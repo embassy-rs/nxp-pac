@@ -14,6 +14,15 @@
     feature = "mcxn947_cm33_core1",
     path = "./chips/mcxn947_cm33_core1/mod.rs"
 )]
+// LPC55S69
+#[cfg_attr(
+    feature = "lpc55s69_core0",
+    path = "./chips/lpc55s69_cm33_core0/mod.rs"
+)]
+#[cfg_attr(
+    feature = "lpc55s69_core1",
+    path = "./chips/lpc55s69_cm33_core1/mod.rs"
+)]
 mod pac;
 pub use pac::*;
 

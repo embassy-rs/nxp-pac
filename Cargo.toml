@@ -42,3 +42,7 @@ mimxrt1062 = []
 ## MCX
 mcxn947_cm33_core0 = []
 mcxn947_cm33_core1 = []
+
+## LPC55S69
+lpc55s69_core0 = []
+lpc55s69_core1 = []

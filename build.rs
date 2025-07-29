@@ -9,12 +9,16 @@ fn main() {
     #[allow(unused)]
     let chip_name = match env::vars()
         .map(|(a, _)| a)
-        .filter(|x| x.starts_with("CARGO_FEATURE_MIMXRT") || x.starts_with("CARGO_FEATURE_MCX"))
+        .filter(|x| {
+            x.starts_with("CARGO_FEATURE_MIMXRT")
+                || x.starts_with("CARGO_FEATURE_MCX")
+                || x.starts_with("CARGO_FEATURE_LPC55S69")
+        })
         .get_one()
     {
         Ok(x) => x,
-        Err(GetOneError::None) => panic!("No mimxrt/mcx Cargo feature enabled"),
-        Err(GetOneError::Multiple) => panic!("Multiple mimxrt/mcx Cargo features enabled"),
+        Err(GetOneError::None) => panic!("No mimxrt/mcx/lpc Cargo feature enabled"),
+        Err(GetOneError::Multiple) => panic!("Multiple mimxrt/mcx/lpc Cargo features enabled"),
     }
     .strip_prefix("CARGO_FEATURE_")
     .unwrap()

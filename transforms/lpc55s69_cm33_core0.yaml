@@ -1,0 +1,3 @@
+includes:
+- useless.yaml
+- lpc55s69_cm33.yaml

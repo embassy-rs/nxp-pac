@@ -39,7 +39,9 @@ struct Feature {
 const GENERATE: &[Feature] = &[
     Feature { chip: "MIMXRT1011", cores: &["MIMXRT1011"] },
     Feature { chip: "MIMXRT1062", cores: &["MIMXRT1062"] },
-
+    
+    Feature { chip: "LPC55S69", cores: &["LPC55S69_cm33_core0", "LPC55S69_cm33_core1"] },
+    
     Feature { chip: "MCXN947", cores: &["MCXN947_cm33_core0", "MCXN947_cm33_core1"]}
 ];
 
@@ -80,12 +82,12 @@ fn main() -> anyhow::Result<()> {
     for output in outputs {
         if let Err(e) = output {
             error |= true;
-            eprintln!("{e}");
+            println!("Error for output {e:?}");
         }
     }
 
     if error {
-        bail!("Failed to generate chips");
+        bail!("Failed to generate chips {:?}", error);
     }
 
     println!("Formatting code");
