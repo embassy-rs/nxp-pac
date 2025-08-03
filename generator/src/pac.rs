@@ -56,17 +56,11 @@ pub fn generate_core(
     }
 
     let lib_temp = temp.path().join("lib.rs");
-    rustfmt(&lib_temp)?;
 
     let device_x = temp.path().join("device.x");
     let output_dir = chip_dir.join(core.to_lowercase());
     fs::create_dir_all(&output_dir)?;
     fs::copy(&device_x, output_dir.join("device.x"))?;
-
-    // Remove #![no_std] attribute, as this is not lib.rs
-    let mut pac = fs::read_to_string(&lib_temp)?;
-    pac = pac.replace("#![no_std]\n", "");
-    fs::write(&lib_temp, pac)?;
 
     Command::new("form")
         .arg("-i")
@@ -78,6 +72,12 @@ pub fn generate_core(
         .status()?;
 
     fs::rename(output_dir.join("lib.rs"), output_dir.join("mod.rs"))?;
+    rustfmt(&output_dir.join("mod.rs")).context("Format pac")?;
+
+    // Remove #![no_std] attribute, as this is not lib.rs
+    let mut pac = fs::read_to_string(&output_dir.join("mod.rs"))?;
+    pac = pac.replace("#![no_std]\n", "");
+    fs::write(&output_dir.join("mod.rs"), pac)?;
 
     Ok(())
 }

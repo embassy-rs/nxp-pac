@@ -15,8 +15,11 @@
 mod iomuxc;
 mod metadata;
 mod pac;
+mod regex_map;
+mod rt1xxx;
 
 use std::{
+    collections::BTreeMap,
     env, fs,
     path::Path,
     process::{Command, Stdio},
@@ -113,14 +116,22 @@ fn generate_chip(current_dir: &Path, feature: &Feature) -> anyhow::Result<()> {
         .join("mcux-soc-svd")
         .join(feature.chip);
 
+    let (peripherals, iomuxc) = if feature.chip.starts_with("MIMXRT1") {
+        rt1xxx::get_metadata(current_dir, feature.chip)?
+    } else {
+        (BTreeMap::new(), BTreeMap::new())
+    };
+
     for core in feature.cores {
         let svd = chip_src_dir.join(core).with_extension("xml");
         let transforms_dir = current_dir.join("transforms");
         let chips_dir = current_dir.join("src").join("chips");
+        let metadata_dir = current_dir.join("src").join("metadata");
 
         println!("Generating {}/{}", feature.chip, core);
         pac::generate_core(&svd, &chips_dir, &transforms_dir, &core).context("Generating PAC")?;
-        metadata::generate_core(&svd, &chips_dir, &core).context("Generating metadata")?;
+        metadata::generate_core(&metadata_dir, &core, &peripherals, &iomuxc)
+            .context("Generating metadata")?;
     }
 
     Ok(())
@@ -129,7 +140,7 @@ fn generate_chip(current_dir: &Path, feature: &Feature) -> anyhow::Result<()> {
 fn rustfmt(path: &Path) -> anyhow::Result<()> {
     let output = Command::new("rustfmt")
         .arg(path.canonicalize()?)
-        .stdout(Stdio::null())
+        .stdout(Stdio::piped())
         .stderr(Stdio::piped())
         .output()?;
 

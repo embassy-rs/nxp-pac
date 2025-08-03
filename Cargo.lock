@@ -166,6 +166,7 @@ dependencies = [
  "proc-macro2",
  "quote",
  "rayon",
+ "regex",
  "svd-parser",
  "temp-dir",
 ]

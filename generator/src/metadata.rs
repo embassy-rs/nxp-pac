@@ -1,35 +1,150 @@
-use std::{fmt::Write, fs, path::Path};
+use std::{collections::BTreeMap, fmt::Write, fs, path::Path};
 
+use anyhow::Context;
 use proc_macro2::{Literal, TokenStream};
 use quote::quote;
 
-use crate::{
-    iomuxc::{self, IomuxcRegisters},
-    rustfmt,
-};
+use crate::{iomuxc::IomuxcRegisters, rustfmt};
 
-pub fn generate_core(svd: &Path, chips_dir: &Path, core: &str) -> anyhow::Result<()> {
+#[derive(Debug)]
+pub struct Peripheral {
+    /// Peripheral name.
+    pub name: String,
+
+    /// Pin options for this peripheral.
+    pub pins: Vec<PeripheralPin>,
+}
+
+#[derive(Debug)]
+pub struct PeripheralPin {
+    /// The pin selection.
+    pub pin: String,
+
+    /// The signal.
+    pub signal: String,
+
+    /// The pin function to select this pin.
+    pub function: u8,
+
+    /// The daisy register to select the signal.
+    ///
+    /// This is optional (but will be required depending on the peripheral) for IMXRT1xxx parts.
+    /// This must always be [`None`] if this is not an RT1xxx part.
+    pub iomuxc_daisy: Option<Daisy>,
+}
+
+#[derive(Debug)]
+/// The daisy chain setting for a peripheral and pin.
+pub struct Daisy {
+    /// The daisy register address.
+    pub register: u32,
+
+    /// The value for the daisy register.
+    pub value: u8,
+}
+
+pub fn generate_core(
+    metadata_dir: &Path,
+    core: &str,
+    peripherals: &BTreeMap<String, Peripheral>,
+    iomuxc: &BTreeMap<String, IomuxcRegisters>,
+) -> anyhow::Result<()> {
     // IMXRT10xx and 11xx require extra metadata for IOMUXC
-    let iomuxc = core
-        .starts_with("MIMXRT1")
-        .then(|| iomuxc::get_registers(svd))
-        .transpose()?;
+    let has_iomuxc = core.starts_with("MIMXRT1");
 
     let mut metadata = String::new();
 
-    if let Some(iomuxc) = iomuxc {
+    writeln!(
+        metadata,
+        "#![doc = \"This file is auto generated. Do not modify directly.\"]"
+    )?;
+    writeln!(metadata, "use crate::metadata::*;")?;
+
+    if has_iomuxc {
         writeln!(metadata, "{}", generate_iomuxc(&iomuxc)?)?;
     }
 
-    let metadata_rs = chips_dir.join(core.to_lowercase()).join("metadata.rs");
+    writeln!(
+        metadata,
+        "{}",
+        generate_peripherals(has_iomuxc, &peripherals)?
+    )?;
+
+    fs::create_dir_all(metadata_dir)?;
+
+    let metadata_rs = metadata_dir.join(format!("{}.rs", core.to_lowercase()));
     fs::write(&metadata_rs, metadata)?;
-    rustfmt(&metadata_rs)?;
+    rustfmt(&metadata_rs).context(format!("Format metadata for {}", core))?;
 
     Ok(())
 }
 
-fn generate_iomuxc(registers: &[IomuxcRegisters]) -> anyhow::Result<TokenStream> {
-    let registers = registers.iter().map(|registers| {
+fn generate_peripherals(
+    has_iomuxc: bool,
+    peripherals: &BTreeMap<String, Peripheral>,
+) -> anyhow::Result<TokenStream> {
+    let peripherals = peripherals.values().map(|peripheral| {
+        let name = &peripheral.name;
+        let pins = peripheral.pins.iter().map(|pin| {
+            let function = Literal::u8_unsuffixed(pin.function);
+            let signal = &pin.signal;
+
+            let daisy = pin
+                .iomuxc_daisy
+                .as_ref()
+                .map(|daisy| {
+                    let register = Literal::u32_unsuffixed(daisy.register);
+                    let value = Literal::u8_unsuffixed(daisy.value);
+
+                    quote! {
+                        Some(Daisy {
+                            register: #register,
+                            value: #value,
+                        })
+                    }
+                })
+                .take_if(|_| has_iomuxc)
+                .or_else(|| Some(quote! { None }));
+
+            let pin = &pin.pin;
+
+            if let Some(daisy) = daisy {
+                quote! {
+                    PeripheralPin {
+                        pin: #pin,
+                        signal: #signal,
+                        function: #function,
+                        iomuxc_daisy: #daisy,
+                    }
+                }
+            } else {
+                quote! {
+                    PeripheralPin {
+                        pin: #pin,
+                        signal: #signal,
+                        function: #function,
+                    }
+                }
+            }
+        });
+
+        quote! {
+            Peripheral {
+                name: #name,
+                pins: &[#(#pins),*],
+            }
+        }
+    });
+
+    Ok(quote! {
+        pub static PERIPHERALS: &[Peripheral] = &[
+            #(#peripherals),*
+        ];
+    })
+}
+
+fn generate_iomuxc(registers: &BTreeMap<String, IomuxcRegisters>) -> anyhow::Result<TokenStream> {
+    let registers = registers.values().map(|registers| {
         let name = &registers.name;
         let mux_ctl = Literal::u32_unsuffixed(registers.mux_address);
         let pad_ctl = Literal::u32_unsuffixed(registers.pad_address);
@@ -40,18 +155,10 @@ fn generate_iomuxc(registers: &[IomuxcRegisters]) -> anyhow::Result<TokenStream>
     });
 
     Ok(quote! {
-        pub mod iomuxc {
-            pub struct IomuxcRegisters {
-                pub name: &'static str,
-                pub mux_ctl: u32,
-                pub pad_ctl: u32,
-            }
-
-            pub const IOMUXC_REGISTERS: &[IomuxcRegisters] = &[
-                #(
-                    #registers
-                ),*
-            ];
-        }
+        pub const IOMUXC_REGISTERS: &[IomuxcRegisters] = &[
+            #(
+                #registers
+            ),*
+        ];
     })
 }

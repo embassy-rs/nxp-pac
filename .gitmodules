@@ -2,3 +2,7 @@
 	path = data/mcux-soc-svd
 	url = https://github.com/nxp-mcuxpresso/mcux-soc-svd
 	update = none # Makes `cargo` not clone the submodule: https://github.com/rust-lang/cargo/issues/4247#issuecomment-1149178736
+[submodule "data/mcux-devices-rt"]
+	path = data/mcux-devices-rt
+	url = https://github.com/nxp-mcuxpresso/mcux-devices-rt
+	update = none # Makes `cargo` not clone the submodule: https://github.com/rust-lang/cargo/issues/4247#issuecomment-1149178736
