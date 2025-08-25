@@ -317,12 +317,6 @@ pub const AHB_SECURE_CTRL: ahb_secure_ctrl::AhbSecureCtrl =
     unsafe { ahb_secure_ctrl::AhbSecureCtrl::from_ptr(0x400a_c000usize as _) };
 #[doc = "no description available"]
 pub const SCNSCB: scn_scb::ScnScb = unsafe { scn_scb::ScnScb::from_ptr(0xe000_e000usize as _) };
-#[doc = "no description available"]
-pub const NVIC: nvic::Nvic = unsafe { nvic::Nvic::from_ptr(0xe000_e100usize as _) };
-#[doc = "no description available"]
-pub const SCB: scb::Scb = unsafe { scb::Scb::from_ptr(0xe000_ed00usize as _) };
-#[doc = "no description available"]
-pub const SAU: sau::Sau = unsafe { sau::Sau::from_ptr(0xe000_edd0usize as _) };
 #[doc = r" Number available in the NVIC for configuring priority"]
 #[cfg(feature = "rt")]
 pub const NVIC_PRIO_BITS: u8 = 3;
@@ -353,7 +347,6 @@ pub mod inputmux;
 pub mod iocon;
 pub mod mailbox;
 pub mod mrt0;
-pub mod nvic;
 pub mod ostimer;
 pub mod pint;
 pub mod plu;
@@ -363,8 +356,6 @@ pub mod prince;
 pub mod puf;
 pub mod rng;
 pub mod rtc;
-pub mod sau;
-pub mod scb;
 pub mod scn_scb;
 pub mod sct0;
 pub mod sdif;
