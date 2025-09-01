@@ -22,8 +22,8 @@ fn main() {
     }
     .strip_prefix("CARGO_FEATURE_")
     .unwrap()
-    .to_ascii_lowercase()
-    .replace('_', "-");
+    .to_ascii_lowercase();
+    // .replace('_', "-");
 
     #[cfg(any(feature = "rt"))]
     println!(
