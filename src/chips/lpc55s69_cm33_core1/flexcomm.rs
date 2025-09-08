@@ -17,12 +17,12 @@ impl Flexcomm {
     #[doc = "Peripheral Select and Flexcomm ID register."]
     #[inline(always)]
     pub const fn pselid(self) -> crate::common::Reg<regs::Pselid, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0ff8usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0ff8usize) as _) }
     }
     #[doc = "Peripheral identification register."]
     #[inline(always)]
     pub const fn pid(self) -> crate::common::Reg<regs::Pid, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0ffcusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0ffcusize) as _) }
     }
 }
 pub mod regs;

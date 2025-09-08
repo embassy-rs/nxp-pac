@@ -1670,15 +1670,15 @@ impl From<Enableupdate> for u16 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Fc0Rst {
+pub enum FcRst {
     #[doc = "Bloc is not reset."]
     RELEASED = 0x0,
     #[doc = "Bloc is reset."]
     ASSERTED = 0x01,
 }
-impl Fc0Rst {
+impl FcRst {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> Fc0Rst {
+    pub const fn from_bits(val: u8) -> FcRst {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -1686,239 +1686,22 @@ impl Fc0Rst {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for Fc0Rst {
+impl From<u8> for FcRst {
     #[inline(always)]
-    fn from(val: u8) -> Fc0Rst {
-        Fc0Rst::from_bits(val)
+    fn from(val: u8) -> FcRst {
+        FcRst::from_bits(val)
     }
 }
-impl From<Fc0Rst> for u8 {
+impl From<FcRst> for u8 {
     #[inline(always)]
-    fn from(val: Fc0Rst) -> u8 {
-        Fc0Rst::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Fc1Rst {
-    #[doc = "Bloc is not reset."]
-    RELEASED = 0x0,
-    #[doc = "Bloc is reset."]
-    ASSERTED = 0x01,
-}
-impl Fc1Rst {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Fc1Rst {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Fc1Rst {
-    #[inline(always)]
-    fn from(val: u8) -> Fc1Rst {
-        Fc1Rst::from_bits(val)
-    }
-}
-impl From<Fc1Rst> for u8 {
-    #[inline(always)]
-    fn from(val: Fc1Rst) -> u8 {
-        Fc1Rst::to_bits(val)
+    fn from(val: FcRst) -> u8 {
+        FcRst::to_bits(val)
     }
 }
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Fc2Rst {
-    #[doc = "Bloc is not reset."]
-    RELEASED = 0x0,
-    #[doc = "Bloc is reset."]
-    ASSERTED = 0x01,
-}
-impl Fc2Rst {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Fc2Rst {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Fc2Rst {
-    #[inline(always)]
-    fn from(val: u8) -> Fc2Rst {
-        Fc2Rst::from_bits(val)
-    }
-}
-impl From<Fc2Rst> for u8 {
-    #[inline(always)]
-    fn from(val: Fc2Rst) -> u8 {
-        Fc2Rst::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Fc3Rst {
-    #[doc = "Bloc is not reset."]
-    RELEASED = 0x0,
-    #[doc = "Bloc is reset."]
-    ASSERTED = 0x01,
-}
-impl Fc3Rst {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Fc3Rst {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Fc3Rst {
-    #[inline(always)]
-    fn from(val: u8) -> Fc3Rst {
-        Fc3Rst::from_bits(val)
-    }
-}
-impl From<Fc3Rst> for u8 {
-    #[inline(always)]
-    fn from(val: Fc3Rst) -> u8 {
-        Fc3Rst::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Fc4Rst {
-    #[doc = "Bloc is not reset."]
-    RELEASED = 0x0,
-    #[doc = "Bloc is reset."]
-    ASSERTED = 0x01,
-}
-impl Fc4Rst {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Fc4Rst {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Fc4Rst {
-    #[inline(always)]
-    fn from(val: u8) -> Fc4Rst {
-        Fc4Rst::from_bits(val)
-    }
-}
-impl From<Fc4Rst> for u8 {
-    #[inline(always)]
-    fn from(val: Fc4Rst) -> u8 {
-        Fc4Rst::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Fc5Rst {
-    #[doc = "Bloc is not reset."]
-    RELEASED = 0x0,
-    #[doc = "Bloc is reset."]
-    ASSERTED = 0x01,
-}
-impl Fc5Rst {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Fc5Rst {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Fc5Rst {
-    #[inline(always)]
-    fn from(val: u8) -> Fc5Rst {
-        Fc5Rst::from_bits(val)
-    }
-}
-impl From<Fc5Rst> for u8 {
-    #[inline(always)]
-    fn from(val: Fc5Rst) -> u8 {
-        Fc5Rst::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Fc6Rst {
-    #[doc = "Bloc is not reset."]
-    RELEASED = 0x0,
-    #[doc = "Bloc is reset."]
-    ASSERTED = 0x01,
-}
-impl Fc6Rst {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Fc6Rst {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Fc6Rst {
-    #[inline(always)]
-    fn from(val: u8) -> Fc6Rst {
-        Fc6Rst::from_bits(val)
-    }
-}
-impl From<Fc6Rst> for u8 {
-    #[inline(always)]
-    fn from(val: Fc6Rst) -> u8 {
-        Fc6Rst::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Fc7Rst {
-    #[doc = "Bloc is not reset."]
-    RELEASED = 0x0,
-    #[doc = "Bloc is reset."]
-    ASSERTED = 0x01,
-}
-impl Fc7Rst {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Fc7Rst {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Fc7Rst {
-    #[inline(always)]
-    fn from(val: u8) -> Fc7Rst {
-        Fc7Rst::from_bits(val)
-    }
-}
-impl From<Fc7Rst> for u8 {
-    #[inline(always)]
-    fn from(val: Fc7Rst) -> u8 {
-        Fc7Rst::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Fcclksel0Sel {
+pub enum FcclkselSel {
     #[doc = "Main clock."]
     ENUM_0X0 = 0x0,
     #[doc = "system PLL divided clock."]
@@ -1936,9 +1719,9 @@ pub enum Fcclksel0Sel {
     #[doc = "No clock."]
     ENUM_0X7 = 0x07,
 }
-impl Fcclksel0Sel {
+impl FcclkselSel {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> Fcclksel0Sel {
+    pub const fn from_bits(val: u8) -> FcclkselSel {
         unsafe { core::mem::transmute(val & 0x07) }
     }
     #[inline(always)]
@@ -1946,317 +1729,16 @@ impl Fcclksel0Sel {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for Fcclksel0Sel {
+impl From<u8> for FcclkselSel {
     #[inline(always)]
-    fn from(val: u8) -> Fcclksel0Sel {
-        Fcclksel0Sel::from_bits(val)
+    fn from(val: u8) -> FcclkselSel {
+        FcclkselSel::from_bits(val)
     }
 }
-impl From<Fcclksel0Sel> for u8 {
+impl From<FcclkselSel> for u8 {
     #[inline(always)]
-    fn from(val: Fcclksel0Sel) -> u8 {
-        Fcclksel0Sel::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Fcclksel1Sel {
-    #[doc = "Main clock."]
-    ENUM_0X0 = 0x0,
-    #[doc = "system PLL divided clock."]
-    ENUM_0X1 = 0x01,
-    #[doc = "FRO 12 MHz clock."]
-    ENUM_0X2 = 0x02,
-    #[doc = "FRO 96 MHz clock."]
-    ENUM_0X3 = 0x03,
-    #[doc = "FRO 1MHz clock."]
-    ENUM_0X4 = 0x04,
-    #[doc = "MCLK clock."]
-    ENUM_0X5 = 0x05,
-    #[doc = "Oscillator 32 kHz clock."]
-    ENUM_0X6 = 0x06,
-    #[doc = "No clock."]
-    ENUM_0X7 = 0x07,
-}
-impl Fcclksel1Sel {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Fcclksel1Sel {
-        unsafe { core::mem::transmute(val & 0x07) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Fcclksel1Sel {
-    #[inline(always)]
-    fn from(val: u8) -> Fcclksel1Sel {
-        Fcclksel1Sel::from_bits(val)
-    }
-}
-impl From<Fcclksel1Sel> for u8 {
-    #[inline(always)]
-    fn from(val: Fcclksel1Sel) -> u8 {
-        Fcclksel1Sel::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Fcclksel2Sel {
-    #[doc = "Main clock."]
-    ENUM_0X0 = 0x0,
-    #[doc = "system PLL divided clock."]
-    ENUM_0X1 = 0x01,
-    #[doc = "FRO 12 MHz clock."]
-    ENUM_0X2 = 0x02,
-    #[doc = "FRO 96 MHz clock."]
-    ENUM_0X3 = 0x03,
-    #[doc = "FRO 1MHz clock."]
-    ENUM_0X4 = 0x04,
-    #[doc = "MCLK clock."]
-    ENUM_0X5 = 0x05,
-    #[doc = "Oscillator 32 kHz clock."]
-    ENUM_0X6 = 0x06,
-    #[doc = "No clock."]
-    ENUM_0X7 = 0x07,
-}
-impl Fcclksel2Sel {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Fcclksel2Sel {
-        unsafe { core::mem::transmute(val & 0x07) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Fcclksel2Sel {
-    #[inline(always)]
-    fn from(val: u8) -> Fcclksel2Sel {
-        Fcclksel2Sel::from_bits(val)
-    }
-}
-impl From<Fcclksel2Sel> for u8 {
-    #[inline(always)]
-    fn from(val: Fcclksel2Sel) -> u8 {
-        Fcclksel2Sel::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Fcclksel3Sel {
-    #[doc = "Main clock."]
-    ENUM_0X0 = 0x0,
-    #[doc = "system PLL divided clock."]
-    ENUM_0X1 = 0x01,
-    #[doc = "FRO 12 MHz clock."]
-    ENUM_0X2 = 0x02,
-    #[doc = "FRO 96 MHz clock."]
-    ENUM_0X3 = 0x03,
-    #[doc = "FRO 1MHz clock."]
-    ENUM_0X4 = 0x04,
-    #[doc = "MCLK clock."]
-    ENUM_0X5 = 0x05,
-    #[doc = "Oscillator 32 kHz clock."]
-    ENUM_0X6 = 0x06,
-    #[doc = "No clock."]
-    ENUM_0X7 = 0x07,
-}
-impl Fcclksel3Sel {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Fcclksel3Sel {
-        unsafe { core::mem::transmute(val & 0x07) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Fcclksel3Sel {
-    #[inline(always)]
-    fn from(val: u8) -> Fcclksel3Sel {
-        Fcclksel3Sel::from_bits(val)
-    }
-}
-impl From<Fcclksel3Sel> for u8 {
-    #[inline(always)]
-    fn from(val: Fcclksel3Sel) -> u8 {
-        Fcclksel3Sel::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Fcclksel4Sel {
-    #[doc = "Main clock."]
-    ENUM_0X0 = 0x0,
-    #[doc = "system PLL divided clock."]
-    ENUM_0X1 = 0x01,
-    #[doc = "FRO 12 MHz clock."]
-    ENUM_0X2 = 0x02,
-    #[doc = "FRO 96 MHz clock."]
-    ENUM_0X3 = 0x03,
-    #[doc = "FRO 1MHz clock."]
-    ENUM_0X4 = 0x04,
-    #[doc = "MCLK clock."]
-    ENUM_0X5 = 0x05,
-    #[doc = "Oscillator 32 kHz clock."]
-    ENUM_0X6 = 0x06,
-    #[doc = "No clock."]
-    ENUM_0X7 = 0x07,
-}
-impl Fcclksel4Sel {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Fcclksel4Sel {
-        unsafe { core::mem::transmute(val & 0x07) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Fcclksel4Sel {
-    #[inline(always)]
-    fn from(val: u8) -> Fcclksel4Sel {
-        Fcclksel4Sel::from_bits(val)
-    }
-}
-impl From<Fcclksel4Sel> for u8 {
-    #[inline(always)]
-    fn from(val: Fcclksel4Sel) -> u8 {
-        Fcclksel4Sel::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Fcclksel5Sel {
-    #[doc = "Main clock."]
-    ENUM_0X0 = 0x0,
-    #[doc = "system PLL divided clock."]
-    ENUM_0X1 = 0x01,
-    #[doc = "FRO 12 MHz clock."]
-    ENUM_0X2 = 0x02,
-    #[doc = "FRO 96 MHz clock."]
-    ENUM_0X3 = 0x03,
-    #[doc = "FRO 1MHz clock."]
-    ENUM_0X4 = 0x04,
-    #[doc = "MCLK clock."]
-    ENUM_0X5 = 0x05,
-    #[doc = "Oscillator 32 kHz clock."]
-    ENUM_0X6 = 0x06,
-    #[doc = "No clock."]
-    ENUM_0X7 = 0x07,
-}
-impl Fcclksel5Sel {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Fcclksel5Sel {
-        unsafe { core::mem::transmute(val & 0x07) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Fcclksel5Sel {
-    #[inline(always)]
-    fn from(val: u8) -> Fcclksel5Sel {
-        Fcclksel5Sel::from_bits(val)
-    }
-}
-impl From<Fcclksel5Sel> for u8 {
-    #[inline(always)]
-    fn from(val: Fcclksel5Sel) -> u8 {
-        Fcclksel5Sel::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Fcclksel6Sel {
-    #[doc = "Main clock."]
-    ENUM_0X0 = 0x0,
-    #[doc = "system PLL divided clock."]
-    ENUM_0X1 = 0x01,
-    #[doc = "FRO 12 MHz clock."]
-    ENUM_0X2 = 0x02,
-    #[doc = "FRO 96 MHz clock."]
-    ENUM_0X3 = 0x03,
-    #[doc = "FRO 1MHz clock."]
-    ENUM_0X4 = 0x04,
-    #[doc = "MCLK clock."]
-    ENUM_0X5 = 0x05,
-    #[doc = "Oscillator 32 kHz clock."]
-    ENUM_0X6 = 0x06,
-    #[doc = "No clock."]
-    ENUM_0X7 = 0x07,
-}
-impl Fcclksel6Sel {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Fcclksel6Sel {
-        unsafe { core::mem::transmute(val & 0x07) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Fcclksel6Sel {
-    #[inline(always)]
-    fn from(val: u8) -> Fcclksel6Sel {
-        Fcclksel6Sel::from_bits(val)
-    }
-}
-impl From<Fcclksel6Sel> for u8 {
-    #[inline(always)]
-    fn from(val: Fcclksel6Sel) -> u8 {
-        Fcclksel6Sel::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Fcclksel7Sel {
-    #[doc = "Main clock."]
-    ENUM_0X0 = 0x0,
-    #[doc = "system PLL divided clock."]
-    ENUM_0X1 = 0x01,
-    #[doc = "FRO 12 MHz clock."]
-    ENUM_0X2 = 0x02,
-    #[doc = "FRO 96 MHz clock."]
-    ENUM_0X3 = 0x03,
-    #[doc = "FRO 1MHz clock."]
-    ENUM_0X4 = 0x04,
-    #[doc = "MCLK clock."]
-    ENUM_0X5 = 0x05,
-    #[doc = "Oscillator 32 kHz clock."]
-    ENUM_0X6 = 0x06,
-    #[doc = "No clock."]
-    ENUM_0X7 = 0x07,
-}
-impl Fcclksel7Sel {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Fcclksel7Sel {
-        unsafe { core::mem::transmute(val & 0x07) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Fcclksel7Sel {
-    #[inline(always)]
-    fn from(val: u8) -> Fcclksel7Sel {
-        Fcclksel7Sel::from_bits(val)
-    }
-}
-impl From<Fcclksel7Sel> for u8 {
-    #[inline(always)]
-    fn from(val: Fcclksel7Sel) -> u8 {
-        Fcclksel7Sel::to_bits(val)
+    fn from(val: FcclkselSel) -> u8 {
+        FcclkselSel::to_bits(val)
     }
 }
 #[repr(u8)]

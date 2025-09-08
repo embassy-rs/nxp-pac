@@ -495,98 +495,18 @@ impl Ahbclkctrl1 {
     #[doc = "Enables the clock for the FC0."]
     #[must_use]
     #[inline(always)]
-    pub const fn fc0(&self) -> bool {
-        let val = (self.0 >> 11usize) & 0x01;
+    pub const fn fc(&self, n: usize) -> bool {
+        assert!(n < 8usize);
+        let offs = 11usize + n * 1usize;
+        let val = (self.0 >> offs) & 0x01;
         val != 0
     }
     #[doc = "Enables the clock for the FC0."]
     #[inline(always)]
-    pub const fn set_fc0(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
-    }
-    #[doc = "Enables the clock for the FC1."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn fc1(&self) -> bool {
-        let val = (self.0 >> 12usize) & 0x01;
-        val != 0
-    }
-    #[doc = "Enables the clock for the FC1."]
-    #[inline(always)]
-    pub const fn set_fc1(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
-    }
-    #[doc = "Enables the clock for the FC2."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn fc2(&self) -> bool {
-        let val = (self.0 >> 13usize) & 0x01;
-        val != 0
-    }
-    #[doc = "Enables the clock for the FC2."]
-    #[inline(always)]
-    pub const fn set_fc2(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
-    }
-    #[doc = "Enables the clock for the FC3."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn fc3(&self) -> bool {
-        let val = (self.0 >> 14usize) & 0x01;
-        val != 0
-    }
-    #[doc = "Enables the clock for the FC3."]
-    #[inline(always)]
-    pub const fn set_fc3(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
-    }
-    #[doc = "Enables the clock for the FC4."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn fc4(&self) -> bool {
-        let val = (self.0 >> 15usize) & 0x01;
-        val != 0
-    }
-    #[doc = "Enables the clock for the FC4."]
-    #[inline(always)]
-    pub const fn set_fc4(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
-    }
-    #[doc = "Enables the clock for the FC5."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn fc5(&self) -> bool {
-        let val = (self.0 >> 16usize) & 0x01;
-        val != 0
-    }
-    #[doc = "Enables the clock for the FC5."]
-    #[inline(always)]
-    pub const fn set_fc5(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
-    }
-    #[doc = "Enables the clock for the FC6."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn fc6(&self) -> bool {
-        let val = (self.0 >> 17usize) & 0x01;
-        val != 0
-    }
-    #[doc = "Enables the clock for the FC6."]
-    #[inline(always)]
-    pub const fn set_fc6(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
-    }
-    #[doc = "Enables the clock for the FC7."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn fc7(&self) -> bool {
-        let val = (self.0 >> 18usize) & 0x01;
-        val != 0
-    }
-    #[doc = "Enables the clock for the FC7."]
-    #[inline(always)]
-    pub const fn set_fc7(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
+    pub const fn set_fc(&mut self, n: usize, val: bool) {
+        assert!(n < 8usize);
+        let offs = 11usize + n * 1usize;
+        self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
     }
     #[doc = "Enables the clock for the Timer 2."]
     #[must_use]
@@ -650,14 +570,14 @@ impl core::fmt::Debug for Ahbclkctrl1 {
             .field("ostimer", &self.ostimer())
             .field("sct", &self.sct())
             .field("utick", &self.utick())
-            .field("fc0", &self.fc0())
-            .field("fc1", &self.fc1())
-            .field("fc2", &self.fc2())
-            .field("fc3", &self.fc3())
-            .field("fc4", &self.fc4())
-            .field("fc5", &self.fc5())
-            .field("fc6", &self.fc6())
-            .field("fc7", &self.fc7())
+            .field("fc[0]", &self.fc(0usize))
+            .field("fc[1]", &self.fc(1usize))
+            .field("fc[2]", &self.fc(2usize))
+            .field("fc[3]", &self.fc(3usize))
+            .field("fc[4]", &self.fc(4usize))
+            .field("fc[5]", &self.fc(5usize))
+            .field("fc[6]", &self.fc(6usize))
+            .field("fc[7]", &self.fc(7usize))
             .field("timer2", &self.timer2())
             .field("usb0_dev", &self.usb0_dev())
             .field("timer0", &self.timer0())
@@ -670,19 +590,19 @@ impl defmt::Format for Ahbclkctrl1 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Ahbclkctrl1 {{ mrt: {=bool:?}, ostimer: {=bool:?}, sct: {=bool:?}, utick: {=bool:?}, fc0: {=bool:?}, fc1: {=bool:?}, fc2: {=bool:?}, fc3: {=bool:?}, fc4: {=bool:?}, fc5: {=bool:?}, fc6: {=bool:?}, fc7: {=bool:?}, timer2: {=bool:?}, usb0_dev: {=bool:?}, timer0: {=bool:?}, timer1: {=bool:?} }}",
+            "Ahbclkctrl1 {{ mrt: {=bool:?}, ostimer: {=bool:?}, sct: {=bool:?}, utick: {=bool:?}, fc[0]: {=bool:?}, fc[1]: {=bool:?}, fc[2]: {=bool:?}, fc[3]: {=bool:?}, fc[4]: {=bool:?}, fc[5]: {=bool:?}, fc[6]: {=bool:?}, fc[7]: {=bool:?}, timer2: {=bool:?}, usb0_dev: {=bool:?}, timer0: {=bool:?}, timer1: {=bool:?} }}",
             self.mrt(),
             self.ostimer(),
             self.sct(),
             self.utick(),
-            self.fc0(),
-            self.fc1(),
-            self.fc2(),
-            self.fc3(),
-            self.fc4(),
-            self.fc5(),
-            self.fc6(),
-            self.fc7(),
+            self.fc(0usize),
+            self.fc(1usize),
+            self.fc(2usize),
+            self.fc(3usize),
+            self.fc(4usize),
+            self.fc(5usize),
+            self.fc(6usize),
+            self.fc(7usize),
             self.timer2(),
             self.usb0_dev(),
             self.timer0(),
@@ -3265,304 +3185,45 @@ impl defmt::Format for Dieid {
 #[doc = "Flexcomm Interface 0 clock source select for Fractional Rate Divider"]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Fcclksel0(pub u32);
-impl Fcclksel0 {
+pub struct Fcclksel(pub u32);
+impl Fcclksel {
     #[doc = "Flexcomm Interface 0 clock source select for Fractional Rate Divider."]
     #[must_use]
     #[inline(always)]
-    pub const fn sel(&self) -> super::vals::Fcclksel0Sel {
+    pub const fn sel(&self) -> super::vals::FcclkselSel {
         let val = (self.0 >> 0usize) & 0x07;
-        super::vals::Fcclksel0Sel::from_bits(val as u8)
+        super::vals::FcclkselSel::from_bits(val as u8)
     }
     #[doc = "Flexcomm Interface 0 clock source select for Fractional Rate Divider."]
     #[inline(always)]
-    pub const fn set_sel(&mut self, val: super::vals::Fcclksel0Sel) {
+    pub const fn set_sel(&mut self, val: super::vals::FcclkselSel) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
 }
-impl Default for Fcclksel0 {
+impl Default for Fcclksel {
     #[inline(always)]
-    fn default() -> Fcclksel0 {
-        Fcclksel0(0)
+    fn default() -> Fcclksel {
+        Fcclksel(0)
     }
 }
-impl core::fmt::Debug for Fcclksel0 {
+impl core::fmt::Debug for Fcclksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Fcclksel0")
+        f.debug_struct("Fcclksel")
             .field("sel", &self.sel())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for Fcclksel0 {
+impl defmt::Format for Fcclksel {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Fcclksel0 {{ sel: {:?} }}", self.sel())
-    }
-}
-#[doc = "Flexcomm Interface 1 clock source select for Fractional Rate Divider"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Fcclksel1(pub u32);
-impl Fcclksel1 {
-    #[doc = "Flexcomm Interface 1 clock source select for Fractional Rate Divider."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn sel(&self) -> super::vals::Fcclksel1Sel {
-        let val = (self.0 >> 0usize) & 0x07;
-        super::vals::Fcclksel1Sel::from_bits(val as u8)
-    }
-    #[doc = "Flexcomm Interface 1 clock source select for Fractional Rate Divider."]
-    #[inline(always)]
-    pub const fn set_sel(&mut self, val: super::vals::Fcclksel1Sel) {
-        self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
-    }
-}
-impl Default for Fcclksel1 {
-    #[inline(always)]
-    fn default() -> Fcclksel1 {
-        Fcclksel1(0)
-    }
-}
-impl core::fmt::Debug for Fcclksel1 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Fcclksel1")
-            .field("sel", &self.sel())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Fcclksel1 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Fcclksel1 {{ sel: {:?} }}", self.sel())
-    }
-}
-#[doc = "Flexcomm Interface 2 clock source select for Fractional Rate Divider"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Fcclksel2(pub u32);
-impl Fcclksel2 {
-    #[doc = "Flexcomm Interface 2 clock source select for Fractional Rate Divider."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn sel(&self) -> super::vals::Fcclksel2Sel {
-        let val = (self.0 >> 0usize) & 0x07;
-        super::vals::Fcclksel2Sel::from_bits(val as u8)
-    }
-    #[doc = "Flexcomm Interface 2 clock source select for Fractional Rate Divider."]
-    #[inline(always)]
-    pub const fn set_sel(&mut self, val: super::vals::Fcclksel2Sel) {
-        self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
-    }
-}
-impl Default for Fcclksel2 {
-    #[inline(always)]
-    fn default() -> Fcclksel2 {
-        Fcclksel2(0)
-    }
-}
-impl core::fmt::Debug for Fcclksel2 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Fcclksel2")
-            .field("sel", &self.sel())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Fcclksel2 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Fcclksel2 {{ sel: {:?} }}", self.sel())
-    }
-}
-#[doc = "Flexcomm Interface 3 clock source select for Fractional Rate Divider"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Fcclksel3(pub u32);
-impl Fcclksel3 {
-    #[doc = "Flexcomm Interface 3 clock source select for Fractional Rate Divider."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn sel(&self) -> super::vals::Fcclksel3Sel {
-        let val = (self.0 >> 0usize) & 0x07;
-        super::vals::Fcclksel3Sel::from_bits(val as u8)
-    }
-    #[doc = "Flexcomm Interface 3 clock source select for Fractional Rate Divider."]
-    #[inline(always)]
-    pub const fn set_sel(&mut self, val: super::vals::Fcclksel3Sel) {
-        self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
-    }
-}
-impl Default for Fcclksel3 {
-    #[inline(always)]
-    fn default() -> Fcclksel3 {
-        Fcclksel3(0)
-    }
-}
-impl core::fmt::Debug for Fcclksel3 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Fcclksel3")
-            .field("sel", &self.sel())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Fcclksel3 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Fcclksel3 {{ sel: {:?} }}", self.sel())
-    }
-}
-#[doc = "Flexcomm Interface 4 clock source select for Fractional Rate Divider"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Fcclksel4(pub u32);
-impl Fcclksel4 {
-    #[doc = "Flexcomm Interface 4 clock source select for Fractional Rate Divider."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn sel(&self) -> super::vals::Fcclksel4Sel {
-        let val = (self.0 >> 0usize) & 0x07;
-        super::vals::Fcclksel4Sel::from_bits(val as u8)
-    }
-    #[doc = "Flexcomm Interface 4 clock source select for Fractional Rate Divider."]
-    #[inline(always)]
-    pub const fn set_sel(&mut self, val: super::vals::Fcclksel4Sel) {
-        self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
-    }
-}
-impl Default for Fcclksel4 {
-    #[inline(always)]
-    fn default() -> Fcclksel4 {
-        Fcclksel4(0)
-    }
-}
-impl core::fmt::Debug for Fcclksel4 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Fcclksel4")
-            .field("sel", &self.sel())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Fcclksel4 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Fcclksel4 {{ sel: {:?} }}", self.sel())
-    }
-}
-#[doc = "Flexcomm Interface 5 clock source select for Fractional Rate Divider"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Fcclksel5(pub u32);
-impl Fcclksel5 {
-    #[doc = "Flexcomm Interface 5 clock source select for Fractional Rate Divider."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn sel(&self) -> super::vals::Fcclksel5Sel {
-        let val = (self.0 >> 0usize) & 0x07;
-        super::vals::Fcclksel5Sel::from_bits(val as u8)
-    }
-    #[doc = "Flexcomm Interface 5 clock source select for Fractional Rate Divider."]
-    #[inline(always)]
-    pub const fn set_sel(&mut self, val: super::vals::Fcclksel5Sel) {
-        self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
-    }
-}
-impl Default for Fcclksel5 {
-    #[inline(always)]
-    fn default() -> Fcclksel5 {
-        Fcclksel5(0)
-    }
-}
-impl core::fmt::Debug for Fcclksel5 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Fcclksel5")
-            .field("sel", &self.sel())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Fcclksel5 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Fcclksel5 {{ sel: {:?} }}", self.sel())
-    }
-}
-#[doc = "Flexcomm Interface 6 clock source select for Fractional Rate Divider"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Fcclksel6(pub u32);
-impl Fcclksel6 {
-    #[doc = "Flexcomm Interface 6 clock source select for Fractional Rate Divider."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn sel(&self) -> super::vals::Fcclksel6Sel {
-        let val = (self.0 >> 0usize) & 0x07;
-        super::vals::Fcclksel6Sel::from_bits(val as u8)
-    }
-    #[doc = "Flexcomm Interface 6 clock source select for Fractional Rate Divider."]
-    #[inline(always)]
-    pub const fn set_sel(&mut self, val: super::vals::Fcclksel6Sel) {
-        self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
-    }
-}
-impl Default for Fcclksel6 {
-    #[inline(always)]
-    fn default() -> Fcclksel6 {
-        Fcclksel6(0)
-    }
-}
-impl core::fmt::Debug for Fcclksel6 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Fcclksel6")
-            .field("sel", &self.sel())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Fcclksel6 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Fcclksel6 {{ sel: {:?} }}", self.sel())
-    }
-}
-#[doc = "Flexcomm Interface 7 clock source select for Fractional Rate Divider"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Fcclksel7(pub u32);
-impl Fcclksel7 {
-    #[doc = "Flexcomm Interface 7 clock source select for Fractional Rate Divider."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn sel(&self) -> super::vals::Fcclksel7Sel {
-        let val = (self.0 >> 0usize) & 0x07;
-        super::vals::Fcclksel7Sel::from_bits(val as u8)
-    }
-    #[doc = "Flexcomm Interface 7 clock source select for Fractional Rate Divider."]
-    #[inline(always)]
-    pub const fn set_sel(&mut self, val: super::vals::Fcclksel7Sel) {
-        self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
-    }
-}
-impl Default for Fcclksel7 {
-    #[inline(always)]
-    fn default() -> Fcclksel7 {
-        Fcclksel7(0)
-    }
-}
-impl core::fmt::Debug for Fcclksel7 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Fcclksel7")
-            .field("sel", &self.sel())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Fcclksel7 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Fcclksel7 {{ sel: {:?} }}", self.sel())
+        defmt::write!(f, "Fcclksel {{ sel: {:?} }}", self.sel())
     }
 }
 #[doc = "Peripheral reset control register"]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Fcclkselx0(pub u32);
-impl Fcclkselx0 {
+pub struct Fcclkselx(pub u32);
+impl Fcclkselx {
     #[doc = "Data array value"]
     #[must_use]
     #[inline(always)]
@@ -3576,289 +3237,30 @@ impl Fcclkselx0 {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
     }
 }
-impl Default for Fcclkselx0 {
+impl Default for Fcclkselx {
     #[inline(always)]
-    fn default() -> Fcclkselx0 {
-        Fcclkselx0(0)
+    fn default() -> Fcclkselx {
+        Fcclkselx(0)
     }
 }
-impl core::fmt::Debug for Fcclkselx0 {
+impl core::fmt::Debug for Fcclkselx {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Fcclkselx0")
+        f.debug_struct("Fcclkselx")
             .field("data", &self.data())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for Fcclkselx0 {
+impl defmt::Format for Fcclkselx {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Fcclkselx0 {{ data: {=u32:?} }}", self.data())
-    }
-}
-#[doc = "Peripheral reset control register"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Fcclkselx1(pub u32);
-impl Fcclkselx1 {
-    #[doc = "Data array value"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn data(&self) -> u32 {
-        let val = (self.0 >> 0usize) & 0xffff_ffff;
-        val as u32
-    }
-    #[doc = "Data array value"]
-    #[inline(always)]
-    pub const fn set_data(&mut self, val: u32) {
-        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
-    }
-}
-impl Default for Fcclkselx1 {
-    #[inline(always)]
-    fn default() -> Fcclkselx1 {
-        Fcclkselx1(0)
-    }
-}
-impl core::fmt::Debug for Fcclkselx1 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Fcclkselx1")
-            .field("data", &self.data())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Fcclkselx1 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Fcclkselx1 {{ data: {=u32:?} }}", self.data())
-    }
-}
-#[doc = "Peripheral reset control register"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Fcclkselx2(pub u32);
-impl Fcclkselx2 {
-    #[doc = "Data array value"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn data(&self) -> u32 {
-        let val = (self.0 >> 0usize) & 0xffff_ffff;
-        val as u32
-    }
-    #[doc = "Data array value"]
-    #[inline(always)]
-    pub const fn set_data(&mut self, val: u32) {
-        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
-    }
-}
-impl Default for Fcclkselx2 {
-    #[inline(always)]
-    fn default() -> Fcclkselx2 {
-        Fcclkselx2(0)
-    }
-}
-impl core::fmt::Debug for Fcclkselx2 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Fcclkselx2")
-            .field("data", &self.data())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Fcclkselx2 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Fcclkselx2 {{ data: {=u32:?} }}", self.data())
-    }
-}
-#[doc = "Peripheral reset control register"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Fcclkselx3(pub u32);
-impl Fcclkselx3 {
-    #[doc = "Data array value"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn data(&self) -> u32 {
-        let val = (self.0 >> 0usize) & 0xffff_ffff;
-        val as u32
-    }
-    #[doc = "Data array value"]
-    #[inline(always)]
-    pub const fn set_data(&mut self, val: u32) {
-        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
-    }
-}
-impl Default for Fcclkselx3 {
-    #[inline(always)]
-    fn default() -> Fcclkselx3 {
-        Fcclkselx3(0)
-    }
-}
-impl core::fmt::Debug for Fcclkselx3 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Fcclkselx3")
-            .field("data", &self.data())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Fcclkselx3 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Fcclkselx3 {{ data: {=u32:?} }}", self.data())
-    }
-}
-#[doc = "Peripheral reset control register"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Fcclkselx4(pub u32);
-impl Fcclkselx4 {
-    #[doc = "Data array value"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn data(&self) -> u32 {
-        let val = (self.0 >> 0usize) & 0xffff_ffff;
-        val as u32
-    }
-    #[doc = "Data array value"]
-    #[inline(always)]
-    pub const fn set_data(&mut self, val: u32) {
-        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
-    }
-}
-impl Default for Fcclkselx4 {
-    #[inline(always)]
-    fn default() -> Fcclkselx4 {
-        Fcclkselx4(0)
-    }
-}
-impl core::fmt::Debug for Fcclkselx4 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Fcclkselx4")
-            .field("data", &self.data())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Fcclkselx4 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Fcclkselx4 {{ data: {=u32:?} }}", self.data())
-    }
-}
-#[doc = "Peripheral reset control register"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Fcclkselx5(pub u32);
-impl Fcclkselx5 {
-    #[doc = "Data array value"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn data(&self) -> u32 {
-        let val = (self.0 >> 0usize) & 0xffff_ffff;
-        val as u32
-    }
-    #[doc = "Data array value"]
-    #[inline(always)]
-    pub const fn set_data(&mut self, val: u32) {
-        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
-    }
-}
-impl Default for Fcclkselx5 {
-    #[inline(always)]
-    fn default() -> Fcclkselx5 {
-        Fcclkselx5(0)
-    }
-}
-impl core::fmt::Debug for Fcclkselx5 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Fcclkselx5")
-            .field("data", &self.data())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Fcclkselx5 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Fcclkselx5 {{ data: {=u32:?} }}", self.data())
-    }
-}
-#[doc = "Peripheral reset control register"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Fcclkselx6(pub u32);
-impl Fcclkselx6 {
-    #[doc = "Data array value"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn data(&self) -> u32 {
-        let val = (self.0 >> 0usize) & 0xffff_ffff;
-        val as u32
-    }
-    #[doc = "Data array value"]
-    #[inline(always)]
-    pub const fn set_data(&mut self, val: u32) {
-        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
-    }
-}
-impl Default for Fcclkselx6 {
-    #[inline(always)]
-    fn default() -> Fcclkselx6 {
-        Fcclkselx6(0)
-    }
-}
-impl core::fmt::Debug for Fcclkselx6 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Fcclkselx6")
-            .field("data", &self.data())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Fcclkselx6 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Fcclkselx6 {{ data: {=u32:?} }}", self.data())
-    }
-}
-#[doc = "Peripheral reset control register"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Fcclkselx7(pub u32);
-impl Fcclkselx7 {
-    #[doc = "Data array value"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn data(&self) -> u32 {
-        let val = (self.0 >> 0usize) & 0xffff_ffff;
-        val as u32
-    }
-    #[doc = "Data array value"]
-    #[inline(always)]
-    pub const fn set_data(&mut self, val: u32) {
-        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
-    }
-}
-impl Default for Fcclkselx7 {
-    #[inline(always)]
-    fn default() -> Fcclkselx7 {
-        Fcclkselx7(0)
-    }
-}
-impl core::fmt::Debug for Fcclkselx7 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Fcclkselx7")
-            .field("data", &self.data())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Fcclkselx7 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Fcclkselx7 {{ data: {=u32:?} }}", self.data())
+        defmt::write!(f, "Fcclkselx {{ data: {=u32:?} }}", self.data())
     }
 }
 #[doc = "Fractional rate divider for flexcomm 0"]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Flexfrg0ctrl(pub u32);
-impl Flexfrg0ctrl {
+pub struct Flexfrgctrl(pub u32);
+impl Flexfrgctrl {
     #[doc = "Denominator of the fractional rate divider."]
     #[must_use]
     #[inline(always)]
@@ -3884,411 +3286,26 @@ impl Flexfrg0ctrl {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
     }
 }
-impl Default for Flexfrg0ctrl {
+impl Default for Flexfrgctrl {
     #[inline(always)]
-    fn default() -> Flexfrg0ctrl {
-        Flexfrg0ctrl(0)
+    fn default() -> Flexfrgctrl {
+        Flexfrgctrl(0)
     }
 }
-impl core::fmt::Debug for Flexfrg0ctrl {
+impl core::fmt::Debug for Flexfrgctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Flexfrg0ctrl")
+        f.debug_struct("Flexfrgctrl")
             .field("div", &self.div())
             .field("mult", &self.mult())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for Flexfrg0ctrl {
+impl defmt::Format for Flexfrgctrl {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Flexfrg0ctrl {{ div: {=u8:?}, mult: {=u8:?} }}",
-            self.div(),
-            self.mult()
-        )
-    }
-}
-#[doc = "Fractional rate divider for flexcomm 1"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Flexfrg1ctrl(pub u32);
-impl Flexfrg1ctrl {
-    #[doc = "Denominator of the fractional rate divider."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn div(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0xff;
-        val as u8
-    }
-    #[doc = "Denominator of the fractional rate divider."]
-    #[inline(always)]
-    pub const fn set_div(&mut self, val: u8) {
-        self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
-    }
-    #[doc = "Numerator of the fractional rate divider."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mult(&self) -> u8 {
-        let val = (self.0 >> 8usize) & 0xff;
-        val as u8
-    }
-    #[doc = "Numerator of the fractional rate divider."]
-    #[inline(always)]
-    pub const fn set_mult(&mut self, val: u8) {
-        self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
-    }
-}
-impl Default for Flexfrg1ctrl {
-    #[inline(always)]
-    fn default() -> Flexfrg1ctrl {
-        Flexfrg1ctrl(0)
-    }
-}
-impl core::fmt::Debug for Flexfrg1ctrl {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Flexfrg1ctrl")
-            .field("div", &self.div())
-            .field("mult", &self.mult())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Flexfrg1ctrl {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "Flexfrg1ctrl {{ div: {=u8:?}, mult: {=u8:?} }}",
-            self.div(),
-            self.mult()
-        )
-    }
-}
-#[doc = "Fractional rate divider for flexcomm 2"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Flexfrg2ctrl(pub u32);
-impl Flexfrg2ctrl {
-    #[doc = "Denominator of the fractional rate divider."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn div(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0xff;
-        val as u8
-    }
-    #[doc = "Denominator of the fractional rate divider."]
-    #[inline(always)]
-    pub const fn set_div(&mut self, val: u8) {
-        self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
-    }
-    #[doc = "Numerator of the fractional rate divider."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mult(&self) -> u8 {
-        let val = (self.0 >> 8usize) & 0xff;
-        val as u8
-    }
-    #[doc = "Numerator of the fractional rate divider."]
-    #[inline(always)]
-    pub const fn set_mult(&mut self, val: u8) {
-        self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
-    }
-}
-impl Default for Flexfrg2ctrl {
-    #[inline(always)]
-    fn default() -> Flexfrg2ctrl {
-        Flexfrg2ctrl(0)
-    }
-}
-impl core::fmt::Debug for Flexfrg2ctrl {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Flexfrg2ctrl")
-            .field("div", &self.div())
-            .field("mult", &self.mult())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Flexfrg2ctrl {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "Flexfrg2ctrl {{ div: {=u8:?}, mult: {=u8:?} }}",
-            self.div(),
-            self.mult()
-        )
-    }
-}
-#[doc = "Fractional rate divider for flexcomm 3"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Flexfrg3ctrl(pub u32);
-impl Flexfrg3ctrl {
-    #[doc = "Denominator of the fractional rate divider."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn div(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0xff;
-        val as u8
-    }
-    #[doc = "Denominator of the fractional rate divider."]
-    #[inline(always)]
-    pub const fn set_div(&mut self, val: u8) {
-        self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
-    }
-    #[doc = "Numerator of the fractional rate divider."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mult(&self) -> u8 {
-        let val = (self.0 >> 8usize) & 0xff;
-        val as u8
-    }
-    #[doc = "Numerator of the fractional rate divider."]
-    #[inline(always)]
-    pub const fn set_mult(&mut self, val: u8) {
-        self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
-    }
-}
-impl Default for Flexfrg3ctrl {
-    #[inline(always)]
-    fn default() -> Flexfrg3ctrl {
-        Flexfrg3ctrl(0)
-    }
-}
-impl core::fmt::Debug for Flexfrg3ctrl {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Flexfrg3ctrl")
-            .field("div", &self.div())
-            .field("mult", &self.mult())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Flexfrg3ctrl {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "Flexfrg3ctrl {{ div: {=u8:?}, mult: {=u8:?} }}",
-            self.div(),
-            self.mult()
-        )
-    }
-}
-#[doc = "Fractional rate divider for flexcomm 4"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Flexfrg4ctrl(pub u32);
-impl Flexfrg4ctrl {
-    #[doc = "Denominator of the fractional rate divider."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn div(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0xff;
-        val as u8
-    }
-    #[doc = "Denominator of the fractional rate divider."]
-    #[inline(always)]
-    pub const fn set_div(&mut self, val: u8) {
-        self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
-    }
-    #[doc = "Numerator of the fractional rate divider."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mult(&self) -> u8 {
-        let val = (self.0 >> 8usize) & 0xff;
-        val as u8
-    }
-    #[doc = "Numerator of the fractional rate divider."]
-    #[inline(always)]
-    pub const fn set_mult(&mut self, val: u8) {
-        self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
-    }
-}
-impl Default for Flexfrg4ctrl {
-    #[inline(always)]
-    fn default() -> Flexfrg4ctrl {
-        Flexfrg4ctrl(0)
-    }
-}
-impl core::fmt::Debug for Flexfrg4ctrl {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Flexfrg4ctrl")
-            .field("div", &self.div())
-            .field("mult", &self.mult())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Flexfrg4ctrl {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "Flexfrg4ctrl {{ div: {=u8:?}, mult: {=u8:?} }}",
-            self.div(),
-            self.mult()
-        )
-    }
-}
-#[doc = "Fractional rate divider for flexcomm 5"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Flexfrg5ctrl(pub u32);
-impl Flexfrg5ctrl {
-    #[doc = "Denominator of the fractional rate divider."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn div(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0xff;
-        val as u8
-    }
-    #[doc = "Denominator of the fractional rate divider."]
-    #[inline(always)]
-    pub const fn set_div(&mut self, val: u8) {
-        self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
-    }
-    #[doc = "Numerator of the fractional rate divider."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mult(&self) -> u8 {
-        let val = (self.0 >> 8usize) & 0xff;
-        val as u8
-    }
-    #[doc = "Numerator of the fractional rate divider."]
-    #[inline(always)]
-    pub const fn set_mult(&mut self, val: u8) {
-        self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
-    }
-}
-impl Default for Flexfrg5ctrl {
-    #[inline(always)]
-    fn default() -> Flexfrg5ctrl {
-        Flexfrg5ctrl(0)
-    }
-}
-impl core::fmt::Debug for Flexfrg5ctrl {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Flexfrg5ctrl")
-            .field("div", &self.div())
-            .field("mult", &self.mult())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Flexfrg5ctrl {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "Flexfrg5ctrl {{ div: {=u8:?}, mult: {=u8:?} }}",
-            self.div(),
-            self.mult()
-        )
-    }
-}
-#[doc = "Fractional rate divider for flexcomm 6"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Flexfrg6ctrl(pub u32);
-impl Flexfrg6ctrl {
-    #[doc = "Denominator of the fractional rate divider."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn div(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0xff;
-        val as u8
-    }
-    #[doc = "Denominator of the fractional rate divider."]
-    #[inline(always)]
-    pub const fn set_div(&mut self, val: u8) {
-        self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
-    }
-    #[doc = "Numerator of the fractional rate divider."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mult(&self) -> u8 {
-        let val = (self.0 >> 8usize) & 0xff;
-        val as u8
-    }
-    #[doc = "Numerator of the fractional rate divider."]
-    #[inline(always)]
-    pub const fn set_mult(&mut self, val: u8) {
-        self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
-    }
-}
-impl Default for Flexfrg6ctrl {
-    #[inline(always)]
-    fn default() -> Flexfrg6ctrl {
-        Flexfrg6ctrl(0)
-    }
-}
-impl core::fmt::Debug for Flexfrg6ctrl {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Flexfrg6ctrl")
-            .field("div", &self.div())
-            .field("mult", &self.mult())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Flexfrg6ctrl {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "Flexfrg6ctrl {{ div: {=u8:?}, mult: {=u8:?} }}",
-            self.div(),
-            self.mult()
-        )
-    }
-}
-#[doc = "Fractional rate divider for flexcomm 7"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Flexfrg7ctrl(pub u32);
-impl Flexfrg7ctrl {
-    #[doc = "Denominator of the fractional rate divider."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn div(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0xff;
-        val as u8
-    }
-    #[doc = "Denominator of the fractional rate divider."]
-    #[inline(always)]
-    pub const fn set_div(&mut self, val: u8) {
-        self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
-    }
-    #[doc = "Numerator of the fractional rate divider."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mult(&self) -> u8 {
-        let val = (self.0 >> 8usize) & 0xff;
-        val as u8
-    }
-    #[doc = "Numerator of the fractional rate divider."]
-    #[inline(always)]
-    pub const fn set_mult(&mut self, val: u8) {
-        self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
-    }
-}
-impl Default for Flexfrg7ctrl {
-    #[inline(always)]
-    fn default() -> Flexfrg7ctrl {
-        Flexfrg7ctrl(0)
-    }
-}
-impl core::fmt::Debug for Flexfrg7ctrl {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Flexfrg7ctrl")
-            .field("div", &self.div())
-            .field("mult", &self.mult())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Flexfrg7ctrl {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "Flexfrg7ctrl {{ div: {=u8:?}, mult: {=u8:?} }}",
+            "Flexfrgctrl {{ div: {=u8:?}, mult: {=u8:?} }}",
             self.div(),
             self.mult()
         )
@@ -4297,8 +3314,8 @@ impl defmt::Format for Flexfrg7ctrl {
 #[doc = "Peripheral reset control register"]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Flexfrgxctrl0(pub u32);
-impl Flexfrgxctrl0 {
+pub struct Flexfrgxctrl(pub u32);
+impl Flexfrgxctrl {
     #[doc = "Data array value"]
     #[must_use]
     #[inline(always)]
@@ -4312,282 +3329,23 @@ impl Flexfrgxctrl0 {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
     }
 }
-impl Default for Flexfrgxctrl0 {
+impl Default for Flexfrgxctrl {
     #[inline(always)]
-    fn default() -> Flexfrgxctrl0 {
-        Flexfrgxctrl0(0)
+    fn default() -> Flexfrgxctrl {
+        Flexfrgxctrl(0)
     }
 }
-impl core::fmt::Debug for Flexfrgxctrl0 {
+impl core::fmt::Debug for Flexfrgxctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Flexfrgxctrl0")
+        f.debug_struct("Flexfrgxctrl")
             .field("data", &self.data())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for Flexfrgxctrl0 {
+impl defmt::Format for Flexfrgxctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Flexfrgxctrl0 {{ data: {=u32:?} }}", self.data())
-    }
-}
-#[doc = "Peripheral reset control register"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Flexfrgxctrl1(pub u32);
-impl Flexfrgxctrl1 {
-    #[doc = "Data array value"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn data(&self) -> u32 {
-        let val = (self.0 >> 0usize) & 0xffff_ffff;
-        val as u32
-    }
-    #[doc = "Data array value"]
-    #[inline(always)]
-    pub const fn set_data(&mut self, val: u32) {
-        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
-    }
-}
-impl Default for Flexfrgxctrl1 {
-    #[inline(always)]
-    fn default() -> Flexfrgxctrl1 {
-        Flexfrgxctrl1(0)
-    }
-}
-impl core::fmt::Debug for Flexfrgxctrl1 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Flexfrgxctrl1")
-            .field("data", &self.data())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Flexfrgxctrl1 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Flexfrgxctrl1 {{ data: {=u32:?} }}", self.data())
-    }
-}
-#[doc = "Peripheral reset control register"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Flexfrgxctrl2(pub u32);
-impl Flexfrgxctrl2 {
-    #[doc = "Data array value"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn data(&self) -> u32 {
-        let val = (self.0 >> 0usize) & 0xffff_ffff;
-        val as u32
-    }
-    #[doc = "Data array value"]
-    #[inline(always)]
-    pub const fn set_data(&mut self, val: u32) {
-        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
-    }
-}
-impl Default for Flexfrgxctrl2 {
-    #[inline(always)]
-    fn default() -> Flexfrgxctrl2 {
-        Flexfrgxctrl2(0)
-    }
-}
-impl core::fmt::Debug for Flexfrgxctrl2 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Flexfrgxctrl2")
-            .field("data", &self.data())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Flexfrgxctrl2 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Flexfrgxctrl2 {{ data: {=u32:?} }}", self.data())
-    }
-}
-#[doc = "Peripheral reset control register"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Flexfrgxctrl3(pub u32);
-impl Flexfrgxctrl3 {
-    #[doc = "Data array value"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn data(&self) -> u32 {
-        let val = (self.0 >> 0usize) & 0xffff_ffff;
-        val as u32
-    }
-    #[doc = "Data array value"]
-    #[inline(always)]
-    pub const fn set_data(&mut self, val: u32) {
-        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
-    }
-}
-impl Default for Flexfrgxctrl3 {
-    #[inline(always)]
-    fn default() -> Flexfrgxctrl3 {
-        Flexfrgxctrl3(0)
-    }
-}
-impl core::fmt::Debug for Flexfrgxctrl3 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Flexfrgxctrl3")
-            .field("data", &self.data())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Flexfrgxctrl3 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Flexfrgxctrl3 {{ data: {=u32:?} }}", self.data())
-    }
-}
-#[doc = "Peripheral reset control register"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Flexfrgxctrl4(pub u32);
-impl Flexfrgxctrl4 {
-    #[doc = "Data array value"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn data(&self) -> u32 {
-        let val = (self.0 >> 0usize) & 0xffff_ffff;
-        val as u32
-    }
-    #[doc = "Data array value"]
-    #[inline(always)]
-    pub const fn set_data(&mut self, val: u32) {
-        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
-    }
-}
-impl Default for Flexfrgxctrl4 {
-    #[inline(always)]
-    fn default() -> Flexfrgxctrl4 {
-        Flexfrgxctrl4(0)
-    }
-}
-impl core::fmt::Debug for Flexfrgxctrl4 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Flexfrgxctrl4")
-            .field("data", &self.data())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Flexfrgxctrl4 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Flexfrgxctrl4 {{ data: {=u32:?} }}", self.data())
-    }
-}
-#[doc = "Peripheral reset control register"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Flexfrgxctrl5(pub u32);
-impl Flexfrgxctrl5 {
-    #[doc = "Data array value"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn data(&self) -> u32 {
-        let val = (self.0 >> 0usize) & 0xffff_ffff;
-        val as u32
-    }
-    #[doc = "Data array value"]
-    #[inline(always)]
-    pub const fn set_data(&mut self, val: u32) {
-        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
-    }
-}
-impl Default for Flexfrgxctrl5 {
-    #[inline(always)]
-    fn default() -> Flexfrgxctrl5 {
-        Flexfrgxctrl5(0)
-    }
-}
-impl core::fmt::Debug for Flexfrgxctrl5 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Flexfrgxctrl5")
-            .field("data", &self.data())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Flexfrgxctrl5 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Flexfrgxctrl5 {{ data: {=u32:?} }}", self.data())
-    }
-}
-#[doc = "Peripheral reset control register"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Flexfrgxctrl6(pub u32);
-impl Flexfrgxctrl6 {
-    #[doc = "Data array value"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn data(&self) -> u32 {
-        let val = (self.0 >> 0usize) & 0xffff_ffff;
-        val as u32
-    }
-    #[doc = "Data array value"]
-    #[inline(always)]
-    pub const fn set_data(&mut self, val: u32) {
-        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
-    }
-}
-impl Default for Flexfrgxctrl6 {
-    #[inline(always)]
-    fn default() -> Flexfrgxctrl6 {
-        Flexfrgxctrl6(0)
-    }
-}
-impl core::fmt::Debug for Flexfrgxctrl6 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Flexfrgxctrl6")
-            .field("data", &self.data())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Flexfrgxctrl6 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Flexfrgxctrl6 {{ data: {=u32:?} }}", self.data())
-    }
-}
-#[doc = "Peripheral reset control register"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Flexfrgxctrl7(pub u32);
-impl Flexfrgxctrl7 {
-    #[doc = "Data array value"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn data(&self) -> u32 {
-        let val = (self.0 >> 0usize) & 0xffff_ffff;
-        val as u32
-    }
-    #[doc = "Data array value"]
-    #[inline(always)]
-    pub const fn set_data(&mut self, val: u32) {
-        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
-    }
-}
-impl Default for Flexfrgxctrl7 {
-    #[inline(always)]
-    fn default() -> Flexfrgxctrl7 {
-        Flexfrgxctrl7(0)
-    }
-}
-impl core::fmt::Debug for Flexfrgxctrl7 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Flexfrgxctrl7")
-            .field("data", &self.data())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Flexfrgxctrl7 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Flexfrgxctrl7 {{ data: {=u32:?} }}", self.data())
+        defmt::write!(f, "Flexfrgxctrl {{ data: {=u32:?} }}", self.data())
     }
 }
 #[doc = "FMC configuration register"]
@@ -6975,98 +5733,18 @@ impl Presetctrl1 {
     #[doc = "FC0 reset control."]
     #[must_use]
     #[inline(always)]
-    pub const fn fc0_rst(&self) -> super::vals::Fc0Rst {
-        let val = (self.0 >> 11usize) & 0x01;
-        super::vals::Fc0Rst::from_bits(val as u8)
+    pub const fn fc_rst(&self, n: usize) -> super::vals::FcRst {
+        assert!(n < 8usize);
+        let offs = 11usize + n * 1usize;
+        let val = (self.0 >> offs) & 0x01;
+        super::vals::FcRst::from_bits(val as u8)
     }
     #[doc = "FC0 reset control."]
     #[inline(always)]
-    pub const fn set_fc0_rst(&mut self, val: super::vals::Fc0Rst) {
-        self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
-    }
-    #[doc = "FC1 reset control."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn fc1_rst(&self) -> super::vals::Fc1Rst {
-        let val = (self.0 >> 12usize) & 0x01;
-        super::vals::Fc1Rst::from_bits(val as u8)
-    }
-    #[doc = "FC1 reset control."]
-    #[inline(always)]
-    pub const fn set_fc1_rst(&mut self, val: super::vals::Fc1Rst) {
-        self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
-    }
-    #[doc = "FC2 reset control."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn fc2_rst(&self) -> super::vals::Fc2Rst {
-        let val = (self.0 >> 13usize) & 0x01;
-        super::vals::Fc2Rst::from_bits(val as u8)
-    }
-    #[doc = "FC2 reset control."]
-    #[inline(always)]
-    pub const fn set_fc2_rst(&mut self, val: super::vals::Fc2Rst) {
-        self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
-    }
-    #[doc = "FC3 reset control."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn fc3_rst(&self) -> super::vals::Fc3Rst {
-        let val = (self.0 >> 14usize) & 0x01;
-        super::vals::Fc3Rst::from_bits(val as u8)
-    }
-    #[doc = "FC3 reset control."]
-    #[inline(always)]
-    pub const fn set_fc3_rst(&mut self, val: super::vals::Fc3Rst) {
-        self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
-    }
-    #[doc = "FC4 reset control."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn fc4_rst(&self) -> super::vals::Fc4Rst {
-        let val = (self.0 >> 15usize) & 0x01;
-        super::vals::Fc4Rst::from_bits(val as u8)
-    }
-    #[doc = "FC4 reset control."]
-    #[inline(always)]
-    pub const fn set_fc4_rst(&mut self, val: super::vals::Fc4Rst) {
-        self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
-    }
-    #[doc = "FC5 reset control."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn fc5_rst(&self) -> super::vals::Fc5Rst {
-        let val = (self.0 >> 16usize) & 0x01;
-        super::vals::Fc5Rst::from_bits(val as u8)
-    }
-    #[doc = "FC5 reset control."]
-    #[inline(always)]
-    pub const fn set_fc5_rst(&mut self, val: super::vals::Fc5Rst) {
-        self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
-    }
-    #[doc = "FC6 reset control."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn fc6_rst(&self) -> super::vals::Fc6Rst {
-        let val = (self.0 >> 17usize) & 0x01;
-        super::vals::Fc6Rst::from_bits(val as u8)
-    }
-    #[doc = "FC6 reset control."]
-    #[inline(always)]
-    pub const fn set_fc6_rst(&mut self, val: super::vals::Fc6Rst) {
-        self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
-    }
-    #[doc = "FC7 reset control."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn fc7_rst(&self) -> super::vals::Fc7Rst {
-        let val = (self.0 >> 18usize) & 0x01;
-        super::vals::Fc7Rst::from_bits(val as u8)
-    }
-    #[doc = "FC7 reset control."]
-    #[inline(always)]
-    pub const fn set_fc7_rst(&mut self, val: super::vals::Fc7Rst) {
-        self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
+    pub const fn set_fc_rst(&mut self, n: usize, val: super::vals::FcRst) {
+        assert!(n < 8usize);
+        let offs = 11usize + n * 1usize;
+        self.0 = (self.0 & !(0x01 << offs)) | (((val.to_bits() as u32) & 0x01) << offs);
     }
     #[doc = "Timer 2 reset control."]
     #[must_use]
@@ -7131,14 +5809,14 @@ impl core::fmt::Debug for Presetctrl1 {
             .field("sct_rst", &self.sct_rst())
             .field("sctipu_rst", &self.sctipu_rst())
             .field("utick_rst", &self.utick_rst())
-            .field("fc0_rst", &self.fc0_rst())
-            .field("fc1_rst", &self.fc1_rst())
-            .field("fc2_rst", &self.fc2_rst())
-            .field("fc3_rst", &self.fc3_rst())
-            .field("fc4_rst", &self.fc4_rst())
-            .field("fc5_rst", &self.fc5_rst())
-            .field("fc6_rst", &self.fc6_rst())
-            .field("fc7_rst", &self.fc7_rst())
+            .field("fc_rst[0]", &self.fc_rst(0usize))
+            .field("fc_rst[1]", &self.fc_rst(1usize))
+            .field("fc_rst[2]", &self.fc_rst(2usize))
+            .field("fc_rst[3]", &self.fc_rst(3usize))
+            .field("fc_rst[4]", &self.fc_rst(4usize))
+            .field("fc_rst[5]", &self.fc_rst(5usize))
+            .field("fc_rst[6]", &self.fc_rst(6usize))
+            .field("fc_rst[7]", &self.fc_rst(7usize))
             .field("timer2_rst", &self.timer2_rst())
             .field("usb0_dev_rst", &self.usb0_dev_rst())
             .field("timer0_rst", &self.timer0_rst())
@@ -7151,20 +5829,20 @@ impl defmt::Format for Presetctrl1 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Presetctrl1 {{ mrt_rst: {:?}, ostimer_rst: {:?}, sct_rst: {:?}, sctipu_rst: {:?}, utick_rst: {:?}, fc0_rst: {:?}, fc1_rst: {:?}, fc2_rst: {:?}, fc3_rst: {:?}, fc4_rst: {:?}, fc5_rst: {:?}, fc6_rst: {:?}, fc7_rst: {:?}, timer2_rst: {:?}, usb0_dev_rst: {:?}, timer0_rst: {:?}, timer1_rst: {:?} }}",
+            "Presetctrl1 {{ mrt_rst: {:?}, ostimer_rst: {:?}, sct_rst: {:?}, sctipu_rst: {:?}, utick_rst: {:?}, fc_rst[0]: {:?}, fc_rst[1]: {:?}, fc_rst[2]: {:?}, fc_rst[3]: {:?}, fc_rst[4]: {:?}, fc_rst[5]: {:?}, fc_rst[6]: {:?}, fc_rst[7]: {:?}, timer2_rst: {:?}, usb0_dev_rst: {:?}, timer0_rst: {:?}, timer1_rst: {:?} }}",
             self.mrt_rst(),
             self.ostimer_rst(),
             self.sct_rst(),
             self.sctipu_rst(),
             self.utick_rst(),
-            self.fc0_rst(),
-            self.fc1_rst(),
-            self.fc2_rst(),
-            self.fc3_rst(),
-            self.fc4_rst(),
-            self.fc5_rst(),
-            self.fc6_rst(),
-            self.fc7_rst(),
+            self.fc_rst(0usize),
+            self.fc_rst(1usize),
+            self.fc_rst(2usize),
+            self.fc_rst(3usize),
+            self.fc_rst(4usize),
+            self.fc_rst(5usize),
+            self.fc_rst(6usize),
+            self.fc_rst(7usize),
             self.timer2_rst(),
             self.usb0_dev_rst(),
             self.timer0_rst(),

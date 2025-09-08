@@ -17,22 +17,22 @@ impl CrcEngine {
     #[doc = "CRC mode register"]
     #[inline(always)]
     pub const fn mode(self) -> crate::common::Reg<regs::Mode, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
     #[doc = "CRC seed register"]
     #[inline(always)]
     pub const fn seed(self) -> crate::common::Reg<regs::Seed, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
     }
     #[doc = "CRC checksum register"]
     #[inline(always)]
     pub const fn sum(self) -> crate::common::Reg<regs::Sum, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
     }
     #[doc = "CRC data register"]
     #[inline(always)]
     pub const fn wr_data(self) -> crate::common::Reg<regs::WrData, crate::common::W> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
     }
 }
 pub mod regs;

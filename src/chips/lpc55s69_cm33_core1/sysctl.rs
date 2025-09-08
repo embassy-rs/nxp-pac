@@ -17,7 +17,7 @@ impl Sysctl {
     #[doc = "update lock out control"]
     #[inline(always)]
     pub const fn updatelckout(self) -> crate::common::Reg<regs::Updatelckout, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
     #[doc = "Selects the source for SCK going into Flexcomm index"]
     #[inline(always)]
@@ -26,7 +26,7 @@ impl Sysctl {
         n: usize,
     ) -> crate::common::Reg<regs::Fcctrlsel, crate::common::RW> {
         assert!(n < 8usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x40usize + n * 4usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x40usize + n * 4usize) as _) }
     }
     #[doc = "Selects sources and data combinations for shared signal set index."]
     #[inline(always)]
@@ -35,12 +35,12 @@ impl Sysctl {
         n: usize,
     ) -> crate::common::Reg<regs::Sharedctrlset, crate::common::RW> {
         assert!(n < 2usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x80usize + n * 4usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x80usize + n * 4usize) as _) }
     }
     #[doc = "Status register for USB HS"]
     #[inline(always)]
     pub const fn usb_hs_status(self) -> crate::common::Reg<regs::UsbHsStatus, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0100usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0100usize) as _) }
     }
 }
 pub mod regs;

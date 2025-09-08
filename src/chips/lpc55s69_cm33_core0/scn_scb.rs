@@ -17,7 +17,7 @@ impl ScnScb {
     #[doc = "Coprocessor Power Control Register"]
     #[inline(always)]
     pub const fn cppwr(self) -> crate::common::Reg<regs::Cppwr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
     }
 }
 pub mod regs;

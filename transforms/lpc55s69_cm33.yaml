@@ -94,3 +94,115 @@ transforms:
   - !Delete
     from: syscon::regs::Presetctrlx\d
 
+  - !MergeEnums
+    from: iocon::vals::Pio\d+Asw
+    to: iocon::vals::PioAsw
+  - !MergeEnums
+    from: iocon::vals::Pio\d+Digimode
+    to: iocon::vals::PioDigimode
+  - !MergeEnums
+    from: iocon::vals::Pio\d+Func
+    to: iocon::vals::PioFunc
+  - !MergeEnums
+    from: iocon::vals::Pio\d+Mode
+    to: iocon::vals::PioMode
+  - !MergeEnums
+    from: iocon::vals::Pio\d+Od
+    to: iocon::vals::PioOd
+  - !MergeEnums
+    from: iocon::vals::Pio\d+Slew
+    to: iocon::vals::PioSlew
+  - !MergeEnums
+    from: iocon::vals::Pio\d+Ssel
+    to: iocon::vals::PioSsel
+  - !MergeEnums
+    from: iocon::vals::Pio\d+I2cfilter
+    to: iocon::vals::PioI2cfilter
+  - !MergeEnums
+    from: iocon::vals::Pio\d+Filteroff
+    to: iocon::vals::PioFilteroff
+  - !MergeEnums
+    from: iocon::vals::Pio\d+Egp
+    to: iocon::vals::PioEgp
+
+  - !MakeRegisterArray
+    blocks: iocon::Iocon
+    from: pio0_\d+
+    to: pio0
+  - !MakeRegisterArray
+    blocks: iocon::Iocon
+    from: pio1_\d+
+    to: pio1
+  
+  - !MergeFieldsets
+    from: iocon::regs::Pio\d+
+    to: iocon::regs::Pio
+    main: iocon::regs::Pio013
+    check: NoCheck
+
+  - !AddFields
+    fieldset: iocon::regs::Pio
+    fields:
+      - name: asw
+        description: "Analog switch input control."
+        bit_offset: 10
+        bit_size: 1
+        enum: iocon::vals::PioAsw
+
+  - !MergeEnums
+    from: syscon::vals::Fc\dRst
+    to: syscon::vals::FcRst
+  - !MergeEnums
+    from: syscon::vals::Fcclksel\dSel
+    to: syscon::vals::FcclkselSel
+
+  - !MakeRegisterArray
+    blocks: syscon::Syscon
+    from: fcclksel\d
+    to: fcclksel
+  - !MergeFieldsets
+    from: syscon::regs::Fcclksel\d
+    to: syscon::regs::Fcclksel
+
+  - !MakeRegisterArray
+    blocks: syscon::Syscon
+    from: flexfrg\dctrl    
+    to: flexfrgctrl  
+  - !MergeFieldsets
+    from: syscon::regs::Flexfrg\dctrl
+    to: syscon::regs::Flexfrgctrl 
+
+  - !MakeRegisterArray
+    blocks: syscon::Syscon
+    from: fcclkselx\d
+    to: fcckkselx
+  - !MergeFieldsets
+    from: syscon::regs::Fcclkselx\d
+    to: syscon::regs::Fcclkselx
+    
+
+  - !MakeRegisterArray
+    blocks: syscon::Syscon
+    from: flexfrgxctrl\d
+    to: flexfrgxctrl
+  - !MergeFieldsets
+    from: syscon::regs::Flexfrgxctrl\d
+    to: syscon::regs::Flexfrgxctrl
+
+  - !MakeFieldArray
+    fieldsets: syscon::regs::Presetctrl1
+    from: fc\d_rst
+    to: fc_rst
+  - !MakeFieldArray
+    fieldsets: syscon::regs::Presetctrl1
+    from: set_fc\d_rst
+    to: set_fc_rst
+
+  - !MakeFieldArray
+      fieldsets: syscon::regs::Ahbclkctrl1
+      from: fc\d
+      to: fc
+  - !MakeFieldArray
+      fieldsets: syscon::regs::Ahbclkctrl1
+      from: set_fc\d
+      to: set_fc
