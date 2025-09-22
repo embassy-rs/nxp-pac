@@ -165,323 +165,35 @@ impl Sct0 {
     }
     #[doc = "SCT capture register of capture channel"]
     #[inline(always)]
-    pub const fn cap0(self) -> crate::common::Reg<regs::Cap0, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0100usize) as _) }
+    pub const fn cap(self, n: usize) -> crate::common::Reg<regs::Cap, crate::common::RW> {
+        assert!(n < 16usize);
+        unsafe {
+            crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0100usize + n * 4usize) as _)
+        }
     }
     #[doc = "SCT match value register of match channels"]
     #[inline(always)]
-    pub const fn match0(self) -> crate::common::Reg<regs::Match0, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0100usize) as _) }
-    }
-    #[doc = "SCT capture register of capture channel"]
-    #[inline(always)]
-    pub const fn cap1(self) -> crate::common::Reg<regs::Cap1, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0104usize) as _) }
-    }
-    #[doc = "SCT match value register of match channels"]
-    #[inline(always)]
-    pub const fn match1(self) -> crate::common::Reg<regs::Match1, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0104usize) as _) }
-    }
-    #[doc = "SCT capture register of capture channel"]
-    #[inline(always)]
-    pub const fn cap2(self) -> crate::common::Reg<regs::Cap2, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0108usize) as _) }
-    }
-    #[doc = "SCT match value register of match channels"]
-    #[inline(always)]
-    pub const fn match2(self) -> crate::common::Reg<regs::Match2, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0108usize) as _) }
-    }
-    #[doc = "SCT capture register of capture channel"]
-    #[inline(always)]
-    pub const fn cap3(self) -> crate::common::Reg<regs::Cap3, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x010cusize) as _) }
-    }
-    #[doc = "SCT match value register of match channels"]
-    #[inline(always)]
-    pub const fn match3(self) -> crate::common::Reg<regs::Match3, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x010cusize) as _) }
-    }
-    #[doc = "SCT capture register of capture channel"]
-    #[inline(always)]
-    pub const fn cap4(self) -> crate::common::Reg<regs::Cap4, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0110usize) as _) }
-    }
-    #[doc = "SCT match value register of match channels"]
-    #[inline(always)]
-    pub const fn match4(self) -> crate::common::Reg<regs::Match4, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0110usize) as _) }
-    }
-    #[doc = "SCT capture register of capture channel"]
-    #[inline(always)]
-    pub const fn cap5(self) -> crate::common::Reg<regs::Cap5, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0114usize) as _) }
-    }
-    #[doc = "SCT match value register of match channels"]
-    #[inline(always)]
-    pub const fn match5(self) -> crate::common::Reg<regs::Match5, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0114usize) as _) }
-    }
-    #[doc = "SCT capture register of capture channel"]
-    #[inline(always)]
-    pub const fn cap6(self) -> crate::common::Reg<regs::Cap6, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0118usize) as _) }
-    }
-    #[doc = "SCT match value register of match channels"]
-    #[inline(always)]
-    pub const fn match6(self) -> crate::common::Reg<regs::Match6, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0118usize) as _) }
-    }
-    #[doc = "SCT capture register of capture channel"]
-    #[inline(always)]
-    pub const fn cap7(self) -> crate::common::Reg<regs::Cap7, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x011cusize) as _) }
-    }
-    #[doc = "SCT match value register of match channels"]
-    #[inline(always)]
-    pub const fn match7(self) -> crate::common::Reg<regs::Match7, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x011cusize) as _) }
-    }
-    #[doc = "SCT capture register of capture channel"]
-    #[inline(always)]
-    pub const fn cap8(self) -> crate::common::Reg<regs::Cap8, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0120usize) as _) }
-    }
-    #[doc = "SCT match value register of match channels"]
-    #[inline(always)]
-    pub const fn match8(self) -> crate::common::Reg<regs::Match8, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0120usize) as _) }
-    }
-    #[doc = "SCT capture register of capture channel"]
-    #[inline(always)]
-    pub const fn cap9(self) -> crate::common::Reg<regs::Cap9, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0124usize) as _) }
-    }
-    #[doc = "SCT match value register of match channels"]
-    #[inline(always)]
-    pub const fn match9(self) -> crate::common::Reg<regs::Match9, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0124usize) as _) }
-    }
-    #[doc = "SCT capture register of capture channel"]
-    #[inline(always)]
-    pub const fn cap10(self) -> crate::common::Reg<regs::Cap10, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0128usize) as _) }
-    }
-    #[doc = "SCT match value register of match channels"]
-    #[inline(always)]
-    pub const fn match10(self) -> crate::common::Reg<regs::Match10, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0128usize) as _) }
-    }
-    #[doc = "SCT capture register of capture channel"]
-    #[inline(always)]
-    pub const fn cap11(self) -> crate::common::Reg<regs::Cap11, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x012cusize) as _) }
-    }
-    #[doc = "SCT match value register of match channels"]
-    #[inline(always)]
-    pub const fn match11(self) -> crate::common::Reg<regs::Match11, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x012cusize) as _) }
-    }
-    #[doc = "SCT capture register of capture channel"]
-    #[inline(always)]
-    pub const fn cap12(self) -> crate::common::Reg<regs::Cap12, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0130usize) as _) }
-    }
-    #[doc = "SCT match value register of match channels"]
-    #[inline(always)]
-    pub const fn match12(self) -> crate::common::Reg<regs::Match12, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0130usize) as _) }
-    }
-    #[doc = "SCT capture register of capture channel"]
-    #[inline(always)]
-    pub const fn cap13(self) -> crate::common::Reg<regs::Cap13, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0134usize) as _) }
-    }
-    #[doc = "SCT match value register of match channels"]
-    #[inline(always)]
-    pub const fn match13(self) -> crate::common::Reg<regs::Match13, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0134usize) as _) }
-    }
-    #[doc = "SCT capture register of capture channel"]
-    #[inline(always)]
-    pub const fn cap14(self) -> crate::common::Reg<regs::Cap14, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0138usize) as _) }
-    }
-    #[doc = "SCT match value register of match channels"]
-    #[inline(always)]
-    pub const fn match14(self) -> crate::common::Reg<regs::Match14, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0138usize) as _) }
-    }
-    #[doc = "SCT capture register of capture channel"]
-    #[inline(always)]
-    pub const fn cap15(self) -> crate::common::Reg<regs::Cap15, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x013cusize) as _) }
-    }
-    #[doc = "SCT match value register of match channels"]
-    #[inline(always)]
-    pub const fn match15(self) -> crate::common::Reg<regs::Match15, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x013cusize) as _) }
+    pub const fn match_(self, n: usize) -> crate::common::Reg<regs::Match, crate::common::RW> {
+        assert!(n < 16usize);
+        unsafe {
+            crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0100usize + n * 4usize) as _)
+        }
     }
     #[doc = "SCT capture control register"]
     #[inline(always)]
-    pub const fn capctrl0(self) -> crate::common::Reg<regs::Capctrl0, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0200usize) as _) }
+    pub const fn capctrl(self, n: usize) -> crate::common::Reg<regs::Capctrl, crate::common::RW> {
+        assert!(n < 16usize);
+        unsafe {
+            crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0200usize + n * 4usize) as _)
+        }
     }
     #[doc = "SCT match reload value register"]
     #[inline(always)]
-    pub const fn matchrel0(self) -> crate::common::Reg<regs::Matchrel0, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0200usize) as _) }
-    }
-    #[doc = "SCT capture control register"]
-    #[inline(always)]
-    pub const fn capctrl1(self) -> crate::common::Reg<regs::Capctrl1, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0204usize) as _) }
-    }
-    #[doc = "SCT match reload value register"]
-    #[inline(always)]
-    pub const fn matchrel1(self) -> crate::common::Reg<regs::Matchrel1, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0204usize) as _) }
-    }
-    #[doc = "SCT capture control register"]
-    #[inline(always)]
-    pub const fn capctrl2(self) -> crate::common::Reg<regs::Capctrl2, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0208usize) as _) }
-    }
-    #[doc = "SCT match reload value register"]
-    #[inline(always)]
-    pub const fn matchrel2(self) -> crate::common::Reg<regs::Matchrel2, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0208usize) as _) }
-    }
-    #[doc = "SCT capture control register"]
-    #[inline(always)]
-    pub const fn capctrl3(self) -> crate::common::Reg<regs::Capctrl3, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x020cusize) as _) }
-    }
-    #[doc = "SCT match reload value register"]
-    #[inline(always)]
-    pub const fn matchrel3(self) -> crate::common::Reg<regs::Matchrel3, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x020cusize) as _) }
-    }
-    #[doc = "SCT capture control register"]
-    #[inline(always)]
-    pub const fn capctrl4(self) -> crate::common::Reg<regs::Capctrl4, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0210usize) as _) }
-    }
-    #[doc = "SCT match reload value register"]
-    #[inline(always)]
-    pub const fn matchrel4(self) -> crate::common::Reg<regs::Matchrel4, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0210usize) as _) }
-    }
-    #[doc = "SCT capture control register"]
-    #[inline(always)]
-    pub const fn capctrl5(self) -> crate::common::Reg<regs::Capctrl5, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0214usize) as _) }
-    }
-    #[doc = "SCT match reload value register"]
-    #[inline(always)]
-    pub const fn matchrel5(self) -> crate::common::Reg<regs::Matchrel5, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0214usize) as _) }
-    }
-    #[doc = "SCT capture control register"]
-    #[inline(always)]
-    pub const fn capctrl6(self) -> crate::common::Reg<regs::Capctrl6, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0218usize) as _) }
-    }
-    #[doc = "SCT match reload value register"]
-    #[inline(always)]
-    pub const fn matchrel6(self) -> crate::common::Reg<regs::Matchrel6, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0218usize) as _) }
-    }
-    #[doc = "SCT capture control register"]
-    #[inline(always)]
-    pub const fn capctrl7(self) -> crate::common::Reg<regs::Capctrl7, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x021cusize) as _) }
-    }
-    #[doc = "SCT match reload value register"]
-    #[inline(always)]
-    pub const fn matchrel7(self) -> crate::common::Reg<regs::Matchrel7, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x021cusize) as _) }
-    }
-    #[doc = "SCT capture control register"]
-    #[inline(always)]
-    pub const fn capctrl8(self) -> crate::common::Reg<regs::Capctrl8, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0220usize) as _) }
-    }
-    #[doc = "SCT match reload value register"]
-    #[inline(always)]
-    pub const fn matchrel8(self) -> crate::common::Reg<regs::Matchrel8, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0220usize) as _) }
-    }
-    #[doc = "SCT capture control register"]
-    #[inline(always)]
-    pub const fn capctrl9(self) -> crate::common::Reg<regs::Capctrl9, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0224usize) as _) }
-    }
-    #[doc = "SCT match reload value register"]
-    #[inline(always)]
-    pub const fn matchrel9(self) -> crate::common::Reg<regs::Matchrel9, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0224usize) as _) }
-    }
-    #[doc = "SCT capture control register"]
-    #[inline(always)]
-    pub const fn capctrl10(self) -> crate::common::Reg<regs::Capctrl10, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0228usize) as _) }
-    }
-    #[doc = "SCT match reload value register"]
-    #[inline(always)]
-    pub const fn matchrel10(self) -> crate::common::Reg<regs::Matchrel10, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0228usize) as _) }
-    }
-    #[doc = "SCT capture control register"]
-    #[inline(always)]
-    pub const fn capctrl11(self) -> crate::common::Reg<regs::Capctrl11, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x022cusize) as _) }
-    }
-    #[doc = "SCT match reload value register"]
-    #[inline(always)]
-    pub const fn matchrel11(self) -> crate::common::Reg<regs::Matchrel11, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x022cusize) as _) }
-    }
-    #[doc = "SCT capture control register"]
-    #[inline(always)]
-    pub const fn capctrl12(self) -> crate::common::Reg<regs::Capctrl12, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0230usize) as _) }
-    }
-    #[doc = "SCT match reload value register"]
-    #[inline(always)]
-    pub const fn matchrel12(self) -> crate::common::Reg<regs::Matchrel12, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0230usize) as _) }
-    }
-    #[doc = "SCT capture control register"]
-    #[inline(always)]
-    pub const fn capctrl13(self) -> crate::common::Reg<regs::Capctrl13, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0234usize) as _) }
-    }
-    #[doc = "SCT match reload value register"]
-    #[inline(always)]
-    pub const fn matchrel13(self) -> crate::common::Reg<regs::Matchrel13, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0234usize) as _) }
-    }
-    #[doc = "SCT capture control register"]
-    #[inline(always)]
-    pub const fn capctrl14(self) -> crate::common::Reg<regs::Capctrl14, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0238usize) as _) }
-    }
-    #[doc = "SCT match reload value register"]
-    #[inline(always)]
-    pub const fn matchrel14(self) -> crate::common::Reg<regs::Matchrel14, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0238usize) as _) }
-    }
-    #[doc = "SCT capture control register"]
-    #[inline(always)]
-    pub const fn capctrl15(self) -> crate::common::Reg<regs::Capctrl15, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x023cusize) as _) }
-    }
-    #[doc = "SCT match reload value register"]
-    #[inline(always)]
-    pub const fn matchrel15(self) -> crate::common::Reg<regs::Matchrel15, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x023cusize) as _) }
+    pub const fn matchrel(self, n: usize) -> crate::common::Reg<regs::Matchrel, crate::common::RW> {
+        assert!(n < 16usize);
+        unsafe {
+            crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0200usize + n * 4usize) as _)
+        }
     }
     #[doc = "no description available"]
     #[inline(always)]
