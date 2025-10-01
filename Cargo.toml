@@ -1,5 +1,9 @@
 [workspace]
-members = [ "generator" ]
+members = [ "generator", "metadata-generator" ]
+
+[profile.dev]
+# the generator runs noticeably faster (10s instead of 100s) with some light optimization enabled.
+opt-level = 1
 
 [package]
 name = "nxp-pac"
