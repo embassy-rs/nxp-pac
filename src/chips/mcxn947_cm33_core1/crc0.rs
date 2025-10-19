@@ -17,17 +17,17 @@ impl Crc0 {
     #[doc = "Data"]
     #[inline(always)]
     pub const fn data(self) -> crate::common::Reg<regs::Data, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
     #[doc = "Polynomial"]
     #[inline(always)]
     pub const fn gpoly(self) -> crate::common::Reg<regs::Gpoly, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
     }
     #[doc = "Control"]
     #[inline(always)]
     pub const fn ctrl(self) -> crate::common::Reg<regs::Ctrl, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
     }
 }
 pub mod regs;

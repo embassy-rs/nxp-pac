@@ -17,23 +17,23 @@ impl Fmu0 {
     #[doc = "Flash Status Register"]
     #[inline(always)]
     pub const fn fstat(self) -> crate::common::Reg<regs::Fstat, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
     #[doc = "Flash Configuration Register"]
     #[inline(always)]
     pub const fn fcnfg(self) -> crate::common::Reg<regs::Fcnfg, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
     }
     #[doc = "Flash Control Register"]
     #[inline(always)]
     pub const fn fctrl(self) -> crate::common::Reg<regs::Fctrl, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
     }
     #[doc = "Flash Common Command Object Registers"]
     #[inline(always)]
     pub const fn fccob(self, n: usize) -> crate::common::Reg<regs::Fccob, crate::common::RW> {
         assert!(n < 8usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x10usize + n * 4usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize + n * 4usize) as _) }
     }
 }
 pub mod regs;

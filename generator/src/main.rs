@@ -12,7 +12,6 @@
 //! cargo run -p generator -- MIMXRT1011
 //! ```
 
-mod iomuxc;
 mod metadata;
 mod pac;
 
@@ -29,6 +28,9 @@ struct Feature {
     /// The name of the chip to generate.
     chip: &'static str,
 
+    /// Metadata file for this chip.
+    metadata: &'static str,
+
     /// Cores to generate. If the chip has a single core, then this is the same as the
     /// [`name`](Feature::name) of the chip.
     cores: &'static [&'static str],
@@ -37,13 +39,15 @@ struct Feature {
 /// Parts (and cores) to generate.
 #[rustfmt::skip]
 const GENERATE: &[Feature] = &[
-    Feature { chip: "MIMXRT1011", cores: &["MIMXRT1011"] },
-    Feature { chip: "MIMXRT1062", cores: &["MIMXRT1062"] },
-    Feature { chip: "MIMXRT685S", cores: &["MIMXRT685S_cm33"] },
-    
-    Feature { chip: "LPC55S69", cores: &["LPC55S69_cm33_core0", "LPC55S69_cm33_core1"] },
-    
-    Feature { chip: "MCXN947", cores: &["MCXN947_cm33_core0", "MCXN947_cm33_core1"]}
+    Feature { chip: "MIMXRT1011", metadata: "MIMXRT1011", cores: &["MIMXRT1011"] },
+    Feature { chip: "MIMXRT1062", metadata: "MIMXRT106x", cores: &["MIMXRT1062"] },
+    // TODO: metadata
+    Feature { chip: "MIMXRT685S", metadata: "", cores: &["MIMXRT685S_cm33"] },
+
+    Feature { chip: "LPC55S69", metadata: "LPC55S6x", cores: &["LPC55S69_cm33_core0", "LPC55S69_cm33_core1"] },
+
+    // TODO: metadata
+    Feature { chip: "MCXN947", metadata: "", cores: &["MCXN947_cm33_core0", "MCXN947_cm33_core1"]}
 ];
 
 fn main() -> anyhow::Result<()> {
@@ -115,6 +119,7 @@ fn generate_chip(current_dir: &Path, feature: &Feature) -> anyhow::Result<()> {
         .join("data")
         .join("mcux-soc-svd")
         .join(feature.chip);
+    let metadata_dir = current_dir.join("data").join("metadata");
 
     for core in feature.cores {
         let svd = chip_src_dir.join(core).with_extension("xml");
@@ -123,7 +128,17 @@ fn generate_chip(current_dir: &Path, feature: &Feature) -> anyhow::Result<()> {
 
         println!("Generating {}/{}", feature.chip, core);
         pac::generate_core(&svd, &chips_dir, &transforms_dir, &core).context("Generating PAC")?;
-        metadata::generate_core(&svd, &chips_dir, &core).context("Generating metadata")?;
+
+        // TODO: MCXN947 metadata to remove this hack
+        if !feature.metadata.is_empty() {
+            metadata::generate_core(
+                &chips_dir,
+                &svd,
+                &metadata_dir.join(feature.metadata).with_extension("json"),
+                &core,
+            )
+            .context("Generating metadata")?;
+        }
     }
 
     Ok(())

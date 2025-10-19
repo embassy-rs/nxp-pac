@@ -14,4 +14,46 @@
 )]
 mod _generated;
 
+pub struct Metadata {
+    pub name: &'static str,
+    pub pins: &'static [Pin],
+    pub peripherals: &'static [Peripheral],
+    pub interrupts: &'static [&'static str],
+}
+
+pub struct Pin {
+    pub name: &'static str,
+    pub iomuxc: Option<PinIomuxc>,
+}
+
+pub struct PinIomuxc {
+    pub mux: Option<u32>,
+    pub pad: u32,
+}
+
+pub struct Peripheral {
+    pub name: &'static str,
+    pub signals: &'static [Signal],
+    pub flexcomm: Option<&'static str>,
+    pub dma_muxing: &'static [DmaMux],
+}
+
+pub struct Signal {
+    pub name: &'static str,
+    pub pins: &'static [SignalPin],
+    pub iomuxc_daisy: Option<u32>,
+}
+
+pub struct SignalPin {
+    pub pin: &'static str,
+    pub alt: u8,
+    pub iomuxc_daisy: Option<u8>,
+}
+
+pub struct DmaMux {
+    pub signal: &'static str,
+    pub mux: &'static str,
+    pub request: u8,
+}
+
 pub use _generated::*;

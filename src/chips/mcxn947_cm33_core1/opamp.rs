@@ -17,17 +17,17 @@ impl Opamp {
     #[doc = "Version ID"]
     #[inline(always)]
     pub const fn verid(self) -> crate::common::Reg<regs::Verid, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
     #[doc = "Parameter"]
     #[inline(always)]
     pub const fn param(self) -> crate::common::Reg<regs::Param, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
     }
     #[doc = "OPAMP Control"]
     #[inline(always)]
     pub const fn opamp_ctr(self) -> crate::common::Reg<regs::OpampCtr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
     }
 }
 pub mod regs;

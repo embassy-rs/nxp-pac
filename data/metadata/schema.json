@@ -1,0 +1,175 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://embassy.dev/schema/nxp_metadata.json",
+  "title": "NXP PAC metadata",
+  "description": "Schema to define NXP PAC chip metadata",
+  "type": "object",
+  "properties": {
+    "chips": {
+      "description": "Chip part numbers provided by this definition",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "pins": { "$ref": "#/$defs/pins" },
+    "peripherals": { "$ref": "#/$defs/peripherals" }
+  },
+  "required": [
+    "chips",
+    "pins",
+    "peripherals"
+  ],
+  "$defs": {
+    "pins": {
+      "description": "Chip pins",
+      "type": "array",
+      "items": { "$ref": "#/$defs/pin" }
+    },
+    "pin": {
+      "description": "Pin provided on a chip. This does not include power pins.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "Package pin name.",
+          "type": "string"
+        },
+        "supply": {
+          "description": "The name of the power domain a pin belongs to.",
+          "type": "string"
+        },
+        "iomuxc": {
+          "description": "IOMUXC metadata for the pin. Not allowed if the chip isn't an RT1xxx family device",
+          "$ref": "#/$defs/iomuxc"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "additionalProperties": false
+    },
+    "iomuxc": {
+      "description": "IOMUXC information for a pin",
+      "type": "object",
+      "properties": {
+        "mux": {
+          "description": "MUX register address. Hexadecimal value",
+          "type": "string"
+        },
+        "pad": {
+          "description": "PAD register address. Hexadecimal value",
+          "type": "string"
+        }
+      }
+    },
+    "peripherals": {
+      "description": "Chip peripherals",
+      "type": "array",
+      "items": { "$ref": "#/$defs/peripheral" }
+    },
+    "peripheral": {
+      "description": "Peripheral",
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "Peripheral name",
+          "type": "string"
+        },
+        "signals": {
+          "description": "Signals provided by this peripheral",
+          "type": "array",
+          "items": { "$ref": "#/$defs/signal" }
+        },
+        "flexcomm": {
+          "description": "Indicates which (LP)FLEXCOMM instance this peripheral belongs to. Optional if the chip does not have FLEXCOMM instances, or the peripheral does not belong to FLEXCOMM",
+          "type": "string"
+        },
+        "dma_muxing": {
+          "description": [
+            "DMA muxing peripheral signals.",
+            "This is chip dependent.",
+            "LPC55 uses fixed DMA channels for peripherals.",
+            "RT1xxx, S32 and MCX use the DMA mux to select the request channel for a peripheral"
+          ],
+          "items": { "$ref": "#/$defs/dma_mux" }
+        },
+        "only_in": {
+          "description": "A regular expression to specify which chips this peripheral is available for. This can be used to define a superset chip and share most mappings with subset chips",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "signals"
+      ]
+    },
+    "signal": {
+      "description": "Signal provided by a peripheral",
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "Signal name",
+          "type": "string"
+        },
+        "pins": {
+          "description": "Pins where the signal is available",
+          "type": "array",
+          "items": { "$ref": "#/$defs/peripheral_pin" }
+        },
+        "iomuxc_daisy": {
+          "description": "IOMUXC Daisy register used for this signal. Depending on the signal this may be optional. Only allowed on RT1xxx devices. Hexadecimal value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "pins"
+      ]
+    },
+    "peripheral_pin": {
+      "description": "Pin where a peripheral signal is available",
+      "type": "object",
+      "properties": {
+        "pin": {
+          "description": "Pin where signal is available",
+          "type": "string"
+        },
+        "alt": {
+          "description": "Alt mode the pin must be placed into.",
+          "type": "integer"
+        },
+        "iomuxc_daisy": {
+          "description": "Daisy value to write to select this pin for the signal. Only allowed when the signal has a iomuxc_daisy value.",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "pin",
+        "alt"
+      ]
+    },
+    "dma_mux": {
+      "description": "A DMA mux selection for a peripheral.",
+      "type": "object",
+      "properties": {
+        "signal": {
+          "description": "The signal being muxed for the peripheral.",
+          "type": "string"
+        },
+        "mux": {
+          "description": "The DMA mux to use. For LPC55, this is the DMA instance to use. For others, the DMAMUX peripheral instance",
+          "type": "string"
+        },
+        "request": {
+          "description": "The request channel this signal is attached to.",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "signal",
+        "mux",
+        "request"
+      ]
+    }
+  }
+}

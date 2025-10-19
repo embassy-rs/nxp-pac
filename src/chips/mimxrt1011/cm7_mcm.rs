@@ -17,7 +17,7 @@ impl Cm7Mcm {
     #[doc = "Interrupt Status and Control Register"]
     #[inline(always)]
     pub const fn iscr(self) -> crate::common::Reg<regs::Iscr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x10usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize) as _) }
     }
 }
 pub mod regs;

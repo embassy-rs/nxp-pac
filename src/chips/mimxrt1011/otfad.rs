@@ -18,23 +18,23 @@ impl Ctx {
     #[inline(always)]
     pub const fn ctx_key(self, n: usize) -> crate::common::Reg<regs::CtxKey, crate::common::RW> {
         assert!(n < 4usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize + n * 4usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize + n * 4usize) as _) }
     }
     #[doc = "AES Counter Word"]
     #[inline(always)]
     pub const fn ctx_ctr(self, n: usize) -> crate::common::Reg<regs::CtxCtr, crate::common::RW> {
         assert!(n < 2usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x10usize + n * 4usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize + n * 4usize) as _) }
     }
     #[doc = "AES Region Descriptor Word0"]
     #[inline(always)]
     pub const fn ctx_rgd_w0(self) -> crate::common::Reg<regs::CtxRgdW0, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x18usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x18usize) as _) }
     }
     #[doc = "AES Region Descriptor Word1"]
     #[inline(always)]
     pub const fn ctx_rgd_w1(self) -> crate::common::Reg<regs::CtxRgdW1, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x1cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x1cusize) as _) }
     }
 }
 #[doc = "OTFAD"]
@@ -56,18 +56,18 @@ impl Otfad {
     #[doc = "Control Register"]
     #[inline(always)]
     pub const fn cr(self) -> crate::common::Reg<regs::Cr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0c00usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0c00usize) as _) }
     }
     #[doc = "Status Register"]
     #[inline(always)]
     pub const fn sr(self) -> crate::common::Reg<regs::Sr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0c04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0c04usize) as _) }
     }
     #[doc = "no description available"]
     #[inline(always)]
     pub const fn ctx(self, n: usize) -> Ctx {
         assert!(n < 4usize);
-        unsafe { Ctx::from_ptr(self.ptr.add(0x0d00usize + n * 64usize) as _) }
+        unsafe { Ctx::from_ptr(self.ptr.wrapping_add(0x0d00usize + n * 64usize) as _) }
     }
 }
 pub mod regs;

@@ -17,17 +17,17 @@ impl Irq {
     #[doc = "name (CPUn) Interrupt"]
     #[inline(always)]
     pub const fn irq(self) -> crate::common::Reg<regs::Irq, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
     #[doc = "name (CPUn) Interrupt Set"]
     #[inline(always)]
     pub const fn irqset(self) -> crate::common::Reg<regs::Irqset, crate::common::W> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
     }
     #[doc = "name (CPUn) Interrupt Clear"]
     #[inline(always)]
     pub const fn irqclr(self) -> crate::common::Reg<regs::Irqclr, crate::common::W> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
     }
 }
 #[doc = "MAILBOX"]
@@ -50,12 +50,12 @@ impl Mailbox {
     #[inline(always)]
     pub const fn irq(self, n: usize) -> Irq {
         assert!(n < 2usize);
-        unsafe { Irq::from_ptr(self.ptr.add(0x0usize + n * 16usize) as _) }
+        unsafe { Irq::from_ptr(self.ptr.wrapping_add(0x0usize + n * 16usize) as _) }
     }
     #[doc = "Mutual Exclusion"]
     #[inline(always)]
     pub const fn mutex(self) -> crate::common::Reg<regs::Mutex, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xf8usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xf8usize) as _) }
     }
 }
 pub mod regs;

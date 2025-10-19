@@ -17,27 +17,27 @@ impl Wdog {
     #[doc = "Watchdog Control Register"]
     #[inline(always)]
     pub const fn wcr(self) -> crate::common::Reg<regs::Wcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
     #[doc = "Watchdog Service Register"]
     #[inline(always)]
     pub const fn wsr(self) -> crate::common::Reg<regs::Wsr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x02usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x02usize) as _) }
     }
     #[doc = "Watchdog Reset Status Register"]
     #[inline(always)]
     pub const fn wrsr(self) -> crate::common::Reg<regs::Wrsr, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
     }
     #[doc = "Watchdog Interrupt Control Register"]
     #[inline(always)]
     pub const fn wicr(self) -> crate::common::Reg<regs::Wicr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x06usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x06usize) as _) }
     }
     #[doc = "Watchdog Miscellaneous Control Register"]
     #[inline(always)]
     pub const fn wmcr(self) -> crate::common::Reg<regs::Wmcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
     }
 }
 pub mod regs;

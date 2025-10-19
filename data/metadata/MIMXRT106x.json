@@ -1,0 +1,867 @@
+{
+  "$schema": "./schema.json",
+  "$comment": [
+    "1061 has no LCD, CSI or PXP.",
+    "GPIO_SPI_* pins only available on the 225 pin package",
+    "TODO: A, D, F, P and V variants?"
+  ],
+  "chips": [ "MIMXRT1061", "MIMXRT1062" ],
+  "pins": [
+    { "name": "GPIO_AD_B0_00", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F80BC", "pad": "0x401F82AC" } },
+    { "name": "GPIO_AD_B0_01", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F80C0", "pad": "0x401F82B0" } },
+    { "name": "GPIO_AD_B0_02", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F80C4", "pad": "0x401F82B4" } },
+    { "name": "GPIO_AD_B0_03", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F80C8", "pad": "0x401F82B8" } },
+    { "name": "GPIO_AD_B0_04", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F80CC", "pad": "0x401F82BC" } },
+    { "name": "GPIO_AD_B0_05", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F80D0", "pad": "0x401F82C0" } },
+    { "name": "GPIO_AD_B0_06", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F80D4", "pad": "0x401F82C4" } },
+    { "name": "GPIO_AD_B0_07", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F80D8", "pad": "0x401F82C8" } },
+    { "name": "GPIO_AD_B0_08", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F80DC", "pad": "0x401F82CC" } },
+    { "name": "GPIO_AD_B0_09", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F80E0", "pad": "0x401F82D0" } },
+    { "name": "GPIO_AD_B0_10", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F80E4", "pad": "0x401F82D4" } },
+    { "name": "GPIO_AD_B0_11", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F80E8", "pad": "0x401F82D8" } },
+    { "name": "GPIO_AD_B0_12", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F80EC", "pad": "0x401F82DC" } },
+    { "name": "GPIO_AD_B0_13", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F80F0", "pad": "0x401F82E0" } },
+    { "name": "GPIO_AD_B0_14", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F80F4", "pad": "0x401F82E4" } },
+    { "name": "GPIO_AD_B0_15", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F80F8", "pad": "0x401F82E8" } },
+
+    { "name": "GPIO_AD_B1_00", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F80FC", "pad": "0x401F82EC" } },
+    { "name": "GPIO_AD_B1_01", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F8100", "pad": "0x401F82F0" } },
+    { "name": "GPIO_AD_B1_02", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F8104", "pad": "0x401F82F4" } },
+    { "name": "GPIO_AD_B1_03", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F8108", "pad": "0x401F82F8" } },
+    { "name": "GPIO_AD_B1_04", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F810C", "pad": "0x401F82FC" } },
+    { "name": "GPIO_AD_B1_05", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F8110", "pad": "0x401F8300" } },
+    { "name": "GPIO_AD_B1_06", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F8114", "pad": "0x401F8304" } },
+    { "name": "GPIO_AD_B1_07", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F8118", "pad": "0x401F8308" } },
+    { "name": "GPIO_AD_B1_08", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F811C", "pad": "0x401F830C" } },
+    { "name": "GPIO_AD_B1_09", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F8120", "pad": "0x401F8310" } },
+    { "name": "GPIO_AD_B1_10", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F8124", "pad": "0x401F8314" } },
+    { "name": "GPIO_AD_B1_11", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F8128", "pad": "0x401F8318" } },
+    { "name": "GPIO_AD_B1_12", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F812C", "pad": "0x401F831C" } },
+    { "name": "GPIO_AD_B1_13", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F8130", "pad": "0x401F8320" } },
+    { "name": "GPIO_AD_B1_14", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F8134", "pad": "0x401F8324" } },
+    { "name": "GPIO_AD_B1_15", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F8138", "pad": "0x401F8328" } },
+
+    { "name": "GPIO_B0_00", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F813C", "pad": "0x401F813C" } },
+    { "name": "GPIO_B0_01", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F8140", "pad": "0x401F8140" } },
+    { "name": "GPIO_B0_02", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F8144", "pad": "0x401F8144" } },
+    { "name": "GPIO_B0_03", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F8148", "pad": "0x401F8148" } },
+    { "name": "GPIO_B0_04", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F814C", "pad": "0x401F814C" } },
+    { "name": "GPIO_B0_05", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F8150", "pad": "0x401F8150" } },
+    { "name": "GPIO_B0_06", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F8154", "pad": "0x401F8154" } },
+    { "name": "GPIO_B0_07", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F8158", "pad": "0x401F8158" } },
+    { "name": "GPIO_B0_08", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F815C", "pad": "0x401F815C" } },
+    { "name": "GPIO_B0_09", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F8160", "pad": "0x401F8160" } },
+    { "name": "GPIO_B0_10", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F8164", "pad": "0x401F8164" } },
+    { "name": "GPIO_B0_11", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F8168", "pad": "0x401F8168" } },
+    { "name": "GPIO_B0_12", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F816C", "pad": "0x401F816C" } },
+    { "name": "GPIO_B0_13", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F8170", "pad": "0x401F8170" } },
+    { "name": "GPIO_B0_14", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F8174", "pad": "0x401F8174" } },
+    { "name": "GPIO_B0_15", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F8178", "pad": "0x401F8178" } },
+
+    { "name": "GPIO_B1_00", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F817C", "pad": "0x401F817C" } },
+    { "name": "GPIO_B1_01", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F8180", "pad": "0x401F8180" } },
+    { "name": "GPIO_B1_02", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F8184", "pad": "0x401F8184" } },
+    { "name": "GPIO_B1_03", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F8188", "pad": "0x401F8188" } },
+    { "name": "GPIO_B1_04", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F818C", "pad": "0x401F818C" } },
+    { "name": "GPIO_B1_05", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F8190", "pad": "0x401F8190" } },
+    { "name": "GPIO_B1_06", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F8194", "pad": "0x401F8194" } },
+    { "name": "GPIO_B1_07", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F8198", "pad": "0x401F8198" } },
+    { "name": "GPIO_B1_08", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F819C", "pad": "0x401F819C" } },
+    { "name": "GPIO_B1_09", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F81A0", "pad": "0x401F81A0" } },
+    { "name": "GPIO_B1_10", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F81A4", "pad": "0x401F81A4" } },
+    { "name": "GPIO_B1_11", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F81A8", "pad": "0x401F81A8" } },
+    { "name": "GPIO_B1_12", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F81AC", "pad": "0x401F81AC" } },
+    { "name": "GPIO_B1_13", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F81B0", "pad": "0x401F81B0" } },
+    { "name": "GPIO_B1_14", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F81B4", "pad": "0x401F81B4" } },
+    { "name": "GPIO_B1_15", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F81B8", "pad": "0x401F81B8" } },
+
+    { "name": "GPIO_EMC_00", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F8014", "pad": "0x401F8204" } },
+    { "name": "GPIO_EMC_01", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F8018", "pad": "0x401F8208" } },
+    { "name": "GPIO_EMC_02", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F801C", "pad": "0x401F820C" } },
+    { "name": "GPIO_EMC_03", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F8020", "pad": "0x401F8210" } },
+    { "name": "GPIO_EMC_04", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F8024", "pad": "0x401F8214" } },
+    { "name": "GPIO_EMC_05", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F8028", "pad": "0x401F8218" } },
+    { "name": "GPIO_EMC_06", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F802C", "pad": "0x401F821C" } },
+    { "name": "GPIO_EMC_07", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F8030", "pad": "0x401F8220" } },
+    { "name": "GPIO_EMC_08", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F8034", "pad": "0x401F8224" } },
+    { "name": "GPIO_EMC_09", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F8038", "pad": "0x401F8228" } },
+    { "name": "GPIO_EMC_10", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F803C", "pad": "0x401F822C" } },
+    { "name": "GPIO_EMC_11", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F8040", "pad": "0x401F8230" } },
+    { "name": "GPIO_EMC_12", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F8044", "pad": "0x401F8234" } },
+    { "name": "GPIO_EMC_13", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F8048", "pad": "0x401F8238" } },
+    { "name": "GPIO_EMC_14", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F804C", "pad": "0x401F823C" } },
+    { "name": "GPIO_EMC_15", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F8050", "pad": "0x401F8240" } },
+    { "name": "GPIO_EMC_16", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F8054", "pad": "0x401F8244" } },
+    { "name": "GPIO_EMC_17", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F8058", "pad": "0x401F8248" } },
+    { "name": "GPIO_EMC_18", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F805C", "pad": "0x401F824C" } },
+    { "name": "GPIO_EMC_19", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F8060", "pad": "0x401F8250" } },
+    { "name": "GPIO_EMC_20", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F8064", "pad": "0x401F8254" } },
+    { "name": "GPIO_EMC_21", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F8068", "pad": "0x401F8258" } },
+    { "name": "GPIO_EMC_22", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F806C", "pad": "0x401F825C" } },
+    { "name": "GPIO_EMC_23", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F8070", "pad": "0x401F8260" } },
+    { "name": "GPIO_EMC_24", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F8074", "pad": "0x401F8264" } },
+    { "name": "GPIO_EMC_25", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F8078", "pad": "0x401F8268" } },
+    { "name": "GPIO_EMC_26", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F807C", "pad": "0x401F826C" } },
+    { "name": "GPIO_EMC_27", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F8080", "pad": "0x401F8270" } },
+    { "name": "GPIO_EMC_28", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F8084", "pad": "0x401F8274" } },
+    { "name": "GPIO_EMC_29", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F8088", "pad": "0x401F8278" } },
+    { "name": "GPIO_EMC_30", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F808C", "pad": "0x401F827C" } },
+    { "name": "GPIO_EMC_31", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F8090", "pad": "0x401F8280" } },
+    { "name": "GPIO_EMC_32", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F8094", "pad": "0x401F8284" } },
+    { "name": "GPIO_EMC_33", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F8098", "pad": "0x401F8288" } },
+    { "name": "GPIO_EMC_34", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F809C", "pad": "0x401F828C" } },
+    { "name": "GPIO_EMC_35", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F80A0", "pad": "0x401F8290" } },
+    { "name": "GPIO_EMC_36", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F80A4", "pad": "0x401F8294" } },
+    { "name": "GPIO_EMC_37", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F80A8", "pad": "0x401F8298" } },
+    { "name": "GPIO_EMC_38", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F80AC", "pad": "0x401F829C" } },
+    { "name": "GPIO_EMC_39", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F80B0", "pad": "0x401F82A0" } },
+    { "name": "GPIO_EMC_40", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F80B4", "pad": "0x401F82A4" } },
+    { "name": "GPIO_EMC_41", "supply": "NVCC_EMC", "iomuxc": { "mux": "0x401F80B8", "pad": "0x401F82A8" } },
+
+    { "name": "GPIO_SD_B0_00", "supply": "NVCC_SD0", "iomuxc": { "mux": "0x401F81BC", "pad": "0x401F83AC" } },
+    { "name": "GPIO_SD_B0_01", "supply": "NVCC_SD0", "iomuxc": { "mux": "0x401F81C0", "pad": "0x401F83B0" } },
+    { "name": "GPIO_SD_B0_02", "supply": "NVCC_SD0", "iomuxc": { "mux": "0x401F81C4", "pad": "0x401F83B4" } },
+    { "name": "GPIO_SD_B0_03", "supply": "NVCC_SD0", "iomuxc": { "mux": "0x401F81C8", "pad": "0x401F83B8" } },
+    { "name": "GPIO_SD_B0_04", "supply": "NVCC_SD0", "iomuxc": { "mux": "0x401F81CC", "pad": "0x401F83BC" } },
+    { "name": "GPIO_SD_B0_05", "supply": "NVCC_SD0", "iomuxc": { "mux": "0x401F81D0", "pad": "0x401F83C0" } },
+
+    { "name": "GPIO_SD_B1_00", "supply": "NVCC_SD1", "iomuxc": { "mux": "0x401F81D4", "pad": "0x401F83C4" } },
+    { "name": "GPIO_SD_B1_01", "supply": "NVCC_SD1", "iomuxc": { "mux": "0x401F81D8", "pad": "0x401F83C8" } },
+    { "name": "GPIO_SD_B1_02", "supply": "NVCC_SD1", "iomuxc": { "mux": "0x401F81DC", "pad": "0x401F83CC" } },
+    { "name": "GPIO_SD_B1_03", "supply": "NVCC_SD1", "iomuxc": { "mux": "0x401F81E0", "pad": "0x401F83D0" } },
+    { "name": "GPIO_SD_B1_04", "supply": "NVCC_SD1", "iomuxc": { "mux": "0x401F81E4", "pad": "0x401F83D4" } },
+    { "name": "GPIO_SD_B1_05", "supply": "NVCC_SD1", "iomuxc": { "mux": "0x401F81E8", "pad": "0x401F83D8" } },
+    { "name": "GPIO_SD_B1_06", "supply": "NVCC_SD1", "iomuxc": { "mux": "0x401F81EC", "pad": "0x401F83DC" } },
+    { "name": "GPIO_SD_B1_07", "supply": "NVCC_SD1", "iomuxc": { "mux": "0x401F81F0", "pad": "0x401F83E0" } },
+    { "name": "GPIO_SD_B1_08", "supply": "NVCC_SD1", "iomuxc": { "mux": "0x401F81F4", "pad": "0x401F83E4" } },
+    { "name": "GPIO_SD_B1_09", "supply": "NVCC_SD1", "iomuxc": { "mux": "0x401F81F8", "pad": "0x401F83E8" } },
+    { "name": "GPIO_SD_B1_10", "supply": "NVCC_SD1", "iomuxc": { "mux": "0x401F81FC", "pad": "0x401F83EC" } },
+    { "name": "GPIO_SD_B1_11", "supply": "NVCC_SD1", "iomuxc": { "mux": "0x401F8200", "pad": "0x401F83F0" } },
+
+    { "name": "GPIO_SPI_B0_00", "supply": "NVCC_SPI0", "iomuxc": { "mux": "0x401F865C", "pad": "0x401F86B4" } },
+    { "name": "GPIO_SPI_B0_01", "supply": "NVCC_SPI0", "iomuxc": { "mux": "0x401F8660", "pad": "0x401F86B8" } },
+    { "name": "GPIO_SPI_B0_02", "supply": "NVCC_SPI0", "iomuxc": { "mux": "0x401F8664", "pad": "0x401F86BC" } },
+    { "name": "GPIO_SPI_B0_03", "supply": "NVCC_SPI0", "iomuxc": { "mux": "0x401F8668", "pad": "0x401F86C0" } },
+    { "name": "GPIO_SPI_B0_04", "supply": "NVCC_SPI0", "iomuxc": { "mux": "0x401F866C", "pad": "0x401F86C4" } },
+    { "name": "GPIO_SPI_B0_05", "supply": "NVCC_SPI0", "iomuxc": { "mux": "0x401F8670", "pad": "0x401F86C8" } },
+    { "name": "GPIO_SPI_B0_06", "supply": "NVCC_SPI0", "iomuxc": { "mux": "0x401F8674", "pad": "0x401F86CC" } },
+    { "name": "GPIO_SPI_B0_07", "supply": "NVCC_SPI0", "iomuxc": { "mux": "0x401F8678", "pad": "0x401F86D0" } },
+    { "name": "GPIO_SPI_B0_08", "supply": "NVCC_SPI0", "iomuxc": { "mux": "0x401F867C", "pad": "0x401F86D4" } },
+    { "name": "GPIO_SPI_B0_09", "supply": "NVCC_SPI0", "iomuxc": { "mux": "0x401F8680", "pad": "0x401F86D8" } },
+    { "name": "GPIO_SPI_B0_10", "supply": "NVCC_SPI0", "iomuxc": { "mux": "0x401F8684", "pad": "0x401F86DC" } },
+    { "name": "GPIO_SPI_B0_11", "supply": "NVCC_SPI0", "iomuxc": { "mux": "0x401F8688", "pad": "0x401F86E0" } },
+    { "name": "GPIO_SPI_B0_12", "supply": "NVCC_SPI0", "iomuxc": { "mux": "0x401F868C", "pad": "0x401F86E4" } },
+    { "name": "GPIO_SPI_B0_13", "supply": "NVCC_SPI0", "iomuxc": { "mux": "0x401F8690", "pad": "0x401F86E8" } },
+
+    { "name": "GPIO_SPI_B1_00", "supply": "NVCC_SPI1", "iomuxc": { "mux": "0x401F8694", "pad": "0x401F86EC" } },
+    { "name": "GPIO_SPI_B1_01", "supply": "NVCC_SPI1", "iomuxc": { "mux": "0x401F8698", "pad": "0x401F86F0" } },
+    { "name": "GPIO_SPI_B1_02", "supply": "NVCC_SPI1", "iomuxc": { "mux": "0x401F869C", "pad": "0x401F86F4" } },
+    { "name": "GPIO_SPI_B1_03", "supply": "NVCC_SPI1", "iomuxc": { "mux": "0x401F86A0", "pad": "0x401F86F8" } },
+    { "name": "GPIO_SPI_B1_04", "supply": "NVCC_SPI1", "iomuxc": { "mux": "0x401F86A4", "pad": "0x401F86FC" } },
+    { "name": "GPIO_SPI_B1_05", "supply": "NVCC_SPI1", "iomuxc": { "mux": "0x401F86A8", "pad": "0x401F8700" } },
+    { "name": "GPIO_SPI_B1_06", "supply": "NVCC_SPI1", "iomuxc": { "mux": "0x401F86AC", "pad": "0x401F8704" } },
+    { "name": "GPIO_SPI_B1_07", "supply": "NVCC_SPI1", "iomuxc": { "mux": "0x401F86B0", "pad": "0x401F8708" } },
+
+    { "name": "WAKEUP", "supply": "VDD_SNVS_IN", "iomuxc": { "mux": "0x400A8000", "pad": "0x400A8018" } },
+    { "name": "PMIC_ON_REQ", "supply": "VDD_SNVS_IN", "iomuxc": { "mux": "0x400A8004", "pad": "0x400A801C" } },
+    { "name": "PMIC_STBY_REQ", "supply": "VDD_SNVS_IN", "iomuxc": { "mux": "0x400A8008", "pad": "0x400A8020" } },
+
+    { "name": "ONOFF", "supply": "VDD_SNVS_IN", "iomuxc": { "pad": "0x400A8014" } },
+    { "name": "POR_B", "supply": "VDD_SNVS_IN", "iomuxc": { "pad": "0x400A8010" } },
+    { "name": "TEST_MODE", "supply": "VDD_SNVS_IN", "iomuxc": { "pad": "0x400A800C" } }
+  ],
+  "peripherals": [
+    {
+      "name": "FLEXSPI1",
+      "signals": [
+        {
+          "name": "A_DATA0",
+          "iomuxc_daisy": "0x401F84A8",
+          "pins": [
+            { "pin": "GPIO_AD_B1_13", "alt": 0, "iomuxc_daisy": 1 },
+            { "pin": "GPIO_SD_B1_08", "alt": 1, "iomuxc_daisy": 0 }
+          ]
+        },
+        {
+          "name": "A_DATA1",
+          "iomuxc_daisy": "0x401F84AC",
+          "pins": [
+            { "pin": "GPIO_AD_B1_12", "alt": 0, "iomuxc_daisy": 1 },
+            { "pin": "GPIO_SD_B1_09", "alt": 1, "iomuxc_daisy": 0 }
+          ]
+        },
+        {
+          "name": "A_DATA2",
+          "iomuxc_daisy": "0x401F84B0",
+          "pins": [
+            { "pin": "GPIO_AD_B1_11", "alt": 0, "iomuxc_daisy": 1 },
+            { "pin": "GPIO_SD_B1_10", "alt": 1, "iomuxc_daisy": 0 }
+          ]
+        },
+        {
+          "name": "A_DATA3",
+          "iomuxc_daisy": "0x401F84B4",
+          "pins": [
+            { "pin": "GPIO_AD_B1_10", "alt": 0, "iomuxc_daisy": 1 },
+            { "pin": "GPIO_SD_B1_11", "alt": 1, "iomuxc_daisy": 0 }
+          ]
+        },
+        {
+          "name": "A_SCLK",
+          "iomuxc_daisy": "0x401F84C8",
+          "pins": [
+            { "pin": "GPIO_AD_B1_14", "alt": 0, "iomuxc_daisy": 1 },
+            { "pin": "GPIO_SD_B1_07", "alt": 1, "iomuxc_daisy": 0 }
+          ]
+        },
+        {
+          "name": "A_SS0_B",
+          "pins": [
+            { "pin": "GPIO_AD_B1_15", "alt": 0 },
+            { "pin": "GPIO_SD_B1_06", "alt": 1 }
+          ]
+        },
+        {
+          "name": "A_SS1_B",
+          "pins": [
+            {"pin": "GPIO_AD_B1_08", "alt": 0 },
+            {"pin": "GPIO_SD_B0_00", "alt": 6 },
+            {"pin": "GPIO_SD_B1_04", "alt": 4 }
+          ]
+        },
+        {
+          "name": "A_DQS",
+          "iomuxc_daisy": "0x401F84A4",
+          "pins": [
+            { "pin": "GPIO_AD_B1_09", "alt": 0, "iomuxc_daisy": 1 },
+            { "pin": "GPIO_SD_B1_05", "alt": 1, "iomuxc_daisy": 0 }
+          ]
+        },
+        {
+          "name": "B_DATA0",
+          "iomuxc_daisy": "0x401F84B8",
+          "pins": [
+            { "pin": "GPIO_AD_B1_07", "alt": 0, "iomuxc_daisy": 1 },
+            { "pin": "GPIO_SD_B1_03", "alt": 1, "iomuxc_daisy": 0 }
+          ]
+        },
+        {
+          "name": "B_DATA1",
+          "iomuxc_daisy": "0x401F84BC",
+          "pins": [
+            { "pin": "GPIO_AD_B1_06", "alt": 0, "iomuxc_daisy": 1 },
+            { "pin": "GPIO_SD_B1_02", "alt": 1, "iomuxc_daisy": 0 }
+          ]
+        },
+        {
+          "name": "B_DATA2",
+          "iomuxc_daisy": "0x401F84C0",
+          "pins": [
+            { "pin": "GPIO_AD_B1_05", "alt": 0, "iomuxc_daisy": 1 },
+            { "pin": "GPIO_SD_B1_01", "alt": 1, "iomuxc_daisy": 0 }
+          ]
+        },
+        {
+          "name": "B_DATA3",
+          "iomuxc_daisy": "0x401F84C4",
+          "pins": [
+            { "pin": "GPIO_AD_B1_04", "alt": 0, "iomuxc_daisy": 1 },
+            { "pin": "GPIO_SD_B1_00", "alt": 1, "iomuxc_daisy": 0 }
+          ]
+        },
+        {
+          "name": "B_SCLK",
+          "pins": [{ "pin": "GPIO_SD_B1_04", "alt": 1 }]
+        },
+        {
+          "name": "B_SS0_B",
+          "pins": [
+            { "pin": "GPIO_SD_B0_04", "alt": 4 },
+            { "pin": "GPIO_SD_B1_05", "alt": 4 }
+          ]
+        },
+        {
+          "name": "B_SS1_B",
+          "pins": [{ "pin": "GPIO_SD_B0_01", "alt": 6 }]
+        },
+        {
+          "name": "B_DQS",
+          "pins": [{ "pin": "GPIO_SD_B0_05", "alt": 4 }]
+        }
+      ]
+    },
+    {
+      "name": "FLEXSPI2",
+      "signals": [
+        {
+          "name": "A_DATA0",
+          "iomuxc_daisy": "0x401F8730",
+          "pins": [
+            { "pin": "GPIO_EMC_26", "alt": 8, "iomuxc_daisy": 1 },
+            { "pin": "GPIO_SPI_B0_02", "alt": 0, "iomuxc_daisy": 2 },
+            { "pin": "GPIO_SPI_B1_04", "alt": 0, "iomuxc_daisy": 0 }
+          ]
+        },
+        {
+          "name": "A_DATA1",
+          "iomuxc_daisy": "0x401F8734",
+          "pins": [
+            { "pin": "GPIO_EMC_27", "alt": 8, "iomuxc_daisy": 1 },
+            { "pin": "GPIO_SPI_B0_12", "alt": 0, "iomuxc_daisy": 2 },
+            { "pin": "GPIO_SPI_B1_03", "alt": 0, "iomuxc_daisy": 0 }
+          ]
+        },
+        {
+          "name": "A_DATA2",
+          "iomuxc_daisy": "0x401F8738",
+          "pins": [
+            { "pin": "GPIO_EMC_28", "alt": 8, "iomuxc_daisy": 1 },
+            { "pin": "GPIO_SPI_B0_06", "alt": 0, "iomuxc_daisy": 2 },
+            { "pin": "GPIO_SPI_B1_02", "alt": 0, "iomuxc_daisy": 0 }
+          ]
+        },
+        {
+          "name": "A_DATA3",
+          "iomuxc_daisy": "0x401F873C",
+          "pins": [
+            { "pin": "GPIO_EMC_29", "alt": 8, "iomuxc_daisy": 1 },
+            { "pin": "GPIO_SPI_B0_10", "alt": 0, "iomuxc_daisy": 2 },
+            { "pin": "GPIO_SPI_B1_01", "alt": 0, "iomuxc_daisy": 0 }
+          ]
+        },
+        {
+          "name": "A_SCLK",
+          "iomuxc_daisy": "0x401F8750",
+          "pins": [
+            { "pin": "GPIO_EMC_25", "alt": 8, "iomuxc_daisy": 1 },
+            { "pin": "GPIO_SPI_B0_08", "alt": 0, "iomuxc_daisy": 2 },
+            { "pin": "GPIO_SPI_B1_05", "alt": 0, "iomuxc_daisy": 0 }
+          ]
+        },
+        {
+          "name": "A_SS0_B",
+          "pins": [
+            { "pin": "GPIO_EMC_24", "alt": 8 },
+            { "pin": "GPIO_SPI_B0_05", "alt": 0 },
+            { "pin": "GPIO_SPI_B1_06", "alt": 0 }
+          ]
+        },
+        {
+          "name": "A_SS1_B",
+          "pins": [
+            { "pin": "GPIO_EMC_22", "alt": 8 }
+          ]
+        },
+        {
+          "name": "A_DQS",
+          "iomuxc_daisy": "0x401F872C",
+          "pins": [
+            { "pin": "GPIO_EMC_23", "alt": 8, "iomuxc_daisy": 1 },
+            { "pin": "GPIO_SPI_B0_09", "alt": 0, "iomuxc_daisy": 2 },
+            { "pin": "GPIO_SPI_B1_00", "alt": 0, "iomuxc_daisy": 0 }
+          ]
+        },
+        {
+          "name": "B_DATA0",
+          "iomuxc_daisy": "0x401F8740",
+          "pins": [
+            { "pin": "GPIO_EMC_13", "alt": 8, "iomuxc_daisy": 0 },
+            { "pin": "GPIO_SPI_B0_11", "alt": 0, "iomuxc_daisy": 1 }
+          ]
+        },
+        {
+          "name": "B_DATA1",
+          "iomuxc_daisy": "0x401F8744",
+          "pins": [
+            { "pin": "GPIO_EMC_14", "alt": 8, "iomuxc_daisy": 0 },
+            { "pin": "GPIO_SPI_B0_07", "alt": 0, "iomuxc_daisy": 1 }
+          ]
+        },
+        {
+          "name": "B_DATA2",
+          "iomuxc_daisy": "0x401F8748",
+          "pins": [
+            { "pin": "GPIO_EMC_15", "alt": 8, "iomuxc_daisy": 0 },
+            { "pin": "GPIO_SPI_B0_03", "alt": 0, "iomuxc_daisy": 1 }
+          ]
+        },
+        {
+          "name": "B_DATA3",
+          "iomuxc_daisy": "0x401F874C",
+          "pins": [
+            { "pin": "GPIO_EMC_16", "alt": 8, "iomuxc_daisy": 0 },
+            { "pin": "GPIO_SPI_B0_04", "alt": 0, "iomuxc_daisy": 1 }
+          ]
+        },
+        {
+          "name": "B_SCLK",
+          "iomuxc_daisy": "0x401F8754",
+          "pins": [
+            { "pin": "GPIO_EMC_12", "alt": 8, "iomuxc_daisy": 0 },
+            { "pin": "GPIO_SPI_B0_01", "alt": 0, "iomuxc_daisy": 1 }
+          ]
+        },
+        {
+          "name": "B_SS0_B",
+          "pins": [{ "pin": "GPIO_EMC_10", "alt": 8 }]
+        },
+        {
+          "name": "B_SS1_B",
+          "pins": [{ "pin": "GPIO_EMC_09", "alt": 8 }]
+        },
+        {
+          "name": "B_DQS",
+          "pins": [{ "pin": "GPIO_EMC_11", "alt": 8 }]
+        }
+      ]
+    },
+    {
+      "name": "GPIO1",
+      "signals": [
+        { "name": "0", "pins": [{ "pin": "GPIO_AD_B0_00", "alt": 5 }]},
+        { "name": "1", "pins": [{ "pin": "GPIO_AD_B0_01", "alt": 5 }]},
+        { "name": "2", "pins": [{ "pin": "GPIO_AD_B0_02", "alt": 5 }]},
+        { "name": "3", "pins": [{ "pin": "GPIO_AD_B0_03", "alt": 5 }]},
+        { "name": "4", "pins": [{ "pin": "GPIO_AD_B0_04", "alt": 5 }]},
+        { "name": "5", "pins": [{ "pin": "GPIO_AD_B0_05", "alt": 5 }]},
+        { "name": "6", "pins": [{ "pin": "GPIO_AD_B0_06", "alt": 5 }]},
+        { "name": "7", "pins": [{ "pin": "GPIO_AD_B0_07", "alt": 5 }]},
+        { "name": "8", "pins": [{ "pin": "GPIO_AD_B0_08", "alt": 5 }]},
+        { "name": "9", "pins": [{ "pin": "GPIO_AD_B0_09", "alt": 5 }]},
+        { "name": "10", "pins": [{ "pin": "GPIO_AD_B0_10", "alt": 5 }]},
+        { "name": "11", "pins": [{ "pin": "GPIO_AD_B0_11", "alt": 5 }]},
+        { "name": "12", "pins": [{ "pin": "GPIO_AD_B0_12", "alt": 5 }]},
+        { "name": "13", "pins": [{ "pin": "GPIO_AD_B0_13", "alt": 5 }]},
+        { "name": "14", "pins": [{ "pin": "GPIO_AD_B0_14", "alt": 5 }]},
+        { "name": "15", "pins": [{ "pin": "GPIO_AD_B0_15", "alt": 5 }]},
+        { "name": "16", "pins": [{ "pin": "GPIO_AD_B1_00", "alt": 5 }]},
+        { "name": "17", "pins": [{ "pin": "GPIO_AD_B1_01", "alt": 5 }]},
+        { "name": "18", "pins": [{ "pin": "GPIO_AD_B1_02", "alt": 5 }]},
+        { "name": "19", "pins": [{ "pin": "GPIO_AD_B1_03", "alt": 5 }]},
+        { "name": "20", "pins": [{ "pin": "GPIO_AD_B1_04", "alt": 5 }]},
+        { "name": "21", "pins": [{ "pin": "GPIO_AD_B1_05", "alt": 5 }]},
+        { "name": "22", "pins": [{ "pin": "GPIO_AD_B1_06", "alt": 5 }]},
+        { "name": "23", "pins": [{ "pin": "GPIO_AD_B1_07", "alt": 5 }]},
+        { "name": "24", "pins": [{ "pin": "GPIO_AD_B1_08", "alt": 5 }]},
+        { "name": "25", "pins": [{ "pin": "GPIO_AD_B1_09", "alt": 5 }]},
+        { "name": "26", "pins": [{ "pin": "GPIO_AD_B1_10", "alt": 5 }]},
+        { "name": "27", "pins": [{ "pin": "GPIO_AD_B1_11", "alt": 5 }]},
+        { "name": "28", "pins": [{ "pin": "GPIO_AD_B1_12", "alt": 5 }]},
+        { "name": "29", "pins": [{ "pin": "GPIO_AD_B1_13", "alt": 5 }]},
+        { "name": "30", "pins": [{ "pin": "GPIO_AD_B1_14", "alt": 5 }]},
+        { "name": "31", "pins": [{ "pin": "GPIO_AD_B1_15", "alt": 5 }]}
+      ]
+    },
+    {
+      "name": "GPIO2",
+      "signals": [
+        { "name": "0", "pins": [{ "pin": "GPIO_B0_00", "alt": 5 }]},
+        { "name": "1", "pins": [{ "pin": "GPIO_B0_01", "alt": 5 }]},
+        { "name": "2", "pins": [{ "pin": "GPIO_B0_02", "alt": 5 }]},
+        { "name": "3", "pins": [{ "pin": "GPIO_B0_03", "alt": 5 }]},
+        { "name": "4", "pins": [{ "pin": "GPIO_B0_04", "alt": 5 }]},
+        { "name": "5", "pins": [{ "pin": "GPIO_B0_05", "alt": 5 }]},
+        { "name": "6", "pins": [{ "pin": "GPIO_B0_06", "alt": 5 }]},
+        { "name": "7", "pins": [{ "pin": "GPIO_B0_07", "alt": 5 }]},
+        { "name": "8", "pins": [{ "pin": "GPIO_B0_08", "alt": 5 }]},
+        { "name": "9", "pins": [{ "pin": "GPIO_B0_09", "alt": 5 }]},
+        { "name": "10", "pins": [{ "pin": "GPIO_B0_10", "alt": 5 }]},
+        { "name": "11", "pins": [{ "pin": "GPIO_B0_11", "alt": 5 }]},
+        { "name": "12", "pins": [{ "pin": "GPIO_B0_12", "alt": 5 }]},
+        { "name": "13", "pins": [{ "pin": "GPIO_B0_13", "alt": 5 }]},
+        { "name": "14", "pins": [{ "pin": "GPIO_B0_14", "alt": 5 }]},
+        { "name": "15", "pins": [{ "pin": "GPIO_B0_15", "alt": 5 }]},
+        { "name": "16", "pins": [{ "pin": "GPIO_B1_00", "alt": 5 }]},
+        { "name": "17", "pins": [{ "pin": "GPIO_B1_01", "alt": 5 }]},
+        { "name": "18", "pins": [{ "pin": "GPIO_B1_02", "alt": 5 }]},
+        { "name": "19", "pins": [{ "pin": "GPIO_B1_03", "alt": 5 }]},
+        { "name": "20", "pins": [{ "pin": "GPIO_B1_04", "alt": 5 }]},
+        { "name": "21", "pins": [{ "pin": "GPIO_B1_05", "alt": 5 }]},
+        { "name": "22", "pins": [{ "pin": "GPIO_B1_06", "alt": 5 }]},
+        { "name": "23", "pins": [{ "pin": "GPIO_B1_07", "alt": 5 }]},
+        { "name": "24", "pins": [{ "pin": "GPIO_B1_08", "alt": 5 }]},
+        { "name": "25", "pins": [{ "pin": "GPIO_B1_09", "alt": 5 }]},
+        { "name": "26", "pins": [{ "pin": "GPIO_B1_10", "alt": 5 }]},
+        { "name": "27", "pins": [{ "pin": "GPIO_B1_11", "alt": 5 }]},
+        { "name": "28", "pins": [{ "pin": "GPIO_B1_12", "alt": 5 }]},
+        { "name": "29", "pins": [{ "pin": "GPIO_B1_13", "alt": 5 }]},
+        { "name": "30", "pins": [{ "pin": "GPIO_B1_14", "alt": 5 }]},
+        { "name": "31", "pins": [{ "pin": "GPIO_B1_15", "alt": 5 }]}
+      ]
+    },
+    {
+      "name": "GPIO3",
+      "signals": [
+        { "name": "0", "pins": [{ "pin": "GPIO_SD_B1_00", "alt": 5 }]},
+        { "name": "1", "pins": [{ "pin": "GPIO_SD_B1_01", "alt": 5 }]},
+        { "name": "2", "pins": [{ "pin": "GPIO_SD_B1_02", "alt": 5 }]},
+        { "name": "3", "pins": [{ "pin": "GPIO_SD_B1_03", "alt": 5 }]},
+        { "name": "4", "pins": [{ "pin": "GPIO_SD_B1_04", "alt": 5 }]},
+        { "name": "5", "pins": [{ "pin": "GPIO_SD_B1_05", "alt": 5 }]},
+        { "name": "6", "pins": [{ "pin": "GPIO_SD_B1_06", "alt": 5 }]},
+        { "name": "7", "pins": [{ "pin": "GPIO_SD_B1_07", "alt": 5 }]},
+        { "name": "8", "pins": [{ "pin": "GPIO_SD_B1_08", "alt": 5 }]},
+        { "name": "9", "pins": [{ "pin": "GPIO_SD_B1_09", "alt": 5 }]},
+        { "name": "10", "pins": [{ "pin": "GPIO_SD_B1_10", "alt": 5 }]},
+        { "name": "11", "pins": [{ "pin": "GPIO_SD_B1_11", "alt": 5 }]},
+        { "name": "12", "pins": [{ "pin": "GPIO_SD_B0_00", "alt": 5 }]},
+        { "name": "13", "pins": [{ "pin": "GPIO_SD_B0_01", "alt": 5 }]},
+        { "name": "14", "pins": [{ "pin": "GPIO_SD_B0_02", "alt": 5 }]},
+        { "name": "15", "pins": [{ "pin": "GPIO_SD_B0_03", "alt": 5 }]},
+        { "name": "16", "pins": [{ "pin": "GPIO_SD_B0_04", "alt": 5 }]},
+        { "name": "17", "pins": [{ "pin": "GPIO_SD_B0_05", "alt": 5 }]},
+        { "name": "18", "pins": [{ "pin": "GPIO_EMC_32", "alt": 5 }]},
+        { "name": "19", "pins": [{ "pin": "GPIO_EMC_33", "alt": 5 }]},
+        { "name": "20", "pins": [{ "pin": "GPIO_EMC_34", "alt": 5 }]},
+        { "name": "21", "pins": [{ "pin": "GPIO_EMC_35", "alt": 5 }]},
+        { "name": "22", "pins": [{ "pin": "GPIO_EMC_36", "alt": 5 }]},
+        { "name": "23", "pins": [{ "pin": "GPIO_EMC_37", "alt": 5 }]},
+        { "name": "24", "pins": [{ "pin": "GPIO_EMC_38", "alt": 5 }]},
+        { "name": "25", "pins": [{ "pin": "GPIO_EMC_39", "alt": 5 }]},
+        { "name": "26", "pins": [{ "pin": "GPIO_EMC_40", "alt": 5 }]},
+        { "name": "27", "pins": [{ "pin": "GPIO_EMC_41", "alt": 5 }]}
+      ]
+    },
+    {
+      "name": "GPIO4",
+      "signals": [
+        { "name": "0", "pins": [{ "pin": "GPIO_EMC_00", "alt": 5 }]},
+        { "name": "1", "pins": [{ "pin": "GPIO_EMC_01", "alt": 5 }]},
+        { "name": "2", "pins": [{ "pin": "GPIO_EMC_02", "alt": 5 }]},
+        { "name": "3", "pins": [{ "pin": "GPIO_EMC_03", "alt": 5 }]},
+        { "name": "4", "pins": [{ "pin": "GPIO_EMC_04", "alt": 5 }]},
+        { "name": "5", "pins": [{ "pin": "GPIO_EMC_05", "alt": 5 }]},
+        { "name": "6", "pins": [{ "pin": "GPIO_EMC_06", "alt": 5 }]},
+        { "name": "7", "pins": [{ "pin": "GPIO_EMC_07", "alt": 5 }]},
+        { "name": "8", "pins": [{ "pin": "GPIO_EMC_08", "alt": 5 }]},
+        { "name": "9", "pins": [{ "pin": "GPIO_EMC_09", "alt": 5 }]},
+        { "name": "10", "pins": [{ "pin": "GPIO_EMC_10", "alt": 5 }]},
+        { "name": "11", "pins": [{ "pin": "GPIO_EMC_11", "alt": 5 }]},
+        { "name": "12", "pins": [{ "pin": "GPIO_EMC_12", "alt": 5 }]},
+        { "name": "13", "pins": [{ "pin": "GPIO_EMC_13", "alt": 5 }]},
+        { "name": "14", "pins": [{ "pin": "GPIO_EMC_14", "alt": 5 }]},
+        { "name": "15", "pins": [{ "pin": "GPIO_EMC_15", "alt": 5 }]},
+        { "name": "16", "pins": [{ "pin": "GPIO_EMC_16", "alt": 5 }]},
+        { "name": "17", "pins": [{ "pin": "GPIO_EMC_17", "alt": 5 }]},
+        { "name": "18", "pins": [{ "pin": "GPIO_EMC_18", "alt": 5 }]},
+        { "name": "19", "pins": [{ "pin": "GPIO_EMC_19", "alt": 5 }]},
+        { "name": "20", "pins": [{ "pin": "GPIO_EMC_20", "alt": 5 }]},
+        { "name": "21", "pins": [{ "pin": "GPIO_EMC_21", "alt": 5 }]},
+        { "name": "22", "pins": [{ "pin": "GPIO_EMC_22", "alt": 5 }]},
+        { "name": "23", "pins": [{ "pin": "GPIO_EMC_23", "alt": 5 }]},
+        { "name": "24", "pins": [{ "pin": "GPIO_EMC_24", "alt": 5 }]},
+        { "name": "25", "pins": [{ "pin": "GPIO_EMC_25", "alt": 5 }]},
+        { "name": "26", "pins": [{ "pin": "GPIO_EMC_26", "alt": 5 }]},
+        { "name": "27", "pins": [{ "pin": "GPIO_EMC_27", "alt": 5 }]},
+        { "name": "28", "pins": [{ "pin": "GPIO_EMC_28", "alt": 5 }]},
+        { "name": "29", "pins": [{ "pin": "GPIO_EMC_29", "alt": 5 }]},
+        { "name": "30", "pins": [{ "pin": "GPIO_EMC_30", "alt": 5 }]},
+        { "name": "31", "pins": [{ "pin": "GPIO_EMC_31", "alt": 5 }]}
+      ]
+    },
+    {
+      "name": "GPIO5",
+      "signals": [
+        { "name": "0", "pins": [{ "pin": "WAKEUP", "alt": 5 }]},
+        { "name": "1", "pins": [{ "pin": "PMIC_ON_REQ", "alt": 5 }]},
+        { "name": "2", "pins": [{ "pin": "PMIC_STBY_REQ", "alt": 5 }]}
+      ]
+    },
+    {
+      "name": "GPIO10",
+      "signals": [
+        { "name": "0", "pins": [{ "pin": "GPIO_SPI_B0_00", "alt": 5 }]},
+        { "name": "1", "pins": [{ "pin": "GPIO_SPI_B0_01", "alt": 5 }]},
+        { "name": "2", "pins": [{ "pin": "GPIO_SPI_B0_02", "alt": 5 }]},
+        { "name": "3", "pins": [{ "pin": "GPIO_SPI_B0_03", "alt": 5 }]},
+        { "name": "4", "pins": [{ "pin": "GPIO_SPI_B0_04", "alt": 5 }]},
+        { "name": "5", "pins": [{ "pin": "GPIO_SPI_B0_05", "alt": 5 }]},
+        { "name": "6", "pins": [{ "pin": "GPIO_SPI_B0_06", "alt": 5 }]},
+        { "name": "7", "pins": [{ "pin": "GPIO_SPI_B0_07", "alt": 5 }]},
+        { "name": "8", "pins": [{ "pin": "GPIO_SPI_B0_08", "alt": 5 }]},
+        { "name": "9", "pins": [{ "pin": "GPIO_SPI_B0_09", "alt": 5 }]},
+        { "name": "10", "pins": [{ "pin": "GPIO_SPI_B0_10", "alt": 5 }]},
+        { "name": "11", "pins": [{ "pin": "GPIO_SPI_B0_11", "alt": 5 }]},
+        { "name": "12", "pins": [{ "pin": "GPIO_SPI_B0_12", "alt": 5 }]},
+        { "name": "13", "pins": [{ "pin": "GPIO_SPI_B0_13", "alt": 5 }]},
+        { "name": "14", "pins": [{ "pin": "GPIO_SPI_B1_00", "alt": 5 }]},
+        { "name": "15", "pins": [{ "pin": "GPIO_SPI_B1_01", "alt": 5 }]},
+        { "name": "16", "pins": [{ "pin": "GPIO_SPI_B1_02", "alt": 5 }]},
+        { "name": "17", "pins": [{ "pin": "GPIO_SPI_B1_03", "alt": 5 }]},
+        { "name": "18", "pins": [{ "pin": "GPIO_SPI_B1_04", "alt": 5 }]},
+        { "name": "19", "pins": [{ "pin": "GPIO_SPI_B1_05", "alt": 5 }]},
+        { "name": "20", "pins": [{ "pin": "GPIO_SPI_B1_06", "alt": 5 }]},
+        { "name": "21", "pins": [{ "pin": "GPIO_SPI_B1_07", "alt": 5 }]}
+      ]
+    },
+    {
+      "name": "LPUART1",
+      "signals": [
+        {
+          "name": "TXD",
+          "pins": [
+            { "pin": "GPIO_AD_B0_12", "alt": 2 }
+          ]
+        },
+        {
+          "name": "RXD",
+          "pins": [
+            { "pin": "GPIO_AD_B0_13", "alt": 2 }
+          ]
+        },
+        {
+          "name": "CTS_B",
+          "pins": [
+            { "pin": "GPIO_AD_B0_14", "alt": 2 }
+          ]
+        },
+        {
+          "name": "RTS_B",
+          "pins": [
+            { "pin": "GPIO_AD_B0_15", "alt": 2 }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "LPUART2",
+      "signals": [
+        {
+          "name": "TXD",
+          "iomuxc_daisy": "0x401F8530",
+          "pins": [
+            { "pin": "GPIO_AD_B1_02", "alt": 2, "iomuxc_daisy": 1 },
+            { "pin": "GPIO_SD_B1_11", "alt": 2, "iomuxc_daisy": 0 }
+          ]
+        },
+        {
+          "name": "RXD",
+          "iomuxc_daisy": "0x401F852C",
+          "pins": [
+            { "pin": "GPIO_AD_B1_03", "alt": 2, "iomuxc_daisy": 1 },
+            { "pin": "GPIO_SD_B1_10", "alt": 2, "iomuxc_daisy": 0 }
+          ]
+        },
+        {
+          "name": "CTS_B",
+          "pins": [
+            { "pin": "GPIO_AD_B1_00", "alt": 2 }
+          ]
+        },
+        {
+          "name": "RTS_B",
+          "pins": [
+            { "pin": "GPIO_AD_B1_01", "alt": 2 }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "LPUART3",
+      "signals": [
+        {
+          "name": "TXD",
+          "iomuxc_daisy": "0x401F853C",
+          "pins": [
+            { "pin": "GPIO_AD_B1_06", "alt": 2, "iomuxc_daisy": 0 },
+            { "pin": "GPIO_B0_08", "alt": 3, "iomuxc_daisy": 2 },
+            { "pin": "GPIO_EMC_13", "alt": 2, "iomuxc_daisy": 1 }
+          ]
+        },
+        {
+          "name": "RXD",
+          "iomuxc_daisy": "0x401F8538",
+          "pins": [
+            { "pin": "GPIO_AD_B1_07", "alt": 2, "iomuxc_daisy": 0 },
+            { "pin": "GPIO_B0_09", "alt": 3, "iomuxc_daisy": 2 },
+            { "pin": "GPIO_EMC_14", "alt": 2, "iomuxc_daisy": 1 }
+          ]
+        },
+        {
+          "name": "CTS_B",
+          "iomuxc_daisy": "0x401F8534",
+          "pins": [
+            { "pin": "GPIO_EMC_15", "alt": 2, "iomuxc_daisy": 0 },
+            { "pin": "GPIO_AD_B1_04", "alt": 2, "iomuxc_daisy": 1 }
+          ]
+        },
+        {
+          "name": "RTS_B",
+          "pins": [
+            { "pin": "GPIO_EMC_16", "alt": 2 },
+            { "pin": "GPIO_AD_B1_05", "alt": 2 }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "LPUART4",
+      "signals": [
+        {
+          "name": "TXD",
+          "iomuxc_daisy": "0x401F8544",
+          "pins": [
+            { "pin": "GPIO_SD_B1_00", "alt": 4, "iomuxc_daisy": 0 },
+            { "pin": "GPIO_B1_00", "alt": 2, "iomuxc_daisy": 2 },
+            { "pin": "GPIO_EMC_19", "alt": 2, "iomuxc_daisy": 1 }
+          ]
+        },
+        {
+          "name": "RXD",
+          "iomuxc_daisy": "0x401F8540",
+          "pins": [
+            { "pin": "GPIO_SD_B1_01", "alt": 4, "iomuxc_daisy": 1 },
+            { "pin": "GPIO_B1_01", "alt": 2, "iomuxc_daisy": 2 },
+            { "pin": "GPIO_EMC_20", "alt": 2, "iomuxc_daisy": 0 }
+          ]
+        },
+        {
+          "name": "CTS_B",
+          "pins": [
+            { "pin": "GPIO_EMC_17", "alt": 2 }
+          ]
+        },
+        {
+          "name": "RTS_B",
+          "pins": [
+            { "pin": "GPIO_EMC_18", "alt": 2 }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "LPUART5",
+      "signals": [
+        {
+          "name": "TXD",
+          "iomuxc_daisy": "0x401F854C",
+          "pins": [
+            { "pin": "GPIO_B1_12", "alt": 1, "iomuxc_daisy": 1 },
+            { "pin": "GPIO_EMC_23", "alt": 2, "iomuxc_daisy": 0 }
+          ]
+        },
+        {
+          "name": "RXD",
+          "iomuxc_daisy": "0x401F8548",
+          "pins": [
+            { "pin": "GPIO_B1_13", "alt": 2, "iomuxc_daisy": 1 },
+            { "pin": "GPIO_EMC_24", "alt": 2, "iomuxc_daisy": 0 }
+          ]
+        },
+        {
+          "name": "CTS_B",
+          "pins": [
+            { "pin": "GPIO_EMC_28", "alt": 2 }
+          ]
+        },
+        {
+          "name": "RTS_B",
+          "pins": [
+            { "pin": "GPIO_EMC_27", "alt": 2 }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "LPUART6",
+      "signals": [
+        {
+          "name": "TXD",
+          "iomuxc_daisy": "0x401F8554",
+          "pins": [
+            { "pin": "GPIO_AD_B0_02", "alt": 2, "iomuxc_daisy": 1 },
+            { "pin": "GPIO_EMC_25", "alt": 2, "iomuxc_daisy": 0 }
+          ]
+        },
+        {
+          "name": "RXD",
+          "iomuxc_daisy": "0x401F8550",
+          "pins": [
+            { "pin": "GPIO_AD_B0_03", "alt": 2, "iomuxc_daisy": 1 },
+            { "pin": "GPIO_EMC_26", "alt": 2, "iomuxc_daisy": 0 }
+          ]
+        },
+        {
+          "name": "CTS_B",
+          "pins": [
+            { "pin": "GPIO_EMC_30", "alt": 2 }
+          ]
+        },
+        {
+          "name": "RTS_B",
+          "pins": [
+            { "pin": "GPIO_EMC_29", "alt": 2 }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "LPUART7",
+      "signals": [
+        {
+          "name": "TXD",
+          "iomuxc_daisy": "0x401F855C",
+          "pins": [
+            { "pin": "GPIO_SD_B1_08", "alt": 2, "iomuxc_daisy": 0 },
+            { "pin": "GPIO_EMC_31", "alt": 2, "iomuxc_daisy": 1 }
+          ]
+        },
+        {
+          "name": "RXD",
+          "iomuxc_daisy": "0x401F8558",
+          "pins": [
+            { "pin": "GPIO_SD_B1_09", "alt": 2, "iomuxc_daisy": 0 },
+            { "pin": "GPIO_EMC_32", "alt": 2, "iomuxc_daisy": 1 }
+          ]
+        },
+        {
+          "name": "CTS_B",
+          "pins": [
+            { "pin": "GPIO_SD_B1_06", "alt": 2 }
+          ]
+        },
+        {
+          "name": "RTS_B",
+          "pins": [
+            { "pin": "GPIO_SD_B1_07", "alt": 2 }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "LPUART8",
+      "signals": [
+        {
+          "name": "TXD",
+          "iomuxc_daisy": "0x401F8564",
+          "pins": [
+            { "pin": "GPIO_SD_B0_04", "alt": 2, "iomuxc_daisy": 0 },
+            { "pin": "GPIO_AD_B1_10", "alt": 2, "iomuxc_daisy": 1 },
+            { "pin": "GPIO_EMC_38", "alt": 2, "iomuxc_daisy": 2 }
+          ]
+        },
+        {
+          "name": "RXD",
+          "iomuxc_daisy": "0x401F8560",
+          "pins": [
+            { "pin": "GPIO_SD_B0_05", "alt": 2, "iomuxc_daisy": 0 },
+            { "pin": "GPIO_AD_B1_11", "alt": 2, "iomuxc_daisy": 1 },
+            { "pin": "GPIO_EMC_39", "alt": 2, "iomuxc_daisy": 2 }
+          ]
+        },
+        {
+          "name": "CTS_B",
+          "pins": [
+            { "pin": "GPIO_SD_B0_02", "alt": 2 }
+          ]
+        },
+        {
+          "name": "RTS_B",
+          "pins": [
+            { "pin": "GPIO_SD_B0_03", "alt": 2 }
+          ]
+        }
+      ]
+    }
+  ]
+}

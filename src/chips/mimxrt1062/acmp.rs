@@ -17,32 +17,32 @@ impl Acmp {
     #[doc = "CMP Control Register 0"]
     #[inline(always)]
     pub const fn cr0(self) -> crate::common::Reg<regs::Cr0, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
     #[doc = "CMP Control Register 1"]
     #[inline(always)]
     pub const fn cr1(self) -> crate::common::Reg<regs::Cr1, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x01usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x01usize) as _) }
     }
     #[doc = "CMP Filter Period Register"]
     #[inline(always)]
     pub const fn fpr(self) -> crate::common::Reg<regs::Fpr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x02usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x02usize) as _) }
     }
     #[doc = "CMP Status and Control Register"]
     #[inline(always)]
     pub const fn scr(self) -> crate::common::Reg<regs::Scr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x03usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x03usize) as _) }
     }
     #[doc = "DAC Control Register"]
     #[inline(always)]
     pub const fn daccr(self) -> crate::common::Reg<regs::Daccr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
     }
     #[doc = "MUX Control Register"]
     #[inline(always)]
     pub const fn muxcr(self) -> crate::common::Reg<regs::Muxcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x05usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x05usize) as _) }
     }
 }
 pub mod regs;

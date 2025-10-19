@@ -17,18 +17,18 @@ impl Intm0 {
     #[doc = "Monitor Mode"]
     #[inline(always)]
     pub const fn intm_mm(self) -> crate::common::Reg<regs::IntmMm, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
     #[doc = "Interrupt Acknowledge"]
     #[inline(always)]
     pub const fn intm_iack(self) -> crate::common::Reg<regs::IntmIack, crate::common::W> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
     }
     #[doc = "Monitoring"]
     #[inline(always)]
     pub const fn mon(self, n: usize) -> Mon {
         assert!(n < 4usize);
-        unsafe { Mon::from_ptr(self.ptr.add(0x08usize + n * 16usize) as _) }
+        unsafe { Mon::from_ptr(self.ptr.wrapping_add(0x08usize + n * 16usize) as _) }
     }
 }
 #[doc = "Monitoring"]
@@ -50,22 +50,22 @@ impl Mon {
     #[doc = "Interrupt Request Select for Monitor mon_index"]
     #[inline(always)]
     pub const fn intm_irqsel(self) -> crate::common::Reg<regs::IntmIrqsel, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
     #[doc = "Interrupt Latency for Monitor mon_index"]
     #[inline(always)]
     pub const fn intm_latency(self) -> crate::common::Reg<regs::IntmLatency, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
     }
     #[doc = "Timer for Monitor mon_index"]
     #[inline(always)]
     pub const fn intm_timer(self) -> crate::common::Reg<regs::IntmTimer, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
     }
     #[doc = "Status for Monitor mon_index"]
     #[inline(always)]
     pub const fn intm_status(self) -> crate::common::Reg<regs::IntmStatus, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
     }
 }
 pub mod regs;

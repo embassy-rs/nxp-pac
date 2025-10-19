@@ -21,22 +21,22 @@ impl Romc {
         n: usize,
     ) -> crate::common::Reg<regs::Rompatchd, crate::common::RW> {
         assert!(n < 8usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xd4usize + n * 4usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xd4usize + n * 4usize) as _) }
     }
     #[doc = "ROMC Control Register"]
     #[inline(always)]
     pub const fn rompatchcntl(self) -> crate::common::Reg<regs::Rompatchcntl, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xf4usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xf4usize) as _) }
     }
     #[doc = "ROMC Enable Register High"]
     #[inline(always)]
     pub const fn rompatchenh(self) -> crate::common::Reg<u32, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xf8usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xf8usize) as _) }
     }
     #[doc = "ROMC Enable Register Low"]
     #[inline(always)]
     pub const fn rompatchenl(self) -> crate::common::Reg<regs::Rompatchenl, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0xfcusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xfcusize) as _) }
     }
     #[doc = "ROMC Address Registers"]
     #[inline(always)]
@@ -45,12 +45,14 @@ impl Romc {
         n: usize,
     ) -> crate::common::Reg<regs::Rompatcha, crate::common::RW> {
         assert!(n < 16usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0100usize + n * 4usize) as _) }
+        unsafe {
+            crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0100usize + n * 4usize) as _)
+        }
     }
     #[doc = "ROMC Status Register"]
     #[inline(always)]
     pub const fn rompatchsr(self) -> crate::common::Reg<regs::Rompatchsr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0208usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0208usize) as _) }
     }
 }
 pub mod regs;

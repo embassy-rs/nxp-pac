@@ -17,14 +17,14 @@ impl Usbnc2 {
     #[doc = "USB OTG2 Control Register"]
     #[inline(always)]
     pub const fn usb_otg2_ctrl(self) -> crate::common::Reg<regs::UsbOtg2Ctrl, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0800usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0800usize) as _) }
     }
     #[doc = "OTG2 UTMI PHY Control 0 Register"]
     #[inline(always)]
     pub const fn usb_otg2_phy_ctrl_0(
         self,
     ) -> crate::common::Reg<regs::UsbOtg2PhyCtrl0, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0818usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0818usize) as _) }
     }
 }
 pub mod regs;

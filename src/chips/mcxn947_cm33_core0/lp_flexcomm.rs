@@ -17,12 +17,12 @@ impl LpFlexcomm {
     #[doc = "Interrupt Status"]
     #[inline(always)]
     pub const fn istat(self) -> crate::common::Reg<regs::Istat, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0ff4usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0ff4usize) as _) }
     }
     #[doc = "Peripheral Select and ID"]
     #[inline(always)]
     pub const fn pselid(self) -> crate::common::Reg<regs::Pselid, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0ff8usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0ff8usize) as _) }
     }
 }
 pub mod regs;

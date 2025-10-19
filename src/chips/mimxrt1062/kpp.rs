@@ -17,22 +17,22 @@ impl Kpp {
     #[doc = "Keypad Control Register"]
     #[inline(always)]
     pub const fn kpcr(self) -> crate::common::Reg<regs::Kpcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
     #[doc = "Keypad Status Register"]
     #[inline(always)]
     pub const fn kpsr(self) -> crate::common::Reg<regs::Kpsr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x02usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x02usize) as _) }
     }
     #[doc = "Keypad Data Direction Register"]
     #[inline(always)]
     pub const fn kddr(self) -> crate::common::Reg<regs::Kddr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
     }
     #[doc = "Keypad Data Register"]
     #[inline(always)]
     pub const fn kpdr(self) -> crate::common::Reg<regs::Kpdr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x06usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x06usize) as _) }
     }
 }
 pub mod regs;

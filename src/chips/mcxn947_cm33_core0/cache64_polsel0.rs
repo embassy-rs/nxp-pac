@@ -17,17 +17,17 @@ impl Cache64Polsel0 {
     #[doc = "Region 0 Top Boundary"]
     #[inline(always)]
     pub const fn reg0_top(self) -> crate::common::Reg<regs::Reg0Top, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x14usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x14usize) as _) }
     }
     #[doc = "Region 1 Top Boundary"]
     #[inline(always)]
     pub const fn reg1_top(self) -> crate::common::Reg<regs::Reg1Top, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x18usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x18usize) as _) }
     }
     #[doc = "Policy Select"]
     #[inline(always)]
     pub const fn polsel(self) -> crate::common::Reg<regs::Polsel, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x1cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x1cusize) as _) }
     }
 }
 pub mod regs;
