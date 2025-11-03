@@ -1363,17 +1363,19 @@ impl defmt::Format for Matchrel {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OutClr(pub u32);
 impl OutClr {
-    #[doc = "A 1 in bit m selects event m to clear output n (or set it if SETCLRn = 0x1 or 0x2) event 0 = bit 0, event 1 = bit 1, etc. The number of bits = number of events in this SCT. When the counter is used in bi-directional mode, it is possible to reverse the action specified by the output set and clear registers when counting down, See the OUTPUTCTRL register."]
     #[must_use]
     #[inline(always)]
-    pub const fn clr(&self) -> u16 {
-        let val = (self.0 >> 0usize) & 0xffff;
-        val as u16
+    pub const fn clr(&self, n: usize) -> bool {
+        assert!(n < 16usize);
+        let offs = 0usize + n * 1usize;
+        let val = (self.0 >> offs) & 0x01;
+        val != 0
     }
-    #[doc = "A 1 in bit m selects event m to clear output n (or set it if SETCLRn = 0x1 or 0x2) event 0 = bit 0, event 1 = bit 1, etc. The number of bits = number of events in this SCT. When the counter is used in bi-directional mode, it is possible to reverse the action specified by the output set and clear registers when counting down, See the OUTPUTCTRL register."]
     #[inline(always)]
-    pub const fn set_clr(&mut self, val: u16) {
-        self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
+    pub const fn set_clr(&mut self, n: usize, val: bool) {
+        assert!(n < 16usize);
+        let offs = 0usize + n * 1usize;
+        self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
     }
 }
 impl Default for OutClr {
@@ -1384,13 +1386,49 @@ impl Default for OutClr {
 }
 impl core::fmt::Debug for OutClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("OutClr").field("clr", &self.clr()).finish()
+        f.debug_struct("OutClr")
+            .field("clr[0]", &self.clr(0usize))
+            .field("clr[1]", &self.clr(1usize))
+            .field("clr[2]", &self.clr(2usize))
+            .field("clr[3]", &self.clr(3usize))
+            .field("clr[4]", &self.clr(4usize))
+            .field("clr[5]", &self.clr(5usize))
+            .field("clr[6]", &self.clr(6usize))
+            .field("clr[7]", &self.clr(7usize))
+            .field("clr[8]", &self.clr(8usize))
+            .field("clr[9]", &self.clr(9usize))
+            .field("clr[10]", &self.clr(10usize))
+            .field("clr[11]", &self.clr(11usize))
+            .field("clr[12]", &self.clr(12usize))
+            .field("clr[13]", &self.clr(13usize))
+            .field("clr[14]", &self.clr(14usize))
+            .field("clr[15]", &self.clr(15usize))
+            .finish()
     }
 }
 #[cfg(feature = "defmt")]
 impl defmt::Format for OutClr {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "OutClr {{ clr: {=u16:?} }}", self.clr())
+        defmt::write!(
+            f,
+            "OutClr {{ clr[0]: {=bool:?}, clr[1]: {=bool:?}, clr[2]: {=bool:?}, clr[3]: {=bool:?}, clr[4]: {=bool:?}, clr[5]: {=bool:?}, clr[6]: {=bool:?}, clr[7]: {=bool:?}, clr[8]: {=bool:?}, clr[9]: {=bool:?}, clr[10]: {=bool:?}, clr[11]: {=bool:?}, clr[12]: {=bool:?}, clr[13]: {=bool:?}, clr[14]: {=bool:?}, clr[15]: {=bool:?} }}",
+            self.clr(0usize),
+            self.clr(1usize),
+            self.clr(2usize),
+            self.clr(3usize),
+            self.clr(4usize),
+            self.clr(5usize),
+            self.clr(6usize),
+            self.clr(7usize),
+            self.clr(8usize),
+            self.clr(9usize),
+            self.clr(10usize),
+            self.clr(11usize),
+            self.clr(12usize),
+            self.clr(13usize),
+            self.clr(14usize),
+            self.clr(15usize)
+        )
     }
 }
 #[doc = "SCT output 0 set register"]
@@ -1398,17 +1436,19 @@ impl defmt::Format for OutClr {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OutSet(pub u32);
 impl OutSet {
-    #[doc = "A 1 in bit m selects event m to set output n (or clear it if SETCLRn = 0x1 or 0x2) output 0 = bit 0, output 1 = bit 1, etc. The number of bits = number of events in this SCT. When the counter is used in bi-directional mode, it is possible to reverse the action specified by the output set and clear registers when counting down, See the OUTPUTCTRL register."]
     #[must_use]
     #[inline(always)]
-    pub const fn set(&self) -> u16 {
-        let val = (self.0 >> 0usize) & 0xffff;
-        val as u16
+    pub const fn set(&self, n: usize) -> bool {
+        assert!(n < 16usize);
+        let offs = 0usize + n * 1usize;
+        let val = (self.0 >> offs) & 0x01;
+        val != 0
     }
-    #[doc = "A 1 in bit m selects event m to set output n (or clear it if SETCLRn = 0x1 or 0x2) output 0 = bit 0, output 1 = bit 1, etc. The number of bits = number of events in this SCT. When the counter is used in bi-directional mode, it is possible to reverse the action specified by the output set and clear registers when counting down, See the OUTPUTCTRL register."]
     #[inline(always)]
-    pub const fn set_set(&mut self, val: u16) {
-        self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
+    pub const fn set_set(&mut self, n: usize, val: bool) {
+        assert!(n < 16usize);
+        let offs = 0usize + n * 1usize;
+        self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
     }
 }
 impl Default for OutSet {
@@ -1419,13 +1459,49 @@ impl Default for OutSet {
 }
 impl core::fmt::Debug for OutSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("OutSet").field("set", &self.set()).finish()
+        f.debug_struct("OutSet")
+            .field("set[0]", &self.set(0usize))
+            .field("set[1]", &self.set(1usize))
+            .field("set[2]", &self.set(2usize))
+            .field("set[3]", &self.set(3usize))
+            .field("set[4]", &self.set(4usize))
+            .field("set[5]", &self.set(5usize))
+            .field("set[6]", &self.set(6usize))
+            .field("set[7]", &self.set(7usize))
+            .field("set[8]", &self.set(8usize))
+            .field("set[9]", &self.set(9usize))
+            .field("set[10]", &self.set(10usize))
+            .field("set[11]", &self.set(11usize))
+            .field("set[12]", &self.set(12usize))
+            .field("set[13]", &self.set(13usize))
+            .field("set[14]", &self.set(14usize))
+            .field("set[15]", &self.set(15usize))
+            .finish()
     }
 }
 #[cfg(feature = "defmt")]
 impl defmt::Format for OutSet {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "OutSet {{ set: {=u16:?} }}", self.set())
+        defmt::write!(
+            f,
+            "OutSet {{ set[0]: {=bool:?}, set[1]: {=bool:?}, set[2]: {=bool:?}, set[3]: {=bool:?}, set[4]: {=bool:?}, set[5]: {=bool:?}, set[6]: {=bool:?}, set[7]: {=bool:?}, set[8]: {=bool:?}, set[9]: {=bool:?}, set[10]: {=bool:?}, set[11]: {=bool:?}, set[12]: {=bool:?}, set[13]: {=bool:?}, set[14]: {=bool:?}, set[15]: {=bool:?} }}",
+            self.set(0usize),
+            self.set(1usize),
+            self.set(2usize),
+            self.set(3usize),
+            self.set(4usize),
+            self.set(5usize),
+            self.set(6usize),
+            self.set(7usize),
+            self.set(8usize),
+            self.set(9usize),
+            self.set(10usize),
+            self.set(11usize),
+            self.set(12usize),
+            self.set(13usize),
+            self.set(14usize),
+            self.set(15usize)
+        )
     }
 }
 #[doc = "SCT output register"]

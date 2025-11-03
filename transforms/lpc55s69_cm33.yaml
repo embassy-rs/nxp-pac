@@ -261,3 +261,27 @@ transforms:
   - !MergeEnums
     from: sct0::vals::Bidir[L,H]
     to: sct0::vals::Bidir
+
+# Turn `clr` and `set` in `` into bit arrays.
+  - !DeleteFields
+    fieldset: sct0::regs::Out(Clr|Set)
+    from: .*
+
+  - !AddFields
+    fieldset: sct0::regs::OutClr
+    fields: 
+      - name: clr
+        bit_offset: 0
+        bit_size: 1
+        array:
+          len: 16
+          stride: 1
+  - !AddFields
+    fieldset: sct0::regs::OutSet
+    fields: 
+      - name: set
+        bit_offset: 0
+        bit_size: 1
+        array:
+          len: 16
+          stride: 1         
