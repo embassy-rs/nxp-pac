@@ -5,6 +5,7 @@
 // IMXRT
 #[cfg_attr(feature = "mimxrt1011", path = "./chips/mimxrt1011/mod.rs")]
 #[cfg_attr(feature = "mimxrt1062", path = "./chips/mimxrt1062/mod.rs")]
+#[cfg_attr(feature = "mimxrt685s_cm33", path = "./chips/mimxrt685s_cm33/mod.rs")]
 // MCX
 #[cfg_attr(
     feature = "mcxn947_cm33_core0",

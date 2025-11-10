@@ -1,0 +1,124 @@
+transforms:
+  - !DeleteFields
+      fieldset: dma::regs::([a-zA-Z]+)0
+      from: .*
+
+  - !AddFields
+      fieldset: dma::regs::Enableset0
+      fields:
+        - name: channel
+          bit_offset: 0
+          bit_size: 1
+          array:
+            len: 32
+            stride: 1
+
+  - !AddFields
+      fieldset: dma::regs::Enableclr0
+      fields:
+        - name: channel
+          bit_offset: 0
+          bit_size: 1
+          array:
+            len: 32
+            stride: 1
+
+  - !AddFields
+      fieldset: dma::regs::Active0
+      fields:
+        - name: channel
+          bit_offset: 0
+          bit_size: 1
+          array:
+            len: 32
+            stride: 1
+
+  - !AddFields
+      fieldset: dma::regs::Busy0
+      fields:
+        - name: channel
+          bit_offset: 0
+          bit_size: 1
+          array:
+            len: 32
+            stride: 1
+
+  - !AddFields
+      fieldset: dma::regs::Errint0
+      fields:
+        - name: channel
+          bit_offset: 0
+          bit_size: 1
+          array:
+            len: 32
+            stride: 1
+
+  - !AddFields
+      fieldset: dma::regs::Intenset0
+      fields:
+        - name: channel
+          bit_offset: 0
+          bit_size: 1
+          array:
+            len: 32
+            stride: 1
+
+  - !AddFields
+      fieldset: dma::regs::Intenclr0
+      fields:
+        - name: channel
+          bit_offset: 0
+          bit_size: 1
+          array:
+            len: 32
+            stride: 1
+
+  - !AddFields
+      fieldset: dma::regs::Inta0
+      fields:
+        - name: channel
+          bit_offset: 0
+          bit_size: 1
+          array:
+            len: 32
+            stride: 1
+
+  - !AddFields
+      fieldset: dma::regs::Intb0
+      fields:
+        - name: channel
+          bit_offset: 0
+          bit_size: 1
+          array:
+            len: 32
+            stride: 1
+
+  - !AddFields
+      fieldset: dma::regs::Setvalid0
+      fields:
+        - name: channel
+          bit_offset: 0
+          bit_size: 1
+          array:
+            len: 32
+            stride: 1
+
+  - !AddFields
+      fieldset: dma::regs::Settrig0
+      fields:
+        - name: channel
+          bit_offset: 0
+          bit_size: 1
+          array:
+            len: 32
+            stride: 1
+
+  - !AddFields
+      fieldset: dma::regs::Abort0
+      fields:
+        - name: channel
+          bit_offset: 0
+          bit_size: 1
+          array:
+            len: 32
+            stride: 1

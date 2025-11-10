@@ -1,0 +1,53 @@
+transforms:
+  - !DeleteRegisters
+      block: crc::Crc
+      from: wr_data
+
+  - !Delete
+      from: crc::regs::WrData
+
+  - !Add
+    ir:
+      fieldset/crc::regs::WrData32:
+        description: 32-bit CRC Data.
+        fields:
+          - name: data
+            bit_offset: 0
+            bit_size: 32
+
+      fieldset/crc::regs::WrData16:
+        description: 16-bit CRC Data.
+        fields:
+          - name: data
+            bit_offset: 0
+            bit_size: 16
+
+      fieldset/crc::regs::WrData8:
+        description: 8-bit CRC Data.
+        fields:
+          - name: data
+            bit_offset: 0
+            bit_size: 8
+
+  - !AddRegisters
+      block: crc::Crc
+      registers:
+
+      - name: wr_data32
+        description: 32-bit data written to this register will be taken to perform CRC calculation with selected bit order and 1’s complement pre-process.
+        byte_offset: 8
+        access: Write
+        fieldset: crc::regs::WrData32
+
+      - name: wr_data16
+        description: 16-bit data written to this register will be taken to perform CRC calculation with selected bit order and 1’s complement pre-process.
+        byte_offset: 8
+        access: Write
+        fieldset: crc::regs::WrData16
+
+      - name: wr_data8
+        description: 8-bit data written to this register will be taken to perform CRC calculation with selected bit order and 1’s complement pre-process.
+        byte_offset: 8
+        access: Write
+        fieldset: crc::regs::WrData8
+

@@ -1,0 +1,81 @@
+transforms:
+  #! ADC1 -> ADC
+  - !Rename
+      from: adc0::(.*)
+      to: adc::$1
+      type: All
+
+  - !Rename
+      from: adc::Adc0
+      to: adc::Adc
+      type: Block
+
+  #! CRC_ENGINE -> CRC
+  - !Rename
+      from: crc_engine::(.*)
+      to: crc::$1
+      type: All
+
+  - !Rename
+      from: crc::CrcEngine
+      to: crc::Crc
+      type: Block
+
+  #! DMIC0 -> DMIC
+  - !Rename
+      from: dmic0::(.*)
+      to: dmic::$1
+      type: All
+
+  - !Rename
+      from: dmic::Dmic0
+      to: dmic::Dmic
+      type: Block
+
+  #! MRT0 -> MRT
+  - !Rename
+      from: mrt0::(.*)
+      to: mrt::$1
+      type: All
+
+  - !Rename
+      from: mrt::Mrt0
+      to: mrt::Mrt
+      type: Block
+
+  #! OSTIMER0 -> OSTIMER
+  - !Rename
+      from: ostimer0::(.*)
+      to: ostimer::$1
+      type: All
+
+  - !Rename
+      from: ostimer::Ostimer0
+      to: ostimer::Ostimer
+      type: Block
+
+  #! SCT0 -> SCT
+  - !Rename
+      from: sct0::(.*)
+      to: sct::$1
+      type: All
+
+  - !Rename
+      from: sct::Sct0
+      to: sct::Sct
+      type: Block
+
+  #! UTICK0 -> UTICK
+  - !Rename
+      from: utick0::(.*)
+      to: utick::$1
+      type: All
+
+  - !Rename
+      from: utick::Utick0
+      to: utick::Utick
+      type: Block
+
+  - !RenameInterrupts
+      from: (SCT|ADC|DMIC|HWVVAD|I3C)0
+      to: $1

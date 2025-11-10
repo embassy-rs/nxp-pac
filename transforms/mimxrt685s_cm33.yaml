@@ -1,0 +1,11 @@
+includes:
+- useless.yaml
+- cm33.yaml
+# Must perform renames first
+- imxrt685s/renames.yaml
+
+- imxrt685s/adc.yaml
+- imxrt685s/crc.yaml
+- imxrt685s/dma.yaml
+transforms:
+  - !Sort

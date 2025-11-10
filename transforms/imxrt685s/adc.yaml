@@ -1,0 +1,19 @@
+transforms:
+  - !Rename
+      from: adc::regs::Cmd([hl])1
+      to: adc::regs::Cmd$1
+
+  - !Rename
+      from: adc::vals::Cmd([hl])1([a-zA-Z]+)
+      to: adc::vals::Cmd$1$2
+
+  - !Delete
+      from: adc::regs::Cmd[hl]\d+
+
+  - !Delete
+      from: adc::vals::Cmd[hl]\d+[a-zA-Z]+
+
+  - !MakeRegisterArray
+      blocks: adc::Adc
+      from: (cmdl|cmdh)\d+
+      to: $1
