@@ -7,5 +7,6 @@ includes:
 - imxrt685s/adc.yaml
 - imxrt685s/crc.yaml
 - imxrt685s/dma.yaml
+- imxrt685s/iopctl.yaml
 transforms:
   - !Sort

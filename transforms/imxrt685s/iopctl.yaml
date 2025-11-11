@@ -1,0 +1,10 @@
+transforms:
+  - !MergeEnums
+      from: iopctl::vals::Pio\d+(Fsel|Fulldrive|Pupdsel|Slewrate)
+      to: iopctl::vals::$1
+      check: Layout
+
+  - !MergeFieldsets
+      from: iopctl::regs::Pio\d+
+      to: iopctl::regs::Pio
+      check: Layout
