@@ -299,14 +299,14 @@ impl Ctrl {
     #[doc = "Loop Mode Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn loops(&self) -> super::vals::Loops {
+    pub const fn loops(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
-        super::vals::Loops::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Loop Mode Select"]
     #[inline(always)]
-    pub const fn set_loops(&mut self, val: super::vals::Loops) {
-        self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
+    pub const fn set_loops(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
     #[doc = "Idle Configuration"]
     #[must_use]
@@ -359,14 +359,14 @@ impl Ctrl {
     #[doc = "Send Break"]
     #[must_use]
     #[inline(always)]
-    pub const fn sbk(&self) -> super::vals::Sbk {
+    pub const fn sbk(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
-        super::vals::Sbk::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Send Break"]
     #[inline(always)]
-    pub const fn set_sbk(&mut self, val: super::vals::Sbk) {
-        self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
+    pub const fn set_sbk(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
     #[doc = "Receiver Wakeup Control"]
     #[must_use]
@@ -594,7 +594,7 @@ impl defmt::Format for Ctrl {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Ctrl {{ pt: {:?}, pe: {=bool:?}, ilt: {:?}, wake: {:?}, m: {:?}, rsrc: {:?}, dozeen: {:?}, loops: {:?}, idlecfg: {:?}, m7: {:?}, ma2ie: {=bool:?}, ma1ie: {=bool:?}, sbk: {:?}, rwu: {:?}, re: {=bool:?}, te: {=bool:?}, ilie: {=bool:?}, rie: {=bool:?}, tcie: {=bool:?}, tie: {=bool:?}, peie: {=bool:?}, feie: {=bool:?}, neie: {=bool:?}, orie: {=bool:?}, txinv: {=bool:?}, txdir: {:?}, r9t8: {=bool:?}, r8t9: {=bool:?} }}",
+            "Ctrl {{ pt: {:?}, pe: {=bool:?}, ilt: {:?}, wake: {:?}, m: {:?}, rsrc: {:?}, dozeen: {:?}, loops: {=bool:?}, idlecfg: {:?}, m7: {:?}, ma2ie: {=bool:?}, ma1ie: {=bool:?}, sbk: {=bool:?}, rwu: {:?}, re: {=bool:?}, te: {=bool:?}, ilie: {=bool:?}, rie: {=bool:?}, tcie: {=bool:?}, tie: {=bool:?}, peie: {=bool:?}, feie: {=bool:?}, neie: {=bool:?}, orie: {=bool:?}, txinv: {=bool:?}, txdir: {:?}, r9t8: {=bool:?}, r8t9: {=bool:?} }}",
             self.pt(),
             self.pe(),
             self.ilt(),
@@ -634,122 +634,18 @@ impl Data {
     #[doc = "R0T0"]
     #[must_use]
     #[inline(always)]
-    pub const fn r0t0(&self) -> bool {
-        let val = (self.0 >> 0usize) & 0x01;
+    pub const fn rt(&self, n: usize) -> bool {
+        assert!(n < 10usize);
+        let offs = 0usize + n * 1usize;
+        let val = (self.0 >> offs) & 0x01;
         val != 0
     }
     #[doc = "R0T0"]
     #[inline(always)]
-    pub const fn set_r0t0(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
-    }
-    #[doc = "R1T1"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn r1t1(&self) -> bool {
-        let val = (self.0 >> 1usize) & 0x01;
-        val != 0
-    }
-    #[doc = "R1T1"]
-    #[inline(always)]
-    pub const fn set_r1t1(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
-    }
-    #[doc = "R2T2"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn r2t2(&self) -> bool {
-        let val = (self.0 >> 2usize) & 0x01;
-        val != 0
-    }
-    #[doc = "R2T2"]
-    #[inline(always)]
-    pub const fn set_r2t2(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
-    }
-    #[doc = "R3T3"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn r3t3(&self) -> bool {
-        let val = (self.0 >> 3usize) & 0x01;
-        val != 0
-    }
-    #[doc = "R3T3"]
-    #[inline(always)]
-    pub const fn set_r3t3(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
-    }
-    #[doc = "R4T4"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn r4t4(&self) -> bool {
-        let val = (self.0 >> 4usize) & 0x01;
-        val != 0
-    }
-    #[doc = "R4T4"]
-    #[inline(always)]
-    pub const fn set_r4t4(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
-    }
-    #[doc = "R5T5"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn r5t5(&self) -> bool {
-        let val = (self.0 >> 5usize) & 0x01;
-        val != 0
-    }
-    #[doc = "R5T5"]
-    #[inline(always)]
-    pub const fn set_r5t5(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
-    }
-    #[doc = "R6T6"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn r6t6(&self) -> bool {
-        let val = (self.0 >> 6usize) & 0x01;
-        val != 0
-    }
-    #[doc = "R6T6"]
-    #[inline(always)]
-    pub const fn set_r6t6(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
-    }
-    #[doc = "R7T7"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn r7t7(&self) -> bool {
-        let val = (self.0 >> 7usize) & 0x01;
-        val != 0
-    }
-    #[doc = "R7T7"]
-    #[inline(always)]
-    pub const fn set_r7t7(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
-    }
-    #[doc = "R8T8"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn r8t8(&self) -> bool {
-        let val = (self.0 >> 8usize) & 0x01;
-        val != 0
-    }
-    #[doc = "R8T8"]
-    #[inline(always)]
-    pub const fn set_r8t8(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
-    }
-    #[doc = "R9T9"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn r9t9(&self) -> bool {
-        let val = (self.0 >> 9usize) & 0x01;
-        val != 0
-    }
-    #[doc = "R9T9"]
-    #[inline(always)]
-    pub const fn set_r9t9(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
+    pub const fn set_rt(&mut self, n: usize, val: bool) {
+        assert!(n < 10usize);
+        let offs = 0usize + n * 1usize;
+        self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
     }
     #[doc = "Idle Line"]
     #[must_use]
@@ -821,16 +717,16 @@ impl Default for Data {
 impl core::fmt::Debug for Data {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Data")
-            .field("r0t0", &self.r0t0())
-            .field("r1t1", &self.r1t1())
-            .field("r2t2", &self.r2t2())
-            .field("r3t3", &self.r3t3())
-            .field("r4t4", &self.r4t4())
-            .field("r5t5", &self.r5t5())
-            .field("r6t6", &self.r6t6())
-            .field("r7t7", &self.r7t7())
-            .field("r8t8", &self.r8t8())
-            .field("r9t9", &self.r9t9())
+            .field("rt[0]", &self.rt(0usize))
+            .field("rt[1]", &self.rt(1usize))
+            .field("rt[2]", &self.rt(2usize))
+            .field("rt[3]", &self.rt(3usize))
+            .field("rt[4]", &self.rt(4usize))
+            .field("rt[5]", &self.rt(5usize))
+            .field("rt[6]", &self.rt(6usize))
+            .field("rt[7]", &self.rt(7usize))
+            .field("rt[8]", &self.rt(8usize))
+            .field("rt[9]", &self.rt(9usize))
             .field("idline", &self.idline())
             .field("rxempt", &self.rxempt())
             .field("fretsc", &self.fretsc())
@@ -844,17 +740,17 @@ impl defmt::Format for Data {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Data {{ r0t0: {=bool:?}, r1t1: {=bool:?}, r2t2: {=bool:?}, r3t3: {=bool:?}, r4t4: {=bool:?}, r5t5: {=bool:?}, r6t6: {=bool:?}, r7t7: {=bool:?}, r8t8: {=bool:?}, r9t9: {=bool:?}, idline: {=bool:?}, rxempt: {=bool:?}, fretsc: {=bool:?}, paritye: {=bool:?}, noisy: {=bool:?} }}",
-            self.r0t0(),
-            self.r1t1(),
-            self.r2t2(),
-            self.r3t3(),
-            self.r4t4(),
-            self.r5t5(),
-            self.r6t6(),
-            self.r7t7(),
-            self.r8t8(),
-            self.r9t9(),
+            "Data {{ rt[0]: {=bool:?}, rt[1]: {=bool:?}, rt[2]: {=bool:?}, rt[3]: {=bool:?}, rt[4]: {=bool:?}, rt[5]: {=bool:?}, rt[6]: {=bool:?}, rt[7]: {=bool:?}, rt[8]: {=bool:?}, rt[9]: {=bool:?}, idline: {=bool:?}, rxempt: {=bool:?}, fretsc: {=bool:?}, paritye: {=bool:?}, noisy: {=bool:?} }}",
+            self.rt(0usize),
+            self.rt(1usize),
+            self.rt(2usize),
+            self.rt(3usize),
+            self.rt(4usize),
+            self.rt(5usize),
+            self.rt(6usize),
+            self.rt(7usize),
+            self.rt(8usize),
+            self.rt(9usize),
             self.idline(),
             self.rxempt(),
             self.fretsc(),
@@ -955,14 +851,14 @@ impl Fifo {
     #[doc = "Receive FIFO Flush"]
     #[must_use]
     #[inline(always)]
-    pub const fn rxflush(&self) -> super::vals::Rxflush {
+    pub const fn rxflush(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
-        super::vals::Rxflush::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Receive FIFO Flush"]
     #[inline(always)]
-    pub const fn set_rxflush(&mut self, val: super::vals::Rxflush) {
-        self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
+    pub const fn set_rxflush(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
     #[doc = "Transmit FIFO Flush"]
     #[must_use]
@@ -1055,7 +951,7 @@ impl defmt::Format for Fifo {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Fifo {{ rxfifosize: {:?}, rxfe: {=bool:?}, txfifosize: {:?}, txfe: {=bool:?}, rxufe: {=bool:?}, txofe: {=bool:?}, rxiden: {:?}, rxflush: {:?}, txflush: {:?}, rxuf: {=bool:?}, txof: {=bool:?}, rxempt: {=bool:?}, txempt: {=bool:?} }}",
+            "Fifo {{ rxfifosize: {:?}, rxfe: {=bool:?}, txfifosize: {:?}, txfe: {=bool:?}, rxufe: {=bool:?}, txofe: {=bool:?}, rxiden: {:?}, rxflush: {=bool:?}, txflush: {:?}, rxuf: {=bool:?}, txof: {=bool:?}, rxempt: {=bool:?}, txempt: {=bool:?} }}",
             self.rxfifosize(),
             self.rxfe(),
             self.txfifosize(),
@@ -1080,14 +976,14 @@ impl Global {
     #[doc = "Software Reset"]
     #[must_use]
     #[inline(always)]
-    pub const fn rst(&self) -> super::vals::Rst {
+    pub const fn rst(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::Rst::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Software Reset"]
     #[inline(always)]
-    pub const fn set_rst(&mut self, val: super::vals::Rst) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    pub const fn set_rst(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
 }
 impl Default for Global {
@@ -1104,7 +1000,7 @@ impl core::fmt::Debug for Global {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Global {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Global {{ rst: {:?} }}", self.rst())
+        defmt::write!(f, "Global {{ rst: {=bool:?} }}", self.rst())
     }
 }
 #[doc = "LPUART Match Address Register"]
