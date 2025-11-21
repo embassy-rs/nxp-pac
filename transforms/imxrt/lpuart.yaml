@@ -1,0 +1,9 @@
+transforms:
+  - !MakeFieldArray
+    fieldsets: lpuart::regs::Data
+    from: r(\d+)t(\d+)
+    to: rt
+
+  # Useless enums
+  - !DeleteEnums
+    from: lpuart::vals::(Loops|Rst|Rxflush|Rxflush|Sbk)

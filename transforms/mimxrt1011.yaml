@@ -9,6 +9,7 @@ includes:
 - imxrt/dma.yaml
 - imxrt/pit.yaml
 - imxrt1011/pwm.yaml
+- imxrt/lpuart.yaml
 transforms:
   #! ADC HS::COCO is array
   - !MakeFieldArray

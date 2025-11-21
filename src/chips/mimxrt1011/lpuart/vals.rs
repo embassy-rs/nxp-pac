@@ -185,37 +185,6 @@ impl From<Ilt> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Loops {
-    #[doc = "Normal operation - RXD and TXD use separate pins."]
-    NOFFECT = 0x0,
-    #[doc = "Loop mode or single-wire mode where transmitter outputs are internally connected to receiver input (see RSRC bit)."]
-    LOOPBACK = 0x01,
-}
-impl Loops {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Loops {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Loops {
-    #[inline(always)]
-    fn from(val: u8) -> Loops {
-        Loops::from_bits(val)
-    }
-}
-impl From<Loops> for u8 {
-    #[inline(always)]
-    fn from(val: Loops) -> u8 {
-        Loops::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum M {
     #[doc = "Receiver and transmitter use 8-bit data characters."]
     DATA8 = 0x0,
@@ -557,37 +526,6 @@ impl From<Rsrc> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Rst {
-    #[doc = "Module is not reset."]
-    NO_EFFECT = 0x0,
-    #[doc = "Module is reset."]
-    RESET = 0x01,
-}
-impl Rst {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Rst {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Rst {
-    #[inline(always)]
-    fn from(val: u8) -> Rst {
-        Rst::from_bits(val)
-    }
-}
-impl From<Rst> for u8 {
-    #[inline(always)]
-    fn from(val: Rst) -> u8 {
-        Rst::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rwu {
     #[doc = "Normal receiver operation."]
     NO_EFFECT = 0x0,
@@ -693,37 +631,6 @@ impl From<Rxfifosize> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Rxflush {
-    #[doc = "No flush operation occurs."]
-    NO_EFFECT = 0x0,
-    #[doc = "All data in the receive FIFO/buffer is cleared out."]
-    RXFIFO_RST = 0x01,
-}
-impl Rxflush {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Rxflush {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Rxflush {
-    #[inline(always)]
-    fn from(val: u8) -> Rxflush {
-        Rxflush::from_bits(val)
-    }
-}
-impl From<Rxflush> for u8 {
-    #[inline(always)]
-    fn from(val: Rxflush) -> u8 {
-        Rxflush::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rxiden {
     #[doc = "Disable RDRF assertion due to partially filled FIFO when receiver is idle."]
     DISABLED = 0x0,
@@ -762,37 +669,6 @@ impl From<Rxiden> for u8 {
     #[inline(always)]
     fn from(val: Rxiden) -> u8 {
         Rxiden::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Sbk {
-    #[doc = "Normal transmitter operation."]
-    NO_EFFECT = 0x0,
-    #[doc = "Queue break character(s) to be sent."]
-    TX_BREAK = 0x01,
-}
-impl Sbk {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Sbk {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Sbk {
-    #[inline(always)]
-    fn from(val: u8) -> Sbk {
-        Sbk::from_bits(val)
-    }
-}
-impl From<Sbk> for u8 {
-    #[inline(always)]
-    fn from(val: Sbk) -> u8 {
-        Sbk::to_bits(val)
     }
 }
 #[repr(u8)]
