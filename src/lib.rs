@@ -24,6 +24,8 @@
     feature = "lpc55s69_cm33_core1",
     path = "./chips/lpc55s69_cm33_core1/mod.rs"
 )]
+// LPC55S16
+#[cfg_attr(feature = "lpc55s16", path = "./chips/lpc55s16/mod.rs")]
 mod pac;
 pub use pac::*;
 
