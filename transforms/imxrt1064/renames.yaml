@@ -1,0 +1,10 @@
+transforms:
+  #! The following registers do not have a mux_mode field in xml
+  #  must manually add them in order for enum merging to properly work
+  - !AddFields
+    fieldset: (iomuxc|iomuxc_snvs)::regs::SwMuxCtlPadGpioSpiB(000|013|107)
+    fields:
+      - name: mux_mode
+        description: "MUX Mode Select Field."
+        bit_offset: 0
+        bit_size: 4

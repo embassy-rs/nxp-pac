@@ -38,6 +38,7 @@ metadata = []
 ## IMXRT
 mimxrt1011 = []
 mimxrt1062 = []
+mimxrt1064 = []
 mimxrt685s_cm33 = []
 
 ## MCX

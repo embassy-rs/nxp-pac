@@ -41,6 +41,7 @@ struct Feature {
 const GENERATE: &[Feature] = &[
     Feature { chip: "MIMXRT1011", metadata: "MIMXRT1011", cores: &["MIMXRT1011"] },
     Feature { chip: "MIMXRT1062", metadata: "MIMXRT106x", cores: &["MIMXRT1062"] },
+    Feature { chip: "MIMXRT1064", metadata: "MIMXRT106x", cores: &["MIMXRT1064"] },
     // TODO: metadata
     Feature { chip: "MIMXRT685S", metadata: "", cores: &["MIMXRT685S_cm33"] },
 

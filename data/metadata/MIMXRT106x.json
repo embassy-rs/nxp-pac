@@ -5,7 +5,7 @@
     "GPIO_SPI_* pins only available on the 225 pin package",
     "TODO: A, D, F, P and V variants?"
   ],
-  "chips": [ "MIMXRT1061", "MIMXRT1062" ],
+  "chips": [ "MIMXRT1061", "MIMXRT1062", "MIMXRT1064" ],
   "pins": [
     { "name": "GPIO_AD_B0_00", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F80BC", "pad": "0x401F82AC" } },
     { "name": "GPIO_AD_B0_01", "supply": "NVCC_GPIO", "iomuxc": { "mux": "0x401F80C0", "pad": "0x401F82B0" } },
