@@ -1741,7 +1741,7 @@ pub enum Tcd0AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
@@ -1915,7 +1915,7 @@ pub enum Tcd10AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
@@ -2089,7 +2089,7 @@ pub enum Tcd11AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
@@ -2263,7 +2263,7 @@ pub enum Tcd12AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
@@ -2437,23 +2437,23 @@ pub enum Tcd13AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED_1 = 0x02,
+    ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED_2 = 0x03,
+    ENABLED_3 = 0x03,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED_3 = 0x04,
+    ENABLED_4 = 0x04,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED_4 = 0x05,
+    ENABLED_5 = 0x05,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED_5 = 0x06,
+    ENABLED_6 = 0x06,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED_6 = 0x07,
+    ENABLED_7 = 0x07,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED_7 = 0x08,
+    ENABLED_8 = 0x08,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED_8 = 0x09,
+    ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
@@ -2611,7 +2611,7 @@ pub enum Tcd14AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
@@ -2785,7 +2785,7 @@ pub enum Tcd15AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
@@ -2959,7 +2959,7 @@ pub enum Tcd16AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
@@ -3133,7 +3133,7 @@ pub enum Tcd17AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
@@ -3307,7 +3307,7 @@ pub enum Tcd18AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
@@ -3481,7 +3481,7 @@ pub enum Tcd19AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
@@ -3655,7 +3655,7 @@ pub enum Tcd1AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
@@ -3829,7 +3829,7 @@ pub enum Tcd20AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
@@ -4003,7 +4003,7 @@ pub enum Tcd21AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
@@ -4177,7 +4177,7 @@ pub enum Tcd22AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
@@ -4351,7 +4351,7 @@ pub enum Tcd23AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
@@ -4525,7 +4525,7 @@ pub enum Tcd24AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
@@ -4699,7 +4699,7 @@ pub enum Tcd25AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
@@ -4873,7 +4873,7 @@ pub enum Tcd26AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
@@ -5047,7 +5047,7 @@ pub enum Tcd27AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
@@ -5221,7 +5221,7 @@ pub enum Tcd28AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
@@ -5395,7 +5395,7 @@ pub enum Tcd29AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
@@ -5569,7 +5569,7 @@ pub enum Tcd2AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
@@ -5743,7 +5743,7 @@ pub enum Tcd30AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
@@ -5917,7 +5917,7 @@ pub enum Tcd31AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
@@ -6091,7 +6091,7 @@ pub enum Tcd3AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
@@ -6265,7 +6265,7 @@ pub enum Tcd4AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
@@ -6439,7 +6439,7 @@ pub enum Tcd5AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
@@ -6613,7 +6613,7 @@ pub enum Tcd6AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
@@ -6787,7 +6787,7 @@ pub enum Tcd7AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
@@ -6961,7 +6961,7 @@ pub enum Tcd8AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]
@@ -7135,7 +7135,7 @@ pub enum Tcd9AttrSmod {
     #[doc = "Source address modulo feature is disabled"]
     DISABLED = 0x0,
     #[doc = "Value defines address range used to set up circular data queue"]
-    ENABLED = 0x01,
+    ENABLED_1 = 0x01,
     #[doc = "Value defines address range used to set up circular data queue"]
     ENABLED_2 = 0x02,
     #[doc = "Value defines address range used to set up circular data queue"]

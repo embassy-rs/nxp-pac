@@ -1812,9 +1812,9 @@ pub enum Pwmafs {
     #[doc = "Output is forced to logic 1 state prior to consideration of output polarity control."]
     LOGIC_1 = 0x01,
     #[doc = "Output is tristated."]
-    TRISTATED = 0x02,
+    TRISTATED_2 = 0x02,
     #[doc = "Output is tristated."]
-    TRISTATED_2 = 0x03,
+    TRISTATED_3 = 0x03,
 }
 impl Pwmafs {
     #[inline(always)]
@@ -1892,9 +1892,9 @@ pub enum Pwmbfs {
     #[doc = "Output is forced to logic 1 state prior to consideration of output polarity control."]
     LOGIC_1 = 0x01,
     #[doc = "Output is tristated."]
-    TRISTATED = 0x02,
+    TRISTATED_2 = 0x02,
     #[doc = "Output is tristated."]
-    TRISTATED_2 = 0x03,
+    TRISTATED_3 = 0x03,
 }
 impl Pwmbfs {
     #[inline(always)]
@@ -1972,9 +1972,9 @@ pub enum Pwmxfs {
     #[doc = "Output is forced to logic 1 state prior to consideration of output polarity control."]
     LOGIC_1 = 0x01,
     #[doc = "Output is tristated."]
-    TRISTATED = 0x02,
+    TRISTATED_2 = 0x02,
     #[doc = "Output is tristated."]
-    TRISTATED_2 = 0x03,
+    TRISTATED_3 = 0x03,
 }
 impl Pwmxfs {
     #[inline(always)]

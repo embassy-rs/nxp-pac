@@ -4,25 +4,25 @@ transforms:
 
   - !DeleteEnumVariants
     enum: inputmux::vals::Dma0ItrigInmuxInp
-    from: VAL22
+    from: VAL22(.*)
   - !DeleteEnumVariants
     enum: inputmux::vals::InpN
-    from: VAL24
+    from: VAL24(.*)
   - !DeleteEnumVariants
     enum: inputmux::vals::Timer0captselCaptsel
-    from: VAL25
+    from: VAL25(.*)
   - !DeleteEnumVariants
     enum: inputmux::vals::Timer1captselCaptsel
-    from: VAL25
+    from: VAL25(.*)
   - !DeleteEnumVariants
     enum: inputmux::vals::Timer2captselCaptsel
-    from: VAL25
+    from: VAL25(.*)
   - !DeleteEnumVariants
     enum: inputmux::vals::Timer3captselCaptsel
-    from: VAL25
+    from: VAL25(.*)
   - !DeleteEnumVariants
     enum: inputmux::vals::Timer4captselCaptsel
-    from: VAL25
+    from: VAL25(.*)
 
   # - !DeleteEnumVariants
   #   enum: syscon::vals::AdcclkselSel
