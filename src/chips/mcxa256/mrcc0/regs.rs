@@ -258,37 +258,37 @@ impl MrccCmp0FuncClkdiv {
     #[doc = "Reset divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccCmp0FuncClkdivReset {
+    pub const fn reset(&self) -> super::vals::MrccCmpFuncClkdivReset {
         let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccCmp0FuncClkdivReset::from_bits(val as u8)
+        super::vals::MrccCmpFuncClkdivReset::from_bits(val as u8)
     }
     #[doc = "Reset divider counter"]
     #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccCmp0FuncClkdivReset) {
+    pub const fn set_reset(&mut self, val: super::vals::MrccCmpFuncClkdivReset) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
     #[doc = "Halt divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccCmp0FuncClkdivHalt {
+    pub const fn halt(&self) -> super::vals::MrccCmpFuncClkdivHalt {
         let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccCmp0FuncClkdivHalt::from_bits(val as u8)
+        super::vals::MrccCmpFuncClkdivHalt::from_bits(val as u8)
     }
     #[doc = "Halt divider counter"]
     #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccCmp0FuncClkdivHalt) {
+    pub const fn set_halt(&mut self, val: super::vals::MrccCmpFuncClkdivHalt) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
     #[doc = "Divider status flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccCmp0FuncClkdivUnstab {
+    pub const fn unstab(&self) -> super::vals::MrccCmpFuncClkdivUnstab {
         let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccCmp0FuncClkdivUnstab::from_bits(val as u8)
+        super::vals::MrccCmpFuncClkdivUnstab::from_bits(val as u8)
     }
     #[doc = "Divider status flag"]
     #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccCmp0FuncClkdivUnstab) {
+    pub const fn set_unstab(&mut self, val: super::vals::MrccCmpFuncClkdivUnstab) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
@@ -341,37 +341,37 @@ impl MrccCmp0RrClkdiv {
     #[doc = "Reset divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccCmp0RrClkdivReset {
+    pub const fn reset(&self) -> super::vals::MrccCmpRrClkdivReset {
         let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccCmp0RrClkdivReset::from_bits(val as u8)
+        super::vals::MrccCmpRrClkdivReset::from_bits(val as u8)
     }
     #[doc = "Reset divider counter"]
     #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccCmp0RrClkdivReset) {
+    pub const fn set_reset(&mut self, val: super::vals::MrccCmpRrClkdivReset) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
     #[doc = "Halt divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccCmp0RrClkdivHalt {
+    pub const fn halt(&self) -> super::vals::MrccCmpRrClkdivHalt {
         let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccCmp0RrClkdivHalt::from_bits(val as u8)
+        super::vals::MrccCmpRrClkdivHalt::from_bits(val as u8)
     }
     #[doc = "Halt divider counter"]
     #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccCmp0RrClkdivHalt) {
+    pub const fn set_halt(&mut self, val: super::vals::MrccCmpRrClkdivHalt) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
     #[doc = "Divider status flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccCmp0RrClkdivUnstab {
+    pub const fn unstab(&self) -> super::vals::MrccCmpRrClkdivUnstab {
         let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccCmp0RrClkdivUnstab::from_bits(val as u8)
+        super::vals::MrccCmpRrClkdivUnstab::from_bits(val as u8)
     }
     #[doc = "Divider status flag"]
     #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccCmp0RrClkdivUnstab) {
+    pub const fn set_unstab(&mut self, val: super::vals::MrccCmpRrClkdivUnstab) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
@@ -412,13 +412,13 @@ impl MrccCmp0RrClksel {
     #[doc = "Functional Clock Mux Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccCmp0RrClkselMux {
+    pub const fn mux(&self) -> super::vals::MrccCmpRrClkselMux {
         let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccCmp0RrClkselMux::from_bits(val as u8)
+        super::vals::MrccCmpRrClkselMux::from_bits(val as u8)
     }
     #[doc = "Functional Clock Mux Select"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccCmp0RrClkselMux) {
+    pub const fn set_mux(&mut self, val: super::vals::MrccCmpRrClkselMux) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
 }
@@ -461,37 +461,37 @@ impl MrccCmp1FuncClkdiv {
     #[doc = "Reset divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccCmp1FuncClkdivReset {
+    pub const fn reset(&self) -> super::vals::MrccCmpFuncClkdivReset {
         let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccCmp1FuncClkdivReset::from_bits(val as u8)
+        super::vals::MrccCmpFuncClkdivReset::from_bits(val as u8)
     }
     #[doc = "Reset divider counter"]
     #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccCmp1FuncClkdivReset) {
+    pub const fn set_reset(&mut self, val: super::vals::MrccCmpFuncClkdivReset) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
     #[doc = "Halt divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccCmp1FuncClkdivHalt {
+    pub const fn halt(&self) -> super::vals::MrccCmpFuncClkdivHalt {
         let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccCmp1FuncClkdivHalt::from_bits(val as u8)
+        super::vals::MrccCmpFuncClkdivHalt::from_bits(val as u8)
     }
     #[doc = "Halt divider counter"]
     #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccCmp1FuncClkdivHalt) {
+    pub const fn set_halt(&mut self, val: super::vals::MrccCmpFuncClkdivHalt) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
     #[doc = "Divider status flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccCmp1FuncClkdivUnstab {
+    pub const fn unstab(&self) -> super::vals::MrccCmpFuncClkdivUnstab {
         let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccCmp1FuncClkdivUnstab::from_bits(val as u8)
+        super::vals::MrccCmpFuncClkdivUnstab::from_bits(val as u8)
     }
     #[doc = "Divider status flag"]
     #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccCmp1FuncClkdivUnstab) {
+    pub const fn set_unstab(&mut self, val: super::vals::MrccCmpFuncClkdivUnstab) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
@@ -544,37 +544,37 @@ impl MrccCmp1RrClkdiv {
     #[doc = "Reset divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccCmp1RrClkdivReset {
+    pub const fn reset(&self) -> super::vals::MrccCmpRrClkdivReset {
         let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccCmp1RrClkdivReset::from_bits(val as u8)
+        super::vals::MrccCmpRrClkdivReset::from_bits(val as u8)
     }
     #[doc = "Reset divider counter"]
     #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccCmp1RrClkdivReset) {
+    pub const fn set_reset(&mut self, val: super::vals::MrccCmpRrClkdivReset) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
     #[doc = "Halt divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccCmp1RrClkdivHalt {
+    pub const fn halt(&self) -> super::vals::MrccCmpRrClkdivHalt {
         let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccCmp1RrClkdivHalt::from_bits(val as u8)
+        super::vals::MrccCmpRrClkdivHalt::from_bits(val as u8)
     }
     #[doc = "Halt divider counter"]
     #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccCmp1RrClkdivHalt) {
+    pub const fn set_halt(&mut self, val: super::vals::MrccCmpRrClkdivHalt) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
     #[doc = "Divider status flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccCmp1RrClkdivUnstab {
+    pub const fn unstab(&self) -> super::vals::MrccCmpRrClkdivUnstab {
         let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccCmp1RrClkdivUnstab::from_bits(val as u8)
+        super::vals::MrccCmpRrClkdivUnstab::from_bits(val as u8)
     }
     #[doc = "Divider status flag"]
     #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccCmp1RrClkdivUnstab) {
+    pub const fn set_unstab(&mut self, val: super::vals::MrccCmpRrClkdivUnstab) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
@@ -615,13 +615,13 @@ impl MrccCmp1RrClksel {
     #[doc = "Functional Clock Mux Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccCmp1RrClkselMux {
+    pub const fn mux(&self) -> super::vals::MrccCmpRrClkselMux {
         let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccCmp1RrClkselMux::from_bits(val as u8)
+        super::vals::MrccCmpRrClkselMux::from_bits(val as u8)
     }
     #[doc = "Functional Clock Mux Select"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccCmp1RrClkselMux) {
+    pub const fn set_mux(&mut self, val: super::vals::MrccCmpRrClkselMux) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
 }
@@ -664,37 +664,37 @@ impl MrccCmp2FuncClkdiv {
     #[doc = "Reset divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccCmp2FuncClkdivReset {
+    pub const fn reset(&self) -> super::vals::MrccCmpFuncClkdivReset {
         let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccCmp2FuncClkdivReset::from_bits(val as u8)
+        super::vals::MrccCmpFuncClkdivReset::from_bits(val as u8)
     }
     #[doc = "Reset divider counter"]
     #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccCmp2FuncClkdivReset) {
+    pub const fn set_reset(&mut self, val: super::vals::MrccCmpFuncClkdivReset) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
     #[doc = "Halt divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccCmp2FuncClkdivHalt {
+    pub const fn halt(&self) -> super::vals::MrccCmpFuncClkdivHalt {
         let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccCmp2FuncClkdivHalt::from_bits(val as u8)
+        super::vals::MrccCmpFuncClkdivHalt::from_bits(val as u8)
     }
     #[doc = "Halt divider counter"]
     #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccCmp2FuncClkdivHalt) {
+    pub const fn set_halt(&mut self, val: super::vals::MrccCmpFuncClkdivHalt) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
     #[doc = "Divider status flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccCmp2FuncClkdivUnstab {
+    pub const fn unstab(&self) -> super::vals::MrccCmpFuncClkdivUnstab {
         let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccCmp2FuncClkdivUnstab::from_bits(val as u8)
+        super::vals::MrccCmpFuncClkdivUnstab::from_bits(val as u8)
     }
     #[doc = "Divider status flag"]
     #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccCmp2FuncClkdivUnstab) {
+    pub const fn set_unstab(&mut self, val: super::vals::MrccCmpFuncClkdivUnstab) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
@@ -747,37 +747,37 @@ impl MrccCmp2RrClkdiv {
     #[doc = "Reset divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccCmp2RrClkdivReset {
+    pub const fn reset(&self) -> super::vals::MrccCmpRrClkdivReset {
         let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccCmp2RrClkdivReset::from_bits(val as u8)
+        super::vals::MrccCmpRrClkdivReset::from_bits(val as u8)
     }
     #[doc = "Reset divider counter"]
     #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccCmp2RrClkdivReset) {
+    pub const fn set_reset(&mut self, val: super::vals::MrccCmpRrClkdivReset) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
     #[doc = "Halt divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccCmp2RrClkdivHalt {
+    pub const fn halt(&self) -> super::vals::MrccCmpRrClkdivHalt {
         let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccCmp2RrClkdivHalt::from_bits(val as u8)
+        super::vals::MrccCmpRrClkdivHalt::from_bits(val as u8)
     }
     #[doc = "Halt divider counter"]
     #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccCmp2RrClkdivHalt) {
+    pub const fn set_halt(&mut self, val: super::vals::MrccCmpRrClkdivHalt) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
     #[doc = "Divider status flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccCmp2RrClkdivUnstab {
+    pub const fn unstab(&self) -> super::vals::MrccCmpRrClkdivUnstab {
         let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccCmp2RrClkdivUnstab::from_bits(val as u8)
+        super::vals::MrccCmpRrClkdivUnstab::from_bits(val as u8)
     }
     #[doc = "Divider status flag"]
     #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccCmp2RrClkdivUnstab) {
+    pub const fn set_unstab(&mut self, val: super::vals::MrccCmpRrClkdivUnstab) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
@@ -818,13 +818,13 @@ impl MrccCmp2RrClksel {
     #[doc = "Functional Clock Mux Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccCmp2RrClkselMux {
+    pub const fn mux(&self) -> super::vals::MrccCmpRrClkselMux {
         let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccCmp2RrClkselMux::from_bits(val as u8)
+        super::vals::MrccCmpRrClkselMux::from_bits(val as u8)
     }
     #[doc = "Functional Clock Mux Select"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccCmp2RrClkselMux) {
+    pub const fn set_mux(&mut self, val: super::vals::MrccCmpRrClkselMux) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
 }
@@ -867,37 +867,37 @@ impl MrccCtimer0Clkdiv {
     #[doc = "Reset divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccCtimer0ClkdivReset {
+    pub const fn reset(&self) -> super::vals::MrccCtimerClkdivReset {
         let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccCtimer0ClkdivReset::from_bits(val as u8)
+        super::vals::MrccCtimerClkdivReset::from_bits(val as u8)
     }
     #[doc = "Reset divider counter"]
     #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccCtimer0ClkdivReset) {
+    pub const fn set_reset(&mut self, val: super::vals::MrccCtimerClkdivReset) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
     #[doc = "Halt divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccCtimer0ClkdivHalt {
+    pub const fn halt(&self) -> super::vals::MrccCtimerClkdivHalt {
         let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccCtimer0ClkdivHalt::from_bits(val as u8)
+        super::vals::MrccCtimerClkdivHalt::from_bits(val as u8)
     }
     #[doc = "Halt divider counter"]
     #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccCtimer0ClkdivHalt) {
+    pub const fn set_halt(&mut self, val: super::vals::MrccCtimerClkdivHalt) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
     #[doc = "Divider status flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccCtimer0ClkdivUnstab {
+    pub const fn unstab(&self) -> super::vals::MrccCtimerClkdivUnstab {
         let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccCtimer0ClkdivUnstab::from_bits(val as u8)
+        super::vals::MrccCtimerClkdivUnstab::from_bits(val as u8)
     }
     #[doc = "Divider status flag"]
     #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccCtimer0ClkdivUnstab) {
+    pub const fn set_unstab(&mut self, val: super::vals::MrccCtimerClkdivUnstab) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
@@ -938,13 +938,13 @@ impl MrccCtimer0Clksel {
     #[doc = "Functional Clock Mux Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccCtimer0ClkselMux {
+    pub const fn mux(&self) -> super::vals::MrccCtimerClkselMux {
         let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccCtimer0ClkselMux::from_bits(val as u8)
+        super::vals::MrccCtimerClkselMux::from_bits(val as u8)
     }
     #[doc = "Functional Clock Mux Select"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccCtimer0ClkselMux) {
+    pub const fn set_mux(&mut self, val: super::vals::MrccCtimerClkselMux) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
 }
@@ -987,37 +987,37 @@ impl MrccCtimer1Clkdiv {
     #[doc = "Reset divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccCtimer1ClkdivReset {
+    pub const fn reset(&self) -> super::vals::MrccCtimerClkdivReset {
         let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccCtimer1ClkdivReset::from_bits(val as u8)
+        super::vals::MrccCtimerClkdivReset::from_bits(val as u8)
     }
     #[doc = "Reset divider counter"]
     #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccCtimer1ClkdivReset) {
+    pub const fn set_reset(&mut self, val: super::vals::MrccCtimerClkdivReset) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
     #[doc = "Halt divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccCtimer1ClkdivHalt {
+    pub const fn halt(&self) -> super::vals::MrccCtimerClkdivHalt {
         let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccCtimer1ClkdivHalt::from_bits(val as u8)
+        super::vals::MrccCtimerClkdivHalt::from_bits(val as u8)
     }
     #[doc = "Halt divider counter"]
     #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccCtimer1ClkdivHalt) {
+    pub const fn set_halt(&mut self, val: super::vals::MrccCtimerClkdivHalt) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
     #[doc = "Divider status flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccCtimer1ClkdivUnstab {
+    pub const fn unstab(&self) -> super::vals::MrccCtimerClkdivUnstab {
         let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccCtimer1ClkdivUnstab::from_bits(val as u8)
+        super::vals::MrccCtimerClkdivUnstab::from_bits(val as u8)
     }
     #[doc = "Divider status flag"]
     #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccCtimer1ClkdivUnstab) {
+    pub const fn set_unstab(&mut self, val: super::vals::MrccCtimerClkdivUnstab) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
@@ -1058,13 +1058,13 @@ impl MrccCtimer1Clksel {
     #[doc = "Functional Clock Mux Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccCtimer1ClkselMux {
+    pub const fn mux(&self) -> super::vals::MrccCtimerClkselMux {
         let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccCtimer1ClkselMux::from_bits(val as u8)
+        super::vals::MrccCtimerClkselMux::from_bits(val as u8)
     }
     #[doc = "Functional Clock Mux Select"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccCtimer1ClkselMux) {
+    pub const fn set_mux(&mut self, val: super::vals::MrccCtimerClkselMux) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
 }
@@ -1107,37 +1107,37 @@ impl MrccCtimer2Clkdiv {
     #[doc = "Reset divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccCtimer2ClkdivReset {
+    pub const fn reset(&self) -> super::vals::MrccCtimerClkdivReset {
         let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccCtimer2ClkdivReset::from_bits(val as u8)
+        super::vals::MrccCtimerClkdivReset::from_bits(val as u8)
     }
     #[doc = "Reset divider counter"]
     #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccCtimer2ClkdivReset) {
+    pub const fn set_reset(&mut self, val: super::vals::MrccCtimerClkdivReset) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
     #[doc = "Halt divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccCtimer2ClkdivHalt {
+    pub const fn halt(&self) -> super::vals::MrccCtimerClkdivHalt {
         let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccCtimer2ClkdivHalt::from_bits(val as u8)
+        super::vals::MrccCtimerClkdivHalt::from_bits(val as u8)
     }
     #[doc = "Halt divider counter"]
     #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccCtimer2ClkdivHalt) {
+    pub const fn set_halt(&mut self, val: super::vals::MrccCtimerClkdivHalt) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
     #[doc = "Divider status flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccCtimer2ClkdivUnstab {
+    pub const fn unstab(&self) -> super::vals::MrccCtimerClkdivUnstab {
         let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccCtimer2ClkdivUnstab::from_bits(val as u8)
+        super::vals::MrccCtimerClkdivUnstab::from_bits(val as u8)
     }
     #[doc = "Divider status flag"]
     #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccCtimer2ClkdivUnstab) {
+    pub const fn set_unstab(&mut self, val: super::vals::MrccCtimerClkdivUnstab) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
@@ -1178,13 +1178,13 @@ impl MrccCtimer2Clksel {
     #[doc = "Functional Clock Mux Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccCtimer2ClkselMux {
+    pub const fn mux(&self) -> super::vals::MrccCtimerClkselMux {
         let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccCtimer2ClkselMux::from_bits(val as u8)
+        super::vals::MrccCtimerClkselMux::from_bits(val as u8)
     }
     #[doc = "Functional Clock Mux Select"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccCtimer2ClkselMux) {
+    pub const fn set_mux(&mut self, val: super::vals::MrccCtimerClkselMux) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
 }
@@ -1227,37 +1227,37 @@ impl MrccCtimer3Clkdiv {
     #[doc = "Reset divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccCtimer3ClkdivReset {
+    pub const fn reset(&self) -> super::vals::MrccCtimerClkdivReset {
         let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccCtimer3ClkdivReset::from_bits(val as u8)
+        super::vals::MrccCtimerClkdivReset::from_bits(val as u8)
     }
     #[doc = "Reset divider counter"]
     #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccCtimer3ClkdivReset) {
+    pub const fn set_reset(&mut self, val: super::vals::MrccCtimerClkdivReset) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
     #[doc = "Halt divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccCtimer3ClkdivHalt {
+    pub const fn halt(&self) -> super::vals::MrccCtimerClkdivHalt {
         let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccCtimer3ClkdivHalt::from_bits(val as u8)
+        super::vals::MrccCtimerClkdivHalt::from_bits(val as u8)
     }
     #[doc = "Halt divider counter"]
     #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccCtimer3ClkdivHalt) {
+    pub const fn set_halt(&mut self, val: super::vals::MrccCtimerClkdivHalt) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
     #[doc = "Divider status flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccCtimer3ClkdivUnstab {
+    pub const fn unstab(&self) -> super::vals::MrccCtimerClkdivUnstab {
         let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccCtimer3ClkdivUnstab::from_bits(val as u8)
+        super::vals::MrccCtimerClkdivUnstab::from_bits(val as u8)
     }
     #[doc = "Divider status flag"]
     #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccCtimer3ClkdivUnstab) {
+    pub const fn set_unstab(&mut self, val: super::vals::MrccCtimerClkdivUnstab) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
@@ -1298,13 +1298,13 @@ impl MrccCtimer3Clksel {
     #[doc = "Functional Clock Mux Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccCtimer3ClkselMux {
+    pub const fn mux(&self) -> super::vals::MrccCtimerClkselMux {
         let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccCtimer3ClkselMux::from_bits(val as u8)
+        super::vals::MrccCtimerClkselMux::from_bits(val as u8)
     }
     #[doc = "Functional Clock Mux Select"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccCtimer3ClkselMux) {
+    pub const fn set_mux(&mut self, val: super::vals::MrccCtimerClkselMux) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
 }
@@ -1347,37 +1347,37 @@ impl MrccCtimer4Clkdiv {
     #[doc = "Reset divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccCtimer4ClkdivReset {
+    pub const fn reset(&self) -> super::vals::MrccCtimerClkdivReset {
         let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccCtimer4ClkdivReset::from_bits(val as u8)
+        super::vals::MrccCtimerClkdivReset::from_bits(val as u8)
     }
     #[doc = "Reset divider counter"]
     #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccCtimer4ClkdivReset) {
+    pub const fn set_reset(&mut self, val: super::vals::MrccCtimerClkdivReset) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
     #[doc = "Halt divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccCtimer4ClkdivHalt {
+    pub const fn halt(&self) -> super::vals::MrccCtimerClkdivHalt {
         let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccCtimer4ClkdivHalt::from_bits(val as u8)
+        super::vals::MrccCtimerClkdivHalt::from_bits(val as u8)
     }
     #[doc = "Halt divider counter"]
     #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccCtimer4ClkdivHalt) {
+    pub const fn set_halt(&mut self, val: super::vals::MrccCtimerClkdivHalt) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
     #[doc = "Divider status flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccCtimer4ClkdivUnstab {
+    pub const fn unstab(&self) -> super::vals::MrccCtimerClkdivUnstab {
         let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccCtimer4ClkdivUnstab::from_bits(val as u8)
+        super::vals::MrccCtimerClkdivUnstab::from_bits(val as u8)
     }
     #[doc = "Divider status flag"]
     #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccCtimer4ClkdivUnstab) {
+    pub const fn set_unstab(&mut self, val: super::vals::MrccCtimerClkdivUnstab) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
@@ -1418,13 +1418,13 @@ impl MrccCtimer4Clksel {
     #[doc = "Functional Clock Mux Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccCtimer4ClkselMux {
+    pub const fn mux(&self) -> super::vals::MrccCtimerClkselMux {
         let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccCtimer4ClkselMux::from_bits(val as u8)
+        super::vals::MrccCtimerClkselMux::from_bits(val as u8)
     }
     #[doc = "Functional Clock Mux Select"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccCtimer4ClkselMux) {
+    pub const fn set_mux(&mut self, val: super::vals::MrccCtimerClkselMux) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
 }
@@ -1707,37 +1707,37 @@ impl MrccFlexcan0Clkdiv {
     #[doc = "Reset divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccFlexcan0ClkdivReset {
+    pub const fn reset(&self) -> super::vals::MrccFlexcanClkdivReset {
         let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccFlexcan0ClkdivReset::from_bits(val as u8)
+        super::vals::MrccFlexcanClkdivReset::from_bits(val as u8)
     }
     #[doc = "Reset divider counter"]
     #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccFlexcan0ClkdivReset) {
+    pub const fn set_reset(&mut self, val: super::vals::MrccFlexcanClkdivReset) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
     #[doc = "Halt divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccFlexcan0ClkdivHalt {
+    pub const fn halt(&self) -> super::vals::MrccFlexcanClkdivHalt {
         let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccFlexcan0ClkdivHalt::from_bits(val as u8)
+        super::vals::MrccFlexcanClkdivHalt::from_bits(val as u8)
     }
     #[doc = "Halt divider counter"]
     #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccFlexcan0ClkdivHalt) {
+    pub const fn set_halt(&mut self, val: super::vals::MrccFlexcanClkdivHalt) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
     #[doc = "Divider status flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccFlexcan0ClkdivUnstab {
+    pub const fn unstab(&self) -> super::vals::MrccFlexcanClkdivUnstab {
         let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccFlexcan0ClkdivUnstab::from_bits(val as u8)
+        super::vals::MrccFlexcanClkdivUnstab::from_bits(val as u8)
     }
     #[doc = "Divider status flag"]
     #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccFlexcan0ClkdivUnstab) {
+    pub const fn set_unstab(&mut self, val: super::vals::MrccFlexcanClkdivUnstab) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
@@ -1778,13 +1778,13 @@ impl MrccFlexcan0Clksel {
     #[doc = "Functional Clock Mux Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccFlexcan0ClkselMux {
+    pub const fn mux(&self) -> super::vals::MrccFlexcanClkselMux {
         let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccFlexcan0ClkselMux::from_bits(val as u8)
+        super::vals::MrccFlexcanClkselMux::from_bits(val as u8)
     }
     #[doc = "Functional Clock Mux Select"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccFlexcan0ClkselMux) {
+    pub const fn set_mux(&mut self, val: super::vals::MrccFlexcanClkselMux) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
 }
@@ -1827,37 +1827,37 @@ impl MrccFlexcan1Clkdiv {
     #[doc = "Reset divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccFlexcan1ClkdivReset {
+    pub const fn reset(&self) -> super::vals::MrccFlexcanClkdivReset {
         let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccFlexcan1ClkdivReset::from_bits(val as u8)
+        super::vals::MrccFlexcanClkdivReset::from_bits(val as u8)
     }
     #[doc = "Reset divider counter"]
     #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccFlexcan1ClkdivReset) {
+    pub const fn set_reset(&mut self, val: super::vals::MrccFlexcanClkdivReset) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
     #[doc = "Halt divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccFlexcan1ClkdivHalt {
+    pub const fn halt(&self) -> super::vals::MrccFlexcanClkdivHalt {
         let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccFlexcan1ClkdivHalt::from_bits(val as u8)
+        super::vals::MrccFlexcanClkdivHalt::from_bits(val as u8)
     }
     #[doc = "Halt divider counter"]
     #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccFlexcan1ClkdivHalt) {
+    pub const fn set_halt(&mut self, val: super::vals::MrccFlexcanClkdivHalt) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
     #[doc = "Divider status flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccFlexcan1ClkdivUnstab {
+    pub const fn unstab(&self) -> super::vals::MrccFlexcanClkdivUnstab {
         let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccFlexcan1ClkdivUnstab::from_bits(val as u8)
+        super::vals::MrccFlexcanClkdivUnstab::from_bits(val as u8)
     }
     #[doc = "Divider status flag"]
     #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccFlexcan1ClkdivUnstab) {
+    pub const fn set_unstab(&mut self, val: super::vals::MrccFlexcanClkdivUnstab) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
@@ -1898,13 +1898,13 @@ impl MrccFlexcan1Clksel {
     #[doc = "Functional Clock Mux Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccFlexcan1ClkselMux {
+    pub const fn mux(&self) -> super::vals::MrccFlexcanClkselMux {
         let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccFlexcan1ClkselMux::from_bits(val as u8)
+        super::vals::MrccFlexcanClkselMux::from_bits(val as u8)
     }
     #[doc = "Functional Clock Mux Select"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccFlexcan1ClkselMux) {
+    pub const fn set_mux(&mut self, val: super::vals::MrccFlexcanClkselMux) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
 }
@@ -5744,37 +5744,37 @@ impl MrccLpi2c0Clkdiv {
     #[doc = "Reset divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccLpi2c0ClkdivReset {
+    pub const fn reset(&self) -> super::vals::MrccLpi2cClkdivReset {
         let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccLpi2c0ClkdivReset::from_bits(val as u8)
+        super::vals::MrccLpi2cClkdivReset::from_bits(val as u8)
     }
     #[doc = "Reset divider counter"]
     #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccLpi2c0ClkdivReset) {
+    pub const fn set_reset(&mut self, val: super::vals::MrccLpi2cClkdivReset) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
     #[doc = "Halt divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccLpi2c0ClkdivHalt {
+    pub const fn halt(&self) -> super::vals::MrccLpi2cClkdivHalt {
         let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccLpi2c0ClkdivHalt::from_bits(val as u8)
+        super::vals::MrccLpi2cClkdivHalt::from_bits(val as u8)
     }
     #[doc = "Halt divider counter"]
     #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccLpi2c0ClkdivHalt) {
+    pub const fn set_halt(&mut self, val: super::vals::MrccLpi2cClkdivHalt) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
     #[doc = "Divider status flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccLpi2c0ClkdivUnstab {
+    pub const fn unstab(&self) -> super::vals::MrccLpi2cClkdivUnstab {
         let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccLpi2c0ClkdivUnstab::from_bits(val as u8)
+        super::vals::MrccLpi2cClkdivUnstab::from_bits(val as u8)
     }
     #[doc = "Divider status flag"]
     #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccLpi2c0ClkdivUnstab) {
+    pub const fn set_unstab(&mut self, val: super::vals::MrccLpi2cClkdivUnstab) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
@@ -5815,13 +5815,13 @@ impl MrccLpi2c0Clksel {
     #[doc = "Functional Clock Mux Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccLpi2c0ClkselMux {
+    pub const fn mux(&self) -> super::vals::MrccLpi2cClkselMux {
         let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccLpi2c0ClkselMux::from_bits(val as u8)
+        super::vals::MrccLpi2cClkselMux::from_bits(val as u8)
     }
     #[doc = "Functional Clock Mux Select"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccLpi2c0ClkselMux) {
+    pub const fn set_mux(&mut self, val: super::vals::MrccLpi2cClkselMux) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
 }
@@ -5864,37 +5864,37 @@ impl MrccLpi2c1Clkdiv {
     #[doc = "Reset divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccLpi2c1ClkdivReset {
+    pub const fn reset(&self) -> super::vals::MrccLpi2cClkdivReset {
         let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccLpi2c1ClkdivReset::from_bits(val as u8)
+        super::vals::MrccLpi2cClkdivReset::from_bits(val as u8)
     }
     #[doc = "Reset divider counter"]
     #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccLpi2c1ClkdivReset) {
+    pub const fn set_reset(&mut self, val: super::vals::MrccLpi2cClkdivReset) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
     #[doc = "Halt divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccLpi2c1ClkdivHalt {
+    pub const fn halt(&self) -> super::vals::MrccLpi2cClkdivHalt {
         let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccLpi2c1ClkdivHalt::from_bits(val as u8)
+        super::vals::MrccLpi2cClkdivHalt::from_bits(val as u8)
     }
     #[doc = "Halt divider counter"]
     #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccLpi2c1ClkdivHalt) {
+    pub const fn set_halt(&mut self, val: super::vals::MrccLpi2cClkdivHalt) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
     #[doc = "Divider status flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccLpi2c1ClkdivUnstab {
+    pub const fn unstab(&self) -> super::vals::MrccLpi2cClkdivUnstab {
         let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccLpi2c1ClkdivUnstab::from_bits(val as u8)
+        super::vals::MrccLpi2cClkdivUnstab::from_bits(val as u8)
     }
     #[doc = "Divider status flag"]
     #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccLpi2c1ClkdivUnstab) {
+    pub const fn set_unstab(&mut self, val: super::vals::MrccLpi2cClkdivUnstab) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
@@ -5935,13 +5935,13 @@ impl MrccLpi2c1Clksel {
     #[doc = "Functional Clock Mux Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccLpi2c1ClkselMux {
+    pub const fn mux(&self) -> super::vals::MrccLpi2cClkselMux {
         let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccLpi2c1ClkselMux::from_bits(val as u8)
+        super::vals::MrccLpi2cClkselMux::from_bits(val as u8)
     }
     #[doc = "Functional Clock Mux Select"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccLpi2c1ClkselMux) {
+    pub const fn set_mux(&mut self, val: super::vals::MrccLpi2cClkselMux) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
 }
@@ -5984,37 +5984,37 @@ impl MrccLpi2c2Clkdiv {
     #[doc = "Reset divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccLpi2c2ClkdivReset {
+    pub const fn reset(&self) -> super::vals::MrccLpi2cClkdivReset {
         let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccLpi2c2ClkdivReset::from_bits(val as u8)
+        super::vals::MrccLpi2cClkdivReset::from_bits(val as u8)
     }
     #[doc = "Reset divider counter"]
     #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccLpi2c2ClkdivReset) {
+    pub const fn set_reset(&mut self, val: super::vals::MrccLpi2cClkdivReset) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
     #[doc = "Halt divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccLpi2c2ClkdivHalt {
+    pub const fn halt(&self) -> super::vals::MrccLpi2cClkdivHalt {
         let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccLpi2c2ClkdivHalt::from_bits(val as u8)
+        super::vals::MrccLpi2cClkdivHalt::from_bits(val as u8)
     }
     #[doc = "Halt divider counter"]
     #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccLpi2c2ClkdivHalt) {
+    pub const fn set_halt(&mut self, val: super::vals::MrccLpi2cClkdivHalt) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
     #[doc = "Divider status flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccLpi2c2ClkdivUnstab {
+    pub const fn unstab(&self) -> super::vals::MrccLpi2cClkdivUnstab {
         let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccLpi2c2ClkdivUnstab::from_bits(val as u8)
+        super::vals::MrccLpi2cClkdivUnstab::from_bits(val as u8)
     }
     #[doc = "Divider status flag"]
     #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccLpi2c2ClkdivUnstab) {
+    pub const fn set_unstab(&mut self, val: super::vals::MrccLpi2cClkdivUnstab) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
@@ -6055,13 +6055,13 @@ impl MrccLpi2c2Clksel {
     #[doc = "Functional Clock Mux Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccLpi2c2ClkselMux {
+    pub const fn mux(&self) -> super::vals::MrccLpi2cClkselMux {
         let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccLpi2c2ClkselMux::from_bits(val as u8)
+        super::vals::MrccLpi2cClkselMux::from_bits(val as u8)
     }
     #[doc = "Functional Clock Mux Select"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccLpi2c2ClkselMux) {
+    pub const fn set_mux(&mut self, val: super::vals::MrccLpi2cClkselMux) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
 }
@@ -6104,37 +6104,37 @@ impl MrccLpi2c3Clkdiv {
     #[doc = "Reset divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccLpi2c3ClkdivReset {
+    pub const fn reset(&self) -> super::vals::MrccLpi2cClkdivReset {
         let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccLpi2c3ClkdivReset::from_bits(val as u8)
+        super::vals::MrccLpi2cClkdivReset::from_bits(val as u8)
     }
     #[doc = "Reset divider counter"]
     #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccLpi2c3ClkdivReset) {
+    pub const fn set_reset(&mut self, val: super::vals::MrccLpi2cClkdivReset) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
     #[doc = "Halt divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccLpi2c3ClkdivHalt {
+    pub const fn halt(&self) -> super::vals::MrccLpi2cClkdivHalt {
         let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccLpi2c3ClkdivHalt::from_bits(val as u8)
+        super::vals::MrccLpi2cClkdivHalt::from_bits(val as u8)
     }
     #[doc = "Halt divider counter"]
     #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccLpi2c3ClkdivHalt) {
+    pub const fn set_halt(&mut self, val: super::vals::MrccLpi2cClkdivHalt) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
     #[doc = "Divider status flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccLpi2c3ClkdivUnstab {
+    pub const fn unstab(&self) -> super::vals::MrccLpi2cClkdivUnstab {
         let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccLpi2c3ClkdivUnstab::from_bits(val as u8)
+        super::vals::MrccLpi2cClkdivUnstab::from_bits(val as u8)
     }
     #[doc = "Divider status flag"]
     #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccLpi2c3ClkdivUnstab) {
+    pub const fn set_unstab(&mut self, val: super::vals::MrccLpi2cClkdivUnstab) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
@@ -6175,13 +6175,13 @@ impl MrccLpi2c3Clksel {
     #[doc = "Functional Clock Mux Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccLpi2c3ClkselMux {
+    pub const fn mux(&self) -> super::vals::MrccLpi2cClkselMux {
         let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccLpi2c3ClkselMux::from_bits(val as u8)
+        super::vals::MrccLpi2cClkselMux::from_bits(val as u8)
     }
     #[doc = "Functional Clock Mux Select"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccLpi2c3ClkselMux) {
+    pub const fn set_mux(&mut self, val: super::vals::MrccLpi2cClkselMux) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
 }
@@ -6224,37 +6224,37 @@ impl MrccLpspi0Clkdiv {
     #[doc = "Reset divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccLpspi0ClkdivReset {
+    pub const fn reset(&self) -> super::vals::MrccLpspiClkdivReset {
         let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccLpspi0ClkdivReset::from_bits(val as u8)
+        super::vals::MrccLpspiClkdivReset::from_bits(val as u8)
     }
     #[doc = "Reset divider counter"]
     #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccLpspi0ClkdivReset) {
+    pub const fn set_reset(&mut self, val: super::vals::MrccLpspiClkdivReset) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
     #[doc = "Halt divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccLpspi0ClkdivHalt {
+    pub const fn halt(&self) -> super::vals::MrccLpspiClkdivHalt {
         let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccLpspi0ClkdivHalt::from_bits(val as u8)
+        super::vals::MrccLpspiClkdivHalt::from_bits(val as u8)
     }
     #[doc = "Halt divider counter"]
     #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccLpspi0ClkdivHalt) {
+    pub const fn set_halt(&mut self, val: super::vals::MrccLpspiClkdivHalt) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
     #[doc = "Divider status flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccLpspi0ClkdivUnstab {
+    pub const fn unstab(&self) -> super::vals::MrccLpspiClkdivUnstab {
         let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccLpspi0ClkdivUnstab::from_bits(val as u8)
+        super::vals::MrccLpspiClkdivUnstab::from_bits(val as u8)
     }
     #[doc = "Divider status flag"]
     #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccLpspi0ClkdivUnstab) {
+    pub const fn set_unstab(&mut self, val: super::vals::MrccLpspiClkdivUnstab) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
@@ -6295,13 +6295,13 @@ impl MrccLpspi0Clksel {
     #[doc = "Functional Clock Mux Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccLpspi0ClkselMux {
+    pub const fn mux(&self) -> super::vals::MrccLpspiClkselMux {
         let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccLpspi0ClkselMux::from_bits(val as u8)
+        super::vals::MrccLpspiClkselMux::from_bits(val as u8)
     }
     #[doc = "Functional Clock Mux Select"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccLpspi0ClkselMux) {
+    pub const fn set_mux(&mut self, val: super::vals::MrccLpspiClkselMux) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
 }
@@ -6344,37 +6344,37 @@ impl MrccLpspi1Clkdiv {
     #[doc = "Reset divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccLpspi1ClkdivReset {
+    pub const fn reset(&self) -> super::vals::MrccLpspiClkdivReset {
         let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccLpspi1ClkdivReset::from_bits(val as u8)
+        super::vals::MrccLpspiClkdivReset::from_bits(val as u8)
     }
     #[doc = "Reset divider counter"]
     #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccLpspi1ClkdivReset) {
+    pub const fn set_reset(&mut self, val: super::vals::MrccLpspiClkdivReset) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
     #[doc = "Halt divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccLpspi1ClkdivHalt {
+    pub const fn halt(&self) -> super::vals::MrccLpspiClkdivHalt {
         let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccLpspi1ClkdivHalt::from_bits(val as u8)
+        super::vals::MrccLpspiClkdivHalt::from_bits(val as u8)
     }
     #[doc = "Halt divider counter"]
     #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccLpspi1ClkdivHalt) {
+    pub const fn set_halt(&mut self, val: super::vals::MrccLpspiClkdivHalt) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
     #[doc = "Divider status flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccLpspi1ClkdivUnstab {
+    pub const fn unstab(&self) -> super::vals::MrccLpspiClkdivUnstab {
         let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccLpspi1ClkdivUnstab::from_bits(val as u8)
+        super::vals::MrccLpspiClkdivUnstab::from_bits(val as u8)
     }
     #[doc = "Divider status flag"]
     #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccLpspi1ClkdivUnstab) {
+    pub const fn set_unstab(&mut self, val: super::vals::MrccLpspiClkdivUnstab) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
@@ -6415,13 +6415,13 @@ impl MrccLpspi1Clksel {
     #[doc = "Functional Clock Mux Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccLpspi1ClkselMux {
+    pub const fn mux(&self) -> super::vals::MrccLpspiClkselMux {
         let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccLpspi1ClkselMux::from_bits(val as u8)
+        super::vals::MrccLpspiClkselMux::from_bits(val as u8)
     }
     #[doc = "Functional Clock Mux Select"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccLpspi1ClkselMux) {
+    pub const fn set_mux(&mut self, val: super::vals::MrccLpspiClkselMux) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
 }
@@ -6584,37 +6584,37 @@ impl MrccLpuart0Clkdiv {
     #[doc = "Reset divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccLpuart0ClkdivReset {
+    pub const fn reset(&self) -> super::vals::MrccLpuartClkdivReset {
         let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccLpuart0ClkdivReset::from_bits(val as u8)
+        super::vals::MrccLpuartClkdivReset::from_bits(val as u8)
     }
     #[doc = "Reset divider counter"]
     #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccLpuart0ClkdivReset) {
+    pub const fn set_reset(&mut self, val: super::vals::MrccLpuartClkdivReset) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
     #[doc = "Halt divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccLpuart0ClkdivHalt {
+    pub const fn halt(&self) -> super::vals::MrccLpuartClkdivHalt {
         let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccLpuart0ClkdivHalt::from_bits(val as u8)
+        super::vals::MrccLpuartClkdivHalt::from_bits(val as u8)
     }
     #[doc = "Halt divider counter"]
     #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccLpuart0ClkdivHalt) {
+    pub const fn set_halt(&mut self, val: super::vals::MrccLpuartClkdivHalt) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
     #[doc = "Divider status flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccLpuart0ClkdivUnstab {
+    pub const fn unstab(&self) -> super::vals::MrccLpuartClkdivUnstab {
         let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccLpuart0ClkdivUnstab::from_bits(val as u8)
+        super::vals::MrccLpuartClkdivUnstab::from_bits(val as u8)
     }
     #[doc = "Divider status flag"]
     #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccLpuart0ClkdivUnstab) {
+    pub const fn set_unstab(&mut self, val: super::vals::MrccLpuartClkdivUnstab) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
@@ -6655,13 +6655,13 @@ impl MrccLpuart0Clksel {
     #[doc = "Functional Clock Mux Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccLpuart0ClkselMux {
+    pub const fn mux(&self) -> super::vals::MrccLpuartClkselMux {
         let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccLpuart0ClkselMux::from_bits(val as u8)
+        super::vals::MrccLpuartClkselMux::from_bits(val as u8)
     }
     #[doc = "Functional Clock Mux Select"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccLpuart0ClkselMux) {
+    pub const fn set_mux(&mut self, val: super::vals::MrccLpuartClkselMux) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
 }
@@ -6704,37 +6704,37 @@ impl MrccLpuart1Clkdiv {
     #[doc = "Reset divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccLpuart1ClkdivReset {
+    pub const fn reset(&self) -> super::vals::MrccLpuartClkdivReset {
         let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccLpuart1ClkdivReset::from_bits(val as u8)
+        super::vals::MrccLpuartClkdivReset::from_bits(val as u8)
     }
     #[doc = "Reset divider counter"]
     #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccLpuart1ClkdivReset) {
+    pub const fn set_reset(&mut self, val: super::vals::MrccLpuartClkdivReset) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
     #[doc = "Halt divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccLpuart1ClkdivHalt {
+    pub const fn halt(&self) -> super::vals::MrccLpuartClkdivHalt {
         let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccLpuart1ClkdivHalt::from_bits(val as u8)
+        super::vals::MrccLpuartClkdivHalt::from_bits(val as u8)
     }
     #[doc = "Halt divider counter"]
     #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccLpuart1ClkdivHalt) {
+    pub const fn set_halt(&mut self, val: super::vals::MrccLpuartClkdivHalt) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
     #[doc = "Divider status flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccLpuart1ClkdivUnstab {
+    pub const fn unstab(&self) -> super::vals::MrccLpuartClkdivUnstab {
         let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccLpuart1ClkdivUnstab::from_bits(val as u8)
+        super::vals::MrccLpuartClkdivUnstab::from_bits(val as u8)
     }
     #[doc = "Divider status flag"]
     #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccLpuart1ClkdivUnstab) {
+    pub const fn set_unstab(&mut self, val: super::vals::MrccLpuartClkdivUnstab) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
@@ -6775,13 +6775,13 @@ impl MrccLpuart1Clksel {
     #[doc = "Functional Clock Mux Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccLpuart1ClkselMux {
+    pub const fn mux(&self) -> super::vals::MrccLpuartClkselMux {
         let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccLpuart1ClkselMux::from_bits(val as u8)
+        super::vals::MrccLpuartClkselMux::from_bits(val as u8)
     }
     #[doc = "Functional Clock Mux Select"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccLpuart1ClkselMux) {
+    pub const fn set_mux(&mut self, val: super::vals::MrccLpuartClkselMux) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
 }
@@ -6824,37 +6824,37 @@ impl MrccLpuart2Clkdiv {
     #[doc = "Reset divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccLpuart2ClkdivReset {
+    pub const fn reset(&self) -> super::vals::MrccLpuartClkdivReset {
         let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccLpuart2ClkdivReset::from_bits(val as u8)
+        super::vals::MrccLpuartClkdivReset::from_bits(val as u8)
     }
     #[doc = "Reset divider counter"]
     #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccLpuart2ClkdivReset) {
+    pub const fn set_reset(&mut self, val: super::vals::MrccLpuartClkdivReset) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
     #[doc = "Halt divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccLpuart2ClkdivHalt {
+    pub const fn halt(&self) -> super::vals::MrccLpuartClkdivHalt {
         let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccLpuart2ClkdivHalt::from_bits(val as u8)
+        super::vals::MrccLpuartClkdivHalt::from_bits(val as u8)
     }
     #[doc = "Halt divider counter"]
     #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccLpuart2ClkdivHalt) {
+    pub const fn set_halt(&mut self, val: super::vals::MrccLpuartClkdivHalt) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
     #[doc = "Divider status flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccLpuart2ClkdivUnstab {
+    pub const fn unstab(&self) -> super::vals::MrccLpuartClkdivUnstab {
         let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccLpuart2ClkdivUnstab::from_bits(val as u8)
+        super::vals::MrccLpuartClkdivUnstab::from_bits(val as u8)
     }
     #[doc = "Divider status flag"]
     #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccLpuart2ClkdivUnstab) {
+    pub const fn set_unstab(&mut self, val: super::vals::MrccLpuartClkdivUnstab) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
@@ -6895,13 +6895,13 @@ impl MrccLpuart2Clksel {
     #[doc = "Functional Clock Mux Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccLpuart2ClkselMux {
+    pub const fn mux(&self) -> super::vals::MrccLpuartClkselMux {
         let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccLpuart2ClkselMux::from_bits(val as u8)
+        super::vals::MrccLpuartClkselMux::from_bits(val as u8)
     }
     #[doc = "Functional Clock Mux Select"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccLpuart2ClkselMux) {
+    pub const fn set_mux(&mut self, val: super::vals::MrccLpuartClkselMux) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
 }
@@ -6944,37 +6944,37 @@ impl MrccLpuart3Clkdiv {
     #[doc = "Reset divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccLpuart3ClkdivReset {
+    pub const fn reset(&self) -> super::vals::MrccLpuartClkdivReset {
         let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccLpuart3ClkdivReset::from_bits(val as u8)
+        super::vals::MrccLpuartClkdivReset::from_bits(val as u8)
     }
     #[doc = "Reset divider counter"]
     #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccLpuart3ClkdivReset) {
+    pub const fn set_reset(&mut self, val: super::vals::MrccLpuartClkdivReset) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
     #[doc = "Halt divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccLpuart3ClkdivHalt {
+    pub const fn halt(&self) -> super::vals::MrccLpuartClkdivHalt {
         let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccLpuart3ClkdivHalt::from_bits(val as u8)
+        super::vals::MrccLpuartClkdivHalt::from_bits(val as u8)
     }
     #[doc = "Halt divider counter"]
     #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccLpuart3ClkdivHalt) {
+    pub const fn set_halt(&mut self, val: super::vals::MrccLpuartClkdivHalt) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
     #[doc = "Divider status flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccLpuart3ClkdivUnstab {
+    pub const fn unstab(&self) -> super::vals::MrccLpuartClkdivUnstab {
         let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccLpuart3ClkdivUnstab::from_bits(val as u8)
+        super::vals::MrccLpuartClkdivUnstab::from_bits(val as u8)
     }
     #[doc = "Divider status flag"]
     #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccLpuart3ClkdivUnstab) {
+    pub const fn set_unstab(&mut self, val: super::vals::MrccLpuartClkdivUnstab) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
@@ -7015,13 +7015,13 @@ impl MrccLpuart3Clksel {
     #[doc = "Functional Clock Mux Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccLpuart3ClkselMux {
+    pub const fn mux(&self) -> super::vals::MrccLpuartClkselMux {
         let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccLpuart3ClkselMux::from_bits(val as u8)
+        super::vals::MrccLpuartClkselMux::from_bits(val as u8)
     }
     #[doc = "Functional Clock Mux Select"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccLpuart3ClkselMux) {
+    pub const fn set_mux(&mut self, val: super::vals::MrccLpuartClkselMux) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
 }
@@ -7064,37 +7064,37 @@ impl MrccLpuart4Clkdiv {
     #[doc = "Reset divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccLpuart4ClkdivReset {
+    pub const fn reset(&self) -> super::vals::MrccLpuartClkdivReset {
         let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccLpuart4ClkdivReset::from_bits(val as u8)
+        super::vals::MrccLpuartClkdivReset::from_bits(val as u8)
     }
     #[doc = "Reset divider counter"]
     #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccLpuart4ClkdivReset) {
+    pub const fn set_reset(&mut self, val: super::vals::MrccLpuartClkdivReset) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
     #[doc = "Halt divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccLpuart4ClkdivHalt {
+    pub const fn halt(&self) -> super::vals::MrccLpuartClkdivHalt {
         let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccLpuart4ClkdivHalt::from_bits(val as u8)
+        super::vals::MrccLpuartClkdivHalt::from_bits(val as u8)
     }
     #[doc = "Halt divider counter"]
     #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccLpuart4ClkdivHalt) {
+    pub const fn set_halt(&mut self, val: super::vals::MrccLpuartClkdivHalt) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
     #[doc = "Divider status flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccLpuart4ClkdivUnstab {
+    pub const fn unstab(&self) -> super::vals::MrccLpuartClkdivUnstab {
         let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccLpuart4ClkdivUnstab::from_bits(val as u8)
+        super::vals::MrccLpuartClkdivUnstab::from_bits(val as u8)
     }
     #[doc = "Divider status flag"]
     #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccLpuart4ClkdivUnstab) {
+    pub const fn set_unstab(&mut self, val: super::vals::MrccLpuartClkdivUnstab) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
@@ -7135,13 +7135,13 @@ impl MrccLpuart4Clksel {
     #[doc = "Functional Clock Mux Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccLpuart4ClkselMux {
+    pub const fn mux(&self) -> super::vals::MrccLpuartClkselMux {
         let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccLpuart4ClkselMux::from_bits(val as u8)
+        super::vals::MrccLpuartClkselMux::from_bits(val as u8)
     }
     #[doc = "Functional Clock Mux Select"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccLpuart4ClkselMux) {
+    pub const fn set_mux(&mut self, val: super::vals::MrccLpuartClkselMux) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
 }
@@ -7184,37 +7184,37 @@ impl MrccLpuart5Clkdiv {
     #[doc = "Reset divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccLpuart5ClkdivReset {
+    pub const fn reset(&self) -> super::vals::MrccLpuartClkdivReset {
         let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccLpuart5ClkdivReset::from_bits(val as u8)
+        super::vals::MrccLpuartClkdivReset::from_bits(val as u8)
     }
     #[doc = "Reset divider counter"]
     #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccLpuart5ClkdivReset) {
+    pub const fn set_reset(&mut self, val: super::vals::MrccLpuartClkdivReset) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
     #[doc = "Halt divider counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccLpuart5ClkdivHalt {
+    pub const fn halt(&self) -> super::vals::MrccLpuartClkdivHalt {
         let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccLpuart5ClkdivHalt::from_bits(val as u8)
+        super::vals::MrccLpuartClkdivHalt::from_bits(val as u8)
     }
     #[doc = "Halt divider counter"]
     #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccLpuart5ClkdivHalt) {
+    pub const fn set_halt(&mut self, val: super::vals::MrccLpuartClkdivHalt) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
     #[doc = "Divider status flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccLpuart5ClkdivUnstab {
+    pub const fn unstab(&self) -> super::vals::MrccLpuartClkdivUnstab {
         let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccLpuart5ClkdivUnstab::from_bits(val as u8)
+        super::vals::MrccLpuartClkdivUnstab::from_bits(val as u8)
     }
     #[doc = "Divider status flag"]
     #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccLpuart5ClkdivUnstab) {
+    pub const fn set_unstab(&mut self, val: super::vals::MrccLpuartClkdivUnstab) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
@@ -7255,13 +7255,13 @@ impl MrccLpuart5Clksel {
     #[doc = "Functional Clock Mux Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccLpuart5ClkselMux {
+    pub const fn mux(&self) -> super::vals::MrccLpuartClkselMux {
         let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccLpuart5ClkselMux::from_bits(val as u8)
+        super::vals::MrccLpuartClkselMux::from_bits(val as u8)
     }
     #[doc = "Functional Clock Mux Select"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccLpuart5ClkselMux) {
+    pub const fn set_mux(&mut self, val: super::vals::MrccLpuartClkselMux) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
 }
