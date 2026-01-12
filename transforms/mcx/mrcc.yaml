@@ -16,6 +16,13 @@ transforms:
     from: mrcc0::vals::MrccLpuart(\d+)ClkdivUnstab
     to: mrcc0::vals::MrccLpuartClkdivUnstab
 
+  - !MergeFieldsets
+    from: mrcc0::regs::MrccLpuart(\d+)Clksel
+    to: mrcc0::regs::MrccLpuartClksel
+  - !MergeFieldsets
+    from: mrcc0::regs::MrccLpuart(\d+)Clkdiv
+    to: mrcc0::regs::MrccLpuartClkdiv
+
   # Lpspi
   - !MergeEnums
     from: mrcc0::vals::MrccLpspi(\d+)ClkselMux
@@ -32,6 +39,13 @@ transforms:
   - !MergeEnums
     from: mrcc0::vals::MrccLpspi(\d+)ClkdivUnstab
     to: mrcc0::vals::MrccLpspiClkdivUnstab
+
+  - !MergeFieldsets
+    from: mrcc0::regs::MrccLpspi(\d+)Clksel
+    to: mrcc0::regs::MrccLpspiClksel
+  - !MergeFieldsets
+    from: mrcc0::regs::MrccLpspi(\d+)Clkdiv
+    to: mrcc0::regs::MrccLpspiClkdiv
 
   # Lpi2c
   - !MergeEnums
@@ -50,6 +64,13 @@ transforms:
     from: mrcc0::vals::MrccLpi2c(\d+)ClkdivUnstab
     to: mrcc0::vals::MrccLpi2cClkdivUnstab
 
+  - !MergeFieldsets
+    from: mrcc0::regs::MrccLpi2c(\d+)Clksel
+    to: mrcc0::regs::MrccLpi2cClksel
+  - !MergeFieldsets
+    from: mrcc0::regs::MrccLpi2c(\d+)Clkdiv
+    to: mrcc0::regs::MrccLpi2cClkdiv
+
   # Ctimer
   - !MergeEnums
     from: mrcc0::vals::MrccCtimer(\d+)ClkselMux
@@ -66,6 +87,13 @@ transforms:
   - !MergeEnums
     from: mrcc0::vals::MrccCtimer(\d+)ClkdivUnstab
     to: mrcc0::vals::MrccCtimerClkdivUnstab
+
+  - !MergeFieldsets
+    from: mrcc0::regs::MrccCtimer(\d+)Clksel
+    to: mrcc0::regs::MrccCtimerClksel
+  - !MergeFieldsets
+    from: mrcc0::regs::MrccCtimer(\d+)Clkdiv
+    to: mrcc0::regs::MrccCtimerClkdiv
 
   # Cmp(Func|Rr)
   - !MergeEnums
@@ -94,6 +122,16 @@ transforms:
     from: mrcc0::vals::MrccCmp(\d+)RrClkdivUnstab
     to: mrcc0::vals::MrccCmpRrClkdivUnstab
 
+  - !MergeFieldsets
+    from: mrcc0::regs::MrccCmp(\d+)FuncClkdiv
+    to: mrcc0::regs::MrccCmpFuncClkdiv
+  - !MergeFieldsets
+    from: mrcc0::regs::MrccCmp(\d+)RrClksel
+    to: mrcc0::regs::MrccCmpRrClksel
+  - !MergeFieldsets
+    from: mrcc0::regs::MrccCmp(\d+)RrClkdiv
+    to: mrcc0::regs::MrccCmpRrClkdiv
+
   # Flexcan
   - !MergeEnums
     from: mrcc0::vals::MrccFlexcan(\d+)ClkselMux
@@ -110,3 +148,10 @@ transforms:
   - !MergeEnums
     from: mrcc0::vals::MrccFlexcan(\d+)ClkdivUnstab
     to: mrcc0::vals::MrccFlexcanClkdivUnstab
+
+  - !MergeFieldsets
+    from: mrcc0::regs::MrccFlexcan(\d+)Clksel
+    to: mrcc0::regs::MrccFlexcanClksel
+  - !MergeFieldsets
+    from: mrcc0::regs::MrccFlexcan(\d+)Clkdiv
+    to: mrcc0::regs::MrccFlexcanClkdiv

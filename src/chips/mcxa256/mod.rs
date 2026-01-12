@@ -305,15 +305,15 @@ pub const DAC0: dac0::Dac0 = unsafe { dac0::Dac0::from_ptr(0x400b_4000usize as _
 #[doc = "OPAMP"]
 pub const OPAMP0: opamp0::Opamp0 = unsafe { opamp0::Opamp0::from_ptr(0x400b_7000usize as _) };
 #[doc = "PORT"]
-pub const PORT0: port0::Port0 = unsafe { port0::Port0::from_ptr(0x400b_c000usize as _) };
+pub const PORT0: port::Port = unsafe { port::Port::from_ptr(0x400b_c000usize as _) };
 #[doc = "PORT"]
-pub const PORT1: port1::Port1 = unsafe { port1::Port1::from_ptr(0x400b_d000usize as _) };
+pub const PORT1: port::Port = unsafe { port::Port::from_ptr(0x400b_d000usize as _) };
 #[doc = "PORT"]
-pub const PORT2: port2::Port2 = unsafe { port2::Port2::from_ptr(0x400b_e000usize as _) };
+pub const PORT2: port::Port = unsafe { port::Port::from_ptr(0x400b_e000usize as _) };
 #[doc = "PORT"]
-pub const PORT3: port3::Port3 = unsafe { port3::Port3::from_ptr(0x400b_f000usize as _) };
+pub const PORT3: port::Port = unsafe { port::Port::from_ptr(0x400b_f000usize as _) };
 #[doc = "PORT"]
-pub const PORT4: port4::Port4 = unsafe { port4::Port4::from_ptr(0x400c_0000usize as _) };
+pub const PORT4: port::Port = unsafe { port::Port::from_ptr(0x400c_0000usize as _) };
 #[doc = "CAN"]
 pub const CAN0: can::Can = unsafe { can::Can::from_ptr(0x400c_c000usize as _) };
 #[doc = "CAN"]
@@ -396,11 +396,7 @@ pub mod mrcc0;
 pub mod opamp0;
 pub mod ostimer0;
 pub mod pkc0;
-pub mod port0;
-pub mod port1;
-pub mod port2;
-pub mod port3;
-pub mod port4;
+pub mod port;
 pub mod rgpio;
 pub mod rtc0;
 pub mod scg0;

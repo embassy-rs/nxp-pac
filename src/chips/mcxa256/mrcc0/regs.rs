@@ -241,8 +241,8 @@ impl defmt::Format for MrccClkoutClksel {
 #[doc = "CMP0_FUNC clock divider control"]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccCmp0FuncClkdiv(pub u32);
-impl MrccCmp0FuncClkdiv {
+pub struct MrccCmpFuncClkdiv(pub u32);
+impl MrccCmpFuncClkdiv {
     #[doc = "Functional Clock Divider"]
     #[must_use]
     #[inline(always)]
@@ -292,15 +292,15 @@ impl MrccCmp0FuncClkdiv {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
-impl Default for MrccCmp0FuncClkdiv {
+impl Default for MrccCmpFuncClkdiv {
     #[inline(always)]
-    fn default() -> MrccCmp0FuncClkdiv {
-        MrccCmp0FuncClkdiv(0)
+    fn default() -> MrccCmpFuncClkdiv {
+        MrccCmpFuncClkdiv(0)
     }
 }
-impl core::fmt::Debug for MrccCmp0FuncClkdiv {
+impl core::fmt::Debug for MrccCmpFuncClkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccCmp0FuncClkdiv")
+        f.debug_struct("MrccCmpFuncClkdiv")
             .field("div", &self.div())
             .field("reset", &self.reset())
             .field("halt", &self.halt())
@@ -309,11 +309,11 @@ impl core::fmt::Debug for MrccCmp0FuncClkdiv {
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for MrccCmp0FuncClkdiv {
+impl defmt::Format for MrccCmpFuncClkdiv {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "MrccCmp0FuncClkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
+            "MrccCmpFuncClkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
             self.div(),
             self.reset(),
             self.halt(),
@@ -324,8 +324,8 @@ impl defmt::Format for MrccCmp0FuncClkdiv {
 #[doc = "CMP0_RR clock divider control"]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccCmp0RrClkdiv(pub u32);
-impl MrccCmp0RrClkdiv {
+pub struct MrccCmpRrClkdiv(pub u32);
+impl MrccCmpRrClkdiv {
     #[doc = "Functional Clock Divider"]
     #[must_use]
     #[inline(always)]
@@ -375,15 +375,15 @@ impl MrccCmp0RrClkdiv {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
-impl Default for MrccCmp0RrClkdiv {
+impl Default for MrccCmpRrClkdiv {
     #[inline(always)]
-    fn default() -> MrccCmp0RrClkdiv {
-        MrccCmp0RrClkdiv(0)
+    fn default() -> MrccCmpRrClkdiv {
+        MrccCmpRrClkdiv(0)
     }
 }
-impl core::fmt::Debug for MrccCmp0RrClkdiv {
+impl core::fmt::Debug for MrccCmpRrClkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccCmp0RrClkdiv")
+        f.debug_struct("MrccCmpRrClkdiv")
             .field("div", &self.div())
             .field("reset", &self.reset())
             .field("halt", &self.halt())
@@ -392,11 +392,11 @@ impl core::fmt::Debug for MrccCmp0RrClkdiv {
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for MrccCmp0RrClkdiv {
+impl defmt::Format for MrccCmpRrClkdiv {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "MrccCmp0RrClkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
+            "MrccCmpRrClkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
             self.div(),
             self.reset(),
             self.halt(),
@@ -407,8 +407,8 @@ impl defmt::Format for MrccCmp0RrClkdiv {
 #[doc = "CMP0_RR clock selection control"]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccCmp0RrClksel(pub u32);
-impl MrccCmp0RrClksel {
+pub struct MrccCmpRrClksel(pub u32);
+impl MrccCmpRrClksel {
     #[doc = "Functional Clock Mux Select"]
     #[must_use]
     #[inline(always)]
@@ -422,436 +422,30 @@ impl MrccCmp0RrClksel {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
 }
-impl Default for MrccCmp0RrClksel {
+impl Default for MrccCmpRrClksel {
     #[inline(always)]
-    fn default() -> MrccCmp0RrClksel {
-        MrccCmp0RrClksel(0)
+    fn default() -> MrccCmpRrClksel {
+        MrccCmpRrClksel(0)
     }
 }
-impl core::fmt::Debug for MrccCmp0RrClksel {
+impl core::fmt::Debug for MrccCmpRrClksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccCmp0RrClksel")
+        f.debug_struct("MrccCmpRrClksel")
             .field("mux", &self.mux())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for MrccCmp0RrClksel {
+impl defmt::Format for MrccCmpRrClksel {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "MrccCmp0RrClksel {{ mux: {:?} }}", self.mux())
-    }
-}
-#[doc = "CMP1_FUNC clock divider control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccCmp1FuncClkdiv(pub u32);
-impl MrccCmp1FuncClkdiv {
-    #[doc = "Functional Clock Divider"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn div(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0x0f;
-        val as u8
-    }
-    #[doc = "Functional Clock Divider"]
-    #[inline(always)]
-    pub const fn set_div(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
-    }
-    #[doc = "Reset divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccCmpFuncClkdivReset {
-        let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccCmpFuncClkdivReset::from_bits(val as u8)
-    }
-    #[doc = "Reset divider counter"]
-    #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccCmpFuncClkdivReset) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
-    }
-    #[doc = "Halt divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccCmpFuncClkdivHalt {
-        let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccCmpFuncClkdivHalt::from_bits(val as u8)
-    }
-    #[doc = "Halt divider counter"]
-    #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccCmpFuncClkdivHalt) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
-    }
-    #[doc = "Divider status flag"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccCmpFuncClkdivUnstab {
-        let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccCmpFuncClkdivUnstab::from_bits(val as u8)
-    }
-    #[doc = "Divider status flag"]
-    #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccCmpFuncClkdivUnstab) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
-    }
-}
-impl Default for MrccCmp1FuncClkdiv {
-    #[inline(always)]
-    fn default() -> MrccCmp1FuncClkdiv {
-        MrccCmp1FuncClkdiv(0)
-    }
-}
-impl core::fmt::Debug for MrccCmp1FuncClkdiv {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccCmp1FuncClkdiv")
-            .field("div", &self.div())
-            .field("reset", &self.reset())
-            .field("halt", &self.halt())
-            .field("unstab", &self.unstab())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccCmp1FuncClkdiv {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "MrccCmp1FuncClkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
-            self.div(),
-            self.reset(),
-            self.halt(),
-            self.unstab()
-        )
-    }
-}
-#[doc = "CMP1_RR clock divider control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccCmp1RrClkdiv(pub u32);
-impl MrccCmp1RrClkdiv {
-    #[doc = "Functional Clock Divider"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn div(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0x0f;
-        val as u8
-    }
-    #[doc = "Functional Clock Divider"]
-    #[inline(always)]
-    pub const fn set_div(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
-    }
-    #[doc = "Reset divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccCmpRrClkdivReset {
-        let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccCmpRrClkdivReset::from_bits(val as u8)
-    }
-    #[doc = "Reset divider counter"]
-    #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccCmpRrClkdivReset) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
-    }
-    #[doc = "Halt divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccCmpRrClkdivHalt {
-        let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccCmpRrClkdivHalt::from_bits(val as u8)
-    }
-    #[doc = "Halt divider counter"]
-    #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccCmpRrClkdivHalt) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
-    }
-    #[doc = "Divider status flag"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccCmpRrClkdivUnstab {
-        let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccCmpRrClkdivUnstab::from_bits(val as u8)
-    }
-    #[doc = "Divider status flag"]
-    #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccCmpRrClkdivUnstab) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
-    }
-}
-impl Default for MrccCmp1RrClkdiv {
-    #[inline(always)]
-    fn default() -> MrccCmp1RrClkdiv {
-        MrccCmp1RrClkdiv(0)
-    }
-}
-impl core::fmt::Debug for MrccCmp1RrClkdiv {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccCmp1RrClkdiv")
-            .field("div", &self.div())
-            .field("reset", &self.reset())
-            .field("halt", &self.halt())
-            .field("unstab", &self.unstab())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccCmp1RrClkdiv {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "MrccCmp1RrClkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
-            self.div(),
-            self.reset(),
-            self.halt(),
-            self.unstab()
-        )
-    }
-}
-#[doc = "CMP1_RR clock selection control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccCmp1RrClksel(pub u32);
-impl MrccCmp1RrClksel {
-    #[doc = "Functional Clock Mux Select"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccCmpRrClkselMux {
-        let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccCmpRrClkselMux::from_bits(val as u8)
-    }
-    #[doc = "Functional Clock Mux Select"]
-    #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccCmpRrClkselMux) {
-        self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
-    }
-}
-impl Default for MrccCmp1RrClksel {
-    #[inline(always)]
-    fn default() -> MrccCmp1RrClksel {
-        MrccCmp1RrClksel(0)
-    }
-}
-impl core::fmt::Debug for MrccCmp1RrClksel {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccCmp1RrClksel")
-            .field("mux", &self.mux())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccCmp1RrClksel {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "MrccCmp1RrClksel {{ mux: {:?} }}", self.mux())
-    }
-}
-#[doc = "CMP2_FUNC clock divider control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccCmp2FuncClkdiv(pub u32);
-impl MrccCmp2FuncClkdiv {
-    #[doc = "Functional Clock Divider"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn div(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0x0f;
-        val as u8
-    }
-    #[doc = "Functional Clock Divider"]
-    #[inline(always)]
-    pub const fn set_div(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
-    }
-    #[doc = "Reset divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccCmpFuncClkdivReset {
-        let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccCmpFuncClkdivReset::from_bits(val as u8)
-    }
-    #[doc = "Reset divider counter"]
-    #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccCmpFuncClkdivReset) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
-    }
-    #[doc = "Halt divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccCmpFuncClkdivHalt {
-        let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccCmpFuncClkdivHalt::from_bits(val as u8)
-    }
-    #[doc = "Halt divider counter"]
-    #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccCmpFuncClkdivHalt) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
-    }
-    #[doc = "Divider status flag"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccCmpFuncClkdivUnstab {
-        let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccCmpFuncClkdivUnstab::from_bits(val as u8)
-    }
-    #[doc = "Divider status flag"]
-    #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccCmpFuncClkdivUnstab) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
-    }
-}
-impl Default for MrccCmp2FuncClkdiv {
-    #[inline(always)]
-    fn default() -> MrccCmp2FuncClkdiv {
-        MrccCmp2FuncClkdiv(0)
-    }
-}
-impl core::fmt::Debug for MrccCmp2FuncClkdiv {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccCmp2FuncClkdiv")
-            .field("div", &self.div())
-            .field("reset", &self.reset())
-            .field("halt", &self.halt())
-            .field("unstab", &self.unstab())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccCmp2FuncClkdiv {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "MrccCmp2FuncClkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
-            self.div(),
-            self.reset(),
-            self.halt(),
-            self.unstab()
-        )
-    }
-}
-#[doc = "CMP2_RR clock divider control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccCmp2RrClkdiv(pub u32);
-impl MrccCmp2RrClkdiv {
-    #[doc = "Functional Clock Divider"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn div(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0x0f;
-        val as u8
-    }
-    #[doc = "Functional Clock Divider"]
-    #[inline(always)]
-    pub const fn set_div(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
-    }
-    #[doc = "Reset divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccCmpRrClkdivReset {
-        let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccCmpRrClkdivReset::from_bits(val as u8)
-    }
-    #[doc = "Reset divider counter"]
-    #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccCmpRrClkdivReset) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
-    }
-    #[doc = "Halt divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccCmpRrClkdivHalt {
-        let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccCmpRrClkdivHalt::from_bits(val as u8)
-    }
-    #[doc = "Halt divider counter"]
-    #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccCmpRrClkdivHalt) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
-    }
-    #[doc = "Divider status flag"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccCmpRrClkdivUnstab {
-        let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccCmpRrClkdivUnstab::from_bits(val as u8)
-    }
-    #[doc = "Divider status flag"]
-    #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccCmpRrClkdivUnstab) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
-    }
-}
-impl Default for MrccCmp2RrClkdiv {
-    #[inline(always)]
-    fn default() -> MrccCmp2RrClkdiv {
-        MrccCmp2RrClkdiv(0)
-    }
-}
-impl core::fmt::Debug for MrccCmp2RrClkdiv {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccCmp2RrClkdiv")
-            .field("div", &self.div())
-            .field("reset", &self.reset())
-            .field("halt", &self.halt())
-            .field("unstab", &self.unstab())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccCmp2RrClkdiv {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "MrccCmp2RrClkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
-            self.div(),
-            self.reset(),
-            self.halt(),
-            self.unstab()
-        )
-    }
-}
-#[doc = "CMP2_RR clock selection control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccCmp2RrClksel(pub u32);
-impl MrccCmp2RrClksel {
-    #[doc = "Functional Clock Mux Select"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccCmpRrClkselMux {
-        let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccCmpRrClkselMux::from_bits(val as u8)
-    }
-    #[doc = "Functional Clock Mux Select"]
-    #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccCmpRrClkselMux) {
-        self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
-    }
-}
-impl Default for MrccCmp2RrClksel {
-    #[inline(always)]
-    fn default() -> MrccCmp2RrClksel {
-        MrccCmp2RrClksel(0)
-    }
-}
-impl core::fmt::Debug for MrccCmp2RrClksel {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccCmp2RrClksel")
-            .field("mux", &self.mux())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccCmp2RrClksel {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "MrccCmp2RrClksel {{ mux: {:?} }}", self.mux())
+        defmt::write!(f, "MrccCmpRrClksel {{ mux: {:?} }}", self.mux())
     }
 }
 #[doc = "CTIMER0 clock divider control"]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccCtimer0Clkdiv(pub u32);
-impl MrccCtimer0Clkdiv {
+pub struct MrccCtimerClkdiv(pub u32);
+impl MrccCtimerClkdiv {
     #[doc = "Functional Clock Divider"]
     #[must_use]
     #[inline(always)]
@@ -901,15 +495,15 @@ impl MrccCtimer0Clkdiv {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
-impl Default for MrccCtimer0Clkdiv {
+impl Default for MrccCtimerClkdiv {
     #[inline(always)]
-    fn default() -> MrccCtimer0Clkdiv {
-        MrccCtimer0Clkdiv(0)
+    fn default() -> MrccCtimerClkdiv {
+        MrccCtimerClkdiv(0)
     }
 }
-impl core::fmt::Debug for MrccCtimer0Clkdiv {
+impl core::fmt::Debug for MrccCtimerClkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccCtimer0Clkdiv")
+        f.debug_struct("MrccCtimerClkdiv")
             .field("div", &self.div())
             .field("reset", &self.reset())
             .field("halt", &self.halt())
@@ -918,11 +512,11 @@ impl core::fmt::Debug for MrccCtimer0Clkdiv {
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for MrccCtimer0Clkdiv {
+impl defmt::Format for MrccCtimerClkdiv {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "MrccCtimer0Clkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
+            "MrccCtimerClkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
             self.div(),
             self.reset(),
             self.halt(),
@@ -933,8 +527,8 @@ impl defmt::Format for MrccCtimer0Clkdiv {
 #[doc = "CTIMER0 clock selection control"]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccCtimer0Clksel(pub u32);
-impl MrccCtimer0Clksel {
+pub struct MrccCtimerClksel(pub u32);
+impl MrccCtimerClksel {
     #[doc = "Functional Clock Mux Select"]
     #[must_use]
     #[inline(always)]
@@ -948,503 +542,23 @@ impl MrccCtimer0Clksel {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
 }
-impl Default for MrccCtimer0Clksel {
+impl Default for MrccCtimerClksel {
     #[inline(always)]
-    fn default() -> MrccCtimer0Clksel {
-        MrccCtimer0Clksel(0)
+    fn default() -> MrccCtimerClksel {
+        MrccCtimerClksel(0)
     }
 }
-impl core::fmt::Debug for MrccCtimer0Clksel {
+impl core::fmt::Debug for MrccCtimerClksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccCtimer0Clksel")
+        f.debug_struct("MrccCtimerClksel")
             .field("mux", &self.mux())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for MrccCtimer0Clksel {
+impl defmt::Format for MrccCtimerClksel {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "MrccCtimer0Clksel {{ mux: {:?} }}", self.mux())
-    }
-}
-#[doc = "CTIMER1 clock divider control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccCtimer1Clkdiv(pub u32);
-impl MrccCtimer1Clkdiv {
-    #[doc = "Functional Clock Divider"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn div(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0x0f;
-        val as u8
-    }
-    #[doc = "Functional Clock Divider"]
-    #[inline(always)]
-    pub const fn set_div(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
-    }
-    #[doc = "Reset divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccCtimerClkdivReset {
-        let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccCtimerClkdivReset::from_bits(val as u8)
-    }
-    #[doc = "Reset divider counter"]
-    #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccCtimerClkdivReset) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
-    }
-    #[doc = "Halt divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccCtimerClkdivHalt {
-        let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccCtimerClkdivHalt::from_bits(val as u8)
-    }
-    #[doc = "Halt divider counter"]
-    #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccCtimerClkdivHalt) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
-    }
-    #[doc = "Divider status flag"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccCtimerClkdivUnstab {
-        let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccCtimerClkdivUnstab::from_bits(val as u8)
-    }
-    #[doc = "Divider status flag"]
-    #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccCtimerClkdivUnstab) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
-    }
-}
-impl Default for MrccCtimer1Clkdiv {
-    #[inline(always)]
-    fn default() -> MrccCtimer1Clkdiv {
-        MrccCtimer1Clkdiv(0)
-    }
-}
-impl core::fmt::Debug for MrccCtimer1Clkdiv {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccCtimer1Clkdiv")
-            .field("div", &self.div())
-            .field("reset", &self.reset())
-            .field("halt", &self.halt())
-            .field("unstab", &self.unstab())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccCtimer1Clkdiv {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "MrccCtimer1Clkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
-            self.div(),
-            self.reset(),
-            self.halt(),
-            self.unstab()
-        )
-    }
-}
-#[doc = "CTIMER1 clock selection control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccCtimer1Clksel(pub u32);
-impl MrccCtimer1Clksel {
-    #[doc = "Functional Clock Mux Select"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccCtimerClkselMux {
-        let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccCtimerClkselMux::from_bits(val as u8)
-    }
-    #[doc = "Functional Clock Mux Select"]
-    #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccCtimerClkselMux) {
-        self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
-    }
-}
-impl Default for MrccCtimer1Clksel {
-    #[inline(always)]
-    fn default() -> MrccCtimer1Clksel {
-        MrccCtimer1Clksel(0)
-    }
-}
-impl core::fmt::Debug for MrccCtimer1Clksel {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccCtimer1Clksel")
-            .field("mux", &self.mux())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccCtimer1Clksel {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "MrccCtimer1Clksel {{ mux: {:?} }}", self.mux())
-    }
-}
-#[doc = "CTIMER2 clock divider control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccCtimer2Clkdiv(pub u32);
-impl MrccCtimer2Clkdiv {
-    #[doc = "Functional Clock Divider"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn div(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0x0f;
-        val as u8
-    }
-    #[doc = "Functional Clock Divider"]
-    #[inline(always)]
-    pub const fn set_div(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
-    }
-    #[doc = "Reset divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccCtimerClkdivReset {
-        let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccCtimerClkdivReset::from_bits(val as u8)
-    }
-    #[doc = "Reset divider counter"]
-    #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccCtimerClkdivReset) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
-    }
-    #[doc = "Halt divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccCtimerClkdivHalt {
-        let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccCtimerClkdivHalt::from_bits(val as u8)
-    }
-    #[doc = "Halt divider counter"]
-    #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccCtimerClkdivHalt) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
-    }
-    #[doc = "Divider status flag"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccCtimerClkdivUnstab {
-        let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccCtimerClkdivUnstab::from_bits(val as u8)
-    }
-    #[doc = "Divider status flag"]
-    #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccCtimerClkdivUnstab) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
-    }
-}
-impl Default for MrccCtimer2Clkdiv {
-    #[inline(always)]
-    fn default() -> MrccCtimer2Clkdiv {
-        MrccCtimer2Clkdiv(0)
-    }
-}
-impl core::fmt::Debug for MrccCtimer2Clkdiv {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccCtimer2Clkdiv")
-            .field("div", &self.div())
-            .field("reset", &self.reset())
-            .field("halt", &self.halt())
-            .field("unstab", &self.unstab())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccCtimer2Clkdiv {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "MrccCtimer2Clkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
-            self.div(),
-            self.reset(),
-            self.halt(),
-            self.unstab()
-        )
-    }
-}
-#[doc = "CTIMER2 clock selection control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccCtimer2Clksel(pub u32);
-impl MrccCtimer2Clksel {
-    #[doc = "Functional Clock Mux Select"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccCtimerClkselMux {
-        let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccCtimerClkselMux::from_bits(val as u8)
-    }
-    #[doc = "Functional Clock Mux Select"]
-    #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccCtimerClkselMux) {
-        self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
-    }
-}
-impl Default for MrccCtimer2Clksel {
-    #[inline(always)]
-    fn default() -> MrccCtimer2Clksel {
-        MrccCtimer2Clksel(0)
-    }
-}
-impl core::fmt::Debug for MrccCtimer2Clksel {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccCtimer2Clksel")
-            .field("mux", &self.mux())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccCtimer2Clksel {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "MrccCtimer2Clksel {{ mux: {:?} }}", self.mux())
-    }
-}
-#[doc = "CTIMER3 clock divider control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccCtimer3Clkdiv(pub u32);
-impl MrccCtimer3Clkdiv {
-    #[doc = "Functional Clock Divider"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn div(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0x0f;
-        val as u8
-    }
-    #[doc = "Functional Clock Divider"]
-    #[inline(always)]
-    pub const fn set_div(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
-    }
-    #[doc = "Reset divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccCtimerClkdivReset {
-        let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccCtimerClkdivReset::from_bits(val as u8)
-    }
-    #[doc = "Reset divider counter"]
-    #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccCtimerClkdivReset) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
-    }
-    #[doc = "Halt divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccCtimerClkdivHalt {
-        let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccCtimerClkdivHalt::from_bits(val as u8)
-    }
-    #[doc = "Halt divider counter"]
-    #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccCtimerClkdivHalt) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
-    }
-    #[doc = "Divider status flag"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccCtimerClkdivUnstab {
-        let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccCtimerClkdivUnstab::from_bits(val as u8)
-    }
-    #[doc = "Divider status flag"]
-    #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccCtimerClkdivUnstab) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
-    }
-}
-impl Default for MrccCtimer3Clkdiv {
-    #[inline(always)]
-    fn default() -> MrccCtimer3Clkdiv {
-        MrccCtimer3Clkdiv(0)
-    }
-}
-impl core::fmt::Debug for MrccCtimer3Clkdiv {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccCtimer3Clkdiv")
-            .field("div", &self.div())
-            .field("reset", &self.reset())
-            .field("halt", &self.halt())
-            .field("unstab", &self.unstab())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccCtimer3Clkdiv {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "MrccCtimer3Clkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
-            self.div(),
-            self.reset(),
-            self.halt(),
-            self.unstab()
-        )
-    }
-}
-#[doc = "CTIMER3 clock selection control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccCtimer3Clksel(pub u32);
-impl MrccCtimer3Clksel {
-    #[doc = "Functional Clock Mux Select"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccCtimerClkselMux {
-        let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccCtimerClkselMux::from_bits(val as u8)
-    }
-    #[doc = "Functional Clock Mux Select"]
-    #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccCtimerClkselMux) {
-        self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
-    }
-}
-impl Default for MrccCtimer3Clksel {
-    #[inline(always)]
-    fn default() -> MrccCtimer3Clksel {
-        MrccCtimer3Clksel(0)
-    }
-}
-impl core::fmt::Debug for MrccCtimer3Clksel {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccCtimer3Clksel")
-            .field("mux", &self.mux())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccCtimer3Clksel {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "MrccCtimer3Clksel {{ mux: {:?} }}", self.mux())
-    }
-}
-#[doc = "CTIMER4 clock divider control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccCtimer4Clkdiv(pub u32);
-impl MrccCtimer4Clkdiv {
-    #[doc = "Functional Clock Divider"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn div(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0x0f;
-        val as u8
-    }
-    #[doc = "Functional Clock Divider"]
-    #[inline(always)]
-    pub const fn set_div(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
-    }
-    #[doc = "Reset divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccCtimerClkdivReset {
-        let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccCtimerClkdivReset::from_bits(val as u8)
-    }
-    #[doc = "Reset divider counter"]
-    #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccCtimerClkdivReset) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
-    }
-    #[doc = "Halt divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccCtimerClkdivHalt {
-        let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccCtimerClkdivHalt::from_bits(val as u8)
-    }
-    #[doc = "Halt divider counter"]
-    #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccCtimerClkdivHalt) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
-    }
-    #[doc = "Divider status flag"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccCtimerClkdivUnstab {
-        let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccCtimerClkdivUnstab::from_bits(val as u8)
-    }
-    #[doc = "Divider status flag"]
-    #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccCtimerClkdivUnstab) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
-    }
-}
-impl Default for MrccCtimer4Clkdiv {
-    #[inline(always)]
-    fn default() -> MrccCtimer4Clkdiv {
-        MrccCtimer4Clkdiv(0)
-    }
-}
-impl core::fmt::Debug for MrccCtimer4Clkdiv {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccCtimer4Clkdiv")
-            .field("div", &self.div())
-            .field("reset", &self.reset())
-            .field("halt", &self.halt())
-            .field("unstab", &self.unstab())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccCtimer4Clkdiv {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "MrccCtimer4Clkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
-            self.div(),
-            self.reset(),
-            self.halt(),
-            self.unstab()
-        )
-    }
-}
-#[doc = "CTIMER4 clock selection control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccCtimer4Clksel(pub u32);
-impl MrccCtimer4Clksel {
-    #[doc = "Functional Clock Mux Select"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccCtimerClkselMux {
-        let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccCtimerClkselMux::from_bits(val as u8)
-    }
-    #[doc = "Functional Clock Mux Select"]
-    #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccCtimerClkselMux) {
-        self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
-    }
-}
-impl Default for MrccCtimer4Clksel {
-    #[inline(always)]
-    fn default() -> MrccCtimer4Clksel {
-        MrccCtimer4Clksel(0)
-    }
-}
-impl core::fmt::Debug for MrccCtimer4Clksel {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccCtimer4Clksel")
-            .field("mux", &self.mux())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccCtimer4Clksel {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "MrccCtimer4Clksel {{ mux: {:?} }}", self.mux())
+        defmt::write!(f, "MrccCtimerClksel {{ mux: {:?} }}", self.mux())
     }
 }
 #[doc = "DAC0 clock divider control"]
@@ -1690,8 +804,8 @@ impl defmt::Format for MrccDbgTraceClksel {
 #[doc = "FLEXCAN0 clock divider control"]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccFlexcan0Clkdiv(pub u32);
-impl MrccFlexcan0Clkdiv {
+pub struct MrccFlexcanClkdiv(pub u32);
+impl MrccFlexcanClkdiv {
     #[doc = "Functional Clock Divider"]
     #[must_use]
     #[inline(always)]
@@ -1741,15 +855,15 @@ impl MrccFlexcan0Clkdiv {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
-impl Default for MrccFlexcan0Clkdiv {
+impl Default for MrccFlexcanClkdiv {
     #[inline(always)]
-    fn default() -> MrccFlexcan0Clkdiv {
-        MrccFlexcan0Clkdiv(0)
+    fn default() -> MrccFlexcanClkdiv {
+        MrccFlexcanClkdiv(0)
     }
 }
-impl core::fmt::Debug for MrccFlexcan0Clkdiv {
+impl core::fmt::Debug for MrccFlexcanClkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccFlexcan0Clkdiv")
+        f.debug_struct("MrccFlexcanClkdiv")
             .field("div", &self.div())
             .field("reset", &self.reset())
             .field("halt", &self.halt())
@@ -1758,11 +872,11 @@ impl core::fmt::Debug for MrccFlexcan0Clkdiv {
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for MrccFlexcan0Clkdiv {
+impl defmt::Format for MrccFlexcanClkdiv {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "MrccFlexcan0Clkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
+            "MrccFlexcanClkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
             self.div(),
             self.reset(),
             self.halt(),
@@ -1773,8 +887,8 @@ impl defmt::Format for MrccFlexcan0Clkdiv {
 #[doc = "FLEXCAN0 clock selection control"]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccFlexcan0Clksel(pub u32);
-impl MrccFlexcan0Clksel {
+pub struct MrccFlexcanClksel(pub u32);
+impl MrccFlexcanClksel {
     #[doc = "Functional Clock Mux Select"]
     #[must_use]
     #[inline(always)]
@@ -1788,143 +902,23 @@ impl MrccFlexcan0Clksel {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
 }
-impl Default for MrccFlexcan0Clksel {
+impl Default for MrccFlexcanClksel {
     #[inline(always)]
-    fn default() -> MrccFlexcan0Clksel {
-        MrccFlexcan0Clksel(0)
+    fn default() -> MrccFlexcanClksel {
+        MrccFlexcanClksel(0)
     }
 }
-impl core::fmt::Debug for MrccFlexcan0Clksel {
+impl core::fmt::Debug for MrccFlexcanClksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccFlexcan0Clksel")
+        f.debug_struct("MrccFlexcanClksel")
             .field("mux", &self.mux())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for MrccFlexcan0Clksel {
+impl defmt::Format for MrccFlexcanClksel {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "MrccFlexcan0Clksel {{ mux: {:?} }}", self.mux())
-    }
-}
-#[doc = "FLEXCAN1 clock divider control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccFlexcan1Clkdiv(pub u32);
-impl MrccFlexcan1Clkdiv {
-    #[doc = "Functional Clock Divider"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn div(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0x0f;
-        val as u8
-    }
-    #[doc = "Functional Clock Divider"]
-    #[inline(always)]
-    pub const fn set_div(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
-    }
-    #[doc = "Reset divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccFlexcanClkdivReset {
-        let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccFlexcanClkdivReset::from_bits(val as u8)
-    }
-    #[doc = "Reset divider counter"]
-    #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccFlexcanClkdivReset) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
-    }
-    #[doc = "Halt divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccFlexcanClkdivHalt {
-        let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccFlexcanClkdivHalt::from_bits(val as u8)
-    }
-    #[doc = "Halt divider counter"]
-    #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccFlexcanClkdivHalt) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
-    }
-    #[doc = "Divider status flag"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccFlexcanClkdivUnstab {
-        let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccFlexcanClkdivUnstab::from_bits(val as u8)
-    }
-    #[doc = "Divider status flag"]
-    #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccFlexcanClkdivUnstab) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
-    }
-}
-impl Default for MrccFlexcan1Clkdiv {
-    #[inline(always)]
-    fn default() -> MrccFlexcan1Clkdiv {
-        MrccFlexcan1Clkdiv(0)
-    }
-}
-impl core::fmt::Debug for MrccFlexcan1Clkdiv {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccFlexcan1Clkdiv")
-            .field("div", &self.div())
-            .field("reset", &self.reset())
-            .field("halt", &self.halt())
-            .field("unstab", &self.unstab())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccFlexcan1Clkdiv {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "MrccFlexcan1Clkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
-            self.div(),
-            self.reset(),
-            self.halt(),
-            self.unstab()
-        )
-    }
-}
-#[doc = "FLEXCAN1 clock selection control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccFlexcan1Clksel(pub u32);
-impl MrccFlexcan1Clksel {
-    #[doc = "Functional Clock Mux Select"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccFlexcanClkselMux {
-        let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccFlexcanClkselMux::from_bits(val as u8)
-    }
-    #[doc = "Functional Clock Mux Select"]
-    #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccFlexcanClkselMux) {
-        self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
-    }
-}
-impl Default for MrccFlexcan1Clksel {
-    #[inline(always)]
-    fn default() -> MrccFlexcan1Clksel {
-        MrccFlexcan1Clksel(0)
-    }
-}
-impl core::fmt::Debug for MrccFlexcan1Clksel {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccFlexcan1Clksel")
-            .field("mux", &self.mux())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccFlexcan1Clksel {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "MrccFlexcan1Clksel {{ mux: {:?} }}", self.mux())
+        defmt::write!(f, "MrccFlexcanClksel {{ mux: {:?} }}", self.mux())
     }
 }
 #[doc = "FLEXIO0 clock divider control"]
@@ -5727,8 +4721,8 @@ impl defmt::Format for MrccI3c0FclkClksel {
 #[doc = "LPI2C0 clock divider control"]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccLpi2c0Clkdiv(pub u32);
-impl MrccLpi2c0Clkdiv {
+pub struct MrccLpi2cClkdiv(pub u32);
+impl MrccLpi2cClkdiv {
     #[doc = "Functional Clock Divider"]
     #[must_use]
     #[inline(always)]
@@ -5778,15 +4772,15 @@ impl MrccLpi2c0Clkdiv {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
-impl Default for MrccLpi2c0Clkdiv {
+impl Default for MrccLpi2cClkdiv {
     #[inline(always)]
-    fn default() -> MrccLpi2c0Clkdiv {
-        MrccLpi2c0Clkdiv(0)
+    fn default() -> MrccLpi2cClkdiv {
+        MrccLpi2cClkdiv(0)
     }
 }
-impl core::fmt::Debug for MrccLpi2c0Clkdiv {
+impl core::fmt::Debug for MrccLpi2cClkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccLpi2c0Clkdiv")
+        f.debug_struct("MrccLpi2cClkdiv")
             .field("div", &self.div())
             .field("reset", &self.reset())
             .field("halt", &self.halt())
@@ -5795,11 +4789,11 @@ impl core::fmt::Debug for MrccLpi2c0Clkdiv {
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for MrccLpi2c0Clkdiv {
+impl defmt::Format for MrccLpi2cClkdiv {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "MrccLpi2c0Clkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
+            "MrccLpi2cClkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
             self.div(),
             self.reset(),
             self.halt(),
@@ -5810,8 +4804,8 @@ impl defmt::Format for MrccLpi2c0Clkdiv {
 #[doc = "LPI2C0 clock selection control"]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccLpi2c0Clksel(pub u32);
-impl MrccLpi2c0Clksel {
+pub struct MrccLpi2cClksel(pub u32);
+impl MrccLpi2cClksel {
     #[doc = "Functional Clock Mux Select"]
     #[must_use]
     #[inline(always)]
@@ -5825,390 +4819,30 @@ impl MrccLpi2c0Clksel {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
 }
-impl Default for MrccLpi2c0Clksel {
+impl Default for MrccLpi2cClksel {
     #[inline(always)]
-    fn default() -> MrccLpi2c0Clksel {
-        MrccLpi2c0Clksel(0)
+    fn default() -> MrccLpi2cClksel {
+        MrccLpi2cClksel(0)
     }
 }
-impl core::fmt::Debug for MrccLpi2c0Clksel {
+impl core::fmt::Debug for MrccLpi2cClksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccLpi2c0Clksel")
+        f.debug_struct("MrccLpi2cClksel")
             .field("mux", &self.mux())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for MrccLpi2c0Clksel {
+impl defmt::Format for MrccLpi2cClksel {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "MrccLpi2c0Clksel {{ mux: {:?} }}", self.mux())
-    }
-}
-#[doc = "LPI2C1 clock divider control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccLpi2c1Clkdiv(pub u32);
-impl MrccLpi2c1Clkdiv {
-    #[doc = "Functional Clock Divider"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn div(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0x0f;
-        val as u8
-    }
-    #[doc = "Functional Clock Divider"]
-    #[inline(always)]
-    pub const fn set_div(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
-    }
-    #[doc = "Reset divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccLpi2cClkdivReset {
-        let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccLpi2cClkdivReset::from_bits(val as u8)
-    }
-    #[doc = "Reset divider counter"]
-    #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccLpi2cClkdivReset) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
-    }
-    #[doc = "Halt divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccLpi2cClkdivHalt {
-        let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccLpi2cClkdivHalt::from_bits(val as u8)
-    }
-    #[doc = "Halt divider counter"]
-    #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccLpi2cClkdivHalt) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
-    }
-    #[doc = "Divider status flag"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccLpi2cClkdivUnstab {
-        let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccLpi2cClkdivUnstab::from_bits(val as u8)
-    }
-    #[doc = "Divider status flag"]
-    #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccLpi2cClkdivUnstab) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
-    }
-}
-impl Default for MrccLpi2c1Clkdiv {
-    #[inline(always)]
-    fn default() -> MrccLpi2c1Clkdiv {
-        MrccLpi2c1Clkdiv(0)
-    }
-}
-impl core::fmt::Debug for MrccLpi2c1Clkdiv {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccLpi2c1Clkdiv")
-            .field("div", &self.div())
-            .field("reset", &self.reset())
-            .field("halt", &self.halt())
-            .field("unstab", &self.unstab())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccLpi2c1Clkdiv {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "MrccLpi2c1Clkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
-            self.div(),
-            self.reset(),
-            self.halt(),
-            self.unstab()
-        )
-    }
-}
-#[doc = "LPI2C1 clock selection control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccLpi2c1Clksel(pub u32);
-impl MrccLpi2c1Clksel {
-    #[doc = "Functional Clock Mux Select"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccLpi2cClkselMux {
-        let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccLpi2cClkselMux::from_bits(val as u8)
-    }
-    #[doc = "Functional Clock Mux Select"]
-    #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccLpi2cClkselMux) {
-        self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
-    }
-}
-impl Default for MrccLpi2c1Clksel {
-    #[inline(always)]
-    fn default() -> MrccLpi2c1Clksel {
-        MrccLpi2c1Clksel(0)
-    }
-}
-impl core::fmt::Debug for MrccLpi2c1Clksel {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccLpi2c1Clksel")
-            .field("mux", &self.mux())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccLpi2c1Clksel {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "MrccLpi2c1Clksel {{ mux: {:?} }}", self.mux())
-    }
-}
-#[doc = "LPI2C2 clock divider control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccLpi2c2Clkdiv(pub u32);
-impl MrccLpi2c2Clkdiv {
-    #[doc = "Functional Clock Divider"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn div(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0x0f;
-        val as u8
-    }
-    #[doc = "Functional Clock Divider"]
-    #[inline(always)]
-    pub const fn set_div(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
-    }
-    #[doc = "Reset divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccLpi2cClkdivReset {
-        let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccLpi2cClkdivReset::from_bits(val as u8)
-    }
-    #[doc = "Reset divider counter"]
-    #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccLpi2cClkdivReset) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
-    }
-    #[doc = "Halt divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccLpi2cClkdivHalt {
-        let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccLpi2cClkdivHalt::from_bits(val as u8)
-    }
-    #[doc = "Halt divider counter"]
-    #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccLpi2cClkdivHalt) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
-    }
-    #[doc = "Divider status flag"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccLpi2cClkdivUnstab {
-        let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccLpi2cClkdivUnstab::from_bits(val as u8)
-    }
-    #[doc = "Divider status flag"]
-    #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccLpi2cClkdivUnstab) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
-    }
-}
-impl Default for MrccLpi2c2Clkdiv {
-    #[inline(always)]
-    fn default() -> MrccLpi2c2Clkdiv {
-        MrccLpi2c2Clkdiv(0)
-    }
-}
-impl core::fmt::Debug for MrccLpi2c2Clkdiv {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccLpi2c2Clkdiv")
-            .field("div", &self.div())
-            .field("reset", &self.reset())
-            .field("halt", &self.halt())
-            .field("unstab", &self.unstab())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccLpi2c2Clkdiv {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "MrccLpi2c2Clkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
-            self.div(),
-            self.reset(),
-            self.halt(),
-            self.unstab()
-        )
-    }
-}
-#[doc = "LPI2C2 clock selection control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccLpi2c2Clksel(pub u32);
-impl MrccLpi2c2Clksel {
-    #[doc = "Functional Clock Mux Select"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccLpi2cClkselMux {
-        let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccLpi2cClkselMux::from_bits(val as u8)
-    }
-    #[doc = "Functional Clock Mux Select"]
-    #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccLpi2cClkselMux) {
-        self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
-    }
-}
-impl Default for MrccLpi2c2Clksel {
-    #[inline(always)]
-    fn default() -> MrccLpi2c2Clksel {
-        MrccLpi2c2Clksel(0)
-    }
-}
-impl core::fmt::Debug for MrccLpi2c2Clksel {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccLpi2c2Clksel")
-            .field("mux", &self.mux())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccLpi2c2Clksel {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "MrccLpi2c2Clksel {{ mux: {:?} }}", self.mux())
-    }
-}
-#[doc = "LPI2C3 clock divider control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccLpi2c3Clkdiv(pub u32);
-impl MrccLpi2c3Clkdiv {
-    #[doc = "Functional Clock Divider"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn div(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0x0f;
-        val as u8
-    }
-    #[doc = "Functional Clock Divider"]
-    #[inline(always)]
-    pub const fn set_div(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
-    }
-    #[doc = "Reset divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccLpi2cClkdivReset {
-        let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccLpi2cClkdivReset::from_bits(val as u8)
-    }
-    #[doc = "Reset divider counter"]
-    #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccLpi2cClkdivReset) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
-    }
-    #[doc = "Halt divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccLpi2cClkdivHalt {
-        let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccLpi2cClkdivHalt::from_bits(val as u8)
-    }
-    #[doc = "Halt divider counter"]
-    #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccLpi2cClkdivHalt) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
-    }
-    #[doc = "Divider status flag"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccLpi2cClkdivUnstab {
-        let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccLpi2cClkdivUnstab::from_bits(val as u8)
-    }
-    #[doc = "Divider status flag"]
-    #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccLpi2cClkdivUnstab) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
-    }
-}
-impl Default for MrccLpi2c3Clkdiv {
-    #[inline(always)]
-    fn default() -> MrccLpi2c3Clkdiv {
-        MrccLpi2c3Clkdiv(0)
-    }
-}
-impl core::fmt::Debug for MrccLpi2c3Clkdiv {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccLpi2c3Clkdiv")
-            .field("div", &self.div())
-            .field("reset", &self.reset())
-            .field("halt", &self.halt())
-            .field("unstab", &self.unstab())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccLpi2c3Clkdiv {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "MrccLpi2c3Clkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
-            self.div(),
-            self.reset(),
-            self.halt(),
-            self.unstab()
-        )
-    }
-}
-#[doc = "LPI2C3 clock selection control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccLpi2c3Clksel(pub u32);
-impl MrccLpi2c3Clksel {
-    #[doc = "Functional Clock Mux Select"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccLpi2cClkselMux {
-        let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccLpi2cClkselMux::from_bits(val as u8)
-    }
-    #[doc = "Functional Clock Mux Select"]
-    #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccLpi2cClkselMux) {
-        self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
-    }
-}
-impl Default for MrccLpi2c3Clksel {
-    #[inline(always)]
-    fn default() -> MrccLpi2c3Clksel {
-        MrccLpi2c3Clksel(0)
-    }
-}
-impl core::fmt::Debug for MrccLpi2c3Clksel {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccLpi2c3Clksel")
-            .field("mux", &self.mux())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccLpi2c3Clksel {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "MrccLpi2c3Clksel {{ mux: {:?} }}", self.mux())
+        defmt::write!(f, "MrccLpi2cClksel {{ mux: {:?} }}", self.mux())
     }
 }
 #[doc = "LPSPI0 clock divider control"]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccLpspi0Clkdiv(pub u32);
-impl MrccLpspi0Clkdiv {
+pub struct MrccLpspiClkdiv(pub u32);
+impl MrccLpspiClkdiv {
     #[doc = "Functional Clock Divider"]
     #[must_use]
     #[inline(always)]
@@ -6258,15 +4892,15 @@ impl MrccLpspi0Clkdiv {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
-impl Default for MrccLpspi0Clkdiv {
+impl Default for MrccLpspiClkdiv {
     #[inline(always)]
-    fn default() -> MrccLpspi0Clkdiv {
-        MrccLpspi0Clkdiv(0)
+    fn default() -> MrccLpspiClkdiv {
+        MrccLpspiClkdiv(0)
     }
 }
-impl core::fmt::Debug for MrccLpspi0Clkdiv {
+impl core::fmt::Debug for MrccLpspiClkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccLpspi0Clkdiv")
+        f.debug_struct("MrccLpspiClkdiv")
             .field("div", &self.div())
             .field("reset", &self.reset())
             .field("halt", &self.halt())
@@ -6275,11 +4909,11 @@ impl core::fmt::Debug for MrccLpspi0Clkdiv {
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for MrccLpspi0Clkdiv {
+impl defmt::Format for MrccLpspiClkdiv {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "MrccLpspi0Clkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
+            "MrccLpspiClkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
             self.div(),
             self.reset(),
             self.halt(),
@@ -6290,8 +4924,8 @@ impl defmt::Format for MrccLpspi0Clkdiv {
 #[doc = "LPSPI0 clock selection control"]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccLpspi0Clksel(pub u32);
-impl MrccLpspi0Clksel {
+pub struct MrccLpspiClksel(pub u32);
+impl MrccLpspiClksel {
     #[doc = "Functional Clock Mux Select"]
     #[must_use]
     #[inline(always)]
@@ -6305,143 +4939,23 @@ impl MrccLpspi0Clksel {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
 }
-impl Default for MrccLpspi0Clksel {
+impl Default for MrccLpspiClksel {
     #[inline(always)]
-    fn default() -> MrccLpspi0Clksel {
-        MrccLpspi0Clksel(0)
+    fn default() -> MrccLpspiClksel {
+        MrccLpspiClksel(0)
     }
 }
-impl core::fmt::Debug for MrccLpspi0Clksel {
+impl core::fmt::Debug for MrccLpspiClksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccLpspi0Clksel")
+        f.debug_struct("MrccLpspiClksel")
             .field("mux", &self.mux())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for MrccLpspi0Clksel {
+impl defmt::Format for MrccLpspiClksel {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "MrccLpspi0Clksel {{ mux: {:?} }}", self.mux())
-    }
-}
-#[doc = "LPSPI1 clock divider control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccLpspi1Clkdiv(pub u32);
-impl MrccLpspi1Clkdiv {
-    #[doc = "Functional Clock Divider"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn div(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0x0f;
-        val as u8
-    }
-    #[doc = "Functional Clock Divider"]
-    #[inline(always)]
-    pub const fn set_div(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
-    }
-    #[doc = "Reset divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccLpspiClkdivReset {
-        let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccLpspiClkdivReset::from_bits(val as u8)
-    }
-    #[doc = "Reset divider counter"]
-    #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccLpspiClkdivReset) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
-    }
-    #[doc = "Halt divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccLpspiClkdivHalt {
-        let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccLpspiClkdivHalt::from_bits(val as u8)
-    }
-    #[doc = "Halt divider counter"]
-    #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccLpspiClkdivHalt) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
-    }
-    #[doc = "Divider status flag"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccLpspiClkdivUnstab {
-        let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccLpspiClkdivUnstab::from_bits(val as u8)
-    }
-    #[doc = "Divider status flag"]
-    #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccLpspiClkdivUnstab) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
-    }
-}
-impl Default for MrccLpspi1Clkdiv {
-    #[inline(always)]
-    fn default() -> MrccLpspi1Clkdiv {
-        MrccLpspi1Clkdiv(0)
-    }
-}
-impl core::fmt::Debug for MrccLpspi1Clkdiv {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccLpspi1Clkdiv")
-            .field("div", &self.div())
-            .field("reset", &self.reset())
-            .field("halt", &self.halt())
-            .field("unstab", &self.unstab())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccLpspi1Clkdiv {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "MrccLpspi1Clkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
-            self.div(),
-            self.reset(),
-            self.halt(),
-            self.unstab()
-        )
-    }
-}
-#[doc = "LPSPI1 clock selection control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccLpspi1Clksel(pub u32);
-impl MrccLpspi1Clksel {
-    #[doc = "Functional Clock Mux Select"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccLpspiClkselMux {
-        let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccLpspiClkselMux::from_bits(val as u8)
-    }
-    #[doc = "Functional Clock Mux Select"]
-    #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccLpspiClkselMux) {
-        self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
-    }
-}
-impl Default for MrccLpspi1Clksel {
-    #[inline(always)]
-    fn default() -> MrccLpspi1Clksel {
-        MrccLpspi1Clksel(0)
-    }
-}
-impl core::fmt::Debug for MrccLpspi1Clksel {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccLpspi1Clksel")
-            .field("mux", &self.mux())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccLpspi1Clksel {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "MrccLpspi1Clksel {{ mux: {:?} }}", self.mux())
+        defmt::write!(f, "MrccLpspiClksel {{ mux: {:?} }}", self.mux())
     }
 }
 #[doc = "LPTMR0 clock divider control"]
@@ -6567,8 +5081,8 @@ impl defmt::Format for MrccLptmr0Clksel {
 #[doc = "LPUART0 clock divider control"]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccLpuart0Clkdiv(pub u32);
-impl MrccLpuart0Clkdiv {
+pub struct MrccLpuartClkdiv(pub u32);
+impl MrccLpuartClkdiv {
     #[doc = "Functional Clock Divider"]
     #[must_use]
     #[inline(always)]
@@ -6618,15 +5132,15 @@ impl MrccLpuart0Clkdiv {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
-impl Default for MrccLpuart0Clkdiv {
+impl Default for MrccLpuartClkdiv {
     #[inline(always)]
-    fn default() -> MrccLpuart0Clkdiv {
-        MrccLpuart0Clkdiv(0)
+    fn default() -> MrccLpuartClkdiv {
+        MrccLpuartClkdiv(0)
     }
 }
-impl core::fmt::Debug for MrccLpuart0Clkdiv {
+impl core::fmt::Debug for MrccLpuartClkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccLpuart0Clkdiv")
+        f.debug_struct("MrccLpuartClkdiv")
             .field("div", &self.div())
             .field("reset", &self.reset())
             .field("halt", &self.halt())
@@ -6635,11 +5149,11 @@ impl core::fmt::Debug for MrccLpuart0Clkdiv {
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for MrccLpuart0Clkdiv {
+impl defmt::Format for MrccLpuartClkdiv {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "MrccLpuart0Clkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
+            "MrccLpuartClkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
             self.div(),
             self.reset(),
             self.halt(),
@@ -6650,8 +5164,8 @@ impl defmt::Format for MrccLpuart0Clkdiv {
 #[doc = "LPUART0 clock selection control"]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccLpuart0Clksel(pub u32);
-impl MrccLpuart0Clksel {
+pub struct MrccLpuartClksel(pub u32);
+impl MrccLpuartClksel {
     #[doc = "Functional Clock Mux Select"]
     #[must_use]
     #[inline(always)]
@@ -6665,623 +5179,23 @@ impl MrccLpuart0Clksel {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
 }
-impl Default for MrccLpuart0Clksel {
+impl Default for MrccLpuartClksel {
     #[inline(always)]
-    fn default() -> MrccLpuart0Clksel {
-        MrccLpuart0Clksel(0)
+    fn default() -> MrccLpuartClksel {
+        MrccLpuartClksel(0)
     }
 }
-impl core::fmt::Debug for MrccLpuart0Clksel {
+impl core::fmt::Debug for MrccLpuartClksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccLpuart0Clksel")
+        f.debug_struct("MrccLpuartClksel")
             .field("mux", &self.mux())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for MrccLpuart0Clksel {
+impl defmt::Format for MrccLpuartClksel {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "MrccLpuart0Clksel {{ mux: {:?} }}", self.mux())
-    }
-}
-#[doc = "LPUART1 clock divider control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccLpuart1Clkdiv(pub u32);
-impl MrccLpuart1Clkdiv {
-    #[doc = "Functional Clock Divider"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn div(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0x0f;
-        val as u8
-    }
-    #[doc = "Functional Clock Divider"]
-    #[inline(always)]
-    pub const fn set_div(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
-    }
-    #[doc = "Reset divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccLpuartClkdivReset {
-        let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccLpuartClkdivReset::from_bits(val as u8)
-    }
-    #[doc = "Reset divider counter"]
-    #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccLpuartClkdivReset) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
-    }
-    #[doc = "Halt divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccLpuartClkdivHalt {
-        let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccLpuartClkdivHalt::from_bits(val as u8)
-    }
-    #[doc = "Halt divider counter"]
-    #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccLpuartClkdivHalt) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
-    }
-    #[doc = "Divider status flag"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccLpuartClkdivUnstab {
-        let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccLpuartClkdivUnstab::from_bits(val as u8)
-    }
-    #[doc = "Divider status flag"]
-    #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccLpuartClkdivUnstab) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
-    }
-}
-impl Default for MrccLpuart1Clkdiv {
-    #[inline(always)]
-    fn default() -> MrccLpuart1Clkdiv {
-        MrccLpuart1Clkdiv(0)
-    }
-}
-impl core::fmt::Debug for MrccLpuart1Clkdiv {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccLpuart1Clkdiv")
-            .field("div", &self.div())
-            .field("reset", &self.reset())
-            .field("halt", &self.halt())
-            .field("unstab", &self.unstab())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccLpuart1Clkdiv {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "MrccLpuart1Clkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
-            self.div(),
-            self.reset(),
-            self.halt(),
-            self.unstab()
-        )
-    }
-}
-#[doc = "LPUART1 clock selection control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccLpuart1Clksel(pub u32);
-impl MrccLpuart1Clksel {
-    #[doc = "Functional Clock Mux Select"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccLpuartClkselMux {
-        let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccLpuartClkselMux::from_bits(val as u8)
-    }
-    #[doc = "Functional Clock Mux Select"]
-    #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccLpuartClkselMux) {
-        self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
-    }
-}
-impl Default for MrccLpuart1Clksel {
-    #[inline(always)]
-    fn default() -> MrccLpuart1Clksel {
-        MrccLpuart1Clksel(0)
-    }
-}
-impl core::fmt::Debug for MrccLpuart1Clksel {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccLpuart1Clksel")
-            .field("mux", &self.mux())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccLpuart1Clksel {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "MrccLpuart1Clksel {{ mux: {:?} }}", self.mux())
-    }
-}
-#[doc = "LPUART2 clock divider control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccLpuart2Clkdiv(pub u32);
-impl MrccLpuart2Clkdiv {
-    #[doc = "Functional Clock Divider"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn div(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0x0f;
-        val as u8
-    }
-    #[doc = "Functional Clock Divider"]
-    #[inline(always)]
-    pub const fn set_div(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
-    }
-    #[doc = "Reset divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccLpuartClkdivReset {
-        let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccLpuartClkdivReset::from_bits(val as u8)
-    }
-    #[doc = "Reset divider counter"]
-    #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccLpuartClkdivReset) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
-    }
-    #[doc = "Halt divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccLpuartClkdivHalt {
-        let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccLpuartClkdivHalt::from_bits(val as u8)
-    }
-    #[doc = "Halt divider counter"]
-    #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccLpuartClkdivHalt) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
-    }
-    #[doc = "Divider status flag"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccLpuartClkdivUnstab {
-        let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccLpuartClkdivUnstab::from_bits(val as u8)
-    }
-    #[doc = "Divider status flag"]
-    #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccLpuartClkdivUnstab) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
-    }
-}
-impl Default for MrccLpuart2Clkdiv {
-    #[inline(always)]
-    fn default() -> MrccLpuart2Clkdiv {
-        MrccLpuart2Clkdiv(0)
-    }
-}
-impl core::fmt::Debug for MrccLpuart2Clkdiv {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccLpuart2Clkdiv")
-            .field("div", &self.div())
-            .field("reset", &self.reset())
-            .field("halt", &self.halt())
-            .field("unstab", &self.unstab())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccLpuart2Clkdiv {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "MrccLpuart2Clkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
-            self.div(),
-            self.reset(),
-            self.halt(),
-            self.unstab()
-        )
-    }
-}
-#[doc = "LPUART2 clock selection control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccLpuart2Clksel(pub u32);
-impl MrccLpuart2Clksel {
-    #[doc = "Functional Clock Mux Select"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccLpuartClkselMux {
-        let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccLpuartClkselMux::from_bits(val as u8)
-    }
-    #[doc = "Functional Clock Mux Select"]
-    #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccLpuartClkselMux) {
-        self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
-    }
-}
-impl Default for MrccLpuart2Clksel {
-    #[inline(always)]
-    fn default() -> MrccLpuart2Clksel {
-        MrccLpuart2Clksel(0)
-    }
-}
-impl core::fmt::Debug for MrccLpuart2Clksel {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccLpuart2Clksel")
-            .field("mux", &self.mux())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccLpuart2Clksel {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "MrccLpuart2Clksel {{ mux: {:?} }}", self.mux())
-    }
-}
-#[doc = "LPUART3 clock divider control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccLpuart3Clkdiv(pub u32);
-impl MrccLpuart3Clkdiv {
-    #[doc = "Functional Clock Divider"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn div(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0x0f;
-        val as u8
-    }
-    #[doc = "Functional Clock Divider"]
-    #[inline(always)]
-    pub const fn set_div(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
-    }
-    #[doc = "Reset divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccLpuartClkdivReset {
-        let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccLpuartClkdivReset::from_bits(val as u8)
-    }
-    #[doc = "Reset divider counter"]
-    #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccLpuartClkdivReset) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
-    }
-    #[doc = "Halt divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccLpuartClkdivHalt {
-        let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccLpuartClkdivHalt::from_bits(val as u8)
-    }
-    #[doc = "Halt divider counter"]
-    #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccLpuartClkdivHalt) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
-    }
-    #[doc = "Divider status flag"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccLpuartClkdivUnstab {
-        let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccLpuartClkdivUnstab::from_bits(val as u8)
-    }
-    #[doc = "Divider status flag"]
-    #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccLpuartClkdivUnstab) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
-    }
-}
-impl Default for MrccLpuart3Clkdiv {
-    #[inline(always)]
-    fn default() -> MrccLpuart3Clkdiv {
-        MrccLpuart3Clkdiv(0)
-    }
-}
-impl core::fmt::Debug for MrccLpuart3Clkdiv {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccLpuart3Clkdiv")
-            .field("div", &self.div())
-            .field("reset", &self.reset())
-            .field("halt", &self.halt())
-            .field("unstab", &self.unstab())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccLpuart3Clkdiv {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "MrccLpuart3Clkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
-            self.div(),
-            self.reset(),
-            self.halt(),
-            self.unstab()
-        )
-    }
-}
-#[doc = "LPUART3 clock selection control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccLpuart3Clksel(pub u32);
-impl MrccLpuart3Clksel {
-    #[doc = "Functional Clock Mux Select"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccLpuartClkselMux {
-        let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccLpuartClkselMux::from_bits(val as u8)
-    }
-    #[doc = "Functional Clock Mux Select"]
-    #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccLpuartClkselMux) {
-        self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
-    }
-}
-impl Default for MrccLpuart3Clksel {
-    #[inline(always)]
-    fn default() -> MrccLpuart3Clksel {
-        MrccLpuart3Clksel(0)
-    }
-}
-impl core::fmt::Debug for MrccLpuart3Clksel {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccLpuart3Clksel")
-            .field("mux", &self.mux())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccLpuart3Clksel {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "MrccLpuart3Clksel {{ mux: {:?} }}", self.mux())
-    }
-}
-#[doc = "LPUART4 clock divider control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccLpuart4Clkdiv(pub u32);
-impl MrccLpuart4Clkdiv {
-    #[doc = "Functional Clock Divider"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn div(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0x0f;
-        val as u8
-    }
-    #[doc = "Functional Clock Divider"]
-    #[inline(always)]
-    pub const fn set_div(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
-    }
-    #[doc = "Reset divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccLpuartClkdivReset {
-        let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccLpuartClkdivReset::from_bits(val as u8)
-    }
-    #[doc = "Reset divider counter"]
-    #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccLpuartClkdivReset) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
-    }
-    #[doc = "Halt divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccLpuartClkdivHalt {
-        let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccLpuartClkdivHalt::from_bits(val as u8)
-    }
-    #[doc = "Halt divider counter"]
-    #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccLpuartClkdivHalt) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
-    }
-    #[doc = "Divider status flag"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccLpuartClkdivUnstab {
-        let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccLpuartClkdivUnstab::from_bits(val as u8)
-    }
-    #[doc = "Divider status flag"]
-    #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccLpuartClkdivUnstab) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
-    }
-}
-impl Default for MrccLpuart4Clkdiv {
-    #[inline(always)]
-    fn default() -> MrccLpuart4Clkdiv {
-        MrccLpuart4Clkdiv(0)
-    }
-}
-impl core::fmt::Debug for MrccLpuart4Clkdiv {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccLpuart4Clkdiv")
-            .field("div", &self.div())
-            .field("reset", &self.reset())
-            .field("halt", &self.halt())
-            .field("unstab", &self.unstab())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccLpuart4Clkdiv {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "MrccLpuart4Clkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
-            self.div(),
-            self.reset(),
-            self.halt(),
-            self.unstab()
-        )
-    }
-}
-#[doc = "LPUART4 clock selection control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccLpuart4Clksel(pub u32);
-impl MrccLpuart4Clksel {
-    #[doc = "Functional Clock Mux Select"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccLpuartClkselMux {
-        let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccLpuartClkselMux::from_bits(val as u8)
-    }
-    #[doc = "Functional Clock Mux Select"]
-    #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccLpuartClkselMux) {
-        self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
-    }
-}
-impl Default for MrccLpuart4Clksel {
-    #[inline(always)]
-    fn default() -> MrccLpuart4Clksel {
-        MrccLpuart4Clksel(0)
-    }
-}
-impl core::fmt::Debug for MrccLpuart4Clksel {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccLpuart4Clksel")
-            .field("mux", &self.mux())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccLpuart4Clksel {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "MrccLpuart4Clksel {{ mux: {:?} }}", self.mux())
-    }
-}
-#[doc = "LPUART5 clock divider control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccLpuart5Clkdiv(pub u32);
-impl MrccLpuart5Clkdiv {
-    #[doc = "Functional Clock Divider"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn div(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0x0f;
-        val as u8
-    }
-    #[doc = "Functional Clock Divider"]
-    #[inline(always)]
-    pub const fn set_div(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
-    }
-    #[doc = "Reset divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn reset(&self) -> super::vals::MrccLpuartClkdivReset {
-        let val = (self.0 >> 29usize) & 0x01;
-        super::vals::MrccLpuartClkdivReset::from_bits(val as u8)
-    }
-    #[doc = "Reset divider counter"]
-    #[inline(always)]
-    pub const fn set_reset(&mut self, val: super::vals::MrccLpuartClkdivReset) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
-    }
-    #[doc = "Halt divider counter"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn halt(&self) -> super::vals::MrccLpuartClkdivHalt {
-        let val = (self.0 >> 30usize) & 0x01;
-        super::vals::MrccLpuartClkdivHalt::from_bits(val as u8)
-    }
-    #[doc = "Halt divider counter"]
-    #[inline(always)]
-    pub const fn set_halt(&mut self, val: super::vals::MrccLpuartClkdivHalt) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
-    }
-    #[doc = "Divider status flag"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn unstab(&self) -> super::vals::MrccLpuartClkdivUnstab {
-        let val = (self.0 >> 31usize) & 0x01;
-        super::vals::MrccLpuartClkdivUnstab::from_bits(val as u8)
-    }
-    #[doc = "Divider status flag"]
-    #[inline(always)]
-    pub const fn set_unstab(&mut self, val: super::vals::MrccLpuartClkdivUnstab) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
-    }
-}
-impl Default for MrccLpuart5Clkdiv {
-    #[inline(always)]
-    fn default() -> MrccLpuart5Clkdiv {
-        MrccLpuart5Clkdiv(0)
-    }
-}
-impl core::fmt::Debug for MrccLpuart5Clkdiv {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccLpuart5Clkdiv")
-            .field("div", &self.div())
-            .field("reset", &self.reset())
-            .field("halt", &self.halt())
-            .field("unstab", &self.unstab())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccLpuart5Clkdiv {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "MrccLpuart5Clkdiv {{ div: {=u8:?}, reset: {:?}, halt: {:?}, unstab: {:?} }}",
-            self.div(),
-            self.reset(),
-            self.halt(),
-            self.unstab()
-        )
-    }
-}
-#[doc = "LPUART5 clock selection control"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MrccLpuart5Clksel(pub u32);
-impl MrccLpuart5Clksel {
-    #[doc = "Functional Clock Mux Select"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mux(&self) -> super::vals::MrccLpuartClkselMux {
-        let val = (self.0 >> 0usize) & 0x07;
-        super::vals::MrccLpuartClkselMux::from_bits(val as u8)
-    }
-    #[doc = "Functional Clock Mux Select"]
-    #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::MrccLpuartClkselMux) {
-        self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
-    }
-}
-impl Default for MrccLpuart5Clksel {
-    #[inline(always)]
-    fn default() -> MrccLpuart5Clksel {
-        MrccLpuart5Clksel(0)
-    }
-}
-impl core::fmt::Debug for MrccLpuart5Clksel {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MrccLpuart5Clksel")
-            .field("mux", &self.mux())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for MrccLpuart5Clksel {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "MrccLpuart5Clksel {{ mux: {:?} }}", self.mux())
+        defmt::write!(f, "MrccLpuartClksel {{ mux: {:?} }}", self.mux())
     }
 }
 #[doc = "OSTIMER0 clock selection control"]
