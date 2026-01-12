@@ -11,7 +11,7 @@ This crate will (hopefully) be used for [`embassy-nxp`](github.com/embassy-rs/em
 
 If you want to regenerate the pac, you need to clone with `--recursive`.
 
-If you forgot this, you can use `git submodule update --init` to fetch the submodules.
+If you forgot this, you can use `git submodule update --checkout` to fetch the submodules.
 
 ## License
 

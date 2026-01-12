@@ -48,7 +48,9 @@ const GENERATE: &[Feature] = &[
     Feature { chip: "LPC55S69", metadata: "LPC55S6x", cores: &["LPC55S69_cm33_core0", "LPC55S69_cm33_core1"] },
 
     // TODO: metadata
-    Feature { chip: "MCXN947", metadata: "", cores: &["MCXN947_cm33_core0", "MCXN947_cm33_core1"]}
+    Feature { chip: "MCXN947", metadata: "", cores: &["MCXN947_cm33_core0", "MCXN947_cm33_core1"]},
+    // TODO: metadata
+    Feature { chip: "MCXA256", metadata: "", cores: &["MCXA256"]}
 ];
 
 fn main() -> anyhow::Result<()> {
