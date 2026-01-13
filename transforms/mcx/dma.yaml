@@ -1,0 +1,5 @@
+transforms:
+  - !ModifyFieldsEnum
+    fieldset: edma_0_tcd0::regs::TcdAttr
+    field: dsize
+    enum: edma_0_tcd0::vals::Ssize

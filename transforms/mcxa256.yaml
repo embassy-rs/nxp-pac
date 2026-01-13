@@ -3,5 +3,6 @@ includes:
   - useless.yaml
   - mcx/mrcc.yaml
   - mcx/port.yaml
+  - mcx/dma.yaml
 transforms:
   - !Sort

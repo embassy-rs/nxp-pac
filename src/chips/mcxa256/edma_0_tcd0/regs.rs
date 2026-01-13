@@ -478,14 +478,14 @@ impl TcdAttr {
     #[doc = "Destination Data Transfer Size"]
     #[must_use]
     #[inline(always)]
-    pub const fn dsize(&self) -> u8 {
+    pub const fn dsize(&self) -> super::vals::Ssize {
         let val = (self.0 >> 0usize) & 0x07;
-        val as u8
+        super::vals::Ssize::from_bits(val as u8)
     }
     #[doc = "Destination Data Transfer Size"]
     #[inline(always)]
-    pub const fn set_dsize(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x07 << 0usize)) | (((val as u16) & 0x07) << 0usize);
+    pub const fn set_dsize(&mut self, val: super::vals::Ssize) {
+        self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u16) & 0x07) << 0usize);
     }
     #[doc = "Destination Address Modulo"]
     #[must_use]
@@ -545,7 +545,7 @@ impl defmt::Format for TcdAttr {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "TcdAttr {{ dsize: {=u8:?}, dmod: {=u8:?}, ssize: {:?}, smod: {:?} }}",
+            "TcdAttr {{ dsize: {:?}, dmod: {=u8:?}, ssize: {:?}, smod: {:?} }}",
             self.dsize(),
             self.dmod(),
             self.ssize(),
