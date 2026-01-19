@@ -2,6 +2,7 @@ includes:
   - cm33.yaml
   - useless.yaml
   - mcx/mrcc.yaml
+  - mcx/gpio.yaml
   - mcx/port.yaml
   - mcx/dma.yaml
 transforms:

@@ -20,10 +20,10 @@ transforms:
 
   - !MergeEnums
     from: port::vals::Pcr(0|1|7)Mux
-    to: port::vals::PcrShortMux
+    to: port::vals::ShortMux
   - !MergeEnums
     from: port::vals::Pcr(\d+)Mux
-    to: port::vals::PcrMux
+    to: port::vals::Mux
 
   - !MergeEnums
     from: port::vals::Gpwe(\d+)
@@ -31,31 +31,31 @@ transforms:
 
   - !MergeEnums
     from: port::vals::Pcr(\d+)Dse
-    to: port::vals::PcrDse
+    to: port::vals::Dse
   - !MergeEnums
     from: port::vals::Pcr(\d+)Dse1
-    to: port::vals::PcrDse1
+    to: port::vals::Dse1
   - !MergeEnums
     from: port::vals::Pcr(\d+)Sre
-    to: port::vals::PcrSre
+    to: port::vals::Sre
   - !MergeEnums
     from: port::vals::Pcr(\d+)Pfe
-    to: port::vals::PcrPfe
+    to: port::vals::Pfe
   - !MergeEnums
     from: port::vals::Pcr(\d+)Ibe
-    to: port::vals::PcrIbe
+    to: port::vals::Ibe
   - !MergeEnums
     from: port::vals::Pcr(\d+)Inv
-    to: port::vals::PcrInv
+    to: port::vals::Inv
   - !MergeEnums
     from: port::vals::Pcr(\d+)Ode
-    to: port::vals::PcrOde
+    to: port::vals::Ode
   - !MergeEnums
     from: port::vals::Pcr(\d+)Pe
-    to: port::vals::PcrPe
+    to: port::vals::Pe
   - !MergeEnums
     from: port::vals::Pcr(\d+)Ps
-    to: port::vals::PcrPs
+    to: port::vals::Ps
   - !MergeEnums
     from: port::vals::Pcr(\d+)Lk
-    to: port::vals::PcrLk
+    to: port::vals::Lk

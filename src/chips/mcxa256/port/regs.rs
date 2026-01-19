@@ -683,109 +683,109 @@ impl Pcr0 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Pin Multiplex Control"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::PcrShortMux {
+    pub const fn mux(&self) -> super::vals::ShortMux {
         let val = (self.0 >> 8usize) & 0x07;
-        super::vals::PcrShortMux::from_bits(val as u8)
+        super::vals::ShortMux::from_bits(val as u8)
     }
     #[doc = "Pin Multiplex Control"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::PcrShortMux) {
+    pub const fn set_mux(&mut self, val: super::vals::ShortMux) {
         self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u32) & 0x07) << 8usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -836,109 +836,109 @@ impl Pcr1 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Pin Multiplex Control"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::PcrShortMux {
+    pub const fn mux(&self) -> super::vals::ShortMux {
         let val = (self.0 >> 8usize) & 0x07;
-        super::vals::PcrShortMux::from_bits(val as u8)
+        super::vals::ShortMux::from_bits(val as u8)
     }
     #[doc = "Pin Multiplex Control"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::PcrShortMux) {
+    pub const fn set_mux(&mut self, val: super::vals::ShortMux) {
         self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u32) & 0x07) << 8usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -989,97 +989,97 @@ impl Pcr10 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -1128,97 +1128,97 @@ impl Pcr11 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -1267,109 +1267,109 @@ impl Pcr12 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Pin Multiplex Control"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::PcrMux {
+    pub const fn mux(&self) -> super::vals::Mux {
         let val = (self.0 >> 8usize) & 0x0f;
-        super::vals::PcrMux::from_bits(val as u8)
+        super::vals::Mux::from_bits(val as u8)
     }
     #[doc = "Pin Multiplex Control"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::PcrMux) {
+    pub const fn set_mux(&mut self, val: super::vals::Mux) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -1420,109 +1420,109 @@ impl Pcr13 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Pin Multiplex Control"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::PcrMux {
+    pub const fn mux(&self) -> super::vals::Mux {
         let val = (self.0 >> 8usize) & 0x0f;
-        super::vals::PcrMux::from_bits(val as u8)
+        super::vals::Mux::from_bits(val as u8)
     }
     #[doc = "Pin Multiplex Control"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::PcrMux) {
+    pub const fn set_mux(&mut self, val: super::vals::Mux) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -1573,109 +1573,109 @@ impl Pcr14 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Pin Multiplex Control"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::PcrMux {
+    pub const fn mux(&self) -> super::vals::Mux {
         let val = (self.0 >> 8usize) & 0x0f;
-        super::vals::PcrMux::from_bits(val as u8)
+        super::vals::Mux::from_bits(val as u8)
     }
     #[doc = "Pin Multiplex Control"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::PcrMux) {
+    pub const fn set_mux(&mut self, val: super::vals::Mux) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -1726,109 +1726,109 @@ impl Pcr15 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Pin Multiplex Control"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::PcrMux {
+    pub const fn mux(&self) -> super::vals::Mux {
         let val = (self.0 >> 8usize) & 0x0f;
-        super::vals::PcrMux::from_bits(val as u8)
+        super::vals::Mux::from_bits(val as u8)
     }
     #[doc = "Pin Multiplex Control"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::PcrMux) {
+    pub const fn set_mux(&mut self, val: super::vals::Mux) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -1879,25 +1879,25 @@ impl Pcr16 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Pull Value"]
@@ -1915,109 +1915,109 @@ impl Pcr16 {
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Passive Filter Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pfe(&self) -> super::vals::PcrPfe {
+    pub const fn pfe(&self) -> super::vals::Pfe {
         let val = (self.0 >> 4usize) & 0x01;
-        super::vals::PcrPfe::from_bits(val as u8)
+        super::vals::Pfe::from_bits(val as u8)
     }
     #[doc = "Passive Filter Enable"]
     #[inline(always)]
-    pub const fn set_pfe(&mut self, val: super::vals::PcrPfe) {
+    pub const fn set_pfe(&mut self, val: super::vals::Pfe) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse1(&self) -> super::vals::PcrDse1 {
+    pub const fn dse1(&self) -> super::vals::Dse1 {
         let val = (self.0 >> 7usize) & 0x01;
-        super::vals::PcrDse1::from_bits(val as u8)
+        super::vals::Dse1::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse1(&mut self, val: super::vals::PcrDse1) {
+    pub const fn set_dse1(&mut self, val: super::vals::Dse1) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
     #[doc = "Pin Multiplex Control"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::PcrMux {
+    pub const fn mux(&self) -> super::vals::Mux {
         let val = (self.0 >> 8usize) & 0x0f;
-        super::vals::PcrMux::from_bits(val as u8)
+        super::vals::Mux::from_bits(val as u8)
     }
     #[doc = "Pin Multiplex Control"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::PcrMux) {
+    pub const fn set_mux(&mut self, val: super::vals::Mux) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -2074,133 +2074,133 @@ impl Pcr17 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Passive Filter Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pfe(&self) -> super::vals::PcrPfe {
+    pub const fn pfe(&self) -> super::vals::Pfe {
         let val = (self.0 >> 4usize) & 0x01;
-        super::vals::PcrPfe::from_bits(val as u8)
+        super::vals::Pfe::from_bits(val as u8)
     }
     #[doc = "Passive Filter Enable"]
     #[inline(always)]
-    pub const fn set_pfe(&mut self, val: super::vals::PcrPfe) {
+    pub const fn set_pfe(&mut self, val: super::vals::Pfe) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse1(&self) -> super::vals::PcrDse1 {
+    pub const fn dse1(&self) -> super::vals::Dse1 {
         let val = (self.0 >> 7usize) & 0x01;
-        super::vals::PcrDse1::from_bits(val as u8)
+        super::vals::Dse1::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse1(&mut self, val: super::vals::PcrDse1) {
+    pub const fn set_dse1(&mut self, val: super::vals::Dse1) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
     #[doc = "Pin Multiplex Control"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::PcrMux {
+    pub const fn mux(&self) -> super::vals::Mux {
         let val = (self.0 >> 8usize) & 0x0f;
-        super::vals::PcrMux::from_bits(val as u8)
+        super::vals::Mux::from_bits(val as u8)
     }
     #[doc = "Pin Multiplex Control"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::PcrMux) {
+    pub const fn set_mux(&mut self, val: super::vals::Mux) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -2255,109 +2255,109 @@ impl Pcr18 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Pin Multiplex Control"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::PcrMux {
+    pub const fn mux(&self) -> super::vals::Mux {
         let val = (self.0 >> 8usize) & 0x0f;
-        super::vals::PcrMux::from_bits(val as u8)
+        super::vals::Mux::from_bits(val as u8)
     }
     #[doc = "Pin Multiplex Control"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::PcrMux) {
+    pub const fn set_mux(&mut self, val: super::vals::Mux) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -2408,109 +2408,109 @@ impl Pcr19 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Pin Multiplex Control"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::PcrMux {
+    pub const fn mux(&self) -> super::vals::Mux {
         let val = (self.0 >> 8usize) & 0x0f;
-        super::vals::PcrMux::from_bits(val as u8)
+        super::vals::Mux::from_bits(val as u8)
     }
     #[doc = "Pin Multiplex Control"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::PcrMux) {
+    pub const fn set_mux(&mut self, val: super::vals::Mux) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -2561,109 +2561,109 @@ impl Pcr2 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Pin Multiplex Control"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::PcrMux {
+    pub const fn mux(&self) -> super::vals::Mux {
         let val = (self.0 >> 8usize) & 0x0f;
-        super::vals::PcrMux::from_bits(val as u8)
+        super::vals::Mux::from_bits(val as u8)
     }
     #[doc = "Pin Multiplex Control"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::PcrMux) {
+    pub const fn set_mux(&mut self, val: super::vals::Mux) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -2714,109 +2714,109 @@ impl Pcr20 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Pin Multiplex Control"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::PcrMux {
+    pub const fn mux(&self) -> super::vals::Mux {
         let val = (self.0 >> 8usize) & 0x0f;
-        super::vals::PcrMux::from_bits(val as u8)
+        super::vals::Mux::from_bits(val as u8)
     }
     #[doc = "Pin Multiplex Control"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::PcrMux) {
+    pub const fn set_mux(&mut self, val: super::vals::Mux) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -2867,109 +2867,109 @@ impl Pcr21 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Pin Multiplex Control"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::PcrMux {
+    pub const fn mux(&self) -> super::vals::Mux {
         let val = (self.0 >> 8usize) & 0x0f;
-        super::vals::PcrMux::from_bits(val as u8)
+        super::vals::Mux::from_bits(val as u8)
     }
     #[doc = "Pin Multiplex Control"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::PcrMux) {
+    pub const fn set_mux(&mut self, val: super::vals::Mux) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -3020,109 +3020,109 @@ impl Pcr22 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Pin Multiplex Control"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::PcrMux {
+    pub const fn mux(&self) -> super::vals::Mux {
         let val = (self.0 >> 8usize) & 0x0f;
-        super::vals::PcrMux::from_bits(val as u8)
+        super::vals::Mux::from_bits(val as u8)
     }
     #[doc = "Pin Multiplex Control"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::PcrMux) {
+    pub const fn set_mux(&mut self, val: super::vals::Mux) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -3173,109 +3173,109 @@ impl Pcr23 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Pin Multiplex Control"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::PcrMux {
+    pub const fn mux(&self) -> super::vals::Mux {
         let val = (self.0 >> 8usize) & 0x0f;
-        super::vals::PcrMux::from_bits(val as u8)
+        super::vals::Mux::from_bits(val as u8)
     }
     #[doc = "Pin Multiplex Control"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::PcrMux) {
+    pub const fn set_mux(&mut self, val: super::vals::Mux) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -3326,109 +3326,109 @@ impl Pcr24 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Pin Multiplex Control"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::PcrMux {
+    pub const fn mux(&self) -> super::vals::Mux {
         let val = (self.0 >> 8usize) & 0x0f;
-        super::vals::PcrMux::from_bits(val as u8)
+        super::vals::Mux::from_bits(val as u8)
     }
     #[doc = "Pin Multiplex Control"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::PcrMux) {
+    pub const fn set_mux(&mut self, val: super::vals::Mux) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -3479,109 +3479,109 @@ impl Pcr25 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Pin Multiplex Control"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::PcrMux {
+    pub const fn mux(&self) -> super::vals::Mux {
         let val = (self.0 >> 8usize) & 0x0f;
-        super::vals::PcrMux::from_bits(val as u8)
+        super::vals::Mux::from_bits(val as u8)
     }
     #[doc = "Pin Multiplex Control"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::PcrMux) {
+    pub const fn set_mux(&mut self, val: super::vals::Mux) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -3632,109 +3632,109 @@ impl Pcr26 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Pin Multiplex Control"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::PcrMux {
+    pub const fn mux(&self) -> super::vals::Mux {
         let val = (self.0 >> 8usize) & 0x0f;
-        super::vals::PcrMux::from_bits(val as u8)
+        super::vals::Mux::from_bits(val as u8)
     }
     #[doc = "Pin Multiplex Control"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::PcrMux) {
+    pub const fn set_mux(&mut self, val: super::vals::Mux) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -3785,109 +3785,109 @@ impl Pcr27 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Pin Multiplex Control"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::PcrMux {
+    pub const fn mux(&self) -> super::vals::Mux {
         let val = (self.0 >> 8usize) & 0x0f;
-        super::vals::PcrMux::from_bits(val as u8)
+        super::vals::Mux::from_bits(val as u8)
     }
     #[doc = "Pin Multiplex Control"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::PcrMux) {
+    pub const fn set_mux(&mut self, val: super::vals::Mux) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -3938,97 +3938,97 @@ impl Pcr28 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -4077,97 +4077,97 @@ impl Pcr29 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -4216,109 +4216,109 @@ impl Pcr3 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Pin Multiplex Control"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::PcrMux {
+    pub const fn mux(&self) -> super::vals::Mux {
         let val = (self.0 >> 8usize) & 0x0f;
-        super::vals::PcrMux::from_bits(val as u8)
+        super::vals::Mux::from_bits(val as u8)
     }
     #[doc = "Pin Multiplex Control"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::PcrMux) {
+    pub const fn set_mux(&mut self, val: super::vals::Mux) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -4369,97 +4369,97 @@ impl Pcr30 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -4508,97 +4508,97 @@ impl Pcr31 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -4647,109 +4647,109 @@ impl Pcr4 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Pin Multiplex Control"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::PcrMux {
+    pub const fn mux(&self) -> super::vals::Mux {
         let val = (self.0 >> 8usize) & 0x0f;
-        super::vals::PcrMux::from_bits(val as u8)
+        super::vals::Mux::from_bits(val as u8)
     }
     #[doc = "Pin Multiplex Control"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::PcrMux) {
+    pub const fn set_mux(&mut self, val: super::vals::Mux) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -4800,109 +4800,109 @@ impl Pcr5 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Pin Multiplex Control"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::PcrMux {
+    pub const fn mux(&self) -> super::vals::Mux {
         let val = (self.0 >> 8usize) & 0x0f;
-        super::vals::PcrMux::from_bits(val as u8)
+        super::vals::Mux::from_bits(val as u8)
     }
     #[doc = "Pin Multiplex Control"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::PcrMux) {
+    pub const fn set_mux(&mut self, val: super::vals::Mux) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -4953,109 +4953,109 @@ impl Pcr6 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Pin Multiplex Control"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::PcrMux {
+    pub const fn mux(&self) -> super::vals::Mux {
         let val = (self.0 >> 8usize) & 0x0f;
-        super::vals::PcrMux::from_bits(val as u8)
+        super::vals::Mux::from_bits(val as u8)
     }
     #[doc = "Pin Multiplex Control"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::PcrMux) {
+    pub const fn set_mux(&mut self, val: super::vals::Mux) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -5106,109 +5106,109 @@ impl Pcr7 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Pin Multiplex Control"]
     #[must_use]
     #[inline(always)]
-    pub const fn mux(&self) -> super::vals::PcrShortMux {
+    pub const fn mux(&self) -> super::vals::ShortMux {
         let val = (self.0 >> 8usize) & 0x07;
-        super::vals::PcrShortMux::from_bits(val as u8)
+        super::vals::ShortMux::from_bits(val as u8)
     }
     #[doc = "Pin Multiplex Control"]
     #[inline(always)]
-    pub const fn set_mux(&mut self, val: super::vals::PcrShortMux) {
+    pub const fn set_mux(&mut self, val: super::vals::ShortMux) {
         self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u32) & 0x07) << 8usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -5259,97 +5259,97 @@ impl Pcr8 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }
@@ -5398,97 +5398,97 @@ impl Pcr9 {
     #[doc = "Pull Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn ps(&self) -> super::vals::PcrPs {
+    pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PcrPs::from_bits(val as u8)
+        super::vals::Ps::from_bits(val as u8)
     }
     #[doc = "Pull Select"]
     #[inline(always)]
-    pub const fn set_ps(&mut self, val: super::vals::PcrPs) {
+    pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Pull Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pe(&self) -> super::vals::PcrPe {
+    pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::PcrPe::from_bits(val as u8)
+        super::vals::Pe::from_bits(val as u8)
     }
     #[doc = "Pull Enable"]
     #[inline(always)]
-    pub const fn set_pe(&mut self, val: super::vals::PcrPe) {
+    pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Slew Rate Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn sre(&self) -> super::vals::PcrSre {
+    pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PcrSre::from_bits(val as u8)
+        super::vals::Sre::from_bits(val as u8)
     }
     #[doc = "Slew Rate Enable"]
     #[inline(always)]
-    pub const fn set_sre(&mut self, val: super::vals::PcrSre) {
+    pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Open Drain Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ode(&self) -> super::vals::PcrOde {
+    pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
-        super::vals::PcrOde::from_bits(val as u8)
+        super::vals::Ode::from_bits(val as u8)
     }
     #[doc = "Open Drain Enable"]
     #[inline(always)]
-    pub const fn set_ode(&mut self, val: super::vals::PcrOde) {
+    pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Drive Strength Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn dse(&self) -> super::vals::PcrDse {
+    pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
-        super::vals::PcrDse::from_bits(val as u8)
+        super::vals::Dse::from_bits(val as u8)
     }
     #[doc = "Drive Strength Enable"]
     #[inline(always)]
-    pub const fn set_dse(&mut self, val: super::vals::PcrDse) {
+    pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Input Buffer Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibe(&self) -> super::vals::PcrIbe {
+    pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::PcrIbe::from_bits(val as u8)
+        super::vals::Ibe::from_bits(val as u8)
     }
     #[doc = "Input Buffer Enable"]
     #[inline(always)]
-    pub const fn set_ibe(&mut self, val: super::vals::PcrIbe) {
+    pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "Invert Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn inv(&self) -> super::vals::PcrInv {
+    pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::PcrInv::from_bits(val as u8)
+        super::vals::Inv::from_bits(val as u8)
     }
     #[doc = "Invert Input"]
     #[inline(always)]
-    pub const fn set_inv(&mut self, val: super::vals::PcrInv) {
+    pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Lock Register"]
     #[must_use]
     #[inline(always)]
-    pub const fn lk(&self) -> super::vals::PcrLk {
+    pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::PcrLk::from_bits(val as u8)
+        super::vals::Lk::from_bits(val as u8)
     }
     #[doc = "Lock Register"]
     #[inline(always)]
-    pub const fn set_lk(&mut self, val: super::vals::PcrLk) {
+    pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
 }

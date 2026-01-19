@@ -1,3 +1,65 @@
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Dse {
+    #[doc = "Low"]
+    DSE0 = 0x0,
+    #[doc = "High"]
+    DSE1 = 0x01,
+}
+impl Dse {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Dse {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Dse {
+    #[inline(always)]
+    fn from(val: u8) -> Dse {
+        Dse::from_bits(val)
+    }
+}
+impl From<Dse> for u8 {
+    #[inline(always)]
+    fn from(val: Dse) -> u8 {
+        Dse::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Dse1 {
+    #[doc = "Normal"]
+    DSE10 = 0x0,
+    #[doc = "Double"]
+    DSE11 = 0x01,
+}
+impl Dse1 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Dse1 {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Dse1 {
+    #[inline(always)]
+    fn from(val: u8) -> Dse1 {
+        Dse1::from_bits(val)
+    }
+}
+impl From<Dse1> for u8 {
+    #[inline(always)]
+    fn from(val: Dse1) -> u8 {
+        Dse1::to_bits(val)
+    }
+}
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Feature(u16);
@@ -76,77 +138,15 @@ impl From<Gpwe> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum PcrDse {
-    #[doc = "Low"]
-    DSE0 = 0x0,
-    #[doc = "High"]
-    DSE1 = 0x01,
-}
-impl PcrDse {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> PcrDse {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for PcrDse {
-    #[inline(always)]
-    fn from(val: u8) -> PcrDse {
-        PcrDse::from_bits(val)
-    }
-}
-impl From<PcrDse> for u8 {
-    #[inline(always)]
-    fn from(val: PcrDse) -> u8 {
-        PcrDse::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum PcrDse1 {
-    #[doc = "Normal"]
-    DSE10 = 0x0,
-    #[doc = "Double"]
-    DSE11 = 0x01,
-}
-impl PcrDse1 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> PcrDse1 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for PcrDse1 {
-    #[inline(always)]
-    fn from(val: u8) -> PcrDse1 {
-        PcrDse1::from_bits(val)
-    }
-}
-impl From<PcrDse1> for u8 {
-    #[inline(always)]
-    fn from(val: PcrDse1) -> u8 {
-        PcrDse1::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum PcrIbe {
+pub enum Ibe {
     #[doc = "Disables"]
     IBE0 = 0x0,
     #[doc = "Enables"]
     IBE1 = 0x01,
 }
-impl PcrIbe {
+impl Ibe {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> PcrIbe {
+    pub const fn from_bits(val: u8) -> Ibe {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -154,30 +154,30 @@ impl PcrIbe {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for PcrIbe {
+impl From<u8> for Ibe {
     #[inline(always)]
-    fn from(val: u8) -> PcrIbe {
-        PcrIbe::from_bits(val)
+    fn from(val: u8) -> Ibe {
+        Ibe::from_bits(val)
     }
 }
-impl From<PcrIbe> for u8 {
+impl From<Ibe> for u8 {
     #[inline(always)]
-    fn from(val: PcrIbe) -> u8 {
-        PcrIbe::to_bits(val)
+    fn from(val: Ibe) -> u8 {
+        Ibe::to_bits(val)
     }
 }
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum PcrInv {
+pub enum Inv {
     #[doc = "Does not invert"]
     INV0 = 0x0,
     #[doc = "Inverts"]
     INV1 = 0x01,
 }
-impl PcrInv {
+impl Inv {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> PcrInv {
+    pub const fn from_bits(val: u8) -> Inv {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -185,30 +185,30 @@ impl PcrInv {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for PcrInv {
+impl From<u8> for Inv {
     #[inline(always)]
-    fn from(val: u8) -> PcrInv {
-        PcrInv::from_bits(val)
+    fn from(val: u8) -> Inv {
+        Inv::from_bits(val)
     }
 }
-impl From<PcrInv> for u8 {
+impl From<Inv> for u8 {
     #[inline(always)]
-    fn from(val: PcrInv) -> u8 {
-        PcrInv::to_bits(val)
+    fn from(val: Inv) -> u8 {
+        Inv::to_bits(val)
     }
 }
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum PcrLk {
+pub enum Lk {
     #[doc = "Does not lock"]
     LK0 = 0x0,
     #[doc = "Locks"]
     LK1 = 0x01,
 }
-impl PcrLk {
+impl Lk {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> PcrLk {
+    pub const fn from_bits(val: u8) -> Lk {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -216,22 +216,22 @@ impl PcrLk {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for PcrLk {
+impl From<u8> for Lk {
     #[inline(always)]
-    fn from(val: u8) -> PcrLk {
-        PcrLk::from_bits(val)
+    fn from(val: u8) -> Lk {
+        Lk::from_bits(val)
     }
 }
-impl From<PcrLk> for u8 {
+impl From<Lk> for u8 {
     #[inline(always)]
-    fn from(val: PcrLk) -> u8 {
-        PcrLk::to_bits(val)
+    fn from(val: Lk) -> u8 {
+        Lk::to_bits(val)
     }
 }
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum PcrMux {
+pub enum Mux {
     #[doc = "Alternative 0 (GPIO)"]
     MUX00 = 0x0,
     #[doc = "Alternative 1 (chip-specific)"]
@@ -263,9 +263,9 @@ pub enum PcrMux {
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
 }
-impl PcrMux {
+impl Mux {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> PcrMux {
+    pub const fn from_bits(val: u8) -> Mux {
         unsafe { core::mem::transmute(val & 0x0f) }
     }
     #[inline(always)]
@@ -273,30 +273,30 @@ impl PcrMux {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for PcrMux {
+impl From<u8> for Mux {
     #[inline(always)]
-    fn from(val: u8) -> PcrMux {
-        PcrMux::from_bits(val)
+    fn from(val: u8) -> Mux {
+        Mux::from_bits(val)
     }
 }
-impl From<PcrMux> for u8 {
+impl From<Mux> for u8 {
     #[inline(always)]
-    fn from(val: PcrMux) -> u8 {
-        PcrMux::to_bits(val)
+    fn from(val: Mux) -> u8 {
+        Mux::to_bits(val)
     }
 }
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum PcrOde {
+pub enum Ode {
     #[doc = "Disables"]
     ODE0 = 0x0,
     #[doc = "Enables"]
     ODE1 = 0x01,
 }
-impl PcrOde {
+impl Ode {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> PcrOde {
+    pub const fn from_bits(val: u8) -> Ode {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -304,30 +304,30 @@ impl PcrOde {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for PcrOde {
+impl From<u8> for Ode {
     #[inline(always)]
-    fn from(val: u8) -> PcrOde {
-        PcrOde::from_bits(val)
+    fn from(val: u8) -> Ode {
+        Ode::from_bits(val)
     }
 }
-impl From<PcrOde> for u8 {
+impl From<Ode> for u8 {
     #[inline(always)]
-    fn from(val: PcrOde) -> u8 {
-        PcrOde::to_bits(val)
+    fn from(val: Ode) -> u8 {
+        Ode::to_bits(val)
     }
 }
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum PcrPe {
+pub enum Pe {
     #[doc = "Disables"]
     PE0 = 0x0,
     #[doc = "Enables"]
     PE1 = 0x01,
 }
-impl PcrPe {
+impl Pe {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> PcrPe {
+    pub const fn from_bits(val: u8) -> Pe {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -335,30 +335,30 @@ impl PcrPe {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for PcrPe {
+impl From<u8> for Pe {
     #[inline(always)]
-    fn from(val: u8) -> PcrPe {
-        PcrPe::from_bits(val)
+    fn from(val: u8) -> Pe {
+        Pe::from_bits(val)
     }
 }
-impl From<PcrPe> for u8 {
+impl From<Pe> for u8 {
     #[inline(always)]
-    fn from(val: PcrPe) -> u8 {
-        PcrPe::to_bits(val)
+    fn from(val: Pe) -> u8 {
+        Pe::to_bits(val)
     }
 }
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum PcrPfe {
+pub enum Pfe {
     #[doc = "Disables"]
     PFE0 = 0x0,
     #[doc = "Enables"]
     PFE1 = 0x01,
 }
-impl PcrPfe {
+impl Pfe {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> PcrPfe {
+    pub const fn from_bits(val: u8) -> Pfe {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -366,30 +366,30 @@ impl PcrPfe {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for PcrPfe {
+impl From<u8> for Pfe {
     #[inline(always)]
-    fn from(val: u8) -> PcrPfe {
-        PcrPfe::from_bits(val)
+    fn from(val: u8) -> Pfe {
+        Pfe::from_bits(val)
     }
 }
-impl From<PcrPfe> for u8 {
+impl From<Pfe> for u8 {
     #[inline(always)]
-    fn from(val: PcrPfe) -> u8 {
-        PcrPfe::to_bits(val)
+    fn from(val: Pfe) -> u8 {
+        Pfe::to_bits(val)
     }
 }
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum PcrPs {
+pub enum Ps {
     #[doc = "Enables internal pulldown resistor"]
     PS0 = 0x0,
     #[doc = "Enables internal pullup resistor"]
     PS1 = 0x01,
 }
-impl PcrPs {
+impl Ps {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> PcrPs {
+    pub const fn from_bits(val: u8) -> Ps {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -397,90 +397,16 @@ impl PcrPs {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for PcrPs {
+impl From<u8> for Ps {
     #[inline(always)]
-    fn from(val: u8) -> PcrPs {
-        PcrPs::from_bits(val)
+    fn from(val: u8) -> Ps {
+        Ps::from_bits(val)
     }
 }
-impl From<PcrPs> for u8 {
+impl From<Ps> for u8 {
     #[inline(always)]
-    fn from(val: PcrPs) -> u8 {
-        PcrPs::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum PcrShortMux {
-    #[doc = "Alternative 0 (GPIO)"]
-    MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
-    MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
-    MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
-    MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
-    MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
-    MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
-    MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
-    MUX111 = 0x07,
-}
-impl PcrShortMux {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> PcrShortMux {
-        unsafe { core::mem::transmute(val & 0x07) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for PcrShortMux {
-    #[inline(always)]
-    fn from(val: u8) -> PcrShortMux {
-        PcrShortMux::from_bits(val)
-    }
-}
-impl From<PcrShortMux> for u8 {
-    #[inline(always)]
-    fn from(val: PcrShortMux) -> u8 {
-        PcrShortMux::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum PcrSre {
-    #[doc = "Fast"]
-    SRE0 = 0x0,
-    #[doc = "Slow"]
-    SRE1 = 0x01,
-}
-impl PcrSre {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> PcrSre {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for PcrSre {
-    #[inline(always)]
-    fn from(val: u8) -> PcrSre {
-        PcrSre::from_bits(val)
-    }
-}
-impl From<PcrSre> for u8 {
-    #[inline(always)]
-    fn from(val: PcrSre) -> u8 {
-        PcrSre::to_bits(val)
+    fn from(val: Ps) -> u8 {
+        Ps::to_bits(val)
     }
 }
 #[repr(u8)]
@@ -543,5 +469,79 @@ impl From<Range> for u8 {
     #[inline(always)]
     fn from(val: Range) -> u8 {
         Range::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum ShortMux {
+    #[doc = "Alternative 0 (GPIO)"]
+    MUX00 = 0x0,
+    #[doc = "Alternative 1 (chip-specific)"]
+    MUX01 = 0x01,
+    #[doc = "Alternative 2 (chip-specific)"]
+    MUX10 = 0x02,
+    #[doc = "Alternative 3 (chip-specific)"]
+    MUX11 = 0x03,
+    #[doc = "Alternative 4 (chip-specific)"]
+    MUX100 = 0x04,
+    #[doc = "Alternative 5 (chip-specific)"]
+    MUX101 = 0x05,
+    #[doc = "Alternative 6 (chip-specific)"]
+    MUX110 = 0x06,
+    #[doc = "Alternative 7 (chip-specific)"]
+    MUX111 = 0x07,
+}
+impl ShortMux {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> ShortMux {
+        unsafe { core::mem::transmute(val & 0x07) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for ShortMux {
+    #[inline(always)]
+    fn from(val: u8) -> ShortMux {
+        ShortMux::from_bits(val)
+    }
+}
+impl From<ShortMux> for u8 {
+    #[inline(always)]
+    fn from(val: ShortMux) -> u8 {
+        ShortMux::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Sre {
+    #[doc = "Fast"]
+    SRE0 = 0x0,
+    #[doc = "Slow"]
+    SRE1 = 0x01,
+}
+impl Sre {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Sre {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Sre {
+    #[inline(always)]
+    fn from(val: u8) -> Sre {
+        Sre::from_bits(val)
+    }
+}
+impl From<Sre> for u8 {
+    #[inline(always)]
+    fn from(val: Sre) -> u8 {
+        Sre::to_bits(val)
     }
 }
