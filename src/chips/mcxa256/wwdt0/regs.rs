@@ -65,14 +65,14 @@ impl Mod {
     #[doc = "Watchdog Timeout Flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn wdtof(&self) -> super::vals::Wdtof {
+    pub const fn wdtof(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
-        super::vals::Wdtof::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Watchdog Timeout Flag"]
     #[inline(always)]
-    pub const fn set_wdtof(&mut self, val: super::vals::Wdtof) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
+    pub const fn set_wdtof(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
     #[doc = "Warning Interrupt Flag"]
     #[must_use]
@@ -147,7 +147,7 @@ impl defmt::Format for Mod {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Mod {{ wden: {:?}, wdreset: {:?}, wdtof: {:?}, wdint: {=bool:?}, wdprotect: {:?}, lock: {=bool:?}, debug_en: {=bool:?} }}",
+            "Mod {{ wden: {:?}, wdreset: {:?}, wdtof: {=bool:?}, wdint: {=bool:?}, wdprotect: {:?}, lock: {=bool:?}, debug_en: {=bool:?} }}",
             self.wden(),
             self.wdreset(),
             self.wdtof(),

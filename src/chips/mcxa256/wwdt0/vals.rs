@@ -91,34 +91,3 @@ impl From<Wdreset> for u8 {
         Wdreset::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Wdtof {
-    #[doc = "Watchdog event has not occurred."]
-    CLEAR = 0x0,
-    #[doc = "Watchdog event has occurred (causes a chip reset if WDRESET = 1)."]
-    RESET = 0x01,
-}
-impl Wdtof {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Wdtof {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Wdtof {
-    #[inline(always)]
-    fn from(val: u8) -> Wdtof {
-        Wdtof::from_bits(val)
-    }
-}
-impl From<Wdtof> for u8 {
-    #[inline(always)]
-    fn from(val: Wdtof) -> u8 {
-        Wdtof::to_bits(val)
-    }
-}
