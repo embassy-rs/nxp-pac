@@ -1,0 +1,20 @@
+transforms:
+  - !DeleteRegisters
+    block: trng0::Trng0
+    from: ent0
+  - !Rename
+    from: trng0::regs::Ent0
+    to: trng0::regs::Ent
+    type: Fieldset
+  - !AddRegisters
+    block: trng0::Trng0
+    registers:
+    - name: ent
+      description: Entropy Read Register
+      array:
+        len: 8
+        stride: 4
+      byte_offset: 64
+      access: Read
+      fieldset: trng0::regs::Ent
+    

@@ -151,8 +151,9 @@ impl Trng0 {
     }
     #[doc = "Entropy Read Register"]
     #[inline(always)]
-    pub const fn ent0(self) -> crate::common::Reg<regs::Ent0, crate::common::R> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x40usize) as _) }
+    pub const fn ent(self, n: usize) -> crate::common::Reg<regs::Ent, crate::common::R> {
+        assert!(n < 8usize);
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x40usize + n * 4usize) as _) }
     }
     #[doc = "Statistical Check Poker Count 1 and 0 Register"]
     #[inline(always)]

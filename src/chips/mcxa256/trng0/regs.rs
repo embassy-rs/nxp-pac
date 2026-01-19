@@ -167,8 +167,8 @@ impl defmt::Format for Cser {
 #[doc = "Entropy Read Register"]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Ent0(pub u32);
-impl Ent0 {
+pub struct Ent(pub u32);
+impl Ent {
     #[doc = "Entropy Value"]
     #[must_use]
     #[inline(always)]
@@ -182,21 +182,21 @@ impl Ent0 {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
     }
 }
-impl Default for Ent0 {
+impl Default for Ent {
     #[inline(always)]
-    fn default() -> Ent0 {
-        Ent0(0)
+    fn default() -> Ent {
+        Ent(0)
     }
 }
-impl core::fmt::Debug for Ent0 {
+impl core::fmt::Debug for Ent {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Ent0").field("ent", &self.ent()).finish()
+        f.debug_struct("Ent").field("ent", &self.ent()).finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for Ent0 {
+impl defmt::Format for Ent {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Ent0 {{ ent: {=u32:?} }}", self.ent())
+        defmt::write!(f, "Ent {{ ent: {=u32:?} }}", self.ent())
     }
 }
 #[doc = "Frequency Count Register"]
