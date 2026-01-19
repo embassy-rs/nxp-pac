@@ -17,3 +17,45 @@ transforms:
 
   - !Delete
     from: port(\d+)::(.*)
+
+  - !MergeEnums
+    from: port::vals::Pcr(0|1|7)Mux
+    to: port::vals::PcrShortMux
+  - !MergeEnums
+    from: port::vals::Pcr(\d+)Mux
+    to: port::vals::PcrMux
+
+  - !MergeEnums
+    from: port::vals::Gpwe(\d+)
+    to: port::vals::Gpwe
+
+  - !MergeEnums
+    from: port::vals::Pcr(\d+)Dse
+    to: port::vals::PcrDse
+  - !MergeEnums
+    from: port::vals::Pcr(\d+)Dse1
+    to: port::vals::PcrDse1
+  - !MergeEnums
+    from: port::vals::Pcr(\d+)Sre
+    to: port::vals::PcrSre
+  - !MergeEnums
+    from: port::vals::Pcr(\d+)Pfe
+    to: port::vals::PcrPfe
+  - !MergeEnums
+    from: port::vals::Pcr(\d+)Ibe
+    to: port::vals::PcrIbe
+  - !MergeEnums
+    from: port::vals::Pcr(\d+)Inv
+    to: port::vals::PcrInv
+  - !MergeEnums
+    from: port::vals::Pcr(\d+)Ode
+    to: port::vals::PcrOde
+  - !MergeEnums
+    from: port::vals::Pcr(\d+)Pe
+    to: port::vals::PcrPe
+  - !MergeEnums
+    from: port::vals::Pcr(\d+)Ps
+    to: port::vals::PcrPs
+  - !MergeEnums
+    from: port::vals::Pcr(\d+)Lk
+    to: port::vals::PcrLk
