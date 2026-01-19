@@ -1,11 +1,11 @@
 #[doc = "GPIO"]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Rgpio {
+pub struct Gpio {
     ptr: *mut u8,
 }
-unsafe impl Send for Rgpio {}
-unsafe impl Sync for Rgpio {}
-impl Rgpio {
+unsafe impl Send for Gpio {}
+unsafe impl Sync for Gpio {}
+impl Gpio {
     #[inline(always)]
     pub const unsafe fn from_ptr(ptr: *mut ()) -> Self {
         Self { ptr: ptr as _ }

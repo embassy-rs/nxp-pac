@@ -1,0 +1,11 @@
+transforms:
+  # MCXA uses rgpio group name
+  - !Rename
+    from: rgpio::Rgpio
+    to: gpio::Gpio
+    type: All
+
+  - !Rename
+    from: rgpio::(.*)
+    to: gpio::$1
+    type: All

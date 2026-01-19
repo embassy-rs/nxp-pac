@@ -24,13 +24,3 @@ transforms:
 
   - !Delete
     from: gpio(\d+)(_alias(\d+))?::(.*)
-
-#  - !Rename
-#      from: sai1::(.*)
-#      to: sai::$1
-#      type: All
-#
-#  - !Rename
-#      from: sai::Sai1
-#      to: sai::Sai
-#      type: Block

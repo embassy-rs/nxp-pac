@@ -340,15 +340,15 @@ pub const CDOG0: cdog::Cdog = unsafe { cdog::Cdog::from_ptr(0x4010_0000usize as 
 pub const DBGMAILBOX: dbgmailbox::Dbgmailbox =
     unsafe { dbgmailbox::Dbgmailbox::from_ptr(0x4010_1000usize as _) };
 #[doc = "GPIO"]
-pub const GPIO0: rgpio::Rgpio = unsafe { rgpio::Rgpio::from_ptr(0x4010_2000usize as _) };
+pub const GPIO0: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4010_2000usize as _) };
 #[doc = "GPIO"]
-pub const GPIO1: rgpio::Rgpio = unsafe { rgpio::Rgpio::from_ptr(0x4010_3000usize as _) };
+pub const GPIO1: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4010_3000usize as _) };
 #[doc = "GPIO"]
-pub const GPIO2: rgpio::Rgpio = unsafe { rgpio::Rgpio::from_ptr(0x4010_4000usize as _) };
+pub const GPIO2: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4010_4000usize as _) };
 #[doc = "GPIO"]
-pub const GPIO3: rgpio::Rgpio = unsafe { rgpio::Rgpio::from_ptr(0x4010_5000usize as _) };
+pub const GPIO3: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4010_5000usize as _) };
 #[doc = "GPIO"]
-pub const GPIO4: rgpio::Rgpio = unsafe { rgpio::Rgpio::from_ptr(0x4010_6000usize as _) };
+pub const GPIO4: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4010_6000usize as _) };
 #[doc = "CDOG"]
 pub const CDOG1: cdog::Cdog = unsafe { cdog::Cdog::from_ptr(0x4010_7000usize as _) };
 #[doc = "MAUWRAP"]
@@ -383,6 +383,7 @@ pub mod fmc0;
 pub mod fmu0;
 pub mod freqme0;
 pub mod glikey0;
+pub mod gpio;
 pub mod hsadc;
 pub mod i3c0;
 pub mod inputmux0;
@@ -397,7 +398,6 @@ pub mod opamp0;
 pub mod ostimer0;
 pub mod pkc0;
 pub mod port;
-pub mod rgpio;
 pub mod rtc0;
 pub mod scg0;
 pub mod scn_scb;
