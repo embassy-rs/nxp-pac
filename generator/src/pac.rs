@@ -75,7 +75,8 @@ pub fn generate_core(
         .arg(output_dir.canonicalize()?)
         .stdout(Stdio::piped())
         .stderr(Stdio::piped())
-        .status()?;
+        .status()
+        .context("Running the `form` command. Make sure to have it installed: https://crates.io/crates/form")?;
 
     fs::rename(output_dir.join("lib.rs"), output_dir.join("mod.rs"))?;
 
