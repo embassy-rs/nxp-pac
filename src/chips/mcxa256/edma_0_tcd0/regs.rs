@@ -270,14 +270,14 @@ impl ChInt {
     #[doc = "Interrupt Request"]
     #[must_use]
     #[inline(always)]
-    pub const fn int(&self) -> super::vals::Int {
+    pub const fn int(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::Int::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt Request"]
     #[inline(always)]
-    pub const fn set_int(&mut self, val: super::vals::Int) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    pub const fn set_int(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
 }
 impl Default for ChInt {
@@ -294,7 +294,7 @@ impl core::fmt::Debug for ChInt {
 #[cfg(feature = "defmt")]
 impl defmt::Format for ChInt {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "ChInt {{ int: {:?} }}", self.int())
+        defmt::write!(f, "ChInt {{ int: {=bool:?} }}", self.int())
     }
 }
 #[doc = "Channel Multiplexor Configuration"]
