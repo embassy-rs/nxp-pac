@@ -92,3 +92,8 @@ transforms:
   - !MergeFieldsets
     from: port::regs::Pcr(\d+)
     to: port::regs::Pcr
+
+  - !MakeRegisterArray
+    blocks: port::Port
+    from: pcr(\d+)
+    to: pcr
