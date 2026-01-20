@@ -675,7 +675,7 @@ impl defmt::Format for Gpclr {
         )
     }
 }
-#[doc = "Pin Control 0"]
+#[doc = "Pin Control 2"]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pcr(pub u32);

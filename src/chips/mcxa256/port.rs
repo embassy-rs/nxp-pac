@@ -86,22 +86,22 @@ impl Port {
     }
     #[doc = "Pin Control 8"]
     #[inline(always)]
-    pub const fn pcr8(self) -> crate::common::Reg<u32, crate::common::RW> {
+    pub const fn pcr8(self) -> crate::common::Reg<regs::Pcr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xa0usize) as _) }
     }
     #[doc = "Pin Control 9"]
     #[inline(always)]
-    pub const fn pcr9(self) -> crate::common::Reg<u32, crate::common::RW> {
+    pub const fn pcr9(self) -> crate::common::Reg<regs::Pcr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xa4usize) as _) }
     }
     #[doc = "Pin Control 10"]
     #[inline(always)]
-    pub const fn pcr10(self) -> crate::common::Reg<u32, crate::common::RW> {
+    pub const fn pcr10(self) -> crate::common::Reg<regs::Pcr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xa8usize) as _) }
     }
     #[doc = "Pin Control 11"]
     #[inline(always)]
-    pub const fn pcr11(self) -> crate::common::Reg<u32, crate::common::RW> {
+    pub const fn pcr11(self) -> crate::common::Reg<regs::Pcr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xacusize) as _) }
     }
     #[doc = "Pin Control 12"]
@@ -186,22 +186,22 @@ impl Port {
     }
     #[doc = "Pin Control 28"]
     #[inline(always)]
-    pub const fn pcr28(self) -> crate::common::Reg<u32, crate::common::RW> {
+    pub const fn pcr28(self) -> crate::common::Reg<regs::Pcr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xf0usize) as _) }
     }
     #[doc = "Pin Control 29"]
     #[inline(always)]
-    pub const fn pcr29(self) -> crate::common::Reg<u32, crate::common::RW> {
+    pub const fn pcr29(self) -> crate::common::Reg<regs::Pcr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xf4usize) as _) }
     }
     #[doc = "Pin Control 30"]
     #[inline(always)]
-    pub const fn pcr30(self) -> crate::common::Reg<u32, crate::common::RW> {
+    pub const fn pcr30(self) -> crate::common::Reg<regs::Pcr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xf8usize) as _) }
     }
     #[doc = "Pin Control 31"]
     #[inline(always)]
-    pub const fn pcr31(self) -> crate::common::Reg<u32, crate::common::RW> {
+    pub const fn pcr31(self) -> crate::common::Reg<regs::Pcr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xfcusize) as _) }
     }
 }
