@@ -62,3 +62,11 @@ transforms:
   - !MergeFieldsets
     from: adc::regs::Cmdh(\d+)
     to: adc::regs::Cmdh
+  
+  - !DeleteEnums
+    from: adc::vals::Swt(\d+)
+
+  - !MakeFieldArray
+    fieldsets: adc::regs::Swtrig
+    from: swt(\d+)
+    to: swt

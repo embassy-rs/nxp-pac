@@ -1386,50 +1386,18 @@ impl Swtrig {
     #[doc = "Software Trigger 0 Event"]
     #[must_use]
     #[inline(always)]
-    pub const fn swt0(&self) -> super::vals::Swt0 {
-        let val = (self.0 >> 0usize) & 0x01;
-        super::vals::Swt0::from_bits(val as u8)
+    pub const fn swt(&self, n: usize) -> bool {
+        assert!(n < 4usize);
+        let offs = 0usize + n * 1usize;
+        let val = (self.0 >> offs) & 0x01;
+        val != 0
     }
     #[doc = "Software Trigger 0 Event"]
     #[inline(always)]
-    pub const fn set_swt0(&mut self, val: super::vals::Swt0) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
-    }
-    #[doc = "Software Trigger 1 Event"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn swt1(&self) -> super::vals::Swt1 {
-        let val = (self.0 >> 1usize) & 0x01;
-        super::vals::Swt1::from_bits(val as u8)
-    }
-    #[doc = "Software Trigger 1 Event"]
-    #[inline(always)]
-    pub const fn set_swt1(&mut self, val: super::vals::Swt1) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
-    }
-    #[doc = "Software Trigger 2 Event"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn swt2(&self) -> super::vals::Swt2 {
-        let val = (self.0 >> 2usize) & 0x01;
-        super::vals::Swt2::from_bits(val as u8)
-    }
-    #[doc = "Software Trigger 2 Event"]
-    #[inline(always)]
-    pub const fn set_swt2(&mut self, val: super::vals::Swt2) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
-    }
-    #[doc = "Software Trigger 3 Event"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn swt3(&self) -> super::vals::Swt3 {
-        let val = (self.0 >> 3usize) & 0x01;
-        super::vals::Swt3::from_bits(val as u8)
-    }
-    #[doc = "Software Trigger 3 Event"]
-    #[inline(always)]
-    pub const fn set_swt3(&mut self, val: super::vals::Swt3) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
+    pub const fn set_swt(&mut self, n: usize, val: bool) {
+        assert!(n < 4usize);
+        let offs = 0usize + n * 1usize;
+        self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
     }
 }
 impl Default for Swtrig {
@@ -1441,10 +1409,10 @@ impl Default for Swtrig {
 impl core::fmt::Debug for Swtrig {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Swtrig")
-            .field("swt0", &self.swt0())
-            .field("swt1", &self.swt1())
-            .field("swt2", &self.swt2())
-            .field("swt3", &self.swt3())
+            .field("swt[0]", &self.swt(0usize))
+            .field("swt[1]", &self.swt(1usize))
+            .field("swt[2]", &self.swt(2usize))
+            .field("swt[3]", &self.swt(3usize))
             .finish()
     }
 }
@@ -1453,11 +1421,11 @@ impl defmt::Format for Swtrig {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Swtrig {{ swt0: {:?}, swt1: {:?}, swt2: {:?}, swt3: {:?} }}",
-            self.swt0(),
-            self.swt1(),
-            self.swt2(),
-            self.swt3()
+            "Swtrig {{ swt[0]: {=bool:?}, swt[1]: {=bool:?}, swt[2]: {=bool:?}, swt[3]: {=bool:?} }}",
+            self.swt(0usize),
+            self.swt(1usize),
+            self.swt(2usize),
+            self.swt(3usize)
         )
     }
 }
