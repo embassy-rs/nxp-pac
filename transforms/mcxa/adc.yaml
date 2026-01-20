@@ -24,40 +24,16 @@ transforms:
         block: adc::Adc
 
   - !MergeEnums
-    from: adc::vals::Cmdl(\d+)Adch
-    to: adc::vals::Adch
-
-  - !MergeEnums
-    from: adc::vals::Cmdl(\d+)Ctype
-    to: adc::vals::Ctype
-
-  - !MergeEnums
-    from: adc::vals::Cmdl(\d+)Mode
-    to: adc::vals::Mode
-
-  - !MergeEnums
-    from: adc::vals::Cmdh(\d+)Avgs
-    to: adc::vals::Avgs
-
-  - !MergeEnums
-    from: adc::vals::Cmdh(\d+)Loop
-    to: adc::vals::Loop
-
-  - !MergeEnums
-    from: adc::vals::Cmdh(\d+)Next
-    to: adc::vals::Next
-  
-  - !MergeEnums
-    from: adc::vals::Cmdh(\d+)Sts
-    to: adc::vals::Sts
-
-  - !MergeEnums
-    from: adc::vals::Cmdh(\d+)Cmpen
-    to: adc::vals::Cmpen
+    from: adc::vals::Cmdl(\d+)(.+)
+    to: adc::vals::$2
 
   - !MergeFieldsets
     from: adc::regs::Cmdl(\d+)
     to: adc::regs::Cmdl
+
+  - !MergeEnums
+    from: adc::vals::Cmdh(\d+)(.+)
+    to: adc::vals::$2
 
   - !MergeFieldsets
     from: adc::regs::Cmdh(\d+)
