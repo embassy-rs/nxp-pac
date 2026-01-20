@@ -97,3 +97,8 @@ transforms:
     blocks: port::Port
     from: pcr(\d+)
     to: pcr
+
+  - !MakeFieldArray
+    fieldsets: port::regs::Gpc(l|h)r
+    from: gpwe(\d+)
+    to: gpwe

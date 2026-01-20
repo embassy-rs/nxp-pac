@@ -165,194 +165,18 @@ impl Gpchr {
     #[doc = "Global Pin Write Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn gpwe16(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 16usize) & 0x01;
+    pub const fn gpwe(&self, n: usize) -> super::vals::Gpwe {
+        assert!(n < 16usize);
+        let offs = 16usize + n * 1usize;
+        let val = (self.0 >> offs) & 0x01;
         super::vals::Gpwe::from_bits(val as u8)
     }
     #[doc = "Global Pin Write Enable"]
     #[inline(always)]
-    pub const fn set_gpwe16(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpwe17(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 17usize) & 0x01;
-        super::vals::Gpwe::from_bits(val as u8)
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[inline(always)]
-    pub const fn set_gpwe17(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpwe18(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 18usize) & 0x01;
-        super::vals::Gpwe::from_bits(val as u8)
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[inline(always)]
-    pub const fn set_gpwe18(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpwe19(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 19usize) & 0x01;
-        super::vals::Gpwe::from_bits(val as u8)
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[inline(always)]
-    pub const fn set_gpwe19(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpwe20(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 20usize) & 0x01;
-        super::vals::Gpwe::from_bits(val as u8)
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[inline(always)]
-    pub const fn set_gpwe20(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpwe21(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 21usize) & 0x01;
-        super::vals::Gpwe::from_bits(val as u8)
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[inline(always)]
-    pub const fn set_gpwe21(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpwe22(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 22usize) & 0x01;
-        super::vals::Gpwe::from_bits(val as u8)
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[inline(always)]
-    pub const fn set_gpwe22(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpwe23(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 23usize) & 0x01;
-        super::vals::Gpwe::from_bits(val as u8)
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[inline(always)]
-    pub const fn set_gpwe23(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpwe24(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 24usize) & 0x01;
-        super::vals::Gpwe::from_bits(val as u8)
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[inline(always)]
-    pub const fn set_gpwe24(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpwe25(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 25usize) & 0x01;
-        super::vals::Gpwe::from_bits(val as u8)
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[inline(always)]
-    pub const fn set_gpwe25(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpwe26(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 26usize) & 0x01;
-        super::vals::Gpwe::from_bits(val as u8)
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[inline(always)]
-    pub const fn set_gpwe26(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpwe27(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 27usize) & 0x01;
-        super::vals::Gpwe::from_bits(val as u8)
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[inline(always)]
-    pub const fn set_gpwe27(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpwe28(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 28usize) & 0x01;
-        super::vals::Gpwe::from_bits(val as u8)
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[inline(always)]
-    pub const fn set_gpwe28(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpwe29(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 29usize) & 0x01;
-        super::vals::Gpwe::from_bits(val as u8)
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[inline(always)]
-    pub const fn set_gpwe29(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpwe30(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 30usize) & 0x01;
-        super::vals::Gpwe::from_bits(val as u8)
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[inline(always)]
-    pub const fn set_gpwe30(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpwe31(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 31usize) & 0x01;
-        super::vals::Gpwe::from_bits(val as u8)
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[inline(always)]
-    pub const fn set_gpwe31(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
+    pub const fn set_gpwe(&mut self, n: usize, val: super::vals::Gpwe) {
+        assert!(n < 16usize);
+        let offs = 16usize + n * 1usize;
+        self.0 = (self.0 & !(0x01 << offs)) | (((val.to_bits() as u32) & 0x01) << offs);
     }
 }
 impl Default for Gpchr {
@@ -365,22 +189,22 @@ impl core::fmt::Debug for Gpchr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpchr")
             .field("gpwd", &self.gpwd())
-            .field("gpwe16", &self.gpwe16())
-            .field("gpwe17", &self.gpwe17())
-            .field("gpwe18", &self.gpwe18())
-            .field("gpwe19", &self.gpwe19())
-            .field("gpwe20", &self.gpwe20())
-            .field("gpwe21", &self.gpwe21())
-            .field("gpwe22", &self.gpwe22())
-            .field("gpwe23", &self.gpwe23())
-            .field("gpwe24", &self.gpwe24())
-            .field("gpwe25", &self.gpwe25())
-            .field("gpwe26", &self.gpwe26())
-            .field("gpwe27", &self.gpwe27())
-            .field("gpwe28", &self.gpwe28())
-            .field("gpwe29", &self.gpwe29())
-            .field("gpwe30", &self.gpwe30())
-            .field("gpwe31", &self.gpwe31())
+            .field("gpwe[0]", &self.gpwe(0usize))
+            .field("gpwe[1]", &self.gpwe(1usize))
+            .field("gpwe[2]", &self.gpwe(2usize))
+            .field("gpwe[3]", &self.gpwe(3usize))
+            .field("gpwe[4]", &self.gpwe(4usize))
+            .field("gpwe[5]", &self.gpwe(5usize))
+            .field("gpwe[6]", &self.gpwe(6usize))
+            .field("gpwe[7]", &self.gpwe(7usize))
+            .field("gpwe[8]", &self.gpwe(8usize))
+            .field("gpwe[9]", &self.gpwe(9usize))
+            .field("gpwe[10]", &self.gpwe(10usize))
+            .field("gpwe[11]", &self.gpwe(11usize))
+            .field("gpwe[12]", &self.gpwe(12usize))
+            .field("gpwe[13]", &self.gpwe(13usize))
+            .field("gpwe[14]", &self.gpwe(14usize))
+            .field("gpwe[15]", &self.gpwe(15usize))
             .finish()
     }
 }
@@ -389,24 +213,24 @@ impl defmt::Format for Gpchr {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Gpchr {{ gpwd: {=u16:?}, gpwe16: {:?}, gpwe17: {:?}, gpwe18: {:?}, gpwe19: {:?}, gpwe20: {:?}, gpwe21: {:?}, gpwe22: {:?}, gpwe23: {:?}, gpwe24: {:?}, gpwe25: {:?}, gpwe26: {:?}, gpwe27: {:?}, gpwe28: {:?}, gpwe29: {:?}, gpwe30: {:?}, gpwe31: {:?} }}",
+            "Gpchr {{ gpwd: {=u16:?}, gpwe[0]: {:?}, gpwe[1]: {:?}, gpwe[2]: {:?}, gpwe[3]: {:?}, gpwe[4]: {:?}, gpwe[5]: {:?}, gpwe[6]: {:?}, gpwe[7]: {:?}, gpwe[8]: {:?}, gpwe[9]: {:?}, gpwe[10]: {:?}, gpwe[11]: {:?}, gpwe[12]: {:?}, gpwe[13]: {:?}, gpwe[14]: {:?}, gpwe[15]: {:?} }}",
             self.gpwd(),
-            self.gpwe16(),
-            self.gpwe17(),
-            self.gpwe18(),
-            self.gpwe19(),
-            self.gpwe20(),
-            self.gpwe21(),
-            self.gpwe22(),
-            self.gpwe23(),
-            self.gpwe24(),
-            self.gpwe25(),
-            self.gpwe26(),
-            self.gpwe27(),
-            self.gpwe28(),
-            self.gpwe29(),
-            self.gpwe30(),
-            self.gpwe31()
+            self.gpwe(0usize),
+            self.gpwe(1usize),
+            self.gpwe(2usize),
+            self.gpwe(3usize),
+            self.gpwe(4usize),
+            self.gpwe(5usize),
+            self.gpwe(6usize),
+            self.gpwe(7usize),
+            self.gpwe(8usize),
+            self.gpwe(9usize),
+            self.gpwe(10usize),
+            self.gpwe(11usize),
+            self.gpwe(12usize),
+            self.gpwe(13usize),
+            self.gpwe(14usize),
+            self.gpwe(15usize)
         )
     }
 }
@@ -430,194 +254,18 @@ impl Gpclr {
     #[doc = "Global Pin Write Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn gpwe0(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 16usize) & 0x01;
+    pub const fn gpwe(&self, n: usize) -> super::vals::Gpwe {
+        assert!(n < 16usize);
+        let offs = 16usize + n * 1usize;
+        let val = (self.0 >> offs) & 0x01;
         super::vals::Gpwe::from_bits(val as u8)
     }
     #[doc = "Global Pin Write Enable"]
     #[inline(always)]
-    pub const fn set_gpwe0(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpwe1(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 17usize) & 0x01;
-        super::vals::Gpwe::from_bits(val as u8)
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[inline(always)]
-    pub const fn set_gpwe1(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpwe2(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 18usize) & 0x01;
-        super::vals::Gpwe::from_bits(val as u8)
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[inline(always)]
-    pub const fn set_gpwe2(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpwe3(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 19usize) & 0x01;
-        super::vals::Gpwe::from_bits(val as u8)
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[inline(always)]
-    pub const fn set_gpwe3(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpwe4(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 20usize) & 0x01;
-        super::vals::Gpwe::from_bits(val as u8)
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[inline(always)]
-    pub const fn set_gpwe4(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpwe5(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 21usize) & 0x01;
-        super::vals::Gpwe::from_bits(val as u8)
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[inline(always)]
-    pub const fn set_gpwe5(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpwe6(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 22usize) & 0x01;
-        super::vals::Gpwe::from_bits(val as u8)
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[inline(always)]
-    pub const fn set_gpwe6(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpwe7(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 23usize) & 0x01;
-        super::vals::Gpwe::from_bits(val as u8)
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[inline(always)]
-    pub const fn set_gpwe7(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpwe8(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 24usize) & 0x01;
-        super::vals::Gpwe::from_bits(val as u8)
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[inline(always)]
-    pub const fn set_gpwe8(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpwe9(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 25usize) & 0x01;
-        super::vals::Gpwe::from_bits(val as u8)
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[inline(always)]
-    pub const fn set_gpwe9(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpwe10(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 26usize) & 0x01;
-        super::vals::Gpwe::from_bits(val as u8)
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[inline(always)]
-    pub const fn set_gpwe10(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpwe11(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 27usize) & 0x01;
-        super::vals::Gpwe::from_bits(val as u8)
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[inline(always)]
-    pub const fn set_gpwe11(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpwe12(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 28usize) & 0x01;
-        super::vals::Gpwe::from_bits(val as u8)
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[inline(always)]
-    pub const fn set_gpwe12(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpwe13(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 29usize) & 0x01;
-        super::vals::Gpwe::from_bits(val as u8)
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[inline(always)]
-    pub const fn set_gpwe13(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpwe14(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 30usize) & 0x01;
-        super::vals::Gpwe::from_bits(val as u8)
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[inline(always)]
-    pub const fn set_gpwe14(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn gpwe15(&self) -> super::vals::Gpwe {
-        let val = (self.0 >> 31usize) & 0x01;
-        super::vals::Gpwe::from_bits(val as u8)
-    }
-    #[doc = "Global Pin Write Enable"]
-    #[inline(always)]
-    pub const fn set_gpwe15(&mut self, val: super::vals::Gpwe) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
+    pub const fn set_gpwe(&mut self, n: usize, val: super::vals::Gpwe) {
+        assert!(n < 16usize);
+        let offs = 16usize + n * 1usize;
+        self.0 = (self.0 & !(0x01 << offs)) | (((val.to_bits() as u32) & 0x01) << offs);
     }
 }
 impl Default for Gpclr {
@@ -630,22 +278,22 @@ impl core::fmt::Debug for Gpclr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpclr")
             .field("gpwd", &self.gpwd())
-            .field("gpwe0", &self.gpwe0())
-            .field("gpwe1", &self.gpwe1())
-            .field("gpwe2", &self.gpwe2())
-            .field("gpwe3", &self.gpwe3())
-            .field("gpwe4", &self.gpwe4())
-            .field("gpwe5", &self.gpwe5())
-            .field("gpwe6", &self.gpwe6())
-            .field("gpwe7", &self.gpwe7())
-            .field("gpwe8", &self.gpwe8())
-            .field("gpwe9", &self.gpwe9())
-            .field("gpwe10", &self.gpwe10())
-            .field("gpwe11", &self.gpwe11())
-            .field("gpwe12", &self.gpwe12())
-            .field("gpwe13", &self.gpwe13())
-            .field("gpwe14", &self.gpwe14())
-            .field("gpwe15", &self.gpwe15())
+            .field("gpwe[0]", &self.gpwe(0usize))
+            .field("gpwe[1]", &self.gpwe(1usize))
+            .field("gpwe[2]", &self.gpwe(2usize))
+            .field("gpwe[3]", &self.gpwe(3usize))
+            .field("gpwe[4]", &self.gpwe(4usize))
+            .field("gpwe[5]", &self.gpwe(5usize))
+            .field("gpwe[6]", &self.gpwe(6usize))
+            .field("gpwe[7]", &self.gpwe(7usize))
+            .field("gpwe[8]", &self.gpwe(8usize))
+            .field("gpwe[9]", &self.gpwe(9usize))
+            .field("gpwe[10]", &self.gpwe(10usize))
+            .field("gpwe[11]", &self.gpwe(11usize))
+            .field("gpwe[12]", &self.gpwe(12usize))
+            .field("gpwe[13]", &self.gpwe(13usize))
+            .field("gpwe[14]", &self.gpwe(14usize))
+            .field("gpwe[15]", &self.gpwe(15usize))
             .finish()
     }
 }
@@ -654,24 +302,24 @@ impl defmt::Format for Gpclr {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Gpclr {{ gpwd: {=u16:?}, gpwe0: {:?}, gpwe1: {:?}, gpwe2: {:?}, gpwe3: {:?}, gpwe4: {:?}, gpwe5: {:?}, gpwe6: {:?}, gpwe7: {:?}, gpwe8: {:?}, gpwe9: {:?}, gpwe10: {:?}, gpwe11: {:?}, gpwe12: {:?}, gpwe13: {:?}, gpwe14: {:?}, gpwe15: {:?} }}",
+            "Gpclr {{ gpwd: {=u16:?}, gpwe[0]: {:?}, gpwe[1]: {:?}, gpwe[2]: {:?}, gpwe[3]: {:?}, gpwe[4]: {:?}, gpwe[5]: {:?}, gpwe[6]: {:?}, gpwe[7]: {:?}, gpwe[8]: {:?}, gpwe[9]: {:?}, gpwe[10]: {:?}, gpwe[11]: {:?}, gpwe[12]: {:?}, gpwe[13]: {:?}, gpwe[14]: {:?}, gpwe[15]: {:?} }}",
             self.gpwd(),
-            self.gpwe0(),
-            self.gpwe1(),
-            self.gpwe2(),
-            self.gpwe3(),
-            self.gpwe4(),
-            self.gpwe5(),
-            self.gpwe6(),
-            self.gpwe7(),
-            self.gpwe8(),
-            self.gpwe9(),
-            self.gpwe10(),
-            self.gpwe11(),
-            self.gpwe12(),
-            self.gpwe13(),
-            self.gpwe14(),
-            self.gpwe15()
+            self.gpwe(0usize),
+            self.gpwe(1usize),
+            self.gpwe(2usize),
+            self.gpwe(3usize),
+            self.gpwe(4usize),
+            self.gpwe(5usize),
+            self.gpwe(6usize),
+            self.gpwe(7usize),
+            self.gpwe(8usize),
+            self.gpwe(9usize),
+            self.gpwe(10usize),
+            self.gpwe(11usize),
+            self.gpwe(12usize),
+            self.gpwe(13usize),
+            self.gpwe(14usize),
+            self.gpwe(15usize)
         )
     }
 }
