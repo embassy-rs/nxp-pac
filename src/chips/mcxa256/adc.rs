@@ -97,72 +97,72 @@ impl Adc {
     }
     #[doc = "Command Low Buffer Register"]
     #[inline(always)]
-    pub const fn cmdl1(self) -> crate::common::Reg<regs::Cmdl1, crate::common::RW> {
+    pub const fn cmdl1(self) -> crate::common::Reg<regs::Cmdl, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0100usize) as _) }
     }
     #[doc = "Command High Buffer Register"]
     #[inline(always)]
-    pub const fn cmdh1(self) -> crate::common::Reg<regs::Cmdh1, crate::common::RW> {
+    pub const fn cmdh1(self) -> crate::common::Reg<regs::Cmdh, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0104usize) as _) }
     }
     #[doc = "Command Low Buffer Register"]
     #[inline(always)]
-    pub const fn cmdl2(self) -> crate::common::Reg<regs::Cmdl2, crate::common::RW> {
+    pub const fn cmdl2(self) -> crate::common::Reg<regs::Cmdl, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0108usize) as _) }
     }
     #[doc = "Command High Buffer Register"]
     #[inline(always)]
-    pub const fn cmdh2(self) -> crate::common::Reg<regs::Cmdh2, crate::common::RW> {
+    pub const fn cmdh2(self) -> crate::common::Reg<regs::Cmdh, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x010cusize) as _) }
     }
     #[doc = "Command Low Buffer Register"]
     #[inline(always)]
-    pub const fn cmdl3(self) -> crate::common::Reg<regs::Cmdl3, crate::common::RW> {
+    pub const fn cmdl3(self) -> crate::common::Reg<regs::Cmdl, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0110usize) as _) }
     }
     #[doc = "Command High Buffer Register"]
     #[inline(always)]
-    pub const fn cmdh3(self) -> crate::common::Reg<regs::Cmdh3, crate::common::RW> {
+    pub const fn cmdh3(self) -> crate::common::Reg<regs::Cmdh, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0114usize) as _) }
     }
     #[doc = "Command Low Buffer Register"]
     #[inline(always)]
-    pub const fn cmdl4(self) -> crate::common::Reg<regs::Cmdl4, crate::common::RW> {
+    pub const fn cmdl4(self) -> crate::common::Reg<regs::Cmdl, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0118usize) as _) }
     }
     #[doc = "Command High Buffer Register"]
     #[inline(always)]
-    pub const fn cmdh4(self) -> crate::common::Reg<regs::Cmdh4, crate::common::RW> {
+    pub const fn cmdh4(self) -> crate::common::Reg<regs::Cmdh, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x011cusize) as _) }
     }
     #[doc = "Command Low Buffer Register"]
     #[inline(always)]
-    pub const fn cmdl5(self) -> crate::common::Reg<regs::Cmdl5, crate::common::RW> {
+    pub const fn cmdl5(self) -> crate::common::Reg<regs::Cmdl, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0120usize) as _) }
     }
     #[doc = "Command High Buffer Register"]
     #[inline(always)]
-    pub const fn cmdh5(self) -> crate::common::Reg<regs::Cmdh5, crate::common::RW> {
+    pub const fn cmdh5(self) -> crate::common::Reg<regs::Cmdh, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0124usize) as _) }
     }
     #[doc = "Command Low Buffer Register"]
     #[inline(always)]
-    pub const fn cmdl6(self) -> crate::common::Reg<regs::Cmdl6, crate::common::RW> {
+    pub const fn cmdl6(self) -> crate::common::Reg<regs::Cmdl, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0128usize) as _) }
     }
     #[doc = "Command High Buffer Register"]
     #[inline(always)]
-    pub const fn cmdh6(self) -> crate::common::Reg<regs::Cmdh6, crate::common::RW> {
+    pub const fn cmdh6(self) -> crate::common::Reg<regs::Cmdh, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x012cusize) as _) }
     }
     #[doc = "Command Low Buffer Register"]
     #[inline(always)]
-    pub const fn cmdl7(self) -> crate::common::Reg<regs::Cmdl7, crate::common::RW> {
+    pub const fn cmdl7(self) -> crate::common::Reg<regs::Cmdl, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0130usize) as _) }
     }
     #[doc = "Command High Buffer Register"]
     #[inline(always)]
-    pub const fn cmdh7(self) -> crate::common::Reg<regs::Cmdh7, crate::common::RW> {
+    pub const fn cmdh7(self) -> crate::common::Reg<regs::Cmdh, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0134usize) as _) }
     }
     #[doc = "Compare Value Register"]

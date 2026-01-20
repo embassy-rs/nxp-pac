@@ -32,6 +32,131 @@ impl From<AdcActive> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Adch {
+    #[doc = "Select CH0A."]
+    SELECT_CH0 = 0x0,
+    #[doc = "Select CH1A."]
+    SELECT_CH1 = 0x01,
+    #[doc = "Select CH2A."]
+    SELECT_CH2 = 0x02,
+    #[doc = "Select CH3A."]
+    SELECT_CH3 = 0x03,
+    #[doc = "Select corresponding channel CHnA."]
+    SELECT_CORRESPONDING_CHANNEL_4 = 0x04,
+    #[doc = "Select corresponding channel CHnA."]
+    SELECT_CORRESPONDING_CHANNEL_5 = 0x05,
+    #[doc = "Select corresponding channel CHnA."]
+    SELECT_CORRESPONDING_CHANNEL_6 = 0x06,
+    #[doc = "Select corresponding channel CHnA."]
+    SELECT_CORRESPONDING_CHANNEL_7 = 0x07,
+    #[doc = "Select corresponding channel CHnA."]
+    SELECT_CORRESPONDING_CHANNEL_8 = 0x08,
+    #[doc = "Select corresponding channel CHnA."]
+    SELECT_CORRESPONDING_CHANNEL_9 = 0x09,
+    _RESERVED_a = 0x0a,
+    _RESERVED_b = 0x0b,
+    _RESERVED_c = 0x0c,
+    _RESERVED_d = 0x0d,
+    _RESERVED_e = 0x0e,
+    _RESERVED_f = 0x0f,
+    _RESERVED_10 = 0x10,
+    _RESERVED_11 = 0x11,
+    _RESERVED_12 = 0x12,
+    _RESERVED_13 = 0x13,
+    _RESERVED_14 = 0x14,
+    _RESERVED_15 = 0x15,
+    _RESERVED_16 = 0x16,
+    _RESERVED_17 = 0x17,
+    _RESERVED_18 = 0x18,
+    _RESERVED_19 = 0x19,
+    _RESERVED_1a = 0x1a,
+    _RESERVED_1b = 0x1b,
+    _RESERVED_1c = 0x1c,
+    _RESERVED_1d = 0x1d,
+    #[doc = "Select CH30A."]
+    SELECT_CH30 = 0x1e,
+    #[doc = "Select CH31A."]
+    SELECT_CH31 = 0x1f,
+}
+impl Adch {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Adch {
+        unsafe { core::mem::transmute(val & 0x1f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Adch {
+    #[inline(always)]
+    fn from(val: u8) -> Adch {
+        Adch::from_bits(val)
+    }
+}
+impl From<Adch> for u8 {
+    #[inline(always)]
+    fn from(val: Adch) -> u8 {
+        Adch::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Avgs {
+    #[doc = "Single conversion."]
+    NO_AVERAGE = 0x0,
+    #[doc = "2 conversions averaged."]
+    AVERAGE_2 = 0x01,
+    #[doc = "4 conversions averaged."]
+    AVERAGE_4 = 0x02,
+    #[doc = "8 conversions averaged."]
+    AVERAGE_8 = 0x03,
+    #[doc = "16 conversions averaged."]
+    AVERAGE_16 = 0x04,
+    #[doc = "32 conversions averaged."]
+    AVERAGE_32 = 0x05,
+    #[doc = "64 conversions averaged."]
+    AVERAGE_64 = 0x06,
+    #[doc = "128 conversions averaged."]
+    AVERAGE_128 = 0x07,
+    #[doc = "256 conversions averaged."]
+    AVERAGE_256 = 0x08,
+    #[doc = "512 conversions averaged."]
+    AVERAGE_512 = 0x09,
+    #[doc = "1024 conversions averaged."]
+    AVERAGE_1024 = 0x0a,
+    _RESERVED_b = 0x0b,
+    _RESERVED_c = 0x0c,
+    _RESERVED_d = 0x0d,
+    _RESERVED_e = 0x0e,
+    _RESERVED_f = 0x0f,
+}
+impl Avgs {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Avgs {
+        unsafe { core::mem::transmute(val & 0x0f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Avgs {
+    #[inline(always)]
+    fn from(val: u8) -> Avgs {
+        Avgs::from_bits(val)
+    }
+}
+impl From<Avgs> for u8 {
+    #[inline(always)]
+    fn from(val: Avgs) -> u8 {
+        Avgs::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CalAvgs {
     #[doc = "Single conversion."]
     NO_AVERAGE = 0x0,
@@ -284,2540 +409,6 @@ impl From<Cmdact> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh1Avgs {
-    #[doc = "Single conversion."]
-    NO_AVERAGE = 0x0,
-    #[doc = "2 conversions averaged."]
-    AVERAGE_2 = 0x01,
-    #[doc = "4 conversions averaged."]
-    AVERAGE_4 = 0x02,
-    #[doc = "8 conversions averaged."]
-    AVERAGE_8 = 0x03,
-    #[doc = "16 conversions averaged."]
-    AVERAGE_16 = 0x04,
-    #[doc = "32 conversions averaged."]
-    AVERAGE_32 = 0x05,
-    #[doc = "64 conversions averaged."]
-    AVERAGE_64 = 0x06,
-    #[doc = "128 conversions averaged."]
-    AVERAGE_128 = 0x07,
-    #[doc = "256 conversions averaged."]
-    AVERAGE_256 = 0x08,
-    #[doc = "512 conversions averaged."]
-    AVERAGE_512 = 0x09,
-    #[doc = "1024 conversions averaged."]
-    AVERAGE_1024 = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
-}
-impl Cmdh1Avgs {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh1Avgs {
-        unsafe { core::mem::transmute(val & 0x0f) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh1Avgs {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh1Avgs {
-        Cmdh1Avgs::from_bits(val)
-    }
-}
-impl From<Cmdh1Avgs> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh1Avgs) -> u8 {
-        Cmdh1Avgs::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh1Cmpen {
-    #[doc = "Compare disabled."]
-    DISABLED_ALWAYS_STORE_RESULT = 0x0,
-    _RESERVED_1 = 0x01,
-    #[doc = "Compare enabled. Store on true."]
-    COMPARE_RESULT_STORE_IF_TRUE = 0x02,
-    #[doc = "Compare enabled. Repeat channel acquisition (sample/convert/compare) until true."]
-    COMPARE_RESULT_KEEP_CONVERTING_UNTIL_TRUE_STORE_IF_TRUE = 0x03,
-}
-impl Cmdh1Cmpen {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh1Cmpen {
-        unsafe { core::mem::transmute(val & 0x03) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh1Cmpen {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh1Cmpen {
-        Cmdh1Cmpen::from_bits(val)
-    }
-}
-impl From<Cmdh1Cmpen> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh1Cmpen) -> u8 {
-        Cmdh1Cmpen::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh1Loop {
-    #[doc = "Looping not enabled. Command executes 1 time."]
-    CMD_EXEC_1X = 0x0,
-    #[doc = "Loop 1 time. Command executes 2 times."]
-    CMD_EXEC_2X = 0x01,
-    #[doc = "Loop 2 times. Command executes 3 times."]
-    CMD_EXEC_3X = 0x02,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_3 = 0x03,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_4 = 0x04,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_5 = 0x05,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_6 = 0x06,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_7 = 0x07,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_8 = 0x08,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    #[doc = "Loop 15 times. Command executes 16 times."]
-    CMD_EXEC_15X = 0x0f,
-}
-impl Cmdh1Loop {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh1Loop {
-        unsafe { core::mem::transmute(val & 0x0f) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh1Loop {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh1Loop {
-        Cmdh1Loop::from_bits(val)
-    }
-}
-impl From<Cmdh1Loop> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh1Loop) -> u8 {
-        Cmdh1Loop::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh1Next {
-    #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
-    NO_NEXT_CMD_TERMINATE_ON_FINISH = 0x0,
-    #[doc = "Select CMD1 command buffer register as next command."]
-    DO_CMD1_NEXT = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_6 = 0x06,
-    #[doc = "Select CMD7 command buffer register as next command."]
-    DO_CMD7_NEXT = 0x07,
-}
-impl Cmdh1Next {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh1Next {
-        unsafe { core::mem::transmute(val & 0x07) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh1Next {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh1Next {
-        Cmdh1Next::from_bits(val)
-    }
-}
-impl From<Cmdh1Next> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh1Next) -> u8 {
-        Cmdh1Next::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh1Sts {
-    #[doc = "Minimum sample time of 3.5 ADCK cycles."]
-    SAMPLE_3P5 = 0x0,
-    #[doc = "3.5 + 21 ADCK cycles; 5.5 ADCK cycles total sample time."]
-    SAMPLE_5P5 = 0x01,
-    #[doc = "3.5 + 22 ADCK cycles; 7.5 ADCK cycles total sample time."]
-    SAMPLE_7P5 = 0x02,
-    #[doc = "3.5 + 23 ADCK cycles; 11.5 ADCK cycles total sample time."]
-    SAMPLE_11P5 = 0x03,
-    #[doc = "3.5 + 24 ADCK cycles; 19.5 ADCK cycles total sample time."]
-    SAMPLE_19P5 = 0x04,
-    #[doc = "3.5 + 25 ADCK cycles; 35.5 ADCK cycles total sample time."]
-    SAMPLE_35P5 = 0x05,
-    #[doc = "3.5 + 26 ADCK cycles; 67.5 ADCK cycles total sample time."]
-    SAMPLE_67P5 = 0x06,
-    #[doc = "3.5 + 27 ADCK cycles; 131.5 ADCK cycles total sample time."]
-    SAMPLE_131P5 = 0x07,
-}
-impl Cmdh1Sts {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh1Sts {
-        unsafe { core::mem::transmute(val & 0x07) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh1Sts {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh1Sts {
-        Cmdh1Sts::from_bits(val)
-    }
-}
-impl From<Cmdh1Sts> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh1Sts) -> u8 {
-        Cmdh1Sts::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh2Avgs {
-    #[doc = "Single conversion."]
-    NO_AVERAGE = 0x0,
-    #[doc = "2 conversions averaged."]
-    AVERAGE_2 = 0x01,
-    #[doc = "4 conversions averaged."]
-    AVERAGE_4 = 0x02,
-    #[doc = "8 conversions averaged."]
-    AVERAGE_8 = 0x03,
-    #[doc = "16 conversions averaged."]
-    AVERAGE_16 = 0x04,
-    #[doc = "32 conversions averaged."]
-    AVERAGE_32 = 0x05,
-    #[doc = "64 conversions averaged."]
-    AVERAGE_64 = 0x06,
-    #[doc = "128 conversions averaged."]
-    AVERAGE_128 = 0x07,
-    #[doc = "256 conversions averaged."]
-    AVERAGE_256 = 0x08,
-    #[doc = "512 conversions averaged."]
-    AVERAGE_512 = 0x09,
-    #[doc = "1024 conversions averaged."]
-    AVERAGE_1024 = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
-}
-impl Cmdh2Avgs {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh2Avgs {
-        unsafe { core::mem::transmute(val & 0x0f) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh2Avgs {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh2Avgs {
-        Cmdh2Avgs::from_bits(val)
-    }
-}
-impl From<Cmdh2Avgs> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh2Avgs) -> u8 {
-        Cmdh2Avgs::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh2Cmpen {
-    #[doc = "Compare disabled."]
-    DISABLED_ALWAYS_STORE_RESULT = 0x0,
-    _RESERVED_1 = 0x01,
-    #[doc = "Compare enabled. Store on true."]
-    COMPARE_RESULT_STORE_IF_TRUE = 0x02,
-    #[doc = "Compare enabled. Repeat channel acquisition (sample/convert/compare) until true."]
-    COMPARE_RESULT_KEEP_CONVERTING_UNTIL_TRUE_STORE_IF_TRUE = 0x03,
-}
-impl Cmdh2Cmpen {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh2Cmpen {
-        unsafe { core::mem::transmute(val & 0x03) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh2Cmpen {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh2Cmpen {
-        Cmdh2Cmpen::from_bits(val)
-    }
-}
-impl From<Cmdh2Cmpen> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh2Cmpen) -> u8 {
-        Cmdh2Cmpen::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh2Loop {
-    #[doc = "Looping not enabled. Command executes 1 time."]
-    CMD_EXEC_1X = 0x0,
-    #[doc = "Loop 1 time. Command executes 2 times."]
-    CMD_EXEC_2X = 0x01,
-    #[doc = "Loop 2 times. Command executes 3 times."]
-    CMD_EXEC_3X = 0x02,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_3 = 0x03,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_4 = 0x04,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_5 = 0x05,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_6 = 0x06,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_7 = 0x07,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_8 = 0x08,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    #[doc = "Loop 15 times. Command executes 16 times."]
-    CMD_EXEC_15X = 0x0f,
-}
-impl Cmdh2Loop {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh2Loop {
-        unsafe { core::mem::transmute(val & 0x0f) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh2Loop {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh2Loop {
-        Cmdh2Loop::from_bits(val)
-    }
-}
-impl From<Cmdh2Loop> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh2Loop) -> u8 {
-        Cmdh2Loop::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh2Next {
-    #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
-    NO_NEXT_CMD_TERMINATE_ON_FINISH = 0x0,
-    #[doc = "Select CMD1 command buffer register as next command."]
-    DO_CMD1_NEXT = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_6 = 0x06,
-    #[doc = "Select CMD7 command buffer register as next command."]
-    DO_CMD7_NEXT = 0x07,
-}
-impl Cmdh2Next {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh2Next {
-        unsafe { core::mem::transmute(val & 0x07) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh2Next {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh2Next {
-        Cmdh2Next::from_bits(val)
-    }
-}
-impl From<Cmdh2Next> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh2Next) -> u8 {
-        Cmdh2Next::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh2Sts {
-    #[doc = "Minimum sample time of 3.5 ADCK cycles."]
-    SAMPLE_3P5 = 0x0,
-    #[doc = "3.5 + 21 ADCK cycles; 5.5 ADCK cycles total sample time."]
-    SAMPLE_5P5 = 0x01,
-    #[doc = "3.5 + 22 ADCK cycles; 7.5 ADCK cycles total sample time."]
-    SAMPLE_7P5 = 0x02,
-    #[doc = "3.5 + 23 ADCK cycles; 11.5 ADCK cycles total sample time."]
-    SAMPLE_11P5 = 0x03,
-    #[doc = "3.5 + 24 ADCK cycles; 19.5 ADCK cycles total sample time."]
-    SAMPLE_19P5 = 0x04,
-    #[doc = "3.5 + 25 ADCK cycles; 35.5 ADCK cycles total sample time."]
-    SAMPLE_35P5 = 0x05,
-    #[doc = "3.5 + 26 ADCK cycles; 67.5 ADCK cycles total sample time."]
-    SAMPLE_67P5 = 0x06,
-    #[doc = "3.5 + 27 ADCK cycles; 131.5 ADCK cycles total sample time."]
-    SAMPLE_131P5 = 0x07,
-}
-impl Cmdh2Sts {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh2Sts {
-        unsafe { core::mem::transmute(val & 0x07) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh2Sts {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh2Sts {
-        Cmdh2Sts::from_bits(val)
-    }
-}
-impl From<Cmdh2Sts> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh2Sts) -> u8 {
-        Cmdh2Sts::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh3Avgs {
-    #[doc = "Single conversion."]
-    NO_AVERAGE = 0x0,
-    #[doc = "2 conversions averaged."]
-    AVERAGE_2 = 0x01,
-    #[doc = "4 conversions averaged."]
-    AVERAGE_4 = 0x02,
-    #[doc = "8 conversions averaged."]
-    AVERAGE_8 = 0x03,
-    #[doc = "16 conversions averaged."]
-    AVERAGE_16 = 0x04,
-    #[doc = "32 conversions averaged."]
-    AVERAGE_32 = 0x05,
-    #[doc = "64 conversions averaged."]
-    AVERAGE_64 = 0x06,
-    #[doc = "128 conversions averaged."]
-    AVERAGE_128 = 0x07,
-    #[doc = "256 conversions averaged."]
-    AVERAGE_256 = 0x08,
-    #[doc = "512 conversions averaged."]
-    AVERAGE_512 = 0x09,
-    #[doc = "1024 conversions averaged."]
-    AVERAGE_1024 = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
-}
-impl Cmdh3Avgs {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh3Avgs {
-        unsafe { core::mem::transmute(val & 0x0f) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh3Avgs {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh3Avgs {
-        Cmdh3Avgs::from_bits(val)
-    }
-}
-impl From<Cmdh3Avgs> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh3Avgs) -> u8 {
-        Cmdh3Avgs::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh3Cmpen {
-    #[doc = "Compare disabled."]
-    DISABLED_ALWAYS_STORE_RESULT = 0x0,
-    _RESERVED_1 = 0x01,
-    #[doc = "Compare enabled. Store on true."]
-    COMPARE_RESULT_STORE_IF_TRUE = 0x02,
-    #[doc = "Compare enabled. Repeat channel acquisition (sample/convert/compare) until true."]
-    COMPARE_RESULT_KEEP_CONVERTING_UNTIL_TRUE_STORE_IF_TRUE = 0x03,
-}
-impl Cmdh3Cmpen {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh3Cmpen {
-        unsafe { core::mem::transmute(val & 0x03) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh3Cmpen {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh3Cmpen {
-        Cmdh3Cmpen::from_bits(val)
-    }
-}
-impl From<Cmdh3Cmpen> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh3Cmpen) -> u8 {
-        Cmdh3Cmpen::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh3Loop {
-    #[doc = "Looping not enabled. Command executes 1 time."]
-    CMD_EXEC_1X = 0x0,
-    #[doc = "Loop 1 time. Command executes 2 times."]
-    CMD_EXEC_2X = 0x01,
-    #[doc = "Loop 2 times. Command executes 3 times."]
-    CMD_EXEC_3X = 0x02,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_3 = 0x03,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_4 = 0x04,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_5 = 0x05,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_6 = 0x06,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_7 = 0x07,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_8 = 0x08,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    #[doc = "Loop 15 times. Command executes 16 times."]
-    CMD_EXEC_15X = 0x0f,
-}
-impl Cmdh3Loop {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh3Loop {
-        unsafe { core::mem::transmute(val & 0x0f) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh3Loop {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh3Loop {
-        Cmdh3Loop::from_bits(val)
-    }
-}
-impl From<Cmdh3Loop> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh3Loop) -> u8 {
-        Cmdh3Loop::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh3Next {
-    #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
-    NO_NEXT_CMD_TERMINATE_ON_FINISH = 0x0,
-    #[doc = "Select CMD1 command buffer register as next command."]
-    DO_CMD1_NEXT = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_6 = 0x06,
-    #[doc = "Select CMD7 command buffer register as next command."]
-    DO_CMD7_NEXT = 0x07,
-}
-impl Cmdh3Next {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh3Next {
-        unsafe { core::mem::transmute(val & 0x07) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh3Next {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh3Next {
-        Cmdh3Next::from_bits(val)
-    }
-}
-impl From<Cmdh3Next> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh3Next) -> u8 {
-        Cmdh3Next::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh3Sts {
-    #[doc = "Minimum sample time of 3.5 ADCK cycles."]
-    SAMPLE_3P5 = 0x0,
-    #[doc = "3.5 + 21 ADCK cycles; 5.5 ADCK cycles total sample time."]
-    SAMPLE_5P5 = 0x01,
-    #[doc = "3.5 + 22 ADCK cycles; 7.5 ADCK cycles total sample time."]
-    SAMPLE_7P5 = 0x02,
-    #[doc = "3.5 + 23 ADCK cycles; 11.5 ADCK cycles total sample time."]
-    SAMPLE_11P5 = 0x03,
-    #[doc = "3.5 + 24 ADCK cycles; 19.5 ADCK cycles total sample time."]
-    SAMPLE_19P5 = 0x04,
-    #[doc = "3.5 + 25 ADCK cycles; 35.5 ADCK cycles total sample time."]
-    SAMPLE_35P5 = 0x05,
-    #[doc = "3.5 + 26 ADCK cycles; 67.5 ADCK cycles total sample time."]
-    SAMPLE_67P5 = 0x06,
-    #[doc = "3.5 + 27 ADCK cycles; 131.5 ADCK cycles total sample time."]
-    SAMPLE_131P5 = 0x07,
-}
-impl Cmdh3Sts {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh3Sts {
-        unsafe { core::mem::transmute(val & 0x07) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh3Sts {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh3Sts {
-        Cmdh3Sts::from_bits(val)
-    }
-}
-impl From<Cmdh3Sts> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh3Sts) -> u8 {
-        Cmdh3Sts::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh4Avgs {
-    #[doc = "Single conversion."]
-    NO_AVERAGE = 0x0,
-    #[doc = "2 conversions averaged."]
-    AVERAGE_2 = 0x01,
-    #[doc = "4 conversions averaged."]
-    AVERAGE_4 = 0x02,
-    #[doc = "8 conversions averaged."]
-    AVERAGE_8 = 0x03,
-    #[doc = "16 conversions averaged."]
-    AVERAGE_16 = 0x04,
-    #[doc = "32 conversions averaged."]
-    AVERAGE_32 = 0x05,
-    #[doc = "64 conversions averaged."]
-    AVERAGE_64 = 0x06,
-    #[doc = "128 conversions averaged."]
-    AVERAGE_128 = 0x07,
-    #[doc = "256 conversions averaged."]
-    AVERAGE_256 = 0x08,
-    #[doc = "512 conversions averaged."]
-    AVERAGE_512 = 0x09,
-    #[doc = "1024 conversions averaged."]
-    AVERAGE_1024 = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
-}
-impl Cmdh4Avgs {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh4Avgs {
-        unsafe { core::mem::transmute(val & 0x0f) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh4Avgs {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh4Avgs {
-        Cmdh4Avgs::from_bits(val)
-    }
-}
-impl From<Cmdh4Avgs> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh4Avgs) -> u8 {
-        Cmdh4Avgs::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh4Cmpen {
-    #[doc = "Compare disabled."]
-    DISABLED_ALWAYS_STORE_RESULT = 0x0,
-    _RESERVED_1 = 0x01,
-    #[doc = "Compare enabled. Store on true."]
-    COMPARE_RESULT_STORE_IF_TRUE = 0x02,
-    #[doc = "Compare enabled. Repeat channel acquisition (sample/convert/compare) until true."]
-    COMPARE_RESULT_KEEP_CONVERTING_UNTIL_TRUE_STORE_IF_TRUE = 0x03,
-}
-impl Cmdh4Cmpen {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh4Cmpen {
-        unsafe { core::mem::transmute(val & 0x03) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh4Cmpen {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh4Cmpen {
-        Cmdh4Cmpen::from_bits(val)
-    }
-}
-impl From<Cmdh4Cmpen> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh4Cmpen) -> u8 {
-        Cmdh4Cmpen::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh4Loop {
-    #[doc = "Looping not enabled. Command executes 1 time."]
-    CMD_EXEC_1X = 0x0,
-    #[doc = "Loop 1 time. Command executes 2 times."]
-    CMD_EXEC_2X = 0x01,
-    #[doc = "Loop 2 times. Command executes 3 times."]
-    CMD_EXEC_3X = 0x02,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_3 = 0x03,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_4 = 0x04,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_5 = 0x05,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_6 = 0x06,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_7 = 0x07,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_8 = 0x08,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    #[doc = "Loop 15 times. Command executes 16 times."]
-    CMD_EXEC_15X = 0x0f,
-}
-impl Cmdh4Loop {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh4Loop {
-        unsafe { core::mem::transmute(val & 0x0f) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh4Loop {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh4Loop {
-        Cmdh4Loop::from_bits(val)
-    }
-}
-impl From<Cmdh4Loop> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh4Loop) -> u8 {
-        Cmdh4Loop::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh4Next {
-    #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
-    NO_NEXT_CMD_TERMINATE_ON_FINISH = 0x0,
-    #[doc = "Select CMD1 command buffer register as next command."]
-    DO_CMD1_NEXT = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_6 = 0x06,
-    #[doc = "Select CMD7 command buffer register as next command."]
-    DO_CMD7_NEXT = 0x07,
-}
-impl Cmdh4Next {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh4Next {
-        unsafe { core::mem::transmute(val & 0x07) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh4Next {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh4Next {
-        Cmdh4Next::from_bits(val)
-    }
-}
-impl From<Cmdh4Next> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh4Next) -> u8 {
-        Cmdh4Next::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh4Sts {
-    #[doc = "Minimum sample time of 3.5 ADCK cycles."]
-    SAMPLE_3P5 = 0x0,
-    #[doc = "3.5 + 21 ADCK cycles; 5.5 ADCK cycles total sample time."]
-    SAMPLE_5P5 = 0x01,
-    #[doc = "3.5 + 22 ADCK cycles; 7.5 ADCK cycles total sample time."]
-    SAMPLE_7P5 = 0x02,
-    #[doc = "3.5 + 23 ADCK cycles; 11.5 ADCK cycles total sample time."]
-    SAMPLE_11P5 = 0x03,
-    #[doc = "3.5 + 24 ADCK cycles; 19.5 ADCK cycles total sample time."]
-    SAMPLE_19P5 = 0x04,
-    #[doc = "3.5 + 25 ADCK cycles; 35.5 ADCK cycles total sample time."]
-    SAMPLE_35P5 = 0x05,
-    #[doc = "3.5 + 26 ADCK cycles; 67.5 ADCK cycles total sample time."]
-    SAMPLE_67P5 = 0x06,
-    #[doc = "3.5 + 27 ADCK cycles; 131.5 ADCK cycles total sample time."]
-    SAMPLE_131P5 = 0x07,
-}
-impl Cmdh4Sts {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh4Sts {
-        unsafe { core::mem::transmute(val & 0x07) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh4Sts {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh4Sts {
-        Cmdh4Sts::from_bits(val)
-    }
-}
-impl From<Cmdh4Sts> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh4Sts) -> u8 {
-        Cmdh4Sts::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh5Avgs {
-    #[doc = "Single conversion."]
-    NO_AVERAGE = 0x0,
-    #[doc = "2 conversions averaged."]
-    AVERAGE_2 = 0x01,
-    #[doc = "4 conversions averaged."]
-    AVERAGE_4 = 0x02,
-    #[doc = "8 conversions averaged."]
-    AVERAGE_8 = 0x03,
-    #[doc = "16 conversions averaged."]
-    AVERAGE_16 = 0x04,
-    #[doc = "32 conversions averaged."]
-    AVERAGE_32 = 0x05,
-    #[doc = "64 conversions averaged."]
-    AVERAGE_64 = 0x06,
-    #[doc = "128 conversions averaged."]
-    AVERAGE_128 = 0x07,
-    #[doc = "256 conversions averaged."]
-    AVERAGE_256 = 0x08,
-    #[doc = "512 conversions averaged."]
-    AVERAGE_512 = 0x09,
-    #[doc = "1024 conversions averaged."]
-    AVERAGE_1024 = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
-}
-impl Cmdh5Avgs {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh5Avgs {
-        unsafe { core::mem::transmute(val & 0x0f) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh5Avgs {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh5Avgs {
-        Cmdh5Avgs::from_bits(val)
-    }
-}
-impl From<Cmdh5Avgs> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh5Avgs) -> u8 {
-        Cmdh5Avgs::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh5Cmpen {
-    #[doc = "Compare disabled."]
-    DISABLED_ALWAYS_STORE_RESULT = 0x0,
-    _RESERVED_1 = 0x01,
-    #[doc = "Compare enabled. Store on true."]
-    COMPARE_RESULT_STORE_IF_TRUE = 0x02,
-    #[doc = "Compare enabled. Repeat channel acquisition (sample/convert/compare) until true."]
-    COMPARE_RESULT_KEEP_CONVERTING_UNTIL_TRUE_STORE_IF_TRUE = 0x03,
-}
-impl Cmdh5Cmpen {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh5Cmpen {
-        unsafe { core::mem::transmute(val & 0x03) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh5Cmpen {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh5Cmpen {
-        Cmdh5Cmpen::from_bits(val)
-    }
-}
-impl From<Cmdh5Cmpen> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh5Cmpen) -> u8 {
-        Cmdh5Cmpen::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh5Loop {
-    #[doc = "Looping not enabled. Command executes 1 time."]
-    CMD_EXEC_1X = 0x0,
-    #[doc = "Loop 1 time. Command executes 2 times."]
-    CMD_EXEC_2X = 0x01,
-    #[doc = "Loop 2 times. Command executes 3 times."]
-    CMD_EXEC_3X = 0x02,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_3 = 0x03,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_4 = 0x04,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_5 = 0x05,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_6 = 0x06,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_7 = 0x07,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_8 = 0x08,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    #[doc = "Loop 15 times. Command executes 16 times."]
-    CMD_EXEC_15X = 0x0f,
-}
-impl Cmdh5Loop {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh5Loop {
-        unsafe { core::mem::transmute(val & 0x0f) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh5Loop {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh5Loop {
-        Cmdh5Loop::from_bits(val)
-    }
-}
-impl From<Cmdh5Loop> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh5Loop) -> u8 {
-        Cmdh5Loop::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh5Next {
-    #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
-    NO_NEXT_CMD_TERMINATE_ON_FINISH = 0x0,
-    #[doc = "Select CMD1 command buffer register as next command."]
-    DO_CMD1_NEXT = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_6 = 0x06,
-    #[doc = "Select CMD7 command buffer register as next command."]
-    DO_CMD7_NEXT = 0x07,
-}
-impl Cmdh5Next {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh5Next {
-        unsafe { core::mem::transmute(val & 0x07) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh5Next {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh5Next {
-        Cmdh5Next::from_bits(val)
-    }
-}
-impl From<Cmdh5Next> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh5Next) -> u8 {
-        Cmdh5Next::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh5Sts {
-    #[doc = "Minimum sample time of 3.5 ADCK cycles."]
-    SAMPLE_3P5 = 0x0,
-    #[doc = "3.5 + 21 ADCK cycles; 5.5 ADCK cycles total sample time."]
-    SAMPLE_5P5 = 0x01,
-    #[doc = "3.5 + 22 ADCK cycles; 7.5 ADCK cycles total sample time."]
-    SAMPLE_7P5 = 0x02,
-    #[doc = "3.5 + 23 ADCK cycles; 11.5 ADCK cycles total sample time."]
-    SAMPLE_11P5 = 0x03,
-    #[doc = "3.5 + 24 ADCK cycles; 19.5 ADCK cycles total sample time."]
-    SAMPLE_19P5 = 0x04,
-    #[doc = "3.5 + 25 ADCK cycles; 35.5 ADCK cycles total sample time."]
-    SAMPLE_35P5 = 0x05,
-    #[doc = "3.5 + 26 ADCK cycles; 67.5 ADCK cycles total sample time."]
-    SAMPLE_67P5 = 0x06,
-    #[doc = "3.5 + 27 ADCK cycles; 131.5 ADCK cycles total sample time."]
-    SAMPLE_131P5 = 0x07,
-}
-impl Cmdh5Sts {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh5Sts {
-        unsafe { core::mem::transmute(val & 0x07) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh5Sts {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh5Sts {
-        Cmdh5Sts::from_bits(val)
-    }
-}
-impl From<Cmdh5Sts> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh5Sts) -> u8 {
-        Cmdh5Sts::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh6Avgs {
-    #[doc = "Single conversion."]
-    NO_AVERAGE = 0x0,
-    #[doc = "2 conversions averaged."]
-    AVERAGE_2 = 0x01,
-    #[doc = "4 conversions averaged."]
-    AVERAGE_4 = 0x02,
-    #[doc = "8 conversions averaged."]
-    AVERAGE_8 = 0x03,
-    #[doc = "16 conversions averaged."]
-    AVERAGE_16 = 0x04,
-    #[doc = "32 conversions averaged."]
-    AVERAGE_32 = 0x05,
-    #[doc = "64 conversions averaged."]
-    AVERAGE_64 = 0x06,
-    #[doc = "128 conversions averaged."]
-    AVERAGE_128 = 0x07,
-    #[doc = "256 conversions averaged."]
-    AVERAGE_256 = 0x08,
-    #[doc = "512 conversions averaged."]
-    AVERAGE_512 = 0x09,
-    #[doc = "1024 conversions averaged."]
-    AVERAGE_1024 = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
-}
-impl Cmdh6Avgs {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh6Avgs {
-        unsafe { core::mem::transmute(val & 0x0f) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh6Avgs {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh6Avgs {
-        Cmdh6Avgs::from_bits(val)
-    }
-}
-impl From<Cmdh6Avgs> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh6Avgs) -> u8 {
-        Cmdh6Avgs::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh6Cmpen {
-    #[doc = "Compare disabled."]
-    DISABLED_ALWAYS_STORE_RESULT = 0x0,
-    _RESERVED_1 = 0x01,
-    #[doc = "Compare enabled. Store on true."]
-    COMPARE_RESULT_STORE_IF_TRUE = 0x02,
-    #[doc = "Compare enabled. Repeat channel acquisition (sample/convert/compare) until true."]
-    COMPARE_RESULT_KEEP_CONVERTING_UNTIL_TRUE_STORE_IF_TRUE = 0x03,
-}
-impl Cmdh6Cmpen {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh6Cmpen {
-        unsafe { core::mem::transmute(val & 0x03) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh6Cmpen {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh6Cmpen {
-        Cmdh6Cmpen::from_bits(val)
-    }
-}
-impl From<Cmdh6Cmpen> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh6Cmpen) -> u8 {
-        Cmdh6Cmpen::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh6Loop {
-    #[doc = "Looping not enabled. Command executes 1 time."]
-    CMD_EXEC_1X = 0x0,
-    #[doc = "Loop 1 time. Command executes 2 times."]
-    CMD_EXEC_2X = 0x01,
-    #[doc = "Loop 2 times. Command executes 3 times."]
-    CMD_EXEC_3X = 0x02,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_3 = 0x03,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_4 = 0x04,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_5 = 0x05,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_6 = 0x06,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_7 = 0x07,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_8 = 0x08,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    #[doc = "Loop 15 times. Command executes 16 times."]
-    CMD_EXEC_15X = 0x0f,
-}
-impl Cmdh6Loop {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh6Loop {
-        unsafe { core::mem::transmute(val & 0x0f) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh6Loop {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh6Loop {
-        Cmdh6Loop::from_bits(val)
-    }
-}
-impl From<Cmdh6Loop> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh6Loop) -> u8 {
-        Cmdh6Loop::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh6Next {
-    #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
-    NO_NEXT_CMD_TERMINATE_ON_FINISH = 0x0,
-    #[doc = "Select CMD1 command buffer register as next command."]
-    DO_CMD1_NEXT = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_6 = 0x06,
-    #[doc = "Select CMD7 command buffer register as next command."]
-    DO_CMD7_NEXT = 0x07,
-}
-impl Cmdh6Next {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh6Next {
-        unsafe { core::mem::transmute(val & 0x07) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh6Next {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh6Next {
-        Cmdh6Next::from_bits(val)
-    }
-}
-impl From<Cmdh6Next> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh6Next) -> u8 {
-        Cmdh6Next::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh6Sts {
-    #[doc = "Minimum sample time of 3.5 ADCK cycles."]
-    SAMPLE_3P5 = 0x0,
-    #[doc = "3.5 + 21 ADCK cycles; 5.5 ADCK cycles total sample time."]
-    SAMPLE_5P5 = 0x01,
-    #[doc = "3.5 + 22 ADCK cycles; 7.5 ADCK cycles total sample time."]
-    SAMPLE_7P5 = 0x02,
-    #[doc = "3.5 + 23 ADCK cycles; 11.5 ADCK cycles total sample time."]
-    SAMPLE_11P5 = 0x03,
-    #[doc = "3.5 + 24 ADCK cycles; 19.5 ADCK cycles total sample time."]
-    SAMPLE_19P5 = 0x04,
-    #[doc = "3.5 + 25 ADCK cycles; 35.5 ADCK cycles total sample time."]
-    SAMPLE_35P5 = 0x05,
-    #[doc = "3.5 + 26 ADCK cycles; 67.5 ADCK cycles total sample time."]
-    SAMPLE_67P5 = 0x06,
-    #[doc = "3.5 + 27 ADCK cycles; 131.5 ADCK cycles total sample time."]
-    SAMPLE_131P5 = 0x07,
-}
-impl Cmdh6Sts {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh6Sts {
-        unsafe { core::mem::transmute(val & 0x07) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh6Sts {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh6Sts {
-        Cmdh6Sts::from_bits(val)
-    }
-}
-impl From<Cmdh6Sts> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh6Sts) -> u8 {
-        Cmdh6Sts::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh7Avgs {
-    #[doc = "Single conversion."]
-    NO_AVERAGE = 0x0,
-    #[doc = "2 conversions averaged."]
-    AVERAGE_2 = 0x01,
-    #[doc = "4 conversions averaged."]
-    AVERAGE_4 = 0x02,
-    #[doc = "8 conversions averaged."]
-    AVERAGE_8 = 0x03,
-    #[doc = "16 conversions averaged."]
-    AVERAGE_16 = 0x04,
-    #[doc = "32 conversions averaged."]
-    AVERAGE_32 = 0x05,
-    #[doc = "64 conversions averaged."]
-    AVERAGE_64 = 0x06,
-    #[doc = "128 conversions averaged."]
-    AVERAGE_128 = 0x07,
-    #[doc = "256 conversions averaged."]
-    AVERAGE_256 = 0x08,
-    #[doc = "512 conversions averaged."]
-    AVERAGE_512 = 0x09,
-    #[doc = "1024 conversions averaged."]
-    AVERAGE_1024 = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
-}
-impl Cmdh7Avgs {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh7Avgs {
-        unsafe { core::mem::transmute(val & 0x0f) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh7Avgs {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh7Avgs {
-        Cmdh7Avgs::from_bits(val)
-    }
-}
-impl From<Cmdh7Avgs> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh7Avgs) -> u8 {
-        Cmdh7Avgs::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh7Cmpen {
-    #[doc = "Compare disabled."]
-    DISABLED_ALWAYS_STORE_RESULT = 0x0,
-    _RESERVED_1 = 0x01,
-    #[doc = "Compare enabled. Store on true."]
-    COMPARE_RESULT_STORE_IF_TRUE = 0x02,
-    #[doc = "Compare enabled. Repeat channel acquisition (sample/convert/compare) until true."]
-    COMPARE_RESULT_KEEP_CONVERTING_UNTIL_TRUE_STORE_IF_TRUE = 0x03,
-}
-impl Cmdh7Cmpen {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh7Cmpen {
-        unsafe { core::mem::transmute(val & 0x03) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh7Cmpen {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh7Cmpen {
-        Cmdh7Cmpen::from_bits(val)
-    }
-}
-impl From<Cmdh7Cmpen> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh7Cmpen) -> u8 {
-        Cmdh7Cmpen::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh7Loop {
-    #[doc = "Looping not enabled. Command executes 1 time."]
-    CMD_EXEC_1X = 0x0,
-    #[doc = "Loop 1 time. Command executes 2 times."]
-    CMD_EXEC_2X = 0x01,
-    #[doc = "Loop 2 times. Command executes 3 times."]
-    CMD_EXEC_3X = 0x02,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_3 = 0x03,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_4 = 0x04,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_5 = 0x05,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_6 = 0x06,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_7 = 0x07,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_8 = 0x08,
-    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
-    CMD_EXECUTES_CORRESPONDING_TIMES_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    #[doc = "Loop 15 times. Command executes 16 times."]
-    CMD_EXEC_15X = 0x0f,
-}
-impl Cmdh7Loop {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh7Loop {
-        unsafe { core::mem::transmute(val & 0x0f) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh7Loop {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh7Loop {
-        Cmdh7Loop::from_bits(val)
-    }
-}
-impl From<Cmdh7Loop> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh7Loop) -> u8 {
-        Cmdh7Loop::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh7Next {
-    #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
-    NO_NEXT_CMD_TERMINATE_ON_FINISH = 0x0,
-    #[doc = "Select CMD1 command buffer register as next command."]
-    DO_CMD1_NEXT = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
-    DO_CORRESPONDING_CMD_NEXT_6 = 0x06,
-    #[doc = "Select CMD7 command buffer register as next command."]
-    DO_CMD7_NEXT = 0x07,
-}
-impl Cmdh7Next {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh7Next {
-        unsafe { core::mem::transmute(val & 0x07) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh7Next {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh7Next {
-        Cmdh7Next::from_bits(val)
-    }
-}
-impl From<Cmdh7Next> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh7Next) -> u8 {
-        Cmdh7Next::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdh7Sts {
-    #[doc = "Minimum sample time of 3.5 ADCK cycles."]
-    SAMPLE_3P5 = 0x0,
-    #[doc = "3.5 + 21 ADCK cycles; 5.5 ADCK cycles total sample time."]
-    SAMPLE_5P5 = 0x01,
-    #[doc = "3.5 + 22 ADCK cycles; 7.5 ADCK cycles total sample time."]
-    SAMPLE_7P5 = 0x02,
-    #[doc = "3.5 + 23 ADCK cycles; 11.5 ADCK cycles total sample time."]
-    SAMPLE_11P5 = 0x03,
-    #[doc = "3.5 + 24 ADCK cycles; 19.5 ADCK cycles total sample time."]
-    SAMPLE_19P5 = 0x04,
-    #[doc = "3.5 + 25 ADCK cycles; 35.5 ADCK cycles total sample time."]
-    SAMPLE_35P5 = 0x05,
-    #[doc = "3.5 + 26 ADCK cycles; 67.5 ADCK cycles total sample time."]
-    SAMPLE_67P5 = 0x06,
-    #[doc = "3.5 + 27 ADCK cycles; 131.5 ADCK cycles total sample time."]
-    SAMPLE_131P5 = 0x07,
-}
-impl Cmdh7Sts {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdh7Sts {
-        unsafe { core::mem::transmute(val & 0x07) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdh7Sts {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdh7Sts {
-        Cmdh7Sts::from_bits(val)
-    }
-}
-impl From<Cmdh7Sts> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdh7Sts) -> u8 {
-        Cmdh7Sts::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdl1Adch {
-    #[doc = "Select CH0A."]
-    SELECT_CH0 = 0x0,
-    #[doc = "Select CH1A."]
-    SELECT_CH1 = 0x01,
-    #[doc = "Select CH2A."]
-    SELECT_CH2 = 0x02,
-    #[doc = "Select CH3A."]
-    SELECT_CH3 = 0x03,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_4 = 0x04,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_5 = 0x05,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_6 = 0x06,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_7 = 0x07,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_8 = 0x08,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
-    _RESERVED_10 = 0x10,
-    _RESERVED_11 = 0x11,
-    _RESERVED_12 = 0x12,
-    _RESERVED_13 = 0x13,
-    _RESERVED_14 = 0x14,
-    _RESERVED_15 = 0x15,
-    _RESERVED_16 = 0x16,
-    _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
-    #[doc = "Select CH30A."]
-    SELECT_CH30 = 0x1e,
-    #[doc = "Select CH31A."]
-    SELECT_CH31 = 0x1f,
-}
-impl Cmdl1Adch {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdl1Adch {
-        unsafe { core::mem::transmute(val & 0x1f) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdl1Adch {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdl1Adch {
-        Cmdl1Adch::from_bits(val)
-    }
-}
-impl From<Cmdl1Adch> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdl1Adch) -> u8 {
-        Cmdl1Adch::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdl1Ctype {
-    #[doc = "Single-Ended Mode. Only A side channel is converted."]
-    SINGLE_ENDED_A_SIDE_CHANNEL = 0x0,
-    _RESERVED_1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-}
-impl Cmdl1Ctype {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdl1Ctype {
-        unsafe { core::mem::transmute(val & 0x03) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdl1Ctype {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdl1Ctype {
-        Cmdl1Ctype::from_bits(val)
-    }
-}
-impl From<Cmdl1Ctype> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdl1Ctype) -> u8 {
-        Cmdl1Ctype::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdl1Mode {
-    #[doc = "Standard resolution. Single-ended 12-bit conversion."]
-    DATA_12_BITS = 0x0,
-    #[doc = "High resolution. Single-ended 16-bit conversion."]
-    DATA_16_BITS = 0x01,
-}
-impl Cmdl1Mode {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdl1Mode {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdl1Mode {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdl1Mode {
-        Cmdl1Mode::from_bits(val)
-    }
-}
-impl From<Cmdl1Mode> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdl1Mode) -> u8 {
-        Cmdl1Mode::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdl2Adch {
-    #[doc = "Select CH0A."]
-    SELECT_CH0 = 0x0,
-    #[doc = "Select CH1A."]
-    SELECT_CH1 = 0x01,
-    #[doc = "Select CH2A."]
-    SELECT_CH2 = 0x02,
-    #[doc = "Select CH3A."]
-    SELECT_CH3 = 0x03,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_4 = 0x04,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_5 = 0x05,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_6 = 0x06,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_7 = 0x07,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_8 = 0x08,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
-    _RESERVED_10 = 0x10,
-    _RESERVED_11 = 0x11,
-    _RESERVED_12 = 0x12,
-    _RESERVED_13 = 0x13,
-    _RESERVED_14 = 0x14,
-    _RESERVED_15 = 0x15,
-    _RESERVED_16 = 0x16,
-    _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
-    #[doc = "Select CH30A."]
-    SELECT_CH30 = 0x1e,
-    #[doc = "Select CH31A."]
-    SELECT_CH31 = 0x1f,
-}
-impl Cmdl2Adch {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdl2Adch {
-        unsafe { core::mem::transmute(val & 0x1f) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdl2Adch {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdl2Adch {
-        Cmdl2Adch::from_bits(val)
-    }
-}
-impl From<Cmdl2Adch> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdl2Adch) -> u8 {
-        Cmdl2Adch::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdl2Ctype {
-    #[doc = "Single-Ended Mode. Only A side channel is converted."]
-    SINGLE_ENDED_A_SIDE_CHANNEL = 0x0,
-    _RESERVED_1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-}
-impl Cmdl2Ctype {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdl2Ctype {
-        unsafe { core::mem::transmute(val & 0x03) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdl2Ctype {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdl2Ctype {
-        Cmdl2Ctype::from_bits(val)
-    }
-}
-impl From<Cmdl2Ctype> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdl2Ctype) -> u8 {
-        Cmdl2Ctype::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdl2Mode {
-    #[doc = "Standard resolution. Single-ended 12-bit conversion."]
-    DATA_12_BITS = 0x0,
-    #[doc = "High resolution. Single-ended 16-bit conversion."]
-    DATA_16_BITS = 0x01,
-}
-impl Cmdl2Mode {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdl2Mode {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdl2Mode {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdl2Mode {
-        Cmdl2Mode::from_bits(val)
-    }
-}
-impl From<Cmdl2Mode> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdl2Mode) -> u8 {
-        Cmdl2Mode::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdl3Adch {
-    #[doc = "Select CH0A."]
-    SELECT_CH0 = 0x0,
-    #[doc = "Select CH1A."]
-    SELECT_CH1 = 0x01,
-    #[doc = "Select CH2A."]
-    SELECT_CH2 = 0x02,
-    #[doc = "Select CH3A."]
-    SELECT_CH3 = 0x03,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_4 = 0x04,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_5 = 0x05,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_6 = 0x06,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_7 = 0x07,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_8 = 0x08,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
-    _RESERVED_10 = 0x10,
-    _RESERVED_11 = 0x11,
-    _RESERVED_12 = 0x12,
-    _RESERVED_13 = 0x13,
-    _RESERVED_14 = 0x14,
-    _RESERVED_15 = 0x15,
-    _RESERVED_16 = 0x16,
-    _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
-    #[doc = "Select CH30A."]
-    SELECT_CH30 = 0x1e,
-    #[doc = "Select CH31A."]
-    SELECT_CH31 = 0x1f,
-}
-impl Cmdl3Adch {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdl3Adch {
-        unsafe { core::mem::transmute(val & 0x1f) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdl3Adch {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdl3Adch {
-        Cmdl3Adch::from_bits(val)
-    }
-}
-impl From<Cmdl3Adch> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdl3Adch) -> u8 {
-        Cmdl3Adch::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdl3Ctype {
-    #[doc = "Single-Ended Mode. Only A side channel is converted."]
-    SINGLE_ENDED_A_SIDE_CHANNEL = 0x0,
-    _RESERVED_1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-}
-impl Cmdl3Ctype {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdl3Ctype {
-        unsafe { core::mem::transmute(val & 0x03) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdl3Ctype {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdl3Ctype {
-        Cmdl3Ctype::from_bits(val)
-    }
-}
-impl From<Cmdl3Ctype> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdl3Ctype) -> u8 {
-        Cmdl3Ctype::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdl3Mode {
-    #[doc = "Standard resolution. Single-ended 12-bit conversion."]
-    DATA_12_BITS = 0x0,
-    #[doc = "High resolution. Single-ended 16-bit conversion."]
-    DATA_16_BITS = 0x01,
-}
-impl Cmdl3Mode {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdl3Mode {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdl3Mode {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdl3Mode {
-        Cmdl3Mode::from_bits(val)
-    }
-}
-impl From<Cmdl3Mode> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdl3Mode) -> u8 {
-        Cmdl3Mode::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdl4Adch {
-    #[doc = "Select CH0A."]
-    SELECT_CH0 = 0x0,
-    #[doc = "Select CH1A."]
-    SELECT_CH1 = 0x01,
-    #[doc = "Select CH2A."]
-    SELECT_CH2 = 0x02,
-    #[doc = "Select CH3A."]
-    SELECT_CH3 = 0x03,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_4 = 0x04,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_5 = 0x05,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_6 = 0x06,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_7 = 0x07,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_8 = 0x08,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
-    _RESERVED_10 = 0x10,
-    _RESERVED_11 = 0x11,
-    _RESERVED_12 = 0x12,
-    _RESERVED_13 = 0x13,
-    _RESERVED_14 = 0x14,
-    _RESERVED_15 = 0x15,
-    _RESERVED_16 = 0x16,
-    _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
-    #[doc = "Select CH30A."]
-    SELECT_CH30 = 0x1e,
-    #[doc = "Select CH31A."]
-    SELECT_CH31 = 0x1f,
-}
-impl Cmdl4Adch {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdl4Adch {
-        unsafe { core::mem::transmute(val & 0x1f) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdl4Adch {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdl4Adch {
-        Cmdl4Adch::from_bits(val)
-    }
-}
-impl From<Cmdl4Adch> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdl4Adch) -> u8 {
-        Cmdl4Adch::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdl4Ctype {
-    #[doc = "Single-Ended Mode. Only A side channel is converted."]
-    SINGLE_ENDED_A_SIDE_CHANNEL = 0x0,
-    _RESERVED_1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-}
-impl Cmdl4Ctype {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdl4Ctype {
-        unsafe { core::mem::transmute(val & 0x03) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdl4Ctype {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdl4Ctype {
-        Cmdl4Ctype::from_bits(val)
-    }
-}
-impl From<Cmdl4Ctype> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdl4Ctype) -> u8 {
-        Cmdl4Ctype::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdl4Mode {
-    #[doc = "Standard resolution. Single-ended 12-bit conversion."]
-    DATA_12_BITS = 0x0,
-    #[doc = "High resolution. Single-ended 16-bit conversion."]
-    DATA_16_BITS = 0x01,
-}
-impl Cmdl4Mode {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdl4Mode {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdl4Mode {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdl4Mode {
-        Cmdl4Mode::from_bits(val)
-    }
-}
-impl From<Cmdl4Mode> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdl4Mode) -> u8 {
-        Cmdl4Mode::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdl5Adch {
-    #[doc = "Select CH0A."]
-    SELECT_CH0 = 0x0,
-    #[doc = "Select CH1A."]
-    SELECT_CH1 = 0x01,
-    #[doc = "Select CH2A."]
-    SELECT_CH2 = 0x02,
-    #[doc = "Select CH3A."]
-    SELECT_CH3 = 0x03,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_4 = 0x04,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_5 = 0x05,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_6 = 0x06,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_7 = 0x07,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_8 = 0x08,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
-    _RESERVED_10 = 0x10,
-    _RESERVED_11 = 0x11,
-    _RESERVED_12 = 0x12,
-    _RESERVED_13 = 0x13,
-    _RESERVED_14 = 0x14,
-    _RESERVED_15 = 0x15,
-    _RESERVED_16 = 0x16,
-    _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
-    #[doc = "Select CH30A."]
-    SELECT_CH30 = 0x1e,
-    #[doc = "Select CH31A."]
-    SELECT_CH31 = 0x1f,
-}
-impl Cmdl5Adch {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdl5Adch {
-        unsafe { core::mem::transmute(val & 0x1f) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdl5Adch {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdl5Adch {
-        Cmdl5Adch::from_bits(val)
-    }
-}
-impl From<Cmdl5Adch> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdl5Adch) -> u8 {
-        Cmdl5Adch::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdl5Ctype {
-    #[doc = "Single-Ended Mode. Only A side channel is converted."]
-    SINGLE_ENDED_A_SIDE_CHANNEL = 0x0,
-    _RESERVED_1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-}
-impl Cmdl5Ctype {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdl5Ctype {
-        unsafe { core::mem::transmute(val & 0x03) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdl5Ctype {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdl5Ctype {
-        Cmdl5Ctype::from_bits(val)
-    }
-}
-impl From<Cmdl5Ctype> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdl5Ctype) -> u8 {
-        Cmdl5Ctype::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdl5Mode {
-    #[doc = "Standard resolution. Single-ended 12-bit conversion."]
-    DATA_12_BITS = 0x0,
-    #[doc = "High resolution. Single-ended 16-bit conversion."]
-    DATA_16_BITS = 0x01,
-}
-impl Cmdl5Mode {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdl5Mode {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdl5Mode {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdl5Mode {
-        Cmdl5Mode::from_bits(val)
-    }
-}
-impl From<Cmdl5Mode> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdl5Mode) -> u8 {
-        Cmdl5Mode::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdl6Adch {
-    #[doc = "Select CH0A."]
-    SELECT_CH0 = 0x0,
-    #[doc = "Select CH1A."]
-    SELECT_CH1 = 0x01,
-    #[doc = "Select CH2A."]
-    SELECT_CH2 = 0x02,
-    #[doc = "Select CH3A."]
-    SELECT_CH3 = 0x03,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_4 = 0x04,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_5 = 0x05,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_6 = 0x06,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_7 = 0x07,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_8 = 0x08,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
-    _RESERVED_10 = 0x10,
-    _RESERVED_11 = 0x11,
-    _RESERVED_12 = 0x12,
-    _RESERVED_13 = 0x13,
-    _RESERVED_14 = 0x14,
-    _RESERVED_15 = 0x15,
-    _RESERVED_16 = 0x16,
-    _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
-    #[doc = "Select CH30A."]
-    SELECT_CH30 = 0x1e,
-    #[doc = "Select CH31A."]
-    SELECT_CH31 = 0x1f,
-}
-impl Cmdl6Adch {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdl6Adch {
-        unsafe { core::mem::transmute(val & 0x1f) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdl6Adch {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdl6Adch {
-        Cmdl6Adch::from_bits(val)
-    }
-}
-impl From<Cmdl6Adch> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdl6Adch) -> u8 {
-        Cmdl6Adch::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdl6Ctype {
-    #[doc = "Single-Ended Mode. Only A side channel is converted."]
-    SINGLE_ENDED_A_SIDE_CHANNEL = 0x0,
-    _RESERVED_1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-}
-impl Cmdl6Ctype {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdl6Ctype {
-        unsafe { core::mem::transmute(val & 0x03) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdl6Ctype {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdl6Ctype {
-        Cmdl6Ctype::from_bits(val)
-    }
-}
-impl From<Cmdl6Ctype> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdl6Ctype) -> u8 {
-        Cmdl6Ctype::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdl6Mode {
-    #[doc = "Standard resolution. Single-ended 12-bit conversion."]
-    DATA_12_BITS = 0x0,
-    #[doc = "High resolution. Single-ended 16-bit conversion."]
-    DATA_16_BITS = 0x01,
-}
-impl Cmdl6Mode {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdl6Mode {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdl6Mode {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdl6Mode {
-        Cmdl6Mode::from_bits(val)
-    }
-}
-impl From<Cmdl6Mode> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdl6Mode) -> u8 {
-        Cmdl6Mode::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdl7Adch {
-    #[doc = "Select CH0A."]
-    SELECT_CH0 = 0x0,
-    #[doc = "Select CH1A."]
-    SELECT_CH1 = 0x01,
-    #[doc = "Select CH2A."]
-    SELECT_CH2 = 0x02,
-    #[doc = "Select CH3A."]
-    SELECT_CH3 = 0x03,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_4 = 0x04,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_5 = 0x05,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_6 = 0x06,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_7 = 0x07,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_8 = 0x08,
-    #[doc = "Select corresponding channel CHnA."]
-    SELECT_CORRESPONDING_CHANNEL_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
-    _RESERVED_10 = 0x10,
-    _RESERVED_11 = 0x11,
-    _RESERVED_12 = 0x12,
-    _RESERVED_13 = 0x13,
-    _RESERVED_14 = 0x14,
-    _RESERVED_15 = 0x15,
-    _RESERVED_16 = 0x16,
-    _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
-    #[doc = "Select CH30A."]
-    SELECT_CH30 = 0x1e,
-    #[doc = "Select CH31A."]
-    SELECT_CH31 = 0x1f,
-}
-impl Cmdl7Adch {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdl7Adch {
-        unsafe { core::mem::transmute(val & 0x1f) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdl7Adch {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdl7Adch {
-        Cmdl7Adch::from_bits(val)
-    }
-}
-impl From<Cmdl7Adch> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdl7Adch) -> u8 {
-        Cmdl7Adch::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdl7Ctype {
-    #[doc = "Single-Ended Mode. Only A side channel is converted."]
-    SINGLE_ENDED_A_SIDE_CHANNEL = 0x0,
-    _RESERVED_1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-}
-impl Cmdl7Ctype {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdl7Ctype {
-        unsafe { core::mem::transmute(val & 0x03) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdl7Ctype {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdl7Ctype {
-        Cmdl7Ctype::from_bits(val)
-    }
-}
-impl From<Cmdl7Ctype> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdl7Ctype) -> u8 {
-        Cmdl7Ctype::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cmdl7Mode {
-    #[doc = "Standard resolution. Single-ended 12-bit conversion."]
-    DATA_12_BITS = 0x0,
-    #[doc = "High resolution. Single-ended 16-bit conversion."]
-    DATA_16_BITS = 0x01,
-}
-impl Cmdl7Mode {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cmdl7Mode {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cmdl7Mode {
-    #[inline(always)]
-    fn from(val: u8) -> Cmdl7Mode {
-        Cmdl7Mode::from_bits(val)
-    }
-}
-impl From<Cmdl7Mode> for u8 {
-    #[inline(always)]
-    fn from(val: Cmdl7Mode) -> u8 {
-        Cmdl7Mode::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdsrc {
     #[doc = "Not a valid value CMDSRC value for a dataword in RESFIFO. 0x0 is only found in initial FIFO state prior to an ADC conversion result dataword being stored to a RESFIFO buffer."]
     NOT_VALID = 0x0,
@@ -2861,6 +452,40 @@ impl From<Cmdsrc> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Cmpen {
+    #[doc = "Compare disabled."]
+    DISABLED_ALWAYS_STORE_RESULT = 0x0,
+    _RESERVED_1 = 0x01,
+    #[doc = "Compare enabled. Store on true."]
+    COMPARE_RESULT_STORE_IF_TRUE = 0x02,
+    #[doc = "Compare enabled. Repeat channel acquisition (sample/convert/compare) until true."]
+    COMPARE_RESULT_KEEP_CONVERTING_UNTIL_TRUE_STORE_IF_TRUE = 0x03,
+}
+impl Cmpen {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Cmpen {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Cmpen {
+    #[inline(always)]
+    fn from(val: u8) -> Cmpen {
+        Cmpen::from_bits(val)
+    }
+}
+impl From<Cmpen> for u8 {
+    #[inline(always)]
+    fn from(val: Cmpen) -> u8 {
+        Cmpen::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Csw {
     #[doc = "Channel scaling not supported."]
     CSCALE_NOT_SUPPORTED = 0x0,
@@ -2894,6 +519,38 @@ impl From<Csw> for u8 {
     #[inline(always)]
     fn from(val: Csw) -> u8 {
         Csw::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Ctype {
+    #[doc = "Single-Ended Mode. Only A side channel is converted."]
+    SINGLE_ENDED_A_SIDE_CHANNEL = 0x0,
+    _RESERVED_1 = 0x01,
+    _RESERVED_2 = 0x02,
+    _RESERVED_3 = 0x03,
+}
+impl Ctype {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Ctype {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Ctype {
+    #[inline(always)]
+    fn from(val: u8) -> Ctype {
+        Ctype::from_bits(val)
+    }
+}
+impl From<Ctype> for u8 {
+    #[inline(always)]
+    fn from(val: Ctype) -> u8 {
+        Ctype::to_bits(val)
     }
 }
 #[repr(u8)]
@@ -3180,6 +837,60 @@ impl From<Iadcki> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Loop {
+    #[doc = "Looping not enabled. Command executes 1 time."]
+    CMD_EXEC_1X = 0x0,
+    #[doc = "Loop 1 time. Command executes 2 times."]
+    CMD_EXEC_2X = 0x01,
+    #[doc = "Loop 2 times. Command executes 3 times."]
+    CMD_EXEC_3X = 0x02,
+    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
+    CMD_EXECUTES_CORRESPONDING_TIMES_3 = 0x03,
+    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
+    CMD_EXECUTES_CORRESPONDING_TIMES_4 = 0x04,
+    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
+    CMD_EXECUTES_CORRESPONDING_TIMES_5 = 0x05,
+    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
+    CMD_EXECUTES_CORRESPONDING_TIMES_6 = 0x06,
+    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
+    CMD_EXECUTES_CORRESPONDING_TIMES_7 = 0x07,
+    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
+    CMD_EXECUTES_CORRESPONDING_TIMES_8 = 0x08,
+    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
+    CMD_EXECUTES_CORRESPONDING_TIMES_9 = 0x09,
+    _RESERVED_a = 0x0a,
+    _RESERVED_b = 0x0b,
+    _RESERVED_c = 0x0c,
+    _RESERVED_d = 0x0d,
+    _RESERVED_e = 0x0e,
+    #[doc = "Loop 15 times. Command executes 16 times."]
+    CMD_EXEC_15X = 0x0f,
+}
+impl Loop {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Loop {
+        unsafe { core::mem::transmute(val & 0x0f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Loop {
+    #[inline(always)]
+    fn from(val: u8) -> Loop {
+        Loop::from_bits(val)
+    }
+}
+impl From<Loop> for u8 {
+    #[inline(always)]
+    fn from(val: Loop) -> u8 {
+        Loop::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Loopcnt {
     #[doc = "Result is from initial conversion in command."]
     RESULT_1 = 0x0,
@@ -3234,6 +945,37 @@ impl From<Loopcnt> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Mode {
+    #[doc = "Standard resolution. Single-ended 12-bit conversion."]
+    DATA_12_BITS = 0x0,
+    #[doc = "High resolution. Single-ended 16-bit conversion."]
+    DATA_16_BITS = 0x01,
+}
+impl Mode {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Mode {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Mode {
+    #[inline(always)]
+    fn from(val: u8) -> Mode {
+        Mode::from_bits(val)
+    }
+}
+impl From<Mode> for u8 {
+    #[inline(always)]
+    fn from(val: Mode) -> u8 {
+        Mode::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mvi {
     #[doc = "Single voltage reference high (VREFH) input supported."]
     MULTIPLE_REF_NOT_SUPPORTED = 0x0,
@@ -3260,6 +1002,49 @@ impl From<Mvi> for u8 {
     #[inline(always)]
     fn from(val: Mvi) -> u8 {
         Mvi::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Next {
+    #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
+    NO_NEXT_CMD_TERMINATE_ON_FINISH = 0x0,
+    #[doc = "Select CMD1 command buffer register as next command."]
+    DO_CMD1_NEXT = 0x01,
+    #[doc = "Select corresponding CMD command buffer register as next command"]
+    DO_CORRESPONDING_CMD_NEXT_2 = 0x02,
+    #[doc = "Select corresponding CMD command buffer register as next command"]
+    DO_CORRESPONDING_CMD_NEXT_3 = 0x03,
+    #[doc = "Select corresponding CMD command buffer register as next command"]
+    DO_CORRESPONDING_CMD_NEXT_4 = 0x04,
+    #[doc = "Select corresponding CMD command buffer register as next command"]
+    DO_CORRESPONDING_CMD_NEXT_5 = 0x05,
+    #[doc = "Select corresponding CMD command buffer register as next command"]
+    DO_CORRESPONDING_CMD_NEXT_6 = 0x06,
+    #[doc = "Select CMD7 command buffer register as next command."]
+    DO_CMD7_NEXT = 0x07,
+}
+impl Next {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Next {
+        unsafe { core::mem::transmute(val & 0x07) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Next {
+    #[inline(always)]
+    fn from(val: u8) -> Next {
+        Next::from_bits(val)
+    }
+}
+impl From<Next> for u8 {
+    #[inline(always)]
+    fn from(val: Next) -> u8 {
+        Next::to_bits(val)
     }
 }
 #[repr(u8)]
@@ -3520,6 +1305,49 @@ impl From<Rstfifo0> for u8 {
     #[inline(always)]
     fn from(val: Rstfifo0) -> u8 {
         Rstfifo0::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Sts {
+    #[doc = "Minimum sample time of 3.5 ADCK cycles."]
+    SAMPLE_3P5 = 0x0,
+    #[doc = "3.5 + 21 ADCK cycles; 5.5 ADCK cycles total sample time."]
+    SAMPLE_5P5 = 0x01,
+    #[doc = "3.5 + 22 ADCK cycles; 7.5 ADCK cycles total sample time."]
+    SAMPLE_7P5 = 0x02,
+    #[doc = "3.5 + 23 ADCK cycles; 11.5 ADCK cycles total sample time."]
+    SAMPLE_11P5 = 0x03,
+    #[doc = "3.5 + 24 ADCK cycles; 19.5 ADCK cycles total sample time."]
+    SAMPLE_19P5 = 0x04,
+    #[doc = "3.5 + 25 ADCK cycles; 35.5 ADCK cycles total sample time."]
+    SAMPLE_35P5 = 0x05,
+    #[doc = "3.5 + 26 ADCK cycles; 67.5 ADCK cycles total sample time."]
+    SAMPLE_67P5 = 0x06,
+    #[doc = "3.5 + 27 ADCK cycles; 131.5 ADCK cycles total sample time."]
+    SAMPLE_131P5 = 0x07,
+}
+impl Sts {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Sts {
+        unsafe { core::mem::transmute(val & 0x07) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Sts {
+    #[inline(always)]
+    fn from(val: u8) -> Sts {
+        Sts::from_bits(val)
+    }
+}
+impl From<Sts> for u8 {
+    #[inline(always)]
+    fn from(val: Sts) -> u8 {
+        Sts::to_bits(val)
     }
 }
 #[repr(u8)]
