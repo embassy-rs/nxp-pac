@@ -1,11 +1,11 @@
 #[doc = "ADC"]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Hsadc {
+pub struct Adc {
     ptr: *mut u8,
 }
-unsafe impl Send for Hsadc {}
-unsafe impl Sync for Hsadc {}
-impl Hsadc {
+unsafe impl Send for Adc {}
+unsafe impl Sync for Adc {}
+impl Adc {
     #[inline(always)]
     pub const unsafe fn from_ptr(ptr: *mut ()) -> Self {
         Self { ptr: ptr as _ }

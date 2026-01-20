@@ -1,0 +1,10 @@
+transforms:
+  - !Rename
+    from: hsadc::(.*)
+    to: adc::$1
+    type: All
+  
+  - !Rename
+    from: adc::Hsadc
+    to: adc::Adc
+    type: Block

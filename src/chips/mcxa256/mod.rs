@@ -1,6 +1,6 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
-#![doc = "Peripheral access API (generated using chiptool v0.1.0 (0b476f2 2026-01-01))"]
+#![doc = "Peripheral access API (generated using chiptool v0.1.0 (935ad2b 2025-12-07))"]
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Interrupt {
@@ -293,9 +293,9 @@ pub const OSTIMER0: ostimer0::Ostimer0 =
 pub const WAKETIMER0: waketimer0::Waketimer0 =
     unsafe { waketimer0::Waketimer0::from_ptr(0x400a_e000usize as _) };
 #[doc = "ADC"]
-pub const ADC0: hsadc::Hsadc = unsafe { hsadc::Hsadc::from_ptr(0x400a_f000usize as _) };
+pub const ADC0: adc::Adc = unsafe { adc::Adc::from_ptr(0x400a_f000usize as _) };
 #[doc = "ADC"]
-pub const ADC1: hsadc::Hsadc = unsafe { hsadc::Hsadc::from_ptr(0x400b_0000usize as _) };
+pub const ADC1: adc::Adc = unsafe { adc::Adc::from_ptr(0x400b_0000usize as _) };
 #[doc = "LPCMP"]
 pub const CMP0: cmp::Cmp = unsafe { cmp::Cmp::from_ptr(0x400b_1000usize as _) };
 #[doc = "LPCMP"]
@@ -362,6 +362,7 @@ pub const NVIC_PRIO_BITS: u8 = 3;
 pub use Interrupt as interrupt;
 #[cfg(feature = "rt")]
 pub use cortex_m_rt::interrupt;
+pub mod adc;
 pub mod aoi;
 pub mod can;
 pub mod cdog;
@@ -384,7 +385,6 @@ pub mod fmu0;
 pub mod freqme0;
 pub mod glikey0;
 pub mod gpio;
-pub mod hsadc;
 pub mod i3c0;
 pub mod inputmux0;
 pub mod lpi2c;
