@@ -42,6 +42,10 @@ transforms:
   - !DeleteEnums
     from: adc::vals::Swt(\d+)
 
+  # ADC channel select is not correct at all, better use bare u8.
+  - !DeleteEnums
+    from: adc::vals::Adch
+
   - !MakeFieldArray
     fieldsets: adc::regs::Swtrig
     from: swt(\d+)

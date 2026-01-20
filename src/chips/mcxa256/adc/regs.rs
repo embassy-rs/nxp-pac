@@ -390,14 +390,14 @@ impl Cmdl {
     #[doc = "Input Channel Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn adch(&self) -> super::vals::Adch {
+    pub const fn adch(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x1f;
-        super::vals::Adch::from_bits(val as u8)
+        val as u8
     }
     #[doc = "Input Channel Select"]
     #[inline(always)]
-    pub const fn set_adch(&mut self, val: super::vals::Adch) {
-        self.0 = (self.0 & !(0x1f << 0usize)) | (((val.to_bits() as u32) & 0x1f) << 0usize);
+    pub const fn set_adch(&mut self, val: u8) {
+        self.0 = (self.0 & !(0x1f << 0usize)) | (((val as u32) & 0x1f) << 0usize);
     }
     #[doc = "Conversion Type"]
     #[must_use]
@@ -444,7 +444,7 @@ impl defmt::Format for Cmdl {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Cmdl {{ adch: {:?}, ctype: {:?}, mode: {:?} }}",
+            "Cmdl {{ adch: {=u8:?}, ctype: {:?}, mode: {:?} }}",
             self.adch(),
             self.ctype(),
             self.mode()
