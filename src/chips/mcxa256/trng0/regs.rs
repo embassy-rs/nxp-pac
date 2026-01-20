@@ -6,50 +6,50 @@ impl Csclr {
     #[doc = "Redundant Signals error/fault Detected"]
     #[must_use]
     #[inline(always)]
-    pub const fn red_sigs_clr(&self) -> super::vals::RedSigsClr {
+    pub const fn red_sigs_clr(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::RedSigsClr::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Redundant Signals error/fault Detected"]
     #[inline(always)]
-    pub const fn set_red_sigs_clr(&mut self, val: super::vals::RedSigsClr) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    pub const fn set_red_sigs_clr(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
     #[doc = "Read only: Redundant FSM error/fault detected"]
     #[must_use]
     #[inline(always)]
-    pub const fn red_fsm_clr(&self) -> super::vals::RedFsmClr {
+    pub const fn red_fsm_clr(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::RedFsmClr::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Read only: Redundant FSM error/fault detected"]
     #[inline(always)]
-    pub const fn set_red_fsm_clr(&mut self, val: super::vals::RedFsmClr) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    pub const fn set_red_fsm_clr(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
     #[doc = "Read only: Local-EDC error/fault detected"]
     #[must_use]
     #[inline(always)]
-    pub const fn local_edc_clr(&self) -> super::vals::LocalEdcClr {
+    pub const fn local_edc_clr(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
-        super::vals::LocalEdcClr::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Read only: Local-EDC error/fault detected"]
     #[inline(always)]
-    pub const fn set_local_edc_clr(&mut self, val: super::vals::LocalEdcClr) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
+    pub const fn set_local_edc_clr(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
     #[doc = "Read only: Bus-EDC error/fault detected"]
     #[must_use]
     #[inline(always)]
-    pub const fn bus_edc_clr(&self) -> super::vals::BusEdcClr {
+    pub const fn bus_edc_clr(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::BusEdcClr::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Read only: Bus-EDC error/fault detected"]
     #[inline(always)]
-    pub const fn set_bus_edc_clr(&mut self, val: super::vals::BusEdcClr) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
+    pub const fn set_bus_edc_clr(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
 }
 impl Default for Csclr {
@@ -73,7 +73,7 @@ impl defmt::Format for Csclr {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Csclr {{ red_sigs_clr: {:?}, red_fsm_clr: {:?}, local_edc_clr: {:?}, bus_edc_clr: {:?} }}",
+            "Csclr {{ red_sigs_clr: {=bool:?}, red_fsm_clr: {=bool:?}, local_edc_clr: {=bool:?}, bus_edc_clr: {=bool:?} }}",
             self.red_sigs_clr(),
             self.red_fsm_clr(),
             self.local_edc_clr(),
@@ -89,50 +89,50 @@ impl Cser {
     #[doc = "Redundant Signals error/fault Detected"]
     #[must_use]
     #[inline(always)]
-    pub const fn red_sigs(&self) -> super::vals::RedSigs {
+    pub const fn red_sigs(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::RedSigs::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Redundant Signals error/fault Detected"]
     #[inline(always)]
-    pub const fn set_red_sigs(&mut self, val: super::vals::RedSigs) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    pub const fn set_red_sigs(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
     #[doc = "Redundant FSM error/fault detected"]
     #[must_use]
     #[inline(always)]
-    pub const fn red_fsm(&self) -> super::vals::RedFsm {
+    pub const fn red_fsm(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::RedFsm::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Redundant FSM error/fault detected"]
     #[inline(always)]
-    pub const fn set_red_fsm(&mut self, val: super::vals::RedFsm) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    pub const fn set_red_fsm(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
     #[doc = "Local-EDC error/fault detected"]
     #[must_use]
     #[inline(always)]
-    pub const fn local_edc(&self) -> super::vals::LocalEdc {
+    pub const fn local_edc(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
-        super::vals::LocalEdc::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Local-EDC error/fault detected"]
     #[inline(always)]
-    pub const fn set_local_edc(&mut self, val: super::vals::LocalEdc) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
+    pub const fn set_local_edc(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
     #[doc = "Bus-EDC error/fault detected"]
     #[must_use]
     #[inline(always)]
-    pub const fn bus_edc(&self) -> super::vals::BusEdc {
+    pub const fn bus_edc(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::BusEdc::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Bus-EDC error/fault detected"]
     #[inline(always)]
-    pub const fn set_bus_edc(&mut self, val: super::vals::BusEdc) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
+    pub const fn set_bus_edc(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
 }
 impl Default for Cser {
@@ -156,7 +156,7 @@ impl defmt::Format for Cser {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Cser {{ red_sigs: {:?}, red_fsm: {:?}, local_edc: {:?}, bus_edc: {:?} }}",
+            "Cser {{ red_sigs: {=bool:?}, red_fsm: {=bool:?}, local_edc: {=bool:?}, bus_edc: {=bool:?} }}",
             self.red_sigs(),
             self.red_fsm(),
             self.local_edc(),
@@ -318,50 +318,50 @@ impl IntCtrl {
     #[doc = "Clear the HW_ERR interrupt."]
     #[must_use]
     #[inline(always)]
-    pub const fn hw_err(&self) -> super::vals::IntCtrlHwErr {
+    pub const fn hw_err(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::IntCtrlHwErr::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Clear the HW_ERR interrupt."]
     #[inline(always)]
-    pub const fn set_hw_err(&mut self, val: super::vals::IntCtrlHwErr) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    pub const fn set_hw_err(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
     #[doc = "Clear the ENT_VAL interrupt."]
     #[must_use]
     #[inline(always)]
-    pub const fn ent_val(&self) -> super::vals::IntCtrlEntVal {
+    pub const fn ent_val(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::IntCtrlEntVal::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Clear the ENT_VAL interrupt."]
     #[inline(always)]
-    pub const fn set_ent_val(&mut self, val: super::vals::IntCtrlEntVal) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    pub const fn set_ent_val(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
     #[doc = "Clear the FRQ_CT_FAIL interrupt."]
     #[must_use]
     #[inline(always)]
-    pub const fn frq_ct_fail(&self) -> super::vals::IntCtrlFrqCtFail {
+    pub const fn frq_ct_fail(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
-        super::vals::IntCtrlFrqCtFail::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Clear the FRQ_CT_FAIL interrupt."]
     #[inline(always)]
-    pub const fn set_frq_ct_fail(&mut self, val: super::vals::IntCtrlFrqCtFail) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
+    pub const fn set_frq_ct_fail(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
     #[doc = "Clear the INTG_FLT interrupt."]
     #[must_use]
     #[inline(always)]
-    pub const fn intg_flt(&self) -> super::vals::IntCtrlIntgFlt {
+    pub const fn intg_flt(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::IntCtrlIntgFlt::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Clear the INTG_FLT interrupt."]
     #[inline(always)]
-    pub const fn set_intg_flt(&mut self, val: super::vals::IntCtrlIntgFlt) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
+    pub const fn set_intg_flt(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
 }
 impl Default for IntCtrl {
@@ -385,7 +385,7 @@ impl defmt::Format for IntCtrl {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "IntCtrl {{ hw_err: {:?}, ent_val: {:?}, frq_ct_fail: {:?}, intg_flt: {:?} }}",
+            "IntCtrl {{ hw_err: {=bool:?}, ent_val: {=bool:?}, frq_ct_fail: {=bool:?}, intg_flt: {=bool:?} }}",
             self.hw_err(),
             self.ent_val(),
             self.frq_ct_fail(),
@@ -401,50 +401,50 @@ impl IntMask {
     #[doc = "Mask the HW_ERR interrupt."]
     #[must_use]
     #[inline(always)]
-    pub const fn hw_err(&self) -> super::vals::IntMaskHwErr {
+    pub const fn hw_err(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::IntMaskHwErr::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Mask the HW_ERR interrupt."]
     #[inline(always)]
-    pub const fn set_hw_err(&mut self, val: super::vals::IntMaskHwErr) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    pub const fn set_hw_err(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
     #[doc = "Mask the ENT_VAL interrupt."]
     #[must_use]
     #[inline(always)]
-    pub const fn ent_val(&self) -> super::vals::IntMaskEntVal {
+    pub const fn ent_val(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::IntMaskEntVal::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Mask the ENT_VAL interrupt."]
     #[inline(always)]
-    pub const fn set_ent_val(&mut self, val: super::vals::IntMaskEntVal) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    pub const fn set_ent_val(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
     #[doc = "Mask the FRQ_CT_FAIL interrupt."]
     #[must_use]
     #[inline(always)]
-    pub const fn frq_ct_fail(&self) -> super::vals::IntMaskFrqCtFail {
+    pub const fn frq_ct_fail(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
-        super::vals::IntMaskFrqCtFail::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Mask the FRQ_CT_FAIL interrupt."]
     #[inline(always)]
-    pub const fn set_frq_ct_fail(&mut self, val: super::vals::IntMaskFrqCtFail) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
+    pub const fn set_frq_ct_fail(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
     #[doc = "Mask the INTG_FLT interrupt."]
     #[must_use]
     #[inline(always)]
-    pub const fn intg_flt(&self) -> super::vals::IntMaskIntgFlt {
+    pub const fn intg_flt(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::IntMaskIntgFlt::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Mask the INTG_FLT interrupt."]
     #[inline(always)]
-    pub const fn set_intg_flt(&mut self, val: super::vals::IntMaskIntgFlt) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
+    pub const fn set_intg_flt(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
 }
 impl Default for IntMask {
@@ -468,7 +468,7 @@ impl defmt::Format for IntMask {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "IntMask {{ hw_err: {:?}, ent_val: {:?}, frq_ct_fail: {:?}, intg_flt: {:?} }}",
+            "IntMask {{ hw_err: {=bool:?}, ent_val: {=bool:?}, frq_ct_fail: {=bool:?}, intg_flt: {=bool:?} }}",
             self.hw_err(),
             self.ent_val(),
             self.frq_ct_fail(),
@@ -484,14 +484,14 @@ impl IntStatus {
     #[doc = "Read: TRNG Error. Any error in the TRNG will trigger this interrupt."]
     #[must_use]
     #[inline(always)]
-    pub const fn hw_err(&self) -> super::vals::IntStatusHwErr {
+    pub const fn hw_err(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::IntStatusHwErr::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Read: TRNG Error. Any error in the TRNG will trigger this interrupt."]
     #[inline(always)]
-    pub const fn set_hw_err(&mut self, val: super::vals::IntStatusHwErr) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    pub const fn set_hw_err(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
     #[doc = "Entropy Valid"]
     #[must_use]
@@ -508,26 +508,26 @@ impl IntStatus {
     #[doc = "Frequency Count Fail"]
     #[must_use]
     #[inline(always)]
-    pub const fn frq_ct_fail(&self) -> super::vals::IntStatusFrqCtFail {
+    pub const fn frq_ct_fail(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
-        super::vals::IntStatusFrqCtFail::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Frequency Count Fail"]
     #[inline(always)]
-    pub const fn set_frq_ct_fail(&mut self, val: super::vals::IntStatusFrqCtFail) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
+    pub const fn set_frq_ct_fail(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
     #[doc = "Integrity Fault. An internal fault has occurred."]
     #[must_use]
     #[inline(always)]
-    pub const fn intg_flt(&self) -> super::vals::IntStatusIntgFlt {
+    pub const fn intg_flt(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::IntStatusIntgFlt::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Integrity Fault. An internal fault has occurred."]
     #[inline(always)]
-    pub const fn set_intg_flt(&mut self, val: super::vals::IntStatusIntgFlt) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
+    pub const fn set_intg_flt(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
 }
 impl Default for IntStatus {
@@ -551,7 +551,7 @@ impl defmt::Format for IntStatus {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "IntStatus {{ hw_err: {:?}, ent_val: {:?}, frq_ct_fail: {:?}, intg_flt: {:?} }}",
+            "IntStatus {{ hw_err: {=bool:?}, ent_val: {:?}, frq_ct_fail: {=bool:?}, intg_flt: {=bool:?} }}",
             self.hw_err(),
             self.ent_val(),
             self.frq_ct_fail(),
@@ -2364,14 +2364,14 @@ impl SecCfg {
     #[doc = "If set, below mentioned TRNG configuration registers cannot be programmed: Oscillator 2 Control Register (OSC2_CTL): TRNG Entropy Generation Control \\[1:0\\] Oscillator 2 Divider \\[3:2\\] Oscillator Fail Safe Limit \\[13:12\\] Oscillator Fail Safe Test \\[14\\] TRNG Seed Control Register (SDCTL) TRNG Frequency Count Minimum Limit Register (FRQMIN) TRNG Frequency Count Maximum Limit Register (FRQMAX) TRNG Statistical Check Monobit Limit Register (SCML) TRNG Statistical Check Run Length 1 Limit Register (SCR1L) TRNG Statistical Check Run Length 2 Limit Register (SCR2L) TRNG Statistical Check Run Length 3 Limit Register (SCR3L) TRNG Miscellaneous Control Register (MCTL): Sample Mode \\[1:0\\] Oscillator Divider \\[3:2\\] Reset Defaults \\[6\\] Force System Clock \\[7\\] Long Runs Continuation Mode \\[14\\] After this bit has been written to a 1, it cannot be changed"]
     #[must_use]
     #[inline(always)]
-    pub const fn no_prgm(&self) -> super::vals::NoPrgm {
+    pub const fn no_prgm(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::NoPrgm::from_bits(val as u8)
+        val != 0
     }
     #[doc = "If set, below mentioned TRNG configuration registers cannot be programmed: Oscillator 2 Control Register (OSC2_CTL): TRNG Entropy Generation Control \\[1:0\\] Oscillator 2 Divider \\[3:2\\] Oscillator Fail Safe Limit \\[13:12\\] Oscillator Fail Safe Test \\[14\\] TRNG Seed Control Register (SDCTL) TRNG Frequency Count Minimum Limit Register (FRQMIN) TRNG Frequency Count Maximum Limit Register (FRQMAX) TRNG Statistical Check Monobit Limit Register (SCML) TRNG Statistical Check Run Length 1 Limit Register (SCR1L) TRNG Statistical Check Run Length 2 Limit Register (SCR2L) TRNG Statistical Check Run Length 3 Limit Register (SCR3L) TRNG Miscellaneous Control Register (MCTL): Sample Mode \\[1:0\\] Oscillator Divider \\[3:2\\] Reset Defaults \\[6\\] Force System Clock \\[7\\] Long Runs Continuation Mode \\[14\\] After this bit has been written to a 1, it cannot be changed"]
     #[inline(always)]
-    pub const fn set_no_prgm(&mut self, val: super::vals::NoPrgm) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    pub const fn set_no_prgm(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
 }
 impl Default for SecCfg {
@@ -2390,7 +2390,7 @@ impl core::fmt::Debug for SecCfg {
 #[cfg(feature = "defmt")]
 impl defmt::Format for SecCfg {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "SecCfg {{ no_prgm: {:?} }}", self.no_prgm())
+        defmt::write!(f, "SecCfg {{ no_prgm: {=bool:?} }}", self.no_prgm())
     }
 }
 #[doc = "Status Register"]

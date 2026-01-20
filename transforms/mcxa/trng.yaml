@@ -9,12 +9,14 @@ transforms:
   - !AddRegisters
     block: trng0::Trng0
     registers:
-    - name: ent
-      description: Entropy Read Register
-      array:
-        len: 8
-        stride: 4
-      byte_offset: 64
-      access: Read
-      fieldset: trng0::regs::Ent
-    
+      - name: ent
+        description: Entropy Read Register
+        array:
+          len: 8
+          stride: 4
+        byte_offset: 64
+        access: Read
+        fieldset: trng0::regs::Ent
+
+  - !DeleteEnums
+    from: trng0::vals::(IntMaskHwErr|IntMaskIntgFlt|IntStatusFrqCtFail|IntStatusHwErr|IntStatusIntgFlt|LocalEdc|LocalEdcClr|NoPrgm|RedFsm|RedFsmClr|RedSigs|RedSigsClr|IntMaskFrqCtFail|IntMaskEntVal|IntCtrlIntgFlt|IntCtrlHwErr|IntCtrlFrqCtFail|IntCtrlEntVal|BusEdcClr|BusEdc)
