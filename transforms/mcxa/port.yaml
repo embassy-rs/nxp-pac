@@ -47,37 +47,6 @@ transforms:
     from: port::vals::Gpwe(\d+)
     to: port::vals::Gpwe
 
-  - !MergeEnums
-    from: port::vals::Pcr(\d+)Dse
-    to: port::vals::Dse
-  # - !MergeEnums
-  #   from: port::vals::Pcr(\d+)Dse1
-  #   to: port::vals::Dse1
-  - !MergeEnums
-    from: port::vals::Pcr(\d+)Sre
-    to: port::vals::Sre
-  # - !MergeEnums
-  #   from: port::vals::Pcr(\d+)Pfe
-  #   to: port::vals::Pfe
-  - !MergeEnums
-    from: port::vals::Pcr(\d+)Ibe
-    to: port::vals::Ibe
-  - !MergeEnums
-    from: port::vals::Pcr(\d+)Inv
-    to: port::vals::Inv
-  - !MergeEnums
-    from: port::vals::Pcr(\d+)Ode
-    to: port::vals::Ode
-  - !MergeEnums
-    from: port::vals::Pcr(\d+)Pe
-    to: port::vals::Pe
-  - !MergeEnums
-    from: port::vals::Pcr(\d+)Ps
-    to: port::vals::Ps
-  - !MergeEnums
-    from: port::vals::Pcr(\d+)Lk
-    to: port::vals::Lk
-
   # Delete uncommon fields that we will not expose in the HAL regardless.
   # In the future, you may consider re-adding them.
   - !DeleteFields
@@ -88,6 +57,10 @@ transforms:
     from: port::vals::Pcr(\d+)(Dse1|Pfe)
   - !DeleteEnums
     from: port::vals::Pv
+
+  - !MergeEnums
+    from: port::vals::Pcr(\d+)(.+)
+    to: port::vals::$2
 
   - !MergeFieldsets
     from: port::regs::Pcr(\d+)
