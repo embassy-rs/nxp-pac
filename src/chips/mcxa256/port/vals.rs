@@ -29,37 +29,6 @@ impl From<Dse> for u8 {
         Dse::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Dse1 {
-    #[doc = "Normal"]
-    DSE10 = 0x0,
-    #[doc = "Double"]
-    DSE11 = 0x01,
-}
-impl Dse1 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Dse1 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Dse1 {
-    #[inline(always)]
-    fn from(val: u8) -> Dse1 {
-        Dse1::from_bits(val)
-    }
-}
-impl From<Dse1> for u8 {
-    #[inline(always)]
-    fn from(val: Dse1) -> u8 {
-        Dse1::to_bits(val)
-    }
-}
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Feature(u16);
@@ -350,37 +319,6 @@ impl From<Pe> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Pfe {
-    #[doc = "Disables"]
-    PFE0 = 0x0,
-    #[doc = "Enables"]
-    PFE1 = 0x01,
-}
-impl Pfe {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Pfe {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Pfe {
-    #[inline(always)]
-    fn from(val: u8) -> Pfe {
-        Pfe::from_bits(val)
-    }
-}
-impl From<Pfe> for u8 {
-    #[inline(always)]
-    fn from(val: Pfe) -> u8 {
-        Pfe::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ps {
     #[doc = "Enables internal pulldown resistor"]
     PS0 = 0x0,
@@ -412,37 +350,6 @@ impl From<Ps> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Pv {
-    #[doc = "Low"]
-    PV0 = 0x0,
-    #[doc = "High"]
-    PV1 = 0x01,
-}
-impl Pv {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Pv {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Pv {
-    #[inline(always)]
-    fn from(val: u8) -> Pv {
-        Pv::from_bits(val)
-    }
-}
-impl From<Pv> for u8 {
-    #[inline(always)]
-    fn from(val: Pv) -> u8 {
-        Pv::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Range {
     #[doc = "1.71 V-3.6 V"]
     RANGE0 = 0x0,
@@ -469,49 +376,6 @@ impl From<Range> for u8 {
     #[inline(always)]
     fn from(val: Range) -> u8 {
         Range::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum ShortMux {
-    #[doc = "Alternative 0 (GPIO)"]
-    MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
-    MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
-    MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
-    MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
-    MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
-    MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
-    MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
-    MUX111 = 0x07,
-}
-impl ShortMux {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> ShortMux {
-        unsafe { core::mem::transmute(val & 0x07) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for ShortMux {
-    #[inline(always)]
-    fn from(val: u8) -> ShortMux {
-        ShortMux::from_bits(val)
-    }
-}
-impl From<ShortMux> for u8 {
-    #[inline(always)]
-    fn from(val: ShortMux) -> u8 {
-        ShortMux::to_bits(val)
     }
 }
 #[repr(u8)]

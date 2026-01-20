@@ -1,4 +1,19 @@
 transforms:
+  # Delete registers for ports that do not support them.
+  # The SVD still has these registers included (but helpfully Mux is not defined for them).
+  - !DeleteFieldsets
+    from: port(0|4)::regs::Pcr(8|9|10|11)
+  - !DeleteFieldsets
+    from: port(0|1|2|4)::regs::Pcr(28)
+  - !DeleteFieldsets
+    from: port(0|2|4)::regs::Pcr(29|30|31)
+  - !DeleteFieldsets
+    from: port(1|4)::regs::Pcr(20|21|22|23|24|25|26)
+  - !DeleteFieldsets
+    from: port(1|2|4)::regs::Pcr(27)
+  - !DeleteFieldsets
+    from: port(4)::regs::Pcr(12|13|14|15|16|17|18|19)
+
   - !MergeBlocks
     from: port(\d+)::Port(\d+)
     to: port0::Port0
@@ -18,9 +33,19 @@ transforms:
   - !Delete
     from: port(\d+)::(.*)
 
-  - !MergeEnums
-    from: port::vals::Pcr(0|1|7)Mux
-    to: port::vals::ShortMux
+    # Merge all Mux into the most capable variant of it with bitsize = 4.
+    # Pcr 0, 1 and 7 have a smaller Mux set for ports 0 and 4.
+    # In the HAL we will enforce this constraint, but for the PAC this only makes the types more complex.
+  - !ModifyFieldsEnum
+    fieldset: port::regs::Pcr(0|1|7)
+    field: mux
+    enum: port::vals::Pcr2Mux
+  - !DeleteEnums
+    from: port::vals::Pcr(\d+)Mux
+    bit_size: 3
+  - !ResizeEnums
+    enum: port::vals::Pcr(\d+)Mux
+    bit_size: 4
   - !MergeEnums
     from: port::vals::Pcr(\d+)Mux
     to: port::vals::Mux
@@ -32,15 +57,15 @@ transforms:
   - !MergeEnums
     from: port::vals::Pcr(\d+)Dse
     to: port::vals::Dse
-  - !MergeEnums
-    from: port::vals::Pcr(\d+)Dse1
-    to: port::vals::Dse1
+  # - !MergeEnums
+  #   from: port::vals::Pcr(\d+)Dse1
+  #   to: port::vals::Dse1
   - !MergeEnums
     from: port::vals::Pcr(\d+)Sre
     to: port::vals::Sre
-  - !MergeEnums
-    from: port::vals::Pcr(\d+)Pfe
-    to: port::vals::Pfe
+  # - !MergeEnums
+  #   from: port::vals::Pcr(\d+)Pfe
+  #   to: port::vals::Pfe
   - !MergeEnums
     from: port::vals::Pcr(\d+)Ibe
     to: port::vals::Ibe
@@ -59,3 +84,18 @@ transforms:
   - !MergeEnums
     from: port::vals::Pcr(\d+)Lk
     to: port::vals::Lk
+
+  # Delete uncommon fields that we will not expose in the HAL regardless.
+  # In the future, you may consider re-adding them.
+  - !DeleteFields
+    fieldset: port::regs::Pcr(\d+)
+    from: (dse1|pfe|pv)
+
+  - !DeleteEnums
+    from: port::vals::Pcr(\d+)(Dse1|Pfe)
+  - !DeleteEnums
+    from: port::vals::Pv
+
+  - !MergeFieldsets
+    from: port::regs::Pcr(\d+)
+    to: port::regs::Pcr
