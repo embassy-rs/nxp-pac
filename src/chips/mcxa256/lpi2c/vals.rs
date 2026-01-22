@@ -138,23 +138,22 @@ impl From<Bef> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmd {
-    #[doc = "Transmit the value in DATA\\[7:0\\]"]
-    TRANSMIT_DATA_7_THROUGH_0 = 0x0,
-    #[doc = "Receive (DATA\\[7:0\\] + 1) bytes"]
-    RECEIVE_DATA_7_THROUGH_0_PLUS_ONE = 0x01,
-    #[doc = "Generate Stop condition on I2C bus"]
-    GENERATE_STOP_CONDITION = 0x02,
-    #[doc = "Receive and discard (DATA\\[7:0\\] + 1) bytes"]
-    RECEIVE_AND_DISCARD_DATA_7_THROUGH_0_PLUS_ONE = 0x03,
+    #[doc = "Transmit value in DATA\\[7:0\\]"]
+    TRANSMIT = 0x0,
+    #[doc = "Receive (DATA\\[7:0\\] + 1) bytes."]
+    RECEIVE = 0x01,
+    #[doc = "Generate Stop condition on I2C bus."]
+    STOP = 0x02,
+    #[doc = "Receive and discard (DATA\\[7:0\\] + 1) bytes."]
+    RECEIVE_AND_DISCARD = 0x03,
     #[doc = "Generate (repeated) Start on the I2C bus and transmit the address in DATA\\[7:0\\]"]
-    GENERATE_START_AND_TRANSMIT_ADDRESS_IN_DATA_7_THROUGH_0 = 0x04,
-    #[doc = "Generate (repeated) Start on the I2C bus and transmit the address in DATA\\[7:0\\] (this transfer expects a NACK to be returned)"]
-    GENERATE_START_AND_TRANSMIT_ADDRESS_IN_DATA_7_THROUGH_0_EXPECT_NACK = 0x05,
+    START = 0x04,
+    #[doc = "Generate (repeated) Start on the I2C bus and transmit the address in DATA\\[7:0\\] expecting a NACK response"]
+    START_EXPECT_NACK = 0x05,
     #[doc = "Generate (repeated) Start on the I2C bus and transmit the address in DATA\\[7:0\\] using HS mode"]
-    GENERATE_START_AND_TRANSMIT_ADDRESS_IN_DATA_7_THROUGH_0_USING_HIGH_SPEED_MODE = 0x06,
-    #[doc = "Generate (repeated) Start on the I2C bus and transmit the address in DATA\\[7:0\\] using HS mode (this transfer expects a NACK to be returned)"]
-    GENERATE_START_AND_TRANSMIT_ADDRESS_IN_DATA_7_THROUGH_0_USING_HIGH_SPEED_MODE_EXPECT_NACK =
-        0x07,
+    START_HS = 0x06,
+    #[doc = "Generate (repeated) Start on the I2C bus and transmit the address in DATA\\[7:0\\] using HS mode expecting a NACK response"]
+    START_HS_EXPECT_NACK = 0x07,
 }
 impl Cmd {
     #[inline(always)]

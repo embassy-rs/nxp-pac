@@ -9,6 +9,7 @@ includes:
   - mcxa/trng.yaml
   - mcxa/adc.yaml
   - mcxa/crc.yaml
+  - mcxa/lpi2c.yaml
 transforms:
   - !Sort
 

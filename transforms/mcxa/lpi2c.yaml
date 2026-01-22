@@ -1,0 +1,16 @@
+transforms:
+  - !DeleteEnumVariants
+    enum: lpi2c::vals::Cmd
+    from: .*
+  
+  - !AddEnumVariants
+    enum: lpi2c::vals::Cmd
+    variants:
+    - { name: TRANSMIT, value: 0, description: "Transmit value in DATA[7:0]" }
+    - { name: RECEIVE, value: 1, description: "Receive (DATA[7:0] + 1) bytes." }
+    - { name: STOP, value: 2, description: "Generate Stop condition on I2C bus." }
+    - { name: RECEIVE_AND_DISCARD, value: 3, description: "Receive and discard (DATA[7:0] + 1) bytes." }
+    - { name: START, value: 4, description: "Generate (repeated) Start on the I2C bus and transmit the address in DATA[7:0]" }
+    - { name: START_EXPECT_NACK, value: 5, description: "Generate (repeated) Start on the I2C bus and transmit the address in DATA[7:0] expecting a NACK response" }
+    - { name: START_HS, value: 6, description: "Generate (repeated) Start on the I2C bus and transmit the address in DATA[7:0] using HS mode" }
+    - { name: START_HS_EXPECT_NACK, value: 7, description: "Generate (repeated) Start on the I2C bus and transmit the address in DATA[7:0] using HS mode expecting a NACK response" }
