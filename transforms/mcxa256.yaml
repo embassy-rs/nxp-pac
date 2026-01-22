@@ -8,6 +8,7 @@ includes:
   - mcxa/wwdt.yaml
   - mcxa/trng.yaml
   - mcxa/adc.yaml
+  - mcxa/crc.yaml
 transforms:
   - !Sort
 

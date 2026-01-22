@@ -1,0 +1,26 @@
+transforms:
+  - !DeleteRegisters
+    block: crc0::Crc0
+    from: (data|gpoly)
+
+  - !AddRegisters
+    block: crc0::Crc0
+    registers:
+      - name: data8
+        byte_offset: 0x0
+        bit_size: 8
+      - name: data16
+        byte_offset: 0x0
+        bit_size: 16
+      - name: data32
+        byte_offset: 0x0
+        bit_size: 32
+      - name: gpoly8
+        byte_offset: 0x4
+        bit_size: 8
+      - name: gpoly16
+        byte_offset: 0x4
+        bit_size: 16
+      - name: gpoly32
+        byte_offset: 0x4
+        bit_size: 32
