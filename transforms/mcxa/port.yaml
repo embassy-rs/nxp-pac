@@ -43,6 +43,28 @@ transforms:
     from: port::vals::Pcr(\d+)Mux
     to: port::vals::Mux
 
+  - !DeleteEnumVariants
+    enum: port::vals::Mux
+    from: .*
+  
+  - !AddEnumVariants
+    enum: port::vals::Mux
+    variants:
+    - { name: MUX0, value: 0 }
+    - { name: MUX1, value: 1 }
+    - { name: MUX2, value: 2 }
+    - { name: MUX3, value: 3 }
+    - { name: MUX4, value: 4 }
+    - { name: MUX5, value: 5 }
+    - { name: MUX6, value: 6 }
+    - { name: MUX7, value: 7 }
+    - { name: MUX8, value: 8 }
+    - { name: MUX9, value: 9 }
+    - { name: MUX10, value: 10 }
+    - { name: MUX11, value: 11 }
+    - { name: MUX12, value: 12 }
+    - { name: MUX13, value: 13 }
+
   - !MergeEnums
     from: port::vals::Gpwe(\d+)
     to: port::vals::Gpwe
