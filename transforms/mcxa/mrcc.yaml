@@ -1,157 +1,22 @@
 transforms:
-  # Lpuart
   - !MergeEnums
-    from: mrcc0::vals::MrccLpuart(\d+)ClkselMux
-    to: mrcc0::vals::MrccLpuartClkselMux
+    from: mrcc0::vals::Mrcc(.+)(\d+)(.+)
+    to: mrcc0::vals::Mrcc$3
+    skip_unmergeable: true
+  
+  # Merge unmergeable per number, but keep the group intact.
   - !MergeEnums
-    from: mrcc0::vals::MrccLpuart(\d+)Clkdiv
-    to: mrcc0::vals::MrccLpuartClkdiv
-  - !MergeEnums
-    from: mrcc0::vals::MrccLpuart(\d+)ClkdivHalt
-    to: mrcc0::vals::MrccLpuartClkdivHalt
-  - !MergeEnums
-    from: mrcc0::vals::MrccLpuart(\d+)ClkdivReset
-    to: mrcc0::vals::MrccLpuartClkdivReset
-  - !MergeEnums
-    from: mrcc0::vals::MrccLpuart(\d+)ClkdivUnstab
-    to: mrcc0::vals::MrccLpuartClkdivUnstab
-
-  - !MergeFieldsets
-    from: mrcc0::regs::MrccLpuart(\d+)Clksel
-    to: mrcc0::regs::MrccLpuartClksel
-  - !MergeFieldsets
-    from: mrcc0::regs::MrccLpuart(\d+)Clkdiv
-    to: mrcc0::regs::MrccLpuartClkdiv
-
-  # Lpspi
-  - !MergeEnums
-    from: mrcc0::vals::MrccLpspi(\d+)ClkselMux
-    to: mrcc0::vals::MrccLpspiClkselMux
-  - !MergeEnums
-    from: mrcc0::vals::MrccLpspi(\d+)Clkdiv
-    to: mrcc0::vals::MrccLpspiClkdiv
-  - !MergeEnums
-    from: mrcc0::vals::MrccLpspi(\d+)ClkdivHalt
-    to: mrcc0::vals::MrccLpspiClkdivHalt
-  - !MergeEnums
-    from: mrcc0::vals::MrccLpspi(\d+)ClkdivReset
-    to: mrcc0::vals::MrccLpspiClkdivReset
-  - !MergeEnums
-    from: mrcc0::vals::MrccLpspi(\d+)ClkdivUnstab
-    to: mrcc0::vals::MrccLpspiClkdivUnstab
-
-  - !MergeFieldsets
-    from: mrcc0::regs::MrccLpspi(\d+)Clksel
-    to: mrcc0::regs::MrccLpspiClksel
-  - !MergeFieldsets
-    from: mrcc0::regs::MrccLpspi(\d+)Clkdiv
-    to: mrcc0::regs::MrccLpspiClkdiv
-
-  # Lpi2c
-  - !MergeEnums
-    from: mrcc0::vals::MrccLpi2c(\d+)ClkselMux
-    to: mrcc0::vals::MrccLpi2cClkselMux
-  - !MergeEnums
-    from: mrcc0::vals::MrccLpi2c(\d+)Clkdiv
-    to: mrcc0::vals::MrccLpi2cClkdiv
-  - !MergeEnums
-    from: mrcc0::vals::MrccLpi2c(\d+)ClkdivHalt
-    to: mrcc0::vals::MrccLpi2cClkdivHalt
-  - !MergeEnums
-    from: mrcc0::vals::MrccLpi2c(\d+)ClkdivReset
-    to: mrcc0::vals::MrccLpi2cClkdivReset
-  - !MergeEnums
-    from: mrcc0::vals::MrccLpi2c(\d+)ClkdivUnstab
-    to: mrcc0::vals::MrccLpi2cClkdivUnstab
-
-  - !MergeFieldsets
-    from: mrcc0::regs::MrccLpi2c(\d+)Clksel
-    to: mrcc0::regs::MrccLpi2cClksel
-  - !MergeFieldsets
-    from: mrcc0::regs::MrccLpi2c(\d+)Clkdiv
-    to: mrcc0::regs::MrccLpi2cClkdiv
-
-  # Ctimer
-  - !MergeEnums
-    from: mrcc0::vals::MrccCtimer(\d+)ClkselMux
-    to: mrcc0::vals::MrccCtimerClkselMux
-  - !MergeEnums
-    from: mrcc0::vals::MrccCtimer(\d+)Clkdiv
-    to: mrcc0::vals::MrccCtimerClkdiv
-  - !MergeEnums
-    from: mrcc0::vals::MrccCtimer(\d+)ClkdivHalt
-    to: mrcc0::vals::MrccCtimerClkdivHalt
-  - !MergeEnums
-    from: mrcc0::vals::MrccCtimer(\d+)ClkdivReset
-    to: mrcc0::vals::MrccCtimerClkdivReset
-  - !MergeEnums
-    from: mrcc0::vals::MrccCtimer(\d+)ClkdivUnstab
-    to: mrcc0::vals::MrccCtimerClkdivUnstab
-
-  - !MergeFieldsets
-    from: mrcc0::regs::MrccCtimer(\d+)Clksel
-    to: mrcc0::regs::MrccCtimerClksel
-  - !MergeFieldsets
-    from: mrcc0::regs::MrccCtimer(\d+)Clkdiv
-    to: mrcc0::regs::MrccCtimerClkdiv
-
-  # Cmp(Func|Rr)
-  - !MergeEnums
-    from: mrcc0::vals::MrccCmp(\d+)FuncClkdivHalt
-    to: mrcc0::vals::MrccCmpFuncClkdivHalt
-  - !MergeEnums
-    from: mrcc0::vals::MrccCmp(\d+)FuncClkdivReset
-    to: mrcc0::vals::MrccCmpFuncClkdivReset
-  - !MergeEnums
-    from: mrcc0::vals::MrccCmp(\d+)FuncClkdivUnstab
-    to: mrcc0::vals::MrccCmpFuncClkdivUnstab
+    from: mrcc0::vals::Mrcc(.+)(\d+)(.+)
+    to: mrcc0::vals::Mrcc$1$3
 
   - !MergeEnums
-    from: mrcc0::vals::MrccCmp(\d+)RrClkselMux
-    to: mrcc0::vals::MrccCmpRrClkselMux
-  - !MergeEnums
-    from: mrcc0::vals::MrccCmp(\d+)RrClkdiv
-    to: mrcc0::vals::MrccCmpRrClkdiv
-  - !MergeEnums
-    from: mrcc0::vals::MrccCmp(\d+)RrClkdivHalt
-    to: mrcc0::vals::MrccCmpRrClkdivHalt
-  - !MergeEnums
-    from: mrcc0::vals::MrccCmp(\d+)RrClkdivReset
-    to: mrcc0::vals::MrccCmpRrClkdivReset
-  - !MergeEnums
-    from: mrcc0::vals::MrccCmp(\d+)RrClkdivUnstab
-    to: mrcc0::vals::MrccCmpRrClkdivUnstab
+    from: mrcc0::vals::Mrcc(.*)(\d*)(ClkdivReset|ClkdivHalt|ClkdivUnstab)
+    to: mrcc0::vals::Mrcc$3
+
+  - !Rename
+    from: mrcc0::vals::Mrcc(.+)
+    to: mrcc0::vals::$1
 
   - !MergeFieldsets
-    from: mrcc0::regs::MrccCmp(\d+)FuncClkdiv
-    to: mrcc0::regs::MrccCmpFuncClkdiv
-  - !MergeFieldsets
-    from: mrcc0::regs::MrccCmp(\d+)RrClksel
-    to: mrcc0::regs::MrccCmpRrClksel
-  - !MergeFieldsets
-    from: mrcc0::regs::MrccCmp(\d+)RrClkdiv
-    to: mrcc0::regs::MrccCmpRrClkdiv
-
-  # Flexcan
-  - !MergeEnums
-    from: mrcc0::vals::MrccFlexcan(\d+)ClkselMux
-    to: mrcc0::vals::MrccFlexcanClkselMux
-  - !MergeEnums
-    from: mrcc0::vals::MrccFlexcan(\d+)Clkdiv
-    to: mrcc0::vals::MrccFlexcanClkdiv
-  - !MergeEnums
-    from: mrcc0::vals::MrccFlexcan(\d+)ClkdivHalt
-    to: mrcc0::vals::MrccFlexcanClkdivHalt
-  - !MergeEnums
-    from: mrcc0::vals::MrccFlexcan(\d+)ClkdivReset
-    to: mrcc0::vals::MrccFlexcanClkdivReset
-  - !MergeEnums
-    from: mrcc0::vals::MrccFlexcan(\d+)ClkdivUnstab
-    to: mrcc0::vals::MrccFlexcanClkdivUnstab
-
-  - !MergeFieldsets
-    from: mrcc0::regs::MrccFlexcan(\d+)Clksel
-    to: mrcc0::regs::MrccFlexcanClksel
-  - !MergeFieldsets
-    from: mrcc0::regs::MrccFlexcan(\d+)Clkdiv
-    to: mrcc0::regs::MrccFlexcanClkdiv
+    from: mrcc0::regs::Mrcc(.+)(\d+)(.+)
+    to: mrcc0::regs::$1$3
