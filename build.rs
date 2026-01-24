@@ -13,6 +13,7 @@ fn main() {
             x.starts_with("CARGO_FEATURE_MIMXRT")
                 || x.starts_with("CARGO_FEATURE_MCX")
                 || x.starts_with("CARGO_FEATURE_LPC55S69")
+                || x.starts_with("CARGO_FEATURE_LPC55S16")
         })
         .get_one()
     {
