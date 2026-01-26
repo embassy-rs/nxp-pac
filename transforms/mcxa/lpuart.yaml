@@ -5,3 +5,6 @@ transforms:
       - name: LPUART5
         base_address: 0x400da000
         block: lpuart::Lpuart
+
+  - !DeleteEnums
+    from: lpuart::vals::(Osr)

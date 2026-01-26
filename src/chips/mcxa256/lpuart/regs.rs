@@ -126,14 +126,14 @@ impl Baud {
     #[doc = "Oversampling Ratio"]
     #[must_use]
     #[inline(always)]
-    pub const fn osr(&self) -> super::vals::Osr {
+    pub const fn osr(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x1f;
-        super::vals::Osr::from_bits(val as u8)
+        val as u8
     }
     #[doc = "Oversampling Ratio"]
     #[inline(always)]
-    pub const fn set_osr(&mut self, val: super::vals::Osr) {
-        self.0 = (self.0 & !(0x1f << 24usize)) | (((val.to_bits() as u32) & 0x1f) << 24usize);
+    pub const fn set_osr(&mut self, val: u8) {
+        self.0 = (self.0 & !(0x1f << 24usize)) | (((val as u32) & 0x1f) << 24usize);
     }
     #[doc = "10-Bit Mode Select"]
     #[must_use]
@@ -203,7 +203,7 @@ impl defmt::Format for Baud {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Baud {{ sbr: {=u16:?}, sbns: {:?}, rxedgie: {=bool:?}, lbkdie: {=bool:?}, resyncdis: {:?}, bothedge: {=bool:?}, matcfg: {:?}, ridmae: {=bool:?}, rdmae: {=bool:?}, tdmae: {=bool:?}, osr: {:?}, m10: {=bool:?}, maen2: {=bool:?}, maen1: {=bool:?} }}",
+            "Baud {{ sbr: {=u16:?}, sbns: {:?}, rxedgie: {=bool:?}, lbkdie: {=bool:?}, resyncdis: {:?}, bothedge: {=bool:?}, matcfg: {:?}, ridmae: {=bool:?}, rdmae: {=bool:?}, tdmae: {=bool:?}, osr: {=u8:?}, m10: {=bool:?}, maen2: {=bool:?}, maen1: {=bool:?} }}",
             self.sbr(),
             self.sbns(),
             self.rxedgie(),
