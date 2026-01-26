@@ -1,0 +1,19 @@
+transforms:
+  - !MergeBlocks
+    from: port(\d+)::Port(\d+)
+    to: port0::Port0
+    main: port0::Port0
+    check: Layout
+
+  - !Rename
+    from: port0::(.*)
+    to: port::$1
+    type: All
+
+  - !Rename
+    from: port::Port0
+    to: port::Port
+    type: Block
+
+  - !Delete
+    from: port(\d+)::(.*)
