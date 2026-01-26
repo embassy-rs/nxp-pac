@@ -75,50 +75,50 @@ impl Ier {
     #[doc = "Time Invalid Interrupt Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn tiie(&self) -> super::vals::Tiie {
+    pub const fn tiie(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::Tiie::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Time Invalid Interrupt Enable"]
     #[inline(always)]
-    pub const fn set_tiie(&mut self, val: super::vals::Tiie) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    pub const fn set_tiie(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
     #[doc = "Time Overflow Interrupt Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn toie(&self) -> super::vals::Toie {
+    pub const fn toie(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::Toie::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Time Overflow Interrupt Enable"]
     #[inline(always)]
-    pub const fn set_toie(&mut self, val: super::vals::Toie) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    pub const fn set_toie(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
     #[doc = "Time Alarm Interrupt Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn taie(&self) -> super::vals::Taie {
+    pub const fn taie(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
-        super::vals::Taie::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Time Alarm Interrupt Enable"]
     #[inline(always)]
-    pub const fn set_taie(&mut self, val: super::vals::Taie) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
+    pub const fn set_taie(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
     #[doc = "Time Seconds Interrupt Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn tsie(&self) -> super::vals::Tsie {
+    pub const fn tsie(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
-        super::vals::Tsie::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Time Seconds Interrupt Enable"]
     #[inline(always)]
-    pub const fn set_tsie(&mut self, val: super::vals::Tsie) {
-        self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
+    pub const fn set_tsie(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
     #[doc = "Timer Seconds Interrupt Configuration"]
     #[must_use]
@@ -155,7 +155,7 @@ impl defmt::Format for Ier {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Ier {{ tiie: {:?}, toie: {:?}, taie: {:?}, tsie: {:?}, tsic: {:?} }}",
+            "Ier {{ tiie: {=bool:?}, toie: {=bool:?}, taie: {=bool:?}, tsie: {=bool:?}, tsic: {:?} }}",
             self.tiie(),
             self.toie(),
             self.taie(),
@@ -255,50 +255,50 @@ impl Sr {
     #[doc = "Time Invalid Flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn tif(&self) -> super::vals::Tif {
+    pub const fn tif(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::Tif::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Time Invalid Flag"]
     #[inline(always)]
-    pub const fn set_tif(&mut self, val: super::vals::Tif) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    pub const fn set_tif(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
     #[doc = "Time Overflow Flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn tof(&self) -> super::vals::Tof {
+    pub const fn tof(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::Tof::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Time Overflow Flag"]
     #[inline(always)]
-    pub const fn set_tof(&mut self, val: super::vals::Tof) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    pub const fn set_tof(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
     #[doc = "Time Alarm Flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn taf(&self) -> super::vals::Taf {
+    pub const fn taf(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
-        super::vals::Taf::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Time Alarm Flag"]
     #[inline(always)]
-    pub const fn set_taf(&mut self, val: super::vals::Taf) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
+    pub const fn set_taf(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
     #[doc = "Time Counter Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn tce(&self) -> super::vals::Tce {
+    pub const fn tce(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
-        super::vals::Tce::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Time Counter Enable"]
     #[inline(always)]
-    pub const fn set_tce(&mut self, val: super::vals::Tce) {
-        self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
+    pub const fn set_tce(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
 }
 impl Default for Sr {
@@ -322,7 +322,7 @@ impl defmt::Format for Sr {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Sr {{ tif: {:?}, tof: {:?}, taf: {:?}, tce: {:?} }}",
+            "Sr {{ tif: {=bool:?}, tof: {=bool:?}, taf: {=bool:?}, tce: {=bool:?} }}",
             self.tif(),
             self.tof(),
             self.taf(),

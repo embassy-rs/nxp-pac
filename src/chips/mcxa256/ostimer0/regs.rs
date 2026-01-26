@@ -256,14 +256,14 @@ impl OseventCtrl {
     #[doc = "Interrupt or Wake-Up Request"]
     #[must_use]
     #[inline(always)]
-    pub const fn ostimer_intena(&self) -> super::vals::OstimerIntena {
+    pub const fn ostimer_intena(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::OstimerIntena::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Interrupt or Wake-Up Request"]
     #[inline(always)]
-    pub const fn set_ostimer_intena(&mut self, val: super::vals::OstimerIntena) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    pub const fn set_ostimer_intena(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
     #[doc = "EVTimer Match Write Ready"]
     #[must_use]
@@ -311,7 +311,7 @@ impl defmt::Format for OseventCtrl {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "OseventCtrl {{ ostimer_intrflag: {=bool:?}, ostimer_intena: {:?}, match_wr_rdy: {=bool:?}, debug_en: {=bool:?} }}",
+            "OseventCtrl {{ ostimer_intrflag: {=bool:?}, ostimer_intena: {=bool:?}, match_wr_rdy: {=bool:?}, debug_en: {=bool:?} }}",
             self.ostimer_intrflag(),
             self.ostimer_intena(),
             self.match_wr_rdy(),

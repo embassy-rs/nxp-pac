@@ -51,4 +51,3 @@ impl Ostimer0 {
     }
 }
 pub mod regs;
-pub mod vals;

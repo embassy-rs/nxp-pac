@@ -10,6 +10,8 @@ includes:
   - mcxa/adc.yaml
   - mcxa/crc.yaml
   - mcxa/lpi2c.yaml
+  - mcxa/rtc.yaml
+  - mcxa/ostimer.yaml
 transforms:
   - !Sort
 
