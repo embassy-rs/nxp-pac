@@ -1,46 +1,6 @@
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum CsrScs {
-    _RESERVED_0 = 0x0,
-    #[doc = "SOSC"]
-    SOSC = 0x01,
-    #[doc = "SIRC"]
-    SIRC = 0x02,
-    #[doc = "FIRC"]
-    FIRC = 0x03,
-    #[doc = "ROSC"]
-    ROSC = 0x04,
-    _RESERVED_5 = 0x05,
-    #[doc = "SPLL"]
-    SPLL = 0x06,
-    _RESERVED_7 = 0x07,
-}
-impl CsrScs {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> CsrScs {
-        unsafe { core::mem::transmute(val & 0x07) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for CsrScs {
-    #[inline(always)]
-    fn from(val: u8) -> CsrScs {
-        CsrScs::from_bits(val)
-    }
-}
-impl From<CsrScs> for u8 {
-    #[inline(always)]
-    fn from(val: CsrScs) -> u8 {
-        CsrScs::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Erefs {
     #[doc = "External reference clock selected."]
     EXTERNAL = 0x0,
@@ -394,46 +354,6 @@ impl From<Range> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum RccrScs {
-    _RESERVED_0 = 0x0,
-    #[doc = "SOSC"]
-    SOSC = 0x01,
-    #[doc = "SIRC"]
-    SIRC = 0x02,
-    #[doc = "FIRC"]
-    FIRC = 0x03,
-    #[doc = "ROSC"]
-    ROSC = 0x04,
-    _RESERVED_5 = 0x05,
-    #[doc = "SPLL"]
-    SPLL = 0x06,
-    _RESERVED_7 = 0x07,
-}
-impl RccrScs {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> RccrScs {
-        unsafe { core::mem::transmute(val & 0x07) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for RccrScs {
-    #[inline(always)]
-    fn from(val: u8) -> RccrScs {
-        RccrScs::from_bits(val)
-    }
-}
-impl From<RccrScs> for u8 {
-    #[inline(always)]
-    fn from(val: RccrScs) -> u8 {
-        RccrScs::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RosccsrLk {
     #[doc = "Control Status Register can be written"]
     WRITE_ENABLED = 0x0,
@@ -522,6 +442,46 @@ impl From<Roscvld> for u8 {
     #[inline(always)]
     fn from(val: Roscvld) -> u8 {
         Roscvld::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Scs {
+    _RESERVED_0 = 0x0,
+    #[doc = "SOSC"]
+    SOSC = 0x01,
+    #[doc = "SIRC"]
+    SIRC = 0x02,
+    #[doc = "FIRC"]
+    FIRC = 0x03,
+    #[doc = "ROSC"]
+    ROSC = 0x04,
+    _RESERVED_5 = 0x05,
+    #[doc = "SPLL"]
+    SPLL = 0x06,
+    _RESERVED_7 = 0x07,
+}
+impl Scs {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Scs {
+        unsafe { core::mem::transmute(val & 0x07) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Scs {
+    #[inline(always)]
+    fn from(val: u8) -> Scs {
+        Scs::from_bits(val)
+    }
+}
+impl From<Scs> for u8 {
+    #[inline(always)]
+    fn from(val: Scs) -> u8 {
+        Scs::to_bits(val)
     }
 }
 #[repr(u8)]

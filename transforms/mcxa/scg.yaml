@@ -1,0 +1,5 @@
+transforms:
+  - !MergeEnums
+    from: scg0::vals::(Rccr|Csr)Scs
+    to: scg0::vals::Scs
+

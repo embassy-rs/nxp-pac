@@ -633,14 +633,14 @@ impl Sc {
     #[doc = "SPC Busy Status Flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn busy(&self) -> super::vals::Busy {
+    pub const fn busy(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::Busy::from_bits(val as u8)
+        val != 0
     }
     #[doc = "SPC Busy Status Flag"]
     #[inline(always)]
-    pub const fn set_busy(&mut self, val: super::vals::Busy) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    pub const fn set_busy(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
     #[doc = "SPC Power Mode Configuration Status Flag"]
     #[must_use]
@@ -700,7 +700,7 @@ impl defmt::Format for Sc {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Sc {{ busy: {:?}, spc_lp_req: {:?}, spc_lp_mode: {:?}, iso_clr: {=bool:?} }}",
+            "Sc {{ busy: {=bool:?}, spc_lp_req: {:?}, spc_lp_mode: {:?}, iso_clr: {=bool:?} }}",
             self.busy(),
             self.spc_lp_req(),
             self.spc_lp_mode(),
@@ -728,26 +728,26 @@ impl Sramctl {
     #[doc = "SRAM Voltage Update Request"]
     #[must_use]
     #[inline(always)]
-    pub const fn req(&self) -> super::vals::Req {
+    pub const fn req(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
-        super::vals::Req::from_bits(val as u8)
+        val != 0
     }
     #[doc = "SRAM Voltage Update Request"]
     #[inline(always)]
-    pub const fn set_req(&mut self, val: super::vals::Req) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
+    pub const fn set_req(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
     #[doc = "SRAM Voltage Update Request Acknowledge"]
     #[must_use]
     #[inline(always)]
-    pub const fn ack(&self) -> super::vals::Ack {
+    pub const fn ack(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
-        super::vals::Ack::from_bits(val as u8)
+        val != 0
     }
     #[doc = "SRAM Voltage Update Request Acknowledge"]
     #[inline(always)]
-    pub const fn set_ack(&mut self, val: super::vals::Ack) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
+    pub const fn set_ack(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
     }
 }
 impl Default for Sramctl {
@@ -770,7 +770,7 @@ impl defmt::Format for Sramctl {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Sramctl {{ vsm: {:?}, req: {:?}, ack: {:?} }}",
+            "Sramctl {{ vsm: {:?}, req: {=bool:?}, ack: {=bool:?} }}",
             self.vsm(),
             self.req(),
             self.ack()

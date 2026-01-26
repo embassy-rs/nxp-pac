@@ -6,13 +6,13 @@ impl Csr {
     #[doc = "System Clock Source"]
     #[must_use]
     #[inline(always)]
-    pub const fn scs(&self) -> super::vals::CsrScs {
+    pub const fn scs(&self) -> super::vals::Scs {
         let val = (self.0 >> 24usize) & 0x07;
-        super::vals::CsrScs::from_bits(val as u8)
+        super::vals::Scs::from_bits(val as u8)
     }
     #[doc = "System Clock Source"]
     #[inline(always)]
-    pub const fn set_scs(&mut self, val: super::vals::CsrScs) {
+    pub const fn set_scs(&mut self, val: super::vals::Scs) {
         self.0 = (self.0 & !(0x07 << 24usize)) | (((val.to_bits() as u32) & 0x07) << 24usize);
     }
 }
@@ -522,13 +522,13 @@ impl Rccr {
     #[doc = "System Clock Source"]
     #[must_use]
     #[inline(always)]
-    pub const fn scs(&self) -> super::vals::RccrScs {
+    pub const fn scs(&self) -> super::vals::Scs {
         let val = (self.0 >> 24usize) & 0x07;
-        super::vals::RccrScs::from_bits(val as u8)
+        super::vals::Scs::from_bits(val as u8)
     }
     #[doc = "System Clock Source"]
     #[inline(always)]
-    pub const fn set_scs(&mut self, val: super::vals::RccrScs) {
+    pub const fn set_scs(&mut self, val: super::vals::Scs) {
         self.0 = (self.0 & !(0x07 << 24usize)) | (((val.to_bits() as u32) & 0x07) << 24usize);
     }
 }

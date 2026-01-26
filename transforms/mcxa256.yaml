@@ -13,6 +13,8 @@ includes:
   - mcxa/lpuart.yaml
   - mcxa/rtc.yaml
   - mcxa/ostimer.yaml
+  - mcxa/scg.yaml
+  - mcxa/spc.yaml
 transforms:
   - !Sort
 

@@ -1,37 +1,6 @@
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Ack {
-    #[doc = "Not acknowledged"]
-    ACK_NO = 0x0,
-    #[doc = "Acknowledged"]
-    ACK_YES = 0x01,
-}
-impl Ack {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Ack {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Ack {
-    #[inline(always)]
-    fn from(val: u8) -> Ack {
-        Ack::from_bits(val)
-    }
-}
-impl From<Ack> for u8 {
-    #[inline(always)]
-    fn from(val: Ack) -> u8 {
-        Ack::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ActiveCfgBgmode {
     #[doc = "Bandgap disabled"]
     BGMODE0 = 0x0,
@@ -126,37 +95,6 @@ impl From<ActiveCfgCoreldoVddLvl> for u8 {
     #[inline(always)]
     fn from(val: ActiveCfgCoreldoVddLvl) -> u8 {
         ActiveCfgCoreldoVddLvl::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Busy {
-    #[doc = "Not busy"]
-    BUSY_NO = 0x0,
-    #[doc = "Busy"]
-    BUSY_YES = 0x01,
-}
-impl Busy {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Busy {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Busy {
-    #[inline(always)]
-    fn from(val: u8) -> Busy {
-        Busy::from_bits(val)
-    }
-}
-impl From<Busy> for u8 {
-    #[inline(always)]
-    fn from(val: Busy) -> u8 {
-        Busy::to_bits(val)
     }
 }
 #[repr(u8)]
@@ -510,37 +448,6 @@ impl From<PwrReqStatus> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Req {
-    #[doc = "Do not request"]
-    REQ_NO = 0x0,
-    #[doc = "Request"]
-    REQ_YES = 0x01,
-}
-impl Req {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Req {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Req {
-    #[inline(always)]
-    fn from(val: u8) -> Req {
-        Req::from_bits(val)
-    }
-}
-impl From<Req> for u8 {
-    #[inline(always)]
-    fn from(val: Req) -> u8 {
-        Req::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SpcLpMode {
     #[doc = "Sleep mode with system clock running"]
     MODE0 = 0x0,
@@ -776,11 +683,11 @@ impl From<VddVdDisable> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Vsm {
     _RESERVED_0 = 0x0,
-    #[doc = "1.0 V"]
-    VSM1 = 0x01,
-    #[doc = "1.1 V"]
-    VSM2 = 0x02,
-    _RESERVED_3 = 0x03,
+    #[doc = "SRAM configured for 1.0V"]
+    SRAM1V0 = 0x01,
+    _RESERVED_2 = 0x02,
+    #[doc = "SRAM configured for 1.2V"]
+    SRAM1V2 = 0x03,
 }
 impl Vsm {
     #[inline(always)]

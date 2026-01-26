@@ -1,0 +1,13 @@
+transforms:
+  - !DeleteEnums
+      from: spc0::vals::(Busy|Req|Ack)
+  
+  - !DeleteEnumVariants
+    enum: spc0::vals::Vsm
+    from: .*
+  
+  - !AddEnumVariants
+    enum: spc0::vals::Vsm
+    variants:
+    - { name: SRAM1V0, value: 1, description: "SRAM configured for 1.0V" }
+    - { name: SRAM1V2, value: 3, description: "SRAM configured for 1.2V" }
