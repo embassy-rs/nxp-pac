@@ -1,6 +1,6 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
-#![doc = "Peripheral access API (generated using chiptool v0.1.0 (f78270d 2025-11-08))"]
+#![doc = "Peripheral access API (generated using chiptool v0.1.0 (935ad2b 2025-12-07))"]
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Interrupt {
@@ -322,6 +322,7 @@ pub const CAN1: can::Can = unsafe { can::Can::from_ptr(0x400d_0000usize as _) };
 pub const LPI2C2: lpi2c::Lpi2c = unsafe { lpi2c::Lpi2c::from_ptr(0x400d_4000usize as _) };
 #[doc = "Low-Power Inter-Integrated Circuit"]
 pub const LPI2C3: lpi2c::Lpi2c = unsafe { lpi2c::Lpi2c::from_ptr(0x400d_5000usize as _) };
+pub const LPUART5: lpuart::Lpuart = unsafe { lpuart::Lpuart::from_ptr(0x400d_a000usize as _) };
 #[doc = "TDET"]
 pub const TDET0: tdet0::Tdet0 = unsafe { tdet0::Tdet0::from_ptr(0x400e_9000usize as _) };
 #[doc = "no description available"]

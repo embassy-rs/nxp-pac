@@ -1,0 +1,7 @@
+transforms:
+  - !AddPeripherals
+    devices: .*
+    peripherals:
+      - name: LPUART5
+        base_address: 0x400da000
+        block: lpuart::Lpuart

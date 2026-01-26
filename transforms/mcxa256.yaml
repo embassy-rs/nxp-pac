@@ -10,6 +10,7 @@ includes:
   - mcxa/adc.yaml
   - mcxa/crc.yaml
   - mcxa/lpi2c.yaml
+  - mcxa/lpuart.yaml
   - mcxa/rtc.yaml
   - mcxa/ostimer.yaml
 transforms:
