@@ -9,3 +9,40 @@ transforms:
     from: rgpio::(.*)
     to: gpio::$1
     type: All
+
+  - !DeleteEnums
+    from: gpio::vals::(Ptto|Pdi)(\d+)
+
+  - !MergeEnums
+    from: gpio::vals::(Pdd|Pid|Ptso|Ptco)(\d+)
+    to: gpio::vals::$1
+  
+  - !MakeFieldArray
+    fieldsets: gpio::regs::Pddr
+    from: pdd(\d+)
+    to: pdd
+
+  - !MakeFieldArray
+    fieldsets: gpio::regs::Pidr
+    from: pid(\d+)
+    to: pid
+  
+  - !MakeFieldArray
+    fieldsets: gpio::regs::Psor
+    from: ptso(\d+)
+    to: ptso
+
+  - !MakeFieldArray
+    fieldsets: gpio::regs::Pcor
+    from: ptco(\d+)
+    to: ptco
+  
+  - !MakeFieldArray
+    fieldsets: gpio::regs::Ptor
+    from: ptto(\d+)
+    to: ptto
+  
+  - !MakeFieldArray
+    fieldsets: gpio::regs::Pdir
+    from: pdi(\d+)
+    to: pdi

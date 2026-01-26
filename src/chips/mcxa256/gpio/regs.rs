@@ -1103,386 +1103,18 @@ impl Pcor {
     #[doc = "Port Clear Output"]
     #[must_use]
     #[inline(always)]
-    pub const fn ptco0(&self) -> super::vals::Ptco0 {
-        let val = (self.0 >> 0usize) & 0x01;
-        super::vals::Ptco0::from_bits(val as u8)
+    pub const fn ptco(&self, n: usize) -> super::vals::Ptco {
+        assert!(n < 32usize);
+        let offs = 0usize + n * 1usize;
+        let val = (self.0 >> offs) & 0x01;
+        super::vals::Ptco::from_bits(val as u8)
     }
     #[doc = "Port Clear Output"]
     #[inline(always)]
-    pub const fn set_ptco0(&mut self, val: super::vals::Ptco0) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco1(&self) -> super::vals::Ptco1 {
-        let val = (self.0 >> 1usize) & 0x01;
-        super::vals::Ptco1::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco1(&mut self, val: super::vals::Ptco1) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco2(&self) -> super::vals::Ptco2 {
-        let val = (self.0 >> 2usize) & 0x01;
-        super::vals::Ptco2::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco2(&mut self, val: super::vals::Ptco2) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco3(&self) -> super::vals::Ptco3 {
-        let val = (self.0 >> 3usize) & 0x01;
-        super::vals::Ptco3::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco3(&mut self, val: super::vals::Ptco3) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco4(&self) -> super::vals::Ptco4 {
-        let val = (self.0 >> 4usize) & 0x01;
-        super::vals::Ptco4::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco4(&mut self, val: super::vals::Ptco4) {
-        self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco5(&self) -> super::vals::Ptco5 {
-        let val = (self.0 >> 5usize) & 0x01;
-        super::vals::Ptco5::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco5(&mut self, val: super::vals::Ptco5) {
-        self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco6(&self) -> super::vals::Ptco6 {
-        let val = (self.0 >> 6usize) & 0x01;
-        super::vals::Ptco6::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco6(&mut self, val: super::vals::Ptco6) {
-        self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco7(&self) -> super::vals::Ptco7 {
-        let val = (self.0 >> 7usize) & 0x01;
-        super::vals::Ptco7::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco7(&mut self, val: super::vals::Ptco7) {
-        self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco8(&self) -> super::vals::Ptco8 {
-        let val = (self.0 >> 8usize) & 0x01;
-        super::vals::Ptco8::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco8(&mut self, val: super::vals::Ptco8) {
-        self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco9(&self) -> super::vals::Ptco9 {
-        let val = (self.0 >> 9usize) & 0x01;
-        super::vals::Ptco9::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco9(&mut self, val: super::vals::Ptco9) {
-        self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco10(&self) -> super::vals::Ptco10 {
-        let val = (self.0 >> 10usize) & 0x01;
-        super::vals::Ptco10::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco10(&mut self, val: super::vals::Ptco10) {
-        self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco11(&self) -> super::vals::Ptco11 {
-        let val = (self.0 >> 11usize) & 0x01;
-        super::vals::Ptco11::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco11(&mut self, val: super::vals::Ptco11) {
-        self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco12(&self) -> super::vals::Ptco12 {
-        let val = (self.0 >> 12usize) & 0x01;
-        super::vals::Ptco12::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco12(&mut self, val: super::vals::Ptco12) {
-        self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco13(&self) -> super::vals::Ptco13 {
-        let val = (self.0 >> 13usize) & 0x01;
-        super::vals::Ptco13::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco13(&mut self, val: super::vals::Ptco13) {
-        self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco14(&self) -> super::vals::Ptco14 {
-        let val = (self.0 >> 14usize) & 0x01;
-        super::vals::Ptco14::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco14(&mut self, val: super::vals::Ptco14) {
-        self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco15(&self) -> super::vals::Ptco15 {
-        let val = (self.0 >> 15usize) & 0x01;
-        super::vals::Ptco15::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco15(&mut self, val: super::vals::Ptco15) {
-        self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco16(&self) -> super::vals::Ptco16 {
-        let val = (self.0 >> 16usize) & 0x01;
-        super::vals::Ptco16::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco16(&mut self, val: super::vals::Ptco16) {
-        self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco17(&self) -> super::vals::Ptco17 {
-        let val = (self.0 >> 17usize) & 0x01;
-        super::vals::Ptco17::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco17(&mut self, val: super::vals::Ptco17) {
-        self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco18(&self) -> super::vals::Ptco18 {
-        let val = (self.0 >> 18usize) & 0x01;
-        super::vals::Ptco18::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco18(&mut self, val: super::vals::Ptco18) {
-        self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco19(&self) -> super::vals::Ptco19 {
-        let val = (self.0 >> 19usize) & 0x01;
-        super::vals::Ptco19::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco19(&mut self, val: super::vals::Ptco19) {
-        self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco20(&self) -> super::vals::Ptco20 {
-        let val = (self.0 >> 20usize) & 0x01;
-        super::vals::Ptco20::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco20(&mut self, val: super::vals::Ptco20) {
-        self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco21(&self) -> super::vals::Ptco21 {
-        let val = (self.0 >> 21usize) & 0x01;
-        super::vals::Ptco21::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco21(&mut self, val: super::vals::Ptco21) {
-        self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco22(&self) -> super::vals::Ptco22 {
-        let val = (self.0 >> 22usize) & 0x01;
-        super::vals::Ptco22::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco22(&mut self, val: super::vals::Ptco22) {
-        self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco23(&self) -> super::vals::Ptco23 {
-        let val = (self.0 >> 23usize) & 0x01;
-        super::vals::Ptco23::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco23(&mut self, val: super::vals::Ptco23) {
-        self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco24(&self) -> super::vals::Ptco24 {
-        let val = (self.0 >> 24usize) & 0x01;
-        super::vals::Ptco24::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco24(&mut self, val: super::vals::Ptco24) {
-        self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco25(&self) -> super::vals::Ptco25 {
-        let val = (self.0 >> 25usize) & 0x01;
-        super::vals::Ptco25::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco25(&mut self, val: super::vals::Ptco25) {
-        self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco26(&self) -> super::vals::Ptco26 {
-        let val = (self.0 >> 26usize) & 0x01;
-        super::vals::Ptco26::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco26(&mut self, val: super::vals::Ptco26) {
-        self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco27(&self) -> super::vals::Ptco27 {
-        let val = (self.0 >> 27usize) & 0x01;
-        super::vals::Ptco27::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco27(&mut self, val: super::vals::Ptco27) {
-        self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco28(&self) -> super::vals::Ptco28 {
-        let val = (self.0 >> 28usize) & 0x01;
-        super::vals::Ptco28::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco28(&mut self, val: super::vals::Ptco28) {
-        self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco29(&self) -> super::vals::Ptco29 {
-        let val = (self.0 >> 29usize) & 0x01;
-        super::vals::Ptco29::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco29(&mut self, val: super::vals::Ptco29) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco30(&self) -> super::vals::Ptco30 {
-        let val = (self.0 >> 30usize) & 0x01;
-        super::vals::Ptco30::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco30(&mut self, val: super::vals::Ptco30) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
-    }
-    #[doc = "Port Clear Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptco31(&self) -> super::vals::Ptco31 {
-        let val = (self.0 >> 31usize) & 0x01;
-        super::vals::Ptco31::from_bits(val as u8)
-    }
-    #[doc = "Port Clear Output"]
-    #[inline(always)]
-    pub const fn set_ptco31(&mut self, val: super::vals::Ptco31) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
+    pub const fn set_ptco(&mut self, n: usize, val: super::vals::Ptco) {
+        assert!(n < 32usize);
+        let offs = 0usize + n * 1usize;
+        self.0 = (self.0 & !(0x01 << offs)) | (((val.to_bits() as u32) & 0x01) << offs);
     }
 }
 impl Default for Pcor {
@@ -1494,38 +1126,38 @@ impl Default for Pcor {
 impl core::fmt::Debug for Pcor {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pcor")
-            .field("ptco0", &self.ptco0())
-            .field("ptco1", &self.ptco1())
-            .field("ptco2", &self.ptco2())
-            .field("ptco3", &self.ptco3())
-            .field("ptco4", &self.ptco4())
-            .field("ptco5", &self.ptco5())
-            .field("ptco6", &self.ptco6())
-            .field("ptco7", &self.ptco7())
-            .field("ptco8", &self.ptco8())
-            .field("ptco9", &self.ptco9())
-            .field("ptco10", &self.ptco10())
-            .field("ptco11", &self.ptco11())
-            .field("ptco12", &self.ptco12())
-            .field("ptco13", &self.ptco13())
-            .field("ptco14", &self.ptco14())
-            .field("ptco15", &self.ptco15())
-            .field("ptco16", &self.ptco16())
-            .field("ptco17", &self.ptco17())
-            .field("ptco18", &self.ptco18())
-            .field("ptco19", &self.ptco19())
-            .field("ptco20", &self.ptco20())
-            .field("ptco21", &self.ptco21())
-            .field("ptco22", &self.ptco22())
-            .field("ptco23", &self.ptco23())
-            .field("ptco24", &self.ptco24())
-            .field("ptco25", &self.ptco25())
-            .field("ptco26", &self.ptco26())
-            .field("ptco27", &self.ptco27())
-            .field("ptco28", &self.ptco28())
-            .field("ptco29", &self.ptco29())
-            .field("ptco30", &self.ptco30())
-            .field("ptco31", &self.ptco31())
+            .field("ptco[0]", &self.ptco(0usize))
+            .field("ptco[1]", &self.ptco(1usize))
+            .field("ptco[2]", &self.ptco(2usize))
+            .field("ptco[3]", &self.ptco(3usize))
+            .field("ptco[4]", &self.ptco(4usize))
+            .field("ptco[5]", &self.ptco(5usize))
+            .field("ptco[6]", &self.ptco(6usize))
+            .field("ptco[7]", &self.ptco(7usize))
+            .field("ptco[8]", &self.ptco(8usize))
+            .field("ptco[9]", &self.ptco(9usize))
+            .field("ptco[10]", &self.ptco(10usize))
+            .field("ptco[11]", &self.ptco(11usize))
+            .field("ptco[12]", &self.ptco(12usize))
+            .field("ptco[13]", &self.ptco(13usize))
+            .field("ptco[14]", &self.ptco(14usize))
+            .field("ptco[15]", &self.ptco(15usize))
+            .field("ptco[16]", &self.ptco(16usize))
+            .field("ptco[17]", &self.ptco(17usize))
+            .field("ptco[18]", &self.ptco(18usize))
+            .field("ptco[19]", &self.ptco(19usize))
+            .field("ptco[20]", &self.ptco(20usize))
+            .field("ptco[21]", &self.ptco(21usize))
+            .field("ptco[22]", &self.ptco(22usize))
+            .field("ptco[23]", &self.ptco(23usize))
+            .field("ptco[24]", &self.ptco(24usize))
+            .field("ptco[25]", &self.ptco(25usize))
+            .field("ptco[26]", &self.ptco(26usize))
+            .field("ptco[27]", &self.ptco(27usize))
+            .field("ptco[28]", &self.ptco(28usize))
+            .field("ptco[29]", &self.ptco(29usize))
+            .field("ptco[30]", &self.ptco(30usize))
+            .field("ptco[31]", &self.ptco(31usize))
             .finish()
     }
 }
@@ -1534,39 +1166,39 @@ impl defmt::Format for Pcor {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Pcor {{ ptco0: {:?}, ptco1: {:?}, ptco2: {:?}, ptco3: {:?}, ptco4: {:?}, ptco5: {:?}, ptco6: {:?}, ptco7: {:?}, ptco8: {:?}, ptco9: {:?}, ptco10: {:?}, ptco11: {:?}, ptco12: {:?}, ptco13: {:?}, ptco14: {:?}, ptco15: {:?}, ptco16: {:?}, ptco17: {:?}, ptco18: {:?}, ptco19: {:?}, ptco20: {:?}, ptco21: {:?}, ptco22: {:?}, ptco23: {:?}, ptco24: {:?}, ptco25: {:?}, ptco26: {:?}, ptco27: {:?}, ptco28: {:?}, ptco29: {:?}, ptco30: {:?}, ptco31: {:?} }}",
-            self.ptco0(),
-            self.ptco1(),
-            self.ptco2(),
-            self.ptco3(),
-            self.ptco4(),
-            self.ptco5(),
-            self.ptco6(),
-            self.ptco7(),
-            self.ptco8(),
-            self.ptco9(),
-            self.ptco10(),
-            self.ptco11(),
-            self.ptco12(),
-            self.ptco13(),
-            self.ptco14(),
-            self.ptco15(),
-            self.ptco16(),
-            self.ptco17(),
-            self.ptco18(),
-            self.ptco19(),
-            self.ptco20(),
-            self.ptco21(),
-            self.ptco22(),
-            self.ptco23(),
-            self.ptco24(),
-            self.ptco25(),
-            self.ptco26(),
-            self.ptco27(),
-            self.ptco28(),
-            self.ptco29(),
-            self.ptco30(),
-            self.ptco31()
+            "Pcor {{ ptco[0]: {:?}, ptco[1]: {:?}, ptco[2]: {:?}, ptco[3]: {:?}, ptco[4]: {:?}, ptco[5]: {:?}, ptco[6]: {:?}, ptco[7]: {:?}, ptco[8]: {:?}, ptco[9]: {:?}, ptco[10]: {:?}, ptco[11]: {:?}, ptco[12]: {:?}, ptco[13]: {:?}, ptco[14]: {:?}, ptco[15]: {:?}, ptco[16]: {:?}, ptco[17]: {:?}, ptco[18]: {:?}, ptco[19]: {:?}, ptco[20]: {:?}, ptco[21]: {:?}, ptco[22]: {:?}, ptco[23]: {:?}, ptco[24]: {:?}, ptco[25]: {:?}, ptco[26]: {:?}, ptco[27]: {:?}, ptco[28]: {:?}, ptco[29]: {:?}, ptco[30]: {:?}, ptco[31]: {:?} }}",
+            self.ptco(0usize),
+            self.ptco(1usize),
+            self.ptco(2usize),
+            self.ptco(3usize),
+            self.ptco(4usize),
+            self.ptco(5usize),
+            self.ptco(6usize),
+            self.ptco(7usize),
+            self.ptco(8usize),
+            self.ptco(9usize),
+            self.ptco(10usize),
+            self.ptco(11usize),
+            self.ptco(12usize),
+            self.ptco(13usize),
+            self.ptco(14usize),
+            self.ptco(15usize),
+            self.ptco(16usize),
+            self.ptco(17usize),
+            self.ptco(18usize),
+            self.ptco(19usize),
+            self.ptco(20usize),
+            self.ptco(21usize),
+            self.ptco(22usize),
+            self.ptco(23usize),
+            self.ptco(24usize),
+            self.ptco(25usize),
+            self.ptco(26usize),
+            self.ptco(27usize),
+            self.ptco(28usize),
+            self.ptco(29usize),
+            self.ptco(30usize),
+            self.ptco(31usize)
         )
     }
 }
@@ -1578,386 +1210,18 @@ impl Pddr {
     #[doc = "Port Data Direction"]
     #[must_use]
     #[inline(always)]
-    pub const fn pdd0(&self) -> super::vals::Pdd0 {
-        let val = (self.0 >> 0usize) & 0x01;
-        super::vals::Pdd0::from_bits(val as u8)
+    pub const fn pdd(&self, n: usize) -> super::vals::Pdd {
+        assert!(n < 32usize);
+        let offs = 0usize + n * 1usize;
+        let val = (self.0 >> offs) & 0x01;
+        super::vals::Pdd::from_bits(val as u8)
     }
     #[doc = "Port Data Direction"]
     #[inline(always)]
-    pub const fn set_pdd0(&mut self, val: super::vals::Pdd0) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd1(&self) -> super::vals::Pdd1 {
-        let val = (self.0 >> 1usize) & 0x01;
-        super::vals::Pdd1::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd1(&mut self, val: super::vals::Pdd1) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd2(&self) -> super::vals::Pdd2 {
-        let val = (self.0 >> 2usize) & 0x01;
-        super::vals::Pdd2::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd2(&mut self, val: super::vals::Pdd2) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd3(&self) -> super::vals::Pdd3 {
-        let val = (self.0 >> 3usize) & 0x01;
-        super::vals::Pdd3::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd3(&mut self, val: super::vals::Pdd3) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd4(&self) -> super::vals::Pdd4 {
-        let val = (self.0 >> 4usize) & 0x01;
-        super::vals::Pdd4::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd4(&mut self, val: super::vals::Pdd4) {
-        self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd5(&self) -> super::vals::Pdd5 {
-        let val = (self.0 >> 5usize) & 0x01;
-        super::vals::Pdd5::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd5(&mut self, val: super::vals::Pdd5) {
-        self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd6(&self) -> super::vals::Pdd6 {
-        let val = (self.0 >> 6usize) & 0x01;
-        super::vals::Pdd6::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd6(&mut self, val: super::vals::Pdd6) {
-        self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd7(&self) -> super::vals::Pdd7 {
-        let val = (self.0 >> 7usize) & 0x01;
-        super::vals::Pdd7::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd7(&mut self, val: super::vals::Pdd7) {
-        self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd8(&self) -> super::vals::Pdd8 {
-        let val = (self.0 >> 8usize) & 0x01;
-        super::vals::Pdd8::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd8(&mut self, val: super::vals::Pdd8) {
-        self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd9(&self) -> super::vals::Pdd9 {
-        let val = (self.0 >> 9usize) & 0x01;
-        super::vals::Pdd9::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd9(&mut self, val: super::vals::Pdd9) {
-        self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd10(&self) -> super::vals::Pdd10 {
-        let val = (self.0 >> 10usize) & 0x01;
-        super::vals::Pdd10::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd10(&mut self, val: super::vals::Pdd10) {
-        self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd11(&self) -> super::vals::Pdd11 {
-        let val = (self.0 >> 11usize) & 0x01;
-        super::vals::Pdd11::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd11(&mut self, val: super::vals::Pdd11) {
-        self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd12(&self) -> super::vals::Pdd12 {
-        let val = (self.0 >> 12usize) & 0x01;
-        super::vals::Pdd12::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd12(&mut self, val: super::vals::Pdd12) {
-        self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd13(&self) -> super::vals::Pdd13 {
-        let val = (self.0 >> 13usize) & 0x01;
-        super::vals::Pdd13::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd13(&mut self, val: super::vals::Pdd13) {
-        self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd14(&self) -> super::vals::Pdd14 {
-        let val = (self.0 >> 14usize) & 0x01;
-        super::vals::Pdd14::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd14(&mut self, val: super::vals::Pdd14) {
-        self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd15(&self) -> super::vals::Pdd15 {
-        let val = (self.0 >> 15usize) & 0x01;
-        super::vals::Pdd15::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd15(&mut self, val: super::vals::Pdd15) {
-        self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd16(&self) -> super::vals::Pdd16 {
-        let val = (self.0 >> 16usize) & 0x01;
-        super::vals::Pdd16::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd16(&mut self, val: super::vals::Pdd16) {
-        self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd17(&self) -> super::vals::Pdd17 {
-        let val = (self.0 >> 17usize) & 0x01;
-        super::vals::Pdd17::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd17(&mut self, val: super::vals::Pdd17) {
-        self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd18(&self) -> super::vals::Pdd18 {
-        let val = (self.0 >> 18usize) & 0x01;
-        super::vals::Pdd18::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd18(&mut self, val: super::vals::Pdd18) {
-        self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd19(&self) -> super::vals::Pdd19 {
-        let val = (self.0 >> 19usize) & 0x01;
-        super::vals::Pdd19::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd19(&mut self, val: super::vals::Pdd19) {
-        self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd20(&self) -> super::vals::Pdd20 {
-        let val = (self.0 >> 20usize) & 0x01;
-        super::vals::Pdd20::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd20(&mut self, val: super::vals::Pdd20) {
-        self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd21(&self) -> super::vals::Pdd21 {
-        let val = (self.0 >> 21usize) & 0x01;
-        super::vals::Pdd21::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd21(&mut self, val: super::vals::Pdd21) {
-        self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd22(&self) -> super::vals::Pdd22 {
-        let val = (self.0 >> 22usize) & 0x01;
-        super::vals::Pdd22::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd22(&mut self, val: super::vals::Pdd22) {
-        self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd23(&self) -> super::vals::Pdd23 {
-        let val = (self.0 >> 23usize) & 0x01;
-        super::vals::Pdd23::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd23(&mut self, val: super::vals::Pdd23) {
-        self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd24(&self) -> super::vals::Pdd24 {
-        let val = (self.0 >> 24usize) & 0x01;
-        super::vals::Pdd24::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd24(&mut self, val: super::vals::Pdd24) {
-        self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd25(&self) -> super::vals::Pdd25 {
-        let val = (self.0 >> 25usize) & 0x01;
-        super::vals::Pdd25::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd25(&mut self, val: super::vals::Pdd25) {
-        self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd26(&self) -> super::vals::Pdd26 {
-        let val = (self.0 >> 26usize) & 0x01;
-        super::vals::Pdd26::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd26(&mut self, val: super::vals::Pdd26) {
-        self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd27(&self) -> super::vals::Pdd27 {
-        let val = (self.0 >> 27usize) & 0x01;
-        super::vals::Pdd27::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd27(&mut self, val: super::vals::Pdd27) {
-        self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd28(&self) -> super::vals::Pdd28 {
-        let val = (self.0 >> 28usize) & 0x01;
-        super::vals::Pdd28::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd28(&mut self, val: super::vals::Pdd28) {
-        self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd29(&self) -> super::vals::Pdd29 {
-        let val = (self.0 >> 29usize) & 0x01;
-        super::vals::Pdd29::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd29(&mut self, val: super::vals::Pdd29) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd30(&self) -> super::vals::Pdd30 {
-        let val = (self.0 >> 30usize) & 0x01;
-        super::vals::Pdd30::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd30(&mut self, val: super::vals::Pdd30) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
-    }
-    #[doc = "Port Data Direction"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdd31(&self) -> super::vals::Pdd31 {
-        let val = (self.0 >> 31usize) & 0x01;
-        super::vals::Pdd31::from_bits(val as u8)
-    }
-    #[doc = "Port Data Direction"]
-    #[inline(always)]
-    pub const fn set_pdd31(&mut self, val: super::vals::Pdd31) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
+    pub const fn set_pdd(&mut self, n: usize, val: super::vals::Pdd) {
+        assert!(n < 32usize);
+        let offs = 0usize + n * 1usize;
+        self.0 = (self.0 & !(0x01 << offs)) | (((val.to_bits() as u32) & 0x01) << offs);
     }
 }
 impl Default for Pddr {
@@ -1969,38 +1233,38 @@ impl Default for Pddr {
 impl core::fmt::Debug for Pddr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pddr")
-            .field("pdd0", &self.pdd0())
-            .field("pdd1", &self.pdd1())
-            .field("pdd2", &self.pdd2())
-            .field("pdd3", &self.pdd3())
-            .field("pdd4", &self.pdd4())
-            .field("pdd5", &self.pdd5())
-            .field("pdd6", &self.pdd6())
-            .field("pdd7", &self.pdd7())
-            .field("pdd8", &self.pdd8())
-            .field("pdd9", &self.pdd9())
-            .field("pdd10", &self.pdd10())
-            .field("pdd11", &self.pdd11())
-            .field("pdd12", &self.pdd12())
-            .field("pdd13", &self.pdd13())
-            .field("pdd14", &self.pdd14())
-            .field("pdd15", &self.pdd15())
-            .field("pdd16", &self.pdd16())
-            .field("pdd17", &self.pdd17())
-            .field("pdd18", &self.pdd18())
-            .field("pdd19", &self.pdd19())
-            .field("pdd20", &self.pdd20())
-            .field("pdd21", &self.pdd21())
-            .field("pdd22", &self.pdd22())
-            .field("pdd23", &self.pdd23())
-            .field("pdd24", &self.pdd24())
-            .field("pdd25", &self.pdd25())
-            .field("pdd26", &self.pdd26())
-            .field("pdd27", &self.pdd27())
-            .field("pdd28", &self.pdd28())
-            .field("pdd29", &self.pdd29())
-            .field("pdd30", &self.pdd30())
-            .field("pdd31", &self.pdd31())
+            .field("pdd[0]", &self.pdd(0usize))
+            .field("pdd[1]", &self.pdd(1usize))
+            .field("pdd[2]", &self.pdd(2usize))
+            .field("pdd[3]", &self.pdd(3usize))
+            .field("pdd[4]", &self.pdd(4usize))
+            .field("pdd[5]", &self.pdd(5usize))
+            .field("pdd[6]", &self.pdd(6usize))
+            .field("pdd[7]", &self.pdd(7usize))
+            .field("pdd[8]", &self.pdd(8usize))
+            .field("pdd[9]", &self.pdd(9usize))
+            .field("pdd[10]", &self.pdd(10usize))
+            .field("pdd[11]", &self.pdd(11usize))
+            .field("pdd[12]", &self.pdd(12usize))
+            .field("pdd[13]", &self.pdd(13usize))
+            .field("pdd[14]", &self.pdd(14usize))
+            .field("pdd[15]", &self.pdd(15usize))
+            .field("pdd[16]", &self.pdd(16usize))
+            .field("pdd[17]", &self.pdd(17usize))
+            .field("pdd[18]", &self.pdd(18usize))
+            .field("pdd[19]", &self.pdd(19usize))
+            .field("pdd[20]", &self.pdd(20usize))
+            .field("pdd[21]", &self.pdd(21usize))
+            .field("pdd[22]", &self.pdd(22usize))
+            .field("pdd[23]", &self.pdd(23usize))
+            .field("pdd[24]", &self.pdd(24usize))
+            .field("pdd[25]", &self.pdd(25usize))
+            .field("pdd[26]", &self.pdd(26usize))
+            .field("pdd[27]", &self.pdd(27usize))
+            .field("pdd[28]", &self.pdd(28usize))
+            .field("pdd[29]", &self.pdd(29usize))
+            .field("pdd[30]", &self.pdd(30usize))
+            .field("pdd[31]", &self.pdd(31usize))
             .finish()
     }
 }
@@ -2009,39 +1273,39 @@ impl defmt::Format for Pddr {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Pddr {{ pdd0: {:?}, pdd1: {:?}, pdd2: {:?}, pdd3: {:?}, pdd4: {:?}, pdd5: {:?}, pdd6: {:?}, pdd7: {:?}, pdd8: {:?}, pdd9: {:?}, pdd10: {:?}, pdd11: {:?}, pdd12: {:?}, pdd13: {:?}, pdd14: {:?}, pdd15: {:?}, pdd16: {:?}, pdd17: {:?}, pdd18: {:?}, pdd19: {:?}, pdd20: {:?}, pdd21: {:?}, pdd22: {:?}, pdd23: {:?}, pdd24: {:?}, pdd25: {:?}, pdd26: {:?}, pdd27: {:?}, pdd28: {:?}, pdd29: {:?}, pdd30: {:?}, pdd31: {:?} }}",
-            self.pdd0(),
-            self.pdd1(),
-            self.pdd2(),
-            self.pdd3(),
-            self.pdd4(),
-            self.pdd5(),
-            self.pdd6(),
-            self.pdd7(),
-            self.pdd8(),
-            self.pdd9(),
-            self.pdd10(),
-            self.pdd11(),
-            self.pdd12(),
-            self.pdd13(),
-            self.pdd14(),
-            self.pdd15(),
-            self.pdd16(),
-            self.pdd17(),
-            self.pdd18(),
-            self.pdd19(),
-            self.pdd20(),
-            self.pdd21(),
-            self.pdd22(),
-            self.pdd23(),
-            self.pdd24(),
-            self.pdd25(),
-            self.pdd26(),
-            self.pdd27(),
-            self.pdd28(),
-            self.pdd29(),
-            self.pdd30(),
-            self.pdd31()
+            "Pddr {{ pdd[0]: {:?}, pdd[1]: {:?}, pdd[2]: {:?}, pdd[3]: {:?}, pdd[4]: {:?}, pdd[5]: {:?}, pdd[6]: {:?}, pdd[7]: {:?}, pdd[8]: {:?}, pdd[9]: {:?}, pdd[10]: {:?}, pdd[11]: {:?}, pdd[12]: {:?}, pdd[13]: {:?}, pdd[14]: {:?}, pdd[15]: {:?}, pdd[16]: {:?}, pdd[17]: {:?}, pdd[18]: {:?}, pdd[19]: {:?}, pdd[20]: {:?}, pdd[21]: {:?}, pdd[22]: {:?}, pdd[23]: {:?}, pdd[24]: {:?}, pdd[25]: {:?}, pdd[26]: {:?}, pdd[27]: {:?}, pdd[28]: {:?}, pdd[29]: {:?}, pdd[30]: {:?}, pdd[31]: {:?} }}",
+            self.pdd(0usize),
+            self.pdd(1usize),
+            self.pdd(2usize),
+            self.pdd(3usize),
+            self.pdd(4usize),
+            self.pdd(5usize),
+            self.pdd(6usize),
+            self.pdd(7usize),
+            self.pdd(8usize),
+            self.pdd(9usize),
+            self.pdd(10usize),
+            self.pdd(11usize),
+            self.pdd(12usize),
+            self.pdd(13usize),
+            self.pdd(14usize),
+            self.pdd(15usize),
+            self.pdd(16usize),
+            self.pdd(17usize),
+            self.pdd(18usize),
+            self.pdd(19usize),
+            self.pdd(20usize),
+            self.pdd(21usize),
+            self.pdd(22usize),
+            self.pdd(23usize),
+            self.pdd(24usize),
+            self.pdd(25usize),
+            self.pdd(26usize),
+            self.pdd(27usize),
+            self.pdd(28usize),
+            self.pdd(29usize),
+            self.pdd(30usize),
+            self.pdd(31usize)
         )
     }
 }
@@ -2053,386 +1317,18 @@ impl Pdir {
     #[doc = "Port Data Input"]
     #[must_use]
     #[inline(always)]
-    pub const fn pdi0(&self) -> super::vals::Pdi0 {
-        let val = (self.0 >> 0usize) & 0x01;
-        super::vals::Pdi0::from_bits(val as u8)
+    pub const fn pdi(&self, n: usize) -> bool {
+        assert!(n < 32usize);
+        let offs = 0usize + n * 1usize;
+        let val = (self.0 >> offs) & 0x01;
+        val != 0
     }
     #[doc = "Port Data Input"]
     #[inline(always)]
-    pub const fn set_pdi0(&mut self, val: super::vals::Pdi0) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi1(&self) -> super::vals::Pdi1 {
-        let val = (self.0 >> 1usize) & 0x01;
-        super::vals::Pdi1::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi1(&mut self, val: super::vals::Pdi1) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi2(&self) -> super::vals::Pdi2 {
-        let val = (self.0 >> 2usize) & 0x01;
-        super::vals::Pdi2::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi2(&mut self, val: super::vals::Pdi2) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi3(&self) -> super::vals::Pdi3 {
-        let val = (self.0 >> 3usize) & 0x01;
-        super::vals::Pdi3::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi3(&mut self, val: super::vals::Pdi3) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi4(&self) -> super::vals::Pdi4 {
-        let val = (self.0 >> 4usize) & 0x01;
-        super::vals::Pdi4::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi4(&mut self, val: super::vals::Pdi4) {
-        self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi5(&self) -> super::vals::Pdi5 {
-        let val = (self.0 >> 5usize) & 0x01;
-        super::vals::Pdi5::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi5(&mut self, val: super::vals::Pdi5) {
-        self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi6(&self) -> super::vals::Pdi6 {
-        let val = (self.0 >> 6usize) & 0x01;
-        super::vals::Pdi6::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi6(&mut self, val: super::vals::Pdi6) {
-        self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi7(&self) -> super::vals::Pdi7 {
-        let val = (self.0 >> 7usize) & 0x01;
-        super::vals::Pdi7::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi7(&mut self, val: super::vals::Pdi7) {
-        self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi8(&self) -> super::vals::Pdi8 {
-        let val = (self.0 >> 8usize) & 0x01;
-        super::vals::Pdi8::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi8(&mut self, val: super::vals::Pdi8) {
-        self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi9(&self) -> super::vals::Pdi9 {
-        let val = (self.0 >> 9usize) & 0x01;
-        super::vals::Pdi9::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi9(&mut self, val: super::vals::Pdi9) {
-        self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi10(&self) -> super::vals::Pdi10 {
-        let val = (self.0 >> 10usize) & 0x01;
-        super::vals::Pdi10::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi10(&mut self, val: super::vals::Pdi10) {
-        self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi11(&self) -> super::vals::Pdi11 {
-        let val = (self.0 >> 11usize) & 0x01;
-        super::vals::Pdi11::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi11(&mut self, val: super::vals::Pdi11) {
-        self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi12(&self) -> super::vals::Pdi12 {
-        let val = (self.0 >> 12usize) & 0x01;
-        super::vals::Pdi12::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi12(&mut self, val: super::vals::Pdi12) {
-        self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi13(&self) -> super::vals::Pdi13 {
-        let val = (self.0 >> 13usize) & 0x01;
-        super::vals::Pdi13::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi13(&mut self, val: super::vals::Pdi13) {
-        self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi14(&self) -> super::vals::Pdi14 {
-        let val = (self.0 >> 14usize) & 0x01;
-        super::vals::Pdi14::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi14(&mut self, val: super::vals::Pdi14) {
-        self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi15(&self) -> super::vals::Pdi15 {
-        let val = (self.0 >> 15usize) & 0x01;
-        super::vals::Pdi15::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi15(&mut self, val: super::vals::Pdi15) {
-        self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi16(&self) -> super::vals::Pdi16 {
-        let val = (self.0 >> 16usize) & 0x01;
-        super::vals::Pdi16::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi16(&mut self, val: super::vals::Pdi16) {
-        self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi17(&self) -> super::vals::Pdi17 {
-        let val = (self.0 >> 17usize) & 0x01;
-        super::vals::Pdi17::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi17(&mut self, val: super::vals::Pdi17) {
-        self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi18(&self) -> super::vals::Pdi18 {
-        let val = (self.0 >> 18usize) & 0x01;
-        super::vals::Pdi18::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi18(&mut self, val: super::vals::Pdi18) {
-        self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi19(&self) -> super::vals::Pdi19 {
-        let val = (self.0 >> 19usize) & 0x01;
-        super::vals::Pdi19::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi19(&mut self, val: super::vals::Pdi19) {
-        self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi20(&self) -> super::vals::Pdi20 {
-        let val = (self.0 >> 20usize) & 0x01;
-        super::vals::Pdi20::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi20(&mut self, val: super::vals::Pdi20) {
-        self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi21(&self) -> super::vals::Pdi21 {
-        let val = (self.0 >> 21usize) & 0x01;
-        super::vals::Pdi21::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi21(&mut self, val: super::vals::Pdi21) {
-        self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi22(&self) -> super::vals::Pdi22 {
-        let val = (self.0 >> 22usize) & 0x01;
-        super::vals::Pdi22::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi22(&mut self, val: super::vals::Pdi22) {
-        self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi23(&self) -> super::vals::Pdi23 {
-        let val = (self.0 >> 23usize) & 0x01;
-        super::vals::Pdi23::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi23(&mut self, val: super::vals::Pdi23) {
-        self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi24(&self) -> super::vals::Pdi24 {
-        let val = (self.0 >> 24usize) & 0x01;
-        super::vals::Pdi24::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi24(&mut self, val: super::vals::Pdi24) {
-        self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi25(&self) -> super::vals::Pdi25 {
-        let val = (self.0 >> 25usize) & 0x01;
-        super::vals::Pdi25::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi25(&mut self, val: super::vals::Pdi25) {
-        self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi26(&self) -> super::vals::Pdi26 {
-        let val = (self.0 >> 26usize) & 0x01;
-        super::vals::Pdi26::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi26(&mut self, val: super::vals::Pdi26) {
-        self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi27(&self) -> super::vals::Pdi27 {
-        let val = (self.0 >> 27usize) & 0x01;
-        super::vals::Pdi27::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi27(&mut self, val: super::vals::Pdi27) {
-        self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi28(&self) -> super::vals::Pdi28 {
-        let val = (self.0 >> 28usize) & 0x01;
-        super::vals::Pdi28::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi28(&mut self, val: super::vals::Pdi28) {
-        self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi29(&self) -> super::vals::Pdi29 {
-        let val = (self.0 >> 29usize) & 0x01;
-        super::vals::Pdi29::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi29(&mut self, val: super::vals::Pdi29) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi30(&self) -> super::vals::Pdi30 {
-        let val = (self.0 >> 30usize) & 0x01;
-        super::vals::Pdi30::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi30(&mut self, val: super::vals::Pdi30) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
-    }
-    #[doc = "Port Data Input"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdi31(&self) -> super::vals::Pdi31 {
-        let val = (self.0 >> 31usize) & 0x01;
-        super::vals::Pdi31::from_bits(val as u8)
-    }
-    #[doc = "Port Data Input"]
-    #[inline(always)]
-    pub const fn set_pdi31(&mut self, val: super::vals::Pdi31) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
+    pub const fn set_pdi(&mut self, n: usize, val: bool) {
+        assert!(n < 32usize);
+        let offs = 0usize + n * 1usize;
+        self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
     }
 }
 impl Default for Pdir {
@@ -2444,38 +1340,38 @@ impl Default for Pdir {
 impl core::fmt::Debug for Pdir {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pdir")
-            .field("pdi0", &self.pdi0())
-            .field("pdi1", &self.pdi1())
-            .field("pdi2", &self.pdi2())
-            .field("pdi3", &self.pdi3())
-            .field("pdi4", &self.pdi4())
-            .field("pdi5", &self.pdi5())
-            .field("pdi6", &self.pdi6())
-            .field("pdi7", &self.pdi7())
-            .field("pdi8", &self.pdi8())
-            .field("pdi9", &self.pdi9())
-            .field("pdi10", &self.pdi10())
-            .field("pdi11", &self.pdi11())
-            .field("pdi12", &self.pdi12())
-            .field("pdi13", &self.pdi13())
-            .field("pdi14", &self.pdi14())
-            .field("pdi15", &self.pdi15())
-            .field("pdi16", &self.pdi16())
-            .field("pdi17", &self.pdi17())
-            .field("pdi18", &self.pdi18())
-            .field("pdi19", &self.pdi19())
-            .field("pdi20", &self.pdi20())
-            .field("pdi21", &self.pdi21())
-            .field("pdi22", &self.pdi22())
-            .field("pdi23", &self.pdi23())
-            .field("pdi24", &self.pdi24())
-            .field("pdi25", &self.pdi25())
-            .field("pdi26", &self.pdi26())
-            .field("pdi27", &self.pdi27())
-            .field("pdi28", &self.pdi28())
-            .field("pdi29", &self.pdi29())
-            .field("pdi30", &self.pdi30())
-            .field("pdi31", &self.pdi31())
+            .field("pdi[0]", &self.pdi(0usize))
+            .field("pdi[1]", &self.pdi(1usize))
+            .field("pdi[2]", &self.pdi(2usize))
+            .field("pdi[3]", &self.pdi(3usize))
+            .field("pdi[4]", &self.pdi(4usize))
+            .field("pdi[5]", &self.pdi(5usize))
+            .field("pdi[6]", &self.pdi(6usize))
+            .field("pdi[7]", &self.pdi(7usize))
+            .field("pdi[8]", &self.pdi(8usize))
+            .field("pdi[9]", &self.pdi(9usize))
+            .field("pdi[10]", &self.pdi(10usize))
+            .field("pdi[11]", &self.pdi(11usize))
+            .field("pdi[12]", &self.pdi(12usize))
+            .field("pdi[13]", &self.pdi(13usize))
+            .field("pdi[14]", &self.pdi(14usize))
+            .field("pdi[15]", &self.pdi(15usize))
+            .field("pdi[16]", &self.pdi(16usize))
+            .field("pdi[17]", &self.pdi(17usize))
+            .field("pdi[18]", &self.pdi(18usize))
+            .field("pdi[19]", &self.pdi(19usize))
+            .field("pdi[20]", &self.pdi(20usize))
+            .field("pdi[21]", &self.pdi(21usize))
+            .field("pdi[22]", &self.pdi(22usize))
+            .field("pdi[23]", &self.pdi(23usize))
+            .field("pdi[24]", &self.pdi(24usize))
+            .field("pdi[25]", &self.pdi(25usize))
+            .field("pdi[26]", &self.pdi(26usize))
+            .field("pdi[27]", &self.pdi(27usize))
+            .field("pdi[28]", &self.pdi(28usize))
+            .field("pdi[29]", &self.pdi(29usize))
+            .field("pdi[30]", &self.pdi(30usize))
+            .field("pdi[31]", &self.pdi(31usize))
             .finish()
     }
 }
@@ -2484,39 +1380,39 @@ impl defmt::Format for Pdir {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Pdir {{ pdi0: {:?}, pdi1: {:?}, pdi2: {:?}, pdi3: {:?}, pdi4: {:?}, pdi5: {:?}, pdi6: {:?}, pdi7: {:?}, pdi8: {:?}, pdi9: {:?}, pdi10: {:?}, pdi11: {:?}, pdi12: {:?}, pdi13: {:?}, pdi14: {:?}, pdi15: {:?}, pdi16: {:?}, pdi17: {:?}, pdi18: {:?}, pdi19: {:?}, pdi20: {:?}, pdi21: {:?}, pdi22: {:?}, pdi23: {:?}, pdi24: {:?}, pdi25: {:?}, pdi26: {:?}, pdi27: {:?}, pdi28: {:?}, pdi29: {:?}, pdi30: {:?}, pdi31: {:?} }}",
-            self.pdi0(),
-            self.pdi1(),
-            self.pdi2(),
-            self.pdi3(),
-            self.pdi4(),
-            self.pdi5(),
-            self.pdi6(),
-            self.pdi7(),
-            self.pdi8(),
-            self.pdi9(),
-            self.pdi10(),
-            self.pdi11(),
-            self.pdi12(),
-            self.pdi13(),
-            self.pdi14(),
-            self.pdi15(),
-            self.pdi16(),
-            self.pdi17(),
-            self.pdi18(),
-            self.pdi19(),
-            self.pdi20(),
-            self.pdi21(),
-            self.pdi22(),
-            self.pdi23(),
-            self.pdi24(),
-            self.pdi25(),
-            self.pdi26(),
-            self.pdi27(),
-            self.pdi28(),
-            self.pdi29(),
-            self.pdi30(),
-            self.pdi31()
+            "Pdir {{ pdi[0]: {=bool:?}, pdi[1]: {=bool:?}, pdi[2]: {=bool:?}, pdi[3]: {=bool:?}, pdi[4]: {=bool:?}, pdi[5]: {=bool:?}, pdi[6]: {=bool:?}, pdi[7]: {=bool:?}, pdi[8]: {=bool:?}, pdi[9]: {=bool:?}, pdi[10]: {=bool:?}, pdi[11]: {=bool:?}, pdi[12]: {=bool:?}, pdi[13]: {=bool:?}, pdi[14]: {=bool:?}, pdi[15]: {=bool:?}, pdi[16]: {=bool:?}, pdi[17]: {=bool:?}, pdi[18]: {=bool:?}, pdi[19]: {=bool:?}, pdi[20]: {=bool:?}, pdi[21]: {=bool:?}, pdi[22]: {=bool:?}, pdi[23]: {=bool:?}, pdi[24]: {=bool:?}, pdi[25]: {=bool:?}, pdi[26]: {=bool:?}, pdi[27]: {=bool:?}, pdi[28]: {=bool:?}, pdi[29]: {=bool:?}, pdi[30]: {=bool:?}, pdi[31]: {=bool:?} }}",
+            self.pdi(0usize),
+            self.pdi(1usize),
+            self.pdi(2usize),
+            self.pdi(3usize),
+            self.pdi(4usize),
+            self.pdi(5usize),
+            self.pdi(6usize),
+            self.pdi(7usize),
+            self.pdi(8usize),
+            self.pdi(9usize),
+            self.pdi(10usize),
+            self.pdi(11usize),
+            self.pdi(12usize),
+            self.pdi(13usize),
+            self.pdi(14usize),
+            self.pdi(15usize),
+            self.pdi(16usize),
+            self.pdi(17usize),
+            self.pdi(18usize),
+            self.pdi(19usize),
+            self.pdi(20usize),
+            self.pdi(21usize),
+            self.pdi(22usize),
+            self.pdi(23usize),
+            self.pdi(24usize),
+            self.pdi(25usize),
+            self.pdi(26usize),
+            self.pdi(27usize),
+            self.pdi(28usize),
+            self.pdi(29usize),
+            self.pdi(30usize),
+            self.pdi(31usize)
         )
     }
 }
@@ -3038,386 +1934,18 @@ impl Pidr {
     #[doc = "Port Input Disable"]
     #[must_use]
     #[inline(always)]
-    pub const fn pid0(&self) -> super::vals::Pid0 {
-        let val = (self.0 >> 0usize) & 0x01;
-        super::vals::Pid0::from_bits(val as u8)
+    pub const fn pid(&self, n: usize) -> super::vals::Pid {
+        assert!(n < 32usize);
+        let offs = 0usize + n * 1usize;
+        let val = (self.0 >> offs) & 0x01;
+        super::vals::Pid::from_bits(val as u8)
     }
     #[doc = "Port Input Disable"]
     #[inline(always)]
-    pub const fn set_pid0(&mut self, val: super::vals::Pid0) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid1(&self) -> super::vals::Pid1 {
-        let val = (self.0 >> 1usize) & 0x01;
-        super::vals::Pid1::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid1(&mut self, val: super::vals::Pid1) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid2(&self) -> super::vals::Pid2 {
-        let val = (self.0 >> 2usize) & 0x01;
-        super::vals::Pid2::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid2(&mut self, val: super::vals::Pid2) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid3(&self) -> super::vals::Pid3 {
-        let val = (self.0 >> 3usize) & 0x01;
-        super::vals::Pid3::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid3(&mut self, val: super::vals::Pid3) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid4(&self) -> super::vals::Pid4 {
-        let val = (self.0 >> 4usize) & 0x01;
-        super::vals::Pid4::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid4(&mut self, val: super::vals::Pid4) {
-        self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid5(&self) -> super::vals::Pid5 {
-        let val = (self.0 >> 5usize) & 0x01;
-        super::vals::Pid5::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid5(&mut self, val: super::vals::Pid5) {
-        self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid6(&self) -> super::vals::Pid6 {
-        let val = (self.0 >> 6usize) & 0x01;
-        super::vals::Pid6::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid6(&mut self, val: super::vals::Pid6) {
-        self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid7(&self) -> super::vals::Pid7 {
-        let val = (self.0 >> 7usize) & 0x01;
-        super::vals::Pid7::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid7(&mut self, val: super::vals::Pid7) {
-        self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid8(&self) -> super::vals::Pid8 {
-        let val = (self.0 >> 8usize) & 0x01;
-        super::vals::Pid8::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid8(&mut self, val: super::vals::Pid8) {
-        self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid9(&self) -> super::vals::Pid9 {
-        let val = (self.0 >> 9usize) & 0x01;
-        super::vals::Pid9::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid9(&mut self, val: super::vals::Pid9) {
-        self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid10(&self) -> super::vals::Pid10 {
-        let val = (self.0 >> 10usize) & 0x01;
-        super::vals::Pid10::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid10(&mut self, val: super::vals::Pid10) {
-        self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid11(&self) -> super::vals::Pid11 {
-        let val = (self.0 >> 11usize) & 0x01;
-        super::vals::Pid11::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid11(&mut self, val: super::vals::Pid11) {
-        self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid12(&self) -> super::vals::Pid12 {
-        let val = (self.0 >> 12usize) & 0x01;
-        super::vals::Pid12::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid12(&mut self, val: super::vals::Pid12) {
-        self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid13(&self) -> super::vals::Pid13 {
-        let val = (self.0 >> 13usize) & 0x01;
-        super::vals::Pid13::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid13(&mut self, val: super::vals::Pid13) {
-        self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid14(&self) -> super::vals::Pid14 {
-        let val = (self.0 >> 14usize) & 0x01;
-        super::vals::Pid14::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid14(&mut self, val: super::vals::Pid14) {
-        self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid15(&self) -> super::vals::Pid15 {
-        let val = (self.0 >> 15usize) & 0x01;
-        super::vals::Pid15::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid15(&mut self, val: super::vals::Pid15) {
-        self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid16(&self) -> super::vals::Pid16 {
-        let val = (self.0 >> 16usize) & 0x01;
-        super::vals::Pid16::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid16(&mut self, val: super::vals::Pid16) {
-        self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid17(&self) -> super::vals::Pid17 {
-        let val = (self.0 >> 17usize) & 0x01;
-        super::vals::Pid17::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid17(&mut self, val: super::vals::Pid17) {
-        self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid18(&self) -> super::vals::Pid18 {
-        let val = (self.0 >> 18usize) & 0x01;
-        super::vals::Pid18::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid18(&mut self, val: super::vals::Pid18) {
-        self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid19(&self) -> super::vals::Pid19 {
-        let val = (self.0 >> 19usize) & 0x01;
-        super::vals::Pid19::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid19(&mut self, val: super::vals::Pid19) {
-        self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid20(&self) -> super::vals::Pid20 {
-        let val = (self.0 >> 20usize) & 0x01;
-        super::vals::Pid20::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid20(&mut self, val: super::vals::Pid20) {
-        self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid21(&self) -> super::vals::Pid21 {
-        let val = (self.0 >> 21usize) & 0x01;
-        super::vals::Pid21::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid21(&mut self, val: super::vals::Pid21) {
-        self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid22(&self) -> super::vals::Pid22 {
-        let val = (self.0 >> 22usize) & 0x01;
-        super::vals::Pid22::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid22(&mut self, val: super::vals::Pid22) {
-        self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid23(&self) -> super::vals::Pid23 {
-        let val = (self.0 >> 23usize) & 0x01;
-        super::vals::Pid23::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid23(&mut self, val: super::vals::Pid23) {
-        self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid24(&self) -> super::vals::Pid24 {
-        let val = (self.0 >> 24usize) & 0x01;
-        super::vals::Pid24::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid24(&mut self, val: super::vals::Pid24) {
-        self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid25(&self) -> super::vals::Pid25 {
-        let val = (self.0 >> 25usize) & 0x01;
-        super::vals::Pid25::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid25(&mut self, val: super::vals::Pid25) {
-        self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid26(&self) -> super::vals::Pid26 {
-        let val = (self.0 >> 26usize) & 0x01;
-        super::vals::Pid26::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid26(&mut self, val: super::vals::Pid26) {
-        self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid27(&self) -> super::vals::Pid27 {
-        let val = (self.0 >> 27usize) & 0x01;
-        super::vals::Pid27::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid27(&mut self, val: super::vals::Pid27) {
-        self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid28(&self) -> super::vals::Pid28 {
-        let val = (self.0 >> 28usize) & 0x01;
-        super::vals::Pid28::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid28(&mut self, val: super::vals::Pid28) {
-        self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid29(&self) -> super::vals::Pid29 {
-        let val = (self.0 >> 29usize) & 0x01;
-        super::vals::Pid29::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid29(&mut self, val: super::vals::Pid29) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid30(&self) -> super::vals::Pid30 {
-        let val = (self.0 >> 30usize) & 0x01;
-        super::vals::Pid30::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid30(&mut self, val: super::vals::Pid30) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
-    }
-    #[doc = "Port Input Disable"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pid31(&self) -> super::vals::Pid31 {
-        let val = (self.0 >> 31usize) & 0x01;
-        super::vals::Pid31::from_bits(val as u8)
-    }
-    #[doc = "Port Input Disable"]
-    #[inline(always)]
-    pub const fn set_pid31(&mut self, val: super::vals::Pid31) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
+    pub const fn set_pid(&mut self, n: usize, val: super::vals::Pid) {
+        assert!(n < 32usize);
+        let offs = 0usize + n * 1usize;
+        self.0 = (self.0 & !(0x01 << offs)) | (((val.to_bits() as u32) & 0x01) << offs);
     }
 }
 impl Default for Pidr {
@@ -3429,38 +1957,38 @@ impl Default for Pidr {
 impl core::fmt::Debug for Pidr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pidr")
-            .field("pid0", &self.pid0())
-            .field("pid1", &self.pid1())
-            .field("pid2", &self.pid2())
-            .field("pid3", &self.pid3())
-            .field("pid4", &self.pid4())
-            .field("pid5", &self.pid5())
-            .field("pid6", &self.pid6())
-            .field("pid7", &self.pid7())
-            .field("pid8", &self.pid8())
-            .field("pid9", &self.pid9())
-            .field("pid10", &self.pid10())
-            .field("pid11", &self.pid11())
-            .field("pid12", &self.pid12())
-            .field("pid13", &self.pid13())
-            .field("pid14", &self.pid14())
-            .field("pid15", &self.pid15())
-            .field("pid16", &self.pid16())
-            .field("pid17", &self.pid17())
-            .field("pid18", &self.pid18())
-            .field("pid19", &self.pid19())
-            .field("pid20", &self.pid20())
-            .field("pid21", &self.pid21())
-            .field("pid22", &self.pid22())
-            .field("pid23", &self.pid23())
-            .field("pid24", &self.pid24())
-            .field("pid25", &self.pid25())
-            .field("pid26", &self.pid26())
-            .field("pid27", &self.pid27())
-            .field("pid28", &self.pid28())
-            .field("pid29", &self.pid29())
-            .field("pid30", &self.pid30())
-            .field("pid31", &self.pid31())
+            .field("pid[0]", &self.pid(0usize))
+            .field("pid[1]", &self.pid(1usize))
+            .field("pid[2]", &self.pid(2usize))
+            .field("pid[3]", &self.pid(3usize))
+            .field("pid[4]", &self.pid(4usize))
+            .field("pid[5]", &self.pid(5usize))
+            .field("pid[6]", &self.pid(6usize))
+            .field("pid[7]", &self.pid(7usize))
+            .field("pid[8]", &self.pid(8usize))
+            .field("pid[9]", &self.pid(9usize))
+            .field("pid[10]", &self.pid(10usize))
+            .field("pid[11]", &self.pid(11usize))
+            .field("pid[12]", &self.pid(12usize))
+            .field("pid[13]", &self.pid(13usize))
+            .field("pid[14]", &self.pid(14usize))
+            .field("pid[15]", &self.pid(15usize))
+            .field("pid[16]", &self.pid(16usize))
+            .field("pid[17]", &self.pid(17usize))
+            .field("pid[18]", &self.pid(18usize))
+            .field("pid[19]", &self.pid(19usize))
+            .field("pid[20]", &self.pid(20usize))
+            .field("pid[21]", &self.pid(21usize))
+            .field("pid[22]", &self.pid(22usize))
+            .field("pid[23]", &self.pid(23usize))
+            .field("pid[24]", &self.pid(24usize))
+            .field("pid[25]", &self.pid(25usize))
+            .field("pid[26]", &self.pid(26usize))
+            .field("pid[27]", &self.pid(27usize))
+            .field("pid[28]", &self.pid(28usize))
+            .field("pid[29]", &self.pid(29usize))
+            .field("pid[30]", &self.pid(30usize))
+            .field("pid[31]", &self.pid(31usize))
             .finish()
     }
 }
@@ -3469,39 +1997,39 @@ impl defmt::Format for Pidr {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Pidr {{ pid0: {:?}, pid1: {:?}, pid2: {:?}, pid3: {:?}, pid4: {:?}, pid5: {:?}, pid6: {:?}, pid7: {:?}, pid8: {:?}, pid9: {:?}, pid10: {:?}, pid11: {:?}, pid12: {:?}, pid13: {:?}, pid14: {:?}, pid15: {:?}, pid16: {:?}, pid17: {:?}, pid18: {:?}, pid19: {:?}, pid20: {:?}, pid21: {:?}, pid22: {:?}, pid23: {:?}, pid24: {:?}, pid25: {:?}, pid26: {:?}, pid27: {:?}, pid28: {:?}, pid29: {:?}, pid30: {:?}, pid31: {:?} }}",
-            self.pid0(),
-            self.pid1(),
-            self.pid2(),
-            self.pid3(),
-            self.pid4(),
-            self.pid5(),
-            self.pid6(),
-            self.pid7(),
-            self.pid8(),
-            self.pid9(),
-            self.pid10(),
-            self.pid11(),
-            self.pid12(),
-            self.pid13(),
-            self.pid14(),
-            self.pid15(),
-            self.pid16(),
-            self.pid17(),
-            self.pid18(),
-            self.pid19(),
-            self.pid20(),
-            self.pid21(),
-            self.pid22(),
-            self.pid23(),
-            self.pid24(),
-            self.pid25(),
-            self.pid26(),
-            self.pid27(),
-            self.pid28(),
-            self.pid29(),
-            self.pid30(),
-            self.pid31()
+            "Pidr {{ pid[0]: {:?}, pid[1]: {:?}, pid[2]: {:?}, pid[3]: {:?}, pid[4]: {:?}, pid[5]: {:?}, pid[6]: {:?}, pid[7]: {:?}, pid[8]: {:?}, pid[9]: {:?}, pid[10]: {:?}, pid[11]: {:?}, pid[12]: {:?}, pid[13]: {:?}, pid[14]: {:?}, pid[15]: {:?}, pid[16]: {:?}, pid[17]: {:?}, pid[18]: {:?}, pid[19]: {:?}, pid[20]: {:?}, pid[21]: {:?}, pid[22]: {:?}, pid[23]: {:?}, pid[24]: {:?}, pid[25]: {:?}, pid[26]: {:?}, pid[27]: {:?}, pid[28]: {:?}, pid[29]: {:?}, pid[30]: {:?}, pid[31]: {:?} }}",
+            self.pid(0usize),
+            self.pid(1usize),
+            self.pid(2usize),
+            self.pid(3usize),
+            self.pid(4usize),
+            self.pid(5usize),
+            self.pid(6usize),
+            self.pid(7usize),
+            self.pid(8usize),
+            self.pid(9usize),
+            self.pid(10usize),
+            self.pid(11usize),
+            self.pid(12usize),
+            self.pid(13usize),
+            self.pid(14usize),
+            self.pid(15usize),
+            self.pid(16usize),
+            self.pid(17usize),
+            self.pid(18usize),
+            self.pid(19usize),
+            self.pid(20usize),
+            self.pid(21usize),
+            self.pid(22usize),
+            self.pid(23usize),
+            self.pid(24usize),
+            self.pid(25usize),
+            self.pid(26usize),
+            self.pid(27usize),
+            self.pid(28usize),
+            self.pid(29usize),
+            self.pid(30usize),
+            self.pid(31usize)
         )
     }
 }
@@ -3513,386 +2041,18 @@ impl Psor {
     #[doc = "Port Set Output"]
     #[must_use]
     #[inline(always)]
-    pub const fn ptso0(&self) -> super::vals::Ptso0 {
-        let val = (self.0 >> 0usize) & 0x01;
-        super::vals::Ptso0::from_bits(val as u8)
+    pub const fn ptso(&self, n: usize) -> super::vals::Ptso {
+        assert!(n < 32usize);
+        let offs = 0usize + n * 1usize;
+        let val = (self.0 >> offs) & 0x01;
+        super::vals::Ptso::from_bits(val as u8)
     }
     #[doc = "Port Set Output"]
     #[inline(always)]
-    pub const fn set_ptso0(&mut self, val: super::vals::Ptso0) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso1(&self) -> super::vals::Ptso1 {
-        let val = (self.0 >> 1usize) & 0x01;
-        super::vals::Ptso1::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso1(&mut self, val: super::vals::Ptso1) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso2(&self) -> super::vals::Ptso2 {
-        let val = (self.0 >> 2usize) & 0x01;
-        super::vals::Ptso2::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso2(&mut self, val: super::vals::Ptso2) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso3(&self) -> super::vals::Ptso3 {
-        let val = (self.0 >> 3usize) & 0x01;
-        super::vals::Ptso3::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso3(&mut self, val: super::vals::Ptso3) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso4(&self) -> super::vals::Ptso4 {
-        let val = (self.0 >> 4usize) & 0x01;
-        super::vals::Ptso4::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso4(&mut self, val: super::vals::Ptso4) {
-        self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso5(&self) -> super::vals::Ptso5 {
-        let val = (self.0 >> 5usize) & 0x01;
-        super::vals::Ptso5::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso5(&mut self, val: super::vals::Ptso5) {
-        self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso6(&self) -> super::vals::Ptso6 {
-        let val = (self.0 >> 6usize) & 0x01;
-        super::vals::Ptso6::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso6(&mut self, val: super::vals::Ptso6) {
-        self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso7(&self) -> super::vals::Ptso7 {
-        let val = (self.0 >> 7usize) & 0x01;
-        super::vals::Ptso7::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso7(&mut self, val: super::vals::Ptso7) {
-        self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso8(&self) -> super::vals::Ptso8 {
-        let val = (self.0 >> 8usize) & 0x01;
-        super::vals::Ptso8::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso8(&mut self, val: super::vals::Ptso8) {
-        self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso9(&self) -> super::vals::Ptso9 {
-        let val = (self.0 >> 9usize) & 0x01;
-        super::vals::Ptso9::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso9(&mut self, val: super::vals::Ptso9) {
-        self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso10(&self) -> super::vals::Ptso10 {
-        let val = (self.0 >> 10usize) & 0x01;
-        super::vals::Ptso10::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso10(&mut self, val: super::vals::Ptso10) {
-        self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso11(&self) -> super::vals::Ptso11 {
-        let val = (self.0 >> 11usize) & 0x01;
-        super::vals::Ptso11::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso11(&mut self, val: super::vals::Ptso11) {
-        self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso12(&self) -> super::vals::Ptso12 {
-        let val = (self.0 >> 12usize) & 0x01;
-        super::vals::Ptso12::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso12(&mut self, val: super::vals::Ptso12) {
-        self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso13(&self) -> super::vals::Ptso13 {
-        let val = (self.0 >> 13usize) & 0x01;
-        super::vals::Ptso13::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso13(&mut self, val: super::vals::Ptso13) {
-        self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso14(&self) -> super::vals::Ptso14 {
-        let val = (self.0 >> 14usize) & 0x01;
-        super::vals::Ptso14::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso14(&mut self, val: super::vals::Ptso14) {
-        self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso15(&self) -> super::vals::Ptso15 {
-        let val = (self.0 >> 15usize) & 0x01;
-        super::vals::Ptso15::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso15(&mut self, val: super::vals::Ptso15) {
-        self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso16(&self) -> super::vals::Ptso16 {
-        let val = (self.0 >> 16usize) & 0x01;
-        super::vals::Ptso16::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso16(&mut self, val: super::vals::Ptso16) {
-        self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso17(&self) -> super::vals::Ptso17 {
-        let val = (self.0 >> 17usize) & 0x01;
-        super::vals::Ptso17::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso17(&mut self, val: super::vals::Ptso17) {
-        self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso18(&self) -> super::vals::Ptso18 {
-        let val = (self.0 >> 18usize) & 0x01;
-        super::vals::Ptso18::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso18(&mut self, val: super::vals::Ptso18) {
-        self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso19(&self) -> super::vals::Ptso19 {
-        let val = (self.0 >> 19usize) & 0x01;
-        super::vals::Ptso19::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso19(&mut self, val: super::vals::Ptso19) {
-        self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso20(&self) -> super::vals::Ptso20 {
-        let val = (self.0 >> 20usize) & 0x01;
-        super::vals::Ptso20::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso20(&mut self, val: super::vals::Ptso20) {
-        self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso21(&self) -> super::vals::Ptso21 {
-        let val = (self.0 >> 21usize) & 0x01;
-        super::vals::Ptso21::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso21(&mut self, val: super::vals::Ptso21) {
-        self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso22(&self) -> super::vals::Ptso22 {
-        let val = (self.0 >> 22usize) & 0x01;
-        super::vals::Ptso22::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso22(&mut self, val: super::vals::Ptso22) {
-        self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso23(&self) -> super::vals::Ptso23 {
-        let val = (self.0 >> 23usize) & 0x01;
-        super::vals::Ptso23::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso23(&mut self, val: super::vals::Ptso23) {
-        self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso24(&self) -> super::vals::Ptso24 {
-        let val = (self.0 >> 24usize) & 0x01;
-        super::vals::Ptso24::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso24(&mut self, val: super::vals::Ptso24) {
-        self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso25(&self) -> super::vals::Ptso25 {
-        let val = (self.0 >> 25usize) & 0x01;
-        super::vals::Ptso25::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso25(&mut self, val: super::vals::Ptso25) {
-        self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso26(&self) -> super::vals::Ptso26 {
-        let val = (self.0 >> 26usize) & 0x01;
-        super::vals::Ptso26::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso26(&mut self, val: super::vals::Ptso26) {
-        self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso27(&self) -> super::vals::Ptso27 {
-        let val = (self.0 >> 27usize) & 0x01;
-        super::vals::Ptso27::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso27(&mut self, val: super::vals::Ptso27) {
-        self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso28(&self) -> super::vals::Ptso28 {
-        let val = (self.0 >> 28usize) & 0x01;
-        super::vals::Ptso28::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso28(&mut self, val: super::vals::Ptso28) {
-        self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso29(&self) -> super::vals::Ptso29 {
-        let val = (self.0 >> 29usize) & 0x01;
-        super::vals::Ptso29::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso29(&mut self, val: super::vals::Ptso29) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso30(&self) -> super::vals::Ptso30 {
-        let val = (self.0 >> 30usize) & 0x01;
-        super::vals::Ptso30::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso30(&mut self, val: super::vals::Ptso30) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
-    }
-    #[doc = "Port Set Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptso31(&self) -> super::vals::Ptso31 {
-        let val = (self.0 >> 31usize) & 0x01;
-        super::vals::Ptso31::from_bits(val as u8)
-    }
-    #[doc = "Port Set Output"]
-    #[inline(always)]
-    pub const fn set_ptso31(&mut self, val: super::vals::Ptso31) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
+    pub const fn set_ptso(&mut self, n: usize, val: super::vals::Ptso) {
+        assert!(n < 32usize);
+        let offs = 0usize + n * 1usize;
+        self.0 = (self.0 & !(0x01 << offs)) | (((val.to_bits() as u32) & 0x01) << offs);
     }
 }
 impl Default for Psor {
@@ -3904,38 +2064,38 @@ impl Default for Psor {
 impl core::fmt::Debug for Psor {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Psor")
-            .field("ptso0", &self.ptso0())
-            .field("ptso1", &self.ptso1())
-            .field("ptso2", &self.ptso2())
-            .field("ptso3", &self.ptso3())
-            .field("ptso4", &self.ptso4())
-            .field("ptso5", &self.ptso5())
-            .field("ptso6", &self.ptso6())
-            .field("ptso7", &self.ptso7())
-            .field("ptso8", &self.ptso8())
-            .field("ptso9", &self.ptso9())
-            .field("ptso10", &self.ptso10())
-            .field("ptso11", &self.ptso11())
-            .field("ptso12", &self.ptso12())
-            .field("ptso13", &self.ptso13())
-            .field("ptso14", &self.ptso14())
-            .field("ptso15", &self.ptso15())
-            .field("ptso16", &self.ptso16())
-            .field("ptso17", &self.ptso17())
-            .field("ptso18", &self.ptso18())
-            .field("ptso19", &self.ptso19())
-            .field("ptso20", &self.ptso20())
-            .field("ptso21", &self.ptso21())
-            .field("ptso22", &self.ptso22())
-            .field("ptso23", &self.ptso23())
-            .field("ptso24", &self.ptso24())
-            .field("ptso25", &self.ptso25())
-            .field("ptso26", &self.ptso26())
-            .field("ptso27", &self.ptso27())
-            .field("ptso28", &self.ptso28())
-            .field("ptso29", &self.ptso29())
-            .field("ptso30", &self.ptso30())
-            .field("ptso31", &self.ptso31())
+            .field("ptso[0]", &self.ptso(0usize))
+            .field("ptso[1]", &self.ptso(1usize))
+            .field("ptso[2]", &self.ptso(2usize))
+            .field("ptso[3]", &self.ptso(3usize))
+            .field("ptso[4]", &self.ptso(4usize))
+            .field("ptso[5]", &self.ptso(5usize))
+            .field("ptso[6]", &self.ptso(6usize))
+            .field("ptso[7]", &self.ptso(7usize))
+            .field("ptso[8]", &self.ptso(8usize))
+            .field("ptso[9]", &self.ptso(9usize))
+            .field("ptso[10]", &self.ptso(10usize))
+            .field("ptso[11]", &self.ptso(11usize))
+            .field("ptso[12]", &self.ptso(12usize))
+            .field("ptso[13]", &self.ptso(13usize))
+            .field("ptso[14]", &self.ptso(14usize))
+            .field("ptso[15]", &self.ptso(15usize))
+            .field("ptso[16]", &self.ptso(16usize))
+            .field("ptso[17]", &self.ptso(17usize))
+            .field("ptso[18]", &self.ptso(18usize))
+            .field("ptso[19]", &self.ptso(19usize))
+            .field("ptso[20]", &self.ptso(20usize))
+            .field("ptso[21]", &self.ptso(21usize))
+            .field("ptso[22]", &self.ptso(22usize))
+            .field("ptso[23]", &self.ptso(23usize))
+            .field("ptso[24]", &self.ptso(24usize))
+            .field("ptso[25]", &self.ptso(25usize))
+            .field("ptso[26]", &self.ptso(26usize))
+            .field("ptso[27]", &self.ptso(27usize))
+            .field("ptso[28]", &self.ptso(28usize))
+            .field("ptso[29]", &self.ptso(29usize))
+            .field("ptso[30]", &self.ptso(30usize))
+            .field("ptso[31]", &self.ptso(31usize))
             .finish()
     }
 }
@@ -3944,39 +2104,39 @@ impl defmt::Format for Psor {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Psor {{ ptso0: {:?}, ptso1: {:?}, ptso2: {:?}, ptso3: {:?}, ptso4: {:?}, ptso5: {:?}, ptso6: {:?}, ptso7: {:?}, ptso8: {:?}, ptso9: {:?}, ptso10: {:?}, ptso11: {:?}, ptso12: {:?}, ptso13: {:?}, ptso14: {:?}, ptso15: {:?}, ptso16: {:?}, ptso17: {:?}, ptso18: {:?}, ptso19: {:?}, ptso20: {:?}, ptso21: {:?}, ptso22: {:?}, ptso23: {:?}, ptso24: {:?}, ptso25: {:?}, ptso26: {:?}, ptso27: {:?}, ptso28: {:?}, ptso29: {:?}, ptso30: {:?}, ptso31: {:?} }}",
-            self.ptso0(),
-            self.ptso1(),
-            self.ptso2(),
-            self.ptso3(),
-            self.ptso4(),
-            self.ptso5(),
-            self.ptso6(),
-            self.ptso7(),
-            self.ptso8(),
-            self.ptso9(),
-            self.ptso10(),
-            self.ptso11(),
-            self.ptso12(),
-            self.ptso13(),
-            self.ptso14(),
-            self.ptso15(),
-            self.ptso16(),
-            self.ptso17(),
-            self.ptso18(),
-            self.ptso19(),
-            self.ptso20(),
-            self.ptso21(),
-            self.ptso22(),
-            self.ptso23(),
-            self.ptso24(),
-            self.ptso25(),
-            self.ptso26(),
-            self.ptso27(),
-            self.ptso28(),
-            self.ptso29(),
-            self.ptso30(),
-            self.ptso31()
+            "Psor {{ ptso[0]: {:?}, ptso[1]: {:?}, ptso[2]: {:?}, ptso[3]: {:?}, ptso[4]: {:?}, ptso[5]: {:?}, ptso[6]: {:?}, ptso[7]: {:?}, ptso[8]: {:?}, ptso[9]: {:?}, ptso[10]: {:?}, ptso[11]: {:?}, ptso[12]: {:?}, ptso[13]: {:?}, ptso[14]: {:?}, ptso[15]: {:?}, ptso[16]: {:?}, ptso[17]: {:?}, ptso[18]: {:?}, ptso[19]: {:?}, ptso[20]: {:?}, ptso[21]: {:?}, ptso[22]: {:?}, ptso[23]: {:?}, ptso[24]: {:?}, ptso[25]: {:?}, ptso[26]: {:?}, ptso[27]: {:?}, ptso[28]: {:?}, ptso[29]: {:?}, ptso[30]: {:?}, ptso[31]: {:?} }}",
+            self.ptso(0usize),
+            self.ptso(1usize),
+            self.ptso(2usize),
+            self.ptso(3usize),
+            self.ptso(4usize),
+            self.ptso(5usize),
+            self.ptso(6usize),
+            self.ptso(7usize),
+            self.ptso(8usize),
+            self.ptso(9usize),
+            self.ptso(10usize),
+            self.ptso(11usize),
+            self.ptso(12usize),
+            self.ptso(13usize),
+            self.ptso(14usize),
+            self.ptso(15usize),
+            self.ptso(16usize),
+            self.ptso(17usize),
+            self.ptso(18usize),
+            self.ptso(19usize),
+            self.ptso(20usize),
+            self.ptso(21usize),
+            self.ptso(22usize),
+            self.ptso(23usize),
+            self.ptso(24usize),
+            self.ptso(25usize),
+            self.ptso(26usize),
+            self.ptso(27usize),
+            self.ptso(28usize),
+            self.ptso(29usize),
+            self.ptso(30usize),
+            self.ptso(31usize)
         )
     }
 }
@@ -3988,386 +2148,18 @@ impl Ptor {
     #[doc = "Port Toggle Output"]
     #[must_use]
     #[inline(always)]
-    pub const fn ptto0(&self) -> super::vals::Ptto0 {
-        let val = (self.0 >> 0usize) & 0x01;
-        super::vals::Ptto0::from_bits(val as u8)
+    pub const fn ptto(&self, n: usize) -> bool {
+        assert!(n < 32usize);
+        let offs = 0usize + n * 1usize;
+        let val = (self.0 >> offs) & 0x01;
+        val != 0
     }
     #[doc = "Port Toggle Output"]
     #[inline(always)]
-    pub const fn set_ptto0(&mut self, val: super::vals::Ptto0) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto1(&self) -> super::vals::Ptto1 {
-        let val = (self.0 >> 1usize) & 0x01;
-        super::vals::Ptto1::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto1(&mut self, val: super::vals::Ptto1) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto2(&self) -> super::vals::Ptto2 {
-        let val = (self.0 >> 2usize) & 0x01;
-        super::vals::Ptto2::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto2(&mut self, val: super::vals::Ptto2) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto3(&self) -> super::vals::Ptto3 {
-        let val = (self.0 >> 3usize) & 0x01;
-        super::vals::Ptto3::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto3(&mut self, val: super::vals::Ptto3) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto4(&self) -> super::vals::Ptto4 {
-        let val = (self.0 >> 4usize) & 0x01;
-        super::vals::Ptto4::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto4(&mut self, val: super::vals::Ptto4) {
-        self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto5(&self) -> super::vals::Ptto5 {
-        let val = (self.0 >> 5usize) & 0x01;
-        super::vals::Ptto5::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto5(&mut self, val: super::vals::Ptto5) {
-        self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto6(&self) -> super::vals::Ptto6 {
-        let val = (self.0 >> 6usize) & 0x01;
-        super::vals::Ptto6::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto6(&mut self, val: super::vals::Ptto6) {
-        self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto7(&self) -> super::vals::Ptto7 {
-        let val = (self.0 >> 7usize) & 0x01;
-        super::vals::Ptto7::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto7(&mut self, val: super::vals::Ptto7) {
-        self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto8(&self) -> super::vals::Ptto8 {
-        let val = (self.0 >> 8usize) & 0x01;
-        super::vals::Ptto8::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto8(&mut self, val: super::vals::Ptto8) {
-        self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto9(&self) -> super::vals::Ptto9 {
-        let val = (self.0 >> 9usize) & 0x01;
-        super::vals::Ptto9::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto9(&mut self, val: super::vals::Ptto9) {
-        self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto10(&self) -> super::vals::Ptto10 {
-        let val = (self.0 >> 10usize) & 0x01;
-        super::vals::Ptto10::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto10(&mut self, val: super::vals::Ptto10) {
-        self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto11(&self) -> super::vals::Ptto11 {
-        let val = (self.0 >> 11usize) & 0x01;
-        super::vals::Ptto11::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto11(&mut self, val: super::vals::Ptto11) {
-        self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto12(&self) -> super::vals::Ptto12 {
-        let val = (self.0 >> 12usize) & 0x01;
-        super::vals::Ptto12::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto12(&mut self, val: super::vals::Ptto12) {
-        self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto13(&self) -> super::vals::Ptto13 {
-        let val = (self.0 >> 13usize) & 0x01;
-        super::vals::Ptto13::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto13(&mut self, val: super::vals::Ptto13) {
-        self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto14(&self) -> super::vals::Ptto14 {
-        let val = (self.0 >> 14usize) & 0x01;
-        super::vals::Ptto14::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto14(&mut self, val: super::vals::Ptto14) {
-        self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto15(&self) -> super::vals::Ptto15 {
-        let val = (self.0 >> 15usize) & 0x01;
-        super::vals::Ptto15::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto15(&mut self, val: super::vals::Ptto15) {
-        self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto16(&self) -> super::vals::Ptto16 {
-        let val = (self.0 >> 16usize) & 0x01;
-        super::vals::Ptto16::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto16(&mut self, val: super::vals::Ptto16) {
-        self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto17(&self) -> super::vals::Ptto17 {
-        let val = (self.0 >> 17usize) & 0x01;
-        super::vals::Ptto17::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto17(&mut self, val: super::vals::Ptto17) {
-        self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto18(&self) -> super::vals::Ptto18 {
-        let val = (self.0 >> 18usize) & 0x01;
-        super::vals::Ptto18::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto18(&mut self, val: super::vals::Ptto18) {
-        self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto19(&self) -> super::vals::Ptto19 {
-        let val = (self.0 >> 19usize) & 0x01;
-        super::vals::Ptto19::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto19(&mut self, val: super::vals::Ptto19) {
-        self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto20(&self) -> super::vals::Ptto20 {
-        let val = (self.0 >> 20usize) & 0x01;
-        super::vals::Ptto20::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto20(&mut self, val: super::vals::Ptto20) {
-        self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto21(&self) -> super::vals::Ptto21 {
-        let val = (self.0 >> 21usize) & 0x01;
-        super::vals::Ptto21::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto21(&mut self, val: super::vals::Ptto21) {
-        self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto22(&self) -> super::vals::Ptto22 {
-        let val = (self.0 >> 22usize) & 0x01;
-        super::vals::Ptto22::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto22(&mut self, val: super::vals::Ptto22) {
-        self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto23(&self) -> super::vals::Ptto23 {
-        let val = (self.0 >> 23usize) & 0x01;
-        super::vals::Ptto23::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto23(&mut self, val: super::vals::Ptto23) {
-        self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto24(&self) -> super::vals::Ptto24 {
-        let val = (self.0 >> 24usize) & 0x01;
-        super::vals::Ptto24::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto24(&mut self, val: super::vals::Ptto24) {
-        self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto25(&self) -> super::vals::Ptto25 {
-        let val = (self.0 >> 25usize) & 0x01;
-        super::vals::Ptto25::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto25(&mut self, val: super::vals::Ptto25) {
-        self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto26(&self) -> super::vals::Ptto26 {
-        let val = (self.0 >> 26usize) & 0x01;
-        super::vals::Ptto26::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto26(&mut self, val: super::vals::Ptto26) {
-        self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto27(&self) -> super::vals::Ptto27 {
-        let val = (self.0 >> 27usize) & 0x01;
-        super::vals::Ptto27::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto27(&mut self, val: super::vals::Ptto27) {
-        self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto28(&self) -> super::vals::Ptto28 {
-        let val = (self.0 >> 28usize) & 0x01;
-        super::vals::Ptto28::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto28(&mut self, val: super::vals::Ptto28) {
-        self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto29(&self) -> super::vals::Ptto29 {
-        let val = (self.0 >> 29usize) & 0x01;
-        super::vals::Ptto29::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto29(&mut self, val: super::vals::Ptto29) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto30(&self) -> super::vals::Ptto30 {
-        let val = (self.0 >> 30usize) & 0x01;
-        super::vals::Ptto30::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto30(&mut self, val: super::vals::Ptto30) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
-    }
-    #[doc = "Port Toggle Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ptto31(&self) -> super::vals::Ptto31 {
-        let val = (self.0 >> 31usize) & 0x01;
-        super::vals::Ptto31::from_bits(val as u8)
-    }
-    #[doc = "Port Toggle Output"]
-    #[inline(always)]
-    pub const fn set_ptto31(&mut self, val: super::vals::Ptto31) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
+    pub const fn set_ptto(&mut self, n: usize, val: bool) {
+        assert!(n < 32usize);
+        let offs = 0usize + n * 1usize;
+        self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
     }
 }
 impl Default for Ptor {
@@ -4379,38 +2171,38 @@ impl Default for Ptor {
 impl core::fmt::Debug for Ptor {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ptor")
-            .field("ptto0", &self.ptto0())
-            .field("ptto1", &self.ptto1())
-            .field("ptto2", &self.ptto2())
-            .field("ptto3", &self.ptto3())
-            .field("ptto4", &self.ptto4())
-            .field("ptto5", &self.ptto5())
-            .field("ptto6", &self.ptto6())
-            .field("ptto7", &self.ptto7())
-            .field("ptto8", &self.ptto8())
-            .field("ptto9", &self.ptto9())
-            .field("ptto10", &self.ptto10())
-            .field("ptto11", &self.ptto11())
-            .field("ptto12", &self.ptto12())
-            .field("ptto13", &self.ptto13())
-            .field("ptto14", &self.ptto14())
-            .field("ptto15", &self.ptto15())
-            .field("ptto16", &self.ptto16())
-            .field("ptto17", &self.ptto17())
-            .field("ptto18", &self.ptto18())
-            .field("ptto19", &self.ptto19())
-            .field("ptto20", &self.ptto20())
-            .field("ptto21", &self.ptto21())
-            .field("ptto22", &self.ptto22())
-            .field("ptto23", &self.ptto23())
-            .field("ptto24", &self.ptto24())
-            .field("ptto25", &self.ptto25())
-            .field("ptto26", &self.ptto26())
-            .field("ptto27", &self.ptto27())
-            .field("ptto28", &self.ptto28())
-            .field("ptto29", &self.ptto29())
-            .field("ptto30", &self.ptto30())
-            .field("ptto31", &self.ptto31())
+            .field("ptto[0]", &self.ptto(0usize))
+            .field("ptto[1]", &self.ptto(1usize))
+            .field("ptto[2]", &self.ptto(2usize))
+            .field("ptto[3]", &self.ptto(3usize))
+            .field("ptto[4]", &self.ptto(4usize))
+            .field("ptto[5]", &self.ptto(5usize))
+            .field("ptto[6]", &self.ptto(6usize))
+            .field("ptto[7]", &self.ptto(7usize))
+            .field("ptto[8]", &self.ptto(8usize))
+            .field("ptto[9]", &self.ptto(9usize))
+            .field("ptto[10]", &self.ptto(10usize))
+            .field("ptto[11]", &self.ptto(11usize))
+            .field("ptto[12]", &self.ptto(12usize))
+            .field("ptto[13]", &self.ptto(13usize))
+            .field("ptto[14]", &self.ptto(14usize))
+            .field("ptto[15]", &self.ptto(15usize))
+            .field("ptto[16]", &self.ptto(16usize))
+            .field("ptto[17]", &self.ptto(17usize))
+            .field("ptto[18]", &self.ptto(18usize))
+            .field("ptto[19]", &self.ptto(19usize))
+            .field("ptto[20]", &self.ptto(20usize))
+            .field("ptto[21]", &self.ptto(21usize))
+            .field("ptto[22]", &self.ptto(22usize))
+            .field("ptto[23]", &self.ptto(23usize))
+            .field("ptto[24]", &self.ptto(24usize))
+            .field("ptto[25]", &self.ptto(25usize))
+            .field("ptto[26]", &self.ptto(26usize))
+            .field("ptto[27]", &self.ptto(27usize))
+            .field("ptto[28]", &self.ptto(28usize))
+            .field("ptto[29]", &self.ptto(29usize))
+            .field("ptto[30]", &self.ptto(30usize))
+            .field("ptto[31]", &self.ptto(31usize))
             .finish()
     }
 }
@@ -4419,39 +2211,39 @@ impl defmt::Format for Ptor {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Ptor {{ ptto0: {:?}, ptto1: {:?}, ptto2: {:?}, ptto3: {:?}, ptto4: {:?}, ptto5: {:?}, ptto6: {:?}, ptto7: {:?}, ptto8: {:?}, ptto9: {:?}, ptto10: {:?}, ptto11: {:?}, ptto12: {:?}, ptto13: {:?}, ptto14: {:?}, ptto15: {:?}, ptto16: {:?}, ptto17: {:?}, ptto18: {:?}, ptto19: {:?}, ptto20: {:?}, ptto21: {:?}, ptto22: {:?}, ptto23: {:?}, ptto24: {:?}, ptto25: {:?}, ptto26: {:?}, ptto27: {:?}, ptto28: {:?}, ptto29: {:?}, ptto30: {:?}, ptto31: {:?} }}",
-            self.ptto0(),
-            self.ptto1(),
-            self.ptto2(),
-            self.ptto3(),
-            self.ptto4(),
-            self.ptto5(),
-            self.ptto6(),
-            self.ptto7(),
-            self.ptto8(),
-            self.ptto9(),
-            self.ptto10(),
-            self.ptto11(),
-            self.ptto12(),
-            self.ptto13(),
-            self.ptto14(),
-            self.ptto15(),
-            self.ptto16(),
-            self.ptto17(),
-            self.ptto18(),
-            self.ptto19(),
-            self.ptto20(),
-            self.ptto21(),
-            self.ptto22(),
-            self.ptto23(),
-            self.ptto24(),
-            self.ptto25(),
-            self.ptto26(),
-            self.ptto27(),
-            self.ptto28(),
-            self.ptto29(),
-            self.ptto30(),
-            self.ptto31()
+            "Ptor {{ ptto[0]: {=bool:?}, ptto[1]: {=bool:?}, ptto[2]: {=bool:?}, ptto[3]: {=bool:?}, ptto[4]: {=bool:?}, ptto[5]: {=bool:?}, ptto[6]: {=bool:?}, ptto[7]: {=bool:?}, ptto[8]: {=bool:?}, ptto[9]: {=bool:?}, ptto[10]: {=bool:?}, ptto[11]: {=bool:?}, ptto[12]: {=bool:?}, ptto[13]: {=bool:?}, ptto[14]: {=bool:?}, ptto[15]: {=bool:?}, ptto[16]: {=bool:?}, ptto[17]: {=bool:?}, ptto[18]: {=bool:?}, ptto[19]: {=bool:?}, ptto[20]: {=bool:?}, ptto[21]: {=bool:?}, ptto[22]: {=bool:?}, ptto[23]: {=bool:?}, ptto[24]: {=bool:?}, ptto[25]: {=bool:?}, ptto[26]: {=bool:?}, ptto[27]: {=bool:?}, ptto[28]: {=bool:?}, ptto[29]: {=bool:?}, ptto[30]: {=bool:?}, ptto[31]: {=bool:?} }}",
+            self.ptto(0usize),
+            self.ptto(1usize),
+            self.ptto(2usize),
+            self.ptto(3usize),
+            self.ptto(4usize),
+            self.ptto(5usize),
+            self.ptto(6usize),
+            self.ptto(7usize),
+            self.ptto(8usize),
+            self.ptto(9usize),
+            self.ptto(10usize),
+            self.ptto(11usize),
+            self.ptto(12usize),
+            self.ptto(13usize),
+            self.ptto(14usize),
+            self.ptto(15usize),
+            self.ptto(16usize),
+            self.ptto(17usize),
+            self.ptto(18usize),
+            self.ptto(19usize),
+            self.ptto(20usize),
+            self.ptto(21usize),
+            self.ptto(22usize),
+            self.ptto(23usize),
+            self.ptto(24usize),
+            self.ptto(25usize),
+            self.ptto(26usize),
+            self.ptto(27usize),
+            self.ptto(28usize),
+            self.ptto(29usize),
+            self.ptto(30usize),
+            self.ptto(31usize)
         )
     }
 }
