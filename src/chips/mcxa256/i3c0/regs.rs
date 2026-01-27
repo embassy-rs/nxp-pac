@@ -519,26 +519,26 @@ impl Mdatactrl {
     #[doc = "Flush To-Bus Buffer or FIFO"]
     #[must_use]
     #[inline(always)]
-    pub const fn flushtb(&self) -> super::vals::MdatactrlFlushtb {
+    pub const fn flushtb(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::MdatactrlFlushtb::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Flush To-Bus Buffer or FIFO"]
     #[inline(always)]
-    pub const fn set_flushtb(&mut self, val: super::vals::MdatactrlFlushtb) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    pub const fn set_flushtb(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
     #[doc = "Flush From-Bus Buffer or FIFO"]
     #[must_use]
     #[inline(always)]
-    pub const fn flushfb(&self) -> super::vals::MdatactrlFlushfb {
+    pub const fn flushfb(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::MdatactrlFlushfb::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Flush From-Bus Buffer or FIFO"]
     #[inline(always)]
-    pub const fn set_flushfb(&mut self, val: super::vals::MdatactrlFlushfb) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    pub const fn set_flushfb(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
     #[doc = "Unlock"]
     #[must_use]
@@ -651,7 +651,7 @@ impl defmt::Format for Mdatactrl {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Mdatactrl {{ flushtb: {:?}, flushfb: {:?}, unlock: {=bool:?}, txtrig: {:?}, rxtrig: {:?}, txcount: {=u8:?}, rxcount: {=u8:?}, txfull: {=bool:?}, rxempty: {=bool:?} }}",
+            "Mdatactrl {{ flushtb: {=bool:?}, flushfb: {=bool:?}, unlock: {=bool:?}, txtrig: {:?}, rxtrig: {:?}, txcount: {=u8:?}, rxcount: {=u8:?}, txfull: {=bool:?}, rxempty: {=bool:?} }}",
             self.flushtb(),
             self.flushfb(),
             self.unlock(),
@@ -1102,98 +1102,98 @@ impl Mintclr {
     #[doc = "SLVSTART Interrupt Enable Clear Flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn slvstart(&self) -> super::vals::MintclrSlvstart {
+    pub const fn slvstart(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
-        super::vals::MintclrSlvstart::from_bits(val as u8)
+        val != 0
     }
     #[doc = "SLVSTART Interrupt Enable Clear Flag"]
     #[inline(always)]
-    pub const fn set_slvstart(&mut self, val: super::vals::MintclrSlvstart) {
-        self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
+    pub const fn set_slvstart(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
     #[doc = "MCTRLDONE Interrupt Enable Clear Flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn mctrldone(&self) -> super::vals::MintclrMctrldone {
+    pub const fn mctrldone(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
-        super::vals::MintclrMctrldone::from_bits(val as u8)
+        val != 0
     }
     #[doc = "MCTRLDONE Interrupt Enable Clear Flag"]
     #[inline(always)]
-    pub const fn set_mctrldone(&mut self, val: super::vals::MintclrMctrldone) {
-        self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
+    pub const fn set_mctrldone(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
     #[doc = "COMPLETE Interrupt Enable Clear Flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn complete(&self) -> super::vals::MintclrComplete {
+    pub const fn complete(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
-        super::vals::MintclrComplete::from_bits(val as u8)
+        val != 0
     }
     #[doc = "COMPLETE Interrupt Enable Clear Flag"]
     #[inline(always)]
-    pub const fn set_complete(&mut self, val: super::vals::MintclrComplete) {
-        self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
+    pub const fn set_complete(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
     #[doc = "RXPEND Interrupt Enable Clear Flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn rxpend(&self) -> super::vals::MintclrRxpend {
+    pub const fn rxpend(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
-        super::vals::MintclrRxpend::from_bits(val as u8)
+        val != 0
     }
     #[doc = "RXPEND Interrupt Enable Clear Flag"]
     #[inline(always)]
-    pub const fn set_rxpend(&mut self, val: super::vals::MintclrRxpend) {
-        self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
+    pub const fn set_rxpend(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
     #[doc = "TXNOTFULL Interrupt Enable Clear Flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn txnotfull(&self) -> super::vals::MintclrTxnotfull {
+    pub const fn txnotfull(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::MintclrTxnotfull::from_bits(val as u8)
+        val != 0
     }
     #[doc = "TXNOTFULL Interrupt Enable Clear Flag"]
     #[inline(always)]
-    pub const fn set_txnotfull(&mut self, val: super::vals::MintclrTxnotfull) {
-        self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
+    pub const fn set_txnotfull(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
     #[doc = "IBIWON Interrupt Enable Clear Flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn ibiwon(&self) -> super::vals::MintclrIbiwon {
+    pub const fn ibiwon(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
-        super::vals::MintclrIbiwon::from_bits(val as u8)
+        val != 0
     }
     #[doc = "IBIWON Interrupt Enable Clear Flag"]
     #[inline(always)]
-    pub const fn set_ibiwon(&mut self, val: super::vals::MintclrIbiwon) {
-        self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
+    pub const fn set_ibiwon(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
     #[doc = "ERRWARN Interrupt Enable Clear Flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn errwarn(&self) -> super::vals::MintclrErrwarn {
+    pub const fn errwarn(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
-        super::vals::MintclrErrwarn::from_bits(val as u8)
+        val != 0
     }
     #[doc = "ERRWARN Interrupt Enable Clear Flag"]
     #[inline(always)]
-    pub const fn set_errwarn(&mut self, val: super::vals::MintclrErrwarn) {
-        self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
+    pub const fn set_errwarn(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
     #[doc = "NOWCONTROLLER Interrupt Enable Clear Flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn nowmaster(&self) -> super::vals::MintclrNowmaster {
+    pub const fn nowmaster(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
-        super::vals::MintclrNowmaster::from_bits(val as u8)
+        val != 0
     }
     #[doc = "NOWCONTROLLER Interrupt Enable Clear Flag"]
     #[inline(always)]
-    pub const fn set_nowmaster(&mut self, val: super::vals::MintclrNowmaster) {
-        self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
+    pub const fn set_nowmaster(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
 }
 impl Default for Mintclr {
@@ -1221,7 +1221,7 @@ impl defmt::Format for Mintclr {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Mintclr {{ slvstart: {:?}, mctrldone: {:?}, complete: {:?}, rxpend: {:?}, txnotfull: {:?}, ibiwon: {:?}, errwarn: {:?}, nowmaster: {:?} }}",
+            "Mintclr {{ slvstart: {=bool:?}, mctrldone: {=bool:?}, complete: {=bool:?}, rxpend: {=bool:?}, txnotfull: {=bool:?}, ibiwon: {=bool:?}, errwarn: {=bool:?}, nowmaster: {=bool:?} }}",
             self.slvstart(),
             self.mctrldone(),
             self.complete(),
@@ -1769,26 +1769,26 @@ impl Mstatus {
     #[doc = "RXPEND"]
     #[must_use]
     #[inline(always)]
-    pub const fn rxpend(&self) -> super::vals::MstatusRxpend {
+    pub const fn rxpend(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
-        super::vals::MstatusRxpend::from_bits(val as u8)
+        val != 0
     }
     #[doc = "RXPEND"]
     #[inline(always)]
-    pub const fn set_rxpend(&mut self, val: super::vals::MstatusRxpend) {
-        self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
+    pub const fn set_rxpend(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
     #[doc = "TX Buffer or FIFO Not Full"]
     #[must_use]
     #[inline(always)]
-    pub const fn txnotfull(&self) -> super::vals::MstatusTxnotfull {
+    pub const fn txnotfull(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
-        super::vals::MstatusTxnotfull::from_bits(val as u8)
+        val != 0
     }
     #[doc = "TX Buffer or FIFO Not Full"]
     #[inline(always)]
-    pub const fn set_txnotfull(&mut self, val: super::vals::MstatusTxnotfull) {
-        self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
+    pub const fn set_txnotfull(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
     #[doc = "In-Band Interrupt (IBI) Won Flag"]
     #[must_use]
@@ -1869,7 +1869,7 @@ impl defmt::Format for Mstatus {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Mstatus {{ state: {:?}, between: {=bool:?}, nacked: {=bool:?}, ibitype: {:?}, slvstart: {=bool:?}, mctrldone: {=bool:?}, complete: {=bool:?}, rxpend: {:?}, txnotfull: {:?}, ibiwon: {=bool:?}, errwarn: {=bool:?}, nowmaster: {=bool:?}, ibiaddr: {=u8:?} }}",
+            "Mstatus {{ state: {:?}, between: {=bool:?}, nacked: {=bool:?}, ibitype: {:?}, slvstart: {=bool:?}, mctrldone: {=bool:?}, complete: {=bool:?}, rxpend: {=bool:?}, txnotfull: {=bool:?}, ibiwon: {=bool:?}, errwarn: {=bool:?}, nowmaster: {=bool:?}, ibiaddr: {=u8:?} }}",
             self.state(),
             self.between(),
             self.nacked(),
@@ -3087,26 +3087,26 @@ impl Sdatactrl {
     #[doc = "Flush To-Bus Buffer or FIFO"]
     #[must_use]
     #[inline(always)]
-    pub const fn flushtb(&self) -> super::vals::SdatactrlFlushtb {
+    pub const fn flushtb(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::SdatactrlFlushtb::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Flush To-Bus Buffer or FIFO"]
     #[inline(always)]
-    pub const fn set_flushtb(&mut self, val: super::vals::SdatactrlFlushtb) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    pub const fn set_flushtb(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
     #[doc = "Flush From-Bus Buffer or FIFO"]
     #[must_use]
     #[inline(always)]
-    pub const fn flushfb(&self) -> super::vals::SdatactrlFlushfb {
+    pub const fn flushfb(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
-        super::vals::SdatactrlFlushfb::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Flush From-Bus Buffer or FIFO"]
     #[inline(always)]
-    pub const fn set_flushfb(&mut self, val: super::vals::SdatactrlFlushfb) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    pub const fn set_flushfb(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
     #[doc = "Unlock"]
     #[must_use]
@@ -3219,7 +3219,7 @@ impl defmt::Format for Sdatactrl {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Sdatactrl {{ flushtb: {:?}, flushfb: {:?}, unlock: {=bool:?}, txtrig: {:?}, rxtrig: {:?}, txcount: {=u8:?}, rxcount: {=u8:?}, txfull: {:?}, rxempty: {:?} }}",
+            "Sdatactrl {{ flushtb: {=bool:?}, flushfb: {=bool:?}, unlock: {=bool:?}, txtrig: {:?}, rxtrig: {:?}, txcount: {=u8:?}, rxcount: {=u8:?}, txfull: {:?}, rxempty: {:?} }}",
             self.flushtb(),
             self.flushfb(),
             self.unlock(),

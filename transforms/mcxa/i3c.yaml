@@ -1,0 +1,9 @@
+transforms:
+  - !DeleteEnums
+    from: i3c0::vals::Mintclr(.+)
+
+  - !DeleteEnums
+    from: i3c0::vals::(.+)Flush(f|t)b
+
+  - !DeleteEnums
+    from: i3c0::vals::Mstatus(Txnotfull|Rxpend)
