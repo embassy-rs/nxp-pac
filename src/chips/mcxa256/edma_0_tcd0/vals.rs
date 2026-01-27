@@ -190,68 +190,7 @@ impl From<Pal> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Smod {
-    #[doc = "Source address modulo feature disabled"]
-    DISABLE = 0x0,
-    #[doc = "Source address modulo feature enabled for any non-zero value \\[1-31\\]"]
-    ENABLE = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
-    _RESERVED_10 = 0x10,
-    _RESERVED_11 = 0x11,
-    _RESERVED_12 = 0x12,
-    _RESERVED_13 = 0x13,
-    _RESERVED_14 = 0x14,
-    _RESERVED_15 = 0x15,
-    _RESERVED_16 = 0x16,
-    _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
-    _RESERVED_1e = 0x1e,
-    _RESERVED_1f = 0x1f,
-}
-impl Smod {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Smod {
-        unsafe { core::mem::transmute(val & 0x1f) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Smod {
-    #[inline(always)]
-    fn from(val: u8) -> Smod {
-        Smod::from_bits(val)
-    }
-}
-impl From<Smod> for u8 {
-    #[inline(always)]
-    fn from(val: Smod) -> u8 {
-        Smod::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Ssize {
+pub enum Size {
     #[doc = "8-bit"]
     EIGHT_BIT = 0x0,
     #[doc = "16-bit"]
@@ -267,9 +206,9 @@ pub enum Ssize {
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
 }
-impl Ssize {
+impl Size {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> Ssize {
+    pub const fn from_bits(val: u8) -> Size {
         unsafe { core::mem::transmute(val & 0x07) }
     }
     #[inline(always)]
@@ -277,16 +216,16 @@ impl Ssize {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for Ssize {
+impl From<u8> for Size {
     #[inline(always)]
-    fn from(val: u8) -> Ssize {
-        Ssize::from_bits(val)
+    fn from(val: u8) -> Size {
+        Size::from_bits(val)
     }
 }
-impl From<Ssize> for u8 {
+impl From<Size> for u8 {
     #[inline(always)]
-    fn from(val: Ssize) -> u8 {
-        Ssize::to_bits(val)
+    fn from(val: Size) -> u8 {
+        Size::to_bits(val)
     }
 }
 #[repr(u8)]

@@ -1,8 +1,15 @@
 transforms:
+  - !Rename
+    from: edma_0_tcd0::vals::Ssize
+    to: edma_0_tcd0::vals::Size
+
   - !ModifyFieldsEnum
     fieldset: edma_0_tcd0::regs::TcdAttr
     field: dsize
-    enum: edma_0_tcd0::vals::Ssize
+    enum: edma_0_tcd0::vals::Size
 
   - !DeleteEnums
     from: edma_0_tcd0::vals::Int
+
+  - !DeleteEnums
+    from: edma_0_tcd0::vals::(S|D)mod
