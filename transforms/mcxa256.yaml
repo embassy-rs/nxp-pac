@@ -15,6 +15,6 @@ includes:
   - mcxa/ostimer.yaml
   - mcxa/scg.yaml
   - mcxa/spc.yaml
+  - mcxa/cdog.yaml
 transforms:
   - !Sort
-

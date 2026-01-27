@@ -197,61 +197,61 @@ impl Control {
     #[doc = "TIMEOUT fault control"]
     #[must_use]
     #[inline(always)]
-    pub const fn timeout_ctrl(&self) -> super::vals::TimeoutCtrl {
+    pub const fn timeout_ctrl(&self) -> super::vals::Ctrl {
         let val = (self.0 >> 2usize) & 0x07;
-        super::vals::TimeoutCtrl::from_bits(val as u8)
+        super::vals::Ctrl::from_bits(val as u8)
     }
     #[doc = "TIMEOUT fault control"]
     #[inline(always)]
-    pub const fn set_timeout_ctrl(&mut self, val: super::vals::TimeoutCtrl) {
+    pub const fn set_timeout_ctrl(&mut self, val: super::vals::Ctrl) {
         self.0 = (self.0 & !(0x07 << 2usize)) | (((val.to_bits() as u32) & 0x07) << 2usize);
     }
     #[doc = "MISCOMPARE fault control"]
     #[must_use]
     #[inline(always)]
-    pub const fn miscompare_ctrl(&self) -> super::vals::MiscompareCtrl {
+    pub const fn miscompare_ctrl(&self) -> super::vals::Ctrl {
         let val = (self.0 >> 5usize) & 0x07;
-        super::vals::MiscompareCtrl::from_bits(val as u8)
+        super::vals::Ctrl::from_bits(val as u8)
     }
     #[doc = "MISCOMPARE fault control"]
     #[inline(always)]
-    pub const fn set_miscompare_ctrl(&mut self, val: super::vals::MiscompareCtrl) {
+    pub const fn set_miscompare_ctrl(&mut self, val: super::vals::Ctrl) {
         self.0 = (self.0 & !(0x07 << 5usize)) | (((val.to_bits() as u32) & 0x07) << 5usize);
     }
     #[doc = "SEQUENCE fault control"]
     #[must_use]
     #[inline(always)]
-    pub const fn sequence_ctrl(&self) -> super::vals::SequenceCtrl {
+    pub const fn sequence_ctrl(&self) -> super::vals::Ctrl {
         let val = (self.0 >> 8usize) & 0x07;
-        super::vals::SequenceCtrl::from_bits(val as u8)
+        super::vals::Ctrl::from_bits(val as u8)
     }
     #[doc = "SEQUENCE fault control"]
     #[inline(always)]
-    pub const fn set_sequence_ctrl(&mut self, val: super::vals::SequenceCtrl) {
+    pub const fn set_sequence_ctrl(&mut self, val: super::vals::Ctrl) {
         self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u32) & 0x07) << 8usize);
     }
     #[doc = "STATE fault control"]
     #[must_use]
     #[inline(always)]
-    pub const fn state_ctrl(&self) -> super::vals::StateCtrl {
+    pub const fn state_ctrl(&self) -> super::vals::Ctrl {
         let val = (self.0 >> 14usize) & 0x07;
-        super::vals::StateCtrl::from_bits(val as u8)
+        super::vals::Ctrl::from_bits(val as u8)
     }
     #[doc = "STATE fault control"]
     #[inline(always)]
-    pub const fn set_state_ctrl(&mut self, val: super::vals::StateCtrl) {
+    pub const fn set_state_ctrl(&mut self, val: super::vals::Ctrl) {
         self.0 = (self.0 & !(0x07 << 14usize)) | (((val.to_bits() as u32) & 0x07) << 14usize);
     }
     #[doc = "ADDRESS fault control"]
     #[must_use]
     #[inline(always)]
-    pub const fn address_ctrl(&self) -> super::vals::AddressCtrl {
+    pub const fn address_ctrl(&self) -> super::vals::Ctrl {
         let val = (self.0 >> 17usize) & 0x07;
-        super::vals::AddressCtrl::from_bits(val as u8)
+        super::vals::Ctrl::from_bits(val as u8)
     }
     #[doc = "ADDRESS fault control"]
     #[inline(always)]
-    pub const fn set_address_ctrl(&mut self, val: super::vals::AddressCtrl) {
+    pub const fn set_address_ctrl(&mut self, val: super::vals::Ctrl) {
         self.0 = (self.0 & !(0x07 << 17usize)) | (((val.to_bits() as u32) & 0x07) << 17usize);
     }
     #[doc = "IRQ pause control"]
