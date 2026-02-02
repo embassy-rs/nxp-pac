@@ -19,5 +19,6 @@ includes:
   - mcxa/i3c.yaml
   - mcxa/can.yaml
   - mcxa/mbc.yaml
+  - mcxa/inputmux.yaml
 transforms:
   - !Sort

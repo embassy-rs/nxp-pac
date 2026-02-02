@@ -1,0 +1,29 @@
+transforms:
+  - !MergeEnums
+    from: inputmux0::vals::(.+)(\d+)(TrigTrigin|InputInp|TrigInp|Inp)$
+    to: inputmux0::vals::$1$3
+
+  - !MergeEnums
+    from: inputmux0::vals::TrigIn(\d+)Val
+    to: inputmux0::vals::TrigInVal
+  
+  - !MergeEnums
+    from: inputmux0::vals::FlexPwm(.+)Trigin
+    to: inputmux0::vals::FlexPwmTrigin
+  
+  - !MergeEnums
+    from: inputmux0::vals::Qdc(\d+)(Home|Icap|Index)Inp
+    to: inputmux0::vals::Qdc${2}Inp
+
+  - !MergeFieldsets
+    from: inputmux0::regs::([^\d]+|Lpi2c)(\d+)(Trig|Input|)$
+    to: inputmux0::regs::$1$3
+
+  - !MergeFieldsets
+    from: inputmux0::regs::FlexPwm(.+)
+    to: inputmux0::regs::FlexPwm
+
+  - !MakeRegisterArray
+    blocks: inputmux0::Inputmux0
+    from: lpuart(\d+)
+    to: lpuart
