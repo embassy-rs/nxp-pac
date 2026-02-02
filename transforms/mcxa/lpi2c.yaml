@@ -14,3 +14,6 @@ transforms:
     - { name: START_EXPECT_NACK, value: 5, description: "Generate (repeated) Start on the I2C bus and transmit the address in DATA[7:0] expecting a NACK response" }
     - { name: START_HS, value: 6, description: "Generate (repeated) Start on the I2C bus and transmit the address in DATA[7:0] using HS mode" }
     - { name: START_HS_EXPECT_NACK, value: 7, description: "Generate (repeated) Start on the I2C bus and transmit the address in DATA[7:0] using HS mode expecting a NACK response" }
+
+  - !DeleteEnums
+    from: lpi2c::vals::(Rsf|SsrSdf|Bef|SsrFef)

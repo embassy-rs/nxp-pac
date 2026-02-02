@@ -106,37 +106,6 @@ impl From<Anv> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Bef {
-    #[doc = "No bit error occurred"]
-    INT_NO = 0x0,
-    #[doc = "Bit error occurred"]
-    INT_YES = 0x01,
-}
-impl Bef {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Bef {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Bef {
-    #[inline(always)]
-    fn from(val: u8) -> Bef {
-        Bef::from_bits(val)
-    }
-}
-impl From<Bef> for u8 {
-    #[inline(always)]
-    fn from(val: Bef) -> u8 {
-        Bef::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmd {
     #[doc = "Transmit value in DATA\\[7:0\\]"]
     TRANSMIT = 0x0,
@@ -852,37 +821,6 @@ impl From<Rscfg> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Rsf {
-    #[doc = "No repeated Start detected"]
-    INT_NO = 0x0,
-    #[doc = "Repeated Start detected"]
-    INT_YES = 0x01,
-}
-impl Rsf {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Rsf {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Rsf {
-    #[inline(always)]
-    fn from(val: u8) -> Rsf {
-        Rsf::from_bits(val)
-    }
-}
-impl From<Rsf> for u8 {
-    #[inline(always)]
-    fn from(val: Rsf) -> u8 {
-        Rsf::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rxcfg {
     #[doc = "Return received data, clear MSR\\[RDF\\]"]
     RETURNS_RECEIVED_DATA_AND_CLEARS_RX_DATA_FLAG = 0x0,
@@ -1126,68 +1064,6 @@ impl From<SsrBbf> for u8 {
     #[inline(always)]
     fn from(val: SsrBbf) -> u8 {
         SsrBbf::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum SsrFef {
-    #[doc = "No FIFO error"]
-    INT_NO = 0x0,
-    #[doc = "FIFO error"]
-    INT_YES = 0x01,
-}
-impl SsrFef {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> SsrFef {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for SsrFef {
-    #[inline(always)]
-    fn from(val: u8) -> SsrFef {
-        SsrFef::from_bits(val)
-    }
-}
-impl From<SsrFef> for u8 {
-    #[inline(always)]
-    fn from(val: SsrFef) -> u8 {
-        SsrFef::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum SsrSdf {
-    #[doc = "No Stop detected"]
-    INT_NO = 0x0,
-    #[doc = "Stop detected"]
-    INT_YES = 0x01,
-}
-impl SsrSdf {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> SsrSdf {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for SsrSdf {
-    #[inline(always)]
-    fn from(val: u8) -> SsrSdf {
-        SsrSdf::from_bits(val)
-    }
-}
-impl From<SsrSdf> for u8 {
-    #[inline(always)]
-    fn from(val: SsrSdf) -> u8 {
-        SsrSdf::to_bits(val)
     }
 }
 #[repr(u8)]

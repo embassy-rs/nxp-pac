@@ -2571,50 +2571,50 @@ impl Ssr {
     #[doc = "Repeated Start Flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn rsf(&self) -> super::vals::Rsf {
+    pub const fn rsf(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
-        super::vals::Rsf::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Repeated Start Flag"]
     #[inline(always)]
-    pub const fn set_rsf(&mut self, val: super::vals::Rsf) {
-        self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
+    pub const fn set_rsf(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
     #[doc = "Stop Detect Flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn sdf(&self) -> super::vals::SsrSdf {
+    pub const fn sdf(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
-        super::vals::SsrSdf::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Stop Detect Flag"]
     #[inline(always)]
-    pub const fn set_sdf(&mut self, val: super::vals::SsrSdf) {
-        self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
+    pub const fn set_sdf(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
     #[doc = "Bit Error Flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn bef(&self) -> super::vals::Bef {
+    pub const fn bef(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
-        super::vals::Bef::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Bit Error Flag"]
     #[inline(always)]
-    pub const fn set_bef(&mut self, val: super::vals::Bef) {
-        self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
+    pub const fn set_bef(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
     #[doc = "FIFO Error Flag"]
     #[must_use]
     #[inline(always)]
-    pub const fn fef(&self) -> super::vals::SsrFef {
+    pub const fn fef(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
-        super::vals::SsrFef::from_bits(val as u8)
+        val != 0
     }
     #[doc = "FIFO Error Flag"]
     #[inline(always)]
-    pub const fn set_fef(&mut self, val: super::vals::SsrFef) {
-        self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
+    pub const fn set_fef(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
     #[doc = "Address Match 0 Flag"]
     #[must_use]
@@ -2720,7 +2720,7 @@ impl defmt::Format for Ssr {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Ssr {{ tdf: {=bool:?}, rdf: {=bool:?}, avf: {=bool:?}, taf: {=bool:?}, rsf: {:?}, sdf: {:?}, bef: {:?}, fef: {:?}, am0f: {=bool:?}, am1f: {=bool:?}, gcf: {=bool:?}, sarf: {=bool:?}, sbf: {:?}, bbf: {:?} }}",
+            "Ssr {{ tdf: {=bool:?}, rdf: {=bool:?}, avf: {=bool:?}, taf: {=bool:?}, rsf: {=bool:?}, sdf: {=bool:?}, bef: {=bool:?}, fef: {=bool:?}, am0f: {=bool:?}, am1f: {=bool:?}, gcf: {=bool:?}, sarf: {=bool:?}, sbf: {:?}, bbf: {:?} }}",
             self.tdf(),
             self.rdf(),
             self.avf(),
