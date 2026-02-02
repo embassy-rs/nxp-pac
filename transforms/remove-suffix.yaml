@@ -1,0 +1,10 @@
+transforms:
+  - !Rename
+    from: (.*)0::(.+)
+    to: ${1}::$2
+    type: All
+  
+  - !Rename
+    from: (.*)::(.+)0
+    to: ${1}::$2
+    type: Block

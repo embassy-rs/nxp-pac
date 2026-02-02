@@ -21,5 +21,6 @@ includes:
   - mcxa/mbc.yaml
   - mcxa/inputmux.yaml
   - mcxa/flexpwm.yaml
+  - remove-suffix.yaml
 transforms:
   - !Sort
