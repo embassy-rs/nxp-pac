@@ -1,0 +1,39 @@
+transforms:
+  # Fix names of sm*sel(23|45) enum variants such that they overlap
+  - !RenameEnumVariants
+    enum: flexpwm::vals::Sm\d+sel\d+
+    from: (.*)SM\d+(PWM|OUT)\d+
+    to: $1$2
+
+  - !RenameEnumVariants
+    enum: flexpwm::vals::Sm\d+sel\d+
+    from: PWM\d+_EXTA
+    to: PWM_EXTA
+
+  - !MergeEnums
+    from: flexpwm::vals::Sm\d(.+)
+    to: flexpwm::vals::Sm$1
+
+  - !MergeEnums
+    from: flexpwm::vals::([^\d]+)\d+([^\d]*)$
+    to: flexpwm::vals::$1$2
+    skip_unmergeable: true
+    check: Layout
+
+  - !MergeFieldsets
+    from: flexpwm::regs::Sm\d(.+)
+    to: flexpwm::regs::Sm$1
+  
+  - !RenameFields
+    fieldset: flexpwm::regs::Smval\d
+    from: ([^\d]+)\d+
+    to: $1
+
+  - !MergeFieldsets
+    from: flexpwm::regs::Smval\d
+    to: flexpwm::regs::Smval
+  
+  - !MakeRegisterArray
+    blocks: flexpwm::Flexpwm
+    from: (sm\d+val)\d+
+    to: $1

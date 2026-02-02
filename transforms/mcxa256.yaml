@@ -20,5 +20,6 @@ includes:
   - mcxa/can.yaml
   - mcxa/mbc.yaml
   - mcxa/inputmux.yaml
+  - mcxa/flexpwm.yaml
 transforms:
   - !Sort
