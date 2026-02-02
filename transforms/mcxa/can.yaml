@@ -1,0 +1,75 @@
+transforms:
+  - !MergeFieldsets
+    from: can::regs::(Cs|Id)(\d+)
+    to: can::regs::$1
+
+  - !MergeFieldsets
+    from: can::regs::Mb(\d+)b(Cs|Id)
+    to: can::regs::Mbb$2
+
+  - !DeleteFieldsets
+    from: can::regs::Mb(\d+)bWord(\d+)
+  
+  - !DeleteFieldsets
+    from: can::regs::Word(\d+)
+
+  - !MakeRegisterArray
+    blocks: can::Can
+    from: word(0|1)(\d+)
+    to: word$1
+  
+  - !MakeRegisterArray
+    blocks: can::Can
+    from: id(\d+)
+    to: id
+
+  - !MakeRegisterArray
+    blocks: can::Can
+    from: cs(\d+)
+    to: cs
+  
+  - !MakeRegisterArray
+    blocks: can::Can
+    from: mb(\d+)_8b_cs
+    to: mb_8b_cs
+  
+  - !MakeRegisterArray
+    blocks: can::Can
+    from: mb(\d+)_16b_cs
+    to: mb_16b_cs
+  
+  - !MakeRegisterArray
+    blocks: can::Can
+    from: mb(\d+)_32b_cs
+    to: mb_32b_cs
+  
+  - !MakeRegisterArray
+    blocks: can::Can
+    from: mb(\d+)_64b_cs
+    to: mb_64b_cs
+
+  - !MakeRegisterArray
+    blocks: can::Can
+    from: mb(\d+)_8b_id
+    to: mb_8b_id
+  
+  - !MakeRegisterArray
+    blocks: can::Can
+    from: mb(\d+)_16b_id
+    to: mb_16b_id
+  
+  - !MakeRegisterArray
+    blocks: can::Can
+    from: mb(\d+)_32b_id
+    to: mb_32b_id
+  
+  - !MakeRegisterArray
+    blocks: can::Can
+    from: mb(\d+)_64b_id
+    to: mb_64b_id
+  
+  # For now delete all extra word registers.
+  # Can be re-added when needed for HAL implementation.
+  - !DeleteRegisters
+    block: can::Can
+    from: mb(\d+)_(\d+)b_word(\d+)
