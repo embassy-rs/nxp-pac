@@ -1,0 +1,26 @@
+transforms:
+  - !Rename
+    from: mbc0::vals::Mbc0Dom0(.+)
+    to: mbc0::vals::$1
+
+  - !MergeEnums
+    from: mbc0::vals::Mem(\d+)BlkCfgW(\d+)(Nse|Mbacsel)(\d+)
+    to: mbc0::vals::MemBlkCfgW$3
+
+  - !Rename
+    from: mbc0::vals::MemBlkCfgW(.+)
+    to: mbc0::vals::$1
+
+  - !Rename
+    from: mbc0::regs::Mbc0(.+)
+    to: mbc0::regs::$1
+
+  - !MergeFieldsets
+    from: mbc0::regs::Dom0Mem(\d+)BlkCfgW(\d+)
+    to: mbc0::regs::MemnBlkCfgW
+
+  - !MakeRegisterArray
+    blocks: mbc0::Mbc0
+    from: mbc0_dom0_mem0_blk_cfg_w(\d+)
+    to: mbc0_dom0_mem0_blk_cfg_wn
+  

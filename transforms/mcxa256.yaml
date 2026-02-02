@@ -18,5 +18,6 @@ includes:
   - mcxa/cdog.yaml
   - mcxa/i3c.yaml
   - mcxa/can.yaml
+  - mcxa/mbc.yaml
 transforms:
   - !Sort
