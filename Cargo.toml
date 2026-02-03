@@ -15,8 +15,20 @@ keywords = [
     "nxp",
     "imxrt",
 ]
-# repository = ""
-# documentation = "" 
+homepage = "https://github.com/embassy-rs/nxp-pac"
+repository = "https://github.com/embassy-rs/nxp-pac"
+documentation = "https://docs.embassy.dev/nxp-pac"
+
+[package.metadata.embassy_docs]
+src_base = "https://github.com/embassy-rs/nxp-pac/blob/v$VERSION/src/"
+src_base_git = "https://github.com/embassy-rs/nxp-pac/blob/$COMMIT/src/"
+features = ["rt"]
+flavors = [
+    { regex_feature = "mimxrt1.*",  target = "thumbv7em-none-eabihf" },
+    { regex_feature = "mimxrt6.*",  target = "thumbv8m.main-none-eabihf" },
+    { regex_feature = "mcx.*",      target = "thumbv8m.main-none-eabihf" },
+    { regex_feature = "lpc55s69.*", target = "thumbv8m.main-none-eabihf" }
+]
 
 [dependencies]
 cortex-m = "0.7.1"
@@ -49,3 +61,4 @@ mcxa256 = []
 ## LPC55S69
 lpc55s69_cm33_core0 = []
 lpc55s69_cm33_core1 = []
+
