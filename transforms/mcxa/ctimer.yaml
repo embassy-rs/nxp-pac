@@ -1,0 +1,50 @@
+transforms:
+  - !RenameEnumVariants
+    enum: ctimer::vals::([A-Za-z]+)(\d+)(.+)
+    from: ([A-Z]+)[0-9O]([A-Z]+)_([0-9])
+    to: $1$2$3
+
+  - !RenameEnumVariants
+    enum: ctimer::vals::Mr[0-9]s
+    from: ([A-Z_]+)([0-9])
+    to: MRS$2
+
+  - !MergeEnums
+    from: ctimer::vals::Cap(\d+)(.+)
+    to: ctimer::vals::Cap$2
+    skip_unmergeable: false
+
+  - !MergeEnums
+    from: ctimer::vals::Em(\d+)
+    to: ctimer::vals::Em
+    skip_unmergeable: false
+
+  - !MergeEnums
+    from: ctimer::vals::Emc(\d+)
+    to: ctimer::vals::Emc
+    skip_unmergeable: false
+
+  - !MergeEnums
+    from: ctimer::vals::Mr(\d+)i
+    to: ctimer::vals::Mri
+    skip_unmergeable: false
+
+  - !MergeEnums
+    from: ctimer::vals::Mr(\d+)r
+    to: ctimer::vals::Mrr
+    skip_unmergeable: false
+
+  - !MergeEnums
+    from: ctimer::vals::Mr(\d+)rl
+    to: ctimer::vals::Mrrl
+    skip_unmergeable: false
+
+  - !MergeEnums
+    from: ctimer::vals::Mr(\d+)s
+    to: ctimer::vals::Mrs
+    skip_unmergeable: false
+
+  - !MergeEnums
+    from: ctimer::vals::Pwmen(\d+)
+    to: ctimer::vals::Pwmen
+    skip_unmergeable: false
