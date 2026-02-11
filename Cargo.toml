@@ -5,7 +5,7 @@ members = [ "generator" ]
 name = "nxp-pac"
 version = "0.1.0"
 edition = "2024"
-license = "BSD-3-Clause"
+license = "MIT OR Apache-2.0"
 description = "Peripheral Access Crate (PAC) for NXP Semiconductor chips."
 keywords = [
     "no-std",

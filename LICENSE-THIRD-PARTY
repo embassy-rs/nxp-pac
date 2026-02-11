@@ -1,0 +1,5 @@
+There is some third-party software used in this project. The licenses are listed below.
+
+data/mcux-soc-svd:
+  3-clause BSD
+  See data/mcux-soc-svd/COPYING-BSD-3
