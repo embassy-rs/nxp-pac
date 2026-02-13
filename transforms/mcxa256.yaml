@@ -9,6 +9,7 @@ includes:
   - mcxa/trng.yaml
   - mcxa/adc.yaml
   - mcxa/crc.yaml
+  - mcxa/ctimer.yaml
   - mcxa/lpi2c.yaml
   - mcxa/lpuart.yaml
   - mcxa/rtc.yaml
