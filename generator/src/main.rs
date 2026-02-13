@@ -23,6 +23,8 @@ use std::{
 
 use anyhow::{Context, bail};
 use rayon::iter::{IntoParallelRefIterator, ParallelIterator};
+use tracing::{debug, error, info, level_filters::LevelFilter};
+use tracing_subscriber::EnvFilter;
 
 struct Feature {
     /// The name of the chip to generate.
@@ -54,6 +56,12 @@ const GENERATE: &[Feature] = &[
 ];
 
 fn main() -> anyhow::Result<()> {
+    tracing_subscriber::fmt()
+        .with_writer(std::io::stderr)
+        .with_env_filter(EnvFilter::from_default_env())
+        .with_max_level(LevelFilter::INFO)
+        .init();
+
     verify_chiptool().context("chiptool is not installed")?;
 
     let current = env::current_dir()?;
@@ -90,7 +98,7 @@ fn main() -> anyhow::Result<()> {
     for output in outputs {
         if let Err(e) = output {
             error |= true;
-            println!("Error for output {e:?}");
+            error!("Error for output {e:?}");
         }
     }
 
@@ -98,7 +106,7 @@ fn main() -> anyhow::Result<()> {
         bail!("Failed to generate chips {:?}", error);
     }
 
-    println!("Formatting code");
+    info!("Formatting code");
     Command::new("cargo")
         .arg("fmt")
         .current_dir(current)
@@ -126,10 +134,11 @@ fn generate_chip(current_dir: &Path, feature: &Feature) -> anyhow::Result<()> {
 
     for core in feature.cores {
         let svd = chip_src_dir.join(core).with_extension("xml");
+        debug!("svd path: {:?}", svd);
         let transforms_dir = current_dir.join("transforms");
         let chips_dir = current_dir.join("src").join("chips");
 
-        println!("Generating {}/{}", feature.chip, core);
+        info!("Generating {}/{}", feature.chip, core);
         pac::generate_core(&svd, &chips_dir, &transforms_dir, &core).context("Generating PAC")?;
 
         // TODO: MCXN947 metadata to remove this hack
