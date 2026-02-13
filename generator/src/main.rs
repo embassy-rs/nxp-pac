@@ -47,6 +47,8 @@ const GENERATE: &[Feature] = &[
     // TODO: metadata
     Feature { chip: "MIMXRT685S", metadata: "", cores: &["MIMXRT685S_cm33"] },
 
+    Feature { chip: "LPC55S16", metadata: "LPC55S16", cores: &["LPC55S16"] },
+
     Feature { chip: "LPC55S69", metadata: "LPC55S6x", cores: &["LPC55S69_cm33_core0", "LPC55S69_cm33_core1"] },
 
     // TODO: metadata
