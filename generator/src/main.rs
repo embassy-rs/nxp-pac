@@ -23,7 +23,7 @@ use std::{
 
 use anyhow::{Context, bail};
 use rayon::iter::{IntoParallelRefIterator, ParallelIterator};
-use tracing::{error, info, level_filters::LevelFilter};
+use tracing::{debug, error, info, level_filters::LevelFilter};
 use tracing_subscriber::EnvFilter;
 
 struct Feature {
@@ -134,6 +134,7 @@ fn generate_chip(current_dir: &Path, feature: &Feature) -> anyhow::Result<()> {
 
     for core in feature.cores {
         let svd = chip_src_dir.join(core).with_extension("xml");
+        debug!("svd path: {:?}", svd);
         let transforms_dir = current_dir.join("transforms");
         let chips_dir = current_dir.join("src").join("chips");
 
