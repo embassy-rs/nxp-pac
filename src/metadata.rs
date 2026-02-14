@@ -5,6 +5,7 @@
     feature = "mimxrt685s_cm33",
     path = "./chips/mimxrt685s_cm33/metadata.rs"
 )]
+#[cfg_attr(feature = "lpc55s16", path = "./chips/lpc55s16/metadata.rs")]
 #[cfg_attr(
     feature = "lpc55s69_cm33_core0",
     path = "./chips/lpc55s69_cm33_core0/metadata.rs"

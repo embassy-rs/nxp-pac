@@ -1,0 +1,463 @@
+{
+  "$schema": "./schema.json",
+  "$comment": "LPC55S16",
+  "chips": ["LPC55S16"],
+  "pins": [
+    { "name": "PIO0_0", "supply": "VDD" },
+    { "name": "PIO0_1", "supply": "VDD" },
+    { "name": "PIO0_2", "supply": "VDD" },
+    { "name": "PIO0_3", "supply": "VDD" },
+    { "name": "PIO0_4", "supply": "VDD" },
+    { "name": "PIO0_5", "supply": "VDD" },
+    { "name": "PIO0_6", "supply": "VDD" },
+    { "name": "PIO0_7", "supply": "VDD" },
+    { "name": "PIO0_8", "supply": "VDD" },
+    { "name": "PIO0_9", "supply": "VDD" },
+    { "name": "PIO0_10", "supply": "VDD" },
+    { "name": "PIO0_11", "supply": "VDD" },
+    { "name": "PIO0_12", "supply": "VDD" },
+    { "name": "PIO0_13", "supply": "VDD" },
+    { "name": "PIO0_14", "supply": "VDD" },
+    { "name": "PIO0_15", "supply": "VDD" },
+    { "name": "PIO0_16", "supply": "VDD" },
+    { "name": "PIO0_17", "supply": "VDD" },
+    { "name": "PIO0_18", "supply": "VDD" },
+    { "name": "PIO0_19", "supply": "VDD" },
+    { "name": "PIO0_20", "supply": "VDD" },
+    { "name": "PIO0_21", "supply": "VDD" },
+    { "name": "PIO0_22", "supply": "VDD" },
+    { "name": "PIO0_23", "supply": "VDD" },
+    { "name": "PIO0_24", "supply": "VDD" },
+    { "name": "PIO0_25", "supply": "VDD" },
+    { "name": "PIO0_26", "supply": "VDD" },
+    { "name": "PIO0_27", "supply": "VDD" },
+    { "name": "PIO0_28", "supply": "VDD" },
+    { "name": "PIO0_29", "supply": "VDD" },
+    { "name": "PIO0_30", "supply": "VDD" },
+    { "name": "PIO0_31", "supply": "VDD" },
+
+    { "name": "PIO1_0", "supply": "VDD" },
+    { "name": "PIO1_1", "supply": "VDD" },
+    { "name": "PIO1_2", "supply": "VDD" },
+    { "name": "PIO1_3", "supply": "VDD" },
+    { "name": "PIO1_4", "supply": "VDD" },
+    { "name": "PIO1_5", "supply": "VDD" },
+    { "name": "PIO1_6", "supply": "VDD" },
+    { "name": "PIO1_7", "supply": "VDD" },
+    { "name": "PIO1_8", "supply": "VDD" },
+    { "name": "PIO1_9", "supply": "VDD" },
+    { "name": "PIO1_10", "supply": "VDD" },
+    { "name": "PIO1_11", "supply": "VDD" },
+    { "name": "PIO1_12", "supply": "VDD" },
+    { "name": "PIO1_13", "supply": "VDD" },
+    { "name": "PIO1_14", "supply": "VDD" },
+    { "name": "PIO1_15", "supply": "VDD" },
+    { "name": "PIO1_16", "supply": "VDD" },
+    { "name": "PIO1_17", "supply": "VDD" },
+    { "name": "PIO1_18", "supply": "VDD" },
+    { "name": "PIO1_19", "supply": "VDD" },
+    { "name": "PIO1_20", "supply": "VDD" },
+    { "name": "PIO1_21", "supply": "VDD" },
+    { "name": "PIO1_22", "supply": "VDD" },
+    { "name": "PIO1_23", "supply": "VDD" },
+    { "name": "PIO1_24", "supply": "VDD" },
+    { "name": "PIO1_25", "supply": "VDD" },
+    { "name": "PIO1_26", "supply": "VDD" },
+    { "name": "PIO1_27", "supply": "VDD" },
+    { "name": "PIO1_28", "supply": "VDD" },
+    { "name": "PIO1_29", "supply": "VDD" },
+    { "name": "PIO1_30", "supply": "VDD" },
+    { "name": "PIO1_31", "supply": "VDD" },
+
+    { "name": "VREFP" },
+    { "name": "VREFN" }
+  ],
+  "peripherals": [
+    {
+      "name": "DMA0",
+      "signals": [
+        { "name": "0", "pins": [] },
+        { "name": "1", "pins": [] },
+        { "name": "2", "pins": [] },
+        { "name": "3", "pins": [] },
+        { "name": "4", "pins": [] },
+        { "name": "5", "pins": [] },
+        { "name": "6", "pins": [] },
+        { "name": "7", "pins": [] },
+        { "name": "8", "pins": [] },
+        { "name": "9", "pins": [] },
+        { "name": "10", "pins": [] },
+        { "name": "11", "pins": [] },
+        { "name": "12", "pins": [] },
+        { "name": "13", "pins": [] },
+        { "name": "14", "pins": [] },
+        { "name": "15", "pins": [] },
+        { "name": "16", "pins": [] },
+        { "name": "17", "pins": [] },
+        { "name": "18", "pins": [] },
+        { "name": "19", "pins": [] },
+        { "name": "20", "pins": [] },
+        { "name": "21", "pins": [] },
+        { "name": "22", "pins": [] }
+      ]
+    },
+    {
+      "name": "GPIO0",
+      "signals": [
+        { "name": "0", "pins": [{ "pin": "PIO0_0", "alt": 0 }] },
+        { "name": "1", "pins": [{ "pin": "PIO0_1", "alt": 0 }] },
+        { "name": "2", "pins": [{ "pin": "PIO0_2", "alt": 0 }] },
+        { "name": "3", "pins": [{ "pin": "PIO0_3", "alt": 0 }] },
+        { "name": "4", "pins": [{ "pin": "PIO0_4", "alt": 0 }] },
+        { "name": "5", "pins": [{ "pin": "PIO0_5", "alt": 0 }] },
+        { "name": "6", "pins": [{ "pin": "PIO0_6", "alt": 0 }] },
+        { "name": "7", "pins": [{ "pin": "PIO0_7", "alt": 0 }] },
+        { "name": "8", "pins": [{ "pin": "PIO0_8", "alt": 0 }] },
+        { "name": "9", "pins": [{ "pin": "PIO0_9", "alt": 0 }] },
+        { "name": "10", "pins": [{ "pin": "PIO0_10", "alt": 0 }] },
+        { "name": "11", "pins": [{ "pin": "PIO0_11", "alt": 0 }] },
+        { "name": "12", "pins": [{ "pin": "PIO0_12", "alt": 0 }] },
+        { "name": "13", "pins": [{ "pin": "PIO0_13", "alt": 0 }] },
+        { "name": "14", "pins": [{ "pin": "PIO0_14", "alt": 0 }] },
+        { "name": "15", "pins": [{ "pin": "PIO0_15", "alt": 0 }] },
+        { "name": "16", "pins": [{ "pin": "PIO0_16", "alt": 0 }] },
+        { "name": "17", "pins": [{ "pin": "PIO0_17", "alt": 0 }] },
+        { "name": "18", "pins": [{ "pin": "PIO0_18", "alt": 0 }] },
+        { "name": "19", "pins": [{ "pin": "PIO0_19", "alt": 0 }] },
+        { "name": "20", "pins": [{ "pin": "PIO0_20", "alt": 0 }] },
+        { "name": "21", "pins": [{ "pin": "PIO0_21", "alt": 0 }] },
+        { "name": "22", "pins": [{ "pin": "PIO0_22", "alt": 0 }] },
+        { "name": "23", "pins": [{ "pin": "PIO0_23", "alt": 0 }] },
+        { "name": "24", "pins": [{ "pin": "PIO0_24", "alt": 0 }] },
+        { "name": "25", "pins": [{ "pin": "PIO0_25", "alt": 0 }] },
+        { "name": "26", "pins": [{ "pin": "PIO0_26", "alt": 0 }] },
+        { "name": "27", "pins": [{ "pin": "PIO0_27", "alt": 0 }] },
+        { "name": "28", "pins": [{ "pin": "PIO0_28", "alt": 0 }] },
+        { "name": "29", "pins": [{ "pin": "PIO0_29", "alt": 0 }] },
+        { "name": "30", "pins": [{ "pin": "PIO0_30", "alt": 0 }] },
+        { "name": "31", "pins": [{ "pin": "PIO0_31", "alt": 0 }] }
+      ]
+    },
+    {
+      "name": "GPIO1",
+      "signals": [
+        { "name": "0", "pins": [{ "pin": "PIO1_0", "alt": 0 }] },
+        { "name": "1", "pins": [{ "pin": "PIO1_1", "alt": 0 }] },
+        { "name": "2", "pins": [{ "pin": "PIO1_2", "alt": 0 }] },
+        { "name": "3", "pins": [{ "pin": "PIO1_3", "alt": 0 }] },
+        { "name": "4", "pins": [{ "pin": "PIO1_4", "alt": 0 }] },
+        { "name": "5", "pins": [{ "pin": "PIO1_5", "alt": 0 }] },
+        { "name": "6", "pins": [{ "pin": "PIO1_6", "alt": 0 }] },
+        { "name": "7", "pins": [{ "pin": "PIO1_7", "alt": 0 }] },
+        { "name": "8", "pins": [{ "pin": "PIO1_8", "alt": 0 }] },
+        { "name": "9", "pins": [{ "pin": "PIO1_9", "alt": 0 }] },
+        { "name": "10", "pins": [{ "pin": "PIO1_10", "alt": 0 }] },
+        { "name": "11", "pins": [{ "pin": "PIO1_11", "alt": 0 }] },
+        { "name": "12", "pins": [{ "pin": "PIO1_12", "alt": 0 }] },
+        { "name": "13", "pins": [{ "pin": "PIO1_13", "alt": 0 }] },
+        { "name": "14", "pins": [{ "pin": "PIO1_14", "alt": 0 }] },
+        { "name": "15", "pins": [{ "pin": "PIO1_15", "alt": 0 }] },
+        { "name": "16", "pins": [{ "pin": "PIO1_16", "alt": 0 }] },
+        { "name": "17", "pins": [{ "pin": "PIO1_17", "alt": 0 }] },
+        { "name": "18", "pins": [{ "pin": "PIO1_18", "alt": 0 }] },
+        { "name": "19", "pins": [{ "pin": "PIO1_19", "alt": 0 }] },
+        { "name": "20", "pins": [{ "pin": "PIO1_20", "alt": 0 }] },
+        { "name": "21", "pins": [{ "pin": "PIO1_21", "alt": 0 }] },
+        { "name": "22", "pins": [{ "pin": "PIO1_22", "alt": 0 }] },
+        { "name": "23", "pins": [{ "pin": "PIO1_23", "alt": 0 }] },
+        { "name": "24", "pins": [{ "pin": "PIO1_24", "alt": 0 }] },
+        { "name": "25", "pins": [{ "pin": "PIO1_25", "alt": 0 }] },
+        { "name": "26", "pins": [{ "pin": "PIO1_26", "alt": 0 }] },
+        { "name": "27", "pins": [{ "pin": "PIO1_27", "alt": 0 }] },
+        { "name": "28", "pins": [{ "pin": "PIO1_28", "alt": 0 }] },
+        { "name": "29", "pins": [{ "pin": "PIO1_29", "alt": 0 }] },
+        { "name": "30", "pins": [{ "pin": "PIO1_30", "alt": 0 }] },
+        { "name": "31", "pins": [{ "pin": "PIO1_31", "alt": 0 }] }
+      ]
+    },
+    { "name": "FLEXCOMM0", "signals": [] },
+    { "name": "FLEXCOMM1", "signals": [] },
+    { "name": "FLEXCOMM2", "signals": [] },
+    { "name": "FLEXCOMM3", "signals": [] },
+    { "name": "FLEXCOMM4", "signals": [] },
+    { "name": "FLEXCOMM5", "signals": [] },
+    { "name": "FLEXCOMM6", "signals": [] },
+    { "name": "FLEXCOMM7", "signals": [] },
+    {
+      "name": "USART0",
+      "flexcomm": "FLEXCOMM0",
+      "signals": [
+        {
+          "name": "TXD",
+          "pins": [
+            { "pin": "PIO0_25", "alt": 1 },
+            { "pin": "PIO0_30", "alt": 1 },
+            { "pin": "PIO1_6", "alt": 1 }
+          ]
+        },
+        {
+          "name": "RXD",
+          "pins": [
+            { "pin": "PIO0_24", "alt": 1 },
+            { "pin": "PIO0_29", "alt": 1 },
+            { "pin": "PIO1_5", "alt": 1 }
+          ]
+        },
+        {
+          "name": "RTS",
+          "pins": [
+            { "pin": "PIO1_0", "alt": 1 },
+            { "pin": "PIO1_7", "alt": 1 }
+          ]
+        },
+        {
+          "name": "CTS",
+          "pins": [
+            { "pin": "PIO0_23", "alt": 5 },
+            { "pin": "PIO0_31", "alt": 1 },
+            { "pin": "PIO1_8", "alt": 1 }
+          ]
+        },
+        {
+          "name": "SCK",
+          "pins": [
+            { "pin": "PIO0_26", "alt": 8 },
+            { "pin": "PIO0_28", "alt": 1 },
+            { "pin": "PIO1_4", "alt": 1 }
+          ]
+        }
+      ],
+      "dma_muxing": [
+        {
+          "signal": "RX",
+          "mux": "DMA0",
+          "request": 4
+        },
+        {
+          "signal": "TX",
+          "mux": "DMA0",
+          "request": 5
+        }
+      ]
+    },
+    {
+      "name": "USART1",
+      "flexcomm": "FLEXCOMM1",
+      "signals": [
+        { "name": "TXD", "pins": [{ "pin": "PIO1_11", "alt": 2 }] },
+        { "name": "RXD", "pins": [{ "pin": "PIO1_10", "alt": 2 }] }
+      ],
+      "dma_muxing": [
+        {
+          "signal": "RX",
+          "mux": "DMA0",
+          "request": 6
+        },
+        {
+          "signal": "TX",
+          "mux": "DMA0",
+          "request": 7
+        }
+      ]
+    },
+    {
+      "name": "USART2",
+      "flexcomm": "FLEXCOMM2",
+      "signals": [
+        { "name": "TXD", "pins": [{ "pin": "PIO0_27", "alt": 1 }] },
+        { "name": "RXD", "pins": [{ "pin": "PIO1_24", "alt": 1 }] }
+      ],
+      "dma_muxing": [
+        {
+          "signal": "RX",
+          "mux": "DMA0",
+          "request": 10
+        },
+        {
+          "signal": "TX",
+          "mux": "DMA0",
+          "request": 11
+        }
+      ]
+    },
+    {
+      "name": "USART3",
+      "flexcomm": "FLEXCOMM3",
+      "signals": [
+        { "name": "TXD", "pins": [{ "pin": "PIO0_2", "alt": 1 }] },
+        { "name": "RXD", "pins": [{ "pin": "PIO0_3", "alt": 1 }] }
+      ],
+      "dma_muxing": [
+        {
+          "signal": "RX",
+          "mux": "DMA0",
+          "request": 8
+        },
+        {
+          "signal": "TX",
+          "mux": "DMA0",
+          "request": 9
+        }
+      ]
+    },
+    {
+      "name": "USART4",
+      "flexcomm": "FLEXCOMM4",
+      "signals": [
+        { "name": "TXD", "pins": [{ "pin": "PIO0_16", "alt": 1 }] },
+        { "name": "RXD", "pins": [{ "pin": "PIO0_5", "alt": 2 }] }
+      ],
+      "dma_muxing": [
+        {
+          "signal": "RX",
+          "mux": "DMA0",
+          "request": 12
+        },
+        {
+          "signal": "TX",
+          "mux": "DMA0",
+          "request": 13
+        }
+      ]
+    },
+    {
+      "name": "USART5",
+      "flexcomm": "FLEXCOMM5",
+      "signals": [
+        { "name": "TXD", "pins": [{ "pin": "PIO0_9", "alt": 3 }] },
+        { "name": "RXD", "pins": [{ "pin": "PIO0_8", "alt": 3 }] }
+      ],
+      "dma_muxing": [
+        {
+          "signal": "RX",
+          "mux": "DMA0",
+          "request": 14
+        },
+        {
+          "signal": "TX",
+          "mux": "DMA0",
+          "request": 15
+        }
+      ]
+    },
+    {
+      "name": "USART6",
+      "flexcomm": "FLEXCOMM6",
+      "signals": [
+        { "name": "TXD", "pins": [{ "pin": "PIO1_16", "alt": 2 }] },
+        { "name": "RXD", "pins": [{ "pin": "PIO1_13", "alt": 2 }] }
+      ],
+      "dma_muxing": [
+        {
+          "signal": "RX",
+          "mux": "DMA0",
+          "request": 16
+        },
+        {
+          "signal": "TX",
+          "mux": "DMA0",
+          "request": 17
+        }
+      ]
+    },
+    {
+      "name": "USART7",
+      "flexcomm": "FLEXCOMM7",
+      "signals": [
+        { "name": "TXD", "pins": [{ "pin": "PIO0_19", "alt": 7 }] },
+        { "name": "RXD", "pins": [{ "pin": "PIO0_20", "alt": 7 }] }
+      ],
+      "dma_muxing": [
+        {
+          "signal": "RX",
+          "mux": "DMA0",
+          "request": 18
+        },
+        {
+          "signal": "TX",
+          "mux": "DMA0",
+          "request": 19
+        }
+      ]
+    },
+    {
+      "name": "SCT0",
+      "signals": [
+        {
+          "name": "OUT0",
+          "pins": [
+            { "pin": "PIO0_2", "alt": 3 },
+            { "pin": "PIO0_17", "alt": 4 },
+            { "pin": "PIO1_4", "alt": 4 },
+            { "pin": "PIO1_23", "alt": 2 }
+          ]
+        },
+        {
+          "name": "OUT1",
+          "pins": [
+            { "pin": "PIO0_3", "alt": 3 },
+            { "pin": "PIO0_18", "alt": 4 },
+            { "pin": "PIO1_8", "alt": 4 },
+            { "pin": "PIO1_24", "alt": 2 }
+          ]
+        },
+        {
+          "name": "OUT2",
+          "pins": [
+            { "pin": "PIO0_10", "alt": 5 },
+            { "pin": "PIO0_15", "alt": 4 },
+            { "pin": "PIO0_19", "alt": 4 },
+            { "pin": "PIO1_9", "alt": 4 },
+            { "pin": "PIO1_25", "alt": 2 }
+          ]
+        },
+        {
+          "name": "OUT3",
+          "pins": [
+            { "pin": "PIO0_22", "alt": 4 },
+            { "pin": "PIO0_31", "alt": 4 },
+            { "pin": "PIO1_10", "alt": 4 },
+            { "pin": "PIO1_26", "alt": 2 }
+          ]
+        },
+        {
+          "name": "OUT4",
+          "pins": [
+            { "pin": "PIO0_23", "alt": 4 },
+            { "pin": "PIO1_3", "alt": 4 },
+            { "pin": "PIO1_17", "alt": 4 }
+          ]
+        },
+        {
+          "name": "OUT5",
+          "pins": [
+            { "pin": "PIO0_26", "alt": 4 },
+            { "pin": "PIO1_18", "alt": 4 }
+          ]
+        },
+        {
+          "name": "OUT6",
+          "pins": [
+            { "pin": "PIO0_27", "alt": 4 },
+            { "pin": "PIO1_31", "alt": 4 }
+          ]
+        },
+        {
+          "name": "OUT7",
+          "pins": [
+            { "pin": "PIO0_28", "alt": 4 },
+            { "pin": "PIO1_19", "alt": 2 }
+          ]
+        },
+        {
+          "name": "OUT8",
+          "pins": [{ "pin": "PIO0_29", "alt": 4 }]
+        },
+        {
+          "name": "OUT9",
+          "pins": [{ "pin": "PIO0_30", "alt": 4 }]
+        }
+      ]
+    }
+  ]
+}
