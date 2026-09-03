@@ -1840,6 +1840,477 @@ pub const PERIPHERALS: &[Peripheral] = &[
         gate: None,
     },
     Peripheral {
+        name: "I2C0",
+        address: 0,
+        driver_name: "",
+        signals: &[
+            Signal {
+                name: "SDA",
+                pins: &[
+                    SignalPin {
+                        pin: "PIO0_23",
+                        alt: 5u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO0_24",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO0_29",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO0_31",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO1_5",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO1_8",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                ],
+                iomuxc_daisy: None,
+            },
+            Signal {
+                name: "SCL",
+                pins: &[
+                    SignalPin {
+                        pin: "PIO0_25",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO0_30",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO1_0",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO1_6",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO1_7",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                ],
+                iomuxc_daisy: None,
+            },
+        ],
+        flexcomm: Some("FLEXCOMM0"),
+        dma_muxing: &[],
+        gate: None,
+    },
+    Peripheral {
+        name: "I2C1",
+        address: 0,
+        driver_name: "",
+        signals: &[
+            Signal {
+                name: "SDA",
+                pins: &[
+                    SignalPin {
+                        pin: "PIO0_13",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO1_10",
+                        alt: 2u8,
+                        iomuxc_daisy: None,
+                    },
+                ],
+                iomuxc_daisy: None,
+            },
+            Signal {
+                name: "SCL",
+                pins: &[
+                    SignalPin {
+                        pin: "PIO0_10",
+                        alt: 4u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO0_14",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO1_11",
+                        alt: 2u8,
+                        iomuxc_daisy: None,
+                    },
+                ],
+                iomuxc_daisy: None,
+            },
+        ],
+        flexcomm: Some("FLEXCOMM1"),
+        dma_muxing: &[],
+        gate: None,
+    },
+    Peripheral {
+        name: "I2C2",
+        address: 0,
+        driver_name: "",
+        signals: &[
+            Signal {
+                name: "SDA",
+                pins: &[
+                    SignalPin {
+                        pin: "PIO0_26",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO1_24",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO1_26",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                ],
+                iomuxc_daisy: None,
+            },
+            Signal {
+                name: "SCL",
+                pins: &[
+                    SignalPin {
+                        pin: "PIO0_27",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO1_25",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO1_27",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                ],
+                iomuxc_daisy: None,
+            },
+        ],
+        flexcomm: Some("FLEXCOMM2"),
+        dma_muxing: &[],
+        gate: None,
+    },
+    Peripheral {
+        name: "I2C3",
+        address: 0,
+        driver_name: "",
+        signals: &[
+            Signal {
+                name: "SDA",
+                pins: &[
+                    SignalPin {
+                        pin: "PIO0_1",
+                        alt: 2u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO0_3",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO0_4",
+                        alt: 8u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO0_20",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO1_1",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                ],
+                iomuxc_daisy: None,
+            },
+            Signal {
+                name: "SCL",
+                pins: &[
+                    SignalPin {
+                        pin: "PIO0_2",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO0_5",
+                        alt: 8u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO0_7",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO0_12",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO0_21",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                ],
+                iomuxc_daisy: None,
+            },
+        ],
+        flexcomm: Some("FLEXCOMM3"),
+        dma_muxing: &[],
+        gate: None,
+    },
+    Peripheral {
+        name: "I2C4",
+        address: 0,
+        driver_name: "",
+        signals: &[
+            Signal {
+                name: "SDA",
+                pins: &[
+                    SignalPin {
+                        pin: "PIO0_5",
+                        alt: 2u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO0_18",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO1_9",
+                        alt: 5u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO1_21",
+                        alt: 5u8,
+                        iomuxc_daisy: None,
+                    },
+                ],
+                iomuxc_daisy: None,
+            },
+            Signal {
+                name: "SCL",
+                pins: &[
+                    SignalPin {
+                        pin: "PIO0_16",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO0_19",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO0_20",
+                        alt: 11u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO1_15",
+                        alt: 5u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO1_20",
+                        alt: 5u8,
+                        iomuxc_daisy: None,
+                    },
+                ],
+                iomuxc_daisy: None,
+            },
+        ],
+        flexcomm: Some("FLEXCOMM4"),
+        dma_muxing: &[],
+        gate: None,
+    },
+    Peripheral {
+        name: "I2C5",
+        address: 0,
+        driver_name: "",
+        signals: &[
+            Signal {
+                name: "SDA",
+                pins: &[
+                    SignalPin {
+                        pin: "PIO0_8",
+                        alt: 3u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO1_14",
+                        alt: 4u8,
+                        iomuxc_daisy: None,
+                    },
+                ],
+                iomuxc_daisy: None,
+            },
+            Signal {
+                name: "SCL",
+                pins: &[
+                    SignalPin {
+                        pin: "PIO0_9",
+                        alt: 3u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO1_15",
+                        alt: 4u8,
+                        iomuxc_daisy: None,
+                    },
+                ],
+                iomuxc_daisy: None,
+            },
+        ],
+        flexcomm: Some("FLEXCOMM5"),
+        dma_muxing: &[],
+        gate: None,
+    },
+    Peripheral {
+        name: "I2C6",
+        address: 0,
+        driver_name: "",
+        signals: &[
+            Signal {
+                name: "SDA",
+                pins: &[
+                    SignalPin {
+                        pin: "PIO0_11",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO0_15",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO1_13",
+                        alt: 2u8,
+                        iomuxc_daisy: None,
+                    },
+                ],
+                iomuxc_daisy: None,
+            },
+            Signal {
+                name: "SCL",
+                pins: &[
+                    SignalPin {
+                        pin: "PIO0_12",
+                        alt: 7u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO0_22",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO1_16",
+                        alt: 2u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO1_17",
+                        alt: 3u8,
+                        iomuxc_daisy: None,
+                    },
+                ],
+                iomuxc_daisy: None,
+            },
+        ],
+        flexcomm: Some("FLEXCOMM6"),
+        dma_muxing: &[],
+        gate: None,
+    },
+    Peripheral {
+        name: "I2C7",
+        address: 0,
+        driver_name: "",
+        signals: &[
+            Signal {
+                name: "SDA",
+                pins: &[
+                    SignalPin {
+                        pin: "PIO0_20",
+                        alt: 7u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO0_27",
+                        alt: 7u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO1_21",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO1_29",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                ],
+                iomuxc_daisy: None,
+            },
+            Signal {
+                name: "SCL",
+                pins: &[
+                    SignalPin {
+                        pin: "PIO0_19",
+                        alt: 7u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO1_20",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO1_30",
+                        alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                ],
+                iomuxc_daisy: None,
+            },
+        ],
+        flexcomm: Some("FLEXCOMM7"),
+        dma_muxing: &[],
+        gate: None,
+    },
+    Peripheral {
         name: "SCT0",
         address: 0,
         driver_name: "",
