@@ -1,7 +1,3 @@
-#![allow(non_camel_case_types)]
-#![allow(non_snake_case)]
-#![allow(non_upper_case_globals)]
-#![doc = "Peripheral access API (generated using chiptool v0.1.0 (e5ab29f 2026-04-30))"]
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Interrupt {
@@ -192,152 +188,6 @@ unsafe impl cortex_m::interrupt::InterruptNumber for Interrupt {
 }
 #[cfg(feature = "rt")]
 mod _vectors;
-#[doc = "INPUTMUX"]
-pub const INPUTMUX0: inputmux::Inputmux =
-    unsafe { inputmux::Inputmux::from_ptr(0x4000_1000usize as _) };
-#[doc = "I3C"]
-pub const I3C0: i3c::I3c = unsafe { i3c::I3c::from_ptr(0x4000_2000usize as _) };
-#[doc = "CTIMER"]
-pub const CTIMER0: ctimer::Ctimer = unsafe { ctimer::Ctimer::from_ptr(0x4000_4000usize as _) };
-#[doc = "CTIMER"]
-pub const CTIMER1: ctimer::Ctimer = unsafe { ctimer::Ctimer::from_ptr(0x4000_5000usize as _) };
-#[doc = "CTIMER"]
-pub const CTIMER2: ctimer::Ctimer = unsafe { ctimer::Ctimer::from_ptr(0x4000_6000usize as _) };
-#[doc = "CTIMER"]
-pub const CTIMER3: ctimer::Ctimer = unsafe { ctimer::Ctimer::from_ptr(0x4000_7000usize as _) };
-#[doc = "CTIMER"]
-pub const CTIMER4: ctimer::Ctimer = unsafe { ctimer::Ctimer::from_ptr(0x4000_8000usize as _) };
-#[doc = "FREQME"]
-pub const FREQME0: freqme::Freqme = unsafe { freqme::Freqme::from_ptr(0x4000_9000usize as _) };
-#[doc = "UTICK"]
-pub const UTICK0: utick::Utick = unsafe { utick::Utick::from_ptr(0x4000_b000usize as _) };
-#[doc = "WWDT"]
-pub const WWDT0: wwdt::Wwdt = unsafe { wwdt::Wwdt::from_ptr(0x4000_c000usize as _) };
-#[doc = "DMA MP"]
-pub const DMA0: dma::Dma = unsafe { dma::Dma::from_ptr(0x4008_0000usize as _) };
-#[doc = "DMA TCD"]
-pub const EDMA_0_TCD0: edma_0_tcd::Edma0Tcd =
-    unsafe { edma_0_tcd::Edma0Tcd::from_ptr(0x4008_1000usize as _) };
-#[doc = "AOI"]
-pub const AOI0: aoi::Aoi = unsafe { aoi::Aoi::from_ptr(0x4008_9000usize as _) };
-#[doc = "CRC"]
-pub const CRC0: crc::Crc = unsafe { crc::Crc::from_ptr(0x4008_a000usize as _) };
-#[doc = "CMC"]
-pub const CMC: cmc::Cmc = unsafe { cmc::Cmc::from_ptr(0x4008_b000usize as _) };
-#[doc = "EIM"]
-pub const EIM0: eim::Eim = unsafe { eim::Eim::from_ptr(0x4008_c000usize as _) };
-#[doc = "ERM"]
-pub const ERM0: erm::Erm = unsafe { erm::Erm::from_ptr(0x4008_d000usize as _) };
-#[doc = "TRDC"]
-pub const MBC0: mbc::Mbc = unsafe { mbc::Mbc::from_ptr(0x4008_e000usize as _) };
-#[doc = "SCG"]
-pub const SCG0: scg::Scg = unsafe { scg::Scg::from_ptr(0x4008_f000usize as _) };
-#[doc = "SPC"]
-pub const SPC0: spc::Spc = unsafe { spc::Spc::from_ptr(0x4009_0000usize as _) };
-#[doc = "MRCC"]
-pub const MRCC0: mrcc::Mrcc = unsafe { mrcc::Mrcc::from_ptr(0x4009_1000usize as _) };
-#[doc = "SYSCON"]
-pub const SYSCON: syscon::Syscon = unsafe { syscon::Syscon::from_ptr(0x4009_1000usize as _) };
-#[doc = "GLIKEY"]
-pub const GLIKEY0: glikey::Glikey = unsafe { glikey::Glikey::from_ptr(0x4009_1d00usize as _) };
-#[doc = "Low-Leakage Wakeup Unit"]
-pub const WUU0: wuu::Wuu = unsafe { wuu::Wuu::from_ptr(0x4009_2000usize as _) };
-#[doc = "VBAT"]
-pub const VBAT0: vbat::Vbat = unsafe { vbat::Vbat::from_ptr(0x4009_3000usize as _) };
-#[doc = "NPX"]
-pub const FMC0: fmc::Fmc = unsafe { fmc::Fmc::from_ptr(0x4009_4000usize as _) };
-#[doc = "Flash"]
-pub const FMU0: fmu::Fmu = unsafe { fmu::Fmu::from_ptr(0x4009_5000usize as _) };
-#[doc = "FlashTest"]
-pub const FMU0TEST: fmu0test::Fmu0test =
-    unsafe { fmu0test::Fmu0test::from_ptr(0x4009_6000usize as _) };
-#[doc = "AOI"]
-pub const AOI1: aoi::Aoi = unsafe { aoi::Aoi::from_ptr(0x4009_7000usize as _) };
-#[doc = "FLEXIO"]
-pub const FLEXIO0: flexio::Flexio = unsafe { flexio::Flexio::from_ptr(0x4009_9000usize as _) };
-#[doc = "Low-Power Inter-Integrated Circuit"]
-pub const LPI2C0: lpi2c::Lpi2c = unsafe { lpi2c::Lpi2c::from_ptr(0x4009_a000usize as _) };
-#[doc = "Low-Power Inter-Integrated Circuit"]
-pub const LPI2C1: lpi2c::Lpi2c = unsafe { lpi2c::Lpi2c::from_ptr(0x4009_b000usize as _) };
-#[doc = "Low-Power Serial Peripheral Interface"]
-pub const LPSPI0: lpspi::Lpspi = unsafe { lpspi::Lpspi::from_ptr(0x4009_c000usize as _) };
-#[doc = "Low-Power Serial Peripheral Interface"]
-pub const LPSPI1: lpspi::Lpspi = unsafe { lpspi::Lpspi::from_ptr(0x4009_d000usize as _) };
-#[doc = "LPUART"]
-pub const LPUART0: lpuart::Lpuart = unsafe { lpuart::Lpuart::from_ptr(0x4009_f000usize as _) };
-#[doc = "LPUART"]
-pub const LPUART1: lpuart::Lpuart = unsafe { lpuart::Lpuart::from_ptr(0x400a_0000usize as _) };
-#[doc = "LPUART"]
-pub const LPUART2: lpuart::Lpuart = unsafe { lpuart::Lpuart::from_ptr(0x400a_1000usize as _) };
-#[doc = "LPUART"]
-pub const LPUART3: lpuart::Lpuart = unsafe { lpuart::Lpuart::from_ptr(0x400a_2000usize as _) };
-#[doc = "LPUART"]
-pub const LPUART4: lpuart::Lpuart = unsafe { lpuart::Lpuart::from_ptr(0x400a_3000usize as _) };
-#[doc = "USBFS"]
-pub const USB0: usb::Usb = unsafe { usb::Usb::from_ptr(0x400a_4000usize as _) };
-#[doc = "Quadrature_Decoder"]
-pub const QDC0: qdc::Qdc = unsafe { qdc::Qdc::from_ptr(0x400a_7000usize as _) };
-#[doc = "Quadrature_Decoder"]
-pub const QDC1: qdc::Qdc = unsafe { qdc::Qdc::from_ptr(0x400a_8000usize as _) };
-#[doc = "PWM"]
-pub const FLEXPWM0: flexpwm::Flexpwm = unsafe { flexpwm::Flexpwm::from_ptr(0x400a_9000usize as _) };
-#[doc = "PWM"]
-pub const FLEXPWM1: flexpwm::Flexpwm = unsafe { flexpwm::Flexpwm::from_ptr(0x400a_a000usize as _) };
-#[doc = "LPTMR"]
-pub const LPTMR0: lptmr::Lptmr = unsafe { lptmr::Lptmr::from_ptr(0x400a_b000usize as _) };
-#[doc = "OSTIMER"]
-pub const OSTIMER0: ostimer::Ostimer = unsafe { ostimer::Ostimer::from_ptr(0x400a_d000usize as _) };
-#[doc = "WAKEUP_TIMER"]
-pub const WAKETIMER0: waketimer::Waketimer =
-    unsafe { waketimer::Waketimer::from_ptr(0x400a_e000usize as _) };
-#[doc = "ADC"]
-pub const ADC0: hsadc::Hsadc = unsafe { hsadc::Hsadc::from_ptr(0x400a_f000usize as _) };
-#[doc = "ADC"]
-pub const ADC1: hsadc::Hsadc = unsafe { hsadc::Hsadc::from_ptr(0x400b_0000usize as _) };
-#[doc = "LPCMP"]
-pub const CMP0: cmp::Cmp = unsafe { cmp::Cmp::from_ptr(0x400b_1000usize as _) };
-#[doc = "LPCMP"]
-pub const CMP1: cmp::Cmp = unsafe { cmp::Cmp::from_ptr(0x400b_2000usize as _) };
-#[doc = "12-bit DAC"]
-pub const DAC0: dac::Dac = unsafe { dac::Dac::from_ptr(0x400b_4000usize as _) };
-#[doc = "OPAMP"]
-pub const OPAMP0: opamp::Opamp = unsafe { opamp::Opamp::from_ptr(0x400b_7000usize as _) };
-#[doc = "PORT"]
-pub const PORT0: port::Port = unsafe { port::Port::from_ptr(0x400b_c000usize as _) };
-#[doc = "PORT"]
-pub const PORT1: port1::Port1 = unsafe { port1::Port1::from_ptr(0x400b_d000usize as _) };
-#[doc = "PORT"]
-pub const PORT2: port2::Port2 = unsafe { port2::Port2::from_ptr(0x400b_e000usize as _) };
-#[doc = "PORT"]
-pub const PORT3: port3::Port3 = unsafe { port3::Port3::from_ptr(0x400b_f000usize as _) };
-#[doc = "PORT"]
-pub const PORT4: port4::Port4 = unsafe { port4::Port4::from_ptr(0x400c_0000usize as _) };
-#[doc = "CAN"]
-pub const CAN0: can::Can = unsafe { can::Can::from_ptr(0x400c_c000usize as _) };
-#[doc = "Low-Power Inter-Integrated Circuit"]
-pub const LPI2C2: lpi2c::Lpi2c = unsafe { lpi2c::Lpi2c::from_ptr(0x400d_4000usize as _) };
-#[doc = "Low-Power Inter-Integrated Circuit"]
-pub const LPI2C3: lpi2c::Lpi2c = unsafe { lpi2c::Lpi2c::from_ptr(0x400d_5000usize as _) };
-#[doc = "CDOG"]
-pub const CDOG: cdog::Cdog = unsafe { cdog::Cdog::from_ptr(0x4010_0000usize as _) };
-#[doc = "DBGMB"]
-pub const DBGMAILBOX: dbgmailbox::Dbgmailbox =
-    unsafe { dbgmailbox::Dbgmailbox::from_ptr(0x4010_1000usize as _) };
-#[doc = "GPIO"]
-pub const GPIO0: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4010_2000usize as _) };
-#[doc = "GPIO"]
-pub const GPIO1: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4010_3000usize as _) };
-#[doc = "GPIO"]
-pub const GPIO2: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4010_4000usize as _) };
-#[doc = "GPIO"]
-pub const GPIO3: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4010_5000usize as _) };
-#[doc = "GPIO"]
-pub const GPIO4: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4010_6000usize as _) };
-#[doc = "System Control not in System Control Block"]
-pub const SCNSCB: s_cn_scb::SCnScb = unsafe { s_cn_scb::SCnScb::from_ptr(0xe000_e000usize as _) };
-#[doc = "M33 Systick module"]
-pub const SYSTICK: sys_tick::SysTick =
-    unsafe { sys_tick::SysTick::from_ptr(0xe000_e010usize as _) };
 #[doc = r" Number available in the NVIC for configuring priority"]
 #[cfg(feature = "rt")]
 pub const NVIC_PRIO_BITS: u8 = 3;
@@ -345,53 +195,160 @@ pub const NVIC_PRIO_BITS: u8 = 3;
 pub use Interrupt as interrupt;
 #[cfg(feature = "rt")]
 pub use cortex_m_rt::interrupt;
+pub const INPUTMUX0: inputmux::Inputmux = unsafe { inputmux::Inputmux::from_ptr(0x40001000 as _) };
+pub const I3C0: i3c::I3c = unsafe { i3c::I3c::from_ptr(0x40002000 as _) };
+pub const CTIMER0: ctimer::Ctimer = unsafe { ctimer::Ctimer::from_ptr(0x40004000 as _) };
+pub const CTIMER1: ctimer::Ctimer = unsafe { ctimer::Ctimer::from_ptr(0x40005000 as _) };
+pub const CTIMER2: ctimer::Ctimer = unsafe { ctimer::Ctimer::from_ptr(0x40006000 as _) };
+pub const CTIMER3: ctimer::Ctimer = unsafe { ctimer::Ctimer::from_ptr(0x40007000 as _) };
+pub const CTIMER4: ctimer::Ctimer = unsafe { ctimer::Ctimer::from_ptr(0x40008000 as _) };
+pub const FREQME0: freqme::Freqme = unsafe { freqme::Freqme::from_ptr(0x40009000 as _) };
+pub const UTICK0: utick::Utick = unsafe { utick::Utick::from_ptr(0x4000B000 as _) };
+pub const WWDT0: wwdt::Wwdt = unsafe { wwdt::Wwdt::from_ptr(0x4000C000 as _) };
+pub const DMA0: dma::Dma8 = unsafe { dma::Dma8::from_ptr(0x40080000 as _) };
+pub const EDMA_0_TCD: edma_0_tcd::Tcd8 = unsafe { edma_0_tcd::Tcd8::from_ptr(0x40081000 as _) };
+pub const AOI0: aoi::Aoi = unsafe { aoi::Aoi::from_ptr(0x40089000 as _) };
+pub const AOI1: aoi::Aoi = unsafe { aoi::Aoi::from_ptr(0x40097000 as _) };
+pub const CRC0: crc::Crc = unsafe { crc::Crc::from_ptr(0x4008A000 as _) };
+pub const CMC: cmc::Cmc = unsafe { cmc::Cmc::from_ptr(0x4008B000 as _) };
+pub const EIM0: eim::Eim = unsafe { eim::Eim::from_ptr(0x4008C000 as _) };
+pub const ERM0: erm::Erm = unsafe { erm::Erm::from_ptr(0x4008D000 as _) };
+pub const MBC0: mbc::Mbc = unsafe { mbc::Mbc::from_ptr(0x4008E000 as _) };
+pub const SCG0: scg::Scg = unsafe { scg::Scg::from_ptr(0x4008F000 as _) };
+pub const SPC0: spc::Spc = unsafe { spc::Spc::from_ptr(0x40090000 as _) };
+pub const MRCC0: mrcc::Mrcc = unsafe { mrcc::Mrcc::from_ptr(0x40091000 as _) };
+pub const SYSCON: syscon::Syscon = unsafe { syscon::Syscon::from_ptr(0x40091000 as _) };
+pub const GLIKEY0: glikey::Glikey = unsafe { glikey::Glikey::from_ptr(0x40091D00 as _) };
+pub const WUU0: wuu::Wuu = unsafe { wuu::Wuu::from_ptr(0x40092000 as _) };
+pub const VBAT0: vbat::Vbat = unsafe { vbat::Vbat::from_ptr(0x40093000 as _) };
+pub const FMC0: fmc::Fmc = unsafe { fmc::Fmc::from_ptr(0x40094000 as _) };
+pub const FMU0: fmu::Fmu = unsafe { fmu::Fmu::from_ptr(0x40095000 as _) };
+pub const FMU0TEST: fmu0test::Fmu0test = unsafe { fmu0test::Fmu0test::from_ptr(0x40096000 as _) };
+pub const FLEXIO0: flexio::Flexio = unsafe { flexio::Flexio::from_ptr(0x40099000 as _) };
+pub const LPI2C0: lpi2c::Lpi2c = unsafe { lpi2c::Lpi2c::from_ptr(0x4009A000 as _) };
+pub const LPI2C1: lpi2c::Lpi2c = unsafe { lpi2c::Lpi2c::from_ptr(0x4009B000 as _) };
+pub const LPI2C2: lpi2c::Lpi2c = unsafe { lpi2c::Lpi2c::from_ptr(0x400D4000 as _) };
+pub const LPI2C3: lpi2c::Lpi2c = unsafe { lpi2c::Lpi2c::from_ptr(0x400D5000 as _) };
+pub const LPSPI0: lpspi::Lpspi = unsafe { lpspi::Lpspi::from_ptr(0x4009C000 as _) };
+pub const LPSPI1: lpspi::Lpspi = unsafe { lpspi::Lpspi::from_ptr(0x4009D000 as _) };
+pub const LPUART0: lpuart::Lpuart = unsafe { lpuart::Lpuart::from_ptr(0x4009F000 as _) };
+pub const LPUART1: lpuart::Lpuart = unsafe { lpuart::Lpuart::from_ptr(0x400A0000 as _) };
+pub const LPUART2: lpuart::Lpuart = unsafe { lpuart::Lpuart::from_ptr(0x400A1000 as _) };
+pub const LPUART3: lpuart::Lpuart = unsafe { lpuart::Lpuart::from_ptr(0x400A2000 as _) };
+pub const LPUART4: lpuart::Lpuart = unsafe { lpuart::Lpuart::from_ptr(0x400A3000 as _) };
+pub const USB0: usb::Usb = unsafe { usb::Usb::from_ptr(0x400A4000 as _) };
+pub const EQDC0: qdc::Qdc = unsafe { qdc::Qdc::from_ptr(0x400A7000 as _) };
+pub const EQDC1: qdc::Qdc = unsafe { qdc::Qdc::from_ptr(0x400A8000 as _) };
+pub const FLEX_PWM0: flexpwm::Flexpwm = unsafe { flexpwm::Flexpwm::from_ptr(0x400A9000 as _) };
+pub const FLEX_PWM1: flexpwm::Flexpwm = unsafe { flexpwm::Flexpwm::from_ptr(0x400AA000 as _) };
+pub const LPTMR0: lptmr::Lptmr = unsafe { lptmr::Lptmr::from_ptr(0x400AB000 as _) };
+pub const OSTIMER0: ostimer::Ostimer = unsafe { ostimer::Ostimer::from_ptr(0x400AD000 as _) };
+pub const WAKETIMER0: waketimer::Waketimer =
+    unsafe { waketimer::Waketimer::from_ptr(0x400AE000 as _) };
+pub const ADC0: adc::Adc = unsafe { adc::Adc::from_ptr(0x400AF000 as _) };
+pub const ADC1: adc::Adc = unsafe { adc::Adc::from_ptr(0x400B0000 as _) };
+pub const CMP0: cmp::Cmp = unsafe { cmp::Cmp::from_ptr(0x400B1000 as _) };
+pub const CMP1: cmp::Cmp = unsafe { cmp::Cmp::from_ptr(0x400B2000 as _) };
+pub const DAC0: dac::Dac = unsafe { dac::Dac::from_ptr(0x400B4000 as _) };
+pub const OPAMP0: opamp::Opamp = unsafe { opamp::Opamp::from_ptr(0x400B7000 as _) };
+pub const PORT0: port::Port = unsafe { port::Port::from_ptr(0x400BC000 as _) };
+pub const PORT1: port::Port1 = unsafe { port::Port1::from_ptr(0x400BD000 as _) };
+pub const PORT2: port::Port2 = unsafe { port::Port2::from_ptr(0x400BE000 as _) };
+pub const PORT3: port::Port3 = unsafe { port::Port3::from_ptr(0x400BF000 as _) };
+pub const PORT4: port::Port4 = unsafe { port::Port4::from_ptr(0x400C0000 as _) };
+pub const CAN0: can::Can = unsafe { can::Can::from_ptr(0x400CC000 as _) };
+pub const CDOG0: cdog::Cdog = unsafe { cdog::Cdog::from_ptr(0x40100000 as _) };
+pub const DBGMAILBOX: dbgmailbox::Dbgmailbox =
+    unsafe { dbgmailbox::Dbgmailbox::from_ptr(0x40101000 as _) };
+pub const GPIO0: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x40102000 as _) };
+pub const GPIO1: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x40103000 as _) };
+pub const GPIO2: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x40104000 as _) };
+pub const GPIO3: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x40105000 as _) };
+pub const GPIO4: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x40106000 as _) };
+#[path = "../../meta_peripherals/MCXA156/ADC.rs"]
+pub mod adc;
+#[path = "../../meta_peripherals/MCXA156/AOI.rs"]
 pub mod aoi;
+#[path = "../../meta_peripherals/MCXA156/CAN.rs"]
 pub mod can;
+#[path = "../../meta_peripherals/MCXA156/CDOG.rs"]
 pub mod cdog;
+#[path = "../../meta_peripherals/MCXA156/CMC.rs"]
 pub mod cmc;
+#[path = "../../meta_peripherals/MCXA156/CMP.rs"]
 pub mod cmp;
 pub mod common;
+#[path = "../../meta_peripherals/MCXA156/CRC.rs"]
 pub mod crc;
+#[path = "../../meta_peripherals/MCXA156/CTIMER.rs"]
 pub mod ctimer;
+#[path = "../../meta_peripherals/MCXA156/DAC.rs"]
 pub mod dac;
+#[path = "../../meta_peripherals/MCXA156/DBGMAILBOX.rs"]
 pub mod dbgmailbox;
+#[path = "../../meta_peripherals/MCXA156/DMA.rs"]
 pub mod dma;
+#[path = "../../meta_peripherals/MCXA156/EDMA_0_TCD.rs"]
 pub mod edma_0_tcd;
+#[path = "../../meta_peripherals/MCXA156/EIM.rs"]
 pub mod eim;
+#[path = "../../meta_peripherals/MCXA156/ERM.rs"]
 pub mod erm;
+#[path = "../../meta_peripherals/MCXA156/FLEXIO.rs"]
 pub mod flexio;
+#[path = "../../meta_peripherals/MCXA156/FLEXPWM.rs"]
 pub mod flexpwm;
+#[path = "../../meta_peripherals/MCXA156/FMC.rs"]
 pub mod fmc;
+#[path = "../../meta_peripherals/MCXA156/FMU.rs"]
 pub mod fmu;
+#[path = "../../meta_peripherals/MCXA156/FMU0TEST.rs"]
 pub mod fmu0test;
+#[path = "../../meta_peripherals/MCXA156/FREQME.rs"]
 pub mod freqme;
+#[path = "../../meta_peripherals/MCXA156/GLIKEY.rs"]
 pub mod glikey;
+#[path = "../../meta_peripherals/MCXA156/GPIO.rs"]
 pub mod gpio;
-pub mod hsadc;
+#[path = "../../meta_peripherals/MCXA156/I3C.rs"]
 pub mod i3c;
+#[path = "../../meta_peripherals/MCXA156/INPUTMUX.rs"]
 pub mod inputmux;
+#[path = "../../meta_peripherals/MCXA156/LPI2C.rs"]
 pub mod lpi2c;
+#[path = "../../meta_peripherals/MCXA156/LPSPI.rs"]
 pub mod lpspi;
+#[path = "../../meta_peripherals/MCXA156/LPTMR.rs"]
 pub mod lptmr;
+#[path = "../../meta_peripherals/MCXA156/LPUART.rs"]
 pub mod lpuart;
+#[path = "../../meta_peripherals/MCXA156/MBC.rs"]
 pub mod mbc;
+#[path = "../../meta_peripherals/MCXA156/MRCC.rs"]
 pub mod mrcc;
+#[path = "../../meta_peripherals/MCXA156/OPAMP.rs"]
 pub mod opamp;
+#[path = "../../meta_peripherals/MCXA156/OSTIMER.rs"]
 pub mod ostimer;
+#[path = "../../meta_peripherals/MCXA156/PORT.rs"]
 pub mod port;
-pub mod port1;
-pub mod port2;
-pub mod port3;
-pub mod port4;
+#[path = "../../meta_peripherals/MCXA156/QDC.rs"]
 pub mod qdc;
-pub mod s_cn_scb;
+#[path = "../../meta_peripherals/MCXA156/SCG.rs"]
 pub mod scg;
+#[path = "../../meta_peripherals/MCXA156/SPC.rs"]
 pub mod spc;
-pub mod sys_tick;
+#[path = "../../meta_peripherals/MCXA156/SYSCON.rs"]
 pub mod syscon;
+#[path = "../../meta_peripherals/MCXA156/USB.rs"]
 pub mod usb;
+#[path = "../../meta_peripherals/MCXA156/UTICK.rs"]
 pub mod utick;
+#[path = "../../meta_peripherals/MCXA156/VBAT.rs"]
 pub mod vbat;
+#[path = "../../meta_peripherals/MCXA156/WAKETIMER.rs"]
 pub mod waketimer;
+#[path = "../../meta_peripherals/MCXA156/WUU.rs"]
 pub mod wuu;
+#[path = "../../meta_peripherals/MCXA156/WWDT.rs"]
 pub mod wwdt;
