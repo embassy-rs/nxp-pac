@@ -562,7 +562,6 @@
           "pins": [
             { "pin": "PIO0_1", "alt": 2 },
             { "pin": "PIO0_3", "alt": 1 },
-            { "pin": "PIO0_4", "alt": 8 },
             { "pin": "PIO0_20", "alt": 1 },
             { "pin": "PIO1_1", "alt": 1 }
           ]
@@ -571,7 +570,6 @@
           "name": "SCL",
           "pins": [
             { "pin": "PIO0_2", "alt": 1 },
-            { "pin": "PIO0_5", "alt": 8 },
             { "pin": "PIO0_7", "alt": 1 },
             { "pin": "PIO0_12", "alt": 1 },
             { "pin": "PIO0_21", "alt": 1 }
@@ -596,7 +594,6 @@
           "name": "SCL", "pins": [
             { "pin": "PIO0_16", "alt": 1 },
             { "pin": "PIO0_19", "alt": 1 },
-            { "pin": "PIO0_20", "alt": 11 },
             { "pin": "PIO1_15", "alt": 5 },
             { "pin": "PIO1_20", "alt": 5 }
           ]
