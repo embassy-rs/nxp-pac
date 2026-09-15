@@ -101,9 +101,31 @@ transforms:
   - !MergeEnums
     from: iocon::vals::Pio\d+Digimode
     to: iocon::vals::PioDigimode
+  
   - !MergeEnums
     from: iocon::vals::Pio\d+Func
     to: iocon::vals::PioFunc
+  
+  # See https://github.com/embassy-rs/nxp-pac/issues/126 and https://github.com/nxp-mcuxpresso/mcux-soc-svd/issues/6
+  - !DeleteEnumVariants
+    enum: iocon::vals::PioFunc
+    from: _RESERVED_(8|9|a|b)
+  - !AddEnumVariants
+    enum: iocon::vals::PioFunc
+    variants:
+      - name: Alt8
+        description: "Alternative connection 8."
+        value: 0x08
+      - name: Alt9
+        description: "Alternative connection 9."
+        value: 0x09
+      - name: Alt10
+        description: "Alternative connection 10."
+        value: 0x0a
+      - name: Alt11
+        description: "Alternative connection 11."
+        value: 0x0b
+  
   - !MergeEnums
     from: iocon::vals::Pio\d+Mode
     to: iocon::vals::PioMode
