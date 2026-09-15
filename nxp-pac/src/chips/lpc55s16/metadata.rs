@@ -2111,6 +2111,11 @@ pub const PERIPHERALS: &[Peripheral] = &[
                         iomuxc_daisy: None,
                     },
                     SignalPin {
+                        pin: "PIO0_4",
+                        alt: 8u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
                         pin: "PIO0_20",
                         alt: 1u8,
                         iomuxc_daisy: None,
@@ -2129,6 +2134,11 @@ pub const PERIPHERALS: &[Peripheral] = &[
                     SignalPin {
                         pin: "PIO0_2",
                         alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO0_5",
+                        alt: 8u8,
                         iomuxc_daisy: None,
                     },
                     SignalPin {
@@ -2196,6 +2206,11 @@ pub const PERIPHERALS: &[Peripheral] = &[
                     SignalPin {
                         pin: "PIO0_19",
                         alt: 1u8,
+                        iomuxc_daisy: None,
+                    },
+                    SignalPin {
+                        pin: "PIO0_20",
+                        alt: 11u8,
                         iomuxc_daisy: None,
                     },
                     SignalPin {
