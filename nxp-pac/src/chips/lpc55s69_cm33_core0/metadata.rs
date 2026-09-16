@@ -2072,6 +2072,15 @@ pub const PERIPHERALS: &[Peripheral] = &[
         dma_muxing: &[],
         gate: None,
     },
+    Peripheral {
+        name: "CASPER",
+        address: 0x400A_5000,
+        driver_name: "",
+        signals: &[],
+        flexcomm: None,
+        dma_muxing: &[],
+        gate: None,
+    },
 ];
 pub const INTERRUPTS: &[(&str, u32)] = &[
     ("WDT_BOD", 0u32),
