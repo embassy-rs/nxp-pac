@@ -12741,7 +12741,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
         gate: Some(Gate {
             enable: "mrcc_glb_acc0",
             reset: None,
-            config: Some("Clk1MConfig"),
+            config: Some("WwdtConfig"),
             bit: "wwdt0",
         }),
     },
@@ -12755,7 +12755,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
         gate: Some(Gate {
             enable: "mrcc_glb_acc0",
             reset: None,
-            config: Some("Clk1MConfig"),
+            config: Some("WwdtConfig"),
             bit: "wwdt1",
         }),
     },
