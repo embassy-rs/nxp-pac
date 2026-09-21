@@ -131,9 +131,12 @@ fieldset/Froclke:
   description: FRO16K Clock Enable.
   fields:
   - name: clke
-    description: Clock Enable.
+    description: 'Clock enable for the indexed output. MCXA5: 0 = VDD_SYS, 1 = CORE_MAIN, 2 = VDD_BAT. MCXA2: 0 = VDD_BAT, 1 = CORE_MAIN; bit 2 is reserved and must not be written.'
     bit_offset: 0
-    bit_size: 3
+    bit_size: 1
+    array:
+      len: 3
+      stride: 1
 fieldset/Froctla:
   description: FRO16K Control A.
   fields:
@@ -325,9 +328,12 @@ fieldset/Oscclke:
   description: Oscillator Clock Enable.
   fields:
   - name: clke
-    description: Clock Enable.
+    description: 'Clock enable for the indexed output. MCXA5: 0 = VDD_SYS, 1 = CORE_MAIN, 2 = VDD_BAT. MCXA2: OSC32K and OSCCLKE are not supported; do not access this register.'
     bit_offset: 0
-    bit_size: 3
+    bit_size: 1
+    array:
+      len: 3
+      stride: 1
 fieldset/Oscctla:
   description: Oscillator Control A.
   fields:
