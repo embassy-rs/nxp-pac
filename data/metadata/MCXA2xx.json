@@ -9344,7 +9344,7 @@
       "signals": [],
       "gate": {
         "enable": "mrcc_glb_acc0",
-        "config": "Clk1MConfig"
+        "config": "WwdtConfig"
       }
     },
     {
