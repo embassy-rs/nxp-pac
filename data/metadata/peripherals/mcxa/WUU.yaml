@@ -1,0 +1,467 @@
+# This file is a deliberate UNION of raw/MCXA256/WUU.yaml and raw/MCXA577/WUU.yaml.
+# It is NOT a copy of either one, and it is NOT regenerable by a plain `cp`.
+#
+# NEITHER SVD IS A SUPERSET OF THE OTHER. Each omits fields the other has:
+#
+#   * MCXA256 only: wake-up pins 28-31 are real pins (wupe28-31, wuf28-31,
+#     wupdc28-31, wupmc28-31). The MCXA577 SVD marks those same bit positions
+#     "Reserved".
+#   * MCXA577 only: wude0-wude3 in the De fieldset (GPIO5 DMA 0/1 and GPIO5
+#     Trigger 0/1), and wume4, wume5, wume10 in the Me fieldset (wume4/wume5 are
+#     GPIO5 Interrupt 0/1). MCXA2xx has no GPIO5 at all, so its SVD omits them.
+#
+# The WUU register block is shared by both chip families and the register map --
+# names, byte offsets, widths and access -- is byte-for-byte identical between the
+# two SVDs. Only the field-level content differs. The block must therefore express
+# the union; taking either SVD alone silently drops real hardware capability. In
+# particular, curating from MCXA256 alone would make GPIO5 wake permanently
+# unreachable on MCXA5xx through the generated API.
+#
+# PER-CHIP AVAILABILITY IS ONLY PARTIALLY EXPRESSED IN METADATA:
+#
+#   * External wake PINS: each chip JSON's `signals` array lists the wake pins that
+#     chip actually brings out, so pin availability is captured per chip.
+#   * ME/DE MODULE wake sources (wude0-3, wume4, wume5, wume10): these have NO
+#     per-chip representation anywhere in the metadata. They are not signals and
+#     no chip JSON constrains them. Whether a given module source exists on a
+#     given chip must be checked against that chip's reference manual or SVD --
+#     the PAC does not and cannot guard it.
+#
+# Consequently the generated API exposes every field in this union to every chip
+# in both families. Nothing here stops an MCXA2xx consumer from calling, for
+# example, set_wude0() or set_wume4() even though MCXA2xx has no GPIO5.
+# Enforcing module-source validity is the consumer's responsibility; a typical
+# approach is to model the module sources as an enum whose variants are gated
+# per chip, so the invalid ones cannot be constructed.
+#
+# The merge is done by hand rather than via a transform, as permitted by the
+# peripherals README, because a transform that injects fields absent from the
+# source SVD would be surprising and hard to maintain. Each merged field is
+# individually commented at its site below.
+#
+# Base text is the MCXA256 extract, which also carries the current "WUU_Pn" wording
+# in field descriptions where MCXA577 still uses the legacy "LLWU_Pn" naming
+# inherited from the Kinetis LLWU block.
+block/Wuu:
+  description: Low-Leakage Wakeup Unit.
+  items:
+  - name: verid
+    description: Version ID.
+    byte_offset: 0
+    access: Read
+    fieldset: Verid
+  - name: param
+    description: Parameter.
+    byte_offset: 4
+    access: Read
+    fieldset: Param
+  - name: pe1
+    description: Pin Enable 1.
+    byte_offset: 8
+    fieldset: Pe1
+  - name: pe2
+    description: Pin Enable 2.
+    byte_offset: 12
+    fieldset: Pe2
+  - name: me
+    description: Module Interrupt Enable.
+    byte_offset: 24
+    fieldset: Me
+  - name: de
+    description: Module DMA/Trigger Enable.
+    byte_offset: 28
+    fieldset: De
+  - name: pf
+    description: Pin Flag.
+    byte_offset: 32
+    fieldset: Pf
+  - name: filt
+    description: Pin Filter.
+    byte_offset: 48
+    fieldset: Filt
+  - name: pdc1
+    description: Pin DMA/Trigger Configuration 1.
+    byte_offset: 56
+    fieldset: Pdc1
+  - name: pdc2
+    description: Pin DMA/Trigger Configuration 2.
+    byte_offset: 60
+    fieldset: Pdc2
+  - name: fdc
+    description: Pin Filter DMA/Trigger Configuration.
+    byte_offset: 72
+    fieldset: Fdc
+  - name: pmc
+    description: Pin Mode Configuration.
+    byte_offset: 80
+    fieldset: Pmc
+  - name: fmc
+    description: Pin Filter Mode Configuration.
+    byte_offset: 88
+    fieldset: Fmc
+fieldset/De:
+  description: Module DMA/Trigger Enable.
+  fields:
+  # HAND-MERGED: wude0..wude3 are present in the MCXA577 SVD only, absent from the
+  # MCXA256 SVD. They are the GPIO5 DMA 0/1 and GPIO5 Trigger 0/1 wake sources.
+  # MCXA2xx has no GPIO5 at all, which is why its SVD omits these bits. They are
+  # merged in by hand rather than via a transform, because a transform that injects
+  # fields that do not exist in the source SVD would be surprising and unmaintainable.
+  # These module wake sources have NO per-chip representation in the metadata:
+  # they are not signals, so no chip JSON's `signals` array constrains them, and
+  # they are exposed to every chip in both families. Their validity for a given
+  # chip must be checked against that chip's reference manual or SVD; the
+  # consumer is responsible for enforcing it.
+  - name: wude0
+    description: DMA/Trigger Wake-up Enable for Module 0.
+    bit_offset: 0
+    bit_size: 1
+  - name: wude1
+    description: DMA/Trigger Wake-up Enable for Module 1.
+    bit_offset: 1
+    bit_size: 1
+  - name: wude2
+    description: DMA/Trigger Wake-up Enable for Module 2.
+    bit_offset: 2
+    bit_size: 1
+  - name: wude3
+    description: DMA/Trigger Wake-up Enable for Module 3.
+    bit_offset: 3
+    bit_size: 1
+  # End hand-merged block. Fields below come from the MCXA256 SVD (also in MCXA577).
+  - name: wude4
+    description: DMA/Trigger Wake-up Enable for Module 4.
+    bit_offset: 4
+    bit_size: 1
+  - name: wude6
+    description: DMA/Trigger Wake-up Enable for Module 6.
+    bit_offset: 6
+    bit_size: 1
+  - name: wude8
+    description: DMA/Trigger Wake-up Enable for Module 8.
+    bit_offset: 8
+    bit_size: 1
+fieldset/Fdc:
+  description: Pin Filter DMA/Trigger Configuration.
+  fields:
+  - name: filtc1
+    description: Filter Configuration for FILTn.
+    bit_offset: 0
+    bit_size: 2
+    enum: Filtc1
+  - name: filtc2
+    description: Filter Configuration for FILTn.
+    bit_offset: 2
+    bit_size: 2
+    enum: Filtc2
+fieldset/Filt:
+  description: Pin Filter.
+  fields:
+  - name: filtsel1
+    description: Filter 1 Pin Select.
+    bit_offset: 0
+    bit_size: 5
+  - name: filte1
+    description: Filter 1 Enable.
+    bit_offset: 5
+    bit_size: 2
+    enum: Filte1
+  - name: filtf1
+    description: Filter 1 Flag.
+    bit_offset: 7
+    bit_size: 1
+  - name: filtsel2
+    description: Filter 2 Pin Select.
+    bit_offset: 8
+    bit_size: 5
+  - name: filte2
+    description: Filter 2 Enable.
+    bit_offset: 13
+    bit_size: 2
+    enum: Filte2
+  - name: filtf2
+    description: Filter 2 Flag.
+    bit_offset: 15
+    bit_size: 1
+fieldset/Fmc:
+  description: Pin Filter Mode Configuration.
+  fields:
+  - name: filtm1
+    description: Filter Mode for FILTn.
+    bit_offset: 0
+    bit_size: 1
+    enum: Filtm1
+  - name: filtm2
+    description: Filter Mode for FILTn.
+    bit_offset: 1
+    bit_size: 1
+    enum: Filtm2
+fieldset/Me:
+  description: Module Interrupt Enable.
+  fields:
+  - name: wume0
+    description: Module Interrupt Wake-up Enable for Module 0.
+    bit_offset: 0
+    bit_size: 1
+  - name: wume1
+    description: Module Interrupt Wake-up Enable for Module 1.
+    bit_offset: 1
+    bit_size: 1
+  - name: wume2
+    description: Module Interrupt Wake-up Enable for Module 2.
+    bit_offset: 2
+    bit_size: 1
+  - name: wume3
+    description: Module Interrupt Wake-up Enable for Module 3.
+    bit_offset: 3
+    bit_size: 1
+  # HAND-MERGED: wume4 and wume5 are present in the MCXA577 SVD only, absent from
+  # the MCXA256 SVD. They are GPIO5 Interrupt 0 and GPIO5 Interrupt 1. MCXA2xx has
+  # no GPIO5, which is why its SVD omits them. Merged by hand, not via a transform,
+  # for the same reason as the De block above.
+  - name: wume4
+    description: Module Interrupt Wake-up Enable for Module 4.
+    bit_offset: 4
+    bit_size: 1
+  - name: wume5
+    description: Module Interrupt Wake-up Enable for Module 5.
+    bit_offset: 5
+    bit_size: 1
+  # End hand-merged block.
+  - name: wume6
+    description: Module Interrupt Wake-up Enable for Module 6.
+    bit_offset: 6
+    bit_size: 1
+  - name: wume8
+    description: Module Interrupt Wake-up Enable for Module 8.
+    bit_offset: 8
+    bit_size: 1
+  # HAND-MERGED: wume10 is present in the MCXA577 SVD only, absent from the MCXA256
+  # SVD. It is an MCXA5xx-only module interrupt wake source; the MCXA5 reference
+  # manual research note for this plan lists ME bits {0,1,2,3,4,5,6,8} and does not
+  # mention bit 10, so the SVD is the only evidence for it. It is carried over
+  # because the union rule applies, but its module identity is unconfirmed.
+  - name: wume10
+    description: Module Interrupt Wake-up Enable for Module 10.
+    bit_offset: 10
+    bit_size: 1
+fieldset/Param:
+  description: Parameter.
+  fields:
+  - name: filters
+    description: Filter Number.
+    bit_offset: 0
+    bit_size: 8
+  - name: dmas
+    description: DMA Number.
+    bit_offset: 8
+    bit_size: 8
+  - name: modules
+    description: Module Number.
+    bit_offset: 16
+    bit_size: 8
+  - name: pins
+    description: Pin Number.
+    bit_offset: 24
+    bit_size: 8
+fieldset/Pdc1:
+  description: Pin DMA/Trigger Configuration 1.
+  fields:
+  - name: wupdc
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 0
+    bit_size: 2
+    array:
+      len: 16
+      stride: 2
+    enum: Wupdc
+fieldset/Pdc2:
+  description: Pin DMA/Trigger Configuration 2.
+  fields:
+  - name: wupdc
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 0
+    bit_size: 2
+    array:
+      len: 16
+      stride: 2
+    enum: Wupdc
+fieldset/Pe1:
+  description: Pin Enable 1.
+  fields:
+  - name: wupe
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 0
+    bit_size: 2
+    array:
+      len: 16
+      stride: 2
+    enum: Wupe
+fieldset/Pe2:
+  description: Pin Enable 2.
+  fields:
+  - name: wupe
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 0
+    bit_size: 2
+    array:
+      len: 16
+      stride: 2
+    enum: Wupe
+fieldset/Pf:
+  description: Pin Flag.
+  fields:
+  - name: wuf
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 0
+    bit_size: 1
+    array:
+      len: 32
+      stride: 1
+fieldset/Pmc:
+  description: Pin Mode Configuration.
+  fields:
+  - name: wupmc
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 0
+    bit_size: 1
+    array:
+      len: 32
+      stride: 1
+    enum: Wupmc
+fieldset/Verid:
+  description: Version ID.
+  fields:
+  - name: feature
+    description: Feature Specification Number.
+    bit_offset: 0
+    bit_size: 16
+    enum: Feature
+  - name: minor
+    description: Minor Version Number.
+    bit_offset: 16
+    bit_size: 8
+  - name: major
+    description: Major Version Number.
+    bit_offset: 24
+    bit_size: 8
+enum/Feature:
+  bit_size: 16
+  variants:
+  - name: Standard
+    description: Standard features implemented.
+    value: 0
+  - name: FiltAllPwr
+    description: Support for DMA/Trigger generation from wake-up pins and filters enabled. Support for external pin/filter detection during all power modes enabled.
+    value: 1
+enum/Filtc1:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/Filtc2:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/Filte1:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (Detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (Detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (Detect on any edge).
+    value: 3
+enum/Filte2:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (Detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (Detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (Detect on any edge).
+    value: 3
+enum/Filtm1:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during Power Down/Deep Power Down mode.
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes.
+    value: 1
+enum/Filtm2:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during Power Down/Deep Power Down mode.
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes.
+    value: 1
+enum/Wupdc:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+  - name: Res
+    description: Reserved.
+    value: 3
+enum/Wupe:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/Wupmc:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1

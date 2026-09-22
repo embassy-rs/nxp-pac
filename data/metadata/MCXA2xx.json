@@ -9065,7 +9065,7 @@
     {
       "name": "WUU0",
       "address": "0x40092000",
-      "block": "mcxa/WUU0",
+      "block": "mcxa/WUU",
       "signals": [
         {
           "name": "IN0",

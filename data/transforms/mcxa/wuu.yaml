@@ -1,0 +1,54 @@
+# NOTE ON THE `wuu0::` PREFIX: the SVD peripheral is named WUU0 on both MCXA256
+# and MCXA577, so the namespace is `wuu0` here. The trailing 0 is only stripped
+# later by remove-suffix.yaml, which the chip transform lists include *after*
+# this file. Writing `wuu::` would silently match nothing.
+transforms:
+  - !MakeFieldArray
+    fieldsets: wuu0::Pe1
+    from: wupe\d+
+    to: wupe
+
+  - !MakeFieldArray
+    fieldsets: wuu0::Pe2
+    from: wupe\d+
+    to: wupe
+
+  - !MakeFieldArray
+    fieldsets: wuu0::Pdc1
+    from: wupdc\d+
+    to: wupdc
+
+  - !MakeFieldArray
+    fieldsets: wuu0::Pdc2
+    from: wupdc\d+
+    to: wupdc
+
+  - !MakeFieldArray
+    fieldsets: wuu0::Pf
+    from: wuf\d+
+    to: wuf
+
+  - !MakeFieldArray
+    fieldsets: wuu0::Pmc
+    from: wupmc\d+
+    to: wupmc
+
+  # NOTE: Me (wume) and De (wude) are deliberately NOT arrayized. Their bit
+  # positions are not evenly spaced (Me skips 7 and 9; De skips 5 and 7), so
+  # !MakeFieldArray in the default Standard mode aborts the extract outright.
+  # `mode: Holey` would paper over this by inventing array indices for the
+  # missing modules, and `mode: Cursed` would give a non-linear index->offset
+  # map. Both trade a silent correctness hazard for ergonomics on fieldsets of
+  # only 7 and 9 members, so these stay enumerated (wume4, wude0, ...).
+
+  - !MergeEnums
+    from: wuu0::Wupe\d+
+    to: wuu0::Wupe
+
+  - !MergeEnums
+    from: wuu0::Wupdc\d+
+    to: wuu0::Wupdc
+
+  - !MergeEnums
+    from: wuu0::Wupmc\d+
+    to: wuu0::Wupmc
