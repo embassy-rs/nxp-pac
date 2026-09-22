@@ -17,8 +17,22 @@
 # particular, curating from MCXA256 alone would make GPIO5 wake permanently
 # unreachable on MCXA5xx through the generated API.
 #
-# Per-chip availability is expressed elsewhere -- in each chip JSON's `signals`
-# array -- not in the register block.
+# PER-CHIP AVAILABILITY IS ONLY PARTIALLY EXPRESSED IN METADATA:
+#
+#   * External wake PINS: each chip JSON's `signals` array lists the wake pins that
+#     chip actually brings out, so pin availability is captured per chip.
+#   * ME/DE MODULE wake sources (wude0-3, wume4, wume5, wume10): these have NO
+#     per-chip representation anywhere in the metadata. They are not signals and
+#     no chip JSON constrains them. Whether a given module source exists on a
+#     given chip must be checked against that chip's reference manual or SVD --
+#     the PAC does not and cannot guard it.
+#
+# Consequently the generated API exposes every field in this union to every chip
+# in both families. Nothing here stops an MCXA2xx consumer from calling, for
+# example, set_wude0() or set_wume4() even though MCXA2xx has no GPIO5.
+# Enforcing module-source validity is the consumer's responsibility; a typical
+# approach is to model the module sources as an enum whose variants are gated
+# per chip, so the invalid ones cannot be constructed.
 #
 # The merge is done by hand rather than via a transform, as permitted by the
 # peripherals README, because a transform that injects fields absent from the
@@ -93,7 +107,11 @@ fieldset/De:
   # MCXA2xx has no GPIO5 at all, which is why its SVD omits these bits. They are
   # merged in by hand rather than via a transform, because a transform that injects
   # fields that do not exist in the source SVD would be surprising and unmaintainable.
-  # Per-chip availability is expressed in each chip JSON's `signals` array, not here.
+  # These module wake sources have NO per-chip representation in the metadata:
+  # they are not signals, so no chip JSON's `signals` array constrains them, and
+  # they are exposed to every chip in both families. Their validity for a given
+  # chip must be checked against that chip's reference manual or SVD; the
+  # consumer is responsible for enforcing it.
   - name: wude0
     description: DMA/Trigger Wake-up Enable for Module 0.
     bit_offset: 0
