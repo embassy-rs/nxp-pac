@@ -28,6 +28,7 @@ includes:
   - mcxa/sgi.yaml
   - mcxa/spc.yaml
   - mcxa/trng.yaml
+  - mcxa/wuu.yaml
   - mcxa/wwdt.yaml
 
   - remove-suffix.yaml
