@@ -283,6 +283,7 @@ pub const SPC0: spc::Spc = unsafe { spc::Spc::from_ptr(0x400CB000 as _) };
 pub const SYSCON: syscon::Syscon = unsafe { syscon::Syscon::from_ptr(0x40091000 as _) };
 pub const TRNG0: trng::Trng = unsafe { trng::Trng::from_ptr(0x400EC000 as _) };
 pub const VBAT0: vbat::Vbat = unsafe { vbat::Vbat::from_ptr(0x40093000 as _) };
+pub const WUU0: wuu::Wuu = unsafe { wuu::Wuu::from_ptr(0x40092000 as _) };
 pub const WWDT0: wwdt::Wwdt = unsafe { wwdt::Wwdt::from_ptr(0x4000C000 as _) };
 pub const WWDT1: wwdt::Wwdt = unsafe { wwdt::Wwdt::from_ptr(0x4000D000 as _) };
 pub const EDMA_0_TCD: edma_tcd::Tcd12 = unsafe { edma_tcd::Tcd12::from_ptr(0x40081000 as _) };
@@ -345,5 +346,7 @@ pub mod syscon;
 pub mod trng;
 #[path = "../../meta_peripherals/mcxa/VBAT.rs"]
 pub mod vbat;
+#[path = "../../meta_peripherals/mcxa/WUU.rs"]
+pub mod wuu;
 #[path = "../../meta_peripherals/mcxa/WWDT.rs"]
 pub mod wwdt;

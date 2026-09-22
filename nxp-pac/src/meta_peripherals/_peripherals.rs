@@ -35,5 +35,6 @@ pub const META_PERIPHERALS: &[&str] = &[
     "mcxa/TRNG",
     "mcxa/USB",
     "mcxa/VBAT",
+    "mcxa/WUU",
     "mcxa/WWDT",
 ];
