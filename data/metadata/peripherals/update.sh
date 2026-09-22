@@ -27,6 +27,7 @@ cp raw/MCXA256/FLEXIO.yaml mcxa/FLEXIO.yaml
 cp raw/MCXA256/FLEXPWM.yaml mcxa/FLEXPWM.yaml
 cp raw/MCXA256/SPC.yaml mcxa/SPC.yaml
 cp raw/MCXA256/USB.yaml mcxa/USB.yaml
+cp raw/MCXA256/WUU.yaml mcxa/WUU.yaml
 
 cp raw/MCXA577/ADC.yaml mcxa/ADC.yaml
 cp raw/MCXA577/CDOG.yaml mcxa/CDOG.yaml
