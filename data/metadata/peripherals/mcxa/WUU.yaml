@@ -1,11 +1,33 @@
-# Curated from raw/MCXA256/WUU.yaml, not raw/MCXA577/WUU.yaml.
-# The block/Wuu register list (names, byte offsets, widths, access) is byte-for-byte
-# identical between the two SVDs. They differ only at field level: the MCXA256 SVD
-# describes wake-up pins 28-31 as real pins (wupe28-31, wuf28-31, wupdc28-31,
-# wupmc28-31), while the MCXA577 SVD marks those same bit positions "Reserved".
-# MCXA256 is therefore the superset. The MCXA256 SVD also uses the current "WUU_Pn"
-# wording in field descriptions, where MCXA577 still carries the legacy "LLWU_Pn"
-# naming inherited from the Kinetis LLWU block.
+# This file is a deliberate UNION of raw/MCXA256/WUU.yaml and raw/MCXA577/WUU.yaml.
+# It is NOT a copy of either one, and it is NOT regenerable by a plain `cp`.
+#
+# NEITHER SVD IS A SUPERSET OF THE OTHER. Each omits fields the other has:
+#
+#   * MCXA256 only: wake-up pins 28-31 are real pins (wupe28-31, wuf28-31,
+#     wupdc28-31, wupmc28-31). The MCXA577 SVD marks those same bit positions
+#     "Reserved".
+#   * MCXA577 only: wude0-wude3 in the De fieldset (GPIO5 DMA 0/1 and GPIO5
+#     Trigger 0/1), and wume4, wume5, wume10 in the Me fieldset (wume4/wume5 are
+#     GPIO5 Interrupt 0/1). MCXA2xx has no GPIO5 at all, so its SVD omits them.
+#
+# The WUU register block is shared by both chip families and the register map --
+# names, byte offsets, widths and access -- is byte-for-byte identical between the
+# two SVDs. Only the field-level content differs. The block must therefore express
+# the union; taking either SVD alone silently drops real hardware capability. In
+# particular, curating from MCXA256 alone would make GPIO5 wake permanently
+# unreachable on MCXA5xx through the generated API.
+#
+# Per-chip availability is expressed elsewhere -- in each chip JSON's `signals`
+# array -- not in the register block.
+#
+# The merge is done by hand rather than via a transform, as permitted by the
+# peripherals README, because a transform that injects fields absent from the
+# source SVD would be surprising and hard to maintain. Each merged field is
+# individually commented at its site below.
+#
+# Base text is the MCXA256 extract, which also carries the current "WUU_Pn" wording
+# in field descriptions where MCXA577 still uses the legacy "LLWU_Pn" naming
+# inherited from the Kinetis LLWU block.
 block/Wuu:
   description: Low-Leakage Wakeup Unit.
   items:
@@ -66,6 +88,29 @@ block/Wuu:
 fieldset/De:
   description: Module DMA/Trigger Enable.
   fields:
+  # HAND-MERGED: wude0..wude3 are present in the MCXA577 SVD only, absent from the
+  # MCXA256 SVD. They are the GPIO5 DMA 0/1 and GPIO5 Trigger 0/1 wake sources.
+  # MCXA2xx has no GPIO5 at all, which is why its SVD omits these bits. They are
+  # merged in by hand rather than via a transform, because a transform that injects
+  # fields that do not exist in the source SVD would be surprising and unmaintainable.
+  # Per-chip availability is expressed in each chip JSON's `signals` array, not here.
+  - name: wude0
+    description: DMA/Trigger Wake-up Enable for Module 0.
+    bit_offset: 0
+    bit_size: 1
+  - name: wude1
+    description: DMA/Trigger Wake-up Enable for Module 1.
+    bit_offset: 1
+    bit_size: 1
+  - name: wude2
+    description: DMA/Trigger Wake-up Enable for Module 2.
+    bit_offset: 2
+    bit_size: 1
+  - name: wude3
+    description: DMA/Trigger Wake-up Enable for Module 3.
+    bit_offset: 3
+    bit_size: 1
+  # End hand-merged block. Fields below come from the MCXA256 SVD (also in MCXA577).
   - name: wude4
     description: DMA/Trigger Wake-up Enable for Module 4.
     bit_offset: 4
@@ -152,6 +197,19 @@ fieldset/Me:
     description: Module Interrupt Wake-up Enable for Module 3.
     bit_offset: 3
     bit_size: 1
+  # HAND-MERGED: wume4 and wume5 are present in the MCXA577 SVD only, absent from
+  # the MCXA256 SVD. They are GPIO5 Interrupt 0 and GPIO5 Interrupt 1. MCXA2xx has
+  # no GPIO5, which is why its SVD omits them. Merged by hand, not via a transform,
+  # for the same reason as the De block above.
+  - name: wume4
+    description: Module Interrupt Wake-up Enable for Module 4.
+    bit_offset: 4
+    bit_size: 1
+  - name: wume5
+    description: Module Interrupt Wake-up Enable for Module 5.
+    bit_offset: 5
+    bit_size: 1
+  # End hand-merged block.
   - name: wume6
     description: Module Interrupt Wake-up Enable for Module 6.
     bit_offset: 6
@@ -159,6 +217,15 @@ fieldset/Me:
   - name: wume8
     description: Module Interrupt Wake-up Enable for Module 8.
     bit_offset: 8
+    bit_size: 1
+  # HAND-MERGED: wume10 is present in the MCXA577 SVD only, absent from the MCXA256
+  # SVD. It is an MCXA5xx-only module interrupt wake source; the MCXA5 reference
+  # manual research note for this plan lists ME bits {0,1,2,3,4,5,6,8} and does not
+  # mention bit 10, so the SVD is the only evidence for it. It is carried over
+  # because the union rule applies, but its module identity is unconfirmed.
+  - name: wume10
+    description: Module Interrupt Wake-up Enable for Module 10.
+    bit_offset: 10
     bit_size: 1
 fieldset/Param:
   description: Parameter.

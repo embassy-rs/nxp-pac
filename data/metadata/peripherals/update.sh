@@ -22,12 +22,16 @@ pushd $CURRENT_DIR
 # cp raw/MCXA577/DMA.yaml mcxa/DMA.yaml
 # cp raw/MCXA577/EDMA_TCD.yaml mcxa/EDMA_TCD.yaml
 # cp raw/MCXA577/AHBSC.yaml mcxa/AHBSC.yaml
+# mcxa/WUU.yaml is a hand-merged UNION of raw/MCXA256/WUU.yaml and
+# raw/MCXA577/WUU.yaml -- neither SVD is a superset of the other. Re-running a
+# plain cp from either source would silently drop real fields. See the header
+# comment in mcxa/WUU.yaml for the details of what is merged and why.
+# cp raw/MCXA256/WUU.yaml mcxa/WUU.yaml
 
 cp raw/MCXA256/FLEXIO.yaml mcxa/FLEXIO.yaml
 cp raw/MCXA256/FLEXPWM.yaml mcxa/FLEXPWM.yaml
 cp raw/MCXA256/SPC.yaml mcxa/SPC.yaml
 cp raw/MCXA256/USB.yaml mcxa/USB.yaml
-cp raw/MCXA256/WUU.yaml mcxa/WUU.yaml
 
 cp raw/MCXA577/ADC.yaml mcxa/ADC.yaml
 cp raw/MCXA577/CDOG.yaml mcxa/CDOG.yaml
