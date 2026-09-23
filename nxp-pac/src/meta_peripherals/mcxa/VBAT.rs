@@ -232,17 +232,21 @@ impl defmt::Format for Frocfga {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Froclke(pub u32);
 impl Froclke {
-    #[doc = "Clock Enable."]
+    #[doc = "Clock enable for the indexed output. MCXA5: 0 = VDD_SYS, 1 = CORE_MAIN, 2 = VDD_BAT. MCXA2: 0 = VDD_BAT, 1 = CORE_MAIN; bit 2 is reserved and must not be written."]
     #[must_use]
     #[inline(always)]
-    pub const fn clke(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0x07;
-        val as u8
+    pub const fn clke(&self, n: usize) -> bool {
+        assert!(n < 3usize);
+        let offs = 0usize + n * 1usize;
+        let val = (self.0 >> offs) & 0x01;
+        val != 0
     }
-    #[doc = "Clock Enable."]
+    #[doc = "Clock enable for the indexed output. MCXA5: 0 = VDD_SYS, 1 = CORE_MAIN, 2 = VDD_BAT. MCXA2: 0 = VDD_BAT, 1 = CORE_MAIN; bit 2 is reserved and must not be written."]
     #[inline(always)]
-    pub const fn set_clke(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x07 << 0usize)) | (((val as u32) & 0x07) << 0usize);
+    pub const fn set_clke(&mut self, n: usize, val: bool) {
+        assert!(n < 3usize);
+        let offs = 0usize + n * 1usize;
+        self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
     }
 }
 impl Default for Froclke {
@@ -254,14 +258,22 @@ impl Default for Froclke {
 impl core::fmt::Debug for Froclke {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Froclke")
-            .field("clke", &self.clke())
+            .field("clke[0]", &self.clke(0usize))
+            .field("clke[1]", &self.clke(1usize))
+            .field("clke[2]", &self.clke(2usize))
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
 impl defmt::Format for Froclke {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Froclke {{ clke: {=u8:?} }}", self.clke())
+        defmt::write!(
+            f,
+            "Froclke {{ clke[0]: {=bool:?}, clke[1]: {=bool:?}, clke[2]: {=bool:?} }}",
+            self.clke(0usize),
+            self.clke(1usize),
+            self.clke(2usize)
+        )
     }
 }
 #[doc = "FRO16K Control A."]
@@ -1081,17 +1093,21 @@ impl defmt::Format for Osccfga {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Oscclke(pub u32);
 impl Oscclke {
-    #[doc = "Clock Enable."]
+    #[doc = "Clock enable for the indexed output. MCXA5: 0 = VDD_SYS, 1 = CORE_MAIN, 2 = VDD_BAT. MCXA2: OSC32K and OSCCLKE are not supported; do not access this register."]
     #[must_use]
     #[inline(always)]
-    pub const fn clke(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0x07;
-        val as u8
+    pub const fn clke(&self, n: usize) -> bool {
+        assert!(n < 3usize);
+        let offs = 0usize + n * 1usize;
+        let val = (self.0 >> offs) & 0x01;
+        val != 0
     }
-    #[doc = "Clock Enable."]
+    #[doc = "Clock enable for the indexed output. MCXA5: 0 = VDD_SYS, 1 = CORE_MAIN, 2 = VDD_BAT. MCXA2: OSC32K and OSCCLKE are not supported; do not access this register."]
     #[inline(always)]
-    pub const fn set_clke(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x07 << 0usize)) | (((val as u32) & 0x07) << 0usize);
+    pub const fn set_clke(&mut self, n: usize, val: bool) {
+        assert!(n < 3usize);
+        let offs = 0usize + n * 1usize;
+        self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
     }
 }
 impl Default for Oscclke {
@@ -1103,14 +1119,22 @@ impl Default for Oscclke {
 impl core::fmt::Debug for Oscclke {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Oscclke")
-            .field("clke", &self.clke())
+            .field("clke[0]", &self.clke(0usize))
+            .field("clke[1]", &self.clke(1usize))
+            .field("clke[2]", &self.clke(2usize))
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
 impl defmt::Format for Oscclke {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Oscclke {{ clke: {=u8:?} }}", self.clke())
+        defmt::write!(
+            f,
+            "Oscclke {{ clke[0]: {=bool:?}, clke[1]: {=bool:?}, clke[2]: {=bool:?} }}",
+            self.clke(0usize),
+            self.clke(1usize),
+            self.clke(2usize)
+        )
     }
 }
 #[doc = "Oscillator Control A."]
