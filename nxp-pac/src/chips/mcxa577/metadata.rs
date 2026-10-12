@@ -9966,7 +9966,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
     Peripheral {
         name: "SPC0",
         address: 0x400CB000,
-        driver_name: "mcxa/SPC",
+        driver_name: "mcxa/SPC::Spc5xx",
         signals: &[Signal {
             name: "LPREQ",
             pins: &[

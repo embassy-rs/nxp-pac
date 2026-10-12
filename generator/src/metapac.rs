@@ -1,7 +1,8 @@
-use std::{collections::HashSet, fs, path::Path, str::FromStr};
+use std::{collections::HashSet, fs, path::Path};
 
 use anyhow::Context;
-use chiptool::commands::{GenerateShared, ModulePath, gen_block::GenBlock, gen_common::GenCommon};
+use chiptool::commands::gen_common::GenCommon;
+use chiptool::generate::{CommonModule, Options};
 use indexmap::IndexSet;
 use proc_macro2::{Ident, Literal, Span, TokenStream};
 use quote::quote;
@@ -54,20 +55,13 @@ pub fn generate_meta_peripherals(current: &Path) -> anyhow::Result<()> {
                     .context("Getting parent of output path")?,
             )?;
 
-            chiptool::commands::gen_block::gen_block(GenBlock {
-                input: entry
+            generate_peripheral(
+                &entry
                     .path()
                     .canonicalize()
                     .context("Canonicalizing entry path")?,
-                output: output_path.clone(),
-                gen_shared: GenerateShared {
-                    common_module: Some(ModulePath::from_str("crate::pac::common")?),
-                    defmt_feature: "defmt".to_string(),
-                    no_defmt: false,
-                    yes_defmt: false,
-                    skip_no_std: true,
-                },
-            })
+                &output_path,
+            )
             .with_context(|| format!("Error generating block {}", relative_entry_path.display()))?;
 
             crate::util::rustfmt(&output_path).with_context(|| {
@@ -81,6 +75,23 @@ pub fn generate_meta_peripherals(current: &Path) -> anyhow::Result<()> {
 
     generate_meta_peripherals_mod(current, drivers)?;
 
+    Ok(())
+}
+
+fn generate_peripheral(input: &Path, output: &Path) -> anyhow::Result<()> {
+    let data = fs::read(input)?;
+    let mut ir: chiptool::ir::IR = serde_yaml::from_slice(&data)?;
+
+    // Curated YAMLs contain their inheritance parents locally. The CLI loader
+    // instead looks for parent-named files, which need not exist or match case.
+    chiptool::transform::expand_extends::ExpandExtends {}.run(&mut ir)?;
+    chiptool::transform::sort::Sort {}.run(&mut ir)?;
+
+    let options = Options::new()
+        .with_common_module(CommonModule::External(quote!(crate::pac::common)))
+        .with_skip_no_std(true);
+    let tokens = chiptool::generate::render(&ir, &options)?;
+    fs::write(output, tokens.to_string())?;
     Ok(())
 }
 

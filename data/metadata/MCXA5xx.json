@@ -8681,7 +8681,7 @@
     {
       "name": "SPC0",
       "address": "0x400CB000",
-      "block": "mcxa/SPC",
+      "block": "mcxa/SPC::Spc5xx",
       "signals": [
         {
           "name": "LPREQ",
