@@ -74,6 +74,15 @@ block/Spc:
     description: LDO_CORE Configuration.
     byte_offset: 768
     access: Read
+# MCXA577.xml EVD_CFG (0x140) has six-bit fields, unlike MCXA256.xml.
+block/Spc5xx:
+  extends: Spc
+  description: SPC.
+  items:
+  - name: evd_cfg
+    description: External Voltage Domain Configuration.
+    byte_offset: 320
+    fieldset: EvdCfg5xx
 fieldset/ActiveCfg:
   description: Active Power Mode Configuration.
   fields:
@@ -138,6 +147,25 @@ fieldset/EvdCfg:
     description: External Voltage Domain Status.
     bit_offset: 16
     bit_size: 3
+# Vendor MCXA256.xml and MCXA577.xml define EVDSTAT as read-only.
+# Pinned chiptool IR has register access, but no field-level access, so it
+# currently generates a status setter. Do not use it to write EVDSTAT.
+fieldset/EvdCfg5xx:
+  extends: EvdCfg
+  description: External Voltage Domain Configuration.
+  fields:
+  - name: evdiso
+    description: External Voltage Domain Isolation.
+    bit_offset: 0
+    bit_size: 6
+  - name: evdlpiso
+    description: External Voltage Domain Low-Power Isolation.
+    bit_offset: 8
+    bit_size: 6
+  - name: evdstat
+    description: External Voltage Domain Status.
+    bit_offset: 16
+    bit_size: 6
 fieldset/LpCfg:
   description: Low-Power Mode Configuration.
   fields:

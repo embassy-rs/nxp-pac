@@ -117,6 +117,121 @@ impl Spc {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0300usize) as _) }
     }
 }
+#[doc = "SPC."]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Spc5xx {
+    ptr: *mut u8,
+}
+unsafe impl Send for Spc5xx {}
+unsafe impl Sync for Spc5xx {}
+impl Spc5xx {
+    #[inline(always)]
+    pub const unsafe fn from_ptr(ptr: *mut ()) -> Self {
+        Self { ptr: ptr as _ }
+    }
+    #[inline(always)]
+    pub const fn as_ptr(&self) -> *mut () {
+        self.ptr as _
+    }
+    #[doc = "Version ID."]
+    #[inline(always)]
+    pub const fn verid(self) -> crate::pac::common::Reg<Verid, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+    }
+    #[doc = "Status Control."]
+    #[inline(always)]
+    pub const fn sc(self) -> crate::pac::common::Reg<Sc, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize) as _) }
+    }
+    #[doc = "Low-Power Request Configuration."]
+    #[inline(always)]
+    pub const fn lpreq_cfg(self) -> crate::pac::common::Reg<LpreqCfg, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x1cusize) as _) }
+    }
+    #[doc = "SPC Power Domain Mode Status."]
+    #[inline(always)]
+    pub const fn pd_status0(self) -> crate::pac::common::Reg<PdStatus0, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x30usize) as _) }
+    }
+    #[doc = "SRAM Control."]
+    #[inline(always)]
+    pub const fn sramctl(self) -> crate::pac::common::Reg<Sramctl, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x40usize) as _) }
+    }
+    #[doc = "SRAM Retention Reference Trim."]
+    #[inline(always)]
+    pub const fn sramretldo_reftrim(
+        self,
+    ) -> crate::pac::common::Reg<SramretldoReftrim, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x54usize) as _) }
+    }
+    #[doc = "SRAM Retention LDO Control."]
+    #[inline(always)]
+    pub const fn sramretldo_cntrl(
+        self,
+    ) -> crate::pac::common::Reg<SramretldoCntrl, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x58usize) as _) }
+    }
+    #[doc = "Active Power Mode Configuration."]
+    #[inline(always)]
+    pub const fn active_cfg(self) -> crate::pac::common::Reg<ActiveCfg, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0100usize) as _) }
+    }
+    #[doc = "Active Power Mode Configuration 1."]
+    #[inline(always)]
+    pub const fn active_cfg1(self) -> crate::pac::common::Reg<ActiveCfg1, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0104usize) as _) }
+    }
+    #[doc = "Low-Power Mode Configuration."]
+    #[inline(always)]
+    pub const fn lp_cfg(self) -> crate::pac::common::Reg<LpCfg, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0108usize) as _) }
+    }
+    #[doc = "Low Power Mode Configuration 1."]
+    #[inline(always)]
+    pub const fn lp_cfg1(self) -> crate::pac::common::Reg<LpCfg1, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x010cusize) as _) }
+    }
+    #[doc = "Low Power Wake-Up Delay."]
+    #[inline(always)]
+    pub const fn lpwkup_delay(
+        self,
+    ) -> crate::pac::common::Reg<LpwkupDelay, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0120usize) as _) }
+    }
+    #[doc = "Active Voltage Trim Delay."]
+    #[inline(always)]
+    pub const fn active_vdelay(
+        self,
+    ) -> crate::pac::common::Reg<ActiveVdelay, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0124usize) as _) }
+    }
+    #[doc = "Voltage Detect Status."]
+    #[inline(always)]
+    pub const fn vd_stat(self) -> crate::pac::common::Reg<VdStat, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0130usize) as _) }
+    }
+    #[doc = "Core Voltage Detect Configuration."]
+    #[inline(always)]
+    pub const fn vd_core_cfg(self) -> crate::pac::common::Reg<VdCoreCfg, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0134usize) as _) }
+    }
+    #[doc = "System Voltage Detect Configuration."]
+    #[inline(always)]
+    pub const fn vd_sys_cfg(self) -> crate::pac::common::Reg<VdSysCfg, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0138usize) as _) }
+    }
+    #[doc = "External Voltage Domain Configuration."]
+    #[inline(always)]
+    pub const fn evd_cfg(self) -> crate::pac::common::Reg<EvdCfg5xx, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0140usize) as _) }
+    }
+    #[doc = "LDO_CORE Configuration."]
+    #[inline(always)]
+    pub const fn coreldo_cfg(self) -> crate::pac::common::Reg<u32, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0300usize) as _) }
+    }
+}
 #[doc = "Active Power Mode Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
@@ -383,6 +498,75 @@ impl defmt::Format for EvdCfg {
         defmt::write!(
             f,
             "EvdCfg {{ evdiso: {=u8:?}, evdlpiso: {=u8:?}, evdstat: {=u8:?} }}",
+            self.evdiso(),
+            self.evdlpiso(),
+            self.evdstat()
+        )
+    }
+}
+#[doc = "External Voltage Domain Configuration."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct EvdCfg5xx(pub u32);
+impl EvdCfg5xx {
+    #[doc = "External Voltage Domain Isolation."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn evdiso(&self) -> u8 {
+        let val = (self.0 >> 0usize) & 0x3f;
+        val as u8
+    }
+    #[doc = "External Voltage Domain Isolation."]
+    #[inline(always)]
+    pub const fn set_evdiso(&mut self, val: u8) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val as u32) & 0x3f) << 0usize);
+    }
+    #[doc = "External Voltage Domain Low-Power Isolation."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn evdlpiso(&self) -> u8 {
+        let val = (self.0 >> 8usize) & 0x3f;
+        val as u8
+    }
+    #[doc = "External Voltage Domain Low-Power Isolation."]
+    #[inline(always)]
+    pub const fn set_evdlpiso(&mut self, val: u8) {
+        self.0 = (self.0 & !(0x3f << 8usize)) | (((val as u32) & 0x3f) << 8usize);
+    }
+    #[doc = "External Voltage Domain Status."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn evdstat(&self) -> u8 {
+        let val = (self.0 >> 16usize) & 0x3f;
+        val as u8
+    }
+    #[doc = "External Voltage Domain Status."]
+    #[inline(always)]
+    pub const fn set_evdstat(&mut self, val: u8) {
+        self.0 = (self.0 & !(0x3f << 16usize)) | (((val as u32) & 0x3f) << 16usize);
+    }
+}
+impl Default for EvdCfg5xx {
+    #[inline(always)]
+    fn default() -> EvdCfg5xx {
+        EvdCfg5xx(0)
+    }
+}
+impl core::fmt::Debug for EvdCfg5xx {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EvdCfg5xx")
+            .field("evdiso", &self.evdiso())
+            .field("evdlpiso", &self.evdlpiso())
+            .field("evdstat", &self.evdstat())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for EvdCfg5xx {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "EvdCfg5xx {{ evdiso: {=u8:?}, evdlpiso: {=u8:?}, evdstat: {=u8:?} }}",
             self.evdiso(),
             self.evdlpiso(),
             self.evdstat()
