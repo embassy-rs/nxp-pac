@@ -7767,7 +7767,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
     Peripheral {
         name: "LPTMR0",
         address: 0x400AB000,
-        driver_name: "mcxa/LPTMR0",
+        driver_name: "mcxa/LPTMR",
         signals: &[
             Signal {
                 name: "ALT2",

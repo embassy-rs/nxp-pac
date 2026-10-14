@@ -7754,6 +7754,7 @@
     {
       "name": "LPTMR0",
       "address": "0x400AB000",
+      "block": "mcxa/LPTMR",
       "signals": [
         {
           "name": "ALT2",
