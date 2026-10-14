@@ -27,6 +27,9 @@ pushd $CURRENT_DIR
 # plain cp from either source would silently drop real fields. See the header
 # comment in mcxa/WUU.yaml for the details of what is merged and why.
 # cp raw/MCXA256/WUU.yaml mcxa/WUU.yaml
+# mcx/DAC.yaml is raw/MCXA256/DAC.yaml without the BufEn enum, whose SVD
+# variant descriptions are inverted. A plain cp would bring it back.
+# cp raw/MCXA256/DAC.yaml mcx/DAC.yaml
 
 cp raw/MCXA256/FLEXIO.yaml mcxa/FLEXIO.yaml
 cp raw/MCXA256/FLEXPWM.yaml mcxa/FLEXPWM.yaml
@@ -37,11 +40,11 @@ cp raw/MCXA577/ADC.yaml mcxa/ADC.yaml
 cp raw/MCXA577/CDOG.yaml mcxa/CDOG.yaml
 cp raw/MCXA577/CMC.yaml mcxa/CMC.yaml
 cp raw/MCXA577/CRC.yaml mcxa/CRC.yaml
-cp raw/MCXA577/CTIMER.yaml mcxa/CTIMER.yaml
+cp raw/MCXA577/CTIMER.yaml mcx/CTIMER.yaml
 cp raw/MCXA577/DAC.yaml mcxa/DAC.yaml
 cp raw/MCXA577/FLEXSPI.yaml mcxa/FLEXSPI.yaml
 cp raw/MCXA577/FMU.yaml mcxa/FMU.yaml
-cp raw/MCXA577/GPIO.yaml mcxa/GPIO.yaml
+cp raw/MCXA577/GPIO.yaml mcx/GPIO.yaml
 cp raw/MCXA577/I3C.yaml mcxa/I3C.yaml
 cp raw/MCXA577/INPUTMUX.yaml mcxa/INPUTMUX.yaml
 cp raw/MCXA577/LPI2C.yaml mcxa/LPI2C.yaml
@@ -49,15 +52,15 @@ cp raw/MCXA577/LPSPI.yaml mcxa/LPSPI.yaml
 cp raw/MCXA577/LPUART.yaml mcxa/LPUART.yaml
 cp raw/MCXA577/MBC.yaml mcxa/MBC.yaml
 cp raw/MCXA577/OSTIMER.yaml mcxa/OSTIMER.yaml
-cp raw/MCXA577/PORT.yaml mcxa/PORT.yaml
+cp raw/MCXA577/PORT.yaml mcx/PORT.yaml
 cp raw/MCXA577/SCG.yaml mcxa/SCG.yaml
 cp raw/MCXA577/SGI.yaml mcxa/SGI.yaml
 cp raw/MCXA577/TRNG.yaml mcxa/TRNG.yaml
 cp raw/MCXA577/VBAT.yaml mcxa/VBAT.yaml
-cp raw/MCXA577/WWDT.yaml mcxa/WWDT.yaml
+cp raw/MCXA577/WWDT.yaml mcx/WWDT.yaml
 
 cp raw/MCXA256/RTC.yaml mcxa/RTC2xx.yaml
-cp raw/MCXA577/RTC.yaml mcxa/RTC5xx.yaml
+cp raw/MCXA577/RTC.yaml mcx/RTC5xx.yaml
 
 cp raw/MCXA256/MRCC.yaml mcxa/MRCC2xx.yaml
 cp raw/MCXA577/MRCC.yaml mcxa/MRCC5xx.yaml
