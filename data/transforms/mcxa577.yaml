@@ -25,6 +25,7 @@ includes:
   - mcxa/inputmux.yaml
   - mcxa/lpi2c.yaml
   - mcxa/lpspi.yaml
+  - mcxa/lptmr.yaml
   - mcxa/lpuart.yaml
   - mcxa/mbc.yaml
   - mcxa/mrcc.yaml

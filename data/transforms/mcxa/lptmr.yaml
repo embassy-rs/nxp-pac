@@ -1,0 +1,5 @@
+transforms:
+  # TCF is a write-one-to-clear status flag. A boolean supports both reading
+  # the flag and explicitly choosing whether a CSR write acknowledges it.
+  - !DeleteEnums
+    from: lptmr0::Tcf

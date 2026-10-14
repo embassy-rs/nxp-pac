@@ -231,6 +231,7 @@ pub const LPI2C2: lpi2c::Lpi2c = unsafe { lpi2c::Lpi2c::from_ptr(0x400D4000 as _
 pub const LPI2C3: lpi2c::Lpi2c = unsafe { lpi2c::Lpi2c::from_ptr(0x400D5000 as _) };
 pub const LPSPI0: lpspi::Lpspi = unsafe { lpspi::Lpspi::from_ptr(0x4009C000 as _) };
 pub const LPSPI1: lpspi::Lpspi = unsafe { lpspi::Lpspi::from_ptr(0x4009D000 as _) };
+pub const LPTMR0: lptmr::Lptmr = unsafe { lptmr::Lptmr::from_ptr(0x400AB000 as _) };
 pub const LPUART0: lpuart::Lpuart = unsafe { lpuart::Lpuart::from_ptr(0x4009F000 as _) };
 pub const LPUART1: lpuart::Lpuart = unsafe { lpuart::Lpuart::from_ptr(0x400A0000 as _) };
 pub const LPUART2: lpuart::Lpuart = unsafe { lpuart::Lpuart::from_ptr(0x400A1000 as _) };
@@ -290,6 +291,8 @@ pub mod inputmux;
 pub mod lpi2c;
 #[path = "../../meta_peripherals/mcxa/LPSPI.rs"]
 pub mod lpspi;
+#[path = "../../meta_peripherals/mcxa/LPTMR.rs"]
+pub mod lptmr;
 #[path = "../../meta_peripherals/mcxa/LPUART.rs"]
 pub mod lpuart;
 #[path = "../../meta_peripherals/mcxa/MRCC2xx.rs"]

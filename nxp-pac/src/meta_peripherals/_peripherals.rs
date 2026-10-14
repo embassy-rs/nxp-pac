@@ -19,6 +19,7 @@ pub const META_PERIPHERALS: &[&str] = &[
     "mcxa/INPUTMUX",
     "mcxa/LPI2C",
     "mcxa/LPSPI",
+    "mcxa/LPTMR",
     "mcxa/LPUART",
     "mcxa/MBC",
     "mcxa/MRCC2xx",

@@ -46,6 +46,7 @@ cp raw/MCXA577/I3C.yaml mcxa/I3C.yaml
 cp raw/MCXA577/INPUTMUX.yaml mcxa/INPUTMUX.yaml
 cp raw/MCXA577/LPI2C.yaml mcxa/LPI2C.yaml
 cp raw/MCXA577/LPSPI.yaml mcxa/LPSPI.yaml
+cp raw/MCXA577/LPTMR.yaml mcxa/LPTMR.yaml
 cp raw/MCXA577/LPUART.yaml mcxa/LPUART.yaml
 cp raw/MCXA577/MBC.yaml mcxa/MBC.yaml
 cp raw/MCXA577/OSTIMER.yaml mcxa/OSTIMER.yaml
