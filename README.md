@@ -33,6 +33,7 @@ Because the crate is in transition, some of them use the PAC method, and some of
 | MCXA176 | MetaPAC |
 | MCXA185 | MetaPAC |
 | MCXA186 | MetaPAC |
+| MCXA255 | MetaPAC |
 | MCXA256 | MetaPAC |
 | MCXA266 | MetaPAC |
 | MCXA276 | MetaPAC (engineering sample) |

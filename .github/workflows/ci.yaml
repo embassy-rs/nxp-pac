@@ -69,6 +69,7 @@ jobs:
           - mcxa176
           - mcxa185
           - mcxa186
+          - mcxa255
           - mcxa256
           - mcxa266
           - mcxa276
@@ -96,6 +97,7 @@ jobs:
           - mcxa176
           - mcxa185
           - mcxa186
+          - mcxa255
           - mcxa256
           - mcxa266
           - mcxa276
