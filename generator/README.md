@@ -39,6 +39,8 @@ Refer to the [chiptool](https://github.com/embassy-rs/chiptool/) project to find
 
 For metapac chips the peripheral definitions are manually curated in [`data/metadata/peripherals`](/data/metadata/peripherals). Refer to the [README](/data/metadata/peripherals/README.md) in that folder on how to update these files.
 
+MCXA chip metadata includes one shared family file. Chip fields replace shared fields; `only_in` filters peripherals by chip name. Nested includes are not supported.
+
 For all chips you can (re-)generate the nxp-pac code by running (replace MCXA577 with your chip).
 ```
 cargo run -p generator -- generate MCXA577

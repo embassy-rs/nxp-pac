@@ -63,6 +63,19 @@ transforms:
     block: port\d+::Port\d*
     from: calib\d+
 
+  # Keep the existing generic PCR array across sparse port descriptions.
+  - !DeleteRegisters
+    block: port\d+::Port\d*
+    from: pcr\d+
+
+  - !AddRegisters
+    block: port\d+::Port\d*
+    registers:
+      - name: pcr
+        byte_offset: 128
+        array: { len: 32, stride: 4 }
+        fieldset: port::Pcr
+
   # Roughly merge all port blocks together.
   - !MergeBlocks
     from: port\d*::Port\d*
@@ -98,11 +111,6 @@ transforms:
   - !MergeEnums
     from: port::Pcr(\d+)(.+)
     to: port::$2
-
-  - !MakeRegisterArray
-    blocks: port::Port
-    from: pcr(\d+)
-    to: pcr
 
   - !MakeFieldArray
     fieldsets: port::Gpc(l|h)r

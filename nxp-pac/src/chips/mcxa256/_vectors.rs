@@ -1,5 +1,4 @@
 unsafe extern "C" {
-    fn RESERVED16();
     fn CMC();
     fn DMA0_CH0();
     fn DMA0_CH1();
@@ -19,7 +18,6 @@ unsafe extern "C" {
     fn TDET();
     fn WUU0();
     fn CAN0();
-    fn CAN1();
     fn FLEXIO();
     fn I3C0();
     fn LPI2C0();
@@ -58,7 +56,6 @@ unsafe extern "C" {
     fn ADC1();
     fn CMP0();
     fn CMP1();
-    fn RESERVED82();
     fn DAC0();
     fn GPIO0();
     fn GPIO1();
@@ -77,7 +74,6 @@ unsafe extern "C" {
     fn EQDC1_HOME();
     fn EQDC1_WATCHDOG();
     fn EQDC1_INDEX();
-    fn LPUART5();
     fn MAU();
     fn SMARTDMA();
     fn CDOG1();
@@ -85,11 +81,8 @@ unsafe extern "C" {
     fn SGI();
     fn TRNG0();
     fn SECURE_ERR();
-    fn RESERVED132();
-    fn RESERVED133();
     fn RTC();
     fn RTC_1HZ();
-    fn RESERVED137();
 }
 pub union Vector {
     _handler: unsafe extern "C" fn(),
@@ -97,10 +90,8 @@ pub union Vector {
 }
 #[unsafe(link_section = ".vector_table.interrupts")]
 #[unsafe(no_mangle)]
-pub static __INTERRUPTS: [Vector; 122] = [
-    Vector {
-        _handler: RESERVED16,
-    },
+pub static __INTERRUPTS: [Vector; 121] = [
+    Vector { _reserved: 0 },
     Vector { _handler: CMC },
     Vector { _handler: DMA0_CH0 },
     Vector { _handler: DMA0_CH1 },
@@ -124,7 +115,7 @@ pub static __INTERRUPTS: [Vector; 122] = [
     Vector { _handler: TDET },
     Vector { _handler: WUU0 },
     Vector { _handler: CAN0 },
-    Vector { _handler: CAN1 },
+    Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _handler: FLEXIO },
@@ -192,9 +183,7 @@ pub static __INTERRUPTS: [Vector; 122] = [
     Vector { _handler: ADC1 },
     Vector { _handler: CMP0 },
     Vector { _handler: CMP1 },
-    Vector {
-        _handler: RESERVED82,
-    },
+    Vector { _reserved: 0 },
     Vector { _handler: DAC0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
@@ -243,7 +232,7 @@ pub static __INTERRUPTS: [Vector; 122] = [
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
-    Vector { _handler: LPUART5 },
+    Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
@@ -266,16 +255,9 @@ pub static __INTERRUPTS: [Vector; 122] = [
         _handler: SECURE_ERR,
     },
     Vector { _reserved: 0 },
-    Vector {
-        _handler: RESERVED132,
-    },
-    Vector {
-        _handler: RESERVED133,
-    },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _handler: RTC },
     Vector { _handler: RTC_1HZ },
-    Vector {
-        _handler: RESERVED137,
-    },
 ];

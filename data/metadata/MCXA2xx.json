@@ -1041,6 +1041,7 @@
     },
     {
       "name": "ADC2",
+      "only_in": "^MCXA276$",
       "signals": [],
       "dma_muxing": [
         {
@@ -1052,6 +1053,7 @@
     },
     {
       "name": "ADC3",
+      "only_in": "^MCXA276$",
       "signals": [],
       "dma_muxing": [
         {
@@ -1137,6 +1139,7 @@
     },
     {
       "name": "CAN1",
+      "only_in": "^MCXA(266|276)$",
       "address": "0x400D0000",
       "block": "mcxa/CAN::Can",
       "signals": [
@@ -1411,6 +1414,7 @@
     },
     {
       "name": "CMP2",
+      "only_in": "^MCXA276$",
       "signals": []
     },
     {
@@ -7363,6 +7367,7 @@
     },
     {
       "name": "LPUART5",
+      "only_in": "^MCXA(266|276)$",
       "address": "0x400DA000",
       "block": "mcxa/LPUART",
       "signals": [
@@ -7471,6 +7476,7 @@
     },
     {
       "name": "MAU0",
+      "only_in": "^MCXA276$",
       "signals": [],
       "dma_muxing": [
         {
@@ -7516,14 +7522,17 @@
     },
     {
       "name": "OPAMP1",
+      "only_in": "^MCXA276$",
       "signals": []
     },
     {
       "name": "OPAMP2",
+      "only_in": "^MCXA276$",
       "signals": []
     },
     {
       "name": "OPAMP3",
+      "only_in": "^MCXA276$",
       "signals": []
     },
     {
@@ -7673,6 +7682,7 @@
     },
     {
       "name": "SLCD0",
+      "only_in": "^MCXA(266|276)$",
       "signals": [
         {
           "name": "P0",

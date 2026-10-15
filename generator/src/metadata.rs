@@ -273,8 +273,8 @@ fn generate_metadata(name: &str, metadata: &Metadata) -> TokenStream {
                     None => quote! { None },
                 };
                 let bit = match bit.clone() {
-                    Some(bit) => { bit },
-                    None => { name.to_lowercase() }
+                    Some(bit) => bit,
+                    None => name.to_lowercase(),
                 };
 
                 quote! {
@@ -325,8 +325,60 @@ fn generate_metadata(name: &str, metadata: &Metadata) -> TokenStream {
 
 /// Read the metadata, generate the Rust source files for the metadata file used in build.rs and return the metadata.
 pub fn generate(chips_dir: &Path, metadata: &Path, core: &str) -> anyhow::Result<Metadata> {
-    let metadata = fs::read_to_string(metadata).context("Read metadata")?;
-    let metadata = serde_json::from_str::<Metadata>(&metadata).context("Deserialize metadata")?;
+    let mut source: serde_json::Value =
+        serde_json::from_slice(&fs::read(metadata).context("Read metadata")?)
+            .context("Deserialize metadata")?;
+    let overlay = source
+        .as_object_mut()
+        .context("Metadata must be an object")?;
+    let included = if let Some(include) = overlay.remove("include") {
+        let include = include
+            .as_str()
+            .context("Metadata include must be a string")?;
+        if include.is_empty()
+            || !include
+                .bytes()
+                .all(|c| c.is_ascii_alphanumeric() || c == b'_' || c == b'-')
+        {
+            bail!("Invalid metadata include: {include}");
+        }
+        let path = metadata
+            .parent()
+            .context("Metadata directory")?
+            .join(include)
+            .with_extension("json");
+        let mut base: serde_json::Value = serde_json::from_slice(
+            &fs::read(&path).with_context(|| format!("Read {}", path.display()))?,
+        )?;
+        let base = base
+            .as_object_mut()
+            .context("Included metadata must be an object")?;
+        if base.contains_key("include") {
+            bail!("Nested metadata includes are not supported");
+        }
+        base.extend(std::mem::take(overlay));
+        *overlay = std::mem::take(base);
+        true
+    } else {
+        false
+    };
+    let mut metadata: Metadata = serde_json::from_value(source).context("Deserialize metadata")?;
+    if included && !metadata.chips.iter().any(|chip| chip == core) {
+        bail!("Metadata does not describe {core}");
+    }
+    let mut peripherals = Vec::with_capacity(metadata.peripherals.len());
+    for peripheral in metadata.peripherals {
+        let selected = match peripheral.only_in.as_deref() {
+            Some(pattern) => regex::Regex::new(pattern)
+                .with_context(|| format!("Invalid only_in for {}", peripheral.name))?
+                .is_match(core),
+            None => true,
+        };
+        if selected {
+            peripherals.push(peripheral);
+        }
+    }
+    metadata.peripherals = peripherals;
 
     let mut metadata_out = String::new();
     write!(metadata_out, "{}", generate_metadata(core, &metadata))?;
