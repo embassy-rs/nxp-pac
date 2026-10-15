@@ -42,5 +42,6 @@ pub const CHIPS: &[ChipDescription] = &[
     ChipDescription { chip: "MCXA286", metadata: Some("MCXA286"), cores: &["MCXA286"], metapac: true },
     ChipDescription { chip: "MCXA287", metadata: Some("MCXA287"), cores: &["MCXA287"], metapac: true },
     ChipDescription { chip: "MCXA456", metadata: Some("MCXA456"), cores: &["MCXA456"], metapac: true },
+    ChipDescription { chip: "MCXA457", metadata: Some("MCXA457"), cores: &["MCXA457"], metapac: true },
     ChipDescription { chip: "MCXA577", metadata: Some("MCXA577"), cores: &["MCXA577"], metapac: true },
 ];

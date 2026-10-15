@@ -30,6 +30,7 @@
 #[cfg_attr(feature = "mcxa286", path = "./chips/mcxa286/mod.rs")]
 #[cfg_attr(feature = "mcxa287", path = "./chips/mcxa287/mod.rs")]
 #[cfg_attr(feature = "mcxa456", path = "./chips/mcxa456/mod.rs")]
+#[cfg_attr(feature = "mcxa457", path = "./chips/mcxa457/mod.rs")]
 #[cfg_attr(feature = "mcxa577", path = "./chips/mcxa577/mod.rs")]
 // LPC55S16
 #[cfg_attr(feature = "lpc55s16", path = "./chips/lpc55s16/mod.rs")]
