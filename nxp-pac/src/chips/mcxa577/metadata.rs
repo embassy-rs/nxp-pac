@@ -1180,15 +1180,6 @@ pub const PERIPHERALS: &[Peripheral] = &[
         gate: None,
     },
     Peripheral {
-        name: "AOI1",
-        address: 0,
-        driver_name: "",
-        signals: &[],
-        flexcomm: None,
-        dma_muxing: &[],
-        gate: None,
-    },
-    Peripheral {
         name: "CAN0",
         address: 0x400CC000,
         driver_name: "mcxa/CAN::Can",
@@ -4331,7 +4322,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "DBGMAILBOX",
-        address: 0,
+        address: 0x40042000,
         driver_name: "",
         signals: &[
             Signal {
@@ -9910,7 +9901,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "ROMCP",
-        address: 0,
+        address: 0x40011000,
         driver_name: "",
         signals: &[],
         flexcomm: None,
@@ -10010,42 +10001,6 @@ pub const PERIPHERALS: &[Peripheral] = &[
         name: "SYSCON",
         address: 0x40091000,
         driver_name: "mcxa/SYSCON5xx::SYSCON",
-        signals: &[],
-        flexcomm: None,
-        dma_muxing: &[],
-        gate: None,
-    },
-    Peripheral {
-        name: "Secure_AHB_Ctrl_Alias_0",
-        address: 0,
-        driver_name: "",
-        signals: &[],
-        flexcomm: None,
-        dma_muxing: &[],
-        gate: None,
-    },
-    Peripheral {
-        name: "Secure_AHB_Ctrl_Alias_1",
-        address: 0,
-        driver_name: "",
-        signals: &[],
-        flexcomm: None,
-        dma_muxing: &[],
-        gate: None,
-    },
-    Peripheral {
-        name: "Secure_AHB_Ctrl_Alias_2",
-        address: 0,
-        driver_name: "",
-        signals: &[],
-        flexcomm: None,
-        dma_muxing: &[],
-        gate: None,
-    },
-    Peripheral {
-        name: "Secure_AHB_Ctrl_Alias_3",
-        address: 0,
-        driver_name: "",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
@@ -12310,7 +12265,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "USB1",
-        address: 0,
+        address: 0x4002E000,
         driver_name: "",
         signals: &[
             Signal {
@@ -12363,7 +12318,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "USB1_HS_PHY",
-        address: 0,
+        address: 0x4002F000,
         driver_name: "",
         signals: &[],
         flexcomm: None,
@@ -12985,7 +12940,6 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
 ];
 pub const INTERRUPTS: &[(&str, u32)] = &[
-    ("RESERVED16", 0u32),
     ("CMC", 1u32),
     ("DMA0_CH0", 2u32),
     ("DMA0_CH1", 3u32),
@@ -13063,7 +13017,6 @@ pub const INTERRUPTS: &[(&str, u32)] = &[
     ("CDOG1", 109u32),
     ("PKC", 110u32),
     ("SGI", 111u32),
-    ("SPI_FILTER", 112u32),
     ("TRNG0", 113u32),
     ("SECURE_ERR", 114u32),
     ("SEC_HYPERVISOR_CALL", 115u32),

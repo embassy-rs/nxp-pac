@@ -1169,10 +1169,6 @@
       "signals": []
     },
     {
-      "name": "AOI1",
-      "signals": []
-    },
-    {
       "name": "CAN0",
       "address": "0x400CC000",
       "block": "mcxa/CAN::Can",
@@ -3756,6 +3752,7 @@
     },
     {
       "name": "DBGMAILBOX",
+      "address": "0x40042000",
       "signals": [
         {
           "name": "TDI",
@@ -8639,6 +8636,7 @@
     },
     {
       "name": "ROMCP",
+      "address": "0x40011000",
       "signals": []
     },
     {
@@ -8719,22 +8717,6 @@
       "address": "0x40091000",
       "block": "mcxa/SYSCON5xx::SYSCON",
       "module": "SYSCON",
-      "signals": []
-    },
-    {
-      "name": "Secure_AHB_Ctrl_Alias_0",
-      "signals": []
-    },
-    {
-      "name": "Secure_AHB_Ctrl_Alias_1",
-      "signals": []
-    },
-    {
-      "name": "Secure_AHB_Ctrl_Alias_2",
-      "signals": []
-    },
-    {
-      "name": "Secure_AHB_Ctrl_Alias_3",
       "signals": []
     },
     {
@@ -10571,6 +10553,7 @@
     },
     {
       "name": "USB1",
+      "address": "0x4002E000",
       "signals": [
         {
           "name": "OTGn_ID",
@@ -10616,6 +10599,7 @@
     },
     {
       "name": "USB1_HS_PHY",
+      "address": "0x4002F000",
       "signals": []
     },
     {

@@ -1,5 +1,4 @@
 unsafe extern "C" {
-    fn RESERVED16();
     fn CMC();
     fn DMA0_CH0();
     fn DMA0_CH1();
@@ -77,7 +76,6 @@ unsafe extern "C" {
     fn CDOG1();
     fn PKC();
     fn SGI();
-    fn SPI_FILTER();
     fn TRNG0();
     fn SECURE_ERR();
     fn SEC_HYPERVISOR_CALL();
@@ -109,9 +107,7 @@ pub union Vector {
 #[unsafe(link_section = ".vector_table.interrupts")]
 #[unsafe(no_mangle)]
 pub static __INTERRUPTS: [Vector; 146] = [
-    Vector {
-        _handler: RESERVED16,
-    },
+    Vector { _reserved: 0 },
     Vector { _handler: CMC },
     Vector { _handler: DMA0_CH0 },
     Vector { _handler: DMA0_CH1 },
@@ -235,9 +231,7 @@ pub static __INTERRUPTS: [Vector; 146] = [
     Vector { _handler: CDOG1 },
     Vector { _handler: PKC },
     Vector { _handler: SGI },
-    Vector {
-        _handler: SPI_FILTER,
-    },
+    Vector { _reserved: 0 },
     Vector { _handler: TRNG0 },
     Vector {
         _handler: SECURE_ERR,
