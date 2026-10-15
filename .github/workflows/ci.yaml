@@ -67,6 +67,7 @@ jobs:
           - mcxa156
           - mcxa256
           - mcxa266
+          - mcxa276
           - mcxa577
           - lpc55s16
           - lpc55s69_cm33_core0
@@ -89,6 +90,7 @@ jobs:
           - mimxrt1064
           - mcxa256
           - mcxa266
+          - mcxa276
           - mcxa577
           - lpc55s16
           - lpc55s69_cm33_core0

@@ -1042,6 +1042,13 @@
     {
       "name": "ADC2",
       "only_in": "^MCXA276$",
+      "address": "0x400F0000",
+      "block": "mcxa/ADC",
+      "gate": {
+        "enable": "mrcc_glb_cc1",
+        "reset": "mrcc_glb_rst1",
+        "config": "AdcConfig"
+      },
       "signals": [],
       "dma_muxing": [
         {
@@ -1054,6 +1061,13 @@
     {
       "name": "ADC3",
       "only_in": "^MCXA276$",
+      "address": "0x400F1000",
+      "block": "mcxa/ADC",
+      "gate": {
+        "enable": "mrcc_glb_cc1",
+        "reset": "mrcc_glb_rst1",
+        "config": "AdcConfig"
+      },
       "signals": [],
       "dma_muxing": [
         {
@@ -1415,6 +1429,7 @@
     {
       "name": "CMP2",
       "only_in": "^MCXA276$",
+      "address": "0x400B3000",
       "signals": []
     },
     {
@@ -7477,6 +7492,7 @@
     {
       "name": "MAU0",
       "only_in": "^MCXA276$",
+      "address": "0x40108000",
       "signals": [],
       "dma_muxing": [
         {
@@ -7523,16 +7539,19 @@
     {
       "name": "OPAMP1",
       "only_in": "^MCXA276$",
+      "address": "0x400B8000",
       "signals": []
     },
     {
       "name": "OPAMP2",
       "only_in": "^MCXA276$",
+      "address": "0x400B9000",
       "signals": []
     },
     {
       "name": "OPAMP3",
       "only_in": "^MCXA276$",
+      "address": "0x400BA000",
       "signals": []
     },
     {
