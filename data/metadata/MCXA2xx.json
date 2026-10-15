@@ -7683,6 +7683,7 @@
     {
       "name": "SLCD0",
       "only_in": "^MCXA(266|276)$",
+      "address": "0x400C2000",
       "signals": [
         {
           "name": "P0",
