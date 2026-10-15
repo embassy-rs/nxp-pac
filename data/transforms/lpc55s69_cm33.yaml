@@ -109,7 +109,7 @@ transforms:
   # See https://github.com/embassy-rs/nxp-pac/issues/126 and https://github.com/nxp-mcuxpresso/mcux-soc-svd/issues/6
   - !DeleteEnumVariants
     enum: iocon::vals::PioFunc
-    from: _RESERVED_(8|9|a|b)
+    from: (_RESERVED_(8|9|a|b)|Alt(8|9|10|11))
   - !AddEnumVariants
     enum: iocon::vals::PioFunc
     variants:
