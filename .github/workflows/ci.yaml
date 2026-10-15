@@ -83,6 +83,7 @@ jobs:
           - mcxa556
           - mcxa557
           - mcxa566
+          - mcxa567
           - mcxa577
           - lpc55s16
           - lpc55s69_cm33_core0
@@ -121,6 +122,7 @@ jobs:
           - mcxa556
           - mcxa557
           - mcxa566
+          - mcxa567
           - mcxa577
           - lpc55s16
           - lpc55s69_cm33_core0
