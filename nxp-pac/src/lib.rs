@@ -19,6 +19,7 @@
 )]
 #[cfg_attr(feature = "mcxa156", path = "./chips/mcxa156/mod.rs")]
 #[cfg_attr(feature = "mcxa175", path = "./chips/mcxa175/mod.rs")]
+#[cfg_attr(feature = "mcxa176", path = "./chips/mcxa176/mod.rs")]
 #[cfg_attr(feature = "mcxa256", path = "./chips/mcxa256/mod.rs")]
 #[cfg_attr(feature = "mcxa266", path = "./chips/mcxa266/mod.rs")]
 #[cfg_attr(feature = "mcxa276", path = "./chips/mcxa276/mod.rs")]
