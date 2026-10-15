@@ -1,47 +1,70 @@
 transforms:
-  # Normalize field types while preserving each port's exact sparse register
-  # layout. Missing PCRs are reserved according to the locked MCXA156 SVD and
-  # must not be materialized as a common 32-entry array.
-  - !Rename
-    from: port0::Pcr2
-    to: port::Pcr
-
-  - !ModifyRegisters
-    blocks: port\d+::Port\d*
-    registers: pcr\d+
-    fieldset: port::Pcr
-
-  - !DeleteFieldsets
-    from: port\d+::Pcr\d+
-
-  - !DeleteEnums
-    from: port\d+::Pcr(\d+)Mux
-    bit_size: 1
-  - !DeleteEnums
-    from: port\d+::Pcr(\d+)Mux
-    bit_size: 2
-  - !DeleteEnums
-    from: port\d+::Pcr(\d+)Mux
-    bit_size: 3
+  # Preserve per-PCR fields, MUX widths, and sparse layouts (RM §11.6.1).
   - !MergeEnums
-    from: port\d+::Pcr(\d+)Mux
+    from:
+      include:
+        - port0::Pcr(0|1|2[0-3])Mux
+        - port1::Pcr1[45]Mux
+        - port2::Pcr([0-2]|[4-6]|1[015679]|2[013])Mux
+        - port3::Pcr(2|1[6-9]|2[0-2]|27|28)Mux
+    to: port::Mux3
+    check: Descriptions
+
+  - !MergeEnums
+    from:
+      include:
+        - port0::Pcr([236]|1[6-9])Mux
+        - port1::Pcr([0-9]|1[0-3]|3[01])Mux
+        - port2::Pcr(3|7|1[23])Mux
+        - port3::Pcr([016-9]|1[0-5]|29|3[01])Mux
     to: port::Mux
+    check: Descriptions
+
+  - !MergeEnums
+    from: port1::Pcr29Mux
+    to: port::Mux2
+
+  - !MergeEnums
+    from: port4::Pcr\d+Mux
+    to: port::MuxPort4
+    check: Descriptions
+
+  - !MergeEnums
+    from: port\d+::Pcr\d+(.+)
+    to: port::$1
+    check: Descriptions
+
+  - !MergeEnums
+    from: (port\d+|port)::(.+)
+    to: port::$2
 
   - !DeleteEnumVariants
-    enum: port::Mux
+    enum: port::(Mux|Mux2|Mux3|MuxPort4)
     from: .*
 
   - !AddEnumVariants
-    enum: port::Mux
+    enum: port::(Mux|Mux2|Mux3|MuxPort4)
     variants:
       - { name: Mux0, value: 0 }
       - { name: Mux1, value: 1 }
       - { name: Mux2, value: 2 }
       - { name: Mux3, value: 3 }
+
+  - !AddEnumVariants
+    enum: port::(Mux|Mux3|MuxPort4)
+    variants:
       - { name: Mux4, value: 4 }
       - { name: Mux5, value: 5 }
       - { name: Mux6, value: 6 }
+
+  - !AddEnumVariants
+    enum: port::(Mux|Mux3)
+    variants:
       - { name: Mux7, value: 7 }
+
+  - !AddEnumVariants
+    enum: port::Mux
+    variants:
       - { name: Mux8, value: 8 }
       - { name: Mux9, value: 9 }
       - { name: Mux10, value: 10 }
@@ -49,9 +72,55 @@ transforms:
       - { name: Mux12, value: 12 }
       - { name: Mux13, value: 13 }
 
-  - !MergeEnums
-    from: port\d+::(.+)
-    to: port::$1
+  - !MergeFieldsets
+    from:
+      include:
+        - port0::Pcr(0|1|2[0-3])
+        - port1::Pcr1[45]
+        - port2::Pcr([0-2]|[4-6]|1[015679]|2[013])
+        - port3::Pcr(2|1[6-9]|2[0-2])
+    to: port::PcrMux3
+
+  - !MergeFieldsets
+    from:
+      include:
+        - port0::Pcr([236]|1[89])
+        - port1::Pcr([2-7]|1[0-3])
+        - port2::Pcr(3|7|1[23])
+        - port3::Pcr([6-9]|1[0-5]|29|3[01])
+    to: port::Pcr
+    main: port0::Pcr2
+
+  - !MergeFieldsets
+    from:
+      include:
+        - port0::Pcr16
+        - port1::Pcr(8|30)
+    to: port::PcrPvPfeDse1
+
+  - !MergeFieldsets
+    from:
+      include:
+        - port0::Pcr17
+        - port1::Pcr(9|31)
+        - port3::Pcr[01]
+    to: port::PcrPfeDse1
+
+  - !MergeFieldsets
+    from: port1::Pcr[01]
+    to: port::PcrPfe
+
+  - !MergeFieldsets
+    from: port1::Pcr29
+    to: port::PcrPvPfeMux2
+
+  - !MergeFieldsets
+    from: port3::Pcr2[78]
+    to: port::PcrDse1Mux3
+
+  - !MergeFieldsets
+    from: port4::Pcr[2-7]
+    to: port::PcrPort4
 
   - !MergeFieldsets
     from: port\d+::(.+)
@@ -70,19 +139,6 @@ transforms:
   - !MergeEnums
     from: port::Gpwe\d+
     to: port::Gpwe
-
-  - !DeleteFields
-    fieldset: port::Pcr(\d+)
-    from: (dse1|pfe|pv)
-
-  - !DeleteEnums
-    from: port::Pcr(\d+)(Dse1|Pfe)
-  - !DeleteEnums
-    from: port::Pv
-
-  - !MergeEnums
-    from: port::Pcr(\d+)(.+)
-    to: port::$2
 
   - !MakeFieldArray
     fieldsets: port::Gpc(l|h)r

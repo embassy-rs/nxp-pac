@@ -1411,8 +1411,7 @@ pub enum ActiveCfgCoreldoVddLvl {
     Mid = 0x01,
     #[doc = "Regulate to normal voltage (1.1 V)."]
     Normal = 0x02,
-    #[doc = "Regulate to overdrive voltage (1.15 V)."]
-    Over = 0x03,
+    _RESERVED_3 = 0x03,
 }
 impl ActiveCfgCoreldoVddLvl {
     #[inline(always)]
@@ -1585,8 +1584,7 @@ pub enum LpCfgCoreldoVddLvl {
     Mid = 0x01,
     #[doc = "Normal voltage (1.1 V)."]
     Normal = 0x02,
-    #[doc = "Overdrive voltage (1.15 V)."]
-    Over = 0x03,
+    _RESERVED_3 = 0x03,
 }
 impl LpCfgCoreldoVddLvl {
     #[inline(always)]
@@ -2026,8 +2024,7 @@ pub enum Vsm {
     Sram1v0 = 0x01,
     #[doc = "SRAM configured for 1.1V"]
     Sram1v1 = 0x02,
-    #[doc = "SRAM configured for 1.2V"]
-    Sram1v2 = 0x03,
+    _RESERVED_3 = 0x03,
 }
 impl Vsm {
     #[inline(always)]

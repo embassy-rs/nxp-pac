@@ -125,7 +125,7 @@ impl Inputmux {
     }
     #[doc = "CMP0 input connections."]
     #[inline(always)]
-    pub const fn cmp0_trig(self) -> crate::pac::common::Reg<CmpTrig, crate::pac::common::RW> {
+    pub const fn cmp0_trig(self) -> crate::pac::common::Reg<Cmp0Trig, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0260usize) as _) }
     }
     #[doc = "ADC Trigger input connections."]
@@ -133,7 +133,7 @@ impl Inputmux {
     pub const fn adc0_trig(
         self,
         n: usize,
-    ) -> crate::pac::common::Reg<AdcTrig, crate::pac::common::RW> {
+    ) -> crate::pac::common::Reg<Adc0Trig, crate::pac::common::RW> {
         assert!(n < 4usize);
         unsafe {
             crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0280usize + n * 4usize) as _)
@@ -144,7 +144,7 @@ impl Inputmux {
     pub const fn adc1_trig(
         self,
         n: usize,
-    ) -> crate::pac::common::Reg<AdcTrig, crate::pac::common::RW> {
+    ) -> crate::pac::common::Reg<Adc1Trig, crate::pac::common::RW> {
         assert!(n < 4usize);
         unsafe {
             crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x02c0usize + n * 4usize) as _)
@@ -239,42 +239,42 @@ impl Inputmux {
     #[inline(always)]
     pub const fn flex_pwm0_sm0_exta0(
         self,
-    ) -> crate::pac::common::Reg<FlexPwm, crate::pac::common::RW> {
+    ) -> crate::pac::common::Reg<FlexPwm0, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x03a0usize) as _) }
     }
     #[doc = "PWM0 input trigger connections."]
     #[inline(always)]
     pub const fn flex_pwm0_sm0_extsync(
         self,
-    ) -> crate::pac::common::Reg<FlexPwm, crate::pac::common::RW> {
+    ) -> crate::pac::common::Reg<FlexPwm0, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x03a4usize) as _) }
     }
     #[doc = "PWM0 input trigger connections."]
     #[inline(always)]
     pub const fn flex_pwm0_sm1_exta(
         self,
-    ) -> crate::pac::common::Reg<FlexPwm, crate::pac::common::RW> {
+    ) -> crate::pac::common::Reg<FlexPwm0, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x03a8usize) as _) }
     }
     #[doc = "PWM0 input trigger connections."]
     #[inline(always)]
     pub const fn flex_pwm0_sm1_extsync(
         self,
-    ) -> crate::pac::common::Reg<FlexPwm, crate::pac::common::RW> {
+    ) -> crate::pac::common::Reg<FlexPwm0, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x03acusize) as _) }
     }
     #[doc = "PWM0 input trigger connections."]
     #[inline(always)]
     pub const fn flex_pwm0_sm2_exta(
         self,
-    ) -> crate::pac::common::Reg<FlexPwm, crate::pac::common::RW> {
+    ) -> crate::pac::common::Reg<FlexPwm0, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x03b0usize) as _) }
     }
     #[doc = "PWM0 input trigger connections."]
     #[inline(always)]
     pub const fn flex_pwm0_sm2_extsync(
         self,
-    ) -> crate::pac::common::Reg<FlexPwm, crate::pac::common::RW> {
+    ) -> crate::pac::common::Reg<FlexPwm0, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x03b4usize) as _) }
     }
     #[doc = "PWM0 Fault Input Trigger Connections."]
@@ -282,7 +282,7 @@ impl Inputmux {
     pub const fn flex_pwm0_fault(
         self,
         n: usize,
-    ) -> crate::pac::common::Reg<FlexPwm, crate::pac::common::RW> {
+    ) -> crate::pac::common::Reg<FlexPwm0, crate::pac::common::RW> {
         assert!(n < 4usize);
         unsafe {
             crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x03c0usize + n * 4usize) as _)
@@ -290,49 +290,51 @@ impl Inputmux {
     }
     #[doc = "PWM0 input trigger connections."]
     #[inline(always)]
-    pub const fn flex_pwm0_force(self) -> crate::pac::common::Reg<FlexPwm, crate::pac::common::RW> {
+    pub const fn flex_pwm0_force(
+        self,
+    ) -> crate::pac::common::Reg<FlexPwm0, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x03d0usize) as _) }
     }
     #[doc = "PWM1 input trigger connections."]
     #[inline(always)]
     pub const fn flex_pwm1_sm0_exta0(
         self,
-    ) -> crate::pac::common::Reg<FlexPwm, crate::pac::common::RW> {
+    ) -> crate::pac::common::Reg<FlexPwm1, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x03e0usize) as _) }
     }
     #[doc = "PWM1 input trigger connections."]
     #[inline(always)]
     pub const fn flex_pwm1_sm0_extsync(
         self,
-    ) -> crate::pac::common::Reg<FlexPwm, crate::pac::common::RW> {
+    ) -> crate::pac::common::Reg<FlexPwm1, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x03e4usize) as _) }
     }
     #[doc = "PWM1 input trigger connections."]
     #[inline(always)]
     pub const fn flex_pwm1_sm1_exta(
         self,
-    ) -> crate::pac::common::Reg<FlexPwm, crate::pac::common::RW> {
+    ) -> crate::pac::common::Reg<FlexPwm1, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x03e8usize) as _) }
     }
     #[doc = "PWM1 input trigger connections."]
     #[inline(always)]
     pub const fn flex_pwm1_sm1_extsync(
         self,
-    ) -> crate::pac::common::Reg<FlexPwm, crate::pac::common::RW> {
+    ) -> crate::pac::common::Reg<FlexPwm1, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x03ecusize) as _) }
     }
     #[doc = "PWM1 input trigger connections."]
     #[inline(always)]
     pub const fn flex_pwm1_sm2_exta(
         self,
-    ) -> crate::pac::common::Reg<FlexPwm, crate::pac::common::RW> {
+    ) -> crate::pac::common::Reg<FlexPwm1, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x03f0usize) as _) }
     }
     #[doc = "PWM1 input trigger connections."]
     #[inline(always)]
     pub const fn flex_pwm1_sm2_extsync(
         self,
-    ) -> crate::pac::common::Reg<FlexPwm, crate::pac::common::RW> {
+    ) -> crate::pac::common::Reg<FlexPwm1, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x03f4usize) as _) }
     }
     #[doc = "PWM1 Fault Input Trigger Connections."]
@@ -340,7 +342,7 @@ impl Inputmux {
     pub const fn flex_pwm1_fault(
         self,
         n: usize,
-    ) -> crate::pac::common::Reg<FlexPwm, crate::pac::common::RW> {
+    ) -> crate::pac::common::Reg<FlexPwm1, crate::pac::common::RW> {
         assert!(n < 4usize);
         unsafe {
             crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0400usize + n * 4usize) as _)
@@ -348,7 +350,9 @@ impl Inputmux {
     }
     #[doc = "PWM1 input trigger connections."]
     #[inline(always)]
-    pub const fn flex_pwm1_force(self) -> crate::pac::common::Reg<FlexPwm, crate::pac::common::RW> {
+    pub const fn flex_pwm1_force(
+        self,
+    ) -> crate::pac::common::Reg<FlexPwm1, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0410usize) as _) }
     }
     #[doc = "PWM0 external clock trigger."]
@@ -390,7 +394,7 @@ impl Inputmux {
     }
     #[doc = "CMP1 input connections."]
     #[inline(always)]
-    pub const fn cmp1_trig(self) -> crate::pac::common::Reg<CmpTrig, crate::pac::common::RW> {
+    pub const fn cmp1_trig(self) -> crate::pac::common::Reg<Cmp1Trig, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x04e0usize) as _) }
     }
     #[doc = "LPI2C2 trigger input connections."]
@@ -446,38 +450,75 @@ impl Inputmux {
 #[doc = "ADC Trigger input connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct AdcTrig(pub u32);
-impl AdcTrig {
+pub struct Adc0Trig(pub u32);
+impl Adc0Trig {
     #[doc = "ADC0 trigger inputs."]
     #[must_use]
     #[inline(always)]
-    pub const fn trigin(&self) -> AdcTrigTrigin {
+    pub const fn trigin(&self) -> Adc0TrigTrigin {
         let val = (self.0 >> 0usize) & 0x3f;
-        AdcTrigTrigin::from_bits(val as u8)
+        Adc0TrigTrigin::from_bits(val as u8)
     }
     #[doc = "ADC0 trigger inputs."]
     #[inline(always)]
-    pub const fn set_trigin(&mut self, val: AdcTrigTrigin) {
+    pub const fn set_trigin(&mut self, val: Adc0TrigTrigin) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
     }
 }
-impl Default for AdcTrig {
+impl Default for Adc0Trig {
     #[inline(always)]
-    fn default() -> AdcTrig {
-        AdcTrig(0)
+    fn default() -> Adc0Trig {
+        Adc0Trig(0)
     }
 }
-impl core::fmt::Debug for AdcTrig {
+impl core::fmt::Debug for Adc0Trig {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("AdcTrig")
+        f.debug_struct("Adc0Trig")
             .field("trigin", &self.trigin())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for AdcTrig {
+impl defmt::Format for Adc0Trig {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "AdcTrig {{ trigin: {:?} }}", self.trigin())
+        defmt::write!(f, "Adc0Trig {{ trigin: {:?} }}", self.trigin())
+    }
+}
+#[doc = "ADC Trigger input connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Adc1Trig(pub u32);
+impl Adc1Trig {
+    #[doc = "ADC1 trigger inputs."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn trigin(&self) -> Adc1TrigTrigin {
+        let val = (self.0 >> 0usize) & 0x3f;
+        Adc1TrigTrigin::from_bits(val as u8)
+    }
+    #[doc = "ADC1 trigger inputs."]
+    #[inline(always)]
+    pub const fn set_trigin(&mut self, val: Adc1TrigTrigin) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for Adc1Trig {
+    #[inline(always)]
+    fn default() -> Adc1Trig {
+        Adc1Trig(0)
+    }
+}
+impl core::fmt::Debug for Adc1Trig {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Adc1Trig")
+            .field("trigin", &self.trigin())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Adc1Trig {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Adc1Trig {{ trigin: {:?} }}", self.trigin())
     }
 }
 #[doc = "AOI0 trigger input connections 0."]
@@ -557,38 +598,75 @@ impl defmt::Format for Aoi1Input {
 #[doc = "CMP0 input connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct CmpTrig(pub u32);
-impl CmpTrig {
+pub struct Cmp0Trig(pub u32);
+impl Cmp0Trig {
     #[doc = "CMP0 input trigger."]
     #[must_use]
     #[inline(always)]
-    pub const fn trigin(&self) -> CmpTrigTrigin {
+    pub const fn trigin(&self) -> Cmp0TrigTrigin {
         let val = (self.0 >> 0usize) & 0x3f;
-        CmpTrigTrigin::from_bits(val as u8)
+        Cmp0TrigTrigin::from_bits(val as u8)
     }
     #[doc = "CMP0 input trigger."]
     #[inline(always)]
-    pub const fn set_trigin(&mut self, val: CmpTrigTrigin) {
+    pub const fn set_trigin(&mut self, val: Cmp0TrigTrigin) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
     }
 }
-impl Default for CmpTrig {
+impl Default for Cmp0Trig {
     #[inline(always)]
-    fn default() -> CmpTrig {
-        CmpTrig(0)
+    fn default() -> Cmp0Trig {
+        Cmp0Trig(0)
     }
 }
-impl core::fmt::Debug for CmpTrig {
+impl core::fmt::Debug for Cmp0Trig {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("CmpTrig")
+        f.debug_struct("Cmp0Trig")
             .field("trigin", &self.trigin())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for CmpTrig {
+impl defmt::Format for Cmp0Trig {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "CmpTrig {{ trigin: {:?} }}", self.trigin())
+        defmt::write!(f, "Cmp0Trig {{ trigin: {:?} }}", self.trigin())
+    }
+}
+#[doc = "CMP1 input connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Cmp1Trig(pub u32);
+impl Cmp1Trig {
+    #[doc = "CMP0 input trigger."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn trigin(&self) -> Cmp1TrigTrigin {
+        let val = (self.0 >> 0usize) & 0x3f;
+        Cmp1TrigTrigin::from_bits(val as u8)
+    }
+    #[doc = "CMP0 input trigger."]
+    #[inline(always)]
+    pub const fn set_trigin(&mut self, val: Cmp1TrigTrigin) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for Cmp1Trig {
+    #[inline(always)]
+    fn default() -> Cmp1Trig {
+        Cmp1Trig(0)
+    }
+}
+impl core::fmt::Debug for Cmp1Trig {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Cmp1Trig")
+            .field("trigin", &self.trigin())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Cmp1Trig {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Cmp1Trig {{ trigin: {:?} }}", self.trigin())
     }
 }
 #[doc = "Capture select register for CTIMER inputs."]
@@ -851,38 +929,75 @@ impl defmt::Format for ExtTrig {
 #[doc = "PWM0 Fault Input Trigger Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct FlexPwm(pub u32);
-impl FlexPwm {
+pub struct FlexPwm0(pub u32);
+impl FlexPwm0 {
     #[doc = "FAULT input connections for PWM0."]
     #[must_use]
     #[inline(always)]
-    pub const fn trigin(&self) -> FlexPwmTrigin {
+    pub const fn trigin(&self) -> FlexPwm0Trigin {
         let val = (self.0 >> 0usize) & 0x3f;
-        FlexPwmTrigin::from_bits(val as u8)
+        FlexPwm0Trigin::from_bits(val as u8)
     }
     #[doc = "FAULT input connections for PWM0."]
     #[inline(always)]
-    pub const fn set_trigin(&mut self, val: FlexPwmTrigin) {
+    pub const fn set_trigin(&mut self, val: FlexPwm0Trigin) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
     }
 }
-impl Default for FlexPwm {
+impl Default for FlexPwm0 {
     #[inline(always)]
-    fn default() -> FlexPwm {
-        FlexPwm(0)
+    fn default() -> FlexPwm0 {
+        FlexPwm0(0)
     }
 }
-impl core::fmt::Debug for FlexPwm {
+impl core::fmt::Debug for FlexPwm0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("FlexPwm")
+        f.debug_struct("FlexPwm0")
             .field("trigin", &self.trigin())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for FlexPwm {
+impl defmt::Format for FlexPwm0 {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "FlexPwm {{ trigin: {:?} }}", self.trigin())
+        defmt::write!(f, "FlexPwm0 {{ trigin: {:?} }}", self.trigin())
+    }
+}
+#[doc = "PWM1 Fault Input Trigger Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct FlexPwm1(pub u32);
+impl FlexPwm1 {
+    #[doc = "FAULT input connections for PWM1."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn trigin(&self) -> FlexPwm1Trigin {
+        let val = (self.0 >> 0usize) & 0x3f;
+        FlexPwm1Trigin::from_bits(val as u8)
+    }
+    #[doc = "FAULT input connections for PWM1."]
+    #[inline(always)]
+    pub const fn set_trigin(&mut self, val: FlexPwm1Trigin) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for FlexPwm1 {
+    #[inline(always)]
+    fn default() -> FlexPwm1 {
+        FlexPwm1(0)
+    }
+}
+impl core::fmt::Debug for FlexPwm1 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FlexPwm1")
+            .field("trigin", &self.trigin())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for FlexPwm1 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "FlexPwm1 {{ trigin: {:?} }}", self.trigin())
     }
 }
 #[doc = "FlexIO Trigger Input Connections."]
@@ -2033,7 +2148,7 @@ impl defmt::Format for UsbfsTrig {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum AdcTrigTrigin {
+pub enum Adc0TrigTrigin {
     _RESERVED_0 = 0x0,
     #[doc = "ARM_TXEV input is selected."]
     Val1 = 0x01,
@@ -2149,9 +2264,9 @@ pub enum AdcTrigTrigin {
     _RESERVED_3e = 0x3e,
     _RESERVED_3f = 0x3f,
 }
-impl AdcTrigTrigin {
+impl Adc0TrigTrigin {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> AdcTrigTrigin {
+    pub const fn from_bits(val: u8) -> Adc0TrigTrigin {
         unsafe { core::mem::transmute(val & 0x3f) }
     }
     #[inline(always)]
@@ -2159,16 +2274,157 @@ impl AdcTrigTrigin {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for AdcTrigTrigin {
+impl From<u8> for Adc0TrigTrigin {
     #[inline(always)]
-    fn from(val: u8) -> AdcTrigTrigin {
-        AdcTrigTrigin::from_bits(val)
+    fn from(val: u8) -> Adc0TrigTrigin {
+        Adc0TrigTrigin::from_bits(val)
     }
 }
-impl From<AdcTrigTrigin> for u8 {
+impl From<Adc0TrigTrigin> for u8 {
     #[inline(always)]
-    fn from(val: AdcTrigTrigin) -> u8 {
-        AdcTrigTrigin::to_bits(val)
+    fn from(val: Adc0TrigTrigin) -> u8 {
+        Adc0TrigTrigin::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Adc1TrigTrigin {
+    _RESERVED_0 = 0x0,
+    #[doc = "ARM_TXEV input is selected."]
+    Val1 = 0x01,
+    #[doc = "AOI0_OUT0 input is selected."]
+    Val2 = 0x02,
+    #[doc = "AOI0_OUT1 input is selected."]
+    Val3 = 0x03,
+    #[doc = "AOI0_OUT2 input is selected."]
+    Val4 = 0x04,
+    #[doc = "AOI0_OUT3 input is selected."]
+    Val5 = 0x05,
+    #[doc = "CMP0_OUT input is selected."]
+    Val6 = 0x06,
+    #[doc = "CMP1_OUT input is selected."]
+    Val7 = 0x07,
+    _RESERVED_8 = 0x08,
+    #[doc = "CTimer0_MAT0 input is selected."]
+    Val9 = 0x09,
+    #[doc = "CTimer0_MAT1 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "CTimer1_MAT0 input is selected."]
+    Val11 = 0x0b,
+    #[doc = "CTimer1_MAT1 input is selected."]
+    Val12 = 0x0c,
+    #[doc = "CTimer2_MAT0 input is selected."]
+    Val13 = 0x0d,
+    #[doc = "CTimer2_MAT1 input is selected."]
+    Val14 = 0x0e,
+    #[doc = "LPTMR0 input is selected."]
+    Val15 = 0x0f,
+    _RESERVED_10 = 0x10,
+    #[doc = "QDC0_POS_MATCH0 input is selected."]
+    Val17 = 0x11,
+    #[doc = "PWM0_SM0_OUT_TRIG0 input is selected."]
+    Val18 = 0x12,
+    #[doc = "PWM0_SM0_OUT_TRIG1 input is selected."]
+    Val19 = 0x13,
+    #[doc = "PWM0_SM1_OUT_TRIG0 input is selected."]
+    Val20 = 0x14,
+    #[doc = "PWM0_SM1_OUT_TRIG1 input is selected."]
+    Val21 = 0x15,
+    #[doc = "PWM0_SM2_OUT_TRIG0 input is selected."]
+    Val22 = 0x16,
+    #[doc = "PWM0_SM2_OUT_TRIG1 input is selected."]
+    Val23 = 0x17,
+    _RESERVED_18 = 0x18,
+    _RESERVED_19 = 0x19,
+    #[doc = "GPIO0 Pin Event Trig 0 input is selected."]
+    Val26 = 0x1a,
+    #[doc = "GPIO1 Pin Event Trig 0 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "GPIO2 Pin Event Trig 0 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "GPIO3 Pin Event Trig 0 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "GPIO4 Pin Event Trig 0 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "WUU."]
+    Val31 = 0x1f,
+    _RESERVED_20 = 0x20,
+    #[doc = "AOI1_OUT0 input is selected."]
+    Val33 = 0x21,
+    #[doc = "AOI1_OUT1 input is selected."]
+    Val34 = 0x22,
+    #[doc = "AOI1_OUT2 input is selected."]
+    Val35 = 0x23,
+    #[doc = "AOI1_OUT3 input is selected."]
+    Val36 = 0x24,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val37 = 0x25,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val38 = 0x26,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val39 = 0x27,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val40 = 0x28,
+    #[doc = "CTimer3_MAT0 input is selected."]
+    Val41 = 0x29,
+    #[doc = "CTimer3_MAT1 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "CTimer4_MAT0 input is selected."]
+    Val43 = 0x2b,
+    #[doc = "CTimer4_MAT1 input is selected."]
+    Val44 = 0x2c,
+    #[doc = "FlexIO CH0 input is selected."]
+    Val45 = 0x2d,
+    #[doc = "FlexIO CH1 input is selected."]
+    Val46 = 0x2e,
+    #[doc = "FlexIO CH2 input is selected."]
+    Val47 = 0x2f,
+    #[doc = "FlexIO CH3 input is selected."]
+    Val48 = 0x30,
+    #[doc = "QDC1_POS_MATCH0 input is selected."]
+    Val49 = 0x31,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val50 = 0x32,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val51 = 0x33,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val52 = 0x34,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val53 = 0x35,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val54 = 0x36,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val55 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl Adc1TrigTrigin {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Adc1TrigTrigin {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Adc1TrigTrigin {
+    #[inline(always)]
+    fn from(val: u8) -> Adc1TrigTrigin {
+        Adc1TrigTrigin::from_bits(val)
+    }
+}
+impl From<Adc1TrigTrigin> for u8 {
+    #[inline(always)]
+    fn from(val: Adc1TrigTrigin) -> u8 {
+        Adc1TrigTrigin::to_bits(val)
     }
 }
 #[repr(u8)]
@@ -2403,7 +2659,7 @@ impl From<AoiInputInp> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum CmpTrigTrigin {
+pub enum Cmp0TrigTrigin {
     _RESERVED_0 = 0x0,
     _RESERVED_1 = 0x01,
     #[doc = "AOI0_OUT0 input is selected."]
@@ -2509,9 +2765,9 @@ pub enum CmpTrigTrigin {
     _RESERVED_3e = 0x3e,
     _RESERVED_3f = 0x3f,
 }
-impl CmpTrigTrigin {
+impl Cmp0TrigTrigin {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> CmpTrigTrigin {
+    pub const fn from_bits(val: u8) -> Cmp0TrigTrigin {
         unsafe { core::mem::transmute(val & 0x3f) }
     }
     #[inline(always)]
@@ -2519,16 +2775,147 @@ impl CmpTrigTrigin {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for CmpTrigTrigin {
+impl From<u8> for Cmp0TrigTrigin {
     #[inline(always)]
-    fn from(val: u8) -> CmpTrigTrigin {
-        CmpTrigTrigin::from_bits(val)
+    fn from(val: u8) -> Cmp0TrigTrigin {
+        Cmp0TrigTrigin::from_bits(val)
     }
 }
-impl From<CmpTrigTrigin> for u8 {
+impl From<Cmp0TrigTrigin> for u8 {
     #[inline(always)]
-    fn from(val: CmpTrigTrigin) -> u8 {
-        CmpTrigTrigin::to_bits(val)
+    fn from(val: Cmp0TrigTrigin) -> u8 {
+        Cmp0TrigTrigin::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Cmp1TrigTrigin {
+    _RESERVED_0 = 0x0,
+    _RESERVED_1 = 0x01,
+    #[doc = "AOI0_OUT0 input is selected."]
+    Val2 = 0x02,
+    #[doc = "AOI0_OUT1 input is selected."]
+    Val3 = 0x03,
+    #[doc = "AOI0_OUT2 input is selected."]
+    Val4 = 0x04,
+    #[doc = "AOI0_OUT3 input is selected."]
+    Val5 = 0x05,
+    #[doc = "CMP0_OUT input is selected."]
+    Val6 = 0x06,
+    _RESERVED_7 = 0x07,
+    #[doc = "CTimer0_MAT0 input is selected."]
+    Val8 = 0x08,
+    #[doc = "CTimer0_MAT2 input is selected."]
+    Val9 = 0x09,
+    #[doc = "CTimer1_MAT0."]
+    Val10 = 0x0a,
+    #[doc = "CTimer1_MAT2 input is selected."]
+    Val11 = 0x0b,
+    #[doc = "CTimer2_MAT0 input is selected."]
+    Val12 = 0x0c,
+    #[doc = "CTimer2_MAT2 input is selected."]
+    Val13 = 0x0d,
+    #[doc = "LPTMR0 input is selected."]
+    Val14 = 0x0e,
+    _RESERVED_f = 0x0f,
+    #[doc = "QDC0_POS_MATCH0."]
+    Val16 = 0x10,
+    #[doc = "PWM0_SM0_MUX_TRIG0 input is selected."]
+    Val17 = 0x11,
+    #[doc = "PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val18 = 0x12,
+    #[doc = "PWM0_SM1_MUX_TRIG0 input is selected."]
+    Val19 = 0x13,
+    #[doc = "PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val20 = 0x14,
+    #[doc = "PWM0_SM2_MUX_TRIG0 input is selected."]
+    Val21 = 0x15,
+    #[doc = "PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val22 = 0x16,
+    _RESERVED_17 = 0x17,
+    _RESERVED_18 = 0x18,
+    #[doc = "GPIO0 Pin Event Trig 0 input is selected."]
+    Val25 = 0x19,
+    #[doc = "GPIO1 Pin Event Trig 0 input is selected."]
+    Val26 = 0x1a,
+    #[doc = "GPIO2 Pin Event Trig 0 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "GPIO3 Pin Event Trig 0 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "GPIO4 Pin Event Trig 0 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "WUU input is selected."]
+    Val30 = 0x1e,
+    #[doc = "AOI1_OUT0 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "AOI1_OUT1 input is selected."]
+    Val32 = 0x20,
+    #[doc = "AOI1_OUT2 input is selected."]
+    Val33 = 0x21,
+    #[doc = "AOI1_OUT3 input is selected."]
+    Val34 = 0x22,
+    _RESERVED_23 = 0x23,
+    _RESERVED_24 = 0x24,
+    _RESERVED_25 = 0x25,
+    _RESERVED_26 = 0x26,
+    #[doc = "CTimer3_MAT0."]
+    Val39 = 0x27,
+    #[doc = "CTimer3_MAT1."]
+    Val40 = 0x28,
+    #[doc = "CTimer4_MAT0 input is selected."]
+    Val41 = 0x29,
+    #[doc = "CTimer4_MAT1 input is selected."]
+    Val42 = 0x2a,
+    _RESERVED_2b = 0x2b,
+    _RESERVED_2c = 0x2c,
+    _RESERVED_2d = 0x2d,
+    _RESERVED_2e = 0x2e,
+    #[doc = "QDC1_POS_MATCH0 input is selected."]
+    Val47 = 0x2f,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val48 = 0x30,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val49 = 0x31,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val50 = 0x32,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val51 = 0x33,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val52 = 0x34,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val53 = 0x35,
+    _RESERVED_36 = 0x36,
+    _RESERVED_37 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl Cmp1TrigTrigin {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Cmp1TrigTrigin {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Cmp1TrigTrigin {
+    #[inline(always)]
+    fn from(val: u8) -> Cmp1TrigTrigin {
+        Cmp1TrigTrigin::from_bits(val)
+    }
+}
+impl From<Cmp1TrigTrigin> for u8 {
+    #[inline(always)]
+    fn from(val: Cmp1TrigTrigin) -> u8 {
+        Cmp1TrigTrigin::to_bits(val)
     }
 }
 #[repr(u8)]
@@ -3976,7 +4363,7 @@ impl From<ExtTrigInp> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum FlexPwmTrigin {
+pub enum FlexPwm0Trigin {
     _RESERVED_0 = 0x0,
     #[doc = "ARM_TXEV input is selected."]
     Val1 = 0x01,
@@ -4096,9 +4483,9 @@ pub enum FlexPwmTrigin {
     _RESERVED_3e = 0x3e,
     _RESERVED_3f = 0x3f,
 }
-impl FlexPwmTrigin {
+impl FlexPwm0Trigin {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> FlexPwmTrigin {
+    pub const fn from_bits(val: u8) -> FlexPwm0Trigin {
         unsafe { core::mem::transmute(val & 0x3f) }
     }
     #[inline(always)]
@@ -4106,16 +4493,161 @@ impl FlexPwmTrigin {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for FlexPwmTrigin {
+impl From<u8> for FlexPwm0Trigin {
     #[inline(always)]
-    fn from(val: u8) -> FlexPwmTrigin {
-        FlexPwmTrigin::from_bits(val)
+    fn from(val: u8) -> FlexPwm0Trigin {
+        FlexPwm0Trigin::from_bits(val)
     }
 }
-impl From<FlexPwmTrigin> for u8 {
+impl From<FlexPwm0Trigin> for u8 {
     #[inline(always)]
-    fn from(val: FlexPwmTrigin) -> u8 {
-        FlexPwmTrigin::to_bits(val)
+    fn from(val: FlexPwm0Trigin) -> u8 {
+        FlexPwm0Trigin::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum FlexPwm1Trigin {
+    _RESERVED_0 = 0x0,
+    #[doc = "ARM_TXEV input is selected."]
+    Val1 = 0x01,
+    #[doc = "AOI0_OUT0 input is selected."]
+    Val2 = 0x02,
+    #[doc = "AOI0_OUT1 input is selected."]
+    Val3 = 0x03,
+    #[doc = "AOI0_OUT2 input is selected."]
+    Val4 = 0x04,
+    #[doc = "AOI0_OUT3 input is selected."]
+    Val5 = 0x05,
+    #[doc = "CMP0_OUT input is selected."]
+    Val6 = 0x06,
+    #[doc = "CMP1_OUT input is selected."]
+    Val7 = 0x07,
+    _RESERVED_8 = 0x08,
+    #[doc = "CTimer0_MAT2 input is selected."]
+    Val9 = 0x09,
+    #[doc = "CTimer0_MAT3 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "CTimer1_MAT2 input is selected."]
+    Val11 = 0x0b,
+    #[doc = "CTimer1_MAT3 input is selected."]
+    Val12 = 0x0c,
+    #[doc = "CTimer2_MAT2 input is selected."]
+    Val13 = 0x0d,
+    #[doc = "CTimer2_MAT3 input is selected."]
+    Val14 = 0x0e,
+    #[doc = "QDC0_CMP_FLAG0 input is selected."]
+    Val15 = 0x0f,
+    #[doc = "QDC0_CMP_FLAG1 input is selected."]
+    Val16 = 0x10,
+    #[doc = "QDC0_CMP_FLAG2 input is selected."]
+    Val17 = 0x11,
+    #[doc = "QDC0_CMP_FLAG3 input is selected."]
+    Val18 = 0x12,
+    #[doc = "QDC0_POS_MATCH0 input is selected."]
+    Val19 = 0x13,
+    #[doc = "TRIG_IN0 input is selected."]
+    Val20 = 0x14,
+    #[doc = "TRIG_IN1 input is selected."]
+    Val21 = 0x15,
+    #[doc = "TRIG_IN2 input is selected."]
+    Val22 = 0x16,
+    #[doc = "TRIG_IN3 input is selected."]
+    Val23 = 0x17,
+    #[doc = "TRIG_IN4 input is selected."]
+    Val24 = 0x18,
+    #[doc = "TRIG_IN5 input is selected."]
+    Val25 = 0x19,
+    #[doc = "TRIG_IN6 input is selected."]
+    Val26 = 0x1a,
+    #[doc = "TRIG_IN7 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "TRIG_IN8 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "TRIG_IN9 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "TRIG_IN10 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "TRIG_IN11 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "GPIO0 Pin Event Trig 0 input is selected."]
+    Val32 = 0x20,
+    #[doc = "GPIO1 Pin Event Trig 0 input is selected."]
+    Val33 = 0x21,
+    #[doc = "GPIO2 Pin Event Trig 0 input is selected."]
+    Val34 = 0x22,
+    #[doc = "GPIO3 Pin Event Trig 0 input is selected."]
+    Val35 = 0x23,
+    #[doc = "GPIO4 Pin Event Trig 0 input is selected."]
+    Val36 = 0x24,
+    #[doc = "AOI1_OUT0 input is selected."]
+    Val37 = 0x25,
+    #[doc = "AOI1_OUT1 input is selected."]
+    Val38 = 0x26,
+    #[doc = "AOI1_OUT2 input is selected."]
+    Val39 = 0x27,
+    #[doc = "AOI1_OUT3 input is selected."]
+    Val40 = 0x28,
+    _RESERVED_29 = 0x29,
+    _RESERVED_2a = 0x2a,
+    _RESERVED_2b = 0x2b,
+    _RESERVED_2c = 0x2c,
+    #[doc = "CTimer3_MAT2 input is selected."]
+    Val45 = 0x2d,
+    #[doc = "CTimer3_MAT3 input is selected."]
+    Val46 = 0x2e,
+    #[doc = "CTimer4_MAT2 input is selected."]
+    Val47 = 0x2f,
+    #[doc = "CTimer4_MAT3 input is selected."]
+    Val48 = 0x30,
+    #[doc = "QDC1_CMP_FLAG0 input is selected."]
+    Val49 = 0x31,
+    #[doc = "QDC1_CMP_FLAG1 input is selected."]
+    Val50 = 0x32,
+    #[doc = "QDC1_CMP_FLAG2 input is selected."]
+    Val51 = 0x33,
+    #[doc = "QDC1_CMP_FLAG3 input is selected."]
+    Val52 = 0x34,
+    #[doc = "QDC1_POS_MATCH0 input is selected."]
+    Val53 = 0x35,
+    #[doc = "PWM0_SM0_MUX_TRIG0 input is selected."]
+    Val54 = 0x36,
+    #[doc = "PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val55 = 0x37,
+    #[doc = "PWM0_SM1_MUX_TRIG0 input is selected."]
+    Val56 = 0x38,
+    #[doc = "PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val57 = 0x39,
+    #[doc = "PWM0_SM2_MUX_TRIG0 input is selected."]
+    Val58 = 0x3a,
+    #[doc = "PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val59 = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl FlexPwm1Trigin {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> FlexPwm1Trigin {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for FlexPwm1Trigin {
+    #[inline(always)]
+    fn from(val: u8) -> FlexPwm1Trigin {
+        FlexPwm1Trigin::from_bits(val)
+    }
+}
+impl From<FlexPwm1Trigin> for u8 {
+    #[inline(always)]
+    fn from(val: FlexPwm1Trigin) -> u8 {
+        FlexPwm1Trigin::to_bits(val)
     }
 }
 #[repr(u8)]

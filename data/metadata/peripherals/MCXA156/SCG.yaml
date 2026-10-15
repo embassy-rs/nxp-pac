@@ -1,3 +1,4 @@
+# FIRCATC1–11 follow SVD 7c1f00b; RM §22.7.1.1 omits them.
 block/Scg:
   description: System Clock Generator.
   items:

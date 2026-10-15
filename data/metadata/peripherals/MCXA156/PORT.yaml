@@ -1,6 +1,4 @@
-# MCXA156 PORT0..PORT4 have distinct sparse register layouts in the NXP SVD.
-# Keep all five blocks in this module; the raw extractor otherwise emits one
-# fragment per block under the shared PORT namespace.
+# Preserve all five sparse blocks and per-PCR capabilities (RM §11.6.1).
 block/Port:
   description: PORT.
   items:
@@ -32,11 +30,11 @@ block/Port:
   - name: pcr0
     description: Pin Control 0.
     byte_offset: 128
-    fieldset: Pcr
+    fieldset: PcrMux3
   - name: pcr1
     description: Pin Control 1.
     byte_offset: 132
-    fieldset: Pcr
+    fieldset: PcrMux3
   - name: pcr2
     description: Pin Control 2.
     byte_offset: 136
@@ -52,11 +50,11 @@ block/Port:
   - name: pcr16
     description: Pin Control 16.
     byte_offset: 192
-    fieldset: Pcr
+    fieldset: PcrPvPfeDse1
   - name: pcr17
     description: Pin Control 17.
     byte_offset: 196
-    fieldset: Pcr
+    fieldset: PcrPfeDse1
   - name: pcr18
     description: Pin Control 18.
     byte_offset: 200
@@ -68,19 +66,19 @@ block/Port:
   - name: pcr20
     description: Pin Control 20.
     byte_offset: 208
-    fieldset: Pcr
+    fieldset: PcrMux3
   - name: pcr21
     description: Pin Control 21.
     byte_offset: 212
-    fieldset: Pcr
+    fieldset: PcrMux3
   - name: pcr22
     description: Pin Control 22.
     byte_offset: 216
-    fieldset: Pcr
+    fieldset: PcrMux3
   - name: pcr23
     description: Pin Control 23.
     byte_offset: 220
-    fieldset: Pcr
+    fieldset: PcrMux3
 block/Port1:
   description: PORT.
   items:
@@ -112,11 +110,11 @@ block/Port1:
   - name: pcr0
     description: Pin Control 0.
     byte_offset: 128
-    fieldset: Pcr
+    fieldset: PcrPfe
   - name: pcr1
     description: Pin Control 1.
     byte_offset: 132
-    fieldset: Pcr
+    fieldset: PcrPfe
   - name: pcr2
     description: Pin Control 2.
     byte_offset: 136
@@ -144,11 +142,11 @@ block/Port1:
   - name: pcr8
     description: Pin Control 8.
     byte_offset: 160
-    fieldset: Pcr
+    fieldset: PcrPvPfeDse1
   - name: pcr9
     description: Pin Control 9.
     byte_offset: 164
-    fieldset: Pcr
+    fieldset: PcrPfeDse1
   - name: pcr10
     description: Pin Control 10.
     byte_offset: 168
@@ -168,23 +166,23 @@ block/Port1:
   - name: pcr14
     description: Pin Control 14.
     byte_offset: 184
-    fieldset: Pcr
+    fieldset: PcrMux3
   - name: pcr15
     description: Pin Control 15.
     byte_offset: 188
-    fieldset: Pcr
+    fieldset: PcrMux3
   - name: pcr29
     description: Pin Control 29.
     byte_offset: 244
-    fieldset: Pcr
+    fieldset: PcrPvPfeMux2
   - name: pcr30
     description: Pin Control 30.
     byte_offset: 248
-    fieldset: Pcr
+    fieldset: PcrPvPfeDse1
   - name: pcr31
     description: Pin Control 31.
     byte_offset: 252
-    fieldset: Pcr
+    fieldset: PcrPfeDse1
 block/Port2:
   description: PORT.
   items:
@@ -208,15 +206,15 @@ block/Port2:
   - name: pcr0
     description: Pin Control 0.
     byte_offset: 128
-    fieldset: Pcr
+    fieldset: PcrMux3
   - name: pcr1
     description: Pin Control 1.
     byte_offset: 132
-    fieldset: Pcr
+    fieldset: PcrMux3
   - name: pcr2
     description: Pin Control 2.
     byte_offset: 136
-    fieldset: Pcr
+    fieldset: PcrMux3
   - name: pcr3
     description: Pin Control 3.
     byte_offset: 140
@@ -224,15 +222,15 @@ block/Port2:
   - name: pcr4
     description: Pin Control 4.
     byte_offset: 144
-    fieldset: Pcr
+    fieldset: PcrMux3
   - name: pcr5
     description: Pin Control 5.
     byte_offset: 148
-    fieldset: Pcr
+    fieldset: PcrMux3
   - name: pcr6
     description: Pin Control 6.
     byte_offset: 152
-    fieldset: Pcr
+    fieldset: PcrMux3
   - name: pcr7
     description: Pin Control 7.
     byte_offset: 156
@@ -240,11 +238,11 @@ block/Port2:
   - name: pcr10
     description: Pin Control 10.
     byte_offset: 168
-    fieldset: Pcr
+    fieldset: PcrMux3
   - name: pcr11
     description: Pin Control 11.
     byte_offset: 172
-    fieldset: Pcr
+    fieldset: PcrMux3
   - name: pcr12
     description: Pin Control 12.
     byte_offset: 176
@@ -256,31 +254,31 @@ block/Port2:
   - name: pcr15
     description: Pin Control 15.
     byte_offset: 188
-    fieldset: Pcr
+    fieldset: PcrMux3
   - name: pcr16
     description: Pin Control 16.
     byte_offset: 192
-    fieldset: Pcr
+    fieldset: PcrMux3
   - name: pcr17
     description: Pin Control 17.
     byte_offset: 196
-    fieldset: Pcr
+    fieldset: PcrMux3
   - name: pcr19
     description: Pin Control 19.
     byte_offset: 204
-    fieldset: Pcr
+    fieldset: PcrMux3
   - name: pcr20
     description: Pin Control 20.
     byte_offset: 208
-    fieldset: Pcr
+    fieldset: PcrMux3
   - name: pcr21
     description: Pin Control 21.
     byte_offset: 212
-    fieldset: Pcr
+    fieldset: PcrMux3
   - name: pcr23
     description: Pin Control 23.
     byte_offset: 220
-    fieldset: Pcr
+    fieldset: PcrMux3
 block/Port3:
   description: PORT.
   items:
@@ -312,15 +310,15 @@ block/Port3:
   - name: pcr0
     description: Pin Control 0.
     byte_offset: 128
-    fieldset: Pcr
+    fieldset: PcrPfeDse1
   - name: pcr1
     description: Pin Control 1.
     byte_offset: 132
-    fieldset: Pcr
+    fieldset: PcrPfeDse1
   - name: pcr2
     description: Pin Control 2.
     byte_offset: 136
-    fieldset: Pcr
+    fieldset: PcrMux3
   - name: pcr6
     description: Pin Control 6.
     byte_offset: 152
@@ -364,39 +362,39 @@ block/Port3:
   - name: pcr16
     description: Pin Control 16.
     byte_offset: 192
-    fieldset: Pcr
+    fieldset: PcrMux3
   - name: pcr17
     description: Pin Control 17.
     byte_offset: 196
-    fieldset: Pcr
+    fieldset: PcrMux3
   - name: pcr18
     description: Pin Control 18.
     byte_offset: 200
-    fieldset: Pcr
+    fieldset: PcrMux3
   - name: pcr19
     description: Pin Control 19.
     byte_offset: 204
-    fieldset: Pcr
+    fieldset: PcrMux3
   - name: pcr20
     description: Pin Control 20.
     byte_offset: 208
-    fieldset: Pcr
+    fieldset: PcrMux3
   - name: pcr21
     description: Pin Control 21.
     byte_offset: 212
-    fieldset: Pcr
+    fieldset: PcrMux3
   - name: pcr22
     description: Pin Control 22.
     byte_offset: 216
-    fieldset: Pcr
+    fieldset: PcrMux3
   - name: pcr27
     description: Pin Control 27.
     byte_offset: 236
-    fieldset: Pcr
+    fieldset: PcrDse1Mux3
   - name: pcr28
     description: Pin Control 28.
     byte_offset: 240
-    fieldset: Pcr
+    fieldset: PcrDse1Mux3
   - name: pcr29
     description: Pin Control 29.
     byte_offset: 244
@@ -440,27 +438,27 @@ block/Port4:
   - name: pcr2
     description: Pin Control 2.
     byte_offset: 136
-    fieldset: Pcr
+    fieldset: PcrPort4
   - name: pcr3
     description: Pin Control 3.
     byte_offset: 140
-    fieldset: Pcr
+    fieldset: PcrPort4
   - name: pcr4
     description: Pin Control 4.
     byte_offset: 144
-    fieldset: Pcr
+    fieldset: PcrPort4
   - name: pcr5
     description: Pin Control 5.
     byte_offset: 148
-    fieldset: Pcr
+    fieldset: PcrPort4
   - name: pcr6
     description: Pin Control 6.
     byte_offset: 152
-    fieldset: Pcr
+    fieldset: PcrPort4
   - name: pcr7
     description: Pin Control 7.
     byte_offset: 156
-    fieldset: Pcr
+    fieldset: PcrPort4
 fieldset/Calib0:
   description: Calibration 0.
   fields:
@@ -569,6 +567,387 @@ fieldset/Pcr:
     bit_offset: 15
     bit_size: 1
     enum: Lk
+fieldset/PcrDse1Mux3:
+  description: Pin Control 27.
+  fields:
+  - name: ps
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: Ps
+  - name: pe
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: Pe
+  - name: sre
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: Sre
+  - name: ode
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: Ode
+  - name: dse
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: Dse
+  - name: dse1
+    description: Drive Strength Enable.
+    bit_offset: 7
+    bit_size: 1
+    enum: Dse1
+  - name: mux
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 3
+    enum: Mux3
+  - name: ibe
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: Ibe
+  - name: inv
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: Inv
+  - name: lk
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: Lk
+fieldset/PcrMux3:
+  description: Pin Control 0.
+  fields:
+  - name: ps
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: Ps
+  - name: pe
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: Pe
+  - name: sre
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: Sre
+  - name: ode
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: Ode
+  - name: dse
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: Dse
+  - name: mux
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 3
+    enum: Mux3
+  - name: ibe
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: Ibe
+  - name: inv
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: Inv
+  - name: lk
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: Lk
+fieldset/PcrPfe:
+  description: Pin Control 0.
+  fields:
+  - name: ps
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: Ps
+  - name: pe
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: Pe
+  - name: sre
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: Sre
+  - name: pfe
+    description: Passive Filter Enable.
+    bit_offset: 4
+    bit_size: 1
+    enum: Pfe
+  - name: ode
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: Ode
+  - name: dse
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: Dse
+  - name: mux
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 4
+    enum: Mux
+  - name: ibe
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: Ibe
+  - name: inv
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: Inv
+  - name: lk
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: Lk
+fieldset/PcrPfeDse1:
+  description: Pin Control 17.
+  fields:
+  - name: ps
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: Ps
+  - name: pe
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: Pe
+  - name: sre
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: Sre
+  - name: pfe
+    description: Passive Filter Enable.
+    bit_offset: 4
+    bit_size: 1
+    enum: Pfe
+  - name: ode
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: Ode
+  - name: dse
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: Dse
+  - name: dse1
+    description: Drive Strength Enable.
+    bit_offset: 7
+    bit_size: 1
+    enum: Dse1
+  - name: mux
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 4
+    enum: Mux
+  - name: ibe
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: Ibe
+  - name: inv
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: Inv
+  - name: lk
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: Lk
+fieldset/PcrPort4:
+  description: Pin Control 2.
+  fields:
+  - name: ps
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: Ps
+  - name: pe
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: Pe
+  - name: sre
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: Sre
+  - name: ode
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: Ode
+  - name: dse
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: Dse
+  - name: mux
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 3
+    enum: MuxPort4
+  - name: ibe
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: Ibe
+  - name: inv
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: Inv
+  - name: lk
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: Lk
+fieldset/PcrPvPfeDse1:
+  description: Pin Control 16.
+  fields:
+  - name: ps
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: Ps
+  - name: pe
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: Pe
+  - name: pv
+    description: Pull Value.
+    bit_offset: 2
+    bit_size: 1
+    enum: Pv
+  - name: sre
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: Sre
+  - name: pfe
+    description: Passive Filter Enable.
+    bit_offset: 4
+    bit_size: 1
+    enum: Pfe
+  - name: ode
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: Ode
+  - name: dse
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: Dse
+  - name: dse1
+    description: Drive Strength Enable.
+    bit_offset: 7
+    bit_size: 1
+    enum: Dse1
+  - name: mux
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 4
+    enum: Mux
+  - name: ibe
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: Ibe
+  - name: inv
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: Inv
+  - name: lk
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: Lk
+fieldset/PcrPvPfeMux2:
+  description: Pin Control 29.
+  fields:
+  - name: ps
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: Ps
+  - name: pe
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: Pe
+  - name: pv
+    description: Pull Value.
+    bit_offset: 2
+    bit_size: 1
+    enum: Pv
+  - name: sre
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: Sre
+  - name: pfe
+    description: Passive Filter Enable.
+    bit_offset: 4
+    bit_size: 1
+    enum: Pfe
+  - name: ode
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: Ode
+  - name: dse
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: Dse
+  - name: mux
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 2
+    enum: Mux2
+  - name: ibe
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: Ibe
+  - name: inv
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: Inv
+  - name: lk
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: Lk
 fieldset/Verid:
   description: Version ID.
   fields:
@@ -593,6 +972,15 @@ enum/Dse:
     value: 0
   - name: Dse1
     description: High.
+    value: 1
+enum/Dse1:
+  bit_size: 1
+  variants:
+  - name: Dse10
+    description: Normal.
+    value: 0
+  - name: Dse11
+    description: Double.
     value: 1
 enum/Feature:
   bit_size: 16
@@ -667,6 +1055,53 @@ enum/Mux:
     value: 12
   - name: Mux13
     value: 13
+enum/Mux2:
+  bit_size: 2
+  variants:
+  - name: Mux0
+    value: 0
+  - name: Mux1
+    value: 1
+  - name: Mux2
+    value: 2
+  - name: Mux3
+    value: 3
+enum/Mux3:
+  bit_size: 3
+  variants:
+  - name: Mux0
+    value: 0
+  - name: Mux1
+    value: 1
+  - name: Mux2
+    value: 2
+  - name: Mux3
+    value: 3
+  - name: Mux4
+    value: 4
+  - name: Mux5
+    value: 5
+  - name: Mux6
+    value: 6
+  - name: Mux7
+    value: 7
+enum/MuxPort4:
+  bit_size: 3
+  variants:
+  - name: Mux0
+    value: 0
+  - name: Mux1
+    value: 1
+  - name: Mux2
+    value: 2
+  - name: Mux3
+    value: 3
+  - name: Mux4
+    value: 4
+  - name: Mux5
+    value: 5
+  - name: Mux6
+    value: 6
 enum/Ode:
   bit_size: 1
   variants:
@@ -685,6 +1120,15 @@ enum/Pe:
   - name: Pe1
     description: Enables.
     value: 1
+enum/Pfe:
+  bit_size: 1
+  variants:
+  - name: Pfe0
+    description: Disables.
+    value: 0
+  - name: Pfe1
+    description: Enables.
+    value: 1
 enum/Ps:
   bit_size: 1
   variants:
@@ -693,6 +1137,15 @@ enum/Ps:
     value: 0
   - name: Ps1
     description: Enables internal pullup resistor.
+    value: 1
+enum/Pv:
+  bit_size: 1
+  variants:
+  - name: Pv0
+    description: Low.
+    value: 0
+  - name: Pv1
+    description: High.
     value: 1
 enum/Range:
   bit_size: 1

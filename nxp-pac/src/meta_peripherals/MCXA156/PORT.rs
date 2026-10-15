@@ -50,12 +50,12 @@ impl Port {
     }
     #[doc = "Pin Control 0."]
     #[inline(always)]
-    pub const fn pcr0(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr0(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x80usize) as _) }
     }
     #[doc = "Pin Control 1."]
     #[inline(always)]
-    pub const fn pcr1(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr1(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x84usize) as _) }
     }
     #[doc = "Pin Control 2."]
@@ -75,12 +75,12 @@ impl Port {
     }
     #[doc = "Pin Control 16."]
     #[inline(always)]
-    pub const fn pcr16(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr16(self) -> crate::pac::common::Reg<PcrPvPfeDse1, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xc0usize) as _) }
     }
     #[doc = "Pin Control 17."]
     #[inline(always)]
-    pub const fn pcr17(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr17(self) -> crate::pac::common::Reg<PcrPfeDse1, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xc4usize) as _) }
     }
     #[doc = "Pin Control 18."]
@@ -95,22 +95,22 @@ impl Port {
     }
     #[doc = "Pin Control 20."]
     #[inline(always)]
-    pub const fn pcr20(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr20(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xd0usize) as _) }
     }
     #[doc = "Pin Control 21."]
     #[inline(always)]
-    pub const fn pcr21(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr21(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xd4usize) as _) }
     }
     #[doc = "Pin Control 22."]
     #[inline(always)]
-    pub const fn pcr22(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr22(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xd8usize) as _) }
     }
     #[doc = "Pin Control 23."]
     #[inline(always)]
-    pub const fn pcr23(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr23(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xdcusize) as _) }
     }
 }
@@ -162,12 +162,12 @@ impl Port1 {
     }
     #[doc = "Pin Control 0."]
     #[inline(always)]
-    pub const fn pcr0(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr0(self) -> crate::pac::common::Reg<PcrPfe, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x80usize) as _) }
     }
     #[doc = "Pin Control 1."]
     #[inline(always)]
-    pub const fn pcr1(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr1(self) -> crate::pac::common::Reg<PcrPfe, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x84usize) as _) }
     }
     #[doc = "Pin Control 2."]
@@ -202,12 +202,12 @@ impl Port1 {
     }
     #[doc = "Pin Control 8."]
     #[inline(always)]
-    pub const fn pcr8(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr8(self) -> crate::pac::common::Reg<PcrPvPfeDse1, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xa0usize) as _) }
     }
     #[doc = "Pin Control 9."]
     #[inline(always)]
-    pub const fn pcr9(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr9(self) -> crate::pac::common::Reg<PcrPfeDse1, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xa4usize) as _) }
     }
     #[doc = "Pin Control 10."]
@@ -232,27 +232,27 @@ impl Port1 {
     }
     #[doc = "Pin Control 14."]
     #[inline(always)]
-    pub const fn pcr14(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr14(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xb8usize) as _) }
     }
     #[doc = "Pin Control 15."]
     #[inline(always)]
-    pub const fn pcr15(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr15(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xbcusize) as _) }
     }
     #[doc = "Pin Control 29."]
     #[inline(always)]
-    pub const fn pcr29(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr29(self) -> crate::pac::common::Reg<PcrPvPfeMux2, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xf4usize) as _) }
     }
     #[doc = "Pin Control 30."]
     #[inline(always)]
-    pub const fn pcr30(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr30(self) -> crate::pac::common::Reg<PcrPvPfeDse1, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xf8usize) as _) }
     }
     #[doc = "Pin Control 31."]
     #[inline(always)]
-    pub const fn pcr31(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr31(self) -> crate::pac::common::Reg<PcrPfeDse1, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xfcusize) as _) }
     }
 }
@@ -294,17 +294,17 @@ impl Port2 {
     }
     #[doc = "Pin Control 0."]
     #[inline(always)]
-    pub const fn pcr0(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr0(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x80usize) as _) }
     }
     #[doc = "Pin Control 1."]
     #[inline(always)]
-    pub const fn pcr1(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr1(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x84usize) as _) }
     }
     #[doc = "Pin Control 2."]
     #[inline(always)]
-    pub const fn pcr2(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr2(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x88usize) as _) }
     }
     #[doc = "Pin Control 3."]
@@ -314,17 +314,17 @@ impl Port2 {
     }
     #[doc = "Pin Control 4."]
     #[inline(always)]
-    pub const fn pcr4(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr4(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x90usize) as _) }
     }
     #[doc = "Pin Control 5."]
     #[inline(always)]
-    pub const fn pcr5(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr5(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x94usize) as _) }
     }
     #[doc = "Pin Control 6."]
     #[inline(always)]
-    pub const fn pcr6(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr6(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x98usize) as _) }
     }
     #[doc = "Pin Control 7."]
@@ -334,12 +334,12 @@ impl Port2 {
     }
     #[doc = "Pin Control 10."]
     #[inline(always)]
-    pub const fn pcr10(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr10(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xa8usize) as _) }
     }
     #[doc = "Pin Control 11."]
     #[inline(always)]
-    pub const fn pcr11(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr11(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xacusize) as _) }
     }
     #[doc = "Pin Control 12."]
@@ -354,37 +354,37 @@ impl Port2 {
     }
     #[doc = "Pin Control 15."]
     #[inline(always)]
-    pub const fn pcr15(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr15(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xbcusize) as _) }
     }
     #[doc = "Pin Control 16."]
     #[inline(always)]
-    pub const fn pcr16(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr16(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xc0usize) as _) }
     }
     #[doc = "Pin Control 17."]
     #[inline(always)]
-    pub const fn pcr17(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr17(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xc4usize) as _) }
     }
     #[doc = "Pin Control 19."]
     #[inline(always)]
-    pub const fn pcr19(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr19(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xccusize) as _) }
     }
     #[doc = "Pin Control 20."]
     #[inline(always)]
-    pub const fn pcr20(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr20(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xd0usize) as _) }
     }
     #[doc = "Pin Control 21."]
     #[inline(always)]
-    pub const fn pcr21(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr21(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xd4usize) as _) }
     }
     #[doc = "Pin Control 23."]
     #[inline(always)]
-    pub const fn pcr23(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr23(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xdcusize) as _) }
     }
 }
@@ -436,17 +436,17 @@ impl Port3 {
     }
     #[doc = "Pin Control 0."]
     #[inline(always)]
-    pub const fn pcr0(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr0(self) -> crate::pac::common::Reg<PcrPfeDse1, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x80usize) as _) }
     }
     #[doc = "Pin Control 1."]
     #[inline(always)]
-    pub const fn pcr1(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr1(self) -> crate::pac::common::Reg<PcrPfeDse1, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x84usize) as _) }
     }
     #[doc = "Pin Control 2."]
     #[inline(always)]
-    pub const fn pcr2(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr2(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x88usize) as _) }
     }
     #[doc = "Pin Control 6."]
@@ -501,47 +501,47 @@ impl Port3 {
     }
     #[doc = "Pin Control 16."]
     #[inline(always)]
-    pub const fn pcr16(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr16(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xc0usize) as _) }
     }
     #[doc = "Pin Control 17."]
     #[inline(always)]
-    pub const fn pcr17(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr17(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xc4usize) as _) }
     }
     #[doc = "Pin Control 18."]
     #[inline(always)]
-    pub const fn pcr18(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr18(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xc8usize) as _) }
     }
     #[doc = "Pin Control 19."]
     #[inline(always)]
-    pub const fn pcr19(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr19(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xccusize) as _) }
     }
     #[doc = "Pin Control 20."]
     #[inline(always)]
-    pub const fn pcr20(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr20(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xd0usize) as _) }
     }
     #[doc = "Pin Control 21."]
     #[inline(always)]
-    pub const fn pcr21(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr21(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xd4usize) as _) }
     }
     #[doc = "Pin Control 22."]
     #[inline(always)]
-    pub const fn pcr22(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr22(self) -> crate::pac::common::Reg<PcrMux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xd8usize) as _) }
     }
     #[doc = "Pin Control 27."]
     #[inline(always)]
-    pub const fn pcr27(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr27(self) -> crate::pac::common::Reg<PcrDse1Mux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xecusize) as _) }
     }
     #[doc = "Pin Control 28."]
     #[inline(always)]
-    pub const fn pcr28(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr28(self) -> crate::pac::common::Reg<PcrDse1Mux3, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xf0usize) as _) }
     }
     #[doc = "Pin Control 29."]
@@ -608,32 +608,32 @@ impl Port4 {
     }
     #[doc = "Pin Control 2."]
     #[inline(always)]
-    pub const fn pcr2(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr2(self) -> crate::pac::common::Reg<PcrPort4, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x88usize) as _) }
     }
     #[doc = "Pin Control 3."]
     #[inline(always)]
-    pub const fn pcr3(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr3(self) -> crate::pac::common::Reg<PcrPort4, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x8cusize) as _) }
     }
     #[doc = "Pin Control 4."]
     #[inline(always)]
-    pub const fn pcr4(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr4(self) -> crate::pac::common::Reg<PcrPort4, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x90usize) as _) }
     }
     #[doc = "Pin Control 5."]
     #[inline(always)]
-    pub const fn pcr5(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr5(self) -> crate::pac::common::Reg<PcrPort4, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x94usize) as _) }
     }
     #[doc = "Pin Control 6."]
     #[inline(always)]
-    pub const fn pcr6(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr6(self) -> crate::pac::common::Reg<PcrPort4, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x98usize) as _) }
     }
     #[doc = "Pin Control 7."]
     #[inline(always)]
-    pub const fn pcr7(self) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
+    pub const fn pcr7(self) -> crate::pac::common::Reg<PcrPort4, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x9cusize) as _) }
     }
 }
@@ -1115,6 +1115,1203 @@ impl defmt::Format for Pcr {
         )
     }
 }
+#[doc = "Pin Control 27."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct PcrDse1Mux3(pub u32);
+impl PcrDse1Mux3 {
+    #[doc = "Pull Select."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn ps(&self) -> Ps {
+        let val = (self.0 >> 0usize) & 0x01;
+        Ps::from_bits(val as u8)
+    }
+    #[doc = "Pull Select."]
+    #[inline(always)]
+    pub const fn set_ps(&mut self, val: Ps) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    }
+    #[doc = "Pull Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pe(&self) -> Pe {
+        let val = (self.0 >> 1usize) & 0x01;
+        Pe::from_bits(val as u8)
+    }
+    #[doc = "Pull Enable."]
+    #[inline(always)]
+    pub const fn set_pe(&mut self, val: Pe) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    }
+    #[doc = "Slew Rate Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn sre(&self) -> Sre {
+        let val = (self.0 >> 3usize) & 0x01;
+        Sre::from_bits(val as u8)
+    }
+    #[doc = "Slew Rate Enable."]
+    #[inline(always)]
+    pub const fn set_sre(&mut self, val: Sre) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
+    }
+    #[doc = "Open Drain Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn ode(&self) -> Ode {
+        let val = (self.0 >> 5usize) & 0x01;
+        Ode::from_bits(val as u8)
+    }
+    #[doc = "Open Drain Enable."]
+    #[inline(always)]
+    pub const fn set_ode(&mut self, val: Ode) {
+        self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
+    }
+    #[doc = "Drive Strength Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn dse(&self) -> Dse {
+        let val = (self.0 >> 6usize) & 0x01;
+        Dse::from_bits(val as u8)
+    }
+    #[doc = "Drive Strength Enable."]
+    #[inline(always)]
+    pub const fn set_dse(&mut self, val: Dse) {
+        self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
+    }
+    #[doc = "Drive Strength Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn dse1(&self) -> Dse1 {
+        let val = (self.0 >> 7usize) & 0x01;
+        Dse1::from_bits(val as u8)
+    }
+    #[doc = "Drive Strength Enable."]
+    #[inline(always)]
+    pub const fn set_dse1(&mut self, val: Dse1) {
+        self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
+    }
+    #[doc = "Pin Multiplex Control."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn mux(&self) -> Mux3 {
+        let val = (self.0 >> 8usize) & 0x07;
+        Mux3::from_bits(val as u8)
+    }
+    #[doc = "Pin Multiplex Control."]
+    #[inline(always)]
+    pub const fn set_mux(&mut self, val: Mux3) {
+        self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u32) & 0x07) << 8usize);
+    }
+    #[doc = "Input Buffer Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn ibe(&self) -> Ibe {
+        let val = (self.0 >> 12usize) & 0x01;
+        Ibe::from_bits(val as u8)
+    }
+    #[doc = "Input Buffer Enable."]
+    #[inline(always)]
+    pub const fn set_ibe(&mut self, val: Ibe) {
+        self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
+    }
+    #[doc = "Invert Input."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inv(&self) -> Inv {
+        let val = (self.0 >> 13usize) & 0x01;
+        Inv::from_bits(val as u8)
+    }
+    #[doc = "Invert Input."]
+    #[inline(always)]
+    pub const fn set_inv(&mut self, val: Inv) {
+        self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
+    }
+    #[doc = "Lock Register."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn lk(&self) -> Lk {
+        let val = (self.0 >> 15usize) & 0x01;
+        Lk::from_bits(val as u8)
+    }
+    #[doc = "Lock Register."]
+    #[inline(always)]
+    pub const fn set_lk(&mut self, val: Lk) {
+        self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
+    }
+}
+impl Default for PcrDse1Mux3 {
+    #[inline(always)]
+    fn default() -> PcrDse1Mux3 {
+        PcrDse1Mux3(0)
+    }
+}
+impl core::fmt::Debug for PcrDse1Mux3 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PcrDse1Mux3")
+            .field("ps", &self.ps())
+            .field("pe", &self.pe())
+            .field("sre", &self.sre())
+            .field("ode", &self.ode())
+            .field("dse", &self.dse())
+            .field("dse1", &self.dse1())
+            .field("mux", &self.mux())
+            .field("ibe", &self.ibe())
+            .field("inv", &self.inv())
+            .field("lk", &self.lk())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for PcrDse1Mux3 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "PcrDse1Mux3 {{ ps: {:?}, pe: {:?}, sre: {:?}, ode: {:?}, dse: {:?}, dse1: {:?}, mux: {:?}, ibe: {:?}, inv: {:?}, lk: {:?} }}",
+            self.ps(),
+            self.pe(),
+            self.sre(),
+            self.ode(),
+            self.dse(),
+            self.dse1(),
+            self.mux(),
+            self.ibe(),
+            self.inv(),
+            self.lk()
+        )
+    }
+}
+#[doc = "Pin Control 0."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct PcrMux3(pub u32);
+impl PcrMux3 {
+    #[doc = "Pull Select."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn ps(&self) -> Ps {
+        let val = (self.0 >> 0usize) & 0x01;
+        Ps::from_bits(val as u8)
+    }
+    #[doc = "Pull Select."]
+    #[inline(always)]
+    pub const fn set_ps(&mut self, val: Ps) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    }
+    #[doc = "Pull Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pe(&self) -> Pe {
+        let val = (self.0 >> 1usize) & 0x01;
+        Pe::from_bits(val as u8)
+    }
+    #[doc = "Pull Enable."]
+    #[inline(always)]
+    pub const fn set_pe(&mut self, val: Pe) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    }
+    #[doc = "Slew Rate Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn sre(&self) -> Sre {
+        let val = (self.0 >> 3usize) & 0x01;
+        Sre::from_bits(val as u8)
+    }
+    #[doc = "Slew Rate Enable."]
+    #[inline(always)]
+    pub const fn set_sre(&mut self, val: Sre) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
+    }
+    #[doc = "Open Drain Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn ode(&self) -> Ode {
+        let val = (self.0 >> 5usize) & 0x01;
+        Ode::from_bits(val as u8)
+    }
+    #[doc = "Open Drain Enable."]
+    #[inline(always)]
+    pub const fn set_ode(&mut self, val: Ode) {
+        self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
+    }
+    #[doc = "Drive Strength Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn dse(&self) -> Dse {
+        let val = (self.0 >> 6usize) & 0x01;
+        Dse::from_bits(val as u8)
+    }
+    #[doc = "Drive Strength Enable."]
+    #[inline(always)]
+    pub const fn set_dse(&mut self, val: Dse) {
+        self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
+    }
+    #[doc = "Pin Multiplex Control."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn mux(&self) -> Mux3 {
+        let val = (self.0 >> 8usize) & 0x07;
+        Mux3::from_bits(val as u8)
+    }
+    #[doc = "Pin Multiplex Control."]
+    #[inline(always)]
+    pub const fn set_mux(&mut self, val: Mux3) {
+        self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u32) & 0x07) << 8usize);
+    }
+    #[doc = "Input Buffer Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn ibe(&self) -> Ibe {
+        let val = (self.0 >> 12usize) & 0x01;
+        Ibe::from_bits(val as u8)
+    }
+    #[doc = "Input Buffer Enable."]
+    #[inline(always)]
+    pub const fn set_ibe(&mut self, val: Ibe) {
+        self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
+    }
+    #[doc = "Invert Input."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inv(&self) -> Inv {
+        let val = (self.0 >> 13usize) & 0x01;
+        Inv::from_bits(val as u8)
+    }
+    #[doc = "Invert Input."]
+    #[inline(always)]
+    pub const fn set_inv(&mut self, val: Inv) {
+        self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
+    }
+    #[doc = "Lock Register."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn lk(&self) -> Lk {
+        let val = (self.0 >> 15usize) & 0x01;
+        Lk::from_bits(val as u8)
+    }
+    #[doc = "Lock Register."]
+    #[inline(always)]
+    pub const fn set_lk(&mut self, val: Lk) {
+        self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
+    }
+}
+impl Default for PcrMux3 {
+    #[inline(always)]
+    fn default() -> PcrMux3 {
+        PcrMux3(0)
+    }
+}
+impl core::fmt::Debug for PcrMux3 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PcrMux3")
+            .field("ps", &self.ps())
+            .field("pe", &self.pe())
+            .field("sre", &self.sre())
+            .field("ode", &self.ode())
+            .field("dse", &self.dse())
+            .field("mux", &self.mux())
+            .field("ibe", &self.ibe())
+            .field("inv", &self.inv())
+            .field("lk", &self.lk())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for PcrMux3 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "PcrMux3 {{ ps: {:?}, pe: {:?}, sre: {:?}, ode: {:?}, dse: {:?}, mux: {:?}, ibe: {:?}, inv: {:?}, lk: {:?} }}",
+            self.ps(),
+            self.pe(),
+            self.sre(),
+            self.ode(),
+            self.dse(),
+            self.mux(),
+            self.ibe(),
+            self.inv(),
+            self.lk()
+        )
+    }
+}
+#[doc = "Pin Control 0."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct PcrPfe(pub u32);
+impl PcrPfe {
+    #[doc = "Pull Select."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn ps(&self) -> Ps {
+        let val = (self.0 >> 0usize) & 0x01;
+        Ps::from_bits(val as u8)
+    }
+    #[doc = "Pull Select."]
+    #[inline(always)]
+    pub const fn set_ps(&mut self, val: Ps) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    }
+    #[doc = "Pull Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pe(&self) -> Pe {
+        let val = (self.0 >> 1usize) & 0x01;
+        Pe::from_bits(val as u8)
+    }
+    #[doc = "Pull Enable."]
+    #[inline(always)]
+    pub const fn set_pe(&mut self, val: Pe) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    }
+    #[doc = "Slew Rate Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn sre(&self) -> Sre {
+        let val = (self.0 >> 3usize) & 0x01;
+        Sre::from_bits(val as u8)
+    }
+    #[doc = "Slew Rate Enable."]
+    #[inline(always)]
+    pub const fn set_sre(&mut self, val: Sre) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
+    }
+    #[doc = "Passive Filter Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pfe(&self) -> Pfe {
+        let val = (self.0 >> 4usize) & 0x01;
+        Pfe::from_bits(val as u8)
+    }
+    #[doc = "Passive Filter Enable."]
+    #[inline(always)]
+    pub const fn set_pfe(&mut self, val: Pfe) {
+        self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
+    }
+    #[doc = "Open Drain Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn ode(&self) -> Ode {
+        let val = (self.0 >> 5usize) & 0x01;
+        Ode::from_bits(val as u8)
+    }
+    #[doc = "Open Drain Enable."]
+    #[inline(always)]
+    pub const fn set_ode(&mut self, val: Ode) {
+        self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
+    }
+    #[doc = "Drive Strength Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn dse(&self) -> Dse {
+        let val = (self.0 >> 6usize) & 0x01;
+        Dse::from_bits(val as u8)
+    }
+    #[doc = "Drive Strength Enable."]
+    #[inline(always)]
+    pub const fn set_dse(&mut self, val: Dse) {
+        self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
+    }
+    #[doc = "Pin Multiplex Control."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn mux(&self) -> Mux {
+        let val = (self.0 >> 8usize) & 0x0f;
+        Mux::from_bits(val as u8)
+    }
+    #[doc = "Pin Multiplex Control."]
+    #[inline(always)]
+    pub const fn set_mux(&mut self, val: Mux) {
+        self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
+    }
+    #[doc = "Input Buffer Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn ibe(&self) -> Ibe {
+        let val = (self.0 >> 12usize) & 0x01;
+        Ibe::from_bits(val as u8)
+    }
+    #[doc = "Input Buffer Enable."]
+    #[inline(always)]
+    pub const fn set_ibe(&mut self, val: Ibe) {
+        self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
+    }
+    #[doc = "Invert Input."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inv(&self) -> Inv {
+        let val = (self.0 >> 13usize) & 0x01;
+        Inv::from_bits(val as u8)
+    }
+    #[doc = "Invert Input."]
+    #[inline(always)]
+    pub const fn set_inv(&mut self, val: Inv) {
+        self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
+    }
+    #[doc = "Lock Register."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn lk(&self) -> Lk {
+        let val = (self.0 >> 15usize) & 0x01;
+        Lk::from_bits(val as u8)
+    }
+    #[doc = "Lock Register."]
+    #[inline(always)]
+    pub const fn set_lk(&mut self, val: Lk) {
+        self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
+    }
+}
+impl Default for PcrPfe {
+    #[inline(always)]
+    fn default() -> PcrPfe {
+        PcrPfe(0)
+    }
+}
+impl core::fmt::Debug for PcrPfe {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PcrPfe")
+            .field("ps", &self.ps())
+            .field("pe", &self.pe())
+            .field("sre", &self.sre())
+            .field("pfe", &self.pfe())
+            .field("ode", &self.ode())
+            .field("dse", &self.dse())
+            .field("mux", &self.mux())
+            .field("ibe", &self.ibe())
+            .field("inv", &self.inv())
+            .field("lk", &self.lk())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for PcrPfe {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "PcrPfe {{ ps: {:?}, pe: {:?}, sre: {:?}, pfe: {:?}, ode: {:?}, dse: {:?}, mux: {:?}, ibe: {:?}, inv: {:?}, lk: {:?} }}",
+            self.ps(),
+            self.pe(),
+            self.sre(),
+            self.pfe(),
+            self.ode(),
+            self.dse(),
+            self.mux(),
+            self.ibe(),
+            self.inv(),
+            self.lk()
+        )
+    }
+}
+#[doc = "Pin Control 17."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct PcrPfeDse1(pub u32);
+impl PcrPfeDse1 {
+    #[doc = "Pull Select."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn ps(&self) -> Ps {
+        let val = (self.0 >> 0usize) & 0x01;
+        Ps::from_bits(val as u8)
+    }
+    #[doc = "Pull Select."]
+    #[inline(always)]
+    pub const fn set_ps(&mut self, val: Ps) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    }
+    #[doc = "Pull Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pe(&self) -> Pe {
+        let val = (self.0 >> 1usize) & 0x01;
+        Pe::from_bits(val as u8)
+    }
+    #[doc = "Pull Enable."]
+    #[inline(always)]
+    pub const fn set_pe(&mut self, val: Pe) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    }
+    #[doc = "Slew Rate Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn sre(&self) -> Sre {
+        let val = (self.0 >> 3usize) & 0x01;
+        Sre::from_bits(val as u8)
+    }
+    #[doc = "Slew Rate Enable."]
+    #[inline(always)]
+    pub const fn set_sre(&mut self, val: Sre) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
+    }
+    #[doc = "Passive Filter Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pfe(&self) -> Pfe {
+        let val = (self.0 >> 4usize) & 0x01;
+        Pfe::from_bits(val as u8)
+    }
+    #[doc = "Passive Filter Enable."]
+    #[inline(always)]
+    pub const fn set_pfe(&mut self, val: Pfe) {
+        self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
+    }
+    #[doc = "Open Drain Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn ode(&self) -> Ode {
+        let val = (self.0 >> 5usize) & 0x01;
+        Ode::from_bits(val as u8)
+    }
+    #[doc = "Open Drain Enable."]
+    #[inline(always)]
+    pub const fn set_ode(&mut self, val: Ode) {
+        self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
+    }
+    #[doc = "Drive Strength Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn dse(&self) -> Dse {
+        let val = (self.0 >> 6usize) & 0x01;
+        Dse::from_bits(val as u8)
+    }
+    #[doc = "Drive Strength Enable."]
+    #[inline(always)]
+    pub const fn set_dse(&mut self, val: Dse) {
+        self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
+    }
+    #[doc = "Drive Strength Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn dse1(&self) -> Dse1 {
+        let val = (self.0 >> 7usize) & 0x01;
+        Dse1::from_bits(val as u8)
+    }
+    #[doc = "Drive Strength Enable."]
+    #[inline(always)]
+    pub const fn set_dse1(&mut self, val: Dse1) {
+        self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
+    }
+    #[doc = "Pin Multiplex Control."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn mux(&self) -> Mux {
+        let val = (self.0 >> 8usize) & 0x0f;
+        Mux::from_bits(val as u8)
+    }
+    #[doc = "Pin Multiplex Control."]
+    #[inline(always)]
+    pub const fn set_mux(&mut self, val: Mux) {
+        self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
+    }
+    #[doc = "Input Buffer Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn ibe(&self) -> Ibe {
+        let val = (self.0 >> 12usize) & 0x01;
+        Ibe::from_bits(val as u8)
+    }
+    #[doc = "Input Buffer Enable."]
+    #[inline(always)]
+    pub const fn set_ibe(&mut self, val: Ibe) {
+        self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
+    }
+    #[doc = "Invert Input."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inv(&self) -> Inv {
+        let val = (self.0 >> 13usize) & 0x01;
+        Inv::from_bits(val as u8)
+    }
+    #[doc = "Invert Input."]
+    #[inline(always)]
+    pub const fn set_inv(&mut self, val: Inv) {
+        self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
+    }
+    #[doc = "Lock Register."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn lk(&self) -> Lk {
+        let val = (self.0 >> 15usize) & 0x01;
+        Lk::from_bits(val as u8)
+    }
+    #[doc = "Lock Register."]
+    #[inline(always)]
+    pub const fn set_lk(&mut self, val: Lk) {
+        self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
+    }
+}
+impl Default for PcrPfeDse1 {
+    #[inline(always)]
+    fn default() -> PcrPfeDse1 {
+        PcrPfeDse1(0)
+    }
+}
+impl core::fmt::Debug for PcrPfeDse1 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PcrPfeDse1")
+            .field("ps", &self.ps())
+            .field("pe", &self.pe())
+            .field("sre", &self.sre())
+            .field("pfe", &self.pfe())
+            .field("ode", &self.ode())
+            .field("dse", &self.dse())
+            .field("dse1", &self.dse1())
+            .field("mux", &self.mux())
+            .field("ibe", &self.ibe())
+            .field("inv", &self.inv())
+            .field("lk", &self.lk())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for PcrPfeDse1 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "PcrPfeDse1 {{ ps: {:?}, pe: {:?}, sre: {:?}, pfe: {:?}, ode: {:?}, dse: {:?}, dse1: {:?}, mux: {:?}, ibe: {:?}, inv: {:?}, lk: {:?} }}",
+            self.ps(),
+            self.pe(),
+            self.sre(),
+            self.pfe(),
+            self.ode(),
+            self.dse(),
+            self.dse1(),
+            self.mux(),
+            self.ibe(),
+            self.inv(),
+            self.lk()
+        )
+    }
+}
+#[doc = "Pin Control 2."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct PcrPort4(pub u32);
+impl PcrPort4 {
+    #[doc = "Pull Select."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn ps(&self) -> Ps {
+        let val = (self.0 >> 0usize) & 0x01;
+        Ps::from_bits(val as u8)
+    }
+    #[doc = "Pull Select."]
+    #[inline(always)]
+    pub const fn set_ps(&mut self, val: Ps) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    }
+    #[doc = "Pull Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pe(&self) -> Pe {
+        let val = (self.0 >> 1usize) & 0x01;
+        Pe::from_bits(val as u8)
+    }
+    #[doc = "Pull Enable."]
+    #[inline(always)]
+    pub const fn set_pe(&mut self, val: Pe) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    }
+    #[doc = "Slew Rate Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn sre(&self) -> Sre {
+        let val = (self.0 >> 3usize) & 0x01;
+        Sre::from_bits(val as u8)
+    }
+    #[doc = "Slew Rate Enable."]
+    #[inline(always)]
+    pub const fn set_sre(&mut self, val: Sre) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
+    }
+    #[doc = "Open Drain Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn ode(&self) -> Ode {
+        let val = (self.0 >> 5usize) & 0x01;
+        Ode::from_bits(val as u8)
+    }
+    #[doc = "Open Drain Enable."]
+    #[inline(always)]
+    pub const fn set_ode(&mut self, val: Ode) {
+        self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
+    }
+    #[doc = "Drive Strength Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn dse(&self) -> Dse {
+        let val = (self.0 >> 6usize) & 0x01;
+        Dse::from_bits(val as u8)
+    }
+    #[doc = "Drive Strength Enable."]
+    #[inline(always)]
+    pub const fn set_dse(&mut self, val: Dse) {
+        self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
+    }
+    #[doc = "Pin Multiplex Control."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn mux(&self) -> MuxPort4 {
+        let val = (self.0 >> 8usize) & 0x07;
+        MuxPort4::from_bits(val as u8)
+    }
+    #[doc = "Pin Multiplex Control."]
+    #[inline(always)]
+    pub const fn set_mux(&mut self, val: MuxPort4) {
+        self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u32) & 0x07) << 8usize);
+    }
+    #[doc = "Input Buffer Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn ibe(&self) -> Ibe {
+        let val = (self.0 >> 12usize) & 0x01;
+        Ibe::from_bits(val as u8)
+    }
+    #[doc = "Input Buffer Enable."]
+    #[inline(always)]
+    pub const fn set_ibe(&mut self, val: Ibe) {
+        self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
+    }
+    #[doc = "Invert Input."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inv(&self) -> Inv {
+        let val = (self.0 >> 13usize) & 0x01;
+        Inv::from_bits(val as u8)
+    }
+    #[doc = "Invert Input."]
+    #[inline(always)]
+    pub const fn set_inv(&mut self, val: Inv) {
+        self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
+    }
+    #[doc = "Lock Register."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn lk(&self) -> Lk {
+        let val = (self.0 >> 15usize) & 0x01;
+        Lk::from_bits(val as u8)
+    }
+    #[doc = "Lock Register."]
+    #[inline(always)]
+    pub const fn set_lk(&mut self, val: Lk) {
+        self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
+    }
+}
+impl Default for PcrPort4 {
+    #[inline(always)]
+    fn default() -> PcrPort4 {
+        PcrPort4(0)
+    }
+}
+impl core::fmt::Debug for PcrPort4 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PcrPort4")
+            .field("ps", &self.ps())
+            .field("pe", &self.pe())
+            .field("sre", &self.sre())
+            .field("ode", &self.ode())
+            .field("dse", &self.dse())
+            .field("mux", &self.mux())
+            .field("ibe", &self.ibe())
+            .field("inv", &self.inv())
+            .field("lk", &self.lk())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for PcrPort4 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "PcrPort4 {{ ps: {:?}, pe: {:?}, sre: {:?}, ode: {:?}, dse: {:?}, mux: {:?}, ibe: {:?}, inv: {:?}, lk: {:?} }}",
+            self.ps(),
+            self.pe(),
+            self.sre(),
+            self.ode(),
+            self.dse(),
+            self.mux(),
+            self.ibe(),
+            self.inv(),
+            self.lk()
+        )
+    }
+}
+#[doc = "Pin Control 16."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct PcrPvPfeDse1(pub u32);
+impl PcrPvPfeDse1 {
+    #[doc = "Pull Select."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn ps(&self) -> Ps {
+        let val = (self.0 >> 0usize) & 0x01;
+        Ps::from_bits(val as u8)
+    }
+    #[doc = "Pull Select."]
+    #[inline(always)]
+    pub const fn set_ps(&mut self, val: Ps) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    }
+    #[doc = "Pull Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pe(&self) -> Pe {
+        let val = (self.0 >> 1usize) & 0x01;
+        Pe::from_bits(val as u8)
+    }
+    #[doc = "Pull Enable."]
+    #[inline(always)]
+    pub const fn set_pe(&mut self, val: Pe) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    }
+    #[doc = "Pull Value."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pv(&self) -> Pv {
+        let val = (self.0 >> 2usize) & 0x01;
+        Pv::from_bits(val as u8)
+    }
+    #[doc = "Pull Value."]
+    #[inline(always)]
+    pub const fn set_pv(&mut self, val: Pv) {
+        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
+    }
+    #[doc = "Slew Rate Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn sre(&self) -> Sre {
+        let val = (self.0 >> 3usize) & 0x01;
+        Sre::from_bits(val as u8)
+    }
+    #[doc = "Slew Rate Enable."]
+    #[inline(always)]
+    pub const fn set_sre(&mut self, val: Sre) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
+    }
+    #[doc = "Passive Filter Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pfe(&self) -> Pfe {
+        let val = (self.0 >> 4usize) & 0x01;
+        Pfe::from_bits(val as u8)
+    }
+    #[doc = "Passive Filter Enable."]
+    #[inline(always)]
+    pub const fn set_pfe(&mut self, val: Pfe) {
+        self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
+    }
+    #[doc = "Open Drain Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn ode(&self) -> Ode {
+        let val = (self.0 >> 5usize) & 0x01;
+        Ode::from_bits(val as u8)
+    }
+    #[doc = "Open Drain Enable."]
+    #[inline(always)]
+    pub const fn set_ode(&mut self, val: Ode) {
+        self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
+    }
+    #[doc = "Drive Strength Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn dse(&self) -> Dse {
+        let val = (self.0 >> 6usize) & 0x01;
+        Dse::from_bits(val as u8)
+    }
+    #[doc = "Drive Strength Enable."]
+    #[inline(always)]
+    pub const fn set_dse(&mut self, val: Dse) {
+        self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
+    }
+    #[doc = "Drive Strength Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn dse1(&self) -> Dse1 {
+        let val = (self.0 >> 7usize) & 0x01;
+        Dse1::from_bits(val as u8)
+    }
+    #[doc = "Drive Strength Enable."]
+    #[inline(always)]
+    pub const fn set_dse1(&mut self, val: Dse1) {
+        self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
+    }
+    #[doc = "Pin Multiplex Control."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn mux(&self) -> Mux {
+        let val = (self.0 >> 8usize) & 0x0f;
+        Mux::from_bits(val as u8)
+    }
+    #[doc = "Pin Multiplex Control."]
+    #[inline(always)]
+    pub const fn set_mux(&mut self, val: Mux) {
+        self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
+    }
+    #[doc = "Input Buffer Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn ibe(&self) -> Ibe {
+        let val = (self.0 >> 12usize) & 0x01;
+        Ibe::from_bits(val as u8)
+    }
+    #[doc = "Input Buffer Enable."]
+    #[inline(always)]
+    pub const fn set_ibe(&mut self, val: Ibe) {
+        self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
+    }
+    #[doc = "Invert Input."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inv(&self) -> Inv {
+        let val = (self.0 >> 13usize) & 0x01;
+        Inv::from_bits(val as u8)
+    }
+    #[doc = "Invert Input."]
+    #[inline(always)]
+    pub const fn set_inv(&mut self, val: Inv) {
+        self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
+    }
+    #[doc = "Lock Register."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn lk(&self) -> Lk {
+        let val = (self.0 >> 15usize) & 0x01;
+        Lk::from_bits(val as u8)
+    }
+    #[doc = "Lock Register."]
+    #[inline(always)]
+    pub const fn set_lk(&mut self, val: Lk) {
+        self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
+    }
+}
+impl Default for PcrPvPfeDse1 {
+    #[inline(always)]
+    fn default() -> PcrPvPfeDse1 {
+        PcrPvPfeDse1(0)
+    }
+}
+impl core::fmt::Debug for PcrPvPfeDse1 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PcrPvPfeDse1")
+            .field("ps", &self.ps())
+            .field("pe", &self.pe())
+            .field("pv", &self.pv())
+            .field("sre", &self.sre())
+            .field("pfe", &self.pfe())
+            .field("ode", &self.ode())
+            .field("dse", &self.dse())
+            .field("dse1", &self.dse1())
+            .field("mux", &self.mux())
+            .field("ibe", &self.ibe())
+            .field("inv", &self.inv())
+            .field("lk", &self.lk())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for PcrPvPfeDse1 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "PcrPvPfeDse1 {{ ps: {:?}, pe: {:?}, pv: {:?}, sre: {:?}, pfe: {:?}, ode: {:?}, dse: {:?}, dse1: {:?}, mux: {:?}, ibe: {:?}, inv: {:?}, lk: {:?} }}",
+            self.ps(),
+            self.pe(),
+            self.pv(),
+            self.sre(),
+            self.pfe(),
+            self.ode(),
+            self.dse(),
+            self.dse1(),
+            self.mux(),
+            self.ibe(),
+            self.inv(),
+            self.lk()
+        )
+    }
+}
+#[doc = "Pin Control 29."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct PcrPvPfeMux2(pub u32);
+impl PcrPvPfeMux2 {
+    #[doc = "Pull Select."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn ps(&self) -> Ps {
+        let val = (self.0 >> 0usize) & 0x01;
+        Ps::from_bits(val as u8)
+    }
+    #[doc = "Pull Select."]
+    #[inline(always)]
+    pub const fn set_ps(&mut self, val: Ps) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    }
+    #[doc = "Pull Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pe(&self) -> Pe {
+        let val = (self.0 >> 1usize) & 0x01;
+        Pe::from_bits(val as u8)
+    }
+    #[doc = "Pull Enable."]
+    #[inline(always)]
+    pub const fn set_pe(&mut self, val: Pe) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    }
+    #[doc = "Pull Value."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pv(&self) -> Pv {
+        let val = (self.0 >> 2usize) & 0x01;
+        Pv::from_bits(val as u8)
+    }
+    #[doc = "Pull Value."]
+    #[inline(always)]
+    pub const fn set_pv(&mut self, val: Pv) {
+        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
+    }
+    #[doc = "Slew Rate Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn sre(&self) -> Sre {
+        let val = (self.0 >> 3usize) & 0x01;
+        Sre::from_bits(val as u8)
+    }
+    #[doc = "Slew Rate Enable."]
+    #[inline(always)]
+    pub const fn set_sre(&mut self, val: Sre) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
+    }
+    #[doc = "Passive Filter Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pfe(&self) -> Pfe {
+        let val = (self.0 >> 4usize) & 0x01;
+        Pfe::from_bits(val as u8)
+    }
+    #[doc = "Passive Filter Enable."]
+    #[inline(always)]
+    pub const fn set_pfe(&mut self, val: Pfe) {
+        self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
+    }
+    #[doc = "Open Drain Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn ode(&self) -> Ode {
+        let val = (self.0 >> 5usize) & 0x01;
+        Ode::from_bits(val as u8)
+    }
+    #[doc = "Open Drain Enable."]
+    #[inline(always)]
+    pub const fn set_ode(&mut self, val: Ode) {
+        self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
+    }
+    #[doc = "Drive Strength Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn dse(&self) -> Dse {
+        let val = (self.0 >> 6usize) & 0x01;
+        Dse::from_bits(val as u8)
+    }
+    #[doc = "Drive Strength Enable."]
+    #[inline(always)]
+    pub const fn set_dse(&mut self, val: Dse) {
+        self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
+    }
+    #[doc = "Pin Multiplex Control."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn mux(&self) -> Mux2 {
+        let val = (self.0 >> 8usize) & 0x03;
+        Mux2::from_bits(val as u8)
+    }
+    #[doc = "Pin Multiplex Control."]
+    #[inline(always)]
+    pub const fn set_mux(&mut self, val: Mux2) {
+        self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
+    }
+    #[doc = "Input Buffer Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn ibe(&self) -> Ibe {
+        let val = (self.0 >> 12usize) & 0x01;
+        Ibe::from_bits(val as u8)
+    }
+    #[doc = "Input Buffer Enable."]
+    #[inline(always)]
+    pub const fn set_ibe(&mut self, val: Ibe) {
+        self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
+    }
+    #[doc = "Invert Input."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inv(&self) -> Inv {
+        let val = (self.0 >> 13usize) & 0x01;
+        Inv::from_bits(val as u8)
+    }
+    #[doc = "Invert Input."]
+    #[inline(always)]
+    pub const fn set_inv(&mut self, val: Inv) {
+        self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
+    }
+    #[doc = "Lock Register."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn lk(&self) -> Lk {
+        let val = (self.0 >> 15usize) & 0x01;
+        Lk::from_bits(val as u8)
+    }
+    #[doc = "Lock Register."]
+    #[inline(always)]
+    pub const fn set_lk(&mut self, val: Lk) {
+        self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
+    }
+}
+impl Default for PcrPvPfeMux2 {
+    #[inline(always)]
+    fn default() -> PcrPvPfeMux2 {
+        PcrPvPfeMux2(0)
+    }
+}
+impl core::fmt::Debug for PcrPvPfeMux2 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PcrPvPfeMux2")
+            .field("ps", &self.ps())
+            .field("pe", &self.pe())
+            .field("pv", &self.pv())
+            .field("sre", &self.sre())
+            .field("pfe", &self.pfe())
+            .field("ode", &self.ode())
+            .field("dse", &self.dse())
+            .field("mux", &self.mux())
+            .field("ibe", &self.ibe())
+            .field("inv", &self.inv())
+            .field("lk", &self.lk())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for PcrPvPfeMux2 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "PcrPvPfeMux2 {{ ps: {:?}, pe: {:?}, pv: {:?}, sre: {:?}, pfe: {:?}, ode: {:?}, dse: {:?}, mux: {:?}, ibe: {:?}, inv: {:?}, lk: {:?} }}",
+            self.ps(),
+            self.pe(),
+            self.pv(),
+            self.sre(),
+            self.pfe(),
+            self.ode(),
+            self.dse(),
+            self.mux(),
+            self.ibe(),
+            self.inv(),
+            self.lk()
+        )
+    }
+}
 #[doc = "Version ID."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
@@ -1213,6 +2410,37 @@ impl From<Dse> for u8 {
     #[inline(always)]
     fn from(val: Dse) -> u8 {
         Dse::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Dse1 {
+    #[doc = "Normal."]
+    Dse10 = 0x0,
+    #[doc = "Double."]
+    Dse11 = 0x01,
+}
+impl Dse1 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Dse1 {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Dse1 {
+    #[inline(always)]
+    fn from(val: u8) -> Dse1 {
+        Dse1::from_bits(val)
+    }
+}
+impl From<Dse1> for u8 {
+    #[inline(always)]
+    fn from(val: Dse1) -> u8 {
+        Dse1::to_bits(val)
     }
 }
 #[repr(transparent)]
@@ -1429,6 +2657,107 @@ impl From<Mux> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Mux2 {
+    Mux0 = 0x0,
+    Mux1 = 0x01,
+    Mux2 = 0x02,
+    Mux3 = 0x03,
+}
+impl Mux2 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Mux2 {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Mux2 {
+    #[inline(always)]
+    fn from(val: u8) -> Mux2 {
+        Mux2::from_bits(val)
+    }
+}
+impl From<Mux2> for u8 {
+    #[inline(always)]
+    fn from(val: Mux2) -> u8 {
+        Mux2::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Mux3 {
+    Mux0 = 0x0,
+    Mux1 = 0x01,
+    Mux2 = 0x02,
+    Mux3 = 0x03,
+    Mux4 = 0x04,
+    Mux5 = 0x05,
+    Mux6 = 0x06,
+    Mux7 = 0x07,
+}
+impl Mux3 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Mux3 {
+        unsafe { core::mem::transmute(val & 0x07) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Mux3 {
+    #[inline(always)]
+    fn from(val: u8) -> Mux3 {
+        Mux3::from_bits(val)
+    }
+}
+impl From<Mux3> for u8 {
+    #[inline(always)]
+    fn from(val: Mux3) -> u8 {
+        Mux3::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum MuxPort4 {
+    Mux0 = 0x0,
+    Mux1 = 0x01,
+    Mux2 = 0x02,
+    Mux3 = 0x03,
+    Mux4 = 0x04,
+    Mux5 = 0x05,
+    Mux6 = 0x06,
+    _RESERVED_7 = 0x07,
+}
+impl MuxPort4 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> MuxPort4 {
+        unsafe { core::mem::transmute(val & 0x07) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for MuxPort4 {
+    #[inline(always)]
+    fn from(val: u8) -> MuxPort4 {
+        MuxPort4::from_bits(val)
+    }
+}
+impl From<MuxPort4> for u8 {
+    #[inline(always)]
+    fn from(val: MuxPort4) -> u8 {
+        MuxPort4::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ode {
     #[doc = "Disables."]
     Ode0 = 0x0,
@@ -1491,6 +2820,37 @@ impl From<Pe> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Pfe {
+    #[doc = "Disables."]
+    Pfe0 = 0x0,
+    #[doc = "Enables."]
+    Pfe1 = 0x01,
+}
+impl Pfe {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Pfe {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Pfe {
+    #[inline(always)]
+    fn from(val: u8) -> Pfe {
+        Pfe::from_bits(val)
+    }
+}
+impl From<Pfe> for u8 {
+    #[inline(always)]
+    fn from(val: Pfe) -> u8 {
+        Pfe::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ps {
     #[doc = "Enables internal pulldown resistor."]
     Ps0 = 0x0,
@@ -1517,6 +2877,37 @@ impl From<Ps> for u8 {
     #[inline(always)]
     fn from(val: Ps) -> u8 {
         Ps::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Pv {
+    #[doc = "Low."]
+    Pv0 = 0x0,
+    #[doc = "High."]
+    Pv1 = 0x01,
+}
+impl Pv {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Pv {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Pv {
+    #[inline(always)]
+    fn from(val: u8) -> Pv {
+        Pv::from_bits(val)
+    }
+}
+impl From<Pv> for u8 {
+    #[inline(always)]
+    fn from(val: Pv) -> u8 {
+        Pv::to_bits(val)
     }
 }
 #[repr(u8)]

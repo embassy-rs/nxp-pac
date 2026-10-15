@@ -1,0 +1,34 @@
+transforms:
+  # ADC and CMP selectors differ between instances (RM §13.5.1).
+  - !MergeEnums
+    from:
+      include: inputmux0::(.+)(\d+)(TrigTrigin|TrigInp|trigInp|InputInp|Inp)
+      exclude: inputmux0::(Adc|Cmp)\d+TrigTrigin
+    to: inputmux0::$1$3
+    skip_unmergeable: true
+
+  - !MergeEnums
+    from: inputmux0::TrigIn(\d+)Val
+    to: inputmux0::TrigInVal
+
+  - !MergeEnums
+    from: inputmux0::FlexPwm([01]).+Trigin
+    to: inputmux0::FlexPwm${1}Trigin
+    check: Descriptions
+
+  - !MergeEnums
+    from: inputmux0::Qdc(\d+)(Home|Icap|Index)Inp
+    to: inputmux0::Qdc${2}Inp
+
+  - !MergeFieldsets
+    from: inputmux0::(Lpi2c|Lpuart|Lpspi|Dac)(\d*)(Trig|Input|)$
+    to: inputmux0::$1$3
+
+  - !MergeFieldsets
+    from: inputmux0::FlexPwm([01]).+
+    to: inputmux0::FlexPwm$1
+
+  - !MakeRegisterArray
+    blocks: inputmux0::Inputmux0
+    from: lpuart(\d+)
+    to: lpuart

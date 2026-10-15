@@ -382,6 +382,7 @@ enum/ActiveCfgCoreldoVddDs:
   - name: Normal
     description: Normal.
     value: 1
+# RM §25.7.9: encoding 3 is reserved.
 enum/ActiveCfgCoreldoVddLvl:
   bit_size: 2
   variants:
@@ -391,9 +392,6 @@ enum/ActiveCfgCoreldoVddLvl:
   - name: Normal
     description: Regulate to normal voltage (1.1 V).
     value: 2
-  - name: Over
-    description: Regulate to overdrive voltage (1.15 V).
-    value: 3
 enum/CorevddLvdf:
   bit_size: 1
   variants:
@@ -430,6 +428,7 @@ enum/LpCfgCoreldoVddDs:
   - name: Normal
     description: Normal.
     value: 1
+# RM §25.7.11: encoding 3 is reserved.
 enum/LpCfgCoreldoVddLvl:
   bit_size: 2
   variants:
@@ -439,9 +438,6 @@ enum/LpCfgCoreldoVddLvl:
   - name: Normal
     description: Normal voltage (1.1 V).
     value: 2
-  - name: Over
-    description: Overdrive voltage (1.15 V).
-    value: 3
 enum/LpMode:
   bit_size: 4
   variants:
@@ -565,6 +561,7 @@ enum/VddVdDisable:
   - name: Disable
     description: Disable.
     value: 1
+# RM §25.7.6: encoding 3 is reserved.
 enum/Vsm:
   bit_size: 2
   variants:
@@ -574,6 +571,3 @@ enum/Vsm:
   - name: Sram1v1
     description: SRAM configured for 1.1V
     value: 2
-  - name: Sram1v2
-    description: SRAM configured for 1.2V
-    value: 3

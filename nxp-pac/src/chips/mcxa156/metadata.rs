@@ -22009,15 +22009,6 @@ pub const PERIPHERALS: &[Peripheral] = &[
                 iomuxc_daisy: None,
             },
             Signal {
-                name: "DP1",
-                pins: &[SignalPin {
-                    pin: "P2_13",
-                    alt: 0u8,
-                    iomuxc_daisy: None,
-                }],
-                iomuxc_daisy: None,
-            },
-            Signal {
                 name: "OUT",
                 pins: &[SignalPin {
                     pin: "P2_15",

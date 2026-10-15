@@ -16,7 +16,7 @@ includes:
   - mcxa/gpio.yaml
   - mcxa156/gpio.yaml
   - mcxa/i3c.yaml
-  - mcxa/inputmux.yaml
+  - mcxa156/inputmux.yaml
   - mcxa/lpi2c.yaml
   - mcxa/lpspi.yaml
   - mcxa/lpuart.yaml
@@ -26,6 +26,7 @@ includes:
   - mcxa156/qdc.yaml
   - mcxa/scg.yaml
   - mcxa/spc.yaml
+  - mcxa156/spc.yaml
   - mcxa/wwdt.yaml
 
   - remove-suffix.yaml
