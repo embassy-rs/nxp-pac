@@ -46,6 +46,7 @@ Because the crate is in transition, some of them use the PAC method, and some of
 | MCXA537 | MetaPAC |
 | MCXA556 | MetaPAC |
 | MCXA557 | MetaPAC |
+| MCXA566 | MetaPAC |
 | MCXA577 | MetaPAC |
 
 ## Tour
