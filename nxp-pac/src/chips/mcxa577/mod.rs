@@ -241,6 +241,7 @@ pub const DMA0: dma::Dma12 = unsafe { dma::Dma12::from_ptr(0x40080000 as _) };
 pub const DMA1: dma::Dma4 = unsafe { dma::Dma4::from_ptr(0x40013000 as _) };
 pub const FLEXSPI0: flexspi::Flexspi = unsafe { flexspi::Flexspi::from_ptr(0x40020000 as _) };
 pub const FMU0: fmu::Fmu = unsafe { fmu::Fmu::from_ptr(0x40095000 as _) };
+pub const FREQME0: freqme::Freqme = unsafe { freqme::Freqme::from_ptr(0x40009000 as _) };
 pub const GPIO0: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x40048000 as _) };
 pub const GPIO1: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4004A000 as _) };
 pub const GPIO2: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4004C000 as _) };
@@ -315,6 +316,8 @@ pub mod edma_tcd;
 pub mod flexspi;
 #[path = "../../meta_peripherals/mcxa/FMU.rs"]
 pub mod fmu;
+#[path = "../../meta_peripherals/mcxa/FREQME.rs"]
+pub mod freqme;
 #[path = "../../meta_peripherals/mcxa/GPIO.rs"]
 pub mod gpio;
 #[path = "../../meta_peripherals/mcxa/I3C.rs"]

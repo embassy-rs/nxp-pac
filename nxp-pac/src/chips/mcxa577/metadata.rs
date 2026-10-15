@@ -5644,7 +5644,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
     Peripheral {
         name: "FREQME0",
         address: 0x40009000,
-        driver_name: "",
+        driver_name: "mcxa/FREQME",
         signals: &[
             Signal {
                 name: "CLK_IN0",
@@ -5691,7 +5691,12 @@ pub const PERIPHERALS: &[Peripheral] = &[
         ],
         flexcomm: None,
         dma_muxing: &[],
-        gate: None,
+        gate: Some(Gate {
+            enable: "mrcc_glb_cc0",
+            reset: Some("mrcc_glb_rst0"),
+            config: None,
+            bit: "freqme",
+        }),
     },
     Peripheral {
         name: "GLIKEY0",

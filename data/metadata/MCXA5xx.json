@@ -4870,6 +4870,12 @@
     {
       "name": "FREQME0",
       "address": "0x40009000",
+      "block": "mcxa/FREQME",
+      "gate": {
+        "enable": "mrcc_glb_cc0",
+        "reset": "mrcc_glb_rst0",
+        "bit": "freqme"
+      },
       "signals": [
         {
           "name": "CLK_IN0",
