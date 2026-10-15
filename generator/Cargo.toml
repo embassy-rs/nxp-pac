@@ -16,7 +16,7 @@ svd-parser = "0.14.9"
 proc-macro2 = "1.0.95"
 quote = "1.0.40"
 serde = { version = "1.0.228", features = ["derive"] }
-serde_json = "1.0.145"
+serde_json = { version = "1.0.145", features = ["preserve_order"] }
 serde_yaml = "=0.9.34-deprecated"
 tracing = "0.1.44"
 tracing-subscriber = { version = "0.3.22", features = ["env-filter"] }

@@ -9,29 +9,11 @@ transforms:
     to: wupe
 
   - !MakeFieldArray
-    fieldsets: wuu0::Pe2
-    from: wupe\d+
-    to: wupe
-
-  - !MakeFieldArray
     fieldsets: wuu0::Pdc1
     from: wupdc\d+
     to: wupdc
 
-  - !MakeFieldArray
-    fieldsets: wuu0::Pdc2
-    from: wupdc\d+
-    to: wupdc
-
-  - !MakeFieldArray
-    fieldsets: wuu0::Pf
-    from: wuf\d+
-    to: wuf
-
-  - !MakeFieldArray
-    fieldsets: wuu0::Pmc
-    from: wupmc\d+
-    to: wupmc
+  # Keep sparse pin fieldsets enumerated; MCXA577 reserves inputs 28, 29, 31.
 
   # NOTE: Me (wume) and De (wude) are deliberately NOT arrayized. Their bit
   # positions are not evenly spaced (Me skips 7 and 9; De skips 5 and 7), so

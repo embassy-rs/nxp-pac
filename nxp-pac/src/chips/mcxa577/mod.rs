@@ -1,8 +1,6 @@
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Interrupt {
-    #[doc = "0 - RESERVED16"]
-    RESERVED16 = 0,
     #[doc = "1 - CMC"]
     CMC = 1,
     #[doc = "2 - DMA0_CH0"]
@@ -157,8 +155,6 @@ pub enum Interrupt {
     PKC = 110,
     #[doc = "111 - SGI"]
     SGI = 111,
-    #[doc = "112 - SPI_FILTER"]
-    SPI_FILTER = 112,
     #[doc = "113 - TRNG0"]
     TRNG0 = 113,
     #[doc = "114 - SECURE_ERR"]

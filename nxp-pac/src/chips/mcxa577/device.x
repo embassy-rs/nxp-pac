@@ -1,4 +1,3 @@
-PROVIDE(RESERVED16 = DefaultHandler);
 PROVIDE(CMC = DefaultHandler);
 PROVIDE(DMA0_CH0 = DefaultHandler);
 PROVIDE(DMA0_CH1 = DefaultHandler);
@@ -76,7 +75,6 @@ PROVIDE(SMARTDMA = DefaultHandler);
 PROVIDE(CDOG1 = DefaultHandler);
 PROVIDE(PKC = DefaultHandler);
 PROVIDE(SGI = DefaultHandler);
-PROVIDE(SPI_FILTER = DefaultHandler);
 PROVIDE(TRNG0 = DefaultHandler);
 PROVIDE(SECURE_ERR = DefaultHandler);
 PROVIDE(SEC_HYPERVISOR_CALL = DefaultHandler);

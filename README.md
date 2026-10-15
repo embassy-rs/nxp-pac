@@ -29,7 +29,25 @@ Because the crate is in transition, some of them use the PAC method, and some of
 | LPC55S69 | PAC |
 | MCXN947 | PAC |
 | MCXA156 | PAC |
+| MCXA175 | MetaPAC |
+| MCXA176 | MetaPAC |
+| MCXA185 | MetaPAC |
+| MCXA186 | MetaPAC |
+| MCXA255 | MetaPAC |
 | MCXA256 | MetaPAC |
+| MCXA265 | MetaPAC |
+| MCXA266 | MetaPAC |
+| MCXA276 | MetaPAC (engineering sample) |
+| MCXA286 | MetaPAC |
+| MCXA287 | MetaPAC |
+| MCXA456 | MetaPAC |
+| MCXA457 | MetaPAC |
+| MCXA536 | MetaPAC |
+| MCXA537 | MetaPAC |
+| MCXA556 | MetaPAC |
+| MCXA557 | MetaPAC |
+| MCXA566 | MetaPAC |
+| MCXA567 | MetaPAC |
 | MCXA577 | MetaPAC |
 
 ## Tour

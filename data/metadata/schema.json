@@ -5,6 +5,11 @@
   "description": "Schema to define NXP PAC chip metadata",
   "type": "object",
   "properties": {
+    "include": {
+      "description": "Shared metadata file name, without extension. Nested includes are not supported. Chip fields replace shared fields.",
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]+$"
+    },
     "chips": {
       "description": "Chip part numbers provided by this definition",
       "type": "array",
@@ -28,9 +33,13 @@
     }
   },
   "required": [
-    "chips",
-    "pins",
-    "peripherals"
+    "chips"
+  ],
+  "allOf": [
+    {
+      "if": { "not": { "required": ["include"] } },
+      "then": { "required": ["pins", "peripherals"] }
+    }
   ],
   "$defs": {
     "pins": {

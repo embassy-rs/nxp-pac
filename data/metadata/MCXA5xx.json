@@ -695,6 +695,7 @@
     },
     {
       "name": "_10BASE_T1S0",
+      "only_in": "^MCXA(536|537|566|567|577)$",
       "address": "0x4002D000",
       "signals": [
         {
@@ -966,6 +967,7 @@
     },
     {
       "name": "ADC1",
+      "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x400B0000",
       "block": "mcxa/ADC",
       "signals": [
@@ -1169,11 +1171,8 @@
       "signals": []
     },
     {
-      "name": "AOI1",
-      "signals": []
-    },
-    {
       "name": "CAN0",
+      "only_in": "^MCXA(286|287|456|457|566|567|577)$",
       "address": "0x400CC000",
       "block": "mcxa/CAN::Can",
       "signals": [
@@ -1236,6 +1235,7 @@
     },
     {
       "name": "CAN1",
+      "only_in": "^MCXA(286|287|456|457|566|567|577)$",
       "address": "0x400D0000",
       "block": "mcxa/CAN::Can",
       "signals": [
@@ -1314,12 +1314,14 @@
     },
     {
       "name": "CDOG0",
+      "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x40040000",
       "block": "mcxa/CDOG",
       "signals": []
     },
     {
       "name": "CDOG1",
+      "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x40041000",
       "block": "mcxa/CDOG",
       "signals": []
@@ -3695,6 +3697,7 @@
     },
     {
       "name": "DAC0",
+      "only_in": "^MCXA(286|287|456|457|566|567|577)$",
       "address": "0x400B4000",
       "block": "mcxa/DAC",
       "signals": [
@@ -3723,6 +3726,7 @@
     },
     {
       "name": "DAC1",
+      "only_in": "^MCXA(286|287|456|457|566|567|577)$",
       "address": "0x400B5000",
       "block": "mcxa/DAC",
       "signals": [
@@ -3756,6 +3760,7 @@
     },
     {
       "name": "DBGMAILBOX",
+      "address": "0x40042000",
       "signals": [
         {
           "name": "TDI",
@@ -3822,6 +3827,7 @@
     },
     {
       "name": "ENET0",
+      "only_in": "^MCXA(536|537|566|567|577)$",
       "address": "0x4001C000",
       "signals": [
         {
@@ -4062,6 +4068,7 @@
     },
     {
       "name": "FLEXIO0",
+      "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x40099000",
       "signals": [
         {
@@ -6233,6 +6240,7 @@
     },
     {
       "name": "I3C0",
+      "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x40002000",
       "block": "mcxa/I3C",
       "signals": [
@@ -6296,6 +6304,7 @@
     },
     {
       "name": "I3C1",
+      "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x40003000",
       "block": "mcxa/I3C",
       "signals": [
@@ -6394,6 +6403,7 @@
     },
     {
       "name": "I3C2",
+      "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x4009E000",
       "block": "mcxa/I3C",
       "signals": [
@@ -6457,6 +6467,7 @@
     },
     {
       "name": "I3C3",
+      "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x400DE000",
       "block": "mcxa/I3C",
       "signals": [
@@ -6803,6 +6814,7 @@
     },
     {
       "name": "LPI2C3",
+      "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x400D5000",
       "block": "mcxa/LPI2C",
       "signals": [
@@ -6916,6 +6928,7 @@
     },
     {
       "name": "LPI2C4",
+      "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x400D6000",
       "block": "mcxa/LPI2C",
       "signals": [
@@ -7386,6 +7399,7 @@
     },
     {
       "name": "LPSPI3",
+      "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x40022000",
       "block": "mcxa/LPSPI",
       "signals": [
@@ -7529,6 +7543,7 @@
     },
     {
       "name": "LPSPI4",
+      "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x40023000",
       "block": "mcxa/LPSPI",
       "signals": [
@@ -7644,6 +7659,7 @@
     },
     {
       "name": "LPSPI5",
+      "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x40024000",
       "block": "mcxa/LPSPI",
       "signals": [
@@ -8131,6 +8147,7 @@
     },
     {
       "name": "LPUART3",
+      "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x400A2000",
       "block": "mcxa/LPUART",
       "signals": [
@@ -8223,6 +8240,7 @@
     },
     {
       "name": "LPUART4",
+      "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x400A3000",
       "block": "mcxa/LPUART",
       "signals": [
@@ -8311,6 +8329,7 @@
     },
     {
       "name": "LPUART5",
+      "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x400DA000",
       "block": "mcxa/LPUART",
       "signals": [
@@ -8639,6 +8658,7 @@
     },
     {
       "name": "ROMCP",
+      "address": "0x40011000",
       "signals": []
     },
     {
@@ -8719,22 +8739,6 @@
       "address": "0x40091000",
       "block": "mcxa/SYSCON5xx::SYSCON",
       "module": "SYSCON",
-      "signals": []
-    },
-    {
-      "name": "Secure_AHB_Ctrl_Alias_0",
-      "signals": []
-    },
-    {
-      "name": "Secure_AHB_Ctrl_Alias_1",
-      "signals": []
-    },
-    {
-      "name": "Secure_AHB_Ctrl_Alias_2",
-      "signals": []
-    },
-    {
-      "name": "Secure_AHB_Ctrl_Alias_3",
       "signals": []
     },
     {
@@ -9650,6 +9654,7 @@
     },
     {
       "name": "TSI0",
+      "only_in": "^MCXA(456|457|577)$",
       "address": "0x400C3000",
       "signals": [
         {
@@ -10571,6 +10576,8 @@
     },
     {
       "name": "USB1",
+      "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
+      "address": "0x4002E000",
       "signals": [
         {
           "name": "OTGn_ID",
@@ -10616,6 +10623,7 @@
     },
     {
       "name": "USB1_HS_PHY",
+      "address": "0x4002F000",
       "signals": []
     },
     {
@@ -11021,6 +11029,7 @@
     },
     {
       "name": "eSPI0",
+      "only_in": "^MCXA(556|557|577)$",
       "address": "0x4001F000",
       "signals": [
         {

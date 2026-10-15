@@ -1,8 +1,6 @@
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Interrupt {
-    #[doc = "0 - RESERVED16"]
-    RESERVED16 = 0,
     #[doc = "1 - CMC"]
     CMC = 1,
     #[doc = "2 - DMA0_CH0"]
@@ -41,8 +39,6 @@ pub enum Interrupt {
     WUU0 = 18,
     #[doc = "19 - CAN0"]
     CAN0 = 19,
-    #[doc = "20 - CAN1"]
-    CAN1 = 20,
     #[doc = "23 - FLEXIO"]
     FLEXIO = 23,
     #[doc = "24 - I3C0"]
@@ -119,8 +115,6 @@ pub enum Interrupt {
     CMP0 = 64,
     #[doc = "65 - CMP1"]
     CMP1 = 65,
-    #[doc = "66 - RESERVED82"]
-    RESERVED82 = 66,
     #[doc = "67 - DAC0"]
     DAC0 = 67,
     #[doc = "71 - GPIO0"]
@@ -157,8 +151,6 @@ pub enum Interrupt {
     EQDC1_WATCHDOG = 87,
     #[doc = "88 - EQDC1_INDEX"]
     EQDC1_INDEX = 88,
-    #[doc = "95 - LPUART5"]
-    LPUART5 = 95,
     #[doc = "107 - MAU"]
     MAU = 107,
     #[doc = "108 - SMARTDMA"]
@@ -173,16 +165,10 @@ pub enum Interrupt {
     TRNG0 = 113,
     #[doc = "114 - SECURE_ERR"]
     SECURE_ERR = 114,
-    #[doc = "116 - RESERVED132"]
-    RESERVED132 = 116,
-    #[doc = "117 - RESERVED133"]
-    RESERVED133 = 117,
     #[doc = "119 - RTC"]
     RTC = 119,
     #[doc = "120 - RTC_1HZ"]
     RTC_1HZ = 120,
-    #[doc = "121 - RESERVED137"]
-    RESERVED137 = 121,
 }
 unsafe impl cortex_m::interrupt::InterruptNumber for Interrupt {
     #[inline(always)]
@@ -202,7 +188,6 @@ pub use cortex_m_rt::interrupt;
 pub const ADC0: adc::Adc = unsafe { adc::Adc::from_ptr(0x400AF000 as _) };
 pub const ADC1: adc::Adc = unsafe { adc::Adc::from_ptr(0x400B0000 as _) };
 pub const CAN0: can::Can = unsafe { can::Can::from_ptr(0x400CC000 as _) };
-pub const CAN1: can::Can = unsafe { can::Can::from_ptr(0x400D0000 as _) };
 pub const CDOG0: cdog::Cdog = unsafe { cdog::Cdog::from_ptr(0x40100000 as _) };
 pub const CDOG1: cdog::Cdog = unsafe { cdog::Cdog::from_ptr(0x40107000 as _) };
 pub const CMC: cmc::Cmc = unsafe { cmc::Cmc::from_ptr(0x4008B000 as _) };
@@ -238,7 +223,6 @@ pub const LPUART1: lpuart::Lpuart = unsafe { lpuart::Lpuart::from_ptr(0x400A0000
 pub const LPUART2: lpuart::Lpuart = unsafe { lpuart::Lpuart::from_ptr(0x400A1000 as _) };
 pub const LPUART3: lpuart::Lpuart = unsafe { lpuart::Lpuart::from_ptr(0x400A2000 as _) };
 pub const LPUART4: lpuart::Lpuart = unsafe { lpuart::Lpuart::from_ptr(0x400A3000 as _) };
-pub const LPUART5: lpuart::Lpuart = unsafe { lpuart::Lpuart::from_ptr(0x400DA000 as _) };
 pub const OSTIMER0: ostimer::Ostimer = unsafe { ostimer::Ostimer::from_ptr(0x400AD000 as _) };
 pub const PORT0: port::Port = unsafe { port::Port::from_ptr(0x400BC000 as _) };
 pub const PORT1: port::Port = unsafe { port::Port::from_ptr(0x400BD000 as _) };
