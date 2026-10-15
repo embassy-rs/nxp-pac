@@ -13,6 +13,7 @@ includes:
   - mcxa/dac.yaml
   - mcxa/dma.yaml
   - mcxa/flexpwm.yaml
+  - mcxa/freqme.yaml
   - mcxa/gpio.yaml
   - mcxa/i3c.yaml
   - mcxa/inputmux.yaml

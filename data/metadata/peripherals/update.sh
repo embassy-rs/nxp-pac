@@ -41,6 +41,7 @@ cp raw/MCXA577/CTIMER.yaml mcxa/CTIMER.yaml
 cp raw/MCXA577/DAC.yaml mcxa/DAC.yaml
 cp raw/MCXA577/FLEXSPI.yaml mcxa/FLEXSPI.yaml
 cp raw/MCXA577/FMU.yaml mcxa/FMU.yaml
+cp raw/MCXA577/FREQME.yaml mcxa/FREQME.yaml
 cp raw/MCXA577/GPIO.yaml mcxa/GPIO.yaml
 cp raw/MCXA577/I3C.yaml mcxa/I3C.yaml
 cp raw/MCXA577/INPUTMUX.yaml mcxa/INPUTMUX.yaml

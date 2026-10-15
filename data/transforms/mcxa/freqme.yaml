@@ -1,0 +1,5 @@
+transforms:
+  # Threshold status flags are write-one-to-clear. Use booleans for reading
+  # their state and explicitly choosing which flags a CTRLSTAT write clears.
+  - !DeleteEnums
+    from: freqme0::(GtMaxStat|LtMinStat)
