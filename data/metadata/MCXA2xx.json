@@ -1153,7 +1153,7 @@
     },
     {
       "name": "CAN1",
-      "only_in": "^MCXA(266|276)$",
+      "only_in": "^MCXA(185|186|265|266|276)$",
       "address": "0x400D0000",
       "block": "mcxa/CAN::Can",
       "signals": [
@@ -7382,7 +7382,7 @@
     },
     {
       "name": "LPUART5",
-      "only_in": "^MCXA(266|276)$",
+      "only_in": "^MCXA(185|186|265|266|276)$",
       "address": "0x400DA000",
       "block": "mcxa/LPUART",
       "signals": [
@@ -7567,6 +7567,7 @@
     },
     {
       "name": "PKC0",
+      "only_in": "^MCXA(255|256|265|266|276)$",
       "address": "0x400EA000",
       "block": "mcxa/PKC0",
       "signals": []
@@ -7679,6 +7680,7 @@
     },
     {
       "name": "SGI0",
+      "only_in": "^MCXA(255|256|265|266|276)$",
       "address": "0x400EB000",
       "block": "mcxa/SGI",
       "signals": [],
@@ -7701,7 +7703,7 @@
     },
     {
       "name": "SLCD0",
-      "only_in": "^MCXA(266|276)$",
+      "only_in": "^MCXA(185|186|265|266|276)$",
       "address": "0x400C2000",
       "signals": [
         {
@@ -8982,6 +8984,7 @@
     },
     {
       "name": "TRNG0",
+      "only_in": "^MCXA(255|256|265|266|276)$",
       "address": "0x400EC000",
       "block": "mcxa/TRNG",
       "signals": [],
@@ -8992,6 +8995,7 @@
     },
     {
       "name": "UDF0",
+      "only_in": "^MCXA(255|256|265|266|276)$",
       "address": "0x400ED000",
       "block": "mcxa/UDF0",
       "signals": []
