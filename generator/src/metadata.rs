@@ -63,6 +63,9 @@ pub struct Peripheral {
     #[serde(default)]
     pub dma_muxing: Vec<DmaMux>,
     pub only_in: Option<String>,
+    /// Generate the PAC instance without advertising a HAL driver mapping.
+    #[serde(default)]
+    pub pac_only: bool,
     pub gate: Option<Gate>,
 }
 
@@ -255,7 +258,7 @@ fn generate_metadata(name: &str, metadata: &Metadata) -> TokenStream {
             None => quote! { 0 },
         };
 
-        let driver_name = peripheral.peripheral_block.as_deref().unwrap_or_default();
+        let driver_name = runtime_driver_name(peripheral);
 
         let gate = match peripheral.gate.as_ref() {
             Some(Gate {
@@ -320,6 +323,14 @@ fn generate_metadata(name: &str, metadata: &Metadata) -> TokenStream {
         pub const PINS: &[Pin] = &[#(#pins),*];
         pub const PERIPHERALS: &[Peripheral] = &[#(#peripherals),*];
         pub const INTERRUPTS: &[(&str, u32)] = &[#(#interrupts),*];
+    }
+}
+
+fn runtime_driver_name(peripheral: &Peripheral) -> &str {
+    if peripheral.pac_only {
+        ""
+    } else {
+        peripheral.peripheral_block.as_deref().unwrap_or_default()
     }
 }
 
@@ -564,4 +575,30 @@ pub fn extract_peripherals(
     .context("writing _addresses.json")?;
 
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::{Peripheral, runtime_driver_name};
+
+    fn peripheral(pac_only: bool) -> Peripheral {
+        Peripheral {
+            name: "GPIO0".into(),
+            peripheral_block: Some("mcxa/GPIO".into()),
+            rust_module_name: None,
+            peripheral_address: Some("0x4000_0000".into()),
+            signals: Vec::new(),
+            flexcomm: None,
+            dma_muxing: Vec::new(),
+            only_in: None,
+            pac_only,
+            gate: None,
+        }
+    }
+
+    #[test]
+    fn pac_only_uses_existing_empty_driver_name_convention() {
+        assert_eq!(runtime_driver_name(&peripheral(true)), "");
+        assert_eq!(runtime_driver_name(&peripheral(false)), "mcxa/GPIO");
+    }
 }

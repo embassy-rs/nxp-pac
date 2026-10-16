@@ -29,7 +29,7 @@ pub const CHIPS: &[ChipDescription] = &[
     ChipDescription { chip: "LPC55S16", metadata: Some("LPC55S16"), cores: &["LPC55S16"], metapac: false },
     ChipDescription { chip: "LPC55S69", metadata: Some("LPC55S6x"), cores: &["LPC55S69_cm33_core0", "LPC55S69_cm33_core1"], metapac: false },
     ChipDescription { chip: "MCXN947", metadata: None, cores: &["MCXN947_cm33_core0", "MCXN947_cm33_core1"], metapac: false },
-    ChipDescription { chip: "MCXA156", metadata: None, cores: &["MCXA156"], metapac: false },
+    ChipDescription { chip: "MCXA156", metadata: Some("MCXA156"), cores: &["MCXA156"], metapac: true },
     ChipDescription { chip: "MCXA175", metadata: Some("MCXA175"), cores: &["MCXA175"], metapac: true },
     ChipDescription { chip: "MCXA176", metadata: Some("MCXA176"), cores: &["MCXA176"], metapac: true },
     ChipDescription { chip: "MCXA185", metadata: Some("MCXA185"), cores: &["MCXA185"], metapac: true },

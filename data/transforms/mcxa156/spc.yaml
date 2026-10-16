@@ -1,0 +1,9 @@
+transforms:
+  # RM §25.7.6, §25.7.9, §25.7.11: encoding 3 is reserved.
+  - !DeleteEnumVariants
+    enum: spc0::(ActiveCfg|LpCfg)CoreldoVddLvl
+    from: Over
+
+  - !DeleteEnumVariants
+    enum: spc0::Vsm
+    from: Sram1v2
