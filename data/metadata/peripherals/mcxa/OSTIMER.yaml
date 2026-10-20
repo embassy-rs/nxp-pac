@@ -63,6 +63,7 @@ fieldset/Evtimerl:
     bit_size: 32
 fieldset/MatchH:
   description: Local Match High for CPU.
+  reset_value: 0xffffffff
   fields:
   - name: match_value
     description: EVTimer Match Value.

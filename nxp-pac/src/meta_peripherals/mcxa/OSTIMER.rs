@@ -241,7 +241,7 @@ impl MatchH {
 impl Default for MatchH {
     #[inline(always)]
     fn default() -> MatchH {
-        MatchH(0)
+        MatchH(4294967295)
     }
 }
 impl core::fmt::Debug for MatchH {

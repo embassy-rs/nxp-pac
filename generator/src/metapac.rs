@@ -1,6 +1,10 @@
-use std::{collections::HashSet, fs, path::Path};
+use std::{
+    collections::{BTreeMap, HashSet},
+    fs,
+    path::Path,
+};
 
-use anyhow::Context;
+use anyhow::{Context, ensure};
 use chiptool::commands::gen_common::GenCommon;
 use chiptool::generate::{CommonModule, Options};
 use indexmap::IndexSet;
@@ -91,8 +95,85 @@ fn generate_peripheral(input: &Path, output: &Path) -> anyhow::Result<()> {
         .with_common_module(CommonModule::External(quote!(crate::pac::common)))
         .with_skip_no_std(true);
     let tokens = chiptool::generate::render(&ir, &options)?;
+    let tokens = apply_reset_values(&data, &ir, tokens)?;
     fs::write(output, tokens.to_string())?;
     Ok(())
+}
+
+#[derive(serde::Deserialize)]
+struct FieldsetMetadata {
+    reset_value: Option<u64>,
+}
+
+fn apply_reset_values(
+    data: &[u8],
+    ir: &chiptool::ir::IR,
+    tokens: TokenStream,
+) -> anyhow::Result<TokenStream> {
+    let definitions: BTreeMap<String, FieldsetMetadata> = serde_yaml::from_slice(data)?;
+    let mut reset_values = BTreeMap::new();
+    for (key, metadata) in definitions {
+        let Some(value) = metadata.reset_value else {
+            continue;
+        };
+        let name = key
+            .strip_prefix("fieldset/")
+            .context("reset_value requires a fieldset")?;
+        let fieldset = ir
+            .fieldsets
+            .get(name)
+            .context("reset_value fieldset not found")?;
+        ensure!(
+            fieldset.bit_size <= 64,
+            "reset_value fieldset exceeds 64 bits: {name}"
+        );
+        ensure!(
+            fieldset.bit_size == 64 || value < (1u64 << fieldset.bit_size),
+            "reset_value exceeds fieldset width: {name}"
+        );
+        reset_values.insert(name.to_owned(), value);
+    }
+    if reset_values.is_empty() {
+        return Ok(tokens);
+    }
+
+    let mut file: syn::File = syn::parse2(tokens)?;
+    for item in &mut file.items {
+        let syn::Item::Impl(implementation) = item else {
+            continue;
+        };
+        if !implementation
+            .trait_
+            .as_ref()
+            .is_some_and(|(_, path, _)| path.is_ident("Default"))
+        {
+            continue;
+        }
+        let syn::Type::Path(self_type) = &*implementation.self_ty else {
+            continue;
+        };
+        let Some(name) = self_type.path.get_ident() else {
+            continue;
+        };
+        let Some(value) = reset_values.remove(&name.to_string()) else {
+            continue;
+        };
+        let value = Literal::u64_unsuffixed(value);
+        let method = implementation
+            .items
+            .iter_mut()
+            .find_map(|item| match item {
+                syn::ImplItem::Fn(method) if method.sig.ident == "default" => Some(method),
+                _ => None,
+            })
+            .context("Default implementation has no default method")?;
+        method.block = syn::parse_quote!({ #name(#value) });
+    }
+    ensure!(
+        reset_values.is_empty(),
+        "reset_value has no generated Default implementation: {reset_values:?}"
+    );
+    Ok(quote!(#file))
 }
 
 /// Generate a file in meta_peripherals listing all peripherals.
