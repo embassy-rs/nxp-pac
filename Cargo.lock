@@ -335,6 +335,7 @@ dependencies = [
  "serde_json",
  "serde_yaml",
  "svd-parser 0.14.9 (registry+https://github.com/rust-lang/crates.io-index)",
+ "syn",
  "temp-dir",
  "tracing",
  "tracing-subscriber",

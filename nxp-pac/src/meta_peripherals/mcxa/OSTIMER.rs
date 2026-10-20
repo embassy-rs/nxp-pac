@@ -241,7 +241,7 @@ impl MatchH {
 impl Default for MatchH {
     #[inline(always)]
     fn default() -> MatchH {
-        MatchH(0)
+        MatchH(4294967295)
     }
 }
 impl core::fmt::Debug for MatchH {
@@ -335,11 +335,23 @@ impl OseventCtrl {
     pub const fn set_match_wr_rdy(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
+    #[doc = "Enables OSTIMER in Debug mode."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn debug_en(&self) -> bool {
+        let val = (self.0 >> 3usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Enables OSTIMER in Debug mode."]
+    #[inline(always)]
+    pub const fn set_debug_en(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
+    }
 }
 impl Default for OseventCtrl {
     #[inline(always)]
     fn default() -> OseventCtrl {
-        OseventCtrl(0)
+        OseventCtrl(8)
     }
 }
 impl core::fmt::Debug for OseventCtrl {
@@ -348,6 +360,7 @@ impl core::fmt::Debug for OseventCtrl {
             .field("ostimer_intrflag", &self.ostimer_intrflag())
             .field("ostimer_intena", &self.ostimer_intena())
             .field("match_wr_rdy", &self.match_wr_rdy())
+            .field("debug_en", &self.debug_en())
             .finish()
     }
 }
@@ -356,10 +369,11 @@ impl defmt::Format for OseventCtrl {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "OseventCtrl {{ ostimer_intrflag: {=bool:?}, ostimer_intena: {=bool:?}, match_wr_rdy: {=bool:?} }}",
+            "OseventCtrl {{ ostimer_intrflag: {=bool:?}, ostimer_intena: {=bool:?}, match_wr_rdy: {=bool:?}, debug_en: {=bool:?} }}",
             self.ostimer_intrflag(),
             self.ostimer_intena(),
-            self.match_wr_rdy()
+            self.match_wr_rdy(),
+            self.debug_en()
         )
     }
 }

@@ -62,6 +62,9 @@ The [`nxp-pac`](/nxp-pac) directory contains the nxp-pac crate. If you are looki
 an NXP microcontroller, please see this directory. You should never need to manually edit the source
 code in this directory. The metadata will need to be updated to support new microcontrollers.
 
+Curated peripheral fieldsets may specify `reset_value` to initialize their generated
+`Default` value. Fieldsets without it retain a zero default.
+
 ## License
 
 The contents of this crate are auto-generated and licensed under the same terms as the underlying SVD file, which is licensed by NXP under a BSD-3-Clause license.

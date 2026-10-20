@@ -63,6 +63,7 @@ fieldset/Evtimerl:
     bit_size: 32
 fieldset/MatchH:
   description: Local Match High for CPU.
+  reset_value: 0xffffffff
   fields:
   - name: match_value
     description: EVTimer Match Value.
@@ -77,6 +78,7 @@ fieldset/MatchL:
     bit_size: 32
 fieldset/OseventCtrl:
   description: OSTIMER Control for CPU.
+  reset_value: 0x8
   fields:
   - name: ostimer_intrflag
     description: Interrupt Flag.
@@ -89,4 +91,8 @@ fieldset/OseventCtrl:
   - name: match_wr_rdy
     description: EVTimer Match Write Ready.
     bit_offset: 2
+    bit_size: 1
+  - name: debug_en
+    description: Enables OSTIMER in Debug mode.
+    bit_offset: 3
     bit_size: 1
