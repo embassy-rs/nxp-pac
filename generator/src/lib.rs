@@ -1,5 +1,10 @@
+#[path = "../../nxp-pac/build/chips.rs"]
+mod chips;
 pub mod commands;
+#[path = "../../nxp-pac/build/inventory.rs"]
+mod inventory;
 pub mod metadata;
+#[path = "../../nxp-pac/build/engine/mod.rs"]
 pub mod metapac;
 pub mod pac;
 pub mod util;

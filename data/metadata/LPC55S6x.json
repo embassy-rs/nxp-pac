@@ -1,5 +1,5 @@
 {
-  "$schema": "./schema.json",
+  "$schema": "../../nxp-pac/data/metadata/schema.json",
   "$comment": "S66 and S69 differ only in RAM and flash",
   "chips": [ "LPC55S66", "LPC55S69" ],
   "nvic_prio_bits": 3,

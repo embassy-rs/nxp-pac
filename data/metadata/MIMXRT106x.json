@@ -1,5 +1,5 @@
 {
-  "$schema": "./schema.json",
+  "$schema": "../../nxp-pac/data/metadata/schema.json",
   "$comment": [
     "1061 has no LCD, CSI or PXP.",
     "GPIO_SPI_* pins only available on the 225 pin package",
