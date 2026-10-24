@@ -6,6 +6,8 @@ mod inventory;
 pub mod metadata;
 #[path = "../../nxp-pac/build/engine/mod.rs"]
 pub mod metapac;
+#[path = "../../nxp-pac/build/models.rs"]
+mod models;
 pub mod pac;
 pub mod util;
 

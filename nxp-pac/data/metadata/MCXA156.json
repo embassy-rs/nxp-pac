@@ -352,7 +352,7 @@
     {
       "name": "INPUTMUX0",
       "address": "0x40001000",
-      "block": "MCXA156/INPUTMUX::Inputmux",
+      "block": "mcx/a/a1/INPUTMUX::Inputmux",
       "module": "INPUTMUX",
       "signals": [
         {
@@ -625,7 +625,7 @@
     {
       "name": "I3C0",
       "address": "0x40002000",
-      "block": "MCXA156/I3C::I3c",
+      "block": "mcx/a/a1/I3C::I3c",
       "module": "I3C",
       "signals": [
         {
@@ -693,7 +693,7 @@
     {
       "name": "CTIMER0",
       "address": "0x40004000",
-      "block": "MCXA156/CTIMER::Ctimer",
+      "block": "mcx/a/a1/CTIMER::Ctimer",
       "module": "CTIMER",
       "signals": [
         {
@@ -1655,7 +1655,7 @@
     {
       "name": "CTIMER1",
       "address": "0x40005000",
-      "block": "MCXA156/CTIMER::Ctimer",
+      "block": "mcx/a/a1/CTIMER::Ctimer",
       "module": "CTIMER",
       "signals": [
         {
@@ -2589,7 +2589,7 @@
     {
       "name": "CTIMER2",
       "address": "0x40006000",
-      "block": "MCXA156/CTIMER::Ctimer",
+      "block": "mcx/a/a1/CTIMER::Ctimer",
       "module": "CTIMER",
       "signals": [
         {
@@ -3535,7 +3535,7 @@
     {
       "name": "CTIMER3",
       "address": "0x40007000",
-      "block": "MCXA156/CTIMER::Ctimer",
+      "block": "mcx/a/a1/CTIMER::Ctimer",
       "module": "CTIMER",
       "signals": [
         {
@@ -4461,7 +4461,7 @@
     {
       "name": "CTIMER4",
       "address": "0x40008000",
-      "block": "MCXA156/CTIMER::Ctimer",
+      "block": "mcx/a/a1/CTIMER::Ctimer",
       "module": "CTIMER",
       "signals": [
         {
@@ -5395,7 +5395,7 @@
     {
       "name": "FREQME0",
       "address": "0x40009000",
-      "block": "MCXA156/FREQME::Freqme",
+      "block": "mcx/a/a1/FREQME::Freqme",
       "module": "FREQME",
       "signals": [
         {
@@ -5448,7 +5448,7 @@
     {
       "name": "UTICK0",
       "address": "0x4000B000",
-      "block": "MCXA156/UTICK::Utick",
+      "block": "mcx/a/a1/UTICK::Utick",
       "module": "UTICK",
       "signals": [
         {
@@ -5493,7 +5493,7 @@
     {
       "name": "WWDT0",
       "address": "0x4000C000",
-      "block": "MCXA156/WWDT::Wwdt",
+      "block": "mcx/a/a1/WWDT::Wwdt",
       "module": "WWDT",
       "signals": [],
       "pac_only": true
@@ -5501,7 +5501,7 @@
     {
       "name": "DMA0",
       "address": "0x40080000",
-      "block": "MCXA156/DMA::DMA8",
+      "block": "mcx/a/a1/DMA::DMA8",
       "module": "DMA",
       "signals": [],
       "pac_only": true
@@ -5509,7 +5509,7 @@
     {
       "name": "EDMA_0_TCD",
       "address": "0x40081000",
-      "block": "MCXA156/EDMA_0_TCD::TCD8",
+      "block": "mcx/a/a1/EDMA_0_TCD::TCD8",
       "module": "EDMA_0_TCD",
       "signals": [],
       "pac_only": true
@@ -5517,7 +5517,7 @@
     {
       "name": "AOI0",
       "address": "0x40089000",
-      "block": "MCXA156/AOI::Aoi",
+      "block": "mcx/a/a1/AOI::Aoi",
       "module": "AOI",
       "signals": [
         {
@@ -7530,7 +7530,7 @@
     {
       "name": "AOI1",
       "address": "0x40097000",
-      "block": "MCXA156/AOI::Aoi",
+      "block": "mcx/a/a1/AOI::Aoi",
       "module": "AOI",
       "signals": [
         {
@@ -9543,7 +9543,7 @@
     {
       "name": "CRC0",
       "address": "0x4008A000",
-      "block": "MCXA156/CRC::Crc",
+      "block": "mcx/a/a1/CRC::Crc",
       "module": "CRC",
       "signals": [],
       "pac_only": true
@@ -9551,7 +9551,7 @@
     {
       "name": "CMC",
       "address": "0x4008B000",
-      "block": "MCXA156/CMC::Cmc",
+      "block": "mcx/a/a1/CMC::Cmc",
       "module": "CMC",
       "signals": [],
       "pac_only": true
@@ -9559,7 +9559,7 @@
     {
       "name": "EIM0",
       "address": "0x4008C000",
-      "block": "MCXA156/EIM::Eim",
+      "block": "mcx/a/a1/EIM::Eim",
       "module": "EIM",
       "signals": [],
       "pac_only": true
@@ -9567,7 +9567,7 @@
     {
       "name": "ERM0",
       "address": "0x4008D000",
-      "block": "MCXA156/ERM::Erm",
+      "block": "mcx/a/a1/ERM::Erm",
       "module": "ERM",
       "signals": [],
       "pac_only": true
@@ -9575,7 +9575,7 @@
     {
       "name": "MBC0",
       "address": "0x4008E000",
-      "block": "MCXA156/MBC::Mbc",
+      "block": "mcx/a/a1/MBC::Mbc",
       "module": "MBC",
       "signals": [],
       "pac_only": true
@@ -9583,7 +9583,7 @@
     {
       "name": "SCG0",
       "address": "0x4008F000",
-      "block": "MCXA156/SCG::Scg",
+      "block": "mcx/a/a1/SCG::Scg",
       "module": "SCG",
       "signals": [
         {
@@ -9610,7 +9610,7 @@
     {
       "name": "SPC0",
       "address": "0x40090000",
-      "block": "MCXA156/SPC::Spc",
+      "block": "mcx/a/a1/SPC::Spc",
       "module": "SPC",
       "signals": [
         {
@@ -9628,7 +9628,7 @@
     {
       "name": "MRCC0",
       "address": "0x40091000",
-      "block": "MCXA156/MRCC::Mrcc",
+      "block": "mcx/a/a1/MRCC::Mrcc",
       "module": "MRCC",
       "signals": [],
       "pac_only": false
@@ -9636,7 +9636,7 @@
     {
       "name": "SYSCON",
       "address": "0x40091000",
-      "block": "MCXA156/SYSCON::Syscon",
+      "block": "mcx/a/a1/SYSCON::Syscon",
       "module": "SYSCON",
       "signals": [
         {
@@ -9688,7 +9688,7 @@
     {
       "name": "GLIKEY0",
       "address": "0x40091D00",
-      "block": "MCXA156/GLIKEY::Glikey",
+      "block": "mcx/a/a1/GLIKEY::Glikey",
       "module": "GLIKEY",
       "signals": [],
       "pac_only": true
@@ -9696,7 +9696,7 @@
     {
       "name": "WUU0",
       "address": "0x40092000",
-      "block": "MCXA156/WUU::Wuu",
+      "block": "mcx/a/a1/WUU::Wuu",
       "module": "WUU",
       "signals": [
         {
@@ -9914,7 +9914,7 @@
     {
       "name": "VBAT0",
       "address": "0x40093000",
-      "block": "MCXA156/VBAT::Vbat",
+      "block": "mcx/a/a1/VBAT::Vbat",
       "module": "VBAT",
       "signals": [],
       "pac_only": true
@@ -9922,7 +9922,7 @@
     {
       "name": "FMC0",
       "address": "0x40094000",
-      "block": "MCXA156/FMC::Fmc",
+      "block": "mcx/a/a1/FMC::Fmc",
       "module": "FMC",
       "signals": [],
       "pac_only": true
@@ -9930,7 +9930,7 @@
     {
       "name": "FMU0",
       "address": "0x40095000",
-      "block": "MCXA156/FMU::Fmu",
+      "block": "mcx/a/a1/FMU::Fmu",
       "module": "FMU",
       "signals": [],
       "pac_only": true
@@ -9938,7 +9938,7 @@
     {
       "name": "FMU0TEST",
       "address": "0x40096000",
-      "block": "MCXA156/FMU0TEST::Fmu0test",
+      "block": "mcx/a/a1/FMU0TEST::Fmu0test",
       "module": "FMU0TEST",
       "signals": [],
       "pac_only": true
@@ -9946,7 +9946,7 @@
     {
       "name": "FLEXIO0",
       "address": "0x40099000",
-      "block": "MCXA156/FLEXIO::Flexio",
+      "block": "mcx/a/a1/FLEXIO::Flexio",
       "module": "FLEXIO",
       "signals": [
         {
@@ -10801,7 +10801,7 @@
     {
       "name": "LPI2C0",
       "address": "0x4009A000",
-      "block": "MCXA156/LPI2C::Lpi2c",
+      "block": "mcx/a/a1/LPI2C::Lpi2c",
       "module": "LPI2C",
       "signals": [
         {
@@ -10960,7 +10960,7 @@
     {
       "name": "LPI2C1",
       "address": "0x4009B000",
-      "block": "MCXA156/LPI2C::Lpi2c",
+      "block": "mcx/a/a1/LPI2C::Lpi2c",
       "module": "LPI2C",
       "signals": [
         {
@@ -11118,7 +11118,7 @@
     {
       "name": "LPI2C2",
       "address": "0x400D4000",
-      "block": "MCXA156/LPI2C::Lpi2c",
+      "block": "mcx/a/a1/LPI2C::Lpi2c",
       "module": "LPI2C",
       "signals": [
         {
@@ -11285,7 +11285,7 @@
     {
       "name": "LPI2C3",
       "address": "0x400D5000",
-      "block": "MCXA156/LPI2C::Lpi2c",
+      "block": "mcx/a/a1/LPI2C::Lpi2c",
       "module": "LPI2C",
       "signals": [
         {
@@ -11359,7 +11359,7 @@
     {
       "name": "LPSPI0",
       "address": "0x4009C000",
-      "block": "MCXA156/LPSPI::Lpspi",
+      "block": "mcx/a/a1/LPSPI::Lpspi",
       "module": "LPSPI",
       "signals": [
         {
@@ -11556,7 +11556,7 @@
     {
       "name": "LPSPI1",
       "address": "0x4009D000",
-      "block": "MCXA156/LPSPI::Lpspi",
+      "block": "mcx/a/a1/LPSPI::Lpspi",
       "module": "LPSPI",
       "signals": [
         {
@@ -11757,7 +11757,7 @@
     {
       "name": "LPUART0",
       "address": "0x4009F000",
-      "block": "MCXA156/LPUART::Lpuart",
+      "block": "mcx/a/a1/LPUART::Lpuart",
       "module": "LPUART",
       "signals": [
         {
@@ -11960,7 +11960,7 @@
     {
       "name": "LPUART1",
       "address": "0x400A0000",
-      "block": "MCXA156/LPUART::Lpuart",
+      "block": "mcx/a/a1/LPUART::Lpuart",
       "module": "LPUART",
       "signals": [
         {
@@ -12174,7 +12174,7 @@
     {
       "name": "LPUART2",
       "address": "0x400A1000",
-      "block": "MCXA156/LPUART::Lpuart",
+      "block": "mcx/a/a1/LPUART::Lpuart",
       "module": "LPUART",
       "signals": [
         {
@@ -12396,7 +12396,7 @@
     {
       "name": "LPUART3",
       "address": "0x400A2000",
-      "block": "MCXA156/LPUART::Lpuart",
+      "block": "mcx/a/a1/LPUART::Lpuart",
       "module": "LPUART",
       "signals": [
         {
@@ -12594,7 +12594,7 @@
     {
       "name": "LPUART4",
       "address": "0x400A3000",
-      "block": "MCXA156/LPUART::Lpuart",
+      "block": "mcx/a/a1/LPUART::Lpuart",
       "module": "LPUART",
       "signals": [
         {
@@ -12800,7 +12800,7 @@
     {
       "name": "USB0",
       "address": "0x400A4000",
-      "block": "MCXA156/USB::Usb",
+      "block": "mcx/a/a1/USB::Usb",
       "module": "USB",
       "signals": [
         {
@@ -12818,7 +12818,7 @@
     {
       "name": "EQDC0",
       "address": "0x400A7000",
-      "block": "MCXA156/QDC::Qdc",
+      "block": "mcx/a/a1/QDC::Qdc",
       "module": "QDC",
       "signals": [
         {
@@ -13706,7 +13706,7 @@
     {
       "name": "EQDC1",
       "address": "0x400A8000",
-      "block": "MCXA156/QDC::Qdc",
+      "block": "mcx/a/a1/QDC::Qdc",
       "module": "QDC",
       "signals": [
         {
@@ -14594,7 +14594,7 @@
     {
       "name": "FLEX_PWM0",
       "address": "0x400A9000",
-      "block": "MCXA156/FLEXPWM::Flexpwm",
+      "block": "mcx/a/a1/FLEXPWM::Flexpwm",
       "module": "FLEXPWM",
       "signals": [
         {
@@ -15959,7 +15959,7 @@
     {
       "name": "FLEX_PWM1",
       "address": "0x400AA000",
-      "block": "MCXA156/FLEXPWM::Flexpwm",
+      "block": "mcx/a/a1/FLEXPWM::Flexpwm",
       "module": "FLEXPWM",
       "signals": [
         {
@@ -17300,7 +17300,7 @@
     {
       "name": "LPTMR0",
       "address": "0x400AB000",
-      "block": "MCXA156/LPTMR::Lptmr",
+      "block": "mcx/a/a1/LPTMR::Lptmr",
       "module": "LPTMR",
       "signals": [
         {
@@ -17334,7 +17334,7 @@
     {
       "name": "OSTIMER0",
       "address": "0x400AD000",
-      "block": "MCXA156/OSTIMER::Ostimer",
+      "block": "mcx/a/a1/OSTIMER::Ostimer",
       "signals": [],
       "gate": {
         "enable": "mrcc_glb_cc1",
@@ -17346,7 +17346,7 @@
     {
       "name": "WAKETIMER0",
       "address": "0x400AE000",
-      "block": "MCXA156/WAKETIMER::Waketimer",
+      "block": "mcx/a/a1/WAKETIMER::Waketimer",
       "module": "WAKETIMER",
       "signals": [],
       "pac_only": true
@@ -17354,7 +17354,7 @@
     {
       "name": "ADC0",
       "address": "0x400AF000",
-      "block": "MCXA156/ADC::Adc",
+      "block": "mcx/a/a1/ADC::Adc",
       "module": "ADC",
       "signals": [
         {
@@ -17586,7 +17586,7 @@
     {
       "name": "ADC1",
       "address": "0x400B0000",
-      "block": "MCXA156/ADC::Adc",
+      "block": "mcx/a/a1/ADC::Adc",
       "module": "ADC",
       "signals": [
         {
@@ -17781,7 +17781,7 @@
     {
       "name": "CMP0",
       "address": "0x400B1000",
-      "block": "MCXA156/CMP::Cmp",
+      "block": "mcx/a/a1/CMP::Cmp",
       "module": "CMP",
       "signals": [
         {
@@ -17891,7 +17891,7 @@
     {
       "name": "CMP1",
       "address": "0x400B2000",
-      "block": "MCXA156/CMP::Cmp",
+      "block": "mcx/a/a1/CMP::Cmp",
       "module": "CMP",
       "signals": [
         {
@@ -18001,7 +18001,7 @@
     {
       "name": "DAC0",
       "address": "0x400B4000",
-      "block": "MCXA156/DAC::Dac",
+      "block": "mcx/a/a1/DAC::Dac",
       "module": "DAC",
       "signals": [
         {
@@ -18026,7 +18026,7 @@
     {
       "name": "OPAMP0",
       "address": "0x400B7000",
-      "block": "MCXA156/OPAMP::Opamp",
+      "block": "mcx/a/a1/OPAMP::Opamp",
       "module": "OPAMP",
       "signals": [
         {
@@ -18062,7 +18062,7 @@
     {
       "name": "PORT0",
       "address": "0x400BC000",
-      "block": "MCXA156/PORT::Port",
+      "block": "mcx/a/a1/PORT::Port",
       "module": "PORT",
       "signals": [],
       "gate": {
@@ -18074,7 +18074,7 @@
     {
       "name": "PORT1",
       "address": "0x400BD000",
-      "block": "MCXA156/PORT::Port1",
+      "block": "mcx/a/a1/PORT::Port1",
       "module": "PORT",
       "signals": [],
       "pac_only": false,
@@ -18086,7 +18086,7 @@
     {
       "name": "PORT2",
       "address": "0x400BE000",
-      "block": "MCXA156/PORT::Port2",
+      "block": "mcx/a/a1/PORT::Port2",
       "module": "PORT",
       "signals": [],
       "pac_only": false,
@@ -18098,7 +18098,7 @@
     {
       "name": "PORT3",
       "address": "0x400BF000",
-      "block": "MCXA156/PORT::Port3",
+      "block": "mcx/a/a1/PORT::Port3",
       "module": "PORT",
       "signals": [],
       "gate": {
@@ -18110,7 +18110,7 @@
     {
       "name": "PORT4",
       "address": "0x400C0000",
-      "block": "MCXA156/PORT::Port4",
+      "block": "mcx/a/a1/PORT::Port4",
       "module": "PORT",
       "signals": [],
       "pac_only": false,
@@ -18122,7 +18122,7 @@
     {
       "name": "CAN0",
       "address": "0x400CC000",
-      "block": "MCXA156/CAN::Can",
+      "block": "mcx/a/a1/CAN::Can",
       "module": "CAN",
       "signals": [
         {
@@ -18188,7 +18188,7 @@
     {
       "name": "CDOG0",
       "address": "0x40100000",
-      "block": "MCXA156/CDOG::Cdog",
+      "block": "mcx/a/a1/CDOG::Cdog",
       "module": "CDOG",
       "signals": [],
       "pac_only": true
@@ -18196,7 +18196,7 @@
     {
       "name": "DBGMAILBOX",
       "address": "0x40101000",
-      "block": "MCXA156/DBGMAILBOX::Dbgmailbox",
+      "block": "mcx/a/a1/DBGMAILBOX::Dbgmailbox",
       "module": "DBGMAILBOX",
       "signals": [],
       "pac_only": true
@@ -18204,7 +18204,7 @@
     {
       "name": "GPIO0",
       "address": "0x40102000",
-      "block": "MCXA156/GPIO::Gpio",
+      "block": "mcx/a/a1/GPIO::Gpio",
       "module": "GPIO",
       "signals": [
         {
@@ -18341,7 +18341,7 @@
     {
       "name": "GPIO1",
       "address": "0x40103000",
-      "block": "MCXA156/GPIO::Gpio",
+      "block": "mcx/a/a1/GPIO::Gpio",
       "module": "GPIO",
       "signals": [
         {
@@ -18532,7 +18532,7 @@
     {
       "name": "GPIO2",
       "address": "0x40104000",
-      "block": "MCXA156/GPIO::Gpio",
+      "block": "mcx/a/a1/GPIO::Gpio",
       "module": "GPIO",
       "signals": [
         {
@@ -18723,7 +18723,7 @@
     {
       "name": "GPIO3",
       "address": "0x40105000",
-      "block": "MCXA156/GPIO::Gpio",
+      "block": "mcx/a/a1/GPIO::Gpio",
       "module": "GPIO",
       "signals": [
         {
@@ -18968,7 +18968,7 @@
     {
       "name": "GPIO4",
       "address": "0x40106000",
-      "block": "MCXA156/GPIO::Gpio",
+      "block": "mcx/a/a1/GPIO::Gpio",
       "module": "GPIO",
       "signals": [
         {

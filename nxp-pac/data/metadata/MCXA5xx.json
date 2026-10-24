@@ -690,7 +690,7 @@
     {
       "name": "AHBSC",
       "address": "0x40044000",
-      "block": "mcxa/AHBSC",
+      "block": "mcx/a/a5/AHBSC",
       "signals": []
     },
     {
@@ -742,7 +742,7 @@
     {
       "name": "ADC0",
       "address": "0x400AF000",
-      "block": "mcxa/ADC",
+      "block": "mcx/a/a5/ADC",
       "signals": [
         {
           "name": "A0",
@@ -969,7 +969,7 @@
       "name": "ADC1",
       "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x400B0000",
-      "block": "mcxa/ADC",
+      "block": "mcx/a/a5/ADC",
       "signals": [
         {
           "name": "A0",
@@ -1174,7 +1174,7 @@
       "name": "CAN0",
       "only_in": "^MCXA(286|287|456|457|566|567|577)$",
       "address": "0x400CC000",
-      "block": "mcxa/CAN::Can",
+      "block": "mcx/a/a5/CAN::Can",
       "signals": [
         {
           "name": "RXD",
@@ -1237,7 +1237,7 @@
       "name": "CAN1",
       "only_in": "^MCXA(286|287|456|457|566|567|577)$",
       "address": "0x400D0000",
-      "block": "mcxa/CAN::Can",
+      "block": "mcx/a/a5/CAN::Can",
       "signals": [
         {
           "name": "RXD",
@@ -1316,14 +1316,14 @@
       "name": "CDOG0",
       "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x40040000",
-      "block": "mcxa/CDOG",
+      "block": "mcx/a/a5/CDOG",
       "signals": []
     },
     {
       "name": "CDOG1",
       "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x40041000",
-      "block": "mcxa/CDOG",
+      "block": "mcx/a/a5/CDOG",
       "signals": []
     },
     {
@@ -1347,7 +1347,7 @@
     {
       "name": "CMC",
       "address": "0x400C6000",
-      "block": "mcxa/CMC",
+      "block": "mcx/a/a5/CMC",
       "signals": []
     },
     {
@@ -1444,7 +1444,7 @@
     {
       "name": "CRC0",
       "address": "0x400C5000",
-      "block": "mcxa/CRC",
+      "block": "mcx/a/a5/CRC",
       "signals": [],
       "gate": {
         "enable": "mrcc_glb_cc0",
@@ -1454,7 +1454,7 @@
     {
       "name": "CTIMER0",
       "address": "0x40004000",
-      "block": "mcxa/CTIMER",
+      "block": "mcx/a/a5/CTIMER",
       "signals": [
         {
           "name": "INP0",
@@ -1942,7 +1942,7 @@
     {
       "name": "CTIMER1",
       "address": "0x40005000",
-      "block": "mcxa/CTIMER",
+      "block": "mcx/a/a5/CTIMER",
       "signals": [
         {
           "name": "INP0",
@@ -2370,7 +2370,7 @@
     {
       "name": "CTIMER2",
       "address": "0x40006000",
-      "block": "mcxa/CTIMER",
+      "block": "mcx/a/a5/CTIMER",
       "signals": [
         {
           "name": "INP0",
@@ -2814,7 +2814,7 @@
     {
       "name": "CTIMER3",
       "address": "0x40007000",
-      "block": "mcxa/CTIMER",
+      "block": "mcx/a/a5/CTIMER",
       "signals": [
         {
           "name": "INP0",
@@ -3262,7 +3262,7 @@
     {
       "name": "CTIMER4",
       "address": "0x40008000",
-      "block": "mcxa/CTIMER",
+      "block": "mcx/a/a5/CTIMER",
       "signals": [
         {
           "name": "INP0",
@@ -3699,7 +3699,7 @@
       "name": "DAC0",
       "only_in": "^MCXA(286|287|456|457|566|567|577)$",
       "address": "0x400B4000",
-      "block": "mcxa/DAC",
+      "block": "mcx/a/a5/DAC",
       "signals": [
         {
           "name": "OUT",
@@ -3728,7 +3728,7 @@
       "name": "DAC1",
       "only_in": "^MCXA(286|287|456|457|566|567|577)$",
       "address": "0x400B5000",
-      "block": "mcxa/DAC",
+      "block": "mcx/a/a5/DAC",
       "signals": [
         {
           "name": "OUT",
@@ -3803,7 +3803,7 @@
     {
       "name": "DMA0",
       "address": "0x40080000",
-      "block": "mcxa/DMA::DMA12",
+      "block": "mcx/a/a5/DMA::DMA12",
       "signals": [],
       "gate": {
         "enable": "mrcc_glb_acc0",
@@ -3813,7 +3813,7 @@
     {
       "name": "DMA1",
       "address": "0x40013000",
-      "block": "mcxa/DMA::DMA4",
+      "block": "mcx/a/a5/DMA::DMA4",
       "signals": [],
       "gate": {
         "enable": "mrcc_glb_acc0",
@@ -4698,7 +4698,7 @@
     {
       "name": "FLEXSPI0",
       "address": "0x40020000",
-      "block": "mcxa/FLEXSPI",
+      "block": "mcx/a/a5/FLEXSPI",
       "signals": [
         {
           "name": "A_DATA0",
@@ -4871,13 +4871,13 @@
     {
       "name": "FMU0",
       "address": "0x40095000",
-      "block": "mcxa/FMU",
+      "block": "mcx/a/a5/FMU",
       "signals": []
     },
     {
       "name": "FREQME0",
       "address": "0x40009000",
-      "block": "mcxa/FREQME",
+      "block": "mcx/a/a5/FREQME",
       "gate": {
         "enable": "mrcc_glb_cc0",
         "reset": "mrcc_glb_rst0",
@@ -4928,7 +4928,7 @@
     {
       "name": "GPIO0",
       "address": "0x40048000",
-      "block": "mcxa/GPIO",
+      "block": "mcx/a/a5/GPIO",
       "signals": [
         {
           "name": "0",
@@ -5198,7 +5198,7 @@
     {
       "name": "GPIO1",
       "address": "0x4004A000",
-      "block": "mcxa/GPIO",
+      "block": "mcx/a/a5/GPIO",
       "signals": [
         {
           "name": "0",
@@ -5423,7 +5423,7 @@
     {
       "name": "GPIO2",
       "address": "0x4004C000",
-      "block": "mcxa/GPIO",
+      "block": "mcx/a/a5/GPIO",
       "signals": [
         {
           "name": "0",
@@ -5720,7 +5720,7 @@
     {
       "name": "GPIO3",
       "address": "0x4004E000",
-      "block": "mcxa/GPIO",
+      "block": "mcx/a/a5/GPIO",
       "signals": [
         {
           "name": "0",
@@ -5990,7 +5990,7 @@
     {
       "name": "GPIO4",
       "address": "0x40050000",
-      "block": "mcxa/GPIO",
+      "block": "mcx/a/a5/GPIO",
       "signals": [
         {
           "name": "0",
@@ -6134,7 +6134,7 @@
     {
       "name": "GPIO5",
       "address": "0x400DF000",
-      "block": "mcxa/GPIO",
+      "block": "mcx/a/a5/GPIO",
       "signals": [
         {
           "name": "0",
@@ -6242,7 +6242,7 @@
       "name": "I3C0",
       "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x40002000",
-      "block": "mcxa/I3C",
+      "block": "mcx/a/a5/I3C",
       "signals": [
         {
           "name": "PUR",
@@ -6306,7 +6306,7 @@
       "name": "I3C1",
       "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x40003000",
-      "block": "mcxa/I3C",
+      "block": "mcx/a/a5/I3C",
       "signals": [
         {
           "name": "PUR",
@@ -6405,7 +6405,7 @@
       "name": "I3C2",
       "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x4009E000",
-      "block": "mcxa/I3C",
+      "block": "mcx/a/a5/I3C",
       "signals": [
         {
           "name": "PUR",
@@ -6469,7 +6469,7 @@
       "name": "I3C3",
       "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x400DE000",
-      "block": "mcxa/I3C",
+      "block": "mcx/a/a5/I3C",
       "signals": [
         {
           "name": "PUR",
@@ -6532,7 +6532,7 @@
     {
       "name": "INPUTMUX0",
       "address": "0x40001000",
-      "block": "mcxa/INPUTMUX",
+      "block": "mcx/a/a5/INPUTMUX",
       "signals": [],
       "gate": {
         "enable": "mrcc_glb_cc0",
@@ -6561,7 +6561,7 @@
     {
       "name": "LPI2C0",
       "address": "0x4009A000",
-      "block": "mcxa/LPI2C",
+      "block": "mcx/a/a5/LPI2C",
       "signals": [
         {
           "name": "HREQ",
@@ -6654,7 +6654,7 @@
     {
       "name": "LPI2C1",
       "address": "0x4009B000",
-      "block": "mcxa/LPI2C",
+      "block": "mcx/a/a5/LPI2C",
       "signals": [
         {
           "name": "SCL",
@@ -6730,7 +6730,7 @@
     {
       "name": "LPI2C2",
       "address": "0x400D4000",
-      "block": "mcxa/LPI2C",
+      "block": "mcx/a/a5/LPI2C",
       "signals": [
         {
           "name": "HREQ",
@@ -6816,7 +6816,7 @@
       "name": "LPI2C3",
       "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x400D5000",
-      "block": "mcxa/LPI2C",
+      "block": "mcx/a/a5/LPI2C",
       "signals": [
         {
           "name": "HREQ",
@@ -6930,7 +6930,7 @@
       "name": "LPI2C4",
       "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x400D6000",
-      "block": "mcxa/LPI2C",
+      "block": "mcx/a/a5/LPI2C",
       "signals": [
         {
           "name": "HREQ",
@@ -7051,7 +7051,7 @@
     {
       "name": "LPSPI0",
       "address": "0x4009C000",
-      "block": "mcxa/LPSPI",
+      "block": "mcx/a/a5/LPSPI",
       "signals": [
         {
           "name": "PCS0",
@@ -7166,7 +7166,7 @@
     {
       "name": "LPSPI1",
       "address": "0x4009D000",
-      "block": "mcxa/LPSPI",
+      "block": "mcx/a/a5/LPSPI",
       "signals": [
         {
           "name": "PCS0",
@@ -7285,7 +7285,7 @@
     {
       "name": "LPSPI2",
       "address": "0x40021000",
-      "block": "mcxa/LPSPI",
+      "block": "mcx/a/a5/LPSPI",
       "signals": [
         {
           "name": "PCS0",
@@ -7401,7 +7401,7 @@
       "name": "LPSPI3",
       "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x40022000",
-      "block": "mcxa/LPSPI",
+      "block": "mcx/a/a5/LPSPI",
       "signals": [
         {
           "name": "PCS0",
@@ -7545,7 +7545,7 @@
       "name": "LPSPI4",
       "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x40023000",
-      "block": "mcxa/LPSPI",
+      "block": "mcx/a/a5/LPSPI",
       "signals": [
         {
           "name": "PCS0",
@@ -7661,7 +7661,7 @@
       "name": "LPSPI5",
       "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x40024000",
-      "block": "mcxa/LPSPI",
+      "block": "mcx/a/a5/LPSPI",
       "signals": [
         {
           "name": "PCS0",
@@ -7776,7 +7776,7 @@
     {
       "name": "LPTMR0",
       "address": "0x400AB000",
-      "block": "mcxa/LPTMR",
+      "block": "mcx/a/a5/LPTMR",
       "signals": [
         {
           "name": "ALT2",
@@ -7812,7 +7812,7 @@
     {
       "name": "LPUART0",
       "address": "0x4009F000",
-      "block": "mcxa/LPUART",
+      "block": "mcx/a/a5/LPUART",
       "signals": [
         {
           "name": "CTS_B",
@@ -7920,7 +7920,7 @@
     {
       "name": "LPUART1",
       "address": "0x400A0000",
-      "block": "mcxa/LPUART",
+      "block": "mcx/a/a5/LPUART",
       "signals": [
         {
           "name": "CTS_B",
@@ -8032,7 +8032,7 @@
     {
       "name": "LPUART2",
       "address": "0x400A1000",
-      "block": "mcxa/LPUART",
+      "block": "mcx/a/a5/LPUART",
       "signals": [
         {
           "name": "CTS_B",
@@ -8149,7 +8149,7 @@
       "name": "LPUART3",
       "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x400A2000",
-      "block": "mcxa/LPUART",
+      "block": "mcx/a/a5/LPUART",
       "signals": [
         {
           "name": "CTS_B",
@@ -8242,7 +8242,7 @@
       "name": "LPUART4",
       "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x400A3000",
-      "block": "mcxa/LPUART",
+      "block": "mcx/a/a5/LPUART",
       "signals": [
         {
           "name": "CTS_B",
@@ -8331,7 +8331,7 @@
       "name": "LPUART5",
       "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "address": "0x400DA000",
-      "block": "mcxa/LPUART",
+      "block": "mcx/a/a5/LPUART",
       "signals": [
         {
           "name": "CTS_B",
@@ -8444,7 +8444,7 @@
     {
       "name": "OSTIMER0",
       "address": "0x400AD000",
-      "block": "mcxa/OSTIMER",
+      "block": "mcx/a/a5/OSTIMER",
       "signals": [],
       "gate": {
         "enable": "mrcc_glb_cc0",
@@ -8582,7 +8582,7 @@
     {
       "name": "PORT0",
       "address": "0x400BC000",
-      "block": "mcxa/PORT",
+      "block": "mcx/a/a5/PORT",
       "signals": [],
       "gate": {
         "enable": "mrcc_glb_cc1",
@@ -8592,7 +8592,7 @@
     {
       "name": "PORT1",
       "address": "0x400BD000",
-      "block": "mcxa/PORT",
+      "block": "mcx/a/a5/PORT",
       "signals": [],
       "gate": {
         "enable": "mrcc_glb_cc1",
@@ -8602,7 +8602,7 @@
     {
       "name": "PORT2",
       "address": "0x400BE000",
-      "block": "mcxa/PORT",
+      "block": "mcx/a/a5/PORT",
       "signals": [],
       "gate": {
         "enable": "mrcc_glb_cc1",
@@ -8612,7 +8612,7 @@
     {
       "name": "PORT3",
       "address": "0x400BF000",
-      "block": "mcxa/PORT",
+      "block": "mcx/a/a5/PORT",
       "signals": [],
       "gate": {
         "enable": "mrcc_glb_cc1",
@@ -8622,7 +8622,7 @@
     {
       "name": "PORT4",
       "address": "0x400C0000",
-      "block": "mcxa/PORT",
+      "block": "mcx/a/a5/PORT",
       "signals": [],
       "gate": {
         "enable": "mrcc_glb_cc1",
@@ -8632,7 +8632,7 @@
     {
       "name": "PORT5",
       "address": "0x400E3000",
-      "block": "mcxa/PORT",
+      "block": "mcx/a/a5/PORT",
       "signals": [],
       "gate": {
         "enable": "mrcc_glb_cc1"
@@ -8664,7 +8664,8 @@
     {
       "name": "RTC0",
       "address": "0x400EE000",
-      "block": "mcxa/RTC5xx::RTC",
+      "block": "mcx/a/a5/RTC::RTC",
+      "module": "RTC5xx",
       "signals": [
         {
           "name": "CLKOUT",
@@ -8680,13 +8681,13 @@
     {
       "name": "SCG0",
       "address": "0x400CA000",
-      "block": "mcxa/SCG",
+      "block": "mcx/a/a5/SCG",
       "signals": []
     },
     {
       "name": "SGI0",
       "address": "0x400EB000",
-      "block": "mcxa/SGI",
+      "block": "mcx/a/a5/SGI",
       "signals": [],
       "gate": {
         "enable": "mrcc_glb_cc4",
@@ -8708,7 +8709,7 @@
     {
       "name": "SPC0",
       "address": "0x400CB000",
-      "block": "mcxa/SPC::Spc5xx",
+      "block": "mcx/a/a5/SPC::Spc5xx",
       "signals": [
         {
           "name": "LPREQ",
@@ -8737,7 +8738,7 @@
     {
       "name": "SYSCON",
       "address": "0x40091000",
-      "block": "mcxa/SYSCON5xx::SYSCON",
+      "block": "mcx/a/a5/SYSCON::SYSCON",
       "module": "SYSCON",
       "signals": []
     },
@@ -9645,7 +9646,7 @@
     {
       "name": "TRNG0",
       "address": "0x400EC000",
-      "block": "mcxa/TRNG",
+      "block": "mcx/a/a5/TRNG",
       "signals": [],
       "gate": {
         "enable": "mrcc_glb_acc4",
@@ -10687,7 +10688,7 @@
     {
       "name": "VBAT0",
       "address": "0x40093000",
-      "block": "mcxa/VBAT",
+      "block": "mcx/a/a5/VBAT",
       "signals": [
         {
           "name": "WAKEUP_b",
@@ -10713,7 +10714,7 @@
     {
       "name": "WUU0",
       "address": "0x40092000",
-      "block": "mcxa/WUU",
+      "block": "mcx/a/a5/WUU",
       "signals": [
         {
           "name": "IN0",
@@ -10970,7 +10971,7 @@
     {
       "name": "WWDT0",
       "address": "0x4000C000",
-      "block": "mcxa/WWDT",
+      "block": "mcx/a/a5/WWDT",
       "signals": [],
       "gate": {
         "enable": "mrcc_glb_acc0",
@@ -10980,7 +10981,7 @@
     {
       "name": "WWDT1",
       "address": "0x4000D000",
-      "block": "mcxa/WWDT",
+      "block": "mcx/a/a5/WWDT",
       "signals": [],
       "gate": {
         "enable": "mrcc_glb_acc0",
@@ -11018,13 +11019,13 @@
     {
       "name": "EDMA_0_TCD",
       "address": "0x40081000",
-      "block": "mcxa/EDMA_TCD::TCD12",
+      "block": "mcx/a/a5/EDMA_TCD::TCD12",
       "signals": []
     },
     {
       "name": "EDMA_1_TCD",
       "address": "0x40014000",
-      "block": "mcxa/EDMA_TCD::TCD4",
+      "block": "mcx/a/a5/EDMA_TCD::TCD4",
       "signals": []
     },
     {
@@ -11158,7 +11159,7 @@
     {
       "name": "MRCC0",
       "address": "0x40091800",
-      "block": "mcxa/MRCC5xx::MRCC",
+      "block": "mcx/a/a5/MRCC::MRCC",
       "module": "MRCC",
       "signals": []
     }

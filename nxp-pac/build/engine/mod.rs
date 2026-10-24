@@ -1,6 +1,7 @@
 pub mod metadata;
 pub mod model;
 mod render;
+mod source;
 pub mod validate;
 
 use anyhow::{Context, ensure};
@@ -21,26 +22,6 @@ pub struct Generation {
     pub output_files: Vec<PathBuf>,
 }
 
-// These mappings have no curated model and no public PAC binding in the
-// committed MetaPAC baseline. Preserve that metadata-only status explicitly;
-// every other missing model is an error rather than silently losing API.
-const INTENTIONALLY_UNMAPPED: &[&str] = &[
-    "mcxa/AOI",
-    "mcxa/CMP",
-    "mcxa/DBGMAILBOX",
-    "mcxa/EIM0",
-    "mcxa/EQDC",
-    "mcxa/ERM0",
-    "mcxa/FMC0",
-    "mcxa/OPAMP0",
-    "mcxa/PKC0",
-    "mcxa/SMARTDMA0",
-    "mcxa/TDET0",
-    "mcxa/UDF0",
-    "mcxa/UTICK0",
-    "mcxa/WAKETIMER0",
-];
-
 pub fn asset_path(name: &str) -> anyhow::Result<&Path> {
     let path = Path::new(name);
     ensure!(
@@ -60,8 +41,30 @@ pub fn generate(
 ) -> anyhow::Result<Generation> {
     let chip =
         super::chips::find(chip).with_context(|| format!("unsupported MetaPAC chip: {chip}"))?;
-    let (metadata, mut input_files) = metadata::load(inputs, chip)
+    let core = chip.core_name();
+    let catalog = super::models::Catalog::load(inputs).context("loading model catalog")?;
+    let (mut metadata, mut input_files) = metadata::load(inputs, chip)
         .with_context(|| format!("loading {} metadata", chip.feature))?;
+    input_files.push(inputs.join("peripherals/models.json"));
+    for peripheral in &mut metadata.peripherals {
+        let Some(block) = peripheral.parse_block_path()? else {
+            continue;
+        };
+        let entry = catalog.entries.get(&block.path).with_context(|| {
+            format!(
+                "{} {}: unknown model {}",
+                chip.feature, peripheral.name, block.path
+            )
+        })?;
+        let suffix = peripheral
+            .peripheral_block
+            .as_deref()
+            .and_then(|block| block.split_once("::"));
+        peripheral.driver_name = Some(match suffix {
+            Some((_, ty)) => format!("{}::{ty}", entry.driver),
+            None => entry.driver.clone(),
+        });
+    }
     let mut pac_metadata = metadata.clone();
     let mut models = BTreeMap::new();
     let mut selected = Vec::new();
@@ -69,23 +72,13 @@ pub fn generate(
         let Some(block) = peripheral.parse_block_path()? else {
             continue;
         };
-        let path = inputs
-            .join("peripherals")
-            .join(asset_path(&block.path)?)
-            .with_extension("yaml");
-        // Preserve the existing metadata/PAC split: an intentionally absent driver
-        // does not become an error or gain a new register implementation.
-        if !path.try_exists()? {
-            ensure!(
-                INTENTIONALLY_UNMAPPED.contains(&block.path.as_str()),
-                "{} {} maps to missing required peripheral model {} ({})",
-                chip.feature,
-                peripheral.name,
-                block.path,
-                path.display()
-            );
+        let entry = &catalog.entries[&block.path];
+        // Explicit null source preserves an existing metadata-only mapping.
+        // Missing files for implemented models are never silently ignored.
+        let Some(source) = &entry.source else {
             continue;
-        }
+        };
+        let path = inputs.join("peripherals").join(asset_path(source)?);
         if !models.contains_key(&block.path) {
             let transforms = chip
                 .transforms
@@ -94,7 +87,8 @@ pub fn generate(
                 .flat_map(|t| t.files.iter())
                 .map(|name| Ok(inputs.join("transforms").join(asset_path(name)?)))
                 .collect::<anyhow::Result<Vec<_>>>()?;
-            let mut model = model::load(&path)?;
+            let mut model = model::load(&inputs.join("peripherals"), &path, &core)
+                .with_context(|| format!("{}: loading {}", chip.feature, block.path))?;
             model::prepare(&mut model, &transforms)
                 .with_context(|| format!("{}: preparing {}", chip.feature, block.path))?;
             validate::validate(&model)
@@ -107,7 +101,7 @@ pub fn generate(
                 block.rust_type_name,
                 block.path
             );
-            input_files.push(path);
+            input_files.extend(model.input_files.iter().cloned());
             input_files.extend(transforms);
             models.insert(block.path.clone(), model);
         }
@@ -129,10 +123,7 @@ pub fn generate(
     let mut output_files = render::write_device(&pac_metadata, &models, out_dir, &outputs)?;
     if outputs.metadata {
         let path = out_dir.join("metadata.rs");
-        fs::write(
-            &path,
-            metadata::render(chip.metadata, &metadata)?.to_string(),
-        )?;
+        fs::write(&path, metadata::render(&core, &metadata)?.to_string())?;
         output_files.push(path);
     }
     input_files.sort();

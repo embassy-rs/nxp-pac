@@ -8,6 +8,8 @@ mod chips;
 mod engine;
 #[path = "build/inventory.rs"]
 mod inventory;
+#[path = "build/models.rs"]
+mod models;
 
 fn main() {
     let mut chips = env::vars().map(|(name, _)| name).filter(|name| {

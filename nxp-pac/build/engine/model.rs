@@ -10,19 +10,14 @@ use serde::Deserialize;
 pub struct Model {
     pub ir: chiptool::ir::IR,
     pub reset_values: BTreeMap<String, u64>,
+    pub input_files: Vec<PathBuf>,
 }
 
-pub fn load(path: &Path) -> anyhow::Result<Model> {
-    let data = fs::read(path).with_context(|| format!("reading {}", path.display()))?;
-    // Value's mapping visitor rejects duplicate keys, including nested mappings.
-    // Deserialize before converting to IR, whose defaulted fields can lose annotations.
-    let yaml: serde_yaml::Value =
-        serde_yaml::from_slice(&data).with_context(|| format!("parsing {}", path.display()))?;
+pub fn load(root: &Path, path: &Path, chip: &str) -> anyhow::Result<Model> {
+    let source = super::source::load(root, path, chip)
+        .with_context(|| format!("{chip}: composing {}", path.display()))?;
     let mut reset_values = BTreeMap::new();
-    for (key, definition) in yaml
-        .as_mapping()
-        .context("peripheral YAML must be a mapping")?
-    {
+    for (key, definition) in &source.definitions {
         if let Some(value) = definition.get("reset_value") {
             let name = key
                 .as_str()
@@ -35,8 +30,10 @@ pub fn load(path: &Path) -> anyhow::Result<Model> {
         }
     }
     Ok(Model {
-        ir: serde_yaml::from_value(yaml).with_context(|| format!("loading {}", path.display()))?,
+        ir: serde_yaml::from_value(serde_yaml::Value::Mapping(source.definitions))
+            .with_context(|| format!("loading {}", path.display()))?,
         reset_values,
+        input_files: source.files,
     })
 }
 

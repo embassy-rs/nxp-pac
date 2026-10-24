@@ -4,6 +4,13 @@ pub struct Chip {
     pub transforms: &'static [ModelTransforms],
 }
 
+impl Chip {
+    /// Availability predicates identify the selected core, not its metadata file.
+    pub fn core_name(&self) -> String {
+        self.feature.to_ascii_uppercase()
+    }
+}
+
 pub struct ModelTransforms {
     pub model: &'static str,
     pub files: &'static [&'static str],

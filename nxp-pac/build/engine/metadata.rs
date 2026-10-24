@@ -47,6 +47,9 @@ pub struct Peripheral {
     #[serde(default)]
     pub pac_only: bool,
     pub gate: Option<Gate>,
+    /// HAL driver selection is independent of the canonical model/source path.
+    #[serde(skip)]
+    pub driver_name: Option<String>,
 }
 
 pub struct BlockPath {
@@ -107,6 +110,7 @@ pub struct Gate {
 }
 
 pub fn load(inputs: &Path, chip: &Chip) -> anyhow::Result<(Metadata, Vec<std::path::PathBuf>)> {
+    let core = chip.core_name();
     let path = inputs
         .join("metadata")
         .join(chip.metadata)
@@ -163,7 +167,7 @@ pub fn load(inputs: &Path, chip: &Chip) -> anyhow::Result<(Metadata, Vec<std::pa
         let keep = match &peripheral.only_in {
             Some(pattern) => regex::Regex::new(pattern)
                 .with_context(|| format!("invalid only_in for {}", peripheral.name))?
-                .is_match(chip.metadata),
+                .is_match(&core),
             None => true,
         };
         if keep {
@@ -214,7 +218,7 @@ pub fn render(chip: &str, metadata: &Metadata) -> anyhow::Result<TokenStream> {
     let peripherals = metadata.peripherals.iter().map(|peripheral| {
         let name = &peripheral.name;
         let addr = peripheral.peripheral_address.as_deref().map(address).transpose()?.unwrap_or(0);
-        let driver = if peripheral.pac_only { "" } else { peripheral.peripheral_block.as_deref().unwrap_or_default() };
+        let driver = if peripheral.pac_only { "" } else { peripheral.driver_name.as_deref().or(peripheral.peripheral_block.as_deref()).unwrap_or_default() };
         let flexcomm = some(peripheral.flexcomm.as_deref());
         let signals = peripheral.signals.iter().map(|signal| {
             let name = &signal.name;

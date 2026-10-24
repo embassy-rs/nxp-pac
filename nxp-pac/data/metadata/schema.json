@@ -105,11 +105,11 @@
           "type": "string"
         },
         "block": {
-          "description": "The yaml block used for the peripheral. Should point to a file in 'data/metadata/peripherals' without extension. E.g.: mcxa/WWDT. If the block name is different from the YAML file name, then you can specify that as: mcxa/WWDT::OTHERBLOCK",
+          "description": "Canonical peripheral model ID, resolved through nxp-pac/data/peripherals/models.json. E.g. mcx/a/a2/WWDT, or mcx/a/a2/DMA::DMA8 to select a particular block. The catalog source path and HAL driver identity are independent of this ID.",
           "type": "string"
         },
         "module": {
-          "description": "Optional name that will be used for the Rust",
+          "description": "Optional flat generated Rust module name; independent of the canonical model ID or YAML source directory",
           "type": "string"
         },
         "address": {

@@ -1,0 +1,2 @@
+includes:
+  - ../common/EDMA_TCD.yaml

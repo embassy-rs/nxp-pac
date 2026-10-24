@@ -4,34 +4,31 @@ use std::{
 };
 
 pub fn write(inputs: &Path, out: &Path) -> io::Result<Vec<PathBuf>> {
-    fn collect(
-        root: &Path,
-        directory: &Path,
-        names: &mut Vec<String>,
-        directories: &mut Vec<PathBuf>,
-    ) -> io::Result<()> {
+    let catalog = super::models::Catalog::load(inputs)?;
+    fn collect(directory: &Path, directories: &mut Vec<PathBuf>) -> io::Result<()> {
         directories.push(directory.to_owned());
         for entry in fs::read_dir(directory)? {
             let entry = entry?;
             let path = entry.path();
             if entry.file_type()?.is_dir() {
-                collect(root, &path, names, directories)?;
-            } else if path.extension().is_some_and(|ext| ext == "yaml") {
-                let relative = path
-                    .strip_prefix(root)
-                    .map_err(io::Error::other)?
-                    .with_extension("");
-                names.push(relative.to_string_lossy().replace('\\', "/"));
+                collect(&path, directories)?;
             }
         }
         Ok(())
     }
     let root = inputs.join("peripherals");
-    let mut names = Vec::new();
+    let mut names = catalog
+        .entries
+        .values()
+        .filter(|entry| entry.source.is_some())
+        .map(|entry| entry.driver.clone())
+        .collect::<Vec<_>>();
     let mut directories = Vec::new();
-    collect(&root, &root, &mut names, &mut directories)?;
+    collect(&root, &mut directories)?;
     names.sort();
+    names.dedup();
     directories.sort();
+    directories.push(root.join("models.json"));
     let values = names
         .iter()
         .map(|name| format!("{name:?}"))

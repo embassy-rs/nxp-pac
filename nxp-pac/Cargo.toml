@@ -41,8 +41,8 @@ inflections = { version = "1.1", optional = true }
 proc-macro2 = { version = "1.0.95", optional = true }
 quote = { version = "1.0.40", optional = true }
 regex = { version = "1.12", optional = true }
-serde = { version = "1.0.228", features = ["derive"], optional = true }
-serde_json = { version = "1.0.145", features = ["preserve_order"], optional = true }
+serde = "1.0.228"
+serde_json = { version = "1.0.145", features = ["preserve_order"] }
 serde_yaml = { version = "=0.9.34-deprecated", optional = true }
 syn = { version = "2.0", features = ["full"], optional = true }
 
@@ -55,7 +55,7 @@ defmt = ["dep:defmt"]
 metadata = []
 
 # Internal implementation detail; chip selection remains the public interface.
-_metapac = ["dep:anyhow", "dep:chiptool", "dep:indexmap", "dep:inflections", "dep:proc-macro2", "dep:quote", "dep:regex", "dep:serde", "dep:serde_json", "dep:serde_yaml", "dep:syn"]
+_metapac = ["dep:anyhow", "dep:chiptool", "dep:indexmap", "dep:inflections", "dep:proc-macro2", "dep:quote", "dep:regex", "serde/derive", "dep:serde_yaml", "dep:syn"]
 
 #! Chip features
 
