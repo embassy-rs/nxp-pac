@@ -255,7 +255,7 @@ fieldset/Mcfgr1:
     bit_size: 3
     enum: Pincfg
   - name: frchs
-    only_in: '^MCXA(175|176|185|186|255|256|265|266|276|286|287|456|457|536|537|556|557|566|567|577)$'
+    only_in: '^MCXA(175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)$'
     description: Force HS Mode.
     bit_offset: 27
     bit_size: 1
@@ -1168,11 +1168,11 @@ enum/Rxcfg:
   bit_size: 1
   variants:
   - name: ReturnsReceivedDataAndClearsRxDataFlag
-    only_in: '^MCXA(175|176|185|186|255|256|265|266|276|286|287|456|457|536|537|556|557|566|567|577)$'
+    only_in: '^MCXA(175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)$'
     description: Return received data, clear SSR[RDF].
     value: 0
   - name: WhenAddressValidFlagSetReturnsAddressStatusAndClearsAddressValidFlag
-    only_in: '^MCXA(175|176|185|186|255|256|265|266|276|286|287|456|457|536|537|556|557|566|567|577)$'
+    only_in: '^MCXA(175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)$'
     description: Return SASR and clear SSR[AVF] when SSR[AVF] is set, return received data and clear SSR[RDF] when SSR[AFV] is not set.
     value: 1
   - name: ReturnsReceivedDataAndClearsRxDataFlag
@@ -1286,11 +1286,11 @@ enum/Txcfg:
   bit_size: 1
   variants:
   - name: AssertsDuringSlaveTransmitTransferWhenTxDataEmpty
-    only_in: '^MCXA(175|176|185|186|255|256|265|266|276|286|287|456|457|536|537|556|557|566|567|577)$'
+    only_in: '^MCXA(175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)$'
     description: SSR[TDF] is set only during a target-transmit transfer when STDR is empty.
     value: 0
   - name: AssertsWhenTxDataEmpty
-    only_in: '^MCXA(175|176|185|186|255|256|265|266|276|286|287|456|457|536|537|556|557|566|567|577)$'
+    only_in: '^MCXA(175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)$'
     description: SSR[TDF] is set whenever STDR is empty.
     value: 1
   - name: AssertsDuringSlaveTransmitTransferWhenTxDataEmpty

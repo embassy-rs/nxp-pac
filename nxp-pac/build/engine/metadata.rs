@@ -157,7 +157,7 @@ pub fn load(inputs: &Path, chip: &Chip) -> anyhow::Result<(Metadata, Vec<std::pa
             metadata
                 .chips
                 .iter()
-                .any(|name| name.eq_ignore_ascii_case(chip.feature)),
+                .any(|name| name.eq_ignore_ascii_case(&core)),
             "metadata does not describe {}",
             chip.feature
         );

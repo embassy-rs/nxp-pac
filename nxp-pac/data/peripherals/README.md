@@ -54,10 +54,13 @@ fieldset/Example:
       bit_size: 1
 ```
 
-`only_in` is a regex matched against the selected uppercase core name. It is
-supported on block/fieldset/enum definitions and entries in their items, fields,
-and variants. An absent annotation means unconditional availability. Validate
-all annotations, including excluded definitions, before filtering. Disjoint
+`only_in` is a regex matched against the canonical uppercase hardware core name.
+The `mcxa276` feature selects the MCXA266 hardware model, so its predicates match
+`MCXA266`; no separate sample-specific register model is maintained. The runtime
+metadata name still identifies the requested compatibility feature as `MCXA276`.
+The annotation is supported on block/fieldset/enum definitions and entries in
+their items, fields, and variants. An absent annotation means unconditional
+availability. Validate all annotations, including excluded definitions, before filtering. Disjoint
 conditional entries can retain variant-specific documentation; after filtering,
 the selected model must have valid references and unambiguous definitions.
 
@@ -75,7 +78,7 @@ A1/A2 GPIO versus extended A5 GPIO, not A1 versus A2/A5:
 | --- | --- |
 | MCXA156, MCXA175/176/185/186/255/256/265/266 | One ISFR bank; ICR[23:20] reserved; no documented protection-register bank |
 | MCXA286/287/456/457/536/537/556/557/566/567/577 | Two ISFR banks, ICR.IRQS/LK, and LOCK/PCNS/ICNS/PCNP/ICNP |
-| MCXA276 engineering sample | Existing extended API retained as an explicitly unverified compatibility exception |
+| MCXA276 compatibility selection | Same basic GPIO and complete hardware model as MCXA266; retained for existing boards |
 
 References: MCXAP100M96FS6RM Rev. 7, chapter 12; MCXAP144M240F61RM Rev. 2,
 sections 12.7.1.1, 12.7.1.12 and 12.7.1.15; MCXAP144M240F61SRM Rev. 2,
@@ -86,9 +89,9 @@ main reference manual; it does not establish the A5 protection extensions.
 The source migration intentionally corrects the old A2/A5 superset for the
 documented A2 devices: unsupported protection/routing/lock accessors disappear,
 and `isfr(1)` is rejected on single-bank devices. The flat module, instance names,
-and indexed `isfr(n)` shape remain unchanged. Do not infer MCXA276 silicon behavior
-from its old API or from a numeric family regex; applicable sample documentation
-is still required. PDR register and fieldset storage remain explicitly 8-bit.
+and indexed `isfr(n)` shape remain unchanged. MCXA276 is resolved to MCXA266 in the
+chip registry, rather than handled as an extended-GPIO exception. PDR register
+and fieldset storage remain explicitly 8-bit.
 
 ## Build pipeline
 

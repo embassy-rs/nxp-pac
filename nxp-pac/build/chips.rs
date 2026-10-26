@@ -7,7 +7,7 @@ pub struct Chip {
 impl Chip {
     /// Availability predicates identify the selected core, not its metadata file.
     pub fn core_name(&self) -> String {
-        self.feature.to_ascii_uppercase()
+        hardware_feature(self.feature).to_ascii_uppercase()
     }
 }
 
@@ -16,6 +16,7 @@ pub struct ModelTransforms {
     pub files: &'static [&'static str],
 }
 
+// Canonical hardware descriptions; compatibility feature names resolve in find.
 macro_rules! chips {
     ($($feature:literal => $metadata:literal),* $(,)?) => {
         pub const CHIPS: &[Chip] = &[$(Chip { feature: $feature, metadata: $metadata, transforms: &[] }),*];
@@ -32,7 +33,6 @@ chips! {
     "mcxa256" => "MCXA256",
     "mcxa265" => "MCXA265",
     "mcxa266" => "MCXA266",
-    "mcxa276" => "MCXA276",
     "mcxa286" => "MCXA286",
     "mcxa287" => "MCXA287",
     "mcxa456" => "MCXA456",
@@ -46,7 +46,18 @@ chips! {
     "mcxa577" => "MCXA577",
 }
 
+// MCXA276 was an earlier name used on existing MCXA266 boards. Keep the Cargo
+// feature, but share one hardware description, including future transforms.
+fn hardware_feature(feature: &str) -> &str {
+    if feature.eq_ignore_ascii_case("mcxa276") {
+        "mcxa266"
+    } else {
+        feature
+    }
+}
+
 pub fn find(feature: &str) -> Option<&'static Chip> {
+    let feature = hardware_feature(feature);
     CHIPS
         .iter()
         .find(|chip| chip.feature.eq_ignore_ascii_case(feature))

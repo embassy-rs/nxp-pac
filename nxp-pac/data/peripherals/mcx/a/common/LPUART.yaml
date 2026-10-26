@@ -101,7 +101,7 @@ fieldset/Baud:
     bit_offset: 21
     bit_size: 1
   - name: hlfm
-    only_in: '^MCXA(175|176|185|186|255|256|265|266|276|286|287|456|457|536|537|556|557|566|567|577)$'
+    only_in: '^MCXA(175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)$'
     description: Reduced Oversample Mode Selection.
     bit_offset: 22
     bit_size: 1
@@ -179,13 +179,13 @@ fieldset/Ctrl:
     bit_size: 1
     enum: M7
   - name: swap
-    only_in: '^MCXA(175|176|185|186|255|256|265|266|276|286|287|456|457|536|537|556|557|566|567|577)$'
+    only_in: '^MCXA(175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)$'
     description: TXD and RXD Pin Swap.
     bit_offset: 12
     bit_size: 1
     enum: Swap
   - name: erlsmp
-    only_in: '^MCXA(175|176|185|186|255|256|265|266|276|286|287|456|457|536|537|556|557|566|567|577)$'
+    only_in: '^MCXA(175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)$'
     description: Early Sample Selection.
     bit_offset: 13
     bit_size: 1
@@ -623,7 +623,7 @@ enum/Dozeen:
     description: Disable.
     value: 1
 enum/Erlsmp:
-  only_in: '^MCXA(175|176|185|186|255|256|265|266|276|286|287|456|457|536|537|556|557|566|567|577)$'
+  only_in: '^MCXA(175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)$'
   bit_size: 1
   variants:
   - name: Midpoint
@@ -642,7 +642,7 @@ enum/Feature:
     description: Standard feature set with MODEM and IrDA support.
     value: 3
 enum/Hlfm:
-  only_in: '^MCXA(175|176|185|186|255|256|265|266|276|286|287|456|457|536|537|556|557|566|567|577)$'
+  only_in: '^MCXA(175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)$'
   bit_size: 1
   variants:
   - name: Regular
@@ -883,7 +883,7 @@ enum/Sbns:
     description: Two stop bits.
     value: 1
 enum/Swap:
-  only_in: '^MCXA(175|176|185|186|255|256|265|266|276|286|287|456|457|536|537|556|557|566|567|577)$'
+  only_in: '^MCXA(175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)$'
   bit_size: 1
   variants:
   - name: Standard

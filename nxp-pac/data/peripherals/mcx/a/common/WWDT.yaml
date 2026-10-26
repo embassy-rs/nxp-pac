@@ -66,7 +66,7 @@ fieldset/Mod:
     bit_offset: 5
     bit_size: 1
   - name: debug_en
-    only_in: '^MCXA(175|176|185|186|255|256|265|266|276|286|287|456|457|536|537|556|557|566|567|577)$'
+    only_in: '^MCXA(175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)$'
     description: Debug Enable.
     bit_offset: 6
     bit_size: 1

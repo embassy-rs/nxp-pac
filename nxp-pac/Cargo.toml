@@ -77,6 +77,7 @@ mcxa255 = ["_metapac"]
 mcxa256 = ["_metapac"]
 mcxa265 = ["_metapac"]
 mcxa266 = ["_metapac"]
+# Compatibility name for existing MCXA266-based boards; resolve in build/chips.rs.
 mcxa276 = ["_metapac"]
 mcxa286 = ["_metapac"]
 mcxa287 = ["_metapac"]

@@ -237,7 +237,7 @@ fieldset/Cr:
     bit_offset: 1
     bit_size: 1
   - name: dozen
-    only_in: '^MCXA(175|176|185|186|255|256|265|266|276|286|287|456|457|536|537|556|557|566|567|577)$'
+    only_in: '^MCXA(175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)$'
     description: Doze Mode Enable.
     bit_offset: 2
     bit_size: 1
@@ -556,7 +556,7 @@ enum/Cpol:
     description: Inactive high.
     value: 1
 enum/Dozen:
-  only_in: '^MCXA(175|176|185|186|255|256|265|266|276|286|287|456|457|536|537|556|557|566|567|577)$'
+  only_in: '^MCXA(175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)$'
   bit_size: 1
   variants:
   - name: Enabled

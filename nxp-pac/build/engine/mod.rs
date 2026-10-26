@@ -39,6 +39,7 @@ pub fn generate(
     out_dir: &Path,
     outputs: Outputs,
 ) -> anyhow::Result<Generation> {
+    let selected_name = chip.to_ascii_uppercase();
     let chip =
         super::chips::find(chip).with_context(|| format!("unsupported MetaPAC chip: {chip}"))?;
     let core = chip.core_name();
@@ -123,7 +124,10 @@ pub fn generate(
     let mut output_files = render::write_device(&pac_metadata, &models, out_dir, &outputs)?;
     if outputs.metadata {
         let path = out_dir.join("metadata.rs");
-        fs::write(&path, metadata::render(&core, &metadata)?.to_string())?;
+        fs::write(
+            &path,
+            metadata::render(&selected_name, &metadata)?.to_string(),
+        )?;
         output_files.push(path);
     }
     input_files.sort();
