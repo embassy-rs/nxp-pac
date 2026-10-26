@@ -1,0 +1,11 @@
+{
+  "$schema": "./schema.json",
+  "include": "MCXA13x_15x",
+  "chips": [
+    "MCXA142",
+    "MCXA142VFM",
+    "MCXA142VFT",
+    "MCXA142VLF",
+    "MCXA142VLH"
+  ]
+}

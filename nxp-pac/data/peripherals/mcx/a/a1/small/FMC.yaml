@@ -1,0 +1,36 @@
+# MCXAP64M96FS3RM Rev. 7 (2024-10-22), FMC chapter.
+# Small-group source XML register resets restored by explicit offline onboarding.
+# Compatible curated A1 layouts reused where applicable; shared sources remain unchanged.
+block/Fmc:
+  description: NPX.
+  items:
+  - name: remap
+    description: Data Remap.
+    byte_offset: 32
+    fieldset: Remap
+fieldset/Remap:
+  description: Data Remap.
+  fields:
+  - name: remaplk
+    description: Remap Lock Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: Remaplk
+  - name: lim
+    description: LIM Remapping Address.
+    bit_offset: 16
+    bit_size: 5
+  - name: limdp
+    description: LIMDP Remapping Address.
+    bit_offset: 24
+    bit_size: 5
+  reset_value: 0
+enum/Remaplk:
+  bit_size: 1
+  variants:
+  - name: LockDisabled
+    description: 'Lock disabled: can write to REMAP.'
+    value: 0
+  - name: LockEnabled
+    description: 'Lock enabled: cannot write to REMAP.'
+    value: 1

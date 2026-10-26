@@ -1,0 +1,3 @@
+# MCXAP100M180F41RM Rev.2, GPIO basic IP; no protection bank.
+includes:
+  - ../../common/GPIO.yaml

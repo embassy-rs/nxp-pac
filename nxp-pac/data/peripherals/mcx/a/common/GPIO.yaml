@@ -96,7 +96,7 @@ block/Gpio:
     byte_offset: 260
     fieldset: Gichr
   - name: isfr
-    only_in: '^MCXA(156|175|176|185|186|255|256|265|266)$'
+    only_in: '^MCXA(132|133|142|143|144|145|146|152|153|154|155|156|173|174|175|176|185|186|255|256|265|266)$'
     description: Interrupt Status Flag.
     array:
       len: 1

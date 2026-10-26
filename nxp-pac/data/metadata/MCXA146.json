@@ -1,0 +1,13 @@
+{
+  "$schema": "./schema.json",
+  "$comment": "MCXAP100M096F60 Rev.10 Tables1/4: 48MHz, flash/SRAM 1024/128 KB; package-specific bondout documented in A1 README.",
+  "include": "MCXA14x",
+  "chips": [
+    "MCXA146",
+    "MCXA146VFT",
+    "MCXA146VLH",
+    "MCXA146VLL",
+    "MCXA146VMP",
+    "MCXA146VPJ"
+  ]
+}

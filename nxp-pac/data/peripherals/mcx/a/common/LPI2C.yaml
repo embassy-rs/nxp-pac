@@ -1176,11 +1176,11 @@ enum/Rxcfg:
     description: Return SASR and clear SSR[AVF] when SSR[AVF] is set, return received data and clear SSR[RDF] when SSR[AFV] is not set.
     value: 1
   - name: ReturnsReceivedDataAndClearsRxDataFlag
-    only_in: '^MCXA156$'
+    only_in: '^MCXA(132|133|142|143|144|145|146|152|153|154|155|156)$'
     description: Return received data, clear MSR[RDF].
     value: 0
   - name: WhenAddressValidFlagSetReturnsAddressStatusAndClearsAddressValidFlag
-    only_in: '^MCXA156$'
+    only_in: '^MCXA(132|133|142|143|144|145|146|152|153|154|155|156)$'
     description: Return SASR and clear SSR[AVF] when SSR[AVF] is set, return received data and clear MSR[RDF] when SSR[AFV] is not set.
     value: 1
 enum/Rxnack:
@@ -1294,11 +1294,11 @@ enum/Txcfg:
     description: SSR[TDF] is set whenever STDR is empty.
     value: 1
   - name: AssertsDuringSlaveTransmitTransferWhenTxDataEmpty
-    only_in: '^MCXA156$'
+    only_in: '^MCXA(132|133|142|143|144|145|146|152|153|154|155|156)$'
     description: MSR[TDF] is set only during a target-transmit transfer when STDR is empty.
     value: 0
   - name: AssertsWhenTxDataEmpty
-    only_in: '^MCXA156$'
+    only_in: '^MCXA(132|133|142|143|144|145|146|152|153|154|155|156)$'
     description: MSR[TDF] is set whenever STDR is empty.
     value: 1
 enum/Txnack:

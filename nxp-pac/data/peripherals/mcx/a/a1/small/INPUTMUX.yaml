@@ -1,0 +1,7094 @@
+# MCXAP64M96FS3RM Rev. 7 (2024-10-22), INPUTMUX chapter.
+# Small-group source XML register resets restored by explicit offline onboarding.
+# Compatible curated A1 layouts reused where applicable; shared sources remain unchanged.
+block/Inputmux:
+  description: INPUTMUX.
+  items:
+  - name: ctimer0cap
+    description: Capture select register for CTIMER inputs.
+    array:
+      len: 4
+      stride: 4
+    byte_offset: 32
+    fieldset: Ctimer0cap
+  - name: timer0trig
+    description: Trigger register for TIMER0.
+    byte_offset: 48
+    fieldset: Timer0trig
+  - name: ctimer1cap
+    description: Capture select register for CTIMER inputs.
+    array:
+      len: 4
+      stride: 4
+    byte_offset: 64
+    fieldset: Ctimer1cap
+  - name: timer1trig
+    description: Trigger register for TIMER1.
+    byte_offset: 80
+    fieldset: Timer1trig
+  - name: ctimer2cap
+    description: Capture select register for CTIMER inputs.
+    array:
+      len: 4
+      stride: 4
+    byte_offset: 96
+    fieldset: Ctimer2cap
+  - name: timer2trig
+    description: Trigger register for TIMER2 inputs.
+    byte_offset: 112
+    fieldset: Timer2trig
+  - name: freqmeas_ref
+    description: Selection for frequency measurement reference clock.
+    byte_offset: 384
+    fieldset: FreqmeasRef
+  - name: freqmeas_tar
+    description: Selection for frequency measurement reference clock.
+    byte_offset: 388
+    fieldset: FreqmeasTar
+  - name: cmp0_trig
+    description: CMP0 input connections.
+    byte_offset: 608
+    fieldset: Cmp0Trig
+  - name: adc0_trig
+    description: ADC Trigger input connections.
+    array:
+      len: 4
+      stride: 4
+    byte_offset: 640
+    fieldset: Adc0Trig
+  - name: qdc0_trig
+    description: QDC0 Trigger Input Connections.
+    byte_offset: 864
+    fieldset: Qdc0Trig
+  - name: qdc0_home
+    description: QDC0 Trigger Input Connections.
+    byte_offset: 868
+    fieldset: Qdc0Home
+  - name: qdc0_index
+    description: QDC0 Trigger Input Connections.
+    byte_offset: 872
+    fieldset: Qdc0Index
+  - name: qdc0_phaseb
+    description: QDC0 Trigger Input Connections.
+    byte_offset: 876
+    fieldset: Qdc0Phaseb
+  - name: qdc0_phasea
+    description: QDC0 Trigger Input Connections.
+    byte_offset: 880
+    fieldset: Qdc0Phasea
+  - name: qdc0_icap1
+    description: QDC0 Trigger Input Connections.
+    byte_offset: 884
+    fieldset: Qdc0Icap1
+  - name: qdc0_icap2
+    description: QDC0 Trigger Input Connections.
+    byte_offset: 888
+    fieldset: Qdc0Icap2
+  - name: qdc0_icap3
+    description: QDC0 Trigger Input Connections.
+    byte_offset: 892
+    fieldset: Qdc0Icap3
+  - name: flex_pwm0_sm0_exta0
+    description: PWM0 input trigger connections.
+    byte_offset: 928
+    fieldset: FlexPwm0Sm0Exta0
+  - name: flex_pwm0_sm0_extsync0
+    description: PWM0 input trigger connections.
+    byte_offset: 932
+    fieldset: FlexPwm0Sm0Extsync0
+  - name: flex_pwm0_sm1_exta1
+    description: PWM0 input trigger connections.
+    byte_offset: 936
+    fieldset: FlexPwm0Sm1Exta1
+  - name: flex_pwm0_sm1_extsync1
+    description: PWM0 input trigger connections.
+    byte_offset: 940
+    fieldset: FlexPwm0Sm1Extsync1
+  - name: flex_pwm0_sm2_exta2
+    description: PWM0 input trigger connections.
+    byte_offset: 944
+    fieldset: FlexPwm0Sm2Exta2
+  - name: flex_pwm0_sm2_extsync2
+    description: PWM0 input trigger connections.
+    byte_offset: 948
+    fieldset: FlexPwm0Sm2Extsync2
+  - name: flex_pwm0_fault0
+    description: PWM0 input trigger connections.
+    byte_offset: 960
+    fieldset: FlexPwm0Fault0
+  - name: flex_pwm0_fault1
+    description: PWM0 input trigger connections.
+    byte_offset: 964
+    fieldset: FlexPwm0Fault1
+  - name: flex_pwm0_fault2
+    description: PWM0 input trigger connections.
+    byte_offset: 968
+    fieldset: FlexPwm0Fault2
+  - name: flex_pwm0_fault3
+    description: PWM0 input trigger connections.
+    byte_offset: 972
+    fieldset: FlexPwm0Fault3
+  - name: flex_pwm0_force
+    description: PWM0 input trigger connections.
+    byte_offset: 976
+    fieldset: FlexPwm0Force
+  - name: pwm0_ext_clk
+    description: PWM0 external clock trigger.
+    byte_offset: 1056
+    fieldset: Pwm0ExtClk
+  - name: aoi0_mux0
+    description: AOI0 trigger input connections 0-15.
+    byte_offset: 1088
+    fieldset: Aoi0Mux0
+  - name: aoi0_mux1
+    description: AOI0 trigger input connections 0-15.
+    byte_offset: 1092
+    fieldset: Aoi0Mux1
+  - name: aoi0_mux2
+    description: AOI0 trigger input connections 0-15.
+    byte_offset: 1096
+    fieldset: Aoi0Mux2
+  - name: aoi0_mux3
+    description: AOI0 trigger input connections 0-15.
+    byte_offset: 1100
+    fieldset: Aoi0Mux3
+  - name: aoi0_mux4
+    description: AOI0 trigger input connections 0-15.
+    byte_offset: 1104
+    fieldset: Aoi0Mux4
+  - name: aoi0_mux5
+    description: AOI0 trigger input connections 0-15.
+    byte_offset: 1108
+    fieldset: Aoi0Mux5
+  - name: aoi0_mux6
+    description: AOI0 trigger input connections 0-15.
+    byte_offset: 1112
+    fieldset: Aoi0Mux6
+  - name: aoi0_mux7
+    description: AOI0 trigger input connections 0-15.
+    byte_offset: 1116
+    fieldset: Aoi0Mux7
+  - name: aoi0_mux8
+    description: AOI0 trigger input connections 0-15.
+    byte_offset: 1120
+    fieldset: Aoi0Mux8
+  - name: aoi0_mux9
+    description: AOI0 trigger input connections 0-15.
+    byte_offset: 1124
+    fieldset: Aoi0Mux9
+  - name: aoi0_mux10
+    description: AOI0 trigger input connections 0-15.
+    byte_offset: 1128
+    fieldset: Aoi0Mux10
+  - name: aoi0_mux11
+    description: AOI0 trigger input connections 0-15.
+    byte_offset: 1132
+    fieldset: Aoi0Mux11
+  - name: aoi0_mux12
+    description: AOI0 trigger input connections 0-15.
+    byte_offset: 1136
+    fieldset: Aoi0Mux12
+  - name: aoi0_mux13
+    description: AOI0 trigger input connections 0-15.
+    byte_offset: 1140
+    fieldset: Aoi0Mux13
+  - name: aoi0_mux14
+    description: AOI0 trigger input connections 0-15.
+    byte_offset: 1144
+    fieldset: Aoi0Mux14
+  - name: aoi0_mux15
+    description: AOI0 trigger input connections 0-15.
+    byte_offset: 1148
+    fieldset: Aoi0Mux15
+  - name: usbfs_trig
+    description: USB-FS trigger input connections.
+    byte_offset: 1152
+    fieldset: UsbfsTrig
+  - name: ext_trig
+    description: EXT trigger connections 0-4.
+    array:
+      len: 5
+      stride: 4
+    byte_offset: 1216
+    fieldset: ExtTrig
+  - name: ext_trig_6_7
+    description: EXT trigger connections 6-7.
+    array:
+      len: 2
+      stride: 4
+    byte_offset: 1240
+    fieldset: ExtTrig67
+  - name: cmp1_trig
+    description: CMP1 input connections.
+    byte_offset: 1248
+    fieldset: Cmp1Trig
+  - name: lpi2c0_trig
+    description: LPI2C0 trigger input connections.
+    byte_offset: 1440
+    fieldset: Lpi2c0Trig
+  - name: lpspi0_trig
+    description: LPSPI0 trigger input connections.
+    byte_offset: 1504
+    fieldset: Lpspi0Trig
+  - name: lpspi1_trig
+    description: LPSPI1 trigger input connections.
+    byte_offset: 1536
+    fieldset: Lpspi1Trig
+  - name: lpuart0
+    description: LPUART0 trigger input connections.
+    byte_offset: 1568
+    fieldset: Lpuart0
+  - name: lpuart1
+    description: LPUART1 trigger input connections.
+    byte_offset: 1600
+    fieldset: Lpuart1
+  - name: lpuart2
+    description: LPUART2 trigger input connections.
+    byte_offset: 1632
+    fieldset: Lpuart2
+fieldset/Adc0Trig:
+  description: ADC Trigger input connections.
+  fields:
+  - name: trigin
+    description: ADC0 trigger inputs.
+    bit_offset: 0
+    bit_size: 6
+    enum: Adc0TrigTrigin
+  reset_value: 63
+fieldset/Aoi0Mux0:
+  description: AOI0 trigger input connections 0-15.
+  fields:
+  - name: inp
+    description: AOI0 trigger input connections.
+    bit_offset: 0
+    bit_size: 6
+    enum: Aoi0Mux0Inp
+  reset_value: 63
+fieldset/Aoi0Mux1:
+  description: AOI0 trigger input connections 0-15.
+  fields:
+  - name: inp
+    description: AOI0 trigger input connections.
+    bit_offset: 0
+    bit_size: 6
+    enum: Aoi0Mux1Inp
+  reset_value: 63
+fieldset/Aoi0Mux10:
+  description: AOI0 trigger input connections 0-15.
+  fields:
+  - name: inp
+    description: AOI0 trigger input connections.
+    bit_offset: 0
+    bit_size: 6
+    enum: Aoi0Mux10Inp
+  reset_value: 63
+fieldset/Aoi0Mux11:
+  description: AOI0 trigger input connections 0-15.
+  fields:
+  - name: inp
+    description: AOI0 trigger input connections.
+    bit_offset: 0
+    bit_size: 6
+    enum: Aoi0Mux11Inp
+  reset_value: 63
+fieldset/Aoi0Mux12:
+  description: AOI0 trigger input connections 0-15.
+  fields:
+  - name: inp
+    description: AOI0 trigger input connections.
+    bit_offset: 0
+    bit_size: 6
+    enum: Aoi0Mux12Inp
+  reset_value: 63
+fieldset/Aoi0Mux13:
+  description: AOI0 trigger input connections 0-15.
+  fields:
+  - name: inp
+    description: AOI0 trigger input connections.
+    bit_offset: 0
+    bit_size: 6
+    enum: Aoi0Mux13Inp
+  reset_value: 63
+fieldset/Aoi0Mux14:
+  description: AOI0 trigger input connections 0-15.
+  fields:
+  - name: inp
+    description: AOI0 trigger input connections.
+    bit_offset: 0
+    bit_size: 6
+    enum: Aoi0Mux14Inp
+  reset_value: 63
+fieldset/Aoi0Mux15:
+  description: AOI0 trigger input connections 0-15.
+  fields:
+  - name: inp
+    description: AOI0 trigger input connections.
+    bit_offset: 0
+    bit_size: 6
+    enum: Aoi0Mux15Inp
+  reset_value: 63
+fieldset/Aoi0Mux2:
+  description: AOI0 trigger input connections 0-15.
+  fields:
+  - name: inp
+    description: AOI0 trigger input connections.
+    bit_offset: 0
+    bit_size: 6
+    enum: Aoi0Mux2Inp
+  reset_value: 63
+fieldset/Aoi0Mux3:
+  description: AOI0 trigger input connections 0-15.
+  fields:
+  - name: inp
+    description: AOI0 trigger input connections.
+    bit_offset: 0
+    bit_size: 6
+    enum: Aoi0Mux3Inp
+  reset_value: 63
+fieldset/Aoi0Mux4:
+  description: AOI0 trigger input connections 0-15.
+  fields:
+  - name: inp
+    description: AOI0 trigger input connections.
+    bit_offset: 0
+    bit_size: 6
+    enum: Aoi0Mux4Inp
+  reset_value: 63
+fieldset/Aoi0Mux5:
+  description: AOI0 trigger input connections 0-15.
+  fields:
+  - name: inp
+    description: AOI0 trigger input connections.
+    bit_offset: 0
+    bit_size: 6
+    enum: Aoi0Mux5Inp
+  reset_value: 63
+fieldset/Aoi0Mux6:
+  description: AOI0 trigger input connections 0-15.
+  fields:
+  - name: inp
+    description: AOI0 trigger input connections.
+    bit_offset: 0
+    bit_size: 6
+    enum: Aoi0Mux6Inp
+  reset_value: 63
+fieldset/Aoi0Mux7:
+  description: AOI0 trigger input connections 0-15.
+  fields:
+  - name: inp
+    description: AOI0 trigger input connections.
+    bit_offset: 0
+    bit_size: 6
+    enum: Aoi0Mux7Inp
+  reset_value: 63
+fieldset/Aoi0Mux8:
+  description: AOI0 trigger input connections 0-15.
+  fields:
+  - name: inp
+    description: AOI0 trigger input connections.
+    bit_offset: 0
+    bit_size: 6
+    enum: Aoi0Mux8Inp
+  reset_value: 63
+fieldset/Aoi0Mux9:
+  description: AOI0 trigger input connections 0-15.
+  fields:
+  - name: inp
+    description: AOI0 trigger input connections.
+    bit_offset: 0
+    bit_size: 6
+    enum: Aoi0Mux9Inp
+  reset_value: 63
+fieldset/Cmp0Trig:
+  description: CMP0 input connections.
+  fields:
+  - name: trigin
+    description: CMP0 input trigger.
+    bit_offset: 0
+    bit_size: 6
+    enum: Cmp0TrigTrigin
+  reset_value: 63
+fieldset/Cmp1Trig:
+  description: CMP1 input connections.
+  fields:
+  - name: trigin
+    description: CMP0 input trigger.
+    bit_offset: 0
+    bit_size: 6
+    enum: Cmp1TrigTrigin
+  reset_value: 63
+fieldset/Ctimer0cap:
+  description: Capture select register for CTIMER inputs.
+  fields:
+  - name: inp
+    description: Input number for CTIMER0.
+    bit_offset: 0
+    bit_size: 7
+    enum: Ctimer0capInp
+  reset_value: 127
+fieldset/Ctimer1cap:
+  description: Capture select register for CTIMER inputs.
+  fields:
+  - name: inp
+    description: Input number for CTIMER0.
+    bit_offset: 0
+    bit_size: 7
+    enum: Ctimer1capInp
+  reset_value: 127
+fieldset/Ctimer2cap:
+  description: Capture select register for CTIMER inputs.
+  fields:
+  - name: inp
+    description: Input number for CTIMER0.
+    bit_offset: 0
+    bit_size: 7
+    enum: Ctimer2capInp
+  reset_value: 127
+fieldset/ExtTrig:
+  description: EXT trigger connections 0-4.
+  fields:
+  - name: inp
+    description: EXT trigger input connections.
+    bit_offset: 0
+    bit_size: 5
+    enum: ExtTrigInp
+  reset_value: 31
+fieldset/ExtTrig67:
+  description: EXT trigger connections 6-7.
+  fields:
+  - name: inp
+    description: EXT trigger input connections.
+    bit_offset: 0
+    bit_size: 5
+    enum: ExtTrig67Inp
+  reset_value: 31
+fieldset/FlexPwm0Fault0:
+  description: PWM0 input trigger connections.
+  fields:
+  - name: trigin
+    description: Trigger input connections for PWM0.
+    bit_offset: 0
+    bit_size: 6
+    enum: FlexPwm0Fault0Trigin
+  reset_value: 63
+fieldset/FlexPwm0Fault1:
+  description: PWM0 input trigger connections.
+  fields:
+  - name: trigin
+    description: Trigger input connections for PWM0.
+    bit_offset: 0
+    bit_size: 6
+    enum: FlexPwm0Fault1Trigin
+  reset_value: 63
+fieldset/FlexPwm0Fault2:
+  description: PWM0 input trigger connections.
+  fields:
+  - name: trigin
+    description: Trigger input connections for PWM0.
+    bit_offset: 0
+    bit_size: 6
+    enum: FlexPwm0Fault2Trigin
+  reset_value: 63
+fieldset/FlexPwm0Fault3:
+  description: PWM0 input trigger connections.
+  fields:
+  - name: trigin
+    description: Trigger input connections for PWM0.
+    bit_offset: 0
+    bit_size: 6
+    enum: FlexPwm0Fault3Trigin
+  reset_value: 63
+fieldset/FlexPwm0Force:
+  description: PWM0 input trigger connections.
+  fields:
+  - name: trigin
+    description: Trigger input connections for PWM0.
+    bit_offset: 0
+    bit_size: 6
+    enum: FlexPwm0ForceTrigin
+  reset_value: 63
+fieldset/FlexPwm0Sm0Exta0:
+  description: PWM0 input trigger connections.
+  fields:
+  - name: trigin
+    description: Trigger input connections for PWM0.
+    bit_offset: 0
+    bit_size: 6
+    enum: FlexPwm0Sm0Exta0Trigin
+  reset_value: 63
+fieldset/FlexPwm0Sm0Extsync0:
+  description: PWM0 input trigger connections.
+  fields:
+  - name: trigin
+    description: Trigger input connections for PWM0.
+    bit_offset: 0
+    bit_size: 6
+    enum: FlexPwm0Sm0Extsync0Trigin
+  reset_value: 63
+fieldset/FlexPwm0Sm1Exta1:
+  description: PWM0 input trigger connections.
+  fields:
+  - name: trigin
+    description: Trigger input connections for PWM0.
+    bit_offset: 0
+    bit_size: 6
+    enum: FlexPwm0Sm1Exta1Trigin
+  reset_value: 63
+fieldset/FlexPwm0Sm1Extsync1:
+  description: PWM0 input trigger connections.
+  fields:
+  - name: trigin
+    description: Trigger input connections for PWM0.
+    bit_offset: 0
+    bit_size: 6
+    enum: FlexPwm0Sm1Extsync1Trigin
+  reset_value: 63
+fieldset/FlexPwm0Sm2Exta2:
+  description: PWM0 input trigger connections.
+  fields:
+  - name: trigin
+    description: Trigger input connections for PWM0.
+    bit_offset: 0
+    bit_size: 6
+    enum: FlexPwm0Sm2Exta2Trigin
+  reset_value: 63
+fieldset/FlexPwm0Sm2Extsync2:
+  description: PWM0 input trigger connections.
+  fields:
+  - name: trigin
+    description: Trigger input connections for PWM0.
+    bit_offset: 0
+    bit_size: 6
+    enum: FlexPwm0Sm2Extsync2Trigin
+  reset_value: 63
+fieldset/FreqmeasRef:
+  description: Selection for frequency measurement reference clock.
+  fields:
+  - name: inp
+    description: Clock source number (binary value) for frequency measure function target clock.
+    bit_offset: 0
+    bit_size: 5
+    enum: FreqmeasRefInp
+  reset_value: 31
+fieldset/FreqmeasTar:
+  description: Selection for frequency measurement reference clock.
+  fields:
+  - name: inp
+    description: Clock source number (binary value) for frequency measure function target clock.
+    bit_offset: 0
+    bit_size: 5
+    enum: FreqmeasTarInp
+  reset_value: 31
+fieldset/Lpi2c0Trig:
+  description: LPI2C0 trigger input connections.
+  fields:
+  - name: inp
+    description: LPI2C0 trigger input connections.
+    bit_offset: 0
+    bit_size: 6
+    enum: Lpi2c0TrigInp
+  reset_value: 63
+fieldset/Lpspi0Trig:
+  description: LPSPI0 trigger input connections.
+  fields:
+  - name: inp
+    description: LPSPI0 trigger input connections.
+    bit_offset: 0
+    bit_size: 6
+    enum: Lpspi0TrigInp
+  reset_value: 63
+fieldset/Lpspi1Trig:
+  description: LPSPI1 trigger input connections.
+  fields:
+  - name: inp
+    description: LPSPI1 trigger input connections.
+    bit_offset: 0
+    bit_size: 6
+    enum: Lpspi1TrigInp
+  reset_value: 63
+fieldset/Lpuart0:
+  description: LPUART0 trigger input connections.
+  fields:
+  - name: inp
+    description: LPUART0 trigger input connections.
+    bit_offset: 0
+    bit_size: 6
+    enum: Lpuart0Inp
+  reset_value: 63
+fieldset/Lpuart1:
+  description: LPUART1 trigger input connections.
+  fields:
+  - name: inp
+    description: LPUART1 trigger input connections.
+    bit_offset: 0
+    bit_size: 6
+    enum: Lpuart1Inp
+  reset_value: 63
+fieldset/Lpuart2:
+  description: LPUART2 trigger input connections.
+  fields:
+  - name: inp
+    description: LPUART2 trigger input connections.
+    bit_offset: 0
+    bit_size: 6
+    enum: Lpuart2Inp
+  reset_value: 63
+fieldset/Pwm0ExtClk:
+  description: PWM0 external clock trigger.
+  fields:
+  - name: trigin
+    description: Trigger input connections for PWM.
+    bit_offset: 0
+    bit_size: 3
+    enum: Pwm0ExtClkTrigin
+  reset_value: 7
+fieldset/Qdc0Home:
+  description: QDC0 Trigger Input Connections.
+  fields:
+  - name: inp
+    description: QDC0 input connections.
+    bit_offset: 0
+    bit_size: 6
+    enum: Qdc0HomeInp
+  reset_value: 63
+fieldset/Qdc0Icap1:
+  description: QDC0 Trigger Input Connections.
+  fields:
+  - name: inp
+    description: QDC0 input connections.
+    bit_offset: 0
+    bit_size: 6
+    enum: Qdc0Icap1Inp
+  reset_value: 63
+fieldset/Qdc0Icap2:
+  description: QDC0 Trigger Input Connections.
+  fields:
+  - name: inp
+    description: QDC0 input connections.
+    bit_offset: 0
+    bit_size: 6
+    enum: Qdc0Icap2Inp
+  reset_value: 63
+fieldset/Qdc0Icap3:
+  description: QDC0 Trigger Input Connections.
+  fields:
+  - name: inp
+    description: QDC0 input connections.
+    bit_offset: 0
+    bit_size: 6
+    enum: Qdc0Icap3Inp
+  reset_value: 63
+fieldset/Qdc0Index:
+  description: QDC0 Trigger Input Connections.
+  fields:
+  - name: inp
+    description: QDC0 input connections.
+    bit_offset: 0
+    bit_size: 6
+    enum: Qdc0IndexInp
+  reset_value: 63
+fieldset/Qdc0Phasea:
+  description: QDC0 Trigger Input Connections.
+  fields:
+  - name: inp
+    description: QDC0 input connections.
+    bit_offset: 0
+    bit_size: 6
+    enum: Qdc0PhaseaInp
+  reset_value: 63
+fieldset/Qdc0Phaseb:
+  description: QDC0 Trigger Input Connections.
+  fields:
+  - name: inp
+    description: QDC0 input connections.
+    bit_offset: 0
+    bit_size: 6
+    enum: Qdc0PhasebInp
+  reset_value: 63
+fieldset/Qdc0Trig:
+  description: QDC0 Trigger Input Connections.
+  fields:
+  - name: inp
+    description: QDC0 input connections.
+    bit_offset: 0
+    bit_size: 6
+    enum: Qdc0TrigInp
+  reset_value: 63
+fieldset/Timer0trig:
+  description: Trigger register for TIMER0.
+  fields:
+  - name: inp
+    description: Input number for CTIMER0.
+    bit_offset: 0
+    bit_size: 7
+    enum: Timer0trigInp
+  reset_value: 127
+fieldset/Timer1trig:
+  description: Trigger register for TIMER1.
+  fields:
+  - name: inp
+    description: Input number for CTIMER0.
+    bit_offset: 0
+    bit_size: 7
+    enum: Timer1trigInp
+  reset_value: 127
+fieldset/Timer2trig:
+  description: Trigger register for TIMER2 inputs.
+  fields:
+  - name: inp
+    description: Input number for CTIMER0.
+    bit_offset: 0
+    bit_size: 7
+    enum: Timer2trigInp
+  reset_value: 127
+fieldset/UsbfsTrig:
+  description: USB-FS trigger input connections.
+  fields:
+  - name: inp
+    description: USB-FS trigger input connections.
+    bit_offset: 0
+    bit_size: 3
+    enum: UsbfsTrigInp
+  reset_value: 7
+enum/Adc0TrigTrigin:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ARM_TXEV input is selected.
+    value: 1
+  - name: Val2
+    description: AOI0_OUT0 input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT1 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT2 input is selected.
+    value: 4
+  - name: Val5
+    description: AOI0_OUT3 input is selected.
+    value: 5
+  - name: Val6
+    description: CMP0_OUT input is selected.
+    value: 6
+  - name: Val7
+    description: CMP1_OUT input is selected.
+    value: 7
+  - name: Val9
+    description: CTimer0_MAT0 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT1 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer1_MAT0 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT1 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer2_MAT0 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer2_MAT1 input is selected.
+    value: 14
+  - name: Val15
+    description: LPTMR0 input is selected.
+    value: 15
+  - name: Val17
+    description: QDC0_POS_MATCH0 input is selected.
+    value: 17
+  - name: Val18
+    description: PWM0_SM0_OUT_TRIG0 input is selected.
+    value: 18
+  - name: Val19
+    description: PWM0_SM0_OUT_TRIG1 input is selected.
+    value: 19
+  - name: Val20
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 20
+  - name: Val21
+    description: PWM0_SM1_OUT_TRIG1 input is selected.
+    value: 21
+  - name: Val22
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 22
+  - name: Val23
+    description: PWM0_SM2_OUT_TRIG1 input is selected.
+    value: 23
+  - name: Val26
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 26
+  - name: Val27
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 27
+  - name: Val28
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 28
+  - name: Val29
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 29
+  - name: Val31
+    description: WUU.
+    value: 31
+enum/Aoi0Mux0Inp:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ADC0_tcomp[0] input is selected input is selected input is selected.
+    value: 1
+  - name: Val2
+    description: ADC0_tcomp[1] input is selected input is selected.
+    value: 2
+  - name: Val3
+    description: ADC0_tcomp[2] input is selected input is selected.
+    value: 3
+  - name: Val4
+    description: ADC0_tcomp[3] input is selected input is selected.
+    value: 4
+  - name: Val5
+    description: CMP0_OUT input is selected.
+    value: 5
+  - name: Val6
+    description: CMP1_OUT input is selected.
+    value: 6
+  - name: Val8
+    description: CTimer0_MAT0 input is selected.
+    value: 8
+  - name: Val9
+    description: CTimer0_MAT1 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT2 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer0_MAT3 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT0 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer1_MAT1 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer1_MAT2 input is selected.
+    value: 14
+  - name: Val15
+    description: CTimer1_MAT3 input is selected.
+    value: 15
+  - name: Val16
+    description: CTimer2_MAT0 input is selected.
+    value: 16
+  - name: Val17
+    description: CTimer2_MAT1 input is selected.
+    value: 17
+  - name: Val18
+    description: CTimer2_MAT2 input is selected.
+    value: 18
+  - name: Val19
+    description: CTimer2_MAT3 input is selected.
+    value: 19
+  - name: Val20
+    description: LPTMR0 input is selected.
+    value: 20
+  - name: Val22
+    description: QDC0_CMP_FLAG0 input input is selected.
+    value: 22
+  - name: Val23
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 23
+  - name: Val24
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 24
+  - name: Val25
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 25
+  - name: Val26
+    description: QDC0_POS_MATCH input is selected.
+    value: 26
+  - name: Val27
+    description: PWM0_SM0_OUT_TRIG0 0 input is selected.
+    value: 27
+  - name: Val28
+    description: PWM0_SM0_OUT_TRIG1 input is selected.
+    value: 28
+  - name: Val29
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 29
+  - name: Val30
+    description: PWM0_SM1_OUT_TRIG1 input is selected.
+    value: 30
+  - name: Val31
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 31
+  - name: Val32
+    description: PWM0_SM2_OUT_TRIG1 input is selected.
+    value: 32
+  - name: Val35
+    description: TRIG_IN0 input is selected.
+    value: 35
+  - name: Val36
+    description: TRIG_IN1 input is selected.
+    value: 36
+  - name: Val37
+    description: TRIG_IN2 input is selected.
+    value: 37
+  - name: Val38
+    description: TRIG_IN3 input is selected.
+    value: 38
+  - name: Val39
+    description: TRIG_IN4 input is selected.
+    value: 39
+  - name: Val40
+    description: TRIG_IN5 input is selected.
+    value: 40
+  - name: Val41
+    description: TRIG_IN6 input is selected.
+    value: 41
+  - name: Val42
+    description: TRIG_IN7 input is selected.
+    value: 42
+  - name: Val43
+    description: TRIG_IN8 input is selected.
+    value: 43
+  - name: Val44
+    description: TRIG_IN9 input is selected.
+    value: 44
+  - name: Val45
+    description: TRIG_IN10 input is selected.
+    value: 45
+  - name: Val46
+    description: TRIG_IN11 input is selected.
+    value: 46
+  - name: Val47
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 47
+  - name: Val48
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 48
+  - name: Val49
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 49
+  - name: Val50
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 50
+enum/Aoi0Mux10Inp:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ADC0_tcomp[0] input is selected input is selected input is selected.
+    value: 1
+  - name: Val2
+    description: ADC0_tcomp[1] input is selected input is selected.
+    value: 2
+  - name: Val3
+    description: ADC0_tcomp[2] input is selected input is selected.
+    value: 3
+  - name: Val4
+    description: ADC0_tcomp[3] input is selected input is selected.
+    value: 4
+  - name: Val5
+    description: CMP0_OUT input is selected.
+    value: 5
+  - name: Val6
+    description: CMP1_OUT input is selected.
+    value: 6
+  - name: Val8
+    description: CTimer0_MAT0 input is selected.
+    value: 8
+  - name: Val9
+    description: CTimer0_MAT1 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT2 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer0_MAT3 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT0 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer1_MAT1 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer1_MAT2 input is selected.
+    value: 14
+  - name: Val15
+    description: CTimer1_MAT3 input is selected.
+    value: 15
+  - name: Val16
+    description: CTimer2_MAT0 input is selected.
+    value: 16
+  - name: Val17
+    description: CTimer2_MAT1 input is selected.
+    value: 17
+  - name: Val18
+    description: CTimer2_MAT2 input is selected.
+    value: 18
+  - name: Val19
+    description: CTimer2_MAT3 input is selected.
+    value: 19
+  - name: Val20
+    description: LPTMR0 input is selected.
+    value: 20
+  - name: Val22
+    description: QDC0_CMP_FLAG0 input input is selected.
+    value: 22
+  - name: Val23
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 23
+  - name: Val24
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 24
+  - name: Val25
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 25
+  - name: Val26
+    description: QDC0_POS_MATCH input is selected.
+    value: 26
+  - name: Val27
+    description: PWM0_SM0_OUT_TRIG0 0 input is selected.
+    value: 27
+  - name: Val28
+    description: PWM0_SM0_OUT_TRIG1 input is selected.
+    value: 28
+  - name: Val29
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 29
+  - name: Val30
+    description: PWM0_SM1_OUT_TRIG1 input is selected.
+    value: 30
+  - name: Val31
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 31
+  - name: Val32
+    description: PWM0_SM2_OUT_TRIG1 input is selected.
+    value: 32
+  - name: Val35
+    description: TRIG_IN0 input is selected.
+    value: 35
+  - name: Val36
+    description: TRIG_IN1 input is selected.
+    value: 36
+  - name: Val37
+    description: TRIG_IN2 input is selected.
+    value: 37
+  - name: Val38
+    description: TRIG_IN3 input is selected.
+    value: 38
+  - name: Val39
+    description: TRIG_IN4 input is selected.
+    value: 39
+  - name: Val40
+    description: TRIG_IN5 input is selected.
+    value: 40
+  - name: Val41
+    description: TRIG_IN6 input is selected.
+    value: 41
+  - name: Val42
+    description: TRIG_IN7 input is selected.
+    value: 42
+  - name: Val43
+    description: TRIG_IN8 input is selected.
+    value: 43
+  - name: Val44
+    description: TRIG_IN9 input is selected.
+    value: 44
+  - name: Val45
+    description: TRIG_IN10 input is selected.
+    value: 45
+  - name: Val46
+    description: TRIG_IN11 input is selected.
+    value: 46
+  - name: Val47
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 47
+  - name: Val48
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 48
+  - name: Val49
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 49
+  - name: Val50
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 50
+enum/Aoi0Mux11Inp:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ADC0_tcomp[0] input is selected input is selected input is selected.
+    value: 1
+  - name: Val2
+    description: ADC0_tcomp[1] input is selected input is selected.
+    value: 2
+  - name: Val3
+    description: ADC0_tcomp[2] input is selected input is selected.
+    value: 3
+  - name: Val4
+    description: ADC0_tcomp[3] input is selected input is selected.
+    value: 4
+  - name: Val5
+    description: CMP0_OUT input is selected.
+    value: 5
+  - name: Val6
+    description: CMP1_OUT input is selected.
+    value: 6
+  - name: Val8
+    description: CTimer0_MAT0 input is selected.
+    value: 8
+  - name: Val9
+    description: CTimer0_MAT1 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT2 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer0_MAT3 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT0 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer1_MAT1 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer1_MAT2 input is selected.
+    value: 14
+  - name: Val15
+    description: CTimer1_MAT3 input is selected.
+    value: 15
+  - name: Val16
+    description: CTimer2_MAT0 input is selected.
+    value: 16
+  - name: Val17
+    description: CTimer2_MAT1 input is selected.
+    value: 17
+  - name: Val18
+    description: CTimer2_MAT2 input is selected.
+    value: 18
+  - name: Val19
+    description: CTimer2_MAT3 input is selected.
+    value: 19
+  - name: Val20
+    description: LPTMR0 input is selected.
+    value: 20
+  - name: Val22
+    description: QDC0_CMP_FLAG0 input input is selected.
+    value: 22
+  - name: Val23
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 23
+  - name: Val24
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 24
+  - name: Val25
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 25
+  - name: Val26
+    description: QDC0_POS_MATCH input is selected.
+    value: 26
+  - name: Val27
+    description: PWM0_SM0_OUT_TRIG0 0 input is selected.
+    value: 27
+  - name: Val28
+    description: PWM0_SM0_OUT_TRIG1 input is selected.
+    value: 28
+  - name: Val29
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 29
+  - name: Val30
+    description: PWM0_SM1_OUT_TRIG1 input is selected.
+    value: 30
+  - name: Val31
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 31
+  - name: Val32
+    description: PWM0_SM2_OUT_TRIG1 input is selected.
+    value: 32
+  - name: Val35
+    description: TRIG_IN0 input is selected.
+    value: 35
+  - name: Val36
+    description: TRIG_IN1 input is selected.
+    value: 36
+  - name: Val37
+    description: TRIG_IN2 input is selected.
+    value: 37
+  - name: Val38
+    description: TRIG_IN3 input is selected.
+    value: 38
+  - name: Val39
+    description: TRIG_IN4 input is selected.
+    value: 39
+  - name: Val40
+    description: TRIG_IN5 input is selected.
+    value: 40
+  - name: Val41
+    description: TRIG_IN6 input is selected.
+    value: 41
+  - name: Val42
+    description: TRIG_IN7 input is selected.
+    value: 42
+  - name: Val43
+    description: TRIG_IN8 input is selected.
+    value: 43
+  - name: Val44
+    description: TRIG_IN9 input is selected.
+    value: 44
+  - name: Val45
+    description: TRIG_IN10 input is selected.
+    value: 45
+  - name: Val46
+    description: TRIG_IN11 input is selected.
+    value: 46
+  - name: Val47
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 47
+  - name: Val48
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 48
+  - name: Val49
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 49
+  - name: Val50
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 50
+enum/Aoi0Mux12Inp:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ADC0_tcomp[0] input is selected input is selected input is selected.
+    value: 1
+  - name: Val2
+    description: ADC0_tcomp[1] input is selected input is selected.
+    value: 2
+  - name: Val3
+    description: ADC0_tcomp[2] input is selected input is selected.
+    value: 3
+  - name: Val4
+    description: ADC0_tcomp[3] input is selected input is selected.
+    value: 4
+  - name: Val5
+    description: CMP0_OUT input is selected.
+    value: 5
+  - name: Val6
+    description: CMP1_OUT input is selected.
+    value: 6
+  - name: Val8
+    description: CTimer0_MAT0 input is selected.
+    value: 8
+  - name: Val9
+    description: CTimer0_MAT1 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT2 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer0_MAT3 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT0 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer1_MAT1 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer1_MAT2 input is selected.
+    value: 14
+  - name: Val15
+    description: CTimer1_MAT3 input is selected.
+    value: 15
+  - name: Val16
+    description: CTimer2_MAT0 input is selected.
+    value: 16
+  - name: Val17
+    description: CTimer2_MAT1 input is selected.
+    value: 17
+  - name: Val18
+    description: CTimer2_MAT2 input is selected.
+    value: 18
+  - name: Val19
+    description: CTimer2_MAT3 input is selected.
+    value: 19
+  - name: Val20
+    description: LPTMR0 input is selected.
+    value: 20
+  - name: Val22
+    description: QDC0_CMP_FLAG0 input input is selected.
+    value: 22
+  - name: Val23
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 23
+  - name: Val24
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 24
+  - name: Val25
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 25
+  - name: Val26
+    description: QDC0_POS_MATCH input is selected.
+    value: 26
+  - name: Val27
+    description: PWM0_SM0_OUT_TRIG0 0 input is selected.
+    value: 27
+  - name: Val28
+    description: PWM0_SM0_OUT_TRIG1 input is selected.
+    value: 28
+  - name: Val29
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 29
+  - name: Val30
+    description: PWM0_SM1_OUT_TRIG1 input is selected.
+    value: 30
+  - name: Val31
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 31
+  - name: Val32
+    description: PWM0_SM2_OUT_TRIG1 input is selected.
+    value: 32
+  - name: Val35
+    description: TRIG_IN0 input is selected.
+    value: 35
+  - name: Val36
+    description: TRIG_IN1 input is selected.
+    value: 36
+  - name: Val37
+    description: TRIG_IN2 input is selected.
+    value: 37
+  - name: Val38
+    description: TRIG_IN3 input is selected.
+    value: 38
+  - name: Val39
+    description: TRIG_IN4 input is selected.
+    value: 39
+  - name: Val40
+    description: TRIG_IN5 input is selected.
+    value: 40
+  - name: Val41
+    description: TRIG_IN6 input is selected.
+    value: 41
+  - name: Val42
+    description: TRIG_IN7 input is selected.
+    value: 42
+  - name: Val43
+    description: TRIG_IN8 input is selected.
+    value: 43
+  - name: Val44
+    description: TRIG_IN9 input is selected.
+    value: 44
+  - name: Val45
+    description: TRIG_IN10 input is selected.
+    value: 45
+  - name: Val46
+    description: TRIG_IN11 input is selected.
+    value: 46
+  - name: Val47
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 47
+  - name: Val48
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 48
+  - name: Val49
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 49
+  - name: Val50
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 50
+enum/Aoi0Mux13Inp:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ADC0_tcomp[0] input is selected input is selected input is selected.
+    value: 1
+  - name: Val2
+    description: ADC0_tcomp[1] input is selected input is selected.
+    value: 2
+  - name: Val3
+    description: ADC0_tcomp[2] input is selected input is selected.
+    value: 3
+  - name: Val4
+    description: ADC0_tcomp[3] input is selected input is selected.
+    value: 4
+  - name: Val5
+    description: CMP0_OUT input is selected.
+    value: 5
+  - name: Val6
+    description: CMP1_OUT input is selected.
+    value: 6
+  - name: Val8
+    description: CTimer0_MAT0 input is selected.
+    value: 8
+  - name: Val9
+    description: CTimer0_MAT1 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT2 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer0_MAT3 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT0 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer1_MAT1 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer1_MAT2 input is selected.
+    value: 14
+  - name: Val15
+    description: CTimer1_MAT3 input is selected.
+    value: 15
+  - name: Val16
+    description: CTimer2_MAT0 input is selected.
+    value: 16
+  - name: Val17
+    description: CTimer2_MAT1 input is selected.
+    value: 17
+  - name: Val18
+    description: CTimer2_MAT2 input is selected.
+    value: 18
+  - name: Val19
+    description: CTimer2_MAT3 input is selected.
+    value: 19
+  - name: Val20
+    description: LPTMR0 input is selected.
+    value: 20
+  - name: Val22
+    description: QDC0_CMP_FLAG0 input input is selected.
+    value: 22
+  - name: Val23
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 23
+  - name: Val24
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 24
+  - name: Val25
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 25
+  - name: Val26
+    description: QDC0_POS_MATCH input is selected.
+    value: 26
+  - name: Val27
+    description: PWM0_SM0_OUT_TRIG0 0 input is selected.
+    value: 27
+  - name: Val28
+    description: PWM0_SM0_OUT_TRIG1 input is selected.
+    value: 28
+  - name: Val29
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 29
+  - name: Val30
+    description: PWM0_SM1_OUT_TRIG1 input is selected.
+    value: 30
+  - name: Val31
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 31
+  - name: Val32
+    description: PWM0_SM2_OUT_TRIG1 input is selected.
+    value: 32
+  - name: Val35
+    description: TRIG_IN0 input is selected.
+    value: 35
+  - name: Val36
+    description: TRIG_IN1 input is selected.
+    value: 36
+  - name: Val37
+    description: TRIG_IN2 input is selected.
+    value: 37
+  - name: Val38
+    description: TRIG_IN3 input is selected.
+    value: 38
+  - name: Val39
+    description: TRIG_IN4 input is selected.
+    value: 39
+  - name: Val40
+    description: TRIG_IN5 input is selected.
+    value: 40
+  - name: Val41
+    description: TRIG_IN6 input is selected.
+    value: 41
+  - name: Val42
+    description: TRIG_IN7 input is selected.
+    value: 42
+  - name: Val43
+    description: TRIG_IN8 input is selected.
+    value: 43
+  - name: Val44
+    description: TRIG_IN9 input is selected.
+    value: 44
+  - name: Val45
+    description: TRIG_IN10 input is selected.
+    value: 45
+  - name: Val46
+    description: TRIG_IN11 input is selected.
+    value: 46
+  - name: Val47
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 47
+  - name: Val48
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 48
+  - name: Val49
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 49
+  - name: Val50
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 50
+enum/Aoi0Mux14Inp:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ADC0_tcomp[0] input is selected input is selected input is selected.
+    value: 1
+  - name: Val2
+    description: ADC0_tcomp[1] input is selected input is selected.
+    value: 2
+  - name: Val3
+    description: ADC0_tcomp[2] input is selected input is selected.
+    value: 3
+  - name: Val4
+    description: ADC0_tcomp[3] input is selected input is selected.
+    value: 4
+  - name: Val5
+    description: CMP0_OUT input is selected.
+    value: 5
+  - name: Val6
+    description: CMP1_OUT input is selected.
+    value: 6
+  - name: Val8
+    description: CTimer0_MAT0 input is selected.
+    value: 8
+  - name: Val9
+    description: CTimer0_MAT1 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT2 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer0_MAT3 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT0 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer1_MAT1 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer1_MAT2 input is selected.
+    value: 14
+  - name: Val15
+    description: CTimer1_MAT3 input is selected.
+    value: 15
+  - name: Val16
+    description: CTimer2_MAT0 input is selected.
+    value: 16
+  - name: Val17
+    description: CTimer2_MAT1 input is selected.
+    value: 17
+  - name: Val18
+    description: CTimer2_MAT2 input is selected.
+    value: 18
+  - name: Val19
+    description: CTimer2_MAT3 input is selected.
+    value: 19
+  - name: Val20
+    description: LPTMR0 input is selected.
+    value: 20
+  - name: Val22
+    description: QDC0_CMP_FLAG0 input input is selected.
+    value: 22
+  - name: Val23
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 23
+  - name: Val24
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 24
+  - name: Val25
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 25
+  - name: Val26
+    description: QDC0_POS_MATCH input is selected.
+    value: 26
+  - name: Val27
+    description: PWM0_SM0_OUT_TRIG0 0 input is selected.
+    value: 27
+  - name: Val28
+    description: PWM0_SM0_OUT_TRIG1 input is selected.
+    value: 28
+  - name: Val29
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 29
+  - name: Val30
+    description: PWM0_SM1_OUT_TRIG1 input is selected.
+    value: 30
+  - name: Val31
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 31
+  - name: Val32
+    description: PWM0_SM2_OUT_TRIG1 input is selected.
+    value: 32
+  - name: Val35
+    description: TRIG_IN0 input is selected.
+    value: 35
+  - name: Val36
+    description: TRIG_IN1 input is selected.
+    value: 36
+  - name: Val37
+    description: TRIG_IN2 input is selected.
+    value: 37
+  - name: Val38
+    description: TRIG_IN3 input is selected.
+    value: 38
+  - name: Val39
+    description: TRIG_IN4 input is selected.
+    value: 39
+  - name: Val40
+    description: TRIG_IN5 input is selected.
+    value: 40
+  - name: Val41
+    description: TRIG_IN6 input is selected.
+    value: 41
+  - name: Val42
+    description: TRIG_IN7 input is selected.
+    value: 42
+  - name: Val43
+    description: TRIG_IN8 input is selected.
+    value: 43
+  - name: Val44
+    description: TRIG_IN9 input is selected.
+    value: 44
+  - name: Val45
+    description: TRIG_IN10 input is selected.
+    value: 45
+  - name: Val46
+    description: TRIG_IN11 input is selected.
+    value: 46
+  - name: Val47
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 47
+  - name: Val48
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 48
+  - name: Val49
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 49
+  - name: Val50
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 50
+enum/Aoi0Mux15Inp:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ADC0_tcomp[0] input is selected input is selected input is selected.
+    value: 1
+  - name: Val2
+    description: ADC0_tcomp[1] input is selected input is selected.
+    value: 2
+  - name: Val3
+    description: ADC0_tcomp[2] input is selected input is selected.
+    value: 3
+  - name: Val4
+    description: ADC0_tcomp[3] input is selected input is selected.
+    value: 4
+  - name: Val5
+    description: CMP0_OUT input is selected.
+    value: 5
+  - name: Val6
+    description: CMP1_OUT input is selected.
+    value: 6
+  - name: Val8
+    description: CTimer0_MAT0 input is selected.
+    value: 8
+  - name: Val9
+    description: CTimer0_MAT1 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT2 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer0_MAT3 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT0 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer1_MAT1 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer1_MAT2 input is selected.
+    value: 14
+  - name: Val15
+    description: CTimer1_MAT3 input is selected.
+    value: 15
+  - name: Val16
+    description: CTimer2_MAT0 input is selected.
+    value: 16
+  - name: Val17
+    description: CTimer2_MAT1 input is selected.
+    value: 17
+  - name: Val18
+    description: CTimer2_MAT2 input is selected.
+    value: 18
+  - name: Val19
+    description: CTimer2_MAT3 input is selected.
+    value: 19
+  - name: Val20
+    description: LPTMR0 input is selected.
+    value: 20
+  - name: Val22
+    description: QDC0_CMP_FLAG0 input input is selected.
+    value: 22
+  - name: Val23
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 23
+  - name: Val24
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 24
+  - name: Val25
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 25
+  - name: Val26
+    description: QDC0_POS_MATCH input is selected.
+    value: 26
+  - name: Val27
+    description: PWM0_SM0_OUT_TRIG0 0 input is selected.
+    value: 27
+  - name: Val28
+    description: PWM0_SM0_OUT_TRIG1 input is selected.
+    value: 28
+  - name: Val29
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 29
+  - name: Val30
+    description: PWM0_SM1_OUT_TRIG1 input is selected.
+    value: 30
+  - name: Val31
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 31
+  - name: Val32
+    description: PWM0_SM2_OUT_TRIG1 input is selected.
+    value: 32
+  - name: Val35
+    description: TRIG_IN0 input is selected.
+    value: 35
+  - name: Val36
+    description: TRIG_IN1 input is selected.
+    value: 36
+  - name: Val37
+    description: TRIG_IN2 input is selected.
+    value: 37
+  - name: Val38
+    description: TRIG_IN3 input is selected.
+    value: 38
+  - name: Val39
+    description: TRIG_IN4 input is selected.
+    value: 39
+  - name: Val40
+    description: TRIG_IN5 input is selected.
+    value: 40
+  - name: Val41
+    description: TRIG_IN6 input is selected.
+    value: 41
+  - name: Val42
+    description: TRIG_IN7 input is selected.
+    value: 42
+  - name: Val43
+    description: TRIG_IN8 input is selected.
+    value: 43
+  - name: Val44
+    description: TRIG_IN9 input is selected.
+    value: 44
+  - name: Val45
+    description: TRIG_IN10 input is selected.
+    value: 45
+  - name: Val46
+    description: TRIG_IN11 input is selected.
+    value: 46
+  - name: Val47
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 47
+  - name: Val48
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 48
+  - name: Val49
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 49
+  - name: Val50
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 50
+enum/Aoi0Mux1Inp:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ADC0_tcomp[0] input is selected input is selected input is selected.
+    value: 1
+  - name: Val2
+    description: ADC0_tcomp[1] input is selected input is selected.
+    value: 2
+  - name: Val3
+    description: ADC0_tcomp[2] input is selected input is selected.
+    value: 3
+  - name: Val4
+    description: ADC0_tcomp[3] input is selected input is selected.
+    value: 4
+  - name: Val5
+    description: CMP0_OUT input is selected.
+    value: 5
+  - name: Val6
+    description: CMP1_OUT input is selected.
+    value: 6
+  - name: Val8
+    description: CTimer0_MAT0 input is selected.
+    value: 8
+  - name: Val9
+    description: CTimer0_MAT1 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT2 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer0_MAT3 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT0 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer1_MAT1 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer1_MAT2 input is selected.
+    value: 14
+  - name: Val15
+    description: CTimer1_MAT3 input is selected.
+    value: 15
+  - name: Val16
+    description: CTimer2_MAT0 input is selected.
+    value: 16
+  - name: Val17
+    description: CTimer2_MAT1 input is selected.
+    value: 17
+  - name: Val18
+    description: CTimer2_MAT2 input is selected.
+    value: 18
+  - name: Val19
+    description: CTimer2_MAT3 input is selected.
+    value: 19
+  - name: Val20
+    description: LPTMR0 input is selected.
+    value: 20
+  - name: Val22
+    description: QDC0_CMP_FLAG0 input input is selected.
+    value: 22
+  - name: Val23
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 23
+  - name: Val24
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 24
+  - name: Val25
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 25
+  - name: Val26
+    description: QDC0_POS_MATCH input is selected.
+    value: 26
+  - name: Val27
+    description: PWM0_SM0_OUT_TRIG0 0 input is selected.
+    value: 27
+  - name: Val28
+    description: PWM0_SM0_OUT_TRIG1 input is selected.
+    value: 28
+  - name: Val29
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 29
+  - name: Val30
+    description: PWM0_SM1_OUT_TRIG1 input is selected.
+    value: 30
+  - name: Val31
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 31
+  - name: Val32
+    description: PWM0_SM2_OUT_TRIG1 input is selected.
+    value: 32
+  - name: Val35
+    description: TRIG_IN0 input is selected.
+    value: 35
+  - name: Val36
+    description: TRIG_IN1 input is selected.
+    value: 36
+  - name: Val37
+    description: TRIG_IN2 input is selected.
+    value: 37
+  - name: Val38
+    description: TRIG_IN3 input is selected.
+    value: 38
+  - name: Val39
+    description: TRIG_IN4 input is selected.
+    value: 39
+  - name: Val40
+    description: TRIG_IN5 input is selected.
+    value: 40
+  - name: Val41
+    description: TRIG_IN6 input is selected.
+    value: 41
+  - name: Val42
+    description: TRIG_IN7 input is selected.
+    value: 42
+  - name: Val43
+    description: TRIG_IN8 input is selected.
+    value: 43
+  - name: Val44
+    description: TRIG_IN9 input is selected.
+    value: 44
+  - name: Val45
+    description: TRIG_IN10 input is selected.
+    value: 45
+  - name: Val46
+    description: TRIG_IN11 input is selected.
+    value: 46
+  - name: Val47
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 47
+  - name: Val48
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 48
+  - name: Val49
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 49
+  - name: Val50
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 50
+enum/Aoi0Mux2Inp:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ADC0_tcomp[0] input is selected input is selected input is selected.
+    value: 1
+  - name: Val2
+    description: ADC0_tcomp[1] input is selected input is selected.
+    value: 2
+  - name: Val3
+    description: ADC0_tcomp[2] input is selected input is selected.
+    value: 3
+  - name: Val4
+    description: ADC0_tcomp[3] input is selected input is selected.
+    value: 4
+  - name: Val5
+    description: CMP0_OUT input is selected.
+    value: 5
+  - name: Val6
+    description: CMP1_OUT input is selected.
+    value: 6
+  - name: Val8
+    description: CTimer0_MAT0 input is selected.
+    value: 8
+  - name: Val9
+    description: CTimer0_MAT1 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT2 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer0_MAT3 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT0 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer1_MAT1 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer1_MAT2 input is selected.
+    value: 14
+  - name: Val15
+    description: CTimer1_MAT3 input is selected.
+    value: 15
+  - name: Val16
+    description: CTimer2_MAT0 input is selected.
+    value: 16
+  - name: Val17
+    description: CTimer2_MAT1 input is selected.
+    value: 17
+  - name: Val18
+    description: CTimer2_MAT2 input is selected.
+    value: 18
+  - name: Val19
+    description: CTimer2_MAT3 input is selected.
+    value: 19
+  - name: Val20
+    description: LPTMR0 input is selected.
+    value: 20
+  - name: Val22
+    description: QDC0_CMP_FLAG0 input input is selected.
+    value: 22
+  - name: Val23
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 23
+  - name: Val24
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 24
+  - name: Val25
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 25
+  - name: Val26
+    description: QDC0_POS_MATCH input is selected.
+    value: 26
+  - name: Val27
+    description: PWM0_SM0_OUT_TRIG0 0 input is selected.
+    value: 27
+  - name: Val28
+    description: PWM0_SM0_OUT_TRIG1 input is selected.
+    value: 28
+  - name: Val29
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 29
+  - name: Val30
+    description: PWM0_SM1_OUT_TRIG1 input is selected.
+    value: 30
+  - name: Val31
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 31
+  - name: Val32
+    description: PWM0_SM2_OUT_TRIG1 input is selected.
+    value: 32
+  - name: Val35
+    description: TRIG_IN0 input is selected.
+    value: 35
+  - name: Val36
+    description: TRIG_IN1 input is selected.
+    value: 36
+  - name: Val37
+    description: TRIG_IN2 input is selected.
+    value: 37
+  - name: Val38
+    description: TRIG_IN3 input is selected.
+    value: 38
+  - name: Val39
+    description: TRIG_IN4 input is selected.
+    value: 39
+  - name: Val40
+    description: TRIG_IN5 input is selected.
+    value: 40
+  - name: Val41
+    description: TRIG_IN6 input is selected.
+    value: 41
+  - name: Val42
+    description: TRIG_IN7 input is selected.
+    value: 42
+  - name: Val43
+    description: TRIG_IN8 input is selected.
+    value: 43
+  - name: Val44
+    description: TRIG_IN9 input is selected.
+    value: 44
+  - name: Val45
+    description: TRIG_IN10 input is selected.
+    value: 45
+  - name: Val46
+    description: TRIG_IN11 input is selected.
+    value: 46
+  - name: Val47
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 47
+  - name: Val48
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 48
+  - name: Val49
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 49
+  - name: Val50
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 50
+enum/Aoi0Mux3Inp:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ADC0_tcomp[0] input is selected input is selected input is selected.
+    value: 1
+  - name: Val2
+    description: ADC0_tcomp[1] input is selected input is selected.
+    value: 2
+  - name: Val3
+    description: ADC0_tcomp[2] input is selected input is selected.
+    value: 3
+  - name: Val4
+    description: ADC0_tcomp[3] input is selected input is selected.
+    value: 4
+  - name: Val5
+    description: CMP0_OUT input is selected.
+    value: 5
+  - name: Val6
+    description: CMP1_OUT input is selected.
+    value: 6
+  - name: Val8
+    description: CTimer0_MAT0 input is selected.
+    value: 8
+  - name: Val9
+    description: CTimer0_MAT1 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT2 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer0_MAT3 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT0 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer1_MAT1 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer1_MAT2 input is selected.
+    value: 14
+  - name: Val15
+    description: CTimer1_MAT3 input is selected.
+    value: 15
+  - name: Val16
+    description: CTimer2_MAT0 input is selected.
+    value: 16
+  - name: Val17
+    description: CTimer2_MAT1 input is selected.
+    value: 17
+  - name: Val18
+    description: CTimer2_MAT2 input is selected.
+    value: 18
+  - name: Val19
+    description: CTimer2_MAT3 input is selected.
+    value: 19
+  - name: Val20
+    description: LPTMR0 input is selected.
+    value: 20
+  - name: Val22
+    description: QDC0_CMP_FLAG0 input input is selected.
+    value: 22
+  - name: Val23
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 23
+  - name: Val24
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 24
+  - name: Val25
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 25
+  - name: Val26
+    description: QDC0_POS_MATCH input is selected.
+    value: 26
+  - name: Val27
+    description: PWM0_SM0_OUT_TRIG0 0 input is selected.
+    value: 27
+  - name: Val28
+    description: PWM0_SM0_OUT_TRIG1 input is selected.
+    value: 28
+  - name: Val29
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 29
+  - name: Val30
+    description: PWM0_SM1_OUT_TRIG1 input is selected.
+    value: 30
+  - name: Val31
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 31
+  - name: Val32
+    description: PWM0_SM2_OUT_TRIG1 input is selected.
+    value: 32
+  - name: Val35
+    description: TRIG_IN0 input is selected.
+    value: 35
+  - name: Val36
+    description: TRIG_IN1 input is selected.
+    value: 36
+  - name: Val37
+    description: TRIG_IN2 input is selected.
+    value: 37
+  - name: Val38
+    description: TRIG_IN3 input is selected.
+    value: 38
+  - name: Val39
+    description: TRIG_IN4 input is selected.
+    value: 39
+  - name: Val40
+    description: TRIG_IN5 input is selected.
+    value: 40
+  - name: Val41
+    description: TRIG_IN6 input is selected.
+    value: 41
+  - name: Val42
+    description: TRIG_IN7 input is selected.
+    value: 42
+  - name: Val43
+    description: TRIG_IN8 input is selected.
+    value: 43
+  - name: Val44
+    description: TRIG_IN9 input is selected.
+    value: 44
+  - name: Val45
+    description: TRIG_IN10 input is selected.
+    value: 45
+  - name: Val46
+    description: TRIG_IN11 input is selected.
+    value: 46
+  - name: Val47
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 47
+  - name: Val48
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 48
+  - name: Val49
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 49
+  - name: Val50
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 50
+enum/Aoi0Mux4Inp:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ADC0_tcomp[0] input is selected input is selected input is selected.
+    value: 1
+  - name: Val2
+    description: ADC0_tcomp[1] input is selected input is selected.
+    value: 2
+  - name: Val3
+    description: ADC0_tcomp[2] input is selected input is selected.
+    value: 3
+  - name: Val4
+    description: ADC0_tcomp[3] input is selected input is selected.
+    value: 4
+  - name: Val5
+    description: CMP0_OUT input is selected.
+    value: 5
+  - name: Val6
+    description: CMP1_OUT input is selected.
+    value: 6
+  - name: Val8
+    description: CTimer0_MAT0 input is selected.
+    value: 8
+  - name: Val9
+    description: CTimer0_MAT1 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT2 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer0_MAT3 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT0 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer1_MAT1 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer1_MAT2 input is selected.
+    value: 14
+  - name: Val15
+    description: CTimer1_MAT3 input is selected.
+    value: 15
+  - name: Val16
+    description: CTimer2_MAT0 input is selected.
+    value: 16
+  - name: Val17
+    description: CTimer2_MAT1 input is selected.
+    value: 17
+  - name: Val18
+    description: CTimer2_MAT2 input is selected.
+    value: 18
+  - name: Val19
+    description: CTimer2_MAT3 input is selected.
+    value: 19
+  - name: Val20
+    description: LPTMR0 input is selected.
+    value: 20
+  - name: Val22
+    description: QDC0_CMP_FLAG0 input input is selected.
+    value: 22
+  - name: Val23
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 23
+  - name: Val24
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 24
+  - name: Val25
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 25
+  - name: Val26
+    description: QDC0_POS_MATCH input is selected.
+    value: 26
+  - name: Val27
+    description: PWM0_SM0_OUT_TRIG0 0 input is selected.
+    value: 27
+  - name: Val28
+    description: PWM0_SM0_OUT_TRIG1 input is selected.
+    value: 28
+  - name: Val29
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 29
+  - name: Val30
+    description: PWM0_SM1_OUT_TRIG1 input is selected.
+    value: 30
+  - name: Val31
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 31
+  - name: Val32
+    description: PWM0_SM2_OUT_TRIG1 input is selected.
+    value: 32
+  - name: Val35
+    description: TRIG_IN0 input is selected.
+    value: 35
+  - name: Val36
+    description: TRIG_IN1 input is selected.
+    value: 36
+  - name: Val37
+    description: TRIG_IN2 input is selected.
+    value: 37
+  - name: Val38
+    description: TRIG_IN3 input is selected.
+    value: 38
+  - name: Val39
+    description: TRIG_IN4 input is selected.
+    value: 39
+  - name: Val40
+    description: TRIG_IN5 input is selected.
+    value: 40
+  - name: Val41
+    description: TRIG_IN6 input is selected.
+    value: 41
+  - name: Val42
+    description: TRIG_IN7 input is selected.
+    value: 42
+  - name: Val43
+    description: TRIG_IN8 input is selected.
+    value: 43
+  - name: Val44
+    description: TRIG_IN9 input is selected.
+    value: 44
+  - name: Val45
+    description: TRIG_IN10 input is selected.
+    value: 45
+  - name: Val46
+    description: TRIG_IN11 input is selected.
+    value: 46
+  - name: Val47
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 47
+  - name: Val48
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 48
+  - name: Val49
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 49
+  - name: Val50
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 50
+enum/Aoi0Mux5Inp:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ADC0_tcomp[0] input is selected input is selected input is selected.
+    value: 1
+  - name: Val2
+    description: ADC0_tcomp[1] input is selected input is selected.
+    value: 2
+  - name: Val3
+    description: ADC0_tcomp[2] input is selected input is selected.
+    value: 3
+  - name: Val4
+    description: ADC0_tcomp[3] input is selected input is selected.
+    value: 4
+  - name: Val5
+    description: CMP0_OUT input is selected.
+    value: 5
+  - name: Val6
+    description: CMP1_OUT input is selected.
+    value: 6
+  - name: Val8
+    description: CTimer0_MAT0 input is selected.
+    value: 8
+  - name: Val9
+    description: CTimer0_MAT1 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT2 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer0_MAT3 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT0 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer1_MAT1 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer1_MAT2 input is selected.
+    value: 14
+  - name: Val15
+    description: CTimer1_MAT3 input is selected.
+    value: 15
+  - name: Val16
+    description: CTimer2_MAT0 input is selected.
+    value: 16
+  - name: Val17
+    description: CTimer2_MAT1 input is selected.
+    value: 17
+  - name: Val18
+    description: CTimer2_MAT2 input is selected.
+    value: 18
+  - name: Val19
+    description: CTimer2_MAT3 input is selected.
+    value: 19
+  - name: Val20
+    description: LPTMR0 input is selected.
+    value: 20
+  - name: Val22
+    description: QDC0_CMP_FLAG0 input input is selected.
+    value: 22
+  - name: Val23
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 23
+  - name: Val24
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 24
+  - name: Val25
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 25
+  - name: Val26
+    description: QDC0_POS_MATCH input is selected.
+    value: 26
+  - name: Val27
+    description: PWM0_SM0_OUT_TRIG0 0 input is selected.
+    value: 27
+  - name: Val28
+    description: PWM0_SM0_OUT_TRIG1 input is selected.
+    value: 28
+  - name: Val29
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 29
+  - name: Val30
+    description: PWM0_SM1_OUT_TRIG1 input is selected.
+    value: 30
+  - name: Val31
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 31
+  - name: Val32
+    description: PWM0_SM2_OUT_TRIG1 input is selected.
+    value: 32
+  - name: Val35
+    description: TRIG_IN0 input is selected.
+    value: 35
+  - name: Val36
+    description: TRIG_IN1 input is selected.
+    value: 36
+  - name: Val37
+    description: TRIG_IN2 input is selected.
+    value: 37
+  - name: Val38
+    description: TRIG_IN3 input is selected.
+    value: 38
+  - name: Val39
+    description: TRIG_IN4 input is selected.
+    value: 39
+  - name: Val40
+    description: TRIG_IN5 input is selected.
+    value: 40
+  - name: Val41
+    description: TRIG_IN6 input is selected.
+    value: 41
+  - name: Val42
+    description: TRIG_IN7 input is selected.
+    value: 42
+  - name: Val43
+    description: TRIG_IN8 input is selected.
+    value: 43
+  - name: Val44
+    description: TRIG_IN9 input is selected.
+    value: 44
+  - name: Val45
+    description: TRIG_IN10 input is selected.
+    value: 45
+  - name: Val46
+    description: TRIG_IN11 input is selected.
+    value: 46
+  - name: Val47
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 47
+  - name: Val48
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 48
+  - name: Val49
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 49
+  - name: Val50
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 50
+enum/Aoi0Mux6Inp:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ADC0_tcomp[0] input is selected input is selected input is selected.
+    value: 1
+  - name: Val2
+    description: ADC0_tcomp[1] input is selected input is selected.
+    value: 2
+  - name: Val3
+    description: ADC0_tcomp[2] input is selected input is selected.
+    value: 3
+  - name: Val4
+    description: ADC0_tcomp[3] input is selected input is selected.
+    value: 4
+  - name: Val5
+    description: CMP0_OUT input is selected.
+    value: 5
+  - name: Val6
+    description: CMP1_OUT input is selected.
+    value: 6
+  - name: Val8
+    description: CTimer0_MAT0 input is selected.
+    value: 8
+  - name: Val9
+    description: CTimer0_MAT1 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT2 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer0_MAT3 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT0 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer1_MAT1 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer1_MAT2 input is selected.
+    value: 14
+  - name: Val15
+    description: CTimer1_MAT3 input is selected.
+    value: 15
+  - name: Val16
+    description: CTimer2_MAT0 input is selected.
+    value: 16
+  - name: Val17
+    description: CTimer2_MAT1 input is selected.
+    value: 17
+  - name: Val18
+    description: CTimer2_MAT2 input is selected.
+    value: 18
+  - name: Val19
+    description: CTimer2_MAT3 input is selected.
+    value: 19
+  - name: Val20
+    description: LPTMR0 input is selected.
+    value: 20
+  - name: Val22
+    description: QDC0_CMP_FLAG0 input input is selected.
+    value: 22
+  - name: Val23
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 23
+  - name: Val24
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 24
+  - name: Val25
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 25
+  - name: Val26
+    description: QDC0_POS_MATCH input is selected.
+    value: 26
+  - name: Val27
+    description: PWM0_SM0_OUT_TRIG0 0 input is selected.
+    value: 27
+  - name: Val28
+    description: PWM0_SM0_OUT_TRIG1 input is selected.
+    value: 28
+  - name: Val29
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 29
+  - name: Val30
+    description: PWM0_SM1_OUT_TRIG1 input is selected.
+    value: 30
+  - name: Val31
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 31
+  - name: Val32
+    description: PWM0_SM2_OUT_TRIG1 input is selected.
+    value: 32
+  - name: Val35
+    description: TRIG_IN0 input is selected.
+    value: 35
+  - name: Val36
+    description: TRIG_IN1 input is selected.
+    value: 36
+  - name: Val37
+    description: TRIG_IN2 input is selected.
+    value: 37
+  - name: Val38
+    description: TRIG_IN3 input is selected.
+    value: 38
+  - name: Val39
+    description: TRIG_IN4 input is selected.
+    value: 39
+  - name: Val40
+    description: TRIG_IN5 input is selected.
+    value: 40
+  - name: Val41
+    description: TRIG_IN6 input is selected.
+    value: 41
+  - name: Val42
+    description: TRIG_IN7 input is selected.
+    value: 42
+  - name: Val43
+    description: TRIG_IN8 input is selected.
+    value: 43
+  - name: Val44
+    description: TRIG_IN9 input is selected.
+    value: 44
+  - name: Val45
+    description: TRIG_IN10 input is selected.
+    value: 45
+  - name: Val46
+    description: TRIG_IN11 input is selected.
+    value: 46
+  - name: Val47
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 47
+  - name: Val48
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 48
+  - name: Val49
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 49
+  - name: Val50
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 50
+enum/Aoi0Mux7Inp:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ADC0_tcomp[0] input is selected input is selected input is selected.
+    value: 1
+  - name: Val2
+    description: ADC0_tcomp[1] input is selected input is selected.
+    value: 2
+  - name: Val3
+    description: ADC0_tcomp[2] input is selected input is selected.
+    value: 3
+  - name: Val4
+    description: ADC0_tcomp[3] input is selected input is selected.
+    value: 4
+  - name: Val5
+    description: CMP0_OUT input is selected.
+    value: 5
+  - name: Val6
+    description: CMP1_OUT input is selected.
+    value: 6
+  - name: Val8
+    description: CTimer0_MAT0 input is selected.
+    value: 8
+  - name: Val9
+    description: CTimer0_MAT1 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT2 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer0_MAT3 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT0 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer1_MAT1 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer1_MAT2 input is selected.
+    value: 14
+  - name: Val15
+    description: CTimer1_MAT3 input is selected.
+    value: 15
+  - name: Val16
+    description: CTimer2_MAT0 input is selected.
+    value: 16
+  - name: Val17
+    description: CTimer2_MAT1 input is selected.
+    value: 17
+  - name: Val18
+    description: CTimer2_MAT2 input is selected.
+    value: 18
+  - name: Val19
+    description: CTimer2_MAT3 input is selected.
+    value: 19
+  - name: Val20
+    description: LPTMR0 input is selected.
+    value: 20
+  - name: Val22
+    description: QDC0_CMP_FLAG0 input input is selected.
+    value: 22
+  - name: Val23
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 23
+  - name: Val24
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 24
+  - name: Val25
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 25
+  - name: Val26
+    description: QDC0_POS_MATCH input is selected.
+    value: 26
+  - name: Val27
+    description: PWM0_SM0_OUT_TRIG0 0 input is selected.
+    value: 27
+  - name: Val28
+    description: PWM0_SM0_OUT_TRIG1 input is selected.
+    value: 28
+  - name: Val29
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 29
+  - name: Val30
+    description: PWM0_SM1_OUT_TRIG1 input is selected.
+    value: 30
+  - name: Val31
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 31
+  - name: Val32
+    description: PWM0_SM2_OUT_TRIG1 input is selected.
+    value: 32
+  - name: Val35
+    description: TRIG_IN0 input is selected.
+    value: 35
+  - name: Val36
+    description: TRIG_IN1 input is selected.
+    value: 36
+  - name: Val37
+    description: TRIG_IN2 input is selected.
+    value: 37
+  - name: Val38
+    description: TRIG_IN3 input is selected.
+    value: 38
+  - name: Val39
+    description: TRIG_IN4 input is selected.
+    value: 39
+  - name: Val40
+    description: TRIG_IN5 input is selected.
+    value: 40
+  - name: Val41
+    description: TRIG_IN6 input is selected.
+    value: 41
+  - name: Val42
+    description: TRIG_IN7 input is selected.
+    value: 42
+  - name: Val43
+    description: TRIG_IN8 input is selected.
+    value: 43
+  - name: Val44
+    description: TRIG_IN9 input is selected.
+    value: 44
+  - name: Val45
+    description: TRIG_IN10 input is selected.
+    value: 45
+  - name: Val46
+    description: TRIG_IN11 input is selected.
+    value: 46
+  - name: Val47
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 47
+  - name: Val48
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 48
+  - name: Val49
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 49
+  - name: Val50
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 50
+enum/Aoi0Mux8Inp:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ADC0_tcomp[0] input is selected input is selected input is selected.
+    value: 1
+  - name: Val2
+    description: ADC0_tcomp[1] input is selected input is selected.
+    value: 2
+  - name: Val3
+    description: ADC0_tcomp[2] input is selected input is selected.
+    value: 3
+  - name: Val4
+    description: ADC0_tcomp[3] input is selected input is selected.
+    value: 4
+  - name: Val5
+    description: CMP0_OUT input is selected.
+    value: 5
+  - name: Val6
+    description: CMP1_OUT input is selected.
+    value: 6
+  - name: Val8
+    description: CTimer0_MAT0 input is selected.
+    value: 8
+  - name: Val9
+    description: CTimer0_MAT1 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT2 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer0_MAT3 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT0 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer1_MAT1 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer1_MAT2 input is selected.
+    value: 14
+  - name: Val15
+    description: CTimer1_MAT3 input is selected.
+    value: 15
+  - name: Val16
+    description: CTimer2_MAT0 input is selected.
+    value: 16
+  - name: Val17
+    description: CTimer2_MAT1 input is selected.
+    value: 17
+  - name: Val18
+    description: CTimer2_MAT2 input is selected.
+    value: 18
+  - name: Val19
+    description: CTimer2_MAT3 input is selected.
+    value: 19
+  - name: Val20
+    description: LPTMR0 input is selected.
+    value: 20
+  - name: Val22
+    description: QDC0_CMP_FLAG0 input input is selected.
+    value: 22
+  - name: Val23
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 23
+  - name: Val24
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 24
+  - name: Val25
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 25
+  - name: Val26
+    description: QDC0_POS_MATCH input is selected.
+    value: 26
+  - name: Val27
+    description: PWM0_SM0_OUT_TRIG0 0 input is selected.
+    value: 27
+  - name: Val28
+    description: PWM0_SM0_OUT_TRIG1 input is selected.
+    value: 28
+  - name: Val29
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 29
+  - name: Val30
+    description: PWM0_SM1_OUT_TRIG1 input is selected.
+    value: 30
+  - name: Val31
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 31
+  - name: Val32
+    description: PWM0_SM2_OUT_TRIG1 input is selected.
+    value: 32
+  - name: Val35
+    description: TRIG_IN0 input is selected.
+    value: 35
+  - name: Val36
+    description: TRIG_IN1 input is selected.
+    value: 36
+  - name: Val37
+    description: TRIG_IN2 input is selected.
+    value: 37
+  - name: Val38
+    description: TRIG_IN3 input is selected.
+    value: 38
+  - name: Val39
+    description: TRIG_IN4 input is selected.
+    value: 39
+  - name: Val40
+    description: TRIG_IN5 input is selected.
+    value: 40
+  - name: Val41
+    description: TRIG_IN6 input is selected.
+    value: 41
+  - name: Val42
+    description: TRIG_IN7 input is selected.
+    value: 42
+  - name: Val43
+    description: TRIG_IN8 input is selected.
+    value: 43
+  - name: Val44
+    description: TRIG_IN9 input is selected.
+    value: 44
+  - name: Val45
+    description: TRIG_IN10 input is selected.
+    value: 45
+  - name: Val46
+    description: TRIG_IN11 input is selected.
+    value: 46
+  - name: Val47
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 47
+  - name: Val48
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 48
+  - name: Val49
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 49
+  - name: Val50
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 50
+enum/Aoi0Mux9Inp:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ADC0_tcomp[0] input is selected input is selected input is selected.
+    value: 1
+  - name: Val2
+    description: ADC0_tcomp[1] input is selected input is selected.
+    value: 2
+  - name: Val3
+    description: ADC0_tcomp[2] input is selected input is selected.
+    value: 3
+  - name: Val4
+    description: ADC0_tcomp[3] input is selected input is selected.
+    value: 4
+  - name: Val5
+    description: CMP0_OUT input is selected.
+    value: 5
+  - name: Val6
+    description: CMP1_OUT input is selected.
+    value: 6
+  - name: Val8
+    description: CTimer0_MAT0 input is selected.
+    value: 8
+  - name: Val9
+    description: CTimer0_MAT1 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT2 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer0_MAT3 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT0 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer1_MAT1 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer1_MAT2 input is selected.
+    value: 14
+  - name: Val15
+    description: CTimer1_MAT3 input is selected.
+    value: 15
+  - name: Val16
+    description: CTimer2_MAT0 input is selected.
+    value: 16
+  - name: Val17
+    description: CTimer2_MAT1 input is selected.
+    value: 17
+  - name: Val18
+    description: CTimer2_MAT2 input is selected.
+    value: 18
+  - name: Val19
+    description: CTimer2_MAT3 input is selected.
+    value: 19
+  - name: Val20
+    description: LPTMR0 input is selected.
+    value: 20
+  - name: Val22
+    description: QDC0_CMP_FLAG0 input input is selected.
+    value: 22
+  - name: Val23
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 23
+  - name: Val24
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 24
+  - name: Val25
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 25
+  - name: Val26
+    description: QDC0_POS_MATCH input is selected.
+    value: 26
+  - name: Val27
+    description: PWM0_SM0_OUT_TRIG0 0 input is selected.
+    value: 27
+  - name: Val28
+    description: PWM0_SM0_OUT_TRIG1 input is selected.
+    value: 28
+  - name: Val29
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 29
+  - name: Val30
+    description: PWM0_SM1_OUT_TRIG1 input is selected.
+    value: 30
+  - name: Val31
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 31
+  - name: Val32
+    description: PWM0_SM2_OUT_TRIG1 input is selected.
+    value: 32
+  - name: Val35
+    description: TRIG_IN0 input is selected.
+    value: 35
+  - name: Val36
+    description: TRIG_IN1 input is selected.
+    value: 36
+  - name: Val37
+    description: TRIG_IN2 input is selected.
+    value: 37
+  - name: Val38
+    description: TRIG_IN3 input is selected.
+    value: 38
+  - name: Val39
+    description: TRIG_IN4 input is selected.
+    value: 39
+  - name: Val40
+    description: TRIG_IN5 input is selected.
+    value: 40
+  - name: Val41
+    description: TRIG_IN6 input is selected.
+    value: 41
+  - name: Val42
+    description: TRIG_IN7 input is selected.
+    value: 42
+  - name: Val43
+    description: TRIG_IN8 input is selected.
+    value: 43
+  - name: Val44
+    description: TRIG_IN9 input is selected.
+    value: 44
+  - name: Val45
+    description: TRIG_IN10 input is selected.
+    value: 45
+  - name: Val46
+    description: TRIG_IN11 input is selected.
+    value: 46
+  - name: Val47
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 47
+  - name: Val48
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 48
+  - name: Val49
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 49
+  - name: Val50
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 50
+enum/Cmp0TrigTrigin:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ARM_TXEV input is selected.
+    value: 1
+  - name: Val2
+    description: AOI0_OUT0 input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT1 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT2 input is selected.
+    value: 4
+  - name: Val5
+    description: AOI0_OUT3 input is selected.
+    value: 5
+  - name: Val6
+    description: CMP1_OUT input is selected.
+    value: 6
+  - name: Val8
+    description: CTimer0_MAT0 input is selected.
+    value: 8
+  - name: Val9
+    description: CTimer0_MAT2 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer1_MAT0 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer1_MAT2 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer2_MAT0 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer2_MAT2 input is selected.
+    value: 13
+  - name: Val14
+    description: LPTMR0 input is selected.
+    value: 14
+  - name: Val16
+    description: QDC0_POS_MATCH0.
+    value: 16
+  - name: Val17
+    description: PWM0_SM0_OUT_TRIG0 input is selected.
+    value: 17
+  - name: Val18
+    description: PWM0_SM0_OUT_TRIG1 input is selected.
+    value: 18
+  - name: Val19
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 19
+  - name: Val20
+    description: PWM0_SM1_OUT_TRIG1 input is selected.
+    value: 20
+  - name: Val21
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 21
+  - name: Val22
+    description: PWM0_SM2_OUT_TRIG1 input is selected.
+    value: 22
+  - name: Val25
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 25
+  - name: Val26
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 26
+  - name: Val27
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 27
+  - name: Val28
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 28
+  - name: Val30
+    description: WUU input is selected.
+    value: 30
+enum/Cmp1TrigTrigin:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ARM_TXEV input is selected.
+    value: 1
+  - name: Val2
+    description: AOI0_OUT0 input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT1 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT2 input is selected.
+    value: 4
+  - name: Val5
+    description: AOI0_OUT3 input is selected.
+    value: 5
+  - name: Val6
+    description: CMP0_OUT input is selected.
+    value: 6
+  - name: Val8
+    description: CTimer0_MAT0 input is selected.
+    value: 8
+  - name: Val9
+    description: CTimer0_MAT2 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer1_MAT0 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer1_MAT2 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer2_MAT0 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer2_MAT2 input is selected.
+    value: 13
+  - name: Val14
+    description: LPTMR0 input is selected.
+    value: 14
+  - name: Val16
+    description: QDC0_CMP/POS_MATCH0.
+    value: 16
+  - name: Val17
+    description: PWM0_SM0_OUT_TRIG0 input is selected.
+    value: 17
+  - name: Val18
+    description: PWM0_SM0_OUT_TRIG1 input is selected.
+    value: 18
+  - name: Val19
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 19
+  - name: Val20
+    description: PWM0_SM1_OUT_TRIG1 input is selected.
+    value: 20
+  - name: Val21
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 21
+  - name: Val22
+    description: PWM0_SM2_OUT_TRIG1 input is selected.
+    value: 22
+  - name: Val25
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 25
+  - name: Val26
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 26
+  - name: Val27
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 27
+  - name: Val28
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 28
+  - name: Val30
+    description: WUU input is selected.
+    value: 30
+enum/Ctimer0capInp:
+  bit_size: 7
+  variants:
+  - name: Val1
+    description: CT_INP0 input is selected.
+    value: 1
+  - name: Val2
+    description: CT_INP1 input is selected.
+    value: 2
+  - name: Val3
+    description: CT_INP2 input is selected.
+    value: 3
+  - name: Val4
+    description: CT_INP3 input is selected.
+    value: 4
+  - name: Val5
+    description: CT_INP4 input is selected.
+    value: 5
+  - name: Val6
+    description: CT_INP5 input is selected.
+    value: 6
+  - name: Val7
+    description: CT_INP6 input is selected.
+    value: 7
+  - name: Val8
+    description: CT_INP7 input is selected.
+    value: 8
+  - name: Val9
+    description: CT_INP8 input is selected.
+    value: 9
+  - name: Val10
+    description: CT_INP9 input is selected.
+    value: 10
+  - name: Val13
+    description: CT_INP12 input is selected.
+    value: 13
+  - name: Val14
+    description: CT_INP13 input is selected.
+    value: 14
+  - name: Val15
+    description: CT_INP14 input is selected.
+    value: 15
+  - name: Val16
+    description: CT_INP15 input is selected.
+    value: 16
+  - name: Val17
+    description: CT_INP16 input is selected.
+    value: 17
+  - name: Val18
+    description: CT_INP17 input is selected.
+    value: 18
+  - name: Val19
+    description: CT_INP18 input is selected.
+    value: 19
+  - name: Val20
+    description: CT_INP19 input is selected.
+    value: 20
+  - name: Val21
+    description: USB0 usb0 start of frame input is selected.
+    value: 21
+  - name: Val22
+    description: AOI0_OUT0 input is selected.
+    value: 22
+  - name: Val23
+    description: AOI0_OUT1 input is selected.
+    value: 23
+  - name: Val24
+    description: AOI0_OUT2 input is selected.
+    value: 24
+  - name: Val25
+    description: AOI0_OUT3 input is selected.
+    value: 25
+  - name: Val26
+    description: ADC0_tcomp[0] input is selected.
+    value: 26
+  - name: Val27
+    description: ADC0_tcomp[1] input is selected.
+    value: 27
+  - name: Val28
+    description: ADC0_tcomp[2] input is selected.
+    value: 28
+  - name: Val29
+    description: ADC0_tcomp[3] input is selected.
+    value: 29
+  - name: Val30
+    description: CMP0_OUT input is selected selected.
+    value: 30
+  - name: Val31
+    description: CMP1_OUT input is selected selected.
+    value: 31
+  - name: Val33
+    description: CTimer1_MAT1 input is selected.
+    value: 33
+  - name: Val34
+    description: CTimer1_MAT2 input is selected.
+    value: 34
+  - name: Val35
+    description: CTimer1_MAT3 input is selected.
+    value: 35
+  - name: Val36
+    description: CTimer2_MAT1 input is selected.
+    value: 36
+  - name: Val37
+    description: CTimer2_MAT2 input is selected.
+    value: 37
+  - name: Val38
+    description: CTimer2_MAT3 input is selected.
+    value: 38
+  - name: Val39
+    description: QDC0_CMP_FLAG0 input input is selected.
+    value: 39
+  - name: Val40
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 40
+  - name: Val41
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 41
+  - name: Val42
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 42
+  - name: Val43
+    description: QDC0_POS_MATCH0 input is selected.
+    value: 43
+  - name: Val44
+    description: PWM0_SM0_OUT_TRIG0 input is selected.
+    value: 44
+  - name: Val45
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 45
+  - name: Val46
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 46
+  - name: Val48
+    description: LPI2C0 Master End of Packet input is selected.
+    value: 48
+  - name: Val49
+    description: LPI2C0 Slave End of Packet input is selected.
+    value: 49
+  - name: Val52
+    description: LPSPI0 End of Frame input is selected.
+    value: 52
+  - name: Val53
+    description: LPSPI0 Received Data Word input is selected.
+    value: 53
+  - name: Val54
+    description: LPSPI1 End of Frame input is selected.
+    value: 54
+  - name: Val55
+    description: LPSPI1 Received Data Word input is selected.
+    value: 55
+  - name: Val56
+    description: LPUART0 Received Data Word input is selected.
+    value: 56
+  - name: Val57
+    description: LPUART0 Transmitted Data Word input is selected.
+    value: 57
+  - name: Val58
+    description: LPUART0 Receive Line Idle input is selected.
+    value: 58
+  - name: Val59
+    description: LPUART1 Received Data Word input is selected.
+    value: 59
+  - name: Val60
+    description: LPUART1 Transmitted Data Word input is selected.
+    value: 60
+  - name: Val61
+    description: LPUART1 Receive Line Idle input is selected.
+    value: 61
+  - name: Val62
+    description: LPUART2 Received Data Word input is selected.
+    value: 62
+  - name: Val63
+    description: LPUART2 Transmitted Data Word input is selected.
+    value: 63
+  - name: Val64
+    description: LPUART2 Receive Line Idle input is selected.
+    value: 64
+enum/Ctimer1capInp:
+  bit_size: 7
+  variants:
+  - name: Val1
+    description: CT_INP0 input is selected.
+    value: 1
+  - name: Val2
+    description: CT_INP1 input is selected.
+    value: 2
+  - name: Val3
+    description: CT_INP2 input is selected.
+    value: 3
+  - name: Val4
+    description: CT_INP3 input is selected.
+    value: 4
+  - name: Val5
+    description: CT_INP4 input is selected.
+    value: 5
+  - name: Val6
+    description: CT_INP5 input is selected.
+    value: 6
+  - name: Val7
+    description: CT_INP6 input is selected.
+    value: 7
+  - name: Val8
+    description: CT_INP7 input is selected.
+    value: 8
+  - name: Val9
+    description: CT_INP8 input is selected.
+    value: 9
+  - name: Val10
+    description: CT_INP9 input is selected.
+    value: 10
+  - name: Val13
+    description: CT_INP12 input is selected.
+    value: 13
+  - name: Val14
+    description: CT_INP13 input is selected.
+    value: 14
+  - name: Val15
+    description: CT_INP14 input is selected.
+    value: 15
+  - name: Val16
+    description: CT_INP15 input is selected.
+    value: 16
+  - name: Val17
+    description: CT_INP16 input is selected.
+    value: 17
+  - name: Val18
+    description: CT_INP17 input is selected.
+    value: 18
+  - name: Val19
+    description: CT_INP18 input is selected.
+    value: 19
+  - name: Val20
+    description: CT_INP19 input is selected.
+    value: 20
+  - name: Val21
+    description: USB0 usb0 start of frame input is selected.
+    value: 21
+  - name: Val22
+    description: AOI0_OUT0 input is selected.
+    value: 22
+  - name: Val23
+    description: AOI0_OUT1 input is selected.
+    value: 23
+  - name: Val24
+    description: AOI0_OUT2 input is selected.
+    value: 24
+  - name: Val25
+    description: AOI0_OUT3 input is selected.
+    value: 25
+  - name: Val26
+    description: ADC0_tcomp[0] input is selected.
+    value: 26
+  - name: Val27
+    description: ADC0_tcomp[1] input is selected.
+    value: 27
+  - name: Val28
+    description: ADC0_tcomp[2] input is selected.
+    value: 28
+  - name: Val29
+    description: ADC0_tcomp[3] input is selected.
+    value: 29
+  - name: Val30
+    description: CMP0_OUT input is selected.
+    value: 30
+  - name: Val31
+    description: CMP1_OUT input is selected.
+    value: 31
+  - name: Val33
+    description: CTimer0_MAT1 input is selected.
+    value: 33
+  - name: Val34
+    description: CTimer0_MAT2 input is selected.
+    value: 34
+  - name: Val35
+    description: CTimer0_MAT3 input is selected.
+    value: 35
+  - name: Val36
+    description: CTimer2_MAT1 input is selected.
+    value: 36
+  - name: Val37
+    description: CTimer2_MAT2 input is selected.
+    value: 37
+  - name: Val38
+    description: CTimer2_MAT3 input is selected.
+    value: 38
+  - name: Val39
+    description: QDC0_CMP_FLAG0 input is selected.
+    value: 39
+  - name: Val40
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 40
+  - name: Val41
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 41
+  - name: Val42
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 42
+  - name: Val43
+    description: QDC0_POS_MATCH0 input is selected.
+    value: 43
+  - name: Val44
+    description: PWM0_SM0_OUT_TRIG0 input is selected.
+    value: 44
+  - name: Val45
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 45
+  - name: Val46
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 46
+  - name: Val48
+    description: LPI2C0 Master End of Packet input is selected.
+    value: 48
+  - name: Val49
+    description: LPI2C0 Slave End of Packet input is selected.
+    value: 49
+  - name: Val52
+    description: LPSPI0 End of Frame input is selected.
+    value: 52
+  - name: Val53
+    description: LPSPI0 Received Data Word input is selected.
+    value: 53
+  - name: Val54
+    description: LPSPI1 End of Frame input is selected.
+    value: 54
+  - name: Val55
+    description: LPSPI1 Received Data Word input is selected.
+    value: 55
+  - name: Val56
+    description: LPUART0 Received Data Word input is selected.
+    value: 56
+  - name: Val57
+    description: LPUART0 Transmitted Data Word input is selected.
+    value: 57
+  - name: Val58
+    description: LPUART0 Receive Line Idle input is selected.
+    value: 58
+  - name: Val59
+    description: LPUART1 Received Data Word input is selected.
+    value: 59
+  - name: Val60
+    description: LPUART1 Transmitted Data Word input is selected.
+    value: 60
+  - name: Val61
+    description: LPUART1 Receive Line Idle input is selected.
+    value: 61
+  - name: Val62
+    description: LPUART2 Received Data Word input is selected.
+    value: 62
+  - name: Val63
+    description: LPUART2 Transmitted Data Word input is selected.
+    value: 63
+  - name: Val64
+    description: LPUART2 Receive Line Idle input is selected.
+    value: 64
+enum/Ctimer2capInp:
+  bit_size: 7
+  variants:
+  - name: Val1
+    description: CT_INP0 input is selected.
+    value: 1
+  - name: Val2
+    description: CT_INP1 input is selected.
+    value: 2
+  - name: Val3
+    description: CT_INP2 input is selected.
+    value: 3
+  - name: Val4
+    description: CT_INP3 input is selected.
+    value: 4
+  - name: Val5
+    description: CT_INP4 input is selected.
+    value: 5
+  - name: Val6
+    description: CT_INP5 input is selected.
+    value: 6
+  - name: Val7
+    description: CT_INP6 input is selected.
+    value: 7
+  - name: Val8
+    description: CT_INP7 input is selected.
+    value: 8
+  - name: Val9
+    description: CT_INP8 input is selected.
+    value: 9
+  - name: Val10
+    description: CT_INP9 input is selected.
+    value: 10
+  - name: Val13
+    description: CT_INP12 input is selected.
+    value: 13
+  - name: Val14
+    description: CT_INP13 input is selected.
+    value: 14
+  - name: Val15
+    description: CT_INP14 input is selected.
+    value: 15
+  - name: Val16
+    description: CT_INP15 input is selected.
+    value: 16
+  - name: Val17
+    description: CT_INP16 input is selected.
+    value: 17
+  - name: Val18
+    description: CT_INP17 input is selected.
+    value: 18
+  - name: Val19
+    description: CT_INP18 input is selected.
+    value: 19
+  - name: Val20
+    description: CT_INP19 input is selected.
+    value: 20
+  - name: Val21
+    description: USB0 usb0 start of frame input is selected.
+    value: 21
+  - name: Val22
+    description: AOI0_OUT0 input is selected.
+    value: 22
+  - name: Val23
+    description: AOI0_OUT1 input is selected.
+    value: 23
+  - name: Val24
+    description: AOI0_OUT2 input is selected.
+    value: 24
+  - name: Val25
+    description: AOI0_OUT3 input is selected.
+    value: 25
+  - name: Val26
+    description: ADC0_tcomp[0] input is selected.
+    value: 26
+  - name: Val27
+    description: ADC0_tcomp[1] input is selected.
+    value: 27
+  - name: Val28
+    description: ADC0_tcomp[2] input is selected.
+    value: 28
+  - name: Val29
+    description: ADC0_tcomp[3] input is selected.
+    value: 29
+  - name: Val30
+    description: CMP0_OUT input is selected.
+    value: 30
+  - name: Val31
+    description: CMP1_OUT input is selected.
+    value: 31
+  - name: Val33
+    description: CTimer0_MAT1 input is selected.
+    value: 33
+  - name: Val34
+    description: CTimer0_MAT2 input is selected.
+    value: 34
+  - name: Val35
+    description: CTimer0_MAT3 input is selected.
+    value: 35
+  - name: Val36
+    description: CTimer1_MAT1 input is selected.
+    value: 36
+  - name: Val37
+    description: CTimer1_MAT2 input is selected.
+    value: 37
+  - name: Val38
+    description: CTimer1_MAT3 input is selected.
+    value: 38
+  - name: Val39
+    description: QDC0_CMP_FLAG0 input is selected.
+    value: 39
+  - name: Val40
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 40
+  - name: Val41
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 41
+  - name: Val42
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 42
+  - name: Val43
+    description: QDC0_POS_MATCH0 input is selected.
+    value: 43
+  - name: Val44
+    description: PWM0_SM0_OUT_TRIG0 input is selected.
+    value: 44
+  - name: Val45
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 45
+  - name: Val46
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 46
+  - name: Val48
+    description: LPI2C0 Master End of Packet input is selected.
+    value: 48
+  - name: Val49
+    description: LPI2C0 Slave End of Packet input is selected.
+    value: 49
+  - name: Val52
+    description: LPSPI0 End of Frame input is selected.
+    value: 52
+  - name: Val53
+    description: LPSPI0 Received Data Word input is selected.
+    value: 53
+  - name: Val54
+    description: LPSPI1 End of Frame input is selected.
+    value: 54
+  - name: Val55
+    description: LPSPI1 Received Data Word input is selected.
+    value: 55
+  - name: Val56
+    description: LPUART0 Received Data Word input is selected.
+    value: 56
+  - name: Val57
+    description: LPUART0 Transmitted Data Word input is selected.
+    value: 57
+  - name: Val58
+    description: LPUART0 Receive Line Idle input is selected.
+    value: 58
+  - name: Val59
+    description: LPUART1 Received Data Word input is selected.
+    value: 59
+  - name: Val60
+    description: LPUART1 Transmitted Data Word input is selected.
+    value: 60
+  - name: Val61
+    description: LPUART1 Receive Line Idle input is selected.
+    value: 61
+  - name: Val62
+    description: LPUART2 Received Data Word input is selected.
+    value: 62
+  - name: Val63
+    description: LPUART2 Transmitted Data Word input is selected.
+    value: 63
+  - name: Val64
+    description: LPUART2 Receive Line Idle input is selected.
+    value: 64
+enum/ExtTrig67Inp:
+  bit_size: 5
+  variants:
+  - name: Val1
+    description: ARM_TXEV input is selected.
+    value: 1
+  - name: Val2
+    description: AOI0_OUT0 input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT1 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT2 input is selected.
+    value: 4
+  - name: Val5
+    description: AOI0_OUT3 input is selected.
+    value: 5
+  - name: Val6
+    description: CMP0_OUT input is selected.
+    value: 6
+  - name: Val7
+    description: CMP1_OUT input is selected.
+    value: 7
+  - name: Val9
+    description: LPUART0 input is selected.
+    value: 9
+  - name: Val10
+    description: LPUART1 input is selected.
+    value: 10
+  - name: Val11
+    description: LPUART2 input is selected.
+    value: 11
+enum/ExtTrigInp:
+  bit_size: 5
+  variants:
+  - name: Val1
+    description: ARM_TXEV input is selected.
+    value: 1
+  - name: Val2
+    description: AOI0_OUT0 input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT1 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT2 input is selected.
+    value: 4
+  - name: Val5
+    description: AOI0_OUT3 input is selected.
+    value: 5
+  - name: Val6
+    description: CMP0_OUT input is selected.
+    value: 6
+  - name: Val7
+    description: CMP1_OUT input is selected.
+    value: 7
+  - name: Val9
+    description: LPUART0 input is selected.
+    value: 9
+  - name: Val10
+    description: LPUART1 input is selected.
+    value: 10
+  - name: Val11
+    description: LPUART2 input is selected.
+    value: 11
+enum/FlexPwm0Fault0Trigin:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ARM_TXEV input is selected.
+    value: 1
+  - name: Val2
+    description: AOI0_OUT0 input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT1 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT2 input is selected.
+    value: 4
+  - name: Val5
+    description: AOI0_OUT3 input is selected.
+    value: 5
+  - name: Val6
+    description: CMP0_OUT input is selected.
+    value: 6
+  - name: Val7
+    description: CMP1_OUT input is selected.
+    value: 7
+  - name: Val9
+    description: CTimer0_MAT2 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT3 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer1_MAT2 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT3 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer2_MAT2 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer2_MAT3 input is selected.
+    value: 14
+  - name: Val15
+    description: QDC0_CMP_FLAG0 input is selected.
+    value: 15
+  - name: Val16
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 16
+  - name: Val17
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 17
+  - name: Val18
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 18
+  - name: Val19
+    description: QDC0_POS_MATCH0 input is selected.
+    value: 19
+  - name: Val20
+    description: TRIG_IN0 input is selected.
+    value: 20
+  - name: Val21
+    description: TRIG_IN1 input is selected.
+    value: 21
+  - name: Val22
+    description: TRIG_IN2 input is selected.
+    value: 22
+  - name: Val23
+    description: TRIG_IN3 input is selected.
+    value: 23
+  - name: Val24
+    description: TRIG_IN4 input is selected.
+    value: 24
+  - name: Val25
+    description: TRIG_IN5 input is selected.
+    value: 25
+  - name: Val26
+    description: TRIG_IN6 input is selected.
+    value: 26
+  - name: Val27
+    description: TRIG_IN7 input is selected.
+    value: 27
+  - name: Val28
+    description: TRIG_IN8 input is selected.
+    value: 28
+  - name: Val29
+    description: TRIG_IN9 input is selected.
+    value: 29
+  - name: Val30
+    description: TRIG_IN10 input is selected.
+    value: 30
+  - name: Val31
+    description: TRIG_IN11 input is selected.
+    value: 31
+  - name: Val32
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 32
+  - name: Val33
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 33
+  - name: Val34
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 34
+  - name: Val35
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 35
+enum/FlexPwm0Fault1Trigin:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ARM_TXEV input is selected.
+    value: 1
+  - name: Val2
+    description: AOI0_OUT0 input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT1 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT2 input is selected.
+    value: 4
+  - name: Val5
+    description: AOI0_OUT3 input is selected.
+    value: 5
+  - name: Val6
+    description: CMP0_OUT input is selected.
+    value: 6
+  - name: Val7
+    description: CMP1_OUT input is selected.
+    value: 7
+  - name: Val9
+    description: CTimer0_MAT2 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT3 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer1_MAT2 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT3 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer2_MAT2 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer2_MAT3 input is selected.
+    value: 14
+  - name: Val15
+    description: QDC0_CMP_FLAG0 input is selected.
+    value: 15
+  - name: Val16
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 16
+  - name: Val17
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 17
+  - name: Val18
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 18
+  - name: Val19
+    description: QDC0_POS_MATCH0 input is selected.
+    value: 19
+  - name: Val20
+    description: TRIG_IN0 input is selected.
+    value: 20
+  - name: Val21
+    description: TRIG_IN1 input is selected.
+    value: 21
+  - name: Val22
+    description: TRIG_IN2 input is selected.
+    value: 22
+  - name: Val23
+    description: TRIG_IN3 input is selected.
+    value: 23
+  - name: Val24
+    description: TRIG_IN4 input is selected.
+    value: 24
+  - name: Val25
+    description: TRIG_IN5 input is selected.
+    value: 25
+  - name: Val26
+    description: TRIG_IN6 input is selected.
+    value: 26
+  - name: Val27
+    description: TRIG_IN7 input is selected.
+    value: 27
+  - name: Val28
+    description: TRIG_IN8 input is selected.
+    value: 28
+  - name: Val29
+    description: TRIG_IN9 input is selected.
+    value: 29
+  - name: Val30
+    description: TRIG_IN10 input is selected.
+    value: 30
+  - name: Val31
+    description: TRIG_IN11 input is selected.
+    value: 31
+  - name: Val32
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 32
+  - name: Val33
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 33
+  - name: Val34
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 34
+  - name: Val35
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 35
+enum/FlexPwm0Fault2Trigin:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ARM_TXEV input is selected.
+    value: 1
+  - name: Val2
+    description: AOI0_OUT0 input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT1 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT2 input is selected.
+    value: 4
+  - name: Val5
+    description: AOI0_OUT3 input is selected.
+    value: 5
+  - name: Val6
+    description: CMP0_OUT input is selected.
+    value: 6
+  - name: Val7
+    description: CMP1_OUT input is selected.
+    value: 7
+  - name: Val9
+    description: CTimer0_MAT2 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT3 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer1_MAT2 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT3 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer2_MAT2 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer2_MAT3 input is selected.
+    value: 14
+  - name: Val15
+    description: QDC0_CMP_FLAG0 input is selected.
+    value: 15
+  - name: Val16
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 16
+  - name: Val17
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 17
+  - name: Val18
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 18
+  - name: Val19
+    description: QDC0_POS_MATCH0 input is selected.
+    value: 19
+  - name: Val20
+    description: TRIG_IN0 input is selected.
+    value: 20
+  - name: Val21
+    description: TRIG_IN1 input is selected.
+    value: 21
+  - name: Val22
+    description: TRIG_IN2 input is selected.
+    value: 22
+  - name: Val23
+    description: TRIG_IN3 input is selected.
+    value: 23
+  - name: Val24
+    description: TRIG_IN4 input is selected.
+    value: 24
+  - name: Val25
+    description: TRIG_IN5 input is selected.
+    value: 25
+  - name: Val26
+    description: TRIG_IN6 input is selected.
+    value: 26
+  - name: Val27
+    description: TRIG_IN7 input is selected.
+    value: 27
+  - name: Val28
+    description: TRIG_IN8 input is selected.
+    value: 28
+  - name: Val29
+    description: TRIG_IN9 input is selected.
+    value: 29
+  - name: Val30
+    description: TRIG_IN10 input is selected.
+    value: 30
+  - name: Val31
+    description: TRIG_IN11 input is selected.
+    value: 31
+  - name: Val32
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 32
+  - name: Val33
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 33
+  - name: Val34
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 34
+  - name: Val35
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 35
+enum/FlexPwm0Fault3Trigin:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ARM_TXEV input is selected.
+    value: 1
+  - name: Val2
+    description: AOI0_OUT0 input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT1 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT2 input is selected.
+    value: 4
+  - name: Val5
+    description: AOI0_OUT3 input is selected.
+    value: 5
+  - name: Val6
+    description: CMP0_OUT input is selected.
+    value: 6
+  - name: Val7
+    description: CMP1_OUT input is selected.
+    value: 7
+  - name: Val9
+    description: CTimer0_MAT2 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT3 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer1_MAT2 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT3 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer2_MAT2 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer2_MAT3 input is selected.
+    value: 14
+  - name: Val15
+    description: QDC0_CMP_FLAG0 input is selected.
+    value: 15
+  - name: Val16
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 16
+  - name: Val17
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 17
+  - name: Val18
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 18
+  - name: Val19
+    description: QDC0_POS_MATCH0 input is selected.
+    value: 19
+  - name: Val20
+    description: TRIG_IN0 input is selected.
+    value: 20
+  - name: Val21
+    description: TRIG_IN1 input is selected.
+    value: 21
+  - name: Val22
+    description: TRIG_IN2 input is selected.
+    value: 22
+  - name: Val23
+    description: TRIG_IN3 input is selected.
+    value: 23
+  - name: Val24
+    description: TRIG_IN4 input is selected.
+    value: 24
+  - name: Val25
+    description: TRIG_IN5 input is selected.
+    value: 25
+  - name: Val26
+    description: TRIG_IN6 input is selected.
+    value: 26
+  - name: Val27
+    description: TRIG_IN7 input is selected.
+    value: 27
+  - name: Val28
+    description: TRIG_IN8 input is selected.
+    value: 28
+  - name: Val29
+    description: TRIG_IN9 input is selected.
+    value: 29
+  - name: Val30
+    description: TRIG_IN10 input is selected.
+    value: 30
+  - name: Val31
+    description: TRIG_IN11 input is selected.
+    value: 31
+  - name: Val32
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 32
+  - name: Val33
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 33
+  - name: Val34
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 34
+  - name: Val35
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 35
+enum/FlexPwm0ForceTrigin:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ARM_TXEV input is selected.
+    value: 1
+  - name: Val2
+    description: AOI0_OUT0 input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT1 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT2 input is selected.
+    value: 4
+  - name: Val5
+    description: AOI0_OUT3 input is selected.
+    value: 5
+  - name: Val6
+    description: CMP0_OUT input is selected.
+    value: 6
+  - name: Val7
+    description: CMP1_OUT input is selected.
+    value: 7
+  - name: Val9
+    description: CTimer0_MAT2 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT3 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer1_MAT2 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT3 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer2_MAT2 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer2_MAT3 input is selected.
+    value: 14
+  - name: Val15
+    description: QDC0_CMP_FLAG0 input is selected.
+    value: 15
+  - name: Val16
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 16
+  - name: Val17
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 17
+  - name: Val18
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 18
+  - name: Val19
+    description: QDC0_POS_MATCH0 input is selected.
+    value: 19
+  - name: Val20
+    description: TRIG_IN0 input is selected.
+    value: 20
+  - name: Val21
+    description: TRIG_IN1 input is selected.
+    value: 21
+  - name: Val22
+    description: TRIG_IN2 input is selected.
+    value: 22
+  - name: Val23
+    description: TRIG_IN3 input is selected.
+    value: 23
+  - name: Val24
+    description: TRIG_IN4 input is selected.
+    value: 24
+  - name: Val25
+    description: TRIG_IN5 input is selected.
+    value: 25
+  - name: Val26
+    description: TRIG_IN6 input is selected.
+    value: 26
+  - name: Val27
+    description: TRIG_IN7 input is selected.
+    value: 27
+  - name: Val28
+    description: TRIG_IN8 input is selected.
+    value: 28
+  - name: Val29
+    description: TRIG_IN9 input is selected.
+    value: 29
+  - name: Val30
+    description: TRIG_IN10 input is selected.
+    value: 30
+  - name: Val31
+    description: TRIG_IN11 input is selected.
+    value: 31
+  - name: Val32
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 32
+  - name: Val33
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 33
+  - name: Val34
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 34
+  - name: Val35
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 35
+enum/FlexPwm0Sm0Exta0Trigin:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ARM_TXEV input is selected.
+    value: 1
+  - name: Val2
+    description: AOI0_OUT0 input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT1 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT2 input is selected.
+    value: 4
+  - name: Val5
+    description: AOI0_OUT3 input is selected.
+    value: 5
+  - name: Val6
+    description: CMP0_OUT input is selected.
+    value: 6
+  - name: Val7
+    description: CMP1_OUT input is selected.
+    value: 7
+  - name: Val9
+    description: CTimer0_MAT2 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT3 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer1_MAT2 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT3 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer2_MAT2 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer2_MAT3 input is selected.
+    value: 14
+  - name: Val15
+    description: QDC0_CMP_FLAG0 input is selected.
+    value: 15
+  - name: Val16
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 16
+  - name: Val17
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 17
+  - name: Val18
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 18
+  - name: Val19
+    description: QDC0_POS_MATCH0 input is selected.
+    value: 19
+  - name: Val20
+    description: TRIG_IN0 input is selected.
+    value: 20
+  - name: Val21
+    description: TRIG_IN1 input is selected.
+    value: 21
+  - name: Val22
+    description: TRIG_IN2 input is selected.
+    value: 22
+  - name: Val23
+    description: TRIG_IN3 input is selected.
+    value: 23
+  - name: Val24
+    description: TRIG_IN4 input is selected.
+    value: 24
+  - name: Val25
+    description: TRIG_IN5 input is selected.
+    value: 25
+  - name: Val26
+    description: TRIG_IN6 input is selected.
+    value: 26
+  - name: Val27
+    description: TRIG_IN7 input is selected.
+    value: 27
+  - name: Val28
+    description: TRIG_IN8 input is selected.
+    value: 28
+  - name: Val29
+    description: TRIG_IN9 input is selected.
+    value: 29
+  - name: Val30
+    description: TRIG_IN10 input is selected.
+    value: 30
+  - name: Val31
+    description: TRIG_IN11 input is selected.
+    value: 31
+  - name: Val32
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 32
+  - name: Val33
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 33
+  - name: Val34
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 34
+  - name: Val35
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 35
+enum/FlexPwm0Sm0Extsync0Trigin:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ARM_TXEV input is selected.
+    value: 1
+  - name: Val2
+    description: AOI0_OUT0 input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT1 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT2 input is selected.
+    value: 4
+  - name: Val5
+    description: AOI0_OUT3 input is selected.
+    value: 5
+  - name: Val6
+    description: CMP0_OUT input is selected.
+    value: 6
+  - name: Val7
+    description: CMP1_OUT input is selected.
+    value: 7
+  - name: Val9
+    description: CTimer0_MAT2 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT3 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer1_MAT2 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT3 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer2_MAT2 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer2_MAT3 input is selected.
+    value: 14
+  - name: Val15
+    description: QDC0_CMP_FLAG0 input is selected.
+    value: 15
+  - name: Val16
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 16
+  - name: Val17
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 17
+  - name: Val18
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 18
+  - name: Val19
+    description: QDC0_POS_MATCH0 input is selected.
+    value: 19
+  - name: Val20
+    description: TRIG_IN0 input is selected.
+    value: 20
+  - name: Val21
+    description: TRIG_IN1 input is selected.
+    value: 21
+  - name: Val22
+    description: TRIG_IN2 input is selected.
+    value: 22
+  - name: Val23
+    description: TRIG_IN3 input is selected.
+    value: 23
+  - name: Val24
+    description: TRIG_IN4 input is selected.
+    value: 24
+  - name: Val25
+    description: TRIG_IN5 input is selected.
+    value: 25
+  - name: Val26
+    description: TRIG_IN6 input is selected.
+    value: 26
+  - name: Val27
+    description: TRIG_IN7 input is selected.
+    value: 27
+  - name: Val28
+    description: TRIG_IN8 input is selected.
+    value: 28
+  - name: Val29
+    description: TRIG_IN9 input is selected.
+    value: 29
+  - name: Val30
+    description: TRIG_IN10 input is selected.
+    value: 30
+  - name: Val31
+    description: TRIG_IN11 input is selected.
+    value: 31
+  - name: Val32
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 32
+  - name: Val33
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 33
+  - name: Val34
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 34
+  - name: Val35
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 35
+enum/FlexPwm0Sm1Exta1Trigin:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ARM_TXEV input is selected.
+    value: 1
+  - name: Val2
+    description: AOI0_OUT0 input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT1 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT2 input is selected.
+    value: 4
+  - name: Val5
+    description: AOI0_OUT3 input is selected.
+    value: 5
+  - name: Val6
+    description: CMP0_OUT input is selected.
+    value: 6
+  - name: Val7
+    description: CMP1_OUT input is selected.
+    value: 7
+  - name: Val9
+    description: CTimer0_MAT2 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT3 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer1_MAT2 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT3 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer2_MAT2 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer2_MAT3 input is selected.
+    value: 14
+  - name: Val15
+    description: QDC0_CMP_FLAG0 input is selected.
+    value: 15
+  - name: Val16
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 16
+  - name: Val17
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 17
+  - name: Val18
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 18
+  - name: Val19
+    description: QDC0_POS_MATCH0 input is selected.
+    value: 19
+  - name: Val20
+    description: TRIG_IN0 input is selected.
+    value: 20
+  - name: Val21
+    description: TRIG_IN1 input is selected.
+    value: 21
+  - name: Val22
+    description: TRIG_IN2 input is selected.
+    value: 22
+  - name: Val23
+    description: TRIG_IN3 input is selected.
+    value: 23
+  - name: Val24
+    description: TRIG_IN4 input is selected.
+    value: 24
+  - name: Val25
+    description: TRIG_IN5 input is selected.
+    value: 25
+  - name: Val26
+    description: TRIG_IN6 input is selected.
+    value: 26
+  - name: Val27
+    description: TRIG_IN7 input is selected.
+    value: 27
+  - name: Val28
+    description: TRIG_IN8 input is selected.
+    value: 28
+  - name: Val29
+    description: TRIG_IN9 input is selected.
+    value: 29
+  - name: Val30
+    description: TRIG_IN10 input is selected.
+    value: 30
+  - name: Val31
+    description: TRIG_IN11 input is selected.
+    value: 31
+  - name: Val32
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 32
+  - name: Val33
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 33
+  - name: Val34
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 34
+  - name: Val35
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 35
+enum/FlexPwm0Sm1Extsync1Trigin:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ARM_TXEV input is selected.
+    value: 1
+  - name: Val2
+    description: AOI0_OUT0 input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT1 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT2 input is selected.
+    value: 4
+  - name: Val5
+    description: AOI0_OUT3 input is selected.
+    value: 5
+  - name: Val6
+    description: CMP0_OUT input is selected.
+    value: 6
+  - name: Val7
+    description: CMP1_OUT input is selected.
+    value: 7
+  - name: Val9
+    description: CTimer0_MAT2 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT3 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer1_MAT2 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT3 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer2_MAT2 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer2_MAT3 input is selected.
+    value: 14
+  - name: Val15
+    description: QDC0_CMP_FLAG0 input is selected.
+    value: 15
+  - name: Val16
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 16
+  - name: Val17
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 17
+  - name: Val18
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 18
+  - name: Val19
+    description: QDC0_POS_MATCH0 input is selected.
+    value: 19
+  - name: Val20
+    description: TRIG_IN0 input is selected.
+    value: 20
+  - name: Val21
+    description: TRIG_IN1 input is selected.
+    value: 21
+  - name: Val22
+    description: TRIG_IN2 input is selected.
+    value: 22
+  - name: Val23
+    description: TRIG_IN3 input is selected.
+    value: 23
+  - name: Val24
+    description: TRIG_IN4 input is selected.
+    value: 24
+  - name: Val25
+    description: TRIG_IN5 input is selected.
+    value: 25
+  - name: Val26
+    description: TRIG_IN6 input is selected.
+    value: 26
+  - name: Val27
+    description: TRIG_IN7 input is selected.
+    value: 27
+  - name: Val28
+    description: TRIG_IN8 input is selected.
+    value: 28
+  - name: Val29
+    description: TRIG_IN9 input is selected.
+    value: 29
+  - name: Val30
+    description: TRIG_IN10 input is selected.
+    value: 30
+  - name: Val31
+    description: TRIG_IN11 input is selected.
+    value: 31
+  - name: Val32
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 32
+  - name: Val33
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 33
+  - name: Val34
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 34
+  - name: Val35
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 35
+enum/FlexPwm0Sm2Exta2Trigin:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ARM_TXEV input is selected.
+    value: 1
+  - name: Val2
+    description: AOI0_OUT0 input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT1 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT2 input is selected.
+    value: 4
+  - name: Val5
+    description: AOI0_OUT3 input is selected.
+    value: 5
+  - name: Val6
+    description: CMP0_OUT input is selected.
+    value: 6
+  - name: Val7
+    description: CMP1_OUT input is selected.
+    value: 7
+  - name: Val9
+    description: CTimer0_MAT2 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT3 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer1_MAT2 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT3 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer2_MAT2 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer2_MAT3 input is selected.
+    value: 14
+  - name: Val15
+    description: QDC0_CMP_FLAG0 input is selected.
+    value: 15
+  - name: Val16
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 16
+  - name: Val17
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 17
+  - name: Val18
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 18
+  - name: Val19
+    description: QDC0_POS_MATCH0 input is selected.
+    value: 19
+  - name: Val20
+    description: TRIG_IN0 input is selected.
+    value: 20
+  - name: Val21
+    description: TRIG_IN1 input is selected.
+    value: 21
+  - name: Val22
+    description: TRIG_IN2 input is selected.
+    value: 22
+  - name: Val23
+    description: TRIG_IN3 input is selected.
+    value: 23
+  - name: Val24
+    description: TRIG_IN4 input is selected.
+    value: 24
+  - name: Val25
+    description: TRIG_IN5 input is selected.
+    value: 25
+  - name: Val26
+    description: TRIG_IN6 input is selected.
+    value: 26
+  - name: Val27
+    description: TRIG_IN7 input is selected.
+    value: 27
+  - name: Val28
+    description: TRIG_IN8 input is selected.
+    value: 28
+  - name: Val29
+    description: TRIG_IN9 input is selected.
+    value: 29
+  - name: Val30
+    description: TRIG_IN10 input is selected.
+    value: 30
+  - name: Val31
+    description: TRIG_IN11 input is selected.
+    value: 31
+  - name: Val32
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 32
+  - name: Val33
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 33
+  - name: Val34
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 34
+  - name: Val35
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 35
+enum/FlexPwm0Sm2Extsync2Trigin:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ARM_TXEV input is selected.
+    value: 1
+  - name: Val2
+    description: AOI0_OUT0 input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT1 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT2 input is selected.
+    value: 4
+  - name: Val5
+    description: AOI0_OUT3 input is selected.
+    value: 5
+  - name: Val6
+    description: CMP0_OUT input is selected.
+    value: 6
+  - name: Val7
+    description: CMP1_OUT input is selected.
+    value: 7
+  - name: Val9
+    description: CTimer0_MAT2 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT3 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer1_MAT2 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT3 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer2_MAT2 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer2_MAT3 input is selected.
+    value: 14
+  - name: Val15
+    description: QDC0_CMP_FLAG0 input is selected.
+    value: 15
+  - name: Val16
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 16
+  - name: Val17
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 17
+  - name: Val18
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 18
+  - name: Val19
+    description: QDC0_POS_MATCH0 input is selected.
+    value: 19
+  - name: Val20
+    description: TRIG_IN0 input is selected.
+    value: 20
+  - name: Val21
+    description: TRIG_IN1 input is selected.
+    value: 21
+  - name: Val22
+    description: TRIG_IN2 input is selected.
+    value: 22
+  - name: Val23
+    description: TRIG_IN3 input is selected.
+    value: 23
+  - name: Val24
+    description: TRIG_IN4 input is selected.
+    value: 24
+  - name: Val25
+    description: TRIG_IN5 input is selected.
+    value: 25
+  - name: Val26
+    description: TRIG_IN6 input is selected.
+    value: 26
+  - name: Val27
+    description: TRIG_IN7 input is selected.
+    value: 27
+  - name: Val28
+    description: TRIG_IN8 input is selected.
+    value: 28
+  - name: Val29
+    description: TRIG_IN9 input is selected.
+    value: 29
+  - name: Val30
+    description: TRIG_IN10 input is selected.
+    value: 30
+  - name: Val31
+    description: TRIG_IN11 input is selected.
+    value: 31
+  - name: Val32
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 32
+  - name: Val33
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 33
+  - name: Val34
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 34
+  - name: Val35
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 35
+enum/FreqmeasRefInp:
+  bit_size: 5
+  variants:
+  - name: Val1
+    description: clk_in input is selected.
+    value: 1
+  - name: Val2
+    description: FRO_OSC_12M input is selected.
+    value: 2
+  - name: Val3
+    description: fro_hf_div input is selected.
+    value: 3
+  - name: Val5
+    description: clk_16k[1] input is selected.
+    value: 5
+  - name: Val6
+    description: SLOW_CLK input is selected.
+    value: 6
+  - name: Val7
+    description: FREQME_CLK_IN0 input is selected.
+    value: 7
+  - name: Val8
+    description: FREQME_CLK_IN1 input is selected.
+    value: 8
+  - name: Val9
+    description: AOI0_OUT0 input is selected.
+    value: 9
+  - name: Val10
+    description: AOI0_OUT1 input is selected.
+    value: 10
+  - name: Val11
+    description: PWM0_SM0_OUT_TRIG0 input is selected.
+    value: 11
+  - name: Val12
+    description: PWM0_SM0_OUT_TRIG1 input is selected.
+    value: 12
+  - name: Val13
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 13
+  - name: Val14
+    description: PWM0_SM1_OUT_TRIG1 input is selected.
+    value: 14
+  - name: Val15
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 15
+  - name: Val16
+    description: PWM0_SM2_OUT_TRIG1 input is selected.
+    value: 16
+enum/FreqmeasTarInp:
+  bit_size: 5
+  variants:
+  - name: Val1
+    description: clk_in input is selected.
+    value: 1
+  - name: Val2
+    description: FRO_OSC_12M input is selected.
+    value: 2
+  - name: Val3
+    description: fro_hf_div input is selected.
+    value: 3
+  - name: Val5
+    description: clk_16k[1] input is selected.
+    value: 5
+  - name: Val6
+    description: SLOW_CLK input is selected.
+    value: 6
+  - name: Val7
+    description: FREQME_CLK_IN0 input is selected.
+    value: 7
+  - name: Val8
+    description: FREQME_CLK_IN1 input is selected.
+    value: 8
+  - name: Val9
+    description: AOI0_OUT0 input is selected.
+    value: 9
+  - name: Val10
+    description: AOI0_OUT1 input is selected.
+    value: 10
+  - name: Val11
+    description: PWM0_SM0_OUT_TRIG0 input is selected.
+    value: 11
+  - name: Val12
+    description: PWM0_SM0_OUT_TRIG1 input is selected.
+    value: 12
+  - name: Val13
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 13
+  - name: Val14
+    description: PWM0_SM1_OUT_TRIG1 input is selected.
+    value: 14
+  - name: Val15
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 15
+  - name: Val16
+    description: PWM0_SM2_OUT_TRIG1 input is selected.
+    value: 16
+enum/Lpi2c0TrigInp:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ARM_TXEV.
+    value: 1
+  - name: Val2
+    description: AOI0_OUT0 input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT1 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT2 input is selected.
+    value: 4
+  - name: Val5
+    description: AOI0_OUT3 input is selected.
+    value: 5
+  - name: Val6
+    description: CMP0_OUT input is selected.
+    value: 6
+  - name: Val7
+    description: CMP1_OUT input is selected.
+    value: 7
+  - name: Val9
+    description: CTimer0_MAT0 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT1 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer1_MAT0 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT1 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer2_MAT0 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer2_MAT1 input is selected.
+    value: 14
+  - name: Val15
+    description: LPTMR0 input is selected.
+    value: 15
+  - name: Val17
+    description: TRIG_IN0 input is selected.
+    value: 17
+  - name: Val18
+    description: TRIG_IN1 input is selected.
+    value: 18
+  - name: Val19
+    description: TRIG_IN2 input is selected.
+    value: 19
+  - name: Val20
+    description: TRIG_IN3 input is selected.
+    value: 20
+  - name: Val21
+    description: TRIG_IN4 input is selected.
+    value: 21
+  - name: Val22
+    description: TRIG_IN5 input is selected.
+    value: 22
+  - name: Val23
+    description: TRIG_IN6 input is selected.
+    value: 23
+  - name: Val24
+    description: TRIG_IN7 input is selected.
+    value: 24
+  - name: Val25
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 25
+  - name: Val26
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 26
+  - name: Val27
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 27
+  - name: Val28
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 28
+  - name: Val42
+    description: WUU input is selected.
+    value: 42
+enum/Lpspi0TrigInp:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ARM_TXEV.
+    value: 1
+  - name: Val2
+    description: AOI0_OUT0 input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT1 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT2 input is selected.
+    value: 4
+  - name: Val5
+    description: AOI0_OUT3 input is selected.
+    value: 5
+  - name: Val6
+    description: CMP0_OUT input is selected.
+    value: 6
+  - name: Val7
+    description: CMP1_OUT input is selected.
+    value: 7
+  - name: Val9
+    description: CTimer0_MAT1 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT2 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer1_MAT1 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT2 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer2_MAT1 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer2_MAT2 input is selected.
+    value: 14
+  - name: Val15
+    description: LPTMR0 input is selected.
+    value: 15
+  - name: Val17
+    description: TRIG_IN0 input is selected.
+    value: 17
+  - name: Val18
+    description: TRIG_IN1 input is selected.
+    value: 18
+  - name: Val19
+    description: TRIG_IN2 input is selected.
+    value: 19
+  - name: Val20
+    description: TRIG_IN3 input is selected.
+    value: 20
+  - name: Val21
+    description: TRIG_IN4 input is selected.
+    value: 21
+  - name: Val22
+    description: TRIG_IN5 input is selected.
+    value: 22
+  - name: Val23
+    description: TRIG_IN6 input is selected.
+    value: 23
+  - name: Val24
+    description: TRIG_IN7 input is selected.
+    value: 24
+  - name: Val25
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 25
+  - name: Val26
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 26
+  - name: Val27
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 27
+  - name: Val28
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 28
+  - name: Val42
+    description: WUU input is selected.
+    value: 42
+enum/Lpspi1TrigInp:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ARM_TXEV.
+    value: 1
+  - name: Val2
+    description: AOI0_OUT0 input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT1 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT2 input is selected.
+    value: 4
+  - name: Val5
+    description: AOI0_OUT3 input is selected.
+    value: 5
+  - name: Val6
+    description: CMP0_OUT input is selected.
+    value: 6
+  - name: Val7
+    description: CMP1_OUT input is selected.
+    value: 7
+  - name: Val9
+    description: CTimer0_MAT1 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT2 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer1_MAT1 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT2 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer2_MAT1 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer2_MAT2 input is selected.
+    value: 14
+  - name: Val15
+    description: LPTMR0 input is selected.
+    value: 15
+  - name: Val17
+    description: TRIG_IN0 input is selected.
+    value: 17
+  - name: Val18
+    description: TRIG_IN1 input is selected.
+    value: 18
+  - name: Val19
+    description: TRIG_IN2 input is selected.
+    value: 19
+  - name: Val20
+    description: TRIG_IN3 input is selected.
+    value: 20
+  - name: Val21
+    description: TRIG_IN4 input is selected.
+    value: 21
+  - name: Val22
+    description: TRIG_IN5 input is selected.
+    value: 22
+  - name: Val23
+    description: TRIG_IN6 input is selected.
+    value: 23
+  - name: Val24
+    description: TRIG_IN7 input is selected.
+    value: 24
+  - name: Val25
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 25
+  - name: Val26
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 26
+  - name: Val27
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 27
+  - name: Val28
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 28
+  - name: Val42
+    description: WUU input is selected.
+    value: 42
+enum/Lpuart0Inp:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ARM_TXEV.
+    value: 1
+  - name: Val2
+    description: AOI0_OUT0 input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT1 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT2 input is selected.
+    value: 4
+  - name: Val5
+    description: AOI0_OUT3 input is selected.
+    value: 5
+  - name: Val6
+    description: CMP0_OUT input is selected.
+    value: 6
+  - name: Val7
+    description: CMP1_OUT input is selected.
+    value: 7
+  - name: Val9
+    description: CTimer0_MAT2 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT3 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer1_MAT2 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT3 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer2_MAT2 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer2_MAT3 input is selected.
+    value: 14
+  - name: Val15
+    description: LPTMR0 input is selected.
+    value: 15
+  - name: Val17
+    description: TRIG_IN0 input is selected.
+    value: 17
+  - name: Val18
+    description: TRIG_IN1 input is selected.
+    value: 18
+  - name: Val19
+    description: TRIG_IN2 input is selected.
+    value: 19
+  - name: Val20
+    description: TRIG_IN3 input is selected.
+    value: 20
+  - name: Val21
+    description: TRIG_IN4 input is selected.
+    value: 21
+  - name: Val22
+    description: TRIG_IN5 input is selected.
+    value: 22
+  - name: Val23
+    description: TRIG_IN6 input is selected.
+    value: 23
+  - name: Val24
+    description: TRIG_IN7 input is selected.
+    value: 24
+  - name: Val25
+    description: TRIG_IN8 input is selected.
+    value: 25
+  - name: Val26
+    description: TRIG_IN9 input is selected.
+    value: 26
+  - name: Val27
+    description: TRIG_IN10 input is selected.
+    value: 27
+  - name: Val28
+    description: TRIG_IN11 input is selected.
+    value: 28
+  - name: Val29
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 29
+  - name: Val30
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 30
+  - name: Val31
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 31
+  - name: Val32
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 32
+  - name: Val34
+    description: WUU input is selected.
+    value: 34
+  - name: Val35
+    description: USB0 ipp_ind_uart_rxd_usbmux input is selected.
+    value: 35
+enum/Lpuart1Inp:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ARM_TXEV.
+    value: 1
+  - name: Val2
+    description: AOI0_OUT0 input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT1 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT2 input is selected.
+    value: 4
+  - name: Val5
+    description: AOI0_OUT3 input is selected.
+    value: 5
+  - name: Val6
+    description: CMP0_OUT input is selected.
+    value: 6
+  - name: Val7
+    description: CMP1_OUT input is selected.
+    value: 7
+  - name: Val9
+    description: CTimer0_MAT2 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT3 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer1_MAT2 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT3 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer2_MAT2 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer2_MAT3 input is selected.
+    value: 14
+  - name: Val15
+    description: LPTMR0 input is selected.
+    value: 15
+  - name: Val17
+    description: TRIG_IN0 input is selected.
+    value: 17
+  - name: Val18
+    description: TRIG_IN1 input is selected.
+    value: 18
+  - name: Val19
+    description: TRIG_IN2 input is selected.
+    value: 19
+  - name: Val20
+    description: TRIG_IN3 input is selected.
+    value: 20
+  - name: Val21
+    description: TRIG_IN4 input is selected.
+    value: 21
+  - name: Val22
+    description: TRIG_IN5 input is selected.
+    value: 22
+  - name: Val23
+    description: TRIG_IN6 input is selected.
+    value: 23
+  - name: Val24
+    description: TRIG_IN7 input is selected.
+    value: 24
+  - name: Val25
+    description: TRIG_IN8 input is selected.
+    value: 25
+  - name: Val26
+    description: TRIG_IN9 input is selected.
+    value: 26
+  - name: Val27
+    description: TRIG_IN10 input is selected.
+    value: 27
+  - name: Val28
+    description: TRIG_IN11 input is selected.
+    value: 28
+  - name: Val29
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 29
+  - name: Val30
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 30
+  - name: Val31
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 31
+  - name: Val32
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 32
+  - name: Val34
+    description: WUU input is selected.
+    value: 34
+  - name: Val35
+    description: USB0 ipp_ind_uart_rxd_usbmux input is selected.
+    value: 35
+enum/Lpuart2Inp:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ARM_TXEV.
+    value: 1
+  - name: Val2
+    description: AOI0_OUT0 input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT1 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT2 input is selected.
+    value: 4
+  - name: Val5
+    description: AOI0_OUT3 input is selected.
+    value: 5
+  - name: Val6
+    description: CMP0_OUT input is selected.
+    value: 6
+  - name: Val7
+    description: CMP1_OUT input is selected.
+    value: 7
+  - name: Val9
+    description: CTimer0_MAT2 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT3 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer1_MAT2 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT3 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer2_MAT2 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer2_MAT3 input is selected.
+    value: 14
+  - name: Val15
+    description: LPTMR0 input is selected.
+    value: 15
+  - name: Val17
+    description: TRIG_IN0 input is selected.
+    value: 17
+  - name: Val18
+    description: TRIG_IN1 input is selected.
+    value: 18
+  - name: Val19
+    description: TRIG_IN2 input is selected.
+    value: 19
+  - name: Val20
+    description: TRIG_IN3 input is selected.
+    value: 20
+  - name: Val21
+    description: TRIG_IN4 input is selected.
+    value: 21
+  - name: Val22
+    description: TRIG_IN5 input is selected.
+    value: 22
+  - name: Val23
+    description: TRIG_IN6 input is selected.
+    value: 23
+  - name: Val24
+    description: TRIG_IN7 input is selected.
+    value: 24
+  - name: Val25
+    description: TRIG_IN8 input is selected.
+    value: 25
+  - name: Val26
+    description: TRIG_IN9 input is selected.
+    value: 26
+  - name: Val27
+    description: TRIG_IN10 input is selected.
+    value: 27
+  - name: Val28
+    description: TRIG_IN11 input is selected.
+    value: 28
+  - name: Val29
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 29
+  - name: Val30
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 30
+  - name: Val31
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 31
+  - name: Val32
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 32
+  - name: Val34
+    description: WUU input is selected.
+    value: 34
+  - name: Val35
+    description: USB0 ipp_ind_uart_rxd_usbmux input is selected.
+    value: 35
+enum/Pwm0ExtClkTrigin:
+  bit_size: 3
+  variants:
+  - name: Val1
+    description: clk_16k[1] input is selected.
+    value: 1
+  - name: Val2
+    description: clk_in input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT0 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT1 input is selected.
+    value: 4
+  - name: Val5
+    description: EXTTRIG_IN0 input is selected.
+    value: 5
+  - name: Val6
+    description: EXTTRIG_IN7 input is selected.
+    value: 6
+enum/Qdc0HomeInp:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ARM_TXEV input is selected.
+    value: 1
+  - name: Val2
+    description: AOI0_OUT0 input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT1 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT2 input is selected.
+    value: 4
+  - name: Val5
+    description: AOI0_OUT3 input is selected.
+    value: 5
+  - name: Val6
+    description: CMP0_OUT input is selected.
+    value: 6
+  - name: Val7
+    description: CMP1_OUT input is selected.
+    value: 7
+  - name: Val9
+    description: CTimer0_MAT2 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT3 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer1_MAT2 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT3 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer2_MAT2 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer2_MAT3 input is selected.
+    value: 14
+  - name: Val15
+    description: QDC0_POS_MATCH0 input is selected.
+    value: 15
+  - name: Val16
+    description: PWM0_SM0_OUT_TRIG0 input is selected.
+    value: 16
+  - name: Val17
+    description: PWM0_SM0_OUT_TRIG1 input is selected.
+    value: 17
+  - name: Val18
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 18
+  - name: Val19
+    description: PWM0_SM1_OUT_TRIG1 input is selected.
+    value: 19
+  - name: Val20
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 20
+  - name: Val21
+    description: PWM0_SM2_OUT_TRIG1 input is selected.
+    value: 21
+  - name: Val24
+    description: TRIG_IN0 input is selected.
+    value: 24
+  - name: Val25
+    description: TRIG_IN1 input is selected.
+    value: 25
+  - name: Val26
+    description: TRIG_IN2 input is selected.
+    value: 26
+  - name: Val27
+    description: TRIG_IN3 input is selected.
+    value: 27
+  - name: Val28
+    description: TRIG_IN4 input is selected.
+    value: 28
+  - name: Val29
+    description: TRIG_IN5 input is selected.
+    value: 29
+  - name: Val30
+    description: TRIG_IN6 input is selected.
+    value: 30
+  - name: Val31
+    description: TRIG_IN7 input is selected.
+    value: 31
+  - name: Val32
+    description: TRIG_IN8 input is selected.
+    value: 32
+  - name: Val33
+    description: TRIG_IN9 input is selected.
+    value: 33
+  - name: Val34
+    description: TRIG_IN10 input is selected.
+    value: 34
+  - name: Val35
+    description: TRIG_IN11 input is selected.
+    value: 35
+  - name: Val36
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 36
+  - name: Val37
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 37
+  - name: Val38
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 38
+  - name: Val39
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 39
+enum/Qdc0Icap1Inp:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ARM_TXEV input is selected.
+    value: 1
+  - name: Val2
+    description: AOI0_OUT0 input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT1 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT2 input is selected.
+    value: 4
+  - name: Val5
+    description: AOI0_OUT3 input is selected.
+    value: 5
+  - name: Val6
+    description: CMP0_OUT input is selected.
+    value: 6
+  - name: Val7
+    description: CMP1_OUT input is selected.
+    value: 7
+  - name: Val9
+    description: CTimer0_MAT2 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT3 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer1_MAT2 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT3 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer2_MAT2 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer2_MAT3 input is selected.
+    value: 14
+  - name: Val15
+    description: QDC0_POS_MATCH0 input is selected.
+    value: 15
+  - name: Val16
+    description: PWM0_SM0_OUT_TRIG0 input is selected.
+    value: 16
+  - name: Val17
+    description: PWM0_SM0_OUT_TRIG1 input is selected.
+    value: 17
+  - name: Val18
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 18
+  - name: Val19
+    description: PWM0_SM1_OUT_TRIG1 input is selected.
+    value: 19
+  - name: Val20
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 20
+  - name: Val21
+    description: PWM0_SM2_OUT_TRIG1 input is selected.
+    value: 21
+  - name: Val24
+    description: TRIG_IN0 input is selected.
+    value: 24
+  - name: Val25
+    description: TRIG_IN1 input is selected.
+    value: 25
+  - name: Val26
+    description: TRIG_IN2 input is selected.
+    value: 26
+  - name: Val27
+    description: TRIG_IN3 input is selected.
+    value: 27
+  - name: Val28
+    description: TRIG_IN4 input is selected.
+    value: 28
+  - name: Val29
+    description: TRIG_IN5 input is selected.
+    value: 29
+  - name: Val30
+    description: TRIG_IN6 input is selected.
+    value: 30
+  - name: Val31
+    description: TRIG_IN7 input is selected.
+    value: 31
+  - name: Val32
+    description: TRIG_IN8 input is selected.
+    value: 32
+  - name: Val33
+    description: TRIG_IN9 input is selected.
+    value: 33
+  - name: Val34
+    description: TRIG_IN10 input is selected.
+    value: 34
+  - name: Val35
+    description: TRIG_IN11 input is selected.
+    value: 35
+  - name: Val36
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 36
+  - name: Val37
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 37
+  - name: Val38
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 38
+  - name: Val39
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 39
+enum/Qdc0Icap2Inp:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ARM_TXEV input is selected.
+    value: 1
+  - name: Val2
+    description: AOI0_OUT0 input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT1 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT2 input is selected.
+    value: 4
+  - name: Val5
+    description: AOI0_OUT3 input is selected.
+    value: 5
+  - name: Val6
+    description: CMP0_OUT input is selected.
+    value: 6
+  - name: Val7
+    description: CMP1_OUT input is selected.
+    value: 7
+  - name: Val9
+    description: CTimer0_MAT2 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT3 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer1_MAT2 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT3 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer2_MAT2 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer2_MAT3 input is selected.
+    value: 14
+  - name: Val15
+    description: QDC0_POS_MATCH0 input is selected.
+    value: 15
+  - name: Val16
+    description: PWM0_SM0_OUT_TRIG0 input is selected.
+    value: 16
+  - name: Val17
+    description: PWM0_SM0_OUT_TRIG1 input is selected.
+    value: 17
+  - name: Val18
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 18
+  - name: Val19
+    description: PWM0_SM1_OUT_TRIG1 input is selected.
+    value: 19
+  - name: Val20
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 20
+  - name: Val21
+    description: PWM0_SM2_OUT_TRIG1 input is selected.
+    value: 21
+  - name: Val24
+    description: TRIG_IN0 input is selected.
+    value: 24
+  - name: Val25
+    description: TRIG_IN1 input is selected.
+    value: 25
+  - name: Val26
+    description: TRIG_IN2 input is selected.
+    value: 26
+  - name: Val27
+    description: TRIG_IN3 input is selected.
+    value: 27
+  - name: Val28
+    description: TRIG_IN4 input is selected.
+    value: 28
+  - name: Val29
+    description: TRIG_IN5 input is selected.
+    value: 29
+  - name: Val30
+    description: TRIG_IN6 input is selected.
+    value: 30
+  - name: Val31
+    description: TRIG_IN7 input is selected.
+    value: 31
+  - name: Val32
+    description: TRIG_IN8 input is selected.
+    value: 32
+  - name: Val33
+    description: TRIG_IN9 input is selected.
+    value: 33
+  - name: Val34
+    description: TRIG_IN10 input is selected.
+    value: 34
+  - name: Val35
+    description: TRIG_IN11 input is selected.
+    value: 35
+  - name: Val36
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 36
+  - name: Val37
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 37
+  - name: Val38
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 38
+  - name: Val39
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 39
+enum/Qdc0Icap3Inp:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ARM_TXEV input is selected.
+    value: 1
+  - name: Val2
+    description: AOI0_OUT0 input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT1 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT2 input is selected.
+    value: 4
+  - name: Val5
+    description: AOI0_OUT3 input is selected.
+    value: 5
+  - name: Val6
+    description: CMP0_OUT input is selected.
+    value: 6
+  - name: Val7
+    description: CMP1_OUT input is selected.
+    value: 7
+  - name: Val9
+    description: CTimer0_MAT2 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT3 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer1_MAT2 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT3 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer2_MAT2 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer2_MAT3 input is selected.
+    value: 14
+  - name: Val15
+    description: QDC0_POS_MATCH0 input is selected.
+    value: 15
+  - name: Val16
+    description: PWM0_SM0_OUT_TRIG0 input is selected.
+    value: 16
+  - name: Val17
+    description: PWM0_SM0_OUT_TRIG1 input is selected.
+    value: 17
+  - name: Val18
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 18
+  - name: Val19
+    description: PWM0_SM1_OUT_TRIG1 input is selected.
+    value: 19
+  - name: Val20
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 20
+  - name: Val21
+    description: PWM0_SM2_OUT_TRIG1 input is selected.
+    value: 21
+  - name: Val24
+    description: TRIG_IN0 input is selected.
+    value: 24
+  - name: Val25
+    description: TRIG_IN1 input is selected.
+    value: 25
+  - name: Val26
+    description: TRIG_IN2 input is selected.
+    value: 26
+  - name: Val27
+    description: TRIG_IN3 input is selected.
+    value: 27
+  - name: Val28
+    description: TRIG_IN4 input is selected.
+    value: 28
+  - name: Val29
+    description: TRIG_IN5 input is selected.
+    value: 29
+  - name: Val30
+    description: TRIG_IN6 input is selected.
+    value: 30
+  - name: Val31
+    description: TRIG_IN7 input is selected.
+    value: 31
+  - name: Val32
+    description: TRIG_IN8 input is selected.
+    value: 32
+  - name: Val33
+    description: TRIG_IN9 input is selected.
+    value: 33
+  - name: Val34
+    description: TRIG_IN10 input is selected.
+    value: 34
+  - name: Val35
+    description: TRIG_IN11 input is selected.
+    value: 35
+  - name: Val36
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 36
+  - name: Val37
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 37
+  - name: Val38
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 38
+  - name: Val39
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 39
+enum/Qdc0IndexInp:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ARM_TXEV input is selected.
+    value: 1
+  - name: Val2
+    description: AOI0_OUT0 input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT1 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT2 input is selected.
+    value: 4
+  - name: Val5
+    description: AOI0_OUT3 input is selected.
+    value: 5
+  - name: Val6
+    description: CMP0_OUT input is selected.
+    value: 6
+  - name: Val7
+    description: CMP1_OUT input is selected.
+    value: 7
+  - name: Val9
+    description: CTimer0_MAT2 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT3 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer1_MAT2 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT3 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer2_MAT2 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer2_MAT3 input is selected.
+    value: 14
+  - name: Val15
+    description: QDC0_POS_MATCH0 input is selected.
+    value: 15
+  - name: Val16
+    description: PWM0_SM0_OUT_TRIG0 input is selected.
+    value: 16
+  - name: Val17
+    description: PWM0_SM0_OUT_TRIG1 input is selected.
+    value: 17
+  - name: Val18
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 18
+  - name: Val19
+    description: PWM0_SM1_OUT_TRIG1 input is selected.
+    value: 19
+  - name: Val20
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 20
+  - name: Val21
+    description: PWM0_SM2_OUT_TRIG1 input is selected.
+    value: 21
+  - name: Val24
+    description: TRIG_IN0 input is selected.
+    value: 24
+  - name: Val25
+    description: TRIG_IN1 input is selected.
+    value: 25
+  - name: Val26
+    description: TRIG_IN2 input is selected.
+    value: 26
+  - name: Val27
+    description: TRIG_IN3 input is selected.
+    value: 27
+  - name: Val28
+    description: TRIG_IN4 input is selected.
+    value: 28
+  - name: Val29
+    description: TRIG_IN5 input is selected.
+    value: 29
+  - name: Val30
+    description: TRIG_IN6 input is selected.
+    value: 30
+  - name: Val31
+    description: TRIG_IN7 input is selected.
+    value: 31
+  - name: Val32
+    description: TRIG_IN8 input is selected.
+    value: 32
+  - name: Val33
+    description: TRIG_IN9 input is selected.
+    value: 33
+  - name: Val34
+    description: TRIG_IN10 input is selected.
+    value: 34
+  - name: Val35
+    description: TRIG_IN11 input is selected.
+    value: 35
+  - name: Val36
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 36
+  - name: Val37
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 37
+  - name: Val38
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 38
+  - name: Val39
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 39
+enum/Qdc0PhaseaInp:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ARM_TXEV input is selected.
+    value: 1
+  - name: Val2
+    description: AOI0_OUT0 input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT1 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT2 input is selected.
+    value: 4
+  - name: Val5
+    description: AOI0_OUT3 input is selected.
+    value: 5
+  - name: Val6
+    description: CMP0_OUT input is selected.
+    value: 6
+  - name: Val7
+    description: CMP1_OUT input is selected.
+    value: 7
+  - name: Val9
+    description: CTimer0_MAT2 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT3 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer1_MAT2 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT3 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer2_MAT2 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer2_MAT3 input is selected.
+    value: 14
+  - name: Val15
+    description: QDC0_POS_MATCH0 input is selected.
+    value: 15
+  - name: Val16
+    description: PWM0_SM0_OUT_TRIG0 input is selected.
+    value: 16
+  - name: Val17
+    description: PWM0_SM0_OUT_TRIG1 input is selected.
+    value: 17
+  - name: Val18
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 18
+  - name: Val19
+    description: PWM0_SM1_OUT_TRIG1 input is selected.
+    value: 19
+  - name: Val20
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 20
+  - name: Val21
+    description: PWM0_SM2_OUT_TRIG1 input is selected.
+    value: 21
+  - name: Val24
+    description: TRIG_IN0 input is selected.
+    value: 24
+  - name: Val25
+    description: TRIG_IN1 input is selected.
+    value: 25
+  - name: Val26
+    description: TRIG_IN2 input is selected.
+    value: 26
+  - name: Val27
+    description: TRIG_IN3 input is selected.
+    value: 27
+  - name: Val28
+    description: TRIG_IN4 input is selected.
+    value: 28
+  - name: Val29
+    description: TRIG_IN5 input is selected.
+    value: 29
+  - name: Val30
+    description: TRIG_IN6 input is selected.
+    value: 30
+  - name: Val31
+    description: TRIG_IN7 input is selected.
+    value: 31
+  - name: Val32
+    description: TRIG_IN8 input is selected.
+    value: 32
+  - name: Val33
+    description: TRIG_IN9 input is selected.
+    value: 33
+  - name: Val34
+    description: TRIG_IN10 input is selected.
+    value: 34
+  - name: Val35
+    description: TRIG_IN11 input is selected.
+    value: 35
+  - name: Val36
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 36
+  - name: Val37
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 37
+  - name: Val38
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 38
+  - name: Val39
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 39
+enum/Qdc0PhasebInp:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ARM_TXEV input is selected.
+    value: 1
+  - name: Val2
+    description: AOI0_OUT0 input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT1 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT2 input is selected.
+    value: 4
+  - name: Val5
+    description: AOI0_OUT3 input is selected.
+    value: 5
+  - name: Val6
+    description: CMP0_OUT input is selected.
+    value: 6
+  - name: Val7
+    description: CMP1_OUT input is selected.
+    value: 7
+  - name: Val9
+    description: CTimer0_MAT2 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT3 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer1_MAT2 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT3 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer2_MAT2 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer2_MAT3 input is selected.
+    value: 14
+  - name: Val15
+    description: QDC0_POS_MATCH0 input is selected.
+    value: 15
+  - name: Val16
+    description: PWM0_SM0_OUT_TRIG0 input is selected.
+    value: 16
+  - name: Val17
+    description: PWM0_SM0_OUT_TRIG1 input is selected.
+    value: 17
+  - name: Val18
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 18
+  - name: Val19
+    description: PWM0_SM1_OUT_TRIG1 input is selected.
+    value: 19
+  - name: Val20
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 20
+  - name: Val21
+    description: PWM0_SM2_OUT_TRIG1 input is selected.
+    value: 21
+  - name: Val24
+    description: TRIG_IN0 input is selected.
+    value: 24
+  - name: Val25
+    description: TRIG_IN1 input is selected.
+    value: 25
+  - name: Val26
+    description: TRIG_IN2 input is selected.
+    value: 26
+  - name: Val27
+    description: TRIG_IN3 input is selected.
+    value: 27
+  - name: Val28
+    description: TRIG_IN4 input is selected.
+    value: 28
+  - name: Val29
+    description: TRIG_IN5 input is selected.
+    value: 29
+  - name: Val30
+    description: TRIG_IN6 input is selected.
+    value: 30
+  - name: Val31
+    description: TRIG_IN7 input is selected.
+    value: 31
+  - name: Val32
+    description: TRIG_IN8 input is selected.
+    value: 32
+  - name: Val33
+    description: TRIG_IN9 input is selected.
+    value: 33
+  - name: Val34
+    description: TRIG_IN10 input is selected.
+    value: 34
+  - name: Val35
+    description: TRIG_IN11 input is selected.
+    value: 35
+  - name: Val36
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 36
+  - name: Val37
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 37
+  - name: Val38
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 38
+  - name: Val39
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 39
+enum/Qdc0TrigInp:
+  bit_size: 6
+  variants:
+  - name: Val1
+    description: ARM_TXEV input is selected.
+    value: 1
+  - name: Val2
+    description: AOI0_OUT0 input is selected.
+    value: 2
+  - name: Val3
+    description: AOI0_OUT1 input is selected.
+    value: 3
+  - name: Val4
+    description: AOI0_OUT2 input is selected.
+    value: 4
+  - name: Val5
+    description: AOI0_OUT3 input is selected.
+    value: 5
+  - name: Val6
+    description: CMP0_OUT input is selected.
+    value: 6
+  - name: Val7
+    description: CMP1_OUT input is selected.
+    value: 7
+  - name: Val9
+    description: CTimer0_MAT2 input is selected.
+    value: 9
+  - name: Val10
+    description: CTimer0_MAT3 input is selected.
+    value: 10
+  - name: Val11
+    description: CTimer1_MAT2 input is selected.
+    value: 11
+  - name: Val12
+    description: CTimer1_MAT3 input is selected.
+    value: 12
+  - name: Val13
+    description: CTimer2_MAT2 input is selected.
+    value: 13
+  - name: Val14
+    description: CTimer2_MAT3 input is selected.
+    value: 14
+  - name: Val15
+    description: QDC0_POS_MATCH0 input is selected.
+    value: 15
+  - name: Val16
+    description: PWM0_SM0_OUT_TRIG0 input is selected.
+    value: 16
+  - name: Val17
+    description: PWM0_SM0_OUT_TRIG1 input is selected.
+    value: 17
+  - name: Val18
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 18
+  - name: Val19
+    description: PWM0_SM1_OUT_TRIG1 input is selected.
+    value: 19
+  - name: Val20
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 20
+  - name: Val21
+    description: PWM0_SM2_OUT_TRIG1 input is selected.
+    value: 21
+  - name: Val24
+    description: TRIG_IN0 input is selected.
+    value: 24
+  - name: Val25
+    description: TRIG_IN1 input is selected.
+    value: 25
+  - name: Val26
+    description: TRIG_IN2 input is selected.
+    value: 26
+  - name: Val27
+    description: TRIG_IN3 input is selected.
+    value: 27
+  - name: Val28
+    description: TRIG_IN4 input is selected.
+    value: 28
+  - name: Val29
+    description: TRIG_IN5 input is selected.
+    value: 29
+  - name: Val30
+    description: TRIG_IN6 input is selected.
+    value: 30
+  - name: Val31
+    description: TRIG_IN7 input is selected.
+    value: 31
+  - name: Val32
+    description: TRIG_IN8 input is selected.
+    value: 32
+  - name: Val33
+    description: TRIG_IN9 input is selected.
+    value: 33
+  - name: Val34
+    description: TRIG_IN10 input is selected.
+    value: 34
+  - name: Val35
+    description: TRIG_IN11 input is selected.
+    value: 35
+  - name: Val36
+    description: GPIO0 Pin Event Trig 0 input is selected.
+    value: 36
+  - name: Val37
+    description: GPIO1 Pin Event Trig 0 input is selected.
+    value: 37
+  - name: Val38
+    description: GPIO2 Pin Event Trig 0 input is selected.
+    value: 38
+  - name: Val39
+    description: GPIO3 Pin Event Trig 0 input is selected.
+    value: 39
+enum/Timer0trigInp:
+  bit_size: 7
+  variants:
+  - name: Val1
+    description: CT_INP0 input is selected.
+    value: 1
+  - name: Val2
+    description: CT_INP1 input is selected.
+    value: 2
+  - name: Val3
+    description: CT_INP2 input is selected.
+    value: 3
+  - name: Val4
+    description: CT_INP3 input is selected.
+    value: 4
+  - name: Val5
+    description: CT_INP4 input is selected.
+    value: 5
+  - name: Val6
+    description: CT_INP5 input is selected.
+    value: 6
+  - name: Val7
+    description: CT_INP6 input is selected.
+    value: 7
+  - name: Val8
+    description: CT_INP7 input is selected.
+    value: 8
+  - name: Val9
+    description: CT_INP8 input is selected.
+    value: 9
+  - name: Val10
+    description: CT_INP9 input is selected.
+    value: 10
+  - name: Val13
+    description: CT_INP12 input is selected.
+    value: 13
+  - name: Val14
+    description: CT_INP13 input is selected.
+    value: 14
+  - name: Val15
+    description: CT_INP14 input is selected.
+    value: 15
+  - name: Val16
+    description: CT_INP15 input is selected.
+    value: 16
+  - name: Val17
+    description: CT_INP16 input is selected.
+    value: 17
+  - name: Val18
+    description: CT_INP17 input is selected.
+    value: 18
+  - name: Val19
+    description: CT_INP18 input is selected.
+    value: 19
+  - name: Val20
+    description: CT_INP19 input is selected.
+    value: 20
+  - name: Val21
+    description: USB0 usb0 start of frame input is selected.
+    value: 21
+  - name: Val22
+    description: AOI0_OUT0 input is selected.
+    value: 22
+  - name: Val23
+    description: AOI0_OUT1 input is selected.
+    value: 23
+  - name: Val24
+    description: AOI0_OUT2 input is selected.
+    value: 24
+  - name: Val25
+    description: AOI0_OUT3 input is selected.
+    value: 25
+  - name: Val26
+    description: ADC0_tcomp[0] input is selected.
+    value: 26
+  - name: Val27
+    description: ADC0_tcomp[1] input is selected.
+    value: 27
+  - name: Val28
+    description: ADC0_tcomp[2] input is selected.
+    value: 28
+  - name: Val29
+    description: ADC0_tcomp[3] input is selected.
+    value: 29
+  - name: Val30
+    description: CMP0_OUT input is selected selected.
+    value: 30
+  - name: Val31
+    description: CMP1_OUT input is selected selected.
+    value: 31
+  - name: Val33
+    description: CTimer1_MAT1 input is selected.
+    value: 33
+  - name: Val34
+    description: CTimer1_MAT2 input is selected.
+    value: 34
+  - name: Val35
+    description: CTimer1_MAT3 input is selected.
+    value: 35
+  - name: Val36
+    description: CTimer2_MAT1 input is selected.
+    value: 36
+  - name: Val37
+    description: CTimer2_MAT2 input is selected.
+    value: 37
+  - name: Val38
+    description: CTimer2_MAT3 input is selected.
+    value: 38
+  - name: Val39
+    description: QDC0_CMP_FLAG0 input is selected.
+    value: 39
+  - name: Val40
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 40
+  - name: Val41
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 41
+  - name: Val42
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 42
+  - name: Val43
+    description: QDC0_POS_MATCH0 input is selected.
+    value: 43
+  - name: Val44
+    description: PWM0_SM0_OUT_TRIG0 input is selected.
+    value: 44
+  - name: Val45
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 45
+  - name: Val46
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 46
+  - name: Val48
+    description: LPI2C0 Master End of Packet input is selected.
+    value: 48
+  - name: Val49
+    description: LPI2C0 Slave End of Packet input is selected.
+    value: 49
+  - name: Val52
+    description: LPSPI0 End of Frame input is selected.
+    value: 52
+  - name: Val53
+    description: LPSPI0 Received Data Word input is selected.
+    value: 53
+  - name: Val54
+    description: LPSPI1 End of Frame input is selected.
+    value: 54
+  - name: Val55
+    description: LPSPI1 Received Data Word input is selected.
+    value: 55
+  - name: Val56
+    description: LPUART0 Received Data Word input is selected.
+    value: 56
+  - name: Val57
+    description: LPUART0 Transmitted Data Word input is selected.
+    value: 57
+  - name: Val58
+    description: LPUART0 Receive Line Idle input is selected.
+    value: 58
+  - name: Val59
+    description: LPUART1 Received Data Word input is selected.
+    value: 59
+  - name: Val60
+    description: LPUART1 Transmitted Data Word input is selected.
+    value: 60
+  - name: Val61
+    description: LPUART1 Receive Line Idle input is selected.
+    value: 61
+  - name: Val62
+    description: LPUART2 Received Data Word input is selected.
+    value: 62
+  - name: Val63
+    description: LPUART2 Transmitted Data Word input is selected.
+    value: 63
+  - name: Val64
+    description: LPUART2 Receive Line Idle input is selected.
+    value: 64
+enum/Timer1trigInp:
+  bit_size: 7
+  variants:
+  - name: Val1
+    description: CT_INP0 input is selected.
+    value: 1
+  - name: Val2
+    description: CT_INP1 input is selected.
+    value: 2
+  - name: Val3
+    description: CT_INP2 input is selected.
+    value: 3
+  - name: Val4
+    description: CT_INP3 input is selected.
+    value: 4
+  - name: Val5
+    description: CT_INP4 input is selected.
+    value: 5
+  - name: Val6
+    description: CT_INP5 input is selected.
+    value: 6
+  - name: Val7
+    description: CT_INP6 input is selected.
+    value: 7
+  - name: Val8
+    description: CT_INP7 input is selected.
+    value: 8
+  - name: Val9
+    description: CT_INP8 input is selected.
+    value: 9
+  - name: Val10
+    description: CT_INP9 input is selected.
+    value: 10
+  - name: Val13
+    description: CT_INP12 input is selected.
+    value: 13
+  - name: Val14
+    description: CT_INP13 input is selected.
+    value: 14
+  - name: Val15
+    description: CT_INP14 input is selected.
+    value: 15
+  - name: Val16
+    description: CT_INP15 input is selected.
+    value: 16
+  - name: Val17
+    description: CT_INP16 input is selected.
+    value: 17
+  - name: Val18
+    description: CT_INP17 input is selected.
+    value: 18
+  - name: Val19
+    description: CT_INP18 input is selected.
+    value: 19
+  - name: Val20
+    description: CT_INP19 input is selected.
+    value: 20
+  - name: Val21
+    description: USB0 usb0 start of frame input is selected.
+    value: 21
+  - name: Val22
+    description: AOI0_OUT0 input is selected.
+    value: 22
+  - name: Val23
+    description: AOI0_OUT1 input is selected.
+    value: 23
+  - name: Val24
+    description: AOI0_OUT2 input is selected.
+    value: 24
+  - name: Val25
+    description: AOI0_OUT3 input is selected.
+    value: 25
+  - name: Val26
+    description: ADC0_tcomp[0] input is selected.
+    value: 26
+  - name: Val27
+    description: ADC0_tcomp[1] input is selected.
+    value: 27
+  - name: Val28
+    description: ADC0_tcomp[2] input is selected.
+    value: 28
+  - name: Val29
+    description: ADC0_tcomp[3] input is selected.
+    value: 29
+  - name: Val30
+    description: CMP0_OUT input is selected.
+    value: 30
+  - name: Val31
+    description: CMP1_OUT input is selected.
+    value: 31
+  - name: Val33
+    description: CTimer0_MAT1 input is selected.
+    value: 33
+  - name: Val34
+    description: CTimer0_MAT2 input is selected.
+    value: 34
+  - name: Val35
+    description: CTimer0_MAT3 input is selected.
+    value: 35
+  - name: Val36
+    description: CTimer2_MAT1 input is selected.
+    value: 36
+  - name: Val37
+    description: CTimer2_MAT2 input is selected.
+    value: 37
+  - name: Val38
+    description: CTimer2_MAT3 input is selected.
+    value: 38
+  - name: Val39
+    description: QDC0_CMP_FLAG0 input is selected.
+    value: 39
+  - name: Val40
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 40
+  - name: Val41
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 41
+  - name: Val42
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 42
+  - name: Val43
+    description: QDC0_POS_MATCH0 input is selected.
+    value: 43
+  - name: Val44
+    description: PWM0_SM0_OUT_TRIG0 input is selected.
+    value: 44
+  - name: Val45
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 45
+  - name: Val46
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 46
+  - name: Val48
+    description: LPI2C0 Master End of Packet input is selected.
+    value: 48
+  - name: Val49
+    description: LPI2C0 Slave End of Packet input is selected.
+    value: 49
+  - name: Val52
+    description: LPSPI0 End of Frame input is selected.
+    value: 52
+  - name: Val53
+    description: LPSPI0 Received Data Word input is selected.
+    value: 53
+  - name: Val54
+    description: LPSPI1 End of Frame input is selected.
+    value: 54
+  - name: Val55
+    description: LPSPI1 Received Data Word input is selected.
+    value: 55
+  - name: Val56
+    description: LPUART0 Received Data Word input is selected.
+    value: 56
+  - name: Val57
+    description: LPUART0 Transmitted Data Word input is selected.
+    value: 57
+  - name: Val58
+    description: LPUART0 Receive Line Idle input is selected.
+    value: 58
+  - name: Val59
+    description: LPUART1 Received Data Word input is selected.
+    value: 59
+  - name: Val60
+    description: LPUART1 Transmitted Data Word input is selected.
+    value: 60
+  - name: Val61
+    description: LPUART1 Receive Line Idle input is selected.
+    value: 61
+  - name: Val62
+    description: LPUART2 Received Data Word input is selected.
+    value: 62
+  - name: Val63
+    description: LPUART2 Transmitted Data Word input is selected.
+    value: 63
+  - name: Val64
+    description: LPUART2 Receive Line Idle input is selected.
+    value: 64
+enum/Timer2trigInp:
+  bit_size: 7
+  variants:
+  - name: Val1
+    description: CT_INP0 input is selected.
+    value: 1
+  - name: Val2
+    description: CT_INP1 input is selected.
+    value: 2
+  - name: Val3
+    description: CT_INP2 input is selected.
+    value: 3
+  - name: Val4
+    description: CT_INP3 input is selected.
+    value: 4
+  - name: Val5
+    description: CT_INP4 input is selected.
+    value: 5
+  - name: Val6
+    description: CT_INP5 input is selected.
+    value: 6
+  - name: Val7
+    description: CT_INP6 input is selected.
+    value: 7
+  - name: Val8
+    description: CT_INP7 input is selected.
+    value: 8
+  - name: Val9
+    description: CT_INP8 input is selected.
+    value: 9
+  - name: Val10
+    description: CT_INP9 input is selected.
+    value: 10
+  - name: Val13
+    description: CT_INP12 input is selected.
+    value: 13
+  - name: Val14
+    description: CT_INP13 input is selected.
+    value: 14
+  - name: Val15
+    description: CT_INP14 input is selected.
+    value: 15
+  - name: Val16
+    description: CT_INP15 input is selected.
+    value: 16
+  - name: Val17
+    description: CT_INP16 input is selected.
+    value: 17
+  - name: Val18
+    description: CT_INP17 input is selected.
+    value: 18
+  - name: Val19
+    description: CT_INP18 input is selected.
+    value: 19
+  - name: Val20
+    description: CT_INP19 input is selected.
+    value: 20
+  - name: Val21
+    description: USB0 usb0 start of frame input is selected.
+    value: 21
+  - name: Val22
+    description: AOI0_OUT0 input is selected.
+    value: 22
+  - name: Val23
+    description: AOI0_OUT1 input is selected.
+    value: 23
+  - name: Val24
+    description: AOI0_OUT2 input is selected.
+    value: 24
+  - name: Val25
+    description: AOI0_OUT3 input is selected.
+    value: 25
+  - name: Val26
+    description: ADC0_tcomp[0] input is selected.
+    value: 26
+  - name: Val27
+    description: ADC0_tcomp[1] input is selected.
+    value: 27
+  - name: Val28
+    description: ADC0_tcomp[2] input is selected.
+    value: 28
+  - name: Val29
+    description: ADC0_tcomp[3] input is selected.
+    value: 29
+  - name: Val30
+    description: CMP0_OUT input is selected selected.
+    value: 30
+  - name: Val31
+    description: CMP1_OUT input is selected selected.
+    value: 31
+  - name: Val33
+    description: CTimer0_MAT1 input is selected.
+    value: 33
+  - name: Val34
+    description: CTimer0_MAT2 input is selected.
+    value: 34
+  - name: Val35
+    description: CTimer0_MAT3 input is selected.
+    value: 35
+  - name: Val36
+    description: CTimer1_MAT1 input is selected.
+    value: 36
+  - name: Val37
+    description: CTimer1_MAT2 input is selected.
+    value: 37
+  - name: Val38
+    description: CTimer1_MAT3 input is selected.
+    value: 38
+  - name: Val39
+    description: QDC0_CMP_FLAG0 input is selected.
+    value: 39
+  - name: Val40
+    description: QDC0_CMP_FLAG1 input is selected.
+    value: 40
+  - name: Val41
+    description: QDC0_CMP_FLAG2 input is selected.
+    value: 41
+  - name: Val42
+    description: QDC0_CMP_FLAG3 input is selected.
+    value: 42
+  - name: Val43
+    description: QDC0_POS_MATCH0 input is selected.
+    value: 43
+  - name: Val44
+    description: PWM0_SM0_OUT_TRIG0 input is selected.
+    value: 44
+  - name: Val45
+    description: PWM0_SM1_OUT_TRIG0 input is selected.
+    value: 45
+  - name: Val46
+    description: PWM0_SM2_OUT_TRIG0 input is selected.
+    value: 46
+  - name: Val48
+    description: LPI2C0 Master End of Packet input is selected.
+    value: 48
+  - name: Val49
+    description: LPI2C0 Slave End of Packet input is selected.
+    value: 49
+  - name: Val52
+    description: LPSPI0 End of Frame input is selected.
+    value: 52
+  - name: Val53
+    description: LPSPI0 Received Data Word input is selected.
+    value: 53
+  - name: Val54
+    description: LPSPI1 End of Frame input is selected.
+    value: 54
+  - name: Val55
+    description: LPSPI1 Received Data Word input is selected.
+    value: 55
+  - name: Val56
+    description: LPUART0 Received Data Word input is selected.
+    value: 56
+  - name: Val57
+    description: LPUART0 Transmitted Data Word input is selected.
+    value: 57
+  - name: Val58
+    description: LPUART0 Receive Line Idle input is selected.
+    value: 58
+  - name: Val59
+    description: LPUART1 Received Data Word input is selected.
+    value: 59
+  - name: Val60
+    description: LPUART1 Transmitted Data Word input is selected.
+    value: 60
+  - name: Val61
+    description: LPUART1 Receive Line Idle input is selected.
+    value: 61
+  - name: Val62
+    description: LPUART2 Received Data Word input is selected.
+    value: 62
+  - name: Val63
+    description: LPUART2 Transmitted Data Word input is selected.
+    value: 63
+  - name: Val64
+    description: LPUART2 Receive Line Idle input is selected.
+    value: 64
+enum/UsbfsTrigInp:
+  bit_size: 3
+  variants:
+  - name: Val1
+    description: LPUART0 lpuart_trg_txdata input is selected.
+    value: 1
+  - name: Val2
+    description: LPUART1 lpuart_trg_txdata input is selected.
+    value: 2
+  - name: Val3
+    description: LPUART2 lpuart_trg_txdata input is selected.
+    value: 3

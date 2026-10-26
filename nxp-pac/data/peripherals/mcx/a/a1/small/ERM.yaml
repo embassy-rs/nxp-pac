@@ -1,0 +1,3 @@
+# MCXAP64M96FS3RM Rev. 7; register-compatible A1 definition.
+includes:
+  - ../ERM.yaml

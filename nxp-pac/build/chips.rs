@@ -24,7 +24,20 @@ macro_rules! chips {
 }
 
 chips! {
+    "mcxa132" => "MCXA132",
+    "mcxa133" => "MCXA133",
+    "mcxa142" => "MCXA142",
+    "mcxa143" => "MCXA143",
+    "mcxa144" => "MCXA144",
+    "mcxa145" => "MCXA145",
+    "mcxa146" => "MCXA146",
+    "mcxa152" => "MCXA152",
+    "mcxa153" => "MCXA153",
+    "mcxa154" => "MCXA154",
+    "mcxa155" => "MCXA155",
     "mcxa156" => "MCXA156",
+    "mcxa173" => "MCXA173",
+    "mcxa174" => "MCXA174",
     "mcxa175" => "MCXA175",
     "mcxa176" => "MCXA176",
     "mcxa185" => "MCXA185",
