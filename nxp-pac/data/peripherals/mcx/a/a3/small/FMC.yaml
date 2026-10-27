@@ -1,0 +1,142 @@
+# MCXA3: explicit pinned XML onboarding; backing widths and resets retained.
+block/Fmc:
+  description: NPX.
+  items:
+  - name: remap
+    description: Data Remap.
+    byte_offset: 32
+    fieldset: Remap
+  - name: fccr
+    description: Flash Cache Control Register.
+    byte_offset: 1024
+    fieldset: Fccr
+  - name: fcar
+    description: Flash Cache Access Register.
+    byte_offset: 1028
+    fieldset: Fcar
+  - name: fctg
+    description: Flash Cache Tag.
+    byte_offset: 1036
+    fieldset: Fctg
+  - name: fcln0
+    description: Flash Cache Line Num0.
+    byte_offset: 1056
+    fieldset: Fcln0
+  - name: fcln1
+    description: Flash Cache Line Num1.
+    byte_offset: 1060
+    fieldset: Fcln1
+  - name: fcln2
+    description: Flash Cache Line Num2.
+    byte_offset: 1064
+    fieldset: Fcln2
+  - name: fcln3
+    description: Flash Cache Line Num3.
+    byte_offset: 1068
+    fieldset: Fcln3
+fieldset/Fcar:
+  description: Flash Cache Access Register.
+  fields:
+  - name: caches_way_num
+    description: Flash Cache Way Number.
+    bit_offset: 0
+    bit_size: 2
+  - name: caches_set_num
+    description: Flash Cache Set Number.
+    bit_offset: 4
+    bit_size: 1
+  - name: type_
+    description: Operation of cache type.
+    bit_offset: 30
+    bit_size: 2
+  bit_size: 32
+  reset_value: 0
+fieldset/Fccr:
+  description: Flash Cache Control Register.
+  fields:
+  - name: way_lock
+    description: Cache Way Lock.
+    bit_offset: 0
+    bit_size: 4
+  - name: lock
+    description: Lock Flash Cache Control.
+    bit_offset: 31
+    bit_size: 1
+  bit_size: 32
+  reset_value: 0
+fieldset/Fcln0:
+  description: Flash Cache Line Num0.
+  fields:
+  - name: data_wx_sy_lm
+    description: The lowermost word (bits [31:0]) of Flash Cache Line Data.
+    bit_offset: 0
+    bit_size: 32
+  bit_size: 32
+  reset_value: 0
+fieldset/Fcln1:
+  description: Flash Cache Line Num1.
+  fields:
+  - name: data_wx_sy_ml
+    description: The mid-lower word (bits [63:32]) of Flash Cache Line Data.
+    bit_offset: 0
+    bit_size: 32
+  bit_size: 32
+  reset_value: 0
+fieldset/Fcln2:
+  description: Flash Cache Line Num2.
+  fields:
+  - name: data_wx_sy_mu
+    description: The mid-upper word (bits [95:64]) of Flash Cache Line Data.
+    bit_offset: 0
+    bit_size: 32
+  bit_size: 32
+  reset_value: 0
+fieldset/Fcln3:
+  description: Flash Cache Line Num3.
+  fields:
+  - name: data_wx_sy_um
+    description: The uppermost word (bits [127:96]) of Flash Cache Line Data.
+    bit_offset: 0
+    bit_size: 32
+  bit_size: 32
+  reset_value: 0
+fieldset/Fctg:
+  description: Flash Cache Tag.
+  fields:
+  - name: valid
+    description: Flash Cache Tag Valid Bit.
+    bit_offset: 0
+    bit_size: 1
+  - name: addess
+    description: Flash Cache Tag Address Bit[23:6].
+    bit_offset: 6
+    bit_size: 18
+  bit_size: 32
+  reset_value: 0
+fieldset/Remap:
+  description: Data Remap.
+  fields:
+  - name: remaplk
+    description: Remap Lock Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: Remaplk
+  - name: lim
+    description: LIM Remapping Address.
+    bit_offset: 16
+    bit_size: 7
+  - name: limdp
+    description: LIMDP Remapping Address.
+    bit_offset: 24
+    bit_size: 7
+  bit_size: 32
+  reset_value: 0
+enum/Remaplk:
+  bit_size: 1
+  variants:
+  - name: LockDisabled
+    description: 'Lock disabled: can write to REMAP.'
+    value: 0
+  - name: LockEnabled
+    description: 'Lock enabled: cannot write to REMAP.'
+    value: 1

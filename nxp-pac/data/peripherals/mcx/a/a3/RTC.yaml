@@ -1,0 +1,302 @@
+# MCXA3: explicit pinned XML onboarding; backing widths and resets retained.
+block/Rtc:
+  description: Real Time Clock.
+  items:
+  - name: tsr
+    description: RTC Time Seconds.
+    byte_offset: 0
+    fieldset: Tsr
+  - name: tpr
+    description: RTC Time Prescaler.
+    byte_offset: 4
+    fieldset: Tpr
+  - name: tar
+    description: RTC Time Alarm.
+    byte_offset: 8
+    fieldset: Tar
+  - name: tcr
+    description: RTC Time Compensation.
+    byte_offset: 12
+    fieldset: Tcr
+  - name: cr
+    description: RTC Control.
+    byte_offset: 16
+    fieldset: Cr
+  - name: sr
+    description: RTC Status.
+    byte_offset: 20
+    fieldset: Sr
+  - name: lr
+    description: RTC Lock.
+    byte_offset: 24
+    fieldset: Lr
+  - name: ier
+    description: RTC Interrupt Enable.
+    byte_offset: 28
+    fieldset: Ier
+fieldset/Cr:
+  description: RTC Control.
+  fields:
+  - name: swr
+    description: Software Reset.
+    bit_offset: 0
+    bit_size: 1
+    enum: Swr
+  - name: um
+    description: Update Mode.
+    bit_offset: 3
+    bit_size: 1
+    enum: Um
+  - name: lpos
+    description: LPO Select.
+    bit_offset: 7
+    bit_size: 1
+    enum: Lpos
+  bit_size: 32
+  reset_value: 128
+fieldset/Ier:
+  description: RTC Interrupt Enable.
+  fields:
+  - name: tiie
+    description: Time Invalid Interrupt Enable.
+    bit_offset: 0
+    bit_size: 1
+  - name: toie
+    description: Time Overflow Interrupt Enable.
+    bit_offset: 1
+    bit_size: 1
+  - name: taie
+    description: Time Alarm Interrupt Enable.
+    bit_offset: 2
+    bit_size: 1
+  - name: tsie
+    description: Time Seconds Interrupt Enable.
+    bit_offset: 4
+    bit_size: 1
+  - name: tsic
+    description: Timer Seconds Interrupt Configuration.
+    bit_offset: 16
+    bit_size: 3
+    enum: Tsic
+  bit_size: 32
+  reset_value: 7
+fieldset/Lr:
+  description: RTC Lock.
+  fields:
+  - name: tcl
+    description: Time Compensation Lock.
+    bit_offset: 3
+    bit_size: 1
+    enum: Tcl
+  - name: crl
+    description: Control Register Lock.
+    bit_offset: 4
+    bit_size: 1
+    enum: Crl
+  - name: srl
+    description: Status Register Lock.
+    bit_offset: 5
+    bit_size: 1
+    enum: Srl
+  - name: lrl
+    description: Lock Register Lock.
+    bit_offset: 6
+    bit_size: 1
+    enum: Lrl
+  bit_size: 32
+  reset_value: 255
+fieldset/Sr:
+  description: RTC Status.
+  fields:
+  - name: tif
+    description: Time Invalid Flag.
+    bit_offset: 0
+    bit_size: 1
+    enum: Tif
+  - name: tof
+    description: Time Overflow Flag.
+    bit_offset: 1
+    bit_size: 1
+  - name: taf
+    description: Time Alarm Flag.
+    bit_offset: 2
+    bit_size: 1
+  - name: tce
+    description: Time Counter Enable.
+    bit_offset: 4
+    bit_size: 1
+  bit_size: 32
+  reset_value: 1
+fieldset/Tar:
+  description: RTC Time Alarm.
+  fields:
+  - name: tar
+    description: Time Alarm Register.
+    bit_offset: 0
+    bit_size: 32
+  bit_size: 32
+  reset_value: 0
+fieldset/Tcr:
+  description: RTC Time Compensation.
+  fields:
+  - name: tcr
+    description: Time Compensation Register.
+    bit_offset: 0
+    bit_size: 8
+    enum: TcrValue
+  - name: cir
+    description: Compensation Interval Register.
+    bit_offset: 8
+    bit_size: 8
+  - name: tcv
+    description: Time Compensation Value.
+    bit_offset: 16
+    bit_size: 8
+  - name: cic
+    description: Compensation Interval Counter.
+    bit_offset: 24
+    bit_size: 8
+  bit_size: 32
+  reset_value: 0
+fieldset/Tpr:
+  description: RTC Time Prescaler.
+  fields:
+  - name: tpr
+    description: Time Prescaler Register.
+    bit_offset: 0
+    bit_size: 16
+  bit_size: 32
+  reset_value: 0
+fieldset/Tsr:
+  description: RTC Time Seconds.
+  fields:
+  - name: tsr
+    description: Time Seconds Register.
+    bit_offset: 0
+    bit_size: 32
+  bit_size: 32
+  reset_value: 0
+enum/Crl:
+  bit_size: 1
+  variants:
+  - name: Locked
+    description: Control Register is locked and writes are ignored.
+    value: 0
+  - name: NotLocked
+    description: Control Register is not locked and writes complete as normal.
+    value: 1
+enum/Lpos:
+  bit_size: 1
+  variants:
+  - name: Clock32
+    description: RTC prescaler increments using 32.768 kHz clock.
+    value: 0
+  - name: ClockLpo
+    description: RTC prescaler increments using 16.384 kHz LPO. Bit [0] of the prescaler is ignored.
+    value: 1
+enum/Lrl:
+  bit_size: 1
+  variants:
+  - name: Locked
+    description: Lock Register is locked and writes are ignored.
+    value: 0
+  - name: NotLocked
+    description: Lock Register is not locked and writes complete as normal.
+    value: 1
+enum/Srl:
+  bit_size: 1
+  variants:
+  - name: Locked
+    description: Status Register is locked and writes are ignored.
+    value: 0
+  - name: NotLocked
+    description: Status Register is not locked and writes complete as normal.
+    value: 1
+enum/Swr:
+  bit_size: 1
+  variants:
+  - name: NoEffect
+    description: No effect.
+    value: 0
+  - name: Reset
+    description: Resets all RTC registers except for the SWR bit . The SWR bit is cleared by POR and by software
+      explicitly clearing it.
+    value: 1
+enum/Tcl:
+  bit_size: 1
+  variants:
+  - name: Locked
+    description: Time Compensation Register is locked and writes are ignored.
+    value: 0
+  - name: NotLocked
+    description: Time Compensation Register is not locked and writes complete as normal.
+    value: 1
+enum/Tif:
+  bit_size: 1
+  variants:
+  - name: Valid
+    description: Time is valid.
+    value: 0
+  - name: Invalid
+    description: Time is invalid and time counter is read as zero.
+    value: 1
+enum/Tsic:
+  bit_size: 3
+  variants:
+  - name: Frq1
+    description: 1 Hz.
+    value: 0
+  - name: Frq2
+    description: 2 Hz.
+    value: 1
+  - name: Frq3
+    description: 4 Hz.
+    value: 2
+  - name: Frq4
+    description: 8 Hz.
+    value: 3
+  - name: Frq5
+    description: 16 Hz.
+    value: 4
+  - name: Frq6
+    description: 32 Hz.
+    value: 5
+  - name: Frq7
+    description: 64 Hz.
+    value: 6
+  - name: Frq8
+    description: 128 Hz.
+    value: 7
+enum/Um:
+  bit_size: 1
+  variants:
+  - name: NonWritable
+    description: Registers cannot be written when locked.
+    value: 0
+  - name: Writable
+    description: Registers can be written when locked under limited conditions.
+    value: 1
+enum/TcrValue:
+  bit_size: 8
+  variants:
+  - name: Cycle4
+    description: Time Prescaler Register overflows every 32768 clock cycles.
+    value: 0
+  - name: Cycle5
+    description: Time Prescaler Register overflows every 32767 clock cycles.
+    value: 1
+  - name: Cycle6
+    description: Time Prescaler Register overflows every 32642 clock cycles.
+    value: 126
+  - name: Cycle7
+    description: Time Prescaler Register overflows every 32641 clock cycles.
+    value: 127
+  - name: Cycle1
+    description: Time Prescaler Register overflows every 32896 clock cycles.
+    value: 128
+  - name: Cycle2
+    description: Time Prescaler Register overflows every 32895 clock cycles.
+    value: 129
+  - name: Cycle3
+    description: Time Prescaler Register overflows every 32769 clock cycles.
+    value: 255

@@ -1,0 +1,733 @@
+# MCXA3: explicit pinned XML onboarding; backing widths and resets retained.
+block/Tdet:
+  description: TDET.
+  items:
+  - name: cr
+    description: Control.
+    byte_offset: 16
+    fieldset: Cr
+  - name: sr
+    description: Status.
+    byte_offset: 20
+    fieldset: Sr
+  - name: lr
+    description: Lock.
+    byte_offset: 24
+    fieldset: Lr
+  - name: ier
+    description: Interrupt Enable.
+    byte_offset: 28
+    fieldset: Ier
+  - name: tsr
+    description: Tamper Seconds.
+    byte_offset: 32
+    fieldset: Tsr
+  - name: ter
+    description: Tamper Enable.
+    byte_offset: 36
+    fieldset: Ter
+  - name: ppr
+    description: Pin Polarity.
+    byte_offset: 44
+    fieldset: Ppr
+  - name: pgfr
+    description: Pin Glitch Filter.
+    array:
+      len: 6
+      stride: 4
+    byte_offset: 64
+    fieldset: Pgfr
+fieldset/Cr:
+  description: Control.
+  fields:
+  - name: swr
+    description: Software Reset.
+    bit_offset: 0
+    bit_size: 1
+    enum: Swr
+  - name: den
+    description: Digital Tamper Enable.
+    bit_offset: 1
+    bit_size: 1
+  - name: tfsr
+    description: Tamper Force System Reset.
+    bit_offset: 2
+    bit_size: 1
+  - name: um
+    description: Update Mode.
+    bit_offset: 3
+    bit_size: 1
+    enum: Um
+  - name: distam
+    description: Disable Prescaler On Tamper.
+    bit_offset: 8
+    bit_size: 1
+    enum: Distam
+  - name: dpr
+    description: Digital Tamper Prescaler.
+    bit_offset: 17
+    bit_size: 15
+  bit_size: 32
+  reset_value: 0
+fieldset/Ier:
+  description: Interrupt Enable.
+  fields:
+  - name: dtie
+    description: Digital Tamper Interrupt Enable.
+    bit_offset: 0
+    bit_size: 1
+  - name: tiie0
+    description: Tamper Input n Interrupt Enable.
+    bit_offset: 2
+    bit_size: 1
+  - name: tiie1
+    description: Tamper Input n Interrupt Enable.
+    bit_offset: 3
+    bit_size: 1
+  - name: tiie2
+    description: Tamper Input n Interrupt Enable.
+    bit_offset: 4
+    bit_size: 1
+  - name: tiie3
+    description: Tamper Input n Interrupt Enable.
+    bit_offset: 5
+    bit_size: 1
+  - name: tiie4
+    description: Tamper Input n Interrupt Enable.
+    bit_offset: 6
+    bit_size: 1
+  - name: tiie5
+    description: Tamper Input n Interrupt Enable.
+    bit_offset: 7
+    bit_size: 1
+  - name: tiie6
+    description: Tamper Input n Interrupt Enable.
+    bit_offset: 8
+    bit_size: 1
+  - name: tiie7
+    description: Tamper Input n Interrupt Enable.
+    bit_offset: 9
+    bit_size: 1
+  - name: tiie8
+    description: Tamper Input n Interrupt Enable.
+    bit_offset: 10
+    bit_size: 1
+  - name: tiie9
+    description: Tamper Input n Interrupt Enable.
+    bit_offset: 11
+    bit_size: 1
+  - name: tiie10
+    description: Tamper Input n Interrupt Enable.
+    bit_offset: 12
+    bit_size: 1
+  - name: tpie0
+    description: Tamper Pin n Interrupt Enable.
+    bit_offset: 16
+    bit_size: 1
+  - name: tpie1
+    description: Tamper Pin n Interrupt Enable.
+    bit_offset: 17
+    bit_size: 1
+  - name: tpie2
+    description: Tamper Pin n Interrupt Enable.
+    bit_offset: 18
+    bit_size: 1
+  - name: tpie3
+    description: Tamper Pin n Interrupt Enable.
+    bit_offset: 19
+    bit_size: 1
+  - name: tpie4
+    description: Tamper Pin n Interrupt Enable.
+    bit_offset: 20
+    bit_size: 1
+  - name: tpie5
+    description: Tamper Pin n Interrupt Enable.
+    bit_offset: 21
+    bit_size: 1
+  bit_size: 32
+  reset_value: 0
+fieldset/Lr:
+  description: Lock.
+  fields:
+  - name: crl
+    description: Control Register Lock.
+    bit_offset: 4
+    bit_size: 1
+    enum: Crl
+  - name: srl
+    description: Status Register Lock.
+    bit_offset: 5
+    bit_size: 1
+    enum: Srl
+  - name: lrl
+    description: Lock Register Lock.
+    bit_offset: 6
+    bit_size: 1
+    enum: Lrl
+  - name: iel
+    description: Interrupt Enable Lock.
+    bit_offset: 7
+    bit_size: 1
+    enum: Iel
+  - name: tsl
+    description: Tamper Seconds Lock.
+    bit_offset: 8
+    bit_size: 1
+    enum: Tsl
+  - name: tel
+    description: Tamper Enable Lock.
+    bit_offset: 9
+    bit_size: 1
+    enum: Tel
+  - name: ppl
+    description: Pin Polarity Lock.
+    bit_offset: 11
+    bit_size: 1
+    enum: Ppl
+  - name: gfl0
+    description: Glitch Filter Lock.
+    bit_offset: 16
+    bit_size: 1
+    enum: Gfl0
+  - name: gfl1
+    description: Glitch Filter Lock.
+    bit_offset: 17
+    bit_size: 1
+    enum: Gfl1
+  - name: gfl2
+    description: Glitch Filter Lock.
+    bit_offset: 18
+    bit_size: 1
+    enum: Gfl2
+  - name: gfl3
+    description: Glitch Filter Lock.
+    bit_offset: 19
+    bit_size: 1
+    enum: Gfl3
+  - name: gfl4
+    description: Glitch Filter Lock.
+    bit_offset: 20
+    bit_size: 1
+    enum: Gfl4
+  - name: gfl5
+    description: Glitch Filter Lock.
+    bit_offset: 21
+    bit_size: 1
+    enum: Gfl5
+  bit_size: 32
+  reset_value: 4131824
+fieldset/Pgfr:
+  description: Pin Glitch Filter.
+  fields:
+  - name: gfw
+    description: Glitch Filter Width.
+    bit_offset: 0
+    bit_size: 6
+  - name: gfp
+    description: Glitch Filter Prescaler.
+    bit_offset: 6
+    bit_size: 1
+    enum: Gfp
+  - name: gfe
+    description: Glitch Filter Enable.
+    bit_offset: 7
+    bit_size: 1
+    enum: Gfe
+  - name: tpsw
+    description: Tamper Pin Sample Width.
+    bit_offset: 8
+    bit_size: 2
+    enum: Tpsw
+  - name: tpsf
+    description: Tamper Pin Sample Frequency.
+    bit_offset: 10
+    bit_size: 2
+    enum: Tpsf
+  - name: tpe
+    description: Tamper Pull Enable.
+    bit_offset: 24
+    bit_size: 1
+  - name: tps
+    description: Tamper Pull Select.
+    bit_offset: 25
+    bit_size: 1
+    enum: Tps
+  bit_size: 32
+  reset_value: 0
+fieldset/Ppr:
+  description: Pin Polarity.
+  fields:
+  - name: tpp0
+    description: Tamper Pin n Polarity.
+    bit_offset: 0
+    bit_size: 1
+  - name: tpp1
+    description: Tamper Pin n Polarity.
+    bit_offset: 1
+    bit_size: 1
+  - name: tpp2
+    description: Tamper Pin n Polarity.
+    bit_offset: 2
+    bit_size: 1
+  - name: tpp3
+    description: Tamper Pin n Polarity.
+    bit_offset: 3
+    bit_size: 1
+  - name: tpp4
+    description: Tamper Pin n Polarity.
+    bit_offset: 4
+    bit_size: 1
+  - name: tpp5
+    description: Tamper Pin n Polarity.
+    bit_offset: 5
+    bit_size: 1
+  - name: tpid0
+    description: Tamper Pin n Input Data.
+    bit_offset: 16
+    bit_size: 1
+    enum: Tpid0
+  - name: tpid1
+    description: Tamper Pin n Input Data.
+    bit_offset: 17
+    bit_size: 1
+    enum: Tpid1
+  - name: tpid2
+    description: Tamper Pin n Input Data.
+    bit_offset: 18
+    bit_size: 1
+    enum: Tpid2
+  - name: tpid3
+    description: Tamper Pin n Input Data.
+    bit_offset: 19
+    bit_size: 1
+    enum: Tpid3
+  - name: tpid4
+    description: Tamper Pin n Input Data.
+    bit_offset: 20
+    bit_size: 1
+    enum: Tpid4
+  - name: tpid5
+    description: Tamper Pin n Input Data.
+    bit_offset: 21
+    bit_size: 1
+    enum: Tpid5
+  bit_size: 32
+  reset_value: 0
+fieldset/Sr:
+  description: Status.
+  fields:
+  - name: dtf
+    description: Digital Tamper Flag.
+    bit_offset: 0
+    bit_size: 1
+  - name: taf
+    description: Tamper Acknowledge Flag.
+    bit_offset: 1
+    bit_size: 1
+  - name: tif0
+    description: Tamper Input n Flag.
+    bit_offset: 2
+    bit_size: 1
+  - name: tif1
+    description: Tamper Input n Flag.
+    bit_offset: 3
+    bit_size: 1
+  - name: tif2
+    description: Tamper Input n Flag.
+    bit_offset: 4
+    bit_size: 1
+  - name: tif3
+    description: Tamper Input n Flag.
+    bit_offset: 5
+    bit_size: 1
+  - name: tif4
+    description: Tamper Input n Flag.
+    bit_offset: 6
+    bit_size: 1
+  - name: tif5
+    description: Tamper Input n Flag.
+    bit_offset: 7
+    bit_size: 1
+  - name: tif6
+    description: Tamper Input n Flag.
+    bit_offset: 8
+    bit_size: 1
+  - name: tif7
+    description: Tamper Input n Flag.
+    bit_offset: 9
+    bit_size: 1
+  - name: tif8
+    description: Tamper Input n Flag.
+    bit_offset: 10
+    bit_size: 1
+  - name: tif9
+    description: Tamper Input n Flag.
+    bit_offset: 11
+    bit_size: 1
+  - name: tif10
+    description: Tamper Input n Flag.
+    bit_offset: 12
+    bit_size: 1
+  - name: tpf0
+    description: Tamper Pin n Flag.
+    bit_offset: 16
+    bit_size: 1
+  - name: tpf1
+    description: Tamper Pin n Flag.
+    bit_offset: 17
+    bit_size: 1
+  - name: tpf2
+    description: Tamper Pin n Flag.
+    bit_offset: 18
+    bit_size: 1
+  - name: tpf3
+    description: Tamper Pin n Flag.
+    bit_offset: 19
+    bit_size: 1
+  - name: tpf4
+    description: Tamper Pin n Flag.
+    bit_offset: 20
+    bit_size: 1
+  - name: tpf5
+    description: Tamper Pin n Flag.
+    bit_offset: 21
+    bit_size: 1
+  bit_size: 32
+  reset_value: 0
+fieldset/Ter:
+  description: Tamper Enable.
+  fields:
+  - name: tie0
+    description: Tamper Input Enable.
+    bit_offset: 2
+    bit_size: 1
+  - name: tie1
+    description: Tamper Input Enable.
+    bit_offset: 3
+    bit_size: 1
+  - name: tie2
+    description: Tamper Input Enable.
+    bit_offset: 4
+    bit_size: 1
+  - name: tie3
+    description: Tamper Input Enable.
+    bit_offset: 5
+    bit_size: 1
+  - name: tie4
+    description: Tamper Input Enable.
+    bit_offset: 6
+    bit_size: 1
+  - name: tie5
+    description: Tamper Input Enable.
+    bit_offset: 7
+    bit_size: 1
+  - name: tie6
+    description: Tamper Input Enable.
+    bit_offset: 8
+    bit_size: 1
+  - name: tie7
+    description: Tamper Input Enable.
+    bit_offset: 9
+    bit_size: 1
+  - name: tie8
+    description: Tamper Input Enable.
+    bit_offset: 10
+    bit_size: 1
+  - name: tie9
+    description: Tamper Input Enable.
+    bit_offset: 11
+    bit_size: 1
+  - name: tie10
+    description: Tamper Input Enable.
+    bit_offset: 12
+    bit_size: 1
+  - name: tpe0
+    description: Tamper Pin Enable.
+    bit_offset: 16
+    bit_size: 1
+  - name: tpe1
+    description: Tamper Pin Enable.
+    bit_offset: 17
+    bit_size: 1
+  - name: tpe2
+    description: Tamper Pin Enable.
+    bit_offset: 18
+    bit_size: 1
+  - name: tpe3
+    description: Tamper Pin Enable.
+    bit_offset: 19
+    bit_size: 1
+  - name: tpe4
+    description: Tamper Pin Enable.
+    bit_offset: 20
+    bit_size: 1
+  - name: tpe5
+    description: Tamper Pin Enable.
+    bit_offset: 21
+    bit_size: 1
+  bit_size: 32
+  reset_value: 0
+fieldset/Tsr:
+  description: Tamper Seconds.
+  fields:
+  - name: tts
+    description: Tamper Time Seconds.
+    bit_offset: 0
+    bit_size: 32
+  bit_size: 32
+  reset_value: 0
+enum/Crl:
+  bit_size: 1
+  variants:
+  - name: Lock
+    description: Locked and writes are ignored.
+    value: 0
+  - name: NotLock
+    description: Not locked and writes complete as normal.
+    value: 1
+enum/Distam:
+  bit_size: 1
+  variants:
+  - name: NoEffect
+    description: No effect.
+    value: 0
+  - name: AutoDis
+    description: Automatically disables the prescaler after tamper detection.
+    value: 1
+enum/Gfe:
+  bit_size: 1
+  variants:
+  - name: Bypass
+    description: Bypasses.
+    value: 0
+  - name: Enable
+    description: Enables.
+    value: 1
+enum/Gfl0:
+  bit_size: 1
+  variants:
+  - name: Lock
+    description: Locked and writes are ignored.
+    value: 0
+  - name: NotLock
+    description: Not locked and writes complete as normal.
+    value: 1
+enum/Gfl1:
+  bit_size: 1
+  variants:
+  - name: Lock
+    description: Locked and writes are ignored.
+    value: 0
+  - name: NotLock
+    description: Not locked and writes complete as normal.
+    value: 1
+enum/Gfl2:
+  bit_size: 1
+  variants:
+  - name: Lock
+    description: Locked and writes are ignored.
+    value: 0
+  - name: NotLock
+    description: Not locked and writes complete as normal.
+    value: 1
+enum/Gfl3:
+  bit_size: 1
+  variants:
+  - name: Lock
+    description: Locked and writes are ignored.
+    value: 0
+  - name: NotLock
+    description: Not locked and writes complete as normal.
+    value: 1
+enum/Gfl4:
+  bit_size: 1
+  variants:
+  - name: Lock
+    description: Locked and writes are ignored.
+    value: 0
+  - name: NotLock
+    description: Not locked and writes complete as normal.
+    value: 1
+enum/Gfl5:
+  bit_size: 1
+  variants:
+  - name: Lock
+    description: Locked and writes are ignored.
+    value: 0
+  - name: NotLock
+    description: Not locked and writes complete as normal.
+    value: 1
+enum/Gfp:
+  bit_size: 1
+  variants:
+  - name: Freq512Hz
+    description: 256 Hz prescaler clock.
+    value: 0
+  - name: Freq32Khz
+    description: 16.384 kHz clock.
+    value: 1
+enum/Iel:
+  bit_size: 1
+  variants:
+  - name: Lock
+    description: Locked and writes are ignored.
+    value: 0
+  - name: NotLock
+    description: Not locked and writes complete as normal.
+    value: 1
+enum/Lrl:
+  bit_size: 1
+  variants:
+  - name: Lock
+    description: Locked and writes are ignored.
+    value: 0
+  - name: NotLock
+    description: Not locked and writes complete as normal.
+    value: 1
+enum/Ppl:
+  bit_size: 1
+  variants:
+  - name: Lock
+    description: Locked and writes are ignored.
+    value: 0
+  - name: NotLock
+    description: Not locked and writes complete as normal.
+    value: 1
+enum/Srl:
+  bit_size: 1
+  variants:
+  - name: Lock
+    description: Locked and writes are ignored.
+    value: 0
+  - name: NotLock
+    description: Not locked and writes complete as normal.
+    value: 1
+enum/Swr:
+  bit_size: 1
+  variants:
+  - name: NoEffect
+    description: No effect.
+    value: 0
+  - name: SwReset
+    description: Perform a software reset.
+    value: 1
+enum/Tel:
+  bit_size: 1
+  variants:
+  - name: Lock
+    description: Locked and writes are ignored.
+    value: 0
+  - name: NotLock
+    description: Not locked and writes complete as normal.
+    value: 1
+enum/Tpid0:
+  bit_size: 1
+  variants:
+  - name: Zero
+    description: Zero.
+    value: 0
+  - name: One
+    description: One.
+    value: 1
+enum/Tpid1:
+  bit_size: 1
+  variants:
+  - name: Zero
+    description: Zero.
+    value: 0
+  - name: One
+    description: One.
+    value: 1
+enum/Tpid2:
+  bit_size: 1
+  variants:
+  - name: Zero
+    description: Zero.
+    value: 0
+  - name: One
+    description: One.
+    value: 1
+enum/Tpid3:
+  bit_size: 1
+  variants:
+  - name: Zero
+    description: Zero.
+    value: 0
+  - name: One
+    description: One.
+    value: 1
+enum/Tpid4:
+  bit_size: 1
+  variants:
+  - name: Zero
+    description: Zero.
+    value: 0
+  - name: One
+    description: One.
+    value: 1
+enum/Tpid5:
+  bit_size: 1
+  variants:
+  - name: Zero
+    description: Zero.
+    value: 0
+  - name: One
+    description: One.
+    value: 1
+enum/Tps:
+  bit_size: 1
+  variants:
+  - name: Assert
+    description: Asserts.
+    value: 0
+  - name: Negate
+    description: Negates.
+    value: 1
+enum/Tpsf:
+  bit_size: 2
+  variants:
+  - name: Cycles8
+    description: Every 8 cycles.
+    value: 0
+  - name: Cycles32
+    description: Every 32 cycles.
+    value: 1
+  - name: Cycles128
+    description: Every 128 cycles.
+    value: 2
+  - name: Cycles512
+    description: Every 512 cycles.
+    value: 3
+enum/Tpsw:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Continuous monitoring, pin sampling disabled.
+    value: 0
+  - name: Cycles2
+    description: 2 cycles for pull enable and 1 cycle for input buffer enable.
+    value: 1
+  - name: Cycles4
+    description: 4 cycles for pull enable and 2 cycles for input buffer enable.
+    value: 2
+  - name: Cycles8
+    description: 8 cycles for pull enable and 4 cycles for input buffer enable.
+    value: 3
+enum/Tsl:
+  bit_size: 1
+  variants:
+  - name: Lock
+    description: Locked and writes are ignored.
+    value: 0
+  - name: NotLock
+    description: Not locked and writes complete as normal.
+    value: 1
+enum/Um:
+  bit_size: 1
+  variants:
+  - name: NoEffect
+    description: No effect.
+    value: 0
+  - name: ClearInts
+    description: Allows the clearing of interrupts.
+    value: 1
