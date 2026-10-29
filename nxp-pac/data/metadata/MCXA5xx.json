@@ -10709,6 +10709,8 @@
     {
       "name": "WAKETIMER0",
       "address": "0x400AE000",
+      "block": "mcx/a/a5/WAKETIMER::Waketimer",
+      "module": "WAKETIMER",
       "signals": []
     },
     {

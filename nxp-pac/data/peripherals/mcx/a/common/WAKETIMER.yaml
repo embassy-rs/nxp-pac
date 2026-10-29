@@ -1,0 +1,62 @@
+# Register-compatible across MCXA1/2/3/5. Reference manuals:
+# MCXAP64M96FS3RM Rev. 7, MCXAP100M96FS6RM Rev. 7, and
+# MCXAP100M180F41RM Rev. 2, section 30.5.1;
+# MCXAP100M180F40RM Rev. 2 and MCXAP144M240F60RM Rev. 4, section 31.5.1;
+# MCXAP144M240F61RM Rev. 2, section 30.5.1;
+# MCXAP172M240F70RM Rev. 1, section 37.5.1.
+block/Waketimer:
+  description: Wake timer. A nonzero counter write starts a one-shot countdown.
+  items:
+  - name: wake_timer_ctrl
+    description: >-
+      Wake Timer Control. WAKE_FLAG is write-one-to-clear. When modifying other
+      fields, write WAKE_FLAG as zero to avoid acknowledging a pending event.
+    byte_offset: 0
+    fieldset: WakeTimerCtrl
+  - name: wake_timer_cnt
+    description: >-
+      Wake Timer Counter. Do not write while counting is in progress. Read twice
+      in succession and repeat until the two values match because of clock domain
+      crossing. A nonzero write starts a countdown; expiry sets WAKE_FLAG and
+      stops the counter until it is reloaded.
+    byte_offset: 12
+    fieldset: WakeTimerCnt
+fieldset/WakeTimerCnt:
+  description: Wake Timer Counter.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: wake_cnt
+    description: >-
+      Current count on reads; starting count on writes. Do not write while
+      counting. Read twice in succession until both values match.
+    bit_offset: 0
+    bit_size: 32
+fieldset/WakeTimerCtrl:
+  description: Wake Timer Control. WAKE_FLAG is write-one-to-clear.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: wake_flag
+    description: >-
+      Wake Timer Status Flag. Set when the counter times out. Writing one clears
+      the flag; writing zero has no effect.
+    bit_offset: 1
+    bit_size: 1
+  - name: clr_wake_timer
+    description: >-
+      Clear Wake Timer. Writing one clears the counter and halts counting until
+      a new count is loaded. Writing zero has no effect. Always reads as zero.
+    bit_offset: 2
+    bit_size: 1
+  - name: osc_div_ena
+    description: >-
+      Enables the divide-by-16 stage for the low-frequency oscillator input.
+      Must be set for the wake timer to run. The source oscillator and its
+      output clock must also be enabled.
+    bit_offset: 4
+    bit_size: 1
+  - name: intr_en
+    description: Enables the interrupt when WAKE_FLAG is set.
+    bit_offset: 5
+    bit_size: 1

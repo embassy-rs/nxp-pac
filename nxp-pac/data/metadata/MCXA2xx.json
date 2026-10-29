@@ -9024,7 +9024,8 @@
     {
       "name": "WAKETIMER0",
       "address": "0x400AE000",
-      "block": "mcx/a/a2/WAKETIMER0",
+      "block": "mcx/a/a2/WAKETIMER::Waketimer",
+      "module": "WAKETIMER",
       "signals": []
     },
     {
