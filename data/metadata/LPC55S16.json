@@ -1,5 +1,5 @@
 {
-  "$schema": "./schema.json",
+  "$schema": "../../nxp-pac/data/metadata/schema.json",
   "$comment": "LPC55S16",
   "chips": ["LPC55S16"],
   "nvic_prio_bits": 3,

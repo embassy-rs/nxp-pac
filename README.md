@@ -4,7 +4,8 @@ This is the workspace for the nxp-pac crate and supporting utilities.
 
 ## Cloning
 
-If you want to regenerate the pac, you need to clone with `--recursive`.
+For explicit SVD import or legacy PAC regeneration, clone with `--recursive`.
+Compiling a MetaPAC device does not require the SVD submodule.
 
 If you forgot this, you can use `git submodule update --checkout --init` to fetch the submodules.
 
@@ -28,7 +29,7 @@ Because the crate is in transition, some of them use the PAC method, and some of
 | LPC55S16 | PAC |
 | LPC55S69 | PAC |
 | MCXN947 | PAC |
-| MCXA156 | PAC |
+| MCXA156 | MetaPAC |
 | MCXA175 | MetaPAC |
 | MCXA176 | MetaPAC |
 | MCXA185 | MetaPAC |
@@ -37,7 +38,7 @@ Because the crate is in transition, some of them use the PAC method, and some of
 | MCXA256 | MetaPAC |
 | MCXA265 | MetaPAC |
 | MCXA266 | MetaPAC |
-| MCXA276 | MetaPAC (engineering sample) |
+| MCXA276 | MetaPAC (MCXA266 compatibility name for existing boards) |
 | MCXA286 | MetaPAC |
 | MCXA287 | MetaPAC |
 | MCXA456 | MetaPAC |
@@ -52,15 +53,22 @@ Because the crate is in transition, some of them use the PAC method, and some of
 
 ## Tour
 
-The [`data`](/data) directory contains the SVD files, board metadata, and chiptool transformations needed to
-generate the nxp-pac crate. This data is used by the code generation tool.
+The [`data`](/data) directory contains the vendor SVD checkout, legacy metadata,
+and extraction transforms. Import is an explicit onboarding pipeline; its scratch
+output never automatically replaces curated input.
+
+The [`nxp-pac/data`](/nxp-pac/data) directory contains the authoritative MetaPAC
+chip metadata and curated peripheral YAML. Maintain these files directly. Cargo
+generates the selected device's Rust into `OUT_DIR` when the PAC is compiled,
+including as a downstream dependency. No generated MetaPAC Rust needs committing.
 
 The [`generator`](/generator) directory contains the code generation tool for generating the code in the [`nxp-pac`](/nxp-pac) crate.
 If you want change the way the [`nxp-pac`](/nxp-pac) crate is generated please see this directory.
 
 The [`nxp-pac`](/nxp-pac) directory contains the nxp-pac crate. If you are looking for a peripheral access crate for
 an NXP microcontroller, please see this directory. You should never need to manually edit the source
-code in this directory. The metadata will need to be updated to support new microcontrollers.
+code in its legacy generated chip directories. Its internal `build/` modules own
+MetaPAC generation. The metadata will need to be updated to support new microcontrollers.
 
 Curated peripheral fieldsets may specify `reset_value` to initialize their generated
 `Default` value. Fieldsets without it retain a zero default.

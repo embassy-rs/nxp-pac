@@ -2,7 +2,12 @@
 #![allow(non_camel_case_types)]
 #![doc = include_str!("../README.md")]
 
-#[cfg(feature = "pac")]
+#[cfg(all(feature = "pac", nxp_metapac))]
+mod pac {
+    include!(concat!(env!("OUT_DIR"), "/pac.rs"));
+}
+
+#[cfg(all(feature = "pac", not(nxp_metapac)))]
 // IMXRT
 #[cfg_attr(feature = "mimxrt1011", path = "./chips/mimxrt1011/mod.rs")]
 #[cfg_attr(feature = "mimxrt1062", path = "./chips/mimxrt1062/mod.rs")]
@@ -17,27 +22,6 @@
     feature = "mcxn947_cm33_core1",
     path = "./chips/mcxn947_cm33_core1/mod.rs"
 )]
-#[cfg_attr(feature = "mcxa156", path = "./chips/mcxa156/mod.rs")]
-#[cfg_attr(feature = "mcxa175", path = "./chips/mcxa175/mod.rs")]
-#[cfg_attr(feature = "mcxa176", path = "./chips/mcxa176/mod.rs")]
-#[cfg_attr(feature = "mcxa185", path = "./chips/mcxa185/mod.rs")]
-#[cfg_attr(feature = "mcxa186", path = "./chips/mcxa186/mod.rs")]
-#[cfg_attr(feature = "mcxa255", path = "./chips/mcxa255/mod.rs")]
-#[cfg_attr(feature = "mcxa256", path = "./chips/mcxa256/mod.rs")]
-#[cfg_attr(feature = "mcxa265", path = "./chips/mcxa265/mod.rs")]
-#[cfg_attr(feature = "mcxa266", path = "./chips/mcxa266/mod.rs")]
-#[cfg_attr(feature = "mcxa276", path = "./chips/mcxa276/mod.rs")]
-#[cfg_attr(feature = "mcxa286", path = "./chips/mcxa286/mod.rs")]
-#[cfg_attr(feature = "mcxa287", path = "./chips/mcxa287/mod.rs")]
-#[cfg_attr(feature = "mcxa456", path = "./chips/mcxa456/mod.rs")]
-#[cfg_attr(feature = "mcxa457", path = "./chips/mcxa457/mod.rs")]
-#[cfg_attr(feature = "mcxa536", path = "./chips/mcxa536/mod.rs")]
-#[cfg_attr(feature = "mcxa537", path = "./chips/mcxa537/mod.rs")]
-#[cfg_attr(feature = "mcxa556", path = "./chips/mcxa556/mod.rs")]
-#[cfg_attr(feature = "mcxa557", path = "./chips/mcxa557/mod.rs")]
-#[cfg_attr(feature = "mcxa566", path = "./chips/mcxa566/mod.rs")]
-#[cfg_attr(feature = "mcxa567", path = "./chips/mcxa567/mod.rs")]
-#[cfg_attr(feature = "mcxa577", path = "./chips/mcxa577/mod.rs")]
 // LPC55S16
 #[cfg_attr(feature = "lpc55s16", path = "./chips/lpc55s16/mod.rs")]
 // LPC55S69

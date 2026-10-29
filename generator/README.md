@@ -2,7 +2,7 @@
 
 ## Preparing your environment
 
-To be able to run the generator you need install locally:
+Legacy PAC regeneration requires:
 - [form](https://crates.io/crates/form) - Used to format the generated code. If you try to install this tool via your package manager (apt, zypper, etc.) you may install a different tool. Please install it from cargo, as shown below.
 
 ```bash
@@ -37,11 +37,25 @@ The SVDs can be selected from the submodule in `data/mcux-soc-svd`.
 These SVDs are transformed using definitions in [`data/transforms`](/data/transforms).
 Refer to the [chiptool](https://github.com/embassy-rs/chiptool/) project to find out how these transforms work.
 
-For metapac chips the peripheral definitions are manually curated in [`data/metadata/peripherals`](/data/metadata/peripherals). Refer to the [README](/data/metadata/peripherals/README.md) in that folder on how to update these files.
+For MetaPAC chips, authoritative peripheral definitions live in
+[`nxp-pac/data/peripherals`](/nxp-pac/data/peripherals), and chip metadata lives in
+[`nxp-pac/data/metadata`](/nxp-pac/data/metadata). Maintain these files directly.
+See the [curation guide](/nxp-pac/data/peripherals/README.md).
 
 MCXA chip metadata includes one shared family file. Chip fields replace shared fields; `only_in` filters peripherals by chip name. Nested includes are not supported.
 
-For all chips you can (re-)generate the nxp-pac code by running (replace MCXA577 with your chip).
+MetaPAC Rust is generated automatically when the PAC is compiled. The development
+command below validates the same generation engine in scratch output; it does not
+write generated files back into `nxp-pac/src`:
 ```
 cargo run -p generator -- generate MCXA577
 ```
+
+To retain inspection output, add `--out-dir <directory>`; files are grouped by
+lowercase chip name below that directory. This path uses no external formatter.
+The generation command resolves inputs independently of the current directory.
+
+The no-argument `generate` command still regenerates **legacy** sources from the
+vendor checkout and checks MetaPAC generation in scratch directories. It is not
+a read-only check. Explicit `extract <chip>` remains a separate import operation
+whose output goes to `data/metadata/peripherals/raw` by default.

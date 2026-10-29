@@ -34,6 +34,17 @@ defmt = { version = "0.3.10", optional = true }
 
 [build-dependencies]
 cfg_aliases = "0.2.1"
+anyhow = { version = "1.0.98", optional = true }
+chiptool = { git = "https://github.com/embassy-rs/chiptool.git", rev = "e5ab29fff80a7cbe271631dbf7e4233c52dd8e32", optional = true }
+indexmap = { version = "2.13.0", features = ["serde"], optional = true }
+inflections = { version = "1.1", optional = true }
+proc-macro2 = { version = "1.0.95", optional = true }
+quote = { version = "1.0.40", optional = true }
+regex = { version = "1.12", optional = true }
+serde = "1.0.228"
+serde_json = { version = "1.0.145", features = ["preserve_order"] }
+serde_yaml = { version = "=0.9.34-deprecated", optional = true }
+syn = { version = "2.0", features = ["full"], optional = true }
 
 [features]
 default = ["pac"]
@@ -42,6 +53,9 @@ pac = []
 defmt = ["dep:defmt"]
 
 metadata = []
+
+# Internal implementation detail; chip selection remains the public interface.
+_metapac = ["dep:anyhow", "dep:chiptool", "dep:indexmap", "dep:inflections", "dep:proc-macro2", "dep:quote", "dep:regex", "serde/derive", "dep:serde_yaml", "dep:syn"]
 
 #! Chip features
 
@@ -54,27 +68,28 @@ mimxrt685s_cm33 = []
 ## MCX
 mcxn947_cm33_core0 = []
 mcxn947_cm33_core1 = []
-mcxa156 = []
-mcxa175 = []
-mcxa176 = []
-mcxa185 = []
-mcxa186 = []
-mcxa255 = []
-mcxa256 = []
-mcxa265 = []
-mcxa266 = []
-mcxa276 = []
-mcxa286 = []
-mcxa287 = []
-mcxa456 = []
-mcxa457 = []
-mcxa536 = []
-mcxa537 = []
-mcxa556 = []
-mcxa557 = []
-mcxa566 = []
-mcxa567 = []
-mcxa577 = []
+mcxa156 = ["_metapac"]
+mcxa175 = ["_metapac"]
+mcxa176 = ["_metapac"]
+mcxa185 = ["_metapac"]
+mcxa186 = ["_metapac"]
+mcxa255 = ["_metapac"]
+mcxa256 = ["_metapac"]
+mcxa265 = ["_metapac"]
+mcxa266 = ["_metapac"]
+# Compatibility name for existing MCXA266-based boards; resolve in build/chips.rs.
+mcxa276 = ["_metapac"]
+mcxa286 = ["_metapac"]
+mcxa287 = ["_metapac"]
+mcxa456 = ["_metapac"]
+mcxa457 = ["_metapac"]
+mcxa536 = ["_metapac"]
+mcxa537 = ["_metapac"]
+mcxa556 = ["_metapac"]
+mcxa557 = ["_metapac"]
+mcxa566 = ["_metapac"]
+mcxa567 = ["_metapac"]
+mcxa577 = ["_metapac"]
 
 ## LPC55S16
 lpc55s16 = []

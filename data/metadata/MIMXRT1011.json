@@ -1,5 +1,5 @@
 {
-  "$schema": "./schema.json",
+  "$schema": "../../nxp-pac/data/metadata/schema.json",
   "$comment": [ "TODO: D and C difference is clock speed" ],
   "chips": [ "MIMXRT1011" ],
   "pins": [
