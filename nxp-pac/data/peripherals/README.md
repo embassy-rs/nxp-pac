@@ -7,8 +7,9 @@ before changing those definitions.
 
 ## Source hierarchy and model identities
 
-MCX-A sources live in `mcx/a/a1`, `mcx/a/a2`, and `mcx/a/a5`. Compatible definitions
-are shared from `mcx/a/common`; true subfamily-specific layouts remain local.
+MCX-A sources live in `mcx/a/a1`, `mcx/a/a2`, `mcx/a/a3`, and `mcx/a/a5`.
+Compatible definitions are shared from `mcx/a/common`; true subfamily-specific
+layouts remain local.
 Future families get their own directories when there are actual definitions to
 add, not placeholder directories or implicit fallback to another family.
 
@@ -92,6 +93,24 @@ and `isfr(1)` is rejected on single-bank devices. The flat module, instance name
 and indexed `isfr(n)` shape remain unchanged. MCXA276 is resolved to MCXA266 in the
 chip registry, rather than handled as an extended-GPIO exception. PDR register
 and fieldset storage remain explicitly 8-bit.
+
+## WAKETIMER compatibility
+
+All supported MCXA1/2/3/5 devices share `common/WAKETIMER.yaml`, with the flat
+`waketimer` module, `Waketimer` type, and `WAKETIMER0` instance. Every selection
+advertises runtime driver identity `mcxa/WAKETIMER::Waketimer`; the catalog-wide
+`META_PERIPHERALS` lists its base identity `mcxa/WAKETIMER`. This replaces the
+former family-specific identities, A2 metadata-only `mcxa/WAKETIMER0`, and A1
+`pac_only` exceptions. MCXA276 uses the same implementation as MCXA266.
+
+The timer is a one-shot down counter. Its status flag is write-one-to-clear, and
+counter reads require two consecutive matching values because of clock domain
+crossing. Stop the counter before reloading it. Source-clock setup remains the
+caller's responsibility: `OSC_DIV_ENA` alone does not enable the oscillator's
+output clock. The timer chapter's rounded "1 kHz" wording must not be interpreted
+as exactly one millisecond per tick:
+the clock chapters specify a nominal 16.384 kHz source and the timer divides it
+by 16. This PAC exposes raw counts, not a time conversion or a HAL driver.
 
 ## Build pipeline
 

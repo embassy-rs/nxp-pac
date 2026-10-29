@@ -14076,8 +14076,7 @@
       "address": "0x400AE000",
       "block": "mcx/a/a1/small/WAKETIMER::Waketimer",
       "module": "WAKETIMER",
-      "signals": [],
-      "pac_only": true
+      "signals": []
     },
     {
       "name": "ADC0",
