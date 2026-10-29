@@ -2,8 +2,8 @@
 
 These YAML files are the authoritative register and type definitions for the
 existing MetaPAC devices. They are maintained directly and reviewed, including
-manual corrections and intentional unions. See individual comments and the
-[A1 correction notes](mcx/a/a1/README.md) before changing those definitions.
+manual corrections and intentional unions. See the individual YAML comments
+before changing those definitions.
 
 ## Source hierarchy and model identities
 

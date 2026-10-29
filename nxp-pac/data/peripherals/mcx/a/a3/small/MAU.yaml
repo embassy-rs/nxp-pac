@@ -1,0 +1,682 @@
+# MCXA3: explicit pinned XML onboarding; backing widths and resets retained.
+block/Mau:
+  description: MAUWRAP.
+  items:
+  - name: sys_ctlr
+    description: System Control.
+    byte_offset: 2064
+    fieldset: SysCtlr
+  - name: gexp_status_ie
+    description: General Exception Status Interrupt Enable.
+    byte_offset: 2068
+    fieldset: GexpStatusIe
+  - name: gexp_status
+    description: General Exception Status.
+    byte_offset: 2072
+    fieldset: GexpStatus
+  - name: op_ctrl
+    description: Operation Control.
+    byte_offset: 2096
+    fieldset: OpCtrl
+  - name: res_status_ie
+    description: Result Status Interrupt Enable.
+    byte_offset: 2104
+    fieldset: ResStatusIe
+  - name: res_status
+    description: Result Status.
+    byte_offset: 2108
+    fieldset: ResStatus
+  - name: res0
+    description: Result Register 0.
+    byte_offset: 2112
+    fieldset: Res0
+  - name: res1
+    description: Result Register 1.
+    byte_offset: 2116
+    fieldset: Res1
+  - name: res2
+    description: Result Register 2.
+    byte_offset: 2120
+    fieldset: Res2
+  - name: res3
+    description: Result Register 3.
+    byte_offset: 2124
+    fieldset: Res3
+fieldset/GexpStatus:
+  description: General Exception Status.
+  fields:
+  - name: error
+    description: Direct operation Error.
+    bit_offset: 0
+    bit_size: 1
+  bit_size: 32
+  reset_value: 0
+fieldset/GexpStatusIe:
+  description: General Exception Status Interrupt Enable.
+  fields:
+  - name: error_ie
+    description: Direct operation Error Interrupt Enable.
+    bit_offset: 0
+    bit_size: 1
+  bit_size: 32
+  reset_value: 0
+fieldset/OpCtrl:
+  description: Operation Control.
+  fields:
+  - name: ovdt_en_res0
+    description: Override RES0 Data Type Enable.
+    bit_offset: 0
+    bit_size: 1
+  - name: ovdt_res0
+    description: Override RES0 Data Type.
+    bit_offset: 1
+    bit_size: 2
+    enum: OvdtRes0
+  - name: ovdt_en_res1
+    description: Override RES1 Data Type Enable.
+    bit_offset: 8
+    bit_size: 1
+  - name: ovdt_res1
+    description: Override RES1 Data Type.
+    bit_offset: 9
+    bit_size: 2
+    enum: OvdtRes1
+  - name: ovdt_en_res2
+    description: Override RES2 Data Type Enable.
+    bit_offset: 16
+    bit_size: 1
+  - name: ovdt_res2
+    description: Override RES2 Data Type.
+    bit_offset: 17
+    bit_size: 2
+    enum: OvdtRes2
+  - name: ovdt_en_res3
+    description: Override RES3 Data Type Enable.
+    bit_offset: 24
+    bit_size: 1
+  - name: ovdt_res3
+    description: Override RES3 Data Type.
+    bit_offset: 25
+    bit_size: 2
+    enum: OvdtRes3
+  bit_size: 32
+  reset_value: 0
+fieldset/Res0:
+  description: Result Register 0.
+  fields:
+  - name: mau_res0
+    description: MAUWRAP Result Register 0.
+    bit_offset: 0
+    bit_size: 32
+  bit_size: 32
+  reset_value: 0
+fieldset/Res1:
+  description: Result Register 1.
+  fields:
+  - name: mau_res1
+    description: MAUWRAP Result Register 1.
+    bit_offset: 0
+    bit_size: 32
+  bit_size: 32
+  reset_value: 0
+fieldset/Res2:
+  description: Result Register 2.
+  fields:
+  - name: mau_res2
+    description: MAUWRAP Result Register 2.
+    bit_offset: 0
+    bit_size: 32
+  bit_size: 32
+  reset_value: 0
+fieldset/Res3:
+  description: Result Register 3.
+  fields:
+  - name: mau_res3
+    description: MAUWRAP Result Register 3.
+    bit_offset: 0
+    bit_size: 32
+  bit_size: 32
+  reset_value: 0
+fieldset/ResStatus:
+  description: Result Status.
+  fields:
+  - name: res0_nx
+    description: RES0 IEEE Inexact Flag.
+    bit_offset: 0
+    bit_size: 1
+    enum: Res0Nx
+  - name: res0_uf
+    description: RES0 IEEE Underflow Flag.
+    bit_offset: 1
+    bit_size: 1
+    enum: Res0Uf
+  - name: res0_of
+    description: RES0 IEEE Overflow Flag.
+    bit_offset: 2
+    bit_size: 1
+    enum: Res0Of
+  - name: res0_dz
+    description: RES0 IEEE Divide by Zero Flag.
+    bit_offset: 3
+    bit_size: 1
+    enum: Res0Dz
+  - name: res0_nv
+    description: RES0 IEEE Invalid Flag.
+    bit_offset: 4
+    bit_size: 1
+    enum: Res0Nv
+  - name: res0_err
+    description: RES0 Indirect Operation Error Flag.
+    bit_offset: 5
+    bit_size: 1
+    enum: Res0Err
+  - name: res0_ovwr
+    description: RES0 Overwrite Flag.
+    bit_offset: 6
+    bit_size: 1
+    enum: Res0Ovwr
+  - name: res0_full
+    description: RES0 Full Flag.
+    bit_offset: 7
+    bit_size: 1
+    enum: Res0Full
+  - name: res1_nx
+    description: RES1 IEEE Inexact Flag.
+    bit_offset: 8
+    bit_size: 1
+    enum: Res1Nx
+  - name: res1_uf
+    description: RES1 IEEE Underflow Flag.
+    bit_offset: 9
+    bit_size: 1
+    enum: Res1Uf
+  - name: res1_of
+    description: RES1 IEEE Overflow Flag.
+    bit_offset: 10
+    bit_size: 1
+    enum: Res1Of
+  - name: res1_dz
+    description: RES1 IEEE Divide by Zero Flag.
+    bit_offset: 11
+    bit_size: 1
+    enum: Res1Dz
+  - name: res1_nv
+    description: RES1 IEEE Invalid Flag.
+    bit_offset: 12
+    bit_size: 1
+    enum: Res1Nv
+  - name: res1_err
+    description: RES1 Indirect Operation Error Flag.
+    bit_offset: 13
+    bit_size: 1
+    enum: Res1Err
+  - name: res1_ovwr
+    description: RES1 Overwrite Flag.
+    bit_offset: 14
+    bit_size: 1
+    enum: Res1Ovwr
+  - name: res1_full
+    description: RES1 Full Flag.
+    bit_offset: 15
+    bit_size: 1
+    enum: Res1Full
+  - name: res2_nx
+    description: RES2 IEEE Inexact Flag.
+    bit_offset: 16
+    bit_size: 1
+    enum: Res2Nx
+  - name: res2_uf
+    description: RES2 IEEE Underflow Flag.
+    bit_offset: 17
+    bit_size: 1
+    enum: Res2Uf
+  - name: res2_of
+    description: RES2 IEEE Overflow Flag.
+    bit_offset: 18
+    bit_size: 1
+    enum: Res2Of
+  - name: res2_dz
+    description: RES2 IEEE Divide by Zero Flag.
+    bit_offset: 19
+    bit_size: 1
+    enum: Res2Dz
+  - name: res2_nv
+    description: RES2 IEEE Invalid Flag.
+    bit_offset: 20
+    bit_size: 1
+    enum: Res2Nv
+  - name: res2_err
+    description: RES2 Indirect Operation Error Flag.
+    bit_offset: 21
+    bit_size: 1
+    enum: Res2Err
+  - name: res2_ovwr
+    description: RES2 Overwrite Flag.
+    bit_offset: 22
+    bit_size: 1
+    enum: Res2Ovwr
+  - name: res2_full
+    description: RES2 Full Flag.
+    bit_offset: 23
+    bit_size: 1
+    enum: Res2Full
+  - name: res3_nx
+    description: RES3 IEEE Inexact Flag.
+    bit_offset: 24
+    bit_size: 1
+    enum: Res3Nx
+  - name: res3_uf
+    description: RES3 IEEE Underflow Flag.
+    bit_offset: 25
+    bit_size: 1
+    enum: Res3Uf
+  - name: res3_of
+    description: RES3 IEEE Overflow Flag.
+    bit_offset: 26
+    bit_size: 1
+    enum: Res3Of
+  - name: res3_dz
+    description: RES3 IEEE Divide by Zero Flag.
+    bit_offset: 27
+    bit_size: 1
+    enum: Res3Dz
+  - name: res3_nv
+    description: RES3 IEEE Invalid Flag.
+    bit_offset: 28
+    bit_size: 1
+    enum: Res3Nv
+  - name: res3_err
+    description: RES3 Indirect Operation Error Flag.
+    bit_offset: 29
+    bit_size: 1
+    enum: Res3Err
+  - name: res3_ovwr
+    description: RES3 Overwrite Flag.
+    bit_offset: 30
+    bit_size: 1
+    enum: Res3Ovwr
+  - name: res3_full
+    description: RES3 Full Flag.
+    bit_offset: 31
+    bit_size: 1
+    enum: Res3Full
+  bit_size: 32
+  reset_value: 0
+fieldset/ResStatusIe:
+  description: Result Status Interrupt Enable.
+  fields:
+  - name: res0_ie
+    description: RES0 Interrupt Enable.
+    bit_offset: 0
+    bit_size: 1
+  - name: res1_ie
+    description: RES1 Interrupt Enable.
+    bit_offset: 1
+    bit_size: 1
+  - name: res2_ie
+    description: RES2 Interrupt Enable.
+    bit_offset: 2
+    bit_size: 1
+  - name: res3_ie
+    description: RES3 Interrupt Enable.
+    bit_offset: 3
+    bit_size: 1
+  bit_size: 32
+  reset_value: 0
+fieldset/SysCtlr:
+  description: System Control.
+  fields:
+  - name: acg_en
+    description: Automatic Clock Gating Enable.
+    bit_offset: 0
+    bit_size: 1
+  bit_size: 32
+  reset_value: 1
+enum/OvdtRes0:
+  bit_size: 2
+  variants:
+  - name: Uint
+    description: UINT.
+    value: 0
+  - name: Int
+    description: INT.
+    value: 1
+  - name: Q1X
+    description: Q1.X.
+    value: 2
+  - name: Float
+    description: FLOAT.
+    value: 3
+enum/OvdtRes1:
+  bit_size: 2
+  variants:
+  - name: Uint
+    description: UINT.
+    value: 0
+  - name: Int
+    description: INT.
+    value: 1
+  - name: Q1X
+    description: Q1.X.
+    value: 2
+  - name: Float
+    description: FLOAT.
+    value: 3
+enum/OvdtRes2:
+  bit_size: 2
+  variants:
+  - name: Uint
+    description: UINT.
+    value: 0
+  - name: Int
+    description: INT.
+    value: 1
+  - name: Q1X
+    description: Q1.X.
+    value: 2
+  - name: Float
+    description: FLOAT.
+    value: 3
+enum/OvdtRes3:
+  bit_size: 2
+  variants:
+  - name: Uint
+    description: UINT.
+    value: 0
+  - name: Int
+    description: INT.
+    value: 1
+  - name: Q1X
+    description: Q1.X.
+    value: 2
+  - name: Float
+    description: FLOAT.
+    value: 3
+enum/Res0Dz:
+  bit_size: 1
+  variants:
+  - name: Res0DzNo
+    description: No exact infinite result is defined for an operation on finite operands.
+    value: 0
+  - name: Res0DzYes
+    description: An exact infinite result is defined for an operation on finite operands.
+    value: 1
+enum/Res0Err:
+  bit_size: 1
+  variants:
+  - name: Res0ErrNo
+    description: No invalid indirect operation is detected.
+    value: 0
+  - name: Res0ErrYes
+    description: An invalid indirect operation error is detected.
+    value: 1
+enum/Res0Full:
+  bit_size: 1
+  variants:
+  - name: Res0FullNo
+    description: RES0 has not updated and cannot be read.
+    value: 0
+  - name: Res0FullYes
+    description: RES0 has updated and can be read.
+    value: 1
+enum/Res0Nv:
+  bit_size: 1
+  variants:
+  - name: Res0NvNo
+    description: There is usefully definable result.
+    value: 0
+  - name: Res0NvYes
+    description: There is no usefully definable result.
+    value: 1
+enum/Res0Nx:
+  bit_size: 1
+  variants:
+  - name: Res0NxNo
+    description: The result is not rounded.
+    value: 0
+  - name: Res0NxYes
+    description: The result is rounded, and as a result some digits lost.
+    value: 1
+enum/Res0Of:
+  bit_size: 1
+  variants:
+  - name: Res0OfNo
+    description: The result format's largest finite number is not exceeded.
+    value: 0
+  - name: Res0OfYes
+    description: The result format's largest finite number is exceeded.
+    value: 1
+enum/Res0Ovwr:
+  bit_size: 1
+  variants:
+  - name: Res0OvwrNo
+    description: The value of RES0 has been read.
+    value: 0
+  - name: Res0OvwrYes
+    description: The value of RES0 has not been read yet and is overwritten by a new MAUWRAP result.
+    value: 1
+enum/Res0Uf:
+  bit_size: 1
+  variants:
+  - name: Res0UfNo
+    description: No tiny non-zero result is detected.
+    value: 0
+  - name: Res0UfYes
+    description: A tiny non-zero result is detected.
+    value: 1
+enum/Res1Dz:
+  bit_size: 1
+  variants:
+  - name: Res1DzNo
+    description: No exact infinite result is defined for an operation on finite operands.
+    value: 0
+  - name: Res1DzYes
+    description: An exact infinite result is defined for an operation on finite operands.
+    value: 1
+enum/Res1Err:
+  bit_size: 1
+  variants:
+  - name: Res1ErrNo
+    description: No invalid indirect operation is detected.
+    value: 0
+  - name: Res1ErrYes
+    description: An invalid indirect operation error is detected.
+    value: 1
+enum/Res1Full:
+  bit_size: 1
+  variants:
+  - name: Res1FullNo
+    description: RES1 has not updated and cannot be read.
+    value: 0
+  - name: Res1FullYes
+    description: RES1 has updated and can be read.
+    value: 1
+enum/Res1Nv:
+  bit_size: 1
+  variants:
+  - name: Res1NvNo
+    description: There is usefully definable result.
+    value: 0
+  - name: Res1NvYes
+    description: There is no usefully definable result.
+    value: 1
+enum/Res1Nx:
+  bit_size: 1
+  variants:
+  - name: Res1NxNo
+    description: The result is not rounded.
+    value: 0
+  - name: Res1NxYes
+    description: The result is rounded, and as a result some digits lost.
+    value: 1
+enum/Res1Of:
+  bit_size: 1
+  variants:
+  - name: Res1OfNo
+    description: The result format's largest finite number is not exceeded.
+    value: 0
+  - name: Res1OfYes
+    description: The result format's largest finite number is exceeded.
+    value: 1
+enum/Res1Ovwr:
+  bit_size: 1
+  variants:
+  - name: Res1OvwrNo
+    description: The value of RES1 has been read.
+    value: 0
+  - name: Res1OvwrYes
+    description: The value of RES1 has not been read yet and is overwritten by a new MAUWRAP result.
+    value: 1
+enum/Res1Uf:
+  bit_size: 1
+  variants:
+  - name: Res1UfNo
+    description: No tiny non-zero result is detected.
+    value: 0
+  - name: Res1UfYes
+    description: A tiny non-zero result is detected.
+    value: 1
+enum/Res2Dz:
+  bit_size: 1
+  variants:
+  - name: Res2DzNo
+    description: No exact infinite result is defined for an operation on finite operands.
+    value: 0
+  - name: Res2DzYes
+    description: An exact infinite result is defined for an operation on finite operands.
+    value: 1
+enum/Res2Err:
+  bit_size: 1
+  variants:
+  - name: Res2ErrNo
+    description: No invalid indirect operation is detected.
+    value: 0
+  - name: Res2ErrYes
+    description: An invalid indirect operation error is detected.
+    value: 1
+enum/Res2Full:
+  bit_size: 1
+  variants:
+  - name: Res2FullNo
+    description: RES2 has not updated and cannot be read.
+    value: 0
+  - name: Res2FullYes
+    description: RES2 has updated and can be read.
+    value: 1
+enum/Res2Nv:
+  bit_size: 1
+  variants:
+  - name: Res2NvNo
+    description: There is usefully definable result.
+    value: 0
+  - name: Res2NvYes
+    description: There is no usefully definable result.
+    value: 1
+enum/Res2Nx:
+  bit_size: 1
+  variants:
+  - name: Res2NxNo
+    description: The result is not rounded.
+    value: 0
+  - name: Res2NxYes
+    description: The result is rounded, and as a result some digits lost.
+    value: 1
+enum/Res2Of:
+  bit_size: 1
+  variants:
+  - name: Res2OfNo
+    description: The result format's largest finite number is not exceeded.
+    value: 0
+  - name: Res2OfYes
+    description: The result format's largest finite number is exceeded.
+    value: 1
+enum/Res2Ovwr:
+  bit_size: 1
+  variants:
+  - name: Res2OvwrNo
+    description: The value of RES2 has been read.
+    value: 0
+  - name: Res2OvwrYes
+    description: The value of RES2 has not been read yet and is overwritten by a new MAUWRAP result.
+    value: 1
+enum/Res2Uf:
+  bit_size: 1
+  variants:
+  - name: Res2UfNo
+    description: No tiny non-zero result is detected.
+    value: 0
+  - name: Res2UfYes
+    description: A tiny non-zero result is detected.
+    value: 1
+enum/Res3Dz:
+  bit_size: 1
+  variants:
+  - name: Res3DzNo
+    description: No exact infinite result is defined for an operation on finite operands.
+    value: 0
+  - name: Res3DzYes
+    description: An exact infinite result is defined for an operation on finite operands.
+    value: 1
+enum/Res3Err:
+  bit_size: 1
+  variants:
+  - name: Res3ErrNo
+    description: No invalid indirect operation is detected.
+    value: 0
+  - name: Res3ErrYes
+    description: An invalid indirect operation error is detected.
+    value: 1
+enum/Res3Full:
+  bit_size: 1
+  variants:
+  - name: Res3FullNo
+    description: RES3 has not updated and cannot be read.
+    value: 0
+  - name: Res3FullYes
+    description: RES3 has updated and can be read.
+    value: 1
+enum/Res3Nv:
+  bit_size: 1
+  variants:
+  - name: Res3NvNo
+    description: There is usefully definable result.
+    value: 0
+  - name: Res3NvYes
+    description: There is no usefully definable result.
+    value: 1
+enum/Res3Nx:
+  bit_size: 1
+  variants:
+  - name: Res3NxNo
+    description: The result is not rounded.
+    value: 0
+  - name: Res3NxYes
+    description: The result is rounded, and as a result some digits lost.
+    value: 1
+enum/Res3Of:
+  bit_size: 1
+  variants:
+  - name: Res3OfNo
+    description: The result format's largest finite number is not exceeded.
+    value: 0
+  - name: Res3OfYes
+    description: The result format's largest finite number is exceeded.
+    value: 1
+enum/Res3Ovwr:
+  bit_size: 1
+  variants:
+  - name: Res3OvwrNo
+    description: The value of RES3 has been read.
+    value: 0
+  - name: Res3OvwrYes
+    description: The value of RES3 has not been read yet and is overwritten by a new MAUWRAP result.
+    value: 1
+enum/Res3Uf:
+  bit_size: 1
+  variants:
+  - name: Res3UfNo
+    description: No tiny non-zero result is detected.
+    value: 0
+  - name: Res3UfYes
+    description: A tiny non-zero result is detected.
+    value: 1

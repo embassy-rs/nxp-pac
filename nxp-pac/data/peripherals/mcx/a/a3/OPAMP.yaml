@@ -1,0 +1,93 @@
+# MCXA3: explicit pinned XML onboarding; backing widths and resets retained.
+block/Opamp:
+  description: OPAMP.
+  items:
+  - name: verid
+    description: Version ID.
+    byte_offset: 0
+    access: Read
+    fieldset: Verid
+  - name: param
+    description: Parameter.
+    byte_offset: 4
+    access: Read
+    fieldset: Param
+  - name: opamp_ctrl
+    description: OPAMP Control.
+    byte_offset: 8
+    fieldset: OpampCtrl
+fieldset/OpampCtrl:
+  description: OPAMP Control.
+  fields:
+  - name: opa_en
+    description: OPAMP Enable.
+    bit_offset: 0
+    bit_size: 1
+  - name: opa_cc_sel
+    description: Compensation capcitor config selection.
+    bit_offset: 4
+    bit_size: 2
+    enum: OpaCcSel
+  - name: opa_bc_sel
+    description: Bias current config selection.
+    bit_offset: 6
+    bit_size: 2
+    enum: OpaBcSel
+  bit_size: 32
+  reset_value: 0
+fieldset/Param:
+  description: Parameter.
+  fields:
+  - name: param
+    description: Parameters.
+    bit_offset: 0
+    bit_size: 32
+  bit_size: 32
+  reset_value: 0
+fieldset/Verid:
+  description: Version ID.
+  fields:
+  - name: feature
+    description: Feature Specification Number.
+    bit_offset: 0
+    bit_size: 16
+  - name: minor
+    description: Minor Version Number.
+    bit_offset: 16
+    bit_size: 8
+  - name: major
+    description: Major Version Number.
+    bit_offset: 24
+    bit_size: 8
+  bit_size: 32
+  reset_value: 0
+enum/OpaBcSel:
+  bit_size: 2
+  variants:
+  - name: Tbd1
+    description: Default value. Keep power consumption constant.
+    value: 0
+  - name: Tbd2
+    description: Reduce power consumption to 1/4.
+    value: 1
+  - name: Tbd3
+    description: Reduce power consumption to 1/2.
+    value: 2
+  - name: Tbd4
+    description: Increase power consumption to 3/2.
+    value: 3
+enum/OpaCcSel:
+  bit_size: 2
+  variants:
+  - name: Tbd1
+    description: Fit 2X gains.
+    value: 0
+  - name: Tbd2
+    description: Fit 4X gains.
+    value: 1
+  - name: Tbd3
+    description: Fit 8X gains.
+    value: 2
+  - name: Tbd4
+    description: Fit 16X gains.
+    value: 3

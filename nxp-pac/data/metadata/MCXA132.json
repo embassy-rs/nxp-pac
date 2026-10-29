@@ -1,0 +1,192 @@
+{
+  "$schema": "./schema.json",
+  "include": "MCXA13x_15x",
+  "chips": [
+    "MCXA132",
+    "MCXA132VFM",
+    "MCXA132VFT",
+    "MCXA132VLF"
+  ],
+  "pins": [
+    {
+      "name": "P0_0"
+    },
+    {
+      "name": "P0_1"
+    },
+    {
+      "name": "P0_16"
+    },
+    {
+      "name": "P0_17"
+    },
+    {
+      "name": "P0_2"
+    },
+    {
+      "name": "P0_3"
+    },
+    {
+      "name": "P0_6"
+    },
+    {
+      "name": "P1_0"
+    },
+    {
+      "name": "P1_1"
+    },
+    {
+      "name": "P1_10"
+    },
+    {
+      "name": "P1_11"
+    },
+    {
+      "name": "P1_2"
+    },
+    {
+      "name": "P1_29"
+    },
+    {
+      "name": "P1_3"
+    },
+    {
+      "name": "P1_30"
+    },
+    {
+      "name": "P1_31"
+    },
+    {
+      "name": "P1_8"
+    },
+    {
+      "name": "P1_9"
+    },
+    {
+      "name": "P2_0"
+    },
+    {
+      "name": "P2_1"
+    },
+    {
+      "name": "P2_12"
+    },
+    {
+      "name": "P2_13"
+    },
+    {
+      "name": "P2_16"
+    },
+    {
+      "name": "P2_17"
+    },
+    {
+      "name": "P2_2"
+    },
+    {
+      "name": "P2_20"
+    },
+    {
+      "name": "P2_21"
+    },
+    {
+      "name": "P2_3"
+    },
+    {
+      "name": "P2_6"
+    },
+    {
+      "name": "P2_7"
+    },
+    {
+      "name": "P3_0"
+    },
+    {
+      "name": "P3_1"
+    },
+    {
+      "name": "P3_10"
+    },
+    {
+      "name": "P3_11"
+    },
+    {
+      "name": "P3_12"
+    },
+    {
+      "name": "P3_13"
+    },
+    {
+      "name": "P3_14"
+    },
+    {
+      "name": "P3_27"
+    },
+    {
+      "name": "P3_28"
+    },
+    {
+      "name": "P3_29"
+    },
+    {
+      "name": "P3_30"
+    },
+    {
+      "name": "P3_31"
+    },
+    {
+      "name": "P3_8"
+    },
+    {
+      "name": "P3_9"
+    }
+  ],
+  "interrupts": {
+    "CMC": 1,
+    "DMA_CH0": 2,
+    "DMA_CH1": 3,
+    "DMA_CH2": 4,
+    "DMA_CH3": 5,
+    "ERM0_SINGLE_BIT": 10,
+    "ERM0_MULTI_BIT": 11,
+    "FMU0": 12,
+    "GLIKEY0": 13,
+    "MBC0": 14,
+    "SCG0": 15,
+    "SPC0": 16,
+    "WUU0": 18,
+    "I3C0": 24,
+    "LPI2C0": 26,
+    "LPSPI0": 28,
+    "LPSPI1": 29,
+    "LPUART0": 31,
+    "LPUART1": 32,
+    "LPUART2": 33,
+    "CDOG0": 38,
+    "CTIMER0": 39,
+    "CTIMER1": 40,
+    "CTIMER2": 41,
+    "FLEXPWM0_RELOAD_ERROR": 44,
+    "FLEXPWM0_FAULT": 45,
+    "FLEXPWM0_SUBMODULE0": 46,
+    "FLEXPWM0_SUBMODULE1": 47,
+    "FLEXPWM0_SUBMODULE2": 48,
+    "QDC0_COMPARE": 50,
+    "QDC0_HOME": 51,
+    "QDC0_WATCHDOG": 52,
+    "QDC0_INDEX": 53,
+    "FREQME0": 54,
+    "LPTMR0": 55,
+    "OS_EVENT": 57,
+    "WAKETIMER0": 58,
+    "UTICK0": 59,
+    "WWDT0": 60,
+    "ADC0": 62,
+    "CMP0": 64,
+    "CMP1": 65,
+    "GPIO0": 71,
+    "GPIO1": 72,
+    "GPIO2": 73,
+    "GPIO3": 74
+  }
+}

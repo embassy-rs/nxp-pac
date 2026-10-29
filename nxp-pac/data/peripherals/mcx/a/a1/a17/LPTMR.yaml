@@ -1,0 +1,3 @@
+# A17 XML register/field/enum structure matches curated A1; all reset values zero.
+includes:
+  - ../LPTMR.yaml

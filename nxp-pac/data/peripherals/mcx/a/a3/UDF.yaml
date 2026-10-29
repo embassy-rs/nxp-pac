@@ -1,0 +1,114 @@
+# MCXA3: explicit pinned XML onboarding; backing widths and resets retained.
+block/Udf:
+  description: no description available.
+  items:
+  - name: udf_ctrl
+    description: Control register.
+    byte_offset: 0
+    fieldset: UdfCtrl
+  - name: udf_status
+    description: Status register.
+    byte_offset: 4
+    access: Read
+    fieldset: UdfStatus
+  - name: udf_wr_data
+    description: Data In Register.
+    byte_offset: 8
+    access: Write
+    fieldset: UdfWrData
+  - name: udf_rd_data
+    description: Data Out Register.
+    byte_offset: 12
+    access: Read
+    fieldset: UdfRdData
+fieldset/UdfCtrl:
+  description: Control register.
+  fields:
+  - name: salt
+    description: Bits are internally XORed with i_custom.
+    bit_offset: 0
+    bit_size: 16
+  - name: lock
+    description: Lock access to UDF.
+    bit_offset: 16
+    bit_size: 3
+  - name: reserved21
+    description: RFU.
+    bit_offset: 19
+    bit_size: 3
+  - name: udf_en
+    description: Enable the UDF block.
+    bit_offset: 22
+    bit_size: 3
+  - name: reserved25
+    description: RFU.
+    bit_offset: 25
+    bit_size: 1
+  - name: reserved27
+    description: RFU.
+    bit_offset: 26
+    bit_size: 2
+  - name: flush
+    description: Flush UDF and return to reset state.
+    bit_offset: 28
+    bit_size: 3
+  - name: reserved31
+    description: reserved.
+    bit_offset: 31
+    bit_size: 1
+  bit_size: 32
+  reset_value: 8388608
+fieldset/UdfRdData:
+  description: Data Out Register.
+  fields:
+  - name: o_dat
+    description: no description available.
+    bit_offset: 0
+    bit_size: 32
+  bit_size: 32
+  reset_value: 0
+fieldset/UdfStatus:
+  description: Status register.
+  fields:
+  - name: o_status
+    description: Status bits.
+    bit_offset: 0
+    bit_size: 5
+    enum: OStatus
+  - name: rsv
+    description: RFU.
+    bit_offset: 5
+    bit_size: 26
+  - name: o_wait
+    description: Indicates UDF is processing data.
+    bit_offset: 31
+    bit_size: 1
+  bit_size: 32
+  reset_value: 1
+fieldset/UdfWrData:
+  description: Data In Register.
+  fields:
+  - name: i_dat
+    description: no description available.
+    bit_offset: 0
+    bit_size: 32
+  bit_size: 32
+  reset_value: 0
+enum/OStatus:
+  bit_size: 5
+  variants:
+  - name: Reset
+    description: 5'b00001 = Reset.
+    value: 1
+  - name: Init
+    description: 5'b00010 = Init.
+    value: 2
+  - name: Warmup
+    description: 5'b00100 = Warmup.
+    value: 4
+  - name: Ready
+    description: 5'b01000 = Ready.
+    value: 8
+  - name: Error
+    description: 5'b10000 = Error.
+    value: 16

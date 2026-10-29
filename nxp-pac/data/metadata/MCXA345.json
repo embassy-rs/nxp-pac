@@ -1,0 +1,11 @@
+{
+  "$schema": "./schema.json",
+  "include": "MCXA345_356",
+  "chips": [
+    "MCXA345",
+    "MCXA345VPN",
+    "MCXA345VLQ",
+    "MCXA345VLL",
+    "MCXA345VLH"
+  ]
+}

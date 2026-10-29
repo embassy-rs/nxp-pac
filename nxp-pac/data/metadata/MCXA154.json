@@ -1,0 +1,13 @@
+{
+  "$schema": "./schema.json",
+  "$comment": "MCXAP100M96FS6RM Rev. 7; MCXAP100M096F60 Rev. 10, Tables 1 and 4. A154 shares A156 peripheral instances, register models, interrupts and pin muxing; flash/SRAM capacities are 256/64 KB. Pins are the device-level package union, not a single-package bondout.",
+  "include": "MCXA156",
+  "chips": [
+    "MCXA154",
+    "MCXA154VFT",
+    "MCXA154VLH",
+    "MCXA154VLL",
+    "MCXA154VMP",
+    "MCXA154VPJ"
+  ]
+}
