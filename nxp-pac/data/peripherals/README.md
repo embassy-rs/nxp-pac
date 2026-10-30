@@ -156,6 +156,22 @@ do not describe its registers, and the A5 XML assigns overlapping, unaligned
 offsets to 32-bit UDF registers. Existing A3 definitions are unchanged; XML
 presence alone is not confirmation of customer-visible hardware support.
 
+A2 additionally models TDET0, EQDC, SLCD, MBC, and PKC0; A5 models TDET,
+FLEXIO, MBC, PKC, ITRC, GDET, SECCON, and USBDCD. These follow the same F61
+and F70 manuals, including the F61 security reference manual. EQDC accesses
+are 16-bit, and SLCD preserves its overlapping byte/word waveform views.
+PKC exposes each family's documented map: the A5 map does not establish
+MCDATA, VERSION, or MODULE_ID registers. Reserved or undocumented addresses
+must not be probed to infer additional coverage.
+
+Protection models describe access and reset restrictions; they do not implement
+unlock sequences or enforce per-field permissions. Contradictory TDET reset
+descriptions, lower-A2 TDET routing, A5 NSE semantics, unknown SECCON reset
+values, and ambiguous ITRC IN39 remain explicit source limitations. IN39 is
+not exposed. USBDCD follows the existing nine-part USB1 availability predicate;
+MCXA536/537 applicability remains unresolved, not proven absent. Aliased
+USBDCD timer defaults describe their respective modes, not independent storage.
+
 ## Build pipeline
 
 Selecting a chip feature compiles its PAC from packaged metadata and the required

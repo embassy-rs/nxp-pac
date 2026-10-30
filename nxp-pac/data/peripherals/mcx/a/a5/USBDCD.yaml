@@ -1,0 +1,204 @@
+# MCXAP172M240F70RM Rev. 1, section 43.6.
+# BC1.1/BC1.2 timer views intentionally overlap at0x18 with different defaults.
+# Instance availability conservatively follows the existing nine USB1-enabled profiles.
+# Applicability on MCXA536/537 remains unresolved; exclusion is not proof of physical absence.
+block/Usbdcd:
+  description: USB charger detection. Reset in software before every START. Configure before START; later reconfiguration is undefined and BC12 must not change after starting. Software reset preserves configuration. Timeout does not stop detection.
+  items:
+  - name: control
+    byte_offset: 0
+    fieldset: Control
+  - name: clock
+    byte_offset: 4
+    fieldset: Clock
+  - name: status
+    byte_offset: 8
+    fieldset: Status
+    access: Read
+  - name: signal_override
+    byte_offset: 12
+    fieldset: SignalOverride
+  - name: timer0
+    byte_offset: 16
+    fieldset: Timer0
+  - name: timer1
+    byte_offset: 20
+    fieldset: Timer1
+  - name: timer2_bc11
+    byte_offset: 24
+    fieldset: Timer2Bc11
+    description: Mode-specific alias at offset0x18. Select the matching BC mode. The two view defaults are not simultaneous observations; changing BC12 is not documented to install the other default.
+  - name: timer2_bc12
+    byte_offset: 24
+    fieldset: Timer2Bc12
+    description: Mode-specific alias at offset0x18. Select the matching BC mode. The two view defaults are not simultaneous observations; changing BC12 is not documented to install the other default.
+fieldset/Control:
+  bit_size: 32
+  reset_value: 196608
+  fields:
+  - name: iack
+    bit_offset: 0
+    bit_size: 1
+    description: Write one to acknowledge IF. Self-clearing.
+  - name: if_
+    bit_offset: 8
+    bit_size: 1
+    description: Read-only interrupt flag. Writes ignored; acknowledge with IACK.
+  - name: ie
+    bit_offset: 16
+    bit_size: 1
+  - name: bc12
+    bit_offset: 17
+    bit_size: 1
+    description: One selects BC1.2, zero BC1.1. Must not change after detection starts.
+  - name: start
+    bit_offset: 24
+    bit_size: 1
+    description: Start detection after software reset and configuration. Writes of zero or writes during an active sequence have no effect.
+  - name: sr
+    bit_offset: 25
+    bit_size: 1
+    description: Software reset command; self-clearing. Configuration is preserved.
+fieldset/Clock:
+  bit_size: 32
+  reset_value: 193
+  fields:
+  - name: clock_unit
+    bit_offset: 0
+    bit_size: 1
+    enum: ClockUnit
+  - name: clock_speed
+    bit_offset: 2
+    bit_size: 10
+    description: Clock speed:1..1023MHz or4..1023kHz, according to CLOCK_UNIT.
+fieldset/Status:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: seq_res
+    bit_offset: 16
+    bit_size: 2
+    description: Result2 means a charging port; CDP/DCP interpretation depends on sequence status. The prose status values conflict with Table443; do not decode2 unconditionally as CDP.
+    enum: SequenceResult
+  - name: seq_stat
+    bit_offset: 18
+    bit_size: 2
+    enum: SequenceStatus
+  - name: err
+    bit_offset: 20
+    bit_size: 1
+  - name: to
+    bit_offset: 21
+    bit_size: 1
+    description: Timeout does not stop the sequence; assess ERR and sequence state.
+  - name: active
+    bit_offset: 22
+    bit_size: 1
+fieldset/SignalOverride:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: ps
+    bit_offset: 0
+    bit_size: 3
+    description: Must remain zero for normal USB communication. Only encodings0,2,4 are customer-supported.
+    enum: OverrideMode
+fieldset/Timer0:
+  bit_size: 32
+  reset_value: 1048576
+  fields:
+  - name: tunitcon
+    bit_offset: 0
+    bit_size: 12
+    description: Read-only connection timer, milliseconds, saturates4095.
+  - name: tseq_init
+    bit_offset: 16
+    bit_size: 10
+    description: Initial delay0..1023ms; the total sequence must not exceed one second.
+fieldset/Timer1:
+  bit_size: 32
+  reset_value: 655400
+  fields:
+  - name: tvdpsrc_on
+    bit_offset: 0
+    bit_size: 10
+    description: Valid1..1023ms; USB BC minimum40ms.
+  - name: tdcd_dbnc
+    bit_offset: 16
+    bit_size: 10
+    description: Valid1..1023ms; USB BC minimum10ms.
+fieldset/Timer2Bc11:
+  bit_size: 32
+  reset_value: 2621441
+  fields:
+  - name: check_dm
+    bit_offset: 0
+    bit_size: 4
+    description: Valid1..15.
+  - name: tvdpsrc_con
+    bit_offset: 16
+    bit_size: 10
+    description: Valid1..1023ms; USB BC minimum40ms.
+fieldset/Timer2Bc12:
+  bit_size: 32
+  reset_value: 65576
+  fields:
+  - name: tvdmsrc_on
+    bit_offset: 0
+    bit_size: 10
+    description: Valid0..40ms, not every representable ten-bit value.
+  - name: twait_after_prd
+    bit_offset: 16
+    bit_size: 10
+    description: Valid1..1023ms.
+enum/ClockUnit:
+  bit_size: 1
+  variants:
+  - name: Kilohertz
+    value: 0
+    description: kHz,4..1023.
+  - name: Megahertz
+    value: 1
+    description: MHz,1..1023.
+enum/SequenceResult:
+  bit_size: 2
+  variants:
+  - name: None
+    value: 0
+    description: No result.
+  - name: Sdp
+    value: 1
+    description: Standard downstream port; current remains constrained until USB connection.
+  - name: ChargingPort
+    value: 2
+    description: Charging port. Depends on sequence completion; not unconditionally CDP.
+  - name: Dcp
+    value: 3
+    description: Dedicated charging port.
+enum/SequenceStatus:
+  bit_size: 2
+  variants:
+  - name: NotDetected
+    value: 0
+    description: Not enabled or contact not yet detected.
+  - name: ContactComplete
+    value: 1
+    description: Data pin contact detection complete.
+  - name: PrimaryComplete
+    value: 2
+    description: Charging port detection complete.
+  - name: TypeComplete
+    value: 3
+    description: Charger type detection complete.
+enum/OverrideMode:
+  bit_size: 3
+  variants:
+  - name: None
+    value: 0
+    description: No overrides, required during normal USB communication.
+  - name: VdpSourceDmSink
+    value: 2
+    description: Enable VDP_SRC and IDM_SINK.
+  - name: VdmSource
+    value: 4
+    description: Enable VDM_SRC only.

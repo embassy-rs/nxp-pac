@@ -3758,7 +3758,8 @@
     {
       "name": "DGDET0",
       "address": "0x400E5000",
-      "signals": []
+      "signals": [],
+      "block": "mcx/a/a5/GDET"
     },
     {
       "name": "DBGMAILBOX",
@@ -4699,7 +4700,8 @@
           "mux": "DMA3",
           "request": 74
         }
-      ]
+      ],
+      "block": "mcx/a/a5/FLEXIO"
     },
     {
       "name": "FLEXSPI0",
@@ -6564,7 +6566,8 @@
     {
       "name": "ITRC0",
       "address": "0x400E7000",
-      "signals": []
+      "signals": [],
+      "block": "mcx/a/a5/ITRC"
     },
     {
       "name": "LPI2C0",
@@ -8447,7 +8450,8 @@
     {
       "name": "MBC0",
       "address": "0x400C9000",
-      "signals": []
+      "signals": [],
+      "block": "mcx/a/a5/MBC"
     },
     {
       "name": "OSTIMER0",
@@ -8585,7 +8589,8 @@
     {
       "name": "PKC0",
       "address": "0x40012000",
-      "signals": []
+      "signals": [],
+      "block": "mcx/a/a5/PKC"
     },
     {
       "name": "PORT0",
@@ -9345,7 +9350,8 @@
             }
           ]
         }
-      ]
+      ],
+      "block": "mcx/a/a5/TDET"
     },
     {
       "name": "TRIG",
@@ -11167,13 +11173,21 @@
     {
       "name": "seccon",
       "address": "0x400EA000",
-      "signals": []
+      "signals": [],
+      "block": "mcx/a/a5/SECCON"
     },
     {
       "name": "MRCC0",
       "address": "0x40091800",
       "block": "mcx/a/a5/MRCC::MRCC",
       "module": "MRCC",
+      "signals": []
+    },
+    {
+      "name": "USBHS1_PHY_DCD",
+      "address": "0x4002F800",
+      "block": "mcx/a/a5/USBDCD",
+      "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "signals": []
     }
   ]

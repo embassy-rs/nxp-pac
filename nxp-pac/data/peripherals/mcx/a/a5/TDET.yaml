@@ -1,0 +1,1626 @@
+# MCXAP172M240F70RM Rev. 1, chapter69.
+block/Tdet:
+  items:
+  - name: cr
+    byte_offset: 16
+    fieldset: Cr
+  - name: sr
+    byte_offset: 20
+    fieldset: Sr
+    description: Conditional W1C flags. Clear pin flags only after expected pin/filter state returns; internal flags only after source negates. Clear enabled tamper-input flags before DTF; DTF also requires TAF set. TAF clears by software only with DTF clear. Table reset conflicts with VBAT/software-reset prose.
+  - name: lr
+    byte_offset: 24
+    fieldset: Lr
+    description: Clearing lock bits blocks writes until VBAT POR or TDET software reset. Locked writes are ignored without bus error. Locking CR disables software reset; locking LR prevents future lock updates.
+  - name: ier
+    byte_offset: 28
+    fieldset: Ier
+  - name: tsr
+    byte_offset: 32
+    fieldset: Tsr
+    description: Reads the captured timestamp (zero when DTF is clear). Any write is tampering and sets DTF; not an ordinary writable clock value.
+  - name: ter
+    byte_offset: 36
+    fieldset: Ter
+  - name: ppr
+    byte_offset: 44
+    fieldset: Ppr
+  - name: pgfr
+    byte_offset: 64
+    fieldset: Pgfr
+    array:
+      len: 8
+      stride: 4
+  - name: wac
+    byte_offset: 2048
+    fieldset: Wac
+    description: 'One-way access control: clearing a bit blocks access until chip reset. VBAT POR and TDET software reset do not restore these controls.'
+  - name: rac
+    byte_offset: 2052
+    fieldset: Rac
+    description: 'One-way access control: clearing a bit blocks access until chip reset. VBAT POR and TDET software reset do not restore these controls. Blocked reads return zero without a bus error.'
+  description: Digital tamper. Word writes only. TSR writes create tamper events. SR table defaults contradict the reset-condition prose and are not confirmed post-reset observations. No device operations are performed by this model.
+enum/CrSwr:
+  bit_size: 1
+  variants:
+  - name: NoEffect
+    description: No effect
+    value: 0
+  - name: SwReset
+    description: Perform a software reset
+    value: 1
+enum/CrDen:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables TDET clock and prescaler
+    value: 0
+  - name: Enable
+    description: Enables TDET clock and prescaler
+    value: 1
+enum/CrTfsr:
+  bit_size: 1
+  variants:
+  - name: NoReset
+    description: Do not force chip reset
+    value: 0
+  - name: Reset
+    description: Force chip reset
+    value: 1
+enum/CrUm:
+  bit_size: 1
+  variants:
+  - name: NoEffect
+    description: No effect
+    value: 0
+  - name: ClearInts
+    description: Allows the clearing of interrupts
+    value: 1
+enum/CrDistam:
+  bit_size: 1
+  variants:
+  - name: NoEffect
+    description: No effect
+    value: 0
+  - name: AutoDis
+    description: Automatically disables the prescaler after tamper detection
+    value: 1
+fieldset/Cr:
+  description: Control
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: swr
+    description: 'Software reset is not self-clearing: it must be released by writing zero. Locking CR disables software reset. No reset operation is performed by this model.'
+    bit_offset: 0
+    bit_size: 1
+    enum: CrSwr
+  - name: den
+    description: Enable before enabling any glitch filter; disable only after disabling all filters.
+    bit_offset: 1
+    bit_size: 1
+    enum: CrDen
+  - name: tfsr
+    description: Tamper Force System Reset
+    bit_offset: 2
+    bit_size: 1
+    enum: CrTfsr
+  - name: um
+    description: Permits clearing locked SR tamper flags only while DTF=0 and only for sources enabled for interrupt (IER=1) with corresponding tamper enable clear (TER=0).
+    bit_offset: 3
+    bit_size: 1
+    enum: CrUm
+  - name: distam
+    description: Disable Prescaler On Tamper
+    bit_offset: 8
+    bit_size: 1
+    enum: CrDistam
+  - name: dpr
+    description: Prescaler initial/current value. Writes require DEN=0.
+    bit_offset: 17
+    bit_size: 15
+enum/SrDtf:
+  bit_size: 1
+  variants:
+  - name: NoDet
+    description: TDET tampering not detected
+    value: 0
+  - name: Det
+    description: TDET tampering detected
+    value: 1
+enum/SrTaf:
+  bit_size: 1
+  variants:
+  - name: NotOccur
+    description: Digital Tamper Flag (SR[DTF]) is clear or chip reset has not occurred after Digital Tamper Flag (SR[DTF]) was set.
+    value: 0
+  - name: Occur
+    description: Chip reset has occurred after Digital Tamper Flag (SR[DTF]) was set.
+    value: 1
+enum/SrTif0:
+  bit_size: 1
+  variants:
+  - name: NoDet
+    description: On-chip tamper not detected
+    value: 0
+  - name: Det
+    description: On-chip tamper detected
+    value: 1
+enum/SrTif6:
+  bit_size: 1
+  variants:
+  - name: NoDet
+    description: On-chip tamper not detected
+    value: 0
+  - name: Det
+    description: On-chip tamper detected
+    value: 1
+enum/SrTif10:
+  bit_size: 1
+  variants:
+  - name: NoDet
+    description: On-chip tamper not detected
+    value: 0
+  - name: Det
+    description: On-chip tamper detected
+    value: 1
+enum/SrTpf0:
+  bit_size: 1
+  variants:
+  - name: NoDet
+    description: Pin tamper not detected
+    value: 0
+  - name: Det
+    description: Pin tamper detected
+    value: 1
+enum/SrTpf1:
+  bit_size: 1
+  variants:
+  - name: NoDet
+    description: Pin tamper not detected
+    value: 0
+  - name: Det
+    description: Pin tamper detected
+    value: 1
+enum/SrTpf2:
+  bit_size: 1
+  variants:
+  - name: NoDet
+    description: Pin tamper not detected
+    value: 0
+  - name: Det
+    description: Pin tamper detected
+    value: 1
+enum/SrTpf3:
+  bit_size: 1
+  variants:
+  - name: NoDet
+    description: Pin tamper not detected
+    value: 0
+  - name: Det
+    description: Pin tamper detected
+    value: 1
+enum/SrTpf4:
+  bit_size: 1
+  variants:
+  - name: NoDet
+    description: Pin tamper not detected
+    value: 0
+  - name: Det
+    description: Pin tamper detected
+    value: 1
+enum/SrTpf5:
+  bit_size: 1
+  variants:
+  - name: NoDet
+    description: Pin tamper not detected
+    value: 0
+  - name: Det
+    description: Pin tamper detected
+    value: 1
+enum/SrTpf6:
+  bit_size: 1
+  variants:
+  - name: NoDet
+    description: Pin tamper not detected
+    value: 0
+  - name: Det
+    description: Pin tamper detected
+    value: 1
+enum/SrTpf7:
+  bit_size: 1
+  variants:
+  - name: NoDet
+    description: Pin tamper not detected
+    value: 0
+  - name: Det
+    description: Pin tamper detected
+    value: 1
+fieldset/Sr:
+  description: Status
+  bit_size: 32
+  reset_value: 2
+  fields:
+  - name: dtf
+    description: Tamper flag. Conditional W1C only when TAF=1. Reset-condition prose says set on VBAT/software reset, conflicting with table defaults.
+    bit_offset: 0
+    bit_size: 1
+    enum: SrDtf
+  - name: taf
+    description: Tamper acknowledged by chip reset. Software may W1C only while DTF=0. Reset-condition prose and table disagree.
+    bit_offset: 1
+    bit_size: 1
+    enum: SrTaf
+  - name: tif0
+    description: Tamper Input n Flag W1C only after the originating source negates.
+    bit_offset: 2
+    bit_size: 1
+    enum: SrTif0
+  - name: tif6
+    description: Tamper Input n Flag W1C only after the originating source negates.
+    bit_offset: 8
+    bit_size: 1
+    enum: SrTif6
+  - name: tif10
+    description: Tamper Input n Flag W1C only after the originating source negates.
+    bit_offset: 12
+    bit_size: 1
+    enum: SrTif10
+  - name: tpf0
+    description: Tamper Pin n Flag W1C only after pin equals expected level and filter output updates.
+    bit_offset: 16
+    bit_size: 1
+    enum: SrTpf0
+  - name: tpf1
+    description: Tamper Pin n Flag W1C only after pin equals expected level and filter output updates.
+    bit_offset: 17
+    bit_size: 1
+    enum: SrTpf1
+  - name: tpf2
+    description: Tamper Pin n Flag W1C only after pin equals expected level and filter output updates.
+    bit_offset: 18
+    bit_size: 1
+    enum: SrTpf2
+  - name: tpf3
+    description: Tamper Pin n Flag W1C only after pin equals expected level and filter output updates.
+    bit_offset: 19
+    bit_size: 1
+    enum: SrTpf3
+  - name: tpf4
+    description: Tamper Pin n Flag W1C only after pin equals expected level and filter output updates.
+    bit_offset: 20
+    bit_size: 1
+    enum: SrTpf4
+  - name: tpf5
+    description: Tamper Pin n Flag W1C only after pin equals expected level and filter output updates.
+    bit_offset: 21
+    bit_size: 1
+    enum: SrTpf5
+  - name: tpf6
+    description: Tamper Pin n Flag W1C only after pin equals expected level and filter output updates.
+    bit_offset: 22
+    bit_size: 1
+    enum: SrTpf6
+  - name: tpf7
+    description: Tamper Pin n Flag W1C only after pin equals expected level and filter output updates.
+    bit_offset: 23
+    bit_size: 1
+    enum: SrTpf7
+enum/LrCrl:
+  bit_size: 1
+  variants:
+  - name: Lock
+    description: Locked and writes are ignored
+    value: 0
+  - name: NotLock
+    description: Not locked and writes complete as normal
+    value: 1
+enum/LrSrl:
+  bit_size: 1
+  variants:
+  - name: Lock
+    description: Locked and writes are ignored
+    value: 0
+  - name: NotLock
+    description: Not locked and writes complete as normal
+    value: 1
+enum/LrLrl:
+  bit_size: 1
+  variants:
+  - name: Lock
+    description: Locked and writes are ignored
+    value: 0
+  - name: NotLock
+    description: Not locked and writes complete as normal
+    value: 1
+enum/LrIel:
+  bit_size: 1
+  variants:
+  - name: Lock
+    description: Locked and writes are ignored
+    value: 0
+  - name: NotLock
+    description: Not locked and writes complete as normal
+    value: 1
+enum/LrTsl:
+  bit_size: 1
+  variants:
+  - name: Lock
+    description: Locked and writes are ignored
+    value: 0
+  - name: NotLock
+    description: Not locked and writes complete as normal
+    value: 1
+enum/LrTel:
+  bit_size: 1
+  variants:
+  - name: Lock
+    description: Locked and writes are ignored
+    value: 0
+  - name: NotLock
+    description: Not locked and writes complete as normal
+    value: 1
+enum/LrPpl:
+  bit_size: 1
+  variants:
+  - name: Lock
+    description: Locked and writes are ignored
+    value: 0
+  - name: NotLock
+    description: Not locked and writes complete as normal
+    value: 1
+enum/LrGfl0:
+  bit_size: 1
+  variants:
+  - name: Lock
+    description: Locked and writes are ignored
+    value: 0
+  - name: NotLock
+    description: Not locked and writes complete as normal
+    value: 1
+enum/LrGfl1:
+  bit_size: 1
+  variants:
+  - name: Lock
+    description: Locked and writes are ignored
+    value: 0
+  - name: NotLock
+    description: Not locked and writes complete as normal
+    value: 1
+enum/LrGfl2:
+  bit_size: 1
+  variants:
+  - name: Lock
+    description: Locked and writes are ignored
+    value: 0
+  - name: NotLock
+    description: Not locked and writes complete as normal
+    value: 1
+enum/LrGfl3:
+  bit_size: 1
+  variants:
+  - name: Lock
+    description: Locked and writes are ignored
+    value: 0
+  - name: NotLock
+    description: Not locked and writes complete as normal
+    value: 1
+enum/LrGfl4:
+  bit_size: 1
+  variants:
+  - name: Lock
+    description: Locked and writes are ignored
+    value: 0
+  - name: NotLock
+    description: Not locked and writes complete as normal
+    value: 1
+enum/LrGfl5:
+  bit_size: 1
+  variants:
+  - name: Lock
+    description: Locked and writes are ignored
+    value: 0
+  - name: NotLock
+    description: Not locked and writes complete as normal
+    value: 1
+enum/LrGfl6:
+  bit_size: 1
+  variants:
+  - name: Lock
+    description: Locked and writes are ignored
+    value: 0
+  - name: NotLock
+    description: Not locked and writes complete as normal
+    value: 1
+enum/LrGfl7:
+  bit_size: 1
+  variants:
+  - name: Lock
+    description: Locked and writes are ignored
+    value: 0
+  - name: NotLock
+    description: Not locked and writes complete as normal
+    value: 1
+fieldset/Lr:
+  description: One-way lock bits until VBAT POR or TDET software reset. Locked writes are ignored without bus error. Locking CR disables software reset; locking LR itself prevents further lock changes.
+  bit_size: 32
+  reset_value: 16714736
+  fields:
+  - name: crl
+    description: Control Register Lock
+    bit_offset: 4
+    bit_size: 1
+    enum: LrCrl
+  - name: srl
+    description: Status Register Lock
+    bit_offset: 5
+    bit_size: 1
+    enum: LrSrl
+  - name: lrl
+    description: Lock Register Lock
+    bit_offset: 6
+    bit_size: 1
+    enum: LrLrl
+  - name: iel
+    description: Interrupt Enable Lock
+    bit_offset: 7
+    bit_size: 1
+    enum: LrIel
+  - name: tsl
+    description: Tamper Seconds Lock
+    bit_offset: 8
+    bit_size: 1
+    enum: LrTsl
+  - name: tel
+    description: Tamper Enable Lock
+    bit_offset: 9
+    bit_size: 1
+    enum: LrTel
+  - name: ppl
+    description: Pin Polarity Lock
+    bit_offset: 11
+    bit_size: 1
+    enum: LrPpl
+  - name: gfl0
+    description: Glitch Filter Lock
+    bit_offset: 16
+    bit_size: 1
+    enum: LrGfl0
+  - name: gfl1
+    description: Glitch Filter Lock
+    bit_offset: 17
+    bit_size: 1
+    enum: LrGfl1
+  - name: gfl2
+    description: Glitch Filter Lock
+    bit_offset: 18
+    bit_size: 1
+    enum: LrGfl2
+  - name: gfl3
+    description: Glitch Filter Lock
+    bit_offset: 19
+    bit_size: 1
+    enum: LrGfl3
+  - name: gfl4
+    description: Glitch Filter Lock
+    bit_offset: 20
+    bit_size: 1
+    enum: LrGfl4
+  - name: gfl5
+    description: Glitch Filter Lock
+    bit_offset: 21
+    bit_size: 1
+    enum: LrGfl5
+  - name: gfl6
+    description: Glitch Filter Lock
+    bit_offset: 22
+    bit_size: 1
+    enum: LrGfl6
+  - name: gfl7
+    description: Glitch Filter Lock
+    bit_offset: 23
+    bit_size: 1
+    enum: LrGfl7
+enum/IerDtie:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables
+    value: 0
+  - name: Enable
+    description: Enables
+    value: 1
+enum/IerTiie0:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables
+    value: 0
+  - name: Enable
+    description: Enables
+    value: 1
+enum/IerTiie6:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables
+    value: 0
+  - name: Enable
+    description: Enables
+    value: 1
+enum/IerTiie10:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables
+    value: 0
+  - name: Enable
+    description: Enables
+    value: 1
+enum/IerTpie0:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables
+    value: 0
+  - name: Enable
+    description: Enables
+    value: 1
+enum/IerTpie1:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables
+    value: 0
+  - name: Enable
+    description: Enables
+    value: 1
+enum/IerTpie2:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables
+    value: 0
+  - name: Enable
+    description: Enables
+    value: 1
+enum/IerTpie3:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables
+    value: 0
+  - name: Enable
+    description: Enables
+    value: 1
+enum/IerTpie4:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables
+    value: 0
+  - name: Enable
+    description: Enables
+    value: 1
+enum/IerTpie5:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables
+    value: 0
+  - name: Enable
+    description: Enables
+    value: 1
+enum/IerTpie6:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables
+    value: 0
+  - name: Enable
+    description: Enables
+    value: 1
+enum/IerTpie7:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables
+    value: 0
+  - name: Enable
+    description: Enables
+    value: 1
+fieldset/Ier:
+  description: Interrupt Enable
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: dtie
+    description: Digital Tamper Interrupt Enable
+    bit_offset: 0
+    bit_size: 1
+    enum: IerDtie
+  - name: tiie0
+    description: Tamper Input n Interrupt Enable
+    bit_offset: 2
+    bit_size: 1
+    enum: IerTiie0
+  - name: tiie6
+    description: Tamper Input n Interrupt Enable
+    bit_offset: 8
+    bit_size: 1
+    enum: IerTiie6
+  - name: tiie10
+    description: Tamper Input n Interrupt Enable
+    bit_offset: 12
+    bit_size: 1
+    enum: IerTiie10
+  - name: tpie0
+    description: Tamper Pin n Interrupt Enable
+    bit_offset: 16
+    bit_size: 1
+    enum: IerTpie0
+  - name: tpie1
+    description: Tamper Pin n Interrupt Enable
+    bit_offset: 17
+    bit_size: 1
+    enum: IerTpie1
+  - name: tpie2
+    description: Tamper Pin n Interrupt Enable
+    bit_offset: 18
+    bit_size: 1
+    enum: IerTpie2
+  - name: tpie3
+    description: Tamper Pin n Interrupt Enable
+    bit_offset: 19
+    bit_size: 1
+    enum: IerTpie3
+  - name: tpie4
+    description: Tamper Pin n Interrupt Enable
+    bit_offset: 20
+    bit_size: 1
+    enum: IerTpie4
+  - name: tpie5
+    description: Tamper Pin n Interrupt Enable
+    bit_offset: 21
+    bit_size: 1
+    enum: IerTpie5
+  - name: tpie6
+    description: Tamper Pin n Interrupt Enable
+    bit_offset: 22
+    bit_size: 1
+    enum: IerTpie6
+  - name: tpie7
+    description: Tamper Pin n Interrupt Enable
+    bit_offset: 23
+    bit_size: 1
+    enum: IerTpie7
+fieldset/Tsr:
+  description: Tamper Seconds
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: tts
+    description: Tamper Time Seconds
+    bit_offset: 0
+    bit_size: 32
+enum/TerTie0:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables
+    value: 0
+  - name: Enable
+    description: Enables
+    value: 1
+enum/TerTie6:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables
+    value: 0
+  - name: Enable
+    description: Enables
+    value: 1
+enum/TerTie10:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables
+    value: 0
+  - name: Enable
+    description: Enables
+    value: 1
+enum/TerTpe0:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables
+    value: 0
+  - name: Enable
+    description: Enables
+    value: 1
+enum/TerTpe1:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables
+    value: 0
+  - name: Enable
+    description: Enables
+    value: 1
+enum/TerTpe2:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables
+    value: 0
+  - name: Enable
+    description: Enables
+    value: 1
+enum/TerTpe3:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables
+    value: 0
+  - name: Enable
+    description: Enables
+    value: 1
+enum/TerTpe4:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables
+    value: 0
+  - name: Enable
+    description: Enables
+    value: 1
+enum/TerTpe5:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables
+    value: 0
+  - name: Enable
+    description: Enables
+    value: 1
+enum/TerTpe6:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables
+    value: 0
+  - name: Enable
+    description: Enables
+    value: 1
+enum/TerTpe7:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables
+    value: 0
+  - name: Enable
+    description: Enables
+    value: 1
+fieldset/Ter:
+  description: Tamper Enable
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: tie0
+    description: Tamper Input Enable
+    bit_offset: 2
+    bit_size: 1
+    enum: TerTie0
+  - name: tie6
+    description: Tamper Input Enable
+    bit_offset: 8
+    bit_size: 1
+    enum: TerTie6
+  - name: tie10
+    description: Tamper Input Enable
+    bit_offset: 12
+    bit_size: 1
+    enum: TerTie10
+  - name: tpe0
+    description: Tamper Pin Enable
+    bit_offset: 16
+    bit_size: 1
+    enum: TerTpe0
+  - name: tpe1
+    description: Tamper Pin Enable
+    bit_offset: 17
+    bit_size: 1
+    enum: TerTpe1
+  - name: tpe2
+    description: Tamper Pin Enable
+    bit_offset: 18
+    bit_size: 1
+    enum: TerTpe2
+  - name: tpe3
+    description: Tamper Pin Enable
+    bit_offset: 19
+    bit_size: 1
+    enum: TerTpe3
+  - name: tpe4
+    description: Tamper Pin Enable
+    bit_offset: 20
+    bit_size: 1
+    enum: TerTpe4
+  - name: tpe5
+    description: Tamper Pin Enable
+    bit_offset: 21
+    bit_size: 1
+    enum: TerTpe5
+  - name: tpe6
+    description: Tamper Pin Enable
+    bit_offset: 22
+    bit_size: 1
+    enum: TerTpe6
+  - name: tpe7
+    description: Tamper Pin Enable
+    bit_offset: 23
+    bit_size: 1
+    enum: TerTpe7
+enum/PprTpp0:
+  bit_size: 1
+  variants:
+  - name: NoInvert
+    description: Not inverted
+    value: 0
+  - name: Invert
+    description: Inverted
+    value: 1
+enum/PprTpp1:
+  bit_size: 1
+  variants:
+  - name: NoInvert
+    description: Not inverted
+    value: 0
+  - name: Invert
+    description: Inverted
+    value: 1
+enum/PprTpp2:
+  bit_size: 1
+  variants:
+  - name: NoInvert
+    description: Not inverted
+    value: 0
+  - name: Invert
+    description: Inverted
+    value: 1
+enum/PprTpp3:
+  bit_size: 1
+  variants:
+  - name: NoInvert
+    description: Not inverted
+    value: 0
+  - name: Invert
+    description: Inverted
+    value: 1
+enum/PprTpp4:
+  bit_size: 1
+  variants:
+  - name: NoInvert
+    description: Not inverted
+    value: 0
+  - name: Invert
+    description: Inverted
+    value: 1
+enum/PprTpp5:
+  bit_size: 1
+  variants:
+  - name: NoInvert
+    description: Not inverted
+    value: 0
+  - name: Invert
+    description: Inverted
+    value: 1
+enum/PprTpp6:
+  bit_size: 1
+  variants:
+  - name: NoInvert
+    description: Not inverted
+    value: 0
+  - name: Invert
+    description: Inverted
+    value: 1
+enum/PprTpp7:
+  bit_size: 1
+  variants:
+  - name: NoInvert
+    description: Not inverted
+    value: 0
+  - name: Invert
+    description: Inverted
+    value: 1
+enum/PprTpid0:
+  bit_size: 1
+  variants:
+  - name: Zero
+    description: Zero
+    value: 0
+  - name: One
+    description: One
+    value: 1
+enum/PprTpid1:
+  bit_size: 1
+  variants:
+  - name: Zero
+    description: Zero
+    value: 0
+  - name: One
+    description: One
+    value: 1
+enum/PprTpid2:
+  bit_size: 1
+  variants:
+  - name: Zero
+    description: Zero
+    value: 0
+  - name: One
+    description: One
+    value: 1
+enum/PprTpid3:
+  bit_size: 1
+  variants:
+  - name: Zero
+    description: Zero
+    value: 0
+  - name: One
+    description: One
+    value: 1
+enum/PprTpid4:
+  bit_size: 1
+  variants:
+  - name: Zero
+    description: Zero
+    value: 0
+  - name: One
+    description: One
+    value: 1
+enum/PprTpid5:
+  bit_size: 1
+  variants:
+  - name: Zero
+    description: Zero
+    value: 0
+  - name: One
+    description: One
+    value: 1
+enum/PprTpid6:
+  bit_size: 1
+  variants:
+  - name: Zero
+    description: Zero
+    value: 0
+  - name: One
+    description: One
+    value: 1
+enum/PprTpid7:
+  bit_size: 1
+  variants:
+  - name: Zero
+    description: Zero
+    value: 0
+  - name: One
+    description: One
+    value: 1
+fieldset/Ppr:
+  description: Pin Polarity
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: tpp0
+    description: Tamper Pin n Polarity
+    bit_offset: 0
+    bit_size: 1
+    enum: PprTpp0
+  - name: tpp1
+    description: Tamper Pin n Polarity
+    bit_offset: 1
+    bit_size: 1
+    enum: PprTpp1
+  - name: tpp2
+    description: Tamper Pin n Polarity
+    bit_offset: 2
+    bit_size: 1
+    enum: PprTpp2
+  - name: tpp3
+    description: Tamper Pin n Polarity
+    bit_offset: 3
+    bit_size: 1
+    enum: PprTpp3
+  - name: tpp4
+    description: Tamper Pin n Polarity
+    bit_offset: 4
+    bit_size: 1
+    enum: PprTpp4
+  - name: tpp5
+    description: Tamper Pin n Polarity
+    bit_offset: 5
+    bit_size: 1
+    enum: PprTpp5
+  - name: tpp6
+    description: Tamper Pin n Polarity
+    bit_offset: 6
+    bit_size: 1
+    enum: PprTpp6
+  - name: tpp7
+    description: Tamper Pin n Polarity
+    bit_offset: 7
+    bit_size: 1
+    enum: PprTpp7
+  - name: tpid0
+    description: Read-only observed tamper-pin state.
+    bit_offset: 16
+    bit_size: 1
+    enum: PprTpid0
+  - name: tpid1
+    description: Read-only observed tamper-pin state.
+    bit_offset: 17
+    bit_size: 1
+    enum: PprTpid1
+  - name: tpid2
+    description: Read-only observed tamper-pin state.
+    bit_offset: 18
+    bit_size: 1
+    enum: PprTpid2
+  - name: tpid3
+    description: Read-only observed tamper-pin state.
+    bit_offset: 19
+    bit_size: 1
+    enum: PprTpid3
+  - name: tpid4
+    description: Read-only observed tamper-pin state.
+    bit_offset: 20
+    bit_size: 1
+    enum: PprTpid4
+  - name: tpid5
+    description: Read-only observed tamper-pin state.
+    bit_offset: 21
+    bit_size: 1
+    enum: PprTpid5
+  - name: tpid6
+    description: Read-only observed tamper-pin state.
+    bit_offset: 22
+    bit_size: 1
+    enum: PprTpid6
+  - name: tpid7
+    description: Read-only observed tamper-pin state.
+    bit_offset: 23
+    bit_size: 1
+    enum: PprTpid7
+enum/PgfrGfp:
+  bit_size: 1
+  variants:
+  - name: Prescaler
+    value: 0
+  - name: Clock
+    value: 1
+enum/PgfrGfe:
+  bit_size: 1
+  variants:
+  - name: Bypass
+    description: Bypasses
+    value: 0
+  - name: Enable
+    description: Enables
+    value: 1
+enum/PgfrTpsw:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Continuous monitoring, pin sampling disabled
+    value: 0
+  - name: Cycles2
+    description: 2 cycles for pull enable and 1 cycle for input buffer enable
+    value: 1
+  - name: Cycles4
+    description: 4 cycles for pull enable and 2 cycles for input buffer enable
+    value: 2
+  - name: Cycles8
+    description: 8 cycles for pull enable and 4 cycles for input buffer enable
+    value: 3
+enum/PgfrTpsf:
+  bit_size: 2
+  variants:
+  - name: Cycles8
+    description: Every 8 cycles
+    value: 0
+  - name: Cycles32
+    description: Every 32 cycles
+    value: 1
+  - name: Cycles128
+    description: Every 128 cycles
+    value: 2
+  - name: Cycles512
+    description: Every 512 cycles
+    value: 3
+enum/PgfrTpe:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables
+    value: 0
+  - name: Enable
+    description: Enables
+    value: 1
+enum/PgfrTps:
+  bit_size: 1
+  variants:
+  - name: Assert
+    description: Asserts
+    value: 0
+  - name: Negate
+    description: Negates
+    value: 1
+fieldset/Pgfr:
+  description: Pin Glitch Filter
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: gfw
+    description: 'Filter width: 2*(GFW+1) clock edges,2..128. Do not change while filter enabled.'
+    bit_offset: 0
+    bit_size: 6
+  - name: gfp
+    description: Filter clock. Do not change while filter enabled. Sources are512Hz prescaler and32.768kHz clock.
+    bit_offset: 6
+    bit_size: 1
+    enum: PgfrGfp
+  - name: gfe
+    description: Filter enable. Do not change while the corresponding tamper pin is enabled.
+    bit_offset: 7
+    bit_size: 1
+    enum: PgfrGfe
+  - name: tpsw
+    description: Tamper Pin Sample Width
+    bit_offset: 8
+    bit_size: 2
+    enum: PgfrTpsw
+  - name: tpsf
+    description: Tamper Pin Sample Frequency
+    bit_offset: 10
+    bit_size: 2
+    enum: PgfrTpsf
+  - name: tpe
+    description: Tamper Pull Enable
+    bit_offset: 24
+    bit_size: 1
+    enum: PgfrTpe
+  - name: tps
+    description: 'Pull state relative to PPR polarity: zero asserts and one negates; not a universal pull-up/down selection.'
+    bit_offset: 25
+    bit_size: 1
+    enum: PgfrTps
+enum/WacCrw:
+  bit_size: 1
+  variants:
+  - name: Ignored
+    description: Writes to the Control register are ignored.
+    value: 0
+  - name: Normal
+    description: Writes to the Control register complete as normal.
+    value: 1
+enum/WacSrw:
+  bit_size: 1
+  variants:
+  - name: Ignored
+    description: Writes to the Status Register are ignored.
+    value: 0
+  - name: Normal
+    description: Writes to the Status Register complete as normal.
+    value: 1
+enum/WacLrw:
+  bit_size: 1
+  variants:
+  - name: Ignored
+    description: Writes to the Lock register are ignored.
+    value: 0
+  - name: Normal
+    description: Writes to the Lock register complete as normal.
+    value: 1
+enum/WacIew:
+  bit_size: 1
+  variants:
+  - name: Ignored
+    description: Writes to the Interrupt enable register are ignored.
+    value: 0
+  - name: Normal
+    description: Writes to the Interrupt enable register complete as normal.
+    value: 1
+enum/WacTsrw:
+  bit_size: 1
+  variants:
+  - name: Ignored
+    description: Writes to the Tamper Seconds register are ignored.
+    value: 0
+  - name: Normal
+    description: Writes to the Tamper Seconds register complete as normal.
+    value: 1
+enum/WacTew:
+  bit_size: 1
+  variants:
+  - name: Ignored
+    description: Writes to the tamper enable register are ignored.
+    value: 0
+  - name: Normal
+    description: Writes to the tamper enable register complete as normal.
+    value: 1
+enum/WacPpw:
+  bit_size: 1
+  variants:
+  - name: Ignored
+    description: Writes to the pin polarity register are ignored.
+    value: 0
+  - name: Normal
+    description: Writes to the pin polarity register complete as normal.
+    value: 1
+enum/WacGfw0:
+  bit_size: 1
+  variants:
+  - name: Ignored
+    description: Writes are ignored
+    value: 0
+  - name: Normal
+    description: Writes complete as normal
+    value: 1
+enum/WacGfw1:
+  bit_size: 1
+  variants:
+  - name: Ignored
+    description: Writes are ignored
+    value: 0
+  - name: Normal
+    description: Writes complete as normal
+    value: 1
+enum/WacGfw2:
+  bit_size: 1
+  variants:
+  - name: Ignored
+    description: Writes are ignored
+    value: 0
+  - name: Normal
+    description: Writes complete as normal
+    value: 1
+enum/WacGfw3:
+  bit_size: 1
+  variants:
+  - name: Ignored
+    description: Writes are ignored
+    value: 0
+  - name: Normal
+    description: Writes complete as normal
+    value: 1
+enum/WacGfw4:
+  bit_size: 1
+  variants:
+  - name: Ignored
+    description: Writes are ignored
+    value: 0
+  - name: Normal
+    description: Writes complete as normal
+    value: 1
+enum/WacGfw5:
+  bit_size: 1
+  variants:
+  - name: Ignored
+    description: Writes are ignored
+    value: 0
+  - name: Normal
+    description: Writes complete as normal
+    value: 1
+enum/WacGfw6:
+  bit_size: 1
+  variants:
+  - name: Ignored
+    description: Writes are ignored
+    value: 0
+  - name: Normal
+    description: Writes complete as normal
+    value: 1
+enum/WacGfw7:
+  bit_size: 1
+  variants:
+  - name: Ignored
+    description: Writes are ignored
+    value: 0
+  - name: Normal
+    description: Writes complete as normal
+    value: 1
+fieldset/Wac:
+  description: Write Access Control
+  bit_size: 32
+  reset_value: 16714736
+  fields:
+  - name: crw
+    description: Control Register Write
+    bit_offset: 4
+    bit_size: 1
+    enum: WacCrw
+  - name: srw
+    description: Status Register Write
+    bit_offset: 5
+    bit_size: 1
+    enum: WacSrw
+  - name: lrw
+    description: Lock Register Write
+    bit_offset: 6
+    bit_size: 1
+    enum: WacLrw
+  - name: iew
+    description: Interrupt Enable Write
+    bit_offset: 7
+    bit_size: 1
+    enum: WacIew
+  - name: tsrw
+    description: Tamper Seconds Register Write
+    bit_offset: 8
+    bit_size: 1
+    enum: WacTsrw
+  - name: tew
+    description: Tamper Enable Write
+    bit_offset: 9
+    bit_size: 1
+    enum: WacTew
+  - name: ppw
+    description: Pin Polarity Write
+    bit_offset: 11
+    bit_size: 1
+    enum: WacPpw
+  - name: gfw0
+    description: Glitch Filter Write
+    bit_offset: 16
+    bit_size: 1
+    enum: WacGfw0
+  - name: gfw1
+    description: Glitch Filter Write
+    bit_offset: 17
+    bit_size: 1
+    enum: WacGfw1
+  - name: gfw2
+    description: Glitch Filter Write
+    bit_offset: 18
+    bit_size: 1
+    enum: WacGfw2
+  - name: gfw3
+    description: Glitch Filter Write
+    bit_offset: 19
+    bit_size: 1
+    enum: WacGfw3
+  - name: gfw4
+    description: Glitch Filter Write
+    bit_offset: 20
+    bit_size: 1
+    enum: WacGfw4
+  - name: gfw5
+    description: Glitch Filter Write
+    bit_offset: 21
+    bit_size: 1
+    enum: WacGfw5
+  - name: gfw6
+    description: Glitch Filter Write
+    bit_offset: 22
+    bit_size: 1
+    enum: WacGfw6
+  - name: gfw7
+    description: Glitch Filter Write
+    bit_offset: 23
+    bit_size: 1
+    enum: WacGfw7
+enum/RacCrr:
+  bit_size: 1
+  variants:
+  - name: Ignored
+    description: Reads to the Control register are ignored.
+    value: 0
+  - name: Normal
+    description: Reads to the Control register complete as normal.
+    value: 1
+enum/RacSrr:
+  bit_size: 1
+  variants:
+  - name: Ignored
+    description: Reads to the Status Register are ignored.
+    value: 0
+  - name: Normal
+    description: Reads to the Status Register complete as normal.
+    value: 1
+enum/RacLrr:
+  bit_size: 1
+  variants:
+  - name: Ignored
+    description: Reads to the Lock register are ignored.
+    value: 0
+  - name: Normal
+    description: Reads to the Lock register complete as normal.
+    value: 1
+enum/RacIer:
+  bit_size: 1
+  variants:
+  - name: Ignored
+    description: Reads to the Interrupt enable register are ignored.
+    value: 0
+  - name: Normal
+    description: Reads to the Interrupt enable register complete as normal.
+    value: 1
+enum/RacTsrr:
+  bit_size: 1
+  variants:
+  - name: Ignored
+    description: Reads to the tamper seconds register are ignored.
+    value: 0
+  - name: Normal
+    description: Reads to the tamper seconds register complete as normal.
+    value: 1
+enum/RacTer:
+  bit_size: 1
+  variants:
+  - name: Ignored
+    description: Reads to the tamper enable register are ignored.
+    value: 0
+  - name: Normal
+    description: Reads to the tamper enable register complete as normal.
+    value: 1
+enum/RacPpr:
+  bit_size: 1
+  variants:
+  - name: Ignored
+    description: Reads to the pin polarity register are ignored.
+    value: 0
+  - name: Normal
+    description: Reads to the pin polarity register complete as normal.
+    value: 1
+enum/RacGfr0:
+  bit_size: 1
+  variants:
+  - name: Ignored
+    description: Reads are ignored
+    value: 0
+  - name: Normal
+    description: Reads complete as normal
+    value: 1
+enum/RacGfr1:
+  bit_size: 1
+  variants:
+  - name: Ignored
+    description: Reads are ignored
+    value: 0
+  - name: Normal
+    description: Reads complete as normal
+    value: 1
+enum/RacGfr2:
+  bit_size: 1
+  variants:
+  - name: Ignored
+    description: Reads are ignored
+    value: 0
+  - name: Normal
+    description: Reads complete as normal
+    value: 1
+enum/RacGfr3:
+  bit_size: 1
+  variants:
+  - name: Ignored
+    description: Reads are ignored
+    value: 0
+  - name: Normal
+    description: Reads complete as normal
+    value: 1
+enum/RacGfr4:
+  bit_size: 1
+  variants:
+  - name: Ignored
+    description: Reads are ignored
+    value: 0
+  - name: Normal
+    description: Reads complete as normal
+    value: 1
+enum/RacGfr5:
+  bit_size: 1
+  variants:
+  - name: Ignored
+    description: Reads are ignored
+    value: 0
+  - name: Normal
+    description: Reads complete as normal
+    value: 1
+enum/RacGfr6:
+  bit_size: 1
+  variants:
+  - name: Ignored
+    description: Reads are ignored
+    value: 0
+  - name: Normal
+    description: Reads complete as normal
+    value: 1
+enum/RacGfr7:
+  bit_size: 1
+  variants:
+  - name: Ignored
+    description: Reads are ignored
+    value: 0
+  - name: Normal
+    description: Reads complete as normal
+    value: 1
+fieldset/Rac:
+  description: Read Access Control
+  bit_size: 32
+  reset_value: 16714736
+  fields:
+  - name: crr
+    description: Control Register Read
+    bit_offset: 4
+    bit_size: 1
+    enum: RacCrr
+  - name: srr
+    description: Status Register Read
+    bit_offset: 5
+    bit_size: 1
+    enum: RacSrr
+  - name: lrr
+    description: Lock Register Read
+    bit_offset: 6
+    bit_size: 1
+    enum: RacLrr
+  - name: ier
+    description: Interrupt Enable Read
+    bit_offset: 7
+    bit_size: 1
+    enum: RacIer
+  - name: tsrr
+    description: Tamper Seconds Register Read
+    bit_offset: 8
+    bit_size: 1
+    enum: RacTsrr
+  - name: ter
+    description: Tamper Enable Read
+    bit_offset: 9
+    bit_size: 1
+    enum: RacTer
+  - name: ppr
+    description: Pin Polarity Read
+    bit_offset: 11
+    bit_size: 1
+    enum: RacPpr
+  - name: gfr0
+    description: Glitch Filter Read
+    bit_offset: 16
+    bit_size: 1
+    enum: RacGfr0
+  - name: gfr1
+    description: Glitch Filter Read
+    bit_offset: 17
+    bit_size: 1
+    enum: RacGfr1
+  - name: gfr2
+    description: Glitch Filter Read
+    bit_offset: 18
+    bit_size: 1
+    enum: RacGfr2
+  - name: gfr3
+    description: Glitch Filter Read
+    bit_offset: 19
+    bit_size: 1
+    enum: RacGfr3
+  - name: gfr4
+    description: Glitch Filter Read
+    bit_offset: 20
+    bit_size: 1
+    enum: RacGfr4
+  - name: gfr5
+    description: Glitch Filter Read
+    bit_offset: 21
+    bit_size: 1
+    enum: RacGfr5
+  - name: gfr6
+    description: Glitch Filter Read
+    bit_offset: 22
+    bit_size: 1
+    enum: RacGfr6
+  - name: gfr7
+    description: Glitch Filter Read
+    bit_offset: 23
+    bit_size: 1
+    enum: RacGfr7

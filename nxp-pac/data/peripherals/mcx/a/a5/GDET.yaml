@@ -1,0 +1,158 @@
+# MCXAP172M240F70RM Rev. 1, sections63.1/63.4.1. No RFU/SBZ controls are exposed.
+block/Gdet:
+  items:
+  - name: gdet_conf_0
+    byte_offset: 0
+    fieldset: GdetConf0
+  - name: gdet_conf_1
+    byte_offset: 4
+    fieldset: GdetConf1
+  - name: gdet_enable1
+    byte_offset: 8
+    fieldset: GdetEnable1
+  - name: gdet_conf_2
+    byte_offset: 12
+    fieldset: GdetConf2
+  - name: gdet_conf_3
+    byte_offset: 16
+    fieldset: GdetConf3
+  - name: gdet_conf_4
+    byte_offset: 20
+    fieldset: GdetConf4
+  - name: gdet_conf_5
+    byte_offset: 24
+    fieldset: GdetConf5
+  - name: gdet_reset
+    byte_offset: 4032
+    fieldset: GdetReset
+  - name: gdet_test
+    byte_offset: 4036
+    fieldset: GdetTest
+  - name: gdet_dly_ctrl
+    byte_offset: 4044
+    fieldset: GdetDlyCtrl
+  description: Boot-ROM-configured glitch detector. The manual says not to access SFR fields outside its documented startup/voltage-mode procedures and not to change normal configuration. This model performs no operations and provides no procedure examples.
+fieldset/GdetConf0:
+  description: GDET Configuration 0 Register
+  bit_size: 32
+  reset_value: 11
+  fields:
+  - name: field_3_0
+    description: GDET Configuration 0 Field 3_0
+    bit_offset: 0
+    bit_size: 4
+fieldset/GdetConf1:
+  description: GDET Configuration 1 Register
+  bit_size: 32
+  reset_value: 14
+  fields:
+  - name: field_1_0
+    description: GDET Configuration 1 Field 1_0
+    bit_offset: 0
+    bit_size: 2
+  - name: field_3_2
+    description: GDET Configuration 1 Field 3_2
+    bit_offset: 2
+    bit_size: 2
+  - name: field_7
+    description: GDET Configuration 1 Field 7
+    bit_offset: 7
+    bit_size: 1
+  - name: field_8
+    description: GDET Configuration 1 Field 8
+    bit_offset: 8
+    bit_size: 1
+fieldset/GdetEnable1:
+  description: GDET Enable Register
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: en1
+    description: One clock-gates the detector, NOT an ordinary active-high detector-enable bit.
+    bit_offset: 0
+    bit_size: 1
+fieldset/GdetConf2:
+  description: GDET Configuration 2 Register
+  bit_size: 32
+  reset_value: 1056964612
+  fields:
+  - name: field_6_0
+    description: GDET Configuration 2 Field 6_0
+    bit_offset: 0
+    bit_size: 7
+  - name: field_21_16
+    description: GDET Configuration 2 Field 21_16
+    bit_offset: 16
+    bit_size: 6
+  - name: field_29_24
+    description: GDET Configuration 2 Field 29_24
+    bit_offset: 24
+    bit_size: 6
+fieldset/GdetConf3:
+  description: GDET Configuration 3 Register
+  bit_size: 32
+  reset_value: 4
+  fields:
+  - name: field_6_0
+    description: GDET Configuration 3 Field 6_0
+    bit_offset: 0
+    bit_size: 7
+fieldset/GdetConf4:
+  description: GDET Configuration 4 Register
+  bit_size: 32
+  reset_value: 4
+  fields:
+  - name: field_6_0
+    description: GDET Configuration 4 Field 6_0
+    bit_offset: 0
+    bit_size: 7
+fieldset/GdetConf5:
+  description: GDET Configuration 5 Register
+  bit_size: 32
+  reset_value: 1560
+  fields:
+  - name: field_5_0
+    description: GDET Configuration 5 Field 5_0
+    bit_offset: 0
+    bit_size: 6
+  - name: field_11_6
+    description: GDET Configuration 5 Field 11_6
+    bit_offset: 6
+    bit_size: 6
+fieldset/GdetReset:
+  description: GDET Reset Register
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: sft_rst
+    description: Soft Reset for the Core Reset Volatile field; this does not establish self-clearing timing.
+    bit_offset: 3
+    bit_size: 1
+fieldset/GdetTest:
+  description: GDET Test Register
+  bit_size: 32
+  reset_value: 0
+  fields: []
+fieldset/GdetDlyCtrl:
+  description: GDET Delay Control Register
+  bit_size: 32
+  reset_value: 1
+  fields:
+  - name: vol_sel
+    description: Documented CORE voltage selection; encoding3 is reserved. Access restricted to the documented procedure.
+    bit_offset: 0
+    bit_size: 2
+    enum: VolSel
+  - name: sw_vol_ctrl
+    description: Select the Control of the Trim Code to the Delay Line
+    bit_offset: 2
+    bit_size: 1
+enum/VolSel:
+  bit_size: 2
+  variants:
+  - name: Voltage1V0
+    value: 0
+  - name: Voltage1V1
+    value: 1
+  - name: Voltage1V2
+    value: 2

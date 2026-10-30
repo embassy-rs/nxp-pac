@@ -1,0 +1,536 @@
+# MCXAP172M240F70RM Rev. 1, section22.5.3.
+# Application-facing BEACON is RO after ROM handoff; unknown resets are not asserted as zero hardware states.
+block/Seccon:
+  items:
+  - name: cpu0stckcal
+    byte_offset: 80
+    fieldset: Cpu0stckcal
+  - name: msfcfg
+    byte_offset: 1564
+    fieldset: Msfcfg
+    description: GLIKEY-protected one-way erase-disable locks until system reset, not reversible Boolean configuration. Protected by GLIKEY index3.
+  - name: cfpa_lc_state
+    byte_offset: 1596
+    fieldset: CfpaLcState
+    access: Read
+  - name: ram_xen
+    byte_offset: 1624
+    fieldset: RamXen
+  - name: ram_xen_dp
+    byte_offset: 1628
+    fieldset: RamXenDp
+    description: Protected by GLIKEY index2; unlike RAM_XEN this duplicate has no LOCK field.
+  - name: gdet0_ctrl
+    byte_offset: 1644
+    fieldset: Gdet0Ctrl
+  - name: els_otp_lc_state
+    byte_offset: 1664
+    fieldset: ElsOtpLcState
+    access: Read
+  - name: els_otp_lc_state_dp
+    byte_offset: 1668
+    fieldset: ElsOtpLcStateDp
+    access: Read
+  - name: debug_lock_en
+    byte_offset: 1952
+    fieldset: DebugLockEn
+  - name: debug_features
+    byte_offset: 1956
+    fieldset: DebugFeatures
+    description: Reset on PoR only. Hardware reset bits are unknown, not guaranteed disabled or zero.
+  - name: debug_features_dp
+    byte_offset: 1960
+    fieldset: DebugFeaturesDp
+    description: Protected by GLIKEY index1 with GLIKEY reset function. Do not assume the same reset behavior as PoR-only DEBUG_FEATURES.
+  - name: swd_access_cpu0
+    byte_offset: 1972
+    fieldset: SwdAccessCpu0
+    description: ROM-used write-once register, reset only by POR. Readback encodings differ from write commands. Not an ordinary application configuration register; no command enum or operation is provided.
+  - name: debug_auth_beacon
+    byte_offset: 1984
+    fieldset: DebugAuthBeacon
+    access: Read
+    description: Application-side view after ROM handoff is read-only. The generic map RW covers ROM/hardware access; ROM sets this value before user code. Reset on PoR only.
+  description: 'Core/application-side security-controller register view. Source model only: no provisioning, authentication, lock, erase or lifecycle operation is performed. Unknown reset bits remain unknown; generated defaults are construction values, not observed device state.'
+enum/Cpu0stckcalSkew:
+  bit_size: 1
+  variants:
+  - name: Exact
+    description: TENMS value is exact
+    value: 0
+  - name: Inexact
+    description: TENMS value is not exact or not given
+    value: 1
+enum/Cpu0stckcalNoref:
+  bit_size: 1
+  variants:
+  - name: YesRef
+    description: Reference clock is provided
+    value: 0
+  - name: NoRef
+    description: No reference clock is provided
+    value: 1
+fieldset/Cpu0stckcal:
+  description: Secure CPU0 System Tick Calibration Hardware reset contains unknown bits. Known-zero mask0x03FFFFFF; all other reset bits are unknown. Generated zero default is only a construction value, NOT a complete hardware reset value.
+  bit_size: 32
+  fields:
+  - name: tenms
+    description: Reload value for 10 ms (100 Hz) timing, subject to system clock skew errors. If the value reads as zero, the calibration value is not known.
+    bit_offset: 0
+    bit_size: 24
+  - name: skew
+    description: Whether the TENMS value is exact.
+    bit_offset: 24
+    bit_size: 1
+    enum: Cpu0stckcalSkew
+  - name: noref
+    description: Whether the device provides a reference clock to the processor.
+    bit_offset: 25
+    bit_size: 1
+    enum: Cpu0stckcalNoref
+enum/MsfcfgIfrBlock0EraseDis0:
+  bit_size: 1
+  variants:
+  - name: Enable
+    description: Enable IFR sector erase.
+    value: 0
+  - name: Disable
+    description: Disable IFR sector erase, write one lock until a system reset.
+    value: 1
+enum/MsfcfgIfrBlock0EraseDis1:
+  bit_size: 1
+  variants:
+  - name: Enable
+    description: Enable IFR sector erase.
+    value: 0
+  - name: Disable
+    description: Disable IFR sector erase, write one lock until a system reset.
+    value: 1
+enum/MsfcfgIfrBlock0EraseDis2:
+  bit_size: 1
+  variants:
+  - name: Enable
+    description: Enable IFR sector erase.
+    value: 0
+  - name: Disable
+    description: Disable IFR sector erase, write one lock until a system reset.
+    value: 1
+enum/MsfcfgIfrBlock0EraseDis3:
+  bit_size: 1
+  variants:
+  - name: Enable
+    description: Enable IFR sector erase.
+    value: 0
+  - name: Disable
+    description: Disable IFR sector erase, write one lock until a system reset.
+    value: 1
+enum/MsfcfgIfrBlock1EraseDis0:
+  bit_size: 1
+  variants:
+  - name: Enable
+    description: Enable IFR sector erase.
+    value: 0
+  - name: Disable
+    description: Disable IFR sector erase, write one lock until a system reset.
+    value: 1
+enum/MsfcfgIfrBlock1EraseDis1:
+  bit_size: 1
+  variants:
+  - name: Enable
+    description: Enable IFR sector erase.
+    value: 0
+  - name: Disable
+    description: Disable IFR sector erase, write one lock until a system reset.
+    value: 1
+enum/MsfcfgIfrBlock1EraseDis2:
+  bit_size: 1
+  variants:
+  - name: Enable
+    description: Enable IFR sector erase.
+    value: 0
+  - name: Disable
+    description: Disable IFR sector erase, write one lock until a system reset.
+    value: 1
+enum/MsfcfgIfrBlock1EraseDis3:
+  bit_size: 1
+  variants:
+  - name: Enable
+    description: Enable IFR sector erase.
+    value: 0
+  - name: Disable
+    description: Disable IFR sector erase, write one lock until a system reset.
+    value: 1
+enum/MsfcfgMassEraseDis:
+  bit_size: 1
+  variants:
+  - name: Enable
+    description: Enables mass erase
+    value: 0
+  - name: Disable
+    description: Disables mass erase, write one lock until a system reset.
+    value: 1
+enum/MsfcfgCgOverride:
+  bit_size: 1
+  variants:
+  - name: Enable
+    description: FMU access clock gating is enabled.
+    value: 0
+  - name: Disable
+    description: FMU access clock gating is disabled.
+    value: 1
+fieldset/Msfcfg:
+  description: MSF Configuration
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: ifr_block0_erase_dis0
+    description: user IFR block0 sector 0 erase control
+    bit_offset: 0
+    bit_size: 1
+    enum: MsfcfgIfrBlock0EraseDis0
+  - name: ifr_block0_erase_dis1
+    description: user IFR block0 sector 1 erase control
+    bit_offset: 1
+    bit_size: 1
+    enum: MsfcfgIfrBlock0EraseDis1
+  - name: ifr_block0_erase_dis2
+    description: user IFR block0 sector 2 erase control
+    bit_offset: 2
+    bit_size: 1
+    enum: MsfcfgIfrBlock0EraseDis2
+  - name: ifr_block0_erase_dis3
+    description: user IFR block0 sector 3 erase control
+    bit_offset: 3
+    bit_size: 1
+    enum: MsfcfgIfrBlock0EraseDis3
+  - name: ifr_block1_erase_dis0
+    description: user IFR block1 sector 0 erase control
+    bit_offset: 4
+    bit_size: 1
+    enum: MsfcfgIfrBlock1EraseDis0
+  - name: ifr_block1_erase_dis1
+    description: user IFR block1 sector 1 erase control
+    bit_offset: 5
+    bit_size: 1
+    enum: MsfcfgIfrBlock1EraseDis1
+  - name: ifr_block1_erase_dis2
+    description: user IFR block1 sector 2 erase control
+    bit_offset: 6
+    bit_size: 1
+    enum: MsfcfgIfrBlock1EraseDis2
+  - name: ifr_block1_erase_dis3
+    description: user IFR block1 sector 3 erase control
+    bit_offset: 7
+    bit_size: 1
+    enum: MsfcfgIfrBlock1EraseDis3
+  - name: mass_erase_dis
+    description: Mass erase control
+    bit_offset: 8
+    bit_size: 1
+    enum: MsfcfgMassEraseDis
+  - name: cg_override
+    description: FMU CG override
+    bit_offset: 16
+    bit_size: 1
+    enum: MsfcfgCgOverride
+fieldset/CfpaLcState:
+  description: CFPA State Register Hardware reset contains unknown bits. Known-zero mask0x00000000; all other reset bits are unknown. Generated zero default is only a construction value, NOT a complete hardware reset value.
+  bit_size: 32
+  fields:
+  - name: cfpa_lc_state
+    description: CFPA state
+    bit_offset: 0
+    bit_size: 32
+enum/RamXenRamx0Xen:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Execute permission is disabled, R/W are enabled.
+    value: 0
+  - name: Enable
+    description: Execute permission is enabled, R/W/X are enabled.
+    value: 1
+enum/RamXenRama0Xen:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Execute permission is disabled, R/W are enabled.
+    value: 0
+  - name: Enable
+    description: Execute permission is enabled, R/W/X are enabled.
+    value: 1
+enum/RamXenRama1Xen:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Execute permission is disabled, R/W are enabled.
+    value: 0
+  - name: Enable
+    description: Execute permission is enabled, R/W/X are enabled.
+    value: 1
+enum/RamXenRambXen:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Execute permission is disabled, R/W are enabled.
+    value: 0
+  - name: Enable
+    description: Execute permission is enabled, R/W/X are enabled.
+    value: 1
+enum/RamXenLock:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: This register is not locked and can be altered.
+    value: 0
+  - name: Enable
+    description: This register is locked and cannot be altered.
+    value: 1
+fieldset/RamXen:
+  description: RAM XEN Control
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: ramx0_xen
+    description: RAMX0 to RAMX3 Execute Permission Control.
+    bit_offset: 0
+    bit_size: 1
+    enum: RamXenRamx0Xen
+  - name: rama0_xen
+    description: RAMA0 Execute Permission Control.
+    bit_offset: 2
+    bit_size: 1
+    enum: RamXenRama0Xen
+  - name: rama1_xen
+    description: RAMAx (excluding RAMA0) Execute Permission Control.
+    bit_offset: 3
+    bit_size: 1
+    enum: RamXenRama1Xen
+  - name: ramb_xen
+    description: RAMBx Execute Permission Control.
+    bit_offset: 4
+    bit_size: 1
+    enum: RamXenRambXen
+  - name: lock
+    description: This 1-bit field provides a mechanism to limit writes to this register (and RAM_XEN_DP) to protect its contents. Once set, this bit remains asserted until a system reset.
+    bit_offset: 31
+    bit_size: 1
+    enum: RamXenLock
+fieldset/RamXenDp:
+  description: RAM XEN Control (Duplicate) Protected by GLIKEY index2; no LOCK field.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: ramx0_xen
+    description: Refer to RAM_XEN for more details.
+    bit_offset: 0
+    bit_size: 1
+  - name: rama0_xen
+    description: Refer to RAM_XEN for more details.
+    bit_offset: 2
+    bit_size: 1
+  - name: rama1_xen
+    description: Refer to RAM_XEN for more details.
+    bit_offset: 3
+    bit_size: 1
+  - name: ramb_xen
+    description: Refer to RAM_XEN for more details.
+    bit_offset: 4
+    bit_size: 1
+enum/Gdet0CtrlGdetEvtcntClr:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Event counter not cleared
+    value: 0
+  - name: Enable
+    description: Clears event counter
+    value: 1
+enum/Gdet0CtrlGdetErrClr:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Error status not cleared
+    value: 0
+  - name: Enable
+    description: Clears error status
+    value: 1
+enum/Gdet0CtrlGdetIsoSw:
+  bit_size: 2
+  variants:
+  - name: Disable0
+    description: Isolation is disabled
+    value: 0
+  - name: Disable1
+    description: Isolation is disabled
+    value: 1
+  - name: Enable
+    description: Isolation is enabled. When GDET0_CTRL GDET_ISO_SW are "10", isolation_on is asserted.
+    value: 2
+  - name: Disable3
+    description: Isolation is disabled
+    value: 3
+enum/Gdet0CtrlPosSync:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Positive glitch not detected
+    value: 0
+  - name: Enable
+    description: Positive glitch detected
+    value: 1
+enum/Gdet0CtrlNegSync:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Negative glitch not detected
+    value: 0
+  - name: Enable
+    description: Negative glitch detected
+    value: 1
+enum/Gdet0CtrlEventClrFlag:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Event counter not cleared
+    value: 0
+  - name: Enable
+    description: Event counter cleared
+    value: 1
+fieldset/Gdet0Ctrl:
+  description: GDET0 Control Register
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: gdet_evtcnt_clr
+    description: Controls the GDET0 clean event counter
+    bit_offset: 0
+    bit_size: 1
+    enum: Gdet0CtrlGdetEvtcntClr
+  - name: gdet_err_clr
+    description: Clears GDET0 error status
+    bit_offset: 1
+    bit_size: 1
+    enum: Gdet0CtrlGdetErrClr
+  - name: gdet_iso_sw
+    description: GDET0 isolation control
+    bit_offset: 2
+    bit_size: 2
+    enum: Gdet0CtrlGdetIsoSw
+  - name: event_cnt
+    description: Read-only Gray-coded glitch-event counter; not ordinary binary.
+    bit_offset: 8
+    bit_size: 8
+  - name: pos_sync
+    description: Read-only status observation.
+    bit_offset: 16
+    bit_size: 1
+    enum: Gdet0CtrlPosSync
+  - name: neg_sync
+    description: Read-only status observation.
+    bit_offset: 17
+    bit_size: 1
+    enum: Gdet0CtrlNegSync
+  - name: event_clr_flag
+    description: Read-only status observation.
+    bit_offset: 18
+    bit_size: 1
+    enum: Gdet0CtrlEventClrFlag
+fieldset/ElsOtpLcState:
+  description: Life Cycle State Register Hardware reset contains unknown bits. Known-zero mask0xFFFFFF00; all other reset bits are unknown. Generated zero default is only a construction value, NOT a complete hardware reset value.
+  bit_size: 32
+  fields:
+  - name: otp_lc_state
+    description: OTP life cycle state
+    bit_offset: 0
+    bit_size: 8
+fieldset/ElsOtpLcStateDp:
+  description: Life Cycle State Register (Duplicate) Hardware reset contains unknown bits. Known-zero mask0xFFFFFF00; all other reset bits are unknown. Generated zero default is only a construction value, NOT a complete hardware reset value.
+  bit_size: 32
+  fields:
+  - name: otp_lc_state_dp
+    description: OTP life cycle state
+    bit_offset: 0
+    bit_size: 8
+fieldset/DebugLockEn:
+  description: Control Write Access to Security
+  bit_size: 32
+  reset_value: 10
+  fields:
+  - name: lock_all
+    description: Only encoding0xA permits writes; every other encoding disables writes. Not a two-value enum with reserved other codes.
+    bit_offset: 0
+    bit_size: 4
+fieldset/DebugFeatures:
+  description: Cortex Debug Features Control Hardware reset contains unknown bits. Known-zero mask0x00000000; all other reset bits are unknown. Generated zero default is only a construction value, NOT a complete hardware reset value. Reset on PoR only.
+  bit_size: 32
+  fields:
+  - name: cpu0_dbgen
+    description: Encoding1 disables,2 enables;0 and3 are reserved. Hardware reset value is unknown.
+    bit_offset: 0
+    bit_size: 2
+    enum: DebugFeature
+  - name: cpu0_niden
+    description: Encoding1 disables,2 enables;0 and3 are reserved. Hardware reset value is unknown.
+    bit_offset: 2
+    bit_size: 2
+    enum: DebugFeature
+  - name: cpu0_spiden
+    description: Encoding1 disables,2 enables;0 and3 are reserved. Hardware reset value is unknown.
+    bit_offset: 4
+    bit_size: 2
+    enum: DebugFeature
+  - name: cpu0_spniden
+    description: Encoding1 disables,2 enables;0 and3 are reserved. Hardware reset value is unknown.
+    bit_offset: 6
+    bit_size: 2
+    enum: DebugFeature
+fieldset/DebugFeaturesDp:
+  description: Cortex Debug Features Control (Duplicate) Hardware reset contains unknown bits. Known-zero mask0x00000000; all other reset bits are unknown. Generated zero default is only a construction value, NOT a complete hardware reset value. Protected by GLIKEY index1 with GLIKEY reset function, distinct from DEBUG_FEATURES.
+  bit_size: 32
+  fields:
+  - name: cpu0_dbgen
+    description: Encoding1 disables,2 enables;0 and3 are reserved. Hardware reset value is unknown.
+    bit_offset: 0
+    bit_size: 2
+    enum: DebugFeature
+  - name: cpu0_niden
+    description: Encoding1 disables,2 enables;0 and3 are reserved. Hardware reset value is unknown.
+    bit_offset: 2
+    bit_size: 2
+    enum: DebugFeature
+  - name: cpu0_spiden
+    description: Encoding1 disables,2 enables;0 and3 are reserved. Hardware reset value is unknown.
+    bit_offset: 4
+    bit_size: 2
+    enum: DebugFeature
+  - name: cpu0_spniden
+    description: Encoding1 disables,2 enables;0 and3 are reserved. Hardware reset value is unknown.
+    bit_offset: 6
+    bit_size: 2
+    enum: DebugFeature
+fieldset/SwdAccessCpu0:
+  description: CPU0 Software Debug Access
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: sec_code
+    description: Raw SEC_CODE. Documented readbacks0x5/0xA are not the write-command encodings. ROM-used write-once register; no authentication operation is provided.
+    bit_offset: 0
+    bit_size: 32
+fieldset/DebugAuthBeacon:
+  description: Debug Authentication BEACON Application-side read-only after ROM handoff; reset on PoR only.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: beacon
+    description: Sets by the debug authentication code in ROM to pass the debug beacons (Credential Beacon and Authentication Beacon) to the application code.
+    bit_offset: 0
+    bit_size: 32
+enum/DebugFeature:
+  bit_size: 2
+  variants:
+  - name: Disabled
+    value: 1
+  - name: Enabled
+    value: 2

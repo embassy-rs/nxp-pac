@@ -1,5 +1,6 @@
+# MCXAP172M240F70RM Rev. 1, sections64.1/64.5.1. Includes MEM1 words2/3 and effective RO fixed policies.
 block/Mbc:
-  description: TRDC.
+  description: Memory block checker. Word writes only. GLIKEY index15 protects MBC registers. Choosing a locked global policy locks the corresponding block selector until reset. Chip-specific flash accesses are SecureUser; the manual advises not setting NSE.
   items:
   - name: mbc0_mem0_glbcfg
     description: MBC Global Configuration Register.
@@ -25,17 +26,20 @@ block/Mbc:
     byte_offset: 32
     fieldset: MemnGlbac0
   - name: mbc0_memn_glbac1
-    description: MBC Global Access Control.
+    description: 'Effectively read-only: detailed manual says this policy is not writable despite generic map RW.'
     byte_offset: 36
     fieldset: MemnGlbac1
+    access: Read
   - name: mbc0_memn_glbac2
-    description: MBC Global Access Control.
+    description: 'Effectively read-only: detailed manual says this policy is not writable despite generic map RW.'
     byte_offset: 40
     fieldset: MemnGlbac2
+    access: Read
   - name: mbc0_memn_glbac3
-    description: MBC Global Access Control.
+    description: 'Effectively read-only: detailed manual says this policy is not writable despite generic map RW.'
     byte_offset: 44
     fieldset: MemnGlbac3
+    access: Read
   - name: mbc0_memn_glbac4
     description: MBC Global Access Control.
     byte_offset: 48
@@ -45,13 +49,15 @@ block/Mbc:
     byte_offset: 52
     fieldset: MemnGlbac5
   - name: mbc0_memn_glbac6
-    description: MBC Global Access Control.
+    description: 'Effectively read-only: detailed manual says this policy is not writable despite generic map RW.'
     byte_offset: 56
     fieldset: MemnGlbac6
+    access: Read
   - name: mbc0_memn_glbac7
-    description: MBC Global Access Control.
+    description: 'Effectively read-only: detailed manual says this policy is not writable despite generic map RW.'
     byte_offset: 60
     fieldset: MemnGlbac7
+    access: Read
   - name: mbc0_dom0_mem0_blk_cfg_wn
     description: MBC Memory Block Configuration Word.
     array:
@@ -66,6 +72,12 @@ block/Mbc:
   - name: mbc0_dom0_mem1_blk_cfg_w1
     description: MBC Memory Block Configuration Word.
     byte_offset: 388
+    fieldset: MemnBlkCfgW
+  - name: mbc0_dom0_mem1_blk_cfg_w2
+    byte_offset: 392
+    fieldset: MemnBlkCfgW
+  - name: mbc0_dom0_mem1_blk_cfg_w3
+    byte_offset: 396
     fieldset: MemnBlkCfgW
   - name: mbc0_dom0_mem2_blk_cfg_w0
     description: MBC Memory Block Configuration Word.
@@ -82,6 +94,8 @@ fieldset/Mem0Glbcfg:
     description: Log2 size per block.
     bit_offset: 16
     bit_size: 5
+  bit_size: 32
+  reset_value: 917632
 fieldset/Mem1Glbcfg:
   description: MBC Global Configuration Register.
   fields:
@@ -93,6 +107,8 @@ fieldset/Mem1Glbcfg:
     description: Log2 size per block.
     bit_offset: 16
     bit_size: 5
+  bit_size: 32
+  reset_value: 720928
 fieldset/Mem2Glbcfg:
   description: MBC Global Configuration Register.
   fields:
@@ -104,6 +120,8 @@ fieldset/Mem2Glbcfg:
     description: Log2 size per block.
     bit_offset: 16
     bit_size: 5
+  bit_size: 32
+  reset_value: 720904
 fieldset/Mem3Glbcfg:
   description: MBC Global Configuration Register.
   fields:
@@ -116,9 +134,11 @@ fieldset/Mem3Glbcfg:
     bit_offset: 16
     bit_size: 5
   - name: clre
-    description: Clear Error.
+    description: 'Write-only clear command: encoding1 clears error; all other writes have no effect. MEM3 itself is not an implemented memory.'
     bit_offset: 30
     bit_size: 2
+  bit_size: 32
+  reset_value: 0
 fieldset/MemnBlkCfgW:
   description: MBC Memory Block Configuration Word.
   fields:
@@ -128,80 +148,74 @@ fieldset/MemnBlkCfgW:
     bit_size: 3
     enum: Mbacsel
   - name: nse0
-    description: NonSecure Enable for block B.
+    description: NSE policy bit. F70 chip-specific SecureUser/XOM descriptions conflict with its generic NSE=0 secure-execution wording. Do not assume either interpretation is settled; the chip-specific section advises not setting NSE for flash.
     bit_offset: 3
     bit_size: 1
-    enum: Nse
   - name: mbacsel1
     description: Memory Block Access Control Select for block B.
     bit_offset: 4
     bit_size: 3
     enum: Mbacsel
   - name: nse1
-    description: NonSecure Enable for block B.
+    description: NSE policy bit. F70 chip-specific SecureUser/XOM descriptions conflict with its generic NSE=0 secure-execution wording. Do not assume either interpretation is settled; the chip-specific section advises not setting NSE for flash.
     bit_offset: 7
     bit_size: 1
-    enum: Nse
   - name: mbacsel2
     description: Memory Block Access Control Select for block B.
     bit_offset: 8
     bit_size: 3
     enum: Mbacsel
   - name: nse2
-    description: NonSecure Enable for block B.
+    description: NSE policy bit. F70 chip-specific SecureUser/XOM descriptions conflict with its generic NSE=0 secure-execution wording. Do not assume either interpretation is settled; the chip-specific section advises not setting NSE for flash.
     bit_offset: 11
     bit_size: 1
-    enum: Nse
   - name: mbacsel3
     description: Memory Block Access Control Select for block B.
     bit_offset: 12
     bit_size: 3
     enum: Mbacsel
   - name: nse3
-    description: NonSecure Enable for block B.
+    description: NSE policy bit. F70 chip-specific SecureUser/XOM descriptions conflict with its generic NSE=0 secure-execution wording. Do not assume either interpretation is settled; the chip-specific section advises not setting NSE for flash.
     bit_offset: 15
     bit_size: 1
-    enum: Nse
   - name: mbacsel4
     description: Memory Block Access Control Select for block B.
     bit_offset: 16
     bit_size: 3
     enum: Mbacsel
   - name: nse4
-    description: NonSecure Enable for block B.
+    description: NSE policy bit. F70 chip-specific SecureUser/XOM descriptions conflict with its generic NSE=0 secure-execution wording. Do not assume either interpretation is settled; the chip-specific section advises not setting NSE for flash.
     bit_offset: 19
     bit_size: 1
-    enum: Nse
   - name: mbacsel5
     description: Memory Block Access Control Select for block B.
     bit_offset: 20
     bit_size: 3
     enum: Mbacsel
   - name: nse5
-    description: NonSecure Enable for block B.
+    description: NSE policy bit. F70 chip-specific SecureUser/XOM descriptions conflict with its generic NSE=0 secure-execution wording. Do not assume either interpretation is settled; the chip-specific section advises not setting NSE for flash.
     bit_offset: 23
     bit_size: 1
-    enum: Nse
   - name: mbacsel6
     description: Memory Block Access Control Select for block B.
     bit_offset: 24
     bit_size: 3
     enum: Mbacsel
   - name: nse6
-    description: NonSecure Enable for block B.
+    description: NSE policy bit. F70 chip-specific SecureUser/XOM descriptions conflict with its generic NSE=0 secure-execution wording. Do not assume either interpretation is settled; the chip-specific section advises not setting NSE for flash.
     bit_offset: 27
     bit_size: 1
-    enum: Nse
   - name: mbacsel7
     description: Memory Block Access Control Select for block B.
     bit_offset: 28
     bit_size: 3
     enum: Mbacsel
   - name: nse7
-    description: NonSecure Enable for block B.
+    description: NSE policy bit. F70 chip-specific SecureUser/XOM descriptions conflict with its generic NSE=0 secure-execution wording. Do not assume either interpretation is settled; the chip-specific section advises not setting NSE for flash.
     bit_offset: 31
     bit_size: 1
-    enum: Nse
+  bit_size: 32
+  reset_value: 0
 fieldset/MemnGlbac0:
   description: MBC Global Access Control.
   fields:
@@ -253,6 +267,8 @@ fieldset/MemnGlbac0:
     description: SecurePriv Read.
     bit_offset: 14
     bit_size: 1
+  bit_size: 32
+  reset_value: 26112
 fieldset/MemnGlbac1:
   description: MBC Global Access Control.
   fields:
@@ -308,6 +324,8 @@ fieldset/MemnGlbac1:
     description: LOCK.
     bit_offset: 31
     bit_size: 1
+  bit_size: 32
+  reset_value: 2147509760
 fieldset/MemnGlbac2:
   description: MBC Global Access Control.
   fields:
@@ -363,6 +381,8 @@ fieldset/MemnGlbac2:
     description: LOCK.
     bit_offset: 31
     bit_size: 1
+  bit_size: 32
+  reset_value: 2147505408
 fieldset/MemnGlbac3:
   description: MBC Global Access Control.
   fields:
@@ -418,6 +438,8 @@ fieldset/MemnGlbac3:
     description: LOCK.
     bit_offset: 31
     bit_size: 1
+  bit_size: 32
+  reset_value: 2147501056
 fieldset/MemnGlbac4:
   description: MBC Global Access Control.
   fields:
@@ -470,9 +492,11 @@ fieldset/MemnGlbac4:
     bit_offset: 14
     bit_size: 1
   - name: lk
-    description: LOCK.
+    description: One-way policy-register lock. Once asserted, remains asserted until reset and prevents policy-register updates.
     bit_offset: 31
     bit_size: 1
+  bit_size: 32
+  reset_value: 21760
 fieldset/MemnGlbac5:
   description: MBC Global Access Control.
   fields:
@@ -525,9 +549,11 @@ fieldset/MemnGlbac5:
     bit_offset: 14
     bit_size: 1
   - name: lk
-    description: LOCK.
+    description: One-way policy-register lock. Once asserted, remains asserted until reset and prevents policy-register updates.
     bit_offset: 31
     bit_size: 1
+  bit_size: 32
+  reset_value: 4352
 fieldset/MemnGlbac6:
   description: MBC Global Access Control.
   fields:
@@ -583,6 +609,8 @@ fieldset/MemnGlbac6:
     description: LOCK.
     bit_offset: 31
     bit_size: 1
+  bit_size: 32
+  reset_value: 2147488000
 fieldset/MemnGlbac7:
   description: MBC Global Access Control.
   fields:
@@ -638,6 +666,8 @@ fieldset/MemnGlbac7:
     description: LOCK.
     bit_offset: 31
     bit_size: 1
+  bit_size: 32
+  reset_value: 2147483648
 enum/Mbacsel:
   bit_size: 3
   variants:
@@ -665,12 +695,3 @@ enum/Mbacsel:
   - name: Glbac7
     description: select MBC_MEMN_GLBAC7 access control policy for block B.
     value: 7
-enum/Nse:
-  bit_size: 1
-  variants:
-  - name: Allowed
-    description: Secure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
-    value: 0
-  - name: Notallowed
-    description: Secure accesses to block B are not allowed, nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
-    value: 1

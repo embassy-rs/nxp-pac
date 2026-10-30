@@ -8280,7 +8280,8 @@
             }
           ]
         }
-      ]
+      ],
+      "block": "mcx/a/a2/SLCD"
     },
     {
       "name": "SPC0",
@@ -9337,6 +9338,12 @@
       "name": "EDMA_0_TCD",
       "address": "0x40081000",
       "block": "mcx/a/a2/EDMA_TCD::TCD8",
+      "signals": []
+    },
+    {
+      "name": "MBC0",
+      "address": "0x4008E000",
+      "block": "mcx/a/a2/MBC",
       "signals": []
     },
     {
