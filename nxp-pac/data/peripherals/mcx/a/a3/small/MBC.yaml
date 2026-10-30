@@ -1,4 +1,5 @@
 # MCXA3: explicit pinned XML onboarding; backing widths and resets retained.
+# F40RM Rev. 2, section 48.5.1: MEM2 has four blocks; W0 bits 31:16 are reserved.
 block/Mbc:
   description: TRDC.
   items:
@@ -71,7 +72,7 @@ block/Mbc:
   - name: mbc0_dom0_mem2_blk_cfg_w0
     description: MBC Memory Block Configuration Word.
     byte_offset: 424
-    fieldset: MemnBlkCfgW
+    fieldset: Mem2BlkCfgW0
 fieldset/Mem0Glbcfg:
   description: MBC Global Configuration Register.
   fields:
@@ -209,6 +210,51 @@ fieldset/MemnBlkCfgW:
   - name: nse7
     description: NonSecure Enable for block B.
     bit_offset: 31
+    bit_size: 1
+    enum: Nse
+  bit_size: 32
+  reset_value: 0
+fieldset/Mem2BlkCfgW0:
+  description: MEM2 block configuration for blocks 0 through 3. Bits 31:16 are reserved.
+  fields:
+  - name: mbacsel0
+    description: Memory Block Access Control Select for block B.
+    bit_offset: 0
+    bit_size: 3
+    enum: Mbacsel
+  - name: nse0
+    description: NonSecure Enable for block B.
+    bit_offset: 3
+    bit_size: 1
+    enum: Nse
+  - name: mbacsel1
+    description: Memory Block Access Control Select for block B.
+    bit_offset: 4
+    bit_size: 3
+    enum: Mbacsel
+  - name: nse1
+    description: NonSecure Enable for block B.
+    bit_offset: 7
+    bit_size: 1
+    enum: Nse
+  - name: mbacsel2
+    description: Memory Block Access Control Select for block B.
+    bit_offset: 8
+    bit_size: 3
+    enum: Mbacsel
+  - name: nse2
+    description: NonSecure Enable for block B.
+    bit_offset: 11
+    bit_size: 1
+    enum: Nse
+  - name: mbacsel3
+    description: Memory Block Access Control Select for block B.
+    bit_offset: 12
+    bit_size: 3
+    enum: Mbacsel
+  - name: nse3
+    description: NonSecure Enable for block B.
+    bit_offset: 15
     bit_size: 1
     enum: Nse
   bit_size: 32

@@ -1,6 +1,8 @@
 # MCXAP64M96FS3RM Rev. 7 (2024-10-22), CMP chapter.
 # Small-group source XML register resets restored by explicit offline onboarding.
 # Compatible curated A1 layouts reused where applicable; shared sources remain unchanged.
+includes:
+- ../../common/CMP_RR_INITMOD.yaml
 block/Cmp:
   description: LPCMP.
   items:
@@ -649,60 +651,6 @@ enum/RrClkSel:
   - name: Rr3
     description: Select Round Robin clock Source 3.
     value: 3
-enum/RrInitmod:
-  bit_size: 6
-  variants:
-  - name: Mod63
-    description: 63 cycles (same as 111111b).
-    value: 0
-  - name: Mod1631
-    description: 1 to 63 cycles.
-    value: 1
-  - name: Mod1632
-    description: 1 to 63 cycles.
-    value: 2
-  - name: Mod1633
-    description: 1 to 63 cycles.
-    value: 3
-  - name: Mod1634
-    description: 1 to 63 cycles.
-    value: 4
-  - name: Mod1635
-    description: 1 to 63 cycles.
-    value: 5
-  - name: Mod1636
-    description: 1 to 63 cycles.
-    value: 6
-  - name: Mod1637
-    description: 1 to 63 cycles.
-    value: 7
-  - name: Mod1638
-    description: 1 to 63 cycles.
-    value: 8
-  - name: Mod1639
-    description: 1 to 63 cycles.
-    value: 9
-  - name: Mod16310
-    description: 1 to 63 cycles.
-    value: 10
-  - name: Mod16358
-    description: 1 to 63 cycles.
-    value: 58
-  - name: Mod16359
-    description: 1 to 63 cycles.
-    value: 59
-  - name: Mod16360
-    description: 1 to 63 cycles.
-    value: 60
-  - name: Mod16361
-    description: 1 to 63 cycles.
-    value: 61
-  - name: Mod16362
-    description: 1 to 63 cycles.
-    value: 62
-  - name: Mod16363
-    description: 1 to 63 cycles.
-    value: 63
 enum/RrNsam:
   bit_size: 2
   variants:

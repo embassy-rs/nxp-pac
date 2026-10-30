@@ -1,4 +1,6 @@
 # MCXA3: explicit pinned XML onboarding; backing widths and resets retained.
+# F40RM Rev. 2, section 7.6.1.1 documents only REMAP on A343/A344.
+# The cache bank is documented only on the F60 devices within A3.
 block/Fmc:
   description: NPX.
   items:
@@ -7,34 +9,42 @@ block/Fmc:
     byte_offset: 32
     fieldset: Remap
   - name: fccr
+    only_in: '^MCXA(345|346|355|356|365|366)$'
     description: Flash Cache Control Register.
     byte_offset: 1024
     fieldset: Fccr
   - name: fcar
+    only_in: '^MCXA(345|346|355|356|365|366)$'
     description: Flash Cache Access Register.
     byte_offset: 1028
     fieldset: Fcar
   - name: fctg
+    only_in: '^MCXA(345|346|355|356|365|366)$'
     description: Flash Cache Tag.
     byte_offset: 1036
     fieldset: Fctg
   - name: fcln0
+    only_in: '^MCXA(345|346|355|356|365|366)$'
     description: Flash Cache Line Num0.
     byte_offset: 1056
     fieldset: Fcln0
   - name: fcln1
+    only_in: '^MCXA(345|346|355|356|365|366)$'
     description: Flash Cache Line Num1.
     byte_offset: 1060
     fieldset: Fcln1
   - name: fcln2
+    only_in: '^MCXA(345|346|355|356|365|366)$'
     description: Flash Cache Line Num2.
     byte_offset: 1064
     fieldset: Fcln2
   - name: fcln3
+    only_in: '^MCXA(345|346|355|356|365|366)$'
     description: Flash Cache Line Num3.
     byte_offset: 1068
     fieldset: Fcln3
 fieldset/Fcar:
+  only_in: '^MCXA(345|346|355|356|365|366)$'
   description: Flash Cache Access Register.
   fields:
   - name: caches_way_num
@@ -52,6 +62,7 @@ fieldset/Fcar:
   bit_size: 32
   reset_value: 0
 fieldset/Fccr:
+  only_in: '^MCXA(345|346|355|356|365|366)$'
   description: Flash Cache Control Register.
   fields:
   - name: way_lock
@@ -65,6 +76,7 @@ fieldset/Fccr:
   bit_size: 32
   reset_value: 0
 fieldset/Fcln0:
+  only_in: '^MCXA(345|346|355|356|365|366)$'
   description: Flash Cache Line Num0.
   fields:
   - name: data_wx_sy_lm
@@ -74,6 +86,7 @@ fieldset/Fcln0:
   bit_size: 32
   reset_value: 0
 fieldset/Fcln1:
+  only_in: '^MCXA(345|346|355|356|365|366)$'
   description: Flash Cache Line Num1.
   fields:
   - name: data_wx_sy_ml
@@ -83,6 +96,7 @@ fieldset/Fcln1:
   bit_size: 32
   reset_value: 0
 fieldset/Fcln2:
+  only_in: '^MCXA(345|346|355|356|365|366)$'
   description: Flash Cache Line Num2.
   fields:
   - name: data_wx_sy_mu
@@ -92,6 +106,7 @@ fieldset/Fcln2:
   bit_size: 32
   reset_value: 0
 fieldset/Fcln3:
+  only_in: '^MCXA(345|346|355|356|365|366)$'
   description: Flash Cache Line Num3.
   fields:
   - name: data_wx_sy_um
@@ -101,6 +116,7 @@ fieldset/Fcln3:
   bit_size: 32
   reset_value: 0
 fieldset/Fctg:
+  only_in: '^MCXA(345|346|355|356|365|366)$'
   description: Flash Cache Tag.
   fields:
   - name: valid

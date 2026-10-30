@@ -189,6 +189,24 @@ SAF tag/length layout, TSI overrun polarity, PHY LINKUP wording, and USB trim
 and buffer-capacity descriptions. Their conservative register views are not
 claims that the contradictory vendor documentation has been resolved.
 
+## A1/A3 source corrections
+
+Small A1 devices have seven ADC compare words, not fifteen. A173/174 and
+A343/344 expose only the documented FMC REMAP register; their undocumented
+cache-programming banks are excluded without removing the documented banks
+on neighboring devices. These follow FS3RM Rev. 7, F41RM Rev. 2, and F40RM
+Rev. 2 respectively.
+
+F40RM Rev. 2 and F60RM Rev. 4 distinguish A3 CMP1/2's external-trigger
+selector from CMP0 and limit MBC MEM2 to four blocks. CMP1/2 now use the
+`Cmp1` view and runtime suffix `::Cmp1` instead of `::Cmp`; the flat module,
+instance names, and base driver identities remain unchanged. Unsupported
+FMC accessors and MEM2 block 4–7 field accessors intentionally disappear.
+All native A1/A3 RR_INITMOD encodings are named: values 1–63 select that
+many cycles, and zero also selects 63. Existing variant names are retained.
+These are bounded model corrections, not a complete register/errata audit
+or resolution of the remaining A1/A3 source and applicability conflicts.
+
 ## Build pipeline
 
 Selecting a chip feature compiles its PAC from packaged metadata and the required
