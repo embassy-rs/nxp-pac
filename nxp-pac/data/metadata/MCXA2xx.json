@@ -7601,7 +7601,6 @@
       "name": "RTC0",
       "address": "0x400EE000",
       "block": "mcx/a/a2/RTC::RTC",
-      "module": "RTC2xx",
       "signals": []
     },
     {
