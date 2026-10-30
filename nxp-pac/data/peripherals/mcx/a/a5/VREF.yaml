@@ -1,0 +1,85 @@
+# MCXAP172M240F70RM Rev. 1, section 58.6.1.
+# UTRIM.VREFTRIM is factory-loaded and has no fixed reset value.
+# The UTRIM default below represents only known bits, not the factory trim.
+block/Vref:
+  description: Voltage reference. Use 32-bit writes; byte, halfword, and word reads are supported.
+  items:
+  - name: verid
+    byte_offset: 0
+    access: Read
+    fieldset: Verid
+  - name: csr
+    byte_offset: 8
+    fieldset: Csr
+  - name: utrim
+    description: Factory-loaded user trim. Preserve VREFTRIM when changing the output selection.
+    byte_offset: 16
+    fieldset: Utrim
+fieldset/Verid:
+  bit_size: 32
+  reset_value: 16777216
+  fields:
+  - name: feature
+    bit_offset: 0
+    bit_size: 16
+  - name: minor
+    bit_offset: 16
+    bit_size: 8
+  - name: major
+    bit_offset: 24
+    bit_size: 8
+fieldset/Csr:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: hcbgen
+    description: HC bandgap enable. Enable only when IBIAS_EN is set.
+    bit_offset: 0
+    bit_size: 1
+  - name: ibias_en
+    bit_offset: 1
+    bit_size: 1
+  - name: chopen
+    description: Chopping enable. Required when using the internal regulator.
+    bit_offset: 3
+    bit_size: 1
+  - name: icompen
+    description: Current compensation. Must be set for data-sheet performance.
+    bit_offset: 4
+    bit_size: 1
+  - name: regen
+    description: Internal regulator. Must be set for data-sheet performance.
+    bit_offset: 5
+    bit_size: 1
+  - name: refchseln_en
+    bit_offset: 6
+    bit_size: 1
+  - name: refchselp_en
+    bit_offset: 7
+    bit_size: 1
+  - name: hi_pwr_lv
+    description: Buffer21 high-power mode when set, low-power mode when clear.
+    bit_offset: 11
+    bit_size: 1
+  - name: buf21en
+    bit_offset: 16
+    bit_size: 1
+  - name: vrefst
+    description: Read-only stability indication. Valid only with chopping disabled.
+    bit_offset: 31
+    bit_size: 1
+fieldset/Utrim:
+  bit_size: 32
+  reset_value: 1
+  fields:
+  - name: trim2v1
+    description: >-
+      Output voltage selection, reset encoding 1. The manual disagrees on the
+      nominal voltage for encoding 1 (Table 671 says 1.25 V; section 58.6.1.4
+      says 1.2 V). Confirm the voltage with NXP before relying on it.
+    bit_offset: 0
+    bit_size: 4
+  - name: vreftrim
+    description: Factory-loaded unsigned output trim. Reset value is device-specific.
+    bit_offset: 8
+    bit_size: 6

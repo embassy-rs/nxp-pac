@@ -1,0 +1,1252 @@
+# MCXA5: MCXAP172M240F70RM final Rev.1, chapters 42 and 44.
+# XML MCXA577 is supplemental layout only; RM field intervals checked externally.
+# Raw numeric fields preserve legal ranges and independent bit-mask combinations.
+# Field access and W1C/command semantics are documented, not enforced by this raw PAC.
+# reset_value is a generated construction default; unknown reset masks are documented.
+# No chip availability is inferred here; preserve existing instance metadata.
+block/Usbphy:
+  description: 'MCXA5 USB HS PHY. One UTMI+ 16-bit instance; functional only in SD/OD, not MD; CORELDO_VDD_LVL
+    must be >=2. Source conflict: RM 42.8 (text lines 106616-106618) says SCT aliases always read 0, must
+    be write-only, and cannot exist for read-only primaries; RM 42.7.1 maps writable primary aliases as
+    RW and also lists aliases of read-only status registers. Mapped access is retained; no reliable alias
+    readback is inferred.'
+  items:
+  - name: pwd
+    description: Power Down.
+    byte_offset: 0
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Pwd
+  - name: pwd_set
+    description: 'Power Down. Write-one-to-set alias: write a mask, not a stored register value. Avoid
+      read-modify-write; register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618)
+      says SCT aliases always read 0, must be write-only, and cannot exist for read-only primaries; RM
+      42.7.1 maps writable primary aliases as RW and also lists aliases of read-only status registers.
+      Mapped access is retained; no reliable alias readback is inferred.'
+    byte_offset: 4
+    access: ReadWrite
+    bit_size: 32
+    fieldset: PwdMask
+  - name: pwd_clr
+    description: 'Power Down. Write-one-to-clear alias: write a mask, not a stored register value. Avoid
+      read-modify-write; register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618)
+      says SCT aliases always read 0, must be write-only, and cannot exist for read-only primaries; RM
+      42.7.1 maps writable primary aliases as RW and also lists aliases of read-only status registers.
+      Mapped access is retained; no reliable alias readback is inferred.'
+    byte_offset: 8
+    access: ReadWrite
+    bit_size: 32
+    fieldset: PwdMask
+  - name: pwd_tog
+    description: 'Power Down. Write-one-to-toggle alias: write a mask, not a stored register value. Avoid
+      read-modify-write; register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618)
+      says SCT aliases always read 0, must be write-only, and cannot exist for read-only primaries; RM
+      42.7.1 maps writable primary aliases as RW and also lists aliases of read-only status registers.
+      Mapped access is retained; no reliable alias readback is inferred.'
+    byte_offset: 12
+    access: ReadWrite
+    bit_size: 32
+    fieldset: PwdMask
+  - name: tx
+    description: TX Control.
+    byte_offset: 16
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Tx
+  - name: tx_set
+    description: 'TX Control. Write-one-to-set alias: write a mask, not a stored register value. Avoid
+      read-modify-write; register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618)
+      says SCT aliases always read 0, must be write-only, and cannot exist for read-only primaries; RM
+      42.7.1 maps writable primary aliases as RW and also lists aliases of read-only status registers.
+      Mapped access is retained; no reliable alias readback is inferred.'
+    byte_offset: 20
+    access: ReadWrite
+    bit_size: 32
+    fieldset: TxMask
+  - name: tx_clr
+    description: 'TX Control. Write-one-to-clear alias: write a mask, not a stored register value. Avoid
+      read-modify-write; register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618)
+      says SCT aliases always read 0, must be write-only, and cannot exist for read-only primaries; RM
+      42.7.1 maps writable primary aliases as RW and also lists aliases of read-only status registers.
+      Mapped access is retained; no reliable alias readback is inferred.'
+    byte_offset: 24
+    access: ReadWrite
+    bit_size: 32
+    fieldset: TxMask
+  - name: tx_tog
+    description: 'TX Control. Write-one-to-toggle alias: write a mask, not a stored register value. Avoid
+      read-modify-write; register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618)
+      says SCT aliases always read 0, must be write-only, and cannot exist for read-only primaries; RM
+      42.7.1 maps writable primary aliases as RW and also lists aliases of read-only status registers.
+      Mapped access is retained; no reliable alias readback is inferred.'
+    byte_offset: 28
+    access: ReadWrite
+    bit_size: 32
+    fieldset: TxMask
+  - name: rx
+    description: RX Control.
+    byte_offset: 32
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Rx
+  - name: rx_set
+    description: 'RX Control. Write-one-to-set alias: write a mask, not a stored register value. Avoid
+      read-modify-write; register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618)
+      says SCT aliases always read 0, must be write-only, and cannot exist for read-only primaries; RM
+      42.7.1 maps writable primary aliases as RW and also lists aliases of read-only status registers.
+      Mapped access is retained; no reliable alias readback is inferred.'
+    byte_offset: 36
+    access: ReadWrite
+    bit_size: 32
+    fieldset: RxMask
+  - name: rx_clr
+    description: 'RX Control. Write-one-to-clear alias: write a mask, not a stored register value. Avoid
+      read-modify-write; register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618)
+      says SCT aliases always read 0, must be write-only, and cannot exist for read-only primaries; RM
+      42.7.1 maps writable primary aliases as RW and also lists aliases of read-only status registers.
+      Mapped access is retained; no reliable alias readback is inferred.'
+    byte_offset: 40
+    access: ReadWrite
+    bit_size: 32
+    fieldset: RxMask
+  - name: rx_tog
+    description: 'RX Control. Write-one-to-toggle alias: write a mask, not a stored register value. Avoid
+      read-modify-write; register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618)
+      says SCT aliases always read 0, must be write-only, and cannot exist for read-only primaries; RM
+      42.7.1 maps writable primary aliases as RW and also lists aliases of read-only status registers.
+      Mapped access is retained; no reliable alias readback is inferred.'
+    byte_offset: 44
+    access: ReadWrite
+    bit_size: 32
+    fieldset: RxMask
+  - name: ctrl
+    description: General Purpose Control.
+    byte_offset: 48
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Ctrl
+  - name: ctrl_set
+    description: 'General Purpose Control. Write-one-to-set alias: write a mask, not a stored register
+      value. Avoid read-modify-write; register-map RW access is retained. Source conflict: RM 42.8 (text
+      lines 106616-106618) says SCT aliases always read 0, must be write-only, and cannot exist for read-only
+      primaries; RM 42.7.1 maps writable primary aliases as RW and also lists aliases of read-only status
+      registers. Mapped access is retained; no reliable alias readback is inferred.'
+    byte_offset: 52
+    access: ReadWrite
+    bit_size: 32
+    fieldset: CtrlMask
+  - name: ctrl_clr
+    description: 'General Purpose Control. Write-one-to-clear alias: write a mask, not a stored register
+      value. Avoid read-modify-write; register-map RW access is retained. Source conflict: RM 42.8 (text
+      lines 106616-106618) says SCT aliases always read 0, must be write-only, and cannot exist for read-only
+      primaries; RM 42.7.1 maps writable primary aliases as RW and also lists aliases of read-only status
+      registers. Mapped access is retained; no reliable alias readback is inferred.'
+    byte_offset: 56
+    access: ReadWrite
+    bit_size: 32
+    fieldset: CtrlMask
+  - name: ctrl_tog
+    description: 'General Purpose Control. Write-one-to-toggle alias: write a mask, not a stored register
+      value. Avoid read-modify-write; register-map RW access is retained. Source conflict: RM 42.8 (text
+      lines 106616-106618) says SCT aliases always read 0, must be write-only, and cannot exist for read-only
+      primaries; RM 42.7.1 maps writable primary aliases as RW and also lists aliases of read-only status
+      registers. Mapped access is retained; no reliable alias readback is inferred.'
+    byte_offset: 60
+    access: ReadWrite
+    bit_size: 32
+    fieldset: CtrlMask
+  - name: status
+    description: Status.
+    byte_offset: 64
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Status
+  - name: debug0
+    description: Debug 0.
+    byte_offset: 80
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Debug0
+  - name: debug0_set
+    description: 'Debug 0. Write-one-to-set alias: write a mask, not a stored register value. Avoid read-modify-write;
+      register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618) says SCT
+      aliases always read 0, must be write-only, and cannot exist for read-only primaries; RM 42.7.1 maps
+      writable primary aliases as RW and also lists aliases of read-only status registers. Mapped access
+      is retained; no reliable alias readback is inferred.'
+    byte_offset: 84
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Debug0Mask
+  - name: debug0_clr
+    description: 'Debug 0. Write-one-to-clear alias: write a mask, not a stored register value. Avoid
+      read-modify-write; register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618)
+      says SCT aliases always read 0, must be write-only, and cannot exist for read-only primaries; RM
+      42.7.1 maps writable primary aliases as RW and also lists aliases of read-only status registers.
+      Mapped access is retained; no reliable alias readback is inferred.'
+    byte_offset: 88
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Debug0Mask
+  - name: debug0_tog
+    description: 'Debug 0. Write-one-to-toggle alias: write a mask, not a stored register value. Avoid
+      read-modify-write; register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618)
+      says SCT aliases always read 0, must be write-only, and cannot exist for read-only primaries; RM
+      42.7.1 maps writable primary aliases as RW and also lists aliases of read-only status registers.
+      Mapped access is retained; no reliable alias readback is inferred.'
+    byte_offset: 92
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Debug0Mask
+  - name: version
+    description: Version.
+    byte_offset: 128
+    access: Read
+    bit_size: 32
+    fieldset: Version
+  - name: ip
+    description: IP Block.
+    byte_offset: 144
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Ip
+  - name: ip_set
+    description: 'IP Block. Write-one-to-set alias: write a mask, not a stored register value. Avoid read-modify-write;
+      register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618) says SCT
+      aliases always read 0, must be write-only, and cannot exist for read-only primaries; RM 42.7.1 maps
+      writable primary aliases as RW and also lists aliases of read-only status registers. Mapped access
+      is retained; no reliable alias readback is inferred.'
+    byte_offset: 148
+    access: ReadWrite
+    bit_size: 32
+    fieldset: IpMask
+  - name: ip_clr
+    description: 'IP Block. Write-one-to-clear alias: write a mask, not a stored register value. Avoid
+      read-modify-write; register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618)
+      says SCT aliases always read 0, must be write-only, and cannot exist for read-only primaries; RM
+      42.7.1 maps writable primary aliases as RW and also lists aliases of read-only status registers.
+      Mapped access is retained; no reliable alias readback is inferred.'
+    byte_offset: 152
+    access: ReadWrite
+    bit_size: 32
+    fieldset: IpMask
+  - name: ip_tog
+    description: 'IP Block. Write-one-to-toggle alias: write a mask, not a stored register value. Avoid
+      read-modify-write; register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618)
+      says SCT aliases always read 0, must be write-only, and cannot exist for read-only primaries; RM
+      42.7.1 maps writable primary aliases as RW and also lists aliases of read-only status registers.
+      Mapped access is retained; no reliable alias readback is inferred.'
+    byte_offset: 156
+    access: ReadWrite
+    bit_size: 32
+    fieldset: IpMask
+  - name: pll_sic
+    description: PLL SIC.
+    byte_offset: 160
+    access: ReadWrite
+    bit_size: 32
+    fieldset: PllSic
+  - name: pll_sic_set
+    description: 'PLL SIC. Write-one-to-set alias: write a mask, not a stored register value. Avoid read-modify-write;
+      register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618) says SCT
+      aliases always read 0, must be write-only, and cannot exist for read-only primaries; RM 42.7.1 maps
+      writable primary aliases as RW and also lists aliases of read-only status registers. Mapped access
+      is retained; no reliable alias readback is inferred.'
+    byte_offset: 164
+    access: ReadWrite
+    bit_size: 32
+    fieldset: PllSicMask
+  - name: pll_sic_clr
+    description: 'PLL SIC. Write-one-to-clear alias: write a mask, not a stored register value. Avoid
+      read-modify-write; register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618)
+      says SCT aliases always read 0, must be write-only, and cannot exist for read-only primaries; RM
+      42.7.1 maps writable primary aliases as RW and also lists aliases of read-only status registers.
+      Mapped access is retained; no reliable alias readback is inferred.'
+    byte_offset: 168
+    access: ReadWrite
+    bit_size: 32
+    fieldset: PllSicMask
+  - name: pll_sic_tog
+    description: 'PLL SIC. Write-one-to-toggle alias: write a mask, not a stored register value. Avoid
+      read-modify-write; register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618)
+      says SCT aliases always read 0, must be write-only, and cannot exist for read-only primaries; RM
+      42.7.1 maps writable primary aliases as RW and also lists aliases of read-only status registers.
+      Mapped access is retained; no reliable alias readback is inferred.'
+    byte_offset: 172
+    access: ReadWrite
+    bit_size: 32
+    fieldset: PllSicMask
+  - name: usb1_vbus_detect
+    description: VBUS Detect.
+    byte_offset: 192
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Usb1VbusDetect
+  - name: usb1_vbus_detect_set
+    description: 'VBUS Detect. Write-one-to-set alias: write a mask, not a stored register value. Avoid
+      read-modify-write; register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618)
+      says SCT aliases always read 0, must be write-only, and cannot exist for read-only primaries; RM
+      42.7.1 maps writable primary aliases as RW and also lists aliases of read-only status registers.
+      Mapped access is retained; no reliable alias readback is inferred.'
+    byte_offset: 196
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Usb1VbusDetectMask
+  - name: usb1_vbus_detect_clr
+    description: 'VBUS Detect. Write-one-to-clear alias: write a mask, not a stored register value. Avoid
+      read-modify-write; register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618)
+      says SCT aliases always read 0, must be write-only, and cannot exist for read-only primaries; RM
+      42.7.1 maps writable primary aliases as RW and also lists aliases of read-only status registers.
+      Mapped access is retained; no reliable alias readback is inferred.'
+    byte_offset: 200
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Usb1VbusDetectMask
+  - name: usb1_vbus_detect_tog
+    description: 'VBUS Detect. Write-one-to-toggle alias: write a mask, not a stored register value. Avoid
+      read-modify-write; register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618)
+      says SCT aliases always read 0, must be write-only, and cannot exist for read-only primaries; RM
+      42.7.1 maps writable primary aliases as RW and also lists aliases of read-only status registers.
+      Mapped access is retained; no reliable alias readback is inferred.'
+    byte_offset: 204
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Usb1VbusDetectMask
+  - name: usb1_vbus_det_stat
+    description: VBUS Detect Status.
+    byte_offset: 208
+    access: Read
+    bit_size: 32
+    fieldset: Usb1VbusDetStat
+  - name: usb1_vbus_det_stat_set
+    description: 'VBUS Detect Status. Read-only alias; suffix does not make this a writable command. Source
+      conflict: RM 42.8 (text lines 106616-106618) says SCT aliases always read 0, must be write-only,
+      and cannot exist for read-only primaries; RM 42.7.1 maps writable primary aliases as RW and also
+      lists aliases of read-only status registers. Mapped access is retained; no reliable alias readback
+      is inferred.'
+    byte_offset: 212
+    access: Read
+    bit_size: 32
+    fieldset: Usb1VbusDetStat
+  - name: usb1_vbus_det_stat_clr
+    description: 'VBUS Detect Status. Read-only alias; suffix does not make this a writable command. Source
+      conflict: RM 42.8 (text lines 106616-106618) says SCT aliases always read 0, must be write-only,
+      and cannot exist for read-only primaries; RM 42.7.1 maps writable primary aliases as RW and also
+      lists aliases of read-only status registers. Mapped access is retained; no reliable alias readback
+      is inferred.'
+    byte_offset: 216
+    access: Read
+    bit_size: 32
+    fieldset: Usb1VbusDetStat
+  - name: usb1_vbus_det_stat_tog
+    description: 'VBUS Detect Status. Read-only alias; suffix does not make this a writable command. Source
+      conflict: RM 42.8 (text lines 106616-106618) says SCT aliases always read 0, must be write-only,
+      and cannot exist for read-only primaries; RM 42.7.1 maps writable primary aliases as RW and also
+      lists aliases of read-only status registers. Mapped access is retained; no reliable alias readback
+      is inferred.'
+    byte_offset: 220
+    access: Read
+    bit_size: 32
+    fieldset: Usb1VbusDetStat
+  - name: usb1_chrg_detect
+    description: Charger Detect.
+    byte_offset: 224
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Usb1ChrgDetect
+  - name: usb1_chrg_detect_set
+    description: 'Charger Detect. Write-one-to-set alias: write a mask, not a stored register value. Avoid
+      read-modify-write; register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618)
+      says SCT aliases always read 0, must be write-only, and cannot exist for read-only primaries; RM
+      42.7.1 maps writable primary aliases as RW and also lists aliases of read-only status registers.
+      Mapped access is retained; no reliable alias readback is inferred.'
+    byte_offset: 228
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Usb1ChrgDetectMask
+  - name: usb1_chrg_detect_clr
+    description: 'Charger Detect. Write-one-to-clear alias: write a mask, not a stored register value.
+      Avoid read-modify-write; register-map RW access is retained. Source conflict: RM 42.8 (text lines
+      106616-106618) says SCT aliases always read 0, must be write-only, and cannot exist for read-only
+      primaries; RM 42.7.1 maps writable primary aliases as RW and also lists aliases of read-only status
+      registers. Mapped access is retained; no reliable alias readback is inferred.'
+    byte_offset: 232
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Usb1ChrgDetectMask
+  - name: usb1_chrg_detect_tog
+    description: 'Charger Detect. Write-one-to-toggle alias: write a mask, not a stored register value.
+      Avoid read-modify-write; register-map RW access is retained. Source conflict: RM 42.8 (text lines
+      106616-106618) says SCT aliases always read 0, must be write-only, and cannot exist for read-only
+      primaries; RM 42.7.1 maps writable primary aliases as RW and also lists aliases of read-only status
+      registers. Mapped access is retained; no reliable alias readback is inferred.'
+    byte_offset: 236
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Usb1ChrgDetectMask
+  - name: usb1_chrg_det_stat
+    description: Charger Detect Status.
+    byte_offset: 240
+    access: Read
+    bit_size: 32
+    fieldset: Usb1ChrgDetStat
+  - name: usb1_chrg_det_stat_set
+    description: 'Charger Detect Status. Read-only alias; suffix does not make this a writable command.
+      Source conflict: RM 42.8 (text lines 106616-106618) says SCT aliases always read 0, must be write-only,
+      and cannot exist for read-only primaries; RM 42.7.1 maps writable primary aliases as RW and also
+      lists aliases of read-only status registers. Mapped access is retained; no reliable alias readback
+      is inferred.'
+    byte_offset: 244
+    access: Read
+    bit_size: 32
+    fieldset: Usb1ChrgDetStat
+  - name: usb1_chrg_det_stat_clr
+    description: 'Charger Detect Status. Read-only alias; suffix does not make this a writable command.
+      Source conflict: RM 42.8 (text lines 106616-106618) says SCT aliases always read 0, must be write-only,
+      and cannot exist for read-only primaries; RM 42.7.1 maps writable primary aliases as RW and also
+      lists aliases of read-only status registers. Mapped access is retained; no reliable alias readback
+      is inferred.'
+    byte_offset: 248
+    access: Read
+    bit_size: 32
+    fieldset: Usb1ChrgDetStat
+  - name: usb1_chrg_det_stat_tog
+    description: 'Charger Detect Status. Read-only alias; suffix does not make this a writable command.
+      Source conflict: RM 42.8 (text lines 106616-106618) says SCT aliases always read 0, must be write-only,
+      and cannot exist for read-only primaries; RM 42.7.1 maps writable primary aliases as RW and also
+      lists aliases of read-only status registers. Mapped access is retained; no reliable alias readback
+      is inferred.'
+    byte_offset: 252
+    access: Read
+    bit_size: 32
+    fieldset: Usb1ChrgDetStat
+  - name: anactrl
+    description: Analog Control.
+    byte_offset: 256
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Anactrl
+  - name: anactrl_set
+    description: 'Analog Control. Write-one-to-set alias: write a mask, not a stored register value. Avoid
+      read-modify-write; register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618)
+      says SCT aliases always read 0, must be write-only, and cannot exist for read-only primaries; RM
+      42.7.1 maps writable primary aliases as RW and also lists aliases of read-only status registers.
+      Mapped access is retained; no reliable alias readback is inferred.'
+    byte_offset: 260
+    access: ReadWrite
+    bit_size: 32
+    fieldset: AnactrlMask
+  - name: anactrl_clr
+    description: 'Analog Control. Write-one-to-clear alias: write a mask, not a stored register value.
+      Avoid read-modify-write; register-map RW access is retained. Source conflict: RM 42.8 (text lines
+      106616-106618) says SCT aliases always read 0, must be write-only, and cannot exist for read-only
+      primaries; RM 42.7.1 maps writable primary aliases as RW and also lists aliases of read-only status
+      registers. Mapped access is retained; no reliable alias readback is inferred.'
+    byte_offset: 264
+    access: ReadWrite
+    bit_size: 32
+    fieldset: AnactrlMask
+  - name: anactrl_tog
+    description: 'Analog Control. Write-one-to-toggle alias: write a mask, not a stored register value.
+      Avoid read-modify-write; register-map RW access is retained. Source conflict: RM 42.8 (text lines
+      106616-106618) says SCT aliases always read 0, must be write-only, and cannot exist for read-only
+      primaries; RM 42.7.1 maps writable primary aliases as RW and also lists aliases of read-only status
+      registers. Mapped access is retained; no reliable alias readback is inferred.'
+    byte_offset: 268
+    access: ReadWrite
+    bit_size: 32
+    fieldset: AnactrlMask
+  - name: trim_override_en
+    description: Trim.
+    byte_offset: 304
+    access: ReadWrite
+    bit_size: 32
+    fieldset: TrimOverrideEn
+  - name: trim_override_en_set
+    description: 'Trim. Write-one-to-set alias: write a mask, not a stored register value. Avoid read-modify-write;
+      register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618) says SCT
+      aliases always read 0, must be write-only, and cannot exist for read-only primaries; RM 42.7.1 maps
+      writable primary aliases as RW and also lists aliases of read-only status registers. Mapped access
+      is retained; no reliable alias readback is inferred.'
+    byte_offset: 308
+    access: ReadWrite
+    bit_size: 32
+    fieldset: TrimOverrideEnMask
+  - name: trim_override_en_clr
+    description: 'Trim. Write-one-to-clear alias: write a mask, not a stored register value. Avoid read-modify-write;
+      register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618) says SCT
+      aliases always read 0, must be write-only, and cannot exist for read-only primaries; RM 42.7.1 maps
+      writable primary aliases as RW and also lists aliases of read-only status registers. Mapped access
+      is retained; no reliable alias readback is inferred.'
+    byte_offset: 312
+    access: ReadWrite
+    bit_size: 32
+    fieldset: TrimOverrideEnMask
+  - name: trim_override_en_tog
+    description: 'Trim. Write-one-to-toggle alias: write a mask, not a stored register value. Avoid read-modify-write;
+      register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618) says SCT
+      aliases always read 0, must be write-only, and cannot exist for read-only primaries; RM 42.7.1 maps
+      writable primary aliases as RW and also lists aliases of read-only status registers. Mapped access
+      is retained; no reliable alias readback is inferred.'
+    byte_offset: 316
+    access: ReadWrite
+    bit_size: 32
+    fieldset: TrimOverrideEnMask
+  - name: pfda
+    description: PFD A.
+    byte_offset: 320
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Pfda
+  - name: pfda_set
+    description: 'PFD A. Write-one-to-set alias: write a mask, not a stored register value. Avoid read-modify-write;
+      register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618) says SCT
+      aliases always read 0, must be write-only, and cannot exist for read-only primaries; RM 42.7.1 maps
+      writable primary aliases as RW and also lists aliases of read-only status registers. Mapped access
+      is retained; no reliable alias readback is inferred.'
+    byte_offset: 324
+    access: ReadWrite
+    bit_size: 32
+    fieldset: PfdaMask
+  - name: pfda_clr
+    description: 'PFD A. Write-one-to-clear alias: write a mask, not a stored register value. Avoid read-modify-write;
+      register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618) says SCT
+      aliases always read 0, must be write-only, and cannot exist for read-only primaries; RM 42.7.1 maps
+      writable primary aliases as RW and also lists aliases of read-only status registers. Mapped access
+      is retained; no reliable alias readback is inferred.'
+    byte_offset: 328
+    access: ReadWrite
+    bit_size: 32
+    fieldset: PfdaMask
+  - name: pfda_tog
+    description: 'PFD A. Write-one-to-toggle alias: write a mask, not a stored register value. Avoid read-modify-write;
+      register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618) says SCT
+      aliases always read 0, must be write-only, and cannot exist for read-only primaries; RM 42.7.1 maps
+      writable primary aliases as RW and also lists aliases of read-only status registers. Mapped access
+      is retained; no reliable alias readback is inferred.'
+    byte_offset: 332
+    access: ReadWrite
+    bit_size: 32
+    fieldset: PfdaMask
+fieldset/Pwd:
+  description: 'Power Down. F70RM 42.7.2 (text line 103642). '
+  bit_size: 32
+  reset_value: 1973248
+  fields:
+  - name: txpwdfs
+    description: 'Power Down USB FS TX Drivers. Raw encoding: 0b - Provide bias to enable; 1b - Disable
+      or power down.'
+    bit_offset: 10
+    bit_size: 1
+  - name: txpwdibias
+    description: 'Power Down USBPHY TX Current Bias Block. Raw encoding: 0b - Enable; 1b - Disable or
+      power down.'
+    bit_offset: 11
+    bit_size: 1
+  - name: txpwdv2i
+    description: 'Power Down USBPHY TX V-I Converter and Current Mirror. Raw encoding: 0b - Enable; 1b
+      - Disable or power down.'
+    bit_offset: 12
+    bit_size: 1
+  - name: rxpwdenv
+    description: 'Power Down USB HS RX Envelope Detector. Raw encoding: 0b - Enable; 1b - Disable or power
+      down.'
+    bit_offset: 17
+    bit_size: 1
+  - name: rxpwd1pt1
+    description: 'Power Down USB FS Differential Receiver. Raw encoding: 0b - Enable; 1b - Disable or
+      power down.'
+    bit_offset: 18
+    bit_size: 1
+  - name: rxpwddiff
+    description: 'Power Down USB HS Differential Receiver. Raw encoding: 0b - Enable; 1b - Disable or
+      power down.'
+    bit_offset: 19
+    bit_size: 1
+  - name: rxpwdrx
+    description: 'Power Down USBPHY Receiver Circuits. Raw encoding: 0b - Enable; 1b - Disable or power
+      down.'
+    bit_offset: 20
+    bit_size: 1
+fieldset/PwdMask:
+  description: 'PWD SCT command mask. Zero construction default ensures only explicitly selected bits
+    are written. Register-map hardware reset values are not command payload defaults. Source conflict:
+    RM 42.8 (text lines 106616-106618) says SCT aliases always read 0, must be write-only, and cannot
+    exist for read-only primaries; RM 42.7.1 maps writable primary aliases as RW and also lists aliases
+    of read-only status registers. Mapped access is retained; no reliable alias readback is inferred.'
+  extends: Pwd
+  bit_size: 32
+  reset_value: 0
+  fields: []
+fieldset/Tx:
+  description: TX Control. F70RM 42.7.3 (text line 103828). Preserve reserved bits, including 28:26=100b.
+    D_CAL and termination trims are raw 0..15 codes, not a sparse three-value enum. Override selection
+    follows the corresponding TRIM_OVERRIDE_EN control.
+  bit_size: 32
+  reset_value: 268896007
+  fields:
+  - name: d_cal
+    description: 'HS TX Output Current Trim. Raw encoding: 0000b - Maximum current, approximately 19%
+      above nominal; 0111b - Nominal; 1111b - Minimum current, approximately 19% below nominal.'
+    bit_offset: 0
+    bit_size: 4
+  - name: txcal45dn
+    description: DM Series Termination Resistance Trim.
+    bit_offset: 8
+    bit_size: 4
+  - name: txcal45dp
+    description: DP Series Termination Resistance Trim.
+    bit_offset: 16
+    bit_size: 4
+fieldset/TxMask:
+  description: 'TX SCT command mask. Zero construction default ensures only explicitly selected bits are
+    written. Register-map hardware reset values are not command payload defaults. Source conflict: RM
+    42.8 (text lines 106616-106618) says SCT aliases always read 0, must be write-only, and cannot exist
+    for read-only primaries; RM 42.7.1 maps writable primary aliases as RW and also lists aliases of read-only
+    status registers. Mapped access is retained; no reliable alias readback is inferred.'
+  extends: Tx
+  bit_size: 32
+  reset_value: 0
+  fields: []
+fieldset/Rx:
+  description: RX Control. F70RM 42.7.4 (text line 103981). ENVADJ and DISCONADJ legal codes are 0..3;
+    codes 4..7 are reserved.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: envadj
+    description: 'Envelope Detector Trip Point. Raw encoding: 000b - 0.1000 V; 001b - 0.1125 V; 010b -
+      0.1250 V; 011b - 0.0875 V; 1xxb - Reserved.'
+    bit_offset: 0
+    bit_size: 3
+  - name: disconadj
+    description: 'Disconnect Detector Trip Point. Raw encoding: 000b - 0.56875 V; 001b - 0.55000 V; 010b
+      - 0.58125 V; 011b - 0.60000 V; 1xxb - Reserved.'
+    bit_offset: 4
+    bit_size: 3
+fieldset/RxMask:
+  description: 'RX SCT command mask. Zero construction default ensures only explicitly selected bits are
+    written. Register-map hardware reset values are not command payload defaults. Source conflict: RM
+    42.8 (text lines 106616-106618) says SCT aliases always read 0, must be write-only, and cannot exist
+    for read-only primaries; RM 42.7.1 maps writable primary aliases as RW and also lists aliases of read-only
+    status registers. Mapped access is retained; no reliable alias readback is inferred.'
+  extends: Rx
+  bit_size: 32
+  reset_value: 0
+  fields: []
+fieldset/Ctrl:
+  description: General Purpose Control. F70RM 42.7.5 (text line 104092). Mixed control/read-only status
+    and sticky IRQ flags. Clear HOSTDISCONDETECT_IRQ, OTG_ID_CHG_IRQ, DEVPLUGIN_IRQ and WAKEUP_IRQ by
+    writing 1 to CTRL_CLR (SCT clear space), not by a general write. RESUME_IRQ also supports clearing
+    through a general write; RESUMEIRQSTICKY affects its lifetime. SFTRST is released by writing 0, not
+    self-clearing. Do not set CLKGATE together with SFTRST; reset gates clocks automatically. UTMI_SUSPENDM
+    and OTG_ID_VALUE are read-only. Preserve reserved and no-function bits.
+  bit_size: 32
+  reset_value: 3221225472
+  fields:
+  - name: enotg_id_chg_irq
+    description: 'OTG ID Change Interrupt Enable. Raw encoding: 0b - Disable; 1b - Enable.'
+    bit_offset: 0
+    bit_size: 1
+  - name: enhostdiscondetect
+    description: 'Host Disconnect Detection Enable. Raw encoding: 0b - Disable; 1b - Enable.'
+    bit_offset: 1
+    bit_size: 1
+  - name: enirqhostdiscon
+    description: 'Enable Interrupt for Host Disconnect. Raw encoding: 0b - Disable; 1b - Enable.'
+    bit_offset: 2
+    bit_size: 1
+  - name: hostdiscondetect_irq
+    description: 'Host Disconnect Detection Interrupt. Raw encoding: 0b - Connected; 1b - Disconnected.'
+    bit_offset: 3
+    bit_size: 1
+  - name: endevplugindetect
+    description: 'Enable Nonstandard Resistive Plugged-In Detection. Raw encoding: 0b - Disable; 1b -
+      Enable.'
+    bit_offset: 4
+    bit_size: 1
+  - name: devplugin_polarity
+    description: 'Device Plug-In Polarity. Raw encoding: 0b - Plugged in; 1b - Unplugged.'
+    bit_offset: 5
+    bit_size: 1
+  - name: otg_id_chg_irq
+    description: 'OTG ID Change Interrupt. Raw encoding: 0b - No ID change interrupt; 1b - ID change interrupt.'
+    bit_offset: 6
+    bit_size: 1
+  - name: enotgiddetect
+    description: 'Enable Internal OTG ID Detector. Raw encoding: 0b - Disable; 1b - Enable.'
+    bit_offset: 7
+    bit_size: 1
+  - name: resumeirqsticky
+    description: 'Resume Interrupt Sticky. Raw encoding: 0b - During the resume or reset state signaling
+      period; 1b - Until you write 0 to it.'
+    bit_offset: 8
+    bit_size: 1
+  - name: enirqresumedetect
+    description: 'Resume Detection Interrupt Enable. Raw encoding: 0b - Disable; 1b - Enable.'
+    bit_offset: 9
+    bit_size: 1
+  - name: resume_irq
+    description: 'Resume Interrupt. Raw encoding: 0b - No resume interrupt; 1b - Resume interrupt.'
+    bit_offset: 10
+    bit_size: 1
+  - name: enirqdevplugin
+    description: 'Enable Interrupt for Nonstandard Resistive Plugged-In Detection. Raw encoding: 0b -
+      Disable; 1b - Enable.'
+    bit_offset: 11
+    bit_size: 1
+  - name: devplugin_irq
+    description: Device Plug-In Interrupt.
+    bit_offset: 12
+    bit_size: 1
+  - name: data_on_lradc
+    description: APB Clock Switch Option.
+    bit_offset: 13
+    bit_size: 1
+  - name: enutmilevel2
+    description: 'UTMI Level 2 Enable. Raw encoding: 0b - Disable; 1b - Enable.'
+    bit_offset: 14
+    bit_size: 1
+  - name: enutmilevel3
+    description: 'UTMI Level 3 Enable. Raw encoding: 0b - Disable; 1b - Enable.'
+    bit_offset: 15
+    bit_size: 1
+  - name: enirqwakeup
+    description: 'Wake-Up Interrupt Enable. Raw encoding: 0b - Disable; 1b - Enable.'
+    bit_offset: 16
+    bit_size: 1
+  - name: wakeup_irq
+    description: Wake-Up Interrupt.
+    bit_offset: 17
+    bit_size: 1
+  - name: autoresume_en
+    description: 'Autoresume Enable. Raw encoding: 0b - Disable; 1b - Enable.'
+    bit_offset: 18
+    bit_size: 1
+  - name: enautoclr_clkgate
+    description: 'Autoclear Clock Gate Enable. Raw encoding: 0b - Disable; 1b - Enable.'
+    bit_offset: 19
+    bit_size: 1
+  - name: enautoclr_phy_pwd
+    description: 'PHY PWD Autoclear Enable. Raw encoding: 0b - Disable; 1b - Enable.'
+    bit_offset: 20
+    bit_size: 1
+  - name: otg_id_value
+    description: 'OTG ID Value. Read-only status/value; writes do not configure this field. Raw encoding:
+      0b - Host; 1b - Device.'
+    bit_offset: 27
+    bit_size: 1
+  - name: utmi_suspendm
+    description: 'UTMI Suspend. Read-only status/value; writes do not configure this field. Raw encoding:
+      0b - Suspended; 1b - Not suspended.'
+    bit_offset: 29
+    bit_size: 1
+  - name: clkgate
+    description: 'UTMI Clock Gate. Raw encoding: 0b - Run clocks; 1b - Gate clocks.'
+    bit_offset: 30
+    bit_size: 1
+  - name: sftrst
+    description: 'Software Reset. Raw encoding: 0b - Release from reset; 1b - Soft-reset.'
+    bit_offset: 31
+    bit_size: 1
+fieldset/CtrlMask:
+  description: 'CTRL SCT command mask. Zero construction default ensures only explicitly selected bits
+    are written. Register-map hardware reset values are not command payload defaults. Source conflict:
+    RM 42.8 (text lines 106616-106618) says SCT aliases always read 0, must be write-only, and cannot
+    exist for read-only primaries; RM 42.7.1 maps writable primary aliases as RW and also lists aliases
+    of read-only status registers. Mapped access is retained; no reliable alias readback is inferred.'
+  extends: Ctrl
+  bit_size: 32
+  reset_value: 0
+  fields: []
+fieldset/Status:
+  description: 'Status. F70RM 42.7.6 (text line 104459). Known reset mask 0xfffffffe, known value 0; OK_STATUS_3V
+    reset is unknown. Generated reset_value is a construction default, not a fixed supply status. OTGID_STATUS
+    is shown writable in XML but the RM diagram shows no writable field: access remains RW per the map,
+    and software-write behavior is not inferred.'
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: ok_status_3v
+    description: 'USB 3.3 V and 1.8 V Supply Status. Read-only status/value; writes do not configure this
+      field. Raw encoding: 0b - Not powered; 1b - Powered.'
+    bit_offset: 0
+    bit_size: 1
+  - name: hostdiscondetect_status
+    description: 'Host Disconnect Status. Read-only status/value; writes do not configure this field.
+      Raw encoding: 0b - Not detected; 1b - Detected.'
+    bit_offset: 3
+    bit_size: 1
+  - name: devplugin_status
+    description: 'Status Indicator for Nonstandard Resistive Plugged-In Detection. Read-only status/value;
+      writes do not configure this field. Raw encoding: 0b - No attachment detected; 1b - Cable attachment
+      detected.'
+    bit_offset: 6
+    bit_size: 1
+  - name: otgid_status
+    description: 'OTG ID Status. Raw encoding: 0b - Host; 1b - Device.'
+    bit_offset: 8
+    bit_size: 1
+  - name: resume_status
+    description: Resume Status. Read-only status/value; writes do not configure this field.
+    bit_offset: 10
+    bit_size: 1
+fieldset/Debug0:
+  description: 'Debug 0. F70RM 42.7.7 (text line 104589). Preserve reserved reset values. HSTPULLDOWN
+    and ENHSTPULLDOWN are independent DP/DM masks: field bit 1 controls DP and bit 0 DM. Values 0..3 are
+    valid combinations, not a two-state enum. OTGIDPIOLOCK holds the sampled OTG ID (not a security lock).'
+  bit_size: 32
+  reset_value: 2132279296
+  fields:
+  - name: otgidpiolock
+    description: Hold OTG_ID.
+    bit_offset: 0
+    bit_size: 1
+  - name: hstpulldown
+    description: 'Host Pulldown Overdrive Mode. Raw encoding: 00b - Disconnect; 01b - Connect.'
+    bit_offset: 2
+    bit_size: 2
+  - name: enhstpulldown
+    description: 'Enable Host Pulldown Overdrive Mode. Raw encoding: 00b - Disable; 01b - Enable.'
+    bit_offset: 4
+    bit_size: 2
+fieldset/Debug0Mask:
+  description: 'DEBUG0 SCT command mask. Zero construction default ensures only explicitly selected bits
+    are written. Register-map hardware reset values are not command payload defaults. Source conflict:
+    RM 42.8 (text lines 106616-106618) says SCT aliases always read 0, must be write-only, and cannot
+    exist for read-only primaries; RM 42.7.1 maps writable primary aliases as RW and also lists aliases
+    of read-only status registers. Mapped access is retained; no reliable alias readback is inferred.'
+  extends: Debug0
+  bit_size: 32
+  reset_value: 0
+  fields: []
+fieldset/Version:
+  description: 'Version. F70RM 42.7.8 (text line 104763). '
+  bit_size: 32
+  reset_value: 83886080
+  fields:
+  - name: step
+    description: Step. Read-only status/value; writes do not configure this field.
+    bit_offset: 0
+    bit_size: 16
+  - name: minor
+    description: Minor. Read-only status/value; writes do not configure this field.
+    bit_offset: 16
+    bit_size: 8
+  - name: major
+    description: Major. Read-only status/value; writes do not configure this field.
+    bit_offset: 24
+    bit_size: 8
+fieldset/Ip:
+  description: IP Block. F70RM 42.7.9 (text line 104821). Preserve reserved reset values. Do not change
+    POWER_CONTROL_SUSPEND_OPTION without a specific recommendation from NXP.
+  bit_size: 32
+  reset_value: 393216
+  fields:
+  - name: power_control_suspend_option
+    description: Power Control Suspend Option.
+    bit_offset: 0
+    bit_size: 1
+fieldset/IpMask:
+  description: 'IP SCT command mask. Zero construction default ensures only explicitly selected bits are
+    written. Register-map hardware reset values are not command payload defaults. Source conflict: RM
+    42.8 (text lines 106616-106618) says SCT aliases always read 0, must be write-only, and cannot exist
+    for read-only primaries; RM 42.7.1 maps writable primary aliases as RW and also lists aliases of read-only
+    status registers. Mapped access is retained; no reliable alias readback is inferred.'
+  extends: Ip
+  bit_size: 32
+  reset_value: 0
+  fields: []
+fieldset/PllSic:
+  description: PLL SIC. F70RM 42.7.10 (text line 104936). Preserve reserved reset values; PLL_LOCK is
+    read-only. PLL_DIV_SEL legal codes 0,1,2,4,5,6,7 select 32,30,24,20,19.2,16,12 MHz; 3 is unusable
+    for USB and 7 may have marginal jitter. PLL_PREDIV optionally divides reference by 2. Enable regulator
+    at least 15 us before PLL_POWER. Main and multiphase clock outputs require PLL_POWER first.
+  bit_size: 32
+  reset_value: 9510912
+  fields:
+  - name: misc2_control0
+    description: 'Miscellaneous Control. Raw encoding: 0b - Power up PLL; 1b - Power down PLL.'
+    bit_offset: 5
+    bit_size: 1
+  - name: pll_en_usb_clks
+    description: 'PLL Multi-Phase Clock Outputs Enable. Raw encoding: 0b - Disable; 1b - Enable.'
+    bit_offset: 6
+    bit_size: 1
+  - name: pll_power
+    description: 'USB PLL Powerup Control. Raw encoding: 0b - Power down; 1b - Allow powerup.'
+    bit_offset: 12
+    bit_size: 1
+  - name: pll_enable
+    description: 'PLL Output Clock Enable. Raw encoding: 0b - Disable; 1b - Enable.'
+    bit_offset: 13
+    bit_size: 1
+  - name: pll_bypass
+    description: 'Bypass USB PLL. Raw encoding: 0b - 480 MHz output clock; 1b - Input reference clock.'
+    bit_offset: 16
+    bit_size: 1
+  - name: refbias_pwd_sel
+    description: 'Reference Bias Power Control. Raw encoding: 0b - PLL_POWER internal state signal; 1b
+      - REFBIAS_PWD.'
+    bit_offset: 19
+    bit_size: 1
+  - name: refbias_pwd
+    description: 'Power Down Reference Bias. Raw encoding: 0b - Enable; 1b - Disable or power down.'
+    bit_offset: 20
+    bit_size: 1
+  - name: pll_reg_enable
+    description: 'Enable PLL Regulator. Raw encoding: 0b - Disable; 1b - Enable.'
+    bit_offset: 21
+    bit_size: 1
+  - name: pll_div_sel
+    description: 'PLL Divider Value Configuration. Raw encoding: 000b - Configure for a 32 MHz input clock
+      (divide by 15); 001b - Configure for a 30 MHz input clock (divide by 16); 010b - Configure for a
+      24 MHz input clock (divide by 20); 011b - Reserved, not usable for USB operation (divide by 22);
+      100b - Configure for a 20 MHz input clock (divide by 24); 101b - Configure for a 19.2 MHz input
+      clock (divide by 25); 110b - Configure for a 16 MHz input clock (divide by 30); 111b - Configure
+      for a 12 MHz input clock (divide by 40).'
+    bit_offset: 22
+    bit_size: 3
+  - name: pll_prediv
+    description: 'PLL Pre-Divider. Raw encoding: 0b - Uses the undivided reference clock for PLL loop;
+      1b - Divides the reference clock by two for PLL loop.'
+    bit_offset: 30
+    bit_size: 1
+  - name: pll_lock
+    description: 'USB PLL Lock Status Indicator. Read-only status/value; writes do not configure this
+      field. Raw encoding: 0b - Not locked; 1b - Locked.'
+    bit_offset: 31
+    bit_size: 1
+fieldset/PllSicMask:
+  description: 'PLL_SIC SCT command mask. Zero construction default ensures only explicitly selected bits
+    are written. Register-map hardware reset values are not command payload defaults. Source conflict:
+    RM 42.8 (text lines 106616-106618) says SCT aliases always read 0, must be write-only, and cannot
+    exist for read-only primaries; RM 42.7.1 maps writable primary aliases as RW and also lists aliases
+    of read-only status registers. Mapped access is retained; no reliable alias readback is inferred.'
+  extends: PllSic
+  bit_size: 32
+  reset_value: 0
+  fields: []
+fieldset/Usb1VbusDetect:
+  description: 'VBUS Detect. F70RM 42.7.11 (text line 105240). VBUSVALID_PWRUP_CMPS is a three-bit independent
+    enable mask: bit 0 VBUS_VALID, bit 1 session valid, bit 2 VBUS_VALID_3V; all combinations are legal.
+    VBUS_SOURCE_SEL codes 0 comparator, 1 or 2 session-valid, 3 reserved (unlike USBNC.CTRL2). VBUSVALID_THRESH
+    codes 0..7 select 4.0..4.7 V in 0.1 V steps. Override priority is external before local; local ID
+    override prose has contradictory polarity wording, so no additional boolean interpretation is inferred.'
+  bit_size: 32
+  reset_value: 7340036
+  fields:
+  - name: vbusvalid_thresh
+    description: 'VBUS Comparator Threshold. Raw encoding: 000b - 4.0 V; 001b - 4.1 V; 010b - 4.2 V; 011b
+      - 4.3 V; 100b - 4.4 V; 101b - 4.5 V; 110b - 4.6 V; 111b - 4.7 V.'
+    bit_offset: 0
+    bit_size: 3
+  - name: vbus_override_en
+    description: 'VBUS Detect Signal Local Override Enable. Raw encoding: 0b - Results of VBUS_VALID and
+      session valid comparators for VBUS_VALID, AVALID, BVALID,; 1b - Override values for VBUS_VALID,
+      AVALID, BVALID, and SESSEND.'
+    bit_offset: 3
+    bit_size: 1
+  - name: sessend_override
+    description: Override Value for SESSEND.
+    bit_offset: 4
+    bit_size: 1
+  - name: bvalid_override
+    description: Override Value for B-Device Session Valid.
+    bit_offset: 5
+    bit_size: 1
+  - name: avalid_override
+    description: Override Value for A-Device Session Valid.
+    bit_offset: 6
+    bit_size: 1
+  - name: vbusvalid_override
+    description: Override Value for the VBUS_VALID Signal.
+    bit_offset: 7
+    bit_size: 1
+  - name: vbusvalid_sel
+    description: 'VBUS_VALID Selection. Raw encoding: 0b - VBUS_VALID comparator result; 1b - VBUS_VALID_3V
+      comparator result.'
+    bit_offset: 8
+    bit_size: 1
+  - name: vbus_source_sel
+    description: 'VBUS_VALID Source Selection. Raw encoding: 00b - VBUS_VALID comparator result; 01b -
+      Session valid comparator result; 10b - Session valid comparator result; 11b - Reserved.'
+    bit_offset: 9
+    bit_size: 2
+  - name: id_override_en
+    description: 'Enable Local ID Pin Status Override. Raw encoding: 0b - Use ID pin detector or external
+      override; 1b - Allow local override of ID pin detection status.'
+    bit_offset: 11
+    bit_size: 1
+  - name: id_override
+    description: ID Pin Status Local Override.
+    bit_offset: 12
+    bit_size: 1
+  - name: ext_id_override_en
+    description: 'External ID Override Enable. Raw encoding: 0b - Internal detector or local override;
+      1b - External ID signal value.'
+    bit_offset: 13
+    bit_size: 1
+  - name: ext_vbus_override_en
+    description: 'External VBUS Override Enable. Raw encoding: 0b - Internal detector or local override;
+      1b - External VBUS_VALID value.'
+    bit_offset: 14
+    bit_size: 1
+  - name: vbusvalid_to_b
+    description: 'VBUS_VALID Comparator Selection. Raw encoding: 0b - VBUS_VALID comparator; 1b - Session
+      valid detector.'
+    bit_offset: 18
+    bit_size: 1
+  - name: vbusvalid_pwrup_cmps
+    description: 'VBUS_VALID Comparator Enable. Raw encoding: 0xxb - Disable or power down the VBUS_VALID_3V
+      detector; 1xxb - Enable the VBUS_VALID_3V detector; x0xb - Disable or power down the session valid
+      detector; x1xb - Enable the session valid detector; xx0b - Disable or power down the VBUS_VALID
+      comparator; xx1b - Enable the VBUS_VALID comparator.'
+    bit_offset: 20
+    bit_size: 3
+  - name: discharge_vbus
+    description: 'VBUS Discharge Resistor. Raw encoding: 0b - Disable; 1b - Enable.'
+    bit_offset: 26
+    bit_size: 1
+fieldset/Usb1VbusDetectMask:
+  description: 'USB1_VBUS_DETECT SCT command mask. Zero construction default ensures only explicitly selected
+    bits are written. Register-map hardware reset values are not command payload defaults. Source conflict:
+    RM 42.8 (text lines 106616-106618) says SCT aliases always read 0, must be write-only, and cannot
+    exist for read-only primaries; RM 42.7.1 maps writable primary aliases as RW and also lists aliases
+    of read-only status registers. Mapped access is retained; no reliable alias readback is inferred.'
+  extends: Usb1VbusDetect
+  bit_size: 32
+  reset_value: 0
+  fields: []
+fieldset/Usb1VbusDetStat:
+  description: VBUS Detect Status. F70RM 42.7.12 (text line 105578). Read-only, including its SET/CLR/TOG
+    address aliases. SESSEND is the inverse session-valid result; RM prose says both below/above and the
+    encoding table states 0 above, 1 below. That source conflict is retained explicitly; no voltage-named
+    enum is supplied.
+  bit_size: 32
+  reset_value: 1
+  fields:
+  - name: sessend
+    description: 'Session End Indicator. Read-only status/value; writes do not configure this field. Raw
+      encoding: 0b - Above threshold; 1b - Below threshold.'
+    bit_offset: 0
+    bit_size: 1
+  - name: bvalid
+    description: 'B-Device Session Valid Status. Read-only status/value; writes do not configure this
+      field. Raw encoding: 0b - Below threshold; 1b - Above threshold.'
+    bit_offset: 1
+    bit_size: 1
+  - name: avalid
+    description: 'A-Device Session Valid Status. Read-only status/value; writes do not configure this
+      field. Raw encoding: 0b - Below threshold; 1b - Above threshold.'
+    bit_offset: 2
+    bit_size: 1
+  - name: vbus_valid
+    description: 'VBUS Voltage Status. Read-only status/value; writes do not configure this field. Raw
+      encoding: 0b - Below threshold; 1b - Above threshold.'
+    bit_offset: 3
+    bit_size: 1
+  - name: vbus_valid_3v
+    description: 'VBUS_VALID_3V Detector Status. Read-only status/value; writes do not configure this
+      field. Raw encoding: 0b - Below threshold; 1b - Above threshold.'
+    bit_offset: 4
+    bit_size: 1
+  - name: ext_id
+    description: OTG ID External Override Status. Read-only status/value; writes do not configure this
+      field.
+    bit_offset: 5
+    bit_size: 1
+fieldset/Usb1ChrgDetect:
+  description: Charger Detect. F70RM 42.7.13 (text line 105740). DCDSEL selects manual PHY control (0)
+    or USBHSDCD state machines (1). Disable charger detection before normal USB communication. EN_B and
+    CHK_CHRG_B are active-low enables; CHK_CONTACT and DETECT_SEC are active-high. PULLUP_DP must remain
+    0 for normal USB and BC 1.2.
+  bit_size: 32
+  reset_value: 2149056512
+  fields:
+  - name: detect_sec
+    description: 'Secondary Detection Function Enable. Raw encoding: 0b - Disable; 1b - Enable.'
+    bit_offset: 1
+    bit_size: 1
+  - name: pullup_dp
+    description: 'DP Pullup Resistor Enable Override Control. Raw encoding: 0b - Disable; 1b - Enable.'
+    bit_offset: 2
+    bit_size: 1
+  - name: vdm_src_enable
+    description: 'VDM_SRC Function Enable. Raw encoding: 0b - Disable; 1b - Enable.'
+    bit_offset: 4
+    bit_size: 1
+  - name: chk_contact
+    description: 'BC Data Contact Detect Function Enable. Raw encoding: 0b - Disable; 1b - Enable.'
+    bit_offset: 18
+    bit_size: 1
+  - name: chk_chrg_b
+    description: 'BC Charger Detection Function Enable. Raw encoding: 0b - Enable; 1b - Disable.'
+    bit_offset: 19
+    bit_size: 1
+  - name: en_b
+    description: 'Selection of BC v1.2 Function Enable. Raw encoding: 0b - Enable; 1b - Disable.'
+    bit_offset: 20
+    bit_size: 1
+  - name: dcdsel
+    description: 'DCD Selection. Raw encoding: 0b - Fields in USB1_CHRG_DETECT; 1b - Fields and state
+      machines in the USBHSDCD module.'
+    bit_offset: 31
+    bit_size: 1
+fieldset/Usb1ChrgDetectMask:
+  description: 'USB1_CHRG_DETECT SCT command mask. Zero construction default ensures only explicitly selected
+    bits are written. Register-map hardware reset values are not command payload defaults. Source conflict:
+    RM 42.8 (text lines 106616-106618) says SCT aliases always read 0, must be write-only, and cannot
+    exist for read-only primaries; RM 42.7.1 maps writable primary aliases as RW and also lists aliases
+    of read-only status registers. Mapped access is retained; no reliable alias readback is inferred.'
+  extends: Usb1ChrgDetect
+  bit_size: 32
+  reset_value: 0
+  fields: []
+fieldset/Usb1ChrgDetStat:
+  description: Charger Detect Status. F70RM 42.7.14 (text line 105955). Read-only, including its SET/CLR/TOG
+    address aliases.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: plug_contact
+    description: 'Battery Charging Data Contact Detection Phase Output. Read-only status/value; writes
+      do not configure this field. Raw encoding: 0b - Not detected; 1b - Detected.'
+    bit_offset: 0
+    bit_size: 1
+  - name: chrg_detected
+    description: 'Battery Charging Primary Detection Phase Output. Read-only status/value; writes do not
+      configure this field. Raw encoding: 0b - SDP detected; 1b - Charging port detected.'
+    bit_offset: 1
+    bit_size: 1
+  - name: dm_state
+    description: 'DM Voltage. Read-only status/value; writes do not configure this field. Raw encoding:
+      0b - USB_DM pin voltage is ≤ 0.8 V; 1b - USB_DM pin voltage is ≥ 2.0 V.'
+    bit_offset: 2
+    bit_size: 1
+  - name: dp_state
+    description: 'DP Voltage. Read-only status/value; writes do not configure this field. Raw encoding:
+      0b - USB_DP pin voltage is ≤ 0.8 V; 1b - USB_DP pin voltage is ≥ 2.0 V.'
+    bit_offset: 3
+    bit_size: 1
+  - name: secdet_dcp
+    description: 'Battery Charging Secondary Detection Phase Output. Read-only status/value; writes do
+      not configure this field. Raw encoding: 0b - CDP detected; 1b - DCP detected.'
+    bit_offset: 4
+    bit_size: 1
+fieldset/Anactrl:
+  description: Analog Control. F70RM 42.7.15 (text line 106070). Preserve reserved values, including bit
+    25=1. DEV_PULLDOWN unconditionally enables both 15 kohm pulldowns and must be 0 during normal Device-mode
+    communication and USBHSDCD detection. LVI_EN must be 1 for CLN40ULP PHY. PFD_CLK_SEL codes 0 reference
+    clock, 1 pfd/4, 2 pfd/2, 3 pfd.
+  bit_size: 32
+  reset_value: 33555456
+  fields:
+  - name: lvi_en
+    description: 'Internal Low Voltage Detector Enable. Raw encoding: 0b - Disable; 1b - Enable.'
+    bit_offset: 1
+    bit_size: 1
+  - name: pfd_clk_sel
+    description: 'PFD Clock Selection. Raw encoding: 00b - USB1PFDCLK = USB PLL reference clock; 01b -
+      USB1PFDCLK = pfd_clk ÷ 4; 10b - USB1PFDCLK frequency = pfd_clk ÷ 2; 11b - USB1PFDCLK = pfd_clk.'
+    bit_offset: 2
+    bit_size: 2
+  - name: dev_pulldown
+    description: 'Device Pulldown Enable. Raw encoding: 0b - Disable; 1b - Enable.'
+    bit_offset: 10
+    bit_size: 1
+fieldset/AnactrlMask:
+  description: 'ANACTRL SCT command mask. Zero construction default ensures only explicitly selected bits
+    are written. Register-map hardware reset values are not command payload defaults. Source conflict:
+    RM 42.8 (text lines 106616-106618) says SCT aliases always read 0, must be write-only, and cannot
+    exist for read-only primaries; RM 42.7.1 maps writable primary aliases as RW and also lists aliases
+    of read-only status registers. Mapped access is retained; no reliable alias readback is inferred.'
+  extends: Anactrl
+  bit_size: 32
+  reset_value: 0
+  fields: []
+fieldset/TrimOverrideEn:
+  description: Trim. F70RM 42.7.16 (text line 106288). Known reset mask 0x0000007f, known value 0x7f;
+    bits 31:7 (including factory/external trim values and reserved bits) are unknown. Generated reset_value
+    contains only known bits, not factory trim. Upper trim fields are read-only. Override-control encoding
+    tables specify 0 external/nonvolatile settings, 1 TX/PLL_SIC settings. Several upper-field paragraphs
+    reverse this selection or describe self-selection, conflicting with those tables and the TX/PLL_SIC
+    descriptions; no alternative polarity is guessed.
+  bit_size: 32
+  reset_value: 127
+  fields:
+  - name: div_sel_override
+    description: 'Override Enable for PLL Divider Value. Raw encoding: 0b - TRIM_OVERRIDE_EN; 1b - PLL_SIC.'
+    bit_offset: 0
+    bit_size: 1
+  - name: tx_d_cal_override
+    description: 'Override Enable for HS TX Output Current Trim. Raw encoding: 0b - TRIM_OVERRIDE_EN;
+      1b - TX.'
+    bit_offset: 2
+    bit_size: 1
+  - name: tx_cal45dp_override
+    description: 'Override Enable for USB_DP Series Termination Trim. Raw encoding: 0b - TRIM_OVERRIDE_EN;
+      1b - TX.'
+    bit_offset: 3
+    bit_size: 1
+  - name: tx_cal45dm_override
+    description: 'Override Enable for USB_DM Series Termination Trim. Raw encoding: 0b - TRIM_OVERRIDE_EN;
+      1b - TX.'
+    bit_offset: 4
+    bit_size: 1
+  - name: pll_ctrl0_div_sel
+    description: PLL Divider Value Configuration Bits from Outside USBPHY. Read-only status/value; writes
+      do not configure this field.
+    bit_offset: 15
+    bit_size: 3
+  - name: usbphy_tx_d_cal
+    description: 'HS TX Output Current Trim Bits from Outside USBPHY. Read-only status/value; writes do
+      not configure this field. Raw encoding: 0000b - Maximum current, approximately 19% above nominal;
+      0111b - Nominal; 1111b - Minimum current, approximately 19% below nominal.'
+    bit_offset: 20
+    bit_size: 4
+  - name: usbphy_tx_cal45dp
+    description: DP Series Termination Resistance Trim Bits from Outside USBPHY. Read-only status/value;
+      writes do not configure this field.
+    bit_offset: 24
+    bit_size: 4
+  - name: usbphy_tx_cal45dn
+    description: DM Series Termination Resistance Trim Bits from Outside USBPHY. Read-only status/value;
+      writes do not configure this field.
+    bit_offset: 28
+    bit_size: 4
+fieldset/TrimOverrideEnMask:
+  description: 'TRIM_OVERRIDE_EN SCT command mask. Zero construction default ensures only explicitly selected
+    bits are written. Register-map hardware reset values are not command payload defaults. Source conflict:
+    RM 42.8 (text lines 106616-106618) says SCT aliases always read 0, must be write-only, and cannot
+    exist for read-only primaries; RM 42.7.1 maps writable primary aliases as RW and also lists aliases
+    of read-only status registers. Mapped access is retained; no reliable alias readback is inferred.'
+  extends: TrimOverrideEn
+  bit_size: 32
+  reset_value: 0
+  fields: []
+fieldset/Pfda:
+  description: 'PFD A. F70RM 42.7.17 (text line 106514). Source conflict: six-bit PFD0_FRAC and frequency
+    formula specify n=18..35, but the RM legal-range sentence gives 12-bit values 0x26a..0x27b that cannot
+    fit. Expose raw numeric bits without inventing a corrected range enum. PFD0_CLKGATE=1 gates the output;
+    writing the fractional value toggles pfd_update.'
+  bit_size: 32
+  reset_value: 16843009
+  fields:
+  - name: pfd0_clkgate
+    description: 'PFD0 Clock Gate. Raw encoding: 0b - Enable; 1b - Disable.'
+    bit_offset: 0
+    bit_size: 1
+  - name: pfd0_frac
+    description: PFD0 Fractional Divider.
+    bit_offset: 1
+    bit_size: 6
+fieldset/PfdaMask:
+  description: 'PFDA SCT command mask. Zero construction default ensures only explicitly selected bits
+    are written. Register-map hardware reset values are not command payload defaults. Source conflict:
+    RM 42.8 (text lines 106616-106618) says SCT aliases always read 0, must be write-only, and cannot
+    exist for read-only primaries; RM 42.7.1 maps writable primary aliases as RW and also lists aliases
+    of read-only status registers. Mapped access is retained; no reliable alias readback is inferred.'
+  extends: Pfda
+  bit_size: 32
+  reset_value: 0
+  fields: []

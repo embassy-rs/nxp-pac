@@ -133,7 +133,8 @@ block/Adc:
   - name: cv
     description: Compare Value Register.
     array:
-      len: 15
+      # FS3RM Rev. 7, section 40.6.20: CV1 through CV7, indexed from zero.
+      len: 7
       stride: 4
     byte_offset: 512
     fieldset: Cv

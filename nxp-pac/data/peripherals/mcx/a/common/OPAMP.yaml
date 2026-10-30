@@ -1,0 +1,74 @@
+# MCXAP144M240F61RM Rev. 2, section 48.5.1.
+block/Opamp:
+  description: Operational amplifier.
+  items:
+  - name: verid
+    byte_offset: 0
+    access: Read
+    fieldset: Verid
+  - name: param
+    byte_offset: 4
+    access: Read
+    fieldset: Param
+  - name: opamp_ctrl
+    byte_offset: 8
+    fieldset: OpampCtrl
+fieldset/Verid:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: feature
+    bit_offset: 0
+    bit_size: 16
+  - name: minor
+    bit_offset: 16
+    bit_size: 8
+  - name: major
+    bit_offset: 24
+    bit_size: 8
+fieldset/Param:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: param
+    bit_offset: 0
+    bit_size: 32
+fieldset/OpampCtrl:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: opa_en
+    bit_offset: 0
+    bit_size: 1
+  - name: opa_cc_sel
+    description: Compensation capacitor selection for the external feedback gain.
+    bit_offset: 4
+    bit_size: 2
+    enum: OpaCcSel
+  - name: opa_bc_sel
+    description: Bias current and power consumption selection.
+    bit_offset: 6
+    bit_size: 2
+    enum: OpaBcSel
+enum/OpaCcSel:
+  bit_size: 2
+  variants:
+  - name: Gain2
+    value: 0
+  - name: Gain4
+    value: 1
+  - name: Gain8
+    value: 2
+  - name: Gain16
+    value: 3
+enum/OpaBcSel:
+  bit_size: 2
+  variants:
+  - name: Default
+    value: 0
+  - name: Quarter
+    value: 1
+  - name: Half
+    value: 2
+  - name: ThreeHalves
+    value: 3

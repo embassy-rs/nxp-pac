@@ -1,0 +1,1507 @@
+# MCXAP172M240F70RM final Rev. 1, chapter 54.
+# Reset annotations are software Default values, not hardware observations; no unknown reset bits in the mapped tables.
+block/TenbasetPhy:
+  description: 'MCX-A5 10BASE-T1S digital PHY at 0x4002d000 (XML T1S0; metadata _10BASE_T1S0). All registers and
+    fieldset storage are 16-bit. No analog PMD, driver or protocol state machine is implemented here. Fixed 10 Mbit/s
+    half duplex. Read-only subfields are documented, not enforced within writable fieldsets. PHYSTAT is clear-on-read;
+    interrupt capture and diagnostic flags are write-one-to-clear. PLCADIAG3/4 counters clear by writing all zeros,
+    not ones. Interrupt enable set/clear registers are aliases. PCSDIAG1/2 and PLCARECST are ordinary read-only
+    values: chapter 54 does not specify read-clear behavior. Numeric fields are raw to preserve legal ranges and
+    reserved holes; do not treat multibit values as booleans. reset_value supplies software Default from the manual
+    reset tables, not observed hardware; live flags can change after reset release.'
+  only_in: ^MCXA(536|537|566|567|577)$
+  items:
+  - name: phyctrl
+    description: PHY control. RESET is the soft-reset command (the manual says write clears bits). SPD1/SPD0 and
+      DUPLX are fixed read-only indicators (10 Mbit/s, half duplex).
+    byte_offset: 0
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Phyctrl
+  - name: phystat
+    description: PHY status. LJAB and RJAB are clear-on-read; reads are destructive.
+    byte_offset: 2
+    bit_size: 16
+    access: Read
+    fieldset: Phystat
+  - name: phyid0
+    description: PHY Identifier0.
+    byte_offset: 4
+    bit_size: 16
+    access: Read
+    fieldset: Phyid0
+  - name: phyid1
+    description: PHY Identifier1.
+    byte_offset: 6
+    bit_size: 16
+    access: Read
+    fieldset: Phyid1
+  - name: base1ext
+    description: PHY BASE-T1 Extended.
+    byte_offset: 68
+    bit_size: 16
+    access: Read
+    fieldset: Base1Ext
+  - name: pmapmdctrl
+    description: PMA/PMD Control.
+    byte_offset: 104
+    bit_size: 16
+    access: Read
+    fieldset: Pmapmdctrl
+  - name: pmactrl
+    description: PMA CTRL.
+    byte_offset: 146
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Pmactrl
+  - name: pmastat
+    description: PMA Status.
+    byte_offset: 148
+    bit_size: 16
+    access: Read
+    fieldset: Pmastat
+  - name: pmatm
+    description: PMA Test Mode.
+    byte_offset: 150
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Pmatm
+  - name: pcsctrl
+    description: PCS Control.
+    byte_offset: 166
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Pcsctrl
+  - name: pcsstat
+    description: PCS Status.
+    byte_offset: 168
+    bit_size: 16
+    access: Read
+    fieldset: Pcsstat
+  - name: pcsdiag1
+    description: PCS Remote Jabber Counter.
+    byte_offset: 170
+    bit_size: 16
+    access: Read
+    fieldset: Pcsdiag1
+  - name: pcsdiag2
+    description: PCS Physical Collisions Counter.
+    byte_offset: 172
+    bit_size: 16
+    access: Read
+    fieldset: Pcsdiag2
+  - name: plcaidver
+    description: PLCA Identification and Version.
+    byte_offset: 192
+    bit_size: 16
+    access: Read
+    fieldset: Plcaidver
+  - name: plcactrl0
+    description: PLCA Control0.
+    byte_offset: 194
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Plcactrl0
+  - name: plcactrl1
+    description: PLCA Control1.
+    byte_offset: 196
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Plcactrl1
+  - name: plcastat
+    description: PLCA Status.
+    byte_offset: 198
+    bit_size: 16
+    access: Read
+    fieldset: Plcastat
+  - name: plcatotmr
+    description: PLCA Transmit Opportunity Timer.
+    byte_offset: 200
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Plcatotmr
+  - name: plcaburst
+    description: PLCA Burst Mode Configuration.
+    byte_offset: 202
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Plcaburst
+  - name: plcarecst
+    description: PLCA Status.
+    byte_offset: 204
+    bit_size: 16
+    access: Read
+    fieldset: Plcarecst
+  - name: modectrl
+    description: MODE Control.
+    byte_offset: 256
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Modectrl
+  - name: modecfg
+    description: Mode Configuration.
+    byte_offset: 258
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Modecfg
+  - name: modestat
+    description: Mode Status.
+    byte_offset: 260
+    bit_size: 16
+    access: Read
+    fieldset: Modestat
+  - name: wkctrl
+    description: Wake Control.
+    byte_offset: 288
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Wkctrl
+  - name: wkcfg
+    description: Wake Configuration.
+    byte_offset: 290
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Wkcfg
+  - name: wupctrl
+    description: Wake Control.
+    byte_offset: 294
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Wupctrl
+  - name: wupcfg
+    description: Wakeup Configuration.
+    byte_offset: 296
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Wupcfg
+  - name: wupstat
+    description: Wakeup Status.
+    byte_offset: 298
+    bit_size: 16
+    access: Read
+    fieldset: Wupstat
+  - name: smidata
+    description: SMI Frame DATA.
+    byte_offset: 320
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Smidata
+  - name: smictrl
+    description: SMI Control. In TXCCFG mode, every write to SMICTRL triggers an SMI transaction. Check SMISTAT[READY]
+      before starting an access. For write transactions, stage SMIDATA first. Prepare the complete control word
+      (ST, OP, PA, RA and TA) before issuing one register write; separate field writes can trigger unintended intermediate
+      transactions. See section 54.4.2, manual lines 171146-171160.
+    byte_offset: 322
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Smictrl
+  - name: smicfg
+    description: SMI Configuration.
+    byte_offset: 324
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Smicfg
+  - name: smistat
+    description: SMI Status.
+    byte_offset: 326
+    bit_size: 16
+    access: Read
+    fieldset: Smistat
+  - name: intencapt1
+    description: Interrupt Capture1. Captured interrupt flags are write-one-to-clear; write only intended acknowledgement
+      bits.
+    byte_offset: 352
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Intencapt1
+  - name: intenset1
+    description: 'Interrupt Enable Set1. Set alias for interrupt enable state: writing one enables the corresponding
+      interrupt; zero has no effect.'
+    byte_offset: 354
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Intenset1
+  - name: intenclr1
+    description: 'Interrupt Enable Clear1. Clear alias for interrupt enable state: writing one disables the corresponding
+      interrupt; zero has no effect.'
+    byte_offset: 356
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Intenclr1
+  - name: intstat1
+    description: Interrupt Status1.
+    byte_offset: 358
+    bit_size: 16
+    access: Read
+    fieldset: Intstat1
+  - name: intencapt2
+    description: Interrupt Capture2. Captured interrupt flags are write-one-to-clear; write only intended acknowledgement
+      bits.
+    byte_offset: 368
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Intencapt2
+  - name: intenset2
+    description: 'Interrupt Enable Set1. Set alias for interrupt enable state: writing one enables the corresponding
+      interrupt; zero has no effect.'
+    byte_offset: 370
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Intenset2
+  - name: intenclr2
+    description: 'Interrupt Enable Clear2. Clear alias for interrupt enable state: writing one disables the corresponding
+      interrupt; zero has no effect.'
+    byte_offset: 372
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Intenclr2
+  - name: intstat2
+    description: Interrupt Status2.
+    byte_offset: 374
+    bit_size: 16
+    access: Read
+    fieldset: Intstat2
+  - name: plcadiag1
+    description: PLCA TC14 Adv diagnostics. Diagnostic flags are write-one-to-clear.
+    byte_offset: 416
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Plcadiag1
+  - name: plcadiag2
+    description: PLCA NXP prop diagnostics. Diagnostic flags are write-one-to-clear.
+    byte_offset: 418
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Plcadiag2
+  - name: plcadiag3
+    description: PLCA Beacon Counter Diagnostics. Write all zeros to clear the receive-beacon counter; this is not
+      write-one-to-clear.
+    byte_offset: 420
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Plcadiag3
+  - name: plcadiag4
+    description: PLCA TO Counter Diagnostics. Write all zeros to clear the transmit-opportunity counter; this is
+      not write-one-to-clear.
+    byte_offset: 422
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Plcadiag4
+  - name: txcdiag
+    description: Transceiver Diagnostics. Diagnostic flags are write-one-to-clear; live flags can change after reset
+      release.
+    byte_offset: 424
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Txcdiag
+  - name: mskplcadiag1
+    description: Mask Control PLCADIAG1 Flag.
+    byte_offset: 432
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Mskplcadiag1
+  - name: mskplcadiag2
+    description: Mask Control PLCADIAG2 Flags.
+    byte_offset: 434
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Mskplcadiag2
+  - name: msktxcdiag
+    description: Mask Control TXCDIAG Flag.
+    byte_offset: 436
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Msktxcdiag
+  - name: accessctrl
+    description: Global Access Control. ACCESS gates APB writes to the static registers listed in section 54.5.1;
+      this is a PHY configuration gate, not security provisioning.
+    byte_offset: 480
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Accessctrl
+  - name: dbgctrl
+    description: Debug Control.
+    byte_offset: 482
+    bit_size: 16
+    access: ReadWrite
+    fieldset: Dbgctrl
+  - name: version
+    description: Version Information.
+    byte_offset: 510
+    bit_size: 16
+    access: Read
+    fieldset: Version
+fieldset/Phyctrl:
+  description: F70RM Rev. 1 section 54.5.1.2; manual text line 171350.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: spd1
+    description: Read-only. Speed Selection1. Msb of Speed Selection (fixed 10Mbps)
+    bit_offset: 6
+    bit_size: 1
+  - name: ctest
+    description: Collision Test.
+    bit_offset: 7
+    bit_size: 1
+  - name: duplx
+    description: Read-only. Duplex Mode. Duplex mode (fixed to half-duplex)
+    bit_offset: 8
+    bit_size: 1
+  - name: spd0
+    description: Read-only. Speed Selection0. Lsb of Speed Selection (fixed 10Mbps)
+    bit_offset: 13
+    bit_size: 1
+  - name: reset
+    description: RESET. Soft reset Write clears bits.
+    bit_offset: 15
+    bit_size: 1
+fieldset/Phystat:
+  description: F70RM Rev. 1 section 54.5.1.3; manual text line 171420.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: ljab
+    description: Read-only. Local Jabber. Local jabber event. Cleared by read-access
+    bit_offset: 1
+    bit_size: 1
+  - name: rjab
+    description: Read-only. Remote Jabber. Remote jabber event. Cleared by read-access
+    bit_offset: 4
+    bit_size: 1
+fieldset/Phyid0:
+  description: F70RM Rev. 1 section 54.5.1.4; manual text line 171478.
+  bit_size: 16
+  reset_value: 27
+  fields:
+  - name: oui_03_18
+    description: Read-only. Organizationally Unique Identifier. Map to bit 3-18 of the Organizationally Unique Identifier
+    bit_offset: 0
+    bit_size: 16
+fieldset/Phyid1:
+  description: F70RM Rev. 1 section 54.5.1.5; manual text line 171521.
+  bit_size: 16
+  reset_value: 45120
+  fields:
+  - name: icrevision
+    description: Read-only. IC Model Revision.
+    bit_offset: 0
+    bit_size: 4
+  - name: icmodel
+    description: Read-only. IC Model Identifier.
+    bit_offset: 4
+    bit_size: 6
+  - name: oui_19_24
+    description: Read-only. Organizationally Unique Identifier. Map to bit 19-24 of the Organizationally Unique
+      Identifier
+    bit_offset: 10
+    bit_size: 6
+fieldset/Base1Ext:
+  description: F70RM Rev. 1 section 54.5.1.6; manual text line 171572.
+  bit_size: 16
+  reset_value: 8
+  fields:
+  - name: baset1ext_bit
+    description: Read-only. Capability Info.
+    bit_offset: 0
+    bit_size: 16
+fieldset/Pmapmdctrl:
+  description: F70RM Rev. 1 section 54.5.1.7; manual text line 171609.
+  bit_size: 16
+  reset_value: 3
+  fields:
+  - name: type_
+    description: 'TYPE: Read-only. Type. Fixed to node type 10BT1S 0000b - CBT1. 100BASE-T1 0001b - MBT1. 1000BASE-T1
+      0010b - XBT1L. 10BASE-T1L 0011b - XBT1S. 10BASE-T1S'
+    bit_offset: 0
+    bit_size: 4
+fieldset/Pmactrl:
+  description: F70RM Rev. 1 section 54.5.1.8; manual text line 171660.
+  bit_size: 16
+  reset_value: 33792
+  fields:
+  - name: loop_
+    description: 'LOOP: Loop. 0b - Disabled 1b - Enabled'
+    bit_offset: 0
+    bit_size: 1
+  - name: mult
+    description: Read-only. Multidrop Configuration. Read-only bit returning 1'b1 indicating multidrop is always
+      enabled.
+    bit_offset: 10
+    bit_size: 1
+  - name: txdis
+    description: Transmission Disable. 0b - Disabled 1b - Enabled
+    bit_offset: 14
+    bit_size: 1
+  - name: rst
+    description: Reset. Reset the PMA and PCS layers
+    bit_offset: 15
+    bit_size: 1
+fieldset/Pmastat:
+  description: F70RM Rev. 1 section 54.5.1.9; manual text line 171731.
+  bit_size: 16
+  reset_value: 11776
+  fields:
+  - name: rjab
+    description: Read-only. RJAB Alias. Receive fault detected. Alias of the RJAB status bit in the STATUS
+    bit_offset: 1
+    bit_size: 1
+  - name: rflta
+    description: Read-only. Receive Fault Advertises. Advertises support for detecting receive faults
+    bit_offset: 9
+    bit_size: 1
+  - name: multa
+    description: Read-only. Multidrop Advertises. Advertises support for half-duplex multidrop operation
+    bit_offset: 10
+    bit_size: 1
+  - name: lpwa
+    description: Read-only. Low Power Advertise. Advertises support for low-power mode
+    bit_offset: 11
+    bit_size: 1
+  - name: loopa
+    description: Read-only. Loopback Advertise. Advertises support for loopback mode.
+    bit_offset: 13
+    bit_size: 1
+fieldset/Pmatm:
+  description: F70RM Rev. 1 section 54.5.1.10; manual text line 171804.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: pattern
+    description: Pattern. 000b - NONE. Normal operation (default) 001b - TM1. Transmitter output voltage, timing
+      jitter (DME encoded ones) 010b - TM2. Transmitter output droop test mode (loop 1.6us diff pos / 1.6us diff
+      neg ) 011b - TM3. Transmitter PSD mask (DME encoded pseudo random sequence) 100b - TM4. Transmitter high-impedance
+      mode 101b - RES0 110b - RES1 111b - WUT. Wake-up signal
+    bit_offset: 13
+    bit_size: 3
+fieldset/Pcsctrl:
+  description: F70RM Rev. 1 section 54.5.1.11; manual text line 171859.
+  bit_size: 16
+  reset_value: 33024
+  fields:
+  - name: duplx
+    description: Read-only. Duplex. Duplex mode (fixed to half-duplex)
+    bit_offset: 8
+    bit_size: 1
+  - name: loop_
+    description: 'LOOP: Loop. Loop-back mode enable. 0b - Disabled 1b - Enabled'
+    bit_offset: 14
+    bit_size: 1
+  - name: rst
+    description: Reset. 0b - STAT_NO_RESET. PCS not in reset 1b - STAT_RESET. PCS in reset
+    bit_offset: 15
+    bit_size: 1
+fieldset/Pcsstat:
+  description: F70RM Rev. 1 section 54.5.1.12; manual text line 171921.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: jab
+    description: 'Read-only. Jabber condition. Jabber condition detected: either locally or remote 0b - No 1b -
+      Yes'
+    bit_offset: 7
+    bit_size: 1
+fieldset/Pcsdiag1:
+  description: F70RM Rev. 1 section 54.5.1.13; manual text line 171974.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: remjabcnt
+    description: Read-only. Remote Jabber Counter. Remote jabber counter for PCS register.
+    bit_offset: 0
+    bit_size: 16
+fieldset/Pcsdiag2:
+  description: F70RM Rev. 1 section 54.5.1.14; manual text line 172022.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: phycolcnt
+    description: Read-only. Physical Collisions Counter. Physical collisions counter for PCS register.
+    bit_offset: 0
+    bit_size: 16
+fieldset/Plcaidver:
+  description: F70RM Rev. 1 section 54.5.1.15; manual text line 172057.
+  bit_size: 16
+  reset_value: 2577
+  fields:
+  - name: ver
+    description: Read-only. Version.
+    bit_offset: 0
+    bit_size: 8
+  - name: idm
+    description: Read-only. OA memory map identifier.
+    bit_offset: 8
+    bit_size: 8
+fieldset/Plcactrl0:
+  description: F70RM Rev. 1 section 54.5.1.16; manual text line 172105.
+  bit_size: 16
+  reset_value: 16384
+  fields:
+  - name: rst
+    description: Reset.
+    bit_offset: 14
+    bit_size: 1
+  - name: en
+    description: Enable.
+    bit_offset: 15
+    bit_size: 1
+fieldset/Plcactrl1:
+  description: F70RM Rev. 1 section 54.5.1.17; manual text line 172164.
+  bit_size: 16
+  reset_value: 2303
+  fields:
+  - name: id
+    description: Identifier.
+    bit_offset: 0
+    bit_size: 8
+  - name: ncnt
+    description: PLCA Node count. Sets the PLCA node count parameter.
+    bit_offset: 8
+    bit_size: 8
+fieldset/Plcastat:
+  description: F70RM Rev. 1 section 54.5.1.18; manual text line 172203.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: pst
+    description: Read-only. PLCA Node status. Indicates the PLCA node status
+    bit_offset: 15
+    bit_size: 1
+fieldset/Plcatotmr:
+  description: F70RM Rev. 1 section 54.5.1.19; manual text line 172250.
+  bit_size: 16
+  reset_value: 32
+  fields:
+  - name: totmr
+    description: PLCA Transmit Opportunity. Sets the PLCA transmit opportunity timer (Clause 148.4.4.4)
+    bit_offset: 0
+    bit_size: 8
+fieldset/Plcaburst:
+  description: F70RM Rev. 1 section 54.5.1.20; manual text line 172297.
+  bit_size: 16
+  reset_value: 128
+  fields:
+  - name: btmr
+    description: Burst Timer. Sets the maximum time-gap between packets (Clause 148.4.4.2).
+    bit_offset: 0
+    bit_size: 8
+  - name: maxbc
+    description: Maximum Burst Count. Sets the maximum number of packets within a burst (Clause 148.4.4.4).
+    bit_offset: 8
+    bit_size: 8
+fieldset/Plcarecst:
+  description: F70RM Rev. 1 section 54.5.1.21; manual text line 172335.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: recst
+    description: Read-only. Recovering Status. Indicates that PLCA is recovering
+    bit_offset: 15
+    bit_size: 1
+fieldset/Modectrl:
+  description: F70RM Rev. 1 section 54.5.1.22; manual text line 172383.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: cmd
+    description: Set back to NONE when mode controller has entered the selected mode. 000b - None 001b - Linkdown.
+      Set mode to LINKDOWN 010b - Linkup. Set mode to Linkup 011b - TXCCFG. Set mode to TXCCFG 100b - Low-power.
+      Set mode to Low-power 101b - TXCBIST. Set mode to TXCBIST
+    bit_offset: 0
+    bit_size: 3
+fieldset/Modecfg:
+  description: F70RM Rev. 1 section 54.5.1.23; manual text line 172444.
+  bit_size: 16
+  reset_value: 7
+  fields:
+  - name: lclwkena
+    description: Enable wake-up to WAITINIT mode by local-wake-event. 0b - Disable 1b - Enable
+    bit_offset: 0
+    bit_size: 1
+  - name: remwkena
+    description: Enable wake-up to WAITINIT mode by remote-wake-event. 0b - Disable 1b - Enable
+    bit_offset: 1
+    bit_size: 1
+  - name: sspwkena
+    description: Enable wake-up to WAITINIT mode by SUSPEND detection. 0b - Disable 1b - Enable
+    bit_offset: 2
+    bit_size: 1
+fieldset/Modestat:
+  description: F70RM Rev. 1 section 54.5.1.24; manual text line 172501.
+  bit_size: 16
+  reset_value: 1
+  fields:
+  - name: stat
+    description: 'Read-only. Status power-mode sequencer. 0000b - PORST. Power on reset status 0001b - WAITINIT.
+      Wait for initialization to complete 0010b - Linkdown. 10BT1S link is disabled 0011b - Linkup. Source conflict:
+      operating modes section 54.2.1 (manual lines 170646-170647) says datapath enabled and transmission/reception
+      possible, but the field table (manual line 172551) says disabled. The LINKUP encoding is retained without
+      resolving that conflicting operational wording. 0100b - WAITCMDLP. Transition to LOWPOWER: Wait until sending
+      SLEEP command is done 0101b - Low-power. Low-power mode 0110b - WAITCMDCFG. Transition to TXCCFG: Wait until
+      sending CONFIG command is done 0111b - TXCCFG. Transceiver configuration mode 1000b - TXCBIST. Transceiver
+      BIST mode 1001b - WAITSSILENTLP. Transition to LOWPOWER: Wait until any transmission completed 1010b - WAITSILENTCFG.
+      Transition to CONFIG: Wait until any transmission completed'
+    bit_offset: 0
+    bit_size: 4
+  - name: silentto
+    description: Read-only. Silent Time-out condition. 0b - No 1b - Yes
+    bit_offset: 4
+    bit_size: 1
+fieldset/Wkctrl:
+  description: F70RM Rev. 1 section 54.5.1.25; manual text line 172569.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: remwkfdw
+    description: Command to generate a wake-forward pulse. 0b - NO_EFFECT 1b - Trigger generation of a wake-forward
+      pulse
+    bit_offset: 0
+    bit_size: 1
+fieldset/Wkcfg:
+  description: F70RM Rev. 1 section 54.5.1.26; manual text line 172611.
+  bit_size: 16
+  reset_value: 1
+  fields:
+  - name: remkwkfdw
+    description: Enable wake forwarding of a remote-wake-event. 0b - DISABLED 1b - ENABLED
+    bit_offset: 0
+    bit_size: 1
+fieldset/Wupctrl:
+  description: F70RM Rev. 1 section 54.5.1.27; manual text line 172660.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: wupcmd
+    description: Trigger the WUP sequencer transmission. 0b - NO_EFFECT 1b - Trigger WUP-sequencer
+    bit_offset: 0
+    bit_size: 1
+  - name: abortcmd
+    description: Abort the WUP sequencer when pending.. 0b - NO_EFFECT 1b - Abort WUP-sequencer
+    bit_offset: 1
+    bit_size: 1
+fieldset/Wupcfg:
+  description: F70RM Rev. 1 section 54.5.1.28; manual text line 172722.
+  bit_size: 16
+  reset_value: 65281
+  fields:
+  - name: lclwkwup
+    description: Enable WUP transmission by local-wake-event. 0b - Disabled 1b - Enabled
+    bit_offset: 0
+    bit_size: 1
+  - name: wuptimeout
+    description: 'Wakeup Timeout. Configures the WUP time-out timer: WUP time-out = (WUPTIMEOUT + 1) * 10ms'
+    bit_offset: 8
+    bit_size: 8
+fieldset/Wupstat:
+  description: F70RM Rev. 1 section 54.5.1.29; manual text line 172774.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: stat
+    description: Read-only. Status. Status WUP sequencer 00b - IDLE. WUP sequencer is idle 01b - WAITLINK. WUP sequencer
+      is waiting for LINKUP mode 10b - PENDING. WUP sequencer is waiting for transmission slot 11b - TRANSMIT. WUP
+      sequencer is transmitting the WUP
+    bit_offset: 0
+    bit_size: 2
+  - name: errcode
+    description: Read-only. Error code. Indicates the error code of the previous WUP sequence 000b - NONE. WUP transmission
+      successful 001b - SWABORT. WUP sequencer aborted by software (abort command) 010b - MODECHG. WUP sequencer
+      aborted by invalid mode 011b - TOWM. WUP sequencer aborted by time-out in WAITMODE state 100b - TOPD. WUP
+      sequencer aborted by time-out in PENDING state 101b - TOWP. WUP sequencer aborted by time-out in PENDING state
+      110b - TOWA. WUP sequencer aborted by time-out in PENDING state 111b - CORE. WUP sequencer aborted by core
+    bit_offset: 2
+    bit_size: 3
+fieldset/Smidata:
+  description: F70RM Rev. 1 section 54.5.1.30; manual text line 172836.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: data
+    description: Frame Data. Control the SMI Frame Data.
+    bit_offset: 0
+    bit_size: 16
+fieldset/Smictrl:
+  description: F70RM Rev. 1 section 54.5.1.31; manual text line 172871.
+  bit_size: 16
+  reset_value: 16514
+  fields:
+  - name: ta
+    description: Turn Around. Programmed to 2'b10 to generate a valid SMI Management frame
+    bit_offset: 0
+    bit_size: 2
+  - name: ra
+    description: Register Address. Specifies one of 32 registers within the TXC
+    bit_offset: 2
+    bit_size: 5
+  - name: pa
+    description: PHY Address. Specifies one of 32 PHY address. This should be 0x01 since TXC PHY address is fixed
+      to 1.
+    bit_offset: 7
+    bit_size: 5
+  - name: op
+    description: Operation. Specifies operation to be performed 00b - WRITE_COMPERR. Write frame operation but generates
+      C22 compliance error 01b - WRITE. Write frame operation 10b - READ. Read frame operation 11b - READ_COMPERR.
+      Read frame operation but generates C22 compliance error
+    bit_offset: 12
+    bit_size: 2
+  - name: st
+    description: Start. Start of frame delimiter. This field must be programmed to 2'b01 to generate a clause 22
+      compliant SMI Management frame
+    bit_offset: 14
+    bit_size: 2
+fieldset/Smicfg:
+  description: F70RM Rev. 1 section 54.5.1.32; manual text line 172931.
+  bit_size: 16
+  reset_value: 126
+  fields:
+  - name: speed
+    description: 'Speed. Sets the MDC clock frequency as a ratio of the PCLK frequency: MDC freq = PCLK freq divided
+      by 1/((MII_SPEED+1) × 2)'
+    bit_offset: 1
+    bit_size: 6
+  - name: dispre
+    description: Disable SMI Preamble. Disabled SMI preamble (32 x 1'b1) generation 0b - Disabled 1b - Enabled
+    bit_offset: 7
+    bit_size: 1
+  - name: hold
+    description: Hold. Specifies the hold time for the MDIO output. The IEEE802.3 clause 22 specifies a minimum
+      hold time of 10ns 000b - HOLD_1. 1 PCLK cycle (default) 001b - HOLD_2. 2 PCLK cycles 010b - HOLD_3. 3 PCLK
+      cycles 011b - HOLD_4. 4 PCLK cycles 100b - HOLD_5. 5 PCLK cycles 101b - 6 PCLK cycles 6 110b - HOLD_7. 7 PCLK
+      cycles 111b - HOLD_8. 8 PCLK cycles
+    bit_offset: 8
+    bit_size: 3
+fieldset/Smistat:
+  description: F70RM Rev. 1 section 54.5.1.33; manual text line 173000.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: ready
+    description: Read-only. Ready. Indicates that the SMI controller is ready to start a read- or write-access 0b
+      - No. SMI controller not enabled or access in progress 1b - Yes. SMI ready to start a read- or write-access
+    bit_offset: 0
+    bit_size: 1
+  - name: errcode
+    description: Read-only. Error Code. 000b - NONE. SMI access successful 001b - NONTC14. Non-compliance with TC14
+      detected 010b - Disabled. SMI access triggered while SMI controller is disabled 011b - ABORTED. SMI access
+      got aborted 100b - INPRGS. SMI access triggered while access in progress
+    bit_offset: 1
+    bit_size: 3
+fieldset/Intencapt1:
+  description: F70RM Rev. 1 section 54.5.1.34; manual text line 173057.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: physcol
+    description: Physical Collision. Physical collision event Write 1 clears bits. 0b - NO Effect 1b - Clear
+    bit_offset: 0
+    bit_size: 1
+  - name: plcarec
+    description: PLCA Recovery. PLCA recovery event Write 1 clears bits. 0b - NO Effect 1b - Clear
+    bit_offset: 1
+    bit_size: 1
+  - name: plcastat
+    description: PLCA Status. PLCA status change Write 1 clears bits. 0b - NO Effect 1b - Clear
+    bit_offset: 2
+    bit_size: 1
+  - name: modestat
+    description: MODE Status. Mode controller status change Write 1 clears bits. 0b - NO Effect 1b - Clear
+    bit_offset: 3
+    bit_size: 1
+  - name: invldapb
+    description: Invalid APB. Invalid APB write access detected Write 1 clears bits. 0b - NO Effect 1b - Clear
+    bit_offset: 4
+    bit_size: 1
+  - name: locjab
+    description: Local Jabber. Local jabber event Write 1 clears bits. 0b - NO Effect 1b - Clear
+    bit_offset: 5
+    bit_size: 1
+  - name: remjab
+    description: Remote Jabber. Remote jabber event Write 1 clears bits. 0b - NO Effect 1b - Clear
+    bit_offset: 6
+    bit_size: 1
+  - name: pinfault
+    description: PIN Fault Monitor. TXC pin monitor has detected a ED, RX or TX pin fault Write 1 clears bits. 0b
+      - NO Effect 1b - Clear
+    bit_offset: 7
+    bit_size: 1
+  - name: plcadiag
+    description: PLCA Diagnostics. Adv PLCA diagnostics interrupt Write 1 clears bits. 0b - NO Effect 1b - Clear
+    bit_offset: 8
+    bit_size: 1
+  - name: smiaccess
+    description: SMI Access. SMI read/write access done interrupt Write 1 clears bits. 0b - NO Effect 1b - Clear
+    bit_offset: 9
+    bit_size: 1
+  - name: lclwk
+    description: Local Wake. Local wake event detected Write 1 clears bits. 0b - NO Effect 1b - Clear
+    bit_offset: 10
+    bit_size: 1
+  - name: sspdet
+    description: Suspend Symbol Detects. Suspend symbols received Write 1 clears bits. 0b - NO Effect 1b - Clear
+    bit_offset: 11
+    bit_size: 1
+  - name: wutdet
+    description: WUT Detect. WUT detected by the AFE Write 1 clears bits. 0b - NO Effect 1b - Clear
+    bit_offset: 12
+    bit_size: 1
+  - name: wupdone
+    description: WUP transmission completed Write 1 clears bits.. WUP Transmission 0b - NO Effect 1b - Clear
+    bit_offset: 13
+    bit_size: 1
+  - name: apbparity
+    description: APB Parity. Change in APB parity detected Write 1 clears bits. 0b - NO Effect 1b - Clear
+    bit_offset: 14
+    bit_size: 1
+fieldset/Intenset1:
+  description: F70RM Rev. 1 section 54.5.1.35; manual text line 173211.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: physcol
+    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
+    bit_offset: 0
+    bit_size: 1
+  - name: plcarec
+    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
+    bit_offset: 1
+    bit_size: 1
+  - name: plcastat
+    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
+    bit_offset: 2
+    bit_size: 1
+  - name: modestat
+    description: Mode status. 0b - Disabled 1b - ENABLED
+    bit_offset: 3
+    bit_size: 1
+  - name: invldapb
+    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
+    bit_offset: 4
+    bit_size: 1
+  - name: locjab
+    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
+    bit_offset: 5
+    bit_size: 1
+  - name: remjab
+    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
+    bit_offset: 6
+    bit_size: 1
+  - name: pinfault
+    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
+    bit_offset: 7
+    bit_size: 1
+  - name: plcadiag
+    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
+    bit_offset: 8
+    bit_size: 1
+  - name: smiaccess
+    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
+    bit_offset: 9
+    bit_size: 1
+  - name: lclwk
+    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
+    bit_offset: 10
+    bit_size: 1
+  - name: sspdet
+    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
+    bit_offset: 11
+    bit_size: 1
+  - name: wutdet
+    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
+    bit_offset: 12
+    bit_size: 1
+  - name: wupdone
+    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
+    bit_offset: 13
+    bit_size: 1
+  - name: apbparity
+    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
+    bit_offset: 14
+    bit_size: 1
+fieldset/Intenclr1:
+  description: F70RM Rev. 1 section 54.5.1.36; manual text line 173353.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: physcol
+    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
+    bit_offset: 0
+    bit_size: 1
+  - name: plcarec
+    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
+    bit_offset: 1
+    bit_size: 1
+  - name: plcastat
+    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
+    bit_offset: 2
+    bit_size: 1
+  - name: modestat
+    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
+    bit_offset: 3
+    bit_size: 1
+  - name: invldapb
+    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
+    bit_offset: 4
+    bit_size: 1
+  - name: locjab
+    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
+    bit_offset: 5
+    bit_size: 1
+  - name: remjab
+    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
+    bit_offset: 6
+    bit_size: 1
+  - name: pinfault
+    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
+    bit_offset: 7
+    bit_size: 1
+  - name: plcadiag
+    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
+    bit_offset: 8
+    bit_size: 1
+  - name: smiaccess
+    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
+    bit_offset: 9
+    bit_size: 1
+  - name: lclwk
+    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
+    bit_offset: 10
+    bit_size: 1
+  - name: sspdet
+    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
+    bit_offset: 11
+    bit_size: 1
+  - name: wutdet
+    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
+    bit_offset: 12
+    bit_size: 1
+  - name: wupdone
+    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
+    bit_offset: 13
+    bit_size: 1
+  - name: apbparity
+    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
+    bit_offset: 14
+    bit_size: 1
+fieldset/Intstat1:
+  description: F70RM Rev. 1 section 54.5.1.37; manual text line 173494.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: physcol
+    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
+    bit_offset: 0
+    bit_size: 1
+  - name: plcarec
+    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
+    bit_offset: 1
+    bit_size: 1
+  - name: plcastat
+    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
+    bit_offset: 2
+    bit_size: 1
+  - name: modestat
+    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
+    bit_offset: 3
+    bit_size: 1
+  - name: invldapb
+    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
+    bit_offset: 4
+    bit_size: 1
+  - name: locjab
+    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
+    bit_offset: 5
+    bit_size: 1
+  - name: remjab
+    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
+    bit_offset: 6
+    bit_size: 1
+  - name: pinfault
+    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
+    bit_offset: 7
+    bit_size: 1
+  - name: plcadiag
+    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
+    bit_offset: 8
+    bit_size: 1
+  - name: smiaccess
+    description: Read-only. status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
+    bit_offset: 9
+    bit_size: 1
+  - name: lclwk
+    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
+    bit_offset: 10
+    bit_size: 1
+  - name: sspdet
+    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
+    bit_offset: 11
+    bit_size: 1
+  - name: wutdet
+    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
+    bit_offset: 12
+    bit_size: 1
+  - name: wupdone
+    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
+    bit_offset: 13
+    bit_size: 1
+  - name: apbparity
+    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
+    bit_offset: 14
+    bit_size: 1
+fieldset/Intencapt2:
+  description: F70RM Rev. 1 section 54.5.1.38; manual text line 173637.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: physcol
+    description: Physical Collision. Physical collision event Write 1 clears bits. 0b - NO Effect 1b - Clear
+    bit_offset: 0
+    bit_size: 1
+  - name: plcarec
+    description: PLCA Recovery. PLCA recovery event Write 1 clears bits. 0b - NO Effect 1b - Clear
+    bit_offset: 1
+    bit_size: 1
+  - name: plcastat
+    description: PLCA Status. PLCA status change Write 1 clears bits. 0b - NO Effect 1b - Clear
+    bit_offset: 2
+    bit_size: 1
+  - name: modestat
+    description: MODE Status. Mode controller status change Write 1 clears bits. 0b - NO Effect 1b - Clear
+    bit_offset: 3
+    bit_size: 1
+  - name: invldapb
+    description: Invalid APB. Invalid APB write access detected Write 1 clears bits. 0b - NO Effect 1b - Clear
+    bit_offset: 4
+    bit_size: 1
+  - name: locjab
+    description: Local Jabber. Local jabber event Write 1 clears bits. 0b - NO Effect 1b - Clear
+    bit_offset: 5
+    bit_size: 1
+  - name: remjab
+    description: Remote Jabber. Remote jabber event Write 1 clears bits. 0b - NO Effect 1b - Clear
+    bit_offset: 6
+    bit_size: 1
+  - name: pinfault
+    description: PIN Fault Monitor. TXC pin monitor has detected a ED, RX or TX pin fault Write 1 clears bits. 0b
+      - NO Effect 1b - Clear
+    bit_offset: 7
+    bit_size: 1
+  - name: plcadiag
+    description: PLCA Diagnostics. Adv PLCA diagnostics interrupt Write 1 clears bits. 0b - NO Effect 1b - Clear
+    bit_offset: 8
+    bit_size: 1
+  - name: smiaccess
+    description: SMI Access. SMI read/write access done interrupt Write 1 clears bits. 0b - NO Effect 1b - Clear
+    bit_offset: 9
+    bit_size: 1
+  - name: lclwk
+    description: Local Wake. Local wake event detected Write 1 clears bits. 0b - NO Effect 1b - Clear
+    bit_offset: 10
+    bit_size: 1
+  - name: sspdet
+    description: Suspend Symbol Detects. Suspend symbols received Write 1 clears bits. 0b - NO Effect 1b - Clear
+    bit_offset: 11
+    bit_size: 1
+  - name: wutdet
+    description: WUT Detect. WUT detected by the AFE Write 1 clears bits. 0b - NO Effect 1b - Clear
+    bit_offset: 12
+    bit_size: 1
+  - name: wupdone
+    description: WUP transmission completed Write 1 clears bits.. WUP Transmission 0b - NO Effect 1b - Clear
+    bit_offset: 13
+    bit_size: 1
+  - name: apbparity
+    description: APB Parity. Change in APB parity detected Write 1 clears bits. 0b - NO Effect 1b - Clear
+    bit_offset: 14
+    bit_size: 1
+fieldset/Intenset2:
+  description: F70RM Rev. 1 section 54.5.1.39; manual text line 173791.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: physcol
+    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
+    bit_offset: 0
+    bit_size: 1
+  - name: plcarec
+    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
+    bit_offset: 1
+    bit_size: 1
+  - name: plcastat
+    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
+    bit_offset: 2
+    bit_size: 1
+  - name: modestat
+    description: Mode status. 0b - Disabled 1b - ENABLED
+    bit_offset: 3
+    bit_size: 1
+  - name: invldapb
+    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
+    bit_offset: 4
+    bit_size: 1
+  - name: locjab
+    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
+    bit_offset: 5
+    bit_size: 1
+  - name: remjab
+    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
+    bit_offset: 6
+    bit_size: 1
+  - name: pinfault
+    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
+    bit_offset: 7
+    bit_size: 1
+  - name: plcadiag
+    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
+    bit_offset: 8
+    bit_size: 1
+  - name: smiaccess
+    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
+    bit_offset: 9
+    bit_size: 1
+  - name: lclwk
+    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
+    bit_offset: 10
+    bit_size: 1
+  - name: sspdet
+    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
+    bit_offset: 11
+    bit_size: 1
+  - name: wutdet
+    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
+    bit_offset: 12
+    bit_size: 1
+  - name: wupdone
+    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
+    bit_offset: 13
+    bit_size: 1
+  - name: apbparity
+    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
+    bit_offset: 14
+    bit_size: 1
+fieldset/Intenclr2:
+  description: F70RM Rev. 1 section 54.5.1.40; manual text line 173928.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: physcol
+    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
+    bit_offset: 0
+    bit_size: 1
+  - name: plcarec
+    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
+    bit_offset: 1
+    bit_size: 1
+  - name: plcastat
+    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
+    bit_offset: 2
+    bit_size: 1
+  - name: modestat
+    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
+    bit_offset: 3
+    bit_size: 1
+  - name: invldapb
+    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
+    bit_offset: 4
+    bit_size: 1
+  - name: locjab
+    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
+    bit_offset: 5
+    bit_size: 1
+  - name: remjab
+    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
+    bit_offset: 6
+    bit_size: 1
+  - name: pinfault
+    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
+    bit_offset: 7
+    bit_size: 1
+  - name: plcadiag
+    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
+    bit_offset: 8
+    bit_size: 1
+  - name: smiaccess
+    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
+    bit_offset: 9
+    bit_size: 1
+  - name: lclwk
+    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
+    bit_offset: 10
+    bit_size: 1
+  - name: sspdet
+    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
+    bit_offset: 11
+    bit_size: 1
+  - name: wutdet
+    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
+    bit_offset: 12
+    bit_size: 1
+  - name: wupdone
+    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
+    bit_offset: 13
+    bit_size: 1
+  - name: apbparity
+    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
+    bit_offset: 14
+    bit_size: 1
+fieldset/Intstat2:
+  description: F70RM Rev. 1 section 54.5.1.41; manual text line 174065.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: physcol
+    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
+    bit_offset: 0
+    bit_size: 1
+  - name: plcarec
+    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
+    bit_offset: 1
+    bit_size: 1
+  - name: plcastat
+    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
+    bit_offset: 2
+    bit_size: 1
+  - name: modestat
+    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
+    bit_offset: 3
+    bit_size: 1
+  - name: invldapb
+    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
+    bit_offset: 4
+    bit_size: 1
+  - name: locjab
+    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
+    bit_offset: 5
+    bit_size: 1
+  - name: remjab
+    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
+    bit_offset: 6
+    bit_size: 1
+  - name: pinfault
+    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
+    bit_offset: 7
+    bit_size: 1
+  - name: plcadiag
+    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
+    bit_offset: 8
+    bit_size: 1
+  - name: smiaccess
+    description: Read-only. status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
+    bit_offset: 9
+    bit_size: 1
+  - name: lclwk
+    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
+    bit_offset: 10
+    bit_size: 1
+  - name: sspdet
+    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
+    bit_offset: 11
+    bit_size: 1
+  - name: wutdet
+    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
+    bit_offset: 12
+    bit_size: 1
+  - name: wupdone
+    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
+    bit_offset: 13
+    bit_size: 1
+  - name: apbparity
+    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
+    bit_offset: 14
+    bit_size: 1
+fieldset/Plcadiag1:
+  description: F70RM Rev. 1 section 54.5.1.42; manual text line 174202.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: bcnbfto
+    description: Beacon Consecutive. Indicates 4 consecutive BEACON's received before TO is reached Write 1 clears
+      bits. 0b - NO 1b - Yes
+    bit_offset: 0
+    bit_size: 1
+  - name: unexpb
+    description: Unexpected Beacon. Indicates reception of an unexpected BEACON by coordinator Write 1 clears bits.
+      0b - NO 1b - Yes
+    bit_offset: 1
+    bit_size: 1
+  - name: rxinto
+    description: Indicates Reception. Indicates reception occurred within local transmit opportunity Write 1 clears
+      bits. 0b - NO 1b - Yes
+    bit_offset: 2
+    bit_size: 1
+fieldset/Plcadiag2:
+  description: F70RM Rev. 1 section 54.5.1.43; manual text line 174261.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: earlybcn
+    description: Early Beacon. Indicates reception of an early BEACON by follower node Write 1 clears bits. 0b -
+      NO 1b - Yes
+    bit_offset: 0
+    bit_size: 1
+  - name: latebcn
+    description: Late Beacon. Indicates reception of a late BEACON by follower node Write 1 clears bits. 0b - NO
+      1b - Yes
+    bit_offset: 1
+    bit_size: 1
+  - name: norxbcn
+    description: No Beacon Received. Indicates no beacon received by coordinator while it is transmitted Write 1
+      clears bits. 0b - NO 1b - Yes
+    bit_offset: 2
+    bit_size: 1
+  - name: undefstate
+    description: Undefined State. Indicates PLCA state-machines are in an undefined state Write 1 clears bits. 0b
+      - NO 1b - Yes
+    bit_offset: 3
+    bit_size: 1
+fieldset/Plcadiag3:
+  description: F70RM Rev. 1 section 54.5.1.44; manual text line 174325.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: rxbcntcnt
+    description: RX Beacon Counter. PLCA RX beacon counter Write 0 clears bits.
+    bit_offset: 0
+    bit_size: 16
+fieldset/Plcadiag4:
+  description: F70RM Rev. 1 section 54.5.1.45; manual text line 174360.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: tocnt
+    description: Transmit Opportunity Counter. PLCA transmit opportunity (TO) counter Write 0 clears bits.
+    bit_offset: 0
+    bit_size: 16
+fieldset/Txcdiag:
+  description: F70RM Rev. 1 section 54.5.1.46; manual text line 174403.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: rxlowfail
+    description: RX Low Pin Detect. Stuck LOW of the RX pin detected Write 1 clears bits. 0b - NO 1b - Yes
+    bit_offset: 0
+    bit_size: 1
+  - name: rxhghfail
+    description: RX High Pin Detect. Stuck HIGH of the RX pin detected Write 1 clears bits. 0b - NO 1b - Yes
+    bit_offset: 1
+    bit_size: 1
+  - name: edlowfail
+    description: Stuck Low ED Pin. Stuck LOW of the ED pin detected Write 1 clears bits. 0b - NO 1b - Yes
+    bit_offset: 2
+    bit_size: 1
+  - name: edhghfail
+    description: Stuck High ED Pin. Stuck HIGH of the ED pin detected Write 1 clears bits. 0b - NO 1b - Yes
+    bit_offset: 3
+    bit_size: 1
+  - name: lpwrfail
+    description: Low Power Failure. Failure of ED/RX pin in LOWPOWER mode detected Write 1 clears bits. 0b - NO
+      1b - Yes
+    bit_offset: 4
+    bit_size: 1
+fieldset/Mskplcadiag1:
+  description: F70RM Rev. 1 section 54.5.1.47; manual text line 174488.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: bcnbfto
+    description: Mask control for BCNBFTO flag. 0b - Enabled. Flag is not masked 1b - Masked. Flag is masked
+    bit_offset: 0
+    bit_size: 1
+  - name: unexpb
+    description: Mask control for UNEXPB flag. 0b - Enabled. Flag is not masked 1b - Masked. Flag is masked
+    bit_offset: 1
+    bit_size: 1
+  - name: rxinto
+    description: Mask control for RXINTO flag. 0b - Enabled. Flag is not masked 1b - Masked. Flag is masked
+    bit_offset: 2
+    bit_size: 1
+fieldset/Mskplcadiag2:
+  description: F70RM Rev. 1 section 54.5.1.48; manual text line 174547.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: earlybcn
+    description: Early Beacon Flag. Mask control for EARLYBCN flag 0b - Enabled. Flag is not masked 1b - Masked.
+      Flag is masked
+    bit_offset: 0
+    bit_size: 1
+  - name: latebcn
+    description: Late Beacon. Mask control for LATEBCN flag 0b - Enabled. Flag is not masked 1b - Masked. Flag is
+      masked
+    bit_offset: 1
+    bit_size: 1
+  - name: norxbcn
+    description: NO RX Beacon. Mask control for NORXBCN flag 0b - Enabled. Flag is not masked 1b - Masked. Flag
+      is masked
+    bit_offset: 2
+    bit_size: 1
+  - name: undefstate
+    description: UNDEF State. Mask control for UNDEFSTATE flag 0b - Enabled. Flag is not masked 1b - Masked. Flag
+      is masked
+    bit_offset: 3
+    bit_size: 1
+fieldset/Msktxcdiag:
+  description: F70RM Rev. 1 section 54.5.1.49; manual text line 174611.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: rxlowfail
+    description: RX Low Fail. Mask control for RXLOWFAIL flag 0b - Enabled. Flag is not masked 1b - Masked. Flag
+      is masked
+    bit_offset: 0
+    bit_size: 1
+  - name: rxhghfail
+    description: RX High Fail. Mask control for RXHGHFAIL flag 0b - Enabled. Flag is not masked 1b - Masked. Flag
+      is masked
+    bit_offset: 1
+    bit_size: 1
+  - name: edlowfail
+    description: ED Low Fail. Mask control for EDLOWFAIL flag 0b - Enabled. Flag is not masked 1b - Masked. Flag
+      is masked
+    bit_offset: 2
+    bit_size: 1
+  - name: edhghfail
+    description: ED High Flag. Mask control for EDHGHFAIL flag 0b - Enabled. Flag is not masked 1b - Masked. Flag
+      is masked
+    bit_offset: 3
+    bit_size: 1
+  - name: lpwrfail
+    description: Low Power Fail. Mask control for LPWRFAIL flag 0b - Enabled. Flag is not masked 1b - Masked. Flag
+      is masked
+    bit_offset: 4
+    bit_size: 1
+fieldset/Accessctrl:
+  description: F70RM Rev. 1 section 54.5.1.50; manual text line 174694.
+  bit_size: 16
+  reset_value: 1
+  fields:
+  - name: access
+    description: APB Write Access. Enables APB write access for registers classified as static registers. See the
+      list of static registers. 0b - Disabled 1b - Enabled
+    bit_offset: 0
+    bit_size: 1
+fieldset/Dbgctrl:
+  description: F70RM Rev. 1 section 54.5.1.51; manual text line 174735.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: debug
+    description: Debug. Access Control for Debug
+    bit_offset: 0
+    bit_size: 8
+fieldset/Version:
+  description: F70RM Rev. 1 section 54.5.1.52; manual text line 174782.
+  bit_size: 16
+  reset_value: 4368
+  fields:
+  - name: custver
+    description: Read-only. Customer Version. Customer version info defined by the version_liw4 inputs
+    bit_offset: 0
+    bit_size: 4
+  - name: minorver
+    description: Read-only. Minor Version. Information for Minor Version
+    bit_offset: 4
+    bit_size: 8
+  - name: majorver
+    description: Read-only. Major Version. Information for Major Version
+    bit_offset: 12
+    bit_size: 4

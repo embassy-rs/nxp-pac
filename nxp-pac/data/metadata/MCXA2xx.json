@@ -1313,7 +1313,7 @@
     {
       "name": "CMP1",
       "address": "0x400B2000",
-      "block": "mcx/a/a2/CMP",
+      "block": "mcx/a/a2/CMP1",
       "signals": [
         {
           "name": "IN0",
@@ -5029,6 +5029,12 @@
       ]
     },
     {
+      "name": "GLIKEY0",
+      "address": "0x40091D00",
+      "block": "mcx/a/a2/GLIKEY",
+      "signals": []
+    },
+    {
       "name": "GPIO0",
       "address": "0x40102000",
       "block": "mcx/a/a2/GPIO",
@@ -7595,7 +7601,6 @@
       "name": "RTC0",
       "address": "0x400EE000",
       "block": "mcx/a/a2/RTC::RTC",
-      "module": "RTC2xx",
       "signals": []
     },
     {
@@ -8274,7 +8279,8 @@
             }
           ]
         }
-      ]
+      ],
+      "block": "mcx/a/a2/SLCD"
     },
     {
       "name": "SPC0",
@@ -9331,6 +9337,12 @@
       "name": "EDMA_0_TCD",
       "address": "0x40081000",
       "block": "mcx/a/a2/EDMA_TCD::TCD8",
+      "signals": []
+    },
+    {
+      "name": "MBC0",
+      "address": "0x4008E000",
+      "block": "mcx/a/a2/MBC",
       "signals": []
     },
     {

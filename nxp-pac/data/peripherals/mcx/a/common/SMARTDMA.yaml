@@ -1,0 +1,129 @@
+# MCXAP144M240F61RM Rev. 2, section 42.4; MCXAP172M240F70RM Rev. 1, section 49.4.
+block/Smartdma:
+  description: Smart DMA Controller.
+  items:
+  - name: bootadr
+    description: Boot Address.
+    byte_offset: 32
+    fieldset: Bootadr
+  - name: ctrl
+    description: Control. Writes require WKEY=0xC0DE, including read-modify-write; SYNCEN must be one for AHB synchronization.
+    byte_offset: 36
+    fieldset: Ctrl
+  - name: pc
+    description: Program Counter.
+    byte_offset: 40
+    access: Read
+    fieldset: Pc
+  - name: sp
+    description: Stack Pointer.
+    byte_offset: 44
+    access: Read
+    fieldset: Sp
+  - name: arm2ezh
+    description: ARM to EZH Interrupt Control.
+    byte_offset: 64
+    fieldset: Arm2ezh
+  - name: ezh2arm
+    description: EZH to ARM Trigger.
+    byte_offset: 68
+    fieldset: Ezh2arm
+  - name: pendtrap
+    description: Pending Trap Control.
+    byte_offset: 72
+    fieldset: Pendtrap
+fieldset/Arm2ezh:
+  description: ARM to EZH Interrupt Control.
+  fields:
+  - name: ie
+    description: 'A2: encoding 2 selects SmartDMA-to-Arm interrupt; 0, 1 and 3 are reserved. A5: 2 selects interrupt and 3 selects RXEV; 0 and 1 are reserved.'
+    bit_offset: 0
+    bit_size: 2
+  - name: gp
+    description: General-purpose bits. On A5 only, writing 0x3FFFFFFF while IE=3 triggers RXEV to the Arm core. IE=3 is reserved on A2.
+    bit_offset: 2
+    bit_size: 30
+  bit_size: 32
+  reset_value: 0
+fieldset/Bootadr:
+  description: Boot Address.
+  fields:
+  - name: addr
+    description: 32-bit boot address, the boot address should be 4-byte aligned.
+    bit_offset: 2
+    bit_size: 30
+  bit_size: 32
+  reset_value: 0
+fieldset/Ctrl:
+  description: Control.
+  fields:
+  - name: start
+    description: Start Bit Ignition.
+    bit_offset: 0
+    bit_size: 1
+  - name: exf
+    description: External Flag.
+    bit_offset: 1
+    bit_size: 1
+  - name: errdis
+    description: Error Disable.
+    bit_offset: 2
+    bit_size: 1
+  - name: bufen
+    description: Buffer Enable.
+    bit_offset: 3
+    bit_size: 1
+  - name: syncen
+    description: Must be one for AHB synchronization.
+    bit_offset: 4
+    bit_size: 1
+  - name: wkey
+    description: Write 0xC0DE to enable AHB writes to CTRL to take effect.
+    bit_offset: 16
+    bit_size: 16
+  bit_size: 32
+  reset_value: 0
+fieldset/Ezh2arm:
+  description: EZH to ARM Trigger.
+  fields:
+  - name: gp
+    description: Writing triggers an Arm interrupt when ARM2EZH.IE=2. On A5, IE=3 instead triggers RXEV; that encoding is reserved on A2.
+    bit_offset: 0
+    bit_size: 32
+  bit_size: 32
+  reset_value: 0
+fieldset/Pc:
+  description: Program Counter.
+  fields:
+  - name: pc
+    description: Program Counter.
+    bit_offset: 0
+    bit_size: 32
+  bit_size: 32
+  reset_value: 0
+fieldset/Pendtrap:
+  description: Pending Trap Control.
+  fields:
+  - name: status
+    description: Status Flag or Pending Trap Request.
+    bit_offset: 0
+    bit_size: 8
+  - name: pol
+    description: Polarity.
+    bit_offset: 8
+    bit_size: 8
+  - name: en
+    description: Enable Pending Trap.
+    bit_offset: 16
+    bit_size: 8
+  bit_size: 32
+  reset_value: 0
+fieldset/Sp:
+  description: Stack Pointer.
+  fields:
+  - name: sp
+    description: Stack Pointer.
+    bit_offset: 0
+    bit_size: 32
+  bit_size: 32
+  reset_value: 0

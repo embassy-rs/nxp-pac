@@ -112,6 +112,101 @@ as exactly one millisecond per tick:
 the clock chapters specify a nominal 16.384 kHz source and the timer divides it
 by 16. This PAC exposes raw counts, not a time conversion or a HAL driver.
 
+## Additional A2/A5 register coverage
+
+A2 now has register models for AOI, CMP, DBGMAILBOX, EIM, ERM, FMC, GLIKEY,
+OPAMP, SMARTDMA, and UTICK. A5 adds AOI, CMP, DBGMAILBOX, EIM, ERM, EWM, FMC,
+GLIKEY, SMARTDMA, UTICK, and VREF. These additions fill
+gaps in A2/A5; they do not restrict or replace existing A1/A3 models. A2 retains
+its existing `FMC0`, `OPAMP0`, and `UTICK0` catalog and driver identities.
+
+The definitions follow MCXAP144M240F61RM Rev. 2 (sections 7.6.1, 17.7, 28.6,
+48.5.1, and 53.5.2.1), MCXAP144M240F61SRM Rev. 2 (section 10.5.1), and
+MCXAP172M240F70RM final Rev. 1 (sections 13.6.1, 25.7, 35.6, 41.5.1, 58.6.1,
+66.4, and 67.5.1).
+
+EIM, ERM, SMARTDMA, and CMP follow F61RM sections 8.6, 9.5, 42.4, and 46.7,
+and F70RM sections 15.3, 16.5, 49.4, and 56.7. The manuals take precedence
+over conflicting XML fields and generic-IP descriptions. Important distinctions:
+
+- AOI uses 16-bit accesses; EWM uses 8-bit accesses, including backing storage.
+- GLIKEY's VERSION offset is `0xFC` on A2 and `0xFFC` on A5. Its write-enable
+  fields contain FSM sequence values, not ordinary enable/disable switches.
+- Only A2 has the FMC flash-cache programming bank. REMAP writes require command
+  keys in the lower halfword; setting a field with read-modify-write is not enough.
+- DBGMAILBOX models core-side access: REQUEST is read-only and ID reads zero,
+  unlike the external debugger's AP identification value of `0x002A0000`.
+- VREF UTRIM is factory-loaded. Its generated default includes only known reset
+  bits, not a device's factory trim. Preserve VREFTRIM when changing TRIM2V1.
+  The manual disagrees on TRIM2V1 encoding 1's nominal voltage (Table 671 says
+  1.25 V; section 58.6.1.4 says 1.2 V), so no voltage-named enum is provided.
+- EIM exposes only the channel documented by its register map. ERM has two
+  status/count channels, but only channel 0 has address and syndrome registers.
+- A2 CMP1 has a four-bit external-trigger selector omitted by the XML. It uses
+  a separate `CMP1` model with the same `mcxa/CMP` driver identity. CMP0's trigger
+  is fixed. A5 also reserves RRCR0 bit 1 despite the XML exposing it.
+- Comparator input 5 is reserved on A2 but connected on A5. On A5, zero filter
+  count with sampling enabled is illegal and drives COUT low; A2 bypasses its
+  filter at zero count. Window events follow COUT on A2 and CMPO on A5.
+- SMARTDMA control writes require WKEY `0xC0DE` and AHB synchronization. IE=3
+  is reserved on A2, but selects RXEV on A5; do not assume ordinary enable bits.
+
+New A2/A5 UDF extraction is deferred pending NXP clarification. The local manuals
+do not describe its registers, and the A5 XML assigns overlapping, unaligned
+offsets to 32-bit UDF registers. Existing A3 definitions are unchanged; XML
+presence alone is not confirmation of customer-visible hardware support.
+
+A2 additionally models TDET0, EQDC, SLCD, MBC, and PKC0; A5 models TDET,
+FLEXIO, MBC, PKC, ITRC, GDET, SECCON, and USBDCD. These follow the same F61
+and F70 manuals, including the F61 security reference manual. EQDC accesses
+are 16-bit, and SLCD preserves its overlapping byte/word waveform views.
+PKC exposes each family's documented map: the A5 map does not establish
+MCDATA, VERSION, or MODULE_ID registers. Reserved or undocumented addresses
+must not be probed to infer additional coverage.
+
+Protection models describe access and reset restrictions; they do not implement
+unlock sequences or enforce per-field permissions. Contradictory TDET reset
+descriptions, lower-A2 TDET routing, A5 NSE semantics, unknown SECCON reset
+values, and ambiguous ITRC IN39 remain explicit source limitations. IN39 is
+not exposed. USBDCD follows the existing nine-part USB1 availability predicate;
+MCXA536/537 applicability remains unresolved, not proven absent. Aliased
+USBDCD timer defaults describe their respective modes, not independent storage.
+
+A5 also models TSI, eSPI, USBHS/USBNC, USBPHY, ENET, and the 10BASE-T1S PHY
+from F70RM chapters 42, 44, 51, 52, 54, and 59. Existing per-device metadata
+predicates and instance names are preserved. USB capability and recovery
+registers retain their 8/16-bit widths; the T1S PHY uses 16-bit accesses.
+USBHS has eight endpoint pairs (EP0 plus seven indexed control registers),
+and eSPI has five ports. ENET has one queue/channel, with explicit nested
+MTL and DMA banks rather than generic-IP maximum-sized arrays.
+
+Writable USBPHY SET/CLR/TOG aliases use zero-default mask types, distinct
+from primary register reset defaults. Closure-based writes therefore emit
+only selected mask bits. Do not rely on alias readback or use read-modify-write:
+the specific register map and generic SCT access/readback prose conflict.
+Other explicit source conflicts include eSPI WIREOUT_GPIO access and incoming
+SAF tag/length layout, TSI overrun polarity, PHY LINKUP wording, and USB trim
+and buffer-capacity descriptions. Their conservative register views are not
+claims that the contradictory vendor documentation has been resolved.
+
+## A1/A3 source corrections
+
+Small A1 devices have seven ADC compare words, not fifteen. A173/174 and
+A343/344 expose only the documented FMC REMAP register; their undocumented
+cache-programming banks are excluded without removing the documented banks
+on neighboring devices. These follow FS3RM Rev. 7, F41RM Rev. 2, and F40RM
+Rev. 2 respectively.
+
+F40RM Rev. 2 and F60RM Rev. 4 distinguish A3 CMP1/2's external-trigger
+selector from CMP0 and limit MBC MEM2 to four blocks. CMP1/2 now use the
+`Cmp1` view and runtime suffix `::Cmp1` instead of `::Cmp`; the flat module,
+instance names, and base driver identities remain unchanged. Unsupported
+FMC accessors and MEM2 block 4–7 field accessors intentionally disappear.
+All native A1/A3 RR_INITMOD encodings are named: values 1–63 select that
+many cycles, and zero also selects 63. Existing variant names are retained.
+These are bounded model corrections, not a complete register/errata audit
+or resolution of the remaining A1/A3 source and applicability conflicts.
+
 ## Build pipeline
 
 Selecting a chip feature compiles its PAC from packaged metadata and the required

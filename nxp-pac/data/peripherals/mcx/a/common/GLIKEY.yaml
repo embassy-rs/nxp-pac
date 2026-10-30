@@ -1,0 +1,95 @@
+# Shared field layout: MCXAP144M240F61RM Rev. 2, section 53.5.2.1;
+# MCXAP172M240F70RM Rev. 1, section 66.4.
+# VERSION is at 0xFC on A2 and 0xFFC on A5; blocks are family-specific.
+# Defaults retain documented reset bits; unspecified reserved bits are zero.
+# WR_EN_0/1 are raw sequence values, not simple enable/disable enums.
+fieldset/Ctrl0:
+  bit_size: 32
+  reset_value: 131072
+  fields:
+  - name: write_index
+    description: Target security-sensitive register index.
+    bit_offset: 0
+    bit_size: 8
+  - name: wr_en_0
+    description: FSM sequence value. Use with CTRL_1.WR_EN_1 in the documented sequence.
+    bit_offset: 16
+    bit_size: 2
+  - name: sft_rst
+    description: Reset the FSM; preserves SFR_LOCK and locked indexes. Reads as zero.
+    bit_offset: 18
+    bit_size: 1
+fieldset/Ctrl1:
+  bit_size: 32
+  reset_value: 2621440
+  fields:
+  - name: read_index
+    description: Index whose lock status is returned in STATUS.
+    bit_offset: 0
+    bit_size: 8
+  - name: wr_en_1
+    description: FSM sequence value. Use with CTRL_0.WR_EN_0 in the documented sequence.
+    bit_offset: 16
+    bit_size: 2
+  - name: sfr_lock
+    description: Write 0x5 to lock GLIKEY until hardware reset; 0xA indicates unlocked.
+    bit_offset: 18
+    bit_size: 4
+    enum: SfrLock
+fieldset/IntrCtrl:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: int_en
+    bit_offset: 0
+    bit_size: 1
+  - name: int_clr
+    description: Write one to clear the interrupt. Reads as zero; does not clear error status.
+    bit_offset: 1
+    bit_size: 1
+  - name: int_set
+    description: Write one to set the interrupt. Reads as zero.
+    bit_offset: 2
+    bit_size: 1
+fieldset/Status:
+  bit_size: 32
+  reset_value: 11534336
+  fields:
+  - name: int_status
+    bit_offset: 0
+    bit_size: 1
+  - name: lock_status
+    description: The selected read index is locked.
+    bit_offset: 1
+    bit_size: 1
+  - name: error_status
+    description: Bit 0 is FSM error, bit 1 write-index out of bounds, bit 2 read-index out of bounds.
+    bit_offset: 2
+    bit_size: 3
+  - name: fsm_state
+    description: Encoded FSM state. INIT is 0x16; WR_DISABLED is 0x0B.
+    bit_offset: 19
+    bit_size: 13
+fieldset/Version:
+  bit_size: 32
+  reset_value: 8061184
+  fields:
+  - name: milestone
+    description: Release milestone (0 PREL, 1 BR, 2 SI, 3 GO).
+    bit_offset: 16
+    bit_size: 2
+  - name: fsm_config
+    description: Four-step FSM when clear; eight-step FSM when set.
+    bit_offset: 18
+    bit_size: 1
+  - name: index_config
+    description: Configured number of addressable indexes.
+    bit_offset: 19
+    bit_size: 8
+enum/SfrLock:
+  bit_size: 4
+  variants:
+  - name: Locked
+    value: 5
+  - name: Unlocked
+    value: 10

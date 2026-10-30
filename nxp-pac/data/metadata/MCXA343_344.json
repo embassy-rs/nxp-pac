@@ -3931,7 +3931,7 @@
     {
       "name": "CMP1",
       "address": "0x400b2000",
-      "block": "mcx/a/a3/small/CMP::Cmp",
+      "block": "mcx/a/a3/small/CMP::Cmp1",
       "module": "CMP",
       "signals": [
         {
@@ -4049,7 +4049,7 @@
     {
       "name": "CMP2",
       "address": "0x400b3000",
-      "block": "mcx/a/a3/small/CMP::Cmp",
+      "block": "mcx/a/a3/small/CMP::Cmp1",
       "module": "CMP",
       "signals": [
         {

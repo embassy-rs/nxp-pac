@@ -1,0 +1,199 @@
+# RRCR0.RR_INITMOD: all six-bit encodings are legal; zero also selects 63 cycles.
+# FS3RM Rev. 7 section 41.7.9; FS6RM Rev. 7 section 43.7.10;
+# F41RM Rev. 2 section 42.7.10; F40RM Rev. 2 section 43.7.10;
+# F60RM Rev. 4 section 47.7.10. Existing variant names retain their encodings.
+enum/RrInitmod:
+  bit_size: 6
+  variants:
+  - name: Mod63
+    description: 63 cycles (same as 111111b).
+    value: 0
+  - name: Mod1631
+    description: 1 cycle.
+    value: 1
+  - name: Mod1632
+    description: 2 cycles.
+    value: 2
+  - name: Mod1633
+    description: 3 cycles.
+    value: 3
+  - name: Mod1634
+    description: 4 cycles.
+    value: 4
+  - name: Mod1635
+    description: 5 cycles.
+    value: 5
+  - name: Mod1636
+    description: 6 cycles.
+    value: 6
+  - name: Mod1637
+    description: 7 cycles.
+    value: 7
+  - name: Mod1638
+    description: 8 cycles.
+    value: 8
+  - name: Mod1639
+    description: 9 cycles.
+    value: 9
+  - name: Mod16310
+    description: 10 cycles.
+    value: 10
+  - name: Mod16311
+    description: 11 cycles.
+    value: 11
+  - name: Mod16312
+    description: 12 cycles.
+    value: 12
+  - name: Mod16313
+    description: 13 cycles.
+    value: 13
+  - name: Mod16314
+    description: 14 cycles.
+    value: 14
+  - name: Mod16315
+    description: 15 cycles.
+    value: 15
+  - name: Mod16316
+    description: 16 cycles.
+    value: 16
+  - name: Mod16317
+    description: 17 cycles.
+    value: 17
+  - name: Mod16318
+    description: 18 cycles.
+    value: 18
+  - name: Mod16319
+    description: 19 cycles.
+    value: 19
+  - name: Mod16320
+    description: 20 cycles.
+    value: 20
+  - name: Mod16321
+    description: 21 cycles.
+    value: 21
+  - name: Mod16322
+    description: 22 cycles.
+    value: 22
+  - name: Mod16323
+    description: 23 cycles.
+    value: 23
+  - name: Mod16324
+    description: 24 cycles.
+    value: 24
+  - name: Mod16325
+    description: 25 cycles.
+    value: 25
+  - name: Mod16326
+    description: 26 cycles.
+    value: 26
+  - name: Mod16327
+    description: 27 cycles.
+    value: 27
+  - name: Mod16328
+    description: 28 cycles.
+    value: 28
+  - name: Mod16329
+    description: 29 cycles.
+    value: 29
+  - name: Mod16330
+    description: 30 cycles.
+    value: 30
+  - name: Mod16331
+    description: 31 cycles.
+    value: 31
+  - name: Mod16332
+    description: 32 cycles.
+    value: 32
+  - name: Mod16333
+    description: 33 cycles.
+    value: 33
+  - name: Mod16334
+    description: 34 cycles.
+    value: 34
+  - name: Mod16335
+    description: 35 cycles.
+    value: 35
+  - name: Mod16336
+    description: 36 cycles.
+    value: 36
+  - name: Mod16337
+    description: 37 cycles.
+    value: 37
+  - name: Mod16338
+    description: 38 cycles.
+    value: 38
+  - name: Mod16339
+    description: 39 cycles.
+    value: 39
+  - name: Mod16340
+    description: 40 cycles.
+    value: 40
+  - name: Mod16341
+    description: 41 cycles.
+    value: 41
+  - name: Mod16342
+    description: 42 cycles.
+    value: 42
+  - name: Mod16343
+    description: 43 cycles.
+    value: 43
+  - name: Mod16344
+    description: 44 cycles.
+    value: 44
+  - name: Mod16345
+    description: 45 cycles.
+    value: 45
+  - name: Mod16346
+    description: 46 cycles.
+    value: 46
+  - name: Mod16347
+    description: 47 cycles.
+    value: 47
+  - name: Mod16348
+    description: 48 cycles.
+    value: 48
+  - name: Mod16349
+    description: 49 cycles.
+    value: 49
+  - name: Mod16350
+    description: 50 cycles.
+    value: 50
+  - name: Mod16351
+    description: 51 cycles.
+    value: 51
+  - name: Mod16352
+    description: 52 cycles.
+    value: 52
+  - name: Mod16353
+    description: 53 cycles.
+    value: 53
+  - name: Mod16354
+    description: 54 cycles.
+    value: 54
+  - name: Mod16355
+    description: 55 cycles.
+    value: 55
+  - name: Mod16356
+    description: 56 cycles.
+    value: 56
+  - name: Mod16357
+    description: 57 cycles.
+    value: 57
+  - name: Mod16358
+    description: 58 cycles.
+    value: 58
+  - name: Mod16359
+    description: 59 cycles.
+    value: 59
+  - name: Mod16360
+    description: 60 cycles.
+    value: 60
+  - name: Mod16361
+    description: 61 cycles.
+    value: 61
+  - name: Mod16362
+    description: 62 cycles.
+    value: 62
+  - name: Mod16363
+    description: 63 cycles.
+    value: 63

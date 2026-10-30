@@ -1,0 +1,135 @@
+# MCXAP144M240F61RM Rev. 2, section 17.7;
+# MCXAP172M240F70RM Rev. 1, section 25.7.
+# AOI supports only 16-bit accesses; wider accesses are undefined.
+block/Aoi:
+  description: AND/OR invert Boolean function generator. Only 16-bit accesses are supported.
+  items:
+  - name: bfcrt010
+    description: Boolean function terms 0 and 1 for EVENT0.
+    byte_offset: 0
+    bit_size: 16
+    fieldset: Bfcrt01
+  - name: bfcrt230
+    description: Boolean function terms 2 and 3 for EVENT0.
+    byte_offset: 2
+    bit_size: 16
+    fieldset: Bfcrt23
+  - name: bfcrt011
+    description: Boolean function terms 0 and 1 for EVENT1.
+    byte_offset: 4
+    bit_size: 16
+    fieldset: Bfcrt01
+  - name: bfcrt231
+    description: Boolean function terms 2 and 3 for EVENT1.
+    byte_offset: 6
+    bit_size: 16
+    fieldset: Bfcrt23
+  - name: bfcrt012
+    description: Boolean function terms 0 and 1 for EVENT2.
+    byte_offset: 8
+    bit_size: 16
+    fieldset: Bfcrt01
+  - name: bfcrt232
+    description: Boolean function terms 2 and 3 for EVENT2.
+    byte_offset: 10
+    bit_size: 16
+    fieldset: Bfcrt23
+  - name: bfcrt013
+    description: Boolean function terms 0 and 1 for EVENT3.
+    byte_offset: 12
+    bit_size: 16
+    fieldset: Bfcrt01
+  - name: bfcrt233
+    description: Boolean function terms 2 and 3 for EVENT3.
+    byte_offset: 14
+    bit_size: 16
+    fieldset: Bfcrt23
+fieldset/Bfcrt01:
+  description: Boolean function terms 0 and 1.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: pt1_dc
+    bit_offset: 0
+    bit_size: 2
+    enum: InputConfig
+  - name: pt1_cc
+    bit_offset: 2
+    bit_size: 2
+    enum: InputConfig
+  - name: pt1_bc
+    bit_offset: 4
+    bit_size: 2
+    enum: InputConfig
+  - name: pt1_ac
+    bit_offset: 6
+    bit_size: 2
+    enum: InputConfig
+  - name: pt0_dc
+    bit_offset: 8
+    bit_size: 2
+    enum: InputConfig
+  - name: pt0_cc
+    bit_offset: 10
+    bit_size: 2
+    enum: InputConfig
+  - name: pt0_bc
+    bit_offset: 12
+    bit_size: 2
+    enum: InputConfig
+  - name: pt0_ac
+    bit_offset: 14
+    bit_size: 2
+    enum: InputConfig
+fieldset/Bfcrt23:
+  description: Boolean function terms 2 and 3.
+  bit_size: 16
+  reset_value: 0
+  fields:
+  - name: pt3_dc
+    bit_offset: 0
+    bit_size: 2
+    enum: InputConfig
+  - name: pt3_cc
+    bit_offset: 2
+    bit_size: 2
+    enum: InputConfig
+  - name: pt3_bc
+    bit_offset: 4
+    bit_size: 2
+    enum: InputConfig
+  - name: pt3_ac
+    bit_offset: 6
+    bit_size: 2
+    enum: InputConfig
+  - name: pt2_dc
+    bit_offset: 8
+    bit_size: 2
+    enum: InputConfig
+  - name: pt2_cc
+    bit_offset: 10
+    bit_size: 2
+    enum: InputConfig
+  - name: pt2_bc
+    bit_offset: 12
+    bit_size: 2
+    enum: InputConfig
+  - name: pt2_ac
+    bit_offset: 14
+    bit_size: 2
+    enum: InputConfig
+enum/InputConfig:
+  bit_size: 2
+  variants:
+  - name: Zero
+    description: Force the selected input to zero.
+    value: 0
+  - name: Pass
+    description: Pass the selected input unchanged.
+    value: 1
+  - name: Complement
+    description: Complement the selected input.
+    value: 2
+  - name: One
+    description: Force the selected input to one.
+    value: 3

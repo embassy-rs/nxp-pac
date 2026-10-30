@@ -1,0 +1,1478 @@
+# MCXAP172M240F70RM final Rev. 1 (2026-03-30), chapter 52.
+# MCXA577.xml is supplemental; source conflicts are retained in descriptions.
+# reset_value supplies fieldset construction defaults, not hardware observations.
+# All 32 reset bits are specified by the manual map (known mask 0xFFFFFFFF).
+# Mixed-access fields and W1C/strobes are documented, not enforced by this schema.
+block/Espi:
+  description: eSPI0 target peripheral at 0x4001F000, with five ports and two external DMA request channels. Mode-dependent
+    register aliases are intentional; choose the view matching PCFG.TYPE.
+  only_in: ^MCXA(556|557|577)$
+  items:
+  - name: mctrl
+    description: Master Control. ENABLE may transition only 0->1/2 or 1/2->0; never directly between active modes
+      or to 3. PENA is a five-port independent enable mask, valid only after port TYPE/configuration is set.
+    byte_offset: 0
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Mctrl
+  - name: mstat
+    description: Master Status. Mixed read-only status and write-one-to-clear sticky causes. PORTINT causes must
+      be handled in PnSTAT. Read, handle data, then clear intended causes; wait at least 50 PCLK cycles before clearing
+      to avoid reassertion (52.8.1.3). Avoid read-modify-write.
+    byte_offset: 4
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Mstat
+  - name: intenset
+    description: Interrupt Enable Set. Write-one-to-set interrupt enable bits; port masks are independent bit masks,
+      not one-bit enumerations. Port-local interrupt rules must also be enabled.
+    byte_offset: 8
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Intenset
+  - name: intenclr
+    description: 'Interrupt Clear. Alias for clearing the interrupt enables: write one to disable only the intended
+      enables. It does not clear pending event causes.'
+    byte_offset: 12
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Intenclr
+  - name: intstat
+    description: Masked Interrupt Status. Masked interrupt status is MSTAT AND interrupt enables. The memory map
+      and XML mark RW although the function describes a computed status; no undocumented clear-on-write or read
+      side effect is assumed.
+    byte_offset: 16
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Intstat
+  - name: dmactrl
+    description: DMA Control. Two external DMA request channels, with ports 0-4 or Port80. Software primes the first
+      block; DMA enable refills. The function says "up to 3 ports" but 52.3.1.9 and the register expose two DMA
+      requests. The DMA1EN/DMA0EN tables mention action 3 for mailbox while their encoding lists reserve 3; no variant
+      3 is provided.
+    byte_offset: 20
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Dmactrl
+  - name: rambase
+    description: RAM Base. RAM base, at least 4 KiB aligned. Bits 11:0 are always zero and omitted. Map reset is
+      0x20000000; the function says the system selects the initial base. A generated default is not an observation
+      of allocated memory.
+    byte_offset: 24
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Rambase
+  - name: mapbase
+    description: Mapped Base
+    byte_offset: 28
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Mapbase
+  - name: irqpush
+    description: IRQ Push. Push an IRQ only after clearing the previous MSTAT.IRQUPD (must be zero). DONE reports
+      completion.
+    byte_offset: 32
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Irqpush
+  - name: wirewo
+    description: Virtual Wire MCU-to-host. Wait for DONE=1 before writing new wire values. A write clears DONE,
+      hardware sets it after transmission; DONE does not generate an interrupt and must be polled. BOOT_DONE and
+      BOOT_ERRN should be set after power-on. LPC START/FORCE prose does not match all field names; no additional
+      alias fields are invented.
+    byte_offset: 36
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Wirewo
+  - name: wirero
+    description: Virtual Wire Host-to-MCU
+    byte_offset: 40
+    bit_size: 32
+    access: Read
+    fieldset: Wirero
+  - name: p80stat
+    description: Port 80 Status
+    byte_offset: 48
+    bit_size: 32
+    access: ReadWrite
+    fieldset: P80stat
+  - name: stataddr
+    description: Status Block Address. Eight-byte status block, aligned to eight bytes. BASE=1/2 is called Base1/Base2
+      here, whereas MAPBASE and PnADDR use BASE0/BASE1; retain raw numeric BASE because naming conflicts.
+    byte_offset: 52
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Stataddr
+  - name: espicap
+    description: eSPI Capabilities. Advertised capabilities and limits; host still chooses configuration. SAFERA
+      defines only encodings 0-3 in a four-bit field; other values are unspecified, not inferred. MAXSPD=5-7 is
+      unspecified.
+    byte_offset: 64
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Espicap
+  - name: espicfg
+    description: eSPI Configuration
+    byte_offset: 68
+    bit_size: 32
+    access: Read
+    fieldset: Espicfg
+  - name: espimisc
+    description: eSPI Miscellaneous. GPIO_IN is input status; GPIO output controls depend on whether Alert is dedicated.
+      PWRSAV only affects eSPI clock gating, not LPC; may delay writes by less than 200 ns.
+    byte_offset: 72
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Espimisc
+  - name: rpmc_support1
+    description: 'RPMC Support 1. Configure before eSPI starts; do not change while eSPI works. TARGET_RPMC_SUPPORTED
+      is a numeric count: prose says 1-based total up to 63, but the encoding list labels 3 as "up to 63"; no four-entry
+      enum is used.'
+    byte_offset: 80
+    bit_size: 32
+    access: ReadWrite
+    fieldset: RpmcSupport1
+  - name: rpmc_support2
+    description: RPMC Support 2. Configure before eSPI starts; do not change while eSPI works.
+    byte_offset: 84
+    bit_size: 32
+    access: ReadWrite
+    fieldset: RpmcSupport2
+  - name: wirein_gpio
+    description: WIREIN_GPIO. LEVEL and VALID are four independent corresponding bits, not two-state 4-bit values.
+      Captures controller virtual-wire writes; target software forwards them to GPIO.
+    byte_offset: 88
+    bit_size: 32
+    access: Read
+    fieldset: WireinGpio
+  - name: wireout_gpio
+    description: 'WIREOUT_GPIO. SOURCE CONFLICT: memory map/XML mark read-only, but 52.8.1.21 says the target CPU
+      writes this register to transmit virtual wires. Conservatively retain Read access pending vendor clarification;
+      no write accessor is proposed. LEVEL and VALID are independent bit masks.'
+    byte_offset: 92
+    bit_size: 32
+    access: Read
+    fieldset: WireoutGpio
+  - name: pcfg
+    description: 'Port Configuration. Configure type/address before enabling the port; TYPE must not change while
+      enabled. Only one port may be OOB; if multiple ports are marked OOB, only the lowest-numbered port receives
+      host writes. Only one port may be used for mastering and only one for flash; attempts to configure a second
+      port are refused. Mastering, OOB and flash are not available with LPC. DIRECTION may change with caution.
+      ERRORIGN polarity conflicts between its field and DIRECTION prose. STALLRD/STALLWR are documented here, but
+      52.4.2 says application stalling is no longer supported: raw fields do not guarantee this feature. TYPE=8
+      follows the register definition; 52.3.1.3.3 incorrectly calls Mailbox Shared 1010b.'
+    byte_offset: 256
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Pcfg
+    array:
+      len: 5
+      stride: 32
+  - name: pstat
+    description: Port Status. RDSTAT/WRSTAT depend on port type; change them through PIRULESTAT, not ordinary writes.
+      Interrupt cause bits 8-14 are sticky write-one-to-clear, even with interrupts masked. Clearing INTERR also
+      clears ERR0-ERR3. RPMC_FLASH_DEVICE may toggle for non-RPMC commands and must then be ignored.
+    byte_offset: 260
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Pstat
+    array:
+      len: 5
+      stride: 32
+  - name: pirulestat
+    description: Set Interrupt Rules and User Status. Contains interrupt masks, user status, status commands and
+      completion tags. SRST and SSTCL must not be written together; SRST takes precedence. SSTCL is mode-dependent
+      command bits, not a global enable enum. Program CPU_TAG before completion commands.
+    byte_offset: 264
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Pirulestat
+    array:
+      len: 5
+      stride: 32
+  - name: paddr
+    description: Port Address. Normal-port address view; aliases POMFLEN at each port offset +0x0C. Address alignment
+      must match the port range; split mailbox alignment includes both halves. Do not change address while enabled.
+    byte_offset: 268
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Paddr
+    array:
+      len: 5
+      stride: 32
+  - name: pomflen
+    description: Port OOB, Mastering, and Flash Length. OOB/master/flash length view; aliases PADDR at +0x0C. LEN
+      is zero-relative; obey host payload limit and maximum 124 bytes, or 120 for bus mastering. Flash erase uses
+      its low three bits as sector encoding. TRANS semantics depend on port type; prepare before issuing SSTCL.
+    byte_offset: 268
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Pomflen
+    array:
+      len: 5
+      stride: 32
+  - name: pdatain
+    description: 'Port Data Input. Host input byte for endpoint/index-and-data; otherwise zero-relative last message
+      length, including the four address bytes for SAF. SOURCE CONFLICT: SAF examples (52.6.1 and 52.6.3) require
+      incoming TAG[29:26] and length[11:0], but the register table (52.8.1.27) marks 31:26 reserved and defines
+      DIR[8] with DATA_LEN[7:0]. This model retains the conservative table layout and has no incoming TAG accessor;
+      it does not supply the incoming SAF tag/length view required by those examples. CPU_TAG in PIRULESTAT is an
+      outgoing completion tag, not a replacement for the missing incoming tag. Status depends on data consumption
+      and port type; the source does not completely specify per-read clearing semantics. Mailbox state is explicitly
+      maintained through PIRULESTAT. Do not assume a universal clear-on-read rule.'
+    byte_offset: 272
+    bit_size: 32
+    access: Read
+    fieldset: Pdatain
+    array:
+      len: 5
+      stride: 32
+  - name: pdataout
+    description: Port Data Out. Output-byte view; aliases PRAMUSE at +0x14. Writing endpoint data makes it pending
+      for the host. The function paragraph repeats input-register wording, but the field definition says data to
+      send to host; the latter is used.
+    byte_offset: 276
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Pdataout
+    array:
+      len: 5
+      stride: 32
+  - name: pramuse
+    description: Port RAM Use. Mailbox/master RAM-allocation view; aliases PDATAOUT at +0x14. Per-direction length
+      is 4<<LEN bytes (4..512); split mailboxes use twice that RAM. OFF must be aligned modulo the mailbox range.
+    byte_offset: 276
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Pramuse
+    array:
+      len: 5
+      stride: 32
+fieldset/Mctrl:
+  description: Master Control. ENABLE may transition only 0->1/2 or 1/2->0; never directly between active modes
+    or to 3. PENA is a five-port independent enable mask, valid only after port TYPE/configuration is set.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: enable
+    description: 'Enable. Encodings: 0: Disabled. Block is not operational.; 1: eSPI (Enhanced Serial Peripheral
+      Interface); 2: LPC (Low Pin Count)'
+    bit_offset: 0
+    bit_size: 2
+    enum: MctrlEnable
+  - name: rtc_int_bmc
+    description: 'RTC-Integrated-BMC. Encodings: 0: BMC does not support an integrated RTC.; 1: BMC supports an
+      integrated RTC to which eSPI controller can forward RTC targeting IO cycles. (**ESPI slave regs: 0x8, bit
+      29**).'
+    bit_offset: 2
+    bit_size: 1
+  - name: pena
+    description: Independent enable bits for ports 0..4; configure each port before setting its bit.
+    bit_offset: 8
+    bit_size: 5
+  - name: p80ena
+    description: Port 80 Enable
+    bit_offset: 16
+    bit_size: 1
+  - name: sblkena
+    description: Status Block Enable
+    bit_offset: 17
+    bit_size: 1
+  - name: clk_div_disable
+    description: 'Clock Division Disable. Encodings: 0: Clock division is enabled.; 1: Clock division is disabled.'
+    bit_offset: 18
+    bit_size: 1
+  - name: early_sample
+    description: Early Sample
+    bit_offset: 19
+    bit_size: 1
+fieldset/Mstat:
+  description: Master Status. Mixed read-only status and write-one-to-clear sticky causes. PORTINT causes must be
+    handled in PnSTAT. Read, handle data, then clear intended causes; wait at least 50 PCLK cycles before clearing
+    to avoid reassertion (52.8.1.3). Avoid read-modify-write.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: portint
+    description: Port Interrupt
+    bit_offset: 0
+    bit_size: 5
+  - name: p80int
+    description: Port80 Interrupt Request
+    bit_offset: 8
+    bit_size: 1
+  - name: busrst
+    description: 'Bus Reset. Encodings: 1: The bit entered or exited reset. Sticky, must clear.'
+    bit_offset: 9
+    bit_size: 1
+  - name: irqupd
+    description: 'Interrupt Request Update Completion. Encodings: 1: The bus had an IRQ update completion (for eSPI,
+      IRQPush done; for LPC, SERIRQ done). Sticky, must clear.'
+    bit_offset: 10
+    bit_size: 1
+  - name: wirechg
+    description: 'Wire Change. Encodings: 1: For eSPI, one or more input VWires have changed since last cleared
+      for eSPI. For LPC, SERIRQ started. Sticky, write to clear.'
+    bit_offset: 11
+    bit_size: 1
+  - name: hstall
+    description: 'Host Stall. Encodings: 1: Host is stalled on a read from or write to a port that has the STALLRD
+      or STALLWR bit set in the PnCFG register. The application must write 1 to this bit to clear and release the
+      host. The stall should not allowed to persist.'
+    bit_offset: 12
+    bit_size: 1
+  - name: crcerr
+    description: 'Cyclic Redundancy Check (CRC) Error. Encodings: 1: CRC from the master did not match the computed
+      CRC. The state of the app may be in error (due to bad data). Write 1 to clear.'
+    bit_offset: 13
+    bit_size: 1
+  - name: gpio
+    description: 'General Purpose Input/Output (GPIO). Encodings: 1: ESPIMISC[GPIO] has had an input change. Only
+      detected if INTENSET has configured this bit to interrupt. Write 1 to clear.'
+    bit_offset: 14
+    bit_size: 1
+  - name: busy
+    description: 'Bus Busy. Encodings: 0: Idle; 1: Busy'
+    bit_offset: 16
+    bit_size: 1
+  - name: inrst
+    description: 'Bus Reset. Encodings: 0: Bus not in reset; 1: Bus is in reset'
+    bit_offset: 17
+    bit_size: 1
+  - name: comppend
+    description: 'Completion Pending. Encodings: 0: No completions pending; 1: Completions are pending for eSPI.
+      Indicates quiet mode for LPC'
+    bit_offset: 18
+    bit_size: 1
+  - name: mastpend
+    description: 'Master Pending. Encodings: 0: No mastering pending; 1: Mastering is pending (flash or memory)'
+    bit_offset: 19
+    bit_size: 1
+  - name: alertpend
+    description: 'Alert Pending. Encodings: 0: No alert request pending; 1: Alert request pin is pending, whether
+      a separate pin or master-in slave-out (MISO). For LPC, indicates that SERIRQ is in process.'
+    bit_offset: 20
+    bit_size: 1
+fieldset/Intenset:
+  description: Interrupt Enable Set. Write-one-to-set interrupt enable bits; port masks are independent bit masks,
+    not one-bit enumerations. Port-local interrupt rules must also be enabled.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: portint
+    description: 'Port interrupt. Encodings: 1: Corresponding port interrupts main processor, if it matches IRule'
+    bit_offset: 0
+    bit_size: 5
+  - name: p80int
+    description: 'Port80 Interrupt. Encodings: 0: Disabled; 1: Port80 interrupts main processor on update from host'
+    bit_offset: 8
+    bit_size: 1
+  - name: busrst
+    description: 'Bus Reset. Encodings: 0: Disabled; 1: A change in bus reset status interrupts CPU'
+    bit_offset: 9
+    bit_size: 1
+  - name: irqupd
+    description: 'IRQ Update. Encodings: 0: Disabled; 1: Completion of an IRQ update interrupts CPU'
+    bit_offset: 10
+    bit_size: 1
+  - name: wirechg
+    description: 'Wire Change. Encodings: 0: Disabled; 1: When one or more VWire inputs have changed, interrupts
+      CPU'
+    bit_offset: 11
+    bit_size: 1
+  - name: hstall
+    description: 'Host Stall. Encodings: 0: Disabled; 1: When the MSTAT[HSTALL] is 1, interrupt main processor'
+    bit_offset: 12
+    bit_size: 1
+  - name: crcerr
+    description: 'CRC Error. Encodings: 0: Disabled; 1: When CRC error detected, interrupts CPU'
+    bit_offset: 13
+    bit_size: 1
+  - name: gpio
+    description: 'GPIO. Encodings: 0: Disabled; 1: When ESPICFG GPIO changes input value, interrupts CPU'
+    bit_offset: 14
+    bit_size: 1
+  - name: cs_int
+    description: 'CS_INT. Encodings: 0: Disabled; 1: When CS falls, interrupts the main processor (wake_async is
+      asserted)'
+    bit_offset: 15
+    bit_size: 1
+  - name: cportint
+    description: 'Coprocessor Interrupt. Encodings: 0: Disabled; 1: no description available'
+    bit_offset: 16
+    bit_size: 5
+  - name: cp80int
+    description: 'Coprocessor Port80 Interrupt. Encodings: 0: Disabled; 1: Port80 interrupts coprocessor on update
+      from host'
+    bit_offset: 24
+    bit_size: 1
+  - name: cbusrst
+    description: 'Coprocessor Burst. Encodings: 0: Disabled; 1: Change in bus reset status interrupts coprocessor'
+    bit_offset: 25
+    bit_size: 1
+  - name: cirqupd
+    description: 'Coprocessor Interrupt Update. Encodings: 0: Disabled; 1: Completion of an IRQ update interrupts
+      coprocessor'
+    bit_offset: 26
+    bit_size: 1
+  - name: cwirechg
+    description: 'Coprocessor Wire Change. Encodings: 0: Disabled; 1: When one one or more Vwire inputs have changed,
+      interrupts coprocessor'
+    bit_offset: 27
+    bit_size: 1
+  - name: chstall
+    description: 'Coprocessor Host Stall. Encodings: 0: Disabled; 1: When MSTAT[HSTALL] is 1, interrupts coprocessor'
+    bit_offset: 28
+    bit_size: 1
+  - name: ccrcerr
+    description: 'Coprocessor Error. Encodings: 0: Disabled; 1: When CRC error detected, interrupts coprocessor'
+    bit_offset: 29
+    bit_size: 1
+  - name: cgpio
+    description: 'Coprocessor GPIO. Encodings: 0: Disabled; 1: When ESPICFG GPIO changes input value, interrupts
+      coprocessor'
+    bit_offset: 30
+    bit_size: 1
+fieldset/Intenclr:
+  description: 'Interrupt Clear. Alias for clearing the interrupt enables: write one to disable only the intended
+    enables. It does not clear pending event causes.'
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: portint
+    description: 'Port Interrupt. Encodings: 1: Writes 0 to corresponding port interrupt enable'
+    bit_offset: 0
+    bit_size: 5
+  - name: p80int
+    description: 'Port80 Interrupt. Encodings: 1: Writes 0 to Port80 interrupt enable'
+    bit_offset: 8
+    bit_size: 1
+  - name: busrst
+    description: 'Bus Reset. Encodings: 1: Writes 0 to reset change interrupt enable'
+    bit_offset: 9
+    bit_size: 1
+  - name: irqupd
+    description: 'IRQ Update. Encodings: 1: Writes 0 to IRQ completion interrupt enable'
+    bit_offset: 10
+    bit_size: 1
+  - name: wirechg
+    description: 'Wire Change. Encodings: 1: Writes 0 to Wire Change interrupt enable'
+    bit_offset: 11
+    bit_size: 1
+  - name: hstall
+    description: 'Host Stall. Encodings: 1: Writes 0 to HSTALL interrupt enable'
+    bit_offset: 12
+    bit_size: 1
+  - name: crcerr
+    description: 'CRC Error. Encodings: 1: Writes 0 to CRCERR interrupt enable'
+    bit_offset: 13
+    bit_size: 1
+  - name: gpio
+    description: 'GPIO. Encodings: 1: Writes 0 to GPIO interrupt enable'
+    bit_offset: 14
+    bit_size: 1
+  - name: cs_int
+    description: 'CS_INT. Encodings: 0: Disabled; 1: Clear CS falls enable'
+    bit_offset: 15
+    bit_size: 1
+  - name: cportint
+    description: 'Coprocessor Interrupt. Encodings: 1: Writes 0 to corresponding coprocessor port interrupt enable'
+    bit_offset: 16
+    bit_size: 5
+  - name: cp80int
+    description: 'Coprocesssor Port80 Interrupt. Encodings: 1: Writes 0 to coprocessor Port80 interrupt enable.'
+    bit_offset: 24
+    bit_size: 1
+  - name: cbusrst
+    description: 'Coprocessor Burst. Encodings: 1: Writes 0 to coprocessor Reset change interrupt enable'
+    bit_offset: 25
+    bit_size: 1
+  - name: cirqupd
+    description: 'Coprocessor IRQ Update. Encodings: 1: Writes 0 to coprocessor IRQ completion interrupt enable'
+    bit_offset: 26
+    bit_size: 1
+  - name: cwirechg
+    description: 'Coprocessor Wire Change. Encodings: 1: Writes 0 to coprocessor Wire Change interrupt enable'
+    bit_offset: 27
+    bit_size: 1
+  - name: chstall
+    description: 'Coprocessor Host Stall. Encodings: 1: Writes 0 to coprocessor HSTALL interrupt enable'
+    bit_offset: 28
+    bit_size: 1
+  - name: ccrcerr
+    description: 'Coprocessor CRC Error. Encodings: 1: Writes 0 to coprocessor CRCERR interrupt enable'
+    bit_offset: 29
+    bit_size: 1
+  - name: cgpio
+    description: 'Coprocessor GPIO. Encodings: 1: Writes 0 to coprocessor GPIO interrupt enable'
+    bit_offset: 30
+    bit_size: 1
+fieldset/Intstat:
+  description: Masked Interrupt Status. Masked interrupt status is MSTAT AND interrupt enables. The memory map and
+    XML mark RW although the function describes a computed status; no undocumented clear-on-write or read side effect
+    is assumed.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: portint
+    description: 'Port Interrupt. Encodings: 0: Disabled; 1: Corresponding port interrupts main processor if it
+      matches IRule'
+    bit_offset: 0
+    bit_size: 5
+  - name: p80int
+    description: 'Port80 Interrupt. Encodings: 0: Disabled; 1: Port80 interrupts main processor on update from host'
+    bit_offset: 8
+    bit_size: 1
+  - name: busrst
+    description: 'Bus Reset. Encodings: 0: Disabled; 1: A change in Bus Reset status interrupts CPU'
+    bit_offset: 9
+    bit_size: 1
+  - name: irqupd
+    description: 'IRQ Update. Encodings: 0: Disabled; 1: Completion of an IRQ update interrupts CPU'
+    bit_offset: 10
+    bit_size: 1
+  - name: wirechg
+    description: 'Wire Change. Encodings: 0: Disabled; 1: The VWire input change interrupt is enabled and pending
+      for the CPU'
+    bit_offset: 11
+    bit_size: 1
+  - name: hstall
+    description: 'Host Stall. Encodings: 0: Disabled; 1: The HSTALL interrupt is enabled and pending for the CPU'
+    bit_offset: 12
+    bit_size: 1
+  - name: crcerr
+    description: 'CRC Error. Encodings: 0: Disabled; 1: The CRC error interrupt is enabled and pending for the CPU'
+    bit_offset: 13
+    bit_size: 1
+  - name: gpio
+    description: 'GPIO. Encodings: 0: Disabled; 1: The GPIO input change interrupt is enabled and pending for the
+      CPU'
+    bit_offset: 14
+    bit_size: 1
+  - name: cportint
+    description: 'Coprocessor Interrupt. Encodings: 0: Disabled; 1: Interrupt is enabled and pending for the coprocessor'
+    bit_offset: 16
+    bit_size: 5
+  - name: cp80int
+    description: 'Coprocessor Port80 Interrupt. Encodings: 0: Disabled; 1: Port80 interrupt is enabled and pending
+      for the CPU. Port80 interrupts coprocessor on update from host.'
+    bit_offset: 24
+    bit_size: 1
+  - name: cbusrst
+    description: 'Coprocessor Burst. Encodings: 0: Disabled; 1: Bus reset status change interrupt is enabled and
+      pending for the CPU. A change in bus reset status interrupts coprocessor.'
+    bit_offset: 25
+    bit_size: 1
+  - name: cirqupd
+    description: 'Coprocessor IRQ Update. Encodings: 0: Disabled; 1: IRQ update interrupt is enabled and pending
+      for the CPU.'
+    bit_offset: 26
+    bit_size: 1
+  - name: cwirechg
+    description: 'Coprocessor Wire Change. Encodings: 0: Disabled; 1: When one one or more Vwire input has changed,
+      interrupts coprocessor.'
+    bit_offset: 27
+    bit_size: 1
+  - name: chstall
+    description: 'Coprocessor Host Stall. Encodings: 0: Disabled; 1: When MSTAT[HSTALL] is 1, interrupts coprocessor.'
+    bit_offset: 28
+    bit_size: 1
+  - name: ccrcerr
+    description: 'Coprocessor CRC Error. Encodings: 0: Disabled; 1: When a CRC error detected, interrupts coprocessor.'
+    bit_offset: 29
+    bit_size: 1
+  - name: cgpio
+    description: 'Coprocessor GPIO. Encodings: 0: Disabled; 1: When ESPICFG GPIO changes input value, interrupts
+      coprocessor.'
+    bit_offset: 30
+    bit_size: 1
+fieldset/Dmactrl:
+  description: DMA Control. Two external DMA request channels, with ports 0-4 or Port80. Software primes the first
+    block; DMA enable refills. The function says "up to 3 ports" but 52.3.1.9 and the register expose two DMA requests.
+    The DMA1EN/DMA0EN tables mention action 3 for mailbox while their encoding lists reserve 3; no variant 3 is
+    provided.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: dma0en
+    description: 'DMA 0 Enable. Encodings: 0: Disabled. The DMA channel is not used.; 1: Triggers on Host Read empty
+      (whether endpoint and a byte or mailbox and many bytes). Allows reload of memory.; 2: Triggers on Host Write
+      complete/ready (whether endpoint and a byte, or mailbox and many bytes).'
+    bit_offset: 0
+    bit_size: 2
+    enum: DmactrlDma0en
+  - name: dma1en
+    description: 'DMA 1 Enable. Encodings: 0: Disabled. The DMA channel is not used.; 1: Triggers on Host Read empty
+      (whether endpoint and a byte or mailbox and many bytes). Allows reload of memory.; 2: Triggers on Host Write
+      complete/ready (whether endpoint and a byte or mailbox and many bytes).'
+    bit_offset: 2
+    bit_size: 2
+    enum: DmactrlDma1en
+  - name: dma0port
+    description: DMA 0 Port
+    bit_offset: 8
+    bit_size: 4
+    enum: DmactrlDma0port
+  - name: dma1port
+    description: 'Selects port operating DMA. Encodings: 0: Port 0; 1: Port 1; 2: Port 2; 3: Port 3; 4: Port 4;
+      8: Port80. Used to offload the Port80 bytes (only host writes apply to Port80).'
+    bit_offset: 12
+    bit_size: 4
+    enum: DmactrlDma1port
+  - name: cnt0
+    description: Reload Count 0
+    bit_offset: 16
+    bit_size: 7
+  - name: cnt1
+    description: Reload Count 1
+    bit_offset: 24
+    bit_size: 7
+fieldset/Rambase:
+  description: RAM Base. RAM base, at least 4 KiB aligned. Bits 11:0 are always zero and omitted. Map reset is 0x20000000;
+    the function says the system selects the initial base. A generated default is not an observation of allocated
+    memory.
+  bit_size: 32
+  reset_value: 536870912
+  fields:
+  - name: ram
+    description: RAM Location
+    bit_offset: 12
+    bit_size: 20
+fieldset/Mapbase:
+  description: Mapped Base
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: base0
+    description: Base 0
+    bit_offset: 0
+    bit_size: 16
+  - name: base1
+    description: Base 1
+    bit_offset: 16
+    bit_size: 16
+fieldset/Irqpush:
+  description: IRQ Push. Push an IRQ only after clearing the previous MSTAT.IRQUPD (must be zero). DONE reports
+    completion.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: irq
+    description: Interrupt Request Queue
+    bit_offset: 0
+    bit_size: 8
+  - name: done
+    description: IRQ Update Done
+    bit_offset: 8
+    bit_size: 1
+fieldset/Wirewo:
+  description: Virtual Wire MCU-to-host. Wait for DONE=1 before writing new wire values. A write clears DONE, hardware
+    sets it after transmission; DONE does not generate an interrupt and must be polled. BOOT_DONE and BOOT_ERRN
+    should be set after power-on. LPC START/FORCE prose does not match all field names; no additional alias fields
+    are invented.
+  bit_size: 32
+  reset_value: 2147483648
+  fields:
+  - name: oob_rst_ack
+    description: Out-Of-Band Reset Acknowledge
+    bit_offset: 0
+    bit_size: 1
+  - name: waken_scin
+    description: IRQ1
+    bit_offset: 1
+    bit_size: 1
+  - name: pmen
+    description: SMIN
+    bit_offset: 2
+    bit_size: 1
+  - name: scin
+    description: IRQ2
+    bit_offset: 3
+    bit_size: 1
+  - name: smin
+    description: IRQ3
+    bit_offset: 4
+    bit_size: 1
+  - name: rcinn
+    description: IRQ4
+    bit_offset: 5
+    bit_size: 1
+  - name: host_rst_ack
+    description: IRQ5
+    bit_offset: 6
+    bit_size: 1
+  - name: susackn
+    description: IRQ6
+    bit_offset: 7
+    bit_size: 1
+  - name: e2p
+    description: IRQ7-IRQ15
+    bit_offset: 8
+    bit_size: 8
+  - name: boot_done
+    description: Boot Load Done
+    bit_offset: 16
+    bit_size: 1
+  - name: boot_errn
+    description: 'Boot Load Error. Encodings: 0: Boot load error; 1: Boot load successful'
+    bit_offset: 17
+    bit_size: 1
+  - name: dsw_pwrok_rst
+    description: Force
+    bit_offset: 18
+    bit_size: 1
+  - name: done
+    description: 'Write Done. Encodings: 0: Write not done; 1: Write done'
+    bit_offset: 31
+    bit_size: 1
+fieldset/Wirero:
+  description: Virtual Wire Host-to-MCU
+  bit_size: 32
+  reset_value: 1048576
+  fields:
+  - name: slp_s3n
+    description: Sleep State 3
+    bit_offset: 0
+    bit_size: 1
+  - name: slp_s4n
+    description: Sleep State 4
+    bit_offset: 1
+    bit_size: 1
+  - name: slp_s5n
+    description: Sleep State 5
+    bit_offset: 2
+    bit_size: 1
+  - name: sus_stat
+    description: Suspend Status
+    bit_offset: 3
+    bit_size: 1
+  - name: pltrstn
+    description: Reset Request
+    bit_offset: 4
+    bit_size: 1
+  - name: oob_rst_warn
+    description: Out-Of-Band Reset Warning
+    bit_offset: 5
+    bit_size: 1
+  - name: host_rst_warn
+    description: Host Reset Warning
+    bit_offset: 6
+    bit_size: 1
+  - name: sus_warn
+    description: Suspend Warning
+    bit_offset: 7
+    bit_size: 1
+  - name: sus_pwrdn_ackn
+    description: Suspend Power Well Acknowledge
+    bit_offset: 8
+    bit_size: 1
+  - name: slp_an
+    description: Sleep AN
+    bit_offset: 9
+    bit_size: 1
+  - name: slp_lan
+    description: Wired LAN Sleep
+    bit_offset: 10
+    bit_size: 1
+  - name: slp_wlan
+    description: Wireless LAN Sleep
+    bit_offset: 11
+    bit_size: 1
+  - name: p2e
+    description: PCIe to EC
+    bit_offset: 12
+    bit_size: 8
+  - name: host_c10n
+    description: Host Entering Deep Power Down C10 State
+    bit_offset: 20
+    bit_size: 1
+fieldset/P80stat:
+  description: Port 80 Status
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: curr
+    description: Current Port80 Value
+    bit_offset: 0
+    bit_size: 8
+  - name: prev
+    description: Previous Port80 Value
+    bit_offset: 8
+    bit_size: 8
+  - name: cnt
+    description: Counter
+    bit_offset: 16
+    bit_size: 4
+  - name: rst
+    description: Counter Reset
+    bit_offset: 20
+    bit_size: 1
+fieldset/Stataddr:
+  description: Status Block Address. Eight-byte status block, aligned to eight bytes. BASE=1/2 is called Base1/Base2
+    here, whereas MAPBASE and PnADDR use BASE0/BASE1; retain raw numeric BASE because naming conflicts.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: 'off'
+    description: Offset
+    bit_offset: 3
+    bit_size: 13
+  - name: base
+    description: 'Offset Base. Encodings: 0: Offset from 0 in host memory or I/O space; 1: Base1 offset in host
+      memory; 2: Base2 offset in host memory'
+    bit_offset: 16
+    bit_size: 2
+fieldset/Espicap:
+  description: eSPI Capabilities. Advertised capabilities and limits; host still chooses configuration. SAFERA defines
+    only encodings 0-3 in a four-bit field; other values are unspecified, not inferred. MAXSPD=5-7 is unspecified.
+  bit_size: 32
+  reset_value: 10485760
+  fields:
+  - name: spicap
+    description: 'SPI mode allowed (host still has to select):. Encodings: 0: SPI only; 1: BiSPI and SPI; 2: FLEXSPI
+      and SPI; 3: Any'
+    bit_offset: 0
+    bit_size: 2
+    enum: EspicapSpicap
+  - name: maxspd
+    description: 'Maximum SPI Clock Speed. Encodings: 0: <=20 MHz; 1: <=25 MHz (24 Mhz); 2: <=33 MHz (30 MHz); 3:
+      <=50 MHz (48 MHz); 4: <=66 MHz (60 MHz)'
+    bit_offset: 4
+    bit_size: 3
+  - name: alpin
+    description: Alert Pin
+    bit_offset: 7
+    bit_size: 1
+  - name: oobok
+    description: 'OOB Allow. Encodings: 0: Do not allow OOB; 1: Allow OOB'
+    bit_offset: 8
+    bit_size: 1
+  - name: flashmx
+    description: 'Maximum Flash Payload Size. Encodings: 0: 64 bytes; 1: 128 bytes; 2: 256 bytes; 3: 512 bytes'
+    bit_offset: 10
+    bit_size: 2
+  - name: saf
+    description: 'Slave-Attached Flash. Encodings: 0: Host cannot support SAF; 1: SAF is possible with the firmware.'
+    bit_offset: 12
+    bit_size: 1
+  - name: safera
+    description: 'SAF Erase Sector. Encodings: 0: 2 kB; 1: 4 kB; 2: 8 kB; 3: 16 kB'
+    bit_offset: 13
+    bit_size: 4
+  - name: maf
+    description: 'Master-Attached Flash. Encodings: 0: Host cannot support MAF; 1: If 1, then Master Attached Flash
+      is possible with this firmware'
+    bit_offset: 17
+    bit_size: 1
+  - name: trgt_req_size_supp
+    description: 'Target Maximum Read Request Size Supported. Encodings: 1: 64 bytes max read request size; 2: 128
+      bytes max read request size; 3: 256 bytes max read request size; 4: 512 bytes max read request size; 5: 1024
+      bytes max read request size; 6: 2048 bytes max read request size; 7: 4096 bytes max read request size'
+    bit_offset: 18
+    bit_size: 3
+  - name: memmx
+    description: 'Peripheral Channel Maximum Payload Size Supported. Encodings: 1: 64 bytes address aligned max
+      payload size; 2: 128 bytes address aligned max payload size; 3: 256 bytes address aligned max payload size'
+    bit_offset: 21
+    bit_size: 2
+  - name: oobmx
+    description: 'OOB Message Channel Maximum Payload Size Supported. Encodings: 1: 64 bytes address aligned max
+      payload size; 2: 128 bytes address aligned max payload size; 3: 256 bytes address aligned max payload size'
+    bit_offset: 23
+    bit_size: 2
+fieldset/Espicfg:
+  description: eSPI Configuration
+  bit_size: 32
+  reset_value: 2658307
+  fields:
+  - name: saf
+    description: 'Slave-Attached Flash Supported. Encodings: 0: Host cannot support SAF; 1: Slave Attached Flash
+      is possible with the firmware.'
+    bit_offset: 0
+    bit_size: 1
+  - name: flashsz
+    description: 'Flash Size. Encodings: 0: 64 bytes; 1: 128 bytes; 2: 256 bytes; 3: 512 bytes'
+    bit_offset: 1
+    bit_size: 2
+  - name: spimod
+    description: 'SPI Mode. Encodings: 0: SPI; 1: BiSPI; 2: FLEXSPI'
+    bit_offset: 3
+    bit_size: 2
+    enum: EspicfgSpimod
+  - name: alert
+    description: Alert Is Pin
+    bit_offset: 5
+    bit_size: 1
+  - name: alertod
+    description: Alert Is Open Drain as Pin
+    bit_offset: 6
+    bit_size: 1
+  - name: spispd
+    description: 'SPI Speed. Encodings: 0: 20 MHz or less; 1: 25 MHz or 24 MHz; 2: 33 MHz or 30 MHz; 3: 50 MHz or
+      48 MHz; 4: 66 MHz or 60 MHz'
+    bit_offset: 7
+    bit_size: 3
+  - name: crc
+    description: CRC Checking Enabled
+    bit_offset: 10
+    bit_size: 1
+  - name: busmok
+    description: Bus Master OK
+    bit_offset: 11
+    bit_size: 1
+  - name: memena
+    description: Channel 0 (Memory) Enabled
+    bit_offset: 12
+    bit_size: 1
+  - name: vwok
+    description: Channel 1 (VWire) Enabled
+    bit_offset: 13
+    bit_size: 1
+  - name: oobok
+    description: Channel 2 (OOB) Enabled
+    bit_offset: 14
+    bit_size: 1
+  - name: flshera
+    description: 'Flash Erase Size and Whether Enabled. Encodings: 0: Flash not enabled; 1: Erase is 4 kB; 2: Erase
+      is 64 kB; 3: Erase allows 4 kB and 64 kB; 4: Erase is 128 kB; 5: Erase is 256 kB'
+    bit_offset: 15
+    bit_size: 3
+  - name: flshok
+    description: Channel 3 (Flash) Enabled
+    bit_offset: 18
+    bit_size: 1
+  - name: memsz
+    description: 'Peripheral Channel Maximum Payload Size Selected. Encodings: 1: 64-byte payload for memory; 2:
+      128-byte payload for memory and OOB access; 3: 256-byte payload for memory and OOB access'
+    bit_offset: 19
+    bit_size: 2
+  - name: oobsz
+    description: 'OOB Message Channel Maximum Payload Size Selected. Encodings: 1: 64-byte payload for memory; 2:
+      128-byte payload for memory and OOB access; 3: 256-byte payload for memory and OOB access'
+    bit_offset: 21
+    bit_size: 2
+fieldset/Espimisc:
+  description: eSPI Miscellaneous. GPIO_IN is input status; GPIO output controls depend on whether Alert is dedicated.
+    PWRSAV only affects eSPI clock gating, not LPC; may delay writes by less than 200 ns.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: gpio_oe
+    description: 'GPIO Output Enable. Encodings: 0: Input (High-Z); 1: Alert or reset pin is set as an output GPIO.'
+    bit_offset: 0
+    bit_size: 1
+  - name: gpio_od
+    description: 'GPIO Open Drain. Encodings: 1: Alert/Reset pin acts as open drain when ESPIMISC[GPIO_OE] = 1.
+      This means ESPIMISC[GPIO_OUT] = 0 is low, and ESPIMISC[GPIO_OUT] = 1 is high-Z.'
+    bit_offset: 1
+    bit_size: 1
+  - name: gpio_out
+    description: 'Not used in eSPI if ESPICFG[ALERT] is 1. Encodings: 0: Low; 1: High, high-Z if ESPIMISC[GPIO_OD]
+      = 1.'
+    bit_offset: 2
+    bit_size: 1
+  - name: gpio_in
+    description: GPIO Input
+    bit_offset: 3
+    bit_size: 1
+  - name: risgp
+    description: 'RSTN Pin Is GPIO. Encodings: 1: In eSPI mode, if this bit is 1, RSTN pin is not used as Reset
+      (affects behavior). It can be used as GPIO if Alert is dedicated to Alert (instead of MISO). This option does
+      not apply in LPC mode.'
+    bit_offset: 4
+    bit_size: 1
+  - name: pwrsav
+    description: Power Save
+    bit_offset: 31
+    bit_size: 1
+fieldset/RpmcSupport1:
+  description: 'RPMC Support 1. Configure before eSPI starts; do not change while eSPI works. TARGET_RPMC_SUPPORTED
+    is a numeric count: prose says 1-based total up to 63, but the encoding list labels 3 as "up to 63"; no four-entry
+    enum is used.'
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: target_rpmc_supported
+    description: Total count, 0 means unsupported, 1..63 is the 1-based total. Source encoding list ambiguously
+      maps 3 to up to 63; do not infer a four-state enum.
+    bit_offset: 0
+    bit_size: 6
+  - name: num_of_target
+    description: 'Number of Target Attached Flash RPMC flash devices. Encodings: 0: 1 RPMC flash device is supported;
+      1: 2 RPMC flash device is supported; 2: 3 RPMC flash device is supported; 3: 4 RPMC flash device is supported'
+    bit_offset: 6
+    bit_size: 2
+  - name: rpmc_op1
+    description: RPMC OP1 Opcode on the 1st RPMC Flash device
+    bit_offset: 8
+    bit_size: 8
+  - name: rpmc_counter
+    description: RPMC Counter on the 1st RPMC Flash device
+    bit_offset: 16
+    bit_size: 4
+  - name: rpmc_op1_2
+    description: RPMC OP1 Opcode on the 2nd RPMC Flash device
+    bit_offset: 20
+    bit_size: 8
+  - name: rpmc_counter_2
+    description: RPMC Counter on the 2nd RPMC Flash device
+    bit_offset: 28
+    bit_size: 4
+fieldset/RpmcSupport2:
+  description: RPMC Support 2. Configure before eSPI starts; do not change while eSPI works.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: rpmc_counter_3
+    description: RPMC Counter on the 3rd RPMC Flash device
+    bit_offset: 0
+    bit_size: 4
+  - name: rpmc_op1_3
+    description: RPMC OP1 Opcode on the 3rd RPMC Flash device
+    bit_offset: 4
+    bit_size: 8
+  - name: rpmc_counter_4
+    description: RPMC Counter on the 4th RPMC Flash device
+    bit_offset: 12
+    bit_size: 4
+  - name: rpmc_op1_4
+    description: RPMC OP1 Opcode on the 4th RPMC Flash device
+    bit_offset: 16
+    bit_size: 8
+fieldset/WireinGpio:
+  description: WIREIN_GPIO. LEVEL and VALID are four independent corresponding bits, not two-state 4-bit values.
+    Captures controller virtual-wire writes; target software forwards them to GPIO.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: level
+    description: 'Level. Encodings: 0: Low; 1: High'
+    bit_offset: 0
+    bit_size: 4
+  - name: valid
+    description: 'Valid. Encodings: 0: Not valid; 1: Valid'
+    bit_offset: 4
+    bit_size: 4
+  - name: index
+    description: Index
+    bit_offset: 8
+    bit_size: 8
+fieldset/WireoutGpio:
+  description: 'WIREOUT_GPIO. SOURCE CONFLICT: memory map/XML mark read-only, but 52.8.1.21 says the target CPU
+    writes this register to transmit virtual wires. Conservatively retain Read access pending vendor clarification;
+    no write accessor is proposed. LEVEL and VALID are independent bit masks.'
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: level
+    description: 'Level. Encodings: 0: Low; 1: High'
+    bit_offset: 0
+    bit_size: 4
+  - name: valid
+    description: 'Valid. Encodings: 0: Not valid; 1: Valid'
+    bit_offset: 4
+    bit_size: 4
+  - name: index
+    description: Index
+    bit_offset: 8
+    bit_size: 8
+fieldset/Pcfg:
+  description: 'Port Configuration. Configure type/address before enabling the port; TYPE must not change while
+    enabled. Only one port may be OOB; if multiple ports are marked OOB, only the lowest-numbered port receives
+    host writes. Only one port may be used for mastering and only one for flash; attempts to configure a second
+    port are refused. Mastering, OOB and flash are not available with LPC. DIRECTION may change with caution. ERRORIGN
+    polarity conflicts between its field and DIRECTION prose. STALLRD/STALLWR are documented here, but 52.4.2 says
+    application stalling is no longer supported: raw fields do not guarantee this feature. TYPE=8 follows the register
+    definition; 52.3.1.3.3 incorrectly calls Mailbox Shared 1010b.'
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: type_
+    description: 'TYPE: Port interaction type; do not change while enabled. Only one port may be OOB; if multiple
+      ports are marked OOB, only the lowest-numbered port receives host writes. Only one port may be used for mastering
+      and only one for flash; attempts to configure a second port are refused. Mastering, OOB and flash are not
+      available with LPC. Legal codes: 0=unconfigured, 1=ACPI endpoint, 2=ACPI index-and-data, 4=bus-master memory,
+      5=bus-master flash, 8=mailbox shared, 9=mailbox single, 10=mailbox split, 11=mailbox OOB split, 12=mailbox
+      OEM; other codes reserved.'
+    bit_offset: 0
+    bit_size: 4
+    enum: PcfgType
+  - name: direction
+    description: 'Port Direction. Encodings: 0: Endpoint or index-and-data: bidirectional (normal). Mailbox Single:
+      unenforced. Mailbox Split or Mailbox Shared: bidirectional.; 1: Endpoint or index-and-data: ignore read. Mailbox
+      Single: write only. Mailbox Split or Mailbox Shared: ignore read.; 2: Endpoint or index-and-data: ignore write.
+      Mailbox Single: read only. Mailbox Split or Mailbox Shared: ignore write.; 3: Endpoint or index-and-data:
+      Ignore both. Mailbox Single: ignore both. Mailbox Split or Mailbox Shared: ignore both.'
+    bit_offset: 5
+    bit_size: 2
+    enum: PcfgDirection
+  - name: mbintall
+    description: 'Mailbox: map interrupt'
+    bit_offset: 7
+    bit_size: 1
+  - name: stallrd
+    description: Stall on any read
+    bit_offset: 8
+    bit_size: 1
+  - name: stallwr
+    description: Stall on write
+    bit_offset: 9
+    bit_size: 1
+  - name: errorign
+    description: 'Error Origin. Encodings: 0: The host receives an error when trying to perform a read or write
+      that is blocked by PnCFG[DIRECTION].; 1: Ignored silently. Reads return FFh for each byte if ignored (host
+      property). In either case, PnSTAT[INTERR] bit becomes 1, causing an interrupt if masked for it.'
+    bit_offset: 10
+    bit_size: 1
+fieldset/Pstat:
+  description: Port Status. RDSTAT/WRSTAT depend on port type; change them through PIRULESTAT, not ordinary writes.
+    Interrupt cause bits 8-14 are sticky write-one-to-clear, even with interrupts masked. Clearing INTERR also clears
+    ERR0-ERR3. RPMC_FLASH_DEVICE may toggle for non-RPMC commands and must then be ignored.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: rdstat
+    description: 'Host Read Data Status. Encodings: 0: Endpoint or index-and-data: Empty. Mailbox: Empty (host read
+      to end). Master/Flash: No requests.; 1: Endpoint or index-and-data: Data waiting from MCU. Mailbox: Started
+      (by MCU). Master/Flash: Started. From-host: goes to Pending next. To-host: goes to Complete next. SAF: host
+      made request: Started.; 2: Mailbox: Complete (by MCU). Master/Flash: Complete. SAF: Complete.; 3: Mailbox:
+      Partially read (by host). Master/Flash: From-host only, Pending (request made); goes to Complete next. SAF:
+      MCU has setup completion.'
+    bit_offset: 0
+    bit_size: 2
+  - name: wrstat
+    description: 'Status of Host Writes. Encodings: 0: Endpoint: Empty. Index-and-data: Empty. Mailbox: Empty. Master/flash:
+      Not last request.; 1: Endpoint: data waiting from host. Index-and-data: data waiting from host (index may
+      have been written before). Mailbox: Started (by host). Master/flash: last request from-host/read-flash (writes
+      to MCU). SAF: Request from master was or is Flash Read.; 2: Endpoint: Empty, but last was CMD. Index-and-data:
+      wrote index. Mailbox: complete/last (host to end). Master/flash: last request to-host/write-flash (read from
+      MCU). SAF: Request from Master was or is Flash Write.; 3: Endpoint: CMD waiting from host. Index-and-data:
+      Wrote Data then Index. Mailbox: Partially read (by MCU). Flash: Last Requested Erase. SAF: Request from Master
+      was or is Flash Erase.'
+    bit_offset: 2
+    bit_size: 2
+  - name: interr
+    description: Interrupt Caused by Error
+    bit_offset: 8
+    bit_size: 1
+  - name: intrd
+    description: Interrupt Caused by Read
+    bit_offset: 9
+    bit_size: 1
+  - name: intwr
+    description: Interrupt Caused by Write
+    bit_offset: 10
+    bit_size: 1
+  - name: intspc0
+    description: SPC0 Interrupt
+    bit_offset: 11
+    bit_size: 1
+  - name: intspc1
+    description: SPC1 Interrupt
+    bit_offset: 12
+    bit_size: 1
+  - name: intspc2
+    description: SPC2 Interrupt
+    bit_offset: 13
+    bit_size: 1
+  - name: instspc3
+    description: SPC3 Interrupt
+    bit_offset: 14
+    bit_size: 1
+  - name: err0
+    description: Error 0
+    bit_offset: 16
+    bit_size: 1
+  - name: err1
+    description: Error 1
+    bit_offset: 17
+    bit_size: 1
+  - name: err2
+    description: Error 2
+    bit_offset: 18
+    bit_size: 1
+  - name: err3
+    description: Error 3
+    bit_offset: 19
+    bit_size: 1
+  - name: rpmc_1_or_2
+    description: 'RPMC 1 or 2. Encodings: 0: RPMC operation 1 has been chosen; 1: RPMC operation 2 has been chosen'
+    bit_offset: 20
+    bit_size: 1
+  - name: rpmc_flash_device
+    description: 'RPMC Flash Device. Encodings: 0: First device; 1: Second device; 2: Third device; 3: Fourth device'
+    bit_offset: 21
+    bit_size: 2
+fieldset/Pirulestat:
+  description: Set Interrupt Rules and User Status. Contains interrupt masks, user status, status commands and completion
+    tags. SRST and SSTCL must not be written together; SRST takes precedence. SSTCL is mode-dependent command bits,
+    not a global enable enum. Program CPU_TAG before completion commands.
+  bit_size: 32
+  reset_value: 6291456
+  fields:
+  - name: ustat
+    description: User-Defined Status Bits
+    bit_offset: 0
+    bit_size: 5
+  - name: interr
+    description: Interrupt If Error Detected
+    bit_offset: 8
+    bit_size: 1
+  - name: intrd
+    description: Interrupt If Read or First Read or Bus Master Started
+    bit_offset: 9
+    bit_size: 1
+  - name: intwr
+    description: Interrupt If Write or First Write or Bus Master Finished
+    bit_offset: 10
+    bit_size: 1
+  - name: intspc
+    description: Select Interrupts for PnSTAT[INTSPC0] through PnSTAT[INSTSPC3]
+    bit_offset: 11
+    bit_size: 4
+  - name: sstcl
+    description: Status Set and Clear
+    bit_offset: 16
+    bit_size: 4
+  - name: srst
+    description: Reset PnSTAT[RDSTAT] and PnSTAT[WRSTAT]
+    bit_offset: 20
+    bit_size: 1
+  - name: flash_completion_type
+    description: 'Flash Completion Type. Encodings: 0: Indicates the middle completion of a split completion sequence;
+      1: Indicates the first completion of a split completion sequence; 2: Indicates the last completion of a split
+      completion sequence; 3: Indicates the only completion for a split transaction.'
+    bit_offset: 21
+    bit_size: 2
+    enum: PirulestatFlashCompletionType
+  - name: cpu_tag
+    description: CPU Tag
+    bit_offset: 23
+    bit_size: 4
+fieldset/Paddr:
+  description: Port Address. Normal-port address view; aliases POMFLEN at each port offset +0x0C. Address alignment
+    must match the port range; split mailbox alignment includes both halves. Do not change address while enabled.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: 'off'
+    description: Offset
+    bit_offset: 0
+    bit_size: 16
+  - name: base_asz
+    description: 'The meaning is dependent on type of port:. Encodings: 0: Offset from 0 in host memory or I/O space.;
+      1: Uses BASE0 offset in host memory; 2: Uses BASE1 offset in host memory'
+    bit_offset: 16
+    bit_size: 2
+    enum: PaddrBaseAsz
+  - name: idxoff
+    description: Index Offset
+    bit_offset: 24
+    bit_size: 4
+  - name: idx1st
+    description: 'For index-and-data register only:. Encodings: 0: Index is higher address than data (for example,
+      data at OFF, index at OFF+IDXOFF); 1: Index is lower address than data (for example, index at OFF, data at
+      OFF+IDXOFF)'
+    bit_offset: 28
+    bit_size: 1
+fieldset/Pomflen:
+  description: Port OOB, Mastering, and Flash Length. OOB/master/flash length view; aliases PADDR at +0x0C. LEN
+    is zero-relative; obey host payload limit and maximum 124 bytes, or 120 for bus mastering. Flash erase uses
+    its low three bits as sector encoding. TRANS semantics depend on port type; prepare before issuing SSTCL.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: len
+    description: Length in Bytes
+    bit_offset: 0
+    bit_size: 7
+  - name: trans
+    description: 'Transfer Request. Encodings: 0: OOB: to host; Master: to host 32 (host reads with 32-bit address);
+      SAF: Completion fail; 1: Master: to host 64 (host reads w/64-bit address); MAF: read flash (location in RAM);
+      SAF: completion with data; 2: Master: from host 32 (host writes w/32-bit address); MAF: write flash (location
+      in RAM); SAF: completion with no data; 3: Master: from host 64 (host writes w/64-bit address); MAF: erase
+      flash (sector in RAM)'
+    bit_offset: 12
+    bit_size: 2
+fieldset/Pdatain:
+  description: 'Port Data Input. Host input byte for endpoint/index-and-data; otherwise zero-relative last message
+    length, including the four address bytes for SAF. SOURCE CONFLICT: SAF examples (52.6.1 and 52.6.3) require
+    incoming TAG[29:26] and length[11:0], but the register table (52.8.1.27) marks 31:26 reserved and defines DIR[8]
+    with DATA_LEN[7:0]. This model retains the conservative table layout and has no incoming TAG accessor; it does
+    not supply the incoming SAF tag/length view required by those examples. CPU_TAG in PIRULESTAT is an outgoing
+    completion tag, not a replacement for the missing incoming tag. Status depends on data consumption and port
+    type; the source does not completely specify per-read clearing semantics. Mailbox state is explicitly maintained
+    through PIRULESTAT. Do not assume a universal clear-on-read rule.'
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: data_len
+    description: Endpoint/index-and-data input byte; otherwise zero-relative last message count, including the four
+      address bytes for SAF. This conservative 8-bit register-table field conflicts with SAF examples requiring
+      length[11:0]; do not treat it as the complete example-defined incoming SAF length.
+    bit_offset: 0
+    bit_size: 8
+  - name: dir
+    description: 'Direction of last access. Encodings: 0: Read by host; 1: Write by host'
+    bit_offset: 8
+    bit_size: 1
+  - name: idx
+    description: Index of Last Access
+    bit_offset: 16
+    bit_size: 10
+fieldset/Pdataout:
+  description: Port Data Out. Output-byte view; aliases PRAMUSE at +0x14. Writing endpoint data makes it pending
+    for the host. The function paragraph repeats input-register wording, but the field definition says data to send
+    to host; the latter is used.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: data
+    description: Data to Send to Host
+    bit_offset: 0
+    bit_size: 8
+fieldset/Pramuse:
+  description: Port RAM Use. Mailbox/master RAM-allocation view; aliases PDATAOUT at +0x14. Per-direction length
+    is 4<<LEN bytes (4..512); split mailboxes use twice that RAM. OFF must be aligned modulo the mailbox range.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: 'off'
+    description: Offset into RAM
+    bit_offset: 0
+    bit_size: 12
+  - name: len
+    description: Length
+    bit_offset: 16
+    bit_size: 3
+enum/MctrlEnable:
+  bit_size: 2
+  variants:
+  - name: Disabled
+    value: 0
+  - name: Espi
+    value: 1
+  - name: Lpc
+    value: 2
+enum/DmactrlDma0en:
+  bit_size: 2
+  variants:
+  - name: Disabled
+    value: 0
+  - name: HostReadEmpty
+    value: 1
+  - name: HostWriteReady
+    value: 2
+enum/DmactrlDma1en:
+  bit_size: 2
+  variants:
+  - name: Disabled
+    value: 0
+  - name: HostReadEmpty
+    value: 1
+  - name: HostWriteReady
+    value: 2
+enum/DmactrlDma0port:
+  bit_size: 4
+  variants:
+  - name: Port0
+    value: 0
+  - name: Port1
+    value: 1
+  - name: Port2
+    value: 2
+  - name: Port3
+    value: 3
+  - name: Port4
+    value: 4
+  - name: Port80
+    value: 8
+enum/DmactrlDma1port:
+  bit_size: 4
+  variants:
+  - name: Port0
+    value: 0
+  - name: Port1
+    value: 1
+  - name: Port2
+    value: 2
+  - name: Port3
+    value: 3
+  - name: Port4
+    value: 4
+  - name: Port80
+    value: 8
+enum/EspicapSpicap:
+  bit_size: 2
+  variants:
+  - name: Spi
+    value: 0
+  - name: BiSpiAndSpi
+    value: 1
+  - name: QuadAndSpi
+    value: 2
+  - name: Any
+    value: 3
+enum/EspicfgSpimod:
+  bit_size: 2
+  variants:
+  - name: Spi
+    value: 0
+  - name: BiSpi
+    value: 1
+  - name: QuadSpi
+    value: 2
+enum/PcfgType:
+  bit_size: 4
+  variants:
+  - name: Unconfigured
+    value: 0
+  - name: AcpiEndpoint
+    value: 1
+  - name: AcpiIndexData
+    value: 2
+  - name: BusMasterMemory
+    value: 4
+  - name: BusMasterFlash
+    value: 5
+  - name: MailboxShared
+    value: 8
+  - name: MailboxSingle
+    value: 9
+  - name: MailboxSplit
+    value: 10
+  - name: MailboxOobSplit
+    value: 11
+  - name: MailboxOem
+    value: 12
+enum/PcfgDirection:
+  bit_size: 2
+  variants:
+  - name: Both
+    value: 0
+  - name: IgnoreRead
+    value: 1
+  - name: IgnoreWrite
+    value: 2
+  - name: IgnoreBoth
+    value: 3
+enum/PirulestatFlashCompletionType:
+  bit_size: 2
+  variants:
+  - name: Middle
+    value: 0
+  - name: First
+    value: 1
+  - name: Last
+    value: 2
+  - name: Only
+    value: 3
+enum/PaddrBaseAsz:
+  bit_size: 2
+  variants:
+  - name: Absolute
+    value: 0
+  - name: Base0
+    value: 1
+  - name: Base1
+    value: 2

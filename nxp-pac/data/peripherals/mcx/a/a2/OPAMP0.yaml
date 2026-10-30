@@ -1,0 +1,5 @@
+includes:
+  - ../common/OPAMP.yaml
+block/Opamp0:
+  extends: Opamp
+  items: []

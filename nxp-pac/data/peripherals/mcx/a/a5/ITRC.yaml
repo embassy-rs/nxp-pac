@@ -1,0 +1,317 @@
+# MCXAP172M240F70RM Rev. 1, sections65.3/65.4.1.
+# IN39 selector width conflicts (two bits in general text; bits27:14 in table/XML). It is not guessed here.
+block/Itrc:
+  description: 'Intrusion/tamper response controller. Selector pairs jointly encode selection and persistent locking; they are not independent enables. Undefined IN39 layout is intentionally unmodeled. Software-event writes trigger response signals, including writes that appear harmless. Output indices0..6: 0=ITRC_IRQ interrupt, 1=SGI_UDF_RESET, 2=Can initiate PoR reset of CORE and SYSTEM domains (VBAT unaffected), 3=RAM_ZEROIZE: hardware zeroizes PKC/ECC SRAM during reset, 4=CHIP_RESET request to CMC, 5=TMPR_OUT0, 6=TMPR_OUT1.'
+  items:
+  - name: status
+    byte_offset: 0
+    fieldset: Status
+    description: Latched input/output status. Clear the originating source before writing one to clear a latched status.
+  - name: status1
+    byte_offset: 4
+    fieldset: Status1
+    description: Latched input/output status. Clear the originating source before writing one to clear a latched status.
+  - name: out_sel
+    byte_offset: 8
+    array:
+      len: 7
+      stride: 8
+    block: OutSelect0
+  - name: out_sel_1
+    byte_offset: 72
+    array:
+      len: 7
+      stride: 8
+    block: OutSelect1
+  - name: out_sel_2
+    byte_offset: 136
+    array:
+      len: 7
+      stride: 8
+    block: OutSelect2
+  - name: sw_event0
+    byte_offset: 240
+    access: Write
+    fieldset: SwEvent
+  - name: sw_event1
+    byte_offset: 244
+    access: Write
+    fieldset: SwEvent
+fieldset/Status:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: in0_status
+    bit_offset: 0
+    bit_size: 1
+    description: DGDET0 interrupt
+  - name: in1_status
+    bit_offset: 1
+    bit_size: 1
+    description: TDET DTF
+  - name: in2_status
+    bit_offset: 2
+    bit_size: 1
+    description: CDOG0
+  - name: in4_status
+    bit_offset: 4
+    bit_size: 1
+    description: VDD_CORE low voltage
+  - name: in5_status
+    bit_offset: 5
+    bit_size: 1
+    description: WWDT0
+  - name: in6_status
+    bit_offset: 6
+    bit_size: 1
+    description: Flash ECC error
+  - name: in7_status
+    bit_offset: 7
+    bit_size: 1
+    description: MBC/AHBSC/XEN violation
+  - name: in9_status
+    bit_offset: 9
+    bit_size: 1
+    description: SPC core/VDD glitch
+  - name: in10_status
+    bit_offset: 10
+    bit_size: 1
+    description: PKC error
+  - name: in11_status
+    bit_offset: 11
+    bit_size: 1
+    description: CDOG1
+  - name: in12_status
+    bit_offset: 12
+    bit_size: 1
+    description: WWDT1
+  - name: in13_status
+    bit_offset: 13
+    bit_size: 1
+    description: FREQME out-of-range
+  - name: in14_status
+    bit_offset: 14
+    bit_size: 1
+    description: software event0
+  - name: in15_status
+    bit_offset: 15
+    bit_size: 1
+    description: software event1
+  - name: out0_status
+    bit_offset: 16
+    bit_size: 1
+    description: ITRC_IRQ interrupt
+  - name: out1_status
+    bit_offset: 17
+    bit_size: 1
+    description: SGI_UDF_RESET
+  - name: out2_status
+    bit_offset: 18
+    bit_size: 1
+    description: Can initiate PoR reset of CORE and SYSTEM domains (VBAT unaffected)
+  - name: out3_status
+    bit_offset: 19
+    bit_size: 1
+    description: 'RAM_ZEROIZE: hardware zeroizes PKC/ECC SRAM during reset'
+  - name: out4_status
+    bit_offset: 20
+    bit_size: 1
+    description: CHIP_RESET request to CMC
+  - name: out5_status
+    bit_offset: 21
+    bit_size: 1
+    description: TMPR_OUT0
+  - name: out6_status
+    bit_offset: 22
+    bit_size: 1
+    description: TMPR_OUT1
+  description: ''
+fieldset/Status1:
+  bit_size: 32
+  reset_value: 16
+  fields:
+  - name: in16_status
+    bit_offset: 0
+    bit_size: 1
+    description: VDD low voltage
+  - name: in20_status
+    bit_offset: 4
+    bit_size: 1
+    description: VDD_MAIN clock tamper
+  - name: in25_status
+    bit_offset: 9
+    bit_size: 1
+    description: OR of SOCTRIM0..7 errors
+  - name: in27_status
+    bit_offset: 11
+    bit_size: 1
+    description: ERM multibit error
+  - name: in33_status
+    bit_offset: 17
+    bit_size: 1
+    description: DGDET error
+  - name: in34_status
+    bit_offset: 18
+    bit_size: 1
+    description: VDD_CORE high voltage
+  - name: in35_status
+    bit_offset: 19
+    bit_size: 1
+    description: VDD high voltage
+  - name: in37_status
+    bit_offset: 21
+    bit_size: 1
+    description: VBAT off
+  - name: in38_status
+    bit_offset: 22
+    bit_size: 1
+    description: FLEXSPI GCM error
+  - name: in47_status
+    bit_offset: 31
+    bit_size: 1
+    description: TRNG hardware error
+  description: ''
+block/OutSelect0:
+  items:
+  - name: sel
+    byte_offset: 0
+    array:
+      len: 2
+      stride: 4
+    fieldset: Select0
+fieldset/Select0:
+  bit_size: 32
+  reset_value: 2863180330
+  fields:
+  - name: in0_sel
+    bit_offset: 0
+    bit_size: 2
+    description: 'DGDET0 interrupt. Joint SEL0/SEL1 code: (2,2) unselected/writable; (1,2) selected/writable; other combinations select and lock until reset. Do not treat either field as an independent Boolean enable.'
+  - name: in1_sel
+    bit_offset: 2
+    bit_size: 2
+    description: 'TDET DTF. Joint SEL0/SEL1 code: (2,2) unselected/writable; (1,2) selected/writable; other combinations select and lock until reset. Do not treat either field as an independent Boolean enable.'
+  - name: in2_sel
+    bit_offset: 4
+    bit_size: 2
+    description: 'CDOG0. Joint SEL0/SEL1 code: (2,2) unselected/writable; (1,2) selected/writable; other combinations select and lock until reset. Do not treat either field as an independent Boolean enable.'
+  - name: in4_sel
+    bit_offset: 8
+    bit_size: 2
+    description: 'VDD_CORE low voltage. Joint SEL0/SEL1 code: (2,2) unselected/writable; (1,2) selected/writable; other combinations select and lock until reset. Do not treat either field as an independent Boolean enable.'
+  - name: in5_sel
+    bit_offset: 10
+    bit_size: 2
+    description: 'WWDT0. Joint SEL0/SEL1 code: (2,2) unselected/writable; (1,2) selected/writable; other combinations select and lock until reset. Do not treat either field as an independent Boolean enable.'
+  - name: in6_sel
+    bit_offset: 12
+    bit_size: 2
+    description: 'Flash ECC error. Joint SEL0/SEL1 code: (2,2) unselected/writable; (1,2) selected/writable; other combinations select and lock until reset. Do not treat either field as an independent Boolean enable.'
+  - name: in7_sel
+    bit_offset: 14
+    bit_size: 2
+    description: 'MBC/AHBSC/XEN violation. Joint SEL0/SEL1 code: (2,2) unselected/writable; (1,2) selected/writable; other combinations select and lock until reset. Do not treat either field as an independent Boolean enable.'
+  - name: in9_sel
+    bit_offset: 18
+    bit_size: 2
+    description: 'SPC core/VDD glitch. Joint SEL0/SEL1 code: (2,2) unselected/writable; (1,2) selected/writable; other combinations select and lock until reset. Do not treat either field as an independent Boolean enable.'
+  - name: in10_sel
+    bit_offset: 20
+    bit_size: 2
+    description: 'PKC error. Joint SEL0/SEL1 code: (2,2) unselected/writable; (1,2) selected/writable; other combinations select and lock until reset. Do not treat either field as an independent Boolean enable.'
+  - name: in11_sel
+    bit_offset: 22
+    bit_size: 2
+    description: 'CDOG1. Joint SEL0/SEL1 code: (2,2) unselected/writable; (1,2) selected/writable; other combinations select and lock until reset. Do not treat either field as an independent Boolean enable.'
+  - name: in12_sel
+    bit_offset: 24
+    bit_size: 2
+    description: 'WWDT1. Joint SEL0/SEL1 code: (2,2) unselected/writable; (1,2) selected/writable; other combinations select and lock until reset. Do not treat either field as an independent Boolean enable.'
+  - name: in13_sel
+    bit_offset: 26
+    bit_size: 2
+    description: 'FREQME out-of-range. Joint SEL0/SEL1 code: (2,2) unselected/writable; (1,2) selected/writable; other combinations select and lock until reset. Do not treat either field as an independent Boolean enable.'
+  - name: in14_sel
+    bit_offset: 28
+    bit_size: 2
+    description: 'software event0. Joint SEL0/SEL1 code: (2,2) unselected/writable; (1,2) selected/writable; other combinations select and lock until reset. Do not treat either field as an independent Boolean enable.'
+  - name: in15_sel
+    bit_offset: 30
+    bit_size: 2
+    description: 'software event1. Joint SEL0/SEL1 code: (2,2) unselected/writable; (1,2) selected/writable; other combinations select and lock until reset. Do not treat either field as an independent Boolean enable.'
+  description: Reserved reset bits retained. IN39 is omitted because the manual gives conflicting two-bit versus fourteen-bit coverage and no status bit.
+block/OutSelect1:
+  items:
+  - name: sel
+    byte_offset: 0
+    array:
+      len: 2
+      stride: 4
+    fieldset: Select1
+fieldset/Select1:
+  bit_size: 32
+  reset_value: 11010570
+  fields:
+  - name: in16_sel
+    bit_offset: 0
+    bit_size: 2
+    description: 'VDD low voltage. Joint SEL0/SEL1 code: (2,2) unselected/writable; (1,2) selected/writable; other combinations select and lock until reset. Do not treat either field as an independent Boolean enable.'
+  - name: in20_sel
+    bit_offset: 8
+    bit_size: 2
+    description: 'VDD_MAIN clock tamper. Joint SEL0/SEL1 code: (2,2) unselected/writable; (1,2) selected/writable; other combinations select and lock until reset. Do not treat either field as an independent Boolean enable.'
+  - name: in25_sel
+    bit_offset: 18
+    bit_size: 2
+    description: 'OR of SOCTRIM0..7 errors. Joint SEL0/SEL1 code: (2,2) unselected/writable; (1,2) selected/writable; other combinations select and lock until reset. Do not treat either field as an independent Boolean enable.'
+  - name: in27_sel
+    bit_offset: 22
+    bit_size: 2
+    description: 'ERM multibit error. Joint SEL0/SEL1 code: (2,2) unselected/writable; (1,2) selected/writable; other combinations select and lock until reset. Do not treat either field as an independent Boolean enable.'
+  description: Reserved reset bits retained. IN39 is omitted because the manual gives conflicting two-bit versus fourteen-bit coverage and no status bit.
+block/OutSelect2:
+  items:
+  - name: sel
+    byte_offset: 0
+    array:
+      len: 2
+      stride: 4
+    fieldset: Select2
+fieldset/Select2:
+  bit_size: 32
+  reset_value: 2147527336
+  fields:
+  - name: in33_sel
+    bit_offset: 2
+    bit_size: 2
+    description: 'DGDET error. Joint SEL0/SEL1 code: (2,2) unselected/writable; (1,2) selected/writable; other combinations select and lock until reset. Do not treat either field as an independent Boolean enable.'
+  - name: in34_sel
+    bit_offset: 4
+    bit_size: 2
+    description: 'VDD_CORE high voltage. Joint SEL0/SEL1 code: (2,2) unselected/writable; (1,2) selected/writable; other combinations select and lock until reset. Do not treat either field as an independent Boolean enable.'
+  - name: in35_sel
+    bit_offset: 6
+    bit_size: 2
+    description: 'VDD high voltage. Joint SEL0/SEL1 code: (2,2) unselected/writable; (1,2) selected/writable; other combinations select and lock until reset. Do not treat either field as an independent Boolean enable.'
+  - name: in37_sel
+    bit_offset: 10
+    bit_size: 2
+    description: 'VBAT off. Joint SEL0/SEL1 code: (2,2) unselected/writable; (1,2) selected/writable; other combinations select and lock until reset. Do not treat either field as an independent Boolean enable.'
+  - name: in38_sel
+    bit_offset: 12
+    bit_size: 2
+    description: 'FLEXSPI GCM error. Joint SEL0/SEL1 code: (2,2) unselected/writable; (1,2) selected/writable; other combinations select and lock until reset. Do not treat either field as an independent Boolean enable.'
+  - name: in47_sel
+    bit_offset: 30
+    bit_size: 2
+    description: 'TRNG hardware error. Joint SEL0/SEL1 code: (2,2) unselected/writable; (1,2) selected/writable; other combinations select and lock until reset. Do not treat either field as an independent Boolean enable.'
+  description: Reserved reset bits retained. IN39 is omitted because the manual gives conflicting two-bit versus fourteen-bit coverage and no status bit.
+fieldset/SwEvent:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: event
+    bit_offset: 0
+    bit_size: 32
+    description: Any write triggers the software event, which self-clears. No normal configuration write is implied.
+  description: ''

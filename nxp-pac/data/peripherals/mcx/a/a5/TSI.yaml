@@ -1,0 +1,897 @@
+# MCXAP172M240F70RM final Rev. 1 (2026-03-30), chapter 59.
+# MCXA577.xml is supplemental; source conflicts are retained in descriptions.
+# reset_value supplies fieldset construction defaults, not hardware observations.
+# All 32 reset bits are specified by the manual map (known mask 0xFFFFFFFF).
+# Mixed-access fields and W1C/strobes are documented, not enforced by this schema.
+block/Tsi:
+  description: Touch sensing input, TSI0 at 0x400C3000. Up to 70 channel-selection bits; actual bonded pins depend
+    on device/package. Select at most one role per channel.
+  only_in: ^MCXA(456|457|577)$
+  items:
+  - name: config
+    description: TSI CONFIG Register (TSI_CONFIG) for self-capacitor. Self-capacitor view of offset 0, selected
+      by MODE=0; aliases CONFIG_MUTUAL. Do not set S_SEN and S_NOISE together (59.3.2).
+    byte_offset: 0
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Config
+  - name: config_mutual
+    description: 'TSI CONFIG register (TSI_CONFIG) for mutual-capacitor (CONFIG_MUTUAL). Mutual-capacitor view of
+      offset 0, selected by MODE=1; aliases CONFIG. The manual reset image is 0x2802007E, including MODE=0: this
+      is a bank reset image, not a ready-to-write mutual-mode configuration. M_PMIRRORR and M_NMIRROR must match.'
+    byte_offset: 0
+    bit_size: 32
+    access: ReadWrite
+    fieldset: ConfigMutual
+  - name: tshd
+    description: TSI Threshold Register
+    byte_offset: 4
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Tshd
+  - name: gencs
+    description: TSI General Control and Status Register. TSIEN and STM must not change during a scan. SWTS is a
+      write-only start strobe, reading zero; it starts a software scan when STM=0. Clear DATA.EOSF before ESOR,
+      and DATA.OUTRGF before OUTRG_EN or DMAEN_OUTRG. ACTIVE use requires TSIEN_DPD=0, TSIEN=1 and SPC configuration;
+      low-power scan supports channels 0-3 and wakes through WUU, not the NVIC (59.1.3).
+    byte_offset: 8
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Gencs
+  - name: mul
+    description: 'TSI Mutual-cap Register. M_TRIM_USED[31:16] is omitted: 59.6.1.6 calls it "Not use, just reserved",
+      despite the XML exposing it. M_MODE=3 is not allowed.'
+    byte_offset: 12
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Mul
+  - name: sinc
+    description: TSI SINC Filter Register. Low four bits report SSC/filter state; configuration is in bits 16 and
+      above. SINC_CUTOFF encodings 8-15 are NC. Its prose says default div=0 while code 0 is listed as div=1; preserve
+      the raw code rather than interpreting the inconsistent default wording.
+    byte_offset: 16
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Sinc
+  - name: ssc0
+    description: TSI SSC Register 0
+    byte_offset: 20
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Ssc0
+  - name: ssc1
+    description: TSI SSC Register 1
+    byte_offset: 24
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Ssc1
+  - name: ssc2
+    description: TSI SSC Register 2
+    byte_offset: 28
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Ssc2
+  - name: baseline
+    description: TSI Baseline Register. The manual inconsistently labels THRESHOLD_TRACE_EN reserved while listing
+      enable values, and lists both BASE_TRACE_EN encodings reserved despite describing low-power tracing. Fields
+      are raw descriptions, not an assurance of supported tracing. THESHOLD_RATIO references an otherwise undocumented
+      TEST_FINGER_EN.
+    byte_offset: 32
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Baseline
+  - name: shield
+    description: TSI Shield Register. M_SEN_RES has only example values 0, 1, 2 and 14; the source does not establish
+      a complete resistor conversion for all 6-bit values. Kept numeric without inventing holes or a formula.
+    byte_offset: 40
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Shield
+  - name: self_sel_31_0
+    description: Self-cap mode channels selection(CH31~CH0)
+    byte_offset: 44
+    bit_size: 32
+    access: ReadWrite
+    fieldset: SelfSel310
+  - name: self_sel_63_32
+    description: Self-cap mode channels selection(CH63~CH32)
+    byte_offset: 48
+    bit_size: 32
+    access: ReadWrite
+    fieldset: SelfSel6332
+  - name: self_sel_69_64
+    description: Self-cap mode channels selection(CH69~CH64)
+    byte_offset: 52
+    bit_size: 32
+    access: ReadWrite
+    fieldset: SelfSel6964
+  - name: shield_sel_31_0
+    description: Shield mode channels selection(CH31~CH0)
+    byte_offset: 56
+    bit_size: 32
+    access: ReadWrite
+    fieldset: ShieldSel310
+  - name: shield_sel_63_32
+    description: Shield mode channels selection(CH63~CH32)
+    byte_offset: 60
+    bit_size: 32
+    access: ReadWrite
+    fieldset: ShieldSel6332
+  - name: shield_sel_69_64
+    description: Shield mode channels selection(CH69~CH64)
+    byte_offset: 64
+    bit_size: 32
+    access: ReadWrite
+    fieldset: ShieldSel6964
+  - name: mutual_tx_sel_31_0
+    description: Mutual TX mode channels selection(CH31~CH0)
+    byte_offset: 68
+    bit_size: 32
+    access: ReadWrite
+    fieldset: MutualTxSel310
+  - name: mutual_tx_sel_63_32
+    description: Mutual TX mode channels selection(CH63~CH32)
+    byte_offset: 72
+    bit_size: 32
+    access: ReadWrite
+    fieldset: MutualTxSel6332
+  - name: mutual_tx_sel_69_64
+    description: Mutual TX mode channels selection(CH69~CH64)
+    byte_offset: 76
+    bit_size: 32
+    access: ReadWrite
+    fieldset: MutualTxSel6964
+  - name: mutual_rx_sel_31_0
+    description: Mutual RX mode channels selection(CH31~CH0)
+    byte_offset: 80
+    bit_size: 32
+    access: ReadWrite
+    fieldset: MutualRxSel310
+  - name: mutual_rx_sel_63_32
+    description: Mutual RX mode channels selection(CH63~CH32)
+    byte_offset: 84
+    bit_size: 32
+    access: ReadWrite
+    fieldset: MutualRxSel6332
+  - name: mutual_rx_sel_69_64
+    description: Mutual RX mode channels selection (CH69~CH64)
+    byte_offset: 88
+    bit_size: 32
+    access: ReadWrite
+    fieldset: MutualRxSel6964
+  - name: data
+    description: 'TSI Data and Status Register. TSICNT is read-only. EOSF, OVERRUNF, OUTRGF and DPD_OUTRGF are write-one-to-clear:
+      write only intended flag bits, not read-modify-write. DMA transfer clears EOSF/OUTRGF automatically. DPD_OUTRGF
+      can be read only with GENCS.TSIEN_DPD=1. OVERRUNF encoding descriptions contradict the assertion prose; no
+      polarity enum is supplied.'
+    byte_offset: 256
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Data
+  - name: misc
+    description: TSI Miscellaneous Register. DPD_MODE_ENABLE=1 updates the 3 V domain configuration latch; 0 holds
+      it. CAP_BANK_148FF is named in fF but 59.6.1.26 gives pF values; see source conflict note, do not infer a
+      unit conversion from its name.
+    byte_offset: 264
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Misc
+  - name: trig
+    description: TSI AUTO TRIG Register
+    byte_offset: 268
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Trig
+  - name: test
+    description: TSI TEST Register. TSI_TEST_EN is asserted only by a full-register write of 0x55AA55AA, not by
+      setting bit 0; writing bit 0 to zero disables test mode. DPD_TEST_EOSF is write-one-to-clear. CLKSOC_SEL and
+      RUN_CTRL require ipt_test_mod=1; the referenced test guide is not supplied and CLKSOC_SEL values are reserved.
+      This register model does not authorize hardware test operations.
+    byte_offset: 272
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Test
+fieldset/Config:
+  description: TSI CONFIG Register (TSI_CONFIG) for self-capacitor. Self-capacitor view of offset 0, selected by
+    MODE=0; aliases CONFIG_MUTUAL. Do not set S_SEN and S_NOISE together (59.3.2).
+  bit_size: 32
+  reset_value: 8388608
+  fields:
+  - name: mode
+    description: 'MODE. Encodings: 0: Self-cap mode, this address is TSI_SEL_CONFIG; 1: Mutual-cap mode, this address
+      is TSI_MUL_CONFIG'
+    bit_offset: 0
+    bit_size: 1
+    enum: ConfigMode
+  - name: filter_trim
+    description: 'FILTER_TRIM. Encodings: 0: filter bypass; 1: 5.3ns; 2: 21.1ns; 3: 25ns'
+    bit_offset: 4
+    bit_size: 2
+    enum: ConfigFilterTrim
+  - name: self_bypass_flt
+    description: 'self_bypass_flt. Encodings: 0: LPF is not bypassed (default); 1: LPF is bypassed'
+    bit_offset: 6
+    bit_size: 1
+  - name: xin_scale_down_trim
+    description: Numeric boost discharge scale code 0..7 means 1/(code+1); 8..15 reserved.
+    bit_offset: 8
+    bit_size: 4
+  - name: xin_scale_down
+    description: Numeric scale code 0..7 means 1/(code+1); 8..15 reserved.
+    bit_offset: 12
+    bit_size: 4
+  - name: self_boost_scale
+    description: 'self_boost_scale. Encodings: 0: 500 nA (default); 1: 1 uA; 2: 1.5 uA; 3: 2 uA; 4: 2.5 uA; 5: 3
+      uA; 6: 3.5 uA; 7: 4 uA'
+    bit_offset: 16
+    bit_size: 3
+  - name: s_noise
+    description: 'S_NOISE. Encodings: 0: Noise cancellation off (default); 1: Noise cancellation on'
+    bit_offset: 19
+    bit_size: 1
+  - name: s_xch
+    description: 'S_XCH. Encodings: 0: 1/16 (default); 1: 1/8; 2: 1/4; 3: 1/2; 4: 1/1; 5: 2/1; 6: 4/1; 7: 8/1'
+    bit_offset: 20
+    bit_size: 3
+  - name: s_xin
+    description: 'S_XIN. Encodings: 0: 1/8; 1: 1/4 (default)'
+    bit_offset: 23
+    bit_size: 1
+  - name: s_sen
+    description: 'S_SEN. Encodings: 0: Sensitivity boost off (default); 1: Sensitivity boost on'
+    bit_offset: 27
+    bit_size: 1
+  - name: s_xdn
+    description: Codes 0..3 mean 1/16, 1/8, 1/4, 1/2; 4..7 are NA.
+    bit_offset: 28
+    bit_size: 3
+  - name: self_boost_mode
+    description: 'self_boost_mode. Encodings: 0: Cap boost mode (default); 1: Current boost mode'
+    bit_offset: 31
+    bit_size: 1
+fieldset/ConfigMutual:
+  description: 'TSI CONFIG register (TSI_CONFIG) for mutual-capacitor (CONFIG_MUTUAL). Mutual-capacitor view of
+    offset 0, selected by MODE=1; aliases CONFIG. The manual reset image is 0x2802007E, including MODE=0: this is
+    a bank reset image, not a ready-to-write mutual-mode configuration. M_PMIRRORR and M_NMIRROR must match.'
+  bit_size: 32
+  reset_value: 671219838
+  fields:
+  - name: mode
+    description: 'MODE. Encodings: 0: Self-cap mode, this address is TSI_CONFIG for self-cap; 1: Mutual-cap mode,
+      this address is TSI_CONFIG for mutual-cap'
+    bit_offset: 0
+    bit_size: 1
+    enum: ConfigMutualMode
+  - name: m_nmirror
+    description: 'M_NMIRROR. Encodings: 0: m=1; 1: m=2; 2: m=3; 3: m=4 (default)'
+    bit_offset: 1
+    bit_size: 2
+  - name: m_pmirrorr
+    description: 'M_PMIRRORR. Encodings: 0: m=1; 1: m=2; 2: m=3; 3: m=4 (default)'
+    bit_offset: 3
+    bit_size: 2
+  - name: m_pmirrorl
+    description: 'M_PMIRRORL. Encodings: 0: m=4; 1: m=8; 2: m=12; 3: m=16 (default); 4: m=20; 5: m=24; 6: m=28;
+      7: m=32'
+    bit_offset: 5
+    bit_size: 3
+  - name: m_cnt_en
+    description: 'M_CNT_EN. Encodings: 0: Disable, the counter works in all scan process; 1: Enable, the counter
+      only works when the capacitor does the integration'
+    bit_offset: 16
+    bit_size: 1
+  - name: m_tx_pd_en
+    description: 'M_TX_PD_EN. Encodings: 0: Disable; 1: Enable (default)'
+    bit_offset: 17
+    bit_size: 1
+  - name: m_sen_boost
+    description: 'M_SEN_BOOST. Encodings: 0: 0 u; 1: 2 u; 2: 4 u; 3: 6 u; 4: 8 u; 5: 10 u; 6: 12 u; 7: 14 u; 8:
+      16 u; 9: 18 u; 10: 20 u; 11: 22 u; 12: 24 u; 13: 26 u; 14: 28 u; 15: 30 u; 16: 32 u; 17: 34 u; 18: 36 u; 19:
+      38 u; 20: 40 u; 21: 42 u; 22: 44 u; 23: 46 u; 24: 48 u; 25: 50 u; 26: 52 u; 27: 54 u; 28: 56 u; 29: 58 u;
+      30: 60 u; 31: 62 u'
+    bit_offset: 18
+    bit_size: 5
+  - name: pre_chrg_mode
+    description: 'PRE_CHRG_MODE. Encodings: 0: Mode 0; 1: Mode 1'
+    bit_offset: 23
+    bit_size: 1
+  - name: m_pre_res
+    description: 'M_PRE_RES. Encodings: 0: 1 kohm; 1: 2 kohm; 2: 3 kohm; 3: 4 kohm; 4: 5 kohm; 5: 6 kohm; 6: 7 kohm;
+      7: 8 kohm'
+    bit_offset: 26
+    bit_size: 3
+  - name: m_pre_current
+    description: 'M_PRE_CURRENT. Encodings: 0: 1 uA; 1: 2 uA; 2: 3 uA; 3: 4 uA; 4: 5 uA; 5: 6 uA; 6: 7 uA; 7: 8
+      uA'
+    bit_offset: 29
+    bit_size: 3
+fieldset/Tshd:
+  description: TSI Threshold Register
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: thresl
+    description: TSI Wakeup Channel Low-Threshold
+    bit_offset: 0
+    bit_size: 16
+  - name: thresh
+    description: TSI Wakeup Channel High-threshold
+    bit_offset: 16
+    bit_size: 16
+fieldset/Gencs:
+  description: TSI General Control and Status Register. TSIEN and STM must not change during a scan. SWTS is a write-only
+    start strobe, reading zero; it starts a software scan when STM=0. Clear DATA.EOSF before ESOR, and DATA.OUTRGF
+    before OUTRG_EN or DMAEN_OUTRG. ACTIVE use requires TSIEN_DPD=0, TSIEN=1 and SPC configuration; low-power scan
+    supports channels 0-3 and wakes through WUU, not the NVIC (59.1.3).
+  bit_size: 32
+  reset_value: 4096
+  fields:
+  - name: dmaen_eos
+    description: 'In-progress DMA Transfer Request Enable. Encodings: 0: Disable DMA request at End of Scan event;
+      1: Enable DMA request at End of event'
+    bit_offset: 0
+    bit_size: 1
+  - name: dmaen_outrg
+    description: 'Out of Range DMA Transfer Request Enable. Encodings: 0: Disable DMA request at Out-of-Range event;
+      1: Enable DMA request at Out-of-Range event'
+    bit_offset: 2
+    bit_size: 1
+  - name: stm
+    description: 'Scan Trigger Mode. Encodings: 0: Software trigger scan; 1: Hardware trigger scan'
+    bit_offset: 3
+    bit_size: 1
+  - name: tsien
+    description: 'Touch Sensing Input Module Enable. Encodings: 0: TSI module disabled; 1: TSI module enabled'
+    bit_offset: 5
+    bit_size: 1
+  - name: clk_sel
+    description: 'KHz clock selection. Encodings: 0: Select 16K clock to use; 1: Select 32K clock to use'
+    bit_offset: 6
+    bit_size: 1
+  - name: swts
+    description: 'Software Trigger Start. Encodings: 0: No effect; 1: Takes effect'
+    bit_offset: 7
+    bit_size: 1
+  - name: tsien_dpd
+    description: 'Enable of 3v domain logic in this IP. Encodings: 0: 3v domain logic is disabled; 1: 3v domain
+      logic is enabled'
+    bit_offset: 8
+    bit_size: 1
+  - name: dvolt
+    description: 'DVOLT. Encodings: 0: Vm=0.6 V, Vp=1.73 V; 1: Vm=0.6 V, Vp=1.82 V; 2: Vm=0.6 V, Vp=1.89 V; 3: Vm=0.6
+      V, Vp=1.98 V; 4: Vm=0.6 V, Vp=2.06 V; 5: Vm=0.6 V, Vp=2.14 V; 6: Vm=0.6 V, Vp=2.23 V; 7: Vm=0.6 V, Vp=2.31
+      V; 8: Vm=0.6 V, Vp=2.39 V; 9: Vm=0.6 V, Vp=2.47 V; 10: Vm=0.6 V, Vp=2.56 V; 11: Vm=0.6 V, Vp=2.64 V; 12: Vm=0.6
+      V, Vp=2.72 V; 13: Vm=0.6 V, Vp=2.81 V; 14: Vm=0.6 V, Vp=2.88 V; 15: Vm=0.6 V, Vp=2.97 V'
+    bit_offset: 12
+    bit_size: 4
+  - name: debounce_counter_configured
+    description: Numeric code N requires N+1 out-of-range events, 1..32 events.
+    bit_offset: 16
+    bit_size: 5
+  - name: esor
+    description: 'End of Scan Interrupt enable.. Encodings: 0: End of Scan interrupt is disable; 1: End of Scan
+      interrupt is enabled'
+    bit_offset: 27
+    bit_size: 1
+  - name: outrg_en
+    description: 'Out-of-range interrupt enable.. Encodings: 0: Out-of-range interrupt is disable; 1: Out-of-range
+      interrupt is enabled'
+    bit_offset: 30
+    bit_size: 1
+fieldset/Mul:
+  description: 'TSI Mutual-cap Register. M_TRIM_USED[31:16] is omitted: 59.6.1.6 calls it "Not use, just reserved",
+    despite the XML exposing it. M_MODE=3 is not allowed.'
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: m_vpre_choose
+    description: 'M_VPRE_CHOOSE. Encodings: 0: Internal 1.2 V voltage (default); 1: External 1.2 V voltage from
+      PMC'
+    bit_offset: 0
+    bit_size: 1
+  - name: m_mode
+    description: 'M_MODE. Encodings: 0: Sense both pos and neg side; 1: Sense pos side only; 2: Sense neg side only;
+      3: Not allowed'
+    bit_offset: 1
+    bit_size: 2
+    enum: MulMMode
+  - name: m_trim_cap
+    description: 'M_TRIM_CAP. Encodings: 0: 0 pF (default); 1: 10 pF; 2: 10 pF; 3: 20 pF'
+    bit_offset: 3
+    bit_size: 2
+fieldset/Sinc:
+  description: TSI SINC Filter Register. Low four bits report SSC/filter state; configuration is in bits 16 and
+    above. SINC_CUTOFF encodings 8-15 are NC. Its prose says default div=0 while code 0 is listed as div=1; preserve
+    the raw code rather than interpreting the inconsistent default wording.
+  bit_size: 32
+  reset_value: 458753
+  fields:
+  - name: ssc_control_out
+    description: 'SSC_CONTROL_OUT. Encodings: 0: SSC output value is 0; 1: SSC output value is 1'
+    bit_offset: 0
+    bit_size: 1
+  - name: sinc_valid
+    description: 'SINC_VALID. Encodings: 0: SINC filter is disabled; 1: SINC filter is enabled'
+    bit_offset: 1
+    bit_size: 1
+  - name: sinc_overflow_flag
+    description: 'SINC_OVERFLOW_FLAG. Encodings: 0: The counter result has no overflow occurrence in the last scan
+      process; 1: The counter result has an overflow occurrence in the last scan process'
+    bit_offset: 2
+    bit_size: 1
+  - name: switch_enable
+    description: 'SWITCH_ENABLE. Encodings: 0: SSC function is disabled; 1: SSC function is enabled'
+    bit_offset: 3
+    bit_size: 1
+  - name: sinc_decimation
+    description: Numeric code N accumulates N+1 trigger periods, 1..32 periods.
+    bit_offset: 16
+    bit_size: 5
+  - name: sinc_order
+    description: 'SINC_ORDER. Encodings: 0: Using 1 order sinc filter; 1: Using 2 order sinc filter'
+    bit_offset: 21
+    bit_size: 1
+  - name: sinc_cutoff
+    description: 'SINC_CUTOFF. Encodings: 0: div=1; 1: div=2; 2: div=4; 3: div=8; 4: div=16; 5: div=32; 6: div=64;
+      7: div=128; 8: NC; 9: NC; 10: NC; 11: NC; 12: NC; 13: NC; 14: NC; 15: NC'
+    bit_offset: 24
+    bit_size: 4
+fieldset/Ssc0:
+  description: TSI SSC Register 0
+  bit_size: 32
+  reset_value: 1613889536
+  fields:
+  - name: ssc_prescale_num
+    description: 'Full 12-bit numeric divider: main_clock/(N+1). The listed powers of two are examples, not the
+      complete legal range.'
+    bit_offset: 0
+    bit_size: 12
+  - name: base_nocharge_num
+    description: 'BASE_NOCHARGE_NUM. Encodings: 0: The SSC output bit 1''s basic period will be 1 clock cycle of
+      system clock; 1: The SSC output bit 1''s basic period will be 2 clock cycles of system clock; 2: The SSC output
+      bit 1''s basic period will be 3 clock cycles of system clock; 3: The SSC output bit 1''s basic period will
+      be 4 clock cycles of system clock; 4: The SSC output bit 1''s basic period will be 5 clock cycles of system
+      clock; 5: The SSC output bit 1''s basic period will be 6 clock cycles of system clock; 6: The SSC output bit
+      1''s basic period will be 7 clock cycles of system clock; 7: The SSC output bit 1''s basic period will be
+      8 clock cycles of system clock; 8: The SSC output bit 1''s basic period will be 9 clock cycles of system clock;
+      9: The SSC output bit 1''s basic period will be 10 clock cycles of system clock; 10: The SSC output bit 1''s
+      basic period will be 11 clock cycles of system clock; 11: The SSC output bit 1''s basic period will be 12
+      clock cycles of system clock; 12: The SSC output bit 1''s basic period will be 13 clock cycles of system clock;
+      13: The SSC output bit 1''s basic period will be 14 clock cycles of system clock; 14: The SSC output bit 1''s
+      basic period will be 15 clock cycles of system clock; 15: The SSC output bit 1''s basic period will be 16
+      clock cycles of system clock'
+    bit_offset: 16
+    bit_size: 4
+  - name: charge_num
+    description: 'CHARGE_NUM. Encodings: 0: The SSC output bit 0''s period will be 1 clock cycle of system clock;
+      1: The SSC output bit 0''s period will be 2 clock cycles of system clock; 2: The SSC output bit 0''s period
+      will be 3 clock cycles of system clock; 3: The SSC output bit 0''s period will be 4 clock cycles of system
+      clock; 4: The SSC output bit 0''s period will be 5 clock cycles of system clock; 5: The SSC output bit 0''s
+      period will be 6 clock cycles of system clock; 6: The SSC output bit 0''s period will be 7 clock cycles of
+      system clock; 7: The SSC output bit 0''s period will be 8 clock cycles of system clock; 8: The SSC output
+      bit 0''s period will be 9 clock cycles of system clock; 9: The SSC output bit 0''s period will be 10 clock
+      cycles of system clock; 10: The SSC output bit 0''s period will be 11 clock cycles of system clock; 11: The
+      SSC output bit 0''s period will be 12 clock cycles of system clock; 12: The SSC output bit 0''s period will
+      be 13 clock cycles of system clock; 13: The SSC output bit 0''s period will be 14 clock cycles of system clock;
+      14: The SSC output bit 0''s period will be 15 clock cycles of system clock; 15: The SSC output bit 0''s period
+      will be 16 clock cycles of system clock'
+    bit_offset: 20
+    bit_size: 4
+  - name: ssc_control_reverse
+    description: 'SSC_CONTROL_REVERSE. Encodings: 0: Keep the polarity of the SSC output bit; 1: Reverse the polarity
+      of the SSC output bit'
+    bit_offset: 24
+    bit_size: 1
+  - name: ssc_mode
+    description: 'SSC_MODE. Encodings: 0: Using PRBS method generating SSC output bit; 1: Using up-down counter
+      generating SSC output bit; 2: SSC function is disabled; 3: NC'
+    bit_offset: 25
+    bit_size: 2
+    enum: Ssc0SscMode
+  - name: prbs_outsel
+    description: Primitive polynomial order 2..15 in PRBS mode; 0 and 1 are NC.
+    bit_offset: 28
+    bit_size: 4
+fieldset/Ssc1:
+  description: TSI SSC Register 1
+  bit_size: 32
+  reset_value: 6291520
+  fields:
+  - name: prbs_seed_lo
+    description: PRBS_SEED_LO
+    bit_offset: 0
+    bit_size: 8
+  - name: prbs_seed_hi
+    description: PRBS_SEED_HI
+    bit_offset: 8
+    bit_size: 8
+  - name: prbs_weight_lo
+    description: PRBS_WEIGHT_LO
+    bit_offset: 16
+    bit_size: 8
+  - name: prbs_weight_hi
+    description: PRBS_WEIGHT_HI
+    bit_offset: 24
+    bit_size: 8
+fieldset/Ssc2:
+  description: TSI SSC Register 2
+  bit_size: 32
+  reset_value: 268960001
+  fields:
+  - name: move_repeat_num
+    description: Numeric repeat count code; only codes 0..6 (1..7 cycles) are listed in 59.6.1.10. Other codes are
+      unspecified; no partial seven-entry enum.
+    bit_offset: 0
+    bit_size: 5
+  - name: move_steps_num
+    description: 'MOVE_STEPS_NUM. Encodings: 0: The added value for up-down counter is 0; 1: The added value for
+      up-down counter is 1; 2: The added value for up-down counter is 2; 3: The added value for up-down counter
+      is 3; 4: The added value for up-down counter is 4; 5: The added value for up-down counter is 5; 6: The added
+      value for up-down counter is 6; 7: The added value for up-down counter is 7'
+    bit_offset: 8
+    bit_size: 3
+  - name: move_nocharge_max
+    description: MOVE_NOCHARGE_MAX
+    bit_offset: 16
+    bit_size: 6
+  - name: move_nocharge_min
+    description: 'MOVE_NOCHARGE_MIN. Encodings: 0: The SSC output bit 1''s min period will be (1 + TSI_SSC0[BASE_
+      NOCHARGE_NUM]) clock cycle of system clock; 1: The SSC output bit 1''s min period will be (2 + TSI_SSC0[BASE_
+      NOCHARGE_NUM]) clock cycles of system clock; 2: The SSC output bit 1''s min period will be (3 + TSI_SSC0[BASE_
+      NOCHARGE_NUM]) clock cycles of system clock; 3: The SSC output bit 1''s min period will be (4 + TSI_SSC0[BASE_
+      NOCHARGE_NUM]) clock cycles of system clock; 4: The SSC output bit 1''s min period will be (5 + TSI_SSC0[BASE_
+      NOCHARGE_NUM]) clock cycles of system clock; 5: The SSC output bit 1''s min period will be (6 + TSI_SSC0[BASE_
+      NOCHARGE_NUM]) clock cycles of system clock; 6: The SSC output bit 1''s min period will be (7 + TSI_SSC0[BASE_
+      NOCHARGE_NUM]) clock cycles of system clock; 7: The SSC output bit 1''s min period will be (8 + TSI_SSC0[BASE_
+      NOCHARGE_NUM]) clock cycles of system clock; 8: The SSC output bit 1''s min period will be (9 + TSI_SSC0[BASE_
+      NOCHARGE_NUM]) clock cycles of system clock; 9: The SSC output bit 1''s min period will be (10 + TSI_SSC0[BASE_
+      NOCHARGE_NUM]) clock cycles of system clock; 10: The SSC output bit 1''s min period will be (11 + TSI_SSC0[BASE_
+      NOCHARGE_NUM]) clock cycles of system clock; 11: The SSC output bit 1''s min period will be (12 + TSI_SSC0[BASE_
+      NOCHARGE_NUM]) clock cycles of system clock; 12: The SSC output bit 1''s min period will be (13 + TSI_SSC0[BASE_
+      NOCHARGE_NUM]) clock cycles of system clock; 13: The SSC output bit 1''s min period will be (14 + TSI_SSC0[BASE_
+      NOCHARGE_NUM]) clock cycles of system clock; 14: The SSC output bit 1''s min period will be (15 + TSI_SSC0[BASE_
+      NOCHARGE_NUM]) clock cycles of system clock; 15: The SSC output bit 1''s min period will be (16 + TSI_SSC0[BASE_
+      NOCHARGE_NUM]) clock cycles of system clock'
+    bit_offset: 28
+    bit_size: 4
+fieldset/Baseline:
+  description: TSI Baseline Register. The manual inconsistently labels THRESHOLD_TRACE_EN reserved while listing
+    enable values, and lists both BASE_TRACE_EN encodings reserved despite describing low-power tracing. Fields
+    are raw descriptions, not an assurance of supported tracing. THESHOLD_RATIO references an otherwise undocumented
+    TEST_FINGER_EN.
+  bit_size: 32
+  reset_value: 65536
+  fields:
+  - name: tsi_baseline
+    description: TSI_BASELINE
+    bit_offset: 0
+    bit_size: 16
+  - name: base_trace_debounce
+    description: 'BASE_TRACE_DEBOUNCE. Encodings: 0: The current counter value takes 0 ratio; 1: The current counter
+      value takes 1/16 ratio; 2: The current counter value takes 2/16 ratio; 3: The current counter value takes
+      3/16 ratio; 4: The current counter value takes 4/16 ratio; 5: The current counter value takes 5/16 ratio;
+      6: The current counter value take 6/16 ratio; 7: The current counter value takes 7/16 ratio; 8: The current
+      counter value takes 8/16 ratio; 9: The current counter value takes 9/16 ratio; 10: The current counter value
+      takes 10/16 ratio; 11: The current counter value takes 11/16 ratio; 12: The current counter value takes 12/16
+      ratio; 13: The current counter value takes 13/16 ratio; 14: The current counter value takes 14/16 ratio; 15:
+      The current counter value takes 15/16 ratio'
+    bit_offset: 16
+    bit_size: 4
+  - name: base_trace_en
+    description: BASE_TRACE_EN
+    bit_offset: 20
+    bit_size: 1
+  - name: theshold_ratio
+    description: 'THESHOLD_RATIO. Encodings: 0: The thresholdh = baseline+counter/2, and thresholdl = baseline-counter/2;
+      1: The thresholdh = baseline+counter/4, and thresholdl = baseline-counter/4; 2: The thresholdh = baseline+counter/8,
+      and thresholdl = baseline-counter/8; 3: The thresholdh = baseline+counter/16, and thresholdl = baseline-counter/16;
+      4: The thresholdh = baseline+counter/32, and thresholdl = baseline-counter/32; 5: The thresholdh = baseline+counter/64,
+      and thresholdl = baseline-counter/64; 6: The thresholdh = baseline+counter/128, and thresholdl = baseline-counter/128;
+      7: The thresholdh = baseline+counter/256, and thresholdl = baseline-counter/256'
+    bit_offset: 28
+    bit_size: 3
+  - name: threshold_trace_en
+    description: 'THRESHOLD_TRACE_EN. Encodings: 0: Disable threshold trace function; 1: Enable threshold trace
+      function'
+    bit_offset: 31
+    bit_size: 1
+fieldset/Shield:
+  description: TSI Shield Register. M_SEN_RES has only example values 0, 1, 2 and 14; the source does not establish
+    a complete resistor conversion for all 6-bit values. Kept numeric without inventing holes or a formula.
+  bit_size: 32
+  reset_value: 67108864
+  fields:
+  - name: m_sen_res
+    description: 'Six-bit raw resistor trim. Documented examples only: 0=10 kohm, 1=10+(2.5/3) kohm (auto-calibration),
+      2=12.5 kohm, 14=25 kohm. Other codes unspecified.'
+    bit_offset: 25
+    bit_size: 6
+fieldset/SelfSel310:
+  description: Self-cap mode channels selection(CH31~CH0)
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: as_self_31_0
+    description: Config TSI channel as self-cap mode among CH31~CH0
+    bit_offset: 0
+    bit_size: 32
+fieldset/SelfSel6332:
+  description: Self-cap mode channels selection(CH63~CH32)
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: as_self_63_32
+    description: Config TSI channel as self-cap mode among CH63~CH32
+    bit_offset: 0
+    bit_size: 32
+fieldset/SelfSel6964:
+  description: Self-cap mode channels selection(CH69~CH64)
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: as_self_69_64
+    description: Config TSI channel as self-cap mode among CH69~CH64
+    bit_offset: 0
+    bit_size: 6
+fieldset/ShieldSel310:
+  description: Shield mode channels selection(CH31~CH0)
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: as_shield_31_0
+    description: Config TSI channel as shield mode among CH31~CH0
+    bit_offset: 0
+    bit_size: 32
+fieldset/ShieldSel6332:
+  description: Shield mode channels selection(CH63~CH32)
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: as_shield_63_32
+    description: Config TSI channel as shield mode among CH63~CH32
+    bit_offset: 0
+    bit_size: 32
+fieldset/ShieldSel6964:
+  description: Shield mode channels selection(CH69~CH64)
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: as_shield_69_64
+    description: Config TSI channel as shield mode among CH69~CH64
+    bit_offset: 0
+    bit_size: 6
+fieldset/MutualTxSel310:
+  description: Mutual TX mode channels selection(CH31~CH0)
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: as_mutual_tx_31_0
+    description: Config TSI channel as mutual TX mode among CH31~CH0
+    bit_offset: 0
+    bit_size: 32
+fieldset/MutualTxSel6332:
+  description: Mutual TX mode channels selection(CH63~CH32)
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: as_mutual_tx_63_32
+    description: Config TSI channel as mutual TX mode among CH63~CH32
+    bit_offset: 0
+    bit_size: 32
+fieldset/MutualTxSel6964:
+  description: Mutual TX mode channels selection(CH69~CH64)
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: as_mutual_tx_69_64
+    description: Config TSI channel as mutual TX mode among CH69~CH64
+    bit_offset: 0
+    bit_size: 6
+fieldset/MutualRxSel310:
+  description: Mutual RX mode channels selection(CH31~CH0)
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: as_mutual_rx_31_0
+    description: Config TSI channel as mutual RX mode among CH31~CH0
+    bit_offset: 0
+    bit_size: 32
+fieldset/MutualRxSel6332:
+  description: Mutual RX mode channels selection(CH63~CH32)
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: as_mutual_rx_63_32
+    description: Config TSI channel as mutual RX mode among CH63~CH32
+    bit_offset: 0
+    bit_size: 32
+fieldset/MutualRxSel6964:
+  description: Mutual RX mode channels selection (CH69~CH64)
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: as_mutual_rx_69_64
+    description: Config TSI channel as mutual RX mode among CH69~CH64
+    bit_offset: 0
+    bit_size: 6
+fieldset/Data:
+  description: 'TSI Data and Status Register. TSICNT is read-only. EOSF, OVERRUNF, OUTRGF and DPD_OUTRGF are write-one-to-clear:
+    write only intended flag bits, not read-modify-write. DMA transfer clears EOSF/OUTRGF automatically. DPD_OUTRGF
+    can be read only with GENCS.TSIEN_DPD=1. OVERRUNF encoding descriptions contradict the assertion prose; no polarity
+    enum is supplied.'
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: tsicnt
+    description: TSI Conversion Counter Value
+    bit_offset: 0
+    bit_size: 16
+  - name: tsicnt_overflow_flag
+    description: 'TSI Counter Overflow Flag. Encodings: 0: The DATA[TSICNT] value has no overflow occurrence in
+      the last scan process; 1: The DATA[TSICNT] value has an overflow occurrence in the last scan process'
+    bit_offset: 16
+    bit_size: 1
+  - name: eosf
+    description: 'End of Scan Flag. Encodings: 0: Scan is not done; 1: Scan is done'
+    bit_offset: 27
+    bit_size: 1
+  - name: overrunf
+    description: Overrun flag, write-one-to-clear according to the register diagram. The assertion prose says a
+      trigger or configuration write during an active scan asserts the flag, but the encoding list reverses that
+      polarity (59.6.1.25); no polarity enum is supplied.
+    bit_offset: 29
+    bit_size: 1
+  - name: outrgf
+    description: 'Out of Range Flag. Encodings: 0: The counter value is not out of range; 1: The counter value is
+      out of range'
+    bit_offset: 30
+    bit_size: 1
+  - name: dpd_outrgf
+    description: 'DPD Out of Range Flag. Encodings: 0: The counter value is not out of range; 1: The counter value
+      is out of range'
+    bit_offset: 31
+    bit_size: 1
+fieldset/Misc:
+  description: TSI Miscellaneous Register. DPD_MODE_ENABLE=1 updates the 3 V domain configuration latch; 0 holds
+    it. CAP_BANK_148FF is named in fF but 59.6.1.26 gives pF values; see source conflict note, do not infer a unit
+    conversion from its name.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: cap_bank_2500ff
+    description: 'Enable the 2500fF caps inside cap bank. Encodings: 0: Enable another 2.5 pF in cap bank; 1: Enable
+      another 5.0 pF in cap bank; 2: Enable another 7.5 pF in cap bank; 3: Enable another 10 pF in cap bank; 4:
+      Enable another 12.5 pF in cap bank; 5: Enable another 15 pF in cap bank; 6: Enable another 17.5 pF in cap
+      bank; 7: Enable another 20 pF in cap bank'
+    bit_offset: 0
+    bit_size: 3
+  - name: cap_bank_312ff
+    description: 'Enable the 312fF caps inside cap bank. Encodings: 0: Enable another 0.3125 pF; 1: Enable another
+      0.625 pF; 2: Enable another 0.936 pF; 3: Enable another 1.25 pF; 4: Enable another 1.56 pF; 5: Enable another
+      1.87 pF; 6: Enable another 2.19 pF; 7: Enable another 2.5 pF'
+    bit_offset: 4
+    bit_size: 3
+  - name: dpd_mode_enable
+    description: 'DPD_MODE_ENABLE. Encodings: 0: Configuration information in 3v domain logic is latched; 1: Configuration
+      information in 3v domain logic is updating from configuration registers simultaneously'
+    bit_offset: 19
+    bit_size: 1
+  - name: cap_bank_148ff
+    description: 'CAP_BANK_148FF. Encodings: 0: Enable another 148 pF in cap bank; 1: Enable another 296 pF in cap
+      bank; 2: Enable another 444 pF in cap bank; 3: Enable another 592 pF in cap bank; 4: Enable another 740 pF
+      in cap bank; 5: Enable another 888 pF in cap bank; 6: Enable another 1036 pF in cap bank; 7: Enable another
+      1184 pF in cap bank'
+    bit_offset: 20
+    bit_size: 3
+  - name: cap_bank_en
+    description: 'Cap bank function enable signal. Encodings: 0: Disable cap bank function; 1: Enable cap bank function'
+    bit_offset: 23
+    bit_size: 1
+  - name: clk_divider
+    description: TSI Clock Divider
+    bit_offset: 24
+    bit_size: 5
+  - name: counting_clk_high
+    description: 'COUNTING_CLK_HIGH. Encodings: 0: Using default process inside SSC; 1: Follow the counting signal
+      from AIP front end'
+    bit_offset: 31
+    bit_size: 1
+fieldset/Trig:
+  description: TSI AUTO TRIG Register
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: trig_period_counter
+    description: TRIG_PERIOD_COUNTER
+    bit_offset: 0
+    bit_size: 20
+  - name: trig_clk_divider
+    description: Numeric code N divides the trigger clock by N+1, 1..32.
+    bit_offset: 24
+    bit_size: 5
+  - name: trig_en
+    description: 'TRIG_EN. Encodings: 0: Disabled; 1: Enabled'
+    bit_offset: 30
+    bit_size: 1
+  - name: trig_clk_sel
+    description: 'TRIG_CLK_SEL. Encodings: 0: 32 KHz clock; 1: clksoc'
+    bit_offset: 31
+    bit_size: 1
+fieldset/Test:
+  description: TSI TEST Register. TSI_TEST_EN is asserted only by a full-register write of 0x55AA55AA, not by setting
+    bit 0; writing bit 0 to zero disables test mode. DPD_TEST_EOSF is write-one-to-clear. CLKSOC_SEL and RUN_CTRL
+    require ipt_test_mod=1; the referenced test guide is not supplied and CLKSOC_SEL values are reserved. This register
+    model does not authorize hardware test operations.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: tsi_test_en
+    description: 'TSI_TEST_EN. Encodings: 0: Test mode is disabled; 1: Test mode is enabled'
+    bit_offset: 0
+    bit_size: 1
+  - name: dpd_test_en
+    description: 'DPD_TEST_EN. Encodings: 0: IP is not entering dpd test mode; 1: IP is entering dpd test mode'
+    bit_offset: 1
+    bit_size: 1
+  - name: dpd_test_eosf
+    description: 'End of Scan Flag in DPD test mode. Encodings: 0: Scan is not done in DPD test mode; 1: Scan is
+      done in DPD test mode'
+    bit_offset: 8
+    bit_size: 1
+  - name: tsi_ana_test_setting
+    description: 'TSI_ANA_TEST_SETTING. Encodings: 0: Normal operation mode; 1: Test mode 1, Vref test; 2: Test
+      mode 2, Vprechrg voltage test; 3: Test mode 3, Comparator test; 4: Test mode 4, Precharge function test; 5:
+      Test mode 5, 4uA bias test; 6: Test mode 6, 2uA bias test; 7: Test mode 7, Function monitor test'
+    bit_offset: 16
+    bit_size: 4
+  - name: clksoc_sel
+    description: CLKSOC_SEL
+    bit_offset: 20
+    bit_size: 1
+  - name: run_ctrl
+    description: 'RUN_CTRL. Encodings: 0: Gate analog switch clock; 1: Not gate analog switch clock'
+    bit_offset: 21
+    bit_size: 1
+enum/ConfigMode:
+  bit_size: 1
+  variants:
+  - name: SelfCap
+    value: 0
+  - name: MutualCap
+    value: 1
+enum/ConfigFilterTrim:
+  bit_size: 2
+  variants:
+  - name: Bypass
+    value: 0
+  - name: Ns5_3
+    value: 1
+  - name: Ns21_1
+    value: 2
+  - name: Ns25
+    value: 3
+enum/ConfigMutualMode:
+  bit_size: 1
+  variants:
+  - name: SelfCap
+    value: 0
+  - name: MutualCap
+    value: 1
+enum/MulMMode:
+  bit_size: 2
+  variants:
+  - name: Both
+    value: 0
+  - name: Positive
+    value: 1
+  - name: Negative
+    value: 2
+enum/Ssc0SscMode:
+  bit_size: 2
+  variants:
+  - name: Prbs
+    value: 0
+  - name: UpDown
+    value: 1
+  - name: Disabled
+    value: 2

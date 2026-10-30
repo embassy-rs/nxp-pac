@@ -737,7 +737,8 @@
             }
           ]
         }
-      ]
+      ],
+      "block": "mcx/a/a5/TENBASET_PHY"
     },
     {
       "name": "ADC0",
@@ -1167,6 +1168,7 @@
     },
     {
       "name": "AOI0",
+      "block": "mcx/a/a5/AOI",
       "address": "0x400C4000",
       "signals": []
     },
@@ -1352,6 +1354,7 @@
     },
     {
       "name": "CMP0",
+      "block": "mcx/a/a5/CMP",
       "address": "0x400B1000",
       "signals": [
         {
@@ -3756,10 +3759,12 @@
     {
       "name": "DGDET0",
       "address": "0x400E5000",
-      "signals": []
+      "signals": [],
+      "block": "mcx/a/a5/GDET"
     },
     {
       "name": "DBGMAILBOX",
+      "block": "mcx/a/a5/DBGMAILBOX",
       "address": "0x40042000",
       "signals": [
         {
@@ -3822,6 +3827,7 @@
     },
     {
       "name": "EIM0",
+      "block": "mcx/a/a5/EIM",
       "address": "0x400C7000",
       "signals": []
     },
@@ -3983,15 +3989,18 @@
             }
           ]
         }
-      ]
+      ],
+      "block": "mcx/a/a5/ENET"
     },
     {
       "name": "ERM0",
+      "block": "mcx/a/a5/ERM",
       "address": "0x400C8000",
       "signals": []
     },
     {
       "name": "EWM0",
+      "block": "mcx/a/a5/EWM",
       "address": "0x40010000",
       "signals": [
         {
@@ -4693,7 +4702,8 @@
           "mux": "DMA3",
           "request": 74
         }
-      ]
+      ],
+      "block": "mcx/a/a5/FLEXIO"
     },
     {
       "name": "FLEXSPI0",
@@ -4865,6 +4875,7 @@
     },
     {
       "name": "FMC0",
+      "block": "mcx/a/a5/FMC",
       "address": "0x40094000",
       "signals": []
     },
@@ -4922,6 +4933,7 @@
     },
     {
       "name": "GLIKEY0",
+      "block": "mcx/a/a5/GLIKEY",
       "address": "0x400E8000",
       "signals": []
     },
@@ -6556,7 +6568,8 @@
     {
       "name": "ITRC0",
       "address": "0x400E7000",
-      "signals": []
+      "signals": [],
+      "block": "mcx/a/a5/ITRC"
     },
     {
       "name": "LPI2C0",
@@ -8439,7 +8452,8 @@
     {
       "name": "MBC0",
       "address": "0x400C9000",
-      "signals": []
+      "signals": [],
+      "block": "mcx/a/a5/MBC"
     },
     {
       "name": "OSTIMER0",
@@ -8577,7 +8591,8 @@
     {
       "name": "PKC0",
       "address": "0x40012000",
-      "signals": []
+      "signals": [],
+      "block": "mcx/a/a5/PKC"
     },
     {
       "name": "PORT0",
@@ -8665,7 +8680,6 @@
       "name": "RTC0",
       "address": "0x400EE000",
       "block": "mcx/a/a5/RTC::RTC",
-      "module": "RTC5xx",
       "signals": [
         {
           "name": "CLKOUT",
@@ -8744,6 +8758,7 @@
     },
     {
       "name": "SmartDMA0",
+      "block": "mcx/a/a5/SMARTDMA",
       "address": "0x4000E000",
       "signals": [
         {
@@ -9336,7 +9351,8 @@
             }
           ]
         }
-      ]
+      ],
+      "block": "mcx/a/a5/TDET"
     },
     {
       "name": "TRIG",
@@ -10568,7 +10584,8 @@
             }
           ]
         }
-      ]
+      ],
+      "block": "mcx/a/a5/TSI"
     },
     {
       "name": "UDF0",
@@ -10620,15 +10637,18 @@
             }
           ]
         }
-      ]
+      ],
+      "block": "mcx/a/a5/USBHS"
     },
     {
       "name": "USB1_HS_PHY",
       "address": "0x4002F000",
-      "signals": []
+      "signals": [],
+      "block": "mcx/a/a5/USBPHY"
     },
     {
       "name": "UTICK0",
+      "block": "mcx/a/a5/UTICK",
       "address": "0x4000B000",
       "signals": [
         {
@@ -10703,6 +10723,7 @@
     },
     {
       "name": "VREF0",
+      "block": "mcx/a/a5/VREF",
       "address": "0x400BB000",
       "signals": []
     },
@@ -11151,18 +11172,27 @@
           "mux": "DMA3",
           "request": 93
         }
-      ]
+      ],
+      "block": "mcx/a/a5/ESPI"
     },
     {
       "name": "seccon",
       "address": "0x400EA000",
-      "signals": []
+      "signals": [],
+      "block": "mcx/a/a5/SECCON"
     },
     {
       "name": "MRCC0",
       "address": "0x40091800",
       "block": "mcx/a/a5/MRCC::MRCC",
       "module": "MRCC",
+      "signals": []
+    },
+    {
+      "name": "USBHS1_PHY_DCD",
+      "address": "0x4002F800",
+      "block": "mcx/a/a5/USBDCD",
+      "only_in": "^MCXA(286|287|456|457|556|557|566|567|577)$",
       "signals": []
     }
   ]

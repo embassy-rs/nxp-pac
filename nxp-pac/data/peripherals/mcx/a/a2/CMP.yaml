@@ -1,0 +1,147 @@
+# MCXAP144M240F61RM Rev. 2, sections 46.1.4 and 46.7.10.
+# CMP0 has fixed external source 0. CMP1 supports RR_EXTTRG_SEL at bits 5:2.
+# The vendor XML omits that CMP1-only field. Do not copy its CMP0 derivation.
+includes:
+- ../common/CMP.yaml
+block/Cmp:
+  description: Low-power comparator. Registers require word writes; byte, halfword and word reads are supported. Input connections are instance-specific.
+  items:
+  - name: verid
+    description: Version ID.
+    byte_offset: 0
+    access: Read
+    fieldset: Verid
+  - name: param
+    description: Parameter.
+    byte_offset: 4
+    access: Read
+    fieldset: Param
+  - name: ccr0
+    description: Comparator Control Register 0.
+    byte_offset: 8
+    fieldset: Ccr0
+  - name: ccr1
+    description: Comparator Control Register 1.
+    byte_offset: 12
+    fieldset: Ccr1
+  - name: ccr2
+    description: Comparator Control Register 2.
+    byte_offset: 16
+    fieldset: Ccr2
+  - name: dcr
+    description: DAC Control.
+    byte_offset: 24
+    fieldset: Dcr
+  - name: ier
+    description: Interrupt Enable.
+    byte_offset: 28
+    fieldset: Ier
+  - name: csr
+    description: Comparator status. CFR/CFF/RRF are write-one-to-clear, COUT is read-only. DMA can clear edge flags.
+    byte_offset: 32
+    fieldset: Csr
+  - name: rrcr0
+    description: Round Robin Control Register 0.
+    byte_offset: 36
+    fieldset: Rrcr0
+  - name: rrcr1
+    description: Round Robin Control Register 1.
+    byte_offset: 40
+    fieldset: Rrcr1
+  - name: rrcsr
+    description: Round Robin Control and Status.
+    byte_offset: 44
+    fieldset: Rrcsr
+  - name: rrsr
+    description: Round-robin channel change flags. Write one to clear the intended flags.
+    byte_offset: 48
+    fieldset: Rrsr
+  - name: rrcr2
+    description: Round Robin Control Register 2.
+    byte_offset: 56
+    fieldset: Rrcr2
+block/Cmp1:
+  description: Low-power comparator. Registers require word writes; byte, halfword and word reads are supported. Input connections are instance-specific.
+  items:
+  - name: verid
+    description: Version ID.
+    byte_offset: 0
+    access: Read
+    fieldset: Verid
+  - name: param
+    description: Parameter.
+    byte_offset: 4
+    access: Read
+    fieldset: Param
+  - name: ccr0
+    description: Comparator Control Register 0.
+    byte_offset: 8
+    fieldset: Ccr0
+  - name: ccr1
+    description: Comparator Control Register 1.
+    byte_offset: 12
+    fieldset: Ccr1
+  - name: ccr2
+    description: Comparator Control Register 2.
+    byte_offset: 16
+    fieldset: Ccr2
+  - name: dcr
+    description: DAC Control.
+    byte_offset: 24
+    fieldset: Dcr
+  - name: ier
+    description: Interrupt Enable.
+    byte_offset: 28
+    fieldset: Ier
+  - name: csr
+    description: Comparator status. CFR/CFF/RRF are write-one-to-clear, COUT is read-only. DMA can clear edge flags.
+    byte_offset: 32
+    fieldset: Csr
+  - name: rrcr0
+    description: Round Robin Control Register 0.
+    byte_offset: 36
+    fieldset: Rrcr0Cmp1
+  - name: rrcr1
+    description: Round Robin Control Register 1.
+    byte_offset: 40
+    fieldset: Rrcr1
+  - name: rrcsr
+    description: Round Robin Control and Status.
+    byte_offset: 44
+    fieldset: Rrcsr
+  - name: rrsr
+    description: Round-robin channel change flags. Write one to clear the intended flags.
+    byte_offset: 48
+    fieldset: Rrsr
+  - name: rrcr2
+    description: Round Robin Control Register 2.
+    byte_offset: 56
+    fieldset: Rrcr2
+fieldset/Rrcr0:
+  extends: Rrcr0Base
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: rr_trg_sel
+    description: Round-Robin Trigger Select.
+    bit_offset: 1
+    bit_size: 1
+    enum: RrTrgSel
+fieldset/Rrcr0Cmp1:
+  extends: Rrcr0
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: rr_exttrg_sel
+    description: CMP1 external trigger source. This four-bit field is documented in F61RM section 46.7.10 but omitted by the vendor XML derived from CMP0.
+    bit_offset: 2
+    bit_size: 4
+enum/RrTrgSel:
+  bit_size: 1
+  variants:
+  - name: Enable
+    description: External trigger.
+    value: 0
+  - name: Disable
+    description: Internal trigger.
+    value: 1

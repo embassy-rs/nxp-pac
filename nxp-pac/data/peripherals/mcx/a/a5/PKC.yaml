@@ -1,0 +1,8 @@
+# MCXAP172M240F70RM Rev. 1, section 71.6.1. Do not assume A2-only offsets exist.
+# Probing undocumented addresses can itself raise a security alert and reset PKC.
+includes:
+- ../common/PKC.yaml
+block/Pkc:
+  description: A5 PKC. MCDATA, VERSION and MODULE_ID are absent from the documented map and intentionally not exposed.
+  extends: PkcShared
+  items: []

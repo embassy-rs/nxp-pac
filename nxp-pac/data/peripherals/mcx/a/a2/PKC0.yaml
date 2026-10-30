@@ -1,0 +1,107 @@
+# MCXAP144M240F61SRM Rev. 2, section 16.6.1 and MCDATA restrictions in 16.6.16.
+includes:
+- ../common/PKC.yaml
+block/Pkc0:
+  description: A2 PKC. The documented MCDATA interface is not usable for normal operation; any access raises an alarm.
+  extends: PkcShared
+  items:
+  - name: pkc_mcdata
+    description: DO NOT ACCESS for normal operation. This IP supports only hard-coded MC patterns. Any read or write raises a security alarm and increments PKC_MODE1 by 4, even though the register is documented.
+    byte_offset: 80
+    fieldset: PkcMcdata
+  - name: pkc_version
+    description: PKC version register.
+    byte_offset: 96
+    access: Read
+    fieldset: PkcVersion
+  - name: pkc_module_id
+    description: Module ID.
+    byte_offset: 4092
+    access: Read
+    fieldset: PkcModuleId
+fieldset/PkcMcdata:
+  description: Unsupported flexible microcode interface. Any access raises a security alarm and increments PKC_MODE1 by 4. Do not probe or use for normal operation.
+  fields:
+  - name: mcdata
+    description: 'Microcode data. Reading returns zero but is not side-effect free: it raises a security alarm and changes PKC_MODE1.'
+    bit_offset: 0
+    bit_size: 32
+  bit_size: 32
+  reset_value: 0
+fieldset/PkcVersion:
+  description: PKC version register.
+  fields:
+  - name: mulsize
+    description: Native multiplier size and operand granularity.
+    bit_offset: 0
+    bit_size: 2
+    enum: Mulsize
+  - name: mcavail
+    description: MC feature (layer1 calculation) is available.
+    bit_offset: 2
+    bit_size: 1
+  - name: upavail
+    description: UP feature (layer2 calculation) is available.
+    bit_offset: 3
+    bit_size: 1
+  - name: upcacheavail
+    description: UP cache is available.
+    bit_offset: 4
+    bit_size: 1
+  - name: gf2avail
+    description: GF2 calculation modes are available.
+    bit_offset: 5
+    bit_size: 1
+  - name: paramnum
+    description: Number of parameter sets for real calculation.
+    bit_offset: 6
+    bit_size: 2
+  - name: sbx0avail
+    description: SBX0 operation is available.
+    bit_offset: 8
+    bit_size: 1
+  - name: sbx1avail
+    description: SBX1 operation is available.
+    bit_offset: 9
+    bit_size: 1
+  - name: sbx2avail
+    description: SBX2 operation is available.
+    bit_offset: 10
+    bit_size: 1
+  - name: sbx3avail
+    description: SBX3 operation is available.
+    bit_offset: 11
+    bit_size: 1
+  - name: mcreconf_size
+    description: Size of reconfigurable MC table in bytes.
+    bit_offset: 12
+    bit_size: 8
+  bit_size: 32
+  reset_value: 190
+fieldset/PkcModuleId:
+  description: Module ID.
+  fields:
+  - name: size
+    description: Address space of the IP.
+    bit_offset: 0
+    bit_size: 8
+  - name: minor_rev
+    description: Minor revision.
+    bit_offset: 8
+    bit_size: 4
+  - name: major_rev
+    description: Major revision.
+    bit_offset: 12
+    bit_size: 4
+  - name: id
+    description: Module ID.
+    bit_offset: 16
+    bit_size: 16
+  bit_size: 32
+  reset_value: 3775074944
+enum/Mulsize:
+  bit_size: 2
+  variants:
+  - name: Bit64
+    description: 64-bit multiplier.
+    value: 2

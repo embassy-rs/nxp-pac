@@ -1,0 +1,71 @@
+# Core-side access, not the external debugger's AP interface.
+# MCXAP144M240F61SRM Rev. 2, section 10.5.1;
+# MCXAP172M240F70RM Rev. 1, section 67.5.1.
+block/Dbgmailbox:
+  description: Core-side debug mailbox.
+  items:
+  - name: csw
+    byte_offset: 0
+    fieldset: Csw
+  - name: request
+    description: Debugger request. The core can only read this register.
+    byte_offset: 4
+    access: Read
+    fieldset: Request
+  - name: return_
+    description: Core response. Writing again before the debugger reads sets AHB_OR_ERR.
+    byte_offset: 8
+    fieldset: Return
+  - name: id
+    description: Reads as zero from on-chip software; only the debugger sees 0x002A0000.
+    byte_offset: 252
+    access: Read
+    fieldset: Id
+fieldset/Csw:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: resynch_req
+    description: Debugger requests resynchronization; the core acknowledges with SOFT_RESET.
+    bit_offset: 0
+    bit_size: 1
+  - name: req_pending
+    description: A debugger request is waiting for the core to read REQUEST.
+    bit_offset: 1
+    bit_size: 1
+  - name: dbg_or_err
+    bit_offset: 2
+    bit_size: 1
+  - name: ahb_or_err
+    bit_offset: 3
+    bit_size: 1
+  - name: soft_reset
+    description: Write-only from the core. Reset the DM-AP.
+    bit_offset: 4
+    bit_size: 1
+  - name: chip_reset_req
+    description: Write-only. Reset the chip, but not the DM-AP.
+    bit_offset: 5
+    bit_size: 1
+fieldset/Request:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: request
+    bit_offset: 0
+    bit_size: 32
+fieldset/Return:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: ret
+    bit_offset: 0
+    bit_size: 32
+fieldset/Id:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: id
+    description: Core-side reads return zero, not the AP identification value.
+    bit_offset: 0
+    bit_size: 32
