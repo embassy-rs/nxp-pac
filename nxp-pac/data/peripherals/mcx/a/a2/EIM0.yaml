@@ -1,0 +1,5 @@
+includes:
+- ../common/EIM.yaml
+block/Eim0:
+  extends: Eim
+  items: []

@@ -1,0 +1,5 @@
+includes:
+- ../common/ERM.yaml
+block/Erm0:
+  extends: Erm
+  items: []

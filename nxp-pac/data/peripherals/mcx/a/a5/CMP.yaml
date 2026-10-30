@@ -1,0 +1,68 @@
+# MCXAP172M240F70RM Rev. 1, sections 56.1.4 and 56.7.10.
+# Only CMP0 exists; its external trigger is fixed at source 0. The generic trigger
+# table disagrees. RRCR0 bit 1 is reserved in the manual despite the XML.
+# Do not expose RR_TRG_SEL or a configurable RR_EXTTRG_SEL on CMP0.
+includes:
+- ../common/CMP.yaml
+block/Cmp:
+  description: Low-power comparator. Registers require word writes; byte, halfword and word reads are supported. Input connections are instance-specific.
+  items:
+  - name: verid
+    description: Version ID.
+    byte_offset: 0
+    access: Read
+    fieldset: Verid
+  - name: param
+    description: Parameter.
+    byte_offset: 4
+    access: Read
+    fieldset: Param
+  - name: ccr0
+    description: Comparator Control Register 0.
+    byte_offset: 8
+    fieldset: Ccr0
+  - name: ccr1
+    description: Comparator Control Register 1.
+    byte_offset: 12
+    fieldset: Ccr1
+  - name: ccr2
+    description: Comparator Control Register 2.
+    byte_offset: 16
+    fieldset: Ccr2
+  - name: dcr
+    description: DAC Control.
+    byte_offset: 24
+    fieldset: Dcr
+  - name: ier
+    description: Interrupt Enable.
+    byte_offset: 28
+    fieldset: Ier
+  - name: csr
+    description: Comparator status. CFR/CFF/RRF are write-one-to-clear, COUT is read-only. DMA can clear edge flags.
+    byte_offset: 32
+    fieldset: Csr
+  - name: rrcr0
+    description: Round Robin Control Register 0.
+    byte_offset: 36
+    fieldset: Rrcr0
+  - name: rrcr1
+    description: Round Robin Control Register 1.
+    byte_offset: 40
+    fieldset: Rrcr1
+  - name: rrcsr
+    description: Round Robin Control and Status.
+    byte_offset: 44
+    fieldset: Rrcsr
+  - name: rrsr
+    description: Round-robin channel change flags. Write one to clear the intended flags.
+    byte_offset: 48
+    fieldset: Rrsr
+  - name: rrcr2
+    description: Round Robin Control Register 2.
+    byte_offset: 56
+    fieldset: Rrcr2
+fieldset/Rrcr0:
+  extends: Rrcr0Base
+  bit_size: 32
+  reset_value: 0
+  fields: []

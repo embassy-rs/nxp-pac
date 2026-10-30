@@ -1353,6 +1353,7 @@
     },
     {
       "name": "CMP0",
+      "block": "mcx/a/a5/CMP",
       "address": "0x400B1000",
       "signals": [
         {
@@ -3824,6 +3825,7 @@
     },
     {
       "name": "EIM0",
+      "block": "mcx/a/a5/EIM",
       "address": "0x400C7000",
       "signals": []
     },
@@ -3989,6 +3991,7 @@
     },
     {
       "name": "ERM0",
+      "block": "mcx/a/a5/ERM",
       "address": "0x400C8000",
       "signals": []
     },
@@ -8749,6 +8752,7 @@
     },
     {
       "name": "SmartDMA0",
+      "block": "mcx/a/a5/SMARTDMA",
       "address": "0x4000E000",
       "signals": [
         {

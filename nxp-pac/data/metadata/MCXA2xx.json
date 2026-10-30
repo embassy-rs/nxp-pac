@@ -1313,7 +1313,7 @@
     {
       "name": "CMP1",
       "address": "0x400B2000",
-      "block": "mcx/a/a2/CMP",
+      "block": "mcx/a/a2/CMP1",
       "signals": [
         {
           "name": "IN0",

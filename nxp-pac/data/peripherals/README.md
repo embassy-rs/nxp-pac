@@ -114,15 +114,20 @@ by 16. This PAC exposes raw counts, not a time conversion or a HAL driver.
 
 ## Additional A2/A5 register coverage
 
-A2 now has register models for AOI, DBGMAILBOX, FMC, GLIKEY, OPAMP, and UTICK.
-A5 adds AOI, DBGMAILBOX, EWM, FMC, GLIKEY, UTICK, and VREF. These additions fill
+A2 now has register models for AOI, CMP, DBGMAILBOX, EIM, ERM, FMC, GLIKEY,
+OPAMP, SMARTDMA, and UTICK. A5 adds AOI, CMP, DBGMAILBOX, EIM, ERM, EWM, FMC,
+GLIKEY, SMARTDMA, UTICK, and VREF. These additions fill
 gaps in A2/A5; they do not restrict or replace existing A1/A3 models. A2 retains
 its existing `FMC0`, `OPAMP0`, and `UTICK0` catalog and driver identities.
 
 The definitions follow MCXAP144M240F61RM Rev. 2 (sections 7.6.1, 17.7, 28.6,
 48.5.1, and 53.5.2.1), MCXAP144M240F61SRM Rev. 2 (section 10.5.1), and
 MCXAP172M240F70RM final Rev. 1 (sections 13.6.1, 25.7, 35.6, 41.5.1, 58.6.1,
-66.4, and 67.5.1). Important distinctions:
+66.4, and 67.5.1).
+
+EIM, ERM, SMARTDMA, and CMP follow F61RM sections 8.6, 9.5, 42.4, and 46.7,
+and F70RM sections 15.3, 16.5, 49.4, and 56.7. The manuals take precedence
+over conflicting XML fields and generic-IP descriptions. Important distinctions:
 
 - AOI uses 16-bit accesses; EWM uses 8-bit accesses, including backing storage.
 - GLIKEY's VERSION offset is `0xFC` on A2 and `0xFFC` on A5. Its write-enable
@@ -135,6 +140,16 @@ MCXAP172M240F70RM final Rev. 1 (sections 13.6.1, 25.7, 35.6, 41.5.1, 58.6.1,
   bits, not a device's factory trim. Preserve VREFTRIM when changing TRIM2V1.
   The manual disagrees on TRIM2V1 encoding 1's nominal voltage (Table 671 says
   1.25 V; section 58.6.1.4 says 1.2 V), so no voltage-named enum is provided.
+- EIM exposes only the channel documented by its register map. ERM has two
+  status/count channels, but only channel 0 has address and syndrome registers.
+- A2 CMP1 has a four-bit external-trigger selector omitted by the XML. It uses
+  a separate `CMP1` model with the same `mcxa/CMP` driver identity. CMP0's trigger
+  is fixed. A5 also reserves RRCR0 bit 1 despite the XML exposing it.
+- Comparator input 5 is reserved on A2 but connected on A5. On A5, zero filter
+  count with sampling enabled is illegal and drives COUT low; A2 bypasses its
+  filter at zero count. Window events follow COUT on A2 and CMPO on A5.
+- SMARTDMA control writes require WKEY `0xC0DE` and AHB synchronization. IE=3
+  is reserved on A2, but selects RXEV on A5; do not assume ordinary enable bits.
 
 New A2/A5 UDF extraction is deferred pending NXP clarification. The local manuals
 do not describe its registers, and the A5 XML assigns overlapping, unaligned

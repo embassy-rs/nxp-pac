@@ -1,0 +1,5 @@
+includes:
+- ../common/SMARTDMA.yaml
+block/Smartdma0:
+  extends: Smartdma
+  items: []
