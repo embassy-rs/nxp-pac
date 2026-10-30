@@ -5029,6 +5029,12 @@
       ]
     },
     {
+      "name": "GLIKEY0",
+      "address": "0x40091D00",
+      "block": "mcx/a/a2/GLIKEY",
+      "signals": []
+    },
+    {
       "name": "GPIO0",
       "address": "0x40102000",
       "block": "mcx/a/a2/GPIO",

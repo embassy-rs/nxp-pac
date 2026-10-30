@@ -1,0 +1,22 @@
+# MCXAP144M240F61RM Rev. 2, section 7.6.1.2;
+# MCXAP172M240F70RM Rev. 1, section 13.6.1.2.
+fieldset/Remap:
+  description: >-
+    Data remap. Do not use read-modify-write: writes use command keys in the
+    lower halfword. Write 0xNNNNA5A5 to update LIMDP, 0xNNNN5A5A to update
+    LIM, or 0xXXXXC3C3 to lock until reset. Other writes are ignored.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: remaplk
+    description: Sticky remap lock status. Set by writing the 0xC3C3 command key.
+    bit_offset: 0
+    bit_size: 1
+  - name: lim
+    description: LIM remapping address. Update with the 0x5A5A command key.
+    bit_offset: 16
+    bit_size: 7
+  - name: limdp
+    description: LIMDP remapping address. Update with the 0xA5A5 command key.
+    bit_offset: 24
+    bit_size: 7

@@ -1,0 +1,11 @@
+# MCXAP172M240F70RM Rev. 1, section 13.6.1.
+# A5 has no A2 flash-cache programming register bank.
+includes:
+  - ../common/FMC_REMAP.yaml
+block/Fmc:
+  description: Flash memory controller data remapping.
+  items:
+  - name: remap
+    description: Data remap. Write command keys as documented; do not use read-modify-write.
+    byte_offset: 32
+    fieldset: Remap

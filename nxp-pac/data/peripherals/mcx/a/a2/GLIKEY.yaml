@@ -1,0 +1,23 @@
+# MCXAP144M240F61RM Rev. 2, section 53.5.2.1.1.
+includes:
+  - ../common/GLIKEY.yaml
+block/Glikey:
+  description: Security-sensitive register access sequence controller.
+  items:
+  - name: ctrl_0
+    byte_offset: 0
+    fieldset: Ctrl0
+  - name: ctrl_1
+    byte_offset: 4
+    fieldset: Ctrl1
+  - name: intr_ctrl
+    byte_offset: 8
+    fieldset: IntrCtrl
+  - name: status
+    byte_offset: 12
+    access: Read
+    fieldset: Status
+  - name: version
+    byte_offset: 252
+    access: Read
+    fieldset: Version

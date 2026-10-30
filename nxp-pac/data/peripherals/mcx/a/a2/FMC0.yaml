@@ -1,0 +1,89 @@
+# MCXAP144M240F61RM Rev. 2, section 7.6.1.
+includes:
+  - ../common/FMC_REMAP.yaml
+block/Fmc0:
+  description: Flash memory controller with flash-cache programming registers.
+  items:
+  - name: remap
+    description: Data remap. Write command keys as documented; do not use read-modify-write.
+    byte_offset: 32
+    fieldset: Remap
+  - name: fccr
+    byte_offset: 1024
+    fieldset: Fccr
+  - name: fcar
+    byte_offset: 1028
+    fieldset: Fcar
+  - name: fctg
+    byte_offset: 1036
+    fieldset: Fctg
+  - name: fcln0
+    byte_offset: 1056
+    fieldset: Fcln
+  - name: fcln1
+    byte_offset: 1060
+    fieldset: Fcln
+  - name: fcln2
+    byte_offset: 1064
+    fieldset: Fcln
+  - name: fcln3
+    byte_offset: 1068
+    fieldset: Fcln
+fieldset/Fccr:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: way_lock
+    description: Lock individual cache ways against refresh by flash reads.
+    bit_offset: 0
+    bit_size: 4
+  - name: lock
+    description: Lock all cache programming registers until reset. Flash-cache operation continues.
+    bit_offset: 31
+    bit_size: 1
+fieldset/Fcar:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: caches_way_num
+    bit_offset: 0
+    bit_size: 2
+  - name: caches_set_num
+    bit_offset: 4
+    bit_size: 1
+  - name: type_
+    bit_offset: 30
+    bit_size: 2
+    enum: CacheAccess
+fieldset/Fctg:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: valid
+    bit_offset: 0
+    bit_size: 1
+  - name: address
+    description: Cache-line tag corresponding to flash address bits 23 through 6.
+    bit_offset: 6
+    bit_size: 18
+fieldset/Fcln:
+  description: One 32-bit word of the selected 128-bit cache line, in increasing word order.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: data
+    bit_offset: 0
+    bit_size: 32
+enum/CacheAccess:
+  bit_size: 2
+  variants:
+  - name: NoAccess
+    value: 0
+  - name: Read
+    description: Copy the selected line's tag, valid bit, and data into FCTG and FCLN0-3.
+    value: 1
+  - name: Write
+    description: Update the selected line from FCTG and FCLN0-3.
+    value: 2
+  - name: NoAccessAlt
+    value: 3

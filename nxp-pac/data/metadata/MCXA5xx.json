@@ -1167,6 +1167,7 @@
     },
     {
       "name": "AOI0",
+      "block": "mcx/a/a5/AOI",
       "address": "0x400C4000",
       "signals": []
     },
@@ -3760,6 +3761,7 @@
     },
     {
       "name": "DBGMAILBOX",
+      "block": "mcx/a/a5/DBGMAILBOX",
       "address": "0x40042000",
       "signals": [
         {
@@ -3992,6 +3994,7 @@
     },
     {
       "name": "EWM0",
+      "block": "mcx/a/a5/EWM",
       "address": "0x40010000",
       "signals": [
         {
@@ -4865,6 +4868,7 @@
     },
     {
       "name": "FMC0",
+      "block": "mcx/a/a5/FMC",
       "address": "0x40094000",
       "signals": []
     },
@@ -4922,6 +4926,7 @@
     },
     {
       "name": "GLIKEY0",
+      "block": "mcx/a/a5/GLIKEY",
       "address": "0x400E8000",
       "signals": []
     },
@@ -10629,6 +10634,7 @@
     },
     {
       "name": "UTICK0",
+      "block": "mcx/a/a5/UTICK",
       "address": "0x4000B000",
       "signals": [
         {
@@ -10703,6 +10709,7 @@
     },
     {
       "name": "VREF0",
+      "block": "mcx/a/a5/VREF",
       "address": "0x400BB000",
       "signals": []
     },

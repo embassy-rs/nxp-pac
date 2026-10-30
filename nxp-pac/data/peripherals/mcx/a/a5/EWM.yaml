@@ -1,0 +1,99 @@
+# MCXAP172M240F70RM Rev. 1, sections 41.1.4 and 41.5.1.
+# All six registers use byte accesses, including fieldset backing storage.
+block/Ewm:
+  description: External watchdog monitor. Configure write-once registers before enabling.
+  items:
+  - name: ctrl
+    description: Control. EWMEN, ASSIN, and INEN can be written only once after CPU reset.
+    byte_offset: 0
+    bit_size: 8
+    fieldset: Ctrl
+  - name: serv
+    description: Refresh by writing 0xB4 followed by 0x2C within 15 peripheral bus clocks. Reads as zero.
+    byte_offset: 1
+    bit_size: 8
+    fieldset: Serv
+  - name: cmpl
+    description: Lower refresh-window bound. Write only once after CPU reset, before enabling.
+    byte_offset: 2
+    bit_size: 8
+    fieldset: Cmpl
+  - name: cmph
+    description: Upper refresh-window bound. Write once before enabling; 0xFF prevents expiration.
+    byte_offset: 3
+    bit_size: 8
+    fieldset: Cmph
+  - name: clkctrl
+    description: Select the low-power clock. Write only once after CPU reset, before enabling.
+    byte_offset: 4
+    bit_size: 8
+    fieldset: Clkctrl
+  - name: clkprescaler
+    description: Divide the selected clock by CLK_DIV + 1. Write once before enabling.
+    byte_offset: 5
+    bit_size: 8
+    fieldset: Clkprescaler
+fieldset/Ctrl:
+  bit_size: 8
+  reset_value: 0
+  fields:
+  - name: ewmen
+    bit_offset: 0
+    bit_size: 1
+  - name: assin
+    description: Input asserted high when set, low when clear.
+    bit_offset: 1
+    bit_size: 1
+  - name: inen
+    bit_offset: 2
+    bit_size: 1
+  - name: inten
+    description: Enable interrupt generation; clear to deassert interrupt requests.
+    bit_offset: 3
+    bit_size: 1
+fieldset/Serv:
+  bit_size: 8
+  reset_value: 0
+  fields:
+  - name: service
+    bit_offset: 0
+    bit_size: 8
+fieldset/Cmpl:
+  bit_size: 8
+  reset_value: 0
+  fields:
+  - name: comparel
+    bit_offset: 0
+    bit_size: 8
+fieldset/Cmph:
+  bit_size: 8
+  reset_value: 255
+  fields:
+  - name: compareh
+    bit_offset: 0
+    bit_size: 8
+fieldset/Clkctrl:
+  bit_size: 8
+  reset_value: 0
+  fields:
+  - name: clksel
+    description: Only LPO_CLK[0] and LPO_CLK[1] are connected on this device.
+    bit_offset: 0
+    bit_size: 2
+    enum: Clksel
+fieldset/Clkprescaler:
+  bit_size: 8
+  reset_value: 0
+  fields:
+  - name: clk_div
+    bit_offset: 0
+    bit_size: 8
+enum/Clksel:
+  bit_size: 2
+  variants:
+  - name: Clk16k
+    description: clk_16k.
+    value: 0
+  - name: Osc32k
+    description: osc32k[1].
+    value: 1

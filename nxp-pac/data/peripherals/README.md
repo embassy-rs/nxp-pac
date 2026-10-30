@@ -112,6 +112,35 @@ as exactly one millisecond per tick:
 the clock chapters specify a nominal 16.384 kHz source and the timer divides it
 by 16. This PAC exposes raw counts, not a time conversion or a HAL driver.
 
+## Additional A2/A5 register coverage
+
+A2 now has register models for AOI, DBGMAILBOX, FMC, GLIKEY, OPAMP, and UTICK.
+A5 adds AOI, DBGMAILBOX, EWM, FMC, GLIKEY, UTICK, and VREF. These additions fill
+gaps in A2/A5; they do not restrict or replace existing A1/A3 models. A2 retains
+its existing `FMC0`, `OPAMP0`, and `UTICK0` catalog and driver identities.
+
+The definitions follow MCXAP144M240F61RM Rev. 2 (sections 7.6.1, 17.7, 28.6,
+48.5.1, and 53.5.2.1), MCXAP144M240F61SRM Rev. 2 (section 10.5.1), and
+MCXAP172M240F70RM final Rev. 1 (sections 13.6.1, 25.7, 35.6, 41.5.1, 58.6.1,
+66.4, and 67.5.1). Important distinctions:
+
+- AOI uses 16-bit accesses; EWM uses 8-bit accesses, including backing storage.
+- GLIKEY's VERSION offset is `0xFC` on A2 and `0xFFC` on A5. Its write-enable
+  fields contain FSM sequence values, not ordinary enable/disable switches.
+- Only A2 has the FMC flash-cache programming bank. REMAP writes require command
+  keys in the lower halfword; setting a field with read-modify-write is not enough.
+- DBGMAILBOX models core-side access: REQUEST is read-only and ID reads zero,
+  unlike the external debugger's AP identification value of `0x002A0000`.
+- VREF UTRIM is factory-loaded. Its generated default includes only known reset
+  bits, not a device's factory trim. Preserve VREFTRIM when changing TRIM2V1.
+  The manual disagrees on TRIM2V1 encoding 1's nominal voltage (Table 671 says
+  1.25 V; section 58.6.1.4 says 1.2 V), so no voltage-named enum is provided.
+
+New A2/A5 UDF extraction is deferred pending NXP clarification. The local manuals
+do not describe its registers, and the A5 XML assigns overlapping, unaligned
+offsets to 32-bit UDF registers. Existing A3 definitions are unchanged; XML
+presence alone is not confirmation of customer-visible hardware support.
+
 ## Build pipeline
 
 Selecting a chip feature compiles its PAC from packaged metadata and the required
