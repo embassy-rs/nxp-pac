@@ -737,7 +737,8 @@
             }
           ]
         }
-      ]
+      ],
+      "block": "mcx/a/a5/TENBASET_PHY"
     },
     {
       "name": "ADC0",
@@ -3988,7 +3989,8 @@
             }
           ]
         }
-      ]
+      ],
+      "block": "mcx/a/a5/ENET"
     },
     {
       "name": "ERM0",
@@ -10583,7 +10585,8 @@
             }
           ]
         }
-      ]
+      ],
+      "block": "mcx/a/a5/TSI"
     },
     {
       "name": "UDF0",
@@ -10635,12 +10638,14 @@
             }
           ]
         }
-      ]
+      ],
+      "block": "mcx/a/a5/USBHS"
     },
     {
       "name": "USB1_HS_PHY",
       "address": "0x4002F000",
-      "signals": []
+      "signals": [],
+      "block": "mcx/a/a5/USBPHY"
     },
     {
       "name": "UTICK0",
@@ -11168,7 +11173,8 @@
           "mux": "DMA3",
           "request": 93
         }
-      ]
+      ],
+      "block": "mcx/a/a5/ESPI"
     },
     {
       "name": "seccon",

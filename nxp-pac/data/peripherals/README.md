@@ -172,6 +172,23 @@ not exposed. USBDCD follows the existing nine-part USB1 availability predicate;
 MCXA536/537 applicability remains unresolved, not proven absent. Aliased
 USBDCD timer defaults describe their respective modes, not independent storage.
 
+A5 also models TSI, eSPI, USBHS/USBNC, USBPHY, ENET, and the 10BASE-T1S PHY
+from F70RM chapters 42, 44, 51, 52, 54, and 59. Existing per-device metadata
+predicates and instance names are preserved. USB capability and recovery
+registers retain their 8/16-bit widths; the T1S PHY uses 16-bit accesses.
+USBHS has eight endpoint pairs (EP0 plus seven indexed control registers),
+and eSPI has five ports. ENET has one queue/channel, with explicit nested
+MTL and DMA banks rather than generic-IP maximum-sized arrays.
+
+Writable USBPHY SET/CLR/TOG aliases use zero-default mask types, distinct
+from primary register reset defaults. Closure-based writes therefore emit
+only selected mask bits. Do not rely on alias readback or use read-modify-write:
+the specific register map and generic SCT access/readback prose conflict.
+Other explicit source conflicts include eSPI WIREOUT_GPIO access and incoming
+SAF tag/length layout, TSI overrun polarity, PHY LINKUP wording, and USB trim
+and buffer-capacity descriptions. Their conservative register views are not
+claims that the contradictory vendor documentation has been resolved.
+
 ## Build pipeline
 
 Selecting a chip feature compiles its PAC from packaged metadata and the required

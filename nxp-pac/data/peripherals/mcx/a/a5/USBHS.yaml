@@ -1,0 +1,1715 @@
+# MCXA5: MCXAP172M240F70RM final Rev.1, chapters 42 and 44.
+# XML MCXA577 is supplemental layout only; RM field intervals checked externally.
+# Raw numeric fields preserve legal ranges and independent bit-mask combinations.
+# Field access and W1C/command semantics are documented, not enforced by this raw PAC.
+# reset_value is a generated construction default; unknown reset masks are documented.
+# No chip availability is inferred here; preserve existing instance metadata.
+block/Usbhs:
+  description: MCXA5 USB HS controller. One port, eight IN/OUT endpoint pairs. Host/device aliases share
+    addresses; select the interpretation for USBMODE.CM.
+  items:
+  - name: id
+    description: Identification.
+    byte_offset: 0
+    access: Read
+    bit_size: 32
+    fieldset: Id
+  - name: hwgeneral
+    description: Hardware General.
+    byte_offset: 4
+    access: Read
+    bit_size: 32
+    fieldset: Hwgeneral
+  - name: hwhost
+    description: Host Hardware Parameters.
+    byte_offset: 8
+    access: Read
+    bit_size: 32
+    fieldset: Hwhost
+  - name: hwdevice
+    description: Device Hardware Parameters.
+    byte_offset: 12
+    access: Read
+    bit_size: 32
+    fieldset: Hwdevice
+  - name: hwtxbuf
+    description: TX Buffer Hardware Parameters.
+    byte_offset: 16
+    access: Read
+    bit_size: 32
+    fieldset: Hwtxbuf
+  - name: hwrxbuf
+    description: RX Buffer Hardware Parameters.
+    byte_offset: 20
+    access: Read
+    bit_size: 32
+    fieldset: Hwrxbuf
+  - name: gptimer0ld
+    description: General Purpose Timer 0 Load.
+    byte_offset: 128
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Gptimer0ld
+  - name: gptimer0ctrl
+    description: General Purpose Timer 0 Controller.
+    byte_offset: 132
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Gptimer0ctrl
+  - name: gptimer1ld
+    description: General Purpose Timer 1 Load.
+    byte_offset: 136
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Gptimer1ld
+  - name: gptimer1ctrl
+    description: General Purpose Timer 1 Controller.
+    byte_offset: 140
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Gptimer1ctrl
+  - name: sbuscfg
+    description: System Bus Configuration.
+    byte_offset: 144
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Sbuscfg
+  - name: caplength
+    description: Capability Registers Length.
+    byte_offset: 256
+    access: Read
+    bit_size: 8
+    fieldset: Caplength
+  - name: hciversion
+    description: Host Controller Interface Version.
+    byte_offset: 258
+    access: Read
+    bit_size: 16
+    fieldset: Hciversion
+  - name: hcsparams
+    description: Host Controller Structural Parameters.
+    byte_offset: 260
+    access: Read
+    bit_size: 32
+    fieldset: Hcsparams
+  - name: hccparams
+    description: Host Controller Capability Parameters.
+    byte_offset: 264
+    access: Read
+    bit_size: 32
+    fieldset: Hccparams
+  - name: dciversion
+    description: Device Controller Interface Version.
+    byte_offset: 288
+    access: Read
+    bit_size: 16
+    fieldset: Dciversion
+  - name: dccparams
+    description: Device Controller Capability Parameters.
+    byte_offset: 292
+    access: Read
+    bit_size: 32
+    fieldset: Dccparams
+  - name: usbcmd
+    description: USB Command.
+    byte_offset: 320
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Usbcmd
+  - name: usbsts
+    description: USB Status.
+    byte_offset: 324
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Usbsts
+  - name: usbintr
+    description: Interrupt Enable.
+    byte_offset: 328
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Usbintr
+  - name: frindex
+    description: USB Frame Index.
+    byte_offset: 332
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Frindex
+  - name: deviceaddr
+    description: Device Address.
+    byte_offset: 340
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Deviceaddr
+  - name: periodiclistbase
+    description: Frame List Base Address.
+    byte_offset: 340
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Periodiclistbase
+  - name: asynclistaddr
+    description: Next Asynchronous Address.
+    byte_offset: 344
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Asynclistaddr
+  - name: endptlistaddr
+    description: Endpoint List Address.
+    byte_offset: 344
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Endptlistaddr
+  - name: burstsize
+    description: Programmable Burst Size.
+    byte_offset: 352
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Burstsize
+  - name: txfilltuning
+    description: TX FIFO Fill Tuning.
+    byte_offset: 356
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Txfilltuning
+  - name: endptnak
+    description: Endpoint NAK.
+    byte_offset: 376
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Endptnak
+  - name: endptnaken
+    description: Endpoint NAK Enable.
+    byte_offset: 380
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Endptnaken
+  - name: configflag
+    description: Configure Flag.
+    byte_offset: 384
+    access: Read
+    bit_size: 32
+    fieldset: Configflag
+  - name: portsc1
+    description: Port Status and Control.
+    byte_offset: 388
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Portsc1
+  - name: otgsc
+    description: On-The-Go Status and Control.
+    byte_offset: 420
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Otgsc
+  - name: usbmode
+    description: USB Device Mode.
+    byte_offset: 424
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Usbmode
+  - name: endptsetupstat
+    description: Endpoint Setup Status.
+    byte_offset: 428
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Endptsetupstat
+  - name: endptprime
+    description: Endpoint Prime.
+    byte_offset: 432
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Endptprime
+  - name: endptflush
+    description: Endpoint Flush.
+    byte_offset: 436
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Endptflush
+  - name: endptstat
+    description: Endpoint Status.
+    byte_offset: 440
+    access: Read
+    bit_size: 32
+    fieldset: Endptstat
+  - name: endptcomplete
+    description: Endpoint Complete.
+    byte_offset: 444
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Endptcomplete
+  - name: endptctrl0
+    description: Endpoint Control 0.
+    byte_offset: 448
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Endptctrl0
+  - name: endptctrl
+    description: Endpoint Control 1.
+    byte_offset: 452
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Endptctrl
+    array:
+      len: 7
+      stride: 4
+  - name: usbnc
+    description: USB noncore registers at controller +0x200. Clock-recovery byte registers are at controller
+      +0x400 and beyond.
+    byte_offset: 512
+    block: Usbnc
+fieldset/Id:
+  description: 'Identification. F70RM 44.6.1.2 (text line 112108). '
+  bit_size: 32
+  reset_value: 3835820549
+  fields:
+  - name: id
+    description: Configuration Number. Read-only status/value; writes do not configure this field.
+    bit_offset: 0
+    bit_size: 6
+  - name: nid
+    description: Complement Version. Read-only status/value; writes do not configure this field.
+    bit_offset: 8
+    bit_size: 6
+  - name: revision
+    description: Revision Number. Read-only status/value; writes do not configure this field.
+    bit_offset: 16
+    bit_size: 8
+fieldset/Hwgeneral:
+  description: 'Hardware General. F70RM 44.6.1.3 (text line 112178). '
+  bit_size: 32
+  reset_value: 4117
+  fields:
+  - name: phyw
+    description: 'PHY Width. Read-only status/value; writes do not configure this field. Raw encoding:
+      00b - 8-bit wide data bus (software nonprogrammable); 01b - 16-bit wide data bus (software nonprogrammable);
+      10b - Reset to 8-bit wide data bus (software programmable); 11b - Reset to 16-bit wide data bus
+      (software programmable).'
+    bit_offset: 4
+    bit_size: 2
+  - name: phym
+    description: 'Transceiver Type. Read-only status/value; writes do not configure this field. Raw encoding:
+      0000b - UTMI/UMTI+; 0001b - ULPI DDR; 0010b - ULPI; 0011b - Serial only; 0100b - Software programmable:
+      reset to UTMI/UTMI+; 0101b - Software programmable: reset to ULPI DDR; 0110b - Software programmable:
+      reset to ULPI; 0111b - Software programmable: reset to Serial; 1000b - IC-USB; 1001b - Software
+      programmable: reset to IC-USB; 1010b - HSIC; 1011b - Software programmable: reset to HSIC; 1100b-1111b
+      - Reserved.'
+    bit_offset: 6
+    bit_size: 4
+  - name: sm
+    description: 'Serial Interface Mode Capability. Read-only status/value; writes do not configure this
+      field. Raw encoding: 00b - No serial engine; always use parallel signaling; 01b - Serial engine
+      present; always use serial signaling for FS and LS; 10b - Software programmable; reset to use parallel
+      signaling for FS and LS; 11b - Software programmable; reset to use serial signaling for FS and LS.'
+    bit_offset: 10
+    bit_size: 2
+  - name: lpm
+    description: 'Link Power Management Capability. Read-only status/value; writes do not configure this
+      field. Raw encoding: 0b - Not supported; 1b - Supported.'
+    bit_offset: 12
+    bit_size: 1
+fieldset/Hwhost:
+  description: 'Host Hardware Parameters. F70RM 44.6.1.4 (text line 112284). '
+  bit_size: 32
+  reset_value: 268566529
+  fields:
+  - name: hc
+    description: 'Host Capable. Read-only status/value; writes do not configure this field. Raw encoding:
+      0b - Not supported; 1b - Supported.'
+    bit_offset: 0
+    bit_size: 1
+  - name: nport
+    description: Number of Ports. Read-only status/value; writes do not configure this field.
+    bit_offset: 1
+    bit_size: 3
+fieldset/Hwdevice:
+  description: 'Device Hardware Parameters. F70RM 44.6.1.5 (text line 112347). '
+  bit_size: 32
+  reset_value: 17
+  fields:
+  - name: dc
+    description: 'Device Capable. Read-only status/value; writes do not configure this field. Raw encoding:
+      0b - Not supported; 1b - Supported.'
+    bit_offset: 0
+    bit_size: 1
+  - name: devep
+    description: Device Endpoint Number. Read-only status/value; writes do not configure this field.
+    bit_offset: 1
+    bit_size: 5
+fieldset/Hwtxbuf:
+  description: 'TX Buffer Hardware Parameters. F70RM 44.6.1.6 (text line 112408). Source conflict: map/diagram
+    reset 0x80050808 gives TXCHANADD=5, but field prose says 8 and 256x4 bytes per TX endpoint. Retain
+    the map reset and raw size exponent without asserting a corrected buffer capacity. Eight TX endpoints
+    are explicitly documented.'
+  bit_size: 32
+  reset_value: 2147813384
+  fields:
+  - name: txburst
+    description: TX Burst. Read-only status/value; writes do not configure this field.
+    bit_offset: 0
+    bit_size: 8
+  - name: txchanadd
+    description: TX Channel Add. Read-only status/value; writes do not configure this field.
+    bit_offset: 16
+    bit_size: 8
+fieldset/Hwrxbuf:
+  description: 'RX Buffer Hardware Parameters. F70RM 44.6.1.7 (text line 112478). '
+  bit_size: 32
+  reset_value: 2056
+  fields:
+  - name: rxburst
+    description: RX Burst. Read-only status/value; writes do not configure this field.
+    bit_offset: 0
+    bit_size: 8
+  - name: rxadd
+    description: RX Add. Read-only status/value; writes do not configure this field.
+    bit_offset: 8
+    bit_size: 8
+fieldset/Gptimer0ld:
+  description: 'General Purpose Timer 0 Load. F70RM 44.6.1.8 (text line 112541). '
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: gptld
+    description: General Purpose Timer Load Value.
+    bit_offset: 0
+    bit_size: 24
+fieldset/Gptimer0ctrl:
+  description: General Purpose Timer 0 Controller. F70RM 44.6.1.9 (text line 112604). GPTCNT is read-only;
+    GPTRST is a write-only load command. Avoid read-modify-write on command bits.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: gptcnt
+    description: General Purpose Timer Counter. Read-only status/value; writes do not configure this field.
+    bit_offset: 0
+    bit_size: 24
+  - name: gptmode
+    description: 'General Purpose Timer Mode. Raw encoding: 0b - One Shot mode; 1b - Repeat mode.'
+    bit_offset: 24
+    bit_size: 1
+  - name: gptrst
+    description: 'General Purpose Timer Reset. Write-only command. Raw encoding: 0b - No action; 1b -
+      Load counter value.'
+    bit_offset: 30
+    bit_size: 1
+  - name: gptrun
+    description: 'General Purpose Timer Run. Raw encoding: 0b - Stopped counting; 1b - Running.'
+    bit_offset: 31
+    bit_size: 1
+fieldset/Gptimer1ld:
+  description: 'General Purpose Timer 1 Load. F70RM 44.6.1.10 (text line 112693). '
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: gptld
+    description: General Purpose Timer Load Value.
+    bit_offset: 0
+    bit_size: 24
+fieldset/Gptimer1ctrl:
+  description: General Purpose Timer 1 Controller. F70RM 44.6.1.11 (text line 112748). GPTCNT is read-only;
+    GPTRST is a write-only load command. RM .10-.11 refer to timer 0 in timer 1 prose; those cross-references
+    conflict with the timer 1 register names and are not resolved here.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: gptcnt
+    description: General Purpose Timer Counter. Read-only status/value; writes do not configure this field.
+    bit_offset: 0
+    bit_size: 24
+  - name: gptmode
+    description: 'General Purpose Timer Mode. Raw encoding: 0b - One Shot mode; 1b - Repeat mode.'
+    bit_offset: 24
+    bit_size: 1
+  - name: gptrst
+    description: 'General Purpose Timer Reset. Write-only command. Raw encoding: 0b - No action; 1b -
+      Load counter value.'
+    bit_offset: 30
+    bit_size: 1
+  - name: gptrun
+    description: 'General Purpose Timer Run. Raw encoding: 0b - Stopped counting; 1b - Running.'
+    bit_offset: 31
+    bit_size: 1
+fieldset/Sbuscfg:
+  description: 'System Bus Configuration. F70RM 44.6.1.12 (text line 112843). '
+  bit_size: 32
+  reset_value: 2
+  fields:
+  - name: ahbbrst
+    description: 'AHB Manager Interface Burst Configuration. Raw encoding: 000b - Incremental burst of
+      unspecified length only; 001b - INCR4 burst, then single transfer; 010b - INCR8 burst, INCR4 burst,
+      then single transfer; 011b - INCR16 burst, INCR8 burst, INCR4 burst, then single transfer; 100b
+      - Reserved, do not use; 101b - INCR4 burst, then incremental burst of unspecified length; 110b -
+      INCR8 burst, INCR4 burst, then incremental burst of unspecified length; 111b - INCR16 burst, INCR8
+      burst, INCR4 burst, then incremental burst of unspecified length.'
+    bit_offset: 0
+    bit_size: 3
+fieldset/Caplength:
+  description: 'Capability Registers Length. F70RM 44.6.1.13 (text line 112922). '
+  bit_size: 8
+  reset_value: 64
+  fields:
+  - name: caplength
+    description: Capability Length. Read-only status/value; writes do not configure this field.
+    bit_offset: 0
+    bit_size: 8
+fieldset/Hciversion:
+  description: 'Host Controller Interface Version. F70RM 44.6.1.14 (text line 112966). Source conflict:
+    map/diagram reset is 0x0100, but prose calls the default 0x10 for EHCI revision 1.0. Retain the map
+    reset and raw version value.'
+  bit_size: 16
+  reset_value: 256
+  fields:
+  - name: hciversion
+    description: Host Controller Interface Version Number. Read-only status/value; writes do not configure
+      this field.
+    bit_offset: 0
+    bit_size: 16
+fieldset/Hcsparams:
+  description: 'Host Controller Structural Parameters. F70RM 44.6.1.15 (text line 113003). '
+  bit_size: 32
+  reset_value: 65553
+  fields:
+  - name: n_ports
+    description: Number of Ports. Read-only status/value; writes do not configure this field.
+    bit_offset: 0
+    bit_size: 4
+  - name: ppc
+    description: 'Port Power Control. Read-only status/value; writes do not configure this field. Raw
+      encoding: 0b - No port power switches; 1b - Port power switches exist.'
+    bit_offset: 4
+    bit_size: 1
+  - name: n_pcc
+    description: Number of Ports per Companion Controller. Read-only status/value; writes do not configure
+      this field.
+    bit_offset: 8
+    bit_size: 4
+  - name: n_cc
+    description: 'Number of Companion Controller (N_CC). Read-only status/value; writes do not configure
+      this field. Raw encoding: 0000b - No internal companion controller exists; 0001b - Internal companion
+      controllers exist.'
+    bit_offset: 12
+    bit_size: 4
+  - name: pi
+    description: Port Indicators (P_INDICATOR). Read-only status/value; writes do not configure this field.
+    bit_offset: 16
+    bit_size: 1
+  - name: n_ptt
+    description: Number of Ports per Transaction Translator (N_PTT). Read-only status/value; writes do
+      not configure this field.
+    bit_offset: 20
+    bit_size: 4
+  - name: n_tt
+    description: Number of Transaction Translators (N_TT). Read-only status/value; writes do not configure
+      this field.
+    bit_offset: 24
+    bit_size: 4
+fieldset/Hccparams:
+  description: 'Host Controller Capability Parameters. F70RM 44.6.1.16 (text line 113129). '
+  bit_size: 32
+  reset_value: 6
+  fields:
+  - name: adc
+    description: Addressing Capability. Read-only status/value; writes do not configure this field.
+    bit_offset: 0
+    bit_size: 1
+  - name: pfl
+    description: Programmable Frame List Flag. Read-only status/value; writes do not configure this field.
+    bit_offset: 1
+    bit_size: 1
+  - name: asp
+    description: Asynchronous Schedule Park Capability. Read-only status/value; writes do not configure
+      this field.
+    bit_offset: 2
+    bit_size: 1
+  - name: ist
+    description: Isochronous Scheduling Threshold. Read-only status/value; writes do not configure this
+      field.
+    bit_offset: 4
+    bit_size: 4
+  - name: eecp
+    description: EHCI Extended Capabilities Pointer. Read-only status/value; writes do not configure this
+      field.
+    bit_offset: 8
+    bit_size: 8
+fieldset/Dciversion:
+  description: 'Device Controller Interface Version. F70RM 44.6.1.17 (text line 113238). '
+  bit_size: 16
+  reset_value: 1
+  fields:
+  - name: dciversion
+    description: Device Controller Interface Version Number. Read-only status/value; writes do not configure
+      this field.
+    bit_offset: 0
+    bit_size: 16
+fieldset/Dccparams:
+  description: Device Controller Capability Parameters. F70RM 44.6.1.18 (text line 113282). DEN is a raw
+    endpoint count (valid 0..15 in the field prose); reset count is 8. The abbreviated encoding table
+    listing 0 and 1 is not an exhaustive count enum.
+  bit_size: 32
+  reset_value: 392
+  fields:
+  - name: den
+    description: 'Device Endpoint Number. Read-only status/value; writes do not configure this field.
+      Raw encoding: 0_0000b - Not device capable; 0_0001b - Device capable.'
+    bit_offset: 0
+    bit_size: 5
+  - name: dc
+    description: 'Device Capable. Read-only status/value; writes do not configure this field. Raw encoding:
+      0b - Not device capable; 1b - Device capable.'
+    bit_offset: 7
+    bit_size: 1
+  - name: hc
+    description: 'Host Capable. Read-only status/value; writes do not configure this field. Raw encoding:
+      0b - Not host capable; 1b - Host capable.'
+    bit_offset: 8
+    bit_size: 1
+fieldset/Usbcmd:
+  description: USB Command. F70RM 44.6.1.19 (text line 113363). RST and IAA are self-clearing commands.
+    Host reset requires HCH=1. Device reset requires flushed endpoints and RS=0. FS_2:FS_1 jointly select
+    1024,512,256,128,64,32,16,8 frame-list elements. ITC legal values are 0,1,2,4,8,16,32,64. RM ASP/ASPE
+    prose defaults (3/1) conflict with the register-map/diagram reset 0x00080000; the diagram is retained
+    without guessing a mode-specific alternative.
+  bit_size: 32
+  reset_value: 524288
+  fields:
+  - name: rs
+    description: 'Run/Stop. Raw encoding: 0b - Stopped executing; 1b - Running.'
+    bit_offset: 0
+    bit_size: 1
+  - name: rst
+    description: Controller Reset.
+    bit_offset: 1
+    bit_size: 1
+  - name: fs_1
+    description: Frame List Size 1.
+    bit_offset: 2
+    bit_size: 2
+  - name: pse
+    description: 'Periodic Schedule Enable. Raw encoding: 0b - Do not process the periodic schedule; 1b
+      - Process the periodic schedule.'
+    bit_offset: 4
+    bit_size: 1
+  - name: ase
+    description: 'Asynchronous Schedule Enable. Raw encoding: 0b - Do not process the asynchronous schedule;
+      1b - Access the asynchronous schedule.'
+    bit_offset: 5
+    bit_size: 1
+  - name: iaa
+    description: Interrupt on Async Advance Doorbell.
+    bit_offset: 6
+    bit_size: 1
+  - name: asp
+    description: Asynchronous Schedule Park Mode Count.
+    bit_offset: 8
+    bit_size: 2
+  - name: aspe
+    description: 'Asynchronous Schedule Park Mode Enable. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 11
+    bit_size: 1
+  - name: sutw
+    description: Setup Trip Wire (Device mode only).
+    bit_offset: 13
+    bit_size: 1
+  - name: atdtw
+    description: Add dTD Trip Wire (Device mode only).
+    bit_offset: 14
+    bit_size: 1
+  - name: fs_2
+    description: 'Frame List Size 2 (Host mode only). Raw encoding: 000b - 1024 elements (4096 bytes);
+      001b - 512 elements (2048 bytes); 010b - 256 elements (1024 bytes); 011b - 128 elements (512 bytes);
+      100b - 64 elements (256 bytes); 101b - 32 elements (128 bytes); 110b - 16 elements (64 bytes); 111b
+      - 8 elements (32 bytes).'
+    bit_offset: 15
+    bit_size: 1
+  - name: itc
+    description: 'Interrupt Threshold Control. Raw encoding: 0000_0000b - Immediate (no threshold); 0000_0001b
+      - 1 microframe; 0000_0010b - 2 microframes; 0000_0100b - 4 microframes; 0000_1000b - 8 microframes;
+      0001_0000b - 16 microframes; 0010_0000b - 32 microframes; 0100_0000b - 64 microframes.'
+    bit_offset: 16
+    bit_size: 8
+fieldset/Usbsts:
+  description: USB Status. F70RM 44.6.1.20 (text line 113592). Mixed read-only status and W1C interrupt
+    flags; never acknowledge via an unmasked read-modify-write. Known reset mask 0xffffff7f, known value
+    0; SRI reset is unknown. Generated reset_value is a construction default, not a fully known hardware
+    reset.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: ui
+    description: 'USB Interrupt (USBINT) Flag. Raw encoding: 0b - Interrupt did not occur; 1b - Interrupt
+      occurred; 0b - No effect; 1b - Clear the flag.'
+    bit_offset: 0
+    bit_size: 1
+  - name: uei
+    description: 'USB Error Interrupt (USBERRINT) Flag. Raw encoding: 0b - Interrupt did not occur; 1b
+      - Interrupt occurred; 0b - No effect; 1b - Clear the flag.'
+    bit_offset: 1
+    bit_size: 1
+  - name: pci
+    description: 'Port Change Detect Flag. Raw encoding: 0b - Port change not detected; 1b - Port change
+      detected; 0b - No effect; 1b - Clear the flag.'
+    bit_offset: 2
+    bit_size: 1
+  - name: fri
+    description: 'Frame List Rollover Flag. Raw encoding: 0b - Frame list index did not roll over; 1b
+      - Frame list index rolled over; 0b - No effect; 1b - Clear the flag.'
+    bit_offset: 3
+    bit_size: 1
+  - name: sei
+    description: 'System Error Flag. Raw encoding: 0b - Error response did not occur; 1b - Error response
+      occurred; 0b - No effect; 1b - Clear the flag.'
+    bit_offset: 4
+    bit_size: 1
+  - name: aai
+    description: 'Interrupt on Asynchronous Advance Flag. Raw encoding: 0b - Interrupt did not occur;
+      1b - Interrupt occurred; 0b - No effect; 1b - Clear the flag.'
+    bit_offset: 5
+    bit_size: 1
+  - name: uri
+    description: 'USB Reset Received. Raw encoding: 0b - USB reset not received; 1b - USB reset received;
+      0b - No effect; 1b - Clear the flag.'
+    bit_offset: 6
+    bit_size: 1
+  - name: sri
+    description: 'SOF Received Flag. Raw encoding: 0b - SOF not received; 1b - SOF received; 0b - No effect;
+      1b - Clear the flag.'
+    bit_offset: 7
+    bit_size: 1
+  - name: sli
+    description: 'Device Controller Suspend Flag. Raw encoding: 0b - Did not enter Suspended state; 1b
+      - Entered Suspended state; 0b - No effect; 1b - Clear the flag.'
+    bit_offset: 8
+    bit_size: 1
+  - name: ulpii
+    description: 'ULPI Interrupt Flag. Raw encoding: 0b - Event completion did not occur; 1b - Event completion
+      occurred; 0b - No effect; 1b - Clear the flag.'
+    bit_offset: 10
+    bit_size: 1
+  - name: hch
+    description: HC Halted. Read-only status/value; writes do not configure this field.
+    bit_offset: 12
+    bit_size: 1
+  - name: rcl
+    description: 'Reclamation. Read-only status/value; writes do not configure this field. Raw encoding:
+      0b - Does not detect; 1b - Detects.'
+    bit_offset: 13
+    bit_size: 1
+  - name: ps
+    description: 'Periodic Schedule Status. Read-only status/value; writes do not configure this field.
+      Raw encoding: 0b - Disabled; 1b - Enabled.'
+    bit_offset: 14
+    bit_size: 1
+  - name: as_
+    description: 'AS: Asynchronous Schedule Status. Read-only status/value; writes do not configure this
+      field. Raw encoding: 0b - Disabled; 1b - Enabled.'
+    bit_offset: 15
+    bit_size: 1
+  - name: naki
+    description: NAK Interrupt. Read-only status/value; writes do not configure this field.
+    bit_offset: 16
+    bit_size: 1
+  - name: uai
+    description: 'USB Host Asynchronous Interrupt Flag. Raw encoding: 0b - Interrupt did not occur; 1b
+      - Interrupt occurred; 0b - No effect; 1b - Clear the flag.'
+    bit_offset: 18
+    bit_size: 1
+  - name: upi
+    description: 'USB Host Periodic Interrupt Flag. Raw encoding: 0b - Interrupt did not occur; 1b - Interrupt
+      occurred; 0b - No effect; 1b - Clear the flag.'
+    bit_offset: 19
+    bit_size: 1
+  - name: ti0
+    description: 'General Purpose Timer Interrupt 0 (GPTINT0) Flag. Raw encoding: 0b - Interrupt did not
+      occur; 1b - Interrupt occurred; 0b - No effect; 1b - Clear the flag.'
+    bit_offset: 24
+    bit_size: 1
+  - name: ti1
+    description: 'General Purpose Timer Interrupt 1 (GPTINT1) Flag. Raw encoding: 0b - Interrupt did not
+      occur; 1b - Interrupt occurred; 0b - No effect; 1b - Clear the flag.'
+    bit_offset: 25
+    bit_size: 1
+  - name: lpm_l1_exiti
+    description: 'L1 Exit Interrupt Flag. Raw encoding: 0b - Interrupt did not occur; 1b - Interrupt occurred;
+      0b - No effect; 1b - Clear the flag.'
+    bit_offset: 28
+    bit_size: 1
+  - name: lpm_l1_entryi
+    description: 'L1 Entry Interrupt Flag. Raw encoding: 0b - Interrupt did not occur; 1b - Interrupt
+      occurred; 0b - No effect; 1b - Clear the flag.'
+    bit_offset: 29
+    bit_size: 1
+  - name: lpm_dev_rcvdi
+    description: 'Device Received Extension Token Interrupt Flag. Raw encoding: 0b - Interrupt did not
+      occur; 1b - Interrupt occurred; 0b - No effect; 1b - Clear the flag.'
+    bit_offset: 30
+    bit_size: 1
+  - name: lpm_hst_compi
+    description: 'Host Completes the LPM Transaction Interrupt Flag. Raw encoding: 0b - Interrupt did
+      not occur; 1b - Interrupt occurred; 0b - No effect; 1b - Clear the flag.'
+    bit_offset: 31
+    bit_size: 1
+fieldset/Usbintr:
+  description: 'Interrupt Enable. F70RM 44.6.1.21 (text line 114100). '
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: ue
+    description: 'USB Interrupt Enable. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 0
+    bit_size: 1
+  - name: uee
+    description: 'USB Error Interrupt Enable. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 1
+    bit_size: 1
+  - name: pce
+    description: 'Port Change Detect Interrupt Enable. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 2
+    bit_size: 1
+  - name: fre
+    description: 'Frame List Rollover Interrupt Enable. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 3
+    bit_size: 1
+  - name: see
+    description: 'System Error Interrupt Enable. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 4
+    bit_size: 1
+  - name: aae
+    description: 'Asynchronous Advance Interrupt Enable. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 5
+    bit_size: 1
+  - name: ure
+    description: 'USB Reset Interrupt Enable. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 6
+    bit_size: 1
+  - name: sre
+    description: 'SOF Received Interrupt Enable. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 7
+    bit_size: 1
+  - name: sle
+    description: 'Sleep Interrupt Enable. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 8
+    bit_size: 1
+  - name: nake
+    description: 'NAK Interrupt Enable. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 16
+    bit_size: 1
+  - name: uaie
+    description: 'USB Host Asynchronous Interrupt Enable. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 18
+    bit_size: 1
+  - name: upie
+    description: 'USB Host Periodic Interrupt Enable. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 19
+    bit_size: 1
+  - name: tie0
+    description: 'General Purpose Timer 0 Interrupt Enable. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 24
+    bit_size: 1
+  - name: tie1
+    description: 'General Purpose Timer 1 Interrupt Enable. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 25
+    bit_size: 1
+  - name: lpm_l1_exitie
+    description: 'L1 Exit Interrupt Enable. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 28
+    bit_size: 1
+  - name: lpm_l1_entryie
+    description: 'L1 Entry Interrupt Enable. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 29
+    bit_size: 1
+  - name: lpm_dev_rcvdie
+    description: 'Device Received Extension Token Interrupt Enable. Raw encoding: 0b - Disables; 1b -
+      Enables.'
+    bit_offset: 30
+    bit_size: 1
+  - name: lpm_hst_compie
+    description: 'Host Completed LPM Transaction Interrupt Enable. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 31
+    bit_size: 1
+fieldset/Frindex:
+  description: USB Frame Index. F70RM 44.6.1.22 (text line 114351). Raw numeric frame/microframe counter.
+    In Host mode it updates every 125 microseconds; bits n:3 index the periodic frame list, with n selected
+    by USBCMD frame-list size. Bits 13:3 contain the frame number and bits 2:0 the microframe. Only 32-bit
+    writes are defined, and Host-mode writes require the Halted state (USBSTS.HCH=1, USBCMD.RS=0); writes
+    also affect the SOF value. In Device mode the register is read-only and the received SOF updates the
+    frame/microframe counter. The table in RM 44.6.1.22 refers to USBCMD frame-list-size encodings, not
+    legal FRINDEX counter values.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: frindex
+    description: 'Frame Index. Raw numeric counter: bits 13:3 frame number, bits 2:0 microframe; not a
+      frame-list-size selector.'
+    bit_offset: 0
+    bit_size: 14
+fieldset/Deviceaddr:
+  description: Device Address. F70RM 44.6.1.23 (text line 114438). Device-mode interpretation of 0x154;
+    PERIODICLISTBASE is the host-mode alias. USBADRA defers the address update until the status phase
+    completes.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: usbadra
+    description: Device Address Advance.
+    bit_offset: 24
+    bit_size: 1
+  - name: usbadr
+    description: Device Address.
+    bit_offset: 25
+    bit_size: 7
+fieldset/Periodiclistbase:
+  description: Frame List Base Address. F70RM 44.6.1.24 (text line 114514). Host-mode interpretation of
+    0x154; DEVICEADDR is the device-mode alias. BASEADR encodes address bits 31:12, not an unshifted pointer.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: baseadr
+    description: Base Address (Low).
+    bit_offset: 12
+    bit_size: 20
+fieldset/Asynclistaddr:
+  description: Next Asynchronous Address. F70RM 44.6.1.25 (text line 114575). Host-mode interpretation
+    of 0x158; ENDPTLISTADDR is the device-mode alias. ASYBASE encodes address bits 31:5.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: asybase
+    description: Link Pointer Low (LPL).
+    bit_offset: 5
+    bit_size: 27
+fieldset/Endptlistaddr:
+  description: Endpoint List Address. F70RM 44.6.1.26 (text line 114635). Device-mode interpretation of
+    0x158; ASYNCLISTADDR is the host-mode alias. EPBASE encodes address bits 31:11. This controller implements
+    eight endpoint pairs, not the generic 32-queue-head maximum.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: epbase
+    description: Endpoint List Pointer (Low).
+    bit_offset: 11
+    bit_size: 21
+fieldset/Burstsize:
+  description: 'Programmable Burst Size. F70RM 44.6.1.27 (text line 114696). '
+  bit_size: 32
+  reset_value: 2056
+  fields:
+  - name: rxpburst
+    description: Programmable RX Burst Size.
+    bit_offset: 0
+    bit_size: 8
+  - name: txpburst
+    description: Programmable TX Burst Size.
+    bit_offset: 8
+    bit_size: 8
+fieldset/Txfilltuning:
+  description: TX FIFO Fill Tuning. F70RM 44.6.1.28 (text line 114761). Writing this register clears TXSCHHEALTH,
+    regardless of the written counter value. TXFIFOTHRES minimum is 2; ignored when USBMODE.SDIS=1.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: txschoh
+    description: Scheduler Overhead.
+    bit_offset: 0
+    bit_size: 7
+  - name: txschhealth
+    description: Scheduler Health Counter.
+    bit_offset: 8
+    bit_size: 5
+  - name: txfifothres
+    description: FIFO Burst Threshold.
+    bit_offset: 16
+    bit_size: 6
+fieldset/Endptnak:
+  description: Endpoint NAK. F70RM 44.6.1.29 (text line 114882). Device-mode RX/TX bit masks for endpoints
+    0..7, W1C. Write only the intended acknowledgement mask; no two-state enum.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: eprn
+    description: 'RX Endpoint NAK Flag. Raw encoding: 0000_0000b - No NACK; 0000_0001b - NACK; 0000_0000b
+      - No effect; 0000_0001b - Clear the flag.'
+    bit_offset: 0
+    bit_size: 8
+  - name: eptn
+    description: 'TX Endpoint NAK Flag. Raw encoding: 0000_0000b - No NACK; 0000_0001b - NACK; 0000_0000b
+      - No effect; 0000_0001b - Clear the flag.'
+    bit_offset: 16
+    bit_size: 8
+fieldset/Endptnaken:
+  description: Endpoint NAK Enable. F70RM 44.6.1.30 (text line 114980). Device-mode RX/TX enable masks
+    for endpoints 0..7.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: eprne
+    description: RX Endpoint NAK Enable.
+    bit_offset: 0
+    bit_size: 8
+  - name: eptne
+    description: TX Endpoint NAK Enable.
+    bit_offset: 16
+    bit_size: 8
+fieldset/Configflag:
+  description: Configure Flag. F70RM 44.6.1.31 (text line 115049). Read-only in the register map/diagram;
+    generic prose about setting CF does not establish a writable implementation on this chip.
+  bit_size: 32
+  reset_value: 1
+  fields:
+  - name: cf
+    description: 'Configure Flag. Read-only status/value; writes do not configure this field. Raw encoding:
+      0b - Port routing to classic host controller; 1b - Port routing to this host controller.'
+    bit_offset: 0
+    bit_size: 1
+fieldset/Portsc1:
+  description: Port Status and Control. F70RM 44.6.1.32 (text line 115111). Mixed control/read-only status
+    and W1C CSC, PEC, OCC. Unmasked read-modify-write can acknowledge pending changes. PR and SUSP are
+    read-only in Device mode; PR/FPR self-clear after signaling. PE is always 1 in Device mode; in Host
+    mode software can disable but cannot enable it by writing 1. This chip uses the 16-bit UTMI interface
+    (HWGENERAL reset 0x1015); generic alternative PHY encodings do not establish chip support.
+  bit_size: 32
+  reset_value: 469762052
+  fields:
+  - name: ccs
+    description: 'Current Connect Status. Read-only status/value; writes do not configure this field.
+      Raw encoding: 0b - No device present or attached; 1b - Device present and attached.'
+    bit_offset: 0
+    bit_size: 1
+  - name: csc
+    description: 'Connect Status Change Flag. Raw encoding: 0b - No change occurred; 1b - Change occurred;
+      0b - No effect; 1b - Clear the flag.'
+    bit_offset: 1
+    bit_size: 1
+  - name: pe
+    description: 'Port Enable and Disable. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 2
+    bit_size: 1
+  - name: pec
+    description: 'Port Enable and Disable Change Flag. Raw encoding: 0b - No change occurred; 1b - Change
+      occurred; 0b - No effect; 1b - Clear the flag.'
+    bit_offset: 3
+    bit_size: 1
+  - name: oca
+    description: 'Overcurrent Active. Read-only status/value; writes do not configure this field. Raw
+      encoding: 0b - No overcurrent condition exists; 1b - Overcurrent condition exists.'
+    bit_offset: 4
+    bit_size: 1
+  - name: occ
+    description: 'Overcurrent Change Flag. Raw encoding: 0b - No change occurred; 1b - Change occurred;
+      0b - No effect; 1b - Clear the flag.'
+    bit_offset: 5
+    bit_size: 1
+  - name: fpr
+    description: 'Force Port Resume. Raw encoding: 0b - No resume (K-state) detected or driven on port;
+      1b - Resume detected or driven on port.'
+    bit_offset: 6
+    bit_size: 1
+  - name: susp
+    description: 'Suspend. Raw encoding: 0b - Port not in Suspended state; 1b - Port in Suspended state.'
+    bit_offset: 7
+    bit_size: 1
+  - name: pr
+    description: 'Port Reset. Raw encoding: 0b - Port not in reset; 1b - Port in reset.'
+    bit_offset: 8
+    bit_size: 1
+  - name: hsp
+    description: 'High-Speed Port. Read-only status/value; writes do not configure this field. Raw encoding:
+      0b - Not in HS mode; 1b - In HS mode.'
+    bit_offset: 9
+    bit_size: 1
+  - name: ls
+    description: 'Line Status. Read-only status/value; writes do not configure this field. Raw encoding:
+      00b - SE0; 01b - K-state; 10b - J-state; 11b - Undefined.'
+    bit_offset: 10
+    bit_size: 2
+  - name: pp
+    description: 'Port Power (PP). Raw encoding: 0b - Off; 1b - On.'
+    bit_offset: 12
+    bit_size: 1
+  - name: po
+    description: Port Owner. Read-only status/value; writes do not configure this field.
+    bit_offset: 13
+    bit_size: 1
+  - name: pic
+    description: 'Port Indicator Control. Raw encoding: 00b - Port indicators are off; 01b - Amber; 10b
+      - Green; 11b - Undefined.'
+    bit_offset: 14
+    bit_size: 2
+  - name: ptc
+    description: 'Port Test Control. Raw encoding: 0000b - TEST_MODE_DISABLE; 0001b - J_STATE; 0010b -
+      K_STATE; 0011b - SE0 (host) or NAK (device); 0100b - Packet; 0101b - FORCE_ENABLE_HS; 0110b - FORCE_ENABLE_FS;
+      0111b - FORCE_ENABLE_LS; 1000b-1111b - Reserved.'
+    bit_offset: 16
+    bit_size: 4
+  - name: wkcn
+    description: 'Wake on Connect Enable (WKCNNT_E). Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 20
+    bit_size: 1
+  - name: wkdc
+    description: 'Wake on Disconnect Enable (WKDSCNNT_E). Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 21
+    bit_size: 1
+  - name: wkoc
+    description: Wake on Overcurrent Enable (WKOC).
+    bit_offset: 22
+    bit_size: 1
+  - name: phcd
+    description: 'PHY Low-Power Suspend - Clock Disable (PLPSCD). Raw encoding: 0b - Enables; 1b - Disables.'
+    bit_offset: 23
+    bit_size: 1
+  - name: pfsc
+    description: 'Port Force Full Speed Connect. Raw encoding: 0b - Normal operation; 1b - Forced to full
+      speed.'
+    bit_offset: 24
+    bit_size: 1
+  - name: pts_2
+    description: Parallel Transceiver Select 2. Read-only status/value; writes do not configure this field.
+    bit_offset: 25
+    bit_size: 1
+  - name: pspd
+    description: 'Port Speed. Raw encoding: 00b - FS; 01b - LS; 10b - HS; 11b - Undefined.'
+    bit_offset: 26
+    bit_size: 2
+  - name: ptw
+    description: 'Parallel Transceiver Width. Read-only status/value; writes do not configure this field.
+      Raw encoding: 0b - 8-bit UTMI interface (60 MHz); 1b - 16-bit UTMI interface (30 MHz).'
+    bit_offset: 28
+    bit_size: 1
+  - name: sts
+    description: 'Serial Transceiver Select. Read-only status/value; writes do not configure this field.
+      Raw encoding: 0b - Parallel interface signals; 1b - Serial interface engine.'
+    bit_offset: 29
+    bit_size: 1
+  - name: pts_1
+    description: 'Parallel Transceiver Select 1. Read-only status/value; writes do not configure this
+      field. Raw encoding: 000b - UTMI/UTMI+; 001b - Reserved; 010b - ULPI; 011b - Serial/USB 1.1 PHY/IC-USB
+      (FS only); 100b - HSIC.'
+    bit_offset: 30
+    bit_size: 2
+fieldset/Otgsc:
+  description: On-The-Go Status and Control. F70RM 44.6.1.33 (text line 115583). Mixed controls/read-only
+    inputs and W1C interrupt status bits 22:16. Known reset mask 0xffdfc1ff, known value 0x20; bits 21
+    and 13:9 are unknown. Generated reset_value is a construction default only. HADP is a write command;
+    do not replay commands or W1C flags with an unmasked read-modify-write.
+  bit_size: 32
+  reset_value: 32
+  fields:
+  - name: vd
+    description: VBUS Discharge.
+    bit_offset: 0
+    bit_size: 1
+  - name: vc
+    description: VBUS Charge.
+    bit_offset: 1
+    bit_size: 1
+  - name: haar
+    description: 'Hardware Assist Auto Reset. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 2
+    bit_size: 1
+  - name: ot
+    description: OTG Termination.
+    bit_offset: 3
+    bit_size: 1
+  - name: dp
+    description: Data Pulsing.
+    bit_offset: 4
+    bit_size: 1
+  - name: idpu
+    description: ID Pullup.
+    bit_offset: 5
+    bit_size: 1
+  - name: hadp
+    description: 'Hardware Assist Data Pulse. Write-only command. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 6
+    bit_size: 1
+  - name: haba
+    description: 'Hardware Assist B-Disconnect to A-connect. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 7
+    bit_size: 1
+  - name: id
+    description: 'USB ID. Read-only status/value; writes do not configure this field. Raw encoding: 0b
+      - A device; 1b - B device.'
+    bit_offset: 8
+    bit_size: 1
+  - name: avv
+    description: A VBUS Valid. Read-only status/value; writes do not configure this field.
+    bit_offset: 9
+    bit_size: 1
+  - name: asv
+    description: A Session Valid. Read-only status/value; writes do not configure this field.
+    bit_offset: 10
+    bit_size: 1
+  - name: bsv
+    description: B Session Valid. Read-only status/value; writes do not configure this field.
+    bit_offset: 11
+    bit_size: 1
+  - name: bse
+    description: B Session End. Read-only status/value; writes do not configure this field.
+    bit_offset: 12
+    bit_size: 1
+  - name: tog_1ms
+    description: 1 Millisecond Timer Toggle. Read-only status/value; writes do not configure this field.
+    bit_offset: 13
+    bit_size: 1
+  - name: dps
+    description: Data Bus Pulsing Status. Read-only status/value; writes do not configure this field.
+    bit_offset: 14
+    bit_size: 1
+  - name: idis
+    description: USB ID Interrupt Status.
+    bit_offset: 16
+    bit_size: 1
+  - name: avvis
+    description: A VBUS Valid Interrupt Status.
+    bit_offset: 17
+    bit_size: 1
+  - name: asvis
+    description: A Session Valid Interrupt Status.
+    bit_offset: 18
+    bit_size: 1
+  - name: bsvis
+    description: B Session Valid Interrupt Status.
+    bit_offset: 19
+    bit_size: 1
+  - name: bseis
+    description: B Session End Interrupt Status.
+    bit_offset: 20
+    bit_size: 1
+  - name: status_1ms
+    description: 1 Millisecond Timer Interrupt Status.
+    bit_offset: 21
+    bit_size: 1
+  - name: dpis
+    description: Data Pulse Interrupt Status.
+    bit_offset: 22
+    bit_size: 1
+  - name: idie
+    description: USB ID Interrupt Enable.
+    bit_offset: 24
+    bit_size: 1
+  - name: avvie
+    description: A VBUS Valid Interrupt Enable.
+    bit_offset: 25
+    bit_size: 1
+  - name: asvie
+    description: A Session Valid Interrupt Enable.
+    bit_offset: 26
+    bit_size: 1
+  - name: bsvie
+    description: B Session Valid Interrupt Enable.
+    bit_offset: 27
+    bit_size: 1
+  - name: bseie
+    description: B Session End Interrupt Enable.
+    bit_offset: 28
+    bit_size: 1
+  - name: en_1ms
+    description: 1 Millisecond Timer Interrupt Enable.
+    bit_offset: 29
+    bit_size: 1
+  - name: dpie
+    description: Data Pulse Interrupt Enable.
+    bit_offset: 30
+    bit_size: 1
+fieldset/Usbmode:
+  description: 'USB Device Mode. F70RM 44.6.1.34 (text line 115822). CM is programmed once after reset
+    on this host/device controller; changing mode requires controller reset. CM: 0 idle, 1 reserved, 2
+    device, 3 host. SLOM=0 enables setup lockouts; SLOM=1 disables them and requires the setup-data tripwire.'
+  bit_size: 32
+  reset_value: 20480
+  fields:
+  - name: cm
+    description: 'Controller Mode. Raw encoding: 00b - Idle (default for host and device combination);
+      01b - Reserved; 10b - Device controller (default for device-only controller); 11b - Host controller
+      (default for host-only controller).'
+    bit_offset: 0
+    bit_size: 2
+  - name: es
+    description: 'Endian Select. Raw encoding: 0b - Little endian (default); 1b - Big endian.'
+    bit_offset: 2
+    bit_size: 1
+  - name: slom
+    description: 'Setup Lockout Mode. Raw encoding: 0b - On (default); 1b - Off.'
+    bit_offset: 3
+    bit_size: 1
+  - name: sdis
+    description: 'Stream Disable Mode. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 4
+    bit_size: 1
+fieldset/Endptsetupstat:
+  description: Endpoint Setup Status. F70RM 44.6.1.35 (text line 115973). Device-mode W1C endpoint setup
+    status mask. The manual explicitly draws 15:0; only endpoints 0..7 are implemented (valid endpoint
+    mask 0x00ff). Bits 15:8 do not imply additional endpoints.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: endptsetupstat
+    description: 'Endpoint Setup Status Flag. Raw encoding: 0000_0000_0000_0000b - Not received; 0000_0000_0000_0001b
+      - Received; 0000_0000_0000_0000b - No effect; 0000_0000_0000_0001b - Clear the flag.'
+    bit_offset: 0
+    bit_size: 16
+fieldset/Endptprime:
+  description: Endpoint Prime. F70RM 44.6.1.36 (text line 116055). Device-mode RX/TX command masks for
+    endpoints 0..7. Writing 1 requests priming; hardware clears a bit when primed and may temporarily
+    set it while repriming. Not an ordinary stored enable.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: perb
+    description: Prime Endpoint Receive Buffer.
+    bit_offset: 0
+    bit_size: 8
+  - name: petb
+    description: Prime Endpoint Transmit Buffer.
+    bit_offset: 16
+    bit_size: 8
+fieldset/Endptflush:
+  description: Endpoint Flush. F70RM 44.6.1.37 (text line 116154). Device-mode RX/TX command masks for
+    endpoints 0..7. Writing 1 flushes; current packets complete and hardware clears bits after the operation
+    succeeds.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: ferb
+    description: Flush Endpoint Receive Buffer.
+    bit_offset: 0
+    bit_size: 8
+  - name: fetb
+    description: Flush Endpoint Transmit Buffer.
+    bit_offset: 16
+    bit_size: 8
+fieldset/Endptstat:
+  description: Endpoint Status. F70RM 44.6.1.38 (text line 116226). Read-only device-mode RX/TX readiness
+    masks for endpoints 0..7. May transiently clear during hardware repriming.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: erbr
+    description: Endpoint Receive Buffer Ready. Read-only status/value; writes do not configure this field.
+    bit_offset: 0
+    bit_size: 8
+  - name: etbr
+    description: Endpoint Transmit Buffer Ready. Read-only status/value; writes do not configure this
+      field.
+    bit_offset: 16
+    bit_size: 8
+fieldset/Endptcomplete:
+  description: Endpoint Complete. F70RM 44.6.1.39 (text line 116329). Device-mode RX/TX completion masks
+    for endpoints 0..7, W1C (register diagram). Read the associated queue to determine transfer status;
+    acknowledge only the intended mask.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: erce
+    description: 'Endpoint Receive Complete Event. Raw encoding: 0000_0000b - Transmit incomplete; 0000_0001b
+      - Transmit complete.'
+    bit_offset: 0
+    bit_size: 8
+  - name: etce
+    description: 'Endpoint Transmit Complete Event. Raw encoding: 0000_0000b - Transmit incomplete; 0000_0001b
+      - Transmit complete.'
+    bit_offset: 16
+    bit_size: 8
+fieldset/Endptctrl0:
+  description: Endpoint Control 0. F70RM 44.6.1.40 (text line 116409). Device endpoint 0 only, permanently
+    enabled as control endpoint; RXT, TXT, RXE, TXE are read-only in the diagram. Stall bits clear on
+    setup reception and remain hardware-cleared until setup status is acknowledged (up to 50 clocks delay).
+  bit_size: 32
+  reset_value: 8388736
+  fields:
+  - name: rxs
+    description: 'RX Endpoint Stall. Raw encoding: 0b - Endpoint OK; 1b - Endpoint stalled.'
+    bit_offset: 0
+    bit_size: 1
+  - name: rxt
+    description: RX Endpoint Type. Read-only status/value; writes do not configure this field.
+    bit_offset: 2
+    bit_size: 2
+  - name: rxe
+    description: 'RX Endpoint Enable. Read-only status/value; writes do not configure this field. Raw
+      encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 7
+    bit_size: 1
+  - name: txs
+    description: 'TX Endpoint Stall. Raw encoding: 0b - Endpoint OK; 1b - Endpoint stalled.'
+    bit_offset: 16
+    bit_size: 1
+  - name: txt
+    description: TX Endpoint Type. Read-only status/value; writes do not configure this field.
+    bit_offset: 18
+    bit_size: 2
+  - name: txe
+    description: 'TX Endpoint Enable. Read-only status/value; writes do not configure this field. Raw
+      encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 23
+    bit_size: 1
+fieldset/Endptctrl:
+  description: 'Endpoint Control 1. F70RM 44.6.1.41 (text line 116553). Device endpoints 1..7 (array index
+    0 is endpoint 1). RXT/TXT: 0 control, 1 isochronous, 2 bulk, 3 interrupt. RXR/TXR are write-only data-toggle-reset
+    commands. RXD/TXD must remain 0. RXI/TXI are test controls and must remain 0 for normal operation.
+    Configure before enabling. RM setup-stall prose says both becomes 1 and hardware writes 0; this conflict
+    is not resolved here.'
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: rxs
+    description: 'RX Endpoint Stall. Raw encoding: 0b - Endpoint OK; 1b - Endpoint stalled.'
+    bit_offset: 0
+    bit_size: 1
+  - name: rxd
+    description: RX Endpoint Data Sink.
+    bit_offset: 1
+    bit_size: 1
+  - name: rxt
+    description: 'RX Endpoint Type. Raw encoding: 00b - Control; 01b - Isochronous; 10b - Bulk; 11b -
+      Interrupt.'
+    bit_offset: 2
+    bit_size: 2
+  - name: rxi
+    description: 'RX Data Toggle Inhibit. Raw encoding: 0b - Allow; 1b - Inhibit.'
+    bit_offset: 5
+    bit_size: 1
+  - name: rxr
+    description: 'RX Data Toggle Reset. Write-only command. Raw encoding: 0b - Does not reset; 1b - Resets.'
+    bit_offset: 6
+    bit_size: 1
+  - name: rxe
+    description: 'RX Endpoint Enable. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 7
+    bit_size: 1
+  - name: txs
+    description: 'TX Endpoint Stall. Raw encoding: 0b - Endpoint OK; 1b - Endpoint stalled.'
+    bit_offset: 16
+    bit_size: 1
+  - name: txd
+    description: TX Endpoint Data Source.
+    bit_offset: 17
+    bit_size: 1
+  - name: txt
+    description: 'TX Endpoint Type. Raw encoding: 00b - Control; 01b - Isochronous; 10b - Bulk; 11b -
+      Interrupt.'
+    bit_offset: 18
+    bit_size: 2
+  - name: txi
+    description: 'TX Data Toggle Inhibit. Raw encoding: 0b - Allow; 1b - Inhibit.'
+    bit_offset: 21
+    bit_size: 1
+  - name: txr
+    description: 'TX Data Toggle Reset. Write-only command. Raw encoding: 0b - Does not reset; 1b - Resets.'
+    bit_offset: 22
+    bit_size: 1
+  - name: txe
+    description: 'TX Endpoint Enable. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 23
+    bit_size: 1
+block/Usbnc:
+  description: USB noncore window, relative to controller +0x200. Preserve reserved values on writes.
+  items:
+  - name: ctrl1
+    description: USB Control 1.
+    byte_offset: 0
+    access: ReadWrite
+    bit_size: 32
+    fieldset: NcCtrl1
+  - name: ctrl2
+    description: USB Control 2.
+    byte_offset: 4
+    access: ReadWrite
+    bit_size: 32
+    fieldset: NcCtrl2
+  - name: hsic_dll_cfg4
+    description: HSIC DLL Configuration 4.
+    byte_offset: 44
+    access: ReadWrite
+    bit_size: 32
+    fieldset: NcHsicDllCfg4
+  - name: lpm_csr0
+    description: USB LPM Control and Status 0.
+    byte_offset: 160
+    access: ReadWrite
+    bit_size: 32
+    fieldset: NcLpmCsr0
+  - name: lpm_csr1
+    description: USB LPM Control and Status 1.
+    byte_offset: 164
+    access: ReadWrite
+    bit_size: 32
+    fieldset: NcLpmCsr1
+  - name: lpm_csr2
+    description: USB LPM Control and Status 2.
+    byte_offset: 168
+    access: ReadWrite
+    bit_size: 32
+    fieldset: NcLpmCsr2
+  - name: clk_recover_ctrl
+    description: USB Clock Recovery Control.
+    byte_offset: 512
+    access: ReadWrite
+    bit_size: 8
+    fieldset: NcClkRecoverCtrl
+  - name: clk_recover_irc_en
+    description: FIRC Oscillator Enable.
+    byte_offset: 516
+    access: ReadWrite
+    bit_size: 8
+    fieldset: NcClkRecoverIrcEn
+  - name: clk_recover_int_en
+    description: Clock Recovery Combined Interrupt Enable.
+    byte_offset: 532
+    access: ReadWrite
+    bit_size: 8
+    fieldset: NcClkRecoverIntEn
+  - name: clk_recover_int_status
+    description: Clock Recovery Separated Interrupt Status.
+    byte_offset: 540
+    access: ReadWrite
+    bit_size: 8
+    fieldset: NcClkRecoverIntStatus
+fieldset/NcCtrl1:
+  description: USB Control 1. F70RM 44.5.1.2 (text line 110945). Preserve reserved bits. WIR is read-only
+    and clears by disabling WIE, not W1C. WKUP_DPDM_EN is Device-mode only (disable only while VBUS invalid);
+    REMOTE_WAKEUP_EN is Host-mode only.
+  bit_size: 32
+  reset_value: 805310464
+  fields:
+  - name: over_cur_dis
+    description: 'Overcurrent Disable. Raw encoding: 0b - Enables; 1b - Disables.'
+    bit_offset: 7
+    bit_size: 1
+  - name: over_cur_pol
+    description: 'Overcurrent Polarity. Raw encoding: 1b - Active low.'
+    bit_offset: 8
+    bit_size: 1
+  - name: pwr_pol
+    description: 'Power Polarity. Raw encoding: 0b - Active low; 1b - Active high.'
+    bit_offset: 9
+    bit_size: 1
+  - name: wie
+    description: 'Wake-Up Interrupt Enable. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 10
+    bit_size: 1
+  - name: wkup_sw_en
+    description: 'Software Wake-Up Enable. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 14
+    bit_size: 1
+  - name: wkup_sw
+    description: 'Software Wake-Up. Raw encoding: 0b - Inactive; 1b - Force wake-up.'
+    bit_offset: 15
+    bit_size: 1
+  - name: wkup_id_en
+    description: 'Wake-Up After ID Change Enable. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 16
+    bit_size: 1
+  - name: wkup_vbus_en
+    description: 'Wake-Up After VBUS Change Enable. Raw encoding: 1b - Enables.'
+    bit_offset: 17
+    bit_size: 1
+  - name: remote_wakeup_en
+    description: 'Remote Wake-Up Enable. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 28
+    bit_size: 1
+  - name: wkup_dpdm_en
+    description: 'Wake-Up After DP or DM Change Enable. Raw encoding: 0b - Disable only when VBUS is invalid;
+      1b - Enable (default).'
+    bit_offset: 29
+    bit_size: 1
+  - name: wir
+    description: 'Wake-Up Interrupt Request. Read-only status/value; writes do not configure this field.
+      Raw encoding: 0b - Not received; 1b - Received.'
+    bit_offset: 31
+    bit_size: 1
+fieldset/NcCtrl2:
+  description: 'USB Control 2. F70RM 44.5.1.3 (text line 111143). Preserve reserved bits. UTMI_CLK_VLD
+    is W1C (write 0 has no effect). VBUS_SOURCE_SEL: 0 vbus_valid; 1,2,3 sess_valid; all four encodings
+    are legal.'
+  bit_size: 32
+  reset_value: 3741319168
+  fields:
+  - name: vbus_source_sel
+    description: 'VBUS Source Select. Raw encoding: 00b - vbus_valid; 01b - sess_valid; 10b - sess_valid;
+      11b - sess_valid.'
+    bit_offset: 0
+    bit_size: 2
+  - name: utmi_clk_vld
+    description: 'UTMI Clock Valid Flag. Raw encoding: 0b - Not valid; 1b - Valid; 0b - No effect; 1b
+      - Clear the flag.'
+    bit_offset: 31
+    bit_size: 1
+fieldset/NcHsicDllCfg4:
+  description: HSIC DLL Configuration 4. F70RM 44.5.1.4 (text line 111226). Preserve reserved bits, including
+    reset bit 6. FS_ISO_B2B_FIXEN is only for a directly connected FS device and must not be set when
+    the FS device is behind a hub.
+  bit_size: 32
+  reset_value: 64
+  fields:
+  - name: lpm_en_endp_chk
+    description: 'LPM EXT Token ENDP Check Enable. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 30
+    bit_size: 1
+  - name: fs_iso_b2b_fixen
+    description: 'FS Isochronous Back-to-Back Transfer Enable. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 31
+    bit_size: 1
+fieldset/NcLpmCsr0:
+  description: 'USB LPM Control and Status 0. F70RM 44.5.1.5 (text line 111294). '
+  bit_size: 32
+  reset_value: 8
+  fields:
+  - name: lpm_en
+    description: 'Link Power Management Feature Enable. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 0
+    bit_size: 1
+  - name: lpm_errata_en
+    description: 'Link Power Management ECN Errata Feature Enable. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 1
+    bit_size: 1
+  - name: lpm_auto_phcd
+    description: 'Auto Low-Power Mode. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 3
+    bit_size: 1
+  - name: lpm_resumeok
+    description: 'LPM Resume OK. Read-only status/value; writes do not configure this field. Raw encoding:
+      0b - Cannot resume; 1b - Can resume.'
+    bit_offset: 30
+    bit_size: 1
+  - name: lpm_l1_active
+    description: 'LPM Active. Read-only status/value; writes do not configure this field. Raw encoding:
+      0b - Inactive; 1b - Active.'
+    bit_offset: 31
+    bit_size: 1
+fieldset/NcLpmCsr1:
+  description: 'USB LPM Control and Status 1. F70RM 44.5.1.6 (text line 111415). '
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: lpm_dev_beslthres
+    description: 'Device Required Host Initiated Resume Duration. Raw encoding: 0000b - 75 μs, if LPM_ERRATA_EN
+      = 1; 50 μs, if LPM_ERRATA_EN = 0; 0001b - 100 μs, if LPM_ERRATA_EN = 1; 125 μs, if LPM_ERRATA_EN
+      = 0; 0010b - 150 μs, if LPM_ERRATA_EN = 1; 200 μs, if LPM_ERRATA_EN = 0; 0011b - 250 μs, if LPM_ERRATA_EN
+      = 1; 275 μs, if LPM_ERRATA_EN = 0; 0100b - 350 μs, if LPM_ERRATA_EN = 1; 350 μs, if LPM_ERRATA_EN
+      = 0; 0101b - 450 μs, if LPM_ERRATA_EN = 1; 425 μs, if LPM_ERRATA_EN = 0; 0110b - 950 μs, if LPM_ERRATA_EN
+      = 1; 500 μs, if LPM_ERRATA_EN = 0; 0111b - 1950 μs, if LPM_ERRATA_EN = 1; 575 μs, if LPM_ERRATA_EN
+      = 0; 1000b - 2950 μs, if LPM_ERRATA_EN = 1; 650 μs, if LPM_ERRATA_EN = 0; 1001b - 3950 μs, if LPM_ERRATA_EN
+      = 1; 725 μs, if LPM_ERRATA_EN = 0; 1010b - 4950 μs, if LPM_ERRATA_EN = 1; 800 μs, if LPM_ERRATA_EN
+      = 0; 1011b - 5950 μs, if LPM_ERRATA_EN = 1; 875 μs, if LPM_ERRATA_EN = 0; 1100b - 6950 μs, if LPM_ERRATA_EN
+      = 1; 950 μs, if LPM_ERRATA_EN = 0; 1101b - 7950 μs, if LPM_ERRATA_EN = 1; 1025 μs, if LPM_ERRATA_EN
+      = 0; 1110b - 8950 μs, if LPM_ERRATA_EN = 1; 1100 μs, if LPM_ERRATA_EN = 0; 1111b - 9950 μs, if LPM_ERRATA_EN
+      = 1; 1175 μs, if LPM_ERRATA_EN = 0.'
+    bit_offset: 0
+    bit_size: 4
+  - name: lpm_dev_res
+    description: 'LPM Device Response. Raw encoding: 0b - Fourth condition not needed; 1b - Fourth condition
+      needed.'
+    bit_offset: 4
+    bit_size: 1
+  - name: lpm_dev_dp
+    description: 'LPM Device Data Pending. Raw encoding: 0b - Not pending; 1b - Pending.'
+    bit_offset: 5
+    bit_size: 1
+  - name: lpm_dev_rspsts
+    description: 'LPM Device Response Status. Read-only status/value; writes do not configure this field.
+      Raw encoding: 00b - Invalid; 01b - ACK; 10b - NYET; 11b - STALL.'
+    bit_offset: 20
+    bit_size: 2
+  - name: lpm_dev_rwkenrcvd
+    description: 'LPM Device Received bRemoteWake. Read-only status/value; writes do not configure this
+      field. Raw encoding: 0b - 0; 1b - 1.'
+    bit_offset: 23
+    bit_size: 1
+  - name: lpm_dev_lnkstrcvd
+    description: 'LPM Device Received bLinkState. Read-only status/value; writes do not configure this
+      field. Raw encoding: 0000b - Reserved for future use; 0001b - L1 (Sleep mode); 0010b-1111b - Reserved
+      for future use.'
+    bit_offset: 24
+    bit_size: 4
+  - name: lpm_dev_beslrcvd
+    description: LPM Device Received BESL. Read-only status/value; writes do not configure this field.
+    bit_offset: 28
+    bit_size: 4
+fieldset/NcLpmCsr2:
+  description: 'USB LPM Control and Status 2. F70RM 44.5.1.7 (text line 111573). LPM_HST_SEND is a self-clearing
+    command, allowed only in L0. Response status is read-only: 0 invalid, 1 ACK, 2 NYET, 3 STALL, 4 timeout,
+    5 ERR, 6..7 reserved.'
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: lpm_hst_send
+    description: 'LPM Host Send Extension Token. Raw encoding: 0b - LPM transaction did not happen or
+      is complete; 1b - LPM transaction is ongoing.'
+    bit_offset: 0
+    bit_size: 1
+  - name: lpm_hst_devadd
+    description: LPM Host Extension Token's Device Address.
+    bit_offset: 1
+    bit_size: 7
+  - name: lpm_hst_besl
+    description: LPM Host Extension Token's BESL or HIRD.
+    bit_offset: 8
+    bit_size: 4
+  - name: lpm_hst_rwken
+    description: 'LPM Host Extension Token''s bRemoteWake. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 12
+    bit_size: 1
+  - name: lpm_hst_stsrcvd
+    description: 'LPM Host Response Status from the Device. Read-only status/value; writes do not configure
+      this field. Raw encoding: 000b - Invalid; 001b - ACK; 010b - NYET; 011b - STALL; 100b - Timeout;
+      101b - ERR; 110b - Reserved; 111b - Reserved.'
+    bit_offset: 28
+    bit_size: 3
+fieldset/NcClkRecoverCtrl:
+  description: USB Clock Recovery Control. F70RM 44.5.1.8 (text line 111672). 8-bit storage/access. Clock
+    recovery is only for crystal-less FS Device mode, never Host mode or HS Device mode.
+  bit_size: 8
+  reset_value: 0
+  fields:
+  - name: trim_init_val_sel
+    description: 'Selects the source for the initial FIRC192M trim fine value used after a reset.. Raw
+      encoding: 1b - IFR.'
+    bit_offset: 3
+    bit_size: 1
+  - name: restart_ifrtrim_en
+    description: 'Restart from IFR Trim Value. Raw encoding: 0b - Trim fine adjustment always works based
+      on the previous updated trim fine value.; 1b - Trim fine restarts from the IFR trim value whenever
+      you detect bus_reset or bus_resume or.'
+    bit_offset: 5
+    bit_size: 1
+  - name: reset_resume_rough_en
+    description: 'Reset or Resume to Rough Phase Enable. Raw encoding: 0b - Always works in tracking phase
+      after the first time rough phase, to track transition.; 1b - Go back to rough stage whenever a bus
+      reset or bus resume occurs..'
+    bit_offset: 6
+    bit_size: 1
+  - name: clock_recover_en
+    description: 'Crystal-Less USB Enable. Raw encoding: 0b - Disables; 1b - Enables.'
+    bit_offset: 7
+    bit_size: 1
+fieldset/NcClkRecoverIrcEn:
+  description: FIRC Oscillator Enable. F70RM 44.5.1.9 (text line 111776). 8-bit storage/access. IRC_EN
+    and CLOCK_RECOVER_EN must both be set for crystal-less FS Device mode. Reserved reset bit 0 is retained,
+    not exposed as an enable.
+  bit_size: 8
+  reset_value: 1
+  fields:
+  - name: irc_en
+    description: 'Fast IRC enable. Raw encoding: 0b - Disable; 1b - Enable.'
+    bit_offset: 1
+    bit_size: 1
+fieldset/NcClkRecoverIntEn:
+  description: 'Clock Recovery Combined Interrupt Enable. F70RM 44.5.1.10 (text line 111847). '
+  bit_size: 8
+  reset_value: 16
+  fields:
+  - name: ovf_error_en
+    description: 'Overflow error interrupt enable. Raw encoding: 0b - The interrupt is masked; 1b - The
+      interrupt is enabled.'
+    bit_offset: 4
+    bit_size: 1
+fieldset/NcClkRecoverIntStatus:
+  description: Clock Recovery Separated Interrupt Status. F70RM 44.5.1.11 (text line 111909). 8-bit storage/access.
+    OVF_ERROR is W1C; writing 0 has no effect.
+  bit_size: 8
+  reset_value: 0
+  fields:
+  - name: ovf_error
+    description: 'Overflow Error Interrupt Status Flag. Raw encoding: 0b - Interrupt did not occur; 1b
+      - Unmasked interrupt occurred; 0b - No effect; 1b - Clear the flag.'
+    bit_offset: 4
+    bit_size: 1

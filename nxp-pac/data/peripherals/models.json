@@ -296,5 +296,11 @@
   {"id":"mcx/a/a5/ITRC","source":"mcx/a/a5/ITRC.yaml","driver":"mcxa/ITRC"},
   {"id":"mcx/a/a5/GDET","source":"mcx/a/a5/GDET.yaml","driver":"mcxa/GDET"},
   {"id":"mcx/a/a5/SECCON","source":"mcx/a/a5/SECCON.yaml","driver":"mcxa/SECCON"},
-  {"id":"mcx/a/a5/USBDCD","source":"mcx/a/a5/USBDCD.yaml","driver":"mcxa/USBDCD"}
+  {"id":"mcx/a/a5/USBDCD","source":"mcx/a/a5/USBDCD.yaml","driver":"mcxa/USBDCD"},
+  {"id":"mcx/a/a5/TSI","source":"mcx/a/a5/TSI.yaml","driver":"mcxa/TSI"},
+  {"id":"mcx/a/a5/ESPI","source":"mcx/a/a5/ESPI.yaml","driver":"mcxa/ESPI"},
+  {"id":"mcx/a/a5/USBHS","source":"mcx/a/a5/USBHS.yaml","driver":"mcxa/USBHS"},
+  {"id":"mcx/a/a5/USBPHY","source":"mcx/a/a5/USBPHY.yaml","driver":"mcxa/USBPHY"},
+  {"id":"mcx/a/a5/ENET","source":"mcx/a/a5/ENET.yaml","driver":"mcxa/ENET"},
+  {"id":"mcx/a/a5/TENBASET_PHY","source":"mcx/a/a5/TENBASET_PHY.yaml","driver":"mcxa/TENBASET_PHY"}
 ]
