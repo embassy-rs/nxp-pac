@@ -339,6 +339,10 @@
   "peripherals": [
     {
       "name": "INPUTMUX0",
+      "gate": {
+        "enable": "mrcc_glb_cc0",
+        "reset": "mrcc_glb_rst0"
+      },
       "address": "0x40001000",
       "block": "mcx/a/a1/a17/INPUTMUX::Inputmux",
       "module": "INPUTMUX",
@@ -894,6 +898,10 @@
     },
     {
       "name": "CTIMER0",
+      "gate": {
+        "enable": "mrcc_glb_cc0",
+        "reset": "mrcc_glb_rst0"
+      },
       "address": "0x40004000",
       "block": "mcx/a/a1/a17/CTIMER::Ctimer",
       "module": "CTIMER",
@@ -1010,6 +1018,10 @@
     },
     {
       "name": "CTIMER1",
+      "gate": {
+        "enable": "mrcc_glb_cc0",
+        "reset": "mrcc_glb_rst0"
+      },
       "address": "0x40005000",
       "block": "mcx/a/a1/a17/CTIMER::Ctimer",
       "module": "CTIMER",
@@ -1098,6 +1110,10 @@
     },
     {
       "name": "CTIMER2",
+      "gate": {
+        "enable": "mrcc_glb_cc0",
+        "reset": "mrcc_glb_rst0"
+      },
       "address": "0x40006000",
       "block": "mcx/a/a1/a17/CTIMER::Ctimer",
       "module": "CTIMER",
@@ -1198,6 +1214,11 @@
     },
     {
       "name": "FREQME0",
+      "gate": {
+        "enable": "mrcc_glb_cc0",
+        "reset": "mrcc_glb_rst0",
+        "bit": "freqme"
+      },
       "address": "0x40009000",
       "block": "mcx/a/a1/a17/FREQME::Freqme",
       "module": "FREQME",
@@ -1250,6 +1271,10 @@
     },
     {
       "name": "UTICK0",
+      "gate": {
+        "enable": "mrcc_glb_cc0",
+        "reset": "mrcc_glb_rst0"
+      },
       "address": "0x4000b000",
       "block": "mcx/a/a1/a17/UTICK::Utick",
       "module": "UTICK",
@@ -1302,6 +1327,9 @@
     },
     {
       "name": "WWDT0",
+      "gate": {
+        "enable": "mrcc_glb_cc0"
+      },
       "address": "0x4000c000",
       "block": "mcx/a/a1/a17/WWDT::Wwdt",
       "module": "WWDT",
@@ -1309,6 +1337,10 @@
     },
     {
       "name": "SMARTDMA0",
+      "gate": {
+        "enable": "mrcc_glb_cc0",
+        "reset": "mrcc_glb_rst0"
+      },
       "address": "0x4000e000",
       "block": "mcx/a/a1/a17/SMARTDMA::Smartdma",
       "module": "SMARTDMA",
@@ -1761,6 +1793,10 @@
     },
     {
       "name": "DMA0",
+      "gate": {
+        "enable": "mrcc_glb_cc0",
+        "reset": "mrcc_glb_rst0"
+      },
       "address": "0x40080000",
       "block": "mcx/a/a1/a17/DMA::Dma",
       "module": "DMA",
@@ -1775,6 +1811,10 @@
     },
     {
       "name": "AOI0",
+      "gate": {
+        "enable": "mrcc_glb_cc0",
+        "reset": "mrcc_glb_rst0"
+      },
       "address": "0x40089000",
       "block": "mcx/a/a1/a17/AOI::Aoi",
       "module": "AOI",
@@ -1782,6 +1822,10 @@
     },
     {
       "name": "AOI1",
+      "gate": {
+        "enable": "mrcc_glb_cc0",
+        "reset": "mrcc_glb_rst0"
+      },
       "address": "0x40097000",
       "block": "mcx/a/a1/a17/AOI::Aoi",
       "module": "AOI",
@@ -1789,6 +1833,10 @@
     },
     {
       "name": "CRC0",
+      "gate": {
+        "enable": "mrcc_glb_cc0",
+        "reset": "mrcc_glb_rst0"
+      },
       "address": "0x4008a000",
       "block": "mcx/a/a1/a17/CRC::Crc",
       "module": "CRC",
@@ -1803,6 +1851,10 @@
     },
     {
       "name": "EIM0",
+      "gate": {
+        "enable": "mrcc_glb_cc0",
+        "reset": "mrcc_glb_rst0"
+      },
       "address": "0x4008c000",
       "block": "mcx/a/a1/a17/EIM::Eim",
       "module": "EIM",
@@ -1810,6 +1862,10 @@
     },
     {
       "name": "ERM0",
+      "gate": {
+        "enable": "mrcc_glb_cc0",
+        "reset": "mrcc_glb_rst0"
+      },
       "address": "0x4008d000",
       "block": "mcx/a/a1/a17/ERM::Erm",
       "module": "ERM",
@@ -2171,6 +2227,10 @@
     },
     {
       "name": "LPI2C0",
+      "gate": {
+        "enable": "mrcc_glb_cc0",
+        "reset": "mrcc_glb_rst0"
+      },
       "address": "0x4009a000",
       "block": "mcx/a/a1/a17/LPI2C::Lpi2c",
       "module": "LPI2C",
@@ -2260,6 +2320,10 @@
     },
     {
       "name": "LPI2C1",
+      "gate": {
+        "enable": "mrcc_glb_cc0",
+        "reset": "mrcc_glb_rst0"
+      },
       "address": "0x4009b000",
       "block": "mcx/a/a1/a17/LPI2C::Lpi2c",
       "module": "LPI2C",
@@ -2357,6 +2421,10 @@
     },
     {
       "name": "LPSPI0",
+      "gate": {
+        "enable": "mrcc_glb_cc0",
+        "reset": "mrcc_glb_rst0"
+      },
       "address": "0x4009c000",
       "block": "mcx/a/a1/a17/LPSPI::Lpspi",
       "module": "LPSPI",
@@ -2468,6 +2536,10 @@
     },
     {
       "name": "LPSPI1",
+      "gate": {
+        "enable": "mrcc_glb_cc0",
+        "reset": "mrcc_glb_rst0"
+      },
       "address": "0x4009d000",
       "block": "mcx/a/a1/a17/LPSPI::Lpspi",
       "module": "LPSPI",
@@ -2579,6 +2651,10 @@
     },
     {
       "name": "LPUART0",
+      "gate": {
+        "enable": "mrcc_glb_cc0",
+        "reset": "mrcc_glb_rst0"
+      },
       "address": "0x4009f000",
       "block": "mcx/a/a1/a17/LPUART::Lpuart",
       "module": "LPUART",
@@ -2667,6 +2743,10 @@
     },
     {
       "name": "LPUART1",
+      "gate": {
+        "enable": "mrcc_glb_cc0",
+        "reset": "mrcc_glb_rst0"
+      },
       "address": "0x400a0000",
       "block": "mcx/a/a1/a17/LPUART::Lpuart",
       "module": "LPUART",
@@ -2771,6 +2851,10 @@
     },
     {
       "name": "LPUART2",
+      "gate": {
+        "enable": "mrcc_glb_cc0",
+        "reset": "mrcc_glb_rst0"
+      },
       "address": "0x400a1000",
       "block": "mcx/a/a1/a17/LPUART::Lpuart",
       "module": "LPUART",
@@ -2883,6 +2967,10 @@
     },
     {
       "name": "LPUART3",
+      "gate": {
+        "enable": "mrcc_glb_cc0",
+        "reset": "mrcc_glb_rst0"
+      },
       "address": "0x400a2000",
       "block": "mcx/a/a1/a17/LPUART::Lpuart",
       "module": "LPUART",
@@ -2971,6 +3059,10 @@
     },
     {
       "name": "QDC0",
+      "gate": {
+        "enable": "mrcc_glb_cc0",
+        "reset": "mrcc_glb_rst0"
+      },
       "address": "0x400a7000",
       "block": "mcx/a/a1/a17/QDC::Qdc",
       "module": "QDC",
@@ -2985,6 +3077,10 @@
     },
     {
       "name": "QDC1",
+      "gate": {
+        "enable": "mrcc_glb_cc0",
+        "reset": "mrcc_glb_rst0"
+      },
       "address": "0x400a8000",
       "block": "mcx/a/a1/a17/QDC::Qdc",
       "module": "QDC",
@@ -2999,6 +3095,10 @@
     },
     {
       "name": "FLEXPWM0",
+      "gate": {
+        "enable": "mrcc_glb_cc0",
+        "reset": "mrcc_glb_rst0"
+      },
       "address": "0x400a9000",
       "block": "mcx/a/a1/a17/FLEXPWM::Flexpwm",
       "module": "FLEXPWM",
@@ -3197,6 +3297,10 @@
     },
     {
       "name": "FLEXPWM1",
+      "gate": {
+        "enable": "mrcc_glb_cc1",
+        "reset": "mrcc_glb_rst1"
+      },
       "address": "0x400aa000",
       "block": "mcx/a/a1/a17/FLEXPWM::Flexpwm1",
       "module": "FLEXPWM",
@@ -3406,6 +3510,10 @@
     },
     {
       "name": "OSTIMER0",
+      "gate": {
+        "enable": "mrcc_glb_cc1",
+        "reset": "mrcc_glb_rst1"
+      },
       "address": "0x400ad000",
       "block": "mcx/a/a1/a17/OSTIMER::Ostimer",
       "module": "OSTIMER",
@@ -3420,6 +3528,10 @@
     },
     {
       "name": "ADC0",
+      "gate": {
+        "enable": "mrcc_glb_cc1",
+        "reset": "mrcc_glb_rst1"
+      },
       "address": "0x400af000",
       "block": "mcx/a/a1/a17/ADC::Adc",
       "module": "ADC",
@@ -3651,6 +3763,10 @@
     },
     {
       "name": "ADC1",
+      "gate": {
+        "enable": "mrcc_glb_cc1",
+        "reset": "mrcc_glb_rst1"
+      },
       "address": "0x400b0000",
       "block": "mcx/a/a1/a17/ADC::Adc",
       "module": "ADC",
@@ -3819,6 +3935,9 @@
     },
     {
       "name": "CMP0",
+      "gate": {
+        "enable": "mrcc_glb_cc1"
+      },
       "address": "0x400b1000",
       "block": "mcx/a/a1/a17/CMP::Cmp",
       "module": "CMP",
@@ -3928,6 +4047,10 @@
     },
     {
       "name": "CMP1",
+      "gate": {
+        "enable": "mrcc_glb_cc1",
+        "reset": "mrcc_glb_rst1"
+      },
       "address": "0x400b2000",
       "block": "mcx/a/a1/a17/CMP::Cmp",
       "module": "CMP",
@@ -4046,6 +4169,10 @@
     },
     {
       "name": "OPAMP0",
+      "gate": {
+        "enable": "mrcc_glb_cc1",
+        "reset": "mrcc_glb_rst1"
+      },
       "address": "0x400b7000",
       "block": "mcx/a/a1/a17/OPAMP::Opamp",
       "module": "OPAMP",
@@ -4081,6 +4208,10 @@
     },
     {
       "name": "PORT0",
+      "gate": {
+        "enable": "mrcc_glb_cc1",
+        "reset": "mrcc_glb_rst1"
+      },
       "address": "0x400bc000",
       "block": "mcx/a/a1/a17/PORT::Port",
       "module": "PORT",
@@ -4088,6 +4219,10 @@
     },
     {
       "name": "PORT1",
+      "gate": {
+        "enable": "mrcc_glb_cc1",
+        "reset": "mrcc_glb_rst1"
+      },
       "address": "0x400bd000",
       "block": "mcx/a/a1/a17/PORT::Port1",
       "module": "PORT",
@@ -4095,6 +4230,10 @@
     },
     {
       "name": "PORT2",
+      "gate": {
+        "enable": "mrcc_glb_cc1",
+        "reset": "mrcc_glb_rst1"
+      },
       "address": "0x400be000",
       "block": "mcx/a/a1/a17/PORT::Port2",
       "module": "PORT",
@@ -4102,6 +4241,10 @@
     },
     {
       "name": "PORT3",
+      "gate": {
+        "enable": "mrcc_glb_cc1",
+        "reset": "mrcc_glb_rst1"
+      },
       "address": "0x400bf000",
       "block": "mcx/a/a1/a17/PORT::Port3",
       "module": "PORT",
@@ -4109,6 +4252,10 @@
     },
     {
       "name": "PORT4",
+      "gate": {
+        "enable": "mrcc_glb_cc1",
+        "reset": "mrcc_glb_rst1"
+      },
       "address": "0x400c0000",
       "block": "mcx/a/a1/a17/PORT::Port4",
       "module": "PORT",
@@ -4116,6 +4263,11 @@
     },
     {
       "name": "CAN0",
+      "gate": {
+        "enable": "mrcc_glb_cc1",
+        "reset": "mrcc_glb_rst1",
+        "bit": "flexcan0"
+      },
       "address": "0x400cc000",
       "block": "mcx/a/a1/a17/CAN::Can",
       "module": "CAN",
@@ -4202,6 +4354,10 @@
     },
     {
       "name": "GPIO0",
+      "gate": {
+        "enable": "mrcc_glb_cc2",
+        "reset": "mrcc_glb_rst2"
+      },
       "address": "0x40102000",
       "block": "mcx/a/a1/a17/GPIO::Gpio",
       "module": "GPIO",
@@ -4352,6 +4508,10 @@
     },
     {
       "name": "GPIO1",
+      "gate": {
+        "enable": "mrcc_glb_cc2",
+        "reset": "mrcc_glb_rst2"
+      },
       "address": "0x40103000",
       "block": "mcx/a/a1/a17/GPIO::Gpio",
       "module": "GPIO",
@@ -4538,6 +4698,10 @@
     },
     {
       "name": "GPIO2",
+      "gate": {
+        "enable": "mrcc_glb_cc2",
+        "reset": "mrcc_glb_rst2"
+      },
       "address": "0x40104000",
       "block": "mcx/a/a1/a17/GPIO::Gpio",
       "module": "GPIO",
@@ -4751,6 +4915,10 @@
     },
     {
       "name": "GPIO3",
+      "gate": {
+        "enable": "mrcc_glb_cc2",
+        "reset": "mrcc_glb_rst2"
+      },
       "address": "0x40105000",
       "block": "mcx/a/a1/a17/GPIO::Gpio",
       "module": "GPIO",
@@ -4982,6 +5150,10 @@
     },
     {
       "name": "GPIO4",
+      "gate": {
+        "enable": "mrcc_glb_cc2",
+        "reset": "mrcc_glb_rst2"
+      },
       "address": "0x40106000",
       "block": "mcx/a/a1/a17/GPIO::Gpio",
       "module": "GPIO",
