@@ -1,7 +1,7 @@
 # MCXAP144M240F61SRM Rev. 2, section 16.6.1 and MCDATA restrictions in 16.6.16.
 includes:
 - ../common/PKC.yaml
-block/Pkc0:
+block/Pkc:
   description: A2 PKC. The documented MCDATA interface is not usable for normal operation; any access raises an alarm.
   extends: PkcShared
   items:

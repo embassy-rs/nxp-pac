@@ -29,6 +29,37 @@ identities from the catalog, not physical YAML paths or include fragments.
 None of these directories creates a Rust namespace: generated modules stay flat,
 such as `nxp_pac::lpuart`, with existing peripheral instance constants unchanged.
 
+## Peripheral naming
+
+Shared model IDs, YAML filenames, Rust modules and register-block types name the
+peripheral kind, not an instance: `EIM.yaml`, `eim::Eim`, `UTICK.yaml`, and
+`utick::Utick`. Peripheral instances always carry a trailing index, including
+single-instance IP: `EIM0`, `UTICK0`, `SMARTDMA0`, `FLEXPWM0`, `EQDC0`, `SLCD0`,
+and `EDMA_TCD0`. A5 also uses `ESPI0` and `SECCON0`, replacing `eSPI0` and
+`seccon`. Additional instances reuse the shared module at another address.
+
+MCXA1/2/3/5 use these spellings consistently. A2's former numbered models
+(`EIM0`, `ERM0`, `FMC0`, `OPAMP0`, `PKC0`, `SMARTDMA0`, `TDET0`, and `UTICK0`)
+are now unnumbered; the corresponding A2/A5 driver identities are unnumbered too.
+The A1/A3 `EDMA_0_TCD`, `QDC`, and A3 `LCD` model names are now `EDMA_TCD`,
+`EQDC`, and `SLCD`. Family-specific driver namespaces are otherwise unchanged.
+These are breaking naming corrections, not compatibility aliases.
+
+Names do not erase hardware differences. DMA/TCD channel-count types, per-port
+and PWM-instance views, and CMP external-trigger views remain distinct.
+All targets expose `SPC0: spc::Spc`; the A2/A5 entry files supply their own
+`EvdCfg` definitions with three- and six-bit fields, respectively. Only the
+selected target's layout is generated; no `Spc5xx` block is needed.
+`SPC0`, `DMA0/1`, and `PORT0/1/...` already follow the instance convention.
+A2 CMP1 now uses `cmp::Cmp1` from the shared CMP model, rather than a separate
+`cmp1` module. Registers, fields, access widths, reset values, base addresses,
+interrupt names and per-chip availability are unchanged by this normalization.
+
+NXP confirmed that UDF is an internal module not intended for customer use.
+It is not exposed as a PAC module, peripheral instance, or runtime driver on any
+MCXA selection. The former A3 model and A2 metadata-only mapping are removed;
+vendor extraction input is not a public support contract.
+
 ## Includes and per-chip availability
 
 An entry YAML can compose uniquely named IR definitions from relative includes:
@@ -117,8 +148,8 @@ by 16. This PAC exposes raw counts, not a time conversion or a HAL driver.
 A2 now has register models for AOI, CMP, DBGMAILBOX, EIM, ERM, FMC, GLIKEY,
 OPAMP, SMARTDMA, and UTICK. A5 adds AOI, CMP, DBGMAILBOX, EIM, ERM, EWM, FMC,
 GLIKEY, SMARTDMA, UTICK, and VREF. These additions fill
-gaps in A2/A5; they do not restrict or replace existing A1/A3 models. A2 retains
-its existing `FMC0`, `OPAMP0`, and `UTICK0` catalog and driver identities.
+gaps in A2/A5; they do not restrict or replace existing A1/A3 models. A2 uses
+the shared `FMC`, `OPAMP`, and `UTICK` catalog and driver naming convention.
 
 The definitions follow MCXAP144M240F61RM Rev. 2 (sections 7.6.1, 17.7, 28.6,
 48.5.1, and 53.5.2.1), MCXAP144M240F61SRM Rev. 2 (section 10.5.1), and
@@ -143,7 +174,7 @@ over conflicting XML fields and generic-IP descriptions. Important distinctions:
 - EIM exposes only the channel documented by its register map. ERM has two
   status/count channels, but only channel 0 has address and syndrome registers.
 - A2 CMP1 has a four-bit external-trigger selector omitted by the XML. It uses
-  a separate `CMP1` model with the same `mcxa/CMP` driver identity. CMP0's trigger
+  the `Cmp1` view in the `CMP` model with driver identity `mcxa/CMP::Cmp1`. CMP0's trigger
   is fixed. A5 also reserves RRCR0 bit 1 despite the XML exposing it.
 - Comparator input 5 is reserved on A2 but connected on A5. On A5, zero filter
   count with sampling enabled is illegal and drives COUT low; A2 bypasses its
@@ -151,10 +182,8 @@ over conflicting XML fields and generic-IP descriptions. Important distinctions:
 - SMARTDMA control writes require WKEY `0xC0DE` and AHB synchronization. IE=3
   is reserved on A2, but selects RXEV on A5; do not assume ordinary enable bits.
 
-New A2/A5 UDF extraction is deferred pending NXP clarification. The local manuals
-do not describe its registers, and the A5 XML assigns overlapping, unaligned
-offsets to 32-bit UDF registers. Existing A3 definitions are unchanged; XML
-presence alone is not confirmation of customer-visible hardware support.
+UDF is excluded following NXP's confirmation that it is internal and not for
+customer use, including on A3 where a register model was previously exposed.
 
 A2 additionally models TDET0, EQDC, SLCD, MBC, and PKC0; A5 models TDET,
 FLEXIO, MBC, PKC, ITRC, GDET, SECCON, and USBDCD. These follow the same F61

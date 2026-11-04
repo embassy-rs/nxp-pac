@@ -1,5 +1,0 @@
-includes:
-  - ../common/UTICK.yaml
-block/Utick0:
-  extends: Utick
-  items: []

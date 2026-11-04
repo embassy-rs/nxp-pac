@@ -1,7 +1,7 @@
 # MCXAP144M240F61RM Rev. 2, section 7.6.1.
 includes:
   - ../common/FMC_REMAP.yaml
-block/Fmc0:
+block/Fmc:
   description: Flash memory controller with flash-cache programming registers.
   items:
   - name: remap

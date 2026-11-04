@@ -2291,10 +2291,10 @@
       "signals": []
     },
     {
-      "name": "EDMA_0_TCD",
+      "name": "EDMA_TCD0",
       "address": "0x40081000",
-      "block": "mcx/a/a3/EDMA_0_TCD::Tcd8",
-      "module": "EDMA_0_TCD",
+      "block": "mcx/a/a3/EDMA_TCD::Tcd8",
+      "module": "EDMA_TCD",
       "signals": []
     },
     {
@@ -3919,14 +3919,15 @@
       ]
     },
     {
-      "name": "QDC0",
+      "name": "EQDC0",
       "gate": {
         "enable": "mrcc_glb_cc0",
-        "reset": "mrcc_glb_rst0"
+        "reset": "mrcc_glb_rst0",
+        "bit": "qdc0"
       },
       "address": "0x400a7000",
-      "block": "mcx/a/a3/QDC::Eqdc",
-      "module": "QDC",
+      "block": "mcx/a/a3/EQDC::Eqdc",
+      "module": "EQDC",
       "signals": [],
       "dma_muxing": [
         {
@@ -3937,14 +3938,15 @@
       ]
     },
     {
-      "name": "QDC1",
+      "name": "EQDC1",
       "gate": {
         "enable": "mrcc_glb_cc0",
-        "reset": "mrcc_glb_rst0"
+        "reset": "mrcc_glb_rst0",
+        "bit": "qdc1"
       },
       "address": "0x400a8000",
-      "block": "mcx/a/a3/QDC::Eqdc",
-      "module": "QDC",
+      "block": "mcx/a/a3/EQDC::Eqdc",
+      "module": "EQDC",
       "signals": [],
       "dma_muxing": [
         {

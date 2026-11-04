@@ -5552,10 +5552,10 @@
       "pac_only": true
     },
     {
-      "name": "EDMA_0_TCD",
+      "name": "EDMA_TCD0",
       "address": "0x40081000",
-      "block": "mcx/a/a1/EDMA_0_TCD::TCD8",
-      "module": "EDMA_0_TCD",
+      "block": "mcx/a/a1/EDMA_TCD::TCD8",
+      "module": "EDMA_TCD",
       "signals": [],
       "pac_only": true
     },
@@ -12940,8 +12940,8 @@
         "bit": "qdc0"
       },
       "address": "0x400A7000",
-      "block": "mcx/a/a1/QDC::Qdc",
-      "module": "QDC",
+      "block": "mcx/a/a1/EQDC::Eqdc",
+      "module": "EQDC",
       "signals": [
         {
           "name": "CAP1",
@@ -13833,8 +13833,8 @@
         "bit": "qdc1"
       },
       "address": "0x400A8000",
-      "block": "mcx/a/a1/QDC::Qdc",
-      "module": "QDC",
+      "block": "mcx/a/a1/EQDC::Eqdc",
+      "module": "EQDC",
       "signals": [
         {
           "name": "CAP1",
@@ -14719,7 +14719,7 @@
       ]
     },
     {
-      "name": "FLEX_PWM0",
+      "name": "FLEXPWM0",
       "gate": {
         "enable": "mrcc_glb_cc0",
         "reset": "mrcc_glb_rst0",
@@ -16089,7 +16089,7 @@
       ]
     },
     {
-      "name": "FLEX_PWM1",
+      "name": "FLEXPWM1",
       "gate": {
         "enable": "mrcc_glb_cc0",
         "reset": "mrcc_glb_rst0",
