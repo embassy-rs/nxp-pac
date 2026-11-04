@@ -1328,7 +1328,7 @@
         "reset": "mrcc_glb_rst1"
       },
       "address": "0x400B2000",
-      "block": "mcx/a/a2/CMP1",
+      "block": "mcx/a/a2/CMP::Cmp1",
       "signals": [
         {
           "name": "IN0",
@@ -3617,7 +3617,7 @@
         "reset": "mrcc_glb_rst0"
       },
       "address": "0x4008C000",
-      "block": "mcx/a/a2/EIM0",
+      "block": "mcx/a/a2/EIM",
       "signals": []
     },
     {
@@ -3627,7 +3627,7 @@
         "reset": "mrcc_glb_rst0"
       },
       "address": "0x4008D000",
-      "block": "mcx/a/a2/ERM0",
+      "block": "mcx/a/a2/ERM",
       "signals": []
     },
     {
@@ -4264,7 +4264,7 @@
     {
       "name": "FMC0",
       "address": "0x40094000",
-      "block": "mcx/a/a2/FMC0",
+      "block": "mcx/a/a2/FMC",
       "signals": []
     },
     {
@@ -4338,7 +4338,7 @@
       ]
     },
     {
-      "name": "FLEX_PWM0",
+      "name": "FLEXPWM0",
       "gate": {
         "enable": "mrcc_glb_cc0",
         "reset": "mrcc_glb_rst0",
@@ -4864,7 +4864,7 @@
       ]
     },
     {
-      "name": "FLEX_PWM1",
+      "name": "FLEXPWM1",
       "gate": {
         "enable": "mrcc_glb_cc1",
         "reset": "mrcc_glb_rst1",
@@ -7495,7 +7495,7 @@
         "reset": "mrcc_glb_rst1"
       },
       "address": "0x400B7000",
-      "block": "mcx/a/a2/OPAMP0",
+      "block": "mcx/a/a2/OPAMP",
       "signals": [
         {
           "name": "INN",
@@ -7545,7 +7545,7 @@
       },
       "only_in": "^MCXA(255|256|265|266)$",
       "address": "0x400EA000",
-      "block": "mcx/a/a2/PKC0",
+      "block": "mcx/a/a2/PKC",
       "signals": []
     },
     {
@@ -8365,14 +8365,14 @@
       "signals": []
     },
     {
-      "name": "SMART_DMA0",
+      "name": "SMARTDMA0",
       "gate": {
         "enable": "mrcc_glb_cc0",
         "reset": "mrcc_glb_rst0",
         "bit": "smartdma0"
       },
       "address": "0x4000E000",
-      "block": "mcx/a/a2/SMARTDMA0",
+      "block": "mcx/a/a2/SMARTDMA",
       "signals": [
         {
           "name": "PIO0",
@@ -8978,7 +8978,7 @@
         "enable": "mrcc_glb_cc1"
       },
       "address": "0x400E9000",
-      "block": "mcx/a/a2/TDET0",
+      "block": "mcx/a/a2/TDET",
       "signals": []
     },
     {
@@ -8991,16 +8991,6 @@
         "enable": "mrcc_glb_cc1",
         "reset": "mrcc_glb_rst1"
       }
-    },
-    {
-      "name": "UDF0",
-      "gate": {
-        "enable": "mrcc_glb_cc1"
-      },
-      "only_in": "^MCXA(255|256|265|266)$",
-      "address": "0x400ED000",
-      "block": "mcx/a/a2/UDF0",
-      "signals": []
     },
     {
       "name": "USB0",
@@ -9029,7 +9019,7 @@
         "reset": "mrcc_glb_rst0"
       },
       "address": "0x4000B000",
-      "block": "mcx/a/a2/UTICK0",
+      "block": "mcx/a/a2/UTICK",
       "signals": [
         {
           "name": "CAP0",
@@ -9412,7 +9402,7 @@
       ]
     },
     {
-      "name": "EDMA_0_TCD",
+      "name": "EDMA_TCD0",
       "address": "0x40081000",
       "block": "mcx/a/a2/EDMA_TCD::TCD8",
       "signals": []

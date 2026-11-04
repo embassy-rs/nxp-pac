@@ -1,4 +1,4 @@
-block/Qdc:
+block/Eqdc:
   description: Quadrature_Decoder.
   items:
   - name: ctrl

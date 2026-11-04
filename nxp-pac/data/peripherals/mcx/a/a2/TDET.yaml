@@ -1,5 +1,5 @@
 # MCXAP144M240F61SRM Rev. 2, chapter13. Detailed internal-source routing is gated to its covered devices; remaining A2 pin/map reuse is corroborated by XML and the product data sheet.
-block/Tdet0:
+block/Tdet:
   items:
   - name: cr
     byte_offset: 16
