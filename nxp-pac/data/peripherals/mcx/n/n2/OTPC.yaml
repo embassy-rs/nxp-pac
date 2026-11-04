@@ -1,0 +1,591 @@
+# NXP mcux-soc-svd 7c1f00bdd6263f0b93466f5e73e5fc55a744b879; native chiptool import.
+# Source instance geometry is retained in explicit block variants; see private source bindings.
+# Unannotated fieldsets construct zero in software, not a claimed hardware reset.
+# Command/W1C/SET/CLR/TOG construction defaults are zero masks; no RMW semantics are implied.
+# Source: MCXN235.xml OTPC0 sha256 a498ada26162c88f6767738bffcd22801318264c9cb2cbecbd190403b4dbd6a7
+# Source: MCXN236.xml OTPC0 sha256 ec813b3b24a785c33c5035ebc25a9c713a18018daf1fdb440035a13bf3549e14
+# Source: MCXN247.xml OTPC0 sha256 dbbed5781a39012768344882dad168430c742f26e4261c6fd0bda9a34ca4a652
+block/OtpcAlpha:
+  description: OTPC.
+  items:
+  - name: verid
+    description: Version ID.
+    byte_offset: 0
+    access: Read
+    fieldset: OtpcAlphaFieldsetQuebec
+  - name: param
+    description: Parameters.
+    byte_offset: 4
+    access: Read
+    fieldset: OtpcAlphaFieldsetFoxtrot
+  - name: sr
+    description: Status.
+    byte_offset: 8
+    fieldset: OtpcAlphaFieldsetNovember
+  - name: rwc
+    description: Read and Write Control.
+    byte_offset: 16
+    fieldset: OtpcAlphaFieldsetKilo
+  - name: rlc
+    description: Reload Control.
+    byte_offset: 20
+    fieldset: OtpcAlphaFieldsetJuliet
+  - name: pcr
+    description: Power Control.
+    byte_offset: 24
+    fieldset: OtpcAlphaFieldsetGolf
+  - name: wdata
+    description: Write Data.
+    byte_offset: 32
+    fieldset: OtpcAlphaFieldsetRomeo
+  - name: rdata
+    description: Read Data.
+    byte_offset: 36
+    access: Read
+    fieldset: OtpcAlphaFieldsetIndia
+  - name: timing1
+    description: Timing1.
+    byte_offset: 48
+    fieldset: OtpcAlphaFieldsetOscar
+  - name: timing2
+    description: Timing2.
+    byte_offset: 52
+    fieldset: OtpcAlphaFieldsetPapa
+  - name: lock
+    description: Lock.
+    byte_offset: 512
+    fieldset: OtpcAlphaFieldsetDelta
+  - name: secure
+    description: Secure.
+    byte_offset: 516
+    access: Read
+    fieldset: OtpcAlphaFieldsetLima
+  - name: secure_inv
+    description: Inverted Secure.
+    byte_offset: 520
+    access: Read
+    fieldset: OtpcAlphaFieldsetMike
+  - name: dbg_key
+    description: Debug and Key.
+    byte_offset: 524
+    access: Read
+    fieldset: OtpcAlphaFieldsetAlpha
+  - name: misc_cfg
+    description: MISC Config.
+    byte_offset: 528
+    fieldset: OtpcAlphaFieldsetEcho
+  - name: phantom_cfg
+    description: PHANTOM Config.
+    byte_offset: 532
+    fieldset: OtpcAlphaFieldsetHotel
+  - name: flex_cfg0
+    description: Flexible Config 0.
+    byte_offset: 536
+    fieldset: OtpcAlphaFieldsetBravo
+  - name: flex_cfg1
+    description: Flexible Config 1.
+    byte_offset: 540
+    fieldset: OtpcAlphaFieldsetCharlie
+fieldset/OtpcAlphaFieldsetAlpha:
+  description: Debug and Key.
+  fields:
+  - name: dat
+    description: Data.
+    bit_offset: 0
+    bit_size: 32
+fieldset/OtpcAlphaFieldsetBravo:
+  description: Flexible Config 0.
+  fields:
+  - name: dat
+    description: Data.
+    bit_offset: 0
+    bit_size: 32
+fieldset/OtpcAlphaFieldsetCharlie:
+  description: Flexible Config 1.
+  fields:
+  - name: dat
+    description: Data.
+    bit_offset: 0
+    bit_size: 32
+fieldset/OtpcAlphaFieldsetDelta:
+  description: Lock.
+  fields:
+  - name: nxp_part_cfg_lock
+    description: NXP Part Config Lock.
+    bit_offset: 0
+    bit_size: 3
+  - name: nxp_ext_lock
+    description: NXP EXT Lock.
+    bit_offset: 3
+    bit_size: 3
+  - name: boot_cfg_lock
+    description: Boot config Lock.
+    bit_offset: 9
+    bit_size: 3
+  - name: prince_cfg_lock
+    description: Prince Config Lock.
+    bit_offset: 12
+    bit_size: 3
+  - name: oscaa_key_lock
+    description: OSCAA Key Lock.
+    bit_offset: 15
+    bit_size: 3
+  - name: cust_lock0
+    description: CUST Lock 0.
+    bit_offset: 18
+    bit_size: 3
+  - name: cust_lock1
+    description: CUST Lock 1.
+    bit_offset: 21
+    bit_size: 3
+  - name: cust_lock2
+    description: CUST Lock 2.
+    bit_offset: 24
+    bit_size: 3
+  - name: cust_lock3
+    description: CUST Lock 3.
+    bit_offset: 27
+    bit_size: 3
+fieldset/OtpcAlphaFieldsetEcho:
+  description: MISC Config.
+  fields:
+  - name: dat
+    description: Data.
+    bit_offset: 0
+    bit_size: 32
+fieldset/OtpcAlphaFieldsetFoxtrot:
+  description: Parameters.
+  fields:
+  - name: num_fuse
+    description: Number of fuse bytes.
+    bit_offset: 0
+    bit_size: 16
+fieldset/OtpcAlphaFieldsetGolf:
+  description: Power Control.
+  fields:
+  - name: hvreq
+    description: Strong switch request.
+    bit_offset: 0
+    bit_size: 1
+    enum: OtpcAlphaEnumJuliet
+  - name: lvreq
+    description: Weak switch request.
+    bit_offset: 1
+    bit_size: 1
+    enum: OtpcAlphaEnumLima
+  - name: pdreq
+    description: Power down request.
+    bit_offset: 2
+    bit_size: 1
+    enum: OtpcAlphaEnumMike
+fieldset/OtpcAlphaFieldsetHotel:
+  description: PHANTOM Config.
+  fields:
+  - name: dat
+    description: Data.
+    bit_offset: 0
+    bit_size: 32
+fieldset/OtpcAlphaFieldsetIndia:
+  description: Read Data.
+  fields:
+  - name: dat
+    description: Read data.
+    bit_offset: 0
+    bit_size: 32
+fieldset/OtpcAlphaFieldsetJuliet:
+  description: Reload Control.
+  fields:
+  - name: reload_shadows
+    description: Reload shadow registers.
+    bit_offset: 0
+    bit_size: 1
+    enum: OtpcAlphaEnumRomeo
+fieldset/OtpcAlphaFieldsetKilo:
+  description: Read and Write Control.
+  fields:
+  - name: addr
+    description: EFUSE address.
+    bit_offset: 0
+    bit_size: 7
+  - name: wr_all1s
+    description: Write all 1s.
+    bit_offset: 12
+    bit_size: 1
+    enum: OtpcAlphaEnumTango
+  - name: read_efuse
+    description: Read EFUSE.
+    bit_offset: 13
+    bit_size: 1
+    enum: OtpcAlphaEnumPapa
+  - name: read_update
+    description: Read update.
+    bit_offset: 14
+    bit_size: 1
+    enum: OtpcAlphaEnumQuebec
+  - name: wr_unlock
+    description: Write Unlock.
+    bit_offset: 16
+    bit_size: 16
+fieldset/OtpcAlphaFieldsetLima:
+  description: Secure.
+  fields:
+  - name: dat
+    description: Data.
+    bit_offset: 0
+    bit_size: 32
+fieldset/OtpcAlphaFieldsetMike:
+  description: Inverted Secure.
+  fields:
+  - name: dat
+    description: Data.
+    bit_offset: 0
+    bit_size: 32
+fieldset/OtpcAlphaFieldsetNovember:
+  description: Status.
+  fields:
+  - name: busy
+    description: Busy status.
+    bit_offset: 0
+    bit_size: 1
+    enum: OtpcAlphaEnumBravo
+  - name: error
+    description: Error flag.
+    bit_offset: 1
+    bit_size: 1
+    enum: OtpcAlphaEnumEcho
+  - name: ecc_sf
+    description: ECC single fault.
+    bit_offset: 2
+    bit_size: 1
+    enum: OtpcAlphaEnumDelta
+  - name: ecc_df
+    description: ECC double fault.
+    bit_offset: 3
+    bit_size: 1
+    enum: OtpcAlphaEnumCharlie
+  - name: tri_f
+    description: Triple voting fault.
+    bit_offset: 4
+    bit_size: 1
+    enum: OtpcAlphaEnumSierra
+  - name: rd_fuse_lock
+    description: Read fuse lock error.
+    bit_offset: 8
+    bit_size: 1
+    enum: OtpcAlphaEnumNovember
+  - name: wr_fuse_lock
+    description: Write fuse lock error.
+    bit_offset: 9
+    bit_size: 1
+    enum: OtpcAlphaEnumUniform
+  - name: rd_reg_lock
+    description: Read register lock error.
+    bit_offset: 10
+    bit_size: 1
+    enum: OtpcAlphaEnumOscar
+  - name: wr_reg_lock
+    description: Write register lock error.
+    bit_offset: 11
+    bit_size: 1
+    enum: OtpcAlphaEnumXray
+  - name: wr_reg_busy
+    description: Write register when busy error.
+    bit_offset: 12
+    bit_size: 1
+    enum: OtpcAlphaEnumWhiskey
+  - name: wr_power_off
+    description: Write when power off error.
+    bit_offset: 13
+    bit_size: 1
+    enum: OtpcAlphaEnumVictor
+  - name: fsm
+    description: Finite-state machine error.
+    bit_offset: 16
+    bit_size: 1
+    enum: OtpcAlphaEnumIndia
+  - name: flc
+    description: Fuse load counter error.
+    bit_offset: 17
+    bit_size: 1
+    enum: OtpcAlphaEnumGolf
+  - name: adc
+    description: Address and data compare error.
+    bit_offset: 18
+    bit_size: 1
+    enum: OtpcAlphaEnumAlpha
+  - name: irc
+    description: Inverted register compare error.
+    bit_offset: 19
+    bit_size: 1
+    enum: OtpcAlphaEnumKilo
+  - name: fsc
+    description: Fuse and shadow register compare error.
+    bit_offset: 20
+    bit_size: 1
+    enum: OtpcAlphaEnumHotel
+fieldset/OtpcAlphaFieldsetOscar:
+  description: Timing1.
+  fields:
+  - name: taddr
+    description: Address to STROBE setup and hold time.
+    bit_offset: 0
+    bit_size: 4
+  - name: trelax
+    description: CSB, PGENB and LOAD to STROBE setup and hold time.
+    bit_offset: 4
+    bit_size: 4
+  - name: trd
+    description: Read strobe pulse width time.
+    bit_offset: 8
+    bit_size: 6
+  - name: tps
+    description: PS to CSB setup and hold time between power switch and chip select assertion.
+    bit_offset: 16
+    bit_size: 6
+  - name: tpd
+    description: PD to CSB setup time between power down signal deassertion and chip select signal assertion.
+    bit_offset: 24
+    bit_size: 8
+fieldset/OtpcAlphaFieldsetPapa:
+  description: Timing2.
+  fields:
+  - name: tpgm
+    description: Typical program strobe pulse width time.
+    bit_offset: 0
+    bit_size: 12
+fieldset/OtpcAlphaFieldsetQuebec:
+  description: Version ID.
+  fields:
+  - name: feature
+    description: Feature Specification Number.
+    bit_offset: 0
+    bit_size: 16
+    enum: OtpcAlphaEnumFoxtrot
+  - name: minor
+    description: Minor Version Number.
+    bit_offset: 16
+    bit_size: 8
+  - name: major
+    description: Major Version Number.
+    bit_offset: 24
+    bit_size: 8
+fieldset/OtpcAlphaFieldsetRomeo:
+  description: Write Data.
+  fields:
+  - name: dat
+    description: Write data.
+    bit_offset: 0
+    bit_size: 32
+enum/OtpcAlphaEnumAlpha:
+  bit_size: 1
+  variants:
+  - name: Error
+    description: Error.
+    value: 1
+  - name: NoError
+    description: No error.
+    value: 0
+enum/OtpcAlphaEnumBravo:
+  bit_size: 1
+  variants:
+  - name: Busy
+    description: Busy.
+    value: 1
+  - name: NotBusy
+    description: Not busy (transaction complete).
+    value: 0
+enum/OtpcAlphaEnumCharlie:
+  bit_size: 1
+  variants:
+  - name: Fault
+    description: Fault.
+    value: 1
+  - name: NoFault
+    description: No fault.
+    value: 0
+enum/OtpcAlphaEnumDelta:
+  bit_size: 1
+  variants:
+  - name: Fault
+    description: Fault.
+    value: 1
+  - name: NoFault
+    description: No fault.
+    value: 0
+enum/OtpcAlphaEnumEcho:
+  bit_size: 1
+  variants:
+  - name: Error
+    description: Error.
+    value: 1
+  - name: NoError
+    description: No error.
+    value: 0
+enum/OtpcAlphaEnumFoxtrot:
+  bit_size: 16
+  variants:
+  - name: Standard
+    description: Standard feature set.
+    value: 0
+enum/OtpcAlphaEnumGolf:
+  bit_size: 1
+  variants:
+  - name: Error
+    description: Error.
+    value: 1
+  - name: NoError
+    description: No error.
+    value: 0
+enum/OtpcAlphaEnumHotel:
+  bit_size: 1
+  variants:
+  - name: Error
+    description: Error.
+    value: 1
+  - name: NoError
+    description: No error.
+    value: 0
+enum/OtpcAlphaEnumIndia:
+  bit_size: 1
+  variants:
+  - name: Error
+    description: Error.
+    value: 1
+  - name: NoError
+    description: No error.
+    value: 0
+enum/OtpcAlphaEnumJuliet:
+  bit_size: 1
+  variants:
+  - name: TurnOff
+    description: Turn off.
+    value: 0
+  - name: TurnOn
+    description: Turn on.
+    value: 1
+enum/OtpcAlphaEnumKilo:
+  bit_size: 1
+  variants:
+  - name: Error
+    description: Error.
+    value: 1
+  - name: NoError
+    description: No error.
+    value: 0
+enum/OtpcAlphaEnumLima:
+  bit_size: 1
+  variants:
+  - name: TurnOff
+    description: Turn off.
+    value: 0
+  - name: TurnOn
+    description: Turn on.
+    value: 1
+enum/OtpcAlphaEnumMike:
+  bit_size: 1
+  variants:
+  - name: NoAction
+    description: PD pin is set to low when OTPC is in idle state. It means EFUSE hardmacro is in standby mode. Idle state means OTPC is not in read and program modes.
+    value: 0
+  - name: PowerDn
+    description: PD pin is set to high when OTPC is in idle state. It means EFUSE hardmacro is in power down mode.
+    value: 1
+enum/OtpcAlphaEnumNovember:
+  bit_size: 1
+  variants:
+  - name: Error
+    description: Error.
+    value: 1
+  - name: NoError
+    description: No error.
+    value: 0
+enum/OtpcAlphaEnumOscar:
+  bit_size: 1
+  variants:
+  - name: Error
+    description: Error.
+    value: 1
+  - name: NoError
+    description: No error.
+    value: 0
+enum/OtpcAlphaEnumPapa:
+  bit_size: 1
+  variants:
+  - name: Program
+    description: Starts program operation when the WR_UNLOCK value is 0x9527; otherwise, takes no action.
+    value: 0
+  - name: Read
+    description: Starts read operation.
+    value: 1
+enum/OtpcAlphaEnumQuebec:
+  bit_size: 1
+  variants:
+  - name: NoUpdate
+    description: Shadow register does not update.
+    value: 0
+  - name: Update
+    description: Shadow register updates.
+    value: 1
+enum/OtpcAlphaEnumRomeo:
+  bit_size: 1
+  variants:
+  - name: NoAction
+    description: No action (when writing) or reload complete (when reading).
+    value: 0
+  - name: Reload
+    description: Reload.
+    value: 1
+enum/OtpcAlphaEnumSierra:
+  bit_size: 1
+  variants:
+  - name: Fault
+    description: Fault.
+    value: 1
+  - name: NoFault
+    description: No fault.
+    value: 0
+enum/OtpcAlphaEnumTango:
+  bit_size: 1
+  variants:
+  - name: UseAll1s
+    description: Writes all 1s.
+    value: 1
+  - name: UseWdata
+    description: Uses the WDATA value.
+    value: 0
+enum/OtpcAlphaEnumUniform:
+  bit_size: 1
+  variants:
+  - name: Error
+    description: Error.
+    value: 1
+  - name: NoError
+    description: No error.
+    value: 0
+enum/OtpcAlphaEnumVictor:
+  bit_size: 1
+  variants:
+  - name: Error
+    description: Error.
+    value: 1
+  - name: NoError
+    description: No error.
+    value: 0
+enum/OtpcAlphaEnumWhiskey:
+  bit_size: 1
+  variants:
+  - name: Error
+    description: Error.
+    value: 1
+  - name: NoError
+    description: No error.
+    value: 0
+enum/OtpcAlphaEnumXray:
+  bit_size: 1
+  variants:
+  - name: Error
+    description: Error.
+    value: 1
+  - name: NoError
+    description: No error.
+    value: 0

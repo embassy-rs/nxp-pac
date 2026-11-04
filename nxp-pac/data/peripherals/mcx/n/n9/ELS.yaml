@@ -1,0 +1,3112 @@
+# NXP mcux-soc-svd 7c1f00bdd6263f0b93466f5e73e5fc55a744b879; native chiptool import.
+# Source instance geometry is retained in explicit block variants; see private source bindings.
+# Unannotated fieldsets construct zero in software, not a claimed hardware reset.
+# Command/W1C/SET/CLR/TOG construction defaults are zero masks; no RMW semantics are implied.
+# Source: MCXN946_cm33_core0.xml ELS sha256 b986328ff1224adaeea70522fa61383a5f89f6313dfc3e7df92e8894fdab72d7
+# Source: MCXN946_cm33_core0.xml ELS_ALIAS1 sha256 b986328ff1224adaeea70522fa61383a5f89f6313dfc3e7df92e8894fdab72d7
+# Source: MCXN946_cm33_core0.xml ELS_ALIAS2 sha256 b986328ff1224adaeea70522fa61383a5f89f6313dfc3e7df92e8894fdab72d7
+# Source: MCXN946_cm33_core0.xml ELS_ALIAS3 sha256 b986328ff1224adaeea70522fa61383a5f89f6313dfc3e7df92e8894fdab72d7
+# Source: MCXN946_cm33_core1.xml ELS sha256 57e8910317a1cb467d56726cb822c57806aa247542969bcf12dbcc8822187916
+# Source: MCXN946_cm33_core1.xml ELS_ALIAS1 sha256 57e8910317a1cb467d56726cb822c57806aa247542969bcf12dbcc8822187916
+# Source: MCXN946_cm33_core1.xml ELS_ALIAS2 sha256 57e8910317a1cb467d56726cb822c57806aa247542969bcf12dbcc8822187916
+# Source: MCXN946_cm33_core1.xml ELS_ALIAS3 sha256 57e8910317a1cb467d56726cb822c57806aa247542969bcf12dbcc8822187916
+# Source: MCXN947_cm33_core0.xml ELS sha256 629ac7cdc82684e467b0cf36a8aef697bc1eb65c2047d6610b7b5df65692e590
+# Source: MCXN947_cm33_core0.xml ELS_ALIAS1 sha256 629ac7cdc82684e467b0cf36a8aef697bc1eb65c2047d6610b7b5df65692e590
+# Source: MCXN947_cm33_core0.xml ELS_ALIAS2 sha256 629ac7cdc82684e467b0cf36a8aef697bc1eb65c2047d6610b7b5df65692e590
+# Source: MCXN947_cm33_core0.xml ELS_ALIAS3 sha256 629ac7cdc82684e467b0cf36a8aef697bc1eb65c2047d6610b7b5df65692e590
+# Source: MCXN947_cm33_core1.xml ELS sha256 0d77f3d23cad1d5eab631fd7f5ade4044d8aaca2d9d13cd11f3836d27fe089fb
+# Source: MCXN947_cm33_core1.xml ELS_ALIAS1 sha256 0d77f3d23cad1d5eab631fd7f5ade4044d8aaca2d9d13cd11f3836d27fe089fb
+# Source: MCXN947_cm33_core1.xml ELS_ALIAS2 sha256 0d77f3d23cad1d5eab631fd7f5ade4044d8aaca2d9d13cd11f3836d27fe089fb
+# Source: MCXN947_cm33_core1.xml ELS_ALIAS3 sha256 0d77f3d23cad1d5eab631fd7f5ade4044d8aaca2d9d13cd11f3836d27fe089fb
+block/ElsAlpha:
+  description: no description available.
+  items:
+  - name: status
+    description: Status Register.
+    byte_offset: 0
+    access: Read
+    fieldset: ElsAlphaFieldsetTangoAlpha
+  - name: ctrl
+    description: Control Register.
+    byte_offset: 4
+    fieldset: ElsAlphaFieldsetEcho
+  - name: cmdcfg0
+    description: Command Configuration.
+    byte_offset: 8
+    fieldset: ElsAlphaFieldsetBravo
+  - name: cfg
+    description: Configuration Register.
+    byte_offset: 12
+    fieldset: ElsAlphaFieldsetAlpha
+  - name: kidx0
+    description: Keystore Index 0.
+    byte_offset: 16
+    fieldset: ElsAlphaFieldsetMikeAlpha
+  - name: kidx1
+    description: Keystore Index 1.
+    byte_offset: 20
+    fieldset: ElsAlphaFieldsetNovemberAlpha
+  - name: kpropin
+    description: Key Properties Request.
+    byte_offset: 24
+    fieldset: ElsAlphaFieldsetPapaAlpha
+  - name: dma_src0
+    description: DMA Source 0.
+    byte_offset: 32
+    fieldset: ElsAlphaFieldsetIndia
+  - name: dma_src0_len
+    description: DMA Source 0 Length.
+    byte_offset: 36
+    fieldset: ElsAlphaFieldsetJuliet
+  - name: dma_src1
+    description: DMA Source 1.
+    byte_offset: 40
+    fieldset: ElsAlphaFieldsetKilo
+  - name: dma_src2
+    description: DMA Source 2.
+    byte_offset: 48
+    fieldset: ElsAlphaFieldsetLima
+  - name: dma_src2_len
+    description: DMA Source 2 Length.
+    byte_offset: 52
+    fieldset: ElsAlphaFieldsetMike
+  - name: dma_res0
+    description: DMA Result 0.
+    byte_offset: 56
+    fieldset: ElsAlphaFieldsetGolf
+  - name: dma_res0_len
+    description: DMA Result 0 Length.
+    byte_offset: 60
+    fieldset: ElsAlphaFieldsetHotel
+  - name: int_enable
+    description: Interrupt Enable.
+    byte_offset: 64
+    fieldset: ElsAlphaFieldsetJulietAlpha
+  - name: int_status_clr
+    description: Interrupt Status Clear.
+    byte_offset: 68
+    access: Write
+    fieldset: ElsAlphaFieldsetKiloAlpha
+  - name: int_status_set
+    description: Interrupt Status Set.
+    byte_offset: 72
+    access: Write
+    fieldset: ElsAlphaFieldsetLimaAlpha
+  - name: err_status
+    description: Error Status.
+    byte_offset: 76
+    access: Read
+    fieldset: ElsAlphaFieldsetHotelAlpha
+  - name: err_status_clr
+    description: Error Status Clear.
+    byte_offset: 80
+    access: Write
+    fieldset: ElsAlphaFieldsetIndiaAlpha
+  - name: version
+    description: Version Register.
+    byte_offset: 84
+    access: Read
+    fieldset: ElsAlphaFieldsetUniformAlpha
+  - name: prng_datout
+    description: PRNG SW Read Out.
+    byte_offset: 92
+    access: Read
+    fieldset: ElsAlphaFieldsetRomeoAlpha
+  - name: cmdcrc_ctrl
+    description: CRC Configuration.
+    byte_offset: 96
+    fieldset: ElsAlphaFieldsetDelta
+  - name: cmdcrc
+    description: Command CRC Value.
+    byte_offset: 100
+    access: Read
+    fieldset: ElsAlphaFieldsetCharlie
+  - name: session_id
+    description: Session ID.
+    byte_offset: 104
+    fieldset: ElsAlphaFieldsetSierraAlpha
+  - name: dma_fin_addr
+    description: Final DMA Address.
+    byte_offset: 112
+    access: Read
+    fieldset: ElsAlphaFieldsetFoxtrot
+  - name: master_id
+    description: Master ID.
+    byte_offset: 116
+    fieldset: ElsAlphaFieldsetQuebecAlpha
+  - name: kidx2
+    description: Keystore Index 2.
+    byte_offset: 120
+    fieldset: ElsAlphaFieldsetOscarAlpha
+  - name: els_ks0
+    description: Status Register.
+    byte_offset: 336
+    access: Read
+    fieldset: ElsAlphaFieldsetNovember
+  - name: els_ks1
+    description: Status Register.
+    byte_offset: 340
+    access: Read
+    fieldset: ElsAlphaFieldsetOscar
+  - name: els_ks2
+    description: Status Register.
+    byte_offset: 344
+    access: Read
+    fieldset: ElsAlphaFieldsetZulu
+  - name: els_ks3
+    description: Status Register.
+    byte_offset: 348
+    access: Read
+    fieldset: ElsAlphaFieldsetAlphaAlpha
+  - name: els_ks4
+    description: Status Register.
+    byte_offset: 352
+    access: Read
+    fieldset: ElsAlphaFieldsetBravoAlpha
+  - name: els_ks5
+    description: Status Register.
+    byte_offset: 356
+    access: Read
+    fieldset: ElsAlphaFieldsetCharlieAlpha
+  - name: els_ks6
+    description: Status Register.
+    byte_offset: 360
+    access: Read
+    fieldset: ElsAlphaFieldsetDeltaAlpha
+  - name: els_ks7
+    description: Status Register.
+    byte_offset: 364
+    access: Read
+    fieldset: ElsAlphaFieldsetEchoAlpha
+  - name: els_ks8
+    description: Status Register.
+    byte_offset: 368
+    access: Read
+    fieldset: ElsAlphaFieldsetFoxtrotAlpha
+  - name: els_ks9
+    description: Status Register.
+    byte_offset: 372
+    access: Read
+    fieldset: ElsAlphaFieldsetGolfAlpha
+  - name: els_ks10
+    description: Status Register.
+    byte_offset: 376
+    access: Read
+    fieldset: ElsAlphaFieldsetPapa
+  - name: els_ks11
+    description: Status Register.
+    byte_offset: 380
+    access: Read
+    fieldset: ElsAlphaFieldsetQuebec
+  - name: els_ks12
+    description: Status Register.
+    byte_offset: 384
+    access: Read
+    fieldset: ElsAlphaFieldsetRomeo
+  - name: els_ks13
+    description: Status Register.
+    byte_offset: 388
+    access: Read
+    fieldset: ElsAlphaFieldsetSierra
+  - name: els_ks14
+    description: Status Register.
+    byte_offset: 392
+    access: Read
+    fieldset: ElsAlphaFieldsetTango
+  - name: els_ks15
+    description: Status Register.
+    byte_offset: 396
+    access: Read
+    fieldset: ElsAlphaFieldsetUniform
+  - name: els_ks16
+    description: Status Register.
+    byte_offset: 400
+    access: Read
+    fieldset: ElsAlphaFieldsetVictor
+  - name: els_ks17
+    description: Status Register.
+    byte_offset: 404
+    access: Read
+    fieldset: ElsAlphaFieldsetWhiskey
+  - name: els_ks18
+    description: Status Register.
+    byte_offset: 408
+    access: Read
+    fieldset: ElsAlphaFieldsetXray
+  - name: els_ks19
+    description: Status Register.
+    byte_offset: 412
+    access: Read
+    fieldset: ElsAlphaFieldsetYankee
+fieldset/ElsAlphaFieldsetAlpha:
+  description: Configuration Register.
+  fields:
+  - name: adctrl
+    description: Controls the maximum value of a variable delay that will be applied before any ELS AES operation is started.
+    bit_offset: 16
+    bit_size: 10
+fieldset/ElsAlphaFieldsetBravo:
+  description: Command Configuration.
+  fields:
+  - name: cmdcfg0
+    description: See.
+    bit_offset: 0
+    bit_size: 32
+fieldset/ElsAlphaFieldsetCharlie:
+  description: Command CRC Value.
+  fields:
+  - name: cmdcrc
+    description: Indicates the current CRC value.
+    bit_offset: 0
+    bit_size: 32
+fieldset/ElsAlphaFieldsetDelta:
+  description: CRC Configuration.
+  fields:
+  - name: cmdcrc_rst
+    description: CRC reset to initial valueCMDCRC_EN and CMDCRC_RST fields act independently.
+    bit_offset: 0
+    bit_size: 1
+    enum: ElsAlphaEnumEcho
+  - name: cmdcrc_en
+    description: CRC enable bit.
+    bit_offset: 1
+    bit_size: 1
+    enum: ElsAlphaEnumDelta
+fieldset/ElsAlphaFieldsetEcho:
+  description: Control Register.
+  fields:
+  - name: els_en
+    description: ELS enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: ElsAlphaEnumKilo
+  - name: els_start
+    description: Write to 1 to start an ELS operation. Writing 0 has no effect.
+    bit_offset: 1
+    bit_size: 1
+  - name: els_reset
+    description: Write to 1 to perform an ELS synchronous reset. Writing 0 has no effect.
+    bit_offset: 2
+    bit_size: 1
+  - name: els_cmd
+    description: ELS Command ID.
+    bit_offset: 3
+    bit_size: 5
+  - name: byte_order
+    description: Defines endianness.
+    bit_offset: 8
+    bit_size: 1
+    enum: ElsAlphaEnumCharlie
+fieldset/ElsAlphaFieldsetFoxtrot:
+  description: Final DMA Address.
+  fields:
+  - name: dma_fin_addr
+    description: Indicates the final address of system memory that was accessed by ELS during the last command.
+    bit_offset: 0
+    bit_size: 32
+fieldset/ElsAlphaFieldsetGolf:
+  description: DMA Result 0.
+  fields:
+  - name: addr_res0
+    description: Defines the system start address where the result of the ELS operation is transferred via DMA.
+    bit_offset: 0
+    bit_size: 32
+fieldset/ElsAlphaFieldsetHotel:
+  description: DMA Result 0 Length.
+  fields:
+  - name: size_res0_len
+    description: Size in bytes of the data to be transferred.
+    bit_offset: 0
+    bit_size: 32
+fieldset/ElsAlphaFieldsetIndia:
+  description: DMA Source 0.
+  fields:
+  - name: addr_src0
+    description: Defines the system address of the start of the data to be transferred to the ELS via DMA.
+    bit_offset: 0
+    bit_size: 32
+fieldset/ElsAlphaFieldsetJuliet:
+  description: DMA Source 0 Length.
+  fields:
+  - name: size_src0_len
+    description: Size in bytes of the data to be transferred from the target defined in SFR DMA_SRC0.
+    bit_offset: 0
+    bit_size: 32
+fieldset/ElsAlphaFieldsetKilo:
+  description: DMA Source 1.
+  fields:
+  - name: addr_src1
+    description: Defines the system address of the start of the data to be transferred to the ELS via DMA.
+    bit_offset: 0
+    bit_size: 32
+fieldset/ElsAlphaFieldsetLima:
+  description: DMA Source 2.
+  fields:
+  - name: addr_src2
+    description: Defines the system address of the start of the data to be transferred to the ELS via DMA.
+    bit_offset: 0
+    bit_size: 32
+fieldset/ElsAlphaFieldsetMike:
+  description: DMA Source 2 Length.
+  fields:
+  - name: size_src2_len
+    description: Size in bytes of the data to be transferred from the target defined in SFR DMA_SRC2.
+    bit_offset: 0
+    bit_size: 32
+fieldset/ElsAlphaFieldsetNovember:
+  description: Status Register.
+  fields:
+  - name: ks0_ksize
+    description: Key size.
+    bit_offset: 0
+    bit_size: 2
+    enum: ElsAlphaEnumSierra
+  - name: ks0_kact
+    description: Key is active.
+    bit_offset: 5
+    bit_size: 1
+  - name: ks0_kbase
+    description: First slot in a multislot key.
+    bit_offset: 6
+    bit_size: 1
+  - name: ks0_fgp
+    description: Hardware Feature General Purpose.
+    bit_offset: 7
+    bit_size: 1
+  - name: ks0_frtn
+    description: Hardware Feature Retention.
+    bit_offset: 8
+    bit_size: 1
+  - name: ks0_fhwo
+    description: Hardware Feature Output.
+    bit_offset: 9
+    bit_size: 1
+  - name: ks0_ukpuk
+    description: CMAC key.
+    bit_offset: 11
+    bit_size: 1
+  - name: ks0_utecdh
+    description: CMAC key.
+    bit_offset: 12
+    bit_size: 1
+  - name: ks0_ucmac
+    description: CMAC key.
+    bit_offset: 13
+    bit_size: 1
+  - name: ks0_uksk
+    description: KSK key.
+    bit_offset: 14
+    bit_size: 1
+  - name: ks0_urtf
+    description: Real Time Fingerprint key.
+    bit_offset: 15
+    bit_size: 1
+  - name: ks0_uckdf
+    description: Derivation key for CKDF command.
+    bit_offset: 16
+    bit_size: 1
+  - name: ks0_uhkdf
+    description: Derivation key for HKDF command.
+    bit_offset: 17
+    bit_size: 1
+  - name: ks0_uecsg
+    description: Ecc signing key.
+    bit_offset: 18
+    bit_size: 1
+  - name: ks0_uecdh
+    description: Ecc diffie hellman key.
+    bit_offset: 19
+    bit_size: 1
+  - name: ks0_uaes
+    description: Aes key.
+    bit_offset: 20
+    bit_size: 1
+  - name: ks0_uhmac
+    description: Hmac key.
+    bit_offset: 21
+    bit_size: 1
+  - name: ks0_ukwk
+    description: Key wrapping key.
+    bit_offset: 22
+    bit_size: 1
+  - name: ks0_ukuok
+    description: Key unwrapping key.
+    bit_offset: 23
+    bit_size: 1
+  - name: ks0_utlspms
+    description: TLS Pre Master Secret.
+    bit_offset: 24
+    bit_size: 1
+  - name: ks0_utlsms
+    description: TLS Master Secret.
+    bit_offset: 25
+    bit_size: 1
+  - name: ks0_ukgsrc
+    description: Supply KEYGEN source.
+    bit_offset: 26
+    bit_size: 1
+  - name: ks0_uhwo
+    description: Hardware out key.
+    bit_offset: 27
+    bit_size: 1
+  - name: ks0_uwrpok
+    description: Wrap key.
+    bit_offset: 28
+    bit_size: 1
+  - name: ks0_uduk
+    description: Device Unique Key.
+    bit_offset: 29
+    bit_size: 1
+  - name: ks0_upprot
+    description: Priviledge level.
+    bit_offset: 30
+    bit_size: 2
+fieldset/ElsAlphaFieldsetOscar:
+  description: Status Register.
+  fields:
+  - name: ks1_ksize
+    description: Key size.
+    bit_offset: 0
+    bit_size: 2
+    enum: ElsAlphaEnumDeltaAlpha
+  - name: ks1_kact
+    description: Key is active.
+    bit_offset: 5
+    bit_size: 1
+  - name: ks1_kbase
+    description: First slot in a multislot key.
+    bit_offset: 6
+    bit_size: 1
+  - name: ks1_fgp
+    description: Hardware Feature General Purpose.
+    bit_offset: 7
+    bit_size: 1
+  - name: ks1_frtn
+    description: Hardware Feature Retention.
+    bit_offset: 8
+    bit_size: 1
+  - name: ks1_fhwo
+    description: Hardware Feature Output.
+    bit_offset: 9
+    bit_size: 1
+  - name: ks1_ukpuk
+    description: CMAC key.
+    bit_offset: 11
+    bit_size: 1
+  - name: ks1_utecdh
+    description: CMAC key.
+    bit_offset: 12
+    bit_size: 1
+  - name: ks1_ucmac
+    description: CMAC key.
+    bit_offset: 13
+    bit_size: 1
+  - name: ks1_uksk
+    description: KSK key.
+    bit_offset: 14
+    bit_size: 1
+  - name: ks1_urtf
+    description: Real Time Fingerprint key.
+    bit_offset: 15
+    bit_size: 1
+  - name: ks1_uckdf
+    description: Derivation key for CKDF command.
+    bit_offset: 16
+    bit_size: 1
+  - name: ks1_uhkdf
+    description: Derivation key for HKDF command.
+    bit_offset: 17
+    bit_size: 1
+  - name: ks1_uecsg
+    description: Ecc signing key.
+    bit_offset: 18
+    bit_size: 1
+  - name: ks1_uecdh
+    description: Ecc diffie hellman key.
+    bit_offset: 19
+    bit_size: 1
+  - name: ks1_uaes
+    description: Aes key.
+    bit_offset: 20
+    bit_size: 1
+  - name: ks1_uhmac
+    description: Hmac key.
+    bit_offset: 21
+    bit_size: 1
+  - name: ks1_ukwk
+    description: Key wrapping key.
+    bit_offset: 22
+    bit_size: 1
+  - name: ks1_ukuok
+    description: Key unwrapping key.
+    bit_offset: 23
+    bit_size: 1
+  - name: ks1_utlspms
+    description: TLS Pre Master Secret.
+    bit_offset: 24
+    bit_size: 1
+  - name: ks1_utlsms
+    description: TLS Master Secret.
+    bit_offset: 25
+    bit_size: 1
+  - name: ks1_ukgsrc
+    description: Supply KEYGEN source.
+    bit_offset: 26
+    bit_size: 1
+  - name: ks1_uhwo
+    description: Hardware out key.
+    bit_offset: 27
+    bit_size: 1
+  - name: ks1_uwrpok
+    description: Ok to wrap key.
+    bit_offset: 28
+    bit_size: 1
+  - name: ks1_uduk
+    description: Device Unique Key.
+    bit_offset: 29
+    bit_size: 1
+  - name: ks1_upprot
+    description: Priviledge level.
+    bit_offset: 30
+    bit_size: 2
+fieldset/ElsAlphaFieldsetPapa:
+  description: Status Register.
+  fields:
+  - name: ks10_ksize
+    description: Key size.
+    bit_offset: 0
+    bit_size: 2
+    enum: ElsAlphaEnumTango
+  - name: ks10_kact
+    description: Key is active.
+    bit_offset: 5
+    bit_size: 1
+  - name: ks10_kbase
+    description: First slot in a multislot key.
+    bit_offset: 6
+    bit_size: 1
+  - name: ks10_fgp
+    description: Hardware Feature General Purpose.
+    bit_offset: 7
+    bit_size: 1
+  - name: ks10_frtn
+    description: Hardware Feature Retention.
+    bit_offset: 8
+    bit_size: 1
+  - name: ks10_fhwo
+    description: Hardware Feature Output.
+    bit_offset: 9
+    bit_size: 1
+  - name: ks10_ukpuk
+    description: CMAC key.
+    bit_offset: 11
+    bit_size: 1
+  - name: ks10_utecdh
+    description: CMAC key.
+    bit_offset: 12
+    bit_size: 1
+  - name: ks10_ucmac
+    description: CMAC key.
+    bit_offset: 13
+    bit_size: 1
+  - name: ks10_uksk
+    description: KSK key.
+    bit_offset: 14
+    bit_size: 1
+  - name: ks10_urtf
+    description: Real Time Fingerprint key.
+    bit_offset: 15
+    bit_size: 1
+  - name: ks10_uckdf
+    description: Derivation key for CKDF command.
+    bit_offset: 16
+    bit_size: 1
+  - name: ks10_uhkdf
+    description: Derivation key for HKDF command.
+    bit_offset: 17
+    bit_size: 1
+  - name: ks10_uecsg
+    description: Ecc signing key.
+    bit_offset: 18
+    bit_size: 1
+  - name: ks10_uecdh
+    description: Ecc diffie hellman key.
+    bit_offset: 19
+    bit_size: 1
+  - name: ks10_uaes
+    description: Aes key.
+    bit_offset: 20
+    bit_size: 1
+  - name: ks10_uhmac
+    description: Hmac key.
+    bit_offset: 21
+    bit_size: 1
+  - name: ks10_ukwk
+    description: Key wrapping key.
+    bit_offset: 22
+    bit_size: 1
+  - name: ks10_ukuok
+    description: Key unwrapping key.
+    bit_offset: 23
+    bit_size: 1
+  - name: ks10_utlspms
+    description: TLS Pre Master Secret.
+    bit_offset: 24
+    bit_size: 1
+  - name: ks10_utlsms
+    description: TLS Master Secret.
+    bit_offset: 25
+    bit_size: 1
+  - name: ks10_ukgsrc
+    description: Supply KEYGEN source.
+    bit_offset: 26
+    bit_size: 1
+  - name: ks10_uhwo
+    description: Hardware out key.
+    bit_offset: 27
+    bit_size: 1
+  - name: ks10_uwrpok
+    description: Ok to wrap key.
+    bit_offset: 28
+    bit_size: 1
+  - name: ks10_uduk
+    description: Device Unique Key.
+    bit_offset: 29
+    bit_size: 1
+  - name: ks10_upprot
+    description: Priviledge level.
+    bit_offset: 30
+    bit_size: 2
+fieldset/ElsAlphaFieldsetQuebec:
+  description: Status Register.
+  fields:
+  - name: ks11_ksize
+    description: Key size.
+    bit_offset: 0
+    bit_size: 2
+    enum: ElsAlphaEnumUniform
+  - name: ks11_kact
+    description: Key is active.
+    bit_offset: 5
+    bit_size: 1
+  - name: ks11_kbase
+    description: First slot in a multislot key.
+    bit_offset: 6
+    bit_size: 1
+  - name: ks11_fgp
+    description: Hardware Feature General Purpose.
+    bit_offset: 7
+    bit_size: 1
+  - name: ks11_frtn
+    description: Hardware Feature Retention.
+    bit_offset: 8
+    bit_size: 1
+  - name: ks11_fhwo
+    description: Hardware Feature Output.
+    bit_offset: 9
+    bit_size: 1
+  - name: ks11_ukpuk
+    description: CMAC key.
+    bit_offset: 11
+    bit_size: 1
+  - name: ks11_utecdh
+    description: CMAC key.
+    bit_offset: 12
+    bit_size: 1
+  - name: ks11_ucmac
+    description: CMAC key.
+    bit_offset: 13
+    bit_size: 1
+  - name: ks11_uksk
+    description: KSK key.
+    bit_offset: 14
+    bit_size: 1
+  - name: ks11_urtf
+    description: Real Time Fingerprint key.
+    bit_offset: 15
+    bit_size: 1
+  - name: ks11_uckdf
+    description: Derivation key for CKDF command.
+    bit_offset: 16
+    bit_size: 1
+  - name: ks11_uhkdf
+    description: Derivation key for HKDF command.
+    bit_offset: 17
+    bit_size: 1
+  - name: ks11_uecsg
+    description: Ecc signing key.
+    bit_offset: 18
+    bit_size: 1
+  - name: ks11_uecdh
+    description: Ecc diffie hellman key.
+    bit_offset: 19
+    bit_size: 1
+  - name: ks11_uaes
+    description: Aes key.
+    bit_offset: 20
+    bit_size: 1
+  - name: ks11_uhmac
+    description: Hmac key.
+    bit_offset: 21
+    bit_size: 1
+  - name: ks11_ukwk
+    description: Key wrapping key.
+    bit_offset: 22
+    bit_size: 1
+  - name: ks11_ukuok
+    description: Key unwrapping key.
+    bit_offset: 23
+    bit_size: 1
+  - name: ks11_utlspms
+    description: TLS Pre Master Secret.
+    bit_offset: 24
+    bit_size: 1
+  - name: ks11_utlsms
+    description: TLS Master Secret.
+    bit_offset: 25
+    bit_size: 1
+  - name: ks11_ukgsrc
+    description: Supply KEYGEN source.
+    bit_offset: 26
+    bit_size: 1
+  - name: ks11_uhwo
+    description: Hardware out key.
+    bit_offset: 27
+    bit_size: 1
+  - name: ks11_uwrpok
+    description: Ok to wrap key.
+    bit_offset: 28
+    bit_size: 1
+  - name: ks11_uduk
+    description: Device Unique Key.
+    bit_offset: 29
+    bit_size: 1
+  - name: ks11_upprot
+    description: Priviledge level.
+    bit_offset: 30
+    bit_size: 2
+fieldset/ElsAlphaFieldsetRomeo:
+  description: Status Register.
+  fields:
+  - name: ks12_ksize
+    description: Key size.
+    bit_offset: 0
+    bit_size: 2
+    enum: ElsAlphaEnumVictor
+  - name: ks12_kact
+    description: Key is active.
+    bit_offset: 5
+    bit_size: 1
+  - name: ks12_kbase
+    description: First slot in a multislot key.
+    bit_offset: 6
+    bit_size: 1
+  - name: ks12_fgp
+    description: Hardware Feature General Purpose.
+    bit_offset: 7
+    bit_size: 1
+  - name: ks12_frtn
+    description: Hardware Feature Retention.
+    bit_offset: 8
+    bit_size: 1
+  - name: ks12_fhwo
+    description: Hardware Feature Output.
+    bit_offset: 9
+    bit_size: 1
+  - name: ks12_ukpuk
+    description: CMAC key.
+    bit_offset: 11
+    bit_size: 1
+  - name: ks12_utecdh
+    description: CMAC key.
+    bit_offset: 12
+    bit_size: 1
+  - name: ks12_ucmac
+    description: CMAC key.
+    bit_offset: 13
+    bit_size: 1
+  - name: ks12_uksk
+    description: KSK key.
+    bit_offset: 14
+    bit_size: 1
+  - name: ks12_urtf
+    description: Real Time Fingerprint key.
+    bit_offset: 15
+    bit_size: 1
+  - name: ks12_uckdf
+    description: Derivation key for CKDF command.
+    bit_offset: 16
+    bit_size: 1
+  - name: ks12_uhkdf
+    description: Derivation key for HKDF command.
+    bit_offset: 17
+    bit_size: 1
+  - name: ks12_uecsg
+    description: Ecc signing key.
+    bit_offset: 18
+    bit_size: 1
+  - name: ks12_uecdh
+    description: Ecc diffie hellman key.
+    bit_offset: 19
+    bit_size: 1
+  - name: ks12_uaes
+    description: Aes key.
+    bit_offset: 20
+    bit_size: 1
+  - name: ks12_uhmac
+    description: Hmac key.
+    bit_offset: 21
+    bit_size: 1
+  - name: ks12_ukwk
+    description: Key wrapping key.
+    bit_offset: 22
+    bit_size: 1
+  - name: ks12_ukuok
+    description: Key unwrapping key.
+    bit_offset: 23
+    bit_size: 1
+  - name: ks12_utlspms
+    description: TLS Pre Master Secret.
+    bit_offset: 24
+    bit_size: 1
+  - name: ks12_utlsms
+    description: TLS Master Secret.
+    bit_offset: 25
+    bit_size: 1
+  - name: ks12_ukgsrc
+    description: Supply KEYGEN source.
+    bit_offset: 26
+    bit_size: 1
+  - name: ks12_uhwo
+    description: Hardware out key.
+    bit_offset: 27
+    bit_size: 1
+  - name: ks12_uwrpok
+    description: Ok to wrap key.
+    bit_offset: 28
+    bit_size: 1
+  - name: ks12_uduk
+    description: Device Unique Key.
+    bit_offset: 29
+    bit_size: 1
+  - name: ks12_upprot
+    description: Priviledge level.
+    bit_offset: 30
+    bit_size: 2
+fieldset/ElsAlphaFieldsetSierra:
+  description: Status Register.
+  fields:
+  - name: ks13_ksize
+    description: Key size.
+    bit_offset: 0
+    bit_size: 2
+    enum: ElsAlphaEnumWhiskey
+  - name: ks13_kact
+    description: Key is active.
+    bit_offset: 5
+    bit_size: 1
+  - name: ks13_kbase
+    description: First slot in a multislot key.
+    bit_offset: 6
+    bit_size: 1
+  - name: ks13_fgp
+    description: Hardware Feature General Purpose.
+    bit_offset: 7
+    bit_size: 1
+  - name: ks13_frtn
+    description: Hardware Feature Retention.
+    bit_offset: 8
+    bit_size: 1
+  - name: ks13_fhwo
+    description: Hardware Feature Output.
+    bit_offset: 9
+    bit_size: 1
+  - name: ks13_ukpuk
+    description: CMAC key.
+    bit_offset: 11
+    bit_size: 1
+  - name: ks13_utecdh
+    description: CMAC key.
+    bit_offset: 12
+    bit_size: 1
+  - name: ks13_ucmac
+    description: CMAC key.
+    bit_offset: 13
+    bit_size: 1
+  - name: ks13_uksk
+    description: KSK key.
+    bit_offset: 14
+    bit_size: 1
+  - name: ks13_urtf
+    description: Real Time Fingerprint key.
+    bit_offset: 15
+    bit_size: 1
+  - name: ks13_uckdf
+    description: Derivation key for CKDF command.
+    bit_offset: 16
+    bit_size: 1
+  - name: ks13_uhkdf
+    description: Derivation key for HKDF command.
+    bit_offset: 17
+    bit_size: 1
+  - name: ks13_uecsg
+    description: Ecc signing key.
+    bit_offset: 18
+    bit_size: 1
+  - name: ks13_uecdh
+    description: Ecc diffie hellman key.
+    bit_offset: 19
+    bit_size: 1
+  - name: ks13_uaes
+    description: Aes key.
+    bit_offset: 20
+    bit_size: 1
+  - name: ks13_uhmac
+    description: Hmac key.
+    bit_offset: 21
+    bit_size: 1
+  - name: ks13_ukwk
+    description: Key wrapping key.
+    bit_offset: 22
+    bit_size: 1
+  - name: ks13_ukuok
+    description: Key unwrapping key.
+    bit_offset: 23
+    bit_size: 1
+  - name: ks13_utlspms
+    description: TLS Pre Master Secret.
+    bit_offset: 24
+    bit_size: 1
+  - name: ks13_utlsms
+    description: TLS Master Secret.
+    bit_offset: 25
+    bit_size: 1
+  - name: ks13_ukgsrc
+    description: Supply KEYGEN source.
+    bit_offset: 26
+    bit_size: 1
+  - name: ks13_uhwo
+    description: Hardware out key.
+    bit_offset: 27
+    bit_size: 1
+  - name: ks13_uwrpok
+    description: Ok to wrap key.
+    bit_offset: 28
+    bit_size: 1
+  - name: ks13_uduk
+    description: Device Unique Key.
+    bit_offset: 29
+    bit_size: 1
+  - name: ks13_upprot
+    description: Priviledge level.
+    bit_offset: 30
+    bit_size: 2
+fieldset/ElsAlphaFieldsetTango:
+  description: Status Register.
+  fields:
+  - name: ks14_ksize
+    description: Key size.
+    bit_offset: 0
+    bit_size: 2
+    enum: ElsAlphaEnumXray
+  - name: ks14_kact
+    description: Key is active.
+    bit_offset: 5
+    bit_size: 1
+  - name: ks14_kbase
+    description: First slot in a multislot key.
+    bit_offset: 6
+    bit_size: 1
+  - name: ks14_fgp
+    description: Hardware Feature General Purpose.
+    bit_offset: 7
+    bit_size: 1
+  - name: ks14_frtn
+    description: Hardware Feature Retention.
+    bit_offset: 8
+    bit_size: 1
+  - name: ks14_fhwo
+    description: Hardware Feature Output.
+    bit_offset: 9
+    bit_size: 1
+  - name: ks14_ukpuk
+    description: CMAC key.
+    bit_offset: 11
+    bit_size: 1
+  - name: ks14_utecdh
+    description: CMAC key.
+    bit_offset: 12
+    bit_size: 1
+  - name: ks14_ucmac
+    description: CMAC key.
+    bit_offset: 13
+    bit_size: 1
+  - name: ks14_uksk
+    description: KSK key.
+    bit_offset: 14
+    bit_size: 1
+  - name: ks14_urtf
+    description: Real Time Fingerprint key.
+    bit_offset: 15
+    bit_size: 1
+  - name: ks14_uckdf
+    description: Derivation key for CKDF command.
+    bit_offset: 16
+    bit_size: 1
+  - name: ks14_uhkdf
+    description: Derivation key for HKDF command.
+    bit_offset: 17
+    bit_size: 1
+  - name: ks14_uecsg
+    description: Ecc signing key.
+    bit_offset: 18
+    bit_size: 1
+  - name: ks14_uecdh
+    description: Ecc diffie hellman key.
+    bit_offset: 19
+    bit_size: 1
+  - name: ks14_uaes
+    description: Aes key.
+    bit_offset: 20
+    bit_size: 1
+  - name: ks14_uhmac
+    description: Hmac key.
+    bit_offset: 21
+    bit_size: 1
+  - name: ks14_ukwk
+    description: Key wrapping key.
+    bit_offset: 22
+    bit_size: 1
+  - name: ks14_ukuok
+    description: Key unwrapping key.
+    bit_offset: 23
+    bit_size: 1
+  - name: ks14_utlspms
+    description: TLS Pre Master Secret.
+    bit_offset: 24
+    bit_size: 1
+  - name: ks14_utlsms
+    description: TLS Master Secret.
+    bit_offset: 25
+    bit_size: 1
+  - name: ks14_ukgsrc
+    description: Supply KEYGEN source.
+    bit_offset: 26
+    bit_size: 1
+  - name: ks14_uhwo
+    description: Hardware out key.
+    bit_offset: 27
+    bit_size: 1
+  - name: ks14_uwrpok
+    description: Ok to wrap key.
+    bit_offset: 28
+    bit_size: 1
+  - name: ks14_uduk
+    description: Device Unique Key.
+    bit_offset: 29
+    bit_size: 1
+  - name: ks14_upprot
+    description: Priviledge level.
+    bit_offset: 30
+    bit_size: 2
+fieldset/ElsAlphaFieldsetUniform:
+  description: Status Register.
+  fields:
+  - name: ks15_ksize
+    description: Key size.
+    bit_offset: 0
+    bit_size: 2
+    enum: ElsAlphaEnumYankee
+  - name: ks15_kact
+    description: Key is active.
+    bit_offset: 5
+    bit_size: 1
+  - name: ks15_kbase
+    description: First slot in a multislot key.
+    bit_offset: 6
+    bit_size: 1
+  - name: ks15_fgp
+    description: Hardware Feature General Purpose.
+    bit_offset: 7
+    bit_size: 1
+  - name: ks15_frtn
+    description: Hardware Feature Retention.
+    bit_offset: 8
+    bit_size: 1
+  - name: ks15_fhwo
+    description: Hardware Feature Output.
+    bit_offset: 9
+    bit_size: 1
+  - name: ks15_ukpuk
+    description: CMAC key.
+    bit_offset: 11
+    bit_size: 1
+  - name: ks15_utecdh
+    description: CMAC key.
+    bit_offset: 12
+    bit_size: 1
+  - name: ks15_ucmac
+    description: CMAC key.
+    bit_offset: 13
+    bit_size: 1
+  - name: ks15_uksk
+    description: KSK key.
+    bit_offset: 14
+    bit_size: 1
+  - name: ks15_urtf
+    description: Real Time Fingerprint key.
+    bit_offset: 15
+    bit_size: 1
+  - name: ks15_uckdf
+    description: Derivation key for CKDF command.
+    bit_offset: 16
+    bit_size: 1
+  - name: ks15_uhkdf
+    description: Derivation key for HKDF command.
+    bit_offset: 17
+    bit_size: 1
+  - name: ks15_uecsg
+    description: Ecc signing key.
+    bit_offset: 18
+    bit_size: 1
+  - name: ks15_uecdh
+    description: Ecc diffie hellman key.
+    bit_offset: 19
+    bit_size: 1
+  - name: ks15_uaes
+    description: Aes key.
+    bit_offset: 20
+    bit_size: 1
+  - name: ks15_uhmac
+    description: Hmac key.
+    bit_offset: 21
+    bit_size: 1
+  - name: ks15_ukwk
+    description: Key wrapping key.
+    bit_offset: 22
+    bit_size: 1
+  - name: ks15_ukuok
+    description: Key unwrapping key.
+    bit_offset: 23
+    bit_size: 1
+  - name: ks15_utlspms
+    description: TLS Pre Master Secret.
+    bit_offset: 24
+    bit_size: 1
+  - name: ks15_utlsms
+    description: TLS Master Secret.
+    bit_offset: 25
+    bit_size: 1
+  - name: ks15_ukgsrc
+    description: Supply KEYGEN source.
+    bit_offset: 26
+    bit_size: 1
+  - name: ks15_uhwo
+    description: Hardware out key.
+    bit_offset: 27
+    bit_size: 1
+  - name: ks15_uwrpok
+    description: Ok to wrap key.
+    bit_offset: 28
+    bit_size: 1
+  - name: ks15_uduk
+    description: Device Unique Key.
+    bit_offset: 29
+    bit_size: 1
+  - name: ks15_upprot
+    description: Priviledge level.
+    bit_offset: 30
+    bit_size: 2
+fieldset/ElsAlphaFieldsetVictor:
+  description: Status Register.
+  fields:
+  - name: ks16_ksize
+    description: Key size.
+    bit_offset: 0
+    bit_size: 2
+    enum: ElsAlphaEnumZulu
+  - name: ks16_kact
+    description: Key is active.
+    bit_offset: 5
+    bit_size: 1
+  - name: ks16_kbase
+    description: First slot in a multislot key.
+    bit_offset: 6
+    bit_size: 1
+  - name: ks16_fgp
+    description: Hardware Feature General Purpose.
+    bit_offset: 7
+    bit_size: 1
+  - name: ks16_frtn
+    description: Hardware Feature Retention.
+    bit_offset: 8
+    bit_size: 1
+  - name: ks16_fhwo
+    description: Hardware Feature Output.
+    bit_offset: 9
+    bit_size: 1
+  - name: ks16_ukpuk
+    description: CMAC key.
+    bit_offset: 11
+    bit_size: 1
+  - name: ks16_utecdh
+    description: CMAC key.
+    bit_offset: 12
+    bit_size: 1
+  - name: ks16_ucmac
+    description: CMAC key.
+    bit_offset: 13
+    bit_size: 1
+  - name: ks16_uksk
+    description: KSK key.
+    bit_offset: 14
+    bit_size: 1
+  - name: ks16_urtf
+    description: Real Time Fingerprint key.
+    bit_offset: 15
+    bit_size: 1
+  - name: ks16_uckdf
+    description: Derivation key for CKDF command.
+    bit_offset: 16
+    bit_size: 1
+  - name: ks16_uhkdf
+    description: Derivation key for HKDF command.
+    bit_offset: 17
+    bit_size: 1
+  - name: ks16_uecsg
+    description: Ecc signing key.
+    bit_offset: 18
+    bit_size: 1
+  - name: ks16_uecdh
+    description: Ecc diffie hellman key.
+    bit_offset: 19
+    bit_size: 1
+  - name: ks16_uaes
+    description: Aes key.
+    bit_offset: 20
+    bit_size: 1
+  - name: ks16_uhmac
+    description: Hmac key.
+    bit_offset: 21
+    bit_size: 1
+  - name: ks16_ukwk
+    description: Key wrapping key.
+    bit_offset: 22
+    bit_size: 1
+  - name: ks16_ukuok
+    description: Key unwrapping key.
+    bit_offset: 23
+    bit_size: 1
+  - name: ks16_utlspms
+    description: TLS Pre Master Secret.
+    bit_offset: 24
+    bit_size: 1
+  - name: ks16_utlsms
+    description: TLS Master Secret.
+    bit_offset: 25
+    bit_size: 1
+  - name: ks16_ukgsrc
+    description: Supply KEYGEN source.
+    bit_offset: 26
+    bit_size: 1
+  - name: ks16_uhwo
+    description: Hardware out key.
+    bit_offset: 27
+    bit_size: 1
+  - name: ks16_uwrpok
+    description: Ok to wrap key.
+    bit_offset: 28
+    bit_size: 1
+  - name: ks16_uduk
+    description: Device Unique Key.
+    bit_offset: 29
+    bit_size: 1
+  - name: ks16_upprot
+    description: Priviledge level.
+    bit_offset: 30
+    bit_size: 2
+fieldset/ElsAlphaFieldsetWhiskey:
+  description: Status Register.
+  fields:
+  - name: ks17_ksize
+    description: Key size.
+    bit_offset: 0
+    bit_size: 2
+    enum: ElsAlphaEnumAlphaAlpha
+  - name: ks17_kact
+    description: Key is active.
+    bit_offset: 5
+    bit_size: 1
+  - name: ks17_kbase
+    description: First slot in a multislot key.
+    bit_offset: 6
+    bit_size: 1
+  - name: ks17_fgp
+    description: Hardware Feature General Purpose.
+    bit_offset: 7
+    bit_size: 1
+  - name: ks17_frtn
+    description: Hardware Feature Retention.
+    bit_offset: 8
+    bit_size: 1
+  - name: ks17_fhwo
+    description: Hardware Feature Output.
+    bit_offset: 9
+    bit_size: 1
+  - name: ks17_ukpuk
+    description: CMAC key.
+    bit_offset: 11
+    bit_size: 1
+  - name: ks17_utecdh
+    description: CMAC key.
+    bit_offset: 12
+    bit_size: 1
+  - name: ks17_ucmac
+    description: CMAC key.
+    bit_offset: 13
+    bit_size: 1
+  - name: ks17_uksk
+    description: KSK key.
+    bit_offset: 14
+    bit_size: 1
+  - name: ks17_urtf
+    description: Real Time Fingerprint key.
+    bit_offset: 15
+    bit_size: 1
+  - name: ks17_uckdf
+    description: Derivation key for CKDF command.
+    bit_offset: 16
+    bit_size: 1
+  - name: ks17_uhkdf
+    description: Derivation key for HKDF command.
+    bit_offset: 17
+    bit_size: 1
+  - name: ks17_uecsg
+    description: Ecc signing key.
+    bit_offset: 18
+    bit_size: 1
+  - name: ks17_uecdh
+    description: Ecc diffie hellman key.
+    bit_offset: 19
+    bit_size: 1
+  - name: ks17_uaes
+    description: Aes key.
+    bit_offset: 20
+    bit_size: 1
+  - name: ks17_uhmac
+    description: Hmac key.
+    bit_offset: 21
+    bit_size: 1
+  - name: ks17_ukwk
+    description: Key wrapping key.
+    bit_offset: 22
+    bit_size: 1
+  - name: ks17_ukuok
+    description: Key unwrapping key.
+    bit_offset: 23
+    bit_size: 1
+  - name: ks17_utlspms
+    description: TLS Pre Master Secret.
+    bit_offset: 24
+    bit_size: 1
+  - name: ks17_utlsms
+    description: TLS Master Secret.
+    bit_offset: 25
+    bit_size: 1
+  - name: ks17_ukgsrc
+    description: Supply KEYGEN source.
+    bit_offset: 26
+    bit_size: 1
+  - name: ks17_uhwo
+    description: Hardware out key.
+    bit_offset: 27
+    bit_size: 1
+  - name: ks17_uwrpok
+    description: Ok to wrap key.
+    bit_offset: 28
+    bit_size: 1
+  - name: ks17_uduk
+    description: Device Unique Key.
+    bit_offset: 29
+    bit_size: 1
+  - name: ks17_upprot
+    description: Priviledge level.
+    bit_offset: 30
+    bit_size: 2
+fieldset/ElsAlphaFieldsetXray:
+  description: Status Register.
+  fields:
+  - name: ks18_ksize
+    description: Key size.
+    bit_offset: 0
+    bit_size: 2
+    enum: ElsAlphaEnumBravoAlpha
+  - name: ks18_kact
+    description: Key is active.
+    bit_offset: 5
+    bit_size: 1
+  - name: ks18_kbase
+    description: First slot in a multislot key.
+    bit_offset: 6
+    bit_size: 1
+  - name: ks18_fgp
+    description: Hardware Feature General Purpose.
+    bit_offset: 7
+    bit_size: 1
+  - name: ks18_frtn
+    description: Hardware Feature Retention.
+    bit_offset: 8
+    bit_size: 1
+  - name: ks18_fhwo
+    description: Hardware Feature Output.
+    bit_offset: 9
+    bit_size: 1
+  - name: ks18_ukpuk
+    description: CMAC key.
+    bit_offset: 11
+    bit_size: 1
+  - name: ks18_utecdh
+    description: CMAC key.
+    bit_offset: 12
+    bit_size: 1
+  - name: ks18_ucmac
+    description: CMAC key.
+    bit_offset: 13
+    bit_size: 1
+  - name: ks18_uksk
+    description: KSK key.
+    bit_offset: 14
+    bit_size: 1
+  - name: ks18_urtf
+    description: Real Time Fingerprint key.
+    bit_offset: 15
+    bit_size: 1
+  - name: ks18_uckdf
+    description: Derivation key for CKDF command.
+    bit_offset: 16
+    bit_size: 1
+  - name: ks18_uhkdf
+    description: Derivation key for HKDF command.
+    bit_offset: 17
+    bit_size: 1
+  - name: ks18_uecsg
+    description: Ecc signing key.
+    bit_offset: 18
+    bit_size: 1
+  - name: ks18_uecdh
+    description: Ecc diffie hellman key.
+    bit_offset: 19
+    bit_size: 1
+  - name: ks18_uaes
+    description: Aes key.
+    bit_offset: 20
+    bit_size: 1
+  - name: ks18_uhmac
+    description: Hmac key.
+    bit_offset: 21
+    bit_size: 1
+  - name: ks18_ukwk
+    description: Key wrapping key.
+    bit_offset: 22
+    bit_size: 1
+  - name: ks18_ukuok
+    description: Key unwrapping key.
+    bit_offset: 23
+    bit_size: 1
+  - name: ks18_utlspms
+    description: TLS Pre Master Secret.
+    bit_offset: 24
+    bit_size: 1
+  - name: ks18_utlsms
+    description: TLS Master Secret.
+    bit_offset: 25
+    bit_size: 1
+  - name: ks18_ukgsrc
+    description: Supply KEYGEN source.
+    bit_offset: 26
+    bit_size: 1
+  - name: ks18_uhwo
+    description: Hardware out key.
+    bit_offset: 27
+    bit_size: 1
+  - name: ks18_uwrpok
+    description: Ok to wrap key.
+    bit_offset: 28
+    bit_size: 1
+  - name: ks18_uduk
+    description: Device Unique Key.
+    bit_offset: 29
+    bit_size: 1
+  - name: ks18_upprot
+    description: Priviledge level.
+    bit_offset: 30
+    bit_size: 2
+fieldset/ElsAlphaFieldsetYankee:
+  description: Status Register.
+  fields:
+  - name: ks19_ksize
+    description: Key size.
+    bit_offset: 0
+    bit_size: 2
+    enum: ElsAlphaEnumCharlieAlpha
+  - name: ks19_kact
+    description: Key is active.
+    bit_offset: 5
+    bit_size: 1
+  - name: ks19_kbase
+    description: First slot in a multislot key.
+    bit_offset: 6
+    bit_size: 1
+  - name: ks19_fgp
+    description: Hardware Feature General Purpose.
+    bit_offset: 7
+    bit_size: 1
+  - name: ks19_frtn
+    description: Hardware Feature Retention.
+    bit_offset: 8
+    bit_size: 1
+  - name: ks19_fhwo
+    description: Hardware Feature Output.
+    bit_offset: 9
+    bit_size: 1
+  - name: ks19_ukpuk
+    description: CMAC key.
+    bit_offset: 11
+    bit_size: 1
+  - name: ks19_utecdh
+    description: CMAC key.
+    bit_offset: 12
+    bit_size: 1
+  - name: ks19_ucmac
+    description: CMAC key.
+    bit_offset: 13
+    bit_size: 1
+  - name: ks19_uksk
+    description: KSK key.
+    bit_offset: 14
+    bit_size: 1
+  - name: ks19_urtf
+    description: Real Time Fingerprint key.
+    bit_offset: 15
+    bit_size: 1
+  - name: ks19_uckdf
+    description: Derivation key for CKDF command.
+    bit_offset: 16
+    bit_size: 1
+  - name: ks19_uhkdf
+    description: Derivation key for HKDF command.
+    bit_offset: 17
+    bit_size: 1
+  - name: ks19_uecsg
+    description: Ecc signing key.
+    bit_offset: 18
+    bit_size: 1
+  - name: ks19_uecdh
+    description: Ecc diffie hellman key.
+    bit_offset: 19
+    bit_size: 1
+  - name: ks19_uaes
+    description: Aes key.
+    bit_offset: 20
+    bit_size: 1
+  - name: ks19_uhmac
+    description: Hmac key.
+    bit_offset: 21
+    bit_size: 1
+  - name: ks19_ukwk
+    description: Key wrapping key.
+    bit_offset: 22
+    bit_size: 1
+  - name: ks19_ukuok
+    description: Key unwrapping key.
+    bit_offset: 23
+    bit_size: 1
+  - name: ks19_utlspms
+    description: TLS Pre Master Secret.
+    bit_offset: 24
+    bit_size: 1
+  - name: ks19_utlsms
+    description: TLS Master Secret.
+    bit_offset: 25
+    bit_size: 1
+  - name: ks19_ukgsrc
+    description: Supply KEYGEN source.
+    bit_offset: 26
+    bit_size: 1
+  - name: ks19_uhwo
+    description: Hardware out key.
+    bit_offset: 27
+    bit_size: 1
+  - name: ks19_uwrpok
+    description: Ok to wrap key.
+    bit_offset: 28
+    bit_size: 1
+  - name: ks19_uduk
+    description: Device Unique Key.
+    bit_offset: 29
+    bit_size: 1
+  - name: ks19_upprot
+    description: Priviledge level.
+    bit_offset: 30
+    bit_size: 2
+fieldset/ElsAlphaFieldsetZulu:
+  description: Status Register.
+  fields:
+  - name: ks2_ksize
+    description: Key size.
+    bit_offset: 0
+    bit_size: 2
+    enum: ElsAlphaEnumEchoAlpha
+  - name: ks2_kact
+    description: Key is active.
+    bit_offset: 5
+    bit_size: 1
+  - name: ks2_kbase
+    description: First slot in a multislot key.
+    bit_offset: 6
+    bit_size: 1
+  - name: ks2_fgp
+    description: Hardware Feature General Purpose.
+    bit_offset: 7
+    bit_size: 1
+  - name: ks2_frtn
+    description: Hardware Feature Retention.
+    bit_offset: 8
+    bit_size: 1
+  - name: ks2_fhwo
+    description: Hardware Feature Output.
+    bit_offset: 9
+    bit_size: 1
+  - name: ks2_ukpuk
+    description: CMAC key.
+    bit_offset: 11
+    bit_size: 1
+  - name: ks2_utecdh
+    description: CMAC key.
+    bit_offset: 12
+    bit_size: 1
+  - name: ks2_ucmac
+    description: CMAC key.
+    bit_offset: 13
+    bit_size: 1
+  - name: ks2_uksk
+    description: KSK key.
+    bit_offset: 14
+    bit_size: 1
+  - name: ks2_urtf
+    description: Real Time Fingerprint key.
+    bit_offset: 15
+    bit_size: 1
+  - name: ks2_uckdf
+    description: Derivation key for CKDF command.
+    bit_offset: 16
+    bit_size: 1
+  - name: ks2_uhkdf
+    description: Derivation key for HKDF command.
+    bit_offset: 17
+    bit_size: 1
+  - name: ks2_uecsg
+    description: Ecc signing key.
+    bit_offset: 18
+    bit_size: 1
+  - name: ks2_uecdh
+    description: Ecc diffie hellman key.
+    bit_offset: 19
+    bit_size: 1
+  - name: ks2_uaes
+    description: Aes key.
+    bit_offset: 20
+    bit_size: 1
+  - name: ks2_uhmac
+    description: Hmac key.
+    bit_offset: 21
+    bit_size: 1
+  - name: ks2_ukwk
+    description: Key wrapping key.
+    bit_offset: 22
+    bit_size: 1
+  - name: ks2_ukuok
+    description: Key unwrapping key.
+    bit_offset: 23
+    bit_size: 1
+  - name: ks2_utlspms
+    description: TLS Pre Master Secret.
+    bit_offset: 24
+    bit_size: 1
+  - name: ks2_utlsms
+    description: TLS Master Secret.
+    bit_offset: 25
+    bit_size: 1
+  - name: ks2_ukgsrc
+    description: Supply KEYGEN source.
+    bit_offset: 26
+    bit_size: 1
+  - name: ks2_uhwo
+    description: Hardware out key.
+    bit_offset: 27
+    bit_size: 1
+  - name: ks2_uwrpok
+    description: Ok to wrap key.
+    bit_offset: 28
+    bit_size: 1
+  - name: ks2_uduk
+    description: Device Unique Key.
+    bit_offset: 29
+    bit_size: 1
+  - name: ks2_upprot
+    description: Priviledge level.
+    bit_offset: 30
+    bit_size: 2
+fieldset/ElsAlphaFieldsetAlphaAlpha:
+  description: Status Register.
+  fields:
+  - name: ks3_ksize
+    description: Key size.
+    bit_offset: 0
+    bit_size: 2
+    enum: ElsAlphaEnumFoxtrotAlpha
+  - name: ks3_kact
+    description: Key is active.
+    bit_offset: 5
+    bit_size: 1
+  - name: ks3_kbase
+    description: First slot in a multislot key.
+    bit_offset: 6
+    bit_size: 1
+  - name: ks3_fgp
+    description: Hardware Feature General Purpose.
+    bit_offset: 7
+    bit_size: 1
+  - name: ks3_frtn
+    description: Hardware Feature Retention.
+    bit_offset: 8
+    bit_size: 1
+  - name: ks3_fhwo
+    description: Hardware Feature Output.
+    bit_offset: 9
+    bit_size: 1
+  - name: ks3_ukpuk
+    description: CMAC key.
+    bit_offset: 11
+    bit_size: 1
+  - name: ks3_utecdh
+    description: CMAC key.
+    bit_offset: 12
+    bit_size: 1
+  - name: ks3_ucmac
+    description: CMAC key.
+    bit_offset: 13
+    bit_size: 1
+  - name: ks3_uksk
+    description: KSK key.
+    bit_offset: 14
+    bit_size: 1
+  - name: ks3_urtf
+    description: Real Time Fingerprint key.
+    bit_offset: 15
+    bit_size: 1
+  - name: ks3_uckdf
+    description: Derivation key for CKDF command.
+    bit_offset: 16
+    bit_size: 1
+  - name: ks3_uhkdf
+    description: Derivation key for HKDF command.
+    bit_offset: 17
+    bit_size: 1
+  - name: ks3_uecsg
+    description: Ecc signing key.
+    bit_offset: 18
+    bit_size: 1
+  - name: ks3_uecdh
+    description: Ecc diffie hellman key.
+    bit_offset: 19
+    bit_size: 1
+  - name: ks3_uaes
+    description: Aes key.
+    bit_offset: 20
+    bit_size: 1
+  - name: ks3_uhmac
+    description: Hmac key.
+    bit_offset: 21
+    bit_size: 1
+  - name: ks3_ukwk
+    description: Key wrapping key.
+    bit_offset: 22
+    bit_size: 1
+  - name: ks3_ukuok
+    description: Key unwrapping key.
+    bit_offset: 23
+    bit_size: 1
+  - name: ks3_utlspms
+    description: TLS Pre Master Secret.
+    bit_offset: 24
+    bit_size: 1
+  - name: ks3_utlsms
+    description: TLS Master Secret.
+    bit_offset: 25
+    bit_size: 1
+  - name: ks3_ukgsrc
+    description: Supply KEYGEN source.
+    bit_offset: 26
+    bit_size: 1
+  - name: ks3_uhwo
+    description: Hardware out key.
+    bit_offset: 27
+    bit_size: 1
+  - name: ks3_uwrpok
+    description: Ok to wrap key.
+    bit_offset: 28
+    bit_size: 1
+  - name: ks3_uduk
+    description: Device Unique Key.
+    bit_offset: 29
+    bit_size: 1
+  - name: ks3_upprot
+    description: Priviledge level.
+    bit_offset: 30
+    bit_size: 2
+fieldset/ElsAlphaFieldsetBravoAlpha:
+  description: Status Register.
+  fields:
+  - name: ks4_ksize
+    description: Key size.
+    bit_offset: 0
+    bit_size: 2
+    enum: ElsAlphaEnumGolfAlpha
+  - name: ks4_kact
+    description: Key is active.
+    bit_offset: 5
+    bit_size: 1
+  - name: ks4_kbase
+    description: First slot in a multislot key.
+    bit_offset: 6
+    bit_size: 1
+  - name: ks4_fgp
+    description: Hardware Feature General Purpose.
+    bit_offset: 7
+    bit_size: 1
+  - name: ks4_frtn
+    description: Hardware Feature Retention.
+    bit_offset: 8
+    bit_size: 1
+  - name: ks4_fhwo
+    description: Hardware Feature Output.
+    bit_offset: 9
+    bit_size: 1
+  - name: ks4_ukpuk
+    description: CMAC key.
+    bit_offset: 11
+    bit_size: 1
+  - name: ks4_utecdh
+    description: CMAC key.
+    bit_offset: 12
+    bit_size: 1
+  - name: ks4_ucmac
+    description: CMAC key.
+    bit_offset: 13
+    bit_size: 1
+  - name: ks4_uksk
+    description: KSK key.
+    bit_offset: 14
+    bit_size: 1
+  - name: ks4_urtf
+    description: Real Time Fingerprint key.
+    bit_offset: 15
+    bit_size: 1
+  - name: ks4_uckdf
+    description: Derivation key for CKDF command.
+    bit_offset: 16
+    bit_size: 1
+  - name: ks4_uhkdf
+    description: Derivation key for HKDF command.
+    bit_offset: 17
+    bit_size: 1
+  - name: ks4_uecsg
+    description: Ecc signing key.
+    bit_offset: 18
+    bit_size: 1
+  - name: ks4_uecdh
+    description: Ecc diffie hellman key.
+    bit_offset: 19
+    bit_size: 1
+  - name: ks4_uaes
+    description: Aes key.
+    bit_offset: 20
+    bit_size: 1
+  - name: ks4_uhmac
+    description: Hmac key.
+    bit_offset: 21
+    bit_size: 1
+  - name: ks4_ukwk
+    description: Key wrapping key.
+    bit_offset: 22
+    bit_size: 1
+  - name: ks4_ukuok
+    description: Key unwrapping key.
+    bit_offset: 23
+    bit_size: 1
+  - name: ks4_utlspms
+    description: TLS Pre Master Secret.
+    bit_offset: 24
+    bit_size: 1
+  - name: ks4_utlsms
+    description: TLS Master Secret.
+    bit_offset: 25
+    bit_size: 1
+  - name: ks4_ukgsrc
+    description: Supply KEYGEN source.
+    bit_offset: 26
+    bit_size: 1
+  - name: ks4_uhwo
+    description: Hardware out key.
+    bit_offset: 27
+    bit_size: 1
+  - name: ks4_uwrpok
+    description: Ok to wrap key.
+    bit_offset: 28
+    bit_size: 1
+  - name: ks4_uduk
+    description: Device Unique Key.
+    bit_offset: 29
+    bit_size: 1
+  - name: ks4_upprot
+    description: Priviledge level.
+    bit_offset: 30
+    bit_size: 2
+fieldset/ElsAlphaFieldsetCharlieAlpha:
+  description: Status Register.
+  fields:
+  - name: ks5_ksize
+    description: Key size.
+    bit_offset: 0
+    bit_size: 2
+    enum: ElsAlphaEnumHotelAlpha
+  - name: ks5_kact
+    description: Key is active.
+    bit_offset: 5
+    bit_size: 1
+  - name: ks5_kbase
+    description: First slot in a multislot key.
+    bit_offset: 6
+    bit_size: 1
+  - name: ks5_fgp
+    description: Hardware Feature General Purpose.
+    bit_offset: 7
+    bit_size: 1
+  - name: ks5_frtn
+    description: Hardware Feature Retention.
+    bit_offset: 8
+    bit_size: 1
+  - name: ks5_fhwo
+    description: Hardware Feature Output.
+    bit_offset: 9
+    bit_size: 1
+  - name: ks5_ukpuk
+    description: CMAC key.
+    bit_offset: 11
+    bit_size: 1
+  - name: ks5_utecdh
+    description: CMAC key.
+    bit_offset: 12
+    bit_size: 1
+  - name: ks5_ucmac
+    description: CMAC key.
+    bit_offset: 13
+    bit_size: 1
+  - name: ks5_uksk
+    description: KSK key.
+    bit_offset: 14
+    bit_size: 1
+  - name: ks5_urtf
+    description: Real Time Fingerprint key.
+    bit_offset: 15
+    bit_size: 1
+  - name: ks5_uckdf
+    description: Derivation key for CKDF command.
+    bit_offset: 16
+    bit_size: 1
+  - name: ks5_uhkdf
+    description: Derivation key for HKDF command.
+    bit_offset: 17
+    bit_size: 1
+  - name: ks5_uecsg
+    description: Ecc signing key.
+    bit_offset: 18
+    bit_size: 1
+  - name: ks5_uecdh
+    description: Ecc diffie hellman key.
+    bit_offset: 19
+    bit_size: 1
+  - name: ks5_uaes
+    description: Aes key.
+    bit_offset: 20
+    bit_size: 1
+  - name: ks5_uhmac
+    description: Hmac key.
+    bit_offset: 21
+    bit_size: 1
+  - name: ks5_ukwk
+    description: Key wrapping key.
+    bit_offset: 22
+    bit_size: 1
+  - name: ks5_ukuok
+    description: Key unwrapping key.
+    bit_offset: 23
+    bit_size: 1
+  - name: ks5_utlspms
+    description: TLS Pre Master Secret.
+    bit_offset: 24
+    bit_size: 1
+  - name: ks5_utlsms
+    description: TLS Master Secret.
+    bit_offset: 25
+    bit_size: 1
+  - name: ks5_ukgsrc
+    description: Supply KEYGEN source.
+    bit_offset: 26
+    bit_size: 1
+  - name: ks5_uhwo
+    description: Hardware out key.
+    bit_offset: 27
+    bit_size: 1
+  - name: ks5_uwrpok
+    description: Ok to wrap key.
+    bit_offset: 28
+    bit_size: 1
+  - name: ks5_uduk
+    description: Device Unique Key.
+    bit_offset: 29
+    bit_size: 1
+  - name: ks5_upprot
+    description: Priviledge level.
+    bit_offset: 30
+    bit_size: 2
+fieldset/ElsAlphaFieldsetDeltaAlpha:
+  description: Status Register.
+  fields:
+  - name: ks6_ksize
+    description: Key size.
+    bit_offset: 0
+    bit_size: 2
+    enum: ElsAlphaEnumIndiaAlpha
+  - name: ks6_kact
+    description: Key is active.
+    bit_offset: 5
+    bit_size: 1
+  - name: ks6_kbase
+    description: First slot in a multislot key.
+    bit_offset: 6
+    bit_size: 1
+  - name: ks6_fgp
+    description: Hardware Feature General Purpose.
+    bit_offset: 7
+    bit_size: 1
+  - name: ks6_frtn
+    description: Hardware Feature Retention.
+    bit_offset: 8
+    bit_size: 1
+  - name: ks6_fhwo
+    description: Hardware Feature Output.
+    bit_offset: 9
+    bit_size: 1
+  - name: ks6_ukpuk
+    description: CMAC key.
+    bit_offset: 11
+    bit_size: 1
+  - name: ks6_utecdh
+    description: CMAC key.
+    bit_offset: 12
+    bit_size: 1
+  - name: ks6_ucmac
+    description: CMAC key.
+    bit_offset: 13
+    bit_size: 1
+  - name: ks6_uksk
+    description: KSK key.
+    bit_offset: 14
+    bit_size: 1
+  - name: ks6_urtf
+    description: Real Time Fingerprint key.
+    bit_offset: 15
+    bit_size: 1
+  - name: ks6_uckdf
+    description: Derivation key for CKDF command.
+    bit_offset: 16
+    bit_size: 1
+  - name: ks6_uhkdf
+    description: Derivation key for HKDF command.
+    bit_offset: 17
+    bit_size: 1
+  - name: ks6_uecsg
+    description: Ecc signing key.
+    bit_offset: 18
+    bit_size: 1
+  - name: ks6_uecdh
+    description: Ecc diffie hellman key.
+    bit_offset: 19
+    bit_size: 1
+  - name: ks6_uaes
+    description: Aes key.
+    bit_offset: 20
+    bit_size: 1
+  - name: ks6_uhmac
+    description: Hmac key.
+    bit_offset: 21
+    bit_size: 1
+  - name: ks6_ukwk
+    description: Key wrapping key.
+    bit_offset: 22
+    bit_size: 1
+  - name: ks6_ukuok
+    description: Key unwrapping key.
+    bit_offset: 23
+    bit_size: 1
+  - name: ks6_utlspms
+    description: TLS Pre Master Secret.
+    bit_offset: 24
+    bit_size: 1
+  - name: ks6_utlsms
+    description: TLS Master Secret.
+    bit_offset: 25
+    bit_size: 1
+  - name: ks6_ukgsrc
+    description: Supply KEYGEN source.
+    bit_offset: 26
+    bit_size: 1
+  - name: ks6_uhwo
+    description: Hardware out key.
+    bit_offset: 27
+    bit_size: 1
+  - name: ks6_uwrpok
+    description: Ok to wrap key.
+    bit_offset: 28
+    bit_size: 1
+  - name: ks6_uduk
+    description: Device Unique Key.
+    bit_offset: 29
+    bit_size: 1
+  - name: ks6_upprot
+    description: Priviledge level.
+    bit_offset: 30
+    bit_size: 2
+fieldset/ElsAlphaFieldsetEchoAlpha:
+  description: Status Register.
+  fields:
+  - name: ks7_ksize
+    description: Key size.
+    bit_offset: 0
+    bit_size: 2
+    enum: ElsAlphaEnumJulietAlpha
+  - name: ks7_kact
+    description: Key is active.
+    bit_offset: 5
+    bit_size: 1
+  - name: ks7_kbase
+    description: First slot in a multislot key.
+    bit_offset: 6
+    bit_size: 1
+  - name: ks7_fgp
+    description: Hardware Feature General Purpose.
+    bit_offset: 7
+    bit_size: 1
+  - name: ks7_frtn
+    description: Hardware Feature Retention.
+    bit_offset: 8
+    bit_size: 1
+  - name: ks7_fhwo
+    description: Hardware Feature Output.
+    bit_offset: 9
+    bit_size: 1
+  - name: ks7_ukpuk
+    description: CMAC key.
+    bit_offset: 11
+    bit_size: 1
+  - name: ks7_utecdh
+    description: CMAC key.
+    bit_offset: 12
+    bit_size: 1
+  - name: ks7_ucmac
+    description: CMAC key.
+    bit_offset: 13
+    bit_size: 1
+  - name: ks7_uksk
+    description: KSK key.
+    bit_offset: 14
+    bit_size: 1
+  - name: ks7_urtf
+    description: Real Time Fingerprint key.
+    bit_offset: 15
+    bit_size: 1
+  - name: ks7_uckdf
+    description: Derivation key for CKDF command.
+    bit_offset: 16
+    bit_size: 1
+  - name: ks7_uhkdf
+    description: Derivation key for HKDF command.
+    bit_offset: 17
+    bit_size: 1
+  - name: ks7_uecsg
+    description: Ecc signing key.
+    bit_offset: 18
+    bit_size: 1
+  - name: ks7_uecdh
+    description: Ecc diffie hellman key.
+    bit_offset: 19
+    bit_size: 1
+  - name: ks7_uaes
+    description: Aes key.
+    bit_offset: 20
+    bit_size: 1
+  - name: ks7_uhmac
+    description: Hmac key.
+    bit_offset: 21
+    bit_size: 1
+  - name: ks7_ukwk
+    description: Key wrapping key.
+    bit_offset: 22
+    bit_size: 1
+  - name: ks7_ukuok
+    description: Key unwrapping key.
+    bit_offset: 23
+    bit_size: 1
+  - name: ks7_utlspms
+    description: TLS Pre Master Secret.
+    bit_offset: 24
+    bit_size: 1
+  - name: ks7_utlsms
+    description: TLS Master Secret.
+    bit_offset: 25
+    bit_size: 1
+  - name: ks7_ukgsrc
+    description: Supply KEYGEN source.
+    bit_offset: 26
+    bit_size: 1
+  - name: ks7_uhwo
+    description: Hardware out key.
+    bit_offset: 27
+    bit_size: 1
+  - name: ks7_uwrpok
+    description: Ok to wrap key.
+    bit_offset: 28
+    bit_size: 1
+  - name: ks7_uduk
+    description: Device Unique Key.
+    bit_offset: 29
+    bit_size: 1
+  - name: ks7_upprot
+    description: Priviledge level.
+    bit_offset: 30
+    bit_size: 2
+fieldset/ElsAlphaFieldsetFoxtrotAlpha:
+  description: Status Register.
+  fields:
+  - name: ks8_ksize
+    description: Key size.
+    bit_offset: 0
+    bit_size: 2
+    enum: ElsAlphaEnumKiloAlpha
+  - name: ks8_kact
+    description: Key is active.
+    bit_offset: 5
+    bit_size: 1
+  - name: ks8_kbase
+    description: First slot in a multislot key.
+    bit_offset: 6
+    bit_size: 1
+  - name: ks8_fgp
+    description: Hardware Feature General Purpose.
+    bit_offset: 7
+    bit_size: 1
+  - name: ks8_frtn
+    description: Hardware Feature Retention.
+    bit_offset: 8
+    bit_size: 1
+  - name: ks8_fhwo
+    description: Hardware Feature Output.
+    bit_offset: 9
+    bit_size: 1
+  - name: ks8_ukpuk
+    description: CMAC key.
+    bit_offset: 11
+    bit_size: 1
+  - name: ks8_utecdh
+    description: CMAC key.
+    bit_offset: 12
+    bit_size: 1
+  - name: ks8_ucmac
+    description: CMAC key.
+    bit_offset: 13
+    bit_size: 1
+  - name: ks8_uksk
+    description: KSK key.
+    bit_offset: 14
+    bit_size: 1
+  - name: ks8_urtf
+    description: Real Time Fingerprint key.
+    bit_offset: 15
+    bit_size: 1
+  - name: ks8_uckdf
+    description: Derivation key for CKDF command.
+    bit_offset: 16
+    bit_size: 1
+  - name: ks8_uhkdf
+    description: Derivation key for HKDF command.
+    bit_offset: 17
+    bit_size: 1
+  - name: ks8_uecsg
+    description: Ecc signing key.
+    bit_offset: 18
+    bit_size: 1
+  - name: ks8_uecdh
+    description: Ecc diffie hellman key.
+    bit_offset: 19
+    bit_size: 1
+  - name: ks8_uaes
+    description: Aes key.
+    bit_offset: 20
+    bit_size: 1
+  - name: ks8_uhmac
+    description: Hmac key.
+    bit_offset: 21
+    bit_size: 1
+  - name: ks8_ukwk
+    description: Key wrapping key.
+    bit_offset: 22
+    bit_size: 1
+  - name: ks8_ukuok
+    description: Key unwrapping key.
+    bit_offset: 23
+    bit_size: 1
+  - name: ks8_utlspms
+    description: TLS Pre Master Secret.
+    bit_offset: 24
+    bit_size: 1
+  - name: ks8_utlsms
+    description: TLS Master Secret.
+    bit_offset: 25
+    bit_size: 1
+  - name: ks8_ukgsrc
+    description: Supply KEYGEN source.
+    bit_offset: 26
+    bit_size: 1
+  - name: ks8_uhwo
+    description: Hardware out key.
+    bit_offset: 27
+    bit_size: 1
+  - name: ks8_uwrpok
+    description: Ok to wrap key.
+    bit_offset: 28
+    bit_size: 1
+  - name: ks8_uduk
+    description: Device Unique Key.
+    bit_offset: 29
+    bit_size: 1
+  - name: ks8_upprot
+    description: Priviledge level.
+    bit_offset: 30
+    bit_size: 2
+fieldset/ElsAlphaFieldsetGolfAlpha:
+  description: Status Register.
+  fields:
+  - name: ks9_ksize
+    description: Key size.
+    bit_offset: 0
+    bit_size: 2
+    enum: ElsAlphaEnumLimaAlpha
+  - name: ks9_kact
+    description: Key is active.
+    bit_offset: 5
+    bit_size: 1
+  - name: ks9_kbase
+    description: First slot in a multislot key.
+    bit_offset: 6
+    bit_size: 1
+  - name: ks9_fgp
+    description: Hardware Feature General Purpose.
+    bit_offset: 7
+    bit_size: 1
+  - name: ks9_frtn
+    description: Hardware Feature Retention.
+    bit_offset: 8
+    bit_size: 1
+  - name: ks9_fhwo
+    description: Hardware Feature Output.
+    bit_offset: 9
+    bit_size: 1
+  - name: ks9_ukpuk
+    description: CMAC key.
+    bit_offset: 11
+    bit_size: 1
+  - name: ks9_utecdh
+    description: CMAC key.
+    bit_offset: 12
+    bit_size: 1
+  - name: ks9_ucmac
+    description: CMAC key.
+    bit_offset: 13
+    bit_size: 1
+  - name: ks9_uksk
+    description: KSK key.
+    bit_offset: 14
+    bit_size: 1
+  - name: ks9_urtf
+    description: Real Time Fingerprint key.
+    bit_offset: 15
+    bit_size: 1
+  - name: ks9_uckdf
+    description: Derivation key for CKDF command.
+    bit_offset: 16
+    bit_size: 1
+  - name: ks9_uhkdf
+    description: Derivation key for HKDF command.
+    bit_offset: 17
+    bit_size: 1
+  - name: ks9_uecsg
+    description: Ecc signing key.
+    bit_offset: 18
+    bit_size: 1
+  - name: ks9_uecdh
+    description: Ecc diffie hellman key.
+    bit_offset: 19
+    bit_size: 1
+  - name: ks9_uaes
+    description: Aes key.
+    bit_offset: 20
+    bit_size: 1
+  - name: ks9_uhmac
+    description: Hmac key.
+    bit_offset: 21
+    bit_size: 1
+  - name: ks9_ukwk
+    description: Key wrapping key.
+    bit_offset: 22
+    bit_size: 1
+  - name: ks9_ukuok
+    description: Key unwrapping key.
+    bit_offset: 23
+    bit_size: 1
+  - name: ks9_utlspms
+    description: TLS Pre Master Secret.
+    bit_offset: 24
+    bit_size: 1
+  - name: ks9_utlsms
+    description: TLS Master Secret.
+    bit_offset: 25
+    bit_size: 1
+  - name: ks9_ukgsrc
+    description: Supply KEYGEN source.
+    bit_offset: 26
+    bit_size: 1
+  - name: ks9_uhwo
+    description: Hardware out key.
+    bit_offset: 27
+    bit_size: 1
+  - name: ks9_uwrpok
+    description: Ok to wrap key.
+    bit_offset: 28
+    bit_size: 1
+  - name: ks9_uduk
+    description: Device Unique Key.
+    bit_offset: 29
+    bit_size: 1
+  - name: ks9_upprot
+    description: Priviledge level.
+    bit_offset: 30
+    bit_size: 2
+fieldset/ElsAlphaFieldsetHotelAlpha:
+  description: Error Status.
+  fields:
+  - name: bus_err
+    description: Indicates public or private bus access error.
+    bit_offset: 0
+    bit_size: 1
+    enum: ElsAlphaEnumBravo
+  - name: opn_err
+    description: Indicates operational error, that is, ELS has been incorrectly operated.
+    bit_offset: 1
+    bit_size: 1
+    enum: ElsAlphaEnumMikeAlpha
+  - name: alg_err
+    description: Indicates algorithm error; an internal algorithm has produced an unexpected result.
+    bit_offset: 2
+    bit_size: 1
+    enum: ElsAlphaEnumAlpha
+  - name: itg_err
+    description: Indicates data integrity error, that is, internal data integrity check has failed.
+    bit_offset: 3
+    bit_size: 1
+    enum: ElsAlphaEnumRomeo
+  - name: flt_err
+    description: Indicates hardware fault error; an attempt to change the value of an internal register.
+    bit_offset: 4
+    bit_size: 1
+    enum: ElsAlphaEnumPapa
+  - name: prng_err
+    description: Indicates user read of PRNG_DATOUT when STATUS[PRNG_RDY] is 0.
+    bit_offset: 5
+    bit_size: 1
+    enum: ElsAlphaEnumOscarAlpha
+  - name: err_lvl
+    description: 'Indicates the triggered error level: 0, 1 ,2.'
+    bit_offset: 6
+    bit_size: 2
+  - name: dtrng_err
+    description: TRNG unable to gather entropy with the current configuration.
+    bit_offset: 8
+    bit_size: 1
+    enum: ElsAlphaEnumHotel
+fieldset/ElsAlphaFieldsetIndiaAlpha:
+  description: Error Status Clear.
+  fields:
+  - name: err_clr
+    description: ELS error status bit.
+    bit_offset: 0
+    bit_size: 1
+    enum: ElsAlphaEnumOscar
+fieldset/ElsAlphaFieldsetJulietAlpha:
+  description: Interrupt Enable.
+  fields:
+  - name: int_en
+    description: Enables or disables the operation of the ELS interrupt output port.
+    bit_offset: 0
+    bit_size: 1
+    enum: ElsAlphaEnumQuebec
+fieldset/ElsAlphaFieldsetKiloAlpha:
+  description: Interrupt Status Clear.
+  fields:
+  - name: int_clr
+    description: Interrupt status clear bit.
+    bit_offset: 0
+    bit_size: 1
+fieldset/ElsAlphaFieldsetLimaAlpha:
+  description: Interrupt Status Set.
+  fields:
+  - name: int_set
+    description: Software triggered interrupt bit.
+    bit_offset: 0
+    bit_size: 1
+fieldset/ElsAlphaFieldsetMikeAlpha:
+  description: Keystore Index 0.
+  fields:
+  - name: kidx0
+    description: Selects the base 128-bit section of a key in ELS keystore.
+    bit_offset: 0
+    bit_size: 5
+fieldset/ElsAlphaFieldsetNovemberAlpha:
+  description: Keystore Index 1.
+  fields:
+  - name: kidx1
+    description: Selects the base 128-bit section of a key in ELS keystore.
+    bit_offset: 0
+    bit_size: 5
+fieldset/ElsAlphaFieldsetOscarAlpha:
+  description: Keystore Index 2.
+  fields:
+  - name: kidx2
+    description: Selects the base 128-bit section of a key in ELS keystore.
+    bit_offset: 0
+    bit_size: 5
+fieldset/ElsAlphaFieldsetPapaAlpha:
+  description: Key Properties Request.
+  fields:
+  - name: kpropin
+    description: Specifies requested properties of the key created by ELS command.
+    bit_offset: 0
+    bit_size: 32
+fieldset/ElsAlphaFieldsetQuebecAlpha:
+  description: Master ID.
+  fields:
+  - name: master_id
+    description: Sets the privileged master ID.
+    bit_offset: 0
+    bit_size: 5
+fieldset/ElsAlphaFieldsetRomeoAlpha:
+  description: PRNG SW Read Out.
+  fields:
+  - name: prng_datout
+    description: 32-bit wide pseudo-random number.
+    bit_offset: 0
+    bit_size: 32
+fieldset/ElsAlphaFieldsetSierraAlpha:
+  description: Session ID.
+  fields:
+  - name: session_id
+    description: Indicates the current value of the session ID.
+    bit_offset: 0
+    bit_size: 32
+fieldset/ElsAlphaFieldsetTangoAlpha:
+  description: Status Register.
+  fields:
+  - name: els_busy
+    description: When set, indicates the ELS is executing a crypto sequence.
+    bit_offset: 0
+    bit_size: 1
+    enum: ElsAlphaEnumJuliet
+  - name: els_irq
+    description: When set, indicates the ELS has an active interrupt.
+    bit_offset: 1
+    bit_size: 1
+    enum: ElsAlphaEnumMike
+  - name: els_err
+    description: When set, indicates the ELS has detected an internal error.
+    bit_offset: 2
+    bit_size: 1
+    enum: ElsAlphaEnumLima
+  - name: prng_rdy
+    description: When set, indicates the internal PRNG is ready.
+    bit_offset: 3
+    bit_size: 1
+    enum: ElsAlphaEnumPapaAlpha
+  - name: ecdsa_vfy_status
+    description: Signature verify result status.
+    bit_offset: 4
+    bit_size: 2
+    enum: ElsAlphaEnumIndia
+  - name: pprot
+    description: Current command privilege level.
+    bit_offset: 6
+    bit_size: 2
+    enum: ElsAlphaEnumNovemberAlpha
+  - name: drbg_ent_lvl
+    description: Entropy quality of the current DRBG instance.
+    bit_offset: 8
+    bit_size: 2
+    enum: ElsAlphaEnumFoxtrot
+  - name: dtrng_busy
+    description: When set, it indicates TRNG is gathering entropy.
+    bit_offset: 10
+    bit_size: 1
+    enum: ElsAlphaEnumGolf
+  - name: els_locked
+    description: When set, indicates that ELS is locked by a master.
+    bit_offset: 16
+    bit_size: 1
+    enum: ElsAlphaEnumNovember
+fieldset/ElsAlphaFieldsetUniformAlpha:
+  description: Version Register.
+  fields:
+  - name: z
+    description: Specifies the extended release version digit1; possible values are from 0-9.
+    bit_offset: 0
+    bit_size: 4
+  - name: y2
+    description: Specifies the minor release version digit0; possible values are from 0-9.
+    bit_offset: 4
+    bit_size: 4
+  - name: y1
+    description: Specifies the minor release version digit1; possible values are from 0-9.
+    bit_offset: 8
+    bit_size: 4
+  - name: x
+    description: Specifies the major release version; possible values are from 1-9.
+    bit_offset: 12
+    bit_size: 4
+  - name: sw_z
+    description: Specifies the software extended revision version; possible values are from 0-9.
+    bit_offset: 16
+    bit_size: 4
+  - name: sw_y2
+    description: Specifies the software minor release version digit0; possible values are from 0-9.
+    bit_offset: 20
+    bit_size: 4
+  - name: sw_y1
+    description: Specifies the software minor release version digit1; possible values are from 0-9.
+    bit_offset: 24
+    bit_size: 4
+  - name: sw_x
+    description: Specifies the software major release version; possible values are from 1-9.
+    bit_offset: 28
+    bit_size: 4
+enum/ElsAlphaEnumAlpha:
+  bit_size: 1
+  variants:
+  - name: Dis
+    description: No error.
+    value: 0
+  - name: En
+    description: Error occurred.
+    value: 1
+enum/ElsAlphaEnumBravo:
+  bit_size: 1
+  variants:
+  - name: Dis
+    description: No error.
+    value: 0
+  - name: En
+    description: Error occurred.
+    value: 1
+enum/ElsAlphaEnumCharlie:
+  bit_size: 1
+  variants:
+  - name: Big
+    description: Big endian.
+    value: 1
+  - name: Lit
+    description: Little endian.
+    value: 0
+enum/ElsAlphaEnumDelta:
+  bit_size: 1
+  variants:
+  - name: Clr
+    description: Enables the CRC command. The CRC command will be updated on completion of each ELS command.
+    value: 1
+  - name: Exit
+    description: Disables the CRC command CRC. The CRC command will not be updated on completion of each ELS command.
+    value: 0
+enum/ElsAlphaEnumEcho:
+  bit_size: 1
+  variants:
+  - name: Clr
+    description: Resets the CRC command to its default value.
+    value: 1
+  - name: Exit
+    description: No effect.
+    value: 0
+enum/ElsAlphaEnumFoxtrot:
+  bit_size: 2
+  variants:
+  - name: High
+    description: HIGH, DRBG generates random numbers of high quality entropy.
+    value: 2
+  - name: Low
+    description: LOW, DRBG generates random numbers of low quality entropy.
+    value: 1
+  - name: None
+    description: NONE.
+    value: 0
+enum/ElsAlphaEnumGolf:
+  bit_size: 1
+  variants:
+  - name: Ent
+    description: Gathering entropy.
+    value: 1
+  - name: Notent
+    description: Not gathering entropy.
+    value: 0
+enum/ElsAlphaEnumHotel:
+  bit_size: 1
+  variants:
+  - name: Dis
+    description: No error.
+    value: 0
+  - name: En
+    description: TRNG error occurred.
+    value: 1
+enum/ElsAlphaEnumIndia:
+  bit_size: 2
+  variants:
+  - name: Err
+    description: Invalid, Error.
+    value: 3
+  - name: NoVRun
+    description: No verify run.
+    value: 0
+  - name: SigFail
+    description: Signature verify failed.
+    value: 1
+  - name: SigPass
+    description: Signature verify passed.
+    value: 2
+enum/ElsAlphaEnumJuliet:
+  bit_size: 1
+  variants:
+  - name: Cryp
+    description: Crypto sequence executing.
+    value: 1
+  - name: Ntcry
+    description: Crypto sequence not executing.
+    value: 0
+enum/ElsAlphaEnumKilo:
+  bit_size: 1
+  variants:
+  - name: Dis
+    description: Disabled.
+    value: 0
+  - name: En
+    description: Enabled.
+    value: 1
+enum/ElsAlphaEnumLima:
+  bit_size: 1
+  variants:
+  - name: Err
+    description: Internal error detected.
+    value: 1
+  - name: Nterr
+    description: Internal error not detected.
+    value: 0
+enum/ElsAlphaEnumMike:
+  bit_size: 1
+  variants:
+  - name: Int
+    description: Active interrupt.
+    value: 1
+  - name: Ntint
+    description: No active interrupt.
+    value: 0
+enum/ElsAlphaEnumNovember:
+  bit_size: 1
+  variants:
+  - name: Lock
+    description: Locked by master.
+    value: 1
+  - name: Notl
+    description: Not locked by master.
+    value: 0
+enum/ElsAlphaEnumOscar:
+  bit_size: 1
+  variants:
+  - name: Clr
+    description: Clears ELS error state.
+    value: 1
+  - name: Exit
+    description: Exits ELS error state.
+    value: 0
+enum/ElsAlphaEnumPapa:
+  bit_size: 1
+  variants:
+  - name: Dis
+    description: No error.
+    value: 0
+  - name: En
+    description: Error occurred.
+    value: 1
+enum/ElsAlphaEnumQuebec:
+  bit_size: 1
+  variants:
+  - name: Dis
+    description: Disables.
+    value: 0
+  - name: En
+    description: Enables.
+    value: 1
+enum/ElsAlphaEnumRomeo:
+  bit_size: 1
+  variants:
+  - name: Dis
+    description: No error.
+    value: 0
+  - name: En
+    description: Error occurred.
+    value: 1
+enum/ElsAlphaEnumSierra:
+  bit_size: 2
+  variants:
+  - name: Size128
+    description: '128.'
+    value: 0
+  - name: Size256
+    description: '256.'
+    value: 1
+enum/ElsAlphaEnumTango:
+  bit_size: 2
+  variants:
+  - name: Size128
+    description: '128.'
+    value: 0
+  - name: Size256
+    description: '256.'
+    value: 1
+enum/ElsAlphaEnumUniform:
+  bit_size: 2
+  variants:
+  - name: Size128
+    description: '128.'
+    value: 0
+  - name: Size256
+    description: '256.'
+    value: 1
+enum/ElsAlphaEnumVictor:
+  bit_size: 2
+  variants:
+  - name: Size128
+    description: '128.'
+    value: 0
+  - name: Size256
+    description: '256.'
+    value: 1
+enum/ElsAlphaEnumWhiskey:
+  bit_size: 2
+  variants:
+  - name: Size128
+    description: '128.'
+    value: 0
+  - name: Size256
+    description: '256.'
+    value: 1
+enum/ElsAlphaEnumXray:
+  bit_size: 2
+  variants:
+  - name: Size128
+    description: '128.'
+    value: 0
+  - name: Size256
+    description: '256.'
+    value: 1
+enum/ElsAlphaEnumYankee:
+  bit_size: 2
+  variants:
+  - name: Size128
+    description: '128.'
+    value: 0
+  - name: Size256
+    description: '256.'
+    value: 1
+enum/ElsAlphaEnumZulu:
+  bit_size: 2
+  variants:
+  - name: Size128
+    description: '128.'
+    value: 0
+  - name: Size256
+    description: '256.'
+    value: 1
+enum/ElsAlphaEnumAlphaAlpha:
+  bit_size: 2
+  variants:
+  - name: Size128
+    description: '128.'
+    value: 0
+  - name: Size256
+    description: '256.'
+    value: 1
+enum/ElsAlphaEnumBravoAlpha:
+  bit_size: 2
+  variants:
+  - name: Size128
+    description: '128.'
+    value: 0
+  - name: Size256
+    description: '256.'
+    value: 1
+enum/ElsAlphaEnumCharlieAlpha:
+  bit_size: 2
+  variants:
+  - name: Size128
+    description: '128.'
+    value: 0
+  - name: Size256
+    description: '256.'
+    value: 1
+enum/ElsAlphaEnumDeltaAlpha:
+  bit_size: 2
+  variants:
+  - name: Size128
+    description: '128.'
+    value: 0
+  - name: Size256
+    description: '256.'
+    value: 1
+enum/ElsAlphaEnumEchoAlpha:
+  bit_size: 2
+  variants:
+  - name: Size128
+    description: '128.'
+    value: 0
+  - name: Size256
+    description: '256.'
+    value: 1
+enum/ElsAlphaEnumFoxtrotAlpha:
+  bit_size: 2
+  variants:
+  - name: Size128
+    description: '128.'
+    value: 0
+  - name: Size256
+    description: '256.'
+    value: 1
+enum/ElsAlphaEnumGolfAlpha:
+  bit_size: 2
+  variants:
+  - name: Size128
+    description: '128.'
+    value: 0
+  - name: Size256
+    description: '256.'
+    value: 1
+enum/ElsAlphaEnumHotelAlpha:
+  bit_size: 2
+  variants:
+  - name: Size128
+    description: '128.'
+    value: 0
+  - name: Size256
+    description: '256.'
+    value: 1
+enum/ElsAlphaEnumIndiaAlpha:
+  bit_size: 2
+  variants:
+  - name: Size128
+    description: '128.'
+    value: 0
+  - name: Size256
+    description: '256.'
+    value: 1
+enum/ElsAlphaEnumJulietAlpha:
+  bit_size: 2
+  variants:
+  - name: Size128
+    description: '128.'
+    value: 0
+  - name: Size256
+    description: '256.'
+    value: 1
+enum/ElsAlphaEnumKiloAlpha:
+  bit_size: 2
+  variants:
+  - name: Size128
+    description: '128.'
+    value: 0
+  - name: Size256
+    description: '256.'
+    value: 1
+enum/ElsAlphaEnumLimaAlpha:
+  bit_size: 2
+  variants:
+  - name: Size128
+    description: '128.'
+    value: 0
+  - name: Size256
+    description: '256.'
+    value: 1
+enum/ElsAlphaEnumMikeAlpha:
+  bit_size: 1
+  variants:
+  - name: Dis
+    description: No error.
+    value: 0
+  - name: En
+    description: Error occurred.
+    value: 1
+enum/ElsAlphaEnumNovemberAlpha:
+  bit_size: 2
+  variants:
+  - name: Nsecnp
+    description: Non-secure, non-privileged.
+    value: 2
+  - name: Nsecp
+    description: Non-secure, privileged.
+    value: 3
+  - name: Secnp
+    description: Secure, non-privileged.
+    value: 0
+  - name: Secp
+    description: Secure, privileged.
+    value: 1
+enum/ElsAlphaEnumOscarAlpha:
+  bit_size: 1
+  variants:
+  - name: Dis
+    description: No error.
+    value: 0
+  - name: En
+    description: Error occurred.
+    value: 1
+enum/ElsAlphaEnumPapaAlpha:
+  bit_size: 1
+  variants:
+  - name: Ntready
+    description: Internal PRNG not ready.
+    value: 0
+  - name: Ready
+    description: Internal PRNG ready.
+    value: 1

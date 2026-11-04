@@ -1,0 +1,783 @@
+# NXP mcux-soc-svd 7c1f00bdd6263f0b93466f5e73e5fc55a744b879; native chiptool import.
+# Source instance geometry is retained in explicit block variants; see private source bindings.
+# Unannotated fieldsets construct zero in software, not a claimed hardware reset.
+# Command/W1C/SET/CLR/TOG construction defaults are zero masks; no RMW semantics are implied.
+# Source: MCXN526_cm33_core0.xml ITRC0 sha256 ccb0c8ecf3573e24bb8c15a32bdec8a6f63b8870ced5bb7b9b629177f5f990f3
+# Source: MCXN526_cm33_core1.xml ITRC0 sha256 caf054982956506a2f2e6896e0b1e0eb1c3035684fd3093778a21bda218bfa09
+# Source: MCXN527_cm33_core0.xml ITRC0 sha256 5547fbb406e6e825ebc2f983518a5893814d62c3a6e2c5ad6075c49d939c8e17
+# Source: MCXN527_cm33_core1.xml ITRC0 sha256 daac6c4d6fdbbdc87d7557ed9e567801921eca1e8107fc3f9f38173be3c936e0
+# Source: MCXN536_cm33_core0.xml ITRC0 sha256 f9533e58d74eab222fc38608bd1d8dc45087e87b80a93f8b693e6cf2eb25cba4
+# Source: MCXN536_cm33_core1.xml ITRC0 sha256 c089aecac3d73a7d8fc4a8c0cccf77ea8446b22a2ea99f4f2f01a4e0ca3a2fdd
+# Source: MCXN537_cm33_core0.xml ITRC0 sha256 e72dbd80d33e6f53f05f11156fc20f6d53cf9848bc74fed80b5c34157455b11a
+# Source: MCXN537_cm33_core1.xml ITRC0 sha256 4d5f7d121166c4d720a9da81b90be1b2f93be5e71fd25b9dd74b8715ebe30dce
+# Source: MCXN546_cm33_core0.xml ITRC0 sha256 54e1fc060f9ccc17299bdb2da84159e699e87456276f2e695d440a6eb4aa9aad
+# Source: MCXN546_cm33_core1.xml ITRC0 sha256 ddb7e932730a51c75f544efd6564ad6dbce5b3eca0a7befb7ab5b74a9951b937
+# Source: MCXN547_cm33_core0.xml ITRC0 sha256 a276aee072bebd57c18929fe9a74408366fdbb42b918e06be5a3783a4aae4db7
+# Source: MCXN547_cm33_core1.xml ITRC0 sha256 4a265743bdd2130cdd37ef12b9fd1d538cce9a2eac1c9149db291b7638e61423
+# Explicit reserved/RFU/SBZ fields omitted; exact source-field ledger retained in reserved-fields-removed.json.
+# Explicit reserved/RFU/SBZ fields omitted; exact source-field ledger retained in reserved-fields-removed.json.
+block/ItrcAlpha:
+  description: Intrusion and Tamper Response Controller.
+  items:
+  - name: status
+    description: ITRC outputs and IN0 to IN15 Status.
+    byte_offset: 0
+    fieldset: ItrcAlphaFieldsetDelta
+  - name: status1
+    description: ITRC IN16 to IN47 Status.
+    byte_offset: 4
+    fieldset: ItrcAlphaFieldsetEcho
+  - name: ou_tx_sel
+    description: 'Array of registers: OUT_SEL[%s].'
+    array:
+      len: 7
+      stride: 8
+    byte_offset: 8
+    block: ItrcAlphaBlockBravo
+  - name: ou_tx_sel_1
+    description: 'Array of registers: OUT_SEL_1[%s].'
+    array:
+      len: 7
+      stride: 8
+    byte_offset: 72
+    block: ItrcAlphaBlockCharlie
+  - name: ou_tx_sel_2
+    description: 'Array of registers: OUT_SEL_2[%s].'
+    array:
+      len: 7
+      stride: 8
+    byte_offset: 136
+    block: ItrcAlphaBlockDelta
+  - name: sw_event0
+    description: Software event 0.
+    byte_offset: 240
+    access: Write
+    fieldset: ItrcAlphaFieldsetFoxtrot
+  - name: sw_event1
+    description: Software event 1.
+    byte_offset: 244
+    access: Write
+    fieldset: ItrcAlphaFieldsetGolf
+block/ItrcAlphaBlockBravo:
+  description: 'Array of registers: OUT_SEL[%s].'
+  items:
+  - name: out_sel
+    description: Trigger Source IN0 to IN15 selector.
+    array:
+      len: 2
+      stride: 4
+    byte_offset: 0
+    fieldset: ItrcAlphaFieldsetAlpha
+block/ItrcAlphaBlockCharlie:
+  description: 'Array of registers: OUT_SEL_1[%s].'
+  items:
+  - name: out_sel_1
+    description: Trigger Source IN16 to IN31 selector.
+    array:
+      len: 2
+      stride: 4
+    byte_offset: 0
+    fieldset: ItrcAlphaFieldsetBravo
+block/ItrcAlphaBlockDelta:
+  description: 'Array of registers: OUT_SEL_2[%s].'
+  items:
+  - name: out_sel_2
+    description: Trigger source IN32 to IN47 selector.
+    array:
+      len: 2
+      stride: 4
+    byte_offset: 0
+    fieldset: ItrcAlphaFieldsetCharlie
+fieldset/ItrcAlphaFieldsetAlpha:
+  description: Trigger Source IN0 to IN15 selector.
+  fields:
+  - name: in0_se_ln
+    description: Selects digital glitch detector as a trigger source.
+    bit_offset: 0
+    bit_size: 2
+  - name: in1_se_ln
+    description: Selects TDET event as a trigger source.
+    bit_offset: 2
+    bit_size: 2
+  - name: in2_se_ln
+    description: Selects Code Watchdog 0 event as a trigger source.
+    bit_offset: 4
+    bit_size: 2
+  - name: in3_se_ln
+    description: Selects VBAT voltage tamper event as a trigger source.
+    bit_offset: 6
+    bit_size: 2
+  - name: in4_se_ln
+    description: Selects low-voltage event on VDD_CORE rail as a trigger source.
+    bit_offset: 8
+    bit_size: 2
+  - name: in5_se_ln
+    description: Selects Watchdog 0 timer event as a trigger source.
+    bit_offset: 10
+    bit_size: 2
+  - name: in6_se_ln
+    description: Selects Flash ECC mismatch event as a trigger source.
+    bit_offset: 12
+    bit_size: 2
+  - name: in7_se_ln
+    description: Selects AHB secure bus or MBC bus illegal access event as a trigger source.
+    bit_offset: 14
+    bit_size: 2
+  - name: in8_se_ln
+    description: Selects ELS error event as a trigger source.
+    bit_offset: 16
+    bit_size: 2
+  - name: in9_se_ln
+    description: Selects SPC VDD_CORE glitch detector as a trigger source.
+    bit_offset: 18
+    bit_size: 2
+  - name: in10_se_ln
+    description: Selects PKC error event as a trigger source.
+    bit_offset: 20
+    bit_size: 2
+  - name: in11_se_ln
+    description: Selects Code Watchdog 1 event as a trigger source.
+    bit_offset: 22
+    bit_size: 2
+  - name: in12_se_ln
+    description: Selects Watchdog 1 timer event as a trigger source.
+    bit_offset: 24
+    bit_size: 2
+  - name: in13_se_ln
+    description: Selects FREQME out of range status output as a trigger source.
+    bit_offset: 26
+    bit_size: 2
+  - name: in14_se_ln
+    description: Selects software event 0 as a trigger source.
+    bit_offset: 28
+    bit_size: 2
+  - name: in15_se_ln
+    description: Selects software event 1 as a trigger source.
+    bit_offset: 30
+    bit_size: 2
+fieldset/ItrcAlphaFieldsetBravo:
+  description: Trigger Source IN16 to IN31 selector.
+  fields:
+  - name: in16_se_ln
+    description: Selects SPC VDD_SYS_LVD detect as a trigger source.
+    bit_offset: 0
+    bit_size: 2
+  - name: in17_se_ln
+    description: Selects SPC VDD_IO_LVD detect as a trigger source.
+    bit_offset: 2
+    bit_size: 2
+  - name: in19_se_ln
+    description: Selects VBAT temperature tamper output event as a trigger source.
+    bit_offset: 6
+    bit_size: 2
+  - name: in20_se_ln
+    description: Selects VBAT clock tamper output event as a trigger source.
+    bit_offset: 8
+    bit_size: 2
+  - name: in21_se_ln
+    description: Selects INTM interrupt monitor error 0 event as a trigger source.
+    bit_offset: 10
+    bit_size: 2
+  - name: in22_se_ln
+    description: Selects INTM interrupt monitor error 1 event as a trigger source.
+    bit_offset: 12
+    bit_size: 2
+  - name: in23_se_ln
+    description: Selects INTM interrupt monitor error 2 event as a trigger source.
+    bit_offset: 14
+    bit_size: 2
+  - name: in24_se_ln
+    description: Selects INTM interrupt monitor error 3 event as a trigger source.
+    bit_offset: 16
+    bit_size: 2
+  - name: in25_se_ln
+    description: Selects MSF SOCTRIM 0 ECC error event as a trigger source.
+    bit_offset: 18
+    bit_size: 2
+  - name: in26_se_ln
+    description: Selects MSF SOCTRIM 1 ECC error event as a trigger source.
+    bit_offset: 20
+    bit_size: 2
+  - name: in27_se_ln
+    description: Selects MSF SOCTRIM 2 ECC error event as a trigger source.
+    bit_offset: 22
+    bit_size: 2
+  - name: in28_se_ln
+    description: Selects MSF SOCTRIM 3 ECC error event as a trigger source.
+    bit_offset: 24
+    bit_size: 2
+  - name: in29_se_ln
+    description: Selects MSF SOCTRIM 4 ECC error event as a trigger source.
+    bit_offset: 26
+    bit_size: 2
+  - name: in30_se_ln
+    description: Selects MSF SOCTRIM 5 ECC error event as a trigger source.
+    bit_offset: 28
+    bit_size: 2
+  - name: in31_se_ln
+    description: Selects MSF SOCTRIM 6 ECC error event as a trigger source.
+    bit_offset: 30
+    bit_size: 2
+fieldset/ItrcAlphaFieldsetCharlie:
+  description: Trigger source IN32 to IN47 selector.
+  fields:
+  - name: in32_se_ln
+    description: Selects MSF SOCTRIM 7 ECC error event as a trigger source.
+    bit_offset: 0
+    bit_size: 2
+  - name: in33_se_ln
+    description: Selects GDET0 & 1 SFR error detect as a trigger source.
+    bit_offset: 2
+    bit_size: 2
+  - name: in34_se_ln
+    description: Selects SPC VDD_CORE_HVD as a trigger source.
+    bit_offset: 4
+    bit_size: 2
+  - name: in35_se_ln
+    description: Selects VDD_SYS_HVD as a trigger source.
+    bit_offset: 6
+    bit_size: 2
+  - name: in36_se_ln
+    description: Selects VDD_IO_HVD as a trigger source.
+    bit_offset: 8
+    bit_size: 2
+  - name: in37_se_ln
+    description: Selects FLEXSPI GCM error as a trigger source.
+    bit_offset: 10
+    bit_size: 2
+  - name: in46_se_ln
+    description: Selects SM3 SGI error as a trigger source.
+    bit_offset: 28
+    bit_size: 2
+  - name: in47_se_ln
+    description: Selects TRNG HW Error as a trigger source.
+    bit_offset: 30
+    bit_size: 2
+fieldset/ItrcAlphaFieldsetDelta:
+  description: ITRC outputs and IN0 to IN15 Status.
+  fields:
+  - name: in0_status
+    description: GDET0 & 1 interrupt.
+    bit_offset: 0
+    bit_size: 1
+    enum: ItrcAlphaEnumAlpha
+  - name: in1_status
+    description: TDET tamper output.
+    bit_offset: 1
+    bit_size: 1
+    enum: ItrcAlphaEnumLima
+  - name: in2_status
+    description: Code Watchdog 0 interrupt.
+    bit_offset: 2
+    bit_size: 1
+    enum: ItrcAlphaEnumOscar
+  - name: in3_status
+    description: VBAT volt tamper output.
+    bit_offset: 3
+    bit_size: 1
+    enum: ItrcAlphaEnumVictor
+  - name: in4_status
+    description: SPC VDD_CORE_LVD detect.
+    bit_offset: 4
+    bit_size: 1
+    enum: ItrcAlphaEnumYankee
+  - name: in5_status
+    description: Watch Dog timer event occurred.
+    bit_offset: 5
+    bit_size: 1
+    enum: ItrcAlphaEnumZulu
+  - name: in6_status
+    description: Flash ECC mismatch event occurred.
+    bit_offset: 6
+    bit_size: 1
+    enum: ItrcAlphaEnumAlphaAlpha
+  - name: in7_status
+    description: AHB secure bus checkers detected illegal access.
+    bit_offset: 7
+    bit_size: 1
+    enum: ItrcAlphaEnumBravoAlpha
+  - name: in8_status
+    description: ELS error event occurred.
+    bit_offset: 8
+    bit_size: 1
+    enum: ItrcAlphaEnumCharlieAlpha
+  - name: in9_status
+    description: SPC VDD_CORE glitch detect event occurred.
+    bit_offset: 9
+    bit_size: 1
+    enum: ItrcAlphaEnumDeltaAlpha
+  - name: in10_status
+    description: PKC module detected an error event.
+    bit_offset: 10
+    bit_size: 1
+    enum: ItrcAlphaEnumBravo
+  - name: in11_status
+    description: Code Watchdog 1 interrupt.
+    bit_offset: 11
+    bit_size: 1
+    enum: ItrcAlphaEnumEcho
+  - name: in112_status
+    description: Watchdog 1 timer event interrupt.
+    bit_offset: 12
+    bit_size: 1
+    enum: ItrcAlphaEnumCharlie
+  - name: in113_status
+    description: FREQME out of range status output.
+    bit_offset: 13
+    bit_size: 1
+    enum: ItrcAlphaEnumDelta
+  - name: in14_status
+    description: Software event 0 occurred.
+    bit_offset: 14
+    bit_size: 1
+    enum: ItrcAlphaEnumFoxtrot
+  - name: in15_status
+    description: Software event 1 occurred.
+    bit_offset: 15
+    bit_size: 1
+    enum: ItrcAlphaEnumGolf
+  - name: out0_status
+    description: ITRC triggered ITRC_IRQ output.
+    bit_offset: 16
+    bit_size: 1
+    enum: ItrcAlphaEnumEchoAlpha
+  - name: out1_status
+    description: ITRC triggered ELS_RESET to clear ELS key store.
+    bit_offset: 17
+    bit_size: 1
+    enum: ItrcAlphaEnumFoxtrotAlpha
+  - name: out2_status
+    description: ITRC triggered PUF_ZEROIZE to clear PUF key store and RAM.
+    bit_offset: 18
+    bit_size: 1
+    enum: ItrcAlphaEnumGolfAlpha
+  - name: out3_status
+    description: ITRC triggered RAM_ZEROIZE.
+    bit_offset: 19
+    bit_size: 1
+    enum: ItrcAlphaEnumHotelAlpha
+  - name: out4_status
+    description: ITRC triggered CHIP_RESET to reset the chip after all other response process finished.
+    bit_offset: 20
+    bit_size: 1
+    enum: ItrcAlphaEnumIndiaAlpha
+  - name: out5_status
+    description: ITRC triggered TMPR_OUT0 internal signal connected to various on-chip multiplexers.
+    bit_offset: 21
+    bit_size: 1
+    enum: ItrcAlphaEnumJulietAlpha
+  - name: out6_status
+    description: ITRC triggered TMPR_OUT1 internal signal connected to various on-chip multiplexers.
+    bit_offset: 22
+    bit_size: 1
+    enum: ItrcAlphaEnumKiloAlpha
+fieldset/ItrcAlphaFieldsetEcho:
+  description: ITRC IN16 to IN47 Status.
+  fields:
+  - name: in16_status
+    description: SSPC VDD_SYS_LVD detect event occurred.
+    bit_offset: 0
+    bit_size: 1
+    enum: ItrcAlphaEnumHotel
+  - name: in17_status
+    description: SPC VDD_IO_LVD detect event occurred.
+    bit_offset: 1
+    bit_size: 1
+    enum: ItrcAlphaEnumIndia
+  - name: in20_status
+    description: VBAT clock tamper output event occurred.
+    bit_offset: 4
+    bit_size: 1
+    enum: ItrcAlphaEnumMike
+  - name: in24_21_status
+    description: INTM interrupt monitor error 3~0 event occurred.
+    bit_offset: 5
+    bit_size: 4
+    enum: ItrcAlphaEnumNovember
+  - name: in32_25_status
+    description: MSF SOCTRIM 7~0 ECC error event occurred.
+    bit_offset: 9
+    bit_size: 8
+    enum: ItrcAlphaEnumPapa
+  - name: in33_status
+    description: GDET0/1 SFR error event occurred.
+    bit_offset: 17
+    bit_size: 1
+    enum: ItrcAlphaEnumQuebec
+  - name: in34_status
+    description: SPC VDD_CORE high voltage detect event occurred.
+    bit_offset: 18
+    bit_size: 1
+    enum: ItrcAlphaEnumRomeo
+  - name: in35_status
+    description: SPC VDD_SYS_HVD high voltage detect event occurred.
+    bit_offset: 19
+    bit_size: 1
+    enum: ItrcAlphaEnumSierra
+  - name: in36_status
+    description: SPC VDD_IO high voltage detect event occurred.
+    bit_offset: 20
+    bit_size: 1
+    enum: ItrcAlphaEnumTango
+  - name: in37_status
+    description: FLEXSPI GCM error event occurred.
+    bit_offset: 21
+    bit_size: 1
+    enum: ItrcAlphaEnumUniform
+  - name: in46_status
+    description: SM3 SGI error event occurred.
+    bit_offset: 30
+    bit_size: 1
+    enum: ItrcAlphaEnumWhiskey
+  - name: in47_status
+    description: TRNG HW error event occurred.
+    bit_offset: 31
+    bit_size: 1
+    enum: ItrcAlphaEnumXray
+fieldset/ItrcAlphaFieldsetFoxtrot:
+  description: Software event 0.
+  fields:
+  - name: trigger_sw_event_0
+    description: Trigger software event 0.
+    bit_offset: 0
+    bit_size: 32
+fieldset/ItrcAlphaFieldsetGolf:
+  description: Software event 1.
+  fields:
+  - name: trigger_sw_event_1
+    description: Trigger software event 1.
+    bit_offset: 0
+    bit_size: 32
+enum/ItrcAlphaEnumAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumAlphaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumBravoAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumCharlie:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumCharlieAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumDelta:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumDeltaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumEcho:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumEchoAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumFoxtrotAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumGolf:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumGolfAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumHotel:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumHotelAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumIndia:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumIndiaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumJuliet:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumJulietAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumKilo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumKiloAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumLima:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumMike:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumNovember:
+  bit_size: 4
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumOscar:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumPapa:
+  bit_size: 8
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumQuebec:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumRomeo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumSierra:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumTango:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumUniform:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumVictor:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumWhiskey:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumXray:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumYankee:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1
+enum/ItrcAlphaEnumZulu:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Output not triggered.
+    value: 0
+  - name: Enable
+    description: Output has been triggered.
+    value: 1

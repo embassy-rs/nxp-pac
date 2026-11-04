@@ -1,0 +1,7077 @@
+# NXP mcux-soc-svd 7c1f00bdd6263f0b93466f5e73e5fc55a744b879; native chiptool import.
+# Source instance geometry is retained in explicit block variants; see private source bindings.
+# Unannotated fieldsets construct zero in software, not a claimed hardware reset.
+# Command/W1C/SET/CLR/TOG construction defaults are zero masks; no RMW semantics are implied.
+# Source: MCXN946_cm33_core0.xml ENET0 sha256 b986328ff1224adaeea70522fa61383a5f89f6313dfc3e7df92e8894fdab72d7
+# Source: MCXN946_cm33_core1.xml ENET0 sha256 57e8910317a1cb467d56726cb822c57806aa247542969bcf12dbcc8822187916
+# Source: MCXN947_cm33_core0.xml ENET0 sha256 629ac7cdc82684e467b0cf36a8aef697bc1eb65c2047d6610b7b5df65692e590
+# Source: MCXN947_cm33_core1.xml ENET0 sha256 0d77f3d23cad1d5eab631fd7f5ade4044d8aaca2d9d13cd11f3836d27fe089fb
+block/EnetAlpha:
+  description: ENET.
+  items:
+  - name: mac_configuration
+    description: MAC Configuration.
+    byte_offset: 0
+    fieldset: EnetAlphaFieldsetUniformAlpha
+  - name: mac_ext_configuration
+    description: MAC Extended Configuration Register.
+    byte_offset: 4
+    fieldset: EnetAlphaFieldsetXrayAlpha
+  - name: mac_packet_filter
+    description: MAC Packet Filter.
+    byte_offset: 8
+    fieldset: EnetAlphaFieldsetLimaBravo
+  - name: mac_watchdog_timeout
+    description: Watchdog Timeout.
+    byte_offset: 12
+    fieldset: EnetAlphaFieldsetNovemberCharlie
+  - name: mac_vlan_tag_ctrl
+    description: MAC VLAN Tag Control.
+    byte_offset: 80
+    fieldset: EnetAlphaFieldsetMikeCharlie
+  - name: mac_vlan_incl
+    description: VLAN Tag Inclusion or Replacement.
+    byte_offset: 96
+    fieldset: EnetAlphaFieldsetLimaCharlie
+  - name: mac_inner_vlan_incl
+    description: MAC Inner VLAN Tag Inclusion or Replacement.
+    byte_offset: 100
+    fieldset: EnetAlphaFieldsetCharlieBravo
+  - name: mac_q0_tx_flow_ctrl
+    description: MAC Q0 Tx Flow Control.
+    byte_offset: 112
+    fieldset: EnetAlphaFieldsetOscarBravo
+  - name: mac_rx_flow_ctrl
+    description: MAC Rx Flow Control.
+    byte_offset: 144
+    fieldset: EnetAlphaFieldsetQuebecBravo
+  - name: mac_rxq_ctrl4
+    description: Receive Queue Control 4.
+    byte_offset: 148
+    fieldset: EnetAlphaFieldsetVictorBravo
+  - name: mac_rxq_ctrl0
+    description: Receive Queue Control 0.
+    byte_offset: 160
+    fieldset: EnetAlphaFieldsetSierraBravo
+  - name: mac_rxq_ctrl1
+    description: Receive Queue Control 1.
+    byte_offset: 164
+    fieldset: EnetAlphaFieldsetTangoBravo
+  - name: mac_rxq_ctrl2
+    description: Receive Queue Control 2.
+    byte_offset: 168
+    fieldset: EnetAlphaFieldsetUniformBravo
+  - name: mac_interrupt_status
+    description: Interrupt Status.
+    byte_offset: 176
+    access: Read
+    fieldset: EnetAlphaFieldsetEchoBravo
+  - name: mac_interrupt_enable
+    description: Interrupt Enable.
+    byte_offset: 180
+    fieldset: EnetAlphaFieldsetDeltaBravo
+  - name: mac_rx_tx_status
+    description: Receive Transmit Status.
+    byte_offset: 184
+    access: Read
+    fieldset: EnetAlphaFieldsetRomeoBravo
+  - name: mac_pmt_control_status
+    description: PMT Control and Status.
+    byte_offset: 192
+    fieldset: EnetAlphaFieldsetMikeBravo
+  - name: mac_rwk_packet_filter
+    description: Remote Wakeup Filter.
+    byte_offset: 196
+    fieldset: EnetAlphaFieldsetPapaBravo
+  - name: mac_lpi_control_status
+    description: LPI Control and Status.
+    byte_offset: 208
+    fieldset: EnetAlphaFieldsetFoxtrotBravo
+  - name: mac_lpi_timers_control
+    description: LPI Timers Control.
+    byte_offset: 212
+    fieldset: EnetAlphaFieldsetHotelBravo
+  - name: mac_lpi_entry_timer
+    description: Tx LPI Entry Timer Control.
+    byte_offset: 216
+    fieldset: EnetAlphaFieldsetGolfBravo
+  - name: mac_oneus_tic_counter
+    description: One-microsecond Reference Timer.
+    byte_offset: 220
+    fieldset: EnetAlphaFieldsetKiloBravo
+  - name: mac_version
+    description: MAC Version.
+    byte_offset: 272
+    access: Read
+    fieldset: EnetAlphaFieldsetKiloCharlie
+  - name: mac_debug
+    description: MAC Debug.
+    byte_offset: 276
+    access: Read
+    fieldset: EnetAlphaFieldsetWhiskeyAlpha
+  - name: mac_hw_feature0
+    description: Hardware Features 0.
+    byte_offset: 284
+    access: Read
+    fieldset: EnetAlphaFieldsetYankeeAlpha
+  - name: mac_hw_feature1
+    description: Hardware Features 1.
+    byte_offset: 288
+    access: Read
+    fieldset: EnetAlphaFieldsetZuluAlpha
+  - name: mac_hw_feature2
+    description: Hardware Features 2.
+    byte_offset: 292
+    access: Read
+    fieldset: EnetAlphaFieldsetAlphaBravo
+  - name: mac_hw_feature3
+    description: Hardware Features 3.
+    byte_offset: 296
+    access: Read
+    fieldset: EnetAlphaFieldsetBravoBravo
+  - name: mac_mdio_address
+    description: MDIO Address.
+    byte_offset: 512
+    fieldset: EnetAlphaFieldsetIndiaBravo
+  - name: mac_mdio_data
+    description: MAC MDIO Data.
+    byte_offset: 516
+    fieldset: EnetAlphaFieldsetJulietBravo
+  - name: mac_csr_sw_ctrl
+    description: CSR Software Control.
+    byte_offset: 560
+    fieldset: EnetAlphaFieldsetVictorAlpha
+  - name: mac_address0_high
+    description: MAC Address0 High.
+    byte_offset: 768
+    fieldset: EnetAlphaFieldsetSierraAlpha
+  - name: mac_address0_low
+    description: MAC Address0 Low.
+    byte_offset: 772
+    fieldset: EnetAlphaFieldsetTangoAlpha
+  - name: indir_access_ctrl
+    description: Indirect Access Control.
+    byte_offset: 2672
+    fieldset: EnetAlphaFieldsetQuebecAlpha
+  - name: indir_access_data
+    description: Indirect Access Data.
+    byte_offset: 2676
+    fieldset: EnetAlphaFieldsetRomeoAlpha
+  - name: mac_timestamp_control
+    description: Timestamp Control.
+    byte_offset: 2816
+    fieldset: EnetAlphaFieldsetCharlieCharlie
+  - name: mac_sub_second_increment
+    description: Subsecond Increment.
+    byte_offset: 2820
+    fieldset: EnetAlphaFieldsetWhiskeyBravo
+  - name: mac_system_time_seconds
+    description: System Time Seconds.
+    byte_offset: 2824
+    access: Read
+    fieldset: EnetAlphaFieldsetZuluBravo
+  - name: mac_system_time_nanoseconds
+    description: System Time Nanoseconds.
+    byte_offset: 2828
+    access: Read
+    fieldset: EnetAlphaFieldsetXrayBravo
+  - name: mac_system_time_seconds_update
+    description: System Time Seconds Update.
+    byte_offset: 2832
+    fieldset: EnetAlphaFieldsetAlphaCharlie
+  - name: mac_system_time_nanoseconds_update
+    description: System Time Nanoseconds Update.
+    byte_offset: 2836
+    fieldset: EnetAlphaFieldsetYankeeBravo
+  - name: mac_timestamp_addend
+    description: Timestamp Addend.
+    byte_offset: 2840
+    fieldset: EnetAlphaFieldsetBravoCharlie
+  - name: mac_timestamp_status
+    description: Timestamp Status.
+    byte_offset: 2848
+    access: Read
+    fieldset: EnetAlphaFieldsetHotelCharlie
+  - name: mac_tx_timestamp_status_nanoseconds
+    description: Transmit Timestamp Status Nanoseconds.
+    byte_offset: 2864
+    access: Read
+    fieldset: EnetAlphaFieldsetIndiaCharlie
+  - name: mac_tx_timestamp_status_seconds
+    description: Transmit Timestamp Status Seconds.
+    byte_offset: 2868
+    access: Read
+    fieldset: EnetAlphaFieldsetJulietCharlie
+  - name: mac_timestamp_ingress_corr_nanosecond
+    description: Timestamp Ingress Correction Nanosecond.
+    byte_offset: 2904
+    fieldset: EnetAlphaFieldsetFoxtrotCharlie
+  - name: mac_timestamp_egress_corr_nanosecond
+    description: Timestamp Egress Correction Nanosecond.
+    byte_offset: 2908
+    fieldset: EnetAlphaFieldsetDeltaCharlie
+  - name: mac_timestamp_ingress_latency
+    description: Timestamp Ingress Latency.
+    byte_offset: 2920
+    access: Read
+    fieldset: EnetAlphaFieldsetGolfCharlie
+  - name: mac_timestamp_egress_latency
+    description: Timestamp Egress Latency.
+    byte_offset: 2924
+    access: Read
+    fieldset: EnetAlphaFieldsetEchoCharlie
+  - name: mac_pps_control
+    description: PPS Control.
+    byte_offset: 2928
+    fieldset: EnetAlphaFieldsetNovemberBravo
+  - name: pps0_target_time_seconds
+    description: PPS0 Target Time Seconds.
+    byte_offset: 2944
+    fieldset: EnetAlphaFieldsetQuebecDelta
+  - name: pps0_target_time_nanoseconds
+    description: PPS0 Target Time Nanoseconds.
+    byte_offset: 2948
+    fieldset: EnetAlphaFieldsetPapaDelta
+  - name: mtl_operation_mode
+    description: MTL Operation Mode.
+    byte_offset: 3072
+    fieldset: EnetAlphaFieldsetPapaCharlie
+  - name: mtl_interrupt_status
+    description: MTL Interrupt Status.
+    byte_offset: 3104
+    access: Read
+    fieldset: EnetAlphaFieldsetOscarCharlie
+  - name: mtl_rxq_dma_map0
+    description: Receive Queue and DMA Channel Mapping 0.
+    byte_offset: 3120
+    fieldset: EnetAlphaFieldsetAlphaDelta
+  - name: mtl_txq0_operation_mode
+    description: Queue 0 Transmit Operation Mode.
+    byte_offset: 3328
+    fieldset: EnetAlphaFieldsetDeltaDelta
+  - name: mtl_txq0_underflow
+    description: Queue 0 Underflow Counter.
+    byte_offset: 3332
+    access: Read
+    fieldset: EnetAlphaFieldsetFoxtrotDelta
+  - name: mtl_txq0_debug
+    description: Queue 0 Transmit Debug.
+    byte_offset: 3336
+    access: Read
+    fieldset: EnetAlphaFieldsetBravoDelta
+  - name: mtl_txq0_ets_status
+    description: Queue 0 ETS Status.
+    byte_offset: 3348
+    access: Read
+    fieldset: EnetAlphaFieldsetCharlieDelta
+  - name: mtl_txq0_quantum_weight
+    description: Queue 0 Quantum or Weights.
+    byte_offset: 3352
+    fieldset: EnetAlphaFieldsetEchoDelta
+  - name: mtl_q0_interrupt_control_status
+    description: Queue 0 Interrupt Control Status.
+    byte_offset: 3372
+    fieldset: EnetAlphaFieldsetQuebecCharlie
+  - name: mtl_rxq0_operation_mode
+    description: Queue 0 Receive Operation Mode.
+    byte_offset: 3376
+    fieldset: EnetAlphaFieldsetVictorCharlie
+  - name: mtl_rxq0_missed_packet_overflow_cnt
+    description: Queue 0 Missed Packet and Overflow Counter.
+    byte_offset: 3380
+    access: Read
+    fieldset: EnetAlphaFieldsetUniformCharlie
+  - name: mtl_rxq0_debug
+    description: Queue 0 Receive Debug.
+    byte_offset: 3384
+    access: Read
+    fieldset: EnetAlphaFieldsetTangoCharlie
+  - name: mtl_rxq0_control
+    description: Queue 0 Receive Control.
+    byte_offset: 3388
+    fieldset: EnetAlphaFieldsetSierraCharlie
+  - name: mtl_txq1_operation_mode
+    description: Queue 1 Transmit Operation Mode.
+    byte_offset: 3392
+    fieldset: EnetAlphaFieldsetLimaDelta
+  - name: mtl_txq1_underflow
+    description: Queue 1 Underflow Counter.
+    byte_offset: 3396
+    access: Read
+    fieldset: EnetAlphaFieldsetOscarDelta
+  - name: mtl_txq1_debug
+    description: Queue 1 Transmit Debug.
+    byte_offset: 3400
+    access: Read
+    fieldset: EnetAlphaFieldsetGolfDelta
+  - name: mtl_txq1_ets_control
+    description: Queue 1 ETS Control.
+    byte_offset: 3408
+    fieldset: EnetAlphaFieldsetHotelDelta
+  - name: mtl_txq1_ets_status
+    description: Queue 1 ETS Status.
+    byte_offset: 3412
+    access: Read
+    fieldset: EnetAlphaFieldsetIndiaDelta
+  - name: mtl_txq1_quantum_weight
+    description: Queue 1 idleSlopeCredit, Quantum or Weights.
+    byte_offset: 3416
+    fieldset: EnetAlphaFieldsetMikeDelta
+  - name: mtl_txq1_sendslopecredit
+    description: Queue 1 sendSlopeCredit.
+    byte_offset: 3420
+    fieldset: EnetAlphaFieldsetNovemberDelta
+  - name: mtl_txq1_hicredit
+    description: Queue 1 hiCredit.
+    byte_offset: 3424
+    fieldset: EnetAlphaFieldsetJulietDelta
+  - name: mtl_txq1_locredit
+    description: Queue 1 loCredit.
+    byte_offset: 3428
+    fieldset: EnetAlphaFieldsetKiloDelta
+  - name: mtl_q1_interrupt_control_status
+    description: Queue 1 Interrupt Control Status.
+    byte_offset: 3436
+    fieldset: EnetAlphaFieldsetRomeoCharlie
+  - name: mtl_rxq1_operation_mode
+    description: Queue 1 Receive Operation Mode.
+    byte_offset: 3440
+    fieldset: EnetAlphaFieldsetZuluCharlie
+  - name: mtl_rxq1_missed_packet_overflow_cnt
+    description: Queue 1 Missed Packet and Overflow Counter.
+    byte_offset: 3444
+    access: Read
+    fieldset: EnetAlphaFieldsetYankeeCharlie
+  - name: mtl_rxq1_debug
+    description: Queue 1 Receive Debug.
+    byte_offset: 3448
+    access: Read
+    fieldset: EnetAlphaFieldsetXrayCharlie
+  - name: mtl_rxq1_control
+    description: Queue 1 Receive Control.
+    byte_offset: 3452
+    fieldset: EnetAlphaFieldsetWhiskeyCharlie
+  - name: dma_mode
+    description: DMA Bus Mode.
+    byte_offset: 4096
+    fieldset: EnetAlphaFieldsetOscarAlpha
+  - name: dma_sysbus_mode
+    description: DMA System Bus Mode.
+    byte_offset: 4100
+    fieldset: EnetAlphaFieldsetPapaAlpha
+  - name: dma_interrupt_status
+    description: DMA Interrupt Status.
+    byte_offset: 4104
+    access: Read
+    fieldset: EnetAlphaFieldsetNovemberAlpha
+  - name: dma_debug_status0
+    description: DMA Debug Status 0.
+    byte_offset: 4108
+    access: Read
+    fieldset: EnetAlphaFieldsetMikeAlpha
+  - name: dma_ch0_control
+    description: DMA Channel 0 Control.
+    byte_offset: 4352
+    fieldset: EnetAlphaFieldsetAlpha
+  - name: dma_ch0_tx_control
+    description: DMA Channel 0 Transmit Control.
+    byte_offset: 4356
+    fieldset: EnetAlphaFieldsetPapa
+  - name: dma_ch0_rx_control
+    description: DMA Channel 0 Receive Control.
+    byte_offset: 4360
+    fieldset: EnetAlphaFieldsetHotel
+  - name: dma_ch0_txdesc_list_address
+    description: Channel 0 Tx Descriptor List Address register.
+    byte_offset: 4372
+    fieldset: EnetAlphaFieldsetQuebec
+  - name: dma_ch0_rxdesc_list_address
+    description: Channel 0 Rx Descriptor List Address register.
+    byte_offset: 4380
+    fieldset: EnetAlphaFieldsetLima
+  - name: dma_ch0_txdesc_tail_pointer
+    description: Channel 0 Tx Descriptor Tail Pointer.
+    byte_offset: 4384
+    fieldset: EnetAlphaFieldsetSierra
+  - name: dma_ch0_rxdesc_tail_pointer
+    description: Channel 0 Rx Descriptor Tail Pointer.
+    byte_offset: 4392
+    fieldset: EnetAlphaFieldsetMike
+  - name: dma_ch0_txdesc_ring_length
+    description: Channel 0 Tx Descriptor Ring Length.
+    byte_offset: 4396
+    fieldset: EnetAlphaFieldsetRomeo
+  - name: dma_ch0_rx_control2
+    description: Channeli Receive Control.
+    byte_offset: 4400
+    fieldset: EnetAlphaFieldsetIndia
+  - name: dma_ch0_interrupt_enable
+    description: Channeli Interrupt Enable.
+    byte_offset: 4404
+    fieldset: EnetAlphaFieldsetFoxtrot
+  - name: dma_ch0_rx_interrupt_watchdog_timer
+    description: Channel 0 Receive Interrupt Watchdog Timer.
+    byte_offset: 4408
+    fieldset: EnetAlphaFieldsetKilo
+  - name: dma_ch0_slot_function_control_status
+    description: Channel 0 Slot Function Control and Status.
+    byte_offset: 4412
+    fieldset: EnetAlphaFieldsetNovember
+  - name: dma_ch0_current_app_txdesc
+    description: Channel 0 Current Application Transmit Descriptor.
+    byte_offset: 4420
+    access: Read
+    fieldset: EnetAlphaFieldsetEcho
+  - name: dma_ch0_current_app_rxdesc
+    description: Channel 0 Current Application Receive Descriptor.
+    byte_offset: 4428
+    access: Read
+    fieldset: EnetAlphaFieldsetCharlie
+  - name: dma_ch0_current_app_txbuffer
+    description: Channel 0 Current Application Transmit Buffer Address.
+    byte_offset: 4436
+    access: Read
+    fieldset: EnetAlphaFieldsetDelta
+  - name: dma_ch0_current_app_rxbuffer
+    description: Channel 0 Current Application Receive Buffer Address.
+    byte_offset: 4444
+    access: Read
+    fieldset: EnetAlphaFieldsetBravo
+  - name: dma_ch0_status
+    description: DMA Channel 0 Status.
+    byte_offset: 4448
+    fieldset: EnetAlphaFieldsetOscar
+  - name: dma_ch0_miss_frame_cnt
+    description: Channel 0 Missed Frame Counter.
+    byte_offset: 4452
+    access: Read
+    fieldset: EnetAlphaFieldsetGolf
+  - name: dma_ch0_rx_eri_cnt
+    description: Channel 0 Receive ERI Counter.
+    byte_offset: 4460
+    access: Read
+    fieldset: EnetAlphaFieldsetJuliet
+  - name: dma_ch1_control
+    description: DMA Channel 1 Control.
+    byte_offset: 4480
+    fieldset: EnetAlphaFieldsetTango
+  - name: dma_ch1_tx_control
+    description: DMA Channel 1 Transmit Control.
+    byte_offset: 4484
+    fieldset: EnetAlphaFieldsetIndiaAlpha
+  - name: dma_ch1_rx_control
+    description: DMA Channel 1 Receive Control.
+    byte_offset: 4488
+    fieldset: EnetAlphaFieldsetAlphaAlpha
+  - name: dma_ch1_txdesc_list_address
+    description: Channel 1 Tx Descriptor List Address.
+    byte_offset: 4500
+    fieldset: EnetAlphaFieldsetJulietAlpha
+  - name: dma_ch1_rxdesc_list_address
+    description: Channel 1 Rx Descriptor List Address.
+    byte_offset: 4508
+    fieldset: EnetAlphaFieldsetEchoAlpha
+  - name: dma_ch1_txdesc_tail_pointer
+    description: Channel 1 Tx Descriptor Tail Pointer.
+    byte_offset: 4512
+    fieldset: EnetAlphaFieldsetLimaAlpha
+  - name: dma_ch1_rxdesc_tail_pointer
+    description: Channel 1 Rx Descriptor Tail Pointer.
+    byte_offset: 4520
+    fieldset: EnetAlphaFieldsetFoxtrotAlpha
+  - name: dma_ch1_txdesc_ring_length
+    description: Channel 1 Tx Descriptor Ring Length.
+    byte_offset: 4524
+    fieldset: EnetAlphaFieldsetKiloAlpha
+  - name: dma_ch1_rx_control2
+    description: DMA Channel 1 Receive Control.
+    byte_offset: 4528
+    fieldset: EnetAlphaFieldsetBravoAlpha
+  - name: dma_ch1_interrupt_enable
+    description: Channel 1 Interrupt Enable.
+    byte_offset: 4532
+    fieldset: EnetAlphaFieldsetYankee
+  - name: dma_ch1_rx_interrupt_watchdog_timer
+    description: Channel 1 Receive Interrupt Watchdog Timer.
+    byte_offset: 4536
+    fieldset: EnetAlphaFieldsetDeltaAlpha
+  - name: dma_ch1_slot_function_control_status
+    description: Channel 1 Slot Function Control and Status.
+    byte_offset: 4540
+    fieldset: EnetAlphaFieldsetGolfAlpha
+  - name: dma_ch1_current_app_txdesc
+    description: Channel 1 Current Application Transmit Descriptor.
+    byte_offset: 4548
+    access: Read
+    fieldset: EnetAlphaFieldsetXray
+  - name: dma_ch1_current_app_rxdesc
+    description: Channel 1 Current Application Receive Descriptor.
+    byte_offset: 4556
+    access: Read
+    fieldset: EnetAlphaFieldsetVictor
+  - name: dma_ch1_current_app_txbuffer
+    description: Channel 1 Current Application Transmit Buffer Address.
+    byte_offset: 4564
+    access: Read
+    fieldset: EnetAlphaFieldsetWhiskey
+  - name: dma_ch1_current_app_rxbuffer
+    description: Channel 1 Current Application Receive Buffer Address.
+    byte_offset: 4572
+    access: Read
+    fieldset: EnetAlphaFieldsetUniform
+  - name: dma_ch1_status
+    description: DMA Channel 1 Status.
+    byte_offset: 4576
+    fieldset: EnetAlphaFieldsetHotelAlpha
+  - name: dma_ch1_miss_frame_cnt
+    description: Channel 1 Missed Frame Counter.
+    byte_offset: 4580
+    access: Read
+    fieldset: EnetAlphaFieldsetZulu
+  - name: dma_ch1_rx_eri_cnt
+    description: Channel 1 Receive ERI Counter.
+    byte_offset: 4588
+    access: Read
+    fieldset: EnetAlphaFieldsetCharlieAlpha
+fieldset/EnetAlphaFieldsetAlpha:
+  description: DMA Channel 0 Control.
+  fields:
+  - name: pb_lx8
+    description: 8xPBL mode.
+    bit_offset: 16
+    bit_size: 1
+    enum: EnetAlphaEnumLimaAlpha
+  - name: dsl
+    description: Descriptor Skip Length.
+    bit_offset: 18
+    bit_size: 3
+fieldset/EnetAlphaFieldsetBravo:
+  description: Channel 0 Current Application Receive Buffer Address.
+  fields:
+  - name: currbufaptr
+    description: Application Receive Buffer Address Pointer.
+    bit_offset: 0
+    bit_size: 32
+fieldset/EnetAlphaFieldsetCharlie:
+  description: Channel 0 Current Application Receive Descriptor.
+  fields:
+  - name: currdesaptr
+    description: Application Receive Descriptor Address Pointer.
+    bit_offset: 0
+    bit_size: 32
+fieldset/EnetAlphaFieldsetDelta:
+  description: Channel 0 Current Application Transmit Buffer Address.
+  fields:
+  - name: curtbufaptr
+    description: Application Transmit Buffer Address Pointer.
+    bit_offset: 0
+    bit_size: 32
+fieldset/EnetAlphaFieldsetEcho:
+  description: Channel 0 Current Application Transmit Descriptor.
+  fields:
+  - name: curtdesaptr
+    description: Application Transmit Descriptor Address Pointer.
+    bit_offset: 0
+    bit_size: 32
+fieldset/EnetAlphaFieldsetFoxtrot:
+  description: Channeli Interrupt Enable.
+  fields:
+  - name: tie
+    description: Transmit Interrupt Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumXrayAlpha
+  - name: txse
+    description: Transmit Stopped Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: EnetAlphaEnumYankeeAlpha
+  - name: tbue
+    description: Transmit Buffer Unavailable Enable.
+    bit_offset: 2
+    bit_size: 1
+    enum: EnetAlphaEnumWhiskeyAlpha
+  - name: rie
+    description: Receive Interrupt Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: EnetAlphaEnumTangoAlpha
+  - name: rbue
+    description: Receive Buffer Unavailable Enable.
+    bit_offset: 7
+    bit_size: 1
+    enum: EnetAlphaEnumSierraAlpha
+  - name: rse
+    description: Receive Stopped Enable.
+    bit_offset: 8
+    bit_size: 1
+    enum: EnetAlphaEnumUniformAlpha
+  - name: rwte
+    description: Receive Watchdog Timeout Enable.
+    bit_offset: 9
+    bit_size: 1
+    enum: EnetAlphaEnumVictorAlpha
+  - name: etie
+    description: Early Transmit Interrupt Enable.
+    bit_offset: 10
+    bit_size: 1
+    enum: EnetAlphaEnumPapaAlpha
+  - name: erie
+    description: Early Receive Interrupt Enable.
+    bit_offset: 11
+    bit_size: 1
+    enum: EnetAlphaEnumOscarAlpha
+  - name: fbee
+    description: Fatal Bus Error Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: EnetAlphaEnumQuebecAlpha
+  - name: cdee
+    description: Context Descriptor Error Enable.
+    bit_offset: 13
+    bit_size: 1
+    enum: EnetAlphaEnumNovemberAlpha
+  - name: aie
+    description: Abnormal Interrupt Summary Enable.
+    bit_offset: 14
+    bit_size: 1
+    enum: EnetAlphaEnumMikeAlpha
+  - name: nie
+    description: Normal Interrupt Summary Enable.
+    bit_offset: 15
+    bit_size: 1
+    enum: EnetAlphaEnumRomeoAlpha
+fieldset/EnetAlphaFieldsetGolf:
+  description: Channel 0 Missed Frame Counter.
+  fields:
+  - name: mfc
+    description: Dropped Packet Counters.
+    bit_offset: 0
+    bit_size: 11
+  - name: mfco
+    description: Overflow status of the MFC Counter.
+    bit_offset: 15
+    bit_size: 1
+    enum: EnetAlphaEnumZuluAlpha
+fieldset/EnetAlphaFieldsetHotel:
+  description: DMA Channel 0 Receive Control.
+  fields:
+  - name: sr
+    description: Start or Stop Receive.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumCharlieBravo
+  - name: rbsz_x_0
+    description: Receive Buffer size Low.
+    bit_offset: 1
+    bit_size: 2
+  - name: rbsz_13_y
+    description: Receive Buffer size High.
+    bit_offset: 3
+    bit_size: 12
+  - name: rx_pbl
+    description: Receive Programmable Burst Length.
+    bit_offset: 16
+    bit_size: 6
+  - name: eric
+    description: Early Receive Interrupt Control.
+    bit_offset: 22
+    bit_size: 1
+    enum: EnetAlphaEnumAlphaBravo
+  - name: rpf
+    description: Rx Packet Flush.
+    bit_offset: 31
+    bit_size: 1
+    enum: EnetAlphaEnumBravoBravo
+fieldset/EnetAlphaFieldsetIndia:
+  description: Channeli Receive Control.
+  fields:
+  - name: rdrl
+    description: Receive Descriptor Ring Length.
+    bit_offset: 0
+    bit_size: 10
+  - name: arbs
+    description: Alternate Receive Buffer Size.
+    bit_offset: 16
+    bit_size: 8
+fieldset/EnetAlphaFieldsetJuliet:
+  description: Channel 0 Receive ERI Counter.
+  fields:
+  - name: ecnt
+    description: ERI Counter.
+    bit_offset: 0
+    bit_size: 12
+fieldset/EnetAlphaFieldsetKilo:
+  description: Channel 0 Receive Interrupt Watchdog Timer.
+  fields:
+  - name: rwt
+    description: Receive Interrupt Watchdog Timer Count.
+    bit_offset: 0
+    bit_size: 8
+  - name: rwtu
+    description: Receive Interrupt Watchdog Timer Count Units.
+    bit_offset: 16
+    bit_size: 2
+fieldset/EnetAlphaFieldsetLima:
+  description: Channel 0 Rx Descriptor List Address register.
+  fields:
+  - name: rdesla
+    description: Start of Receive List.
+    bit_offset: 2
+    bit_size: 30
+fieldset/EnetAlphaFieldsetMike:
+  description: Channel 0 Rx Descriptor Tail Pointer.
+  fields:
+  - name: rdtp
+    description: Receive Descriptor Tail Pointer.
+    bit_offset: 2
+    bit_size: 30
+fieldset/EnetAlphaFieldsetNovember:
+  description: Channel 0 Slot Function Control and Status.
+  fields:
+  - name: esc
+    description: Enable Slot Comparison.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumEchoBravo
+  - name: asc
+    description: Advance Slot Check.
+    bit_offset: 1
+    bit_size: 1
+    enum: EnetAlphaEnumDeltaBravo
+  - name: siv
+    description: Slot Interval Value.
+    bit_offset: 4
+    bit_size: 12
+  - name: rsn
+    description: Reference Slot Number.
+    bit_offset: 16
+    bit_size: 4
+fieldset/EnetAlphaFieldsetOscar:
+  description: DMA Channel 0 Status.
+  fields:
+  - name: ti
+    description: Transmit Interrupt.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumQuebecBravo
+  - name: tps
+    description: Transmit Process Stopped.
+    bit_offset: 1
+    bit_size: 1
+    enum: EnetAlphaEnumRomeoBravo
+  - name: tbu
+    description: Transmit Buffer Unavailable.
+    bit_offset: 2
+    bit_size: 1
+    enum: EnetAlphaEnumPapaBravo
+  - name: ri
+    description: Receive Interrupt.
+    bit_offset: 6
+    bit_size: 1
+    enum: EnetAlphaEnumMikeBravo
+  - name: rbu
+    description: Receive Buffer Unavailable.
+    bit_offset: 7
+    bit_size: 1
+    enum: EnetAlphaEnumLimaBravo
+  - name: rps
+    description: Receive Process Stopped.
+    bit_offset: 8
+    bit_size: 1
+    enum: EnetAlphaEnumNovemberBravo
+  - name: rwt
+    description: Receive Watchdog Timeout.
+    bit_offset: 9
+    bit_size: 1
+    enum: EnetAlphaEnumOscarBravo
+  - name: eti
+    description: Early Transmit Interrupt.
+    bit_offset: 10
+    bit_size: 1
+    enum: EnetAlphaEnumIndiaBravo
+  - name: eri
+    description: Early Receive Interrupt.
+    bit_offset: 11
+    bit_size: 1
+    enum: EnetAlphaEnumHotelBravo
+  - name: fbe
+    description: Fatal Bus Error.
+    bit_offset: 12
+    bit_size: 1
+    enum: EnetAlphaEnumJulietBravo
+  - name: cde
+    description: Context Descriptor Error.
+    bit_offset: 13
+    bit_size: 1
+    enum: EnetAlphaEnumGolfBravo
+  - name: ais
+    description: Abnormal Interrupt Summary.
+    bit_offset: 14
+    bit_size: 1
+    enum: EnetAlphaEnumFoxtrotBravo
+  - name: nis
+    description: Normal Interrupt Summary.
+    bit_offset: 15
+    bit_size: 1
+    enum: EnetAlphaEnumKiloBravo
+  - name: teb
+    description: Tx DMA Error Bits.
+    bit_offset: 16
+    bit_size: 3
+  - name: reb
+    description: Rx DMA Error Bits.
+    bit_offset: 19
+    bit_size: 3
+fieldset/EnetAlphaFieldsetPapa:
+  description: DMA Channel 0 Transmit Control.
+  fields:
+  - name: st
+    description: Start or Stop Transmission Command.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumUniformBravo
+  - name: tcw
+    description: Transmit Channel Weight.
+    bit_offset: 1
+    bit_size: 3
+  - name: osf
+    description: Operate on Second Packet.
+    bit_offset: 4
+    bit_size: 1
+    enum: EnetAlphaEnumTangoBravo
+  - name: tx_pbl
+    description: Transmit Programmable Burst Length.
+    bit_offset: 16
+    bit_size: 6
+  - name: etic
+    description: Early Transmit Interrupt Control.
+    bit_offset: 22
+    bit_size: 1
+    enum: EnetAlphaEnumSierraBravo
+fieldset/EnetAlphaFieldsetQuebec:
+  description: Channel 0 Tx Descriptor List Address register.
+  fields:
+  - name: tdesla
+    description: Start of Transmit List.
+    bit_offset: 2
+    bit_size: 30
+fieldset/EnetAlphaFieldsetRomeo:
+  description: Channel 0 Tx Descriptor Ring Length.
+  fields:
+  - name: tdrl
+    description: Transmit Descriptor Ring Length.
+    bit_offset: 0
+    bit_size: 10
+fieldset/EnetAlphaFieldsetSierra:
+  description: Channel 0 Tx Descriptor Tail Pointer.
+  fields:
+  - name: tdtp
+    description: Transmit Descriptor Tail Pointer.
+    bit_offset: 2
+    bit_size: 30
+fieldset/EnetAlphaFieldsetTango:
+  description: DMA Channel 1 Control.
+  fields:
+  - name: pb_lx8
+    description: 8xPBL mode.
+    bit_offset: 16
+    bit_size: 1
+    enum: EnetAlphaEnumVictorBravo
+  - name: dsl
+    description: Descriptor Skip Length.
+    bit_offset: 18
+    bit_size: 3
+fieldset/EnetAlphaFieldsetUniform:
+  description: Channel 1 Current Application Receive Buffer Address.
+  fields:
+  - name: currbufaptr
+    description: Application Receive Buffer Address Pointer.
+    bit_offset: 0
+    bit_size: 32
+fieldset/EnetAlphaFieldsetVictor:
+  description: Channel 1 Current Application Receive Descriptor.
+  fields:
+  - name: currdesaptr
+    description: Application Receive Descriptor Address Pointer.
+    bit_offset: 0
+    bit_size: 32
+fieldset/EnetAlphaFieldsetWhiskey:
+  description: Channel 1 Current Application Transmit Buffer Address.
+  fields:
+  - name: curtbufaptr
+    description: Application Transmit Buffer Address Pointer.
+    bit_offset: 0
+    bit_size: 32
+fieldset/EnetAlphaFieldsetXray:
+  description: Channel 1 Current Application Transmit Descriptor.
+  fields:
+  - name: curtdesaptr
+    description: Application Transmit Descriptor Address Pointer.
+    bit_offset: 0
+    bit_size: 32
+fieldset/EnetAlphaFieldsetYankee:
+  description: Channel 1 Interrupt Enable.
+  fields:
+  - name: tie
+    description: Transmit Interrupt Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumHotelCharlie
+  - name: txse
+    description: Transmit Stopped Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: EnetAlphaEnumIndiaCharlie
+  - name: tbue
+    description: Transmit Buffer Unavailable Enable.
+    bit_offset: 2
+    bit_size: 1
+    enum: EnetAlphaEnumGolfCharlie
+  - name: rie
+    description: Receive Interrupt Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: EnetAlphaEnumDeltaCharlie
+  - name: rbue
+    description: Receive Buffer Unavailable Enable.
+    bit_offset: 7
+    bit_size: 1
+    enum: EnetAlphaEnumCharlieCharlie
+  - name: rse
+    description: Receive Stopped Enable.
+    bit_offset: 8
+    bit_size: 1
+    enum: EnetAlphaEnumEchoCharlie
+  - name: rwte
+    description: Receive Watchdog Timeout Enable.
+    bit_offset: 9
+    bit_size: 1
+    enum: EnetAlphaEnumFoxtrotCharlie
+  - name: etie
+    description: Early Transmit Interrupt Enable.
+    bit_offset: 10
+    bit_size: 1
+    enum: EnetAlphaEnumZuluBravo
+  - name: erie
+    description: Early Receive Interrupt Enable.
+    bit_offset: 11
+    bit_size: 1
+    enum: EnetAlphaEnumYankeeBravo
+  - name: fbee
+    description: Fatal Bus Error Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: EnetAlphaEnumAlphaCharlie
+  - name: cdee
+    description: Context Descriptor Error Enable.
+    bit_offset: 13
+    bit_size: 1
+    enum: EnetAlphaEnumXrayBravo
+  - name: aie
+    description: Abnormal Interrupt Summary Enable.
+    bit_offset: 14
+    bit_size: 1
+    enum: EnetAlphaEnumWhiskeyBravo
+  - name: nie
+    description: Normal Interrupt Summary Enable.
+    bit_offset: 15
+    bit_size: 1
+    enum: EnetAlphaEnumBravoCharlie
+fieldset/EnetAlphaFieldsetZulu:
+  description: Channel 1 Missed Frame Counter.
+  fields:
+  - name: mfc
+    description: Dropped Packet Counters.
+    bit_offset: 0
+    bit_size: 11
+  - name: mfco
+    description: Overflow status of the MFC Counter.
+    bit_offset: 15
+    bit_size: 1
+    enum: EnetAlphaEnumJulietCharlie
+fieldset/EnetAlphaFieldsetAlphaAlpha:
+  description: DMA Channel 1 Receive Control.
+  fields:
+  - name: sr
+    description: Start or Stop Receive.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumMikeCharlie
+  - name: rbsz_x_0
+    description: Receive Buffer size Low.
+    bit_offset: 1
+    bit_size: 2
+  - name: rbsz_13_y
+    description: Receive Buffer size High.
+    bit_offset: 3
+    bit_size: 12
+  - name: rx_pbl
+    description: Receive Programmable Burst Length.
+    bit_offset: 16
+    bit_size: 6
+  - name: eric
+    description: Early Receive Interrupt Control.
+    bit_offset: 22
+    bit_size: 1
+    enum: EnetAlphaEnumKiloCharlie
+  - name: rpf
+    description: Rx Packet Flush.
+    bit_offset: 31
+    bit_size: 1
+    enum: EnetAlphaEnumLimaCharlie
+fieldset/EnetAlphaFieldsetBravoAlpha:
+  description: DMA Channel 1 Receive Control.
+  fields:
+  - name: rdrl
+    description: Receive Descriptor Ring Length.
+    bit_offset: 0
+    bit_size: 10
+  - name: arbs
+    description: Alternate Receive Buffer Size.
+    bit_offset: 16
+    bit_size: 8
+fieldset/EnetAlphaFieldsetCharlieAlpha:
+  description: Channel 1 Receive ERI Counter.
+  fields:
+  - name: ecnt
+    description: ERI Counter.
+    bit_offset: 0
+    bit_size: 12
+fieldset/EnetAlphaFieldsetDeltaAlpha:
+  description: Channel 1 Receive Interrupt Watchdog Timer.
+  fields:
+  - name: rwt
+    description: Receive Interrupt Watchdog Timer Count.
+    bit_offset: 0
+    bit_size: 8
+  - name: rwtu
+    description: Receive Interrupt Watchdog Timer Count Units.
+    bit_offset: 16
+    bit_size: 2
+fieldset/EnetAlphaFieldsetEchoAlpha:
+  description: Channel 1 Rx Descriptor List Address.
+  fields:
+  - name: rdesla
+    description: Start of Receive List.
+    bit_offset: 2
+    bit_size: 30
+fieldset/EnetAlphaFieldsetFoxtrotAlpha:
+  description: Channel 1 Rx Descriptor Tail Pointer.
+  fields:
+  - name: rdtp
+    description: Receive Descriptor Tail Pointer.
+    bit_offset: 2
+    bit_size: 30
+fieldset/EnetAlphaFieldsetGolfAlpha:
+  description: Channel 1 Slot Function Control and Status.
+  fields:
+  - name: esc
+    description: Enable Slot Comparison.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumOscarCharlie
+  - name: asc
+    description: Advance Slot Check.
+    bit_offset: 1
+    bit_size: 1
+    enum: EnetAlphaEnumNovemberCharlie
+  - name: siv
+    description: Slot Interval Value.
+    bit_offset: 4
+    bit_size: 12
+  - name: rsn
+    description: Reference Slot Number.
+    bit_offset: 16
+    bit_size: 4
+fieldset/EnetAlphaFieldsetHotelAlpha:
+  description: DMA Channel 1 Status.
+  fields:
+  - name: ti
+    description: Transmit Interrupt.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumAlphaDelta
+  - name: tps
+    description: Transmit Process Stopped.
+    bit_offset: 1
+    bit_size: 1
+    enum: EnetAlphaEnumBravoDelta
+  - name: tbu
+    description: Transmit Buffer Unavailable.
+    bit_offset: 2
+    bit_size: 1
+    enum: EnetAlphaEnumZuluCharlie
+  - name: ri
+    description: Receive Interrupt.
+    bit_offset: 6
+    bit_size: 1
+    enum: EnetAlphaEnumWhiskeyCharlie
+  - name: rbu
+    description: Receive Buffer Unavailable.
+    bit_offset: 7
+    bit_size: 1
+    enum: EnetAlphaEnumVictorCharlie
+  - name: rps
+    description: Receive Process Stopped.
+    bit_offset: 8
+    bit_size: 1
+    enum: EnetAlphaEnumXrayCharlie
+  - name: rwt
+    description: Receive Watchdog Timeout.
+    bit_offset: 9
+    bit_size: 1
+    enum: EnetAlphaEnumYankeeCharlie
+  - name: eti
+    description: Early Transmit Interrupt.
+    bit_offset: 10
+    bit_size: 1
+    enum: EnetAlphaEnumSierraCharlie
+  - name: eri
+    description: Early Receive Interrupt.
+    bit_offset: 11
+    bit_size: 1
+    enum: EnetAlphaEnumRomeoCharlie
+  - name: fbe
+    description: Fatal Bus Error.
+    bit_offset: 12
+    bit_size: 1
+    enum: EnetAlphaEnumTangoCharlie
+  - name: cde
+    description: Context Descriptor Error.
+    bit_offset: 13
+    bit_size: 1
+    enum: EnetAlphaEnumQuebecCharlie
+  - name: ais
+    description: Abnormal Interrupt Summary.
+    bit_offset: 14
+    bit_size: 1
+    enum: EnetAlphaEnumPapaCharlie
+  - name: nis
+    description: Normal Interrupt Summary.
+    bit_offset: 15
+    bit_size: 1
+    enum: EnetAlphaEnumUniformCharlie
+  - name: teb
+    description: Tx DMA Error Bits.
+    bit_offset: 16
+    bit_size: 3
+  - name: reb
+    description: Rx DMA Error Bits.
+    bit_offset: 19
+    bit_size: 3
+fieldset/EnetAlphaFieldsetIndiaAlpha:
+  description: DMA Channel 1 Transmit Control.
+  fields:
+  - name: st
+    description: Start or Stop Transmission Command.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumEchoDelta
+  - name: tcw
+    description: Transmit Channel Weight.
+    bit_offset: 1
+    bit_size: 3
+  - name: osf
+    description: Operate on Second Packet.
+    bit_offset: 4
+    bit_size: 1
+    enum: EnetAlphaEnumDeltaDelta
+  - name: tx_pbl
+    description: Transmit Programmable Burst Length.
+    bit_offset: 16
+    bit_size: 6
+  - name: etic
+    description: Early Transmit Interrupt Control.
+    bit_offset: 22
+    bit_size: 1
+    enum: EnetAlphaEnumCharlieDelta
+fieldset/EnetAlphaFieldsetJulietAlpha:
+  description: Channel 1 Tx Descriptor List Address.
+  fields:
+  - name: tdesla
+    description: Start of Transmit List.
+    bit_offset: 2
+    bit_size: 30
+fieldset/EnetAlphaFieldsetKiloAlpha:
+  description: Channel 1 Tx Descriptor Ring Length.
+  fields:
+  - name: tdrl
+    description: Transmit Descriptor Ring Length.
+    bit_offset: 0
+    bit_size: 10
+fieldset/EnetAlphaFieldsetLimaAlpha:
+  description: Channel 1 Tx Descriptor Tail Pointer.
+  fields:
+  - name: tdtp
+    description: Transmit Descriptor Tail Pointer.
+    bit_offset: 2
+    bit_size: 30
+fieldset/EnetAlphaFieldsetMikeAlpha:
+  description: DMA Debug Status 0.
+  fields:
+  - name: axwhsts
+    description: AHB Master Status.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumOscar
+  - name: rps0
+    description: DMA Channel 0 Receive Process State.
+    bit_offset: 8
+    bit_size: 4
+    enum: EnetAlphaEnumWhiskeyJuliet
+  - name: tps0
+    description: DMA Channel 0 Transmit Process State.
+    bit_offset: 12
+    bit_size: 4
+    enum: EnetAlphaEnumHotelLima
+  - name: rps1
+    description: DMA Channel 1 Receive Process State.
+    bit_offset: 16
+    bit_size: 4
+    enum: EnetAlphaEnumXrayJuliet
+  - name: tps1
+    description: DMA Channel 1 Transmit Process State.
+    bit_offset: 20
+    bit_size: 4
+    enum: EnetAlphaEnumIndiaLima
+fieldset/EnetAlphaFieldsetNovemberAlpha:
+  description: DMA Interrupt Status.
+  fields:
+  - name: dc0is
+    description: DMA Channel 0 Interrupt Status.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumFoxtrotAlpha
+  - name: dc1is
+    description: DMA Channel 1 Interrupt Status.
+    bit_offset: 1
+    bit_size: 1
+    enum: EnetAlphaEnumGolfAlpha
+  - name: mtlis
+    description: MTL Interrupt Status.
+    bit_offset: 16
+    bit_size: 1
+    enum: EnetAlphaEnumHotelIndia
+  - name: macis
+    description: MAC Interrupt Status.
+    bit_offset: 17
+    bit_size: 1
+    enum: EnetAlphaEnumTangoFoxtrot
+fieldset/EnetAlphaFieldsetOscarAlpha:
+  description: DMA Bus Mode.
+  fields:
+  - name: swr
+    description: Software Reset.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumVictorKilo
+  - name: da
+    description: DMA Tx or Rx Arbitration Scheme.
+    bit_offset: 1
+    bit_size: 1
+    enum: EnetAlphaEnumAlphaAlpha
+  - name: taa
+    description: Transmit Arbitration Algorithm.
+    bit_offset: 2
+    bit_size: 3
+    enum: EnetAlphaEnumWhiskeyKilo
+  - name: txpr
+    description: Transmit Priority.
+    bit_offset: 11
+    bit_size: 1
+    enum: EnetAlphaEnumJulietMike
+  - name: pr
+    description: Priority Ratio.
+    bit_offset: 12
+    bit_size: 3
+    enum: EnetAlphaEnumFoxtrotDelta
+fieldset/EnetAlphaFieldsetPapaAlpha:
+  description: DMA System Bus Mode.
+  fields:
+  - name: fb
+    description: Fixed Burst Length.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumEchoEcho
+  - name: aal
+    description: Address-Aligned Beats.
+    bit_offset: 12
+    bit_size: 1
+    enum: EnetAlphaEnumAlpha
+  - name: mb
+    description: Mixed Burst.
+    bit_offset: 14
+    bit_size: 1
+    enum: EnetAlphaEnumUniformFoxtrot
+  - name: rb
+    description: Rebuild INCRx Burst.
+    bit_offset: 15
+    bit_size: 1
+    enum: EnetAlphaEnumNovemberJuliet
+fieldset/EnetAlphaFieldsetQuebecAlpha:
+  description: Indirect Access Control.
+  fields:
+  - name: ob
+    description: Operation Busy.
+    bit_offset: 0
+    bit_size: 1
+  - name: com
+    description: Command type.
+    bit_offset: 1
+    bit_size: 1
+    enum: EnetAlphaEnumYankee
+  - name: auto
+    description: Auto increment.
+    bit_offset: 5
+    bit_size: 1
+  - name: aoff
+    description: Address Offset.
+    bit_offset: 8
+    bit_size: 8
+  - name: msel
+    description: Mode Select.
+    bit_offset: 16
+    bit_size: 4
+fieldset/EnetAlphaFieldsetRomeoAlpha:
+  description: Indirect Access Data.
+  fields:
+  - name: data
+    description: This field contains data to read/write for Indirect address access associated with MAC_Indir_Access_Ctrl.
+    bit_offset: 0
+    bit_size: 32
+fieldset/EnetAlphaFieldsetSierraAlpha:
+  description: MAC Address0 High.
+  fields:
+  - name: addrhi
+    description: MAC Address0[47:32].
+    bit_offset: 0
+    bit_size: 16
+  - name: dcs
+    description: DMA Channel Select.
+    bit_offset: 16
+    bit_size: 2
+  - name: ae
+    description: Address Enable.
+    bit_offset: 31
+    bit_size: 1
+    enum: EnetAlphaEnumGolf
+fieldset/EnetAlphaFieldsetTangoAlpha:
+  description: MAC Address0 Low.
+  fields:
+  - name: addrlo
+    description: MAC Address0[31:0].
+    bit_offset: 0
+    bit_size: 32
+fieldset/EnetAlphaFieldsetUniformAlpha:
+  description: MAC Configuration.
+  fields:
+  - name: re
+    description: Receiver Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumQuebecJuliet
+  - name: te
+    description: Transmitter Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: EnetAlphaEnumZuluKilo
+  - name: prelen
+    description: Preamble Length for Transmit packets.
+    bit_offset: 2
+    bit_size: 2
+    enum: EnetAlphaEnumZuluIndia
+  - name: dc
+    description: Deferral Check.
+    bit_offset: 4
+    bit_size: 1
+    enum: EnetAlphaEnumEchoAlpha
+  - name: bl
+    description: Back-Off Limit.
+    bit_offset: 5
+    bit_size: 2
+    enum: EnetAlphaEnumPapa
+  - name: dr
+    description: Disable Retry.
+    bit_offset: 8
+    bit_size: 1
+    enum: EnetAlphaEnumIndiaDelta
+  - name: dcrs
+    description: Disable Carrier Sense During Transmission.
+    bit_offset: 9
+    bit_size: 1
+    enum: EnetAlphaEnumJulietAlpha
+  - name: do_
+    description: Disable Receive Own.
+    bit_offset: 10
+    bit_size: 1
+    enum: EnetAlphaEnumGolfDelta
+  - name: ecrsfd
+    description: Enable Carrier Sense Before Transmission in Full-Duplex Mode.
+    bit_offset: 11
+    bit_size: 1
+    enum: EnetAlphaEnumMikeDelta
+  - name: lm
+    description: Loopback Mode.
+    bit_offset: 12
+    bit_size: 1
+    enum: EnetAlphaEnumAlphaFoxtrot
+  - name: dm
+    description: Duplex Mode.
+    bit_offset: 13
+    bit_size: 1
+    enum: EnetAlphaEnumKiloAlpha
+  - name: fes
+    description: Speed.
+    bit_offset: 14
+    bit_size: 1
+    enum: EnetAlphaEnumGolfEcho
+  - name: ps
+    description: Port Select.
+    bit_offset: 15
+    bit_size: 1
+    enum: EnetAlphaEnumAlphaJuliet
+  - name: je
+    description: Jumbo Packet Enable.
+    bit_offset: 16
+    bit_size: 1
+    enum: EnetAlphaEnumWhiskeyEcho
+  - name: jd
+    description: Jabber Disable.
+    bit_offset: 17
+    bit_size: 1
+    enum: EnetAlphaEnumVictorEcho
+  - name: wd
+    description: Watchdog Disable.
+    bit_offset: 19
+    bit_size: 1
+    enum: EnetAlphaEnumYankeeMike
+  - name: acs
+    description: Automatic Pad or CRC Stripping.
+    bit_offset: 20
+    bit_size: 1
+    enum: EnetAlphaEnumBravo
+  - name: cst
+    description: CRC stripping for Type packets.
+    bit_offset: 21
+    bit_size: 1
+    enum: EnetAlphaEnumZulu
+  - name: s2kp
+    description: IEEE 802.3as Support for 2K Packets.
+    bit_offset: 22
+    bit_size: 1
+    enum: EnetAlphaEnumLimaKilo
+  - name: gpslce
+    description: Giant Packet Size Limit Control Enable.
+    bit_offset: 23
+    bit_size: 1
+    enum: EnetAlphaEnumQuebecEcho
+  - name: ipg
+    description: Inter-Packet Gap.
+    bit_offset: 24
+    bit_size: 3
+    enum: EnetAlphaEnumUniformEcho
+  - name: ipc
+    description: Checksum Offload.
+    bit_offset: 27
+    bit_size: 1
+    enum: EnetAlphaEnumTangoEcho
+  - name: sarc
+    description: Source Address Insertion or Replacement Control.
+    bit_offset: 28
+    bit_size: 3
+    enum: EnetAlphaEnumMikeKilo
+fieldset/EnetAlphaFieldsetVictorAlpha:
+  description: CSR Software Control.
+  fields:
+  - name: rcwe
+    description: Register Clear on Write 1 Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumOscarJuliet
+fieldset/EnetAlphaFieldsetWhiskeyAlpha:
+  description: MAC Debug.
+  fields:
+  - name: rpests
+    description: MAC GMII or MII Receive Protocol Engine Status.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumVictorJuliet
+  - name: rfcfcsts
+    description: MAC Receive Packet Controller FIFO Status.
+    bit_offset: 1
+    bit_size: 2
+  - name: tpests
+    description: MAC GMII or MII Transmit Protocol Engine Status.
+    bit_offset: 16
+    bit_size: 1
+    enum: EnetAlphaEnumGolfLima
+  - name: tfcsts
+    description: MAC Transmit Packet Controller Status.
+    bit_offset: 17
+    bit_size: 2
+    enum: EnetAlphaEnumAlphaLima
+fieldset/EnetAlphaFieldsetXrayAlpha:
+  description: MAC Extended Configuration Register.
+  fields:
+  - name: gpsl
+    description: Giant Packet Size Limit.
+    bit_offset: 0
+    bit_size: 14
+  - name: dcrcc
+    description: Disable CRC Checking for Received Packets.
+    bit_offset: 16
+    bit_size: 1
+    enum: EnetAlphaEnumIndiaAlpha
+  - name: spen
+    description: Slow Protocol Detection Enable.
+    bit_offset: 17
+    bit_size: 1
+    enum: EnetAlphaEnumSierraKilo
+  - name: usp
+    description: Unicast Slow Protocol Packet Detect.
+    bit_offset: 18
+    bit_size: 1
+    enum: EnetAlphaEnumTangoMike
+  - name: pdc
+    description: Packet Duplication Control.
+    bit_offset: 19
+    bit_size: 1
+    enum: EnetAlphaEnumOscarIndia
+  - name: eipgen
+    description: Extended Inter-Packet Gap Enable.
+    bit_offset: 24
+    bit_size: 1
+    enum: EnetAlphaEnumPapaDelta
+  - name: eipg
+    description: Extended Inter-Packet Gap.
+    bit_offset: 25
+    bit_size: 5
+fieldset/EnetAlphaFieldsetYankeeAlpha:
+  description: Hardware Features 0.
+  fields:
+  - name: miisel
+    description: 10 or 100 Mbps Support.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumDeltaGolf
+  - name: gmiisel
+    description: 1000 Mbps Support.
+    bit_offset: 1
+    bit_size: 1
+    enum: EnetAlphaEnumNovemberEcho
+  - name: hdsel
+    description: Half-duplex Support.
+    bit_offset: 2
+    bit_size: 1
+    enum: EnetAlphaEnumSierraEcho
+  - name: pcssel
+    description: PCS Registers (TBI, SGMII, or RTBI PHY interface).
+    bit_offset: 3
+    bit_size: 1
+    enum: EnetAlphaEnumNovemberIndia
+  - name: vlhash
+    description: VLAN Hash Filter Selected.
+    bit_offset: 4
+    bit_size: 1
+    enum: EnetAlphaEnumVictorMike
+  - name: smasel
+    description: SMA (MDIO) Interface.
+    bit_offset: 5
+    bit_size: 1
+    enum: EnetAlphaEnumRomeoKilo
+  - name: rwksel
+    description: PMT Remote Wake-up Packet Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: EnetAlphaEnumCharlieKilo
+  - name: mgksel
+    description: PMT Magic Packet Enable.
+    bit_offset: 7
+    bit_size: 1
+    enum: EnetAlphaEnumCharlieGolf
+  - name: mmcsel
+    description: RMON Module Enable.
+    bit_offset: 8
+    bit_size: 1
+    enum: EnetAlphaEnumEchoGolf
+  - name: arpoffsel
+    description: ARP Offload Enabled.
+    bit_offset: 9
+    bit_size: 1
+    enum: EnetAlphaEnumHotel
+  - name: tssel
+    description: IEEE 1588-2008 Timestamp Enabled.
+    bit_offset: 12
+    bit_size: 1
+    enum: EnetAlphaEnumYankeeLima
+  - name: eeesel
+    description: Energy Efficient Ethernet Enabled.
+    bit_offset: 13
+    bit_size: 1
+    enum: EnetAlphaEnumOscarDelta
+  - name: txcoesel
+    description: Transmit Checksum Offload Enabled.
+    bit_offset: 14
+    bit_size: 1
+    enum: EnetAlphaEnumHotelMike
+  - name: rxcoesel
+    description: Receive Checksum Offload Enabled.
+    bit_offset: 16
+    bit_size: 1
+    enum: EnetAlphaEnumEchoKilo
+  - name: addmacadrsel
+    description: MAC Addresses 1-31 Selected.
+    bit_offset: 18
+    bit_size: 5
+  - name: macadr32sel
+    description: MAC Addresses 32-63 Selected.
+    bit_offset: 23
+    bit_size: 1
+    enum: EnetAlphaEnumRomeoFoxtrot
+  - name: macadr64sel
+    description: MAC Addresses 64-127 Selected.
+    bit_offset: 24
+    bit_size: 1
+    enum: EnetAlphaEnumSierraFoxtrot
+  - name: tsstssel
+    description: Timestamp System Time Source.
+    bit_offset: 25
+    bit_size: 2
+    enum: EnetAlphaEnumAlphaMike
+  - name: savlanins
+    description: Source Address or VLAN Insertion Enable.
+    bit_offset: 27
+    bit_size: 1
+    enum: EnetAlphaEnumNovemberKilo
+  - name: actphysel
+    description: Active PHY Selected.
+    bit_offset: 28
+    bit_size: 3
+    enum: EnetAlphaEnumCharlie
+fieldset/EnetAlphaFieldsetZuluAlpha:
+  description: Hardware Features 1.
+  fields:
+  - name: rxfifosize
+    description: MTL Receive FIFO Size.
+    bit_offset: 0
+    bit_size: 5
+    enum: EnetAlphaEnumFoxtrotKilo
+  - name: spram
+    description: Single Port RAM Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: EnetAlphaEnumUniformKilo
+  - name: txfifosize
+    description: MTL Transmit FIFO Size.
+    bit_offset: 6
+    bit_size: 5
+    enum: EnetAlphaEnumIndiaMike
+  - name: osten
+    description: One-Step Timestamping Enable.
+    bit_offset: 11
+    bit_size: 1
+    enum: EnetAlphaEnumLimaIndia
+  - name: ptoen
+    description: PTP Offload Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: EnetAlphaEnumCharlieJuliet
+  - name: advthword
+    description: IEEE 1588 High Word Register Enable.
+    bit_offset: 13
+    bit_size: 1
+    enum: EnetAlphaEnumFoxtrot
+  - name: addr64
+    description: Address Width.
+    bit_offset: 14
+    bit_size: 2
+    enum: EnetAlphaEnumDelta
+  - name: dcben
+    description: DCB Feature Enable.
+    bit_offset: 16
+    bit_size: 1
+    enum: EnetAlphaEnumHotelAlpha
+  - name: sphen
+    description: Split Header Feature Enable.
+    bit_offset: 17
+    bit_size: 1
+    enum: EnetAlphaEnumTangoKilo
+  - name: tsoen
+    description: TCP Segmentation Offload Enable.
+    bit_offset: 18
+    bit_size: 1
+    enum: EnetAlphaEnumXrayLima
+  - name: dbgmema
+    description: DMA Debug Registers Enable.
+    bit_offset: 19
+    bit_size: 1
+    enum: EnetAlphaEnumDeltaAlpha
+  - name: avsel
+    description: AV Feature Enable.
+    bit_offset: 20
+    bit_size: 1
+    enum: EnetAlphaEnumNovember
+  - name: ravsel
+    description: Rx Side Only AV Feature Enable.
+    bit_offset: 21
+    bit_size: 1
+    enum: EnetAlphaEnumMikeJuliet
+  - name: pouost
+    description: One Step for PTP over UDP/IP Feature Enable.
+    bit_offset: 23
+    bit_size: 1
+    enum: EnetAlphaEnumXrayIndia
+  - name: hashtblsz
+    description: Hash Table Size.
+    bit_offset: 24
+    bit_size: 2
+    enum: EnetAlphaEnumRomeoEcho
+  - name: l3l4fnum
+    description: Total number of L3 or L4 Filters.
+    bit_offset: 27
+    bit_size: 4
+    enum: EnetAlphaEnumXrayEcho
+fieldset/EnetAlphaFieldsetAlphaBravo:
+  description: Hardware Features 2.
+  fields:
+  - name: rxqcnt
+    description: Number of MTL Receive Queues.
+    bit_offset: 0
+    bit_size: 4
+    enum: EnetAlphaEnumIndiaKilo
+  - name: txqcnt
+    description: Number of MTL Transmit Queues.
+    bit_offset: 6
+    bit_size: 4
+    enum: EnetAlphaEnumKiloMike
+  - name: rxchcnt
+    description: Number of DMA Receive Channels.
+    bit_offset: 12
+    bit_size: 4
+    enum: EnetAlphaEnumDeltaKilo
+  - name: rdcsz
+    description: Rx DMA Descriptor Cache Size in terms of 16 bytes descriptors:.
+    bit_offset: 16
+    bit_size: 2
+  - name: txchcnt
+    description: Number of DMA Transmit Channels.
+    bit_offset: 18
+    bit_size: 4
+    enum: EnetAlphaEnumGolfMike
+  - name: tdcsz
+    description: Tx DMA Descriptor Cache Size in terms of 16 bytes descriptors:.
+    bit_offset: 22
+    bit_size: 2
+  - name: ppsoutnum
+    description: Number of PPS Outputs.
+    bit_offset: 24
+    bit_size: 3
+    enum: EnetAlphaEnumYankeeIndia
+  - name: auxsnapnum
+    description: Number of Auxiliary Snapshot Inputs.
+    bit_offset: 28
+    bit_size: 3
+    enum: EnetAlphaEnumJuliet
+fieldset/EnetAlphaFieldsetBravoBravo:
+  description: Hardware Features 3.
+  fields:
+  - name: nrvf
+    description: Number of Extended VLAN Tag Filters Enabled.
+    bit_offset: 0
+    bit_size: 3
+    enum: EnetAlphaEnumJulietIndia
+  - name: cbtisel
+    description: Queue/Channel based VLAN tag insertion on Tx Enable.
+    bit_offset: 4
+    bit_size: 1
+    enum: EnetAlphaEnumUniform
+  - name: dvlan
+    description: Double VLAN Tag Processing Selected.
+    bit_offset: 5
+    bit_size: 1
+    enum: EnetAlphaEnumKiloDelta
+  - name: pdupsel
+    description: Broadcast/Multicast Packet Duplication.
+    bit_offset: 9
+    bit_size: 1
+    enum: EnetAlphaEnumPapaIndia
+  - name: frpsel
+    description: Flexible Receive Parser Selected.
+    bit_offset: 10
+    bit_size: 1
+    enum: EnetAlphaEnumKiloEcho
+  - name: frpbs
+    description: Flexible Receive Parser Buffer size.
+    bit_offset: 11
+    bit_size: 2
+    enum: EnetAlphaEnumIndiaEcho
+  - name: frpes
+    description: Flexible Receive Parser Table Entries size.
+    bit_offset: 13
+    bit_size: 2
+    enum: EnetAlphaEnumJulietEcho
+  - name: estsel
+    description: Enhancements to Scheduled Traffic Enable.
+    bit_offset: 16
+    bit_size: 1
+    enum: EnetAlphaEnumWhiskeyDelta
+  - name: estdep
+    description: Depth of the Gate Control List.
+    bit_offset: 17
+    bit_size: 3
+    enum: EnetAlphaEnumUniformDelta
+  - name: estwid
+    description: Width of the Time Interval field in the Gate Control List.
+    bit_offset: 20
+    bit_size: 2
+    enum: EnetAlphaEnumXrayDelta
+  - name: fpesel
+    description: Frame Preemption Enable.
+    bit_offset: 26
+    bit_size: 1
+    enum: EnetAlphaEnumHotelEcho
+  - name: tbssel
+    description: Time Based Scheduling Enable.
+    bit_offset: 27
+    bit_size: 1
+    enum: EnetAlphaEnumYankeeKilo
+  - name: asp
+    description: Automotive Safety Package.
+    bit_offset: 28
+    bit_size: 2
+    enum: EnetAlphaEnumIndia
+fieldset/EnetAlphaFieldsetCharlieBravo:
+  description: MAC Inner VLAN Tag Inclusion or Replacement.
+  fields:
+  - name: vlt
+    description: VLAN Tag for Transmit Packets.
+    bit_offset: 0
+    bit_size: 16
+  - name: vlc
+    description: VLAN Tag Control in Transmit Packets.
+    bit_offset: 16
+    bit_size: 2
+    enum: EnetAlphaEnumIndiaFoxtrot
+  - name: vlp
+    description: VLAN Priority Control.
+    bit_offset: 18
+    bit_size: 1
+    enum: EnetAlphaEnumJulietFoxtrot
+  - name: csvl
+    description: C-VLAN or S-VLAN.
+    bit_offset: 19
+    bit_size: 1
+    enum: EnetAlphaEnumHotelFoxtrot
+  - name: vlti
+    description: VLAN Tag Input.
+    bit_offset: 20
+    bit_size: 1
+    enum: EnetAlphaEnumKiloFoxtrot
+fieldset/EnetAlphaFieldsetDeltaBravo:
+  description: Interrupt Enable.
+  fields:
+  - name: phyie
+    description: PHY Interrupt Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: EnetAlphaEnumQuebecIndia
+  - name: pmtie
+    description: PMT Interrupt Enable.
+    bit_offset: 4
+    bit_size: 1
+    enum: EnetAlphaEnumVictorIndia
+  - name: lpiie
+    description: LPI Interrupt Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: EnetAlphaEnumDeltaFoxtrot
+  - name: tsie
+    description: Timestamp Interrupt Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: EnetAlphaEnumQuebecLima
+  - name: txstsie
+    description: Transmit Status Interrupt Enable.
+    bit_offset: 13
+    bit_size: 1
+    enum: EnetAlphaEnumLimaMike
+  - name: rxstsie
+    description: Receive Status Interrupt Enable.
+    bit_offset: 14
+    bit_size: 1
+    enum: EnetAlphaEnumJulietKilo
+  - name: mdioie
+    description: MDIO Interrupt Enable.
+    bit_offset: 18
+    bit_size: 1
+    enum: EnetAlphaEnumXrayFoxtrot
+fieldset/EnetAlphaFieldsetEchoBravo:
+  description: Interrupt Status.
+  fields:
+  - name: phyis
+    description: PHY Interrupt.
+    bit_offset: 3
+    bit_size: 1
+    enum: EnetAlphaEnumRomeoIndia
+  - name: pmtis
+    description: PMTIS.
+    bit_offset: 4
+    bit_size: 1
+    enum: EnetAlphaEnumWhiskeyIndia
+  - name: lpiis
+    description: LPIIS.
+    bit_offset: 5
+    bit_size: 1
+    enum: EnetAlphaEnumEchoFoxtrot
+  - name: tsis
+    description: TSIS.
+    bit_offset: 12
+    bit_size: 1
+    enum: EnetAlphaEnumVictorLima
+  - name: txstsis
+    description: Transmit Status Interrupt.
+    bit_offset: 13
+    bit_size: 1
+    enum: EnetAlphaEnumMikeMike
+  - name: rxstsis
+    description: Receive Status Interrupt.
+    bit_offset: 14
+    bit_size: 1
+    enum: EnetAlphaEnumKiloKilo
+  - name: mdiois
+    description: MDIO Interrupt Status.
+    bit_offset: 18
+    bit_size: 1
+    enum: EnetAlphaEnumYankeeFoxtrot
+fieldset/EnetAlphaFieldsetFoxtrotBravo:
+  description: LPI Control and Status.
+  fields:
+  - name: tlpien
+    description: Transmit LPI Entry.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumDeltaLima
+  - name: tlpiex
+    description: Transmit LPI Exit.
+    bit_offset: 1
+    bit_size: 1
+    enum: EnetAlphaEnumEchoLima
+  - name: rlpien
+    description: Receive LPI Entry.
+    bit_offset: 2
+    bit_size: 1
+    enum: EnetAlphaEnumSierraJuliet
+  - name: rlpiex
+    description: Receive LPI Exit.
+    bit_offset: 3
+    bit_size: 1
+    enum: EnetAlphaEnumTangoJuliet
+  - name: tlpist
+    description: Transmit LPI State.
+    bit_offset: 8
+    bit_size: 1
+    enum: EnetAlphaEnumFoxtrotLima
+  - name: rlpist
+    description: Receive LPI State.
+    bit_offset: 9
+    bit_size: 1
+    enum: EnetAlphaEnumUniformJuliet
+  - name: lpien
+    description: LPI Enable.
+    bit_offset: 16
+    bit_size: 1
+    enum: EnetAlphaEnumCharlieFoxtrot
+  - name: pls
+    description: PHY Link Status.
+    bit_offset: 17
+    bit_size: 1
+    enum: EnetAlphaEnumSierraIndia
+  - name: lpitxa
+    description: LPI Tx Automate.
+    bit_offset: 19
+    bit_size: 1
+    enum: EnetAlphaEnumGolfFoxtrot
+  - name: lpiate
+    description: LPI Timer Enable.
+    bit_offset: 20
+    bit_size: 1
+    enum: EnetAlphaEnumBravoFoxtrot
+  - name: lpitcse
+    description: LPI Tx Clock Stop Enable.
+    bit_offset: 21
+    bit_size: 1
+    enum: EnetAlphaEnumFoxtrotFoxtrot
+fieldset/EnetAlphaFieldsetGolfBravo:
+  description: Tx LPI Entry Timer Control.
+  fields:
+  - name: lpiet
+    description: LPI Entry Timer.
+    bit_offset: 3
+    bit_size: 17
+fieldset/EnetAlphaFieldsetHotelBravo:
+  description: LPI Timers Control.
+  fields:
+  - name: twt
+    description: LPI TW Timer.
+    bit_offset: 0
+    bit_size: 16
+  - name: lst
+    description: LPI LS Timer.
+    bit_offset: 16
+    bit_size: 10
+fieldset/EnetAlphaFieldsetIndiaBravo:
+  description: MDIO Address.
+  fields:
+  - name: gb
+    description: GMII Busy.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumLimaEcho
+  - name: c45e
+    description: Clause 45 PHY Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: EnetAlphaEnumSierra
+  - name: goc_0
+    description: GMII Operation Command 0.
+    bit_offset: 2
+    bit_size: 1
+    enum: EnetAlphaEnumOscarEcho
+  - name: goc_1
+    description: GMII Operation Command 1.
+    bit_offset: 3
+    bit_size: 1
+    enum: EnetAlphaEnumPapaEcho
+  - name: skap
+    description: Skip Address Packet.
+    bit_offset: 4
+    bit_size: 1
+    enum: EnetAlphaEnumPapaKilo
+  - name: cr
+    description: CR.
+    bit_offset: 8
+    bit_size: 4
+  - name: ntc
+    description: NTC.
+    bit_offset: 12
+    bit_size: 3
+  - name: rda
+    description: Register/Device Address.
+    bit_offset: 16
+    bit_size: 5
+  - name: pa
+    description: Physical Layer Address.
+    bit_offset: 21
+    bit_size: 5
+  - name: btb
+    description: Back to Back transactions.
+    bit_offset: 26
+    bit_size: 1
+    enum: EnetAlphaEnumQuebec
+  - name: pse
+    description: Preamble Suppression Enable.
+    bit_offset: 27
+    bit_size: 1
+    enum: EnetAlphaEnumBravoJuliet
+fieldset/EnetAlphaFieldsetJulietBravo:
+  description: MAC MDIO Data.
+  fields:
+  - name: gd
+    description: GMII Data.
+    bit_offset: 0
+    bit_size: 16
+  - name: ra
+    description: Register Address.
+    bit_offset: 16
+    bit_size: 16
+fieldset/EnetAlphaFieldsetKiloBravo:
+  description: One-microsecond Reference Timer.
+  fields:
+  - name: tic_1us_cntr
+    description: 1US TIC Counter.
+    bit_offset: 0
+    bit_size: 12
+fieldset/EnetAlphaFieldsetLimaBravo:
+  description: MAC Packet Filter.
+  fields:
+  - name: pr
+    description: Promiscuous Mode.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumLimaFoxtrot
+  - name: daif
+    description: DA Inverse Filtering.
+    bit_offset: 3
+    bit_size: 1
+    enum: EnetAlphaEnumBravoAlpha
+  - name: pm
+    description: Pass All Multicast.
+    bit_offset: 4
+    bit_size: 1
+    enum: EnetAlphaEnumUniformIndia
+  - name: dbf
+    description: Disable Broadcast Packets.
+    bit_offset: 5
+    bit_size: 1
+    enum: EnetAlphaEnumCharlieAlpha
+  - name: pcf
+    description: Pass Control Packets.
+    bit_offset: 6
+    bit_size: 2
+    enum: EnetAlphaEnumMikeIndia
+  - name: vtfe
+    description: VLAN Tag Filter Enable.
+    bit_offset: 16
+    bit_size: 1
+    enum: EnetAlphaEnumWhiskeyMike
+  - name: ra
+    description: Receive All.
+    bit_offset: 31
+    bit_size: 1
+    enum: EnetAlphaEnumKiloJuliet
+fieldset/EnetAlphaFieldsetMikeBravo:
+  description: PMT Control and Status.
+  fields:
+  - name: pwrdwn
+    description: Power Down.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumFoxtrotJuliet
+  - name: mgkpkten
+    description: Magic Packet Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: EnetAlphaEnumAlphaGolf
+  - name: rwkpkten
+    description: Remote Wake-Up Packet Enable.
+    bit_offset: 2
+    bit_size: 1
+    enum: EnetAlphaEnumAlphaKilo
+  - name: mgkprcvd
+    description: Magic Packet Received.
+    bit_offset: 5
+    bit_size: 1
+    enum: EnetAlphaEnumBravoGolf
+  - name: rwkprcvd
+    description: Remote Wake-Up Packet Received.
+    bit_offset: 6
+    bit_size: 1
+    enum: EnetAlphaEnumBravoKilo
+  - name: glblucast
+    description: Global Unicast.
+    bit_offset: 9
+    bit_size: 1
+    enum: EnetAlphaEnumMikeEcho
+  - name: rwkpfe
+    description: Remote Wake-up Packet Forwarding Enable.
+    bit_offset: 10
+    bit_size: 1
+    enum: EnetAlphaEnumZuluJuliet
+  - name: rwkptr
+    description: Remote Wake-up FIFO Pointer.
+    bit_offset: 24
+    bit_size: 5
+  - name: rwkfiltrst
+    description: Remote Wake-Up Packet Filter Register Pointer Reset.
+    bit_offset: 31
+    bit_size: 1
+    enum: EnetAlphaEnumYankeeJuliet
+fieldset/EnetAlphaFieldsetNovemberBravo:
+  description: PPS Control.
+  fields:
+  - name: ppsctrl_ppscmd
+    description: PPS Output Frequency Control.
+    bit_offset: 0
+    bit_size: 4
+fieldset/EnetAlphaFieldsetOscarBravo:
+  description: MAC Q0 Tx Flow Control.
+  fields:
+  - name: fcb_bpa
+    description: Flow Control Busy or Backpressure Activate.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumFoxtrotEcho
+  - name: tfe
+    description: Transmit Flow Control Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: EnetAlphaEnumBravoLima
+  - name: plt
+    description: Pause Low Threshold.
+    bit_offset: 4
+    bit_size: 3
+    enum: EnetAlphaEnumTangoIndia
+  - name: dzpq
+    description: Disable Zero-Quanta Pause.
+    bit_offset: 7
+    bit_size: 1
+    enum: EnetAlphaEnumLimaDelta
+  - name: pt
+    description: Pause Time.
+    bit_offset: 16
+    bit_size: 16
+fieldset/EnetAlphaFieldsetPapaBravo:
+  description: Remote Wakeup Filter.
+  fields:
+  - name: wkupfrmftr
+    description: RWK Packet Filter.
+    bit_offset: 0
+    bit_size: 32
+fieldset/EnetAlphaFieldsetQuebecBravo:
+  description: MAC Rx Flow Control.
+  fields:
+  - name: rfe
+    description: Receive Flow Control Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumRomeoJuliet
+  - name: up
+    description: Unicast Pause Packet Detect.
+    bit_offset: 1
+    bit_size: 1
+    enum: EnetAlphaEnumRomeoMike
+fieldset/EnetAlphaFieldsetRomeoBravo:
+  description: Receive Transmit Status.
+  fields:
+  - name: tjt
+    description: Transmit Jabber Timeout.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumCharlieLima
+  - name: ncarr
+    description: No Carrier.
+    bit_offset: 1
+    bit_size: 1
+    enum: EnetAlphaEnumIndiaIndia
+  - name: lcarr
+    description: Loss of Carrier.
+    bit_offset: 2
+    bit_size: 1
+    enum: EnetAlphaEnumYankeeEcho
+  - name: exdef
+    description: Excessive Deferral.
+    bit_offset: 3
+    bit_size: 1
+    enum: EnetAlphaEnumDeltaEcho
+  - name: lcol
+    description: Late Collision.
+    bit_offset: 4
+    bit_size: 1
+    enum: EnetAlphaEnumZuluEcho
+  - name: excol
+    description: Excessive Collisions.
+    bit_offset: 5
+    bit_size: 1
+    enum: EnetAlphaEnumCharlieEcho
+  - name: rwt
+    description: Receive Watchdog Timeout.
+    bit_offset: 8
+    bit_size: 1
+    enum: EnetAlphaEnumMikeFoxtrot
+fieldset/EnetAlphaFieldsetSierraBravo:
+  description: Receive Queue Control 0.
+  fields:
+  - name: rxq0en
+    description: Receive Queue 0 Enable.
+    bit_offset: 0
+    bit_size: 2
+    enum: EnetAlphaEnumGolfKilo
+  - name: rxq1en
+    description: Receive Queue 1 Enable.
+    bit_offset: 2
+    bit_size: 2
+    enum: EnetAlphaEnumHotelKilo
+fieldset/EnetAlphaFieldsetTangoBravo:
+  description: Receive Queue Control 1.
+  fields:
+  - name: avcpq
+    description: AV Untagged Control Packets Queue.
+    bit_offset: 0
+    bit_size: 3
+    enum: EnetAlphaEnumMike
+  - name: ptpq
+    description: PTP Packets Queue.
+    bit_offset: 4
+    bit_size: 3
+    enum: EnetAlphaEnumDeltaJuliet
+  - name: upq
+    description: Untagged Packet Queue.
+    bit_offset: 12
+    bit_size: 3
+    enum: EnetAlphaEnumSierraMike
+  - name: mcbcq
+    description: Multicast and Broadcast Queue.
+    bit_offset: 16
+    bit_size: 3
+    enum: EnetAlphaEnumVictorFoxtrot
+  - name: mcbcqen
+    description: Multicast and Broadcast Queue Enable.
+    bit_offset: 20
+    bit_size: 1
+    enum: EnetAlphaEnumWhiskeyFoxtrot
+  - name: tacpqe
+    description: Tagged AV Control Packets Queuing Enable.
+    bit_offset: 21
+    bit_size: 1
+    enum: EnetAlphaEnumXrayKilo
+  - name: tpqc
+    description: Tagged PTP over Ethernet Packets Queuing Control.
+    bit_offset: 22
+    bit_size: 2
+  - name: omcbcq
+    description: OMCBCQ.
+    bit_offset: 28
+    bit_size: 1
+    enum: EnetAlphaEnumKiloIndia
+  - name: tbrqe
+    description: Type Field Based Rx Queuing Enable.
+    bit_offset: 29
+    bit_size: 1
+fieldset/EnetAlphaFieldsetUniformBravo:
+  description: Receive Queue Control 2.
+  fields:
+  - name: psrq0
+    description: Priorities Selected in the Receive Queue 0.
+    bit_offset: 0
+    bit_size: 8
+  - name: psrq1
+    description: Priorities Selected in the Receive Queue 1.
+    bit_offset: 8
+    bit_size: 8
+fieldset/EnetAlphaFieldsetVictorBravo:
+  description: Receive Queue Control 4.
+  fields:
+  - name: uffqe
+    description: Unicast Address Filter Fail Packets Queuing Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumQuebecMike
+  - name: uffq
+    description: Unicast Address Filter Fail Packets Queue.
+    bit_offset: 1
+    bit_size: 1
+  - name: mffqe
+    description: Multicast Address Filter Fail Packets Queuing Enable.
+    bit_offset: 8
+    bit_size: 1
+    enum: EnetAlphaEnumZuluFoxtrot
+  - name: mffq
+    description: Multicast Address Filter Fail Packets Queue.
+    bit_offset: 9
+    bit_size: 1
+  - name: vffqe
+    description: VLAN Tag Filter Fail Packets Queuing Enable.
+    bit_offset: 16
+    bit_size: 1
+    enum: EnetAlphaEnumUniformMike
+  - name: vffq
+    description: VLAN Tag Filter Fail Packets Queue.
+    bit_offset: 17
+    bit_size: 1
+fieldset/EnetAlphaFieldsetWhiskeyBravo:
+  description: Subsecond Increment.
+  fields:
+  - name: snsinc
+    description: Sub-nanosecond Increment Value.
+    bit_offset: 16
+    bit_size: 8
+fieldset/EnetAlphaFieldsetXrayBravo:
+  description: System Time Nanoseconds.
+  fields:
+  - name: tsss
+    description: Timestamp Sub Seconds.
+    bit_offset: 0
+    bit_size: 31
+fieldset/EnetAlphaFieldsetYankeeBravo:
+  description: System Time Nanoseconds Update.
+  fields:
+  - name: tsss
+    description: Timestamp Sub Seconds.
+    bit_offset: 0
+    bit_size: 31
+  - name: addsub
+    description: Add or Subtract Time.
+    bit_offset: 31
+    bit_size: 1
+    enum: EnetAlphaEnumEcho
+fieldset/EnetAlphaFieldsetZuluBravo:
+  description: System Time Seconds.
+  fields:
+  - name: tss
+    description: Timestamp Second.
+    bit_offset: 0
+    bit_size: 32
+fieldset/EnetAlphaFieldsetAlphaCharlie:
+  description: System Time Seconds Update.
+  fields:
+  - name: tss
+    description: Timestamp Seconds.
+    bit_offset: 0
+    bit_size: 32
+fieldset/EnetAlphaFieldsetBravoCharlie:
+  description: Timestamp Addend.
+  fields:
+  - name: tsar
+    description: Timestamp Addend Register.
+    bit_offset: 0
+    bit_size: 32
+fieldset/EnetAlphaFieldsetCharlieCharlie:
+  description: Timestamp Control.
+  fields:
+  - name: tsena
+    description: Enable Timestamp.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumMikeLima
+  - name: tscfupdt
+    description: Fine or Coarse Timestamp Update.
+    bit_offset: 1
+    bit_size: 1
+    enum: EnetAlphaEnumKiloLima
+  - name: tsinit
+    description: Initialize Timestamp.
+    bit_offset: 2
+    bit_size: 1
+    enum: EnetAlphaEnumRomeoLima
+  - name: tsupdt
+    description: Update Timestamp.
+    bit_offset: 3
+    bit_size: 1
+    enum: EnetAlphaEnumEchoMike
+  - name: tstrig
+    description: Enable Timestamp Interrupt Trigger.
+    bit_offset: 4
+    bit_size: 1
+    enum: EnetAlphaEnumDeltaMike
+  - name: tsaddreg
+    description: Update Addend Register.
+    bit_offset: 5
+    bit_size: 1
+    enum: EnetAlphaEnumJulietLima
+  - name: tsenall
+    description: Enable Timestamp for All Packets.
+    bit_offset: 8
+    bit_size: 1
+    enum: EnetAlphaEnumNovemberLima
+  - name: tsctrlssr
+    description: Timestamp Digital or Binary Rollover Control.
+    bit_offset: 9
+    bit_size: 1
+    enum: EnetAlphaEnumLimaLima
+  - name: tsver2ena
+    description: Enable PTP Packet Processing for Version 2 Format.
+    bit_offset: 10
+    bit_size: 1
+    enum: EnetAlphaEnumFoxtrotMike
+  - name: tsipena
+    description: Enable Processing of PTP over Ethernet Packets.
+    bit_offset: 11
+    bit_size: 1
+    enum: EnetAlphaEnumSierraLima
+  - name: tsipv6ena
+    description: Enable Processing of PTP Packets Sent over IPv6-UDP.
+    bit_offset: 12
+    bit_size: 1
+    enum: EnetAlphaEnumUniformLima
+  - name: tsipv4ena
+    description: Enable Processing of PTP Packets Sent over IPv4-UDP.
+    bit_offset: 13
+    bit_size: 1
+    enum: EnetAlphaEnumTangoLima
+  - name: tsevntena
+    description: Enable Timestamp Snapshot for Event Messages.
+    bit_offset: 14
+    bit_size: 1
+    enum: EnetAlphaEnumPapaLima
+  - name: tsmstrena
+    description: Enable Snapshot for Messages Relevant to Master.
+    bit_offset: 15
+    bit_size: 1
+    enum: EnetAlphaEnumWhiskeyLima
+  - name: snaptypsel
+    description: Select PTP packets for Taking Snapshots.
+    bit_offset: 16
+    bit_size: 2
+  - name: tsenmacaddr
+    description: Enable MAC Address for PTP Packet Filtering.
+    bit_offset: 18
+    bit_size: 1
+    enum: EnetAlphaEnumOscarLima
+  - name: esti
+    description: External System Time Input.
+    bit_offset: 20
+    bit_size: 1
+    enum: EnetAlphaEnumVictorDelta
+  - name: txtsstsm
+    description: Transmit Timestamp Status Mode.
+    bit_offset: 24
+    bit_size: 1
+    enum: EnetAlphaEnumPapaMike
+  - name: av8021asmen
+    description: AV 802.
+    bit_offset: 28
+    bit_size: 1
+    enum: EnetAlphaEnumKilo
+fieldset/EnetAlphaFieldsetDeltaCharlie:
+  description: Timestamp Egress Correction Nanosecond.
+  fields:
+  - name: tsec
+    description: Timestamp Egress Correction.
+    bit_offset: 0
+    bit_size: 32
+fieldset/EnetAlphaFieldsetEchoCharlie:
+  description: Timestamp Egress Latency.
+  fields:
+  - name: etlsns
+    description: Egress Timestamp Latency, in sub-nanoseconds.
+    bit_offset: 8
+    bit_size: 8
+  - name: etlns
+    description: Egress Timestamp Latency, in nanoseconds.
+    bit_offset: 16
+    bit_size: 12
+fieldset/EnetAlphaFieldsetFoxtrotCharlie:
+  description: Timestamp Ingress Correction Nanosecond.
+  fields:
+  - name: tsic
+    description: Timestamp Ingress Correction.
+    bit_offset: 0
+    bit_size: 32
+fieldset/EnetAlphaFieldsetGolfCharlie:
+  description: Timestamp Ingress Latency.
+  fields:
+  - name: itlsns
+    description: ITLSNS.
+    bit_offset: 8
+    bit_size: 8
+  - name: itlns
+    description: ITLNS.
+    bit_offset: 16
+    bit_size: 12
+fieldset/EnetAlphaFieldsetHotelCharlie:
+  description: Timestamp Status.
+  fields:
+  - name: tssovf
+    description: Timestamp Seconds Overflow.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumZuluLima
+  - name: tstargt0
+    description: Timestamp Target Time Reached.
+    bit_offset: 1
+    bit_size: 1
+    enum: EnetAlphaEnumBravoMike
+  - name: tstrgterr0
+    description: Timestamp Target Time Error.
+    bit_offset: 3
+    bit_size: 1
+    enum: EnetAlphaEnumCharlieMike
+  - name: txtssis
+    description: Tx Timestamp Status Interrupt Status.
+    bit_offset: 15
+    bit_size: 1
+    enum: EnetAlphaEnumNovemberMike
+fieldset/EnetAlphaFieldsetIndiaCharlie:
+  description: Transmit Timestamp Status Nanoseconds.
+  fields:
+  - name: txtsslo
+    description: Transmit Timestamp Status Low.
+    bit_offset: 0
+    bit_size: 31
+  - name: txtssmis
+    description: TXTSSMIS.
+    bit_offset: 31
+    bit_size: 1
+    enum: EnetAlphaEnumOscarMike
+fieldset/EnetAlphaFieldsetJulietCharlie:
+  description: Transmit Timestamp Status Seconds.
+  fields:
+  - name: txtsshi
+    description: Transmit Timestamp Status High.
+    bit_offset: 0
+    bit_size: 32
+fieldset/EnetAlphaFieldsetKiloCharlie:
+  description: MAC Version.
+  fields:
+  - name: snpsver
+    description: Synopsys-defined Version.
+    bit_offset: 0
+    bit_size: 8
+  - name: userver
+    description: User-defined Version.
+    bit_offset: 8
+    bit_size: 8
+fieldset/EnetAlphaFieldsetLimaCharlie:
+  description: VLAN Tag Inclusion or Replacement.
+  fields:
+  - name: vlt
+    description: VLAN Tag for Transmit Packets.
+    bit_offset: 0
+    bit_size: 16
+  - name: vlc
+    description: VLAN Tag Control in Transmit Packets.
+    bit_offset: 16
+    bit_size: 2
+    enum: EnetAlphaEnumOscarFoxtrot
+  - name: vlp
+    description: VLAN Priority Control.
+    bit_offset: 18
+    bit_size: 1
+    enum: EnetAlphaEnumPapaFoxtrot
+  - name: csvl
+    description: C-VLAN or S-VLAN.
+    bit_offset: 19
+    bit_size: 1
+    enum: EnetAlphaEnumNovemberFoxtrot
+  - name: vlti
+    description: VLAN Tag Input.
+    bit_offset: 20
+    bit_size: 1
+    enum: EnetAlphaEnumQuebecFoxtrot
+  - name: cbti
+    description: Channel based tag insertion.
+    bit_offset: 21
+    bit_size: 1
+    enum: EnetAlphaEnumTango
+  - name: addr
+    description: Address.
+    bit_offset: 24
+    bit_size: 1
+  - name: rdwr
+    description: Read write control.
+    bit_offset: 30
+    bit_size: 1
+    enum: EnetAlphaEnumPapaJuliet
+  - name: busy
+    description: Busy.
+    bit_offset: 31
+    bit_size: 1
+    enum: EnetAlphaEnumRomeo
+fieldset/EnetAlphaFieldsetMikeCharlie:
+  description: MAC VLAN Tag Control.
+  fields:
+  - name: vl
+    description: VLAN Tag Identifier for Receive Packets.
+    bit_offset: 0
+    bit_size: 16
+  - name: etv
+    description: Enable 12-Bit VLAN Tag Comparison.
+    bit_offset: 16
+    bit_size: 1
+    enum: EnetAlphaEnumZuluDelta
+  - name: vtim
+    description: VLAN Tag Inverse Match Enable.
+    bit_offset: 17
+    bit_size: 1
+    enum: EnetAlphaEnumXrayMike
+  - name: esvl
+    description: Enable S-VLAN.
+    bit_offset: 18
+    bit_size: 1
+    enum: EnetAlphaEnumYankeeDelta
+  - name: ersvlm
+    description: Enable Receive S-VLAN Match.
+    bit_offset: 19
+    bit_size: 1
+    enum: EnetAlphaEnumTangoDelta
+  - name: dovltc
+    description: Disable VLAN Type Check.
+    bit_offset: 20
+    bit_size: 1
+    enum: EnetAlphaEnumHotelDelta
+  - name: evls
+    description: Enable VLAN Tag Stripping on Receive.
+    bit_offset: 21
+    bit_size: 2
+    enum: EnetAlphaEnumBravoEcho
+  - name: evlrxs
+    description: Enable VLAN Tag in Rx status.
+    bit_offset: 24
+    bit_size: 1
+    enum: EnetAlphaEnumAlphaEcho
+  - name: edvlp
+    description: Enable Double VLAN Processing.
+    bit_offset: 26
+    bit_size: 1
+    enum: EnetAlphaEnumNovemberDelta
+  - name: erivlt
+    description: Enable Inner VLAN Tag.
+    bit_offset: 27
+    bit_size: 1
+    enum: EnetAlphaEnumSierraDelta
+  - name: eivls
+    description: Enable Inner VLAN Tag Stripping on Receive.
+    bit_offset: 28
+    bit_size: 2
+    enum: EnetAlphaEnumRomeoDelta
+  - name: eivlrxs
+    description: Enable Inner VLAN Tag in Rx Status.
+    bit_offset: 31
+    bit_size: 1
+    enum: EnetAlphaEnumQuebecDelta
+fieldset/EnetAlphaFieldsetNovemberCharlie:
+  description: Watchdog Timeout.
+  fields:
+  - name: wto
+    description: Watchdog Timeout.
+    bit_offset: 0
+    bit_size: 4
+    enum: EnetAlphaEnumZuluMike
+  - name: pwe
+    description: Programmable Watchdog Enable.
+    bit_offset: 8
+    bit_size: 1
+    enum: EnetAlphaEnumEchoJuliet
+fieldset/EnetAlphaFieldsetOscarCharlie:
+  description: MTL Interrupt Status.
+  fields:
+  - name: q0is
+    description: Queue 0 Interrupt status.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumHotelJuliet
+  - name: q1is
+    description: Queue 1 Interrupt status.
+    bit_offset: 1
+    bit_size: 1
+    enum: EnetAlphaEnumJulietJuliet
+fieldset/EnetAlphaFieldsetPapaCharlie:
+  description: MTL Operation Mode.
+  fields:
+  - name: dtxsts
+    description: Drop Transmit Status.
+    bit_offset: 1
+    bit_size: 1
+    enum: EnetAlphaEnumJulietDelta
+  - name: raa
+    description: Receive Arbitration Algorithm.
+    bit_offset: 2
+    bit_size: 1
+    enum: EnetAlphaEnumLimaJuliet
+  - name: schalg
+    description: Tx Scheduling Algorithm.
+    bit_offset: 5
+    bit_size: 2
+    enum: EnetAlphaEnumOscarKilo
+  - name: cntprst
+    description: Counters Preset.
+    bit_offset: 8
+    bit_size: 1
+    enum: EnetAlphaEnumXray
+  - name: cntclr
+    description: Counters Reset.
+    bit_offset: 9
+    bit_size: 1
+    enum: EnetAlphaEnumWhiskey
+fieldset/EnetAlphaFieldsetQuebecCharlie:
+  description: Queue 0 Interrupt Control Status.
+  fields:
+  - name: txunfis
+    description: Transmit Queue Underflow Interrupt Status.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumKiloGolf
+  - name: abpsis
+    description: Average Bits Per Slot Interrupt Status.
+    bit_offset: 1
+    bit_size: 1
+    enum: EnetAlphaEnumGolfGolf
+  - name: txuie
+    description: Transmit Queue Underflow Interrupt Enable.
+    bit_offset: 8
+    bit_size: 1
+    enum: EnetAlphaEnumJulietGolf
+  - name: abpsie
+    description: Average Bits Per Slot Interrupt Enable.
+    bit_offset: 9
+    bit_size: 1
+    enum: EnetAlphaEnumFoxtrotGolf
+  - name: rxovfis
+    description: Receive Queue Overflow Interrupt Status.
+    bit_offset: 16
+    bit_size: 1
+    enum: EnetAlphaEnumIndiaGolf
+  - name: rxoie
+    description: Receive Queue Overflow Interrupt Enable.
+    bit_offset: 24
+    bit_size: 1
+    enum: EnetAlphaEnumHotelGolf
+fieldset/EnetAlphaFieldsetRomeoCharlie:
+  description: Queue 1 Interrupt Control Status.
+  fields:
+  - name: txunfis
+    description: Transmit Queue Underflow Interrupt Status.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumQuebecGolf
+  - name: abpsis
+    description: Average Bits Per Slot Interrupt Status.
+    bit_offset: 1
+    bit_size: 1
+    enum: EnetAlphaEnumMikeGolf
+  - name: txuie
+    description: Transmit Queue Underflow Interrupt Enable.
+    bit_offset: 8
+    bit_size: 1
+    enum: EnetAlphaEnumPapaGolf
+  - name: abpsie
+    description: Average Bits Per Slot Interrupt Enable.
+    bit_offset: 9
+    bit_size: 1
+    enum: EnetAlphaEnumLimaGolf
+  - name: rxovfis
+    description: Receive Queue Overflow Interrupt Status.
+    bit_offset: 16
+    bit_size: 1
+    enum: EnetAlphaEnumOscarGolf
+  - name: rxoie
+    description: Receive Queue Overflow Interrupt Enable.
+    bit_offset: 24
+    bit_size: 1
+    enum: EnetAlphaEnumNovemberGolf
+fieldset/EnetAlphaFieldsetSierraCharlie:
+  description: Queue 0 Receive Control.
+  fields:
+  - name: rxq_wegt
+    description: Receive Queue Weight.
+    bit_offset: 0
+    bit_size: 3
+  - name: rxq_frm_arbit
+    description: Receive Queue Packet Arbitration.
+    bit_offset: 3
+    bit_size: 1
+    enum: EnetAlphaEnumRomeoGolf
+fieldset/EnetAlphaFieldsetTangoCharlie:
+  description: Queue 0 Receive Debug.
+  fields:
+  - name: rwcsts
+    description: MTL Rx Queue Write Controller Active Status.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumTangoGolf
+  - name: rrcsts
+    description: MTL Rx Queue Read Controller State.
+    bit_offset: 1
+    bit_size: 2
+    enum: EnetAlphaEnumSierraGolf
+  - name: rxqsts
+    description: MTL Rx Queue Fill-Level Status.
+    bit_offset: 4
+    bit_size: 2
+    enum: EnetAlphaEnumUniformGolf
+  - name: prxq
+    description: Number of Packets in Receive Queue.
+    bit_offset: 16
+    bit_size: 14
+fieldset/EnetAlphaFieldsetUniformCharlie:
+  description: Queue 0 Missed Packet and Overflow Counter.
+  fields:
+  - name: ovfpktcnt
+    description: Overflow Packet Counter.
+    bit_offset: 0
+    bit_size: 11
+  - name: ovfcntovf
+    description: Overflow Counter Overflow Bit.
+    bit_offset: 11
+    bit_size: 1
+    enum: EnetAlphaEnumWhiskeyGolf
+  - name: mispktcnt
+    description: Missed Packet Counter.
+    bit_offset: 16
+    bit_size: 11
+  - name: miscntovf
+    description: Missed Packet Counter Overflow Bit.
+    bit_offset: 27
+    bit_size: 1
+    enum: EnetAlphaEnumVictorGolf
+fieldset/EnetAlphaFieldsetVictorCharlie:
+  description: Queue 0 Receive Operation Mode.
+  fields:
+  - name: rtc
+    description: Receive Queue Threshold Control.
+    bit_offset: 0
+    bit_size: 2
+    enum: EnetAlphaEnumBravoHotel
+  - name: fup
+    description: Forward Undersized Good Packets.
+    bit_offset: 3
+    bit_size: 1
+    enum: EnetAlphaEnumZuluGolf
+  - name: fep
+    description: Forward Error Packets.
+    bit_offset: 4
+    bit_size: 1
+    enum: EnetAlphaEnumYankeeGolf
+  - name: rsf
+    description: Receive Queue Store and Forward.
+    bit_offset: 5
+    bit_size: 1
+    enum: EnetAlphaEnumAlphaHotel
+  - name: dis_tcp_ef
+    description: Disable Dropping of TCP/IP Checksum Error Packets.
+    bit_offset: 6
+    bit_size: 1
+    enum: EnetAlphaEnumXrayGolf
+  - name: rqs
+    description: Receive Queue Size.
+    bit_offset: 20
+    bit_size: 3
+fieldset/EnetAlphaFieldsetWhiskeyCharlie:
+  description: Queue 1 Receive Control.
+  fields:
+  - name: rxq_wegt
+    description: Receive Queue Weight.
+    bit_offset: 0
+    bit_size: 3
+  - name: rxq_frm_arbit
+    description: Receive Queue Packet Arbitration.
+    bit_offset: 3
+    bit_size: 1
+    enum: EnetAlphaEnumCharlieHotel
+fieldset/EnetAlphaFieldsetXrayCharlie:
+  description: Queue 1 Receive Debug.
+  fields:
+  - name: rwcsts
+    description: MTL Rx Queue Write Controller Active Status.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumEchoHotel
+  - name: rrcsts
+    description: MTL Rx Queue Read Controller State.
+    bit_offset: 1
+    bit_size: 2
+    enum: EnetAlphaEnumDeltaHotel
+  - name: rxqsts
+    description: MTL Rx Queue Fill-Level Status.
+    bit_offset: 4
+    bit_size: 2
+    enum: EnetAlphaEnumFoxtrotHotel
+  - name: prxq
+    description: Number of Packets in Receive Queue.
+    bit_offset: 16
+    bit_size: 14
+fieldset/EnetAlphaFieldsetYankeeCharlie:
+  description: Queue 1 Missed Packet and Overflow Counter.
+  fields:
+  - name: ovfpktcnt
+    description: Overflow Packet Counter.
+    bit_offset: 0
+    bit_size: 11
+  - name: ovfcntovf
+    description: Overflow Counter Overflow Bit.
+    bit_offset: 11
+    bit_size: 1
+    enum: EnetAlphaEnumHotelHotel
+  - name: mispktcnt
+    description: Missed Packet Counter.
+    bit_offset: 16
+    bit_size: 11
+  - name: miscntovf
+    description: Missed Packet Counter Overflow Bit.
+    bit_offset: 27
+    bit_size: 1
+    enum: EnetAlphaEnumGolfHotel
+fieldset/EnetAlphaFieldsetZuluCharlie:
+  description: Queue 1 Receive Operation Mode.
+  fields:
+  - name: rtc
+    description: Receive Queue Threshold Control.
+    bit_offset: 0
+    bit_size: 2
+    enum: EnetAlphaEnumMikeHotel
+  - name: fup
+    description: Forward Undersized Good Packets.
+    bit_offset: 3
+    bit_size: 1
+    enum: EnetAlphaEnumKiloHotel
+  - name: fep
+    description: Forward Error Packets.
+    bit_offset: 4
+    bit_size: 1
+    enum: EnetAlphaEnumJulietHotel
+  - name: rsf
+    description: Receive Queue Store and Forward.
+    bit_offset: 5
+    bit_size: 1
+    enum: EnetAlphaEnumLimaHotel
+  - name: dis_tcp_ef
+    description: Disable Dropping of TCP/IP Checksum Error Packets.
+    bit_offset: 6
+    bit_size: 1
+    enum: EnetAlphaEnumIndiaHotel
+  - name: rqs
+    description: Receive Queue Size.
+    bit_offset: 20
+    bit_size: 3
+fieldset/EnetAlphaFieldsetAlphaDelta:
+  description: Receive Queue and DMA Channel Mapping 0.
+  fields:
+  - name: q0mdmach
+    description: Queue 0 Mapped to DMA Channel.
+    bit_offset: 0
+    bit_size: 1
+  - name: q0ddmach
+    description: Queue 0 Enabled for DA-based DMA Channel Selection.
+    bit_offset: 4
+    bit_size: 1
+    enum: EnetAlphaEnumGolfJuliet
+  - name: q1mdmach
+    description: Queue 1 Mapped to DMA Channel.
+    bit_offset: 8
+    bit_size: 1
+  - name: q1ddmach
+    description: Queue 1 Enabled for DA-based DMA Channel Selection.
+    bit_offset: 12
+    bit_size: 1
+    enum: EnetAlphaEnumIndiaJuliet
+fieldset/EnetAlphaFieldsetBravoDelta:
+  description: Queue 0 Transmit Debug.
+  fields:
+  - name: txqpaused
+    description: Transmit Queue in Pause.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumPapaHotel
+  - name: trcsts
+    description: MTL Tx Queue Read Controller Status.
+    bit_offset: 1
+    bit_size: 2
+    enum: EnetAlphaEnumNovemberHotel
+  - name: twcsts
+    description: MTL Tx Queue Write Controller Status.
+    bit_offset: 3
+    bit_size: 1
+    enum: EnetAlphaEnumOscarHotel
+  - name: txqsts
+    description: MTL Tx Queue Not Empty Status.
+    bit_offset: 4
+    bit_size: 1
+    enum: EnetAlphaEnumQuebecHotel
+  - name: txstsfsts
+    description: MTL Tx Status FIFO Full Status.
+    bit_offset: 5
+    bit_size: 1
+    enum: EnetAlphaEnumRomeoHotel
+  - name: ptxq
+    description: Number of Packets in the Transmit Queue.
+    bit_offset: 16
+    bit_size: 3
+  - name: stxstsf
+    description: Number of Status Words in Tx Status FIFO of Queue.
+    bit_offset: 20
+    bit_size: 3
+fieldset/EnetAlphaFieldsetCharlieDelta:
+  description: Queue 0 ETS Status.
+  fields:
+  - name: abs
+    description: Average Bits per Slot.
+    bit_offset: 0
+    bit_size: 24
+fieldset/EnetAlphaFieldsetDeltaDelta:
+  description: Queue 0 Transmit Operation Mode.
+  fields:
+  - name: ftq
+    description: Flush Transmit Queue.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumSierraHotel
+  - name: tsf
+    description: Transmit Store and Forward.
+    bit_offset: 1
+    bit_size: 1
+    enum: EnetAlphaEnumTangoHotel
+  - name: txqen
+    description: Transmit Queue Enable.
+    bit_offset: 2
+    bit_size: 2
+    enum: EnetAlphaEnumVictorHotel
+  - name: ttc
+    description: Transmit Threshold Control.
+    bit_offset: 4
+    bit_size: 3
+    enum: EnetAlphaEnumUniformHotel
+  - name: tqs
+    description: Transmit Queue Size.
+    bit_offset: 16
+    bit_size: 3
+fieldset/EnetAlphaFieldsetEchoDelta:
+  description: Queue 0 Quantum or Weights.
+  fields:
+  - name: iscqw
+    description: Quantum or Weights.
+    bit_offset: 0
+    bit_size: 21
+fieldset/EnetAlphaFieldsetFoxtrotDelta:
+  description: Queue 0 Underflow Counter.
+  fields:
+  - name: uffrmcnt
+    description: Underflow Packet Counter.
+    bit_offset: 0
+    bit_size: 11
+  - name: ufcntovf
+    description: Overflow Bit for Underflow Packet Counter.
+    bit_offset: 11
+    bit_size: 1
+    enum: EnetAlphaEnumWhiskeyHotel
+fieldset/EnetAlphaFieldsetGolfDelta:
+  description: Queue 1 Transmit Debug.
+  fields:
+  - name: txqpaused
+    description: Transmit Queue in Pause.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumZuluHotel
+  - name: trcsts
+    description: MTL Tx Queue Read Controller Status.
+    bit_offset: 1
+    bit_size: 2
+    enum: EnetAlphaEnumXrayHotel
+  - name: twcsts
+    description: MTL Tx Queue Write Controller Status.
+    bit_offset: 3
+    bit_size: 1
+    enum: EnetAlphaEnumYankeeHotel
+  - name: txqsts
+    description: MTL Tx Queue Not Empty Status.
+    bit_offset: 4
+    bit_size: 1
+    enum: EnetAlphaEnumAlphaIndia
+  - name: txstsfsts
+    description: MTL Tx Status FIFO Full Status.
+    bit_offset: 5
+    bit_size: 1
+    enum: EnetAlphaEnumBravoIndia
+  - name: ptxq
+    description: Number of Packets in the Transmit Queue.
+    bit_offset: 16
+    bit_size: 3
+  - name: stxstsf
+    description: Number of Status Words in Tx Status FIFO of Queue.
+    bit_offset: 20
+    bit_size: 3
+fieldset/EnetAlphaFieldsetHotelDelta:
+  description: Queue 1 ETS Control.
+  fields:
+  - name: avalg
+    description: AV Algorithm.
+    bit_offset: 2
+    bit_size: 1
+    enum: EnetAlphaEnumLima
+  - name: cc
+    description: Credit Control.
+    bit_offset: 3
+    bit_size: 1
+    enum: EnetAlphaEnumVictor
+  - name: slc
+    description: Slot Count.
+    bit_offset: 4
+    bit_size: 3
+    enum: EnetAlphaEnumQuebecKilo
+fieldset/EnetAlphaFieldsetIndiaDelta:
+  description: Queue 1 ETS Status.
+  fields:
+  - name: abs
+    description: Average Bits per Slot.
+    bit_offset: 0
+    bit_size: 24
+fieldset/EnetAlphaFieldsetJulietDelta:
+  description: Queue 1 hiCredit.
+  fields:
+  - name: hc
+    description: hiCredit Value.
+    bit_offset: 0
+    bit_size: 29
+fieldset/EnetAlphaFieldsetKiloDelta:
+  description: Queue 1 loCredit.
+  fields:
+  - name: lc
+    description: loCredit Value.
+    bit_offset: 0
+    bit_size: 29
+fieldset/EnetAlphaFieldsetLimaDelta:
+  description: Queue 1 Transmit Operation Mode.
+  fields:
+  - name: ftq
+    description: Flush Transmit Queue.
+    bit_offset: 0
+    bit_size: 1
+    enum: EnetAlphaEnumCharlieIndia
+  - name: tsf
+    description: Transmit Store and Forward.
+    bit_offset: 1
+    bit_size: 1
+    enum: EnetAlphaEnumDeltaIndia
+  - name: txqen
+    description: Transmit Queue Enable.
+    bit_offset: 2
+    bit_size: 2
+    enum: EnetAlphaEnumFoxtrotIndia
+  - name: ttc
+    description: Transmit Threshold Control.
+    bit_offset: 4
+    bit_size: 3
+    enum: EnetAlphaEnumEchoIndia
+  - name: tqs
+    description: Transmit Queue Size.
+    bit_offset: 16
+    bit_size: 3
+fieldset/EnetAlphaFieldsetMikeDelta:
+  description: Queue 1 idleSlopeCredit, Quantum or Weights.
+  fields:
+  - name: iscqw
+    description: idleSlopeCredit, Quantum or Weights.
+    bit_offset: 0
+    bit_size: 21
+fieldset/EnetAlphaFieldsetNovemberDelta:
+  description: Queue 1 sendSlopeCredit.
+  fields:
+  - name: ssc
+    description: sendSlopeCredit Value.
+    bit_offset: 0
+    bit_size: 14
+fieldset/EnetAlphaFieldsetOscarDelta:
+  description: Queue 1 Underflow Counter.
+  fields:
+  - name: uffrmcnt
+    description: Underflow Packet Counter.
+    bit_offset: 0
+    bit_size: 11
+  - name: ufcntovf
+    description: Overflow Bit for Underflow Packet Counter.
+    bit_offset: 11
+    bit_size: 1
+    enum: EnetAlphaEnumGolfIndia
+fieldset/EnetAlphaFieldsetPapaDelta:
+  description: PPS0 Target Time Nanoseconds.
+  fields:
+  - name: ttsl0
+    description: Target Time Low for PPS Register.
+    bit_offset: 0
+    bit_size: 31
+fieldset/EnetAlphaFieldsetQuebecDelta:
+  description: PPS0 Target Time Seconds.
+  fields:
+  - name: tstrh0
+    description: PPS Target Time Seconds Register.
+    bit_offset: 0
+    bit_size: 32
+enum/EnetAlphaEnumAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Address-Aligned Beats is disabled.
+    value: 0
+  - name: Enable
+    description: Address-Aligned Beats is enabled.
+    value: 1
+enum/EnetAlphaEnumBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Automatic Pad or CRC Stripping is disabled.
+    value: 0
+  - name: Enable
+    description: Automatic Pad or CRC Stripping is enabled.
+    value: 1
+enum/EnetAlphaEnumCharlie:
+  bit_size: 3
+  variants:
+  - name: GmiiMii
+    description: GMII or MII.
+    value: 0
+  - name: Revmiii
+    description: RevMII.
+    value: 7
+  - name: Rgmii
+    description: RGMII.
+    value: 1
+  - name: Rmii
+    description: RMII.
+    value: 4
+  - name: Rtbi
+    description: RTBI.
+    value: 5
+  - name: Sgmii
+    description: SGMII.
+    value: 2
+  - name: Smii
+    description: SMII.
+    value: 6
+  - name: Tbi
+    description: TBI.
+    value: 3
+enum/EnetAlphaEnumDelta:
+  bit_size: 2
+  variants:
+  - name: M32
+    description: '32.'
+    value: 0
+  - name: M40
+    description: '40.'
+    value: 1
+  - name: M48
+    description: '48.'
+    value: 2
+enum/EnetAlphaEnumEcho:
+  bit_size: 1
+  variants:
+  - name: Add
+    description: Add time.
+    value: 0
+  - name: Sub
+    description: Subtract time.
+    value: 1
+enum/EnetAlphaEnumFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: IEEE 1588 High Word Register option is selected.
+    value: 1
+  - name: Inactive
+    description: IEEE 1588 High Word Register option is not selected.
+    value: 0
+enum/EnetAlphaEnumGolf:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: 'INVALID : This bit must be always set to 1.'
+    value: 0
+  - name: Enable
+    description: This bit is always set to 1.
+    value: 1
+enum/EnetAlphaEnumHotel:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: ARP Offload Enable option is selected.
+    value: 1
+  - name: Inactive
+    description: ARP Offload Enable option is not selected.
+    value: 0
+enum/EnetAlphaEnumIndia:
+  bit_size: 2
+  variants:
+  - name: AsNppe
+    description: All the Automotive Safety features are selected without the "Parity Port Enable for external interface" feature.
+    value: 2
+  - name: AsPpe
+    description: All the Automotive Safety features are selected with the "Parity Port Enable for external interface" feature.
+    value: 3
+  - name: EccOnly
+    description: Only "ECC protection for external memory" feature is selected.
+    value: 1
+  - name: None
+    description: No Safety features selected.
+    value: 0
+enum/EnetAlphaEnumJuliet:
+  bit_size: 3
+  variants:
+  - name: M1Auxi
+    description: 1 auxiliary input.
+    value: 1
+  - name: M2Auxi
+    description: 2 auxiliary input.
+    value: 2
+  - name: M3Auxi
+    description: 3 auxiliary input.
+    value: 3
+  - name: M4Auxi
+    description: 4 auxiliary input.
+    value: 4
+  - name: NoAuxi
+    description: No auxiliary input.
+    value: 0
+enum/EnetAlphaEnumKilo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: AV 802.1AS Mode is disabled.
+    value: 0
+  - name: Enable
+    description: AV 802.1AS Mode is enabled.
+    value: 1
+enum/EnetAlphaEnumLima:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: CBS Algorithm is disabled.
+    value: 0
+  - name: Enable
+    description: CBS Algorithm is enabled.
+    value: 1
+enum/EnetAlphaEnumMike:
+  bit_size: 3
+  variants:
+  - name: Queue0
+    description: Receive Queue 0.
+    value: 0
+  - name: Queue1
+    description: Receive Queue 1.
+    value: 1
+enum/EnetAlphaEnumNovember:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: AV Feature is selected.
+    value: 1
+  - name: Inactive
+    description: AV Feature is not selected.
+    value: 0
+enum/EnetAlphaEnumOscar:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: AXI Master Write Channel or AHB Master Status detected.
+    value: 1
+  - name: Inactive
+    description: AXI Master Write Channel or AHB Master Status not detected.
+    value: 0
+enum/EnetAlphaEnumPapa:
+  bit_size: 2
+  variants:
+  - name: MinN1
+    description: k = min(n,1).
+    value: 3
+  - name: MinN10
+    description: k = min(n,10).
+    value: 0
+  - name: MinN4
+    description: k = min(n,4).
+    value: 2
+  - name: MinN8
+    description: k = min(n,8).
+    value: 1
+enum/EnetAlphaEnumQuebec:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Back to Back transactions disabled.
+    value: 0
+  - name: Enable
+    description: Back to Back transactions enabled.
+    value: 1
+enum/EnetAlphaEnumRomeo:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Busy status detected.
+    value: 1
+  - name: Inactive
+    description: Busy status not detected.
+    value: 0
+enum/EnetAlphaEnumSierra:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Clause 45 PHY is disabled.
+    value: 0
+  - name: Enable
+    description: Clause 45 PHY is enabled.
+    value: 1
+enum/EnetAlphaEnumTango:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Channel based tag insertion is disabled.
+    value: 0
+  - name: Enable
+    description: Channel based tag insertion is enabled.
+    value: 1
+enum/EnetAlphaEnumUniform:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Enable Queue/Channel based VLAN tag insertion on Tx feature is selected.
+    value: 1
+  - name: Inactive
+    description: Enable Queue/Channel based VLAN tag insertion on Tx feature is not selected.
+    value: 0
+enum/EnetAlphaEnumVictor:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Credit Control is disabled.
+    value: 0
+  - name: Enable
+    description: Credit Control is enabled.
+    value: 1
+enum/EnetAlphaEnumWhiskey:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Counters are not reset.
+    value: 0
+  - name: Enable
+    description: All counters are reset.
+    value: 1
+enum/EnetAlphaEnumXray:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Counters Preset is disabled.
+    value: 0
+  - name: Enable
+    description: Counters Preset is enabled.
+    value: 1
+enum/EnetAlphaEnumYankee:
+  bit_size: 1
+  variants:
+  - name: Read
+    description: Read operation.
+    value: 1
+  - name: Write
+    description: Write operation.
+    value: 0
+enum/EnetAlphaEnumZulu:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: CRC stripping for Type packets is disabled.
+    value: 0
+  - name: Enable
+    description: CRC stripping for Type packets is enabled.
+    value: 1
+enum/EnetAlphaEnumAlphaAlpha:
+  bit_size: 1
+  variants:
+  - name: Fp
+    description: Fixed Priority.
+    value: 1
+  - name: Wrr
+    description: Weighted Round-Robin with Rx:Tx or Tx:Rx.
+    value: 0
+enum/EnetAlphaEnumBravoAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: DA Inverse Filtering is disabled.
+    value: 0
+  - name: Enable
+    description: DA Inverse Filtering is enabled.
+    value: 1
+enum/EnetAlphaEnumCharlieAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable Broadcast Packets.
+    value: 1
+  - name: Enable
+    description: Enable Broadcast Packets.
+    value: 0
+enum/EnetAlphaEnumDeltaAlpha:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: DMA Debug Registers option is selected.
+    value: 1
+  - name: Inactive
+    description: DMA Debug Registers option is not selected.
+    value: 0
+enum/EnetAlphaEnumEchoAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Deferral check function is disabled.
+    value: 0
+  - name: Enable
+    description: Deferral check function is enabled.
+    value: 1
+enum/EnetAlphaEnumFoxtrotAlpha:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: DMA Channel 0 Interrupt Status detected.
+    value: 1
+  - name: Inactive
+    description: DMA Channel 0 Interrupt Status not detected.
+    value: 0
+enum/EnetAlphaEnumGolfAlpha:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: DMA Channel 1 Interrupt Status detected.
+    value: 1
+  - name: Inactive
+    description: DMA Channel 1 Interrupt Status not detected.
+    value: 0
+enum/EnetAlphaEnumHotelAlpha:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: DCB Feature is selected.
+    value: 1
+  - name: Inactive
+    description: DCB Feature is not selected.
+    value: 0
+enum/EnetAlphaEnumIndiaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: CRC Checking is disabled.
+    value: 1
+  - name: Enable
+    description: CRC Checking is enabled.
+    value: 0
+enum/EnetAlphaEnumJulietAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable Carrier Sense During Transmission.
+    value: 1
+  - name: Enable
+    description: Enable Carrier Sense During Transmission.
+    value: 0
+enum/EnetAlphaEnumKiloAlpha:
+  bit_size: 1
+  variants:
+  - name: Fduplx
+    description: Full-duplex mode.
+    value: 1
+  - name: Hduplx
+    description: Half-duplex mode.
+    value: 0
+enum/EnetAlphaEnumLimaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: 8xPBL mode is disabled.
+    value: 0
+  - name: Enable
+    description: 8xPBL mode is enabled.
+    value: 1
+enum/EnetAlphaEnumMikeAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Abnormal Interrupt Summary is disabled.
+    value: 0
+  - name: Enable
+    description: Abnormal Interrupt Summary is enabled.
+    value: 1
+enum/EnetAlphaEnumNovemberAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Context Descriptor Error is disabled.
+    value: 0
+  - name: Enable
+    description: Context Descriptor Error is enabled.
+    value: 1
+enum/EnetAlphaEnumOscarAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Early Receive Interrupt is disabled.
+    value: 0
+  - name: Enable
+    description: Early Receive Interrupt is enabled.
+    value: 1
+enum/EnetAlphaEnumPapaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Early Transmit Interrupt is disabled.
+    value: 0
+  - name: Enable
+    description: Early Transmit Interrupt is enabled.
+    value: 1
+enum/EnetAlphaEnumQuebecAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Fatal Bus Error is disabled.
+    value: 0
+  - name: Enable
+    description: Fatal Bus Error is enabled.
+    value: 1
+enum/EnetAlphaEnumRomeoAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Normal Interrupt Summary is disabled.
+    value: 0
+  - name: Enable
+    description: Normal Interrupt Summary is enabled.
+    value: 1
+enum/EnetAlphaEnumSierraAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Receive Buffer Unavailable is disabled.
+    value: 0
+  - name: Enable
+    description: Receive Buffer Unavailable is enabled.
+    value: 1
+enum/EnetAlphaEnumTangoAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Receive Interrupt is disabled.
+    value: 0
+  - name: Enable
+    description: Receive Interrupt is enabled.
+    value: 1
+enum/EnetAlphaEnumUniformAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Receive Stopped is disabled.
+    value: 0
+  - name: Enable
+    description: Receive Stopped is enabled.
+    value: 1
+enum/EnetAlphaEnumVictorAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Receive Watchdog Timeout is disabled.
+    value: 0
+  - name: Enable
+    description: Receive Watchdog Timeout is enabled.
+    value: 1
+enum/EnetAlphaEnumWhiskeyAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Transmit Buffer Unavailable is disabled.
+    value: 0
+  - name: Enable
+    description: Transmit Buffer Unavailable is enabled.
+    value: 1
+enum/EnetAlphaEnumXrayAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Transmit Interrupt is disabled.
+    value: 0
+  - name: Enable
+    description: Transmit Interrupt is enabled.
+    value: 1
+enum/EnetAlphaEnumYankeeAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Transmit Stopped is disabled.
+    value: 0
+  - name: Enable
+    description: Transmit Stopped is enabled.
+    value: 1
+enum/EnetAlphaEnumZuluAlpha:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Miss Frame Counter overflow occurred.
+    value: 1
+  - name: Inactive
+    description: Miss Frame Counter overflow not occurred.
+    value: 0
+enum/EnetAlphaEnumAlphaBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Early Receive Interrupt is disabled.
+    value: 0
+  - name: Enable
+    description: Early Receive Interrupt is enabled.
+    value: 1
+enum/EnetAlphaEnumBravoBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Rx Packet Flush is disabled.
+    value: 0
+  - name: Enable
+    description: Rx Packet Flush is enabled.
+    value: 1
+enum/EnetAlphaEnumCharlieBravo:
+  bit_size: 1
+  variants:
+  - name: Start
+    description: Start Receive.
+    value: 1
+  - name: Stop
+    description: Stop Receive.
+    value: 0
+enum/EnetAlphaEnumDeltaBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Advance Slot Check is disabled.
+    value: 0
+  - name: Enable
+    description: Advance Slot Check is enabled.
+    value: 1
+enum/EnetAlphaEnumEchoBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Slot Comparison is disabled.
+    value: 0
+  - name: Enable
+    description: Slot Comparison is enabled.
+    value: 1
+enum/EnetAlphaEnumFoxtrotBravo:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Abnormal Interrupt Summary status detected.
+    value: 1
+  - name: Inactive
+    description: Abnormal Interrupt Summary status not detected.
+    value: 0
+enum/EnetAlphaEnumGolfBravo:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Context Descriptor Error status detected.
+    value: 1
+  - name: Inactive
+    description: Context Descriptor Error status not detected.
+    value: 0
+enum/EnetAlphaEnumHotelBravo:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Early Receive Interrupt status detected.
+    value: 1
+  - name: Inactive
+    description: Early Receive Interrupt status not detected.
+    value: 0
+enum/EnetAlphaEnumIndiaBravo:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Early Transmit Interrupt status detected.
+    value: 1
+  - name: Inactive
+    description: Early Transmit Interrupt status not detected.
+    value: 0
+enum/EnetAlphaEnumJulietBravo:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Fatal Bus Error status detected.
+    value: 1
+  - name: Inactive
+    description: Fatal Bus Error status not detected.
+    value: 0
+enum/EnetAlphaEnumKiloBravo:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Normal Interrupt Summary status detected.
+    value: 1
+  - name: Inactive
+    description: Normal Interrupt Summary status not detected.
+    value: 0
+enum/EnetAlphaEnumLimaBravo:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Receive Buffer Unavailable status detected.
+    value: 1
+  - name: Inactive
+    description: Receive Buffer Unavailable status not detected.
+    value: 0
+enum/EnetAlphaEnumMikeBravo:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Receive Interrupt status detected.
+    value: 1
+  - name: Inactive
+    description: Receive Interrupt status not detected.
+    value: 0
+enum/EnetAlphaEnumNovemberBravo:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Receive Process Stopped status detected.
+    value: 1
+  - name: Inactive
+    description: Receive Process Stopped status not detected.
+    value: 0
+enum/EnetAlphaEnumOscarBravo:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Receive Watchdog Timeout status detected.
+    value: 1
+  - name: Inactive
+    description: Receive Watchdog Timeout status not detected.
+    value: 0
+enum/EnetAlphaEnumPapaBravo:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Transmit Buffer Unavailable status detected.
+    value: 1
+  - name: Inactive
+    description: Transmit Buffer Unavailable status not detected.
+    value: 0
+enum/EnetAlphaEnumQuebecBravo:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Transmit Interrupt status detected.
+    value: 1
+  - name: Inactive
+    description: Transmit Interrupt status not detected.
+    value: 0
+enum/EnetAlphaEnumRomeoBravo:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Transmit Process Stopped status detected.
+    value: 1
+  - name: Inactive
+    description: Transmit Process Stopped status not detected.
+    value: 0
+enum/EnetAlphaEnumSierraBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Early Transmit Interrupt is disabled.
+    value: 0
+  - name: Enable
+    description: Early Transmit Interrupt is enabled.
+    value: 1
+enum/EnetAlphaEnumTangoBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Operate on Second Packet disabled.
+    value: 0
+  - name: Enable
+    description: Operate on Second Packet enabled.
+    value: 1
+enum/EnetAlphaEnumUniformBravo:
+  bit_size: 1
+  variants:
+  - name: Start
+    description: Start Transmission Command.
+    value: 1
+  - name: Stop
+    description: Stop Transmission Command.
+    value: 0
+enum/EnetAlphaEnumVictorBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: 8xPBL mode is disabled.
+    value: 0
+  - name: Enable
+    description: 8xPBL mode is enabled.
+    value: 1
+enum/EnetAlphaEnumWhiskeyBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Abnormal Interrupt Summary is disabled.
+    value: 0
+  - name: Enable
+    description: Abnormal Interrupt Summary is enabled.
+    value: 1
+enum/EnetAlphaEnumXrayBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Context Descriptor Error is disabled.
+    value: 0
+  - name: Enable
+    description: Context Descriptor Error is enabled.
+    value: 1
+enum/EnetAlphaEnumYankeeBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Early Receive Interrupt is disabled.
+    value: 0
+  - name: Enable
+    description: Early Receive Interrupt is enabled.
+    value: 1
+enum/EnetAlphaEnumZuluBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Early Transmit Interrupt is disabled.
+    value: 0
+  - name: Enable
+    description: Early Transmit Interrupt is enabled.
+    value: 1
+enum/EnetAlphaEnumAlphaCharlie:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Fatal Bus Error is disabled.
+    value: 0
+  - name: Enable
+    description: Fatal Bus Error is enabled.
+    value: 1
+enum/EnetAlphaEnumBravoCharlie:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Normal Interrupt Summary is disabled.
+    value: 0
+  - name: Enable
+    description: Normal Interrupt Summary is enabled.
+    value: 1
+enum/EnetAlphaEnumCharlieCharlie:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Receive Buffer Unavailable is disabled.
+    value: 0
+  - name: Enable
+    description: Receive Buffer Unavailable is enabled.
+    value: 1
+enum/EnetAlphaEnumDeltaCharlie:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Receive Interrupt is disabled.
+    value: 0
+  - name: Enable
+    description: Receive Interrupt is enabled.
+    value: 1
+enum/EnetAlphaEnumEchoCharlie:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Receive Stopped is disabled.
+    value: 0
+  - name: Enable
+    description: Receive Stopped is enabled.
+    value: 1
+enum/EnetAlphaEnumFoxtrotCharlie:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Receive Watchdog Timeout is disabled.
+    value: 0
+  - name: Enable
+    description: Receive Watchdog Timeout is enabled.
+    value: 1
+enum/EnetAlphaEnumGolfCharlie:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Transmit Buffer Unavailable is disabled.
+    value: 0
+  - name: Enable
+    description: Transmit Buffer Unavailable is enabled.
+    value: 1
+enum/EnetAlphaEnumHotelCharlie:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Transmit Interrupt is disabled.
+    value: 0
+  - name: Enable
+    description: Transmit Interrupt is enabled.
+    value: 1
+enum/EnetAlphaEnumIndiaCharlie:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Transmit Stopped is disabled.
+    value: 0
+  - name: Enable
+    description: Transmit Stopped is enabled.
+    value: 1
+enum/EnetAlphaEnumJulietCharlie:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Miss Frame Counter overflow occurred.
+    value: 1
+  - name: Inactive
+    description: Miss Frame Counter overflow not occurred.
+    value: 0
+enum/EnetAlphaEnumKiloCharlie:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Early Receive Interrupt is disabled.
+    value: 0
+  - name: Enable
+    description: Early Receive Interrupt is enabled.
+    value: 1
+enum/EnetAlphaEnumLimaCharlie:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Rx Packet Flush is disabled.
+    value: 0
+  - name: Enable
+    description: Rx Packet Flush is enabled.
+    value: 1
+enum/EnetAlphaEnumMikeCharlie:
+  bit_size: 1
+  variants:
+  - name: Start
+    description: Start Receive.
+    value: 1
+  - name: Stop
+    description: Stop Receive.
+    value: 0
+enum/EnetAlphaEnumNovemberCharlie:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Advance Slot Check is disabled.
+    value: 0
+  - name: Enable
+    description: Advance Slot Check is enabled.
+    value: 1
+enum/EnetAlphaEnumOscarCharlie:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Slot Comparison is disabled.
+    value: 0
+  - name: Enable
+    description: Slot Comparison is enabled.
+    value: 1
+enum/EnetAlphaEnumPapaCharlie:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Abnormal Interrupt Summary status detected.
+    value: 1
+  - name: Inactive
+    description: Abnormal Interrupt Summary status not detected.
+    value: 0
+enum/EnetAlphaEnumQuebecCharlie:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Context Descriptor Error status detected.
+    value: 1
+  - name: Inactive
+    description: Context Descriptor Error status not detected.
+    value: 0
+enum/EnetAlphaEnumRomeoCharlie:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Early Receive Interrupt status detected.
+    value: 1
+  - name: Inactive
+    description: Early Receive Interrupt status not detected.
+    value: 0
+enum/EnetAlphaEnumSierraCharlie:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Early Transmit Interrupt status detected.
+    value: 1
+  - name: Inactive
+    description: Early Transmit Interrupt status not detected.
+    value: 0
+enum/EnetAlphaEnumTangoCharlie:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Fatal Bus Error status detected.
+    value: 1
+  - name: Inactive
+    description: Fatal Bus Error status not detected.
+    value: 0
+enum/EnetAlphaEnumUniformCharlie:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Normal Interrupt Summary status detected.
+    value: 1
+  - name: Inactive
+    description: Normal Interrupt Summary status not detected.
+    value: 0
+enum/EnetAlphaEnumVictorCharlie:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Receive Buffer Unavailable status detected.
+    value: 1
+  - name: Inactive
+    description: Receive Buffer Unavailable status not detected.
+    value: 0
+enum/EnetAlphaEnumWhiskeyCharlie:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Receive Interrupt status detected.
+    value: 1
+  - name: Inactive
+    description: Receive Interrupt status not detected.
+    value: 0
+enum/EnetAlphaEnumXrayCharlie:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Receive Process Stopped status detected.
+    value: 1
+  - name: Inactive
+    description: Receive Process Stopped status not detected.
+    value: 0
+enum/EnetAlphaEnumYankeeCharlie:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Receive Watchdog Timeout status detected.
+    value: 1
+  - name: Inactive
+    description: Receive Watchdog Timeout status not detected.
+    value: 0
+enum/EnetAlphaEnumZuluCharlie:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Transmit Buffer Unavailable status detected.
+    value: 1
+  - name: Inactive
+    description: Transmit Buffer Unavailable status not detected.
+    value: 0
+enum/EnetAlphaEnumAlphaDelta:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Transmit Interrupt status detected.
+    value: 1
+  - name: Inactive
+    description: Transmit Interrupt status not detected.
+    value: 0
+enum/EnetAlphaEnumBravoDelta:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Transmit Process Stopped status detected.
+    value: 1
+  - name: Inactive
+    description: Transmit Process Stopped status not detected.
+    value: 0
+enum/EnetAlphaEnumCharlieDelta:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Early Transmit Interrupt is disabled.
+    value: 0
+  - name: Enable
+    description: Early Transmit Interrupt is enabled.
+    value: 1
+enum/EnetAlphaEnumDeltaDelta:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Operate on Second Packet disabled.
+    value: 0
+  - name: Enable
+    description: Operate on Second Packet enabled.
+    value: 1
+enum/EnetAlphaEnumEchoDelta:
+  bit_size: 1
+  variants:
+  - name: Start
+    description: Start Transmission Command.
+    value: 1
+  - name: Stop
+    description: Stop Transmission Command.
+    value: 0
+enum/EnetAlphaEnumFoxtrotDelta:
+  bit_size: 3
+  variants:
+  - name: R11
+    description: The priority ratio is 1:1.
+    value: 0
+  - name: R21
+    description: The priority ratio is 2:1.
+    value: 1
+  - name: R31
+    description: The priority ratio is 3:1.
+    value: 2
+  - name: R41
+    description: The priority ratio is 4:1.
+    value: 3
+  - name: R51
+    description: The priority ratio is 5:1.
+    value: 4
+  - name: R61
+    description: The priority ratio is 6:1.
+    value: 5
+  - name: R71
+    description: The priority ratio is 7:1.
+    value: 6
+  - name: R81
+    description: The priority ratio is 8:1.
+    value: 7
+enum/EnetAlphaEnumGolfDelta:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable Receive Own.
+    value: 1
+  - name: Enable
+    description: Enable Receive Own.
+    value: 0
+enum/EnetAlphaEnumHotelDelta:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: VLAN Type Check is disabled.
+    value: 1
+  - name: Enable
+    description: VLAN Type Check is enabled.
+    value: 0
+enum/EnetAlphaEnumIndiaDelta:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable Retry.
+    value: 1
+  - name: Enable
+    description: Enable Retry.
+    value: 0
+enum/EnetAlphaEnumJulietDelta:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Drop Transmit Status is disabled.
+    value: 0
+  - name: Enable
+    description: Drop Transmit Status is enabled.
+    value: 1
+enum/EnetAlphaEnumKiloDelta:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Double VLAN option is selected.
+    value: 1
+  - name: Inactive
+    description: Double VLAN option is not selected.
+    value: 0
+enum/EnetAlphaEnumLimaDelta:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Zero-Quanta Pause packet generation is disabled.
+    value: 1
+  - name: Enable
+    description: Zero-Quanta Pause packet generation is enabled.
+    value: 0
+enum/EnetAlphaEnumMikeDelta:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: ECRSFD is disabled.
+    value: 0
+  - name: Enable
+    description: ECRSFD is enabled.
+    value: 1
+enum/EnetAlphaEnumNovemberDelta:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Double VLAN Processing is disabled.
+    value: 0
+  - name: Enable
+    description: Double VLAN Processing is enabled.
+    value: 1
+enum/EnetAlphaEnumOscarDelta:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Energy Efficient Ethernet Enable option is selected.
+    value: 1
+  - name: Inactive
+    description: Energy Efficient Ethernet Enable option is not selected.
+    value: 0
+enum/EnetAlphaEnumPapaDelta:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Extended Inter-Packet Gap is disabled.
+    value: 0
+  - name: Enable
+    description: Extended Inter-Packet Gap is enabled.
+    value: 1
+enum/EnetAlphaEnumQuebecDelta:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Inner VLAN Tag in Rx status is disabled.
+    value: 0
+  - name: Enable
+    description: Inner VLAN Tag in Rx status is enabled.
+    value: 1
+enum/EnetAlphaEnumRomeoDelta:
+  bit_size: 2
+  variants:
+  - name: Always
+    description: Always strip.
+    value: 3
+  - name: Donot
+    description: Do not strip.
+    value: 0
+  - name: Iffail
+    description: Strip if VLAN filter fails.
+    value: 2
+  - name: Ifpass
+    description: Strip if VLAN filter passes.
+    value: 1
+enum/EnetAlphaEnumSierraDelta:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Inner VLAN tag is disabled.
+    value: 0
+  - name: Enable
+    description: Inner VLAN tag is enabled.
+    value: 1
+enum/EnetAlphaEnumTangoDelta:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Receive S-VLAN Match is disabled.
+    value: 0
+  - name: Enable
+    description: Receive S-VLAN Match is enabled.
+    value: 1
+enum/EnetAlphaEnumUniformDelta:
+  bit_size: 3
+  variants:
+  - name: Depth1024
+    description: '1024.'
+    value: 5
+  - name: Depth128
+    description: '128.'
+    value: 2
+  - name: Depth256
+    description: '256.'
+    value: 3
+  - name: Depth512
+    description: '512.'
+    value: 4
+  - name: Depth64
+    description: '64.'
+    value: 1
+  - name: Nodepth
+    description: No Depth configured.
+    value: 0
+enum/EnetAlphaEnumVictorDelta:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: External System Time Input is disabled.
+    value: 0
+  - name: Enable
+    description: External System Time Input is enabled.
+    value: 1
+enum/EnetAlphaEnumWhiskeyDelta:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Enable Enhancements to Scheduling Traffic feature is selected.
+    value: 1
+  - name: Inactive
+    description: Enable Enhancements to Scheduling Traffic feature is not selected.
+    value: 0
+enum/EnetAlphaEnumXrayDelta:
+  bit_size: 2
+  variants:
+  - name: Nowidth
+    description: Width not configured.
+    value: 0
+  - name: Width16
+    description: '16.'
+    value: 1
+  - name: Width20
+    description: '20.'
+    value: 2
+  - name: Width24
+    description: '24.'
+    value: 3
+enum/EnetAlphaEnumYankeeDelta:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: S-VLAN is disabled.
+    value: 0
+  - name: Enable
+    description: S-VLAN is enabled.
+    value: 1
+enum/EnetAlphaEnumZuluDelta:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: 12-bit VLAN Tag Comparison is disabled.
+    value: 0
+  - name: Enable
+    description: 12-bit VLAN Tag Comparison is enabled.
+    value: 1
+enum/EnetAlphaEnumAlphaEcho:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: VLAN Tag in Rx status is disabled.
+    value: 0
+  - name: Enable
+    description: VLAN Tag in Rx status is enabled.
+    value: 1
+enum/EnetAlphaEnumBravoEcho:
+  bit_size: 2
+  variants:
+  - name: Always
+    description: Always strip.
+    value: 3
+  - name: Donot
+    description: Do not strip.
+    value: 0
+  - name: Iffail
+    description: Strip if VLAN filter fails.
+    value: 2
+  - name: Ifpass
+    description: Strip if VLAN filter passes.
+    value: 1
+enum/EnetAlphaEnumCharlieEcho:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Excessive collision is sensed.
+    value: 1
+  - name: Inactive
+    description: No collision.
+    value: 0
+enum/EnetAlphaEnumDeltaEcho:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Excessive deferral.
+    value: 1
+  - name: Inactive
+    description: No Excessive deferral.
+    value: 0
+enum/EnetAlphaEnumEchoEcho:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Fixed Burst Length is disabled.
+    value: 0
+  - name: Enable
+    description: Fixed Burst Length is enabled.
+    value: 1
+enum/EnetAlphaEnumFoxtrotEcho:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Flow Control Busy or Backpressure Activate is disabled.
+    value: 0
+  - name: Enable
+    description: Flow Control Busy or Backpressure Activate is enabled.
+    value: 1
+enum/EnetAlphaEnumGolfEcho:
+  bit_size: 1
+  variants:
+  - name: M1002500m
+    description: 100 Mbps when PS bit is 1 and 2.5 Gbps when PS bit is 0.
+    value: 1
+  - name: M101000m
+    description: 10 Mbps when PS bit is 1 and 1 Gbps when PS bit is 0.
+    value: 0
+enum/EnetAlphaEnumHotelEcho:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Frame Preemption Enable feature is selected.
+    value: 1
+  - name: Inactive
+    description: Frame Preemption Enable feature is not selected.
+    value: 0
+enum/EnetAlphaEnumIndiaEcho:
+  bit_size: 2
+  variants:
+  - name: M128bytes
+    description: 128 Bytes.
+    value: 1
+  - name: M256bytes
+    description: 256 Bytes.
+    value: 2
+  - name: M64bytes
+    description: 64 Bytes.
+    value: 0
+enum/EnetAlphaEnumJulietEcho:
+  bit_size: 2
+  variants:
+  - name: M128entr
+    description: 128 Entries.
+    value: 1
+  - name: M256entr
+    description: 256 Entries.
+    value: 2
+  - name: M64entr
+    description: 64 Entries.
+    value: 0
+enum/EnetAlphaEnumKiloEcho:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Flexible Receive Parser feature is selected.
+    value: 1
+  - name: Inactive
+    description: Flexible Receive Parser feature is not selected.
+    value: 0
+enum/EnetAlphaEnumLimaEcho:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: GMII Busy is disabled.
+    value: 0
+  - name: Enable
+    description: GMII Busy is enabled.
+    value: 1
+enum/EnetAlphaEnumMikeEcho:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Global unicast is disabled.
+    value: 0
+  - name: Enable
+    description: Global unicast is enabled.
+    value: 1
+enum/EnetAlphaEnumNovemberEcho:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: 1000 Mbps support.
+    value: 1
+  - name: Inactive
+    description: No 1000 Mbps support.
+    value: 0
+enum/EnetAlphaEnumOscarEcho:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: GMII Operation Command 0 is disabled.
+    value: 0
+  - name: Enable
+    description: GMII Operation Command 0 is enabled.
+    value: 1
+enum/EnetAlphaEnumPapaEcho:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: GMII Operation Command 1 is disabled.
+    value: 0
+  - name: Enable
+    description: GMII Operation Command 1 is enabled.
+    value: 1
+enum/EnetAlphaEnumQuebecEcho:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Giant Packet Size Limit Control is disabled.
+    value: 0
+  - name: Enable
+    description: Giant Packet Size Limit Control is enabled.
+    value: 1
+enum/EnetAlphaEnumRomeoEcho:
+  bit_size: 2
+  variants:
+  - name: M128
+    description: '128.'
+    value: 2
+  - name: M256
+    description: '256.'
+    value: 3
+  - name: M64
+    description: '64.'
+    value: 1
+  - name: NoHt
+    description: No hash table.
+    value: 0
+enum/EnetAlphaEnumSierraEcho:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Half-duplex support.
+    value: 1
+  - name: Inactive
+    description: No Half-duplex support.
+    value: 0
+enum/EnetAlphaEnumTangoEcho:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: IP header/payload checksum checking is disabled.
+    value: 0
+  - name: Enable
+    description: IP header/payload checksum checking is enabled.
+    value: 1
+enum/EnetAlphaEnumUniformEcho:
+  bit_size: 3
+  variants:
+  - name: Ipg40
+    description: 40 bit times IPG.
+    value: 7
+  - name: Ipg48
+    description: 48 bit times IPG.
+    value: 6
+  - name: Ipg56
+    description: 56 bit times IPG.
+    value: 5
+  - name: Ipg64
+    description: 64 bit times IPG.
+    value: 4
+  - name: Ipg72
+    description: 72 bit times IPG.
+    value: 3
+  - name: Ipg80
+    description: 80 bit times IPG.
+    value: 2
+  - name: Ipg88
+    description: 88 bit times IPG.
+    value: 1
+  - name: Ipg96
+    description: 96 bit times IPG.
+    value: 0
+enum/EnetAlphaEnumVictorEcho:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Jabber is disabled.
+    value: 1
+  - name: Enable
+    description: Jabber is enabled.
+    value: 0
+enum/EnetAlphaEnumWhiskeyEcho:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Jumbo packet is disabled.
+    value: 0
+  - name: Enable
+    description: Jumbo packet is enabled.
+    value: 1
+enum/EnetAlphaEnumXrayEcho:
+  bit_size: 4
+  variants:
+  - name: M1filt
+    description: 1 L3 or L4 Filter.
+    value: 1
+  - name: M2filt
+    description: 2 L3 or L4 Filters.
+    value: 2
+  - name: M3filt
+    description: 3 L3 or L4 Filters.
+    value: 3
+  - name: M4filt
+    description: 4 L3 or L4 Filters.
+    value: 4
+  - name: M5filt
+    description: 5 L3 or L4 Filters.
+    value: 5
+  - name: M6filt
+    description: 6 L3 or L4 Filters.
+    value: 6
+  - name: M7filt
+    description: 7 L3 or L4 Filters.
+    value: 7
+  - name: M8filt
+    description: 8 L3 or L4 Filters.
+    value: 8
+  - name: Nofilt
+    description: No L3 or L4 Filter.
+    value: 0
+enum/EnetAlphaEnumYankeeEcho:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Loss of carrier.
+    value: 1
+  - name: Inactive
+    description: Carrier is present.
+    value: 0
+enum/EnetAlphaEnumZuluEcho:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Late collision is sensed.
+    value: 1
+  - name: Inactive
+    description: No collision.
+    value: 0
+enum/EnetAlphaEnumAlphaFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Loopback is disabled.
+    value: 0
+  - name: Enable
+    description: Loopback is enabled.
+    value: 1
+enum/EnetAlphaEnumBravoFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: LPI Timer is disabled.
+    value: 0
+  - name: Enable
+    description: LPI Timer is enabled.
+    value: 1
+enum/EnetAlphaEnumCharlieFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: LPI state is disabled.
+    value: 0
+  - name: Enable
+    description: LPI state is enabled.
+    value: 1
+enum/EnetAlphaEnumDeltaFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: LPI Interrupt is disabled.
+    value: 0
+  - name: Enable
+    description: LPI Interrupt is enabled.
+    value: 1
+enum/EnetAlphaEnumEchoFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: LPI Interrupt status active.
+    value: 1
+  - name: Inactive
+    description: LPI Interrupt status not active.
+    value: 0
+enum/EnetAlphaEnumFoxtrotFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: LPI Tx Clock Stop is disabled.
+    value: 0
+  - name: Enable
+    description: LPI Tx Clock Stop is enabled.
+    value: 1
+enum/EnetAlphaEnumGolfFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: LPI Tx Automate is disabled.
+    value: 0
+  - name: Enable
+    description: LPI Tx Automate is enabled.
+    value: 1
+enum/EnetAlphaEnumHotelFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Cvlan
+    description: C-VLAN type (0x8100) is inserted.
+    value: 0
+  - name: Svlan
+    description: S-VLAN type (0x88A8) is inserted.
+    value: 1
+enum/EnetAlphaEnumIndiaFoxtrot:
+  bit_size: 2
+  variants:
+  - name: Delete
+    description: VLAN tag deletion.
+    value: 1
+  - name: Insert
+    description: VLAN tag insertion.
+    value: 2
+  - name: None
+    description: No VLAN tag deletion, insertion, or replacement.
+    value: 0
+  - name: Replace
+    description: VLAN tag replacement.
+    value: 3
+enum/EnetAlphaEnumJulietFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: VLAN Priority Control is disabled.
+    value: 0
+  - name: Enable
+    description: VLAN Priority Control is enabled.
+    value: 1
+enum/EnetAlphaEnumKiloFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: VLAN Tag Input is disabled.
+    value: 0
+  - name: Enable
+    description: VLAN Tag Input is enabled.
+    value: 1
+enum/EnetAlphaEnumLimaFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Promiscuous Mode is disabled.
+    value: 0
+  - name: Enable
+    description: Promiscuous Mode is enabled.
+    value: 1
+enum/EnetAlphaEnumMikeFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Receive watchdog timed out.
+    value: 1
+  - name: Inactive
+    description: No receive watchdog timeout.
+    value: 0
+enum/EnetAlphaEnumNovemberFoxtrot:
+  bit_size: 1
+  variants:
+  - name: CVlan
+    description: C-VLAN type (0x8100) is inserted or replaced.
+    value: 0
+  - name: SVlan
+    description: S-VLAN type (0x88A8) is inserted or replaced.
+    value: 1
+enum/EnetAlphaEnumOscarFoxtrot:
+  bit_size: 2
+  variants:
+  - name: Delete
+    description: VLAN tag deletion.
+    value: 1
+  - name: Insert
+    description: VLAN tag insertion.
+    value: 2
+  - name: None
+    description: No VLAN tag deletion, insertion, or replacement.
+    value: 0
+  - name: Replace
+    description: VLAN tag replacement.
+    value: 3
+enum/EnetAlphaEnumPapaFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: VLAN Priority Control is disabled.
+    value: 0
+  - name: Enable
+    description: VLAN Priority Control is enabled.
+    value: 1
+enum/EnetAlphaEnumQuebecFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: VLAN Tag Input is disabled.
+    value: 0
+  - name: Enable
+    description: VLAN Tag Input is enabled.
+    value: 1
+enum/EnetAlphaEnumRomeoFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: MAC Addresses 32-63 Select option is selected.
+    value: 1
+  - name: Inactive
+    description: MAC Addresses 32-63 Select option is not selected.
+    value: 0
+enum/EnetAlphaEnumSierraFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: MAC Addresses 64-127 Select option is selected.
+    value: 1
+  - name: Inactive
+    description: MAC Addresses 64-127 Select option is not selected.
+    value: 0
+enum/EnetAlphaEnumTangoFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: MAC Interrupt Status detected.
+    value: 1
+  - name: Inactive
+    description: MAC Interrupt Status not detected.
+    value: 0
+enum/EnetAlphaEnumUniformFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Mixed Burst is disabled.
+    value: 0
+  - name: Enable
+    description: Mixed Burst is enabled.
+    value: 1
+enum/EnetAlphaEnumVictorFoxtrot:
+  bit_size: 3
+  variants:
+  - name: Queue0
+    description: Receive Queue 0.
+    value: 0
+  - name: Queue1
+    description: Receive Queue 1.
+    value: 1
+enum/EnetAlphaEnumWhiskeyFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Multicast and Broadcast Queue is disabled.
+    value: 0
+  - name: Enable
+    description: Multicast and Broadcast Queue is enabled.
+    value: 1
+enum/EnetAlphaEnumXrayFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: MDIO Interrupt is disabled.
+    value: 0
+  - name: Enable
+    description: MDIO Interrupt is enabled.
+    value: 1
+enum/EnetAlphaEnumYankeeFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: MDIO Interrupt status active.
+    value: 1
+  - name: Inactive
+    description: MDIO Interrupt status not active.
+    value: 0
+enum/EnetAlphaEnumZuluFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Multicast Address Filter Fail Packets Queuing is disabled.
+    value: 0
+  - name: Enable
+    description: Multicast Address Filter Fail Packets Queuing is enabled.
+    value: 1
+enum/EnetAlphaEnumAlphaGolf:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Magic Packet is disabled.
+    value: 0
+  - name: Enable
+    description: Magic Packet is enabled.
+    value: 1
+enum/EnetAlphaEnumBravoGolf:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Magic packet is received.
+    value: 1
+  - name: Inactive
+    description: No Magic packet is received.
+    value: 0
+enum/EnetAlphaEnumCharlieGolf:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: PMT Magic Packet Enable option is selected.
+    value: 1
+  - name: Inactive
+    description: PMT Magic Packet Enable option is not selected.
+    value: 0
+enum/EnetAlphaEnumDeltaGolf:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: 10 or 100 Mbps support.
+    value: 1
+  - name: Inactive
+    description: No 10 or 100 Mbps support.
+    value: 0
+enum/EnetAlphaEnumEchoGolf:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: RMON Module Enable option is selected.
+    value: 1
+  - name: Inactive
+    description: RMON Module Enable option is not selected.
+    value: 0
+enum/EnetAlphaEnumFoxtrotGolf:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Average Bits Per Slot Interrupt is disabled.
+    value: 0
+  - name: Enable
+    description: Average Bits Per Slot Interrupt is enabled.
+    value: 1
+enum/EnetAlphaEnumGolfGolf:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Average Bits Per Slot Interrupt Status detected.
+    value: 1
+  - name: Inactive
+    description: Average Bits Per Slot Interrupt Status not detected.
+    value: 0
+enum/EnetAlphaEnumHotelGolf:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Receive Queue Overflow Interrupt is disabled.
+    value: 0
+  - name: Enable
+    description: Receive Queue Overflow Interrupt is enabled.
+    value: 1
+enum/EnetAlphaEnumIndiaGolf:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Receive Queue Overflow Interrupt Status detected.
+    value: 1
+  - name: Inactive
+    description: Receive Queue Overflow Interrupt Status not detected.
+    value: 0
+enum/EnetAlphaEnumJulietGolf:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Transmit Queue Underflow Interrupt Status is disabled.
+    value: 0
+  - name: Enable
+    description: Transmit Queue Underflow Interrupt Status is enabled.
+    value: 1
+enum/EnetAlphaEnumKiloGolf:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Transmit Queue Underflow Interrupt Status detected.
+    value: 1
+  - name: Inactive
+    description: Transmit Queue Underflow Interrupt Status not detected.
+    value: 0
+enum/EnetAlphaEnumLimaGolf:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Average Bits Per Slot Interrupt is disabled.
+    value: 0
+  - name: Enable
+    description: Average Bits Per Slot Interrupt is enabled.
+    value: 1
+enum/EnetAlphaEnumMikeGolf:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Average Bits Per Slot Interrupt Status detected.
+    value: 1
+  - name: Inactive
+    description: Average Bits Per Slot Interrupt Status not detected.
+    value: 0
+enum/EnetAlphaEnumNovemberGolf:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Receive Queue Overflow Interrupt is disabled.
+    value: 0
+  - name: Enable
+    description: Receive Queue Overflow Interrupt is enabled.
+    value: 1
+enum/EnetAlphaEnumOscarGolf:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Receive Queue Overflow Interrupt Status detected.
+    value: 1
+  - name: Inactive
+    description: Receive Queue Overflow Interrupt Status not detected.
+    value: 0
+enum/EnetAlphaEnumPapaGolf:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Transmit Queue Underflow Interrupt Status is disabled.
+    value: 0
+  - name: Enable
+    description: Transmit Queue Underflow Interrupt Status is enabled.
+    value: 1
+enum/EnetAlphaEnumQuebecGolf:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Transmit Queue Underflow Interrupt Status detected.
+    value: 1
+  - name: Inactive
+    description: Transmit Queue Underflow Interrupt Status not detected.
+    value: 0
+enum/EnetAlphaEnumRomeoGolf:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Receive Queue Packet Arbitration is disabled.
+    value: 0
+  - name: Enable
+    description: Receive Queue Packet Arbitration is enabled.
+    value: 1
+enum/EnetAlphaEnumSierraGolf:
+  bit_size: 2
+  variants:
+  - name: Flush
+    description: Flushing the packet data and status.
+    value: 3
+  - name: Idle
+    description: Idle state.
+    value: 0
+  - name: ReadData
+    description: Reading packet data.
+    value: 1
+  - name: ReadSts
+    description: Reading packet status (or timestamp).
+    value: 2
+enum/EnetAlphaEnumTangoGolf:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: MTL Rx Queue Write Controller Active Status detected.
+    value: 1
+  - name: Inactive
+    description: MTL Rx Queue Write Controller Active Status not detected.
+    value: 0
+enum/EnetAlphaEnumUniformGolf:
+  bit_size: 2
+  variants:
+  - name: AbvThr
+    description: Rx Queue fill-level above flow-control activate threshold.
+    value: 2
+  - name: BlwThr
+    description: Rx Queue fill-level below flow-control deactivate threshold.
+    value: 1
+  - name: Empty
+    description: Rx Queue empty.
+    value: 0
+  - name: Full
+    description: Rx Queue full.
+    value: 3
+enum/EnetAlphaEnumVictorGolf:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Missed Packet Counter overflow detected.
+    value: 1
+  - name: Inactive
+    description: Missed Packet Counter overflow not detected.
+    value: 0
+enum/EnetAlphaEnumWhiskeyGolf:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Overflow Counter overflow detected.
+    value: 1
+  - name: Inactive
+    description: Overflow Counter overflow not detected.
+    value: 0
+enum/EnetAlphaEnumXrayGolf:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Dropping of TCP/IP Checksum Error Packets is disabled.
+    value: 1
+  - name: Enable
+    description: Dropping of TCP/IP Checksum Error Packets is enabled.
+    value: 0
+enum/EnetAlphaEnumYankeeGolf:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Forward Error Packets is disabled.
+    value: 0
+  - name: Enable
+    description: Forward Error Packets is enabled.
+    value: 1
+enum/EnetAlphaEnumZuluGolf:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Forward Undersized Good Packets is disabled.
+    value: 0
+  - name: Enable
+    description: Forward Undersized Good Packets is enabled.
+    value: 1
+enum/EnetAlphaEnumAlphaHotel:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Receive Queue Store and Forward is disabled.
+    value: 0
+  - name: Enable
+    description: Receive Queue Store and Forward is enabled.
+    value: 1
+enum/EnetAlphaEnumBravoHotel:
+  bit_size: 2
+  variants:
+  - name: M128byte
+    description: '128.'
+    value: 3
+  - name: M32byte
+    description: '32.'
+    value: 1
+  - name: M64byte
+    description: '64.'
+    value: 0
+  - name: M96byte
+    description: '96.'
+    value: 2
+enum/EnetAlphaEnumCharlieHotel:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Receive Queue Packet Arbitration is disabled.
+    value: 0
+  - name: Enable
+    description: Receive Queue Packet Arbitration is enabled.
+    value: 1
+enum/EnetAlphaEnumDeltaHotel:
+  bit_size: 2
+  variants:
+  - name: Flush
+    description: Flushing the packet data and status.
+    value: 3
+  - name: Idle
+    description: Idle state.
+    value: 0
+  - name: ReadData
+    description: Reading packet data.
+    value: 1
+  - name: ReadSts
+    description: Reading packet status (or timestamp).
+    value: 2
+enum/EnetAlphaEnumEchoHotel:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: MTL Rx Queue Write Controller Active Status detected.
+    value: 1
+  - name: Inactive
+    description: MTL Rx Queue Write Controller Active Status not detected.
+    value: 0
+enum/EnetAlphaEnumFoxtrotHotel:
+  bit_size: 2
+  variants:
+  - name: AbvThr
+    description: Rx Queue fill-level above flow-control activate threshold.
+    value: 2
+  - name: BlwThr
+    description: Rx Queue fill-level below flow-control deactivate threshold.
+    value: 1
+  - name: Empty
+    description: Rx Queue empty.
+    value: 0
+  - name: Full
+    description: Rx Queue full.
+    value: 3
+enum/EnetAlphaEnumGolfHotel:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Missed Packet Counter overflow detected.
+    value: 1
+  - name: Inactive
+    description: Missed Packet Counter overflow not detected.
+    value: 0
+enum/EnetAlphaEnumHotelHotel:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Overflow Counter overflow detected.
+    value: 1
+  - name: Inactive
+    description: Overflow Counter overflow not detected.
+    value: 0
+enum/EnetAlphaEnumIndiaHotel:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Dropping of TCP/IP Checksum Error Packets is disabled.
+    value: 1
+  - name: Enable
+    description: Dropping of TCP/IP Checksum Error Packets is enabled.
+    value: 0
+enum/EnetAlphaEnumJulietHotel:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Forward Error Packets is disabled.
+    value: 0
+  - name: Enable
+    description: Forward Error Packets is enabled.
+    value: 1
+enum/EnetAlphaEnumKiloHotel:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Forward Undersized Good Packets is disabled.
+    value: 0
+  - name: Enable
+    description: Forward Undersized Good Packets is enabled.
+    value: 1
+enum/EnetAlphaEnumLimaHotel:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Receive Queue Store and Forward is disabled.
+    value: 0
+  - name: Enable
+    description: Receive Queue Store and Forward is enabled.
+    value: 1
+enum/EnetAlphaEnumMikeHotel:
+  bit_size: 2
+  variants:
+  - name: M128byte
+    description: '128.'
+    value: 3
+  - name: M32byte
+    description: '32.'
+    value: 1
+  - name: M64byte
+    description: '64.'
+    value: 0
+  - name: M96byte
+    description: '96.'
+    value: 2
+enum/EnetAlphaEnumNovemberHotel:
+  bit_size: 2
+  variants:
+  - name: Flush
+    description: Flushing the Tx queue because of the Packet Abort request from the MAC.
+    value: 3
+  - name: Idle
+    description: Idle state.
+    value: 0
+  - name: Read
+    description: Read state (transferring data to the MAC transmitter).
+    value: 1
+  - name: Wait
+    description: Waiting for pending Tx Status from the MAC transmitter.
+    value: 2
+enum/EnetAlphaEnumOscarHotel:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: MTL Tx Queue Write Controller status is detected.
+    value: 1
+  - name: Inactive
+    description: MTL Tx Queue Write Controller status is not detected.
+    value: 0
+enum/EnetAlphaEnumPapaHotel:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Transmit Queue in Pause status is detected.
+    value: 1
+  - name: Inactive
+    description: Transmit Queue in Pause status is not detected.
+    value: 0
+enum/EnetAlphaEnumQuebecHotel:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: MTL Tx Queue Not Empty status is detected.
+    value: 1
+  - name: Inactive
+    description: MTL Tx Queue Not Empty status is not detected.
+    value: 0
+enum/EnetAlphaEnumRomeoHotel:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: MTL Tx Status FIFO Full status is detected.
+    value: 1
+  - name: Inactive
+    description: MTL Tx Status FIFO Full status is not detected.
+    value: 0
+enum/EnetAlphaEnumSierraHotel:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Flush Transmit Queue is disabled.
+    value: 0
+  - name: Enable
+    description: Flush Transmit Queue is enabled.
+    value: 1
+enum/EnetAlphaEnumTangoHotel:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Transmit Store and Forward is disabled.
+    value: 0
+  - name: Enable
+    description: Transmit Store and Forward is enabled.
+    value: 1
+enum/EnetAlphaEnumUniformHotel:
+  bit_size: 3
+  variants:
+  - name: M128bytes
+    description: '128.'
+    value: 3
+  - name: M192bytes
+    description: '192.'
+    value: 4
+  - name: M256bytes
+    description: '256.'
+    value: 5
+  - name: M32bytes
+    description: '32.'
+    value: 0
+  - name: M384bytes
+    description: '384.'
+    value: 6
+  - name: M512bytes
+    description: '512.'
+    value: 7
+  - name: M64bytes
+    description: '64.'
+    value: 1
+  - name: M96bytes
+    description: '96.'
+    value: 2
+enum/EnetAlphaEnumVictorHotel:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Not enabled.
+    value: 0
+  - name: Enable
+    description: Enabled.
+    value: 2
+enum/EnetAlphaEnumWhiskeyHotel:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Overflow detected for Underflow Packet Counter.
+    value: 1
+  - name: Inactive
+    description: Overflow not detected for Underflow Packet Counter.
+    value: 0
+enum/EnetAlphaEnumXrayHotel:
+  bit_size: 2
+  variants:
+  - name: Flush
+    description: Flushing the Tx queue because of the Packet Abort request from the MAC.
+    value: 3
+  - name: Idle
+    description: Idle state.
+    value: 0
+  - name: Read
+    description: Read state (transferring data to the MAC transmitter).
+    value: 1
+  - name: Wait
+    description: Waiting for pending Tx Status from the MAC transmitter.
+    value: 2
+enum/EnetAlphaEnumYankeeHotel:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: MTL Tx Queue Write Controller status is detected.
+    value: 1
+  - name: Inactive
+    description: MTL Tx Queue Write Controller status is not detected.
+    value: 0
+enum/EnetAlphaEnumZuluHotel:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Transmit Queue in Pause status is detected.
+    value: 1
+  - name: Inactive
+    description: Transmit Queue in Pause status is not detected.
+    value: 0
+enum/EnetAlphaEnumAlphaIndia:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: MTL Tx Queue Not Empty status is detected.
+    value: 1
+  - name: Inactive
+    description: MTL Tx Queue Not Empty status is not detected.
+    value: 0
+enum/EnetAlphaEnumBravoIndia:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: MTL Tx Status FIFO Full status is detected.
+    value: 1
+  - name: Inactive
+    description: MTL Tx Status FIFO Full status is not detected.
+    value: 0
+enum/EnetAlphaEnumCharlieIndia:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Flush Transmit Queue is disabled.
+    value: 0
+  - name: Enable
+    description: Flush Transmit Queue is enabled.
+    value: 1
+enum/EnetAlphaEnumDeltaIndia:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Transmit Store and Forward is disabled.
+    value: 0
+  - name: Enable
+    description: Transmit Store and Forward is enabled.
+    value: 1
+enum/EnetAlphaEnumEchoIndia:
+  bit_size: 3
+  variants:
+  - name: M128bytes
+    description: '128.'
+    value: 3
+  - name: M192bytes
+    description: '192.'
+    value: 4
+  - name: M256bytes
+    description: '256.'
+    value: 5
+  - name: M32bytes
+    description: '32.'
+    value: 0
+  - name: M384bytes
+    description: '384.'
+    value: 6
+  - name: M512bytes
+    description: '512.'
+    value: 7
+  - name: M64bytes
+    description: '64.'
+    value: 1
+  - name: M96bytes
+    description: '96.'
+    value: 2
+enum/EnetAlphaEnumFoxtrotIndia:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Not enabled.
+    value: 0
+  - name: Enable
+    description: Enabled.
+    value: 2
+enum/EnetAlphaEnumGolfIndia:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Overflow detected for Underflow Packet Counter.
+    value: 1
+  - name: Inactive
+    description: Overflow not detected for Underflow Packet Counter.
+    value: 0
+enum/EnetAlphaEnumHotelIndia:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: MTL Interrupt Status detected.
+    value: 1
+  - name: Inactive
+    description: MTL Interrupt Status not detected.
+    value: 0
+enum/EnetAlphaEnumIndiaIndia:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: No carrier.
+    value: 1
+  - name: Inactive
+    description: Carrier is present.
+    value: 0
+enum/EnetAlphaEnumJulietIndia:
+  bit_size: 3
+  variants:
+  - name: M16Ervlan
+    description: 16 Extended Rx VLAN Filters.
+    value: 3
+  - name: M24Ervlan
+    description: 24 Extended Rx VLAN Filters.
+    value: 4
+  - name: M32Ervlan
+    description: 32 Extended Rx VLAN Filters.
+    value: 5
+  - name: M4Ervlan
+    description: 4 Extended Rx VLAN Filters.
+    value: 1
+  - name: M8Ervlan
+    description: 8 Extended Rx VLAN Filters.
+    value: 2
+  - name: NoErvlan
+    description: No Extended Rx VLAN Filters.
+    value: 0
+enum/EnetAlphaEnumKiloIndia:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: overriding MCBCQ priority disabled.
+    value: 0
+  - name: Enable
+    description: overriding MCBCQ priority enabled.
+    value: 1
+enum/EnetAlphaEnumLimaIndia:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: One-Step Timestamping feature is selected.
+    value: 1
+  - name: Inactive
+    description: One-Step Timestamping feature is not selected.
+    value: 0
+enum/EnetAlphaEnumMikeIndia:
+  bit_size: 2
+  variants:
+  - name: FltrAll
+    description: MAC filters all control packets from reaching the application.
+    value: 0
+  - name: FwAll
+    description: MAC forwards all control packets to the application even if they fail the address filter.
+    value: 2
+  - name: FwPass
+    description: MAC forwards the control packets that pass the Address filter.
+    value: 3
+  - name: FwXcptPau
+    description: MAC forwards all control packets except Pause packets to the application even if they fail the address filter.
+    value: 1
+enum/EnetAlphaEnumNovemberIndia:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: PCS Registers (TBI, SGMII, or RTBI PHY interface).
+    value: 1
+  - name: Inactive
+    description: No PCS Registers (TBI, SGMII, or RTBI PHY interface).
+    value: 0
+enum/EnetAlphaEnumOscarIndia:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Packet Duplication Control is disabled.
+    value: 0
+  - name: Enable
+    description: Packet Duplication Control is enabled.
+    value: 1
+enum/EnetAlphaEnumPapaIndia:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Broadcast/Multicast Packet Duplication feature is selected.
+    value: 1
+  - name: Inactive
+    description: Broadcast/Multicast Packet Duplication feature is not selected.
+    value: 0
+enum/EnetAlphaEnumQuebecIndia:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: PHY Interrupt is disabled.
+    value: 0
+  - name: Enable
+    description: PHY Interrupt is enabled.
+    value: 1
+enum/EnetAlphaEnumRomeoIndia:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: PHY Interrupt detected.
+    value: 1
+  - name: Inactive
+    description: PHY Interrupt not detected.
+    value: 0
+enum/EnetAlphaEnumSierraIndia:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: link is down.
+    value: 0
+  - name: Enable
+    description: link is okay (UP).
+    value: 1
+enum/EnetAlphaEnumTangoIndia:
+  bit_size: 3
+  variants:
+  - name: Pt144
+    description: Pause Time minus 144 Slot Times (PT -144 slot times).
+    value: 3
+  - name: Pt256
+    description: Pause Time minus 256 Slot Times (PT -256 slot times).
+    value: 4
+  - name: Pt28
+    description: Pause Time minus 28 Slot Times (PT -28 slot times).
+    value: 1
+  - name: Pt36
+    description: Pause Time minus 36 Slot Times (PT -36 slot times).
+    value: 2
+  - name: Pt4
+    description: Pause Time minus 4 Slot Times (PT -4 slot times).
+    value: 0
+  - name: Pt512
+    description: Pause Time minus 512 Slot Times (PT -512 slot times).
+    value: 5
+enum/EnetAlphaEnumUniformIndia:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Pass All Multicast is disabled.
+    value: 0
+  - name: Enable
+    description: Pass All Multicast is enabled.
+    value: 1
+enum/EnetAlphaEnumVictorIndia:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: PMT Interrupt is disabled.
+    value: 0
+  - name: Enable
+    description: PMT Interrupt is enabled.
+    value: 1
+enum/EnetAlphaEnumWhiskeyIndia:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: PMT Interrupt status active.
+    value: 1
+  - name: Inactive
+    description: PMT Interrupt status not active.
+    value: 0
+enum/EnetAlphaEnumXrayIndia:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: One Step for PTP over UDP/IP Feature is selected.
+    value: 1
+  - name: Inactive
+    description: One Step for PTP over UDP/IP Feature is not selected.
+    value: 0
+enum/EnetAlphaEnumYankeeIndia:
+  bit_size: 3
+  variants:
+  - name: M1Ppso
+    description: 1 PPS output.
+    value: 1
+  - name: M2Ppso
+    description: 2 PPS output.
+    value: 2
+  - name: M3Ppso
+    description: 3 PPS output.
+    value: 3
+  - name: M4Ppso
+    description: 4 PPS output.
+    value: 4
+  - name: NoPpso
+    description: No PPS output.
+    value: 0
+enum/EnetAlphaEnumZuluIndia:
+  bit_size: 2
+  variants:
+  - name: M3bytes
+    description: 3 bytes of preamble.
+    value: 2
+  - name: M5bytes
+    description: 5 bytes of preamble.
+    value: 1
+  - name: M7bytes
+    description: 7 bytes of preamble.
+    value: 0
+enum/EnetAlphaEnumAlphaJuliet:
+  bit_size: 1
+  variants:
+  - name: M10002500m
+    description: For 1000 or 2500 Mbps operations.
+    value: 0
+  - name: M10100m
+    description: For 10 or 100 Mbps operations.
+    value: 1
+enum/EnetAlphaEnumBravoJuliet:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Preamble Suppression disabled.
+    value: 0
+  - name: Enable
+    description: Preamble Suppression enabled.
+    value: 1
+enum/EnetAlphaEnumCharlieJuliet:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: PTP Offload feature is selected.
+    value: 1
+  - name: Inactive
+    description: PTP Offload feature is not selected.
+    value: 0
+enum/EnetAlphaEnumDeltaJuliet:
+  bit_size: 3
+  variants:
+  - name: Queue0
+    description: Receive Queue 0.
+    value: 0
+  - name: Queue1
+    description: Receive Queue 1.
+    value: 1
+enum/EnetAlphaEnumEchoJuliet:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Programmable Watchdog is disabled.
+    value: 0
+  - name: Enable
+    description: Programmable Watchdog is enabled.
+    value: 1
+enum/EnetAlphaEnumFoxtrotJuliet:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Power down is disabled.
+    value: 0
+  - name: Enable
+    description: Power down is enabled.
+    value: 1
+enum/EnetAlphaEnumGolfJuliet:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Queue 0 disabled for DA-based DMA Channel Selection.
+    value: 0
+  - name: Enable
+    description: Queue 0 enabled for DA-based DMA Channel Selection.
+    value: 1
+enum/EnetAlphaEnumHotelJuliet:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Queue 0 Interrupt status detected.
+    value: 1
+  - name: Inactive
+    description: Queue 0 Interrupt status not detected.
+    value: 0
+enum/EnetAlphaEnumIndiaJuliet:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Queue 1 disabled for DA-based DMA Channel Selection.
+    value: 0
+  - name: Enable
+    description: Queue 1 enabled for DA-based DMA Channel Selection.
+    value: 1
+enum/EnetAlphaEnumJulietJuliet:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Queue 1 Interrupt status detected.
+    value: 1
+  - name: Inactive
+    description: Queue 1 Interrupt status not detected.
+    value: 0
+enum/EnetAlphaEnumKiloJuliet:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Receive All is disabled.
+    value: 0
+  - name: Enable
+    description: Receive All is enabled.
+    value: 1
+enum/EnetAlphaEnumLimaJuliet:
+  bit_size: 1
+  variants:
+  - name: Sp
+    description: Strict priority (SP).
+    value: 0
+  - name: Wsp
+    description: Weighted Strict Priority (WSP).
+    value: 1
+enum/EnetAlphaEnumMikeJuliet:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Rx Side Only AV Feature is selected.
+    value: 1
+  - name: Inactive
+    description: Rx Side Only AV Feature is not selected.
+    value: 0
+enum/EnetAlphaEnumNovemberJuliet:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Rebuild INCRx Burst is disabled.
+    value: 0
+  - name: Enable
+    description: Rebuild INCRx Burst is enabled.
+    value: 1
+enum/EnetAlphaEnumOscarJuliet:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Register Clear on Write 1 is disabled.
+    value: 0
+  - name: Enable
+    description: Register Clear on Write 1 is enabled.
+    value: 1
+enum/EnetAlphaEnumPapaJuliet:
+  bit_size: 1
+  variants:
+  - name: Read
+    description: Read operation of indirect access.
+    value: 0
+  - name: Write
+    description: Write operation of indirect access.
+    value: 1
+enum/EnetAlphaEnumQuebecJuliet:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Receiver is disabled.
+    value: 0
+  - name: Enable
+    description: Receiver is enabled.
+    value: 1
+enum/EnetAlphaEnumRomeoJuliet:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Receive Flow Control is disabled.
+    value: 0
+  - name: Enable
+    description: Receive Flow Control is enabled.
+    value: 1
+enum/EnetAlphaEnumSierraJuliet:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Receive LPI entry detected.
+    value: 1
+  - name: Inactive
+    description: Receive LPI entry not detected.
+    value: 0
+enum/EnetAlphaEnumTangoJuliet:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Receive LPI exit detected.
+    value: 1
+  - name: Inactive
+    description: Receive LPI exit not detected.
+    value: 0
+enum/EnetAlphaEnumUniformJuliet:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Receive LPI state detected.
+    value: 1
+  - name: Inactive
+    description: Receive LPI state not detected.
+    value: 0
+enum/EnetAlphaEnumVictorJuliet:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: MAC GMII or MII Receive Protocol Engine Status detected.
+    value: 1
+  - name: Inactive
+    description: MAC GMII or MII Receive Protocol Engine Status not detected.
+    value: 0
+enum/EnetAlphaEnumWhiskeyJuliet:
+  bit_size: 4
+  variants:
+  - name: RunCrd
+    description: Running (Closing the Rx Descriptor).
+    value: 5
+  - name: RunFrtd
+    description: Running (Fetching Rx Transfer Descriptor).
+    value: 1
+  - name: RunTrp
+    description: Running (Transferring the received packet data from the Rx buffer to the system memory).
+    value: 7
+  - name: RunWrp
+    description: Running (Waiting for Rx packet).
+    value: 3
+  - name: Stop
+    description: Stopped (Reset or Stop Receive Command issued).
+    value: 0
+  - name: Suspnd
+    description: Suspended (Rx Descriptor Unavailable).
+    value: 4
+  - name: Tstmp
+    description: Timestamp write state.
+    value: 6
+enum/EnetAlphaEnumXrayJuliet:
+  bit_size: 4
+  variants:
+  - name: RunCrd
+    description: Running (Closing the Rx Descriptor).
+    value: 5
+  - name: RunFrtd
+    description: Running (Fetching Rx Transfer Descriptor).
+    value: 1
+  - name: RunTrp
+    description: Running (Transferring the received packet data from the Rx buffer to the system memory).
+    value: 7
+  - name: RunWrp
+    description: Running (Waiting for Rx packet).
+    value: 3
+  - name: Stop
+    description: Stopped (Reset or Stop Receive Command issued).
+    value: 0
+  - name: Suspnd
+    description: Suspended (Rx Descriptor Unavailable).
+    value: 4
+  - name: Tstmp
+    description: Timestamp write state.
+    value: 6
+enum/EnetAlphaEnumYankeeJuliet:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Remote Wake-Up Packet Filter Register Pointer is not Reset.
+    value: 0
+  - name: Enable
+    description: Remote Wake-Up Packet Filter Register Pointer is Reset.
+    value: 1
+enum/EnetAlphaEnumZuluJuliet:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Remote Wake-up Packet Forwarding is disabled.
+    value: 0
+  - name: Enable
+    description: Remote Wake-up Packet Forwarding is enabled.
+    value: 1
+enum/EnetAlphaEnumAlphaKilo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Remote wake-up packet is disabled.
+    value: 0
+  - name: Enable
+    description: Remote wake-up packet is enabled.
+    value: 1
+enum/EnetAlphaEnumBravoKilo:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Remote wake-up packet is received.
+    value: 1
+  - name: Inactive
+    description: Remote wake-up packet is received.
+    value: 0
+enum/EnetAlphaEnumCharlieKilo:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: PMT Remote Wake-up Packet Enable option is selected.
+    value: 1
+  - name: Inactive
+    description: PMT Remote Wake-up Packet Enable option is not selected.
+    value: 0
+enum/EnetAlphaEnumDeltaKilo:
+  bit_size: 4
+  variants:
+  - name: M1rxch
+    description: 1 MTL Rx Channel.
+    value: 0
+  - name: M2rxch
+    description: 2 MTL Rx Channels.
+    value: 1
+  - name: M3rxch
+    description: 3 MTL Rx Channels.
+    value: 2
+  - name: M4rxch
+    description: 4 MTL Rx Channels.
+    value: 3
+  - name: M5rxch
+    description: 5 MTL Rx Channels.
+    value: 4
+  - name: M6rxch
+    description: 6 MTL Rx Channels.
+    value: 5
+  - name: M7rxch
+    description: 7 MTL Rx Channels.
+    value: 6
+  - name: M8rxch
+    description: 8 MTL Rx Channels.
+    value: 7
+enum/EnetAlphaEnumEchoKilo:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Receive Checksum Offload Enable option is selected.
+    value: 1
+  - name: Inactive
+    description: Receive Checksum Offload Enable option is not selected.
+    value: 0
+enum/EnetAlphaEnumFoxtrotKilo:
+  bit_size: 5
+  variants:
+  - name: M1024b
+    description: 1024 bytes.
+    value: 3
+  - name: M128b
+    description: 128 bytes.
+    value: 0
+  - name: M128kb
+    description: 128 KB.
+    value: 10
+  - name: M16384b
+    description: 16384 bytes.
+    value: 7
+  - name: M2048b
+    description: 2048 bytes.
+    value: 4
+  - name: M256b
+    description: 256 bytes.
+    value: 1
+  - name: M256kb
+    description: 256 KB.
+    value: 11
+  - name: M32kb
+    description: 32 KB.
+    value: 8
+  - name: M4096b
+    description: 4096 bytes.
+    value: 5
+  - name: M512b
+    description: 512 bytes.
+    value: 2
+  - name: M64kb
+    description: 64 KB.
+    value: 9
+  - name: M8192b
+    description: 8192 bytes.
+    value: 6
+enum/EnetAlphaEnumGolfKilo:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Queue not enabled.
+    value: 0
+  - name: EnAv
+    description: Queue enabled for AV.
+    value: 1
+  - name: EnDcbGen
+    description: Queue enabled for DCB/Generic.
+    value: 2
+enum/EnetAlphaEnumHotelKilo:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Queue not enabled.
+    value: 0
+  - name: EnAv
+    description: Queue enabled for AV.
+    value: 1
+  - name: EnDcbGen
+    description: Queue enabled for DCB/Generic.
+    value: 2
+enum/EnetAlphaEnumIndiaKilo:
+  bit_size: 4
+  variants:
+  - name: M1rxq
+    description: 1 MTL Rx Queue.
+    value: 0
+  - name: M2rxq
+    description: 2 MTL Rx Queues.
+    value: 1
+  - name: M3rxq
+    description: 3 MTL Rx Queues.
+    value: 2
+  - name: M4rxq
+    description: 4 MTL Rx Queues.
+    value: 3
+  - name: M5rxq
+    description: 5 MTL Rx Queues.
+    value: 4
+  - name: M6rxq
+    description: 6 MTL Rx Queues.
+    value: 5
+  - name: M7rxq
+    description: 7 MTL Rx Queues.
+    value: 6
+  - name: M8rxq
+    description: 8 MTL Rx Queues.
+    value: 7
+enum/EnetAlphaEnumJulietKilo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Receive Status Interrupt is disabled.
+    value: 0
+  - name: Enable
+    description: Receive Status Interrupt is enabled.
+    value: 1
+enum/EnetAlphaEnumKiloKilo:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Receive Interrupt status active.
+    value: 1
+  - name: Inactive
+    description: Receive Interrupt status not active.
+    value: 0
+enum/EnetAlphaEnumLimaKilo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Support upto 2K packet is disabled.
+    value: 0
+  - name: Enable
+    description: Support upto 2K packet is Enabled.
+    value: 1
+enum/EnetAlphaEnumMikeKilo:
+  bit_size: 3
+  variants:
+  - name: Mac0InsSa
+    description: Contents of MAC Addr-0 inserted in SA field.
+    value: 2
+  - name: Mac0RepSa
+    description: Contents of MAC Addr-0 replaces SA field.
+    value: 3
+  - name: Mac1InsSa
+    description: Contents of MAC Addr-1 inserted in SA field.
+    value: 6
+  - name: Mac1RepSa
+    description: Contents of MAC Addr-1 replaces SA field.
+    value: 7
+  - name: SaCtrlIn
+    description: mti_sa_ctrl_i and ati_sa_ctrl_i input signals control the SA field generation.
+    value: 0
+enum/EnetAlphaEnumNovemberKilo:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Source Address or VLAN Insertion Enable option is selected.
+    value: 1
+  - name: Inactive
+    description: Source Address or VLAN Insertion Enable option is not selected.
+    value: 0
+enum/EnetAlphaEnumOscarKilo:
+  bit_size: 2
+  variants:
+  - name: Sp
+    description: Strict priority algorithm.
+    value: 3
+  - name: Wrr
+    description: WRR algorithm.
+    value: 0
+enum/EnetAlphaEnumPapaKilo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Skip Address Packet is disabled.
+    value: 0
+  - name: Enable
+    description: Skip Address Packet is enabled.
+    value: 1
+enum/EnetAlphaEnumQuebecKilo:
+  bit_size: 3
+  variants:
+  - name: M16Slot
+    description: 16 slots.
+    value: 4
+  - name: M1Slot
+    description: 1 slot.
+    value: 0
+  - name: M2Slot
+    description: 2 slots.
+    value: 1
+  - name: M4Slot
+    description: 4 slots.
+    value: 2
+  - name: M8Slot
+    description: 8 slots.
+    value: 3
+enum/EnetAlphaEnumRomeoKilo:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: SMA (MDIO) Interface selected.
+    value: 1
+  - name: Inactive
+    description: SMA (MDIO) Interface not selected.
+    value: 0
+enum/EnetAlphaEnumSierraKilo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Slow Protocol Detection is disabled.
+    value: 0
+  - name: Enable
+    description: Slow Protocol Detection is enabled.
+    value: 1
+enum/EnetAlphaEnumTangoKilo:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Split Header Feature is selected.
+    value: 1
+  - name: Inactive
+    description: Split Header Feature is not selected.
+    value: 0
+enum/EnetAlphaEnumUniformKilo:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Single Port RAM feature is selected.
+    value: 1
+  - name: Inactive
+    description: Single Port RAM feature is not selected.
+    value: 0
+enum/EnetAlphaEnumVictorKilo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Software Reset is disabled.
+    value: 0
+  - name: Enable
+    description: Software Reset is enabled.
+    value: 1
+enum/EnetAlphaEnumWhiskeyKilo:
+  bit_size: 3
+  variants:
+  - name: Fp
+    description: Fixed priority.
+    value: 0
+  - name: Wrr
+    description: Weighted Round-Robin (WRR).
+    value: 2
+  - name: Wsp
+    description: Weighted Strict Priority (WSP).
+    value: 1
+enum/EnetAlphaEnumXrayKilo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Tagged AV Control Packets Queuing is disabled.
+    value: 0
+  - name: Enable
+    description: Tagged AV Control Packets Queuing is enabled.
+    value: 1
+enum/EnetAlphaEnumYankeeKilo:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Time Based Scheduling Enable feature is selected.
+    value: 1
+  - name: Inactive
+    description: Time Based Scheduling Enable feature is not selected.
+    value: 0
+enum/EnetAlphaEnumZuluKilo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Transmitter is disabled.
+    value: 0
+  - name: Enable
+    description: Transmitter is enabled.
+    value: 1
+enum/EnetAlphaEnumAlphaLima:
+  bit_size: 2
+  variants:
+  - name: GenTxPau
+    description: Generating and transmitting a Pause control packet (in full-duplex mode).
+    value: 2
+  - name: Idle
+    description: Idle state.
+    value: 0
+  - name: Trnsfr
+    description: Transferring input packet for transmission.
+    value: 3
+  - name: Waiting
+    description: 'Waiting for one of the following: Status of the previous packet OR IPG or back off period to be over.'
+    value: 1
+enum/EnetAlphaEnumBravoLima:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Transmit Flow Control is disabled.
+    value: 0
+  - name: Enable
+    description: Transmit Flow Control is enabled.
+    value: 1
+enum/EnetAlphaEnumCharlieLima:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Transmit Jabber Timeout occurred.
+    value: 1
+  - name: Inactive
+    description: No Transmit Jabber Timeout.
+    value: 0
+enum/EnetAlphaEnumDeltaLima:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Transmit LPI entry detected.
+    value: 1
+  - name: Inactive
+    description: Transmit LPI entry not detected.
+    value: 0
+enum/EnetAlphaEnumEchoLima:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Transmit LPI exit detected.
+    value: 1
+  - name: Inactive
+    description: Transmit LPI exit not detected.
+    value: 0
+enum/EnetAlphaEnumFoxtrotLima:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Transmit LPI state detected.
+    value: 1
+  - name: Inactive
+    description: Transmit LPI state not detected.
+    value: 0
+enum/EnetAlphaEnumGolfLima:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: MAC GMII or MII Transmit Protocol Engine Status detected.
+    value: 1
+  - name: Inactive
+    description: MAC GMII or MII Transmit Protocol Engine Status not detected.
+    value: 0
+enum/EnetAlphaEnumHotelLima:
+  bit_size: 4
+  variants:
+  - name: RunCtd
+    description: Running (Closing Tx Descriptor).
+    value: 7
+  - name: RunFttd
+    description: Running (Fetching Tx Transfer Descriptor).
+    value: 1
+  - name: RunRds
+    description: Running (Reading Data from system memory buffer and queuing it to the Tx buffer (Tx FIFO)).
+    value: 3
+  - name: RunWs
+    description: Running (Waiting for status).
+    value: 2
+  - name: Stop
+    description: Stopped (Reset or Stop Transmit Command issued).
+    value: 0
+  - name: Suspnd
+    description: Suspended (Tx Descriptor Unavailable or Tx Buffer Underflow).
+    value: 6
+  - name: TstmpWs
+    description: Timestamp write state.
+    value: 4
+enum/EnetAlphaEnumIndiaLima:
+  bit_size: 4
+  variants:
+  - name: RunCtd
+    description: Running (Closing Tx Descriptor).
+    value: 7
+  - name: RunFttd
+    description: Running (Fetching Tx Transfer Descriptor).
+    value: 1
+  - name: RunRds
+    description: Running (Reading Data from system memory buffer and queuing it to the Tx buffer (Tx FIFO)).
+    value: 3
+  - name: RunWs
+    description: Running (Waiting for status).
+    value: 2
+  - name: Stop
+    description: Stopped (Reset or Stop Transmit Command issued).
+    value: 0
+  - name: Suspnd
+    description: Suspended (Tx Descriptor Unavailable or Tx Buffer Underflow).
+    value: 6
+  - name: TstmpWs
+    description: Timestamp write state.
+    value: 4
+enum/EnetAlphaEnumJulietLima:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Addend Register is not updated.
+    value: 0
+  - name: Enable
+    description: Addend Register is updated.
+    value: 1
+enum/EnetAlphaEnumKiloLima:
+  bit_size: 1
+  variants:
+  - name: Coarse
+    description: Coarse method is used to update system timestamp.
+    value: 0
+  - name: Fine
+    description: Fine method is used to update system timestamp.
+    value: 1
+enum/EnetAlphaEnumLimaLima:
+  bit_size: 1
+  variants:
+  - name: DigDisable
+    description: Timestamp Digital Rollover Control is disabled and Binary Rollover Control is enabled.
+    value: 0
+  - name: DigEnable
+    description: Timestamp Digital Rollover Control is enabled and Binary Rollover Control is disabled.
+    value: 1
+enum/EnetAlphaEnumMikeLima:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Timestamp is disabled.
+    value: 0
+  - name: Enable
+    description: Timestamp is enabled.
+    value: 1
+enum/EnetAlphaEnumNovemberLima:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Timestamp for All Packets disabled.
+    value: 0
+  - name: Enable
+    description: Timestamp for All Packets enabled.
+    value: 1
+enum/EnetAlphaEnumOscarLima:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: MAC Address for PTP Packet Filtering is disabled.
+    value: 0
+  - name: Enable
+    description: MAC Address for PTP Packet Filtering is enabled.
+    value: 1
+enum/EnetAlphaEnumPapaLima:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Timestamp Snapshot for Event Messages is disabled.
+    value: 0
+  - name: Enable
+    description: Timestamp Snapshot for Event Messages is enabled.
+    value: 1
+enum/EnetAlphaEnumQuebecLima:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Timestamp Interrupt is disabled.
+    value: 0
+  - name: Enable
+    description: Timestamp Interrupt is enabled.
+    value: 1
+enum/EnetAlphaEnumRomeoLima:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Timestamp is not initialized.
+    value: 0
+  - name: Enable
+    description: Timestamp is initialized.
+    value: 1
+enum/EnetAlphaEnumSierraLima:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Processing of PTP over Ethernet Packets is disabled.
+    value: 0
+  - name: Enable
+    description: Processing of PTP over Ethernet Packets is enabled.
+    value: 1
+enum/EnetAlphaEnumTangoLima:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Processing of PTP Packets Sent over IPv4-UDP is disabled.
+    value: 0
+  - name: Enable
+    description: Processing of PTP Packets Sent over IPv4-UDP is enabled.
+    value: 1
+enum/EnetAlphaEnumUniformLima:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Processing of PTP Packets Sent over IPv6-UDP is disabled.
+    value: 0
+  - name: Enable
+    description: Processing of PTP Packets Sent over IPv6-UDP is enabled.
+    value: 1
+enum/EnetAlphaEnumVictorLima:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Timestamp Interrupt status active.
+    value: 1
+  - name: Inactive
+    description: Timestamp Interrupt status not active.
+    value: 0
+enum/EnetAlphaEnumWhiskeyLima:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Snapshot for Messages Relevant to Master is disabled.
+    value: 0
+  - name: Enable
+    description: Snapshot for Messages Relevant to Master is enabled.
+    value: 1
+enum/EnetAlphaEnumXrayLima:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: TCP Segmentation Offload Feature is selected.
+    value: 1
+  - name: Inactive
+    description: TCP Segmentation Offload Feature is not selected.
+    value: 0
+enum/EnetAlphaEnumYankeeLima:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: IEEE 1588-2008 Timestamp Enable option is selected.
+    value: 1
+  - name: Inactive
+    description: IEEE 1588-2008 Timestamp Enable option is not selected.
+    value: 0
+enum/EnetAlphaEnumZuluLima:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Timestamp Seconds Overflow status detected.
+    value: 1
+  - name: Inactive
+    description: Timestamp Seconds Overflow status not detected.
+    value: 0
+enum/EnetAlphaEnumAlphaMike:
+  bit_size: 2
+  variants:
+  - name: Both
+    description: Both.
+    value: 2
+  - name: Extrnl
+    description: External.
+    value: 1
+  - name: Intrnl
+    description: Internal.
+    value: 0
+enum/EnetAlphaEnumBravoMike:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Timestamp Target Time Reached status detected.
+    value: 1
+  - name: Inactive
+    description: Timestamp Target Time Reached status not detected.
+    value: 0
+enum/EnetAlphaEnumCharlieMike:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Timestamp Target Time Error status detected.
+    value: 1
+  - name: Inactive
+    description: Timestamp Target Time Error status not detected.
+    value: 0
+enum/EnetAlphaEnumDeltaMike:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Timestamp Interrupt Trigger is not enabled.
+    value: 0
+  - name: Enable
+    description: Timestamp Interrupt Trigger is enabled.
+    value: 1
+enum/EnetAlphaEnumEchoMike:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Timestamp is not updated.
+    value: 0
+  - name: Enable
+    description: Timestamp is updated.
+    value: 1
+enum/EnetAlphaEnumFoxtrotMike:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: PTP Packet Processing for Version 2 Format is disabled.
+    value: 0
+  - name: Enable
+    description: PTP Packet Processing for Version 2 Format is enabled.
+    value: 1
+enum/EnetAlphaEnumGolfMike:
+  bit_size: 4
+  variants:
+  - name: M1txch
+    description: 1 MTL Tx Channel.
+    value: 0
+  - name: M2txch
+    description: 2 MTL Tx Channels.
+    value: 1
+  - name: M3txch
+    description: 3 MTL Tx Channels.
+    value: 2
+  - name: M4txch
+    description: 4 MTL Tx Channels.
+    value: 3
+  - name: M5txch
+    description: 5 MTL Tx Channels.
+    value: 4
+  - name: M6txch
+    description: 6 MTL Tx Channels.
+    value: 5
+  - name: M7txch
+    description: 7 MTL Tx Channels.
+    value: 6
+  - name: M8txch
+    description: 8 MTL Tx Channels.
+    value: 7
+enum/EnetAlphaEnumHotelMike:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Transmit Checksum Offload Enable option is selected.
+    value: 1
+  - name: Inactive
+    description: Transmit Checksum Offload Enable option is not selected.
+    value: 0
+enum/EnetAlphaEnumIndiaMike:
+  bit_size: 5
+  variants:
+  - name: M1024b
+    description: 1024 bytes.
+    value: 3
+  - name: M128b
+    description: 128 bytes.
+    value: 0
+  - name: M128kb
+    description: 128 KB.
+    value: 10
+  - name: M16384b
+    description: 16384 bytes.
+    value: 7
+  - name: M2048b
+    description: 2048 bytes.
+    value: 4
+  - name: M256b
+    description: 256 bytes.
+    value: 1
+  - name: M32kb
+    description: 32 KB.
+    value: 8
+  - name: M4096b
+    description: 4096 bytes.
+    value: 5
+  - name: M512b
+    description: 512 bytes.
+    value: 2
+  - name: M64kb
+    description: 64 KB.
+    value: 9
+  - name: M8192b
+    description: 8192 bytes.
+    value: 6
+enum/EnetAlphaEnumJulietMike:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Transmit Priority is disabled.
+    value: 0
+  - name: Enable
+    description: Transmit Priority is enabled.
+    value: 1
+enum/EnetAlphaEnumKiloMike:
+  bit_size: 4
+  variants:
+  - name: M1txq
+    description: 1 MTL Tx Queue.
+    value: 0
+  - name: M2txq
+    description: 2 MTL Tx Queues.
+    value: 1
+  - name: M3txq
+    description: 3 MTL Tx Queues.
+    value: 2
+  - name: M4txq
+    description: 4 MTL Tx Queues.
+    value: 3
+  - name: M5txq
+    description: 5 MTL Tx Queues.
+    value: 4
+  - name: M6txq
+    description: 6 MTL Tx Queues.
+    value: 5
+  - name: M7txq
+    description: 7 MTL Tx Queues.
+    value: 6
+  - name: M8txq
+    description: 8 MTL Tx Queues.
+    value: 7
+enum/EnetAlphaEnumLimaMike:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Timestamp Status Interrupt is disabled.
+    value: 0
+  - name: Enable
+    description: Timestamp Status Interrupt is enabled.
+    value: 1
+enum/EnetAlphaEnumMikeMike:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Transmit Interrupt status active.
+    value: 1
+  - name: Inactive
+    description: Transmit Interrupt status not active.
+    value: 0
+enum/EnetAlphaEnumNovemberMike:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Tx Timestamp Status Interrupt status detected.
+    value: 1
+  - name: Inactive
+    description: Tx Timestamp Status Interrupt status not detected.
+    value: 0
+enum/EnetAlphaEnumOscarMike:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Transmit Timestamp Status Missed status detected.
+    value: 1
+  - name: Inactive
+    description: Transmit Timestamp Status Missed status not detected.
+    value: 0
+enum/EnetAlphaEnumPapaMike:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Transmit Timestamp Status Mode is disabled.
+    value: 0
+  - name: Enable
+    description: Transmit Timestamp Status Mode is enabled.
+    value: 1
+enum/EnetAlphaEnumQuebecMike:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Unicast Address Filter Fail Packets Queuing is disabled.
+    value: 0
+  - name: Enable
+    description: Unicast Address Filter Fail Packets Queuing is enabled.
+    value: 1
+enum/EnetAlphaEnumRomeoMike:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Unicast Pause Packet Detect disabled.
+    value: 0
+  - name: Enable
+    description: Unicast Pause Packet Detect enabled.
+    value: 1
+enum/EnetAlphaEnumSierraMike:
+  bit_size: 3
+  variants:
+  - name: Queue0
+    description: Receive Queue 0.
+    value: 0
+  - name: Queue1
+    description: Receive Queue 1.
+    value: 1
+enum/EnetAlphaEnumTangoMike:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Unicast Slow Protocol Packet Detection is disabled.
+    value: 0
+  - name: Enable
+    description: Unicast Slow Protocol Packet Detection is enabled.
+    value: 1
+enum/EnetAlphaEnumUniformMike:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: VLAN tag Filter Fail Packets Queuing is disabled.
+    value: 0
+  - name: Enable
+    description: VLAN tag Filter Fail Packets Queuing is enabled.
+    value: 1
+enum/EnetAlphaEnumVictorMike:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: VLAN Hash Filter selected.
+    value: 1
+  - name: Inactive
+    description: VLAN Hash Filter not selected.
+    value: 0
+enum/EnetAlphaEnumWhiskeyMike:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: VLAN Tag Filter is disabled.
+    value: 0
+  - name: Enable
+    description: VLAN Tag Filter is enabled.
+    value: 1
+enum/EnetAlphaEnumXrayMike:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: VLAN Tag Inverse Match is disabled.
+    value: 0
+  - name: Enable
+    description: VLAN Tag Inverse Match is enabled.
+    value: 1
+enum/EnetAlphaEnumYankeeMike:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Watchdog is disabled.
+    value: 1
+  - name: Enable
+    description: Watchdog is enabled.
+    value: 0
+enum/EnetAlphaEnumZuluMike:
+  bit_size: 4
+  variants:
+  - name: Bf10kbytes
+    description: 10 KB.
+    value: 8
+  - name: Bf11kbytes
+    description: 11 KB.
+    value: 9
+  - name: Bf12kbytes
+    description: 12 KB.
+    value: 10
+  - name: Bf13kbytes
+    description: 13 KB.
+    value: 11
+  - name: Bf14kbytes
+    description: 14 KB.
+    value: 12
+  - name: Bf15kbytes
+    description: 15 KB.
+    value: 13
+  - name: Bf16383bytes
+    description: 16383 Bytes.
+    value: 14
+  - name: Bf2kbytes
+    description: 2 KB.
+    value: 0
+  - name: Bf3kbytes
+    description: 3 KB.
+    value: 1
+  - name: Bf4kbytes
+    description: 4 KB.
+    value: 2
+  - name: Bf5kbytes
+    description: 5 KB.
+    value: 3
+  - name: Bf6kbytes
+    description: 6 KB.
+    value: 4
+  - name: Bf7kbytes
+    description: 7 KB.
+    value: 5
+  - name: Bf8kbytes
+    description: 8 KB.
+    value: 6
+  - name: Bf9kbytes
+    description: 9 KB.
+    value: 7

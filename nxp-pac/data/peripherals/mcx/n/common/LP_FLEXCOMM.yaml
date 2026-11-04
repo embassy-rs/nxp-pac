@@ -1,0 +1,84 @@
+# N23 RM Rev.4 50.2.6.1 and MCX N RM Rev.7 66.2.6.1.
+block/LpFlexcomm:
+  description: Low-Power Flexible Communications Interface. Raw wrapper view; UART/SPI use its base and I2C uses base+0x800. Mode register banks and burst aliases overlap physically and share FIFO resources. UART+I2C has a reduced interface; enable DMA requests and input trigger for only one of those functions. Bus and functional clocks are required; unselected function clocks are internally gated. Select clocks, pins, and a supported function externally before using a mode view; these types do not provide ownership or automatic mode selection. PSELID reset defaults are documentation, not live capability detection.
+  items:
+  - name: istat
+    description: Interrupt Status. Read-only sources of the shared wrapper interrupt.
+    byte_offset: 0xff4
+    access: Read
+    fieldset: Istat
+  - name: pselid
+    description: Peripheral Select and ID. PERSEL and LOCK are writable; presence and ID fields are read-only. LOCK prevents PERSEL writes until reset. Only selections 0/1/2/3/7 are documented; do not use reserved encodings or assume unsupported functions exist. No mode or clock transition sequence is performed by this accessor.
+    byte_offset: 0xff8
+    fieldset: Pselid
+fieldset/Istat:
+  description: Interrupt Status.
+  reset_value: 0
+  fields:
+  - name: uarttx
+    description: UART transmitter interrupt asserted.
+    bit_offset: 0
+    bit_size: 1
+  - name: uartrx
+    description: UART receiver interrupt asserted.
+    bit_offset: 1
+    bit_size: 1
+  - name: spi
+    description: SPI interrupt asserted.
+    bit_offset: 2
+    bit_size: 1
+  - name: i2cm
+    description: I2C controller interrupt asserted.
+    bit_offset: 4
+    bit_size: 1
+  - name: i2cs
+    description: I2C subordinate interrupt asserted.
+    bit_offset: 5
+    bit_size: 1
+fieldset/Pselid:
+  description: Peripheral Select and ID.
+  reset_value: 0x00103070
+  fields:
+  - name: persel
+    description: Peripheral Select. Writable only until LOCK is set; encodings 4/5/6 are reserved.
+    bit_offset: 0
+    bit_size: 3
+    enum: Persel
+  - name: lock
+    description: Lock PERSEL until the next reset.
+    bit_offset: 3
+    bit_size: 1
+  - name: uartpresent
+    description: Read-only UART function support indication.
+    bit_offset: 4
+    bit_size: 1
+  - name: spipresent
+    description: Read-only SPI function support indication.
+    bit_offset: 5
+    bit_size: 1
+  - name: i2cpresent
+    description: Read-only I2C function support indication.
+    bit_offset: 6
+    bit_size: 1
+  - name: id
+    description: Read-only LP_FLEXCOMM interface ID.
+    bit_offset: 12
+    bit_size: 20
+enum/Persel:
+  bit_size: 3
+  variants:
+  - name: None
+    description: No peripheral selected.
+    value: 0
+  - name: Uart
+    description: UART.
+    value: 1
+  - name: Spi
+    description: SPI.
+    value: 2
+  - name: I2c
+    description: I2C.
+    value: 3
+  - name: UartAndI2c
+    description: UART and I2C with reduced interface. DMA and input trigger may be enabled for only one function.
+    value: 7

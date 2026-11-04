@@ -1,0 +1,214 @@
+# NXP mcux-soc-svd 7c1f00bdd6263f0b93466f5e73e5fc55a744b879; native chiptool import.
+# Source instance geometry is retained in explicit block variants; see private source bindings.
+# Unannotated fieldsets construct zero in software, not a claimed hardware reset.
+# Command/W1C/SET/CLR/TOG construction defaults are zero masks; no RMW semantics are implied.
+# Source: MCXN235.xml PUF_CTRL sha256 a498ada26162c88f6767738bffcd22801318264c9cb2cbecbd190403b4dbd6a7
+# Source: MCXN235.xml PUF_CTRL_ALIAS1 sha256 a498ada26162c88f6767738bffcd22801318264c9cb2cbecbd190403b4dbd6a7
+# Source: MCXN235.xml PUF_CTRL_ALIAS2 sha256 a498ada26162c88f6767738bffcd22801318264c9cb2cbecbd190403b4dbd6a7
+# Source: MCXN235.xml PUF_CTRL_ALIAS3 sha256 a498ada26162c88f6767738bffcd22801318264c9cb2cbecbd190403b4dbd6a7
+# Source: MCXN236.xml PUF_CTRL sha256 ec813b3b24a785c33c5035ebc25a9c713a18018daf1fdb440035a13bf3549e14
+# Source: MCXN236.xml PUF_CTRL_ALIAS1 sha256 ec813b3b24a785c33c5035ebc25a9c713a18018daf1fdb440035a13bf3549e14
+# Source: MCXN236.xml PUF_CTRL_ALIAS2 sha256 ec813b3b24a785c33c5035ebc25a9c713a18018daf1fdb440035a13bf3549e14
+# Source: MCXN236.xml PUF_CTRL_ALIAS3 sha256 ec813b3b24a785c33c5035ebc25a9c713a18018daf1fdb440035a13bf3549e14
+# Source: MCXN247.xml PUF_CTRL sha256 dbbed5781a39012768344882dad168430c742f26e4261c6fd0bda9a34ca4a652
+# Source: MCXN247.xml PUF_CTRL_ALIAS1 sha256 dbbed5781a39012768344882dad168430c742f26e4261c6fd0bda9a34ca4a652
+# Source: MCXN247.xml PUF_CTRL_ALIAS2 sha256 dbbed5781a39012768344882dad168430c742f26e4261c6fd0bda9a34ca4a652
+# Source: MCXN247.xml PUF_CTRL_ALIAS3 sha256 dbbed5781a39012768344882dad168430c742f26e4261c6fd0bda9a34ca4a652
+block/PufKeyContextAlpha:
+  description: PUF Key Context Management.
+  items:
+  - name: config
+    description: PUF command blocking configuration.
+    byte_offset: 256
+    fieldset: PufKeyContextAlphaFieldsetBravo
+  - name: sec_lock
+    description: Security level lock.
+    byte_offset: 260
+    fieldset: PufKeyContextAlphaFieldsetCharlie
+  - name: app_ctx_mask
+    description: Application defined context mask.
+    byte_offset: 264
+    fieldset: PufKeyContextAlphaFieldsetAlpha
+fieldset/PufKeyContextAlphaFieldsetAlpha:
+  description: Application defined context mask.
+  fields:
+  - name: app_ctx_mask
+    description: Application defined context.
+    bit_offset: 0
+    bit_size: 32
+fieldset/PufKeyContextAlphaFieldsetBravo:
+  description: PUF command blocking configuration.
+  fields:
+  - name: dis_puf_enroll
+    description: Disable PUF enroll command.
+    bit_offset: 1
+    bit_size: 1
+    enum: PufKeyContextAlphaEnumBravo
+  - name: dis_puf_start
+    description: Disable PUF start command.
+    bit_offset: 2
+    bit_size: 1
+    enum: PufKeyContextAlphaEnumFoxtrot
+  - name: dis_puf_stop
+    description: Disable PUF stop command.
+    bit_offset: 5
+    bit_size: 1
+    enum: PufKeyContextAlphaEnumGolf
+  - name: dis_puf_get_key
+    description: Disable PUF get key command.
+    bit_offset: 6
+    bit_size: 1
+    enum: PufKeyContextAlphaEnumEcho
+  - name: dis_puf_unwrap_key
+    description: Disable PUF unwrap key command.
+    bit_offset: 7
+    bit_size: 1
+    enum: PufKeyContextAlphaEnumIndia
+  - name: dis_puf_gen_wrap_key
+    description: Disable PUF generate and wrap key command.
+    bit_offset: 8
+    bit_size: 1
+    enum: PufKeyContextAlphaEnumDelta
+  - name: dis_puf_wrap_key
+    description: Disable PUF wrap key command.
+    bit_offset: 9
+    bit_size: 1
+    enum: PufKeyContextAlphaEnumJuliet
+  - name: dis_puf_gen_random_number
+    description: Disable PUF generate and wrap key command.
+    bit_offset: 15
+    bit_size: 1
+    enum: PufKeyContextAlphaEnumCharlie
+  - name: dis_puf_test
+    description: Disable PUF test command.
+    bit_offset: 31
+    bit_size: 1
+    enum: PufKeyContextAlphaEnumHotel
+fieldset/PufKeyContextAlphaFieldsetCharlie:
+  description: Security level lock.
+  fields:
+  - name: sec_level
+    description: Security Level.
+    bit_offset: 0
+    bit_size: 2
+    enum: PufKeyContextAlphaEnumKilo
+  - name: anti_pole_sec_level
+    description: Anti-pole of security level.
+    bit_offset: 2
+    bit_size: 2
+    enum: PufKeyContextAlphaEnumAlpha
+  - name: pattern
+    description: Pattern.
+    bit_offset: 4
+    bit_size: 12
+enum/PufKeyContextAlphaEnumAlpha:
+  bit_size: 2
+  variants:
+  - name: NonsecureNonprivMaster
+    description: Secure and privileged Master.
+    value: 0
+  - name: NonsecurePrivMaster
+    description: Secure and non-privileged Master.
+    value: 1
+  - name: SecureNonprivMaster
+    description: Non-secure and privileged Master.
+    value: 2
+  - name: SecurePrivMaster
+    description: Non-secure and non-privileged Master.
+    value: 3
+enum/PufKeyContextAlphaEnumBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Command disabled.
+    value: 1
+  - name: Enable
+    description: Command enabled.
+    value: 0
+enum/PufKeyContextAlphaEnumCharlie:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Command disabled.
+    value: 1
+  - name: Enable
+    description: Command enabled.
+    value: 0
+enum/PufKeyContextAlphaEnumDelta:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Command disabled.
+    value: 1
+  - name: Enable
+    description: Command enabled.
+    value: 0
+enum/PufKeyContextAlphaEnumEcho:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Command disabled.
+    value: 1
+  - name: Enable
+    description: Command enabled.
+    value: 0
+enum/PufKeyContextAlphaEnumFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Command disabled.
+    value: 1
+  - name: Enable
+    description: Command enabled.
+    value: 0
+enum/PufKeyContextAlphaEnumGolf:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Command disabled.
+    value: 1
+  - name: Enable
+    description: Command enabled.
+    value: 0
+enum/PufKeyContextAlphaEnumHotel:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Command disabled.
+    value: 1
+  - name: Enable
+    description: Command enabled.
+    value: 0
+enum/PufKeyContextAlphaEnumIndia:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Command disabled.
+    value: 1
+  - name: Enable
+    description: Command enabled.
+    value: 0
+enum/PufKeyContextAlphaEnumJuliet:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Command disabled.
+    value: 1
+  - name: Enable
+    description: Command enabled.
+    value: 0
+enum/PufKeyContextAlphaEnumKilo:
+  bit_size: 2
+  variants:
+  - name: NonsecureNonprivMaster
+    description: Non-secure and non-privileged Master.
+    value: 0
+  - name: NonsecurePrivMaster
+    description: Non-secure and privileged Master.
+    value: 1
+  - name: SecureNonprivMaster
+    description: Secure and non-privileged Master.
+    value: 2
+  - name: SecurePrivMaster
+    description: Secure and privileged Master.
+    value: 3

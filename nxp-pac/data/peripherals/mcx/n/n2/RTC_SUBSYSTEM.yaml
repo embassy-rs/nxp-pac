@@ -1,0 +1,117 @@
+# NXP mcux-soc-svd 7c1f00bdd6263f0b93466f5e73e5fc55a744b879; native chiptool import.
+# Source instance geometry is retained in explicit block variants; see private source bindings.
+# Unannotated fieldsets construct zero in software, not a claimed hardware reset.
+# Command/W1C/SET/CLR/TOG construction defaults are zero masks; no RMW semantics are implied.
+# Source: MCXN235.xml RTC_SUBSYSTEM0 sha256 a498ada26162c88f6767738bffcd22801318264c9cb2cbecbd190403b4dbd6a7
+# Source: MCXN236.xml RTC_SUBSYSTEM0 sha256 ec813b3b24a785c33c5035ebc25a9c713a18018daf1fdb440035a13bf3549e14
+# Source: MCXN247.xml RTC_SUBSYSTEM0 sha256 dbbed5781a39012768344882dad168430c742f26e4261c6fd0bda9a34ca4a652
+block/RtcSubsystemAlpha:
+  description: RTC_SUBSYSTEM.
+  items:
+  - name: subsecond_ctrl
+    description: Subsecond Control.
+    byte_offset: 2048
+    fieldset: RtcSubsystemAlphaFieldsetBravo
+  - name: subsecond_cnt
+    description: Subsecond Counter.
+    byte_offset: 2052
+    access: Read
+    fieldset: RtcSubsystemAlphaFieldsetAlpha
+  - name: wake_timer_ctrl
+    description: Wake Timer Control.
+    byte_offset: 3072
+    fieldset: RtcSubsystemAlphaFieldsetDelta
+  - name: wake_timer_cnt
+    description: Wake Timer Counter.
+    byte_offset: 3084
+    fieldset: RtcSubsystemAlphaFieldsetCharlie
+fieldset/RtcSubsystemAlphaFieldsetAlpha:
+  description: Subsecond Counter.
+  fields:
+  - name: subsecond_cnt
+    description: Current Subsecond Counter Value.
+    bit_offset: 0
+    bit_size: 16
+fieldset/RtcSubsystemAlphaFieldsetBravo:
+  description: Subsecond Control.
+  fields:
+  - name: sub_second_cnt_en
+    description: Subsecond Counter Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: RtcSubsystemAlphaEnumDelta
+fieldset/RtcSubsystemAlphaFieldsetCharlie:
+  description: Wake Timer Counter.
+  fields:
+  - name: wake_cnt
+    description: Wake Counter.
+    bit_offset: 0
+    bit_size: 32
+fieldset/RtcSubsystemAlphaFieldsetDelta:
+  description: Wake Timer Control.
+  fields:
+  - name: wake_flag
+    description: Wake Timer Status Flag.
+    bit_offset: 1
+    bit_size: 1
+    enum: RtcSubsystemAlphaEnumEcho
+  - name: clr_wake_timer
+    description: Clear Wake Timer.
+    bit_offset: 2
+    bit_size: 1
+    enum: RtcSubsystemAlphaEnumAlpha
+  - name: osc_div_ena
+    description: OSC Divide Enable.
+    bit_offset: 4
+    bit_size: 1
+    enum: RtcSubsystemAlphaEnumCharlie
+  - name: intr_en
+    description: Enable Interrupt.
+    bit_offset: 5
+    bit_size: 1
+    enum: RtcSubsystemAlphaEnumBravo
+enum/RtcSubsystemAlphaEnumAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: No effect.
+    value: 0
+  - name: Enable
+    description: Clear the wake timer counter.
+    value: 1
+enum/RtcSubsystemAlphaEnumBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/RtcSubsystemAlphaEnumCharlie:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/RtcSubsystemAlphaEnumDelta:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/RtcSubsystemAlphaEnumEcho:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Not timed out.
+    value: 0
+  - name: Enable
+    description: Timed out.
+    value: 1

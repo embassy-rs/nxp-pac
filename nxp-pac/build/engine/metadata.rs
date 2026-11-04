@@ -1,4 +1,4 @@
-use std::{fs, path::Path};
+use std::{collections::BTreeSet, fs, path::Path};
 
 use anyhow::{Context, ensure};
 use indexmap::IndexMap;
@@ -40,6 +40,8 @@ pub struct Peripheral {
     #[serde(rename = "address")]
     pub peripheral_address: Option<String>,
     pub signals: Vec<Signal>,
+    #[serde(default)]
+    pub direct_signals: Vec<DirectSignal>,
     pub flexcomm: Option<String>,
     #[serde(default)]
     pub dma_muxing: Vec<DmaMux>,
@@ -47,6 +49,8 @@ pub struct Peripheral {
     #[serde(default)]
     pub pac_only: bool,
     pub gate: Option<Gate>,
+    #[serde(default)]
+    pub named_gates: Vec<NamedGate>,
     /// HAL driver selection is independent of the canonical model/source path.
     #[serde(skip)]
     pub driver_name: Option<String>,
@@ -95,6 +99,27 @@ pub struct SignalPin {
 }
 
 #[derive(Clone, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct DirectSignal {
+    pub name: String,
+    pub pins: Vec<DirectSignalPin>,
+}
+
+#[derive(Clone, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct DirectSignalPin {
+    pub pin: String,
+    pub kind: DirectSignalKind,
+}
+
+#[derive(Clone, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum DirectSignalKind {
+    Analog,
+    DirectInput,
+}
+
+#[derive(Clone, Deserialize)]
 pub struct DmaMux {
     pub signal: String,
     pub mux: String,
@@ -107,6 +132,21 @@ pub struct Gate {
     pub reset: Option<String>,
     pub config: Option<String>,
     pub bit: Option<String>,
+    #[serde(default, deserialize_with = "deserialize_reset_bit")]
+    pub reset_bit: Option<String>,
+}
+
+fn deserialize_reset_bit<'de, D: serde::Deserializer<'de>>(
+    deserializer: D,
+) -> Result<Option<String>, D::Error> {
+    String::deserialize(deserializer).map(Some)
+}
+
+#[derive(Clone, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct NamedGate {
+    pub name: String,
+    pub gate: Gate,
 }
 
 pub fn load(inputs: &Path, chip: &Chip) -> anyhow::Result<(Metadata, Vec<std::path::PathBuf>)> {
@@ -175,7 +215,155 @@ pub fn load(inputs: &Path, chip: &Chip) -> anyhow::Result<(Metadata, Vec<std::pa
         }
     }
     metadata.peripherals = selected;
+    validate_direct_signals(&metadata)?;
+    validate_named_gates(&metadata)?;
+    reset_fields(&metadata)?;
     Ok((metadata, files))
+}
+
+fn validate_direct_signals(metadata: &Metadata) -> anyhow::Result<()> {
+    let pins: BTreeSet<_> = metadata.pins.iter().map(|pin| pin.name.as_str()).collect();
+    for peripheral in &metadata.peripherals {
+        for signal in &peripheral.direct_signals {
+            for pin in &signal.pins {
+                ensure!(
+                    pins.contains(pin.pin.as_str()),
+                    "{} {}: direct signal references undeclared pin {}",
+                    peripheral.name,
+                    signal.name,
+                    pin.pin
+                );
+            }
+        }
+    }
+    Ok(())
+}
+
+fn validate_named_gates(metadata: &Metadata) -> anyhow::Result<()> {
+    let mut names = BTreeSet::new();
+    for peripheral in &metadata.peripherals {
+        for named in &peripheral.named_gates {
+            ensure!(
+                !named.name.trim().is_empty(),
+                "{}: named gate name must not be empty",
+                peripheral.name
+            );
+            ensure!(
+                names.insert((peripheral.name.as_str(), named.name.as_str())),
+                "{}: duplicate named gate {}",
+                peripheral.name,
+                named.name
+            );
+        }
+    }
+    Ok(())
+}
+
+struct ResetField {
+    name: String,
+    explicit: bool,
+}
+
+fn reset_fields(metadata: &Metadata) -> anyhow::Result<IndexMap<(&str, String, &str), ResetField>> {
+    let mut fields: IndexMap<_, ResetField> = IndexMap::new();
+    for peripheral in &metadata.peripherals {
+        for gate in peripheral
+            .gate
+            .iter()
+            .chain(peripheral.named_gates.iter().map(|named| &named.gate))
+        {
+            if let Some(reset_bit) = &gate.reset_bit {
+                ensure!(
+                    !reset_bit.trim().is_empty(),
+                    "{}: reset_bit must not be empty",
+                    peripheral.name
+                );
+                ensure!(
+                    gate.reset.is_some(),
+                    "{}: reset_bit requires a reset register",
+                    peripheral.name
+                );
+            }
+            let Some(reset) = gate.reset.as_deref() else {
+                continue;
+            };
+            let bit = gate
+                .bit
+                .clone()
+                .unwrap_or_else(|| peripheral.name.to_lowercase());
+            let reset_bit = gate.reset_bit.as_deref().unwrap_or(&bit);
+            let key = (gate.enable.as_str(), bit.clone(), reset);
+            if let Some(previous) = fields.get_mut(&key) {
+                // An override would also affect shared-key views that omit it.
+                ensure!(
+                    previous.name == reset_bit,
+                    "{}: conflicting reset_bit for ({}, {}, {}): {} vs {}",
+                    peripheral.name,
+                    gate.enable,
+                    bit,
+                    reset,
+                    previous.name,
+                    reset_bit
+                );
+                previous.explicit |= gate.reset_bit.is_some();
+            } else {
+                fields.insert(
+                    key,
+                    ResetField {
+                        name: reset_bit.to_owned(),
+                        explicit: gate.reset_bit.is_some(),
+                    },
+                );
+            }
+        }
+    }
+    Ok(fields)
+}
+
+/// Render additive tables without changing the legacy metadata struct literals.
+pub fn render_extensions(metadata: &Metadata) -> anyhow::Result<TokenStream> {
+    validate_direct_signals(metadata)?;
+    validate_named_gates(metadata)?;
+    let direct_signals = metadata.peripherals.iter().flat_map(|peripheral| {
+        peripheral.direct_signals.iter().map(|signal| {
+            let peripheral = &peripheral.name;
+            let name = &signal.name;
+            let pins = signal.pins.iter().map(|pin| {
+                let name = &pin.pin;
+                let kind = match pin.kind {
+                    DirectSignalKind::Analog => quote!(DirectSignalKind::Analog),
+                    DirectSignalKind::DirectInput => quote!(DirectSignalKind::DirectInput),
+                };
+                quote!(DirectSignalPin { pin: #name, kind: #kind })
+            });
+            quote!(DirectSignal { peripheral: #peripheral, name: #name, pins: &[#(#pins),*] })
+        })
+    });
+    let fields = reset_fields(metadata)?;
+    let named_gates = metadata.peripherals.iter().flat_map(|peripheral| {
+        peripheral.named_gates.iter().map(|named| {
+            let owner = &peripheral.name;
+            let name = &named.name;
+            let gate = &named.gate;
+            let enable = &gate.enable;
+            let reset = some(gate.reset.as_deref());
+            let config = some(gate.config.as_deref());
+            let bit = gate.bit.clone().unwrap_or_else(|| owner.to_lowercase());
+            quote!(NamedGate { peripheral: #owner, name: #name, gate: Gate { enable: #enable, reset: #reset, config: #config, bit: #bit } })
+        })
+    });
+    let reset_gates = fields.iter().filter(|(_, field)| field.explicit).map(
+        |((enable, bit, reset), field)| {
+            let reset_bit = &field.name;
+            quote!(ResetGate { enable: #enable, bit: #bit, reset: #reset, reset_bit: #reset_bit })
+        },
+    );
+    Ok(quote! {
+        use crate::metadata::*;
+        pub const DIRECT_SIGNALS: &[DirectSignal] = &[#(#direct_signals),*];
+        pub const RESET_GATES: &[ResetGate] = &[#(#reset_gates),*];
+        pub const NAMED_GATES: &[NamedGate] = &[#(#named_gates),*];
+    })
 }
 
 fn some<T: quote::ToTokens>(value: Option<T>) -> TokenStream {

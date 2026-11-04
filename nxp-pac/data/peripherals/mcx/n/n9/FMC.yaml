@@ -1,0 +1,741 @@
+# NXP mcux-soc-svd 7c1f00bdd6263f0b93466f5e73e5fc55a744b879; native chiptool import.
+# Source instance geometry is retained in explicit block variants; see private source bindings.
+# Unannotated fieldsets construct zero in software, not a claimed hardware reset.
+# Command/W1C/SET/CLR/TOG construction defaults are zero masks; no RMW semantics are implied.
+# Source: MCXN946_cm33_core0.xml NPX0 sha256 b986328ff1224adaeea70522fa61383a5f89f6313dfc3e7df92e8894fdab72d7
+# Source: MCXN946_cm33_core1.xml NPX0 sha256 57e8910317a1cb467d56726cb822c57806aa247542969bcf12dbcc8822187916
+# Source: MCXN947_cm33_core0.xml NPX0 sha256 629ac7cdc82684e467b0cf36a8aef697bc1eb65c2047d6610b7b5df65692e590
+# Source: MCXN947_cm33_core1.xml NPX0 sha256 0d77f3d23cad1d5eab631fd7f5ade4044d8aaca2d9d13cd11f3836d27fe089fb
+block/FmcAlphaBlockAlpha:
+  description: 'Array of registers: BIVCTX_WD%s, VMAPCTX_WD%s.'
+  items:
+  - name: vmapctx_wd
+    description: Bitmap of Valid Control for Memory Context n.
+    array:
+      len: 2
+      stride: 4
+    byte_offset: 0
+    fieldset: FmcAlphaFieldsetFoxtrot
+  - name: bivctx_wd
+    description: Block Initial Vector for Memory Context n.
+    array:
+      len: 2
+      stride: 4
+    byte_offset: 8
+    access: Write
+    fieldset: FmcAlphaFieldsetAlpha
+block/FmcAlpha:
+  description: NPX.
+  items:
+  - name: npxcr
+    description: NPX Control Register.
+    byte_offset: 0
+    fieldset: FmcAlphaFieldsetCharlie
+  - name: npxsr
+    description: NPX Status Register.
+    byte_offset: 8
+    access: Read
+    fieldset: FmcAlphaFieldsetDelta
+  - name: cacmsk
+    description: Flash Cache Obfuscation Mask.
+    byte_offset: 16
+    access: Write
+    fieldset: FmcAlphaFieldsetBravo
+  - name: remap
+    description: Data Remap.
+    byte_offset: 32
+    fieldset: FmcAlphaFieldsetEcho
+  - name: ctx_valid_iv_array
+    description: 'Array of registers: BIVCTX_WD%s, VMAPCTX_WD%s.'
+    array:
+      len: 4
+      stride: 16
+    byte_offset: 64
+    block: FmcAlphaBlockAlpha
+fieldset/FmcAlphaFieldsetAlpha:
+  description: Block Initial Vector for Memory Context n.
+  fields:
+  - name: biv_wd0
+    description: Block Initial Vector Word0.
+    bit_offset: 0
+    bit_size: 32
+fieldset/FmcAlphaFieldsetBravo:
+  description: Flash Cache Obfuscation Mask.
+  fields:
+  - name: obmask
+    description: Obfuscation Mask.
+    bit_offset: 0
+    bit_size: 32
+fieldset/FmcAlphaFieldsetCharlie:
+  description: NPX Control Register.
+  fields:
+  - name: gee
+    description: Global Encryption Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: FmcAlphaEnumFoxtrot
+  - name: gde
+    description: Global Decryption Enable.
+    bit_offset: 2
+    bit_size: 1
+    enum: FmcAlphaEnumEcho
+  - name: glk
+    description: Global Lock Enable.
+    bit_offset: 4
+    bit_size: 1
+    enum: FmcAlphaEnumGolf
+  - name: mlk
+    description: Mask Lock Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: FmcAlphaEnumHotel
+  - name: ctx0lk
+    description: Lock Enable for Context 0.
+    bit_offset: 8
+    bit_size: 1
+    enum: FmcAlphaEnumAlpha
+  - name: ctx1lk
+    description: Lock Enable for Context 1.
+    bit_offset: 10
+    bit_size: 1
+    enum: FmcAlphaEnumBravo
+  - name: ctx2lk
+    description: Lock Enable for Context 2.
+    bit_offset: 12
+    bit_size: 1
+    enum: FmcAlphaEnumCharlie
+  - name: ctx3lk
+    description: Lock Enable for Context 3.
+    bit_offset: 14
+    bit_size: 1
+    enum: FmcAlphaEnumDelta
+fieldset/FmcAlphaFieldsetDelta:
+  description: NPX Status Register.
+  fields:
+  - name: numctx
+    description: Number of implemented memory contexts.
+    bit_offset: 0
+    bit_size: 4
+    enum: FmcAlphaEnumIndia
+  - name: v0
+    description: Key n Valid.
+    bit_offset: 8
+    bit_size: 1
+    enum: FmcAlphaEnumKilo
+  - name: v1
+    description: Key n Valid.
+    bit_offset: 9
+    bit_size: 1
+    enum: FmcAlphaEnumLima
+  - name: v2
+    description: Key n Valid.
+    bit_offset: 10
+    bit_size: 1
+    enum: FmcAlphaEnumMike
+  - name: v3
+    description: Key n Valid.
+    bit_offset: 11
+    bit_size: 1
+    enum: FmcAlphaEnumNovember
+fieldset/FmcAlphaFieldsetEcho:
+  description: Data Remap.
+  fields:
+  - name: remaplk
+    description: Remap Lock Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: FmcAlphaEnumJuliet
+  - name: lim
+    description: LIM Remapping Address.
+    bit_offset: 16
+    bit_size: 5
+  - name: limdp
+    description: LIMDP Remapping Address.
+    bit_offset: 24
+    bit_size: 5
+fieldset/FmcAlphaFieldsetFoxtrot:
+  description: Bitmap of Valid Control for Memory Context n.
+  fields:
+  - name: val0
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 0
+    bit_size: 1
+    enum: FmcAlphaEnumOscar
+  - name: val1
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 1
+    bit_size: 1
+    enum: FmcAlphaEnumPapa
+  - name: val2
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 2
+    bit_size: 1
+    enum: FmcAlphaEnumAlphaAlpha
+  - name: val3
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 3
+    bit_size: 1
+    enum: FmcAlphaEnumLimaAlpha
+  - name: val4
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 4
+    bit_size: 1
+    enum: FmcAlphaEnumOscarAlpha
+  - name: val5
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 5
+    bit_size: 1
+    enum: FmcAlphaEnumPapaAlpha
+  - name: val6
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 6
+    bit_size: 1
+    enum: FmcAlphaEnumQuebecAlpha
+  - name: val7
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 7
+    bit_size: 1
+    enum: FmcAlphaEnumRomeoAlpha
+  - name: val8
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 8
+    bit_size: 1
+    enum: FmcAlphaEnumSierraAlpha
+  - name: val9
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 9
+    bit_size: 1
+    enum: FmcAlphaEnumTangoAlpha
+  - name: val10
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 10
+    bit_size: 1
+    enum: FmcAlphaEnumQuebec
+  - name: val11
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 11
+    bit_size: 1
+    enum: FmcAlphaEnumRomeo
+  - name: val12
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 12
+    bit_size: 1
+    enum: FmcAlphaEnumSierra
+  - name: val13
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 13
+    bit_size: 1
+    enum: FmcAlphaEnumTango
+  - name: val14
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 14
+    bit_size: 1
+    enum: FmcAlphaEnumUniform
+  - name: val15
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 15
+    bit_size: 1
+    enum: FmcAlphaEnumVictor
+  - name: val16
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 16
+    bit_size: 1
+    enum: FmcAlphaEnumWhiskey
+  - name: val17
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 17
+    bit_size: 1
+    enum: FmcAlphaEnumXray
+  - name: val18
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 18
+    bit_size: 1
+    enum: FmcAlphaEnumYankee
+  - name: val19
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 19
+    bit_size: 1
+    enum: FmcAlphaEnumZulu
+  - name: val20
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 20
+    bit_size: 1
+    enum: FmcAlphaEnumBravoAlpha
+  - name: val21
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 21
+    bit_size: 1
+    enum: FmcAlphaEnumCharlieAlpha
+  - name: val22
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 22
+    bit_size: 1
+    enum: FmcAlphaEnumDeltaAlpha
+  - name: val23
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 23
+    bit_size: 1
+    enum: FmcAlphaEnumEchoAlpha
+  - name: val24
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 24
+    bit_size: 1
+    enum: FmcAlphaEnumFoxtrotAlpha
+  - name: val25
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 25
+    bit_size: 1
+    enum: FmcAlphaEnumGolfAlpha
+  - name: val26
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 26
+    bit_size: 1
+    enum: FmcAlphaEnumHotelAlpha
+  - name: val27
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 27
+    bit_size: 1
+    enum: FmcAlphaEnumIndiaAlpha
+  - name: val28
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 28
+    bit_size: 1
+    enum: FmcAlphaEnumJulietAlpha
+  - name: val29
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 29
+    bit_size: 1
+    enum: FmcAlphaEnumKiloAlpha
+  - name: val30
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 30
+    bit_size: 1
+    enum: FmcAlphaEnumMikeAlpha
+  - name: val31
+    description: Block valid enable for encryption/decryption.
+    bit_offset: 31
+    bit_size: 1
+    enum: FmcAlphaEnumNovemberAlpha
+enum/FmcAlphaEnumAlpha:
+  bit_size: 1
+  variants:
+  - name: LockDisabled
+    description: 'Lock disabled: VMAPCTX0 remains read-write.'
+    value: 0
+  - name: LockEnabled
+    description: 'Lock enabled: cannot write to VMAPCTX0 (becomes read-only).'
+    value: 1
+enum/FmcAlphaEnumBravo:
+  bit_size: 1
+  variants:
+  - name: LockDisabled
+    description: 'Lock disabled: VMAPCTX1 remains read-write.'
+    value: 0
+  - name: LockEnabled
+    description: 'Lock enabled: cannot write to VMAPCTX1 (becomes read-only).'
+    value: 1
+enum/FmcAlphaEnumCharlie:
+  bit_size: 1
+  variants:
+  - name: LockDisabled
+    description: 'Lock disabled: VMAPCTX2 remains read-write.'
+    value: 0
+  - name: LockEnabled
+    description: 'Lock enabled: cannot write to VMAPCTX2 (becomes read-only).'
+    value: 1
+enum/FmcAlphaEnumDelta:
+  bit_size: 1
+  variants:
+  - name: LockDisabled
+    description: 'Lock disabled: VMAPCTX3 remains read-write.'
+    value: 0
+  - name: LockEnabled
+    description: 'Lock enabled: cannot write to VMAPCTX3 (becomes read-only).'
+    value: 1
+enum/FmcAlphaEnumEcho:
+  bit_size: 1
+  variants:
+  - name: DecryptionDisabled
+    description: Global decryption disabled. NPX on-the-fly decryption is globally disabled. Subsequent reads return 0.
+    value: 0
+  - name: DecryptionEnabled
+    description: Global decryption enabled. NPX on-the-fly decryption is globally enabled. Subsequent reads return 1.
+    value: 1
+enum/FmcAlphaEnumFoxtrot:
+  bit_size: 1
+  variants:
+  - name: EncryptionDisabled
+    description: Global encryption disabled. NPX on-the-fly encryption is disabled. Subsequent reads return 0.
+    value: 0
+  - name: EncryptionEnabled
+    description: Global encryption enabled. NPX on-the-fly encryption is enabled if the flash access hits in a valid memory context. Subsequent reads return 1.
+    value: 1
+enum/FmcAlphaEnumGolf:
+  bit_size: 1
+  variants:
+  - name: LockDisabled
+    description: Lock disabled. Subsequent reads return 0.
+    value: 0
+  - name: LockEnabled
+    description: 'Lock enabled: cannot write to VMAPCTXn, NPXCR, or CACMSK. Subsequent reads return 1.'
+    value: 1
+enum/FmcAlphaEnumHotel:
+  bit_size: 1
+  variants:
+  - name: LockDisabled
+    description: Lock disabled. Subsequent reads return 0.
+    value: 0
+  - name: LockEnabled
+    description: 'Lock enabled: cannot write to mask. Subsequent reads return 1.'
+    value: 1
+enum/FmcAlphaEnumIndia:
+  bit_size: 4
+  variants:
+  - name: FourCtx
+    description: 4 implemented memory contexts.
+    value: 4
+  - name: OneCtx
+    description: 1 implemented memory contexts.
+    value: 1
+  - name: ThreeCtx
+    description: 3 implemented memory contexts.
+    value: 3
+  - name: TwoCtx
+    description: 2 implemented memory contexts.
+    value: 2
+  - name: ZeroCtx
+    description: No (zero) implemented memory contexts.
+    value: 0
+enum/FmcAlphaEnumJuliet:
+  bit_size: 1
+  variants:
+  - name: LockDisabled
+    description: 'Lock disabled: can write to REMAP.'
+    value: 0
+  - name: LockEnabled
+    description: 'Lock enabled: cannot write to REMAP.'
+    value: 1
+enum/FmcAlphaEnumKilo:
+  bit_size: 1
+  variants:
+  - name: KeyNotvalid
+    description: Not valid.
+    value: 0
+  - name: KeyValid
+    description: Valid.
+    value: 1
+enum/FmcAlphaEnumLima:
+  bit_size: 1
+  variants:
+  - name: KeyNotvalid
+    description: Not valid.
+    value: 0
+  - name: KeyValid
+    description: Valid.
+    value: 1
+enum/FmcAlphaEnumMike:
+  bit_size: 1
+  variants:
+  - name: KeyNotvalid
+    description: Not valid.
+    value: 0
+  - name: KeyValid
+    description: Valid.
+    value: 1
+enum/FmcAlphaEnumNovember:
+  bit_size: 1
+  variants:
+  - name: KeyNotvalid
+    description: Not valid.
+    value: 0
+  - name: KeyValid
+    description: Valid.
+    value: 1
+enum/FmcAlphaEnumOscar:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumPapa:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumQuebec:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumRomeo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumSierra:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumTango:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumUniform:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumVictor:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumWhiskey:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumXray:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumYankee:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumZulu:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumAlphaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumBravoAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumCharlieAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumDeltaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumEchoAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumFoxtrotAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumGolfAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumHotelAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumIndiaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumJulietAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumKiloAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumLimaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumMikeAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumNovemberAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumOscarAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumPapaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumQuebecAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumRomeoAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumSierraAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FmcAlphaEnumTangoAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1

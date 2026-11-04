@@ -1,0 +1,115 @@
+# MCXN23XRM Rev. 4, sections 21.1/21.6; MCXNP184M150F70RM Rev. 7, sections 29.1/29.6.
+# Explicit descriptor offsets take precedence over the generic 16-byte structure prose.
+block/Eim:
+  description: Error injection module. Supervisor word accesses only. Configure descriptors before enabling the channel and global injection; updates during an operation are non-deterministic. Inverting more than two bits in one operation may cause undefined behavior. Register slots do not imply usable memory or ECC routing; N23 channels 5 and 6 are reserved targets, and RAMF is unavailable on 352-KB parts. Follow the selected part's memory and ECC restrictions. Secure and privileged configuration is recommended by NXP, not enforced by this register view.
+  items:
+  - name: eimcr
+    description: Global error injection configuration.
+    byte_offset: 0
+    fieldset: Eimcr
+  - name: eichen
+    description: Channel enables. Both the channel enable and GEIEN must be set. Descriptor writes clear the corresponding channel enable; injection otherwise persists until disabled.
+    byte_offset: 4
+    fieldset: Eichen
+  - name: eichd_word0
+    description: Channel 0-6 checkbit masks. A successful write clears the corresponding channel enable. N23 channels 5 and 6 have reserved targets; RAMF channel 6 has no target on 352-KB parts.
+    byte_offset: 256
+    array:
+      len: 7
+      stride: 64
+    fieldset: CheckbitMask
+  - name: eichd_word1
+    description: Channel 0-8 data masks. Set bits invert the corresponding read data bits. A successful write clears the corresponding channel enable. N23 channels 5 and 6 have reserved targets; RAMF channel 6 has no target on 352-KB parts.
+    byte_offset: 260
+    array:
+      len: 9
+      stride: 64
+    fieldset: DataMask
+  - name: eichd7_word0
+    description: LPCAC parity mask. A successful write clears channel 7 enable.
+    byte_offset: 704
+    fieldset: ParityMask
+  - name: eichd8_word0
+    description: PKC RAM checkbit mask. A successful write clears channel 8 enable.
+    byte_offset: 768
+    fieldset: PkcMask
+fieldset/Eimcr:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: geien
+    description: Global error injection enable. Zero disables; one enables, subject to the channel enable.
+    bit_offset: 0
+    bit_size: 1
+fieldset/Eichen:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: eich0en
+    description: Channel 0 enable, subject to supported memory and ECC routing.
+    bit_offset: 31
+    bit_size: 1
+  - name: eich1en
+    description: Channel 1 enable.
+    bit_offset: 30
+    bit_size: 1
+  - name: eich2en
+    description: Channel 2 enable, subject to supported memory and ECC routing.
+    bit_offset: 29
+    bit_size: 1
+  - name: eich3en
+    description: Channel 3 enable, subject to supported memory and ECC routing.
+    bit_offset: 28
+    bit_size: 1
+  - name: eich4en
+    description: Channel 4 enable, subject to supported memory and ECC routing.
+    bit_offset: 27
+    bit_size: 1
+  - name: eich5en
+    description: Documented channel 5 enable slot. The target is reserved on N23; other parts remain subject to supported memory and ECC routing.
+    bit_offset: 26
+    bit_size: 1
+  - name: eich6en
+    description: Documented channel 6 enable slot. The target is reserved on N23; RAMF is unavailable on 352-KB parts.
+    bit_offset: 25
+    bit_size: 1
+  - name: eich7en
+    description: LPCAC RAM channel 7 enable.
+    bit_offset: 24
+    bit_size: 1
+  - name: eich8en
+    description: PKC RAM channel 8 enable.
+    bit_offset: 23
+    bit_size: 1
+fieldset/CheckbitMask:
+  description: Left-justified RAM checkbit mask. Set bits invert the corresponding check bits on reads; writes to unimplemented bits are ignored.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: chkbit_mask
+    bit_offset: 25
+    bit_size: 7
+fieldset/ParityMask:
+  description: Left-justified LPCAC RAM parity mask. One inverts the parity bit on reads.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: chkbit_mask
+    bit_offset: 31
+    bit_size: 1
+fieldset/PkcMask:
+  description: Left-justified PKC RAM checkbit mask. Set bits invert the corresponding byte parity bits on reads.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: chkbit_mask
+    bit_offset: 28
+    bit_size: 4
+fieldset/DataMask:
+  description: Read data inversion mask for bytes 0-3. Zero leaves a bit unchanged; one inverts it. Writes to unimplemented bits are ignored.
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: b0_3data_mask
+    bit_offset: 0
+    bit_size: 32

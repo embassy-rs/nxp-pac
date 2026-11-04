@@ -1,0 +1,167 @@
+# NXP mcux-soc-svd 7c1f00bdd6263f0b93466f5e73e5fc55a744b879; native chiptool import.
+# Source instance geometry is retained in explicit block variants; see private source bindings.
+# Unannotated fieldsets construct zero in software, not a claimed hardware reset.
+# Command/W1C/SET/CLR/TOG construction defaults are zero masks; no RMW semantics are implied.
+# Source: MCXN526_cm33_core0.xml GDET0 sha256 ccb0c8ecf3573e24bb8c15a32bdec8a6f63b8870ced5bb7b9b629177f5f990f3
+# Source: MCXN526_cm33_core0.xml GDET1 sha256 ccb0c8ecf3573e24bb8c15a32bdec8a6f63b8870ced5bb7b9b629177f5f990f3
+# Source: MCXN526_cm33_core1.xml GDET0 sha256 caf054982956506a2f2e6896e0b1e0eb1c3035684fd3093778a21bda218bfa09
+# Source: MCXN526_cm33_core1.xml GDET1 sha256 caf054982956506a2f2e6896e0b1e0eb1c3035684fd3093778a21bda218bfa09
+# Source: MCXN527_cm33_core0.xml GDET0 sha256 5547fbb406e6e825ebc2f983518a5893814d62c3a6e2c5ad6075c49d939c8e17
+# Source: MCXN527_cm33_core0.xml GDET1 sha256 5547fbb406e6e825ebc2f983518a5893814d62c3a6e2c5ad6075c49d939c8e17
+# Source: MCXN527_cm33_core1.xml GDET0 sha256 daac6c4d6fdbbdc87d7557ed9e567801921eca1e8107fc3f9f38173be3c936e0
+# Source: MCXN527_cm33_core1.xml GDET1 sha256 daac6c4d6fdbbdc87d7557ed9e567801921eca1e8107fc3f9f38173be3c936e0
+# Source: MCXN536_cm33_core0.xml GDET0 sha256 f9533e58d74eab222fc38608bd1d8dc45087e87b80a93f8b693e6cf2eb25cba4
+# Source: MCXN536_cm33_core0.xml GDET1 sha256 f9533e58d74eab222fc38608bd1d8dc45087e87b80a93f8b693e6cf2eb25cba4
+# Source: MCXN536_cm33_core1.xml GDET0 sha256 c089aecac3d73a7d8fc4a8c0cccf77ea8446b22a2ea99f4f2f01a4e0ca3a2fdd
+# Source: MCXN536_cm33_core1.xml GDET1 sha256 c089aecac3d73a7d8fc4a8c0cccf77ea8446b22a2ea99f4f2f01a4e0ca3a2fdd
+# Source: MCXN537_cm33_core0.xml GDET0 sha256 e72dbd80d33e6f53f05f11156fc20f6d53cf9848bc74fed80b5c34157455b11a
+# Source: MCXN537_cm33_core0.xml GDET1 sha256 e72dbd80d33e6f53f05f11156fc20f6d53cf9848bc74fed80b5c34157455b11a
+# Source: MCXN537_cm33_core1.xml GDET0 sha256 4d5f7d121166c4d720a9da81b90be1b2f93be5e71fd25b9dd74b8715ebe30dce
+# Source: MCXN537_cm33_core1.xml GDET1 sha256 4d5f7d121166c4d720a9da81b90be1b2f93be5e71fd25b9dd74b8715ebe30dce
+# Source: MCXN546_cm33_core0.xml GDET0 sha256 54e1fc060f9ccc17299bdb2da84159e699e87456276f2e695d440a6eb4aa9aad
+# Source: MCXN546_cm33_core0.xml GDET1 sha256 54e1fc060f9ccc17299bdb2da84159e699e87456276f2e695d440a6eb4aa9aad
+# Source: MCXN546_cm33_core1.xml GDET0 sha256 ddb7e932730a51c75f544efd6564ad6dbce5b3eca0a7befb7ab5b74a9951b937
+# Source: MCXN546_cm33_core1.xml GDET1 sha256 ddb7e932730a51c75f544efd6564ad6dbce5b3eca0a7befb7ab5b74a9951b937
+# Source: MCXN547_cm33_core0.xml GDET0 sha256 a276aee072bebd57c18929fe9a74408366fdbb42b918e06be5a3783a4aae4db7
+# Source: MCXN547_cm33_core0.xml GDET1 sha256 a276aee072bebd57c18929fe9a74408366fdbb42b918e06be5a3783a4aae4db7
+# Source: MCXN547_cm33_core1.xml GDET0 sha256 4a265743bdd2130cdd37ef12b9fd1d538cce9a2eac1c9149db291b7638e61423
+# Source: MCXN547_cm33_core1.xml GDET1 sha256 4a265743bdd2130cdd37ef12b9fd1d538cce9a2eac1c9149db291b7638e61423
+# Explicit reserved/RFU/SBZ fields omitted; exact source-field ledger retained in reserved-fields-removed.json.
+# Explicit reserved/RFU/SBZ fields omitted; exact source-field ledger retained in reserved-fields-removed.json.
+block/GdetAlpha:
+  description: 'Boot-ROM-configured glitch detector. The security manual forbids accessing SFR fields outside its documented startup or voltage-mode-switch procedures; normal configuration must not be changed. Generic SVD field availability is not permission to access these controls. Explicit RFU/SBZ/reserved fields are omitted. No hardware operations or procedure examples are provided. Source: MCX N23x Security Reference Manual section 19.3.1.3, extracted lines 54167-54170; corresponding larger-N security-manual GDET restrictions apply.'
+  items:
+  - name: gdet_conf_0
+    description: GDET configuration 0 register.
+    byte_offset: 0
+    fieldset: GdetAlphaFieldsetAlpha
+  - name: gdet_conf_1
+    description: GDET configuration 1 register.
+    byte_offset: 4
+    fieldset: GdetAlphaFieldsetBravo
+  - name: gdet_enable1
+    description: GDET enable register.
+    byte_offset: 8
+    fieldset: GdetAlphaFieldsetHotel
+  - name: gdet_conf_2
+    description: GDET configuration 2 register.
+    byte_offset: 12
+    fieldset: GdetAlphaFieldsetCharlie
+  - name: gdet_conf_3
+    description: GDET configuration 3 register.
+    byte_offset: 16
+    fieldset: GdetAlphaFieldsetDelta
+  - name: gdet_conf_4
+    description: GDET configuration 4 register.
+    byte_offset: 20
+    fieldset: GdetAlphaFieldsetEcho
+  - name: gdet_conf_5
+    description: GDET configuration 5 register.
+    byte_offset: 24
+    fieldset: GdetAlphaFieldsetFoxtrot
+  - name: gdet_reset
+    description: GDET reset register.
+    byte_offset: 4032
+    fieldset: GdetAlphaFieldsetIndia
+  - name: gdet_test
+    description: GDET test Register.
+    byte_offset: 4036
+    fieldset: GdetAlphaFieldsetJuliet
+  - name: gdet_dly_ctrl
+    description: GDET delay control register.
+    byte_offset: 4044
+    fieldset: GdetAlphaFieldsetGolf
+fieldset/GdetAlphaFieldsetAlpha:
+  description: GDET configuration 0 register.
+  fields:
+  - name: field_3_0
+    description: GDET configuration 0 Field 3_0.
+    bit_offset: 0
+    bit_size: 4
+fieldset/GdetAlphaFieldsetBravo:
+  description: GDET configuration 1 register.
+  fields:
+  - name: field_1_0
+    description: GDET configuration 1 Field 1_0.
+    bit_offset: 0
+    bit_size: 2
+  - name: field_3_2
+    description: GDET configuration 1 Field 3_2.
+    bit_offset: 2
+    bit_size: 2
+  - name: field_7
+    description: GDET configuration 1 Field 7.
+    bit_offset: 7
+    bit_size: 1
+  - name: field_8
+    description: GDET configuration 1 Field 8.
+    bit_offset: 8
+    bit_size: 1
+fieldset/GdetAlphaFieldsetCharlie:
+  description: GDET configuration 2 register.
+  fields:
+  - name: field_6_0
+    description: GDET configuration 2 Field 6_0.
+    bit_offset: 0
+    bit_size: 7
+  - name: field_21_16
+    description: GDET configuration 2 Field 21_16.
+    bit_offset: 16
+    bit_size: 6
+  - name: field_29_24
+    description: GDET configuration 2 Field 29_24.
+    bit_offset: 24
+    bit_size: 6
+fieldset/GdetAlphaFieldsetDelta:
+  description: GDET configuration 3 register.
+  fields:
+  - name: field_6_0
+    description: GDET configuration 3 Field 6_0.
+    bit_offset: 0
+    bit_size: 7
+fieldset/GdetAlphaFieldsetEcho:
+  description: GDET configuration 4 register.
+  fields:
+  - name: field_6_0
+    description: GDET configuration 4 Field 6_0.
+    bit_offset: 0
+    bit_size: 7
+fieldset/GdetAlphaFieldsetFoxtrot:
+  description: GDET configuration 5 register.
+  fields:
+  - name: field_5_0
+    description: GDET configuration 5 Field 5_0.
+    bit_offset: 0
+    bit_size: 6
+  - name: field_11_6
+    description: GDET configuration 5 Field 11_6.
+    bit_offset: 6
+    bit_size: 6
+fieldset/GdetAlphaFieldsetGolf:
+  description: GDET delay control register.
+  fields:
+  - name: vol_sel
+    description: GDET delay control of the voltage mode. Used to select the trim code appropiate to the voltage mode.
+    bit_offset: 0
+    bit_size: 2
+  - name: sw_vol_ctrl
+    description: Select the control of the trim code to the delay line via HW port (0) or SW SFR (1).
+    bit_offset: 2
+    bit_size: 1
+fieldset/GdetAlphaFieldsetHotel:
+  description: GDET enable register.
+  fields:
+  - name: en1
+    description: If set, the detector will be clock gated.
+    bit_offset: 0
+    bit_size: 1
+fieldset/GdetAlphaFieldsetIndia:
+  description: GDET reset register.
+  fields:
+  - name: sft_rst
+    description: Soft reset for the core reset (SFR configuration will be preseved).This register reads as 0.
+    bit_offset: 3
+    bit_size: 1
+fieldset/GdetAlphaFieldsetJuliet:
+  description: GDET test Register.
+  fields: []

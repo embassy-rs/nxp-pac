@@ -1,0 +1,193 @@
+# MCXN23XRM Rev. 4, 37.6.1; MCXNP184M150F70RM Rev. 7, 51.6.1.
+# Both N manuals reserve MOD[6], overriding the N235/N236 XML DEBUG_EN.
+# debug_en is absent from the existing A1 curated model.
+block/Wwdt:
+  description: Windowed Watchdog Timer.
+  items:
+  - name: mod_
+    only_in: '^MCXA.*$'
+    description: Mode.
+    byte_offset: 0
+    fieldset: Mod
+  - name: mod_
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: 'Mode. Changes take effect after a watchdog feed. Once set, WDEN, WDPROTECT, WDRESET and LOCK clear only on reset. Enable the watchdog oscillator for each power mode before setting LOCK. After writing 1 to LOCK and performing a watchdog feed, the watchdog oscillator cannot be disabled or powered down. WDTOF clears by writing 0; WDINT is W1C and cannot clear while WARNINT equals TV.'
+    byte_offset: 0
+    fieldset: Mod
+  - name: tc
+    only_in: '^MCXA.*$'
+    description: Timer Constant.
+    byte_offset: 4
+    fieldset: Tc
+  - name: tc
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: Timer Constant.
+    byte_offset: 4
+    fieldset: TcN
+  - name: feed
+    only_in: '^MCXA.*$'
+    description: Feed Sequence.
+    byte_offset: 8
+    access: Write
+    fieldset: Feed
+  - name: feed
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: 'Feed Sequence. Write 0xAA then 0x55 without any intervening watchdog register access. An incorrect access during a feed causes a reset or interrupt when enabled. Feed only when TV is no greater than WINDOW; protect the sequence from interrupt-driven accesses.'
+    byte_offset: 8
+    access: Write
+    fieldset: Feed
+  - name: tv
+    only_in: '^MCXA.*$'
+    description: Timer Value.
+    byte_offset: 12
+    access: Read
+    fieldset: Tv
+  - name: tv
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: Timer Value.
+    byte_offset: 12
+    access: Read
+    fieldset: TvN
+  - name: warnint
+    description: Warning Interrupt Compare Value.
+    byte_offset: 20
+    fieldset: Warnint
+  - name: window
+    only_in: '^MCXA.*$'
+    description: Window Compare Value.
+    byte_offset: 24
+    fieldset: Window
+  - name: window
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: Window Compare Value.
+    byte_offset: 24
+    fieldset: WindowN
+fieldset/Feed:
+  description: Feed Sequence.
+  # N reset diagrams mark every bit unknown; implicit zero is only a payload default.
+  fields:
+  - name: feed
+    description: Feed Value.
+    bit_offset: 0
+    bit_size: 8
+fieldset/Mod:
+  description: Mode.
+  fields:
+  - name: wden
+    description: Watchdog Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: Wden
+  - name: wdreset
+    description: Watchdog Reset Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: Wdreset
+  - name: wdtof
+    description: Watchdog Timeout Flag.
+    bit_offset: 2
+    bit_size: 1
+  - name: wdint
+    description: Warning Interrupt Flag.
+    bit_offset: 3
+    bit_size: 1
+  - name: wdprotect
+    description: Watchdog Update Mode.
+    bit_offset: 4
+    bit_size: 1
+    enum: Wdprotect
+  - name: lock
+    description: Lock.
+    bit_offset: 5
+    bit_size: 1
+  - name: debug_en
+    only_in: '^MCXA(175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)$'
+    description: Debug Enable.
+    bit_offset: 6
+    bit_size: 1
+# Disjoint fieldsets preserve A's implicit defaults and public type names.
+fieldset/Tc:
+  only_in: '^MCXA.*$'
+  description: Timer Constant.
+  fields:
+  - name: count
+    description: Watchdog Timeout Value.
+    bit_offset: 0
+    bit_size: 24
+fieldset/TcN:
+  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  description: 'Timer Constant. Values below 0xFF load 0xFF. A feed transfers the value to the counter. With WDPROTECT set, updating before TV is below both WARNINT and WINDOW causes a reset.'
+  reset_value: 0xff
+  fields:
+  - name: count
+    description: Watchdog Timeout Value.
+    bit_offset: 0
+    bit_size: 24
+fieldset/Tv:
+  only_in: '^MCXA.*$'
+  description: Timer Value.
+  fields:
+  - name: count
+    description: Counter Timer Value.
+    bit_offset: 0
+    bit_size: 24
+fieldset/TvN:
+  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  description: 'Timer Value. The synchronized value is older than the actual counter; reading takes up to six WDCLK cycles plus six APB cycles.'
+  reset_value: 0xff
+  fields:
+  - name: count
+    description: Counter Timer Value.
+    bit_offset: 0
+    bit_size: 24
+fieldset/Warnint:
+  description: Warning Interrupt Compare Value.
+  fields:
+  - name: warnint
+    description: Watchdog Warning Interrupt Compare Value.
+    bit_offset: 0
+    bit_size: 10
+fieldset/Window:
+  only_in: '^MCXA.*$'
+  description: Window Compare Value.
+  fields:
+  - name: window
+    description: Watchdog Window Value.
+    bit_offset: 0
+    bit_size: 24
+fieldset/WindowN:
+  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  description: 'Window Compare Value. A feed when TV exceeds WINDOW causes a watchdog event. The reset value disables windowing.'
+  reset_value: 0xffffff
+  fields:
+  - name: window
+    description: Watchdog Window Value.
+    bit_offset: 0
+    bit_size: 24
+enum/Wden:
+  bit_size: 1
+  variants:
+  - name: Stop
+    description: Timer stopped.
+    value: 0
+  - name: Run
+    description: Timer running.
+    value: 1
+enum/Wdprotect:
+  bit_size: 1
+  variants:
+  - name: Flexible
+    description: Flexible.
+    value: 0
+  - name: Threshold
+    description: Threshold.
+    value: 1
+enum/Wdreset:
+  bit_size: 1
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: Reset
+    description: Reset.
+    value: 1

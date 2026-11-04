@@ -1,0 +1,1714 @@
+# NXP mcux-soc-svd 7c1f00bdd6263f0b93466f5e73e5fc55a744b879; native chiptool import.
+# Source instance geometry is retained in explicit block variants; see private source bindings.
+# Unannotated fieldsets construct zero in software, not a claimed hardware reset.
+# Command/W1C/SET/CLR/TOG construction defaults are zero masks; no RMW semantics are implied.
+# Source: MCXN235.xml QDC0 sha256 a498ada26162c88f6767738bffcd22801318264c9cb2cbecbd190403b4dbd6a7
+# Source: MCXN235.xml QDC1 sha256 a498ada26162c88f6767738bffcd22801318264c9cb2cbecbd190403b4dbd6a7
+# Source: MCXN236.xml QDC0 sha256 ec813b3b24a785c33c5035ebc25a9c713a18018daf1fdb440035a13bf3549e14
+# Source: MCXN236.xml QDC1 sha256 ec813b3b24a785c33c5035ebc25a9c713a18018daf1fdb440035a13bf3549e14
+# Source: MCXN247.xml QDC0 sha256 dbbed5781a39012768344882dad168430c742f26e4261c6fd0bda9a34ca4a652
+# Source: MCXN247.xml QDC1 sha256 dbbed5781a39012768344882dad168430c742f26e4261c6fd0bda9a34ca4a652
+block/QdcAlpha:
+  description: QDC.
+  items:
+  - name: ctrl
+    description: Control.
+    byte_offset: 0
+    bit_size: 16
+    fieldset: QdcAlphaFieldsetAlpha
+  - name: filt
+    description: Input Filter.
+    byte_offset: 2
+    bit_size: 16
+    fieldset: QdcAlphaFieldsetDelta
+  - name: wtr
+    description: Watchdog Timeout.
+    byte_offset: 4
+    bit_size: 16
+    fieldset: QdcAlphaFieldsetZulu
+  - name: posd
+    description: Position Difference Counter.
+    byte_offset: 6
+    bit_size: 16
+    fieldset: QdcAlphaFieldsetMike
+  - name: posdh
+    description: Position Difference Hold.
+    byte_offset: 8
+    access: Read
+    bit_size: 16
+    fieldset: QdcAlphaFieldsetNovember
+  - name: rev
+    description: Revolution Counter.
+    byte_offset: 10
+    bit_size: 16
+    fieldset: QdcAlphaFieldsetRomeo
+  - name: revh
+    description: Revolution Hold.
+    byte_offset: 12
+    access: Read
+    bit_size: 16
+    fieldset: QdcAlphaFieldsetSierra
+  - name: upos
+    description: Upper Position Counter.
+    byte_offset: 14
+    bit_size: 16
+    fieldset: QdcAlphaFieldsetXray
+  - name: lpos
+    description: Lower Position Counter.
+    byte_offset: 16
+    bit_size: 16
+    fieldset: QdcAlphaFieldsetKilo
+  - name: uposh
+    description: Upper Position Hold.
+    byte_offset: 18
+    access: Read
+    bit_size: 16
+    fieldset: QdcAlphaFieldsetYankee
+  - name: lposh
+    description: Lower Position Hold.
+    byte_offset: 20
+    access: Read
+    bit_size: 16
+    fieldset: QdcAlphaFieldsetLima
+  - name: uinit
+    description: Upper Initialization.
+    byte_offset: 22
+    bit_size: 16
+    fieldset: QdcAlphaFieldsetVictor
+  - name: linit
+    description: Lower Initialization.
+    byte_offset: 24
+    bit_size: 16
+    fieldset: QdcAlphaFieldsetIndia
+  - name: imr
+    description: Input Monitor.
+    byte_offset: 26
+    access: Read
+    bit_size: 16
+    fieldset: QdcAlphaFieldsetEcho
+  - name: tst
+    description: Test.
+    byte_offset: 28
+    bit_size: 16
+    fieldset: QdcAlphaFieldsetTango
+  - name: ctrl2
+    description: Control 2.
+    byte_offset: 30
+    bit_size: 16
+    fieldset: QdcAlphaFieldsetBravo
+  - name: umod
+    description: Upper Modulus.
+    byte_offset: 32
+    bit_size: 16
+    fieldset: QdcAlphaFieldsetWhiskey
+  - name: lmod
+    description: Lower Modulus.
+    byte_offset: 34
+    bit_size: 16
+    fieldset: QdcAlphaFieldsetJuliet
+  - name: ucomp
+    description: Upper Position Compare.
+    byte_offset: 36
+    bit_size: 16
+    fieldset: QdcAlphaFieldsetUniform
+  - name: lcomp
+    description: Lower Position Compare.
+    byte_offset: 38
+    bit_size: 16
+    fieldset: QdcAlphaFieldsetHotel
+  - name: lastedge
+    description: Last Edge Time.
+    byte_offset: 40
+    access: Read
+    bit_size: 16
+    fieldset: QdcAlphaFieldsetFoxtrot
+  - name: lastedgeh
+    description: Last Edge Time Hold.
+    byte_offset: 42
+    access: Read
+    bit_size: 16
+    fieldset: QdcAlphaFieldsetGolf
+  - name: posdper
+    description: Position Difference Period Counter.
+    byte_offset: 44
+    access: Read
+    bit_size: 16
+    fieldset: QdcAlphaFieldsetOscar
+  - name: posdperbfr
+    description: Position Difference Period Buffer.
+    byte_offset: 46
+    access: Read
+    bit_size: 16
+    fieldset: QdcAlphaFieldsetPapa
+  - name: posdperh
+    description: Position Difference Period Hold.
+    byte_offset: 48
+    access: Read
+    bit_size: 16
+    fieldset: QdcAlphaFieldsetQuebec
+  - name: ctrl3
+    description: Control 3.
+    byte_offset: 50
+    bit_size: 16
+    fieldset: QdcAlphaFieldsetCharlie
+fieldset/QdcAlphaFieldsetAlpha:
+  description: Control.
+  bit_size: 16
+  fields:
+  - name: cmpie
+    description: Compare Interrupt Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: QdcAlphaEnumAlpha
+  - name: cmpirq
+    description: Compare Interrupt Request.
+    bit_offset: 1
+    bit_size: 1
+    enum: QdcAlphaEnumBravo
+  - name: wde
+    description: Watchdog Enable.
+    bit_offset: 2
+    bit_size: 1
+    enum: QdcAlphaEnumDeltaAlpha
+  - name: die
+    description: Watchdog Timeout Interrupt Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: QdcAlphaEnumCharlie
+  - name: dirq
+    description: Watchdog Timeout Interrupt Request.
+    bit_offset: 4
+    bit_size: 1
+    enum: QdcAlphaEnumEcho
+  - name: xne
+    description: Select Positive and Negative Edge of INDEX Pulse.
+    bit_offset: 5
+    bit_size: 1
+    enum: QdcAlphaEnumHotelAlpha
+  - name: xip
+    description: INDEX Triggered Initialization of Position Counters UPOS and LPOS.
+    bit_offset: 6
+    bit_size: 1
+    enum: QdcAlphaEnumFoxtrotAlpha
+  - name: xie
+    description: INDEX Pulse Interrupt Enable.
+    bit_offset: 7
+    bit_size: 1
+    enum: QdcAlphaEnumEchoAlpha
+  - name: xirq
+    description: INDEX Pulse Interrupt Request.
+    bit_offset: 8
+    bit_size: 1
+    enum: QdcAlphaEnumGolfAlpha
+  - name: ph1
+    description: Enable Signal Phase Count Mode.
+    bit_offset: 9
+    bit_size: 1
+    enum: QdcAlphaEnumNovember
+  - name: rev
+    description: Enable Reverse Direction Counting.
+    bit_offset: 10
+    bit_size: 1
+    enum: QdcAlphaEnumQuebec
+  - name: swip
+    description: Software-Triggered Initialization of Position Counters UPOS and LPOS.
+    bit_offset: 11
+    bit_size: 1
+    enum: QdcAlphaEnumYankee
+  - name: hne
+    description: Use Negative Edge of HOME Input.
+    bit_offset: 12
+    bit_size: 1
+    enum: QdcAlphaEnumJuliet
+  - name: hip
+    description: Enable HOME to Initialize Position Counters UPOS and LPOS.
+    bit_offset: 13
+    bit_size: 1
+    enum: QdcAlphaEnumHotel
+  - name: hie
+    description: HOME Interrupt Enable.
+    bit_offset: 14
+    bit_size: 1
+    enum: QdcAlphaEnumGolf
+  - name: hirq
+    description: HOME Signal Transition Interrupt Request.
+    bit_offset: 15
+    bit_size: 1
+    enum: QdcAlphaEnumIndia
+fieldset/QdcAlphaFieldsetBravo:
+  description: Control 2.
+  bit_size: 16
+  fields:
+  - name: updhld
+    description: Update Hold Registers.
+    bit_offset: 0
+    bit_size: 1
+    enum: QdcAlphaEnumBravoAlpha
+  - name: updpos
+    description: Update Position Registers.
+    bit_offset: 1
+    bit_size: 1
+    enum: QdcAlphaEnumCharlieAlpha
+  - name: mod_
+    description: Enable Modulo Counting.
+    bit_offset: 2
+    bit_size: 1
+    enum: QdcAlphaEnumLima
+  - name: dir
+    description: Count Direction Flag.
+    bit_offset: 3
+    bit_size: 1
+    enum: QdcAlphaEnumDelta
+  - name: ruie
+    description: Roll-under Interrupt Enable.
+    bit_offset: 4
+    bit_size: 1
+    enum: QdcAlphaEnumUniform
+  - name: ruirq
+    description: Roll-under Interrupt Request.
+    bit_offset: 5
+    bit_size: 1
+    enum: QdcAlphaEnumVictor
+  - name: roie
+    description: Roll-over Interrupt Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: QdcAlphaEnumSierra
+  - name: roirq
+    description: Roll-over Interrupt Request.
+    bit_offset: 7
+    bit_size: 1
+    enum: QdcAlphaEnumTango
+  - name: revmod
+    description: Revolution Counter Modulus Enable.
+    bit_offset: 8
+    bit_size: 1
+    enum: QdcAlphaEnumRomeo
+  - name: outctl
+    description: Output Control.
+    bit_offset: 9
+    bit_size: 1
+    enum: QdcAlphaEnumMike
+  - name: sabie
+    description: Simultaneous PHASEA and PHASEB Change Interrupt Enable.
+    bit_offset: 10
+    bit_size: 1
+    enum: QdcAlphaEnumWhiskey
+  - name: sabirq
+    description: Simultaneous PHASEA and PHASEB Change Interrupt Request.
+    bit_offset: 11
+    bit_size: 1
+    enum: QdcAlphaEnumXray
+  - name: initpos
+    description: Initialize Position Registers.
+    bit_offset: 12
+    bit_size: 1
+    enum: QdcAlphaEnumKilo
+  - name: emip
+    description: Enables/disables the position counter to be initialized by Index Event Edge Mark.
+    bit_offset: 13
+    bit_size: 1
+    enum: QdcAlphaEnumFoxtrot
+fieldset/QdcAlphaFieldsetCharlie:
+  description: Control 3.
+  bit_size: 16
+  fields:
+  - name: pmen
+    description: Period Measurement Function Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: QdcAlphaEnumOscar
+  - name: prsc
+    description: Prescaler.
+    bit_offset: 4
+    bit_size: 4
+fieldset/QdcAlphaFieldsetDelta:
+  description: Input Filter.
+  bit_size: 16
+  fields:
+  - name: filt_per
+    description: Input Filter Sample Period.
+    bit_offset: 0
+    bit_size: 8
+  - name: filt_cnt
+    description: Input Filter Sample Count.
+    bit_offset: 8
+    bit_size: 3
+  - name: filt_prsc
+    description: Prescaler Divide IPBus Clock to FILT Clock.
+    bit_offset: 13
+    bit_size: 3
+fieldset/QdcAlphaFieldsetEcho:
+  description: Input Monitor.
+  bit_size: 16
+  fields:
+  - name: home
+    description: HOME.
+    bit_offset: 0
+    bit_size: 1
+  - name: index
+    description: INDEX.
+    bit_offset: 1
+    bit_size: 1
+  - name: phb
+    description: PHB.
+    bit_offset: 2
+    bit_size: 1
+  - name: pha
+    description: PHA.
+    bit_offset: 3
+    bit_size: 1
+  - name: fhom
+    description: FHOM.
+    bit_offset: 4
+    bit_size: 1
+  - name: find
+    description: FIND.
+    bit_offset: 5
+    bit_size: 1
+  - name: fphb
+    description: FPHB.
+    bit_offset: 6
+    bit_size: 1
+  - name: fpha
+    description: FPHA.
+    bit_offset: 7
+    bit_size: 1
+fieldset/QdcAlphaFieldsetFoxtrot:
+  description: Last Edge Time.
+  bit_size: 16
+  fields:
+  - name: lastedge
+    description: Last Edge Time Counter.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcAlphaFieldsetGolf:
+  description: Last Edge Time Hold.
+  bit_size: 16
+  fields:
+  - name: lastedgeh
+    description: Last Edge Time Hold.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcAlphaFieldsetHotel:
+  description: Lower Position Compare.
+  bit_size: 16
+  fields:
+  - name: comp
+    description: COMP.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcAlphaFieldsetIndia:
+  description: Lower Initialization.
+  bit_size: 16
+  fields:
+  - name: init
+    description: INIT.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcAlphaFieldsetJuliet:
+  description: Lower Modulus.
+  bit_size: 16
+  fields:
+  - name: mod_
+    description: MOD.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcAlphaFieldsetKilo:
+  description: Lower Position Counter.
+  bit_size: 16
+  fields:
+  - name: pos
+    description: POS.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcAlphaFieldsetLima:
+  description: Lower Position Hold.
+  bit_size: 16
+  fields:
+  - name: posh
+    description: POSH.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcAlphaFieldsetMike:
+  description: Position Difference Counter.
+  bit_size: 16
+  fields:
+  - name: posd
+    description: POSD.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcAlphaFieldsetNovember:
+  description: Position Difference Hold.
+  bit_size: 16
+  fields:
+  - name: posdh
+    description: POSDH.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcAlphaFieldsetOscar:
+  description: Position Difference Period Counter.
+  bit_size: 16
+  fields:
+  - name: posdper
+    description: Position difference period.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcAlphaFieldsetPapa:
+  description: Position Difference Period Buffer.
+  bit_size: 16
+  fields:
+  - name: posdperbfr
+    description: Position difference period buffer.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcAlphaFieldsetQuebec:
+  description: Position Difference Period Hold.
+  bit_size: 16
+  fields:
+  - name: posdperh
+    description: Position difference period hold.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcAlphaFieldsetRomeo:
+  description: Revolution Counter.
+  bit_size: 16
+  fields:
+  - name: rev
+    description: REV.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcAlphaFieldsetSierra:
+  description: Revolution Hold.
+  bit_size: 16
+  fields:
+  - name: revh
+    description: REVH.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcAlphaFieldsetTango:
+  description: Test.
+  bit_size: 16
+  fields:
+  - name: test_count
+    description: TEST_COUNT.
+    bit_offset: 0
+    bit_size: 8
+  - name: test_period
+    description: TEST_PERIOD.
+    bit_offset: 8
+    bit_size: 5
+  - name: qdn
+    description: Quadrature Decoder Negative Signal.
+    bit_offset: 13
+    bit_size: 1
+    enum: QdcAlphaEnumPapa
+  - name: tce
+    description: Test Counter Enable.
+    bit_offset: 14
+    bit_size: 1
+    enum: QdcAlphaEnumZulu
+  - name: ten
+    description: Test Mode Enable.
+    bit_offset: 15
+    bit_size: 1
+    enum: QdcAlphaEnumAlphaAlpha
+fieldset/QdcAlphaFieldsetUniform:
+  description: Upper Position Compare.
+  bit_size: 16
+  fields:
+  - name: comp
+    description: COMP.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcAlphaFieldsetVictor:
+  description: Upper Initialization.
+  bit_size: 16
+  fields:
+  - name: init
+    description: INIT.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcAlphaFieldsetWhiskey:
+  description: Upper Modulus.
+  bit_size: 16
+  fields:
+  - name: mod_
+    description: MOD.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcAlphaFieldsetXray:
+  description: Upper Position Counter.
+  bit_size: 16
+  fields:
+  - name: pos
+    description: POS.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcAlphaFieldsetYankee:
+  description: Upper Position Hold.
+  bit_size: 16
+  fields:
+  - name: posh
+    description: POSH.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcAlphaFieldsetZulu:
+  description: Watchdog Timeout.
+  bit_size: 16
+  fields:
+  - name: wdog
+    description: WDOG.
+    bit_offset: 0
+    bit_size: 16
+enum/QdcAlphaEnumAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disable.
+    value: 0
+  - name: Enabled
+    description: Enable.
+    value: 1
+enum/QdcAlphaEnumBravo:
+  bit_size: 1
+  variants:
+  - name: Mat
+    description: COMP match has occurred.
+    value: 1
+  - name: Nomat
+    description: No match has occurred.
+    value: 0
+enum/QdcAlphaEnumCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disable.
+    value: 0
+  - name: Enabled
+    description: Enable.
+    value: 1
+enum/QdcAlphaEnumDelta:
+  bit_size: 1
+  variants:
+  - name: Down
+    description: Down direction.
+    value: 0
+  - name: Up
+    description: Up direction.
+    value: 1
+enum/QdcAlphaEnumEcho:
+  bit_size: 1
+  variants:
+  - name: Int
+    description: Occurred.
+    value: 1
+  - name: Noint
+    description: Not occurred.
+    value: 0
+enum/QdcAlphaEnumFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Emip0
+    description: Disable.
+    value: 0
+  - name: Emip1
+    description: Enable.
+    value: 1
+enum/QdcAlphaEnumGolf:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disable.
+    value: 0
+  - name: Enabled
+    description: Enable.
+    value: 1
+enum/QdcAlphaEnumHotel:
+  bit_size: 1
+  variants:
+  - name: Home
+    description: HOME signal initializes the position counter.
+    value: 1
+  - name: Noaction
+    description: No action.
+    value: 0
+enum/QdcAlphaEnumIndia:
+  bit_size: 1
+  variants:
+  - name: Notrans
+    description: Not occurred.
+    value: 0
+  - name: Transi
+    description: Occurred.
+    value: 1
+enum/QdcAlphaEnumJuliet:
+  bit_size: 1
+  variants:
+  - name: Neg
+    description: Use negative-going edge-to-trigger initialization of position counters UPOS and LPOS.
+    value: 1
+  - name: Pos
+    description: Use positive-going edge-to-trigger initialization of position counters UPOS and LPOS.
+    value: 0
+enum/QdcAlphaEnumKilo:
+  bit_size: 1
+  variants:
+  - name: Init
+    description: Initialize position counter.
+    value: 1
+  - name: Noinit
+    description: Don't initialize position counter.
+    value: 0
+enum/QdcAlphaEnumLima:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disable.
+    value: 0
+  - name: Enabled
+    description: Enable.
+    value: 1
+enum/QdcAlphaEnumMike:
+  bit_size: 1
+  variants:
+  - name: Compare
+    description: POSMATCH pulses when a match occurs between the position counters (POS) and the corresponding compare value (COMP ).
+    value: 0
+  - name: Read
+    description: POSMATCH pulses when the UPOS, LPOS, REV, or POSD registers are read.
+    value: 1
+enum/QdcAlphaEnumNovember:
+  bit_size: 1
+  variants:
+  - name: Bypass
+    description: Bypasses the quadrature decoder. A positive transition of the PHASEA input generates a count signal. PHASEB input and CTRL[REV] controls the counter direction. If the value of CTRL[REV] and PHASEB are identical; then count is up. If the value of CTRL[REV] and PHASEB is different, then count is down.
+    value: 1
+  - name: Use
+    description: Uses the standard quadrature decoder, where PHASEA and PHASEB represent a two-phase quadrature signal.
+    value: 0
+enum/QdcAlphaEnumOscar:
+  bit_size: 1
+  variants:
+  - name: Notused
+    description: Not used.
+    value: 0
+  - name: Used
+    description: Used.
+    value: 1
+enum/QdcAlphaEnumPapa:
+  bit_size: 1
+  variants:
+  - name: Negative
+    description: Negative quadrature decoder signal.
+    value: 1
+  - name: Positive
+    description: Positive quadrature decoder signal.
+    value: 0
+enum/QdcAlphaEnumQuebec:
+  bit_size: 1
+  variants:
+  - name: Normal
+    description: Counts normally.
+    value: 0
+  - name: Reverse
+    description: Counts in the reverse direction.
+    value: 1
+enum/QdcAlphaEnumRomeo:
+  bit_size: 1
+  variants:
+  - name: Count
+    description: Use modulus counting roll-over or roll-under.
+    value: 1
+  - name: Index
+    description: Use INDEX pulse.
+    value: 0
+enum/QdcAlphaEnumSierra:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disable.
+    value: 0
+  - name: Enabled
+    description: Enable.
+    value: 1
+enum/QdcAlphaEnumTango:
+  bit_size: 1
+  variants:
+  - name: Noroll
+    description: Did not occur.
+    value: 0
+  - name: Roll
+    description: Occurred.
+    value: 1
+enum/QdcAlphaEnumUniform:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disable.
+    value: 0
+  - name: Enabled
+    description: Enable.
+    value: 1
+enum/QdcAlphaEnumVictor:
+  bit_size: 1
+  variants:
+  - name: Noroll
+    description: No roll-under has occurred.
+    value: 0
+  - name: Roll
+    description: Roll-under has occurred.
+    value: 1
+enum/QdcAlphaEnumWhiskey:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disable.
+    value: 0
+  - name: Enabled
+    description: Enable.
+    value: 1
+enum/QdcAlphaEnumXray:
+  bit_size: 1
+  variants:
+  - name: Nosimul
+    description: No simultaneous change has occurred.
+    value: 0
+  - name: Simul
+    description: A simultaneous change has occurred.
+    value: 1
+enum/QdcAlphaEnumYankee:
+  bit_size: 1
+  variants:
+  - name: Init
+    description: Initialize position counter.
+    value: 1
+  - name: Noaction
+    description: No action.
+    value: 0
+enum/QdcAlphaEnumZulu:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disable.
+    value: 0
+  - name: Enabled
+    description: Enable.
+    value: 1
+enum/QdcAlphaEnumAlphaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disable.
+    value: 0
+  - name: Enabled
+    description: Enable.
+    value: 1
+enum/QdcAlphaEnumBravoAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disable.
+    value: 0
+  - name: Enabled
+    description: Enable.
+    value: 1
+enum/QdcAlphaEnumCharlieAlpha:
+  bit_size: 1
+  variants:
+  - name: Clear
+    description: Clear.
+    value: 1
+  - name: Noaction
+    description: No action.
+    value: 0
+enum/QdcAlphaEnumDeltaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disable.
+    value: 0
+  - name: Enabled
+    description: Enable.
+    value: 1
+enum/QdcAlphaEnumEchoAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disable.
+    value: 0
+  - name: Enabled
+    description: Enable.
+    value: 1
+enum/QdcAlphaEnumFoxtrotAlpha:
+  bit_size: 1
+  variants:
+  - name: Int
+    description: Initializes.
+    value: 1
+  - name: Noint
+    description: Does not initialize.
+    value: 0
+enum/QdcAlphaEnumGolfAlpha:
+  bit_size: 1
+  variants:
+  - name: Index
+    description: Occurred.
+    value: 1
+  - name: Noind
+    description: Not occurred.
+    value: 0
+enum/QdcAlphaEnumHotelAlpha:
+  bit_size: 1
+  variants:
+  - name: Xne0
+    description: Use positive edge.
+    value: 0
+  - name: Xne1
+    description: Use negative edge.
+    value: 1
+block/QdcBravo:
+  description: ENC.
+  items:
+  - name: ctrl
+    description: Control.
+    byte_offset: 0
+    bit_size: 16
+    fieldset: QdcBravoFieldsetAlpha
+  - name: filt
+    description: Input Filter.
+    byte_offset: 2
+    bit_size: 16
+    fieldset: QdcBravoFieldsetDelta
+  - name: wtr
+    description: Watchdog Timeout.
+    byte_offset: 4
+    bit_size: 16
+    fieldset: QdcBravoFieldsetZulu
+  - name: posd
+    description: Position Difference Counter.
+    byte_offset: 6
+    bit_size: 16
+    fieldset: QdcBravoFieldsetMike
+  - name: posdh
+    description: Position Difference Hold.
+    byte_offset: 8
+    access: Read
+    bit_size: 16
+    fieldset: QdcBravoFieldsetNovember
+  - name: rev
+    description: Revolution Counter.
+    byte_offset: 10
+    bit_size: 16
+    fieldset: QdcBravoFieldsetRomeo
+  - name: revh
+    description: Revolution Hold.
+    byte_offset: 12
+    access: Read
+    bit_size: 16
+    fieldset: QdcBravoFieldsetSierra
+  - name: upos
+    description: Upper Position Counter.
+    byte_offset: 14
+    bit_size: 16
+    fieldset: QdcBravoFieldsetXray
+  - name: lpos
+    description: Lower Position Counter.
+    byte_offset: 16
+    bit_size: 16
+    fieldset: QdcBravoFieldsetKilo
+  - name: uposh
+    description: Upper Position Hold.
+    byte_offset: 18
+    access: Read
+    bit_size: 16
+    fieldset: QdcBravoFieldsetYankee
+  - name: lposh
+    description: Lower Position Hold.
+    byte_offset: 20
+    access: Read
+    bit_size: 16
+    fieldset: QdcBravoFieldsetLima
+  - name: uinit
+    description: Upper Initialization.
+    byte_offset: 22
+    bit_size: 16
+    fieldset: QdcBravoFieldsetVictor
+  - name: linit
+    description: Lower Initialization.
+    byte_offset: 24
+    bit_size: 16
+    fieldset: QdcBravoFieldsetIndia
+  - name: imr
+    description: Input Monitor.
+    byte_offset: 26
+    access: Read
+    bit_size: 16
+    fieldset: QdcBravoFieldsetEcho
+  - name: tst
+    description: Test.
+    byte_offset: 28
+    bit_size: 16
+    fieldset: QdcBravoFieldsetTango
+  - name: ctrl2
+    description: Control 2.
+    byte_offset: 30
+    bit_size: 16
+    fieldset: QdcBravoFieldsetBravo
+  - name: umod
+    description: Upper Modulus.
+    byte_offset: 32
+    bit_size: 16
+    fieldset: QdcBravoFieldsetWhiskey
+  - name: lmod
+    description: Lower Modulus.
+    byte_offset: 34
+    bit_size: 16
+    fieldset: QdcBravoFieldsetJuliet
+  - name: ucomp
+    description: Upper Position Compare.
+    byte_offset: 36
+    bit_size: 16
+    fieldset: QdcBravoFieldsetUniform
+  - name: lcomp
+    description: Lower Position Compare.
+    byte_offset: 38
+    bit_size: 16
+    fieldset: QdcBravoFieldsetHotel
+  - name: lastedge
+    description: Last Edge Time.
+    byte_offset: 40
+    access: Read
+    bit_size: 16
+    fieldset: QdcBravoFieldsetFoxtrot
+  - name: lastedgeh
+    description: Last Edge Time Hold.
+    byte_offset: 42
+    access: Read
+    bit_size: 16
+    fieldset: QdcBravoFieldsetGolf
+  - name: posdper
+    description: Position Difference Period Counter.
+    byte_offset: 44
+    access: Read
+    bit_size: 16
+    fieldset: QdcBravoFieldsetOscar
+  - name: posdperbfr
+    description: Position Difference Period Buffer.
+    byte_offset: 46
+    access: Read
+    bit_size: 16
+    fieldset: QdcBravoFieldsetPapa
+  - name: posdperh
+    description: Position Difference Period Hold.
+    byte_offset: 48
+    access: Read
+    bit_size: 16
+    fieldset: QdcBravoFieldsetQuebec
+  - name: ctrl3
+    description: Control 3.
+    byte_offset: 50
+    bit_size: 16
+    fieldset: QdcBravoFieldsetCharlie
+fieldset/QdcBravoFieldsetAlpha:
+  description: Control.
+  bit_size: 16
+  fields:
+  - name: cmpie
+    description: Compare Interrupt Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: QdcBravoEnumAlpha
+  - name: cmpirq
+    description: Compare Interrupt Request.
+    bit_offset: 1
+    bit_size: 1
+    enum: QdcBravoEnumBravo
+  - name: wde
+    description: Watchdog Enable.
+    bit_offset: 2
+    bit_size: 1
+    enum: QdcBravoEnumCharlieAlpha
+  - name: die
+    description: Watchdog Timeout Interrupt Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: QdcBravoEnumCharlie
+  - name: dirq
+    description: Watchdog Timeout Interrupt Request.
+    bit_offset: 4
+    bit_size: 1
+    enum: QdcBravoEnumEcho
+  - name: xne
+    description: Select Positive and Negative Edge of INDEX Pulse.
+    bit_offset: 5
+    bit_size: 1
+    enum: QdcBravoEnumGolfAlpha
+  - name: xip
+    description: INDEX Triggered Initialization of Position Counters UPOS and LPOS.
+    bit_offset: 6
+    bit_size: 1
+    enum: QdcBravoEnumEchoAlpha
+  - name: xie
+    description: INDEX Pulse Interrupt Enable.
+    bit_offset: 7
+    bit_size: 1
+    enum: QdcBravoEnumDeltaAlpha
+  - name: xirq
+    description: INDEX Pulse Interrupt Request.
+    bit_offset: 8
+    bit_size: 1
+    enum: QdcBravoEnumFoxtrotAlpha
+  - name: ph1
+    description: Enable Signal Phase Count Mode.
+    bit_offset: 9
+    bit_size: 1
+    enum: QdcBravoEnumMike
+  - name: rev
+    description: Enable Reverse Direction Counting.
+    bit_offset: 10
+    bit_size: 1
+    enum: QdcBravoEnumPapa
+  - name: swip
+    description: Software-Triggered Initialization of Position Counters UPOS and LPOS.
+    bit_offset: 11
+    bit_size: 1
+    enum: QdcBravoEnumXray
+  - name: hne
+    description: Use Negative Edge of HOME Input.
+    bit_offset: 12
+    bit_size: 1
+    enum: QdcBravoEnumIndia
+  - name: hip
+    description: Enable HOME to Initialize Position Counters UPOS and LPOS.
+    bit_offset: 13
+    bit_size: 1
+    enum: QdcBravoEnumGolf
+  - name: hie
+    description: HOME Interrupt Enable.
+    bit_offset: 14
+    bit_size: 1
+    enum: QdcBravoEnumFoxtrot
+  - name: hirq
+    description: HOME Signal Transition Interrupt Request.
+    bit_offset: 15
+    bit_size: 1
+    enum: QdcBravoEnumHotel
+fieldset/QdcBravoFieldsetBravo:
+  description: Control 2.
+  bit_size: 16
+  fields:
+  - name: updhld
+    description: Update Hold Registers.
+    bit_offset: 0
+    bit_size: 1
+    enum: QdcBravoEnumAlphaAlpha
+  - name: updpos
+    description: Update Position Registers.
+    bit_offset: 1
+    bit_size: 1
+    enum: QdcBravoEnumBravoAlpha
+  - name: mod_
+    description: Enable Modulo Counting.
+    bit_offset: 2
+    bit_size: 1
+    enum: QdcBravoEnumKilo
+  - name: dir
+    description: Count Direction Flag.
+    bit_offset: 3
+    bit_size: 1
+    enum: QdcBravoEnumDelta
+  - name: ruie
+    description: Roll-under Interrupt Enable.
+    bit_offset: 4
+    bit_size: 1
+    enum: QdcBravoEnumTango
+  - name: ruirq
+    description: Roll-under Interrupt Request.
+    bit_offset: 5
+    bit_size: 1
+    enum: QdcBravoEnumUniform
+  - name: roie
+    description: Roll-over Interrupt Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: QdcBravoEnumRomeo
+  - name: roirq
+    description: Roll-over Interrupt Request.
+    bit_offset: 7
+    bit_size: 1
+    enum: QdcBravoEnumSierra
+  - name: revmod
+    description: Revolution Counter Modulus Enable.
+    bit_offset: 8
+    bit_size: 1
+    enum: QdcBravoEnumQuebec
+  - name: outctl
+    description: Output Control.
+    bit_offset: 9
+    bit_size: 1
+    enum: QdcBravoEnumLima
+  - name: sabie
+    description: Simultaneous PHASEA and PHASEB Change Interrupt Enable.
+    bit_offset: 10
+    bit_size: 1
+    enum: QdcBravoEnumVictor
+  - name: sabirq
+    description: Simultaneous PHASEA and PHASEB Change Interrupt Request.
+    bit_offset: 11
+    bit_size: 1
+    enum: QdcBravoEnumWhiskey
+  - name: initpos
+    description: Initialize Position Registers.
+    bit_offset: 12
+    bit_size: 1
+    enum: QdcBravoEnumJuliet
+fieldset/QdcBravoFieldsetCharlie:
+  description: Control 3.
+  bit_size: 16
+  fields:
+  - name: pmen
+    description: Period Measurement Function Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: QdcBravoEnumNovember
+  - name: prsc
+    description: Prescaler.
+    bit_offset: 4
+    bit_size: 4
+fieldset/QdcBravoFieldsetDelta:
+  description: Input Filter.
+  bit_size: 16
+  fields:
+  - name: filt_per
+    description: Input Filter Sample Period.
+    bit_offset: 0
+    bit_size: 8
+  - name: filt_cnt
+    description: Input Filter Sample Count.
+    bit_offset: 8
+    bit_size: 3
+  - name: filt_prsc
+    description: Prescaler Divide IPBus Clock to FILT Clock.
+    bit_offset: 13
+    bit_size: 3
+fieldset/QdcBravoFieldsetEcho:
+  description: Input Monitor.
+  bit_size: 16
+  fields:
+  - name: home
+    description: HOME.
+    bit_offset: 0
+    bit_size: 1
+  - name: index
+    description: INDEX.
+    bit_offset: 1
+    bit_size: 1
+  - name: phb
+    description: PHB.
+    bit_offset: 2
+    bit_size: 1
+  - name: pha
+    description: PHA.
+    bit_offset: 3
+    bit_size: 1
+  - name: fhom
+    description: FHOM.
+    bit_offset: 4
+    bit_size: 1
+  - name: find
+    description: FIND.
+    bit_offset: 5
+    bit_size: 1
+  - name: fphb
+    description: FPHB.
+    bit_offset: 6
+    bit_size: 1
+  - name: fpha
+    description: FPHA.
+    bit_offset: 7
+    bit_size: 1
+fieldset/QdcBravoFieldsetFoxtrot:
+  description: Last Edge Time.
+  bit_size: 16
+  fields:
+  - name: lastedge
+    description: Last Edge Time Counter.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcBravoFieldsetGolf:
+  description: Last Edge Time Hold.
+  bit_size: 16
+  fields:
+  - name: lastedgeh
+    description: Last Edge Time Hold.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcBravoFieldsetHotel:
+  description: Lower Position Compare.
+  bit_size: 16
+  fields:
+  - name: comp
+    description: COMP.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcBravoFieldsetIndia:
+  description: Lower Initialization.
+  bit_size: 16
+  fields:
+  - name: init
+    description: INIT.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcBravoFieldsetJuliet:
+  description: Lower Modulus.
+  bit_size: 16
+  fields:
+  - name: mod_
+    description: MOD.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcBravoFieldsetKilo:
+  description: Lower Position Counter.
+  bit_size: 16
+  fields:
+  - name: pos
+    description: POS.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcBravoFieldsetLima:
+  description: Lower Position Hold.
+  bit_size: 16
+  fields:
+  - name: posh
+    description: POSH.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcBravoFieldsetMike:
+  description: Position Difference Counter.
+  bit_size: 16
+  fields:
+  - name: posd
+    description: POSD.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcBravoFieldsetNovember:
+  description: Position Difference Hold.
+  bit_size: 16
+  fields:
+  - name: posdh
+    description: POSDH.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcBravoFieldsetOscar:
+  description: Position Difference Period Counter.
+  bit_size: 16
+  fields:
+  - name: posdper
+    description: Position difference period.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcBravoFieldsetPapa:
+  description: Position Difference Period Buffer.
+  bit_size: 16
+  fields:
+  - name: posdperbfr
+    description: Position difference period buffer.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcBravoFieldsetQuebec:
+  description: Position Difference Period Hold.
+  bit_size: 16
+  fields:
+  - name: posdperh
+    description: Position difference period hold.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcBravoFieldsetRomeo:
+  description: Revolution Counter.
+  bit_size: 16
+  fields:
+  - name: rev
+    description: REV.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcBravoFieldsetSierra:
+  description: Revolution Hold.
+  bit_size: 16
+  fields:
+  - name: revh
+    description: REVH.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcBravoFieldsetTango:
+  description: Test.
+  bit_size: 16
+  fields:
+  - name: test_count
+    description: TEST_COUNT.
+    bit_offset: 0
+    bit_size: 8
+  - name: test_period
+    description: TEST_PERIOD.
+    bit_offset: 8
+    bit_size: 5
+  - name: qdn
+    description: Quadrature Decoder Negative Signal.
+    bit_offset: 13
+    bit_size: 1
+    enum: QdcBravoEnumOscar
+  - name: tce
+    description: Test Counter Enable.
+    bit_offset: 14
+    bit_size: 1
+    enum: QdcBravoEnumYankee
+  - name: ten
+    description: Test Mode Enable.
+    bit_offset: 15
+    bit_size: 1
+    enum: QdcBravoEnumZulu
+fieldset/QdcBravoFieldsetUniform:
+  description: Upper Position Compare.
+  bit_size: 16
+  fields:
+  - name: comp
+    description: COMP.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcBravoFieldsetVictor:
+  description: Upper Initialization.
+  bit_size: 16
+  fields:
+  - name: init
+    description: INIT.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcBravoFieldsetWhiskey:
+  description: Upper Modulus.
+  bit_size: 16
+  fields:
+  - name: mod_
+    description: MOD.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcBravoFieldsetXray:
+  description: Upper Position Counter.
+  bit_size: 16
+  fields:
+  - name: pos
+    description: POS.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcBravoFieldsetYankee:
+  description: Upper Position Hold.
+  bit_size: 16
+  fields:
+  - name: posh
+    description: POSH.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QdcBravoFieldsetZulu:
+  description: Watchdog Timeout.
+  bit_size: 16
+  fields:
+  - name: wdog
+    description: WDOG.
+    bit_offset: 0
+    bit_size: 16
+enum/QdcBravoEnumAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disable.
+    value: 0
+  - name: Enabled
+    description: Enable.
+    value: 1
+enum/QdcBravoEnumBravo:
+  bit_size: 1
+  variants:
+  - name: Mat
+    description: COMP match has occurred.
+    value: 1
+  - name: Nomat
+    description: No match has occurred.
+    value: 0
+enum/QdcBravoEnumCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disable.
+    value: 0
+  - name: Enabled
+    description: Enable.
+    value: 1
+enum/QdcBravoEnumDelta:
+  bit_size: 1
+  variants:
+  - name: Down
+    description: Down direction.
+    value: 0
+  - name: Up
+    description: Up direction.
+    value: 1
+enum/QdcBravoEnumEcho:
+  bit_size: 1
+  variants:
+  - name: Int
+    description: Occurred.
+    value: 1
+  - name: Noint
+    description: Not occurred.
+    value: 0
+enum/QdcBravoEnumFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disable.
+    value: 0
+  - name: Enabled
+    description: Enable.
+    value: 1
+enum/QdcBravoEnumGolf:
+  bit_size: 1
+  variants:
+  - name: Home
+    description: HOME signal initializes the position counter.
+    value: 1
+  - name: Noaction
+    description: No action.
+    value: 0
+enum/QdcBravoEnumHotel:
+  bit_size: 1
+  variants:
+  - name: Notrans
+    description: Not occurred.
+    value: 0
+  - name: Transi
+    description: Occurred.
+    value: 1
+enum/QdcBravoEnumIndia:
+  bit_size: 1
+  variants:
+  - name: Neg
+    description: Use negative-going edge-to-trigger initialization of position counters UPOS and LPOS.
+    value: 1
+  - name: Pos
+    description: Use positive-going edge-to-trigger initialization of position counters UPOS and LPOS.
+    value: 0
+enum/QdcBravoEnumJuliet:
+  bit_size: 1
+  variants:
+  - name: Init
+    description: Initialize position counter.
+    value: 1
+  - name: Noinit
+    description: Don't initialize position counter.
+    value: 0
+enum/QdcBravoEnumKilo:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disable.
+    value: 0
+  - name: Enabled
+    description: Enable.
+    value: 1
+enum/QdcBravoEnumLima:
+  bit_size: 1
+  variants:
+  - name: Compare
+    description: POSMATCH pulses when a match occurs between the position counters (POS) and the corresponding compare value (COMP ).
+    value: 0
+  - name: Read
+    description: POSMATCH pulses when the UPOS, LPOS, REV, or POSD registers are read.
+    value: 1
+enum/QdcBravoEnumMike:
+  bit_size: 1
+  variants:
+  - name: Bypass
+    description: Bypasses the quadrature decoder. A positive transition of the PHASEA input generates a count signal. PHASEB input and CTRL[REV] controls the counter direction. If the value of CTRL[REV] and PHASEB are identical; then count is up. If the value of CTRL[REV] and PHASEB is different, then count is down.
+    value: 1
+  - name: Use
+    description: Uses the standard quadrature decoder, where PHASEA and PHASEB represent a two-phase quadrature signal.
+    value: 0
+enum/QdcBravoEnumNovember:
+  bit_size: 1
+  variants:
+  - name: Notused
+    description: Not used.
+    value: 0
+  - name: Used
+    description: Used.
+    value: 1
+enum/QdcBravoEnumOscar:
+  bit_size: 1
+  variants:
+  - name: Negative
+    description: Negative quadrature decoder signal.
+    value: 1
+  - name: Positive
+    description: Positive quadrature decoder signal.
+    value: 0
+enum/QdcBravoEnumPapa:
+  bit_size: 1
+  variants:
+  - name: Normal
+    description: Counts normally.
+    value: 0
+  - name: Reverse
+    description: Counts in the reverse direction.
+    value: 1
+enum/QdcBravoEnumQuebec:
+  bit_size: 1
+  variants:
+  - name: Count
+    description: Use modulus counting roll-over or roll-under.
+    value: 1
+  - name: Index
+    description: Use INDEX pulse.
+    value: 0
+enum/QdcBravoEnumRomeo:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disable.
+    value: 0
+  - name: Enabled
+    description: Enable.
+    value: 1
+enum/QdcBravoEnumSierra:
+  bit_size: 1
+  variants:
+  - name: Noroll
+    description: Did not occur.
+    value: 0
+  - name: Roll
+    description: Occurred.
+    value: 1
+enum/QdcBravoEnumTango:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disable.
+    value: 0
+  - name: Enabled
+    description: Enable.
+    value: 1
+enum/QdcBravoEnumUniform:
+  bit_size: 1
+  variants:
+  - name: Noroll
+    description: No roll-under has occurred.
+    value: 0
+  - name: Roll
+    description: Roll-under has occurred.
+    value: 1
+enum/QdcBravoEnumVictor:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disable.
+    value: 0
+  - name: Enabled
+    description: Enable.
+    value: 1
+enum/QdcBravoEnumWhiskey:
+  bit_size: 1
+  variants:
+  - name: Nosimul
+    description: No simultaneous change has occurred.
+    value: 0
+  - name: Simul
+    description: A simultaneous change has occurred.
+    value: 1
+enum/QdcBravoEnumXray:
+  bit_size: 1
+  variants:
+  - name: Init
+    description: Initialize position counter.
+    value: 1
+  - name: Noaction
+    description: No action.
+    value: 0
+enum/QdcBravoEnumYankee:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disable.
+    value: 0
+  - name: Enabled
+    description: Enable.
+    value: 1
+enum/QdcBravoEnumZulu:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disable.
+    value: 0
+  - name: Enabled
+    description: Enable.
+    value: 1
+enum/QdcBravoEnumAlphaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disable.
+    value: 0
+  - name: Enabled
+    description: Enable.
+    value: 1
+enum/QdcBravoEnumBravoAlpha:
+  bit_size: 1
+  variants:
+  - name: Clear
+    description: Clear.
+    value: 1
+  - name: Noaction
+    description: No action.
+    value: 0
+enum/QdcBravoEnumCharlieAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disable.
+    value: 0
+  - name: Enabled
+    description: Enable.
+    value: 1
+enum/QdcBravoEnumDeltaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disable.
+    value: 0
+  - name: Enabled
+    description: Enable.
+    value: 1
+enum/QdcBravoEnumEchoAlpha:
+  bit_size: 1
+  variants:
+  - name: Int
+    description: Initializes.
+    value: 1
+  - name: Noint
+    description: Does not initialize.
+    value: 0
+enum/QdcBravoEnumFoxtrotAlpha:
+  bit_size: 1
+  variants:
+  - name: Index
+    description: Occurred.
+    value: 1
+  - name: Noind
+    description: Not occurred.
+    value: 0
+enum/QdcBravoEnumGolfAlpha:
+  bit_size: 1
+  variants:
+  - name: Xne0
+    description: Use positive edge.
+    value: 0
+  - name: Xne1
+    description: Use negative edge.
+    value: 1

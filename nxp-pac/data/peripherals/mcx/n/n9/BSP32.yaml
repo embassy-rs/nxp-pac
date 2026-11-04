@@ -1,0 +1,166 @@
+# NXP mcux-soc-svd 7c1f00bdd6263f0b93466f5e73e5fc55a744b879; native chiptool import.
+# Source instance geometry is retained in explicit block variants; see private source bindings.
+# Unannotated fieldsets construct zero in software, not a claimed hardware reset.
+# Command/W1C/SET/CLR/TOG construction defaults are zero masks; no RMW semantics are implied.
+# Source: MCXN946_cm33_core0.xml BSP32_0 sha256 b986328ff1224adaeea70522fa61383a5f89f6313dfc3e7df92e8894fdab72d7
+# Source: MCXN946_cm33_core1.xml BSP32_0 sha256 57e8910317a1cb467d56726cb822c57806aa247542969bcf12dbcc8822187916
+# Source: MCXN947_cm33_core0.xml BSP32_0 sha256 629ac7cdc82684e467b0cf36a8aef697bc1eb65c2047d6610b7b5df65692e590
+# Source: MCXN947_cm33_core1.xml BSP32_0 sha256 0d77f3d23cad1d5eab631fd7f5ade4044d8aaca2d9d13cd11f3836d27fe089fb
+block/BspthreetwoAlpha:
+  description: CoolFlux BSP32.
+  items:
+  - name: offset_pmem
+    description: Offset address register for program memory.
+    byte_offset: 0
+    fieldset: BspthreetwoAlphaFieldsetKilo
+  - name: offset_xmem
+    description: Offset address register for X-data memory.
+    byte_offset: 4
+    fieldset: BspthreetwoAlphaFieldsetLima
+  - name: offset_ymem
+    description: Offset address register for Y-data memory.
+    byte_offset: 8
+    fieldset: BspthreetwoAlphaFieldsetMike
+  - name: offset_mailbox
+    description: Offset address register for mailbox peripheral.
+    byte_offset: 12
+    fieldset: BspthreetwoAlphaFieldsetJuliet
+  - name: interrupts_external
+    description: External interrupt register.
+    byte_offset: 16
+    fieldset: BspthreetwoAlphaFieldsetBravo
+  - name: interrupts_status
+    description: Interrupt status register.
+    byte_offset: 20
+    fieldset: BspthreetwoAlphaFieldsetCharlie
+  - name: cf_gating_override
+    description: CoolFlux BSP32 gating override.
+    byte_offset: 24
+    fieldset: BspthreetwoAlphaFieldsetAlpha
+  - name: ivt_offset
+    description: CoolFlux BSP32 IVT offset register.
+    byte_offset: 28
+    fieldset: BspthreetwoAlphaFieldsetIndia
+  - name: sleep_mode
+    description: CoolFlux BSP32 sleep mode register.
+    byte_offset: 32
+    access: Read
+    fieldset: BspthreetwoAlphaFieldsetNovember
+  - name: ivt0
+    description: CoolFlux BSP32 IVT register 0 content.
+    byte_offset: 36
+    fieldset: BspthreetwoAlphaFieldsetDelta
+  - name: ivt1
+    description: CoolFlux BSP32 IVT register 1 content.
+    byte_offset: 40
+    fieldset: BspthreetwoAlphaFieldsetEcho
+  - name: ivt2
+    description: CoolFlux BSP32 IVT register 2 content.
+    byte_offset: 44
+    fieldset: BspthreetwoAlphaFieldsetFoxtrot
+  - name: ivt3
+    description: CoolFlux BSP32 IVT register 3 content.
+    byte_offset: 48
+    fieldset: BspthreetwoAlphaFieldsetGolf
+  - name: ivt_disable
+    description: CoolFlux BSP32 IVT disable register.
+    byte_offset: 52
+    fieldset: BspthreetwoAlphaFieldsetHotel
+fieldset/BspthreetwoAlphaFieldsetAlpha:
+  description: CoolFlux BSP32 gating override.
+  fields:
+  - name: val
+    description: CoolFlux BSP32 gating override.
+    bit_offset: 0
+    bit_size: 1
+fieldset/BspthreetwoAlphaFieldsetBravo:
+  description: External interrupt register.
+  fields:
+  - name: val
+    description: External interrupt register.
+    bit_offset: 0
+    bit_size: 32
+fieldset/BspthreetwoAlphaFieldsetCharlie:
+  description: Interrupt status register.
+  fields:
+  - name: val
+    description: Interrupt status register.
+    bit_offset: 0
+    bit_size: 1
+fieldset/BspthreetwoAlphaFieldsetDelta:
+  description: CoolFlux BSP32 IVT register 0 content.
+  fields:
+  - name: val
+    description: CoolFlux BSP32 IVT register 0 content.
+    bit_offset: 0
+    bit_size: 24
+fieldset/BspthreetwoAlphaFieldsetEcho:
+  description: CoolFlux BSP32 IVT register 1 content.
+  fields:
+  - name: val
+    description: CoolFlux BSP32 IVT register 1 content.
+    bit_offset: 0
+    bit_size: 24
+fieldset/BspthreetwoAlphaFieldsetFoxtrot:
+  description: CoolFlux BSP32 IVT register 2 content.
+  fields:
+  - name: val
+    description: CoolFlux BSP32 IVT register 2 content.
+    bit_offset: 0
+    bit_size: 24
+fieldset/BspthreetwoAlphaFieldsetGolf:
+  description: CoolFlux BSP32 IVT register 3 content.
+  fields:
+  - name: val
+    description: CoolFlux BSP32 IVT register 3 content.
+    bit_offset: 0
+    bit_size: 24
+fieldset/BspthreetwoAlphaFieldsetHotel:
+  description: CoolFlux BSP32 IVT disable register.
+  fields:
+  - name: val
+    description: CoolFlux BSP32 IVT disable register.
+    bit_offset: 0
+    bit_size: 1
+fieldset/BspthreetwoAlphaFieldsetIndia:
+  description: CoolFlux BSP32 IVT offset register.
+  fields:
+  - name: val
+    description: CoolFlux BSP32 IVT offset register.
+    bit_offset: 0
+    bit_size: 24
+fieldset/BspthreetwoAlphaFieldsetJuliet:
+  description: Offset address register for mailbox peripheral.
+  fields:
+  - name: val
+    description: Offset address register for mailbox peripheral.
+    bit_offset: 0
+    bit_size: 24
+fieldset/BspthreetwoAlphaFieldsetKilo:
+  description: Offset address register for program memory.
+  fields:
+  - name: val
+    description: Offset address register for program memory.
+    bit_offset: 0
+    bit_size: 6
+fieldset/BspthreetwoAlphaFieldsetLima:
+  description: Offset address register for X-data memory.
+  fields:
+  - name: val
+    description: Offset address register for X-data memory.
+    bit_offset: 0
+    bit_size: 8
+fieldset/BspthreetwoAlphaFieldsetMike:
+  description: Offset address register for Y-data memory.
+  fields:
+  - name: val
+    description: Offset address register for Y-data memory.
+    bit_offset: 0
+    bit_size: 8
+fieldset/BspthreetwoAlphaFieldsetNovember:
+  description: CoolFlux BSP32 sleep mode register.
+  fields:
+  - name: val
+    description: CoolFlux BSP32 sleep mode register.
+    bit_offset: 0
+    bit_size: 1

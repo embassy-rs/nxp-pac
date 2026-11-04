@@ -1,0 +1,144 @@
+# MCXAP144M240F61RM Rev. 2, section 28.6;
+# MCXAP172M240F70RM Rev. 1, section 35.6.
+# MCXN23XRM Rev. 4, section 38.6;
+# MCXNP184M150F70RM Rev. 7, section 52.6.
+# N reset_value annotations are software construction defaults corroborated by XML;
+# PDF unknown reserved reset bits and CAPCLR reset bits are not established zeros.
+block/Utick:
+  description: Micro-tick timer.
+  items:
+  - name: ctrl
+    only_in: '^MCXA[0-9]+$'
+    description: Control. A nonzero DELAYVAL starts the timer; zero stops it.
+    byte_offset: 0
+    fieldset: Ctrl
+  - name: ctrl
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: >-
+      Control. The manual specifies DELAYVAL + 1 timer clocks and says zero stops
+      the timer, but its enumeration calls zero reserved. This inconsistency is
+      unresolved.
+    byte_offset: 0
+    fieldset: Ctrl
+  - name: stat
+    description: Status. INTR is write-one-to-clear.
+    byte_offset: 4
+    fieldset: Stat
+  - name: cfg
+    description: Capture configuration.
+    byte_offset: 8
+    fieldset: Cfg
+  - name: capclr
+    description: Write one to clear the corresponding capture value and valid flag.
+    byte_offset: 12
+    access: Write
+    fieldset: Capclr
+  - name: cap
+    description: Captured value, one less than the timer value at the capture event.
+    byte_offset: 16
+    array:
+      len: 4
+      stride: 4
+    access: Read
+    fieldset: Cap
+fieldset/Ctrl:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: delayval
+    only_in: '^MCXA[0-9]+$'
+    description: Tick interval. Delay is DELAYVAL + 1 timer clocks; zero stops the timer.
+    bit_offset: 0
+    bit_size: 31
+  - name: delayval
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: >-
+      Tick interval. The manual specifies DELAYVAL + 1 timer clocks and says zero
+      stops the timer, but its enumeration calls zero reserved. This inconsistency
+      is unresolved.
+    bit_offset: 0
+    bit_size: 31
+  - name: repeat
+    description: Repeat continuously instead of performing a one-time delay.
+    bit_offset: 31
+    bit_size: 1
+fieldset/Stat:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: intr
+    description: Interrupt pending. Write one to clear.
+    bit_offset: 0
+    bit_size: 1
+  - name: active
+    only_in: '^MCXA[0-9]+$'
+    description: Timer is active.
+    bit_offset: 1
+    bit_size: 1
+  - name: active
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: >-
+      Timer is active. The N register diagrams mark ACTIVE as write-one-to-clear,
+      while A XML marks it read-only. Access and clear behavior remain unresolved;
+      avoid blind read-modify-write on status.
+    bit_offset: 1
+    bit_size: 1
+fieldset/Cfg:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: capen0
+    bit_offset: 0
+    bit_size: 1
+  - name: capen1
+    bit_offset: 1
+    bit_size: 1
+  - name: capen2
+    bit_offset: 2
+    bit_size: 1
+  - name: capen3
+    bit_offset: 3
+    bit_size: 1
+  - name: cappol0
+    description: Capture on a negative edge when set, positive edge when clear.
+    bit_offset: 8
+    bit_size: 1
+  - name: cappol1
+    description: Capture on a negative edge when set, positive edge when clear.
+    bit_offset: 9
+    bit_size: 1
+  - name: cappol2
+    description: Capture on a negative edge when set, positive edge when clear.
+    bit_offset: 10
+    bit_size: 1
+  - name: cappol3
+    description: Capture on a negative edge when set, positive edge when clear.
+    bit_offset: 11
+    bit_size: 1
+fieldset/Capclr:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: capclr0
+    bit_offset: 0
+    bit_size: 1
+  - name: capclr1
+    bit_offset: 1
+    bit_size: 1
+  - name: capclr2
+    bit_offset: 2
+    bit_size: 1
+  - name: capclr3
+    bit_offset: 3
+    bit_size: 1
+fieldset/Cap:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: cap_value
+    bit_offset: 0
+    bit_size: 31
+  - name: valid
+    description: Valid captured value. Clear using the corresponding CAPCLR bit.
+    bit_offset: 31
+    bit_size: 1

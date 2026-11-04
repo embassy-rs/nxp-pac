@@ -24,6 +24,17 @@ macro_rules! chips {
 }
 
 chips! {
+    "mcxn235" => "MCXN235",
+    "mcxn236" => "MCXN236",
+    "mcxn247" => "MCXN247",
+    "mcxn526" => "MCXN526",
+    "mcxn527" => "MCXN527",
+    "mcxn536" => "MCXN536",
+    "mcxn537" => "MCXN537",
+    "mcxn546" => "MCXN546",
+    "mcxn547" => "MCXN547",
+    "mcxn946" => "MCXN946",
+    "mcxn947" => "MCXN947",
     "mcxa132" => "MCXA132",
     "mcxa133" => "MCXA133",
     "mcxa142" => "MCXA142",

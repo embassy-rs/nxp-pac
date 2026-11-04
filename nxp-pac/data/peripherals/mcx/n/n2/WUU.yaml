@@ -1,0 +1,5103 @@
+# NXP mcux-soc-svd 7c1f00bdd6263f0b93466f5e73e5fc55a744b879; native chiptool import.
+# Source instance geometry is retained in explicit block variants; see private source bindings.
+# Unannotated fieldsets construct zero in software, not a claimed hardware reset.
+# Command/W1C/SET/CLR/TOG construction defaults are zero masks; no RMW semantics are implied.
+# Source: MCXN235.xml WUU0 sha256 a498ada26162c88f6767738bffcd22801318264c9cb2cbecbd190403b4dbd6a7
+# Source: MCXN236.xml WUU0 sha256 ec813b3b24a785c33c5035ebc25a9c713a18018daf1fdb440035a13bf3549e14
+# Source: MCXN247.xml WUU0 sha256 dbbed5781a39012768344882dad168430c742f26e4261c6fd0bda9a34ca4a652
+# Explicit reserved/RFU/SBZ fields omitted; exact source-field ledger retained in reserved-fields-removed.json.
+# Explicit reserved/RFU/SBZ fields omitted; exact source-field ledger retained in reserved-fields-removed.json.
+block/WuuAlpha:
+  description: Low-Leakage Wakeup Unit.
+  items:
+  - name: verid
+    description: Version ID.
+    byte_offset: 0
+    access: Read
+    fieldset: WuuAlphaFieldsetMike
+  - name: param
+    description: Parameter.
+    byte_offset: 4
+    access: Read
+    fieldset: WuuAlphaFieldsetFoxtrot
+  - name: pe1
+    description: Pin Enable 1.
+    byte_offset: 8
+    fieldset: WuuAlphaFieldsetIndia
+  - name: pe2
+    description: Pin Enable 2.
+    byte_offset: 12
+    fieldset: WuuAlphaFieldsetJuliet
+  - name: me
+    description: Module Interrupt Enable.
+    byte_offset: 24
+    fieldset: WuuAlphaFieldsetEcho
+  - name: de
+    description: Module DMA/Trigger Enable.
+    byte_offset: 28
+    fieldset: WuuAlphaFieldsetAlpha
+  - name: pf
+    description: Pin Flag.
+    byte_offset: 32
+    fieldset: WuuAlphaFieldsetKilo
+  - name: filt
+    description: Pin Filter.
+    byte_offset: 48
+    fieldset: WuuAlphaFieldsetCharlie
+  - name: pdc1
+    description: Pin DMA/Trigger Configuration 1.
+    byte_offset: 56
+    fieldset: WuuAlphaFieldsetGolf
+  - name: pdc2
+    description: Pin DMA/Trigger Configuration 2.
+    byte_offset: 60
+    fieldset: WuuAlphaFieldsetHotel
+  - name: fdc
+    description: Pin Filter DMA/Trigger Configuration.
+    byte_offset: 72
+    fieldset: WuuAlphaFieldsetBravo
+  - name: pmc
+    description: Pin Mode Configuration.
+    byte_offset: 80
+    fieldset: WuuAlphaFieldsetLima
+  - name: fmc
+    description: Pin Filter Mode Configuration.
+    byte_offset: 88
+    fieldset: WuuAlphaFieldsetDelta
+block/WuuBravo:
+  description: Low-Leakage Wakeup Unit.
+  items:
+  - name: verid
+    description: Version ID.
+    byte_offset: 0
+    access: Read
+    fieldset: WuuBravoFieldsetMike
+  - name: param
+    description: Parameter.
+    byte_offset: 4
+    access: Read
+    fieldset: WuuBravoFieldsetFoxtrot
+  - name: pe1
+    description: Pin Enable 1.
+    byte_offset: 8
+    fieldset: WuuBravoFieldsetIndia
+  - name: pe2
+    description: Pin Enable 2.
+    byte_offset: 12
+    fieldset: WuuBravoFieldsetJuliet
+  - name: me
+    description: Module Interrupt Enable.
+    byte_offset: 24
+    fieldset: WuuBravoFieldsetEcho
+  - name: de
+    description: Module DMA/Trigger Enable.
+    byte_offset: 28
+    fieldset: WuuBravoFieldsetAlpha
+  - name: pf
+    description: Pin Flag.
+    byte_offset: 32
+    fieldset: WuuBravoFieldsetKilo
+  - name: filt
+    description: Pin Filter.
+    byte_offset: 48
+    fieldset: WuuBravoFieldsetCharlie
+  - name: pdc1
+    description: Pin DMA/Trigger Configuration 1.
+    byte_offset: 56
+    fieldset: WuuBravoFieldsetGolf
+  - name: pdc2
+    description: Pin DMA/Trigger Configuration 2.
+    byte_offset: 60
+    fieldset: WuuBravoFieldsetHotel
+  - name: fdc
+    description: Pin Filter DMA/Trigger Configuration.
+    byte_offset: 72
+    fieldset: WuuBravoFieldsetBravo
+  - name: pmc
+    description: Pin Mode Configuration.
+    byte_offset: 80
+    fieldset: WuuBravoFieldsetLima
+  - name: fmc
+    description: Pin Filter Mode Configuration.
+    byte_offset: 88
+    fieldset: WuuBravoFieldsetDelta
+fieldset/WuuAlphaFieldsetAlpha:
+  description: Module DMA/Trigger Enable.
+  fields:
+  - name: wude0
+    description: DMA/Trigger Wake-up Enable for Module 0.
+    bit_offset: 0
+    bit_size: 1
+    enum: WuuAlphaEnumZulu
+  - name: wude1
+    description: DMA/Trigger Wake-up Enable for Module 1.
+    bit_offset: 1
+    bit_size: 1
+    enum: WuuAlphaEnumAlphaAlpha
+  - name: wude2
+    description: DMA/Trigger Wake-up Enable for Module 2.
+    bit_offset: 2
+    bit_size: 1
+    enum: WuuAlphaEnumBravoAlpha
+  - name: wude3
+    description: DMA/Trigger Wake-up Enable for Module 3.
+    bit_offset: 3
+    bit_size: 1
+    enum: WuuAlphaEnumCharlieAlpha
+  - name: wude4
+    description: DMA/Trigger Wake-up Enable for Module 4.
+    bit_offset: 4
+    bit_size: 1
+    enum: WuuAlphaEnumDeltaAlpha
+  - name: wude5
+    description: DMA/Trigger Wake-up Enable for Module 5.
+    bit_offset: 5
+    bit_size: 1
+    enum: WuuAlphaEnumEchoAlpha
+  - name: wude6
+    description: DMA/Trigger Wake-up Enable for Module 6.
+    bit_offset: 6
+    bit_size: 1
+    enum: WuuAlphaEnumFoxtrotAlpha
+  - name: wude7
+    description: DMA/Trigger Wake-up Enable for Module 7.
+    bit_offset: 7
+    bit_size: 1
+    enum: WuuAlphaEnumGolfAlpha
+  - name: wude8
+    description: DMA/Trigger Wake-up Enable for Module 8.
+    bit_offset: 8
+    bit_size: 1
+    enum: WuuAlphaEnumHotelAlpha
+  - name: wude9
+    description: DMA/Trigger Wake-up Enable for Module 9.
+    bit_offset: 9
+    bit_size: 1
+    enum: WuuAlphaEnumIndiaAlpha
+fieldset/WuuAlphaFieldsetBravo:
+  description: Pin Filter DMA/Trigger Configuration.
+  fields:
+  - name: filtc1
+    description: Filter Configuration for FILTn.
+    bit_offset: 0
+    bit_size: 2
+    enum: WuuAlphaEnumBravo
+  - name: filtc2
+    description: Filter Configuration for FILTn.
+    bit_offset: 2
+    bit_size: 2
+    enum: WuuAlphaEnumCharlie
+fieldset/WuuAlphaFieldsetCharlie:
+  description: Pin Filter.
+  fields:
+  - name: filtsel1
+    description: Filter 1 Pin Select.
+    bit_offset: 0
+    bit_size: 5
+  - name: filte1
+    description: Filter 1 Enable.
+    bit_offset: 5
+    bit_size: 2
+    enum: WuuAlphaEnumDelta
+  - name: filtf1
+    description: Filter 1 Flag.
+    bit_offset: 7
+    bit_size: 1
+    enum: WuuAlphaEnumFoxtrot
+  - name: filtsel2
+    description: Filter 2 Pin Select.
+    bit_offset: 8
+    bit_size: 5
+  - name: filte2
+    description: Filter 2 Enable.
+    bit_offset: 13
+    bit_size: 2
+    enum: WuuAlphaEnumEcho
+  - name: filtf2
+    description: Filter 2 Flag.
+    bit_offset: 15
+    bit_size: 1
+    enum: WuuAlphaEnumGolf
+fieldset/WuuAlphaFieldsetDelta:
+  description: Pin Filter Mode Configuration.
+  fields:
+  - name: filtm1
+    description: Filter Mode for FILTn.
+    bit_offset: 0
+    bit_size: 1
+    enum: WuuAlphaEnumHotel
+  - name: filtm2
+    description: Filter Mode for FILTn.
+    bit_offset: 1
+    bit_size: 1
+    enum: WuuAlphaEnumIndia
+fieldset/WuuAlphaFieldsetEcho:
+  description: Module Interrupt Enable.
+  fields:
+  - name: wume0
+    description: Module Interrupt Wake-up Enable for Module 0.
+    bit_offset: 0
+    bit_size: 1
+    enum: WuuAlphaEnumLimaBravo
+  - name: wume1
+    description: Module Interrupt Wake-up Enable for Module 1.
+    bit_offset: 1
+    bit_size: 1
+    enum: WuuAlphaEnumMikeBravo
+  - name: wume2
+    description: Module Interrupt Wake-up Enable for Module 2.
+    bit_offset: 2
+    bit_size: 1
+    enum: WuuAlphaEnumNovemberBravo
+  - name: wume3
+    description: Module Interrupt Wake-up Enable for Module 3.
+    bit_offset: 3
+    bit_size: 1
+    enum: WuuAlphaEnumOscarBravo
+  - name: wume4
+    description: Module Interrupt Wake-up Enable for Module 4.
+    bit_offset: 4
+    bit_size: 1
+    enum: WuuAlphaEnumPapaBravo
+  - name: wume5
+    description: Module Interrupt Wake-up Enable for Module 5.
+    bit_offset: 5
+    bit_size: 1
+    enum: WuuAlphaEnumQuebecBravo
+  - name: wume6
+    description: Module Interrupt Wake-up Enable for Module 6.
+    bit_offset: 6
+    bit_size: 1
+    enum: WuuAlphaEnumRomeoBravo
+  - name: wume7
+    description: Module Interrupt Wake-up Enable for Module 7.
+    bit_offset: 7
+    bit_size: 1
+    enum: WuuAlphaEnumSierraBravo
+  - name: wume8
+    description: Module Interrupt Wake-up Enable for Module 8.
+    bit_offset: 8
+    bit_size: 1
+    enum: WuuAlphaEnumTangoBravo
+  - name: wume9
+    description: Module Interrupt Wake-up Enable for Module 9.
+    bit_offset: 9
+    bit_size: 1
+    enum: WuuAlphaEnumUniformBravo
+fieldset/WuuAlphaFieldsetFoxtrot:
+  description: Parameter.
+  fields:
+  - name: filters
+    description: Filter Number.
+    bit_offset: 0
+    bit_size: 8
+  - name: dmas
+    description: DMA Number.
+    bit_offset: 8
+    bit_size: 8
+  - name: modules
+    description: Module Number.
+    bit_offset: 16
+    bit_size: 8
+  - name: pins
+    description: Pin Number.
+    bit_offset: 24
+    bit_size: 8
+fieldset/WuuAlphaFieldsetGolf:
+  description: Pin DMA/Trigger Configuration 1.
+  fields:
+  - name: wupdc0
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 0
+    bit_size: 2
+    enum: WuuAlphaEnumVictorBravo
+  - name: wupdc1
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 2
+    bit_size: 2
+    enum: WuuAlphaEnumWhiskeyBravo
+  - name: wupdc2
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 4
+    bit_size: 2
+    enum: WuuAlphaEnumHotelCharlie
+  - name: wupdc3
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 6
+    bit_size: 2
+    enum: WuuAlphaEnumQuebecCharlie
+  - name: wupdc4
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 8
+    bit_size: 2
+    enum: WuuAlphaEnumRomeoCharlie
+  - name: wupdc5
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 10
+    bit_size: 2
+    enum: WuuAlphaEnumSierraCharlie
+  - name: wupdc6
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 12
+    bit_size: 2
+    enum: WuuAlphaEnumTangoCharlie
+  - name: wupdc7
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 14
+    bit_size: 2
+    enum: WuuAlphaEnumUniformCharlie
+  - name: wupdc8
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 16
+    bit_size: 2
+    enum: WuuAlphaEnumVictorCharlie
+  - name: wupdc9
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 18
+    bit_size: 2
+    enum: WuuAlphaEnumWhiskeyCharlie
+  - name: wupdc10
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 20
+    bit_size: 2
+    enum: WuuAlphaEnumXrayBravo
+  - name: wupdc11
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 22
+    bit_size: 2
+    enum: WuuAlphaEnumYankeeBravo
+  - name: wupdc12
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 24
+    bit_size: 2
+    enum: WuuAlphaEnumZuluBravo
+  - name: wupdc13
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 26
+    bit_size: 2
+    enum: WuuAlphaEnumAlphaCharlie
+  - name: wupdc14
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 28
+    bit_size: 2
+    enum: WuuAlphaEnumBravoCharlie
+  - name: wupdc15
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 30
+    bit_size: 2
+    enum: WuuAlphaEnumCharlieCharlie
+fieldset/WuuAlphaFieldsetHotel:
+  description: Pin DMA/Trigger Configuration 2.
+  fields:
+  - name: wupdc16
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 0
+    bit_size: 2
+    enum: WuuAlphaEnumDeltaCharlie
+  - name: wupdc17
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 2
+    bit_size: 2
+    enum: WuuAlphaEnumEchoCharlie
+  - name: wupdc18
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 4
+    bit_size: 2
+    enum: WuuAlphaEnumFoxtrotCharlie
+  - name: wupdc19
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 6
+    bit_size: 2
+    enum: WuuAlphaEnumGolfCharlie
+  - name: wupdc20
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 8
+    bit_size: 2
+    enum: WuuAlphaEnumIndiaCharlie
+  - name: wupdc21
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 10
+    bit_size: 2
+    enum: WuuAlphaEnumJulietCharlie
+  - name: wupdc22
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 12
+    bit_size: 2
+    enum: WuuAlphaEnumKiloCharlie
+  - name: wupdc23
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 14
+    bit_size: 2
+    enum: WuuAlphaEnumLimaCharlie
+  - name: wupdc24
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 16
+    bit_size: 2
+    enum: WuuAlphaEnumMikeCharlie
+  - name: wupdc25
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 18
+    bit_size: 2
+    enum: WuuAlphaEnumNovemberCharlie
+  - name: wupdc26
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 20
+    bit_size: 2
+    enum: WuuAlphaEnumOscarCharlie
+  - name: wupdc27
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 22
+    bit_size: 2
+    enum: WuuAlphaEnumPapaCharlie
+fieldset/WuuAlphaFieldsetIndia:
+  description: Pin Enable 1.
+  fields:
+  - name: wupe0
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 0
+    bit_size: 2
+    enum: WuuAlphaEnumXrayCharlie
+  - name: wupe1
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 2
+    bit_size: 2
+    enum: WuuAlphaEnumYankeeCharlie
+  - name: wupe2
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 4
+    bit_size: 2
+    enum: WuuAlphaEnumJulietDelta
+  - name: wupe3
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 6
+    bit_size: 2
+    enum: WuuAlphaEnumSierraDelta
+  - name: wupe4
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 8
+    bit_size: 2
+    enum: WuuAlphaEnumTangoDelta
+  - name: wupe5
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 10
+    bit_size: 2
+    enum: WuuAlphaEnumUniformDelta
+  - name: wupe6
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 12
+    bit_size: 2
+    enum: WuuAlphaEnumVictorDelta
+  - name: wupe7
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 14
+    bit_size: 2
+    enum: WuuAlphaEnumWhiskeyDelta
+  - name: wupe8
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 16
+    bit_size: 2
+    enum: WuuAlphaEnumXrayDelta
+  - name: wupe9
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 18
+    bit_size: 2
+    enum: WuuAlphaEnumYankeeDelta
+  - name: wupe10
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 20
+    bit_size: 2
+    enum: WuuAlphaEnumZuluCharlie
+  - name: wupe11
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 22
+    bit_size: 2
+    enum: WuuAlphaEnumAlphaDelta
+  - name: wupe12
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 24
+    bit_size: 2
+    enum: WuuAlphaEnumBravoDelta
+  - name: wupe13
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 26
+    bit_size: 2
+    enum: WuuAlphaEnumCharlieDelta
+  - name: wupe14
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 28
+    bit_size: 2
+    enum: WuuAlphaEnumDeltaDelta
+  - name: wupe15
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 30
+    bit_size: 2
+    enum: WuuAlphaEnumEchoDelta
+fieldset/WuuAlphaFieldsetJuliet:
+  description: Pin Enable 2.
+  fields:
+  - name: wupe16
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 0
+    bit_size: 2
+    enum: WuuAlphaEnumFoxtrotDelta
+  - name: wupe17
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 2
+    bit_size: 2
+    enum: WuuAlphaEnumGolfDelta
+  - name: wupe18
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 4
+    bit_size: 2
+    enum: WuuAlphaEnumHotelDelta
+  - name: wupe19
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 6
+    bit_size: 2
+    enum: WuuAlphaEnumIndiaDelta
+  - name: wupe20
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 8
+    bit_size: 2
+    enum: WuuAlphaEnumKiloDelta
+  - name: wupe21
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 10
+    bit_size: 2
+    enum: WuuAlphaEnumLimaDelta
+  - name: wupe22
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 12
+    bit_size: 2
+    enum: WuuAlphaEnumMikeDelta
+  - name: wupe23
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 14
+    bit_size: 2
+    enum: WuuAlphaEnumNovemberDelta
+  - name: wupe24
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 16
+    bit_size: 2
+    enum: WuuAlphaEnumOscarDelta
+  - name: wupe25
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 18
+    bit_size: 2
+    enum: WuuAlphaEnumPapaDelta
+  - name: wupe26
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 20
+    bit_size: 2
+    enum: WuuAlphaEnumQuebecDelta
+  - name: wupe27
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 22
+    bit_size: 2
+    enum: WuuAlphaEnumRomeoDelta
+fieldset/WuuAlphaFieldsetKilo:
+  description: Pin Flag.
+  fields:
+  - name: wuf0
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 0
+    bit_size: 1
+    enum: WuuAlphaEnumJulietAlpha
+  - name: wuf1
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 1
+    bit_size: 1
+    enum: WuuAlphaEnumKiloAlpha
+  - name: wuf2
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 2
+    bit_size: 1
+    enum: WuuAlphaEnumVictorAlpha
+  - name: wuf3
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 3
+    bit_size: 1
+    enum: WuuAlphaEnumEchoBravo
+  - name: wuf4
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 4
+    bit_size: 1
+    enum: WuuAlphaEnumFoxtrotBravo
+  - name: wuf5
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 5
+    bit_size: 1
+    enum: WuuAlphaEnumGolfBravo
+  - name: wuf6
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 6
+    bit_size: 1
+    enum: WuuAlphaEnumHotelBravo
+  - name: wuf7
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 7
+    bit_size: 1
+    enum: WuuAlphaEnumIndiaBravo
+  - name: wuf8
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 8
+    bit_size: 1
+    enum: WuuAlphaEnumJulietBravo
+  - name: wuf9
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 9
+    bit_size: 1
+    enum: WuuAlphaEnumKiloBravo
+  - name: wuf10
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 10
+    bit_size: 1
+    enum: WuuAlphaEnumLimaAlpha
+  - name: wuf11
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 11
+    bit_size: 1
+    enum: WuuAlphaEnumMikeAlpha
+  - name: wuf12
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 12
+    bit_size: 1
+    enum: WuuAlphaEnumNovemberAlpha
+  - name: wuf13
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 13
+    bit_size: 1
+    enum: WuuAlphaEnumOscarAlpha
+  - name: wuf14
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 14
+    bit_size: 1
+    enum: WuuAlphaEnumPapaAlpha
+  - name: wuf15
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 15
+    bit_size: 1
+    enum: WuuAlphaEnumQuebecAlpha
+  - name: wuf16
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 16
+    bit_size: 1
+    enum: WuuAlphaEnumRomeoAlpha
+  - name: wuf17
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 17
+    bit_size: 1
+    enum: WuuAlphaEnumSierraAlpha
+  - name: wuf18
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 18
+    bit_size: 1
+    enum: WuuAlphaEnumTangoAlpha
+  - name: wuf19
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 19
+    bit_size: 1
+    enum: WuuAlphaEnumUniformAlpha
+  - name: wuf20
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 20
+    bit_size: 1
+    enum: WuuAlphaEnumWhiskeyAlpha
+  - name: wuf21
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 21
+    bit_size: 1
+    enum: WuuAlphaEnumXrayAlpha
+  - name: wuf22
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 22
+    bit_size: 1
+    enum: WuuAlphaEnumYankeeAlpha
+  - name: wuf23
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 23
+    bit_size: 1
+    enum: WuuAlphaEnumZuluAlpha
+  - name: wuf24
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 24
+    bit_size: 1
+    enum: WuuAlphaEnumAlphaBravo
+  - name: wuf25
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 25
+    bit_size: 1
+    enum: WuuAlphaEnumBravoBravo
+  - name: wuf26
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 26
+    bit_size: 1
+    enum: WuuAlphaEnumCharlieBravo
+  - name: wuf27
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 27
+    bit_size: 1
+    enum: WuuAlphaEnumDeltaBravo
+fieldset/WuuAlphaFieldsetLima:
+  description: Pin Mode Configuration.
+  fields:
+  - name: wupmc0
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 0
+    bit_size: 1
+    enum: WuuAlphaEnumZuluDelta
+  - name: wupmc1
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 1
+    bit_size: 1
+    enum: WuuAlphaEnumAlphaEcho
+  - name: wupmc2
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 2
+    bit_size: 1
+    enum: WuuAlphaEnumLimaEcho
+  - name: wupmc3
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 3
+    bit_size: 1
+    enum: WuuAlphaEnumUniformEcho
+  - name: wupmc4
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 4
+    bit_size: 1
+    enum: WuuAlphaEnumVictorEcho
+  - name: wupmc5
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 5
+    bit_size: 1
+    enum: WuuAlphaEnumWhiskeyEcho
+  - name: wupmc6
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 6
+    bit_size: 1
+    enum: WuuAlphaEnumXrayEcho
+  - name: wupmc7
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 7
+    bit_size: 1
+    enum: WuuAlphaEnumYankeeEcho
+  - name: wupmc8
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 8
+    bit_size: 1
+    enum: WuuAlphaEnumZuluEcho
+  - name: wupmc9
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 9
+    bit_size: 1
+    enum: WuuAlphaEnumAlphaFoxtrot
+  - name: wupmc10
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 10
+    bit_size: 1
+    enum: WuuAlphaEnumBravoEcho
+  - name: wupmc11
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 11
+    bit_size: 1
+    enum: WuuAlphaEnumCharlieEcho
+  - name: wupmc12
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 12
+    bit_size: 1
+    enum: WuuAlphaEnumDeltaEcho
+  - name: wupmc13
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 13
+    bit_size: 1
+    enum: WuuAlphaEnumEchoEcho
+  - name: wupmc14
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 14
+    bit_size: 1
+    enum: WuuAlphaEnumFoxtrotEcho
+  - name: wupmc15
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 15
+    bit_size: 1
+    enum: WuuAlphaEnumGolfEcho
+  - name: wupmc16
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 16
+    bit_size: 1
+    enum: WuuAlphaEnumHotelEcho
+  - name: wupmc17
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 17
+    bit_size: 1
+    enum: WuuAlphaEnumIndiaEcho
+  - name: wupmc18
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 18
+    bit_size: 1
+    enum: WuuAlphaEnumJulietEcho
+  - name: wupmc19
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 19
+    bit_size: 1
+    enum: WuuAlphaEnumKiloEcho
+  - name: wupmc20
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 20
+    bit_size: 1
+    enum: WuuAlphaEnumMikeEcho
+  - name: wupmc21
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 21
+    bit_size: 1
+    enum: WuuAlphaEnumNovemberEcho
+  - name: wupmc22
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 22
+    bit_size: 1
+    enum: WuuAlphaEnumOscarEcho
+  - name: wupmc23
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 23
+    bit_size: 1
+    enum: WuuAlphaEnumPapaEcho
+  - name: wupmc24
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 24
+    bit_size: 1
+    enum: WuuAlphaEnumQuebecEcho
+  - name: wupmc25
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 25
+    bit_size: 1
+    enum: WuuAlphaEnumRomeoEcho
+  - name: wupmc26
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 26
+    bit_size: 1
+    enum: WuuAlphaEnumSierraEcho
+  - name: wupmc27
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 27
+    bit_size: 1
+    enum: WuuAlphaEnumTangoEcho
+fieldset/WuuAlphaFieldsetMike:
+  description: Version ID.
+  fields:
+  - name: feature
+    description: Feature Specification Number.
+    bit_offset: 0
+    bit_size: 16
+    enum: WuuAlphaEnumAlpha
+  - name: minor
+    description: Minor Version Number.
+    bit_offset: 16
+    bit_size: 8
+  - name: major
+    description: Major Version Number.
+    bit_offset: 24
+    bit_size: 8
+fieldset/WuuBravoFieldsetAlpha:
+  description: Module DMA/Trigger Enable.
+  fields:
+  - name: wude0
+    description: DMA/Trigger Wake-up Enable for Module 0.
+    bit_offset: 0
+    bit_size: 1
+    enum: WuuBravoEnumJuliet
+  - name: wude1
+    description: DMA/Trigger Wake-up Enable for Module 1.
+    bit_offset: 1
+    bit_size: 1
+    enum: WuuBravoEnumKilo
+  - name: wude2
+    description: DMA/Trigger Wake-up Enable for Module 2.
+    bit_offset: 2
+    bit_size: 1
+    enum: WuuBravoEnumLima
+  - name: wude3
+    description: DMA/Trigger Wake-up Enable for Module 3.
+    bit_offset: 3
+    bit_size: 1
+    enum: WuuBravoEnumMike
+  - name: wude4
+    description: DMA/Trigger Wake-up Enable for Module 4.
+    bit_offset: 4
+    bit_size: 1
+    enum: WuuBravoEnumNovember
+  - name: wude5
+    description: DMA/Trigger Wake-up Enable for Module 5.
+    bit_offset: 5
+    bit_size: 1
+    enum: WuuBravoEnumOscar
+  - name: wude6
+    description: DMA/Trigger Wake-up Enable for Module 6.
+    bit_offset: 6
+    bit_size: 1
+    enum: WuuBravoEnumPapa
+  - name: wude7
+    description: DMA/Trigger Wake-up Enable for Module 7.
+    bit_offset: 7
+    bit_size: 1
+    enum: WuuBravoEnumQuebec
+  - name: wude8
+    description: DMA/Trigger Wake-up Enable for Module 8.
+    bit_offset: 8
+    bit_size: 1
+    enum: WuuBravoEnumRomeo
+  - name: wude9
+    description: DMA/Trigger Wake-up Enable for Module 9.
+    bit_offset: 9
+    bit_size: 1
+    enum: WuuBravoEnumSierra
+fieldset/WuuBravoFieldsetBravo:
+  description: Pin Filter DMA/Trigger Configuration.
+  fields:
+  - name: filtc1
+    description: Filter Configuration for FILTn.
+    bit_offset: 0
+    bit_size: 2
+    enum: WuuBravoEnumBravo
+  - name: filtc2
+    description: Filter Configuration for FILTn.
+    bit_offset: 2
+    bit_size: 2
+    enum: WuuBravoEnumCharlie
+fieldset/WuuBravoFieldsetCharlie:
+  description: Pin Filter.
+  fields:
+  - name: filtsel1
+    description: Filter 1 Pin Select.
+    bit_offset: 0
+    bit_size: 5
+  - name: filte1
+    description: Filter 1 Enable.
+    bit_offset: 5
+    bit_size: 2
+    enum: WuuBravoEnumDelta
+  - name: filtf1
+    description: Filter 1 Flag.
+    bit_offset: 7
+    bit_size: 1
+    enum: WuuBravoEnumFoxtrot
+  - name: filtsel2
+    description: Filter 2 Pin Select.
+    bit_offset: 8
+    bit_size: 5
+  - name: filte2
+    description: Filter 2 Enable.
+    bit_offset: 13
+    bit_size: 2
+    enum: WuuBravoEnumEcho
+  - name: filtf2
+    description: Filter 2 Flag.
+    bit_offset: 15
+    bit_size: 1
+    enum: WuuBravoEnumGolf
+fieldset/WuuBravoFieldsetDelta:
+  description: Pin Filter Mode Configuration.
+  fields:
+  - name: filtm1
+    description: Filter Mode for FILTn.
+    bit_offset: 0
+    bit_size: 1
+    enum: WuuBravoEnumHotel
+  - name: filtm2
+    description: Filter Mode for FILTn.
+    bit_offset: 1
+    bit_size: 1
+    enum: WuuBravoEnumIndia
+fieldset/WuuBravoFieldsetEcho:
+  description: Module Interrupt Enable.
+  fields:
+  - name: wume0
+    description: Module Interrupt Wake-up Enable for Module 0.
+    bit_offset: 0
+    bit_size: 1
+    enum: WuuBravoEnumWhiskeyAlpha
+  - name: wume1
+    description: Module Interrupt Wake-up Enable for Module 1.
+    bit_offset: 1
+    bit_size: 1
+    enum: WuuBravoEnumXrayAlpha
+  - name: wume2
+    description: Module Interrupt Wake-up Enable for Module 2.
+    bit_offset: 2
+    bit_size: 1
+    enum: WuuBravoEnumYankeeAlpha
+  - name: wume3
+    description: Module Interrupt Wake-up Enable for Module 3.
+    bit_offset: 3
+    bit_size: 1
+    enum: WuuBravoEnumZuluAlpha
+  - name: wume4
+    description: Module Interrupt Wake-up Enable for Module 4.
+    bit_offset: 4
+    bit_size: 1
+    enum: WuuBravoEnumAlphaBravo
+  - name: wume5
+    description: Module Interrupt Wake-up Enable for Module 5.
+    bit_offset: 5
+    bit_size: 1
+    enum: WuuBravoEnumBravoBravo
+  - name: wume6
+    description: Module Interrupt Wake-up Enable for Module 6.
+    bit_offset: 6
+    bit_size: 1
+    enum: WuuBravoEnumCharlieBravo
+  - name: wume7
+    description: Module Interrupt Wake-up Enable for Module 7.
+    bit_offset: 7
+    bit_size: 1
+    enum: WuuBravoEnumDeltaBravo
+  - name: wume8
+    description: Module Interrupt Wake-up Enable for Module 8.
+    bit_offset: 8
+    bit_size: 1
+    enum: WuuBravoEnumEchoBravo
+  - name: wume9
+    description: Module Interrupt Wake-up Enable for Module 9.
+    bit_offset: 9
+    bit_size: 1
+    enum: WuuBravoEnumFoxtrotBravo
+fieldset/WuuBravoFieldsetFoxtrot:
+  description: Parameter.
+  fields:
+  - name: filters
+    description: Filter Number.
+    bit_offset: 0
+    bit_size: 8
+  - name: dmas
+    description: DMA Number.
+    bit_offset: 8
+    bit_size: 8
+  - name: modules
+    description: Module Number.
+    bit_offset: 16
+    bit_size: 8
+  - name: pins
+    description: Pin Number.
+    bit_offset: 24
+    bit_size: 8
+fieldset/WuuBravoFieldsetGolf:
+  description: Pin DMA/Trigger Configuration 1.
+  fields:
+  - name: wupdc0
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 0
+    bit_size: 2
+    enum: WuuBravoEnumGolfBravo
+  - name: wupdc1
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 2
+    bit_size: 2
+    enum: WuuBravoEnumHotelBravo
+  - name: wupdc2
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 4
+    bit_size: 2
+    enum: WuuBravoEnumSierraBravo
+  - name: wupdc3
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 6
+    bit_size: 2
+    enum: WuuBravoEnumDeltaCharlie
+  - name: wupdc4
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 8
+    bit_size: 2
+    enum: WuuBravoEnumGolfCharlie
+  - name: wupdc5
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 10
+    bit_size: 2
+    enum: WuuBravoEnumHotelCharlie
+  - name: wupdc6
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 12
+    bit_size: 2
+    enum: WuuBravoEnumIndiaCharlie
+  - name: wupdc7
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 14
+    bit_size: 2
+    enum: WuuBravoEnumJulietCharlie
+  - name: wupdc8
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 16
+    bit_size: 2
+    enum: WuuBravoEnumKiloCharlie
+  - name: wupdc9
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 18
+    bit_size: 2
+    enum: WuuBravoEnumLimaCharlie
+  - name: wupdc10
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 20
+    bit_size: 2
+    enum: WuuBravoEnumIndiaBravo
+  - name: wupdc11
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 22
+    bit_size: 2
+    enum: WuuBravoEnumJulietBravo
+  - name: wupdc12
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 24
+    bit_size: 2
+    enum: WuuBravoEnumKiloBravo
+  - name: wupdc13
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 26
+    bit_size: 2
+    enum: WuuBravoEnumLimaBravo
+  - name: wupdc14
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 28
+    bit_size: 2
+    enum: WuuBravoEnumMikeBravo
+  - name: wupdc15
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 30
+    bit_size: 2
+    enum: WuuBravoEnumNovemberBravo
+fieldset/WuuBravoFieldsetHotel:
+  description: Pin DMA/Trigger Configuration 2.
+  fields:
+  - name: wupdc16
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 0
+    bit_size: 2
+    enum: WuuBravoEnumOscarBravo
+  - name: wupdc17
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 2
+    bit_size: 2
+    enum: WuuBravoEnumPapaBravo
+  - name: wupdc18
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 4
+    bit_size: 2
+    enum: WuuBravoEnumQuebecBravo
+  - name: wupdc19
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 6
+    bit_size: 2
+    enum: WuuBravoEnumRomeoBravo
+  - name: wupdc20
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 8
+    bit_size: 2
+    enum: WuuBravoEnumTangoBravo
+  - name: wupdc21
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 10
+    bit_size: 2
+    enum: WuuBravoEnumUniformBravo
+  - name: wupdc22
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 12
+    bit_size: 2
+    enum: WuuBravoEnumVictorBravo
+  - name: wupdc23
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 14
+    bit_size: 2
+    enum: WuuBravoEnumWhiskeyBravo
+  - name: wupdc24
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 16
+    bit_size: 2
+    enum: WuuBravoEnumXrayBravo
+  - name: wupdc25
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 18
+    bit_size: 2
+    enum: WuuBravoEnumYankeeBravo
+  - name: wupdc26
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 20
+    bit_size: 2
+    enum: WuuBravoEnumZuluBravo
+  - name: wupdc27
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 22
+    bit_size: 2
+    enum: WuuBravoEnumAlphaCharlie
+  - name: wupdc28
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 24
+    bit_size: 2
+    enum: WuuBravoEnumBravoCharlie
+  - name: wupdc29
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 26
+    bit_size: 2
+    enum: WuuBravoEnumCharlieCharlie
+  - name: wupdc30
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 28
+    bit_size: 2
+    enum: WuuBravoEnumEchoCharlie
+  - name: wupdc31
+    description: Wake-up Pin Configuration for WUU_Pn.
+    bit_offset: 30
+    bit_size: 2
+    enum: WuuBravoEnumFoxtrotCharlie
+fieldset/WuuBravoFieldsetIndia:
+  description: Pin Enable 1.
+  fields:
+  - name: wupe0
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 0
+    bit_size: 2
+    enum: WuuBravoEnumMikeCharlie
+  - name: wupe1
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 2
+    bit_size: 2
+    enum: WuuBravoEnumNovemberCharlie
+  - name: wupe2
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 4
+    bit_size: 2
+    enum: WuuBravoEnumYankeeCharlie
+  - name: wupe3
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 6
+    bit_size: 2
+    enum: WuuBravoEnumIndiaDelta
+  - name: wupe4
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 8
+    bit_size: 2
+    enum: WuuBravoEnumJulietDelta
+  - name: wupe5
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 10
+    bit_size: 2
+    enum: WuuBravoEnumKiloDelta
+  - name: wupe6
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 12
+    bit_size: 2
+    enum: WuuBravoEnumLimaDelta
+  - name: wupe7
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 14
+    bit_size: 2
+    enum: WuuBravoEnumMikeDelta
+  - name: wupe8
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 16
+    bit_size: 2
+    enum: WuuBravoEnumNovemberDelta
+  - name: wupe9
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 18
+    bit_size: 2
+    enum: WuuBravoEnumOscarDelta
+  - name: wupe10
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 20
+    bit_size: 2
+    enum: WuuBravoEnumOscarCharlie
+  - name: wupe11
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 22
+    bit_size: 2
+    enum: WuuBravoEnumPapaCharlie
+  - name: wupe12
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 24
+    bit_size: 2
+    enum: WuuBravoEnumQuebecCharlie
+  - name: wupe13
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 26
+    bit_size: 2
+    enum: WuuBravoEnumRomeoCharlie
+  - name: wupe14
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 28
+    bit_size: 2
+    enum: WuuBravoEnumSierraCharlie
+  - name: wupe15
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 30
+    bit_size: 2
+    enum: WuuBravoEnumTangoCharlie
+fieldset/WuuBravoFieldsetJuliet:
+  description: Pin Enable 2.
+  fields:
+  - name: wupe16
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 0
+    bit_size: 2
+    enum: WuuBravoEnumUniformCharlie
+  - name: wupe17
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 2
+    bit_size: 2
+    enum: WuuBravoEnumVictorCharlie
+  - name: wupe18
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 4
+    bit_size: 2
+    enum: WuuBravoEnumWhiskeyCharlie
+  - name: wupe19
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 6
+    bit_size: 2
+    enum: WuuBravoEnumXrayCharlie
+  - name: wupe20
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 8
+    bit_size: 2
+    enum: WuuBravoEnumZuluCharlie
+  - name: wupe21
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 10
+    bit_size: 2
+    enum: WuuBravoEnumAlphaDelta
+  - name: wupe22
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 12
+    bit_size: 2
+    enum: WuuBravoEnumBravoDelta
+  - name: wupe23
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 14
+    bit_size: 2
+    enum: WuuBravoEnumCharlieDelta
+  - name: wupe24
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 16
+    bit_size: 2
+    enum: WuuBravoEnumDeltaDelta
+  - name: wupe25
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 18
+    bit_size: 2
+    enum: WuuBravoEnumEchoDelta
+  - name: wupe26
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 20
+    bit_size: 2
+    enum: WuuBravoEnumFoxtrotDelta
+  - name: wupe27
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 22
+    bit_size: 2
+    enum: WuuBravoEnumGolfDelta
+  - name: wupe28
+    description: Wake-up Pin Enable for WUU_Pn.
+    bit_offset: 24
+    bit_size: 2
+    enum: WuuBravoEnumHotelDelta
+fieldset/WuuBravoFieldsetKilo:
+  description: Pin Flag.
+  fields:
+  - name: wuf0
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 0
+    bit_size: 1
+    enum: WuuBravoEnumTango
+  - name: wuf1
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 1
+    bit_size: 1
+    enum: WuuBravoEnumUniform
+  - name: wuf2
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 2
+    bit_size: 1
+    enum: WuuBravoEnumFoxtrotAlpha
+  - name: wuf3
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 3
+    bit_size: 1
+    enum: WuuBravoEnumPapaAlpha
+  - name: wuf4
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 4
+    bit_size: 1
+    enum: WuuBravoEnumQuebecAlpha
+  - name: wuf5
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 5
+    bit_size: 1
+    enum: WuuBravoEnumRomeoAlpha
+  - name: wuf6
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 6
+    bit_size: 1
+    enum: WuuBravoEnumSierraAlpha
+  - name: wuf7
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 7
+    bit_size: 1
+    enum: WuuBravoEnumTangoAlpha
+  - name: wuf8
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 8
+    bit_size: 1
+    enum: WuuBravoEnumUniformAlpha
+  - name: wuf9
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 9
+    bit_size: 1
+    enum: WuuBravoEnumVictorAlpha
+  - name: wuf10
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 10
+    bit_size: 1
+    enum: WuuBravoEnumVictor
+  - name: wuf11
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 11
+    bit_size: 1
+    enum: WuuBravoEnumWhiskey
+  - name: wuf12
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 12
+    bit_size: 1
+    enum: WuuBravoEnumXray
+  - name: wuf13
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 13
+    bit_size: 1
+    enum: WuuBravoEnumYankee
+  - name: wuf14
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 14
+    bit_size: 1
+    enum: WuuBravoEnumZulu
+  - name: wuf15
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 15
+    bit_size: 1
+    enum: WuuBravoEnumAlphaAlpha
+  - name: wuf16
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 16
+    bit_size: 1
+    enum: WuuBravoEnumBravoAlpha
+  - name: wuf17
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 17
+    bit_size: 1
+    enum: WuuBravoEnumCharlieAlpha
+  - name: wuf18
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 18
+    bit_size: 1
+    enum: WuuBravoEnumDeltaAlpha
+  - name: wuf19
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 19
+    bit_size: 1
+    enum: WuuBravoEnumEchoAlpha
+  - name: wuf20
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 20
+    bit_size: 1
+    enum: WuuBravoEnumGolfAlpha
+  - name: wuf21
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 21
+    bit_size: 1
+    enum: WuuBravoEnumHotelAlpha
+  - name: wuf22
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 22
+    bit_size: 1
+    enum: WuuBravoEnumIndiaAlpha
+  - name: wuf23
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 23
+    bit_size: 1
+    enum: WuuBravoEnumJulietAlpha
+  - name: wuf24
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 24
+    bit_size: 1
+    enum: WuuBravoEnumKiloAlpha
+  - name: wuf25
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 25
+    bit_size: 1
+    enum: WuuBravoEnumLimaAlpha
+  - name: wuf26
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 26
+    bit_size: 1
+    enum: WuuBravoEnumMikeAlpha
+  - name: wuf27
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 27
+    bit_size: 1
+    enum: WuuBravoEnumNovemberAlpha
+  - name: wuf28
+    description: Wake-up Flag for WUU_Pn.
+    bit_offset: 28
+    bit_size: 1
+    enum: WuuBravoEnumOscarAlpha
+fieldset/WuuBravoFieldsetLima:
+  description: Pin Mode Configuration.
+  fields:
+  - name: wupmc0
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 0
+    bit_size: 1
+    enum: WuuBravoEnumPapaDelta
+  - name: wupmc1
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 1
+    bit_size: 1
+    enum: WuuBravoEnumQuebecDelta
+  - name: wupmc2
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 2
+    bit_size: 1
+    enum: WuuBravoEnumBravoEcho
+  - name: wupmc3
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 3
+    bit_size: 1
+    enum: WuuBravoEnumMikeEcho
+  - name: wupmc4
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 4
+    bit_size: 1
+    enum: WuuBravoEnumPapaEcho
+  - name: wupmc5
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 5
+    bit_size: 1
+    enum: WuuBravoEnumQuebecEcho
+  - name: wupmc6
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 6
+    bit_size: 1
+    enum: WuuBravoEnumRomeoEcho
+  - name: wupmc7
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 7
+    bit_size: 1
+    enum: WuuBravoEnumSierraEcho
+  - name: wupmc8
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 8
+    bit_size: 1
+    enum: WuuBravoEnumTangoEcho
+  - name: wupmc9
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 9
+    bit_size: 1
+    enum: WuuBravoEnumUniformEcho
+  - name: wupmc10
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 10
+    bit_size: 1
+    enum: WuuBravoEnumRomeoDelta
+  - name: wupmc11
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 11
+    bit_size: 1
+    enum: WuuBravoEnumSierraDelta
+  - name: wupmc12
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 12
+    bit_size: 1
+    enum: WuuBravoEnumTangoDelta
+  - name: wupmc13
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 13
+    bit_size: 1
+    enum: WuuBravoEnumUniformDelta
+  - name: wupmc14
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 14
+    bit_size: 1
+    enum: WuuBravoEnumVictorDelta
+  - name: wupmc15
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 15
+    bit_size: 1
+    enum: WuuBravoEnumWhiskeyDelta
+  - name: wupmc16
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 16
+    bit_size: 1
+    enum: WuuBravoEnumXrayDelta
+  - name: wupmc17
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 17
+    bit_size: 1
+    enum: WuuBravoEnumYankeeDelta
+  - name: wupmc18
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 18
+    bit_size: 1
+    enum: WuuBravoEnumZuluDelta
+  - name: wupmc19
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 19
+    bit_size: 1
+    enum: WuuBravoEnumAlphaEcho
+  - name: wupmc20
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 20
+    bit_size: 1
+    enum: WuuBravoEnumCharlieEcho
+  - name: wupmc21
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 21
+    bit_size: 1
+    enum: WuuBravoEnumDeltaEcho
+  - name: wupmc22
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 22
+    bit_size: 1
+    enum: WuuBravoEnumEchoEcho
+  - name: wupmc23
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 23
+    bit_size: 1
+    enum: WuuBravoEnumFoxtrotEcho
+  - name: wupmc24
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 24
+    bit_size: 1
+    enum: WuuBravoEnumGolfEcho
+  - name: wupmc25
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 25
+    bit_size: 1
+    enum: WuuBravoEnumHotelEcho
+  - name: wupmc26
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 26
+    bit_size: 1
+    enum: WuuBravoEnumIndiaEcho
+  - name: wupmc27
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 27
+    bit_size: 1
+    enum: WuuBravoEnumJulietEcho
+  - name: wupmc28
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 28
+    bit_size: 1
+    enum: WuuBravoEnumKiloEcho
+  - name: wupmc29
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 29
+    bit_size: 1
+    enum: WuuBravoEnumLimaEcho
+  - name: wupmc30
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 30
+    bit_size: 1
+    enum: WuuBravoEnumNovemberEcho
+  - name: wupmc31
+    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    bit_offset: 31
+    bit_size: 1
+    enum: WuuBravoEnumOscarEcho
+fieldset/WuuBravoFieldsetMike:
+  description: Version ID.
+  fields:
+  - name: feature
+    description: Feature Specification Number.
+    bit_offset: 0
+    bit_size: 16
+    enum: WuuBravoEnumAlpha
+  - name: minor
+    description: Minor Version Number.
+    bit_offset: 16
+    bit_size: 8
+  - name: major
+    description: Major Version Number.
+    bit_offset: 24
+    bit_size: 8
+enum/WuuAlphaEnumAlpha:
+  bit_size: 16
+  variants:
+  - name: Standard
+    description: Standard features implemented.
+    value: 0
+  - name: FiltAllPwr
+    description: Support for DMA/Trigger generation from wake-up pins and filters enabled. Support for external pin/filter detection during all power modes enabled.
+    value: 1
+enum/WuuAlphaEnumAlphaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuAlphaEnumAlphaBravo:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuAlphaEnumAlphaCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuAlphaEnumAlphaDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuAlphaEnumAlphaEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuAlphaEnumAlphaFoxtrot:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuAlphaEnumBravo:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuAlphaEnumBravoAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuAlphaEnumBravoBravo:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuAlphaEnumBravoCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuAlphaEnumBravoDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuAlphaEnumBravoEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuAlphaEnumCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuAlphaEnumCharlieAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuAlphaEnumCharlieBravo:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuAlphaEnumCharlieCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuAlphaEnumCharlieDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuAlphaEnumCharlieEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuAlphaEnumDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (Detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (Detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (Detect on any edge).
+    value: 3
+enum/WuuAlphaEnumDeltaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuAlphaEnumDeltaBravo:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuAlphaEnumDeltaCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuAlphaEnumDeltaDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuAlphaEnumDeltaEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuAlphaEnumEcho:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (Detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (Detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (Detect on any edge).
+    value: 3
+enum/WuuAlphaEnumEchoAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuAlphaEnumEchoBravo:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuAlphaEnumEchoCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuAlphaEnumEchoDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuAlphaEnumEchoEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuAlphaEnumFoxtrot:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuAlphaEnumFoxtrotAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuAlphaEnumFoxtrotBravo:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuAlphaEnumFoxtrotCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuAlphaEnumFoxtrotDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuAlphaEnumFoxtrotEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuAlphaEnumGolf:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuAlphaEnumGolfAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuAlphaEnumGolfBravo:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuAlphaEnumGolfCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuAlphaEnumGolfDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuAlphaEnumGolfEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuAlphaEnumHotel:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during Power Down/Deep Power Down mode.
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes.
+    value: 1
+enum/WuuAlphaEnumHotelAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuAlphaEnumHotelBravo:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuAlphaEnumHotelCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuAlphaEnumHotelDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuAlphaEnumHotelEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuAlphaEnumIndia:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during Power Down/Deep Power Down mode.
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes.
+    value: 1
+enum/WuuAlphaEnumIndiaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuAlphaEnumIndiaBravo:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuAlphaEnumIndiaCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuAlphaEnumIndiaDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuAlphaEnumIndiaEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuAlphaEnumJuliet:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Not supported.
+    value: 0
+  - name: DmaReq
+    description: Not supported.
+    value: 1
+  - name: Trigger
+    description: Not supported.
+    value: 2
+  - name: Res
+    description: Not supported.
+    value: 3
+enum/WuuAlphaEnumJulietAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuAlphaEnumJulietBravo:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuAlphaEnumJulietCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuAlphaEnumJulietDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuAlphaEnumJulietEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuAlphaEnumKilo:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Not supported.
+    value: 0
+  - name: DmaReq
+    description: Not supported.
+    value: 1
+  - name: Trigger
+    description: Not supported.
+    value: 2
+  - name: Res
+    description: Not supported.
+    value: 3
+enum/WuuAlphaEnumKiloAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuAlphaEnumKiloBravo:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuAlphaEnumKiloCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuAlphaEnumKiloDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuAlphaEnumKiloEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuAlphaEnumLima:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Not supported.
+    value: 0
+  - name: DmaReq
+    description: Not supported.
+    value: 1
+  - name: Trigger
+    description: Not supported.
+    value: 2
+  - name: Res
+    description: Not supported.
+    value: 3
+enum/WuuAlphaEnumLimaAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuAlphaEnumLimaBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuAlphaEnumLimaCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuAlphaEnumLimaDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuAlphaEnumLimaEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuAlphaEnumMike:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Not supported.
+    value: 0
+  - name: DmaReq
+    description: Not supported.
+    value: 1
+  - name: Trigger
+    description: Not supported.
+    value: 2
+  - name: Res
+    description: Not supported.
+    value: 3
+enum/WuuAlphaEnumMikeAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuAlphaEnumMikeBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuAlphaEnumMikeCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuAlphaEnumMikeDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuAlphaEnumMikeEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuAlphaEnumNovember:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Not supported.
+    value: 0
+  - name: EnRiseHi
+    description: Not supported.
+    value: 1
+  - name: EnFallLo
+    description: Not supported.
+    value: 2
+  - name: EnAny
+    description: Not supported.
+    value: 3
+enum/WuuAlphaEnumNovemberAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuAlphaEnumNovemberBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuAlphaEnumNovemberCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuAlphaEnumNovemberDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuAlphaEnumNovemberEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuAlphaEnumOscar:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Not supported.
+    value: 0
+  - name: EnRiseHi
+    description: Not supported.
+    value: 1
+  - name: EnFallLo
+    description: Not supported.
+    value: 2
+  - name: EnAny
+    description: Not supported.
+    value: 3
+enum/WuuAlphaEnumOscarAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuAlphaEnumOscarBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuAlphaEnumOscarCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuAlphaEnumOscarDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuAlphaEnumOscarEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuAlphaEnumPapa:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Not supported.
+    value: 0
+  - name: EnRiseHi
+    description: Not supported.
+    value: 1
+  - name: EnFallLo
+    description: Not supported.
+    value: 2
+  - name: EnAny
+    description: Not supported.
+    value: 3
+enum/WuuAlphaEnumPapaAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuAlphaEnumPapaBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuAlphaEnumPapaCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuAlphaEnumPapaDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuAlphaEnumPapaEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuAlphaEnumQuebec:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Not supported.
+    value: 0
+  - name: EnRiseHi
+    description: Not supported.
+    value: 1
+  - name: EnFallLo
+    description: Not supported.
+    value: 2
+  - name: EnAny
+    description: Not supported.
+    value: 3
+enum/WuuAlphaEnumQuebecAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuAlphaEnumQuebecBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuAlphaEnumQuebecCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuAlphaEnumQuebecDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuAlphaEnumQuebecEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuAlphaEnumRomeo:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: Not supported.
+    value: 0
+  - name: Flag
+    description: Not supported.
+    value: 1
+enum/WuuAlphaEnumRomeoAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuAlphaEnumRomeoBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuAlphaEnumRomeoCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuAlphaEnumRomeoDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuAlphaEnumRomeoEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuAlphaEnumSierra:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: Not supported.
+    value: 0
+  - name: Flag
+    description: Not supported.
+    value: 1
+enum/WuuAlphaEnumSierraAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuAlphaEnumSierraBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuAlphaEnumSierraCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuAlphaEnumSierraDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuAlphaEnumSierraEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuAlphaEnumTango:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: Not supported.
+    value: 0
+  - name: Flag
+    description: Not supported.
+    value: 1
+enum/WuuAlphaEnumTangoAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuAlphaEnumTangoBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuAlphaEnumTangoCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuAlphaEnumTangoDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuAlphaEnumTangoEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuAlphaEnumUniform:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: Not supported.
+    value: 0
+  - name: Flag
+    description: Not supported.
+    value: 1
+enum/WuuAlphaEnumUniformAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuAlphaEnumUniformBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuAlphaEnumUniformCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuAlphaEnumUniformDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuAlphaEnumUniformEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuAlphaEnumVictor:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Not supported.
+    value: 0
+  - name: AnyPwr
+    description: Not supported.
+    value: 1
+enum/WuuAlphaEnumVictorAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuAlphaEnumVictorBravo:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuAlphaEnumVictorCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuAlphaEnumVictorDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuAlphaEnumVictorEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuAlphaEnumWhiskey:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Not supported.
+    value: 0
+  - name: AnyPwr
+    description: Not supported.
+    value: 1
+enum/WuuAlphaEnumWhiskeyAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuAlphaEnumWhiskeyBravo:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuAlphaEnumWhiskeyCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuAlphaEnumWhiskeyDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuAlphaEnumWhiskeyEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuAlphaEnumXray:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Not supported.
+    value: 0
+  - name: AnyPwr
+    description: Not supported.
+    value: 1
+enum/WuuAlphaEnumXrayAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuAlphaEnumXrayBravo:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuAlphaEnumXrayCharlie:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuAlphaEnumXrayDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuAlphaEnumXrayEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuAlphaEnumYankee:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Not supported.
+    value: 0
+  - name: AnyPwr
+    description: Not supported.
+    value: 1
+enum/WuuAlphaEnumYankeeAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuAlphaEnumYankeeBravo:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuAlphaEnumYankeeCharlie:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuAlphaEnumYankeeDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuAlphaEnumYankeeEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuAlphaEnumZulu:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuAlphaEnumZuluAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuAlphaEnumZuluBravo:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuAlphaEnumZuluCharlie:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuAlphaEnumZuluDelta:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuAlphaEnumZuluEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumAlpha:
+  bit_size: 16
+  variants:
+  - name: Standard
+    description: Standard features implemented.
+    value: 0
+  - name: FiltAllPwr
+    description: Support for DMA/Trigger generation from wake-up pins and filters enabled. Support for external pin/filter detection during all power modes enabled.
+    value: 1
+enum/WuuBravoEnumAlphaAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumAlphaBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuBravoEnumAlphaCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumAlphaDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuBravoEnumAlphaEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumBravo:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumBravoAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumBravoBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuBravoEnumBravoCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumBravoDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuBravoEnumBravoEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumCharlieAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumCharlieBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuBravoEnumCharlieCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumCharlieDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuBravoEnumCharlieEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (Detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (Detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (Detect on any edge).
+    value: 3
+enum/WuuBravoEnumDeltaAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumDeltaBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuBravoEnumDeltaCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumDeltaDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuBravoEnumDeltaEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumEcho:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (Detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (Detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (Detect on any edge).
+    value: 3
+enum/WuuBravoEnumEchoAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumEchoBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuBravoEnumEchoCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumEchoDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuBravoEnumEchoEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumFoxtrot:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumFoxtrotAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumFoxtrotBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuBravoEnumFoxtrotCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumFoxtrotDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuBravoEnumFoxtrotEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumGolf:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumGolfAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumGolfBravo:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumGolfCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumGolfDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuBravoEnumGolfEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumHotel:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during Power Down/Deep Power Down mode.
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes.
+    value: 1
+enum/WuuBravoEnumHotelAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumHotelBravo:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumHotelCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumHotelDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuBravoEnumHotelEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumIndia:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during Power Down/Deep Power Down mode.
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes.
+    value: 1
+enum/WuuBravoEnumIndiaAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumIndiaBravo:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumIndiaCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumIndiaDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuBravoEnumIndiaEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumJuliet:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuBravoEnumJulietAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumJulietBravo:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumJulietCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumJulietDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuBravoEnumJulietEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumKilo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuBravoEnumKiloAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumKiloBravo:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumKiloCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumKiloDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuBravoEnumKiloEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumLima:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuBravoEnumLimaAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumLimaBravo:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumLimaCharlie:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumLimaDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuBravoEnumLimaEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumMike:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuBravoEnumMikeAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumMikeBravo:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumMikeCharlie:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuBravoEnumMikeDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuBravoEnumMikeEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumNovember:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuBravoEnumNovemberAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumNovemberBravo:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumNovemberCharlie:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuBravoEnumNovemberDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuBravoEnumNovemberEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumOscar:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuBravoEnumOscarAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumOscarBravo:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumOscarCharlie:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuBravoEnumOscarDelta:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuBravoEnumOscarEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumPapa:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuBravoEnumPapaAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumPapaBravo:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumPapaCharlie:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuBravoEnumPapaDelta:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumPapaEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumQuebec:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuBravoEnumQuebecAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumQuebecBravo:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumQuebecCharlie:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuBravoEnumQuebecDelta:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumQuebecEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumRomeo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuBravoEnumRomeoAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumRomeoBravo:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumRomeoCharlie:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuBravoEnumRomeoDelta:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumRomeoEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumSierra:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuBravoEnumSierraAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumSierraBravo:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumSierraCharlie:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuBravoEnumSierraDelta:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumSierraEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumTango:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumTangoAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumTangoBravo:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumTangoCharlie:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuBravoEnumTangoDelta:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumTangoEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumUniform:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumUniformAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumUniformBravo:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumUniformCharlie:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuBravoEnumUniformDelta:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumUniformEcho:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumVictor:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumVictorAlpha:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumVictorBravo:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumVictorCharlie:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuBravoEnumVictorDelta:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumWhiskey:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumWhiskeyAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuBravoEnumWhiskeyBravo:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumWhiskeyCharlie:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuBravoEnumWhiskeyDelta:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumXray:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumXrayAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuBravoEnumXrayBravo:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumXrayCharlie:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuBravoEnumXrayDelta:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumYankee:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumYankeeAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuBravoEnumYankeeBravo:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumYankeeCharlie:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuBravoEnumYankeeDelta:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1
+enum/WuuBravoEnumZulu:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No.
+    value: 0
+  - name: Flag
+    description: Yes.
+    value: 1
+enum/WuuBravoEnumZuluAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/WuuBravoEnumZuluBravo:
+  bit_size: 2
+  variants:
+  - name: Interrupt
+    description: Interrupt.
+    value: 0
+  - name: DmaReq
+    description: DMA request.
+    value: 1
+  - name: Trigger
+    description: Trigger event.
+    value: 2
+enum/WuuBravoEnumZuluCharlie:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: EnRiseHi
+    description: Enable (detect on rising edge or high level).
+    value: 1
+  - name: EnFallLo
+    description: Enable (detect on falling edge or low level).
+    value: 2
+  - name: EnAny
+    description: Enable (detect on any edge).
+    value: 3
+enum/WuuBravoEnumZuluDelta:
+  bit_size: 1
+  variants:
+  - name: LowPwrOnly
+    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 0
+  - name: AnyPwr
+    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
+    value: 1

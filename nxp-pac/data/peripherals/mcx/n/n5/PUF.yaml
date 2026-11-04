@@ -1,0 +1,915 @@
+# NXP mcux-soc-svd 7c1f00bdd6263f0b93466f5e73e5fc55a744b879; native chiptool import.
+# Source instance geometry is retained in explicit block variants; see private source bindings.
+# Unannotated fieldsets construct zero in software, not a claimed hardware reset.
+# Command/W1C/SET/CLR/TOG construction defaults are zero masks; no RMW semantics are implied.
+# Source: MCXN526_cm33_core0.xml PUF sha256 ccb0c8ecf3573e24bb8c15a32bdec8a6f63b8870ced5bb7b9b629177f5f990f3
+# Source: MCXN526_cm33_core0.xml PUF_ALIAS1 sha256 ccb0c8ecf3573e24bb8c15a32bdec8a6f63b8870ced5bb7b9b629177f5f990f3
+# Source: MCXN526_cm33_core0.xml PUF_ALIAS2 sha256 ccb0c8ecf3573e24bb8c15a32bdec8a6f63b8870ced5bb7b9b629177f5f990f3
+# Source: MCXN526_cm33_core0.xml PUF_ALIAS3 sha256 ccb0c8ecf3573e24bb8c15a32bdec8a6f63b8870ced5bb7b9b629177f5f990f3
+# Source: MCXN526_cm33_core1.xml PUF sha256 caf054982956506a2f2e6896e0b1e0eb1c3035684fd3093778a21bda218bfa09
+# Source: MCXN526_cm33_core1.xml PUF_ALIAS1 sha256 caf054982956506a2f2e6896e0b1e0eb1c3035684fd3093778a21bda218bfa09
+# Source: MCXN526_cm33_core1.xml PUF_ALIAS2 sha256 caf054982956506a2f2e6896e0b1e0eb1c3035684fd3093778a21bda218bfa09
+# Source: MCXN526_cm33_core1.xml PUF_ALIAS3 sha256 caf054982956506a2f2e6896e0b1e0eb1c3035684fd3093778a21bda218bfa09
+# Source: MCXN527_cm33_core0.xml PUF sha256 5547fbb406e6e825ebc2f983518a5893814d62c3a6e2c5ad6075c49d939c8e17
+# Source: MCXN527_cm33_core0.xml PUF_ALIAS1 sha256 5547fbb406e6e825ebc2f983518a5893814d62c3a6e2c5ad6075c49d939c8e17
+# Source: MCXN527_cm33_core0.xml PUF_ALIAS2 sha256 5547fbb406e6e825ebc2f983518a5893814d62c3a6e2c5ad6075c49d939c8e17
+# Source: MCXN527_cm33_core0.xml PUF_ALIAS3 sha256 5547fbb406e6e825ebc2f983518a5893814d62c3a6e2c5ad6075c49d939c8e17
+# Source: MCXN527_cm33_core1.xml PUF sha256 daac6c4d6fdbbdc87d7557ed9e567801921eca1e8107fc3f9f38173be3c936e0
+# Source: MCXN527_cm33_core1.xml PUF_ALIAS1 sha256 daac6c4d6fdbbdc87d7557ed9e567801921eca1e8107fc3f9f38173be3c936e0
+# Source: MCXN527_cm33_core1.xml PUF_ALIAS2 sha256 daac6c4d6fdbbdc87d7557ed9e567801921eca1e8107fc3f9f38173be3c936e0
+# Source: MCXN527_cm33_core1.xml PUF_ALIAS3 sha256 daac6c4d6fdbbdc87d7557ed9e567801921eca1e8107fc3f9f38173be3c936e0
+# Source: MCXN536_cm33_core0.xml PUF sha256 f9533e58d74eab222fc38608bd1d8dc45087e87b80a93f8b693e6cf2eb25cba4
+# Source: MCXN536_cm33_core0.xml PUF_ALIAS1 sha256 f9533e58d74eab222fc38608bd1d8dc45087e87b80a93f8b693e6cf2eb25cba4
+# Source: MCXN536_cm33_core0.xml PUF_ALIAS2 sha256 f9533e58d74eab222fc38608bd1d8dc45087e87b80a93f8b693e6cf2eb25cba4
+# Source: MCXN536_cm33_core0.xml PUF_ALIAS3 sha256 f9533e58d74eab222fc38608bd1d8dc45087e87b80a93f8b693e6cf2eb25cba4
+# Source: MCXN536_cm33_core1.xml PUF sha256 c089aecac3d73a7d8fc4a8c0cccf77ea8446b22a2ea99f4f2f01a4e0ca3a2fdd
+# Source: MCXN536_cm33_core1.xml PUF_ALIAS1 sha256 c089aecac3d73a7d8fc4a8c0cccf77ea8446b22a2ea99f4f2f01a4e0ca3a2fdd
+# Source: MCXN536_cm33_core1.xml PUF_ALIAS2 sha256 c089aecac3d73a7d8fc4a8c0cccf77ea8446b22a2ea99f4f2f01a4e0ca3a2fdd
+# Source: MCXN536_cm33_core1.xml PUF_ALIAS3 sha256 c089aecac3d73a7d8fc4a8c0cccf77ea8446b22a2ea99f4f2f01a4e0ca3a2fdd
+# Source: MCXN537_cm33_core0.xml PUF sha256 e72dbd80d33e6f53f05f11156fc20f6d53cf9848bc74fed80b5c34157455b11a
+# Source: MCXN537_cm33_core0.xml PUF_ALIAS1 sha256 e72dbd80d33e6f53f05f11156fc20f6d53cf9848bc74fed80b5c34157455b11a
+# Source: MCXN537_cm33_core0.xml PUF_ALIAS2 sha256 e72dbd80d33e6f53f05f11156fc20f6d53cf9848bc74fed80b5c34157455b11a
+# Source: MCXN537_cm33_core0.xml PUF_ALIAS3 sha256 e72dbd80d33e6f53f05f11156fc20f6d53cf9848bc74fed80b5c34157455b11a
+# Source: MCXN537_cm33_core1.xml PUF sha256 4d5f7d121166c4d720a9da81b90be1b2f93be5e71fd25b9dd74b8715ebe30dce
+# Source: MCXN537_cm33_core1.xml PUF_ALIAS1 sha256 4d5f7d121166c4d720a9da81b90be1b2f93be5e71fd25b9dd74b8715ebe30dce
+# Source: MCXN537_cm33_core1.xml PUF_ALIAS2 sha256 4d5f7d121166c4d720a9da81b90be1b2f93be5e71fd25b9dd74b8715ebe30dce
+# Source: MCXN537_cm33_core1.xml PUF_ALIAS3 sha256 4d5f7d121166c4d720a9da81b90be1b2f93be5e71fd25b9dd74b8715ebe30dce
+# Source: MCXN546_cm33_core0.xml PUF sha256 54e1fc060f9ccc17299bdb2da84159e699e87456276f2e695d440a6eb4aa9aad
+# Source: MCXN546_cm33_core0.xml PUF_ALIAS1 sha256 54e1fc060f9ccc17299bdb2da84159e699e87456276f2e695d440a6eb4aa9aad
+# Source: MCXN546_cm33_core0.xml PUF_ALIAS2 sha256 54e1fc060f9ccc17299bdb2da84159e699e87456276f2e695d440a6eb4aa9aad
+# Source: MCXN546_cm33_core0.xml PUF_ALIAS3 sha256 54e1fc060f9ccc17299bdb2da84159e699e87456276f2e695d440a6eb4aa9aad
+# Source: MCXN546_cm33_core1.xml PUF sha256 ddb7e932730a51c75f544efd6564ad6dbce5b3eca0a7befb7ab5b74a9951b937
+# Source: MCXN546_cm33_core1.xml PUF_ALIAS1 sha256 ddb7e932730a51c75f544efd6564ad6dbce5b3eca0a7befb7ab5b74a9951b937
+# Source: MCXN546_cm33_core1.xml PUF_ALIAS2 sha256 ddb7e932730a51c75f544efd6564ad6dbce5b3eca0a7befb7ab5b74a9951b937
+# Source: MCXN546_cm33_core1.xml PUF_ALIAS3 sha256 ddb7e932730a51c75f544efd6564ad6dbce5b3eca0a7befb7ab5b74a9951b937
+# Source: MCXN547_cm33_core0.xml PUF sha256 a276aee072bebd57c18929fe9a74408366fdbb42b918e06be5a3783a4aae4db7
+# Source: MCXN547_cm33_core0.xml PUF_ALIAS1 sha256 a276aee072bebd57c18929fe9a74408366fdbb42b918e06be5a3783a4aae4db7
+# Source: MCXN547_cm33_core0.xml PUF_ALIAS2 sha256 a276aee072bebd57c18929fe9a74408366fdbb42b918e06be5a3783a4aae4db7
+# Source: MCXN547_cm33_core0.xml PUF_ALIAS3 sha256 a276aee072bebd57c18929fe9a74408366fdbb42b918e06be5a3783a4aae4db7
+# Source: MCXN547_cm33_core1.xml PUF sha256 4a265743bdd2130cdd37ef12b9fd1d538cce9a2eac1c9149db291b7638e61423
+# Source: MCXN547_cm33_core1.xml PUF_ALIAS1 sha256 4a265743bdd2130cdd37ef12b9fd1d538cce9a2eac1c9149db291b7638e61423
+# Source: MCXN547_cm33_core1.xml PUF_ALIAS2 sha256 4a265743bdd2130cdd37ef12b9fd1d538cce9a2eac1c9149db291b7638e61423
+# Source: MCXN547_cm33_core1.xml PUF_ALIAS3 sha256 4a265743bdd2130cdd37ef12b9fd1d538cce9a2eac1c9149db291b7638e61423
+block/PufAlpha:
+  description: PUF.
+  items:
+  - name: cr
+    description: Control.
+    byte_offset: 0
+    fieldset: PufAlphaFieldsetBravo
+  - name: orr
+    description: Operation Result.
+    byte_offset: 4
+    access: Read
+    fieldset: PufAlphaFieldsetQuebec
+  - name: sr
+    description: Status.
+    byte_offset: 8
+    fieldset: PufAlphaFieldsetSierra
+  - name: ar
+    description: Allow.
+    byte_offset: 12
+    access: Read
+    fieldset: PufAlphaFieldsetAlpha
+  - name: ier
+    description: Interrupt Enable.
+    byte_offset: 16
+    fieldset: PufAlphaFieldsetLima
+  - name: imr
+    description: Interrupt Mask.
+    byte_offset: 20
+    fieldset: PufAlphaFieldsetNovember
+  - name: isr
+    description: Interrupt Status.
+    byte_offset: 24
+    fieldset: PufAlphaFieldsetOscar
+  - name: data_dest
+    description: Data Destination.
+    byte_offset: 32
+    fieldset: PufAlphaFieldsetCharlie
+  - name: data_src
+    description: Data Source.
+    byte_offset: 36
+    fieldset: PufAlphaFieldsetDelta
+  - name: dir
+    description: Data Input.
+    byte_offset: 160
+    access: Write
+    fieldset: PufAlphaFieldsetEcho
+  - name: dor
+    description: Data Output.
+    byte_offset: 168
+    access: Read
+    fieldset: PufAlphaFieldsetFoxtrot
+  - name: misc
+    description: Miscellaneous.
+    byte_offset: 192
+    fieldset: PufAlphaFieldsetPapa
+  - name: if_sr
+    description: Interface Status.
+    byte_offset: 208
+    fieldset: PufAlphaFieldsetMike
+  - name: psr
+    description: PUF Score.
+    byte_offset: 220
+    access: Read
+    fieldset: PufAlphaFieldsetRomeo
+  - name: hw_ruc0
+    description: Hardware Restrict User Context 0.
+    byte_offset: 224
+    access: Read
+    fieldset: PufAlphaFieldsetIndia
+  - name: hw_ruc1
+    description: Hardware Restrict User Context 1.
+    byte_offset: 228
+    access: Read
+    fieldset: PufAlphaFieldsetJuliet
+  - name: hw_info
+    description: Hardware Information.
+    byte_offset: 244
+    access: Read
+    fieldset: PufAlphaFieldsetHotel
+  - name: hw_id
+    description: Hardware Identifier.
+    byte_offset: 248
+    access: Read
+    fieldset: PufAlphaFieldsetGolf
+  - name: hw_ver
+    description: Hardware Version.
+    byte_offset: 252
+    access: Read
+    fieldset: PufAlphaFieldsetKilo
+  - name: sram_cfg
+    description: SRAM Configuration.
+    byte_offset: 768
+    fieldset: PufAlphaFieldsetTango
+  - name: sram_status
+    description: Status.
+    byte_offset: 772
+    access: Read
+    fieldset: PufAlphaFieldsetAlphaAlpha
+  - name: sram_int_clr_enable
+    description: Interrupt Enable Clear.
+    byte_offset: 984
+    access: Write
+    fieldset: PufAlphaFieldsetUniform
+  - name: sram_int_set_enable
+    description: Interrupt Enable Set.
+    byte_offset: 988
+    access: Write
+    fieldset: PufAlphaFieldsetXray
+  - name: sram_int_status
+    description: Interrupt Status.
+    byte_offset: 992
+    access: Read
+    fieldset: PufAlphaFieldsetZulu
+  - name: sram_int_enable
+    description: Interrupt Enable.
+    byte_offset: 996
+    access: Read
+    fieldset: PufAlphaFieldsetWhiskey
+  - name: sram_int_clr_status
+    description: Interrupt Status Clear.
+    byte_offset: 1000
+    access: Write
+    fieldset: PufAlphaFieldsetVictor
+  - name: sram_int_set_status
+    description: Interrupt Status set.
+    byte_offset: 1004
+    access: Write
+    fieldset: PufAlphaFieldsetYankee
+fieldset/PufAlphaFieldsetAlpha:
+  description: Allow.
+  fields:
+  - name: allow_enroll
+    description: Enroll operation.
+    bit_offset: 1
+    bit_size: 1
+    enum: PufAlphaEnumAlpha
+  - name: allow_start
+    description: Start operation.
+    bit_offset: 2
+    bit_size: 1
+    enum: PufAlphaEnumEcho
+  - name: allow_reconstruct
+    description: Reconstruct operation.
+    bit_offset: 3
+    bit_size: 1
+    enum: PufAlphaEnumDelta
+  - name: allow_stop
+    description: Stop operation.
+    bit_offset: 5
+    bit_size: 1
+    enum: PufAlphaEnumFoxtrot
+  - name: allow_get_key
+    description: Get Key operation.
+    bit_offset: 6
+    bit_size: 1
+    enum: PufAlphaEnumCharlie
+  - name: allow_unwrap
+    description: Unwrap operation.
+    bit_offset: 7
+    bit_size: 1
+    enum: PufAlphaEnumIndia
+  - name: allow_wrap_generated_random
+    description: Wrap Generated Random operation.
+    bit_offset: 8
+    bit_size: 1
+    enum: PufAlphaEnumKilo
+  - name: allow_wrap
+    description: Wrap operation.
+    bit_offset: 9
+    bit_size: 1
+    enum: PufAlphaEnumJuliet
+  - name: allow_generate_random
+    description: Generate Random operation.
+    bit_offset: 15
+    bit_size: 1
+    enum: PufAlphaEnumBravo
+  - name: allow_test_memory
+    description: no description available.
+    bit_offset: 30
+    bit_size: 1
+    enum: PufAlphaEnumGolf
+  - name: allow_test_puf
+    description: Test PUF operation.
+    bit_offset: 31
+    bit_size: 1
+    enum: PufAlphaEnumHotel
+fieldset/PufAlphaFieldsetBravo:
+  description: Control.
+  fields:
+  - name: zeroize
+    description: Zeroize operation.
+    bit_offset: 0
+    bit_size: 1
+  - name: enroll
+    description: Enroll operation.
+    bit_offset: 1
+    bit_size: 1
+  - name: start
+    description: Start operation.
+    bit_offset: 2
+    bit_size: 1
+  - name: reconstruct
+    description: Reconstruct operation.
+    bit_offset: 3
+    bit_size: 1
+  - name: stop
+    description: Stop operation.
+    bit_offset: 5
+    bit_size: 1
+  - name: get_key
+    description: Get Key operation.
+    bit_offset: 6
+    bit_size: 1
+  - name: unwrap
+    description: Unwrap operation.
+    bit_offset: 7
+    bit_size: 1
+  - name: wrap_generated_random
+    description: Wrap Generated Random operation.
+    bit_offset: 8
+    bit_size: 1
+  - name: wrap
+    description: Wrap operation.
+    bit_offset: 9
+    bit_size: 1
+  - name: generate_random
+    description: Generate Random operation.
+    bit_offset: 15
+    bit_size: 1
+  - name: test_memory
+    description: Test memory operation.
+    bit_offset: 30
+    bit_size: 1
+  - name: test_puf
+    description: Test PUF operation.
+    bit_offset: 31
+    bit_size: 1
+fieldset/PufAlphaFieldsetCharlie:
+  description: Data Destination.
+  fields:
+  - name: dest_dor
+    description: Key available via the DOR register.
+    bit_offset: 0
+    bit_size: 1
+  - name: dest_so
+    description: Key available to ELS.
+    bit_offset: 1
+    bit_size: 1
+fieldset/PufAlphaFieldsetDelta:
+  description: Data Source.
+  fields:
+  - name: src_dir
+    description: Data provided via the DIR register.
+    bit_offset: 0
+    bit_size: 1
+  - name: src_si
+    description: Data provided via the SI interface.
+    bit_offset: 1
+    bit_size: 1
+fieldset/PufAlphaFieldsetEcho:
+  description: Data Input.
+  fields:
+  - name: di
+    description: Input data.
+    bit_offset: 0
+    bit_size: 32
+fieldset/PufAlphaFieldsetFoxtrot:
+  description: Data Output.
+  fields:
+  - name: do_
+    description: Output data.
+    bit_offset: 0
+    bit_size: 32
+fieldset/PufAlphaFieldsetGolf:
+  description: Hardware Identifier.
+  fields:
+  - name: hw_id
+    description: Provides the hardware identifier.
+    bit_offset: 0
+    bit_size: 32
+fieldset/PufAlphaFieldsetHotel:
+  description: Hardware Information.
+  fields:
+  - name: config_wrap
+    description: Wrap configuration.
+    bit_offset: 24
+    bit_size: 1
+    enum: PufAlphaEnumNovember
+  - name: config_type
+    description: PUF configuration.
+    bit_offset: 28
+    bit_size: 4
+    enum: PufAlphaEnumMike
+fieldset/PufAlphaFieldsetIndia:
+  description: Hardware Restrict User Context 0.
+  fields:
+  - name: lc_state
+    description: Life cycle state based restrictions.
+    bit_offset: 0
+    bit_size: 8
+    enum: PufAlphaEnumSierra
+  - name: boot_state
+    description: Temporal boot state.
+    bit_offset: 8
+    bit_size: 16
+  - name: cpu0_debug
+    description: Disable key access when debugger is attached to CPU0 after power-up.
+    bit_offset: 24
+    bit_size: 1
+  - name: coolflux_debug
+    description: Disable key access when debugger is attached to COOLFLUX after power-up.
+    bit_offset: 25
+    bit_size: 1
+  - name: dsp_debug
+    description: DSP debug status.
+    bit_offset: 26
+    bit_size: 1
+  - name: access_level
+    description: Restrict the key access based on TrustZone security level.
+    bit_offset: 28
+    bit_size: 4
+fieldset/PufAlphaFieldsetJuliet:
+  description: Hardware Restrict User Context 1.
+  fields:
+  - name: app_ctx
+    description: Application customizable context.
+    bit_offset: 0
+    bit_size: 32
+fieldset/PufAlphaFieldsetKilo:
+  description: Hardware Version.
+  fields:
+  - name: hw_rev
+    description: Provides the hardware version, patch part.
+    bit_offset: 0
+    bit_size: 8
+  - name: hw_version_minor
+    description: Provides the hardware version, minor part.
+    bit_offset: 8
+    bit_size: 8
+  - name: hw_version_major
+    description: Provides the hardware version, major part.
+    bit_offset: 16
+    bit_size: 8
+fieldset/PufAlphaFieldsetLima:
+  description: Interrupt Enable.
+  fields:
+  - name: int_en
+    description: Interrupt enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: PufAlphaEnumQuebec
+fieldset/PufAlphaFieldsetMike:
+  description: Interface Status.
+  fields:
+  - name: apb_error
+    description: APB error.
+    bit_offset: 0
+    bit_size: 1
+fieldset/PufAlphaFieldsetNovember:
+  description: Interrupt Mask.
+  fields:
+  - name: int_en_busy
+    description: Busy interrupt.
+    bit_offset: 0
+    bit_size: 1
+  - name: int_en_ok
+    description: Ok interrupt.
+    bit_offset: 1
+    bit_size: 1
+  - name: int_en_error
+    description: Error interrupt.
+    bit_offset: 2
+    bit_size: 1
+  - name: int_en_zeroized
+    description: Zeroized interrupt.
+    bit_offset: 3
+    bit_size: 1
+  - name: int_en_rejected
+    description: Rejected interrupt.
+    bit_offset: 4
+    bit_size: 1
+  - name: int_en_di_request
+    description: Data in request interrupt.
+    bit_offset: 5
+    bit_size: 1
+  - name: int_en_do_request
+    description: Data out request interrupt.
+    bit_offset: 6
+    bit_size: 1
+fieldset/PufAlphaFieldsetOscar:
+  description: Interrupt Status.
+  fields:
+  - name: int_busy
+    description: Negative edge occurred on Busy.
+    bit_offset: 0
+    bit_size: 1
+  - name: int_ok
+    description: Positive edge occurred on Ok.
+    bit_offset: 1
+    bit_size: 1
+  - name: int_error
+    description: Positive edge occurred on Error.
+    bit_offset: 2
+    bit_size: 1
+  - name: int_zeroized
+    description: Positive edge occurred on Zeroized.
+    bit_offset: 3
+    bit_size: 1
+  - name: int_rejected
+    description: Positive edge occurred on Rejected.
+    bit_offset: 4
+    bit_size: 1
+  - name: int_di_request
+    description: Positive edge occurred on di_request.
+    bit_offset: 5
+    bit_size: 1
+  - name: int_do_request
+    description: Positive edge occurred on do_request.
+    bit_offset: 6
+    bit_size: 1
+fieldset/PufAlphaFieldsetPapa:
+  description: Miscellaneous.
+  fields:
+  - name: data_endianness
+    description: Defines the endianness of data in DIR and DOR:.
+    bit_offset: 0
+    bit_size: 1
+    enum: PufAlphaEnumOscar
+fieldset/PufAlphaFieldsetQuebec:
+  description: Operation Result.
+  fields:
+  - name: result_code
+    description: Result code of last operation.
+    bit_offset: 0
+    bit_size: 8
+    enum: PufAlphaEnumUniform
+  - name: last_operation
+    description: Last operation type.
+    bit_offset: 24
+    bit_size: 8
+    enum: PufAlphaEnumRomeo
+fieldset/PufAlphaFieldsetRomeo:
+  description: PUF Score.
+  fields:
+  - name: puf_score
+    description: Provides the PUF score obtained during the last Test PUF, Enroll or Start operation.
+    bit_offset: 0
+    bit_size: 4
+fieldset/PufAlphaFieldsetSierra:
+  description: Status.
+  fields:
+  - name: busy
+    description: Operation in progress.
+    bit_offset: 0
+    bit_size: 1
+  - name: ok
+    description: Last operation successful.
+    bit_offset: 1
+    bit_size: 1
+  - name: error
+    description: Last operation failed.
+    bit_offset: 2
+    bit_size: 1
+  - name: zeroized
+    description: Zeroized or Locked state.
+    bit_offset: 3
+    bit_size: 1
+  - name: rejected
+    description: Operation rejected.
+    bit_offset: 4
+    bit_size: 1
+  - name: di_request
+    description: Indicates the request for data in transfer via the DIR register.
+    bit_offset: 5
+    bit_size: 1
+  - name: do_request
+    description: Indicates the request for data out transfer via the DOR register.
+    bit_offset: 6
+    bit_size: 1
+fieldset/PufAlphaFieldsetTango:
+  description: SRAM Configuration.
+  fields:
+  - name: enable
+    description: PUF SRAM Controller activation.
+    bit_offset: 0
+    bit_size: 1
+    enum: PufAlphaEnumPapa
+  - name: ckgating
+    description: PUF SRAM Clock Gating control.
+    bit_offset: 2
+    bit_size: 1
+    enum: PufAlphaEnumLima
+fieldset/PufAlphaFieldsetUniform:
+  description: Interrupt Enable Clear.
+  fields:
+  - name: ready
+    description: READY Interrupt Enable clear.
+    bit_offset: 0
+    bit_size: 1
+  - name: apb_err
+    description: APB_ERR Interrupt Enable clear.
+    bit_offset: 1
+    bit_size: 1
+fieldset/PufAlphaFieldsetVictor:
+  description: Interrupt Status Clear.
+  fields:
+  - name: ready
+    description: READY Interrupt Status clear.
+    bit_offset: 0
+    bit_size: 1
+  - name: apb_err
+    description: APB_ERR Interrupt Status Clear.
+    bit_offset: 1
+    bit_size: 1
+    enum: PufAlphaEnumWhiskey
+fieldset/PufAlphaFieldsetWhiskey:
+  description: Interrupt Enable.
+  fields:
+  - name: ready
+    description: READY Interrupt Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: PufAlphaEnumTango
+  - name: sram_apb_err
+    description: APB_ERR Interrupt Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PufAlphaEnumVictor
+fieldset/PufAlphaFieldsetXray:
+  description: Interrupt Enable Set.
+  fields:
+  - name: ready
+    description: READY Interrupt Enable set.
+    bit_offset: 0
+    bit_size: 1
+  - name: apb_err
+    description: APB_ERR Interrupt Enable set.
+    bit_offset: 1
+    bit_size: 1
+fieldset/PufAlphaFieldsetYankee:
+  description: Interrupt Status set.
+  fields:
+  - name: ready
+    description: READY Interrupt Status set.
+    bit_offset: 0
+    bit_size: 1
+  - name: apb_err
+    description: APB_ERR Interrupt Status Set.
+    bit_offset: 1
+    bit_size: 1
+    enum: PufAlphaEnumXray
+fieldset/PufAlphaFieldsetZulu:
+  description: Interrupt Status.
+  fields:
+  - name: ready
+    description: READY Interrupt Status.
+    bit_offset: 0
+    bit_size: 1
+  - name: apb_err
+    description: APB_ERR Interrupt Status.
+    bit_offset: 1
+    bit_size: 1
+fieldset/PufAlphaFieldsetAlphaAlpha:
+  description: Status.
+  fields:
+  - name: ready
+    description: PUF SRAM Controller State.
+    bit_offset: 0
+    bit_size: 1
+enum/PufAlphaEnumAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Indicates that the Enroll operation is not allowed.
+    value: 0
+  - name: Enable
+    description: Indicates that the Enroll operation is allowed.
+    value: 1
+enum/PufAlphaEnumBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Indicates that the Generate Random operation is not allowed.
+    value: 0
+  - name: Enable
+    description: Indicates that the Generate Random operation is allowed.
+    value: 1
+enum/PufAlphaEnumCharlie:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Indicates that the Get Key operation is not allowed.
+    value: 0
+  - name: Enable
+    description: Indicates that the Get Key operation is allowed.
+    value: 1
+enum/PufAlphaEnumDelta:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Indicates that the Reconstruct operation is not allowed.
+    value: 0
+  - name: Enable
+    description: Indicates that the Reconstruct operation is allowed.
+    value: 1
+enum/PufAlphaEnumEcho:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Indicates that the Start operation is not allowed.
+    value: 0
+  - name: Enable
+    description: Indicates that the Start operation is allowed.
+    value: 1
+enum/PufAlphaEnumFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Indicates that the Stop operation is not allowed.
+    value: 0
+  - name: Enable
+    description: Indicates that the Stop operation is allowed.
+    value: 1
+enum/PufAlphaEnumGolf:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Indicates that the Test Memory operation is not allowed.
+    value: 0
+  - name: Enable
+    description: Indicates that the Test Memory operation is allowed.
+    value: 1
+enum/PufAlphaEnumHotel:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Test PUF operation is not allowed.
+    value: 0
+  - name: Enable
+    description: Test PUF operation is allowed.
+    value: 1
+enum/PufAlphaEnumIndia:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Indicates that the Unwrap operation is not allowed.
+    value: 0
+  - name: Enable
+    description: Indicates that the Unwrap operation is allowed.
+    value: 1
+enum/PufAlphaEnumJuliet:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Indicates that the Wrap operation is not allowed.
+    value: 0
+  - name: Enable
+    description: Indicates that the Wrap operation is allowed.
+    value: 1
+enum/PufAlphaEnumKilo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Indicates that the Wrap Generated Random operation is not allowed.
+    value: 0
+  - name: Enable
+    description: Indicates that the Wrap Generated Random operation is allowed.
+    value: 1
+enum/PufAlphaEnumLima:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disabled.
+    value: 0
+  - name: Enable
+    description: Enabled.
+    value: 1
+enum/PufAlphaEnumMike:
+  bit_size: 4
+  variants:
+  - name: Plus
+    description: Indicates that PUF configuration is Plus.
+    value: 2
+  - name: Safe
+    description: Indicates that PUF configuration is Safe.
+    value: 1
+enum/PufAlphaEnumNovember:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Indicates that Wrap is included.
+    value: 1
+  - name: Enable
+    description: Indicates that Wrap is not included.
+    value: 0
+enum/PufAlphaEnumOscar:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Little endian.
+    value: 0
+  - name: Enable
+    description: Big endian (default).
+    value: 1
+enum/PufAlphaEnumPapa:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disabled.
+    value: 0
+  - name: Enable
+    description: Enabled.
+    value: 1
+enum/PufAlphaEnumQuebec:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables all PUF interrupts.
+    value: 0
+  - name: Enable
+    description: Enables all PUF interrupts that are enabled in the Interrupt Mask register.
+    value: 1
+enum/PufAlphaEnumRomeo:
+  bit_size: 8
+  variants:
+  - name: LoEnroll
+    description: Indicates that the last operation was Enroll.
+    value: 1
+  - name: LoGenRnd
+    description: Indicates that the last operation was Generate Random.
+    value: 15
+  - name: LoGetKey
+    description: Indicates that the last operation was Get Key.
+    value: 6
+  - name: LoInitialization
+    description: Indicates that the last operation was Initialization.
+    value: 32
+  - name: LoProgress
+    description: Indicates that the operation is in progress.
+    value: 0
+  - name: LoReconstruct
+    description: Indicates that the last operation was Reconstruct.
+    value: 3
+  - name: LoStart
+    description: Indicates that the last operation was Start.
+    value: 2
+  - name: LoStop
+    description: Indicates that the last operation was Stop.
+    value: 5
+  - name: LoTestMemory
+    description: Indicates that the last operation was Test Memory.
+    value: 30
+  - name: LoTestPuf
+    description: Indicates that the last operation was Test PUF.
+    value: 31
+  - name: LoUnwrap
+    description: Indicates that the last operation was Unwrap.
+    value: 7
+  - name: LoWrap
+    description: Indicates that the last operation was Wrap.
+    value: 9
+  - name: LoWrapGenRnd
+    description: Indicates that the last operation was Wrap Generated Random.
+    value: 8
+  - name: LoZeroize
+    description: Indicates that the last operation was Zeroize.
+    value: 47
+enum/PufAlphaEnumSierra:
+  bit_size: 8
+  variants:
+  - name: FieldReturnNxp
+    description: NXP Field Return/Failure Analysis.
+    value: 63
+  - name: OemClosed
+    description: OEM In-field.
+    value: 15
+  - name: OemFieldReturn
+    description: OEM Field return.
+    value: 31
+  - name: OemLocked
+    description: In-field Locked.
+    value: 207
+  - name: OemOpen
+    description: OEM Develop.
+    value: 3
+  - name: OemSecureWorld
+    description: OEM Develop 2.
+    value: 7
+  - name: OemShredded
+    description: Bricked.
+    value: 255
+enum/PufAlphaEnumTango:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disabled.
+    value: 0
+  - name: Enable
+    description: Enabled.
+    value: 1
+enum/PufAlphaEnumUniform:
+  bit_size: 8
+  variants:
+  - name: ErrAuth
+    description: Indicates that the authentication of the provided AC failed.
+    value: 244
+  - name: ErrAuthPh2
+    description: Indicates that the authentication of the provided AC failed in the second phase.
+    value: 245
+  - name: ErrContext
+    description: Indicates that the incorrect or unsupported context is provided.
+    value: 247
+  - name: ErrDestination
+    description: Indicates that a data destination was set that is not allowed according to other settings and the current PUF state.
+    value: 248
+  - name: ErrProduct
+    description: Indicates that the AC is not for the current product/version.
+    value: 240
+  - name: ErrProductPh2
+    description: Indicates that the AC in the second phase is not for the current product/version.
+    value: 241
+  - name: ErrPufQuality
+    description: Indicates that the SRAM PUF quality verification fails.
+    value: 246
+  - name: ErrTransfer
+    description: Indicates that the AC is corrupted.
+    value: 242
+  - name: ErrTransferPh2
+    description: Indicates that the AC in the second phase is corrupted.
+    value: 243
+  - name: Failure
+    description: Indicates that the PUF SRAM access has failed.
+    value: 255
+  - name: Ok
+    description: Indicates that the last operation was successful or operation is in progress.
+    value: 0
+enum/PufAlphaEnumVictor:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disabled.
+    value: 0
+  - name: Enable
+    description: Enabled.
+    value: 1
+enum/PufAlphaEnumWhiskey:
+  bit_size: 1
+  variants:
+  - name: Enable
+    description: Clears the APB_ERR bit field in register INT_STATUS. Automatically reset by the Hardware.
+    value: 1
+  - name: NoEffect
+    description: No effect.
+    value: 0
+enum/PufAlphaEnumXray:
+  bit_size: 1
+  variants:
+  - name: Enable
+    description: Clears the APB_ERR bit field in register INT_STATUS. Automatically reset by the Hardware.
+    value: 1
+  - name: NoEffect
+    description: No effect.
+    value: 0

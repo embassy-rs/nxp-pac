@@ -10,6 +10,9 @@ before changing those definitions.
 MCX-A sources live in `mcx/a/a1`, `mcx/a/a2`, `mcx/a/a3`, and `mcx/a/a5`.
 Compatible definitions are shared from `mcx/a/common`; true subfamily-specific
 layouts remain local.
+MCX-N definitions are organized under `mcx/n/common` and the `n2`, `n5`, and
+`n9` family directories. Shared definitions are used only where the register
+model is compatible; variant differences can be expressed with `only_in`.
 Future families get their own directories when there are actual definitions to
 add, not placeholder directories or implicit fallback to another family.
 
@@ -237,6 +240,13 @@ These are bounded model corrections, not a complete register/errata audit
 or resolution of the remaining A1/A3 source and applicability conflicts.
 
 ## Build pipeline
+
+The MCXN MetaPAC selections use the curated N-family register models. This is
+register coverage only: internal UDF/FMUTEST blocks are not included, and the
+public NPU register map is unavailable because vendor eIQ controls are opaque.
+Do not treat absent public register definitions as evidence of peripheral
+absence or complete device coverage. Raw PAC access also does not implement
+factory-trim behavior, errata workarounds, or HAL policy.
 
 Selecting a chip feature compiles its PAC from packaged metadata and the required
 curated YAML, using the internal `build/engine` modules. Models are fresh for each

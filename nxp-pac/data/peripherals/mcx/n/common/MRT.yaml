@@ -1,0 +1,201 @@
+# MCXN23xRM Rev. 4, section 36.6.1 (sources/mcxn23xrm.txt:77497-78069).
+# MCXNP184M150F70RM Rev. 7, section 50.6.1
+# (sources/mcxnp184m150f70rm.txt:121378-121951).
+# reset_value annotations are software construction defaults using known reset
+# bits corroborated by the pinned SVDs. Reserved PDF `u` bits remain unknown;
+# zero padding in these defaults is not a hardware reset claim.
+block/Mrt:
+  description: Four-channel, 24-bit multi-rate timer.
+  items:
+  - name: channel
+    description: Timer channel registers.
+    byte_offset: 0
+    array:
+      len: 4
+      stride: 16
+    block: Channel
+  - name: modcfg
+    description: Module configuration and idle-channel operating mode.
+    byte_offset: 240
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Modcfg
+  - name: idle_ch
+    description: >-
+      Lowest available channel. In multitask mode, reading an available channel
+      sets its INUSE flag. Availability requires RUN = 0 and no pending interrupt;
+      multitask mode additionally requires INUSE = 0.
+    byte_offset: 244
+    access: Read
+    bit_size: 32
+    fieldset: IdleCh
+  - name: irq_flag
+    description: >-
+      Channel interrupt flags. Write one to clear the corresponding request;
+      writing zero has no effect. Avoid blind read-modify-write on these flags.
+    byte_offset: 248
+    access: ReadWrite
+    bit_size: 32
+    fieldset: IrqFlag
+block/Channel:
+  description: One MRT timer channel.
+  items:
+  - name: intval
+    description: Time interval value and force-load control.
+    byte_offset: 0
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Intval
+  - name: timer
+    description: Current down-counter value. Read-only.
+    byte_offset: 4
+    access: Read
+    bit_size: 32
+    fieldset: Timer
+  - name: ctrl
+    description: Timer operating mode and interrupt enable.
+    byte_offset: 8
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Ctrl
+  - name: stat
+    description: >-
+      Channel status. INTFLAG and INUSE are write-one-to-clear; RUN is read-only.
+      Field access is not enforced within this RW register. Avoid blind
+      read-modify-write on these flags.
+    byte_offset: 12
+    access: ReadWrite
+    bit_size: 32
+    fieldset: Stat
+# N23:77589-77638; N:121470-121519. Known reset mask: 0x80ffffff.
+fieldset/Intval:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: ivalue
+    description: >-
+      Timer interval; countdown starts at IVALUE - 1. A nonzero write while idle
+      starts the timer immediately. Writing zero while running stops immediately
+      with LOAD = 1, or at the end of the interval with LOAD = 0.
+    bit_offset: 0
+    bit_size: 24
+  - name: load
+    description: >-
+      Force load when set. Write-only and always reads zero; field access is not
+      enforced within this RW register. In repeat mode, LOAD = 0 defers the new
+      interval until the end of the current interval; LOAD = 1 loads immediately.
+    bit_offset: 31
+    bit_size: 1
+# N23:77669-77701; N:121550-121582. Known reset mask: 0x00ffffff.
+fieldset/Timer:
+  bit_size: 32
+  reset_value: 0x00ffffff
+  fields:
+  - name: value
+    description: Current down-counter value. Reads 0x00ffffff when idle.
+    bit_offset: 0
+    bit_size: 24
+# N23:77741-77778; N:121622-121659. Known reset mask: 0x00000007.
+fieldset/Ctrl:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: inten
+    description: Enable the channel interrupt when set.
+    bit_offset: 0
+    bit_size: 1
+  - name: mode
+    description: Timer operating mode. Encoding 3 is reserved.
+    bit_offset: 1
+    bit_size: 2
+    enum: Mode
+# N23:77818-77855; N:121699-121736. Known reset mask: 0x00000007.
+fieldset/Stat:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: intflag
+    description: Interrupt pending. Write one to clear the request.
+    bit_offset: 0
+    bit_size: 1
+  - name: run
+    description: Timer is running when set, idle when clear. Read-only.
+    bit_offset: 1
+    bit_size: 1
+  - name: inuse
+    description: >-
+      Channel-in-use flag. Write one to clear. Hardware status mode resets all
+      INUSE flags; in multitask mode an allocating IDLE_CH read sets this flag.
+    bit_offset: 2
+    bit_size: 1
+# N23:77890-77921; N:121771-121802. Known reset mask: 0x800001ff.
+fieldset/Modcfg:
+  bit_size: 32
+  reset_value: 0x00000184
+  fields:
+  - name: noc
+    description: Number of implemented timer channels (4).
+    bit_offset: 0
+    bit_size: 4
+  - name: nob
+    description: Number of implemented timer bits (24).
+    bit_offset: 4
+    bit_size: 5
+  - name: multitask
+    description: Operating mode for STAT.INUSE and IDLE_CH.
+    bit_offset: 31
+    bit_size: 1
+    enum: Multitask
+# N23:77979-77999; N:121861-121881. Known reset mask: 0x000000f0.
+fieldset/IdleCh:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: chan
+    description: >-
+      Lowest idle channel number, positioned as a channel-register byte offset.
+      Returns 0xf if all channels are running.
+    bit_offset: 4
+    bit_size: 4
+# N23:78042-78069; N:121924-121951. Known reset mask: 0x0000000f.
+fieldset/IrqFlag:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: gflag0
+    description: Channel 0 interrupt pending. Write one to clear; zero has no effect.
+    bit_offset: 0
+    bit_size: 1
+  - name: gflag1
+    description: Channel 1 interrupt pending. Write one to clear; zero has no effect.
+    bit_offset: 1
+    bit_size: 1
+  - name: gflag2
+    description: Channel 2 interrupt pending. Write one to clear; zero has no effect.
+    bit_offset: 2
+    bit_size: 1
+  - name: gflag3
+    description: Channel 3 interrupt pending. Write one to clear; zero has no effect.
+    bit_offset: 3
+    bit_size: 1
+enum/Mode:
+  bit_size: 2
+  variants:
+  - name: REPEAT_INTERRUPT
+    description: Repeat Interrupt mode.
+    value: 0
+  - name: ONE_SHOT_INTERRUPT
+    description: One-Shot Interrupt mode.
+    value: 1
+  - name: ONE_SHOT_STALL
+    description: One-Shot Stall mode.
+    value: 2
+enum/Multitask:
+  bit_size: 1
+  variants:
+  - name: HARDWARE_STATUS
+    description: Hardware status mode.
+    value: 0
+  - name: MULTITASK
+    description: Multitask mode.
+    value: 1

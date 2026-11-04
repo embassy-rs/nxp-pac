@@ -1,0 +1,2926 @@
+# NXP mcux-soc-svd 7c1f00bdd6263f0b93466f5e73e5fc55a744b879; native chiptool import.
+# Source instance geometry is retained in explicit block variants; see private source bindings.
+# Unannotated fieldsets construct zero in software, not a claimed hardware reset.
+# Command/W1C/SET/CLR/TOG construction defaults are zero masks; no RMW semantics are implied.
+# Source: MCXN247.xml SINC0 sha256 dbbed5781a39012768344882dad168430c742f26e4261c6fd0bda9a34ca4a652
+block/SincAlphaBlockAlpha:
+  description: Prefetch configuration array.
+  items:
+  - name: ccr
+    description: Channel n Control.
+    byte_offset: 0
+    fieldset: SincAlphaFieldsetDelta
+  - name: cdr
+    description: Channel n Data Rate.
+    byte_offset: 4
+    fieldset: SincAlphaFieldsetFoxtrot
+  - name: ccfr
+    description: Channel n Configuration.
+    byte_offset: 8
+    fieldset: SincAlphaFieldsetCharlie
+  - name: cprot
+    description: Channel n Protection.
+    byte_offset: 12
+    fieldset: SincAlphaFieldsetJuliet
+  - name: cbias
+    description: Channel n Bias.
+    byte_offset: 16
+    fieldset: SincAlphaFieldsetBravo
+  - name: clolmt
+    description: Channel n Low Limit.
+    byte_offset: 20
+    fieldset: SincAlphaFieldsetHotel
+  - name: chilmt
+    description: Channel n High Limit.
+    byte_offset: 24
+    fieldset: SincAlphaFieldsetGolf
+  - name: crdata
+    description: Channel n Result Data.
+    byte_offset: 28
+    access: Read
+    fieldset: SincAlphaFieldsetKilo
+  - name: cmpdata
+    description: Channel n Multipurpose Data.
+    byte_offset: 32
+    fieldset: SincAlphaFieldsetIndia
+  - name: cacfr
+    description: Channel n Advanced Configuration.
+    byte_offset: 36
+    fieldset: SincAlphaFieldsetAlpha
+  - name: csr
+    description: Channel n Status.
+    byte_offset: 40
+    fieldset: SincAlphaFieldsetLima
+  - name: cdbgr
+    description: Channel n Debug.
+    byte_offset: 44
+    access: Read
+    fieldset: SincAlphaFieldsetEcho
+block/SincAlpha:
+  description: SINC.
+  items:
+  - name: verid
+    description: Version ID.
+    byte_offset: 0
+    access: Read
+    fieldset: SincAlphaFieldsetVictor
+  - name: parameter
+    description: Parameters.
+    byte_offset: 4
+    fieldset: SincAlphaFieldsetTango
+  - name: mcr
+    description: Main Control.
+    byte_offset: 8
+    fieldset: SincAlphaFieldsetQuebec
+  - name: nie
+    description: Normal Interrupt Enable.
+    byte_offset: 12
+    fieldset: SincAlphaFieldsetRomeo
+  - name: eie
+    description: Error Interrupt Enable.
+    byte_offset: 16
+    fieldset: SincAlphaFieldsetMike
+  - name: fifoie
+    description: FIFO And CAD Error Interrupt Enable.
+    byte_offset: 20
+    fieldset: SincAlphaFieldsetOscar
+  - name: nis
+    description: Normal Interrupt Status.
+    byte_offset: 24
+    fieldset: SincAlphaFieldsetSierra
+  - name: eis
+    description: Error Interrupt Status.
+    byte_offset: 28
+    fieldset: SincAlphaFieldsetNovember
+  - name: fifois
+    description: FIFO And CAD Error Interrupt Status.
+    byte_offset: 32
+    fieldset: SincAlphaFieldsetPapa
+  - name: sr
+    description: Status.
+    byte_offset: 36
+    access: Read
+    fieldset: SincAlphaFieldsetUniform
+  - name: channel
+    description: Prefetch configuration array.
+    array:
+      len: 5
+      stride: 48
+    byte_offset: 56
+    block: SincAlphaBlockAlpha
+fieldset/SincAlphaFieldsetAlpha:
+  description: Channel n Advanced Configuration.
+  fields:
+  - name: admasel
+    description: Alternate DMA Source Selection.
+    bit_offset: 12
+    bit_size: 4
+    enum: SincAlphaEnumAlpha
+  - name: hpfa
+    description: HPF DC Remover Alpha Coefficient.
+    bit_offset: 16
+    bit_size: 4
+  - name: ibdly
+    description: Input Modulator Bitstream Delay.
+    bit_offset: 20
+    bit_size: 4
+    enum: SincAlphaEnumLimaCharlie
+fieldset/SincAlphaFieldsetBravo:
+  description: Channel n Bias.
+  fields:
+  - name: bias
+    description: Bias Value.
+    bit_offset: 8
+    bit_size: 24
+fieldset/SincAlphaFieldsetCharlie:
+  description: Channel n Configuration.
+  fields:
+  - name: pfsft
+    description: PF Shift.
+    bit_offset: 0
+    bit_size: 5
+  - name: rdfmt
+    description: Result Data Format.
+    bit_offset: 6
+    bit_size: 1
+    enum: SincAlphaEnumWhiskeyDelta
+  - name: fifowmk
+    description: FIFO Watermark.
+    bit_offset: 10
+    bit_size: 3
+  - name: ibfmt
+    description: Input Bit Format.
+    bit_offset: 16
+    bit_size: 2
+    enum: SincAlphaEnumMikeCharlie
+  - name: icsel
+    description: Input Clock Select.
+    bit_offset: 18
+    bit_size: 3
+    enum: SincAlphaEnumPapaCharlie
+  - name: icesel
+    description: Input Clock Edge Select.
+    bit_offset: 21
+    bit_size: 3
+    enum: SincAlphaEnumOscarCharlie
+  - name: itsel
+    description: Input Trigger Select.
+    bit_offset: 24
+    bit_size: 2
+    enum: SincAlphaEnumRomeoCharlie
+  - name: ibsel
+    description: Input Bit Select.
+    bit_offset: 26
+    bit_size: 2
+    enum: SincAlphaEnumNovemberCharlie
+  - name: itlvl
+    description: Input Trigger Level Type.
+    bit_offset: 28
+    bit_size: 1
+    enum: SincAlphaEnumQuebecCharlie
+  - name: zcop
+    description: Zero Cross Option.
+    bit_offset: 30
+    bit_size: 2
+    enum: SincAlphaEnumBravoGolf
+fieldset/SincAlphaFieldsetDelta:
+  description: Channel n Control.
+  fields:
+  - name: chen
+    description: Channel Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: SincAlphaEnumPapa
+  - name: pfen
+    description: PF Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: SincAlphaEnumRomeoDelta
+  - name: dmaen
+    description: DMA Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: SincAlphaEnumXrayAlpha
+  - name: scden
+    description: Short Circuit Detect Enable.
+    bit_offset: 8
+    bit_size: 1
+    enum: SincAlphaEnumQuebecEcho
+  - name: caden
+    description: Clock Absence Detect Enable.
+    bit_offset: 9
+    bit_size: 1
+    enum: SincAlphaEnumIndia
+  - name: zcden
+    description: Zero Cross Detect Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: SincAlphaEnumVictorFoxtrot
+  - name: lmten
+    description: Limit Enable.
+    bit_offset: 13
+    bit_size: 1
+    enum: SincAlphaEnumDeltaDelta
+  - name: fifoen
+    description: FIFO Enable.
+    bit_offset: 14
+    bit_size: 1
+    enum: SincAlphaEnumEchoBravo
+  - name: dbgsel
+    description: Debug Output Selection.
+    bit_offset: 20
+    bit_size: 4
+    enum: SincAlphaEnumWhiskeyAlpha
+fieldset/SincAlphaFieldsetEcho:
+  description: Channel n Debug.
+  fields:
+  - name: dbgdata
+    description: Debug Data.
+    bit_offset: 0
+    bit_size: 32
+fieldset/SincAlphaFieldsetFoxtrot:
+  description: Channel n Data Rate.
+  fields:
+  - name: pfosr
+    description: PF OSR.
+    bit_offset: 0
+    bit_size: 11
+  - name: pford
+    description: PF Order.
+    bit_offset: 11
+    bit_size: 2
+    enum: SincAlphaEnumSierraDelta
+  - name: pfcm
+    description: PF Conversion Mode.
+    bit_offset: 14
+    bit_size: 2
+    enum: SincAlphaEnumQuebecDelta
+fieldset/SincAlphaFieldsetGolf:
+  description: Channel n High Limit.
+  fields:
+  - name: hilmt
+    description: High Limit Threshold.
+    bit_offset: 8
+    bit_size: 24
+fieldset/SincAlphaFieldsetHotel:
+  description: Channel n Low Limit.
+  fields:
+  - name: lolmt
+    description: Low Limit Threshold.
+    bit_offset: 8
+    bit_size: 24
+fieldset/SincAlphaFieldsetIndia:
+  description: Channel n Multipurpose Data.
+  fields:
+  - name: mpdata
+    description: Multipurpose Data.
+    bit_offset: 0
+    bit_size: 32
+fieldset/SincAlphaFieldsetJuliet:
+  description: Channel n Protection.
+  fields:
+  - name: scdlmt
+    description: SCD Limit Threshold.
+    bit_offset: 0
+    bit_size: 8
+    enum: SincAlphaEnumWhiskeyEcho
+  - name: scdcm
+    description: SCD Conversion Mode.
+    bit_offset: 11
+    bit_size: 1
+    enum: SincAlphaEnumPapaEcho
+  - name: scdop
+    description: SCD Option.
+    bit_offset: 12
+    bit_size: 2
+    enum: SincAlphaEnumXrayEcho
+  - name: lmtop
+    description: Limit Detection Option.
+    bit_offset: 14
+    bit_size: 2
+    enum: SincAlphaEnumEchoDelta
+  - name: cadlmt
+    description: CAD Limit Threshold.
+    bit_offset: 16
+    bit_size: 4
+    enum: SincAlphaEnumOscar
+  - name: cadbk
+    description: CAD Break Signal.
+    bit_offset: 26
+    bit_size: 1
+    enum: SincAlphaEnumHotel
+  - name: scdbk
+    description: SCD Break Signal.
+    bit_offset: 27
+    bit_size: 1
+    enum: SincAlphaEnumOscarEcho
+  - name: llmtbk
+    description: Low Limit Break Signal.
+    bit_offset: 29
+    bit_size: 1
+    enum: SincAlphaEnumXrayCharlie
+  - name: wlmtbk
+    description: Window Limit Break Signal.
+    bit_offset: 30
+    bit_size: 1
+    enum: SincAlphaEnumKiloFoxtrot
+  - name: hlmtbk
+    description: High Limit Break Signal.
+    bit_offset: 31
+    bit_size: 1
+    enum: SincAlphaEnumEchoCharlie
+fieldset/SincAlphaFieldsetKilo:
+  description: Channel n Result Data.
+  fields:
+  - name: rdata
+    description: Result Data.
+    bit_offset: 8
+    bit_size: 24
+fieldset/SincAlphaFieldsetLima:
+  description: Channel n Status.
+  fields:
+  - name: fifoavil
+    description: FIFO Available Data.
+    bit_offset: 0
+    bit_size: 5
+  - name: psrdy
+    description: Parallel or Serial Data Ready.
+    bit_offset: 7
+    bit_size: 1
+    enum: SincAlphaEnumVictorDelta
+  - name: pfsat
+    description: Primary CIC Saturation Flag.
+    bit_offset: 8
+    bit_size: 1
+    enum: SincAlphaEnumTangoDelta
+  - name: hpfsat
+    description: HPF Saturation Flag.
+    bit_offset: 9
+    bit_size: 1
+    enum: SincAlphaEnumKiloCharlie
+  - name: sftsat
+    description: Shift Saturation Flag.
+    bit_offset: 10
+    bit_size: 1
+    enum: SincAlphaEnumYankeeEcho
+  - name: biassat
+    description: Bias Saturation Flag.
+    bit_offset: 11
+    bit_size: 1
+    enum: SincAlphaEnumBravo
+  - name: rdrs
+    description: Result Data Direct Read Status.
+    bit_offset: 12
+    bit_size: 1
+    enum: SincAlphaEnumXrayDelta
+  - name: srds
+    description: Start Read Debug Data Sync.
+    bit_offset: 13
+    bit_size: 1
+    enum: SincAlphaEnumZuluEcho
+  - name: dbgrs
+    description: Debug Data Read Status.
+    bit_offset: 14
+    bit_size: 2
+    enum: SincAlphaEnumVictorAlpha
+  - name: cnum
+    description: Number Of Conversions.
+    bit_offset: 16
+    bit_size: 7
+  - name: cnum_ov
+    description: Overflow In Number Of Conversions.
+    bit_offset: 23
+    bit_size: 1
+    enum: SincAlphaEnumKiloAlpha
+fieldset/SincAlphaFieldsetMike:
+  description: Error Interrupt Enable.
+  fields:
+  - name: scdie0
+    description: Short Circuit Detected Interrupt Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: SincAlphaEnumRomeoEcho
+  - name: scdie1
+    description: Short Circuit Detected Interrupt Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: SincAlphaEnumSierraEcho
+  - name: scdie2
+    description: Short Circuit Detected Interrupt Enable.
+    bit_offset: 2
+    bit_size: 1
+    enum: SincAlphaEnumTangoEcho
+  - name: scdie3
+    description: Short Circuit Detected Interrupt Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: SincAlphaEnumUniformEcho
+  - name: scdie4
+    description: Short Circuit Detected Interrupt Enable.
+    bit_offset: 4
+    bit_size: 1
+    enum: SincAlphaEnumVictorEcho
+  - name: wlmtie0
+    description: Window Limit Interrupt Enable.
+    bit_offset: 8
+    bit_size: 1
+    enum: SincAlphaEnumLimaFoxtrot
+  - name: wlmtie1
+    description: Window Limit Interrupt Enable.
+    bit_offset: 9
+    bit_size: 1
+    enum: SincAlphaEnumMikeFoxtrot
+  - name: wlmtie2
+    description: Window Limit Interrupt Enable.
+    bit_offset: 10
+    bit_size: 1
+    enum: SincAlphaEnumNovemberFoxtrot
+  - name: wlmtie3
+    description: Window Limit Interrupt Enable.
+    bit_offset: 11
+    bit_size: 1
+    enum: SincAlphaEnumOscarFoxtrot
+  - name: wlmtie4
+    description: Window Limit Interrupt Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: SincAlphaEnumPapaFoxtrot
+  - name: llmtie0
+    description: Low Limit Interrupt Enable.
+    bit_offset: 16
+    bit_size: 1
+    enum: SincAlphaEnumYankeeCharlie
+  - name: llmtie1
+    description: Low Limit Interrupt Enable.
+    bit_offset: 17
+    bit_size: 1
+    enum: SincAlphaEnumZuluCharlie
+  - name: llmtie2
+    description: Low Limit Interrupt Enable.
+    bit_offset: 18
+    bit_size: 1
+    enum: SincAlphaEnumAlphaDelta
+  - name: llmtie3
+    description: Low Limit Interrupt Enable.
+    bit_offset: 19
+    bit_size: 1
+    enum: SincAlphaEnumBravoDelta
+  - name: llmtie4
+    description: Low Limit Interrupt Enable.
+    bit_offset: 20
+    bit_size: 1
+    enum: SincAlphaEnumCharlieDelta
+  - name: hlmtie0
+    description: High Limit Interrupt Enable.
+    bit_offset: 24
+    bit_size: 1
+    enum: SincAlphaEnumFoxtrotCharlie
+  - name: hlmtie1
+    description: High Limit Interrupt Enable.
+    bit_offset: 25
+    bit_size: 1
+    enum: SincAlphaEnumGolfCharlie
+  - name: hlmtie2
+    description: High Limit Interrupt Enable.
+    bit_offset: 26
+    bit_size: 1
+    enum: SincAlphaEnumHotelCharlie
+  - name: hlmtie3
+    description: High Limit Interrupt Enable.
+    bit_offset: 27
+    bit_size: 1
+    enum: SincAlphaEnumIndiaCharlie
+  - name: hlmtie4
+    description: High Limit Interrupt Enable.
+    bit_offset: 28
+    bit_size: 1
+    enum: SincAlphaEnumJulietCharlie
+fieldset/SincAlphaFieldsetNovember:
+  description: Error Interrupt Status.
+  fields:
+  - name: scd0
+    description: Short Circuit Detected Flag.
+    bit_offset: 0
+    bit_size: 1
+    enum: SincAlphaEnumJulietEcho
+  - name: scd1
+    description: Short Circuit Detected Flag.
+    bit_offset: 1
+    bit_size: 1
+    enum: SincAlphaEnumKiloEcho
+  - name: scd2
+    description: Short Circuit Detected Flag.
+    bit_offset: 2
+    bit_size: 1
+    enum: SincAlphaEnumLimaEcho
+  - name: scd3
+    description: Short Circuit Detected Flag.
+    bit_offset: 3
+    bit_size: 1
+    enum: SincAlphaEnumMikeEcho
+  - name: scd4
+    description: Short Circuit Detected Flag.
+    bit_offset: 4
+    bit_size: 1
+    enum: SincAlphaEnumNovemberEcho
+  - name: wlmt0
+    description: Window Limit Flag.
+    bit_offset: 8
+    bit_size: 1
+    enum: SincAlphaEnumFoxtrotFoxtrot
+  - name: wlmt1
+    description: Window Limit Flag.
+    bit_offset: 9
+    bit_size: 1
+    enum: SincAlphaEnumGolfFoxtrot
+  - name: wlmt2
+    description: Window Limit Flag.
+    bit_offset: 10
+    bit_size: 1
+    enum: SincAlphaEnumHotelFoxtrot
+  - name: wlmt3
+    description: Window Limit Flag.
+    bit_offset: 11
+    bit_size: 1
+    enum: SincAlphaEnumIndiaFoxtrot
+  - name: wlmt4
+    description: Window Limit Flag.
+    bit_offset: 12
+    bit_size: 1
+    enum: SincAlphaEnumJulietFoxtrot
+  - name: llmt0
+    description: Low Limit Flag.
+    bit_offset: 16
+    bit_size: 1
+    enum: SincAlphaEnumSierraCharlie
+  - name: llmt1
+    description: Low Limit Flag.
+    bit_offset: 17
+    bit_size: 1
+    enum: SincAlphaEnumTangoCharlie
+  - name: llmt2
+    description: Low Limit Flag.
+    bit_offset: 18
+    bit_size: 1
+    enum: SincAlphaEnumUniformCharlie
+  - name: llmt3
+    description: Low Limit Flag.
+    bit_offset: 19
+    bit_size: 1
+    enum: SincAlphaEnumVictorCharlie
+  - name: llmt4
+    description: Low Limit Flag.
+    bit_offset: 20
+    bit_size: 1
+    enum: SincAlphaEnumWhiskeyCharlie
+  - name: hlmt0
+    description: High Limit Flag.
+    bit_offset: 24
+    bit_size: 1
+    enum: SincAlphaEnumZuluBravo
+  - name: hlmt1
+    description: High Limit Flag.
+    bit_offset: 25
+    bit_size: 1
+    enum: SincAlphaEnumAlphaCharlie
+  - name: hlmt2
+    description: High Limit Flag.
+    bit_offset: 26
+    bit_size: 1
+    enum: SincAlphaEnumBravoCharlie
+  - name: hlmt3
+    description: High Limit Flag.
+    bit_offset: 27
+    bit_size: 1
+    enum: SincAlphaEnumCharlieCharlie
+  - name: hlmt4
+    description: High Limit Flag.
+    bit_offset: 28
+    bit_size: 1
+    enum: SincAlphaEnumDeltaCharlie
+fieldset/SincAlphaFieldsetOscar:
+  description: FIFO And CAD Error Interrupt Enable.
+  fields:
+  - name: funfie0
+    description: FIFO Underflow Interrupt Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: SincAlphaEnumUniformBravo
+  - name: funfie1
+    description: FIFO Underflow Interrupt Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: SincAlphaEnumVictorBravo
+  - name: funfie2
+    description: FIFO Underflow Interrupt Enable.
+    bit_offset: 2
+    bit_size: 1
+    enum: SincAlphaEnumWhiskeyBravo
+  - name: funfie3
+    description: FIFO Underflow Interrupt Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: SincAlphaEnumXrayBravo
+  - name: funfie4
+    description: FIFO Underflow Interrupt Enable.
+    bit_offset: 4
+    bit_size: 1
+    enum: SincAlphaEnumYankeeBravo
+  - name: fovfie0
+    description: FIFO Overflow Interrupt Enable.
+    bit_offset: 8
+    bit_size: 1
+    enum: SincAlphaEnumKiloBravo
+  - name: fovfie1
+    description: FIFO Overflow Interrupt Enable.
+    bit_offset: 9
+    bit_size: 1
+    enum: SincAlphaEnumLimaBravo
+  - name: fovfie2
+    description: FIFO Overflow Interrupt Enable.
+    bit_offset: 10
+    bit_size: 1
+    enum: SincAlphaEnumMikeBravo
+  - name: fovfie3
+    description: FIFO Overflow Interrupt Enable.
+    bit_offset: 11
+    bit_size: 1
+    enum: SincAlphaEnumNovemberBravo
+  - name: fovfie4
+    description: FIFO Overflow Interrupt Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: SincAlphaEnumOscarBravo
+  - name: cadie0
+    description: Clock Absence Interrupt Enable.
+    bit_offset: 16
+    bit_size: 1
+    enum: SincAlphaEnumJuliet
+  - name: cadie1
+    description: Clock Absence Interrupt Enable.
+    bit_offset: 17
+    bit_size: 1
+    enum: SincAlphaEnumKilo
+  - name: cadie2
+    description: Clock Absence Interrupt Enable.
+    bit_offset: 18
+    bit_size: 1
+    enum: SincAlphaEnumLima
+  - name: cadie3
+    description: Clock Absence Interrupt Enable.
+    bit_offset: 19
+    bit_size: 1
+    enum: SincAlphaEnumMike
+  - name: cadie4
+    description: Clock Absence Interrupt Enable.
+    bit_offset: 20
+    bit_size: 1
+    enum: SincAlphaEnumNovember
+  - name: satie0
+    description: Saturation Interrupt Enable.
+    bit_offset: 24
+    bit_size: 1
+    enum: SincAlphaEnumEchoEcho
+  - name: satie1
+    description: Saturation Interrupt Enable.
+    bit_offset: 25
+    bit_size: 1
+    enum: SincAlphaEnumFoxtrotEcho
+  - name: satie2
+    description: Saturation Interrupt Enable.
+    bit_offset: 26
+    bit_size: 1
+    enum: SincAlphaEnumGolfEcho
+  - name: satie3
+    description: Saturation Interrupt Enable.
+    bit_offset: 27
+    bit_size: 1
+    enum: SincAlphaEnumHotelEcho
+  - name: satie4
+    description: Saturation Interrupt Enable.
+    bit_offset: 28
+    bit_size: 1
+    enum: SincAlphaEnumIndiaEcho
+fieldset/SincAlphaFieldsetPapa:
+  description: FIFO And CAD Error Interrupt Status.
+  fields:
+  - name: funf0
+    description: FIFO Underflow Flag.
+    bit_offset: 0
+    bit_size: 1
+    enum: SincAlphaEnumPapaBravo
+  - name: funf1
+    description: FIFO Underflow Flag.
+    bit_offset: 1
+    bit_size: 1
+    enum: SincAlphaEnumQuebecBravo
+  - name: funf2
+    description: FIFO Underflow Flag.
+    bit_offset: 2
+    bit_size: 1
+    enum: SincAlphaEnumRomeoBravo
+  - name: funf3
+    description: FIFO Underflow Flag.
+    bit_offset: 3
+    bit_size: 1
+    enum: SincAlphaEnumSierraBravo
+  - name: funf4
+    description: FIFO Underflow Flag.
+    bit_offset: 4
+    bit_size: 1
+    enum: SincAlphaEnumTangoBravo
+  - name: fovf0
+    description: FIFO Overflow Flag.
+    bit_offset: 8
+    bit_size: 1
+    enum: SincAlphaEnumFoxtrotBravo
+  - name: fovf1
+    description: FIFO Overflow Flag.
+    bit_offset: 9
+    bit_size: 1
+    enum: SincAlphaEnumGolfBravo
+  - name: fovf2
+    description: FIFO Overflow Flag.
+    bit_offset: 10
+    bit_size: 1
+    enum: SincAlphaEnumHotelBravo
+  - name: fovf3
+    description: FIFO Overflow Flag.
+    bit_offset: 11
+    bit_size: 1
+    enum: SincAlphaEnumIndiaBravo
+  - name: fovf4
+    description: FIFO Overflow Flag.
+    bit_offset: 12
+    bit_size: 1
+    enum: SincAlphaEnumJulietBravo
+  - name: cad0
+    description: Clock Absence Flag.
+    bit_offset: 16
+    bit_size: 1
+    enum: SincAlphaEnumCharlie
+  - name: cad1
+    description: Clock Absence Flag.
+    bit_offset: 17
+    bit_size: 1
+    enum: SincAlphaEnumDelta
+  - name: cad2
+    description: Clock Absence Flag.
+    bit_offset: 18
+    bit_size: 1
+    enum: SincAlphaEnumEcho
+  - name: cad3
+    description: Clock Absence Flag.
+    bit_offset: 19
+    bit_size: 1
+    enum: SincAlphaEnumFoxtrot
+  - name: cad4
+    description: Clock Absence Flag.
+    bit_offset: 20
+    bit_size: 1
+    enum: SincAlphaEnumGolf
+  - name: sat0
+    description: Saturation Flag.
+    bit_offset: 24
+    bit_size: 1
+    enum: SincAlphaEnumZuluDelta
+  - name: sat1
+    description: Saturation Flag.
+    bit_offset: 25
+    bit_size: 1
+    enum: SincAlphaEnumAlphaEcho
+  - name: sat2
+    description: Saturation Flag.
+    bit_offset: 26
+    bit_size: 1
+    enum: SincAlphaEnumBravoEcho
+  - name: sat3
+    description: Saturation Flag.
+    bit_offset: 27
+    bit_size: 1
+    enum: SincAlphaEnumCharlieEcho
+  - name: sat4
+    description: Saturation Flag.
+    bit_offset: 28
+    bit_size: 1
+    enum: SincAlphaEnumDeltaEcho
+fieldset/SincAlphaFieldsetQuebec:
+  description: Main Control.
+  fields:
+  - name: strig0
+    description: Software Trigger For Channel 0.
+    bit_offset: 0
+    bit_size: 1
+    enum: SincAlphaEnumAlphaFoxtrot
+  - name: strig1
+    description: Software Trigger For Channel 1.
+    bit_offset: 1
+    bit_size: 1
+    enum: SincAlphaEnumBravoFoxtrot
+  - name: strig2
+    description: Software Trigger For Channel 2.
+    bit_offset: 2
+    bit_size: 1
+    enum: SincAlphaEnumCharlieFoxtrot
+  - name: strig3
+    description: Software Trigger For Channel 3.
+    bit_offset: 3
+    bit_size: 1
+    enum: SincAlphaEnumDeltaFoxtrot
+  - name: strig4
+    description: Software Trigger For Channel 4.
+    bit_offset: 4
+    bit_size: 1
+    enum: SincAlphaEnumEchoFoxtrot
+  - name: dozen
+    description: Doze Or Stop Enable.
+    bit_offset: 10
+    bit_size: 1
+    enum: SincAlphaEnumYankeeAlpha
+  - name: rst
+    description: Software Reset.
+    bit_offset: 13
+    bit_size: 1
+    enum: SincAlphaEnumYankeeDelta
+  - name: men
+    description: Master Enable.
+    bit_offset: 15
+    bit_size: 1
+    enum: SincAlphaEnumNovemberDelta
+  - name: mclkdiv
+    description: Modulator Clock Divider.
+    bit_offset: 16
+    bit_size: 8
+    enum: SincAlphaEnumJulietDelta
+  - name: prescale
+    description: Prescale Before Clock Divider.
+    bit_offset: 25
+    bit_size: 2
+    enum: SincAlphaEnumUniformDelta
+  - name: mclk0dis
+    description: Disable Modulator Clock 0 Output.
+    bit_offset: 27
+    bit_size: 1
+    enum: SincAlphaEnumGolfDelta
+  - name: mclk1dis
+    description: Disable Modulator Clock 1 Output.
+    bit_offset: 28
+    bit_size: 1
+    enum: SincAlphaEnumHotelDelta
+  - name: mclk2dis
+    description: Disable Modulator Clock 2 Output.
+    bit_offset: 29
+    bit_size: 1
+    enum: SincAlphaEnumIndiaDelta
+fieldset/SincAlphaFieldsetRomeo:
+  description: Normal Interrupt Enable.
+  fields:
+  - name: cocie0
+    description: Conversion Complete Interrupt Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: SincAlphaEnumQuebecAlpha
+  - name: cocie1
+    description: Conversion Complete Interrupt Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: SincAlphaEnumRomeoAlpha
+  - name: cocie2
+    description: Conversion Complete Interrupt Enable.
+    bit_offset: 2
+    bit_size: 1
+    enum: SincAlphaEnumSierraAlpha
+  - name: cocie3
+    description: Conversion Complete Interrupt Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: SincAlphaEnumTangoAlpha
+  - name: cocie4
+    description: Conversion Complete Interrupt Enable.
+    bit_offset: 4
+    bit_size: 1
+    enum: SincAlphaEnumUniformAlpha
+  - name: chfie0
+    description: Data Output Ready Interrupt Enable.
+    bit_offset: 8
+    bit_size: 1
+    enum: SincAlphaEnumVictor
+  - name: chfie1
+    description: Data Output Ready Interrupt Enable.
+    bit_offset: 9
+    bit_size: 1
+    enum: SincAlphaEnumWhiskey
+  - name: chfie2
+    description: Data Output Ready Interrupt Enable.
+    bit_offset: 10
+    bit_size: 1
+    enum: SincAlphaEnumXray
+  - name: chfie3
+    description: Data Output Ready Interrupt Enable.
+    bit_offset: 11
+    bit_size: 1
+    enum: SincAlphaEnumYankee
+  - name: chfie4
+    description: Data Output Ready Interrupt Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: SincAlphaEnumZulu
+  - name: zcdie0
+    description: Zero Cross Detected Interrupt Enable.
+    bit_offset: 16
+    bit_size: 1
+    enum: SincAlphaEnumWhiskeyFoxtrot
+  - name: zcdie1
+    description: Zero Cross Detected Interrupt Enable.
+    bit_offset: 17
+    bit_size: 1
+    enum: SincAlphaEnumXrayFoxtrot
+  - name: zcdie2
+    description: Zero Cross Detected Interrupt Enable.
+    bit_offset: 18
+    bit_size: 1
+    enum: SincAlphaEnumYankeeFoxtrot
+  - name: zcdie3
+    description: Zero Cross Detected Interrupt Enable.
+    bit_offset: 19
+    bit_size: 1
+    enum: SincAlphaEnumZuluFoxtrot
+  - name: zcdie4
+    description: Zero Cross Detected Interrupt Enable.
+    bit_offset: 20
+    bit_size: 1
+    enum: SincAlphaEnumAlphaGolf
+fieldset/SincAlphaFieldsetSierra:
+  description: Normal Interrupt Status.
+  fields:
+  - name: coc0
+    description: Conversion Complete Flag.
+    bit_offset: 0
+    bit_size: 1
+    enum: SincAlphaEnumLimaAlpha
+  - name: coc1
+    description: Conversion Complete Flag.
+    bit_offset: 1
+    bit_size: 1
+    enum: SincAlphaEnumMikeAlpha
+  - name: coc2
+    description: Conversion Complete Flag.
+    bit_offset: 2
+    bit_size: 1
+    enum: SincAlphaEnumNovemberAlpha
+  - name: coc3
+    description: Conversion Complete Flag.
+    bit_offset: 3
+    bit_size: 1
+    enum: SincAlphaEnumOscarAlpha
+  - name: coc4
+    description: Conversion Complete Flag.
+    bit_offset: 4
+    bit_size: 1
+    enum: SincAlphaEnumPapaAlpha
+  - name: chf0
+    description: Data Output Ready Flag.
+    bit_offset: 8
+    bit_size: 1
+    enum: SincAlphaEnumQuebec
+  - name: chf1
+    description: Data Output Ready Flag.
+    bit_offset: 9
+    bit_size: 1
+    enum: SincAlphaEnumRomeo
+  - name: chf2
+    description: Data Output Ready Flag.
+    bit_offset: 10
+    bit_size: 1
+    enum: SincAlphaEnumSierra
+  - name: chf3
+    description: Data Output Ready Flag.
+    bit_offset: 11
+    bit_size: 1
+    enum: SincAlphaEnumTango
+  - name: chf4
+    description: Data Output Ready Flag.
+    bit_offset: 12
+    bit_size: 1
+    enum: SincAlphaEnumUniform
+  - name: zcd0
+    description: Zero Cross Detected Flag.
+    bit_offset: 16
+    bit_size: 1
+    enum: SincAlphaEnumQuebecFoxtrot
+  - name: zcd1
+    description: Zero Cross Detected Flag.
+    bit_offset: 17
+    bit_size: 1
+    enum: SincAlphaEnumRomeoFoxtrot
+  - name: zcd2
+    description: Zero Cross Detected Flag.
+    bit_offset: 18
+    bit_size: 1
+    enum: SincAlphaEnumSierraFoxtrot
+  - name: zcd3
+    description: Zero Cross Detected Flag.
+    bit_offset: 19
+    bit_size: 1
+    enum: SincAlphaEnumTangoFoxtrot
+  - name: zcd4
+    description: Zero Cross Detected Flag.
+    bit_offset: 20
+    bit_size: 1
+    enum: SincAlphaEnumUniformFoxtrot
+fieldset/SincAlphaFieldsetTango:
+  description: Parameters.
+  fields:
+  - name: fifo_depth
+    description: FIFO Depth.
+    bit_offset: 0
+    bit_size: 5
+  - name: flt_num
+    description: Filter Channel Number.
+    bit_offset: 8
+    bit_size: 4
+  - name: pf_ord_sel
+    description: PF Order Select.
+    bit_offset: 19
+    bit_size: 2
+    enum: SincAlphaEnumPapaDelta
+fieldset/SincAlphaFieldsetUniform:
+  description: Status.
+  fields:
+  - name: cip0
+    description: Conversion In Progress.
+    bit_offset: 0
+    bit_size: 1
+    enum: SincAlphaEnumFoxtrotAlpha
+  - name: cip1
+    description: Conversion In Progress.
+    bit_offset: 1
+    bit_size: 1
+    enum: SincAlphaEnumGolfAlpha
+  - name: cip2
+    description: Conversion In Progress.
+    bit_offset: 2
+    bit_size: 1
+    enum: SincAlphaEnumHotelAlpha
+  - name: cip3
+    description: Conversion In Progress.
+    bit_offset: 3
+    bit_size: 1
+    enum: SincAlphaEnumIndiaAlpha
+  - name: cip4
+    description: Conversion In Progress.
+    bit_offset: 4
+    bit_size: 1
+    enum: SincAlphaEnumJulietAlpha
+  - name: chrdy0
+    description: Channel Ready For Conversion.
+    bit_offset: 8
+    bit_size: 1
+    enum: SincAlphaEnumAlphaAlpha
+  - name: chrdy1
+    description: Channel Ready For Conversion.
+    bit_offset: 9
+    bit_size: 1
+    enum: SincAlphaEnumBravoAlpha
+  - name: chrdy2
+    description: Channel Ready For Conversion.
+    bit_offset: 10
+    bit_size: 1
+    enum: SincAlphaEnumCharlieAlpha
+  - name: chrdy3
+    description: Channel Ready For Conversion.
+    bit_offset: 11
+    bit_size: 1
+    enum: SincAlphaEnumDeltaAlpha
+  - name: chrdy4
+    description: Channel Ready For Conversion.
+    bit_offset: 12
+    bit_size: 1
+    enum: SincAlphaEnumEchoAlpha
+  - name: fifoempty0
+    description: FIFO Empty.
+    bit_offset: 16
+    bit_size: 1
+    enum: SincAlphaEnumZuluAlpha
+  - name: fifoempty1
+    description: FIFO Empty.
+    bit_offset: 17
+    bit_size: 1
+    enum: SincAlphaEnumAlphaBravo
+  - name: fifoempty2
+    description: FIFO Empty.
+    bit_offset: 18
+    bit_size: 1
+    enum: SincAlphaEnumBravoBravo
+  - name: fifoempty3
+    description: FIFO Empty.
+    bit_offset: 19
+    bit_size: 1
+    enum: SincAlphaEnumCharlieBravo
+  - name: fifoempty4
+    description: FIFO Empty.
+    bit_offset: 20
+    bit_size: 1
+    enum: SincAlphaEnumDeltaBravo
+  - name: mclkrdy0
+    description: Modulator Clock 0 Ready.
+    bit_offset: 24
+    bit_size: 1
+    enum: SincAlphaEnumKiloDelta
+  - name: mclkrdy1
+    description: Modulator Clock 1 Ready.
+    bit_offset: 25
+    bit_size: 1
+    enum: SincAlphaEnumLimaDelta
+  - name: mclkrdy2
+    description: Modulator Clock 2 Ready.
+    bit_offset: 26
+    bit_size: 1
+    enum: SincAlphaEnumMikeDelta
+fieldset/SincAlphaFieldsetVictor:
+  description: Version ID.
+  fields:
+  - name: feature
+    description: Feature Specification Code.
+    bit_offset: 0
+    bit_size: 16
+  - name: minor
+    description: Minor Version Number.
+    bit_offset: 16
+    bit_size: 8
+    enum: SincAlphaEnumOscarDelta
+  - name: major
+    description: Major Version Number.
+    bit_offset: 24
+    bit_size: 8
+    enum: SincAlphaEnumFoxtrotDelta
+enum/SincAlphaEnumAlpha:
+  bit_size: 4
+  variants:
+  - name: ClkAbs
+    description: Clock absence.
+    value: 10
+  - name: Disabled
+    description: Alternate DMA disabled.
+    value: 0
+  - name: FifoOf
+    description: FIFO overflow.
+    value: 9
+  - name: FifoUf
+    description: FIFO underflow.
+    value: 8
+  - name: HighLmt
+    description: High limit.
+    value: 7
+  - name: LowLmt
+    description: Low limit detected.
+    value: 6
+  - name: PfConvComplete
+    description: PF conversion complete.
+    value: 1
+  - name: PfDataReady
+    description: PF data output ready.
+    value: 2
+  - name: Sat
+    description: Saturation.
+    value: 11
+  - name: Scd
+    description: Short circuit detected.
+    value: 4
+  - name: WindowLmt
+    description: Window limit detected.
+    value: 5
+  - name: Zcd
+    description: Zero crossing detected.
+    value: 3
+enum/SincAlphaEnumBravo:
+  bit_size: 1
+  variants:
+  - name: SatNo
+    description: Did not occur.
+    value: 0
+  - name: SatYes
+    description: Occurred.
+    value: 1
+enum/SincAlphaEnumCharlie:
+  bit_size: 1
+  variants:
+  - name: CadNo
+    description: Clock present.
+    value: 0
+  - name: CadYes
+    description: Clock absent.
+    value: 1
+enum/SincAlphaEnumDelta:
+  bit_size: 1
+  variants:
+  - name: CadNo
+    description: Clock present.
+    value: 0
+  - name: CadYes
+    description: Clock absent.
+    value: 1
+enum/SincAlphaEnumEcho:
+  bit_size: 1
+  variants:
+  - name: CadNo
+    description: Clock present.
+    value: 0
+  - name: CadYes
+    description: Clock absent.
+    value: 1
+enum/SincAlphaEnumFoxtrot:
+  bit_size: 1
+  variants:
+  - name: CadNo
+    description: Clock present.
+    value: 0
+  - name: CadYes
+    description: Clock absent.
+    value: 1
+enum/SincAlphaEnumGolf:
+  bit_size: 1
+  variants:
+  - name: CadNo
+    description: Clock present.
+    value: 0
+  - name: CadYes
+    description: Clock absent.
+    value: 1
+enum/SincAlphaEnumHotel:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumIndia:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumJuliet:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumKilo:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumLima:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumMike:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumNovember:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumOscar:
+  bit_size: 4
+  variants:
+  - name: Disables
+    description: Disables CAD.
+    value: 0
+enum/SincAlphaEnumPapa:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumQuebec:
+  bit_size: 1
+  variants:
+  - name: OvflwNo
+    description: No overflow; data not available.
+    value: 0
+  - name: OvflwYes
+    description: Overflow; data available.
+    value: 1
+enum/SincAlphaEnumRomeo:
+  bit_size: 1
+  variants:
+  - name: OvflwNo
+    description: No overflow; data not available.
+    value: 0
+  - name: OvflwYes
+    description: Overflow; data available.
+    value: 1
+enum/SincAlphaEnumSierra:
+  bit_size: 1
+  variants:
+  - name: OvflwNo
+    description: No overflow; data not available.
+    value: 0
+  - name: OvflwYes
+    description: Overflow; data available.
+    value: 1
+enum/SincAlphaEnumTango:
+  bit_size: 1
+  variants:
+  - name: OvflwNo
+    description: No overflow; data not available.
+    value: 0
+  - name: OvflwYes
+    description: Overflow; data available.
+    value: 1
+enum/SincAlphaEnumUniform:
+  bit_size: 1
+  variants:
+  - name: OvflwNo
+    description: No overflow; data not available.
+    value: 0
+  - name: OvflwYes
+    description: Overflow; data available.
+    value: 1
+enum/SincAlphaEnumVictor:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumWhiskey:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumXray:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumYankee:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumZulu:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumAlphaAlpha:
+  bit_size: 1
+  variants:
+  - name: ReadyNo
+    description: Not ready.
+    value: 0
+  - name: ReadyYes
+    description: Ready.
+    value: 1
+enum/SincAlphaEnumBravoAlpha:
+  bit_size: 1
+  variants:
+  - name: ReadyNo
+    description: Not ready.
+    value: 0
+  - name: ReadyYes
+    description: Ready.
+    value: 1
+enum/SincAlphaEnumCharlieAlpha:
+  bit_size: 1
+  variants:
+  - name: ReadyNo
+    description: Not ready.
+    value: 0
+  - name: ReadyYes
+    description: Ready.
+    value: 1
+enum/SincAlphaEnumDeltaAlpha:
+  bit_size: 1
+  variants:
+  - name: ReadyNo
+    description: Not ready.
+    value: 0
+  - name: ReadyYes
+    description: Ready.
+    value: 1
+enum/SincAlphaEnumEchoAlpha:
+  bit_size: 1
+  variants:
+  - name: ReadyNo
+    description: Not ready.
+    value: 0
+  - name: ReadyYes
+    description: Ready.
+    value: 1
+enum/SincAlphaEnumFoxtrotAlpha:
+  bit_size: 1
+  variants:
+  - name: ConvNo
+    description: Not in progress.
+    value: 0
+  - name: ConvYes
+    description: In progress.
+    value: 1
+enum/SincAlphaEnumGolfAlpha:
+  bit_size: 1
+  variants:
+  - name: ConvNo
+    description: Not in progress.
+    value: 0
+  - name: ConvYes
+    description: In progress.
+    value: 1
+enum/SincAlphaEnumHotelAlpha:
+  bit_size: 1
+  variants:
+  - name: ConvNo
+    description: Not in progress.
+    value: 0
+  - name: ConvYes
+    description: In progress.
+    value: 1
+enum/SincAlphaEnumIndiaAlpha:
+  bit_size: 1
+  variants:
+  - name: ConvNo
+    description: Not in progress.
+    value: 0
+  - name: ConvYes
+    description: In progress.
+    value: 1
+enum/SincAlphaEnumJulietAlpha:
+  bit_size: 1
+  variants:
+  - name: ConvNo
+    description: Not in progress.
+    value: 0
+  - name: ConvYes
+    description: In progress.
+    value: 1
+enum/SincAlphaEnumKiloAlpha:
+  bit_size: 1
+  variants:
+  - name: OflwNo
+    description: No overflow.
+    value: 0
+  - name: OflwYes
+    description: Overflow.
+    value: 1
+enum/SincAlphaEnumLimaAlpha:
+  bit_size: 1
+  variants:
+  - name: CocNo
+    description: Not finished; data not available.
+    value: 0
+  - name: CocYes
+    description: Finished; data available.
+    value: 1
+enum/SincAlphaEnumMikeAlpha:
+  bit_size: 1
+  variants:
+  - name: CocNo
+    description: Not finished; data not available.
+    value: 0
+  - name: CocYes
+    description: Finished; data available.
+    value: 1
+enum/SincAlphaEnumNovemberAlpha:
+  bit_size: 1
+  variants:
+  - name: CocNo
+    description: Not finished; data not available.
+    value: 0
+  - name: CocYes
+    description: Finished; data available.
+    value: 1
+enum/SincAlphaEnumOscarAlpha:
+  bit_size: 1
+  variants:
+  - name: CocNo
+    description: Not finished; data not available.
+    value: 0
+  - name: CocYes
+    description: Finished; data available.
+    value: 1
+enum/SincAlphaEnumPapaAlpha:
+  bit_size: 1
+  variants:
+  - name: CocNo
+    description: Not finished; data not available.
+    value: 0
+  - name: CocYes
+    description: Finished; data available.
+    value: 1
+enum/SincAlphaEnumQuebecAlpha:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumRomeoAlpha:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumSierraAlpha:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumTangoAlpha:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumUniformAlpha:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumVictorAlpha:
+  bit_size: 2
+  variants:
+  - name: Invalid1
+    description: Invalid.
+    value: 1
+  - name: Invalid2
+    description: Invalid.
+    value: 2
+  - name: Invalid3
+    description: Invalid.
+    value: 3
+  - name: Valid
+    description: Valid.
+    value: 0
+enum/SincAlphaEnumWhiskeyAlpha:
+  bit_size: 4
+  variants:
+  - name: Cad
+    description: Data from CAD.
+    value: 8
+  - name: Fifo
+    description: Number of available entries in the FIFO.
+    value: 9
+  - name: Hpf
+    description: DC remover (HPF) data (32 bits).
+    value: 3
+  - name: Mm
+    description: Data from the Manchester decoder.
+    value: 7
+  - name: Pfbis
+    description: Offset data (24 bits).
+    value: 1
+  - name: Pfcic
+    description: Raw data from the PF's CIC filter.
+    value: 4
+  - name: Pfsft
+    description: Shifted data from the PF (24 bits).
+    value: 2
+  - name: Ps
+    description: Status of the parallel or serial data converter.
+    value: 10
+  - name: Rslt
+    description: Final data from the PF (24 bits).
+    value: 0
+  - name: Scd
+    description: Historical data from SCD.
+    value: 6
+enum/SincAlphaEnumXrayAlpha:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumYankeeAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/SincAlphaEnumZuluAlpha:
+  bit_size: 1
+  variants:
+  - name: EmptyNo
+    description: Not empty.
+    value: 0
+  - name: EmptyYes
+    description: Empty.
+    value: 1
+enum/SincAlphaEnumAlphaBravo:
+  bit_size: 1
+  variants:
+  - name: EmptyNo
+    description: Not empty.
+    value: 0
+  - name: EmptyYes
+    description: Empty.
+    value: 1
+enum/SincAlphaEnumBravoBravo:
+  bit_size: 1
+  variants:
+  - name: EmptyNo
+    description: Not empty.
+    value: 0
+  - name: EmptyYes
+    description: Empty.
+    value: 1
+enum/SincAlphaEnumCharlieBravo:
+  bit_size: 1
+  variants:
+  - name: EmptyNo
+    description: Not empty.
+    value: 0
+  - name: EmptyYes
+    description: Empty.
+    value: 1
+enum/SincAlphaEnumDeltaBravo:
+  bit_size: 1
+  variants:
+  - name: EmptyNo
+    description: Not empty.
+    value: 0
+  - name: EmptyYes
+    description: Empty.
+    value: 1
+enum/SincAlphaEnumEchoBravo:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumFoxtrotBravo:
+  bit_size: 1
+  variants:
+  - name: FovfNo
+    description: Did not occur.
+    value: 0
+  - name: FovfYes
+    description: Occurred.
+    value: 1
+enum/SincAlphaEnumGolfBravo:
+  bit_size: 1
+  variants:
+  - name: FovfNo
+    description: Did not occur.
+    value: 0
+  - name: FovfYes
+    description: Occurred.
+    value: 1
+enum/SincAlphaEnumHotelBravo:
+  bit_size: 1
+  variants:
+  - name: FovfNo
+    description: Did not occur.
+    value: 0
+  - name: FovfYes
+    description: Occurred.
+    value: 1
+enum/SincAlphaEnumIndiaBravo:
+  bit_size: 1
+  variants:
+  - name: FovfNo
+    description: Did not occur.
+    value: 0
+  - name: FovfYes
+    description: Occurred.
+    value: 1
+enum/SincAlphaEnumJulietBravo:
+  bit_size: 1
+  variants:
+  - name: FovfNo
+    description: Did not occur.
+    value: 0
+  - name: FovfYes
+    description: Occurred.
+    value: 1
+enum/SincAlphaEnumKiloBravo:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumLimaBravo:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumMikeBravo:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumNovemberBravo:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumOscarBravo:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumPapaBravo:
+  bit_size: 1
+  variants:
+  - name: FunfNo
+    description: Did not occur.
+    value: 0
+  - name: FunfYes
+    description: Occurred.
+    value: 1
+enum/SincAlphaEnumQuebecBravo:
+  bit_size: 1
+  variants:
+  - name: FunfNo
+    description: Did not occur.
+    value: 0
+  - name: FunfYes
+    description: Occurred.
+    value: 1
+enum/SincAlphaEnumRomeoBravo:
+  bit_size: 1
+  variants:
+  - name: FunfNo
+    description: Did not occur.
+    value: 0
+  - name: FunfYes
+    description: Occurred.
+    value: 1
+enum/SincAlphaEnumSierraBravo:
+  bit_size: 1
+  variants:
+  - name: FunfNo
+    description: Did not occur.
+    value: 0
+  - name: FunfYes
+    description: Occurred.
+    value: 1
+enum/SincAlphaEnumTangoBravo:
+  bit_size: 1
+  variants:
+  - name: FunfNo
+    description: Did not occur.
+    value: 0
+  - name: FunfYes
+    description: Occurred.
+    value: 1
+enum/SincAlphaEnumUniformBravo:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumVictorBravo:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumWhiskeyBravo:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumXrayBravo:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumYankeeBravo:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumZuluBravo:
+  bit_size: 1
+  variants:
+  - name: HlmtNo
+    description: Not exceeded.
+    value: 0
+  - name: HlmtYes
+    description: Exceeded.
+    value: 1
+enum/SincAlphaEnumAlphaCharlie:
+  bit_size: 1
+  variants:
+  - name: HlmtNo
+    description: Not exceeded.
+    value: 0
+  - name: HlmtYes
+    description: Exceeded.
+    value: 1
+enum/SincAlphaEnumBravoCharlie:
+  bit_size: 1
+  variants:
+  - name: HlmtNo
+    description: Not exceeded.
+    value: 0
+  - name: HlmtYes
+    description: Exceeded.
+    value: 1
+enum/SincAlphaEnumCharlieCharlie:
+  bit_size: 1
+  variants:
+  - name: HlmtNo
+    description: Not exceeded.
+    value: 0
+  - name: HlmtYes
+    description: Exceeded.
+    value: 1
+enum/SincAlphaEnumDeltaCharlie:
+  bit_size: 1
+  variants:
+  - name: HlmtNo
+    description: Not exceeded.
+    value: 0
+  - name: HlmtYes
+    description: Exceeded.
+    value: 1
+enum/SincAlphaEnumEchoCharlie:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumFoxtrotCharlie:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumGolfCharlie:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumHotelCharlie:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumIndiaCharlie:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumJulietCharlie:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumKiloCharlie:
+  bit_size: 1
+  variants:
+  - name: SatNo
+    description: Did not occur.
+    value: 0
+  - name: SatYes
+    description: Occurred.
+    value: 1
+enum/SincAlphaEnumLimaCharlie:
+  bit_size: 4
+  variants:
+  - name: Disabled
+    description: Disabled.
+    value: 0
+enum/SincAlphaEnumMikeCharlie:
+  bit_size: 2
+  variants:
+  - name: E1b
+    description: External bitstream from the MBIT[n] signal.
+    value: 0
+  - name: Emb
+    description: External Manchester code; ICESEL selects the rise or fall decoder.
+    value: 1
+  - name: Ipb
+    description: Internal 16-bit parallel data from MPDATA.
+    value: 2
+  - name: Isb
+    description: Internal 32-bit serial data from MPDATA.
+    value: 3
+enum/SincAlphaEnumNovemberCharlie:
+  bit_size: 2
+  variants:
+  - name: Epb
+    description: External bitstream from the MBIT[n] signal.
+    value: 0
+  - name: Esb
+    description: Alternate internal bitstream from the INP[n] signal.
+    value: 1
+  - name: Grp
+    description: Grouped bitstream shared with an adjacent channel; the adjacent channel's IBSEL field determines the input.
+    value: 3
+enum/SincAlphaEnumOscarCharlie:
+  bit_size: 3
+  variants:
+  - name: Both
+    description: Both edges.
+    value: 3
+  - name: Eneg
+    description: Every other even negative edge.
+    value: 7
+  - name: Epos
+    description: Every other even positive edge.
+    value: 5
+  - name: Neg
+    description: Negative edge.
+    value: 2
+  - name: Oneg
+    description: Every other odd negative edge.
+    value: 6
+  - name: Opos
+    description: Every other odd positive edge.
+    value: 4
+  - name: Pos
+    description: Positive edge.
+    value: 1
+enum/SincAlphaEnumPapaCharlie:
+  bit_size: 3
+  variants:
+  - name: Ext
+    description: External modulator clock dedicated to this channel.
+    value: 3
+  - name: Grp
+    description: Grouped clock shared with an adjacent channel; the adjacent channel's ICSEL field determines the input clock.
+    value: 7
+  - name: MclkOut0
+    description: MCLK_OUT0 with internal routeback.
+    value: 0
+  - name: MclkOut1
+    description: MCLK_OUT1 with internal routeback.
+    value: 1
+  - name: MclkOut2
+    description: MCLK_OUT2 with internal routeback.
+    value: 2
+enum/SincAlphaEnumQuebecCharlie:
+  bit_size: 1
+  variants:
+  - name: Edge
+    description: Edge.
+    value: 0
+  - name: Level
+    description: Level.
+    value: 1
+enum/SincAlphaEnumRomeoCharlie:
+  bit_size: 2
+  variants:
+  - name: Gp
+    description: Grouped trigger shared with an adjacent channel; the adjacent channel's ITSEL field determines the trigger.
+    value: 3
+  - name: Hw
+    description: Hardware trigger dedicated to the channel.
+    value: 1
+  - name: Sw
+    description: Software.
+    value: 0
+enum/SincAlphaEnumSierraCharlie:
+  bit_size: 1
+  variants:
+  - name: LlmtNo
+    description: Not exceeded.
+    value: 0
+  - name: LlmtYes
+    description: Exceeded.
+    value: 1
+enum/SincAlphaEnumTangoCharlie:
+  bit_size: 1
+  variants:
+  - name: LlmtNo
+    description: Not exceeded.
+    value: 0
+  - name: LlmtYes
+    description: Exceeded.
+    value: 1
+enum/SincAlphaEnumUniformCharlie:
+  bit_size: 1
+  variants:
+  - name: LlmtNo
+    description: Not exceeded.
+    value: 0
+  - name: LlmtYes
+    description: Exceeded.
+    value: 1
+enum/SincAlphaEnumVictorCharlie:
+  bit_size: 1
+  variants:
+  - name: LlmtNo
+    description: Not exceeded.
+    value: 0
+  - name: LlmtYes
+    description: Exceeded.
+    value: 1
+enum/SincAlphaEnumWhiskeyCharlie:
+  bit_size: 1
+  variants:
+  - name: LlmtNo
+    description: Not exceeded.
+    value: 0
+  - name: LlmtYes
+    description: Exceeded.
+    value: 1
+enum/SincAlphaEnumXrayCharlie:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumYankeeCharlie:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumZuluCharlie:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumAlphaDelta:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumBravoDelta:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumCharlieDelta:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumDeltaDelta:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumEchoDelta:
+  bit_size: 2
+  variants:
+  - name: Both
+    description: Both high and low limits.
+    value: 0
+  - name: High
+    description: High limit.
+    value: 1
+  - name: Low
+    description: Low limit.
+    value: 2
+  - name: Window
+    description: Windowed value.
+    value: 3
+enum/SincAlphaEnumFoxtrotDelta:
+  bit_size: 8
+  variants:
+  - name: Ver1
+    description: 1.x.
+    value: 1
+  - name: Ver2
+    description: 2.x.
+    value: 2
+enum/SincAlphaEnumGolfDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disabled regardless of MEN value.
+    value: 1
+  - name: Enabled
+    description: Enabled when MEN = 1.
+    value: 0
+enum/SincAlphaEnumHotelDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disabled regardless of MEN value.
+    value: 1
+  - name: Enabled
+    description: Enabled when MEN = 1.
+    value: 0
+enum/SincAlphaEnumIndiaDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disabled regardless of MEN value.
+    value: 1
+  - name: Enabled
+    description: Enabled when MEN = 1.
+    value: 0
+enum/SincAlphaEnumJulietDelta:
+  bit_size: 8
+  variants:
+  - name: Prohibited
+    description: Prohibited.
+    value: 0
+enum/SincAlphaEnumKiloDelta:
+  bit_size: 1
+  variants:
+  - name: ReadyNo
+    description: Not ready.
+    value: 0
+  - name: ReadyYes
+    description: Ready.
+    value: 1
+enum/SincAlphaEnumLimaDelta:
+  bit_size: 1
+  variants:
+  - name: ReadyNo
+    description: Not ready.
+    value: 0
+  - name: ReadyYes
+    description: Ready.
+    value: 1
+enum/SincAlphaEnumMikeDelta:
+  bit_size: 1
+  variants:
+  - name: ReadyNo
+    description: Not ready.
+    value: 0
+  - name: ReadyYes
+    description: Ready.
+    value: 1
+enum/SincAlphaEnumNovemberDelta:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumOscarDelta:
+  bit_size: 8
+  variants:
+  - name: Ver20
+    description: x.0.
+    value: 0
+enum/SincAlphaEnumPapaDelta:
+  bit_size: 2
+  variants:
+  - name: Order2
+    description: '2.'
+    value: 3
+  - name: Order3
+    description: '3.'
+    value: 2
+enum/SincAlphaEnumQuebecDelta:
+  bit_size: 2
+  variants:
+  - name: Always
+    description: Always.
+    value: 2
+  - name: Continuous
+    description: Continuous.
+    value: 1
+  - name: Fix
+    description: Fixed number.
+    value: 3
+  - name: Single
+    description: Single.
+    value: 0
+enum/SincAlphaEnumRomeoDelta:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumSierraDelta:
+  bit_size: 2
+  variants:
+  - name: Fastsinc
+    description: FastSinc.
+    value: 0
+  - name: Order1
+    description: First order.
+    value: 1
+  - name: Order2
+    description: Second order.
+    value: 2
+  - name: Order3
+    description: Third order.
+    value: 3
+enum/SincAlphaEnumTangoDelta:
+  bit_size: 1
+  variants:
+  - name: SatNo
+    description: Did not occur.
+    value: 0
+  - name: SatYes
+    description: Occurred.
+    value: 1
+enum/SincAlphaEnumUniformDelta:
+  bit_size: 2
+  variants:
+  - name: Prescale2
+    description: '2.'
+    value: 1
+  - name: Prescale4
+    description: '4.'
+    value: 2
+  - name: Prescale8
+    description: '8.'
+    value: 3
+  - name: PrescaleNo
+    description: No prescale.
+    value: 0
+enum/SincAlphaEnumVictorDelta:
+  bit_size: 1
+  variants:
+  - name: ReadyNo
+    description: Not ready.
+    value: 0
+  - name: ReadyYes
+    description: Ready.
+    value: 1
+enum/SincAlphaEnumWhiskeyDelta:
+  bit_size: 1
+  variants:
+  - name: Signed
+    description: Left justified, signed.
+    value: 0
+  - name: Unsigned
+    description: Left justified, unsigned.
+    value: 1
+enum/SincAlphaEnumXrayDelta:
+  bit_size: 1
+  variants:
+  - name: Invalid
+    description: Invalid.
+    value: 1
+  - name: Valid
+    description: Valid.
+    value: 0
+enum/SincAlphaEnumYankeeDelta:
+  bit_size: 1
+  variants:
+  - name: ResetNo
+    description: Do not reset.
+    value: 0
+  - name: ResetYes
+    description: Reset.
+    value: 1
+enum/SincAlphaEnumZuluDelta:
+  bit_size: 1
+  variants:
+  - name: SatNo
+    description: Not saturated.
+    value: 0
+  - name: SatYes
+    description: Saturated.
+    value: 1
+enum/SincAlphaEnumAlphaEcho:
+  bit_size: 1
+  variants:
+  - name: SatNo
+    description: Not saturated.
+    value: 0
+  - name: SatYes
+    description: Saturated.
+    value: 1
+enum/SincAlphaEnumBravoEcho:
+  bit_size: 1
+  variants:
+  - name: SatNo
+    description: Not saturated.
+    value: 0
+  - name: SatYes
+    description: Saturated.
+    value: 1
+enum/SincAlphaEnumCharlieEcho:
+  bit_size: 1
+  variants:
+  - name: SatNo
+    description: Not saturated.
+    value: 0
+  - name: SatYes
+    description: Saturated.
+    value: 1
+enum/SincAlphaEnumDeltaEcho:
+  bit_size: 1
+  variants:
+  - name: SatNo
+    description: Not saturated.
+    value: 0
+  - name: SatYes
+    description: Saturated.
+    value: 1
+enum/SincAlphaEnumEchoEcho:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumFoxtrotEcho:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumGolfEcho:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumHotelEcho:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumIndiaEcho:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumJulietEcho:
+  bit_size: 1
+  variants:
+  - name: ScNo
+    description: Not detected.
+    value: 0
+  - name: ScYes
+    description: Detected.
+    value: 1
+enum/SincAlphaEnumKiloEcho:
+  bit_size: 1
+  variants:
+  - name: ScNo
+    description: Not detected.
+    value: 0
+  - name: ScYes
+    description: Detected.
+    value: 1
+enum/SincAlphaEnumLimaEcho:
+  bit_size: 1
+  variants:
+  - name: ScNo
+    description: Not detected.
+    value: 0
+  - name: ScYes
+    description: Detected.
+    value: 1
+enum/SincAlphaEnumMikeEcho:
+  bit_size: 1
+  variants:
+  - name: ScNo
+    description: Not detected.
+    value: 0
+  - name: ScYes
+    description: Detected.
+    value: 1
+enum/SincAlphaEnumNovemberEcho:
+  bit_size: 1
+  variants:
+  - name: ScNo
+    description: Not detected.
+    value: 0
+  - name: ScYes
+    description: Detected.
+    value: 1
+enum/SincAlphaEnumOscarEcho:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumPapaEcho:
+  bit_size: 1
+  variants:
+  - name: Always
+    description: Constantly when CnCR[CHEN] = MCR[MEN] = 1.
+    value: 0
+  - name: DuringConv
+    description: Only when the PF is performing a conversion.
+    value: 1
+enum/SincAlphaEnumQuebecEcho:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumRomeoEcho:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumSierraEcho:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumTangoEcho:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumUniformEcho:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumVictorEcho:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumWhiskeyEcho:
+  bit_size: 8
+  variants:
+  - name: Disables0
+    description: Disables SCD.
+    value: 0
+  - name: Disables1
+    description: Disables SCD.
+    value: 1
+enum/SincAlphaEnumXrayEcho:
+  bit_size: 2
+  variants:
+  - name: Both
+    description: Both 0 and 1.
+    value: 0
+  - name: One
+    description: Only 1.
+    value: 1
+  - name: Zero
+    description: Only 0.
+    value: 2
+enum/SincAlphaEnumYankeeEcho:
+  bit_size: 1
+  variants:
+  - name: SatNo
+    description: Did not occur.
+    value: 0
+  - name: SatYes
+    description: Occurred.
+    value: 1
+enum/SincAlphaEnumZuluEcho:
+  bit_size: 1
+  variants:
+  - name: DataValid
+    description: Data valid.
+    value: 0
+  - name: InProgress
+    description: Procedure in progress.
+    value: 1
+enum/SincAlphaEnumAlphaFoxtrot:
+  bit_size: 1
+  variants:
+  - name: NoEffect
+    description: No effect.
+    value: 0
+  - name: Trigger
+    description: Trigger.
+    value: 1
+enum/SincAlphaEnumBravoFoxtrot:
+  bit_size: 1
+  variants:
+  - name: NoEffect
+    description: No effect.
+    value: 0
+  - name: Trigger
+    description: Trigger.
+    value: 1
+enum/SincAlphaEnumCharlieFoxtrot:
+  bit_size: 1
+  variants:
+  - name: NoEffect
+    description: No effect.
+    value: 0
+  - name: Trigger
+    description: Trigger.
+    value: 1
+enum/SincAlphaEnumDeltaFoxtrot:
+  bit_size: 1
+  variants:
+  - name: NoEffect
+    description: No effect.
+    value: 0
+  - name: Trigger
+    description: Trigger.
+    value: 1
+enum/SincAlphaEnumEchoFoxtrot:
+  bit_size: 1
+  variants:
+  - name: NoEffect
+    description: No effect.
+    value: 0
+  - name: Trigger
+    description: Trigger.
+    value: 1
+enum/SincAlphaEnumFoxtrotFoxtrot:
+  bit_size: 1
+  variants:
+  - name: WlmtNo
+    description: Not exceeded.
+    value: 0
+  - name: WlmtYes
+    description: Exceeded.
+    value: 1
+enum/SincAlphaEnumGolfFoxtrot:
+  bit_size: 1
+  variants:
+  - name: WlmtNo
+    description: Not exceeded.
+    value: 0
+  - name: WlmtYes
+    description: Exceeded.
+    value: 1
+enum/SincAlphaEnumHotelFoxtrot:
+  bit_size: 1
+  variants:
+  - name: WlmtNo
+    description: Not exceeded.
+    value: 0
+  - name: WlmtYes
+    description: Exceeded.
+    value: 1
+enum/SincAlphaEnumIndiaFoxtrot:
+  bit_size: 1
+  variants:
+  - name: WlmtNo
+    description: Not exceeded.
+    value: 0
+  - name: WlmtYes
+    description: Exceeded.
+    value: 1
+enum/SincAlphaEnumJulietFoxtrot:
+  bit_size: 1
+  variants:
+  - name: WlmtNo
+    description: Not exceeded.
+    value: 0
+  - name: WlmtYes
+    description: Exceeded.
+    value: 1
+enum/SincAlphaEnumKiloFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumLimaFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumMikeFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumNovemberFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumOscarFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumPapaFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumQuebecFoxtrot:
+  bit_size: 1
+  variants:
+  - name: ZcNo
+    description: Not detected.
+    value: 0
+  - name: ZcYes
+    description: Detected.
+    value: 1
+enum/SincAlphaEnumRomeoFoxtrot:
+  bit_size: 1
+  variants:
+  - name: ZcNo
+    description: Not detected.
+    value: 0
+  - name: ZcYes
+    description: Detected.
+    value: 1
+enum/SincAlphaEnumSierraFoxtrot:
+  bit_size: 1
+  variants:
+  - name: ZcNo
+    description: Not detected.
+    value: 0
+  - name: ZcYes
+    description: Detected.
+    value: 1
+enum/SincAlphaEnumTangoFoxtrot:
+  bit_size: 1
+  variants:
+  - name: ZcNo
+    description: Not detected.
+    value: 0
+  - name: ZcYes
+    description: Detected.
+    value: 1
+enum/SincAlphaEnumUniformFoxtrot:
+  bit_size: 1
+  variants:
+  - name: ZcNo
+    description: Not detected.
+    value: 0
+  - name: ZcYes
+    description: Detected.
+    value: 1
+enum/SincAlphaEnumVictorFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumWhiskeyFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumXrayFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumYankeeFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumZuluFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumAlphaGolf:
+  bit_size: 1
+  variants:
+  - name: Disables
+    description: Disables.
+    value: 0
+  - name: Enables
+    description: Enables.
+    value: 1
+enum/SincAlphaEnumBravoGolf:
+  bit_size: 2
+  variants:
+  - name: Both
+    description: Both rise and fall.
+    value: 0
+  - name: Fall
+    description: Fall.
+    value: 1
+  - name: Rise
+    description: Rise.
+    value: 2

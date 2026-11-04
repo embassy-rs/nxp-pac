@@ -1,0 +1,127 @@
+# NXP mcux-soc-svd 7c1f00bdd6263f0b93466f5e73e5fc55a744b879; native chiptool import.
+# Source instance geometry is retained in explicit block variants; see private source bindings.
+# Unannotated fieldsets construct zero in software, not a claimed hardware reset.
+# Command/W1C/SET/CLR/TOG construction defaults are zero masks; no RMW semantics are implied.
+# Core ID reads zero (N23 SRM 16630-16631; larger N SRM 18773-18774).
+# REQUEST retains generic N-map RW access; core-context permission is ambiguous.
+# Source: MCXN526_cm33_core0.xml DM0 sha256 ccb0c8ecf3573e24bb8c15a32bdec8a6f63b8870ced5bb7b9b629177f5f990f3
+# Source: MCXN526_cm33_core1.xml DM0 sha256 caf054982956506a2f2e6896e0b1e0eb1c3035684fd3093778a21bda218bfa09
+# Source: MCXN527_cm33_core0.xml DM0 sha256 5547fbb406e6e825ebc2f983518a5893814d62c3a6e2c5ad6075c49d939c8e17
+# Source: MCXN527_cm33_core1.xml DM0 sha256 daac6c4d6fdbbdc87d7557ed9e567801921eca1e8107fc3f9f38173be3c936e0
+# Source: MCXN536_cm33_core0.xml DM0 sha256 f9533e58d74eab222fc38608bd1d8dc45087e87b80a93f8b693e6cf2eb25cba4
+# Source: MCXN536_cm33_core1.xml DM0 sha256 c089aecac3d73a7d8fc4a8c0cccf77ea8446b22a2ea99f4f2f01a4e0ca3a2fdd
+# Source: MCXN537_cm33_core0.xml DM0 sha256 e72dbd80d33e6f53f05f11156fc20f6d53cf9848bc74fed80b5c34157455b11a
+# Source: MCXN537_cm33_core1.xml DM0 sha256 4d5f7d121166c4d720a9da81b90be1b2f93be5e71fd25b9dd74b8715ebe30dce
+# Source: MCXN546_cm33_core0.xml DM0 sha256 54e1fc060f9ccc17299bdb2da84159e699e87456276f2e695d440a6eb4aa9aad
+# Source: MCXN546_cm33_core1.xml DM0 sha256 ddb7e932730a51c75f544efd6564ad6dbce5b3eca0a7befb7ab5b74a9951b937
+# Source: MCXN547_cm33_core0.xml DM0 sha256 a276aee072bebd57c18929fe9a74408366fdbb42b918e06be5a3783a4aae4db7
+# Source: MCXN547_cm33_core1.xml DM0 sha256 4a265743bdd2130cdd37ef12b9fd1d538cce9a2eac1c9149db291b7638e61423
+block/DbgmailboxAlpha:
+  description: DBGMB.
+  items:
+  - name: csw
+    description: Command and Status Word.
+    byte_offset: 0
+    fieldset: DbgmailboxAlphaFieldsetAlpha
+  - name: request
+    description: Request Value.
+    byte_offset: 4
+    fieldset: DbgmailboxAlphaFieldsetCharlie
+  - name: return_
+    description: Return Value.
+    byte_offset: 8
+    fieldset: DbgmailboxAlphaFieldsetDelta
+  - name: id
+    description: Identification.
+    byte_offset: 252
+    access: Read
+    fieldset: DbgmailboxAlphaFieldsetBravo
+fieldset/DbgmailboxAlphaFieldsetAlpha:
+  description: Command and Status Word.
+  fields:
+  - name: resynch_req
+    description: Resynchronization Request.
+    bit_offset: 0
+    bit_size: 1
+    enum: DbgmailboxAlphaEnumDelta
+  - name: req_pending
+    description: Request Pending.
+    bit_offset: 1
+    bit_size: 1
+    enum: DbgmailboxAlphaEnumCharlie
+  - name: dbg_or_err
+    description: DBGMB Overrun Error.
+    bit_offset: 2
+    bit_size: 1
+    enum: DbgmailboxAlphaEnumBravo
+  - name: ahb_or_err
+    description: AHB Overrun Error.
+    bit_offset: 3
+    bit_size: 1
+    enum: DbgmailboxAlphaEnumAlpha
+  - name: soft_reset
+    description: Soft Reset.
+    bit_offset: 4
+    bit_size: 1
+  - name: chip_reset_req
+    description: Chip Reset Request.
+    bit_offset: 5
+    bit_size: 1
+fieldset/DbgmailboxAlphaFieldsetBravo:
+  description: Identification.
+  fields:
+  - name: id
+    description: Identification Value.
+    bit_offset: 0
+    bit_size: 32
+  reset_value: 0
+fieldset/DbgmailboxAlphaFieldsetCharlie:
+  description: Request Value.
+  fields:
+  - name: request
+    description: Request Value.
+    bit_offset: 0
+    bit_size: 32
+fieldset/DbgmailboxAlphaFieldsetDelta:
+  description: Return Value.
+  fields:
+  - name: ret
+    description: Return Value.
+    bit_offset: 0
+    bit_size: 32
+enum/DbgmailboxAlphaEnumAlpha:
+  bit_size: 1
+  variants:
+  - name: AhbOverrunErr
+    description: AHB Overrun Error. An AHB overrun occurred.
+    value: 1
+  - name: NoAhbOverrunErr
+    description: No AHB Overrun Error.
+    value: 0
+enum/DbgmailboxAlphaEnumBravo:
+  bit_size: 1
+  variants:
+  - name: NoOverrunErr
+    description: No DBGMB Overrun error.
+    value: 0
+  - name: OverrunErr
+    description: DBGMB overrun error. A DBGMB overrun occurred.
+    value: 1
+enum/DbgmailboxAlphaEnumCharlie:
+  bit_size: 1
+  variants:
+  - name: NoRequestPending
+    description: No request pending.
+    value: 0
+  - name: RequestPending
+    description: Request for resynchronization pending.
+    value: 1
+enum/DbgmailboxAlphaEnumDelta:
+  bit_size: 1
+  variants:
+  - name: NoRequest
+    description: No request.
+    value: 0
+  - name: Request
+    description: Request for resynchronization.
+    value: 1

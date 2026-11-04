@@ -1,0 +1,97 @@
+# NXP mcux-soc-svd 7c1f00bdd6263f0b93466f5e73e5fc55a744b879; native chiptool import.
+# Source instance geometry is retained in explicit block variants; see private source bindings.
+# Unannotated fieldsets construct zero in software, not a claimed hardware reset.
+# Command/W1C/SET/CLR/TOG construction defaults are zero masks; no RMW semantics are implied.
+# Source: MCXN247.xml CACHE64_POLSEL0 sha256 dbbed5781a39012768344882dad168430c742f26e4261c6fd0bda9a34ca4a652
+block/CachesixfourPolselAlpha:
+  description: CACHE64_POLSEL.
+  items:
+  - name: reg0_top
+    description: Region 0 Top Boundary.
+    byte_offset: 20
+    fieldset: CachesixfourPolselAlphaFieldsetBravo
+  - name: reg1_top
+    description: Region 1 Top Boundary.
+    byte_offset: 24
+    fieldset: CachesixfourPolselAlphaFieldsetCharlie
+  - name: polsel
+    description: Policy Select.
+    byte_offset: 28
+    fieldset: CachesixfourPolselAlphaFieldsetAlpha
+fieldset/CachesixfourPolselAlphaFieldsetAlpha:
+  description: Policy Select.
+  fields:
+  - name: reg0_policy
+    description: Policy Select For Region 0.
+    bit_offset: 0
+    bit_size: 2
+    enum: CachesixfourPolselAlphaEnumAlpha
+  - name: reg1_policy
+    description: Policy Select For Region 1.
+    bit_offset: 2
+    bit_size: 2
+    enum: CachesixfourPolselAlphaEnumBravo
+  - name: reg2_policy
+    description: Policy Select For Region 2.
+    bit_offset: 4
+    bit_size: 2
+    enum: CachesixfourPolselAlphaEnumCharlie
+fieldset/CachesixfourPolselAlphaFieldsetBravo:
+  description: Region 0 Top Boundary.
+  fields:
+  - name: reg0_top
+    description: Upper Limit Of Region 0.
+    bit_offset: 10
+    bit_size: 19
+fieldset/CachesixfourPolselAlphaFieldsetCharlie:
+  description: Region 1 Top Boundary.
+  fields:
+  - name: reg1_top
+    description: Upper Limit Of Region 1.
+    bit_offset: 10
+    bit_size: 19
+enum/CachesixfourPolselAlphaEnumAlpha:
+  bit_size: 2
+  variants:
+  - name: Reg000
+    description: Noncacheable.
+    value: 0
+  - name: Reg001
+    description: Write-through.
+    value: 1
+  - name: Reg010
+    description: Write-back.
+    value: 2
+  - name: Reg011
+    description: Invalid.
+    value: 3
+enum/CachesixfourPolselAlphaEnumBravo:
+  bit_size: 2
+  variants:
+  - name: Reg100
+    description: Noncacheable.
+    value: 0
+  - name: Reg101
+    description: Write-through.
+    value: 1
+  - name: Reg110
+    description: Write-back.
+    value: 2
+  - name: Reg111
+    description: Invalid.
+    value: 3
+enum/CachesixfourPolselAlphaEnumCharlie:
+  bit_size: 2
+  variants:
+  - name: Reg200
+    description: Noncacheable.
+    value: 0
+  - name: Reg201
+    description: Write-through.
+    value: 1
+  - name: Reg210
+    description: Write-back.
+    value: 2
+  - name: Reg211
+    description: Invalid.
+    value: 3
