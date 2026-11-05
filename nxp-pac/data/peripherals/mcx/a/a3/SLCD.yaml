@@ -1,5 +1,5 @@
 # MCXA3: explicit pinned XML onboarding; backing widths and resets retained.
-block/Lcd:
+block/Slcd:
   description: Segment LCD Controller.
   items:
   - name: gcr

@@ -1,2 +1,20 @@
 includes:
   - ../common/SPC.yaml
+# MCXA577.xml EVD_CFG (0x140) has six-bit fields.
+# EVDSTAT is read-only. The IR cannot express field-level access and generates
+# a status setter; do not use it to write EVDSTAT.
+fieldset/EvdCfg:
+  description: External Voltage Domain Configuration.
+  fields:
+  - name: evdiso
+    description: External Voltage Domain Isolation.
+    bit_offset: 0
+    bit_size: 6
+  - name: evdlpiso
+    description: External Voltage Domain Low-Power Isolation.
+    bit_offset: 8
+    bit_size: 6
+  - name: evdstat
+    description: External Voltage Domain Status.
+    bit_offset: 16
+    bit_size: 6

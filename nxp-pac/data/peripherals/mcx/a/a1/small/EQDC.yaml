@@ -1,5 +1,232 @@
-# MCXA173/174: MCXAP100M180F41RM Rev.2; explicit MCXA174 XML onboarding.
-# Backing widths and resets restored from the pinned XML; no build-time SVD input.
+# MCXAP64M96FS3RM Rev. 7 (2024-10-22), QDC chapter.
+# Small-group source XML register resets restored by explicit offline onboarding.
+# Compatible curated A1 layouts reused where applicable; shared sources remain unchanged.
+block/Eqdc:
+  description: Quadrature_Decoder.
+  items:
+  - name: ctrl
+    description: Control Register.
+    byte_offset: 0
+    bit_size: 16
+    fieldset: Ctrl
+  - name: ctrl2
+    description: Control 2 Register.
+    byte_offset: 2
+    bit_size: 16
+    fieldset: Ctrl2
+  - name: filt
+    description: Input Filter Register.
+    byte_offset: 4
+    bit_size: 16
+    fieldset: Filt
+  - name: lastedge
+    description: Last Edge Time Register.
+    byte_offset: 6
+    access: Read
+    bit_size: 16
+    fieldset: Lastedge
+  - name: posdper
+    description: Position Difference Period Counter Register.
+    byte_offset: 8
+    access: Read
+    bit_size: 16
+    fieldset: Posdper
+  - name: posdperbfr
+    description: Position Difference Period Buffer Register.
+    byte_offset: 10
+    access: Read
+    bit_size: 16
+    fieldset: Posdperbfr
+  - name: upos
+    description: Upper Position Counter Register.
+    byte_offset: 12
+    bit_size: 16
+    fieldset: Upos
+  - name: lpos
+    description: Lower Position Counter Register.
+    byte_offset: 14
+    bit_size: 16
+    fieldset: Lpos
+  - name: posd
+    description: Position Difference Counter Register.
+    byte_offset: 16
+    bit_size: 16
+    fieldset: Posd
+  - name: posdh
+    description: Position Difference Hold Register.
+    byte_offset: 18
+    access: Read
+    bit_size: 16
+    fieldset: Posdh
+  - name: uposh
+    description: Upper Position Hold Register.
+    byte_offset: 20
+    access: Read
+    bit_size: 16
+    fieldset: Uposh
+  - name: lposh
+    description: Lower Position Hold Register.
+    byte_offset: 22
+    access: Read
+    bit_size: 16
+    fieldset: Lposh
+  - name: lastedgeh
+    description: Last Edge Time Hold Register.
+    byte_offset: 24
+    access: Read
+    bit_size: 16
+    fieldset: Lastedgeh
+  - name: posdperh
+    description: Position Difference Period Hold Register.
+    byte_offset: 26
+    access: Read
+    bit_size: 16
+    fieldset: Posdperh
+  - name: revh
+    description: Revolution Hold Register.
+    byte_offset: 28
+    access: Read
+    bit_size: 16
+    fieldset: Revh
+  - name: rev
+    description: Revolution Counter Register.
+    byte_offset: 30
+    bit_size: 16
+    fieldset: Rev
+  - name: uinit
+    description: Upper Initialization Register.
+    byte_offset: 32
+    bit_size: 16
+    fieldset: Uinit
+  - name: linit
+    description: Lower Initialization Register.
+    byte_offset: 34
+    bit_size: 16
+    fieldset: Linit
+  - name: umod
+    description: Upper Modulus Register.
+    byte_offset: 36
+    bit_size: 16
+    fieldset: Umod
+  - name: lmod
+    description: Lower Modulus Register.
+    byte_offset: 38
+    bit_size: 16
+    fieldset: Lmod
+  - name: ucomp0
+    description: Upper Position Compare Register 0.
+    byte_offset: 40
+    bit_size: 16
+    fieldset: Ucomp0
+  - name: lcomp0
+    description: Lower Position Compare Register 0.
+    byte_offset: 42
+    bit_size: 16
+    fieldset: Lcomp0
+  - name: ucomp1
+    description: Upper Position Compare 1.
+    byte_offset: 44
+    access: Write
+    bit_size: 16
+    fieldset: Ucomp1
+  - name: uposh1
+    description: Upper Position Holder Register 1.
+    byte_offset: 44
+    access: Read
+    bit_size: 16
+    fieldset: Uposh1
+  - name: lcomp1
+    description: Lower Position Compare 1.
+    byte_offset: 46
+    access: Write
+    bit_size: 16
+    fieldset: Lcomp1
+  - name: lposh1
+    description: Lower Position Holder Register 1.
+    byte_offset: 46
+    access: Read
+    bit_size: 16
+    fieldset: Lposh1
+  - name: ucomp2
+    description: Upper Position Compare 2.
+    byte_offset: 48
+    access: Write
+    bit_size: 16
+    fieldset: Ucomp2
+  - name: uposh2
+    description: Upper Position Holder Register 3.
+    byte_offset: 48
+    access: Read
+    bit_size: 16
+    fieldset: Uposh2
+  - name: lcomp2
+    description: Lower Position Compare 2.
+    byte_offset: 50
+    access: Write
+    bit_size: 16
+    fieldset: Lcomp2
+  - name: lposh2
+    description: Lower Position Holder Register 2.
+    byte_offset: 50
+    access: Read
+    bit_size: 16
+    fieldset: Lposh2
+  - name: ucomp3
+    description: Upper Position Compare 3.
+    byte_offset: 52
+    access: Write
+    bit_size: 16
+    fieldset: Ucomp3
+  - name: uposh3
+    description: Upper Position Holder Register 3.
+    byte_offset: 52
+    access: Read
+    bit_size: 16
+    fieldset: Uposh3
+  - name: lcomp3
+    description: Lower Position Compare 3.
+    byte_offset: 54
+    access: Write
+    bit_size: 16
+    fieldset: Lcomp3
+  - name: lposh3
+    description: Lower Position Holder Register 3.
+    byte_offset: 54
+    access: Read
+    bit_size: 16
+    fieldset: Lposh3
+  - name: intctrl
+    description: Interrupt Control Register.
+    byte_offset: 56
+    bit_size: 16
+    fieldset: Intctrl
+  - name: wtr
+    description: Watchdog Timeout Register.
+    byte_offset: 58
+    bit_size: 16
+    fieldset: Wtr
+  - name: imr
+    description: Input Monitor Register.
+    byte_offset: 60
+    bit_size: 16
+    fieldset: Imr
+  - name: tst
+    description: Test Register.
+    byte_offset: 62
+    bit_size: 16
+    fieldset: Tst
+  - name: uverid
+    description: Upper VERID.
+    byte_offset: 80
+    access: Read
+    bit_size: 16
+    fieldset: Uverid
+  - name: lverid
+    description: Lower VERID.
+    byte_offset: 82
+    access: Read
+    bit_size: 16
+    fieldset: Lverid
 fieldset/Ctrl:
   description: Control Register.
   bit_size: 16
@@ -791,11 +1018,10 @@ enum/Dmaen:
     description: DMA is disabled.
     value: 0
   - name: Dmaen1
-    description: DMA is enabled. DMA request asserts automatically when the values in the outer-set of buffered
-      compare registers (UCOMP0/LCOMP0;UCOMP1/LCOMP1;UCOMP2/LCOMP2;UCOMP3/LCOMP3), initial registers(UINIT/LINIT)
-      and modulus registers (UMOD/LMOD) are loaded into the inner-set of buffer and then LDOK is cleared automatically.
-      After the completion of this DMA transfer, LDOK is set automatically, it ensures outer-set values can be loaded
-      into inner-set which in turn triggers DMA again.
+    description: DMA is enabled. DMA request asserts automatically when the values in the outer-set of buffered compare registers
+      (UCOMP0/LCOMP0;UCOMP1/LCOMP1;UCOMP2/LCOMP2;UCOMP3/LCOMP3), initial registers(UINIT/LINIT) and modulus registers (UMOD/LMOD)
+      are loaded into the inner-set of buffer and then LDOK is cleared automatically. After the completion of this DMA transfer,
+      LDOK is set automatically, it ensures outer-set values can be loaded into inner-set which in turn triggers DMA again.
     value: 1
 enum/Emip:
   bit_size: 1
@@ -846,12 +1072,12 @@ enum/Hne:
   bit_size: 1
   variants:
   - name: Hne0
-    description: When CTRL[OPMODE] = 0,use HOME positive edge to trigger initialization of position counters. When
-      CTRL[OPMODE] = 1,use ENABLE high level to enable POS/POSD/WDG/REV counters.
+    description: When CTRL[OPMODE] = 0,use HOME positive edge to trigger initialization of position counters. When CTRL[OPMODE]
+      = 1,use ENABLE high level to enable POS/POSD/WDG/REV counters.
     value: 0
   - name: Hne1
-    description: When CTRL[OPMODE] = 0,use HOME negative edge to trigger initialization of position counters. When
-      CTRL[OPMODE] = 1,use ENABLE low level to enable POS/POSD/WDG/REV counters.
+    description: When CTRL[OPMODE] = 0,use HOME negative edge to trigger initialization of position counters. When CTRL[OPMODE]
+      = 1,use ENABLE low level to enable POS/POSD/WDG/REV counters.
     value: 1
 enum/Initpos:
   bit_size: 1
@@ -869,19 +1095,18 @@ enum/Ldmod:
     description: Buffered registers are loaded and take effect immediately upon CTRL[LDOK] is set.
     value: 0
   - name: Ldmod1
-    description: Buffered registers are loaded and take effect at the next roll-over or roll-under if CTRL[LDOK]
-      is set.
+    description: Buffered registers are loaded and take effect at the next roll-over or roll-under if CTRL[LDOK] is set.
     value: 1
 enum/Ldok:
   bit_size: 1
   variants:
   - name: Ldok0
-    description: No loading action taken. Users can write new values to buffered registers (writing into outer-set
-      of these buffered registers).
+    description: No loading action taken. Users can write new values to buffered registers (writing into outer-set of these
+      buffered registers).
     value: 0
   - name: Ldok1
-    description: Outer-set values are ready to be loaded into inner-set and take effect. The loading time point
-      depends on CTRL2[LDMOD].
+    description: Outer-set values are ready to be loaded into inner-set and take effect. The loading time point depends on
+      CTRL2[LDMOD].
     value: 1
 enum/Once:
   bit_size: 1
@@ -899,23 +1124,20 @@ enum/Opmode:
     description: 'Decode Mode: Input nodes INDEX/PRESET and HOME/ENABLE are assigned to function of INDEX and HOME.'
     value: 0
   - name: Opmode1
-    description: 'Count Mode: Input nodes INDEX/PRESET and HOME/ENABLE are assigned to functions of PRESET and ENABLE.
-      In this mode: (1)only when ENABLE=1, all counters (position/position difference/revolution/watchdog) can run,
-      when ENABLE=0, all counters (position/position difference/revolution/watchdog) can''t run. (2) the rising
-      edge of PRESET input can initialize position/revolution/watchdog counters (position counter initialization
-      also need referring to bit CTRL[REV]).'
+    description: 'Count Mode: Input nodes INDEX/PRESET and HOME/ENABLE are assigned to functions of PRESET and ENABLE. In
+      this mode: (1)only when ENABLE=1, all counters (position/position difference/revolution/watchdog) can run, when ENABLE=0,
+      all counters (position/position difference/revolution/watchdog) can''t run. (2) the rising edge of PRESET input can
+      initialize position/revolution/watchdog counters (position counter initialization also need referring to bit CTRL[REV]).'
     value: 1
 enum/Outctl:
   bit_size: 1
   variants:
   - name: Outctl0
-    description: POS_MATCH[x](x range is 0-3) is asserted when the Position Counter is equal to according compare
-      value (UCOMPx/LCOMPx)(x range is 0-3), and de-asserted when the Position Counter not equal to the compare
-      value (UCOMPx/LCOMPx)(x range is 0-3).
+    description: POS_MATCH[x](x range is 0-3) is asserted when the Position Counter is equal to according compare value (UCOMPx/LCOMPx)(x
+      range is 0-3), and de-asserted when the Position Counter not equal to the compare value (UCOMPx/LCOMPx)(x range is 0-3).
     value: 0
   - name: Outctl1
-    description: All POS_MATCH[x](x range is 0-3) are asserted a pulse, when the UPOS, LPOS, REV, or POSD registers
-      are read.
+    description: All POS_MATCH[x](x range is 0-3) are asserted a pulse, when the UPOS, LPOS, REV, or POSD registers are read.
     value: 1
 enum/Ph1:
   bit_size: 1
@@ -930,12 +1152,11 @@ enum/Pmen:
   bit_size: 1
   variants:
   - name: Pmen0
-    description: Period measurement functions are not used. POSD is loaded to POSDH and then cleared whenever POSD,
-      UPOS, LPOS or REV is read.
+    description: Period measurement functions are not used. POSD is loaded to POSDH and then cleared whenever POSD, UPOS,
+      LPOS or REV is read.
     value: 0
   - name: Pmen1
-    description: Period measurement functions are used. POSD is loaded into POSDH and then cleared only when POSD
-      is read.
+    description: Period measurement functions are used. POSD is loaded into POSDH and then cleared only when POSD is read.
     value: 1
 enum/Qdn:
   bit_size: 1
@@ -945,6 +1166,16 @@ enum/Qdn:
     value: 0
   - name: Qdn1
     description: Generates a negative quadrature decoder signal.
+    value: 1
+enum/Reverse:
+  bit_size: 1
+  variants:
+  - name: Rev0
+    description: Count normally and the position counter initialization uses upper/lower initialization register UINIT/LINIT.
+    value: 0
+  - name: Rev1
+    description: Count in the reverse direction and the position counter initialization uses upper/lower modulus register
+      UMOD/LMOD.
     value: 1
 enum/Revmod:
   bit_size: 1
@@ -1099,240 +1330,3 @@ enum/Xne:
   - name: Xne1
     description: Use negative edge of INDEX/PRESET pulse.
     value: 1
-enum/Reverse:
-  bit_size: 1
-  variants:
-  - name: Rev0
-    description: Count normally and the position counter initialization uses upper/lower initialization register
-      UINIT/LINIT.
-    value: 0
-  - name: Rev1
-    description: Count in the reverse direction and the position counter initialization uses upper/lower modulus
-      register UMOD/LMOD.
-    value: 1
-block/Qdc:
-  description: Enhanced Quadrature Decoder (eQDC).
-  items:
-  - name: ctrl
-    description: Control Register.
-    byte_offset: 0
-    bit_size: 16
-    fieldset: Ctrl
-  - name: ctrl2
-    description: Control 2 Register.
-    byte_offset: 2
-    bit_size: 16
-    fieldset: Ctrl2
-  - name: filt
-    description: Input Filter Register.
-    byte_offset: 4
-    bit_size: 16
-    fieldset: Filt
-  - name: lastedge
-    description: Last Edge Time Register.
-    byte_offset: 6
-    access: Read
-    bit_size: 16
-    fieldset: Lastedge
-  - name: posdper
-    description: Position Difference Period Counter Register.
-    byte_offset: 8
-    access: Read
-    bit_size: 16
-    fieldset: Posdper
-  - name: posdperbfr
-    description: Position Difference Period Buffer Register.
-    byte_offset: 10
-    access: Read
-    bit_size: 16
-    fieldset: Posdperbfr
-  - name: upos
-    description: Upper Position Counter Register.
-    byte_offset: 12
-    bit_size: 16
-    fieldset: Upos
-  - name: lpos
-    description: Lower Position Counter Register.
-    byte_offset: 14
-    bit_size: 16
-    fieldset: Lpos
-  - name: posd
-    description: Position Difference Counter Register.
-    byte_offset: 16
-    bit_size: 16
-    fieldset: Posd
-  - name: posdh
-    description: Position Difference Hold Register.
-    byte_offset: 18
-    access: Read
-    bit_size: 16
-    fieldset: Posdh
-  - name: uposh
-    description: Upper Position Hold Register.
-    byte_offset: 20
-    access: Read
-    bit_size: 16
-    fieldset: Uposh
-  - name: lposh
-    description: Lower Position Hold Register.
-    byte_offset: 22
-    access: Read
-    bit_size: 16
-    fieldset: Lposh
-  - name: lastedgeh
-    description: Last Edge Time Hold Register.
-    byte_offset: 24
-    access: Read
-    bit_size: 16
-    fieldset: Lastedgeh
-  - name: posdperh
-    description: Position Difference Period Hold Register.
-    byte_offset: 26
-    access: Read
-    bit_size: 16
-    fieldset: Posdperh
-  - name: revh
-    description: Revolution Hold Register.
-    byte_offset: 28
-    access: Read
-    bit_size: 16
-    fieldset: Revh
-  - name: rev
-    description: Revolution Counter Register.
-    byte_offset: 30
-    bit_size: 16
-    fieldset: Rev
-  - name: uinit
-    description: Upper Initialization Register.
-    byte_offset: 32
-    bit_size: 16
-    fieldset: Uinit
-  - name: linit
-    description: Lower Initialization Register.
-    byte_offset: 34
-    bit_size: 16
-    fieldset: Linit
-  - name: umod
-    description: Upper Modulus Register.
-    byte_offset: 36
-    bit_size: 16
-    fieldset: Umod
-  - name: lmod
-    description: Lower Modulus Register.
-    byte_offset: 38
-    bit_size: 16
-    fieldset: Lmod
-  - name: ucomp0
-    description: Upper Position Compare Register 0.
-    byte_offset: 40
-    bit_size: 16
-    fieldset: Ucomp0
-  - name: lcomp0
-    description: Lower Position Compare Register 0.
-    byte_offset: 42
-    bit_size: 16
-    fieldset: Lcomp0
-  - name: ucomp1
-    description: Upper Position Compare 1.
-    byte_offset: 44
-    access: Write
-    bit_size: 16
-    fieldset: Ucomp1
-  - name: uposh1
-    description: Upper Position Holder Register 1.
-    byte_offset: 44
-    access: Read
-    bit_size: 16
-    fieldset: Uposh1
-  - name: lcomp1
-    description: Lower Position Compare 1.
-    byte_offset: 46
-    access: Write
-    bit_size: 16
-    fieldset: Lcomp1
-  - name: lposh1
-    description: Lower Position Holder Register 1.
-    byte_offset: 46
-    access: Read
-    bit_size: 16
-    fieldset: Lposh1
-  - name: ucomp2
-    description: Upper Position Compare 2.
-    byte_offset: 48
-    access: Write
-    bit_size: 16
-    fieldset: Ucomp2
-  - name: uposh2
-    description: Upper Position Holder Register 3.
-    byte_offset: 48
-    access: Read
-    bit_size: 16
-    fieldset: Uposh2
-  - name: lcomp2
-    description: Lower Position Compare 2.
-    byte_offset: 50
-    access: Write
-    bit_size: 16
-    fieldset: Lcomp2
-  - name: lposh2
-    description: Lower Position Holder Register 2.
-    byte_offset: 50
-    access: Read
-    bit_size: 16
-    fieldset: Lposh2
-  - name: ucomp3
-    description: Upper Position Compare 3.
-    byte_offset: 52
-    access: Write
-    bit_size: 16
-    fieldset: Ucomp3
-  - name: uposh3
-    description: Upper Position Holder Register 3.
-    byte_offset: 52
-    access: Read
-    bit_size: 16
-    fieldset: Uposh3
-  - name: lcomp3
-    description: Lower Position Compare 3.
-    byte_offset: 54
-    access: Write
-    bit_size: 16
-    fieldset: Lcomp3
-  - name: lposh3
-    description: Lower Position Holder Register 3.
-    byte_offset: 54
-    access: Read
-    bit_size: 16
-    fieldset: Lposh3
-  - name: intctrl
-    description: Interrupt Control Register.
-    byte_offset: 56
-    bit_size: 16
-    fieldset: Intctrl
-  - name: wtr
-    description: Watchdog Timeout Register.
-    byte_offset: 58
-    bit_size: 16
-    fieldset: Wtr
-  - name: imr
-    description: Input Monitor Register.
-    byte_offset: 60
-    bit_size: 16
-    fieldset: Imr
-  - name: tst
-    description: Test Register.
-    byte_offset: 62
-    bit_size: 16
-    fieldset: Tst
-  - name: uverid
-    description: Upper VERID.
-    byte_offset: 80
-    access: Read
-    bit_size: 16
-    fieldset: Uverid
-  - name: lverid
-    description: Lower VERID.
-    byte_offset: 82
-    access: Read
-    bit_size: 16
-    fieldset: Lverid

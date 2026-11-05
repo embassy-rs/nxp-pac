@@ -8770,7 +8770,7 @@
     {
       "name": "SPC0",
       "address": "0x400CB000",
-      "block": "mcx/a/a5/SPC::Spc5xx",
+      "block": "mcx/a/a5/SPC",
       "signals": [
         {
           "name": "LPREQ",
@@ -8809,7 +8809,7 @@
       "signals": []
     },
     {
-      "name": "SmartDMA0",
+      "name": "SMARTDMA0",
       "gate": {
         "enable": "mrcc_glb_cc3",
         "reset": "mrcc_glb_rst3"
@@ -10650,14 +10650,6 @@
       "block": "mcx/a/a5/TSI"
     },
     {
-      "name": "UDF0",
-      "gate": {
-        "enable": "mrcc_glb_cc4"
-      },
-      "address": "0x400ED000",
-      "signals": []
-    },
-    {
       "name": "USB1",
       "gate": {
         "enable": "mrcc_glb_cc2",
@@ -11122,19 +11114,19 @@
       ]
     },
     {
-      "name": "EDMA_0_TCD",
+      "name": "EDMA_TCD0",
       "address": "0x40081000",
       "block": "mcx/a/a5/EDMA_TCD::TCD12",
       "signals": []
     },
     {
-      "name": "EDMA_1_TCD",
+      "name": "EDMA_TCD1",
       "address": "0x40014000",
       "block": "mcx/a/a5/EDMA_TCD::TCD4",
       "signals": []
     },
     {
-      "name": "eSPI0",
+      "name": "ESPI0",
       "gate": {
         "enable": "mrcc_glb_cc2",
         "reset": "mrcc_glb_rst2"
@@ -11262,9 +11254,10 @@
       "block": "mcx/a/a5/ESPI"
     },
     {
-      "name": "seccon",
+      "name": "SECCON0",
       "gate": {
-        "enable": "mrcc_glb_cc4"
+        "enable": "mrcc_glb_cc4",
+        "bit": "seccon"
       },
       "address": "0x400EA000",
       "signals": [],
