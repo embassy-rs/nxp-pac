@@ -17,7 +17,7 @@ proc-macro2 = "1.0.95"
 quote = "1.0.40"
 serde = { version = "1.0.228", features = ["derive"] }
 serde_json = { version = "1.0.145", features = ["preserve_order"] }
-serde_yaml = "=0.9.34-deprecated"
+serde_yaml = "=0.9.34"
 tracing = "0.1.44"
 tracing-subscriber = { version = "0.3.22", features = ["env-filter"] }
 read-dir-all = "1.0.0"
@@ -27,4 +27,4 @@ itertools = "0.14"
 regex = "1.12"
 syn = { version = "2.0", features = ["full"] }
 
-chiptool = { git = "https://github.com/embassy-rs/chiptool.git", rev = "e5ab29fff80a7cbe271631dbf7e4233c52dd8e32" }
+chiptool = { git = "https://github.com/embassy-rs/chiptool.git", rev = "e8902440a6eee471a9b14b38ee1cd2e526d2c495" }
