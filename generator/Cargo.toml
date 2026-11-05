@@ -27,4 +27,4 @@ itertools = "0.14"
 regex = "1.12"
 syn = { version = "2.0", features = ["full"] }
 
-chiptool = { git = "https://github.com/embassy-rs/chiptool.git", rev = "e5ab29fff80a7cbe271631dbf7e4233c52dd8e32" }
+chiptool = { git = "https://github.com/embassy-rs/chiptool.git", rev = "e8902440a6eee471a9b14b38ee1cd2e526d2c495" }

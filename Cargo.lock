@@ -103,7 +103,7 @@ checksum = "613afe47fcd5fac7ccf1db93babcb082c5994d996f20b8b159f2ad1658eb5724"
 [[package]]
 name = "chiptool"
 version = "0.1.0"
-source = "git+https://github.com/embassy-rs/chiptool.git?rev=e5ab29fff80a7cbe271631dbf7e4233c52dd8e32#e5ab29fff80a7cbe271631dbf7e4233c52dd8e32"
+source = "git+https://github.com/embassy-rs/chiptool.git?rev=e8902440a6eee471a9b14b38ee1cd2e526d2c495#e8902440a6eee471a9b14b38ee1cd2e526d2c495"
 dependencies = [
  "anyhow",
  "clap",
@@ -698,9 +698,9 @@ dependencies = [
 
 [[package]]
 name = "serde_yaml"
-version = "0.9.34-deprecated"
+version = "0.9.34+deprecated"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d4f17ab28832fcb8e88a0e938aaa915b4f4618142bd011d4e6a3060028974c47"
+checksum = "6a8b1a1a2ebf674015cc02edccce75287f1a0130d394307b36743c2f5d504b47"
 dependencies = [
  "indexmap",
  "itoa",
