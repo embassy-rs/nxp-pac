@@ -252,6 +252,41 @@ many cycles, and zero also selects 63. Existing variant names are retained.
 These are bounded model corrections, not a complete register/errata audit
 or resolution of the remaining A1/A3 source and applicability conflicts.
 
+## MCXN device groups and source packs
+
+The numeric `mcxn246`, `mcxn556`, and `mcxn557` features also cover their
+suffix variants: N246/T, N556S/T, and N557S/T. NXP's 26.09.00 DFP exports have
+matching peripheral/register structures, addresses, reset values, interrupts,
+CPU descriptions, memory maps, and SDK feature definitions within each pair.
+Package variant lists differ; matching register maps do not mean matching pin
+bonding, electrical specifications, boot configuration, or silicon errata.
+N556S/N557S list SCDF; their T packs list TCDF, TVDF, TVAB, and
+TCAB. Select pins for the actual package, not merely the numeric feature.
+
+N246 shares the existing N247 register metadata. N556/N557 share the N547
+metadata with PLU removed, DAC1 added, and the corresponding interrupt map.
+Existing N547 output is unchanged. Register metadata sharing does not equate
+memory capacity: the packs specify 1 MiB flash for N246/N556 and 2 MiB for
+N557. Application linker memory layouts remain the application's responsibility.
+Pins/connectivity retain the existing common N-family package union; this does
+not establish that every logical pin or route is bonded in every S/T package.
+
+The following archives were obtained from
+`https://mcuxpresso.nxp.com/cmsis_pack/repo/`. Each filename is prefixed by
+`NXP.` and suffixed by `_DFP.26.09.00.pack`:
+
+| Device | Archive SHA-256 |
+| --- | --- |
+| MCXN246 | `e3cf18be904fc5ca525e61c80f4c0ebd143ad5e072d3ba7bf5f5791ee73f3804` |
+| MCXN246T | `a1fcd2478ac557fa73c577a57eca1024e7b45012f383dc2c14915200f07c7f99` |
+| MCXN556S | `5ff26547e6cf76e4abad1196380a81506e17fe11f227850963425220f6515271` |
+| MCXN556T | `d6045ae8420e1c569f44f63dd0a4cd4582905e86c54c0ce9ba23cdb0e9740bf1` |
+| MCXN557S | `542a6a28cae5d1f0fe22a8201afbfa748dfd2cc4cf247c7997ad94d30b2f3b68` |
+| MCXN557T | `45129cf65067aab37ad680cf30b247c1b68e50ea244ae6b92b0f778700687a58` |
+
+This completes the numeric groups in the supplied N-family pack catalog. It is
+not a claim of coverage of every NXP device or every internal/test peripheral.
+
 ## Build pipeline
 
 The MCXN MetaPAC selections use the curated N-family register models. This is

@@ -2409,6 +2409,7 @@
     },
     {
       "name": "PLU0",
+      "only_in": "^MCXN547$",
       "block": "mcx/n/n5/PLU::PluAlpha",
       "address": "0x40034000",
       "signals": [
@@ -13498,6 +13499,51 @@
           "pins": [
             {
               "pin": "P4_2",
+              "kind": "analog"
+            }
+          ]
+        },
+        {
+          "name": "VREFH2",
+          "pins": [
+            {
+              "pin": "VREFH",
+              "kind": "analog"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "DAC1",
+      "only_in": "^MCXN55[67]$",
+      "block": "mcx/n/n5/DAC::DacAlpha",
+      "address": "0x40112000",
+      "signals": [],
+      "gate": {
+        "enable": "ahbclkctrl3",
+        "bit": "dac1",
+        "reset": "presetctrl3",
+        "reset_bit": "dac1_rst"
+      },
+      "dma_muxing": [
+        {
+          "signal": "FIFO_REQUEST",
+          "mux": "DMA0",
+          "request": 26
+        },
+        {
+          "signal": "FIFO_REQUEST",
+          "mux": "DMA1",
+          "request": 26
+        }
+      ],
+      "direct_signals": [
+        {
+          "name": "OUT",
+          "pins": [
+            {
+              "pin": "P4_3",
               "kind": "analog"
             }
           ]

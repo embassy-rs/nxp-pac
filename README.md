@@ -31,6 +31,7 @@ Because the crate is in transition, some of them use the PAC method, and some of
 | MCXN947 (legacy two-core) | PAC |
 | MCXN235 | MetaPAC |
 | MCXN236 | MetaPAC |
+| MCXN246 | MetaPAC |
 | MCXN247 | MetaPAC |
 | MCXN526 | MetaPAC |
 | MCXN527 | MetaPAC |
@@ -38,6 +39,8 @@ Because the crate is in transition, some of them use the PAC method, and some of
 | MCXN537 | MetaPAC |
 | MCXN546 | MetaPAC |
 | MCXN547 | MetaPAC |
+| MCXN556 | MetaPAC |
+| MCXN557 | MetaPAC |
 | MCXN946 | MetaPAC |
 | MCXN947 | MetaPAC |
 | MCXA156 | MetaPAC |

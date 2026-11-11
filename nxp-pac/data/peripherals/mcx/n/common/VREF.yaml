@@ -5,7 +5,7 @@
 # hardware reset or a factory calibration value. Preserve the live trim.
 block/Vref:
   description: Voltage reference.
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   items:
   - name: verid
     byte_offset: 0
@@ -22,7 +22,7 @@ block/Vref:
     byte_offset: 16
     fieldset: Utrim
 fieldset/Verid:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   bit_size: 32
   reset_value: 16777216
   fields:
@@ -36,7 +36,7 @@ fieldset/Verid:
     bit_offset: 24
     bit_size: 8
 fieldset/Csr:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   bit_size: 32
   reset_value: 0
   fields:
@@ -79,7 +79,7 @@ fieldset/Csr:
     bit_offset: 31
     bit_size: 1
 fieldset/Utrim:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   bit_size: 32
   fields:
   - name: trim2v1

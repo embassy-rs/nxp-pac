@@ -12,7 +12,7 @@ block/Ewm:
     bit_size: 8
     fieldset: Ctrl
   - name: ctrl
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Control. Write EWMEN, ASSIN, and INEN only once after CPU reset; modifying them again generates a bus transfer error. INTEN remains writable. Configure compare bounds, clock and prescaler before enabling. Loss of BUS_CLK prevents output assertion and refresh.
     byte_offset: 0
     bit_size: 8
@@ -24,7 +24,7 @@ block/Ewm:
     bit_size: 8
     fieldset: Serv
   - name: serv
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Refresh by writing 0xB4 followed by 0x2C within 15 peripheral bus clocks, inside the compare window. Mask all interrupts before refreshing. Reads as zero. After Stop-mode interrupt recovery, the pending refresh resumes and the second byte is still required within 15 bus clocks.
     byte_offset: 1
     bit_size: 8
@@ -36,7 +36,7 @@ block/Ewm:
     bit_size: 8
     fieldset: Cmpl
   - name: cmpl
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Lower refresh-window bound. Write once after CPU reset, even when using zero, before enabling; a second write generates a bus transfer error. Must differ from CMPH. Request service after one period of the slowest clock when updating CMPL.
     byte_offset: 2
     bit_size: 8
@@ -48,7 +48,7 @@ block/Ewm:
     bit_size: 8
     fieldset: Cmph
   - name: cmph
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Upper refresh-window bound. Write once after CPU reset before enabling; a second write generates a bus transfer error. Must differ from CMPL. Values up to 0xFE permit expiration; the reset value 0xFF prevents expiration.
     byte_offset: 3
     bit_size: 8
@@ -60,7 +60,7 @@ block/Ewm:
     bit_size: 8
     fieldset: Clkctrl
   - name: clkctrl
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Select the low-power clock. Write once after CPU reset before enabling; a second write generates a bus transfer error. Only ordinal 0 is connected.
     byte_offset: 4
     bit_size: 8
@@ -72,7 +72,7 @@ block/Ewm:
     bit_size: 8
     fieldset: Clkprescaler
   - name: clkprescaler
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Divide the selected clock by CLK_DIV + 1. Write once after CPU reset before enabling; a second write generates a bus transfer error. The divided counter clock must not exceed half the bus clock frequency.
     byte_offset: 5
     bit_size: 8
@@ -127,7 +127,7 @@ fieldset/Clkctrl:
     bit_size: 2
     enum: Clksel
   - name: clksel
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Only LPO_CLK[0] is connected, to EWM LPO CLK. Inputs 1 through 3 are disconnected and must not be used. The input frequency depends on chip clock configuration.
     bit_offset: 0
     bit_size: 2
@@ -151,6 +151,6 @@ enum/Clksel:
     description: osc32k[1].
     value: 1
   - name: LpoClk0
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: EWM LPO CLK, connected to LPO_CLK[0].
     value: 0

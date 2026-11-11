@@ -1,0 +1,6 @@
+{
+  "$schema": "./schema.json",
+  "$comment": "MCXN246 and MCXN246T: NXP DFP 26.09.00 primary-core SVD register maps, addresses and interrupts match MCXN247. Reuse its curated models and package-union connectivity; pin availability still depends on the package. See peripherals/README.md for source hashes and variant coverage.",
+  "include": "MCXN247",
+  "chips": ["MCXN246"]
+}

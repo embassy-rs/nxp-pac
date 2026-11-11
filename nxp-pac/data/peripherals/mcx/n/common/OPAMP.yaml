@@ -4,7 +4,7 @@
 # and pin availability must be established separately from this register model.
 block/Opamp:
   description: Operational amplifier with programmable gain.
-  only_in: '^MCXN(247|526|527|536|537|946|947)$'
+  only_in: '^MCXN(246|247|526|527|536|537|946|947)$'
   items:
   - name: verid
     byte_offset: 0
@@ -18,7 +18,7 @@ block/Opamp:
     byte_offset: 8
     fieldset: OpampCtr
 fieldset/Verid:
-  only_in: '^MCXN(247|526|527|536|537|946|947)$'
+  only_in: '^MCXN(246|247|526|527|536|537|946|947)$'
   bit_size: 32
   reset_value: 0
   fields:
@@ -32,7 +32,7 @@ fieldset/Verid:
     bit_offset: 24
     bit_size: 8
 fieldset/Param:
-  only_in: '^MCXN(247|526|527|536|537|946|947)$'
+  only_in: '^MCXN(246|247|526|527|536|537|946|947)$'
   bit_size: 32
   reset_value: 1
   fields:
@@ -42,7 +42,7 @@ fieldset/Param:
     bit_size: 1
     enum: PgaFunction
 fieldset/OpampCtr:
-  only_in: '^MCXN(247|526|527|536|537|946|947)$'
+  only_in: '^MCXN(246|247|526|527|536|537|946|947)$'
   bit_size: 32
   reset_value: 16777216
   fields:
@@ -112,7 +112,7 @@ fieldset/OpampCtr:
     bit_size: 3
     enum: Ngain
 enum/PgaFunction:
-  only_in: '^MCXN(247|526|527|536|537|946|947)$'
+  only_in: '^MCXN(246|247|526|527|536|537|946|947)$'
   bit_size: 1
   variants:
   - name: CoreAmplifier
@@ -120,7 +120,7 @@ enum/PgaFunction:
   - name: Pga
     value: 1
 enum/Mode:
-  only_in: '^MCXN(247|526|527|536|537|946|947)$'
+  only_in: '^MCXN(246|247|526|527|536|537|946|947)$'
   bit_size: 1
   variants:
   - name: HighPerformance
@@ -128,7 +128,7 @@ enum/Mode:
   - name: LowPower
     value: 1
 enum/Biasc:
-  only_in: '^MCXN(247|526|527|536|537|946|947)$'
+  only_in: '^MCXN(246|247|526|527|536|537|946|947)$'
   bit_size: 2
   variants:
   - name: Default
@@ -143,7 +143,7 @@ enum/Biasc:
     description: Decrease current by 25 percent.
     value: 3
 enum/Intref:
-  only_in: '^MCXN(247|526|527|536|537|946|947)$'
+  only_in: '^MCXN(246|247|526|527|536|537|946|947)$'
   bit_size: 2
   variants:
   - name: FullRange
@@ -156,7 +156,7 @@ enum/Intref:
     description: 0.8 V to VDD_ANA.
     value: 2
 enum/Pref:
-  only_in: '^MCXN(247|526|527|536|537|946|947)$'
+  only_in: '^MCXN(246|247|526|527|536|537|946|947)$'
   bit_size: 2
   variants:
   - name: Input0
@@ -168,7 +168,7 @@ enum/Pref:
   - name: Input3
     value: 3
 enum/Pgain:
-  only_in: '^MCXN(247|526|527|536|537|946|947)$'
+  only_in: '^MCXN(246|247|526|527|536|537|946|947)$'
   bit_size: 3
   variants:
   - name: Input1
@@ -189,7 +189,7 @@ enum/Pgain:
   - name: Gain64
     value: 7
 enum/Ngain:
-  only_in: '^MCXN(247|526|527|536|537|946|947)$'
+  only_in: '^MCXN(246|247|526|527|536|537|946|947)$'
   bit_size: 3
   variants:
   - name: Buffer

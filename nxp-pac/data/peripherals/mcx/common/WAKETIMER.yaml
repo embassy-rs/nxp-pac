@@ -61,7 +61,7 @@ fieldset/WakeTimerCtrl:
     bit_offset: 4
     bit_size: 1
   - name: osc_div_ena
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: >-
       Enables the lp_osc clock divider; write one for the wake timer to run.
       MCXN23XRM Rev. 4 section 42.6.4 and MCXNP184M150F70RM Rev. 7 section
@@ -76,7 +76,7 @@ fieldset/WakeTimerCtrl:
     bit_offset: 5
     bit_size: 1
   - name: intr_en
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: >-
       Raw interrupt enable bit (zero disables, one enables). MCXN23XRM Rev. 4
       section 42.6.4 and MCXNP184M150F70RM Rev. 7 section 56.6.4 say an interrupt
