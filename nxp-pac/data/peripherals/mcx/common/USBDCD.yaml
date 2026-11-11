@@ -15,7 +15,7 @@ block/Usbdcd:
     byte_offset: 4
     fieldset: Clock
   - name: clock
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     byte_offset: 4
     fieldset: ClockN
   - name: status
@@ -80,7 +80,7 @@ fieldset/Clock:
     bit_size: 10
     description: Clock speed:1..1023MHz or4..1023kHz, according to CLOCK_UNIT.
 fieldset/ClockN:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   bit_size: 32
   reset_value: 97
   fields:
@@ -103,7 +103,7 @@ fieldset/Status:
     description: Result2 means a charging port; CDP/DCP interpretation depends on sequence status. The prose status values conflict with Table443; do not decode2 unconditionally as CDP.
     enum: SequenceResult
   - name: seq_res
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     bit_offset: 16
     bit_size: 2
     description: Result 2 means a charging port; CDP/DCP interpretation depends on sequence status. The result prose uses status values 0/1 for incomplete/complete charger type detection, conflicting with the status encoding and interrupt phase tables (2/3). Do not decode 2 unconditionally as CDP.
@@ -145,7 +145,7 @@ fieldset/Timer0:
     bit_size: 10
     description: Initial delay0..1023ms; the total sequence must not exceed one second.
   - name: tseq_init
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     bit_offset: 16
     bit_size: 10
     description: Elapsed VBUS-to-START system latency,0..1023ms. START initializes TUNITCON to this value to account for already-elapsed time, not an inserted delay. The total sequence, including this latency, must not exceed one second.
@@ -159,7 +159,7 @@ fieldset/Timer1:
     bit_size: 10
     description: Valid1..1023ms; USB BC minimum40ms.
   - name: tvdpsrc_on
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     bit_offset: 0
     bit_size: 10
     description: Valid1..1023ms per the detailed field; USB BC minimum40ms. Timing tables list a broader programmable range of0..1023ms. This discrepancy is unresolved; that range does not establish USB-compliant operation or hardware behavior for disputed values.
@@ -169,7 +169,7 @@ fieldset/Timer1:
     bit_size: 10
     description: Valid1..1023ms; USB BC minimum10ms.
   - name: tdcd_dbnc
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     bit_offset: 16
     bit_size: 10
     description: Valid1..1023ms per the detailed field; USB BC minimum10ms. Timing tables list a broader programmable range of0..1023ms. This discrepancy is unresolved; that range does not establish USB-compliant operation or hardware behavior for disputed values.
@@ -183,7 +183,7 @@ fieldset/Timer2Bc11:
     bit_size: 4
     description: Valid1..15.
   - name: check_dm
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     bit_offset: 0
     bit_size: 4
     description: Valid1..15ms per the detailed field. The timing table lists a broader programmable range of0..15ms. This discrepancy is unresolved; that range does not establish USB-compliant operation or hardware behavior for disputed values.
@@ -193,7 +193,7 @@ fieldset/Timer2Bc11:
     bit_size: 10
     description: Valid1..1023ms; USB BC minimum40ms.
   - name: tvdpsrc_con
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     bit_offset: 16
     bit_size: 10
     description: Valid1..1023ms per the detailed field; USB BC minimum40ms. The timing table lists a broader programmable range of0..1023ms. This discrepancy is unresolved; that range does not establish USB-compliant operation or hardware behavior for disputed values.
@@ -207,7 +207,7 @@ fieldset/Timer2Bc12:
     bit_size: 10
     description: Valid0..40ms, not every representable ten-bit value.
   - name: tvdmsrc_on
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     bit_offset: 0
     bit_size: 10
     description: Valid0..40ms per the detailed field, not every representable ten-bit value. The timing table lists a broader programmable range of0..1023ms. This discrepancy is unresolved; that range does not establish USB-compliant operation or hardware behavior for disputed values.
@@ -217,7 +217,7 @@ fieldset/Timer2Bc12:
     bit_size: 10
     description: Valid1..1023ms.
   - name: twait_after_prd
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     bit_offset: 16
     bit_size: 10
     description: Valid1..1023ms per the detailed field. The timing table lists a broader programmable range of0..1023ms. This discrepancy is unresolved; that range does not establish USB-compliant operation or hardware behavior for disputed values.

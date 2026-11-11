@@ -599,7 +599,7 @@ block/TcdDma0:
       stride: 4096
     block: ChannelDma0
 block/TcdDma1:
-  only_in: '^MCXN(247|5[234][67]|94[67])$'
+  only_in: '^MCXN(24[67]|5[2345][67]|94[67])$'
   description: DMA1 sixteen-channel windows, spaced 0x1000 bytes. CH_SBR construction default is 7, independently of DMA0.
   items:
   - name: tcd

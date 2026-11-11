@@ -21,9 +21,13 @@ existing roles. Metadata-only host builds are supported with default features
 disabled. Building a MetaPAC does not require a vendor SVD checkout, external
 formatter, or generator executable.
 
-MCXN MetaPAC chip features are `mcxn235`, `mcxn236`, `mcxn247`, `mcxn526`,
-`mcxn527`, `mcxn536`, `mcxn537`, `mcxn546`, `mcxn547`, `mcxn946`, and
-`mcxn947`. They each select one chip PAC; the legacy `mcxn947_cm33_core0` and
+MCXN MetaPAC chip features are `mcxn235`, `mcxn236`, `mcxn246`, `mcxn247`,
+`mcxn526`, `mcxn527`, `mcxn536`, `mcxn537`, `mcxn546`, `mcxn547`, `mcxn556`,
+`mcxn557`, `mcxn946`, and `mcxn947`. The numeric features also cover matching
+T variants; `mcxn556` and `mcxn557` cover both S and T variants. The supplied
+NXP 26.09.00 packs have matching register maps within each group. Package options
+vary; verify pin bonding for the exact order code. Each feature selects one chip
+PAC; the legacy `mcxn947_cm33_core0` and
 `mcxn947_cm33_core1` features remain separate legacy PAC selections. For MCXN947,
 both CPU firmware images can use the single `mcxn947` PAC with the appropriate
 target/runtime ABI. Core peripherals such as SysTick are supplied by the Cortex-M

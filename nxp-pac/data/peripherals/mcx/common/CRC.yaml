@@ -9,7 +9,7 @@ block/Crc:
     byte_offset: 0
     bit_size: 16
   - name: data16
-    only_in: '^MCXN(23[56]|247|5[234][67]|94[67])$'
+    only_in: '^MCXN(23[56]|24[67]|5[2345][67]|94[67])$'
     description: Data programming write. Write contiguous bytes in big endian order; see data32 for seed and result semantics.
     byte_offset: 0
     bit_size: 16
@@ -18,7 +18,7 @@ block/Crc:
     only_in: '^MCXA[0-9]+$'
     byte_offset: 0
   - name: data32
-    only_in: '^MCXN(23[56]|247|5[234][67]|94[67])$'
+    only_in: '^MCXN(23[56]|24[67]|5[2345][67]|94[67])$'
     description: |
       Seed, data, and checksum. WAS=1 selects seed writes; WAS=0 selects data
       writes. Program contiguous data bytes in big endian order. Wait at least
@@ -39,7 +39,7 @@ block/Crc:
     byte_offset: 0
     bit_size: 8
   - name: data8
-    only_in: '^MCXN(23[56]|247|5[234][67]|94[67])$'
+    only_in: '^MCXN(23[56]|24[67]|5[2345][67]|94[67])$'
     description: Data programming write. Write contiguous bytes in big endian order; see data32 for seed and result semantics.
     byte_offset: 0
     bit_size: 8
@@ -52,7 +52,7 @@ block/Crc:
     only_in: '^MCXA[0-9]+$'
     byte_offset: 4
   - name: gpoly32
-    only_in: '^MCXN(23[56]|247|5[234][67]|94[67])$'
+    only_in: '^MCXN(23[56]|24[67]|5[2345][67]|94[67])$'
     description: |
       CRC polynomial. Bits 15:0 are used in both CRC modes. Bits 31:16 are
       readable and writable in 32-bit CRC mode; writes are ignored in 16-bit
@@ -82,7 +82,7 @@ fieldset/Ctrl:
     bit_size: 1
     enum: Was
   - name: was
-    only_in: '^MCXN(23[56]|247|5[234][67]|94[67])$'
+    only_in: '^MCXN(23[56]|24[67]|5[2345][67]|94[67])$'
     description: |
       Write as Seed. 0 selects data writes; 1 selects seed writes, as defined
       by CTRL[WAS] and the DATA function. The DATA[HL]/DATA[LL] byte-level

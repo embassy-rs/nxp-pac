@@ -29,7 +29,7 @@ block/Erm:
       stride: 16
     fieldset: Ear
   - name: ear
-    only_in: '^MCXN(247|52[67]|53[67]|54[67]|94[67])$'
+    only_in: '^MCXN(24[67]|52[67]|53[67]|54[67]|55[67]|94[67])$'
     description: Channel 0-6 address of the last recorded ECC event. Writes are ignored. Channel 6 has no RAMF target on 352-KB parts; register presence does not establish supported ECC routing.
     byte_offset: 256
     access: Read
@@ -47,7 +47,7 @@ block/Erm:
       stride: 16
     fieldset: Syn
   - name: syn
-    only_in: '^MCXN(247|52[67]|53[67]|54[67]|94[67])$'
+    only_in: '^MCXN(24[67]|52[67]|53[67]|54[67]|55[67]|94[67])$'
     description: Channel 0-6 syndrome of the last recorded ECC event. Writes are ignored. Identifies a single inverted data or address bit, but provides no additional diagnosis for non-correctable multi-bit inversions. Channel 6 has no RAMF target on 352-KB parts; register presence does not establish supported ECC routing.
     byte_offset: 260
     access: Read

@@ -13,7 +13,7 @@ block/Utick:
     byte_offset: 0
     fieldset: Ctrl
   - name: ctrl
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: >-
       Control. The manual specifies DELAYVAL + 1 timer clocks and says zero stops
       the timer, but its enumeration calls zero reserved. This inconsistency is
@@ -51,7 +51,7 @@ fieldset/Ctrl:
     bit_offset: 0
     bit_size: 31
   - name: delayval
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: >-
       Tick interval. The manual specifies DELAYVAL + 1 timer clocks and says zero
       stops the timer, but its enumeration calls zero reserved. This inconsistency
@@ -76,7 +76,7 @@ fieldset/Stat:
     bit_offset: 1
     bit_size: 1
   - name: active
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: >-
       Timer is active. The N register diagrams mark ACTIVE as write-one-to-clear,
       while A XML marks it read-only. Access and clear behavior remain unresolved;

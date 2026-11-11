@@ -69,8 +69,9 @@ To select its new single-chip MetaPAC instead, pass `--metapac` explicitly:
 cargo run -p generator -- generate MCXN947 --metapac --out-dir <scratch-directory>
 ```
 
-The eleven MCXN MetaPAC chip names are `MCXN235`, `MCXN236`, `MCXN247`,
-`MCXN526`, `MCXN527`, `MCXN536`, `MCXN537`, `MCXN546`, `MCXN547`, `MCXN946`,
-and `MCXN947`. The other ten names select MetaPAC with the ordinary `generate`
+The fourteen MCXN MetaPAC chip names are `MCXN235`, `MCXN236`, `MCXN246`,
+`MCXN247`, `MCXN526`, `MCXN527`, `MCXN536`, `MCXN537`, `MCXN546`, `MCXN547`,
+`MCXN556`, `MCXN557`, `MCXN946`, and `MCXN947`. The other thirteen names select
+MetaPAC with the ordinary `generate`
 command. Use `--out-dir` to retain inspection output; generation otherwise uses
 temporary output. Do not use the no-argument command as a read-only check.

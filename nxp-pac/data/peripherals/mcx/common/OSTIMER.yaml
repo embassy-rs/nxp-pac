@@ -10,7 +10,7 @@ block/Ostimer:
     access: Read
     fieldset: Evtimerl
   - name: evtimerl
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: 'EVTIMER Low. The central 42-bit counter is Gray encoded and asynchronous to the bus. Split reads may straddle rollover; the documented adjacent-value guarantee requires a bus clock at least twice the timer clock, or the same LP oscillator clock. The shared EVTimer resets only on POR or software reset. Software reset means a complete module reset, not CPU SYSRESETREQ.'
     byte_offset: 0
     access: Read
@@ -27,7 +27,7 @@ block/Ostimer:
     access: Read
     fieldset: CaptureL
   - name: capture_l
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: 'Local Capture Low for CPU. Gray encoded. Do not issue a new capture between reading CAPTURE_L and CAPTURE_H. Each CPU reads its own local capture at the same addresses. The capture pair resets on system reset, not module software reset.'
     byte_offset: 8
     access: Read
@@ -39,7 +39,7 @@ block/Ostimer:
     access: Read
     fieldset: CaptureH
   - name: capture_h
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: 'Local Capture High for CPU. Gray encoded. Do not issue a new capture between reading CAPTURE_L and CAPTURE_H.'
     byte_offset: 12
     access: Read
@@ -50,7 +50,7 @@ block/Ostimer:
     byte_offset: 16
     fieldset: MatchL
   - name: match_l
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: 'Local Match Low for CPU. Write Gray-encoded MATCH_L before MATCH_H. Do not start another pair until MATCH_WR_RDY is low (transfer complete). Each CPU accesses its own match pair at the same addresses. The match pair resets on system reset, not module software reset.'
     byte_offset: 16
     fieldset: MatchLN
@@ -64,7 +64,7 @@ block/Ostimer:
     byte_offset: 28
     fieldset: OseventCtrl
   - name: osevent_ctrl
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: 'OSTIMER Control for CPU. Each CPU reads its own local state at the same address. Clear OSTIMER_INTRFLAG by writing 1 before programming a new match pair. System reset includes RESETn, CPU SYSRESETREQ, POR and internal low-voltage resets. OSEVENT_CTRL resets on system or module software reset, except MATCH_WR_RDY, which resets only on system reset.'
     byte_offset: 28
     fieldset: OseventCtrlN
@@ -115,7 +115,7 @@ fieldset/MatchL:
     bit_offset: 0
     bit_size: 32
 fieldset/MatchLN:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   description: Local Match Low for CPU.
   reset_value: 0xffffffff
   fields:
@@ -145,7 +145,7 @@ fieldset/OseventCtrl:
     bit_offset: 3
     bit_size: 1
 fieldset/OseventCtrlN:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   description: OSTIMER Control for CPU.
   reset_value: 0
   fields:

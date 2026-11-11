@@ -10,7 +10,7 @@ block/Freqme:
     access: Read
     fieldset: CtrlR
   - name: ctrl_r
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Measurement result and progress. RESULT is valid when MEASURE_IN_PROGRESS is zero; in continuous mode it holds the most recently completed measurement.
     byte_offset: 0
     access: Read
@@ -22,7 +22,7 @@ block/Freqme:
     access: Write
     fieldset: CtrlW
   - name: ctrl_w
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Measurement control. Writing MEASURE_IN_PROGRESS=1 starts or restarts measurement; writing zero terminates measurement and clears RESULT. REF_SCALE selects 2^REF_SCALE reference pulses in frequency mode; PULSE_POL selects high (0) or low (1) period in pulse-width mode. Continuous mode stops on an out-of-range result; clear both threshold status bits and write both enable and start bits to restart it.
     byte_offset: 0
     access: Write
@@ -33,7 +33,7 @@ block/Freqme:
     byte_offset: 4
     fieldset: Ctrlstat
   - name: ctrlstat
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Current configuration and measurement status. LT_MIN_STAT, GT_MAX_STAT, and RESULT_READY_STAT are write-one-to-clear; the other fields reflect CTRL_W. Threshold flags indicate strict RESULT < MIN and RESULT > MAX comparisons.
     byte_offset: 4
     fieldset: Ctrlstat
@@ -47,7 +47,7 @@ block/Freqme:
     byte_offset: 12
     fieldset: Max
   - name: max
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Maximum.
     byte_offset: 12
     fieldset: MaxN
@@ -161,7 +161,7 @@ fieldset/Max:
 # Keep the existing A construction default unchanged. The documented N reset
 # supplies a constructor value, not an observation of live hardware state.
 fieldset/MaxN:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   extends: Max
   description: Maximum.
   reset_value: 0x7fffffff

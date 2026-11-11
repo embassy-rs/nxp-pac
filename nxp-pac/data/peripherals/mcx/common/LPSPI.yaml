@@ -125,94 +125,94 @@ block/Lpspi:
     access: Read
     fieldset: Rdbr
   - name: cr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Control. RTF/RRF are write-only FIFO reset commands and read zero. RST holds logic/registers except CR in reset until software clears it. Change DBGEN only with MEN zero. Wrapper mode and clocks are separate controls.
     byte_offset: 16
     fieldset: Cr
   - name: cfgr0
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Configuration 0. Enable RDMO only when idle and SR.DMF is zero; clear RDMO before clearing DMF to avoid losing receive data.
     byte_offset: 32
     fieldset: Cfgr0
   - name: cfgr1
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Configuration 1. Write only with module disabled. MATCFG encoding 1 is reserved and transitions between nonzero match configurations require an intervening zero. PCSPOL is a per-PCS polarity mask, not a single polarity selector. Generic pin/PCS options do not establish chip pin routing.
     byte_offset: 36
     fieldset: Cfgr1
   - name: verid
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Version ID.
     byte_offset: 0
     access: Read
     fieldset: NVerid
   - name: param
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Parameter. Transmit/command and receive FIFOs each contain eight entries; burst address-window lengths are not FIFO depth.
     byte_offset: 4
     access: Read
     fieldset: NParam
   - name: sr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Status. TDF/RDF/MBF are read-only; WCF/FCF/TCF/TEF/REF/DMF are write-one-to-clear. Do not read-modify-write. On affected masks ERR051588 requires transmit FIFO reset after peripheral-mode underrun; no workaround is implemented here.
     byte_offset: 20
     fieldset: NSr
   - name: der
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: DMA Enable. Includes frame-complete request enable.
     byte_offset: 28
     fieldset: NDer
   - name: ccr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Clock Configuration. Change only when CR.MEN is zero. SCKDIV and DBT read zero and writes update CCR1 timing fields; a 32-bit write overwrites CCR1. Use the documented byte/halfword sequence when preserving CCR1 fields; do not read-modify-write this alias as independent storage.
     byte_offset: 64
     fieldset: Ccr
   - name: ccr1
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Clock Configuration 1. Controller-mode timing; change only when CR.MEN is zero. Also updated by writes through CCR.SCKDIV and CCR.DBT.
     byte_offset: 68
     fieldset: Ccr1
   - name: fcr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: FIFO Control.
     byte_offset: 88
     fieldset: NFcr
   - name: fsr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: FIFO Status.
     byte_offset: 92
     access: Read
     fieldset: NFsr
   - name: tcr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Transmit Command. Only 32-bit writes are supported and enqueue command words into the transmit FIFO, not ordinary storage. In peripheral mode, change only while idle with no SPI bus transfer. CPOL/CPHA/PRESCALE/PCS update only with PCS deasserted. Reads can be incorrect while the command loads from the FIFO; read when the FIFO is empty or compare repeated reads. Avoid read-modify-write and FIFO reset before the command updates. WIDTH encoding 3 is reserved.
     byte_offset: 96
     fieldset: NTcr
   - name: rsr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Receive Status.
     byte_offset: 112
     access: Read
     fieldset: NRsr
   - name: rdr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Receive Data. Reads pull the first entry from the receive FIFO.
     byte_offset: 116
     access: Read
     fieldset: Rdr
   - name: rdror
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Receive Data Read Only. Returns the first FIFO entry without removing it.
     byte_offset: 120
     access: Read
     fieldset: Rdror
   - name: tcbr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Transmit Command Burst alias of TCR for DMA command writes; not independent storage.
     byte_offset: 1020
     access: Write
     fieldset: Tcbr
   - name: tdbr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Transmit Data Burst aliases of TDR for DMA FIFO writes; not independent storage or 128 FIFO entries. UART/SPI views overlap physically; selection is external to this model.
     array:
       len: 128
@@ -221,7 +221,7 @@ block/Lpspi:
     access: Write
     fieldset: Tdbr
   - name: rdbr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Receive Data Burst aliases of RDR for DMA FIFO reads. Reads remove FIFO entries; not independent storage or 128 FIFO entries.
     array:
       len: 128
@@ -942,32 +942,32 @@ enum/Width:
     value: 2
 # N23 RM Rev.4 50.4.5.1 and MCX N RM Rev.7 66.4.5.1.
 fieldset/NVerid:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   extends: Verid
   reset_value: 0x02000004
   fields: []
 fieldset/NParam:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   extends: Param
   reset_value: 0x00040303
   fields: []
 fieldset/NSr:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   extends: Sr
   reset_value: 1
   fields: []
 fieldset/NTcr:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   extends: Tcr
   reset_value: 0x0000001f
   fields: []
 fieldset/NRsr:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   extends: Rsr
   reset_value: 2
   fields: []
 fieldset/NDer:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   extends: Der
   reset_value: 0
   fields:
@@ -976,7 +976,7 @@ fieldset/NDer:
     bit_offset: 9
     bit_size: 1
 fieldset/NFcr:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   description: FIFO Control.
   reset_value: 0
   fields:
@@ -989,7 +989,7 @@ fieldset/NFcr:
     bit_offset: 16
     bit_size: 3
 fieldset/NFsr:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   description: FIFO Status.
   reset_value: 0
   fields:

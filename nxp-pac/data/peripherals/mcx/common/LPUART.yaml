@@ -72,110 +72,110 @@ block/Lpuart:
     access: Read
     fieldset: Dataro
   - name: verid
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Version ID. Documented reset, not a live capability probe.
     byte_offset: 0
     access: Read
     fieldset: NVerid
   - name: param
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Parameter. The transmit and receive FIFOs each contain eight entries; burst address windows are aliases, not FIFO depth.
     byte_offset: 4
     access: Read
     fieldset: NParam
   - name: baud
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Baud Rate. Change configuration only with transmitter and receiver disabled. OSR encodings 1 and 2 are reserved; OSR 3..6 requires BOTHEDGE.
     byte_offset: 16
     fieldset: NBaud
   - name: stat
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Status. MSF/TSF and RDRF/TC/TDRE/RAF are read-only. MA2F/MA1F/PF/FE/NF/OR/IDLE/RXEDGIF/LBKDIF are write-one-to-clear; avoid read-modify-write. Some flags also participate in DATA access clearing sequences. Change MSBF/AME/LBKFE only with both directions disabled, RXINV/RWUID with receiver disabled, and BRK13 with transmitter disabled. On affected masks ERR051629 can prevent TC from asserting after flushing TX FIFO with CTS negated and TXCTSE set; no workaround is implemented here.
     byte_offset: 20
     fieldset: NStat
   - name: data
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Data. Reads pop the receive FIFO and participate in automatic status-flag clearing; writes push the transmit FIFO. These are distinct read/write views, not ordinary storage; do not read-modify-write. Receive-only status bits must not be interpreted as transmit commands. FRETSC writes select a special character with T9 and require T8..T0 zero.
     byte_offset: 28
     fieldset: NData
   - name: modir
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: MODEM IrDA. Change RTSWATER/RXRTSE with receiver disabled, TXRTSE/TXRTSPOL with transmitter disabled, and TNP/IREN with both disabled. Do not enable RXRTSE and TXRTSE together.
     byte_offset: 36
     fieldset: NModir
   - name: fifo
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: FIFO. RXFIFOSIZE/TXFIFOSIZE/RXEMPT/TXEMPT are read-only; RXUF/TXOF are write-one-to-clear; RXFLUSH/TXFLUSH are flush commands. Avoid read-modify-write. The register description requires writes with CTRL.RE/TE zero and FIFO empty; FIFO operations also have specific command/flag semantics.
     byte_offset: 40
     fieldset: NFifo
   - name: water
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Watermark. TXCOUNT and RXCOUNT are read-only. Write only with CTRL.TE zero.
     byte_offset: 44
     fieldset: NWater
   - name: dataro
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Data Read-Only. Returns DATA without removing the receive FIFO entry.
     byte_offset: 48
     access: Read
     fieldset: NDataro
   - name: ctrl
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Control. Bit6 is reserved in both detailed N manuals, despite N23 XML exposing DOZEEN. Change M/M7/PE/ILT/RSRC/LOOPS configuration only with transmitter and receiver disabled as specified by the field descriptions. R9T8/R8T9 read receive bits but write transmit bits; read-modify-write does not preserve the transmit value. Enabling TE can queue an idle preamble; RE/TE may remain set until the current character finishes after disable.
     byte_offset: 24
     fieldset: Ctrl
   - name: global
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Global. RST holds all LPUART logic/registers except GLOBAL in reset until software clears it; no minimum delay is required before clearing. This is not a wrapper mode or clock control.
     byte_offset: 8
     fieldset: Global
   - name: pincfg
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Pin Configuration. Change TRGSEL only with transmitter and receiver disabled. The raw trigger selector does not establish chip routing.
     byte_offset: 12
     fieldset: Pincfg
   - name: match_
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Match Address. Write MA1/MA2 only while the corresponding BAUD.MAEN1/MAEN2 is disabled.
     byte_offset: 32
     fieldset: Match
   - name: mcr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: MODEM Control.
     byte_offset: 64
     fieldset: Mcr
   - name: msr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: MODEM Status. Delta flags are write-one-to-clear; pin-state bits are read-only. Pad configuration affects observed reset values; the generated default is the documented reset, not sampled pin state. Do not read-modify-write.
     byte_offset: 68
     fieldset: Msr
   - name: reir
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Receiver Extended Idle. Change only with receiver disabled; zero disables extended idle and the minimum enabled interval is one idle character.
     byte_offset: 72
     fieldset: Reir
   - name: teir
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Transmitter Extended Idle. Change only with transmitter disabled; zero disables extended idle and the minimum enabled interval is one idle character.
     byte_offset: 76
     fieldset: Teir
   - name: hdcr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Half Duplex Control. Raw controls, not a mode or pin-ownership operation.
     byte_offset: 80
     fieldset: Hdcr
   - name: tocr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Timeout Control. Counters 0/1 monitor the receiver; 2/3 monitor the transmitter.
     byte_offset: 88
     fieldset: Tocr
   - name: tosr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Timeout Status. TOZ is read-only; each TOF bit is write-one-to-clear and disables its counter when set. Do not read-modify-write.
     byte_offset: 92
     fieldset: Tosr
   - name: timeout
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Timeout N. Write only when the corresponding timeout is disabled or its timeout flag is set. Counters 0/1 monitor receive; 2/3 monitor transmit.
     array:
       len: 4
@@ -183,7 +183,7 @@ block/Lpuart:
     byte_offset: 96
     fieldset: Timeout
   - name: tcbr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Transmit Command Burst aliases of DATA, not independent storage. A 32-bit or low-halfword write pushes one FIFO entry; a low-byte write stages data until the high byte is written. Upper-halfword byte/halfword writes are ignored. The field payload is 16 bits but register access remains 32 bits.
     array:
       len: 128
@@ -192,7 +192,7 @@ block/Lpuart:
     access: Write
     fieldset: Tcbr
   - name: tdbr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Transmit Data Burst aliases of DATA, not independent storage or 256 FIFO entries. A word pushes four bytes DATA0 first, with three wait states; a halfword pushes two bytes with one wait state. Bytes use CTRL R8T9/R9T8 for upper data bits and zero-extend FRETSC. UART/SPI views overlap physically; selection is external to this model.
     array:
       len: 256
@@ -785,7 +785,7 @@ enum/Feature:
     description: Standard feature set with MODEM and IrDA support.
     value: 3
   - name: Enhanced
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Enhanced feature set with full MODEM, IrDA, and enhanced idle detection.
     value: 7
 enum/Hlfm:
@@ -1171,22 +1171,22 @@ enum/Wake:
 # N23 RM Rev.4 50.5.5 and MCX N RM Rev.7 66.5.5. Separate reset views
 # retain A defaults. Both detailed CTRL tables reserve bit6, despite N23 XML.
 fieldset/NVerid:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   extends: Verid
   reset_value: 0x04040007
   fields: []
 fieldset/NParam:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   extends: Param
   reset_value: 0x00000303
   fields: []
 fieldset/NBaud:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   extends: Baud
   reset_value: 0x0f000004
   fields: []
 fieldset/NStat:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   extends: Stat
   reset_value: 0x00c00000
   fields:
@@ -1199,22 +1199,22 @@ fieldset/NStat:
     bit_offset: 9
     bit_size: 1
 fieldset/NData:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   extends: Data
   reset_value: 0x00001000
   fields: []
 fieldset/NDataro:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   extends: Dataro
   reset_value: 0x00001000
   fields: []
 fieldset/NFifo:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   extends: Fifo
   reset_value: 0x00c00022
   fields: []
 fieldset/NModir:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   description: MODEM IrDA with three-bit receive RTS threshold.
   reset_value: 0
   fields:
@@ -1259,7 +1259,7 @@ fieldset/NModir:
     bit_offset: 18
     bit_size: 1
 fieldset/NWater:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   description: Watermark.
   reset_value: 0
   fields:
@@ -1280,7 +1280,7 @@ fieldset/NWater:
     bit_offset: 24
     bit_size: 4
 fieldset/Mcr:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   description: MODEM Control.
   reset_value: 0
   fields:
@@ -1309,7 +1309,7 @@ fieldset/Mcr:
     bit_offset: 9
     bit_size: 1
 fieldset/Msr:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   description: MODEM Status. Pin states are read-only and inverted; delta flags are W1C. Pad configuration affects observed reset states.
   reset_value: 0
   fields:
@@ -1346,7 +1346,7 @@ fieldset/Msr:
     bit_offset: 7
     bit_size: 1
 fieldset/Reir:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   description: Receiver Extended Idle. Change only with receiver disabled.
   reset_value: 0
   fields:
@@ -1355,7 +1355,7 @@ fieldset/Reir:
     bit_offset: 0
     bit_size: 14
 fieldset/Teir:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   description: Transmitter Extended Idle. Change only with transmitter disabled.
   reset_value: 0
   fields:
@@ -1364,7 +1364,7 @@ fieldset/Teir:
     bit_offset: 0
     bit_size: 14
 fieldset/Hdcr:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   description: Half Duplex Control.
   reset_value: 0
   fields:
@@ -1389,7 +1389,7 @@ fieldset/Hdcr:
     bit_offset: 8
     bit_size: 8
 fieldset/Tocr:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   description: Timeout Control.
   reset_value: 0
   fields:
@@ -1402,7 +1402,7 @@ fieldset/Tocr:
     bit_offset: 8
     bit_size: 4
 fieldset/Tosr:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   description: Timeout Status.
   reset_value: 0x0000000f
   fields:
@@ -1415,7 +1415,7 @@ fieldset/Tosr:
     bit_offset: 8
     bit_size: 4
 fieldset/Timeout:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   description: Timeout N. Write only when the corresponding counter is disabled or its flag is set.
   reset_value: 0
   fields:
@@ -1429,7 +1429,7 @@ fieldset/Timeout:
     bit_size: 2
     enum: TimeoutCfg
 fieldset/Tcbr:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   description: Transmit Command Burst alias payload. Not independent storage.
   reset_value: 0
   fields:
@@ -1438,7 +1438,7 @@ fieldset/Tcbr:
     bit_offset: 0
     bit_size: 16
 fieldset/Tdbr:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   description: Transmit Data Burst byte payloads, pushed DATA0 first on word writes.
   reset_value: 0
   fields:
@@ -1459,7 +1459,7 @@ fieldset/Tdbr:
     bit_offset: 24
     bit_size: 8
 enum/TimeoutCfg:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   bit_size: 2
   variants:
   - name: Characters

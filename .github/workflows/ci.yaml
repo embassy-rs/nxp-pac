@@ -66,6 +66,7 @@ jobs:
           - mcxn947_cm33_core1
           - mcxn235
           - mcxn236
+          - mcxn246
           - mcxn247
           - mcxn526
           - mcxn527
@@ -73,6 +74,8 @@ jobs:
           - mcxn537
           - mcxn546
           - mcxn547
+          - mcxn556
+          - mcxn557
           - mcxn946
           - mcxn947
           - mcxa156
@@ -137,6 +140,7 @@ jobs:
           - mcxa577
           - mcxn235
           - mcxn236
+          - mcxn246
           - mcxn247
           - mcxn526
           - mcxn527
@@ -144,6 +148,8 @@ jobs:
           - mcxn537
           - mcxn546
           - mcxn547
+          - mcxn556
+          - mcxn557
           - mcxn946
           - mcxn947
           - lpc55s16

@@ -166,81 +166,81 @@ block/Lpi2c:
     access: Read
     fieldset: Srdror
   - name: verid
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Version ID.
     byte_offset: 0
     access: Read
     fieldset: NVerid
   - name: param
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Parameter. Controller transmit and receive FIFOs each contain eight entries; burst windows do not describe FIFO depth.
     byte_offset: 4
     access: Read
     fieldset: NParam
   - name: msr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Controller Status. TDF/RDF/MBF/BBF are read-only; EPF/SDF/NDF/ALF/FEF/PLTF/DMF/STF are write-one-to-clear. Do not read-modify-write.
     byte_offset: 20
     fieldset: NMsr
   - name: mfcr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Controller FIFO Control.
     byte_offset: 88
     fieldset: NMfcr
   - name: mfsr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Controller FIFO Status.
     byte_offset: 92
     access: Read
     fieldset: NMfsr
   - name: mtdr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Controller Transmit Data. Writes push command/data into the FIFO. Byte writes to CMD are ignored; byte writes to DATA zero-extend CMD. Command encodings do not establish chip-level HS controller support; the feature list documents HS target support only.
     byte_offset: 96
     access: Write
     fieldset: Mtdr
   - name: mrdr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Controller Receive Data. Reads pull the first entry from the receive FIFO.
     byte_offset: 112
     access: Read
     fieldset: NMrdr
   - name: mrdror
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Controller Receive Data Read Only. Returns the first entry without pulling it from the FIFO.
     byte_offset: 120
     access: Read
     fieldset: NMrdror
   - name: ssr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Target Status. Only RSF/SDF/BEF/FEF are write-one-to-clear; all other fields are read-only. SASR reads clear AVF/AM0F/AM1F/GCF/SARF, STAR writes clear TAF, STDR writes clear TDF, and SRDR reads clear RDF or AVF according to RXCFG. Do not read-modify-write. On masks covered by ERR053287, target mode can incorrectly count SCL and unexpectedly NAK valid data or addresses; target mode is not recommended for production and there is no workaround.
     byte_offset: 276
     fieldset: NSsr
   - name: sier
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Target Interrupt Enable.
     byte_offset: 280
     fieldset: NSier
   - name: sasr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Target Address Status. Read only when SSR.AVF is set. Reading acknowledges the address and clears SSR.AVF/AM0F/AM1F/GCF/SARF; SRDR can return this view when RXCFG selects it.
     byte_offset: 336
     access: Read
     fieldset: NSasr
   - name: srdr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Target Receive Data. Read only when SSR.RDF is set, or when SSR.AVF is set and RXCFG is one. Read clears SSR.RDF or returns SASR and acknowledges the address according to SCFGR1.RXCFG. Not ordinary storage.
     byte_offset: 368
     access: Read
     fieldset: NSrdr
   - name: srdror
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Target Receive Data Read Only. Returns received data without pulling it from the receive register.
     byte_offset: 376
     access: Read
     fieldset: NSrdror
   - name: mtcbr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Controller Transmit Command Burst aliases of MTDR, not independent storage. A word or low-halfword write pushes one command/data entry. Unlike MTDR byte accesses, a low-byte write stages DATA without pushing; a high-byte write pushes CMD with the previously staged DATA. Upper-halfword byte/halfword writes are ignored. Access width remains 32 bits despite the 11-bit payload.
     array:
       len: 128
@@ -249,7 +249,7 @@ block/Lpi2c:
     access: Write
     fieldset: Mtdr
   - name: mtdbr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Transmit Data Burst aliases of MTDR, not independent storage. The documented map ends at MTDBR252 (0x7F0), despite generic 1024-byte wording. Word/halfword writes push four/two bytes DATA0 first with zero CMD; ensure four/two empty FIFO slots because overflow prevention does not signal an error. This view is at the LPI2C mode base, 0x800 above its wrapper base.
     array:
       len: 253
@@ -258,77 +258,77 @@ block/Lpi2c:
     access: Write
     fieldset: Mtdbr
   - name: mcr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Controller Control. RTF/RRF are write-only FIFO reset commands and read zero. RST holds controller logic/registers except MCR in reset until software clears it. These controls do not select wrapper mode or enable the peripheral clock.
     byte_offset: 16
     fieldset: Mcr
   - name: mcfgr0
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Controller Configuration 0. Do not change HRSEL or HRPOL while host request is enabled.
     byte_offset: 32
     fieldset: Mcfgr0
   - name: mcfgr1
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Controller Configuration 1. Write only with controller disabled. MATCFG encoding 1 is reserved. PINCFG names describe generic routing, not chip pin availability or HS controller support.
     byte_offset: 36
     fieldset: Mcfgr1
   - name: mcfgr2
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Controller Configuration 2. Write only with controller disabled; filter timing uses functional clock cycles, not the prescaled clock.
     byte_offset: 40
     fieldset: Mcfgr2
   - name: mcfgr3
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Controller Configuration 3. Write only with controller disabled.
     byte_offset: 44
     fieldset: Mcfgr3
   - name: mdmr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Controller Data Match. Write only with controller disabled or idle.
     byte_offset: 64
     fieldset: Mdmr
   - name: mccr0
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Controller Clock Configuration 0. Change only with controller disabled. Raw clock counts, not a bus frequency or electrical timing guarantee.
     byte_offset: 72
     fieldset: Mccr0
   - name: mccr1
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Controller Clock Configuration 1. Change only with controller disabled. The generic HS timing register does not establish chip-level HS controller support.
     byte_offset: 80
     fieldset: Mccr1
   - name: scr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Target Control. RTF/RRF are write-only reset commands and read zero. RST holds target logic/registers except SCR in reset until software clears it. Update FILTEN/FILTDZ only with target disabled.
     byte_offset: 272
     fieldset: Scr
   - name: scfgr0
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Target Configuration 0. RDACK is read-only. RDREQ issues a target read request only while the bus is idle; writes while busy may be ignored, so confirm acknowledgement before initiating controller transfer.
     byte_offset: 288
     fieldset: Scfgr0
   - name: scfgr1
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Target Configuration 1. Write only with target disabled. RXCFG/TXCFG refer to target SSR flags; MSR references in the generic encoding prose are inconsistent with the detailed SSR behavior.
     byte_offset: 292
     fieldset: Scfgr1
   - name: scfgr2
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Target Configuration 2. Write only with target disabled. Filter/delay counts are not affected by MCFGR1.PRESCALE and are disabled in HS mode.
     byte_offset: 296
     fieldset: Scfgr2
   - name: samr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Target Address Match. Write only with target disabled.
     byte_offset: 320
     fieldset: Samr
   - name: star
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Target Transmit ACK. Function prose restricts writes to ACKSTALL=1; the field table also permits default ACK/NACK configuration while target is disabled or idle. During ACKSTALL transfers, write once per matching address/received word; this releases the ACK clock stall and clears SSR.TAF. The raw view does not resolve the differing write restrictions.
     byte_offset: 340
     fieldset: Star
   - name: stdr
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Target Transmit Data. Write only when SSR.TDF is set. Writes clear TDF and release a TXDSTALL clock stall. Without TXDSTALL, data must be ready before the target-transmit transfer starts or SSR.FEF is set.
     byte_offset: 352
     access: Write
@@ -1380,11 +1380,11 @@ enum/Rxcfg:
     description: Return SASR and clear SSR[AVF] when SSR[AVF] is set, return received data and clear MSR[RDF] when SSR[AFV] is not set.
     value: 1
   - name: ReturnsReceivedDataAndClearsRxDataFlag
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Return received data and clear SSR.RDF.
     value: 0
   - name: WhenAddressValidFlagSetReturnsAddressStatusAndClearsAddressValidFlag
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Return SASR and clear SSR.AVF when AVF is set; otherwise return received data and clear SSR.RDF.
     value: 1
 enum/Rxnack:
@@ -1506,11 +1506,11 @@ enum/Txcfg:
     description: MSR[TDF] is set whenever STDR is empty.
     value: 1
   - name: AssertsDuringSlaveTransmitTransferWhenTxDataEmpty
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: SSR.TDF is set only during a target-transmit transfer when STDR is empty.
     value: 0
   - name: AssertsWhenTxDataEmpty
-    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: SSR.TDF is set whenever STDR is empty.
     value: 1
 enum/Txnack:
@@ -1525,47 +1525,47 @@ enum/Txnack:
 # N23 RM Rev.4 50.3.6.1 and MCX N RM Rev.7 66.3.6.1.
 # Inherited reset views preserve A defaults; wider FIFO fields remain disjoint.
 fieldset/NVerid:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   extends: Verid
   reset_value: 0x01030003
   fields: []
 fieldset/NParam:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   extends: Param
   reset_value: 0x00000303
   fields: []
 fieldset/NMsr:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   extends: Msr
   reset_value: 1
   fields: []
 fieldset/NMrdr:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   extends: Mrdr
   reset_value: 0x00004000
   fields: []
 fieldset/NMrdror:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   extends: Mrdror
   reset_value: 0x00004000
   fields: []
 fieldset/NSasr:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   extends: Sasr
   reset_value: 0x00004000
   fields: []
 fieldset/NSrdr:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   extends: Srdr
   reset_value: 0x00004000
   fields: []
 fieldset/NSrdror:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   extends: Srdror
   reset_value: 0x00004000
   fields: []
 fieldset/NMfcr:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   description: Controller FIFO Control.
   reset_value: 0
   fields:
@@ -1578,7 +1578,7 @@ fieldset/NMfcr:
     bit_offset: 16
     bit_size: 3
 fieldset/NMfsr:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   description: Controller FIFO Status.
   reset_value: 0
   fields:
@@ -1591,7 +1591,7 @@ fieldset/NMfsr:
     bit_offset: 16
     bit_size: 4
 fieldset/NSsr:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   extends: Ssr
   reset_value: 0
   fields:
@@ -1636,7 +1636,7 @@ fieldset/NSsr:
     bit_offset: 15
     bit_size: 1
 fieldset/NSier:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   extends: Sier
   reset_value: 0
   fields:
@@ -1681,7 +1681,7 @@ fieldset/NSier:
     bit_offset: 15
     bit_size: 1
 fieldset/Mtdbr:
-  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   description: Transmit Data Burst byte payloads. Each pushes a zero-command transmit entry.
   reset_value: 0
   fields:
