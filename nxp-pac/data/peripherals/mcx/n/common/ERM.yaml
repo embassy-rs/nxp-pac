@@ -203,6 +203,7 @@ fieldset/Sr0:
     description: Documented channel 5 single-bit correction flag slot; target reserved on N23. Write one to clear the flag and interrupt notification.
     bit_offset: 11
     bit_size: 1
+    enum: Sbc5
   - name: nce5
     description: Documented channel 5 non-correctable flag slot; target reserved on N23. Write one to clear the flag and interrupt notification.
     bit_offset: 10
@@ -267,3 +268,12 @@ fieldset/CorrErrCnt:
     description: Correctable event count. Saturates at 255 without wrapping; writing zero clears it, nonzero writes have no effect.
     bit_offset: 0
     bit_size: 8
+enum/Sbc5:
+  bit_size: 1
+  variants:
+  - name: NoEvent
+    description: No single-bit correction event on Memory 5 detected.
+    value: 0
+  - name: CorrEvent
+    description: Single-bit correction event on Memory 5 detected.
+    value: 1

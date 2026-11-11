@@ -44,40 +44,49 @@ fieldset/Csr:
     description: HC bandgap enable. Enable only when LPBGEN is set.
     bit_offset: 0
     bit_size: 1
+    enum: Hcbgen
   - name: lpbgen
     description: Low-power bandgap enable.
     bit_offset: 1
     bit_size: 1
+    enum: Lpbgen
   - name: lpbg_buf_en
     description: Low-power bandgap buffer enable with latch function. Enable only when LPBGEN is set.
     bit_offset: 2
     bit_size: 1
+    enum: LpbgBufEn
   - name: chopen
     description: >-
       Chop oscillator enable. Required when using the internal regulator.
       Chopping in low-power modes also requires the HC bandgap reference.
     bit_offset: 3
     bit_size: 1
+    enum: Chopen
   - name: icompen
     description: Second-order current compensation. Must be set for data-sheet performance.
     bit_offset: 4
     bit_size: 1
+    enum: Icompen
   - name: regen
     description: Internal 1.75 V regulator enable. Must be set for data-sheet performance; follow the regulator enable sequence.
     bit_offset: 5
     bit_size: 1
+    enum: Regen
   - name: hi_pwr_lv
     description: Buffer21 high-power mode when set, low-power mode when clear.
     bit_offset: 11
     bit_size: 1
+    enum: HiPwrLv
   - name: buf21en
     description: Enables the programmable Buffer21 output from 1.0 to 2.1 V.
     bit_offset: 16
     bit_size: 1
+    enum: Buf21en
   - name: vrefst
     description: Read-only HC bandgap stability indication. Valid only with chopping disabled; 0 means disabled or unstable, 1 means stable.
     bit_offset: 31
     bit_size: 1
+    enum: Vrefst
 fieldset/Utrim:
   only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   bit_size: 32
@@ -96,3 +105,84 @@ fieldset/Utrim:
       is the target output voltage in volts selected by TRIM2V1.
     bit_offset: 8
     bit_size: 6
+enum/Hcbgen:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 0
+  - name: Enabled
+    description: Enables.
+    value: 1
+enum/HiPwrLv:
+  bit_size: 1
+  variants:
+  - name: Low
+    description: Low-power.
+    value: 0
+  - name: High
+    description: High-power.
+    value: 1
+enum/LpbgBufEn:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 0
+  - name: Enabled
+    description: Enables.
+    value: 1
+enum/Chopen:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 0
+  - name: Enabled
+    description: Enables.
+    value: 1
+enum/Lpbgen:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 0
+  - name: Enabled
+    description: Enables.
+    value: 1
+enum/Vrefst:
+  bit_size: 1
+  variants:
+  - name: NotStable
+    description: Disabled or not stable.
+    value: 0
+  - name: Stable
+    description: Stable.
+    value: 1
+enum/Regen:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 0
+  - name: Enabled
+    description: Enables.
+    value: 1
+enum/Icompen:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 0
+  - name: Enabled
+    description: Enables.
+    value: 1
+enum/Buf21en:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 0
+  - name: Enabled
+    description: Enables.
+    value: 1

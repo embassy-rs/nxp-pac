@@ -134,10 +134,12 @@ fieldset/Ctrlstat:
     description: Less Than Minimum Results Status.
     bit_offset: 24
     bit_size: 1
+    enum: LtMinStat
   - name: gt_max_stat
     description: Greater Than Maximum Result Status.
     bit_offset: 25
     bit_size: 1
+    enum: GtMaxStat
   - name: result_ready_stat
     description: Result Ready Status.
     bit_offset: 26
@@ -235,4 +237,22 @@ enum/CtrlstatPulsePol:
     value: 0
   - name: Low
     description: Low period.
+    value: 1
+enum/LtMinStat:
+  bit_size: 1
+  variants:
+  - name: InRange
+    description: Greater than MIN[MIN_VALUE].
+    value: 0
+  - name: LtMin
+    description: Less than MIN[MIN_VALUE].
+    value: 1
+enum/GtMaxStat:
+  bit_size: 1
+  variants:
+  - name: InRange
+    description: Less than MAX[MAX_VALUE].
+    value: 0
+  - name: GtMax
+    description: Greater than MAX[MAX_VALUE].
     value: 1

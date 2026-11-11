@@ -95,6 +95,7 @@ fieldset/Csr:
     description: Timer Compare Flag.
     bit_offset: 7
     bit_size: 1
+    enum: Tcf
   - name: tdre
     description: Timer DMA Request Enable.
     bit_offset: 8
@@ -262,3 +263,12 @@ enum/Tps:
   - name: Tps11
     description: Input 3.
     value: 3
+enum/Tcf:
+  bit_size: 1
+  variants:
+  - name: NoMatch
+    description: CNR != (CMR + 1).
+    value: 0
+  - name: Match
+    description: CNR = (CMR + 1).
+    value: 1

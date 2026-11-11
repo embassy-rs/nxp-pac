@@ -62,6 +62,7 @@ fieldset/Ctrl:
     description: Repeat continuously instead of performing a one-time delay.
     bit_offset: 31
     bit_size: 1
+    enum: Repeat
 fieldset/Stat:
   bit_size: 32
   reset_value: 0
@@ -75,6 +76,7 @@ fieldset/Stat:
     description: Timer is active.
     bit_offset: 1
     bit_size: 1
+    enum: StatActive
   - name: active
     only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: >-
@@ -90,31 +92,39 @@ fieldset/Cfg:
   - name: capen0
     bit_offset: 0
     bit_size: 1
+    enum: Capen
   - name: capen1
     bit_offset: 1
     bit_size: 1
+    enum: Capen
   - name: capen2
     bit_offset: 2
     bit_size: 1
+    enum: Capen
   - name: capen3
     bit_offset: 3
     bit_size: 1
+    enum: Capen
   - name: cappol0
     description: Capture on a negative edge when set, positive edge when clear.
     bit_offset: 8
     bit_size: 1
+    enum: Cappol
   - name: cappol1
     description: Capture on a negative edge when set, positive edge when clear.
     bit_offset: 9
     bit_size: 1
+    enum: Cappol
   - name: cappol2
     description: Capture on a negative edge when set, positive edge when clear.
     bit_offset: 10
     bit_size: 1
+    enum: Cappol
   - name: cappol3
     description: Capture on a negative edge when set, positive edge when clear.
     bit_offset: 11
     bit_size: 1
+    enum: Cappol
 fieldset/Capclr:
   bit_size: 32
   reset_value: 0
@@ -142,3 +152,39 @@ fieldset/Cap:
     description: Valid captured value. Clear using the corresponding CAPCLR bit.
     bit_offset: 31
     bit_size: 1
+enum/Repeat:
+  bit_size: 1
+  variants:
+  - name: Once
+    description: One-time delay.
+    value: 0
+  - name: Repeat
+    description: Delay repeats continuously.
+    value: 1
+enum/StatActive:
+  bit_size: 1
+  variants:
+  - name: Inactive
+    description: Inactive (stopped).
+    value: 0
+  - name: Active
+    description: Active.
+    value: 1
+enum/Capen:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disable.
+    value: 0
+  - name: Enabled
+    description: Enable.
+    value: 1
+enum/Cappol:
+  bit_size: 1
+  variants:
+  - name: Rising
+    description: Rising (positive) edge.
+    value: 0
+  - name: Falling
+    description: Falling (negative) edge.
+    value: 1

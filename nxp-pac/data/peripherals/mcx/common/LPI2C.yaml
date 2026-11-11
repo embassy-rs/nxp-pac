@@ -1607,18 +1607,22 @@ fieldset/NSsr:
     description: Repeated Start Flag. Write one to clear.
     bit_offset: 8
     bit_size: 1
+    enum: SsrDetect
   - name: sdf
     description: Stop Detect Flag. Write one to clear.
     bit_offset: 9
     bit_size: 1
+    enum: SsrDetect
   - name: bef
     description: Bit Error Flag. Write one to clear.
     bit_offset: 10
     bit_size: 1
+    enum: SsrError
   - name: fef
     description: FIFO Error Flag. Write one to clear.
     bit_offset: 11
     bit_size: 1
+    enum: SsrError
   - name: am0f
     description: Read-only Address Match 0 Flag. Cleared by reading SASR.
     bit_offset: 12
@@ -1701,3 +1705,21 @@ fieldset/Mtdbr:
     description: Fourth byte.
     bit_offset: 24
     bit_size: 8
+enum/SsrDetect:
+  bit_size: 1
+  variants:
+  - name: NotDetected
+    description: Not detected.
+    value: 0
+  - name: Detected
+    description: Detected.
+    value: 1
+enum/SsrError:
+  bit_size: 1
+  variants:
+  - name: NoError
+    description: No error.
+    value: 0
+  - name: Error
+    description: Error occurred.
+    value: 1

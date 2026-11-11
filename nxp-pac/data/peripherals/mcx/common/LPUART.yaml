@@ -256,6 +256,7 @@ fieldset/Baud:
     description: Oversampling Ratio.
     bit_offset: 24
     bit_size: 5
+    enum: Osr
   - name: m10
     description: 10-Bit Mode Select.
     bit_offset: 29
@@ -1304,10 +1305,12 @@ fieldset/Mcr:
     description: DTR_B default state. Zero drives logic one; one drives logic zero.
     bit_offset: 8
     bit_size: 1
+    enum: Dtr
   - name: rts
     description: RTS_B default state when its function is disabled. Zero drives logic one; one drives logic zero.
     bit_offset: 9
     bit_size: 1
+    enum: Rts
 fieldset/Msr:
   only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   description: MODEM Status. Pin states are read-only and inverted; delta flags are W1C. Pad configuration affects observed reset states.
@@ -1333,18 +1336,22 @@ fieldset/Msr:
     description: Read-only CTS_B state. Zero indicates logic one; one indicates logic zero.
     bit_offset: 4
     bit_size: 1
+    enum: MsrCts
   - name: dsr
     description: Read-only DSR_B state. Zero indicates logic one; one indicates logic zero.
     bit_offset: 5
     bit_size: 1
+    enum: MsrDsr
   - name: rin
     description: Read-only RIN_B state. Zero indicates logic one; one indicates logic zero.
     bit_offset: 6
     bit_size: 1
+    enum: MsrRin
   - name: dcd
     description: Read-only DCD_B state. Zero indicates logic one; one indicates logic zero.
     bit_offset: 7
     bit_size: 1
+    enum: MsrDcd
 fieldset/Reir:
   only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   description: Receiver Extended Idle. Change only with receiver disabled.
@@ -1372,18 +1379,22 @@ fieldset/Hdcr:
     description: Prevent transmitter from becoming busy or asserting RTS_B while the receiver is active.
     bit_offset: 0
     bit_size: 1
+    enum: Txstall
   - name: rxsel
     description: Receive data source. Zero selects RXD; one selects TXD.
     bit_offset: 1
     bit_size: 1
+    enum: Rxsel
   - name: rxwrmsk
     description: Allow transmitter RTS_B to mask receive FIFO writes, without affecting the idle flag.
     bit_offset: 2
     bit_size: 1
+    enum: Rxwrmsk
   - name: rxmsk
     description: Allow transmitter RTS_B to mask the receive data pin.
     bit_offset: 3
     bit_size: 1
+    enum: Rxmsk
   - name: rtsext
     description: RTS_B remains asserted for RTSEXT+1 bit times after the last stop bit, including internally when transmitter RTS output is disabled.
     bit_offset: 8
@@ -1474,3 +1485,186 @@ enum/TimeoutCfg:
   - name: IdleBeforeExtended
     description: Flag becomes one when idle for at least timeout bit clocks but a new character is detected before extended idle timeout.
     value: 3
+enum/Osr:
+  bit_size: 5
+  variants:
+  - name: Default
+    description: Results in an OSR of 16.
+    value: 0
+  - name: Osr4
+    description: Results in an OSR of 4 (requires BAUD[BOTHEDGE] to be 1).
+    value: 3
+  - name: Osr5
+    description: Results in an OSR of 5 (requires BAUD[BOTHEDGE] to be 1).
+    value: 4
+  - name: Osr6
+    description: Results in an OSR of 6 (requires BAUD[BOTHEDGE] to be 1).
+    value: 5
+  - name: Osr7
+    description: Results in an OSR of 7 (requires BAUD[BOTHEDGE] to be 1).
+    value: 6
+  - name: Osr8
+    description: Results in an OSR of 8.
+    value: 7
+  - name: Osr9
+    description: Results in an OSR of 9.
+    value: 8
+  - name: Osr10
+    description: Results in an OSR of 10.
+    value: 9
+  - name: Osr11
+    description: Results in an OSR of 11.
+    value: 10
+  - name: Osr12
+    description: Results in an OSR of 12.
+    value: 11
+  - name: Osr13
+    description: Results in an OSR of 13.
+    value: 12
+  - name: Osr14
+    description: Results in an OSR of 14.
+    value: 13
+  - name: Osr15
+    description: Results in an OSR of 15.
+    value: 14
+  - name: Osr16
+    description: Results in an OSR of 16.
+    value: 15
+  - name: Osr17
+    description: Results in an OSR of 17.
+    value: 16
+  - name: Osr18
+    description: Results in an OSR of 18.
+    value: 17
+  - name: Osr19
+    description: Results in an OSR of 19.
+    value: 18
+  - name: Osr20
+    description: Results in an OSR of 20.
+    value: 19
+  - name: Osr21
+    description: Results in an OSR of 21.
+    value: 20
+  - name: Osr22
+    description: Results in an OSR of 22.
+    value: 21
+  - name: Osr23
+    description: Results in an OSR of 23.
+    value: 22
+  - name: Osr24
+    description: Results in an OSR of 24.
+    value: 23
+  - name: Osr25
+    description: Results in an OSR of 25.
+    value: 24
+  - name: Osr26
+    description: Results in an OSR of 26.
+    value: 25
+  - name: Osr27
+    description: Results in an OSR of 27.
+    value: 26
+  - name: Osr28
+    description: Results in an OSR of 28.
+    value: 27
+  - name: Osr29
+    description: Results in an OSR of 29.
+    value: 28
+  - name: Osr30
+    description: Results in an OSR of 30.
+    value: 29
+  - name: Osr31
+    description: Results in an OSR of 31.
+    value: 30
+  - name: Osr32
+    description: Results in an OSR of 32.
+    value: 31
+enum/Dtr:
+  bit_size: 1
+  variants:
+  - name: Deasserted
+    description: Logic one (deasserted).
+    value: 0
+  - name: Asserted
+    description: Logic zero (asserted).
+    value: 1
+enum/Rts:
+  bit_size: 1
+  variants:
+  - name: Deasserted
+    description: Logic one (deasserted).
+    value: 0
+  - name: Asserted
+    description: Logic zero (asserted).
+    value: 1
+enum/MsrDcd:
+  bit_size: 1
+  variants:
+  - name: Deasserted
+    description: Logic one (deasserted).
+    value: 0
+  - name: Asserted
+    description: Logic zero (asserted).
+    value: 1
+enum/MsrRin:
+  bit_size: 1
+  variants:
+  - name: Deasserted
+    description: Logic one (deasserted).
+    value: 0
+  - name: Asserted
+    description: Logic zero (asserted).
+    value: 1
+enum/MsrDsr:
+  bit_size: 1
+  variants:
+  - name: Deasserted
+    description: Logic one (deasserted).
+    value: 0
+  - name: Asserted
+    description: Logic zero (asserted).
+    value: 1
+enum/MsrCts:
+  bit_size: 1
+  variants:
+  - name: Deasserted
+    description: Logic one (deasserted).
+    value: 0
+  - name: Asserted
+    description: Logic zero (asserted).
+    value: 1
+enum/Txstall:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: No effect.
+    value: 0
+  - name: Enabled
+    description: Does not become busy.
+    value: 1
+enum/Rxwrmsk:
+  bit_size: 1
+  variants:
+  - name: NotMasked
+    description: Do not mask.
+    value: 0
+  - name: Masked
+    description: Mask.
+    value: 1
+enum/Rxmsk:
+  bit_size: 1
+  variants:
+  - name: NotMasked
+    description: Do not mask.
+    value: 0
+  - name: Masked
+    description: Mask.
+    value: 1
+enum/Rxsel:
+  bit_size: 1
+  variants:
+  - name: PinRxd
+    description: RXD.
+    value: 0
+  - name: PinTxd
+    description: TXD.
+    value: 1

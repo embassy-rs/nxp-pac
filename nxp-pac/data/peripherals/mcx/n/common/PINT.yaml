@@ -253,6 +253,7 @@ fieldset/Pmcfg:
       always an endpoint and has no programmable bit.
     bit_offset: 0
     bit_size: 1
+    enum: ProdEndpts
     array:
       len: 7
       stride: 1
@@ -323,3 +324,12 @@ enum/MatchCondition:
   - name: EVENT
     description: Nonsticky rising or falling edge; see CFG timing wording conflict.
     value: 7
+enum/ProdEndpts:
+  bit_size: 1
+  variants:
+  - name: NoEffect
+    description: No effect.
+    value: 0
+  - name: Endpoint
+    description: Endpoint.
+    value: 1

@@ -76,10 +76,12 @@ fieldset/OpampCtr:
       INP1 is connected when both PGAIN is 0 and INPSEL is 1.
     bit_offset: 9
     bit_size: 1
+    enum: Inpsel
   - name: inpf
     description: Read-only positive input connection status, 0 for INP0 and 1 for INP1.
     bit_offset: 12
     bit_size: 1
+    enum: Inpf
   - name: bufen
     description: Enables the reference buffer.
     bit_offset: 16
@@ -208,3 +210,21 @@ enum/Ngain:
     value: 6
   - name: Gain64
     value: 7
+enum/Inpf:
+  bit_size: 1
+  variants:
+  - name: Inp0
+    description: Positive input 0 (INP0).
+    value: 0
+  - name: Inp1
+    description: Positive input 1 (INP1).
+    value: 1
+enum/Inpsel:
+  bit_size: 1
+  variants:
+  - name: Inp0
+    description: When OPAMP is not in trigger mode, select positive input 0 (INP0).
+    value: 0
+  - name: Inp1
+    description: When OPAMP is not in trigger mode, select positive input 1 (INP1).
+    value: 1
