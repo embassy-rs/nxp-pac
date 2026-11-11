@@ -1,0 +1,164 @@
+# N sources: MCXN23XRM Rev. 4, section 31.7.1; MCXNP184M150F70RM
+# Rev. 7, section 40.7.1. Narrow DATA programming writes are explicit;
+# narrow GPOLY accesses and narrow DATA result reads are not established.
+block/Crc:
+  description: CRC.
+  items:
+  - name: data16
+    only_in: '^MCXA[0-9]+$'
+    byte_offset: 0
+    bit_size: 16
+  - name: data16
+    only_in: '^MCXN(23[56]|247|5[234][67]|94[67])$'
+    description: Data programming write. Write contiguous bytes in big endian order; see data32 for seed and result semantics.
+    byte_offset: 0
+    bit_size: 16
+    access: Write
+  - name: data32
+    only_in: '^MCXA[0-9]+$'
+    byte_offset: 0
+  - name: data32
+    only_in: '^MCXN(23[56]|247|5[234][67]|94[67])$'
+    description: |
+      Seed, data, and checksum. WAS=1 selects seed writes; WAS=0 selects data
+      writes. Program contiguous data bytes in big endian order. Wait at least
+      two clock cycles after writing all data before reading the result.
+      In 16-bit CRC mode, read results occupy bits 15:0 for TOTR=0/1
+      and bits 31:16 for TOTR=2/3. The other halfword is indeterminate.
+      Seed programming is separate: in 16-bit CRC mode only bits 15:0
+      are used for the seed; bits 31:16 are not used. In 32-bit CRC mode
+      all bits are used for the seed and read result.
+      The documented hardware reset value is 0xFFFFFFFF. The raw u32 write
+      payload default is not the hardware reset or a seed initialization.
+      Both N manuals have conflicting DATA[HL]/DATA[LL] WAS prose; this view
+      follows the DATA function and CTRL[WAS] definitions without resolving
+      that source inconsistency.
+    byte_offset: 0
+  - name: data8
+    only_in: '^MCXA[0-9]+$'
+    byte_offset: 0
+    bit_size: 8
+  - name: data8
+    only_in: '^MCXN(23[56]|247|5[234][67]|94[67])$'
+    description: Data programming write. Write contiguous bytes in big endian order; see data32 for seed and result semantics.
+    byte_offset: 0
+    bit_size: 8
+    access: Write
+  - name: gpoly16
+    only_in: '^MCXA[0-9]+$'
+    byte_offset: 4
+    bit_size: 16
+  - name: gpoly32
+    only_in: '^MCXA[0-9]+$'
+    byte_offset: 4
+  - name: gpoly32
+    only_in: '^MCXN(23[56]|247|5[234][67]|94[67])$'
+    description: |
+      CRC polynomial. Bits 15:0 are used in both CRC modes. Bits 31:16 are
+      readable and writable in 32-bit CRC mode; writes are ignored in 16-bit
+      CRC mode. The documented hardware reset value is 0x00001021. The raw
+      u32 write payload default does not initialize the hardware polynomial.
+    byte_offset: 4
+  - name: gpoly8
+    only_in: '^MCXA[0-9]+$'
+    byte_offset: 4
+    bit_size: 8
+  - name: ctrl
+    description: Control.
+    byte_offset: 8
+    fieldset: Ctrl
+fieldset/Ctrl:
+  description: Control.
+  fields:
+  - name: tcrc
+    description: TCRC.
+    bit_offset: 24
+    bit_size: 1
+    enum: Tcrc
+  - name: was
+    only_in: '^MCXA[0-9]+$'
+    description: Write as Seed.
+    bit_offset: 25
+    bit_size: 1
+    enum: Was
+  - name: was
+    only_in: '^MCXN(23[56]|247|5[234][67]|94[67])$'
+    description: |
+      Write as Seed. 0 selects data writes; 1 selects seed writes, as defined
+      by CTRL[WAS] and the DATA function. The DATA[HL]/DATA[LL] byte-level
+      prose conflicts with these definitions in both N reference manuals.
+    bit_offset: 25
+    bit_size: 1
+    enum: Was
+  - name: fxor
+    description: Complement Read of CRC Data Register.
+    bit_offset: 26
+    bit_size: 1
+    enum: Fxor
+  - name: totr
+    description: Transpose Type for Read.
+    bit_offset: 28
+    bit_size: 2
+    enum: Totr
+  - name: tot
+    description: Transpose Type for Write.
+    bit_offset: 30
+    bit_size: 2
+    enum: Tot
+enum/Fxor:
+  bit_size: 1
+  variants:
+  - name: Noxor
+    description: Disables XOR on reading data.
+    value: 0
+  - name: Invert
+    description: Inverts or complements the read value of the CRC Data.
+    value: 1
+enum/Tcrc:
+  bit_size: 1
+  variants:
+  - name: B16
+    description: 16 bits.
+    value: 0
+  - name: B32
+    description: 32 bits.
+    value: 1
+enum/Tot:
+  bit_size: 2
+  variants:
+  - name: Notrnps
+    description: No transposition.
+    value: 0
+  - name: BtsTrnps
+    description: Bits in bytes are transposed, but bytes are not transposed.
+    value: 1
+  - name: BytsBtsTrnps
+    description: Both bits in bytes and bytes are transposed.
+    value: 2
+  - name: BytsTrnps
+    description: Only bytes are transposed, no bits in a byte are transposed.
+    value: 3
+enum/Totr:
+  bit_size: 2
+  variants:
+  - name: Notrnps
+    description: No transposition.
+    value: 0
+  - name: BtsTrnps
+    description: Bits in bytes are transposed, but bytes are not transposed.
+    value: 1
+  - name: BytsBtsTrnps
+    description: Both bits in bytes and bytes are transposed.
+    value: 2
+  - name: BytsTrnps
+    description: Only bytes are transposed, no bits in a byte are transposed.
+    value: 3
+enum/Was:
+  bit_size: 1
+  variants:
+  - name: Data
+    description: Data values.
+    value: 0
+  - name: Seed
+    description: Seed values.
+    value: 1

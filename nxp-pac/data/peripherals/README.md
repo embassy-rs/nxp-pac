@@ -10,6 +10,9 @@ before changing those definitions.
 MCX-A sources live in `mcx/a/a1`, `mcx/a/a2`, `mcx/a/a3`, and `mcx/a/a5`.
 Compatible definitions are shared from `mcx/a/common`; true subfamily-specific
 layouts remain local.
+MCX-N definitions are organized under `mcx/n/common` and the `n2`, `n5`, and
+`n9` family directories. Shared definitions are used only where the register
+model is compatible; variant differences can be expressed with `only_in`.
 Future families get their own directories when there are actual definitions to
 add, not placeholder directories or implicit fallback to another family.
 
@@ -20,6 +23,11 @@ add, not placeholder directories or implicit fallback to another family.
   preserves an existing metadata-only mapping without a PAC implementation.
 - `driver`: the base HAL driver identity. A2/A5 keep names such as `mcxa/LPUART`
   so existing HAL cfgs remain compatible; A1 uses its new `mcx/a/a1/...` identities.
+
+When a model uses a shared definition without adding anything, its `source`
+points directly to that definition, including across family directories. Do not
+add an entry YAML that only includes another file; reserve includes for composing
+definitions with local additions.
 
 Chip metadata selects the canonical `block` ID and optional `::type` suffix. That
 suffix is also retained on the runtime driver name. `pac_only` still leaves the
@@ -220,6 +228,14 @@ claims that the contradictory vendor documentation has been resolved.
 
 ## A1/A3 source corrections
 
+The A17 AOI, EIM, ERM, LPTMR, UTICK, and WAKETIMER XML register/field/enum
+structures match the curated A1 definitions, with all reset values zero. A17
+GPIO uses the basic IP without a protection bank (MCXAP100M180F41RM Rev. 2).
+Small A1 AOI, EIM, ERM, LPTMR, and WAKETIMER are register-compatible with the
+shared definitions (MCXAP64M96FS3RM Rev. 7). These compatibility notes were
+previously recorded in include-only entry files; the catalog now references
+their definitions directly.
+
 Small A1 devices have seven ADC compare words, not fifteen. A173/174 and
 A343/344 expose only the documented FMC REMAP register; their undocumented
 cache-programming banks are excluded without removing the documented banks
@@ -237,6 +253,13 @@ These are bounded model corrections, not a complete register/errata audit
 or resolution of the remaining A1/A3 source and applicability conflicts.
 
 ## Build pipeline
+
+The MCXN MetaPAC selections use the curated N-family register models. This is
+register coverage only: internal UDF/FMUTEST blocks are not included, and the
+public NPU register map is unavailable because vendor eIQ controls are opaque.
+Do not treat absent public register definitions as evidence of peripheral
+absence or complete device coverage. Raw PAC access also does not implement
+factory-trim behavior, errata workarounds, or HAL policy.
 
 Selecting a chip feature compiles its PAC from packaged metadata and the required
 curated YAML, using the internal `build/engine` modules. Models are fresh for each

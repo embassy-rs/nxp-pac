@@ -1,0 +1,210 @@
+# MCXNP184M150F70RM Rev. 7, sections 46.1 and 46.7.1.
+# MCXNP184M150F70 Rev. 8.2, Table 4: no OPAMP on N54.
+# N247/N52/N53 HLQFP100 packages expose only one OPAMP; instance selection
+# and pin availability must be established separately from this register model.
+block/Opamp:
+  description: Operational amplifier with programmable gain.
+  only_in: '^MCXN(247|526|527|536|537|946|947)$'
+  items:
+  - name: verid
+    byte_offset: 0
+    access: Read
+    fieldset: Verid
+  - name: param
+    byte_offset: 4
+    access: Read
+    fieldset: Param
+  - name: opamp_ctr
+    byte_offset: 8
+    fieldset: OpampCtr
+fieldset/Verid:
+  only_in: '^MCXN(247|526|527|536|537|946|947)$'
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: feature
+    bit_offset: 0
+    bit_size: 16
+  - name: minor
+    bit_offset: 16
+    bit_size: 8
+  - name: major
+    bit_offset: 24
+    bit_size: 8
+fieldset/Param:
+  only_in: '^MCXN(247|526|527|536|537|946|947)$'
+  bit_size: 32
+  reset_value: 1
+  fields:
+  - name: pga_function
+    description: Optional PGA function implemented by this instance.
+    bit_offset: 0
+    bit_size: 1
+    enum: PgaFunction
+fieldset/OpampCtr:
+  only_in: '^MCXN(247|526|527|536|537|946|947)$'
+  bit_size: 32
+  reset_value: 16777216
+  fields:
+  - name: en
+    description: Enables OPAMP.
+    bit_offset: 0
+    bit_size: 1
+  - name: mode
+    description: Performance and power mode.
+    bit_offset: 1
+    bit_size: 1
+    enum: Mode
+  - name: biasc
+    description: Bias current trim relative to the default current.
+    bit_offset: 2
+    bit_size: 2
+    enum: Biasc
+  - name: intref
+    description: Input rail-to-rail voltage selection. Encoding 3 is not allowed.
+    bit_offset: 4
+    bit_size: 2
+    enum: Intref
+  - name: trigmd
+    description: Enables trigger mode.
+    bit_offset: 8
+    bit_size: 1
+  - name: inpsel
+    description: >-
+      Positive input selection, 0 for INP0 and 1 for INP1. Select the initial
+      connection before enabling trigger mode; not writable in trigger mode.
+      INP1 is connected when both PGAIN is 0 and INPSEL is 1.
+    bit_offset: 9
+    bit_size: 1
+  - name: inpf
+    description: Read-only positive input connection status, 0 for INP0 and 1 for INP1.
+    bit_offset: 12
+    bit_size: 1
+  - name: bufen
+    description: Enables the reference buffer.
+    bit_offset: 16
+    bit_size: 1
+  - name: pref
+    description: Positive reference input selection. See chip-specific routing for each instance.
+    bit_offset: 17
+    bit_size: 2
+    enum: Pref
+  - name: adcsw1
+    description: Connects the negative gain resistor ladder voltage to the ADC/CMP measurement channel.
+    bit_offset: 20
+    bit_size: 1
+  - name: adcsw2
+    description: Connects the positive gain resistor ladder reference voltage to the ADC measurement channel.
+    bit_offset: 21
+    bit_size: 1
+  - name: outsw
+    description: Connects OPAMP output to the negative gain resistor ladder.
+    bit_offset: 22
+    bit_size: 1
+  - name: pgain
+    description: Positive PGA resistor ratio Pgain. Not writable in trigger mode.
+    bit_offset: 24
+    bit_size: 3
+    enum: Pgain
+  - name: ngain
+    description: Negative PGA resistor ratio Ngain.
+    bit_offset: 28
+    bit_size: 3
+    enum: Ngain
+enum/PgaFunction:
+  only_in: '^MCXN(247|526|527|536|537|946|947)$'
+  bit_size: 1
+  variants:
+  - name: CoreAmplifier
+    value: 0
+  - name: Pga
+    value: 1
+enum/Mode:
+  only_in: '^MCXN(247|526|527|536|537|946|947)$'
+  bit_size: 1
+  variants:
+  - name: HighPerformance
+    value: 0
+  - name: LowPower
+    value: 1
+enum/Biasc:
+  only_in: '^MCXN(247|526|527|536|537|946|947)$'
+  bit_size: 2
+  variants:
+  - name: Default
+    value: 0
+  - name: Increase
+    description: Increase current by 12.5 percent.
+    value: 1
+  - name: Decrease
+    description: Decrease current by 12.5 percent.
+    value: 2
+  - name: FurtherDecrease
+    description: Decrease current by 25 percent.
+    value: 3
+enum/Intref:
+  only_in: '^MCXN(247|526|527|536|537|946|947)$'
+  bit_size: 2
+  variants:
+  - name: FullRange
+    description: 0 to VDD_ANA.
+    value: 0
+  - name: LowRange
+    description: 0 to VDD_ANA minus 0.8 V.
+    value: 1
+  - name: HighRange
+    description: 0.8 V to VDD_ANA.
+    value: 2
+enum/Pref:
+  only_in: '^MCXN(247|526|527|536|537|946|947)$'
+  bit_size: 2
+  variants:
+  - name: Input0
+    value: 0
+  - name: Input1
+    value: 1
+  - name: Input2
+    value: 2
+  - name: Input3
+    value: 3
+enum/Pgain:
+  only_in: '^MCXN(247|526|527|536|537|946|947)$'
+  bit_size: 3
+  variants:
+  - name: Input1
+    description: Positive input 1 (INP1).
+    value: 0
+  - name: Gain1
+    value: 1
+  - name: Gain2
+    value: 2
+  - name: Gain4
+    value: 3
+  - name: Gain8
+    value: 4
+  - name: Gain16
+    value: 5
+  - name: Gain33
+    value: 6
+  - name: Gain64
+    value: 7
+enum/Ngain:
+  only_in: '^MCXN(247|526|527|536|537|946|947)$'
+  bit_size: 3
+  variants:
+  - name: Buffer
+    value: 0
+  - name: Gain1
+    value: 1
+  - name: Gain2
+    value: 2
+  - name: Gain4
+    value: 3
+  - name: Gain8
+    value: 4
+  - name: Gain16
+    value: 5
+  - name: Gain33
+    value: 6
+  - name: Gain64
+    value: 7

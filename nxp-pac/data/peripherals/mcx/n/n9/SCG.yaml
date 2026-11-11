@@ -1,0 +1,2410 @@
+# NXP mcux-soc-svd 7c1f00bdd6263f0b93466f5e73e5fc55a744b879; native chiptool import.
+# Source instance geometry is retained in explicit block variants; see private source bindings.
+# Unannotated fieldsets construct zero in software, not a claimed hardware reset.
+# Command/W1C/SET/CLR/TOG construction defaults are zero masks; no RMW semantics are implied.
+# Source: MCXN946_cm33_core0.xml SCG0 sha256 b986328ff1224adaeea70522fa61383a5f89f6313dfc3e7df92e8894fdab72d7
+# Source: MCXN946_cm33_core1.xml SCG0 sha256 57e8910317a1cb467d56726cb822c57806aa247542969bcf12dbcc8822187916
+# Source: MCXN947_cm33_core0.xml SCG0 sha256 629ac7cdc82684e467b0cf36a8aef697bc1eb65c2047d6610b7b5df65692e590
+# Source: MCXN947_cm33_core1.xml SCG0 sha256 0d77f3d23cad1d5eab631fd7f5ade4044d8aaca2d9d13cd11f3836d27fe089fb
+block/ScgAlpha:
+  description: SCG.
+  items:
+  - name: verid
+    description: Version ID Register.
+    byte_offset: 0
+    access: Read
+    fieldset: ScgAlphaFieldsetOscarAlpha
+  - name: param
+    description: Parameter Register.
+    byte_offset: 4
+    access: Read
+    fieldset: ScgAlphaFieldsetSierra
+  - name: trim_lock
+    description: Trim Lock register.
+    byte_offset: 8
+    fieldset: ScgAlphaFieldsetMikeAlpha
+  - name: csr
+    description: Clock Status Register.
+    byte_offset: 16
+    access: Read
+    fieldset: ScgAlphaFieldsetLima
+  - name: rccr
+    description: Run Clock Control Register.
+    byte_offset: 20
+    fieldset: ScgAlphaFieldsetTango
+  - name: sosccsr
+    description: SOSC Control Status Register.
+    byte_offset: 256
+    fieldset: ScgAlphaFieldsetAlphaAlpha
+  - name: sosccfg
+    description: SOSC Configuration Register.
+    byte_offset: 264
+    fieldset: ScgAlphaFieldsetZulu
+  - name: sirccsr
+    description: SIRC Control Status Register.
+    byte_offset: 512
+    fieldset: ScgAlphaFieldsetVictor
+  - name: sirctcfg
+    description: SIRC Trim Configuration Register.
+    byte_offset: 524
+    fieldset: ScgAlphaFieldsetXray
+  - name: sirctrim
+    description: SIRC Trim Register.
+    byte_offset: 528
+    fieldset: ScgAlphaFieldsetYankee
+  - name: sircstat
+    description: SIRC Auto-trimming Status Register.
+    byte_offset: 536
+    fieldset: ScgAlphaFieldsetWhiskey
+  - name: firccsr
+    description: FIRC Control Status Register.
+    byte_offset: 768
+    fieldset: ScgAlphaFieldsetNovember
+  - name: firccfg
+    description: FIRC Configuration Register.
+    byte_offset: 776
+    fieldset: ScgAlphaFieldsetMike
+  - name: firctcfg
+    description: FIRC Trim Configuration Register.
+    byte_offset: 780
+    fieldset: ScgAlphaFieldsetPapa
+  - name: firctrim
+    description: FIRC Trim Register.
+    byte_offset: 784
+    fieldset: ScgAlphaFieldsetQuebec
+  - name: fircstat
+    description: FIRC Auto-trimming Status Register.
+    byte_offset: 792
+    fieldset: ScgAlphaFieldsetOscar
+  - name: rosccsr
+    description: ROSC Control Status Register.
+    byte_offset: 1024
+    fieldset: ScgAlphaFieldsetUniform
+  - name: apllcsr
+    description: APLL Control Status Register.
+    byte_offset: 1280
+    fieldset: ScgAlphaFieldsetBravo
+  - name: apllctrl
+    description: APLL Control Register.
+    byte_offset: 1284
+    fieldset: ScgAlphaFieldsetCharlie
+  - name: apllstat
+    description: APLL Status Register.
+    byte_offset: 1288
+    access: Read
+    fieldset: ScgAlphaFieldsetKilo
+  - name: apllndiv
+    description: APLL N Divider Register.
+    byte_offset: 1292
+    fieldset: ScgAlphaFieldsetFoxtrot
+  - name: apllmdiv
+    description: APLL M Divider Register.
+    byte_offset: 1296
+    fieldset: ScgAlphaFieldsetEcho
+  - name: apllpdiv
+    description: APLL P Divider Register.
+    byte_offset: 1300
+    fieldset: ScgAlphaFieldsetGolf
+  - name: aplllock_cnfg
+    description: APLL LOCK Configuration Register.
+    byte_offset: 1304
+    fieldset: ScgAlphaFieldsetDelta
+  - name: apllsscgstat
+    description: APLL SSCG Status Register.
+    byte_offset: 1312
+    access: Read
+    fieldset: ScgAlphaFieldsetJuliet
+  - name: apllsscg0
+    description: APLL Spread Spectrum Control 0 Register.
+    byte_offset: 1316
+    fieldset: ScgAlphaFieldsetHotel
+  - name: apllsscg1
+    description: APLL Spread Spectrum Control 1 Register.
+    byte_offset: 1320
+    fieldset: ScgAlphaFieldsetIndia
+  - name: apll_ovrd
+    description: APLL Override Register.
+    byte_offset: 1524
+    fieldset: ScgAlphaFieldsetAlpha
+  - name: spllcsr
+    description: SPLL Control Status Register.
+    byte_offset: 1536
+    fieldset: ScgAlphaFieldsetCharlieAlpha
+  - name: spllctrl
+    description: SPLL Control Register.
+    byte_offset: 1540
+    fieldset: ScgAlphaFieldsetDeltaAlpha
+  - name: spllstat
+    description: SPLL Status Register.
+    byte_offset: 1544
+    access: Read
+    fieldset: ScgAlphaFieldsetLimaAlpha
+  - name: spllndiv
+    description: SPLL N Divider Register.
+    byte_offset: 1548
+    fieldset: ScgAlphaFieldsetGolfAlpha
+  - name: spllmdiv
+    description: SPLL M Divider Register.
+    byte_offset: 1552
+    fieldset: ScgAlphaFieldsetFoxtrotAlpha
+  - name: spllpdiv
+    description: SPLL P Divider Register.
+    byte_offset: 1556
+    fieldset: ScgAlphaFieldsetHotelAlpha
+  - name: splllock_cnfg
+    description: SPLL LOCK Configuration Register.
+    byte_offset: 1560
+    fieldset: ScgAlphaFieldsetEchoAlpha
+  - name: spllsscgstat
+    description: SPLL SSCG Status Register.
+    byte_offset: 1568
+    access: Read
+    fieldset: ScgAlphaFieldsetKiloAlpha
+  - name: spllsscg0
+    description: SPLL Spread Spectrum Control 0 Register.
+    byte_offset: 1572
+    fieldset: ScgAlphaFieldsetIndiaAlpha
+  - name: spllsscg1
+    description: SPLL Spread Spectrum Control 1 Register.
+    byte_offset: 1576
+    fieldset: ScgAlphaFieldsetJulietAlpha
+  - name: spll_ovrd
+    description: SPLL Override Register.
+    byte_offset: 1780
+    fieldset: ScgAlphaFieldsetBravoAlpha
+  - name: upllcsr
+    description: UPLL Control Status Register.
+    byte_offset: 1792
+    fieldset: ScgAlphaFieldsetNovemberAlpha
+  - name: ldocsr
+    description: LDO Control and Status Register.
+    byte_offset: 2048
+    fieldset: ScgAlphaFieldsetRomeo
+fieldset/ScgAlphaFieldsetAlpha:
+  description: APLL Override Register.
+  fields:
+  - name: apllpwren_ovrd
+    description: APLL Power Enable Override if APLL_OVRD_EN=1.
+    bit_offset: 0
+    bit_size: 1
+    enum: ScgAlphaEnumWhiskey
+  - name: apllclken_ovrd
+    description: APLL Clock Enable Override if APLL_OVRD_EN=1.
+    bit_offset: 1
+    bit_size: 1
+    enum: ScgAlphaEnumEcho
+  - name: apll_ovrd_en
+    description: APLL Override Enable.
+    bit_offset: 31
+    bit_size: 1
+    enum: ScgAlphaEnumCharlie
+fieldset/ScgAlphaFieldsetBravo:
+  description: APLL Control Status Register.
+  fields:
+  - name: apllpwren
+    description: APLL Power Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: ScgAlphaEnumVictor
+  - name: apllclken
+    description: APLL Clock Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: ScgAlphaEnumDelta
+  - name: apllsten
+    description: APLL Stop Enable.
+    bit_offset: 2
+    bit_size: 1
+    enum: ScgAlphaEnumIndiaAlpha
+  - name: frm_clockstable
+    description: Free running mode clock stable.
+    bit_offset: 3
+    bit_size: 1
+    enum: ScgAlphaEnumIndia
+  - name: apllcm
+    description: APLL Clock Monitor.
+    bit_offset: 16
+    bit_size: 1
+    enum: ScgAlphaEnumGolf
+  - name: apllcmre
+    description: APLL Clock Monitor Reset Enable.
+    bit_offset: 17
+    bit_size: 1
+    enum: ScgAlphaEnumHotel
+  - name: lk
+    description: Lock Register.
+    bit_offset: 23
+    bit_size: 1
+    enum: ScgAlphaEnumJuliet
+  - name: apll_lock
+    description: APLL LOCK.
+    bit_offset: 24
+    bit_size: 1
+    enum: ScgAlphaEnumAlpha
+  - name: apllsel
+    description: APLL Selected.
+    bit_offset: 25
+    bit_size: 1
+    enum: ScgAlphaEnumXray
+  - name: apllerr
+    description: APLL Clock Error.
+    bit_offset: 26
+    bit_size: 1
+    enum: ScgAlphaEnumRomeo
+  - name: apll_lock_ie
+    description: APLL LOCK Interrupt Enable.
+    bit_offset: 30
+    bit_size: 1
+    enum: ScgAlphaEnumBravo
+fieldset/ScgAlphaFieldsetCharlie:
+  description: APLL Control Register.
+  fields:
+  - name: selr
+    description: Bandwidth select R (resistor) value.
+    bit_offset: 0
+    bit_size: 4
+  - name: seli
+    description: Bandwidth select I (integration) value.
+    bit_offset: 4
+    bit_size: 6
+  - name: selp
+    description: Bandwidth select P (proportional) value.
+    bit_offset: 10
+    bit_size: 5
+  - name: bypasspostdiv2
+    description: Bypass of Divide-by-2 Divider.
+    bit_offset: 16
+    bit_size: 1
+    enum: ScgAlphaEnumMike
+  - name: limupoff
+    description: Up Limiter.
+    bit_offset: 17
+    bit_size: 1
+    enum: ScgAlphaEnumPapa
+  - name: banddirect
+    description: Control of the bandwidth of the PLL.
+    bit_offset: 18
+    bit_size: 1
+    enum: ScgAlphaEnumKilo
+  - name: bypassprediv
+    description: Bypass of the predivider.
+    bit_offset: 19
+    bit_size: 1
+    enum: ScgAlphaEnumNovember
+  - name: bypasspostdiv
+    description: Bypass of the postdivider.
+    bit_offset: 20
+    bit_size: 1
+    enum: ScgAlphaEnumLima
+  - name: frm
+    description: Free Running Mode Enable.
+    bit_offset: 22
+    bit_size: 1
+    enum: ScgAlphaEnumOscar
+  - name: source
+    description: Clock Source.
+    bit_offset: 25
+    bit_size: 2
+    enum: ScgAlphaEnumQuebec
+fieldset/ScgAlphaFieldsetDelta:
+  description: APLL LOCK Configuration Register.
+  fields:
+  - name: lock_time
+    description: Configures the number of reference clocks to count before APLL is considered locked.
+    bit_offset: 0
+    bit_size: 17
+fieldset/ScgAlphaFieldsetEcho:
+  description: APLL M Divider Register.
+  fields:
+  - name: mdiv
+    description: Feedback divider divider ratio (M-divider).
+    bit_offset: 0
+    bit_size: 16
+  - name: mreq
+    description: Feedback ratio change request.
+    bit_offset: 31
+    bit_size: 1
+    enum: ScgAlphaEnumSierra
+fieldset/ScgAlphaFieldsetFoxtrot:
+  description: APLL N Divider Register.
+  fields:
+  - name: ndiv
+    description: Predivider divider ratio (N-divider).
+    bit_offset: 0
+    bit_size: 8
+  - name: nreq
+    description: Predivider ratio change request.
+    bit_offset: 31
+    bit_size: 1
+    enum: ScgAlphaEnumTango
+fieldset/ScgAlphaFieldsetGolf:
+  description: APLL P Divider Register.
+  fields:
+  - name: pdiv
+    description: Postdivider divider ratio (P-divider).
+    bit_offset: 0
+    bit_size: 5
+  - name: preq
+    description: Postdivider ratio change request.
+    bit_offset: 31
+    bit_size: 1
+    enum: ScgAlphaEnumUniform
+fieldset/ScgAlphaFieldsetHotel:
+  description: APLL Spread Spectrum Control 0 Register.
+  fields:
+  - name: ss_mdiv_lsb
+    description: SS_MDIV.
+    bit_offset: 0
+    bit_size: 32
+fieldset/ScgAlphaFieldsetIndia:
+  description: APLL Spread Spectrum Control 1 Register.
+  fields:
+  - name: ss_mdiv_msb
+    description: SS_MDIV[32].
+    bit_offset: 0
+    bit_size: 1
+  - name: ss_mdiv_req
+    description: SS_MDIV[32:0] change request.
+    bit_offset: 1
+    bit_size: 1
+    enum: ScgAlphaEnumBravoAlpha
+  - name: mf
+    description: Modulation Frequency Control.
+    bit_offset: 2
+    bit_size: 3
+  - name: mr
+    description: Modulation Depth Control.
+    bit_offset: 5
+    bit_size: 3
+  - name: mc
+    description: Modulation Waveform Control.
+    bit_offset: 8
+    bit_size: 2
+    enum: ScgAlphaEnumZulu
+  - name: dither
+    description: Dither Enable.
+    bit_offset: 10
+    bit_size: 1
+    enum: ScgAlphaEnumYankee
+  - name: sel_ss_mdiv
+    description: SS_MDIV select.
+    bit_offset: 11
+    bit_size: 1
+    enum: ScgAlphaEnumAlphaAlpha
+  - name: ss_pd
+    description: SSCG Power Down.
+    bit_offset: 31
+    bit_size: 1
+    enum: ScgAlphaEnumCharlieAlpha
+fieldset/ScgAlphaFieldsetJuliet:
+  description: APLL SSCG Status Register.
+  fields:
+  - name: ss_mdiv_ack
+    description: SS_MDIV change acknowledge.
+    bit_offset: 0
+    bit_size: 1
+    enum: ScgAlphaEnumDeltaAlpha
+fieldset/ScgAlphaFieldsetKilo:
+  description: APLL Status Register.
+  fields:
+  - name: ndivack
+    description: Predivider(N) ratio change acknowledge.
+    bit_offset: 1
+    bit_size: 1
+    enum: ScgAlphaEnumGolfAlpha
+  - name: mdivack
+    description: Feedback(M) divider ratio change acknowledge.
+    bit_offset: 2
+    bit_size: 1
+    enum: ScgAlphaEnumFoxtrotAlpha
+  - name: pdivack
+    description: Postdivider(P) ratio change acknowledge.
+    bit_offset: 3
+    bit_size: 1
+    enum: ScgAlphaEnumHotelAlpha
+  - name: frmdet
+    description: Free running detector (active high).
+    bit_offset: 4
+    bit_size: 1
+    enum: ScgAlphaEnumEchoAlpha
+fieldset/ScgAlphaFieldsetLima:
+  description: Clock Status Register.
+  fields:
+  - name: scs
+    description: System Clock Source.
+    bit_offset: 24
+    bit_size: 4
+    enum: ScgAlphaEnumJulietAlpha
+fieldset/ScgAlphaFieldsetMike:
+  description: FIRC Configuration Register.
+  fields:
+  - name: range
+    description: Frequency Range.
+    bit_offset: 0
+    bit_size: 1
+    enum: ScgAlphaEnumPapaAlpha
+fieldset/ScgAlphaFieldsetNovember:
+  description: FIRC Control Status Register.
+  fields:
+  - name: fircen
+    description: FIRC Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: ScgAlphaEnumUniformAlpha
+  - name: fircsten
+    description: FIRC Stop Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: ScgAlphaEnumYankeeAlpha
+  - name: firc_sclk_periph_en
+    description: FIRC 48 MHz Clock to peripherals Enable.
+    bit_offset: 4
+    bit_size: 1
+    enum: ScgAlphaEnumMikeAlpha
+  - name: firc_fclk_periph_en
+    description: FIRC 144 MHz Clock to peripherals Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: ScgAlphaEnumLimaAlpha
+  - name: firctren
+    description: FIRC 144 MHz Trim Enable (FIRCCFG[RANGE]=1).
+    bit_offset: 8
+    bit_size: 1
+    enum: ScgAlphaEnumAlphaBravo
+  - name: firctrup
+    description: FIRC Trim Update.
+    bit_offset: 9
+    bit_size: 1
+    enum: ScgAlphaEnumBravoBravo
+  - name: trim_lock
+    description: FIRC TRIM LOCK.
+    bit_offset: 10
+    bit_size: 1
+    enum: ScgAlphaEnumTangoAlpha
+  - name: coarse_trim_bypass
+    description: Coarse Auto Trim Bypass.
+    bit_offset: 11
+    bit_size: 1
+    enum: ScgAlphaEnumRomeoAlpha
+  - name: lk
+    description: Lock Register.
+    bit_offset: 23
+    bit_size: 1
+    enum: ScgAlphaEnumSierraAlpha
+  - name: fircvld
+    description: FIRC Valid status.
+    bit_offset: 24
+    bit_size: 1
+    enum: ScgAlphaEnumCharlieBravo
+  - name: fircsel
+    description: FIRC Selected.
+    bit_offset: 25
+    bit_size: 1
+    enum: ScgAlphaEnumXrayAlpha
+  - name: fircerr
+    description: FIRC Clock Error.
+    bit_offset: 26
+    bit_size: 1
+    enum: ScgAlphaEnumVictorAlpha
+  - name: fircerr_ie
+    description: FIRC Clock Error Interrupt Enable.
+    bit_offset: 27
+    bit_size: 1
+    enum: ScgAlphaEnumWhiskeyAlpha
+  - name: fircacc_ie
+    description: FIRC Accurate Interrupt Enable.
+    bit_offset: 30
+    bit_size: 1
+    enum: ScgAlphaEnumOscarAlpha
+  - name: fircacc
+    description: FIRC Frequency Accurate.
+    bit_offset: 31
+    bit_size: 1
+    enum: ScgAlphaEnumNovemberAlpha
+fieldset/ScgAlphaFieldsetOscar:
+  description: FIRC Auto-trimming Status Register.
+  fields:
+  - name: trimfine
+    description: Trim Fine.
+    bit_offset: 0
+    bit_size: 8
+  - name: trimcoar
+    description: Trim Coarse.
+    bit_offset: 8
+    bit_size: 6
+fieldset/ScgAlphaFieldsetPapa:
+  description: FIRC Trim Configuration Register.
+  fields:
+  - name: trimsrc
+    description: Trim Source.
+    bit_offset: 0
+    bit_size: 2
+    enum: ScgAlphaEnumZuluAlpha
+  - name: trimdiv
+    description: FIRC Trim Predivider.
+    bit_offset: 16
+    bit_size: 7
+fieldset/ScgAlphaFieldsetQuebec:
+  description: FIRC Trim Register.
+  fields:
+  - name: trimfine
+    description: Trim Fine.
+    bit_offset: 0
+    bit_size: 8
+  - name: trimcoar
+    description: Trim Coarse.
+    bit_offset: 8
+    bit_size: 6
+  - name: trimtemp
+    description: Trim Temperature.
+    bit_offset: 16
+    bit_size: 2
+  - name: trimstart
+    description: Trim Start.
+    bit_offset: 24
+    bit_size: 6
+fieldset/ScgAlphaFieldsetRomeo:
+  description: LDO Control and Status Register.
+  fields:
+  - name: ldoen
+    description: LDO Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: ScgAlphaEnumFoxtrotBravo
+  - name: vout_sel
+    description: LDO output voltage select.
+    bit_offset: 1
+    bit_size: 3
+    enum: ScgAlphaEnumEchoEcho
+  - name: ldobypass
+    description: LDO Bypass.
+    bit_offset: 4
+    bit_size: 1
+    enum: ScgAlphaEnumEchoBravo
+  - name: vout_ok
+    description: LDO VOUT OK Inform.
+    bit_offset: 31
+    bit_size: 1
+    enum: ScgAlphaEnumDeltaEcho
+fieldset/ScgAlphaFieldsetSierra:
+  description: Parameter Register.
+  fields:
+  - name: soscclkpres
+    description: SOSC Clock Present.
+    bit_offset: 1
+    bit_size: 1
+    enum: ScgAlphaEnumCharlieCharlie
+  - name: sircclkpres
+    description: SIRC Clock Present.
+    bit_offset: 2
+    bit_size: 1
+    enum: ScgAlphaEnumPapaBravo
+  - name: fircclkpres
+    description: FIRC Clock Present.
+    bit_offset: 3
+    bit_size: 1
+    enum: ScgAlphaEnumQuebecAlpha
+  - name: roscclkpres
+    description: ROSC Clock Present.
+    bit_offset: 4
+    bit_size: 1
+    enum: ScgAlphaEnumHotelBravo
+  - name: apllclkpres
+    description: APLL Clock Present.
+    bit_offset: 5
+    bit_size: 1
+    enum: ScgAlphaEnumFoxtrot
+  - name: spllclkpres
+    description: SPLL Clock Present.
+    bit_offset: 6
+    bit_size: 1
+    enum: ScgAlphaEnumRomeoCharlie
+  - name: upllclkpres
+    description: UPLL Clock Present.
+    bit_offset: 7
+    bit_size: 1
+    enum: ScgAlphaEnumWhiskeyDelta
+fieldset/ScgAlphaFieldsetTango:
+  description: Run Clock Control Register.
+  fields:
+  - name: scs
+    description: System Clock Source.
+    bit_offset: 24
+    bit_size: 4
+    enum: ScgAlphaEnumGolfBravo
+fieldset/ScgAlphaFieldsetUniform:
+  description: ROSC Control Status Register.
+  fields:
+  - name: rosccm
+    description: ROSC Clock Monitor.
+    bit_offset: 16
+    bit_size: 1
+    enum: ScgAlphaEnumIndiaBravo
+  - name: rosccmre
+    description: ROSC Clock Monitor Reset Enable.
+    bit_offset: 17
+    bit_size: 1
+    enum: ScgAlphaEnumJulietBravo
+  - name: lk
+    description: Lock Register.
+    bit_offset: 23
+    bit_size: 1
+    enum: ScgAlphaEnumKiloBravo
+  - name: roscvld
+    description: ROSC Valid.
+    bit_offset: 24
+    bit_size: 1
+    enum: ScgAlphaEnumNovemberBravo
+  - name: roscsel
+    description: ROSC Selected.
+    bit_offset: 25
+    bit_size: 1
+    enum: ScgAlphaEnumMikeBravo
+  - name: roscerr
+    description: ROSC Clock Error.
+    bit_offset: 26
+    bit_size: 1
+    enum: ScgAlphaEnumLimaBravo
+fieldset/ScgAlphaFieldsetVictor:
+  description: SIRC Control Status Register.
+  fields:
+  - name: sircsten
+    description: SIRC Stop Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: ScgAlphaEnumWhiskeyBravo
+  - name: sirc_clk_periph_en
+    description: SIRC Clock to Peripherals Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: ScgAlphaEnumOscarBravo
+  - name: sirctren
+    description: SIRC 12 MHz Trim Enable (SIRCCFG[RANGE]=1).
+    bit_offset: 8
+    bit_size: 1
+    enum: ScgAlphaEnumYankeeBravo
+  - name: sirctrup
+    description: SIRC Trim Update.
+    bit_offset: 9
+    bit_size: 1
+    enum: ScgAlphaEnumZuluBravo
+  - name: trim_lock
+    description: SIRC TRIM LOCK.
+    bit_offset: 10
+    bit_size: 1
+    enum: ScgAlphaEnumSierraBravo
+  - name: coarse_trim_bypass
+    description: Coarse Auto Trim Bypass.
+    bit_offset: 11
+    bit_size: 1
+    enum: ScgAlphaEnumQuebecBravo
+  - name: lk
+    description: Lock Register.
+    bit_offset: 23
+    bit_size: 1
+    enum: ScgAlphaEnumRomeoBravo
+  - name: sircvld
+    description: SIRC Valid.
+    bit_offset: 24
+    bit_size: 1
+    enum: ScgAlphaEnumAlphaCharlie
+  - name: sircsel
+    description: SIRC Selected.
+    bit_offset: 25
+    bit_size: 1
+    enum: ScgAlphaEnumVictorBravo
+  - name: sircerr
+    description: SIRC Clock Error.
+    bit_offset: 26
+    bit_size: 1
+    enum: ScgAlphaEnumTangoBravo
+  - name: sircerr_ie
+    description: SIRC Clock Error Interrupt Enable.
+    bit_offset: 27
+    bit_size: 1
+    enum: ScgAlphaEnumUniformBravo
+fieldset/ScgAlphaFieldsetWhiskey:
+  description: SIRC Auto-trimming Status Register.
+  fields:
+  - name: ccotrim
+    description: CCO Trim.
+    bit_offset: 0
+    bit_size: 6
+  - name: cltrim
+    description: CL Trim.
+    bit_offset: 8
+    bit_size: 6
+fieldset/ScgAlphaFieldsetXray:
+  description: SIRC Trim Configuration Register.
+  fields:
+  - name: trimsrc
+    description: Trim Source.
+    bit_offset: 0
+    bit_size: 2
+    enum: ScgAlphaEnumXrayBravo
+  - name: trimdiv
+    description: SIRC Trim Predivider.
+    bit_offset: 16
+    bit_size: 7
+fieldset/ScgAlphaFieldsetYankee:
+  description: SIRC Trim Register.
+  fields:
+  - name: ccotrim
+    description: CCO Trim.
+    bit_offset: 0
+    bit_size: 6
+  - name: cltrim
+    description: CL Trim.
+    bit_offset: 8
+    bit_size: 6
+  - name: tctrim
+    description: Trim Temp.
+    bit_offset: 16
+    bit_size: 5
+  - name: fvchtrim
+    description: Calibrates the replica voltage in FSU for CCO to get well frequency at initial period.
+    bit_offset: 24
+    bit_size: 5
+fieldset/ScgAlphaFieldsetZulu:
+  description: SOSC Configuration Register.
+  fields:
+  - name: erefs
+    description: External Reference Select.
+    bit_offset: 2
+    bit_size: 1
+    enum: ScgAlphaEnumKiloAlpha
+  - name: range
+    description: SOSC Range Select.
+    bit_offset: 4
+    bit_size: 2
+    enum: ScgAlphaEnumBravoCharlie
+fieldset/ScgAlphaFieldsetAlphaAlpha:
+  description: SOSC Control Status Register.
+  fields:
+  - name: soscen
+    description: SOSC Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: ScgAlphaEnumGolfCharlie
+  - name: soscsten
+    description: SOSC Stop Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: ScgAlphaEnumJulietCharlie
+  - name: sosccm
+    description: SOSC Clock Monitor Enable.
+    bit_offset: 16
+    bit_size: 1
+    enum: ScgAlphaEnumDeltaCharlie
+  - name: sosccmre
+    description: SOSC Clock Monitor Reset Enable.
+    bit_offset: 17
+    bit_size: 1
+    enum: ScgAlphaEnumEchoCharlie
+  - name: lk
+    description: Lock Register.
+    bit_offset: 23
+    bit_size: 1
+    enum: ScgAlphaEnumFoxtrotCharlie
+  - name: soscvld
+    description: SOSC Valid.
+    bit_offset: 24
+    bit_size: 1
+    enum: ScgAlphaEnumKiloCharlie
+  - name: soscsel
+    description: SOSC Selected.
+    bit_offset: 25
+    bit_size: 1
+    enum: ScgAlphaEnumIndiaCharlie
+  - name: soscerr
+    description: SOSC Clock Error.
+    bit_offset: 26
+    bit_size: 1
+    enum: ScgAlphaEnumHotelCharlie
+  - name: soscvld_ie
+    description: SOSC Valid Interrupt Enable.
+    bit_offset: 30
+    bit_size: 1
+    enum: ScgAlphaEnumLimaCharlie
+fieldset/ScgAlphaFieldsetBravoAlpha:
+  description: SPLL Override Register.
+  fields:
+  - name: spllpwren_ovrd
+    description: SPLL Power Enable Override if SPLL_OVRD_EN=1.
+    bit_offset: 0
+    bit_size: 1
+    enum: ScgAlphaEnumIndiaDelta
+  - name: spllclken_ovrd
+    description: SPLL Clock Enable Override if SPLL_OVRD_EN=1.
+    bit_offset: 1
+    bit_size: 1
+    enum: ScgAlphaEnumQuebecCharlie
+  - name: spll_ovrd_en
+    description: SPLL Override Enable.
+    bit_offset: 31
+    bit_size: 1
+    enum: ScgAlphaEnumOscarCharlie
+fieldset/ScgAlphaFieldsetCharlieAlpha:
+  description: SPLL Control Status Register.
+  fields:
+  - name: spllpwren
+    description: SPLL Power Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: ScgAlphaEnumHotelDelta
+  - name: spllclken
+    description: SPLL Clock Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: ScgAlphaEnumPapaCharlie
+  - name: spllsten
+    description: SPLL Stop Enable.
+    bit_offset: 2
+    bit_size: 1
+    enum: ScgAlphaEnumUniformDelta
+  - name: frm_clockstable
+    description: Free running mode clock stable.
+    bit_offset: 3
+    bit_size: 1
+    enum: ScgAlphaEnumUniformCharlie
+  - name: spllcm
+    description: SPLL Clock Monitor.
+    bit_offset: 16
+    bit_size: 1
+    enum: ScgAlphaEnumSierraCharlie
+  - name: spllcmre
+    description: SPLL Clock Monitor Reset Enable.
+    bit_offset: 17
+    bit_size: 1
+    enum: ScgAlphaEnumTangoCharlie
+  - name: lk
+    description: Lock Register.
+    bit_offset: 23
+    bit_size: 1
+    enum: ScgAlphaEnumVictorCharlie
+  - name: spll_lock
+    description: SPLL LOCK.
+    bit_offset: 24
+    bit_size: 1
+    enum: ScgAlphaEnumMikeCharlie
+  - name: spllsel
+    description: SPLL Selected.
+    bit_offset: 25
+    bit_size: 1
+    enum: ScgAlphaEnumJulietDelta
+  - name: spllerr
+    description: SPLL Clock Error.
+    bit_offset: 26
+    bit_size: 1
+    enum: ScgAlphaEnumDeltaDelta
+  - name: spll_lock_ie
+    description: SPLL LOCK Interrupt Enable.
+    bit_offset: 30
+    bit_size: 1
+    enum: ScgAlphaEnumNovemberCharlie
+fieldset/ScgAlphaFieldsetDeltaAlpha:
+  description: SPLL Control Register.
+  fields:
+  - name: selr
+    description: Bandwidth select R (resistor) value.
+    bit_offset: 0
+    bit_size: 4
+  - name: seli
+    description: Bandwidth select I (integration) value.
+    bit_offset: 4
+    bit_size: 6
+  - name: selp
+    description: Bandwidth select P (proportional) value.
+    bit_offset: 10
+    bit_size: 5
+  - name: bypasspostdiv2
+    description: Bypass of Divide-by-2 Divider.
+    bit_offset: 16
+    bit_size: 1
+    enum: ScgAlphaEnumYankeeCharlie
+  - name: limupoff
+    description: Up Limiter.
+    bit_offset: 17
+    bit_size: 1
+    enum: ScgAlphaEnumBravoDelta
+  - name: banddirect
+    description: Control of the bandwidth of the PLL.
+    bit_offset: 18
+    bit_size: 1
+    enum: ScgAlphaEnumWhiskeyCharlie
+  - name: bypassprediv
+    description: Bypass of the predivider.
+    bit_offset: 19
+    bit_size: 1
+    enum: ScgAlphaEnumZuluCharlie
+  - name: bypasspostdiv
+    description: Bypass of the postdivider.
+    bit_offset: 20
+    bit_size: 1
+    enum: ScgAlphaEnumXrayCharlie
+  - name: frm
+    description: Free Running Mode Enable.
+    bit_offset: 22
+    bit_size: 1
+    enum: ScgAlphaEnumAlphaDelta
+  - name: source
+    description: Clock Source.
+    bit_offset: 25
+    bit_size: 2
+    enum: ScgAlphaEnumCharlieDelta
+fieldset/ScgAlphaFieldsetEchoAlpha:
+  description: SPLL LOCK Configuration Register.
+  fields:
+  - name: lock_time
+    description: Configures the number of reference clocks to count before SPLL is considered locked.
+    bit_offset: 0
+    bit_size: 17
+fieldset/ScgAlphaFieldsetFoxtrotAlpha:
+  description: SPLL M Divider Register.
+  fields:
+  - name: mdiv
+    description: Feedback divider divider ratio (M-divider).
+    bit_offset: 0
+    bit_size: 16
+  - name: mreq
+    description: Feedback ratio change request.
+    bit_offset: 31
+    bit_size: 1
+    enum: ScgAlphaEnumEchoDelta
+fieldset/ScgAlphaFieldsetGolfAlpha:
+  description: SPLL N Divider Register.
+  fields:
+  - name: ndiv
+    description: Predivider divider ratio (N-divider).
+    bit_offset: 0
+    bit_size: 8
+  - name: nreq
+    description: Predivider ratio change request.
+    bit_offset: 31
+    bit_size: 1
+    enum: ScgAlphaEnumFoxtrotDelta
+fieldset/ScgAlphaFieldsetHotelAlpha:
+  description: SPLL P Divider Register.
+  fields:
+  - name: pdiv
+    description: Postdivider divider ratio (P-divider).
+    bit_offset: 0
+    bit_size: 5
+  - name: preq
+    description: Postdivider ratio change request.
+    bit_offset: 31
+    bit_size: 1
+    enum: ScgAlphaEnumGolfDelta
+fieldset/ScgAlphaFieldsetIndiaAlpha:
+  description: SPLL Spread Spectrum Control 0 Register.
+  fields:
+  - name: ss_mdiv_lsb
+    description: SS_MDIV[31:0].
+    bit_offset: 0
+    bit_size: 32
+fieldset/ScgAlphaFieldsetJulietAlpha:
+  description: SPLL Spread Spectrum Control 1 Register.
+  fields:
+  - name: ss_mdiv_msb
+    description: SS_MDIV[32].
+    bit_offset: 0
+    bit_size: 1
+  - name: ss_mdiv_req
+    description: SS_MDIV[32:0] change request.
+    bit_offset: 1
+    bit_size: 1
+    enum: ScgAlphaEnumNovemberDelta
+  - name: mf
+    description: Modulation Frequency Control.
+    bit_offset: 2
+    bit_size: 3
+  - name: mr
+    description: Modulation Depth Control.
+    bit_offset: 5
+    bit_size: 3
+  - name: mc
+    description: Modulation Waveform Control.
+    bit_offset: 8
+    bit_size: 2
+    enum: ScgAlphaEnumLimaDelta
+  - name: dither
+    description: Dither Enable.
+    bit_offset: 10
+    bit_size: 1
+    enum: ScgAlphaEnumKiloDelta
+  - name: sel_ss_mdiv
+    description: SS_MDIV select.
+    bit_offset: 11
+    bit_size: 1
+    enum: ScgAlphaEnumMikeDelta
+  - name: ss_pd
+    description: SSCG Power Down.
+    bit_offset: 31
+    bit_size: 1
+    enum: ScgAlphaEnumOscarDelta
+fieldset/ScgAlphaFieldsetKiloAlpha:
+  description: SPLL SSCG Status Register.
+  fields:
+  - name: ss_mdiv_ack
+    description: SS_MDIV change acknowledge.
+    bit_offset: 0
+    bit_size: 1
+    enum: ScgAlphaEnumPapaDelta
+fieldset/ScgAlphaFieldsetLimaAlpha:
+  description: SPLL Status Register.
+  fields:
+  - name: ndivack
+    description: Predivider (N) ratio change acknowledge.
+    bit_offset: 1
+    bit_size: 1
+    enum: ScgAlphaEnumSierraDelta
+  - name: mdivack
+    description: Feedback (M) divider ratio change acknowledge.
+    bit_offset: 2
+    bit_size: 1
+    enum: ScgAlphaEnumRomeoDelta
+  - name: pdivack
+    description: Postdivider (P) ratio change acknowledge.
+    bit_offset: 3
+    bit_size: 1
+    enum: ScgAlphaEnumTangoDelta
+  - name: frmdet
+    description: Free running detector (active high).
+    bit_offset: 4
+    bit_size: 1
+    enum: ScgAlphaEnumQuebecDelta
+fieldset/ScgAlphaFieldsetMikeAlpha:
+  description: Trim Lock register.
+  fields:
+  - name: trim_unlock
+    description: TRIM_UNLOCK.
+    bit_offset: 0
+    bit_size: 1
+    enum: ScgAlphaEnumVictorDelta
+  - name: ifr_disable
+    description: IFR_DISABLE.
+    bit_offset: 1
+    bit_size: 1
+    enum: ScgAlphaEnumDeltaBravo
+  - name: trim_lock_key
+    description: TRIM_LOCK_KEY.
+    bit_offset: 16
+    bit_size: 16
+fieldset/ScgAlphaFieldsetNovemberAlpha:
+  description: UPLL Control Status Register.
+  fields:
+  - name: upllcm
+    description: UPLL Clock Monitor.
+    bit_offset: 16
+    bit_size: 1
+    enum: ScgAlphaEnumXrayDelta
+  - name: upllcmre
+    description: UPLL Clock Monitor Reset Enable.
+    bit_offset: 17
+    bit_size: 1
+    enum: ScgAlphaEnumYankeeDelta
+  - name: lk
+    description: Lock Register.
+    bit_offset: 23
+    bit_size: 1
+    enum: ScgAlphaEnumZuluDelta
+  - name: upllvld
+    description: UPLL Valid.
+    bit_offset: 24
+    bit_size: 1
+    enum: ScgAlphaEnumCharlieEcho
+  - name: upllsel
+    description: UPLL Selected.
+    bit_offset: 25
+    bit_size: 1
+    enum: ScgAlphaEnumBravoEcho
+  - name: upllerr
+    description: UPLL Clock Error.
+    bit_offset: 26
+    bit_size: 1
+    enum: ScgAlphaEnumAlphaEcho
+fieldset/ScgAlphaFieldsetOscarAlpha:
+  description: Version ID Register.
+  fields:
+  - name: version
+    description: SCG Version Number.
+    bit_offset: 0
+    bit_size: 32
+enum/ScgAlphaEnumAlpha:
+  bit_size: 1
+  variants:
+  - name: DisabledOrNotValid
+    description: APLL is not powered on or not locked.
+    value: 0
+  - name: EnabledAndValid
+    description: APLL is locked.
+    value: 1
+enum/ScgAlphaEnumBravo:
+  bit_size: 1
+  variants:
+  - name: Apll
+    description: APLL_LOCK interrupt is enabled.
+    value: 1
+  - name: NotApll
+    description: APLL_LOCK interrupt is not enabled.
+    value: 0
+enum/ScgAlphaEnumCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: APLL override is disabled.
+    value: 0
+  - name: Enabled
+    description: APLL override is enabled.
+    value: 1
+enum/ScgAlphaEnumDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: APLL clock is disabled.
+    value: 0
+  - name: Enabled
+    description: APLL clock is enabled.
+    value: 1
+enum/ScgAlphaEnumEcho:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: APLL clock is disabled.
+    value: 0
+  - name: Enabled
+    description: APLL clock is enabled.
+    value: 1
+enum/ScgAlphaEnumFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Nopres
+    description: APLL clock source is not present.
+    value: 0
+  - name: Pres
+    description: APLL clock source is present.
+    value: 1
+enum/ScgAlphaEnumGolf:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: APLL Clock Monitor is disabled.
+    value: 0
+  - name: Enabled
+    description: APLL Clock Monitor is enabled.
+    value: 1
+enum/ScgAlphaEnumHotel:
+  bit_size: 1
+  variants:
+  - name: GenerateInterrupt
+    description: Clock monitor generates an interrupt when an error is detected.
+    value: 0
+  - name: GenerateReset
+    description: Clock monitor generates a reset when an error is detected.
+    value: 1
+enum/ScgAlphaEnumIndia:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Free running mode clockstable is disabled.
+    value: 0
+  - name: Enabled
+    description: Free running mode clockstable is enabled.
+    value: 1
+enum/ScgAlphaEnumJuliet:
+  bit_size: 1
+  variants:
+  - name: WriteDisabled
+    description: Control Status Register cannot be written.
+    value: 1
+  - name: WriteEnabled
+    description: Control Status Register can be written.
+    value: 0
+enum/ScgAlphaEnumKilo:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: The bandwidth is changed synchronously with the feedback-divider.
+    value: 0
+  - name: Enabled
+    description: Modifies the bandwidth of the PLL directly.
+    value: 1
+enum/ScgAlphaEnumLima:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Use the postdivider.
+    value: 0
+  - name: Enabled
+    description: Bypass of the postdivider.
+    value: 1
+enum/ScgAlphaEnumMike:
+  bit_size: 1
+  variants:
+  - name: Bypassed
+    description: Bypass of the divide-by-2 divider in the postdivider.
+    value: 1
+  - name: NotBypassed
+    description: Use the divide-by-2 divider in the postdivider.
+    value: 0
+enum/ScgAlphaEnumNovember:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Use the predivider.
+    value: 0
+  - name: Enabled
+    description: Bypass of the predivider.
+    value: 1
+enum/ScgAlphaEnumOscar:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Free running mode disabled.
+    value: 0
+  - name: Enabled
+    description: Free running mode enabled.
+    value: 1
+enum/ScgAlphaEnumPapa:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Application set to non-Spectrum and Fractional applications.
+    value: 0
+  - name: Enabled
+    description: Application set to Spectrum and Fractional applications.
+    value: 1
+enum/ScgAlphaEnumQuebec:
+  bit_size: 2
+  variants:
+  - name: Firc
+    description: FIRC 48 MHz clock. FIRC_SCLK_PERIPH_EN must be set to use FIRC 48 MHz clock.
+    value: 1
+  - name: Rsvd
+    description: No clock.
+    value: 3
+  - name: Sosc
+    description: SOSC.
+    value: 0
+enum/ScgAlphaEnumRomeo:
+  bit_size: 1
+  variants:
+  - name: DisabledOrNoError
+    description: APLL Clock Monitor is disabled or has not detected an error.
+    value: 0
+  - name: EnabledAndError
+    description: APLL Clock Monitor is enabled and detected an error.
+    value: 1
+enum/ScgAlphaEnumSierra:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Feedback ratio change is not requested.
+    value: 0
+  - name: Enabled
+    description: Feedback ratio change is requested.
+    value: 1
+enum/ScgAlphaEnumTango:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Predivider ratio change is not requested.
+    value: 0
+  - name: Enabled
+    description: Predivider ratio change is requested.
+    value: 1
+enum/ScgAlphaEnumUniform:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Postdivider ratio change is not requested.
+    value: 0
+  - name: Enabled
+    description: Postdivider ratio change is requested.
+    value: 1
+enum/ScgAlphaEnumVictor:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: APLL clock is powered off.
+    value: 0
+  - name: Enabled
+    description: APLL clock is powered on.
+    value: 1
+enum/ScgAlphaEnumWhiskey:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: APLL clock is powered off.
+    value: 0
+  - name: Enabled
+    description: APLL clock is powered on.
+    value: 1
+enum/ScgAlphaEnumXray:
+  bit_size: 1
+  variants:
+  - name: Apll
+    description: APLL is the system clock source.
+    value: 1
+  - name: NotApll
+    description: APLL is not the system clock source.
+    value: 0
+enum/ScgAlphaEnumYankee:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Dither is not enabled.
+    value: 0
+  - name: Enabled
+    description: Dither is enabled.
+    value: 1
+enum/ScgAlphaEnumZulu:
+  bit_size: 2
+  variants:
+  - name: MaxComp
+    description: MC[1:0] maximum compensation.
+    value: 3
+  - name: NoComp
+    description: MC[1:0] no compensation.
+    value: 0
+enum/ScgAlphaEnumAlphaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Feedback divider ratio is MDIV[15:0].
+    value: 0
+  - name: Enabled
+    description: Feedback divider ratio is SS_MDIV[32:0].
+    value: 1
+enum/ScgAlphaEnumBravoAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: SS_MDIV change is not requested.
+    value: 0
+  - name: Enabled
+    description: SS_MDIV change is requested.
+    value: 1
+enum/ScgAlphaEnumCharlieAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: SSCG is powered on.
+    value: 0
+  - name: Enabled
+    description: SSCG is powered off.
+    value: 1
+enum/ScgAlphaEnumDeltaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: The SS_MDIV, MF, MR, and MC ratio change is not accepted by the analog PLL.
+    value: 0
+  - name: Enabled
+    description: The SS_MDIV, MF, MR, and MC ratio change is accepted by the analog PLL.
+    value: 1
+enum/ScgAlphaEnumEchoAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Free running is not detected.
+    value: 0
+  - name: Enabled
+    description: Free running is detected.
+    value: 1
+enum/ScgAlphaEnumFoxtrotAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: The feedback (M) ratio change is not accepted by the analog PLL.
+    value: 0
+  - name: Enabled
+    description: The feedback (M) ratio change is accepted by the analog PLL.
+    value: 1
+enum/ScgAlphaEnumGolfAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: The predivider (N) ratio change is not accepted by the analog PLL.
+    value: 0
+  - name: Enabled
+    description: The predivider (N) ratio change is accepted by the analog PLL.
+    value: 1
+enum/ScgAlphaEnumHotelAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: The postdivider (P) ratio change is not accepted by the analog PLL.
+    value: 0
+  - name: Enabled
+    description: The postdivider (P) ratio change is accepted by the analog PLL.
+    value: 1
+enum/ScgAlphaEnumIndiaAlpha:
+  bit_size: 1
+  variants:
+  - name: DisabledInStop
+    description: APLL is disabled in Deep Sleep mode.
+    value: 0
+  - name: EnabledInStop
+    description: APLL is enabled in Deep Sleep mode.
+    value: 1
+enum/ScgAlphaEnumJulietAlpha:
+  bit_size: 4
+  variants:
+  - name: Apll
+    description: APLL.
+    value: 5
+  - name: Firc
+    description: FIRC.
+    value: 3
+  - name: Rosc
+    description: ROSC.
+    value: 4
+  - name: Sirc
+    description: SIRC.
+    value: 2
+  - name: Sosc
+    description: SOSC.
+    value: 1
+  - name: Spll
+    description: SPLL.
+    value: 6
+  - name: Upll
+    description: UPLL.
+    value: 7
+enum/ScgAlphaEnumKiloAlpha:
+  bit_size: 1
+  variants:
+  - name: External
+    description: External reference clock selected. LDO can be disabled in this case.
+    value: 0
+  - name: Internal
+    description: Internal crystal oscillator of OSC selected.
+    value: 1
+enum/ScgAlphaEnumLimaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: FIRC 144 MHz to peripherals is disabled.
+    value: 0
+  - name: Enabled
+    description: FIRC 144 MHz to peripherals is enabled.
+    value: 1
+enum/ScgAlphaEnumMikeAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: FIRC 48 MHz to peripherals is disabled.
+    value: 0
+  - name: Enabled
+    description: FIRC 48 MHz to peripherals is enabled.
+    value: 1
+enum/ScgAlphaEnumNovemberAlpha:
+  bit_size: 1
+  variants:
+  - name: EnabledAndValid
+    description: FIRC is enabled and output clock is accurate. The clock is accurate after 4096 clock cycles of 144 MHz (RANGE=1) or 1365 clock cycles of 48 MHz(RANGE=0) from the FIRC analog.
+    value: 1
+  - name: NotEnabledOrNotValid
+    description: FIRC is not enabled or clock is not accurate.
+    value: 0
+enum/ScgAlphaEnumOscarAlpha:
+  bit_size: 1
+  variants:
+  - name: Fircaccnot
+    description: FIRCACC interrupt is not enabled.
+    value: 0
+  - name: Fircaccyes
+    description: FIRCACC interrupt is enabled.
+    value: 1
+enum/ScgAlphaEnumPapaAlpha:
+  bit_size: 1
+  variants:
+  - name: Firc144mhz
+    description: 144 MHz FIRC clock selected.
+    value: 1
+  - name: Firc48mhz
+    description: 48 MHz FIRC clock selected.
+    value: 0
+enum/ScgAlphaEnumQuebecAlpha:
+  bit_size: 1
+  variants:
+  - name: Nopres
+    description: FIRC clock source is not present.
+    value: 0
+  - name: Pres
+    description: FIRC clock source is present.
+    value: 1
+enum/ScgAlphaEnumRomeoAlpha:
+  bit_size: 1
+  variants:
+  - name: Bypassed
+    description: FIRC coarse auto trim is bypassed.
+    value: 1
+  - name: NotBypassed
+    description: FIRC coarse auto trim is not bypassed.
+    value: 0
+enum/ScgAlphaEnumSierraAlpha:
+  bit_size: 1
+  variants:
+  - name: WriteDisabled
+    description: Control Status Register cannot be written.
+    value: 1
+  - name: WriteEnabled
+    description: Control Status Register can be written.
+    value: 0
+enum/ScgAlphaEnumTangoAlpha:
+  bit_size: 1
+  variants:
+  - name: FircLocked
+    description: FIRC auto trim locked to target frequency range.
+    value: 1
+  - name: FircNotLocked
+    description: FIRC auto trim not locked to target frequency range.
+    value: 0
+enum/ScgAlphaEnumUniformAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: FIRC is disabled.
+    value: 0
+  - name: Enabled
+    description: FIRC is enabled.
+    value: 1
+enum/ScgAlphaEnumVictorAlpha:
+  bit_size: 1
+  variants:
+  - name: ErrorDetected
+    description: Error detected with the FIRC trimming.
+    value: 1
+  - name: ErrorNotDetected
+    description: Error not detected with the FIRC trimming.
+    value: 0
+enum/ScgAlphaEnumWhiskeyAlpha:
+  bit_size: 1
+  variants:
+  - name: ErrorDetected
+    description: FIRCERR interrupt is enabled.
+    value: 1
+  - name: ErrorNotDetected
+    description: FIRCERR interrupt is not enabled.
+    value: 0
+enum/ScgAlphaEnumXrayAlpha:
+  bit_size: 1
+  variants:
+  - name: Firc
+    description: FIRC is the system clock source.
+    value: 1
+  - name: NotFirc
+    description: FIRC is not the system clock source.
+    value: 0
+enum/ScgAlphaEnumYankeeAlpha:
+  bit_size: 1
+  variants:
+  - name: DisabledInStopModes
+    description: FIRC is disabled in Deep Sleep mode.
+    value: 0
+  - name: EnabledInStopModes
+    description: FIRC is enabled in Deep Sleep mode.
+    value: 1
+enum/ScgAlphaEnumZuluAlpha:
+  bit_size: 2
+  variants:
+  - name: Rosc
+    description: ROSC.
+    value: 3
+  - name: Sosc
+    description: SOSC.
+    value: 2
+  - name: Usb0
+    description: USB0 Start of Frame (1 kHz). This option does not use TRIMDIV.
+    value: 0
+enum/ScgAlphaEnumAlphaBravo:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables trimming FIRC to an external clock source.
+    value: 0
+  - name: Enabled
+    description: Enables trimming FIRC to an external clock source.
+    value: 1
+enum/ScgAlphaEnumBravoBravo:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables FIRC trimming updates.
+    value: 0
+  - name: Enabled
+    description: Enables FIRC trimming updates.
+    value: 1
+enum/ScgAlphaEnumCharlieBravo:
+  bit_size: 1
+  variants:
+  - name: EnabledAndValid
+    description: FIRC is enabled and output clock is valid. The clock is valid after there is an output clock from the FIRC analog.
+    value: 1
+  - name: NotEnabledOrNotValid
+    description: FIRC is not enabled or clock is not valid.
+    value: 0
+enum/ScgAlphaEnumDeltaBravo:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: IFR write access to SCG trim registers during system reset is blocked.
+    value: 1
+  - name: Enabled
+    description: IFR write access to SCG trim registers not disabled. The SCG Trim registers are reprogrammed with the IFR values after any system reset.
+    value: 0
+enum/ScgAlphaEnumEchoBravo:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: LDO is not bypassed.
+    value: 0
+  - name: Enabled
+    description: LDO is bypassed.
+    value: 1
+enum/ScgAlphaEnumFoxtrotBravo:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: LDO is disabled.
+    value: 0
+  - name: Enabled
+    description: LDO is enabled.
+    value: 1
+enum/ScgAlphaEnumGolfBravo:
+  bit_size: 4
+  variants:
+  - name: Apll
+    description: APLL.
+    value: 5
+  - name: Firc
+    description: FIRC.
+    value: 3
+  - name: Rosc
+    description: ROSC.
+    value: 4
+  - name: Sirc
+    description: SIRC.
+    value: 2
+  - name: Sosc
+    description: SOSC.
+    value: 1
+  - name: Spll
+    description: SPLL.
+    value: 6
+  - name: Upll
+    description: UPLL.
+    value: 7
+enum/ScgAlphaEnumHotelBravo:
+  bit_size: 1
+  variants:
+  - name: Nopres
+    description: ROSC clock source is not present.
+    value: 0
+  - name: Pres
+    description: ROSC clock source is present.
+    value: 1
+enum/ScgAlphaEnumIndiaBravo:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: ROSC clock monitor is disabled.
+    value: 0
+  - name: Enabled
+    description: ROSC clock monitor is enabled.
+    value: 1
+enum/ScgAlphaEnumJulietBravo:
+  bit_size: 1
+  variants:
+  - name: GenerateInterrupt
+    description: Clock monitor generates an interrupt when an error is detected.
+    value: 0
+  - name: GenerateReset
+    description: Clock monitor generates a reset when an error is detected.
+    value: 1
+enum/ScgAlphaEnumKiloBravo:
+  bit_size: 1
+  variants:
+  - name: WriteDisabled
+    description: Control Status Register cannot be written.
+    value: 1
+  - name: WriteEnabled
+    description: Control Status Register can be written.
+    value: 0
+enum/ScgAlphaEnumLimaBravo:
+  bit_size: 1
+  variants:
+  - name: DisabledOrNoError
+    description: ROSC Clock Monitor is disabled or has not detected an error.
+    value: 0
+  - name: EnabledAndError
+    description: ROSC Clock Monitor is enabled and detected an RTC loss of clock error.
+    value: 1
+enum/ScgAlphaEnumMikeBravo:
+  bit_size: 1
+  variants:
+  - name: NotRosc
+    description: ROSC is not the system clock source.
+    value: 0
+  - name: Rosc
+    description: ROSC is the system clock source.
+    value: 1
+enum/ScgAlphaEnumNovemberBravo:
+  bit_size: 1
+  variants:
+  - name: DisabledOrNotValid
+    description: ROSC is not enabled or clock is not valid.
+    value: 0
+  - name: EnabledAndValid
+    description: ROSC is enabled and output clock is valid.
+    value: 1
+enum/ScgAlphaEnumOscarBravo:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: SIRC clock to peripherals is disabled.
+    value: 0
+  - name: Enabled
+    description: SIRC clock to peripherals is enabled.
+    value: 1
+enum/ScgAlphaEnumPapaBravo:
+  bit_size: 1
+  variants:
+  - name: Nopres
+    description: SIRC clock source is not present.
+    value: 0
+  - name: Pres
+    description: SIRC clock source is present.
+    value: 1
+enum/ScgAlphaEnumQuebecBravo:
+  bit_size: 1
+  variants:
+  - name: Bypassed
+    description: SIRC coarse auto-trim is bypassed.
+    value: 1
+  - name: NotBypassed
+    description: SIRC coarse auto-trim is not bypassed.
+    value: 0
+enum/ScgAlphaEnumRomeoBravo:
+  bit_size: 1
+  variants:
+  - name: WriteDisabled
+    description: Control Status Register cannot be written.
+    value: 1
+  - name: WriteEnabled
+    description: Control Status Register can be written.
+    value: 0
+enum/ScgAlphaEnumSierraBravo:
+  bit_size: 1
+  variants:
+  - name: SircLocked
+    description: SIRC auto trim locked to target frequency range.
+    value: 1
+  - name: SircNotLocked
+    description: SIRC auto trim not locked to target frequency range.
+    value: 0
+enum/ScgAlphaEnumTangoBravo:
+  bit_size: 1
+  variants:
+  - name: ErrorDetected
+    description: Error detected with the SIRC trimming.
+    value: 1
+  - name: ErrorNotDetected
+    description: Error not detected with the SIRC trimming.
+    value: 0
+enum/ScgAlphaEnumUniformBravo:
+  bit_size: 1
+  variants:
+  - name: ErrorDetected
+    description: SIRCERR interrupt is enabled.
+    value: 1
+  - name: ErrorNotDetected
+    description: SIRCERR interrupt is not enabled.
+    value: 0
+enum/ScgAlphaEnumVictorBravo:
+  bit_size: 1
+  variants:
+  - name: NotSirc
+    description: SIRC is not the system clock source.
+    value: 0
+  - name: Sirc
+    description: SIRC is the system clock source.
+    value: 1
+enum/ScgAlphaEnumWhiskeyBravo:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: SIRC is disabled in Deep Sleep mode.
+    value: 0
+  - name: Enabled
+    description: SIRC is enabled in Deep Sleep mode.
+    value: 1
+enum/ScgAlphaEnumXrayBravo:
+  bit_size: 2
+  variants:
+  - name: Rosc
+    description: ROSC (32.768 kHz).
+    value: 3
+  - name: Sosc
+    description: SOSC.
+    value: 2
+enum/ScgAlphaEnumYankeeBravo:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables trimming SIRC to an external clock source.
+    value: 0
+  - name: Enabled
+    description: Enables trimming SIRC to an external clock source.
+    value: 1
+enum/ScgAlphaEnumZuluBravo:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables SIRC trimming updates.
+    value: 0
+  - name: Enabled
+    description: Enables SIRC trimming updates.
+    value: 1
+enum/ScgAlphaEnumAlphaCharlie:
+  bit_size: 1
+  variants:
+  - name: DisabledOrNotValid
+    description: SIRC is not enabled or clock is not valid.
+    value: 0
+  - name: EnabledAndValid
+    description: SIRC is enabled and output clock is valid.
+    value: 1
+enum/ScgAlphaEnumBravoCharlie:
+  bit_size: 2
+  variants:
+  - name: Freq16to20mhz
+    description: Frequency range select of 16-20 MHz.
+    value: 0
+  - name: HighFreq
+    description: Frequency range select of 50-66 MHz.
+    value: 3
+  - name: LowFreq
+    description: Frequency range select of 20-30 MHz.
+    value: 1
+  - name: MediumFreq
+    description: Frequency range select of 30-50 MHz.
+    value: 2
+enum/ScgAlphaEnumCharlieCharlie:
+  bit_size: 1
+  variants:
+  - name: Nopres
+    description: SOSC clock source is not present.
+    value: 0
+  - name: Pres
+    description: SOSC clock source is present.
+    value: 1
+enum/ScgAlphaEnumDeltaCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: SOSC Clock Monitor is disabled.
+    value: 0
+  - name: Enabled
+    description: SOSC Clock Monitor is enabled.
+    value: 1
+enum/ScgAlphaEnumEchoCharlie:
+  bit_size: 1
+  variants:
+  - name: GenerateInterrupt
+    description: Clock monitor generates an interrupt when an error is detected.
+    value: 0
+  - name: GenerateReset
+    description: Clock monitor generates a reset when an error is detected.
+    value: 1
+enum/ScgAlphaEnumFoxtrotCharlie:
+  bit_size: 1
+  variants:
+  - name: WriteDisabled
+    description: This Control Status Register cannot be written.
+    value: 1
+  - name: WriteEnabled
+    description: This Control Status Register can be written.
+    value: 0
+enum/ScgAlphaEnumGolfCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: SOSC is disabled.
+    value: 0
+  - name: Enabled
+    description: SOSC is enabled.
+    value: 1
+enum/ScgAlphaEnumHotelCharlie:
+  bit_size: 1
+  variants:
+  - name: DisabledOrNoError
+    description: SOSC Clock Monitor is disabled or has not detected an error.
+    value: 0
+  - name: EnabledAndError
+    description: SOSC Clock Monitor is enabled and detected an error.
+    value: 1
+enum/ScgAlphaEnumIndiaCharlie:
+  bit_size: 1
+  variants:
+  - name: NotSosc
+    description: SOSC is not the system clock source.
+    value: 0
+  - name: Sosc
+    description: SOSC is the system clock source.
+    value: 1
+enum/ScgAlphaEnumJulietCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: SOSC is disabled in Deep Sleep mode.
+    value: 0
+  - name: Enabled
+    description: SOSC is enabled in Deep Sleep mode only if SOSCEN is set.
+    value: 1
+enum/ScgAlphaEnumKiloCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: SOSC is not enabled or clock is not valid.
+    value: 0
+  - name: Enabled
+    description: SOSC is enabled and output clock is valid.
+    value: 1
+enum/ScgAlphaEnumLimaCharlie:
+  bit_size: 1
+  variants:
+  - name: NotSosc
+    description: SOSCVLD interrupt is not enabled.
+    value: 0
+  - name: Sosc
+    description: SOSCVLD interrupt is enabled.
+    value: 1
+enum/ScgAlphaEnumMikeCharlie:
+  bit_size: 1
+  variants:
+  - name: DisabledOrNotValid
+    description: SPLL is not powered on or not locked.
+    value: 0
+  - name: EnabledAndValid
+    description: SPLL is locked.
+    value: 1
+enum/ScgAlphaEnumNovemberCharlie:
+  bit_size: 1
+  variants:
+  - name: NotSpll
+    description: SPLL_LOCK interrupt is not enabled.
+    value: 0
+  - name: Spll
+    description: SPLL_LOCK interrupt is enabled.
+    value: 1
+enum/ScgAlphaEnumOscarCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: SPLL override is disabled.
+    value: 0
+  - name: Enabled
+    description: SPLL override is enabled.
+    value: 1
+enum/ScgAlphaEnumPapaCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: SPLL clock is disabled.
+    value: 0
+  - name: Enabled
+    description: SPLL clock is enabled.
+    value: 1
+enum/ScgAlphaEnumQuebecCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: SPLL clock is disabled.
+    value: 0
+  - name: Enabled
+    description: SPLL clock is enabled.
+    value: 1
+enum/ScgAlphaEnumRomeoCharlie:
+  bit_size: 1
+  variants:
+  - name: Nopres
+    description: SPLL clock source is not present.
+    value: 0
+  - name: Pres
+    description: SPLL clock source is present.
+    value: 1
+enum/ScgAlphaEnumSierraCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: SPLL Clock Monitor is disabled.
+    value: 0
+  - name: Enabled
+    description: SPLL Clock Monitor is enabled.
+    value: 1
+enum/ScgAlphaEnumTangoCharlie:
+  bit_size: 1
+  variants:
+  - name: GenerateInterrupt
+    description: Clock monitor generates an interrupt when an error is detected.
+    value: 0
+  - name: GenerateReset
+    description: Clock monitor generates a reset when an error is detected.
+    value: 1
+enum/ScgAlphaEnumUniformCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Free running mode clockstable is disabled.
+    value: 0
+  - name: Enabled
+    description: Free running mode clockstable is enabled.
+    value: 1
+enum/ScgAlphaEnumVictorCharlie:
+  bit_size: 1
+  variants:
+  - name: WriteDisabled
+    description: Control Status Register cannot be written.
+    value: 1
+  - name: WriteEnabled
+    description: Control Status Register can be written.
+    value: 0
+enum/ScgAlphaEnumWhiskeyCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: The bandwidth is changed synchronously with the feedback-divider.
+    value: 0
+  - name: Enabled
+    description: Modifies the bandwidth of the PLL directly.
+    value: 1
+enum/ScgAlphaEnumXrayCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Use the postdivider.
+    value: 0
+  - name: Enabled
+    description: Bypass of the postdivider.
+    value: 1
+enum/ScgAlphaEnumYankeeCharlie:
+  bit_size: 1
+  variants:
+  - name: Bypassed
+    description: Bypass of the divide-by-2 divider in the postdivider.
+    value: 1
+  - name: NotBypassed
+    description: Use the divide-by-2 divider in the postdivider.
+    value: 0
+enum/ScgAlphaEnumZuluCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Use the predivider.
+    value: 0
+  - name: Enabled
+    description: Bypass of the predivider.
+    value: 1
+enum/ScgAlphaEnumAlphaDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Free running mode disabled.
+    value: 0
+  - name: Enabled
+    description: Free running mode enabled.
+    value: 1
+enum/ScgAlphaEnumBravoDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Application set to non-Spectrum and Fractional applications.
+    value: 0
+  - name: Enabled
+    description: Application set to Spectrum and Fractional applications.
+    value: 1
+enum/ScgAlphaEnumCharlieDelta:
+  bit_size: 2
+  variants:
+  - name: Firc
+    description: FIRC 48 MHz clock. FIRC_SCLK_PERIPH_EN must be set to use FIRC 48 MHz clock.
+    value: 1
+  - name: Rsvd
+    description: No clock.
+    value: 3
+  - name: Sosc
+    description: SOSC.
+    value: 0
+enum/ScgAlphaEnumDeltaDelta:
+  bit_size: 1
+  variants:
+  - name: DisabledOrNoError
+    description: SPLL Clock Monitor is disabled or has not detected an error.
+    value: 0
+  - name: EnabledAndError
+    description: SPLL Clock Monitor is enabled and detected an error.
+    value: 1
+enum/ScgAlphaEnumEchoDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Feedback ratio change is not requested.
+    value: 0
+  - name: Enabled
+    description: Feedback ratio change is requested.
+    value: 1
+enum/ScgAlphaEnumFoxtrotDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Predivider ratio change is not requested.
+    value: 0
+  - name: Enabled
+    description: Predivider ratio change is requested.
+    value: 1
+enum/ScgAlphaEnumGolfDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Postdivider ratio change is not requested.
+    value: 0
+  - name: Enabled
+    description: Postdivider ratio change is requested.
+    value: 1
+enum/ScgAlphaEnumHotelDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: SPLL clock is powered off.
+    value: 0
+  - name: Enabled
+    description: SPLL clock is powered on.
+    value: 1
+enum/ScgAlphaEnumIndiaDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: SPLL clock is powered off.
+    value: 0
+  - name: Enabled
+    description: SPLL clock is powered on.
+    value: 1
+enum/ScgAlphaEnumJulietDelta:
+  bit_size: 1
+  variants:
+  - name: NotSpll
+    description: SPLL is not the system clock source.
+    value: 0
+  - name: Spll
+    description: SPLL is the system clock source.
+    value: 1
+enum/ScgAlphaEnumKiloDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Dither is not enabled.
+    value: 0
+  - name: Enabled
+    description: Dither is enabled.
+    value: 1
+enum/ScgAlphaEnumLimaDelta:
+  bit_size: 2
+  variants:
+  - name: MaxComp
+    description: MC[1:0] maximum compensation.
+    value: 3
+  - name: NoComp
+    description: MC[1:0] no compensation.
+    value: 0
+enum/ScgAlphaEnumMikeDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Feedback divider ratio is MDIV[15:0].
+    value: 0
+  - name: Enabled
+    description: Feedback divider ratio is SS_MDIV[32:0].
+    value: 1
+enum/ScgAlphaEnumNovemberDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: SS_MDIV change is not requested.
+    value: 0
+  - name: Enabled
+    description: SS_MDIV change is requested.
+    value: 1
+enum/ScgAlphaEnumOscarDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: SSCG is powered on.
+    value: 0
+  - name: Enabled
+    description: SSCG is powered off.
+    value: 1
+enum/ScgAlphaEnumPapaDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: The SS_MDIV, MF, MR, and MC ratio change is not accepted by the analog PLL.
+    value: 0
+  - name: Enabled
+    description: The SS_MDIV, MF, MR, and MC ratio change is accepted by the analog PLL.
+    value: 1
+enum/ScgAlphaEnumQuebecDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Free running is not detected.
+    value: 0
+  - name: Enabled
+    description: Free running is detected.
+    value: 1
+enum/ScgAlphaEnumRomeoDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: The feedback (M) ratio change is not accepted by the analog PLL.
+    value: 0
+  - name: Enabled
+    description: The feedback (M) ratio change is accepted by the analog PLL.
+    value: 1
+enum/ScgAlphaEnumSierraDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: The predivider (N) ratio change is not accepted by the analog PLL.
+    value: 0
+  - name: Enabled
+    description: The predivider (N) ratio change is accepted by the analog PLL.
+    value: 1
+enum/ScgAlphaEnumTangoDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: The postdivider (P) ratio change is not accepted by the analog PLL.
+    value: 0
+  - name: Enabled
+    description: The postdivider (P) ratio change is accepted by the analog PLL.
+    value: 1
+enum/ScgAlphaEnumUniformDelta:
+  bit_size: 1
+  variants:
+  - name: DisabledInStop
+    description: SPLL is disabled in Deep Sleep mode.
+    value: 0
+  - name: EnabledInStop
+    description: SPLL is enabled in Deep Sleep mode.
+    value: 1
+enum/ScgAlphaEnumVictorDelta:
+  bit_size: 1
+  variants:
+  - name: Locked
+    description: SCG Trim registers are locked and not writable.
+    value: 0
+  - name: NotLocked
+    description: SCG Trim registers are unlocked and writable.
+    value: 1
+enum/ScgAlphaEnumWhiskeyDelta:
+  bit_size: 1
+  variants:
+  - name: Nopres
+    description: UPLL clock source is not present.
+    value: 0
+  - name: Pres
+    description: UPLL clock source is present.
+    value: 1
+enum/ScgAlphaEnumXrayDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: UPLL Clock Monitor is disabled.
+    value: 0
+  - name: Enabled
+    description: UPLL Clock Monitor is enabled.
+    value: 1
+enum/ScgAlphaEnumYankeeDelta:
+  bit_size: 1
+  variants:
+  - name: GenerateInterrupt
+    description: Clock monitor generates an interrupt when an error is detected.
+    value: 0
+  - name: GenerateReset
+    description: Clock monitor generates a reset when an error is detected.
+    value: 1
+enum/ScgAlphaEnumZuluDelta:
+  bit_size: 1
+  variants:
+  - name: WriteDisabled
+    description: Control Status Register cannot be written.
+    value: 1
+  - name: WriteEnabled
+    description: Control Status Register can be written.
+    value: 0
+enum/ScgAlphaEnumAlphaEcho:
+  bit_size: 1
+  variants:
+  - name: DisabledOrNoError
+    description: UPLL Clock Monitor is disabled or has not detected an error.
+    value: 0
+  - name: EnabledAndError
+    description: UPLL Clock Monitor is enabled and detected an error.
+    value: 1
+enum/ScgAlphaEnumBravoEcho:
+  bit_size: 1
+  variants:
+  - name: NotUsbPll
+    description: UPLL is not the system clock source.
+    value: 0
+  - name: UsbPll
+    description: UPLL is the system clock source.
+    value: 1
+enum/ScgAlphaEnumCharlieEcho:
+  bit_size: 1
+  variants:
+  - name: DisabledOrNotValid
+    description: UPLL is not enabled or clock is not valid.
+    value: 0
+  - name: EnabledAndValid
+    description: UPLL is enabled and output clock is valid.
+    value: 1
+enum/ScgAlphaEnumDeltaEcho:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: LDO output VOUT is not OK.
+    value: 0
+  - name: Enabled
+    description: LDO output VOUT is OK.
+    value: 1
+enum/ScgAlphaEnumEchoEcho:
+  bit_size: 3
+  variants:
+  - name: Vout105v
+    description: VOUT = 1.05V.
+    value: 3
+  - name: Vout115v
+    description: VOUT = 1.15V.
+    value: 5
+  - name: Vout11v
+    description: VOUT = 1.1V.
+    value: 4
+  - name: Vout125v
+    description: VOUT = 1.25V.
+    value: 7
+  - name: Vout12v
+    description: VOUT = 1.2V.
+    value: 6
+  - name: Vout1v1
+    description: VOUT = 1V.
+    value: 0
+  - name: Vout1v2
+    description: VOUT = 1V.
+    value: 1
+  - name: Vout1v3
+    description: VOUT = 1V.
+    value: 2

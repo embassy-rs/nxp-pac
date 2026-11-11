@@ -1,0 +1,199 @@
+# NXP mcux-soc-svd 7c1f00bdd6263f0b93466f5e73e5fc55a744b879; native chiptool import.
+# Source instance geometry is retained in explicit block variants; see private source bindings.
+# Unannotated fieldsets construct zero in software, not a claimed hardware reset.
+# Command/W1C/SET/CLR/TOG construction defaults are zero masks; no RMW semantics are implied.
+# Source: MCXN946_cm33_core0.xml CMX_PERFMON0 sha256 b986328ff1224adaeea70522fa61383a5f89f6313dfc3e7df92e8894fdab72d7
+# Source: MCXN946_cm33_core0.xml CMX_PERFMON1 sha256 b986328ff1224adaeea70522fa61383a5f89f6313dfc3e7df92e8894fdab72d7
+# Source: MCXN946_cm33_core1.xml CMX_PERFMON0 sha256 57e8910317a1cb467d56726cb822c57806aa247542969bcf12dbcc8822187916
+# Source: MCXN946_cm33_core1.xml CMX_PERFMON1 sha256 57e8910317a1cb467d56726cb822c57806aa247542969bcf12dbcc8822187916
+# Source: MCXN947_cm33_core0.xml CMX_PERFMON0 sha256 629ac7cdc82684e467b0cf36a8aef697bc1eb65c2047d6610b7b5df65692e590
+# Source: MCXN947_cm33_core0.xml CMX_PERFMON1 sha256 629ac7cdc82684e467b0cf36a8aef697bc1eb65c2047d6610b7b5df65692e590
+# Source: MCXN947_cm33_core1.xml CMX_PERFMON0 sha256 0d77f3d23cad1d5eab631fd7f5ade4044d8aaca2d9d13cd11f3836d27fe089fb
+# Source: MCXN947_cm33_core1.xml CMX_PERFMON1 sha256 0d77f3d23cad1d5eab631fd7f5ade4044d8aaca2d9d13cd11f3836d27fe089fb
+block/CmxPerfmonAlpha:
+  description: CMX_PERFMON.
+  items:
+  - name: pmcr
+    description: Performance Monitor Control.
+    byte_offset: 0
+    fieldset: CmxPerfmonAlphaFieldsetAlpha
+  - name: pmectr1_hi
+    description: Performance Monitor Event Counter.
+    byte_offset: 24
+    access: Read
+    bit_size: 8
+    fieldset: CmxPerfmonAlphaFieldsetBravo
+  - name: pmectr1_lo
+    description: Performance Monitor Event Counter.
+    byte_offset: 28
+    access: Read
+    fieldset: CmxPerfmonAlphaFieldsetCharlie
+  - name: pmectr2_hi
+    description: Performance Monitor Event Counter.
+    byte_offset: 32
+    access: Read
+    bit_size: 8
+    fieldset: CmxPerfmonAlphaFieldsetDelta
+  - name: pmectr2_lo
+    description: Performance Monitor Event Counter.
+    byte_offset: 36
+    access: Read
+    fieldset: CmxPerfmonAlphaFieldsetEcho
+  - name: pmectr3_hi
+    description: Performance Monitor Event Counter.
+    byte_offset: 40
+    access: Read
+    bit_size: 8
+    fieldset: CmxPerfmonAlphaFieldsetFoxtrot
+  - name: pmectr3_lo
+    description: Performance Monitor Event Counter.
+    byte_offset: 44
+    access: Read
+    fieldset: CmxPerfmonAlphaFieldsetGolf
+fieldset/CmxPerfmonAlphaFieldsetAlpha:
+  description: Performance Monitor Control.
+  fields:
+  - name: menb
+    description: Module Is Enabled.
+    bit_offset: 0
+    bit_size: 1
+    enum: CmxPerfmonAlphaEnumBravo
+  - name: ssc
+    description: Start and Stop Control.
+    bit_offset: 1
+    bit_size: 3
+    enum: CmxPerfmonAlphaEnumFoxtrot
+  - name: cmode
+    description: Count Mode.
+    bit_offset: 4
+    bit_size: 2
+    enum: CmxPerfmonAlphaEnumAlpha
+  - name: rectr1
+    description: Reset Event Counter 1.
+    bit_offset: 8
+    bit_size: 1
+    enum: CmxPerfmonAlphaEnumCharlie
+  - name: rectr2
+    description: Reset Event Counter 2.
+    bit_offset: 9
+    bit_size: 1
+    enum: CmxPerfmonAlphaEnumDelta
+  - name: rectr3
+    description: Reset Event Counter 3.
+    bit_offset: 10
+    bit_size: 1
+    enum: CmxPerfmonAlphaEnumEcho
+  - name: selevt1
+    description: Select Event 1.
+    bit_offset: 11
+    bit_size: 7
+  - name: selevt2
+    description: Select Event 2.
+    bit_offset: 18
+    bit_size: 7
+  - name: selevt3
+    description: Select Event 3.
+    bit_offset: 25
+    bit_size: 7
+fieldset/CmxPerfmonAlphaFieldsetBravo:
+  description: Performance Monitor Event Counter.
+  bit_size: 8
+  fields:
+  - name: ectr
+    description: Event Counter.
+    bit_offset: 0
+    bit_size: 8
+fieldset/CmxPerfmonAlphaFieldsetCharlie:
+  description: Performance Monitor Event Counter.
+  fields:
+  - name: ectr
+    description: Event Counter.
+    bit_offset: 0
+    bit_size: 32
+fieldset/CmxPerfmonAlphaFieldsetDelta:
+  description: Performance Monitor Event Counter.
+  bit_size: 8
+  fields:
+  - name: ectr
+    description: Event Counter.
+    bit_offset: 0
+    bit_size: 8
+fieldset/CmxPerfmonAlphaFieldsetEcho:
+  description: Performance Monitor Event Counter.
+  fields:
+  - name: ectr
+    description: Event Counter.
+    bit_offset: 0
+    bit_size: 32
+fieldset/CmxPerfmonAlphaFieldsetFoxtrot:
+  description: Performance Monitor Event Counter.
+  bit_size: 8
+  fields:
+  - name: ectr
+    description: Event Counter.
+    bit_offset: 0
+    bit_size: 8
+fieldset/CmxPerfmonAlphaFieldsetGolf:
+  description: Performance Monitor Event Counter.
+  fields:
+  - name: ectr
+    description: Event Counter.
+    bit_offset: 0
+    bit_size: 32
+enum/CmxPerfmonAlphaEnumAlpha:
+  bit_size: 2
+  variants:
+  - name: UserAndPriv
+    description: Counted in both User and Privileged modes.
+    value: 0
+enum/CmxPerfmonAlphaEnumBravo:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disabled.
+    value: 0
+  - name: Enabled
+    description: Enabled.
+    value: 1
+enum/CmxPerfmonAlphaEnumCharlie:
+  bit_size: 1
+  variants:
+  - name: Reset
+    description: Reset.
+    value: 1
+  - name: Run
+    description: Run normally.
+    value: 0
+enum/CmxPerfmonAlphaEnumDelta:
+  bit_size: 1
+  variants:
+  - name: Reset
+    description: Reset.
+    value: 1
+  - name: Run
+    description: Run normally.
+    value: 0
+enum/CmxPerfmonAlphaEnumEcho:
+  bit_size: 1
+  variants:
+  - name: Reset
+    description: Reset.
+    value: 1
+  - name: Run
+    description: Run normally.
+    value: 0
+enum/CmxPerfmonAlphaEnumFoxtrot:
+  bit_size: 3
+  variants:
+  - name: Idle
+    description: Idle or no-op.
+    value: 0
+  - name: Lstart2
+    description: Local start.
+    value: 2
+  - name: Lstart3
+    description: Local start.
+    value: 3
+  - name: Lstop
+    description: Local stop.
+    value: 1

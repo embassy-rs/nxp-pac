@@ -1,0 +1,1089 @@
+# NXP mcux-soc-svd 7c1f00bdd6263f0b93466f5e73e5fc55a744b879; native chiptool import.
+# Source instance geometry is retained in explicit block variants; see private source bindings.
+# Unannotated fieldsets construct zero in software, not a claimed hardware reset.
+# Command/W1C/SET/CLR/TOG construction defaults are zero masks; no RMW semantics are implied.
+# Source: MCXN947_cm33_core0.xml PDM sha256 629ac7cdc82684e467b0cf36a8aef697bc1eb65c2047d6610b7b5df65692e590
+# Source: MCXN947_cm33_core1.xml PDM sha256 0d77f3d23cad1d5eab631fd7f5ade4044d8aaca2d9d13cd11f3836d27fe089fb
+block/MicfilAlpha:
+  description: MICFIL.
+  items:
+  - name: ctrl_1
+    description: MICFIL Control 1.
+    byte_offset: 0
+    fieldset: MicfilAlphaFieldsetAlpha
+  - name: ctrl_2
+    description: MICFIL Control 2.
+    byte_offset: 4
+    fieldset: MicfilAlphaFieldsetBravo
+  - name: stat
+    description: MICFIL Status.
+    byte_offset: 8
+    fieldset: MicfilAlphaFieldsetLima
+  - name: fifo_ctrl
+    description: MICFIL FIFO Control.
+    byte_offset: 16
+    fieldset: MicfilAlphaFieldsetFoxtrot
+  - name: fifo_stat
+    description: MICFIL FIFO Status.
+    byte_offset: 20
+    fieldset: MicfilAlphaFieldsetGolf
+  - name: datach
+    description: MICFIL Output Result.
+    array:
+      len: 4
+      stride: 4
+    byte_offset: 36
+    access: Read
+    fieldset: MicfilAlphaFieldsetCharlie
+  - name: dc_ctrl
+    description: MICFIL DC Remover Control.
+    byte_offset: 100
+    access: Read
+    fieldset: MicfilAlphaFieldsetDelta
+  - name: dc_out_ctrl
+    description: MICFIL Output DC Remover Control.
+    byte_offset: 104
+    fieldset: MicfilAlphaFieldsetEcho
+  - name: range_ctrl
+    description: MICFIL Range Control.
+    byte_offset: 116
+    fieldset: MicfilAlphaFieldsetJuliet
+  - name: range_stat
+    description: MICFIL Range Status.
+    byte_offset: 124
+    fieldset: MicfilAlphaFieldsetKilo
+  - name: fsync_ctrl
+    description: Frame Synchronization Control.
+    byte_offset: 128
+    fieldset: MicfilAlphaFieldsetHotel
+  - name: verid
+    description: Version ID.
+    byte_offset: 132
+    access: Read
+    fieldset: MicfilAlphaFieldsetMike
+  - name: param
+    description: Parameter.
+    byte_offset: 136
+    access: Read
+    fieldset: MicfilAlphaFieldsetIndia
+fieldset/MicfilAlphaFieldsetAlpha:
+  description: MICFIL Control 1.
+  fields:
+  - name: ch0en
+    description: Channel 0 Enable.
+    bit_offset: 0
+    bit_size: 1
+  - name: ch1en
+    description: Channel 1 Enable.
+    bit_offset: 1
+    bit_size: 1
+  - name: ch2en
+    description: Channel 2 Enable.
+    bit_offset: 2
+    bit_size: 1
+  - name: ch3en
+    description: Channel 3 Enable.
+    bit_offset: 3
+    bit_size: 1
+  - name: fsyncen
+    description: Frame Synchronization Enable.
+    bit_offset: 16
+    bit_size: 1
+    enum: MicfilAlphaEnumIndiaAlpha
+  - name: decfils
+    description: Decimation Filter Enable in Stop.
+    bit_offset: 20
+    bit_size: 1
+    enum: MicfilAlphaEnumUniform
+  - name: erren
+    description: Error Interruption Enable.
+    bit_offset: 23
+    bit_size: 1
+    enum: MicfilAlphaEnumXray
+  - name: disel
+    description: DMA Interrupt Selection.
+    bit_offset: 24
+    bit_size: 2
+    enum: MicfilAlphaEnumVictor
+  - name: dbge
+    description: Module Enable in Debug.
+    bit_offset: 26
+    bit_size: 1
+    enum: MicfilAlphaEnumJuliet
+  - name: sres
+    description: Software Reset.
+    bit_offset: 27
+    bit_size: 1
+    enum: MicfilAlphaEnumWhiskeyAlpha
+  - name: dbg
+    description: Debug Mode.
+    bit_offset: 28
+    bit_size: 1
+    enum: MicfilAlphaEnumIndia
+  - name: pdmien
+    description: MICFIL Enable.
+    bit_offset: 29
+    bit_size: 1
+    enum: MicfilAlphaEnumMikeAlpha
+  - name: dozen
+    description: Stop Enable.
+    bit_offset: 30
+    bit_size: 1
+    enum: MicfilAlphaEnumWhiskey
+  - name: mdis
+    description: Module Disable.
+    bit_offset: 31
+    bit_size: 1
+    enum: MicfilAlphaEnumKiloAlpha
+fieldset/MicfilAlphaFieldsetBravo:
+  description: MICFIL Control 2.
+  fields:
+  - name: clkdiv
+    description: Clock Divider.
+    bit_offset: 0
+    bit_size: 8
+    enum: MicfilAlphaEnumGolf
+  - name: clkdivdis
+    description: Clock Divider Disable.
+    bit_offset: 15
+    bit_size: 1
+    enum: MicfilAlphaEnumHotel
+  - name: cicosr
+    description: CIC Decimation Rate.
+    bit_offset: 16
+    bit_size: 4
+    enum: MicfilAlphaEnumFoxtrot
+  - name: qsel
+    description: Quality Mode.
+    bit_offset: 25
+    bit_size: 3
+    enum: MicfilAlphaEnumNovemberAlpha
+fieldset/MicfilAlphaFieldsetCharlie:
+  description: MICFIL Output Result.
+  fields:
+  - name: data
+    description: Channel n Data.
+    bit_offset: 0
+    bit_size: 32
+fieldset/MicfilAlphaFieldsetDelta:
+  description: MICFIL DC Remover Control.
+  fields:
+  - name: dcconfig0
+    description: Channel 0 DC Remover Configuration.
+    bit_offset: 0
+    bit_size: 2
+    enum: MicfilAlphaEnumLima
+  - name: dcconfig1
+    description: Channel 1 DC Remover Configuration.
+    bit_offset: 2
+    bit_size: 2
+    enum: MicfilAlphaEnumMike
+  - name: dcconfig2
+    description: Channel 2 DC Remover Configuration.
+    bit_offset: 4
+    bit_size: 2
+    enum: MicfilAlphaEnumNovember
+  - name: dcconfig3
+    description: Channel 3 DC Remover Configuration.
+    bit_offset: 6
+    bit_size: 2
+    enum: MicfilAlphaEnumOscar
+fieldset/MicfilAlphaFieldsetEcho:
+  description: MICFIL Output DC Remover Control.
+  fields:
+  - name: dcconfig0
+    description: Channel 0 DC Remover Configuration.
+    bit_offset: 0
+    bit_size: 2
+    enum: MicfilAlphaEnumQuebec
+  - name: dcconfig1
+    description: Channel 1 DC Remover Configuration.
+    bit_offset: 2
+    bit_size: 2
+    enum: MicfilAlphaEnumRomeo
+  - name: dcconfig2
+    description: Channel 2 DC Remover Configuration.
+    bit_offset: 4
+    bit_size: 2
+    enum: MicfilAlphaEnumSierra
+  - name: dcconfig3
+    description: Channel 3 DC Remover Configuration.
+    bit_offset: 6
+    bit_size: 2
+    enum: MicfilAlphaEnumTango
+fieldset/MicfilAlphaFieldsetFoxtrot:
+  description: MICFIL FIFO Control.
+  fields:
+  - name: fifowmk
+    description: FIFO Watermark Control.
+    bit_offset: 0
+    bit_size: 4
+fieldset/MicfilAlphaFieldsetGolf:
+  description: MICFIL FIFO Status.
+  fields:
+  - name: fifoovf0
+    description: FIFO Overflow Exception Flag for Channel 0.
+    bit_offset: 0
+    bit_size: 1
+    enum: MicfilAlphaEnumZulu
+  - name: fifoovf1
+    description: FIFO Overflow Exception Flag for Channel 1.
+    bit_offset: 1
+    bit_size: 1
+    enum: MicfilAlphaEnumAlphaAlpha
+  - name: fifoovf2
+    description: FIFO Overflow Exception Flag for Channel 2.
+    bit_offset: 2
+    bit_size: 1
+    enum: MicfilAlphaEnumBravoAlpha
+  - name: fifoovf3
+    description: FIFO Overflow Exception Flag for Channel 3.
+    bit_offset: 3
+    bit_size: 1
+    enum: MicfilAlphaEnumCharlieAlpha
+  - name: fifound0
+    description: FIFO Underflow Exception Flag for Channel 0.
+    bit_offset: 8
+    bit_size: 1
+    enum: MicfilAlphaEnumDeltaAlpha
+  - name: fifound1
+    description: FIFO Underflow Exception Flag for Channel 1.
+    bit_offset: 9
+    bit_size: 1
+    enum: MicfilAlphaEnumEchoAlpha
+  - name: fifound2
+    description: FIFO Underflow Exception Flag for Channel 2.
+    bit_offset: 10
+    bit_size: 1
+    enum: MicfilAlphaEnumFoxtrotAlpha
+  - name: fifound3
+    description: FIFO Underflow Exception Flag for Channel 3.
+    bit_offset: 11
+    bit_size: 1
+    enum: MicfilAlphaEnumGolfAlpha
+fieldset/MicfilAlphaFieldsetHotel:
+  description: Frame Synchronization Control.
+  fields:
+  - name: fsynclen
+    description: Frame Synchronization Window Length.
+    bit_offset: 0
+    bit_size: 32
+fieldset/MicfilAlphaFieldsetIndia:
+  description: Parameter.
+  fields:
+  - name: npair
+    description: Number of Microphone Pairs.
+    bit_offset: 0
+    bit_size: 4
+    enum: MicfilAlphaEnumLimaAlpha
+  - name: fifo_ptrwid
+    description: FIFO Pointer Width.
+    bit_offset: 4
+    bit_size: 4
+    enum: MicfilAlphaEnumYankee
+  - name: fil_out_width_24b
+    description: Filter Output Width.
+    bit_offset: 8
+    bit_size: 1
+    enum: MicfilAlphaEnumHotelAlpha
+  - name: low_power
+    description: Low-Power Decimation Filter.
+    bit_offset: 9
+    bit_size: 1
+    enum: MicfilAlphaEnumJulietAlpha
+  - name: dc_bypass
+    description: Input DC Remover Bypass.
+    bit_offset: 10
+    bit_size: 1
+    enum: MicfilAlphaEnumKilo
+  - name: dc_out_bypass
+    description: Output DC Remover Bypass.
+    bit_offset: 11
+    bit_size: 1
+    enum: MicfilAlphaEnumPapa
+fieldset/MicfilAlphaFieldsetJuliet:
+  description: MICFIL Range Control.
+  fields:
+  - name: rangeadj0
+    description: Channel 0 Range Adjustment.
+    bit_offset: 0
+    bit_size: 4
+  - name: rangeadj1
+    description: Channel 1 Range Adjustment.
+    bit_offset: 4
+    bit_size: 4
+  - name: rangeadj2
+    description: Channel 2 Range Adjustment.
+    bit_offset: 8
+    bit_size: 4
+  - name: rangeadj3
+    description: Channel 3 Range Adjustment.
+    bit_offset: 12
+    bit_size: 4
+fieldset/MicfilAlphaFieldsetKilo:
+  description: MICFIL Range Status.
+  fields:
+  - name: rangeovf0
+    description: Channel 0 Range Overflow Error Flag.
+    bit_offset: 0
+    bit_size: 1
+    enum: MicfilAlphaEnumOscarAlpha
+  - name: rangeovf1
+    description: Channel 1 Range Overflow Error Flag.
+    bit_offset: 1
+    bit_size: 1
+    enum: MicfilAlphaEnumPapaAlpha
+  - name: rangeovf2
+    description: Channel 2 Range Overflow Error Flag.
+    bit_offset: 2
+    bit_size: 1
+    enum: MicfilAlphaEnumQuebecAlpha
+  - name: rangeovf3
+    description: Channel 3 Range Overflow Error Flag.
+    bit_offset: 3
+    bit_size: 1
+    enum: MicfilAlphaEnumRomeoAlpha
+  - name: rangeunf0
+    description: Channel 0 Range Underflow Error Flag.
+    bit_offset: 16
+    bit_size: 1
+    enum: MicfilAlphaEnumSierraAlpha
+  - name: rangeunf1
+    description: Channel 1 Range Underflow Error Flag.
+    bit_offset: 17
+    bit_size: 1
+    enum: MicfilAlphaEnumTangoAlpha
+  - name: rangeunf2
+    description: Channel 2 Range Underflow Error Flag.
+    bit_offset: 18
+    bit_size: 1
+    enum: MicfilAlphaEnumUniformAlpha
+  - name: rangeunf3
+    description: Channel 3 Range Underflow Error Flag.
+    bit_offset: 19
+    bit_size: 1
+    enum: MicfilAlphaEnumVictorAlpha
+fieldset/MicfilAlphaFieldsetLima:
+  description: MICFIL Status.
+  fields:
+  - name: ch0f
+    description: Channel 0 Output Data Flag.
+    bit_offset: 0
+    bit_size: 1
+    enum: MicfilAlphaEnumBravo
+  - name: ch1f
+    description: Channel 1 Output Data Flag.
+    bit_offset: 1
+    bit_size: 1
+    enum: MicfilAlphaEnumCharlie
+  - name: ch2f
+    description: Channel 2 Output Data Flag.
+    bit_offset: 2
+    bit_size: 1
+    enum: MicfilAlphaEnumDelta
+  - name: ch3f
+    description: Channel 3 Output Data Flag.
+    bit_offset: 3
+    bit_size: 1
+    enum: MicfilAlphaEnumEcho
+  - name: bsy_fil
+    description: Busy Flag.
+    bit_offset: 31
+    bit_size: 1
+    enum: MicfilAlphaEnumAlpha
+fieldset/MicfilAlphaFieldsetMike:
+  description: Version ID.
+  fields:
+  - name: feature
+    description: Feature Specification Number.
+    bit_offset: 0
+    bit_size: 16
+  - name: minor
+    description: Minor Version Number.
+    bit_offset: 16
+    bit_size: 8
+  - name: major
+    description: Major Version Number.
+    bit_offset: 24
+    bit_size: 8
+enum/MicfilAlphaEnumAlpha:
+  bit_size: 1
+  variants:
+  - name: Running
+    description: MICFIL is running.
+    value: 1
+  - name: Stopped
+    description: MICFIL is stopped.
+    value: 0
+enum/MicfilAlphaEnumBravo:
+  bit_size: 1
+  variants:
+  - name: WmNotreached
+    description: Not surpassed.
+    value: 0
+  - name: WmReached
+    description: Surpassed.
+    value: 1
+enum/MicfilAlphaEnumCharlie:
+  bit_size: 1
+  variants:
+  - name: WmNotreached
+    description: Not surpassed.
+    value: 0
+  - name: WmReached
+    description: Surpassed.
+    value: 1
+enum/MicfilAlphaEnumDelta:
+  bit_size: 1
+  variants:
+  - name: WmNotreached
+    description: Not surpassed.
+    value: 0
+  - name: WmReached
+    description: Surpassed.
+    value: 1
+enum/MicfilAlphaEnumEcho:
+  bit_size: 1
+  variants:
+  - name: WmNotreached
+    description: Not surpassed.
+    value: 0
+  - name: WmReached
+    description: Surpassed.
+    value: 1
+enum/MicfilAlphaEnumFoxtrot:
+  bit_size: 4
+  variants:
+  - name: Cicosr0
+    description: CIC oversampling rate = 0.
+    value: 0
+  - name: Cicosr1
+    description: CIC oversampling rate = 1.
+    value: 1
+  - name: Cicosr15
+    description: CIC oversampling rate = 15.
+    value: 15
+  - name: Cicosr210
+    description: '...'
+    value: 10
+  - name: Cicosr211
+    description: '...'
+    value: 11
+  - name: Cicosr212
+    description: '...'
+    value: 12
+  - name: Cicosr213
+    description: '...'
+    value: 13
+  - name: Cicosr214
+    description: '...'
+    value: 14
+  - name: Cicosr22
+    description: '...'
+    value: 2
+  - name: Cicosr23
+    description: '...'
+    value: 3
+  - name: Cicosr24
+    description: '...'
+    value: 4
+  - name: Cicosr25
+    description: '...'
+    value: 5
+  - name: Cicosr26
+    description: '...'
+    value: 6
+  - name: Cicosr27
+    description: '...'
+    value: 7
+  - name: Cicosr28
+    description: '...'
+    value: 8
+  - name: Cicosr29
+    description: '...'
+    value: 9
+enum/MicfilAlphaEnumGolf:
+  bit_size: 8
+  variants:
+  - name: Clkdiv0
+    description: Internal clock divider value = 0.
+    value: 0
+  - name: Clkdiv1
+    description: Internal clock divider value = 1.
+    value: 1
+  - name: Clkdiv210
+    description: '...'
+    value: 10
+  - name: Clkdiv211
+    description: '...'
+    value: 11
+  - name: Clkdiv22
+    description: '...'
+    value: 2
+  - name: Clkdiv2249
+    description: '...'
+    value: 249
+  - name: Clkdiv2250
+    description: '...'
+    value: 250
+  - name: Clkdiv2251
+    description: '...'
+    value: 251
+  - name: Clkdiv2252
+    description: '...'
+    value: 252
+  - name: Clkdiv2253
+    description: '...'
+    value: 253
+  - name: Clkdiv2254
+    description: '...'
+    value: 254
+  - name: Clkdiv23
+    description: '...'
+    value: 3
+  - name: Clkdiv24
+    description: '...'
+    value: 4
+  - name: Clkdiv25
+    description: '...'
+    value: 5
+  - name: Clkdiv255
+    description: Internal clock divider value = 255.
+    value: 255
+  - name: Clkdiv26
+    description: '...'
+    value: 6
+  - name: Clkdiv27
+    description: '...'
+    value: 7
+  - name: Clkdiv28
+    description: '...'
+    value: 8
+  - name: Clkdiv29
+    description: '...'
+    value: 9
+enum/MicfilAlphaEnumHotel:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables.
+    value: 1
+  - name: Enable
+    description: Enables.
+    value: 0
+enum/MicfilAlphaEnumIndia:
+  bit_size: 1
+  variants:
+  - name: Debug
+    description: Debug.
+    value: 1
+  - name: Normal
+    description: Normal.
+    value: 0
+enum/MicfilAlphaEnumJuliet:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables after completing the current frame.
+    value: 0
+  - name: Enabled
+    description: Enables operation.
+    value: 1
+enum/MicfilAlphaEnumKilo:
+  bit_size: 1
+  variants:
+  - name: Dcactive
+    description: Active.
+    value: 0
+  - name: Dcbypassed
+    description: Disabled.
+    value: 1
+enum/MicfilAlphaEnumLima:
+  bit_size: 2
+  variants:
+  - name: DcRem13p3hz
+    description: 13.3 Hz (PDM_CLK = 3.072 MHz).
+    value: 1
+  - name: DcRem20hz
+    description: 20 Hz (PDM_CLK = 3.072 MHz).
+    value: 0
+  - name: DcRem40hz
+    description: 40 Hz (PDM_CLK = 3.072 MHz).
+    value: 2
+  - name: DcRemBypass
+    description: DC remover is bypassed.
+    value: 3
+enum/MicfilAlphaEnumMike:
+  bit_size: 2
+  variants:
+  - name: DcRem13p3hz
+    description: 13.3 Hz (PDM_CLK = 3.072 MHz).
+    value: 1
+  - name: DcRem20hz
+    description: 20 Hz (PDM_CLK = 3.072 MHz).
+    value: 0
+  - name: DcRem40hz
+    description: 40 Hz (PDM_CLK = 3.072 MHz).
+    value: 2
+  - name: DcRemBypass
+    description: DC remover is bypassed.
+    value: 3
+enum/MicfilAlphaEnumNovember:
+  bit_size: 2
+  variants:
+  - name: DcRem13p3hz
+    description: 13.3 Hz (PDM_CLK = 3.072 MHz).
+    value: 1
+  - name: DcRem20hz
+    description: 20 Hz (PDM_CLK = 3.072 MHz).
+    value: 0
+  - name: DcRem40hz
+    description: 40 Hz (PDM_CLK = 3.072 MHz).
+    value: 2
+  - name: DcRemBypass
+    description: DC remover is bypassed.
+    value: 3
+enum/MicfilAlphaEnumOscar:
+  bit_size: 2
+  variants:
+  - name: DcRem13p3hz
+    description: 13.3 Hz (PDM_CLK = 3.072 MHz).
+    value: 1
+  - name: DcRem20hz
+    description: 20 Hz (PDM_CLK = 3.072 MHz).
+    value: 0
+  - name: DcRem40hz
+    description: 40 Hz (PDM_CLK = 3.072 MHz).
+    value: 2
+  - name: DcRemBypass
+    description: DC remover is bypassed.
+    value: 3
+enum/MicfilAlphaEnumPapa:
+  bit_size: 1
+  variants:
+  - name: Dcactive
+    description: Active.
+    value: 0
+  - name: Dcbypassed
+    description: Disabled.
+    value: 1
+enum/MicfilAlphaEnumQuebec:
+  bit_size: 2
+  variants:
+  - name: DcRem13p3hz
+    description: 13.3 Hz (FS = 48 kHz).
+    value: 1
+  - name: DcRem20hz
+    description: 20 Hz (FS = 48 kHz).
+    value: 0
+  - name: DcRem40hz
+    description: 40 Hz (FS = 48 kHz).
+    value: 2
+  - name: DcRemBypassed
+    description: DC remover is bypassed.
+    value: 3
+enum/MicfilAlphaEnumRomeo:
+  bit_size: 2
+  variants:
+  - name: DcRem13p3hz
+    description: 13.3 Hz (FS = 48 kHz).
+    value: 1
+  - name: DcRem20hz
+    description: 20 Hz (FS = 48 kHz).
+    value: 0
+  - name: DcRem40hz
+    description: 40 Hz (FS = 48 kHz).
+    value: 2
+  - name: DcRemBypassed
+    description: DC remover is bypassed.
+    value: 3
+enum/MicfilAlphaEnumSierra:
+  bit_size: 2
+  variants:
+  - name: DcRem13p3hz
+    description: 13.3 Hz (FS = 48 kHz).
+    value: 1
+  - name: DcRem20hz
+    description: 20 Hz (FS = 48 kHz).
+    value: 0
+  - name: DcRem40hz
+    description: 40 Hz (FS = 48 kHz).
+    value: 2
+  - name: DcRemBypassed
+    description: DC remover is bypassed.
+    value: 3
+enum/MicfilAlphaEnumTango:
+  bit_size: 2
+  variants:
+  - name: DcRem13p3hz
+    description: 13.3 Hz (FS = 48 kHz).
+    value: 1
+  - name: DcRem20hz
+    description: 20 Hz (FS = 48 kHz).
+    value: 0
+  - name: DcRem40hz
+    description: 40 Hz (FS = 48 kHz).
+    value: 2
+  - name: DcRemBypassed
+    description: DC remover is bypassed.
+    value: 3
+enum/MicfilAlphaEnumUniform:
+  bit_size: 1
+  variants:
+  - name: Run
+    description: Keeps decimation filter running.
+    value: 1
+  - name: Stop
+    description: Stops decimation filter.
+    value: 0
+enum/MicfilAlphaEnumVictor:
+  bit_size: 2
+  variants:
+  - name: AllDisabled
+    description: Disables DMA and interrupt requests.
+    value: 0
+  - name: DmareqEnabled
+    description: Enables DMA requests.
+    value: 1
+  - name: IntreqEnabled
+    description: Enables interrupt requests.
+    value: 2
+enum/MicfilAlphaEnumWhiskey:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables.
+    value: 0
+  - name: Enable
+    description: Enables.
+    value: 1
+enum/MicfilAlphaEnumXray:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 0
+  - name: Enabled
+    description: Enables.
+    value: 1
+enum/MicfilAlphaEnumYankee:
+  bit_size: 4
+  variants:
+  - name: Ptrwid0
+    description: 0 bits.
+    value: 0
+  - name: Ptrwid1
+    description: 1 bit.
+    value: 1
+  - name: Ptrwid15
+    description: 15 bits.
+    value: 15
+  - name: Ptrwid2
+    description: 2 bits.
+    value: 2
+  - name: Ptrwid310
+    description: '...'
+    value: 10
+  - name: Ptrwid311
+    description: '...'
+    value: 11
+  - name: Ptrwid312
+    description: '...'
+    value: 12
+  - name: Ptrwid313
+    description: '...'
+    value: 13
+  - name: Ptrwid314
+    description: '...'
+    value: 14
+  - name: Ptrwid33
+    description: '...'
+    value: 3
+  - name: Ptrwid34
+    description: '...'
+    value: 4
+  - name: Ptrwid35
+    description: '...'
+    value: 5
+  - name: Ptrwid36
+    description: '...'
+    value: 6
+  - name: Ptrwid37
+    description: '...'
+    value: 7
+  - name: Ptrwid38
+    description: '...'
+    value: 8
+  - name: Ptrwid39
+    description: '...'
+    value: 9
+enum/MicfilAlphaEnumZulu:
+  bit_size: 1
+  variants:
+  - name: Exception
+    description: Exception by FIFO overflow.
+    value: 1
+  - name: NoException
+    description: No exception by FIFO overflow.
+    value: 0
+enum/MicfilAlphaEnumAlphaAlpha:
+  bit_size: 1
+  variants:
+  - name: Exception
+    description: Exception by FIFO overflow.
+    value: 1
+  - name: NoException
+    description: No exception by FIFO overflow.
+    value: 0
+enum/MicfilAlphaEnumBravoAlpha:
+  bit_size: 1
+  variants:
+  - name: Exception
+    description: Exception by FIFO overflow.
+    value: 1
+  - name: NoException
+    description: No exception by FIFO overflow.
+    value: 0
+enum/MicfilAlphaEnumCharlieAlpha:
+  bit_size: 1
+  variants:
+  - name: Exception
+    description: Exception by FIFO overflow.
+    value: 1
+  - name: NoException
+    description: No exception by FIFO overflow.
+    value: 0
+enum/MicfilAlphaEnumDeltaAlpha:
+  bit_size: 1
+  variants:
+  - name: Exception
+    description: Exception by FIFO underflow.
+    value: 1
+  - name: NoException
+    description: No exception by FIFO underflow.
+    value: 0
+enum/MicfilAlphaEnumEchoAlpha:
+  bit_size: 1
+  variants:
+  - name: Exception
+    description: Exception by FIFO underflow.
+    value: 1
+  - name: NoException
+    description: No exception by FIFO underflow.
+    value: 0
+enum/MicfilAlphaEnumFoxtrotAlpha:
+  bit_size: 1
+  variants:
+  - name: Exception
+    description: Exception by FIFO underflow.
+    value: 1
+  - name: NoException
+    description: No exception by FIFO underflow.
+    value: 0
+enum/MicfilAlphaEnumGolfAlpha:
+  bit_size: 1
+  variants:
+  - name: Exception
+    description: Exception by FIFO underflow.
+    value: 1
+  - name: NoException
+    description: No exception by FIFO underflow.
+    value: 0
+enum/MicfilAlphaEnumHotelAlpha:
+  bit_size: 1
+  variants:
+  - name: Wid16b
+    description: 16 bits.
+    value: 0
+  - name: Wid24b
+    description: 24 bits.
+    value: 1
+enum/MicfilAlphaEnumIndiaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables.
+    value: 0
+  - name: Enable
+    description: Enables.
+    value: 1
+enum/MicfilAlphaEnumJulietAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables.
+    value: 0
+  - name: Enable
+    description: Enables.
+    value: 1
+enum/MicfilAlphaEnumKiloAlpha:
+  bit_size: 1
+  variants:
+  - name: LowLeakage
+    description: DLL mode.
+    value: 1
+  - name: Normal
+    description: Normal mode.
+    value: 0
+enum/MicfilAlphaEnumLimaAlpha:
+  bit_size: 4
+  variants:
+  - name: Npair0
+    description: None.
+    value: 0
+  - name: Npair1
+    description: 1 pair.
+    value: 1
+  - name: Npair15
+    description: 15 pairs.
+    value: 15
+  - name: Npair2
+    description: 2 pairs.
+    value: 2
+  - name: Npair310
+    description: '...'
+    value: 10
+  - name: Npair311
+    description: '...'
+    value: 11
+  - name: Npair312
+    description: '...'
+    value: 12
+  - name: Npair313
+    description: '...'
+    value: 13
+  - name: Npair314
+    description: '...'
+    value: 14
+  - name: Npair33
+    description: '...'
+    value: 3
+  - name: Npair34
+    description: '...'
+    value: 4
+  - name: Npair35
+    description: '...'
+    value: 5
+  - name: Npair36
+    description: '...'
+    value: 6
+  - name: Npair37
+    description: '...'
+    value: 7
+  - name: Npair38
+    description: '...'
+    value: 8
+  - name: Npair39
+    description: '...'
+    value: 9
+enum/MicfilAlphaEnumMikeAlpha:
+  bit_size: 1
+  variants:
+  - name: Started
+    description: Starts MICFIL operation.
+    value: 1
+  - name: Stopped
+    description: Stops MICFIL operation.
+    value: 0
+enum/MicfilAlphaEnumNovemberAlpha:
+  bit_size: 3
+  variants:
+  - name: HqMode
+    description: High-Quality mode.
+    value: 1
+  - name: LqMode
+    description: Low-Quality mode.
+    value: 7
+  - name: MqMode
+    description: Medium-Quality mode.
+    value: 0
+  - name: Vlq0Mode
+    description: Very-Low-Quality 0 mode.
+    value: 6
+  - name: Vlq1Mode
+    description: Very-Low-Quality 1 mode.
+    value: 5
+  - name: Vlq2Mode
+    description: Very-Low-Quality 2 mode.
+    value: 4
+enum/MicfilAlphaEnumOscarAlpha:
+  bit_size: 1
+  variants:
+  - name: Exception
+    description: Exception by range overflow.
+    value: 1
+  - name: NoException
+    description: No exception by range overflow.
+    value: 0
+enum/MicfilAlphaEnumPapaAlpha:
+  bit_size: 1
+  variants:
+  - name: Exception
+    description: Exception by range overflow.
+    value: 1
+  - name: NoException
+    description: No exception by range overflow.
+    value: 0
+enum/MicfilAlphaEnumQuebecAlpha:
+  bit_size: 1
+  variants:
+  - name: Exception
+    description: Exception by range overflow.
+    value: 1
+  - name: NoException
+    description: No exception by range overflow.
+    value: 0
+enum/MicfilAlphaEnumRomeoAlpha:
+  bit_size: 1
+  variants:
+  - name: Exception
+    description: Exception by range overflow.
+    value: 1
+  - name: NoException
+    description: No exception by range overflow.
+    value: 0
+enum/MicfilAlphaEnumSierraAlpha:
+  bit_size: 1
+  variants:
+  - name: Exception
+    description: Exception by range underflow.
+    value: 1
+  - name: NoException
+    description: No exception by range underflow.
+    value: 0
+enum/MicfilAlphaEnumTangoAlpha:
+  bit_size: 1
+  variants:
+  - name: Exception
+    description: Exception by range underflow.
+    value: 1
+  - name: NoException
+    description: No exception by range underflow.
+    value: 0
+enum/MicfilAlphaEnumUniformAlpha:
+  bit_size: 1
+  variants:
+  - name: Exception
+    description: Exception by range underflow.
+    value: 1
+  - name: NoException
+    description: No exception by range underflow.
+    value: 0
+enum/MicfilAlphaEnumVictorAlpha:
+  bit_size: 1
+  variants:
+  - name: Exception
+    description: Exception by range underflow.
+    value: 1
+  - name: NoException
+    description: No exception by range underflow.
+    value: 0
+enum/MicfilAlphaEnumWhiskeyAlpha:
+  bit_size: 1
+  variants:
+  - name: NoAction
+    description: No action.
+    value: 0
+  - name: SwReset
+    description: Software reset.
+    value: 1

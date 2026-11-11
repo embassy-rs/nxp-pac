@@ -129,6 +129,9 @@ pub fn generate(
             metadata::render(&selected_name, &metadata)?.to_string(),
         )?;
         output_files.push(path);
+        let path = out_dir.join("metadata_ext.rs");
+        fs::write(&path, metadata::render_extensions(&metadata)?.to_string())?;
+        output_files.push(path);
     }
     input_files.sort();
     input_files.dedup();

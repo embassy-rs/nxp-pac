@@ -1,0 +1,108 @@
+# NXP mcux-soc-svd 7c1f00bdd6263f0b93466f5e73e5fc55a744b879; native chiptool import.
+# Source instance geometry is retained in explicit block variants; see private source bindings.
+# Unannotated fieldsets construct zero in software, not a claimed hardware reset.
+# Command/W1C/SET/CLR/TOG construction defaults are zero masks; no RMW semantics are implied.
+# Source: MCXN235.xml INTM0 sha256 a498ada26162c88f6767738bffcd22801318264c9cb2cbecbd190403b4dbd6a7
+# Source: MCXN236.xml INTM0 sha256 ec813b3b24a785c33c5035ebc25a9c713a18018daf1fdb440035a13bf3549e14
+# Source: MCXN247.xml INTM0 sha256 dbbed5781a39012768344882dad168430c742f26e4261c6fd0bda9a34ca4a652
+block/IntmAlpha:
+  description: INTM.
+  items:
+  - name: intm_mm
+    description: Monitor Mode.
+    byte_offset: 0
+    fieldset: IntmAlphaFieldsetDelta
+  - name: intm_iack
+    description: Interrupt Acknowledge.
+    byte_offset: 4
+    access: Write
+    fieldset: IntmAlphaFieldsetAlpha
+  - name: mon
+    description: Monitoring.
+    array:
+      len: 4
+      stride: 16
+    byte_offset: 8
+    block: IntmAlphaBlockBravo
+block/IntmAlphaBlockBravo:
+  description: Monitoring.
+  items:
+  - name: intm_irqsel
+    description: Interrupt Request Select for Monitor mon_index.
+    byte_offset: 0
+    fieldset: IntmAlphaFieldsetBravo
+  - name: intm_latency
+    description: Interrupt Latency for Monitor mon_index.
+    byte_offset: 4
+    fieldset: IntmAlphaFieldsetCharlie
+  - name: intm_timer
+    description: Timer for Monitor mon_index.
+    byte_offset: 8
+    fieldset: IntmAlphaFieldsetFoxtrot
+  - name: intm_status
+    description: Status for Monitor mon_index.
+    byte_offset: 12
+    access: Read
+    fieldset: IntmAlphaFieldsetEcho
+fieldset/IntmAlphaFieldsetAlpha:
+  description: Interrupt Acknowledge.
+  fields:
+  - name: irq
+    description: Interrupt Request.
+    bit_offset: 0
+    bit_size: 10
+fieldset/IntmAlphaFieldsetBravo:
+  description: Interrupt Request Select for Monitor mon_index.
+  fields:
+  - name: irq
+    description: Interrupt Request.
+    bit_offset: 0
+    bit_size: 10
+fieldset/IntmAlphaFieldsetCharlie:
+  description: Interrupt Latency for Monitor mon_index.
+  fields:
+  - name: lat
+    description: Latency.
+    bit_offset: 0
+    bit_size: 24
+fieldset/IntmAlphaFieldsetDelta:
+  description: Monitor Mode.
+  fields:
+  - name: mm
+    description: Monitor Mode.
+    bit_offset: 0
+    bit_size: 1
+    enum: IntmAlphaEnumAlpha
+fieldset/IntmAlphaFieldsetEcho:
+  description: Status for Monitor mon_index.
+  fields:
+  - name: status
+    description: Monitor status.
+    bit_offset: 0
+    bit_size: 1
+    enum: IntmAlphaEnumBravo
+fieldset/IntmAlphaFieldsetFoxtrot:
+  description: Timer for Monitor mon_index.
+  fields:
+  - name: timer
+    description: Timer.
+    bit_offset: 0
+    bit_size: 24
+enum/IntmAlphaEnumAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/IntmAlphaEnumBravo:
+  bit_size: 1
+  variants:
+  - name: St01
+    description: Exceeded.
+    value: 1
+  - name: St02
+    description: Did not exceed.
+    value: 0

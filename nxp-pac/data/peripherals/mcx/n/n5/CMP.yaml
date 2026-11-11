@@ -1,0 +1,1206 @@
+# NXP mcux-soc-svd 7c1f00bdd6263f0b93466f5e73e5fc55a744b879; native chiptool import.
+# Source instance geometry is retained in explicit block variants; see private source bindings.
+# Unannotated fieldsets construct zero in software, not a claimed hardware reset.
+# Command/W1C/SET/CLR/TOG construction defaults are zero masks; no RMW semantics are implied.
+# Source: MCXN526_cm33_core0.xml CMP0 sha256 ccb0c8ecf3573e24bb8c15a32bdec8a6f63b8870ced5bb7b9b629177f5f990f3
+# Source: MCXN526_cm33_core0.xml CMP1 sha256 ccb0c8ecf3573e24bb8c15a32bdec8a6f63b8870ced5bb7b9b629177f5f990f3
+# Source: MCXN526_cm33_core0.xml CMP2 sha256 ccb0c8ecf3573e24bb8c15a32bdec8a6f63b8870ced5bb7b9b629177f5f990f3
+# Source: MCXN526_cm33_core1.xml CMP0 sha256 caf054982956506a2f2e6896e0b1e0eb1c3035684fd3093778a21bda218bfa09
+# Source: MCXN526_cm33_core1.xml CMP1 sha256 caf054982956506a2f2e6896e0b1e0eb1c3035684fd3093778a21bda218bfa09
+# Source: MCXN526_cm33_core1.xml CMP2 sha256 caf054982956506a2f2e6896e0b1e0eb1c3035684fd3093778a21bda218bfa09
+# Source: MCXN527_cm33_core0.xml CMP0 sha256 5547fbb406e6e825ebc2f983518a5893814d62c3a6e2c5ad6075c49d939c8e17
+# Source: MCXN527_cm33_core0.xml CMP1 sha256 5547fbb406e6e825ebc2f983518a5893814d62c3a6e2c5ad6075c49d939c8e17
+# Source: MCXN527_cm33_core0.xml CMP2 sha256 5547fbb406e6e825ebc2f983518a5893814d62c3a6e2c5ad6075c49d939c8e17
+# Source: MCXN527_cm33_core1.xml CMP0 sha256 daac6c4d6fdbbdc87d7557ed9e567801921eca1e8107fc3f9f38173be3c936e0
+# Source: MCXN527_cm33_core1.xml CMP1 sha256 daac6c4d6fdbbdc87d7557ed9e567801921eca1e8107fc3f9f38173be3c936e0
+# Source: MCXN527_cm33_core1.xml CMP2 sha256 daac6c4d6fdbbdc87d7557ed9e567801921eca1e8107fc3f9f38173be3c936e0
+# Source: MCXN536_cm33_core0.xml CMP0 sha256 f9533e58d74eab222fc38608bd1d8dc45087e87b80a93f8b693e6cf2eb25cba4
+# Source: MCXN536_cm33_core0.xml CMP1 sha256 f9533e58d74eab222fc38608bd1d8dc45087e87b80a93f8b693e6cf2eb25cba4
+# Source: MCXN536_cm33_core0.xml CMP2 sha256 f9533e58d74eab222fc38608bd1d8dc45087e87b80a93f8b693e6cf2eb25cba4
+# Source: MCXN536_cm33_core1.xml CMP0 sha256 c089aecac3d73a7d8fc4a8c0cccf77ea8446b22a2ea99f4f2f01a4e0ca3a2fdd
+# Source: MCXN536_cm33_core1.xml CMP1 sha256 c089aecac3d73a7d8fc4a8c0cccf77ea8446b22a2ea99f4f2f01a4e0ca3a2fdd
+# Source: MCXN536_cm33_core1.xml CMP2 sha256 c089aecac3d73a7d8fc4a8c0cccf77ea8446b22a2ea99f4f2f01a4e0ca3a2fdd
+# Source: MCXN537_cm33_core0.xml CMP0 sha256 e72dbd80d33e6f53f05f11156fc20f6d53cf9848bc74fed80b5c34157455b11a
+# Source: MCXN537_cm33_core0.xml CMP1 sha256 e72dbd80d33e6f53f05f11156fc20f6d53cf9848bc74fed80b5c34157455b11a
+# Source: MCXN537_cm33_core0.xml CMP2 sha256 e72dbd80d33e6f53f05f11156fc20f6d53cf9848bc74fed80b5c34157455b11a
+# Source: MCXN537_cm33_core1.xml CMP0 sha256 4d5f7d121166c4d720a9da81b90be1b2f93be5e71fd25b9dd74b8715ebe30dce
+# Source: MCXN537_cm33_core1.xml CMP1 sha256 4d5f7d121166c4d720a9da81b90be1b2f93be5e71fd25b9dd74b8715ebe30dce
+# Source: MCXN537_cm33_core1.xml CMP2 sha256 4d5f7d121166c4d720a9da81b90be1b2f93be5e71fd25b9dd74b8715ebe30dce
+# Source: MCXN546_cm33_core0.xml CMP0 sha256 54e1fc060f9ccc17299bdb2da84159e699e87456276f2e695d440a6eb4aa9aad
+# Source: MCXN546_cm33_core0.xml CMP1 sha256 54e1fc060f9ccc17299bdb2da84159e699e87456276f2e695d440a6eb4aa9aad
+# Source: MCXN546_cm33_core1.xml CMP0 sha256 ddb7e932730a51c75f544efd6564ad6dbce5b3eca0a7befb7ab5b74a9951b937
+# Source: MCXN546_cm33_core1.xml CMP1 sha256 ddb7e932730a51c75f544efd6564ad6dbce5b3eca0a7befb7ab5b74a9951b937
+# Source: MCXN547_cm33_core0.xml CMP0 sha256 a276aee072bebd57c18929fe9a74408366fdbb42b918e06be5a3783a4aae4db7
+# Source: MCXN547_cm33_core0.xml CMP1 sha256 a276aee072bebd57c18929fe9a74408366fdbb42b918e06be5a3783a4aae4db7
+# Source: MCXN547_cm33_core1.xml CMP0 sha256 4a265743bdd2130cdd37ef12b9fd1d538cce9a2eac1c9149db291b7638e61423
+# Source: MCXN547_cm33_core1.xml CMP1 sha256 4a265743bdd2130cdd37ef12b9fd1d538cce9a2eac1c9149db291b7638e61423
+block/CmpAlpha:
+  description: LPCMP.
+  items:
+  - name: verid
+    description: Version ID.
+    byte_offset: 0
+    access: Read
+    fieldset: CmpAlphaFieldsetMike
+  - name: param
+    description: Parameter.
+    byte_offset: 4
+    access: Read
+    fieldset: CmpAlphaFieldsetGolf
+  - name: ccr0
+    description: Comparator Control Register 0.
+    byte_offset: 8
+    fieldset: CmpAlphaFieldsetAlpha
+  - name: ccr1
+    description: Comparator Control Register 1.
+    byte_offset: 12
+    fieldset: CmpAlphaFieldsetBravo
+  - name: ccr2
+    description: Comparator Control Register 2.
+    byte_offset: 16
+    fieldset: CmpAlphaFieldsetCharlie
+  - name: dcr
+    description: DAC Control.
+    byte_offset: 24
+    fieldset: CmpAlphaFieldsetEcho
+  - name: ier
+    description: Interrupt Enable.
+    byte_offset: 28
+    fieldset: CmpAlphaFieldsetFoxtrot
+  - name: csr
+    description: Comparator Status.
+    byte_offset: 32
+    fieldset: CmpAlphaFieldsetDelta
+  - name: rrcr0
+    description: Round Robin Control Register 0.
+    byte_offset: 36
+    fieldset: CmpAlphaFieldsetHotel
+  - name: rrcr1
+    description: Round Robin Control Register 1.
+    byte_offset: 40
+    fieldset: CmpAlphaFieldsetIndia
+  - name: rrcsr
+    description: Round Robin Control and Status.
+    byte_offset: 44
+    fieldset: CmpAlphaFieldsetKilo
+  - name: rrsr
+    description: Round Robin Status.
+    byte_offset: 48
+    fieldset: CmpAlphaFieldsetLima
+  - name: rrcr2
+    description: Round Robin Control Register 2.
+    byte_offset: 56
+    fieldset: CmpAlphaFieldsetJuliet
+fieldset/CmpAlphaFieldsetAlpha:
+  description: Comparator Control Register 0.
+  fields:
+  - name: cmp_en
+    description: Comparator Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: CmpAlphaEnumEcho
+fieldset/CmpAlphaFieldsetBravo:
+  description: Comparator Control Register 1.
+  fields:
+  - name: window_en
+    description: Windowing Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: CmpAlphaEnumCharlieBravo
+  - name: sample_en
+    description: Sampling Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: CmpAlphaEnumZuluAlpha
+  - name: dma_en
+    description: DMA Enable.
+    bit_offset: 2
+    bit_size: 1
+    enum: CmpAlphaEnumPapa
+  - name: cout_inv
+    description: Comparator Invert.
+    bit_offset: 3
+    bit_size: 1
+    enum: CmpAlphaEnumHotel
+  - name: cout_sel
+    description: Comparator Output Select.
+    bit_offset: 4
+    bit_size: 1
+    enum: CmpAlphaEnumJuliet
+  - name: cout_pen
+    description: Comparator Output Pin Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: CmpAlphaEnumIndia
+  - name: couta_owen
+    description: COUTA_OW Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: CmpAlphaEnumLima
+  - name: couta_ow
+    description: COUTA Output Level for Closed Window.
+    bit_offset: 7
+    bit_size: 1
+    enum: CmpAlphaEnumKilo
+  - name: window_inv
+    description: WINDOW/SAMPLE Signal Invert.
+    bit_offset: 8
+    bit_size: 1
+    enum: CmpAlphaEnumDeltaBravo
+  - name: window_cls
+    description: COUT Event Window Close.
+    bit_offset: 9
+    bit_size: 1
+    enum: CmpAlphaEnumBravoBravo
+  - name: evt_sel
+    description: COUT Event Select.
+    bit_offset: 10
+    bit_size: 2
+    enum: CmpAlphaEnumQuebec
+  - name: func_clk_sel
+    description: Functional Clock Source Select.
+    bit_offset: 12
+    bit_size: 2
+    enum: CmpAlphaEnumVictor
+  - name: filt_cnt
+    description: Filter Sample Count.
+    bit_offset: 16
+    bit_size: 3
+    enum: CmpAlphaEnumSierra
+  - name: filt_per
+    description: Filter Sample Period.
+    bit_offset: 24
+    bit_size: 8
+fieldset/CmpAlphaFieldsetCharlie:
+  description: Comparator Control Register 2.
+  fields:
+  - name: cmp_hpmd
+    description: CMP High Power Mode Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: CmpAlphaEnumFoxtrot
+  - name: cmp_npmd
+    description: CMP Nano Power Mode Select.
+    bit_offset: 1
+    bit_size: 1
+    enum: CmpAlphaEnumGolf
+  - name: hystctr
+    description: Comparator Hysteresis Control.
+    bit_offset: 4
+    bit_size: 2
+    enum: CmpAlphaEnumWhiskey
+  - name: psel
+    description: Plus Input MUX Select.
+    bit_offset: 16
+    bit_size: 3
+    enum: CmpAlphaEnumYankee
+  - name: msel
+    description: Minus Input MUX Select.
+    bit_offset: 20
+    bit_size: 3
+    enum: CmpAlphaEnumXray
+fieldset/CmpAlphaFieldsetDelta:
+  description: Comparator Status.
+  fields:
+  - name: cfr
+    description: Analog Comparator Flag Rising.
+    bit_offset: 0
+    bit_size: 1
+    enum: CmpAlphaEnumCharlie
+  - name: cff
+    description: Analog Comparator Flag Falling.
+    bit_offset: 1
+    bit_size: 1
+    enum: CmpAlphaEnumAlpha
+  - name: rrf
+    description: Round-Robin Flag.
+    bit_offset: 2
+    bit_size: 1
+    enum: CmpAlphaEnumXrayAlpha
+  - name: cout
+    description: Analog Comparator Output.
+    bit_offset: 8
+    bit_size: 1
+fieldset/CmpAlphaFieldsetEcho:
+  description: DAC Control.
+  fields:
+  - name: dac_en
+    description: DAC Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: CmpAlphaEnumMike
+  - name: dac_hpmd
+    description: DAC High Power Mode.
+    bit_offset: 1
+    bit_size: 1
+    enum: CmpAlphaEnumNovember
+  - name: vrsel
+    description: DAC Reference High Voltage Source Select.
+    bit_offset: 8
+    bit_size: 1
+    enum: CmpAlphaEnumAlphaBravo
+  - name: dac_data
+    description: DAC Output Voltage Select.
+    bit_offset: 16
+    bit_size: 8
+fieldset/CmpAlphaFieldsetFoxtrot:
+  description: Interrupt Enable.
+  fields:
+  - name: cfr_ie
+    description: Comparator Flag Rising Interrupt Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: CmpAlphaEnumDelta
+  - name: cff_ie
+    description: Comparator Flag Falling Interrupt Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: CmpAlphaEnumBravo
+  - name: rrf_ie
+    description: Round-Robin Flag Interrupt Enable.
+    bit_offset: 2
+    bit_size: 1
+    enum: CmpAlphaEnumYankeeAlpha
+fieldset/CmpAlphaFieldsetGolf:
+  description: Parameter.
+  fields:
+  - name: dac_res
+    description: DAC Resolution.
+    bit_offset: 0
+    bit_size: 4
+    enum: CmpAlphaEnumOscar
+fieldset/CmpAlphaFieldsetHotel:
+  description: Round Robin Control Register 0.
+  fields:
+  - name: rr_en
+    description: Round-Robin Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: CmpAlphaEnumQuebecAlpha
+  - name: rr_trg_sel
+    description: Round-Robin Trigger Select.
+    bit_offset: 1
+    bit_size: 1
+    enum: CmpAlphaEnumWhiskeyAlpha
+  - name: rr_nsam
+    description: Number of Sample Clocks.
+    bit_offset: 8
+    bit_size: 2
+    enum: CmpAlphaEnumSierraAlpha
+  - name: rr_clk_sel
+    description: Round Robin Clock Source Select.
+    bit_offset: 12
+    bit_size: 2
+    enum: CmpAlphaEnumPapaAlpha
+  - name: rr_initmod
+    description: Initialization Delay Modulus.
+    bit_offset: 16
+    bit_size: 6
+    enum: CmpAlphaEnumRomeoAlpha
+  - name: rr_sample_cnt
+    description: Number of Sample for One Channel.
+    bit_offset: 24
+    bit_size: 4
+    enum: CmpAlphaEnumTangoAlpha
+  - name: rr_sample_threshold
+    description: Sample Time Threshold.
+    bit_offset: 28
+    bit_size: 4
+    enum: CmpAlphaEnumUniformAlpha
+fieldset/CmpAlphaFieldsetIndia:
+  description: Round Robin Control Register 1.
+  fields:
+  - name: rr_ch0en
+    description: Channel 0 Input Enable in Trigger Mode.
+    bit_offset: 0
+    bit_size: 1
+    enum: CmpAlphaEnumZulu
+  - name: rr_ch1en
+    description: Channel 1 Input Enable in Trigger Mode.
+    bit_offset: 1
+    bit_size: 1
+    enum: CmpAlphaEnumBravoAlpha
+  - name: rr_ch2en
+    description: Channel 2 Input Enable in Trigger Mode.
+    bit_offset: 2
+    bit_size: 1
+    enum: CmpAlphaEnumDeltaAlpha
+  - name: rr_ch3en
+    description: Channel 3 Input Enable in Trigger Mode.
+    bit_offset: 3
+    bit_size: 1
+    enum: CmpAlphaEnumFoxtrotAlpha
+  - name: rr_ch4en
+    description: Channel 4 Input Enable in Trigger Mode.
+    bit_offset: 4
+    bit_size: 1
+    enum: CmpAlphaEnumHotelAlpha
+  - name: rr_ch5en
+    description: Channel 5 Input Enable in Trigger Mode.
+    bit_offset: 5
+    bit_size: 1
+    enum: CmpAlphaEnumJulietAlpha
+  - name: rr_ch6en
+    description: Channel 6 Input Enable in Trigger Mode.
+    bit_offset: 6
+    bit_size: 1
+    enum: CmpAlphaEnumLimaAlpha
+  - name: rr_ch7en
+    description: Channel 7 Input Enable in Trigger Mode.
+    bit_offset: 7
+    bit_size: 1
+    enum: CmpAlphaEnumNovemberAlpha
+  - name: fixp
+    description: Fixed Port.
+    bit_offset: 16
+    bit_size: 1
+    enum: CmpAlphaEnumUniform
+  - name: fixch
+    description: Fixed Channel Select.
+    bit_offset: 20
+    bit_size: 3
+    enum: CmpAlphaEnumTango
+fieldset/CmpAlphaFieldsetJuliet:
+  description: Round Robin Control Register 2.
+  fields:
+  - name: rr_timer_reload
+    description: Number of Sample Clocks.
+    bit_offset: 0
+    bit_size: 28
+  - name: rr_timer_en
+    description: Round-Robin Internal Timer Enable.
+    bit_offset: 31
+    bit_size: 1
+    enum: CmpAlphaEnumVictorAlpha
+fieldset/CmpAlphaFieldsetKilo:
+  description: Round Robin Control and Status.
+  fields:
+  - name: rr_ch0out
+    description: Comparison Result for Channel 0.
+    bit_offset: 0
+    bit_size: 1
+  - name: rr_ch1out
+    description: Comparison Result for Channel 1.
+    bit_offset: 1
+    bit_size: 1
+  - name: rr_ch2out
+    description: Comparison Result for Channel 2.
+    bit_offset: 2
+    bit_size: 1
+  - name: rr_ch3out
+    description: Comparison Result for Channel 3.
+    bit_offset: 3
+    bit_size: 1
+  - name: rr_ch4out
+    description: Comparison Result for Channel 4.
+    bit_offset: 4
+    bit_size: 1
+  - name: rr_ch5out
+    description: Comparison Result for Channel 5.
+    bit_offset: 5
+    bit_size: 1
+  - name: rr_ch6out
+    description: Comparison Result for Channel 6.
+    bit_offset: 6
+    bit_size: 1
+  - name: rr_ch7out
+    description: Comparison Result for Channel 7.
+    bit_offset: 7
+    bit_size: 1
+fieldset/CmpAlphaFieldsetLima:
+  description: Round Robin Status.
+  fields:
+  - name: rr_ch0f
+    description: Channel 0 Input Changed Flag.
+    bit_offset: 0
+    bit_size: 1
+    enum: CmpAlphaEnumAlphaAlpha
+  - name: rr_ch1f
+    description: Channel 1 Input Changed Flag.
+    bit_offset: 1
+    bit_size: 1
+    enum: CmpAlphaEnumCharlieAlpha
+  - name: rr_ch2f
+    description: Channel 2 Input Changed Flag.
+    bit_offset: 2
+    bit_size: 1
+    enum: CmpAlphaEnumEchoAlpha
+  - name: rr_ch3f
+    description: Channel 3 Input Changed Flag.
+    bit_offset: 3
+    bit_size: 1
+    enum: CmpAlphaEnumGolfAlpha
+  - name: rr_ch4f
+    description: Channel 4 Input Changed Flag.
+    bit_offset: 4
+    bit_size: 1
+    enum: CmpAlphaEnumIndiaAlpha
+  - name: rr_ch5f
+    description: Channel 5 Input Changed Flag.
+    bit_offset: 5
+    bit_size: 1
+    enum: CmpAlphaEnumKiloAlpha
+  - name: rr_ch6f
+    description: Channel 6 Input Changed Flag.
+    bit_offset: 6
+    bit_size: 1
+    enum: CmpAlphaEnumMikeAlpha
+  - name: rr_ch7f
+    description: Channel 7 Input Changed Flag.
+    bit_offset: 7
+    bit_size: 1
+    enum: CmpAlphaEnumOscarAlpha
+fieldset/CmpAlphaFieldsetMike:
+  description: Version ID.
+  fields:
+  - name: feature
+    description: Feature Specification Number.
+    bit_offset: 0
+    bit_size: 16
+    enum: CmpAlphaEnumRomeo
+  - name: minor
+    description: Minor Version Number.
+    bit_offset: 16
+    bit_size: 8
+  - name: major
+    description: Major Version Number.
+    bit_offset: 24
+    bit_size: 8
+enum/CmpAlphaEnumAlpha:
+  bit_size: 1
+  variants:
+  - name: Detected
+    description: Detected.
+    value: 1
+  - name: NotDetected
+    description: Not detected.
+    value: 0
+enum/CmpAlphaEnumBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables the comparator flag falling interrupt.
+    value: 0
+  - name: Enable
+    description: Enables the comparator flag falling interrupt when CFF is set.
+    value: 1
+enum/CmpAlphaEnumCharlie:
+  bit_size: 1
+  variants:
+  - name: Detected
+    description: Detected.
+    value: 1
+  - name: NotDetected
+    description: Not detected.
+    value: 0
+enum/CmpAlphaEnumDelta:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables the comparator flag rising interrupt.
+    value: 0
+  - name: Enable
+    description: Enables the comparator flag rising interrupt when CFR is set.
+    value: 1
+enum/CmpAlphaEnumEcho:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable (The analog logic remains off and consumes no power.).
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/CmpAlphaEnumFoxtrot:
+  bit_size: 1
+  variants:
+  - name: High
+    description: High power (speed) comparison mode.
+    value: 1
+  - name: Low
+    description: Low power (speed) comparison mode.
+    value: 0
+enum/CmpAlphaEnumGolf:
+  bit_size: 1
+  variants:
+  - name: Nano
+    description: Enables CMP Nano power mode.
+    value: 1
+  - name: NoNano
+    description: Disables CMP Nano power mode. CCR2[CMP_HPMD] determines the mode for the comparator.
+    value: 0
+enum/CmpAlphaEnumHotel:
+  bit_size: 1
+  variants:
+  - name: Invert
+    description: Invert.
+    value: 1
+  - name: NoInvert
+    description: Do not invert.
+    value: 0
+enum/CmpAlphaEnumIndia:
+  bit_size: 1
+  variants:
+  - name: Available
+    description: Available.
+    value: 1
+  - name: Unavailable
+    description: Not available.
+    value: 0
+enum/CmpAlphaEnumJuliet:
+  bit_size: 1
+  variants:
+  - name: Cout
+    description: Use COUT (filtered).
+    value: 0
+  - name: Couta
+    description: Use COUTA (unfiltered).
+    value: 1
+enum/CmpAlphaEnumKilo:
+  bit_size: 1
+  variants:
+  - name: Couta0
+    description: COUTA is 0.
+    value: 0
+  - name: Couta1
+    description: COUTA is 1.
+    value: 1
+enum/CmpAlphaEnumLima:
+  bit_size: 1
+  variants:
+  - name: CoutaOw
+    description: Enables the COUTA signal value to be defined by COUTA_OW.
+    value: 1
+  - name: Sampled
+    description: COUTA holds the last sampled value.
+    value: 0
+enum/CmpAlphaEnumMike:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/CmpAlphaEnumNovember:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/CmpAlphaEnumOscar:
+  bit_size: 4
+  variants:
+  - name: Reso10
+    description: 10-bit DAC.
+    value: 3
+  - name: Reso12
+    description: 12-bit DAC.
+    value: 4
+  - name: Reso14
+    description: 14-bit DAC.
+    value: 5
+  - name: Reso16
+    description: 16-bit DAC.
+    value: 6
+  - name: Reso4
+    description: 4-bit DAC.
+    value: 0
+  - name: Reso6
+    description: 6-bit DAC.
+    value: 1
+  - name: Reso8
+    description: 8-bit DAC.
+    value: 2
+enum/CmpAlphaEnumPapa:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/CmpAlphaEnumQuebec:
+  bit_size: 2
+  variants:
+  - name: Both
+    description: Both edges.
+    value: 2
+  - name: Falling
+    description: Falling edge.
+    value: 1
+  - name: Rising
+    description: Rising edge.
+    value: 0
+enum/CmpAlphaEnumRomeo:
+  bit_size: 16
+  variants:
+  - name: RoundRobin
+    description: Round robin feature.
+    value: 1
+enum/CmpAlphaEnumSierra:
+  bit_size: 3
+  variants:
+  - name: Bypassed
+    description: 'Filter is bypassed: COUT = COUTA.'
+    value: 0
+  - name: Sample1
+    description: 1 consecutive sample (Comparator output is simply sampled.).
+    value: 1
+  - name: Sample2
+    description: 2 consecutive samples.
+    value: 2
+  - name: Sample3
+    description: 3 consecutive samples.
+    value: 3
+  - name: Sample4
+    description: 4 consecutive samples.
+    value: 4
+  - name: Sample5
+    description: 5 consecutive samples.
+    value: 5
+  - name: Sample6
+    description: 6 consecutive samples.
+    value: 6
+  - name: Sample7
+    description: 7 consecutive samples.
+    value: 7
+enum/CmpAlphaEnumTango:
+  bit_size: 3
+  variants:
+  - name: FixCh0
+    description: Channel 0.
+    value: 0
+  - name: FixCh1
+    description: Channel 1.
+    value: 1
+  - name: FixCh2
+    description: Channel 2.
+    value: 2
+  - name: FixCh3
+    description: Channel 3.
+    value: 3
+  - name: FixCh4
+    description: Channel 4.
+    value: 4
+  - name: FixCh5
+    description: Channel 5.
+    value: 5
+  - name: FixCh6
+    description: Channel 6.
+    value: 6
+  - name: FixCh7
+    description: Channel 7.
+    value: 7
+enum/CmpAlphaEnumUniform:
+  bit_size: 1
+  variants:
+  - name: FixMinus
+    description: Fix the minus port. Sweep only the inputs to the plus port.
+    value: 1
+  - name: FixPlus
+    description: Fix the plus port. Sweep only the inputs to the minus port.
+    value: 0
+enum/CmpAlphaEnumVictor:
+  bit_size: 2
+  variants:
+  - name: Func0
+    description: Select functional clock source 0.
+    value: 0
+  - name: Func1
+    description: Select functional clock source 1.
+    value: 1
+  - name: Func2
+    description: Select functional clock source 2.
+    value: 2
+  - name: Func3
+    description: Select functional clock source 3.
+    value: 3
+enum/CmpAlphaEnumWhiskey:
+  bit_size: 2
+  variants:
+  - name: Level0
+    description: 'Level 0: Analog comparator hysteresis 0 mV.'
+    value: 0
+  - name: Level1
+    description: 'Level 1: Analog comparator hysteresis 10 mV.'
+    value: 1
+  - name: Level2
+    description: 'Level 2: Analog comparator hysteresis 20 mV.'
+    value: 2
+  - name: Level3
+    description: 'Level 3: Analog comparator hysteresis 30 mV.'
+    value: 3
+enum/CmpAlphaEnumXray:
+  bit_size: 3
+  variants:
+  - name: Input0
+    description: Input 0m.
+    value: 0
+  - name: Input1
+    description: Input 1m.
+    value: 1
+  - name: Input2
+    description: Input 2m.
+    value: 2
+  - name: Input3
+    description: Input 3m.
+    value: 3
+  - name: Input4
+    description: Input 4m.
+    value: 4
+  - name: Input5
+    description: Input 5m.
+    value: 5
+  - name: Input7
+    description: Internal DAC output.
+    value: 7
+enum/CmpAlphaEnumYankee:
+  bit_size: 3
+  variants:
+  - name: Input0
+    description: Input 0p.
+    value: 0
+  - name: Input1
+    description: Input 1p.
+    value: 1
+  - name: Input2
+    description: Input 2p.
+    value: 2
+  - name: Input3
+    description: Input 3p.
+    value: 3
+  - name: Input4
+    description: Input 4p.
+    value: 4
+  - name: Input5
+    description: Input 5p.
+    value: 5
+  - name: Input7
+    description: Internal DAC output.
+    value: 7
+enum/CmpAlphaEnumZulu:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/CmpAlphaEnumAlphaAlpha:
+  bit_size: 1
+  variants:
+  - name: Different
+    description: Different.
+    value: 1
+  - name: NotDifferent
+    description: No different.
+    value: 0
+enum/CmpAlphaEnumBravoAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/CmpAlphaEnumCharlieAlpha:
+  bit_size: 1
+  variants:
+  - name: Different
+    description: Different.
+    value: 1
+  - name: NotDifferent
+    description: No different.
+    value: 0
+enum/CmpAlphaEnumDeltaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/CmpAlphaEnumEchoAlpha:
+  bit_size: 1
+  variants:
+  - name: Different
+    description: Different.
+    value: 1
+  - name: NotDifferent
+    description: No different.
+    value: 0
+enum/CmpAlphaEnumFoxtrotAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/CmpAlphaEnumGolfAlpha:
+  bit_size: 1
+  variants:
+  - name: Different
+    description: Different.
+    value: 1
+  - name: NotDifferent
+    description: No different.
+    value: 0
+enum/CmpAlphaEnumHotelAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/CmpAlphaEnumIndiaAlpha:
+  bit_size: 1
+  variants:
+  - name: Different
+    description: Different.
+    value: 1
+  - name: NotDifferent
+    description: No different.
+    value: 0
+enum/CmpAlphaEnumJulietAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/CmpAlphaEnumKiloAlpha:
+  bit_size: 1
+  variants:
+  - name: Different
+    description: Different.
+    value: 1
+  - name: NotDifferent
+    description: No different.
+    value: 0
+enum/CmpAlphaEnumLimaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/CmpAlphaEnumMikeAlpha:
+  bit_size: 1
+  variants:
+  - name: Different
+    description: Different.
+    value: 1
+  - name: NotDifferent
+    description: No different.
+    value: 0
+enum/CmpAlphaEnumNovemberAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/CmpAlphaEnumOscarAlpha:
+  bit_size: 1
+  variants:
+  - name: Different
+    description: Different.
+    value: 1
+  - name: NotDifferent
+    description: No different.
+    value: 0
+enum/CmpAlphaEnumPapaAlpha:
+  bit_size: 2
+  variants:
+  - name: Rr0
+    description: Select Round Robin clock Source 0.
+    value: 0
+  - name: Rr1
+    description: Select Round Robin clock Source 1.
+    value: 1
+  - name: Rr2
+    description: Select Round Robin clock Source 2.
+    value: 2
+  - name: Rr3
+    description: Select Round Robin clock Source 3.
+    value: 3
+enum/CmpAlphaEnumQuebecAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/CmpAlphaEnumRomeoAlpha:
+  bit_size: 6
+  variants:
+  - name: Mod1631
+    description: 1 to 63 cycles.
+    value: 1
+  - name: Mod16310
+    description: 1 to 63 cycles.
+    value: 10
+  - name: Mod1632
+    description: 1 to 63 cycles.
+    value: 2
+  - name: Mod1633
+    description: 1 to 63 cycles.
+    value: 3
+  - name: Mod1634
+    description: 1 to 63 cycles.
+    value: 4
+  - name: Mod1635
+    description: 1 to 63 cycles.
+    value: 5
+  - name: Mod16358
+    description: 1 to 63 cycles.
+    value: 58
+  - name: Mod16359
+    description: 1 to 63 cycles.
+    value: 59
+  - name: Mod1636
+    description: 1 to 63 cycles.
+    value: 6
+  - name: Mod16360
+    description: 1 to 63 cycles.
+    value: 60
+  - name: Mod16361
+    description: 1 to 63 cycles.
+    value: 61
+  - name: Mod16362
+    description: 1 to 63 cycles.
+    value: 62
+  - name: Mod16363
+    description: 1 to 63 cycles.
+    value: 63
+  - name: Mod1637
+    description: 1 to 63 cycles.
+    value: 7
+  - name: Mod1638
+    description: 1 to 63 cycles.
+    value: 8
+  - name: Mod1639
+    description: 1 to 63 cycles.
+    value: 9
+  - name: Mod63
+    description: 63 cycles (same as 111111b).
+    value: 0
+enum/CmpAlphaEnumSierraAlpha:
+  bit_size: 2
+  variants:
+  - name: Wait0
+    description: 0 clock.
+    value: 0
+  - name: Wait1
+    description: 1 clock.
+    value: 1
+  - name: Wait2
+    description: 2 clocks.
+    value: 2
+  - name: Wait3
+    description: 3 clocks.
+    value: 3
+enum/CmpAlphaEnumTangoAlpha:
+  bit_size: 4
+  variants:
+  - name: Sample0
+    description: 1 samples.
+    value: 0
+  - name: Sample1
+    description: 2 samples.
+    value: 1
+  - name: Sample10
+    description: 11 samples.
+    value: 10
+  - name: Sample11
+    description: 12 samples.
+    value: 11
+  - name: Sample12
+    description: 13 samples.
+    value: 12
+  - name: Sample13
+    description: 14 samples.
+    value: 13
+  - name: Sample14
+    description: 15 samples.
+    value: 14
+  - name: Sample15
+    description: 16 samples.
+    value: 15
+  - name: Sample2
+    description: 3 samples.
+    value: 2
+  - name: Sample3
+    description: 4 samples.
+    value: 3
+  - name: Sample4
+    description: 5 samples.
+    value: 4
+  - name: Sample5
+    description: 6 samples.
+    value: 5
+  - name: Sample6
+    description: 7 samples.
+    value: 6
+  - name: Sample7
+    description: 8 samples.
+    value: 7
+  - name: Sample8
+    description: 9 samples.
+    value: 8
+  - name: Sample9
+    description: 10 samples.
+    value: 9
+enum/CmpAlphaEnumUniformAlpha:
+  bit_size: 4
+  variants:
+  - name: Sample0
+    description: At least 1 sampled "1", the final result is "1".
+    value: 0
+  - name: Sample1
+    description: At least 2 sampled "1", the final result is "1".
+    value: 1
+  - name: Sample10
+    description: At least 11 sampled "1", the final result is "1".
+    value: 10
+  - name: Sample11
+    description: At least 12 sampled "1", the final result is "1".
+    value: 11
+  - name: Sample12
+    description: At least 13 sampled "1", the final result is "1".
+    value: 12
+  - name: Sample13
+    description: At least 14 sampled "1", the final result is "1".
+    value: 13
+  - name: Sample14
+    description: At least 15 sampled "1", the final result is "1".
+    value: 14
+  - name: Sample15
+    description: At least 16 sampled "1", the final result is "1".
+    value: 15
+  - name: Sample2
+    description: At least 3 sampled "1", the final result is "1".
+    value: 2
+  - name: Sample3
+    description: At least 4 sampled "1", the final result is "1".
+    value: 3
+  - name: Sample4
+    description: At least 5 sampled "1", the final result is "1".
+    value: 4
+  - name: Sample5
+    description: At least 6 sampled "1", the final result is "1".
+    value: 5
+  - name: Sample6
+    description: At least 7 sampled "1", the final result is "1".
+    value: 6
+  - name: Sample7
+    description: At least 8 sampled "1", the final result is "1".
+    value: 7
+  - name: Sample8
+    description: At least 9 sampled "1", the final result is "1".
+    value: 8
+  - name: Sample9
+    description: At least 10 sampled "1", the final result is "1".
+    value: 9
+enum/CmpAlphaEnumVictorAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables.
+    value: 0
+  - name: Enable
+    description: Enables.
+    value: 1
+enum/CmpAlphaEnumWhiskeyAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Internal trigger.
+    value: 1
+  - name: Enable
+    description: External trigger.
+    value: 0
+enum/CmpAlphaEnumXrayAlpha:
+  bit_size: 1
+  variants:
+  - name: Detected
+    description: Detected.
+    value: 1
+  - name: NotDetected
+    description: Not detected.
+    value: 0
+enum/CmpAlphaEnumYankeeAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disables the round-robin flag interrupt.
+    value: 0
+  - name: Enable
+    description: Enables the round-robin flag interrupt when the comparison result changes for a given channel.
+    value: 1
+enum/CmpAlphaEnumZuluAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/CmpAlphaEnumAlphaBravo:
+  bit_size: 1
+  variants:
+  - name: Vref0
+    description: VREFH0.
+    value: 0
+  - name: Vref1
+    description: VREFH1.
+    value: 1
+enum/CmpAlphaEnumBravoBravo:
+  bit_size: 1
+  variants:
+  - name: Close
+    description: COUT event can close the window.
+    value: 1
+  - name: NoClose
+    description: COUT event cannot close the window.
+    value: 0
+enum/CmpAlphaEnumCharlieBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/CmpAlphaEnumDeltaBravo:
+  bit_size: 1
+  variants:
+  - name: Invert
+    description: Invert.
+    value: 1
+  - name: NoInvert
+    description: Do not invert.
+    value: 0

@@ -1,0 +1,118 @@
+# NXP mcux-soc-svd 7c1f00bdd6263f0b93466f5e73e5fc55a744b879; native chiptool import.
+# Source instance geometry is retained in explicit block variants; see private source bindings.
+# Unannotated fieldsets construct zero in software, not a claimed hardware reset.
+# Command/W1C/SET/CLR/TOG construction defaults are zero masks; no RMW semantics are implied.
+# Core ID reads zero (N23 SRM 16630-16631; larger N SRM 18773-18774).
+# REQUEST retains generic N-map RW access; core-context permission is ambiguous.
+# Source: MCXN235.xml DM0 sha256 a498ada26162c88f6767738bffcd22801318264c9cb2cbecbd190403b4dbd6a7
+# Source: MCXN236.xml DM0 sha256 ec813b3b24a785c33c5035ebc25a9c713a18018daf1fdb440035a13bf3549e14
+# Source: MCXN247.xml DM0 sha256 dbbed5781a39012768344882dad168430c742f26e4261c6fd0bda9a34ca4a652
+block/DbgmailboxAlpha:
+  description: DBGMB.
+  items:
+  - name: csw
+    description: Command and Status Word.
+    byte_offset: 0
+    fieldset: DbgmailboxAlphaFieldsetAlpha
+  - name: request
+    description: Request Value.
+    byte_offset: 4
+    fieldset: DbgmailboxAlphaFieldsetCharlie
+  - name: return_
+    description: Return Value.
+    byte_offset: 8
+    fieldset: DbgmailboxAlphaFieldsetDelta
+  - name: id
+    description: Identification.
+    byte_offset: 252
+    access: Read
+    fieldset: DbgmailboxAlphaFieldsetBravo
+fieldset/DbgmailboxAlphaFieldsetAlpha:
+  description: Command and Status Word.
+  fields:
+  - name: resynch_req
+    description: Resynchronization Request.
+    bit_offset: 0
+    bit_size: 1
+    enum: DbgmailboxAlphaEnumDelta
+  - name: req_pending
+    description: Request Pending.
+    bit_offset: 1
+    bit_size: 1
+    enum: DbgmailboxAlphaEnumCharlie
+  - name: dbg_or_err
+    description: DBGMB Overrun Error.
+    bit_offset: 2
+    bit_size: 1
+    enum: DbgmailboxAlphaEnumBravo
+  - name: ahb_or_err
+    description: AHB Overrun Error.
+    bit_offset: 3
+    bit_size: 1
+    enum: DbgmailboxAlphaEnumAlpha
+  - name: soft_reset
+    description: Soft Reset.
+    bit_offset: 4
+    bit_size: 1
+  - name: chip_reset_req
+    description: Chip Reset Request.
+    bit_offset: 5
+    bit_size: 1
+fieldset/DbgmailboxAlphaFieldsetBravo:
+  description: Identification.
+  fields:
+  - name: id
+    description: Identification Value.
+    bit_offset: 0
+    bit_size: 32
+  reset_value: 0
+fieldset/DbgmailboxAlphaFieldsetCharlie:
+  description: Request Value.
+  fields:
+  - name: request
+    description: Request Value.
+    bit_offset: 0
+    bit_size: 32
+fieldset/DbgmailboxAlphaFieldsetDelta:
+  description: Return Value.
+  fields:
+  - name: ret
+    description: Return Value.
+    bit_offset: 0
+    bit_size: 32
+enum/DbgmailboxAlphaEnumAlpha:
+  bit_size: 1
+  variants:
+  - name: AhbOverrunErr
+    description: AHB Overrun Error. An AHB overrun occurred.
+    value: 1
+  - name: NoAhbOverrunErr
+    description: No AHB Overrun Error.
+    value: 0
+enum/DbgmailboxAlphaEnumBravo:
+  bit_size: 1
+  variants:
+  - name: NoOverrunErr
+    description: No DBGMB Overrun error.
+    value: 0
+  - name: OverrunErr
+    description: DBGMB overrun error. A DBGMB overrun occurred.
+    value: 1
+enum/DbgmailboxAlphaEnumCharlie:
+  bit_size: 1
+  variants:
+  - name: NoRequestPending
+    description: No request pending.
+    value: 0
+  - name: RequestPending
+    description: Request for resynchronization pending.
+    value: 1
+enum/DbgmailboxAlphaEnumDelta:
+  bit_size: 1
+  variants:
+  - name: NoRequest
+    description: No request.
+    value: 0
+  - name: Request
+    description: Request for resynchronization.
+    value: 1

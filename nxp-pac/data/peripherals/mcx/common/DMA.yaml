@@ -1,0 +1,652 @@
+# File not directly generated from transforms!
+
+block/Dma4:
+  description: DMA MP.
+  items:
+  - name: mp_csr
+    description: Management Page Control.
+    byte_offset: 0
+    fieldset: MpCsr4
+  - name: mp_es
+    description: Management Page Error Status.
+    byte_offset: 4
+    access: Read
+    fieldset: MpEs4
+  - name: mp_int
+    description: Management Page Interrupt Request Status.
+    byte_offset: 8
+    access: Read
+    fieldset: MpInt
+  - name: mp_hrs
+    description: Management Page Hardware Request Status.
+    byte_offset: 12
+    access: Read
+    fieldset: MpHrs
+  - name: ch_grpri
+    description: Channel Arbitration Group.
+    array:
+      len: 4
+      stride: 4
+    byte_offset: 256
+    fieldset: ChGrpri
+block/Dma8:
+  description: DMA MP.
+  items:
+  - name: mp_csr
+    description: Management Page Control.
+    byte_offset: 0
+    fieldset: MpCsr8
+  - name: mp_es
+    description: Management Page Error Status.
+    byte_offset: 4
+    access: Read
+    fieldset: MpEs8
+  - name: mp_int
+    description: Management Page Interrupt Request Status.
+    byte_offset: 8
+    access: Read
+    fieldset: MpInt
+  - name: mp_hrs
+    description: Management Page Hardware Request Status.
+    byte_offset: 12
+    access: Read
+    fieldset: MpHrs
+  - name: ch_grpri
+    description: Channel Arbitration Group.
+    array:
+      len: 8
+      stride: 4
+    byte_offset: 256
+    fieldset: ChGrpri
+block/Dma12:
+  description: DMA MP.
+  items:
+  - name: mp_csr
+    description: Management Page Control.
+    byte_offset: 0
+    fieldset: MpCsr12
+  - name: mp_es
+    description: Management Page Error Status.
+    byte_offset: 4
+    access: Read
+    fieldset: MpEs12
+  - name: mp_int
+    description: Management Page Interrupt Request Status.
+    byte_offset: 8
+    access: Read
+    fieldset: MpInt
+  - name: mp_hrs
+    description: Management Page Hardware Request Status.
+    byte_offset: 12
+    access: Read
+    fieldset: MpHrs
+  - name: ch_grpri
+    description: Channel Arbitration Group.
+    array:
+      len: 8
+      stride: 4
+    byte_offset: 256
+    fieldset: ChGrpri
+fieldset/ChGrpri:
+  description: Channel Arbitration Group.
+  fields:
+  - name: grpri
+    description: Arbitration Group For Channel n.
+    bit_offset: 0
+    bit_size: 5
+fieldset/MpCsr4:
+  description: Management Page Control.
+  fields:
+  - name: edbg
+    description: Enable Debug.
+    bit_offset: 1
+    bit_size: 1
+  - name: erca
+    description: Enable Round Robin Channel Arbitration.
+    bit_offset: 2
+    bit_size: 1
+  - name: hae
+    description: Halt After Error.
+    bit_offset: 4
+    bit_size: 1
+    enum: Hae
+  - name: halt
+    description: Halt DMA Operations.
+    bit_offset: 5
+    bit_size: 1
+    enum: Halt
+  - name: gclc
+    description: Global Channel Linking Control.
+    bit_offset: 6
+    bit_size: 1
+  - name: gmrc
+    description: Global Master ID Replication Control.
+    bit_offset: 7
+    bit_size: 1
+  - name: ecx
+    description: Cancel Transfer With Error.
+    bit_offset: 8
+    bit_size: 1
+    enum: MpCsrEcx
+  - name: cx
+    description: Cancel Transfer.
+    bit_offset: 9
+    bit_size: 1
+    enum: Cx
+  - name: active_id
+    description: Active Channel ID.
+    bit_offset: 24
+    bit_size: 2
+  - name: active
+    description: DMA Active Status.
+    bit_offset: 31
+    bit_size: 1
+    enum: Active
+fieldset/MpCsr8:
+  description: Management Page Control.
+  fields:
+  - name: edbg
+    description: Enable Debug.
+    bit_offset: 1
+    bit_size: 1
+  - name: erca
+    description: Enable Round Robin Channel Arbitration.
+    bit_offset: 2
+    bit_size: 1
+  - name: hae
+    description: Halt After Error.
+    bit_offset: 4
+    bit_size: 1
+    enum: Hae
+  - name: halt
+    description: Halt DMA Operations.
+    bit_offset: 5
+    bit_size: 1
+    enum: Halt
+  - name: gclc
+    description: Global Channel Linking Control.
+    bit_offset: 6
+    bit_size: 1
+  - name: gmrc
+    description: Global Master ID Replication Control.
+    bit_offset: 7
+    bit_size: 1
+  - name: ecx
+    description: Cancel Transfer With Error.
+    bit_offset: 8
+    bit_size: 1
+    enum: MpCsrEcx
+  - name: cx
+    description: Cancel Transfer.
+    bit_offset: 9
+    bit_size: 1
+    enum: Cx
+  - name: active_id
+    description: Active Channel ID.
+    bit_offset: 24
+    bit_size: 3
+  - name: active
+    description: DMA Active Status.
+    bit_offset: 31
+    bit_size: 1
+    enum: Active
+fieldset/MpCsr12:
+  description: Management Page Control.
+  fields:
+  - name: edbg
+    description: Enable Debug.
+    bit_offset: 1
+    bit_size: 1
+  - name: erca
+    description: Enable Round Robin Channel Arbitration.
+    bit_offset: 2
+    bit_size: 1
+  - name: hae
+    description: Halt After Error.
+    bit_offset: 4
+    bit_size: 1
+    enum: Hae
+  - name: halt
+    description: Halt DMA Operations.
+    bit_offset: 5
+    bit_size: 1
+    enum: Halt
+  - name: gclc
+    description: Global Channel Linking Control.
+    bit_offset: 6
+    bit_size: 1
+  - name: gmrc
+    description: Global Master ID Replication Control.
+    bit_offset: 7
+    bit_size: 1
+  - name: ecx
+    description: Cancel Transfer With Error.
+    bit_offset: 8
+    bit_size: 1
+    enum: MpCsrEcx
+  - name: cx
+    description: Cancel Transfer.
+    bit_offset: 9
+    bit_size: 1
+    enum: Cx
+  - name: active_id
+    description: Active Channel ID.
+    bit_offset: 24
+    bit_size: 4
+  - name: active
+    description: DMA Active Status.
+    bit_offset: 31
+    bit_size: 1
+    enum: Active
+fieldset/MpEs4:
+  description: Management Page Error Status.
+  fields:
+  - name: dbe
+    description: Destination Bus Error.
+    bit_offset: 0
+    bit_size: 1
+    enum: Dbe
+  - name: sbe
+    description: Source Bus Error.
+    bit_offset: 1
+    bit_size: 1
+    enum: Sbe
+  - name: sge
+    description: Scatter/Gather Configuration Error.
+    bit_offset: 2
+    bit_size: 1
+    enum: Sge
+  - name: nce
+    description: NBYTES/CITER Configuration Error.
+    bit_offset: 3
+    bit_size: 1
+    enum: Nce
+  - name: doe
+    description: Destination Offset Error.
+    bit_offset: 4
+    bit_size: 1
+    enum: Doe
+  - name: dae
+    description: Destination Address Error.
+    bit_offset: 5
+    bit_size: 1
+    enum: Dae
+  - name: soe
+    description: Source Offset Error.
+    bit_offset: 6
+    bit_size: 1
+    enum: Soe
+  - name: sae
+    description: Source Address Error.
+    bit_offset: 7
+    bit_size: 1
+    enum: Sae
+  - name: ecx
+    description: Transfer Canceled.
+    bit_offset: 8
+    bit_size: 1
+    enum: MpEsEcx
+  - name: errchn
+    description: Error Channel Number or Canceled Channel Number.
+    bit_offset: 24
+    bit_size: 2
+  - name: vld
+    description: Valid.
+    bit_offset: 31
+    bit_size: 1
+    enum: Vld
+fieldset/MpEs8:
+  description: Management Page Error Status.
+  fields:
+  - name: dbe
+    description: Destination Bus Error.
+    bit_offset: 0
+    bit_size: 1
+    enum: Dbe
+  - name: sbe
+    description: Source Bus Error.
+    bit_offset: 1
+    bit_size: 1
+    enum: Sbe
+  - name: sge
+    description: Scatter/Gather Configuration Error.
+    bit_offset: 2
+    bit_size: 1
+    enum: Sge
+  - name: nce
+    description: NBYTES/CITER Configuration Error.
+    bit_offset: 3
+    bit_size: 1
+    enum: Nce
+  - name: doe
+    description: Destination Offset Error.
+    bit_offset: 4
+    bit_size: 1
+    enum: Doe
+  - name: dae
+    description: Destination Address Error.
+    bit_offset: 5
+    bit_size: 1
+    enum: Dae
+  - name: soe
+    description: Source Offset Error.
+    bit_offset: 6
+    bit_size: 1
+    enum: Soe
+  - name: sae
+    description: Source Address Error.
+    bit_offset: 7
+    bit_size: 1
+    enum: Sae
+  - name: ecx
+    description: Transfer Canceled.
+    bit_offset: 8
+    bit_size: 1
+    enum: MpEsEcx
+  - name: errchn
+    description: Error Channel Number or Canceled Channel Number.
+    bit_offset: 24
+    bit_size: 3
+  - name: vld
+    description: Valid.
+    bit_offset: 31
+    bit_size: 1
+    enum: Vld
+fieldset/MpEs12:
+  description: Management Page Error Status.
+  fields:
+  - name: dbe
+    description: Destination Bus Error.
+    bit_offset: 0
+    bit_size: 1
+    enum: Dbe
+  - name: sbe
+    description: Source Bus Error.
+    bit_offset: 1
+    bit_size: 1
+    enum: Sbe
+  - name: sge
+    description: Scatter/Gather Configuration Error.
+    bit_offset: 2
+    bit_size: 1
+    enum: Sge
+  - name: nce
+    description: NBYTES/CITER Configuration Error.
+    bit_offset: 3
+    bit_size: 1
+    enum: Nce
+  - name: doe
+    description: Destination Offset Error.
+    bit_offset: 4
+    bit_size: 1
+    enum: Doe
+  - name: dae
+    description: Destination Address Error.
+    bit_offset: 5
+    bit_size: 1
+    enum: Dae
+  - name: soe
+    description: Source Offset Error.
+    bit_offset: 6
+    bit_size: 1
+    enum: Soe
+  - name: sae
+    description: Source Address Error.
+    bit_offset: 7
+    bit_size: 1
+    enum: Sae
+  - name: ecx
+    description: Transfer Canceled.
+    bit_offset: 8
+    bit_size: 1
+    enum: MpEsEcx
+  - name: errchn
+    description: Error Channel Number or Canceled Channel Number.
+    bit_offset: 24
+    bit_size: 4
+  - name: vld
+    description: Valid.
+    bit_offset: 31
+    bit_size: 1
+    enum: Vld
+fieldset/MpHrs:
+  description: Management Page Hardware Request Status.
+  fields:
+  - name: hrs
+    description: Hardware Request Status.
+    bit_offset: 0
+    bit_size: 32
+fieldset/MpInt:
+  description: Management Page Interrupt Request Status.
+  fields:
+  - name: int
+    description: Interrupt Request Status.
+    bit_offset: 0
+    bit_size: 12
+enum/Active:
+  bit_size: 1
+  variants:
+  - name: Idle
+    description: eDMA is idle.
+    value: 0
+  - name: Execution
+    description: eDMA is executing a channel.
+    value: 1
+enum/Cx:
+  bit_size: 1
+  variants:
+  - name: NormalOperation
+    description: Normal operation.
+    value: 0
+  - name: DataTransferCancel
+    description: Cancel the remaining data transfer.
+    value: 1
+enum/Dae:
+  bit_size: 1
+  variants:
+  - name: NoError
+    description: No destination address configuration error.
+    value: 0
+  - name: ConfigurationError
+    description: Last recorded error was a configuration error detected in the TCDn_DADDR field.
+    value: 1
+enum/Dbe:
+  bit_size: 1
+  variants:
+  - name: NoError
+    description: No destination bus error.
+    value: 0
+  - name: BusError
+    description: Last recorded error was a bus error on a destination write.
+    value: 1
+enum/Doe:
+  bit_size: 1
+  variants:
+  - name: NoError
+    description: No destination offset configuration error.
+    value: 0
+  - name: ConfigurationError
+    description: Last recorded error was a configuration error detected in the TCDn_DOFF field.
+    value: 1
+enum/Hae:
+  bit_size: 1
+  variants:
+  - name: NormalOperation
+    description: Normal operation.
+    value: 0
+  - name: Halt
+    description: Any error causes the HALT field to be set to 1.
+    value: 1
+enum/Halt:
+  bit_size: 1
+  variants:
+  - name: NormalOperation
+    description: Normal operation.
+    value: 0
+  - name: Stall
+    description: Stall the start of any new channels.
+    value: 1
+enum/MpCsrEcx:
+  bit_size: 1
+  variants:
+  - name: NORMAL_OPERATION
+    description: Normal operation.
+    value: 0
+  - name: CANCEL
+    description: Cancel the remaining data transfer.
+    value: 1
+enum/MpEsEcx:
+  bit_size: 1
+  variants:
+  - name: NO_CANCELED_TRANSFERS
+    description: No canceled transfers.
+    value: 0
+  - name: CANCELED_TRANSFER
+    description: Last recorded entry was a canceled transfer by the error cancel transfer input.
+    value: 1
+enum/Nce:
+  bit_size: 1
+  variants:
+  - name: NoError
+    description: No NBYTES/CITER configuration error.
+    value: 0
+  - name: ConfigurationError
+    description: The last recorded error was NBYTES equal to zero or a CITER not equal to BITER error.
+    value: 1
+enum/Sae:
+  bit_size: 1
+  variants:
+  - name: NoError
+    description: No source address configuration error.
+    value: 0
+  - name: ConfigurationError
+    description: Last recorded error was a configuration error detected in the TCDn_SADDR field.
+    value: 1
+enum/Sbe:
+  bit_size: 1
+  variants:
+  - name: NoError
+    description: No source bus error.
+    value: 0
+  - name: BusError
+    description: Last recorded error was a bus error on a source read.
+    value: 1
+enum/Sge:
+  bit_size: 1
+  variants:
+  - name: NoError
+    description: No scatter/gather configuration error.
+    value: 0
+  - name: ConfigurationError
+    description: Last recorded error was a configuration error detected in the TCDn_DLAST_SGA field.
+    value: 1
+enum/Soe:
+  bit_size: 1
+  variants:
+  - name: NoError
+    description: No source offset configuration error.
+    value: 0
+  - name: ConfigurationError
+    description: Last recorded error was a configuration error detected in the TCDn_SOFF field.
+    value: 1
+enum/Vld:
+  bit_size: 1
+  variants:
+  - name: NoFieldSetOne
+    description: No CHn_ES[ERR] fields are set to 1.
+    value: 0
+  - name: AtleastOneField
+    description: At least one CHn_ES[ERR] field is set to 1, indicating a valid error exists that software has not cleared.
+    value: 1
+
+# MCXN23x RM Rev. 4, 16.1.2 and 16.6.1; MCXN RM Rev. 7, 23.1.1 and 23.6.1-2.
+# DMA1 on N235/N236 has eight channels; the other N controllers have sixteen.
+block/Dma16:
+  only_in: '^MCXN'
+  description: Sixteen-channel eDMA management page. Status is read-only; CX and ECX cancel transfers. GCLC gates channel linking and GMRC gates master-ID replication.
+  items:
+  - name: mp_csr
+    description: Management Page Control. ACTIVE_ID and ACTIVE are read-only; CX and ECX are command bits. Change ERCA, GCLC or GMRC only when all channels are inactive (ACTIVE=0). Reserved known reset bits are retained in the construction default.
+    byte_offset: 0
+    fieldset: MpCsr16
+  - name: mp_es
+    description: Management Page Error Status. Read-only summary; acknowledge errors through the channel CH_ES register.
+    byte_offset: 4
+    access: Read
+    fieldset: MpEs16
+  - name: mp_int
+    description: Management Page Interrupt Request Status. Read-only summary of channel interrupts.
+    byte_offset: 8
+    access: Read
+    fieldset: MpInt16
+  - name: mp_hrs
+    description: Management Page Hardware Request Status. Documented raw 32-bit request-status field; its width does not imply 32 implemented channels.
+    byte_offset: 12
+    access: Read
+    fieldset: MpHrs
+  - name: ch_grpri
+    description: Channel Arbitration Group. Values 0 through 31 select fixed-priority groups, with 31 highest.
+    array:
+      len: 16
+      stride: 4
+    byte_offset: 256
+    fieldset: ChGrpri
+block/DmaEight:
+  only_in: '^MCXN23[56]$'
+  description: Eight-channel DMA1 management page on MCXN235 and MCXN236.
+  extends: Dma16
+  items:
+  - name: mp_csr
+    description: Management Page Control. ACTIVE_ID and ACTIVE are read-only; CX and ECX are cancel commands. Change ERCA, GCLC or GMRC only when all channels are inactive (ACTIVE=0).
+    byte_offset: 0
+    fieldset: MpCsrEight
+  - name: mp_es
+    description: Management Page Error Status. Read-only summary; acknowledge errors through CH_ES.
+    byte_offset: 4
+    access: Read
+    fieldset: MpEs8
+  - name: mp_int
+    description: Management Page Interrupt Request Status for channels 0 through 7.
+    byte_offset: 8
+    access: Read
+    fieldset: MpIntEight
+  - name: ch_grpri
+    description: Channel Arbitration Group. Values 0 through 31; only channels 0 through 7 exist.
+    byte_offset: 256
+    array:
+      len: 8
+      stride: 4
+    fieldset: ChGrpri
+fieldset/MpCsr16:
+  only_in: '^MCXN'
+  description: Management Page Control. ACTIVE_ID and ACTIVE are read-only. CX and ECX cancel the remaining transfer; HALT stalls new channels, not an executing channel. Change ERCA, GCLC or GMRC only when all channels are inactive (ACTIVE=0).
+  extends: MpCsr12
+  reset_value: 0x00310000
+  fields: []
+fieldset/MpCsrEight:
+  only_in: '^MCXN23[56]$'
+  description: Eight-channel Management Page Control. ACTIVE_ID and ACTIVE are read-only; CX and ECX are cancel commands. Change ERCA, GCLC or GMRC only when all channels are inactive (ACTIVE=0).
+  extends: MpCsr8
+  reset_value: 0x00310000
+  fields: []
+fieldset/MpEs16:
+  only_in: '^MCXN'
+  description: Read-only Management Page Error Status for sixteen channels.
+  extends: MpEs12
+  fields: []
+fieldset/MpInt16:
+  only_in: '^MCXN'
+  description: Management Page Interrupt Request Status for sixteen channels.
+  fields:
+  - name: int
+    description: Read-only interrupt request summary for channels 0 through 15.
+    bit_offset: 0
+    bit_size: 16
+fieldset/MpIntEight:
+  only_in: '^MCXN23[56]$'
+  description: Management Page Interrupt Request Status for eight channels.
+  fields:
+  - name: int
+    description: Read-only interrupt request summary for channels 0 through 7.
+    bit_offset: 0
+    bit_size: 8

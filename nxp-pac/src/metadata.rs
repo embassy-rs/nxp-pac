@@ -3,6 +3,20 @@ mod _generated {
     include!(concat!(env!("OUT_DIR"), "/metadata.rs"));
 }
 
+#[cfg(nxp_metapac)]
+mod _extensions {
+    include!(concat!(env!("OUT_DIR"), "/metadata_ext.rs"));
+}
+
+#[cfg(not(nxp_metapac))]
+mod _extensions {
+    use super::{DirectSignal, NamedGate, ResetGate};
+
+    pub const DIRECT_SIGNALS: &[DirectSignal] = &[];
+    pub const RESET_GATES: &[ResetGate] = &[];
+    pub const NAMED_GATES: &[NamedGate] = &[];
+}
+
 #[cfg(not(nxp_metapac))]
 #[cfg_attr(feature = "mimxrt1011", path = "./chips/mimxrt1011/metadata.rs")]
 #[cfg_attr(feature = "mimxrt1062", path = "./chips/mimxrt1062/metadata.rs")]
@@ -58,6 +72,42 @@ pub struct Peripheral {
     pub gate: Option<Gate>,
 }
 
+impl Peripheral {
+    /// Non-PORT-mux connectivity for this peripheral on the selected chip.
+    pub fn direct_signals(&self) -> impl Iterator<Item = &'static DirectSignal> + '_ {
+        DIRECT_SIGNALS
+            .iter()
+            .filter(move |signal| signal.peripheral == self.name)
+    }
+
+    /// Named controls for this peripheral, without an implied initialization sequence.
+    pub fn named_gates(&self) -> impl Iterator<Item = &'static NamedGate> + '_ {
+        NAMED_GATES
+            .iter()
+            .filter(move |gate| gate.peripheral == self.name)
+    }
+}
+
+#[derive(Clone, Copy, Debug, Eq, PartialEq)]
+pub enum DirectSignalKind {
+    Analog,
+    DirectInput,
+}
+
+#[derive(Debug)]
+pub struct DirectSignalPin {
+    pub pin: &'static str,
+    pub kind: DirectSignalKind,
+}
+
+/// A peripheral connection, not a pin configuration recipe or digital ALT route.
+#[derive(Debug)]
+pub struct DirectSignal {
+    pub peripheral: &'static str,
+    pub name: &'static str,
+    pub pins: &'static [DirectSignalPin],
+}
+
 #[derive(Debug)]
 pub struct Signal {
     pub name: &'static str,
@@ -87,5 +137,34 @@ pub struct Gate {
     pub bit: &'static str,
 }
 
+impl Gate {
+    /// Reset field for `self.reset`, falling back to the clock field name.
+    /// This lookup does not access hardware and is only meaningful with a reset register.
+    pub fn reset_bit(&self) -> &'static str {
+        RESET_GATES
+            .iter()
+            .find(|gate| {
+                gate.enable == self.enable && gate.bit == self.bit && Some(gate.reset) == self.reset
+            })
+            .map_or(self.bit, |gate| gate.reset_bit)
+    }
+}
+
+#[derive(Debug)]
+pub struct ResetGate {
+    pub enable: &'static str,
+    pub bit: &'static str,
+    pub reset: &'static str,
+    pub reset_bit: &'static str,
+}
+
+#[derive(Debug)]
+pub struct NamedGate {
+    pub peripheral: &'static str,
+    pub name: &'static str,
+    pub gate: Gate,
+}
+
+pub use _extensions::{DIRECT_SIGNALS, NAMED_GATES, RESET_GATES};
 pub use _generated::*;
 pub use meta_peripherals::META_PERIPHERALS;

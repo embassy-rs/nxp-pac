@@ -1,0 +1,1998 @@
+# NXP mcux-soc-svd 7c1f00bdd6263f0b93466f5e73e5fc55a744b879; native chiptool import.
+# Source instance geometry is retained in explicit block variants; see private source bindings.
+# Unannotated fieldsets construct zero in software, not a claimed hardware reset.
+# Command/W1C/SET/CLR/TOG construction defaults are zero masks; no RMW semantics are implied.
+# Source: MCXN946_cm33_core0.xml SAI0 sha256 b986328ff1224adaeea70522fa61383a5f89f6313dfc3e7df92e8894fdab72d7
+# Source: MCXN946_cm33_core0.xml SAI1 sha256 b986328ff1224adaeea70522fa61383a5f89f6313dfc3e7df92e8894fdab72d7
+# Source: MCXN946_cm33_core1.xml SAI0 sha256 57e8910317a1cb467d56726cb822c57806aa247542969bcf12dbcc8822187916
+# Source: MCXN946_cm33_core1.xml SAI1 sha256 57e8910317a1cb467d56726cb822c57806aa247542969bcf12dbcc8822187916
+# Source: MCXN947_cm33_core0.xml SAI0 sha256 629ac7cdc82684e467b0cf36a8aef697bc1eb65c2047d6610b7b5df65692e590
+# Source: MCXN947_cm33_core0.xml SAI1 sha256 629ac7cdc82684e467b0cf36a8aef697bc1eb65c2047d6610b7b5df65692e590
+# Source: MCXN947_cm33_core1.xml SAI0 sha256 0d77f3d23cad1d5eab631fd7f5ade4044d8aaca2d9d13cd11f3836d27fe089fb
+# Source: MCXN947_cm33_core1.xml SAI1 sha256 0d77f3d23cad1d5eab631fd7f5ade4044d8aaca2d9d13cd11f3836d27fe089fb
+block/SaiAlpha:
+  description: SAI.
+  items:
+  - name: verid
+    description: Version ID.
+    byte_offset: 0
+    access: Read
+    fieldset: SaiAlphaFieldsetUniform
+  - name: param
+    description: Parameter.
+    byte_offset: 4
+    access: Read
+    fieldset: SaiAlphaFieldsetBravo
+  - name: tcsr
+    description: Transmit Control.
+    byte_offset: 8
+    fieldset: SaiAlphaFieldsetQuebec
+  - name: tcr1
+    description: Transmit Configuration 1.
+    byte_offset: 12
+    fieldset: SaiAlphaFieldsetLima
+  - name: tcr2
+    description: Transmit Configuration 2.
+    byte_offset: 16
+    fieldset: SaiAlphaFieldsetMike
+  - name: tcr3
+    description: Transmit Configuration 3.
+    byte_offset: 20
+    fieldset: SaiAlphaFieldsetNovember
+  - name: tcr4
+    description: Transmit Configuration 4.
+    byte_offset: 24
+    fieldset: SaiAlphaFieldsetOscar
+  - name: tcr5
+    description: Transmit Configuration 5.
+    byte_offset: 28
+    fieldset: SaiAlphaFieldsetPapa
+  - name: tdr
+    description: Transmit Data.
+    array:
+      len: 2
+      stride: 4
+    byte_offset: 32
+    fieldset: SaiAlphaFieldsetRomeo
+  - name: tfr
+    description: Transmit FIFO.
+    array:
+      len: 2
+      stride: 4
+    byte_offset: 64
+    access: Read
+    fieldset: SaiAlphaFieldsetSierra
+  - name: tmr
+    description: Transmit Mask.
+    byte_offset: 96
+    fieldset: SaiAlphaFieldsetTango
+  - name: rcsr
+    description: Receive Control.
+    byte_offset: 136
+    fieldset: SaiAlphaFieldsetHotel
+  - name: rcr1
+    description: Receive Configuration 1.
+    byte_offset: 140
+    fieldset: SaiAlphaFieldsetCharlie
+  - name: rcr2
+    description: Receive Configuration 2.
+    byte_offset: 144
+    fieldset: SaiAlphaFieldsetDelta
+  - name: rcr3
+    description: Receive Configuration 3.
+    byte_offset: 148
+    fieldset: SaiAlphaFieldsetEcho
+  - name: rcr4
+    description: Receive Configuration 4.
+    byte_offset: 152
+    fieldset: SaiAlphaFieldsetFoxtrot
+  - name: rcr5
+    description: Receive Configuration 5.
+    byte_offset: 156
+    fieldset: SaiAlphaFieldsetGolf
+  - name: rdr
+    description: Receive Data.
+    array:
+      len: 2
+      stride: 4
+    byte_offset: 160
+    access: Read
+    fieldset: SaiAlphaFieldsetIndia
+  - name: rfr
+    description: Receive FIFO.
+    array:
+      len: 2
+      stride: 4
+    byte_offset: 192
+    access: Read
+    fieldset: SaiAlphaFieldsetJuliet
+  - name: rmr
+    description: Receive Mask.
+    byte_offset: 224
+    fieldset: SaiAlphaFieldsetKilo
+  - name: mcr
+    description: MCLK Control.
+    byte_offset: 256
+    fieldset: SaiAlphaFieldsetAlpha
+fieldset/SaiAlphaFieldsetAlpha:
+  description: MCLK Control.
+  fields:
+  - name: div
+    description: MCLK Post Divide.
+    bit_offset: 0
+    bit_size: 8
+  - name: diven
+    description: MCLK Post Divide Enable.
+    bit_offset: 23
+    bit_size: 1
+    enum: SaiAlphaEnumBravo
+  - name: msel
+    description: MCLK Select.
+    bit_offset: 24
+    bit_size: 2
+    enum: SaiAlphaEnumEcho
+  - name: moe
+    description: MCLK Output Enable.
+    bit_offset: 30
+    bit_size: 1
+    enum: SaiAlphaEnumFoxtrot
+fieldset/SaiAlphaFieldsetBravo:
+  description: Parameter.
+  fields:
+  - name: dataline
+    description: Number of Data Lines.
+    bit_offset: 0
+    bit_size: 4
+  - name: fifo
+    description: FIFO Size.
+    bit_offset: 8
+    bit_size: 4
+  - name: frame
+    description: Frame Size.
+    bit_offset: 16
+    bit_size: 4
+fieldset/SaiAlphaFieldsetCharlie:
+  description: Receive Configuration 1.
+  fields:
+  - name: rfw
+    description: Receive FIFO Watermark.
+    bit_offset: 0
+    bit_size: 3
+    enum: SaiAlphaEnumRomeoAlpha
+fieldset/SaiAlphaFieldsetDelta:
+  description: Receive Configuration 2.
+  fields:
+  - name: div
+    description: Bit Clock Divide.
+    bit_offset: 0
+    bit_size: 8
+  - name: byp
+    description: Bit Clock Bypass.
+    bit_offset: 23
+    bit_size: 1
+    enum: SaiAlphaEnumLima
+  - name: bcd
+    description: Bit Clock Direction.
+    bit_offset: 24
+    bit_size: 1
+    enum: SaiAlphaEnumHotel
+  - name: bcp
+    description: Bit Clock Polarity.
+    bit_offset: 25
+    bit_size: 1
+    enum: SaiAlphaEnumJuliet
+  - name: msel
+    description: MCLK Select.
+    bit_offset: 26
+    bit_size: 2
+    enum: SaiAlphaEnumMike
+  - name: bci
+    description: Bit Clock Input.
+    bit_offset: 28
+    bit_size: 1
+    enum: SaiAlphaEnumIndia
+  - name: bcs
+    description: Bit Clock Swap.
+    bit_offset: 29
+    bit_size: 1
+    enum: SaiAlphaEnumKilo
+  - name: sync
+    description: Synchronous Mode.
+    bit_offset: 30
+    bit_size: 2
+    enum: SaiAlphaEnumNovember
+fieldset/SaiAlphaFieldsetEcho:
+  description: Receive Configuration 3.
+  fields:
+  - name: wdfl
+    description: Word Flag Configuration.
+    bit_offset: 0
+    bit_size: 5
+    enum: SaiAlphaEnumHotelCharlie
+  - name: rce
+    description: Receive Channel Enable.
+    bit_offset: 16
+    bit_size: 2
+  - name: cfr
+    description: Channel FIFO Reset.
+    bit_offset: 24
+    bit_size: 2
+fieldset/SaiAlphaFieldsetFoxtrot:
+  description: Receive Configuration 4.
+  fields:
+  - name: fsd
+    description: Frame Sync Direction.
+    bit_offset: 0
+    bit_size: 1
+    enum: SaiAlphaEnumRomeo
+  - name: fsp
+    description: Frame Sync Polarity.
+    bit_offset: 1
+    bit_size: 1
+    enum: SaiAlphaEnumTango
+  - name: ondem
+    description: On-Demand Mode.
+    bit_offset: 2
+    bit_size: 1
+    enum: SaiAlphaEnumVictor
+  - name: fse
+    description: Frame Sync Early.
+    bit_offset: 3
+    bit_size: 1
+    enum: SaiAlphaEnumSierra
+  - name: mf
+    description: MSB First.
+    bit_offset: 4
+    bit_size: 1
+    enum: SaiAlphaEnumUniform
+  - name: sywd
+    description: Sync Width.
+    bit_offset: 8
+    bit_size: 5
+    enum: SaiAlphaEnumTangoAlpha
+  - name: frsz
+    description: Frame Size.
+    bit_offset: 16
+    bit_size: 5
+    enum: SaiAlphaEnumDelta
+  - name: fpack
+    description: FIFO Packing Mode.
+    bit_offset: 24
+    bit_size: 2
+    enum: SaiAlphaEnumQuebec
+  - name: fcomb
+    description: FIFO Combine Mode.
+    bit_offset: 26
+    bit_size: 2
+    enum: SaiAlphaEnumOscar
+  - name: fcont
+    description: FIFO Continue on Error.
+    bit_offset: 28
+    bit_size: 1
+    enum: SaiAlphaEnumPapa
+fieldset/SaiAlphaFieldsetGolf:
+  description: Receive Configuration 5.
+  fields:
+  - name: fbt
+    description: First Bit Shifted.
+    bit_offset: 8
+    bit_size: 5
+    enum: SaiAlphaEnumWhiskey
+  - name: w0w
+    description: Word 0 Width.
+    bit_offset: 16
+    bit_size: 5
+    enum: SaiAlphaEnumXray
+  - name: wnw
+    description: Word N Width.
+    bit_offset: 24
+    bit_size: 5
+    enum: SaiAlphaEnumYankee
+fieldset/SaiAlphaFieldsetHotel:
+  description: Receive Control.
+  fields:
+  - name: frde
+    description: FIFO Request DMA Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: SaiAlphaEnumEchoAlpha
+  - name: fwde
+    description: FIFO Warning DMA Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: SaiAlphaEnumHotelAlpha
+  - name: frie
+    description: FIFO Request Interrupt Enable.
+    bit_offset: 8
+    bit_size: 1
+    enum: SaiAlphaEnumGolfAlpha
+  - name: fwie
+    description: FIFO Warning Interrupt Enable.
+    bit_offset: 9
+    bit_size: 1
+    enum: SaiAlphaEnumJulietAlpha
+  - name: feie
+    description: FIFO Error Interrupt Enable.
+    bit_offset: 10
+    bit_size: 1
+    enum: SaiAlphaEnumCharlieAlpha
+  - name: seie
+    description: Sync Error Interrupt Enable.
+    bit_offset: 11
+    bit_size: 1
+    enum: SaiAlphaEnumLimaAlpha
+  - name: wsie
+    description: Word Start Interrupt Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: SaiAlphaEnumPapaAlpha
+  - name: frf
+    description: FIFO Request Flag.
+    bit_offset: 16
+    bit_size: 1
+    enum: SaiAlphaEnumFoxtrotAlpha
+  - name: fwf
+    description: FIFO Warning Flag.
+    bit_offset: 17
+    bit_size: 1
+    enum: SaiAlphaEnumIndiaAlpha
+  - name: fef
+    description: FIFO Error Flag.
+    bit_offset: 18
+    bit_size: 1
+    enum: SaiAlphaEnumBravoAlpha
+  - name: sef
+    description: Sync Error Flag.
+    bit_offset: 19
+    bit_size: 1
+    enum: SaiAlphaEnumKiloAlpha
+  - name: wsf
+    description: Word Start Flag.
+    bit_offset: 20
+    bit_size: 1
+    enum: SaiAlphaEnumOscarAlpha
+  - name: sr
+    description: Software Reset.
+    bit_offset: 24
+    bit_size: 1
+    enum: SaiAlphaEnumMikeAlpha
+  - name: fr
+    description: FIFO Reset.
+    bit_offset: 25
+    bit_size: 1
+    enum: SaiAlphaEnumDeltaAlpha
+  - name: bce
+    description: Bit Clock Enable.
+    bit_offset: 28
+    bit_size: 1
+    enum: SaiAlphaEnumZulu
+  - name: dbge
+    description: Debug Enable.
+    bit_offset: 29
+    bit_size: 1
+    enum: SaiAlphaEnumAlphaAlpha
+  - name: stope
+    description: Stop Enable.
+    bit_offset: 30
+    bit_size: 1
+    enum: SaiAlphaEnumNovemberAlpha
+  - name: re
+    description: Receiver Enable.
+    bit_offset: 31
+    bit_size: 1
+    enum: SaiAlphaEnumQuebecAlpha
+fieldset/SaiAlphaFieldsetIndia:
+  description: Receive Data.
+  fields:
+  - name: rdr
+    description: Receive Data.
+    bit_offset: 0
+    bit_size: 32
+fieldset/SaiAlphaFieldsetJuliet:
+  description: Receive FIFO.
+  fields:
+  - name: rfp
+    description: Read FIFO Pointer.
+    bit_offset: 0
+    bit_size: 4
+  - name: rcp
+    description: Read Channel Pointer.
+    bit_offset: 15
+    bit_size: 1
+    enum: SaiAlphaEnumGolf
+  - name: wfp
+    description: Write FIFO Pointer.
+    bit_offset: 16
+    bit_size: 4
+fieldset/SaiAlphaFieldsetKilo:
+  description: Receive Mask.
+  fields:
+  - name: rwm
+    description: Receive Word Mask.
+    bit_offset: 0
+    bit_size: 32
+    enum: SaiAlphaEnumSierraAlpha
+fieldset/SaiAlphaFieldsetLima:
+  description: Transmit Configuration 1.
+  fields:
+  - name: tfw
+    description: Transmit FIFO Watermark.
+    bit_offset: 0
+    bit_size: 3
+    enum: SaiAlphaEnumEchoCharlie
+fieldset/SaiAlphaFieldsetMike:
+  description: Transmit Configuration 2.
+  fields:
+  - name: div
+    description: Bit Clock Divide.
+    bit_offset: 0
+    bit_size: 8
+  - name: byp
+    description: Bit Clock Bypass.
+    bit_offset: 23
+    bit_size: 1
+    enum: SaiAlphaEnumYankeeAlpha
+  - name: bcd
+    description: Bit Clock Direction.
+    bit_offset: 24
+    bit_size: 1
+    enum: SaiAlphaEnumUniformAlpha
+  - name: bcp
+    description: Bit Clock Polarity.
+    bit_offset: 25
+    bit_size: 1
+    enum: SaiAlphaEnumWhiskeyAlpha
+  - name: msel
+    description: MCLK Select.
+    bit_offset: 26
+    bit_size: 2
+    enum: SaiAlphaEnumZuluAlpha
+  - name: bci
+    description: Bit Clock Input.
+    bit_offset: 28
+    bit_size: 1
+    enum: SaiAlphaEnumVictorAlpha
+  - name: bcs
+    description: Bit Clock Swap.
+    bit_offset: 29
+    bit_size: 1
+    enum: SaiAlphaEnumXrayAlpha
+  - name: sync
+    description: Synchronous Mode.
+    bit_offset: 30
+    bit_size: 2
+    enum: SaiAlphaEnumAlphaBravo
+fieldset/SaiAlphaFieldsetNovember:
+  description: Transmit Configuration 3.
+  fields:
+  - name: wdfl
+    description: Word Flag Configuration.
+    bit_offset: 0
+    bit_size: 5
+  - name: tce
+    description: Transmit Channel Enable.
+    bit_offset: 16
+    bit_size: 2
+  - name: cfr
+    description: Channel FIFO Reset.
+    bit_offset: 24
+    bit_size: 2
+fieldset/SaiAlphaFieldsetOscar:
+  description: Transmit Configuration 4.
+  fields:
+  - name: fsd
+    description: Frame Sync Direction.
+    bit_offset: 0
+    bit_size: 1
+    enum: SaiAlphaEnumEchoBravo
+  - name: fsp
+    description: Frame Sync Polarity.
+    bit_offset: 1
+    bit_size: 1
+    enum: SaiAlphaEnumGolfBravo
+  - name: ondem
+    description: On-Demand Mode.
+    bit_offset: 2
+    bit_size: 1
+    enum: SaiAlphaEnumIndiaBravo
+  - name: fse
+    description: Frame Sync Early.
+    bit_offset: 3
+    bit_size: 1
+    enum: SaiAlphaEnumFoxtrotBravo
+  - name: mf
+    description: MSB First.
+    bit_offset: 4
+    bit_size: 1
+    enum: SaiAlphaEnumHotelBravo
+  - name: chmod
+    description: Channel Mode.
+    bit_offset: 5
+    bit_size: 1
+    enum: SaiAlphaEnumAlpha
+  - name: sywd
+    description: Sync Width.
+    bit_offset: 8
+    bit_size: 5
+  - name: frsz
+    description: Frame Size.
+    bit_offset: 16
+    bit_size: 5
+  - name: fpack
+    description: FIFO Packing Mode.
+    bit_offset: 24
+    bit_size: 2
+    enum: SaiAlphaEnumDeltaBravo
+  - name: fcomb
+    description: FIFO Combine Mode.
+    bit_offset: 26
+    bit_size: 2
+    enum: SaiAlphaEnumBravoBravo
+  - name: fcont
+    description: FIFO Continue on Error.
+    bit_offset: 28
+    bit_size: 1
+    enum: SaiAlphaEnumCharlieBravo
+fieldset/SaiAlphaFieldsetPapa:
+  description: Transmit Configuration 5.
+  fields:
+  - name: fbt
+    description: First Bit Shifted.
+    bit_offset: 8
+    bit_size: 5
+    enum: SaiAlphaEnumJulietBravo
+  - name: w0w
+    description: Word 0 Width.
+    bit_offset: 16
+    bit_size: 5
+    enum: SaiAlphaEnumKiloBravo
+  - name: wnw
+    description: Word N Width.
+    bit_offset: 24
+    bit_size: 5
+    enum: SaiAlphaEnumLimaBravo
+fieldset/SaiAlphaFieldsetQuebec:
+  description: Transmit Control.
+  fields:
+  - name: frde
+    description: FIFO Request DMA Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: SaiAlphaEnumRomeoBravo
+  - name: fwde
+    description: FIFO Warning DMA Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: SaiAlphaEnumUniformBravo
+  - name: frie
+    description: FIFO Request Interrupt Enable.
+    bit_offset: 8
+    bit_size: 1
+    enum: SaiAlphaEnumTangoBravo
+  - name: fwie
+    description: FIFO Warning Interrupt Enable.
+    bit_offset: 9
+    bit_size: 1
+    enum: SaiAlphaEnumWhiskeyBravo
+  - name: feie
+    description: FIFO Error Interrupt Enable.
+    bit_offset: 10
+    bit_size: 1
+    enum: SaiAlphaEnumPapaBravo
+  - name: seie
+    description: Sync Error Interrupt Enable.
+    bit_offset: 11
+    bit_size: 1
+    enum: SaiAlphaEnumYankeeBravo
+  - name: wsie
+    description: Word Start Interrupt Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: SaiAlphaEnumCharlieCharlie
+  - name: frf
+    description: FIFO Request Flag.
+    bit_offset: 16
+    bit_size: 1
+    enum: SaiAlphaEnumSierraBravo
+  - name: fwf
+    description: FIFO Warning Flag.
+    bit_offset: 17
+    bit_size: 1
+    enum: SaiAlphaEnumVictorBravo
+  - name: fef
+    description: FIFO Error Flag.
+    bit_offset: 18
+    bit_size: 1
+    enum: SaiAlphaEnumOscarBravo
+  - name: sef
+    description: Sync Error Flag.
+    bit_offset: 19
+    bit_size: 1
+    enum: SaiAlphaEnumXrayBravo
+  - name: wsf
+    description: Word Start Flag.
+    bit_offset: 20
+    bit_size: 1
+    enum: SaiAlphaEnumBravoCharlie
+  - name: sr
+    description: Software Reset.
+    bit_offset: 24
+    bit_size: 1
+    enum: SaiAlphaEnumZuluBravo
+  - name: fr
+    description: FIFO Reset.
+    bit_offset: 25
+    bit_size: 1
+    enum: SaiAlphaEnumQuebecBravo
+  - name: bce
+    description: Bit Clock Enable.
+    bit_offset: 28
+    bit_size: 1
+    enum: SaiAlphaEnumMikeBravo
+  - name: dbge
+    description: Debug Enable.
+    bit_offset: 29
+    bit_size: 1
+    enum: SaiAlphaEnumNovemberBravo
+  - name: stope
+    description: Stop Enable.
+    bit_offset: 30
+    bit_size: 1
+    enum: SaiAlphaEnumAlphaCharlie
+  - name: te
+    description: Transmitter Enable.
+    bit_offset: 31
+    bit_size: 1
+    enum: SaiAlphaEnumDeltaCharlie
+fieldset/SaiAlphaFieldsetRomeo:
+  description: Transmit Data.
+  fields:
+  - name: tdr
+    description: Transmit Data.
+    bit_offset: 0
+    bit_size: 32
+fieldset/SaiAlphaFieldsetSierra:
+  description: Transmit FIFO.
+  fields:
+  - name: rfp
+    description: Read FIFO Pointer.
+    bit_offset: 0
+    bit_size: 4
+  - name: wfp
+    description: Write FIFO Pointer.
+    bit_offset: 16
+    bit_size: 4
+  - name: wcp
+    description: Write Channel Pointer.
+    bit_offset: 31
+    bit_size: 1
+    enum: SaiAlphaEnumGolfCharlie
+fieldset/SaiAlphaFieldsetTango:
+  description: Transmit Mask.
+  fields:
+  - name: twm
+    description: Transmit Word Mask.
+    bit_offset: 0
+    bit_size: 32
+    enum: SaiAlphaEnumFoxtrotCharlie
+fieldset/SaiAlphaFieldsetUniform:
+  description: Version ID.
+  fields:
+  - name: feature
+    description: Feature Specification Number.
+    bit_offset: 0
+    bit_size: 16
+    enum: SaiAlphaEnumCharlie
+  - name: minor
+    description: Minor Version Number.
+    bit_offset: 16
+    bit_size: 8
+  - name: major
+    description: Major Version Number.
+    bit_offset: 24
+    bit_size: 8
+enum/SaiAlphaEnumAlpha:
+  bit_size: 1
+  variants:
+  - name: OutputMode
+    description: Output mode.
+    value: 1
+  - name: TdmMode
+    description: TDM mode.
+    value: 0
+enum/SaiAlphaEnumBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/SaiAlphaEnumCharlie:
+  bit_size: 16
+  variants:
+  - name: Std
+    description: Standard feature set.
+    value: 0
+enum/SaiAlphaEnumDelta:
+  bit_size: 5
+  variants:
+  - name: MaxWords
+    description: '32.'
+    value: 31
+  - name: NWords10
+    description: (FRSZ value + 1).
+    value: 10
+  - name: NWords11
+    description: (FRSZ value + 1).
+    value: 11
+  - name: NWords2
+    description: (FRSZ value + 1).
+    value: 2
+  - name: NWords25
+    description: (FRSZ value + 1).
+    value: 25
+  - name: NWords26
+    description: (FRSZ value + 1).
+    value: 26
+  - name: NWords27
+    description: (FRSZ value + 1).
+    value: 27
+  - name: NWords28
+    description: (FRSZ value + 1).
+    value: 28
+  - name: NWords29
+    description: (FRSZ value + 1).
+    value: 29
+  - name: NWords3
+    description: (FRSZ value + 1).
+    value: 3
+  - name: NWords30
+    description: (FRSZ value + 1).
+    value: 30
+  - name: NWords4
+    description: (FRSZ value + 1).
+    value: 4
+  - name: NWords5
+    description: (FRSZ value + 1).
+    value: 5
+  - name: NWords6
+    description: (FRSZ value + 1).
+    value: 6
+  - name: NWords7
+    description: (FRSZ value + 1).
+    value: 7
+  - name: NWords8
+    description: (FRSZ value + 1).
+    value: 8
+  - name: NWords9
+    description: (FRSZ value + 1).
+    value: 9
+  - name: OneWord
+    description: '1.'
+    value: 0
+  - name: TwoWords
+    description: '2.'
+    value: 1
+enum/SaiAlphaEnumEcho:
+  bit_size: 2
+  variants:
+  - name: Mclk1
+    description: Controller clock (MCLK) option 1.
+    value: 0
+  - name: Mclk2
+    description: Controller clock (MCLK) option 2.
+    value: 2
+  - name: Mclk3
+    description: Controller clock (MCLK) option 3.
+    value: 3
+enum/SaiAlphaEnumFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Input
+    description: Input.
+    value: 0
+  - name: Output
+    description: Output.
+    value: 1
+enum/SaiAlphaEnumGolf:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: No effect.
+    value: 0
+  - name: Enable
+    description: Next FIFO to be read.
+    value: 1
+enum/SaiAlphaEnumHotel:
+  bit_size: 1
+  variants:
+  - name: ExtTargetMode
+    description: Generated externally in Target mode.
+    value: 0
+  - name: IntControllerMode
+    description: Generated internally in Controller mode.
+    value: 1
+enum/SaiAlphaEnumIndia:
+  bit_size: 1
+  variants:
+  - name: ClockedAsIfExtGenerated
+    description: Enable.
+    value: 1
+  - name: NoEffect
+    description: Disable.
+    value: 0
+enum/SaiAlphaEnumJuliet:
+  bit_size: 1
+  variants:
+  - name: ActiveHigh
+    description: Active high.
+    value: 0
+  - name: ActiveLow
+    description: Active low.
+    value: 1
+enum/SaiAlphaEnumKilo:
+  bit_size: 1
+  variants:
+  - name: Normal
+    description: Use the normal bit clock source.
+    value: 0
+  - name: SwapBitClkSource
+    description: Swap the bit clock source.
+    value: 1
+enum/SaiAlphaEnumLima:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/SaiAlphaEnumMike:
+  bit_size: 2
+  variants:
+  - name: BusClock
+    description: Bus clock.
+    value: 0
+  - name: Mclk1
+    description: Controller clock (MCLK) option 1.
+    value: 1
+  - name: Mclk2
+    description: Controller clock (MCLK) option 2.
+    value: 2
+  - name: Mclk3
+    description: Controller clock (MCLK) option 3.
+    value: 3
+enum/SaiAlphaEnumNovember:
+  bit_size: 2
+  variants:
+  - name: Async
+    description: Asynchronous mode.
+    value: 0
+  - name: SyncWAnotherSaiRx
+    description: Synchronous with another SAI receiver.
+    value: 2
+  - name: SyncWAnotherSaiTx
+    description: Synchronous with another SAI transmitter.
+    value: 3
+  - name: SyncWTx
+    description: Synchronous with transmitter.
+    value: 1
+enum/SaiAlphaEnumOscar:
+  bit_size: 2
+  variants:
+  - name: Disabled
+    description: Disable.
+    value: 0
+  - name: EnaOnFifoReads
+    description: Enable on FIFO reads (by software).
+    value: 2
+  - name: EnaOnFifoWrites
+    description: Enable on FIFO writes (from receive shift registers).
+    value: 1
+  - name: EnaOnFifoWritesReads
+    description: Enable on FIFO writes (from receive shift registers) and reads (by software).
+    value: 3
+enum/SaiAlphaEnumPapa:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: From the start of the next frame after the FIFO error flag is cleared.
+    value: 0
+  - name: Enable
+    description: From the same word that caused the FIFO error to become 1 after the FIFO warning flag is cleared.
+    value: 1
+enum/SaiAlphaEnumQuebec:
+  bit_size: 2
+  variants:
+  - name: Disabled
+    description: Disable.
+    value: 0
+  - name: EightBitPacking
+    description: Enable 8-bit FIFO packing.
+    value: 2
+  - name: SixteenBitPacking
+    description: Enable 16-bit FIFO packing.
+    value: 3
+enum/SaiAlphaEnumRomeo:
+  bit_size: 1
+  variants:
+  - name: ExtTargetMode
+    description: Generated externally in Target mode.
+    value: 0
+  - name: IntControllerMode
+    description: Generated internally in Controller mode.
+    value: 1
+enum/SaiAlphaEnumSierra:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: First bit of the frame.
+    value: 0
+  - name: Enable
+    description: One bit before the first bit of the frame.
+    value: 1
+enum/SaiAlphaEnumTango:
+  bit_size: 1
+  variants:
+  - name: ActiveHigh
+    description: Active high.
+    value: 0
+  - name: ActiveLow
+    description: Active low.
+    value: 1
+enum/SaiAlphaEnumUniform:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: LSB.
+    value: 0
+  - name: Enable
+    description: MSB.
+    value: 1
+enum/SaiAlphaEnumVictor:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Generated continuously.
+    value: 0
+  - name: Enable
+    description: Generated when the FIFO warning flag is 0.
+    value: 1
+enum/SaiAlphaEnumWhiskey:
+  bit_size: 5
+  variants:
+  - name: Index0
+    description: '0.'
+    value: 0
+  - name: Index1
+    description: FBT value.
+    value: 1
+  - name: Index10
+    description: FBT value.
+    value: 10
+  - name: Index2
+    description: FBT value.
+    value: 2
+  - name: Index25
+    description: FBT value.
+    value: 25
+  - name: Index26
+    description: FBT value.
+    value: 26
+  - name: Index27
+    description: FBT value.
+    value: 27
+  - name: Index28
+    description: FBT value.
+    value: 28
+  - name: Index29
+    description: FBT value.
+    value: 29
+  - name: Index3
+    description: FBT value.
+    value: 3
+  - name: Index30
+    description: FBT value.
+    value: 30
+  - name: Index31
+    description: '31.'
+    value: 31
+  - name: Index4
+    description: FBT value.
+    value: 4
+  - name: Index5
+    description: FBT value.
+    value: 5
+  - name: Index6
+    description: FBT value.
+    value: 6
+  - name: Index7
+    description: FBT value.
+    value: 7
+  - name: Index8
+    description: FBT value.
+    value: 8
+  - name: Index9
+    description: FBT value.
+    value: 9
+enum/SaiAlphaEnumXray:
+  bit_size: 5
+  variants:
+  - name: Max
+    description: '32.'
+    value: 31
+  - name: Min
+    description: '1.'
+    value: 0
+  - name: ThreeThirtyone10
+    description: (W0W value + 1).
+    value: 10
+  - name: ThreeThirtyone11
+    description: (W0W value + 1).
+    value: 11
+  - name: ThreeThirtyone2
+    description: (W0W value + 1).
+    value: 2
+  - name: ThreeThirtyone25
+    description: (W0W value + 1).
+    value: 25
+  - name: ThreeThirtyone26
+    description: (W0W value + 1).
+    value: 26
+  - name: ThreeThirtyone27
+    description: (W0W value + 1).
+    value: 27
+  - name: ThreeThirtyone28
+    description: (W0W value + 1).
+    value: 28
+  - name: ThreeThirtyone29
+    description: (W0W value + 1).
+    value: 29
+  - name: ThreeThirtyone3
+    description: (W0W value + 1).
+    value: 3
+  - name: ThreeThirtyone30
+    description: (W0W value + 1).
+    value: 30
+  - name: ThreeThirtyone4
+    description: (W0W value + 1).
+    value: 4
+  - name: ThreeThirtyone5
+    description: (W0W value + 1).
+    value: 5
+  - name: ThreeThirtyone6
+    description: (W0W value + 1).
+    value: 6
+  - name: ThreeThirtyone7
+    description: (W0W value + 1).
+    value: 7
+  - name: ThreeThirtyone8
+    description: (W0W value + 1).
+    value: 8
+  - name: ThreeThirtyone9
+    description: (W0W value + 1).
+    value: 9
+  - name: Two
+    description: '2.'
+    value: 1
+enum/SaiAlphaEnumYankee:
+  bit_size: 5
+  variants:
+  - name: Eight
+    description: '8.'
+    value: 7
+  - name: Max
+    description: '32.'
+    value: 31
+  - name: Nine
+    description: '9.'
+    value: 8
+  - name: TenThirtyone10
+    description: (WNW value + 1).
+    value: 10
+  - name: TenThirtyone11
+    description: (WNW value + 1).
+    value: 11
+  - name: TenThirtyone12
+    description: (WNW value + 1).
+    value: 12
+  - name: TenThirtyone13
+    description: (WNW value + 1).
+    value: 13
+  - name: TenThirtyone14
+    description: (WNW value + 1).
+    value: 14
+  - name: TenThirtyone15
+    description: (WNW value + 1).
+    value: 15
+  - name: TenThirtyone16
+    description: (WNW value + 1).
+    value: 16
+  - name: TenThirtyone17
+    description: (WNW value + 1).
+    value: 17
+  - name: TenThirtyone18
+    description: (WNW value + 1).
+    value: 18
+  - name: TenThirtyone25
+    description: (WNW value + 1).
+    value: 25
+  - name: TenThirtyone26
+    description: (WNW value + 1).
+    value: 26
+  - name: TenThirtyone27
+    description: (WNW value + 1).
+    value: 27
+  - name: TenThirtyone28
+    description: (WNW value + 1).
+    value: 28
+  - name: TenThirtyone29
+    description: (WNW value + 1).
+    value: 29
+  - name: TenThirtyone30
+    description: (WNW value + 1).
+    value: 30
+  - name: TenThirtyone9
+    description: (WNW value + 1).
+    value: 9
+enum/SaiAlphaEnumZulu:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/SaiAlphaEnumAlphaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable after completing the current frame.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/SaiAlphaEnumBravoAlpha:
+  bit_size: 1
+  variants:
+  - name: Flag
+    description: Receive overflow detected.
+    value: 1
+  - name: NoFlag
+    description: No error.
+    value: 0
+enum/SaiAlphaEnumCharlieAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/SaiAlphaEnumDeltaAlpha:
+  bit_size: 1
+  variants:
+  - name: FifoReset
+    description: Reset.
+    value: 1
+  - name: NoEffect
+    description: No effect.
+    value: 0
+enum/SaiAlphaEnumEchoAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/SaiAlphaEnumFoxtrotAlpha:
+  bit_size: 1
+  variants:
+  - name: BelowWatermark
+    description: Watermark not reached.
+    value: 0
+  - name: WatermarkReached
+    description: Watermark reached.
+    value: 1
+enum/SaiAlphaEnumGolfAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/SaiAlphaEnumHotelAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/SaiAlphaEnumIndiaAlpha:
+  bit_size: 1
+  variants:
+  - name: Full
+    description: Full.
+    value: 1
+  - name: NotFull
+    description: Not full.
+    value: 0
+enum/SaiAlphaEnumJulietAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/SaiAlphaEnumKiloAlpha:
+  bit_size: 1
+  variants:
+  - name: Flag
+    description: Detected.
+    value: 1
+  - name: NoFlag
+    description: Not detected.
+    value: 0
+enum/SaiAlphaEnumLimaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/SaiAlphaEnumMikeAlpha:
+  bit_size: 1
+  variants:
+  - name: NoEffect
+    description: No effect.
+    value: 0
+  - name: SwReset
+    description: Software reset.
+    value: 1
+enum/SaiAlphaEnumNovemberAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/SaiAlphaEnumOscarAlpha:
+  bit_size: 1
+  variants:
+  - name: Flag
+    description: Detected.
+    value: 1
+  - name: NoFlag
+    description: Not detected.
+    value: 0
+enum/SaiAlphaEnumPapaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/SaiAlphaEnumQuebecAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable (or receiver disabled and not yet reached end of frame).
+    value: 1
+enum/SaiAlphaEnumRomeoAlpha:
+  bit_size: 3
+  variants:
+  - name: Max
+    description: '8.'
+    value: 7
+  - name: Min
+    description: '1.'
+    value: 0
+  - name: Two
+    description: '2.'
+    value: 1
+  - name: Watermark2
+    description: (RFW value + 1).
+    value: 2
+  - name: Watermark3
+    description: (RFW value + 1).
+    value: 3
+  - name: Watermark4
+    description: (RFW value + 1).
+    value: 4
+  - name: Watermark5
+    description: (RFW value + 1).
+    value: 5
+  - name: Watermark6
+    description: (RFW value + 1).
+    value: 6
+enum/SaiAlphaEnumSierraAlpha:
+  bit_size: 32
+  variants:
+  - name: WordNEnabled
+    description: Enable.
+    value: 0
+  - name: WordNMasked
+    description: Mask.
+    value: 1
+enum/SaiAlphaEnumTangoAlpha:
+  bit_size: 5
+  variants:
+  - name: Min
+    description: '1.'
+    value: 0
+  - name: NClocks10
+    description: (SYWD value + 1).
+    value: 10
+  - name: NClocks11
+    description: (SYWD value + 1).
+    value: 11
+  - name: NClocks2
+    description: (SYWD value + 1).
+    value: 2
+  - name: NClocks25
+    description: (SYWD value + 1).
+    value: 25
+  - name: NClocks26
+    description: (SYWD value + 1).
+    value: 26
+  - name: NClocks27
+    description: (SYWD value + 1).
+    value: 27
+  - name: NClocks28
+    description: (SYWD value + 1).
+    value: 28
+  - name: NClocks29
+    description: (SYWD value + 1).
+    value: 29
+  - name: NClocks3
+    description: (SYWD value + 1).
+    value: 3
+  - name: NClocks30
+    description: (SYWD value + 1).
+    value: 30
+  - name: NClocks4
+    description: (SYWD value + 1).
+    value: 4
+  - name: NClocks5
+    description: (SYWD value + 1).
+    value: 5
+  - name: NClocks6
+    description: (SYWD value + 1).
+    value: 6
+  - name: NClocks7
+    description: (SYWD value + 1).
+    value: 7
+  - name: NClocks8
+    description: (SYWD value + 1).
+    value: 8
+  - name: NClocks9
+    description: (SYWD value + 1).
+    value: 9
+  - name: ThirtytwoClocks
+    description: '32.'
+    value: 31
+  - name: TwoClocks
+    description: '2.'
+    value: 1
+enum/SaiAlphaEnumUniformAlpha:
+  bit_size: 1
+  variants:
+  - name: ExtInTarget
+    description: Generate externally in Target mode.
+    value: 0
+  - name: IntInController
+    description: Generate internally in Controller mode.
+    value: 1
+enum/SaiAlphaEnumVictorAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/SaiAlphaEnumWhiskeyAlpha:
+  bit_size: 1
+  variants:
+  - name: ActiveHigh
+    description: Active high.
+    value: 0
+  - name: ActiveLow
+    description: Active low.
+    value: 1
+enum/SaiAlphaEnumXrayAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Use the normal bit clock source.
+    value: 0
+  - name: Enable
+    description: Swap the bit clock source.
+    value: 1
+enum/SaiAlphaEnumYankeeAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/SaiAlphaEnumZuluAlpha:
+  bit_size: 2
+  variants:
+  - name: BusClock
+    description: Bus clock.
+    value: 0
+  - name: Mclk1
+    description: Controller clock (MCLK) option 1.
+    value: 1
+  - name: Mclk2
+    description: Controller clock (MCLK) option 2.
+    value: 2
+  - name: Mclk3
+    description: Controller clock (MCLK) option 3.
+    value: 3
+enum/SaiAlphaEnumAlphaBravo:
+  bit_size: 2
+  variants:
+  - name: Async
+    description: Asynchronous mode.
+    value: 0
+  - name: SyncWAnotherSaiRx
+    description: Synchronous with another SAI receiver.
+    value: 3
+  - name: SyncWRx
+    description: Synchronous with receiver.
+    value: 1
+  - name: SyncWTx
+    description: Synchronous with another SAI transmitter.
+    value: 2
+enum/SaiAlphaEnumBravoBravo:
+  bit_size: 2
+  variants:
+  - name: Disabled
+    description: Disable.
+    value: 0
+  - name: EnabledOnFifoReads
+    description: Enable on FIFO reads (from transmit shift registers).
+    value: 1
+  - name: EnabledOnFifoReadsWrites
+    description: Enable on FIFO reads (from transmit shift registers) and writes (by software).
+    value: 3
+  - name: EnabledOnFifoWrites
+    description: Enable on FIFO writes (by software).
+    value: 2
+enum/SaiAlphaEnumCharlieBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Continue from the start of the next frame.
+    value: 0
+  - name: Enable
+    description: Continue from the same word that caused the FIFO error.
+    value: 1
+enum/SaiAlphaEnumDeltaBravo:
+  bit_size: 2
+  variants:
+  - name: Disabled
+    description: Disable FIFO packing.
+    value: 0
+  - name: EightBitFifoPacking
+    description: Enable 8-bit FIFO packing.
+    value: 2
+  - name: SixteenBitFifoPacking
+    description: Enable 16-bit FIFO packing.
+    value: 3
+enum/SaiAlphaEnumEchoBravo:
+  bit_size: 1
+  variants:
+  - name: ExtInTargetMode
+    description: Generated externally in Target mode.
+    value: 0
+  - name: IntInControllerMode
+    description: Generated internally in Controller mode.
+    value: 1
+enum/SaiAlphaEnumFoxtrotBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: First bit of the frame.
+    value: 0
+  - name: Enable
+    description: One bit before the first bit of the frame.
+    value: 1
+enum/SaiAlphaEnumGolfBravo:
+  bit_size: 1
+  variants:
+  - name: ActiveHigh
+    description: Active high.
+    value: 0
+  - name: ActiveLow
+    description: Active low.
+    value: 1
+enum/SaiAlphaEnumHotelBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: LSB.
+    value: 0
+  - name: Enable
+    description: MSB.
+    value: 1
+enum/SaiAlphaEnumIndiaBravo:
+  bit_size: 1
+  variants:
+  - name: ContinuousFrameSync
+    description: Generated continuously.
+    value: 0
+  - name: OnDemandFrameSync
+    description: Generated after the FIFO warning flag is cleared.
+    value: 1
+enum/SaiAlphaEnumJulietBravo:
+  bit_size: 5
+  variants:
+  - name: Index0
+    description: '0.'
+    value: 0
+  - name: Index1
+    description: FBT.
+    value: 1
+  - name: Index10
+    description: FBT.
+    value: 10
+  - name: Index2
+    description: FBT.
+    value: 2
+  - name: Index25
+    description: FBT.
+    value: 25
+  - name: Index26
+    description: FBT.
+    value: 26
+  - name: Index27
+    description: FBT.
+    value: 27
+  - name: Index28
+    description: FBT.
+    value: 28
+  - name: Index29
+    description: FBT.
+    value: 29
+  - name: Index3
+    description: FBT.
+    value: 3
+  - name: Index30
+    description: FBT.
+    value: 30
+  - name: Index31
+    description: '31.'
+    value: 31
+  - name: Index4
+    description: FBT.
+    value: 4
+  - name: Index5
+    description: FBT.
+    value: 5
+  - name: Index6
+    description: FBT.
+    value: 6
+  - name: Index7
+    description: FBT.
+    value: 7
+  - name: Index8
+    description: FBT.
+    value: 8
+  - name: Index9
+    description: FBT.
+    value: 9
+enum/SaiAlphaEnumKiloBravo:
+  bit_size: 5
+  variants:
+  - name: Eight
+    description: '8.'
+    value: 7
+  - name: Max
+    description: '32.'
+    value: 31
+  - name: Nine
+    description: '9.'
+    value: 8
+  - name: TenThirtyone10
+    description: (W0W value + 1).
+    value: 10
+  - name: TenThirtyone11
+    description: (W0W value + 1).
+    value: 11
+  - name: TenThirtyone12
+    description: (W0W value + 1).
+    value: 12
+  - name: TenThirtyone13
+    description: (W0W value + 1).
+    value: 13
+  - name: TenThirtyone14
+    description: (W0W value + 1).
+    value: 14
+  - name: TenThirtyone15
+    description: (W0W value + 1).
+    value: 15
+  - name: TenThirtyone16
+    description: (W0W value + 1).
+    value: 16
+  - name: TenThirtyone17
+    description: (W0W value + 1).
+    value: 17
+  - name: TenThirtyone18
+    description: (W0W value + 1).
+    value: 18
+  - name: TenThirtyone25
+    description: (W0W value + 1).
+    value: 25
+  - name: TenThirtyone26
+    description: (W0W value + 1).
+    value: 26
+  - name: TenThirtyone27
+    description: (W0W value + 1).
+    value: 27
+  - name: TenThirtyone28
+    description: (W0W value + 1).
+    value: 28
+  - name: TenThirtyone29
+    description: (W0W value + 1).
+    value: 29
+  - name: TenThirtyone30
+    description: (W0W value + 1).
+    value: 30
+  - name: TenThirtyone9
+    description: (W0W value + 1).
+    value: 9
+enum/SaiAlphaEnumLimaBravo:
+  bit_size: 5
+  variants:
+  - name: Eight
+    description: '8.'
+    value: 7
+  - name: Max
+    description: '32.'
+    value: 31
+  - name: Nine
+    description: '9.'
+    value: 8
+  - name: TenThirtyone10
+    description: (WNW value + 1).
+    value: 10
+  - name: TenThirtyone11
+    description: (WNW value + 1).
+    value: 11
+  - name: TenThirtyone12
+    description: (WNW value + 1).
+    value: 12
+  - name: TenThirtyone13
+    description: (WNW value + 1).
+    value: 13
+  - name: TenThirtyone14
+    description: (WNW value + 1).
+    value: 14
+  - name: TenThirtyone15
+    description: (WNW value + 1).
+    value: 15
+  - name: TenThirtyone16
+    description: (WNW value + 1).
+    value: 16
+  - name: TenThirtyone17
+    description: (WNW value + 1).
+    value: 17
+  - name: TenThirtyone18
+    description: (WNW value + 1).
+    value: 18
+  - name: TenThirtyone25
+    description: (WNW value + 1).
+    value: 25
+  - name: TenThirtyone26
+    description: (WNW value + 1).
+    value: 26
+  - name: TenThirtyone27
+    description: (WNW value + 1).
+    value: 27
+  - name: TenThirtyone28
+    description: (WNW value + 1).
+    value: 28
+  - name: TenThirtyone29
+    description: (WNW value + 1).
+    value: 29
+  - name: TenThirtyone30
+    description: (WNW value + 1).
+    value: 30
+  - name: TenThirtyone9
+    description: (WNW value + 1).
+    value: 9
+enum/SaiAlphaEnumMikeBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/SaiAlphaEnumNovemberBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/SaiAlphaEnumOscarBravo:
+  bit_size: 1
+  variants:
+  - name: Flag
+    description: Detected.
+    value: 1
+  - name: NoFlag
+    description: Not detected.
+    value: 0
+enum/SaiAlphaEnumPapaBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/SaiAlphaEnumQuebecBravo:
+  bit_size: 1
+  variants:
+  - name: NoEffect
+    description: No effect.
+    value: 0
+  - name: Reset
+    description: FIFO reset.
+    value: 1
+enum/SaiAlphaEnumRomeoBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/SaiAlphaEnumSierraBravo:
+  bit_size: 1
+  variants:
+  - name: Flag
+    description: Watermark reached.
+    value: 1
+  - name: NoFlag
+    description: Watermark not reached.
+    value: 0
+enum/SaiAlphaEnumTangoBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/SaiAlphaEnumUniformBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/SaiAlphaEnumVictorBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Not empty.
+    value: 0
+  - name: Enable
+    description: Empty.
+    value: 1
+enum/SaiAlphaEnumWhiskeyBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/SaiAlphaEnumXrayBravo:
+  bit_size: 1
+  variants:
+  - name: Flag
+    description: Detected.
+    value: 1
+  - name: NoFlag
+    description: Not detected.
+    value: 0
+enum/SaiAlphaEnumYankeeBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/SaiAlphaEnumZuluBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: No effect.
+    value: 0
+  - name: Enable
+    description: Software reset.
+    value: 1
+enum/SaiAlphaEnumAlphaCharlie:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/SaiAlphaEnumBravoCharlie:
+  bit_size: 1
+  variants:
+  - name: Flag
+    description: Detected.
+    value: 1
+  - name: NoFlag
+    description: Not detected.
+    value: 0
+enum/SaiAlphaEnumCharlieCharlie:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/SaiAlphaEnumDeltaCharlie:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable (or transmitter has been disabled and has not yet reached the end of the frame).
+    value: 1
+enum/SaiAlphaEnumEchoCharlie:
+  bit_size: 3
+  variants:
+  - name: Max
+    description: '8.'
+    value: 7
+  - name: Min
+    description: '1.'
+    value: 0
+  - name: Two
+    description: '2.'
+    value: 1
+  - name: WatermarkValue2
+    description: (TFW +1).
+    value: 2
+  - name: WatermarkValue3
+    description: (TFW +1).
+    value: 3
+  - name: WatermarkValue4
+    description: (TFW +1).
+    value: 4
+  - name: WatermarkValue5
+    description: (TFW +1).
+    value: 5
+  - name: WatermarkValue6
+    description: (TFW +1).
+    value: 6
+enum/SaiAlphaEnumFoxtrotCharlie:
+  bit_size: 32
+  variants:
+  - name: WordNEnabled
+    description: Enable.
+    value: 0
+  - name: WordNMasked
+    description: Mask.
+    value: 1
+enum/SaiAlphaEnumGolfCharlie:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: No effect.
+    value: 0
+  - name: Enable
+    description: Next FIFO to be written.
+    value: 1
+enum/SaiAlphaEnumHotelCharlie:
+  bit_size: 5
+  variants:
+  - name: Word1
+    description: Word 1.
+    value: 0
+  - name: Word2
+    description: Word 2.
+    value: 1
+  - name: WordMax
+    description: Word 32.
+    value: 31
+  - name: WordN10
+    description: Word (WDFL value + 1).
+    value: 10
+  - name: WordN11
+    description: Word (WDFL value + 1).
+    value: 11
+  - name: WordN2
+    description: Word (WDFL value + 1).
+    value: 2
+  - name: WordN25
+    description: Word (WDFL value + 1).
+    value: 25
+  - name: WordN26
+    description: Word (WDFL value + 1).
+    value: 26
+  - name: WordN27
+    description: Word (WDFL value + 1).
+    value: 27
+  - name: WordN28
+    description: Word (WDFL value + 1).
+    value: 28
+  - name: WordN29
+    description: Word (WDFL value + 1).
+    value: 29
+  - name: WordN3
+    description: Word (WDFL value + 1).
+    value: 3
+  - name: WordN30
+    description: Word (WDFL value + 1).
+    value: 30
+  - name: WordN4
+    description: Word (WDFL value + 1).
+    value: 4
+  - name: WordN5
+    description: Word (WDFL value + 1).
+    value: 5
+  - name: WordN6
+    description: Word (WDFL value + 1).
+    value: 6
+  - name: WordN7
+    description: Word (WDFL value + 1).
+    value: 7
+  - name: WordN8
+    description: Word (WDFL value + 1).
+    value: 8
+  - name: WordN9
+    description: Word (WDFL value + 1).
+    value: 9

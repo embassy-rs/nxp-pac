@@ -64,6 +64,17 @@ jobs:
           - mimxrt685s_cm33
           - mcxn947_cm33_core0
           - mcxn947_cm33_core1
+          - mcxn235
+          - mcxn236
+          - mcxn247
+          - mcxn526
+          - mcxn527
+          - mcxn536
+          - mcxn537
+          - mcxn546
+          - mcxn547
+          - mcxn946
+          - mcxn947
           - mcxa156
           - mcxa175
           - mcxa176
@@ -124,6 +135,17 @@ jobs:
           - mcxa566
           - mcxa567
           - mcxa577
+          - mcxn235
+          - mcxn236
+          - mcxn247
+          - mcxn526
+          - mcxn527
+          - mcxn536
+          - mcxn537
+          - mcxn546
+          - mcxn547
+          - mcxn946
+          - mcxn947
           - lpc55s16
           - lpc55s69_cm33_core0
           - lpc55s69_cm33_core1

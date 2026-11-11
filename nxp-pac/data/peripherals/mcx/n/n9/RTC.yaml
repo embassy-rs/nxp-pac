@@ -1,0 +1,921 @@
+# NXP mcux-soc-svd 7c1f00bdd6263f0b93466f5e73e5fc55a744b879; native chiptool import.
+# Source instance geometry is retained in explicit block variants; see private source bindings.
+# Unannotated fieldsets construct zero in software, not a claimed hardware reset.
+# Command/W1C/SET/CLR/TOG construction defaults are zero masks; no RMW semantics are implied.
+# Source: MCXN946_cm33_core0.xml RTC0 sha256 b986328ff1224adaeea70522fa61383a5f89f6313dfc3e7df92e8894fdab72d7
+# Source: MCXN946_cm33_core1.xml RTC0 sha256 57e8910317a1cb467d56726cb822c57806aa247542969bcf12dbcc8822187916
+# Source: MCXN947_cm33_core0.xml RTC0 sha256 629ac7cdc82684e467b0cf36a8aef697bc1eb65c2047d6610b7b5df65692e590
+# Source: MCXN947_cm33_core1.xml RTC0 sha256 0d77f3d23cad1d5eab631fd7f5ade4044d8aaca2d9d13cd11f3836d27fe089fb
+block/RtcAlpha:
+  description: Real Time Clock.
+  items:
+  - name: yearmon
+    description: Year and Month Counters.
+    byte_offset: 0
+    bit_size: 16
+    fieldset: RtcAlphaFieldsetQuebec
+  - name: days
+    description: Days and Day-of-Week Counters.
+    byte_offset: 2
+    bit_size: 16
+    fieldset: RtcAlphaFieldsetGolf
+  - name: hourmin
+    description: Hours and Minutes Counters.
+    byte_offset: 4
+    bit_size: 16
+    fieldset: RtcAlphaFieldsetKilo
+  - name: seconds
+    description: Seconds Counters.
+    byte_offset: 6
+    bit_size: 16
+    fieldset: RtcAlphaFieldsetOscar
+  - name: alm_yearmon
+    description: Year and Months Alarm.
+    byte_offset: 8
+    bit_size: 16
+    fieldset: RtcAlphaFieldsetDelta
+  - name: alm_days
+    description: Days Alarm.
+    byte_offset: 10
+    bit_size: 16
+    fieldset: RtcAlphaFieldsetAlpha
+  - name: alm_hourmin
+    description: Hours and Minutes Alarm.
+    byte_offset: 12
+    bit_size: 16
+    fieldset: RtcAlphaFieldsetBravo
+  - name: alm_seconds
+    description: Seconds Alarm.
+    byte_offset: 14
+    bit_size: 16
+    fieldset: RtcAlphaFieldsetCharlie
+  - name: ctrl
+    description: Control.
+    byte_offset: 16
+    bit_size: 16
+    fieldset: RtcAlphaFieldsetFoxtrot
+  - name: status
+    description: Status.
+    byte_offset: 18
+    bit_size: 16
+    fieldset: RtcAlphaFieldsetPapa
+  - name: isr
+    description: Interrupt Status.
+    byte_offset: 20
+    bit_size: 16
+    fieldset: RtcAlphaFieldsetMike
+  - name: ier
+    description: Interrupt Enable.
+    byte_offset: 22
+    bit_size: 16
+    fieldset: RtcAlphaFieldsetLima
+  - name: rtc_test2
+    description: Sub Second Counter.
+    byte_offset: 28
+    access: Read
+    bit_size: 16
+    fieldset: RtcAlphaFieldsetNovember
+  - name: dst_hour
+    description: Daylight Saving Hour.
+    byte_offset: 34
+    bit_size: 16
+    fieldset: RtcAlphaFieldsetIndia
+  - name: dst_month
+    description: Daylight Saving Month.
+    byte_offset: 36
+    bit_size: 16
+    fieldset: RtcAlphaFieldsetJuliet
+  - name: dst_day
+    description: Daylight Saving Day.
+    byte_offset: 38
+    bit_size: 16
+    fieldset: RtcAlphaFieldsetHotel
+  - name: compen
+    description: Compensation.
+    byte_offset: 40
+    bit_size: 16
+    fieldset: RtcAlphaFieldsetEcho
+fieldset/RtcAlphaFieldsetAlpha:
+  description: Days Alarm.
+  bit_size: 16
+  fields:
+  - name: alm_day
+    description: Days Value for Alarm.
+    bit_offset: 0
+    bit_size: 5
+fieldset/RtcAlphaFieldsetBravo:
+  description: Hours and Minutes Alarm.
+  bit_size: 16
+  fields:
+  - name: alm_min
+    description: Minutes Value for Alarm.
+    bit_offset: 0
+    bit_size: 6
+  - name: alm_hour
+    description: Hours Value for Alarm.
+    bit_offset: 8
+    bit_size: 5
+fieldset/RtcAlphaFieldsetCharlie:
+  description: Seconds Alarm.
+  bit_size: 16
+  fields:
+  - name: alm_sec
+    description: Seconds Alarm Value.
+    bit_offset: 0
+    bit_size: 6
+  - name: dec_sec
+    description: Decrement Seconds Counter by 1.
+    bit_offset: 8
+    bit_size: 1
+  - name: inc_sec
+    description: Increment Seconds Counter by 1.
+    bit_offset: 9
+    bit_size: 1
+fieldset/RtcAlphaFieldsetDelta:
+  description: Year and Months Alarm.
+  bit_size: 16
+  fields:
+  - name: alm_mon
+    description: Months Value for Alarm.
+    bit_offset: 0
+    bit_size: 4
+  - name: alm_year
+    description: Year Value for Alarm.
+    bit_offset: 8
+    bit_size: 8
+fieldset/RtcAlphaFieldsetEcho:
+  description: Compensation.
+  bit_size: 16
+  fields:
+  - name: compen_val
+    description: Compensation Value.
+    bit_offset: 0
+    bit_size: 16
+fieldset/RtcAlphaFieldsetFoxtrot:
+  description: Control.
+  bit_size: 16
+  fields:
+  - name: fineen
+    description: Fine Compensation Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: RtcAlphaEnumNovember
+  - name: comp_en
+    description: Compensation Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: RtcAlphaEnumIndia
+  - name: alm_match
+    description: Alarm Match.
+    bit_offset: 2
+    bit_size: 2
+    enum: RtcAlphaEnumCharlie
+  - name: dst_en
+    description: Daylight Saving Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: RtcAlphaEnumMike
+  - name: swr
+    description: Software Reset.
+    bit_offset: 8
+    bit_size: 1
+    enum: RtcAlphaEnumOscarAlpha
+  - name: clk_sel
+    description: RTC Clock Select.
+    bit_offset: 9
+    bit_size: 1
+    enum: RtcAlphaEnumEcho
+  - name: clko_dis
+    description: Clock Output Disable.
+    bit_offset: 10
+    bit_size: 1
+    enum: RtcAlphaEnumFoxtrot
+  - name: clkout
+    description: RTC Clock Output Selection.
+    bit_offset: 13
+    bit_size: 2
+    enum: RtcAlphaEnumGolf
+fieldset/RtcAlphaFieldsetGolf:
+  description: Days and Day-of-Week Counters.
+  bit_size: 16
+  fields:
+  - name: day_cnt
+    description: Days Counter Value.
+    bit_offset: 0
+    bit_size: 5
+  - name: dow
+    description: Day of Week Counter Value.
+    bit_offset: 8
+    bit_size: 3
+    enum: RtcAlphaEnumLima
+fieldset/RtcAlphaFieldsetHotel:
+  description: Daylight Saving Day.
+  bit_size: 16
+  fields:
+  - name: dst_end_day
+    description: Daylight Saving Time (DST) Day End Value.
+    bit_offset: 0
+    bit_size: 5
+  - name: dst_start_day
+    description: Daylight Saving Time (DST) Day Start Value.
+    bit_offset: 8
+    bit_size: 5
+fieldset/RtcAlphaFieldsetIndia:
+  description: Daylight Saving Hour.
+  bit_size: 16
+  fields:
+  - name: dst_end_hour
+    description: Daylight Saving Time (DST) Hours End Value.
+    bit_offset: 0
+    bit_size: 5
+  - name: dst_start_hour
+    description: Daylight Saving Time (DST) Hours Start Value.
+    bit_offset: 8
+    bit_size: 5
+fieldset/RtcAlphaFieldsetJuliet:
+  description: Daylight Saving Month.
+  bit_size: 16
+  fields:
+  - name: dst_end_month
+    description: Daylight Saving Time (DST) Month End Value.
+    bit_offset: 0
+    bit_size: 4
+  - name: dst_start_month
+    description: Daylight Saving Time (DST) Month Start Value.
+    bit_offset: 8
+    bit_size: 4
+fieldset/RtcAlphaFieldsetKilo:
+  description: Hours and Minutes Counters.
+  bit_size: 16
+  fields:
+  - name: min_cnt
+    description: Minutes Counter Value.
+    bit_offset: 0
+    bit_size: 6
+  - name: hour_cnt
+    description: Hours Counter Value.
+    bit_offset: 8
+    bit_size: 5
+fieldset/RtcAlphaFieldsetLima:
+  description: Interrupt Enable.
+  bit_size: 16
+  fields:
+  - name: alm_ie
+    description: Alarm Interrupt Enable.
+    bit_offset: 2
+    bit_size: 1
+    enum: RtcAlphaEnumAlpha
+  - name: day_ie
+    description: Days Interrupt Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: RtcAlphaEnumJuliet
+  - name: hour_ie
+    description: Hours Interrupt Enable.
+    bit_offset: 4
+    bit_size: 1
+    enum: RtcAlphaEnumOscar
+  - name: min_ie
+    description: Minutes Interrupt Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: RtcAlphaEnumLimaAlpha
+  - name: ie_1hz
+    description: 1 Hz Interval Interrupt Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: RtcAlphaEnumSierra
+  - name: ie_2hz
+    description: 2 Hz Interval Interrupt Enable.
+    bit_offset: 7
+    bit_size: 1
+    enum: RtcAlphaEnumUniform
+  - name: ie_4hz
+    description: 4 Hz Interval Interrupt Enable.
+    bit_offset: 8
+    bit_size: 1
+    enum: RtcAlphaEnumWhiskey
+  - name: ie_8hz
+    description: 8 Hz Interval Interrupt Enable.
+    bit_offset: 9
+    bit_size: 1
+    enum: RtcAlphaEnumZulu
+  - name: ie_16hz
+    description: 16 Hz Interval Interrupt Enable.
+    bit_offset: 10
+    bit_size: 1
+    enum: RtcAlphaEnumRomeo
+  - name: ie_32hz
+    description: 32 Hz Interval Interrupt Enable.
+    bit_offset: 11
+    bit_size: 1
+    enum: RtcAlphaEnumVictor
+  - name: ie_64hz
+    description: 64 Hz Interval Interrupt Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: RtcAlphaEnumYankee
+  - name: ie_128hz
+    description: 128 Hz Interval Interrupt Enable.
+    bit_offset: 13
+    bit_size: 1
+    enum: RtcAlphaEnumQuebec
+  - name: ie_256hz
+    description: 256 Hz Interval Interrupt Enable.
+    bit_offset: 14
+    bit_size: 1
+    enum: RtcAlphaEnumTango
+  - name: ie_512hz
+    description: 512 Hz Interval Interrupt Enable.
+    bit_offset: 15
+    bit_size: 1
+    enum: RtcAlphaEnumXray
+fieldset/RtcAlphaFieldsetMike:
+  description: Interrupt Status.
+  bit_size: 16
+  fields:
+  - name: alm_is
+    description: Alarm Interrupt Status.
+    bit_offset: 2
+    bit_size: 1
+    enum: RtcAlphaEnumBravo
+  - name: day_is
+    description: Days Interrupt Status.
+    bit_offset: 3
+    bit_size: 1
+    enum: RtcAlphaEnumKilo
+  - name: hour_is
+    description: Hours Interrupt Status.
+    bit_offset: 4
+    bit_size: 1
+    enum: RtcAlphaEnumPapa
+  - name: min_is
+    description: Minutes Interrupt Status.
+    bit_offset: 5
+    bit_size: 1
+    enum: RtcAlphaEnumMikeAlpha
+  - name: is_1hz
+    description: 1 Hz Interval Interrupt Status.
+    bit_offset: 6
+    bit_size: 1
+    enum: RtcAlphaEnumDeltaAlpha
+  - name: is_2hz
+    description: 2 Hz Interval Interrupt Status.
+    bit_offset: 7
+    bit_size: 1
+    enum: RtcAlphaEnumFoxtrotAlpha
+  - name: is_4hz
+    description: 4 Hz Interval Interrupt Status.
+    bit_offset: 8
+    bit_size: 1
+    enum: RtcAlphaEnumHotelAlpha
+  - name: is_8hz
+    description: 8 Hz Interval Interrupt Status.
+    bit_offset: 9
+    bit_size: 1
+    enum: RtcAlphaEnumKiloAlpha
+  - name: is_16hz
+    description: 16 Hz Interval Interrupt Status.
+    bit_offset: 10
+    bit_size: 1
+    enum: RtcAlphaEnumCharlieAlpha
+  - name: is_32hz
+    description: 32 Hz Interval Interrupt Status.
+    bit_offset: 11
+    bit_size: 1
+    enum: RtcAlphaEnumGolfAlpha
+  - name: is_64hz
+    description: 64 Hz Interval Interrupt Status.
+    bit_offset: 12
+    bit_size: 1
+    enum: RtcAlphaEnumJulietAlpha
+  - name: is_128hz
+    description: 128 Hz Interval Interrupt Status.
+    bit_offset: 13
+    bit_size: 1
+    enum: RtcAlphaEnumBravoAlpha
+  - name: is_256hz
+    description: 256 Hz Interval Interrupt Status.
+    bit_offset: 14
+    bit_size: 1
+    enum: RtcAlphaEnumEchoAlpha
+  - name: is_512hz
+    description: 512 Hz Interval Interrupt Status.
+    bit_offset: 15
+    bit_size: 1
+    enum: RtcAlphaEnumIndiaAlpha
+fieldset/RtcAlphaFieldsetNovember:
+  description: Sub Second Counter.
+  bit_size: 16
+  fields:
+  - name: sub_second_count
+    description: Sub Second Counter Value.
+    bit_offset: 0
+    bit_size: 16
+fieldset/RtcAlphaFieldsetOscar:
+  description: Seconds Counters.
+  bit_size: 16
+  fields:
+  - name: sec_cnt
+    description: Seconds Counter Value.
+    bit_offset: 0
+    bit_size: 6
+fieldset/RtcAlphaFieldsetPapa:
+  description: Status.
+  bit_size: 16
+  fields:
+  - name: inval_bit
+    description: Invalidate CPU Read/Write Access.
+    bit_offset: 0
+    bit_size: 1
+    enum: RtcAlphaEnumAlphaAlpha
+  - name: write_prot_en
+    description: Write Protect Enable Status.
+    bit_offset: 1
+    bit_size: 1
+    enum: RtcAlphaEnumQuebecAlpha
+  - name: cmp_int
+    description: Compensation Interval.
+    bit_offset: 5
+    bit_size: 1
+  - name: we
+    description: Write Enable.
+    bit_offset: 6
+    bit_size: 2
+    enum: RtcAlphaEnumPapaAlpha
+  - name: bus_err
+    description: Bus Error.
+    bit_offset: 8
+    bit_size: 1
+    enum: RtcAlphaEnumDelta
+  - name: cmp_done
+    description: Compensation Done.
+    bit_offset: 11
+    bit_size: 1
+    enum: RtcAlphaEnumHotel
+fieldset/RtcAlphaFieldsetQuebec:
+  description: Year and Month Counters.
+  bit_size: 16
+  fields:
+  - name: mon_cnt
+    description: Month Counter.
+    bit_offset: 0
+    bit_size: 4
+    enum: RtcAlphaEnumNovemberAlpha
+  - name: yrofst
+    description: Year Offset Count Value.
+    bit_offset: 8
+    bit_size: 8
+enum/RtcAlphaEnumAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt is disabled.
+    value: 0
+  - name: Enabled
+    description: Interrupt is enabled.
+    value: 1
+enum/RtcAlphaEnumBravo:
+  bit_size: 1
+  variants:
+  - name: Asserted
+    description: Interrupt is asserted.
+    value: 1
+  - name: Deasserted
+    description: Interrupt is de-asserted.
+    value: 0
+enum/RtcAlphaEnumCharlie:
+  bit_size: 2
+  variants:
+  - name: Days
+    description: Only seconds, minutes, hours, and days matched.
+    value: 1
+  - name: Hours
+    description: Only seconds, minutes, and hours matched.
+    value: 0
+  - name: Months
+    description: Only seconds, minutes, hours, days, and months matched.
+    value: 2
+  - name: Year
+    description: Only seconds, minutes, hours, days, months, and year (offset) matched.
+    value: 3
+enum/RtcAlphaEnumDelta:
+  bit_size: 1
+  variants:
+  - name: Asserted
+    description: Read or write accesses occurred when STATUS[INVAL_BIT] was asserted.
+    value: 1
+  - name: Normal
+    description: Read and write accesses are normal.
+    value: 0
+enum/RtcAlphaEnumEcho:
+  bit_size: 1
+  variants:
+  - name: Clk16384khz
+    description: 16.384 kHz clock is selected.
+    value: 0
+  - name: Clk32768khz
+    description: 32.768 kHz clock is selected.
+    value: 1
+enum/RtcAlphaEnumFoxtrot:
+  bit_size: 1
+  variants:
+  - name: NotToOtherPeripherals
+    description: The selected clock is not output to other peripherals.
+    value: 1
+  - name: ToOtherPeripherals
+    description: The selected clock is output to other peripherals.
+    value: 0
+enum/RtcAlphaEnumGolf:
+  bit_size: 2
+  variants:
+  - name: Clk1hzCoarse
+    description: Coarse 1 Hz clock with both precise edges.
+    value: 3
+  - name: Clk1hzFine
+    description: Fine 1 Hz clock with both precise edges.
+    value: 1
+  - name: Clk32168khz
+    description: 32.768 or 16.384 kHz clock.
+    value: 2
+  - name: NoOutputClk
+    description: No output clock.
+    value: 0
+enum/RtcAlphaEnumHotel:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Compensation busy or not enabled.
+    value: 0
+  - name: Enabled
+    description: Compensation completed.
+    value: 1
+enum/RtcAlphaEnumIndia:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Coarse compensation is disabled.
+    value: 0
+  - name: Enabled
+    description: Coarse compensation is enabled.
+    value: 1
+enum/RtcAlphaEnumJuliet:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt is disabled.
+    value: 0
+  - name: Enabled
+    description: Interrupt is enabled.
+    value: 1
+enum/RtcAlphaEnumKilo:
+  bit_size: 1
+  variants:
+  - name: Asserted
+    description: Interrupt is asserted.
+    value: 1
+  - name: Deasserted
+    description: Interrupt is de-asserted.
+    value: 0
+enum/RtcAlphaEnumLima:
+  bit_size: 3
+  variants:
+  - name: Friday
+    description: Friday.
+    value: 5
+  - name: Monday
+    description: Monday.
+    value: 1
+  - name: Saturday
+    description: Saturday.
+    value: 6
+  - name: Sunday
+    description: Sunday.
+    value: 0
+  - name: Thursday
+    description: Thursday.
+    value: 4
+  - name: Tuesday
+    description: Tuesday.
+    value: 2
+  - name: Wednesday
+    description: Wednesday.
+    value: 3
+enum/RtcAlphaEnumMike:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disabled.
+    value: 0
+  - name: Enabled
+    description: Enabled.
+    value: 1
+enum/RtcAlphaEnumNovember:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Fine compensation is disabled.
+    value: 0
+  - name: Enabled
+    description: Fine compensation is enabled.
+    value: 1
+enum/RtcAlphaEnumOscar:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt is disabled.
+    value: 0
+  - name: Enabled
+    description: Interrupt is enabled.
+    value: 1
+enum/RtcAlphaEnumPapa:
+  bit_size: 1
+  variants:
+  - name: Asserted
+    description: Interrupt is asserted.
+    value: 1
+  - name: Deasserted
+    description: Interrupt is de-asserted.
+    value: 0
+enum/RtcAlphaEnumQuebec:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt is disabled.
+    value: 0
+  - name: Enabled
+    description: Interrupt is enabled.
+    value: 1
+enum/RtcAlphaEnumRomeo:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt is disabled.
+    value: 0
+  - name: Enabled
+    description: Interrupt is enabled.
+    value: 1
+enum/RtcAlphaEnumSierra:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt is disabled.
+    value: 0
+  - name: Enabled
+    description: Interrupt is enabled.
+    value: 1
+enum/RtcAlphaEnumTango:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt is disabled.
+    value: 0
+  - name: Enabled
+    description: Interrupt is enabled.
+    value: 1
+enum/RtcAlphaEnumUniform:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt is disabled.
+    value: 0
+  - name: Enabled
+    description: Interrupt is enabled.
+    value: 1
+enum/RtcAlphaEnumVictor:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt is disabled.
+    value: 0
+  - name: Enabled
+    description: Interrupt is enabled.
+    value: 1
+enum/RtcAlphaEnumWhiskey:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt is disabled.
+    value: 0
+  - name: Enabled
+    description: Interrupt is enabled.
+    value: 1
+enum/RtcAlphaEnumXray:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt is disabled.
+    value: 0
+  - name: Enabled
+    description: Interrupt is enabled.
+    value: 1
+enum/RtcAlphaEnumYankee:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt is disabled.
+    value: 0
+  - name: Enabled
+    description: Interrupt is enabled.
+    value: 1
+enum/RtcAlphaEnumZulu:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt is disabled.
+    value: 0
+  - name: Enabled
+    description: Interrupt is enabled.
+    value: 1
+enum/RtcAlphaEnumAlphaAlpha:
+  bit_size: 1
+  variants:
+  - name: Invalid
+    description: Time and date counter values are changing or time and date is invalid and cannot be read or written.
+    value: 1
+  - name: Valid
+    description: Time and date counters can be read or written. Time and date is valid.
+    value: 0
+enum/RtcAlphaEnumBravoAlpha:
+  bit_size: 1
+  variants:
+  - name: Asserted
+    description: Interrupt is asserted.
+    value: 1
+  - name: Deasserted
+    description: Interrupt is de-asserted.
+    value: 0
+enum/RtcAlphaEnumCharlieAlpha:
+  bit_size: 1
+  variants:
+  - name: Asserted
+    description: Interrupt is asserted.
+    value: 1
+  - name: Deasserted
+    description: Interrupt is de-asserted.
+    value: 0
+enum/RtcAlphaEnumDeltaAlpha:
+  bit_size: 1
+  variants:
+  - name: Asserted
+    description: Interrupt is asserted.
+    value: 1
+  - name: Deasserted
+    description: Interrupt is de-asserted.
+    value: 0
+enum/RtcAlphaEnumEchoAlpha:
+  bit_size: 1
+  variants:
+  - name: Asserted
+    description: Interrupt is asserted.
+    value: 1
+  - name: Deasserted
+    description: Interrupt is de-asserted.
+    value: 0
+enum/RtcAlphaEnumFoxtrotAlpha:
+  bit_size: 1
+  variants:
+  - name: Asserted
+    description: Interrupt is asserted.
+    value: 1
+  - name: Deasserted
+    description: Interrupt is de-asserted.
+    value: 0
+enum/RtcAlphaEnumGolfAlpha:
+  bit_size: 1
+  variants:
+  - name: Asserted
+    description: Interrupt is asserted.
+    value: 1
+  - name: Deasserted
+    description: Interrupt is de-asserted.
+    value: 0
+enum/RtcAlphaEnumHotelAlpha:
+  bit_size: 1
+  variants:
+  - name: Asserted
+    description: Interrupt is asserted.
+    value: 1
+  - name: Deasserted
+    description: Interrupt is de-asserted.
+    value: 0
+enum/RtcAlphaEnumIndiaAlpha:
+  bit_size: 1
+  variants:
+  - name: Asserted
+    description: Interrupt is asserted.
+    value: 1
+  - name: Deasserted
+    description: Interrupt is de-asserted.
+    value: 0
+enum/RtcAlphaEnumJulietAlpha:
+  bit_size: 1
+  variants:
+  - name: Asserted
+    description: Interrupt is asserted.
+    value: 1
+  - name: Deasserted
+    description: Interrupt is de-asserted.
+    value: 0
+enum/RtcAlphaEnumKiloAlpha:
+  bit_size: 1
+  variants:
+  - name: Asserted
+    description: Interrupt is asserted.
+    value: 1
+  - name: Deasserted
+    description: Interrupt is de-asserted.
+    value: 0
+enum/RtcAlphaEnumLimaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt is disabled.
+    value: 0
+  - name: Enabled
+    description: Interrupt is enabled.
+    value: 1
+enum/RtcAlphaEnumMikeAlpha:
+  bit_size: 1
+  variants:
+  - name: Asserted
+    description: Interrupt is asserted.
+    value: 1
+  - name: Deasserted
+    description: Interrupt is de-asserted.
+    value: 0
+enum/RtcAlphaEnumNovemberAlpha:
+  bit_size: 4
+  variants:
+  - name: April
+    description: April.
+    value: 4
+  - name: August
+    description: August.
+    value: 8
+  - name: December
+    description: December.
+    value: 12
+  - name: February
+    description: February.
+    value: 2
+  - name: IllegalValue0
+    description: Illegal Value.
+    value: 0
+  - name: IllegalValue13
+    description: Illegal Value.
+    value: 13
+  - name: IllegalValue14
+    description: Illegal Value.
+    value: 14
+  - name: IllegalValue15
+    description: Illegal Value.
+    value: 15
+  - name: January
+    description: January.
+    value: 1
+  - name: July
+    description: July.
+    value: 7
+  - name: June
+    description: June.
+    value: 6
+  - name: March
+    description: March.
+    value: 3
+  - name: May
+    description: May.
+    value: 5
+  - name: November
+    description: November.
+    value: 11
+  - name: October
+    description: October.
+    value: 10
+  - name: September
+    description: September.
+    value: 9
+enum/RtcAlphaEnumOscarAlpha:
+  bit_size: 1
+  variants:
+  - name: Asserted
+    description: Software Reset asserted.
+    value: 1
+  - name: Cleared
+    description: Software Reset cleared.
+    value: 0
+enum/RtcAlphaEnumPapaAlpha:
+  bit_size: 2
+  variants:
+  - name: Locked
+    description: Enable Write Protection - Registers are locked.
+    value: 2
+enum/RtcAlphaEnumQuebecAlpha:
+  bit_size: 1
+  variants:
+  - name: Locked
+    description: Registers are locked and in read-only mode.
+    value: 1
+  - name: Unlocked
+    description: Registers are unlocked and can be accessed.
+    value: 0

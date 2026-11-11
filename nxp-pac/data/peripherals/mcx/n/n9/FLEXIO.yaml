@@ -1,0 +1,1112 @@
+# NXP mcux-soc-svd 7c1f00bdd6263f0b93466f5e73e5fc55a744b879; native chiptool import.
+# Source instance geometry is retained in explicit block variants; see private source bindings.
+# Unannotated fieldsets construct zero in software, not a claimed hardware reset.
+# Command/W1C/SET/CLR/TOG construction defaults are zero masks; no RMW semantics are implied.
+# Source: MCXN946_cm33_core0.xml FLEXIO0 sha256 b986328ff1224adaeea70522fa61383a5f89f6313dfc3e7df92e8894fdab72d7
+# Source: MCXN946_cm33_core1.xml FLEXIO0 sha256 57e8910317a1cb467d56726cb822c57806aa247542969bcf12dbcc8822187916
+# Source: MCXN947_cm33_core0.xml FLEXIO0 sha256 629ac7cdc82684e467b0cf36a8aef697bc1eb65c2047d6610b7b5df65692e590
+# Source: MCXN947_cm33_core1.xml FLEXIO0 sha256 0d77f3d23cad1d5eab631fd7f5ade4044d8aaca2d9d13cd11f3836d27fe089fb
+block/FlexioAlpha:
+  description: FLEXIO.
+  items:
+  - name: verid
+    description: Version ID.
+    byte_offset: 0
+    access: Read
+    fieldset: FlexioAlphaFieldsetNovemberAlpha
+  - name: param
+    description: Parameter.
+    byte_offset: 4
+    access: Read
+    fieldset: FlexioAlphaFieldsetBravo
+  - name: ctrl
+    description: FLEXIO Control.
+    byte_offset: 8
+    fieldset: FlexioAlphaFieldsetAlpha
+  - name: pin
+    description: Pin State.
+    byte_offset: 12
+    access: Read
+    fieldset: FlexioAlphaFieldsetCharlie
+  - name: shiftstat
+    description: Shifter Status.
+    byte_offset: 16
+    fieldset: FlexioAlphaFieldsetDeltaAlpha
+  - name: shifterr
+    description: Shifter Error.
+    byte_offset: 20
+    fieldset: FlexioAlphaFieldsetAlphaAlpha
+  - name: timstat
+    description: Timer Status Flag.
+    byte_offset: 24
+    fieldset: FlexioAlphaFieldsetKiloAlpha
+  - name: shiftsien
+    description: Shifter Status Interrupt Enable.
+    byte_offset: 32
+    fieldset: FlexioAlphaFieldsetCharlieAlpha
+  - name: shifteien
+    description: Shifter Error Interrupt Enable.
+    byte_offset: 36
+    fieldset: FlexioAlphaFieldsetZulu
+  - name: timien
+    description: Timer Interrupt Enable.
+    byte_offset: 40
+    fieldset: FlexioAlphaFieldsetJulietAlpha
+  - name: shiftsden
+    description: Shifter Status DMA Enable.
+    byte_offset: 48
+    fieldset: FlexioAlphaFieldsetBravoAlpha
+  - name: timersden
+    description: Timer Status DMA Enable.
+    byte_offset: 56
+    fieldset: FlexioAlphaFieldsetIndiaAlpha
+  - name: shiftstate
+    description: Shifter State.
+    byte_offset: 64
+    fieldset: FlexioAlphaFieldsetEchoAlpha
+  - name: trgstat
+    description: Trigger Status.
+    byte_offset: 72
+    fieldset: FlexioAlphaFieldsetLimaAlpha
+  - name: trigien
+    description: External Trigger Interrupt Enable.
+    byte_offset: 76
+    fieldset: FlexioAlphaFieldsetMikeAlpha
+  - name: pinstat
+    description: Pin Status.
+    byte_offset: 80
+    fieldset: FlexioAlphaFieldsetMike
+  - name: pinien
+    description: Pin Interrupt Enable.
+    byte_offset: 84
+    fieldset: FlexioAlphaFieldsetEcho
+  - name: pinren
+    description: Pin Rising Edge Enable.
+    byte_offset: 88
+    fieldset: FlexioAlphaFieldsetLima
+  - name: pinfen
+    description: Pin Falling Edge Enable.
+    byte_offset: 92
+    fieldset: FlexioAlphaFieldsetDelta
+  - name: pinoutd
+    description: Pin Output Data.
+    byte_offset: 96
+    fieldset: FlexioAlphaFieldsetGolf
+  - name: pinoute
+    description: Pin Output Enable.
+    byte_offset: 100
+    fieldset: FlexioAlphaFieldsetIndia
+  - name: pinoutdis
+    description: Pin Output Disable.
+    byte_offset: 104
+    fieldset: FlexioAlphaFieldsetHotel
+  - name: pinoutclr
+    description: Pin Output Clear.
+    byte_offset: 108
+    fieldset: FlexioAlphaFieldsetFoxtrot
+  - name: pinoutset
+    description: Pin Output Set.
+    byte_offset: 112
+    fieldset: FlexioAlphaFieldsetJuliet
+  - name: pinouttog
+    description: Pin Output Toggle.
+    byte_offset: 116
+    fieldset: FlexioAlphaFieldsetKilo
+  - name: shiftctl
+    description: Shifter Control.
+    array:
+      len: 8
+      stride: 4
+    byte_offset: 128
+    fieldset: FlexioAlphaFieldsetYankee
+  - name: shiftcfg
+    description: Shifter Configuration.
+    array:
+      len: 8
+      stride: 4
+    byte_offset: 256
+    fieldset: FlexioAlphaFieldsetXray
+  - name: shiftbuf
+    description: Shifter Buffer.
+    array:
+      len: 8
+      stride: 4
+    byte_offset: 512
+    fieldset: FlexioAlphaFieldsetNovember
+  - name: shiftbufbis
+    description: Shifter Buffer Bit Swapped.
+    array:
+      len: 8
+      stride: 4
+    byte_offset: 640
+    fieldset: FlexioAlphaFieldsetPapa
+  - name: shiftbufbys
+    description: Shifter Buffer Byte Swapped.
+    array:
+      len: 8
+      stride: 4
+    byte_offset: 768
+    fieldset: FlexioAlphaFieldsetQuebec
+  - name: shiftbufbbs
+    description: Shifter Buffer Bit Byte Swapped.
+    array:
+      len: 8
+      stride: 4
+    byte_offset: 896
+    fieldset: FlexioAlphaFieldsetOscar
+  - name: timctl
+    description: Timer Control.
+    array:
+      len: 8
+      stride: 4
+    byte_offset: 1024
+    fieldset: FlexioAlphaFieldsetHotelAlpha
+  - name: timcfg
+    description: Timer Configuration.
+    array:
+      len: 8
+      stride: 4
+    byte_offset: 1152
+    fieldset: FlexioAlphaFieldsetFoxtrotAlpha
+  - name: timcmp
+    description: Timer Compare.
+    array:
+      len: 8
+      stride: 4
+    byte_offset: 1280
+    fieldset: FlexioAlphaFieldsetGolfAlpha
+  - name: shiftbufnbs
+    description: Shifter Buffer Nibble Byte Swapped.
+    array:
+      len: 8
+      stride: 4
+    byte_offset: 1664
+    fieldset: FlexioAlphaFieldsetUniform
+  - name: shiftbufhws
+    description: Shifter Buffer Halfword Swapped.
+    array:
+      len: 8
+      stride: 4
+    byte_offset: 1792
+    fieldset: FlexioAlphaFieldsetTango
+  - name: shiftbufnis
+    description: Shifter Buffer Nibble Swapped.
+    array:
+      len: 8
+      stride: 4
+    byte_offset: 1920
+    fieldset: FlexioAlphaFieldsetVictor
+  - name: shiftbufoes
+    description: Shifter Buffer Odd Even Swapped.
+    array:
+      len: 8
+      stride: 4
+    byte_offset: 2048
+    fieldset: FlexioAlphaFieldsetWhiskey
+  - name: shiftbufeos
+    description: Shifter Buffer Even Odd Swapped.
+    array:
+      len: 8
+      stride: 4
+    byte_offset: 2176
+    fieldset: FlexioAlphaFieldsetRomeo
+  - name: shiftbufhbs
+    description: Shifter Buffer Halfword Byte Swapped.
+    array:
+      len: 8
+      stride: 4
+    byte_offset: 2304
+    fieldset: FlexioAlphaFieldsetSierra
+fieldset/FlexioAlphaFieldsetAlpha:
+  description: FLEXIO Control.
+  fields:
+  - name: flexen
+    description: FLEXIO Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: FlexioAlphaEnumFoxtrot
+  - name: swrst
+    description: Software Reset.
+    bit_offset: 1
+    bit_size: 1
+    enum: FlexioAlphaEnumTango
+  - name: fastacc
+    description: Fast Access.
+    bit_offset: 2
+    bit_size: 1
+    enum: FlexioAlphaEnumDelta
+  - name: dbge
+    description: Debug Enable.
+    bit_offset: 30
+    bit_size: 1
+    enum: FlexioAlphaEnumAlpha
+  - name: dozen
+    description: Doze Enable.
+    bit_offset: 31
+    bit_size: 1
+    enum: FlexioAlphaEnumBravo
+fieldset/FlexioAlphaFieldsetBravo:
+  description: Parameter.
+  fields:
+  - name: shifter
+    description: Shifter Number.
+    bit_offset: 0
+    bit_size: 8
+  - name: timer
+    description: Timer Number.
+    bit_offset: 8
+    bit_size: 8
+  - name: pin
+    description: Pin Number.
+    bit_offset: 16
+    bit_size: 8
+  - name: trigger
+    description: Trigger Number.
+    bit_offset: 24
+    bit_size: 8
+fieldset/FlexioAlphaFieldsetCharlie:
+  description: Pin State.
+  fields:
+  - name: pdi
+    description: Pin Data Input.
+    bit_offset: 0
+    bit_size: 32
+fieldset/FlexioAlphaFieldsetDelta:
+  description: Pin Falling Edge Enable.
+  fields:
+  - name: pfe
+    description: Pin Falling Edge.
+    bit_offset: 0
+    bit_size: 32
+fieldset/FlexioAlphaFieldsetEcho:
+  description: Pin Interrupt Enable.
+  fields:
+  - name: psie
+    description: Pin Status Interrupt Enable.
+    bit_offset: 0
+    bit_size: 32
+fieldset/FlexioAlphaFieldsetFoxtrot:
+  description: Pin Output Clear.
+  fields:
+  - name: outclr
+    description: Output Clear.
+    bit_offset: 0
+    bit_size: 32
+fieldset/FlexioAlphaFieldsetGolf:
+  description: Pin Output Data.
+  fields:
+  - name: outd
+    description: Output Data.
+    bit_offset: 0
+    bit_size: 32
+fieldset/FlexioAlphaFieldsetHotel:
+  description: Pin Output Disable.
+  fields:
+  - name: outdis
+    description: Output Disable.
+    bit_offset: 0
+    bit_size: 32
+fieldset/FlexioAlphaFieldsetIndia:
+  description: Pin Output Enable.
+  fields:
+  - name: oute
+    description: Output Enable.
+    bit_offset: 0
+    bit_size: 32
+fieldset/FlexioAlphaFieldsetJuliet:
+  description: Pin Output Set.
+  fields:
+  - name: outset
+    description: Output Set.
+    bit_offset: 0
+    bit_size: 32
+fieldset/FlexioAlphaFieldsetKilo:
+  description: Pin Output Toggle.
+  fields:
+  - name: outtog
+    description: Output Toggle.
+    bit_offset: 0
+    bit_size: 32
+fieldset/FlexioAlphaFieldsetLima:
+  description: Pin Rising Edge Enable.
+  fields:
+  - name: pre
+    description: Pin Rising Edge.
+    bit_offset: 0
+    bit_size: 32
+fieldset/FlexioAlphaFieldsetMike:
+  description: Pin Status.
+  fields:
+  - name: psf
+    description: Pin Status Flag.
+    bit_offset: 0
+    bit_size: 32
+    enum: FlexioAlphaEnumKilo
+fieldset/FlexioAlphaFieldsetNovember:
+  description: Shifter Buffer.
+  fields:
+  - name: shiftbuf
+    description: Shift Buffer.
+    bit_offset: 0
+    bit_size: 32
+fieldset/FlexioAlphaFieldsetOscar:
+  description: Shifter Buffer Bit Byte Swapped.
+  fields:
+  - name: shiftbufbbs
+    description: Shift Buffer.
+    bit_offset: 0
+    bit_size: 32
+fieldset/FlexioAlphaFieldsetPapa:
+  description: Shifter Buffer Bit Swapped.
+  fields:
+  - name: shiftbufbis
+    description: Shift Buffer.
+    bit_offset: 0
+    bit_size: 32
+fieldset/FlexioAlphaFieldsetQuebec:
+  description: Shifter Buffer Byte Swapped.
+  fields:
+  - name: shiftbufbys
+    description: Shift Buffer.
+    bit_offset: 0
+    bit_size: 32
+fieldset/FlexioAlphaFieldsetRomeo:
+  description: Shifter Buffer Even Odd Swapped.
+  fields:
+  - name: shiftbufeos
+    description: Shift Buffer.
+    bit_offset: 0
+    bit_size: 32
+fieldset/FlexioAlphaFieldsetSierra:
+  description: Shifter Buffer Halfword Byte Swapped.
+  fields:
+  - name: shiftbufhbs
+    description: Shift Buffer.
+    bit_offset: 0
+    bit_size: 32
+fieldset/FlexioAlphaFieldsetTango:
+  description: Shifter Buffer Halfword Swapped.
+  fields:
+  - name: shiftbufhws
+    description: Shift Buffer.
+    bit_offset: 0
+    bit_size: 32
+fieldset/FlexioAlphaFieldsetUniform:
+  description: Shifter Buffer Nibble Byte Swapped.
+  fields:
+  - name: shiftbufnbs
+    description: Shift Buffer.
+    bit_offset: 0
+    bit_size: 32
+fieldset/FlexioAlphaFieldsetVictor:
+  description: Shifter Buffer Nibble Swapped.
+  fields:
+  - name: shiftbufnis
+    description: Shift Buffer.
+    bit_offset: 0
+    bit_size: 32
+fieldset/FlexioAlphaFieldsetWhiskey:
+  description: Shifter Buffer Odd Even Swapped.
+  fields:
+  - name: shiftbufoes
+    description: Shift Buffer.
+    bit_offset: 0
+    bit_size: 32
+fieldset/FlexioAlphaFieldsetXray:
+  description: Shifter Configuration.
+  fields:
+  - name: sstart
+    description: Shifter Start.
+    bit_offset: 0
+    bit_size: 2
+    enum: FlexioAlphaEnumRomeo
+  - name: sstop
+    description: Shifter Stop.
+    bit_offset: 4
+    bit_size: 2
+    enum: FlexioAlphaEnumSierra
+  - name: insrc
+    description: Input Source.
+    bit_offset: 8
+    bit_size: 1
+    enum: FlexioAlphaEnumGolf
+  - name: latst
+    description: Late Store.
+    bit_offset: 9
+    bit_size: 1
+    enum: FlexioAlphaEnumHotel
+  - name: ssize
+    description: Shifter Size.
+    bit_offset: 12
+    bit_size: 1
+    enum: FlexioAlphaEnumQuebec
+  - name: pwidth
+    description: Parallel Width.
+    bit_offset: 16
+    bit_size: 5
+fieldset/FlexioAlphaFieldsetYankee:
+  description: Shifter Control.
+  fields:
+  - name: smod
+    description: Shifter Mode.
+    bit_offset: 0
+    bit_size: 3
+    enum: FlexioAlphaEnumOscar
+  - name: pinpol
+    description: Shifter Pin Polarity.
+    bit_offset: 7
+    bit_size: 1
+    enum: FlexioAlphaEnumNovember
+  - name: pinsel
+    description: Shifter Pin Select.
+    bit_offset: 8
+    bit_size: 5
+  - name: pincfg
+    description: Shifter Pin Configuration.
+    bit_offset: 16
+    bit_size: 2
+    enum: FlexioAlphaEnumMike
+  - name: timpol
+    description: Timer Polarity.
+    bit_offset: 23
+    bit_size: 1
+    enum: FlexioAlphaEnumBravoAlpha
+  - name: timsel
+    description: Timer Select.
+    bit_offset: 24
+    bit_size: 3
+fieldset/FlexioAlphaFieldsetZulu:
+  description: Shifter Error Interrupt Enable.
+  fields:
+  - name: seie
+    description: Shifter Error Interrupt Enable.
+    bit_offset: 0
+    bit_size: 8
+fieldset/FlexioAlphaFieldsetAlphaAlpha:
+  description: Shifter Error.
+  fields:
+  - name: sef
+    description: Shifter Error Flag.
+    bit_offset: 0
+    bit_size: 8
+    enum: FlexioAlphaEnumLima
+fieldset/FlexioAlphaFieldsetBravoAlpha:
+  description: Shifter Status DMA Enable.
+  fields:
+  - name: ssde
+    description: Shifter Status DMA Enable.
+    bit_offset: 0
+    bit_size: 8
+fieldset/FlexioAlphaFieldsetCharlieAlpha:
+  description: Shifter Status Interrupt Enable.
+  fields:
+  - name: ssie
+    description: Shifter Status Interrupt Enable.
+    bit_offset: 0
+    bit_size: 8
+fieldset/FlexioAlphaFieldsetDeltaAlpha:
+  description: Shifter Status.
+  fields:
+  - name: ssf
+    description: Shifter Status Flag.
+    bit_offset: 0
+    bit_size: 8
+    enum: FlexioAlphaEnumPapa
+fieldset/FlexioAlphaFieldsetEchoAlpha:
+  description: Shifter State.
+  fields:
+  - name: state
+    description: Current State Pointer.
+    bit_offset: 0
+    bit_size: 3
+fieldset/FlexioAlphaFieldsetFoxtrotAlpha:
+  description: Timer Configuration.
+  fields:
+  - name: tstart
+    description: Timer Start.
+    bit_offset: 1
+    bit_size: 1
+    enum: FlexioAlphaEnumGolfAlpha
+  - name: tstop
+    description: Timer Stop.
+    bit_offset: 4
+    bit_size: 2
+    enum: FlexioAlphaEnumHotelAlpha
+  - name: timena
+    description: Timer Enable.
+    bit_offset: 8
+    bit_size: 3
+    enum: FlexioAlphaEnumYankee
+  - name: timdis
+    description: Timer Disable.
+    bit_offset: 12
+    bit_size: 3
+    enum: FlexioAlphaEnumXray
+  - name: timrst
+    description: Timer Reset.
+    bit_offset: 16
+    bit_size: 3
+    enum: FlexioAlphaEnumCharlieAlpha
+  - name: timdec
+    description: Timer Decrement.
+    bit_offset: 20
+    bit_size: 3
+    enum: FlexioAlphaEnumWhiskey
+  - name: timout
+    description: Timer Output.
+    bit_offset: 24
+    bit_size: 2
+    enum: FlexioAlphaEnumAlphaAlpha
+fieldset/FlexioAlphaFieldsetGolfAlpha:
+  description: Timer Compare.
+  fields:
+  - name: cmp
+    description: Timer Compare Value.
+    bit_offset: 0
+    bit_size: 16
+fieldset/FlexioAlphaFieldsetHotelAlpha:
+  description: Timer Control.
+  fields:
+  - name: timod
+    description: Timer Mode.
+    bit_offset: 0
+    bit_size: 3
+    enum: FlexioAlphaEnumZulu
+  - name: onetim
+    description: Timer One Time Operation.
+    bit_offset: 5
+    bit_size: 1
+    enum: FlexioAlphaEnumIndia
+  - name: pinins
+    description: Timer Pin Input Select.
+    bit_offset: 6
+    bit_size: 1
+    enum: FlexioAlphaEnumJuliet
+  - name: pinpol
+    description: Timer Pin Polarity.
+    bit_offset: 7
+    bit_size: 1
+    enum: FlexioAlphaEnumVictor
+  - name: pinsel
+    description: Timer Pin Select.
+    bit_offset: 8
+    bit_size: 5
+  - name: pincfg
+    description: Timer Pin Configuration.
+    bit_offset: 16
+    bit_size: 2
+    enum: FlexioAlphaEnumUniform
+  - name: trgsrc
+    description: Trigger Source.
+    bit_offset: 22
+    bit_size: 1
+    enum: FlexioAlphaEnumEchoAlpha
+  - name: trgpol
+    description: Trigger Polarity.
+    bit_offset: 23
+    bit_size: 1
+    enum: FlexioAlphaEnumDeltaAlpha
+  - name: trgsel
+    description: Trigger Select.
+    bit_offset: 24
+    bit_size: 6
+fieldset/FlexioAlphaFieldsetIndiaAlpha:
+  description: Timer Status DMA Enable.
+  fields:
+  - name: tsde
+    description: Timer Status DMA Enable.
+    bit_offset: 0
+    bit_size: 8
+fieldset/FlexioAlphaFieldsetJulietAlpha:
+  description: Timer Interrupt Enable.
+  fields:
+  - name: teie
+    description: Timer Status Interrupt Enable.
+    bit_offset: 0
+    bit_size: 8
+fieldset/FlexioAlphaFieldsetKiloAlpha:
+  description: Timer Status Flag.
+  fields:
+  - name: tsf
+    description: Timer Status Flag.
+    bit_offset: 0
+    bit_size: 8
+    enum: FlexioAlphaEnumFoxtrotAlpha
+fieldset/FlexioAlphaFieldsetLimaAlpha:
+  description: Trigger Status.
+  fields:
+  - name: etsf
+    description: External Trigger Status Flag.
+    bit_offset: 0
+    bit_size: 8
+    enum: FlexioAlphaEnumCharlie
+fieldset/FlexioAlphaFieldsetMikeAlpha:
+  description: External Trigger Interrupt Enable.
+  fields:
+  - name: trie
+    description: External Trigger Interrupt Enable.
+    bit_offset: 0
+    bit_size: 8
+fieldset/FlexioAlphaFieldsetNovemberAlpha:
+  description: Version ID.
+  fields:
+  - name: feature
+    description: Feature Specification Number.
+    bit_offset: 0
+    bit_size: 16
+    enum: FlexioAlphaEnumEcho
+  - name: minor
+    description: Minor Version Number.
+    bit_offset: 16
+    bit_size: 8
+  - name: major
+    description: Major Version Number.
+    bit_offset: 24
+    bit_size: 8
+enum/FlexioAlphaEnumAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Emable
+    description: Enable.
+    value: 1
+enum/FlexioAlphaEnumBravo:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 1
+  - name: Enable
+    description: Enable.
+    value: 0
+enum/FlexioAlphaEnumCharlie:
+  bit_size: 8
+  variants:
+  - name: Clr
+    description: Clear.
+    value: 0
+  - name: Set
+    description: Set.
+    value: 1
+enum/FlexioAlphaEnumDelta:
+  bit_size: 1
+  variants:
+  - name: Fast
+    description: Fast.
+    value: 1
+  - name: Normal
+    description: Normal.
+    value: 0
+enum/FlexioAlphaEnumEcho:
+  bit_size: 16
+  variants:
+  - name: Pinctrl
+    description: Pin control registers supported.
+    value: 2
+  - name: Standard
+    description: Standard features implemented.
+    value: 0
+  - name: StateLogicParallel
+    description: State, logic, and parallel modes supported.
+    value: 1
+  - name: StateLogicParallelPinctrl
+    description: State, logic, and parallel modes, plus pin control registers supported.
+    value: 3
+enum/FlexioAlphaEnumFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Enable
+    description: Enable.
+    value: 1
+enum/FlexioAlphaEnumGolf:
+  bit_size: 1
+  variants:
+  - name: Pin
+    description: Pin.
+    value: 0
+  - name: ShifterNplus1
+    description: Shifter n+1 output.
+    value: 1
+enum/FlexioAlphaEnumHotel:
+  bit_size: 1
+  variants:
+  - name: Postshift
+    description: Store the post-shift register state.
+    value: 1
+  - name: Preshift
+    description: Store the pre-shift register state.
+    value: 0
+enum/FlexioAlphaEnumIndia:
+  bit_size: 1
+  variants:
+  - name: Blocked
+    description: Block the timer enable event unless the timer status flag is clear.
+    value: 1
+  - name: NotBlocked
+    description: Generate the timer enable event as normal.
+    value: 0
+enum/FlexioAlphaEnumJuliet:
+  bit_size: 1
+  variants:
+  - name: Pinsel
+    description: PINSEL selects timer pin input and output.
+    value: 0
+  - name: Pinselplus1
+    description: PINSEL + 1 selects the timer pin input; timer pin output remains selected by PINSEL.
+    value: 1
+enum/FlexioAlphaEnumKilo:
+  bit_size: 32
+  variants:
+  - name: Clr
+    description: Clear.
+    value: 0
+  - name: Set
+    description: Set.
+    value: 1
+enum/FlexioAlphaEnumLima:
+  bit_size: 8
+  variants:
+  - name: Clr
+    description: Clear.
+    value: 0
+  - name: Set
+    description: Set.
+    value: 1
+enum/FlexioAlphaEnumMike:
+  bit_size: 2
+  variants:
+  - name: BidirOutdata
+    description: Shifter pin bidirectional output data.
+    value: 2
+  - name: Disable
+    description: Shifter pin output disabled.
+    value: 0
+  - name: OpendBidirouten
+    description: Shifter pin open-drain or bidirectional output enable.
+    value: 1
+  - name: Output
+    description: Shifter pin output.
+    value: 3
+enum/FlexioAlphaEnumNovember:
+  bit_size: 1
+  variants:
+  - name: ActiveHigh
+    description: Active high.
+    value: 0
+  - name: ActiveLow
+    description: Active low.
+    value: 1
+enum/FlexioAlphaEnumOscar:
+  bit_size: 3
+  variants:
+  - name: Disable
+    description: Disable.
+    value: 0
+  - name: Logic
+    description: Logic mode; SHIFTBUF contents implement programmable logic lookup table.
+    value: 7
+  - name: Matchcont
+    description: Match Continuous mode; shifter data is continuously compared to SHIFTBUF contents.
+    value: 5
+  - name: Matchstore
+    description: Match Store mode; shifter data is compared to SHIFTBUF content on expiration of the timer.
+    value: 4
+  - name: Receive
+    description: Receive mode; capture the current shifter content into SHIFTBUF on expiration of the timer.
+    value: 1
+  - name: State
+    description: State mode; SHIFTBUF contents store programmable state attributes.
+    value: 6
+  - name: Transmit
+    description: Transmit mode; load SHIFTBUF contents into the shifter on expiration of the timer.
+    value: 2
+enum/FlexioAlphaEnumPapa:
+  bit_size: 8
+  variants:
+  - name: Clr
+    description: Clear.
+    value: 0
+  - name: Set
+    description: Set.
+    value: 1
+enum/FlexioAlphaEnumQuebec:
+  bit_size: 1
+  variants:
+  - name: Width24
+    description: 24-bit.
+    value: 1
+  - name: Width32
+    description: 32-bit.
+    value: 0
+enum/FlexioAlphaEnumRomeo:
+  bit_size: 2
+  variants:
+  - name: Value00
+    description: Start bit disabled for Transmitter, Receiver, and Match Store modes; Transmitter mode loads data on enable.
+    value: 0
+  - name: Value01
+    description: Start bit disabled for Transmitter, Receiver, and Match Store modes; Transmitter mode loads data on first shift.
+    value: 1
+  - name: Value10
+    description: Transmitter mode outputs start bit value 0 before loading data on first shift; if start bit is not 0, Receiver and Match Store modes set error flag.
+    value: 2
+  - name: Value11
+    description: Transmitter mode outputs start bit value 1 before loading data on first shift; if start bit is not 1, Receiver and Match Store modes set error flag.
+    value: 3
+enum/FlexioAlphaEnumSierra:
+  bit_size: 2
+  variants:
+  - name: Value00
+    description: Stop bit disabled for Transmitter, Receiver, and Match Store modes.
+    value: 0
+  - name: Value01
+    description: Stop bit disabled for Transmitter, Receiver, and Match Store modes; when timer is in stop condition, Receiver and Match Store modes store receive data on the configured shift edge.
+    value: 1
+  - name: Value10
+    description: Transmitter mode outputs stop bit value 0 in Match Store mode; if stop bit is not 0, Receiver and Match Store modes set error flag (when timer is in stop condition, these modes also store receive data on the configured shift edge).
+    value: 2
+  - name: Value11
+    description: Transmitter mode outputs stop bit value 1 in Match Store mode; if stop bit is not 1, Receiver and Match Store modes set error flag (when timer is in stop condition, these modes also store receive data on the configured shift edge).
+    value: 3
+enum/FlexioAlphaEnumTango:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disabled.
+    value: 0
+  - name: Enable
+    description: Enabled.
+    value: 1
+enum/FlexioAlphaEnumUniform:
+  bit_size: 2
+  variants:
+  - name: BidirOutdata
+    description: Timer pin bidirectional output data.
+    value: 2
+  - name: OpendBidirouten
+    description: Timer pin open-drain or bidirectional output enable.
+    value: 1
+  - name: Outdisable
+    description: Timer pin output disabled.
+    value: 0
+  - name: Output
+    description: Timer pin output.
+    value: 3
+enum/FlexioAlphaEnumVictor:
+  bit_size: 1
+  variants:
+  - name: ActiveHigh
+    description: Active high.
+    value: 0
+  - name: ActiveLow
+    description: Active low.
+    value: 1
+enum/FlexioAlphaEnumWhiskey:
+  bit_size: 3
+  variants:
+  - name: FlexioClkDiv16ShiftclkTmrOut
+    description: Decrement counter on FLEXIO clock divided by 16; shift clock equals timer output.
+    value: 4
+  - name: FlexioClkDiv256ShiftclkTmrOut
+    description: Decrement counter on FLEXIO clock divided by 256; shift clock equals timer output.
+    value: 5
+  - name: FlexioClkShiftclkTmrOut
+    description: Decrement counter on FLEXIO clock; shift clock equals timer output.
+    value: 0
+  - name: PinEdgeShiftclkTmrOut
+    description: Decrement counter on pin input (both edges); shift clock equals pin input.
+    value: 2
+  - name: PinRiseShiftclkPinIn
+    description: Decrement counter on pin input (rising edge); shift clock equals pin input.
+    value: 6
+  - name: TrigEdgeShiftclkTmrOut
+    description: Decrement counter on trigger input (both edges); shift clock equals timer output.
+    value: 1
+  - name: TrigEdgeShiftclkTrigIn
+    description: Decrement counter on trigger input (both edges); shift clock equals trigger input.
+    value: 3
+  - name: TrigRiseShiftclkTrigIn
+    description: Decrement counter on trigger input (rising edge); shift clock equals trigger input.
+    value: 7
+enum/FlexioAlphaEnumXray:
+  bit_size: 3
+  variants:
+  - name: Never
+    description: Timer never disabled.
+    value: 0
+  - name: PinEdge
+    description: Timer disabled on pin rising or falling edge.
+    value: 4
+  - name: PinEdgeTrighi
+    description: Timer disabled on pin rising or falling edge provided trigger is high.
+    value: 5
+  - name: TmrCmp
+    description: Timer disabled on timer compare (upper 8 bits match and decrement).
+    value: 2
+  - name: TmrCmpTriglow
+    description: Timer disabled on timer compare (upper 8 bits match and decrement) and trigger low.
+    value: 3
+  - name: TmrNminus1
+    description: Timer disabled on timer n-1 disable.
+    value: 1
+  - name: TrigFalledge
+    description: Timer disabled on trigger falling edge.
+    value: 6
+enum/FlexioAlphaEnumYankee:
+  bit_size: 3
+  variants:
+  - name: Enable
+    description: Timer always enabled.
+    value: 0
+  - name: TmrNminus1En
+    description: Timer enabled on timer n-1 enable.
+    value: 1
+  - name: TmrPinriseEn
+    description: Timer enabled on pin rising edge.
+    value: 4
+  - name: TmrPinriseTrighiEn
+    description: Timer enabled on pin rising edge and trigger high.
+    value: 5
+  - name: TmrTrigPinHiEn
+    description: Timer enabled on trigger high and pin high.
+    value: 3
+  - name: TmrTrigedgeEn
+    description: Timer enabled on trigger rising or falling edge.
+    value: 7
+  - name: TmrTrighiEn
+    description: Timer enabled on trigger high.
+    value: 2
+  - name: TmrTrigriseEn
+    description: Timer enabled on trigger rising edge.
+    value: 6
+enum/FlexioAlphaEnumZulu:
+  bit_size: 3
+  variants:
+  - name: Disable
+    description: Timer disabled.
+    value: 0
+  - name: Dual8bitBaud
+    description: Dual 8-bit counters baud mode.
+    value: 1
+  - name: Dual8bitPwmH
+    description: Dual 8-bit counters PWM high mode.
+    value: 2
+  - name: Dual8bitPwmL
+    description: Dual 8-bit counters PWM low mode.
+    value: 6
+  - name: Dual8bitWord
+    description: Dual 8-bit counters word mode.
+    value: 5
+  - name: Single16bit
+    description: Single 16-bit counter mode.
+    value: 3
+  - name: Single16bitDisable
+    description: Single 16-bit counter disable mode.
+    value: 4
+  - name: Single16bitInCapture
+    description: Single 16-bit input capture mode.
+    value: 7
+enum/FlexioAlphaEnumAlphaAlpha:
+  bit_size: 2
+  variants:
+  - name: One
+    description: Logic one when enabled; not affected by timer reset.
+    value: 0
+  - name: OneTmrreset
+    description: Logic one when enabled and on timer reset.
+    value: 2
+  - name: Zero
+    description: Logic zero when enabled; not affected by timer reset.
+    value: 1
+  - name: ZeroTmrreset
+    description: Logic zero when enabled and on timer reset.
+    value: 3
+enum/FlexioAlphaEnumBravoAlpha:
+  bit_size: 1
+  variants:
+  - name: Negedge
+    description: Negative edge.
+    value: 1
+  - name: Posedge
+    description: Positive edge.
+    value: 0
+enum/FlexioAlphaEnumCharlieAlpha:
+  bit_size: 3
+  variants:
+  - name: Never
+    description: Never reset timer.
+    value: 0
+  - name: PinEqTmrOut
+    description: Timer reset on timer pin equal to timer output.
+    value: 2
+  - name: PinRiseEdge
+    description: Timer reset on timer pin rising edge.
+    value: 4
+  - name: TmrOutHi
+    description: Timer reset on timer output high.
+    value: 1
+  - name: TrigEdge
+    description: Timer reset on trigger rising or falling edge.
+    value: 7
+  - name: TrigEqTmrOut
+    description: Timer reset on timer trigger equal to timer output.
+    value: 3
+  - name: TrigRiseEdge
+    description: Timer reset on trigger rising edge.
+    value: 6
+enum/FlexioAlphaEnumDeltaAlpha:
+  bit_size: 1
+  variants:
+  - name: ActiveHigh
+    description: Active high.
+    value: 0
+  - name: ActiveLow
+    description: Active low.
+    value: 1
+enum/FlexioAlphaEnumEchoAlpha:
+  bit_size: 1
+  variants:
+  - name: ExtTrig
+    description: External.
+    value: 0
+  - name: InternalTrig
+    description: Internal.
+    value: 1
+enum/FlexioAlphaEnumFoxtrotAlpha:
+  bit_size: 8
+  variants:
+  - name: Clr
+    description: Clear.
+    value: 0
+  - name: Set
+    description: Set.
+    value: 1
+enum/FlexioAlphaEnumGolfAlpha:
+  bit_size: 1
+  variants:
+  - name: Disable
+    description: Disabled.
+    value: 0
+  - name: Enable
+    description: Enabled.
+    value: 1
+enum/FlexioAlphaEnumHotelAlpha:
+  bit_size: 2
+  variants:
+  - name: EnableTmrCmpDis
+    description: Enabled on timer compare and timer disable.
+    value: 3
+  - name: EnableTmrcmp
+    description: Enabled on timer compare.
+    value: 1
+  - name: EnableTmrdisable
+    description: Enabled on timer disable.
+    value: 2
+  - name: StopDisable
+    description: Disabled.
+    value: 0

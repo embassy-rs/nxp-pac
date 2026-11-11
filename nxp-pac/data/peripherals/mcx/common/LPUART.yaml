@@ -1,0 +1,1476 @@
+# Shared curated A/N LPUART definitions. N-specific reset and capability views
+# are disjoint from the existing A selections.
+block/Lpuart:
+  description: LPUART.
+  items:
+  - name: verid
+    only_in: '^MCXA'
+    description: Version ID.
+    byte_offset: 0
+    access: Read
+    fieldset: Verid
+  - name: param
+    only_in: '^MCXA'
+    description: Parameter.
+    byte_offset: 4
+    access: Read
+    fieldset: Param
+  - name: global
+    only_in: '^MCXA'
+    description: Global.
+    byte_offset: 8
+    fieldset: Global
+  - name: pincfg
+    only_in: '^MCXA'
+    description: Pin Configuration.
+    byte_offset: 12
+    fieldset: Pincfg
+  - name: baud
+    only_in: '^MCXA'
+    description: Baud Rate.
+    byte_offset: 16
+    fieldset: Baud
+  - name: stat
+    only_in: '^MCXA'
+    description: Status.
+    byte_offset: 20
+    fieldset: Stat
+  - name: ctrl
+    only_in: '^MCXA'
+    description: Control.
+    byte_offset: 24
+    fieldset: Ctrl
+  - name: data
+    only_in: '^MCXA'
+    description: Data.
+    byte_offset: 28
+    fieldset: Data
+  - name: match_
+    only_in: '^MCXA'
+    description: Match Address.
+    byte_offset: 32
+    fieldset: Match
+  - name: modir
+    only_in: '^MCXA'
+    description: MODEM IrDA.
+    byte_offset: 36
+    fieldset: Modir
+  - name: fifo
+    only_in: '^MCXA'
+    description: FIFO.
+    byte_offset: 40
+    fieldset: Fifo
+  - name: water
+    only_in: '^MCXA'
+    description: Watermark.
+    byte_offset: 44
+    fieldset: Water
+  - name: dataro
+    only_in: '^MCXA'
+    description: Data Read-Only.
+    byte_offset: 48
+    access: Read
+    fieldset: Dataro
+  - name: verid
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: Version ID. Documented reset, not a live capability probe.
+    byte_offset: 0
+    access: Read
+    fieldset: NVerid
+  - name: param
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: Parameter. The transmit and receive FIFOs each contain eight entries; burst address windows are aliases, not FIFO depth.
+    byte_offset: 4
+    access: Read
+    fieldset: NParam
+  - name: baud
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: Baud Rate. Change configuration only with transmitter and receiver disabled. OSR encodings 1 and 2 are reserved; OSR 3..6 requires BOTHEDGE.
+    byte_offset: 16
+    fieldset: NBaud
+  - name: stat
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: Status. MSF/TSF and RDRF/TC/TDRE/RAF are read-only. MA2F/MA1F/PF/FE/NF/OR/IDLE/RXEDGIF/LBKDIF are write-one-to-clear; avoid read-modify-write. Some flags also participate in DATA access clearing sequences. Change MSBF/AME/LBKFE only with both directions disabled, RXINV/RWUID with receiver disabled, and BRK13 with transmitter disabled. On affected masks ERR051629 can prevent TC from asserting after flushing TX FIFO with CTS negated and TXCTSE set; no workaround is implemented here.
+    byte_offset: 20
+    fieldset: NStat
+  - name: data
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: Data. Reads pop the receive FIFO and participate in automatic status-flag clearing; writes push the transmit FIFO. These are distinct read/write views, not ordinary storage; do not read-modify-write. Receive-only status bits must not be interpreted as transmit commands. FRETSC writes select a special character with T9 and require T8..T0 zero.
+    byte_offset: 28
+    fieldset: NData
+  - name: modir
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: MODEM IrDA. Change RTSWATER/RXRTSE with receiver disabled, TXRTSE/TXRTSPOL with transmitter disabled, and TNP/IREN with both disabled. Do not enable RXRTSE and TXRTSE together.
+    byte_offset: 36
+    fieldset: NModir
+  - name: fifo
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: FIFO. RXFIFOSIZE/TXFIFOSIZE/RXEMPT/TXEMPT are read-only; RXUF/TXOF are write-one-to-clear; RXFLUSH/TXFLUSH are flush commands. Avoid read-modify-write. The register description requires writes with CTRL.RE/TE zero and FIFO empty; FIFO operations also have specific command/flag semantics.
+    byte_offset: 40
+    fieldset: NFifo
+  - name: water
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: Watermark. TXCOUNT and RXCOUNT are read-only. Write only with CTRL.TE zero.
+    byte_offset: 44
+    fieldset: NWater
+  - name: dataro
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: Data Read-Only. Returns DATA without removing the receive FIFO entry.
+    byte_offset: 48
+    access: Read
+    fieldset: NDataro
+  - name: ctrl
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: Control. Bit6 is reserved in both detailed N manuals, despite N23 XML exposing DOZEEN. Change M/M7/PE/ILT/RSRC/LOOPS configuration only with transmitter and receiver disabled as specified by the field descriptions. R9T8/R8T9 read receive bits but write transmit bits; read-modify-write does not preserve the transmit value. Enabling TE can queue an idle preamble; RE/TE may remain set until the current character finishes after disable.
+    byte_offset: 24
+    fieldset: Ctrl
+  - name: global
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: Global. RST holds all LPUART logic/registers except GLOBAL in reset until software clears it; no minimum delay is required before clearing. This is not a wrapper mode or clock control.
+    byte_offset: 8
+    fieldset: Global
+  - name: pincfg
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: Pin Configuration. Change TRGSEL only with transmitter and receiver disabled. The raw trigger selector does not establish chip routing.
+    byte_offset: 12
+    fieldset: Pincfg
+  - name: match_
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: Match Address. Write MA1/MA2 only while the corresponding BAUD.MAEN1/MAEN2 is disabled.
+    byte_offset: 32
+    fieldset: Match
+  - name: mcr
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: MODEM Control.
+    byte_offset: 64
+    fieldset: Mcr
+  - name: msr
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: MODEM Status. Delta flags are write-one-to-clear; pin-state bits are read-only. Pad configuration affects observed reset values; the generated default is the documented reset, not sampled pin state. Do not read-modify-write.
+    byte_offset: 68
+    fieldset: Msr
+  - name: reir
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: Receiver Extended Idle. Change only with receiver disabled; zero disables extended idle and the minimum enabled interval is one idle character.
+    byte_offset: 72
+    fieldset: Reir
+  - name: teir
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: Transmitter Extended Idle. Change only with transmitter disabled; zero disables extended idle and the minimum enabled interval is one idle character.
+    byte_offset: 76
+    fieldset: Teir
+  - name: hdcr
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: Half Duplex Control. Raw controls, not a mode or pin-ownership operation.
+    byte_offset: 80
+    fieldset: Hdcr
+  - name: tocr
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: Timeout Control. Counters 0/1 monitor the receiver; 2/3 monitor the transmitter.
+    byte_offset: 88
+    fieldset: Tocr
+  - name: tosr
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: Timeout Status. TOZ is read-only; each TOF bit is write-one-to-clear and disables its counter when set. Do not read-modify-write.
+    byte_offset: 92
+    fieldset: Tosr
+  - name: timeout
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: Timeout N. Write only when the corresponding timeout is disabled or its timeout flag is set. Counters 0/1 monitor receive; 2/3 monitor transmit.
+    array:
+      len: 4
+      stride: 4
+    byte_offset: 96
+    fieldset: Timeout
+  - name: tcbr
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: Transmit Command Burst aliases of DATA, not independent storage. A 32-bit or low-halfword write pushes one FIFO entry; a low-byte write stages data until the high byte is written. Upper-halfword byte/halfword writes are ignored. The field payload is 16 bits but register access remains 32 bits.
+    array:
+      len: 128
+      stride: 4
+    byte_offset: 512
+    access: Write
+    fieldset: Tcbr
+  - name: tdbr
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: Transmit Data Burst aliases of DATA, not independent storage or 256 FIFO entries. A word pushes four bytes DATA0 first, with three wait states; a halfword pushes two bytes with one wait state. Bytes use CTRL R8T9/R9T8 for upper data bits and zero-extend FRETSC. UART/SPI views overlap physically; selection is external to this model.
+    array:
+      len: 256
+      stride: 4
+    byte_offset: 1024
+    access: Write
+    fieldset: Tdbr
+fieldset/Baud:
+  description: Baud Rate.
+  fields:
+  - name: sbr
+    description: Baud Rate Modulo Divisor.
+    bit_offset: 0
+    bit_size: 13
+  - name: sbns
+    description: Stop Bit Number Select.
+    bit_offset: 13
+    bit_size: 1
+    enum: Sbns
+  - name: rxedgie
+    description: RX Input Active Edge Interrupt Enable.
+    bit_offset: 14
+    bit_size: 1
+  - name: lbkdie
+    description: LIN Break Detect Interrupt Enable.
+    bit_offset: 15
+    bit_size: 1
+  - name: resyncdis
+    description: Resynchronization Disable.
+    bit_offset: 16
+    bit_size: 1
+    enum: Resyncdis
+  - name: bothedge
+    description: Both Edge Sampling.
+    bit_offset: 17
+    bit_size: 1
+  - name: matcfg
+    description: Match Configuration.
+    bit_offset: 18
+    bit_size: 2
+    enum: Matcfg
+  - name: ridmae
+    description: Receiver Idle DMA Enable.
+    bit_offset: 20
+    bit_size: 1
+  - name: rdmae
+    description: Receiver Full DMA Enable.
+    bit_offset: 21
+    bit_size: 1
+  - name: hlfm
+    only_in: '^MCXA(175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)$'
+    description: Reduced Oversample Mode Selection.
+    bit_offset: 22
+    bit_size: 1
+    enum: Hlfm
+  - name: tdmae
+    description: Transmitter DMA Enable.
+    bit_offset: 23
+    bit_size: 1
+  - name: osr
+    description: Oversampling Ratio.
+    bit_offset: 24
+    bit_size: 5
+  - name: m10
+    description: 10-Bit Mode Select.
+    bit_offset: 29
+    bit_size: 1
+  - name: maen2
+    description: Match Address Mode Enable 2.
+    bit_offset: 30
+    bit_size: 1
+  - name: maen1
+    description: Match Address Mode Enable 1.
+    bit_offset: 31
+    bit_size: 1
+fieldset/Ctrl:
+  description: Control.
+  fields:
+  - name: pt
+    description: Parity Type.
+    bit_offset: 0
+    bit_size: 1
+    enum: Pt
+  - name: pe
+    description: Parity Enable.
+    bit_offset: 1
+    bit_size: 1
+  - name: ilt
+    description: Idle Line Type Select.
+    bit_offset: 2
+    bit_size: 1
+    enum: Ilt
+  - name: wake
+    description: Receiver Wake-Up Method Select.
+    bit_offset: 3
+    bit_size: 1
+    enum: Wake
+  - name: m
+    description: 9-Bit Or 8-Bit Mode Select.
+    bit_offset: 4
+    bit_size: 1
+    enum: M
+  - name: rsrc
+    description: Receiver Source Select.
+    bit_offset: 5
+    bit_size: 1
+    enum: Rsrc
+  - name: dozeen
+    only_in: '^MCXA'
+    description: Doze Mode.
+    bit_offset: 6
+    bit_size: 1
+    enum: Dozeen
+  - name: loops
+    description: Loop Mode Select.
+    bit_offset: 7
+    bit_size: 1
+    enum: Loops
+  - name: idlecfg
+    description: Idle Configuration.
+    bit_offset: 8
+    bit_size: 3
+    enum: Idlecfg
+  - name: m7
+    description: 7-Bit Mode Select.
+    bit_offset: 11
+    bit_size: 1
+    enum: M7
+  - name: swap
+    only_in: '^MCXA(175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)$'
+    description: TXD and RXD Pin Swap.
+    bit_offset: 12
+    bit_size: 1
+    enum: Swap
+  - name: erlsmp
+    only_in: '^MCXA(175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)$'
+    description: Early Sample Selection.
+    bit_offset: 13
+    bit_size: 1
+    enum: Erlsmp
+  - name: ma2ie
+    description: Match 2 (MA2F) Interrupt Enable.
+    bit_offset: 14
+    bit_size: 1
+  - name: ma1ie
+    description: Match 1 (MA1F) Interrupt Enable.
+    bit_offset: 15
+    bit_size: 1
+  - name: sbk
+    description: Send Break.
+    bit_offset: 16
+    bit_size: 1
+    enum: Sbk
+  - name: rwu
+    description: Receiver Wake-Up Control.
+    bit_offset: 17
+    bit_size: 1
+    enum: Rwu
+  - name: re
+    description: Receiver Enable.
+    bit_offset: 18
+    bit_size: 1
+  - name: te
+    description: Transmitter Enable.
+    bit_offset: 19
+    bit_size: 1
+  - name: ilie
+    description: Idle Line Interrupt Enable.
+    bit_offset: 20
+    bit_size: 1
+  - name: rie
+    description: Receiver Interrupt Enable.
+    bit_offset: 21
+    bit_size: 1
+  - name: tcie
+    description: Transmission Complete Interrupt Enable.
+    bit_offset: 22
+    bit_size: 1
+  - name: tie
+    description: Transmit Interrupt Enable.
+    bit_offset: 23
+    bit_size: 1
+  - name: peie
+    description: Parity Error Interrupt Enable.
+    bit_offset: 24
+    bit_size: 1
+  - name: feie
+    description: Framing Error Interrupt Enable.
+    bit_offset: 25
+    bit_size: 1
+  - name: neie
+    description: Noise Error Interrupt Enable.
+    bit_offset: 26
+    bit_size: 1
+  - name: orie
+    description: Overrun Interrupt Enable.
+    bit_offset: 27
+    bit_size: 1
+  - name: txinv
+    description: Transmit Data Inversion.
+    bit_offset: 28
+    bit_size: 1
+  - name: txdir
+    description: TXD Pin Direction in Single-Wire Mode.
+    bit_offset: 29
+    bit_size: 1
+    enum: Txdir
+  - name: r9t8
+    description: Receive Bit 9 Transmit Bit 8.
+    bit_offset: 30
+    bit_size: 1
+  - name: r8t9
+    description: Receive Bit 8 Transmit Bit 9.
+    bit_offset: 31
+    bit_size: 1
+fieldset/Data:
+  description: Data.
+  fields:
+  - name: r0t0
+    description: Read receive FIFO bit 0 or write transmit FIFO bit 0.
+    bit_offset: 0
+    bit_size: 1
+  - name: r1t1
+    description: Read receive FIFO bit 1 or write transmit FIFO bit 1.
+    bit_offset: 1
+    bit_size: 1
+  - name: r2t2
+    description: Read receive FIFO bit 2 or write transmit FIFO bit 2.
+    bit_offset: 2
+    bit_size: 1
+  - name: r3t3
+    description: Read receive FIFO bit 3 or write transmit FIFO bit 3.
+    bit_offset: 3
+    bit_size: 1
+  - name: r4t4
+    description: Read receive FIFO bit 4 or write transmit FIFO bit 4.
+    bit_offset: 4
+    bit_size: 1
+  - name: r5t5
+    description: Read receive FIFO bit 5 or write transmit FIFO bit 5.
+    bit_offset: 5
+    bit_size: 1
+  - name: r6t6
+    description: Read receive FIFO bit 6 or write transmit FIFO bit 6.
+    bit_offset: 6
+    bit_size: 1
+  - name: r7t7
+    description: Read receive FIFO bit 7 or write transmit FIFO bit 7.
+    bit_offset: 7
+    bit_size: 1
+  - name: r8t8
+    description: Read receive FIFO bit 8 or write transmit FIFO bit 8.
+    bit_offset: 8
+    bit_size: 1
+  - name: r9t9
+    description: Read receive FIFO bit 9 or write transmit FIFO bit 9.
+    bit_offset: 9
+    bit_size: 1
+  - name: linbrk
+    description: LIN Break.
+    bit_offset: 10
+    bit_size: 1
+  - name: idline
+    description: Idle Line.
+    bit_offset: 11
+    bit_size: 1
+  - name: rxempt
+    description: Receive Buffer Empty.
+    bit_offset: 12
+    bit_size: 1
+  - name: fretsc
+    description: Frame Error Transmit Special Character.
+    bit_offset: 13
+    bit_size: 1
+  - name: paritye
+    description: Parity Error.
+    bit_offset: 14
+    bit_size: 1
+  - name: noisy
+    description: Noisy Data Received.
+    bit_offset: 15
+    bit_size: 1
+fieldset/Dataro:
+  description: Data Read-Only.
+  fields:
+  - name: data
+    description: Receive Data.
+    bit_offset: 0
+    bit_size: 16
+fieldset/Fifo:
+  description: FIFO.
+  fields:
+  - name: rxfifosize
+    description: Receive FIFO Buffer Depth.
+    bit_offset: 0
+    bit_size: 3
+    enum: Rxfifosize
+  - name: rxfe
+    description: Receive FIFO Enable.
+    bit_offset: 3
+    bit_size: 1
+  - name: txfifosize
+    description: Transmit FIFO Buffer Depth.
+    bit_offset: 4
+    bit_size: 3
+    enum: Txfifosize
+  - name: txfe
+    description: Transmit FIFO Enable.
+    bit_offset: 7
+    bit_size: 1
+  - name: rxufe
+    description: Receive FIFO Underflow Interrupt Enable.
+    bit_offset: 8
+    bit_size: 1
+  - name: txofe
+    description: Transmit FIFO Overflow Interrupt Enable.
+    bit_offset: 9
+    bit_size: 1
+  - name: rxiden
+    description: Receiver Idle Empty Enable.
+    bit_offset: 10
+    bit_size: 3
+    enum: Rxiden
+  - name: rxflush
+    description: Receive FIFO Flush.
+    bit_offset: 14
+    bit_size: 1
+    enum: Rxflush
+  - name: txflush
+    description: Transmit FIFO Flush.
+    bit_offset: 15
+    bit_size: 1
+    enum: Txflush
+  - name: rxuf
+    description: Receiver FIFO Underflow Flag.
+    bit_offset: 16
+    bit_size: 1
+  - name: txof
+    description: Transmitter FIFO Overflow Flag.
+    bit_offset: 17
+    bit_size: 1
+  - name: rxempt
+    description: Receive FIFO Or Buffer Empty.
+    bit_offset: 22
+    bit_size: 1
+  - name: txempt
+    description: Transmit FIFO Or Buffer Empty.
+    bit_offset: 23
+    bit_size: 1
+fieldset/Global:
+  description: Global.
+  fields:
+  - name: rst
+    description: Software Reset.
+    bit_offset: 1
+    bit_size: 1
+    enum: Rst
+fieldset/Match:
+  description: Match Address.
+  fields:
+  - name: ma1
+    description: Match Address 1.
+    bit_offset: 0
+    bit_size: 10
+  - name: ma2
+    description: Match Address 2.
+    bit_offset: 16
+    bit_size: 10
+fieldset/Modir:
+  description: MODEM IrDA.
+  fields:
+  - name: txctse
+    description: Transmitter CTS Enable.
+    bit_offset: 0
+    bit_size: 1
+  - name: txrtse
+    description: Transmitter RTS Enable.
+    bit_offset: 1
+    bit_size: 1
+  - name: txrtspol
+    description: Transmitter RTS Polarity.
+    bit_offset: 2
+    bit_size: 1
+    enum: Txrtspol
+  - name: rxrtse
+    description: Receiver RTS Enable.
+    bit_offset: 3
+    bit_size: 1
+  - name: txctsc
+    description: Transmit CTS Configuration.
+    bit_offset: 4
+    bit_size: 1
+    enum: Txctsc
+  - name: txctssrc
+    description: Transmit CTS Source.
+    bit_offset: 5
+    bit_size: 1
+    enum: Txctssrc
+  - name: rtswater
+    description: Receive RTS Configuration.
+    bit_offset: 8
+    bit_size: 2
+  - name: tnp
+    description: Transmitter Narrow Pulse.
+    bit_offset: 16
+    bit_size: 2
+    enum: Tnp
+  - name: iren
+    description: IR Enable.
+    bit_offset: 18
+    bit_size: 1
+fieldset/Param:
+  description: Parameter.
+  fields:
+  - name: txfifo
+    description: Transmit FIFO Size.
+    bit_offset: 0
+    bit_size: 8
+  - name: rxfifo
+    description: Receive FIFO Size.
+    bit_offset: 8
+    bit_size: 8
+fieldset/Pincfg:
+  description: Pin Configuration.
+  fields:
+  - name: trgsel
+    description: Trigger Select.
+    bit_offset: 0
+    bit_size: 2
+    enum: Trgsel
+fieldset/Stat:
+  description: Status.
+  fields:
+  - name: lbkfe
+    description: LIN Break Flag Enable.
+    bit_offset: 0
+    bit_size: 1
+  - name: ame
+    description: Address Mark Enable.
+    bit_offset: 1
+    bit_size: 1
+  - name: ma2f
+    description: Match 2 Flag.
+    bit_offset: 14
+    bit_size: 1
+  - name: ma1f
+    description: Match 1 Flag.
+    bit_offset: 15
+    bit_size: 1
+  - name: pf
+    description: Parity Error Flag.
+    bit_offset: 16
+    bit_size: 1
+  - name: fe
+    description: Framing Error Flag.
+    bit_offset: 17
+    bit_size: 1
+  - name: nf
+    description: Noise Flag.
+    bit_offset: 18
+    bit_size: 1
+  - name: or
+    description: Receiver Overrun Flag.
+    bit_offset: 19
+    bit_size: 1
+  - name: idle
+    description: Idle Line Flag.
+    bit_offset: 20
+    bit_size: 1
+  - name: rdrf
+    description: Receive Data Register Full Flag.
+    bit_offset: 21
+    bit_size: 1
+  - name: tc
+    description: Transmission Complete Flag.
+    bit_offset: 22
+    bit_size: 1
+    enum: Tc
+  - name: tdre
+    description: Transmit Data Register Empty Flag.
+    bit_offset: 23
+    bit_size: 1
+    enum: Tdre
+  - name: raf
+    description: Receiver Active Flag.
+    bit_offset: 24
+    bit_size: 1
+    enum: Raf
+  - name: lbkde
+    description: LIN Break Detection Enable.
+    bit_offset: 25
+    bit_size: 1
+  - name: brk13
+    description: Break Character Generation Length.
+    bit_offset: 26
+    bit_size: 1
+    enum: Brk13
+  - name: rwuid
+    description: Receive Wake Up Idle Detect.
+    bit_offset: 27
+    bit_size: 1
+    enum: Rwuid
+  - name: rxinv
+    description: Receive Data Inversion.
+    bit_offset: 28
+    bit_size: 1
+  - name: msbf
+    description: MSB First.
+    bit_offset: 29
+    bit_size: 1
+    enum: Msbf
+  - name: rxedgif
+    description: RXD Pin Active Edge Interrupt Flag.
+    bit_offset: 30
+    bit_size: 1
+  - name: lbkdif
+    description: LIN Break Detect Interrupt Flag.
+    bit_offset: 31
+    bit_size: 1
+fieldset/Verid:
+  description: Version ID.
+  fields:
+  - name: feature
+    description: Feature Identification Number.
+    bit_offset: 0
+    bit_size: 16
+    enum: Feature
+  - name: minor
+    description: Minor Version Number.
+    bit_offset: 16
+    bit_size: 8
+  - name: major
+    description: Major Version Number.
+    bit_offset: 24
+    bit_size: 8
+fieldset/Water:
+  description: Watermark.
+  fields:
+  - name: txwater
+    description: Transmit Watermark.
+    bit_offset: 0
+    bit_size: 2
+  - name: txcount
+    description: Transmit Counter.
+    bit_offset: 8
+    bit_size: 3
+  - name: rxwater
+    description: Receive Watermark.
+    bit_offset: 16
+    bit_size: 2
+  - name: rxcount
+    description: Receive Counter.
+    bit_offset: 24
+    bit_size: 3
+enum/Brk13:
+  bit_size: 1
+  variants:
+  - name: Short
+    description: 9 to 13 bit times.
+    value: 0
+  - name: Long
+    description: 12 to 15 bit times.
+    value: 1
+enum/Dozeen:
+  bit_size: 1
+  variants:
+  - name: Enabled
+    description: Enable.
+    value: 0
+  - name: Disabled
+    description: Disable.
+    value: 1
+enum/Erlsmp:
+  only_in: '^MCXA(175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)$'
+  bit_size: 1
+  variants:
+  - name: Midpoint
+    description: Regular midpoint bit sampling.
+    value: 0
+  - name: Reduced
+    description: Early bit sampling at 1/2 duration of bit timing.
+    value: 1
+enum/Feature:
+  bit_size: 16
+  variants:
+  - name: Standard
+    description: Standard feature set.
+    value: 1
+  - name: Modem
+    description: Standard feature set with MODEM and IrDA support.
+    value: 3
+  - name: Enhanced
+    only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+    description: Enhanced feature set with full MODEM, IrDA, and enhanced idle detection.
+    value: 7
+enum/Hlfm:
+  only_in: '^MCXA(175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)$'
+  bit_size: 1
+  variants:
+  - name: Regular
+    description: Regular Oversampling.
+    value: 0
+  - name: Reduced
+    description: Reduced Oversampling by 0.5.
+    value: 1
+enum/Idlecfg:
+  bit_size: 3
+  variants:
+  - name: Idle1
+    description: '1.'
+    value: 0
+  - name: Idle2
+    description: '2.'
+    value: 1
+  - name: Idle4
+    description: '4.'
+    value: 2
+  - name: Idle8
+    description: '8.'
+    value: 3
+  - name: Idle16
+    description: '16.'
+    value: 4
+  - name: Idle32
+    description: '32.'
+    value: 5
+  - name: Idle64
+    description: '64.'
+    value: 6
+  - name: Idle128
+    description: '128.'
+    value: 7
+enum/Ilt:
+  bit_size: 1
+  variants:
+  - name: FromStart
+    description: After the start bit.
+    value: 0
+  - name: FromStop
+    description: After the stop bit.
+    value: 1
+enum/Loops:
+  bit_size: 1
+  variants:
+  - name: Noffect
+    description: 'Normal operation: RXD and TXD use separate pins.'
+    value: 0
+  - name: Loopback
+    description: Loop mode or Single-Wire mode.
+    value: 1
+enum/M:
+  bit_size: 1
+  variants:
+  - name: Data8
+    description: 8-bit.
+    value: 0
+  - name: Data9
+    description: 9-bit.
+    value: 1
+enum/M7:
+  bit_size: 1
+  variants:
+  - name: NoEffect
+    description: 8-bit to 10-bit.
+    value: 0
+  - name: Data7
+    description: 7-bit.
+    value: 1
+enum/Matcfg:
+  bit_size: 2
+  variants:
+  - name: AddrMatch
+    description: Address match wake-up.
+    value: 0
+  - name: IdleMatch
+    description: Idle match wake-up.
+    value: 1
+  - name: OnoffMatch
+    description: Match on and match off.
+    value: 2
+  - name: RwuMatch
+    description: Enables RWU on data match and match on or off for the transmitter CTS input.
+    value: 3
+enum/Msbf:
+  bit_size: 1
+  variants:
+  - name: LsbFirst
+    description: LSB.
+    value: 0
+  - name: MsbFirst
+    description: MSB.
+    value: 1
+enum/Pt:
+  bit_size: 1
+  variants:
+  - name: Even
+    description: Even parity.
+    value: 0
+  - name: Odd
+    description: Odd parity.
+    value: 1
+enum/Raf:
+  bit_size: 1
+  variants:
+  - name: Idle
+    description: Idle, waiting for a start bit.
+    value: 0
+  - name: Active
+    description: Receiver active (RXD pin input not idle).
+    value: 1
+enum/Resyncdis:
+  bit_size: 1
+  variants:
+  - name: Resync
+    description: Enable.
+    value: 0
+  - name: NoResync
+    description: Disable.
+    value: 1
+enum/Rsrc:
+  bit_size: 1
+  variants:
+  - name: NoEffect
+    description: Internal Loopback mode.
+    value: 0
+  - name: Onewire
+    description: Single-wire mode.
+    value: 1
+enum/Rst:
+  bit_size: 1
+  variants:
+  - name: NoEffect
+    description: Not reset.
+    value: 0
+  - name: Reset
+    description: Reset.
+    value: 1
+enum/Rwu:
+  bit_size: 1
+  variants:
+  - name: NoEffect
+    description: Normal receiver operation.
+    value: 0
+  - name: RxWakeup
+    description: LPUART receiver in standby, waiting for a wake-up condition.
+    value: 1
+enum/Rwuid:
+  bit_size: 1
+  variants:
+  - name: IdleNotset
+    description: STAT[IDLE] does not become 1.
+    value: 0
+  - name: IdleSet
+    description: STAT[IDLE] becomes 1.
+    value: 1
+enum/Rxfifosize:
+  bit_size: 3
+  variants:
+  - name: Fifo1
+    description: '1.'
+    value: 0
+  - name: Fifo4
+    description: '4.'
+    value: 1
+  - name: Fifo8
+    description: '8.'
+    value: 2
+  - name: Fifo16
+    description: '16.'
+    value: 3
+  - name: Fifo32
+    description: '32.'
+    value: 4
+  - name: Fifo64
+    description: '64.'
+    value: 5
+  - name: Fifo128
+    description: '128.'
+    value: 6
+  - name: Fifo256
+    description: '256.'
+    value: 7
+enum/Rxflush:
+  bit_size: 1
+  variants:
+  - name: NoEffect
+    description: No effect.
+    value: 0
+  - name: RxfifoRst
+    description: All data flushed out.
+    value: 1
+enum/Rxiden:
+  bit_size: 3
+  variants:
+  - name: Disabled
+    description: Disable STAT[RDRF] to become 1 because of partially filled FIFO when the receiver is idle.
+    value: 0
+  - name: Idle1
+    description: Enable STAT[RDRF] to become 1 because of partially filled FIFO when the receiver is idle for one character.
+    value: 1
+  - name: Idle2
+    description: Enable STAT[RDRF] to become 1 because of partially filled FIFO when the receiver is idle for two characters.
+    value: 2
+  - name: Idle4
+    description: Enable STAT[RDRF] to become 1 because of partially filled FIFO when the receiver is idle for four characters.
+    value: 3
+  - name: Idle8
+    description: Enable STAT[RDRF] to become 1 because of partially filled FIFO when the receiver is idle for eight characters.
+    value: 4
+  - name: Idle16
+    description: Enable STAT[RDRF] to become 1 because of partially filled FIFO when the receiver is idle for 16 characters.
+    value: 5
+  - name: Idle32
+    description: Enable STAT[RDRF] to become 1 because of partially filled FIFO when the receiver is idle for 32 characters.
+    value: 6
+  - name: Idle64
+    description: Enable STAT[RDRF] to become 1 because of partially filled FIFO when the receiver is idle for 64 characters.
+    value: 7
+enum/Sbk:
+  bit_size: 1
+  variants:
+  - name: NoEffect
+    description: Normal transmitter operation.
+    value: 0
+  - name: TxBreak
+    description: Queue break character(s) to be sent.
+    value: 1
+enum/Sbns:
+  bit_size: 1
+  variants:
+  - name: One
+    description: One stop bit.
+    value: 0
+  - name: Two
+    description: Two stop bits.
+    value: 1
+enum/Swap:
+  only_in: '^MCXA(175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)$'
+  bit_size: 1
+  variants:
+  - name: Standard
+    description: Use the standard way.
+    value: 0
+  - name: Swap
+    description: Swap.
+    value: 1
+enum/Tc:
+  bit_size: 1
+  variants:
+  - name: Active
+    description: Transmitter active.
+    value: 0
+  - name: Complete
+    description: Transmitter idle.
+    value: 1
+enum/Tdre:
+  bit_size: 1
+  variants:
+  - name: Txdata
+    description: Greater than watermark.
+    value: 0
+  - name: NoTxdata
+    description: Equal to or less than watermark.
+    value: 1
+enum/Tnp:
+  bit_size: 2
+  variants:
+  - name: OneSample
+    description: 1 / OSR.
+    value: 0
+  - name: TwoSample
+    description: 2 / OSR.
+    value: 1
+  - name: ThreeSample
+    description: 3 / OSR.
+    value: 2
+  - name: FourSample
+    description: 4 / OSR.
+    value: 3
+enum/Trgsel:
+  bit_size: 2
+  variants:
+  - name: Disabled
+    description: Input trigger disabled.
+    value: 0
+  - name: TrgRxd
+    description: Input trigger used instead of the RXD pin input.
+    value: 1
+  - name: TrgCts
+    description: Input trigger used instead of the CTS_B pin input.
+    value: 2
+  - name: TrgTxd
+    description: Input trigger used to modulate the TXD pin output, which (after TXINV configuration) is internally ANDed with the input trigger.
+    value: 3
+enum/Txctsc:
+  bit_size: 1
+  variants:
+  - name: Start
+    description: Sampled at the start of each character.
+    value: 0
+  - name: Idle
+    description: Sampled when the transmitter is idle.
+    value: 1
+enum/Txctssrc:
+  bit_size: 1
+  variants:
+  - name: Cts
+    description: The CTS_B pin.
+    value: 0
+  - name: Match
+    description: An internal connection to the receiver address match result.
+    value: 1
+enum/Txdir:
+  bit_size: 1
+  variants:
+  - name: TxInput
+    description: Input.
+    value: 0
+  - name: TxOutput
+    description: Output.
+    value: 1
+enum/Txfifosize:
+  bit_size: 3
+  variants:
+  - name: Fifo1
+    description: '1.'
+    value: 0
+  - name: Fifo4
+    description: '4.'
+    value: 1
+  - name: Fifo8
+    description: '8.'
+    value: 2
+  - name: Fifo16
+    description: '16.'
+    value: 3
+  - name: Fifo32
+    description: '32.'
+    value: 4
+  - name: Fifo64
+    description: '64.'
+    value: 5
+  - name: Fifo128
+    description: '128.'
+    value: 6
+  - name: Fifo256
+    description: '256.'
+    value: 7
+enum/Txflush:
+  bit_size: 1
+  variants:
+  - name: NoEffect
+    description: No effect.
+    value: 0
+  - name: TxfifoRst
+    description: All data flushed out.
+    value: 1
+enum/Txrtspol:
+  bit_size: 1
+  variants:
+  - name: Low
+    description: Active low.
+    value: 0
+  - name: High
+    description: Active high.
+    value: 1
+enum/Wake:
+  bit_size: 1
+  variants:
+  - name: Idle
+    description: Idle.
+    value: 0
+  - name: Mark
+    description: Mark.
+    value: 1
+# N23 RM Rev.4 50.5.5 and MCX N RM Rev.7 66.5.5. Separate reset views
+# retain A defaults. Both detailed CTRL tables reserve bit6, despite N23 XML.
+fieldset/NVerid:
+  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  extends: Verid
+  reset_value: 0x04040007
+  fields: []
+fieldset/NParam:
+  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  extends: Param
+  reset_value: 0x00000303
+  fields: []
+fieldset/NBaud:
+  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  extends: Baud
+  reset_value: 0x0f000004
+  fields: []
+fieldset/NStat:
+  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  extends: Stat
+  reset_value: 0x00c00000
+  fields:
+  - name: msf
+    description: Read-only summary of enabled MODEM delta status flags.
+    bit_offset: 8
+    bit_size: 1
+  - name: tsf
+    description: Read-only summary of enabled timeout flags.
+    bit_offset: 9
+    bit_size: 1
+fieldset/NData:
+  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  extends: Data
+  reset_value: 0x00001000
+  fields: []
+fieldset/NDataro:
+  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  extends: Dataro
+  reset_value: 0x00001000
+  fields: []
+fieldset/NFifo:
+  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  extends: Fifo
+  reset_value: 0x00c00022
+  fields: []
+fieldset/NModir:
+  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  description: MODEM IrDA with three-bit receive RTS threshold.
+  reset_value: 0
+  fields:
+  - name: txctse
+    description: Transmitter CTS Enable.
+    bit_offset: 0
+    bit_size: 1
+  - name: txrtse
+    description: Transmitter RTS Enable.
+    bit_offset: 1
+    bit_size: 1
+  - name: txrtspol
+    description: Transmitter RTS Polarity.
+    bit_offset: 2
+    bit_size: 1
+    enum: Txrtspol
+  - name: rxrtse
+    description: Receiver RTS Enable.
+    bit_offset: 3
+    bit_size: 1
+  - name: txctsc
+    description: Transmit CTS Configuration.
+    bit_offset: 4
+    bit_size: 1
+    enum: Txctsc
+  - name: txctssrc
+    description: Transmit CTS Source.
+    bit_offset: 5
+    bit_size: 1
+    enum: Txctssrc
+  - name: rtswater
+    description: Receive RTS Configuration. Change only with receiver disabled.
+    bit_offset: 8
+    bit_size: 3
+  - name: tnp
+    description: Transmitter Narrow Pulse. Change only with transmitter and receiver disabled.
+    bit_offset: 16
+    bit_size: 2
+    enum: Tnp
+  - name: iren
+    description: IR Enable. Change only with transmitter and receiver disabled.
+    bit_offset: 18
+    bit_size: 1
+fieldset/NWater:
+  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  description: Watermark.
+  reset_value: 0
+  fields:
+  - name: txwater
+    description: Transmit Watermark.
+    bit_offset: 0
+    bit_size: 3
+  - name: txcount
+    description: Read-only Transmit Counter.
+    bit_offset: 8
+    bit_size: 4
+  - name: rxwater
+    description: Receive Watermark.
+    bit_offset: 16
+    bit_size: 3
+  - name: rxcount
+    description: Read-only Receive Counter.
+    bit_offset: 24
+    bit_size: 4
+fieldset/Mcr:
+  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  description: MODEM Control.
+  reset_value: 0
+  fields:
+  - name: cts
+    description: Enable interrupt on CTS_B change of state.
+    bit_offset: 0
+    bit_size: 1
+  - name: dsr
+    description: Enable interrupt on DSR_B change of state.
+    bit_offset: 1
+    bit_size: 1
+  - name: rin
+    description: Enable interrupt on RIN_B change of state.
+    bit_offset: 2
+    bit_size: 1
+  - name: dcd
+    description: Enable interrupt on DCD_B change of state.
+    bit_offset: 3
+    bit_size: 1
+  - name: dtr
+    description: DTR_B default state. Zero drives logic one; one drives logic zero.
+    bit_offset: 8
+    bit_size: 1
+  - name: rts
+    description: RTS_B default state when its function is disabled. Zero drives logic one; one drives logic zero.
+    bit_offset: 9
+    bit_size: 1
+fieldset/Msr:
+  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  description: MODEM Status. Pin states are read-only and inverted; delta flags are W1C. Pad configuration affects observed reset states.
+  reset_value: 0
+  fields:
+  - name: dcts
+    description: CTS_B changed state. Write one to clear.
+    bit_offset: 0
+    bit_size: 1
+  - name: ddsr
+    description: DSR_B changed state. Write one to clear.
+    bit_offset: 1
+    bit_size: 1
+  - name: dri
+    description: RIN_B changed state. Write one to clear.
+    bit_offset: 2
+    bit_size: 1
+  - name: ddcd
+    description: DCD_B changed state. Write one to clear.
+    bit_offset: 3
+    bit_size: 1
+  - name: cts
+    description: Read-only CTS_B state. Zero indicates logic one; one indicates logic zero.
+    bit_offset: 4
+    bit_size: 1
+  - name: dsr
+    description: Read-only DSR_B state. Zero indicates logic one; one indicates logic zero.
+    bit_offset: 5
+    bit_size: 1
+  - name: rin
+    description: Read-only RIN_B state. Zero indicates logic one; one indicates logic zero.
+    bit_offset: 6
+    bit_size: 1
+  - name: dcd
+    description: Read-only DCD_B state. Zero indicates logic one; one indicates logic zero.
+    bit_offset: 7
+    bit_size: 1
+fieldset/Reir:
+  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  description: Receiver Extended Idle. Change only with receiver disabled.
+  reset_value: 0
+  fields:
+  - name: idtime
+    description: Idle length in baud-rate bits since the last stop bit. Zero disables; minimum enabled interval is one idle character.
+    bit_offset: 0
+    bit_size: 14
+fieldset/Teir:
+  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  description: Transmitter Extended Idle. Change only with transmitter disabled.
+  reset_value: 0
+  fields:
+  - name: idtime
+    description: Transmit idle time in baud-rate bits when an idle character is queued. Zero disables; minimum enabled interval is one idle character.
+    bit_offset: 0
+    bit_size: 14
+fieldset/Hdcr:
+  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  description: Half Duplex Control.
+  reset_value: 0
+  fields:
+  - name: txstall
+    description: Prevent transmitter from becoming busy or asserting RTS_B while the receiver is active.
+    bit_offset: 0
+    bit_size: 1
+  - name: rxsel
+    description: Receive data source. Zero selects RXD; one selects TXD.
+    bit_offset: 1
+    bit_size: 1
+  - name: rxwrmsk
+    description: Allow transmitter RTS_B to mask receive FIFO writes, without affecting the idle flag.
+    bit_offset: 2
+    bit_size: 1
+  - name: rxmsk
+    description: Allow transmitter RTS_B to mask the receive data pin.
+    bit_offset: 3
+    bit_size: 1
+  - name: rtsext
+    description: RTS_B remains asserted for RTSEXT+1 bit times after the last stop bit, including internally when transmitter RTS output is disabled.
+    bit_offset: 8
+    bit_size: 8
+fieldset/Tocr:
+  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  description: Timeout Control.
+  reset_value: 0
+  fields:
+  - name: toen
+    description: Per-counter enable mask.
+    bit_offset: 0
+    bit_size: 4
+  - name: toie
+    description: Per-counter interrupt enable mask.
+    bit_offset: 8
+    bit_size: 4
+fieldset/Tosr:
+  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  description: Timeout Status.
+  reset_value: 0x0000000f
+  fields:
+  - name: toz
+    description: Read-only mask indicating which timeout counters equal zero.
+    bit_offset: 0
+    bit_size: 4
+  - name: tof
+    description: Per-counter timeout flags. Write one to clear each flag. A set flag disables its counter.
+    bit_offset: 8
+    bit_size: 4
+fieldset/Timeout:
+  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  description: Timeout N. Write only when the corresponding counter is disabled or its flag is set.
+  reset_value: 0
+  fields:
+  - name: timeout
+    description: Timeout value.
+    bit_offset: 0
+    bit_size: 14
+  - name: cfg
+    description: Idle configuration.
+    bit_offset: 30
+    bit_size: 2
+    enum: TimeoutCfg
+fieldset/Tcbr:
+  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  description: Transmit Command Burst alias payload. Not independent storage.
+  reset_value: 0
+  fields:
+  - name: data
+    description: DATA alias payload.
+    bit_offset: 0
+    bit_size: 16
+fieldset/Tdbr:
+  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  description: Transmit Data Burst byte payloads, pushed DATA0 first on word writes.
+  reset_value: 0
+  fields:
+  - name: data0
+    description: First byte.
+    bit_offset: 0
+    bit_size: 8
+  - name: data1
+    description: Second byte.
+    bit_offset: 8
+    bit_size: 8
+  - name: data2
+    description: Third byte.
+    bit_offset: 16
+    bit_size: 8
+  - name: data3
+    description: Fourth byte.
+    bit_offset: 24
+    bit_size: 8
+enum/TimeoutCfg:
+  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  bit_size: 2
+  variants:
+  - name: Characters
+    description: Flag becomes one after timeout characters are received.
+    value: 0
+  - name: Idle
+    description: Flag becomes one when idle for timeout bit clocks.
+    value: 1
+  - name: IdleAfterCharacter
+    description: Flag becomes one when idle for timeout bit clocks following the next character.
+    value: 2
+  - name: IdleBeforeExtended
+    description: Flag becomes one when idle for at least timeout bit clocks but a new character is detected before extended idle timeout.
+    value: 3

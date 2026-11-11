@@ -1,0 +1,325 @@
+# MCXN23xRM Rev. 4, sections 56.7.1.1-56.7.1.14;
+# MCXNP184M150F70RM Rev. 7, sections 74.7.1.1-74.7.1.14.
+# reset_value is a software construction default, not a claim that PDF 'u'
+# reserved bits or alias-register reset bits are known hardware zeros.
+block/Pint:
+  description: >-
+    Pin interrupts and pattern match for eight inputs selected through INPUTMUX.
+    Reserved fields are omitted; write reserved bits as zero. Status and alias
+    registers require explicit writes rather than blind read-modify-write.
+    Construction defaults do not establish hardware reset values for reserved
+    bits or write aliases whose reset diagrams contain unknown bits.
+  items:
+  - name: isel
+    description: Pin interrupt mode. Bits 31:8 read undefined; write them as zero.
+    byte_offset: 0
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Isel
+  - name: ienr
+    description: Rising-edge or level interrupt enable. Write bits 31:8 as zero.
+    byte_offset: 4
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Ienr
+  - name: sienr
+    description: Write-one set mask for IENR; zero has no effect.
+    byte_offset: 8
+    bit_size: 32
+    access: Write
+    fieldset: Sienr
+  - name: cienr
+    description: >-
+      IENR clear alias, retaining the manuals' read-write summary access.
+      Unresolved vendor conflict: both manuals' function prose says writing zero
+      disables interrupts, but their CENRL diagrams mark W1C and field tables say
+      zero has no effect and one disables. Pinned SVD also specifies oneToClear.
+      Neither write-zero nor write-one behavior is resolved here; do not infer a
+      safe write value from Default or use read-modify-write on this register.
+    byte_offset: 12
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Cienr
+  - name: ienf
+    description: Falling-edge enable or active-level selection.
+    byte_offset: 16
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Ienf
+  - name: sienf
+    description: >-
+      IENF set alias. Function prose and field encoding specify one sets and zero
+      has no effect; the field-table introductory sentence instead says clear to
+      disable. This vendor wording conflict is unresolved.
+    byte_offset: 20
+    bit_size: 32
+    access: Write
+    fieldset: Sienf
+  - name: cienf
+    description: >-
+      IENF clear alias, retaining the manuals' write-only summary access. Field
+      encodings specify zero has no effect and one selects LOW-active or disables
+      falling-edge interrupts; adjacent prose also says writing zero configures
+      IENF. This wording conflict is unresolved.
+    byte_offset: 24
+    bit_size: 32
+    access: Write
+    fieldset: Cienf
+  - name: rise
+    description: Rising-edge detection, including disabled inputs; write one to clear.
+    byte_offset: 28
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Rise
+  - name: fall
+    description: Falling-edge detection, including disabled inputs; write one to clear.
+    byte_offset: 32
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Fall
+  - name: ist
+    description: >-
+      Interrupt requests. Writing one clears both edge detectors in edge mode,
+      but toggles the IENF active level in level mode. Zero has no effect.
+    byte_offset: 36
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Ist
+  - name: pmctrl
+    description: >-
+      Pattern-match control and read-only match status. Configure PMSRC and PMCFG
+      before enabling either control to avoid spurious interrupts. Clearing both
+      controls erases edge history. Pattern matching requires clocks and cannot
+      wake the chip below sleep mode. PMAT is read-only despite the register's
+      read-write access; the IR cannot enforce per-field access.
+    byte_offset: 40
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Pmctrl
+  - name: pmsrc
+    description: >-
+      Sources for eight pattern slices. Any write erases all pattern edge-detect
+      history. Bits 7:0 are reserved and read zero.
+    byte_offset: 44
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Pmsrc
+  - name: pmcfg
+    description: >-
+      Eight slice conditions and seven programmable product endpoints. Slice 7
+      is always an endpoint; bit 7 is reserved. Any write erases all pattern
+      edge-detect history. Unused slices must use constant-zero condition 6,
+      not reset condition 0 (constant HIGH). The function prose's instruction to
+      clear PMCTRL controls "by writing 1" conflicts with the PMSRC note and
+      PMCTRL control descriptions, which require zero; no special clear helper
+      is supplied.
+    byte_offset: 48
+    bit_size: 32
+    access: ReadWrite
+    fieldset: Pmcfg
+fieldset/Isel:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: pmode
+    description: Bit n selects input n mode; zero is edge-sensitive, one is level-sensitive.
+    bit_offset: 0
+    bit_size: 8
+fieldset/Ienr:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: enrl
+    description: Bit n enables rising-edge interrupts in edge mode or level interrupts in level mode.
+    bit_offset: 0
+    bit_size: 8
+fieldset/Sienr:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: setenrl
+    description: Per-input IENR set mask; one enables, zero has no effect.
+    bit_offset: 0
+    bit_size: 8
+fieldset/Cienr:
+  bit_size: 32
+  fields:
+  - name: cenrl
+    description: >-
+      Per-input IENR clear mask. Both manuals conflict: function prose says zero
+      disables, diagram says W1C, field encodings and SVD say zero has no effect
+      and one disables. Unresolved; Default is not an established safe write or
+      hardware reset value. Avoid read-modify-write.
+    bit_offset: 0
+    bit_size: 8
+fieldset/Ienf:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: enaf
+    description: >-
+      Bit n enables falling-edge interrupts in edge mode. In level mode, zero
+      selects LOW-active and one selects HIGH-active.
+    bit_offset: 0
+    bit_size: 8
+fieldset/Sienf:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: setenaf
+    description: >-
+      Per-input IENF set mask. Function prose and encoding specify one selects
+      HIGH-active or enables falling edges, zero has no effect; the table's
+      introductory "clear ... disable" sentence conflicts.
+    bit_offset: 0
+    bit_size: 8
+fieldset/Cienf:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: cenaf
+    description: >-
+      Per-input IENF clear mask. Encodings specify one selects LOW-active or
+      disables falling edges, zero has no effect; adjacent prose also says
+      writing zero configures IENF. Default zero follows the no-operation
+      encoding, not an established hardware reset value.
+    bit_offset: 0
+    bit_size: 8
+fieldset/Rise:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: rdet
+    description: Per-input rising-edge flags. Write one to clear, zero has no effect.
+    bit_offset: 0
+    bit_size: 8
+fieldset/Fall:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: fdet
+    description: Per-input falling-edge flags. Write one to clear, zero has no effect.
+    bit_offset: 0
+    bit_size: 8
+fieldset/Ist:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: pstat
+    description: >-
+      Per-input interrupt requests. Write one to clear both edge flags in edge
+      mode or toggle the IENF active level in level mode; zero has no effect.
+    bit_offset: 0
+    bit_size: 8
+fieldset/Pmctrl:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: sel_pmatch
+    description: Select pin interrupts (zero) or pattern-match interrupts (one).
+    bit_offset: 0
+    bit_size: 1
+    enum: SelPmatch
+  - name: ena_rxev
+    description: Enable RXEV output for a true pattern Boolean expression.
+    bit_offset: 1
+    bit_size: 1
+  - name: pmat
+    description: >-
+      Read-only current product-term matches, one bit per slice. Not a latched
+      write-one-to-clear flag; do not write this field.
+    bit_offset: 24
+    bit_size: 8
+fieldset/Pmsrc:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: src
+    description: Input n is the pin selected by INPUTMUX interrupt selection n.
+    bit_offset: 8
+    bit_size: 3
+    array:
+      len: 8
+      stride: 3
+    enum: Source
+fieldset/Pmcfg:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: prod_endpts
+    description: >-
+      One ends a product term at slice n and starts a new term at slice n+1;
+      that term's match asserts interrupt n. Zero has no effect. Slice 7 is
+      always an endpoint and has no programmable bit.
+    bit_offset: 0
+    bit_size: 1
+    array:
+      len: 7
+      stride: 1
+  - name: cfg
+    description: >-
+      Match contribution for slice n. Writing PMCFG or PMSRC clears sticky
+      history. For event encoding 7, the functional description says hardware
+      clears detection after one clock, while the field text says "Write 0 to
+      this field after one clock cycle"; this wording discrepancy is unresolved.
+    bit_offset: 8
+    bit_size: 3
+    array:
+      len: 8
+      stride: 3
+    enum: MatchCondition
+enum/SelPmatch:
+  bit_size: 1
+  variants:
+  - name: PIN_INTERRUPT
+    description: Standard pin interrupt function.
+    value: 0
+  - name: PATTERN_MATCH
+    description: Pattern-match function.
+    value: 1
+enum/Source:
+  bit_size: 3
+  variants:
+  - name: INPUT0
+    value: 0
+  - name: INPUT1
+    value: 1
+  - name: INPUT2
+    value: 2
+  - name: INPUT3
+    value: 3
+  - name: INPUT4
+    value: 4
+  - name: INPUT5
+    value: 5
+  - name: INPUT6
+    value: 6
+  - name: INPUT7
+    value: 7
+enum/MatchCondition:
+  bit_size: 3
+  variants:
+  - name: CONSTANT_HIGH
+    description: Always contributes to a product-term match.
+    value: 0
+  - name: STICKY_RISING_EDGE
+    description: Sticky rising edge; write PMCFG or PMSRC to clear history.
+    value: 1
+  - name: STICKY_FALLING_EDGE
+    description: Sticky falling edge; write PMCFG or PMSRC to clear history.
+    value: 2
+  - name: STICKY_EITHER_EDGE
+    description: Sticky rising or falling edge; write PMCFG or PMSRC to clear history.
+    value: 3
+  - name: HIGH_LEVEL
+    description: Input is HIGH.
+    value: 4
+  - name: LOW_LEVEL
+    description: Input is LOW.
+    value: 5
+  - name: CONSTANT_ZERO
+    description: Never matches; required for unused slices.
+    value: 6
+  - name: EVENT
+    description: Nonsticky rising or falling edge; see CFG timing wording conflict.
+    value: 7

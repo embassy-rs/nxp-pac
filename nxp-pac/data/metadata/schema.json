@@ -50,7 +50,7 @@
       }
     },
     "pin": {
-      "description": "Pin provided on a chip. This does not include power pins.",
+      "description": "Chip pin or dedicated pad. Power and ground pins are excluded unless they have a documented peripheral connection.",
       "type": "object",
       "properties": {
         "name": {
@@ -123,17 +123,20 @@
             "$ref": "#/$defs/signal"
           }
         },
+        "direct_signals": {
+          "description": "Non-PORT-mux peripheral connectivity, not a pin configuration recipe or digital ALT route",
+          "type": "array",
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/direct_signal"
+          }
+        },
         "flexcomm": {
           "description": "Indicates which (LP)FLEXCOMM instance this peripheral belongs to. Optional if the chip does not have FLEXCOMM instances, or the peripheral does not belong to FLEXCOMM",
           "type": "string"
         },
         "dma_muxing": {
-          "description": [
-            "DMA muxing peripheral signals.",
-            "This is chip dependent.",
-            "LPC55 uses fixed DMA channels for peripherals.",
-            "RT1xxx, S32 and MCX use the DMA mux to select the request channel for a peripheral"
-          ],
+          "description": "DMA muxing peripheral signals. This is chip dependent. LPC55 uses fixed DMA channels for peripherals. RT1xxx, S32 and MCX use the DMA mux to select the request channel for a peripheral",
           "items": {
             "$ref": "#/$defs/dma_mux"
           }
@@ -148,35 +151,71 @@
           "default": false
         },
         "gate": {
-          "description": "Clock & reset control for the peripheral",
-          "type": "object",
-          "properties": {
-            "enable": {
-              "description": "The name of the register that gates/enables the clock to the peripheral",
-              "type": "string"
-            },
-            "reset": {
-              "description": "The name of the register that resets the peripheral",
-              "type": "string"
-            },
-            "config": {
-              "description": "The name of the config type used for setting up the clocks",
-              "type": "string"
-            },
-            "bit": {
-              "description": "The name of the bit field inside the MRCC registers. Defaults to the lowercased peripheral name if not manually specified.",
-              "type": "string"
-            }
-          },
-          "required": [
-            "enable"
-          ]
+          "$ref": "#/$defs/gate"
+        },
+        "named_gates": {
+          "description": "Named controls without an implied primary or initialization sequence; names are unique per selected peripheral",
+          "type": "array",
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/named_gate"
+          }
         }
       },
       "required": [
         "name",
         "signals"
       ]
+    },
+    "gate": {
+      "description": "Clock & reset control for the peripheral",
+      "type": "object",
+      "properties": {
+        "enable": {
+          "description": "The name of the register that gates/enables the clock to the peripheral",
+          "type": "string"
+        },
+        "reset": {
+          "description": "The name of the register that resets the peripheral",
+          "type": "string"
+        },
+        "config": {
+          "description": "The name of the config type used for setting up the clocks",
+          "type": "string"
+        },
+        "bit": {
+          "description": "The clock-enable bit field. Defaults to the lowercased peripheral name if not manually specified.",
+          "type": "string"
+        },
+        "reset_bit": {
+          "description": "Optional reset bit field in the reset register. Defaults to the effective clock-enable bit field, including the peripheral-name default.",
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      },
+      "dependentRequired": {
+        "reset_bit": ["reset"]
+      },
+      "required": [
+        "enable"
+      ]
+    },
+    "named_gate": {
+      "description": "A named peripheral control, not an initialization step",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "gate": {
+          "$ref": "#/$defs/gate"
+        }
+      },
+      "required": ["name", "gate"],
+      "additionalProperties": false
     },
     "signal": {
       "description": "Signal provided by a peripheral",
@@ -202,6 +241,38 @@
         "name",
         "pins"
       ]
+    },
+    "direct_signal": {
+      "description": "Peripheral signal available without a digital PORT mux selection",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "pins": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/direct_signal_pin"
+          }
+        }
+      },
+      "required": ["name", "pins"],
+      "additionalProperties": false
+    },
+    "direct_signal_pin": {
+      "description": "Analog or direct-input connectivity; does not imply a configurable PORT mux",
+      "type": "object",
+      "properties": {
+        "pin": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string",
+          "enum": ["analog", "direct_input"]
+        }
+      },
+      "required": ["pin", "kind"],
+      "additionalProperties": false
     },
     "peripheral_pin": {
       "description": "Pin where a peripheral signal is available",

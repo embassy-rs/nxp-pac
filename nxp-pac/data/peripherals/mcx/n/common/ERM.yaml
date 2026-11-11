@@ -1,0 +1,269 @@
+# MCXN23XRM Rev. 4, sections 22.1/22.3/22.5; MCXNP184M150F70RM Rev. 7, sections 30.1/30.3/30.5.
+# Use the explicit EAR/SYN offset lists, not the generic channel maximum or SYN0-SYN8 heading.
+block/Erm:
+  description: Error recording module. Supervisor word accesses only; enable the corresponding memory clock before channel register accesses. Initialize ECC memory and clear captured flags before enabling interrupts. Register slots do not imply usable error routing; N23 channels 5 and 6 are reserved targets, and RAMF is unavailable on 352-KB parts. Follow the selected part's memory and ECC restrictions. Secure and privileged configuration is recommended by NXP, not enforced by this register view.
+  items:
+  - name: cr0
+    description: Interrupt notification enables for channel slots 0-7. N23 targets 5 and 6 are reserved; channel 6 has no RAMF target on 352-KB parts.
+    byte_offset: 0
+    fieldset: Cr0
+  - name: cr1
+    description: Interrupt notification enables for channel slots 8 and 9.
+    byte_offset: 4
+    fieldset: Cr1
+  - name: sr0
+    description: Error status for channel slots 0-7. Write one to clear only the intended flags and their interrupt notifications; avoid read-modify-write. N23 targets 5 and 6 are reserved; channel 6 has no RAMF target on 352-KB parts.
+    byte_offset: 16
+    fieldset: Sr0
+  - name: sr1
+    description: Error status for channel slots 8 and 9. Write one to clear only the intended flags and their interrupt notifications; avoid read-modify-write.
+    byte_offset: 20
+    fieldset: Sr1
+  - name: ear
+    only_in: '^MCXN23[56]$'
+    description: Channel 0-4 address of the last recorded ECC event. Writes are ignored.
+    byte_offset: 256
+    access: Read
+    array:
+      len: 5
+      stride: 16
+    fieldset: Ear
+  - name: ear
+    only_in: '^MCXN(247|52[67]|53[67]|54[67]|94[67])$'
+    description: Channel 0-6 address of the last recorded ECC event. Writes are ignored. Channel 6 has no RAMF target on 352-KB parts; register presence does not establish supported ECC routing.
+    byte_offset: 256
+    access: Read
+    array:
+      len: 7
+      stride: 16
+    fieldset: Ear
+  - name: syn
+    only_in: '^MCXN23[56]$'
+    description: Channel 0-4 syndrome of the last recorded ECC event. Writes are ignored. Identifies a single inverted data or address bit, but provides no additional diagnosis for non-correctable multi-bit inversions.
+    byte_offset: 260
+    access: Read
+    array:
+      len: 5
+      stride: 16
+    fieldset: Syn
+  - name: syn
+    only_in: '^MCXN(247|52[67]|53[67]|54[67]|94[67])$'
+    description: Channel 0-6 syndrome of the last recorded ECC event. Writes are ignored. Identifies a single inverted data or address bit, but provides no additional diagnosis for non-correctable multi-bit inversions. Channel 6 has no RAMF target on 352-KB parts; register presence does not establish supported ECC routing.
+    byte_offset: 260
+    access: Read
+    array:
+      len: 7
+      stride: 16
+    fieldset: Syn
+  - name: syn8
+    description: Documented PKC RAM syndrome register. Writes are ignored. The chip integration table describes byte parity reporting, whereas generic register prose describes ECC syndrome; do not infer ECC decoding for this parity route.
+    byte_offset: 388
+    access: Read
+    fieldset: Syn
+  - name: corr_err_cnt
+    description: Correctable error counts for channel slots 0-9. Saturate at 255; write zero to reset, nonzero writes have no effect. Channels 7-9 report non-correctable errors and do not increment counts. N23 targets 5 and 6 are reserved; RAMF is unavailable on 352-KB parts.
+    byte_offset: 264
+    array:
+      len: 10
+      stride: 16
+    fieldset: CorrErrCnt
+fieldset/Cr0:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: escie0
+    description: Enable channel 0 single-bit correction interrupt notification.
+    bit_offset: 31
+    bit_size: 1
+  - name: encie0
+    description: Enable channel 0 non-correctable error interrupt notification.
+    bit_offset: 30
+    bit_size: 1
+  - name: escie1
+    description: Enable channel 1 single-bit correction interrupt notification.
+    bit_offset: 27
+    bit_size: 1
+  - name: encie1
+    description: Enable channel 1 non-correctable error interrupt notification.
+    bit_offset: 26
+    bit_size: 1
+  - name: escie2
+    description: Enable channel 2 single-bit correction interrupt notification.
+    bit_offset: 23
+    bit_size: 1
+  - name: encie2
+    description: Enable channel 2 non-correctable error interrupt notification.
+    bit_offset: 22
+    bit_size: 1
+  - name: escie3
+    description: Enable channel 3 single-bit correction interrupt notification.
+    bit_offset: 19
+    bit_size: 1
+  - name: encie3
+    description: Enable channel 3 non-correctable error interrupt notification.
+    bit_offset: 18
+    bit_size: 1
+  - name: escie4
+    description: Enable channel 4 single-bit correction interrupt notification.
+    bit_offset: 15
+    bit_size: 1
+  - name: encie4
+    description: Enable channel 4 non-correctable error interrupt notification.
+    bit_offset: 14
+    bit_size: 1
+  - name: escie5
+    description: Documented channel 5 single-bit correction interrupt enable slot; target reserved on N23.
+    bit_offset: 11
+    bit_size: 1
+  - name: encie5
+    description: Documented channel 5 non-correctable error interrupt enable slot; target reserved on N23.
+    bit_offset: 10
+    bit_size: 1
+  - name: escie6
+    description: Documented channel 6 single-bit correction interrupt enable slot; target reserved on N23 and RAMF unavailable on 352-KB parts.
+    bit_offset: 7
+    bit_size: 1
+  - name: encie6
+    description: Documented channel 6 non-correctable error interrupt enable slot; target reserved on N23 and RAMF unavailable on 352-KB parts.
+    bit_offset: 6
+    bit_size: 1
+  - name: escie7
+    description: Documented channel 7 single-bit correction interrupt enable slot; the chip routes non-correctable LPCAC parity errors.
+    bit_offset: 3
+    bit_size: 1
+  - name: encie7
+    description: Enable channel 7 non-correctable error interrupt notification.
+    bit_offset: 2
+    bit_size: 1
+fieldset/Cr1:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: escie8
+    description: Documented channel 8 single-bit correction interrupt enable slot; the chip routes non-correctable PKC parity errors.
+    bit_offset: 31
+    bit_size: 1
+  - name: encie8
+    description: Enable channel 8 non-correctable error interrupt notification.
+    bit_offset: 30
+    bit_size: 1
+  - name: escie9
+    description: Documented channel 9 single-bit correction interrupt enable slot; the chip routes non-correctable flash errors.
+    bit_offset: 27
+    bit_size: 1
+  - name: encie9
+    description: Enable channel 9 non-correctable error interrupt notification.
+    bit_offset: 26
+    bit_size: 1
+fieldset/Sr0:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: sbc0
+    description: Channel 0 single-bit correction event. Write one to clear the flag and corresponding interrupt notification.
+    bit_offset: 31
+    bit_size: 1
+  - name: nce0
+    description: Channel 0 non-correctable error event. Write one to clear the flag and corresponding interrupt notification.
+    bit_offset: 30
+    bit_size: 1
+  - name: sbc1
+    description: Channel 1 single-bit correction event. Write one to clear the flag and corresponding interrupt notification.
+    bit_offset: 27
+    bit_size: 1
+  - name: nce1
+    description: Channel 1 non-correctable error event. Write one to clear the flag and corresponding interrupt notification.
+    bit_offset: 26
+    bit_size: 1
+  - name: sbc2
+    description: Channel 2 single-bit correction event. Write one to clear the flag and corresponding interrupt notification.
+    bit_offset: 23
+    bit_size: 1
+  - name: nce2
+    description: Channel 2 non-correctable error event. Write one to clear the flag and corresponding interrupt notification.
+    bit_offset: 22
+    bit_size: 1
+  - name: sbc3
+    description: Channel 3 single-bit correction event. Write one to clear the flag and corresponding interrupt notification.
+    bit_offset: 19
+    bit_size: 1
+  - name: nce3
+    description: Channel 3 non-correctable error event. Write one to clear the flag and corresponding interrupt notification.
+    bit_offset: 18
+    bit_size: 1
+  - name: sbc4
+    description: Channel 4 single-bit correction event. Write one to clear the flag and corresponding interrupt notification.
+    bit_offset: 15
+    bit_size: 1
+  - name: nce4
+    description: Channel 4 non-correctable error event. Write one to clear the flag and corresponding interrupt notification.
+    bit_offset: 14
+    bit_size: 1
+  - name: sbc5
+    description: Documented channel 5 single-bit correction flag slot; target reserved on N23. Write one to clear the flag and interrupt notification.
+    bit_offset: 11
+    bit_size: 1
+  - name: nce5
+    description: Documented channel 5 non-correctable flag slot; target reserved on N23. Write one to clear the flag and interrupt notification.
+    bit_offset: 10
+    bit_size: 1
+  - name: sbc6
+    description: Documented channel 6 single-bit correction flag slot; target reserved on N23 and RAMF unavailable on 352-KB parts. Write one to clear the flag and interrupt notification.
+    bit_offset: 7
+    bit_size: 1
+  - name: nce6
+    description: Documented channel 6 non-correctable flag slot; target reserved on N23 and RAMF unavailable on 352-KB parts. Write one to clear the flag and interrupt notification.
+    bit_offset: 6
+    bit_size: 1
+  - name: sbc7
+    description: Documented channel 7 single-bit correction flag slot; the chip routes non-correctable LPCAC parity errors. Write one to clear the flag and interrupt notification.
+    bit_offset: 3
+    bit_size: 1
+  - name: nce7
+    description: Channel 7 non-correctable error event. Write one to clear the flag and interrupt notification.
+    bit_offset: 2
+    bit_size: 1
+fieldset/Sr1:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: sbc8
+    description: Documented channel 8 single-bit correction flag slot; the chip routes non-correctable PKC parity errors. Write one to clear the flag and interrupt notification.
+    bit_offset: 31
+    bit_size: 1
+  - name: nce8
+    description: Channel 8 non-correctable error event. Write one to clear the flag and interrupt notification.
+    bit_offset: 30
+    bit_size: 1
+  - name: sbc9
+    description: Documented channel 9 single-bit correction flag slot; the chip routes non-correctable flash errors. Write one to clear the flag and interrupt notification.
+    bit_offset: 27
+    bit_size: 1
+  - name: nce9
+    description: Channel 9 non-correctable error event. Write one to clear the flag and interrupt notification.
+    bit_offset: 26
+    bit_size: 1
+fieldset/Ear:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: ear
+    description: Faulting system address of the last recorded ECC event.
+    bit_offset: 0
+    bit_size: 32
+fieldset/Syn:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: syndrome
+    description: Syndrome associated with the last recorded error event; interpretation depends on the channel's ECC or parity routing.
+    bit_offset: 24
+    bit_size: 8
+fieldset/CorrErrCnt:
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: count
+    description: Correctable event count. Saturates at 255 without wrapping; writing zero clears it, nonzero writes have no effect.
+    bit_offset: 0
+    bit_size: 8

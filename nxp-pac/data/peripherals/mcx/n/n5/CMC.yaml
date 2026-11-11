@@ -1,0 +1,2302 @@
+# NXP mcux-soc-svd 7c1f00bdd6263f0b93466f5e73e5fc55a744b879; native chiptool import.
+# Source instance geometry is retained in explicit block variants; see private source bindings.
+# Unannotated fieldsets construct zero in software, not a claimed hardware reset.
+# Command/W1C/SET/CLR/TOG construction defaults are zero masks; no RMW semantics are implied.
+# Source: MCXN526_cm33_core0.xml CMC0 sha256 ccb0c8ecf3573e24bb8c15a32bdec8a6f63b8870ced5bb7b9b629177f5f990f3
+# Source: MCXN526_cm33_core1.xml CMC0 sha256 caf054982956506a2f2e6896e0b1e0eb1c3035684fd3093778a21bda218bfa09
+# Source: MCXN527_cm33_core0.xml CMC0 sha256 5547fbb406e6e825ebc2f983518a5893814d62c3a6e2c5ad6075c49d939c8e17
+# Source: MCXN527_cm33_core1.xml CMC0 sha256 daac6c4d6fdbbdc87d7557ed9e567801921eca1e8107fc3f9f38173be3c936e0
+# Source: MCXN536_cm33_core0.xml CMC0 sha256 f9533e58d74eab222fc38608bd1d8dc45087e87b80a93f8b693e6cf2eb25cba4
+# Source: MCXN536_cm33_core1.xml CMC0 sha256 c089aecac3d73a7d8fc4a8c0cccf77ea8446b22a2ea99f4f2f01a4e0ca3a2fdd
+# Source: MCXN537_cm33_core0.xml CMC0 sha256 e72dbd80d33e6f53f05f11156fc20f6d53cf9848bc74fed80b5c34157455b11a
+# Source: MCXN537_cm33_core1.xml CMC0 sha256 4d5f7d121166c4d720a9da81b90be1b2f93be5e71fd25b9dd74b8715ebe30dce
+# Source: MCXN546_cm33_core0.xml CMC0 sha256 54e1fc060f9ccc17299bdb2da84159e699e87456276f2e695d440a6eb4aa9aad
+# Source: MCXN546_cm33_core1.xml CMC0 sha256 ddb7e932730a51c75f544efd6564ad6dbce5b3eca0a7befb7ab5b74a9951b937
+# Source: MCXN547_cm33_core0.xml CMC0 sha256 a276aee072bebd57c18929fe9a74408366fdbb42b918e06be5a3783a4aae4db7
+# Source: MCXN547_cm33_core1.xml CMC0 sha256 4a265743bdd2130cdd37ef12b9fd1d538cce9a2eac1c9149db291b7638e61423
+block/CmcAlpha:
+  description: CMC.
+  items:
+  - name: verid
+    description: Version ID.
+    byte_offset: 0
+    access: Read
+    fieldset: CmcAlphaFieldsetVictor
+  - name: ckctrl
+    description: Clock Control.
+    byte_offset: 16
+    fieldset: CmcAlphaFieldsetCharlie
+  - name: ckstat
+    description: Clock Status.
+    byte_offset: 20
+    fieldset: CmcAlphaFieldsetDelta
+  - name: pmprot
+    description: Power Mode Protection.
+    byte_offset: 24
+    fieldset: CmcAlphaFieldsetMike
+  - name: gpmctrl
+    description: Global Power Mode Control.
+    byte_offset: 28
+    fieldset: CmcAlphaFieldsetIndia
+  - name: pmctrlmain
+    description: Power Mode Control.
+    byte_offset: 32
+    fieldset: CmcAlphaFieldsetKilo
+  - name: pmctrlwake
+    description: Power Mode Control.
+    byte_offset: 36
+    fieldset: CmcAlphaFieldsetLima
+  - name: srs
+    description: System Reset Status.
+    byte_offset: 128
+    access: Read
+    fieldset: CmcAlphaFieldsetTango
+  - name: rpc
+    description: Reset Pin Control.
+    byte_offset: 132
+    fieldset: CmcAlphaFieldsetNovember
+  - name: ssrs
+    description: Sticky System Reset Status.
+    byte_offset: 136
+    fieldset: CmcAlphaFieldsetUniform
+  - name: srie
+    description: System Reset Interrupt Enable.
+    byte_offset: 140
+    fieldset: CmcAlphaFieldsetRomeo
+  - name: srif
+    description: System Reset Interrupt Flag.
+    byte_offset: 144
+    fieldset: CmcAlphaFieldsetSierra
+  - name: rstcnt
+    description: Reset Count Register.
+    byte_offset: 156
+    access: Read
+    fieldset: CmcAlphaFieldsetOscar
+  - name: mr0
+    description: Mode.
+    byte_offset: 160
+    fieldset: CmcAlphaFieldsetJuliet
+  - name: fm0
+    description: Force Mode.
+    byte_offset: 176
+    fieldset: CmcAlphaFieldsetHotel
+  - name: sramdis0
+    description: SRAM Disable.
+    byte_offset: 192
+    fieldset: CmcAlphaFieldsetPapa
+  - name: sramret0
+    description: SRAM Retention.
+    byte_offset: 208
+    fieldset: CmcAlphaFieldsetQuebec
+  - name: flashcr
+    description: Flash Control.
+    byte_offset: 224
+    fieldset: CmcAlphaFieldsetGolf
+  - name: bsr
+    description: BootROM Status Register.
+    byte_offset: 256
+    fieldset: CmcAlphaFieldsetBravo
+  - name: blr
+    description: BootROM Lock Register.
+    byte_offset: 268
+    fieldset: CmcAlphaFieldsetAlpha
+  - name: corectl
+    description: Core Control.
+    byte_offset: 272
+    fieldset: CmcAlphaFieldsetEcho
+  - name: dbgctl
+    description: Debug Control.
+    byte_offset: 288
+    fieldset: CmcAlphaFieldsetFoxtrot
+fieldset/CmcAlphaFieldsetAlpha:
+  description: BootROM Lock Register.
+  fields:
+  - name: lock
+    description: Lock.
+    bit_offset: 0
+    bit_size: 3
+    enum: CmcAlphaEnumAlpha
+fieldset/CmcAlphaFieldsetBravo:
+  description: BootROM Status Register.
+  fields:
+  - name: stat
+    description: Provides status information written by the BootROM.
+    bit_offset: 0
+    bit_size: 32
+fieldset/CmcAlphaFieldsetCharlie:
+  description: Clock Control.
+  fields:
+  - name: ckmode
+    description: Clocking Mode.
+    bit_offset: 0
+    bit_size: 4
+    enum: CmcAlphaEnumBravo
+  - name: lock
+    description: Lock.
+    bit_offset: 31
+    bit_size: 1
+    enum: CmcAlphaEnumCharlie
+fieldset/CmcAlphaFieldsetDelta:
+  description: Clock Status.
+  fields:
+  - name: ckmode
+    description: Low Power Status.
+    bit_offset: 0
+    bit_size: 4
+    enum: CmcAlphaEnumDelta
+  - name: wakeup
+    description: Wake-up Source.
+    bit_offset: 8
+    bit_size: 8
+  - name: valid
+    description: Clock Status Valid.
+    bit_offset: 31
+    bit_size: 1
+    enum: CmcAlphaEnumOscarEcho
+fieldset/CmcAlphaFieldsetEcho:
+  description: Core Control.
+  fields:
+  - name: npie
+    description: Non-maskable Pin Interrupt Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: CmcAlphaEnumPapaAlpha
+fieldset/CmcAlphaFieldsetFoxtrot:
+  description: Debug Control.
+  fields:
+  - name: sod
+    description: Sleep Or Debug.
+    bit_offset: 0
+    bit_size: 1
+    enum: CmcAlphaEnumAlphaCharlie
+fieldset/CmcAlphaFieldsetGolf:
+  description: Flash Control.
+  fields:
+  - name: flashdis
+    description: Flash Disable.
+    bit_offset: 0
+    bit_size: 1
+    enum: CmcAlphaEnumLimaAlpha
+  - name: flashdoze
+    description: Flash Doze.
+    bit_offset: 1
+    bit_size: 1
+    enum: CmcAlphaEnumMikeAlpha
+fieldset/CmcAlphaFieldsetHotel:
+  description: Force Mode.
+  fields:
+  - name: forcecfg
+    description: Boot Configuration.
+    bit_offset: 0
+    bit_size: 1
+    enum: CmcAlphaEnumNovemberAlpha
+fieldset/CmcAlphaFieldsetIndia:
+  description: Global Power Mode Control.
+  fields:
+  - name: lpmode
+    description: Low-Power Mode.
+    bit_offset: 0
+    bit_size: 4
+fieldset/CmcAlphaFieldsetJuliet:
+  description: Mode.
+  fields:
+  - name: ispmode_n
+    description: In System Programming Mode.
+    bit_offset: 0
+    bit_size: 1
+fieldset/CmcAlphaFieldsetKilo:
+  description: Power Mode Control.
+  fields:
+  - name: lpmode
+    description: Low-Power Mode.
+    bit_offset: 0
+    bit_size: 4
+    enum: CmcAlphaEnumQuebecAlpha
+fieldset/CmcAlphaFieldsetLima:
+  description: Power Mode Control.
+  fields:
+  - name: lpmode
+    description: Low-Power Mode.
+    bit_offset: 0
+    bit_size: 4
+    enum: CmcAlphaEnumRomeoAlpha
+fieldset/CmcAlphaFieldsetMike:
+  description: Power Mode Protection.
+  fields:
+  - name: lpmode
+    description: Low-Power Mode.
+    bit_offset: 0
+    bit_size: 4
+    enum: CmcAlphaEnumTangoAlpha
+  - name: lock
+    description: Lock Register.
+    bit_offset: 31
+    bit_size: 1
+    enum: CmcAlphaEnumSierraAlpha
+fieldset/CmcAlphaFieldsetNovember:
+  description: Reset Pin Control.
+  fields:
+  - name: filtcfg
+    description: Reset Filter Configuration.
+    bit_offset: 0
+    bit_size: 5
+  - name: filten
+    description: Filter Enable.
+    bit_offset: 8
+    bit_size: 1
+    enum: CmcAlphaEnumKiloAlpha
+  - name: lpfen
+    description: Low-Power Filter Enable.
+    bit_offset: 9
+    bit_size: 1
+    enum: CmcAlphaEnumOscarAlpha
+fieldset/CmcAlphaFieldsetOscar:
+  description: Reset Count Register.
+  fields:
+  - name: count
+    description: Count.
+    bit_offset: 0
+    bit_size: 8
+fieldset/CmcAlphaFieldsetPapa:
+  description: SRAM Disable.
+  fields:
+  - name: dis0
+    description: SRAM Disable.
+    bit_offset: 0
+    bit_size: 1
+    enum: CmcAlphaEnumEcho
+  - name: dis1
+    description: SRAM Disable.
+    bit_offset: 1
+    bit_size: 1
+    enum: CmcAlphaEnumFoxtrot
+  - name: dis2
+    description: SRAM Disable.
+    bit_offset: 2
+    bit_size: 1
+    enum: CmcAlphaEnumQuebec
+  - name: dis3
+    description: SRAM Disable.
+    bit_offset: 3
+    bit_size: 1
+    enum: CmcAlphaEnumBravoAlpha
+  - name: dis4
+    description: SRAM Disable.
+    bit_offset: 4
+    bit_size: 1
+    enum: CmcAlphaEnumEchoAlpha
+  - name: dis5
+    description: SRAM Disable.
+    bit_offset: 5
+    bit_size: 1
+    enum: CmcAlphaEnumFoxtrotAlpha
+  - name: dis6
+    description: SRAM Disable.
+    bit_offset: 6
+    bit_size: 1
+    enum: CmcAlphaEnumGolfAlpha
+  - name: dis7
+    description: SRAM Disable.
+    bit_offset: 7
+    bit_size: 1
+    enum: CmcAlphaEnumHotelAlpha
+  - name: dis8
+    description: SRAM Disable.
+    bit_offset: 8
+    bit_size: 1
+    enum: CmcAlphaEnumIndiaAlpha
+  - name: dis9
+    description: SRAM Disable.
+    bit_offset: 9
+    bit_size: 1
+    enum: CmcAlphaEnumJulietAlpha
+  - name: dis10
+    description: SRAM Disable.
+    bit_offset: 10
+    bit_size: 1
+    enum: CmcAlphaEnumGolf
+  - name: dis11
+    description: SRAM Disable.
+    bit_offset: 11
+    bit_size: 1
+    enum: CmcAlphaEnumHotel
+  - name: dis12
+    description: SRAM Disable.
+    bit_offset: 12
+    bit_size: 1
+    enum: CmcAlphaEnumIndia
+  - name: dis13
+    description: SRAM Disable.
+    bit_offset: 13
+    bit_size: 1
+    enum: CmcAlphaEnumJuliet
+  - name: dis14
+    description: SRAM Disable.
+    bit_offset: 14
+    bit_size: 1
+    enum: CmcAlphaEnumKilo
+  - name: dis15
+    description: SRAM Disable.
+    bit_offset: 15
+    bit_size: 1
+    enum: CmcAlphaEnumLima
+  - name: dis16
+    description: SRAM Disable.
+    bit_offset: 16
+    bit_size: 1
+    enum: CmcAlphaEnumMike
+  - name: dis17
+    description: SRAM Disable.
+    bit_offset: 17
+    bit_size: 1
+    enum: CmcAlphaEnumNovember
+  - name: dis18
+    description: SRAM Disable.
+    bit_offset: 18
+    bit_size: 1
+    enum: CmcAlphaEnumOscar
+  - name: dis19
+    description: SRAM Disable.
+    bit_offset: 19
+    bit_size: 1
+    enum: CmcAlphaEnumPapa
+  - name: dis20
+    description: SRAM Disable.
+    bit_offset: 20
+    bit_size: 1
+    enum: CmcAlphaEnumRomeo
+  - name: dis21
+    description: SRAM Disable.
+    bit_offset: 21
+    bit_size: 1
+    enum: CmcAlphaEnumSierra
+  - name: dis22
+    description: SRAM Disable.
+    bit_offset: 22
+    bit_size: 1
+    enum: CmcAlphaEnumTango
+  - name: dis23
+    description: SRAM Disable.
+    bit_offset: 23
+    bit_size: 1
+    enum: CmcAlphaEnumUniform
+  - name: dis24
+    description: SRAM Disable.
+    bit_offset: 24
+    bit_size: 1
+    enum: CmcAlphaEnumVictor
+  - name: dis25
+    description: SRAM Disable.
+    bit_offset: 25
+    bit_size: 1
+    enum: CmcAlphaEnumWhiskey
+  - name: dis26
+    description: SRAM Disable.
+    bit_offset: 26
+    bit_size: 1
+    enum: CmcAlphaEnumXray
+  - name: dis27
+    description: SRAM Disable.
+    bit_offset: 27
+    bit_size: 1
+    enum: CmcAlphaEnumYankee
+  - name: dis28
+    description: SRAM Disable.
+    bit_offset: 28
+    bit_size: 1
+    enum: CmcAlphaEnumZulu
+  - name: dis29
+    description: SRAM Disable.
+    bit_offset: 29
+    bit_size: 1
+    enum: CmcAlphaEnumAlphaAlpha
+  - name: dis30
+    description: SRAM Disable.
+    bit_offset: 30
+    bit_size: 1
+    enum: CmcAlphaEnumCharlieAlpha
+  - name: dis31
+    description: SRAM Disable.
+    bit_offset: 31
+    bit_size: 1
+    enum: CmcAlphaEnumDeltaAlpha
+fieldset/CmcAlphaFieldsetQuebec:
+  description: SRAM Retention.
+  fields:
+  - name: ret0
+    description: SRAM Retention.
+    bit_offset: 0
+    bit_size: 1
+    enum: CmcAlphaEnumUniformAlpha
+  - name: ret1
+    description: SRAM Retention.
+    bit_offset: 1
+    bit_size: 1
+    enum: CmcAlphaEnumVictorAlpha
+  - name: ret2
+    description: SRAM Retention.
+    bit_offset: 2
+    bit_size: 1
+    enum: CmcAlphaEnumGolfBravo
+  - name: ret3
+    description: SRAM Retention.
+    bit_offset: 3
+    bit_size: 1
+    enum: CmcAlphaEnumRomeoBravo
+  - name: ret4
+    description: SRAM Retention.
+    bit_offset: 4
+    bit_size: 1
+    enum: CmcAlphaEnumUniformBravo
+  - name: ret5
+    description: SRAM Retention.
+    bit_offset: 5
+    bit_size: 1
+    enum: CmcAlphaEnumVictorBravo
+  - name: ret6
+    description: SRAM Retention.
+    bit_offset: 6
+    bit_size: 1
+    enum: CmcAlphaEnumWhiskeyBravo
+  - name: ret7
+    description: SRAM Retention.
+    bit_offset: 7
+    bit_size: 1
+    enum: CmcAlphaEnumXrayBravo
+  - name: ret8
+    description: SRAM Retention.
+    bit_offset: 8
+    bit_size: 1
+    enum: CmcAlphaEnumYankeeBravo
+  - name: ret9
+    description: SRAM Retention.
+    bit_offset: 9
+    bit_size: 1
+    enum: CmcAlphaEnumZuluBravo
+  - name: ret10
+    description: SRAM Retention.
+    bit_offset: 10
+    bit_size: 1
+    enum: CmcAlphaEnumWhiskeyAlpha
+  - name: ret11
+    description: SRAM Retention.
+    bit_offset: 11
+    bit_size: 1
+    enum: CmcAlphaEnumXrayAlpha
+  - name: ret12
+    description: SRAM Retention.
+    bit_offset: 12
+    bit_size: 1
+    enum: CmcAlphaEnumYankeeAlpha
+  - name: ret13
+    description: SRAM Retention.
+    bit_offset: 13
+    bit_size: 1
+    enum: CmcAlphaEnumZuluAlpha
+  - name: ret14
+    description: SRAM Retention.
+    bit_offset: 14
+    bit_size: 1
+    enum: CmcAlphaEnumAlphaBravo
+  - name: ret15
+    description: SRAM Retention.
+    bit_offset: 15
+    bit_size: 1
+    enum: CmcAlphaEnumBravoBravo
+  - name: ret16
+    description: SRAM Retention.
+    bit_offset: 16
+    bit_size: 1
+    enum: CmcAlphaEnumCharlieBravo
+  - name: ret17
+    description: SRAM Retention.
+    bit_offset: 17
+    bit_size: 1
+    enum: CmcAlphaEnumDeltaBravo
+  - name: ret18
+    description: SRAM Retention.
+    bit_offset: 18
+    bit_size: 1
+    enum: CmcAlphaEnumEchoBravo
+  - name: ret19
+    description: SRAM Retention.
+    bit_offset: 19
+    bit_size: 1
+    enum: CmcAlphaEnumFoxtrotBravo
+  - name: ret20
+    description: SRAM Retention.
+    bit_offset: 20
+    bit_size: 1
+    enum: CmcAlphaEnumHotelBravo
+  - name: ret21
+    description: SRAM Retention.
+    bit_offset: 21
+    bit_size: 1
+    enum: CmcAlphaEnumIndiaBravo
+  - name: ret22
+    description: SRAM Retention.
+    bit_offset: 22
+    bit_size: 1
+    enum: CmcAlphaEnumJulietBravo
+  - name: ret23
+    description: SRAM Retention.
+    bit_offset: 23
+    bit_size: 1
+    enum: CmcAlphaEnumKiloBravo
+  - name: ret24
+    description: SRAM Retention.
+    bit_offset: 24
+    bit_size: 1
+    enum: CmcAlphaEnumLimaBravo
+  - name: ret25
+    description: SRAM Retention.
+    bit_offset: 25
+    bit_size: 1
+    enum: CmcAlphaEnumMikeBravo
+  - name: ret26
+    description: SRAM Retention.
+    bit_offset: 26
+    bit_size: 1
+    enum: CmcAlphaEnumNovemberBravo
+  - name: ret27
+    description: SRAM Retention.
+    bit_offset: 27
+    bit_size: 1
+    enum: CmcAlphaEnumOscarBravo
+  - name: ret28
+    description: SRAM Retention.
+    bit_offset: 28
+    bit_size: 1
+    enum: CmcAlphaEnumPapaBravo
+  - name: ret29
+    description: SRAM Retention.
+    bit_offset: 29
+    bit_size: 1
+    enum: CmcAlphaEnumQuebecBravo
+  - name: ret30
+    description: SRAM Retention.
+    bit_offset: 30
+    bit_size: 1
+    enum: CmcAlphaEnumSierraBravo
+  - name: ret31
+    description: SRAM Retention.
+    bit_offset: 31
+    bit_size: 1
+    enum: CmcAlphaEnumTangoBravo
+fieldset/CmcAlphaFieldsetRomeo:
+  description: System Reset Interrupt Enable.
+  fields:
+  - name: pin
+    description: Pin Reset.
+    bit_offset: 8
+    bit_size: 1
+    enum: CmcAlphaEnumHotelCharlie
+  - name: dap
+    description: DAP Reset.
+    bit_offset: 9
+    bit_size: 1
+    enum: CmcAlphaEnumEchoCharlie
+  - name: lpack
+    description: Low Power Acknowledge Timeout Reset.
+    bit_offset: 11
+    bit_size: 1
+    enum: CmcAlphaEnumGolfCharlie
+  - name: scg
+    description: System Clock Generation Reset.
+    bit_offset: 12
+    bit_size: 1
+    enum: CmcAlphaEnumIndiaCharlie
+  - name: wwdt0
+    description: Windowed Watchdog 0 Reset.
+    bit_offset: 13
+    bit_size: 1
+    enum: CmcAlphaEnumLimaCharlie
+  - name: sw
+    description: Software Reset.
+    bit_offset: 14
+    bit_size: 1
+    enum: CmcAlphaEnumJulietCharlie
+  - name: lockup
+    description: Lockup Reset.
+    bit_offset: 15
+    bit_size: 1
+    enum: CmcAlphaEnumFoxtrotCharlie
+  - name: cpu1
+    description: CPU1 Reset.
+    bit_offset: 16
+    bit_size: 1
+    enum: CmcAlphaEnumDeltaCharlie
+  - name: vbat
+    description: VBAT System Reset.
+    bit_offset: 24
+    bit_size: 1
+    enum: CmcAlphaEnumKiloCharlie
+  - name: wwdt1
+    description: Windowed Watchdog 1 Reset.
+    bit_offset: 25
+    bit_size: 1
+    enum: CmcAlphaEnumMikeCharlie
+  - name: cdog0
+    description: Code Watchdog 0 Reset.
+    bit_offset: 26
+    bit_size: 1
+    enum: CmcAlphaEnumBravoCharlie
+  - name: cdog1
+    description: Code Watchdog 1 Reset.
+    bit_offset: 27
+    bit_size: 1
+    enum: CmcAlphaEnumCharlieCharlie
+fieldset/CmcAlphaFieldsetSierra:
+  description: System Reset Interrupt Flag.
+  fields:
+  - name: pin
+    description: Pin Reset.
+    bit_offset: 8
+    bit_size: 1
+    enum: CmcAlphaEnumTangoCharlie
+  - name: dap
+    description: DAP Reset.
+    bit_offset: 9
+    bit_size: 1
+    enum: CmcAlphaEnumQuebecCharlie
+  - name: lpack
+    description: Low Power Acknowledge Timeout Reset.
+    bit_offset: 11
+    bit_size: 1
+    enum: CmcAlphaEnumSierraCharlie
+  - name: wwdt0
+    description: Windowed Watchdog 0 Reset.
+    bit_offset: 13
+    bit_size: 1
+    enum: CmcAlphaEnumWhiskeyCharlie
+  - name: sw
+    description: Software Reset.
+    bit_offset: 14
+    bit_size: 1
+    enum: CmcAlphaEnumUniformCharlie
+  - name: lockup
+    description: Lockup Reset.
+    bit_offset: 15
+    bit_size: 1
+    enum: CmcAlphaEnumRomeoCharlie
+  - name: cpu1
+    description: CPU1 Reset.
+    bit_offset: 16
+    bit_size: 1
+    enum: CmcAlphaEnumPapaCharlie
+  - name: vbat
+    description: VBAT System Reset.
+    bit_offset: 24
+    bit_size: 1
+    enum: CmcAlphaEnumVictorCharlie
+  - name: wwdt1
+    description: Windowed Watchdog 1 Reset.
+    bit_offset: 25
+    bit_size: 1
+    enum: CmcAlphaEnumXrayCharlie
+  - name: cdog0
+    description: Code Watchdog 0 Reset.
+    bit_offset: 26
+    bit_size: 1
+    enum: CmcAlphaEnumNovemberCharlie
+  - name: cdog1
+    description: Code Watchdog 1 Reset.
+    bit_offset: 27
+    bit_size: 1
+    enum: CmcAlphaEnumOscarCharlie
+fieldset/CmcAlphaFieldsetTango:
+  description: System Reset Status.
+  fields:
+  - name: wakeup
+    description: Wake-up Reset.
+    bit_offset: 0
+    bit_size: 1
+    enum: CmcAlphaEnumPapaDelta
+  - name: por
+    description: Power-on Reset.
+    bit_offset: 1
+    bit_size: 1
+    enum: CmcAlphaEnumHotelDelta
+  - name: vd
+    description: Voltage Detect Reset.
+    bit_offset: 2
+    bit_size: 1
+    enum: CmcAlphaEnumOscarDelta
+  - name: warm
+    description: Warm Reset.
+    bit_offset: 4
+    bit_size: 1
+    enum: CmcAlphaEnumQuebecDelta
+  - name: fatal
+    description: Fatal Reset.
+    bit_offset: 5
+    bit_size: 1
+    enum: CmcAlphaEnumCharlieDelta
+  - name: pin
+    description: Pin Reset.
+    bit_offset: 8
+    bit_size: 1
+    enum: CmcAlphaEnumGolfDelta
+  - name: dap
+    description: Debug Access Port Reset.
+    bit_offset: 9
+    bit_size: 1
+    enum: CmcAlphaEnumBravoDelta
+  - name: rstack
+    description: Reset Timeout.
+    bit_offset: 10
+    bit_size: 1
+    enum: CmcAlphaEnumIndiaDelta
+  - name: lpack
+    description: Low Power Acknowledge Timeout Reset.
+    bit_offset: 11
+    bit_size: 1
+    enum: CmcAlphaEnumFoxtrotDelta
+  - name: scg
+    description: System Clock Generation Reset.
+    bit_offset: 12
+    bit_size: 1
+    enum: CmcAlphaEnumJulietDelta
+  - name: wwdt0
+    description: Windowed Watchdog 0 Reset.
+    bit_offset: 13
+    bit_size: 1
+    enum: CmcAlphaEnumRomeoDelta
+  - name: sw
+    description: Software Reset.
+    bit_offset: 14
+    bit_size: 1
+    enum: CmcAlphaEnumLimaDelta
+  - name: lockup
+    description: Lockup Reset.
+    bit_offset: 15
+    bit_size: 1
+    enum: CmcAlphaEnumEchoDelta
+  - name: cpu1
+    description: CPU1 System Reset.
+    bit_offset: 16
+    bit_size: 1
+    enum: CmcAlphaEnumAlphaDelta
+  - name: vbat
+    description: VBAT System Reset.
+    bit_offset: 24
+    bit_size: 1
+    enum: CmcAlphaEnumNovemberDelta
+  - name: wwdt1
+    description: Windowed Watchdog 1 Reset.
+    bit_offset: 25
+    bit_size: 1
+    enum: CmcAlphaEnumSierraDelta
+  - name: cdog0
+    description: Code Watchdog 0 Reset.
+    bit_offset: 26
+    bit_size: 1
+    enum: CmcAlphaEnumYankeeCharlie
+  - name: cdog1
+    description: Code Watchdog 1 Reset.
+    bit_offset: 27
+    bit_size: 1
+    enum: CmcAlphaEnumZuluCharlie
+  - name: jtag
+    description: JTAG System Reset.
+    bit_offset: 28
+    bit_size: 1
+    enum: CmcAlphaEnumDeltaDelta
+  - name: secvio
+    description: Security Violation Reset.
+    bit_offset: 30
+    bit_size: 1
+    enum: CmcAlphaEnumKiloDelta
+  - name: tamper
+    description: Tamper Reset.
+    bit_offset: 31
+    bit_size: 1
+    enum: CmcAlphaEnumMikeDelta
+fieldset/CmcAlphaFieldsetUniform:
+  description: Sticky System Reset Status.
+  fields:
+  - name: wakeup
+    description: Wake-up Reset.
+    bit_offset: 0
+    bit_size: 1
+    enum: CmcAlphaEnumKiloEcho
+  - name: por
+    description: Power-on Reset.
+    bit_offset: 1
+    bit_size: 1
+    enum: CmcAlphaEnumCharlieEcho
+  - name: vd
+    description: Voltage Detect Reset.
+    bit_offset: 2
+    bit_size: 1
+    enum: CmcAlphaEnumJulietEcho
+  - name: warm
+    description: Warm Reset.
+    bit_offset: 4
+    bit_size: 1
+    enum: CmcAlphaEnumLimaEcho
+  - name: fatal
+    description: Fatal Reset.
+    bit_offset: 5
+    bit_size: 1
+    enum: CmcAlphaEnumXrayDelta
+  - name: pin
+    description: Pin Reset.
+    bit_offset: 8
+    bit_size: 1
+    enum: CmcAlphaEnumBravoEcho
+  - name: dap
+    description: DAP Reset.
+    bit_offset: 9
+    bit_size: 1
+    enum: CmcAlphaEnumWhiskeyDelta
+  - name: rstack
+    description: Reset Timeout.
+    bit_offset: 10
+    bit_size: 1
+    enum: CmcAlphaEnumDeltaEcho
+  - name: lpack
+    description: Low Power Acknowledge Timeout Reset.
+    bit_offset: 11
+    bit_size: 1
+    enum: CmcAlphaEnumAlphaEcho
+  - name: scg
+    description: System Clock Generation Reset.
+    bit_offset: 12
+    bit_size: 1
+    enum: CmcAlphaEnumEchoEcho
+  - name: wwdt0
+    description: Windowed Watchdog 0 Reset.
+    bit_offset: 13
+    bit_size: 1
+    enum: CmcAlphaEnumMikeEcho
+  - name: sw
+    description: Software Reset.
+    bit_offset: 14
+    bit_size: 1
+    enum: CmcAlphaEnumGolfEcho
+  - name: lockup
+    description: Lockup Reset.
+    bit_offset: 15
+    bit_size: 1
+    enum: CmcAlphaEnumZuluDelta
+  - name: cpu1
+    description: CPU1 Reset.
+    bit_offset: 16
+    bit_size: 1
+    enum: CmcAlphaEnumVictorDelta
+  - name: vbat
+    description: VBAT System Reset.
+    bit_offset: 24
+    bit_size: 1
+    enum: CmcAlphaEnumIndiaEcho
+  - name: wwdt1
+    description: Windowed Watchdog 1 Reset.
+    bit_offset: 25
+    bit_size: 1
+    enum: CmcAlphaEnumNovemberEcho
+  - name: cdog0
+    description: Code Watchdog 0 Reset.
+    bit_offset: 26
+    bit_size: 1
+    enum: CmcAlphaEnumTangoDelta
+  - name: cdog1
+    description: Code Watchdog 1 Reset.
+    bit_offset: 27
+    bit_size: 1
+    enum: CmcAlphaEnumUniformDelta
+  - name: jtag
+    description: JTAG System Reset.
+    bit_offset: 28
+    bit_size: 1
+    enum: CmcAlphaEnumYankeeDelta
+  - name: secvio
+    description: Security Violation Reset.
+    bit_offset: 30
+    bit_size: 1
+    enum: CmcAlphaEnumFoxtrotEcho
+  - name: tamper
+    description: Tamper Reset.
+    bit_offset: 31
+    bit_size: 1
+    enum: CmcAlphaEnumHotelEcho
+fieldset/CmcAlphaFieldsetVictor:
+  description: Version ID.
+  fields:
+  - name: feature
+    description: Feature Specification Number.
+    bit_offset: 0
+    bit_size: 16
+  - name: minor
+    description: Minor Version Number.
+    bit_offset: 16
+    bit_size: 8
+  - name: major
+    description: Major Version Number.
+    bit_offset: 24
+    bit_size: 8
+enum/CmcAlphaEnumAlpha:
+  bit_size: 3
+  variants:
+  - name: Lock010
+    description: BootROM Status and Lock Registers can be written.
+    value: 2
+  - name: Lock101
+    description: BootROM Status and Lock Registers cannot be written.
+    value: 5
+enum/CmcAlphaEnumBravo:
+  bit_size: 4
+  variants:
+  - name: Ckmode0000
+    description: Core clock is on.
+    value: 0
+  - name: Ckmode0001
+    description: Core clock is off.
+    value: 1
+  - name: Ckmode1111
+    description: Core, platform, and peripheral clocks are gated, and core enters Low-Power mode.
+    value: 15
+enum/CmcAlphaEnumCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Allowed.
+    value: 0
+  - name: Enabled
+    description: Blocked.
+    value: 1
+enum/CmcAlphaEnumDelta:
+  bit_size: 4
+  variants:
+  - name: Ckmode0000
+    description: Core clock not gated.
+    value: 0
+  - name: Ckmode0001
+    description: Core clock was gated.
+    value: 1
+  - name: Ckmode1111
+    description: Core, platform, and peripheral clocks were gated, and power domain entered Low-Power mode.
+    value: 15
+enum/CmcAlphaEnumEcho:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumFoxtrot:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumGolf:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumHotel:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumIndia:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumJuliet:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumKilo:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumLima:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumMike:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumNovember:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumOscar:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumPapa:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumQuebec:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumRomeo:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumSierra:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumTango:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumUniform:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumVictor:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumWhiskey:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumXray:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumYankee:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumZulu:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumAlphaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumBravoAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumCharlieAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumDeltaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumEchoAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumFoxtrotAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumGolfAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumHotelAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumIndiaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumJulietAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 1
+  - name: Enabled
+    description: Enables.
+    value: 0
+enum/CmcAlphaEnumKiloAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 0
+  - name: Enabled
+    description: Enables.
+    value: 1
+enum/CmcAlphaEnumLimaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: No effect.
+    value: 0
+  - name: Enabled
+    description: Flash memory is disabled.
+    value: 1
+enum/CmcAlphaEnumMikeAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: No effect.
+    value: 0
+  - name: Enabled
+    description: Flash memory is disabled when core is sleeping (CKMODE > 0).
+    value: 1
+enum/CmcAlphaEnumNovemberAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: No effect.
+    value: 0
+  - name: Enabled
+    description: Asserts.
+    value: 1
+enum/CmcAlphaEnumOscarAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 0
+  - name: Enabled
+    description: Enables.
+    value: 1
+enum/CmcAlphaEnumPapaAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disables.
+    value: 0
+  - name: Enabled
+    description: Enables.
+    value: 1
+enum/CmcAlphaEnumQuebecAlpha:
+  bit_size: 4
+  variants:
+  - name: Lpmode0000
+    description: Active/Sleep.
+    value: 0
+  - name: Lpmode0001
+    description: Deep Sleep.
+    value: 1
+  - name: Lpmode0011
+    description: Power Down.
+    value: 3
+  - name: Lpmode1111
+    description: Deep-Power Down.
+    value: 15
+enum/CmcAlphaEnumRomeoAlpha:
+  bit_size: 4
+  variants:
+  - name: Lpmode0000
+    description: Active/Sleep.
+    value: 0
+  - name: Lpmode0001
+    description: Deep Sleep.
+    value: 1
+  - name: Lpmode0011
+    description: Power Down.
+    value: 3
+  - name: Lpmode1111
+    description: Deep-Power Down.
+    value: 15
+enum/CmcAlphaEnumSierraAlpha:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Allowed.
+    value: 0
+  - name: Enabled
+    description: Blocked.
+    value: 1
+enum/CmcAlphaEnumTangoAlpha:
+  bit_size: 4
+  variants:
+  - name: Disabled
+    description: Not allowed.
+    value: 0
+  - name: En
+    description: Allowed.
+    value: 1
+  - name: En1
+    description: Allowed.
+    value: 2
+  - name: En10
+    description: Allowed.
+    value: 11
+  - name: En11
+    description: Allowed.
+    value: 12
+  - name: En12
+    description: Allowed.
+    value: 13
+  - name: En13
+    description: Allowed.
+    value: 14
+  - name: En14
+    description: Allowed.
+    value: 15
+  - name: En2
+    description: Allowed.
+    value: 3
+  - name: En3
+    description: Allowed.
+    value: 4
+  - name: En4
+    description: Allowed.
+    value: 5
+  - name: En5
+    description: Allowed.
+    value: 6
+  - name: En6
+    description: Allowed.
+    value: 7
+  - name: En7
+    description: Allowed.
+    value: 8
+  - name: En8
+    description: Allowed.
+    value: 9
+  - name: En9
+    description: Allowed.
+    value: 10
+enum/CmcAlphaEnumUniformAlpha:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumVictorAlpha:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumWhiskeyAlpha:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumXrayAlpha:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumYankeeAlpha:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumZuluAlpha:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumAlphaBravo:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumBravoBravo:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumCharlieBravo:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumDeltaBravo:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumEchoBravo:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumFoxtrotBravo:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumGolfBravo:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumHotelBravo:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumIndiaBravo:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumJulietBravo:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumKiloBravo:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumLimaBravo:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumMikeBravo:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumNovemberBravo:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumOscarBravo:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumPapaBravo:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumQuebecBravo:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumRomeoBravo:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumSierraBravo:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumTangoBravo:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumUniformBravo:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumVictorBravo:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumWhiskeyBravo:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumXrayBravo:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumYankeeBravo:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumZuluBravo:
+  bit_size: 1
+  variants:
+  - name: Poweredoff
+    description: Retains.
+    value: 0
+  - name: Retained
+    description: Powers off.
+    value: 1
+enum/CmcAlphaEnumAlphaCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Remains enabled.
+    value: 0
+  - name: Enabled
+    description: Disabled.
+    value: 1
+enum/CmcAlphaEnumBravoCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt disabled.
+    value: 0
+  - name: Enabled
+    description: Interrupt enabled.
+    value: 1
+enum/CmcAlphaEnumCharlieCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt disabled.
+    value: 0
+  - name: Enabled
+    description: Interrupt enabled.
+    value: 1
+enum/CmcAlphaEnumDeltaCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt disabled.
+    value: 0
+  - name: Enabled
+    description: Interrupt enabled.
+    value: 1
+enum/CmcAlphaEnumEchoCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt disabled.
+    value: 0
+  - name: Enabled
+    description: Interrupt enabled.
+    value: 1
+enum/CmcAlphaEnumFoxtrotCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt disabled.
+    value: 0
+  - name: Enabled
+    description: Interrupt enabled.
+    value: 1
+enum/CmcAlphaEnumGolfCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt disabled.
+    value: 0
+  - name: Enabled
+    description: Interrupt enabled.
+    value: 1
+enum/CmcAlphaEnumHotelCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt disabled.
+    value: 0
+  - name: Enabled
+    description: Interrupt enabled.
+    value: 1
+enum/CmcAlphaEnumIndiaCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt disabled.
+    value: 0
+  - name: Enabled
+    description: Interrupt enabled.
+    value: 1
+enum/CmcAlphaEnumJulietCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt disabled.
+    value: 0
+  - name: Enabled
+    description: Interrupt enabled.
+    value: 1
+enum/CmcAlphaEnumKiloCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt disabled.
+    value: 0
+  - name: Enabled
+    description: Interrupt enabled.
+    value: 1
+enum/CmcAlphaEnumLimaCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt disabled.
+    value: 0
+  - name: Enabled
+    description: Interrupt enabled.
+    value: 1
+enum/CmcAlphaEnumMikeCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt disabled.
+    value: 0
+  - name: Enabled
+    description: Interrupt enabled.
+    value: 1
+enum/CmcAlphaEnumNovemberCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset source not pending.
+    value: 0
+  - name: Enabled
+    description: Reset source pending.
+    value: 1
+enum/CmcAlphaEnumOscarCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset source not pending.
+    value: 0
+  - name: Enabled
+    description: Reset source pending.
+    value: 1
+enum/CmcAlphaEnumPapaCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset source not pending.
+    value: 0
+  - name: Enabled
+    description: Reset source pending.
+    value: 1
+enum/CmcAlphaEnumQuebecCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset source not pending.
+    value: 0
+  - name: Enabled
+    description: Reset source pending.
+    value: 1
+enum/CmcAlphaEnumRomeoCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset source not pending.
+    value: 0
+  - name: Enabled
+    description: Reset source pending.
+    value: 1
+enum/CmcAlphaEnumSierraCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset source not pending.
+    value: 0
+  - name: Enabled
+    description: Reset source pending.
+    value: 1
+enum/CmcAlphaEnumTangoCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset source not pending.
+    value: 0
+  - name: Enabled
+    description: Reset source pending.
+    value: 1
+enum/CmcAlphaEnumUniformCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset source not pending.
+    value: 0
+  - name: Enabled
+    description: Reset source pending.
+    value: 1
+enum/CmcAlphaEnumVictorCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset source not pending.
+    value: 0
+  - name: Enabled
+    description: Reset source pending.
+    value: 1
+enum/CmcAlphaEnumWhiskeyCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset source not pending.
+    value: 0
+  - name: Enabled
+    description: Reset source pending.
+    value: 1
+enum/CmcAlphaEnumXrayCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset source not pending.
+    value: 0
+  - name: Enabled
+    description: Reset source pending.
+    value: 1
+enum/CmcAlphaEnumYankeeCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset is not generated.
+    value: 0
+  - name: Enabled
+    description: Reset is generated.
+    value: 1
+enum/CmcAlphaEnumZuluCharlie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset is not generated.
+    value: 0
+  - name: Enabled
+    description: Reset is generated.
+    value: 1
+enum/CmcAlphaEnumAlphaDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset not generated.
+    value: 0
+  - name: Enabled
+    description: Reset generated.
+    value: 1
+enum/CmcAlphaEnumBravoDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset was not generated.
+    value: 0
+  - name: Enabled
+    description: Reset was generated.
+    value: 1
+enum/CmcAlphaEnumCharlieDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset was not generated.
+    value: 0
+  - name: Enabled
+    description: Reset was generated.
+    value: 1
+enum/CmcAlphaEnumDeltaDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset not generated.
+    value: 0
+  - name: Enabled
+    description: Reset generated.
+    value: 1
+enum/CmcAlphaEnumEchoDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset not generated.
+    value: 0
+  - name: Enabled
+    description: Reset generated.
+    value: 1
+enum/CmcAlphaEnumFoxtrotDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset not generated.
+    value: 0
+  - name: Enabled
+    description: Reset generated.
+    value: 1
+enum/CmcAlphaEnumGolfDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset was not generated.
+    value: 0
+  - name: Enabled
+    description: Reset was generated.
+    value: 1
+enum/CmcAlphaEnumHotelDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset not generated.
+    value: 0
+  - name: Enabled
+    description: Reset generated.
+    value: 1
+enum/CmcAlphaEnumIndiaDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset not generated.
+    value: 0
+  - name: Enabled
+    description: Reset generated.
+    value: 1
+enum/CmcAlphaEnumJulietDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset is not generated.
+    value: 0
+  - name: Enabled
+    description: Reset is generated.
+    value: 1
+enum/CmcAlphaEnumKiloDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset not generated.
+    value: 0
+  - name: Enabled
+    description: Reset generated.
+    value: 1
+enum/CmcAlphaEnumLimaDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset not generated.
+    value: 0
+  - name: Enabled
+    description: Reset generated.
+    value: 1
+enum/CmcAlphaEnumMikeDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset not generated.
+    value: 0
+  - name: Enabled
+    description: Reset generated.
+    value: 1
+enum/CmcAlphaEnumNovemberDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset not generated.
+    value: 0
+  - name: Enabled
+    description: Reset generated.
+    value: 1
+enum/CmcAlphaEnumOscarDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset not generated.
+    value: 0
+  - name: Enabled
+    description: Reset generated.
+    value: 1
+enum/CmcAlphaEnumPapaDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset not generated.
+    value: 0
+  - name: Enabled
+    description: Reset generated.
+    value: 1
+enum/CmcAlphaEnumQuebecDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset not generated.
+    value: 0
+  - name: Enabled
+    description: Reset generated.
+    value: 1
+enum/CmcAlphaEnumRomeoDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset is not generated.
+    value: 0
+  - name: Enabled
+    description: Reset is generated.
+    value: 1
+enum/CmcAlphaEnumSierraDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset is not generated.
+    value: 0
+  - name: Enabled
+    description: Reset is generated.
+    value: 1
+enum/CmcAlphaEnumTangoDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset is not generated.
+    value: 0
+  - name: Enabled
+    description: Reset is generated.
+    value: 1
+enum/CmcAlphaEnumUniformDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset is not generated.
+    value: 0
+  - name: Enabled
+    description: Reset is generated.
+    value: 1
+enum/CmcAlphaEnumVictorDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset not generated from CPU1 reset source.
+    value: 0
+  - name: Enabled
+    description: Reset generated from CPU1 reset source.
+    value: 1
+enum/CmcAlphaEnumWhiskeyDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset not generated.
+    value: 0
+  - name: Enabled
+    description: Reset generated.
+    value: 1
+enum/CmcAlphaEnumXrayDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset was not generated.
+    value: 0
+  - name: Enabled
+    description: Reset was generated.
+    value: 1
+enum/CmcAlphaEnumYankeeDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset not generated.
+    value: 0
+  - name: Enabled
+    description: Reset generated.
+    value: 1
+enum/CmcAlphaEnumZuluDelta:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset not generated.
+    value: 0
+  - name: Enabled
+    description: Reset generated.
+    value: 1
+enum/CmcAlphaEnumAlphaEcho:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset not generated.
+    value: 0
+  - name: Enabled
+    description: Reset generated.
+    value: 1
+enum/CmcAlphaEnumBravoEcho:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset not generated.
+    value: 0
+  - name: Enabled
+    description: Reset generated.
+    value: 1
+enum/CmcAlphaEnumCharlieEcho:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset not generated.
+    value: 0
+  - name: Enabled
+    description: Reset generated.
+    value: 1
+enum/CmcAlphaEnumDeltaEcho:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset not generated.
+    value: 0
+  - name: Enabled
+    description: Reset generated.
+    value: 1
+enum/CmcAlphaEnumEchoEcho:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset is not generated.
+    value: 0
+  - name: Enabled
+    description: Reset is generated.
+    value: 1
+enum/CmcAlphaEnumFoxtrotEcho:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset not generated.
+    value: 0
+  - name: Enabled
+    description: Reset generated.
+    value: 1
+enum/CmcAlphaEnumGolfEcho:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset not generated.
+    value: 0
+  - name: Enabled
+    description: Reset generated.
+    value: 1
+enum/CmcAlphaEnumHotelEcho:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset not generated.
+    value: 0
+  - name: Enabled
+    description: Reset generated.
+    value: 1
+enum/CmcAlphaEnumIndiaEcho:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset not generated.
+    value: 0
+  - name: Enabled
+    description: Reset generated.
+    value: 1
+enum/CmcAlphaEnumJulietEcho:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset not generated.
+    value: 0
+  - name: Enabled
+    description: Reset generated.
+    value: 1
+enum/CmcAlphaEnumKiloEcho:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset not generated.
+    value: 0
+  - name: Enabled
+    description: Reset generated.
+    value: 1
+enum/CmcAlphaEnumLimaEcho:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset not generated.
+    value: 0
+  - name: Enabled
+    description: Reset generated.
+    value: 1
+enum/CmcAlphaEnumMikeEcho:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset is not generated.
+    value: 0
+  - name: Enabled
+    description: Reset is generated.
+    value: 1
+enum/CmcAlphaEnumNovemberEcho:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Reset is not generated.
+    value: 0
+  - name: Enabled
+    description: Reset is generated.
+    value: 1
+enum/CmcAlphaEnumOscarEcho:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Core clock not gated.
+    value: 0
+  - name: Enabled
+    description: Core clock was gated due to Low-Power mode entry.
+    value: 1

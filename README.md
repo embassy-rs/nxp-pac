@@ -28,7 +28,18 @@ Because the crate is in transition, some of them use the PAC method, and some of
 | MIMXRT685S | PAC |
 | LPC55S16 | PAC |
 | LPC55S69 | PAC |
-| MCXN947 | PAC |
+| MCXN947 (legacy two-core) | PAC |
+| MCXN235 | MetaPAC |
+| MCXN236 | MetaPAC |
+| MCXN247 | MetaPAC |
+| MCXN526 | MetaPAC |
+| MCXN527 | MetaPAC |
+| MCXN536 | MetaPAC |
+| MCXN537 | MetaPAC |
+| MCXN546 | MetaPAC |
+| MCXN547 | MetaPAC |
+| MCXN946 | MetaPAC |
+| MCXN947 | MetaPAC |
 | MCXA156 | MetaPAC |
 | MCXA175 | MetaPAC |
 | MCXA176 | MetaPAC |

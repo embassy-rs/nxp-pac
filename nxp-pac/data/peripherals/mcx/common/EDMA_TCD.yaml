@@ -1,0 +1,782 @@
+# File not directly generated from transforms!
+
+block/Tcd12:
+  description: DMA TCD.
+  items:
+    - name: tcd
+      description: "Array of registers: CH_CSR, CH_ES, CH_INT, CH_MUX, CH_PRI, CH_SBR, TCD_ATTR, TCD_BITER_ELINKNO, TCD_BITER_ELINKYES, TCD_CITER_ELINKNO, TCD_CITER_ELINKYES, TCD_CSR, TCD_DADDR, TCD_DLAST_SGA, TCD_DOFF, TCD_NBYTES_MLOFFNO, TCD_NBYTES_MLOFFYES, TCD_SADDR, TCD_SLAST_SDA, TCD_SOFF."
+      array:
+        len: 12
+        stride: 4096
+      byte_offset: 0
+      block: Tcd
+block/Tcd8:
+  description: DMA TCD.
+  items:
+    - name: tcd
+      description: "Array of registers: CH_CSR, CH_ES, CH_INT, CH_MUX, CH_PRI, CH_SBR, TCD_ATTR, TCD_BITER_ELINKNO, TCD_BITER_ELINKYES, TCD_CITER_ELINKNO, TCD_CITER_ELINKYES, TCD_CSR, TCD_DADDR, TCD_DLAST_SGA, TCD_DOFF, TCD_NBYTES_MLOFFNO, TCD_NBYTES_MLOFFYES, TCD_SADDR, TCD_SLAST_SDA, TCD_SOFF."
+      array:
+        len: 8
+        stride: 4096
+      byte_offset: 0
+      block: Tcd
+block/Tcd4:
+  description: DMA TCD.
+  items:
+    - name: tcd
+      description: "Array of registers: CH_CSR, CH_ES, CH_INT, CH_MUX, CH_PRI, CH_SBR, TCD_ATTR, TCD_BITER_ELINKNO, TCD_BITER_ELINKYES, TCD_CITER_ELINKNO, TCD_CITER_ELINKYES, TCD_CSR, TCD_DADDR, TCD_DLAST_SGA, TCD_DOFF, TCD_NBYTES_MLOFFNO, TCD_NBYTES_MLOFFYES, TCD_SADDR, TCD_SLAST_SDA, TCD_SOFF."
+      array:
+        len: 4
+        stride: 4096
+      byte_offset: 0
+      block: Tcd
+block/Tcd:
+  description: "Array of registers: CH_CSR, CH_ES, CH_INT, CH_PRI, CH_SBR, TCD_ATTR, TCD_BITER_ELINKNO, TCD_BITER_ELINKYES, TCD_CITER_ELINKNO, TCD_CITER_ELINKYES, TCD_CSR, TCD_DADDR, TCD_DLAST_SGA, TCD_DOFF, TCD_NBYTES_MLOFFNO, TCD_NBYTES_MLOFFYES, TCD_SADDR, TCD_SLAST_SDA, TCD_SOFF."
+  items:
+    - name: ch_csr
+      description: Channel Control and Status.
+      byte_offset: 0
+      fieldset: ChCsr
+    - name: ch_es
+      description: Channel Error Status.
+      byte_offset: 4
+      fieldset: ChEs
+    - name: ch_int
+      description: Channel Interrupt Status.
+      byte_offset: 8
+      fieldset: ChInt
+    - name: ch_sbr
+      description: Channel System Bus.
+      byte_offset: 12
+      fieldset: ChSbr
+    - name: ch_pri
+      description: Channel Priority.
+      byte_offset: 16
+      fieldset: ChPri
+    - name: ch_mux
+      description: Channel Multiplexor Configuration.
+      byte_offset: 20
+      fieldset: ChMux
+    - name: tcd_saddr
+      description: TCD Source Address.
+      byte_offset: 32
+      fieldset: TcdSaddr
+    - name: tcd_soff
+      description: TCD Signed Source Address Offset.
+      byte_offset: 36
+      bit_size: 16
+      fieldset: TcdSoff
+    - name: tcd_attr
+      description: TCD Transfer Attributes.
+      byte_offset: 38
+      bit_size: 16
+      fieldset: TcdAttr
+    - name: tcd_nbytes_mloffno
+      description: TCD Transfer Size Without Minor Loop Offsets.
+      byte_offset: 40
+      fieldset: TcdNbytesMloffno
+    - name: tcd_nbytes_mloffyes
+      description: TCD Transfer Size with Minor Loop Offsets.
+      byte_offset: 40
+      fieldset: TcdNbytesMloffyes
+    - name: tcd_slast_sda
+      description: TCD Last Source Address Adjustment / Store DADDR Address.
+      byte_offset: 44
+      fieldset: TcdSlastSda
+    - name: tcd_daddr
+      description: TCD Destination Address.
+      byte_offset: 48
+      fieldset: TcdDaddr
+    - name: tcd_doff
+      description: TCD Signed Destination Address Offset.
+      byte_offset: 52
+      bit_size: 16
+      fieldset: TcdDoff
+    - name: tcd_citer_elinkno
+      description: TCD Current Major Loop Count (Minor Loop Channel Linking Disabled).
+      byte_offset: 54
+      bit_size: 16
+      fieldset: TcdCiterElinkno
+    - name: tcd_citer_elinkyes
+      description: TCD Current Major Loop Count (Minor Loop Channel Linking Enabled).
+      byte_offset: 54
+      bit_size: 16
+      fieldset: TcdCiterElinkyes
+    - name: tcd_dlast_sga
+      description: TCD Last Destination Address Adjustment / Scatter Gather Address.
+      byte_offset: 56
+      fieldset: TcdDlastSga
+    - name: tcd_csr
+      description: TCD Control and Status.
+      byte_offset: 60
+      bit_size: 16
+      fieldset: TcdCsr
+    - name: tcd_biter_elinkno
+      description: TCD Beginning Major Loop Count (Minor Loop Channel Linking Disabled).
+      byte_offset: 62
+      bit_size: 16
+      fieldset: TcdBiterElinkno
+    - name: tcd_biter_elinkyes
+      description: TCD Beginning Major Loop Count (Minor Loop Channel Linking Enabled).
+      byte_offset: 62
+      bit_size: 16
+      fieldset: TcdBiterElinkyes
+fieldset/ChCsr:
+  description: Channel Control and Status.
+  fields:
+    - name: erq
+      description: Enable DMA Request.
+      bit_offset: 0
+      bit_size: 1
+    - name: earq
+      description: Enable Asynchronous DMA Request.
+      bit_offset: 1
+      bit_size: 1
+    - name: eei
+      description: Enable Error Interrupt.
+      bit_offset: 2
+      bit_size: 1
+    - name: ebw
+      description: Enable Buffered Writes.
+      bit_offset: 3
+      bit_size: 1
+    - name: done
+      description: Channel Done.
+      bit_offset: 30
+      bit_size: 1
+    - name: active
+      description: Channel Active.
+      bit_offset: 31
+      bit_size: 1
+fieldset/ChEs:
+  description: Channel Error Status.
+  fields:
+    - name: dbe
+      description: Destination Bus Error.
+      bit_offset: 0
+      bit_size: 1
+    - name: sbe
+      description: Source Bus Error.
+      bit_offset: 1
+      bit_size: 1
+    - name: sge
+      description: Scatter/Gather Configuration Error.
+      bit_offset: 2
+      bit_size: 1
+    - name: nce
+      description: NBYTES/CITER Configuration Error.
+      bit_offset: 3
+      bit_size: 1
+    - name: doe
+      description: Destination Offset Error.
+      bit_offset: 4
+      bit_size: 1
+    - name: dae
+      description: Destination Address Error.
+      bit_offset: 5
+      bit_size: 1
+    - name: soe
+      description: Source Offset Error.
+      bit_offset: 6
+      bit_size: 1
+    - name: sae
+      description: Source Address Error.
+      bit_offset: 7
+      bit_size: 1
+    - name: err
+      description: Error In Channel.
+      bit_offset: 31
+      bit_size: 1
+fieldset/ChInt:
+  description: Channel Interrupt Status.
+  fields:
+    - name: int
+      description: Interrupt Request.
+      bit_offset: 0
+      bit_size: 1
+fieldset/ChMux:
+  description: Channel Multiplexor Configuration.
+  fields:
+    - name: src
+      description: Service Request Source.
+      bit_offset: 0
+      bit_size: 7
+fieldset/ChPri:
+  description: Channel Priority.
+  fields:
+    - name: apl
+      description: Arbitration Priority Level.
+      bit_offset: 0
+      bit_size: 3
+    - name: dpa
+      description: Disable Preempt Ability.
+      bit_offset: 30
+      bit_size: 1
+      enum: Dpa
+    - name: ecp
+      description: Enable Channel Preemption.
+      bit_offset: 31
+      bit_size: 1
+      enum: Ecp
+fieldset/ChSbr:
+  description: Channel System Bus.
+  fields:
+    - name: mid
+      description: Master ID.
+      bit_offset: 0
+      bit_size: 4
+    - name: sec
+      description: Security Level.
+      bit_offset: 14
+      bit_size: 1
+      enum: Sec
+    - name: pal
+      description: Privileged Access Level.
+      bit_offset: 15
+      bit_size: 1
+      enum: Pal
+    - name: emi
+      description: Enable Master ID Replication.
+      bit_offset: 16
+      bit_size: 1
+    - name: attr
+      description: Attribute Output.
+      bit_offset: 17
+      bit_size: 4
+fieldset/TcdAttr:
+  description: TCD Transfer Attributes.
+  bit_size: 16
+  fields:
+    - name: dsize
+      description: Destination Data Transfer Size.
+      bit_offset: 0
+      bit_size: 3
+      enum: Size
+    - name: dmod
+      description: Destination Address Modulo.
+      bit_offset: 3
+      bit_size: 5
+    - name: ssize
+      description: Source Data Transfer Size.
+      bit_offset: 8
+      bit_size: 3
+      enum: Size
+    - name: smod
+      description: Source Address Modulo.
+      bit_offset: 11
+      bit_size: 5
+fieldset/TcdBiterElinkno:
+  description: TCD Beginning Major Loop Count (Minor Loop Channel Linking Disabled).
+  bit_size: 16
+  fields:
+    - name: biter
+      description: Starting Major Iteration Count.
+      bit_offset: 0
+      bit_size: 15
+    - name: elink
+      description: Enables Link.
+      bit_offset: 15
+      bit_size: 1
+fieldset/TcdBiterElinkyes:
+  description: TCD Beginning Major Loop Count (Minor Loop Channel Linking Enabled).
+  bit_size: 16
+  fields:
+    - name: biter
+      description: Starting Major Iteration Count.
+      bit_offset: 0
+      bit_size: 9
+    - name: linkch
+      description: Link Channel Number.
+      bit_offset: 9
+      bit_size: 4
+    - name: elink
+      description: Enable Link.
+      bit_offset: 15
+      bit_size: 1
+fieldset/TcdCiterElinkno:
+  description: TCD Current Major Loop Count (Minor Loop Channel Linking Disabled).
+  bit_size: 16
+  fields:
+    - name: citer
+      description: Current Major Iteration Count.
+      bit_offset: 0
+      bit_size: 15
+    - name: elink
+      description: Enable Link.
+      bit_offset: 15
+      bit_size: 1
+fieldset/TcdCiterElinkyes:
+  description: TCD Current Major Loop Count (Minor Loop Channel Linking Enabled).
+  bit_size: 16
+  fields:
+    - name: citer
+      description: Current Major Iteration Count.
+      bit_offset: 0
+      bit_size: 9
+    - name: linkch
+      description: Minor Loop Link Channel Number.
+      bit_offset: 9
+      bit_size: 4
+    - name: elink
+      description: Enable Link.
+      bit_offset: 15
+      bit_size: 1
+fieldset/TcdCsr:
+  description: TCD Control and Status.
+  bit_size: 16
+  fields:
+    - name: start
+      description: Channel Start.
+      bit_offset: 0
+      bit_size: 1
+      enum: Start
+    - name: intmajor
+      description: Enable Interrupt If Major count complete.
+      bit_offset: 1
+      bit_size: 1
+    - name: inthalf
+      description: Enable Interrupt If Major Counter Half-complete.
+      bit_offset: 2
+      bit_size: 1
+    - name: dreq
+      description: Disable Request.
+      bit_offset: 3
+      bit_size: 1
+      enum: Dreq
+    - name: esg
+      description: Enable Scatter/Gather Processing.
+      bit_offset: 4
+      bit_size: 1
+      enum: Esg
+    - name: majorelink
+      description: Enable Link When Major Loop Complete.
+      bit_offset: 5
+      bit_size: 1
+    - name: eeop
+      description: Enable End-Of-Packet Processing.
+      bit_offset: 6
+      bit_size: 1
+    - name: esda
+      description: Enable Store Destination Address.
+      bit_offset: 7
+      bit_size: 1
+    - name: majorlinkch
+      description: Major Loop Link Channel Number.
+      bit_offset: 8
+      bit_size: 4
+    - name: bwc
+      description: Bandwidth Control.
+      bit_offset: 14
+      bit_size: 2
+      enum: Bwc
+fieldset/TcdDaddr:
+  description: TCD Destination Address.
+  fields:
+    - name: daddr
+      description: Destination Address.
+      bit_offset: 0
+      bit_size: 32
+fieldset/TcdDlastSga:
+  description: TCD Last Destination Address Adjustment / Scatter Gather Address.
+  fields:
+    - name: dlast_sga
+      description: Last Destination Address Adjustment / Scatter Gather Address.
+      bit_offset: 0
+      bit_size: 32
+fieldset/TcdDoff:
+  description: TCD Signed Destination Address Offset.
+  bit_size: 16
+  fields:
+    - name: doff
+      description: Destination Address Signed Offset.
+      bit_offset: 0
+      bit_size: 16
+fieldset/TcdNbytesMloffno:
+  description: TCD Transfer Size Without Minor Loop Offsets.
+  fields:
+    - name: nbytes
+      description: Number of Bytes To Transfer Per Service Request.
+      bit_offset: 0
+      bit_size: 30
+    - name: dmloe
+      description: Destination Minor Loop Offset Enable.
+      bit_offset: 30
+      bit_size: 1
+      enum: TcdNbytesMloffnoDmloe
+    - name: smloe
+      description: Source Minor Loop Offset Enable.
+      bit_offset: 31
+      bit_size: 1
+      enum: TcdNbytesMloffnoSmloe
+fieldset/TcdNbytesMloffyes:
+  description: TCD Transfer Size with Minor Loop Offsets.
+  fields:
+    - name: nbytes
+      description: Number of Bytes To Transfer Per Service Request.
+      bit_offset: 0
+      bit_size: 10
+    - name: mloff
+      description: Minor Loop Offset.
+      bit_offset: 10
+      bit_size: 20
+    - name: dmloe
+      description: Destination Minor Loop Offset Enable.
+      bit_offset: 30
+      bit_size: 1
+      enum: TcdNbytesMloffyesDmloe
+    - name: smloe
+      description: Source Minor Loop Offset Enable.
+      bit_offset: 31
+      bit_size: 1
+      enum: TcdNbytesMloffyesSmloe
+fieldset/TcdSaddr:
+  description: TCD Source Address.
+  fields:
+    - name: saddr
+      description: Source Address.
+      bit_offset: 0
+      bit_size: 32
+fieldset/TcdSlastSda:
+  description: TCD Last Source Address Adjustment / Store DADDR Address.
+  fields:
+    - name: slast_sda
+      description: Last Source Address Adjustment / Store DADDR Address.
+      bit_offset: 0
+      bit_size: 32
+fieldset/TcdSoff:
+  description: TCD Signed Source Address Offset.
+  bit_size: 16
+  fields:
+    - name: soff
+      description: Source Address Signed Offset.
+      bit_offset: 0
+      bit_size: 16
+enum/Bwc:
+  bit_size: 2
+  variants:
+    - name: NoStall
+      description: No eDMA engine stalls.
+      value: 0
+    - name: EngineStallsFour
+      description: eDMA engine stalls for 4 cycles after each R/W.
+      value: 2
+    - name: EngineStallsEight
+      description: eDMA engine stalls for 8 cycles after each R/W.
+      value: 3
+enum/Dpa:
+  bit_size: 1
+  variants:
+    - name: Suspend
+      description: Channel can suspend a lower-priority channel.
+      value: 0
+    - name: CannotSuspend
+      description: Channel cannot suspend any other channel, regardless of channel priority.
+      value: 1
+enum/Dreq:
+  bit_size: 1
+  variants:
+    - name: ChannelNotAffected
+      description: No operation.
+      value: 0
+    - name: ErqFieldClear
+      description: Clear the ERQ field to 0 upon major loop completion, thus disabling hardware service requests.
+      value: 1
+enum/Ecp:
+  bit_size: 1
+  variants:
+    - name: CannotSuspend
+      description: Channel cannot be suspended by a higher-priority channel's service request.
+      value: 0
+    - name: Suspend
+      description: Channel can be temporarily suspended by a higher-priority channel's service request.
+      value: 1
+enum/Esg:
+  bit_size: 1
+  variants:
+    - name: NormalFormat
+      description: Current channel's TCD is normal format.
+      value: 0
+    - name: ScatterGatherFormat
+      description: Current channel's TCD specifies scatter/gather format.
+      value: 1
+enum/Pal:
+  bit_size: 1
+  variants:
+    - name: UserProtection
+      description: User protection level for DMA transfers.
+      value: 0
+    - name: PrivilegedProtection
+      description: Privileged protection level for DMA transfers.
+      value: 1
+enum/Sec:
+  bit_size: 1
+  variants:
+    - name: NonsecureProtection
+      description: Nonsecure protection level for DMA transfers.
+      value: 0
+    - name: SecureProtection
+      description: Secure protection level for DMA transfers.
+      value: 1
+enum/Size:
+  bit_size: 3
+  variants:
+    - name: EightBit
+      description: 8-bit.
+      value: 0
+    - name: SixteenBit
+      description: 16-bit.
+      value: 1
+    - name: ThirtytwoBit
+      description: 32-bit.
+      value: 2
+    - name: SixtyfourBit
+      description: 64-bit.
+      value: 3
+    - name: SixteenByte
+      description: 16-byte.
+      value: 4
+    - name: ThirtytwoByte
+      description: 32-byte.
+      value: 5
+enum/Start:
+  bit_size: 1
+  variants:
+    - name: ChannelNotStarted
+      description: Channel not explicitly started.
+      value: 0
+    - name: ChannelStarted
+      description: Channel explicitly started via a software-initiated service request.
+      value: 1
+enum/TcdNbytesMloffnoDmloe:
+  bit_size: 1
+  variants:
+    - name: OffsetNotApplied
+      description: Minor loop offset not applied to DADDR.
+      value: 0
+    - name: OffsetApplied
+      description: Minor loop offset applied to DADDR.
+      value: 1
+enum/TcdNbytesMloffnoSmloe:
+  bit_size: 1
+  variants:
+    - name: OffsetNotApplied
+      description: Minor loop offset not applied to SADDR.
+      value: 0
+    - name: OffsetApplied
+      description: Minor loop offset applied to SADDR.
+      value: 1
+enum/TcdNbytesMloffyesDmloe:
+  bit_size: 1
+  variants:
+    - name: OffsetNotApplied
+      description: Minor loop offset not applied to DADDR.
+      value: 0
+    - name: OffsetApplied
+      description: Minor loop offset applied to DADDR.
+      value: 1
+enum/TcdNbytesMloffyesSmloe:
+  bit_size: 1
+  variants:
+    - name: OffsetNotApplied
+      description: Minor loop offset not applied to SADDR.
+      value: 0
+    - name: OffsetApplied
+      description: Minor loop offset applied to SADDR.
+      value: 1
+
+# MCXN23x RM Rev. 4, 16.6.2; MCXN RM Rev. 7, 23.6.3-4.
+# Controller-specific types are required even when channel counts match:
+# CH_SBR resets to 6 on DMA0 and 7 on DMA1. No chip predicate can select an instance.
+block/TcdDma0:
+  only_in: '^MCXN'
+  description: DMA0 channel windows, each spaced 0x1000 bytes. The descriptor payload at offset 0x20 is 32 bytes, not the channel stride.
+  items:
+  - name: tcd
+    description: DMA0 channels 0 through 15.
+    byte_offset: 0
+    array:
+      len: 16
+      stride: 4096
+    block: ChannelDma0
+block/TcdDma1:
+  only_in: '^MCXN(247|5[234][67]|94[67])$'
+  description: DMA1 sixteen-channel windows, spaced 0x1000 bytes. CH_SBR construction default is 7, independently of DMA0.
+  items:
+  - name: tcd
+    description: DMA1 channels 0 through 15.
+    byte_offset: 0
+    array:
+      len: 16
+      stride: 4096
+    block: ChannelDma1
+block/TcdEightDma1:
+  only_in: '^MCXN23[56]$'
+  description: DMA1 eight-channel windows on MCXN235 and MCXN236. Channels 8 through 15 are not implemented.
+  items:
+  - name: tcd
+    description: DMA1 channels 0 through 7.
+    byte_offset: 0
+    array:
+      len: 8
+      stride: 4096
+    block: ChannelEightDma1
+block/ChannelDma0:
+  only_in: '^MCXN'
+  description: N DMA0 channel. Do not modify an active descriptor except for documented dynamic scatter/gather or linking. Descriptor reset contents are undefined except TCD_CSR, whose reset is known zero; other zero descriptor defaults are construction values, not hardware reset guarantees.
+  extends: Tcd
+  items:
+  - name: ch_csr
+    description: Channel Control and Status. ACTIVE is read-only. DONE is W1C and must be cleared before writing MAJORELINK or ESG. Disable the channel's hardware service request at the source before clearing ERQ.
+    byte_offset: 0
+    fieldset: ChCsrN
+  - name: ch_es
+    description: Channel Error Status. Error-cause bits are read-only; ERR is W1C to acknowledge the channel error. Do not use read-modify-write to acknowledge unrelated status.
+    byte_offset: 4
+    access: ReadWrite
+    fieldset: ChEsN
+  - name: ch_int
+    description: Channel Interrupt Status. INT is W1C to acknowledge the interrupt.
+    byte_offset: 8
+    fieldset: ChInt
+  - name: ch_sbr
+    description: Channel System Bus. MID is read-only captured identity, not a configurable master number. EMI is writable only when GMRC is set. SEC and PAL cannot exceed the writing master's protection level.
+    byte_offset: 12
+    fieldset: ChSbrDma0
+  - name: ch_pri
+    description: Channel Priority. APL is 0 through 7 within the assigned group; APL zero uses ERCA arbitration (round-robin or channel-number order).
+    byte_offset: 16
+    fieldset: ChPri
+  - name: ch_mux
+    description: Channel Multiplexor Configuration. Raw 7-bit selector; 0 disables requests. Implemented and reserved requests depend on chip and controller; the bit range is not a route-availability guarantee. Disable peripheral service requests before configuring. Nonzero sources must be unique within the controller; selecting an already consumed source writes zero instead.
+    byte_offset: 20
+    fieldset: ChMux
+  - name: tcd_soff
+    description: TCD signed source offset, exposed as raw 16-bit two's-complement bits.
+    byte_offset: 36
+    bit_size: 16
+    fieldset: TcdSoff
+  - name: tcd_attr
+    description: TCD Transfer Attributes. SSIZE and DSIZE encodings 0 through 5 mean 1, 2, 4, 8, 16, 32 bytes; 6 and 7 are reserved. Modulo 0 disables; 1 through 31 specify the number of changing low address bits.
+    byte_offset: 38
+    bit_size: 16
+    fieldset: TcdAttr
+  - name: tcd_nbytes_mloffyes
+    description: TCD minor-loop-offset alias at 0x28. MLOFF is raw signed 20-bit two's-complement; align offsets to the associated transfer size. NBYTES must be nonzero.
+    byte_offset: 40
+    fieldset: TcdNbytesMloffyes
+  - name: tcd_slast_sda
+    description: Raw 32-bit signed last-source adjustment, or destination-address-store pointer when ESDA is enabled.
+    byte_offset: 44
+    fieldset: TcdSlastSda
+  - name: tcd_doff
+    description: TCD signed destination offset, exposed as raw 16-bit two's-complement bits.
+    byte_offset: 52
+    bit_size: 16
+    fieldset: TcdDoff
+  - name: tcd_dlast_sga
+    description: Raw 32-bit signed last-destination adjustment, or scatter/gather pointer when ESG is enabled. Scatter/gather descriptors must be 32-byte aligned.
+    byte_offset: 56
+    fieldset: TcdDlastSga
+  - name: tcd_csr
+    description: TCD Control and Status. START requests service. Clear CH_CSR.DONE before setting ESG or MAJORELINK; GCLC must enable linking. BWC encoding 1 is reserved.
+    byte_offset: 60
+    bit_size: 16
+    fieldset: TcdCsr
+block/ChannelDma1:
+  only_in: '^MCXN'
+  description: N DMA1 channel. CH_SBR resets to 7. Descriptor reset contents are undefined except TCD_CSR, whose reset is known zero; other zero descriptor defaults construct software values only.
+  extends: ChannelDma0
+  items:
+  - name: ch_sbr
+    description: Channel System Bus. Read-only captured MID; EMI requires GMRC. SEC and PAL cannot exceed the writing master's protection level.
+    byte_offset: 12
+    fieldset: ChSbrDma1
+block/ChannelEightDma1:
+  only_in: '^MCXN23[56]$'
+  description: N235/N236 DMA1 channel, with three-bit link channel numbers. CITER and BITER must agree on linking and initial count.
+  extends: ChannelDma1
+  items:
+  - name: tcd_citer_elinkyes
+    description: Current major-loop count with minor-loop linking enabled. LINKCH selects only channels 0 through 7.
+    byte_offset: 54
+    bit_size: 16
+    fieldset: TcdCiterEight
+  - name: tcd_csr
+    description: TCD Control and Status. MAJORLINKCH selects channels 0 through 7. START requests service; clear CH_CSR.DONE before setting ESG or MAJORELINK.
+    byte_offset: 60
+    bit_size: 16
+    fieldset: TcdCsrEight
+  - name: tcd_biter_elinkyes
+    description: Beginning major-loop count with minor-loop linking enabled. LINKCH selects only channels 0 through 7.
+    byte_offset: 62
+    bit_size: 16
+    fieldset: TcdBiterEight
+fieldset/ChCsrN:
+  only_in: '^MCXN'
+  description: Channel Control and Status. ACTIVE is read-only; DONE is W1C. Clear DONE before modifying ESG or MAJORELINK. Disable the channel's hardware service request at the source before clearing ERQ.
+  extends: ChCsr
+  fields: []
+fieldset/ChEsN:
+  only_in: '^MCXN'
+  description: Channel Error Status. Cause bits 0 through 7 are read-only; writing one to ERR clears the channel error.
+  extends: ChEs
+  fields: []
+fieldset/ChSbrDma0:
+  only_in: '^MCXN'
+  description: DMA0 Channel System Bus. Known reset bits construct 0x6, not a live security or privilege observation. Attribute-output bits 17 through 20 are reserved on N.
+  reset_value: 0x6
+  fields:
+  - name: mid
+    description: Read-only captured master ID. Captured when the programming master writes the channel security attributes.
+    bit_offset: 0
+    bit_size: 5
+  - name: sec
+    description: Security level, restricted by the writing master's security and privilege.
+    bit_offset: 14
+    bit_size: 1
+    enum: Sec
+  - name: pal
+    description: Privilege level, restricted by the writing master's security and privilege.
+    bit_offset: 15
+    bit_size: 1
+    enum: Pal
+  - name: emi
+    description: Enable master-ID replication; writable only when MP_CSR.GMRC is one, otherwise forced to zero.
+    bit_offset: 16
+    bit_size: 1
+fieldset/ChSbrDma1:
+  only_in: '^MCXN'
+  description: DMA1 Channel System Bus. Known reset bits construct 0x7, independently of DMA0. Captured MID is read-only; SEC and PAL are constrained by the programming master; EMI requires GMRC.
+  extends: ChSbrDma0
+  reset_value: 0x7
+  fields: []
+fieldset/TcdCiterEight:
+  only_in: '^MCXN23[56]$'
+  description: Current major-loop count with minor-loop linking; three-bit channel selector.
+  bit_size: 16
+  extends: TcdCiterElinkyes
+  fields:
+  - name: linkch
+    description: Minor-loop link target channel 0 through 7.
+    bit_offset: 9
+    bit_size: 3
+fieldset/TcdBiterEight:
+  only_in: '^MCXN23[56]$'
+  description: Beginning major-loop count with minor-loop linking; three-bit channel selector.
+  bit_size: 16
+  extends: TcdBiterElinkyes
+  fields:
+  - name: linkch
+    description: Minor-loop link target channel 0 through 7.
+    bit_offset: 9
+    bit_size: 3
+fieldset/TcdCsrEight:
+  only_in: '^MCXN23[56]$'
+  description: Eight-channel DMA1 TCD control, with three-bit major-loop channel selector. BWC encoding 1 is reserved.
+  bit_size: 16
+  extends: TcdCsr
+  fields:
+  - name: majorlinkch
+    description: Major-loop link target channel 0 through 7.
+    bit_offset: 8
+    bit_size: 3

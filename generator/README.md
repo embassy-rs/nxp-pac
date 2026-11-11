@@ -59,3 +59,18 @@ The no-argument `generate` command still regenerates **legacy** sources from the
 vendor checkout and checks MetaPAC generation in scratch directories. It is not
 a read-only check. Explicit `extract <chip>` remains a separate import operation
 whose output goes to `data/metadata/peripherals/raw` by default.
+
+## How to inspect MCXN MetaPAC generation
+
+The bare `MCXN947` name continues to select the legacy two-core PAC generator.
+To select its new single-chip MetaPAC instead, pass `--metapac` explicitly:
+
+```bash
+cargo run -p generator -- generate MCXN947 --metapac --out-dir <scratch-directory>
+```
+
+The eleven MCXN MetaPAC chip names are `MCXN235`, `MCXN236`, `MCXN247`,
+`MCXN526`, `MCXN527`, `MCXN536`, `MCXN537`, `MCXN546`, `MCXN547`, `MCXN946`,
+and `MCXN947`. The other ten names select MetaPAC with the ordinary `generate`
+command. Use `--out-dir` to retain inspection output; generation otherwise uses
+temporary output. Do not use the no-argument command as a read-only check.

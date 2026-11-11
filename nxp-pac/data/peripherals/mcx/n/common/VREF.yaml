@@ -1,0 +1,98 @@
+# MCXN23XRM Rev. 4, sections 34.3 and 34.6.1;
+# MCXNP184M150F70RM Rev. 7, sections 45.3 and 45.6.1.
+# All UTRIM hardware reset bits are unknown and factory-loaded. No reset_value
+# is specified for Utrim: the engine's zero construction fallback is NOT a
+# hardware reset or a factory calibration value. Preserve the live trim.
+block/Vref:
+  description: Voltage reference.
+  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  items:
+  - name: verid
+    byte_offset: 0
+    access: Read
+    fieldset: Verid
+  - name: csr
+    byte_offset: 8
+    fieldset: Csr
+  - name: utrim
+    description: >-
+      Factory-loaded user trim with unknown hardware reset value. Read and
+      preserve live trim when changing output selection; do not write the
+      zero construction default as calibration.
+    byte_offset: 16
+    fieldset: Utrim
+fieldset/Verid:
+  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  bit_size: 32
+  reset_value: 16777216
+  fields:
+  - name: feature
+    bit_offset: 0
+    bit_size: 16
+  - name: minor
+    bit_offset: 16
+    bit_size: 8
+  - name: major
+    bit_offset: 24
+    bit_size: 8
+fieldset/Csr:
+  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  bit_size: 32
+  reset_value: 0
+  fields:
+  - name: hcbgen
+    description: HC bandgap enable. Enable only when LPBGEN is set.
+    bit_offset: 0
+    bit_size: 1
+  - name: lpbgen
+    description: Low-power bandgap enable.
+    bit_offset: 1
+    bit_size: 1
+  - name: lpbg_buf_en
+    description: Low-power bandgap buffer enable with latch function. Enable only when LPBGEN is set.
+    bit_offset: 2
+    bit_size: 1
+  - name: chopen
+    description: >-
+      Chop oscillator enable. Required when using the internal regulator.
+      Chopping in low-power modes also requires the HC bandgap reference.
+    bit_offset: 3
+    bit_size: 1
+  - name: icompen
+    description: Second-order current compensation. Must be set for data-sheet performance.
+    bit_offset: 4
+    bit_size: 1
+  - name: regen
+    description: Internal 1.75 V regulator enable. Must be set for data-sheet performance; follow the regulator enable sequence.
+    bit_offset: 5
+    bit_size: 1
+  - name: hi_pwr_lv
+    description: Buffer21 high-power mode when set, low-power mode when clear.
+    bit_offset: 11
+    bit_size: 1
+  - name: buf21en
+    description: Enables the programmable Buffer21 output from 1.0 to 2.1 V.
+    bit_offset: 16
+    bit_size: 1
+  - name: vrefst
+    description: Read-only HC bandgap stability indication. Valid only with chopping disabled; 0 means disabled or unstable, 1 means stable.
+    bit_offset: 31
+    bit_size: 1
+fieldset/Utrim:
+  only_in: '^MCXN(235|236|247|526|527|536|537|546|547|946|947)$'
+  bit_size: 32
+  fields:
+  - name: trim2v1
+    description: >-
+      Output selection: encodings 0 through 11 select 1.0 through 2.1 V in
+      0.1 V steps (1 selects 1.1 V); encodings 12 through 15 select 1.0 V.
+      Hardware reset is unknown and factory-loaded, not a fixed selection.
+    bit_offset: 0
+    bit_size: 4
+  - name: vreftrim
+    description: >-
+      Factory-loaded unsigned output trim with unknown hardware reset value.
+      Each step adjusts output by (0.5 x VREF_OUT_Nom) mV, where VREF_OUT_Nom
+      is the target output voltage in volts selected by TRIM2V1.
+    bit_offset: 8
+    bit_size: 6
