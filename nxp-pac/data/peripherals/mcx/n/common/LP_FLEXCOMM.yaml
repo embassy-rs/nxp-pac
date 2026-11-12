@@ -19,22 +19,27 @@ fieldset/Istat:
     description: UART transmitter interrupt asserted.
     bit_offset: 0
     bit_size: 1
+    enum: Uarttx
   - name: uartrx
     description: UART receiver interrupt asserted.
     bit_offset: 1
     bit_size: 1
+    enum: Uartrx
   - name: spi
     description: SPI interrupt asserted.
     bit_offset: 2
     bit_size: 1
+    enum: Spi
   - name: i2cm
     description: I2C controller interrupt asserted.
     bit_offset: 4
     bit_size: 1
+    enum: I2cm
   - name: i2cs
     description: I2C subordinate interrupt asserted.
     bit_offset: 5
     bit_size: 1
+    enum: I2cs
 fieldset/Pselid:
   description: Peripheral Select and ID.
   reset_value: 0x00103070
@@ -82,3 +87,48 @@ enum/Persel:
   - name: UartAndI2c
     description: UART and I2C with reduced interface. DMA and input trigger may be enabled for only one function.
     value: 7
+enum/Uarttx:
+  bit_size: 1
+  variants:
+  - name: NotPending
+    description: No interrupt asserted.
+    value: 0
+  - name: Pending
+    description: Interrupt asserted.
+    value: 1
+enum/Spi:
+  bit_size: 1
+  variants:
+  - name: NotPending
+    description: No interrupt asserted.
+    value: 0
+  - name: Pending
+    description: Interrupt asserted.
+    value: 1
+enum/Uartrx:
+  bit_size: 1
+  variants:
+  - name: NotPending
+    description: No interrupt asserted.
+    value: 0
+  - name: Pending
+    description: Interrupt asserted.
+    value: 1
+enum/I2cs:
+  bit_size: 1
+  variants:
+  - name: NotPending
+    description: No interrupt asserted.
+    value: 0
+  - name: Pending
+    description: Interrupt asserted.
+    value: 1
+enum/I2cm:
+  bit_size: 1
+  variants:
+  - name: NotPending
+    description: No interrupt asserted.
+    value: 0
+  - name: Pending
+    description: Interrupt asserted.
+    value: 1

@@ -157,7 +157,17 @@ fieldset/OseventCtrlN:
     description: Interrupt or Wake-Up Request. Set to enable requests.
     bit_offset: 1
     bit_size: 1
+    enum: OstimerIntena
   - name: match_wr_rdy
     description: EVTimer Match Write Ready. Low means safe to reload the match registers after the previous transfer completes. Resets only on system reset, not module software reset.
     bit_offset: 2
     bit_size: 1
+enum/OstimerIntena:
+  bit_size: 1
+  variants:
+  - name: InterruptsBlocked
+    description: Interrupts blocked.
+    value: 0
+  - name: InterruptsEnabled
+    description: Interrupts enabled.
+    value: 1

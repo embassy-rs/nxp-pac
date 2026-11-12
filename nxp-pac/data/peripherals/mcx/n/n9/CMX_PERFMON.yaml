@@ -140,12 +140,53 @@ fieldset/CmxPerfmonAlphaFieldsetGolf:
     description: Event Counter.
     bit_offset: 0
     bit_size: 32
+# UserOnly (10b) and PrivOnly (11b) are kept although MCX N RM Rev. 7
+# §11.6.1.2 marks them reserved. §11.3.2 Table 118 lists them "if supported"
+# and §11.2.2 lists "Count filter based on privilege level" as a feature.
+#
+# Other NXP sources define both encodings:
+# - SVD (MCXN947_cm33_core0/core1.xml): USER_AND_PRIV=0, USER_ONLY=2,
+#   PRIV_ONLY=3.
+# - SDK device header MCXN/periph/PERI_SYSPM.h (SYSPM_PMCR_CMODE).
+#   https://github.com/nxp-mcuxpresso/mcux-devices-mcx/blob/0cca06be224bfd03d1a2ff71139db6ffed12d0d5/MCXN/periph/PERI_SYSPM.h#L374-L382
+# - SDK driver fsl_syspm.h kSYSPM_UserMode=0x02, kSYSPM_PrivilegedMode=0x03,
+#   written directly to PMCR[CMODE] by SYSPM_SetCountMode in fsl_syspm.c.
+#   https://github.com/nxp-mcuxpresso/mcuxsdk-core/blob/b2cee0c457e7e59bd85379fe835076f864260b93/drivers/syspm/fsl_syspm.h#L69-L74
+#   https://github.com/nxp-mcuxpresso/mcuxsdk-core/blob/b2cee0c457e7e59bd85379fe835076f864260b93/drivers/syspm/fsl_syspm.c#L146-L150
+# - The SDK SYSPM driver example for FRDM-MCXN947 uses kSYSPM_UserMode on
+#   CMX_PERFMON0.
+#
+# Hardware check (FRDM-MCXN947, CMX_PERFMON0/LPCAC, core 0, secure, LPCAC
+# enabled): a flash-resident loop of 20,000 operand reads, run in privileged
+# and unprivileged thread mode under each CMODE value.
+#
+#   CMODE  mode    cac_if  cac_opr
+#   00     priv    45025   20000
+#   00     unpriv  45044   20001
+#   10     priv     5001       0
+#   10     unpriv  45032   20001
+#   11     priv    40024   20000
+#   11     unpriv     12       0
+#
+# PMCR reads back all four CMODE values, and 01b behaves like 00b. 10b drops
+# all privileged operand reads; 11b drops all unprivileged activity, leaving
+# only the SVC used to regain privilege (a zero-length run counts the same).
+# Under 10b, one instruction fetch per loop pass (5,000 passes of a 4x-unrolled
+# loop) from privileged code is still counted, and 40024 + 5001 = 45025, so
+# instruction-fetch counts under 10b include some privileged fetches. Operand
+# counts filter exactly. CMX_PERFMON1 (FlexSPI) and core 1 are untested.
 enum/CmxPerfmonAlphaEnumAlpha:
   bit_size: 2
   variants:
   - name: UserAndPriv
     description: Counted in both User and Privileged modes.
     value: 0
+  - name: UserOnly
+    description: Counted only in User mode.
+    value: 2
+  - name: PrivOnly
+    description: Counted only in Privileged mode.
+    value: 3
 enum/CmxPerfmonAlphaEnumBravo:
   bit_size: 1
   variants:

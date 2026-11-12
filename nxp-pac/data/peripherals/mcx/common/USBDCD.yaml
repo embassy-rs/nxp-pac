@@ -46,17 +46,21 @@ fieldset/Control:
   - name: iack
     bit_offset: 0
     bit_size: 1
+    enum: Iack
     description: Write one to acknowledge IF. Self-clearing.
   - name: if_
     bit_offset: 8
     bit_size: 1
+    enum: If
     description: Read-only interrupt flag. Writes ignored; acknowledge with IACK.
   - name: ie
     bit_offset: 16
     bit_size: 1
+    enum: Ie
   - name: bc12
     bit_offset: 17
     bit_size: 1
+    enum: Bc12
     description: One selects BC1.2, zero BC1.1. Must not change after detection starts.
   - name: start
     bit_offset: 24
@@ -65,6 +69,7 @@ fieldset/Control:
   - name: sr
     bit_offset: 25
     bit_size: 1
+    enum: Sr
     description: Software reset command; self-clearing. Configuration is preserved.
 fieldset/Clock:
   only_in: '^MCXA[0-9]+$'
@@ -122,6 +127,7 @@ fieldset/Status:
   - name: active
     bit_offset: 22
     bit_size: 1
+    enum: Active
 fieldset/SignalOverride:
   bit_size: 32
   reset_value: 0
@@ -272,3 +278,57 @@ enum/OverrideMode:
   - name: VdmSource
     value: 4
     description: Enable VDM_SRC only.
+enum/Iack:
+  bit_size: 1
+  variants:
+  - name: NoEffect
+    description: Do not clear the interrupt.
+    value: 0
+  - name: Clear
+    description: Clear the IF field (interrupt flag).
+    value: 1
+enum/Bc12:
+  bit_size: 1
+  variants:
+  - name: Bc11
+    description: Compatible with BC1.1.
+    value: 0
+  - name: Bc12
+    description: Compatible with BC1.2 (default).
+    value: 1
+enum/If:
+  bit_size: 1
+  variants:
+  - name: NotPending
+    description: No interrupt is pending.
+    value: 0
+  - name: Pending
+    description: An interrupt is pending.
+    value: 1
+enum/Sr:
+  bit_size: 1
+  variants:
+  - name: NoReset
+    description: Do not perform a software reset.
+    value: 0
+  - name: SwReset
+    description: Perform a software reset.
+    value: 1
+enum/Ie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disable interrupts to the system.
+    value: 0
+  - name: Enabled
+    description: Enable interrupts to the system.
+    value: 1
+enum/Active:
+  bit_size: 1
+  variants:
+  - name: SeqNotRunning
+    description: The sequence is not running.
+    value: 0
+  - name: SeqRunning
+    description: The sequence is running.
+    value: 1
