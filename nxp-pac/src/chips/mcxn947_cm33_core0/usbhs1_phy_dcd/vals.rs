@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Active {
     #[doc = "The sequence is not running."]
@@ -30,7 +31,8 @@ impl From<Active> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bc12 {
     #[doc = "Compatible with BC1.1."]
@@ -61,7 +63,8 @@ impl From<Bc12> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CheckDm {
     _RESERVED_0 = 0x0,
@@ -85,11 +88,16 @@ pub enum CheckDm {
     Ms9 = 0x09,
     #[doc = "1 ms - 15 ms."]
     Ms10 = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    #[doc = "1 ms - 15 ms."]
+    Ms11 = 0x0b,
+    #[doc = "1 ms - 15 ms."]
+    Ms12 = 0x0c,
+    #[doc = "1 ms - 15 ms."]
+    Ms13 = 0x0d,
+    #[doc = "1 ms - 15 ms."]
+    Ms14 = 0x0e,
+    #[doc = "1 ms - 15 ms."]
+    Ms15 = 0x0f,
 }
 impl CheckDm {
     #[inline(always)]
@@ -114,7 +122,8 @@ impl From<CheckDm> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ClockUnit {
     #[doc = "kHz Speed (between 4 kHz and 1023 kHz)."]
@@ -145,7 +154,8 @@ impl From<ClockUnit> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Iack {
     #[doc = "Do not clear the interrupt."]
@@ -176,7 +186,8 @@ impl From<Iack> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ie {
     #[doc = "Disable interrupts to the system."]
@@ -207,7 +218,8 @@ impl From<Ie> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum If {
     #[doc = "No interrupt is pending."]
@@ -238,7 +250,8 @@ impl From<If> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ps {
     #[doc = "No overrides. Field must remain at this value during normal USB data communication to prevent unexpected conditions on USB_DP and USB_DM pins. (Default)."]
@@ -276,7 +289,8 @@ impl From<Ps> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SeqRes {
     #[doc = "No results to report."]
@@ -311,7 +325,8 @@ impl From<SeqRes> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SeqStat {
     #[doc = "The module is either not enabled, or the module is enabled but the data pins have not yet been detected."]
@@ -346,7 +361,8 @@ impl From<SeqStat> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sr {
     #[doc = "Do not perform a software reset."]
@@ -400,6 +416,18 @@ impl TdcdDbnc {
     pub const Ms9: Self = Self(0x09);
     #[doc = "1 ms - 1023 ms."]
     pub const Ms10: Self = Self(0x0a);
+    #[doc = "1 ms - 1023 ms."]
+    pub const Ms1018: Self = Self(0x03fa);
+    #[doc = "1 ms - 1023 ms."]
+    pub const Ms1019: Self = Self(0x03fb);
+    #[doc = "1 ms - 1023 ms."]
+    pub const Ms1020: Self = Self(0x03fc);
+    #[doc = "1 ms - 1023 ms."]
+    pub const Ms1021: Self = Self(0x03fd);
+    #[doc = "1 ms - 1023 ms."]
+    pub const Ms1022: Self = Self(0x03fe);
+    #[doc = "1 ms - 1023 ms."]
+    pub const Ms1023: Self = Self(0x03ff);
 }
 impl TdcdDbnc {
     pub const fn from_bits(val: u16) -> TdcdDbnc {
@@ -409,6 +437,7 @@ impl TdcdDbnc {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TdcdDbnc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -422,6 +451,12 @@ impl core::fmt::Debug for TdcdDbnc {
             0x08 => f.write_str("Ms8"),
             0x09 => f.write_str("Ms9"),
             0x0a => f.write_str("Ms10"),
+            0x03fa => f.write_str("Ms1018"),
+            0x03fb => f.write_str("Ms1019"),
+            0x03fc => f.write_str("Ms1020"),
+            0x03fd => f.write_str("Ms1021"),
+            0x03fe => f.write_str("Ms1022"),
+            0x03ff => f.write_str("Ms1023"),
             other => core::write!(f, "0x{:02X}", other),
         }
     }
@@ -440,6 +475,12 @@ impl defmt::Format for TdcdDbnc {
             0x08 => defmt::write!(f, "Ms8"),
             0x09 => defmt::write!(f, "Ms9"),
             0x0a => defmt::write!(f, "Ms10"),
+            0x03fa => defmt::write!(f, "Ms1018"),
+            0x03fb => defmt::write!(f, "Ms1019"),
+            0x03fc => defmt::write!(f, "Ms1020"),
+            0x03fd => defmt::write!(f, "Ms1021"),
+            0x03fe => defmt::write!(f, "Ms1022"),
+            0x03ff => defmt::write!(f, "Ms1023"),
             other => defmt::write!(f, "0x{:02X}", other),
         }
     }
@@ -480,6 +521,18 @@ impl TseqInit {
     pub const Ms8: Self = Self(0x08);
     #[doc = "0 ms - 1023 ms."]
     pub const Ms9: Self = Self(0x09);
+    #[doc = "0 ms - 1023 ms."]
+    pub const Ms1018: Self = Self(0x03fa);
+    #[doc = "0 ms - 1023 ms."]
+    pub const Ms1019: Self = Self(0x03fb);
+    #[doc = "0 ms - 1023 ms."]
+    pub const Ms1020: Self = Self(0x03fc);
+    #[doc = "0 ms - 1023 ms."]
+    pub const Ms1021: Self = Self(0x03fd);
+    #[doc = "0 ms - 1023 ms."]
+    pub const Ms1022: Self = Self(0x03fe);
+    #[doc = "0 ms - 1023 ms."]
+    pub const Ms1023: Self = Self(0x03ff);
 }
 impl TseqInit {
     pub const fn from_bits(val: u16) -> TseqInit {
@@ -489,6 +542,7 @@ impl TseqInit {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TseqInit {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -502,6 +556,12 @@ impl core::fmt::Debug for TseqInit {
             0x07 => f.write_str("Ms7"),
             0x08 => f.write_str("Ms8"),
             0x09 => f.write_str("Ms9"),
+            0x03fa => f.write_str("Ms1018"),
+            0x03fb => f.write_str("Ms1019"),
+            0x03fc => f.write_str("Ms1020"),
+            0x03fd => f.write_str("Ms1021"),
+            0x03fe => f.write_str("Ms1022"),
+            0x03ff => f.write_str("Ms1023"),
             other => core::write!(f, "0x{:02X}", other),
         }
     }
@@ -520,6 +580,12 @@ impl defmt::Format for TseqInit {
             0x07 => defmt::write!(f, "Ms7"),
             0x08 => defmt::write!(f, "Ms8"),
             0x09 => defmt::write!(f, "Ms9"),
+            0x03fa => defmt::write!(f, "Ms1018"),
+            0x03fb => defmt::write!(f, "Ms1019"),
+            0x03fc => defmt::write!(f, "Ms1020"),
+            0x03fd => defmt::write!(f, "Ms1021"),
+            0x03fe => defmt::write!(f, "Ms1022"),
+            0x03ff => defmt::write!(f, "Ms1023"),
             other => defmt::write!(f, "0x{:02X}", other),
         }
     }
@@ -560,6 +626,18 @@ impl TvdmsrcOn {
     pub const Ms8: Self = Self(0x08);
     #[doc = "0 ms - 40 ms."]
     pub const Ms9: Self = Self(0x09);
+    #[doc = "0 ms - 40 ms."]
+    pub const Ms35: Self = Self(0x23);
+    #[doc = "0 ms - 40 ms."]
+    pub const Ms36: Self = Self(0x24);
+    #[doc = "0 ms - 40 ms."]
+    pub const Ms37: Self = Self(0x25);
+    #[doc = "0 ms - 40 ms."]
+    pub const Ms38: Self = Self(0x26);
+    #[doc = "0 ms - 40 ms."]
+    pub const Ms39: Self = Self(0x27);
+    #[doc = "0 ms - 40 ms."]
+    pub const Ms40: Self = Self(0x28);
 }
 impl TvdmsrcOn {
     pub const fn from_bits(val: u16) -> TvdmsrcOn {
@@ -569,6 +647,7 @@ impl TvdmsrcOn {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TvdmsrcOn {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -582,6 +661,12 @@ impl core::fmt::Debug for TvdmsrcOn {
             0x07 => f.write_str("Ms7"),
             0x08 => f.write_str("Ms8"),
             0x09 => f.write_str("Ms9"),
+            0x23 => f.write_str("Ms35"),
+            0x24 => f.write_str("Ms36"),
+            0x25 => f.write_str("Ms37"),
+            0x26 => f.write_str("Ms38"),
+            0x27 => f.write_str("Ms39"),
+            0x28 => f.write_str("Ms40"),
             other => core::write!(f, "0x{:02X}", other),
         }
     }
@@ -600,6 +685,12 @@ impl defmt::Format for TvdmsrcOn {
             0x07 => defmt::write!(f, "Ms7"),
             0x08 => defmt::write!(f, "Ms8"),
             0x09 => defmt::write!(f, "Ms9"),
+            0x23 => defmt::write!(f, "Ms35"),
+            0x24 => defmt::write!(f, "Ms36"),
+            0x25 => defmt::write!(f, "Ms37"),
+            0x26 => defmt::write!(f, "Ms38"),
+            0x27 => defmt::write!(f, "Ms39"),
+            0x28 => defmt::write!(f, "Ms40"),
             other => defmt::write!(f, "0x{:02X}", other),
         }
     }
@@ -640,6 +731,18 @@ impl TvdpsrcCon {
     pub const Ms9: Self = Self(0x09);
     #[doc = "1 ms - 1023 ms."]
     pub const Ms10: Self = Self(0x0a);
+    #[doc = "1 ms - 1023 ms."]
+    pub const Ms1018: Self = Self(0x03fa);
+    #[doc = "1 ms - 1023 ms."]
+    pub const Ms1019: Self = Self(0x03fb);
+    #[doc = "1 ms - 1023 ms."]
+    pub const Ms1020: Self = Self(0x03fc);
+    #[doc = "1 ms - 1023 ms."]
+    pub const Ms1021: Self = Self(0x03fd);
+    #[doc = "1 ms - 1023 ms."]
+    pub const Ms1022: Self = Self(0x03fe);
+    #[doc = "1 ms - 1023 ms."]
+    pub const Ms1023: Self = Self(0x03ff);
 }
 impl TvdpsrcCon {
     pub const fn from_bits(val: u16) -> TvdpsrcCon {
@@ -649,6 +752,7 @@ impl TvdpsrcCon {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TvdpsrcCon {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -662,6 +766,12 @@ impl core::fmt::Debug for TvdpsrcCon {
             0x08 => f.write_str("Ms8"),
             0x09 => f.write_str("Ms9"),
             0x0a => f.write_str("Ms10"),
+            0x03fa => f.write_str("Ms1018"),
+            0x03fb => f.write_str("Ms1019"),
+            0x03fc => f.write_str("Ms1020"),
+            0x03fd => f.write_str("Ms1021"),
+            0x03fe => f.write_str("Ms1022"),
+            0x03ff => f.write_str("Ms1023"),
             other => core::write!(f, "0x{:02X}", other),
         }
     }
@@ -680,6 +790,12 @@ impl defmt::Format for TvdpsrcCon {
             0x08 => defmt::write!(f, "Ms8"),
             0x09 => defmt::write!(f, "Ms9"),
             0x0a => defmt::write!(f, "Ms10"),
+            0x03fa => defmt::write!(f, "Ms1018"),
+            0x03fb => defmt::write!(f, "Ms1019"),
+            0x03fc => defmt::write!(f, "Ms1020"),
+            0x03fd => defmt::write!(f, "Ms1021"),
+            0x03fe => defmt::write!(f, "Ms1022"),
+            0x03ff => defmt::write!(f, "Ms1023"),
             other => defmt::write!(f, "0x{:02X}", other),
         }
     }
@@ -720,6 +836,18 @@ impl TvdpsrcOn {
     pub const Ms9: Self = Self(0x09);
     #[doc = "1 ms - 1023 ms."]
     pub const Ms10: Self = Self(0x0a);
+    #[doc = "1 ms - 1023 ms."]
+    pub const Ms1018: Self = Self(0x03fa);
+    #[doc = "1 ms - 1023 ms."]
+    pub const Ms1019: Self = Self(0x03fb);
+    #[doc = "1 ms - 1023 ms."]
+    pub const Ms1020: Self = Self(0x03fc);
+    #[doc = "1 ms - 1023 ms."]
+    pub const Ms1021: Self = Self(0x03fd);
+    #[doc = "1 ms - 1023 ms."]
+    pub const Ms1022: Self = Self(0x03fe);
+    #[doc = "1 ms - 1023 ms."]
+    pub const Ms1023: Self = Self(0x03ff);
 }
 impl TvdpsrcOn {
     pub const fn from_bits(val: u16) -> TvdpsrcOn {
@@ -729,6 +857,7 @@ impl TvdpsrcOn {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TvdpsrcOn {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -742,6 +871,12 @@ impl core::fmt::Debug for TvdpsrcOn {
             0x08 => f.write_str("Ms8"),
             0x09 => f.write_str("Ms9"),
             0x0a => f.write_str("Ms10"),
+            0x03fa => f.write_str("Ms1018"),
+            0x03fb => f.write_str("Ms1019"),
+            0x03fc => f.write_str("Ms1020"),
+            0x03fd => f.write_str("Ms1021"),
+            0x03fe => f.write_str("Ms1022"),
+            0x03ff => f.write_str("Ms1023"),
             other => core::write!(f, "0x{:02X}", other),
         }
     }
@@ -760,6 +895,12 @@ impl defmt::Format for TvdpsrcOn {
             0x08 => defmt::write!(f, "Ms8"),
             0x09 => defmt::write!(f, "Ms9"),
             0x0a => defmt::write!(f, "Ms10"),
+            0x03fa => defmt::write!(f, "Ms1018"),
+            0x03fb => defmt::write!(f, "Ms1019"),
+            0x03fc => defmt::write!(f, "Ms1020"),
+            0x03fd => defmt::write!(f, "Ms1021"),
+            0x03fe => defmt::write!(f, "Ms1022"),
+            0x03ff => defmt::write!(f, "Ms1023"),
             other => defmt::write!(f, "0x{:02X}", other),
         }
     }
@@ -800,6 +941,18 @@ impl TwaitAfterPrd {
     pub const Ms9: Self = Self(0x09);
     #[doc = "1 ms - 1023 ms."]
     pub const Ms10: Self = Self(0x0a);
+    #[doc = "1 ms - 1023 ms."]
+    pub const Ms1018: Self = Self(0x03fa);
+    #[doc = "1 ms - 1023 ms."]
+    pub const Ms1019: Self = Self(0x03fb);
+    #[doc = "1 ms - 1023 ms."]
+    pub const Ms1020: Self = Self(0x03fc);
+    #[doc = "1 ms - 1023 ms."]
+    pub const Ms1021: Self = Self(0x03fd);
+    #[doc = "1 ms - 1023 ms."]
+    pub const Ms1022: Self = Self(0x03fe);
+    #[doc = "1 ms - 1023 ms."]
+    pub const Ms1023: Self = Self(0x03ff);
 }
 impl TwaitAfterPrd {
     pub const fn from_bits(val: u16) -> TwaitAfterPrd {
@@ -809,6 +962,7 @@ impl TwaitAfterPrd {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TwaitAfterPrd {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -822,6 +976,12 @@ impl core::fmt::Debug for TwaitAfterPrd {
             0x08 => f.write_str("Ms8"),
             0x09 => f.write_str("Ms9"),
             0x0a => f.write_str("Ms10"),
+            0x03fa => f.write_str("Ms1018"),
+            0x03fb => f.write_str("Ms1019"),
+            0x03fc => f.write_str("Ms1020"),
+            0x03fd => f.write_str("Ms1021"),
+            0x03fe => f.write_str("Ms1022"),
+            0x03ff => f.write_str("Ms1023"),
             other => core::write!(f, "0x{:02X}", other),
         }
     }
@@ -840,6 +1000,12 @@ impl defmt::Format for TwaitAfterPrd {
             0x08 => defmt::write!(f, "Ms8"),
             0x09 => defmt::write!(f, "Ms9"),
             0x0a => defmt::write!(f, "Ms10"),
+            0x03fa => defmt::write!(f, "Ms1018"),
+            0x03fb => defmt::write!(f, "Ms1019"),
+            0x03fc => defmt::write!(f, "Ms1020"),
+            0x03fd => defmt::write!(f, "Ms1021"),
+            0x03fe => defmt::write!(f, "Ms1022"),
+            0x03ff => defmt::write!(f, "Ms1023"),
             other => defmt::write!(f, "0x{:02X}", other),
         }
     }

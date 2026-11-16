@@ -1,4 +1,4 @@
-#[doc = "WWDT."]
+#[doc = "Windowed Watchdog Timer."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Wwdt {
     ptr: *mut u8,

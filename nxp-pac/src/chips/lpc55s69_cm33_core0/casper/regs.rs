@@ -22,6 +22,7 @@ impl Default for Areg {
         Areg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Areg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Areg")
@@ -59,6 +60,7 @@ impl Default for Breg {
         Breg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Breg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Breg")
@@ -96,6 +98,7 @@ impl Default for Creg {
         Creg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Creg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Creg")
@@ -169,6 +172,7 @@ impl Default for Ctrl0 {
         Ctrl0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl0")
@@ -264,6 +268,7 @@ impl Default for Ctrl1 {
         Ctrl1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl1")
@@ -313,6 +318,7 @@ impl Default for Dreg {
         Dreg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dreg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dreg")
@@ -350,6 +356,7 @@ impl Default for Intenclr {
         Intenclr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Intenclr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Intenclr")
@@ -387,6 +394,7 @@ impl Default for Intenset {
         Intenset(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Intenset {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Intenset")
@@ -424,6 +432,7 @@ impl Default for Intstat {
         Intstat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Intstat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Intstat")
@@ -485,6 +494,7 @@ impl Default for Loader {
         Loader(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Loader {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Loader")
@@ -542,6 +552,7 @@ impl Default for Lock {
         Lock(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lock {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lock")
@@ -585,6 +596,7 @@ impl Default for Mask {
         Mask(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mask {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mask").field("mask", &self.mask()).finish()
@@ -620,6 +632,7 @@ impl Default for Remask {
         Remask(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Remask {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Remask")
@@ -657,6 +670,7 @@ impl Default for Res0 {
         Res0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Res0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Res0")
@@ -694,6 +708,7 @@ impl Default for Res1 {
         Res1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Res1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Res1")
@@ -731,6 +746,7 @@ impl Default for Res2 {
         Res2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Res2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Res2")
@@ -768,6 +784,7 @@ impl Default for Res3 {
         Res3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Res3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Res3")
@@ -829,6 +846,7 @@ impl Default for Status {
         Status(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Status {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Status")

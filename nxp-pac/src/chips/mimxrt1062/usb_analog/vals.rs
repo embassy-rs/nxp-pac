@@ -13,6 +13,7 @@ impl SiliconRevision {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SiliconRevision {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -43,7 +44,8 @@ impl From<SiliconRevision> for u32 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb1ChrgDetectChkChrgB {
     #[doc = "Check whether a charger (either a dedicated charger or a host charger) is connected to USB port."]
@@ -74,7 +76,8 @@ impl From<Usb1ChrgDetectChkChrgB> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb1ChrgDetectClrChkChrgB {
     #[doc = "Check whether a charger (either a dedicated charger or a host charger) is connected to USB port."]
@@ -105,7 +108,8 @@ impl From<Usb1ChrgDetectClrChkChrgB> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb1ChrgDetectClrEnB {
     #[doc = "Enable the charger detector."]
@@ -136,7 +140,8 @@ impl From<Usb1ChrgDetectClrEnB> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb1ChrgDetectEnB {
     #[doc = "Enable the charger detector."]
@@ -167,7 +172,8 @@ impl From<Usb1ChrgDetectEnB> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb1ChrgDetectSetChkChrgB {
     #[doc = "Check whether a charger (either a dedicated charger or a host charger) is connected to USB port."]
@@ -198,7 +204,8 @@ impl From<Usb1ChrgDetectSetChkChrgB> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb1ChrgDetectSetEnB {
     #[doc = "Enable the charger detector."]
@@ -229,7 +236,8 @@ impl From<Usb1ChrgDetectSetEnB> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb1ChrgDetectStatChrgDetected {
     #[doc = "The USB port is not connected to a charger."]
@@ -260,7 +268,8 @@ impl From<Usb1ChrgDetectStatChrgDetected> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb1ChrgDetectStatPlugContact {
     #[doc = "The USB plug has not made contact."]
@@ -291,7 +300,8 @@ impl From<Usb1ChrgDetectStatPlugContact> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb1ChrgDetectTogChkChrgB {
     #[doc = "Check whether a charger (either a dedicated charger or a host charger) is connected to USB port."]
@@ -322,7 +332,8 @@ impl From<Usb1ChrgDetectTogChkChrgB> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb1ChrgDetectTogEnB {
     #[doc = "Enable the charger detector."]
@@ -353,7 +364,8 @@ impl From<Usb1ChrgDetectTogEnB> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb1VbusDetectClrVbusvalidThresh {
     #[doc = "4.0V."]
@@ -396,7 +408,8 @@ impl From<Usb1VbusDetectClrVbusvalidThresh> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb1VbusDetectSetVbusvalidThresh {
     #[doc = "4.0V."]
@@ -439,7 +452,8 @@ impl From<Usb1VbusDetectSetVbusvalidThresh> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb1VbusDetectTogVbusvalidThresh {
     #[doc = "4.0V."]
@@ -482,7 +496,8 @@ impl From<Usb1VbusDetectTogVbusvalidThresh> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb1VbusDetectVbusvalidThresh {
     #[doc = "4.0V."]
@@ -525,7 +540,8 @@ impl From<Usb1VbusDetectVbusvalidThresh> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb2ChrgDetectChkChrgB {
     #[doc = "Check whether a charger (either a dedicated charger or a host charger) is connected to USB port."]
@@ -556,7 +572,8 @@ impl From<Usb2ChrgDetectChkChrgB> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb2ChrgDetectClrChkChrgB {
     #[doc = "Check whether a charger (either a dedicated charger or a host charger) is connected to USB port."]
@@ -587,7 +604,8 @@ impl From<Usb2ChrgDetectClrChkChrgB> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb2ChrgDetectClrEnB {
     #[doc = "Enable the charger detector."]
@@ -618,7 +636,8 @@ impl From<Usb2ChrgDetectClrEnB> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb2ChrgDetectEnB {
     #[doc = "Enable the charger detector."]
@@ -649,7 +668,8 @@ impl From<Usb2ChrgDetectEnB> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb2ChrgDetectSetChkChrgB {
     #[doc = "Check whether a charger (either a dedicated charger or a host charger) is connected to USB port."]
@@ -680,7 +700,8 @@ impl From<Usb2ChrgDetectSetChkChrgB> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb2ChrgDetectSetEnB {
     #[doc = "Enable the charger detector."]
@@ -711,7 +732,8 @@ impl From<Usb2ChrgDetectSetEnB> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb2ChrgDetectStatChrgDetected {
     #[doc = "The USB port is not connected to a charger."]
@@ -742,7 +764,8 @@ impl From<Usb2ChrgDetectStatChrgDetected> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb2ChrgDetectStatPlugContact {
     #[doc = "The USB plug has not made contact."]
@@ -773,7 +796,8 @@ impl From<Usb2ChrgDetectStatPlugContact> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb2ChrgDetectTogChkChrgB {
     #[doc = "Check whether a charger (either a dedicated charger or a host charger) is connected to USB port."]
@@ -804,7 +828,8 @@ impl From<Usb2ChrgDetectTogChkChrgB> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb2ChrgDetectTogEnB {
     #[doc = "Enable the charger detector."]
@@ -835,7 +860,8 @@ impl From<Usb2ChrgDetectTogEnB> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb2VbusDetectClrVbusvalidThresh {
     #[doc = "4.0V."]
@@ -878,7 +904,8 @@ impl From<Usb2VbusDetectClrVbusvalidThresh> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb2VbusDetectSetVbusvalidThresh {
     #[doc = "4.0V."]
@@ -921,7 +948,8 @@ impl From<Usb2VbusDetectSetVbusvalidThresh> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb2VbusDetectTogVbusvalidThresh {
     #[doc = "4.0V."]
@@ -964,7 +992,8 @@ impl From<Usb2VbusDetectTogVbusvalidThresh> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb2VbusDetectVbusvalidThresh {
     #[doc = "4.0V."]

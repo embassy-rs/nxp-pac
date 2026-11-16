@@ -58,6 +58,7 @@ impl Default for Allow {
         Allow(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Allow {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Allow")
@@ -117,6 +118,7 @@ impl Default for Cfg {
         Cfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cfg")
@@ -160,6 +162,7 @@ impl Default for Codeinput {
         Codeinput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Codeinput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Codeinput")
@@ -197,6 +200,7 @@ impl Default for Codeoutput {
         Codeoutput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Codeoutput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Codeoutput")
@@ -294,6 +298,7 @@ impl Default for Ctrl {
         Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl")
@@ -525,6 +530,7 @@ impl Default for Idxblk {
         Idxblk(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Idxblk {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Idxblk")
@@ -776,6 +782,7 @@ impl Default for IdxblkDp {
         IdxblkDp(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IdxblkDp {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IdxblkDp")
@@ -1027,6 +1034,7 @@ impl Default for IdxblkStatus {
         IdxblkStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IdxblkStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IdxblkStatus")
@@ -1098,6 +1106,7 @@ impl Default for Ifstat {
         Ifstat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ifstat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ifstat")
@@ -1207,6 +1216,7 @@ impl Default for Inten {
         Inten(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Inten {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Inten")
@@ -1332,6 +1342,7 @@ impl Default for Intstat {
         Intstat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Intstat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Intstat")
@@ -1421,6 +1432,7 @@ impl Default for Keyenable {
         Keyenable(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Keyenable {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Keyenable")
@@ -1468,6 +1480,7 @@ impl Default for Keyindex {
         Keyindex(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Keyindex {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Keyindex")
@@ -1505,6 +1518,7 @@ impl Default for Keyinput {
         Keyinput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Keyinput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Keyinput")
@@ -1578,6 +1592,7 @@ impl Default for Keylock {
         Keylock(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Keylock {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Keylock")
@@ -1604,8 +1619,8 @@ impl defmt::Format for Keylock {
 #[doc = "Only reset in case of full IC reset."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Keymask(pub u32);
-impl Keymask {
+pub struct Keymask0(pub u32);
+impl Keymask0 {
     #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
@@ -1619,23 +1634,138 @@ impl Keymask {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
     }
 }
-impl Default for Keymask {
+impl Default for Keymask0 {
     #[inline(always)]
-    fn default() -> Keymask {
-        Keymask(0)
+    fn default() -> Keymask0 {
+        Keymask0(0)
     }
 }
-impl core::fmt::Debug for Keymask {
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Keymask0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Keymask")
+        f.debug_struct("Keymask0")
             .field("keymask", &self.keymask())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for Keymask {
+impl defmt::Format for Keymask0 {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Keymask {{ keymask: {=u32:?} }}", self.keymask())
+        defmt::write!(f, "Keymask0 {{ keymask: {=u32:?} }}", self.keymask())
+    }
+}
+#[doc = "Only reset in case of full IC reset."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Keymask1(pub u32);
+impl Keymask1 {
+    #[doc = "no description available."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn keymask(&self) -> u32 {
+        let val = (self.0 >> 0usize) & 0xffff_ffff;
+        val as u32
+    }
+    #[doc = "no description available."]
+    #[inline(always)]
+    pub const fn set_keymask(&mut self, val: u32) {
+        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+    }
+}
+impl Default for Keymask1 {
+    #[inline(always)]
+    fn default() -> Keymask1 {
+        Keymask1(0)
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Keymask1 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Keymask1")
+            .field("keymask", &self.keymask())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Keymask1 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Keymask1 {{ keymask: {=u32:?} }}", self.keymask())
+    }
+}
+#[doc = "Only reset in case of full IC reset."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Keymask2(pub u32);
+impl Keymask2 {
+    #[doc = "no description available."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn keymask(&self) -> u32 {
+        let val = (self.0 >> 0usize) & 0xffff_ffff;
+        val as u32
+    }
+    #[doc = "no description available."]
+    #[inline(always)]
+    pub const fn set_keymask(&mut self, val: u32) {
+        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+    }
+}
+impl Default for Keymask2 {
+    #[inline(always)]
+    fn default() -> Keymask2 {
+        Keymask2(0)
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Keymask2 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Keymask2")
+            .field("keymask", &self.keymask())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Keymask2 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Keymask2 {{ keymask: {=u32:?} }}", self.keymask())
+    }
+}
+#[doc = "Only reset in case of full IC reset."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Keymask3(pub u32);
+impl Keymask3 {
+    #[doc = "no description available."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn keymask(&self) -> u32 {
+        let val = (self.0 >> 0usize) & 0xffff_ffff;
+        val as u32
+    }
+    #[doc = "no description available."]
+    #[inline(always)]
+    pub const fn set_keymask(&mut self, val: u32) {
+        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+    }
+}
+impl Default for Keymask3 {
+    #[inline(always)]
+    fn default() -> Keymask3 {
+        Keymask3(0)
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Keymask3 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Keymask3")
+            .field("keymask", &self.keymask())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Keymask3 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Keymask3 {{ keymask: {=u32:?} }}", self.keymask())
     }
 }
 #[doc = "PUF Key Output Index register."]
@@ -1662,6 +1792,7 @@ impl Default for Keyoutindex {
         Keyoutindex(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Keyoutindex {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Keyoutindex")
@@ -1699,6 +1830,7 @@ impl Default for Keyoutput {
         Keyoutput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Keyoutput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Keyoutput")
@@ -1772,6 +1904,7 @@ impl Default for Keyreset {
         Keyreset(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Keyreset {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Keyreset")
@@ -1819,6 +1952,7 @@ impl Default for Keysize {
         Keysize(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Keysize {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Keysize")
@@ -1892,6 +2026,7 @@ impl Default for ShiftStatus {
         ShiftStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ShiftStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ShiftStatus")
@@ -2011,6 +2146,7 @@ impl Default for Stat {
         Stat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Stat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Stat")

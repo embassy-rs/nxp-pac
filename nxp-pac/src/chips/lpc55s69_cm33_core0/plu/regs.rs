@@ -22,6 +22,7 @@ impl Default for LutInpMux {
         LutInpMux(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for LutInpMux {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LutInpMux")
@@ -59,6 +60,7 @@ impl Default for LutTruth {
         LutTruth(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for LutTruth {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LutTruth")
@@ -100,6 +102,7 @@ impl Default for OutputMux {
         OutputMux(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OutputMux {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OutputMux")
@@ -137,6 +140,7 @@ impl Default for Outputs {
         Outputs(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Outputs {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Outputs")
@@ -226,6 +230,7 @@ impl Default for WakeintCtrl {
         WakeintCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for WakeintCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WakeintCtrl")

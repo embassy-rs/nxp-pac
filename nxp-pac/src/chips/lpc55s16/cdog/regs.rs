@@ -22,6 +22,7 @@ impl Default for Add {
         Add(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Add {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Add").field("ad", &self.ad()).finish()
@@ -57,6 +58,7 @@ impl Default for Add1 {
         Add1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Add1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Add1").field("ad1", &self.ad1()).finish()
@@ -92,6 +94,7 @@ impl Default for Add16 {
         Add16(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Add16 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Add16").field("ad16", &self.ad16()).finish()
@@ -127,6 +130,7 @@ impl Default for Add256 {
         Add256(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Add256 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Add256")
@@ -260,6 +264,7 @@ impl Default for Control {
         Control(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Control {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Control")
@@ -389,6 +394,7 @@ impl Default for Flags {
         Flags(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flags {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flags")
@@ -442,6 +448,7 @@ impl Default for InstructionTimer {
         InstructionTimer(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for InstructionTimer {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("InstructionTimer")
@@ -479,6 +486,7 @@ impl Default for Persistent {
         Persistent(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Persistent {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Persistent")
@@ -516,6 +524,7 @@ impl Default for Reload {
         Reload(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Reload {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Reload")
@@ -553,6 +562,7 @@ impl Default for Restart {
         Restart(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Restart {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Restart")
@@ -590,6 +600,7 @@ impl Default for SecureCounter {
         SecureCounter(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecureCounter {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecureCounter")
@@ -627,6 +638,7 @@ impl Default for Start {
         Start(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Start {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Start").field("strt", &self.strt()).finish()
@@ -698,6 +710,7 @@ impl Default for Status {
         Status(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Status {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Status")
@@ -769,6 +782,7 @@ impl Default for Status2 {
         Status2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Status2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Status2")
@@ -814,6 +828,7 @@ impl Default for Stop {
         Stop(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Stop {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Stop").field("stp", &self.stp()).finish()
@@ -849,6 +864,7 @@ impl Default for Sub {
         Sub(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sub {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sub").field("s0b", &self.s0b()).finish()
@@ -884,6 +900,7 @@ impl Default for Sub1 {
         Sub1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sub1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sub1").field("s1b", &self.s1b()).finish()
@@ -919,6 +936,7 @@ impl Default for Sub16 {
         Sub16(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sub16 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sub16").field("sb16", &self.sb16()).finish()
@@ -954,6 +972,7 @@ impl Default for Sub256 {
         Sub256(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sub256 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sub256")

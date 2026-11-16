@@ -106,6 +106,7 @@ impl Default for Cr {
         Cr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cr")
@@ -161,6 +162,7 @@ impl Default for CtxCtr {
         CtxCtr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CtxCtr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CtxCtr").field("ctr", &self.ctr()).finish()
@@ -196,6 +198,7 @@ impl Default for CtxKey {
         CtxKey(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CtxKey {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CtxKey").field("key", &self.key()).finish()
@@ -231,6 +234,7 @@ impl Default for CtxRgdW0 {
         CtxRgdW0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CtxRgdW0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CtxRgdW0")
@@ -304,6 +308,7 @@ impl Default for CtxRgdW1 {
         CtxRgdW1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CtxRgdW1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CtxRgdW1")
@@ -543,6 +548,7 @@ impl Default for Sr {
         Sr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sr")

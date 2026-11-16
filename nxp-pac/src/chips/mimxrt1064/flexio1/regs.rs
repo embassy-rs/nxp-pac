@@ -70,6 +70,7 @@ impl Default for Ctrl {
         Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl")
@@ -155,6 +156,7 @@ impl Default for Param {
         Param(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Param {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Param")
@@ -202,6 +204,7 @@ impl Default for Pin {
         Pin(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pin {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pin").field("pdi", &self.pdi()).finish()
@@ -237,6 +240,7 @@ impl Default for Shiftbuf {
         Shiftbuf(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Shiftbuf {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Shiftbuf")
@@ -274,6 +278,7 @@ impl Default for Shiftbufbbs {
         Shiftbufbbs(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Shiftbufbbs {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Shiftbufbbs")
@@ -315,6 +320,7 @@ impl Default for Shiftbufbis {
         Shiftbufbis(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Shiftbufbis {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Shiftbufbis")
@@ -356,6 +362,7 @@ impl Default for Shiftbufbys {
         Shiftbufbys(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Shiftbufbys {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Shiftbufbys")
@@ -397,6 +404,7 @@ impl Default for Shiftbufhws {
         Shiftbufhws(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Shiftbufhws {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Shiftbufhws")
@@ -438,6 +446,7 @@ impl Default for Shiftbufnbs {
         Shiftbufnbs(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Shiftbufnbs {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Shiftbufnbs")
@@ -479,6 +488,7 @@ impl Default for Shiftbufnis {
         Shiftbufnis(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Shiftbufnis {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Shiftbufnis")
@@ -556,6 +566,7 @@ impl Default for Shiftcfg {
         Shiftcfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Shiftcfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Shiftcfg")
@@ -663,6 +674,7 @@ impl Default for Shiftctl {
         Shiftctl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Shiftctl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Shiftctl")
@@ -714,6 +726,7 @@ impl Default for Shifteien {
         Shifteien(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Shifteien {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Shifteien")
@@ -751,6 +764,7 @@ impl Default for Shifterr {
         Shifterr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Shifterr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Shifterr")
@@ -788,6 +802,7 @@ impl Default for Shiftsden {
         Shiftsden(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Shiftsden {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Shiftsden")
@@ -825,6 +840,7 @@ impl Default for Shiftsien {
         Shiftsien(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Shiftsien {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Shiftsien")
@@ -862,6 +878,7 @@ impl Default for Shiftstat {
         Shiftstat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Shiftstat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Shiftstat")
@@ -899,6 +916,7 @@ impl Default for Shiftstate {
         Shiftstate(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Shiftstate {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Shiftstate")
@@ -1008,6 +1026,7 @@ impl Default for Timcfg {
         Timcfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Timcfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Timcfg")
@@ -1061,6 +1080,7 @@ impl Default for Timcmp {
         Timcmp(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Timcmp {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Timcmp").field("cmp", &self.cmp()).finish()
@@ -1168,6 +1188,7 @@ impl Default for Timctl {
         Timctl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Timctl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Timctl")
@@ -1221,6 +1242,7 @@ impl Default for Timien {
         Timien(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Timien {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Timien")
@@ -1258,6 +1280,7 @@ impl Default for Timstat {
         Timstat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Timstat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Timstat").field("tsf", &self.tsf()).finish()
@@ -1317,6 +1340,7 @@ impl Default for Verid {
         Verid(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Verid {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Verid")

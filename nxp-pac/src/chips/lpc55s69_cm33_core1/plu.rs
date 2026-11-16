@@ -1,4 +1,4 @@
-#[doc = "no description available."]
+#[doc = "Array of registers: LUT_INP_MUX%s."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lut {
     ptr: *mut u8,
@@ -24,7 +24,7 @@ impl Lut {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize + n * 4usize) as _) }
     }
 }
-#[doc = "LPC80X Programmable Logic Unit (PLU)."]
+#[doc = "Programmable Logic Unit (PLU)."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Plu {
     ptr: *mut u8,
@@ -40,7 +40,7 @@ impl Plu {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "no description available."]
+    #[doc = "Array of registers: LUT_INP_MUX%s."]
     #[inline(always)]
     pub const fn lut(self, n: usize) -> Lut {
         assert!(n < 26usize);

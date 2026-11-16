@@ -202,6 +202,7 @@ impl Default for Ctrl {
         Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl")
@@ -417,6 +418,7 @@ impl Default for Ctrl2 {
         Ctrl2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl2")
@@ -494,6 +496,7 @@ impl Default for Ctrl3 {
         Ctrl3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl3")
@@ -561,6 +564,7 @@ impl Default for Filt {
         Filt(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Filt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Filt")
@@ -690,6 +694,7 @@ impl Default for Imr {
         Imr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Imr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Imr")
@@ -745,6 +750,7 @@ impl Default for Lastedge {
         Lastedge(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lastedge {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lastedge")
@@ -782,6 +788,7 @@ impl Default for Lastedgeh {
         Lastedgeh(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lastedgeh {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lastedgeh")
@@ -819,6 +826,7 @@ impl Default for Lcomp {
         Lcomp(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lcomp {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lcomp").field("comp", &self.comp()).finish()
@@ -854,6 +862,7 @@ impl Default for Linit {
         Linit(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Linit {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Linit").field("init", &self.init()).finish()
@@ -889,6 +898,7 @@ impl Default for Lmod {
         Lmod(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lmod {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lmod").field("mod_", &self.mod_()).finish()
@@ -924,6 +934,7 @@ impl Default for Lpos {
         Lpos(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpos {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpos").field("pos", &self.pos()).finish()
@@ -959,6 +970,7 @@ impl Default for Lposh {
         Lposh(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lposh {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lposh").field("posh", &self.posh()).finish()
@@ -994,6 +1006,7 @@ impl Default for Posd {
         Posd(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Posd {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Posd").field("posd", &self.posd()).finish()
@@ -1029,6 +1042,7 @@ impl Default for Posdh {
         Posdh(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Posdh {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Posdh")
@@ -1066,6 +1080,7 @@ impl Default for Posdper {
         Posdper(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Posdper {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Posdper")
@@ -1103,6 +1118,7 @@ impl Default for Posdperbfr {
         Posdperbfr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Posdperbfr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Posdperbfr")
@@ -1144,6 +1160,7 @@ impl Default for Posdperh {
         Posdperh(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Posdperh {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Posdperh")
@@ -1181,6 +1198,7 @@ impl Default for Rev {
         Rev(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Rev {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Rev").field("rev", &self.rev()).finish()
@@ -1216,6 +1234,7 @@ impl Default for Revh {
         Revh(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Revh {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Revh").field("revh", &self.revh()).finish()
@@ -1299,6 +1318,7 @@ impl Default for Tst {
         Tst(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tst {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tst")
@@ -1348,6 +1368,7 @@ impl Default for Ucomp {
         Ucomp(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ucomp {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ucomp").field("comp", &self.comp()).finish()
@@ -1383,6 +1404,7 @@ impl Default for Uinit {
         Uinit(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Uinit {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Uinit").field("init", &self.init()).finish()
@@ -1418,6 +1440,7 @@ impl Default for Umod {
         Umod(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Umod {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Umod").field("mod_", &self.mod_()).finish()
@@ -1453,6 +1476,7 @@ impl Default for Upos {
         Upos(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Upos {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Upos").field("pos", &self.pos()).finish()
@@ -1488,6 +1512,7 @@ impl Default for Uposh {
         Uposh(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Uposh {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Uposh").field("posh", &self.posh()).finish()
@@ -1523,6 +1548,7 @@ impl Default for Wtr {
         Wtr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Wtr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Wtr").field("wdog", &self.wdog()).finish()

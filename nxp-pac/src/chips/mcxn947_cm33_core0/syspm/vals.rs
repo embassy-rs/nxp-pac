@@ -1,14 +1,13 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmode {
     #[doc = "Counted in both User and Privileged modes."]
     UserAndPriv = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "Counted only in User mode."]
-    UserOnly = 0x02,
-    #[doc = "Counted only in Privileged mode."]
-    PrivOnly = 0x03,
+    _RESERVED_2 = 0x02,
+    _RESERVED_3 = 0x03,
 }
 impl Cmode {
     #[inline(always)]
@@ -33,7 +32,8 @@ impl From<Cmode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rectr1 {
     #[doc = "Run normally."]
@@ -64,7 +64,8 @@ impl From<Rectr1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rectr2 {
     #[doc = "Run normally."]
@@ -95,7 +96,8 @@ impl From<Rectr2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rectr3 {
     #[doc = "Run normally."]
@@ -126,7 +128,8 @@ impl From<Rectr3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ssc {
     #[doc = "Idle or no-op."]

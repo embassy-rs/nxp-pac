@@ -118,6 +118,7 @@ impl Default for Wcr {
         Wcr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Wcr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Wcr")
@@ -199,6 +200,7 @@ impl Default for Wicr {
         Wicr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Wicr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Wicr")
@@ -244,6 +246,7 @@ impl Default for Wmcr {
         Wmcr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Wmcr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Wmcr").field("pde", &self.pde()).finish()
@@ -303,6 +306,7 @@ impl Default for Wrsr {
         Wrsr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Wrsr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Wrsr")
@@ -348,6 +352,7 @@ impl Default for Wsr {
         Wsr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Wsr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Wsr").field("wsr", &self.wsr()).finish()

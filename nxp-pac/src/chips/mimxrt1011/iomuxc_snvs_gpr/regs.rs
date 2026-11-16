@@ -94,6 +94,7 @@ impl Default for Gpr3 {
         Gpr3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr3")

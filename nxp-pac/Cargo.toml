@@ -35,7 +35,7 @@ defmt = { version = "0.3.10", optional = true }
 [build-dependencies]
 cfg_aliases = "0.2.1"
 anyhow = { version = "1.0.98", optional = true }
-chiptool = { git = "https://github.com/embassy-rs/chiptool.git", rev = "e8902440a6eee471a9b14b38ee1cd2e526d2c495", optional = true }
+chiptool = { git = "https://github.com/embassy-rs/chiptool.git", rev = "d54bc66fe9817d2f8d2f8db2505f52716de1d339", optional = true }
 indexmap = { version = "2.13.0", features = ["serde"], optional = true }
 inflections = { version = "1.1", optional = true }
 proc-macro2 = { version = "1.0.95", optional = true }
@@ -53,6 +53,7 @@ rt = ["cortex-m-rt/device"]
 pac = []
 # Enable explicitly when formatted register/enum output is needed.
 defmt = ["dep:defmt"]
+debug = []
 
 metadata = []
 

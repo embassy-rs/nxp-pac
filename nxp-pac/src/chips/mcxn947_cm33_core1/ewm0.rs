@@ -1,4 +1,4 @@
-#[doc = "EWM."]
+#[doc = "External Watchdog Monitor."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ewm0 {
     ptr: *mut u8,

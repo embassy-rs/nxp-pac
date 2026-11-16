@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadOnoffDse {
     #[doc = "HI-Z."]
@@ -42,7 +43,8 @@ impl From<SwPadCtlPadOnoffDse> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadOnoffHys {
     #[doc = "Hysteresis Disabled (CMOS input)."]
@@ -73,7 +75,8 @@ impl From<SwPadCtlPadOnoffHys> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadOnoffOde {
     #[doc = "Open Drain Disabled (Output is CMOS)."]
@@ -104,7 +107,8 @@ impl From<SwPadCtlPadOnoffOde> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadOnoffPke {
     #[doc = "Pull/Keeper Disabled."]
@@ -135,7 +139,8 @@ impl From<SwPadCtlPadOnoffPke> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadOnoffPue {
     #[doc = "Keep the previous output value when the output driver is disabled."]
@@ -166,7 +171,8 @@ impl From<SwPadCtlPadOnoffPue> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadOnoffPus {
     #[doc = "100K Ohm Pull Down."]
@@ -201,7 +207,8 @@ impl From<SwPadCtlPadOnoffPus> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadOnoffSpeed {
     _RESERVED_0 = 0x0,
@@ -233,7 +240,8 @@ impl From<SwPadCtlPadOnoffSpeed> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadOnoffSre {
     #[doc = "Slow Slew Rate."]
@@ -264,7 +272,8 @@ impl From<SwPadCtlPadOnoffSre> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadPmicOnReqDse {
     #[doc = "HI-Z."]
@@ -307,7 +316,8 @@ impl From<SwPadCtlPadPmicOnReqDse> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadPmicOnReqHys {
     #[doc = "Hysteresis Disabled (CMOS input)."]
@@ -338,7 +348,8 @@ impl From<SwPadCtlPadPmicOnReqHys> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadPmicOnReqOde {
     #[doc = "Open Drain Disabled (Output is CMOS)."]
@@ -369,7 +380,8 @@ impl From<SwPadCtlPadPmicOnReqOde> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadPmicOnReqPke {
     #[doc = "Pull/Keeper Disabled."]
@@ -400,7 +412,8 @@ impl From<SwPadCtlPadPmicOnReqPke> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadPmicOnReqPue {
     #[doc = "Keep the previous output value when the output driver is disabled."]
@@ -431,7 +444,8 @@ impl From<SwPadCtlPadPmicOnReqPue> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadPmicOnReqPus {
     #[doc = "100K Ohm Pull Down."]
@@ -466,7 +480,8 @@ impl From<SwPadCtlPadPmicOnReqPus> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadPmicOnReqSpeed {
     _RESERVED_0 = 0x0,
@@ -498,7 +513,8 @@ impl From<SwPadCtlPadPmicOnReqSpeed> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadPmicOnReqSre {
     #[doc = "Slow Slew Rate."]
@@ -529,7 +545,8 @@ impl From<SwPadCtlPadPmicOnReqSre> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadPmicStbyReqDse {
     #[doc = "HI-Z."]
@@ -572,7 +589,8 @@ impl From<SwPadCtlPadPmicStbyReqDse> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadPmicStbyReqHys {
     #[doc = "Hysteresis Disabled (CMOS input)."]
@@ -603,7 +621,8 @@ impl From<SwPadCtlPadPmicStbyReqHys> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadPmicStbyReqOde {
     #[doc = "Open Drain Disabled (Output is CMOS)."]
@@ -634,7 +653,8 @@ impl From<SwPadCtlPadPmicStbyReqOde> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadPmicStbyReqPke {
     #[doc = "Pull/Keeper Disabled."]
@@ -665,7 +685,8 @@ impl From<SwPadCtlPadPmicStbyReqPke> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadPmicStbyReqPue {
     #[doc = "Keep the previous output value when the output driver is disabled."]
@@ -696,7 +717,8 @@ impl From<SwPadCtlPadPmicStbyReqPue> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadPmicStbyReqPus {
     #[doc = "100K Ohm Pull Down."]
@@ -731,7 +753,8 @@ impl From<SwPadCtlPadPmicStbyReqPus> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadPmicStbyReqSpeed {
     _RESERVED_0 = 0x0,
@@ -763,7 +786,8 @@ impl From<SwPadCtlPadPmicStbyReqSpeed> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadPmicStbyReqSre {
     #[doc = "Slow Slew Rate."]
@@ -794,7 +818,8 @@ impl From<SwPadCtlPadPmicStbyReqSre> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadPorBDse {
     #[doc = "HI-Z."]
@@ -837,7 +862,8 @@ impl From<SwPadCtlPadPorBDse> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadPorBHys {
     #[doc = "Hysteresis Disabled (CMOS input)."]
@@ -868,7 +894,8 @@ impl From<SwPadCtlPadPorBHys> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadPorBOde {
     #[doc = "Open Drain Disabled (Output is CMOS)."]
@@ -899,7 +926,8 @@ impl From<SwPadCtlPadPorBOde> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadPorBPke {
     #[doc = "Pull/Keeper Disabled."]
@@ -930,7 +958,8 @@ impl From<SwPadCtlPadPorBPke> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadPorBPue {
     #[doc = "Keep the previous output value when the output driver is disabled."]
@@ -961,7 +990,8 @@ impl From<SwPadCtlPadPorBPue> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadPorBPus {
     #[doc = "100K Ohm Pull Down."]
@@ -996,7 +1026,8 @@ impl From<SwPadCtlPadPorBPus> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadPorBSpeed {
     _RESERVED_0 = 0x0,
@@ -1028,7 +1059,8 @@ impl From<SwPadCtlPadPorBSpeed> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadPorBSre {
     #[doc = "Slow Slew Rate."]
@@ -1059,7 +1091,8 @@ impl From<SwPadCtlPadPorBSre> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadTestModeDse {
     #[doc = "HI-Z."]
@@ -1102,7 +1135,8 @@ impl From<SwPadCtlPadTestModeDse> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadTestModeHys {
     #[doc = "Hysteresis Disabled (CMOS input)."]
@@ -1133,7 +1167,8 @@ impl From<SwPadCtlPadTestModeHys> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadTestModeOde {
     #[doc = "Open Drain Disabled (Output is CMOS)."]
@@ -1164,7 +1199,8 @@ impl From<SwPadCtlPadTestModeOde> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadTestModePke {
     #[doc = "Pull/Keeper Disabled."]
@@ -1195,7 +1231,8 @@ impl From<SwPadCtlPadTestModePke> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadTestModePue {
     #[doc = "Keep the previous output value when the output driver is disabled."]
@@ -1226,7 +1263,8 @@ impl From<SwPadCtlPadTestModePue> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadTestModePus {
     #[doc = "100K Ohm Pull Down."]
@@ -1261,7 +1299,8 @@ impl From<SwPadCtlPadTestModePus> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadTestModeSpeed {
     _RESERVED_0 = 0x0,
@@ -1293,7 +1332,8 @@ impl From<SwPadCtlPadTestModeSpeed> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadTestModeSre {
     #[doc = "Slow Slew Rate."]
@@ -1324,7 +1364,8 @@ impl From<SwPadCtlPadTestModeSre> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadWakeupDse {
     #[doc = "HI-Z."]
@@ -1367,7 +1408,8 @@ impl From<SwPadCtlPadWakeupDse> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadWakeupHys {
     #[doc = "Hysteresis Disabled (CMOS input)."]
@@ -1398,7 +1440,8 @@ impl From<SwPadCtlPadWakeupHys> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadWakeupOde {
     #[doc = "Open Drain Disabled (Output is CMOS)."]
@@ -1429,7 +1472,8 @@ impl From<SwPadCtlPadWakeupOde> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadWakeupPke {
     #[doc = "Pull/Keeper Disabled."]
@@ -1460,7 +1504,8 @@ impl From<SwPadCtlPadWakeupPke> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadWakeupPue {
     #[doc = "Keep the previous output value when the output driver is disabled."]
@@ -1491,7 +1536,8 @@ impl From<SwPadCtlPadWakeupPue> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadWakeupPus {
     #[doc = "100K Ohm Pull Down."]
@@ -1526,7 +1572,8 @@ impl From<SwPadCtlPadWakeupPus> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadWakeupSpeed {
     _RESERVED_0 = 0x0,
@@ -1558,7 +1605,8 @@ impl From<SwPadCtlPadWakeupSpeed> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwPadCtlPadWakeupSre {
     #[doc = "Slow Slew Rate."]

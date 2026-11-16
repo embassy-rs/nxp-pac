@@ -34,6 +34,7 @@ impl Default for Crcr {
         Crcr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Crcr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Crcr")
@@ -245,6 +246,7 @@ impl Default for Ctrl1 {
         Ctrl1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl1")
@@ -374,6 +376,7 @@ impl Default for Ctrl2 {
         Ctrl2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl2")
@@ -437,6 +440,7 @@ impl Default for Dbg1 {
         Dbg1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dbg1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dbg1")
@@ -516,6 +520,7 @@ impl Default for Dbg2 {
         Dbg2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dbg2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dbg2")
@@ -575,6 +580,7 @@ impl Default for Ecr {
         Ecr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ecr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ecr")
@@ -822,6 +828,7 @@ impl Default for Esr1 {
         Esr1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Esr1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Esr1")
@@ -921,6 +928,7 @@ impl Default for Esr2 {
         Esr2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Esr2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Esr2")
@@ -966,6 +974,7 @@ impl Default for Gfwr {
         Gfwr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gfwr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gfwr").field("gfwr", &self.gfwr()).finish()
@@ -1050,6 +1059,7 @@ impl Default for Iflag1 {
         Iflag1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Iflag1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Iflag1")
@@ -1100,6 +1110,7 @@ impl Default for Iflag2 {
         Iflag2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Iflag2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Iflag2")
@@ -1138,6 +1149,7 @@ impl Default for Imask1 {
         Imask1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Imask1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Imask1")
@@ -1176,6 +1188,7 @@ impl Default for Imask2 {
         Imask2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Imask2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Imask2")
@@ -1429,6 +1442,7 @@ impl Default for Mcr {
         Mcr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mcr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mcr")
@@ -1507,6 +1521,7 @@ impl Default for Rx14mask {
         Rx14mask(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Rx14mask {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Rx14mask")
@@ -1545,6 +1560,7 @@ impl Default for Rx15mask {
         Rx15mask(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Rx15mask {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Rx15mask")
@@ -1583,6 +1599,7 @@ impl Default for Rxfgmask {
         Rxfgmask(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Rxfgmask {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Rxfgmask")
@@ -1620,6 +1637,7 @@ impl Default for Rxfir {
         Rxfir(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Rxfir {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Rxfir")
@@ -1658,6 +1676,7 @@ impl Default for Rximr {
         Rximr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Rximr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Rximr").field("mi", &self.mi()).finish()
@@ -1694,6 +1713,7 @@ impl Default for Rxmgmask {
         Rxmgmask(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Rxmgmask {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Rxmgmask").field("mg", &self.mg()).finish()
@@ -1729,6 +1749,7 @@ impl Default for Timer {
         Timer(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Timer {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Timer")

@@ -1,34 +1,58 @@
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Mprot0 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Mprot0(u8);
+impl Mprot0 {
     #[doc = "Accesses from this master are forced to user-mode (ips_supervisor_access is forced to zero) regardless of the hprot\\[1\\] access attribute."]
-    Mpl0 = 0x0,
+    pub const Mpl0: Self = Self(0x0);
+    #[doc = "This master is not trusted for read accesses."]
+    pub const Mtr0: Self = Self(0x0);
+    #[doc = "This master is not trusted for write accesses."]
+    pub const Mtw0: Self = Self(0x0);
     #[doc = "Accesses from this master are not forced to user-mode. The hprot\\[1\\] access attribute is used directly to determine ips_supervisor_access."]
-    Mpl1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Mpl1: Self = Self(0x01);
+    #[doc = "This master is trusted for write accesses."]
+    pub const Mtw1: Self = Self(0x02);
+    #[doc = "This master is trusted for read accesses."]
+    pub const Mtr1: Self = Self(0x04);
+    #[doc = "Write accesses from this master are allowed to be buffered."]
+    pub const Mbw1: Self = Self(0x08);
 }
 impl Mprot0 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Mprot0 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Mprot0 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Mpl0"),
+            0x0 => f.write_str("Mtr0"),
+            0x0 => f.write_str("Mtw0"),
+            0x01 => f.write_str("Mpl1"),
+            0x02 => f.write_str("Mtw1"),
+            0x04 => f.write_str("Mtr1"),
+            0x08 => f.write_str("Mbw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Mprot0 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Mpl0"),
+            0x0 => defmt::write!(f, "Mtr0"),
+            0x0 => defmt::write!(f, "Mtw0"),
+            0x01 => defmt::write!(f, "Mpl1"),
+            0x02 => defmt::write!(f, "Mtw1"),
+            0x04 => defmt::write!(f, "Mtr1"),
+            0x08 => defmt::write!(f, "Mbw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Mprot0 {
@@ -43,37 +67,61 @@ impl From<Mprot0> for u8 {
         Mprot0::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Mprot1 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Mprot1(u8);
+impl Mprot1 {
     #[doc = "Accesses from this master are forced to user-mode (ips_supervisor_access is forced to zero) regardless of the hprot\\[1\\] access attribute."]
-    Mpl0 = 0x0,
+    pub const Mpl0: Self = Self(0x0);
+    #[doc = "This master is not trusted for read accesses."]
+    pub const Mtr0: Self = Self(0x0);
+    #[doc = "This master is not trusted for write accesses."]
+    pub const Mtw0: Self = Self(0x0);
     #[doc = "Accesses from this master are not forced to user-mode. The hprot\\[1\\] access attribute is used directly to determine ips_supervisor_access."]
-    Mpl1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Mpl1: Self = Self(0x01);
+    #[doc = "This master is trusted for write accesses."]
+    pub const Mtw1: Self = Self(0x02);
+    #[doc = "This master is trusted for read accesses."]
+    pub const Mtr1: Self = Self(0x04);
+    #[doc = "Write accesses from this master are allowed to be buffered."]
+    pub const Mbw1: Self = Self(0x08);
 }
 impl Mprot1 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Mprot1 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Mprot1 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Mpl0"),
+            0x0 => f.write_str("Mtr0"),
+            0x0 => f.write_str("Mtw0"),
+            0x01 => f.write_str("Mpl1"),
+            0x02 => f.write_str("Mtw1"),
+            0x04 => f.write_str("Mtr1"),
+            0x08 => f.write_str("Mbw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Mprot1 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Mpl0"),
+            0x0 => defmt::write!(f, "Mtr0"),
+            0x0 => defmt::write!(f, "Mtw0"),
+            0x01 => defmt::write!(f, "Mpl1"),
+            0x02 => defmt::write!(f, "Mtw1"),
+            0x04 => defmt::write!(f, "Mtr1"),
+            0x08 => defmt::write!(f, "Mbw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Mprot1 {
@@ -88,37 +136,61 @@ impl From<Mprot1> for u8 {
         Mprot1::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Mprot2 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Mprot2(u8);
+impl Mprot2 {
     #[doc = "Accesses from this master are forced to user-mode (ips_supervisor_access is forced to zero) regardless of the hprot\\[1\\] access attribute."]
-    Mpl0 = 0x0,
+    pub const Mpl0: Self = Self(0x0);
+    #[doc = "This master is not trusted for read accesses."]
+    pub const Mtr0: Self = Self(0x0);
+    #[doc = "This master is not trusted for write accesses."]
+    pub const Mtw0: Self = Self(0x0);
     #[doc = "Accesses from this master are not forced to user-mode. The hprot\\[1\\] access attribute is used directly to determine ips_supervisor_access."]
-    Mpl1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Mpl1: Self = Self(0x01);
+    #[doc = "This master is trusted for write accesses."]
+    pub const Mtw1: Self = Self(0x02);
+    #[doc = "This master is trusted for read accesses."]
+    pub const Mtr1: Self = Self(0x04);
+    #[doc = "Write accesses from this master are allowed to be buffered."]
+    pub const Mbw1: Self = Self(0x08);
 }
 impl Mprot2 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Mprot2 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Mprot2 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Mpl0"),
+            0x0 => f.write_str("Mtr0"),
+            0x0 => f.write_str("Mtw0"),
+            0x01 => f.write_str("Mpl1"),
+            0x02 => f.write_str("Mtw1"),
+            0x04 => f.write_str("Mtr1"),
+            0x08 => f.write_str("Mbw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Mprot2 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Mpl0"),
+            0x0 => defmt::write!(f, "Mtr0"),
+            0x0 => defmt::write!(f, "Mtw0"),
+            0x01 => defmt::write!(f, "Mpl1"),
+            0x02 => defmt::write!(f, "Mtw1"),
+            0x04 => defmt::write!(f, "Mtr1"),
+            0x08 => defmt::write!(f, "Mbw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Mprot2 {
@@ -133,37 +205,61 @@ impl From<Mprot2> for u8 {
         Mprot2::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Mprot3 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Mprot3(u8);
+impl Mprot3 {
     #[doc = "Accesses from this master are forced to user-mode (ips_supervisor_access is forced to zero) regardless of the hprot\\[1\\] access attribute."]
-    Mpl0 = 0x0,
+    pub const Mpl0: Self = Self(0x0);
+    #[doc = "This master is not trusted for read accesses."]
+    pub const Mtr0: Self = Self(0x0);
+    #[doc = "This master is not trusted for write accesses."]
+    pub const Mtw0: Self = Self(0x0);
     #[doc = "Accesses from this master are not forced to user-mode. The hprot\\[1\\] access attribute is used directly to determine ips_supervisor_access."]
-    Mpl1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Mpl1: Self = Self(0x01);
+    #[doc = "This master is trusted for write accesses."]
+    pub const Mtw1: Self = Self(0x02);
+    #[doc = "This master is trusted for read accesses."]
+    pub const Mtr1: Self = Self(0x04);
+    #[doc = "Write accesses from this master are allowed to be buffered."]
+    pub const Mbw1: Self = Self(0x08);
 }
 impl Mprot3 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Mprot3 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Mprot3 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Mpl0"),
+            0x0 => f.write_str("Mtr0"),
+            0x0 => f.write_str("Mtw0"),
+            0x01 => f.write_str("Mpl1"),
+            0x02 => f.write_str("Mtw1"),
+            0x04 => f.write_str("Mtr1"),
+            0x08 => f.write_str("Mbw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Mprot3 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Mpl0"),
+            0x0 => defmt::write!(f, "Mtr0"),
+            0x0 => defmt::write!(f, "Mtw0"),
+            0x01 => defmt::write!(f, "Mpl1"),
+            0x02 => defmt::write!(f, "Mtw1"),
+            0x04 => defmt::write!(f, "Mtr1"),
+            0x08 => defmt::write!(f, "Mbw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Mprot3 {
@@ -178,37 +274,61 @@ impl From<Mprot3> for u8 {
         Mprot3::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac0 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac0(u8);
+impl Opac0 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac0 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac0 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac0 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac0 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac0 {
@@ -223,37 +343,61 @@ impl From<Opac0> for u8 {
         Opac0::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac1 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac1(u8);
+impl Opac1 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac1 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac1 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac1 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac1 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac1 {
@@ -268,37 +412,61 @@ impl From<Opac1> for u8 {
         Opac1::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac10 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac10(u8);
+impl Opac10 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac10 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac10 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac10 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac10 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac10 {
@@ -313,37 +481,61 @@ impl From<Opac10> for u8 {
         Opac10::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac11 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac11(u8);
+impl Opac11 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac11 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac11 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac11 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac11 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac11 {
@@ -358,37 +550,61 @@ impl From<Opac11> for u8 {
         Opac11::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac12 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac12(u8);
+impl Opac12 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac12 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac12 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac12 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac12 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac12 {
@@ -403,37 +619,61 @@ impl From<Opac12> for u8 {
         Opac12::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac13 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac13(u8);
+impl Opac13 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac13 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac13 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac13 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac13 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac13 {
@@ -448,37 +688,61 @@ impl From<Opac13> for u8 {
         Opac13::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac14 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac14(u8);
+impl Opac14 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac14 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac14 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac14 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac14 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac14 {
@@ -493,37 +757,61 @@ impl From<Opac14> for u8 {
         Opac14::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac15 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac15(u8);
+impl Opac15 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac15 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac15 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac15 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac15 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac15 {
@@ -538,37 +826,61 @@ impl From<Opac15> for u8 {
         Opac15::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac16 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac16(u8);
+impl Opac16 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac16 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac16 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac16 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac16 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac16 {
@@ -583,37 +895,61 @@ impl From<Opac16> for u8 {
         Opac16::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac17 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac17(u8);
+impl Opac17 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac17 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac17 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac17 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac17 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac17 {
@@ -628,37 +964,61 @@ impl From<Opac17> for u8 {
         Opac17::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac18 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac18(u8);
+impl Opac18 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac18 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac18 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac18 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac18 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac18 {
@@ -673,37 +1033,61 @@ impl From<Opac18> for u8 {
         Opac18::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac19 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac19(u8);
+impl Opac19 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac19 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac19 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac19 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac19 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac19 {
@@ -718,37 +1102,61 @@ impl From<Opac19> for u8 {
         Opac19::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac2 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac2(u8);
+impl Opac2 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac2 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac2 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac2 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac2 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac2 {
@@ -763,37 +1171,61 @@ impl From<Opac2> for u8 {
         Opac2::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac20 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac20(u8);
+impl Opac20 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac20 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac20 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac20 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac20 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac20 {
@@ -808,37 +1240,61 @@ impl From<Opac20> for u8 {
         Opac20::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac21 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac21(u8);
+impl Opac21 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac21 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac21 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac21 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac21 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac21 {
@@ -853,37 +1309,61 @@ impl From<Opac21> for u8 {
         Opac21::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac22 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac22(u8);
+impl Opac22 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac22 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac22 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac22 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac22 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac22 {
@@ -898,37 +1378,61 @@ impl From<Opac22> for u8 {
         Opac22::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac23 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac23(u8);
+impl Opac23 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac23 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac23 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac23 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac23 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac23 {
@@ -943,37 +1447,61 @@ impl From<Opac23> for u8 {
         Opac23::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac24 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac24(u8);
+impl Opac24 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac24 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac24 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac24 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac24 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac24 {
@@ -988,37 +1516,61 @@ impl From<Opac24> for u8 {
         Opac24::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac25 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac25(u8);
+impl Opac25 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac25 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac25 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac25 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac25 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac25 {
@@ -1033,37 +1585,61 @@ impl From<Opac25> for u8 {
         Opac25::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac26 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac26(u8);
+impl Opac26 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac26 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac26 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac26 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac26 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac26 {
@@ -1078,37 +1654,61 @@ impl From<Opac26> for u8 {
         Opac26::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac27 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac27(u8);
+impl Opac27 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac27 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac27 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac27 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac27 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac27 {
@@ -1123,37 +1723,61 @@ impl From<Opac27> for u8 {
         Opac27::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac28 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac28(u8);
+impl Opac28 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac28 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac28 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac28 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac28 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac28 {
@@ -1168,37 +1792,61 @@ impl From<Opac28> for u8 {
         Opac28::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac29 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac29(u8);
+impl Opac29 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac29 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac29 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac29 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac29 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac29 {
@@ -1213,37 +1861,61 @@ impl From<Opac29> for u8 {
         Opac29::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac3 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac3(u8);
+impl Opac3 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac3 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac3 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac3 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac3 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac3 {
@@ -1258,37 +1930,61 @@ impl From<Opac3> for u8 {
         Opac3::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac30 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac30(u8);
+impl Opac30 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac30 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac30 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac30 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac30 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac30 {
@@ -1303,37 +1999,61 @@ impl From<Opac30> for u8 {
         Opac30::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac31 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac31(u8);
+impl Opac31 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac31 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac31 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac31 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac31 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac31 {
@@ -1348,37 +2068,61 @@ impl From<Opac31> for u8 {
         Opac31::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac32 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac32(u8);
+impl Opac32 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac32 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac32 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac32 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac32 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac32 {
@@ -1393,37 +2137,61 @@ impl From<Opac32> for u8 {
         Opac32::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac33 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac33(u8);
+impl Opac33 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac33 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac33 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac33 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac33 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac33 {
@@ -1438,37 +2206,61 @@ impl From<Opac33> for u8 {
         Opac33::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac4 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac4(u8);
+impl Opac4 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac4 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac4 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac4 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac4 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac4 {
@@ -1483,37 +2275,61 @@ impl From<Opac4> for u8 {
         Opac4::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac5 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac5(u8);
+impl Opac5 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac5 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac5 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac5 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac5 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac5 {
@@ -1528,37 +2344,61 @@ impl From<Opac5> for u8 {
         Opac5::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac6 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac6(u8);
+impl Opac6 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac6 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac6 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac6 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac6 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac6 {
@@ -1573,37 +2413,61 @@ impl From<Opac6> for u8 {
         Opac6::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac7 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac7(u8);
+impl Opac7 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac7 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac7 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac7 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac7 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac7 {
@@ -1618,37 +2482,61 @@ impl From<Opac7> for u8 {
         Opac7::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac8 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac8(u8);
+impl Opac8 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac8 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac8 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac8 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac8 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac8 {
@@ -1663,37 +2551,61 @@ impl From<Opac8> for u8 {
         Opac8::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Opac9 {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Opac9(u8);
+impl Opac9 {
+    #[doc = "This peripheral does not require supervisor privilege level for accesses."]
+    pub const Sp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are allowed."]
-    Tp0 = 0x0,
+    pub const Tp0: Self = Self(0x0);
+    #[doc = "This peripheral allows write accesses."]
+    pub const Wp0: Self = Self(0x0);
     #[doc = "Accesses from an untrusted master are not allowed. If an access is attempted by an untrusted master, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
-    Tp1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const Tp1: Self = Self(0x01);
+    #[doc = "This peripheral is write protected. If a write access is attempted, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Wp1: Self = Self(0x02);
+    #[doc = "This peripheral requires supervisor privilege level for accesses. The master privilege level must indicate supervisor via the hprot\\[1\\] access attribute, and the MPROTx\\[MPL\\] control bit for the master must be set. If not, the access is terminated with an error response and no peripheral access is initiated on the IPS bus."]
+    pub const Sp1: Self = Self(0x04);
+    #[doc = "Write accesses to this peripheral are allowed to be buffered by the AIPSTZ."]
+    pub const Bw1: Self = Self(0x08);
 }
 impl Opac9 {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Opac9 {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Opac9 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Sp0"),
+            0x0 => f.write_str("Tp0"),
+            0x0 => f.write_str("Wp0"),
+            0x01 => f.write_str("Tp1"),
+            0x02 => f.write_str("Wp1"),
+            0x04 => f.write_str("Sp1"),
+            0x08 => f.write_str("Bw1"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opac9 {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Sp0"),
+            0x0 => defmt::write!(f, "Tp0"),
+            0x0 => defmt::write!(f, "Wp0"),
+            0x01 => defmt::write!(f, "Tp1"),
+            0x02 => defmt::write!(f, "Wp1"),
+            0x04 => defmt::write!(f, "Sp1"),
+            0x08 => defmt::write!(f, "Bw1"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Opac9 {

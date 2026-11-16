@@ -15,6 +15,7 @@ impl Kcdd {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Kcdd {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -63,6 +64,7 @@ impl Kco {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Kco {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -95,7 +97,8 @@ impl From<Kco> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Kdie {
     #[doc = "No interrupt request is generated when KPKD is set."]
@@ -126,7 +129,8 @@ impl From<Kdie> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Kdsc {
     #[doc = "No effect."]
@@ -157,7 +161,8 @@ impl From<Kdsc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Kpkd {
     #[doc = "No key presses detected."]
@@ -188,7 +193,8 @@ impl From<Kpkd> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Kpkr {
     #[doc = "No key release detected."]
@@ -235,6 +241,7 @@ impl Krdd {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Krdd {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -283,6 +290,7 @@ impl Kre {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Kre {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -315,7 +323,8 @@ impl From<Kre> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Krie {
     #[doc = "No interrupt request is generated when KPKR is set."]
@@ -346,7 +355,8 @@ impl From<Krie> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Krss {
     #[doc = "No effect."]

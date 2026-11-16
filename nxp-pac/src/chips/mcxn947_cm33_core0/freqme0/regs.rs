@@ -34,6 +34,7 @@ impl Default for CtrlR {
         CtrlR(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CtrlR {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CtrlR")
@@ -161,6 +162,7 @@ impl Default for CtrlW {
         CtrlW(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CtrlW {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CtrlW")
@@ -336,6 +338,7 @@ impl Default for Ctrlstat {
         Ctrlstat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrlstat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrlstat")
@@ -397,6 +400,7 @@ impl Default for Max {
         Max(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Max {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Max")
@@ -434,6 +438,7 @@ impl Default for Min {
         Min(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Min {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Min")

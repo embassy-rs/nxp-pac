@@ -178,6 +178,7 @@ impl Default for LowpwrCtrl {
         LowpwrCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for LowpwrCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LowpwrCtrl")
@@ -407,6 +408,7 @@ impl Default for LowpwrCtrlClr {
         LowpwrCtrlClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for LowpwrCtrlClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LowpwrCtrlClr")
@@ -636,6 +638,7 @@ impl Default for LowpwrCtrlSet {
         LowpwrCtrlSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for LowpwrCtrlSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LowpwrCtrlSet")
@@ -865,6 +868,7 @@ impl Default for LowpwrCtrlTog {
         LowpwrCtrlTog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for LowpwrCtrlTog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LowpwrCtrlTog")
@@ -1088,6 +1092,7 @@ impl Default for Misc0 {
         Misc0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Misc0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Misc0")
@@ -1311,6 +1316,7 @@ impl Default for Misc0Clr {
         Misc0Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Misc0Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Misc0Clr")
@@ -1534,6 +1540,7 @@ impl Default for Misc0Set {
         Misc0Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Misc0Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Misc0Set")
@@ -1757,6 +1764,7 @@ impl Default for Misc0Tog {
         Misc0Tog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Misc0Tog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Misc0Tog")
@@ -1908,6 +1916,7 @@ impl Default for OscConfig0 {
         OscConfig0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OscConfig0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OscConfig0")
@@ -2047,6 +2056,7 @@ impl Default for OscConfig0Clr {
         OscConfig0Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OscConfig0Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OscConfig0Clr")
@@ -2186,6 +2196,7 @@ impl Default for OscConfig0Set {
         OscConfig0Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OscConfig0Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OscConfig0Set")
@@ -2325,6 +2336,7 @@ impl Default for OscConfig0Tog {
         OscConfig0Tog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OscConfig0Tog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OscConfig0Tog")
@@ -2392,6 +2404,7 @@ impl Default for OscConfig1 {
         OscConfig1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OscConfig1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OscConfig1")
@@ -2447,6 +2460,7 @@ impl Default for OscConfig1Clr {
         OscConfig1Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OscConfig1Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OscConfig1Clr")
@@ -2502,6 +2516,7 @@ impl Default for OscConfig1Set {
         OscConfig1Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OscConfig1Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OscConfig1Set")
@@ -2557,6 +2572,7 @@ impl Default for OscConfig1Tog {
         OscConfig1Tog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OscConfig1Tog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OscConfig1Tog")
@@ -2636,6 +2652,7 @@ impl Default for OscConfig2 {
         OscConfig2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OscConfig2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OscConfig2")
@@ -2719,6 +2736,7 @@ impl Default for OscConfig2Clr {
         OscConfig2Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OscConfig2Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OscConfig2Clr")
@@ -2802,6 +2820,7 @@ impl Default for OscConfig2Set {
         OscConfig2Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OscConfig2Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OscConfig2Set")
@@ -2885,6 +2904,7 @@ impl Default for OscConfig2Tog {
         OscConfig2Tog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OscConfig2Tog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OscConfig2Tog")

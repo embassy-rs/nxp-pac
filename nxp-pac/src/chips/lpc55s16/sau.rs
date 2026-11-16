@@ -1,4 +1,4 @@
-#[doc = "no description available."]
+#[doc = "Security Attribution Unit."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sau {
     ptr: *mut u8,

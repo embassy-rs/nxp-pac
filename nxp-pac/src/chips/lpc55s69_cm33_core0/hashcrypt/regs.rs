@@ -22,6 +22,7 @@ impl Default for Alias {
         Alias(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Alias {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Alias").field("data", &self.data()).finish()
@@ -129,6 +130,7 @@ impl Default for Config {
         Config(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Config {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Config")
@@ -314,6 +316,7 @@ impl Default for Cryptcfg {
         Cryptcfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cryptcfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cryptcfg")
@@ -425,6 +428,7 @@ impl Default for Ctrl {
         Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl")
@@ -474,6 +478,7 @@ impl Default for Digest0 {
         Digest0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Digest0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Digest0")
@@ -511,6 +516,7 @@ impl Default for Indata {
         Indata(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Indata {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Indata")
@@ -572,6 +578,7 @@ impl Default for Intenclr {
         Intenclr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Intenclr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Intenclr")
@@ -641,6 +648,7 @@ impl Default for Intenset {
         Intenset(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Intenset {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Intenset")
@@ -698,6 +706,7 @@ impl Default for Lock {
         Lock(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lock {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lock")
@@ -741,6 +750,7 @@ impl Default for Mask {
         Mask(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mask {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mask").field("mask", &self.mask()).finish()
@@ -776,6 +786,7 @@ impl Default for Memaddr {
         Memaddr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Memaddr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Memaddr")
@@ -825,6 +836,7 @@ impl Default for Memctrl {
         Memctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Memctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Memctrl")
@@ -928,6 +940,7 @@ impl Default for Status {
         Status(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Status {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Status")

@@ -22,6 +22,7 @@ impl Default for Irq {
         Irq(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Irq {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Irq")
@@ -59,6 +60,7 @@ impl Default for Irqclr {
         Irqclr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Irqclr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Irqclr")
@@ -96,6 +98,7 @@ impl Default for Irqset {
         Irqset(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Irqset {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Irqset")
@@ -133,6 +136,7 @@ impl Default for Mutex {
         Mutex(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mutex {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mutex").field("ex", &self.ex()).finish()

@@ -21,6 +21,7 @@ impl Ch0statClrErrorCode {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch0statClrErrorCode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -81,6 +82,7 @@ impl Ch0statErrorCode {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch0statErrorCode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -141,6 +143,7 @@ impl Ch0statSetErrorCode {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch0statSetErrorCode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -201,6 +204,7 @@ impl Ch0statTogErrorCode {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch0statTogErrorCode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -261,6 +265,7 @@ impl Ch1statClrErrorCode {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch1statClrErrorCode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -321,6 +326,7 @@ impl Ch1statErrorCode {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch1statErrorCode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -381,6 +387,7 @@ impl Ch1statSetErrorCode {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch1statSetErrorCode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -441,6 +448,7 @@ impl Ch1statTogErrorCode {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch1statTogErrorCode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -501,6 +509,7 @@ impl Ch2statClrErrorCode {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch2statClrErrorCode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -561,6 +570,7 @@ impl Ch2statErrorCode {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch2statErrorCode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -621,6 +631,7 @@ impl Ch2statSetErrorCode {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch2statSetErrorCode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -681,6 +692,7 @@ impl Ch2statTogErrorCode {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch2statTogErrorCode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -741,6 +753,7 @@ impl Ch3statClrErrorCode {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch3statClrErrorCode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -801,6 +814,7 @@ impl Ch3statErrorCode {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch3statErrorCode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -861,6 +875,7 @@ impl Ch3statSetErrorCode {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch3statSetErrorCode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -921,6 +936,7 @@ impl Ch3statTogErrorCode {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch3statTogErrorCode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -979,6 +995,7 @@ impl ChannelctrlClrEnableChannel {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ChannelctrlClrEnableChannel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -1035,6 +1052,7 @@ impl ChannelctrlClrHighPriorityChannel {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ChannelctrlClrHighPriorityChannel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -1091,6 +1109,7 @@ impl ChannelctrlEnableChannel {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ChannelctrlEnableChannel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -1147,6 +1166,7 @@ impl ChannelctrlHighPriorityChannel {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ChannelctrlHighPriorityChannel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -1203,6 +1223,7 @@ impl ChannelctrlSetEnableChannel {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ChannelctrlSetEnableChannel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -1259,6 +1280,7 @@ impl ChannelctrlSetHighPriorityChannel {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ChannelctrlSetHighPriorityChannel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -1315,6 +1337,7 @@ impl ChannelctrlTogEnableChannel {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ChannelctrlTogEnableChannel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -1371,6 +1394,7 @@ impl ChannelctrlTogHighPriorityChannel {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ChannelctrlTogHighPriorityChannel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -1421,6 +1445,7 @@ impl CipherAlgorithms {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CipherAlgorithms {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -1451,7 +1476,8 @@ impl From<CipherAlgorithms> for u16 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CipherEncrypt {
     #[doc = "DECRYPT."]
@@ -1482,7 +1508,8 @@ impl From<CipherEncrypt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CipherMode {
     #[doc = "ECB."]
@@ -1527,7 +1554,8 @@ impl From<CipherMode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CipherSelect {
     #[doc = "AES128."]
@@ -1591,6 +1619,7 @@ impl CtrlChannelInterruptEnable {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CtrlChannelInterruptEnable {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -1647,6 +1676,7 @@ impl CtrlClrChannelInterruptEnable {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CtrlClrChannelInterruptEnable {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -1683,7 +1713,8 @@ impl From<CtrlClrChannelInterruptEnable> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlClrPresentCrypto {
     #[doc = "Absent."]
@@ -1714,7 +1745,8 @@ impl From<CtrlClrPresentCrypto> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlClrPresentSha {
     #[doc = "Absent."]
@@ -1745,7 +1777,8 @@ impl From<CtrlClrPresentSha> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlPresentCrypto {
     #[doc = "Absent."]
@@ -1776,7 +1809,8 @@ impl From<CtrlPresentCrypto> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlPresentSha {
     #[doc = "Absent."]
@@ -1827,6 +1861,7 @@ impl CtrlSetChannelInterruptEnable {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CtrlSetChannelInterruptEnable {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -1863,7 +1898,8 @@ impl From<CtrlSetChannelInterruptEnable> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlSetPresentCrypto {
     #[doc = "Absent."]
@@ -1894,7 +1930,8 @@ impl From<CtrlSetPresentCrypto> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlSetPresentSha {
     #[doc = "Absent."]
@@ -1945,6 +1982,7 @@ impl CtrlTogChannelInterruptEnable {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CtrlTogChannelInterruptEnable {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -1981,7 +2019,8 @@ impl From<CtrlTogChannelInterruptEnable> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlTogPresentCrypto {
     #[doc = "Absent."]
@@ -2012,7 +2051,8 @@ impl From<CtrlTogPresentCrypto> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlTogPresentSha {
     #[doc = "Absent."]
@@ -2061,6 +2101,7 @@ impl HashAlgorithms {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HashAlgorithms {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -2095,7 +2136,8 @@ impl From<HashAlgorithms> for u16 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HashOutput {
     #[doc = "INPUT."]
@@ -2126,7 +2168,8 @@ impl From<HashOutput> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HashSelect {
     #[doc = "SHA1."]
@@ -2194,6 +2237,7 @@ impl Index {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Index {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -2256,6 +2300,7 @@ impl KeySelect {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for KeySelect {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -2296,7 +2341,8 @@ impl From<KeySelect> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatClrCurChannel {
     #[doc = "None."]
@@ -2364,6 +2410,7 @@ impl StatClrReadyChannels {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for StatClrReadyChannels {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -2400,7 +2447,8 @@ impl From<StatClrReadyChannels> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatCurChannel {
     #[doc = "None."]
@@ -2468,6 +2516,7 @@ impl StatReadyChannels {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for StatReadyChannels {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -2504,7 +2553,8 @@ impl From<StatReadyChannels> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatSetCurChannel {
     #[doc = "None."]
@@ -2572,6 +2622,7 @@ impl StatSetReadyChannels {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for StatSetReadyChannels {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -2608,7 +2659,8 @@ impl From<StatSetReadyChannels> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatTogCurChannel {
     #[doc = "None."]
@@ -2676,6 +2728,7 @@ impl StatTogReadyChannels {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for StatTogReadyChannels {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {

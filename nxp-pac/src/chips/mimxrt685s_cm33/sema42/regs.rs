@@ -22,6 +22,7 @@ impl Default for Gate {
         Gate(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gate {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gate")
@@ -95,6 +96,7 @@ impl Default for RstgtR {
         RstgtR(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for RstgtR {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RstgtR")
@@ -154,6 +156,7 @@ impl Default for RstgtW {
         RstgtW(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for RstgtW {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RstgtW")

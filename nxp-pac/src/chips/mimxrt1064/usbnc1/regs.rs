@@ -130,6 +130,7 @@ impl Default for UsbOtg1Ctrl {
         UsbOtg1Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UsbOtg1Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UsbOtg1Ctrl")
@@ -189,6 +190,7 @@ impl Default for UsbOtg1PhyCtrl0 {
         UsbOtg1PhyCtrl0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UsbOtg1PhyCtrl0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UsbOtg1PhyCtrl0")

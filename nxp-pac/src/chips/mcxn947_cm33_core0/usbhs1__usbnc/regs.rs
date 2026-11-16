@@ -130,6 +130,7 @@ impl Default for Ctrl1 {
         Ctrl1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl1")
@@ -225,6 +226,7 @@ impl Default for Ctrl2 {
         Ctrl2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl2")
@@ -296,6 +298,7 @@ impl Default for HsicCtrl {
         HsicCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HsicCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HsicCtrl")

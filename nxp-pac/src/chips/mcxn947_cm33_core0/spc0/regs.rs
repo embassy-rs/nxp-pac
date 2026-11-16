@@ -202,6 +202,7 @@ impl Default for ActiveCfg {
         ActiveCfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ActiveCfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ActiveCfg")
@@ -273,6 +274,7 @@ impl Default for ActiveCfg1 {
         ActiveCfg1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ActiveCfg1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ActiveCfg1")
@@ -310,6 +312,7 @@ impl Default for ActiveVdelay {
         ActiveVdelay(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ActiveVdelay {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ActiveVdelay")
@@ -375,6 +378,7 @@ impl Default for Cntrl {
         Cntrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cntrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cntrl")
@@ -420,6 +424,7 @@ impl Default for CoreldoCfg {
         CoreldoCfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CoreldoCfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CoreldoCfg")
@@ -497,6 +502,7 @@ impl Default for DcdcBurstCfg {
         DcdcBurstCfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DcdcBurstCfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DcdcBurstCfg")
@@ -568,6 +574,7 @@ impl Default for DcdcCfg {
         DcdcCfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DcdcCfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DcdcCfg")
@@ -637,6 +644,7 @@ impl Default for EvdCfg {
         EvdCfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EvdCfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EvdCfg")
@@ -742,6 +750,7 @@ impl Default for GlitchDetectSc {
         GlitchDetectSc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for GlitchDetectSc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GlitchDetectSc")
@@ -973,6 +982,7 @@ impl Default for LpCfg {
         LpCfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for LpCfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LpCfg")
@@ -1044,6 +1054,7 @@ impl Default for LpCfg1 {
         LpCfg1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for LpCfg1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LpCfg1")
@@ -1105,6 +1116,7 @@ impl Default for LpreqCfg {
         LpreqCfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for LpreqCfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LpreqCfg")
@@ -1150,6 +1162,7 @@ impl Default for LpwkupDelay {
         LpwkupDelay(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for LpwkupDelay {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LpwkupDelay")
@@ -1215,6 +1228,7 @@ impl Default for PdStatus {
         PdStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PdStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PdStatus")
@@ -1296,6 +1310,7 @@ impl Default for Sc {
         Sc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sc")
@@ -1367,6 +1382,7 @@ impl Default for Sramctl {
         Sramctl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sramctl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sramctl")
@@ -1412,6 +1428,7 @@ impl Default for SysldoCfg {
         SysldoCfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SysldoCfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SysldoCfg")
@@ -1497,6 +1514,7 @@ impl Default for VdCoreCfg {
         VdCoreCfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for VdCoreCfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VdCoreCfg")
@@ -1606,6 +1624,7 @@ impl Default for VdIoCfg {
         VdIoCfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for VdIoCfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VdIoCfg")
@@ -1717,6 +1736,7 @@ impl Default for VdStat {
         VdStat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for VdStat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VdStat")
@@ -1816,6 +1836,7 @@ impl Default for VdSysCfg {
         VdSysCfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for VdSysCfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VdSysCfg")
@@ -1889,6 +1910,7 @@ impl Default for Verid {
         Verid(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Verid {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Verid")

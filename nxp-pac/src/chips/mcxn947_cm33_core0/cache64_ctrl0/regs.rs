@@ -118,6 +118,7 @@ impl Default for Ccr {
         Ccr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ccr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ccr")
@@ -175,6 +176,7 @@ impl Default for Ccvr {
         Ccvr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ccvr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ccvr").field("data", &self.data()).finish()
@@ -318,6 +320,7 @@ impl Default for Clcr {
         Clcr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Clcr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Clcr")
@@ -389,6 +392,7 @@ impl Default for Csar {
         Csar(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Csar {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Csar")

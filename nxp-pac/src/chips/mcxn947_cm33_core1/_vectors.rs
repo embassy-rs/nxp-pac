@@ -96,7 +96,7 @@ unsafe extern "C" {
     fn CDOG1();
     fn I3C0();
     fn I3C1();
-    fn NPU();
+    fn RESERVED113();
     fn GDET();
     fn VBAT0();
     fn EWM0();
@@ -358,7 +358,9 @@ pub static __INTERRUPTS: [Vector; 156] = [
     Vector { _handler: CDOG1 },
     Vector { _handler: I3C0 },
     Vector { _handler: I3C1 },
-    Vector { _handler: NPU },
+    Vector {
+        _handler: RESERVED113,
+    },
     Vector { _handler: GDET },
     Vector { _handler: VBAT0 },
     Vector { _handler: EWM0 },

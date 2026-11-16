@@ -202,6 +202,7 @@ impl Default for Gpr1 {
         Gpr1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr1")
@@ -408,6 +409,7 @@ impl Default for Gpr10 {
         Gpr10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr10")
@@ -522,6 +524,7 @@ impl Default for Gpr11 {
         Gpr11(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr11 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr11")
@@ -643,6 +646,7 @@ impl Default for Gpr12 {
         Gpr12(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr12 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr12")
@@ -756,6 +760,7 @@ impl Default for Gpr13 {
         Gpr13(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr13 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr13")
@@ -939,6 +944,7 @@ impl Default for Gpr14 {
         Gpr14(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr14 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr14")
@@ -1014,6 +1020,7 @@ impl Default for Gpr16 {
         Gpr16(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr16 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr16")
@@ -1057,6 +1064,7 @@ impl Default for Gpr17 {
         Gpr17(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr17 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr17")
@@ -1110,6 +1118,7 @@ impl Default for Gpr18 {
         Gpr18(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr18 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr18")
@@ -1165,6 +1174,7 @@ impl Default for Gpr19 {
         Gpr19(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr19 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr19")
@@ -1415,6 +1425,7 @@ impl Default for Gpr2 {
         Gpr2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr2")
@@ -1505,6 +1516,7 @@ impl Default for Gpr20 {
         Gpr20(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr20 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr20")
@@ -1560,6 +1572,7 @@ impl Default for Gpr21 {
         Gpr21(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr21 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr21")
@@ -1615,6 +1628,7 @@ impl Default for Gpr22 {
         Gpr22(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr22 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr22")
@@ -1670,6 +1684,7 @@ impl Default for Gpr23 {
         Gpr23(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr23 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr23")
@@ -1725,6 +1740,7 @@ impl Default for Gpr24 {
         Gpr24(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr24 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr24")
@@ -1780,6 +1796,7 @@ impl Default for Gpr25 {
         Gpr25(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr25 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr25")
@@ -1823,6 +1840,7 @@ impl Default for Gpr26 {
         Gpr26(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr26 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr26")
@@ -1864,6 +1882,7 @@ impl Default for Gpr27 {
         Gpr27(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr27 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr27")
@@ -1905,6 +1924,7 @@ impl Default for Gpr28 {
         Gpr28(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr28 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr28")
@@ -1946,6 +1966,7 @@ impl Default for Gpr29 {
         Gpr29(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr29 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr29")
@@ -2059,6 +2080,7 @@ impl Default for Gpr3 {
         Gpr3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr3")
@@ -2112,6 +2134,7 @@ impl Default for Gpr30 {
         Gpr30(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr30 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr30")
@@ -2153,6 +2176,7 @@ impl Default for Gpr31 {
         Gpr31(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr31 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr31")
@@ -2194,6 +2218,7 @@ impl Default for Gpr32 {
         Gpr32(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr32 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr32")
@@ -2274,6 +2299,7 @@ impl Default for Gpr33 {
         Gpr33(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr33 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr33")
@@ -2333,6 +2359,7 @@ impl Default for Gpr34 {
         Gpr34(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr34 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr34")
@@ -2751,6 +2778,7 @@ impl Default for Gpr4 {
         Gpr4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr4")
@@ -2938,6 +2966,7 @@ impl Default for Gpr5 {
         Gpr5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr5")
@@ -3365,6 +3394,7 @@ impl Default for Gpr6 {
         Gpr6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr6")
@@ -3840,6 +3870,7 @@ impl Default for Gpr7 {
         Gpr7(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr7")
@@ -4315,6 +4346,7 @@ impl Default for Gpr8 {
         Gpr8(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpr8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpr8")

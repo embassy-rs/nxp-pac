@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ConfigType {
     _RESERVED_0 = 0x0,
@@ -44,7 +45,8 @@ impl From<ConfigType> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ConfigWrap {
     #[doc = "Indicates that Wrap is not included."]
@@ -115,6 +117,7 @@ impl LastOperation {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for LastOperation {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -197,6 +200,7 @@ impl LcState {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for LcState {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -273,6 +277,7 @@ impl ResultCode {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ResultCode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -323,7 +328,8 @@ impl From<ResultCode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIntClrStatusApbErr {
     #[doc = "No effect."]
@@ -354,7 +360,8 @@ impl From<SramIntClrStatusApbErr> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIntSetStatusApbErr {
     #[doc = "No effect."]

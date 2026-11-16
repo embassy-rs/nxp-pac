@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ClkgateCtrl {
     #[doc = "Allow the logic to automatically gate the clock when the XTAL is powered down."]
@@ -30,7 +31,8 @@ impl From<Misc0ClkgateCtrl> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ClkgateDelay {
     #[doc = "0.5ms."]
@@ -73,7 +75,8 @@ impl From<Misc0ClkgateDelay> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ClrClkgateCtrl {
     #[doc = "Allow the logic to automatically gate the clock when the XTAL is powered down."]
@@ -104,7 +107,8 @@ impl From<Misc0ClrClkgateCtrl> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ClrClkgateDelay {
     #[doc = "0.5ms."]
@@ -147,7 +151,8 @@ impl From<Misc0ClrClkgateDelay> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ClrDisconHighSnvs {
     #[doc = "Turn on the switch."]
@@ -178,7 +183,8 @@ impl From<Misc0ClrDisconHighSnvs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ClrOscI {
     #[doc = "Nominal."]
@@ -213,7 +219,8 @@ impl From<Misc0ClrOscI> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ClrReftopSelfbiasoff {
     #[doc = "Uses coarse bias currents for startup."]
@@ -244,7 +251,8 @@ impl From<Misc0ClrReftopSelfbiasoff> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ClrReftopVbgadj {
     #[doc = "Nominal VBG."]
@@ -287,7 +295,8 @@ impl From<Misc0ClrReftopVbgadj> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ClrRtcXtalSource {
     #[doc = "Internal ring oscillator."]
@@ -318,7 +327,8 @@ impl From<Misc0ClrRtcXtalSource> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ClrStopModeConfig {
     #[doc = "SUSPEND (DSM)."]
@@ -353,7 +363,8 @@ impl From<Misc0ClrStopModeConfig> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ClrVidPllPrediv {
     #[doc = "Divide by 1."]
@@ -384,7 +395,8 @@ impl From<Misc0ClrVidPllPrediv> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0DisconHighSnvs {
     #[doc = "Turn on the switch."]
@@ -415,7 +427,8 @@ impl From<Misc0DisconHighSnvs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0OscI {
     #[doc = "Nominal."]
@@ -450,7 +463,8 @@ impl From<Misc0OscI> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ReftopSelfbiasoff {
     #[doc = "Uses coarse bias currents for startup."]
@@ -481,7 +495,8 @@ impl From<Misc0ReftopSelfbiasoff> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ReftopVbgadj {
     #[doc = "Nominal VBG."]
@@ -524,7 +539,8 @@ impl From<Misc0ReftopVbgadj> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0RtcXtalSource {
     #[doc = "Internal ring oscillator."]
@@ -555,7 +571,8 @@ impl From<Misc0RtcXtalSource> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0SetClkgateCtrl {
     #[doc = "Allow the logic to automatically gate the clock when the XTAL is powered down."]
@@ -586,7 +603,8 @@ impl From<Misc0SetClkgateCtrl> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0SetClkgateDelay {
     #[doc = "0.5ms."]
@@ -629,7 +647,8 @@ impl From<Misc0SetClkgateDelay> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0SetDisconHighSnvs {
     #[doc = "Turn on the switch."]
@@ -660,7 +679,8 @@ impl From<Misc0SetDisconHighSnvs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0SetOscI {
     #[doc = "Nominal."]
@@ -695,7 +715,8 @@ impl From<Misc0SetOscI> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0SetReftopSelfbiasoff {
     #[doc = "Uses coarse bias currents for startup."]
@@ -726,7 +747,8 @@ impl From<Misc0SetReftopSelfbiasoff> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0SetReftopVbgadj {
     #[doc = "Nominal VBG."]
@@ -769,7 +791,8 @@ impl From<Misc0SetReftopVbgadj> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0SetRtcXtalSource {
     #[doc = "Internal ring oscillator."]
@@ -800,7 +823,8 @@ impl From<Misc0SetRtcXtalSource> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0SetStopModeConfig {
     #[doc = "SUSPEND (DSM)."]
@@ -835,7 +859,8 @@ impl From<Misc0SetStopModeConfig> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0SetVidPllPrediv {
     #[doc = "Divide by 1."]
@@ -866,7 +891,8 @@ impl From<Misc0SetVidPllPrediv> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0StopModeConfig {
     #[doc = "SUSPEND (DSM)."]
@@ -901,7 +927,8 @@ impl From<Misc0StopModeConfig> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0TogClkgateCtrl {
     #[doc = "Allow the logic to automatically gate the clock when the XTAL is powered down."]
@@ -932,7 +959,8 @@ impl From<Misc0TogClkgateCtrl> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0TogClkgateDelay {
     #[doc = "0.5ms."]
@@ -975,7 +1003,8 @@ impl From<Misc0TogClkgateDelay> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0TogDisconHighSnvs {
     #[doc = "Turn on the switch."]
@@ -1006,7 +1035,8 @@ impl From<Misc0TogDisconHighSnvs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0TogOscI {
     #[doc = "Nominal."]
@@ -1041,7 +1071,8 @@ impl From<Misc0TogOscI> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0TogReftopSelfbiasoff {
     #[doc = "Uses coarse bias currents for startup."]
@@ -1072,7 +1103,8 @@ impl From<Misc0TogReftopSelfbiasoff> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0TogReftopVbgadj {
     #[doc = "Nominal VBG."]
@@ -1115,7 +1147,8 @@ impl From<Misc0TogReftopVbgadj> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0TogRtcXtalSource {
     #[doc = "Internal ring oscillator."]
@@ -1146,7 +1179,8 @@ impl From<Misc0TogRtcXtalSource> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0TogStopModeConfig {
     #[doc = "SUSPEND (DSM)."]
@@ -1181,7 +1215,8 @@ impl From<Misc0TogStopModeConfig> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0TogVidPllPrediv {
     #[doc = "Divide by 1."]
@@ -1212,7 +1247,8 @@ impl From<Misc0TogVidPllPrediv> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0VidPllPrediv {
     #[doc = "Divide by 1."]
@@ -1243,7 +1279,8 @@ impl From<Misc0VidPllPrediv> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc1ClrLvds1ClkSel {
     #[doc = "ARM PLL."]
@@ -1318,7 +1355,8 @@ impl From<Misc1ClrLvds1ClkSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc1ClrLvds2ClkSel {
     #[doc = "ARM PLL."]
@@ -1398,7 +1436,8 @@ impl From<Misc1ClrLvds2ClkSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc1Lvds1ClkSel {
     #[doc = "ARM PLL."]
@@ -1473,7 +1512,8 @@ impl From<Misc1Lvds1ClkSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc1Lvds2ClkSel {
     #[doc = "ARM PLL."]
@@ -1553,7 +1593,8 @@ impl From<Misc1Lvds2ClkSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc1SetLvds1ClkSel {
     #[doc = "ARM PLL."]
@@ -1628,7 +1669,8 @@ impl From<Misc1SetLvds1ClkSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc1SetLvds2ClkSel {
     #[doc = "ARM PLL."]
@@ -1708,7 +1750,8 @@ impl From<Misc1SetLvds2ClkSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc1TogLvds1ClkSel {
     #[doc = "ARM PLL."]
@@ -1783,7 +1826,8 @@ impl From<Misc1TogLvds1ClkSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc1TogLvds2ClkSel {
     #[doc = "ARM PLL."]
@@ -1863,7 +1907,8 @@ impl From<Misc1TogLvds2ClkSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2AudioDivLsb {
     #[doc = "divide by 1 (Default)."]
@@ -1894,7 +1939,8 @@ impl From<Misc2AudioDivLsb> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2AudioDivMsb {
     #[doc = "divide by 1 (Default)."]
@@ -1925,7 +1971,8 @@ impl From<Misc2AudioDivMsb> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2ClrAudioDivLsb {
     #[doc = "divide by 1 (Default)."]
@@ -1956,7 +2003,8 @@ impl From<Misc2ClrAudioDivLsb> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2ClrAudioDivMsb {
     #[doc = "divide by 1 (Default)."]
@@ -1987,7 +2035,8 @@ impl From<Misc2ClrAudioDivMsb> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2ClrReg0BoOffset {
     _RESERVED_0 = 0x0,
@@ -2024,7 +2073,8 @@ impl From<Misc2ClrReg0BoOffset> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2ClrReg0StepTime {
     #[doc = "64."]
@@ -2059,7 +2109,8 @@ impl From<Misc2ClrReg0StepTime> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2ClrReg1BoOffset {
     _RESERVED_0 = 0x0,
@@ -2096,7 +2147,8 @@ impl From<Misc2ClrReg1BoOffset> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2ClrReg1StepTime {
     #[doc = "64."]
@@ -2131,7 +2183,8 @@ impl From<Misc2ClrReg1StepTime> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2ClrReg2BoOffset {
     _RESERVED_0 = 0x0,
@@ -2168,7 +2221,8 @@ impl From<Misc2ClrReg2BoOffset> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2ClrReg2StepTime {
     #[doc = "64."]
@@ -2203,7 +2257,8 @@ impl From<Misc2ClrReg2StepTime> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2ClrVideoDiv {
     #[doc = "divide by 1 (Default)."]
@@ -2238,7 +2293,8 @@ impl From<Misc2ClrVideoDiv> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2Reg0BoOffset {
     _RESERVED_0 = 0x0,
@@ -2275,7 +2331,8 @@ impl From<Misc2Reg0BoOffset> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2Reg0StepTime {
     #[doc = "64."]
@@ -2310,7 +2367,8 @@ impl From<Misc2Reg0StepTime> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2Reg1BoOffset {
     _RESERVED_0 = 0x0,
@@ -2347,7 +2405,8 @@ impl From<Misc2Reg1BoOffset> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2Reg1StepTime {
     #[doc = "64."]
@@ -2382,7 +2441,8 @@ impl From<Misc2Reg1StepTime> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2Reg2BoOffset {
     _RESERVED_0 = 0x0,
@@ -2419,7 +2479,8 @@ impl From<Misc2Reg2BoOffset> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2Reg2StepTime {
     #[doc = "64."]
@@ -2454,7 +2515,8 @@ impl From<Misc2Reg2StepTime> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2SetAudioDivLsb {
     #[doc = "divide by 1 (Default)."]
@@ -2485,7 +2547,8 @@ impl From<Misc2SetAudioDivLsb> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2SetAudioDivMsb {
     #[doc = "divide by 1 (Default)."]
@@ -2516,7 +2579,8 @@ impl From<Misc2SetAudioDivMsb> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2SetReg0BoOffset {
     _RESERVED_0 = 0x0,
@@ -2553,7 +2617,8 @@ impl From<Misc2SetReg0BoOffset> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2SetReg0StepTime {
     #[doc = "64."]
@@ -2588,7 +2653,8 @@ impl From<Misc2SetReg0StepTime> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2SetReg1BoOffset {
     _RESERVED_0 = 0x0,
@@ -2625,7 +2691,8 @@ impl From<Misc2SetReg1BoOffset> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2SetReg1StepTime {
     #[doc = "64."]
@@ -2660,7 +2727,8 @@ impl From<Misc2SetReg1StepTime> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2SetReg2BoOffset {
     _RESERVED_0 = 0x0,
@@ -2697,7 +2765,8 @@ impl From<Misc2SetReg2BoOffset> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2SetReg2StepTime {
     #[doc = "64."]
@@ -2732,7 +2801,8 @@ impl From<Misc2SetReg2StepTime> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2SetVideoDiv {
     #[doc = "divide by 1 (Default)."]
@@ -2767,7 +2837,8 @@ impl From<Misc2SetVideoDiv> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2TogAudioDivLsb {
     #[doc = "divide by 1 (Default)."]
@@ -2798,7 +2869,8 @@ impl From<Misc2TogAudioDivLsb> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2TogAudioDivMsb {
     #[doc = "divide by 1 (Default)."]
@@ -2829,7 +2901,8 @@ impl From<Misc2TogAudioDivMsb> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2TogReg0BoOffset {
     _RESERVED_0 = 0x0,
@@ -2866,7 +2939,8 @@ impl From<Misc2TogReg0BoOffset> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2TogReg0StepTime {
     #[doc = "64."]
@@ -2901,7 +2975,8 @@ impl From<Misc2TogReg0StepTime> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2TogReg1BoOffset {
     _RESERVED_0 = 0x0,
@@ -2938,7 +3013,8 @@ impl From<Misc2TogReg1BoOffset> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2TogReg1StepTime {
     #[doc = "64."]
@@ -2973,7 +3049,8 @@ impl From<Misc2TogReg1StepTime> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2TogReg2BoOffset {
     _RESERVED_0 = 0x0,
@@ -3010,7 +3087,8 @@ impl From<Misc2TogReg2BoOffset> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2TogReg2StepTime {
     #[doc = "64."]
@@ -3045,7 +3123,8 @@ impl From<Misc2TogReg2StepTime> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2TogVideoDiv {
     #[doc = "divide by 1 (Default)."]
@@ -3080,7 +3159,8 @@ impl From<Misc2TogVideoDiv> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2VideoDiv {
     #[doc = "divide by 1 (Default)."]
@@ -3114,53 +3194,45 @@ impl From<Misc2VideoDiv> for u8 {
         Misc2VideoDiv::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Reg1p1ClrOutputTrg {
-    _RESERVED_0 = 0x0,
-    _RESERVED_1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Reg1p1ClrOutputTrg(u8);
+impl Reg1p1ClrOutputTrg {
     #[doc = "0.8V."]
-    OutputTrg4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const OutputTrg4: Self = Self(0x04);
+    #[doc = "1.375V."]
+    pub const OutputTrg1: Self = Self(0x10);
     #[doc = "1.1V."]
-    OutputTrg16 = 0x10,
-    _RESERVED_11 = 0x11,
-    _RESERVED_12 = 0x12,
-    _RESERVED_13 = 0x13,
-    _RESERVED_14 = 0x14,
-    _RESERVED_15 = 0x15,
-    _RESERVED_16 = 0x16,
-    _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
-    _RESERVED_1e = 0x1e,
-    _RESERVED_1f = 0x1f,
+    pub const OutputTrg16: Self = Self(0x10);
 }
 impl Reg1p1ClrOutputTrg {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Reg1p1ClrOutputTrg {
-        unsafe { core::mem::transmute(val & 0x1f) }
+        Self(val & 0x1f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Reg1p1ClrOutputTrg {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x04 => f.write_str("OutputTrg4"),
+            0x10 => f.write_str("OutputTrg1"),
+            0x10 => f.write_str("OutputTrg16"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Reg1p1ClrOutputTrg {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x04 => defmt::write!(f, "OutputTrg4"),
+            0x10 => defmt::write!(f, "OutputTrg1"),
+            0x10 => defmt::write!(f, "OutputTrg16"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Reg1p1ClrOutputTrg {
@@ -3176,7 +3248,8 @@ impl From<Reg1p1ClrOutputTrg> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg1p1ClrSelrefWeakLinreg {
     #[doc = "Weak-linreg output tracks low-power-bandgap voltage."]
@@ -3206,53 +3279,45 @@ impl From<Reg1p1ClrSelrefWeakLinreg> for u8 {
         Reg1p1ClrSelrefWeakLinreg::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Reg1p1OutputTrg {
-    _RESERVED_0 = 0x0,
-    _RESERVED_1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Reg1p1OutputTrg(u8);
+impl Reg1p1OutputTrg {
     #[doc = "0.8V."]
-    OutputTrg4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const OutputTrg4: Self = Self(0x04);
+    #[doc = "1.375V."]
+    pub const OutputTrg1: Self = Self(0x10);
     #[doc = "1.1V."]
-    OutputTrg16 = 0x10,
-    _RESERVED_11 = 0x11,
-    _RESERVED_12 = 0x12,
-    _RESERVED_13 = 0x13,
-    _RESERVED_14 = 0x14,
-    _RESERVED_15 = 0x15,
-    _RESERVED_16 = 0x16,
-    _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
-    _RESERVED_1e = 0x1e,
-    _RESERVED_1f = 0x1f,
+    pub const OutputTrg16: Self = Self(0x10);
 }
 impl Reg1p1OutputTrg {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Reg1p1OutputTrg {
-        unsafe { core::mem::transmute(val & 0x1f) }
+        Self(val & 0x1f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Reg1p1OutputTrg {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x04 => f.write_str("OutputTrg4"),
+            0x10 => f.write_str("OutputTrg1"),
+            0x10 => f.write_str("OutputTrg16"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Reg1p1OutputTrg {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x04 => defmt::write!(f, "OutputTrg4"),
+            0x10 => defmt::write!(f, "OutputTrg1"),
+            0x10 => defmt::write!(f, "OutputTrg16"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Reg1p1OutputTrg {
@@ -3268,7 +3333,8 @@ impl From<Reg1p1OutputTrg> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg1p1SelrefWeakLinreg {
     #[doc = "Weak-linreg output tracks low-power-bandgap voltage."]
@@ -3298,53 +3364,45 @@ impl From<Reg1p1SelrefWeakLinreg> for u8 {
         Reg1p1SelrefWeakLinreg::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Reg1p1SetOutputTrg {
-    _RESERVED_0 = 0x0,
-    _RESERVED_1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Reg1p1SetOutputTrg(u8);
+impl Reg1p1SetOutputTrg {
     #[doc = "0.8V."]
-    OutputTrg4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const OutputTrg4: Self = Self(0x04);
+    #[doc = "1.375V."]
+    pub const OutputTrg1: Self = Self(0x10);
     #[doc = "1.1V."]
-    OutputTrg16 = 0x10,
-    _RESERVED_11 = 0x11,
-    _RESERVED_12 = 0x12,
-    _RESERVED_13 = 0x13,
-    _RESERVED_14 = 0x14,
-    _RESERVED_15 = 0x15,
-    _RESERVED_16 = 0x16,
-    _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
-    _RESERVED_1e = 0x1e,
-    _RESERVED_1f = 0x1f,
+    pub const OutputTrg16: Self = Self(0x10);
 }
 impl Reg1p1SetOutputTrg {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Reg1p1SetOutputTrg {
-        unsafe { core::mem::transmute(val & 0x1f) }
+        Self(val & 0x1f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Reg1p1SetOutputTrg {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x04 => f.write_str("OutputTrg4"),
+            0x10 => f.write_str("OutputTrg1"),
+            0x10 => f.write_str("OutputTrg16"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Reg1p1SetOutputTrg {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x04 => defmt::write!(f, "OutputTrg4"),
+            0x10 => defmt::write!(f, "OutputTrg1"),
+            0x10 => defmt::write!(f, "OutputTrg16"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Reg1p1SetOutputTrg {
@@ -3360,7 +3418,8 @@ impl From<Reg1p1SetOutputTrg> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg1p1SetSelrefWeakLinreg {
     #[doc = "Weak-linreg output tracks low-power-bandgap voltage."]
@@ -3390,53 +3449,45 @@ impl From<Reg1p1SetSelrefWeakLinreg> for u8 {
         Reg1p1SetSelrefWeakLinreg::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Reg1p1TogOutputTrg {
-    _RESERVED_0 = 0x0,
-    _RESERVED_1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Reg1p1TogOutputTrg(u8);
+impl Reg1p1TogOutputTrg {
     #[doc = "0.8V."]
-    OutputTrg4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const OutputTrg4: Self = Self(0x04);
+    #[doc = "1.375V."]
+    pub const OutputTrg1: Self = Self(0x10);
     #[doc = "1.1V."]
-    OutputTrg16 = 0x10,
-    _RESERVED_11 = 0x11,
-    _RESERVED_12 = 0x12,
-    _RESERVED_13 = 0x13,
-    _RESERVED_14 = 0x14,
-    _RESERVED_15 = 0x15,
-    _RESERVED_16 = 0x16,
-    _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
-    _RESERVED_1e = 0x1e,
-    _RESERVED_1f = 0x1f,
+    pub const OutputTrg16: Self = Self(0x10);
 }
 impl Reg1p1TogOutputTrg {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> Reg1p1TogOutputTrg {
-        unsafe { core::mem::transmute(val & 0x1f) }
+        Self(val & 0x1f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Reg1p1TogOutputTrg {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x04 => f.write_str("OutputTrg4"),
+            0x10 => f.write_str("OutputTrg1"),
+            0x10 => f.write_str("OutputTrg16"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Reg1p1TogOutputTrg {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x04 => defmt::write!(f, "OutputTrg4"),
+            0x10 => defmt::write!(f, "OutputTrg1"),
+            0x10 => defmt::write!(f, "OutputTrg16"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for Reg1p1TogOutputTrg {
@@ -3452,7 +3503,8 @@ impl From<Reg1p1TogOutputTrg> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg1p1TogSelrefWeakLinreg {
     #[doc = "Weak-linreg output tracks low-power-bandgap voltage."]
@@ -3483,7 +3535,8 @@ impl From<Reg1p1TogSelrefWeakLinreg> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg2p5ClrOutputTrg {
     #[doc = "2.10V."]
@@ -3545,7 +3598,8 @@ impl From<Reg2p5ClrOutputTrg> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg2p5OutputTrg {
     #[doc = "2.10V."]
@@ -3607,7 +3661,8 @@ impl From<Reg2p5OutputTrg> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg2p5SetOutputTrg {
     #[doc = "2.10V."]
@@ -3669,7 +3724,8 @@ impl From<Reg2p5SetOutputTrg> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg2p5TogOutputTrg {
     #[doc = "2.10V."]
@@ -3731,7 +3787,8 @@ impl From<Reg2p5TogOutputTrg> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg3p0ClrOutputTrg {
     #[doc = "2.625V."]
@@ -3793,7 +3850,8 @@ impl From<Reg3p0ClrOutputTrg> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg3p0ClrVbusSel {
     #[doc = "Utilize VBUS OTG2 power."]
@@ -3824,7 +3882,8 @@ impl From<Reg3p0ClrVbusSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg3p0OutputTrg {
     #[doc = "2.625V."]
@@ -3886,7 +3945,8 @@ impl From<Reg3p0OutputTrg> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg3p0SetOutputTrg {
     #[doc = "2.625V."]
@@ -3948,7 +4008,8 @@ impl From<Reg3p0SetOutputTrg> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg3p0SetVbusSel {
     #[doc = "Utilize VBUS OTG2 power."]
@@ -3979,7 +4040,8 @@ impl From<Reg3p0SetVbusSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg3p0TogOutputTrg {
     #[doc = "2.625V."]
@@ -4041,7 +4103,8 @@ impl From<Reg3p0TogOutputTrg> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg3p0TogVbusSel {
     #[doc = "Utilize VBUS OTG2 power."]
@@ -4072,7 +4135,8 @@ impl From<Reg3p0TogVbusSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg3p0VbusSel {
     #[doc = "Utilize VBUS OTG2 power."]
@@ -4103,7 +4167,8 @@ impl From<Reg3p0VbusSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreClrRampRate {
     #[doc = "Fast."]
@@ -4138,7 +4203,8 @@ impl From<RegCoreClrRampRate> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreClrReg0Adj {
     #[doc = "No adjustment."]
@@ -4197,7 +4263,8 @@ impl From<RegCoreClrReg0Adj> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreClrReg0Targ {
     #[doc = "Power gated off."]
@@ -4263,7 +4330,8 @@ impl From<RegCoreClrReg0Targ> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreClrReg1Adj {
     #[doc = "No adjustment."]
@@ -4322,7 +4390,8 @@ impl From<RegCoreClrReg1Adj> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreClrReg1Targ {
     #[doc = "Power gated off."]
@@ -4388,7 +4457,8 @@ impl From<RegCoreClrReg1Targ> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreClrReg2Adj {
     #[doc = "No adjustment."]
@@ -4447,7 +4517,8 @@ impl From<RegCoreClrReg2Adj> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreClrReg2Targ {
     #[doc = "Power gated off."]
@@ -4513,7 +4584,8 @@ impl From<RegCoreClrReg2Targ> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreRampRate {
     #[doc = "Fast."]
@@ -4548,7 +4620,8 @@ impl From<RegCoreRampRate> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreReg0Adj {
     #[doc = "No adjustment."]
@@ -4607,7 +4680,8 @@ impl From<RegCoreReg0Adj> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreReg0Targ {
     #[doc = "Power gated off."]
@@ -4673,7 +4747,8 @@ impl From<RegCoreReg0Targ> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreReg1Adj {
     #[doc = "No adjustment."]
@@ -4732,7 +4807,8 @@ impl From<RegCoreReg1Adj> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreReg1Targ {
     #[doc = "Power gated off."]
@@ -4798,7 +4874,8 @@ impl From<RegCoreReg1Targ> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreReg2Adj {
     #[doc = "No adjustment."]
@@ -4857,7 +4934,8 @@ impl From<RegCoreReg2Adj> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreReg2Targ {
     #[doc = "Power gated off."]
@@ -4923,7 +5001,8 @@ impl From<RegCoreReg2Targ> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreSetRampRate {
     #[doc = "Fast."]
@@ -4958,7 +5037,8 @@ impl From<RegCoreSetRampRate> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreSetReg0Adj {
     #[doc = "No adjustment."]
@@ -5017,7 +5097,8 @@ impl From<RegCoreSetReg0Adj> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreSetReg0Targ {
     #[doc = "Power gated off."]
@@ -5083,7 +5164,8 @@ impl From<RegCoreSetReg0Targ> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreSetReg1Adj {
     #[doc = "No adjustment."]
@@ -5142,7 +5224,8 @@ impl From<RegCoreSetReg1Adj> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreSetReg1Targ {
     #[doc = "Power gated off."]
@@ -5208,7 +5291,8 @@ impl From<RegCoreSetReg1Targ> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreSetReg2Adj {
     #[doc = "No adjustment."]
@@ -5267,7 +5351,8 @@ impl From<RegCoreSetReg2Adj> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreSetReg2Targ {
     #[doc = "Power gated off."]
@@ -5333,7 +5418,8 @@ impl From<RegCoreSetReg2Targ> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreTogRampRate {
     #[doc = "Fast."]
@@ -5368,7 +5454,8 @@ impl From<RegCoreTogRampRate> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreTogReg0Adj {
     #[doc = "No adjustment."]
@@ -5427,7 +5514,8 @@ impl From<RegCoreTogReg0Adj> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreTogReg0Targ {
     #[doc = "Power gated off."]
@@ -5493,7 +5581,8 @@ impl From<RegCoreTogReg0Targ> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreTogReg1Adj {
     #[doc = "No adjustment."]
@@ -5552,7 +5641,8 @@ impl From<RegCoreTogReg1Adj> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreTogReg1Targ {
     #[doc = "Power gated off."]
@@ -5618,7 +5708,8 @@ impl From<RegCoreTogReg1Targ> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreTogReg2Adj {
     #[doc = "No adjustment."]
@@ -5677,7 +5768,8 @@ impl From<RegCoreTogReg2Adj> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreTogReg2Targ {
     #[doc = "Power gated off."]

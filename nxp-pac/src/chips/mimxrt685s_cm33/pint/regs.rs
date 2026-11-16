@@ -22,6 +22,7 @@ impl Default for Cienf {
         Cienf(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cienf {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cienf")
@@ -59,6 +60,7 @@ impl Default for Cienr {
         Cienr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cienr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cienr")
@@ -96,6 +98,7 @@ impl Default for Fall {
         Fall(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fall {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fall").field("fdet", &self.fdet()).finish()
@@ -131,6 +134,7 @@ impl Default for Ienf {
         Ienf(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ienf {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ienf").field("enaf", &self.enaf()).finish()
@@ -166,6 +170,7 @@ impl Default for Ienr {
         Ienr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ienr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ienr").field("enrl", &self.enrl()).finish()
@@ -201,6 +206,7 @@ impl Default for Isel {
         Isel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Isel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Isel")
@@ -238,6 +244,7 @@ impl Default for Ist {
         Ist(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ist {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ist").field("pstat", &self.pstat()).finish()
@@ -441,6 +448,7 @@ impl Default for Pmcfg {
         Pmcfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pmcfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pmcfg")
@@ -534,6 +542,7 @@ impl Default for Pmctrl {
         Pmctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pmctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pmctrl")
@@ -663,6 +672,7 @@ impl Default for Pmsrc {
         Pmsrc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pmsrc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pmsrc")
@@ -718,6 +728,7 @@ impl Default for Rise {
         Rise(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Rise {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Rise").field("rdet", &self.rdet()).finish()
@@ -753,6 +764,7 @@ impl Default for Sienf {
         Sienf(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sienf {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sienf")
@@ -790,6 +802,7 @@ impl Default for Sienr {
         Sienr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sienr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sienr")

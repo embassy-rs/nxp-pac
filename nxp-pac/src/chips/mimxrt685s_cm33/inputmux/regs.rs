@@ -22,6 +22,7 @@ impl Default for Ct32bitCapSel {
         Ct32bitCapSel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ct32bitCapSel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ct32bitCapSel")
@@ -431,6 +432,7 @@ impl Default for Dmac0ItrigEna0 {
         Dmac0ItrigEna0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dmac0ItrigEna0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dmac0ItrigEna0")
@@ -999,6 +1001,7 @@ impl Default for Dmac0ItrigEna0Clr {
         Dmac0ItrigEna0Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dmac0ItrigEna0Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dmac0ItrigEna0Clr")
@@ -1567,6 +1570,7 @@ impl Default for Dmac0ItrigEna0Set {
         Dmac0ItrigEna0Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dmac0ItrigEna0Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dmac0ItrigEna0Set")
@@ -1670,6 +1674,7 @@ impl Default for Dmac0ItrigSel {
         Dmac0ItrigSel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dmac0ItrigSel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dmac0ItrigSel")
@@ -1711,6 +1716,7 @@ impl Default for Dmac0OtrigSel {
         Dmac0OtrigSel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dmac0OtrigSel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dmac0OtrigSel")
@@ -2100,6 +2106,7 @@ impl Default for Dmac0ReqEna0 {
         Dmac0ReqEna0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dmac0ReqEna0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dmac0ReqEna0")
@@ -2547,6 +2554,7 @@ impl Default for Dmac0ReqEna0Clr {
         Dmac0ReqEna0Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dmac0ReqEna0Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dmac0ReqEna0Clr")
@@ -2994,6 +3002,7 @@ impl Default for Dmac0ReqEna0Set {
         Dmac0ReqEna0Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dmac0ReqEna0Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dmac0ReqEna0Set")
@@ -3093,6 +3102,7 @@ impl Default for Dmac0ReqEna1 {
         Dmac0ReqEna1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dmac0ReqEna1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dmac0ReqEna1")
@@ -3130,6 +3140,7 @@ impl Default for Dmac0ReqEna1Clr {
         Dmac0ReqEna1Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dmac0ReqEna1Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dmac0ReqEna1Clr")
@@ -3167,6 +3178,7 @@ impl Default for Dmac0ReqEna1Set {
         Dmac0ReqEna1Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dmac0ReqEna1Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dmac0ReqEna1Set")
@@ -3576,6 +3588,7 @@ impl Default for Dmac1ItrigEna0 {
         Dmac1ItrigEna0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dmac1ItrigEna0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dmac1ItrigEna0")
@@ -4144,6 +4157,7 @@ impl Default for Dmac1ItrigEna0Clr {
         Dmac1ItrigEna0Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dmac1ItrigEna0Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dmac1ItrigEna0Clr")
@@ -4712,6 +4726,7 @@ impl Default for Dmac1ItrigEna0Set {
         Dmac1ItrigEna0Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dmac1ItrigEna0Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dmac1ItrigEna0Set")
@@ -4815,6 +4830,7 @@ impl Default for Dmac1ItrigSel {
         Dmac1ItrigSel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dmac1ItrigSel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dmac1ItrigSel")
@@ -4856,6 +4872,7 @@ impl Default for Dmac1OtrigSel {
         Dmac1OtrigSel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dmac1OtrigSel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dmac1OtrigSel")
@@ -5245,6 +5262,7 @@ impl Default for Dmac1ReqEna0 {
         Dmac1ReqEna0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dmac1ReqEna0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dmac1ReqEna0")
@@ -5692,6 +5710,7 @@ impl Default for Dmac1ReqEna0Clr {
         Dmac1ReqEna0Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dmac1ReqEna0Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dmac1ReqEna0Clr")
@@ -6139,6 +6158,7 @@ impl Default for Dmac1ReqEna0Set {
         Dmac1ReqEna0Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dmac1ReqEna0Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dmac1ReqEna0Set")
@@ -6238,6 +6258,7 @@ impl Default for Dmac1ReqEna1 {
         Dmac1ReqEna1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dmac1ReqEna1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dmac1ReqEna1")
@@ -6275,6 +6296,7 @@ impl Default for Dmac1ReqEna1Clr {
         Dmac1ReqEna1Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dmac1ReqEna1Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dmac1ReqEna1Clr")
@@ -6312,6 +6334,7 @@ impl Default for Dmac1ReqEna1Set {
         Dmac1ReqEna1Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dmac1ReqEna1Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dmac1ReqEna1Set")
@@ -6349,6 +6372,7 @@ impl Default for DspIntSel {
         DspIntSel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DspIntSel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DspIntSel")
@@ -6386,6 +6410,7 @@ impl Default for FmeasureChSel {
         FmeasureChSel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FmeasureChSel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FmeasureChSel")
@@ -6427,6 +6452,7 @@ impl Default for PintSel {
         PintSel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PintSel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PintSel")
@@ -6464,6 +6490,7 @@ impl Default for Sct0InSel {
         Sct0InSel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sct0InSel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sct0InSel")

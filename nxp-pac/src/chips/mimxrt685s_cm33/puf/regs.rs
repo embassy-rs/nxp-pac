@@ -58,6 +58,7 @@ impl Default for Allow {
         Allow(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Allow {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Allow")
@@ -117,6 +118,7 @@ impl Default for Cfg {
         Cfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cfg")
@@ -160,6 +162,7 @@ impl Default for Codeinput {
         Codeinput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Codeinput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Codeinput")
@@ -197,6 +200,7 @@ impl Default for Codeoutput {
         Codeoutput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Codeoutput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Codeoutput")
@@ -294,6 +298,7 @@ impl Default for Ctrl {
         Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl")
@@ -441,6 +446,7 @@ impl Default for IdxblkH {
         IdxblkH(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IdxblkH {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IdxblkH")
@@ -582,6 +588,7 @@ impl Default for IdxblkHDp {
         IdxblkHDp(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IdxblkHDp {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IdxblkHDp")
@@ -721,6 +728,7 @@ impl Default for IdxblkL {
         IdxblkL(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IdxblkL {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IdxblkL")
@@ -860,6 +868,7 @@ impl Default for IdxblkLDp {
         IdxblkLDp(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IdxblkLDp {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IdxblkLDp")
@@ -915,6 +924,7 @@ impl Default for Ifstat {
         Ifstat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ifstat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ifstat")
@@ -1024,6 +1034,7 @@ impl Default for Inten {
         Inten(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Inten {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Inten")
@@ -1149,6 +1160,7 @@ impl Default for Intstat {
         Intstat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Intstat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Intstat")
@@ -1238,6 +1250,7 @@ impl Default for Keyenable {
         Keyenable(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Keyenable {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Keyenable")
@@ -1285,6 +1298,7 @@ impl Default for Keyindex {
         Keyindex(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Keyindex {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Keyindex")
@@ -1322,6 +1336,7 @@ impl Default for Keyinput {
         Keyinput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Keyinput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Keyinput")
@@ -1395,6 +1410,7 @@ impl Default for Keylock {
         Keylock(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Keylock {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Keylock")
@@ -1442,6 +1458,7 @@ impl Default for Keymask {
         Keymask(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Keymask {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Keymask")
@@ -1479,6 +1496,7 @@ impl Default for Keyoutindex {
         Keyoutindex(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Keyoutindex {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Keyoutindex")
@@ -1516,6 +1534,7 @@ impl Default for Keyoutput {
         Keyoutput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Keyoutput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Keyoutput")
@@ -1589,6 +1608,7 @@ impl Default for Keyreset {
         Keyreset(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Keyreset {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Keyreset")
@@ -1636,6 +1656,7 @@ impl Default for Keysize {
         Keysize(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Keysize {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Keysize")
@@ -1685,6 +1706,7 @@ impl Default for Pwrctrl {
         Pwrctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pwrctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pwrctrl")
@@ -1800,6 +1822,7 @@ impl Default for Stat {
         Stat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Stat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Stat")
@@ -1853,6 +1876,7 @@ impl Default for Version {
         Version(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Version {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Version")

@@ -22,6 +22,7 @@ impl Default for BmErrorStat {
         BmErrorStat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for BmErrorStat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BmErrorStat")
@@ -59,6 +60,7 @@ impl Default for CrcStat {
         CrcStat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CrcStat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CrcStat")
@@ -276,6 +278,7 @@ impl Default for Ctrl {
         Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl")
@@ -551,6 +554,7 @@ impl Default for Ctrl1 {
         Ctrl1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl1")
@@ -833,6 +837,7 @@ impl Default for Ctrl1Clr {
         Ctrl1Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl1Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl1Clr")
@@ -1115,6 +1120,7 @@ impl Default for Ctrl1Set {
         Ctrl1Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl1Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl1Set")
@@ -1397,6 +1403,7 @@ impl Default for Ctrl1Tog {
         Ctrl1Tog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl1Tog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl1Tog")
@@ -1511,6 +1518,7 @@ impl Default for Ctrl2 {
         Ctrl2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl2")
@@ -1594,6 +1602,7 @@ impl Default for Ctrl2Clr {
         Ctrl2Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl2Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl2Clr")
@@ -1677,6 +1686,7 @@ impl Default for Ctrl2Set {
         Ctrl2Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl2Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl2Set")
@@ -1760,6 +1770,7 @@ impl Default for Ctrl2Tog {
         Ctrl2Tog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl2Tog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl2Tog")
@@ -1987,6 +1998,7 @@ impl Default for CtrlClr {
         CtrlClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CtrlClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CtrlClr")
@@ -2238,6 +2250,7 @@ impl Default for CtrlSet {
         CtrlSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CtrlSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CtrlSet")
@@ -2489,6 +2502,7 @@ impl Default for CtrlTog {
         CtrlTog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CtrlTog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CtrlTog")
@@ -2560,6 +2574,7 @@ impl Default for CurBuf {
         CurBuf(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CurBuf {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CurBuf")
@@ -2597,6 +2612,7 @@ impl Default for Lut0Addr {
         Lut0Addr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lut0Addr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lut0Addr")
@@ -2634,6 +2650,7 @@ impl Default for Lut0Data {
         Lut0Data(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lut0Data {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lut0Data")
@@ -2671,6 +2688,7 @@ impl Default for Lut1Addr {
         Lut1Addr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lut1Addr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lut1Addr")
@@ -2708,6 +2726,7 @@ impl Default for Lut1Data {
         Lut1Data(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lut1Data {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lut1Data")
@@ -2745,6 +2764,7 @@ impl Default for LutCtrl {
         LutCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for LutCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LutCtrl")
@@ -2782,6 +2802,7 @@ impl Default for NextBuf {
         NextBuf(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for NextBuf {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("NextBuf")
@@ -2891,6 +2912,7 @@ impl Default for Pigeon00 {
         Pigeon00(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon00 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon00")
@@ -2956,6 +2978,7 @@ impl Default for Pigeon01 {
         Pigeon01(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon01 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon01")
@@ -3011,6 +3034,7 @@ impl Default for Pigeon02 {
         Pigeon02(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon02 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon02")
@@ -3126,6 +3150,7 @@ impl Default for Pigeon10 {
         Pigeon10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon10")
@@ -3251,6 +3276,7 @@ impl Default for Pigeon100 {
         Pigeon100(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon100 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon100")
@@ -3316,6 +3342,7 @@ impl Default for Pigeon101 {
         Pigeon101(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon101 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon101")
@@ -3371,6 +3398,7 @@ impl Default for Pigeon102 {
         Pigeon102(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon102 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon102")
@@ -3426,6 +3454,7 @@ impl Default for Pigeon11 {
         Pigeon11(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon11 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon11")
@@ -3541,6 +3570,7 @@ impl Default for Pigeon110 {
         Pigeon110(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon110 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon110")
@@ -3606,6 +3636,7 @@ impl Default for Pigeon111 {
         Pigeon111(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon111 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon111")
@@ -3661,6 +3692,7 @@ impl Default for Pigeon112 {
         Pigeon112(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon112 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon112")
@@ -3716,6 +3748,7 @@ impl Default for Pigeon12 {
         Pigeon12(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon12 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon12")
@@ -3831,6 +3864,7 @@ impl Default for Pigeon20 {
         Pigeon20(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon20 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon20")
@@ -3896,6 +3930,7 @@ impl Default for Pigeon21 {
         Pigeon21(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon21 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon21")
@@ -3951,6 +3986,7 @@ impl Default for Pigeon22 {
         Pigeon22(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon22 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon22")
@@ -4066,6 +4102,7 @@ impl Default for Pigeon30 {
         Pigeon30(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon30 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon30")
@@ -4131,6 +4168,7 @@ impl Default for Pigeon31 {
         Pigeon31(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon31 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon31")
@@ -4186,6 +4224,7 @@ impl Default for Pigeon32 {
         Pigeon32(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon32 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon32")
@@ -4301,6 +4340,7 @@ impl Default for Pigeon40 {
         Pigeon40(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon40 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon40")
@@ -4366,6 +4406,7 @@ impl Default for Pigeon41 {
         Pigeon41(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon41 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon41")
@@ -4421,6 +4462,7 @@ impl Default for Pigeon42 {
         Pigeon42(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon42 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon42")
@@ -4536,6 +4578,7 @@ impl Default for Pigeon50 {
         Pigeon50(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon50 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon50")
@@ -4601,6 +4644,7 @@ impl Default for Pigeon51 {
         Pigeon51(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon51 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon51")
@@ -4656,6 +4700,7 @@ impl Default for Pigeon52 {
         Pigeon52(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon52 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon52")
@@ -4771,6 +4816,7 @@ impl Default for Pigeon60 {
         Pigeon60(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon60 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon60")
@@ -4836,6 +4882,7 @@ impl Default for Pigeon61 {
         Pigeon61(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon61 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon61")
@@ -4891,6 +4938,7 @@ impl Default for Pigeon62 {
         Pigeon62(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon62 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon62")
@@ -5006,6 +5054,7 @@ impl Default for Pigeon70 {
         Pigeon70(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon70 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon70")
@@ -5071,6 +5120,7 @@ impl Default for Pigeon71 {
         Pigeon71(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon71 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon71")
@@ -5126,6 +5176,7 @@ impl Default for Pigeon72 {
         Pigeon72(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon72 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon72")
@@ -5241,6 +5292,7 @@ impl Default for Pigeon80 {
         Pigeon80(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon80 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon80")
@@ -5306,6 +5358,7 @@ impl Default for Pigeon81 {
         Pigeon81(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon81 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon81")
@@ -5361,6 +5414,7 @@ impl Default for Pigeon82 {
         Pigeon82(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon82 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon82")
@@ -5476,6 +5530,7 @@ impl Default for Pigeon90 {
         Pigeon90(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon90 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon90")
@@ -5541,6 +5596,7 @@ impl Default for Pigeon91 {
         Pigeon91(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon91 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon91")
@@ -5596,6 +5652,7 @@ impl Default for Pigeon92 {
         Pigeon92(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon92 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeon92")
@@ -5651,6 +5708,7 @@ impl Default for Pigeonctrl0 {
         Pigeonctrl0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeonctrl0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeonctrl0")
@@ -5706,6 +5764,7 @@ impl Default for Pigeonctrl0Clr {
         Pigeonctrl0Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeonctrl0Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeonctrl0Clr")
@@ -5761,6 +5820,7 @@ impl Default for Pigeonctrl0Set {
         Pigeonctrl0Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeonctrl0Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeonctrl0Set")
@@ -5816,6 +5876,7 @@ impl Default for Pigeonctrl0Tog {
         Pigeonctrl0Tog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeonctrl0Tog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeonctrl0Tog")
@@ -5871,6 +5932,7 @@ impl Default for Pigeonctrl1 {
         Pigeonctrl1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeonctrl1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeonctrl1")
@@ -5926,6 +5988,7 @@ impl Default for Pigeonctrl1Clr {
         Pigeonctrl1Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeonctrl1Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeonctrl1Clr")
@@ -5981,6 +6044,7 @@ impl Default for Pigeonctrl1Set {
         Pigeonctrl1Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeonctrl1Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeonctrl1Set")
@@ -6036,6 +6100,7 @@ impl Default for Pigeonctrl1Tog {
         Pigeonctrl1Tog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeonctrl1Tog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeonctrl1Tog")
@@ -6091,6 +6156,7 @@ impl Default for Pigeonctrl2 {
         Pigeonctrl2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeonctrl2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeonctrl2")
@@ -6146,6 +6212,7 @@ impl Default for Pigeonctrl2Clr {
         Pigeonctrl2Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeonctrl2Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeonctrl2Clr")
@@ -6201,6 +6268,7 @@ impl Default for Pigeonctrl2Set {
         Pigeonctrl2Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeonctrl2Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeonctrl2Set")
@@ -6256,6 +6324,7 @@ impl Default for Pigeonctrl2Tog {
         Pigeonctrl2Tog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeonctrl2Tog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pigeonctrl2Tog")
@@ -6371,6 +6440,7 @@ impl Default for Stat {
         Stat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Stat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Stat")
@@ -6436,6 +6506,7 @@ impl Default for TransferCount {
         TransferCount(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TransferCount {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TransferCount")
@@ -6587,6 +6658,7 @@ impl Default for Vdctrl0 {
         Vdctrl0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Vdctrl0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Vdctrl0")
@@ -6754,6 +6826,7 @@ impl Default for Vdctrl0Clr {
         Vdctrl0Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Vdctrl0Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Vdctrl0Clr")
@@ -6921,6 +6994,7 @@ impl Default for Vdctrl0Set {
         Vdctrl0Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Vdctrl0Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Vdctrl0Set")
@@ -7088,6 +7162,7 @@ impl Default for Vdctrl0Tog {
         Vdctrl0Tog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Vdctrl0Tog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Vdctrl0Tog")
@@ -7147,6 +7222,7 @@ impl Default for Vdctrl1 {
         Vdctrl1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Vdctrl1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Vdctrl1")
@@ -7200,6 +7276,7 @@ impl Default for Vdctrl2 {
         Vdctrl2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Vdctrl2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Vdctrl2")
@@ -7279,6 +7356,7 @@ impl Default for Vdctrl3 {
         Vdctrl3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Vdctrl3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Vdctrl3")
@@ -7350,6 +7428,7 @@ impl Default for Vdctrl4 {
         Vdctrl4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Vdctrl4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Vdctrl4")

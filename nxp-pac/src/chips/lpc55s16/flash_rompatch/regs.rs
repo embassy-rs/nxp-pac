@@ -58,6 +58,7 @@ impl Default for Header {
         Header(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Header {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Header")
@@ -105,6 +106,7 @@ impl Default for Patch {
         Patch(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Patch {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Patch")

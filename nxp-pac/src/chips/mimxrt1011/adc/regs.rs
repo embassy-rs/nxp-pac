@@ -22,6 +22,7 @@ impl Default for Cal {
         Cal(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cal {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cal")
@@ -179,6 +180,7 @@ impl Default for Cfg {
         Cfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cfg")
@@ -252,6 +254,7 @@ impl Default for Cv {
         Cv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cv")
@@ -379,6 +382,7 @@ impl Default for Gc {
         Gc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gc")
@@ -458,6 +462,7 @@ impl Default for Gs {
         Gs(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gs {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gs")
@@ -515,6 +520,7 @@ impl Default for Hc {
         Hc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hc")
@@ -570,6 +576,7 @@ impl Default for Hc0 {
         Hc0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hc0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hc0")
@@ -697,6 +704,7 @@ impl Default for Hs {
         Hs(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hs {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hs")
@@ -764,6 +772,7 @@ impl Default for Ofs {
         Ofs(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ofs {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ofs")
@@ -807,6 +816,7 @@ impl Default for R {
         R(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("R").field("cdata", &self.cdata()).finish()
@@ -842,6 +852,7 @@ impl Default for R0 {
         R0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for R0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("R0").field("cdata", &self.cdata()).finish()

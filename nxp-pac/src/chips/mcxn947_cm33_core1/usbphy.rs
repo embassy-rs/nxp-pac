@@ -1,4 +1,4 @@
-#[doc = "USBPHY."]
+#[doc = "Universal Serial Bus 2.0 Integrated PHY."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Usbphy {
     ptr: *mut u8,

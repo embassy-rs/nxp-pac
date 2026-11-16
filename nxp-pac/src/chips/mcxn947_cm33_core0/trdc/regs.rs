@@ -202,6 +202,7 @@ impl Default for Mbc0Dom0Mem0BlkCfgW0 {
         Mbc0Dom0Mem0BlkCfgW0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mbc0Dom0Mem0BlkCfgW0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mbc0Dom0Mem0BlkCfgW0")
@@ -453,6 +454,7 @@ impl Default for Mbc0Dom0Mem0BlkCfgW1 {
         Mbc0Dom0Mem0BlkCfgW1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mbc0Dom0Mem0BlkCfgW1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mbc0Dom0Mem0BlkCfgW1")
@@ -704,6 +706,7 @@ impl Default for Mbc0Dom0Mem0BlkCfgW2 {
         Mbc0Dom0Mem0BlkCfgW2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mbc0Dom0Mem0BlkCfgW2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mbc0Dom0Mem0BlkCfgW2")
@@ -955,6 +958,7 @@ impl Default for Mbc0Dom0Mem0BlkCfgW3 {
         Mbc0Dom0Mem0BlkCfgW3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mbc0Dom0Mem0BlkCfgW3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mbc0Dom0Mem0BlkCfgW3")
@@ -1206,6 +1210,7 @@ impl Default for Mbc0Dom0Mem0BlkCfgW4 {
         Mbc0Dom0Mem0BlkCfgW4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mbc0Dom0Mem0BlkCfgW4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mbc0Dom0Mem0BlkCfgW4")
@@ -1457,6 +1462,7 @@ impl Default for Mbc0Dom0Mem0BlkCfgW5 {
         Mbc0Dom0Mem0BlkCfgW5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mbc0Dom0Mem0BlkCfgW5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mbc0Dom0Mem0BlkCfgW5")
@@ -1708,6 +1714,7 @@ impl Default for Mbc0Dom0Mem0BlkCfgW6 {
         Mbc0Dom0Mem0BlkCfgW6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mbc0Dom0Mem0BlkCfgW6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mbc0Dom0Mem0BlkCfgW6")
@@ -1959,6 +1966,7 @@ impl Default for Mbc0Dom0Mem0BlkCfgW7 {
         Mbc0Dom0Mem0BlkCfgW7(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mbc0Dom0Mem0BlkCfgW7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mbc0Dom0Mem0BlkCfgW7")
@@ -2402,6 +2410,7 @@ impl Default for Mbc0Dom0Mem0BlkNseW0 {
         Mbc0Dom0Mem0BlkNseW0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mbc0Dom0Mem0BlkNseW0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mbc0Dom0Mem0BlkNseW0")
@@ -2877,6 +2886,7 @@ impl Default for Mbc0Dom0Mem0BlkNseW1 {
         Mbc0Dom0Mem0BlkNseW1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mbc0Dom0Mem0BlkNseW1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mbc0Dom0Mem0BlkNseW1")
@@ -3160,6 +3170,7 @@ impl Default for Mbc0Dom0Mem1BlkCfgW0 {
         Mbc0Dom0Mem1BlkCfgW0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mbc0Dom0Mem1BlkCfgW0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mbc0Dom0Mem1BlkCfgW0")
@@ -3603,6 +3614,7 @@ impl Default for Mbc0Dom0Mem1BlkNseW0 {
         Mbc0Dom0Mem1BlkNseW0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mbc0Dom0Mem1BlkNseW0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mbc0Dom0Mem1BlkNseW0")
@@ -3886,6 +3898,7 @@ impl Default for Mbc0Dom0Mem2BlkCfgW0 {
         Mbc0Dom0Mem2BlkCfgW0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mbc0Dom0Mem2BlkCfgW0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mbc0Dom0Mem2BlkCfgW0")
@@ -4329,6 +4342,7 @@ impl Default for Mbc0Dom0Mem2BlkNseW0 {
         Mbc0Dom0Mem2BlkNseW0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mbc0Dom0Mem2BlkNseW0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mbc0Dom0Mem2BlkNseW0")
@@ -4444,6 +4458,7 @@ impl Default for Mbc0Mem0Glbcfg {
         Mbc0Mem0Glbcfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mbc0Mem0Glbcfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mbc0Mem0Glbcfg")
@@ -4499,6 +4514,7 @@ impl Default for Mbc0Mem1Glbcfg {
         Mbc0Mem1Glbcfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mbc0Mem1Glbcfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mbc0Mem1Glbcfg")
@@ -4554,6 +4570,7 @@ impl Default for Mbc0Mem2Glbcfg {
         Mbc0Mem2Glbcfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mbc0Mem2Glbcfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mbc0Mem2Glbcfg")
@@ -4621,6 +4638,7 @@ impl Default for Mbc0Mem3Glbcfg {
         Mbc0Mem3Glbcfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mbc0Mem3Glbcfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mbc0Mem3Glbcfg")
@@ -4798,6 +4816,7 @@ impl Default for Mbc0MemnGlbac0 {
         Mbc0MemnGlbac0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mbc0MemnGlbac0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mbc0MemnGlbac0")
@@ -5005,6 +5024,7 @@ impl Default for Mbc0MemnGlbac1 {
         Mbc0MemnGlbac1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mbc0MemnGlbac1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mbc0MemnGlbac1")
@@ -5214,6 +5234,7 @@ impl Default for Mbc0MemnGlbac2 {
         Mbc0MemnGlbac2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mbc0MemnGlbac2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mbc0MemnGlbac2")
@@ -5423,6 +5444,7 @@ impl Default for Mbc0MemnGlbac3 {
         Mbc0MemnGlbac3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mbc0MemnGlbac3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mbc0MemnGlbac3")
@@ -5632,6 +5654,7 @@ impl Default for Mbc0MemnGlbac4 {
         Mbc0MemnGlbac4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mbc0MemnGlbac4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mbc0MemnGlbac4")
@@ -5841,6 +5864,7 @@ impl Default for Mbc0MemnGlbac5 {
         Mbc0MemnGlbac5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mbc0MemnGlbac5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mbc0MemnGlbac5")
@@ -6050,6 +6074,7 @@ impl Default for Mbc0MemnGlbac6 {
         Mbc0MemnGlbac6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mbc0MemnGlbac6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mbc0MemnGlbac6")
@@ -6259,6 +6284,7 @@ impl Default for Mbc0MemnGlbac7 {
         Mbc0MemnGlbac7(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mbc0MemnGlbac7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mbc0MemnGlbac7")
@@ -6324,6 +6350,7 @@ impl Default for Mbc0NseBlkClr {
         Mbc0NseBlkClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mbc0NseBlkClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mbc0NseBlkClr")
@@ -6373,6 +6400,7 @@ impl Default for Mbc0NseBlkClrAll {
         Mbc0NseBlkClrAll(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mbc0NseBlkClrAll {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mbc0NseBlkClrAll")
@@ -6452,6 +6480,7 @@ impl Default for Mbc0NseBlkIndex {
         Mbc0NseBlkIndex(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mbc0NseBlkIndex {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mbc0NseBlkIndex")
@@ -6499,6 +6528,7 @@ impl Default for Mbc0NseBlkSet {
         Mbc0NseBlkSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mbc0NseBlkSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mbc0NseBlkSet")

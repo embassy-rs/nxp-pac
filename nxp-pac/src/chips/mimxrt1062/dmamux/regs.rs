@@ -58,6 +58,7 @@ impl Default for Chcfg {
         Chcfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Chcfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Chcfg")

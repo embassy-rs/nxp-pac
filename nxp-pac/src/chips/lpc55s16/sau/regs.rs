@@ -34,6 +34,7 @@ impl Default for Ctrl {
         Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl")
@@ -77,6 +78,7 @@ impl Default for Rbar {
         Rbar(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Rbar {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Rbar")
@@ -138,6 +140,7 @@ impl Default for Rlar {
         Rlar(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Rlar {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Rlar")
@@ -183,6 +186,7 @@ impl Default for Rnr {
         Rnr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Rnr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Rnr")
@@ -220,6 +224,7 @@ impl Default for Sfar {
         Sfar(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sfar {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sfar")
@@ -341,6 +346,7 @@ impl Default for Sfsr {
         Sfsr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sfsr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sfsr")
@@ -396,6 +402,7 @@ impl Default for Type {
         Type(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Type {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Type")

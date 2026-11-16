@@ -22,6 +22,7 @@ impl Default for AppCtxMask {
         AppCtxMask(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AppCtxMask {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AppCtxMask")
@@ -159,6 +160,7 @@ impl Default for Config {
         Config(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Config {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Config")
@@ -243,6 +245,7 @@ impl Default for SecLock {
         SecLock(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecLock {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecLock")

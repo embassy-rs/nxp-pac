@@ -46,6 +46,7 @@ impl Default for Cntr {
         Cntr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cntr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cntr")
@@ -91,6 +92,7 @@ impl Default for Imr1 {
         Imr1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Imr1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Imr1").field("imr1", &self.imr1()).finish()
@@ -126,6 +128,7 @@ impl Default for Imr2 {
         Imr2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Imr2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Imr2").field("imr2", &self.imr2()).finish()
@@ -161,6 +164,7 @@ impl Default for Imr3 {
         Imr3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Imr3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Imr3").field("imr3", &self.imr3()).finish()
@@ -196,6 +200,7 @@ impl Default for Imr4 {
         Imr4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Imr4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Imr4").field("imr4", &self.imr4()).finish()
@@ -231,6 +236,7 @@ impl Default for Imr5 {
         Imr5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Imr5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Imr5").field("imr5", &self.imr5()).finish()
@@ -266,6 +272,7 @@ impl Default for Isr1 {
         Isr1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Isr1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Isr1").field("isr1", &self.isr1()).finish()
@@ -301,6 +308,7 @@ impl Default for Isr2 {
         Isr2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Isr2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Isr2").field("isr2", &self.isr2()).finish()
@@ -336,6 +344,7 @@ impl Default for Isr3 {
         Isr3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Isr3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Isr3").field("isr3", &self.isr3()).finish()
@@ -371,6 +380,7 @@ impl Default for Isr4 {
         Isr4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Isr4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Isr4").field("isr4", &self.isr4()).finish()
@@ -406,6 +416,7 @@ impl Default for Isr5 {
         Isr5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Isr5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Isr5").field("isr5", &self.isr5()).finish()

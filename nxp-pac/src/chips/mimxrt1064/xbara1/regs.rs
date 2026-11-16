@@ -106,6 +106,7 @@ impl Default for Ctrl0 {
         Ctrl0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl0")
@@ -245,6 +246,7 @@ impl Default for Ctrl1 {
         Ctrl1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl1")
@@ -312,6 +314,7 @@ impl Default for Sel0 {
         Sel0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel0")
@@ -367,6 +370,7 @@ impl Default for Sel1 {
         Sel1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel1")
@@ -422,6 +426,7 @@ impl Default for Sel10 {
         Sel10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel10")
@@ -477,6 +482,7 @@ impl Default for Sel11 {
         Sel11(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel11 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel11")
@@ -532,6 +538,7 @@ impl Default for Sel12 {
         Sel12(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel12 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel12")
@@ -587,6 +594,7 @@ impl Default for Sel13 {
         Sel13(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel13 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel13")
@@ -642,6 +650,7 @@ impl Default for Sel14 {
         Sel14(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel14 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel14")
@@ -697,6 +706,7 @@ impl Default for Sel15 {
         Sel15(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel15 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel15")
@@ -752,6 +762,7 @@ impl Default for Sel16 {
         Sel16(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel16 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel16")
@@ -807,6 +818,7 @@ impl Default for Sel17 {
         Sel17(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel17 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel17")
@@ -862,6 +874,7 @@ impl Default for Sel18 {
         Sel18(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel18 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel18")
@@ -917,6 +930,7 @@ impl Default for Sel19 {
         Sel19(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel19 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel19")
@@ -972,6 +986,7 @@ impl Default for Sel2 {
         Sel2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel2")
@@ -1027,6 +1042,7 @@ impl Default for Sel20 {
         Sel20(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel20 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel20")
@@ -1082,6 +1098,7 @@ impl Default for Sel21 {
         Sel21(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel21 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel21")
@@ -1137,6 +1154,7 @@ impl Default for Sel22 {
         Sel22(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel22 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel22")
@@ -1192,6 +1210,7 @@ impl Default for Sel23 {
         Sel23(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel23 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel23")
@@ -1247,6 +1266,7 @@ impl Default for Sel24 {
         Sel24(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel24 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel24")
@@ -1302,6 +1322,7 @@ impl Default for Sel25 {
         Sel25(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel25 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel25")
@@ -1357,6 +1378,7 @@ impl Default for Sel26 {
         Sel26(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel26 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel26")
@@ -1412,6 +1434,7 @@ impl Default for Sel27 {
         Sel27(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel27 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel27")
@@ -1467,6 +1490,7 @@ impl Default for Sel28 {
         Sel28(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel28 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel28")
@@ -1522,6 +1546,7 @@ impl Default for Sel29 {
         Sel29(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel29 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel29")
@@ -1577,6 +1602,7 @@ impl Default for Sel3 {
         Sel3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel3")
@@ -1632,6 +1658,7 @@ impl Default for Sel30 {
         Sel30(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel30 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel30")
@@ -1687,6 +1714,7 @@ impl Default for Sel31 {
         Sel31(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel31 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel31")
@@ -1742,6 +1770,7 @@ impl Default for Sel32 {
         Sel32(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel32 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel32")
@@ -1797,6 +1826,7 @@ impl Default for Sel33 {
         Sel33(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel33 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel33")
@@ -1852,6 +1882,7 @@ impl Default for Sel34 {
         Sel34(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel34 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel34")
@@ -1907,6 +1938,7 @@ impl Default for Sel35 {
         Sel35(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel35 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel35")
@@ -1962,6 +1994,7 @@ impl Default for Sel36 {
         Sel36(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel36 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel36")
@@ -2017,6 +2050,7 @@ impl Default for Sel37 {
         Sel37(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel37 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel37")
@@ -2072,6 +2106,7 @@ impl Default for Sel38 {
         Sel38(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel38 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel38")
@@ -2127,6 +2162,7 @@ impl Default for Sel39 {
         Sel39(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel39 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel39")
@@ -2182,6 +2218,7 @@ impl Default for Sel4 {
         Sel4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel4")
@@ -2237,6 +2274,7 @@ impl Default for Sel40 {
         Sel40(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel40 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel40")
@@ -2292,6 +2330,7 @@ impl Default for Sel41 {
         Sel41(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel41 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel41")
@@ -2347,6 +2386,7 @@ impl Default for Sel42 {
         Sel42(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel42 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel42")
@@ -2402,6 +2442,7 @@ impl Default for Sel43 {
         Sel43(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel43 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel43")
@@ -2457,6 +2498,7 @@ impl Default for Sel44 {
         Sel44(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel44 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel44")
@@ -2512,6 +2554,7 @@ impl Default for Sel45 {
         Sel45(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel45 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel45")
@@ -2567,6 +2610,7 @@ impl Default for Sel46 {
         Sel46(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel46 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel46")
@@ -2622,6 +2666,7 @@ impl Default for Sel47 {
         Sel47(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel47 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel47")
@@ -2677,6 +2722,7 @@ impl Default for Sel48 {
         Sel48(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel48 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel48")
@@ -2732,6 +2778,7 @@ impl Default for Sel49 {
         Sel49(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel49 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel49")
@@ -2787,6 +2834,7 @@ impl Default for Sel5 {
         Sel5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel5")
@@ -2842,6 +2890,7 @@ impl Default for Sel50 {
         Sel50(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel50 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel50")
@@ -2897,6 +2946,7 @@ impl Default for Sel51 {
         Sel51(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel51 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel51")
@@ -2952,6 +3002,7 @@ impl Default for Sel52 {
         Sel52(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel52 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel52")
@@ -3007,6 +3058,7 @@ impl Default for Sel53 {
         Sel53(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel53 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel53")
@@ -3062,6 +3114,7 @@ impl Default for Sel54 {
         Sel54(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel54 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel54")
@@ -3117,6 +3170,7 @@ impl Default for Sel55 {
         Sel55(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel55 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel55")
@@ -3172,6 +3226,7 @@ impl Default for Sel56 {
         Sel56(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel56 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel56")
@@ -3227,6 +3282,7 @@ impl Default for Sel57 {
         Sel57(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel57 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel57")
@@ -3282,6 +3338,7 @@ impl Default for Sel58 {
         Sel58(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel58 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel58")
@@ -3337,6 +3394,7 @@ impl Default for Sel59 {
         Sel59(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel59 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel59")
@@ -3392,6 +3450,7 @@ impl Default for Sel6 {
         Sel6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel6")
@@ -3447,6 +3506,7 @@ impl Default for Sel60 {
         Sel60(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel60 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel60")
@@ -3502,6 +3562,7 @@ impl Default for Sel61 {
         Sel61(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel61 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel61")
@@ -3557,6 +3618,7 @@ impl Default for Sel62 {
         Sel62(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel62 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel62")
@@ -3612,6 +3674,7 @@ impl Default for Sel63 {
         Sel63(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel63 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel63")
@@ -3667,6 +3730,7 @@ impl Default for Sel64 {
         Sel64(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel64 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel64")
@@ -3722,6 +3786,7 @@ impl Default for Sel65 {
         Sel65(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel65 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel65")
@@ -3777,6 +3842,7 @@ impl Default for Sel7 {
         Sel7(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel7")
@@ -3832,6 +3898,7 @@ impl Default for Sel8 {
         Sel8(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel8")
@@ -3887,6 +3954,7 @@ impl Default for Sel9 {
         Sel9(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sel9 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sel9")

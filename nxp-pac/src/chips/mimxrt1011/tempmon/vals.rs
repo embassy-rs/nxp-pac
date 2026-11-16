@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tempsense0ClrMeasureTemp {
     #[doc = "Do not start the measurement process."]
@@ -30,7 +31,8 @@ impl From<Tempsense0ClrMeasureTemp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tempsense0ClrPowerDown {
     #[doc = "Enable power to the temperature sensor."]
@@ -61,7 +63,8 @@ impl From<Tempsense0ClrPowerDown> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tempsense0MeasureTemp {
     #[doc = "Do not start the measurement process."]
@@ -92,7 +95,8 @@ impl From<Tempsense0MeasureTemp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tempsense0PowerDown {
     #[doc = "Enable power to the temperature sensor."]
@@ -123,7 +127,8 @@ impl From<Tempsense0PowerDown> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tempsense0SetMeasureTemp {
     #[doc = "Do not start the measurement process."]
@@ -154,7 +159,8 @@ impl From<Tempsense0SetMeasureTemp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tempsense0SetPowerDown {
     #[doc = "Enable power to the temperature sensor."]
@@ -185,7 +191,8 @@ impl From<Tempsense0SetPowerDown> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tempsense0TogMeasureTemp {
     #[doc = "Do not start the measurement process."]
@@ -216,7 +223,8 @@ impl From<Tempsense0TogMeasureTemp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tempsense0TogPowerDown {
     #[doc = "Enable power to the temperature sensor."]
@@ -244,5 +252,233 @@ impl From<Tempsense0TogPowerDown> for u8 {
     #[inline(always)]
     fn from(val: Tempsense0TogPowerDown) -> u8 {
         Tempsense0TogPowerDown::to_bits(val)
+    }
+}
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Tempsense1ClrMeasureFreq(u16);
+impl Tempsense1ClrMeasureFreq {
+    #[doc = "Defines a single measurement with no repeat."]
+    pub const MeasureFreq0: Self = Self(0x0);
+    #[doc = "Updates the temperature value at a RTC clock rate."]
+    pub const MeasureFreq1: Self = Self(0x01);
+    #[doc = "Updates the temperature value at a RTC/2 clock rate."]
+    pub const MeasureFreq2: Self = Self(0x02);
+    #[doc = "Determines a two second sample period with a 32.768KHz RTC clock. Exact timings depend on the accuracy of the RTC clock."]
+    pub const MeasureFreq65535: Self = Self(0xffff);
+}
+impl Tempsense1ClrMeasureFreq {
+    pub const fn from_bits(val: u16) -> Tempsense1ClrMeasureFreq {
+        Self(val & 0xffff)
+    }
+    pub const fn to_bits(self) -> u16 {
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Tempsense1ClrMeasureFreq {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("MeasureFreq0"),
+            0x01 => f.write_str("MeasureFreq1"),
+            0x02 => f.write_str("MeasureFreq2"),
+            0xffff => f.write_str("MeasureFreq65535"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Tempsense1ClrMeasureFreq {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "MeasureFreq0"),
+            0x01 => defmt::write!(f, "MeasureFreq1"),
+            0x02 => defmt::write!(f, "MeasureFreq2"),
+            0xffff => defmt::write!(f, "MeasureFreq65535"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+impl From<u16> for Tempsense1ClrMeasureFreq {
+    #[inline(always)]
+    fn from(val: u16) -> Tempsense1ClrMeasureFreq {
+        Tempsense1ClrMeasureFreq::from_bits(val)
+    }
+}
+impl From<Tempsense1ClrMeasureFreq> for u16 {
+    #[inline(always)]
+    fn from(val: Tempsense1ClrMeasureFreq) -> u16 {
+        Tempsense1ClrMeasureFreq::to_bits(val)
+    }
+}
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Tempsense1MeasureFreq(u16);
+impl Tempsense1MeasureFreq {
+    #[doc = "Defines a single measurement with no repeat."]
+    pub const MeasureFreq0: Self = Self(0x0);
+    #[doc = "Updates the temperature value at a RTC clock rate."]
+    pub const MeasureFreq1: Self = Self(0x01);
+    #[doc = "Updates the temperature value at a RTC/2 clock rate."]
+    pub const MeasureFreq2: Self = Self(0x02);
+    #[doc = "Determines a two second sample period with a 32.768KHz RTC clock. Exact timings depend on the accuracy of the RTC clock."]
+    pub const MeasureFreq65535: Self = Self(0xffff);
+}
+impl Tempsense1MeasureFreq {
+    pub const fn from_bits(val: u16) -> Tempsense1MeasureFreq {
+        Self(val & 0xffff)
+    }
+    pub const fn to_bits(self) -> u16 {
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Tempsense1MeasureFreq {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("MeasureFreq0"),
+            0x01 => f.write_str("MeasureFreq1"),
+            0x02 => f.write_str("MeasureFreq2"),
+            0xffff => f.write_str("MeasureFreq65535"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Tempsense1MeasureFreq {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "MeasureFreq0"),
+            0x01 => defmt::write!(f, "MeasureFreq1"),
+            0x02 => defmt::write!(f, "MeasureFreq2"),
+            0xffff => defmt::write!(f, "MeasureFreq65535"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+impl From<u16> for Tempsense1MeasureFreq {
+    #[inline(always)]
+    fn from(val: u16) -> Tempsense1MeasureFreq {
+        Tempsense1MeasureFreq::from_bits(val)
+    }
+}
+impl From<Tempsense1MeasureFreq> for u16 {
+    #[inline(always)]
+    fn from(val: Tempsense1MeasureFreq) -> u16 {
+        Tempsense1MeasureFreq::to_bits(val)
+    }
+}
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Tempsense1SetMeasureFreq(u16);
+impl Tempsense1SetMeasureFreq {
+    #[doc = "Defines a single measurement with no repeat."]
+    pub const MeasureFreq0: Self = Self(0x0);
+    #[doc = "Updates the temperature value at a RTC clock rate."]
+    pub const MeasureFreq1: Self = Self(0x01);
+    #[doc = "Updates the temperature value at a RTC/2 clock rate."]
+    pub const MeasureFreq2: Self = Self(0x02);
+    #[doc = "Determines a two second sample period with a 32.768KHz RTC clock. Exact timings depend on the accuracy of the RTC clock."]
+    pub const MeasureFreq65535: Self = Self(0xffff);
+}
+impl Tempsense1SetMeasureFreq {
+    pub const fn from_bits(val: u16) -> Tempsense1SetMeasureFreq {
+        Self(val & 0xffff)
+    }
+    pub const fn to_bits(self) -> u16 {
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Tempsense1SetMeasureFreq {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("MeasureFreq0"),
+            0x01 => f.write_str("MeasureFreq1"),
+            0x02 => f.write_str("MeasureFreq2"),
+            0xffff => f.write_str("MeasureFreq65535"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Tempsense1SetMeasureFreq {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "MeasureFreq0"),
+            0x01 => defmt::write!(f, "MeasureFreq1"),
+            0x02 => defmt::write!(f, "MeasureFreq2"),
+            0xffff => defmt::write!(f, "MeasureFreq65535"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+impl From<u16> for Tempsense1SetMeasureFreq {
+    #[inline(always)]
+    fn from(val: u16) -> Tempsense1SetMeasureFreq {
+        Tempsense1SetMeasureFreq::from_bits(val)
+    }
+}
+impl From<Tempsense1SetMeasureFreq> for u16 {
+    #[inline(always)]
+    fn from(val: Tempsense1SetMeasureFreq) -> u16 {
+        Tempsense1SetMeasureFreq::to_bits(val)
+    }
+}
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct Tempsense1TogMeasureFreq(u16);
+impl Tempsense1TogMeasureFreq {
+    #[doc = "Defines a single measurement with no repeat."]
+    pub const MeasureFreq0: Self = Self(0x0);
+    #[doc = "Updates the temperature value at a RTC clock rate."]
+    pub const MeasureFreq1: Self = Self(0x01);
+    #[doc = "Updates the temperature value at a RTC/2 clock rate."]
+    pub const MeasureFreq2: Self = Self(0x02);
+    #[doc = "Determines a two second sample period with a 32.768KHz RTC clock. Exact timings depend on the accuracy of the RTC clock."]
+    pub const MeasureFreq65535: Self = Self(0xffff);
+}
+impl Tempsense1TogMeasureFreq {
+    pub const fn from_bits(val: u16) -> Tempsense1TogMeasureFreq {
+        Self(val & 0xffff)
+    }
+    pub const fn to_bits(self) -> u16 {
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Tempsense1TogMeasureFreq {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("MeasureFreq0"),
+            0x01 => f.write_str("MeasureFreq1"),
+            0x02 => f.write_str("MeasureFreq2"),
+            0xffff => f.write_str("MeasureFreq65535"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Tempsense1TogMeasureFreq {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "MeasureFreq0"),
+            0x01 => defmt::write!(f, "MeasureFreq1"),
+            0x02 => defmt::write!(f, "MeasureFreq2"),
+            0xffff => defmt::write!(f, "MeasureFreq65535"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+impl From<u16> for Tempsense1TogMeasureFreq {
+    #[inline(always)]
+    fn from(val: u16) -> Tempsense1TogMeasureFreq {
+        Tempsense1TogMeasureFreq::from_bits(val)
+    }
+}
+impl From<Tempsense1TogMeasureFreq> for u16 {
+    #[inline(always)]
+    fn from(val: Tempsense1TogMeasureFreq) -> u16 {
+        Tempsense1TogMeasureFreq::to_bits(val)
     }
 }

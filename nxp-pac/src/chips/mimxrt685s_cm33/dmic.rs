@@ -102,14 +102,14 @@ impl Dmic {
     pub const fn global_sync_en(self) -> crate::common::Reg<regs::GlobalSyncEn, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0f14usize) as _) }
     }
-    #[doc = "no description available."]
+    #[doc = "Global channel synchronization counter value."]
     #[inline(always)]
     pub const fn global_count_val(
         self,
     ) -> crate::common::Reg<regs::GlobalCountVal, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0f18usize) as _) }
     }
-    #[doc = "no description available."]
+    #[doc = "DMIC decimator reset."]
     #[inline(always)]
     pub const fn decreset(self) -> crate::common::Reg<regs::Decreset, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0f1cusize) as _) }

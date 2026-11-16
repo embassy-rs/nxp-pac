@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dma0ItrigInmuxInp {
     #[doc = "Pin interrupt 0."]
@@ -47,25 +48,25 @@ pub enum Dma0ItrigInmuxInp {
     #[doc = "HASH DMA RX trigger."]
     Val21 = 0x15,
     #[doc = "None."]
-    Val22_16 = 0x16,
+    Val2222 = 0x16,
     #[doc = "None."]
-    Val22_17 = 0x17,
+    Val2223 = 0x17,
     #[doc = "None."]
-    Val22_18 = 0x18,
+    Val2224 = 0x18,
     #[doc = "None."]
-    Val22_19 = 0x19,
+    Val2225 = 0x19,
     #[doc = "None."]
-    Val22_1a = 0x1a,
+    Val2226 = 0x1a,
     #[doc = "None."]
-    Val22_1b = 0x1b,
+    Val2227 = 0x1b,
     #[doc = "None."]
-    Val22_1c = 0x1c,
+    Val2228 = 0x1c,
     #[doc = "None."]
-    Val22_1d = 0x1d,
+    Val2229 = 0x1d,
     #[doc = "None."]
-    Val22_1e = 0x1e,
+    Val2230 = 0x1e,
     #[doc = "None."]
-    Val22_1f = 0x1f,
+    Val2231 = 0x1f,
 }
 impl Dma0ItrigInmuxInp {
     #[inline(always)]
@@ -90,7 +91,8 @@ impl From<Dma0ItrigInmuxInp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dma1ItrigInmuxInp {
     #[doc = "Pin interrupt 0."]
@@ -149,7 +151,8 @@ impl From<Dma1ItrigInmuxInp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FreqmeasRefClkin {
     #[doc = "External main crystal oscilator (Clock_in)."]
@@ -216,7 +219,8 @@ impl From<FreqmeasRefClkin> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FreqmeasTargetClkin {
     #[doc = "External main crystal oscilator (Clock_in)."]
@@ -283,7 +287,8 @@ impl From<FreqmeasTargetClkin> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum InpN {
     #[doc = "SCT_GPI0 function selected from IOCON register."]
@@ -335,21 +340,21 @@ pub enum InpN {
     #[doc = "DEBUG_HALTED from cpu0 or cpu1."]
     Val23 = 0x17,
     #[doc = "None."]
-    Val24_18 = 0x18,
+    Val2424 = 0x18,
     #[doc = "None."]
-    Val24_19 = 0x19,
+    Val2425 = 0x19,
     #[doc = "None."]
-    Val24_1a = 0x1a,
+    Val2426 = 0x1a,
     #[doc = "None."]
-    Val24_1b = 0x1b,
+    Val2427 = 0x1b,
     #[doc = "None."]
-    Val24_1c = 0x1c,
+    Val2428 = 0x1c,
     #[doc = "None."]
-    Val24_1d = 0x1d,
+    Val2429 = 0x1d,
     #[doc = "None."]
-    Val24_1e = 0x1e,
+    Val2430 = 0x1e,
     #[doc = "None."]
-    Val24_1f = 0x1f,
+    Val2431 = 0x1f,
 }
 impl InpN {
     #[inline(always)]
@@ -374,7 +379,8 @@ impl From<InpN> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Timer0captselCaptsel {
     #[doc = "CT_INP0 function selected from IOCON register."]
@@ -428,19 +434,19 @@ pub enum Timer0captselCaptsel {
     #[doc = "I2S_SHARED_WS\\[1\\] output from I2S pin sharing."]
     Val24 = 0x18,
     #[doc = "None."]
-    Val25_19 = 0x19,
+    Val2525 = 0x19,
     #[doc = "None."]
-    Val25_1a = 0x1a,
+    Val2526 = 0x1a,
     #[doc = "None."]
-    Val25_1b = 0x1b,
+    Val2527 = 0x1b,
     #[doc = "None."]
-    Val25_1c = 0x1c,
+    Val2528 = 0x1c,
     #[doc = "None."]
-    Val25_1d = 0x1d,
+    Val2529 = 0x1d,
     #[doc = "None."]
-    Val25_1e = 0x1e,
+    Val2530 = 0x1e,
     #[doc = "None."]
-    Val25_1f = 0x1f,
+    Val2531 = 0x1f,
 }
 impl Timer0captselCaptsel {
     #[inline(always)]
@@ -465,7 +471,8 @@ impl From<Timer0captselCaptsel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Timer1captselCaptsel {
     #[doc = "CT_INP0 function selected from IOCON register."]
@@ -519,19 +526,19 @@ pub enum Timer1captselCaptsel {
     #[doc = "I2S_SHARED_WS\\[1\\] output from I2S pin sharing."]
     Val24 = 0x18,
     #[doc = "None."]
-    Val25_19 = 0x19,
+    Val2525 = 0x19,
     #[doc = "None."]
-    Val25_1a = 0x1a,
+    Val2526 = 0x1a,
     #[doc = "None."]
-    Val25_1b = 0x1b,
+    Val2527 = 0x1b,
     #[doc = "None."]
-    Val25_1c = 0x1c,
+    Val2528 = 0x1c,
     #[doc = "None."]
-    Val25_1d = 0x1d,
+    Val2529 = 0x1d,
     #[doc = "None."]
-    Val25_1e = 0x1e,
+    Val2530 = 0x1e,
     #[doc = "None."]
-    Val25_1f = 0x1f,
+    Val2531 = 0x1f,
 }
 impl Timer1captselCaptsel {
     #[inline(always)]
@@ -556,7 +563,8 @@ impl From<Timer1captselCaptsel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Timer2captselCaptsel {
     #[doc = "CT_INP0 function selected from IOCON register."]
@@ -610,19 +618,19 @@ pub enum Timer2captselCaptsel {
     #[doc = "I2S_SHARED_WS\\[1\\] output from I2S pin sharing."]
     Val24 = 0x18,
     #[doc = "None."]
-    Val25_19 = 0x19,
+    Val2525 = 0x19,
     #[doc = "None."]
-    Val25_1a = 0x1a,
+    Val2526 = 0x1a,
     #[doc = "None."]
-    Val25_1b = 0x1b,
+    Val2527 = 0x1b,
     #[doc = "None."]
-    Val25_1c = 0x1c,
+    Val2528 = 0x1c,
     #[doc = "None."]
-    Val25_1d = 0x1d,
+    Val2529 = 0x1d,
     #[doc = "None."]
-    Val25_1e = 0x1e,
+    Val2530 = 0x1e,
     #[doc = "None."]
-    Val25_1f = 0x1f,
+    Val2531 = 0x1f,
 }
 impl Timer2captselCaptsel {
     #[inline(always)]
@@ -647,7 +655,8 @@ impl From<Timer2captselCaptsel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Timer3captselCaptsel {
     #[doc = "CT_INP0 function selected from IOCON register."]
@@ -701,19 +710,19 @@ pub enum Timer3captselCaptsel {
     #[doc = "I2S_SHARED_WS\\[1\\] output from I2S pin sharing."]
     Val24 = 0x18,
     #[doc = "None."]
-    Val25_19 = 0x19,
+    Val2525 = 0x19,
     #[doc = "None."]
-    Val25_1a = 0x1a,
+    Val2526 = 0x1a,
     #[doc = "None."]
-    Val25_1b = 0x1b,
+    Val2527 = 0x1b,
     #[doc = "None."]
-    Val25_1c = 0x1c,
+    Val2528 = 0x1c,
     #[doc = "None."]
-    Val25_1d = 0x1d,
+    Val2529 = 0x1d,
     #[doc = "None."]
-    Val25_1e = 0x1e,
+    Val2530 = 0x1e,
     #[doc = "None."]
-    Val25_1f = 0x1f,
+    Val2531 = 0x1f,
 }
 impl Timer3captselCaptsel {
     #[inline(always)]
@@ -738,7 +747,8 @@ impl From<Timer3captselCaptsel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Timer4captselCaptsel {
     #[doc = "CT_INP0 function selected from IOCON register."]
@@ -792,19 +802,19 @@ pub enum Timer4captselCaptsel {
     #[doc = "I2S_SHARED_WS\\[1\\] output from I2S pin sharing."]
     Val24 = 0x18,
     #[doc = "None."]
-    Val25_19 = 0x19,
+    Val2525 = 0x19,
     #[doc = "None."]
-    Val25_1a = 0x1a,
+    Val2526 = 0x1a,
     #[doc = "None."]
-    Val25_1b = 0x1b,
+    Val2527 = 0x1b,
     #[doc = "None."]
-    Val25_1c = 0x1c,
+    Val2528 = 0x1c,
     #[doc = "None."]
-    Val25_1d = 0x1d,
+    Val2529 = 0x1d,
     #[doc = "None."]
-    Val25_1e = 0x1e,
+    Val2530 = 0x1e,
     #[doc = "None."]
-    Val25_1f = 0x1f,
+    Val2531 = 0x1f,
 }
 impl Timer4captselCaptsel {
     #[inline(always)]

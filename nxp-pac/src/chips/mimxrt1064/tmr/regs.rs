@@ -22,6 +22,7 @@ impl Default for Capt0 {
         Capt0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Capt0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Capt0")
@@ -59,6 +60,7 @@ impl Default for Capt1 {
         Capt1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Capt1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Capt1")
@@ -96,6 +98,7 @@ impl Default for Capt2 {
         Capt2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Capt2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Capt2")
@@ -133,6 +136,7 @@ impl Default for Capt3 {
         Capt3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Capt3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Capt3")
@@ -170,6 +174,7 @@ impl Default for Cmpld10 {
         Cmpld10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmpld10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmpld10")
@@ -211,6 +216,7 @@ impl Default for Cmpld11 {
         Cmpld11(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmpld11 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmpld11")
@@ -252,6 +258,7 @@ impl Default for Cmpld12 {
         Cmpld12(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmpld12 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmpld12")
@@ -293,6 +300,7 @@ impl Default for Cmpld13 {
         Cmpld13(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmpld13 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmpld13")
@@ -334,6 +342,7 @@ impl Default for Cmpld20 {
         Cmpld20(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmpld20 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmpld20")
@@ -375,6 +384,7 @@ impl Default for Cmpld21 {
         Cmpld21(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmpld21 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmpld21")
@@ -416,6 +426,7 @@ impl Default for Cmpld22 {
         Cmpld22(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmpld22 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmpld22")
@@ -457,6 +468,7 @@ impl Default for Cmpld23 {
         Cmpld23(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmpld23 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmpld23")
@@ -498,6 +510,7 @@ impl Default for Cntr0 {
         Cntr0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cntr0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cntr0")
@@ -535,6 +548,7 @@ impl Default for Cntr1 {
         Cntr1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cntr1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cntr1")
@@ -572,6 +586,7 @@ impl Default for Cntr2 {
         Cntr2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cntr2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cntr2")
@@ -609,6 +624,7 @@ impl Default for Cntr3 {
         Cntr3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cntr3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cntr3")
@@ -646,6 +662,7 @@ impl Default for Comp10 {
         Comp10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Comp10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Comp10")
@@ -687,6 +704,7 @@ impl Default for Comp11 {
         Comp11(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Comp11 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Comp11")
@@ -728,6 +746,7 @@ impl Default for Comp12 {
         Comp12(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Comp12 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Comp12")
@@ -769,6 +788,7 @@ impl Default for Comp13 {
         Comp13(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Comp13 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Comp13")
@@ -810,6 +830,7 @@ impl Default for Comp20 {
         Comp20(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Comp20 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Comp20")
@@ -851,6 +872,7 @@ impl Default for Comp21 {
         Comp21(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Comp21 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Comp21")
@@ -892,6 +914,7 @@ impl Default for Comp22 {
         Comp22(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Comp22 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Comp22")
@@ -933,6 +956,7 @@ impl Default for Comp23 {
         Comp23(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Comp23 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Comp23")
@@ -1027,6 +1051,18 @@ impl Csctrl0 {
     pub const fn set_tcf2en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u16) & 0x01) << 7usize);
     }
+    #[doc = "Output flag."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn oflag(&self) -> bool {
+        let val = (self.0 >> 8usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Output flag."]
+    #[inline(always)]
+    pub const fn set_oflag(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u16) & 0x01) << 8usize);
+    }
     #[doc = "Counting Direction Indicator."]
     #[must_use]
     #[inline(always)]
@@ -1106,6 +1142,7 @@ impl Default for Csctrl0 {
         Csctrl0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Csctrl0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Csctrl0")
@@ -1115,6 +1152,7 @@ impl core::fmt::Debug for Csctrl0 {
             .field("tcf2", &self.tcf2())
             .field("tcf1en", &self.tcf1en())
             .field("tcf2en", &self.tcf2en())
+            .field("oflag", &self.oflag())
             .field("up", &self.up())
             .field("tci", &self.tci())
             .field("roc", &self.roc())
@@ -1129,13 +1167,14 @@ impl defmt::Format for Csctrl0 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Csctrl0 {{ cl1: {:?}, cl2: {:?}, tcf1: {=bool:?}, tcf2: {=bool:?}, tcf1en: {=bool:?}, tcf2en: {=bool:?}, up: {:?}, tci: {:?}, roc: {=bool:?}, alt_load: {=bool:?}, fault: {=bool:?}, dbg_en: {:?} }}",
+            "Csctrl0 {{ cl1: {:?}, cl2: {:?}, tcf1: {=bool:?}, tcf2: {=bool:?}, tcf1en: {=bool:?}, tcf2en: {=bool:?}, oflag: {=bool:?}, up: {:?}, tci: {:?}, roc: {=bool:?}, alt_load: {=bool:?}, fault: {=bool:?}, dbg_en: {:?} }}",
             self.cl1(),
             self.cl2(),
             self.tcf1(),
             self.tcf2(),
             self.tcf1en(),
             self.tcf2en(),
+            self.oflag(),
             self.up(),
             self.tci(),
             self.roc(),
@@ -1222,6 +1261,18 @@ impl Csctrl1 {
     pub const fn set_tcf2en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u16) & 0x01) << 7usize);
     }
+    #[doc = "Output flag."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn oflag(&self) -> bool {
+        let val = (self.0 >> 8usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Output flag."]
+    #[inline(always)]
+    pub const fn set_oflag(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u16) & 0x01) << 8usize);
+    }
     #[doc = "Counting Direction Indicator."]
     #[must_use]
     #[inline(always)]
@@ -1301,6 +1352,7 @@ impl Default for Csctrl1 {
         Csctrl1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Csctrl1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Csctrl1")
@@ -1310,6 +1362,7 @@ impl core::fmt::Debug for Csctrl1 {
             .field("tcf2", &self.tcf2())
             .field("tcf1en", &self.tcf1en())
             .field("tcf2en", &self.tcf2en())
+            .field("oflag", &self.oflag())
             .field("up", &self.up())
             .field("tci", &self.tci())
             .field("roc", &self.roc())
@@ -1324,13 +1377,14 @@ impl defmt::Format for Csctrl1 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Csctrl1 {{ cl1: {:?}, cl2: {:?}, tcf1: {=bool:?}, tcf2: {=bool:?}, tcf1en: {=bool:?}, tcf2en: {=bool:?}, up: {:?}, tci: {:?}, roc: {=bool:?}, alt_load: {=bool:?}, fault: {=bool:?}, dbg_en: {:?} }}",
+            "Csctrl1 {{ cl1: {:?}, cl2: {:?}, tcf1: {=bool:?}, tcf2: {=bool:?}, tcf1en: {=bool:?}, tcf2en: {=bool:?}, oflag: {=bool:?}, up: {:?}, tci: {:?}, roc: {=bool:?}, alt_load: {=bool:?}, fault: {=bool:?}, dbg_en: {:?} }}",
             self.cl1(),
             self.cl2(),
             self.tcf1(),
             self.tcf2(),
             self.tcf1en(),
             self.tcf2en(),
+            self.oflag(),
             self.up(),
             self.tci(),
             self.roc(),
@@ -1417,6 +1471,18 @@ impl Csctrl2 {
     pub const fn set_tcf2en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u16) & 0x01) << 7usize);
     }
+    #[doc = "Output flag."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn oflag(&self) -> bool {
+        let val = (self.0 >> 8usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Output flag."]
+    #[inline(always)]
+    pub const fn set_oflag(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u16) & 0x01) << 8usize);
+    }
     #[doc = "Counting Direction Indicator."]
     #[must_use]
     #[inline(always)]
@@ -1496,6 +1562,7 @@ impl Default for Csctrl2 {
         Csctrl2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Csctrl2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Csctrl2")
@@ -1505,6 +1572,7 @@ impl core::fmt::Debug for Csctrl2 {
             .field("tcf2", &self.tcf2())
             .field("tcf1en", &self.tcf1en())
             .field("tcf2en", &self.tcf2en())
+            .field("oflag", &self.oflag())
             .field("up", &self.up())
             .field("tci", &self.tci())
             .field("roc", &self.roc())
@@ -1519,13 +1587,14 @@ impl defmt::Format for Csctrl2 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Csctrl2 {{ cl1: {:?}, cl2: {:?}, tcf1: {=bool:?}, tcf2: {=bool:?}, tcf1en: {=bool:?}, tcf2en: {=bool:?}, up: {:?}, tci: {:?}, roc: {=bool:?}, alt_load: {=bool:?}, fault: {=bool:?}, dbg_en: {:?} }}",
+            "Csctrl2 {{ cl1: {:?}, cl2: {:?}, tcf1: {=bool:?}, tcf2: {=bool:?}, tcf1en: {=bool:?}, tcf2en: {=bool:?}, oflag: {=bool:?}, up: {:?}, tci: {:?}, roc: {=bool:?}, alt_load: {=bool:?}, fault: {=bool:?}, dbg_en: {:?} }}",
             self.cl1(),
             self.cl2(),
             self.tcf1(),
             self.tcf2(),
             self.tcf1en(),
             self.tcf2en(),
+            self.oflag(),
             self.up(),
             self.tci(),
             self.roc(),
@@ -1612,6 +1681,18 @@ impl Csctrl3 {
     pub const fn set_tcf2en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u16) & 0x01) << 7usize);
     }
+    #[doc = "Output flag."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn oflag(&self) -> bool {
+        let val = (self.0 >> 8usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Output flag."]
+    #[inline(always)]
+    pub const fn set_oflag(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u16) & 0x01) << 8usize);
+    }
     #[doc = "Counting Direction Indicator."]
     #[must_use]
     #[inline(always)]
@@ -1691,6 +1772,7 @@ impl Default for Csctrl3 {
         Csctrl3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Csctrl3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Csctrl3")
@@ -1700,6 +1782,7 @@ impl core::fmt::Debug for Csctrl3 {
             .field("tcf2", &self.tcf2())
             .field("tcf1en", &self.tcf1en())
             .field("tcf2en", &self.tcf2en())
+            .field("oflag", &self.oflag())
             .field("up", &self.up())
             .field("tci", &self.tci())
             .field("roc", &self.roc())
@@ -1714,13 +1797,14 @@ impl defmt::Format for Csctrl3 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Csctrl3 {{ cl1: {:?}, cl2: {:?}, tcf1: {=bool:?}, tcf2: {=bool:?}, tcf1en: {=bool:?}, tcf2en: {=bool:?}, up: {:?}, tci: {:?}, roc: {=bool:?}, alt_load: {=bool:?}, fault: {=bool:?}, dbg_en: {:?} }}",
+            "Csctrl3 {{ cl1: {:?}, cl2: {:?}, tcf1: {=bool:?}, tcf2: {=bool:?}, tcf1en: {=bool:?}, tcf2en: {=bool:?}, oflag: {=bool:?}, up: {:?}, tci: {:?}, roc: {=bool:?}, alt_load: {=bool:?}, fault: {=bool:?}, dbg_en: {:?} }}",
             self.cl1(),
             self.cl2(),
             self.tcf1(),
             self.tcf2(),
             self.tcf1en(),
             self.tcf2en(),
+            self.oflag(),
             self.up(),
             self.tci(),
             self.roc(),
@@ -1838,6 +1922,7 @@ impl Default for Ctrl0 {
         Ctrl0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl0")
@@ -1977,6 +2062,7 @@ impl Default for Ctrl1 {
         Ctrl1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl1")
@@ -2116,6 +2202,7 @@ impl Default for Ctrl2 {
         Ctrl2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl2")
@@ -2255,6 +2342,7 @@ impl Default for Ctrl3 {
         Ctrl3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl3")
@@ -2334,6 +2422,7 @@ impl Default for Dma0 {
         Dma0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dma0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dma0")
@@ -2403,6 +2492,7 @@ impl Default for Dma1 {
         Dma1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dma1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dma1")
@@ -2472,6 +2562,7 @@ impl Default for Dma2 {
         Dma2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dma2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dma2")
@@ -2541,6 +2632,7 @@ impl Default for Dma3 {
         Dma3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dma3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dma3")
@@ -2586,6 +2678,7 @@ impl Default for Enbl {
         Enbl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Enbl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Enbl").field("enbl", &self.enbl()).finish()
@@ -2633,6 +2726,7 @@ impl Default for Filt0 {
         Filt0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Filt0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Filt0")
@@ -2688,6 +2782,7 @@ impl Default for Filt1 {
         Filt1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Filt1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Filt1")
@@ -2743,6 +2838,7 @@ impl Default for Filt2 {
         Filt2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Filt2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Filt2")
@@ -2798,6 +2894,7 @@ impl Default for Filt3 {
         Filt3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Filt3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Filt3")
@@ -2841,6 +2938,7 @@ impl Default for Hold0 {
         Hold0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hold0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hold0").field("hold", &self.hold()).finish()
@@ -2876,6 +2974,7 @@ impl Default for Hold1 {
         Hold1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hold1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hold1").field("hold", &self.hold()).finish()
@@ -2911,6 +3010,7 @@ impl Default for Hold2 {
         Hold2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hold2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hold2").field("hold", &self.hold()).finish()
@@ -2946,6 +3046,7 @@ impl Default for Hold3 {
         Hold3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hold3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hold3").field("hold", &self.hold()).finish()
@@ -2981,6 +3082,7 @@ impl Default for Load0 {
         Load0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Load0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Load0").field("load", &self.load()).finish()
@@ -3016,6 +3118,7 @@ impl Default for Load1 {
         Load1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Load1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Load1").field("load", &self.load()).finish()
@@ -3051,6 +3154,7 @@ impl Default for Load2 {
         Load2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Load2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Load2").field("load", &self.load()).finish()
@@ -3086,6 +3190,7 @@ impl Default for Load3 {
         Load3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Load3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Load3").field("load", &self.load()).finish()
@@ -3289,6 +3394,7 @@ impl Default for Sctrl0 {
         Sctrl0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sctrl0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sctrl0")
@@ -3526,6 +3632,7 @@ impl Default for Sctrl1 {
         Sctrl1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sctrl1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sctrl1")
@@ -3763,6 +3870,7 @@ impl Default for Sctrl2 {
         Sctrl2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sctrl2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sctrl2")
@@ -4000,6 +4108,7 @@ impl Default for Sctrl3 {
         Sctrl3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sctrl3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sctrl3")

@@ -142,6 +142,7 @@ impl Default for Aoreg1 {
         Aoreg1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Aoreg1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Aoreg1")
@@ -215,6 +216,7 @@ impl Default for Bodvbat {
         Bodvbat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Bodvbat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Bodvbat")
@@ -342,6 +344,7 @@ impl Default for Comp {
         Comp(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Comp {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Comp")
@@ -505,6 +508,7 @@ impl Default for Dcdc0 {
         Dcdc0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dcdc0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dcdc0")
@@ -708,6 +712,7 @@ impl Default for Dcdc1 {
         Dcdc1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dcdc1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dcdc1")
@@ -845,6 +850,7 @@ impl Default for Ldopmu {
         Ldopmu(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ldopmu {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ldopmu")
@@ -958,6 +964,7 @@ impl Default for Miscctrl {
         Miscctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Miscctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Miscctrl")
@@ -1057,6 +1064,7 @@ impl Default for Ostimer {
         Ostimer(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ostimer {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ostimer")
@@ -1262,6 +1270,7 @@ impl Default for Pdruncfg0 {
         Pdruncfg0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pdruncfg0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pdruncfg0")
@@ -1329,6 +1338,7 @@ impl Default for Pdruncfgclr0 {
         Pdruncfgclr0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pdruncfgclr0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pdruncfgclr0")
@@ -1370,6 +1380,7 @@ impl Default for Pdruncfgset0 {
         Pdruncfgset0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pdruncfgset0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pdruncfgset0")
@@ -1423,6 +1434,7 @@ impl Default for Reffastwkup {
         Reffastwkup(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Reffastwkup {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Reffastwkup")
@@ -1532,6 +1544,7 @@ impl Default for Resetctrl {
         Resetctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Resetctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Resetctrl")
@@ -1649,6 +1662,7 @@ impl Default for Rtcosc32k {
         Rtcosc32k(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Rtcosc32k {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Rtcosc32k")
@@ -1736,6 +1750,7 @@ impl Default for Sramctrl {
         Sramctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sramctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sramctrl")
@@ -1855,6 +1870,7 @@ impl Default for Status {
         Status(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Status {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Status")
@@ -1920,6 +1936,7 @@ impl Default for Statusclk {
         Statusclk(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Statusclk {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Statusclk")
@@ -1999,6 +2016,7 @@ impl Default for Wakeiocause {
         Wakeiocause(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Wakeiocause {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Wakeiocause")
@@ -2202,6 +2220,7 @@ impl Default for Wakeupioctrl {
         Wakeupioctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Wakeupioctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Wakeupioctrl")
@@ -2377,6 +2396,7 @@ impl Default for Xtal32k {
         Xtal32k(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Xtal32k {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Xtal32k")

@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Acfe {
     #[doc = "Compare function disabled."]
@@ -30,7 +31,8 @@ impl From<Acfe> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Acfgt {
     #[doc = "Configures \"Less Than Threshold, Outside Range Not Inclusive and Inside Range Not Inclusive\" functionality based on the values placed in the ADC_CV register."]
@@ -61,7 +63,8 @@ impl From<Acfgt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Acren {
     #[doc = "Range function disabled. Only the compare value 1 of ADC_CV register (CV1) is compared."]
@@ -92,7 +95,8 @@ impl From<Acren> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Adacken {
     #[doc = "Asynchronous clock output disabled; Asynchronous clock only enabled if selected by ADICLK and a conversion is active."]
@@ -123,7 +127,8 @@ impl From<Adacken> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Adact {
     #[doc = "Conversion not in progress."]
@@ -154,7 +159,8 @@ impl From<Adact> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Adco {
     #[doc = "One conversion or one set of conversions if the hardware average function is enabled (AVGE=1) after initiating a conversion."]
@@ -185,7 +191,8 @@ impl From<Adco> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Adhsc {
     #[doc = "Normal conversion selected."]
@@ -216,7 +223,8 @@ impl From<Adhsc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Adiclk {
     #[doc = "IPG clock."]
@@ -251,7 +259,8 @@ impl From<Adiclk> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Adiv {
     #[doc = "Input clock."]
@@ -286,7 +295,8 @@ impl From<Adiv> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Adlpc {
     #[doc = "ADC hard block not in low power mode."]
@@ -317,7 +327,8 @@ impl From<Adlpc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Adlsmp {
     #[doc = "Short sample mode."]
@@ -348,7 +359,8 @@ impl From<Adlsmp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Adsts {
     #[doc = "Sample period (ADC clocks) = 3 if ADLSMP=0b Sample period (ADC clocks) = 13 if ADLSMP=1b."]
@@ -383,7 +395,8 @@ impl From<Adsts> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Adtrg {
     #[doc = "Software trigger selected."]
@@ -414,7 +427,8 @@ impl From<Adtrg> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Avge {
     #[doc = "Hardware average function disabled."]
@@ -445,7 +459,8 @@ impl From<Avge> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Avgs {
     #[doc = "4 samples averaged."]
@@ -480,7 +495,8 @@ impl From<Avgs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Awkst {
     #[doc = "No asynchronous interrupt."]
@@ -511,7 +527,8 @@ impl From<Awkst> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Calf {
     #[doc = "Calibration completed normally."]
@@ -542,7 +559,8 @@ impl From<Calf> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmaen {
     #[doc = "DMA disabled (default)."]
@@ -573,25 +591,42 @@ impl From<Dmaen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hc0Adch {
-    _RESERVED_0 = 0x0,
-    _RESERVED_1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch0 = 0x0,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch1 = 0x01,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch2 = 0x02,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch3 = 0x03,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch4 = 0x04,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch5 = 0x05,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch6 = 0x06,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch7 = 0x07,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch8 = 0x08,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch9 = 0x09,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch10 = 0x0a,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch11 = 0x0b,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch12 = 0x0c,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch13 = 0x0d,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch14 = 0x0e,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch15 = 0x0f,
     #[doc = "External channel selection from ADC_ETC."]
     Adch16 = 0x10,
     _RESERVED_11 = 0x11,
@@ -635,7 +670,8 @@ impl From<Hc0Adch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hc0Aien {
     #[doc = "Conversion complete interrupt disabled."]
@@ -666,25 +702,42 @@ impl From<Hc0Aien> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HcAdch {
-    _RESERVED_0 = 0x0,
-    _RESERVED_1 = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch0 = 0x0,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch1 = 0x01,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch2 = 0x02,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch3 = 0x03,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch4 = 0x04,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch5 = 0x05,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch6 = 0x06,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch7 = 0x07,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch8 = 0x08,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch9 = 0x09,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch10 = 0x0a,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch11 = 0x0b,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch12 = 0x0c,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch13 = 0x0d,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch14 = 0x0e,
+    #[doc = "External channels 0 to 15 See External Signals for more information."]
+    Adch15 = 0x0f,
     #[doc = "External channel selection from ADC_ETC."]
     Adch16 = 0x10,
     _RESERVED_11 = 0x11,
@@ -728,7 +781,8 @@ impl From<HcAdch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HcAien {
     #[doc = "Conversion complete interrupt disabled."]
@@ -759,7 +813,8 @@ impl From<HcAien> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mode {
     #[doc = "8-bit conversion."]
@@ -793,7 +848,8 @@ impl From<Mode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ovwren {
     #[doc = "Disable the overwriting. Existing Data in Data result register will not be overwritten by subsequent converted data."]
@@ -824,7 +880,8 @@ impl From<Ovwren> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Refsel {
     #[doc = "Selects VREFH/VREFL as reference voltage."]
@@ -856,7 +913,8 @@ impl From<Refsel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sign {
     #[doc = "The offset value is added with the raw result."]

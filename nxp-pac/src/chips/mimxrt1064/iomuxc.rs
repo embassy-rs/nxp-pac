@@ -3192,6 +3192,83 @@ impl Iomuxc {
     ) -> crate::common::Reg<regs::Enet2IppIndMac0TxclkSelectInput, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0728usize) as _) }
     }
+    #[doc = "FLEXSPI2_IPP_IND_DQS_FA_SELECT_INPUT DAISY Register."]
+    #[inline(always)]
+    pub const fn flexspi2_ipp_ind_dqs_fa_select_input(
+        self,
+    ) -> crate::common::Reg<regs::Flexspi2IppIndDqsFaSelectInput, crate::common::RW> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x072cusize) as _) }
+    }
+    #[doc = "FLEXSPI2_IPP_IND_IO_FA_BIT0_SELECT_INPUT DAISY Register."]
+    #[inline(always)]
+    pub const fn flexspi2_ipp_ind_io_fa_bit0_select_input(
+        self,
+    ) -> crate::common::Reg<regs::Flexspi2IppIndIoFaBit0SelectInput, crate::common::RW> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0730usize) as _) }
+    }
+    #[doc = "FLEXSPI2_IPP_IND_IO_FA_BIT1_SELECT_INPUT DAISY Register."]
+    #[inline(always)]
+    pub const fn flexspi2_ipp_ind_io_fa_bit1_select_input(
+        self,
+    ) -> crate::common::Reg<regs::Flexspi2IppIndIoFaBit1SelectInput, crate::common::RW> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0734usize) as _) }
+    }
+    #[doc = "FLEXSPI2_IPP_IND_IO_FA_BIT2_SELECT_INPUT DAISY Register."]
+    #[inline(always)]
+    pub const fn flexspi2_ipp_ind_io_fa_bit2_select_input(
+        self,
+    ) -> crate::common::Reg<regs::Flexspi2IppIndIoFaBit2SelectInput, crate::common::RW> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0738usize) as _) }
+    }
+    #[doc = "FLEXSPI2_IPP_IND_IO_FA_BIT3_SELECT_INPUT DAISY Register."]
+    #[inline(always)]
+    pub const fn flexspi2_ipp_ind_io_fa_bit3_select_input(
+        self,
+    ) -> crate::common::Reg<regs::Flexspi2IppIndIoFaBit3SelectInput, crate::common::RW> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x073cusize) as _) }
+    }
+    #[doc = "FLEXSPI2_IPP_IND_IO_FB_BIT0_SELECT_INPUT DAISY Register."]
+    #[inline(always)]
+    pub const fn flexspi2_ipp_ind_io_fb_bit0_select_input(
+        self,
+    ) -> crate::common::Reg<regs::Flexspi2IppIndIoFbBit0SelectInput, crate::common::RW> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0740usize) as _) }
+    }
+    #[doc = "FLEXSPI2_IPP_IND_IO_FB_BIT1_SELECT_INPUT DAISY Register."]
+    #[inline(always)]
+    pub const fn flexspi2_ipp_ind_io_fb_bit1_select_input(
+        self,
+    ) -> crate::common::Reg<regs::Flexspi2IppIndIoFbBit1SelectInput, crate::common::RW> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0744usize) as _) }
+    }
+    #[doc = "FLEXSPI2_IPP_IND_IO_FB_BIT2_SELECT_INPUT DAISY Register."]
+    #[inline(always)]
+    pub const fn flexspi2_ipp_ind_io_fb_bit2_select_input(
+        self,
+    ) -> crate::common::Reg<regs::Flexspi2IppIndIoFbBit2SelectInput, crate::common::RW> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0748usize) as _) }
+    }
+    #[doc = "FLEXSPI2_IPP_IND_IO_FB_BIT3_SELECT_INPUT DAISY Register."]
+    #[inline(always)]
+    pub const fn flexspi2_ipp_ind_io_fb_bit3_select_input(
+        self,
+    ) -> crate::common::Reg<regs::Flexspi2IppIndIoFbBit3SelectInput, crate::common::RW> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x074cusize) as _) }
+    }
+    #[doc = "FLEXSPI2_IPP_IND_SCK_FA_SELECT_INPUT DAISY Register."]
+    #[inline(always)]
+    pub const fn flexspi2_ipp_ind_sck_fa_select_input(
+        self,
+    ) -> crate::common::Reg<regs::Flexspi2IppIndSckFaSelectInput, crate::common::RW> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0750usize) as _) }
+    }
+    #[doc = "FLEXSPI2_IPP_IND_SCK_FB_SELECT_INPUT DAISY Register."]
+    #[inline(always)]
+    pub const fn flexspi2_ipp_ind_sck_fb_select_input(
+        self,
+    ) -> crate::common::Reg<regs::Flexspi2IppIndSckFbSelectInput, crate::common::RW> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0754usize) as _) }
+    }
     #[doc = "GPT1_IPP_IND_CAPIN1_SELECT_INPUT DAISY Register."]
     #[inline(always)]
     pub const fn gpt1_ipp_ind_capin1_select_input(

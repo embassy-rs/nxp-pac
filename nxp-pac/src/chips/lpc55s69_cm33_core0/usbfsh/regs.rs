@@ -22,6 +22,7 @@ impl Default for Hcbulkcurrented {
         Hcbulkcurrented(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hcbulkcurrented {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hcbulkcurrented")
@@ -59,6 +60,7 @@ impl Default for Hcbulkheaded {
         Hcbulkheaded(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hcbulkheaded {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hcbulkheaded")
@@ -144,6 +146,7 @@ impl Default for Hccommandstatus {
         Hccommandstatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hccommandstatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hccommandstatus")
@@ -289,6 +292,7 @@ impl Default for Hccontrol {
         Hccontrol(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hccontrol {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hccontrol")
@@ -346,6 +350,7 @@ impl Default for Hccontrolcurrented {
         Hccontrolcurrented(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hccontrolcurrented {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hccontrolcurrented")
@@ -383,6 +388,7 @@ impl Default for Hccontrolheaded {
         Hccontrolheaded(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hccontrolheaded {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hccontrolheaded")
@@ -420,6 +426,7 @@ impl Default for Hcdonehead {
         Hcdonehead(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hcdonehead {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hcdonehead")
@@ -481,6 +488,7 @@ impl Default for Hcfminterval {
         Hcfminterval(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hcfminterval {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hcfminterval")
@@ -526,6 +534,7 @@ impl Default for Hcfmnumber {
         Hcfmnumber(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hcfmnumber {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hcfmnumber")
@@ -575,6 +584,7 @@ impl Default for Hcfmremaining {
         Hcfmremaining(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hcfmremaining {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hcfmremaining")
@@ -618,6 +628,7 @@ impl Default for Hchcca {
         Hchcca(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hchcca {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hchcca")
@@ -751,6 +762,7 @@ impl Default for Hcinterruptdisable {
         Hcinterruptdisable(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hcinterruptdisable {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hcinterruptdisable")
@@ -904,6 +916,7 @@ impl Default for Hcinterruptenable {
         Hcinterruptenable(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hcinterruptenable {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hcinterruptenable")
@@ -1045,6 +1058,7 @@ impl Default for Hcinterruptstatus {
         Hcinterruptstatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hcinterruptstatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hcinterruptstatus")
@@ -1100,6 +1114,7 @@ impl Default for Hclsthreshold {
         Hclsthreshold(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hclsthreshold {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hclsthreshold")
@@ -1137,6 +1152,7 @@ impl Default for Hcperiodcurrented {
         Hcperiodcurrented(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hcperiodcurrented {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hcperiodcurrented")
@@ -1174,6 +1190,7 @@ impl Default for Hcperiodicstart {
         Hcperiodicstart(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hcperiodicstart {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hcperiodicstart")
@@ -1211,6 +1228,7 @@ impl Default for Hcrevision {
         Hcrevision(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hcrevision {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hcrevision")
@@ -1320,6 +1338,7 @@ impl Default for Hcrhdescriptora {
         Hcrhdescriptora(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hcrhdescriptora {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hcrhdescriptora")
@@ -1385,6 +1404,7 @@ impl Default for Hcrhdescriptorb {
         Hcrhdescriptorb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hcrhdescriptorb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hcrhdescriptorb")
@@ -1560,6 +1580,7 @@ impl Default for Hcrhportstatus {
         Hcrhportstatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hcrhportstatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hcrhportstatus")
@@ -1683,6 +1704,7 @@ impl Default for Hcrhstatus {
         Hcrhstatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hcrhstatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hcrhstatus")
@@ -1758,6 +1780,7 @@ impl Default for Portmode {
         Portmode(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Portmode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Portmode")

@@ -15,6 +15,7 @@ impl Abort6333 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Abort6333 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -63,6 +64,7 @@ impl Abortctrl {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Abortctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -111,6 +113,7 @@ impl Act {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Act {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -159,6 +162,7 @@ impl Active6333 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Active6333 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -207,6 +211,7 @@ impl Bsy {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Bsy {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -255,6 +260,7 @@ impl Busy6333 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Busy6333 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -287,7 +293,8 @@ impl From<Busy6333> for u32 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dstinc {
     #[doc = "No increment. The destination address is not incremented for each transfer. This is the usual case when the destination is a peripheral device."]
@@ -338,6 +345,7 @@ impl Ena {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ena {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -386,6 +394,7 @@ impl Enable6333 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Enable6333 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -434,6 +443,7 @@ impl Err {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Err {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -466,7 +476,8 @@ impl From<Err> for u32 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Err32 {
     #[doc = "The Error Interrupt is not active for DMA channel 32."]
@@ -513,6 +524,7 @@ impl Err6333 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Err6333 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -561,6 +573,7 @@ impl Ia {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ia {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -609,6 +622,7 @@ impl Ib {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ib {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -657,6 +671,7 @@ impl Inta6333 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Inta6333 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -705,6 +720,7 @@ impl Intb6333 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Intb6333 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -753,6 +769,7 @@ impl Inten {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Inten {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -801,6 +818,7 @@ impl Inten6333 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Inten6333 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -833,7 +851,8 @@ impl From<Inten6333> for u32 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Setinta {
     #[doc = "No effect."]
@@ -864,7 +883,8 @@ impl From<Setinta> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Setintb {
     #[doc = "No effect."]
@@ -911,6 +931,7 @@ impl Settrig0Trig {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Settrig0Trig {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -959,6 +980,7 @@ impl Settrig6333 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Settrig6333 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -1007,6 +1029,7 @@ impl Setvalid6333 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Setvalid6333 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -1039,7 +1062,8 @@ impl From<Setvalid6333> for u32 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Srcinc {
     #[doc = "No increment. The source address is not incremented for each transfer. This is the usual case when the source is a peripheral device."]
@@ -1090,6 +1114,7 @@ impl Sv {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -1122,7 +1147,8 @@ impl From<Sv> for u32 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trigburst {
     #[doc = "Single transfer. Hardware trigger causes a single transfer."]
@@ -1153,7 +1179,8 @@ impl From<Trigburst> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trigpol {
     #[doc = "Active low - falling edge. Hardware trigger is active low or falling edge triggered, based on TRIGTYPE."]
@@ -1184,7 +1211,8 @@ impl From<Trigpol> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trigtype {
     #[doc = "Edge. Hardware trigger is edge triggered. Transfers will be initiated and completed, as specified for a single trigger."]
@@ -1215,7 +1243,8 @@ impl From<Trigtype> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Validpending {
     #[doc = "No effect. No effect on DMA operation."]
@@ -1246,7 +1275,8 @@ impl From<Validpending> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Width {
     #[doc = "8-bit. 8-bit transfers are performed (8-bit source reads and destination writes)."]

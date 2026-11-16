@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl2ClrEvenLinePattern {
     #[doc = "RGB."]
@@ -40,7 +41,8 @@ impl From<Ctrl2ClrEvenLinePattern> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl2ClrOddLinePattern {
     #[doc = "RGB."]
@@ -81,7 +83,8 @@ impl From<Ctrl2ClrOddLinePattern> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl2ClrOutstandingReqs {
     #[doc = "REQ_1."]
@@ -121,7 +124,8 @@ impl From<Ctrl2ClrOutstandingReqs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl2EvenLinePattern {
     #[doc = "RGB."]
@@ -162,7 +166,8 @@ impl From<Ctrl2EvenLinePattern> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl2OddLinePattern {
     #[doc = "RGB."]
@@ -203,7 +208,8 @@ impl From<Ctrl2OddLinePattern> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl2OutstandingReqs {
     #[doc = "REQ_1."]
@@ -243,7 +249,8 @@ impl From<Ctrl2OutstandingReqs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl2SetEvenLinePattern {
     #[doc = "RGB."]
@@ -284,7 +291,8 @@ impl From<Ctrl2SetEvenLinePattern> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl2SetOddLinePattern {
     #[doc = "RGB."]
@@ -325,7 +333,8 @@ impl From<Ctrl2SetOddLinePattern> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl2SetOutstandingReqs {
     #[doc = "REQ_1."]
@@ -365,7 +374,8 @@ impl From<Ctrl2SetOutstandingReqs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl2TogEvenLinePattern {
     #[doc = "RGB."]
@@ -406,7 +416,8 @@ impl From<Ctrl2TogEvenLinePattern> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl2TogOddLinePattern {
     #[doc = "RGB."]
@@ -447,7 +458,8 @@ impl From<Ctrl2TogOddLinePattern> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl2TogOutstandingReqs {
     #[doc = "REQ_1."]
@@ -487,7 +499,8 @@ impl From<Ctrl2TogOutstandingReqs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlClrCscDataSwizzle {
     #[doc = "No byte swapping.(Little endian)."]
@@ -522,7 +535,8 @@ impl From<CtrlClrCscDataSwizzle> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlClrDataFormat18Bit {
     #[doc = "Data input to the block is in 18 bpp format, such that lower 18 bits contain RGB 666 and upper 14 bits do not contain any useful data."]
@@ -553,7 +567,8 @@ impl From<CtrlClrDataFormat18Bit> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlClrDataFormat24Bit {
     #[doc = "Data input to the block is in 24 bpp format, such that all RGB 888 data is contained in 24 bits."]
@@ -584,7 +599,8 @@ impl From<CtrlClrDataFormat24Bit> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlClrDataShiftDir {
     #[doc = "Data to be transmitted is shifted LEFT by SHIFT_NUM_BITS bits."]
@@ -615,7 +631,8 @@ impl From<CtrlClrDataShiftDir> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlClrInputDataSwizzle {
     #[doc = "No byte swapping.(Little endian)."]
@@ -650,7 +667,8 @@ impl From<CtrlClrInputDataSwizzle> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlClrLcdDatabusWidth {
     #[doc = "16-bit data bus mode."]
@@ -685,7 +703,8 @@ impl From<CtrlClrLcdDatabusWidth> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlClrWordLength {
     #[doc = "Input data is 16 bits per pixel."]
@@ -720,7 +739,8 @@ impl From<CtrlClrWordLength> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlCscDataSwizzle {
     #[doc = "No byte swapping.(Little endian)."]
@@ -755,7 +775,8 @@ impl From<CtrlCscDataSwizzle> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlDataFormat18Bit {
     #[doc = "Data input to the block is in 18 bpp format, such that lower 18 bits contain RGB 666 and upper 14 bits do not contain any useful data."]
@@ -786,7 +807,8 @@ impl From<CtrlDataFormat18Bit> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlDataFormat24Bit {
     #[doc = "Data input to the block is in 24 bpp format, such that all RGB 888 data is contained in 24 bits."]
@@ -817,7 +839,8 @@ impl From<CtrlDataFormat24Bit> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlDataShiftDir {
     #[doc = "Data to be transmitted is shifted LEFT by SHIFT_NUM_BITS bits."]
@@ -848,7 +871,8 @@ impl From<CtrlDataShiftDir> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlInputDataSwizzle {
     #[doc = "No byte swapping.(Little endian)."]
@@ -883,7 +907,8 @@ impl From<CtrlInputDataSwizzle> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlLcdDatabusWidth {
     #[doc = "16-bit data bus mode."]
@@ -918,7 +943,8 @@ impl From<CtrlLcdDatabusWidth> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlSetCscDataSwizzle {
     #[doc = "No byte swapping.(Little endian)."]
@@ -953,7 +979,8 @@ impl From<CtrlSetCscDataSwizzle> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlSetDataFormat18Bit {
     #[doc = "Data input to the block is in 18 bpp format, such that lower 18 bits contain RGB 666 and upper 14 bits do not contain any useful data."]
@@ -984,7 +1011,8 @@ impl From<CtrlSetDataFormat18Bit> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlSetDataFormat24Bit {
     #[doc = "Data input to the block is in 24 bpp format, such that all RGB 888 data is contained in 24 bits."]
@@ -1015,7 +1043,8 @@ impl From<CtrlSetDataFormat24Bit> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlSetDataShiftDir {
     #[doc = "Data to be transmitted is shifted LEFT by SHIFT_NUM_BITS bits."]
@@ -1046,7 +1075,8 @@ impl From<CtrlSetDataShiftDir> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlSetInputDataSwizzle {
     #[doc = "No byte swapping.(Little endian)."]
@@ -1081,7 +1111,8 @@ impl From<CtrlSetInputDataSwizzle> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlSetLcdDatabusWidth {
     #[doc = "16-bit data bus mode."]
@@ -1116,7 +1147,8 @@ impl From<CtrlSetLcdDatabusWidth> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlSetWordLength {
     #[doc = "Input data is 16 bits per pixel."]
@@ -1151,7 +1183,8 @@ impl From<CtrlSetWordLength> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlTogCscDataSwizzle {
     #[doc = "No byte swapping.(Little endian)."]
@@ -1186,7 +1219,8 @@ impl From<CtrlTogCscDataSwizzle> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlTogDataFormat18Bit {
     #[doc = "Data input to the block is in 18 bpp format, such that lower 18 bits contain RGB 666 and upper 14 bits do not contain any useful data."]
@@ -1217,7 +1251,8 @@ impl From<CtrlTogDataFormat18Bit> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlTogDataFormat24Bit {
     #[doc = "Data input to the block is in 24 bpp format, such that all RGB 888 data is contained in 24 bits."]
@@ -1248,7 +1283,8 @@ impl From<CtrlTogDataFormat24Bit> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlTogDataShiftDir {
     #[doc = "Data to be transmitted is shifted LEFT by SHIFT_NUM_BITS bits."]
@@ -1279,7 +1315,8 @@ impl From<CtrlTogDataShiftDir> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlTogInputDataSwizzle {
     #[doc = "No byte swapping.(Little endian)."]
@@ -1314,7 +1351,8 @@ impl From<CtrlTogInputDataSwizzle> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlTogLcdDatabusWidth {
     #[doc = "16-bit data bus mode."]
@@ -1349,7 +1387,8 @@ impl From<CtrlTogLcdDatabusWidth> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlTogWordLength {
     #[doc = "Input data is 16 bits per pixel."]
@@ -1384,7 +1423,8 @@ impl From<CtrlTogWordLength> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlWordLength {
     #[doc = "Input data is 16 bits per pixel."]
@@ -1419,7 +1459,8 @@ impl From<CtrlWordLength> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon00IncSel {
     #[doc = "pclk."]
@@ -1454,7 +1495,8 @@ impl From<Pigeon00IncSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon00MaskCntSel {
     #[doc = "pclk counter within one hscan state."]
@@ -1505,7 +1547,8 @@ impl From<Pigeon00MaskCntSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon00Pol {
     #[doc = "Normal Signal (Active high)."]
@@ -1564,6 +1607,7 @@ impl Pigeon00StateMask {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon00StateMask {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -1622,6 +1666,7 @@ impl Pigeon01ClrCnt {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon01ClrCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -1666,6 +1711,7 @@ impl Pigeon01SetCnt {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon01SetCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -1696,7 +1742,8 @@ impl From<Pigeon01SetCnt> for u16 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon02SigAnother {
     #[doc = "Keep active until mask off."]
@@ -1756,7 +1803,8 @@ impl From<Pigeon02SigAnother> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon02SigLogic {
     #[doc = "No logic operation."]
@@ -1803,7 +1851,8 @@ impl From<Pigeon02SigLogic> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon100IncSel {
     #[doc = "pclk."]
@@ -1838,7 +1887,8 @@ impl From<Pigeon100IncSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon100MaskCntSel {
     #[doc = "pclk counter within one hscan state."]
@@ -1889,7 +1939,8 @@ impl From<Pigeon100MaskCntSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon100Pol {
     #[doc = "Normal Signal (Active high)."]
@@ -1948,6 +1999,7 @@ impl Pigeon100StateMask {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon100StateMask {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -2006,6 +2058,7 @@ impl Pigeon101ClrCnt {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon101ClrCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -2050,6 +2103,7 @@ impl Pigeon101SetCnt {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon101SetCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -2080,7 +2134,8 @@ impl From<Pigeon101SetCnt> for u16 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon102SigAnother {
     #[doc = "Keep active until mask off."]
@@ -2140,7 +2195,8 @@ impl From<Pigeon102SigAnother> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon102SigLogic {
     #[doc = "No logic operation."]
@@ -2187,7 +2243,8 @@ impl From<Pigeon102SigLogic> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon10IncSel {
     #[doc = "pclk."]
@@ -2222,7 +2279,8 @@ impl From<Pigeon10IncSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon10MaskCntSel {
     #[doc = "pclk counter within one hscan state."]
@@ -2273,7 +2331,8 @@ impl From<Pigeon10MaskCntSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon10Pol {
     #[doc = "Normal Signal (Active high)."]
@@ -2332,6 +2391,7 @@ impl Pigeon10StateMask {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon10StateMask {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -2376,7 +2436,8 @@ impl From<Pigeon10StateMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon110IncSel {
     #[doc = "pclk."]
@@ -2411,7 +2472,8 @@ impl From<Pigeon110IncSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon110MaskCntSel {
     #[doc = "pclk counter within one hscan state."]
@@ -2462,7 +2524,8 @@ impl From<Pigeon110MaskCntSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon110Pol {
     #[doc = "Normal Signal (Active high)."]
@@ -2521,6 +2584,7 @@ impl Pigeon110StateMask {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon110StateMask {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -2579,6 +2643,7 @@ impl Pigeon111ClrCnt {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon111ClrCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -2623,6 +2688,7 @@ impl Pigeon111SetCnt {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon111SetCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -2653,7 +2719,8 @@ impl From<Pigeon111SetCnt> for u16 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon112SigAnother {
     #[doc = "Keep active until mask off."]
@@ -2713,7 +2780,8 @@ impl From<Pigeon112SigAnother> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon112SigLogic {
     #[doc = "No logic operation."]
@@ -2774,6 +2842,7 @@ impl Pigeon11ClrCnt {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon11ClrCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -2818,6 +2887,7 @@ impl Pigeon11SetCnt {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon11SetCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -2848,7 +2918,8 @@ impl From<Pigeon11SetCnt> for u16 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon12SigAnother {
     #[doc = "Keep active until mask off."]
@@ -2908,7 +2979,8 @@ impl From<Pigeon12SigAnother> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon12SigLogic {
     #[doc = "No logic operation."]
@@ -2955,7 +3027,8 @@ impl From<Pigeon12SigLogic> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon20IncSel {
     #[doc = "pclk."]
@@ -2990,7 +3063,8 @@ impl From<Pigeon20IncSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon20MaskCntSel {
     #[doc = "pclk counter within one hscan state."]
@@ -3041,7 +3115,8 @@ impl From<Pigeon20MaskCntSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon20Pol {
     #[doc = "Normal Signal (Active high)."]
@@ -3100,6 +3175,7 @@ impl Pigeon20StateMask {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon20StateMask {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -3158,6 +3234,7 @@ impl Pigeon21ClrCnt {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon21ClrCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -3202,6 +3279,7 @@ impl Pigeon21SetCnt {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon21SetCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -3232,7 +3310,8 @@ impl From<Pigeon21SetCnt> for u16 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon22SigAnother {
     #[doc = "Keep active until mask off."]
@@ -3292,7 +3371,8 @@ impl From<Pigeon22SigAnother> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon22SigLogic {
     #[doc = "No logic operation."]
@@ -3339,7 +3419,8 @@ impl From<Pigeon22SigLogic> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon30IncSel {
     #[doc = "pclk."]
@@ -3374,7 +3455,8 @@ impl From<Pigeon30IncSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon30MaskCntSel {
     #[doc = "pclk counter within one hscan state."]
@@ -3425,7 +3507,8 @@ impl From<Pigeon30MaskCntSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon30Pol {
     #[doc = "Normal Signal (Active high)."]
@@ -3484,6 +3567,7 @@ impl Pigeon30StateMask {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon30StateMask {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -3542,6 +3626,7 @@ impl Pigeon31ClrCnt {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon31ClrCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -3586,6 +3671,7 @@ impl Pigeon31SetCnt {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon31SetCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -3616,7 +3702,8 @@ impl From<Pigeon31SetCnt> for u16 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon32SigAnother {
     #[doc = "Keep active until mask off."]
@@ -3676,7 +3763,8 @@ impl From<Pigeon32SigAnother> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon32SigLogic {
     #[doc = "No logic operation."]
@@ -3723,7 +3811,8 @@ impl From<Pigeon32SigLogic> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon40IncSel {
     #[doc = "pclk."]
@@ -3758,7 +3847,8 @@ impl From<Pigeon40IncSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon40MaskCntSel {
     #[doc = "pclk counter within one hscan state."]
@@ -3809,7 +3899,8 @@ impl From<Pigeon40MaskCntSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon40Pol {
     #[doc = "Normal Signal (Active high)."]
@@ -3868,6 +3959,7 @@ impl Pigeon40StateMask {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon40StateMask {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -3926,6 +4018,7 @@ impl Pigeon41ClrCnt {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon41ClrCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -3970,6 +4063,7 @@ impl Pigeon41SetCnt {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon41SetCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -4000,7 +4094,8 @@ impl From<Pigeon41SetCnt> for u16 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon42SigAnother {
     #[doc = "Keep active until mask off."]
@@ -4060,7 +4155,8 @@ impl From<Pigeon42SigAnother> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon42SigLogic {
     #[doc = "No logic operation."]
@@ -4107,7 +4203,8 @@ impl From<Pigeon42SigLogic> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon50IncSel {
     #[doc = "pclk."]
@@ -4142,7 +4239,8 @@ impl From<Pigeon50IncSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon50MaskCntSel {
     #[doc = "pclk counter within one hscan state."]
@@ -4193,7 +4291,8 @@ impl From<Pigeon50MaskCntSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon50Pol {
     #[doc = "Normal Signal (Active high)."]
@@ -4252,6 +4351,7 @@ impl Pigeon50StateMask {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon50StateMask {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -4310,6 +4410,7 @@ impl Pigeon51ClrCnt {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon51ClrCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -4354,6 +4455,7 @@ impl Pigeon51SetCnt {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon51SetCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -4384,7 +4486,8 @@ impl From<Pigeon51SetCnt> for u16 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon52SigAnother {
     #[doc = "Keep active until mask off."]
@@ -4444,7 +4547,8 @@ impl From<Pigeon52SigAnother> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon52SigLogic {
     #[doc = "No logic operation."]
@@ -4491,7 +4595,8 @@ impl From<Pigeon52SigLogic> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon60IncSel {
     #[doc = "pclk."]
@@ -4526,7 +4631,8 @@ impl From<Pigeon60IncSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon60MaskCntSel {
     #[doc = "pclk counter within one hscan state."]
@@ -4577,7 +4683,8 @@ impl From<Pigeon60MaskCntSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon60Pol {
     #[doc = "Normal Signal (Active high)."]
@@ -4636,6 +4743,7 @@ impl Pigeon60StateMask {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon60StateMask {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -4694,6 +4802,7 @@ impl Pigeon61ClrCnt {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon61ClrCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -4738,6 +4847,7 @@ impl Pigeon61SetCnt {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon61SetCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -4768,7 +4878,8 @@ impl From<Pigeon61SetCnt> for u16 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon62SigAnother {
     #[doc = "Keep active until mask off."]
@@ -4828,7 +4939,8 @@ impl From<Pigeon62SigAnother> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon62SigLogic {
     #[doc = "No logic operation."]
@@ -4875,7 +4987,8 @@ impl From<Pigeon62SigLogic> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon70IncSel {
     #[doc = "pclk."]
@@ -4910,7 +5023,8 @@ impl From<Pigeon70IncSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon70MaskCntSel {
     #[doc = "pclk counter within one hscan state."]
@@ -4961,7 +5075,8 @@ impl From<Pigeon70MaskCntSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon70Pol {
     #[doc = "Normal Signal (Active high)."]
@@ -5020,6 +5135,7 @@ impl Pigeon70StateMask {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon70StateMask {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -5078,6 +5194,7 @@ impl Pigeon71ClrCnt {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon71ClrCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -5122,6 +5239,7 @@ impl Pigeon71SetCnt {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon71SetCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -5152,7 +5270,8 @@ impl From<Pigeon71SetCnt> for u16 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon72SigAnother {
     #[doc = "Keep active until mask off."]
@@ -5212,7 +5331,8 @@ impl From<Pigeon72SigAnother> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon72SigLogic {
     #[doc = "No logic operation."]
@@ -5259,7 +5379,8 @@ impl From<Pigeon72SigLogic> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon80IncSel {
     #[doc = "pclk."]
@@ -5294,7 +5415,8 @@ impl From<Pigeon80IncSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon80MaskCntSel {
     #[doc = "pclk counter within one hscan state."]
@@ -5345,7 +5467,8 @@ impl From<Pigeon80MaskCntSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon80Pol {
     #[doc = "Normal Signal (Active high)."]
@@ -5404,6 +5527,7 @@ impl Pigeon80StateMask {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon80StateMask {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -5462,6 +5586,7 @@ impl Pigeon81ClrCnt {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon81ClrCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -5506,6 +5631,7 @@ impl Pigeon81SetCnt {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon81SetCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -5536,7 +5662,8 @@ impl From<Pigeon81SetCnt> for u16 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon82SigAnother {
     #[doc = "Keep active until mask off."]
@@ -5596,7 +5723,8 @@ impl From<Pigeon82SigAnother> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon82SigLogic {
     #[doc = "No logic operation."]
@@ -5643,7 +5771,8 @@ impl From<Pigeon82SigLogic> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon90IncSel {
     #[doc = "pclk."]
@@ -5678,7 +5807,8 @@ impl From<Pigeon90IncSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon90MaskCntSel {
     #[doc = "pclk counter within one hscan state."]
@@ -5729,7 +5859,8 @@ impl From<Pigeon90MaskCntSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon90Pol {
     #[doc = "Normal Signal (Active high)."]
@@ -5788,6 +5919,7 @@ impl Pigeon90StateMask {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon90StateMask {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -5846,6 +5978,7 @@ impl Pigeon91ClrCnt {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon91ClrCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -5890,6 +6023,7 @@ impl Pigeon91SetCnt {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pigeon91SetCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -5920,7 +6054,8 @@ impl From<Pigeon91SetCnt> for u16 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon92SigAnother {
     #[doc = "Keep active until mask off."]
@@ -5980,7 +6115,8 @@ impl From<Pigeon92SigAnother> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon92SigLogic {
     #[doc = "No logic operation."]

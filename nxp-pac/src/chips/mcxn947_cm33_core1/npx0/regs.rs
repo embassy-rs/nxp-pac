@@ -22,6 +22,7 @@ impl Default for BivctxWd {
         BivctxWd(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for BivctxWd {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BivctxWd")
@@ -59,6 +60,7 @@ impl Default for Cacmsk {
         Cacmsk(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cacmsk {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cacmsk")
@@ -180,6 +182,7 @@ impl Default for Npxcr {
         Npxcr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Npxcr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Npxcr")
@@ -283,6 +286,7 @@ impl Default for Npxsr {
         Npxsr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Npxsr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Npxsr")
@@ -356,6 +360,7 @@ impl Default for Remap {
         Remap(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Remap {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Remap")
@@ -773,6 +778,7 @@ impl Default for VmapctxWd {
         VmapctxWd(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for VmapctxWd {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VmapctxWd")

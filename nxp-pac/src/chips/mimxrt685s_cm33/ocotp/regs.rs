@@ -58,6 +58,7 @@ impl Default for OtpClkDiv {
         OtpClkDiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OtpClkDiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OtpClkDiv")
@@ -129,6 +130,7 @@ impl Default for OtpCrcAddr {
         OtpCrcAddr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OtpCrcAddr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OtpCrcAddr")
@@ -174,6 +176,7 @@ impl Default for OtpCrcValue {
         OtpCrcValue(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OtpCrcValue {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OtpCrcValue")
@@ -259,6 +262,7 @@ impl Default for OtpCtrl {
         OtpCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OtpCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OtpCtrl")
@@ -308,6 +312,7 @@ impl Default for OtpPdn {
         OtpPdn(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OtpPdn {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OtpPdn").field("pdn", &self.pdn()).finish()
@@ -343,6 +348,7 @@ impl Default for OtpReadCtrl {
         OtpReadCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OtpReadCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OtpReadCtrl")
@@ -380,6 +386,7 @@ impl Default for OtpReadData {
         OtpReadData(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OtpReadData {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OtpReadData")
@@ -417,6 +424,7 @@ impl Default for OtpShadow {
         OtpShadow(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OtpShadow {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OtpShadow")
@@ -586,6 +594,7 @@ impl Default for OtpStatus {
         OtpStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OtpStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OtpStatus")
@@ -673,6 +682,7 @@ impl Default for OtpVersion {
         OtpVersion(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OtpVersion {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OtpVersion")
@@ -718,6 +728,7 @@ impl Default for OtpWriteData {
         OtpWriteData(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OtpWriteData {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OtpWriteData")

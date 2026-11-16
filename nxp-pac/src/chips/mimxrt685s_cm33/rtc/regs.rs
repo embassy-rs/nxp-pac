@@ -22,6 +22,7 @@ impl Default for Count {
         Count(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Count {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Count").field("val", &self.val()).finish()
@@ -165,6 +166,7 @@ impl Default for Ctrl {
         Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl")
@@ -224,6 +226,7 @@ impl Default for Gpreg {
         Gpreg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpreg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpreg")
@@ -261,6 +264,7 @@ impl Default for Match {
         Match(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Match {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Match")
@@ -298,6 +302,7 @@ impl Default for Subsec {
         Subsec(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Subsec {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Subsec")
@@ -335,6 +340,7 @@ impl Default for Wake {
         Wake(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Wake {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Wake").field("val", &self.val()).finish()

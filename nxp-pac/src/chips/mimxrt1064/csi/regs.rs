@@ -322,6 +322,7 @@ impl Default for Cr1 {
         Cr1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cr1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cr1")
@@ -545,6 +546,7 @@ impl Default for Cr18 {
         Cr18(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cr18 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cr18")
@@ -608,6 +610,7 @@ impl Default for Cr19 {
         Cr19(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cr19 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cr19")
@@ -748,6 +751,7 @@ impl Default for Cr2 {
         Cr2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cr2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cr2")
@@ -949,6 +953,7 @@ impl Default for Cr3 {
         Cr3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cr3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cr3")
@@ -1014,6 +1019,7 @@ impl Default for DmasaFb1 {
         DmasaFb1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmasaFb1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmasaFb1")
@@ -1055,6 +1061,7 @@ impl Default for DmasaFb2 {
         DmasaFb2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmasaFb2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmasaFb2")
@@ -1096,6 +1103,7 @@ impl Default for DmasaStatfifo {
         DmasaStatfifo(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmasaStatfifo {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmasaStatfifo")
@@ -1137,6 +1145,7 @@ impl Default for DmatsStatfifo {
         DmatsStatfifo(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmatsStatfifo {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmatsStatfifo")
@@ -1190,6 +1199,7 @@ impl Default for FbufPara {
         FbufPara(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FbufPara {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FbufPara")
@@ -1245,6 +1255,7 @@ impl Default for ImagPara {
         ImagPara(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ImagPara {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ImagPara")
@@ -1288,6 +1299,7 @@ impl Default for Rfifo {
         Rfifo(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Rfifo {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Rfifo")
@@ -1325,6 +1337,7 @@ impl Default for Rxcnt {
         Rxcnt(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Rxcnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Rxcnt")
@@ -1566,6 +1579,7 @@ impl Default for Sr {
         Sr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sr")
@@ -1641,6 +1655,7 @@ impl Default for Statfifo {
         Statfifo(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Statfifo {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Statfifo")

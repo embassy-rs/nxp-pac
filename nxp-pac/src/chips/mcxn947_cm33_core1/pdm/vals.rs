@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BsyFil {
     #[doc = "MICFIL is stopped."]
@@ -30,7 +31,8 @@ impl From<BsyFil> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ch0f {
     #[doc = "Not surpassed."]
@@ -61,7 +63,8 @@ impl From<Ch0f> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ch1f {
     #[doc = "Not surpassed."]
@@ -92,7 +95,8 @@ impl From<Ch1f> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ch2f {
     #[doc = "Not surpassed."]
@@ -123,7 +127,8 @@ impl From<Ch2f> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ch3f {
     #[doc = "Not surpassed."]
@@ -154,7 +159,8 @@ impl From<Ch3f> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cicosr {
     #[doc = "CIC oversampling rate = 0."]
@@ -177,11 +183,16 @@ pub enum Cicosr {
     Cicosr28 = 0x08,
     #[doc = "..."]
     Cicosr29 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "..."]
+    Cicosr210 = 0x0a,
+    #[doc = "..."]
+    Cicosr211 = 0x0b,
+    #[doc = "..."]
+    Cicosr212 = 0x0c,
+    #[doc = "..."]
+    Cicosr213 = 0x0d,
+    #[doc = "..."]
+    Cicosr214 = 0x0e,
     #[doc = "CIC oversampling rate = 15."]
     Cicosr15 = 0x0f,
 }
@@ -231,6 +242,22 @@ impl Clkdiv {
     pub const Clkdiv28: Self = Self(0x08);
     #[doc = "..."]
     pub const Clkdiv29: Self = Self(0x09);
+    #[doc = "..."]
+    pub const Clkdiv210: Self = Self(0x0a);
+    #[doc = "..."]
+    pub const Clkdiv211: Self = Self(0x0b);
+    #[doc = "..."]
+    pub const Clkdiv2249: Self = Self(0xf9);
+    #[doc = "..."]
+    pub const Clkdiv2250: Self = Self(0xfa);
+    #[doc = "..."]
+    pub const Clkdiv2251: Self = Self(0xfb);
+    #[doc = "..."]
+    pub const Clkdiv2252: Self = Self(0xfc);
+    #[doc = "..."]
+    pub const Clkdiv2253: Self = Self(0xfd);
+    #[doc = "..."]
+    pub const Clkdiv2254: Self = Self(0xfe);
     #[doc = "Internal clock divider value = 255."]
     pub const Clkdiv255: Self = Self(0xff);
 }
@@ -242,6 +269,7 @@ impl Clkdiv {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Clkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -255,6 +283,14 @@ impl core::fmt::Debug for Clkdiv {
             0x07 => f.write_str("Clkdiv27"),
             0x08 => f.write_str("Clkdiv28"),
             0x09 => f.write_str("Clkdiv29"),
+            0x0a => f.write_str("Clkdiv210"),
+            0x0b => f.write_str("Clkdiv211"),
+            0xf9 => f.write_str("Clkdiv2249"),
+            0xfa => f.write_str("Clkdiv2250"),
+            0xfb => f.write_str("Clkdiv2251"),
+            0xfc => f.write_str("Clkdiv2252"),
+            0xfd => f.write_str("Clkdiv2253"),
+            0xfe => f.write_str("Clkdiv2254"),
             0xff => f.write_str("Clkdiv255"),
             other => core::write!(f, "0x{:02X}", other),
         }
@@ -274,6 +310,14 @@ impl defmt::Format for Clkdiv {
             0x07 => defmt::write!(f, "Clkdiv27"),
             0x08 => defmt::write!(f, "Clkdiv28"),
             0x09 => defmt::write!(f, "Clkdiv29"),
+            0x0a => defmt::write!(f, "Clkdiv210"),
+            0x0b => defmt::write!(f, "Clkdiv211"),
+            0xf9 => defmt::write!(f, "Clkdiv2249"),
+            0xfa => defmt::write!(f, "Clkdiv2250"),
+            0xfb => defmt::write!(f, "Clkdiv2251"),
+            0xfc => defmt::write!(f, "Clkdiv2252"),
+            0xfd => defmt::write!(f, "Clkdiv2253"),
+            0xfe => defmt::write!(f, "Clkdiv2254"),
             0xff => defmt::write!(f, "Clkdiv255"),
             other => defmt::write!(f, "0x{:02X}", other),
         }
@@ -292,7 +336,8 @@ impl From<Clkdiv> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Clkdivdis {
     #[doc = "Enables."]
@@ -323,7 +368,8 @@ impl From<Clkdivdis> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dbg {
     #[doc = "Normal."]
@@ -354,7 +400,8 @@ impl From<Dbg> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DcBypass {
     #[doc = "Active."]
@@ -385,7 +432,8 @@ impl From<DcBypass> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DcCtrlDcconfig0 {
     #[doc = "20 Hz (PDM_CLK = 3.072 MHz)."]
@@ -420,7 +468,8 @@ impl From<DcCtrlDcconfig0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DcCtrlDcconfig1 {
     #[doc = "20 Hz (PDM_CLK = 3.072 MHz)."]
@@ -455,7 +504,8 @@ impl From<DcCtrlDcconfig1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DcCtrlDcconfig2 {
     #[doc = "20 Hz (PDM_CLK = 3.072 MHz)."]
@@ -490,7 +540,8 @@ impl From<DcCtrlDcconfig2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DcCtrlDcconfig3 {
     #[doc = "20 Hz (PDM_CLK = 3.072 MHz)."]
@@ -525,7 +576,8 @@ impl From<DcCtrlDcconfig3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DcOutBypass {
     #[doc = "Active."]
@@ -556,7 +608,8 @@ impl From<DcOutBypass> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DcOutCtrlDcconfig0 {
     #[doc = "20 Hz (FS = 48 kHz)."]
@@ -591,7 +644,8 @@ impl From<DcOutCtrlDcconfig0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DcOutCtrlDcconfig1 {
     #[doc = "20 Hz (FS = 48 kHz)."]
@@ -626,7 +680,8 @@ impl From<DcOutCtrlDcconfig1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DcOutCtrlDcconfig2 {
     #[doc = "20 Hz (FS = 48 kHz)."]
@@ -661,7 +716,8 @@ impl From<DcOutCtrlDcconfig2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DcOutCtrlDcconfig3 {
     #[doc = "20 Hz (FS = 48 kHz)."]
@@ -696,7 +752,8 @@ impl From<DcOutCtrlDcconfig3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Decfils {
     #[doc = "Stops decimation filter."]
@@ -727,7 +784,8 @@ impl From<Decfils> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Disel {
     #[doc = "Disables DMA and interrupt requests."]
@@ -761,7 +819,8 @@ impl From<Disel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FifoPtrwid {
     #[doc = "0 bits."]
@@ -784,11 +843,16 @@ pub enum FifoPtrwid {
     Ptrwid38 = 0x08,
     #[doc = "..."]
     Ptrwid39 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "..."]
+    Ptrwid310 = 0x0a,
+    #[doc = "..."]
+    Ptrwid311 = 0x0b,
+    #[doc = "..."]
+    Ptrwid312 = 0x0c,
+    #[doc = "..."]
+    Ptrwid313 = 0x0d,
+    #[doc = "..."]
+    Ptrwid314 = 0x0e,
     #[doc = "15 bits."]
     Ptrwid15 = 0x0f,
 }
@@ -815,7 +879,8 @@ impl From<FifoPtrwid> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FilOutWidth24b {
     #[doc = "16 bits."]
@@ -846,7 +911,8 @@ impl From<FilOutWidth24b> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mdis {
     #[doc = "Normal mode."]
@@ -877,7 +943,8 @@ impl From<Mdis> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npair {
     #[doc = "None."]
@@ -900,11 +967,16 @@ pub enum Npair {
     Npair38 = 0x08,
     #[doc = "..."]
     Npair39 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "..."]
+    Npair310 = 0x0a,
+    #[doc = "..."]
+    Npair311 = 0x0b,
+    #[doc = "..."]
+    Npair312 = 0x0c,
+    #[doc = "..."]
+    Npair313 = 0x0d,
+    #[doc = "..."]
+    Npair314 = 0x0e,
     #[doc = "15 pairs."]
     Npair15 = 0x0f,
 }
@@ -931,7 +1003,8 @@ impl From<Npair> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdmien {
     #[doc = "Stops MICFIL operation."]
@@ -962,7 +1035,8 @@ impl From<Pdmien> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qsel {
     #[doc = "Medium-Quality mode."]
@@ -1003,7 +1077,8 @@ impl From<Qsel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sres {
     #[doc = "No action."]

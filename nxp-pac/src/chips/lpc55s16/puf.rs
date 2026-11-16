@@ -111,11 +111,23 @@ impl Puf {
     }
     #[doc = "Only reset in case of full IC reset."]
     #[inline(always)]
-    pub const fn keymask(self, n: usize) -> crate::common::Reg<regs::Keymask, crate::common::W> {
-        assert!(n < 4usize);
-        unsafe {
-            crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0214usize + n * 4usize) as _)
-        }
+    pub const fn keymask0(self) -> crate::common::Reg<regs::Keymask0, crate::common::W> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0214usize) as _) }
+    }
+    #[doc = "Only reset in case of full IC reset."]
+    #[inline(always)]
+    pub const fn keymask1(self) -> crate::common::Reg<regs::Keymask1, crate::common::W> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0218usize) as _) }
+    }
+    #[doc = "Only reset in case of full IC reset."]
+    #[inline(always)]
+    pub const fn keymask2(self) -> crate::common::Reg<regs::Keymask2, crate::common::W> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x021cusize) as _) }
+    }
+    #[doc = "Only reset in case of full IC reset."]
+    #[inline(always)]
+    pub const fn keymask3(self) -> crate::common::Reg<regs::Keymask3, crate::common::W> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0220usize) as _) }
     }
     #[doc = "Index block status."]
     #[inline(always)]

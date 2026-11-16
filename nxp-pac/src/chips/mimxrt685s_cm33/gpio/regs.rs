@@ -22,6 +22,7 @@ impl Default for B {
         B(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B").field("pbyte", &self.pbyte()).finish()
@@ -57,6 +58,7 @@ impl Default for Clr {
         Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Clr").field("clrp", &self.clrp()).finish()
@@ -92,6 +94,7 @@ impl Default for Dir {
         Dir(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dir {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dir").field("dirp", &self.dirp()).finish()
@@ -127,6 +130,7 @@ impl Default for Dirclr {
         Dirclr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dirclr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dirclr")
@@ -164,6 +168,7 @@ impl Default for Dirnot {
         Dirnot(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dirnot {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dirnot")
@@ -201,6 +206,7 @@ impl Default for Dirset {
         Dirset(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dirset {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dirset")
@@ -239,6 +245,7 @@ impl Default for Intedg {
         Intedg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Intedg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Intedg")
@@ -276,6 +283,7 @@ impl Default for Intena {
         Intena(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Intena {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Intena")
@@ -313,6 +321,7 @@ impl Default for Intenb {
         Intenb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Intenb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Intenb")
@@ -351,6 +360,7 @@ impl Default for Intpol {
         Intpol(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Intpol {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Intpol")
@@ -388,6 +398,7 @@ impl Default for Intstata {
         Intstata(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Intstata {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Intstata")
@@ -425,6 +436,7 @@ impl Default for Intstatb {
         Intstatb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Intstatb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Intstatb")
@@ -462,6 +474,7 @@ impl Default for Mask {
         Mask(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mask {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mask")
@@ -499,6 +512,7 @@ impl Default for Mpin {
         Mpin(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mpin {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mpin")
@@ -536,6 +550,7 @@ impl Default for Not {
         Not(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Not {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Not").field("notp", &self.notp()).finish()
@@ -571,6 +586,7 @@ impl Default for Pin {
         Pin(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pin {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pin").field("port", &self.port()).finish()
@@ -606,6 +622,7 @@ impl Default for Set {
         Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Set").field("setp", &self.setp()).finish()
@@ -641,6 +658,7 @@ impl Default for W {
         W(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W").field("pword", &self.pword()).finish()

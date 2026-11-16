@@ -1,8 +1,9 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
 #![allow(non_upper_case_globals)]
-#![doc = "Peripheral access API (generated using chiptool v0.1.0 (e5ab29f 2026-04-30))"]
-#[derive(Copy, Clone, Debug, PartialEq, Eq)]
+#![doc = "Peripheral access API (generated using chiptool v0.1.0 (d54bc66 2026-11-16))"]
+#[derive(Copy, Clone, PartialEq, Eq)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Interrupt {
     #[doc = "0 - OR"]
@@ -199,8 +200,8 @@ pub enum Interrupt {
     I3C0 = 95,
     #[doc = "96 - I3C1"]
     I3C1 = 96,
-    #[doc = "97 - NPU"]
-    NPU = 97,
+    #[doc = "97 - RESERVED113"]
+    RESERVED113 = 97,
     #[doc = "98 - GDET"]
     GDET = 98,
     #[doc = "99 - VBAT0"]
@@ -349,9 +350,9 @@ pub const FREQME0: freqme0::Freqme0 = unsafe { freqme0::Freqme0::from_ptr(0x4001
 pub const UTICK0: utick0::Utick0 = unsafe { utick0::Utick0::from_ptr(0x4001_2000usize as _) };
 #[doc = "Multi-Rate Timer (MRT)"]
 pub const MRT0: mrt0::Mrt0 = unsafe { mrt0::Mrt0::from_ptr(0x4001_3000usize as _) };
-#[doc = "WWDT"]
+#[doc = "Windowed Watchdog Timer"]
 pub const WWDT0: wwdt::Wwdt = unsafe { wwdt::Wwdt::from_ptr(0x4001_6000usize as _) };
-#[doc = "WWDT"]
+#[doc = "Windowed Watchdog Timer"]
 pub const WWDT1: wwdt::Wwdt = unsafe { wwdt::Wwdt::from_ptr(0x4001_7000usize as _) };
 #[doc = "CACHE64_CTRL"]
 pub const CACHE64_CTRL0: cache64_ctrl0::Cache64Ctrl0 =
@@ -424,7 +425,7 @@ pub const OSTIMER0: ostimer0::Ostimer0 =
 pub const LPTMR0: lptmr::Lptmr = unsafe { lptmr::Lptmr::from_ptr(0x4004_a000usize as _) };
 #[doc = "LPTMR"]
 pub const LPTMR1: lptmr::Lptmr = unsafe { lptmr::Lptmr::from_ptr(0x4004_b000usize as _) };
-#[doc = "RTC"]
+#[doc = "Real Time Clock"]
 pub const RTC0: rtc0::Rtc0 = unsafe { rtc0::Rtc0::from_ptr(0x4004_c000usize as _) };
 #[doc = "RTC_SUBSYSTEM"]
 pub const RTC_SUBSYSTEM0: rtc_subsystem0::RtcSubsystem0 =
@@ -591,7 +592,7 @@ pub const DM0: dm0::Dm0 = unsafe { dm0::Dm0::from_ptr(0x400b_d000usize as _) };
 #[doc = "PowerQuad"]
 pub const POWERQUAD: powerquad::Powerquad =
     unsafe { powerquad::Powerquad::from_ptr(0x400b_f000usize as _) };
-#[doc = "EWM"]
+#[doc = "External Watchdog Monitor"]
 pub const EWM0: ewm0::Ewm0 = unsafe { ewm0::Ewm0::from_ptr(0x400c_0000usize as _) };
 #[doc = "CMX_PERFMON"]
 pub const CMX_PERFMON0: syspm::Syspm = unsafe { syspm::Syspm::from_ptr(0x400c_1000usize as _) };
@@ -642,7 +643,7 @@ pub const SAI1: sai::Sai = unsafe { sai::Sai::from_ptr(0x4010_7000usize as _) };
 pub const SINC0: sinc0::Sinc0 = unsafe { sinc0::Sinc0::from_ptr(0x4010_8000usize as _) };
 #[doc = "uSDHC"]
 pub const USDHC0: usdhc0::Usdhc0 = unsafe { usdhc0::Usdhc0::from_ptr(0x4010_9000usize as _) };
-#[doc = "USBPHY"]
+#[doc = "Universal Serial Bus 2.0 Integrated PHY"]
 pub const USBPHY: usbphy::Usbphy = unsafe { usbphy::Usbphy::from_ptr(0x4010_a000usize as _) };
 #[doc = "USBDCD"]
 pub const USBHS1_PHY_DCD: usbhs1_phy_dcd::Usbhs1PhyDcd =

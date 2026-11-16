@@ -106,6 +106,7 @@ impl Default for EvtgAoi0Bft01 {
         EvtgAoi0Bft01(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EvtgAoi0Bft01 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EvtgAoi0Bft01")
@@ -245,6 +246,7 @@ impl Default for EvtgAoi0Bft23 {
         EvtgAoi0Bft23(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EvtgAoi0Bft23 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EvtgAoi0Bft23")
@@ -312,6 +314,7 @@ impl Default for EvtgAoi0Filt {
         EvtgAoi0Filt(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EvtgAoi0Filt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EvtgAoi0Filt")
@@ -439,6 +442,7 @@ impl Default for EvtgAoi1Bft01 {
         EvtgAoi1Bft01(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EvtgAoi1Bft01 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EvtgAoi1Bft01")
@@ -578,6 +582,7 @@ impl Default for EvtgAoi1Bft23 {
         EvtgAoi1Bft23(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EvtgAoi1Bft23 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EvtgAoi1Bft23")
@@ -645,6 +650,7 @@ impl Default for EvtgAoi1Filt {
         EvtgAoi1Filt(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EvtgAoi1Filt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EvtgAoi1Filt")
@@ -748,6 +754,7 @@ impl Default for EvtgCtrl {
         EvtgCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EvtgCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EvtgCtrl")

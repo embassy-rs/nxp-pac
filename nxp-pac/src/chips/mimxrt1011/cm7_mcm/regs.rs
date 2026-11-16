@@ -190,6 +190,7 @@ impl Default for Iscr {
         Iscr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Iscr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Iscr")

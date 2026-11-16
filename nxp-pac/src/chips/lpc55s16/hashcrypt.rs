@@ -55,7 +55,7 @@ impl Hashcrypt {
         assert!(n < 7usize);
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x24usize + n * 4usize) as _) }
     }
-    #[doc = "Result digest (when status says so): Is 1st 5 words if SHA1 used Is all 8 words if SHA2 used Is all 8 words if crypto or SHA512."]
+    #[doc = "Result digest (when status says so): * Is 1st 5 words if SHA1 used * Is all 8 words if SHA2 used * Is all 8 words if crypto or SHA512."]
     #[inline(always)]
     pub const fn digest0(self, n: usize) -> crate::common::Reg<regs::Digest0, crate::common::R> {
         assert!(n < 8usize);

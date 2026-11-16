@@ -106,6 +106,7 @@ impl Default for PkcAccessErr {
         PkcAccessErr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PkcAccessErr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PkcAccessErr")
@@ -161,6 +162,7 @@ impl Default for PkcAccessErrClr {
         PkcAccessErrClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PkcAccessErrClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PkcAccessErrClr")
@@ -298,6 +300,7 @@ impl Default for PkcCfg {
         PkcCfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PkcCfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PkcCfg")
@@ -475,6 +478,7 @@ impl Default for PkcCtrl {
         PkcCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PkcCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PkcCtrl")
@@ -536,6 +540,7 @@ impl Default for PkcIntClrEnable {
         PkcIntClrEnable(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PkcIntClrEnable {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PkcIntClrEnable")
@@ -577,6 +582,7 @@ impl Default for PkcIntClrStatus {
         PkcIntClrStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PkcIntClrStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PkcIntClrStatus")
@@ -618,6 +624,7 @@ impl Default for PkcIntEnable {
         PkcIntEnable(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PkcIntEnable {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PkcIntEnable")
@@ -655,6 +662,7 @@ impl Default for PkcIntSetEnable {
         PkcIntSetEnable(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PkcIntSetEnable {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PkcIntSetEnable")
@@ -696,6 +704,7 @@ impl Default for PkcIntSetStatus {
         PkcIntSetStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PkcIntSetStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PkcIntSetStatus")
@@ -737,6 +746,7 @@ impl Default for PkcIntStatus {
         PkcIntStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PkcIntStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PkcIntStatus")
@@ -790,6 +800,7 @@ impl Default for PkcLen1 {
         PkcLen1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PkcLen1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PkcLen1")
@@ -845,6 +856,7 @@ impl Default for PkcLen2 {
         PkcLen2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PkcLen2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PkcLen2")
@@ -888,6 +900,7 @@ impl Default for PkcMcdata {
         PkcMcdata(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PkcMcdata {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PkcMcdata")
@@ -925,6 +938,7 @@ impl Default for PkcMode1 {
         PkcMode1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PkcMode1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PkcMode1")
@@ -962,6 +976,7 @@ impl Default for PkcMode2 {
         PkcMode2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PkcMode2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PkcMode2")
@@ -1035,6 +1050,7 @@ impl Default for PkcModuleId {
         PkcModuleId(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PkcModuleId {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PkcModuleId")
@@ -1082,6 +1098,7 @@ impl Default for PkcSoftRst {
         PkcSoftRst(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PkcSoftRst {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PkcSoftRst")
@@ -1167,6 +1184,7 @@ impl Default for PkcStatus {
         PkcStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PkcStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PkcStatus")
@@ -1216,6 +1234,7 @@ impl Default for PkcUlen {
         PkcUlen(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PkcUlen {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PkcUlen").field("len", &self.len()).finish()
@@ -1251,6 +1270,7 @@ impl Default for PkcUptr {
         PkcUptr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PkcUptr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PkcUptr").field("ptr", &self.ptr()).finish()
@@ -1286,6 +1306,7 @@ impl Default for PkcUptrt {
         PkcUptrt(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PkcUptrt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PkcUptrt")
@@ -1443,6 +1464,7 @@ impl Default for PkcVersion {
         PkcVersion(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PkcVersion {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PkcVersion")
@@ -1516,6 +1538,7 @@ impl Default for PkcXyptr1 {
         PkcXyptr1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PkcXyptr1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PkcXyptr1")
@@ -1571,6 +1594,7 @@ impl Default for PkcXyptr2 {
         PkcXyptr2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PkcXyptr2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PkcXyptr2")
@@ -1626,6 +1650,7 @@ impl Default for PkcZrptr1 {
         PkcZrptr1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PkcZrptr1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PkcZrptr1")
@@ -1681,6 +1706,7 @@ impl Default for PkcZrptr2 {
         PkcZrptr2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PkcZrptr2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PkcZrptr2")

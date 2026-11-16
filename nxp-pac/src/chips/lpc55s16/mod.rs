@@ -1,8 +1,9 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
 #![allow(non_upper_case_globals)]
-#![doc = "Peripheral access API (generated using chiptool v0.1.0 (e5ab29f 2026-04-30))"]
-#[derive(Copy, Clone, Debug, PartialEq, Eq)]
+#![doc = "Peripheral access API (generated using chiptool v0.1.0 (d54bc66 2026-11-16))"]
+#[derive(Copy, Clone, PartialEq, Eq)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Interrupt {
     #[doc = "0 - WDT_BOD"]
@@ -51,14 +52,24 @@ pub enum Interrupt {
     FLEXCOMM7 = 21,
     #[doc = "22 - ADC0"]
     ADC0 = 22,
+    #[doc = "23 - RESERVED39"]
+    RESERVED39 = 23,
     #[doc = "24 - ACMP"]
     ACMP = 24,
+    #[doc = "25 - RESERVED41"]
+    RESERVED41 = 25,
+    #[doc = "26 - RESERVED42"]
+    RESERVED42 = 26,
     #[doc = "27 - USB0_NEEDCLK"]
     USB0_NEEDCLK = 27,
     #[doc = "28 - USB0"]
     USB0 = 28,
     #[doc = "29 - RTC"]
     RTC = 29,
+    #[doc = "30 - RESERVED46"]
+    RESERVED46 = 30,
+    #[doc = "31 - RESERVED47"]
+    RESERVED47 = 31,
     #[doc = "32 - PIN_INT4"]
     PIN_INT4 = 32,
     #[doc = "33 - PIN_INT5"]
@@ -73,10 +84,20 @@ pub enum Interrupt {
     CTIMER4 = 37,
     #[doc = "38 - OS_EVENT"]
     OS_EVENT = 38,
+    #[doc = "39 - RESERVED55"]
+    RESERVED55 = 39,
+    #[doc = "40 - RESERVED56"]
+    RESERVED56 = 40,
+    #[doc = "41 - RESERVED57"]
+    RESERVED57 = 41,
+    #[doc = "42 - RESERVED58"]
+    RESERVED58 = 42,
     #[doc = "43 - CAN0_IRQ0"]
     CAN0_IRQ0 = 43,
     #[doc = "44 - CAN0_IRQ1"]
     CAN0_IRQ1 = 44,
+    #[doc = "45 - RESERVED61"]
+    RESERVED61 = 45,
     #[doc = "46 - USB1_PHY"]
     USB1_PHY = 46,
     #[doc = "47 - USB1"]
@@ -99,6 +120,8 @@ pub enum Interrupt {
     CASER = 55,
     #[doc = "56 - PUF"]
     PUF = 56,
+    #[doc = "57 - RESERVED73"]
+    RESERVED73 = 57,
     #[doc = "58 - DMA1"]
     DMA1 = 58,
     #[doc = "59 - FLEXCOMM8"]
@@ -189,7 +212,7 @@ pub const PUF: puf::Puf = unsafe { puf::Puf::from_ptr(0x4003_b000usize as _) };
 #[doc = "PUF SRAM Control"]
 pub const PUF_SRAM_CTRL: puf_sram_ctrl::PufSramCtrl =
     unsafe { puf_sram_ctrl::PufSramCtrl::from_ptr(0x4003_b000usize as _) };
-#[doc = "LPC80X Programmable Logic Unit (PLU)"]
+#[doc = "Programmable Logic Unit (PLU)"]
 pub const PLU: plu::Plu = unsafe { plu::Plu::from_ptr(0x4003_d000usize as _) };
 #[doc = "DMA controller"]
 pub const DMA0: dma::Dma = unsafe { dma::Dma::from_ptr(0x4008_2000usize as _) };
@@ -322,15 +345,15 @@ pub const SECGPIO: secgpio::Secgpio = unsafe { secgpio::Secgpio::from_ptr(0x400a
 #[doc = "AHB secure controller"]
 pub const AHB_SECURE_CTRL: ahb_secure_ctrl::AhbSecureCtrl =
     unsafe { ahb_secure_ctrl::AhbSecureCtrl::from_ptr(0x400a_c000usize as _) };
-#[doc = "no description available"]
+#[doc = "System Control not in System Control Block"]
 pub const SCNSCB: s_cn_scb::SCnScb = unsafe { s_cn_scb::SCnScb::from_ptr(0xe000_e000usize as _) };
-#[doc = "no description available"]
+#[doc = "Nested Vectored Interrupt Controller"]
 pub const NVIC: nvic::Nvic = unsafe { nvic::Nvic::from_ptr(0xe000_e100usize as _) };
-#[doc = "no description available"]
+#[doc = "System Control Block"]
 pub const SCB: scb::Scb = unsafe { scb::Scb::from_ptr(0xe000_ed00usize as _) };
 #[doc = "Memory Protection Unit"]
 pub const MPU: mpu::Mpu = unsafe { mpu::Mpu::from_ptr(0xe000_ed90usize as _) };
-#[doc = "no description available"]
+#[doc = "Security Attribution Unit"]
 pub const SAU: sau::Sau = unsafe { sau::Sau::from_ptr(0xe000_edd0usize as _) };
 #[doc = r" Number available in the NVIC for configuring priority"]
 #[cfg(feature = "rt")]

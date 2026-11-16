@@ -51,14 +51,14 @@ impl Ahbcr {
     pub const fn set_cachableen(&mut self, val: super::vals::Cachableen) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "Enable AHB bus bufferable write access support."]
+    #[doc = "Enable AHB bus bufferable write access support. This field affects the last beat of AHB write access, refer for more details about AHB bufferable write."]
     #[must_use]
     #[inline(always)]
     pub const fn bufferableen(&self) -> super::vals::Bufferableen {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Bufferableen::from_bits(val as u8)
     }
-    #[doc = "Enable AHB bus bufferable write access support."]
+    #[doc = "Enable AHB bus bufferable write access support. This field affects the last beat of AHB write access, refer for more details about AHB bufferable write."]
     #[inline(always)]
     pub const fn set_bufferableen(&mut self, val: super::vals::Bufferableen) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
@@ -75,14 +75,14 @@ impl Ahbcr {
     pub const fn set_prefetchen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "AHB Read Address option bit. This option bit is intended to remove AHB burst start address alignment limitation."]
+    #[doc = "AHB Read Address option bit. This option bit is intend to remove AHB burst start address alignment limitation."]
     #[must_use]
     #[inline(always)]
     pub const fn readaddropt(&self) -> super::vals::Readaddropt {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Readaddropt::from_bits(val as u8)
     }
-    #[doc = "AHB Read Address option bit. This option bit is intended to remove AHB burst start address alignment limitation."]
+    #[doc = "AHB Read Address option bit. This option bit is intend to remove AHB burst start address alignment limitation."]
     #[inline(always)]
     pub const fn set_readaddropt(&mut self, val: super::vals::Readaddropt) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
@@ -99,6 +99,18 @@ impl Ahbcr {
     pub const fn set_readszalign(&mut self, val: super::vals::Readszalign) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
+    #[doc = "Decides all AHB read/write boundary. All access cross the boundary will be divided into smaller sub accesses."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn alignment(&self) -> super::vals::Alignment {
+        let val = (self.0 >> 20usize) & 0x03;
+        super::vals::Alignment::from_bits(val as u8)
+    }
+    #[doc = "Decides all AHB read/write boundary. All access cross the boundary will be divided into smaller sub accesses."]
+    #[inline(always)]
+    pub const fn set_alignment(&mut self, val: super::vals::Alignment) {
+        self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
+    }
 }
 impl Default for Ahbcr {
     #[inline(always)]
@@ -106,6 +118,7 @@ impl Default for Ahbcr {
         Ahbcr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ahbcr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ahbcr")
@@ -117,6 +130,7 @@ impl core::fmt::Debug for Ahbcr {
             .field("prefetchen", &self.prefetchen())
             .field("readaddropt", &self.readaddropt())
             .field("readszalign", &self.readszalign())
+            .field("alignment", &self.alignment())
             .finish()
     }
 }
@@ -125,7 +139,7 @@ impl defmt::Format for Ahbcr {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Ahbcr {{ aparen: {:?}, clrahbrxbuf: {=bool:?}, clrahbtxbuf: {=bool:?}, cachableen: {:?}, bufferableen: {:?}, prefetchen: {=bool:?}, readaddropt: {:?}, readszalign: {:?} }}",
+            "Ahbcr {{ aparen: {:?}, clrahbrxbuf: {=bool:?}, clrahbtxbuf: {=bool:?}, cachableen: {:?}, bufferableen: {:?}, prefetchen: {=bool:?}, readaddropt: {:?}, readszalign: {:?}, alignment: {:?} }}",
             self.aparen(),
             self.clrahbrxbuf(),
             self.clrahbtxbuf(),
@@ -133,7 +147,8 @@ impl defmt::Format for Ahbcr {
             self.bufferableen(),
             self.prefetchen(),
             self.readaddropt(),
-            self.readszalign()
+            self.readszalign(),
+            self.alignment()
         )
     }
 }
@@ -178,14 +193,14 @@ impl Ahbrxbuf0cr0 {
     pub const fn set_priority(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val as u32) & 0x03) << 24usize);
     }
-    #[doc = "AHB RX Buffer address region function enable."]
+    #[doc = "AHB RX Buffer address region funciton enable."]
     #[must_use]
     #[inline(always)]
     pub const fn regionen(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "AHB RX Buffer address region function enable."]
+    #[doc = "AHB RX Buffer address region funciton enable."]
     #[inline(always)]
     pub const fn set_regionen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
@@ -209,6 +224,7 @@ impl Default for Ahbrxbuf0cr0 {
         Ahbrxbuf0cr0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ahbrxbuf0cr0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ahbrxbuf0cr0")
@@ -275,14 +291,14 @@ impl Ahbrxbuf1cr0 {
     pub const fn set_priority(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val as u32) & 0x03) << 24usize);
     }
-    #[doc = "AHB RX Buffer address region function enable."]
+    #[doc = "AHB RX Buffer address region funciton enable."]
     #[must_use]
     #[inline(always)]
     pub const fn regionen(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "AHB RX Buffer address region function enable."]
+    #[doc = "AHB RX Buffer address region funciton enable."]
     #[inline(always)]
     pub const fn set_regionen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
@@ -306,6 +322,7 @@ impl Default for Ahbrxbuf1cr0 {
         Ahbrxbuf1cr0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ahbrxbuf1cr0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ahbrxbuf1cr0")
@@ -372,14 +389,14 @@ impl Ahbrxbuf2cr0 {
     pub const fn set_priority(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val as u32) & 0x03) << 24usize);
     }
-    #[doc = "AHB RX Buffer address region function enable."]
+    #[doc = "AHB RX Buffer address region funciton enable."]
     #[must_use]
     #[inline(always)]
     pub const fn regionen(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "AHB RX Buffer address region function enable."]
+    #[doc = "AHB RX Buffer address region funciton enable."]
     #[inline(always)]
     pub const fn set_regionen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
@@ -403,6 +420,7 @@ impl Default for Ahbrxbuf2cr0 {
         Ahbrxbuf2cr0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ahbrxbuf2cr0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ahbrxbuf2cr0")
@@ -469,14 +487,14 @@ impl Ahbrxbuf3cr0 {
     pub const fn set_priority(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val as u32) & 0x03) << 24usize);
     }
-    #[doc = "AHB RX Buffer address region function enable."]
+    #[doc = "AHB RX Buffer address region funciton enable."]
     #[must_use]
     #[inline(always)]
     pub const fn regionen(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "AHB RX Buffer address region function enable."]
+    #[doc = "AHB RX Buffer address region funciton enable."]
     #[inline(always)]
     pub const fn set_regionen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
@@ -500,6 +518,7 @@ impl Default for Ahbrxbuf3cr0 {
         Ahbrxbuf3cr0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ahbrxbuf3cr0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ahbrxbuf3cr0")
@@ -573,6 +592,7 @@ impl Default for Ahbspndsts {
         Ahbspndsts(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ahbspndsts {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ahbspndsts")
@@ -611,14 +631,14 @@ impl Dllcr {
     pub const fn set_dllen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "DLL reset."]
+    #[doc = "Software could force a reset on DLL by setting this field to 0x1. This will cause the DLL to lose lock and re-calibrate to detect an ref_clock half period phase shift. The reset action is edge triggered, so software need to clear this bit after set this bit (no delay limitation)."]
     #[must_use]
     #[inline(always)]
     pub const fn dllreset(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "DLL reset."]
+    #[doc = "Software could force a reset on DLL by setting this field to 0x1. This will cause the DLL to lose lock and re-calibrate to detect an ref_clock half period phase shift. The reset action is edge triggered, so software need to clear this bit after set this bit (no delay limitation)."]
     #[inline(always)]
     pub const fn set_dllreset(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
@@ -659,6 +679,18 @@ impl Dllcr {
     pub const fn set_ovrdval(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 9usize)) | (((val as u32) & 0x3f) << 9usize);
     }
+    #[doc = "Reference clock delay line phase adjust gap."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn refphasegap(&self) -> u8 {
+        let val = (self.0 >> 15usize) & 0x03;
+        val as u8
+    }
+    #[doc = "Reference clock delay line phase adjust gap."]
+    #[inline(always)]
+    pub const fn set_refphasegap(&mut self, val: u8) {
+        self.0 = (self.0 & !(0x03 << 15usize)) | (((val as u32) & 0x03) << 15usize);
+    }
 }
 impl Default for Dllcr {
     #[inline(always)]
@@ -666,6 +698,7 @@ impl Default for Dllcr {
         Dllcr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dllcr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dllcr")
@@ -674,6 +707,7 @@ impl core::fmt::Debug for Dllcr {
             .field("slvdlytarget", &self.slvdlytarget())
             .field("ovrden", &self.ovrden())
             .field("ovrdval", &self.ovrdval())
+            .field("refphasegap", &self.refphasegap())
             .finish()
     }
 }
@@ -682,12 +716,13 @@ impl defmt::Format for Dllcr {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Dllcr {{ dllen: {=bool:?}, dllreset: {=bool:?}, slvdlytarget: {=u8:?}, ovrden: {=bool:?}, ovrdval: {=u8:?} }}",
+            "Dllcr {{ dllen: {=bool:?}, dllreset: {=bool:?}, slvdlytarget: {=u8:?}, ovrden: {=bool:?}, ovrdval: {=u8:?}, refphasegap: {=u8:?} }}",
             self.dllen(),
             self.dllreset(),
             self.slvdlytarget(),
             self.ovrden(),
-            self.ovrdval()
+            self.ovrdval(),
+            self.refphasegap()
         )
     }
 }
@@ -715,6 +750,7 @@ impl Default for Flsha1cr0 {
         Flsha1cr0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flsha1cr0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flsha1cr0")
@@ -752,6 +788,7 @@ impl Default for Flsha2cr0 {
         Flsha2cr0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flsha2cr0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flsha2cr0")
@@ -789,6 +826,7 @@ impl Default for Flshb1cr0 {
         Flshb1cr0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flshb1cr0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flshb1cr0")
@@ -826,6 +864,7 @@ impl Default for Flshb2cr0 {
         Flshb2cr0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flshb2cr0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flshb2cr0")
@@ -904,14 +943,14 @@ impl Flshcr1 {
     pub const fn set_csintervalunit(&mut self, val: super::vals::Csintervalunit) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "This field is used to set the minimum interval between flash device chip select deassertion and flash device chip select assertion. If external flash has a limitation on the interval between command sequences, this field should be set accordingly. If there is no limitation, set this field with value 0x0."]
+    #[doc = "This field is used to set the minimum interval between flash device Chip selection deassertion and flash device Chip selection assertion. If external flash has a limitation on the interval between command sequences, this field should be set accordingly. If there is no limitation, set this field with value 0x0."]
     #[must_use]
     #[inline(always)]
     pub const fn csinterval(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "This field is used to set the minimum interval between flash device chip select deassertion and flash device chip select assertion. If external flash has a limitation on the interval between command sequences, this field should be set accordingly. If there is no limitation, set this field with value 0x0."]
+    #[doc = "This field is used to set the minimum interval between flash device Chip selection deassertion and flash device Chip selection assertion. If external flash has a limitation on the interval between command sequences, this field should be set accordingly. If there is no limitation, set this field with value 0x0."]
     #[inline(always)]
     pub const fn set_csinterval(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -923,6 +962,7 @@ impl Default for Flshcr1 {
         Flshcr1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flshcr1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flshcr1")
@@ -1003,14 +1043,14 @@ impl Flshcr2 {
     pub const fn set_awrseqnum(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 13usize)) | (((val as u32) & 0x07) << 13usize);
     }
-    #[doc = "For certain devices (such as FPGA), it need some time to write data into internal memory after the command sequences finished on FlexSPI interface. If another Read command sequence comes before previous programming finished internally, the read data may be wrong. This field is used to hold AHB Bus ready for AHB write access to wait the programming finished in external device. Then there will be no AHB read command triggered before the programming finished in external device. The Wait cycle between AHB triggered command sequences finished on FlexSPI interface and AHB return Bus ready: AWRWAIT * AWRWAITUNIT."]
+    #[doc = "For certain devices (such as FPGA), it need some time to write data into internal memory after the command sequences finished on FlexSPI interface."]
     #[must_use]
     #[inline(always)]
     pub const fn awrwait(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "For certain devices (such as FPGA), it need some time to write data into internal memory after the command sequences finished on FlexSPI interface. If another Read command sequence comes before previous programming finished internally, the read data may be wrong. This field is used to hold AHB Bus ready for AHB write access to wait the programming finished in external device. Then there will be no AHB read command triggered before the programming finished in external device. The Wait cycle between AHB triggered command sequences finished on FlexSPI interface and AHB return Bus ready: AWRWAIT * AWRWAITUNIT."]
+    #[doc = "For certain devices (such as FPGA), it need some time to write data into internal memory after the command sequences finished on FlexSPI interface."]
     #[inline(always)]
     pub const fn set_awrwait(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -1027,14 +1067,14 @@ impl Flshcr2 {
     pub const fn set_awrwaitunit(&mut self, val: super::vals::Awrwaitunit) {
         self.0 = (self.0 & !(0x07 << 28usize)) | (((val.to_bits() as u32) & 0x07) << 28usize);
     }
-    #[doc = "Clear the instruction pointer which is internally saved pointer by JMP_ON_CS."]
+    #[doc = "Clear the instruction pointer which is internally saved pointer by JMP_ON_CS. Refer Programmable Sequence Engine for details."]
     #[must_use]
     #[inline(always)]
     pub const fn clrinstrptr(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Clear the instruction pointer which is internally saved pointer by JMP_ON_CS."]
+    #[doc = "Clear the instruction pointer which is internally saved pointer by JMP_ON_CS. Refer Programmable Sequence Engine for details."]
     #[inline(always)]
     pub const fn set_clrinstrptr(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -1046,6 +1086,7 @@ impl Default for Flshcr2 {
         Flshcr2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flshcr2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flshcr2")
@@ -1080,14 +1121,14 @@ impl defmt::Format for Flshcr2 {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flshcr4(pub u32);
 impl Flshcr4 {
-    #[doc = "Write mask option bit 1. This option bit could be used to remove AHB and IP write burst start address alignment limitation."]
+    #[doc = "Write mask option bit 1. This option bit could be used to remove AHB write burst start address alignment limitation."]
     #[must_use]
     #[inline(always)]
     pub const fn wmopt1(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Write mask option bit 1. This option bit could be used to remove AHB and IP write burst start address alignment limitation."]
+    #[doc = "Write mask option bit 1. This option bit could be used to remove AHB write burst start address alignment limitation."]
     #[inline(always)]
     pub const fn set_wmopt1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -1116,6 +1157,30 @@ impl Flshcr4 {
     pub const fn set_wmenb(&mut self, val: super::vals::Wmenb) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
+    #[doc = "Enable APMEM 16 bit write mask function, bit 9 for A1-B1 pair, bit 10 for A2-B2 pair."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn par_wm(&self) -> u8 {
+        let val = (self.0 >> 9usize) & 0x03;
+        val as u8
+    }
+    #[doc = "Enable APMEM 16 bit write mask function, bit 9 for A1-B1 pair, bit 10 for A2-B2 pair."]
+    #[inline(always)]
+    pub const fn set_par_wm(&mut self, val: u8) {
+        self.0 = (self.0 & !(0x03 << 9usize)) | (((val as u32) & 0x03) << 9usize);
+    }
+    #[doc = "Disable the address shift logic for lower density of 16 bit PSRAM."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn par_addr_adj_dis(&self) -> bool {
+        let val = (self.0 >> 11usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Disable the address shift logic for lower density of 16 bit PSRAM."]
+    #[inline(always)]
+    pub const fn set_par_addr_adj_dis(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
+    }
 }
 impl Default for Flshcr4 {
     #[inline(always)]
@@ -1123,12 +1188,15 @@ impl Default for Flshcr4 {
         Flshcr4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flshcr4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flshcr4")
             .field("wmopt1", &self.wmopt1())
             .field("wmena", &self.wmena())
             .field("wmenb", &self.wmenb())
+            .field("par_wm", &self.par_wm())
+            .field("par_addr_adj_dis", &self.par_addr_adj_dis())
             .finish()
     }
 }
@@ -1137,10 +1205,12 @@ impl defmt::Format for Flshcr4 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Flshcr4 {{ wmopt1: {=bool:?}, wmena: {:?}, wmenb: {:?} }}",
+            "Flshcr4 {{ wmopt1: {=bool:?}, wmena: {:?}, wmenb: {:?}, par_wm: {=u8:?}, par_addr_adj_dis: {=bool:?} }}",
             self.wmopt1(),
             self.wmena(),
-            self.wmenb()
+            self.wmenb(),
+            self.par_wm(),
+            self.par_addr_adj_dis()
         )
     }
 }
@@ -1257,26 +1327,26 @@ impl Inten {
     pub const fn set_sckstopbywren(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "AHB Bus timeout interrupt."]
+    #[doc = "AHB Bus timeout interrupt.Refer Interrupts chapter for more details."]
     #[must_use]
     #[inline(always)]
     pub const fn ahbbustimeouten(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "AHB Bus timeout interrupt."]
+    #[doc = "AHB Bus timeout interrupt.Refer Interrupts chapter for more details."]
     #[inline(always)]
     pub const fn set_ahbbustimeouten(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "Sequence execution timeout interrupt enable."]
+    #[doc = "Sequence execution timeout interrupt enable.Refer Interrupts chapter for more details."]
     #[must_use]
     #[inline(always)]
     pub const fn seqtimeouten(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "Sequence execution timeout interrupt enable."]
+    #[doc = "Sequence execution timeout interrupt enable.Refer Interrupts chapter for more details."]
     #[inline(always)]
     pub const fn set_seqtimeouten(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
@@ -1288,6 +1358,7 @@ impl Default for Inten {
         Inten(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Inten {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Inten")
@@ -1438,14 +1509,14 @@ impl Intr {
     pub const fn set_sckstopbywr(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "AHB Bus timeout interrupt."]
+    #[doc = "AHB Bus timeout interrupt.Refer Interrupts chapter for more details."]
     #[must_use]
     #[inline(always)]
     pub const fn ahbbustimeout(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "AHB Bus timeout interrupt."]
+    #[doc = "AHB Bus timeout interrupt.Refer Interrupts chapter for more details."]
     #[inline(always)]
     pub const fn set_ahbbustimeout(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
@@ -1469,6 +1540,7 @@ impl Default for Intr {
         Intr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Intr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Intr")
@@ -1530,6 +1602,7 @@ impl Default for Ipcmd {
         Ipcmd(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ipcmd {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ipcmd").field("trg", &self.trg()).finish()
@@ -1565,6 +1638,7 @@ impl Default for Ipcr0 {
         Ipcr0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ipcr0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ipcr0").field("sfar", &self.sfar()).finish()
@@ -1636,6 +1710,7 @@ impl Default for Ipcr1 {
         Ipcr1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ipcr1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ipcr1")
@@ -1688,14 +1763,14 @@ impl Iprxfcr {
     pub const fn set_rxdmaen(&mut self, val: super::vals::Rxdmaen) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Watermark level is (RXWMRK+1)*64 bits."]
+    #[doc = "Watermark level is (RXWMRK+1)*64 Bits."]
     #[must_use]
     #[inline(always)]
     pub const fn rxwmrk(&self) -> u8 {
         let val = (self.0 >> 2usize) & 0x0f;
         val as u8
     }
-    #[doc = "Watermark level is (RXWMRK+1)*64 bits."]
+    #[doc = "Watermark level is (RXWMRK+1)*64 Bits."]
     #[inline(always)]
     pub const fn set_rxwmrk(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 2usize)) | (((val as u32) & 0x0f) << 2usize);
@@ -1707,6 +1782,7 @@ impl Default for Iprxfcr {
         Iprxfcr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Iprxfcr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Iprxfcr")
@@ -1764,6 +1840,7 @@ impl Default for Iprxfsts {
         Iprxfsts(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Iprxfsts {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Iprxfsts")
@@ -1831,6 +1908,7 @@ impl Default for Iptxfcr {
         Iptxfcr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Iptxfcr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Iptxfcr")
@@ -1888,6 +1966,7 @@ impl Default for Iptxfsts {
         Iptxfsts(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Iptxfsts {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Iptxfsts")
@@ -1991,6 +2070,7 @@ impl Default for Lut {
         Lut(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lut {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lut")
@@ -2054,6 +2134,7 @@ impl Default for Lutcr {
         Lutcr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lutcr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lutcr")
@@ -2097,6 +2178,7 @@ impl Default for Lutkey {
         Lutkey(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lutkey {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lutkey").field("key", &self.key()).finish()
@@ -2173,26 +2255,26 @@ impl Mcr0 {
     pub const fn set_atdfen(&mut self, val: super::vals::Atdfen) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "Serial root clock."]
+    #[doc = "The serial root clock could be divided inside FlexSPI . Refer to \"Clocks\" chapter for more details on clocking."]
     #[must_use]
     #[inline(always)]
     pub const fn serclkdiv(&self) -> super::vals::Serclkdiv {
         let val = (self.0 >> 8usize) & 0x07;
         super::vals::Serclkdiv::from_bits(val as u8)
     }
-    #[doc = "Serial root clock."]
+    #[doc = "The serial root clock could be divided inside FlexSPI . Refer to \"Clocks\" chapter for more details on clocking."]
     #[inline(always)]
     pub const fn set_serclkdiv(&mut self, val: super::vals::Serclkdiv) {
         self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u32) & 0x07) << 8usize);
     }
-    #[doc = "Half Speed Serial Flash Access Enable."]
+    #[doc = "Half Speed Serial Flash access Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn hsen(&self) -> super::vals::Hsen {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::Hsen::from_bits(val as u8)
     }
-    #[doc = "Half Speed Serial Flash Access Enable."]
+    #[doc = "Half Speed Serial Flash access Enable."]
     #[inline(always)]
     pub const fn set_hsen(&mut self, val: super::vals::Hsen) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
@@ -2212,35 +2294,35 @@ impl Mcr0 {
     #[doc = "This bit is to support Flash Octal mode access by combining Port A and B Data pins (A_DATA\\[3:0\\] and B_DATA\\[3:0\\]), when Port A and Port B are of 4 bit data width."]
     #[must_use]
     #[inline(always)]
-    pub const fn combinationen(&self) -> bool {
+    pub const fn combinationen(&self) -> super::vals::Combinationen {
         let val = (self.0 >> 13usize) & 0x01;
-        val != 0
+        super::vals::Combinationen::from_bits(val as u8)
     }
     #[doc = "This bit is to support Flash Octal mode access by combining Port A and B Data pins (A_DATA\\[3:0\\] and B_DATA\\[3:0\\]), when Port A and Port B are of 4 bit data width."]
     #[inline(always)]
-    pub const fn set_combinationen(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
+    pub const fn set_combinationen(&mut self, val: super::vals::Combinationen) {
+        self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
-    #[doc = "This bit is used to enable SCLK output free-running. For FPGA applications, the external device may use SCLK as reference clock to its internal PLL."]
+    #[doc = "This bit is used to force SCLK output free-running. For FPGA applications, external device may use SCLK as reference clock to its internal PLL. If SCLK free-running is enabled, data sampling with loopback clock from SCLK pad is not supported (MCR0\\[RXCLKSRC\\]=2)."]
     #[must_use]
     #[inline(always)]
-    pub const fn sckfreerunen(&self) -> bool {
+    pub const fn sckfreerunen(&self) -> super::vals::Sckfreerunen {
         let val = (self.0 >> 14usize) & 0x01;
-        val != 0
+        super::vals::Sckfreerunen::from_bits(val as u8)
     }
-    #[doc = "This bit is used to enable SCLK output free-running. For FPGA applications, the external device may use SCLK as reference clock to its internal PLL."]
+    #[doc = "This bit is used to force SCLK output free-running. For FPGA applications, external device may use SCLK as reference clock to its internal PLL. If SCLK free-running is enabled, data sampling with loopback clock from SCLK pad is not supported (MCR0\\[RXCLKSRC\\]=2)."]
     #[inline(always)]
-    pub const fn set_sckfreerunen(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
+    pub const fn set_sckfreerunen(&mut self, val: super::vals::Sckfreerunen) {
+        self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
     }
-    #[doc = "Timeout wait cycle for IP command grant."]
+    #[doc = "Time out wait cycle for IP command grant."]
     #[must_use]
     #[inline(always)]
     pub const fn ipgrantwait(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "Timeout wait cycle for IP command grant."]
+    #[doc = "Time out wait cycle for IP command grant."]
     #[inline(always)]
     pub const fn set_ipgrantwait(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
@@ -2264,6 +2346,7 @@ impl Default for Mcr0 {
         Mcr0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mcr0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mcr0")
@@ -2287,7 +2370,7 @@ impl defmt::Format for Mcr0 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Mcr0 {{ swreset: {=bool:?}, mdis: {=bool:?}, rxclksrc: {:?}, ardfen: {:?}, atdfen: {:?}, serclkdiv: {:?}, hsen: {:?}, dozeen: {:?}, combinationen: {=bool:?}, sckfreerunen: {=bool:?}, ipgrantwait: {=u8:?}, ahbgrantwait: {=u8:?} }}",
+            "Mcr0 {{ swreset: {=bool:?}, mdis: {=bool:?}, rxclksrc: {:?}, ardfen: {:?}, atdfen: {:?}, serclkdiv: {:?}, hsen: {:?}, dozeen: {:?}, combinationen: {:?}, sckfreerunen: {:?}, ipgrantwait: {=u8:?}, ahbgrantwait: {=u8:?} }}",
             self.swreset(),
             self.mdis(),
             self.rxclksrc(),
@@ -2308,26 +2391,26 @@ impl defmt::Format for Mcr0 {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mcr1(pub u32);
 impl Mcr1 {
-    #[doc = "AHB Bus wait."]
+    #[doc = "AHB Read/Write access to Serial Flash Memory space will timeout if not data received from Flash or data not transmitted after AHBBUSWAIT * 1024 ahb clock cycles, AHB Bus will get an error response."]
     #[must_use]
     #[inline(always)]
     pub const fn ahbbuswait(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "AHB Bus wait."]
+    #[doc = "AHB Read/Write access to Serial Flash Memory space will timeout if not data received from Flash or data not transmitted after AHBBUSWAIT * 1024 ahb clock cycles, AHB Bus will get an error response."]
     #[inline(always)]
     pub const fn set_ahbbuswait(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Command Sequence Execution will timeout and abort after SEQWAIT * 1024 Serial Root Clock cycles. When sequence execution timeout occurs, there will be an interrupt generated (INTR\\[SEQTIMEOUT\\]) if this interrupt is enabled (INTEN\\[SEQTIMEOUTEN\\] is set 0x1) and AHB command is ignored by arbitrator."]
+    #[doc = "Command Sequence Execution will timeout and abort after SEQWAIT * 1024 Serial Root Clock cycles."]
     #[must_use]
     #[inline(always)]
     pub const fn seqwait(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Command Sequence Execution will timeout and abort after SEQWAIT * 1024 Serial Root Clock cycles. When sequence execution timeout occurs, there will be an interrupt generated (INTR\\[SEQTIMEOUT\\]) if this interrupt is enabled (INTEN\\[SEQTIMEOUTEN\\] is set 0x1) and AHB command is ignored by arbitrator."]
+    #[doc = "Command Sequence Execution will timeout and abort after SEQWAIT * 1024 Serial Root Clock cycles."]
     #[inline(always)]
     pub const fn set_seqwait(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -2339,6 +2422,7 @@ impl Default for Mcr1 {
         Mcr1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mcr1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mcr1")
@@ -2363,26 +2447,26 @@ impl defmt::Format for Mcr1 {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mcr2(pub u32);
 impl Mcr2 {
-    #[doc = "Clear AHB buffer."]
+    #[doc = "This bit determines whether AHB RX Buffer and AHB TX Buffer will be cleaned automatically when FlexSPI returns STOP mode ACK. Software should set this bit if AHB RX Buffer or AHB TX Buffer will be powered off in STOP mode. Otherwise AHB read access after exiting STOP mode may hit AHB RX Buffer or AHB TX Buffer but their data entries are invalid."]
     #[must_use]
     #[inline(always)]
     pub const fn clrahbbufopt(&self) -> super::vals::Clrahbbufopt {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::Clrahbbufopt::from_bits(val as u8)
     }
-    #[doc = "Clear AHB buffer."]
+    #[doc = "This bit determines whether AHB RX Buffer and AHB TX Buffer will be cleaned automatically when FlexSPI returns STOP mode ACK. Software should set this bit if AHB RX Buffer or AHB TX Buffer will be powered off in STOP mode. Otherwise AHB read access after exiting STOP mode may hit AHB RX Buffer or AHB TX Buffer but their data entries are invalid."]
     #[inline(always)]
     pub const fn set_clrahbbufopt(&mut self, val: super::vals::Clrahbbufopt) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
     }
-    #[doc = "All external devices are same devices (both in type and size) for A1/A2/B1/B2."]
+    #[doc = "All external devices are same devices (both in types and size) for A1/A2/B1/B2."]
     #[must_use]
     #[inline(always)]
     pub const fn samedeviceen(&self) -> super::vals::Samedeviceen {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Samedeviceen::from_bits(val as u8)
     }
-    #[doc = "All external devices are same devices (both in type and size) for A1/A2/B1/B2."]
+    #[doc = "All external devices are same devices (both in types and size) for A1/A2/B1/B2."]
     #[inline(always)]
     pub const fn set_samedeviceen(&mut self, val: super::vals::Samedeviceen) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
@@ -2418,6 +2502,7 @@ impl Default for Mcr2 {
         Mcr2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mcr2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mcr2")
@@ -2465,6 +2550,7 @@ impl Default for Rfdr {
         Rfdr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Rfdr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Rfdr")
@@ -2526,6 +2612,7 @@ impl Default for Sts0 {
         Sts0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sts0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sts0")
@@ -2576,14 +2663,14 @@ impl Sts1 {
     pub const fn set_ahbcmderrcode(&mut self, val: super::vals::Ahbcmderrcode) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
-    #[doc = "Indicates the sequence Index when IP command error detected."]
+    #[doc = "Indicates the sequence Index when IP command error detected. This field will be cleared when INTR\\[IPCMDERR\\] is write-1-clear(w1c)."]
     #[must_use]
     #[inline(always)]
     pub const fn ipcmderrid(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "Indicates the sequence Index when IP command error detected."]
+    #[doc = "Indicates the sequence Index when IP command error detected. This field will be cleared when INTR\\[IPCMDERR\\] is write-1-clear(w1c)."]
     #[inline(always)]
     pub const fn set_ipcmderrid(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
@@ -2607,6 +2694,7 @@ impl Default for Sts1 {
         Sts1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sts1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sts1")
@@ -2738,6 +2826,7 @@ impl Default for Sts2 {
         Sts2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sts2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sts2")
@@ -2793,6 +2882,7 @@ impl Default for Tfdr {
         Tfdr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tfdr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tfdr")

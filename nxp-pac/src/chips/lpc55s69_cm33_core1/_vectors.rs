@@ -22,10 +22,14 @@ unsafe extern "C" {
     fn FLEXCOMM6();
     fn FLEXCOMM7();
     fn ADC0();
+    fn RESERVED39();
     fn ACMP();
+    fn RESERVED41();
+    fn RESERVED42();
     fn USB0_NEEDCLK();
     fn USB0();
     fn RTC();
+    fn RESERVED46();
     fn MAILBOX();
     fn PIN_INT4();
     fn PIN_INT5();
@@ -34,7 +38,13 @@ unsafe extern "C" {
     fn CTIMER2();
     fn CTIMER4();
     fn OS_EVENT();
+    fn RESERVED55();
+    fn RESERVED56();
+    fn RESERVED57();
     fn SDIO();
+    fn RESERVED59();
+    fn RESERVED60();
+    fn RESERVED61();
     fn USB1_PHY();
     fn USB1();
     fn USB1_NEEDCLK();
@@ -96,16 +106,24 @@ pub static __INTERRUPTS: [Vector; 60] = [
         _handler: FLEXCOMM7,
     },
     Vector { _handler: ADC0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: RESERVED39,
+    },
     Vector { _handler: ACMP },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: RESERVED41,
+    },
+    Vector {
+        _handler: RESERVED42,
+    },
     Vector {
         _handler: USB0_NEEDCLK,
     },
     Vector { _handler: USB0 },
     Vector { _handler: RTC },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: RESERVED46,
+    },
     Vector { _handler: MAILBOX },
     Vector { _handler: PIN_INT4 },
     Vector { _handler: PIN_INT5 },
@@ -114,13 +132,25 @@ pub static __INTERRUPTS: [Vector; 60] = [
     Vector { _handler: CTIMER2 },
     Vector { _handler: CTIMER4 },
     Vector { _handler: OS_EVENT },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: RESERVED55,
+    },
+    Vector {
+        _handler: RESERVED56,
+    },
+    Vector {
+        _handler: RESERVED57,
+    },
     Vector { _handler: SDIO },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: RESERVED59,
+    },
+    Vector {
+        _handler: RESERVED60,
+    },
+    Vector {
+        _handler: RESERVED61,
+    },
     Vector { _handler: USB1_PHY },
     Vector { _handler: USB1 },
     Vector {

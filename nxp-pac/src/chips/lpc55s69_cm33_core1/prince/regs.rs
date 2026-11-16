@@ -34,6 +34,7 @@ impl Default for BaseAddr0 {
         BaseAddr0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for BaseAddr0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BaseAddr0")
@@ -89,6 +90,7 @@ impl Default for BaseAddr1 {
         BaseAddr1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for BaseAddr1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BaseAddr1")
@@ -144,6 +146,7 @@ impl Default for BaseAddr2 {
         BaseAddr2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for BaseAddr2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BaseAddr2")
@@ -187,6 +190,7 @@ impl Default for EncEnable {
         EncEnable(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EncEnable {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EncEnable").field("en", &self.en()).finish()
@@ -222,6 +226,7 @@ impl Default for IvLsb0 {
         IvLsb0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IvLsb0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IvLsb0")
@@ -259,6 +264,7 @@ impl Default for IvLsb1 {
         IvLsb1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IvLsb1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IvLsb1")
@@ -296,6 +302,7 @@ impl Default for IvLsb2 {
         IvLsb2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IvLsb2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IvLsb2")
@@ -333,6 +340,7 @@ impl Default for IvMsb0 {
         IvMsb0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IvMsb0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IvMsb0")
@@ -370,6 +378,7 @@ impl Default for IvMsb1 {
         IvMsb1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IvMsb1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IvMsb1")
@@ -407,6 +416,7 @@ impl Default for IvMsb2 {
         IvMsb2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IvMsb2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IvMsb2")
@@ -480,6 +490,7 @@ impl Default for Lock {
         Lock(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lock {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lock")
@@ -527,6 +538,7 @@ impl Default for MaskLsb {
         MaskLsb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MaskLsb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MaskLsb")
@@ -564,6 +576,7 @@ impl Default for MaskMsb {
         MaskMsb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MaskMsb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MaskMsb")
@@ -601,6 +614,7 @@ impl Default for SrEnable0 {
         SrEnable0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SrEnable0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SrEnable0").field("en", &self.en()).finish()
@@ -636,6 +650,7 @@ impl Default for SrEnable1 {
         SrEnable1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SrEnable1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SrEnable1").field("en", &self.en()).finish()
@@ -671,6 +686,7 @@ impl Default for SrEnable2 {
         SrEnable2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SrEnable2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SrEnable2").field("en", &self.en()).finish()

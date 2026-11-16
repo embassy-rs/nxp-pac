@@ -34,6 +34,7 @@ impl Default for AddrOffset0 {
         AddrOffset0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AddrOffset0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AddrOffset0")
@@ -89,6 +90,7 @@ impl Default for AddrOffset1 {
         AddrOffset1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AddrOffset1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AddrOffset1")
@@ -132,6 +134,7 @@ impl Default for AesKey0W0 {
         AesKey0W0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AesKey0W0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AesKey0W0")
@@ -169,6 +172,7 @@ impl Default for AesKey0W1 {
         AesKey0W1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AesKey0W1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AesKey0W1")
@@ -206,6 +210,7 @@ impl Default for AesKey0W2 {
         AesKey0W2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AesKey0W2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AesKey0W2")
@@ -243,6 +248,7 @@ impl Default for AesKey0W3 {
         AesKey0W3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AesKey0W3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AesKey0W3")
@@ -280,6 +286,7 @@ impl Default for CtrNonce0W0 {
         CtrNonce0W0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CtrNonce0W0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CtrNonce0W0")
@@ -317,6 +324,7 @@ impl Default for CtrNonce0W1 {
         CtrNonce0W1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CtrNonce0W1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CtrNonce0W1")
@@ -354,6 +362,7 @@ impl Default for CtrNonce0W2 {
         CtrNonce0W2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CtrNonce0W2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CtrNonce0W2")
@@ -391,6 +400,7 @@ impl Default for CtrNonce0W3 {
         CtrNonce0W3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CtrNonce0W3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CtrNonce0W3")
@@ -428,6 +438,7 @@ impl Default for CtrNonce1W0 {
         CtrNonce1W0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CtrNonce1W0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CtrNonce1W0")
@@ -465,6 +476,7 @@ impl Default for CtrNonce1W1 {
         CtrNonce1W1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CtrNonce1W1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CtrNonce1W1")
@@ -502,6 +514,7 @@ impl Default for CtrNonce1W2 {
         CtrNonce1W2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CtrNonce1W2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CtrNonce1W2")
@@ -539,6 +552,7 @@ impl Default for CtrNonce1W3 {
         CtrNonce1W3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CtrNonce1W3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CtrNonce1W3")
@@ -864,6 +878,7 @@ impl Default for Ctrl {
         Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl")
@@ -953,6 +968,7 @@ impl Default for Region1Bot {
         Region1Bot(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Region1Bot {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Region1Bot")
@@ -994,6 +1010,7 @@ impl Default for Region1Top {
         Region1Top(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Region1Top {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Region1Top")
@@ -1047,6 +1064,7 @@ impl Default for Status {
         Status(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Status {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Status")

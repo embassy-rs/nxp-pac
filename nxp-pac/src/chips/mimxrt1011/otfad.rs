@@ -1,4 +1,4 @@
-#[doc = "no description available."]
+#[doc = "Array of registers: CTX_CTR%s, CTX_KEY%s, CTX_RGD_W0, CTX_RGD_W1."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctx {
     ptr: *mut u8,
@@ -63,7 +63,7 @@ impl Otfad {
     pub const fn sr(self) -> crate::common::Reg<regs::Sr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0c04usize) as _) }
     }
-    #[doc = "no description available."]
+    #[doc = "Array of registers: CTX_CTR%s, CTX_KEY%s, CTX_RGD_W0, CTX_RGD_W1."]
     #[inline(always)]
     pub const fn ctx(self, n: usize) -> Ctx {
         assert!(n < 4usize);

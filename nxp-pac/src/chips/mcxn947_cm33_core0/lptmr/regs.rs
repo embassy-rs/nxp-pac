@@ -22,6 +22,7 @@ impl Default for Cmr {
         Cmr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmr")
@@ -59,6 +60,7 @@ impl Default for Cnr {
         Cnr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cnr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cnr")
@@ -180,6 +182,7 @@ impl Default for Csr {
         Csr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Csr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Csr")
@@ -259,6 +262,7 @@ impl Default for Psr {
         Psr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Psr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Psr")

@@ -22,6 +22,7 @@ impl Default for CmpaProgInProgress {
         CmpaProgInProgress(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CmpaProgInProgress {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CmpaProgInProgress")
@@ -59,6 +60,7 @@ impl Default for CustomerDefined {
         CustomerDefined(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CustomerDefined {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CustomerDefined")
@@ -180,6 +182,7 @@ impl Default for DcfgCcSocuDflt {
         DcfgCcSocuDflt(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DcfgCcSocuDflt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DcfgCcSocuDflt")
@@ -331,6 +334,7 @@ impl Default for DcfgCcSocuPin {
         DcfgCcSocuPin(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DcfgCcSocuPin {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DcfgCcSocuPin")
@@ -388,6 +392,7 @@ impl Default for EnableFaMode {
         EnableFaMode(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EnableFaMode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EnableFaMode")
@@ -425,6 +430,7 @@ impl Default for Header {
         Header(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Header {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Header")
@@ -462,6 +468,7 @@ impl Default for ImageKeyRevoke {
         ImageKeyRevoke(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ImageKeyRevoke {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ImageKeyRevoke")
@@ -499,6 +506,7 @@ impl Default for NsFwVersion {
         NsFwVersion(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for NsFwVersion {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("NsFwVersion")
@@ -536,6 +544,7 @@ impl Default for PrinceRegion0IvBody0 {
         PrinceRegion0IvBody0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0IvBody0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0IvBody0")
@@ -577,6 +586,7 @@ impl Default for PrinceRegion0IvBody1 {
         PrinceRegion0IvBody1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0IvBody1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0IvBody1")
@@ -618,6 +628,7 @@ impl Default for PrinceRegion0IvBody10 {
         PrinceRegion0IvBody10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0IvBody10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0IvBody10")
@@ -659,6 +670,7 @@ impl Default for PrinceRegion0IvBody11 {
         PrinceRegion0IvBody11(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0IvBody11 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0IvBody11")
@@ -700,6 +712,7 @@ impl Default for PrinceRegion0IvBody2 {
         PrinceRegion0IvBody2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0IvBody2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0IvBody2")
@@ -741,6 +754,7 @@ impl Default for PrinceRegion0IvBody3 {
         PrinceRegion0IvBody3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0IvBody3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0IvBody3")
@@ -782,6 +796,7 @@ impl Default for PrinceRegion0IvBody4 {
         PrinceRegion0IvBody4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0IvBody4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0IvBody4")
@@ -823,6 +838,7 @@ impl Default for PrinceRegion0IvBody5 {
         PrinceRegion0IvBody5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0IvBody5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0IvBody5")
@@ -864,6 +880,7 @@ impl Default for PrinceRegion0IvBody6 {
         PrinceRegion0IvBody6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0IvBody6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0IvBody6")
@@ -905,6 +922,7 @@ impl Default for PrinceRegion0IvBody7 {
         PrinceRegion0IvBody7(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0IvBody7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0IvBody7")
@@ -946,6 +964,7 @@ impl Default for PrinceRegion0IvBody8 {
         PrinceRegion0IvBody8(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0IvBody8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0IvBody8")
@@ -987,6 +1006,7 @@ impl Default for PrinceRegion0IvBody9 {
         PrinceRegion0IvBody9(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0IvBody9 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0IvBody9")
@@ -1028,6 +1048,7 @@ impl Default for PrinceRegion0IvCode0 {
         PrinceRegion0IvCode0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0IvCode0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0IvCode0")
@@ -1069,6 +1090,7 @@ impl Default for PrinceRegion0IvCode1 {
         PrinceRegion0IvCode1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0IvCode1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0IvCode1")
@@ -1110,6 +1132,7 @@ impl Default for PrinceRegion0IvCode10 {
         PrinceRegion0IvCode10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0IvCode10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0IvCode10")
@@ -1151,6 +1174,7 @@ impl Default for PrinceRegion0IvCode11 {
         PrinceRegion0IvCode11(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0IvCode11 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0IvCode11")
@@ -1192,6 +1216,7 @@ impl Default for PrinceRegion0IvCode12 {
         PrinceRegion0IvCode12(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0IvCode12 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0IvCode12")
@@ -1233,6 +1258,7 @@ impl Default for PrinceRegion0IvCode13 {
         PrinceRegion0IvCode13(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0IvCode13 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0IvCode13")
@@ -1274,6 +1300,7 @@ impl Default for PrinceRegion0IvCode2 {
         PrinceRegion0IvCode2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0IvCode2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0IvCode2")
@@ -1315,6 +1342,7 @@ impl Default for PrinceRegion0IvCode3 {
         PrinceRegion0IvCode3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0IvCode3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0IvCode3")
@@ -1356,6 +1384,7 @@ impl Default for PrinceRegion0IvCode4 {
         PrinceRegion0IvCode4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0IvCode4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0IvCode4")
@@ -1397,6 +1426,7 @@ impl Default for PrinceRegion0IvCode5 {
         PrinceRegion0IvCode5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0IvCode5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0IvCode5")
@@ -1438,6 +1468,7 @@ impl Default for PrinceRegion0IvCode6 {
         PrinceRegion0IvCode6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0IvCode6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0IvCode6")
@@ -1479,6 +1510,7 @@ impl Default for PrinceRegion0IvCode7 {
         PrinceRegion0IvCode7(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0IvCode7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0IvCode7")
@@ -1520,6 +1552,7 @@ impl Default for PrinceRegion0IvCode8 {
         PrinceRegion0IvCode8(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0IvCode8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0IvCode8")
@@ -1561,6 +1594,7 @@ impl Default for PrinceRegion0IvCode9 {
         PrinceRegion0IvCode9(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0IvCode9 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0IvCode9")
@@ -1602,6 +1636,7 @@ impl Default for PrinceRegion0IvHeader0 {
         PrinceRegion0IvHeader0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0IvHeader0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0IvHeader0")
@@ -1667,6 +1702,7 @@ impl Default for PrinceRegion0IvHeader1 {
         PrinceRegion0IvHeader1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0IvHeader1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0IvHeader1")
@@ -1712,6 +1748,7 @@ impl Default for PrinceRegion1IvBody0 {
         PrinceRegion1IvBody0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1IvBody0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1IvBody0")
@@ -1753,6 +1790,7 @@ impl Default for PrinceRegion1IvBody1 {
         PrinceRegion1IvBody1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1IvBody1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1IvBody1")
@@ -1794,6 +1832,7 @@ impl Default for PrinceRegion1IvBody10 {
         PrinceRegion1IvBody10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1IvBody10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1IvBody10")
@@ -1835,6 +1874,7 @@ impl Default for PrinceRegion1IvBody11 {
         PrinceRegion1IvBody11(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1IvBody11 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1IvBody11")
@@ -1876,6 +1916,7 @@ impl Default for PrinceRegion1IvBody2 {
         PrinceRegion1IvBody2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1IvBody2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1IvBody2")
@@ -1917,6 +1958,7 @@ impl Default for PrinceRegion1IvBody3 {
         PrinceRegion1IvBody3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1IvBody3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1IvBody3")
@@ -1958,6 +2000,7 @@ impl Default for PrinceRegion1IvBody4 {
         PrinceRegion1IvBody4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1IvBody4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1IvBody4")
@@ -1999,6 +2042,7 @@ impl Default for PrinceRegion1IvBody5 {
         PrinceRegion1IvBody5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1IvBody5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1IvBody5")
@@ -2040,6 +2084,7 @@ impl Default for PrinceRegion1IvBody6 {
         PrinceRegion1IvBody6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1IvBody6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1IvBody6")
@@ -2081,6 +2126,7 @@ impl Default for PrinceRegion1IvBody7 {
         PrinceRegion1IvBody7(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1IvBody7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1IvBody7")
@@ -2122,6 +2168,7 @@ impl Default for PrinceRegion1IvBody8 {
         PrinceRegion1IvBody8(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1IvBody8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1IvBody8")
@@ -2163,6 +2210,7 @@ impl Default for PrinceRegion1IvBody9 {
         PrinceRegion1IvBody9(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1IvBody9 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1IvBody9")
@@ -2204,6 +2252,7 @@ impl Default for PrinceRegion1IvCode0 {
         PrinceRegion1IvCode0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1IvCode0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1IvCode0")
@@ -2245,6 +2294,7 @@ impl Default for PrinceRegion1IvCode1 {
         PrinceRegion1IvCode1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1IvCode1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1IvCode1")
@@ -2286,6 +2336,7 @@ impl Default for PrinceRegion1IvCode10 {
         PrinceRegion1IvCode10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1IvCode10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1IvCode10")
@@ -2327,6 +2378,7 @@ impl Default for PrinceRegion1IvCode11 {
         PrinceRegion1IvCode11(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1IvCode11 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1IvCode11")
@@ -2368,6 +2420,7 @@ impl Default for PrinceRegion1IvCode12 {
         PrinceRegion1IvCode12(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1IvCode12 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1IvCode12")
@@ -2409,6 +2462,7 @@ impl Default for PrinceRegion1IvCode13 {
         PrinceRegion1IvCode13(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1IvCode13 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1IvCode13")
@@ -2450,6 +2504,7 @@ impl Default for PrinceRegion1IvCode2 {
         PrinceRegion1IvCode2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1IvCode2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1IvCode2")
@@ -2491,6 +2546,7 @@ impl Default for PrinceRegion1IvCode3 {
         PrinceRegion1IvCode3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1IvCode3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1IvCode3")
@@ -2532,6 +2588,7 @@ impl Default for PrinceRegion1IvCode4 {
         PrinceRegion1IvCode4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1IvCode4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1IvCode4")
@@ -2573,6 +2630,7 @@ impl Default for PrinceRegion1IvCode5 {
         PrinceRegion1IvCode5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1IvCode5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1IvCode5")
@@ -2614,6 +2672,7 @@ impl Default for PrinceRegion1IvCode6 {
         PrinceRegion1IvCode6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1IvCode6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1IvCode6")
@@ -2655,6 +2714,7 @@ impl Default for PrinceRegion1IvCode7 {
         PrinceRegion1IvCode7(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1IvCode7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1IvCode7")
@@ -2696,6 +2756,7 @@ impl Default for PrinceRegion1IvCode8 {
         PrinceRegion1IvCode8(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1IvCode8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1IvCode8")
@@ -2737,6 +2798,7 @@ impl Default for PrinceRegion1IvCode9 {
         PrinceRegion1IvCode9(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1IvCode9 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1IvCode9")
@@ -2778,6 +2840,7 @@ impl Default for PrinceRegion1IvHeader0 {
         PrinceRegion1IvHeader0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1IvHeader0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1IvHeader0")
@@ -2843,6 +2906,7 @@ impl Default for PrinceRegion1IvHeader1 {
         PrinceRegion1IvHeader1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1IvHeader1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1IvHeader1")
@@ -2888,6 +2952,7 @@ impl Default for PrinceRegion2IvBody0 {
         PrinceRegion2IvBody0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2IvBody0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2IvBody0")
@@ -2929,6 +2994,7 @@ impl Default for PrinceRegion2IvBody1 {
         PrinceRegion2IvBody1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2IvBody1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2IvBody1")
@@ -2970,6 +3036,7 @@ impl Default for PrinceRegion2IvBody10 {
         PrinceRegion2IvBody10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2IvBody10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2IvBody10")
@@ -3011,6 +3078,7 @@ impl Default for PrinceRegion2IvBody11 {
         PrinceRegion2IvBody11(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2IvBody11 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2IvBody11")
@@ -3052,6 +3120,7 @@ impl Default for PrinceRegion2IvBody2 {
         PrinceRegion2IvBody2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2IvBody2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2IvBody2")
@@ -3093,6 +3162,7 @@ impl Default for PrinceRegion2IvBody3 {
         PrinceRegion2IvBody3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2IvBody3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2IvBody3")
@@ -3134,6 +3204,7 @@ impl Default for PrinceRegion2IvBody4 {
         PrinceRegion2IvBody4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2IvBody4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2IvBody4")
@@ -3175,6 +3246,7 @@ impl Default for PrinceRegion2IvBody5 {
         PrinceRegion2IvBody5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2IvBody5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2IvBody5")
@@ -3216,6 +3288,7 @@ impl Default for PrinceRegion2IvBody6 {
         PrinceRegion2IvBody6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2IvBody6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2IvBody6")
@@ -3257,6 +3330,7 @@ impl Default for PrinceRegion2IvBody7 {
         PrinceRegion2IvBody7(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2IvBody7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2IvBody7")
@@ -3298,6 +3372,7 @@ impl Default for PrinceRegion2IvBody8 {
         PrinceRegion2IvBody8(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2IvBody8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2IvBody8")
@@ -3339,6 +3414,7 @@ impl Default for PrinceRegion2IvBody9 {
         PrinceRegion2IvBody9(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2IvBody9 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2IvBody9")
@@ -3380,6 +3456,7 @@ impl Default for PrinceRegion2IvCode0 {
         PrinceRegion2IvCode0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2IvCode0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2IvCode0")
@@ -3421,6 +3498,7 @@ impl Default for PrinceRegion2IvCode1 {
         PrinceRegion2IvCode1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2IvCode1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2IvCode1")
@@ -3462,6 +3540,7 @@ impl Default for PrinceRegion2IvCode10 {
         PrinceRegion2IvCode10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2IvCode10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2IvCode10")
@@ -3503,6 +3582,7 @@ impl Default for PrinceRegion2IvCode11 {
         PrinceRegion2IvCode11(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2IvCode11 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2IvCode11")
@@ -3544,6 +3624,7 @@ impl Default for PrinceRegion2IvCode12 {
         PrinceRegion2IvCode12(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2IvCode12 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2IvCode12")
@@ -3585,6 +3666,7 @@ impl Default for PrinceRegion2IvCode13 {
         PrinceRegion2IvCode13(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2IvCode13 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2IvCode13")
@@ -3626,6 +3708,7 @@ impl Default for PrinceRegion2IvCode2 {
         PrinceRegion2IvCode2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2IvCode2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2IvCode2")
@@ -3667,6 +3750,7 @@ impl Default for PrinceRegion2IvCode3 {
         PrinceRegion2IvCode3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2IvCode3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2IvCode3")
@@ -3708,6 +3792,7 @@ impl Default for PrinceRegion2IvCode4 {
         PrinceRegion2IvCode4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2IvCode4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2IvCode4")
@@ -3749,6 +3834,7 @@ impl Default for PrinceRegion2IvCode5 {
         PrinceRegion2IvCode5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2IvCode5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2IvCode5")
@@ -3790,6 +3876,7 @@ impl Default for PrinceRegion2IvCode6 {
         PrinceRegion2IvCode6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2IvCode6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2IvCode6")
@@ -3831,6 +3918,7 @@ impl Default for PrinceRegion2IvCode7 {
         PrinceRegion2IvCode7(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2IvCode7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2IvCode7")
@@ -3872,6 +3960,7 @@ impl Default for PrinceRegion2IvCode8 {
         PrinceRegion2IvCode8(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2IvCode8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2IvCode8")
@@ -3913,6 +4002,7 @@ impl Default for PrinceRegion2IvCode9 {
         PrinceRegion2IvCode9(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2IvCode9 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2IvCode9")
@@ -3954,6 +4044,7 @@ impl Default for PrinceRegion2IvHeader0 {
         PrinceRegion2IvHeader0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2IvHeader0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2IvHeader0")
@@ -4019,6 +4110,7 @@ impl Default for PrinceRegion2IvHeader1 {
         PrinceRegion2IvHeader1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2IvHeader1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2IvHeader1")
@@ -4100,6 +4192,7 @@ impl Default for RotkhRevoke {
         RotkhRevoke(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for RotkhRevoke {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RotkhRevoke")
@@ -4147,6 +4240,7 @@ impl Default for SFwVersion {
         SFwVersion(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SFwVersion {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SFwVersion")
@@ -4184,6 +4278,7 @@ impl Default for Sha256Digest {
         Sha256Digest(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sha256Digest {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sha256Digest")
@@ -4233,6 +4328,7 @@ impl Default for VendorUsage {
         VendorUsage(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for VendorUsage {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VendorUsage")
@@ -4276,6 +4372,7 @@ impl Default for Version {
         Version(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Version {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Version")

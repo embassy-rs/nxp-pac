@@ -226,6 +226,7 @@ impl Default for Csl {
         Csl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Csl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Csl")
@@ -553,6 +554,7 @@ impl Default for Hp0 {
         Hp0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hp0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hp0")
@@ -888,6 +890,7 @@ impl Default for Hpcontrol0 {
         Hpcontrol0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hpcontrol0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hpcontrol0")
@@ -1223,6 +1226,7 @@ impl Default for Sa {
         Sa(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sa {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sa")

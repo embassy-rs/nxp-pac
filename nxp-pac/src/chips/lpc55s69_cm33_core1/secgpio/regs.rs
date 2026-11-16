@@ -22,6 +22,7 @@ impl Default for B00 {
         B00(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B00 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B00").field("pbyte", &self.pbyte()).finish()
@@ -57,6 +58,7 @@ impl Default for B01 {
         B01(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B01 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B01").field("pbyte", &self.pbyte()).finish()
@@ -92,6 +94,7 @@ impl Default for B010 {
         B010(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B010 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B010")
@@ -129,6 +132,7 @@ impl Default for B011 {
         B011(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B011 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B011")
@@ -166,6 +170,7 @@ impl Default for B012 {
         B012(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B012 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B012")
@@ -203,6 +208,7 @@ impl Default for B013 {
         B013(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B013 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B013")
@@ -240,6 +246,7 @@ impl Default for B014 {
         B014(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B014 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B014")
@@ -277,6 +284,7 @@ impl Default for B015 {
         B015(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B015 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B015")
@@ -314,6 +322,7 @@ impl Default for B016 {
         B016(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B016 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B016")
@@ -351,6 +360,7 @@ impl Default for B017 {
         B017(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B017 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B017")
@@ -388,6 +398,7 @@ impl Default for B018 {
         B018(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B018 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B018")
@@ -425,6 +436,7 @@ impl Default for B019 {
         B019(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B019 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B019")
@@ -462,6 +474,7 @@ impl Default for B02 {
         B02(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B02 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B02").field("pbyte", &self.pbyte()).finish()
@@ -497,6 +510,7 @@ impl Default for B020 {
         B020(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B020 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B020")
@@ -534,6 +548,7 @@ impl Default for B021 {
         B021(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B021 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B021")
@@ -571,6 +586,7 @@ impl Default for B022 {
         B022(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B022 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B022")
@@ -608,6 +624,7 @@ impl Default for B023 {
         B023(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B023 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B023")
@@ -645,6 +662,7 @@ impl Default for B024 {
         B024(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B024 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B024")
@@ -682,6 +700,7 @@ impl Default for B025 {
         B025(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B025 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B025")
@@ -719,6 +738,7 @@ impl Default for B026 {
         B026(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B026 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B026")
@@ -756,6 +776,7 @@ impl Default for B027 {
         B027(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B027 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B027")
@@ -793,6 +814,7 @@ impl Default for B028 {
         B028(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B028 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B028")
@@ -830,6 +852,7 @@ impl Default for B029 {
         B029(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B029 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B029")
@@ -867,6 +890,7 @@ impl Default for B03 {
         B03(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B03 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B03").field("pbyte", &self.pbyte()).finish()
@@ -902,6 +926,7 @@ impl Default for B030 {
         B030(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B030 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B030")
@@ -939,6 +964,7 @@ impl Default for B031 {
         B031(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B031 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B031")
@@ -976,6 +1002,7 @@ impl Default for B04 {
         B04(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B04 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B04").field("pbyte", &self.pbyte()).finish()
@@ -1011,6 +1038,7 @@ impl Default for B05 {
         B05(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B05 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B05").field("pbyte", &self.pbyte()).finish()
@@ -1046,6 +1074,7 @@ impl Default for B06 {
         B06(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B06 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B06").field("pbyte", &self.pbyte()).finish()
@@ -1081,6 +1110,7 @@ impl Default for B07 {
         B07(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B07 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B07").field("pbyte", &self.pbyte()).finish()
@@ -1116,6 +1146,7 @@ impl Default for B08 {
         B08(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B08 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B08").field("pbyte", &self.pbyte()).finish()
@@ -1151,6 +1182,7 @@ impl Default for B09 {
         B09(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for B09 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B09").field("pbyte", &self.pbyte()).finish()
@@ -1186,6 +1218,7 @@ impl Default for Clr0 {
         Clr0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Clr0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Clr0").field("clrp", &self.clrp()).finish()
@@ -1221,6 +1254,7 @@ impl Default for Dir0 {
         Dir0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dir0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dir0").field("dirp", &self.dirp()).finish()
@@ -1256,6 +1290,7 @@ impl Default for Dirclr0 {
         Dirclr0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dirclr0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dirclr0")
@@ -1293,6 +1328,7 @@ impl Default for Dirnot0 {
         Dirnot0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dirnot0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dirnot0")
@@ -1330,6 +1366,7 @@ impl Default for Dirset0 {
         Dirset0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dirset0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dirset0")
@@ -1367,6 +1404,7 @@ impl Default for Mask0 {
         Mask0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mask0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mask0")
@@ -1404,6 +1442,7 @@ impl Default for Mpin0 {
         Mpin0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mpin0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mpin0")
@@ -1441,6 +1480,7 @@ impl Default for Not0 {
         Not0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Not0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Not0").field("notp", &self.notp()).finish()
@@ -1476,6 +1516,7 @@ impl Default for Pin0 {
         Pin0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pin0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pin0").field("port", &self.port()).finish()
@@ -1511,6 +1552,7 @@ impl Default for Set0 {
         Set0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Set0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Set0").field("setp", &self.setp()).finish()
@@ -1546,6 +1588,7 @@ impl Default for W00 {
         W00(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W00 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W00").field("pword", &self.pword()).finish()
@@ -1581,6 +1624,7 @@ impl Default for W01 {
         W01(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W01 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W01").field("pword", &self.pword()).finish()
@@ -1616,6 +1660,7 @@ impl Default for W010 {
         W010(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W010 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W010")
@@ -1653,6 +1698,7 @@ impl Default for W011 {
         W011(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W011 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W011")
@@ -1690,6 +1736,7 @@ impl Default for W012 {
         W012(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W012 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W012")
@@ -1727,6 +1774,7 @@ impl Default for W013 {
         W013(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W013 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W013")
@@ -1764,6 +1812,7 @@ impl Default for W014 {
         W014(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W014 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W014")
@@ -1801,6 +1850,7 @@ impl Default for W015 {
         W015(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W015 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W015")
@@ -1838,6 +1888,7 @@ impl Default for W016 {
         W016(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W016 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W016")
@@ -1875,6 +1926,7 @@ impl Default for W017 {
         W017(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W017 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W017")
@@ -1912,6 +1964,7 @@ impl Default for W018 {
         W018(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W018 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W018")
@@ -1949,6 +2002,7 @@ impl Default for W019 {
         W019(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W019 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W019")
@@ -1986,6 +2040,7 @@ impl Default for W02 {
         W02(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W02 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W02").field("pword", &self.pword()).finish()
@@ -2021,6 +2076,7 @@ impl Default for W020 {
         W020(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W020 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W020")
@@ -2058,6 +2114,7 @@ impl Default for W021 {
         W021(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W021 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W021")
@@ -2095,6 +2152,7 @@ impl Default for W022 {
         W022(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W022 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W022")
@@ -2132,6 +2190,7 @@ impl Default for W023 {
         W023(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W023 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W023")
@@ -2169,6 +2228,7 @@ impl Default for W024 {
         W024(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W024 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W024")
@@ -2206,6 +2266,7 @@ impl Default for W025 {
         W025(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W025 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W025")
@@ -2243,6 +2304,7 @@ impl Default for W026 {
         W026(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W026 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W026")
@@ -2280,6 +2342,7 @@ impl Default for W027 {
         W027(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W027 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W027")
@@ -2317,6 +2380,7 @@ impl Default for W028 {
         W028(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W028 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W028")
@@ -2354,6 +2418,7 @@ impl Default for W029 {
         W029(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W029 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W029")
@@ -2391,6 +2456,7 @@ impl Default for W03 {
         W03(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W03 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W03").field("pword", &self.pword()).finish()
@@ -2426,6 +2492,7 @@ impl Default for W030 {
         W030(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W030 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W030")
@@ -2463,6 +2530,7 @@ impl Default for W031 {
         W031(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W031 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W031")
@@ -2500,6 +2568,7 @@ impl Default for W04 {
         W04(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W04 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W04").field("pword", &self.pword()).finish()
@@ -2535,6 +2604,7 @@ impl Default for W05 {
         W05(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W05 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W05").field("pword", &self.pword()).finish()
@@ -2570,6 +2640,7 @@ impl Default for W06 {
         W06(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W06 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W06").field("pword", &self.pword()).finish()
@@ -2605,6 +2676,7 @@ impl Default for W07 {
         W07(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W07 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W07").field("pword", &self.pword()).finish()
@@ -2640,6 +2712,7 @@ impl Default for W08 {
         W08(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W08 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W08").field("pword", &self.pword()).finish()
@@ -2675,6 +2748,7 @@ impl Default for W09 {
         W09(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for W09 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("W09").field("pword", &self.pword()).finish()

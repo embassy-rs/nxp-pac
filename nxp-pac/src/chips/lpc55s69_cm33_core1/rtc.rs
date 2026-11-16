@@ -41,9 +41,43 @@ impl Rtc {
     }
     #[doc = "General Purpose register."]
     #[inline(always)]
-    pub const fn gpreg(self, n: usize) -> crate::common::Reg<regs::Gpreg, crate::common::RW> {
-        assert!(n < 8usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x40usize + n * 4usize) as _) }
+    pub const fn gpreg0(self) -> crate::common::Reg<regs::Gpreg0, crate::common::RW> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x40usize) as _) }
+    }
+    #[doc = "General Purpose register."]
+    #[inline(always)]
+    pub const fn gpreg1(self) -> crate::common::Reg<regs::Gpreg1, crate::common::RW> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x44usize) as _) }
+    }
+    #[doc = "General Purpose register."]
+    #[inline(always)]
+    pub const fn gpreg2(self) -> crate::common::Reg<regs::Gpreg2, crate::common::RW> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x48usize) as _) }
+    }
+    #[doc = "General Purpose register."]
+    #[inline(always)]
+    pub const fn gpreg3(self) -> crate::common::Reg<regs::Gpreg3, crate::common::RW> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x4cusize) as _) }
+    }
+    #[doc = "General Purpose register."]
+    #[inline(always)]
+    pub const fn gpreg4(self) -> crate::common::Reg<regs::Gpreg4, crate::common::RW> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x50usize) as _) }
+    }
+    #[doc = "General Purpose register."]
+    #[inline(always)]
+    pub const fn gpreg5(self) -> crate::common::Reg<regs::Gpreg5, crate::common::RW> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x54usize) as _) }
+    }
+    #[doc = "General Purpose register."]
+    #[inline(always)]
+    pub const fn gpreg6(self) -> crate::common::Reg<regs::Gpreg6, crate::common::RW> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x58usize) as _) }
+    }
+    #[doc = "General Purpose register."]
+    #[inline(always)]
+    pub const fn gpreg7(self) -> crate::common::Reg<regs::Gpreg7, crate::common::RW> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x5cusize) as _) }
     }
 }
 pub mod regs;

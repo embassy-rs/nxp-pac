@@ -22,6 +22,7 @@ impl Default for CpuCtrl {
         CpuCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CpuCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CpuCtrl").field("pcr", &self.pcr()).finish()
@@ -69,6 +70,7 @@ impl Default for CpuPdnscr {
         CpuPdnscr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CpuPdnscr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CpuPdnscr")
@@ -124,6 +126,7 @@ impl Default for CpuPupscr {
         CpuPupscr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CpuPupscr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CpuPupscr")
@@ -167,6 +170,7 @@ impl Default for CpuSr {
         CpuSr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CpuSr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CpuSr").field("psr", &self.psr()).finish()
@@ -202,6 +206,7 @@ impl Default for MegaCtrl {
         MegaCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MegaCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MegaCtrl")
@@ -251,6 +256,7 @@ impl Default for MegaPdnscr {
         MegaPdnscr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MegaPdnscr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MegaPdnscr")
@@ -306,6 +312,7 @@ impl Default for MegaPupscr {
         MegaPupscr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MegaPupscr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MegaPupscr")
@@ -349,6 +356,7 @@ impl Default for MegaSr {
         MegaSr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MegaSr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MegaSr").field("psr", &self.psr()).finish()

@@ -29,14 +29,14 @@ impl Pit {
     pub const fn ltmr64l(self) -> crate::common::Reg<regs::Ltmr64l, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xe4usize) as _) }
     }
-    #[doc = "no description available."]
+    #[doc = "Array of registers: CVAL, LDVAL, TCTRL, TFLG."]
     #[inline(always)]
     pub const fn timer(self, n: usize) -> Timer {
         assert!(n < 4usize);
         unsafe { Timer::from_ptr(self.ptr.wrapping_add(0x0100usize + n * 16usize) as _) }
     }
 }
-#[doc = "no description available."]
+#[doc = "Array of registers: CVAL, LDVAL, TCTRL, TFLG."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Timer {
     ptr: *mut u8,

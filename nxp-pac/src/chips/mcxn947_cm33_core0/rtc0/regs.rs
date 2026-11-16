@@ -22,6 +22,7 @@ impl Default for AlmDays {
         AlmDays(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AlmDays {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AlmDays")
@@ -71,6 +72,7 @@ impl Default for AlmHourmin {
         AlmHourmin(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AlmHourmin {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AlmHourmin")
@@ -138,6 +140,7 @@ impl Default for AlmSeconds {
         AlmSeconds(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AlmSeconds {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AlmSeconds")
@@ -195,6 +198,7 @@ impl Default for AlmYearmon {
         AlmYearmon(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AlmYearmon {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AlmYearmon")
@@ -238,6 +242,7 @@ impl Default for Compen {
         Compen(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Compen {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Compen")
@@ -359,6 +364,7 @@ impl Default for Ctrl {
         Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl")
@@ -426,6 +432,7 @@ impl Default for Days {
         Days(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Days {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Days")
@@ -481,6 +488,7 @@ impl Default for DstDay {
         DstDay(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DstDay {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DstDay")
@@ -536,6 +544,7 @@ impl Default for DstHour {
         DstHour(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DstHour {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DstHour")
@@ -591,6 +600,7 @@ impl Default for DstMonth {
         DstMonth(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DstMonth {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DstMonth")
@@ -646,6 +656,7 @@ impl Default for Hourmin {
         Hourmin(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hourmin {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hourmin")
@@ -845,6 +856,7 @@ impl Default for Ier {
         Ier(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ier {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ier")
@@ -1068,6 +1080,7 @@ impl Default for Isr {
         Isr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Isr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Isr")
@@ -1135,6 +1148,7 @@ impl Default for RtcTest2 {
         RtcTest2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for RtcTest2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RtcTest2")
@@ -1176,6 +1190,7 @@ impl Default for Seconds {
         Seconds(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Seconds {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Seconds")
@@ -1273,6 +1288,7 @@ impl Default for Status {
         Status(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Status {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Status")
@@ -1336,6 +1352,7 @@ impl Default for Yearmon {
         Yearmon(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Yearmon {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Yearmon")

@@ -82,6 +82,7 @@ impl Default for Csw {
         Csw(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Csw {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Csw")
@@ -133,6 +134,7 @@ impl Default for Id {
         Id(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Id {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Id").field("id", &self.id()).finish()
@@ -168,6 +170,7 @@ impl Default for Request {
         Request(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Request {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Request").field("req", &self.req()).finish()
@@ -203,6 +206,7 @@ impl Default for Return {
         Return(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Return {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Return").field("ret", &self.ret()).finish()

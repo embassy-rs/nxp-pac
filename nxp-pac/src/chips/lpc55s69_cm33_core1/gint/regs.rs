@@ -46,6 +46,7 @@ impl Default for Ctrl {
         Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl")
@@ -91,6 +92,7 @@ impl Default for PortEna {
         PortEna(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PortEna {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PortEna").field("ena", &self.ena()).finish()
@@ -126,6 +128,7 @@ impl Default for PortPol {
         PortPol(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PortPol {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PortPol").field("pol", &self.pol()).finish()

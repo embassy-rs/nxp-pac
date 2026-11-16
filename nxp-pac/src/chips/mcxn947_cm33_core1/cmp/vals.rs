@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CmpHpmd {
     #[doc = "Low power (speed) comparison mode."]
@@ -30,7 +31,8 @@ impl From<CmpHpmd> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CoutSel {
     #[doc = "Use COUT (filtered)."]
@@ -61,7 +63,8 @@ impl From<CoutSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CoutaOw {
     #[doc = "COUTA is 0."]
@@ -92,7 +95,8 @@ impl From<CoutaOw> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CoutaOwen {
     #[doc = "COUTA holds the last sampled value."]
@@ -123,7 +127,8 @@ impl From<CoutaOwen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DacRes {
     #[doc = "4-bit DAC."]
@@ -173,7 +178,8 @@ impl From<DacRes> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtSel {
     #[doc = "Rising edge."]
@@ -221,6 +227,7 @@ impl Feature {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Feature {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -251,7 +258,8 @@ impl From<Feature> for u16 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FiltCnt {
     #[doc = "Filter is bypassed: COUT = COUTA."]
@@ -294,7 +302,8 @@ impl From<FiltCnt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fixch {
     #[doc = "Channel 0."]
@@ -337,7 +346,8 @@ impl From<Fixch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fixp {
     #[doc = "Fix the plus port. Sweep only the inputs to the minus port."]
@@ -368,7 +378,8 @@ impl From<Fixp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FuncClkSel {
     #[doc = "Select functional clock source 0."]
@@ -403,7 +414,8 @@ impl From<FuncClkSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hystctr {
     #[doc = "Level 0: Analog comparator hysteresis 0 mV."]
@@ -438,7 +450,8 @@ impl From<Hystctr> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Msel {
     #[doc = "Input 0m."]
@@ -480,7 +493,8 @@ impl From<Msel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Psel {
     #[doc = "Input 0p."]
@@ -522,7 +536,8 @@ impl From<Psel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RrClkSel {
     #[doc = "Select Round Robin clock Source 0."]
@@ -557,7 +572,8 @@ impl From<RrClkSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RrInitmod {
     #[doc = "63 cycles (same as 111111b)."]
@@ -580,7 +596,8 @@ pub enum RrInitmod {
     Mod1638 = 0x08,
     #[doc = "1 to 63 cycles."]
     Mod1639 = 0x09,
-    _RESERVED_a = 0x0a,
+    #[doc = "1 to 63 cycles."]
+    Mod16310 = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
@@ -628,12 +645,18 @@ pub enum RrInitmod {
     _RESERVED_37 = 0x37,
     _RESERVED_38 = 0x38,
     _RESERVED_39 = 0x39,
-    _RESERVED_3a = 0x3a,
-    _RESERVED_3b = 0x3b,
-    _RESERVED_3c = 0x3c,
-    _RESERVED_3d = 0x3d,
-    _RESERVED_3e = 0x3e,
-    _RESERVED_3f = 0x3f,
+    #[doc = "1 to 63 cycles."]
+    Mod16358 = 0x3a,
+    #[doc = "1 to 63 cycles."]
+    Mod16359 = 0x3b,
+    #[doc = "1 to 63 cycles."]
+    Mod16360 = 0x3c,
+    #[doc = "1 to 63 cycles."]
+    Mod16361 = 0x3d,
+    #[doc = "1 to 63 cycles."]
+    Mod16362 = 0x3e,
+    #[doc = "1 to 63 cycles."]
+    Mod16363 = 0x3f,
 }
 impl RrInitmod {
     #[inline(always)]
@@ -658,7 +681,8 @@ impl From<RrInitmod> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RrNsam {
     #[doc = "0 clock."]
@@ -693,7 +717,8 @@ impl From<RrNsam> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RrSampleCnt {
     #[doc = "1 samples."]
@@ -752,7 +777,8 @@ impl From<RrSampleCnt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RrSampleThreshold {
     #[doc = "At least 1 sampled \"1\", the final result is \"1\"."]
@@ -811,7 +837,8 @@ impl From<RrSampleThreshold> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RrTrgSel {
     #[doc = "External trigger."]
@@ -842,7 +869,8 @@ impl From<RrTrgSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Vrsel {
     #[doc = "VREFH0."]

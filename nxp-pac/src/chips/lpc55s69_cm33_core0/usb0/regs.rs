@@ -22,6 +22,7 @@ impl Default for Databufstart {
         Databufstart(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Databufstart {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Databufstart")
@@ -251,6 +252,7 @@ impl Default for Devcmdstat {
         Devcmdstat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Devcmdstat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Devcmdstat")
@@ -324,6 +326,7 @@ impl Default for Epbufcfg {
         Epbufcfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Epbufcfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Epbufcfg")
@@ -361,6 +364,7 @@ impl Default for Epinuse {
         Epinuse(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Epinuse {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Epinuse").field("buf", &self.buf()).finish()
@@ -396,6 +400,7 @@ impl Default for Epliststart {
         Epliststart(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Epliststart {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Epliststart")
@@ -433,6 +438,7 @@ impl Default for Epskip {
         Epskip(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Epskip {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Epskip")
@@ -470,6 +476,7 @@ impl Default for Eptoggle {
         Eptoggle(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Eptoggle {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Eptoggle")
@@ -543,6 +550,7 @@ impl Default for Info {
         Info(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Info {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Info")
@@ -614,6 +622,7 @@ impl Default for Inten {
         Inten(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Inten {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Inten")
@@ -683,6 +692,7 @@ impl Default for Intsetstat {
         Intsetstat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Intsetstat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Intsetstat")
@@ -860,6 +870,7 @@ impl Default for Intstat {
         Intstat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Intstat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Intstat")
@@ -947,6 +958,7 @@ impl Default for Lpm {
         Lpm(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpm {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpm")

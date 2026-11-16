@@ -70,6 +70,7 @@ impl Default for Istat {
         Istat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Istat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Istat")
@@ -179,6 +180,7 @@ impl Default for Pselid {
         Pselid(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pselid {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pselid")

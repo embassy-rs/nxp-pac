@@ -22,6 +22,7 @@ impl Default for Clkctrl {
         Clkctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Clkctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Clkctrl")
@@ -59,6 +60,7 @@ impl Default for Clkprescaler {
         Clkprescaler(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Clkprescaler {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Clkprescaler")
@@ -96,6 +98,7 @@ impl Default for Cmph {
         Cmph(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmph {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmph")
@@ -133,6 +136,7 @@ impl Default for Cmpl {
         Cmpl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmpl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmpl")
@@ -206,6 +210,7 @@ impl Default for Ctrl {
         Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl")
@@ -253,6 +258,7 @@ impl Default for Serv {
         Serv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Serv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Serv")

@@ -22,6 +22,7 @@ impl Default for Feed {
         Feed(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Feed {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Feed").field("feed", &self.feed()).finish()
@@ -110,18 +111,6 @@ impl Mod {
     pub const fn set_lock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "Debug Enable."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn debug_en(&self) -> bool {
-        let val = (self.0 >> 6usize) & 0x01;
-        val != 0
-    }
-    #[doc = "Debug Enable."]
-    #[inline(always)]
-    pub const fn set_debug_en(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
-    }
 }
 impl Default for Mod {
     #[inline(always)]
@@ -129,6 +118,7 @@ impl Default for Mod {
         Mod(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mod {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mod")
@@ -138,7 +128,6 @@ impl core::fmt::Debug for Mod {
             .field("wdint", &self.wdint())
             .field("wdprotect", &self.wdprotect())
             .field("lock", &self.lock())
-            .field("debug_en", &self.debug_en())
             .finish()
     }
 }
@@ -147,14 +136,13 @@ impl defmt::Format for Mod {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Mod {{ wden: {:?}, wdreset: {:?}, wdtof: {:?}, wdint: {=bool:?}, wdprotect: {:?}, lock: {=bool:?}, debug_en: {=bool:?} }}",
+            "Mod {{ wden: {:?}, wdreset: {:?}, wdtof: {:?}, wdint: {=bool:?}, wdprotect: {:?}, lock: {=bool:?} }}",
             self.wden(),
             self.wdreset(),
             self.wdtof(),
             self.wdint(),
             self.wdprotect(),
-            self.lock(),
-            self.debug_en()
+            self.lock()
         )
     }
 }
@@ -182,6 +170,7 @@ impl Default for Tc {
         Tc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tc").field("count", &self.count()).finish()
@@ -217,6 +206,7 @@ impl Default for Tv {
         Tv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tv").field("count", &self.count()).finish()
@@ -252,6 +242,7 @@ impl Default for Warnint {
         Warnint(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Warnint {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Warnint")
@@ -289,6 +280,7 @@ impl Default for Window {
         Window(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Window {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Window")

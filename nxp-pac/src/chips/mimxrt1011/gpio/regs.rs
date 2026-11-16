@@ -24,6 +24,7 @@ impl Default for Dr {
         Dr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dr")
@@ -129,6 +130,7 @@ impl Default for DrClear {
         DrClear(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DrClear {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DrClear")
@@ -234,6 +236,7 @@ impl Default for DrSet {
         DrSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DrSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DrSet")
@@ -339,6 +342,7 @@ impl Default for DrToggle {
         DrToggle(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DrToggle {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DrToggle")
@@ -444,6 +448,7 @@ impl Default for EdgeSel {
         EdgeSel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EdgeSel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EdgeSel")
@@ -549,6 +554,7 @@ impl Default for Gdir {
         Gdir(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gdir {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gdir")
@@ -656,6 +662,7 @@ impl Default for Icr {
         Icr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Icr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Icr")
@@ -729,6 +736,7 @@ impl Default for Imr {
         Imr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Imr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Imr")
@@ -834,6 +842,7 @@ impl Default for Isr {
         Isr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Isr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Isr")
@@ -939,6 +948,7 @@ impl Default for Psr {
         Psr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Psr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Psr")

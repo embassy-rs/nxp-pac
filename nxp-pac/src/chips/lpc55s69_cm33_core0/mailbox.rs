@@ -14,7 +14,7 @@ impl Mailbox {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "no description available."]
+    #[doc = "Array of registers: IRQ, IRQCLR, IRQSET."]
     #[inline(always)]
     pub const fn mboxirq(self, n: usize) -> Mboxirq {
         assert!(n < 2usize);
@@ -26,7 +26,7 @@ impl Mailbox {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xf8usize) as _) }
     }
 }
-#[doc = "no description available."]
+#[doc = "Array of registers: IRQ, IRQCLR, IRQSET."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mboxirq {
     ptr: *mut u8,

@@ -22,6 +22,7 @@ impl Default for ChGrpri {
         ChGrpri(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ChGrpri {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ChGrpri")
@@ -167,6 +168,7 @@ impl Default for MpCsr {
         MpCsr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MpCsr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MpCsr")
@@ -346,6 +348,7 @@ impl Default for MpEs {
         MpEs(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MpEs {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MpEs")
@@ -407,6 +410,7 @@ impl Default for MpHrs {
         MpHrs(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MpHrs {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MpHrs").field("hrs", &self.hrs()).finish()
@@ -442,6 +446,7 @@ impl Default for MpInt {
         MpInt(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MpInt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MpInt").field("int", &self.int()).finish()

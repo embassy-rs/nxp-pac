@@ -106,6 +106,7 @@ impl Default for Aircr {
         Aircr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Aircr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Aircr")
@@ -134,6 +135,174 @@ impl defmt::Format for Aircr {
             self.pris(),
             self.endianness(),
             self.vectkey()
+        )
+    }
+}
+#[doc = "Coprocessor Access Control Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Cpacr(pub u32);
+impl Cpacr {
+    #[doc = "CP0 Privilege."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn cp0(&self) -> super::vals::CpacrCp0 {
+        let val = (self.0 >> 0usize) & 0x03;
+        super::vals::CpacrCp0::from_bits(val as u8)
+    }
+    #[doc = "CP0 Privilege."]
+    #[inline(always)]
+    pub const fn set_cp0(&mut self, val: super::vals::CpacrCp0) {
+        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
+    }
+    #[doc = "CP1 Privilege."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn cp1(&self) -> super::vals::CpacrCp1 {
+        let val = (self.0 >> 2usize) & 0x03;
+        super::vals::CpacrCp1::from_bits(val as u8)
+    }
+    #[doc = "CP1 Privilege."]
+    #[inline(always)]
+    pub const fn set_cp1(&mut self, val: super::vals::CpacrCp1) {
+        self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
+    }
+    #[doc = "CP2 Privilege."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn cp2(&self) -> super::vals::CpacrCp2 {
+        let val = (self.0 >> 4usize) & 0x03;
+        super::vals::CpacrCp2::from_bits(val as u8)
+    }
+    #[doc = "CP2 Privilege."]
+    #[inline(always)]
+    pub const fn set_cp2(&mut self, val: super::vals::CpacrCp2) {
+        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
+    }
+    #[doc = "CP3 Privilege."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn cp3(&self) -> super::vals::CpacrCp3 {
+        let val = (self.0 >> 6usize) & 0x03;
+        super::vals::CpacrCp3::from_bits(val as u8)
+    }
+    #[doc = "CP3 Privilege."]
+    #[inline(always)]
+    pub const fn set_cp3(&mut self, val: super::vals::CpacrCp3) {
+        self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u32) & 0x03) << 6usize);
+    }
+    #[doc = "CP4 Privilege."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn cp4(&self) -> super::vals::CpacrCp4 {
+        let val = (self.0 >> 8usize) & 0x03;
+        super::vals::CpacrCp4::from_bits(val as u8)
+    }
+    #[doc = "CP4 Privilege."]
+    #[inline(always)]
+    pub const fn set_cp4(&mut self, val: super::vals::CpacrCp4) {
+        self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
+    }
+    #[doc = "CP5 Privilege."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn cp5(&self) -> super::vals::CpacrCp5 {
+        let val = (self.0 >> 10usize) & 0x03;
+        super::vals::CpacrCp5::from_bits(val as u8)
+    }
+    #[doc = "CP5 Privilege."]
+    #[inline(always)]
+    pub const fn set_cp5(&mut self, val: super::vals::CpacrCp5) {
+        self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u32) & 0x03) << 10usize);
+    }
+    #[doc = "CP6 Privilege."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn cp6(&self) -> super::vals::CpacrCp6 {
+        let val = (self.0 >> 12usize) & 0x03;
+        super::vals::CpacrCp6::from_bits(val as u8)
+    }
+    #[doc = "CP6 Privilege."]
+    #[inline(always)]
+    pub const fn set_cp6(&mut self, val: super::vals::CpacrCp6) {
+        self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
+    }
+    #[doc = "CP7 Privilege."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn cp7(&self) -> super::vals::CpacrCp7 {
+        let val = (self.0 >> 14usize) & 0x03;
+        super::vals::CpacrCp7::from_bits(val as u8)
+    }
+    #[doc = "CP7 Privilege."]
+    #[inline(always)]
+    pub const fn set_cp7(&mut self, val: super::vals::CpacrCp7) {
+        self.0 = (self.0 & !(0x03 << 14usize)) | (((val.to_bits() as u32) & 0x03) << 14usize);
+    }
+    #[doc = "CP10 Privilege."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn cp10(&self) -> super::vals::CpacrCp10 {
+        let val = (self.0 >> 20usize) & 0x03;
+        super::vals::CpacrCp10::from_bits(val as u8)
+    }
+    #[doc = "CP10 Privilege."]
+    #[inline(always)]
+    pub const fn set_cp10(&mut self, val: super::vals::CpacrCp10) {
+        self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
+    }
+    #[doc = "CP11 Privilege."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn cp11(&self) -> super::vals::Cp11 {
+        let val = (self.0 >> 22usize) & 0x03;
+        super::vals::Cp11::from_bits(val as u8)
+    }
+    #[doc = "CP11 Privilege."]
+    #[inline(always)]
+    pub const fn set_cp11(&mut self, val: super::vals::Cp11) {
+        self.0 = (self.0 & !(0x03 << 22usize)) | (((val.to_bits() as u32) & 0x03) << 22usize);
+    }
+}
+impl Default for Cpacr {
+    #[inline(always)]
+    fn default() -> Cpacr {
+        Cpacr(0)
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Cpacr {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Cpacr")
+            .field("cp0", &self.cp0())
+            .field("cp1", &self.cp1())
+            .field("cp2", &self.cp2())
+            .field("cp3", &self.cp3())
+            .field("cp4", &self.cp4())
+            .field("cp5", &self.cp5())
+            .field("cp6", &self.cp6())
+            .field("cp7", &self.cp7())
+            .field("cp10", &self.cp10())
+            .field("cp11", &self.cp11())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Cpacr {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Cpacr {{ cp0: {:?}, cp1: {:?}, cp2: {:?}, cp3: {:?}, cp4: {:?}, cp5: {:?}, cp6: {:?}, cp7: {:?}, cp10: {:?}, cp11: {:?} }}",
+            self.cp0(),
+            self.cp1(),
+            self.cp2(),
+            self.cp3(),
+            self.cp4(),
+            self.cp5(),
+            self.cp6(),
+            self.cp7(),
+            self.cp10(),
+            self.cp11()
         )
     }
 }
@@ -269,6 +438,7 @@ impl Default for Nsacr {
         Nsacr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Nsacr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Nsacr")
@@ -364,6 +534,7 @@ impl Default for Scr {
         Scr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Scr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Scr")
@@ -639,6 +810,7 @@ impl Default for Shcsr {
         Shcsr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Shcsr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Shcsr")

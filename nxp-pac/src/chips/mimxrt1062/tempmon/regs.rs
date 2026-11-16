@@ -70,6 +70,7 @@ impl Default for Tempsense0 {
         Tempsense0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tempsense0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tempsense0")
@@ -167,6 +168,7 @@ impl Default for Tempsense0Clr {
         Tempsense0Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tempsense0Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tempsense0Clr")
@@ -264,6 +266,7 @@ impl Default for Tempsense0Set {
         Tempsense0Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tempsense0Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tempsense0Set")
@@ -361,6 +364,7 @@ impl Default for Tempsense0Tog {
         Tempsense0Tog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tempsense0Tog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tempsense0Tog")
@@ -410,6 +414,7 @@ impl Default for Tempsense1 {
         Tempsense1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tempsense1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tempsense1")
@@ -451,6 +456,7 @@ impl Default for Tempsense1Clr {
         Tempsense1Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tempsense1Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tempsense1Clr")
@@ -492,6 +498,7 @@ impl Default for Tempsense1Set {
         Tempsense1Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tempsense1Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tempsense1Set")
@@ -533,6 +540,7 @@ impl Default for Tempsense1Tog {
         Tempsense1Tog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tempsense1Tog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tempsense1Tog")
@@ -586,6 +594,7 @@ impl Default for Tempsense2 {
         Tempsense2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tempsense2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tempsense2")
@@ -641,6 +650,7 @@ impl Default for Tempsense2Clr {
         Tempsense2Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tempsense2Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tempsense2Clr")
@@ -696,6 +706,7 @@ impl Default for Tempsense2Set {
         Tempsense2Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tempsense2Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tempsense2Set")
@@ -751,6 +762,7 @@ impl Default for Tempsense2Tog {
         Tempsense2Tog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tempsense2Tog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tempsense2Tog")

@@ -22,6 +22,7 @@ impl Default for HwOcotpAna0 {
         HwOcotpAna0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpAna0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpAna0")
@@ -59,6 +60,7 @@ impl Default for HwOcotpAna1 {
         HwOcotpAna1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpAna1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpAna1")
@@ -96,6 +98,7 @@ impl Default for HwOcotpAna2 {
         HwOcotpAna2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpAna2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpAna2")
@@ -133,6 +136,7 @@ impl Default for HwOcotpCfg0 {
         HwOcotpCfg0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpCfg0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpCfg0")
@@ -170,6 +174,7 @@ impl Default for HwOcotpCfg1 {
         HwOcotpCfg1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpCfg1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpCfg1")
@@ -207,6 +212,7 @@ impl Default for HwOcotpCfg2 {
         HwOcotpCfg2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpCfg2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpCfg2")
@@ -244,6 +250,7 @@ impl Default for HwOcotpCfg3 {
         HwOcotpCfg3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpCfg3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpCfg3")
@@ -281,6 +288,7 @@ impl Default for HwOcotpCfg4 {
         HwOcotpCfg4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpCfg4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpCfg4")
@@ -318,6 +326,7 @@ impl Default for HwOcotpCfg5 {
         HwOcotpCfg5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpCfg5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpCfg5")
@@ -355,6 +364,7 @@ impl Default for HwOcotpCfg6 {
         HwOcotpCfg6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpCfg6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpCfg6")
@@ -440,6 +450,7 @@ impl Default for HwOcotpCtrl {
         HwOcotpCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpCtrl")
@@ -537,6 +548,7 @@ impl Default for HwOcotpCtrlClr {
         HwOcotpCtrlClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpCtrlClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpCtrlClr")
@@ -634,6 +646,7 @@ impl Default for HwOcotpCtrlSet {
         HwOcotpCtrlSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpCtrlSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpCtrlSet")
@@ -731,6 +744,7 @@ impl Default for HwOcotpCtrlTog {
         HwOcotpCtrlTog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpCtrlTog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpCtrlTog")
@@ -780,6 +794,7 @@ impl Default for HwOcotpData {
         HwOcotpData(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpData {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpData")
@@ -817,6 +832,7 @@ impl Default for HwOcotpGp1 {
         HwOcotpGp1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpGp1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpGp1")
@@ -854,6 +870,7 @@ impl Default for HwOcotpGp2 {
         HwOcotpGp2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpGp2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpGp2")
@@ -891,6 +908,7 @@ impl Default for HwOcotpGp3 {
         HwOcotpGp3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpGp3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpGp3")
@@ -1060,6 +1078,7 @@ impl Default for HwOcotpLock {
         HwOcotpLock(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpLock {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpLock")
@@ -1123,6 +1142,7 @@ impl Default for HwOcotpMem0 {
         HwOcotpMem0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpMem0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpMem0")
@@ -1160,6 +1180,7 @@ impl Default for HwOcotpMem1 {
         HwOcotpMem1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpMem1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpMem1")
@@ -1197,6 +1218,7 @@ impl Default for HwOcotpMem2 {
         HwOcotpMem2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpMem2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpMem2")
@@ -1234,6 +1256,7 @@ impl Default for HwOcotpMem3 {
         HwOcotpMem3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpMem3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpMem3")
@@ -1271,6 +1294,7 @@ impl Default for HwOcotpMem4 {
         HwOcotpMem4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpMem4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpMem4")
@@ -1308,6 +1332,7 @@ impl Default for HwOcotpMiscConf0 {
         HwOcotpMiscConf0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpMiscConf0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpMiscConf0")
@@ -1345,6 +1370,7 @@ impl Default for HwOcotpMiscConf1 {
         HwOcotpMiscConf1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpMiscConf1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpMiscConf1")
@@ -1382,6 +1408,7 @@ impl Default for HwOcotpOtfadCfg0 {
         HwOcotpOtfadCfg0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpOtfadCfg0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpOtfadCfg0")
@@ -1419,6 +1446,7 @@ impl Default for HwOcotpOtfadCfg1 {
         HwOcotpOtfadCfg1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpOtfadCfg1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpOtfadCfg1")
@@ -1456,6 +1484,7 @@ impl Default for HwOcotpReadCtrl {
         HwOcotpReadCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpReadCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpReadCtrl")
@@ -1497,6 +1526,7 @@ impl Default for HwOcotpReadFuseData {
         HwOcotpReadFuseData(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpReadFuseData {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpReadFuseData")
@@ -1558,6 +1588,7 @@ impl Default for HwOcotpScs {
         HwOcotpScs(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpScs {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpScs")
@@ -1627,6 +1658,7 @@ impl Default for HwOcotpScsClr {
         HwOcotpScsClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpScsClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpScsClr")
@@ -1696,6 +1728,7 @@ impl Default for HwOcotpScsSet {
         HwOcotpScsSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpScsSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpScsSet")
@@ -1765,6 +1798,7 @@ impl Default for HwOcotpScsTog {
         HwOcotpScsTog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpScsTog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpScsTog")
@@ -1810,6 +1844,7 @@ impl Default for HwOcotpSjcResp0 {
         HwOcotpSjcResp0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpSjcResp0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpSjcResp0")
@@ -1847,6 +1882,7 @@ impl Default for HwOcotpSjcResp1 {
         HwOcotpSjcResp1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpSjcResp1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpSjcResp1")
@@ -1884,6 +1920,7 @@ impl Default for HwOcotpSrk0 {
         HwOcotpSrk0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpSrk0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpSrk0")
@@ -1921,6 +1958,7 @@ impl Default for HwOcotpSrk1 {
         HwOcotpSrk1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpSrk1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpSrk1")
@@ -1958,6 +1996,7 @@ impl Default for HwOcotpSrk2 {
         HwOcotpSrk2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpSrk2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpSrk2")
@@ -1995,6 +2034,7 @@ impl Default for HwOcotpSrk3 {
         HwOcotpSrk3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpSrk3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpSrk3")
@@ -2032,6 +2072,7 @@ impl Default for HwOcotpSrk4 {
         HwOcotpSrk4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpSrk4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpSrk4")
@@ -2069,6 +2110,7 @@ impl Default for HwOcotpSrk5 {
         HwOcotpSrk5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpSrk5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpSrk5")
@@ -2106,6 +2148,7 @@ impl Default for HwOcotpSrk6 {
         HwOcotpSrk6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpSrk6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpSrk6")
@@ -2143,6 +2186,7 @@ impl Default for HwOcotpSrk7 {
         HwOcotpSrk7(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpSrk7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpSrk7")
@@ -2180,6 +2224,7 @@ impl Default for HwOcotpSrkRevoke {
         HwOcotpSrkRevoke(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpSrkRevoke {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpSrkRevoke")
@@ -2217,6 +2262,7 @@ impl Default for HwOcotpSwGp1 {
         HwOcotpSwGp1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpSwGp1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpSwGp1")
@@ -2254,6 +2300,7 @@ impl Default for HwOcotpSwGp20 {
         HwOcotpSwGp20(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpSwGp20 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpSwGp20")
@@ -2291,6 +2338,7 @@ impl Default for HwOcotpSwGp21 {
         HwOcotpSwGp21(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpSwGp21 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpSwGp21")
@@ -2328,6 +2376,7 @@ impl Default for HwOcotpSwGp22 {
         HwOcotpSwGp22(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpSwGp22 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpSwGp22")
@@ -2365,6 +2414,7 @@ impl Default for HwOcotpSwGp23 {
         HwOcotpSwGp23(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpSwGp23 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpSwGp23")
@@ -2414,6 +2464,7 @@ impl Default for HwOcotpSwSticky {
         HwOcotpSwSticky(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpSwSticky {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpSwSticky")
@@ -2493,6 +2544,7 @@ impl Default for HwOcotpTiming {
         HwOcotpTiming(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpTiming {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpTiming")
@@ -2564,6 +2616,7 @@ impl Default for HwOcotpTiming2 {
         HwOcotpTiming2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpTiming2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpTiming2")
@@ -2633,6 +2686,7 @@ impl Default for HwOcotpVersion {
         HwOcotpVersion(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HwOcotpVersion {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HwOcotpVersion")

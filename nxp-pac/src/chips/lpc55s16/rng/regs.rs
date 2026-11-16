@@ -46,6 +46,7 @@ impl Default for CounterCfg {
         CounterCfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CounterCfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CounterCfg")
@@ -103,6 +104,7 @@ impl Default for CounterVal {
         CounterVal(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CounterVal {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CounterVal")
@@ -146,6 +148,7 @@ impl Default for EncryptedNumber {
         EncryptedNumber(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EncryptedNumber {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EncryptedNumber")
@@ -187,6 +190,7 @@ impl Default for EntropyInject {
         EntropyInject(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EntropyInject {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EntropyInject")
@@ -236,6 +240,7 @@ impl Default for MiscCfg {
         MiscCfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MiscCfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MiscCfg")
@@ -315,6 +320,7 @@ impl Default for Moduleid {
         Moduleid(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Moduleid {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Moduleid")
@@ -374,6 +380,7 @@ impl Default for OnlineTestCfg {
         OnlineTestCfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OnlineTestCfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OnlineTestCfg")
@@ -441,6 +448,7 @@ impl Default for OnlineTestVal {
         OnlineTestVal(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OnlineTestVal {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OnlineTestVal")
@@ -510,6 +518,7 @@ impl Default for Powerdown {
         Powerdown(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Powerdown {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Powerdown")
@@ -555,6 +564,7 @@ impl Default for RandomNumber {
         RandomNumber(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for RandomNumber {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RandomNumber")

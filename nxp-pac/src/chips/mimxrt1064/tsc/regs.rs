@@ -46,6 +46,7 @@ impl Default for BasicSetting {
         BasicSetting(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for BasicSetting {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BasicSetting")
@@ -163,6 +164,7 @@ impl Default for DebugMode {
         DebugMode(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DebugMode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DebugMode")
@@ -468,6 +470,7 @@ impl Default for DebugMode2 {
         DebugMode2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DebugMode2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DebugMode2")
@@ -599,6 +602,7 @@ impl Default for FlowControl {
         FlowControl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FlowControl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FlowControl")
@@ -672,6 +676,7 @@ impl Default for IntEn {
         IntEn(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IntEn {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IntEn")
@@ -753,6 +758,7 @@ impl Default for IntSigEn {
         IntSigEn(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IntSigEn {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IntSigEn")
@@ -836,6 +842,7 @@ impl Default for IntStatus {
         IntStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IntStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IntStatus")
@@ -895,6 +902,7 @@ impl Default for MeaseureValue {
         MeaseureValue(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MeaseureValue {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MeaseureValue")
@@ -938,6 +946,7 @@ impl Default for PreChargeTime {
         PreChargeTime(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PreChargeTime {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PreChargeTime")

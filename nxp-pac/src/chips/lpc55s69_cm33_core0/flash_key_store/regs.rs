@@ -22,6 +22,7 @@ impl Default for ActivationCode {
         ActivationCode(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ActivationCode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ActivationCode")
@@ -59,6 +60,7 @@ impl Default for Header {
         Header(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Header {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Header")
@@ -96,6 +98,7 @@ impl Default for PrinceRegion0Body0 {
         PrinceRegion0Body0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0Body0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0Body0")
@@ -133,6 +136,7 @@ impl Default for PrinceRegion0Body1 {
         PrinceRegion0Body1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0Body1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0Body1")
@@ -170,6 +174,7 @@ impl Default for PrinceRegion0Body10 {
         PrinceRegion0Body10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0Body10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0Body10")
@@ -207,6 +212,7 @@ impl Default for PrinceRegion0Body11 {
         PrinceRegion0Body11(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0Body11 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0Body11")
@@ -244,6 +250,7 @@ impl Default for PrinceRegion0Body2 {
         PrinceRegion0Body2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0Body2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0Body2")
@@ -281,6 +288,7 @@ impl Default for PrinceRegion0Body3 {
         PrinceRegion0Body3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0Body3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0Body3")
@@ -318,6 +326,7 @@ impl Default for PrinceRegion0Body4 {
         PrinceRegion0Body4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0Body4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0Body4")
@@ -355,6 +364,7 @@ impl Default for PrinceRegion0Body5 {
         PrinceRegion0Body5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0Body5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0Body5")
@@ -392,6 +402,7 @@ impl Default for PrinceRegion0Body6 {
         PrinceRegion0Body6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0Body6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0Body6")
@@ -429,6 +440,7 @@ impl Default for PrinceRegion0Body7 {
         PrinceRegion0Body7(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0Body7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0Body7")
@@ -466,6 +478,7 @@ impl Default for PrinceRegion0Body8 {
         PrinceRegion0Body8(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0Body8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0Body8")
@@ -503,6 +516,7 @@ impl Default for PrinceRegion0Body9 {
         PrinceRegion0Body9(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0Body9 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0Body9")
@@ -540,6 +554,7 @@ impl Default for PrinceRegion0Header0 {
         PrinceRegion0Header0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0Header0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0Header0")
@@ -605,6 +620,7 @@ impl Default for PrinceRegion0Header1 {
         PrinceRegion0Header1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0Header1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0Header1")
@@ -650,6 +666,7 @@ impl Default for PrinceRegion0KeyCode0 {
         PrinceRegion0KeyCode0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0KeyCode0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0KeyCode0")
@@ -691,6 +708,7 @@ impl Default for PrinceRegion0KeyCode1 {
         PrinceRegion0KeyCode1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0KeyCode1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0KeyCode1")
@@ -732,6 +750,7 @@ impl Default for PrinceRegion0KeyCode10 {
         PrinceRegion0KeyCode10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0KeyCode10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0KeyCode10")
@@ -773,6 +792,7 @@ impl Default for PrinceRegion0KeyCode11 {
         PrinceRegion0KeyCode11(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0KeyCode11 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0KeyCode11")
@@ -814,6 +834,7 @@ impl Default for PrinceRegion0KeyCode12 {
         PrinceRegion0KeyCode12(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0KeyCode12 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0KeyCode12")
@@ -855,6 +876,7 @@ impl Default for PrinceRegion0KeyCode13 {
         PrinceRegion0KeyCode13(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0KeyCode13 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0KeyCode13")
@@ -896,6 +918,7 @@ impl Default for PrinceRegion0KeyCode2 {
         PrinceRegion0KeyCode2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0KeyCode2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0KeyCode2")
@@ -937,6 +960,7 @@ impl Default for PrinceRegion0KeyCode3 {
         PrinceRegion0KeyCode3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0KeyCode3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0KeyCode3")
@@ -978,6 +1002,7 @@ impl Default for PrinceRegion0KeyCode4 {
         PrinceRegion0KeyCode4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0KeyCode4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0KeyCode4")
@@ -1019,6 +1044,7 @@ impl Default for PrinceRegion0KeyCode5 {
         PrinceRegion0KeyCode5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0KeyCode5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0KeyCode5")
@@ -1060,6 +1086,7 @@ impl Default for PrinceRegion0KeyCode6 {
         PrinceRegion0KeyCode6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0KeyCode6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0KeyCode6")
@@ -1101,6 +1128,7 @@ impl Default for PrinceRegion0KeyCode7 {
         PrinceRegion0KeyCode7(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0KeyCode7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0KeyCode7")
@@ -1142,6 +1170,7 @@ impl Default for PrinceRegion0KeyCode8 {
         PrinceRegion0KeyCode8(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0KeyCode8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0KeyCode8")
@@ -1183,6 +1212,7 @@ impl Default for PrinceRegion0KeyCode9 {
         PrinceRegion0KeyCode9(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion0KeyCode9 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion0KeyCode9")
@@ -1224,6 +1254,7 @@ impl Default for PrinceRegion1Body0 {
         PrinceRegion1Body0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1Body0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1Body0")
@@ -1261,6 +1292,7 @@ impl Default for PrinceRegion1Body1 {
         PrinceRegion1Body1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1Body1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1Body1")
@@ -1298,6 +1330,7 @@ impl Default for PrinceRegion1Body10 {
         PrinceRegion1Body10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1Body10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1Body10")
@@ -1335,6 +1368,7 @@ impl Default for PrinceRegion1Body11 {
         PrinceRegion1Body11(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1Body11 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1Body11")
@@ -1372,6 +1406,7 @@ impl Default for PrinceRegion1Body2 {
         PrinceRegion1Body2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1Body2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1Body2")
@@ -1409,6 +1444,7 @@ impl Default for PrinceRegion1Body3 {
         PrinceRegion1Body3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1Body3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1Body3")
@@ -1446,6 +1482,7 @@ impl Default for PrinceRegion1Body4 {
         PrinceRegion1Body4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1Body4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1Body4")
@@ -1483,6 +1520,7 @@ impl Default for PrinceRegion1Body5 {
         PrinceRegion1Body5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1Body5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1Body5")
@@ -1520,6 +1558,7 @@ impl Default for PrinceRegion1Body6 {
         PrinceRegion1Body6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1Body6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1Body6")
@@ -1557,6 +1596,7 @@ impl Default for PrinceRegion1Body7 {
         PrinceRegion1Body7(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1Body7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1Body7")
@@ -1594,6 +1634,7 @@ impl Default for PrinceRegion1Body8 {
         PrinceRegion1Body8(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1Body8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1Body8")
@@ -1631,6 +1672,7 @@ impl Default for PrinceRegion1Body9 {
         PrinceRegion1Body9(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1Body9 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1Body9")
@@ -1668,6 +1710,7 @@ impl Default for PrinceRegion1Header0 {
         PrinceRegion1Header0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1Header0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1Header0")
@@ -1733,6 +1776,7 @@ impl Default for PrinceRegion1Header1 {
         PrinceRegion1Header1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1Header1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1Header1")
@@ -1778,6 +1822,7 @@ impl Default for PrinceRegion1KeyCode0 {
         PrinceRegion1KeyCode0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1KeyCode0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1KeyCode0")
@@ -1819,6 +1864,7 @@ impl Default for PrinceRegion1KeyCode1 {
         PrinceRegion1KeyCode1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1KeyCode1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1KeyCode1")
@@ -1860,6 +1906,7 @@ impl Default for PrinceRegion1KeyCode10 {
         PrinceRegion1KeyCode10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1KeyCode10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1KeyCode10")
@@ -1901,6 +1948,7 @@ impl Default for PrinceRegion1KeyCode11 {
         PrinceRegion1KeyCode11(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1KeyCode11 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1KeyCode11")
@@ -1942,6 +1990,7 @@ impl Default for PrinceRegion1KeyCode12 {
         PrinceRegion1KeyCode12(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1KeyCode12 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1KeyCode12")
@@ -1983,6 +2032,7 @@ impl Default for PrinceRegion1KeyCode13 {
         PrinceRegion1KeyCode13(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1KeyCode13 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1KeyCode13")
@@ -2024,6 +2074,7 @@ impl Default for PrinceRegion1KeyCode2 {
         PrinceRegion1KeyCode2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1KeyCode2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1KeyCode2")
@@ -2065,6 +2116,7 @@ impl Default for PrinceRegion1KeyCode3 {
         PrinceRegion1KeyCode3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1KeyCode3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1KeyCode3")
@@ -2106,6 +2158,7 @@ impl Default for PrinceRegion1KeyCode4 {
         PrinceRegion1KeyCode4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1KeyCode4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1KeyCode4")
@@ -2147,6 +2200,7 @@ impl Default for PrinceRegion1KeyCode5 {
         PrinceRegion1KeyCode5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1KeyCode5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1KeyCode5")
@@ -2188,6 +2242,7 @@ impl Default for PrinceRegion1KeyCode6 {
         PrinceRegion1KeyCode6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1KeyCode6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1KeyCode6")
@@ -2229,6 +2284,7 @@ impl Default for PrinceRegion1KeyCode7 {
         PrinceRegion1KeyCode7(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1KeyCode7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1KeyCode7")
@@ -2270,6 +2326,7 @@ impl Default for PrinceRegion1KeyCode8 {
         PrinceRegion1KeyCode8(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1KeyCode8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1KeyCode8")
@@ -2311,6 +2368,7 @@ impl Default for PrinceRegion1KeyCode9 {
         PrinceRegion1KeyCode9(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion1KeyCode9 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion1KeyCode9")
@@ -2352,6 +2410,7 @@ impl Default for PrinceRegion2Body0 {
         PrinceRegion2Body0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2Body0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2Body0")
@@ -2389,6 +2448,7 @@ impl Default for PrinceRegion2Body1 {
         PrinceRegion2Body1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2Body1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2Body1")
@@ -2426,6 +2486,7 @@ impl Default for PrinceRegion2Body10 {
         PrinceRegion2Body10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2Body10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2Body10")
@@ -2463,6 +2524,7 @@ impl Default for PrinceRegion2Body11 {
         PrinceRegion2Body11(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2Body11 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2Body11")
@@ -2500,6 +2562,7 @@ impl Default for PrinceRegion2Body2 {
         PrinceRegion2Body2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2Body2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2Body2")
@@ -2537,6 +2600,7 @@ impl Default for PrinceRegion2Body3 {
         PrinceRegion2Body3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2Body3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2Body3")
@@ -2574,6 +2638,7 @@ impl Default for PrinceRegion2Body4 {
         PrinceRegion2Body4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2Body4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2Body4")
@@ -2611,6 +2676,7 @@ impl Default for PrinceRegion2Body5 {
         PrinceRegion2Body5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2Body5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2Body5")
@@ -2648,6 +2714,7 @@ impl Default for PrinceRegion2Body6 {
         PrinceRegion2Body6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2Body6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2Body6")
@@ -2685,6 +2752,7 @@ impl Default for PrinceRegion2Body7 {
         PrinceRegion2Body7(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2Body7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2Body7")
@@ -2722,6 +2790,7 @@ impl Default for PrinceRegion2Body8 {
         PrinceRegion2Body8(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2Body8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2Body8")
@@ -2759,6 +2828,7 @@ impl Default for PrinceRegion2Body9 {
         PrinceRegion2Body9(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2Body9 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2Body9")
@@ -2796,6 +2866,7 @@ impl Default for PrinceRegion2Header0 {
         PrinceRegion2Header0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2Header0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2Header0")
@@ -2861,6 +2932,7 @@ impl Default for PrinceRegion2Header1 {
         PrinceRegion2Header1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2Header1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2Header1")
@@ -2906,6 +2978,7 @@ impl Default for PrinceRegion2KeyCode0 {
         PrinceRegion2KeyCode0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2KeyCode0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2KeyCode0")
@@ -2947,6 +3020,7 @@ impl Default for PrinceRegion2KeyCode1 {
         PrinceRegion2KeyCode1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2KeyCode1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2KeyCode1")
@@ -2988,6 +3062,7 @@ impl Default for PrinceRegion2KeyCode10 {
         PrinceRegion2KeyCode10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2KeyCode10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2KeyCode10")
@@ -3029,6 +3104,7 @@ impl Default for PrinceRegion2KeyCode11 {
         PrinceRegion2KeyCode11(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2KeyCode11 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2KeyCode11")
@@ -3070,6 +3146,7 @@ impl Default for PrinceRegion2KeyCode12 {
         PrinceRegion2KeyCode12(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2KeyCode12 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2KeyCode12")
@@ -3111,6 +3188,7 @@ impl Default for PrinceRegion2KeyCode13 {
         PrinceRegion2KeyCode13(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2KeyCode13 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2KeyCode13")
@@ -3152,6 +3230,7 @@ impl Default for PrinceRegion2KeyCode2 {
         PrinceRegion2KeyCode2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2KeyCode2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2KeyCode2")
@@ -3193,6 +3272,7 @@ impl Default for PrinceRegion2KeyCode3 {
         PrinceRegion2KeyCode3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2KeyCode3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2KeyCode3")
@@ -3234,6 +3314,7 @@ impl Default for PrinceRegion2KeyCode4 {
         PrinceRegion2KeyCode4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2KeyCode4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2KeyCode4")
@@ -3275,6 +3356,7 @@ impl Default for PrinceRegion2KeyCode5 {
         PrinceRegion2KeyCode5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2KeyCode5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2KeyCode5")
@@ -3316,6 +3398,7 @@ impl Default for PrinceRegion2KeyCode6 {
         PrinceRegion2KeyCode6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2KeyCode6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2KeyCode6")
@@ -3357,6 +3440,7 @@ impl Default for PrinceRegion2KeyCode7 {
         PrinceRegion2KeyCode7(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2KeyCode7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2KeyCode7")
@@ -3398,6 +3482,7 @@ impl Default for PrinceRegion2KeyCode8 {
         PrinceRegion2KeyCode8(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2KeyCode8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2KeyCode8")
@@ -3439,6 +3524,7 @@ impl Default for PrinceRegion2KeyCode9 {
         PrinceRegion2KeyCode9(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceRegion2KeyCode9 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceRegion2KeyCode9")
@@ -3480,6 +3566,7 @@ impl Default for PufDischargeTimeInMs {
         PufDischargeTimeInMs(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PufDischargeTimeInMs {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PufDischargeTimeInMs")
@@ -3521,6 +3608,7 @@ impl Default for SbkeyBody0 {
         SbkeyBody0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SbkeyBody0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SbkeyBody0")
@@ -3558,6 +3646,7 @@ impl Default for SbkeyBody1 {
         SbkeyBody1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SbkeyBody1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SbkeyBody1")
@@ -3595,6 +3684,7 @@ impl Default for SbkeyBody10 {
         SbkeyBody10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SbkeyBody10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SbkeyBody10")
@@ -3632,6 +3722,7 @@ impl Default for SbkeyBody11 {
         SbkeyBody11(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SbkeyBody11 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SbkeyBody11")
@@ -3669,6 +3760,7 @@ impl Default for SbkeyBody2 {
         SbkeyBody2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SbkeyBody2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SbkeyBody2")
@@ -3706,6 +3798,7 @@ impl Default for SbkeyBody3 {
         SbkeyBody3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SbkeyBody3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SbkeyBody3")
@@ -3743,6 +3836,7 @@ impl Default for SbkeyBody4 {
         SbkeyBody4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SbkeyBody4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SbkeyBody4")
@@ -3780,6 +3874,7 @@ impl Default for SbkeyBody5 {
         SbkeyBody5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SbkeyBody5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SbkeyBody5")
@@ -3817,6 +3912,7 @@ impl Default for SbkeyBody6 {
         SbkeyBody6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SbkeyBody6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SbkeyBody6")
@@ -3854,6 +3950,7 @@ impl Default for SbkeyBody7 {
         SbkeyBody7(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SbkeyBody7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SbkeyBody7")
@@ -3891,6 +3988,7 @@ impl Default for SbkeyBody8 {
         SbkeyBody8(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SbkeyBody8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SbkeyBody8")
@@ -3928,6 +4026,7 @@ impl Default for SbkeyBody9 {
         SbkeyBody9(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SbkeyBody9 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SbkeyBody9")
@@ -3965,6 +4064,7 @@ impl Default for SbkeyHeader0 {
         SbkeyHeader0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SbkeyHeader0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SbkeyHeader0")
@@ -4026,6 +4126,7 @@ impl Default for SbkeyHeader1 {
         SbkeyHeader1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SbkeyHeader1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SbkeyHeader1")
@@ -4071,6 +4172,7 @@ impl Default for SbkeyKeyCode0 {
         SbkeyKeyCode0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SbkeyKeyCode0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SbkeyKeyCode0")
@@ -4108,6 +4210,7 @@ impl Default for SbkeyKeyCode1 {
         SbkeyKeyCode1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SbkeyKeyCode1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SbkeyKeyCode1")
@@ -4145,6 +4248,7 @@ impl Default for SbkeyKeyCode10 {
         SbkeyKeyCode10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SbkeyKeyCode10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SbkeyKeyCode10")
@@ -4182,6 +4286,7 @@ impl Default for SbkeyKeyCode11 {
         SbkeyKeyCode11(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SbkeyKeyCode11 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SbkeyKeyCode11")
@@ -4219,6 +4324,7 @@ impl Default for SbkeyKeyCode12 {
         SbkeyKeyCode12(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SbkeyKeyCode12 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SbkeyKeyCode12")
@@ -4256,6 +4362,7 @@ impl Default for SbkeyKeyCode13 {
         SbkeyKeyCode13(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SbkeyKeyCode13 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SbkeyKeyCode13")
@@ -4293,6 +4400,7 @@ impl Default for SbkeyKeyCode2 {
         SbkeyKeyCode2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SbkeyKeyCode2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SbkeyKeyCode2")
@@ -4330,6 +4438,7 @@ impl Default for SbkeyKeyCode3 {
         SbkeyKeyCode3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SbkeyKeyCode3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SbkeyKeyCode3")
@@ -4367,6 +4476,7 @@ impl Default for SbkeyKeyCode4 {
         SbkeyKeyCode4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SbkeyKeyCode4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SbkeyKeyCode4")
@@ -4404,6 +4514,7 @@ impl Default for SbkeyKeyCode5 {
         SbkeyKeyCode5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SbkeyKeyCode5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SbkeyKeyCode5")
@@ -4441,6 +4552,7 @@ impl Default for SbkeyKeyCode6 {
         SbkeyKeyCode6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SbkeyKeyCode6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SbkeyKeyCode6")
@@ -4478,6 +4590,7 @@ impl Default for SbkeyKeyCode7 {
         SbkeyKeyCode7(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SbkeyKeyCode7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SbkeyKeyCode7")
@@ -4515,6 +4628,7 @@ impl Default for SbkeyKeyCode8 {
         SbkeyKeyCode8(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SbkeyKeyCode8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SbkeyKeyCode8")
@@ -4552,6 +4666,7 @@ impl Default for SbkeyKeyCode9 {
         SbkeyKeyCode9(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SbkeyKeyCode9 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SbkeyKeyCode9")
@@ -4589,6 +4704,7 @@ impl Default for UdsBody0 {
         UdsBody0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UdsBody0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UdsBody0")
@@ -4626,6 +4742,7 @@ impl Default for UdsBody1 {
         UdsBody1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UdsBody1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UdsBody1")
@@ -4663,6 +4780,7 @@ impl Default for UdsBody10 {
         UdsBody10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UdsBody10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UdsBody10")
@@ -4700,6 +4818,7 @@ impl Default for UdsBody11 {
         UdsBody11(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UdsBody11 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UdsBody11")
@@ -4737,6 +4856,7 @@ impl Default for UdsBody2 {
         UdsBody2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UdsBody2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UdsBody2")
@@ -4774,6 +4894,7 @@ impl Default for UdsBody3 {
         UdsBody3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UdsBody3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UdsBody3")
@@ -4811,6 +4932,7 @@ impl Default for UdsBody4 {
         UdsBody4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UdsBody4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UdsBody4")
@@ -4848,6 +4970,7 @@ impl Default for UdsBody5 {
         UdsBody5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UdsBody5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UdsBody5")
@@ -4885,6 +5008,7 @@ impl Default for UdsBody6 {
         UdsBody6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UdsBody6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UdsBody6")
@@ -4922,6 +5046,7 @@ impl Default for UdsBody7 {
         UdsBody7(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UdsBody7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UdsBody7")
@@ -4959,6 +5084,7 @@ impl Default for UdsBody8 {
         UdsBody8(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UdsBody8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UdsBody8")
@@ -4996,6 +5122,7 @@ impl Default for UdsBody9 {
         UdsBody9(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UdsBody9 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UdsBody9")
@@ -5033,6 +5160,7 @@ impl Default for UdsHeader0 {
         UdsHeader0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UdsHeader0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UdsHeader0")
@@ -5094,6 +5222,7 @@ impl Default for UdsHeader1 {
         UdsHeader1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UdsHeader1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UdsHeader1")
@@ -5139,6 +5268,7 @@ impl Default for UdsKeyCode0 {
         UdsKeyCode0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UdsKeyCode0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UdsKeyCode0")
@@ -5176,6 +5306,7 @@ impl Default for UdsKeyCode1 {
         UdsKeyCode1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UdsKeyCode1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UdsKeyCode1")
@@ -5213,6 +5344,7 @@ impl Default for UdsKeyCode10 {
         UdsKeyCode10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UdsKeyCode10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UdsKeyCode10")
@@ -5250,6 +5382,7 @@ impl Default for UdsKeyCode11 {
         UdsKeyCode11(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UdsKeyCode11 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UdsKeyCode11")
@@ -5287,6 +5420,7 @@ impl Default for UdsKeyCode12 {
         UdsKeyCode12(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UdsKeyCode12 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UdsKeyCode12")
@@ -5324,6 +5458,7 @@ impl Default for UdsKeyCode13 {
         UdsKeyCode13(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UdsKeyCode13 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UdsKeyCode13")
@@ -5361,6 +5496,7 @@ impl Default for UdsKeyCode2 {
         UdsKeyCode2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UdsKeyCode2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UdsKeyCode2")
@@ -5398,6 +5534,7 @@ impl Default for UdsKeyCode3 {
         UdsKeyCode3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UdsKeyCode3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UdsKeyCode3")
@@ -5435,6 +5572,7 @@ impl Default for UdsKeyCode4 {
         UdsKeyCode4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UdsKeyCode4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UdsKeyCode4")
@@ -5472,6 +5610,7 @@ impl Default for UdsKeyCode5 {
         UdsKeyCode5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UdsKeyCode5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UdsKeyCode5")
@@ -5509,6 +5648,7 @@ impl Default for UdsKeyCode6 {
         UdsKeyCode6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UdsKeyCode6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UdsKeyCode6")
@@ -5546,6 +5686,7 @@ impl Default for UdsKeyCode7 {
         UdsKeyCode7(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UdsKeyCode7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UdsKeyCode7")
@@ -5583,6 +5724,7 @@ impl Default for UdsKeyCode8 {
         UdsKeyCode8(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UdsKeyCode8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UdsKeyCode8")
@@ -5620,6 +5762,7 @@ impl Default for UdsKeyCode9 {
         UdsKeyCode9(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UdsKeyCode9 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UdsKeyCode9")
@@ -5657,6 +5800,7 @@ impl Default for UserKekBody0 {
         UserKekBody0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UserKekBody0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UserKekBody0")
@@ -5694,6 +5838,7 @@ impl Default for UserKekBody1 {
         UserKekBody1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UserKekBody1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UserKekBody1")
@@ -5731,6 +5876,7 @@ impl Default for UserKekBody10 {
         UserKekBody10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UserKekBody10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UserKekBody10")
@@ -5768,6 +5914,7 @@ impl Default for UserKekBody11 {
         UserKekBody11(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UserKekBody11 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UserKekBody11")
@@ -5805,6 +5952,7 @@ impl Default for UserKekBody2 {
         UserKekBody2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UserKekBody2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UserKekBody2")
@@ -5842,6 +5990,7 @@ impl Default for UserKekBody3 {
         UserKekBody3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UserKekBody3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UserKekBody3")
@@ -5879,6 +6028,7 @@ impl Default for UserKekBody4 {
         UserKekBody4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UserKekBody4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UserKekBody4")
@@ -5916,6 +6066,7 @@ impl Default for UserKekBody5 {
         UserKekBody5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UserKekBody5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UserKekBody5")
@@ -5953,6 +6104,7 @@ impl Default for UserKekBody6 {
         UserKekBody6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UserKekBody6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UserKekBody6")
@@ -5990,6 +6142,7 @@ impl Default for UserKekBody7 {
         UserKekBody7(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UserKekBody7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UserKekBody7")
@@ -6027,6 +6180,7 @@ impl Default for UserKekBody8 {
         UserKekBody8(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UserKekBody8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UserKekBody8")
@@ -6064,6 +6218,7 @@ impl Default for UserKekBody9 {
         UserKekBody9(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UserKekBody9 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UserKekBody9")
@@ -6101,6 +6256,7 @@ impl Default for UserKekHeader0 {
         UserKekHeader0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UserKekHeader0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UserKekHeader0")
@@ -6162,6 +6318,7 @@ impl Default for UserKekHeader1 {
         UserKekHeader1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UserKekHeader1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UserKekHeader1")
@@ -6207,6 +6364,7 @@ impl Default for UserKekKeyCode0 {
         UserKekKeyCode0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UserKekKeyCode0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UserKekKeyCode0")
@@ -6244,6 +6402,7 @@ impl Default for UserKekKeyCode1 {
         UserKekKeyCode1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UserKekKeyCode1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UserKekKeyCode1")
@@ -6281,6 +6440,7 @@ impl Default for UserKekKeyCode10 {
         UserKekKeyCode10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UserKekKeyCode10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UserKekKeyCode10")
@@ -6318,6 +6478,7 @@ impl Default for UserKekKeyCode11 {
         UserKekKeyCode11(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UserKekKeyCode11 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UserKekKeyCode11")
@@ -6355,6 +6516,7 @@ impl Default for UserKekKeyCode12 {
         UserKekKeyCode12(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UserKekKeyCode12 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UserKekKeyCode12")
@@ -6392,6 +6554,7 @@ impl Default for UserKekKeyCode13 {
         UserKekKeyCode13(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UserKekKeyCode13 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UserKekKeyCode13")
@@ -6429,6 +6592,7 @@ impl Default for UserKekKeyCode2 {
         UserKekKeyCode2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UserKekKeyCode2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UserKekKeyCode2")
@@ -6466,6 +6630,7 @@ impl Default for UserKekKeyCode3 {
         UserKekKeyCode3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UserKekKeyCode3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UserKekKeyCode3")
@@ -6503,6 +6668,7 @@ impl Default for UserKekKeyCode4 {
         UserKekKeyCode4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UserKekKeyCode4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UserKekKeyCode4")
@@ -6540,6 +6706,7 @@ impl Default for UserKekKeyCode5 {
         UserKekKeyCode5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UserKekKeyCode5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UserKekKeyCode5")
@@ -6577,6 +6744,7 @@ impl Default for UserKekKeyCode6 {
         UserKekKeyCode6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UserKekKeyCode6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UserKekKeyCode6")
@@ -6614,6 +6782,7 @@ impl Default for UserKekKeyCode7 {
         UserKekKeyCode7(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UserKekKeyCode7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UserKekKeyCode7")
@@ -6651,6 +6820,7 @@ impl Default for UserKekKeyCode8 {
         UserKekKeyCode8(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UserKekKeyCode8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UserKekKeyCode8")
@@ -6688,6 +6858,7 @@ impl Default for UserKekKeyCode9 {
         UserKekKeyCode9(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UserKekKeyCode9 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UserKekKeyCode9")

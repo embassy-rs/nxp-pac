@@ -1,4 +1,4 @@
-#[doc = "RTC."]
+#[doc = "Real Time Clock."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rtc0 {
     ptr: *mut u8,

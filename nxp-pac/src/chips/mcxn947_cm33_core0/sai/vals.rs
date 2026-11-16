@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Chmod {
     #[doc = "TDM mode."]
@@ -44,6 +45,7 @@ impl Feature {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Feature {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -74,7 +76,8 @@ impl From<Feature> for u16 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Frsz {
     #[doc = "1."]
@@ -97,8 +100,10 @@ pub enum Frsz {
     NWords8 = 0x08,
     #[doc = "(FRSZ value + 1)."]
     NWords9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
+    #[doc = "(FRSZ value + 1)."]
+    NWords10 = 0x0a,
+    #[doc = "(FRSZ value + 1)."]
+    NWords11 = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
@@ -112,12 +117,18 @@ pub enum Frsz {
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
     _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
-    _RESERVED_1e = 0x1e,
+    #[doc = "(FRSZ value + 1)."]
+    NWords25 = 0x19,
+    #[doc = "(FRSZ value + 1)."]
+    NWords26 = 0x1a,
+    #[doc = "(FRSZ value + 1)."]
+    NWords27 = 0x1b,
+    #[doc = "(FRSZ value + 1)."]
+    NWords28 = 0x1c,
+    #[doc = "(FRSZ value + 1)."]
+    NWords29 = 0x1d,
+    #[doc = "(FRSZ value + 1)."]
+    NWords30 = 0x1e,
     #[doc = "32."]
     MaxWords = 0x1f,
 }
@@ -144,7 +155,8 @@ impl From<Frsz> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum McrMsel {
     #[doc = "Controller clock (MCLK) option 1."]
@@ -178,7 +190,8 @@ impl From<McrMsel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Moe {
     #[doc = "Input."]
@@ -209,7 +222,8 @@ impl From<Moe> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rcr2Bcd {
     #[doc = "Generated externally in Target mode."]
@@ -240,7 +254,8 @@ impl From<Rcr2Bcd> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rcr2Bci {
     #[doc = "Disable."]
@@ -271,7 +286,8 @@ impl From<Rcr2Bci> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rcr2Bcp {
     #[doc = "Active high."]
@@ -302,7 +318,8 @@ impl From<Rcr2Bcp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rcr2Bcs {
     #[doc = "Use the normal bit clock source."]
@@ -333,7 +350,8 @@ impl From<Rcr2Bcs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rcr2Msel {
     #[doc = "Bus clock."]
@@ -368,7 +386,8 @@ impl From<Rcr2Msel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rcr2Sync {
     #[doc = "Asynchronous mode."]
@@ -403,7 +422,8 @@ impl From<Rcr2Sync> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rcr4Fcomb {
     #[doc = "Disable."]
@@ -438,7 +458,8 @@ impl From<Rcr4Fcomb> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rcr4Fpack {
     #[doc = "Disable."]
@@ -472,7 +493,8 @@ impl From<Rcr4Fpack> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rcr4Fsd {
     #[doc = "Generated externally in Target mode."]
@@ -503,7 +525,8 @@ impl From<Rcr4Fsd> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rcr4Fsp {
     #[doc = "Active high."]
@@ -534,7 +557,8 @@ impl From<Rcr4Fsp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rcr5Fbt {
     #[doc = "0."]
@@ -557,7 +581,8 @@ pub enum Rcr5Fbt {
     Index8 = 0x08,
     #[doc = "FBT value."]
     Index9 = 0x09,
-    _RESERVED_a = 0x0a,
+    #[doc = "FBT value."]
+    Index10 = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
@@ -572,12 +597,18 @@ pub enum Rcr5Fbt {
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
     _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
-    _RESERVED_1e = 0x1e,
+    #[doc = "FBT value."]
+    Index25 = 0x19,
+    #[doc = "FBT value."]
+    Index26 = 0x1a,
+    #[doc = "FBT value."]
+    Index27 = 0x1b,
+    #[doc = "FBT value."]
+    Index28 = 0x1c,
+    #[doc = "FBT value."]
+    Index29 = 0x1d,
+    #[doc = "FBT value."]
+    Index30 = 0x1e,
     #[doc = "31."]
     Index31 = 0x1f,
 }
@@ -604,7 +635,8 @@ impl From<Rcr5Fbt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rcr5W0w {
     #[doc = "1."]
@@ -627,8 +659,10 @@ pub enum Rcr5W0w {
     ThreeThirtyone8 = 0x08,
     #[doc = "(W0W value + 1)."]
     ThreeThirtyone9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
+    #[doc = "(W0W value + 1)."]
+    ThreeThirtyone10 = 0x0a,
+    #[doc = "(W0W value + 1)."]
+    ThreeThirtyone11 = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
@@ -642,12 +676,18 @@ pub enum Rcr5W0w {
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
     _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
-    _RESERVED_1e = 0x1e,
+    #[doc = "(W0W value + 1)."]
+    ThreeThirtyone25 = 0x19,
+    #[doc = "(W0W value + 1)."]
+    ThreeThirtyone26 = 0x1a,
+    #[doc = "(W0W value + 1)."]
+    ThreeThirtyone27 = 0x1b,
+    #[doc = "(W0W value + 1)."]
+    ThreeThirtyone28 = 0x1c,
+    #[doc = "(W0W value + 1)."]
+    ThreeThirtyone29 = 0x1d,
+    #[doc = "(W0W value + 1)."]
+    ThreeThirtyone30 = 0x1e,
     #[doc = "32."]
     Max = 0x1f,
 }
@@ -674,7 +714,8 @@ impl From<Rcr5W0w> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rcr5Wnw {
     _RESERVED_0 = 0x0,
@@ -704,20 +745,28 @@ pub enum Rcr5Wnw {
     TenThirtyone15 = 0x0f,
     #[doc = "(WNW value + 1)."]
     TenThirtyone16 = 0x10,
-    _RESERVED_11 = 0x11,
-    _RESERVED_12 = 0x12,
+    #[doc = "(WNW value + 1)."]
+    TenThirtyone17 = 0x11,
+    #[doc = "(WNW value + 1)."]
+    TenThirtyone18 = 0x12,
     _RESERVED_13 = 0x13,
     _RESERVED_14 = 0x14,
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
     _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
-    _RESERVED_1e = 0x1e,
+    #[doc = "(WNW value + 1)."]
+    TenThirtyone25 = 0x19,
+    #[doc = "(WNW value + 1)."]
+    TenThirtyone26 = 0x1a,
+    #[doc = "(WNW value + 1)."]
+    TenThirtyone27 = 0x1b,
+    #[doc = "(WNW value + 1)."]
+    TenThirtyone28 = 0x1c,
+    #[doc = "(WNW value + 1)."]
+    TenThirtyone29 = 0x1d,
+    #[doc = "(WNW value + 1)."]
+    TenThirtyone30 = 0x1e,
     #[doc = "32."]
     Max = 0x1f,
 }
@@ -744,7 +793,8 @@ impl From<Rcr5Wnw> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RcsrFr {
     #[doc = "No effect."]
@@ -775,7 +825,8 @@ impl From<RcsrFr> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RcsrFrf {
     #[doc = "Watermark not reached."]
@@ -806,7 +857,8 @@ impl From<RcsrFrf> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RcsrSr {
     #[doc = "No effect."]
@@ -837,7 +889,8 @@ impl From<RcsrSr> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rfw {
     #[doc = "1."]
@@ -896,6 +949,7 @@ impl Rwm {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Rwm {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -928,7 +982,8 @@ impl From<Rwm> for u32 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sywd {
     #[doc = "1."]
@@ -951,8 +1006,10 @@ pub enum Sywd {
     NClocks8 = 0x08,
     #[doc = "(SYWD value + 1)."]
     NClocks9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
+    #[doc = "(SYWD value + 1)."]
+    NClocks10 = 0x0a,
+    #[doc = "(SYWD value + 1)."]
+    NClocks11 = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
@@ -966,12 +1023,18 @@ pub enum Sywd {
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
     _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
-    _RESERVED_1e = 0x1e,
+    #[doc = "(SYWD value + 1)."]
+    NClocks25 = 0x19,
+    #[doc = "(SYWD value + 1)."]
+    NClocks26 = 0x1a,
+    #[doc = "(SYWD value + 1)."]
+    NClocks27 = 0x1b,
+    #[doc = "(SYWD value + 1)."]
+    NClocks28 = 0x1c,
+    #[doc = "(SYWD value + 1)."]
+    NClocks29 = 0x1d,
+    #[doc = "(SYWD value + 1)."]
+    NClocks30 = 0x1e,
     #[doc = "32."]
     ThirtytwoClocks = 0x1f,
 }
@@ -998,7 +1061,8 @@ impl From<Sywd> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcr2Bcd {
     #[doc = "Generate externally in Target mode."]
@@ -1029,7 +1093,8 @@ impl From<Tcr2Bcd> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcr2Bcp {
     #[doc = "Active high."]
@@ -1060,7 +1125,8 @@ impl From<Tcr2Bcp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcr2Msel {
     #[doc = "Bus clock."]
@@ -1095,7 +1161,8 @@ impl From<Tcr2Msel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcr2Sync {
     #[doc = "Asynchronous mode."]
@@ -1130,7 +1197,8 @@ impl From<Tcr2Sync> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcr4Fcomb {
     #[doc = "Disable."]
@@ -1165,7 +1233,8 @@ impl From<Tcr4Fcomb> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcr4Fpack {
     #[doc = "Disable FIFO packing."]
@@ -1199,7 +1268,8 @@ impl From<Tcr4Fpack> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcr4Fsd {
     #[doc = "Generated externally in Target mode."]
@@ -1230,7 +1300,8 @@ impl From<Tcr4Fsd> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcr4Fsp {
     #[doc = "Active high."]
@@ -1261,7 +1332,8 @@ impl From<Tcr4Fsp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcr4Ondem {
     #[doc = "Generated continuously."]
@@ -1292,7 +1364,8 @@ impl From<Tcr4Ondem> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcr5Fbt {
     #[doc = "0."]
@@ -1315,7 +1388,8 @@ pub enum Tcr5Fbt {
     Index8 = 0x08,
     #[doc = "FBT."]
     Index9 = 0x09,
-    _RESERVED_a = 0x0a,
+    #[doc = "FBT."]
+    Index10 = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
@@ -1330,12 +1404,18 @@ pub enum Tcr5Fbt {
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
     _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
-    _RESERVED_1e = 0x1e,
+    #[doc = "FBT."]
+    Index25 = 0x19,
+    #[doc = "FBT."]
+    Index26 = 0x1a,
+    #[doc = "FBT."]
+    Index27 = 0x1b,
+    #[doc = "FBT."]
+    Index28 = 0x1c,
+    #[doc = "FBT."]
+    Index29 = 0x1d,
+    #[doc = "FBT."]
+    Index30 = 0x1e,
     #[doc = "31."]
     Index31 = 0x1f,
 }
@@ -1362,7 +1442,8 @@ impl From<Tcr5Fbt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcr5W0w {
     _RESERVED_0 = 0x0,
@@ -1392,20 +1473,28 @@ pub enum Tcr5W0w {
     TenThirtyone15 = 0x0f,
     #[doc = "(W0W value + 1)."]
     TenThirtyone16 = 0x10,
-    _RESERVED_11 = 0x11,
-    _RESERVED_12 = 0x12,
+    #[doc = "(W0W value + 1)."]
+    TenThirtyone17 = 0x11,
+    #[doc = "(W0W value + 1)."]
+    TenThirtyone18 = 0x12,
     _RESERVED_13 = 0x13,
     _RESERVED_14 = 0x14,
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
     _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
-    _RESERVED_1e = 0x1e,
+    #[doc = "(W0W value + 1)."]
+    TenThirtyone25 = 0x19,
+    #[doc = "(W0W value + 1)."]
+    TenThirtyone26 = 0x1a,
+    #[doc = "(W0W value + 1)."]
+    TenThirtyone27 = 0x1b,
+    #[doc = "(W0W value + 1)."]
+    TenThirtyone28 = 0x1c,
+    #[doc = "(W0W value + 1)."]
+    TenThirtyone29 = 0x1d,
+    #[doc = "(W0W value + 1)."]
+    TenThirtyone30 = 0x1e,
     #[doc = "32."]
     Max = 0x1f,
 }
@@ -1432,7 +1521,8 @@ impl From<Tcr5W0w> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcr5Wnw {
     _RESERVED_0 = 0x0,
@@ -1462,20 +1552,28 @@ pub enum Tcr5Wnw {
     TenThirtyone15 = 0x0f,
     #[doc = "(WNW value + 1)."]
     TenThirtyone16 = 0x10,
-    _RESERVED_11 = 0x11,
-    _RESERVED_12 = 0x12,
+    #[doc = "(WNW value + 1)."]
+    TenThirtyone17 = 0x11,
+    #[doc = "(WNW value + 1)."]
+    TenThirtyone18 = 0x12,
     _RESERVED_13 = 0x13,
     _RESERVED_14 = 0x14,
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
     _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
-    _RESERVED_1e = 0x1e,
+    #[doc = "(WNW value + 1)."]
+    TenThirtyone25 = 0x19,
+    #[doc = "(WNW value + 1)."]
+    TenThirtyone26 = 0x1a,
+    #[doc = "(WNW value + 1)."]
+    TenThirtyone27 = 0x1b,
+    #[doc = "(WNW value + 1)."]
+    TenThirtyone28 = 0x1c,
+    #[doc = "(WNW value + 1)."]
+    TenThirtyone29 = 0x1d,
+    #[doc = "(WNW value + 1)."]
+    TenThirtyone30 = 0x1e,
     #[doc = "32."]
     Max = 0x1f,
 }
@@ -1502,7 +1600,8 @@ impl From<Tcr5Wnw> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TcsrFr {
     #[doc = "No effect."]
@@ -1533,7 +1632,8 @@ impl From<TcsrFr> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tfw {
     #[doc = "1."]
@@ -1592,6 +1692,7 @@ impl Twm {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Twm {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -1624,7 +1725,8 @@ impl From<Twm> for u32 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wdfl {
     #[doc = "Word 1."]
@@ -1647,8 +1749,10 @@ pub enum Wdfl {
     WordN8 = 0x08,
     #[doc = "Word (WDFL value + 1)."]
     WordN9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
+    #[doc = "Word (WDFL value + 1)."]
+    WordN10 = 0x0a,
+    #[doc = "Word (WDFL value + 1)."]
+    WordN11 = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
@@ -1662,12 +1766,18 @@ pub enum Wdfl {
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
     _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
-    _RESERVED_1e = 0x1e,
+    #[doc = "Word (WDFL value + 1)."]
+    WordN25 = 0x19,
+    #[doc = "Word (WDFL value + 1)."]
+    WordN26 = 0x1a,
+    #[doc = "Word (WDFL value + 1)."]
+    WordN27 = 0x1b,
+    #[doc = "Word (WDFL value + 1)."]
+    WordN28 = 0x1c,
+    #[doc = "Word (WDFL value + 1)."]
+    WordN29 = 0x1d,
+    #[doc = "Word (WDFL value + 1)."]
+    WordN30 = 0x1e,
     #[doc = "Word 32."]
     WordMax = 0x1f,
 }
