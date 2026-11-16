@@ -183,7 +183,8 @@ pub fn write_device(
         out,
         "pac.rs",
         quote! {
-            #[derive(Copy, Clone, Debug, PartialEq, Eq)]
+            #[derive(Copy, Clone, PartialEq, Eq)]
+            #[cfg_attr(feature = "debug", derive(Debug))]
             #[cfg_attr(feature = "defmt", derive(defmt::Format))]
             pub enum Interrupt { #(#interrupts),* }
             unsafe impl cortex_m::interrupt::InterruptNumber for Interrupt {
