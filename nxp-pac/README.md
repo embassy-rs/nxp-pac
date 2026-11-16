@@ -16,8 +16,20 @@ This crate will (hopefully) be used for [`embassy-nxp`](https://github.com/embas
 ## Cloning
 
 Select exactly one chip feature, for example `mcxa266`, `mcxa287`, or `mcxn235`.
-The `pac` feature is enabled by default; `metadata`, `rt`, and `defmt` retain their
-existing roles. Metadata-only host builds are supported with default features
+The `pac` feature is enabled by default. `metadata`, `rt`, and `defmt` are opt-in;
+neither the defaults nor chip-selection features enable `defmt`. Enable it
+explicitly for `defmt::Format` implementations on register and enum types:
+
+```toml
+nxp-pac = { version = "0.1.0", features = ["mcxn556", "defmt"] }
+```
+
+Omit `"defmt"` when that formatting support is not needed to reduce compiler
+memory use. Cargo features are additive: another dependency enabling this crate's
+`defmt` feature also enables it for the shared build. Standard `core::fmt::Debug`
+implementations do not require `defmt`.
+
+Metadata-only host builds are supported with default features
 disabled. Building a MetaPAC does not require a vendor SVD checkout, external
 formatter, or generator executable.
 
