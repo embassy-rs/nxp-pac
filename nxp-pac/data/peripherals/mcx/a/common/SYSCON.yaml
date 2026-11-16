@@ -27,16 +27,6 @@ enum/DeviceTypePkg:
     description: LQFP.
     value: 6
   only_in: ^(MCXA(144|145|146|154|155|156|173|174|175|176|185|186|255|256|265|266|286|287|343|344|345|346|355|356|365|366|456|457|536|537|556|557|566|567|577))$
-enum/DeviceTypeSec:
-  bit_size: 1
-  variants:
-  - name: NonSec
-    description: Non Secure.
-    value: 0
-  - name: Sec
-    description: Secure.
-    value: 1
-  only_in: ^(MCXA(144|145|146|154|155|156|173|174|175|176|185|186|255|256|265|266|286|287|343|344|345|346|355|356|365|366|456|457|536|537|556|557|566|567|577))$
 enum/FlashSize:
   bit_size: 4
   variants:
@@ -68,46 +58,6 @@ enum/FlashSize:
     description: 2MB.
     value: 8
   only_in: ^(MCXA(144|145|146|154|155|156|173|174|175|176|185|186|255|256|265|266|286|287|343|344|345|346|355|356|365|366|456|457|536|537|556|557|566|567|577))$
-enum/IfrEraseDis0:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Enable IFR sector erase.
-    value: 0
-  - name: Disable
-    description: Disable IFR sector erase, write one lock until a system reset.
-    value: 1
-  only_in: ^(MCXA(173|174|175|176|185|186|255|256|265|266|343|344|345|346|355|356|365|366))$
-enum/Interleave:
-  bit_size: 1
-  variants:
-  - name: Normal
-    description: RAM access is consecutive.
-    value: 0
-  - name: Interleave
-    description: RAM access is interleaved. This setting is need for PKC L0 memory access.
-    value: 1
-  only_in: ^(MCXA(175|176|185|186|255|256|265|266|286|287|365|366|456|457|536|537|556|557|566|567|577))$
-enum/Locknsmpu:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Unlock these registers. privileged access to Nonsecure MPU memory regions is allowed.
-    value: 0
-  - name: Disable
-    description: Disable writes to the MPU_CTRL_NS, MPU_RNR_NS, MPU_RBAR_NS, MPU_RLAR_NS, MPU_RBAR_A_NSn and MPU_RLAR_A_NSn. All writes to the registers are ignored.
-    value: 1
-  only_in: ^(MCXA(173|174|175|176|185|186|255|256|265|266|286|287|343|344|345|346|355|356|365|366|456|457|536|537|556|557|566|567|577))$
-enum/MassEraseDis:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Enables mass erase.
-    value: 0
-  - name: Disable
-    description: Disables mass erase, write one lock until a system reset.
-    value: 1
-  only_in: ^(MCXA(173|174|175|176|185|186|255|256|265|266|343|344|345|346|355|356|365|366))$
 enum/Pkc:
   bit_size: 2
   variants:
@@ -118,16 +68,6 @@ enum/Pkc:
     description: 'RAMX0: same alias space as CPU0_SBUS.'
     value: 1
   only_in: ^(MCXA(175|176|185|186|255|256|265|266|365|366))$
-enum/ProtlvlLock:
-  bit_size: 1
-  variants:
-  - name: Lock0
-    description: This register is not locked and can be altered.
-    value: 0
-  - name: Lock1
-    description: This register is locked and cannot be altered until a system reset.
-    value: 1
-  only_in: ^(MCXA(144|145|146|154|155|156|173|174|175|176|185|186|255|256|265|266|286|287|343|344|345|346|355|356|365|366|456|457|536|537|556|557|566|567|577))$
 enum/RamSize:
   bit_size: 4
   variants:
@@ -228,16 +168,6 @@ enum/SmartDmaI:
     description: 'RAMX0: same alias space as CPU0_SBUS.'
     value: 1
   only_in: ^(MCXA(173|174|175|176|185|186|255|256|265|266|286|287|343|344|345|346|355|356|365|366|456|457|536|537|556|557|566|567|577))$
-enum/SramXenLock:
-  bit_size: 1
-  variants:
-  - name: Lock0
-    description: This register is not locked and can be altered.
-    value: 0
-  - name: Lock1
-    description: This register is locked and cannot be altered.
-    value: 1
-  only_in: ^(MCXA(132|133|142|143|144|145|146|152|153|154|155|156|173|174|175|176|185|186|255|256|265|266|343|344|345|346|355|356|365|366))$
 enum/Usb0:
   bit_size: 2
   variants:
@@ -345,36 +275,31 @@ fieldset/BusclkdivA17:
     bit_offset: 0
     bit_size: 8
   - name: reset
-    description: Resets the divider counter.
+    description: "Resets the divider counter.\n\nRaw bit values: false (0) = Released: Divider is not reset.; true (1) = Asserted: Divider is reset."
     bit_offset: 29
     bit_size: 1
-    enum: BusclkdivReset
   - name: halt
-    description: Halts the divider counter.
+    description: "Halts the divider counter.\n\nRaw bit values: false (0) = Run: Divider clock is running.; true (1) = Halt: Divider clock is stopped."
     bit_offset: 30
     bit_size: 1
-    enum: BusclkdivHalt
   - name: unstab
-    description: Divider status flag.
+    description: "Divider status flag.\n\nRaw bit values: false (0) = Stable: Divider clock is stable.; true (1) = Ongoing: Clock frequency is not stable."
     bit_offset: 31
     bit_size: 1
-    enum: AhbclkdivUnstab
   only_in: ^(MCXA(173|174|343|344|345|346|355|356|365|366))$
 fieldset/Clkunlock:
   fields:
   - name: unlock
-    description: Controls clock configuration registers access (for example, SLOWCLKDIV, BUSCLKDIV, AHBCLKDIV, FROHFDIV, FROLFDIV, PLLxCLKDIV, MRCC_xxx_CLKDIV, MRCC_xxx_CLKSEL, MRCC_GLB_xxx).
+    description: "Controls clock configuration registers access (for example, SLOWCLKDIV, BUSCLKDIV, AHBCLKDIV, FROHFDIV, FROLFDIV, PLLxCLKDIV, MRCC_xxx_CLKDIV, MRCC_xxx_CLKSEL, MRCC_GLB_xxx).\n\nRaw bit values: false (0) = Enable: Updates are allowed to all clock configuration registers.; true (1) = Freeze: Freezes all clock configuration registers update."
     bit_offset: 0
     bit_size: 1
-    enum: Unlock
   only_in: ^(MCXA(173|174|175|176|185|186|255|256|265|266|286|287|343|344|345|346|355|356|365|366|456|457|536|537|556|557|566|567|577))$
 fieldset/ClkunlockA1:
   fields:
   - name: unlock
-    description: Controls clock configuration registers access (for example, MRCC_xxx_CLKDIV, MRCC_xxx_CLKSEL, MRCC_GLB_xxx).
+    description: "Controls clock configuration registers access (for example, MRCC_xxx_CLKDIV, MRCC_xxx_CLKSEL, MRCC_GLB_xxx).\n\nRaw bit values: false (0) = Enable: Updates are allowed to all clock configuration registers.; true (1) = Freeze: Freezes all clock configuration registers update."
     bit_offset: 0
     bit_size: 1
-    enum: Unlock
   only_in: ^(MCXA(132|133|142|143|144|145|146|152|153|154|155|156))$
 fieldset/Ctimerglobalstarten:
   fields:
@@ -487,10 +412,9 @@ fieldset/DeviceType:
     bit_offset: 0
     bit_size: 16
   - name: device_type_sec
-    description: Indicates the device type.
+    description: "Indicates the device type.\n\nRaw bit values: false (0) = NonSec: Non Secure.; true (1) = Sec: Secure."
     bit_offset: 16
     bit_size: 1
-    enum: DeviceTypeSec
   - name: device_type_pkg
     description: Indicates the device's package type.
     bit_offset: 20
@@ -509,10 +433,9 @@ fieldset/DeviceTypeA17:
     bit_offset: 0
     bit_size: 16
   - name: device_type_sec
-    description: Indicates the device type.
+    description: "Indicates the device type.\n\nRaw bit values: false (0) = NonSec: Non Secure.; true (1) = Sec: Secure."
     bit_offset: 16
     bit_size: 1
-    enum: DeviceTypeSec
   - name: device_type_pkg
     description: Indicates the device's package type.
     bit_offset: 20
@@ -531,20 +454,17 @@ fieldset/Frohfdiv:
     bit_offset: 0
     bit_size: 8
   - name: reset
-    description: Resets the divider counter.
+    description: "Resets the divider counter.\n\nRaw bit values: false (0) = Released: Divider is not reset.; true (1) = Asserted: Divider is reset."
     bit_offset: 29
     bit_size: 1
-    enum: BusclkdivReset
   - name: halt
-    description: Halts the divider counter.
+    description: "Halts the divider counter.\n\nRaw bit values: false (0) = Run: Divider clock is running.; true (1) = Halt: Divider clock is stopped."
     bit_offset: 30
     bit_size: 1
-    enum: BusclkdivHalt
   - name: unstab
-    description: Divider status flag.
+    description: "Divider status flag.\n\nRaw bit values: false (0) = Stable: Divider clock is stable.; true (1) = Ongoing: Clock frequency is not stable."
     bit_offset: 31
     bit_size: 1
-    enum: AhbclkdivUnstab
   only_in: ^(MCXA(173|174|343|344|345|346|355|356|365|366))$
 fieldset/JtagIdA17:
   reset_value: 119967787
@@ -565,20 +485,17 @@ fieldset/JtagIdA3:
 fieldset/LpcacCtrl:
   fields:
   - name: dis_lpcac
-    description: Disables/enables the cache function.
+    description: "Disables/enables the cache function.\n\nRaw bit values: false (0) = Enable: Enabled.; true (1) = Disable: Disabled."
     bit_offset: 0
     bit_size: 1
-    enum: DisLpcac
   - name: clr_lpcac
-    description: Clears the cache function.
+    description: "Clears the cache function.\n\nRaw bit values: false (0) = Enable: Unclears the cache.; true (1) = Disable: Clears the cache."
     bit_offset: 1
     bit_size: 1
-    enum: ClrLpcac
   - name: frc_no_alloc
-    description: Forces no allocation.
+    description: "Forces no allocation.\n\nRaw bit values: false (0) = Enable: Forces allocation.; true (1) = Disable: Forces no allocation."
     bit_offset: 2
     bit_size: 1
-    enum: FrcNoAlloc
   - name: dis_lpcac_wtbf
     description: Disable LPCAC Write Through Buffer.
     bit_offset: 4
@@ -600,20 +517,17 @@ fieldset/LpcacCtrlA1Small:
   reset_value: 49
   fields:
   - name: dis_lpcac
-    description: Disables/enables the cache function.
+    description: "Disables/enables the cache function.\n\nRaw bit values: false (0) = Enable: Enabled.; true (1) = Disable: Disabled."
     bit_offset: 0
     bit_size: 1
-    enum: DisLpcac
   - name: clr_lpcac
-    description: Clears the cache function.
+    description: "Clears the cache function.\n\nRaw bit values: false (0) = Enable: Unclears the cache.; true (1) = Disable: Clears the cache."
     bit_offset: 1
     bit_size: 1
-    enum: ClrLpcac
   - name: frc_no_alloc
-    description: Forces no allocation.
+    description: "Forces no allocation.\n\nRaw bit values: false (0) = Enable: Forces allocation.; true (1) = Disable: Forces no allocation."
     bit_offset: 2
     bit_size: 1
-    enum: FrcNoAlloc
   - name: dis_lpcac_wtbf
     description: Disable LPCAC Write Through Buffer.
     bit_offset: 4
@@ -634,30 +548,25 @@ fieldset/LpcacCtrlA1Small:
 fieldset/Msfcfg:
   fields:
   - name: ifr_erase_dis0
-    description: user IFR sector 0 erase control.
+    description: "user IFR sector 0 erase control.\n\nRaw bit values: false (0) = Enable: Enable IFR sector erase.; true (1) = Disable: Disable IFR sector erase, write one lock until a system reset."
     bit_offset: 0
     bit_size: 1
-    enum: IfrEraseDis0
   - name: ifr_erase_dis1
-    description: user IFR sector 1 erase control.
+    description: "user IFR sector 1 erase control.\n\nRaw bit values: false (0) = Enable: Enable IFR sector erase.; true (1) = Disable: Disable IFR sector erase, write one lock until a system reset."
     bit_offset: 1
     bit_size: 1
-    enum: IfrEraseDis0
   - name: ifr_erase_dis2
-    description: user IFR sector 2 erase control.
+    description: "user IFR sector 2 erase control.\n\nRaw bit values: false (0) = Enable: Enable IFR sector erase.; true (1) = Disable: Disable IFR sector erase, write one lock until a system reset."
     bit_offset: 2
     bit_size: 1
-    enum: IfrEraseDis0
   - name: ifr_erase_dis3
-    description: user IFR sector 3 erase control.
+    description: "user IFR sector 3 erase control.\n\nRaw bit values: false (0) = Enable: Enable IFR sector erase.; true (1) = Disable: Disable IFR sector erase, write one lock until a system reset."
     bit_offset: 3
     bit_size: 1
-    enum: IfrEraseDis0
   - name: mass_erase_dis
-    description: Mass erase control.
+    description: "Mass erase control.\n\nRaw bit values: false (0) = Enable: Enables mass erase.; true (1) = Disable: Disables mass erase, write one lock until a system reset."
     bit_offset: 8
     bit_size: 1
-    enum: MassEraseDis
   only_in: ^(MCXA(173|174|175|176|185|186|255|256|265|266|343|344|345|346|355|356|365|366))$
 fieldset/Nmisrc:
   fields:
@@ -672,59 +581,49 @@ fieldset/Nmisrc:
 fieldset/NvmCtrl:
   fields:
   - name: dis_flash_spec
-    description: Flash speculation control.
+    description: "Flash speculation control.\n\nRaw bit values: false (0) = Enable: Enables flash speculation.; true (1) = Disable: Disables flash speculation."
     bit_offset: 0
     bit_size: 1
-    enum: DisFlashSpec
   - name: dis_data_spec
-    description: Flash data speculation control.
+    description: "Flash data speculation control.\n\nRaw bit values: false (0) = Enable: Enables data speculation.; true (1) = Disable: Disables data speculation."
     bit_offset: 1
     bit_size: 1
-    enum: DisDataSpec
   - name: flash_stall_en
-    description: FLASH stall on busy control.
+    description: "FLASH stall on busy control.\n\nRaw bit values: false (0) = Enable: No stall on FLASH busy.; true (1) = Disable: Stall on FLASH busy."
     bit_offset: 10
     bit_size: 1
-    enum: FlashStallEn
   - name: dis_mbecc_err_inst
-    description: Bus error on data multi-bit ECC error control Set this field to 0 if you want to enable flash speculative.
+    description: "Bus error on data multi-bit ECC error control Set this field to 0 if you want to enable flash speculative.\n\nRaw bit values: false (0) = Enable: Enables bus error on multi-bit ECC error for instruction.; true (1) = Disable: Disables bus error on multi-bit ECC error for instruction."
     bit_offset: 16
     bit_size: 1
-    enum: DisMbeccErrInst
   - name: dis_mbecc_err_data
-    description: Bus error on data multi-bit ECC error control Set this field to 0 if you want to enable flash speculative.
+    description: "Bus error on data multi-bit ECC error control Set this field to 0 if you want to enable flash speculative.\n\nRaw bit values: false (0) = Enable: Enables bus error on multi-bit ECC error for data.; true (1) = Disable: Disables bus error on multi-bit ECC error for data."
     bit_offset: 17
     bit_size: 1
-    enum: DisMbeccErrData
   only_in: ^(MCXA(144|145|146|154|155|156|175|176|185|186|255|256|265|266))$
 fieldset/NvmCtrlA1Small:
   reset_value: 132096
   fields:
   - name: dis_flash_spec
-    description: Flash speculation control.
+    description: "Flash speculation control.\n\nRaw bit values: false (0) = Enable: Enables flash speculation.; true (1) = Disable: Disables flash speculation."
     bit_offset: 0
     bit_size: 1
-    enum: DisFlashSpec
   - name: dis_data_spec
-    description: Flash data speculation control.
+    description: "Flash data speculation control.\n\nRaw bit values: false (0) = Enable: Enables data speculation.; true (1) = Disable: Disables data speculation."
     bit_offset: 1
     bit_size: 1
-    enum: DisDataSpec
   - name: flash_stall_en
-    description: FLASH stall on busy control.
+    description: "FLASH stall on busy control.\n\nRaw bit values: false (0) = Enable: No stall on FLASH busy.; true (1) = Disable: Stall on FLASH busy."
     bit_offset: 10
     bit_size: 1
-    enum: FlashStallEn
   - name: dis_mbecc_err_inst
-    description: Bus error on data multi-bit ECC error control Set this field to 0 if you want to enable flash speculative.
+    description: "Bus error on data multi-bit ECC error control Set this field to 0 if you want to enable flash speculative.\n\nRaw bit values: false (0) = Enable: Enables bus error on multi-bit ECC error for instruction.; true (1) = Disable: Disables bus error on multi-bit ECC error for instruction."
     bit_offset: 16
     bit_size: 1
-    enum: DisMbeccErrInst
   - name: dis_mbecc_err_data
-    description: Bus error on data multi-bit ECC error control Set this field to 0 if you want to enable flash speculative.
+    description: "Bus error on data multi-bit ECC error control Set this field to 0 if you want to enable flash speculative.\n\nRaw bit values: false (0) = Enable: Enables bus error on multi-bit ECC error for data.; true (1) = Disable: Disables bus error on multi-bit ECC error for data."
     bit_offset: 17
     bit_size: 1
-    enum: DisMbeccErrData
   only_in: ^(MCXA(132|133|142|143|152|153|173|174|343|344|345|346|355|356|365|366))$
 fieldset/ProtlvlA5:
   fields:
@@ -733,15 +632,13 @@ fieldset/ProtlvlA5:
     bit_offset: 0
     bit_size: 1
   - name: locknsmpu
-    description: Control write access to Nonsecure MPU memory regions.
+    description: "Control write access to Nonsecure MPU memory regions.\n\nRaw bit values: false (0) = Enable: Unlock these registers. privileged access to Nonsecure MPU memory regions is allowed.; true (1) = Disable: Disable writes to the MPU_CTRL_NS, MPU_RNR_NS, MPU_RBAR_NS, MPU_RLAR_NS, MPU_RBAR_A_NSn and MPU_RLAR_A_NSn. All writes to the registers are ignored."
     bit_offset: 16
     bit_size: 1
-    enum: Locknsmpu
   - name: lock
-    description: This 1-bit field provides a mechanism to limit writes to this register to protect its contents. Once set, this bit remains asserted until a system reset.
+    description: "This 1-bit field provides a mechanism to limit writes to this register to protect its contents. Once set, this bit remains asserted until a system reset.\n\nRaw bit values: false (0) = Lock0: This register is not locked and can be altered.; true (1) = Lock1: This register is locked and cannot be altered until a system reset."
     bit_offset: 31
     bit_size: 1
-    enum: ProtlvlLock
   only_in: ^(MCXA(173|174|286|287|343|344|345|346|355|356|365|366|456|457|536|537|556|557|566|567|577))$
 fieldset/Pwm0subctl:
   fields:
@@ -808,10 +705,9 @@ fieldset/RamCtrlA17:
 fieldset/RamInterleave:
   fields:
   - name: interleave
-    description: Controls RAM access for RAMA1 and RAMA2.
+    description: "Controls RAM access for RAMA1 and RAMA2.\n\nRaw bit values: false (0) = Normal: RAM access is consecutive.; true (1) = Interleave: RAM access is interleaved. This setting is need for PKC L0 memory access."
     bit_offset: 0
     bit_size: 1
-    enum: Interleave
   only_in: ^(MCXA(175|176|185|186|255|256|265|266|365|366))$
 fieldset/RemapA17:
   fields:
@@ -836,10 +732,9 @@ fieldset/RemapA17:
     bit_size: 2
     enum: RemapDma0
   - name: lock
-    description: This 1-bit field provides a mechanism to limit writes to this register to protect its contents. Once set, this bit remains asserted until a system reset.
+    description: "This 1-bit field provides a mechanism to limit writes to this register to protect its contents. Once set, this bit remains asserted until a system reset.\n\nRaw bit values: false (0) = Lock0: This register is not locked and can be altered.; true (1) = Lock1: This register is locked and cannot be altered until a system reset."
     bit_offset: 31
     bit_size: 1
-    enum: ProtlvlLock
   only_in: ^(MCXA(173|174|343|344|345|346|355|356))$
 fieldset/RopState:
   fields:
@@ -856,20 +751,17 @@ fieldset/SlowclkdivA17:
     bit_offset: 0
     bit_size: 8
   - name: reset
-    description: Resets the divider counter.
+    description: "Resets the divider counter.\n\nRaw bit values: false (0) = Released: Divider is not reset.; true (1) = Asserted: Divider is reset."
     bit_offset: 29
     bit_size: 1
-    enum: BusclkdivReset
   - name: halt
-    description: Halts the divider counter.
+    description: "Halts the divider counter.\n\nRaw bit values: false (0) = Run: Divider clock is running.; true (1) = Halt: Divider clock is stopped."
     bit_offset: 30
     bit_size: 1
-    enum: BusclkdivHalt
   - name: unstab
-    description: Divider status flag.
+    description: "Divider status flag.\n\nRaw bit values: false (0) = Stable: Divider clock is stable.; true (1) = Ongoing: Clock frequency is not stable."
     bit_offset: 31
     bit_size: 1
-    enum: AhbclkdivUnstab
   only_in: ^(MCXA(173|174|343|344|345|346|355|356|365|366))$
 fieldset/SmartDmaintA17:
   fields:
@@ -1072,10 +964,9 @@ fieldset/SramXenA17:
     bit_offset: 5
     bit_size: 1
   - name: lock
-    description: This 1-bit field provides a mechanism to limit writes to this register (and SRAM_XEN_DP) to protect its contents. Once set, this bit remains asserted until a system reset.
+    description: "This 1-bit field provides a mechanism to limit writes to this register (and SRAM_XEN_DP) to protect its contents. Once set, this bit remains asserted until a system reset.\n\nRaw bit values: false (0) = Lock0: This register is not locked and can be altered.; true (1) = Lock1: This register is locked and cannot be altered."
     bit_offset: 31
     bit_size: 1
-    enum: SramXenLock
   only_in: ^(MCXA(173|174|343|344|345|346|355|356|365|366))$
 fieldset/SramXenDp:
   fields:

@@ -450,50 +450,41 @@ fieldset/FlexspiAlphaFieldsetIndia:
   description: AHB Bus Control.
   fields:
   - name: aparen
-    description: AHB Parallel Mode Enable.
+    description: "AHB Parallel Mode Enable.\n\nRaw bit values: false (0) = Individual: Flash is accessed in Individual mode.; true (1) = Enable: Flash is accessed in Parallel mode."
     bit_offset: 0
     bit_size: 1
-    enum: FlexspiAlphaEnumGolfAlpha
   - name: clrahbrxbuf
-    description: Clear AHB Receive Buffer.
+    description: "Clear AHB Receive Buffer.\n\nRaw bit values: false (0) = Val0: No impact.; true (1) = Val1: Enable clear operation."
     bit_offset: 1
     bit_size: 1
-    enum: Clrahbrxbuf2
   - name: clrahbtxbuf
-    description: Clear AHB Transmit Buffer.
+    description: "Clear AHB Transmit Buffer.\n\nRaw bit values: false (0) = Val0: No impact.; true (1) = Val1: Enable clear operation."
     bit_offset: 2
     bit_size: 1
-    enum: Clrahbrxbuf2
   - name: cachableen
-    description: Cacheable Read Access Enable.
+    description: "Cacheable Read Access Enable.\n\nRaw bit values: false (0) = Val0: Disabled. When an AHB bus cacheable read access occurs, FlexSPI does not check whether it hit the AHB transmit buffer.; true (1) = Val1: Enabled. When an AHB bus cacheable read access occurs, FlexSPI first checks whether the access hit the AHB transmit buffer."
     bit_offset: 3
     bit_size: 1
-    enum: FlexspiAlphaEnumPapaAlpha
   - name: bufferableen
-    description: Bufferable Write Access Enable.
+    description: "Bufferable Write Access Enable.\n\nRaw bit values: false (0) = Val0: Disabled. For all AHB write accesses (bufferable or nonbufferable), FlexSPI returns AHB Bus Ready after transmitting all data and finishing command.; true (1) = Val1: Enabled. For AHB bufferable write access, FlexSPI returns AHB Bus Ready when the arbitrator grants the AHB command. FlexSPI does not wait for the AHB command to finish."
     bit_offset: 4
     bit_size: 1
-    enum: FlexspiAlphaEnumOscarAlpha
   - name: prefetchen
-    description: AHB Read Prefetch Enable.
+    description: "AHB Read Prefetch Enable.\n\nRaw bit values: false (0) = Value0: Disable.; true (1) = Value1: Enable."
     bit_offset: 5
     bit_size: 1
-    enum: Dllen2
   - name: readaddropt
-    description: AHB Read Address Option.
+    description: "AHB Read Address Option.\n\nRaw bit values: false (0) = Val0: AHB read burst start address alignment is limited when flash memory is accessed in parallel mode or flash is word-addressable.; true (1) = Val1: AHB read burst start address alignment is not limited. FlexSPI fetches more data than the AHB burst requires for address alignment."
     bit_offset: 6
     bit_size: 1
-    enum: FlexspiAlphaEnumGolfDelta
   - name: resumedisable
-    description: AHB Read Resume Disable.
+    description: "AHB Read Resume Disable.\n\nRaw bit values: false (0) = Val0: Suspended AHB read prefetch resumes when AHB is IDLE.; true (1) = Val1: Suspended AHB read prefetch does not resume once aborted,."
     bit_offset: 7
     bit_size: 1
-    enum: FlexspiAlphaEnumJulietDelta
   - name: readszalign
-    description: AHB Read Size Alignment.
+    description: "AHB Read Size Alignment.\n\nRaw bit values: false (0) = Val0: Register settings such as PREFETCH_EN determine AHB read size.; true (1) = Val1: AHB read size to up size to 8 bytes aligned, no prefetching."
     bit_offset: 10
     bit_size: 1
-    enum: FlexspiAlphaEnumHotelDelta
   - name: alignment
     description: AHB Boundary Alignment.
     bit_offset: 20
@@ -519,23 +510,20 @@ fieldset/Ahbrxbuf0cr:
     bit_offset: 24
     bit_size: 3
   - name: regionen
-    description: AHB Receive Buffer Address Region Enable.
+    description: "AHB Receive Buffer Address Region Enable.\n\nRaw bit values: false (0) = Value0: Disabled. The buffer hit is based on the value of MSTRID only.; true (1) = Value1: Enabled. The buffer hit is based on the value of MSTRID and the address within AHBBUFREGIONSTARTn and AHBREGIONENDn."
     bit_offset: 30
     bit_size: 1
-    enum: Regionen
   - name: prefetchen
-    description: AHB Read Prefetch Enable.
+    description: "AHB Read Prefetch Enable.\n\nRaw bit values: false (0) = Value0: Disabled.; true (1) = Value1: Enabled when is enabled."
     bit_offset: 31
     bit_size: 1
-    enum: Prefetchen
 fieldset/FlexspiAlphaFieldsetRomeo:
   description: AHB Suspend Status.
   fields:
   - name: active
-    description: Active AHB Read Prefetch Suspended.
+    description: "Active AHB Read Prefetch Suspended.\n\nRaw bit values: false (0) = Val0: No suspended AHB read prefetch command.; true (1) = Val1: An AHB read prefetch command sequence has been suspended."
     bit_offset: 0
     bit_size: 1
-    enum: FlexspiAlphaEnumAlpha
   - name: bufid
     description: AHB Receive Buffer ID for Suspended Command Sequence.
     bit_offset: 1
@@ -548,24 +536,21 @@ fieldset/FlexspiAlphaFieldsetSierra:
   description: DLL Control 0.
   fields:
   - name: dllen
-    description: DLL Calibration Enable.
+    description: "DLL Calibration Enable.\n\nRaw bit values: false (0) = Value0: Disable.; true (1) = Value1: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Dllen2
   - name: dllreset
-    description: DLL reset.
+    description: "DLL reset.\n\nRaw bit values: false (0) = Value0: No function.; true (1) = Value1: Force DLL reset."
     bit_offset: 1
     bit_size: 1
-    enum: FlexspiAlphaEnumCharlieBravo
   - name: slvdlytarget
     description: Target Delay Line.
     bit_offset: 3
     bit_size: 4
   - name: ovrden
-    description: Target Clock Delay Line Override Value Enable.
+    description: "Target Clock Delay Line Override Value Enable.\n\nRaw bit values: false (0) = Value0: Disable.; true (1) = Value1: Enable."
     bit_offset: 8
     bit_size: 1
-    enum: Dllen2
   - name: ovrdval
     description: Target Clock Delay Line Override Value.
     bit_offset: 9
@@ -589,20 +574,17 @@ fieldset/Flsha1cr:
     bit_offset: 0
     bit_size: 23
   - name: addrshift
-    description: AHB Address Shift Function control.
+    description: "AHB Address Shift Function control.\n\nRaw bit values: false (0) = Disable: Disabled.; true (1) = Enable: Enabled."
     bit_offset: 29
     bit_size: 1
-    enum: Addrshift
   - name: splitwren
-    description: AHB Write Access Split Function Enable.
+    description: "AHB Write Access Split Function Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 30
     bit_size: 1
-    enum: Splitrden
   - name: splitrden
-    description: AHB Read Access Split Function Enable.
+    description: "AHB Read Access Split Function Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 31
     bit_size: 1
-    enum: Splitrden
 fieldset/FlexspiAlphaFieldsetYankee:
   description: Flash Control 1.
   fields:
@@ -615,19 +597,17 @@ fieldset/FlexspiAlphaFieldsetYankee:
     bit_offset: 5
     bit_size: 5
   - name: wa
-    description: Word-Addressable.
+    description: "Word-Addressable.\n\nRaw bit values: false (0) = Value0: Byte-addressable.; true (1) = Value1: Word-addressable."
     bit_offset: 10
     bit_size: 1
-    enum: FlexspiAlphaEnumDeltaEcho
   - name: cas
     description: Column Address Size.
     bit_offset: 11
     bit_size: 4
   - name: csintervalunit
-    description: Chip Select Interval Unit.
+    description: "Chip Select Interval Unit.\n\nRaw bit values: false (0) = Val0: 1 serial clock cycle.; true (1) = Val1: 256 serial clock cycles."
     bit_offset: 15
     bit_size: 1
-    enum: FlexspiAlphaEnumYankeeAlpha
   - name: csinterval
     description: Chip Select Interval.
     bit_offset: 16
@@ -668,20 +648,17 @@ fieldset/FlexspiAlphaFieldsetAlphaAlpha:
   description: Flash Control 4.
   fields:
   - name: wmopt1
-    description: Write Mask Option 1.
+    description: "Write Mask Option 1.\n\nRaw bit values: false (0) = Disable: When writing to an external device, DQS pin is used as write mask. When flash memory is accessed in individual mode, AHB or IP write burst start address alignment is not limited.; true (1) = Enable: When writing to an external device, DQS pin is not used as write mask. When flash memory is accessed in individual mode, AHB or IP write burst start address alignment is limited."
     bit_offset: 0
     bit_size: 1
-    enum: FlexspiAlphaEnumGolfEcho
   - name: wmena
-    description: Write Mask Enable for Port A.
+    description: "Write Mask Enable for Port A.\n\nRaw bit values: false (0) = Val0: Disabled. When writing to external device, DQS(RWDS) pin is not driven.; true (1) = Val1: Enabled. When writing to external device, FlexSPI drives DQS(RWDS) pin as write mask output."
     bit_offset: 2
     bit_size: 1
-    enum: Wmena2
   - name: wmenb
-    description: Write Mask Enable for Port B.
+    description: "Write Mask Enable for Port B.\n\nRaw bit values: false (0) = Val0: Disabled. When writing to external device, DQS(RWDS) pin is not driven.; true (1) = Val1: Enabled. When writing to external device, FlexSPI drives DQS(RWDS) pin as write mask output."
     bit_offset: 3
     bit_size: 1
-    enum: Wmena2
 fieldset/FlexspiAlphaFieldsetBravoAlpha:
   description: HADDR REMAP END ADDR.
   fields:
@@ -700,10 +677,9 @@ fieldset/FlexspiAlphaFieldsetDeltaAlpha:
   description: HADDR REMAP Start Address.
   fields:
   - name: remapen
-    description: AHB Bus Address Remap Enable.
+    description: "AHB Bus Address Remap Enable.\n\nRaw bit values: false (0) = Val0: HADDR REMAP Disabled.; true (1) = Val1: HADDR REMAP Enabled."
     bit_offset: 0
     bit_size: 1
-    enum: FlexspiAlphaEnumIndiaDelta
   - name: addrstart
     description: HADDR Start Address.
     bit_offset: 12
@@ -712,156 +688,127 @@ fieldset/FlexspiAlphaFieldsetEchoAlpha:
   description: Interrupt Enable.
   fields:
   - name: ipcmddoneen
-    description: IP-Triggered Command Sequences Execution Finished Interrupt Enable.
+    description: "IP-Triggered Command Sequences Execution Finished Interrupt Enable.\n\nRaw bit values: false (0) = Value0: Disable interrupt or no impact.; true (1) = Value1: Enable interrupt."
     bit_offset: 0
     bit_size: 1
-    enum: Ahbbustimeouten2
   - name: ipcmdgeen
-    description: IP-Triggered Command Sequences Grant Timeout Interrupt Enable.
+    description: "IP-Triggered Command Sequences Grant Timeout Interrupt Enable.\n\nRaw bit values: false (0) = Value0: Disable interrupt or no impact.; true (1) = Value1: Enable interrupt."
     bit_offset: 1
     bit_size: 1
-    enum: Ahbbustimeouten2
   - name: ahbcmdgeen
-    description: AHB-Triggered Command Sequences Grant Timeout Interrupt Enable.
+    description: "AHB-Triggered Command Sequences Grant Timeout Interrupt Enable.\n\nRaw bit values: false (0) = Value0: Disable interrupt or no impact.; true (1) = Value1: Enable interrupt."
     bit_offset: 2
     bit_size: 1
-    enum: Ahbbustimeouten2
   - name: ipcmderren
-    description: IP-Triggered Command Sequences Error Detected Interrupt Enable.
+    description: "IP-Triggered Command Sequences Error Detected Interrupt Enable.\n\nRaw bit values: false (0) = Value0: Disable interrupt or no impact.; true (1) = Value1: Enable interrupt."
     bit_offset: 3
     bit_size: 1
-    enum: Ahbbustimeouten2
   - name: ahbcmderren
-    description: AHB-Triggered Command Sequences Error Detected Interrupt Enable.
+    description: "AHB-Triggered Command Sequences Error Detected Interrupt Enable.\n\nRaw bit values: false (0) = Value0: Disable interrupt or no impact.; true (1) = Value1: Enable interrupt."
     bit_offset: 4
     bit_size: 1
-    enum: Ahbbustimeouten2
   - name: iprxwaen
-    description: IP Receive FIFO Watermark Available Interrupt Enable.
+    description: "IP Receive FIFO Watermark Available Interrupt Enable.\n\nRaw bit values: false (0) = Value0: Disable interrupt or no impact.; true (1) = Value1: Enable interrupt."
     bit_offset: 5
     bit_size: 1
-    enum: Ahbbustimeouten2
   - name: iptxween
-    description: IP Transmit FIFO Watermark Empty Interrupt Enable.
+    description: "IP Transmit FIFO Watermark Empty Interrupt Enable.\n\nRaw bit values: false (0) = Value0: Disable interrupt or no impact.; true (1) = Value1: Enable interrupt."
     bit_offset: 6
     bit_size: 1
-    enum: Ahbbustimeouten2
   - name: datalearnfailen
-    description: Data Learning Failed Interrupt Enable.
+    description: "Data Learning Failed Interrupt Enable.\n\nRaw bit values: false (0) = Value0: Disable interrupt or no impact.; true (1) = Value1: Enable interrupt."
     bit_offset: 7
     bit_size: 1
-    enum: Ahbbustimeouten2
   - name: sckstopbyrden
-    description: SCLK Stopped By Read Interrupt Enable.
+    description: "SCLK Stopped By Read Interrupt Enable.\n\nRaw bit values: false (0) = Value0: Disable interrupt or no impact.; true (1) = Value1: Enable interrupt."
     bit_offset: 8
     bit_size: 1
-    enum: Ahbbustimeouten2
   - name: sckstopbywren
-    description: SCLK Stopped By Write Interrupt Enable.
+    description: "SCLK Stopped By Write Interrupt Enable.\n\nRaw bit values: false (0) = Value0: Disable interrupt or no impact.; true (1) = Value1: Enable interrupt."
     bit_offset: 9
     bit_size: 1
-    enum: Ahbbustimeouten2
   - name: ahbbustimeouten
-    description: AHB Bus Timeout Interrupt Enable.
+    description: "AHB Bus Timeout Interrupt Enable.\n\nRaw bit values: false (0) = Value0: Disable interrupt or no impact.; true (1) = Value1: Enable interrupt."
     bit_offset: 10
     bit_size: 1
-    enum: Ahbbustimeouten2
   - name: seqtimeouten
-    description: Sequence execution Timeout Interrupt Enable.
+    description: "Sequence execution Timeout Interrupt Enable.\n\nRaw bit values: false (0) = Value0: Disable interrupt or no impact.; true (1) = Value1: Enable interrupt."
     bit_offset: 11
     bit_size: 1
-    enum: Ahbbustimeouten2
   - name: ipcmdsecurevioen
-    description: IP Command Security Violation Interrupt Enable.
+    description: "IP Command Security Violation Interrupt Enable.\n\nRaw bit values: false (0) = Value0: Disable interrupt or no impact.; true (1) = Value1: Enable interrupt."
     bit_offset: 16
     bit_size: 1
-    enum: Ahbbustimeouten2
   - name: ahbgcmerren
-    description: AHB Read GCM Error Interrupt Enable.
+    description: "AHB Read GCM Error Interrupt Enable.\n\nRaw bit values: false (0) = Value0: Disable interrupt or no impact.; true (1) = Value1: Enable interrupt."
     bit_offset: 17
     bit_size: 1
-    enum: Ahbbustimeouten2
 fieldset/FlexspiAlphaFieldsetFoxtrotAlpha:
   description: Interrupt.
   fields:
   - name: ipcmddone
-    description: IP-Triggered Command Sequences Execution Finished.
+    description: "IP-Triggered Command Sequences Execution Finished.\n\nRaw bit values: false (0) = NoInterrupt: Interrupt condition has not occurred.; true (1) = Interrupt: Interrupt condition has occurred."
     bit_offset: 0
     bit_size: 1
-    enum: Ahbbustimeout
   - name: ipcmdge
-    description: IP-Triggered Command Sequences Grant Timeout.
+    description: "IP-Triggered Command Sequences Grant Timeout.\n\nRaw bit values: false (0) = NoInterrupt: Interrupt condition has not occurred.; true (1) = Interrupt: Interrupt condition has occurred."
     bit_offset: 1
     bit_size: 1
-    enum: Ahbbustimeout
   - name: ahbcmdge
-    description: AHB-Triggered Command Sequences Grant Timeout.
+    description: "AHB-Triggered Command Sequences Grant Timeout.\n\nRaw bit values: false (0) = NoInterrupt: Interrupt condition has not occurred.; true (1) = Interrupt: Interrupt condition has occurred."
     bit_offset: 2
     bit_size: 1
-    enum: Ahbbustimeout
   - name: ipcmderr
-    description: IP-Triggered Command Sequences Error.
+    description: "IP-Triggered Command Sequences Error.\n\nRaw bit values: false (0) = NoInterrupt: Interrupt condition has not occurred.; true (1) = Interrupt: Interrupt condition has occurred."
     bit_offset: 3
     bit_size: 1
-    enum: Ahbbustimeout
   - name: ahbcmderr
-    description: AHB-Triggered Command Sequences Error.
+    description: "AHB-Triggered Command Sequences Error.\n\nRaw bit values: false (0) = NoInterrupt: Interrupt condition has not occurred.; true (1) = Interrupt: Interrupt condition has occurred."
     bit_offset: 4
     bit_size: 1
-    enum: Ahbbustimeout
   - name: iprxwa
-    description: IP Receive FIFO Watermark Available.
+    description: "IP Receive FIFO Watermark Available.\n\nRaw bit values: false (0) = NoInterrupt: Interrupt condition has not occurred.; true (1) = Interrupt: Interrupt condition has occurred."
     bit_offset: 5
     bit_size: 1
-    enum: Ahbbustimeout
   - name: iptxwe
-    description: IP Transmit FIFO Watermark Empty.
+    description: "IP Transmit FIFO Watermark Empty.\n\nRaw bit values: false (0) = NoInterrupt: Interrupt condition has not occurred.; true (1) = Interrupt: Interrupt condition has occurred."
     bit_offset: 6
     bit_size: 1
-    enum: Ahbbustimeout
   - name: datalearnfail
-    description: Data Learning Failed.
+    description: "Data Learning Failed.\n\nRaw bit values: false (0) = NoInterrupt: Interrupt condition has not occurred.; true (1) = Interrupt: Interrupt condition has occurred."
     bit_offset: 7
     bit_size: 1
-    enum: Ahbbustimeout
   - name: sckstopbyrd
-    description: SCLK Stopped Due To Full Receive FIFO.
+    description: "SCLK Stopped Due To Full Receive FIFO.\n\nRaw bit values: false (0) = NoInterrupt: Interrupt condition has not occurred.; true (1) = Interrupt: Interrupt condition has occurred."
     bit_offset: 8
     bit_size: 1
-    enum: Ahbbustimeout
   - name: sckstopbywr
-    description: SCLK Stopped Due To Empty Transmit FIFO.
+    description: "SCLK Stopped Due To Empty Transmit FIFO.\n\nRaw bit values: false (0) = NoInterrupt: Interrupt condition has not occurred.; true (1) = Interrupt: Interrupt condition has occurred."
     bit_offset: 9
     bit_size: 1
-    enum: Ahbbustimeout
   - name: ahbbustimeout
-    description: AHB Bus Timeout.
+    description: "AHB Bus Timeout.\n\nRaw bit values: false (0) = NoInterrupt: Interrupt condition has not occurred.; true (1) = Interrupt: Interrupt condition has occurred."
     bit_offset: 10
     bit_size: 1
-    enum: Ahbbustimeout
   - name: seqtimeout
-    description: Sequence Execution Timeout.
+    description: "Sequence Execution Timeout.\n\nRaw bit values: false (0) = NoInterrupt: Interrupt condition has not occurred.; true (1) = Interrupt: Interrupt condition has occurred."
     bit_offset: 11
     bit_size: 1
-    enum: Ahbbustimeout
   - name: ipcmdsecurevio
-    description: IP Command Security Violation.
+    description: "IP Command Security Violation.\n\nRaw bit values: false (0) = NoInterrupt: Interrupt condition has not occurred.; true (1) = Interrupt: Interrupt condition has occurred."
     bit_offset: 16
     bit_size: 1
-    enum: Ahbbustimeout
   - name: ahbgcmerr
-    description: AHB Read GCM Error.
+    description: "AHB Read GCM Error.\n\nRaw bit values: false (0) = NoInterrupt: Interrupt condition has not occurred.; true (1) = Interrupt: Interrupt condition has occurred."
     bit_offset: 17
     bit_size: 1
-    enum: Ahbbustimeout
 fieldset/FlexspiAlphaFieldsetGolfAlpha:
   description: IP Command.
   fields:
   - name: trg
-    description: Command Trigger.
+    description: "Command Trigger.\n\nRaw bit values: false (0) = Value0: No action.; true (1) = Value1: Start the IP command that the IPCR0 and IPCR1 registers define."
     bit_offset: 0
     bit_size: 1
-    enum: FlexspiAlphaEnumAlphaEcho
 fieldset/FlexspiAlphaFieldsetHotelAlpha:
   description: IP Control 0.
   fields:
@@ -885,81 +832,67 @@ fieldset/FlexspiAlphaFieldsetIndiaAlpha:
     bit_offset: 24
     bit_size: 3
   - name: iparen
-    description: Parallel Mode Enable for IP Commands.
+    description: "Parallel Mode Enable for IP Commands.\n\nRaw bit values: false (0) = Disable: Disabled. Flash memory is accessed in Individual mode.; true (1) = Enable: Enabled. Flash memory is accessed in Parallel mode."
     bit_offset: 31
     bit_size: 1
-    enum: FlexspiAlphaEnumRomeoBravo
 fieldset/FlexspiAlphaFieldsetJulietAlpha:
   description: IP Control 2.
   fields:
   - name: ipblkahbreq
-    description: IP Command Blocking AHB Command Request Enable.
+    description: "IP Command Blocking AHB Command Request Enable.\n\nRaw bit values: false (0) = Value0: IP commands do not block AHB command requests.; true (1) = Value1: IP commands block AHB command requests."
     bit_offset: 0
     bit_size: 1
-    enum: FlexspiAlphaEnumTangoBravo
   - name: ipblkahback
-    description: IP Command Blocking AHB Command Acknowledgment Enable.
+    description: "IP Command Blocking AHB Command Acknowledgment Enable.\n\nRaw bit values: false (0) = Value0: IP commands do not block AHB command acknowledgment.; true (1) = Value1: IP commands block AHB command acknowledgment."
     bit_offset: 1
     bit_size: 1
-    enum: FlexspiAlphaEnumSierraBravo
   - name: ipblkallahb
-    description: IP Command Blocking All AHB Command Enable.
+    description: "IP Command Blocking All AHB Command Enable.\n\nRaw bit values: false (0) = Value0: IP commands only block AHB commands that affect the IPED region.; true (1) = Value1: IP commands block all AHB commands."
     bit_offset: 2
     bit_size: 1
-    enum: FlexspiAlphaEnumUniformBravo
 fieldset/FlexspiAlphaFieldsetKiloAlpha:
   description: IPED Function Control.
   fields:
   - name: config
-    description: IPED Mode Select.
+    description: "IPED Mode Select.\n\nRaw bit values: false (0) = Val0: Fully pipelined.; true (1) = Val1: Not fully pipelined."
     bit_offset: 0
     bit_size: 1
-    enum: FlexspiAlphaEnumXrayAlpha
   - name: iped_en
-    description: IPED Encryption and Decryption Enable.
+    description: "IPED Encryption and Decryption Enable.\n\nRaw bit values: false (0) = Val0: Disable.; true (1) = Val1: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: Ahbgcmrd
   - name: ipwr_en
-    description: IP Write IPED CTR Mode Encryption Enable.
+    description: "IP Write IPED CTR Mode Encryption Enable.\n\nRaw bit values: false (0) = Val0: Disable.; true (1) = Val1: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: Ahbgcmrd
   - name: ahbwr_en
-    description: AHB Write IPED CTR Mode Encryption Enable.
+    description: "AHB Write IPED CTR Mode Encryption Enable.\n\nRaw bit values: false (0) = Val0: Disable.; true (1) = Val1: Enable."
     bit_offset: 3
     bit_size: 1
-    enum: Ahbgcmrd
   - name: ahbrd_en
-    description: AHB Read IPED CTR Mode Decryption Enable.
+    description: "AHB Read IPED CTR Mode Decryption Enable.\n\nRaw bit values: false (0) = Val0: Disable.; true (1) = Val1: Enable."
     bit_offset: 4
     bit_size: 1
-    enum: Ahbgcmrd
   - name: ipgcmwr
-    description: IP Write GCM Mode Enable.
+    description: "IP Write GCM Mode Enable.\n\nRaw bit values: false (0) = Val0: Disabled.; true (1) = Val1: Enabled."
     bit_offset: 6
     bit_size: 1
-    enum: FlexspiAlphaEnumVictorCharlie
   - name: ahgcmwr
-    description: AHB Write IPED GCM Mode Encryption Enable.
+    description: "AHB Write IPED GCM Mode Encryption Enable.\n\nRaw bit values: false (0) = Val0: Disable.; true (1) = Val1: Enable."
     bit_offset: 7
     bit_size: 1
-    enum: Ahbgcmrd
   - name: ahbgcmrd
-    description: AHB Read IPED GCM Mode Decryption Enable.
+    description: "AHB Read IPED GCM Mode Decryption Enable.\n\nRaw bit values: false (0) = Val0: Disable.; true (1) = Val1: Enable."
     bit_offset: 8
     bit_size: 1
-    enum: Ahbgcmrd
   - name: iped_protect
-    description: IPED Protection.
+    description: "IPED Protection.\n\nRaw bit values: false (0) = Val0: No restrictions.; true (1) = Val1: Only privileged controllers can write IPED registers."
     bit_offset: 9
     bit_size: 1
-    enum: FlexspiAlphaEnumFoxtrotCharlie
   - name: iped_swreset
-    description: Abort Current Decryption or Encryption.
+    description: "Abort Current Decryption or Encryption.\n\nRaw bit values: false (0) = Val0: No function.; true (1) = Val1: Aborts current decryption or encryption and waits for the next start operation."
     bit_offset: 10
     bit_size: 1
-    enum: FlexspiAlphaEnumGolfCharlie
 fieldset/FlexspiAlphaFieldsetLimaAlpha:
   description: IPED Context0 Additional Authenticated Data0.
   fields:
@@ -1076,15 +1009,13 @@ fieldset/Ipedctx0start2:
   description: Start Address of Region.
   fields:
   - name: gcm
-    description: GCM Mode Enable.
+    description: "GCM Mode Enable.\n\nRaw bit values: false (0) = Value0: Disabled. CTR mode is used.; true (1) = Value1: Enabled. GCM mode is used."
     bit_offset: 0
     bit_size: 1
-    enum: Gcm
   - name: ahbbuserror_dis
-    description: AHB Bus Error Disable.
+    description: "AHB Bus Error Disable.\n\nRaw bit values: false (0) = Value0: AHB bus errors enabled.; true (1) = Value1: AHB bus errors disabled."
     bit_offset: 1
     bit_size: 1
-    enum: AhbbuserrorDis
   - name: start_address
     description: Start Address.
     bit_offset: 8
@@ -1246,15 +1177,13 @@ fieldset/FlexspiAlphaFieldsetDeltaCharlie:
   description: IP Receive FIFO Control.
   fields:
   - name: clriprxf
-    description: Clear IP Receive FIFO.
+    description: "Clear IP Receive FIFO.\n\nRaw bit values: false (0) = Value0: No function.; true (1) = Value1: A clock cycle pulse clears all valid data entries in IP receive FIFO."
     bit_offset: 0
     bit_size: 1
-    enum: FlexspiAlphaEnumTangoAlpha
   - name: rxdmaen
-    description: IP Receive FIFO Reading by DMA Enable.
+    description: "IP Receive FIFO Reading by DMA Enable.\n\nRaw bit values: false (0) = Val0: Disabled. The processor reads the FIFO.; true (1) = Val1: Enabled. DMA reads the FIFO."
     bit_offset: 1
     bit_size: 1
-    enum: FlexspiAlphaEnumNovemberDelta
   - name: rxwmrk
     description: IP Receive FIFO Watermark Level.
     bit_offset: 2
@@ -1288,15 +1217,13 @@ fieldset/FlexspiAlphaFieldsetJulietCharlie:
   description: IP Transmit FIFO Control.
   fields:
   - name: clriptxf
-    description: Clear IP Transmit FIFO.
+    description: "Clear IP Transmit FIFO.\n\nRaw bit values: false (0) = Value0: No function.; true (1) = Value1: A clock cycle pulse clears all valid data entries in the IP transmit FIFO."
     bit_offset: 0
     bit_size: 1
-    enum: FlexspiAlphaEnumUniformAlpha
   - name: txdmaen
-    description: Transmit FIFO DMA Enable.
+    description: "Transmit FIFO DMA Enable.\n\nRaw bit values: false (0) = Val0: Processor.; true (1) = Val1: DMA."
     bit_offset: 1
     bit_size: 1
-    enum: FlexspiAlphaEnumBravoEcho
   - name: txwmrk
     description: Transmit Watermark Level.
     bit_offset: 2
@@ -1343,20 +1270,17 @@ fieldset/FlexspiAlphaFieldsetMikeCharlie:
   description: LUT Control.
   fields:
   - name: lock
-    description: Lock LUT.
+    description: "Lock LUT.\n\nRaw bit values: false (0) = Value0: LUT is unlocked (LUTCR[UNLOCK] must be 1).; true (1) = Value1: LUT is locked and cannot be written."
     bit_offset: 0
     bit_size: 1
-    enum: FlexspiAlphaEnumCharlieDelta
   - name: unlock
-    description: Unlock LUT.
+    description: "Unlock LUT.\n\nRaw bit values: false (0) = Value0: LUT is locked (LUTCR[LOCK] must be 1).; true (1) = Value1: LUT is unlocked and can be written."
     bit_offset: 1
     bit_size: 1
-    enum: FlexspiAlphaEnumCharlieEcho
   - name: protect
-    description: LUT Protection.
+    description: "LUT Protection.\n\nRaw bit values: false (0) = Value0: Not protected. All IPS controllers can access LUTCR and LUT memory.; true (1) = Value1: Protected. Only secure IPS controller can change the value of LUTCR and write to LUT memory."
     bit_offset: 2
     bit_size: 1
-    enum: FlexspiAlphaEnumFoxtrotDelta
 fieldset/FlexspiAlphaFieldsetNovemberCharlie:
   description: LUT Key.
   fields:
@@ -1368,15 +1292,13 @@ fieldset/FlexspiAlphaFieldsetOscarCharlie:
   description: Module Control 0.
   fields:
   - name: swreset
-    description: Software Reset.
+    description: "Software Reset.\n\nRaw bit values: false (0) = Val0: No impact.; true (1) = Val1: Software reset."
     bit_offset: 0
     bit_size: 1
-    enum: FlexspiAlphaEnumZuluDelta
   - name: mdis
-    description: Module Disable.
+    description: "Module Disable.\n\nRaw bit values: false (0) = Val0: No impact.; true (1) = Val1: Module disable."
     bit_offset: 1
     bit_size: 1
-    enum: FlexspiAlphaEnumDeltaDelta
   - name: rxclksrc
     description: Sample Clock Source for Flash Reading.
     bit_offset: 4
@@ -1388,30 +1310,25 @@ fieldset/FlexspiAlphaFieldsetOscarCharlie:
     bit_size: 3
     enum: FlexspiAlphaEnumYankeeDelta
   - name: hsen
-    description: Half Speed Serial Flash Memory Access Enable.
+    description: "Half Speed Serial Flash Memory Access Enable.\n\nRaw bit values: false (0) = Val0: Disable.; true (1) = Val1: Enable."
     bit_offset: 11
     bit_size: 1
-    enum: Ahbgcmrd
   - name: dozeen
-    description: Doze Mode Enable.
+    description: "Doze Mode Enable.\n\nRaw bit values: false (0) = Val0: Disable.; true (1) = Val1: Enable."
     bit_offset: 12
     bit_size: 1
-    enum: Ahbgcmrd
   - name: combinationen
-    description: Combination Mode Enable.
+    description: "Combination Mode Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 13
     bit_size: 1
-    enum: Splitrden
   - name: sckfreerunen
-    description: SCLK Free-running Enable.
+    description: "SCLK Free-running Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 14
     bit_size: 1
-    enum: Splitrden
   - name: learnen
-    description: Data Learning Enable.
+    description: "Data Learning Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 15
     bit_size: 1
-    enum: Splitrden
   - name: ipgrantwait
     description: Timeout Wait Cycle for IP Command Grant.
     bit_offset: 16
@@ -1435,35 +1352,30 @@ fieldset/FlexspiAlphaFieldsetQuebecCharlie:
   description: Module Control 2.
   fields:
   - name: clrahbbufopt
-    description: Clear AHB Buffer.
+    description: "Clear AHB Buffer.\n\nRaw bit values: false (0) = Val0: Not cleared automatically.; true (1) = Val1: Cleared automatically."
     bit_offset: 11
     bit_size: 1
-    enum: FlexspiAlphaEnumQuebecAlpha
   - name: clrlearnphase
-    description: Clear Learn Phase Selection.
+    description: "Clear Learn Phase Selection.\n\nRaw bit values: false (0) = Val0: No impact.; true (1) = Val1: Reset sample clock phase selection to 0."
     bit_offset: 14
     bit_size: 1
-    enum: FlexspiAlphaEnumVictorAlpha
   - name: samedeviceen
-    description: Same Device Enable.
+    description: "Same Device Enable.\n\nRaw bit values: false (0) = IndividualParallel: In Individual mode, FLSHA1CRx and FLSHA2CRx, FLSHB1CRx and FLSHB2CRx settings are applied to Flash A1, A2, B1, B2 separately. In Parallel mode, FLSHA1CRx register setting is applied to Flash A1 and B1, FLSHA2CRx register setting is applied to Flash A2 and B2. FLSHB1CRx and FLSHB2CRx register settings are ignored.; true (1) = Enable: FLSHA1CR0, FLSHA1CR1, and FLSHA1CR2 register settings are applied to Flash A1, A2, B1, B2. FLSHA2CRx, FLSHB1CRx, and FLSHB2CRx settings are ignored."
     bit_offset: 15
     bit_size: 1
-    enum: FlexspiAlphaEnumOscarDelta
   - name: sckbdiffopt
-    description: SCLK Port B Differential Output.
+    description: "SCLK Port B Differential Output.\n\nRaw bit values: false (0) = Val1: Use B_SCLK pad as port B SCLK clock output. Port B flash memory access is available.; true (1) = Val0: Use B_SCLK pad as port A SCLK inverted clock output (Differential clock to A_SCLK). Port B flash memory access is not available."
     bit_offset: 19
     bit_size: 1
-    enum: FlexspiAlphaEnumPapaDelta
   - name: rxclksrc_b
     description: Port B Receiver Clock Source.
     bit_offset: 21
     bit_size: 2
     enum: FlexspiAlphaEnumMikeDelta
   - name: rx_clk_src_diff
-    description: Sample Clock Source Different.
+    description: "Sample Clock Source Different.\n\nRaw bit values: false (0) = Value0: Use MCR0[RXCLKSRC] for Port A and Port B. MCR2[RXCLKSRC_B] is ignored and MCR0[RXCLKSRC] selects the Sample Clock source for Flash Reading of both ports A and B.; true (1) = Value1: Use MCR0[RXCLKSRC] for Port A, and MCR2[RXCLKSRC_B] for Port B. MCR0[RXCLKSRC] selects the Sample Clock source for Flash Reading of port A (A_SCLK) and MCR2[RXCLKSRC_B] selects the Sample Clock source for Flash Reading of port B (B_SCLK)."
     bit_offset: 23
     bit_size: 1
-    enum: FlexspiAlphaEnumKiloDelta
   - name: resumewait
     description: Resume Wait Duration.
     bit_offset: 24
@@ -1479,15 +1391,13 @@ fieldset/FlexspiAlphaFieldsetSierraCharlie:
   description: Status 0.
   fields:
   - name: seqidle
-    description: SEQ_CTL State Machine Idle.
+    description: "SEQ_CTL State Machine Idle.\n\nRaw bit values: false (0) = Value0: Not idle.; true (1) = Value1: Idle."
     bit_offset: 0
     bit_size: 1
-    enum: Arbidle2
   - name: arbidle
-    description: ARB_CTL State Machine Idle.
+    description: "ARB_CTL State Machine Idle.\n\nRaw bit values: false (0) = Value0: Not idle.; true (1) = Value1: Idle."
     bit_offset: 1
     bit_size: 1
-    enum: Arbidle2
   - name: arbcmdsrc
     description: ARB Command Source.
     bit_offset: 2
@@ -1526,15 +1436,13 @@ fieldset/FlexspiAlphaFieldsetUniformCharlie:
   description: Status 2.
   fields:
   - name: aslvlock
-    description: Flash A Sample Target Delay Line Locked.
+    description: "Flash A Sample Target Delay Line Locked.\n\nRaw bit values: false (0) = Val0: Not locked.; true (1) = Val1: Locked."
     bit_offset: 0
     bit_size: 1
-    enum: Areflock2
   - name: areflock
-    description: Flash A Sample Clock Reference Delay Line Locked.
+    description: "Flash A Sample Clock Reference Delay Line Locked.\n\nRaw bit values: false (0) = Val0: Not locked.; true (1) = Val1: Locked."
     bit_offset: 1
     bit_size: 1
-    enum: Areflock2
   - name: aslvsel
     description: Flash A Sample Clock Target Delay Line Delay Cell Number.
     bit_offset: 2
@@ -1544,15 +1452,13 @@ fieldset/FlexspiAlphaFieldsetUniformCharlie:
     bit_offset: 8
     bit_size: 6
   - name: bslvlock
-    description: Flash B Sample Target Reference Delay Line Locked.
+    description: "Flash B Sample Target Reference Delay Line Locked.\n\nRaw bit values: false (0) = Val0: Not locked.; true (1) = Val1: Locked."
     bit_offset: 16
     bit_size: 1
-    enum: Areflock2
   - name: breflock
-    description: Flash B Sample Clock Reference Delay Line Locked.
+    description: "Flash B Sample Clock Reference Delay Line Locked.\n\nRaw bit values: false (0) = Val0: Not locked.; true (1) = Val1: Locked."
     bit_offset: 17
     bit_size: 1
-    enum: Areflock2
   - name: bslvsel
     description: Flash B Sample Clock Target Delay Line Delay Cell Number.
     bit_offset: 18
@@ -1568,15 +1474,6 @@ fieldset/FlexspiAlphaFieldsetVictorCharlie:
     description: Transmit Data.
     bit_offset: 0
     bit_size: 32
-enum/FlexspiAlphaEnumAlpha:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: No suspended AHB read prefetch command.
-    value: 0
-  - name: Val1
-    description: An AHB read prefetch command sequence has been suspended.
-    value: 1
 enum/FlexspiAlphaEnumEcho:
   bit_size: 4
   variants:
@@ -1598,60 +1495,6 @@ enum/FlexspiAlphaEnumEcho:
   - name: Val6
     description: Sequence execution timeout.
     value: 14
-enum/Ahbbustimeout:
-  bit_size: 1
-  variants:
-  - name: Interrupt
-    description: Interrupt condition has occurred.
-    value: 1
-  - name: NoInterrupt
-    description: Interrupt condition has not occurred.
-    value: 0
-enum/Dllen2:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disable.
-    value: 0
-  - name: Value1
-    description: Enable.
-    value: 1
-enum/Ahbbustimeouten2:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disable interrupt or no impact.
-    value: 0
-  - name: Value1
-    description: Enable interrupt.
-    value: 1
-enum/Ahbgcmrd:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: Disable.
-    value: 0
-  - name: Val1
-    description: Enable.
-    value: 1
-enum/Regionen:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disabled. The buffer hit is based on the value of MSTRID only.
-    value: 0
-  - name: Value1
-    description: Enabled. The buffer hit is based on the value of MSTRID and the address within AHBBUFREGIONSTARTn and AHBREGIONENDn.
-    value: 1
-enum/Prefetchen:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disabled.
-    value: 0
-  - name: Value1
-    description: Enabled when is enabled.
-    value: 1
 enum/FlexspiAlphaEnumFoxtrotAlpha:
   bit_size: 2
   variants:
@@ -1667,15 +1510,6 @@ enum/FlexspiAlphaEnumFoxtrotAlpha:
   - name: Bit3
     description: 256 bytes.
     value: 3
-enum/FlexspiAlphaEnumGolfAlpha:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Flash is accessed in Parallel mode.
-    value: 1
-  - name: Individual
-    description: Flash is accessed in Individual mode.
-    value: 0
 enum/FlexspiAlphaEnumHotelAlpha:
   bit_size: 2
   variants:
@@ -1691,24 +1525,6 @@ enum/FlexspiAlphaEnumHotelAlpha:
   - name: Val3
     description: Trigger source is a suspended command that has resumed.
     value: 3
-enum/Arbidle2:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Not idle.
-    value: 0
-  - name: Value1
-    description: Idle.
-    value: 1
-enum/Areflock2:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: Not locked.
-    value: 0
-  - name: Val1
-    description: Locked.
-    value: 1
 enum/FlexspiAlphaEnumLimaAlpha:
   bit_size: 3
   variants:
@@ -1736,150 +1552,6 @@ enum/FlexspiAlphaEnumLimaAlpha:
   - name: Val7
     description: '32768.'
     value: 7
-enum/FlexspiAlphaEnumOscarAlpha:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: Disabled. For all AHB write accesses (bufferable or nonbufferable), FlexSPI returns AHB Bus Ready after transmitting all data and finishing command.
-    value: 0
-  - name: Val1
-    description: Enabled. For AHB bufferable write access, FlexSPI returns AHB Bus Ready when the arbitrator grants the AHB command. FlexSPI does not wait for the AHB command to finish.
-    value: 1
-enum/FlexspiAlphaEnumPapaAlpha:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: Disabled. When an AHB bus cacheable read access occurs, FlexSPI does not check whether it hit the AHB transmit buffer.
-    value: 0
-  - name: Val1
-    description: Enabled. When an AHB bus cacheable read access occurs, FlexSPI first checks whether the access hit the AHB transmit buffer.
-    value: 1
-enum/FlexspiAlphaEnumQuebecAlpha:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: Not cleared automatically.
-    value: 0
-  - name: Val1
-    description: Cleared automatically.
-    value: 1
-enum/Clrahbrxbuf2:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: No impact.
-    value: 0
-  - name: Val1
-    description: Enable clear operation.
-    value: 1
-enum/FlexspiAlphaEnumTangoAlpha:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: No function.
-    value: 0
-  - name: Value1
-    description: A clock cycle pulse clears all valid data entries in IP receive FIFO.
-    value: 1
-enum/FlexspiAlphaEnumUniformAlpha:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: No function.
-    value: 0
-  - name: Value1
-    description: A clock cycle pulse clears all valid data entries in the IP transmit FIFO.
-    value: 1
-enum/FlexspiAlphaEnumVictorAlpha:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: No impact.
-    value: 0
-  - name: Val1
-    description: Reset sample clock phase selection to 0.
-    value: 1
-enum/FlexspiAlphaEnumXrayAlpha:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: Fully pipelined.
-    value: 0
-  - name: Val1
-    description: Not fully pipelined.
-    value: 1
-enum/FlexspiAlphaEnumYankeeAlpha:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: 1 serial clock cycle.
-    value: 0
-  - name: Val1
-    description: 256 serial clock cycles.
-    value: 1
-enum/FlexspiAlphaEnumCharlieBravo:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: No function.
-    value: 0
-  - name: Value1
-    description: Force DLL reset.
-    value: 1
-enum/Addrshift:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/Splitrden:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FlexspiAlphaEnumRomeoBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled. Flash memory is accessed in Individual mode.
-    value: 0
-  - name: Enable
-    description: Enabled. Flash memory is accessed in Parallel mode.
-    value: 1
-enum/FlexspiAlphaEnumSierraBravo:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: IP commands do not block AHB command acknowledgment.
-    value: 0
-  - name: Value1
-    description: IP commands block AHB command acknowledgment.
-    value: 1
-enum/FlexspiAlphaEnumTangoBravo:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: IP commands do not block AHB command requests.
-    value: 0
-  - name: Value1
-    description: IP commands block AHB command requests.
-    value: 1
-enum/FlexspiAlphaEnumUniformBravo:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: IP commands only block AHB commands that affect the IPED region.
-    value: 0
-  - name: Value1
-    description: IP commands block all AHB commands.
-    value: 1
 enum/FlexspiAlphaEnumYankeeBravo:
   bit_size: 4
   variants:
@@ -1907,123 +1579,6 @@ enum/FlexspiAlphaEnumYankeeBravo:
   - name: Val8
     description: Flash boundary crossed.
     value: 15
-enum/FlexspiAlphaEnumFoxtrotCharlie:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: No restrictions.
-    value: 0
-  - name: Val1
-    description: Only privileged controllers can write IPED registers.
-    value: 1
-enum/FlexspiAlphaEnumGolfCharlie:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: No function.
-    value: 0
-  - name: Val1
-    description: Aborts current decryption or encryption and waits for the next start operation.
-    value: 1
-enum/Gcm:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disabled. CTR mode is used.
-    value: 0
-  - name: Value1
-    description: Enabled. GCM mode is used.
-    value: 1
-enum/AhbbuserrorDis:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: AHB bus errors enabled.
-    value: 0
-  - name: Value1
-    description: AHB bus errors disabled.
-    value: 1
-enum/FlexspiAlphaEnumVictorCharlie:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: Disabled.
-    value: 0
-  - name: Val1
-    description: Enabled.
-    value: 1
-enum/FlexspiAlphaEnumCharlieDelta:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: LUT is unlocked (LUTCR[UNLOCK] must be 1).
-    value: 0
-  - name: Value1
-    description: LUT is locked and cannot be written.
-    value: 1
-enum/FlexspiAlphaEnumDeltaDelta:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: No impact.
-    value: 0
-  - name: Val1
-    description: Module disable.
-    value: 1
-enum/FlexspiAlphaEnumFoxtrotDelta:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Not protected. All IPS controllers can access LUTCR and LUT memory.
-    value: 0
-  - name: Value1
-    description: Protected. Only secure IPS controller can change the value of LUTCR and write to LUT memory.
-    value: 1
-enum/FlexspiAlphaEnumGolfDelta:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: AHB read burst start address alignment is limited when flash memory is accessed in parallel mode or flash is word-addressable.
-    value: 0
-  - name: Val1
-    description: AHB read burst start address alignment is not limited. FlexSPI fetches more data than the AHB burst requires for address alignment.
-    value: 1
-enum/FlexspiAlphaEnumHotelDelta:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: Register settings such as PREFETCH_EN determine AHB read size.
-    value: 0
-  - name: Val1
-    description: AHB read size to up size to 8 bytes aligned, no prefetching.
-    value: 1
-enum/FlexspiAlphaEnumIndiaDelta:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: HADDR REMAP Disabled.
-    value: 0
-  - name: Val1
-    description: HADDR REMAP Enabled.
-    value: 1
-enum/FlexspiAlphaEnumJulietDelta:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: Suspended AHB read prefetch resumes when AHB is IDLE.
-    value: 0
-  - name: Val1
-    description: Suspended AHB read prefetch does not resume once aborted,.
-    value: 1
-enum/FlexspiAlphaEnumKiloDelta:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Use MCR0[RXCLKSRC] for Port A and Port B. MCR2[RXCLKSRC_B] is ignored and MCR0[RXCLKSRC] selects the Sample Clock source for Flash Reading of both ports A and B.
-    value: 0
-  - name: Value1
-    description: Use MCR0[RXCLKSRC] for Port A, and MCR2[RXCLKSRC_B] for Port B. MCR0[RXCLKSRC] selects the Sample Clock source for Flash Reading of port A (A_SCLK) and MCR2[RXCLKSRC_B] selects the Sample Clock source for Flash Reading of port B (B_SCLK).
-    value: 1
 enum/FlexspiAlphaEnumLimaDelta:
   bit_size: 2
   variants:
@@ -2054,33 +1609,6 @@ enum/FlexspiAlphaEnumMikeDelta:
   - name: Val3
     description: Flash-memory-provided read strobe and input from DQS pad.
     value: 3
-enum/FlexspiAlphaEnumNovemberDelta:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: Disabled. The processor reads the FIFO.
-    value: 0
-  - name: Val1
-    description: Enabled. DMA reads the FIFO.
-    value: 1
-enum/FlexspiAlphaEnumOscarDelta:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: FLSHA1CR0, FLSHA1CR1, and FLSHA1CR2 register settings are applied to Flash A1, A2, B1, B2. FLSHA2CRx, FLSHB1CRx, and FLSHB2CRx settings are ignored.
-    value: 1
-  - name: IndividualParallel
-    description: In Individual mode, FLSHA1CRx and FLSHA2CRx, FLSHB1CRx and FLSHB2CRx settings are applied to Flash A1, A2, B1, B2 separately. In Parallel mode, FLSHA1CRx register setting is applied to Flash A1 and B1, FLSHA2CRx register setting is applied to Flash A2 and B2. FLSHB1CRx and FLSHB2CRx register settings are ignored.
-    value: 0
-enum/FlexspiAlphaEnumPapaDelta:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: Use B_SCLK pad as port A SCLK inverted clock output (Differential clock to A_SCLK). Port B flash memory access is not available.
-    value: 1
-  - name: Val1
-    description: Use B_SCLK pad as port B SCLK clock output. Port B flash memory access is available.
-    value: 0
 enum/FlexspiAlphaEnumYankeeDelta:
   bit_size: 3
   variants:
@@ -2108,66 +1636,3 @@ enum/FlexspiAlphaEnumYankeeDelta:
   - name: Val7
     description: Divided by 8.
     value: 7
-enum/FlexspiAlphaEnumZuluDelta:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: No impact.
-    value: 0
-  - name: Val1
-    description: Software reset.
-    value: 1
-enum/FlexspiAlphaEnumAlphaEcho:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: No action.
-    value: 0
-  - name: Value1
-    description: Start the IP command that the IPCR0 and IPCR1 registers define.
-    value: 1
-enum/FlexspiAlphaEnumBravoEcho:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: Processor.
-    value: 0
-  - name: Val1
-    description: DMA.
-    value: 1
-enum/FlexspiAlphaEnumCharlieEcho:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: LUT is locked (LUTCR[LOCK] must be 1).
-    value: 0
-  - name: Value1
-    description: LUT is unlocked and can be written.
-    value: 1
-enum/FlexspiAlphaEnumDeltaEcho:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Byte-addressable.
-    value: 0
-  - name: Value1
-    description: Word-addressable.
-    value: 1
-enum/Wmena2:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: Disabled. When writing to external device, DQS(RWDS) pin is not driven.
-    value: 0
-  - name: Val1
-    description: Enabled. When writing to external device, FlexSPI drives DQS(RWDS) pin as write mask output.
-    value: 1
-enum/FlexspiAlphaEnumGolfEcho:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: When writing to an external device, DQS pin is used as write mask. When flash memory is accessed in individual mode, AHB or IP write burst start address alignment is not limited.
-    value: 0
-  - name: Enable
-    description: When writing to an external device, DQS pin is not used as write mask. When flash memory is accessed in individual mode, AHB or IP write burst start address alignment is limited.
-    value: 1

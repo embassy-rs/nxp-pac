@@ -70,16 +70,6 @@ fieldset/MailboxAlphaFieldsetDelta:
   description: Mutual Exclusion.
   fields:
   - name: ex
-    description: Mutual Exclusion Request.
+    description: "Mutual Exclusion Request.\n\nRaw bit values: false (0) = Unavailable: Resource unavailable.; true (1) = Available: Resource available."
     bit_offset: 0
     bit_size: 1
-    enum: MailboxAlphaEnumAlpha
-enum/MailboxAlphaEnumAlpha:
-  bit_size: 1
-  variants:
-  - name: Available
-    description: Resource available.
-    value: 1
-  - name: Unavailable
-    description: Resource unavailable.
-    value: 0

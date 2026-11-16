@@ -70,45 +70,37 @@ fieldset/FmcAlphaFieldsetCharlie:
   description: NPX Control Register.
   fields:
   - name: gee
-    description: Global Encryption Enable.
+    description: "Global Encryption Enable.\n\nRaw bit values: false (0) = EncryptionDisabled: Global encryption disabled. NPX on-the-fly encryption is disabled. Subsequent reads return 0.; true (1) = EncryptionEnabled: Global encryption enabled. NPX on-the-fly encryption is enabled if the flash access hits in a valid memory context. Subsequent reads return 1."
     bit_offset: 0
     bit_size: 1
-    enum: FmcAlphaEnumFoxtrot
   - name: gde
-    description: Global Decryption Enable.
+    description: "Global Decryption Enable.\n\nRaw bit values: false (0) = DecryptionDisabled: Global decryption disabled. NPX on-the-fly decryption is globally disabled. Subsequent reads return 0.; true (1) = DecryptionEnabled: Global decryption enabled. NPX on-the-fly decryption is globally enabled. Subsequent reads return 1."
     bit_offset: 2
     bit_size: 1
-    enum: FmcAlphaEnumEcho
   - name: glk
-    description: Global Lock Enable.
+    description: "Global Lock Enable.\n\nRaw bit values: false (0) = LockDisabled: Lock disabled. Subsequent reads return 0.; true (1) = LockEnabled: Lock enabled: cannot write to VMAPCTXn, NPXCR, or CACMSK. Subsequent reads return 1."
     bit_offset: 4
     bit_size: 1
-    enum: FmcAlphaEnumGolf
   - name: mlk
-    description: Mask Lock Enable.
+    description: "Mask Lock Enable.\n\nRaw bit values: false (0) = LockDisabled: Lock disabled. Subsequent reads return 0.; true (1) = LockEnabled: Lock enabled: cannot write to mask. Subsequent reads return 1."
     bit_offset: 6
     bit_size: 1
-    enum: FmcAlphaEnumHotel
   - name: ctx0lk
-    description: Lock Enable for Context 0.
+    description: "Lock Enable for Context 0.\n\nRaw bit values: false (0) = LockDisabled: Lock disabled: VMAPCTX0 remains read-write.; true (1) = LockEnabled: Lock enabled: cannot write to VMAPCTX0 (becomes read-only)."
     bit_offset: 8
     bit_size: 1
-    enum: FmcAlphaEnumAlpha
   - name: ctx1lk
-    description: Lock Enable for Context 1.
+    description: "Lock Enable for Context 1.\n\nRaw bit values: false (0) = LockDisabled: Lock disabled: VMAPCTX1 remains read-write.; true (1) = LockEnabled: Lock enabled: cannot write to VMAPCTX1 (becomes read-only)."
     bit_offset: 10
     bit_size: 1
-    enum: FmcAlphaEnumBravo
   - name: ctx2lk
-    description: Lock Enable for Context 2.
+    description: "Lock Enable for Context 2.\n\nRaw bit values: false (0) = LockDisabled: Lock disabled: VMAPCTX2 remains read-write.; true (1) = LockEnabled: Lock enabled: cannot write to VMAPCTX2 (becomes read-only)."
     bit_offset: 12
     bit_size: 1
-    enum: FmcAlphaEnumCharlie
   - name: ctx3lk
-    description: Lock Enable for Context 3.
+    description: "Lock Enable for Context 3.\n\nRaw bit values: false (0) = LockDisabled: Lock disabled: VMAPCTX3 remains read-write.; true (1) = LockEnabled: Lock enabled: cannot write to VMAPCTX3 (becomes read-only)."
     bit_offset: 14
     bit_size: 1
-    enum: FmcAlphaEnumDelta
 fieldset/FmcAlphaFieldsetDelta:
   description: NPX Status Register.
   fields:
@@ -118,33 +110,28 @@ fieldset/FmcAlphaFieldsetDelta:
     bit_size: 4
     enum: FmcAlphaEnumIndia
   - name: v0
-    description: Key n Valid.
+    description: "Key n Valid.\n\nRaw bit values: false (0) = KeyNotvalid: Not valid.; true (1) = KeyValid: Valid."
     bit_offset: 8
     bit_size: 1
-    enum: V
   - name: v1
-    description: Key n Valid.
+    description: "Key n Valid.\n\nRaw bit values: false (0) = KeyNotvalid: Not valid.; true (1) = KeyValid: Valid."
     bit_offset: 9
     bit_size: 1
-    enum: V
   - name: v2
-    description: Key n Valid.
+    description: "Key n Valid.\n\nRaw bit values: false (0) = KeyNotvalid: Not valid.; true (1) = KeyValid: Valid."
     bit_offset: 10
     bit_size: 1
-    enum: V
   - name: v3
-    description: Key n Valid.
+    description: "Key n Valid.\n\nRaw bit values: false (0) = KeyNotvalid: Not valid.; true (1) = KeyValid: Valid."
     bit_offset: 11
     bit_size: 1
-    enum: V
 fieldset/FmcAlphaFieldsetEcho:
   description: Data Remap.
   fields:
   - name: remaplk
-    description: Remap Lock Enable.
+    description: "Remap Lock Enable.\n\nRaw bit values: false (0) = LockDisabled: Lock disabled: can write to REMAP.; true (1) = LockEnabled: Lock enabled: cannot write to REMAP."
     bit_offset: 0
     bit_size: 1
-    enum: FmcAlphaEnumJuliet
   - name: lim
     description: LIM Remapping Address.
     bit_offset: 16
@@ -157,237 +144,133 @@ fieldset/FmcAlphaFieldsetFoxtrot:
   description: Bitmap of Valid Control for Memory Context n.
   fields:
   - name: val0
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Val
   - name: val1
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: Val
   - name: val2
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: Val
   - name: val3
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 3
     bit_size: 1
-    enum: Val
   - name: val4
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 4
     bit_size: 1
-    enum: Val
   - name: val5
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 5
     bit_size: 1
-    enum: Val
   - name: val6
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 6
     bit_size: 1
-    enum: Val
   - name: val7
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 7
     bit_size: 1
-    enum: Val
   - name: val8
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 8
     bit_size: 1
-    enum: Val
   - name: val9
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 9
     bit_size: 1
-    enum: Val
   - name: val10
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 10
     bit_size: 1
-    enum: Val
   - name: val11
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 11
     bit_size: 1
-    enum: Val
   - name: val12
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 12
     bit_size: 1
-    enum: Val
   - name: val13
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 13
     bit_size: 1
-    enum: Val
   - name: val14
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 14
     bit_size: 1
-    enum: Val
   - name: val15
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 15
     bit_size: 1
-    enum: Val
   - name: val16
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 16
     bit_size: 1
-    enum: Val
   - name: val17
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 17
     bit_size: 1
-    enum: Val
   - name: val18
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 18
     bit_size: 1
-    enum: Val
   - name: val19
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 19
     bit_size: 1
-    enum: Val
   - name: val20
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 20
     bit_size: 1
-    enum: Val
   - name: val21
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 21
     bit_size: 1
-    enum: Val
   - name: val22
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 22
     bit_size: 1
-    enum: Val
   - name: val23
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 23
     bit_size: 1
-    enum: Val
   - name: val24
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 24
     bit_size: 1
-    enum: Val
   - name: val25
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 25
     bit_size: 1
-    enum: Val
   - name: val26
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 26
     bit_size: 1
-    enum: Val
   - name: val27
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 27
     bit_size: 1
-    enum: Val
   - name: val28
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 28
     bit_size: 1
-    enum: Val
   - name: val29
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 29
     bit_size: 1
-    enum: Val
   - name: val30
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 30
     bit_size: 1
-    enum: Val
   - name: val31
-    description: Block valid enable for encryption/decryption.
+    description: "Block valid enable for encryption/decryption.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 31
     bit_size: 1
-    enum: Val
-enum/FmcAlphaEnumAlpha:
-  bit_size: 1
-  variants:
-  - name: LockDisabled
-    description: 'Lock disabled: VMAPCTX0 remains read-write.'
-    value: 0
-  - name: LockEnabled
-    description: 'Lock enabled: cannot write to VMAPCTX0 (becomes read-only).'
-    value: 1
-enum/FmcAlphaEnumBravo:
-  bit_size: 1
-  variants:
-  - name: LockDisabled
-    description: 'Lock disabled: VMAPCTX1 remains read-write.'
-    value: 0
-  - name: LockEnabled
-    description: 'Lock enabled: cannot write to VMAPCTX1 (becomes read-only).'
-    value: 1
-enum/FmcAlphaEnumCharlie:
-  bit_size: 1
-  variants:
-  - name: LockDisabled
-    description: 'Lock disabled: VMAPCTX2 remains read-write.'
-    value: 0
-  - name: LockEnabled
-    description: 'Lock enabled: cannot write to VMAPCTX2 (becomes read-only).'
-    value: 1
-enum/FmcAlphaEnumDelta:
-  bit_size: 1
-  variants:
-  - name: LockDisabled
-    description: 'Lock disabled: VMAPCTX3 remains read-write.'
-    value: 0
-  - name: LockEnabled
-    description: 'Lock enabled: cannot write to VMAPCTX3 (becomes read-only).'
-    value: 1
-enum/FmcAlphaEnumEcho:
-  bit_size: 1
-  variants:
-  - name: DecryptionDisabled
-    description: Global decryption disabled. NPX on-the-fly decryption is globally disabled. Subsequent reads return 0.
-    value: 0
-  - name: DecryptionEnabled
-    description: Global decryption enabled. NPX on-the-fly decryption is globally enabled. Subsequent reads return 1.
-    value: 1
-enum/FmcAlphaEnumFoxtrot:
-  bit_size: 1
-  variants:
-  - name: EncryptionDisabled
-    description: Global encryption disabled. NPX on-the-fly encryption is disabled. Subsequent reads return 0.
-    value: 0
-  - name: EncryptionEnabled
-    description: Global encryption enabled. NPX on-the-fly encryption is enabled if the flash access hits in a valid memory context. Subsequent reads return 1.
-    value: 1
-enum/FmcAlphaEnumGolf:
-  bit_size: 1
-  variants:
-  - name: LockDisabled
-    description: Lock disabled. Subsequent reads return 0.
-    value: 0
-  - name: LockEnabled
-    description: 'Lock enabled: cannot write to VMAPCTXn, NPXCR, or CACMSK. Subsequent reads return 1.'
-    value: 1
-enum/FmcAlphaEnumHotel:
-  bit_size: 1
-  variants:
-  - name: LockDisabled
-    description: Lock disabled. Subsequent reads return 0.
-    value: 0
-  - name: LockEnabled
-    description: 'Lock enabled: cannot write to mask. Subsequent reads return 1.'
-    value: 1
 enum/FmcAlphaEnumIndia:
   bit_size: 4
   variants:
@@ -406,30 +289,3 @@ enum/FmcAlphaEnumIndia:
   - name: ZeroCtx
     description: No (zero) implemented memory contexts.
     value: 0
-enum/FmcAlphaEnumJuliet:
-  bit_size: 1
-  variants:
-  - name: LockDisabled
-    description: 'Lock disabled: can write to REMAP.'
-    value: 0
-  - name: LockEnabled
-    description: 'Lock enabled: cannot write to REMAP.'
-    value: 1
-enum/V:
-  bit_size: 1
-  variants:
-  - name: KeyNotvalid
-    description: Not valid.
-    value: 0
-  - name: KeyValid
-    description: Valid.
-    value: 1
-enum/Val:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1

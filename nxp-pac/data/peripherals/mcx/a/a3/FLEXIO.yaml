@@ -222,20 +222,17 @@ fieldset/Ctrl:
     bit_offset: 1
     bit_size: 1
   - name: fastacc
-    description: Fast Access.
+    description: "Fast Access.\n\nRaw bit values: false (0) = Normal: Normal.; true (1) = Fast: Fast."
     bit_offset: 2
     bit_size: 1
-    enum: Fastacc
   - name: dbge
-    description: Debug Enable.
+    description: "Debug Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Emable: Enable."
     bit_offset: 30
     bit_size: 1
-    enum: Dbge
   - name: dozen
-    description: Doze Enable.
+    description: "Doze Enable.\n\nRaw bit values: false (0) = Enable: Enable.; true (1) = Disable: Disable."
     bit_offset: 31
     bit_size: 1
-    enum: Dozen
   bit_size: 32
   reset_value: 0
 fieldset/Param:
@@ -463,20 +460,17 @@ fieldset/Shiftcfg:
     bit_size: 2
     enum: Sstop
   - name: insrc
-    description: Input Source.
+    description: "Input Source.\n\nRaw bit values: false (0) = Pin: Pin.; true (1) = ShifterNplus1: Shifter n+1 output."
     bit_offset: 8
     bit_size: 1
-    enum: Insrc
   - name: latst
-    description: Late Store.
+    description: "Late Store.\n\nRaw bit values: false (0) = Preshift: Store the pre-shift register state.; true (1) = Postshift: Store the post-shift register state."
     bit_offset: 9
     bit_size: 1
-    enum: Latst
   - name: ssize
-    description: Shifter Size.
+    description: "Shifter Size.\n\nRaw bit values: false (0) = Width32: 32-bit.; true (1) = Width24: 24-bit."
     bit_offset: 12
     bit_size: 1
-    enum: Ssize
   - name: pwidth
     description: Parallel Width.
     bit_offset: 16
@@ -492,10 +486,9 @@ fieldset/Shiftctl:
     bit_size: 3
     enum: Smod
   - name: pinpol
-    description: Shifter Pin Polarity.
+    description: "Shifter Pin Polarity.\n\nRaw bit values: false (0) = ActiveHigh: Active high.; true (1) = ActiveLow: Active low."
     bit_offset: 7
     bit_size: 1
-    enum: Trgpol
   - name: pinsel
     description: Shifter Pin Select.
     bit_offset: 8
@@ -506,10 +499,9 @@ fieldset/Shiftctl:
     bit_size: 2
     enum: ShiftctlPincfg
   - name: timpol
-    description: Timer Polarity.
+    description: "Timer Polarity.\n\nRaw bit values: false (0) = Posedge: Positive edge.; true (1) = Negedge: Negative edge."
     bit_offset: 23
     bit_size: 1
-    enum: Timpol
   - name: timsel
     description: Timer Select.
     bit_offset: 24
@@ -633,15 +625,13 @@ fieldset/Timctl:
     bit_offset: 5
     bit_size: 1
   - name: pinins
-    description: Timer Pin Input Select.
+    description: "Timer Pin Input Select.\n\nRaw bit values: false (0) = Pinsel: PINSEL selects timer pin input and output.; true (1) = Pinselplus1: PINSEL + 1 selects the timer pin input; timer pin output remains selected by PINSEL."
     bit_offset: 6
     bit_size: 1
-    enum: Pinins
   - name: pinpol
-    description: Timer Pin Polarity.
+    description: "Timer Pin Polarity.\n\nRaw bit values: false (0) = ActiveHigh: Active high.; true (1) = ActiveLow: Active low."
     bit_offset: 7
     bit_size: 1
-    enum: Trgpol
   - name: pinsel
     description: Timer Pin Select.
     bit_offset: 8
@@ -652,15 +642,13 @@ fieldset/Timctl:
     bit_size: 2
     enum: TimctlPincfg
   - name: trgsrc
-    description: Trigger Source.
+    description: "Trigger Source.\n\nRaw bit values: false (0) = ExtTrig: External.; true (1) = InternalTrig: Internal."
     bit_offset: 22
     bit_size: 1
-    enum: Trgsrc
   - name: trgpol
-    description: Trigger Polarity.
+    description: "Trigger Polarity.\n\nRaw bit values: false (0) = ActiveHigh: Active high.; true (1) = ActiveLow: Active low."
     bit_offset: 23
     bit_size: 1
-    enum: Trgpol
   - name: trgsel
     description: Trigger Select.
     bit_offset: 24
@@ -732,33 +720,6 @@ fieldset/Verid:
     bit_size: 8
   bit_size: 32
   reset_value: 33619971
-enum/Dbge:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Emable
-    description: Enable.
-    value: 1
-enum/Dozen:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Enable.
-    value: 0
-  - name: Disable
-    description: Disable.
-    value: 1
-enum/Fastacc:
-  bit_size: 1
-  variants:
-  - name: Normal
-    description: Normal.
-    value: 0
-  - name: Fast
-    description: Fast.
-    value: 1
 enum/Feature:
   bit_size: 16
   variants:
@@ -774,33 +735,6 @@ enum/Feature:
   - name: StateLogicParallelPinctrl
     description: State, logic, and parallel modes, plus pin control registers supported.
     value: 3
-enum/Insrc:
-  bit_size: 1
-  variants:
-  - name: Pin
-    description: Pin.
-    value: 0
-  - name: ShifterNplus1
-    description: Shifter n+1 output.
-    value: 1
-enum/Latst:
-  bit_size: 1
-  variants:
-  - name: Preshift
-    description: Store the pre-shift register state.
-    value: 0
-  - name: Postshift
-    description: Store the post-shift register state.
-    value: 1
-enum/Pinins:
-  bit_size: 1
-  variants:
-  - name: Pinsel
-    description: PINSEL selects timer pin input and output.
-    value: 0
-  - name: Pinselplus1
-    description: PINSEL + 1 selects the timer pin input; timer pin output remains selected by PINSEL.
-    value: 1
 enum/Psf:
   bit_size: 32
   variants:
@@ -858,15 +792,6 @@ enum/Smod:
   - name: Logic
     description: Logic mode; SHIFTBUF contents implement programmable logic lookup table.
     value: 7
-enum/Ssize:
-  bit_size: 1
-  variants:
-  - name: Width32
-    description: 32-bit.
-    value: 0
-  - name: Width24
-    description: 24-bit.
-    value: 1
 enum/Sstart:
   bit_size: 2
   variants:
@@ -1041,15 +966,6 @@ enum/Timout:
   - name: ZeroTmrreset
     description: Logic zero when enabled and on timer reset.
     value: 3
-enum/Timpol:
-  bit_size: 1
-  variants:
-  - name: Posedge
-    description: Positive edge.
-    value: 0
-  - name: Negedge
-    description: Negative edge.
-    value: 1
 enum/Timrst:
   bit_size: 3
   variants:
@@ -1074,24 +990,6 @@ enum/Timrst:
   - name: TrigEdge
     description: Timer reset on trigger rising or falling edge.
     value: 7
-enum/Trgpol:
-  bit_size: 1
-  variants:
-  - name: ActiveHigh
-    description: Active high.
-    value: 0
-  - name: ActiveLow
-    description: Active low.
-    value: 1
-enum/Trgsrc:
-  bit_size: 1
-  variants:
-  - name: ExtTrig
-    description: External.
-    value: 0
-  - name: InternalTrig
-    description: Internal.
-    value: 1
 enum/Tstop:
   bit_size: 2
   variants:

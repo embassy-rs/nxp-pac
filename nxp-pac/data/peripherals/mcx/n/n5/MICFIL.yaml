@@ -92,55 +92,46 @@ fieldset/MicfilAlphaFieldsetAlpha:
     bit_offset: 3
     bit_size: 1
   - name: fsyncen
-    description: Frame Synchronization Enable.
+    description: "Frame Synchronization Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 16
     bit_size: 1
-    enum: Dozen3
   - name: decfils
-    description: Decimation Filter Enable in Stop.
+    description: "Decimation Filter Enable in Stop.\n\nRaw bit values: false (0) = Stop: Stops decimation filter.; true (1) = Run: Keeps decimation filter running."
     bit_offset: 20
     bit_size: 1
-    enum: MicfilAlphaEnumUniform
   - name: erren
-    description: Error Interruption Enable.
+    description: "Error Interruption Enable.\n\nRaw bit values: false (0) = Disabled: Disables.; true (1) = Enabled: Enables."
     bit_offset: 23
     bit_size: 1
-    enum: MicfilAlphaEnumXray
   - name: disel
     description: DMA Interrupt Selection.
     bit_offset: 24
     bit_size: 2
     enum: MicfilAlphaEnumVictor
   - name: dbge
-    description: Module Enable in Debug.
+    description: "Module Enable in Debug.\n\nRaw bit values: false (0) = Disabled: Disables after completing the current frame.; true (1) = Enabled: Enables operation."
     bit_offset: 26
     bit_size: 1
-    enum: MicfilAlphaEnumJuliet
   - name: sres
-    description: Software Reset.
+    description: "Software Reset.\n\nRaw bit values: false (0) = NoAction: No action.; true (1) = SwReset: Software reset."
     bit_offset: 27
     bit_size: 1
-    enum: MicfilAlphaEnumWhiskeyAlpha
   - name: dbg
-    description: Debug Mode.
+    description: "Debug Mode.\n\nRaw bit values: false (0) = Normal: Normal.; true (1) = Debug: Debug."
     bit_offset: 28
     bit_size: 1
-    enum: MicfilAlphaEnumIndia
   - name: pdmien
-    description: MICFIL Enable.
+    description: "MICFIL Enable.\n\nRaw bit values: false (0) = Stopped: Stops MICFIL operation.; true (1) = Started: Starts MICFIL operation."
     bit_offset: 29
     bit_size: 1
-    enum: MicfilAlphaEnumMikeAlpha
   - name: dozen
-    description: Stop Enable.
+    description: "Stop Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 30
     bit_size: 1
-    enum: Dozen3
   - name: mdis
-    description: Module Disable.
+    description: "Module Disable.\n\nRaw bit values: false (0) = Normal: Normal mode.; true (1) = LowLeakage: DLL mode."
     bit_offset: 31
     bit_size: 1
-    enum: MicfilAlphaEnumKiloAlpha
 fieldset/MicfilAlphaFieldsetBravo:
   description: MICFIL Control 2.
   fields:
@@ -150,10 +141,9 @@ fieldset/MicfilAlphaFieldsetBravo:
     bit_size: 8
     enum: MicfilAlphaEnumGolf
   - name: clkdivdis
-    description: Clock Divider Disable.
+    description: "Clock Divider Disable.\n\nRaw bit values: false (0) = Enable: Enables.; true (1) = Disable: Disables."
     bit_offset: 15
     bit_size: 1
-    enum: MicfilAlphaEnumHotel
   - name: cicosr
     description: CIC Decimation Rate.
     bit_offset: 16
@@ -228,45 +218,37 @@ fieldset/MicfilAlphaFieldsetGolf:
   description: MICFIL FIFO Status.
   fields:
   - name: fifoovf0
-    description: FIFO Overflow Exception Flag for Channel 0.
+    description: "FIFO Overflow Exception Flag for Channel 0.\n\nRaw bit values: false (0) = NoException: No exception by FIFO overflow.; true (1) = Exception: Exception by FIFO overflow."
     bit_offset: 0
     bit_size: 1
-    enum: Fifoovf
   - name: fifoovf1
-    description: FIFO Overflow Exception Flag for Channel 1.
+    description: "FIFO Overflow Exception Flag for Channel 1.\n\nRaw bit values: false (0) = NoException: No exception by FIFO overflow.; true (1) = Exception: Exception by FIFO overflow."
     bit_offset: 1
     bit_size: 1
-    enum: Fifoovf
   - name: fifoovf2
-    description: FIFO Overflow Exception Flag for Channel 2.
+    description: "FIFO Overflow Exception Flag for Channel 2.\n\nRaw bit values: false (0) = NoException: No exception by FIFO overflow.; true (1) = Exception: Exception by FIFO overflow."
     bit_offset: 2
     bit_size: 1
-    enum: Fifoovf
   - name: fifoovf3
-    description: FIFO Overflow Exception Flag for Channel 3.
+    description: "FIFO Overflow Exception Flag for Channel 3.\n\nRaw bit values: false (0) = NoException: No exception by FIFO overflow.; true (1) = Exception: Exception by FIFO overflow."
     bit_offset: 3
     bit_size: 1
-    enum: Fifoovf
   - name: fifound0
-    description: FIFO Underflow Exception Flag for Channel 0.
+    description: "FIFO Underflow Exception Flag for Channel 0.\n\nRaw bit values: false (0) = NoException: No exception by FIFO underflow.; true (1) = Exception: Exception by FIFO underflow."
     bit_offset: 8
     bit_size: 1
-    enum: Fifound
   - name: fifound1
-    description: FIFO Underflow Exception Flag for Channel 1.
+    description: "FIFO Underflow Exception Flag for Channel 1.\n\nRaw bit values: false (0) = NoException: No exception by FIFO underflow.; true (1) = Exception: Exception by FIFO underflow."
     bit_offset: 9
     bit_size: 1
-    enum: Fifound
   - name: fifound2
-    description: FIFO Underflow Exception Flag for Channel 2.
+    description: "FIFO Underflow Exception Flag for Channel 2.\n\nRaw bit values: false (0) = NoException: No exception by FIFO underflow.; true (1) = Exception: Exception by FIFO underflow."
     bit_offset: 10
     bit_size: 1
-    enum: Fifound
   - name: fifound3
-    description: FIFO Underflow Exception Flag for Channel 3.
+    description: "FIFO Underflow Exception Flag for Channel 3.\n\nRaw bit values: false (0) = NoException: No exception by FIFO underflow.; true (1) = Exception: Exception by FIFO underflow."
     bit_offset: 11
     bit_size: 1
-    enum: Fifound
 fieldset/MicfilAlphaFieldsetHotel:
   description: Frame Synchronization Control.
   fields:
@@ -288,25 +270,21 @@ fieldset/MicfilAlphaFieldsetIndia:
     bit_size: 4
     enum: MicfilAlphaEnumYankee
   - name: fil_out_width_24b
-    description: Filter Output Width.
+    description: "Filter Output Width.\n\nRaw bit values: false (0) = Wid16b: 16 bits.; true (1) = Wid24b: 24 bits."
     bit_offset: 8
     bit_size: 1
-    enum: MicfilAlphaEnumHotelAlpha
   - name: low_power
-    description: Low-Power Decimation Filter.
+    description: "Low-Power Decimation Filter.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 9
     bit_size: 1
-    enum: Dozen3
   - name: dc_bypass
-    description: Input DC Remover Bypass.
+    description: "Input DC Remover Bypass.\n\nRaw bit values: false (0) = Dcactive: Active.; true (1) = Dcbypassed: Disabled."
     bit_offset: 10
     bit_size: 1
-    enum: DcBypass
   - name: dc_out_bypass
-    description: Output DC Remover Bypass.
+    description: "Output DC Remover Bypass.\n\nRaw bit values: false (0) = Dcactive: Active.; true (1) = Dcbypassed: Disabled."
     bit_offset: 11
     bit_size: 1
-    enum: DcBypass
 fieldset/MicfilAlphaFieldsetJuliet:
   description: MICFIL Range Control.
   fields:
@@ -330,73 +308,60 @@ fieldset/MicfilAlphaFieldsetKilo:
   description: MICFIL Range Status.
   fields:
   - name: rangeovf0
-    description: Channel 0 Range Overflow Error Flag.
+    description: "Channel 0 Range Overflow Error Flag.\n\nRaw bit values: false (0) = NoException: No exception by range overflow.; true (1) = Exception: Exception by range overflow."
     bit_offset: 0
     bit_size: 1
-    enum: Rangeovf
   - name: rangeovf1
-    description: Channel 1 Range Overflow Error Flag.
+    description: "Channel 1 Range Overflow Error Flag.\n\nRaw bit values: false (0) = NoException: No exception by range overflow.; true (1) = Exception: Exception by range overflow."
     bit_offset: 1
     bit_size: 1
-    enum: Rangeovf
   - name: rangeovf2
-    description: Channel 2 Range Overflow Error Flag.
+    description: "Channel 2 Range Overflow Error Flag.\n\nRaw bit values: false (0) = NoException: No exception by range overflow.; true (1) = Exception: Exception by range overflow."
     bit_offset: 2
     bit_size: 1
-    enum: Rangeovf
   - name: rangeovf3
-    description: Channel 3 Range Overflow Error Flag.
+    description: "Channel 3 Range Overflow Error Flag.\n\nRaw bit values: false (0) = NoException: No exception by range overflow.; true (1) = Exception: Exception by range overflow."
     bit_offset: 3
     bit_size: 1
-    enum: Rangeovf
   - name: rangeunf0
-    description: Channel 0 Range Underflow Error Flag.
+    description: "Channel 0 Range Underflow Error Flag.\n\nRaw bit values: false (0) = NoException: No exception by range underflow.; true (1) = Exception: Exception by range underflow."
     bit_offset: 16
     bit_size: 1
-    enum: Rangeunf
   - name: rangeunf1
-    description: Channel 1 Range Underflow Error Flag.
+    description: "Channel 1 Range Underflow Error Flag.\n\nRaw bit values: false (0) = NoException: No exception by range underflow.; true (1) = Exception: Exception by range underflow."
     bit_offset: 17
     bit_size: 1
-    enum: Rangeunf
   - name: rangeunf2
-    description: Channel 2 Range Underflow Error Flag.
+    description: "Channel 2 Range Underflow Error Flag.\n\nRaw bit values: false (0) = NoException: No exception by range underflow.; true (1) = Exception: Exception by range underflow."
     bit_offset: 18
     bit_size: 1
-    enum: Rangeunf
   - name: rangeunf3
-    description: Channel 3 Range Underflow Error Flag.
+    description: "Channel 3 Range Underflow Error Flag.\n\nRaw bit values: false (0) = NoException: No exception by range underflow.; true (1) = Exception: Exception by range underflow."
     bit_offset: 19
     bit_size: 1
-    enum: Rangeunf
 fieldset/MicfilAlphaFieldsetLima:
   description: MICFIL Status.
   fields:
   - name: ch0f
-    description: Channel 0 Output Data Flag.
+    description: "Channel 0 Output Data Flag.\n\nRaw bit values: false (0) = WmNotreached: Not surpassed.; true (1) = WmReached: Surpassed."
     bit_offset: 0
     bit_size: 1
-    enum: Ch0f
   - name: ch1f
-    description: Channel 1 Output Data Flag.
+    description: "Channel 1 Output Data Flag.\n\nRaw bit values: false (0) = WmNotreached: Not surpassed.; true (1) = WmReached: Surpassed."
     bit_offset: 1
     bit_size: 1
-    enum: Ch0f
   - name: ch2f
-    description: Channel 2 Output Data Flag.
+    description: "Channel 2 Output Data Flag.\n\nRaw bit values: false (0) = WmNotreached: Not surpassed.; true (1) = WmReached: Surpassed."
     bit_offset: 2
     bit_size: 1
-    enum: Ch0f
   - name: ch3f
-    description: Channel 3 Output Data Flag.
+    description: "Channel 3 Output Data Flag.\n\nRaw bit values: false (0) = WmNotreached: Not surpassed.; true (1) = WmReached: Surpassed."
     bit_offset: 3
     bit_size: 1
-    enum: Ch0f
   - name: bsy_fil
-    description: Busy Flag.
+    description: "Busy Flag.\n\nRaw bit values: false (0) = Stopped: MICFIL is stopped.; true (1) = Running: MICFIL is running."
     bit_offset: 31
     bit_size: 1
-    enum: MicfilAlphaEnumAlpha
 fieldset/MicfilAlphaFieldsetMike:
   description: Version ID.
   fields:
@@ -412,24 +377,6 @@ fieldset/MicfilAlphaFieldsetMike:
     description: Major Version Number.
     bit_offset: 24
     bit_size: 8
-enum/MicfilAlphaEnumAlpha:
-  bit_size: 1
-  variants:
-  - name: Running
-    description: MICFIL is running.
-    value: 1
-  - name: Stopped
-    description: MICFIL is stopped.
-    value: 0
-enum/Ch0f:
-  bit_size: 1
-  variants:
-  - name: WmNotreached
-    description: Not surpassed.
-    value: 0
-  - name: WmReached
-    description: Surpassed.
-    value: 1
 enum/MicfilAlphaEnumFoxtrot:
   bit_size: 4
   variants:
@@ -541,42 +488,6 @@ enum/MicfilAlphaEnumGolf:
   - name: Clkdiv29
     description: '...'
     value: 9
-enum/MicfilAlphaEnumHotel:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 1
-  - name: Enable
-    description: Enables.
-    value: 0
-enum/MicfilAlphaEnumIndia:
-  bit_size: 1
-  variants:
-  - name: Debug
-    description: Debug.
-    value: 1
-  - name: Normal
-    description: Normal.
-    value: 0
-enum/MicfilAlphaEnumJuliet:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables after completing the current frame.
-    value: 0
-  - name: Enabled
-    description: Enables operation.
-    value: 1
-enum/DcBypass:
-  bit_size: 1
-  variants:
-  - name: Dcactive
-    description: Active.
-    value: 0
-  - name: Dcbypassed
-    description: Disabled.
-    value: 1
 enum/Dcconfig2:
   bit_size: 2
   variants:
@@ -607,15 +518,6 @@ enum/Dcconfig:
   - name: DcRemBypassed
     description: DC remover is bypassed.
     value: 3
-enum/MicfilAlphaEnumUniform:
-  bit_size: 1
-  variants:
-  - name: Run
-    description: Keeps decimation filter running.
-    value: 1
-  - name: Stop
-    description: Stops decimation filter.
-    value: 0
 enum/MicfilAlphaEnumVictor:
   bit_size: 2
   variants:
@@ -628,24 +530,6 @@ enum/MicfilAlphaEnumVictor:
   - name: IntreqEnabled
     description: Enables interrupt requests.
     value: 2
-enum/Dozen3:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/MicfilAlphaEnumXray:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
 enum/MicfilAlphaEnumYankee:
   bit_size: 4
   variants:
@@ -697,42 +581,6 @@ enum/MicfilAlphaEnumYankee:
   - name: Ptrwid39
     description: '...'
     value: 9
-enum/Fifoovf:
-  bit_size: 1
-  variants:
-  - name: Exception
-    description: Exception by FIFO overflow.
-    value: 1
-  - name: NoException
-    description: No exception by FIFO overflow.
-    value: 0
-enum/Fifound:
-  bit_size: 1
-  variants:
-  - name: Exception
-    description: Exception by FIFO underflow.
-    value: 1
-  - name: NoException
-    description: No exception by FIFO underflow.
-    value: 0
-enum/MicfilAlphaEnumHotelAlpha:
-  bit_size: 1
-  variants:
-  - name: Wid16b
-    description: 16 bits.
-    value: 0
-  - name: Wid24b
-    description: 24 bits.
-    value: 1
-enum/MicfilAlphaEnumKiloAlpha:
-  bit_size: 1
-  variants:
-  - name: LowLeakage
-    description: DLL mode.
-    value: 1
-  - name: Normal
-    description: Normal mode.
-    value: 0
 enum/MicfilAlphaEnumLimaAlpha:
   bit_size: 4
   variants:
@@ -784,15 +632,6 @@ enum/MicfilAlphaEnumLimaAlpha:
   - name: Npair39
     description: '...'
     value: 9
-enum/MicfilAlphaEnumMikeAlpha:
-  bit_size: 1
-  variants:
-  - name: Started
-    description: Starts MICFIL operation.
-    value: 1
-  - name: Stopped
-    description: Stops MICFIL operation.
-    value: 0
 enum/MicfilAlphaEnumNovemberAlpha:
   bit_size: 3
   variants:
@@ -814,30 +653,3 @@ enum/MicfilAlphaEnumNovemberAlpha:
   - name: Vlq2Mode
     description: Very-Low-Quality 2 mode.
     value: 4
-enum/Rangeovf:
-  bit_size: 1
-  variants:
-  - name: Exception
-    description: Exception by range overflow.
-    value: 1
-  - name: NoException
-    description: No exception by range overflow.
-    value: 0
-enum/Rangeunf:
-  bit_size: 1
-  variants:
-  - name: Exception
-    description: Exception by range underflow.
-    value: 1
-  - name: NoException
-    description: No exception by range underflow.
-    value: 0
-enum/MicfilAlphaEnumWhiskeyAlpha:
-  bit_size: 1
-  variants:
-  - name: NoAction
-    description: No action.
-    value: 0
-  - name: SwReset
-    description: Software reset.
-    value: 1

@@ -105,279 +105,225 @@ fieldset/Dma0ReqEnable0:
   description: DMA0 Request Enable0.
   fields:
   - name: req3_en0
-    description: This register is used to enable and disable PINT0 INT0 request.
+    description: "This register is used to enable and disable PINT0 INT0 request.\n\nRaw bit values: false (0) = Value4: Disable.; true (1) = Value5: Enable."
     bit_offset: 3
     bit_size: 1
-    enum: Req67En1
   - name: req4_en0
-    description: This register is used to enable and disable PINT0 INT1 request.
+    description: "This register is used to enable and disable PINT0 INT1 request.\n\nRaw bit values: false (0) = Value6: Disable.; true (1) = Value7: Enable."
     bit_offset: 4
     bit_size: 1
-    enum: Req68En0
   - name: req5_en0
-    description: This register is used to enable and disable PINT0 INT2 request.
+    description: "This register is used to enable and disable PINT0 INT2 request.\n\nRaw bit values: false (0) = Value8: Disable.; true (1) = Value9: Enable."
     bit_offset: 5
     bit_size: 1
-    enum: Req69En0
   - name: req6_en0
-    description: This register is used to enable and disable PINT0 INT3 request.
+    description: "This register is used to enable and disable PINT0 INT3 request.\n\nRaw bit values: false (0) = Value10: Disable.; true (1) = Value11: Enable."
     bit_offset: 6
     bit_size: 1
-    enum: Req102En1
   - name: req7_en0
-    description: This register is used to enable and disable CTIMER0 DMAREQ_M0 request.
+    description: "This register is used to enable and disable CTIMER0 DMAREQ_M0 request.\n\nRaw bit values: false (0) = Value12: Disable.; true (1) = Value13: Enable."
     bit_offset: 7
     bit_size: 1
-    enum: Req7En0
   - name: req8_en0
-    description: This register is used to enable and disable CTIMER0 DMAREQ_M1 request.
+    description: "This register is used to enable and disable CTIMER0 DMAREQ_M1 request.\n\nRaw bit values: false (0) = Value14: Disable.; true (1) = Value15: Enable."
     bit_offset: 8
     bit_size: 1
-    enum: Req72En0
   - name: req9_en0
-    description: This register is used to enable and disable CTIMER1 DMAREQ_M0 request.
+    description: "This register is used to enable and disable CTIMER1 DMAREQ_M0 request.\n\nRaw bit values: false (0) = Value16: Disable.; true (1) = Value17: Enable."
     bit_offset: 9
     bit_size: 1
-    enum: Req9En1
   - name: req10_en0
-    description: This register is used to enable and disable CTIMER1 DMAREQ_M1 request.
+    description: "This register is used to enable and disable CTIMER1 DMAREQ_M1 request.\n\nRaw bit values: false (0) = Value18: Disable.; true (1) = Value19: Enable."
     bit_offset: 10
     bit_size: 1
-    enum: Req10En0
   - name: req11_en0
-    description: This register is used to enable and disable CTIMER2 DMAREQ_M0 request.
+    description: "This register is used to enable and disable CTIMER2 DMAREQ_M0 request.\n\nRaw bit values: false (0) = Value20: Disable.; true (1) = Value21: Enable."
     bit_offset: 11
     bit_size: 1
-    enum: Req11En0
   - name: req12_en0
-    description: This register is used to enable and disable CTIMER2 DMAREQ_M1 request.
+    description: "This register is used to enable and disable CTIMER2 DMAREQ_M1 request.\n\nRaw bit values: false (0) = Value22: Disable.; true (1) = Value23: Enable."
     bit_offset: 12
     bit_size: 1
-    enum: Req108En0
   - name: req13_en0
-    description: This register is used to enable and disable CTIMER3 DMAREQ_M0 request.
+    description: "This register is used to enable and disable CTIMER3 DMAREQ_M0 request.\n\nRaw bit values: false (0) = Value24: Disable.; true (1) = Value25: Enable."
     bit_offset: 13
     bit_size: 1
-    enum: Req109En0
   - name: req14_en0
-    description: This register is used to enable and disable CTIMER3 DMAREQ_M1 request.
+    description: "This register is used to enable and disable CTIMER3 DMAREQ_M1 request.\n\nRaw bit values: false (0) = Value26: Disable.; true (1) = Value27: Enable."
     bit_offset: 14
     bit_size: 1
-    enum: Req110En0
   - name: req15_en0
-    description: This register is used to enable and disable CTIMER4 DMAREQ_M0 request.
+    description: "This register is used to enable and disable CTIMER4 DMAREQ_M0 request.\n\nRaw bit values: false (0) = Value28: Disable.; true (1) = Value29: Enable."
     bit_offset: 15
     bit_size: 1
-    enum: Req79En1
   - name: req16_en0
-    description: This register is used to enable and disable CTIMER4 DMAREQ_M1 request.
+    description: "This register is used to enable and disable CTIMER4 DMAREQ_M1 request.\n\nRaw bit values: false (0) = Value30: Disable.; true (1) = Value31: Enable."
     bit_offset: 16
     bit_size: 1
-    enum: Req80En0
   - name: req17_en0
-    description: This register is used to enable and disable WUU0 wake up event request.
+    description: "This register is used to enable and disable WUU0 wake up event request.\n\nRaw bit values: false (0) = Value32: Disable.; true (1) = Value33: Enable."
     bit_offset: 17
     bit_size: 1
-    enum: Req81En0
   - name: req18_en0
-    description: This register is used to enable and disable MICFIL0 FIFO_request.
+    description: "This register is used to enable and disable MICFIL0 FIFO_request.\n\nRaw bit values: false (0) = Value34: Disable.; true (1) = Value35: Enable."
     bit_offset: 18
     bit_size: 1
-    enum: Req82En0
   - name: req21_en0
-    description: This register is used to enable and disable ADC0 FIFO A request.
+    description: "This register is used to enable and disable ADC0 FIFO A request.\n\nRaw bit values: false (0) = Value40: Disable.; true (1) = Value41: Enable."
     bit_offset: 21
     bit_size: 1
-    enum: Req21En0
   - name: req22_en0
-    description: This register is used to enable and disable ADC0 FIFO B request.
+    description: "This register is used to enable and disable ADC0 FIFO B request.\n\nRaw bit values: false (0) = Value42: Disable.; true (1) = Value43: Enable."
     bit_offset: 22
     bit_size: 1
-    enum: Req22En0
   - name: req23_en0
-    description: This register is used to enable and disable ADC1 FIFO A request.
+    description: "This register is used to enable and disable ADC1 FIFO A request.\n\nRaw bit values: false (0) = Value44: Disable.; true (1) = Value45: Enable."
     bit_offset: 23
     bit_size: 1
-    enum: Req119En1
   - name: req24_en0
-    description: This register is used to enable and disable ADC1 FIFO B request.
+    description: "This register is used to enable and disable ADC1 FIFO B request.\n\nRaw bit values: false (0) = Value46: Disable.; true (1) = Value47: Enable."
     bit_offset: 24
     bit_size: 1
-    enum: Req24En0
   - name: req28_en0
-    description: This register is used to enable and disable CMP0 DMA_request.
+    description: "This register is used to enable and disable CMP0 DMA_request.\n\nRaw bit values: false (0) = Value54: Disable.; true (1) = Value55: Enable."
     bit_offset: 28
     bit_size: 1
-    enum: Req28En1
   - name: req29_en0
-    description: This register is used to enable and disable CMP1 DMA_request.
+    description: "This register is used to enable and disable CMP1 DMA_request.\n\nRaw bit values: false (0) = Value56: Disable.; true (1) = Value57: Enable."
     bit_offset: 29
     bit_size: 1
-    enum: Req29En0
   - name: req31_en0
-    description: This register is used to enable and disable EVTG0 OUT0A request.
+    description: "This register is used to enable and disable EVTG0 OUT0A request.\n\nRaw bit values: false (0) = Value60: Disable.; true (1) = Value61: Enable."
     bit_offset: 31
     bit_size: 1
-    enum: Req31En0
   only_in: ^(MCXN2[0-9]{2})$
 fieldset/Dma0ReqEnable02:
   description: DMA0 Request Enable0.
   fields:
   - name: req1_en0
-    description: This register is used to enable and disable FLEXSPI0 receive event request.
+    description: "This register is used to enable and disable FLEXSPI0 receive event request.\n\nRaw bit values: false (0) = Value0: Disable.; true (1) = Value1: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: Req96En0
   - name: req2_en0
-    description: This register is used to enable and disable FLEXSPI0 transmit event request.
+    description: "This register is used to enable and disable FLEXSPI0 transmit event request.\n\nRaw bit values: false (0) = Value2: Disable.; true (1) = Value3: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: Req98En0
   - name: req3_en0
-    description: This register is used to enable and disable PINT0 INT0 request.
+    description: "This register is used to enable and disable PINT0 INT0 request.\n\nRaw bit values: false (0) = Value4: Disable.; true (1) = Value5: Enable."
     bit_offset: 3
     bit_size: 1
-    enum: Req67En1
   - name: req4_en0
-    description: This register is used to enable and disable PINT0 INT1 request.
+    description: "This register is used to enable and disable PINT0 INT1 request.\n\nRaw bit values: false (0) = Value6: Disable.; true (1) = Value7: Enable."
     bit_offset: 4
     bit_size: 1
-    enum: Req68En0
   - name: req5_en0
-    description: This register is used to enable and disable PINT0 INT2 request.
+    description: "This register is used to enable and disable PINT0 INT2 request.\n\nRaw bit values: false (0) = Value8: Disable.; true (1) = Value9: Enable."
     bit_offset: 5
     bit_size: 1
-    enum: Req69En0
   - name: req6_en0
-    description: This register is used to enable and disable PINT0 INT3 request.
+    description: "This register is used to enable and disable PINT0 INT3 request.\n\nRaw bit values: false (0) = Value10: Disable.; true (1) = Value11: Enable."
     bit_offset: 6
     bit_size: 1
-    enum: Req102En1
   - name: req7_en0
-    description: This register is used to enable and disable CTIMER0 DMAREQ_M0 request.
+    description: "This register is used to enable and disable CTIMER0 DMAREQ_M0 request.\n\nRaw bit values: false (0) = Value12: Disable.; true (1) = Value13: Enable."
     bit_offset: 7
     bit_size: 1
-    enum: Req7En0
   - name: req8_en0
-    description: This register is used to enable and disable CTIMER0 DMAREQ_M1 request.
+    description: "This register is used to enable and disable CTIMER0 DMAREQ_M1 request.\n\nRaw bit values: false (0) = Value14: Disable.; true (1) = Value15: Enable."
     bit_offset: 8
     bit_size: 1
-    enum: Req72En0
   - name: req9_en0
-    description: This register is used to enable and disable CTIMER1 DMAREQ_M0 request.
+    description: "This register is used to enable and disable CTIMER1 DMAREQ_M0 request.\n\nRaw bit values: false (0) = Value16: Disable.; true (1) = Value17: Enable."
     bit_offset: 9
     bit_size: 1
-    enum: Req9En1
   - name: req10_en0
-    description: This register is used to enable and disable CTIMER1 DMAREQ_M1 request.
+    description: "This register is used to enable and disable CTIMER1 DMAREQ_M1 request.\n\nRaw bit values: false (0) = Value18: Disable.; true (1) = Value19: Enable."
     bit_offset: 10
     bit_size: 1
-    enum: Req10En0
   - name: req11_en0
-    description: This register is used to enable and disable CTIMER2 DMAREQ_M0 request.
+    description: "This register is used to enable and disable CTIMER2 DMAREQ_M0 request.\n\nRaw bit values: false (0) = Value20: Disable.; true (1) = Value21: Enable."
     bit_offset: 11
     bit_size: 1
-    enum: Req11En0
   - name: req12_en0
-    description: This register is used to enable and disable CTIMER2 DMAREQ_M1 request.
+    description: "This register is used to enable and disable CTIMER2 DMAREQ_M1 request.\n\nRaw bit values: false (0) = Value22: Disable.; true (1) = Value23: Enable."
     bit_offset: 12
     bit_size: 1
-    enum: Req108En0
   - name: req13_en0
-    description: This register is used to enable and disable CTIMER3 DMAREQ_M0 request.
+    description: "This register is used to enable and disable CTIMER3 DMAREQ_M0 request.\n\nRaw bit values: false (0) = Value24: Disable.; true (1) = Value25: Enable."
     bit_offset: 13
     bit_size: 1
-    enum: Req109En0
   - name: req14_en0
-    description: This register is used to enable and disable CTIMER3 DMAREQ_M1 request.
+    description: "This register is used to enable and disable CTIMER3 DMAREQ_M1 request.\n\nRaw bit values: false (0) = Value26: Disable.; true (1) = Value27: Enable."
     bit_offset: 14
     bit_size: 1
-    enum: Req110En0
   - name: req15_en0
-    description: This register is used to enable and disable CTIMER4 DMAREQ_M0 request.
+    description: "This register is used to enable and disable CTIMER4 DMAREQ_M0 request.\n\nRaw bit values: false (0) = Value28: Disable.; true (1) = Value29: Enable."
     bit_offset: 15
     bit_size: 1
-    enum: Req79En1
   - name: req16_en0
-    description: This register is used to enable and disable CTIMER4 DMAREQ_M1 request.
+    description: "This register is used to enable and disable CTIMER4 DMAREQ_M1 request.\n\nRaw bit values: false (0) = Value30: Disable.; true (1) = Value31: Enable."
     bit_offset: 16
     bit_size: 1
-    enum: Req80En0
   - name: req17_en0
-    description: This register is used to enable and disable WUU0 wake up event request.
+    description: "This register is used to enable and disable WUU0 wake up event request.\n\nRaw bit values: false (0) = Value32: Disable.; true (1) = Value33: Enable."
     bit_offset: 17
     bit_size: 1
-    enum: Req81En0
   - name: req18_en0
-    description: This register is used to enable and disable MICFIL0 FIFO_request.
+    description: "This register is used to enable and disable MICFIL0 FIFO_request.\n\nRaw bit values: false (0) = Value34: Disable.; true (1) = Value35: Enable."
     bit_offset: 18
     bit_size: 1
-    enum: Req82En0
   - name: req19_en0
-    description: This register is used to enable and disable SCT0 DMA0 request.
+    description: "This register is used to enable and disable SCT0 DMA0 request.\n\nRaw bit values: false (0) = Value36: Disable.; true (1) = Value37: Enable."
     bit_offset: 19
     bit_size: 1
-    enum: Req83En0
   - name: req20_en0
-    description: This register is used to enable and disable SCT0 DMA1 request.
+    description: "This register is used to enable and disable SCT0 DMA1 request.\n\nRaw bit values: false (0) = Value38: Disable.; true (1) = Value39: Enable."
     bit_offset: 20
     bit_size: 1
-    enum: Req84En0
   - name: req21_en0
-    description: This register is used to enable and disable ADC0 FIFO A request.
+    description: "This register is used to enable and disable ADC0 FIFO A request.\n\nRaw bit values: false (0) = Value40: Disable.; true (1) = Value41: Enable."
     bit_offset: 21
     bit_size: 1
-    enum: Req21En0
   - name: req22_en0
-    description: This register is used to enable and disable ADC0 FIFO B request.
+    description: "This register is used to enable and disable ADC0 FIFO B request.\n\nRaw bit values: false (0) = Value42: Disable.; true (1) = Value43: Enable."
     bit_offset: 22
     bit_size: 1
-    enum: Req22En0
   - name: req23_en0
-    description: This register is used to enable and disable ADC1 FIFO A request.
+    description: "This register is used to enable and disable ADC1 FIFO A request.\n\nRaw bit values: false (0) = Value44: Disable.; true (1) = Value45: Enable."
     bit_offset: 23
     bit_size: 1
-    enum: Req119En1
   - name: req24_en0
-    description: This register is used to enable and disable ADC1 FIFO B request.
+    description: "This register is used to enable and disable ADC1 FIFO B request.\n\nRaw bit values: false (0) = Value46: Disable.; true (1) = Value47: Enable."
     bit_offset: 24
     bit_size: 1
-    enum: Req24En0
   - name: req25_en0
-    description: This register is used to enable and disable DAC0 FIFO_request.
+    description: "This register is used to enable and disable DAC0 FIFO_request.\n\nRaw bit values: false (0) = Value48: Disable.; true (1) = Value49: Enable."
     bit_offset: 25
     bit_size: 1
-    enum: Req121En0
   - name: req26_en0
-    description: This register is used to enable and disable DAC1 FIFO_request.
+    description: "This register is used to enable and disable DAC1 FIFO_request.\n\nRaw bit values: false (0) = Value50: Disable.; true (1) = Value51: Enable."
     bit_offset: 26
     bit_size: 1
-    enum: Req26En0
   - name: req27_en0
-    description: This register is used to enable and disable DAC2 FIFO_request.
+    description: "This register is used to enable and disable DAC2 FIFO_request.\n\nRaw bit values: false (0) = Value52: Disable.; true (1) = Value53: Enable."
     bit_offset: 27
     bit_size: 1
-    enum: Req27En0
   - name: req28_en0
-    description: This register is used to enable and disable CMP0 DMA_request.
+    description: "This register is used to enable and disable CMP0 DMA_request.\n\nRaw bit values: false (0) = Value54: Disable.; true (1) = Value55: Enable."
     bit_offset: 28
     bit_size: 1
-    enum: Req28En1
   - name: req29_en0
-    description: This register is used to enable and disable CMP1 DMA_request.
+    description: "This register is used to enable and disable CMP1 DMA_request.\n\nRaw bit values: false (0) = Value56: Disable.; true (1) = Value57: Enable."
     bit_offset: 29
     bit_size: 1
-    enum: Req29En0
   - name: req30_en0
-    description: This register is used to enable and disable CMP2 DMA_request.
+    description: "This register is used to enable and disable CMP2 DMA_request.\n\nRaw bit values: false (0) = Value58: Disable.; true (1) = Value59: Enable."
     bit_offset: 30
     bit_size: 1
-    enum: Req30En0
   - name: req31_en0
-    description: This register is used to enable and disable EVTG0 OUT0A request.
+    description: "This register is used to enable and disable EVTG0 OUT0A request.\n\nRaw bit values: false (0) = Value60: Disable.; true (1) = Value61: Enable."
     bit_offset: 31
     bit_size: 1
-    enum: Req31En0
 fieldset/Dma0ReqEnable0Clr:
   description: DMA0 Request Enable0.
   fields:
@@ -1051,155 +997,125 @@ fieldset/Dma0ReqEnable1:
   description: DMA0 Request Enable1.
   fields:
   - name: req32_en0
-    description: This register is used to enable and disable EVTG0 OUT0B request.
+    description: "This register is used to enable and disable EVTG0 OUT0B request.\n\nRaw bit values: false (0) = Value62: Disable.; true (1) = Value63: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Req32En0
   - name: req33_en0
-    description: This register is used to enable and disable EVTG0 OUT1A request.
+    description: "This register is used to enable and disable EVTG0 OUT1A request.\n\nRaw bit values: false (0) = Value64: Disable.; true (1) = Value65: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: Req33En0
   - name: req34_en0
-    description: This register is used to enable and disable EVTG0 OUT1B request.
+    description: "This register is used to enable and disable EVTG0 OUT1B request.\n\nRaw bit values: false (0) = Value66: Disable.; true (1) = Value67: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: Req34En0
   - name: req35_en0
-    description: This register is used to enable and disable EVTG0 OUT2A request.
+    description: "This register is used to enable and disable EVTG0 OUT2A request.\n\nRaw bit values: false (0) = Value68: Disable.; true (1) = Value69: Enable."
     bit_offset: 3
     bit_size: 1
-    enum: Req35En0
   - name: req36_en0
-    description: This register is used to enable and disable EVTG0 OUT2B request.
+    description: "This register is used to enable and disable EVTG0 OUT2B request.\n\nRaw bit values: false (0) = Value70: Disable.; true (1) = Value71: Enable."
     bit_offset: 4
     bit_size: 1
-    enum: Req36En0
   - name: req37_en0
-    description: This register is used to enable and disable EVTG0 OUT3A request.
+    description: "This register is used to enable and disable EVTG0 OUT3A request.\n\nRaw bit values: false (0) = Value72: Disable.; true (1) = Value73: Enable."
     bit_offset: 5
     bit_size: 1
-    enum: Req37En0
   - name: req38_en0
-    description: This register is used to enable and disable EVTG0 OUT3B request.
+    description: "This register is used to enable and disable EVTG0 OUT3B request.\n\nRaw bit values: false (0) = Value74: Disable.; true (1) = Value75: Enable."
     bit_offset: 6
     bit_size: 1
-    enum: Req38En0
   - name: req39_en0
-    description: This register is used to enable and disable PWM0 Req_capt0 request.
+    description: "This register is used to enable and disable PWM0 Req_capt0 request.\n\nRaw bit values: false (0) = Value76: Disable.; true (1) = Value77: Enable."
     bit_offset: 7
     bit_size: 1
-    enum: Req39En0
   - name: req40_en0
-    description: This register is used to enable and disable PWM0 Req_capt1 request.
+    description: "This register is used to enable and disable PWM0 Req_capt1 request.\n\nRaw bit values: false (0) = Value78: Disable.; true (1) = Value79: Enable."
     bit_offset: 8
     bit_size: 1
-    enum: Req40En0
   - name: req41_en0
-    description: This register is used to enable and disable PWM0 Req_capt2 request.
+    description: "This register is used to enable and disable PWM0 Req_capt2 request.\n\nRaw bit values: false (0) = Value80: Disable.; true (1) = Value81: Enable."
     bit_offset: 9
     bit_size: 1
-    enum: Req41En1
   - name: req42_en0
-    description: This register is used to enable and disable PWM0 Req_capt3 request.
+    description: "This register is used to enable and disable PWM0 Req_capt3 request.\n\nRaw bit values: false (0) = Value82: Disable.; true (1) = Value83: Enable."
     bit_offset: 10
     bit_size: 1
-    enum: Req42En0
   - name: req43_en0
-    description: This register is used to enable and disable PWM0 Req_val0 request.
+    description: "This register is used to enable and disable PWM0 Req_val0 request.\n\nRaw bit values: false (0) = Value84: Disable.; true (1) = Value85: Enable."
     bit_offset: 11
     bit_size: 1
-    enum: Req43En0
   - name: req44_en0
-    description: This register is used to enable and disable PWM0 Req_val1 request.
+    description: "This register is used to enable and disable PWM0 Req_val1 request.\n\nRaw bit values: false (0) = Value86: Disable.; true (1) = Value87: Enable."
     bit_offset: 12
     bit_size: 1
-    enum: Req44En0
   - name: req45_en0
-    description: This register is used to enable and disable PWM0 Req_val2 request.
+    description: "This register is used to enable and disable PWM0 Req_val2 request.\n\nRaw bit values: false (0) = Value88: Disable.; true (1) = Value89: Enable."
     bit_offset: 13
     bit_size: 1
-    enum: Req45En0
   - name: req46_en0
-    description: This register is used to enable and disable PWM0 Req_val3 request.
+    description: "This register is used to enable and disable PWM0 Req_val3 request.\n\nRaw bit values: false (0) = Value90: Disable.; true (1) = Value91: Enable."
     bit_offset: 14
     bit_size: 1
-    enum: Req46En0
   - name: req47_en0
-    description: This register is used to enable and disable PWM1 Req_capt0 request.
+    description: "This register is used to enable and disable PWM1 Req_capt0 request.\n\nRaw bit values: false (0) = Value92: Disable.; true (1) = Value93: Enable."
     bit_offset: 15
     bit_size: 1
-    enum: Req47En0
   - name: req48_en0
-    description: This register is used to enable and disable PWM1 Req_capt1 request.
+    description: "This register is used to enable and disable PWM1 Req_capt1 request.\n\nRaw bit values: false (0) = Value94: Disable.; true (1) = Value95: Enable."
     bit_offset: 16
     bit_size: 1
-    enum: Req48En0
   - name: req49_en0
-    description: This register is used to enable and disable PWM1 Req_capt2 request.
+    description: "This register is used to enable and disable PWM1 Req_capt2 request.\n\nRaw bit values: false (0) = Value96: Disable.; true (1) = Value97: Enable."
     bit_offset: 17
     bit_size: 1
-    enum: Req49En0
   - name: req50_en0
-    description: This register is used to enable and disable PWM1 Req_capt3 request.
+    description: "This register is used to enable and disable PWM1 Req_capt3 request.\n\nRaw bit values: false (0) = Value98: Disable.; true (1) = Value99: Enable."
     bit_offset: 18
     bit_size: 1
-    enum: Req50En0
   - name: req51_en0
-    description: This register is used to enable and disable PWM1 Req_val0 request.
+    description: "This register is used to enable and disable PWM1 Req_val0 request.\n\nRaw bit values: false (0) = Value100: Disable.; true (1) = Value101: Enable."
     bit_offset: 19
     bit_size: 1
-    enum: Req51En0
   - name: req52_en0
-    description: This register is used to enable and disable PWM1 Req_val1 request.
+    description: "This register is used to enable and disable PWM1 Req_val1 request.\n\nRaw bit values: false (0) = Value102: Disable.; true (1) = Value103: Enable."
     bit_offset: 20
     bit_size: 1
-    enum: Req52En0
   - name: req53_en0
-    description: This register is used to enable and disable PWM1 Req_val2 request.
+    description: "This register is used to enable and disable PWM1 Req_val2 request.\n\nRaw bit values: false (0) = Value104: Disable.; true (1) = Value105: Enable."
     bit_offset: 21
     bit_size: 1
-    enum: Req53En1
   - name: req54_en0
-    description: This register is used to enable and disable PWM1 Req_val3 request.
+    description: "This register is used to enable and disable PWM1 Req_val3 request.\n\nRaw bit values: false (0) = Value106: Disable.; true (1) = Value107: Enable."
     bit_offset: 22
     bit_size: 1
-    enum: Req54En0
   - name: req57_en0
-    description: This register is used to enable and disable LPTMR0 counter match event request.
+    description: "This register is used to enable and disable LPTMR0 counter match event request.\n\nRaw bit values: false (0) = Value112: Disable.; true (1) = Value113: Enable."
     bit_offset: 25
     bit_size: 1
-    enum: Req57En0
   - name: req58_en0
-    description: This register is used to enable and disable LPTMR1 counter match event request.
+    description: "This register is used to enable and disable LPTMR1 counter match event request.\n\nRaw bit values: false (0) = Value114: Disable.; true (1) = Value115: Enable."
     bit_offset: 26
     bit_size: 1
-    enum: Req58En0
   - name: req59_en0
-    description: This register is used to enable and disable CAN0 DMA request.
+    description: "This register is used to enable and disable CAN0 DMA request.\n\nRaw bit values: false (0) = Value116: Disable.; true (1) = Value117: Enable."
     bit_offset: 27
     bit_size: 1
-    enum: Req59En0
   - name: req60_en0
-    description: This register is used to enable and disable CAN1 DMA request.
+    description: "This register is used to enable and disable CAN1 DMA request.\n\nRaw bit values: false (0) = Value118: Disable.; true (1) = Value119: Enable."
     bit_offset: 28
     bit_size: 1
-    enum: Req60En0
   - name: req61_en0
-    description: This register is used to enable and disable FlexIO0 Shifter0 Status DMA request OR Timer0 Status DMA request.
+    description: "This register is used to enable and disable FlexIO0 Shifter0 Status DMA request OR Timer0 Status DMA request.\n\nRaw bit values: false (0) = Value120: Disable.; true (1) = Value121: Enable."
     bit_offset: 29
     bit_size: 1
-    enum: Req61En0
   - name: req62_en0
-    description: This register is used to enable and disable FlexIO0 Shifter1 Status DMA request OR Timer1 Status DMA request.
+    description: "This register is used to enable and disable FlexIO0 Shifter1 Status DMA request OR Timer1 Status DMA request.\n\nRaw bit values: false (0) = Value122: Disable.; true (1) = Value123: Enable."
     bit_offset: 30
     bit_size: 1
-    enum: Req62En0
   - name: req63_en0
-    description: This register is used to enable and disable FlexIO0 Shifter2 Status DMA request OR Timer2 Status DMA request.
+    description: "This register is used to enable and disable FlexIO0 Shifter2 Status DMA request OR Timer2 Status DMA request.\n\nRaw bit values: false (0) = Value124: Disable.; true (1) = Value125: Enable."
     bit_offset: 31
     bit_size: 1
-    enum: Req63En0
 fieldset/Dma0ReqEnable1Clr:
   description: DMA0 Request Enable1.
   fields:
@@ -1573,269 +1489,217 @@ fieldset/Dma0ReqEnable2:
   description: DMA0 Request Enable2.
   fields:
   - name: req64_en0
-    description: This register is used to enable and disable FlexIO0 shift register 3 request.
+    description: "This register is used to enable and disable FlexIO0 shift register 3 request.\n\nRaw bit values: false (0) = Value0: Disable.; true (1) = Value1: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Req96En0
   - name: req65_en0
-    description: This register is used to enable and disable FlexIO0 shift register 4 request.
+    description: "This register is used to enable and disable FlexIO0 shift register 4 request.\n\nRaw bit values: false (0) = Value0: Disable.; true (1) = Value1: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: Req96En0
   - name: req66_en0
-    description: This register is used to enable and disable FlexIO0 shift register 5 request.
+    description: "This register is used to enable and disable FlexIO0 shift register 5 request.\n\nRaw bit values: false (0) = Value2: Disable.; true (1) = Value3: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: Req98En0
   - name: req67_en0
-    description: This register is used to enable and disable FlexIO0 shift register 6 request.
+    description: "This register is used to enable and disable FlexIO0 shift register 6 request.\n\nRaw bit values: false (0) = Value4: Disable.; true (1) = Value5: Enable."
     bit_offset: 3
     bit_size: 1
-    enum: Req67En1
   - name: req68_en0
-    description: This register is used to enable and disable FlexIO0 shift register 7 request.
+    description: "This register is used to enable and disable FlexIO0 shift register 7 request.\n\nRaw bit values: false (0) = Value6: Disable.; true (1) = Value7: Enable."
     bit_offset: 4
     bit_size: 1
-    enum: Req68En0
   - name: req69_en0
-    description: This register is used to enable and disable LP_FLEXCOMM0 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM0 receive request.\n\nRaw bit values: false (0) = Value8: Disable.; true (1) = Value9: Enable."
     bit_offset: 5
     bit_size: 1
-    enum: Req69En0
   - name: req70_en0
-    description: This register is used to enable and disable LP_FLEXCOMM0 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM0 transmit request.\n\nRaw bit values: false (0) = Value10: Disable.; true (1) = Value11: Enable."
     bit_offset: 6
     bit_size: 1
-    enum: Req102En1
   - name: req71_en0
-    description: This register is used to enable and disable LP_FLEXCOMM1 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM1 receive request.\n\nRaw bit values: false (0) = Value12: Disable.; true (1) = Value13: Enable."
     bit_offset: 7
     bit_size: 1
-    enum: Req7En0
   - name: req72_en0
-    description: This register is used to enable and disable LP_FLEXCOMM1 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM1 transmit request.\n\nRaw bit values: false (0) = Value14: Disable.; true (1) = Value15: Enable."
     bit_offset: 8
     bit_size: 1
-    enum: Req72En0
   - name: req73_en0
-    description: This register is used to enable and disable LP_FLEXCOMM2 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM2 receive request.\n\nRaw bit values: false (0) = Value16: Disable.; true (1) = Value17: Enable."
     bit_offset: 9
     bit_size: 1
-    enum: Req9En1
   - name: req74_en0
-    description: This register is used to enable and disable LP_FLEXCOMM2 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM2 transmit request.\n\nRaw bit values: false (0) = Value18: Disable.; true (1) = Value19: Enable."
     bit_offset: 10
     bit_size: 1
-    enum: Req10En0
   - name: req75_en0
-    description: This register is used to enable and disable LP_FLEXCOMM3 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM3 receive request.\n\nRaw bit values: false (0) = Value20: Disable.; true (1) = Value21: Enable."
     bit_offset: 11
     bit_size: 1
-    enum: Req11En0
   - name: req76_en0
-    description: This register is used to enable and disable LP_FLEXCOMM3 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM3 transmit request.\n\nRaw bit values: false (0) = Value22: Disable.; true (1) = Value23: Enable."
     bit_offset: 12
     bit_size: 1
-    enum: Req108En0
   - name: req77_en0
-    description: This register is used to enable and disable LP_FLEXCOMM4 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM4 receive request.\n\nRaw bit values: false (0) = Value24: Disable.; true (1) = Value25: Enable."
     bit_offset: 13
     bit_size: 1
-    enum: Req109En0
   - name: req78_en0
-    description: This register is used to enable and disable LP_FLEXCOMM4 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM4 transmit request.\n\nRaw bit values: false (0) = Value26: Disable.; true (1) = Value27: Enable."
     bit_offset: 14
     bit_size: 1
-    enum: Req110En0
   - name: req79_en0
-    description: This register is used to enable and disable LP_FLEXCOMM5 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM5 receive request.\n\nRaw bit values: false (0) = Value28: Disable.; true (1) = Value29: Enable."
     bit_offset: 15
     bit_size: 1
-    enum: Req79En1
   - name: req80_en0
-    description: This register is used to enable and disable LP_FLEXCOMM5 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM5 transmit request.\n\nRaw bit values: false (0) = Value30: Disable.; true (1) = Value31: Enable."
     bit_offset: 16
     bit_size: 1
-    enum: Req80En0
   - name: req81_en0
-    description: This register is used to enable and disable LP_FLEXCOMM6 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM6 receive request.\n\nRaw bit values: false (0) = Value32: Disable.; true (1) = Value33: Enable."
     bit_offset: 17
     bit_size: 1
-    enum: Req81En0
   - name: req82_en0
-    description: This register is used to enable and disable LP_FLEXCOMM6 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM6 transmit request.\n\nRaw bit values: false (0) = Value34: Disable.; true (1) = Value35: Enable."
     bit_offset: 18
     bit_size: 1
-    enum: Req82En0
   - name: req83_en0
-    description: This register is used to enable and disable LP_FLEXCOMM7 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM7 receive request.\n\nRaw bit values: false (0) = Value36: Disable.; true (1) = Value37: Enable."
     bit_offset: 19
     bit_size: 1
-    enum: Req83En0
   - name: req84_en0
-    description: This register is used to enable and disable LP_FLEXCOMM7 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM7 transmit request.\n\nRaw bit values: false (0) = Value38: Disable.; true (1) = Value39: Enable."
     bit_offset: 20
     bit_size: 1
-    enum: Req84En0
   - name: req95_en0
-    description: This register is used to enable and disable I3C0 receive request.
+    description: "This register is used to enable and disable I3C0 receive request.\n\nRaw bit values: false (0) = Value60: Disable.; true (1) = Value61: Enable."
     bit_offset: 31
     bit_size: 1
-    enum: Req31En0
   only_in: ^(MCXN2[0-9]{2})$
 fieldset/Dma0ReqEnable22:
   description: DMA0 Request Enable2.
   fields:
   - name: req64_en0
-    description: This register is used to enable and disable FlexIO0 shift register 3 request.
+    description: "This register is used to enable and disable FlexIO0 shift register 3 request.\n\nRaw bit values: false (0) = Value0: Disable.; true (1) = Value1: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Req96En0
   - name: req65_en0
-    description: This register is used to enable and disable FlexIO0 shift register 4 request.
+    description: "This register is used to enable and disable FlexIO0 shift register 4 request.\n\nRaw bit values: false (0) = Value0: Disable.; true (1) = Value1: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: Req96En0
   - name: req66_en0
-    description: This register is used to enable and disable FlexIO0 shift register 5 request.
+    description: "This register is used to enable and disable FlexIO0 shift register 5 request.\n\nRaw bit values: false (0) = Value2: Disable.; true (1) = Value3: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: Req98En0
   - name: req67_en0
-    description: This register is used to enable and disable FlexIO0 shift register 6 request.
+    description: "This register is used to enable and disable FlexIO0 shift register 6 request.\n\nRaw bit values: false (0) = Value4: Disable.; true (1) = Value5: Enable."
     bit_offset: 3
     bit_size: 1
-    enum: Req67En1
   - name: req68_en0
-    description: This register is used to enable and disable FlexIO0 shift register 7 request.
+    description: "This register is used to enable and disable FlexIO0 shift register 7 request.\n\nRaw bit values: false (0) = Value6: Disable.; true (1) = Value7: Enable."
     bit_offset: 4
     bit_size: 1
-    enum: Req68En0
   - name: req69_en0
-    description: This register is used to enable and disable LP_FLEXCOMM0 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM0 receive request.\n\nRaw bit values: false (0) = Value8: Disable.; true (1) = Value9: Enable."
     bit_offset: 5
     bit_size: 1
-    enum: Req69En0
   - name: req70_en0
-    description: This register is used to enable and disable LP_FLEXCOMM0 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM0 transmit request.\n\nRaw bit values: false (0) = Value10: Disable.; true (1) = Value11: Enable."
     bit_offset: 6
     bit_size: 1
-    enum: Req102En1
   - name: req71_en0
-    description: This register is used to enable and disable LP_FLEXCOMM1 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM1 receive request.\n\nRaw bit values: false (0) = Value12: Disable.; true (1) = Value13: Enable."
     bit_offset: 7
     bit_size: 1
-    enum: Req7En0
   - name: req72_en0
-    description: This register is used to enable and disable LP_FLEXCOMM1 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM1 transmit request.\n\nRaw bit values: false (0) = Value14: Disable.; true (1) = Value15: Enable."
     bit_offset: 8
     bit_size: 1
-    enum: Req72En0
   - name: req73_en0
-    description: This register is used to enable and disable LP_FLEXCOMM2 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM2 receive request.\n\nRaw bit values: false (0) = Value16: Disable.; true (1) = Value17: Enable."
     bit_offset: 9
     bit_size: 1
-    enum: Req9En1
   - name: req74_en0
-    description: This register is used to enable and disable LP_FLEXCOMM2 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM2 transmit request.\n\nRaw bit values: false (0) = Value18: Disable.; true (1) = Value19: Enable."
     bit_offset: 10
     bit_size: 1
-    enum: Req10En0
   - name: req75_en0
-    description: This register is used to enable and disable LP_FLEXCOMM3 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM3 receive request.\n\nRaw bit values: false (0) = Value20: Disable.; true (1) = Value21: Enable."
     bit_offset: 11
     bit_size: 1
-    enum: Req11En0
   - name: req76_en0
-    description: This register is used to enable and disable LP_FLEXCOMM3 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM3 transmit request.\n\nRaw bit values: false (0) = Value22: Disable.; true (1) = Value23: Enable."
     bit_offset: 12
     bit_size: 1
-    enum: Req108En0
   - name: req77_en0
-    description: This register is used to enable and disable LP_FLEXCOMM4 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM4 receive request.\n\nRaw bit values: false (0) = Value24: Disable.; true (1) = Value25: Enable."
     bit_offset: 13
     bit_size: 1
-    enum: Req109En0
   - name: req78_en0
-    description: This register is used to enable and disable LP_FLEXCOMM4 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM4 transmit request.\n\nRaw bit values: false (0) = Value26: Disable.; true (1) = Value27: Enable."
     bit_offset: 14
     bit_size: 1
-    enum: Req110En0
   - name: req79_en0
-    description: This register is used to enable and disable LP_FLEXCOMM5 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM5 receive request.\n\nRaw bit values: false (0) = Value28: Disable.; true (1) = Value29: Enable."
     bit_offset: 15
     bit_size: 1
-    enum: Req79En1
   - name: req80_en0
-    description: This register is used to enable and disable LP_FLEXCOMM5 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM5 transmit request.\n\nRaw bit values: false (0) = Value30: Disable.; true (1) = Value31: Enable."
     bit_offset: 16
     bit_size: 1
-    enum: Req80En0
   - name: req81_en0
-    description: This register is used to enable and disable LP_FLEXCOMM6 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM6 receive request.\n\nRaw bit values: false (0) = Value32: Disable.; true (1) = Value33: Enable."
     bit_offset: 17
     bit_size: 1
-    enum: Req81En0
   - name: req82_en0
-    description: This register is used to enable and disable LP_FLEXCOMM6 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM6 transmit request.\n\nRaw bit values: false (0) = Value34: Disable.; true (1) = Value35: Enable."
     bit_offset: 18
     bit_size: 1
-    enum: Req82En0
   - name: req83_en0
-    description: This register is used to enable and disable LP_FLEXCOMM7 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM7 receive request.\n\nRaw bit values: false (0) = Value36: Disable.; true (1) = Value37: Enable."
     bit_offset: 19
     bit_size: 1
-    enum: Req83En0
   - name: req84_en0
-    description: This register is used to enable and disable LP_FLEXCOMM7 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM7 transmit request.\n\nRaw bit values: false (0) = Value38: Disable.; true (1) = Value39: Enable."
     bit_offset: 20
     bit_size: 1
-    enum: Req84En0
   - name: req85_en0
-    description: This register is used to enable and disable LP_FLEXCOMM8 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM8 receive request.\n\nRaw bit values: false (0) = Value40: Disable.; true (1) = Value41: Enable."
     bit_offset: 21
     bit_size: 1
-    enum: Req21En0
   - name: req86_en0
-    description: This register is used to enable and disable LP_FLEXCOMM8 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM8 transmit request.\n\nRaw bit values: false (0) = Value42: Disable.; true (1) = Value43: Enable."
     bit_offset: 22
     bit_size: 1
-    enum: Req22En0
   - name: req87_en0
-    description: This register is used to enable and disable LP_FLEXCOMM9 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM9 receive request.\n\nRaw bit values: false (0) = Value44: Disable.; true (1) = Value45: Enable."
     bit_offset: 23
     bit_size: 1
-    enum: Req119En1
   - name: req88_en0
-    description: This register is used to enable and disable LP_FLEXCOMM9 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM9 transmit request.\n\nRaw bit values: false (0) = Value46: Disable.; true (1) = Value47: Enable."
     bit_offset: 24
     bit_size: 1
-    enum: Req24En0
   - name: req91_en0
-    description: This register is used to enable and disable EMVSIM0 receive request.
+    description: "This register is used to enable and disable EMVSIM0 receive request.\n\nRaw bit values: false (0) = Value52: Disable.; true (1) = Value53: Enable."
     bit_offset: 27
     bit_size: 1
-    enum: Req27En0
   - name: req92_en0
-    description: This register is used to enable and disable EMVSIM0 transmit request.
+    description: "This register is used to enable and disable EMVSIM0 transmit request.\n\nRaw bit values: false (0) = Value54: Disable.; true (1) = Value55: Enable."
     bit_offset: 28
     bit_size: 1
-    enum: Req28En1
   - name: req93_en0
-    description: This register is used to enable and disable EMVSIM1 receive request.
+    description: "This register is used to enable and disable EMVSIM1 receive request.\n\nRaw bit values: false (0) = Value56: Disable.; true (1) = Value57: Enable."
     bit_offset: 29
     bit_size: 1
-    enum: Req29En0
   - name: req94_en0
-    description: This register is used to enable and disable EMVSIM1 transmit request.
+    description: "This register is used to enable and disable EMVSIM1 transmit request.\n\nRaw bit values: false (0) = Value58: Disable.; true (1) = Value59: Enable."
     bit_offset: 30
     bit_size: 1
-    enum: Req30En0
   - name: req95_en0
-    description: This register is used to enable and disable I3C0 receive request.
+    description: "This register is used to enable and disable I3C0 receive request.\n\nRaw bit values: false (0) = Value60: Disable.; true (1) = Value61: Enable."
     bit_offset: 31
     bit_size: 1
-    enum: Req31En0
 fieldset/Dma0ReqEnable2Clr:
   description: DMA0 Request Enable2.
   fields:
@@ -2485,234 +2349,189 @@ fieldset/Dma0ReqEnable3:
   description: DMA0 Request Enable3.
   fields:
   - name: req96_en0
-    description: This register is used to enable and disable I3C0 transmit request.
+    description: "This register is used to enable and disable I3C0 transmit request.\n\nRaw bit values: false (0) = Value0: Disable.; true (1) = Value1: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Req96En0
   - name: req97_en0
-    description: This register is used to enable and disable I3C1 receive request.
+    description: "This register is used to enable and disable I3C1 receive request.\n\nRaw bit values: false (0) = Value0: Disable.; true (1) = Value1: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: Req96En0
   - name: req98_en0
-    description: This register is used to enable and disable I3C1 transmit request.
+    description: "This register is used to enable and disable I3C1 transmit request.\n\nRaw bit values: false (0) = Value2: Disable.; true (1) = Value3: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: Req98En0
   - name: req99_en0
-    description: This register is used to enable and disable SAI0 receive request.
+    description: "This register is used to enable and disable SAI0 receive request.\n\nRaw bit values: false (0) = Value4: Disable.; true (1) = Value5: Enable."
     bit_offset: 3
     bit_size: 1
-    enum: Req67En1
   - name: req100_en0
-    description: This register is used to enable and disable SAI0 transmit request.
+    description: "This register is used to enable and disable SAI0 transmit request.\n\nRaw bit values: false (0) = Value6: Disable.; true (1) = Value7: Enable."
     bit_offset: 4
     bit_size: 1
-    enum: Req68En0
   - name: req101_en0
-    description: This register is used to enable and disable SAI1 receive request.
+    description: "This register is used to enable and disable SAI1 receive request.\n\nRaw bit values: false (0) = Value8: Disable.; true (1) = Value9: Enable."
     bit_offset: 5
     bit_size: 1
-    enum: Req69En0
   - name: req102_en0
-    description: This register is used to enable and disable SAI1 transmit request.
+    description: "This register is used to enable and disable SAI1 transmit request.\n\nRaw bit values: false (0) = Value10: Disable.; true (1) = Value11: Enable."
     bit_offset: 6
     bit_size: 1
-    enum: Req102En1
   - name: req108_en0
-    description: This register is used to enable and disable GPIO0 pin event request 0.
+    description: "This register is used to enable and disable GPIO0 pin event request 0.\n\nRaw bit values: false (0) = Value22: Disable.; true (1) = Value23: Enable."
     bit_offset: 12
     bit_size: 1
-    enum: Req108En0
   - name: req109_en0
-    description: This register is used to enable and disable GPIO0 pin event request 1.
+    description: "This register is used to enable and disable GPIO0 pin event request 1.\n\nRaw bit values: false (0) = Value24: Disable.; true (1) = Value25: Enable."
     bit_offset: 13
     bit_size: 1
-    enum: Req109En0
   - name: req110_en0
-    description: This register is used to enable and disable GPIO1 pin event request 0.
+    description: "This register is used to enable and disable GPIO1 pin event request 0.\n\nRaw bit values: false (0) = Value26: Disable.; true (1) = Value27: Enable."
     bit_offset: 14
     bit_size: 1
-    enum: Req110En0
   - name: req111_en0
-    description: This register is used to enable and disable GPIO1 pin event request 1.
+    description: "This register is used to enable and disable GPIO1 pin event request 1.\n\nRaw bit values: false (0) = Value28: Disable.; true (1) = Value29: Enable."
     bit_offset: 15
     bit_size: 1
-    enum: Req79En1
   - name: req112_en0
-    description: This register is used to enable and disable GPIO2 pin event request 0.
+    description: "This register is used to enable and disable GPIO2 pin event request 0.\n\nRaw bit values: false (0) = Value30: Disable.; true (1) = Value31: Enable."
     bit_offset: 16
     bit_size: 1
-    enum: Req80En0
   - name: req113_en0
-    description: This register is used to enable and disable GPIO2 pin event request 1.
+    description: "This register is used to enable and disable GPIO2 pin event request 1.\n\nRaw bit values: false (0) = Value32: Disable.; true (1) = Value33: Enable."
     bit_offset: 17
     bit_size: 1
-    enum: Req81En0
   - name: req114_en0
-    description: This register is used to enable and disable GPIO3 pin event request 0.
+    description: "This register is used to enable and disable GPIO3 pin event request 0.\n\nRaw bit values: false (0) = Value34: Disable.; true (1) = Value35: Enable."
     bit_offset: 18
     bit_size: 1
-    enum: Req82En0
   - name: req115_en0
-    description: This register is used to enable and disable GPIO3 pin event request 1.
+    description: "This register is used to enable and disable GPIO3 pin event request 1.\n\nRaw bit values: false (0) = Value36: Disable.; true (1) = Value37: Enable."
     bit_offset: 19
     bit_size: 1
-    enum: Req83En0
   - name: req116_en0
-    description: This register is used to enable and disable GPIO4 pin event request 0.
+    description: "This register is used to enable and disable GPIO4 pin event request 0.\n\nRaw bit values: false (0) = Value38: Disable.; true (1) = Value39: Enable."
     bit_offset: 20
     bit_size: 1
-    enum: Req84En0
   - name: req117_en0
-    description: This register is used to enable and disable GPIO4 pin event request 1.
+    description: "This register is used to enable and disable GPIO4 pin event request 1.\n\nRaw bit values: false (0) = Value40: Disable.; true (1) = Value41: Enable."
     bit_offset: 21
     bit_size: 1
-    enum: Req21En0
   - name: req118_en0
-    description: This register is used to enable and disable GPIO5 pin event request 0.
+    description: "This register is used to enable and disable GPIO5 pin event request 0.\n\nRaw bit values: false (0) = Value42: Disable.; true (1) = Value43: Enable."
     bit_offset: 22
     bit_size: 1
-    enum: Req22En0
   - name: req119_en0
-    description: This register is used to enable and disable GPIO5 pin event request 1.
+    description: "This register is used to enable and disable GPIO5 pin event request 1.\n\nRaw bit values: false (0) = Value44: Disable.; true (1) = Value45: Enable."
     bit_offset: 23
     bit_size: 1
-    enum: Req119En1
   only_in: ^(MCXN2[0-9]{2})$
 fieldset/Dma0ReqEnable32:
   description: DMA0 Request Enable3.
   fields:
   - name: req96_en0
-    description: This register is used to enable and disable I3C0 transmit request.
+    description: "This register is used to enable and disable I3C0 transmit request.\n\nRaw bit values: false (0) = Value0: Disable.; true (1) = Value1: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Req96En0
   - name: req97_en0
-    description: This register is used to enable and disable I3C1 receive request.
+    description: "This register is used to enable and disable I3C1 receive request.\n\nRaw bit values: false (0) = Value0: Disable.; true (1) = Value1: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: Req96En0
   - name: req98_en0
-    description: This register is used to enable and disable I3C1 transmit request.
+    description: "This register is used to enable and disable I3C1 transmit request.\n\nRaw bit values: false (0) = Value2: Disable.; true (1) = Value3: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: Req98En0
   - name: req99_en0
-    description: This register is used to enable and disable SAI0 receive request.
+    description: "This register is used to enable and disable SAI0 receive request.\n\nRaw bit values: false (0) = Value4: Disable.; true (1) = Value5: Enable."
     bit_offset: 3
     bit_size: 1
-    enum: Req67En1
   - name: req100_en0
-    description: This register is used to enable and disable SAI0 transmit request.
+    description: "This register is used to enable and disable SAI0 transmit request.\n\nRaw bit values: false (0) = Value6: Disable.; true (1) = Value7: Enable."
     bit_offset: 4
     bit_size: 1
-    enum: Req68En0
   - name: req101_en0
-    description: This register is used to enable and disable SAI1 receive request.
+    description: "This register is used to enable and disable SAI1 receive request.\n\nRaw bit values: false (0) = Value8: Disable.; true (1) = Value9: Enable."
     bit_offset: 5
     bit_size: 1
-    enum: Req69En0
   - name: req102_en0
-    description: This register is used to enable and disable SAI1 transmit request.
+    description: "This register is used to enable and disable SAI1 transmit request.\n\nRaw bit values: false (0) = Value10: Disable.; true (1) = Value11: Enable."
     bit_offset: 6
     bit_size: 1
-    enum: Req102En1
   - name: req103_en0
-    description: This register is used to enable and disable SINC0 ipd_req_sinc[0] or ipd_req_alt [0] request.
+    description: "This register is used to enable and disable SINC0 ipd_req_sinc[0] or ipd_req_alt [0] request.\n\nRaw bit values: false (0) = Value12: Disable.; true (1) = Value13: Enable."
     bit_offset: 7
     bit_size: 1
-    enum: Req7En0
   - name: req104_en0
-    description: This register is used to enable and disable SINC0 ipd_req_sinc[1] or ipd_req_alt [1] request.
+    description: "This register is used to enable and disable SINC0 ipd_req_sinc[1] or ipd_req_alt [1] request.\n\nRaw bit values: false (0) = Value14: Disable.; true (1) = Value15: Enable."
     bit_offset: 8
     bit_size: 1
-    enum: Req72En0
   - name: req105_en0
-    description: This register is used to enable and disable SINC0 ipd_req_sinc[2] or ipd_req_alt [2] request.
+    description: "This register is used to enable and disable SINC0 ipd_req_sinc[2] or ipd_req_alt [2] request.\n\nRaw bit values: false (0) = Value16: Disable.; true (1) = Value17: Enable."
     bit_offset: 9
     bit_size: 1
-    enum: Req9En1
   - name: req106_en0
-    description: This register is used to enable and disable SINC0 ipd_req_sinc[3] or ipd_req_alt [3] request.
+    description: "This register is used to enable and disable SINC0 ipd_req_sinc[3] or ipd_req_alt [3] request.\n\nRaw bit values: false (0) = Value18: Disable.; true (1) = Value19: Enable."
     bit_offset: 10
     bit_size: 1
-    enum: Req10En0
   - name: req107_en0
-    description: This register is used to enable and disable SINC0 ipd_req_sinc[4] or ipd_req_alt [4] request.
+    description: "This register is used to enable and disable SINC0 ipd_req_sinc[4] or ipd_req_alt [4] request.\n\nRaw bit values: false (0) = Value20: Disable.; true (1) = Value21: Enable."
     bit_offset: 11
     bit_size: 1
-    enum: Req11En0
   - name: req108_en0
-    description: This register is used to enable and disable GPIO0 pin event request 0.
+    description: "This register is used to enable and disable GPIO0 pin event request 0.\n\nRaw bit values: false (0) = Value22: Disable.; true (1) = Value23: Enable."
     bit_offset: 12
     bit_size: 1
-    enum: Req108En0
   - name: req109_en0
-    description: This register is used to enable and disable GPIO0 pin event request 1.
+    description: "This register is used to enable and disable GPIO0 pin event request 1.\n\nRaw bit values: false (0) = Value24: Disable.; true (1) = Value25: Enable."
     bit_offset: 13
     bit_size: 1
-    enum: Req109En0
   - name: req110_en0
-    description: This register is used to enable and disable GPIO1 pin event request 0.
+    description: "This register is used to enable and disable GPIO1 pin event request 0.\n\nRaw bit values: false (0) = Value26: Disable.; true (1) = Value27: Enable."
     bit_offset: 14
     bit_size: 1
-    enum: Req110En0
   - name: req111_en0
-    description: This register is used to enable and disable GPIO1 pin event request 1.
+    description: "This register is used to enable and disable GPIO1 pin event request 1.\n\nRaw bit values: false (0) = Value28: Disable.; true (1) = Value29: Enable."
     bit_offset: 15
     bit_size: 1
-    enum: Req79En1
   - name: req112_en0
-    description: This register is used to enable and disable GPIO2 pin event request 0.
+    description: "This register is used to enable and disable GPIO2 pin event request 0.\n\nRaw bit values: false (0) = Value30: Disable.; true (1) = Value31: Enable."
     bit_offset: 16
     bit_size: 1
-    enum: Req80En0
   - name: req113_en0
-    description: This register is used to enable and disable GPIO2 pin event request 1.
+    description: "This register is used to enable and disable GPIO2 pin event request 1.\n\nRaw bit values: false (0) = Value32: Disable.; true (1) = Value33: Enable."
     bit_offset: 17
     bit_size: 1
-    enum: Req81En0
   - name: req114_en0
-    description: This register is used to enable and disable GPIO3 pin event request 0.
+    description: "This register is used to enable and disable GPIO3 pin event request 0.\n\nRaw bit values: false (0) = Value34: Disable.; true (1) = Value35: Enable."
     bit_offset: 18
     bit_size: 1
-    enum: Req82En0
   - name: req115_en0
-    description: This register is used to enable and disable GPIO3 pin event request 1.
+    description: "This register is used to enable and disable GPIO3 pin event request 1.\n\nRaw bit values: false (0) = Value36: Disable.; true (1) = Value37: Enable."
     bit_offset: 19
     bit_size: 1
-    enum: Req83En0
   - name: req116_en0
-    description: This register is used to enable and disable GPIO4 pin event request 0.
+    description: "This register is used to enable and disable GPIO4 pin event request 0.\n\nRaw bit values: false (0) = Value38: Disable.; true (1) = Value39: Enable."
     bit_offset: 20
     bit_size: 1
-    enum: Req84En0
   - name: req117_en0
-    description: This register is used to enable and disable GPIO4 pin event request 1.
+    description: "This register is used to enable and disable GPIO4 pin event request 1.\n\nRaw bit values: false (0) = Value40: Disable.; true (1) = Value41: Enable."
     bit_offset: 21
     bit_size: 1
-    enum: Req21En0
   - name: req118_en0
-    description: This register is used to enable and disable GPIO5 pin event request 0.
+    description: "This register is used to enable and disable GPIO5 pin event request 0.\n\nRaw bit values: false (0) = Value42: Disable.; true (1) = Value43: Enable."
     bit_offset: 22
     bit_size: 1
-    enum: Req22En0
   - name: req119_en0
-    description: This register is used to enable and disable GPIO5 pin event request 1.
+    description: "This register is used to enable and disable GPIO5 pin event request 1.\n\nRaw bit values: false (0) = Value44: Disable.; true (1) = Value45: Enable."
     bit_offset: 23
     bit_size: 1
-    enum: Req119En1
   - name: req120_en0
-    description: This register is used to enable and disable TSI0 end of scan request.
+    description: "This register is used to enable and disable TSI0 end of scan request.\n\nRaw bit values: false (0) = Value46: Disable.; true (1) = Value47: Enable."
     bit_offset: 24
     bit_size: 1
-    enum: Req24En0
   - name: req121_en0
-    description: This register is used to enable and disable TSI0 out of range request.
+    description: "This register is used to enable and disable TSI0 out of range request.\n\nRaw bit values: false (0) = Value48: Disable.; true (1) = Value49: Enable."
     bit_offset: 25
     bit_size: 1
-    enum: Req121En0
 fieldset/Dma0ReqEnable3Clr:
   description: DMA0 Request Enable3.
   fields:
@@ -3091,279 +2910,225 @@ fieldset/Dma1ReqEnable0:
   description: DMA1 Request Enable0.
   fields:
   - name: req3_en1
-    description: This register is used to enable and disable PINT0 INT0 request.
+    description: "This register is used to enable and disable PINT0 INT0 request.\n\nRaw bit values: false (0) = Value4: Disable.; true (1) = Value5: Enable."
     bit_offset: 3
     bit_size: 1
-    enum: Req67En1
   - name: req4_en1
-    description: This register is used to enable and disable PINT0 INT1 request.
+    description: "This register is used to enable and disable PINT0 INT1 request.\n\nRaw bit values: false (0) = Value6: Disable.; true (1) = Value7: Enable."
     bit_offset: 4
     bit_size: 1
-    enum: Req68En0
   - name: req5_en1
-    description: This register is used to enable and disable PINT0 INT2 request.
+    description: "This register is used to enable and disable PINT0 INT2 request.\n\nRaw bit values: false (0) = Value8: Disable.; true (1) = Value9: Enable."
     bit_offset: 5
     bit_size: 1
-    enum: Req69En0
   - name: req6_en1
-    description: This register is used to enable and disable PINT0 INT3 request.
+    description: "This register is used to enable and disable PINT0 INT3 request.\n\nRaw bit values: false (0) = Value10: Disable.; true (1) = Value11: Enable."
     bit_offset: 6
     bit_size: 1
-    enum: Req102En1
   - name: req7_en1
-    description: This register is used to enable and disable CTIMER0 DMAREQ_M0 request.
+    description: "This register is used to enable and disable CTIMER0 DMAREQ_M0 request.\n\nRaw bit values: false (0) = Value12: Disable.; true (1) = Value13: Enable."
     bit_offset: 7
     bit_size: 1
-    enum: Req7En0
   - name: req8_en1
-    description: This register is used to enable and disable CTIMER0 DMAREQ_M1 request.
+    description: "This register is used to enable and disable CTIMER0 DMAREQ_M1 request.\n\nRaw bit values: false (0) = Value14: Disable.; true (1) = Value15: Enable."
     bit_offset: 8
     bit_size: 1
-    enum: Req72En0
   - name: req9_en1
-    description: This register is used to enable and disable CTIMER1 DMAREQ_M0 request.
+    description: "This register is used to enable and disable CTIMER1 DMAREQ_M0 request.\n\nRaw bit values: false (0) = Value16: Disable.; true (1) = Value17: Enable."
     bit_offset: 9
     bit_size: 1
-    enum: Req9En1
   - name: req10_en1
-    description: This register is used to enable and disable CTIMER1 DMAREQ_M1 request.
+    description: "This register is used to enable and disable CTIMER1 DMAREQ_M1 request.\n\nRaw bit values: false (0) = Value18: Disable.; true (1) = Value19: Enable."
     bit_offset: 10
     bit_size: 1
-    enum: Req10En0
   - name: req11_en1
-    description: This register is used to enable and disable CTIMER2 DMAREQ_M0 request.
+    description: "This register is used to enable and disable CTIMER2 DMAREQ_M0 request.\n\nRaw bit values: false (0) = Value20: Disable.; true (1) = Value21: Enable."
     bit_offset: 11
     bit_size: 1
-    enum: Req11En0
   - name: req12_en1
-    description: This register is used to enable and disable CTIMER2 DMAREQ_M1 request.
+    description: "This register is used to enable and disable CTIMER2 DMAREQ_M1 request.\n\nRaw bit values: false (0) = Value22: Disable.; true (1) = Value23: Enable."
     bit_offset: 12
     bit_size: 1
-    enum: Req108En0
   - name: req13_en1
-    description: This register is used to enable and disable CTIMER3 DMAREQ_M0 request.
+    description: "This register is used to enable and disable CTIMER3 DMAREQ_M0 request.\n\nRaw bit values: false (0) = Value24: Disable.; true (1) = Value25: Enable."
     bit_offset: 13
     bit_size: 1
-    enum: Req109En0
   - name: req14_en1
-    description: This register is used to enable and disable CTIMER3 DMAREQ_M1 request.
+    description: "This register is used to enable and disable CTIMER3 DMAREQ_M1 request.\n\nRaw bit values: false (0) = Value26: Disable.; true (1) = Value27: Enable."
     bit_offset: 14
     bit_size: 1
-    enum: Req110En0
   - name: req15_en1
-    description: This register is used to enable and disable CTIMER4 DMAREQ_M0 request.
+    description: "This register is used to enable and disable CTIMER4 DMAREQ_M0 request.\n\nRaw bit values: false (0) = Value28: Disable.; true (1) = Value29: Enable."
     bit_offset: 15
     bit_size: 1
-    enum: Req79En1
   - name: req16_en1
-    description: This register is used to enable and disable CTIMER4 DMAREQ_M1 request.
+    description: "This register is used to enable and disable CTIMER4 DMAREQ_M1 request.\n\nRaw bit values: false (0) = Value30: Disable.; true (1) = Value31: Enable."
     bit_offset: 16
     bit_size: 1
-    enum: Req80En0
   - name: req17_en1
-    description: This register is used to enable and disable WUU0 wake up event request.
+    description: "This register is used to enable and disable WUU0 wake up event request.\n\nRaw bit values: false (0) = Value32: Disable.; true (1) = Value33: Enable."
     bit_offset: 17
     bit_size: 1
-    enum: Req81En0
   - name: req18_en1
-    description: This register is used to enable and disable MICFIL0 FIFO_request.
+    description: "This register is used to enable and disable MICFIL0 FIFO_request.\n\nRaw bit values: false (0) = Value34: Disable.; true (1) = Value35: Enable."
     bit_offset: 18
     bit_size: 1
-    enum: Req82En0
   - name: req21_en1
-    description: This register is used to enable and disable ADC0 FIFO A request.
+    description: "This register is used to enable and disable ADC0 FIFO A request.\n\nRaw bit values: false (0) = Value40: Disable.; true (1) = Value41: Enable."
     bit_offset: 21
     bit_size: 1
-    enum: Req21En0
   - name: req22_en1
-    description: This register is used to enable and disable ADC0 FIFO B request.
+    description: "This register is used to enable and disable ADC0 FIFO B request.\n\nRaw bit values: false (0) = Value42: Disable.; true (1) = Value43: Enable."
     bit_offset: 22
     bit_size: 1
-    enum: Req22En0
   - name: req23_en1
-    description: This register is used to enable and disable ADC1 FIFO A request.
+    description: "This register is used to enable and disable ADC1 FIFO A request.\n\nRaw bit values: false (0) = Value44: Disable.; true (1) = Value45: Enable."
     bit_offset: 23
     bit_size: 1
-    enum: Req119En1
   - name: req24_en1
-    description: This register is used to enable and disable ADC1 FIFO B request.
+    description: "This register is used to enable and disable ADC1 FIFO B request.\n\nRaw bit values: false (0) = Value46: Disable.; true (1) = Value47: Enable."
     bit_offset: 24
     bit_size: 1
-    enum: Req24En0
   - name: req28_en1
-    description: This register is used to enable and disable CMP0 DMA_request.
+    description: "This register is used to enable and disable CMP0 DMA_request.\n\nRaw bit values: false (0) = Value54: Disable.; true (1) = Value55: Enable."
     bit_offset: 28
     bit_size: 1
-    enum: Req28En1
   - name: req29_en1
-    description: This register is used to enable and disable CMP1 DMA_request.
+    description: "This register is used to enable and disable CMP1 DMA_request.\n\nRaw bit values: false (0) = Value56: Disable.; true (1) = Value57: Enable."
     bit_offset: 29
     bit_size: 1
-    enum: Req29En0
   - name: req31_en1
-    description: This register is used to enable and disable EVTG0 OUT0A request.
+    description: "This register is used to enable and disable EVTG0 OUT0A request.\n\nRaw bit values: false (0) = Value60: Disable.; true (1) = Value61: Enable."
     bit_offset: 31
     bit_size: 1
-    enum: Req31En0
   only_in: ^(MCXN2[0-9]{2})$
 fieldset/Dma1ReqEnable02:
   description: DMA1 Request Enable0.
   fields:
   - name: req1_en1
-    description: This register is used to enable and disable FLEXSPI0 receive event request.
+    description: "This register is used to enable and disable FLEXSPI0 receive event request.\n\nRaw bit values: false (0) = Value0: Disable.; true (1) = Value1: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: Req96En0
   - name: req2_en1
-    description: This register is used to enable and disable FLEXSPI0 transmit event request.
+    description: "This register is used to enable and disable FLEXSPI0 transmit event request.\n\nRaw bit values: false (0) = Value2: Disable.; true (1) = Value3: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: Req98En0
   - name: req3_en1
-    description: This register is used to enable and disable PINT0 INT0 request.
+    description: "This register is used to enable and disable PINT0 INT0 request.\n\nRaw bit values: false (0) = Value4: Disable.; true (1) = Value5: Enable."
     bit_offset: 3
     bit_size: 1
-    enum: Req67En1
   - name: req4_en1
-    description: This register is used to enable and disable PINT0 INT1 request.
+    description: "This register is used to enable and disable PINT0 INT1 request.\n\nRaw bit values: false (0) = Value6: Disable.; true (1) = Value7: Enable."
     bit_offset: 4
     bit_size: 1
-    enum: Req68En0
   - name: req5_en1
-    description: This register is used to enable and disable PINT0 INT2 request.
+    description: "This register is used to enable and disable PINT0 INT2 request.\n\nRaw bit values: false (0) = Value8: Disable.; true (1) = Value9: Enable."
     bit_offset: 5
     bit_size: 1
-    enum: Req69En0
   - name: req6_en1
-    description: This register is used to enable and disable PINT0 INT3 request.
+    description: "This register is used to enable and disable PINT0 INT3 request.\n\nRaw bit values: false (0) = Value10: Disable.; true (1) = Value11: Enable."
     bit_offset: 6
     bit_size: 1
-    enum: Req102En1
   - name: req7_en1
-    description: This register is used to enable and disable CTIMER0 DMAREQ_M0 request.
+    description: "This register is used to enable and disable CTIMER0 DMAREQ_M0 request.\n\nRaw bit values: false (0) = Value12: Disable.; true (1) = Value13: Enable."
     bit_offset: 7
     bit_size: 1
-    enum: Req7En0
   - name: req8_en1
-    description: This register is used to enable and disable CTIMER0 DMAREQ_M1 request.
+    description: "This register is used to enable and disable CTIMER0 DMAREQ_M1 request.\n\nRaw bit values: false (0) = Value14: Disable.; true (1) = Value15: Enable."
     bit_offset: 8
     bit_size: 1
-    enum: Req72En0
   - name: req9_en1
-    description: This register is used to enable and disable CTIMER1 DMAREQ_M0 request.
+    description: "This register is used to enable and disable CTIMER1 DMAREQ_M0 request.\n\nRaw bit values: false (0) = Value16: Disable.; true (1) = Value17: Enable."
     bit_offset: 9
     bit_size: 1
-    enum: Req9En1
   - name: req10_en1
-    description: This register is used to enable and disable CTIMER1 DMAREQ_M1 request.
+    description: "This register is used to enable and disable CTIMER1 DMAREQ_M1 request.\n\nRaw bit values: false (0) = Value18: Disable.; true (1) = Value19: Enable."
     bit_offset: 10
     bit_size: 1
-    enum: Req10En0
   - name: req11_en1
-    description: This register is used to enable and disable CTIMER2 DMAREQ_M0 request.
+    description: "This register is used to enable and disable CTIMER2 DMAREQ_M0 request.\n\nRaw bit values: false (0) = Value20: Disable.; true (1) = Value21: Enable."
     bit_offset: 11
     bit_size: 1
-    enum: Req11En0
   - name: req12_en1
-    description: This register is used to enable and disable CTIMER2 DMAREQ_M1 request.
+    description: "This register is used to enable and disable CTIMER2 DMAREQ_M1 request.\n\nRaw bit values: false (0) = Value22: Disable.; true (1) = Value23: Enable."
     bit_offset: 12
     bit_size: 1
-    enum: Req108En0
   - name: req13_en1
-    description: This register is used to enable and disable CTIMER3 DMAREQ_M0 request.
+    description: "This register is used to enable and disable CTIMER3 DMAREQ_M0 request.\n\nRaw bit values: false (0) = Value24: Disable.; true (1) = Value25: Enable."
     bit_offset: 13
     bit_size: 1
-    enum: Req109En0
   - name: req14_en1
-    description: This register is used to enable and disable CTIMER3 DMAREQ_M1 request.
+    description: "This register is used to enable and disable CTIMER3 DMAREQ_M1 request.\n\nRaw bit values: false (0) = Value26: Disable.; true (1) = Value27: Enable."
     bit_offset: 14
     bit_size: 1
-    enum: Req110En0
   - name: req15_en1
-    description: This register is used to enable and disable CTIMER4 DMAREQ_M0 request.
+    description: "This register is used to enable and disable CTIMER4 DMAREQ_M0 request.\n\nRaw bit values: false (0) = Value28: Disable.; true (1) = Value29: Enable."
     bit_offset: 15
     bit_size: 1
-    enum: Req79En1
   - name: req16_en1
-    description: This register is used to enable and disable CTIMER4 DMAREQ_M1 request.
+    description: "This register is used to enable and disable CTIMER4 DMAREQ_M1 request.\n\nRaw bit values: false (0) = Value30: Disable.; true (1) = Value31: Enable."
     bit_offset: 16
     bit_size: 1
-    enum: Req80En0
   - name: req17_en1
-    description: This register is used to enable and disable WUU0 wake up event request.
+    description: "This register is used to enable and disable WUU0 wake up event request.\n\nRaw bit values: false (0) = Value32: Disable.; true (1) = Value33: Enable."
     bit_offset: 17
     bit_size: 1
-    enum: Req81En0
   - name: req18_en1
-    description: This register is used to enable and disable MICFIL0 FIFO_request.
+    description: "This register is used to enable and disable MICFIL0 FIFO_request.\n\nRaw bit values: false (0) = Value34: Disable.; true (1) = Value35: Enable."
     bit_offset: 18
     bit_size: 1
-    enum: Req82En0
   - name: req19_en1
-    description: This register is used to enable and disable SCT0 DMA0 request.
+    description: "This register is used to enable and disable SCT0 DMA0 request.\n\nRaw bit values: false (0) = Value36: Disable.; true (1) = Value37: Enable."
     bit_offset: 19
     bit_size: 1
-    enum: Req83En0
   - name: req20_en1
-    description: This register is used to enable and disable SCT0 DMA1 request.
+    description: "This register is used to enable and disable SCT0 DMA1 request.\n\nRaw bit values: false (0) = Value38: Disable.; true (1) = Value39: Enable."
     bit_offset: 20
     bit_size: 1
-    enum: Req84En0
   - name: req21_en1
-    description: This register is used to enable and disable ADC0 FIFO A request.
+    description: "This register is used to enable and disable ADC0 FIFO A request.\n\nRaw bit values: false (0) = Value40: Disable.; true (1) = Value41: Enable."
     bit_offset: 21
     bit_size: 1
-    enum: Req21En0
   - name: req22_en1
-    description: This register is used to enable and disable ADC0 FIFO B request.
+    description: "This register is used to enable and disable ADC0 FIFO B request.\n\nRaw bit values: false (0) = Value42: Disable.; true (1) = Value43: Enable."
     bit_offset: 22
     bit_size: 1
-    enum: Req22En0
   - name: req23_en1
-    description: This register is used to enable and disable ADC1 FIFO A request.
+    description: "This register is used to enable and disable ADC1 FIFO A request.\n\nRaw bit values: false (0) = Value44: Disable.; true (1) = Value45: Enable."
     bit_offset: 23
     bit_size: 1
-    enum: Req119En1
   - name: req24_en1
-    description: This register is used to enable and disable ADC1 FIFO B request.
+    description: "This register is used to enable and disable ADC1 FIFO B request.\n\nRaw bit values: false (0) = Value46: Disable.; true (1) = Value47: Enable."
     bit_offset: 24
     bit_size: 1
-    enum: Req24En0
   - name: req25_en1
-    description: This register is used to enable and disable DAC0 FIFO_request.
+    description: "This register is used to enable and disable DAC0 FIFO_request.\n\nRaw bit values: false (0) = Value48: Disable.; true (1) = Value49: Enable."
     bit_offset: 25
     bit_size: 1
-    enum: Req121En0
   - name: req26_en1
-    description: This register is used to enable and disable DAC1 FIFO_request.
+    description: "This register is used to enable and disable DAC1 FIFO_request.\n\nRaw bit values: false (0) = Value50: Disable.; true (1) = Value51: Enable."
     bit_offset: 26
     bit_size: 1
-    enum: Req26En0
   - name: req27_en1
-    description: This register is used to enable and disable DAC2 FIFO_request.
+    description: "This register is used to enable and disable DAC2 FIFO_request.\n\nRaw bit values: false (0) = Value52: Disable.; true (1) = Value53: Enable."
     bit_offset: 27
     bit_size: 1
-    enum: Req27En0
   - name: req28_en1
-    description: This register is used to enable and disable CMP0 DMA_request.
+    description: "This register is used to enable and disable CMP0 DMA_request.\n\nRaw bit values: false (0) = Value54: Disable.; true (1) = Value55: Enable."
     bit_offset: 28
     bit_size: 1
-    enum: Req28En1
   - name: req29_en1
-    description: This register is used to enable and disable CMP1 DMA_request.
+    description: "This register is used to enable and disable CMP1 DMA_request.\n\nRaw bit values: false (0) = Value56: Disable.; true (1) = Value57: Enable."
     bit_offset: 29
     bit_size: 1
-    enum: Req29En0
   - name: req30_en1
-    description: This register is used to enable and disable CMP2 DMA_request.
+    description: "This register is used to enable and disable CMP2 DMA_request.\n\nRaw bit values: false (0) = Value58: Disable.; true (1) = Value59: Enable."
     bit_offset: 30
     bit_size: 1
-    enum: Req30En0
   - name: req31_en1
-    description: This register is used to enable and disable EVTG0 OUT0A request.
+    description: "This register is used to enable and disable EVTG0 OUT0A request.\n\nRaw bit values: false (0) = Value60: Disable.; true (1) = Value61: Enable."
     bit_offset: 31
     bit_size: 1
-    enum: Req31En0
 fieldset/Dma1ReqEnable0Clr:
   description: DMA1 Request Enable0.
   fields:
@@ -4037,155 +3802,125 @@ fieldset/Dma1ReqEnable1:
   description: DMA1 Request Enable1.
   fields:
   - name: req32_en1
-    description: This register is used to enable and disable EVTG0 OUT0B request.
+    description: "This register is used to enable and disable EVTG0 OUT0B request.\n\nRaw bit values: false (0) = Value62: Disable.; true (1) = Value63: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Req32En0
   - name: req33_en1
-    description: This register is used to enable and disable EVTG0 OUT1A request.
+    description: "This register is used to enable and disable EVTG0 OUT1A request.\n\nRaw bit values: false (0) = Value64: Disable.; true (1) = Value65: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: Req33En0
   - name: req34_en1
-    description: This register is used to enable and disable EVTG0 OUT1B request.
+    description: "This register is used to enable and disable EVTG0 OUT1B request.\n\nRaw bit values: false (0) = Value66: Disable.; true (1) = Value67: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: Req34En0
   - name: req35_en1
-    description: This register is used to enable and disable EVTG0 OUT2A request.
+    description: "This register is used to enable and disable EVTG0 OUT2A request.\n\nRaw bit values: false (0) = Value68: Disable.; true (1) = Value69: Enable."
     bit_offset: 3
     bit_size: 1
-    enum: Req35En0
   - name: req36_en1
-    description: This register is used to enable and disable EVTG0 OUT2B request.
+    description: "This register is used to enable and disable EVTG0 OUT2B request.\n\nRaw bit values: false (0) = Value70: Disable.; true (1) = Value71: Enable."
     bit_offset: 4
     bit_size: 1
-    enum: Req36En0
   - name: req37_en1
-    description: This register is used to enable and disable EVTG0 OUT3A request.
+    description: "This register is used to enable and disable EVTG0 OUT3A request.\n\nRaw bit values: false (0) = Value72: Disable.; true (1) = Value73: Enable."
     bit_offset: 5
     bit_size: 1
-    enum: Req37En0
   - name: req38_en1
-    description: This register is used to enable and disable EVTG0 OUT3B request.
+    description: "This register is used to enable and disable EVTG0 OUT3B request.\n\nRaw bit values: false (0) = Value74: Disable.; true (1) = Value75: Enable."
     bit_offset: 6
     bit_size: 1
-    enum: Req38En0
   - name: req39_en1
-    description: This register is used to enable and disable PWM0 Req_capt0 request.
+    description: "This register is used to enable and disable PWM0 Req_capt0 request.\n\nRaw bit values: false (0) = Value76: Disable.; true (1) = Value77: Enable."
     bit_offset: 7
     bit_size: 1
-    enum: Req39En0
   - name: req40_en1
-    description: This register is used to enable and disable PWM0 Req_capt1 request.
+    description: "This register is used to enable and disable PWM0 Req_capt1 request.\n\nRaw bit values: false (0) = Value78: Disable.; true (1) = Value79: Enable."
     bit_offset: 8
     bit_size: 1
-    enum: Req40En0
   - name: req41_en1
-    description: This register is used to enable and disable PWM0 Req_capt2 request.
+    description: "This register is used to enable and disable PWM0 Req_capt2 request.\n\nRaw bit values: false (0) = Value80: Disable.; true (1) = Value81: Enable."
     bit_offset: 9
     bit_size: 1
-    enum: Req41En1
   - name: req42_en1
-    description: This register is used to enable and disable PWM0 Req_capt3 request.
+    description: "This register is used to enable and disable PWM0 Req_capt3 request.\n\nRaw bit values: false (0) = Value82: Disable.; true (1) = Value83: Enable."
     bit_offset: 10
     bit_size: 1
-    enum: Req42En0
   - name: req43_en1
-    description: This register is used to enable and disable PWM0 Req_val0 request.
+    description: "This register is used to enable and disable PWM0 Req_val0 request.\n\nRaw bit values: false (0) = Value84: Disable.; true (1) = Value85: Enable."
     bit_offset: 11
     bit_size: 1
-    enum: Req43En0
   - name: req44_en1
-    description: This register is used to enable and disable PWM0 Req_val1 request.
+    description: "This register is used to enable and disable PWM0 Req_val1 request.\n\nRaw bit values: false (0) = Value86: Disable.; true (1) = Value87: Enable."
     bit_offset: 12
     bit_size: 1
-    enum: Req44En0
   - name: req45_en1
-    description: This register is used to enable and disable PWM0 Req_val2 request.
+    description: "This register is used to enable and disable PWM0 Req_val2 request.\n\nRaw bit values: false (0) = Value88: Disable.; true (1) = Value89: Enable."
     bit_offset: 13
     bit_size: 1
-    enum: Req45En0
   - name: req46_en1
-    description: This register is used to enable and disable PWM0 Req_val3 request.
+    description: "This register is used to enable and disable PWM0 Req_val3 request.\n\nRaw bit values: false (0) = Value90: Disable.; true (1) = Value91: Enable."
     bit_offset: 14
     bit_size: 1
-    enum: Req46En0
   - name: req47_en1
-    description: This register is used to enable and disable PWM1 Req_capt0 request.
+    description: "This register is used to enable and disable PWM1 Req_capt0 request.\n\nRaw bit values: false (0) = Value92: Disable.; true (1) = Value93: Enable."
     bit_offset: 15
     bit_size: 1
-    enum: Req47En0
   - name: req48_en1
-    description: This register is used to enable and disable PWM1 Req_capt1 request.
+    description: "This register is used to enable and disable PWM1 Req_capt1 request.\n\nRaw bit values: false (0) = Value94: Disable.; true (1) = Value95: Enable."
     bit_offset: 16
     bit_size: 1
-    enum: Req48En0
   - name: req49_en1
-    description: This register is used to enable and disable PWM1 Req_capt2 request.
+    description: "This register is used to enable and disable PWM1 Req_capt2 request.\n\nRaw bit values: false (0) = Value96: Disable.; true (1) = Value97: Enable."
     bit_offset: 17
     bit_size: 1
-    enum: Req49En0
   - name: req50_en1
-    description: This register is used to enable and disable PWM1 Req_capt3 request.
+    description: "This register is used to enable and disable PWM1 Req_capt3 request.\n\nRaw bit values: false (0) = Value98: Disable.; true (1) = Value99: Enable."
     bit_offset: 18
     bit_size: 1
-    enum: Req50En0
   - name: req51_en1
-    description: This register is used to enable and disable PWM1 Req_val0 request.
+    description: "This register is used to enable and disable PWM1 Req_val0 request.\n\nRaw bit values: false (0) = Value100: Disable.; true (1) = Value101: Enable."
     bit_offset: 19
     bit_size: 1
-    enum: Req51En0
   - name: req52_en1
-    description: This register is used to enable and disable PWM1 Req_val1 request.
+    description: "This register is used to enable and disable PWM1 Req_val1 request.\n\nRaw bit values: false (0) = Value102: Disable.; true (1) = Value103: Enable."
     bit_offset: 20
     bit_size: 1
-    enum: Req52En0
   - name: req53_en1
-    description: This register is used to enable and disable PWM1 Req_val2 request.
+    description: "This register is used to enable and disable PWM1 Req_val2 request.\n\nRaw bit values: false (0) = Value104: Disable.; true (1) = Value105: Enable."
     bit_offset: 21
     bit_size: 1
-    enum: Req53En1
   - name: req54_en1
-    description: This register is used to enable and disable PWM1 Req_val3 request.
+    description: "This register is used to enable and disable PWM1 Req_val3 request.\n\nRaw bit values: false (0) = Value106: Disable.; true (1) = Value107: Enable."
     bit_offset: 22
     bit_size: 1
-    enum: Req54En0
   - name: req57_en1
-    description: This register is used to enable and disable LPTMR0 counter match event request.
+    description: "This register is used to enable and disable LPTMR0 counter match event request.\n\nRaw bit values: false (0) = Value112: Disable.; true (1) = Value113: Enable."
     bit_offset: 25
     bit_size: 1
-    enum: Req57En0
   - name: req58_en1
-    description: This register is used to enable and disable LPTMR1 counter match event request.
+    description: "This register is used to enable and disable LPTMR1 counter match event request.\n\nRaw bit values: false (0) = Value114: Disable.; true (1) = Value115: Enable."
     bit_offset: 26
     bit_size: 1
-    enum: Req58En0
   - name: req59_en1
-    description: This register is used to enable and disable CAN0 DMA request.
+    description: "This register is used to enable and disable CAN0 DMA request.\n\nRaw bit values: false (0) = Value116: Disable.; true (1) = Value117: Enable."
     bit_offset: 27
     bit_size: 1
-    enum: Req59En0
   - name: req60_en1
-    description: This register is used to enable and disable CAN1 DMA request.
+    description: "This register is used to enable and disable CAN1 DMA request.\n\nRaw bit values: false (0) = Value118: Disable.; true (1) = Value119: Enable."
     bit_offset: 28
     bit_size: 1
-    enum: Req60En0
   - name: req61_en1
-    description: This register is used to enable and disable FlexIO0 Shifter0 Status DMA request OR Timer0 Status DMA request.
+    description: "This register is used to enable and disable FlexIO0 Shifter0 Status DMA request OR Timer0 Status DMA request.\n\nRaw bit values: false (0) = Value120: Disable.; true (1) = Value121: Enable."
     bit_offset: 29
     bit_size: 1
-    enum: Req61En0
   - name: req62_en1
-    description: This register is used to enable and disable FlexIO0 Shifter1 Status DMA request OR Timer1 Status DMA request.
+    description: "This register is used to enable and disable FlexIO0 Shifter1 Status DMA request OR Timer1 Status DMA request.\n\nRaw bit values: false (0) = Value122: Disable.; true (1) = Value123: Enable."
     bit_offset: 30
     bit_size: 1
-    enum: Req62En0
   - name: req63_en1
-    description: This register is used to enable and disable FlexIO0 Shifter2 Status DMA request OR Timer2 Status DMA request.
+    description: "This register is used to enable and disable FlexIO0 Shifter2 Status DMA request OR Timer2 Status DMA request.\n\nRaw bit values: false (0) = Value124: Disable.; true (1) = Value125: Enable."
     bit_offset: 31
     bit_size: 1
-    enum: Req63En0
 fieldset/Dma1ReqEnable1Clr:
   description: DMA1 Request Enable1.
   fields:
@@ -4559,269 +4294,217 @@ fieldset/Dma1ReqEnable2:
   description: DMA1 Request Enable2.
   fields:
   - name: req64_en1
-    description: This register is used to enable and disable FlexIO0 Shifter3 Status DMA request OR Timer3 Status DMA request.
+    description: "This register is used to enable and disable FlexIO0 Shifter3 Status DMA request OR Timer3 Status DMA request.\n\nRaw bit values: false (0) = Value0: Disable.; true (1) = Value1: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Req96En0
   - name: req65_en1
-    description: This register is used to enable and disable FlexIO0 Shifter4 Status DMA request OR Timer4 Status DMA request.
+    description: "This register is used to enable and disable FlexIO0 Shifter4 Status DMA request OR Timer4 Status DMA request.\n\nRaw bit values: false (0) = Value0: Disable.; true (1) = Value1: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: Req96En0
   - name: req66_en1
-    description: This register is used to enable and disable FlexIO0 Shifter5 Status DMA request OR Timer5 Status DMA request.
+    description: "This register is used to enable and disable FlexIO0 Shifter5 Status DMA request OR Timer5 Status DMA request.\n\nRaw bit values: false (0) = Value2: Disable.; true (1) = Value3: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: Req98En0
   - name: req67_en1
-    description: This register is used to enable and disable FlexIO0 Shifter6 Status DMA request OR Timer6 Status DMA request.
+    description: "This register is used to enable and disable FlexIO0 Shifter6 Status DMA request OR Timer6 Status DMA request.\n\nRaw bit values: false (0) = Value4: Disable.; true (1) = Value5: Enable."
     bit_offset: 3
     bit_size: 1
-    enum: Req67En1
   - name: req68_en1
-    description: This register is used to enable and disable FlexIO0 Shifter7 Status DMA request OR Timer7 Status DMA request.
+    description: "This register is used to enable and disable FlexIO0 Shifter7 Status DMA request OR Timer7 Status DMA request.\n\nRaw bit values: false (0) = Value6: Disable.; true (1) = Value7: Enable."
     bit_offset: 4
     bit_size: 1
-    enum: Req68En0
   - name: req69_en1
-    description: This register is used to enable and disable LP_FLEXCOMM0 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM0 receive request.\n\nRaw bit values: false (0) = Value8: Disable.; true (1) = Value9: Enable."
     bit_offset: 5
     bit_size: 1
-    enum: Req69En0
   - name: req70_en1
-    description: This register is used to enable and disable LP_FLEXCOMM0 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM0 transmit request.\n\nRaw bit values: false (0) = Value10: Disable.; true (1) = Value11: Enable."
     bit_offset: 6
     bit_size: 1
-    enum: Req102En1
   - name: req71_en1
-    description: This register is used to enable and disable LP_FLEXCOMM1 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM1 receive request.\n\nRaw bit values: false (0) = Value12: Disable.; true (1) = Value13: Enable."
     bit_offset: 7
     bit_size: 1
-    enum: Req7En0
   - name: req72_en1
-    description: This register is used to enable and disable LP_FLEXCOMM1 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM1 transmit request.\n\nRaw bit values: false (0) = Value14: Disable.; true (1) = Value15: Enable."
     bit_offset: 8
     bit_size: 1
-    enum: Req72En0
   - name: req73_en1
-    description: This register is used to enable and disable LP_FLEXCOMM2 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM2 receive request.\n\nRaw bit values: false (0) = Value16: Disable.; true (1) = Value17: Enable."
     bit_offset: 9
     bit_size: 1
-    enum: Req9En1
   - name: req74_en1
-    description: This register is used to enable and disable LP_FLEXCOMM2 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM2 transmit request.\n\nRaw bit values: false (0) = Value18: Disable.; true (1) = Value19: Enable."
     bit_offset: 10
     bit_size: 1
-    enum: Req10En0
   - name: req75_en1
-    description: This register is used to enable and disable LP_FLEXCOMM3 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM3 receive request.\n\nRaw bit values: false (0) = Value20: Disable.; true (1) = Value21: Enable."
     bit_offset: 11
     bit_size: 1
-    enum: Req11En0
   - name: req76_en1
-    description: This register is used to enable and disable LP_FLEXCOMM3 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM3 transmit request.\n\nRaw bit values: false (0) = Value22: Disable.; true (1) = Value23: Enable."
     bit_offset: 12
     bit_size: 1
-    enum: Req108En0
   - name: req77_en1
-    description: This register is used to enable and disable LP_FLEXCOMM4 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM4 receive request.\n\nRaw bit values: false (0) = Value24: Disable.; true (1) = Value25: Enable."
     bit_offset: 13
     bit_size: 1
-    enum: Req109En0
   - name: req78_en1
-    description: This register is used to enable and disable LP_FLEXCOMM4 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM4 transmit request.\n\nRaw bit values: false (0) = Value26: Disable.; true (1) = Value27: Enable."
     bit_offset: 14
     bit_size: 1
-    enum: Req110En0
   - name: req79_en1
-    description: This register is used to enable and disable LP_FLEXCOMM5 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM5 receive request.\n\nRaw bit values: false (0) = Value28: Disable.; true (1) = Value29: Enable."
     bit_offset: 15
     bit_size: 1
-    enum: Req79En1
   - name: req80_en1
-    description: This register is used to enable and disable LP_FLEXCOMM5 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM5 transmit request.\n\nRaw bit values: false (0) = Value30: Disable.; true (1) = Value31: Enable."
     bit_offset: 16
     bit_size: 1
-    enum: Req80En0
   - name: req81_en1
-    description: This register is used to enable and disable LP_FLEXCOMM6 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM6 receive request.\n\nRaw bit values: false (0) = Value32: Disable.; true (1) = Value33: Enable."
     bit_offset: 17
     bit_size: 1
-    enum: Req81En0
   - name: req82_en1
-    description: This register is used to enable and disable LP_FLEXCOMM6 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM6 transmit request.\n\nRaw bit values: false (0) = Value34: Disable.; true (1) = Value35: Enable."
     bit_offset: 18
     bit_size: 1
-    enum: Req82En0
   - name: req83_en1
-    description: This register is used to enable and disable LP_FLEXCOMM7 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM7 receive request.\n\nRaw bit values: false (0) = Value36: Disable.; true (1) = Value37: Enable."
     bit_offset: 19
     bit_size: 1
-    enum: Req83En0
   - name: req84_en1
-    description: This register is used to enable and disable LP_FLEXCOMM7 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM7 transmit request.\n\nRaw bit values: false (0) = Value38: Disable.; true (1) = Value39: Enable."
     bit_offset: 20
     bit_size: 1
-    enum: Req84En0
   - name: req95_en1
-    description: This register is used to enable and disable I3C0 receive request.
+    description: "This register is used to enable and disable I3C0 receive request.\n\nRaw bit values: false (0) = Value60: Disable.; true (1) = Value61: Enable."
     bit_offset: 31
     bit_size: 1
-    enum: Req31En0
   only_in: ^(MCXN2[0-9]{2})$
 fieldset/Dma1ReqEnable22:
   description: DMA1 Request Enable2.
   fields:
   - name: req64_en1
-    description: This register is used to enable and disable FlexIO0 Shifter3 Status DMA request OR Timer3 Status DMA request.
+    description: "This register is used to enable and disable FlexIO0 Shifter3 Status DMA request OR Timer3 Status DMA request.\n\nRaw bit values: false (0) = Value0: Disable.; true (1) = Value1: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Req96En0
   - name: req65_en1
-    description: This register is used to enable and disable FlexIO0 Shifter4 Status DMA request OR Timer4 Status DMA request.
+    description: "This register is used to enable and disable FlexIO0 Shifter4 Status DMA request OR Timer4 Status DMA request.\n\nRaw bit values: false (0) = Value0: Disable.; true (1) = Value1: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: Req96En0
   - name: req66_en1
-    description: This register is used to enable and disable FlexIO0 Shifter5 Status DMA request OR Timer5 Status DMA request.
+    description: "This register is used to enable and disable FlexIO0 Shifter5 Status DMA request OR Timer5 Status DMA request.\n\nRaw bit values: false (0) = Value2: Disable.; true (1) = Value3: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: Req98En0
   - name: req67_en1
-    description: This register is used to enable and disable FlexIO0 Shifter6 Status DMA request OR Timer6 Status DMA request.
+    description: "This register is used to enable and disable FlexIO0 Shifter6 Status DMA request OR Timer6 Status DMA request.\n\nRaw bit values: false (0) = Value4: Disable.; true (1) = Value5: Enable."
     bit_offset: 3
     bit_size: 1
-    enum: Req67En1
   - name: req68_en1
-    description: This register is used to enable and disable FlexIO0 Shifter7 Status DMA request OR Timer7 Status DMA request.
+    description: "This register is used to enable and disable FlexIO0 Shifter7 Status DMA request OR Timer7 Status DMA request.\n\nRaw bit values: false (0) = Value6: Disable.; true (1) = Value7: Enable."
     bit_offset: 4
     bit_size: 1
-    enum: Req68En0
   - name: req69_en1
-    description: This register is used to enable and disable LP_FLEXCOMM0 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM0 receive request.\n\nRaw bit values: false (0) = Value8: Disable.; true (1) = Value9: Enable."
     bit_offset: 5
     bit_size: 1
-    enum: Req69En0
   - name: req70_en1
-    description: This register is used to enable and disable LP_FLEXCOMM0 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM0 transmit request.\n\nRaw bit values: false (0) = Value10: Disable.; true (1) = Value11: Enable."
     bit_offset: 6
     bit_size: 1
-    enum: Req102En1
   - name: req71_en1
-    description: This register is used to enable and disable LP_FLEXCOMM1 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM1 receive request.\n\nRaw bit values: false (0) = Value12: Disable.; true (1) = Value13: Enable."
     bit_offset: 7
     bit_size: 1
-    enum: Req7En0
   - name: req72_en1
-    description: This register is used to enable and disable LP_FLEXCOMM1 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM1 transmit request.\n\nRaw bit values: false (0) = Value14: Disable.; true (1) = Value15: Enable."
     bit_offset: 8
     bit_size: 1
-    enum: Req72En0
   - name: req73_en1
-    description: This register is used to enable and disable LP_FLEXCOMM2 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM2 receive request.\n\nRaw bit values: false (0) = Value16: Disable.; true (1) = Value17: Enable."
     bit_offset: 9
     bit_size: 1
-    enum: Req9En1
   - name: req74_en1
-    description: This register is used to enable and disable LP_FLEXCOMM2 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM2 transmit request.\n\nRaw bit values: false (0) = Value18: Disable.; true (1) = Value19: Enable."
     bit_offset: 10
     bit_size: 1
-    enum: Req10En0
   - name: req75_en1
-    description: This register is used to enable and disable LP_FLEXCOMM3 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM3 receive request.\n\nRaw bit values: false (0) = Value20: Disable.; true (1) = Value21: Enable."
     bit_offset: 11
     bit_size: 1
-    enum: Req11En0
   - name: req76_en1
-    description: This register is used to enable and disable LP_FLEXCOMM3 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM3 transmit request.\n\nRaw bit values: false (0) = Value22: Disable.; true (1) = Value23: Enable."
     bit_offset: 12
     bit_size: 1
-    enum: Req108En0
   - name: req77_en1
-    description: This register is used to enable and disable LP_FLEXCOMM4 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM4 receive request.\n\nRaw bit values: false (0) = Value24: Disable.; true (1) = Value25: Enable."
     bit_offset: 13
     bit_size: 1
-    enum: Req109En0
   - name: req78_en1
-    description: This register is used to enable and disable LP_FLEXCOMM4 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM4 transmit request.\n\nRaw bit values: false (0) = Value26: Disable.; true (1) = Value27: Enable."
     bit_offset: 14
     bit_size: 1
-    enum: Req110En0
   - name: req79_en1
-    description: This register is used to enable and disable LP_FLEXCOMM5 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM5 receive request.\n\nRaw bit values: false (0) = Value28: Disable.; true (1) = Value29: Enable."
     bit_offset: 15
     bit_size: 1
-    enum: Req79En1
   - name: req80_en1
-    description: This register is used to enable and disable LP_FLEXCOMM5 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM5 transmit request.\n\nRaw bit values: false (0) = Value30: Disable.; true (1) = Value31: Enable."
     bit_offset: 16
     bit_size: 1
-    enum: Req80En0
   - name: req81_en1
-    description: This register is used to enable and disable LP_FLEXCOMM6 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM6 receive request.\n\nRaw bit values: false (0) = Value32: Disable.; true (1) = Value33: Enable."
     bit_offset: 17
     bit_size: 1
-    enum: Req81En0
   - name: req82_en1
-    description: This register is used to enable and disable LP_FLEXCOMM6 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM6 transmit request.\n\nRaw bit values: false (0) = Value34: Disable.; true (1) = Value35: Enable."
     bit_offset: 18
     bit_size: 1
-    enum: Req82En0
   - name: req83_en1
-    description: This register is used to enable and disable LP_FLEXCOMM7 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM7 receive request.\n\nRaw bit values: false (0) = Value36: Disable.; true (1) = Value37: Enable."
     bit_offset: 19
     bit_size: 1
-    enum: Req83En0
   - name: req84_en1
-    description: This register is used to enable and disable LP_FLEXCOMM7 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM7 transmit request.\n\nRaw bit values: false (0) = Value38: Disable.; true (1) = Value39: Enable."
     bit_offset: 20
     bit_size: 1
-    enum: Req84En0
   - name: req85_en1
-    description: This register is used to enable and disable LP_FLEXCOMM8 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM8 receive request.\n\nRaw bit values: false (0) = Value40: Disable.; true (1) = Value41: Enable."
     bit_offset: 21
     bit_size: 1
-    enum: Req21En0
   - name: req86_en1
-    description: This register is used to enable and disable LP_FLEXCOMM8 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM8 transmit request.\n\nRaw bit values: false (0) = Value42: Disable.; true (1) = Value43: Enable."
     bit_offset: 22
     bit_size: 1
-    enum: Req22En0
   - name: req87_en1
-    description: This register is used to enable and disable LP_FLEXCOMM9 receive request.
+    description: "This register is used to enable and disable LP_FLEXCOMM9 receive request.\n\nRaw bit values: false (0) = Value44: Disable.; true (1) = Value45: Enable."
     bit_offset: 23
     bit_size: 1
-    enum: Req119En1
   - name: req88_en1
-    description: This register is used to enable and disable LP_FLEXCOMM9 transmit request.
+    description: "This register is used to enable and disable LP_FLEXCOMM9 transmit request.\n\nRaw bit values: false (0) = Value46: Disable.; true (1) = Value47: Enable."
     bit_offset: 24
     bit_size: 1
-    enum: Req24En0
   - name: req91_en1
-    description: This register is used to enable and disable EMVSIM0 receive request.
+    description: "This register is used to enable and disable EMVSIM0 receive request.\n\nRaw bit values: false (0) = Value52: Disable.; true (1) = Value53: Enable."
     bit_offset: 27
     bit_size: 1
-    enum: Req27En0
   - name: req92_en1
-    description: This register is used to enable and disable EMVSIM0 transmit request.
+    description: "This register is used to enable and disable EMVSIM0 transmit request.\n\nRaw bit values: false (0) = Value54: Disable.; true (1) = Value55: Enable."
     bit_offset: 28
     bit_size: 1
-    enum: Req28En1
   - name: req93_en1
-    description: This register is used to enable and disable EMVSIM1 receive request.
+    description: "This register is used to enable and disable EMVSIM1 receive request.\n\nRaw bit values: false (0) = Value56: Disable.; true (1) = Value57: Enable."
     bit_offset: 29
     bit_size: 1
-    enum: Req29En0
   - name: req94_en1
-    description: This register is used to enable and disable EMVSIM1 transmit request.
+    description: "This register is used to enable and disable EMVSIM1 transmit request.\n\nRaw bit values: false (0) = Value58: Disable.; true (1) = Value59: Enable."
     bit_offset: 30
     bit_size: 1
-    enum: Req30En0
   - name: req95_en1
-    description: This register is used to enable and disable I3C0 receive request.
+    description: "This register is used to enable and disable I3C0 receive request.\n\nRaw bit values: false (0) = Value60: Disable.; true (1) = Value61: Enable."
     bit_offset: 31
     bit_size: 1
-    enum: Req31En0
 fieldset/Dma1ReqEnable2Clr:
   description: DMA1 Request Enable2.
   fields:
@@ -5219,234 +4902,189 @@ fieldset/Dma1ReqEnable3:
   description: DMA1 Request Enable3.
   fields:
   - name: req96_en1
-    description: This register is used to enable and disable I3C0 transmit request.
+    description: "This register is used to enable and disable I3C0 transmit request.\n\nRaw bit values: false (0) = Value0: Disable.; true (1) = Value1: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Req96En0
   - name: req97_en1
-    description: This register is used to enable and disable I3C1 receive request.
+    description: "This register is used to enable and disable I3C1 receive request.\n\nRaw bit values: false (0) = Value0: Disable.; true (1) = Value1: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: Req96En0
   - name: req98_en1
-    description: This register is used to enable and disable I3C1 transmit request.
+    description: "This register is used to enable and disable I3C1 transmit request.\n\nRaw bit values: false (0) = Value2: Disable.; true (1) = Value3: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: Req98En0
   - name: req99_en1
-    description: This register is used to enable and disable SAI0 receive request.
+    description: "This register is used to enable and disable SAI0 receive request.\n\nRaw bit values: false (0) = Value4: Disable.; true (1) = Value5: Enable."
     bit_offset: 3
     bit_size: 1
-    enum: Req67En1
   - name: req100_en1
-    description: This register is used to enable and disable SAI0 transmit request.
+    description: "This register is used to enable and disable SAI0 transmit request.\n\nRaw bit values: false (0) = Value6: Disable.; true (1) = Value7: Enable."
     bit_offset: 4
     bit_size: 1
-    enum: Req68En0
   - name: req101_en1
-    description: This register is used to enable and disable SAI1 receive request.
+    description: "This register is used to enable and disable SAI1 receive request.\n\nRaw bit values: false (0) = Value8: Disable.; true (1) = Value9: Enable."
     bit_offset: 5
     bit_size: 1
-    enum: Req69En0
   - name: req102_en1
-    description: This register is used to enable and disable SAI1 transmit request.
+    description: "This register is used to enable and disable SAI1 transmit request.\n\nRaw bit values: false (0) = Value10: Disable.; true (1) = Value11: Enable."
     bit_offset: 6
     bit_size: 1
-    enum: Req102En1
   - name: req108_en1
-    description: This register is used to enable and disable GPIO0 pin event request 0.
+    description: "This register is used to enable and disable GPIO0 pin event request 0.\n\nRaw bit values: false (0) = Value22: Disable.; true (1) = Value23: Enable."
     bit_offset: 12
     bit_size: 1
-    enum: Req108En0
   - name: req109_en1
-    description: This register is used to enable and disable GPIO0 pin event request 1.
+    description: "This register is used to enable and disable GPIO0 pin event request 1.\n\nRaw bit values: false (0) = Value24: Disable.; true (1) = Value25: Enable."
     bit_offset: 13
     bit_size: 1
-    enum: Req109En0
   - name: req110_en1
-    description: This register is used to enable and disable GPIO1 pin event request 0.
+    description: "This register is used to enable and disable GPIO1 pin event request 0.\n\nRaw bit values: false (0) = Value26: Disable.; true (1) = Value27: Enable."
     bit_offset: 14
     bit_size: 1
-    enum: Req110En0
   - name: req111_en1
-    description: This register is used to enable and disable GPIO1 pin event request 1.
+    description: "This register is used to enable and disable GPIO1 pin event request 1.\n\nRaw bit values: false (0) = Value28: Disable.; true (1) = Value29: Enable."
     bit_offset: 15
     bit_size: 1
-    enum: Req79En1
   - name: req112_en1
-    description: This register is used to enable and disable GPIO2 pin event request 0.
+    description: "This register is used to enable and disable GPIO2 pin event request 0.\n\nRaw bit values: false (0) = Value30: Disable.; true (1) = Value31: Enable."
     bit_offset: 16
     bit_size: 1
-    enum: Req80En0
   - name: req113_en1
-    description: This register is used to enable and disable GPIO2 pin event request 1.
+    description: "This register is used to enable and disable GPIO2 pin event request 1.\n\nRaw bit values: false (0) = Value32: Disable.; true (1) = Value33: Enable."
     bit_offset: 17
     bit_size: 1
-    enum: Req81En0
   - name: req114_en1
-    description: This register is used to enable and disable GPIO3 pin event request 0.
+    description: "This register is used to enable and disable GPIO3 pin event request 0.\n\nRaw bit values: false (0) = Value34: Disable.; true (1) = Value35: Enable."
     bit_offset: 18
     bit_size: 1
-    enum: Req82En0
   - name: req115_en1
-    description: This register is used to enable and disable GPIO3 pin event request 1.
+    description: "This register is used to enable and disable GPIO3 pin event request 1.\n\nRaw bit values: false (0) = Value36: Disable.; true (1) = Value37: Enable."
     bit_offset: 19
     bit_size: 1
-    enum: Req83En0
   - name: req116_en1
-    description: This register is used to enable and disable GPIO4 pin event request 0.
+    description: "This register is used to enable and disable GPIO4 pin event request 0.\n\nRaw bit values: false (0) = Value38: Disable.; true (1) = Value39: Enable."
     bit_offset: 20
     bit_size: 1
-    enum: Req84En0
   - name: req117_en1
-    description: This register is used to enable and disable GPIO4 pin event request 1.
+    description: "This register is used to enable and disable GPIO4 pin event request 1.\n\nRaw bit values: false (0) = Value40: Disable.; true (1) = Value41: Enable."
     bit_offset: 21
     bit_size: 1
-    enum: Req21En0
   - name: req118_en1
-    description: This register is used to enable and disable GPIO5 pin event request 0.
+    description: "This register is used to enable and disable GPIO5 pin event request 0.\n\nRaw bit values: false (0) = Value42: Disable.; true (1) = Value43: Enable."
     bit_offset: 22
     bit_size: 1
-    enum: Req22En0
   - name: req119_en1
-    description: This register is used to enable and disable GPIO5 pin event request 1.
+    description: "This register is used to enable and disable GPIO5 pin event request 1.\n\nRaw bit values: false (0) = Value44: Disable.; true (1) = Value45: Enable."
     bit_offset: 23
     bit_size: 1
-    enum: Req119En1
   only_in: ^(MCXN2[0-9]{2})$
 fieldset/Dma1ReqEnable32:
   description: DMA1 Request Enable3.
   fields:
   - name: req96_en1
-    description: This register is used to enable and disable I3C0 transmit request.
+    description: "This register is used to enable and disable I3C0 transmit request.\n\nRaw bit values: false (0) = Value0: Disable.; true (1) = Value1: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Req96En0
   - name: req97_en1
-    description: This register is used to enable and disable I3C1 receive request.
+    description: "This register is used to enable and disable I3C1 receive request.\n\nRaw bit values: false (0) = Value0: Disable.; true (1) = Value1: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: Req96En0
   - name: req98_en1
-    description: This register is used to enable and disable I3C1 transmit request.
+    description: "This register is used to enable and disable I3C1 transmit request.\n\nRaw bit values: false (0) = Value2: Disable.; true (1) = Value3: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: Req98En0
   - name: req99_en1
-    description: This register is used to enable and disable SAI0 receive request.
+    description: "This register is used to enable and disable SAI0 receive request.\n\nRaw bit values: false (0) = Value4: Disable.; true (1) = Value5: Enable."
     bit_offset: 3
     bit_size: 1
-    enum: Req67En1
   - name: req100_en1
-    description: This register is used to enable and disable SAI0 transmit request.
+    description: "This register is used to enable and disable SAI0 transmit request.\n\nRaw bit values: false (0) = Value6: Disable.; true (1) = Value7: Enable."
     bit_offset: 4
     bit_size: 1
-    enum: Req68En0
   - name: req101_en1
-    description: This register is used to enable and disable SAI1 receive request.
+    description: "This register is used to enable and disable SAI1 receive request.\n\nRaw bit values: false (0) = Value8: Disable.; true (1) = Value9: Enable."
     bit_offset: 5
     bit_size: 1
-    enum: Req69En0
   - name: req102_en1
-    description: This register is used to enable and disable SAI1 transmit request.
+    description: "This register is used to enable and disable SAI1 transmit request.\n\nRaw bit values: false (0) = Value10: Disable.; true (1) = Value11: Enable."
     bit_offset: 6
     bit_size: 1
-    enum: Req102En1
   - name: req103_en1
-    description: This register is used to enable and disable SINC0 ipd_req_sinc[0] or ipd_req_alt [0] request.
+    description: "This register is used to enable and disable SINC0 ipd_req_sinc[0] or ipd_req_alt [0] request.\n\nRaw bit values: false (0) = Value12: Disable.; true (1) = Value13: Enable."
     bit_offset: 7
     bit_size: 1
-    enum: Req7En0
   - name: req104_en1
-    description: This register is used to enable and disable SINC0 ipd_req_sinc[1] or ipd_req_alt [1] request.
+    description: "This register is used to enable and disable SINC0 ipd_req_sinc[1] or ipd_req_alt [1] request.\n\nRaw bit values: false (0) = Value14: Disable.; true (1) = Value15: Enable."
     bit_offset: 8
     bit_size: 1
-    enum: Req72En0
   - name: req105_en1
-    description: This register is used to enable and disable SINC0 ipd_req_sinc[2] or ipd_req_alt [2] request.
+    description: "This register is used to enable and disable SINC0 ipd_req_sinc[2] or ipd_req_alt [2] request.\n\nRaw bit values: false (0) = Value16: Disable.; true (1) = Value17: Enable."
     bit_offset: 9
     bit_size: 1
-    enum: Req9En1
   - name: req106_en1
-    description: This register is used to enable and disable SINC0 ipd_req_sinc[3] or ipd_req_alt [3] request.
+    description: "This register is used to enable and disable SINC0 ipd_req_sinc[3] or ipd_req_alt [3] request.\n\nRaw bit values: false (0) = Value18: Disable.; true (1) = Value19: Enable."
     bit_offset: 10
     bit_size: 1
-    enum: Req10En0
   - name: req107_en1
-    description: This register is used to enable and disable SINC0 ipd_req_sinc[4] or ipd_req_alt [4] request.
+    description: "This register is used to enable and disable SINC0 ipd_req_sinc[4] or ipd_req_alt [4] request.\n\nRaw bit values: false (0) = Value20: Disable.; true (1) = Value21: Enable."
     bit_offset: 11
     bit_size: 1
-    enum: Req11En0
   - name: req108_en1
-    description: This register is used to enable and disable GPIO0 pin event request 0.
+    description: "This register is used to enable and disable GPIO0 pin event request 0.\n\nRaw bit values: false (0) = Value22: Disable.; true (1) = Value23: Enable."
     bit_offset: 12
     bit_size: 1
-    enum: Req108En0
   - name: req109_en1
-    description: This register is used to enable and disable GPIO0 pin event request 1.
+    description: "This register is used to enable and disable GPIO0 pin event request 1.\n\nRaw bit values: false (0) = Value24: Disable.; true (1) = Value25: Enable."
     bit_offset: 13
     bit_size: 1
-    enum: Req109En0
   - name: req110_en1
-    description: This register is used to enable and disable GPIO1 pin event request 0.
+    description: "This register is used to enable and disable GPIO1 pin event request 0.\n\nRaw bit values: false (0) = Value26: Disable.; true (1) = Value27: Enable."
     bit_offset: 14
     bit_size: 1
-    enum: Req110En0
   - name: req111_en1
-    description: This register is used to enable and disable GPIO1 pin event request 1.
+    description: "This register is used to enable and disable GPIO1 pin event request 1.\n\nRaw bit values: false (0) = Value28: Disable.; true (1) = Value29: Enable."
     bit_offset: 15
     bit_size: 1
-    enum: Req79En1
   - name: req112_en1
-    description: This register is used to enable and disable GPIO2 pin event request 0.
+    description: "This register is used to enable and disable GPIO2 pin event request 0.\n\nRaw bit values: false (0) = Value30: Disable.; true (1) = Value31: Enable."
     bit_offset: 16
     bit_size: 1
-    enum: Req80En0
   - name: req113_en1
-    description: This register is used to enable and disable GPIO2 pin event request 1.
+    description: "This register is used to enable and disable GPIO2 pin event request 1.\n\nRaw bit values: false (0) = Value32: Disable.; true (1) = Value33: Enable."
     bit_offset: 17
     bit_size: 1
-    enum: Req81En0
   - name: req114_en1
-    description: This register is used to enable and disable GPIO3 pin event request 0.
+    description: "This register is used to enable and disable GPIO3 pin event request 0.\n\nRaw bit values: false (0) = Value34: Disable.; true (1) = Value35: Enable."
     bit_offset: 18
     bit_size: 1
-    enum: Req82En0
   - name: req115_en1
-    description: This register is used to enable and disable GPIO3 pin event request 1.
+    description: "This register is used to enable and disable GPIO3 pin event request 1.\n\nRaw bit values: false (0) = Value36: Disable.; true (1) = Value37: Enable."
     bit_offset: 19
     bit_size: 1
-    enum: Req83En0
   - name: req116_en1
-    description: This register is used to enable and disable GPIO4 pin event request 0.
+    description: "This register is used to enable and disable GPIO4 pin event request 0.\n\nRaw bit values: false (0) = Value38: Disable.; true (1) = Value39: Enable."
     bit_offset: 20
     bit_size: 1
-    enum: Req84En0
   - name: req117_en1
-    description: This register is used to enable and disable GPIO4 pin event request 1.
+    description: "This register is used to enable and disable GPIO4 pin event request 1.\n\nRaw bit values: false (0) = Value40: Disable.; true (1) = Value41: Enable."
     bit_offset: 21
     bit_size: 1
-    enum: Req21En0
   - name: req118_en1
-    description: This register is used to enable and disable GPIO5 pin event request 0.
+    description: "This register is used to enable and disable GPIO5 pin event request 0.\n\nRaw bit values: false (0) = Value42: Disable.; true (1) = Value43: Enable."
     bit_offset: 22
     bit_size: 1
-    enum: Req22En0
   - name: req119_en1
-    description: This register is used to enable and disable GPIO5 pin event request 1.
+    description: "This register is used to enable and disable GPIO5 pin event request 1.\n\nRaw bit values: false (0) = Value44: Disable.; true (1) = Value45: Enable."
     bit_offset: 23
     bit_size: 1
-    enum: Req119En1
   - name: req120_en1
-    description: This register is used to enable and disable TSI0 end of scan request.
+    description: "This register is used to enable and disable TSI0 end of scan request.\n\nRaw bit values: false (0) = Value46: Disable.; true (1) = Value47: Enable."
     bit_offset: 24
     bit_size: 1
-    enum: Req24En0
   - name: req121_en1
-    description: This register is used to enable and disable TSI0 out of range request.
+    description: "This register is used to enable and disable TSI0 out of range request.\n\nRaw bit values: false (0) = Value48: Disable.; true (1) = Value49: Enable."
     bit_offset: 25
     bit_size: 1
-    enum: Req121En0
 fieldset/Dma1ReqEnable3Clr:
   description: DMA1 Request Enable3.
   fields:
@@ -11234,555 +10872,6 @@ enum/Inp9:
   - name: Val9
     description: EVTG_OUT1A input is selected.
     value: 9
-enum/Req102En1:
-  bit_size: 1
-  variants:
-  - name: Value10
-    description: Disable.
-    value: 0
-  - name: Value11
-    description: Enable.
-    value: 1
-enum/Req108En0:
-  bit_size: 1
-  variants:
-  - name: Value22
-    description: Disable.
-    value: 0
-  - name: Value23
-    description: Enable.
-    value: 1
-enum/Req109En0:
-  bit_size: 1
-  variants:
-  - name: Value24
-    description: Disable.
-    value: 0
-  - name: Value25
-    description: Enable.
-    value: 1
-enum/Req10En0:
-  bit_size: 1
-  variants:
-  - name: Value18
-    description: Disable.
-    value: 0
-  - name: Value19
-    description: Enable.
-    value: 1
-enum/Req110En0:
-  bit_size: 1
-  variants:
-  - name: Value26
-    description: Disable.
-    value: 0
-  - name: Value27
-    description: Enable.
-    value: 1
-enum/Req119En1:
-  bit_size: 1
-  variants:
-  - name: Value44
-    description: Disable.
-    value: 0
-  - name: Value45
-    description: Enable.
-    value: 1
-enum/Req11En0:
-  bit_size: 1
-  variants:
-  - name: Value20
-    description: Disable.
-    value: 0
-  - name: Value21
-    description: Enable.
-    value: 1
-enum/Req121En0:
-  bit_size: 1
-  variants:
-  - name: Value48
-    description: Disable.
-    value: 0
-  - name: Value49
-    description: Enable.
-    value: 1
-enum/Req21En0:
-  bit_size: 1
-  variants:
-  - name: Value40
-    description: Disable.
-    value: 0
-  - name: Value41
-    description: Enable.
-    value: 1
-enum/Req22En0:
-  bit_size: 1
-  variants:
-  - name: Value42
-    description: Disable.
-    value: 0
-  - name: Value43
-    description: Enable.
-    value: 1
-enum/Req24En0:
-  bit_size: 1
-  variants:
-  - name: Value46
-    description: Disable.
-    value: 0
-  - name: Value47
-    description: Enable.
-    value: 1
-enum/Req26En0:
-  bit_size: 1
-  variants:
-  - name: Value50
-    description: Disable.
-    value: 0
-  - name: Value51
-    description: Enable.
-    value: 1
-enum/Req27En0:
-  bit_size: 1
-  variants:
-  - name: Value52
-    description: Disable.
-    value: 0
-  - name: Value53
-    description: Enable.
-    value: 1
-enum/Req28En1:
-  bit_size: 1
-  variants:
-  - name: Value54
-    description: Disable.
-    value: 0
-  - name: Value55
-    description: Enable.
-    value: 1
-enum/Req29En0:
-  bit_size: 1
-  variants:
-  - name: Value56
-    description: Disable.
-    value: 0
-  - name: Value57
-    description: Enable.
-    value: 1
-enum/Req30En0:
-  bit_size: 1
-  variants:
-  - name: Value58
-    description: Disable.
-    value: 0
-  - name: Value59
-    description: Enable.
-    value: 1
-enum/Req31En0:
-  bit_size: 1
-  variants:
-  - name: Value60
-    description: Disable.
-    value: 0
-  - name: Value61
-    description: Enable.
-    value: 1
-enum/Req32En0:
-  bit_size: 1
-  variants:
-  - name: Value62
-    description: Disable.
-    value: 0
-  - name: Value63
-    description: Enable.
-    value: 1
-enum/Req33En0:
-  bit_size: 1
-  variants:
-  - name: Value64
-    description: Disable.
-    value: 0
-  - name: Value65
-    description: Enable.
-    value: 1
-enum/Req34En0:
-  bit_size: 1
-  variants:
-  - name: Value66
-    description: Disable.
-    value: 0
-  - name: Value67
-    description: Enable.
-    value: 1
-enum/Req35En0:
-  bit_size: 1
-  variants:
-  - name: Value68
-    description: Disable.
-    value: 0
-  - name: Value69
-    description: Enable.
-    value: 1
-enum/Req36En0:
-  bit_size: 1
-  variants:
-  - name: Value70
-    description: Disable.
-    value: 0
-  - name: Value71
-    description: Enable.
-    value: 1
-enum/Req37En0:
-  bit_size: 1
-  variants:
-  - name: Value72
-    description: Disable.
-    value: 0
-  - name: Value73
-    description: Enable.
-    value: 1
-enum/Req38En0:
-  bit_size: 1
-  variants:
-  - name: Value74
-    description: Disable.
-    value: 0
-  - name: Value75
-    description: Enable.
-    value: 1
-enum/Req39En0:
-  bit_size: 1
-  variants:
-  - name: Value76
-    description: Disable.
-    value: 0
-  - name: Value77
-    description: Enable.
-    value: 1
-enum/Req40En0:
-  bit_size: 1
-  variants:
-  - name: Value78
-    description: Disable.
-    value: 0
-  - name: Value79
-    description: Enable.
-    value: 1
-enum/Req41En1:
-  bit_size: 1
-  variants:
-  - name: Value80
-    description: Disable.
-    value: 0
-  - name: Value81
-    description: Enable.
-    value: 1
-enum/Req42En0:
-  bit_size: 1
-  variants:
-  - name: Value82
-    description: Disable.
-    value: 0
-  - name: Value83
-    description: Enable.
-    value: 1
-enum/Req43En0:
-  bit_size: 1
-  variants:
-  - name: Value84
-    description: Disable.
-    value: 0
-  - name: Value85
-    description: Enable.
-    value: 1
-enum/Req44En0:
-  bit_size: 1
-  variants:
-  - name: Value86
-    description: Disable.
-    value: 0
-  - name: Value87
-    description: Enable.
-    value: 1
-enum/Req45En0:
-  bit_size: 1
-  variants:
-  - name: Value88
-    description: Disable.
-    value: 0
-  - name: Value89
-    description: Enable.
-    value: 1
-enum/Req46En0:
-  bit_size: 1
-  variants:
-  - name: Value90
-    description: Disable.
-    value: 0
-  - name: Value91
-    description: Enable.
-    value: 1
-enum/Req47En0:
-  bit_size: 1
-  variants:
-  - name: Value92
-    description: Disable.
-    value: 0
-  - name: Value93
-    description: Enable.
-    value: 1
-enum/Req48En0:
-  bit_size: 1
-  variants:
-  - name: Value94
-    description: Disable.
-    value: 0
-  - name: Value95
-    description: Enable.
-    value: 1
-enum/Req49En0:
-  bit_size: 1
-  variants:
-  - name: Value96
-    description: Disable.
-    value: 0
-  - name: Value97
-    description: Enable.
-    value: 1
-enum/Req50En0:
-  bit_size: 1
-  variants:
-  - name: Value98
-    description: Disable.
-    value: 0
-  - name: Value99
-    description: Enable.
-    value: 1
-enum/Req51En0:
-  bit_size: 1
-  variants:
-  - name: Value100
-    description: Disable.
-    value: 0
-  - name: Value101
-    description: Enable.
-    value: 1
-enum/Req52En0:
-  bit_size: 1
-  variants:
-  - name: Value102
-    description: Disable.
-    value: 0
-  - name: Value103
-    description: Enable.
-    value: 1
-enum/Req53En1:
-  bit_size: 1
-  variants:
-  - name: Value104
-    description: Disable.
-    value: 0
-  - name: Value105
-    description: Enable.
-    value: 1
-enum/Req54En0:
-  bit_size: 1
-  variants:
-  - name: Value106
-    description: Disable.
-    value: 0
-  - name: Value107
-    description: Enable.
-    value: 1
-enum/Req57En0:
-  bit_size: 1
-  variants:
-  - name: Value112
-    description: Disable.
-    value: 0
-  - name: Value113
-    description: Enable.
-    value: 1
-enum/Req58En0:
-  bit_size: 1
-  variants:
-  - name: Value114
-    description: Disable.
-    value: 0
-  - name: Value115
-    description: Enable.
-    value: 1
-enum/Req59En0:
-  bit_size: 1
-  variants:
-  - name: Value116
-    description: Disable.
-    value: 0
-  - name: Value117
-    description: Enable.
-    value: 1
-enum/Req60En0:
-  bit_size: 1
-  variants:
-  - name: Value118
-    description: Disable.
-    value: 0
-  - name: Value119
-    description: Enable.
-    value: 1
-enum/Req61En0:
-  bit_size: 1
-  variants:
-  - name: Value120
-    description: Disable.
-    value: 0
-  - name: Value121
-    description: Enable.
-    value: 1
-enum/Req62En0:
-  bit_size: 1
-  variants:
-  - name: Value122
-    description: Disable.
-    value: 0
-  - name: Value123
-    description: Enable.
-    value: 1
-enum/Req63En0:
-  bit_size: 1
-  variants:
-  - name: Value124
-    description: Disable.
-    value: 0
-  - name: Value125
-    description: Enable.
-    value: 1
-enum/Req67En1:
-  bit_size: 1
-  variants:
-  - name: Value4
-    description: Disable.
-    value: 0
-  - name: Value5
-    description: Enable.
-    value: 1
-enum/Req68En0:
-  bit_size: 1
-  variants:
-  - name: Value6
-    description: Disable.
-    value: 0
-  - name: Value7
-    description: Enable.
-    value: 1
-enum/Req69En0:
-  bit_size: 1
-  variants:
-  - name: Value8
-    description: Disable.
-    value: 0
-  - name: Value9
-    description: Enable.
-    value: 1
-enum/Req72En0:
-  bit_size: 1
-  variants:
-  - name: Value14
-    description: Disable.
-    value: 0
-  - name: Value15
-    description: Enable.
-    value: 1
-enum/Req79En1:
-  bit_size: 1
-  variants:
-  - name: Value28
-    description: Disable.
-    value: 0
-  - name: Value29
-    description: Enable.
-    value: 1
-enum/Req7En0:
-  bit_size: 1
-  variants:
-  - name: Value12
-    description: Disable.
-    value: 0
-  - name: Value13
-    description: Enable.
-    value: 1
-enum/Req80En0:
-  bit_size: 1
-  variants:
-  - name: Value30
-    description: Disable.
-    value: 0
-  - name: Value31
-    description: Enable.
-    value: 1
-enum/Req81En0:
-  bit_size: 1
-  variants:
-  - name: Value32
-    description: Disable.
-    value: 0
-  - name: Value33
-    description: Enable.
-    value: 1
-enum/Req82En0:
-  bit_size: 1
-  variants:
-  - name: Value34
-    description: Disable.
-    value: 0
-  - name: Value35
-    description: Enable.
-    value: 1
-enum/Req83En0:
-  bit_size: 1
-  variants:
-  - name: Value36
-    description: Disable.
-    value: 0
-  - name: Value37
-    description: Enable.
-    value: 1
-enum/Req84En0:
-  bit_size: 1
-  variants:
-  - name: Value38
-    description: Disable.
-    value: 0
-  - name: Value39
-    description: Enable.
-    value: 1
-enum/Req96En0:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disable.
-    value: 0
-  - name: Value1
-    description: Enable.
-    value: 1
-enum/Req98En0:
-  bit_size: 1
-  variants:
-  - name: Value2
-    description: Disable.
-    value: 0
-  - name: Value3
-    description: Enable.
-    value: 1
-enum/Req9En1:
-  bit_size: 1
-  variants:
-  - name: Value16
-    description: Disable.
-    value: 0
-  - name: Value17
-    description: Enable.
-    value: 1
 enum/Trigin:
   bit_size: 8
   variants:

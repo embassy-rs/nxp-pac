@@ -97,10 +97,9 @@ fieldset/Icr:
     bit_size: 4
     enum: Irqc
   - name: isf
-    description: Interrupt Status Flag.
+    description: "Interrupt Status Flag.\n\nRaw bit values: false (0) = Isf0: Not detected.; true (1) = Isf1: Detected."
     bit_offset: 24
     bit_size: 1
-    enum: Isf
   reset_value: 0
 fieldset/Isfr:
   description: Interrupt Status Flag.
@@ -246,25 +245,23 @@ fieldset/Pcor:
   description: Port Clear Output.
   fields:
   - name: ptco
-    description: Port Clear Output.
+    description: "Port Clear Output.\n\nRaw bit values: false (0) = Ptco0: No change.; true (1) = Ptco1: Corresponding field in PDOR becomes 0."
     bit_offset: 0
     bit_size: 1
     array:
       len: 32
       stride: 1
-    enum: Ptco
   reset_value: 0
 fieldset/Pddr:
   description: Port Data Direction.
   fields:
   - name: pdd
-    description: Port Data Direction.
+    description: "Port Data Direction.\n\nRaw bit values: false (0) = Pdd0: Input.; true (1) = Pdd1: Output."
     bit_offset: 0
     bit_size: 1
     array:
       len: 32
       stride: 1
-    enum: Pdd
   reset_value: 0
 fieldset/Pdir:
   description: Port Data Input.
@@ -293,34 +290,31 @@ fieldset/Pdr:
   bit_size: 8
   fields:
   - name: pd
-    description: Pin Data (I/O).
+    description: "Pin Data (I/O).\n\nRaw bit values: false (0) = Pd0: Logic zero.; true (1) = Pd1: Logic one."
     bit_offset: 0
     bit_size: 1
-    enum: Pd
   reset_value: 0
 fieldset/Pidr:
   description: Port Input Disable.
   fields:
   - name: pid
-    description: Port Input Disable.
+    description: "Port Input Disable.\n\nRaw bit values: false (0) = Pid0: Configured for general-purpose input.; true (1) = Pid1: Disabled for general-purpose input."
     bit_offset: 0
     bit_size: 1
     array:
       len: 32
       stride: 1
-    enum: Pid
   reset_value: 0
 fieldset/Psor:
   description: Port Set Output.
   fields:
   - name: ptso
-    description: Port Set Output.
+    description: "Port Set Output.\n\nRaw bit values: false (0) = Ptso0: No change.; true (1) = Ptso1: Corresponding field in PDOR becomes 1."
     bit_offset: 0
     bit_size: 1
     array:
       len: 32
       stride: 1
-    enum: Ptso
   reset_value: 0
 fieldset/Ptor:
   description: Port Toggle Output.
@@ -396,57 +390,3 @@ enum/Irqc:
     description: Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled
       triggers to generate the output trigger for use by other peripherals).
     value: 14
-enum/Isf:
-  bit_size: 1
-  variants:
-  - name: Isf0
-    description: Not detected.
-    value: 0
-  - name: Isf1
-    description: Detected.
-    value: 1
-enum/Pd:
-  bit_size: 1
-  variants:
-  - name: Pd0
-    description: Logic zero.
-    value: 0
-  - name: Pd1
-    description: Logic one.
-    value: 1
-enum/Pdd:
-  bit_size: 1
-  variants:
-  - name: Pdd0
-    description: Input.
-    value: 0
-  - name: Pdd1
-    description: Output.
-    value: 1
-enum/Pid:
-  bit_size: 1
-  variants:
-  - name: Pid0
-    description: Configured for general-purpose input.
-    value: 0
-  - name: Pid1
-    description: Disabled for general-purpose input.
-    value: 1
-enum/Ptco:
-  bit_size: 1
-  variants:
-  - name: Ptco0
-    description: No change.
-    value: 0
-  - name: Ptco1
-    description: Corresponding field in PDOR becomes 0.
-    value: 1
-enum/Ptso:
-  bit_size: 1
-  variants:
-  - name: Ptso0
-    description: No change.
-    value: 0
-  - name: Ptso1
-    description: Corresponding field in PDOR becomes 1.
-    value: 1

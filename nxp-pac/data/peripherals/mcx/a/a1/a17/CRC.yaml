@@ -33,20 +33,17 @@ fieldset/Ctrl:
   description: Control.
   fields:
   - name: tcrc
-    description: TCRC.
+    description: "TCRC.\n\nRaw bit values: false (0) = B16: 16 bits.; true (1) = B32: 32 bits."
     bit_offset: 24
     bit_size: 1
-    enum: Tcrc
   - name: was
-    description: Write as Seed.
+    description: "Write as Seed.\n\nRaw bit values: false (0) = Data: Data values.; true (1) = Seed: Seed values."
     bit_offset: 25
     bit_size: 1
-    enum: Was
   - name: fxor
-    description: Complement Read of CRC Data Register.
+    description: "Complement Read of CRC Data Register.\n\nRaw bit values: false (0) = Noxor: Disables XOR on reading data.; true (1) = Invert: Inverts or complements the read value of the CRC Data."
     bit_offset: 26
     bit_size: 1
-    enum: Fxor
   - name: totr
     description: Transpose Type for Read.
     bit_offset: 28
@@ -59,24 +56,6 @@ fieldset/Ctrl:
     enum: Tot
   bit_size: 32
   reset_value: 0
-enum/Fxor:
-  bit_size: 1
-  variants:
-  - name: Noxor
-    description: Disables XOR on reading data.
-    value: 0
-  - name: Invert
-    description: Inverts or complements the read value of the CRC Data.
-    value: 1
-enum/Tcrc:
-  bit_size: 1
-  variants:
-  - name: B16
-    description: 16 bits.
-    value: 0
-  - name: B32
-    description: 32 bits.
-    value: 1
 enum/Tot:
   bit_size: 2
   variants:
@@ -92,15 +71,6 @@ enum/Tot:
   - name: BytsTrnps
     description: Only bytes are transposed, no bits in a byte are transposed.
     value: 3
-enum/Was:
-  bit_size: 1
-  variants:
-  - name: Data
-    description: Data values.
-    value: 0
-  - name: Seed
-    description: Seed values.
-    value: 1
 fieldset/RawData16:
   fields: []
   bit_size: 16

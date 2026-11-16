@@ -37,10 +37,9 @@ fieldset/Param:
   reset_value: 1
   fields:
   - name: pga_function
-    description: Optional PGA function implemented by this instance.
+    description: "Optional PGA function implemented by this instance.\n\nRaw bit values: false (0) = CoreAmplifier; true (1) = Pga"
     bit_offset: 0
     bit_size: 1
-    enum: PgaFunction
 fieldset/OpampCtr:
   only_in: '^MCXN(246|247|526|527|536|537|946|947)$'
   bit_size: 32
@@ -51,10 +50,9 @@ fieldset/OpampCtr:
     bit_offset: 0
     bit_size: 1
   - name: mode
-    description: Performance and power mode.
+    description: "Performance and power mode.\n\nRaw bit values: false (0) = HighPerformance; true (1) = LowPower"
     bit_offset: 1
     bit_size: 1
-    enum: Mode
   - name: biasc
     description: Bias current trim relative to the default current.
     bit_offset: 2
@@ -70,18 +68,13 @@ fieldset/OpampCtr:
     bit_offset: 8
     bit_size: 1
   - name: inpsel
-    description: >-
-      Positive input selection, 0 for INP0 and 1 for INP1. Select the initial
-      connection before enabling trigger mode; not writable in trigger mode.
-      INP1 is connected when both PGAIN is 0 and INPSEL is 1.
+    description: "Positive input selection, 0 for INP0 and 1 for INP1. Select the initial connection before enabling trigger mode; not writable in trigger mode. INP1 is connected when both PGAIN is 0 and INPSEL is 1.\n\nRaw bit values: false (0) = Inp0: When OPAMP is not in trigger mode, select positive input 0 (INP0).; true (1) = Inp1: When OPAMP is not in trigger mode, select positive input 1 (INP1)."
     bit_offset: 9
     bit_size: 1
-    enum: Inpsel
   - name: inpf
-    description: Read-only positive input connection status, 0 for INP0 and 1 for INP1.
+    description: "Read-only positive input connection status, 0 for INP0 and 1 for INP1.\n\nRaw bit values: false (0) = Inp0: Positive input 0 (INP0).; true (1) = Inp1: Positive input 1 (INP1)."
     bit_offset: 12
     bit_size: 1
-    enum: Inpf
   - name: bufen
     description: Enables the reference buffer.
     bit_offset: 16
@@ -113,22 +106,6 @@ fieldset/OpampCtr:
     bit_offset: 28
     bit_size: 3
     enum: Ngain
-enum/PgaFunction:
-  only_in: '^MCXN(246|247|526|527|536|537|946|947)$'
-  bit_size: 1
-  variants:
-  - name: CoreAmplifier
-    value: 0
-  - name: Pga
-    value: 1
-enum/Mode:
-  only_in: '^MCXN(246|247|526|527|536|537|946|947)$'
-  bit_size: 1
-  variants:
-  - name: HighPerformance
-    value: 0
-  - name: LowPower
-    value: 1
 enum/Biasc:
   only_in: '^MCXN(246|247|526|527|536|537|946|947)$'
   bit_size: 2
@@ -210,21 +187,3 @@ enum/Ngain:
     value: 6
   - name: Gain64
     value: 7
-enum/Inpf:
-  bit_size: 1
-  variants:
-  - name: Inp0
-    description: Positive input 0 (INP0).
-    value: 0
-  - name: Inp1
-    description: Positive input 1 (INP1).
-    value: 1
-enum/Inpsel:
-  bit_size: 1
-  variants:
-  - name: Inp0
-    description: When OPAMP is not in trigger mode, select positive input 0 (INP0).
-    value: 0
-  - name: Inp1
-    description: When OPAMP is not in trigger mode, select positive input 1 (INP1).
-    value: 1

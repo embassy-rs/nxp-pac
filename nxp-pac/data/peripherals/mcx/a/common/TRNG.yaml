@@ -360,10 +360,9 @@ fieldset/Osc2Ctl:
     bit_size: 2
     enum: Osc2Div
   - name: osc2_out_en
-    description: Oscillator 2 Clock Output Enable.
+    description: "Oscillator 2 Clock Output Enable.\n\nRaw bit values: false (0) = Osc2OutEn0: Ring oscillator 2 output is gated to an output pad.; true (1) = Osc2OutEn1: Allows external viewing of divided-by-2 ring oscillator 2 if MCTL[PRGM] = 1 mode is also selected, else ring oscillator 2 output is gated to an output pad."
     bit_offset: 4
     bit_size: 1
-    enum: Osc2OutEn
   - name: osc2_fct_val
     description: TRNG Oscillator 2 Frequency Count Valid.
     bit_offset: 9
@@ -880,15 +879,6 @@ enum/Osc2InvChainLen:
   - name: Osc2InvLen
     description: Adding 1 to this count are the total number of inversions occurring in ring oscillator 2.
     value: 54
-enum/Osc2OutEn:
-  bit_size: 1
-  variants:
-  - name: Osc2OutEn0
-    description: Ring oscillator 2 output is gated to an output pad.
-    value: 0
-  - name: Osc2OutEn1
-    description: Allows external viewing of divided-by-2 ring oscillator 2 if MCTL[PRGM] = 1 mode is also selected, else ring oscillator 2 output is gated to an output pad.
-    value: 1
 enum/OscDiv:
   bit_size: 2
   variants:

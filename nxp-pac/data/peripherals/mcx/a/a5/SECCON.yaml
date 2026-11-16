@@ -52,24 +52,6 @@ block/Seccon:
     access: Read
     description: Application-side view after ROM handoff is read-only. The generic map RW covers ROM/hardware access; ROM sets this value before user code. Reset on PoR only.
   description: 'Core/application-side security-controller register view. Source model only: no provisioning, authentication, lock, erase or lifecycle operation is performed. Unknown reset bits remain unknown; generated defaults are construction values, not observed device state.'
-enum/Cpu0stckcalSkew:
-  bit_size: 1
-  variants:
-  - name: Exact
-    description: TENMS value is exact
-    value: 0
-  - name: Inexact
-    description: TENMS value is not exact or not given
-    value: 1
-enum/Cpu0stckcalNoref:
-  bit_size: 1
-  variants:
-  - name: YesRef
-    description: Reference clock is provided
-    value: 0
-  - name: NoRef
-    description: No reference clock is provided
-    value: 1
 fieldset/Cpu0stckcal:
   description: Secure CPU0 System Tick Calibration Hardware reset contains unknown bits. Known-zero mask0x03FFFFFF; all other reset bits are unknown. Generated zero default is only a construction value, NOT a complete hardware reset value.
   bit_size: 32
@@ -79,97 +61,58 @@ fieldset/Cpu0stckcal:
     bit_offset: 0
     bit_size: 24
   - name: skew
-    description: Whether the TENMS value is exact.
+    description: "Whether the TENMS value is exact.\n\nRaw bit values: false (0) = Exact: TENMS value is exact; true (1) = Inexact: TENMS value is not exact or not given"
     bit_offset: 24
     bit_size: 1
-    enum: Cpu0stckcalSkew
   - name: noref
-    description: Whether the device provides a reference clock to the processor.
+    description: "Whether the device provides a reference clock to the processor.\n\nRaw bit values: false (0) = YesRef: Reference clock is provided; true (1) = NoRef: No reference clock is provided"
     bit_offset: 25
     bit_size: 1
-    enum: Cpu0stckcalNoref
-enum/MsfcfgIfrBlock0EraseDis0:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Enable IFR sector erase.
-    value: 0
-  - name: Disable
-    description: Disable IFR sector erase, write one lock until a system reset.
-    value: 1
-enum/MsfcfgMassEraseDis:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Enables mass erase
-    value: 0
-  - name: Disable
-    description: Disables mass erase, write one lock until a system reset.
-    value: 1
-enum/MsfcfgCgOverride:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: FMU access clock gating is enabled.
-    value: 0
-  - name: Disable
-    description: FMU access clock gating is disabled.
-    value: 1
 fieldset/Msfcfg:
   description: MSF Configuration
   bit_size: 32
   reset_value: 0
   fields:
   - name: ifr_block0_erase_dis0
-    description: user IFR block0 sector 0 erase control
+    description: "user IFR block0 sector 0 erase control\n\nRaw bit values: false (0) = Enable: Enable IFR sector erase.; true (1) = Disable: Disable IFR sector erase, write one lock until a system reset."
     bit_offset: 0
     bit_size: 1
-    enum: MsfcfgIfrBlock0EraseDis0
   - name: ifr_block0_erase_dis1
-    description: user IFR block0 sector 1 erase control
+    description: "user IFR block0 sector 1 erase control\n\nRaw bit values: false (0) = Enable: Enable IFR sector erase.; true (1) = Disable: Disable IFR sector erase, write one lock until a system reset."
     bit_offset: 1
     bit_size: 1
-    enum: MsfcfgIfrBlock0EraseDis0
   - name: ifr_block0_erase_dis2
-    description: user IFR block0 sector 2 erase control
+    description: "user IFR block0 sector 2 erase control\n\nRaw bit values: false (0) = Enable: Enable IFR sector erase.; true (1) = Disable: Disable IFR sector erase, write one lock until a system reset."
     bit_offset: 2
     bit_size: 1
-    enum: MsfcfgIfrBlock0EraseDis0
   - name: ifr_block0_erase_dis3
-    description: user IFR block0 sector 3 erase control
+    description: "user IFR block0 sector 3 erase control\n\nRaw bit values: false (0) = Enable: Enable IFR sector erase.; true (1) = Disable: Disable IFR sector erase, write one lock until a system reset."
     bit_offset: 3
     bit_size: 1
-    enum: MsfcfgIfrBlock0EraseDis0
   - name: ifr_block1_erase_dis0
-    description: user IFR block1 sector 0 erase control
+    description: "user IFR block1 sector 0 erase control\n\nRaw bit values: false (0) = Enable: Enable IFR sector erase.; true (1) = Disable: Disable IFR sector erase, write one lock until a system reset."
     bit_offset: 4
     bit_size: 1
-    enum: MsfcfgIfrBlock0EraseDis0
   - name: ifr_block1_erase_dis1
-    description: user IFR block1 sector 1 erase control
+    description: "user IFR block1 sector 1 erase control\n\nRaw bit values: false (0) = Enable: Enable IFR sector erase.; true (1) = Disable: Disable IFR sector erase, write one lock until a system reset."
     bit_offset: 5
     bit_size: 1
-    enum: MsfcfgIfrBlock0EraseDis0
   - name: ifr_block1_erase_dis2
-    description: user IFR block1 sector 2 erase control
+    description: "user IFR block1 sector 2 erase control\n\nRaw bit values: false (0) = Enable: Enable IFR sector erase.; true (1) = Disable: Disable IFR sector erase, write one lock until a system reset."
     bit_offset: 6
     bit_size: 1
-    enum: MsfcfgIfrBlock0EraseDis0
   - name: ifr_block1_erase_dis3
-    description: user IFR block1 sector 3 erase control
+    description: "user IFR block1 sector 3 erase control\n\nRaw bit values: false (0) = Enable: Enable IFR sector erase.; true (1) = Disable: Disable IFR sector erase, write one lock until a system reset."
     bit_offset: 7
     bit_size: 1
-    enum: MsfcfgIfrBlock0EraseDis0
   - name: mass_erase_dis
-    description: Mass erase control
+    description: "Mass erase control\n\nRaw bit values: false (0) = Enable: Enables mass erase; true (1) = Disable: Disables mass erase, write one lock until a system reset."
     bit_offset: 8
     bit_size: 1
-    enum: MsfcfgMassEraseDis
   - name: cg_override
-    description: FMU CG override
+    description: "FMU CG override\n\nRaw bit values: false (0) = Enable: FMU access clock gating is enabled.; true (1) = Disable: FMU access clock gating is disabled."
     bit_offset: 16
     bit_size: 1
-    enum: MsfcfgCgOverride
 fieldset/CfpaLcState:
   description: CFPA State Register Hardware reset contains unknown bits. Known-zero mask0x00000000; all other reset bits are unknown. Generated zero default is only a construction value, NOT a complete hardware reset value.
   bit_size: 32
@@ -178,54 +121,31 @@ fieldset/CfpaLcState:
     description: CFPA state
     bit_offset: 0
     bit_size: 32
-enum/RamXenRambXen:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Execute permission is disabled, R/W are enabled.
-    value: 0
-  - name: Enable
-    description: Execute permission is enabled, R/W/X are enabled.
-    value: 1
-enum/RamXenLock:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: This register is not locked and can be altered.
-    value: 0
-  - name: Enable
-    description: This register is locked and cannot be altered.
-    value: 1
 fieldset/RamXen:
   description: RAM XEN Control
   bit_size: 32
   reset_value: 0
   fields:
   - name: ramx0_xen
-    description: RAMX0 to RAMX3 Execute Permission Control.
+    description: "RAMX0 to RAMX3 Execute Permission Control.\n\nRaw bit values: false (0) = Disable: Execute permission is disabled, R/W are enabled.; true (1) = Enable: Execute permission is enabled, R/W/X are enabled."
     bit_offset: 0
     bit_size: 1
-    enum: RamXenRambXen
   - name: rama0_xen
-    description: RAMA0 Execute Permission Control.
+    description: "RAMA0 Execute Permission Control.\n\nRaw bit values: false (0) = Disable: Execute permission is disabled, R/W are enabled.; true (1) = Enable: Execute permission is enabled, R/W/X are enabled."
     bit_offset: 2
     bit_size: 1
-    enum: RamXenRambXen
   - name: rama1_xen
-    description: RAMAx (excluding RAMA0) Execute Permission Control.
+    description: "RAMAx (excluding RAMA0) Execute Permission Control.\n\nRaw bit values: false (0) = Disable: Execute permission is disabled, R/W are enabled.; true (1) = Enable: Execute permission is enabled, R/W/X are enabled."
     bit_offset: 3
     bit_size: 1
-    enum: RamXenRambXen
   - name: ramb_xen
-    description: RAMBx Execute Permission Control.
+    description: "RAMBx Execute Permission Control.\n\nRaw bit values: false (0) = Disable: Execute permission is disabled, R/W are enabled.; true (1) = Enable: Execute permission is enabled, R/W/X are enabled."
     bit_offset: 4
     bit_size: 1
-    enum: RamXenRambXen
   - name: lock
-    description: This 1-bit field provides a mechanism to limit writes to this register (and RAM_XEN_DP) to protect its contents. Once set, this bit remains asserted until a system reset.
+    description: "This 1-bit field provides a mechanism to limit writes to this register (and RAM_XEN_DP) to protect its contents. Once set, this bit remains asserted until a system reset.\n\nRaw bit values: false (0) = Disable: This register is not locked and can be altered.; true (1) = Enable: This register is locked and cannot be altered."
     bit_offset: 31
     bit_size: 1
-    enum: RamXenLock
 fieldset/RamXenDp:
   description: RAM XEN Control (Duplicate) Protected by GLIKEY index2; no LOCK field.
   bit_size: 32
@@ -247,24 +167,6 @@ fieldset/RamXenDp:
     description: Refer to RAM_XEN for more details.
     bit_offset: 4
     bit_size: 1
-enum/Gdet0CtrlGdetEvtcntClr:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Event counter not cleared
-    value: 0
-  - name: Enable
-    description: Clears event counter
-    value: 1
-enum/Gdet0CtrlGdetErrClr:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Error status not cleared
-    value: 0
-  - name: Enable
-    description: Clears error status
-    value: 1
 enum/Gdet0CtrlGdetIsoSw:
   bit_size: 2
   variants:
@@ -280,48 +182,19 @@ enum/Gdet0CtrlGdetIsoSw:
   - name: Disable3
     description: Isolation is disabled
     value: 3
-enum/Gdet0CtrlPosSync:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Positive glitch not detected
-    value: 0
-  - name: Enable
-    description: Positive glitch detected
-    value: 1
-enum/Gdet0CtrlNegSync:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Negative glitch not detected
-    value: 0
-  - name: Enable
-    description: Negative glitch detected
-    value: 1
-enum/Gdet0CtrlEventClrFlag:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Event counter not cleared
-    value: 0
-  - name: Enable
-    description: Event counter cleared
-    value: 1
 fieldset/Gdet0Ctrl:
   description: GDET0 Control Register
   bit_size: 32
   reset_value: 0
   fields:
   - name: gdet_evtcnt_clr
-    description: Controls the GDET0 clean event counter
+    description: "Controls the GDET0 clean event counter\n\nRaw bit values: false (0) = Disable: Event counter not cleared; true (1) = Enable: Clears event counter"
     bit_offset: 0
     bit_size: 1
-    enum: Gdet0CtrlGdetEvtcntClr
   - name: gdet_err_clr
-    description: Clears GDET0 error status
+    description: "Clears GDET0 error status\n\nRaw bit values: false (0) = Disable: Error status not cleared; true (1) = Enable: Clears error status"
     bit_offset: 1
     bit_size: 1
-    enum: Gdet0CtrlGdetErrClr
   - name: gdet_iso_sw
     description: GDET0 isolation control
     bit_offset: 2
@@ -332,20 +205,17 @@ fieldset/Gdet0Ctrl:
     bit_offset: 8
     bit_size: 8
   - name: pos_sync
-    description: Read-only status observation.
+    description: "Read-only status observation.\n\nRaw bit values: false (0) = Disable: Positive glitch not detected; true (1) = Enable: Positive glitch detected"
     bit_offset: 16
     bit_size: 1
-    enum: Gdet0CtrlPosSync
   - name: neg_sync
-    description: Read-only status observation.
+    description: "Read-only status observation.\n\nRaw bit values: false (0) = Disable: Negative glitch not detected; true (1) = Enable: Negative glitch detected"
     bit_offset: 17
     bit_size: 1
-    enum: Gdet0CtrlNegSync
   - name: event_clr_flag
-    description: Read-only status observation.
+    description: "Read-only status observation.\n\nRaw bit values: false (0) = Disable: Event counter not cleared; true (1) = Enable: Event counter cleared"
     bit_offset: 18
     bit_size: 1
-    enum: Gdet0CtrlEventClrFlag
 fieldset/ElsOtpLcState:
   description: Life Cycle State Register Hardware reset contains unknown bits. Known-zero mask0xFFFFFF00; all other reset bits are unknown. Generated zero default is only a construction value, NOT a complete hardware reset value.
   bit_size: 32

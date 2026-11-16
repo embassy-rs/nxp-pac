@@ -31,10 +31,9 @@ fieldset/Config:
   description: Configuration.
   fields:
   - name: range
-    description: Port Voltage Range.
+    description: "Port Voltage Range.\n\nRaw bit values: false (0) = Range0: 1.71 V-3.6 V.; true (1) = Range1: 2.70 V-3.6 V."
     bit_offset: 0
     bit_size: 1
-    enum: Range
 fieldset/Gpchr:
   description: Global Pin Control High.
   fields:
@@ -43,61 +42,52 @@ fieldset/Gpchr:
     bit_offset: 0
     bit_size: 16
   - name: gpwe
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 16
     bit_size: 1
     array:
       len: 16
       stride: 1
-    enum: Gpwe
 fieldset/Pcr:
   description: Pin Control 2.
   fields:
   - name: ps
-    description: Pull Select.
+    description: "Pull Select.\n\nRaw bit values: false (0) = Ps0: Enables internal pulldown resistor.; true (1) = Ps1: Enables internal pullup resistor."
     bit_offset: 0
     bit_size: 1
-    enum: Ps
   - name: pe
-    description: Pull Enable.
+    description: "Pull Enable.\n\nRaw bit values: false (0) = Pe0: Disables.; true (1) = Pe1: Enables."
     bit_offset: 1
     bit_size: 1
-    enum: Pe
   - name: sre
-    description: Slew Rate Enable.
+    description: "Slew Rate Enable.\n\nRaw bit values: false (0) = Sre0: Fast.; true (1) = Sre1: Slow."
     bit_offset: 3
     bit_size: 1
-    enum: Sre
   - name: ode
-    description: Open Drain Enable.
+    description: "Open Drain Enable.\n\nRaw bit values: false (0) = Ode0: Disables.; true (1) = Ode1: Enables."
     bit_offset: 5
     bit_size: 1
-    enum: Ode
   - name: dse
-    description: Drive Strength Enable.
+    description: "Drive Strength Enable.\n\nRaw bit values: false (0) = Dse0: Low.; true (1) = Dse1: High."
     bit_offset: 6
     bit_size: 1
-    enum: Dse
   - name: mux
     description: Pin Multiplex Control.
     bit_offset: 8
     bit_size: 4
     enum: Mux
   - name: ibe
-    description: Input Buffer Enable.
+    description: "Input Buffer Enable.\n\nRaw bit values: false (0) = Ibe0: Disables.; true (1) = Ibe1: Enables."
     bit_offset: 12
     bit_size: 1
-    enum: Ibe
   - name: inv
-    description: Invert Input.
+    description: "Invert Input.\n\nRaw bit values: false (0) = Inv0: Does not invert.; true (1) = Inv1: Inverts."
     bit_offset: 13
     bit_size: 1
-    enum: Inv
   - name: lk
-    description: Lock Register.
+    description: "Lock Register.\n\nRaw bit values: false (0) = Lk0: Does not lock.; true (1) = Lk1: Locks."
     bit_offset: 15
     bit_size: 1
-    enum: Lk
 fieldset/Verid:
   description: Version ID.
   fields:
@@ -114,57 +104,12 @@ fieldset/Verid:
     description: Major Version Number.
     bit_offset: 24
     bit_size: 8
-enum/Dse:
-  bit_size: 1
-  variants:
-  - name: Dse0
-    description: Low.
-    value: 0
-  - name: Dse1
-    description: High.
-    value: 1
 enum/Feature:
   bit_size: 16
   variants:
   - name: Feature0
     description: Basic implementation.
     value: 0
-enum/Gpwe:
-  bit_size: 1
-  variants:
-  - name: Gpwe0
-    description: Not updated.
-    value: 0
-  - name: Gpwe1
-    description: Updated.
-    value: 1
-enum/Ibe:
-  bit_size: 1
-  variants:
-  - name: Ibe0
-    description: Disables.
-    value: 0
-  - name: Ibe1
-    description: Enables.
-    value: 1
-enum/Inv:
-  bit_size: 1
-  variants:
-  - name: Inv0
-    description: Does not invert.
-    value: 0
-  - name: Inv1
-    description: Inverts.
-    value: 1
-enum/Lk:
-  bit_size: 1
-  variants:
-  - name: Lk0
-    description: Does not lock.
-    value: 0
-  - name: Lk1
-    description: Locks.
-    value: 1
 enum/Mux:
   bit_size: 4
   variants:
@@ -196,48 +141,3 @@ enum/Mux:
     value: 12
   - name: Mux13
     value: 13
-enum/Ode:
-  bit_size: 1
-  variants:
-  - name: Ode0
-    description: Disables.
-    value: 0
-  - name: Ode1
-    description: Enables.
-    value: 1
-enum/Pe:
-  bit_size: 1
-  variants:
-  - name: Pe0
-    description: Disables.
-    value: 0
-  - name: Pe1
-    description: Enables.
-    value: 1
-enum/Ps:
-  bit_size: 1
-  variants:
-  - name: Ps0
-    description: Enables internal pulldown resistor.
-    value: 0
-  - name: Ps1
-    description: Enables internal pullup resistor.
-    value: 1
-enum/Range:
-  bit_size: 1
-  variants:
-  - name: Range0
-    description: 1.71 V-3.6 V.
-    value: 0
-  - name: Range1
-    description: 2.70 V-3.6 V.
-    value: 1
-enum/Sre:
-  bit_size: 1
-  variants:
-  - name: Sre0
-    description: Fast.
-    value: 0
-  - name: Sre1
-    description: Slow.
-    value: 1

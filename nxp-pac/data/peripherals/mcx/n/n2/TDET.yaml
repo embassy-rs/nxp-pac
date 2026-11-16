@@ -69,40 +69,33 @@ fieldset/TdetAlphaFieldsetBravo:
   description: Control.
   fields:
   - name: swr
-    description: Software Reset.
+    description: "Software Reset.\n\nRaw bit values: false (0) = NoEffect: No effect.; true (1) = SwReset: Perform a software reset."
     bit_offset: 0
     bit_size: 1
-    enum: TdetAlphaEnumYankee
   - name: den
-    description: Digital Tamper Enable.
+    description: "Digital Tamper Enable.\n\nRaw bit values: false (0) = Disable: Disables TDET clock and prescaler.; true (1) = Enable: Enables TDET clock and prescaler."
     bit_offset: 1
     bit_size: 1
-    enum: TdetAlphaEnumFoxtrot
   - name: tfsr
-    description: Tamper Force System Reset.
+    description: "Tamper Force System Reset.\n\nRaw bit values: false (0) = NoReset: Do not force chip reset.; true (1) = Reset: Force chip reset."
     bit_offset: 2
     bit_size: 1
-    enum: TdetAlphaEnumBravoAlpha
   - name: um
-    description: Update Mode.
+    description: "Update Mode.\n\nRaw bit values: false (0) = NoEffect: No effect.; true (1) = ClearInts: Allows the clearing of interrupts."
     bit_offset: 3
     bit_size: 1
-    enum: TdetAlphaEnumQuebecDelta
   - name: atcs0
-    description: Active Tamper Clock Source.
+    description: "Active Tamper Clock Source.\n\nRaw bit values: false (0) = Freq1Hz: 1 Hz prescaler clock.; true (1) = Freq64Hz: 64 Hz prescaler clock."
     bit_offset: 4
     bit_size: 1
-    enum: Atcs
   - name: atcs1
-    description: Active Tamper Clock Source.
+    description: "Active Tamper Clock Source.\n\nRaw bit values: false (0) = Freq1Hz: 1 Hz prescaler clock.; true (1) = Freq64Hz: 64 Hz prescaler clock."
     bit_offset: 5
     bit_size: 1
-    enum: Atcs
   - name: distam
-    description: Disable Prescaler On Tamper.
+    description: "Disable Prescaler On Tamper.\n\nRaw bit values: false (0) = NoEffect: No effect.; true (1) = AutoDis: Automatically disables the prescaler after tamper detection."
     bit_offset: 8
     bit_size: 1
-    enum: TdetAlphaEnumGolf
   - name: dpr
     description: Digital Tamper Prescaler.
     bit_offset: 17
@@ -111,276 +104,223 @@ fieldset/TdetAlphaFieldsetCharlie:
   description: Interrupt Enable.
   fields:
   - name: dtie
-    description: Digital Tamper Interrupt Enable.
+    description: "Digital Tamper Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 0
     bit_size: 1
-    enum: Tie2
   - name: tiie0
-    description: Tamper Input n Interrupt Enable.
+    description: "Tamper Input n Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 2
     bit_size: 1
-    enum: Tie2
   - name: tiie1
-    description: Tamper Input n Interrupt Enable.
+    description: "Tamper Input n Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 3
     bit_size: 1
-    enum: Tie2
   - name: tiie2
-    description: Tamper Input n Interrupt Enable.
+    description: "Tamper Input n Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 4
     bit_size: 1
-    enum: Tie2
   - name: tiie3
-    description: Tamper Input n Interrupt Enable.
+    description: "Tamper Input n Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 5
     bit_size: 1
-    enum: Tie2
   - name: tiie4
-    description: Tamper Input n Interrupt Enable.
+    description: "Tamper Input n Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 6
     bit_size: 1
-    enum: Tie2
   - name: tiie5
-    description: Tamper Input n Interrupt Enable.
+    description: "Tamper Input n Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 7
     bit_size: 1
-    enum: Tie2
   - name: tiie6
-    description: Tamper Input n Interrupt Enable.
+    description: "Tamper Input n Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 8
     bit_size: 1
-    enum: Tie2
   - name: tiie7
-    description: Tamper Input n Interrupt Enable.
+    description: "Tamper Input n Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 9
     bit_size: 1
-    enum: Tie2
   - name: tiie8
-    description: Tamper Input n Interrupt Enable.
+    description: "Tamper Input n Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 10
     bit_size: 1
-    enum: Tie2
   - name: tiie9
-    description: Tamper Input n Interrupt Enable.
+    description: "Tamper Input n Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 11
     bit_size: 1
-    enum: Tie2
   - name: tpie0
-    description: Tamper Pin n Interrupt Enable.
+    description: "Tamper Pin n Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 16
     bit_size: 1
-    enum: Tie2
   - name: tpie1
-    description: Tamper Pin n Interrupt Enable.
+    description: "Tamper Pin n Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 17
     bit_size: 1
-    enum: Tie2
   - name: tpie2
-    description: Tamper Pin n Interrupt Enable.
+    description: "Tamper Pin n Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 18
     bit_size: 1
-    enum: Tie2
   - name: tpie3
-    description: Tamper Pin n Interrupt Enable.
+    description: "Tamper Pin n Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 19
     bit_size: 1
-    enum: Tie2
   - name: tpie4
-    description: Tamper Pin n Interrupt Enable.
+    description: "Tamper Pin n Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 20
     bit_size: 1
-    enum: Tie2
   - name: tpie5
-    description: Tamper Pin n Interrupt Enable.
+    description: "Tamper Pin n Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 21
     bit_size: 1
-    enum: Tie2
   - name: tpie6
-    description: Tamper Pin n Interrupt Enable.
+    description: "Tamper Pin n Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 22
     bit_size: 1
-    enum: Tie2
   - name: tpie7
-    description: Tamper Pin n Interrupt Enable.
+    description: "Tamper Pin n Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 23
     bit_size: 1
-    enum: Tie2
 fieldset/TdetAlphaFieldsetDelta:
   description: Lock.
   fields:
   - name: crl
-    description: Control Register Lock.
+    description: "Control Register Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 4
     bit_size: 1
-    enum: Gfl
   - name: srl
-    description: Status Register Lock.
+    description: "Status Register Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 5
     bit_size: 1
-    enum: Gfl
   - name: lrl
-    description: Lock Register Lock.
+    description: "Lock Register Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 6
     bit_size: 1
-    enum: Gfl
   - name: iel
-    description: Interrupt Enable Lock.
+    description: "Interrupt Enable Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 7
     bit_size: 1
-    enum: Gfl
   - name: tsl
-    description: Tamper Seconds Lock.
+    description: "Tamper Seconds Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 8
     bit_size: 1
-    enum: Gfl
   - name: tel
-    description: Tamper Enable Lock.
+    description: "Tamper Enable Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 9
     bit_size: 1
-    enum: Gfl
   - name: pdl
-    description: Pin Direction Lock.
+    description: "Pin Direction Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 10
     bit_size: 1
-    enum: Gfl
   - name: ppl
-    description: Pin Polarity Lock.
+    description: "Pin Polarity Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 11
     bit_size: 1
-    enum: Gfl
   - name: atl0
-    description: Active Tamper Lock.
+    description: "Active Tamper Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 12
     bit_size: 1
-    enum: Gfl
   - name: atl1
-    description: Active Tamper Lock.
+    description: "Active Tamper Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 13
     bit_size: 1
-    enum: Gfl
   - name: gfl0
-    description: Glitch Filter Lock.
+    description: "Glitch Filter Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 16
     bit_size: 1
-    enum: Gfl
   - name: gfl1
-    description: Glitch Filter Lock.
+    description: "Glitch Filter Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 17
     bit_size: 1
-    enum: Gfl
   - name: gfl2
-    description: Glitch Filter Lock.
+    description: "Glitch Filter Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 18
     bit_size: 1
-    enum: Gfl
   - name: gfl3
-    description: Glitch Filter Lock.
+    description: "Glitch Filter Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 19
     bit_size: 1
-    enum: Gfl
   - name: gfl4
-    description: Glitch Filter Lock.
+    description: "Glitch Filter Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 20
     bit_size: 1
-    enum: Gfl
   - name: gfl5
-    description: Glitch Filter Lock.
+    description: "Glitch Filter Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 21
     bit_size: 1
-    enum: Gfl
   - name: gfl6
-    description: Glitch Filter Lock.
+    description: "Glitch Filter Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 22
     bit_size: 1
-    enum: Gfl
   - name: gfl7
-    description: Glitch Filter Lock.
+    description: "Glitch Filter Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 23
     bit_size: 1
-    enum: Gfl
 fieldset/TdetAlphaFieldsetEcho:
   description: Pin Direction.
   fields:
   - name: tpd0
-    description: Tamper Pin Direction.
+    description: "Tamper Pin Direction.\n\nRaw bit values: false (0) = Input: Input.; true (1) = Output: Output and drives the inverse of the expected value (tamper pin is asserted)."
     bit_offset: 0
     bit_size: 1
-    enum: Tpd
   - name: tpd1
-    description: Tamper Pin Direction.
+    description: "Tamper Pin Direction.\n\nRaw bit values: false (0) = Input: Input.; true (1) = Output: Output and drives the inverse of the expected value (tamper pin is asserted)."
     bit_offset: 1
     bit_size: 1
-    enum: Tpd
   - name: tpd2
-    description: Tamper Pin Direction.
+    description: "Tamper Pin Direction.\n\nRaw bit values: false (0) = Input: Input.; true (1) = Output: Output and drives the inverse of the expected value (tamper pin is asserted)."
     bit_offset: 2
     bit_size: 1
-    enum: Tpd
   - name: tpd3
-    description: Tamper Pin Direction.
+    description: "Tamper Pin Direction.\n\nRaw bit values: false (0) = Input: Input.; true (1) = Output: Output and drives the inverse of the expected value (tamper pin is asserted)."
     bit_offset: 3
     bit_size: 1
-    enum: Tpd
   - name: tpd4
-    description: Tamper Pin Direction.
+    description: "Tamper Pin Direction.\n\nRaw bit values: false (0) = Input: Input.; true (1) = Output: Output and drives the inverse of the expected value (tamper pin is asserted)."
     bit_offset: 4
     bit_size: 1
-    enum: Tpd
   - name: tpd5
-    description: Tamper Pin Direction.
+    description: "Tamper Pin Direction.\n\nRaw bit values: false (0) = Input: Input.; true (1) = Output: Output and drives the inverse of the expected value (tamper pin is asserted)."
     bit_offset: 5
     bit_size: 1
-    enum: Tpd
   - name: tpd6
-    description: Tamper Pin Direction.
+    description: "Tamper Pin Direction.\n\nRaw bit values: false (0) = Input: Input.; true (1) = Output: Output and drives the inverse of the expected value (tamper pin is asserted)."
     bit_offset: 6
     bit_size: 1
-    enum: Tpd
   - name: tpd7
-    description: Tamper Pin Direction.
+    description: "Tamper Pin Direction.\n\nRaw bit values: false (0) = Input: Input.; true (1) = Output: Output and drives the inverse of the expected value (tamper pin is asserted)."
     bit_offset: 7
     bit_size: 1
-    enum: Tpd
   - name: tpod0
-    description: Tamper Pin Output Data.
+    description: "Tamper Pin Output Data.\n\nRaw bit values: false (0) = Zero: Zero.; true (1) = One: One."
     bit_offset: 16
     bit_size: 1
-    enum: Tpid
   - name: tpod1
-    description: Tamper Pin Output Data.
+    description: "Tamper Pin Output Data.\n\nRaw bit values: false (0) = Zero: Zero.; true (1) = One: One."
     bit_offset: 17
     bit_size: 1
-    enum: Tpid
   - name: tpod2
-    description: Tamper Pin Output Data.
+    description: "Tamper Pin Output Data.\n\nRaw bit values: false (0) = Zero: Zero.; true (1) = One: One."
     bit_offset: 18
     bit_size: 1
-    enum: Tpid
   - name: tpod3
-    description: Tamper Pin Output Data.
+    description: "Tamper Pin Output Data.\n\nRaw bit values: false (0) = Zero: Zero.; true (1) = One: One."
     bit_offset: 19
     bit_size: 1
-    enum: Tpid
   - name: tpod4
-    description: Tamper Pin Output Data.
+    description: "Tamper Pin Output Data.\n\nRaw bit values: false (0) = Zero: Zero.; true (1) = One: One."
     bit_offset: 20
     bit_size: 1
-    enum: Tpid
   - name: tpod5
-    description: Tamper Pin Output Data.
+    description: "Tamper Pin Output Data.\n\nRaw bit values: false (0) = Zero: Zero.; true (1) = One: One."
     bit_offset: 21
     bit_size: 1
-    enum: Tpid
   - name: tpod6
-    description: Tamper Pin Output Data.
+    description: "Tamper Pin Output Data.\n\nRaw bit values: false (0) = Zero: Zero.; true (1) = One: One."
     bit_offset: 22
     bit_size: 1
-    enum: Tpid
   - name: tpod7
-    description: Tamper Pin Output Data.
+    description: "Tamper Pin Output Data.\n\nRaw bit values: false (0) = Zero: Zero.; true (1) = One: One."
     bit_offset: 23
     bit_size: 1
-    enum: Tpid
 fieldset/TdetAlphaFieldsetFoxtrot:
   description: Pin Glitch Filter.
   fields:
@@ -389,15 +329,13 @@ fieldset/TdetAlphaFieldsetFoxtrot:
     bit_offset: 0
     bit_size: 6
   - name: gfp
-    description: Glitch Filter Prescaler.
+    description: "Glitch Filter Prescaler.\n\nRaw bit values: false (0) = Freq512Hz: 512 Hz prescaler clock.; true (1) = Freq32Khz: 32.768 kHz clock."
     bit_offset: 6
     bit_size: 1
-    enum: TdetAlphaEnumSierra
   - name: gfe
-    description: Glitch Filter Enable.
+    description: "Glitch Filter Enable.\n\nRaw bit values: false (0) = Bypass: Bypasses.; true (1) = Enable: Enables."
     bit_offset: 7
     bit_size: 1
-    enum: TdetAlphaEnumJuliet
   - name: tpsw
     description: Tamper Pin Sample Width.
     bit_offset: 8
@@ -414,294 +352,238 @@ fieldset/TdetAlphaFieldsetFoxtrot:
     bit_size: 2
     enum: TdetAlphaEnumXrayBravo
   - name: tpe
-    description: Tamper Pull Enable.
+    description: "Tamper Pull Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 24
     bit_size: 1
-    enum: Tie2
   - name: tps
-    description: Tamper Pull Select.
+    description: "Tamper Pull Select.\n\nRaw bit values: false (0) = Assert: Asserts.; true (1) = Negate: Negates."
     bit_offset: 25
     bit_size: 1
-    enum: TdetAlphaEnumMikeDelta
 fieldset/TdetAlphaFieldsetGolf:
   description: Pin Polarity.
   fields:
   - name: tpp0
-    description: Tamper Pin n Polarity.
+    description: "Tamper Pin n Polarity.\n\nRaw bit values: false (0) = NoInvert: Not inverted.; true (1) = Invert: Inverted."
     bit_offset: 0
     bit_size: 1
-    enum: Tpp2
   - name: tpp1
-    description: Tamper Pin n Polarity.
+    description: "Tamper Pin n Polarity.\n\nRaw bit values: false (0) = NoInvert: Not inverted.; true (1) = Invert: Inverted."
     bit_offset: 1
     bit_size: 1
-    enum: Tpp2
   - name: tpp2
-    description: Tamper Pin n Polarity.
+    description: "Tamper Pin n Polarity.\n\nRaw bit values: false (0) = NoInvert: Not inverted.; true (1) = Invert: Inverted."
     bit_offset: 2
     bit_size: 1
-    enum: Tpp2
   - name: tpp3
-    description: Tamper Pin n Polarity.
+    description: "Tamper Pin n Polarity.\n\nRaw bit values: false (0) = NoInvert: Not inverted.; true (1) = Invert: Inverted."
     bit_offset: 3
     bit_size: 1
-    enum: Tpp2
   - name: tpp4
-    description: Tamper Pin n Polarity.
+    description: "Tamper Pin n Polarity.\n\nRaw bit values: false (0) = NoInvert: Not inverted.; true (1) = Invert: Inverted."
     bit_offset: 4
     bit_size: 1
-    enum: Tpp2
   - name: tpp5
-    description: Tamper Pin n Polarity.
+    description: "Tamper Pin n Polarity.\n\nRaw bit values: false (0) = NoInvert: Not inverted.; true (1) = Invert: Inverted."
     bit_offset: 5
     bit_size: 1
-    enum: Tpp2
   - name: tpp6
-    description: Tamper Pin n Polarity.
+    description: "Tamper Pin n Polarity.\n\nRaw bit values: false (0) = NoInvert: Not inverted.; true (1) = Invert: Inverted."
     bit_offset: 6
     bit_size: 1
-    enum: Tpp2
   - name: tpp7
-    description: Tamper Pin n Polarity.
+    description: "Tamper Pin n Polarity.\n\nRaw bit values: false (0) = NoInvert: Not inverted.; true (1) = Invert: Inverted."
     bit_offset: 7
     bit_size: 1
-    enum: Tpp2
   - name: tpid0
-    description: Tamper Pin n Input Data.
+    description: "Tamper Pin n Input Data.\n\nRaw bit values: false (0) = Zero: Zero.; true (1) = One: One."
     bit_offset: 16
     bit_size: 1
-    enum: Tpid
   - name: tpid1
-    description: Tamper Pin n Input Data.
+    description: "Tamper Pin n Input Data.\n\nRaw bit values: false (0) = Zero: Zero.; true (1) = One: One."
     bit_offset: 17
     bit_size: 1
-    enum: Tpid
   - name: tpid2
-    description: Tamper Pin n Input Data.
+    description: "Tamper Pin n Input Data.\n\nRaw bit values: false (0) = Zero: Zero.; true (1) = One: One."
     bit_offset: 18
     bit_size: 1
-    enum: Tpid
   - name: tpid3
-    description: Tamper Pin n Input Data.
+    description: "Tamper Pin n Input Data.\n\nRaw bit values: false (0) = Zero: Zero.; true (1) = One: One."
     bit_offset: 19
     bit_size: 1
-    enum: Tpid
   - name: tpid4
-    description: Tamper Pin n Input Data.
+    description: "Tamper Pin n Input Data.\n\nRaw bit values: false (0) = Zero: Zero.; true (1) = One: One."
     bit_offset: 20
     bit_size: 1
-    enum: Tpid
   - name: tpid5
-    description: Tamper Pin n Input Data.
+    description: "Tamper Pin n Input Data.\n\nRaw bit values: false (0) = Zero: Zero.; true (1) = One: One."
     bit_offset: 21
     bit_size: 1
-    enum: Tpid
   - name: tpid6
-    description: Tamper Pin n Input Data.
+    description: "Tamper Pin n Input Data.\n\nRaw bit values: false (0) = Zero: Zero.; true (1) = One: One."
     bit_offset: 22
     bit_size: 1
-    enum: Tpid
   - name: tpid7
-    description: Tamper Pin n Input Data.
+    description: "Tamper Pin n Input Data.\n\nRaw bit values: false (0) = Zero: Zero.; true (1) = One: One."
     bit_offset: 23
     bit_size: 1
-    enum: Tpid
 fieldset/TdetAlphaFieldsetHotel:
   description: Status.
   fields:
   - name: dtf
-    description: Digital Tamper Flag.
+    description: "Digital Tamper Flag.\n\nRaw bit values: false (0) = NoDet: TDET tampering not detected.; true (1) = Det: TDET tampering detected."
     bit_offset: 0
     bit_size: 1
-    enum: TdetAlphaEnumHotel
   - name: taf
-    description: Tamper Acknowledge Flag.
+    description: "Tamper Acknowledge Flag.\n\nRaw bit values: false (0) = NotOccur: Digital Tamper Flag (SR[DTF]) is clear or chip reset has not occurred after Digital Tamper Flag (SR[DTF]) was set.; true (1) = Occur: Chip reset has occurred after Digital Tamper Flag (SR[DTF]) was set."
     bit_offset: 1
     bit_size: 1
-    enum: TdetAlphaEnumZulu
   - name: tif0
-    description: Tamper Input n Flag.
+    description: "Tamper Input n Flag.\n\nRaw bit values: false (0) = NoDet: On-chip tamper not detected.; true (1) = Det: On-chip tamper detected."
     bit_offset: 2
     bit_size: 1
-    enum: Tif2
   - name: tif1
-    description: Tamper Input n Flag.
+    description: "Tamper Input n Flag.\n\nRaw bit values: false (0) = NoDet: On-chip tamper not detected.; true (1) = Det: On-chip tamper detected."
     bit_offset: 3
     bit_size: 1
-    enum: Tif2
   - name: tif2
-    description: Tamper Input n Flag.
+    description: "Tamper Input n Flag.\n\nRaw bit values: false (0) = NoDet: On-chip tamper not detected.; true (1) = Det: On-chip tamper detected."
     bit_offset: 4
     bit_size: 1
-    enum: Tif2
   - name: tif3
-    description: Tamper Input n Flag.
+    description: "Tamper Input n Flag.\n\nRaw bit values: false (0) = NoDet: On-chip tamper not detected.; true (1) = Det: On-chip tamper detected."
     bit_offset: 5
     bit_size: 1
-    enum: Tif2
   - name: tif4
-    description: Tamper Input n Flag.
+    description: "Tamper Input n Flag.\n\nRaw bit values: false (0) = NoDet: On-chip tamper not detected.; true (1) = Det: On-chip tamper detected."
     bit_offset: 6
     bit_size: 1
-    enum: Tif2
   - name: tif5
-    description: Tamper Input n Flag.
+    description: "Tamper Input n Flag.\n\nRaw bit values: false (0) = NoDet: On-chip tamper not detected.; true (1) = Det: On-chip tamper detected."
     bit_offset: 7
     bit_size: 1
-    enum: Tif2
   - name: tif6
-    description: Tamper Input n Flag.
+    description: "Tamper Input n Flag.\n\nRaw bit values: false (0) = NoDet: On-chip tamper not detected.; true (1) = Det: On-chip tamper detected."
     bit_offset: 8
     bit_size: 1
-    enum: Tif2
   - name: tif7
-    description: Tamper Input n Flag.
+    description: "Tamper Input n Flag.\n\nRaw bit values: false (0) = NoDet: On-chip tamper not detected.; true (1) = Det: On-chip tamper detected."
     bit_offset: 9
     bit_size: 1
-    enum: Tif2
   - name: tif8
-    description: Tamper Input n Flag.
+    description: "Tamper Input n Flag.\n\nRaw bit values: false (0) = NoDet: On-chip tamper not detected.; true (1) = Det: On-chip tamper detected."
     bit_offset: 10
     bit_size: 1
-    enum: Tif2
   - name: tif9
-    description: Tamper Input n Flag.
+    description: "Tamper Input n Flag.\n\nRaw bit values: false (0) = NoDet: On-chip tamper not detected.; true (1) = Det: On-chip tamper detected."
     bit_offset: 11
     bit_size: 1
-    enum: Tif2
   - name: tpf0
-    description: Tamper Pin n Flag.
+    description: "Tamper Pin n Flag.\n\nRaw bit values: false (0) = NoDet: Pin tamper not detected.; true (1) = Det: Pin tamper detected."
     bit_offset: 16
     bit_size: 1
-    enum: Tpf
   - name: tpf1
-    description: Tamper Pin n Flag.
+    description: "Tamper Pin n Flag.\n\nRaw bit values: false (0) = NoDet: Pin tamper not detected.; true (1) = Det: Pin tamper detected."
     bit_offset: 17
     bit_size: 1
-    enum: Tpf
   - name: tpf2
-    description: Tamper Pin n Flag.
+    description: "Tamper Pin n Flag.\n\nRaw bit values: false (0) = NoDet: Pin tamper not detected.; true (1) = Det: Pin tamper detected."
     bit_offset: 18
     bit_size: 1
-    enum: Tpf
   - name: tpf3
-    description: Tamper Pin n Flag.
+    description: "Tamper Pin n Flag.\n\nRaw bit values: false (0) = NoDet: Pin tamper not detected.; true (1) = Det: Pin tamper detected."
     bit_offset: 19
     bit_size: 1
-    enum: Tpf
   - name: tpf4
-    description: Tamper Pin n Flag.
+    description: "Tamper Pin n Flag.\n\nRaw bit values: false (0) = NoDet: Pin tamper not detected.; true (1) = Det: Pin tamper detected."
     bit_offset: 20
     bit_size: 1
-    enum: Tpf
   - name: tpf5
-    description: Tamper Pin n Flag.
+    description: "Tamper Pin n Flag.\n\nRaw bit values: false (0) = NoDet: Pin tamper not detected.; true (1) = Det: Pin tamper detected."
     bit_offset: 21
     bit_size: 1
-    enum: Tpf
   - name: tpf6
-    description: Tamper Pin n Flag.
+    description: "Tamper Pin n Flag.\n\nRaw bit values: false (0) = NoDet: Pin tamper not detected.; true (1) = Det: Pin tamper detected."
     bit_offset: 22
     bit_size: 1
-    enum: Tpf
   - name: tpf7
-    description: Tamper Pin n Flag.
+    description: "Tamper Pin n Flag.\n\nRaw bit values: false (0) = NoDet: Pin tamper not detected.; true (1) = Det: Pin tamper detected."
     bit_offset: 23
     bit_size: 1
-    enum: Tpf
 fieldset/TdetAlphaFieldsetIndia:
   description: Tamper Enable.
   fields:
   - name: tie0
-    description: Tamper Input Enable.
+    description: "Tamper Input Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 2
     bit_size: 1
-    enum: Tie2
   - name: tie1
-    description: Tamper Input Enable.
+    description: "Tamper Input Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 3
     bit_size: 1
-    enum: Tie2
   - name: tie2
-    description: Tamper Input Enable.
+    description: "Tamper Input Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 4
     bit_size: 1
-    enum: Tie2
   - name: tie3
-    description: Tamper Input Enable.
+    description: "Tamper Input Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 5
     bit_size: 1
-    enum: Tie2
   - name: tie4
-    description: Tamper Input Enable.
+    description: "Tamper Input Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 6
     bit_size: 1
-    enum: Tie2
   - name: tie5
-    description: Tamper Input Enable.
+    description: "Tamper Input Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 7
     bit_size: 1
-    enum: Tie2
   - name: tie6
-    description: Tamper Input Enable.
+    description: "Tamper Input Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 8
     bit_size: 1
-    enum: Tie2
   - name: tie7
-    description: Tamper Input Enable.
+    description: "Tamper Input Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 9
     bit_size: 1
-    enum: Tie2
   - name: tie8
-    description: Tamper Input Enable.
+    description: "Tamper Input Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 10
     bit_size: 1
-    enum: Tie2
   - name: tie9
-    description: Tamper Input Enable.
+    description: "Tamper Input Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 11
     bit_size: 1
-    enum: Tie2
   - name: tpe0
-    description: Tamper Pin Enable.
+    description: "Tamper Pin Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 16
     bit_size: 1
-    enum: Tie2
   - name: tpe1
-    description: Tamper Pin Enable.
+    description: "Tamper Pin Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 17
     bit_size: 1
-    enum: Tie2
   - name: tpe2
-    description: Tamper Pin Enable.
+    description: "Tamper Pin Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 18
     bit_size: 1
-    enum: Tie2
   - name: tpe3
-    description: Tamper Pin Enable.
+    description: "Tamper Pin Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 19
     bit_size: 1
-    enum: Tie2
   - name: tpe4
-    description: Tamper Pin Enable.
+    description: "Tamper Pin Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 20
     bit_size: 1
-    enum: Tie2
   - name: tpe5
-    description: Tamper Pin Enable.
+    description: "Tamper Pin Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 21
     bit_size: 1
-    enum: Tie2
   - name: tpe6
-    description: Tamper Pin Enable.
+    description: "Tamper Pin Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 22
     bit_size: 1
-    enum: Tie2
   - name: tpe7
-    description: Tamper Pin Enable.
+    description: "Tamper Pin Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 23
     bit_size: 1
-    enum: Tie2
 fieldset/TdetAlphaFieldsetJuliet:
   description: Tamper Seconds.
   fields:
@@ -709,123 +591,6 @@ fieldset/TdetAlphaFieldsetJuliet:
     description: Tamper Time Seconds.
     bit_offset: 0
     bit_size: 32
-enum/Atcs:
-  bit_size: 1
-  variants:
-  - name: Freq1Hz
-    description: 1 Hz prescaler clock.
-    value: 0
-  - name: Freq64Hz
-    description: 64 Hz prescaler clock.
-    value: 1
-enum/Gfl:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
-    value: 1
-enum/TdetAlphaEnumFoxtrot:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables TDET clock and prescaler.
-    value: 0
-  - name: Enable
-    description: Enables TDET clock and prescaler.
-    value: 1
-enum/TdetAlphaEnumGolf:
-  bit_size: 1
-  variants:
-  - name: AutoDis
-    description: Automatically disables the prescaler after tamper detection.
-    value: 1
-  - name: NoEffect
-    description: No effect.
-    value: 0
-enum/TdetAlphaEnumHotel:
-  bit_size: 1
-  variants:
-  - name: Det
-    description: TDET tampering detected.
-    value: 1
-  - name: NoDet
-    description: TDET tampering not detected.
-    value: 0
-enum/Tie2:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumJuliet:
-  bit_size: 1
-  variants:
-  - name: Bypass
-    description: Bypasses.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumSierra:
-  bit_size: 1
-  variants:
-  - name: Freq32Khz
-    description: 32.768 kHz clock.
-    value: 1
-  - name: Freq512Hz
-    description: 512 Hz prescaler clock.
-    value: 0
-enum/TdetAlphaEnumYankee:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: No effect.
-    value: 0
-  - name: SwReset
-    description: Perform a software reset.
-    value: 1
-enum/TdetAlphaEnumZulu:
-  bit_size: 1
-  variants:
-  - name: NotOccur
-    description: Digital Tamper Flag (SR[DTF]) is clear or chip reset has not occurred after Digital Tamper Flag (SR[DTF]) was set.
-    value: 0
-  - name: Occur
-    description: Chip reset has occurred after Digital Tamper Flag (SR[DTF]) was set.
-    value: 1
-enum/TdetAlphaEnumBravoAlpha:
-  bit_size: 1
-  variants:
-  - name: NoReset
-    description: Do not force chip reset.
-    value: 0
-  - name: Reset
-    description: Force chip reset.
-    value: 1
-enum/Tif2:
-  bit_size: 1
-  variants:
-  - name: Det
-    description: On-chip tamper detected.
-    value: 1
-  - name: NoDet
-    description: On-chip tamper not detected.
-    value: 0
-enum/Tpd:
-  bit_size: 1
-  variants:
-  - name: Input
-    description: Input.
-    value: 0
-  - name: Output
-    description: Output and drives the inverse of the expected value (tamper pin is asserted).
-    value: 1
 enum/TdetAlphaEnumXrayBravo:
   bit_size: 2
   variants:
@@ -841,42 +606,6 @@ enum/TdetAlphaEnumXrayBravo:
   - name: Zero
     description: Zero/passive tamper.
     value: 0
-enum/Tpf:
-  bit_size: 1
-  variants:
-  - name: Det
-    description: Pin tamper detected.
-    value: 1
-  - name: NoDet
-    description: Pin tamper not detected.
-    value: 0
-enum/Tpid:
-  bit_size: 1
-  variants:
-  - name: One
-    description: One.
-    value: 1
-  - name: Zero
-    description: Zero.
-    value: 0
-enum/Tpp2:
-  bit_size: 1
-  variants:
-  - name: Invert
-    description: Inverted.
-    value: 1
-  - name: NoInvert
-    description: Not inverted.
-    value: 0
-enum/TdetAlphaEnumMikeDelta:
-  bit_size: 1
-  variants:
-  - name: Assert
-    description: Asserts.
-    value: 0
-  - name: Negate
-    description: Negates.
-    value: 1
 enum/TdetAlphaEnumNovemberDelta:
   bit_size: 2
   variants:
@@ -906,13 +635,4 @@ enum/TdetAlphaEnumOscarDelta:
     value: 3
   - name: Disable
     description: Continuous monitoring, pin sampling disabled.
-    value: 0
-enum/TdetAlphaEnumQuebecDelta:
-  bit_size: 1
-  variants:
-  - name: ClearInts
-    description: Allows the clearing of interrupts.
-    value: 1
-  - name: NoEffect
-    description: No effect.
     value: 0

@@ -77,16 +77,6 @@ enum/Filte2:
   - name: EnAny
     description: Enable (Detect on any edge).
     value: 3
-enum/Filtm2:
-  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
-  bit_size: 1
-  variants:
-  - name: LowPwrOnly
-    description: Active only during Power Down/Deep Power Down mode.
-    value: 0
-  - name: AnyPwr
-    description: Active during all power modes.
-    value: 1
 enum/Wupe:
   only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
   bit_size: 2
@@ -103,13 +93,3 @@ enum/Wupe:
   - name: EnAny
     description: Enable (detect on any edge).
     value: 3
-enum/Wupmc:
-  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
-  bit_size: 1
-  variants:
-  - name: LowPwrOnly
-    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
-    value: 0
-  - name: AnyPwr
-    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
-    value: 1

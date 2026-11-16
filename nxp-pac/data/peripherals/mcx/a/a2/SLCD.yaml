@@ -8,19 +8,17 @@ fieldset/Ar:
     bit_offset: 0
     bit_size: 3
   - name: bmode
-    description: Blink mode.
+    description: "Blink mode.\n\nRaw bit values: false (0) = Blank: Display blank during the blink period.; true (1) = Alternate: Display alternate display during blink period."
     bit_offset: 3
     bit_size: 1
-    enum: Bmode
   - name: blank
     description: Blank display mode.
     bit_offset: 5
     bit_size: 1
   - name: alt
-    description: Alternate display mode.
+    description: "Alternate display mode.\n\nRaw bit values: false (0) = Normal: Normal display mode.; true (1) = Alternate: Alternate display mode."
     bit_offset: 6
     bit_size: 1
-    enum: Alt
   - name: blink
     description: Blink command.
     bit_offset: 7
@@ -35,250 +33,202 @@ fieldset/Bpen0:
   description: LCD Back Plane Enable register 0.
   fields:
   - name: pin_0_bpen
-    description: LCD Pin 0 Back Plane Enable.
+    description: "LCD Pin 0 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 0
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_1_bpen
-    description: LCD Pin 1 Back Plane Enable.
+    description: "LCD Pin 1 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 1
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_2_bpen
-    description: LCD Pin 2 Back Plane Enable.
+    description: "LCD Pin 2 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 2
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_3_bpen
-    description: LCD Pin 3 Back Plane Enable.
+    description: "LCD Pin 3 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 3
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_4_bpen
-    description: LCD Pin 4 Back Plane Enable.
+    description: "LCD Pin 4 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 4
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_5_bpen
-    description: LCD Pin 5 Back Plane Enable.
+    description: "LCD Pin 5 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 5
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_6_bpen
-    description: LCD Pin 6 Back Plane Enable.
+    description: "LCD Pin 6 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 6
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_7_bpen
-    description: LCD Pin 7 Back Plane Enable.
+    description: "LCD Pin 7 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 7
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_8_bpen
-    description: LCD Pin 8 Back Plane Enable.
+    description: "LCD Pin 8 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 8
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_9_bpen
-    description: LCD Pin 9 Back Plane Enable.
+    description: "LCD Pin 9 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 9
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_10_bpen
-    description: LCD Pin 10 Back Plane Enable.
+    description: "LCD Pin 10 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 10
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_11_bpen
-    description: LCD Pin 11 Back Plane Enable.
+    description: "LCD Pin 11 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 11
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_12_bpen
-    description: LCD Pin 12 Back Plane Enable.
+    description: "LCD Pin 12 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 12
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_13_bpen
-    description: LCD Pin 13 Back Plane Enable.
+    description: "LCD Pin 13 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 13
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_14_bpen
-    description: LCD Pin 14 Back Plane Enable.
+    description: "LCD Pin 14 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 14
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_15_bpen
-    description: LCD Pin 15 Back Plane Enable.
+    description: "LCD Pin 15 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 15
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_16_bpen
-    description: LCD Pin 16 Back Plane Enable.
+    description: "LCD Pin 16 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 16
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_17_bpen
-    description: LCD Pin 17 Back Plane Enable.
+    description: "LCD Pin 17 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 17
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_18_bpen
-    description: LCD Pin 18 Back Plane Enable.
+    description: "LCD Pin 18 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 18
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_19_bpen
-    description: LCD Pin 19 Back Plane Enable.
+    description: "LCD Pin 19 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 19
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_20_bpen
-    description: LCD Pin 20 Back Plane Enable.
+    description: "LCD Pin 20 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 20
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_21_bpen
-    description: LCD Pin 21 Back Plane Enable.
+    description: "LCD Pin 21 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 21
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_22_bpen
-    description: LCD Pin 22 Back Plane Enable.
+    description: "LCD Pin 22 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 22
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_23_bpen
-    description: LCD Pin 23 Back Plane Enable.
+    description: "LCD Pin 23 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 23
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_24_bpen
-    description: LCD Pin 24 Back Plane Enable.
+    description: "LCD Pin 24 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 24
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_25_bpen
-    description: LCD Pin 25 Back Plane Enable.
+    description: "LCD Pin 25 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 25
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_26_bpen
-    description: LCD Pin 26 Back Plane Enable.
+    description: "LCD Pin 26 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 26
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_27_bpen
-    description: LCD Pin 27 Back Plane Enable.
+    description: "LCD Pin 27 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 27
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_28_bpen
-    description: LCD Pin 28 Back Plane Enable.
+    description: "LCD Pin 28 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 28
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_29_bpen
-    description: LCD Pin 29 Back Plane Enable.
+    description: "LCD Pin 29 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 29
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_30_bpen
-    description: LCD Pin 30 Back Plane Enable.
+    description: "LCD Pin 30 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 30
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_31_bpen
-    description: LCD Pin 31 Back Plane Enable.
+    description: "LCD Pin 31 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 31
     bit_size: 1
-    enum: Pin0Bpen
   bit_size: 32
   reset_value: 0
 fieldset/Bpen1:
   description: LCD Back Plane Enable register 1.
   fields:
   - name: pin_32_bpen
-    description: LCD Pin 32 Back Plane Enable.
+    description: "LCD Pin 32 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 0
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_33_bpen
-    description: LCD Pin 33 Back Plane Enable.
+    description: "LCD Pin 33 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 1
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_34_bpen
-    description: LCD Pin 34 Back Plane Enable.
+    description: "LCD Pin 34 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 2
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_35_bpen
-    description: LCD Pin 35 Back Plane Enable.
+    description: "LCD Pin 35 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 3
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_36_bpen
-    description: LCD Pin 36 Back Plane Enable.
+    description: "LCD Pin 36 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 4
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_37_bpen
-    description: LCD Pin 37 Back Plane Enable.
+    description: "LCD Pin 37 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 5
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_38_bpen
-    description: LCD Pin 38 Back Plane Enable.
+    description: "LCD Pin 38 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 6
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_39_bpen
-    description: LCD Pin 39 Back Plane Enable.
+    description: "LCD Pin 39 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 7
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_40_bpen
-    description: LCD Pin 40 Back Plane Enable.
+    description: "LCD Pin 40 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 8
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_41_bpen
-    description: LCD Pin 41 Back Plane Enable.
+    description: "LCD Pin 41 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 9
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_42_bpen
-    description: LCD Pin 42 Back Plane Enable.
+    description: "LCD Pin 42 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 10
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_43_bpen
-    description: LCD Pin 43 Back Plane Enable.
+    description: "LCD Pin 43 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 11
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_44_bpen
-    description: LCD Pin 44 Back Plane Enable.
+    description: "LCD Pin 44 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 12
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_45_bpen
-    description: LCD Pin 45 Back Plane Enable.
+    description: "LCD Pin 45 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 13
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_46_bpen
-    description: LCD Pin 46 Back Plane Enable.
+    description: "LCD Pin 46 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 14
     bit_size: 1
-    enum: Pin0Bpen
   - name: pin_47_bpen
-    description: LCD Pin 47 Back Plane Enable.
+    description: "LCD Pin 47 Back Plane Enable.\n\nRaw bit values: false (0) = Fp: Pin as Front Plane.; true (1) = Bp: Pin as Back Plane."
     bit_offset: 15
     bit_size: 1
-    enum: Pin0Bpen
   bit_size: 32
   reset_value: 0
 fieldset/Fdcr:
@@ -289,10 +239,9 @@ fieldset/Fdcr:
     bit_offset: 0
     bit_size: 6
   - name: fdbpen
-    description: Fault Detect Back Plane Enable.
+    description: "Fault Detect Back Plane Enable.\n\nRaw bit values: false (0) = Front: Type of the selected pin under fault detect test is front plane.; true (1) = Back: Type of the selected pin under fault detect test is back plane."
     bit_offset: 6
     bit_size: 1
-    enum: Fdbpen
   - name: fden
     description: Fault Detect Enable.
     bit_offset: 7
@@ -335,24 +284,21 @@ fieldset/Gcr:
     bit_offset: 3
     bit_size: 3
   - name: lcdlp
-    description: LCD Low Power Waveform.
+    description: "LCD Low Power Waveform.\n\nRaw bit values: false (0) = High: LCD driver drives standard waveforms.; true (1) = Low: LCD driver drives low-power waveforms."
     bit_offset: 6
     bit_size: 1
-    enum: Lcdlp
   - name: lcden
     description: LCD Driver Enable.
     bit_offset: 7
     bit_size: 1
   - name: lcdstp
-    description: LCD Stop.
+    description: "LCD Stop.\n\nRaw bit values: false (0) = Enable: Allows the LCD driver to continue running during Stop mode.; true (1) = Disable: Disables the LCD driver when MCU enters Stop mode."
     bit_offset: 8
     bit_size: 1
-    enum: Lcdstp
   - name: lcddoze
-    description: LCD Doze enable.
+    description: "LCD Doze enable.\n\nRaw bit values: false (0) = Enable: Allows the LCD driver to continue running during Doze mode.; true (1) = Disable: Disables the LCD driver when MCU enters Doze mode."
     bit_offset: 9
     bit_size: 1
-    enum: Lcddoze
   - name: fdcien
     description: LCD Fault Detection Complete Interrupt Enable.
     bit_offset: 14
@@ -362,10 +308,9 @@ fieldset/Gcr:
     bit_offset: 15
     bit_size: 1
   - name: shcycle
-    description: Sample & Hold Cycle Select.
+    description: "Sample & Hold Cycle Select.\n\nRaw bit values: false (0) = Clk64: Sample & hold phase clock period is 64 LCD clock (16kHz) period / 32 LCD clock (8kHz) period.; true (1) = Clk128: Sample & hold phase clock period is 128 LCD clk (16kHz) period / 64 LCD clock (8kHz) period."
     bit_offset: 16
     bit_size: 1
-    enum: Shcycle
   - name: shen
     description: Sample & Hold Mode Enable.
     bit_offset: 23
@@ -843,24 +788,6 @@ fieldset/Wf8b0:
     bit_offset: 0
     bit_size: 8
   reset_value: 0
-enum/Alt:
-  bit_size: 1
-  variants:
-  - name: Normal
-    description: Normal display mode.
-    value: 0
-  - name: Alternate
-    description: Alternate display mode.
-    value: 1
-enum/Bmode:
-  bit_size: 1
-  variants:
-  - name: Blank
-    description: Display blank during the blink period.
-    value: 0
-  - name: Alternate
-    description: Display alternate display during blink period.
-    value: 1
 enum/Duty:
   bit_size: 2
   variants:
@@ -876,15 +803,6 @@ enum/Duty:
   - name: Use4Bp
     description: Use 4 BP (1/4 duty cycle).(Default).
     value: 3
-enum/Fdbpen:
-  bit_size: 1
-  variants:
-  - name: Front
-    description: Type of the selected pin under fault detect test is front plane.
-    value: 0
-  - name: Back
-    description: Type of the selected pin under fault detect test is back plane.
-    value: 1
 enum/Fdprs:
   bit_size: 3
   variants:
@@ -939,51 +857,6 @@ enum/Fdsww:
   - name: Sample512Cycles
     description: Sample window width is 512 sample clock cycles.
     value: 7
-enum/Lcddoze:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Allows the LCD driver to continue running during Doze mode.
-    value: 0
-  - name: Disable
-    description: Disables the LCD driver when MCU enters Doze mode.
-    value: 1
-enum/Lcdlp:
-  bit_size: 1
-  variants:
-  - name: High
-    description: LCD driver drives standard waveforms.
-    value: 0
-  - name: Low
-    description: LCD driver drives low-power waveforms.
-    value: 1
-enum/Lcdstp:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Allows the LCD driver to continue running during Stop mode.
-    value: 0
-  - name: Disable
-    description: Disables the LCD driver when MCU enters Stop mode.
-    value: 1
-enum/Pin0Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Shcycle:
-  bit_size: 1
-  variants:
-  - name: Clk64
-    description: Sample & hold phase clock period is 64 LCD clock (16kHz) period / 32 LCD clock (8kHz) period.
-    value: 0
-  - name: Clk128
-    description: Sample & hold phase clock period is 128 LCD clk (16kHz) period / 64 LCD clock (8kHz) period.
-    value: 1
 block/Slcd:
   description: Segment LCD with 48 waveform bytes and four physical backplanes. Word/byte waveform views alias the same 48-byte region. Initialize all PEN/BPEN/waveform registers before enabling.
   items:

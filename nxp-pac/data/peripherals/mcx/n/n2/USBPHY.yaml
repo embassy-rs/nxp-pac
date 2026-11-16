@@ -254,20 +254,18 @@ fieldset/UsbphyAlphaFieldsetAlpha:
   description: Analog Control.
   fields:
   - name: lvi_en
-    description: Internal Low Voltage Detector Enable.
+    description: "Internal Low Voltage Detector Enable.\n\nRaw bit values: false (0) = Lvi3vDisable: Disable.; true (1) = Lvi3vEnable: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: UsbphyAlphaEnumNovemberAlpha
   - name: pfd_clk_sel
     description: PFD Clock Selection.
     bit_offset: 2
     bit_size: 2
     enum: UsbphyAlphaEnumVictorAlpha
   - name: dev_pulldown
-    description: Device Pulldown Enable.
+    description: "Device Pulldown Enable.\n\nRaw bit values: false (0) = DevPulldownDis: Disable.; true (1) = DevPulldownEn: Enable."
     bit_offset: 10
     bit_size: 1
-    enum: UsbphyAlphaEnumKilo
 fieldset/AnactrlClr:
   description: Analog Control.
   fields:
@@ -287,65 +285,53 @@ fieldset/UsbphyAlphaFieldsetEcho:
   description: General Purpose Control.
   fields:
   - name: enotg_id_chg_irq
-    description: OTG ID Change Interrupt Enable.
+    description: "OTG ID Change Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Enutmilevel
   - name: enhostdiscondetect
-    description: Host Disconnect Detection Enable.
+    description: "Host Disconnect Detection Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: Enutmilevel
   - name: enirqhostdiscon
-    description: Enable Interrupt for Host Disconnect.
+    description: "Enable Interrupt for Host Disconnect.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: Enutmilevel
   - name: hostdiscondetect_irq
-    description: Host Disconnect Detection Interrupt.
+    description: "Host Disconnect Detection Interrupt.\n\nRaw bit values: false (0) = Connected: Connected.; true (1) = Disconnected: Disconnected."
     bit_offset: 3
     bit_size: 1
-    enum: UsbphyAlphaEnumJulietAlpha
   - name: endevplugindetect
-    description: Enable Nonstandard Resistive Plugged-In Detection.
+    description: "Enable Nonstandard Resistive Plugged-In Detection.\n\nRaw bit values: false (0) = PluginDisable: Disable.; true (1) = PluginEnable: Enable."
     bit_offset: 4
     bit_size: 1
-    enum: UsbphyAlphaEnumVictor
   - name: devplugin_polarity
-    description: Device Plug-In Polarity.
+    description: "Device Plug-In Polarity.\n\nRaw bit values: false (0) = PluggedIn: Plugged in.; true (1) = Unplugged: Unplugged."
     bit_offset: 5
     bit_size: 1
-    enum: UsbphyAlphaEnumLima
   - name: otg_id_chg_irq
-    description: OTG ID Change Interrupt.
+    description: "OTG ID Change Interrupt.\n\nRaw bit values: false (0) = NoIdChgIrq: No ID change interrupt.; true (1) = IdChgIrq: ID change interrupt."
     bit_offset: 6
     bit_size: 1
-    enum: UsbphyAlphaEnumQuebecAlpha
   - name: enotgiddetect
-    description: Enable Internal OTG ID Detector.
+    description: "Enable Internal OTG ID Detector.\n\nRaw bit values: false (0) = IdDetDisable: Disable.; true (1) = IdDetEnable: Enable."
     bit_offset: 7
     bit_size: 1
-    enum: UsbphyAlphaEnumDeltaAlpha
   - name: resumeirqsticky
-    description: Resume Interrupt Sticky.
+    description: "Resume Interrupt Sticky.\n\nRaw bit values: false (0) = Disable: During the resume or reset state signaling period.; true (1) = Enable: Until you write 0 to it."
     bit_offset: 8
     bit_size: 1
-    enum: UsbphyAlphaEnumJulietBravo
   - name: enirqresumedetect
-    description: Resume Detection Interrupt Enable.
+    description: "Resume Detection Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 9
     bit_size: 1
-    enum: Enutmilevel
   - name: resume_irq
-    description: Resume Interrupt.
+    description: "Resume Interrupt.\n\nRaw bit values: false (0) = Noresirq: No resume interrupt.; true (1) = Resirq: Resume interrupt."
     bit_offset: 10
     bit_size: 1
-    enum: UsbphyAlphaEnumIndiaBravo
   - name: enirqdevplugin
-    description: Enable Interrupt for Nonstandard Resistive Plugged-In Detection.
+    description: "Enable Interrupt for Nonstandard Resistive Plugged-In Detection.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 11
     bit_size: 1
-    enum: Enutmilevel
   - name: devplugin_irq
     description: Device Plug-In Interrupt.
     bit_offset: 12
@@ -355,59 +341,49 @@ fieldset/UsbphyAlphaFieldsetEcho:
     bit_offset: 13
     bit_size: 1
   - name: enutmilevel2
-    description: UTMI Level 2 Enable.
+    description: "UTMI Level 2 Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 14
     bit_size: 1
-    enum: Enutmilevel
   - name: enutmilevel3
-    description: UTMI Level 3 Enable.
+    description: "UTMI Level 3 Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 15
     bit_size: 1
-    enum: Enutmilevel
   - name: enirqwakeup
-    description: Wake-Up Interrupt Enable.
+    description: "Wake-Up Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 16
     bit_size: 1
-    enum: Enutmilevel
   - name: wakeup_irq
     description: Wake-Up Interrupt.
     bit_offset: 17
     bit_size: 1
   - name: autoresume_en
-    description: Autoresume Enable.
+    description: "Autoresume Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 18
     bit_size: 1
-    enum: Enutmilevel
   - name: enautoclr_clkgate
-    description: Autoclear Clock Gate Enable.
+    description: "Autoclear Clock Gate Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 19
     bit_size: 1
-    enum: Enutmilevel
   - name: enautoclr_phy_pwd
-    description: PHY PWD Autoclear Enable.
+    description: "PHY PWD Autoclear Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 20
     bit_size: 1
-    enum: Enutmilevel
   - name: otg_id_value
-    description: OTG ID Value.
+    description: "OTG ID Value.\n\nRaw bit values: false (0) = IdHost: Host.; true (1) = IdDevice: Device."
     bit_offset: 27
     bit_size: 1
-    enum: OtgIdValue
   - name: utmi_suspendm
-    description: UTMI Suspend.
+    description: "UTMI Suspend.\n\nRaw bit values: false (0) = NotSuspended: Not suspended.; true (1) = Suspended: Suspended."
     bit_offset: 29
     bit_size: 1
-    enum: UsbphyAlphaEnumYankeeBravo
   - name: clkgate
-    description: UTMI Clock Gate.
+    description: "UTMI Clock Gate.\n\nRaw bit values: false (0) = RunClocks: Run clocks.; true (1) = GateClocks: Gate clocks."
     bit_offset: 30
     bit_size: 1
-    enum: UsbphyAlphaEnumGolf
   - name: sftrst
-    description: Software Reset.
+    description: "Software Reset.\n\nRaw bit values: false (0) = ReleaseReset: Release from reset.; true (1) = SoftReset: Soft-reset."
     bit_offset: 31
     bit_size: 1
-    enum: UsbphyAlphaEnumQuebecBravo
 fieldset/CtrlClr:
   description: General Purpose Control.
   fields:
@@ -554,19 +530,17 @@ fieldset/UsbphyAlphaFieldsetQuebec:
   description: PFD A.
   fields:
   - name: pfd0_clkgate
-    description: PFD0 Clock Gate.
+    description: "PFD0 Clock Gate.\n\nRaw bit values: false (0) = Pfd0ClkEn: Enable.; true (1) = Pfd0ClkDis: Disable."
     bit_offset: 0
     bit_size: 1
-    enum: UsbphyAlphaEnumTangoAlpha
   - name: pfd0_frac
     description: PFD0 Fractional Divider.
     bit_offset: 1
     bit_size: 6
   - name: pfd0_stable
-    description: PFD0 Stable Signal.
+    description: "PFD0 Stable Signal.\n\nRaw bit values: false (0) = NotStable: Not stable.; true (1) = Stable: Stable."
     bit_offset: 7
     bit_size: 1
-    enum: UsbphyAlphaEnumUniformAlpha
 fieldset/PfdaClr:
   description: PFD A.
   fields:
@@ -586,60 +560,50 @@ fieldset/UsbphyAlphaFieldsetUniform:
   description: PLL SIC.
   fields:
   - name: misc2_control0
-    description: Miscellaneous Control.
+    description: "Miscellaneous Control.\n\nRaw bit values: false (0) = PllOnSuspend: Power up PLL.; true (1) = PllOffSuspend: Power down PLL."
     bit_offset: 5
     bit_size: 1
-    enum: UsbphyAlphaEnumOscarAlpha
   - name: pll_en_usb_clks
-    description: PLL Multi-Phase Clock Outputs Enable.
+    description: "PLL Multi-Phase Clock Outputs Enable.\n\nRaw bit values: false (0) = PllMpDisable: Disable.; true (1) = PllMpEnable: Enable."
     bit_offset: 6
     bit_size: 1
-    enum: UsbphyAlphaEnumYankeeAlpha
   - name: pll_power
-    description: USB PLL Powerup Control.
+    description: "USB PLL Powerup Control.\n\nRaw bit values: false (0) = PllForcePwd: Power down.; true (1) = PllAllowPowerup: Allow powerup."
     bit_offset: 12
     bit_size: 1
-    enum: UsbphyAlphaEnumBravoBravo
   - name: pll_enable
-    description: PLL Output Clock Enable.
+    description: "PLL Output Clock Enable.\n\nRaw bit values: false (0) = PllOutDisable: Disable.; true (1) = PllOutEnable: Enable."
     bit_offset: 13
     bit_size: 1
-    enum: UsbphyAlphaEnumZuluAlpha
   - name: pll_bypass
-    description: Bypass USB PLL.
+    description: "Bypass USB PLL.\n\nRaw bit values: false (0) = PllNoBypass: 480 MHz output clock.; true (1) = PllBypass: Input reference clock."
     bit_offset: 16
     bit_size: 1
-    enum: UsbphyAlphaEnumWhiskeyAlpha
   - name: refbias_pwd_sel
-    description: Reference Bias Power Control.
+    description: "Reference Bias Power Control.\n\nRaw bit values: false (0) = BiasPllpower: PLL_POWER internal state signal.; true (1) = BiasRefbiasPwd: REFBIAS_PWD."
     bit_offset: 19
     bit_size: 1
-    enum: UsbphyAlphaEnumHotelBravo
   - name: refbias_pwd
-    description: Power Down Reference Bias.
+    description: "Power Down Reference Bias.\n\nRaw bit values: false (0) = RefbiasEnabled: Enable.; true (1) = RefbiasPwd: Disable or power down."
     bit_offset: 20
     bit_size: 1
-    enum: UsbphyAlphaEnumGolfBravo
   - name: pll_reg_enable
-    description: Enable PLL Regulator.
+    description: "Enable PLL Regulator.\n\nRaw bit values: false (0) = PllRegDisable: Disable.; true (1) = PllRegEnable: Enable."
     bit_offset: 21
     bit_size: 1
-    enum: UsbphyAlphaEnumDeltaBravo
   - name: pll_div_sel
     description: PLL Divider Value Configuration.
     bit_offset: 22
     bit_size: 3
     enum: UsbphyAlphaEnumXrayAlpha
   - name: pll_prediv
-    description: Predivide selector between /1 or /2 to expand the range of the USB PLL input clock.
+    description: "Predivide selector between /1 or /2 to expand the range of the USB PLL input clock.\n\nRaw bit values: false (0) = Prediv1: Use the undivided reference clock for PLL loop.; true (1) = Prediv2: Divide the reference clock by two for PLL loop."
     bit_offset: 30
     bit_size: 1
-    enum: UsbphyAlphaEnumCharlieBravo
   - name: pll_lock
-    description: USB PLL Lock Status Indicator.
+    description: "USB PLL Lock Status Indicator.\n\nRaw bit values: false (0) = PllNotLocked: Not locked.; true (1) = PllLocked: Locked."
     bit_offset: 31
     bit_size: 1
-    enum: UsbphyAlphaEnumAlphaBravo
 fieldset/PllSicClr:
   description: PLL SIC.
   fields:
@@ -691,40 +655,33 @@ fieldset/UsbphyAlphaFieldsetYankee:
   description: Power Down.
   fields:
   - name: txpwdfs
-    description: Power Down USB FS TX Drivers.
+    description: "Power Down USB FS TX Drivers.\n\nRaw bit values: false (0) = FstxBiasEnable: Provide bias to enable.; true (1) = FstxBiasPwd: Disable or power down."
     bit_offset: 10
     bit_size: 1
-    enum: UsbphyAlphaEnumUniformBravo
   - name: txpwdibias
-    description: Power Down USBPHY TX Current Bias Block.
+    description: "Power Down USBPHY TX Current Bias Block.\n\nRaw bit values: false (0) = IbiasEnable: Enable.; true (1) = IbiasPwd: Disable or power down."
     bit_offset: 11
     bit_size: 1
-    enum: UsbphyAlphaEnumVictorBravo
   - name: txpwdv2i
-    description: Power Down USBPHY TX V-I Converter and Current Mirror.
+    description: "Power Down USBPHY TX V-I Converter and Current Mirror.\n\nRaw bit values: false (0) = V2iBiasEnable: Enable.; true (1) = V2iBiasPwd: Disable or power down."
     bit_offset: 12
     bit_size: 1
-    enum: UsbphyAlphaEnumWhiskeyBravo
   - name: rxpwdenv
-    description: Power Down USB HS RX Envelope Detector.
+    description: "Power Down USB HS RX Envelope Detector.\n\nRaw bit values: false (0) = RxEnvhdEnable: Enable.; true (1) = RxEnvhdPwd: Disable or power down."
     bit_offset: 17
     bit_size: 1
-    enum: UsbphyAlphaEnumMikeBravo
   - name: rxpwd1pt1
-    description: Power Down USB FS Differential Receiver.
+    description: "Power Down USB FS Differential Receiver.\n\nRaw bit values: false (0) = FsRxdiffEnable: Enable.; true (1) = FsRxdiffPwd: Disable or power down."
     bit_offset: 18
     bit_size: 1
-    enum: UsbphyAlphaEnumKiloBravo
   - name: rxpwddiff
-    description: Power Down USB HS Differential Receiver.
+    description: "Power Down USB HS Differential Receiver.\n\nRaw bit values: false (0) = HsRxdiffEnable: Enable.; true (1) = HsRxdiffPwd: Disable or power down."
     bit_offset: 19
     bit_size: 1
-    enum: UsbphyAlphaEnumLimaBravo
   - name: rxpwdrx
-    description: Power Down USBPHY Receiver Circuits.
+    description: "Power Down USBPHY Receiver Circuits.\n\nRaw bit values: false (0) = RxBiasEnable: Enable.; true (1) = RxBiasPwd: Disable or power down."
     bit_offset: 20
     bit_size: 1
-    enum: UsbphyAlphaEnumNovemberBravo
 fieldset/PwdClr:
   description: Power Down.
   fields:
@@ -784,25 +741,21 @@ fieldset/UsbphyAlphaFieldsetGolfAlpha:
   description: Status.
   fields:
   - name: ok_status_3v
-    description: USB 3.3 V and 1.8 V Supply Status.
+    description: "USB 3.3 V and 1.8 V Supply Status.\n\nRaw bit values: false (0) = Power31p8Ok: Not powered.; true (1) = Power31p8Bad: Powered."
     bit_offset: 0
     bit_size: 1
-    enum: UsbphyAlphaEnumPapaAlpha
   - name: hostdiscondetect_status
-    description: Host Disconnect Status.
+    description: "Host Disconnect Status.\n\nRaw bit values: false (0) = NoDisconnect: Not detected.; true (1) = Disconnect: Detected."
     bit_offset: 3
     bit_size: 1
-    enum: UsbphyAlphaEnumKiloAlpha
   - name: devplugin_status
-    description: Status Indicator for Nonstandard Resistive Plugged-In Detection.
+    description: "Status Indicator for Nonstandard Resistive Plugged-In Detection.\n\nRaw bit values: false (0) = NoCable: No attachment detected.; true (1) = CableAttach: Cable attachment detected."
     bit_offset: 6
     bit_size: 1
-    enum: UsbphyAlphaEnumMike
   - name: otgid_status
-    description: OTG ID Status.
+    description: "OTG ID Status.\n\nRaw bit values: false (0) = IdHost: Host.; true (1) = IdDevice: Device."
     bit_offset: 8
     bit_size: 1
-    enum: OtgIdValue
   - name: resume_status
     description: Resume Status.
     bit_offset: 10
@@ -811,25 +764,21 @@ fieldset/UsbphyAlphaFieldsetHotelAlpha:
   description: Trim.
   fields:
   - name: div_sel_override
-    description: Override Enable for PLL Divider Value.
+    description: "Override Enable for PLL Divider Value.\n\nRaw bit values: false (0) = UseTrim0Plldiv: TRIM_OVERRIDE_EN.; true (1) = UsePllSicPlldiv: PLL_SIC."
     bit_offset: 0
     bit_size: 1
-    enum: UsbphyAlphaEnumPapa
   - name: tx_d_cal_override
-    description: Override Enable for HS TX Output Current Trim.
+    description: "Override Enable for HS TX Output Current Trim.\n\nRaw bit values: false (0) = UseTrim0Dcal: TRIM_OVERRIDE_EN.; true (1) = UseTxDcal: TX."
     bit_offset: 2
     bit_size: 1
-    enum: UsbphyAlphaEnumTangoBravo
   - name: tx_cal45dp_override
-    description: Override Enable for USB_DP Series Termination Trim.
+    description: "Override Enable for USB_DP Series Termination Trim.\n\nRaw bit values: false (0) = UseTrim0Cal45dp: TRIM_OVERRIDE_EN.; true (1) = UseTxCal45dp: TX."
     bit_offset: 3
     bit_size: 1
-    enum: UsbphyAlphaEnumSierraBravo
   - name: tx_cal45dm_override
-    description: Override Enable for USB_DM Series Termination Trim.
+    description: "Override Enable for USB_DM Series Termination Trim.\n\nRaw bit values: false (0) = UseTrim0Cal45dn: TRIM_OVERRIDE_EN.; true (1) = UseTxCal45dn: TX."
     bit_offset: 4
     bit_size: 1
-    enum: UsbphyAlphaEnumRomeoBravo
   - name: pll_ctrl0_div_sel
     description: PLL Divider Value Configuration Bits from Outside USBPHY.
     bit_offset: 15
@@ -917,30 +866,25 @@ fieldset/UsbphyAlphaFieldsetPapaAlpha:
   description: Charger Detect Status.
   fields:
   - name: plug_contact
-    description: Battery Charging Data Contact Detection Phase Output.
+    description: "Battery Charging Data Contact Detection Phase Output.\n\nRaw bit values: false (0) = NoDcDetected: Not detected.; true (1) = DcDeteced: Detected."
     bit_offset: 0
     bit_size: 1
-    enum: UsbphyAlphaEnumEchoBravo
   - name: chrg_detected
-    description: Battery Charging Primary Detection Phase Output.
+    description: "Battery Charging Primary Detection Phase Output.\n\nRaw bit values: false (0) = SdpDetect: SDP detected.; true (1) = ChrgPortDetect: Charging port detected."
     bit_offset: 1
     bit_size: 1
-    enum: UsbphyAlphaEnumFoxtrot
   - name: dm_state
-    description: DM Voltage.
+    description: "DM Voltage.\n\nRaw bit values: false (0) = DmSerxLo: USB_DM pin voltage is <= 0.8 V.; true (1) = DmSerxHi: USB_DM pin voltage is >= 2.0 V."
     bit_offset: 2
     bit_size: 1
-    enum: UsbphyAlphaEnumQuebec
   - name: dp_state
-    description: DP Voltage.
+    description: "DP Voltage.\n\nRaw bit values: false (0) = DpSerxLo: USB_DP pin voltage is <= 0.8 V.; true (1) = DpSerxHi: USB_DP pin voltage is >= 2.0 V."
     bit_offset: 3
     bit_size: 1
-    enum: UsbphyAlphaEnumRomeo
   - name: secdet_dcp
-    description: Battery Charging Secondary Detection Phase Output.
+    description: "Battery Charging Secondary Detection Phase Output.\n\nRaw bit values: false (0) = SecdetCdp: CDP detected.; true (1) = SecdetDcp: DCP detected."
     bit_offset: 4
     bit_size: 1
-    enum: UsbphyAlphaEnumOscarBravo
 fieldset/UsbChrgDetStatClr:
   description: Charger Detect Status.
   fields:
@@ -968,40 +912,33 @@ fieldset/UsbphyAlphaFieldsetTangoAlpha:
   description: Charger Detect.
   fields:
   - name: detect_sec
-    description: Secondary Detection Function Enable.
+    description: "Secondary Detection Function Enable.\n\nRaw bit values: false (0) = BcSecdetDisable: Disable.; true (1) = BcSecdetEnable: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: UsbphyAlphaEnumJuliet
   - name: pullup_dp
-    description: DP Pullup Resistor Enable Override Control.
+    description: "DP Pullup Resistor Enable Override Control.\n\nRaw bit values: false (0) = DpPueNormal: Disable.; true (1) = DpPueOverride: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: UsbphyAlphaEnumFoxtrotBravo
   - name: vdm_src_enable
-    description: VDM_SRC Function Enable.
+    description: "VDM_SRC Function Enable.\n\nRaw bit values: false (0) = DcdVdmSrcDisable: Disable.; true (1) = DcdVdmSrcEnable: Enable."
     bit_offset: 4
     bit_size: 1
-    enum: UsbphyAlphaEnumHotelCharlie
   - name: chk_contact
-    description: BC Data Contact Detect Function Enable.
+    description: "BC Data Contact Detect Function Enable.\n\nRaw bit values: false (0) = BcDcdDisable: Disable.; true (1) = BcDcdEnable: Enable."
     bit_offset: 18
     bit_size: 1
-    enum: UsbphyAlphaEnumEcho
   - name: chk_chrg_b
-    description: BC Charger Detection Function Enable.
+    description: "BC Charger Detection Function Enable.\n\nRaw bit values: false (0) = BcChrgdetEnable: Enable.; true (1) = BcChrgdetDisable: Disable."
     bit_offset: 19
     bit_size: 1
-    enum: UsbphyAlphaEnumDelta
   - name: en_b
-    description: Selection of BC v1.2 Function Enable.
+    description: "Selection of BC v1.2 Function Enable.\n\nRaw bit values: false (0) = BcEnable: Enable.; true (1) = BcDisable: Disable."
     bit_offset: 20
     bit_size: 1
-    enum: UsbphyAlphaEnumSierra
   - name: dcdsel
-    description: DCD Selection.
+    description: "DCD Selection.\n\nRaw bit values: false (0) = ChrgdetCtrl: Fields in USB1_CHRG_DETECT.; true (1) = UsbhsdcdCtrl: Fields and state machines in the USBHSDCD module."
     bit_offset: 31
     bit_size: 1
-    enum: UsbphyAlphaEnumIndia
 fieldset/UsbChrgDetectClr:
   description: Charger Detect.
   fields:
@@ -1037,30 +974,25 @@ fieldset/UsbphyAlphaFieldsetXrayAlpha:
   description: VBUS Detect Status.
   fields:
   - name: sessend
-    description: Session End Indicator.
+    description: "Session End Indicator.\n\nRaw bit values: false (0) = SessendLo: Above threshold.; true (1) = SessendHi: Below threshold."
     bit_offset: 0
     bit_size: 1
-    enum: UsbphyAlphaEnumPapaBravo
   - name: bvalid
-    description: B-Device Session Valid Status.
+    description: "B-Device Session Valid Status.\n\nRaw bit values: false (0) = BvalidLo: Below threshold.; true (1) = BvalidHi: Above threshold."
     bit_offset: 1
     bit_size: 1
-    enum: UsbphyAlphaEnumCharlie
   - name: avalid
-    description: A-Device Session Valid Status.
+    description: "A-Device Session Valid Status.\n\nRaw bit values: false (0) = AvalidLo: Below threshold.; true (1) = AvalidHi: Above threshold."
     bit_offset: 2
     bit_size: 1
-    enum: UsbphyAlphaEnumBravo
   - name: vbus_valid
-    description: VBUS Voltage Status.
+    description: "VBUS Voltage Status.\n\nRaw bit values: false (0) = VbusLo: Below threshold.; true (1) = VbusHi: Above threshold."
     bit_offset: 3
     bit_size: 1
-    enum: UsbphyAlphaEnumBravoCharlie
   - name: vbus_valid_3v
-    description: VBUS_VALID_3V Detector Status.
+    description: "VBUS_VALID_3V Detector Status.\n\nRaw bit values: false (0) = VbusVld3vLo: Below threshold.; true (1) = VbusVld3vHi: Above threshold."
     bit_offset: 4
     bit_size: 1
-    enum: UsbphyAlphaEnumCharlieCharlie
   - name: ext_id
     description: OTG ID External Override Status.
     bit_offset: 5
@@ -1101,10 +1033,9 @@ fieldset/UsbphyAlphaFieldsetBravoBravo:
     bit_size: 3
     enum: UsbphyAlphaEnumFoxtrotCharlie
   - name: vbus_override_en
-    description: VBUS Detect Signal Local Override Enable.
+    description: "VBUS Detect Signal Local Override Enable.\n\nRaw bit values: false (0) = VbusNoOverride: Results of VBUS_VALID and session valid comparators for VBUS_VALID, AVALID, BVALID, and SESSEND.; true (1) = VbusOverride: Override values for VBUS_VALID, AVALID, BVALID, and SESSEND."
     bit_offset: 3
     bit_size: 1
-    enum: UsbphyAlphaEnumZuluBravo
   - name: sessend_override
     description: Override Value for SESSEND.
     bit_offset: 4
@@ -1122,49 +1053,43 @@ fieldset/UsbphyAlphaFieldsetBravoBravo:
     bit_offset: 7
     bit_size: 1
   - name: vbusvalid_sel
-    description: VBUS_VALID Selection.
+    description: "VBUS_VALID Selection.\n\nRaw bit values: false (0) = VbusVldOut: VBUS_VALID comparator result.; true (1) = VbusVld3vOut: VBUS_VALID_3V comparator result."
     bit_offset: 8
     bit_size: 1
-    enum: UsbphyAlphaEnumEchoCharlie
   - name: vbus_source_sel
     description: VBUS_VALID Source Selection.
     bit_offset: 9
     bit_size: 2
     enum: UsbphyAlphaEnumAlphaCharlie
   - name: id_override_en
-    description: Enable Local ID Pin Status Override.
+    description: "Enable Local ID Pin Status Override.\n\nRaw bit values: false (0) = NoPhyIdOverride: Use ID pin detector or external override.; true (1) = UsePhyIdOverride: Allow local override of ID pin detection status."
     bit_offset: 11
     bit_size: 1
-    enum: UsbphyAlphaEnumMikeAlpha
   - name: id_override
     description: ID Pin Status Local Override.
     bit_offset: 12
     bit_size: 1
   - name: ext_id_override_en
-    description: External ID Override Enable.
+    description: "External ID Override Enable.\n\nRaw bit values: false (0) = UsePhyId: Internal detector or local override.; true (1) = UseExtId: External ID signal value."
     bit_offset: 13
     bit_size: 1
-    enum: UsbphyAlphaEnumHotelAlpha
   - name: ext_vbus_override_en
-    description: External VBUS Override Enable.
+    description: "External VBUS Override Enable.\n\nRaw bit values: false (0) = UsePhyVbus: Internal detector or local override.; true (1) = UsbExtVbus: External VBUS_VALID value."
     bit_offset: 14
     bit_size: 1
-    enum: UsbphyAlphaEnumIndiaAlpha
   - name: vbusvalid_to_b
-    description: VBUS_VALID Comparator Selection.
+    description: "VBUS_VALID Comparator Selection.\n\nRaw bit values: false (0) = UseVbusVld: VBUS_VALID comparator.; true (1) = UseSessVld: Session valid detector."
     bit_offset: 18
     bit_size: 1
-    enum: UsbphyAlphaEnumGolfCharlie
   - name: vbusvalid_pwrup_cmps
     description: VBUS_VALID Comparator Enable.
     bit_offset: 20
     bit_size: 3
     enum: UsbphyAlphaEnumDeltaCharlie
   - name: discharge_vbus
-    description: VBUS Discharge Resistor.
+    description: "VBUS Discharge Resistor.\n\nRaw bit values: false (0) = VbusDchgOff: Disable.; true (1) = VbusDchgOn: Enable."
     bit_offset: 26
     bit_size: 1
-    enum: UsbphyAlphaEnumNovember
 fieldset/UsbVbusDetectClr:
   description: VBUS Detect.
   fields:
@@ -1243,60 +1168,6 @@ fieldset/UsbphyAlphaFieldsetFoxtrotBravo:
     description: Major.
     bit_offset: 24
     bit_size: 8
-enum/UsbphyAlphaEnumBravo:
-  bit_size: 1
-  variants:
-  - name: AvalidHi
-    description: Above threshold.
-    value: 1
-  - name: AvalidLo
-    description: Below threshold.
-    value: 0
-enum/UsbphyAlphaEnumCharlie:
-  bit_size: 1
-  variants:
-  - name: BvalidHi
-    description: Above threshold.
-    value: 1
-  - name: BvalidLo
-    description: Below threshold.
-    value: 0
-enum/UsbphyAlphaEnumDelta:
-  bit_size: 1
-  variants:
-  - name: BcChrgdetDisable
-    description: Disable.
-    value: 1
-  - name: BcChrgdetEnable
-    description: Enable.
-    value: 0
-enum/UsbphyAlphaEnumEcho:
-  bit_size: 1
-  variants:
-  - name: BcDcdDisable
-    description: Disable.
-    value: 0
-  - name: BcDcdEnable
-    description: Enable.
-    value: 1
-enum/UsbphyAlphaEnumFoxtrot:
-  bit_size: 1
-  variants:
-  - name: ChrgPortDetect
-    description: Charging port detected.
-    value: 1
-  - name: SdpDetect
-    description: SDP detected.
-    value: 0
-enum/UsbphyAlphaEnumGolf:
-  bit_size: 1
-  variants:
-  - name: GateClocks
-    description: Gate clocks.
-    value: 1
-  - name: RunClocks
-    description: Run clocks.
-    value: 0
 enum/DCal:
   bit_size: 4
   variants:
@@ -1309,60 +1180,6 @@ enum/DCal:
   - name: Nominal
     description: Nominal.
     value: 7
-enum/UsbphyAlphaEnumIndia:
-  bit_size: 1
-  variants:
-  - name: ChrgdetCtrl
-    description: Fields in USB1_CHRG_DETECT.
-    value: 0
-  - name: UsbhsdcdCtrl
-    description: Fields and state machines in the USBHSDCD module.
-    value: 1
-enum/UsbphyAlphaEnumJuliet:
-  bit_size: 1
-  variants:
-  - name: BcSecdetDisable
-    description: Disable.
-    value: 0
-  - name: BcSecdetEnable
-    description: Enable.
-    value: 1
-enum/UsbphyAlphaEnumKilo:
-  bit_size: 1
-  variants:
-  - name: DevPulldownDis
-    description: Disable.
-    value: 0
-  - name: DevPulldownEn
-    description: Enable.
-    value: 1
-enum/UsbphyAlphaEnumLima:
-  bit_size: 1
-  variants:
-  - name: PluggedIn
-    description: Plugged in.
-    value: 0
-  - name: Unplugged
-    description: Unplugged.
-    value: 1
-enum/UsbphyAlphaEnumMike:
-  bit_size: 1
-  variants:
-  - name: CableAttach
-    description: Cable attachment detected.
-    value: 1
-  - name: NoCable
-    description: No attachment detected.
-    value: 0
-enum/UsbphyAlphaEnumNovember:
-  bit_size: 1
-  variants:
-  - name: VbusDchgOff
-    description: Disable.
-    value: 0
-  - name: VbusDchgOn
-    description: Enable.
-    value: 1
 enum/UsbphyAlphaEnumOscar:
   bit_size: 3
   variants:
@@ -1378,51 +1195,6 @@ enum/UsbphyAlphaEnumOscar:
   - name: DisconTrimNom
     description: 0.56875 V.
     value: 0
-enum/UsbphyAlphaEnumPapa:
-  bit_size: 1
-  variants:
-  - name: UsePllSicPlldiv
-    description: PLL_SIC.
-    value: 1
-  - name: UseTrim0Plldiv
-    description: TRIM_OVERRIDE_EN.
-    value: 0
-enum/UsbphyAlphaEnumQuebec:
-  bit_size: 1
-  variants:
-  - name: DmSerxHi
-    description: USB_DM pin voltage is >= 2.0 V.
-    value: 1
-  - name: DmSerxLo
-    description: USB_DM pin voltage is <= 0.8 V.
-    value: 0
-enum/UsbphyAlphaEnumRomeo:
-  bit_size: 1
-  variants:
-  - name: DpSerxHi
-    description: USB_DP pin voltage is >= 2.0 V.
-    value: 1
-  - name: DpSerxLo
-    description: USB_DP pin voltage is <= 0.8 V.
-    value: 0
-enum/UsbphyAlphaEnumSierra:
-  bit_size: 1
-  variants:
-  - name: BcDisable
-    description: Disable.
-    value: 1
-  - name: BcEnable
-    description: Enable.
-    value: 0
-enum/UsbphyAlphaEnumVictor:
-  bit_size: 1
-  variants:
-  - name: PluginDisable
-    description: Disable.
-    value: 0
-  - name: PluginEnable
-    description: Enable.
-    value: 1
 enum/UsbphyAlphaEnumXray:
   bit_size: 2
   variants:
@@ -1430,24 +1202,6 @@ enum/UsbphyAlphaEnumXray:
     description: Disable.
     value: 0
   - name: Enable
-    description: Enable.
-    value: 1
-enum/Enutmilevel:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/UsbphyAlphaEnumDeltaAlpha:
-  bit_size: 1
-  variants:
-  - name: IdDetDisable
-    description: Disable.
-    value: 0
-  - name: IdDetEnable
     description: Enable.
     value: 1
 enum/UsbphyAlphaEnumGolfAlpha:
@@ -1465,42 +1219,6 @@ enum/UsbphyAlphaEnumGolfAlpha:
   - name: EnvTrimNom
     description: 0.1000 V.
     value: 0
-enum/UsbphyAlphaEnumHotelAlpha:
-  bit_size: 1
-  variants:
-  - name: UseExtId
-    description: External ID signal value.
-    value: 1
-  - name: UsePhyId
-    description: Internal detector or local override.
-    value: 0
-enum/UsbphyAlphaEnumIndiaAlpha:
-  bit_size: 1
-  variants:
-  - name: UsbExtVbus
-    description: External VBUS_VALID value.
-    value: 1
-  - name: UsePhyVbus
-    description: Internal detector or local override.
-    value: 0
-enum/UsbphyAlphaEnumJulietAlpha:
-  bit_size: 1
-  variants:
-  - name: Connected
-    description: Connected.
-    value: 0
-  - name: Disconnected
-    description: Disconnected.
-    value: 1
-enum/UsbphyAlphaEnumKiloAlpha:
-  bit_size: 1
-  variants:
-  - name: Disconnect
-    description: Detected.
-    value: 1
-  - name: NoDisconnect
-    description: Not detected.
-    value: 0
 enum/UsbphyAlphaEnumLimaAlpha:
   bit_size: 2
   variants:
@@ -1510,78 +1228,6 @@ enum/UsbphyAlphaEnumLimaAlpha:
   - name: Disconnect
     description: Disconnect.
     value: 0
-enum/UsbphyAlphaEnumMikeAlpha:
-  bit_size: 1
-  variants:
-  - name: NoPhyIdOverride
-    description: Use ID pin detector or external override.
-    value: 0
-  - name: UsePhyIdOverride
-    description: Allow local override of ID pin detection status.
-    value: 1
-enum/UsbphyAlphaEnumNovemberAlpha:
-  bit_size: 1
-  variants:
-  - name: Lvi3vDisable
-    description: Disable.
-    value: 0
-  - name: Lvi3vEnable
-    description: Enable.
-    value: 1
-enum/UsbphyAlphaEnumOscarAlpha:
-  bit_size: 1
-  variants:
-  - name: PllOffSuspend
-    description: Power down PLL.
-    value: 1
-  - name: PllOnSuspend
-    description: Power up PLL.
-    value: 0
-enum/UsbphyAlphaEnumPapaAlpha:
-  bit_size: 1
-  variants:
-  - name: Power31p8Bad
-    description: Powered.
-    value: 1
-  - name: Power31p8Ok
-    description: Not powered.
-    value: 0
-enum/UsbphyAlphaEnumQuebecAlpha:
-  bit_size: 1
-  variants:
-  - name: IdChgIrq
-    description: ID change interrupt.
-    value: 1
-  - name: NoIdChgIrq
-    description: No ID change interrupt.
-    value: 0
-enum/OtgIdValue:
-  bit_size: 1
-  variants:
-  - name: IdDevice
-    description: Device.
-    value: 1
-  - name: IdHost
-    description: Host.
-    value: 0
-enum/UsbphyAlphaEnumTangoAlpha:
-  bit_size: 1
-  variants:
-  - name: Pfd0ClkDis
-    description: Disable.
-    value: 1
-  - name: Pfd0ClkEn
-    description: Enable.
-    value: 0
-enum/UsbphyAlphaEnumUniformAlpha:
-  bit_size: 1
-  variants:
-  - name: NotStable
-    description: Not stable.
-    value: 0
-  - name: Stable
-    description: Stable.
-    value: 1
 enum/UsbphyAlphaEnumVictorAlpha:
   bit_size: 2
   variants:
@@ -1597,15 +1243,6 @@ enum/UsbphyAlphaEnumVictorAlpha:
   - name: PfdClkDiv4
     description: USB1PFDCLK = pfd_clk / 4.
     value: 1
-enum/UsbphyAlphaEnumWhiskeyAlpha:
-  bit_size: 1
-  variants:
-  - name: PllBypass
-    description: Input reference clock.
-    value: 1
-  - name: PllNoBypass
-    description: 480 MHz output clock.
-    value: 0
 enum/UsbphyAlphaEnumXrayAlpha:
   bit_size: 3
   variants:
@@ -1630,249 +1267,6 @@ enum/UsbphyAlphaEnumXrayAlpha:
   - name: PllDiv32
     description: Configure for a 12 MHz input clock (divide by 40).
     value: 7
-enum/UsbphyAlphaEnumYankeeAlpha:
-  bit_size: 1
-  variants:
-  - name: PllMpDisable
-    description: Disable.
-    value: 0
-  - name: PllMpEnable
-    description: Enable.
-    value: 1
-enum/UsbphyAlphaEnumZuluAlpha:
-  bit_size: 1
-  variants:
-  - name: PllOutDisable
-    description: Disable.
-    value: 0
-  - name: PllOutEnable
-    description: Enable.
-    value: 1
-enum/UsbphyAlphaEnumAlphaBravo:
-  bit_size: 1
-  variants:
-  - name: PllLocked
-    description: Locked.
-    value: 1
-  - name: PllNotLocked
-    description: Not locked.
-    value: 0
-enum/UsbphyAlphaEnumBravoBravo:
-  bit_size: 1
-  variants:
-  - name: PllAllowPowerup
-    description: Allow powerup.
-    value: 1
-  - name: PllForcePwd
-    description: Power down.
-    value: 0
-enum/UsbphyAlphaEnumCharlieBravo:
-  bit_size: 1
-  variants:
-  - name: Prediv1
-    description: Use the undivided reference clock for PLL loop.
-    value: 0
-  - name: Prediv2
-    description: Divide the reference clock by two for PLL loop.
-    value: 1
-enum/UsbphyAlphaEnumDeltaBravo:
-  bit_size: 1
-  variants:
-  - name: PllRegDisable
-    description: Disable.
-    value: 0
-  - name: PllRegEnable
-    description: Enable.
-    value: 1
-enum/UsbphyAlphaEnumEchoBravo:
-  bit_size: 1
-  variants:
-  - name: DcDeteced
-    description: Detected.
-    value: 1
-  - name: NoDcDetected
-    description: Not detected.
-    value: 0
-enum/UsbphyAlphaEnumFoxtrotBravo:
-  bit_size: 1
-  variants:
-  - name: DpPueNormal
-    description: Disable.
-    value: 0
-  - name: DpPueOverride
-    description: Enable.
-    value: 1
-enum/UsbphyAlphaEnumGolfBravo:
-  bit_size: 1
-  variants:
-  - name: RefbiasEnabled
-    description: Enable.
-    value: 0
-  - name: RefbiasPwd
-    description: Disable or power down.
-    value: 1
-enum/UsbphyAlphaEnumHotelBravo:
-  bit_size: 1
-  variants:
-  - name: BiasPllpower
-    description: PLL_POWER internal state signal.
-    value: 0
-  - name: BiasRefbiasPwd
-    description: REFBIAS_PWD.
-    value: 1
-enum/UsbphyAlphaEnumIndiaBravo:
-  bit_size: 1
-  variants:
-  - name: Noresirq
-    description: No resume interrupt.
-    value: 0
-  - name: Resirq
-    description: Resume interrupt.
-    value: 1
-enum/UsbphyAlphaEnumJulietBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: During the resume or reset state signaling period.
-    value: 0
-  - name: Enable
-    description: Until you write 0 to it.
-    value: 1
-enum/UsbphyAlphaEnumKiloBravo:
-  bit_size: 1
-  variants:
-  - name: FsRxdiffEnable
-    description: Enable.
-    value: 0
-  - name: FsRxdiffPwd
-    description: Disable or power down.
-    value: 1
-enum/UsbphyAlphaEnumLimaBravo:
-  bit_size: 1
-  variants:
-  - name: HsRxdiffEnable
-    description: Enable.
-    value: 0
-  - name: HsRxdiffPwd
-    description: Disable or power down.
-    value: 1
-enum/UsbphyAlphaEnumMikeBravo:
-  bit_size: 1
-  variants:
-  - name: RxEnvhdEnable
-    description: Enable.
-    value: 0
-  - name: RxEnvhdPwd
-    description: Disable or power down.
-    value: 1
-enum/UsbphyAlphaEnumNovemberBravo:
-  bit_size: 1
-  variants:
-  - name: RxBiasEnable
-    description: Enable.
-    value: 0
-  - name: RxBiasPwd
-    description: Disable or power down.
-    value: 1
-enum/UsbphyAlphaEnumOscarBravo:
-  bit_size: 1
-  variants:
-  - name: SecdetCdp
-    description: CDP detected.
-    value: 0
-  - name: SecdetDcp
-    description: DCP detected.
-    value: 1
-enum/UsbphyAlphaEnumPapaBravo:
-  bit_size: 1
-  variants:
-  - name: SessendHi
-    description: Below threshold.
-    value: 1
-  - name: SessendLo
-    description: Above threshold.
-    value: 0
-enum/UsbphyAlphaEnumQuebecBravo:
-  bit_size: 1
-  variants:
-  - name: ReleaseReset
-    description: Release from reset.
-    value: 0
-  - name: SoftReset
-    description: Soft-reset.
-    value: 1
-enum/UsbphyAlphaEnumRomeoBravo:
-  bit_size: 1
-  variants:
-  - name: UseTrim0Cal45dn
-    description: TRIM_OVERRIDE_EN.
-    value: 0
-  - name: UseTxCal45dn
-    description: TX.
-    value: 1
-enum/UsbphyAlphaEnumSierraBravo:
-  bit_size: 1
-  variants:
-  - name: UseTrim0Cal45dp
-    description: TRIM_OVERRIDE_EN.
-    value: 0
-  - name: UseTxCal45dp
-    description: TX.
-    value: 1
-enum/UsbphyAlphaEnumTangoBravo:
-  bit_size: 1
-  variants:
-  - name: UseTrim0Dcal
-    description: TRIM_OVERRIDE_EN.
-    value: 0
-  - name: UseTxDcal
-    description: TX.
-    value: 1
-enum/UsbphyAlphaEnumUniformBravo:
-  bit_size: 1
-  variants:
-  - name: FstxBiasEnable
-    description: Provide bias to enable.
-    value: 0
-  - name: FstxBiasPwd
-    description: Disable or power down.
-    value: 1
-enum/UsbphyAlphaEnumVictorBravo:
-  bit_size: 1
-  variants:
-  - name: IbiasEnable
-    description: Enable.
-    value: 0
-  - name: IbiasPwd
-    description: Disable or power down.
-    value: 1
-enum/UsbphyAlphaEnumWhiskeyBravo:
-  bit_size: 1
-  variants:
-  - name: V2iBiasEnable
-    description: Enable.
-    value: 0
-  - name: V2iBiasPwd
-    description: Disable or power down.
-    value: 1
-enum/UsbphyAlphaEnumYankeeBravo:
-  bit_size: 1
-  variants:
-  - name: NotSuspended
-    description: Not suspended.
-    value: 0
-  - name: Suspended
-    description: Suspended.
-    value: 1
-enum/UsbphyAlphaEnumZuluBravo:
-  bit_size: 1
-  variants:
-  - name: VbusNoOverride
-    description: Results of VBUS_VALID and session valid comparators for VBUS_VALID, AVALID, BVALID, and SESSEND.
-    value: 0
-  - name: VbusOverride
-    description: Override values for VBUS_VALID, AVALID, BVALID, and SESSEND.
-    value: 1
 enum/UsbphyAlphaEnumAlphaCharlie:
   bit_size: 2
   variants:
@@ -1884,24 +1278,6 @@ enum/UsbphyAlphaEnumAlphaCharlie:
     value: 2
   - name: UseVbusVld
     description: VBUS_VALID comparator result.
-    value: 0
-enum/UsbphyAlphaEnumBravoCharlie:
-  bit_size: 1
-  variants:
-  - name: VbusHi
-    description: Above threshold.
-    value: 1
-  - name: VbusLo
-    description: Below threshold.
-    value: 0
-enum/UsbphyAlphaEnumCharlieCharlie:
-  bit_size: 1
-  variants:
-  - name: VbusVld3vHi
-    description: Above threshold.
-    value: 1
-  - name: VbusVld3vLo
-    description: Below threshold.
     value: 0
 enum/UsbphyAlphaEnumDeltaCharlie:
   bit_size: 3
@@ -1924,15 +1300,6 @@ enum/UsbphyAlphaEnumDeltaCharlie:
   - name: VbusValidEnable
     description: Enable the VBUS_VALID comparator.
     value: 1
-enum/UsbphyAlphaEnumEchoCharlie:
-  bit_size: 1
-  variants:
-  - name: VbusVld3vOut
-    description: VBUS_VALID_3V comparator result.
-    value: 1
-  - name: VbusVldOut
-    description: VBUS_VALID comparator result.
-    value: 0
 enum/UsbphyAlphaEnumFoxtrotCharlie:
   bit_size: 3
   variants:
@@ -1960,21 +1327,3 @@ enum/UsbphyAlphaEnumFoxtrotCharlie:
   - name: VbusVld4p7
     description: 4.7 V.
     value: 7
-enum/UsbphyAlphaEnumGolfCharlie:
-  bit_size: 1
-  variants:
-  - name: UseSessVld
-    description: Session valid detector.
-    value: 1
-  - name: UseVbusVld
-    description: VBUS_VALID comparator.
-    value: 0
-enum/UsbphyAlphaEnumHotelCharlie:
-  bit_size: 1
-  variants:
-  - name: DcdVdmSrcDisable
-    description: Disable.
-    value: 0
-  - name: DcdVdmSrcEnable
-    description: Enable.
-    value: 1

@@ -143,20 +143,17 @@ fieldset/OtpcAlphaFieldsetGolf:
   description: Power Control.
   fields:
   - name: hvreq
-    description: Strong switch request.
+    description: "Strong switch request.\n\nRaw bit values: false (0) = TurnOff: Turn off.; true (1) = TurnOn: Turn on."
     bit_offset: 0
     bit_size: 1
-    enum: Hvreq
   - name: lvreq
-    description: Weak switch request.
+    description: "Weak switch request.\n\nRaw bit values: false (0) = TurnOff: Turn off.; true (1) = TurnOn: Turn on."
     bit_offset: 1
     bit_size: 1
-    enum: Hvreq
   - name: pdreq
-    description: Power down request.
+    description: "Power down request.\n\nRaw bit values: false (0) = NoAction: PD pin is set to low when OTPC is in idle state. It means EFUSE hardmacro is in standby mode. Idle state means OTPC is not in read and program modes.; true (1) = PowerDn: PD pin is set to high when OTPC is in idle state. It means EFUSE hardmacro is in power down mode."
     bit_offset: 2
     bit_size: 1
-    enum: OtpcAlphaEnumMike
 fieldset/OtpcAlphaFieldsetIndia:
   description: Read Data.
   fields:
@@ -168,10 +165,9 @@ fieldset/OtpcAlphaFieldsetJuliet:
   description: Reload Control.
   fields:
   - name: reload_shadows
-    description: Reload shadow registers.
+    description: "Reload shadow registers.\n\nRaw bit values: false (0) = NoAction: No action (when writing) or reload complete (when reading).; true (1) = Reload: Reload."
     bit_offset: 0
     bit_size: 1
-    enum: OtpcAlphaEnumRomeo
 fieldset/OtpcAlphaFieldsetKilo:
   description: Read and Write Control.
   fields:
@@ -180,20 +176,17 @@ fieldset/OtpcAlphaFieldsetKilo:
     bit_offset: 0
     bit_size: 7
   - name: wr_all1s
-    description: Write all 1s.
+    description: "Write all 1s.\n\nRaw bit values: false (0) = UseWdata: Uses the WDATA value.; true (1) = UseAll1s: Writes all 1s."
     bit_offset: 12
     bit_size: 1
-    enum: OtpcAlphaEnumTango
   - name: read_efuse
-    description: Read EFUSE.
+    description: "Read EFUSE.\n\nRaw bit values: false (0) = Program: Starts program operation when the WR_UNLOCK value is 0x9527; otherwise, takes no action.; true (1) = Read: Starts read operation."
     bit_offset: 13
     bit_size: 1
-    enum: OtpcAlphaEnumPapa
   - name: read_update
-    description: Read update.
+    description: "Read update.\n\nRaw bit values: false (0) = NoUpdate: Shadow register does not update.; true (1) = Update: Shadow register updates."
     bit_offset: 14
     bit_size: 1
-    enum: OtpcAlphaEnumQuebec
   - name: wr_unlock
     description: Write Unlock.
     bit_offset: 16
@@ -202,85 +195,69 @@ fieldset/OtpcAlphaFieldsetNovember:
   description: Status.
   fields:
   - name: busy
-    description: Busy status.
+    description: "Busy status.\n\nRaw bit values: false (0) = NotBusy: Not busy (transaction complete).; true (1) = Busy: Busy."
     bit_offset: 0
     bit_size: 1
-    enum: OtpcAlphaEnumBravo
   - name: error
-    description: Error flag.
+    description: "Error flag.\n\nRaw bit values: false (0) = NoError: No error.; true (1) = Error: Error."
     bit_offset: 1
     bit_size: 1
-    enum: Adc2
   - name: ecc_sf
-    description: ECC single fault.
+    description: "ECC single fault.\n\nRaw bit values: false (0) = NoFault: No fault.; true (1) = Fault: Fault."
     bit_offset: 2
     bit_size: 1
-    enum: EccDf
   - name: ecc_df
-    description: ECC double fault.
+    description: "ECC double fault.\n\nRaw bit values: false (0) = NoFault: No fault.; true (1) = Fault: Fault."
     bit_offset: 3
     bit_size: 1
-    enum: EccDf
   - name: tri_f
-    description: Triple voting fault.
+    description: "Triple voting fault.\n\nRaw bit values: false (0) = NoFault: No fault.; true (1) = Fault: Fault."
     bit_offset: 4
     bit_size: 1
-    enum: EccDf
   - name: rd_fuse_lock
-    description: Read fuse lock error.
+    description: "Read fuse lock error.\n\nRaw bit values: false (0) = NoError: No error.; true (1) = Error: Error."
     bit_offset: 8
     bit_size: 1
-    enum: Adc2
   - name: wr_fuse_lock
-    description: Write fuse lock error.
+    description: "Write fuse lock error.\n\nRaw bit values: false (0) = NoError: No error.; true (1) = Error: Error."
     bit_offset: 9
     bit_size: 1
-    enum: Adc2
   - name: rd_reg_lock
-    description: Read register lock error.
+    description: "Read register lock error.\n\nRaw bit values: false (0) = NoError: No error.; true (1) = Error: Error."
     bit_offset: 10
     bit_size: 1
-    enum: Adc2
   - name: wr_reg_lock
-    description: Write register lock error.
+    description: "Write register lock error.\n\nRaw bit values: false (0) = NoError: No error.; true (1) = Error: Error."
     bit_offset: 11
     bit_size: 1
-    enum: Adc2
   - name: wr_reg_busy
-    description: Write register when busy error.
+    description: "Write register when busy error.\n\nRaw bit values: false (0) = NoError: No error.; true (1) = Error: Error."
     bit_offset: 12
     bit_size: 1
-    enum: Adc2
   - name: wr_power_off
-    description: Write when power off error.
+    description: "Write when power off error.\n\nRaw bit values: false (0) = NoError: No error.; true (1) = Error: Error."
     bit_offset: 13
     bit_size: 1
-    enum: Adc2
   - name: fsm
-    description: Finite-state machine error.
+    description: "Finite-state machine error.\n\nRaw bit values: false (0) = NoError: No error.; true (1) = Error: Error."
     bit_offset: 16
     bit_size: 1
-    enum: Adc2
   - name: flc
-    description: Fuse load counter error.
+    description: "Fuse load counter error.\n\nRaw bit values: false (0) = NoError: No error.; true (1) = Error: Error."
     bit_offset: 17
     bit_size: 1
-    enum: Adc2
   - name: adc
-    description: Address and data compare error.
+    description: "Address and data compare error.\n\nRaw bit values: false (0) = NoError: No error.; true (1) = Error: Error."
     bit_offset: 18
     bit_size: 1
-    enum: Adc2
   - name: irc
-    description: Inverted register compare error.
+    description: "Inverted register compare error.\n\nRaw bit values: false (0) = NoError: No error.; true (1) = Error: Error."
     bit_offset: 19
     bit_size: 1
-    enum: Adc2
   - name: fsc
-    description: Fuse and shadow register compare error.
+    description: "Fuse and shadow register compare error.\n\nRaw bit values: false (0) = NoError: No error.; true (1) = Error: Error."
     bit_offset: 20
     bit_size: 1
-    enum: Adc2
 fieldset/OtpcAlphaFieldsetOscar:
   description: Timing1.
   fields:
@@ -334,90 +311,9 @@ fieldset/OtpcAlphaFieldsetRomeo:
     description: Write data.
     bit_offset: 0
     bit_size: 32
-enum/OtpcAlphaEnumBravo:
-  bit_size: 1
-  variants:
-  - name: Busy
-    description: Busy.
-    value: 1
-  - name: NotBusy
-    description: Not busy (transaction complete).
-    value: 0
-enum/EccDf:
-  bit_size: 1
-  variants:
-  - name: Fault
-    description: Fault.
-    value: 1
-  - name: NoFault
-    description: No fault.
-    value: 0
-enum/Adc2:
-  bit_size: 1
-  variants:
-  - name: Error
-    description: Error.
-    value: 1
-  - name: NoError
-    description: No error.
-    value: 0
 enum/OtpcAlphaEnumFoxtrot:
   bit_size: 16
   variants:
   - name: Standard
     description: Standard feature set.
-    value: 0
-enum/Hvreq:
-  bit_size: 1
-  variants:
-  - name: TurnOff
-    description: Turn off.
-    value: 0
-  - name: TurnOn
-    description: Turn on.
-    value: 1
-enum/OtpcAlphaEnumMike:
-  bit_size: 1
-  variants:
-  - name: NoAction
-    description: PD pin is set to low when OTPC is in idle state. It means EFUSE hardmacro is in standby mode. Idle state means OTPC is not in read and program modes.
-    value: 0
-  - name: PowerDn
-    description: PD pin is set to high when OTPC is in idle state. It means EFUSE hardmacro is in power down mode.
-    value: 1
-enum/OtpcAlphaEnumPapa:
-  bit_size: 1
-  variants:
-  - name: Program
-    description: Starts program operation when the WR_UNLOCK value is 0x9527; otherwise, takes no action.
-    value: 0
-  - name: Read
-    description: Starts read operation.
-    value: 1
-enum/OtpcAlphaEnumQuebec:
-  bit_size: 1
-  variants:
-  - name: NoUpdate
-    description: Shadow register does not update.
-    value: 0
-  - name: Update
-    description: Shadow register updates.
-    value: 1
-enum/OtpcAlphaEnumRomeo:
-  bit_size: 1
-  variants:
-  - name: NoAction
-    description: No action (when writing) or reload complete (when reading).
-    value: 0
-  - name: Reload
-    description: Reload.
-    value: 1
-enum/OtpcAlphaEnumTango:
-  bit_size: 1
-  variants:
-  - name: UseAll1s
-    description: Writes all 1s.
-    value: 1
-  - name: UseWdata
-    description: Uses the WDATA value.
     value: 0

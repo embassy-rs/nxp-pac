@@ -169,42 +169,6 @@ block/Syscon:
     byte_offset: 2044
     access: Read
     fieldset: Dieid
-enum/ApHsDevNeedclk:
-  bit_size: 1
-  variants:
-  - name: HwCtrl
-    description: HOST_NEEDCLK is under hardware control.
-    value: 0
-  - name: Forced
-    description: HOST_NEEDCLK is forced high.
-    value: 1
-enum/DevNeedclk:
-  bit_size: 1
-  variants:
-  - name: Low
-    description: DEV_NEEDCLK is low.
-    value: 0
-  - name: High
-    description: DEV_NEEDCLK is high.
-    value: 1
-enum/HostNeedclk:
-  bit_size: 1
-  variants:
-  - name: Low
-    description: HOST_NEEDCLK is low.
-    value: 0
-  - name: High
-    description: HOST_NEEDCLK is high.
-    value: 1
-enum/HsDevWakeupN:
-  bit_size: 1
-  variants:
-  - name: ForceWup
-    description: Forces USB1_PHY to wake-up.
-    value: 0
-  - name: NormalWup
-    description: Normal USB1_PHY behavior.
-    value: 1
 enum/I3c0SclFilt:
   bit_size: 4
   variants:
@@ -259,15 +223,6 @@ enum/I3c2SdaFilt:
   - name: FiltNum
     description: Enable Spike filter on SDA input. Non_zero value means width of Glitch on SDA line to be filtered in number of half cycles of CLK_FLT.
     value: 1
-enum/LockIfr1:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: No lock access to IFR1.
-    value: 0
-  - name: Disable
-    description: Lock access to IFR1.
-    value: 1
 enum/MiscphantomRamSize:
   bit_size: 2
   variants:
@@ -280,33 +235,6 @@ enum/MiscphantomRamSize:
   - name: SizeMax
     description: 640KB.
     value: 3
-enum/PhySel:
-  bit_size: 1
-  variants:
-  - name: Phy
-    description: Selects external PHY.
-    value: 0
-  - name: T1s
-    description: Selects on-chip 10BASE-T1S.
-    value: 1
-enum/PolHsDevNeedclk:
-  bit_size: 1
-  variants:
-  - name: Falling
-    description: Falling edge of DEV_NEEDCLK triggers wake-up.
-    value: 0
-  - name: Rising
-    description: Rising edge of DEV_NEEDCLK triggers wake-up.
-    value: 1
-enum/PolHsHostNeedclk:
-  bit_size: 1
-  variants:
-  - name: Falling
-    description: Falling edge of HOST_NEEDCLK triggers wake-up.
-    value: 0
-  - name: Rising
-    description: Rising edge of HOST_NEEDCLK triggers wake-up.
-    value: 1
 enum/RemapCoolfluxYEspi:
   bit_size: 2
   variants:
@@ -482,15 +410,13 @@ fieldset/EnetCtrl:
   description: Ethernet Control.
   fields:
   - name: phy_intf
-    description: Selects external PHY interface.
+    description: "Selects external PHY interface.\n\nRaw bit values: false (0) = Mii: Selects MII PHY Interface.; true (1) = Rmii: Selects RMII PHY Interface."
     bit_offset: 2
     bit_size: 1
-    enum: PhyIntf
   - name: phy_sel
-    description: Selects external PHY or on-chip 10BASE-T1S.
+    description: "Selects external PHY or on-chip 10BASE-T1S.\n\nRaw bit values: false (0) = Phy: Selects external PHY.; true (1) = T1s: Selects on-chip 10BASE-T1S."
     bit_offset: 3
     bit_size: 1
-    enum: PhySel
 fieldset/EnetSbdFlowCtrl:
   description: Sideband Flow Control.
   fields:
@@ -562,43 +488,36 @@ fieldset/NvmCtrlA5:
   description: NVM Control.
   fields:
   - name: dis_flash_spec
-    description: Flash speculation control.
+    description: "Flash speculation control.\n\nRaw bit values: false (0) = Enable: Enables flash speculation.; true (1) = Disable: Disables flash speculation."
     bit_offset: 0
     bit_size: 1
-    enum: DisFlashSpec
   - name: dis_data_spec
-    description: Flash data speculation control.
+    description: "Flash data speculation control.\n\nRaw bit values: false (0) = Enable: Enables data speculation.; true (1) = Disable: Disables data speculation."
     bit_offset: 1
     bit_size: 1
-    enum: DisDataSpec
   - name: lock_ifr1
-    description: FLASH IFR1 lock access control.
+    description: "FLASH IFR1 lock access control.\n\nRaw bit values: false (0) = Enable: No lock access to IFR1.; true (1) = Disable: Lock access to IFR1."
     bit_offset: 9
     bit_size: 1
-    enum: LockIfr1
   - name: flash_stall_en
-    description: FLASH stall on busy control.
+    description: "FLASH stall on busy control.\n\nRaw bit values: false (0) = Enable: No stall on FLASH busy.; true (1) = Disable: Stall on FLASH busy."
     bit_offset: 10
     bit_size: 1
-    enum: FlashStallEn
   - name: dis_mbecc_err_inst
-    description: Bus error on data multi-bit ECC error control Set this field to 0 if you want to enable flash speculative.
+    description: "Bus error on data multi-bit ECC error control Set this field to 0 if you want to enable flash speculative.\n\nRaw bit values: false (0) = Enable: Enables bus error on multi-bit ECC error for instruction.; true (1) = Disable: Disables bus error on multi-bit ECC error for instruction."
     bit_offset: 16
     bit_size: 1
-    enum: DisMbeccErrInst
   - name: dis_mbecc_err_data
-    description: Bus error on data multi-bit ECC error control Set this field to 0 if you want to enable flash speculative.
+    description: "Bus error on data multi-bit ECC error control Set this field to 0 if you want to enable flash speculative.\n\nRaw bit values: false (0) = Enable: Enables bus error on multi-bit ECC error for data.; true (1) = Disable: Disables bus error on multi-bit ECC error for data."
     bit_offset: 17
     bit_size: 1
-    enum: DisMbeccErrData
 fieldset/RamCaspCtrl:
   description: Controls Shared RAM Integration.
   fields:
   - name: interleave
-    description: Controls RAM access for RAMA1 and RAMA2.
+    description: "Controls RAM access for RAMA1 and RAMA2.\n\nRaw bit values: false (0) = Normal: RAM access is consecutive.; true (1) = Interleave: RAM access is interleaved. This setting is need for PKC L0 memory access."
     bit_offset: 0
     bit_size: 1
-    enum: Interleave
   - name: casp_req
     description: Request EZH memories.
     bit_offset: 16
@@ -704,10 +623,9 @@ fieldset/RemapA5:
     bit_size: 2
     enum: RemapUsbHs
   - name: lock
-    description: This 1-bit field provides a mechanism to limit writes to this register to protect its contents. Once set, this bit remains asserted until a system reset.
+    description: "This 1-bit field provides a mechanism to limit writes to this register to protect its contents. Once set, this bit remains asserted until a system reset.\n\nRaw bit values: false (0) = Lock0: This register is not locked and can be altered.; true (1) = Lock1: This register is locked and cannot be altered until a system reset."
     bit_offset: 31
     bit_size: 1
-    enum: ProtlvlLock
 fieldset/Romcr:
   description: ROM Control and State.
   fields:
@@ -814,40 +732,33 @@ fieldset/Usb1needclkctrl:
   description: USB1-HS Need Clock Control.
   fields:
   - name: ap_hs_dev_needclk
-    description: USB1-HS device need_clock signal control.
+    description: "USB1-HS device need_clock signal control.\n\nRaw bit values: false (0) = HwCtrl: HOST_NEEDCLK is under hardware control.; true (1) = Forced: HOST_NEEDCLK is forced high."
     bit_offset: 0
     bit_size: 1
-    enum: ApHsDevNeedclk
   - name: pol_hs_dev_needclk
-    description: USB1-HS device need clock polarity for triggering the USB1_NEEDCLK wake-up interrupt.
+    description: "USB1-HS device need clock polarity for triggering the USB1_NEEDCLK wake-up interrupt.\n\nRaw bit values: false (0) = Falling: Falling edge of DEV_NEEDCLK triggers wake-up.; true (1) = Rising: Rising edge of DEV_NEEDCLK triggers wake-up."
     bit_offset: 1
     bit_size: 1
-    enum: PolHsDevNeedclk
   - name: ap_hs_host_needclk
-    description: USB1-HS Host need clock signal control.
+    description: "USB1-HS Host need clock signal control.\n\nRaw bit values: false (0) = HwCtrl: HOST_NEEDCLK is under hardware control.; true (1) = Forced: HOST_NEEDCLK is forced high."
     bit_offset: 2
     bit_size: 1
-    enum: ApHsDevNeedclk
   - name: pol_hs_host_needclk
-    description: USB1-HS host need clock polarity for triggering the USB1_NEEDCLK wake-up interrupt.
+    description: "USB1-HS host need clock polarity for triggering the USB1_NEEDCLK wake-up interrupt.\n\nRaw bit values: false (0) = Falling: Falling edge of HOST_NEEDCLK triggers wake-up.; true (1) = Rising: Rising edge of HOST_NEEDCLK triggers wake-up."
     bit_offset: 3
     bit_size: 1
-    enum: PolHsHostNeedclk
   - name: hs_dev_wakeup_n
-    description: Software override of device controller PHY wake up logic.
+    description: "Software override of device controller PHY wake up logic.\n\nRaw bit values: false (0) = ForceWup: Forces USB1_PHY to wake-up.; true (1) = NormalWup: Normal USB1_PHY behavior."
     bit_offset: 4
     bit_size: 1
-    enum: HsDevWakeupN
 fieldset/Usb1needclkstat:
   description: USB1-HS Need Clock Status.
   fields:
   - name: dev_needclk
-    description: USB1-HS device need_clock signal status.
+    description: "USB1-HS device need_clock signal status.\n\nRaw bit values: false (0) = Low: DEV_NEEDCLK is low.; true (1) = High: DEV_NEEDCLK is high."
     bit_offset: 0
     bit_size: 1
-    enum: DevNeedclk
   - name: host_needclk
-    description: USB1-HS Host need_clock signal status.
+    description: "USB1-HS Host need_clock signal status.\n\nRaw bit values: false (0) = Low: HOST_NEEDCLK is low.; true (1) = High: HOST_NEEDCLK is high."
     bit_offset: 1
     bit_size: 1
-    enum: HostNeedclk

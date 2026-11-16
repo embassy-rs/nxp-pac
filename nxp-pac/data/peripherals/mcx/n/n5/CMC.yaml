@@ -132,10 +132,9 @@ fieldset/CmcAlphaFieldsetCharlie:
     bit_size: 4
     enum: CmcAlphaEnumBravo
   - name: lock
-    description: Lock.
+    description: "Lock.\n\nRaw bit values: false (0) = Disabled: Allowed.; true (1) = Enabled: Blocked."
     bit_offset: 31
     bit_size: 1
-    enum: Lock2
 fieldset/CmcAlphaFieldsetDelta:
   description: Clock Status.
   fields:
@@ -149,47 +148,41 @@ fieldset/CmcAlphaFieldsetDelta:
     bit_offset: 8
     bit_size: 8
   - name: valid
-    description: Clock Status Valid.
+    description: "Clock Status Valid.\n\nRaw bit values: false (0) = Disabled: Core clock not gated.; true (1) = Enabled: Core clock was gated due to Low-Power mode entry."
     bit_offset: 31
     bit_size: 1
-    enum: CmcAlphaEnumOscarEcho
 fieldset/CmcAlphaFieldsetEcho:
   description: Core Control.
   fields:
   - name: npie
-    description: Non-maskable Pin Interrupt Enable.
+    description: "Non-maskable Pin Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Disables.; true (1) = Enabled: Enables."
     bit_offset: 0
     bit_size: 1
-    enum: Filten
 fieldset/CmcAlphaFieldsetFoxtrot:
   description: Debug Control.
   fields:
   - name: sod
-    description: Sleep Or Debug.
+    description: "Sleep Or Debug.\n\nRaw bit values: false (0) = Disabled: Remains enabled.; true (1) = Enabled: Disabled."
     bit_offset: 0
     bit_size: 1
-    enum: CmcAlphaEnumAlphaCharlie
 fieldset/CmcAlphaFieldsetGolf:
   description: Flash Control.
   fields:
   - name: flashdis
-    description: Flash Disable.
+    description: "Flash Disable.\n\nRaw bit values: false (0) = Disabled: No effect.; true (1) = Enabled: Flash memory is disabled."
     bit_offset: 0
     bit_size: 1
-    enum: CmcAlphaEnumLimaAlpha
   - name: flashdoze
-    description: Flash Doze.
+    description: "Flash Doze.\n\nRaw bit values: false (0) = Disabled: No effect.; true (1) = Enabled: Flash memory is disabled when core is sleeping (CKMODE > 0)."
     bit_offset: 1
     bit_size: 1
-    enum: CmcAlphaEnumMikeAlpha
 fieldset/CmcAlphaFieldsetHotel:
   description: Force Mode.
   fields:
   - name: forcecfg
-    description: Boot Configuration.
+    description: "Boot Configuration.\n\nRaw bit values: false (0) = Disabled: No effect.; true (1) = Enabled: Asserts."
     bit_offset: 0
     bit_size: 1
-    enum: CmcAlphaEnumNovemberAlpha
 fieldset/CmcAlphaFieldsetIndia:
   description: Global Power Mode Control.
   fields:
@@ -221,10 +214,9 @@ fieldset/CmcAlphaFieldsetMike:
     bit_size: 4
     enum: CmcAlphaEnumTangoAlpha
   - name: lock
-    description: Lock Register.
+    description: "Lock Register.\n\nRaw bit values: false (0) = Disabled: Allowed.; true (1) = Enabled: Blocked."
     bit_offset: 31
     bit_size: 1
-    enum: Lock2
 fieldset/CmcAlphaFieldsetNovember:
   description: Reset Pin Control.
   fields:
@@ -233,15 +225,13 @@ fieldset/CmcAlphaFieldsetNovember:
     bit_offset: 0
     bit_size: 5
   - name: filten
-    description: Filter Enable.
+    description: "Filter Enable.\n\nRaw bit values: false (0) = Disabled: Disables.; true (1) = Enabled: Enables."
     bit_offset: 8
     bit_size: 1
-    enum: Filten
   - name: lpfen
-    description: Low-Power Filter Enable.
+    description: "Low-Power Filter Enable.\n\nRaw bit values: false (0) = Disabled: Disables.; true (1) = Enabled: Enables."
     bit_offset: 9
     bit_size: 1
-    enum: Filten
 fieldset/CmcAlphaFieldsetOscar:
   description: Reset Count Register.
   fields:
@@ -253,665 +243,536 @@ fieldset/CmcAlphaFieldsetPapa:
   description: SRAM Disable.
   fields:
   - name: dis0
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 0
     bit_size: 1
-    enum: SramDisable
   - name: dis1
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 1
     bit_size: 1
-    enum: SramDisable
   - name: dis2
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 2
     bit_size: 1
-    enum: SramDisable
   - name: dis3
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 3
     bit_size: 1
-    enum: SramDisable
   - name: dis4
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 4
     bit_size: 1
-    enum: SramDisable
   - name: dis5
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 5
     bit_size: 1
-    enum: SramDisable
   - name: dis6
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 6
     bit_size: 1
-    enum: SramDisable
   - name: dis7
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 7
     bit_size: 1
-    enum: SramDisable
   - name: dis8
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 8
     bit_size: 1
-    enum: SramDisable
   - name: dis9
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 9
     bit_size: 1
-    enum: SramDisable
   - name: dis10
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 10
     bit_size: 1
-    enum: SramDisable
   - name: dis11
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 11
     bit_size: 1
-    enum: SramDisable
   - name: dis12
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 12
     bit_size: 1
-    enum: SramDisable
   - name: dis13
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 13
     bit_size: 1
-    enum: SramDisable
   - name: dis14
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 14
     bit_size: 1
-    enum: SramDisable
   - name: dis15
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 15
     bit_size: 1
-    enum: SramDisable
   - name: dis16
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 16
     bit_size: 1
-    enum: SramDisable
   - name: dis17
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 17
     bit_size: 1
-    enum: SramDisable
   - name: dis18
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 18
     bit_size: 1
-    enum: SramDisable
   - name: dis19
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 19
     bit_size: 1
-    enum: SramDisable
   - name: dis20
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 20
     bit_size: 1
-    enum: SramDisable
   - name: dis21
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 21
     bit_size: 1
-    enum: SramDisable
   - name: dis22
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 22
     bit_size: 1
-    enum: SramDisable
   - name: dis23
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 23
     bit_size: 1
-    enum: SramDisable
   - name: dis24
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 24
     bit_size: 1
-    enum: SramDisable
   - name: dis25
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 25
     bit_size: 1
-    enum: SramDisable
   - name: dis26
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 26
     bit_size: 1
-    enum: SramDisable
   - name: dis27
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 27
     bit_size: 1
-    enum: SramDisable
   - name: dis28
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 28
     bit_size: 1
-    enum: SramDisable
   - name: dis29
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 29
     bit_size: 1
-    enum: SramDisable
   - name: dis30
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 30
     bit_size: 1
-    enum: SramDisable
   - name: dis31
-    description: SRAM Disable.
+    description: "SRAM Disable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 31
     bit_size: 1
-    enum: SramDisable
 fieldset/CmcAlphaFieldsetQuebec:
   description: SRAM Retention.
   fields:
   - name: ret0
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 0
     bit_size: 1
-    enum: SramRetention
   - name: ret1
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 1
     bit_size: 1
-    enum: SramRetention
   - name: ret2
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 2
     bit_size: 1
-    enum: SramRetention
   - name: ret3
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 3
     bit_size: 1
-    enum: SramRetention
   - name: ret4
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 4
     bit_size: 1
-    enum: SramRetention
   - name: ret5
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 5
     bit_size: 1
-    enum: SramRetention
   - name: ret6
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 6
     bit_size: 1
-    enum: SramRetention
   - name: ret7
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 7
     bit_size: 1
-    enum: SramRetention
   - name: ret8
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 8
     bit_size: 1
-    enum: SramRetention
   - name: ret9
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 9
     bit_size: 1
-    enum: SramRetention
   - name: ret10
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 10
     bit_size: 1
-    enum: SramRetention
   - name: ret11
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 11
     bit_size: 1
-    enum: SramRetention
   - name: ret12
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 12
     bit_size: 1
-    enum: SramRetention
   - name: ret13
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 13
     bit_size: 1
-    enum: SramRetention
   - name: ret14
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 14
     bit_size: 1
-    enum: SramRetention
   - name: ret15
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 15
     bit_size: 1
-    enum: SramRetention
   - name: ret16
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 16
     bit_size: 1
-    enum: SramRetention
   - name: ret17
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 17
     bit_size: 1
-    enum: SramRetention
   - name: ret18
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 18
     bit_size: 1
-    enum: SramRetention
   - name: ret19
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 19
     bit_size: 1
-    enum: SramRetention
   - name: ret20
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 20
     bit_size: 1
-    enum: SramRetention
   - name: ret21
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 21
     bit_size: 1
-    enum: SramRetention
   - name: ret22
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 22
     bit_size: 1
-    enum: SramRetention
   - name: ret23
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 23
     bit_size: 1
-    enum: SramRetention
   - name: ret24
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 24
     bit_size: 1
-    enum: SramRetention
   - name: ret25
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 25
     bit_size: 1
-    enum: SramRetention
   - name: ret26
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 26
     bit_size: 1
-    enum: SramRetention
   - name: ret27
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 27
     bit_size: 1
-    enum: SramRetention
   - name: ret28
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 28
     bit_size: 1
-    enum: SramRetention
   - name: ret29
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 29
     bit_size: 1
-    enum: SramRetention
   - name: ret30
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 30
     bit_size: 1
-    enum: SramRetention
   - name: ret31
-    description: SRAM Retention.
+    description: "SRAM Retention.\n\nRaw bit values: false (0) = Poweredoff: Retains.; true (1) = Retained: Powers off."
     bit_offset: 31
     bit_size: 1
-    enum: SramRetention
 fieldset/CmcAlphaFieldsetRomeo:
   description: System Reset Interrupt Enable.
   fields:
   - name: pin
-    description: Pin Reset.
+    description: "Pin Reset.\n\nRaw bit values: false (0) = Disabled: Interrupt disabled.; true (1) = Enabled: Interrupt enabled."
     bit_offset: 8
     bit_size: 1
-    enum: Cdog2
   - name: dap
-    description: DAP Reset.
+    description: "DAP Reset.\n\nRaw bit values: false (0) = Disabled: Interrupt disabled.; true (1) = Enabled: Interrupt enabled."
     bit_offset: 9
     bit_size: 1
-    enum: Cdog2
   - name: lpack
-    description: Low Power Acknowledge Timeout Reset.
+    description: "Low Power Acknowledge Timeout Reset.\n\nRaw bit values: false (0) = Disabled: Interrupt disabled.; true (1) = Enabled: Interrupt enabled."
     bit_offset: 11
     bit_size: 1
-    enum: Cdog2
   - name: scg
-    description: System Clock Generation Reset.
+    description: "System Clock Generation Reset.\n\nRaw bit values: false (0) = Disabled: Interrupt disabled.; true (1) = Enabled: Interrupt enabled."
     bit_offset: 12
     bit_size: 1
-    enum: Cdog2
   - name: wwdt0
-    description: Windowed Watchdog 0 Reset.
+    description: "Windowed Watchdog 0 Reset.\n\nRaw bit values: false (0) = Disabled: Interrupt disabled.; true (1) = Enabled: Interrupt enabled."
     bit_offset: 13
     bit_size: 1
-    enum: Cdog2
   - name: sw
-    description: Software Reset.
+    description: "Software Reset.\n\nRaw bit values: false (0) = Disabled: Interrupt disabled.; true (1) = Enabled: Interrupt enabled."
     bit_offset: 14
     bit_size: 1
-    enum: Cdog2
   - name: lockup
-    description: Lockup Reset.
+    description: "Lockup Reset.\n\nRaw bit values: false (0) = Disabled: Interrupt disabled.; true (1) = Enabled: Interrupt enabled."
     bit_offset: 15
     bit_size: 1
-    enum: Cdog2
   - name: cpu1
-    description: CPU1 Reset.
+    description: "CPU1 Reset.\n\nRaw bit values: false (0) = Disabled: Interrupt disabled.; true (1) = Enabled: Interrupt enabled."
     bit_offset: 16
     bit_size: 1
-    enum: Cdog2
   - name: vbat
-    description: VBAT System Reset.
+    description: "VBAT System Reset.\n\nRaw bit values: false (0) = Disabled: Interrupt disabled.; true (1) = Enabled: Interrupt enabled."
     bit_offset: 24
     bit_size: 1
-    enum: Cdog2
   - name: wwdt1
-    description: Windowed Watchdog 1 Reset.
+    description: "Windowed Watchdog 1 Reset.\n\nRaw bit values: false (0) = Disabled: Interrupt disabled.; true (1) = Enabled: Interrupt enabled."
     bit_offset: 25
     bit_size: 1
-    enum: Cdog2
   - name: cdog0
-    description: Code Watchdog 0 Reset.
+    description: "Code Watchdog 0 Reset.\n\nRaw bit values: false (0) = Disabled: Interrupt disabled.; true (1) = Enabled: Interrupt enabled."
     bit_offset: 26
     bit_size: 1
-    enum: Cdog2
   - name: cdog1
-    description: Code Watchdog 1 Reset.
+    description: "Code Watchdog 1 Reset.\n\nRaw bit values: false (0) = Disabled: Interrupt disabled.; true (1) = Enabled: Interrupt enabled."
     bit_offset: 27
     bit_size: 1
-    enum: Cdog2
 fieldset/CmcAlphaFieldsetSierra:
   description: System Reset Interrupt Flag.
   fields:
   - name: pin
-    description: Pin Reset.
+    description: "Pin Reset.\n\nRaw bit values: false (0) = Disabled: Reset source not pending.; true (1) = Enabled: Reset source pending."
     bit_offset: 8
     bit_size: 1
-    enum: Cdog4
   - name: dap
-    description: DAP Reset.
+    description: "DAP Reset.\n\nRaw bit values: false (0) = Disabled: Reset source not pending.; true (1) = Enabled: Reset source pending."
     bit_offset: 9
     bit_size: 1
-    enum: Cdog4
   - name: lpack
-    description: Low Power Acknowledge Timeout Reset.
+    description: "Low Power Acknowledge Timeout Reset.\n\nRaw bit values: false (0) = Disabled: Reset source not pending.; true (1) = Enabled: Reset source pending."
     bit_offset: 11
     bit_size: 1
-    enum: Cdog4
   - name: wwdt0
-    description: Windowed Watchdog 0 Reset.
+    description: "Windowed Watchdog 0 Reset.\n\nRaw bit values: false (0) = Disabled: Reset source not pending.; true (1) = Enabled: Reset source pending."
     bit_offset: 13
     bit_size: 1
-    enum: Cdog4
   - name: sw
-    description: Software Reset.
+    description: "Software Reset.\n\nRaw bit values: false (0) = Disabled: Reset source not pending.; true (1) = Enabled: Reset source pending."
     bit_offset: 14
     bit_size: 1
-    enum: Cdog4
   - name: lockup
-    description: Lockup Reset.
+    description: "Lockup Reset.\n\nRaw bit values: false (0) = Disabled: Reset source not pending.; true (1) = Enabled: Reset source pending."
     bit_offset: 15
     bit_size: 1
-    enum: Cdog4
   - name: cpu1
-    description: CPU1 Reset.
+    description: "CPU1 Reset.\n\nRaw bit values: false (0) = Disabled: Reset source not pending.; true (1) = Enabled: Reset source pending."
     bit_offset: 16
     bit_size: 1
-    enum: Cdog4
   - name: vbat
-    description: VBAT System Reset.
+    description: "VBAT System Reset.\n\nRaw bit values: false (0) = Disabled: Reset source not pending.; true (1) = Enabled: Reset source pending."
     bit_offset: 24
     bit_size: 1
-    enum: Cdog4
   - name: wwdt1
-    description: Windowed Watchdog 1 Reset.
+    description: "Windowed Watchdog 1 Reset.\n\nRaw bit values: false (0) = Disabled: Reset source not pending.; true (1) = Enabled: Reset source pending."
     bit_offset: 25
     bit_size: 1
-    enum: Cdog4
   - name: cdog0
-    description: Code Watchdog 0 Reset.
+    description: "Code Watchdog 0 Reset.\n\nRaw bit values: false (0) = Disabled: Reset source not pending.; true (1) = Enabled: Reset source pending."
     bit_offset: 26
     bit_size: 1
-    enum: Cdog4
   - name: cdog1
-    description: Code Watchdog 1 Reset.
+    description: "Code Watchdog 1 Reset.\n\nRaw bit values: false (0) = Disabled: Reset source not pending.; true (1) = Enabled: Reset source pending."
     bit_offset: 27
     bit_size: 1
-    enum: Cdog4
 fieldset/CmcAlphaFieldsetTango:
   description: System Reset Status.
   fields:
   - name: wakeup
-    description: Wake-up Reset.
+    description: "Wake-up Reset.\n\nRaw bit values: false (0) = Disabled: Reset not generated.; true (1) = Enabled: Reset generated."
     bit_offset: 0
     bit_size: 1
-    enum: Jtag
   - name: por
-    description: Power-on Reset.
+    description: "Power-on Reset.\n\nRaw bit values: false (0) = Disabled: Reset not generated.; true (1) = Enabled: Reset generated."
     bit_offset: 1
     bit_size: 1
-    enum: Jtag
   - name: vd
-    description: Voltage Detect Reset.
+    description: "Voltage Detect Reset.\n\nRaw bit values: false (0) = Disabled: Reset not generated.; true (1) = Enabled: Reset generated."
     bit_offset: 2
     bit_size: 1
-    enum: Jtag
   - name: warm
-    description: Warm Reset.
+    description: "Warm Reset.\n\nRaw bit values: false (0) = Disabled: Reset not generated.; true (1) = Enabled: Reset generated."
     bit_offset: 4
     bit_size: 1
-    enum: Jtag
   - name: fatal
-    description: Fatal Reset.
+    description: "Fatal Reset.\n\nRaw bit values: false (0) = Disabled: Reset was not generated.; true (1) = Enabled: Reset was generated."
     bit_offset: 5
     bit_size: 1
-    enum: Fatal
   - name: pin
-    description: Pin Reset.
+    description: "Pin Reset.\n\nRaw bit values: false (0) = Disabled: Reset was not generated.; true (1) = Enabled: Reset was generated."
     bit_offset: 8
     bit_size: 1
-    enum: Fatal
   - name: dap
-    description: Debug Access Port Reset.
+    description: "Debug Access Port Reset.\n\nRaw bit values: false (0) = Disabled: Reset was not generated.; true (1) = Enabled: Reset was generated."
     bit_offset: 9
     bit_size: 1
-    enum: Fatal
   - name: rstack
-    description: Reset Timeout.
+    description: "Reset Timeout.\n\nRaw bit values: false (0) = Disabled: Reset not generated.; true (1) = Enabled: Reset generated."
     bit_offset: 10
     bit_size: 1
-    enum: Jtag
   - name: lpack
-    description: Low Power Acknowledge Timeout Reset.
+    description: "Low Power Acknowledge Timeout Reset.\n\nRaw bit values: false (0) = Disabled: Reset not generated.; true (1) = Enabled: Reset generated."
     bit_offset: 11
     bit_size: 1
-    enum: Jtag
   - name: scg
-    description: System Clock Generation Reset.
+    description: "System Clock Generation Reset.\n\nRaw bit values: false (0) = Disabled: Reset is not generated.; true (1) = Enabled: Reset is generated."
     bit_offset: 12
     bit_size: 1
-    enum: Cdog3
   - name: wwdt0
-    description: Windowed Watchdog 0 Reset.
+    description: "Windowed Watchdog 0 Reset.\n\nRaw bit values: false (0) = Disabled: Reset is not generated.; true (1) = Enabled: Reset is generated."
     bit_offset: 13
     bit_size: 1
-    enum: Cdog3
   - name: sw
-    description: Software Reset.
+    description: "Software Reset.\n\nRaw bit values: false (0) = Disabled: Reset not generated.; true (1) = Enabled: Reset generated."
     bit_offset: 14
     bit_size: 1
-    enum: Jtag
   - name: lockup
-    description: Lockup Reset.
+    description: "Lockup Reset.\n\nRaw bit values: false (0) = Disabled: Reset not generated.; true (1) = Enabled: Reset generated."
     bit_offset: 15
     bit_size: 1
-    enum: Jtag
   - name: cpu1
-    description: CPU1 System Reset.
+    description: "CPU1 System Reset.\n\nRaw bit values: false (0) = Disabled: Reset not generated.; true (1) = Enabled: Reset generated."
     bit_offset: 16
     bit_size: 1
-    enum: Jtag
   - name: vbat
-    description: VBAT System Reset.
+    description: "VBAT System Reset.\n\nRaw bit values: false (0) = Disabled: Reset not generated.; true (1) = Enabled: Reset generated."
     bit_offset: 24
     bit_size: 1
-    enum: Jtag
   - name: wwdt1
-    description: Windowed Watchdog 1 Reset.
+    description: "Windowed Watchdog 1 Reset.\n\nRaw bit values: false (0) = Disabled: Reset is not generated.; true (1) = Enabled: Reset is generated."
     bit_offset: 25
     bit_size: 1
-    enum: Cdog3
   - name: cdog0
-    description: Code Watchdog 0 Reset.
+    description: "Code Watchdog 0 Reset.\n\nRaw bit values: false (0) = Disabled: Reset is not generated.; true (1) = Enabled: Reset is generated."
     bit_offset: 26
     bit_size: 1
-    enum: Cdog3
   - name: cdog1
-    description: Code Watchdog 1 Reset.
+    description: "Code Watchdog 1 Reset.\n\nRaw bit values: false (0) = Disabled: Reset is not generated.; true (1) = Enabled: Reset is generated."
     bit_offset: 27
     bit_size: 1
-    enum: Cdog3
   - name: jtag
-    description: JTAG System Reset.
+    description: "JTAG System Reset.\n\nRaw bit values: false (0) = Disabled: Reset not generated.; true (1) = Enabled: Reset generated."
     bit_offset: 28
     bit_size: 1
-    enum: Jtag
   - name: secvio
-    description: Security Violation Reset.
+    description: "Security Violation Reset.\n\nRaw bit values: false (0) = Disabled: Reset not generated.; true (1) = Enabled: Reset generated."
     bit_offset: 30
     bit_size: 1
-    enum: Jtag
   - name: tamper
-    description: Tamper Reset.
+    description: "Tamper Reset.\n\nRaw bit values: false (0) = Disabled: Reset not generated.; true (1) = Enabled: Reset generated."
     bit_offset: 31
     bit_size: 1
-    enum: Jtag
 fieldset/CmcAlphaFieldsetUniform:
   description: Sticky System Reset Status.
   fields:
   - name: wakeup
-    description: Wake-up Reset.
+    description: "Wake-up Reset.\n\nRaw bit values: false (0) = Disabled: Reset not generated.; true (1) = Enabled: Reset generated."
     bit_offset: 0
     bit_size: 1
-    enum: Jtag
   - name: por
-    description: Power-on Reset.
+    description: "Power-on Reset.\n\nRaw bit values: false (0) = Disabled: Reset not generated.; true (1) = Enabled: Reset generated."
     bit_offset: 1
     bit_size: 1
-    enum: Jtag
   - name: vd
-    description: Voltage Detect Reset.
+    description: "Voltage Detect Reset.\n\nRaw bit values: false (0) = Disabled: Reset not generated.; true (1) = Enabled: Reset generated."
     bit_offset: 2
     bit_size: 1
-    enum: Jtag
   - name: warm
-    description: Warm Reset.
+    description: "Warm Reset.\n\nRaw bit values: false (0) = Disabled: Reset not generated.; true (1) = Enabled: Reset generated."
     bit_offset: 4
     bit_size: 1
-    enum: Jtag
   - name: fatal
-    description: Fatal Reset.
+    description: "Fatal Reset.\n\nRaw bit values: false (0) = Disabled: Reset was not generated.; true (1) = Enabled: Reset was generated."
     bit_offset: 5
     bit_size: 1
-    enum: Fatal
   - name: pin
-    description: Pin Reset.
+    description: "Pin Reset.\n\nRaw bit values: false (0) = Disabled: Reset not generated.; true (1) = Enabled: Reset generated."
     bit_offset: 8
     bit_size: 1
-    enum: Jtag
   - name: dap
-    description: DAP Reset.
+    description: "DAP Reset.\n\nRaw bit values: false (0) = Disabled: Reset not generated.; true (1) = Enabled: Reset generated."
     bit_offset: 9
     bit_size: 1
-    enum: Jtag
   - name: rstack
-    description: Reset Timeout.
+    description: "Reset Timeout.\n\nRaw bit values: false (0) = Disabled: Reset not generated.; true (1) = Enabled: Reset generated."
     bit_offset: 10
     bit_size: 1
-    enum: Jtag
   - name: lpack
-    description: Low Power Acknowledge Timeout Reset.
+    description: "Low Power Acknowledge Timeout Reset.\n\nRaw bit values: false (0) = Disabled: Reset not generated.; true (1) = Enabled: Reset generated."
     bit_offset: 11
     bit_size: 1
-    enum: Jtag
   - name: scg
-    description: System Clock Generation Reset.
+    description: "System Clock Generation Reset.\n\nRaw bit values: false (0) = Disabled: Reset is not generated.; true (1) = Enabled: Reset is generated."
     bit_offset: 12
     bit_size: 1
-    enum: Cdog3
   - name: wwdt0
-    description: Windowed Watchdog 0 Reset.
+    description: "Windowed Watchdog 0 Reset.\n\nRaw bit values: false (0) = Disabled: Reset is not generated.; true (1) = Enabled: Reset is generated."
     bit_offset: 13
     bit_size: 1
-    enum: Cdog3
   - name: sw
-    description: Software Reset.
+    description: "Software Reset.\n\nRaw bit values: false (0) = Disabled: Reset not generated.; true (1) = Enabled: Reset generated."
     bit_offset: 14
     bit_size: 1
-    enum: Jtag
   - name: lockup
-    description: Lockup Reset.
+    description: "Lockup Reset.\n\nRaw bit values: false (0) = Disabled: Reset not generated.; true (1) = Enabled: Reset generated."
     bit_offset: 15
     bit_size: 1
-    enum: Jtag
   - name: cpu1
-    description: CPU1 Reset.
+    description: "CPU1 Reset.\n\nRaw bit values: false (0) = Disabled: Reset not generated from CPU1 reset source.; true (1) = Enabled: Reset generated from CPU1 reset source."
     bit_offset: 16
     bit_size: 1
-    enum: CmcAlphaEnumVictorDelta
   - name: vbat
-    description: VBAT System Reset.
+    description: "VBAT System Reset.\n\nRaw bit values: false (0) = Disabled: Reset not generated.; true (1) = Enabled: Reset generated."
     bit_offset: 24
     bit_size: 1
-    enum: Jtag
   - name: wwdt1
-    description: Windowed Watchdog 1 Reset.
+    description: "Windowed Watchdog 1 Reset.\n\nRaw bit values: false (0) = Disabled: Reset is not generated.; true (1) = Enabled: Reset is generated."
     bit_offset: 25
     bit_size: 1
-    enum: Cdog3
   - name: cdog0
-    description: Code Watchdog 0 Reset.
+    description: "Code Watchdog 0 Reset.\n\nRaw bit values: false (0) = Disabled: Reset is not generated.; true (1) = Enabled: Reset is generated."
     bit_offset: 26
     bit_size: 1
-    enum: Cdog3
   - name: cdog1
-    description: Code Watchdog 1 Reset.
+    description: "Code Watchdog 1 Reset.\n\nRaw bit values: false (0) = Disabled: Reset is not generated.; true (1) = Enabled: Reset is generated."
     bit_offset: 27
     bit_size: 1
-    enum: Cdog3
   - name: jtag
-    description: JTAG System Reset.
+    description: "JTAG System Reset.\n\nRaw bit values: false (0) = Disabled: Reset not generated.; true (1) = Enabled: Reset generated."
     bit_offset: 28
     bit_size: 1
-    enum: Jtag
   - name: secvio
-    description: Security Violation Reset.
+    description: "Security Violation Reset.\n\nRaw bit values: false (0) = Disabled: Reset not generated.; true (1) = Enabled: Reset generated."
     bit_offset: 30
     bit_size: 1
-    enum: Jtag
   - name: tamper
-    description: Tamper Reset.
+    description: "Tamper Reset.\n\nRaw bit values: false (0) = Disabled: Reset not generated.; true (1) = Enabled: Reset generated."
     bit_offset: 31
     bit_size: 1
-    enum: Jtag
 fieldset/CmcAlphaFieldsetVictor:
   description: Version ID.
   fields:
@@ -948,15 +809,6 @@ enum/CmcAlphaEnumBravo:
   - name: Ckmode1111
     description: Core, platform, and peripheral clocks are gated, and core enters Low-Power mode.
     value: 15
-enum/Lock2:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Allowed.
-    value: 0
-  - name: Enabled
-    description: Blocked.
-    value: 1
 enum/CmcAlphaEnumDelta:
   bit_size: 4
   variants:
@@ -969,51 +821,6 @@ enum/CmcAlphaEnumDelta:
   - name: Ckmode1111
     description: Core, platform, and peripheral clocks were gated, and power domain entered Low-Power mode.
     value: 15
-enum/SramDisable:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 1
-  - name: Enabled
-    description: Enables.
-    value: 0
-enum/Filten:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
-enum/CmcAlphaEnumLimaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: No effect.
-    value: 0
-  - name: Enabled
-    description: Flash memory is disabled.
-    value: 1
-enum/CmcAlphaEnumMikeAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: No effect.
-    value: 0
-  - name: Enabled
-    description: Flash memory is disabled when core is sleeping (CKMODE > 0).
-    value: 1
-enum/CmcAlphaEnumNovemberAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: No effect.
-    value: 0
-  - name: Enabled
-    description: Asserts.
-    value: 1
 enum/Lpmode:
   bit_size: 4
   variants:
@@ -1080,84 +887,3 @@ enum/CmcAlphaEnumTangoAlpha:
   - name: En9
     description: Allowed.
     value: 10
-enum/SramRetention:
-  bit_size: 1
-  variants:
-  - name: Poweredoff
-    description: Retains.
-    value: 0
-  - name: Retained
-    description: Powers off.
-    value: 1
-enum/CmcAlphaEnumAlphaCharlie:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Remains enabled.
-    value: 0
-  - name: Enabled
-    description: Disabled.
-    value: 1
-enum/Cdog2:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Interrupt disabled.
-    value: 0
-  - name: Enabled
-    description: Interrupt enabled.
-    value: 1
-enum/Cdog4:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Reset source not pending.
-    value: 0
-  - name: Enabled
-    description: Reset source pending.
-    value: 1
-enum/Fatal:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Reset was not generated.
-    value: 0
-  - name: Enabled
-    description: Reset was generated.
-    value: 1
-enum/CmcAlphaEnumVictorDelta:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Reset not generated from CPU1 reset source.
-    value: 0
-  - name: Enabled
-    description: Reset generated from CPU1 reset source.
-    value: 1
-enum/Cdog3:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Reset is not generated.
-    value: 0
-  - name: Enabled
-    description: Reset is generated.
-    value: 1
-enum/Jtag:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Reset not generated.
-    value: 0
-  - name: Enabled
-    description: Reset generated.
-    value: 1
-enum/CmcAlphaEnumOscarEcho:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Core clock not gated.
-    value: 0
-  - name: Enabled
-    description: Core clock was gated due to Low-Power mode entry.
-    value: 1

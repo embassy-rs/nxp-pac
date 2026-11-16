@@ -16,10 +16,30 @@ This crate will (hopefully) be used for [`embassy-nxp`](https://github.com/embas
 ## Cloning
 
 Select exactly one chip feature, for example `mcxa266`, `mcxa287`, or `mcxn235`.
-The `pac` feature is enabled by default; `metadata`, `rt`, and `defmt` retain their
-existing roles. Metadata-only host builds are supported with default features
+The `pac` feature is enabled by default. `metadata`, `rt`, and `defmt` are opt-in;
+neither the defaults nor chip-selection features enable `defmt`. Enable it
+explicitly for `defmt::Format` implementations on register and enum types:
+
+```toml
+nxp-pac = { version = "0.1.0", features = ["mcxn556", "defmt"] }
+```
+
+Omit `"defmt"` when that formatting support is not needed to reduce compiler
+memory use. Cargo features are additive: another dependency enabling this crate's
+`defmt` feature also enables it for the shared build. Standard `core::fmt::Debug`
+implementations do not require `defmt`.
+
+Metadata-only host builds are supported with default features
 disabled. Building a MetaPAC does not require a vendor SVD checkout, external
 formatter, or generator executable.
+
+MCXA/MCXN MetaPAC one-bit fields use primitive `bool`, not field-specific enums.
+`false` is the raw bit value 0 and `true` is 1, including for active-low controls.
+The field documentation retains the former enum's bit meanings. Callers migrating
+from an enum getter/setter must use those raw Boolean values; `true` does not
+universally mean enabled. Wider fields retain their integer or enum types, even
+when they have only two named choices. Register layouts and software defaults are
+unchanged. The separate legacy two-core MCXN947 PAC is not part of this migration.
 
 MCXN MetaPAC chip features are `mcxn235`, `mcxn236`, `mcxn246`, `mcxn247`,
 `mcxn526`, `mcxn527`, `mcxn536`, `mcxn537`, `mcxn546`, `mcxn547`, `mcxn556`,

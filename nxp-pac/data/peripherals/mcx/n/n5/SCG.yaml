@@ -192,78 +192,64 @@ fieldset/ScgAlphaFieldsetAlpha:
   description: APLL Override Register.
   fields:
   - name: apllpwren_ovrd
-    description: APLL Power Enable Override if APLL_OVRD_EN=1.
+    description: "APLL Power Enable Override if APLL_OVRD_EN=1.\n\nRaw bit values: false (0) = Disabled: APLL clock is powered off.; true (1) = Enabled: APLL clock is powered on."
     bit_offset: 0
     bit_size: 1
-    enum: Apllpwren
   - name: apllclken_ovrd
-    description: APLL Clock Enable Override if APLL_OVRD_EN=1.
+    description: "APLL Clock Enable Override if APLL_OVRD_EN=1.\n\nRaw bit values: false (0) = Disabled: APLL clock is disabled.; true (1) = Enabled: APLL clock is enabled."
     bit_offset: 1
     bit_size: 1
-    enum: Apllclken
   - name: apll_ovrd_en
-    description: APLL Override Enable.
+    description: "APLL Override Enable.\n\nRaw bit values: false (0) = Disabled: APLL override is disabled.; true (1) = Enabled: APLL override is enabled."
     bit_offset: 31
     bit_size: 1
-    enum: ScgAlphaEnumCharlie
 fieldset/ScgAlphaFieldsetBravo:
   description: APLL Control Status Register.
   fields:
   - name: apllpwren
-    description: APLL Power Enable.
+    description: "APLL Power Enable.\n\nRaw bit values: false (0) = Disabled: APLL clock is powered off.; true (1) = Enabled: APLL clock is powered on."
     bit_offset: 0
     bit_size: 1
-    enum: Apllpwren
   - name: apllclken
-    description: APLL Clock Enable.
+    description: "APLL Clock Enable.\n\nRaw bit values: false (0) = Disabled: APLL clock is disabled.; true (1) = Enabled: APLL clock is enabled."
     bit_offset: 1
     bit_size: 1
-    enum: Apllclken
   - name: apllsten
-    description: APLL Stop Enable.
+    description: "APLL Stop Enable.\n\nRaw bit values: false (0) = DisabledInStop: APLL is disabled in Deep Sleep mode.; true (1) = EnabledInStop: APLL is enabled in Deep Sleep mode."
     bit_offset: 2
     bit_size: 1
-    enum: ScgAlphaEnumIndiaAlpha
   - name: frm_clockstable
-    description: Free running mode clock stable.
+    description: "Free running mode clock stable.\n\nRaw bit values: false (0) = Disabled: Free running mode clockstable is disabled.; true (1) = Enabled: Free running mode clockstable is enabled."
     bit_offset: 3
     bit_size: 1
-    enum: FrmClockstable
   - name: apllcm
-    description: APLL Clock Monitor.
+    description: "APLL Clock Monitor.\n\nRaw bit values: false (0) = Disabled: APLL Clock Monitor is disabled.; true (1) = Enabled: APLL Clock Monitor is enabled."
     bit_offset: 16
     bit_size: 1
-    enum: ScgAlphaEnumGolf
   - name: apllcmre
-    description: APLL Clock Monitor Reset Enable.
+    description: "APLL Clock Monitor Reset Enable.\n\nRaw bit values: false (0) = GenerateInterrupt: Clock monitor generates an interrupt when an error is detected.; true (1) = GenerateReset: Clock monitor generates a reset when an error is detected."
     bit_offset: 17
     bit_size: 1
-    enum: Apllcmre2
   - name: lk
-    description: Lock Register.
+    description: "Lock Register.\n\nRaw bit values: false (0) = WriteEnabled: Control Status Register can be written.; true (1) = WriteDisabled: Control Status Register cannot be written."
     bit_offset: 23
     bit_size: 1
-    enum: Lk2
   - name: apll_lock
-    description: APLL LOCK.
+    description: "APLL LOCK.\n\nRaw bit values: false (0) = DisabledOrNotValid: APLL is not powered on or not locked.; true (1) = EnabledAndValid: APLL is locked."
     bit_offset: 24
     bit_size: 1
-    enum: ScgAlphaEnumAlpha
   - name: apllsel
-    description: APLL Selected.
+    description: "APLL Selected.\n\nRaw bit values: false (0) = NotApll: APLL is not the system clock source.; true (1) = Apll: APLL is the system clock source."
     bit_offset: 25
     bit_size: 1
-    enum: ScgAlphaEnumXray
   - name: apllerr
-    description: APLL Clock Error.
+    description: "APLL Clock Error.\n\nRaw bit values: false (0) = DisabledOrNoError: APLL Clock Monitor is disabled or has not detected an error.; true (1) = EnabledAndError: APLL Clock Monitor is enabled and detected an error."
     bit_offset: 26
     bit_size: 1
-    enum: ScgAlphaEnumRomeo
   - name: apll_lock_ie
-    description: APLL LOCK Interrupt Enable.
+    description: "APLL LOCK Interrupt Enable.\n\nRaw bit values: false (0) = NotApll: APLL_LOCK interrupt is not enabled.; true (1) = Apll: APLL_LOCK interrupt is enabled."
     bit_offset: 30
     bit_size: 1
-    enum: ScgAlphaEnumBravo
 fieldset/Apllctrl2:
   description: APLL Control Register.
   fields:
@@ -280,35 +266,29 @@ fieldset/Apllctrl2:
     bit_offset: 10
     bit_size: 5
   - name: bypasspostdiv2
-    description: Bypass of Divide-by-2 Divider.
+    description: "Bypass of Divide-by-2 Divider.\n\nRaw bit values: false (0) = NotBypassed: Use the divide-by-2 divider in the postdivider.; true (1) = Bypassed: Bypass of the divide-by-2 divider in the postdivider."
     bit_offset: 16
     bit_size: 1
-    enum: Bypasspostdiv
   - name: limupoff
-    description: Up Limiter.
+    description: "Up Limiter.\n\nRaw bit values: false (0) = Disabled: Application set to non-Spectrum and Fractional applications.; true (1) = Enabled: Application set to Spectrum and Fractional applications."
     bit_offset: 17
     bit_size: 1
-    enum: Limupoff
   - name: banddirect
-    description: Control of the bandwidth of the PLL.
+    description: "Control of the bandwidth of the PLL.\n\nRaw bit values: false (0) = Disabled: The bandwidth is changed synchronously with the feedback-divider.; true (1) = Enabled: Modifies the bandwidth of the PLL directly."
     bit_offset: 18
     bit_size: 1
-    enum: Banddirect
   - name: bypassprediv
-    description: Bypass of the predivider.
+    description: "Bypass of the predivider.\n\nRaw bit values: false (0) = Disabled: Use the predivider.; true (1) = Enabled: Bypass of the predivider."
     bit_offset: 19
     bit_size: 1
-    enum: Bypassprediv
   - name: bypasspostdiv
-    description: Bypass of the postdivider.
+    description: "Bypass of the postdivider.\n\nRaw bit values: false (0) = Disabled: Use the postdivider.; true (1) = Enabled: Bypass of the postdivider."
     bit_offset: 20
     bit_size: 1
-    enum: Bypasspostdiv2
   - name: frm
-    description: Free Running Mode Enable.
+    description: "Free Running Mode Enable.\n\nRaw bit values: false (0) = Disabled: Free running mode disabled.; true (1) = Enabled: Free running mode enabled."
     bit_offset: 22
     bit_size: 1
-    enum: Frm
   - name: source
     description: Clock Source.
     bit_offset: 25
@@ -329,10 +309,9 @@ fieldset/Apllmdiv2:
     bit_offset: 0
     bit_size: 16
   - name: mreq
-    description: Feedback ratio change request.
+    description: "Feedback ratio change request.\n\nRaw bit values: false (0) = Disabled: Feedback ratio change is not requested.; true (1) = Enabled: Feedback ratio change is requested."
     bit_offset: 31
     bit_size: 1
-    enum: Mreq
 fieldset/Apllndiv2:
   description: APLL N Divider Register.
   fields:
@@ -341,10 +320,9 @@ fieldset/Apllndiv2:
     bit_offset: 0
     bit_size: 8
   - name: nreq
-    description: Predivider ratio change request.
+    description: "Predivider ratio change request.\n\nRaw bit values: false (0) = Disabled: Predivider ratio change is not requested.; true (1) = Enabled: Predivider ratio change is requested."
     bit_offset: 31
     bit_size: 1
-    enum: Nreq
 fieldset/Apllpdiv2:
   description: APLL P Divider Register.
   fields:
@@ -353,10 +331,9 @@ fieldset/Apllpdiv2:
     bit_offset: 0
     bit_size: 5
   - name: preq
-    description: Postdivider ratio change request.
+    description: "Postdivider ratio change request.\n\nRaw bit values: false (0) = Disabled: Postdivider ratio change is not requested.; true (1) = Enabled: Postdivider ratio change is requested."
     bit_offset: 31
     bit_size: 1
-    enum: Preq
 fieldset/ScgAlphaFieldsetHotel:
   description: APLL Spread Spectrum Control 0 Register.
   fields:
@@ -372,10 +349,9 @@ fieldset/Apllsscg:
     bit_offset: 0
     bit_size: 1
   - name: ss_mdiv_req
-    description: SS_MDIV[32:0] change request.
+    description: "SS_MDIV[32:0] change request.\n\nRaw bit values: false (0) = Disabled: SS_MDIV change is not requested.; true (1) = Enabled: SS_MDIV change is requested."
     bit_offset: 1
     bit_size: 1
-    enum: SsMdivReq
   - name: mf
     description: Modulation Frequency Control.
     bit_offset: 2
@@ -390,51 +366,43 @@ fieldset/Apllsscg:
     bit_size: 2
     enum: Mc
   - name: dither
-    description: Dither Enable.
+    description: "Dither Enable.\n\nRaw bit values: false (0) = Disabled: Dither is not enabled.; true (1) = Enabled: Dither is enabled."
     bit_offset: 10
     bit_size: 1
-    enum: Dither
   - name: sel_ss_mdiv
-    description: SS_MDIV select.
+    description: "SS_MDIV select.\n\nRaw bit values: false (0) = Disabled: Feedback divider ratio is MDIV[15:0].; true (1) = Enabled: Feedback divider ratio is SS_MDIV[32:0]."
     bit_offset: 11
     bit_size: 1
-    enum: SelSsMdiv
   - name: ss_pd
-    description: SSCG Power Down.
+    description: "SSCG Power Down.\n\nRaw bit values: false (0) = Disabled: SSCG is powered on.; true (1) = Enabled: SSCG is powered off."
     bit_offset: 31
     bit_size: 1
-    enum: SsPd
 fieldset/Apllsscgstat2:
   description: APLL SSCG Status Register.
   fields:
   - name: ss_mdiv_ack
-    description: SS_MDIV change acknowledge.
+    description: "SS_MDIV change acknowledge.\n\nRaw bit values: false (0) = Disabled: The SS_MDIV, MF, MR, and MC ratio change is not accepted by the analog PLL.; true (1) = Enabled: The SS_MDIV, MF, MR, and MC ratio change is accepted by the analog PLL."
     bit_offset: 0
     bit_size: 1
-    enum: SsMdivAck
 fieldset/ScgAlphaFieldsetKilo:
   description: APLL Status Register.
   fields:
   - name: ndivack
-    description: Predivider(N) ratio change acknowledge.
+    description: "Predivider(N) ratio change acknowledge.\n\nRaw bit values: false (0) = Disabled: The predivider (N) ratio change is not accepted by the analog PLL.; true (1) = Enabled: The predivider (N) ratio change is accepted by the analog PLL."
     bit_offset: 1
     bit_size: 1
-    enum: Ndivack
   - name: mdivack
-    description: Feedback(M) divider ratio change acknowledge.
+    description: "Feedback(M) divider ratio change acknowledge.\n\nRaw bit values: false (0) = Disabled: The feedback (M) ratio change is not accepted by the analog PLL.; true (1) = Enabled: The feedback (M) ratio change is accepted by the analog PLL."
     bit_offset: 2
     bit_size: 1
-    enum: Mdivack
   - name: pdivack
-    description: Postdivider(P) ratio change acknowledge.
+    description: "Postdivider(P) ratio change acknowledge.\n\nRaw bit values: false (0) = Disabled: The postdivider (P) ratio change is not accepted by the analog PLL.; true (1) = Enabled: The postdivider (P) ratio change is accepted by the analog PLL."
     bit_offset: 3
     bit_size: 1
-    enum: Pdivack
   - name: frmdet
-    description: Free running detector (active high).
+    description: "Free running detector (active high).\n\nRaw bit values: false (0) = Disabled: Free running is not detected.; true (1) = Enabled: Free running is detected."
     bit_offset: 4
     bit_size: 1
-    enum: Frmdet
 fieldset/Csr2:
   description: Clock Status Register.
   fields:
@@ -447,88 +415,72 @@ fieldset/ScgAlphaFieldsetMike:
   description: FIRC Configuration Register.
   fields:
   - name: range
-    description: Frequency Range.
+    description: "Frequency Range.\n\nRaw bit values: false (0) = Firc48mhz: 48 MHz FIRC clock selected.; true (1) = Firc144mhz: 144 MHz FIRC clock selected."
     bit_offset: 0
     bit_size: 1
-    enum: ScgAlphaEnumPapaAlpha
 fieldset/ScgAlphaFieldsetNovember:
   description: FIRC Control Status Register.
   fields:
   - name: fircen
-    description: FIRC Enable.
+    description: "FIRC Enable.\n\nRaw bit values: false (0) = Disabled: FIRC is disabled.; true (1) = Enabled: FIRC is enabled."
     bit_offset: 0
     bit_size: 1
-    enum: ScgAlphaEnumUniformAlpha
   - name: fircsten
-    description: FIRC Stop Enable.
+    description: "FIRC Stop Enable.\n\nRaw bit values: false (0) = DisabledInStopModes: FIRC is disabled in Deep Sleep mode.; true (1) = EnabledInStopModes: FIRC is enabled in Deep Sleep mode."
     bit_offset: 1
     bit_size: 1
-    enum: ScgAlphaEnumYankeeAlpha
   - name: firc_sclk_periph_en
-    description: FIRC 48 MHz Clock to peripherals Enable.
+    description: "FIRC 48 MHz Clock to peripherals Enable.\n\nRaw bit values: false (0) = Disabled: FIRC 48 MHz to peripherals is disabled.; true (1) = Enabled: FIRC 48 MHz to peripherals is enabled."
     bit_offset: 4
     bit_size: 1
-    enum: ScgAlphaEnumMikeAlpha
   - name: firc_fclk_periph_en
-    description: FIRC 144 MHz Clock to peripherals Enable.
+    description: "FIRC 144 MHz Clock to peripherals Enable.\n\nRaw bit values: false (0) = Disabled: FIRC 144 MHz to peripherals is disabled.; true (1) = Enabled: FIRC 144 MHz to peripherals is enabled."
     bit_offset: 5
     bit_size: 1
-    enum: ScgAlphaEnumLimaAlpha
   - name: firctren
-    description: FIRC 144 MHz Trim Enable (FIRCCFG[RANGE]=1).
+    description: "FIRC 144 MHz Trim Enable (FIRCCFG[RANGE]=1).\n\nRaw bit values: false (0) = Disabled: Disables trimming FIRC to an external clock source.; true (1) = Enabled: Enables trimming FIRC to an external clock source."
     bit_offset: 8
     bit_size: 1
-    enum: ScgAlphaEnumAlphaBravo
   - name: firctrup
-    description: FIRC Trim Update.
+    description: "FIRC Trim Update.\n\nRaw bit values: false (0) = Disabled: Disables FIRC trimming updates.; true (1) = Enabled: Enables FIRC trimming updates."
     bit_offset: 9
     bit_size: 1
-    enum: ScgAlphaEnumBravoBravo
   - name: trim_lock
-    description: FIRC TRIM LOCK.
+    description: "FIRC TRIM LOCK.\n\nRaw bit values: false (0) = FircNotLocked: FIRC auto trim not locked to target frequency range.; true (1) = FircLocked: FIRC auto trim locked to target frequency range."
     bit_offset: 10
     bit_size: 1
-    enum: ScgAlphaEnumTangoAlpha
   - name: coarse_trim_bypass
-    description: Coarse Auto Trim Bypass.
+    description: "Coarse Auto Trim Bypass.\n\nRaw bit values: false (0) = NotBypassed: FIRC coarse auto trim is not bypassed.; true (1) = Bypassed: FIRC coarse auto trim is bypassed."
     bit_offset: 11
     bit_size: 1
-    enum: ScgAlphaEnumRomeoAlpha
   - name: lk
-    description: Lock Register.
+    description: "Lock Register.\n\nRaw bit values: false (0) = WriteEnabled: Control Status Register can be written.; true (1) = WriteDisabled: Control Status Register cannot be written."
     bit_offset: 23
     bit_size: 1
-    enum: Lk2
   - name: fircvld
-    description: FIRC Valid status.
+    description: "FIRC Valid status.\n\nRaw bit values: false (0) = NotEnabledOrNotValid: FIRC is not enabled or clock is not valid.; true (1) = EnabledAndValid: FIRC is enabled and output clock is valid. The clock is valid after there is an output clock from the FIRC analog."
     bit_offset: 24
     bit_size: 1
-    enum: ScgAlphaEnumCharlieBravo
   - name: fircsel
-    description: FIRC Selected.
+    description: "FIRC Selected.\n\nRaw bit values: false (0) = NotFirc: FIRC is not the system clock source.; true (1) = Firc: FIRC is the system clock source."
     bit_offset: 25
     bit_size: 1
-    enum: ScgAlphaEnumXrayAlpha
   - name: fircerr
-    description: FIRC Clock Error.
+    description: "FIRC Clock Error.\n\nRaw bit values: false (0) = ErrorNotDetected: Error not detected with the FIRC trimming.; true (1) = ErrorDetected: Error detected with the FIRC trimming."
     bit_offset: 26
     bit_size: 1
-    enum: ScgAlphaEnumVictorAlpha
   - name: fircerr_ie
-    description: FIRC Clock Error Interrupt Enable.
+    description: "FIRC Clock Error Interrupt Enable.\n\nRaw bit values: false (0) = ErrorNotDetected: FIRCERR interrupt is not enabled.; true (1) = ErrorDetected: FIRCERR interrupt is enabled."
     bit_offset: 27
     bit_size: 1
-    enum: ScgAlphaEnumWhiskeyAlpha
   - name: fircacc_ie
-    description: FIRC Accurate Interrupt Enable.
+    description: "FIRC Accurate Interrupt Enable.\n\nRaw bit values: false (0) = Fircaccnot: FIRCACC interrupt is not enabled.; true (1) = Fircaccyes: FIRCACC interrupt is enabled."
     bit_offset: 30
     bit_size: 1
-    enum: ScgAlphaEnumOscarAlpha
   - name: fircacc
-    description: FIRC Frequency Accurate.
+    description: "FIRC Frequency Accurate.\n\nRaw bit values: false (0) = NotEnabledOrNotValid: FIRC is not enabled or clock is not accurate.; true (1) = EnabledAndValid: FIRC is enabled and output clock is accurate. The clock is accurate after 4096 clock cycles of 144 MHz (RANGE=1) or 1365 clock cycles of 48 MHz(RANGE=0) from the FIRC analog."
     bit_offset: 31
     bit_size: 1
-    enum: ScgAlphaEnumNovemberAlpha
 fieldset/ScgAlphaFieldsetOscar:
   description: FIRC Auto-trimming Status Register.
   fields:
@@ -575,154 +527,127 @@ fieldset/ScgAlphaFieldsetRomeo:
   description: LDO Control and Status Register.
   fields:
   - name: ldoen
-    description: LDO Enable.
+    description: "LDO Enable.\n\nRaw bit values: false (0) = Disabled: LDO is disabled.; true (1) = Enabled: LDO is enabled."
     bit_offset: 0
     bit_size: 1
-    enum: ScgAlphaEnumFoxtrotBravo
   - name: vout_sel
     description: LDO output voltage select.
     bit_offset: 1
     bit_size: 3
     enum: ScgAlphaEnumEchoEcho
   - name: ldobypass
-    description: LDO Bypass.
+    description: "LDO Bypass.\n\nRaw bit values: false (0) = Disabled: LDO is not bypassed.; true (1) = Enabled: LDO is bypassed."
     bit_offset: 4
     bit_size: 1
-    enum: ScgAlphaEnumEchoBravo
   - name: vout_ok
-    description: LDO VOUT OK Inform.
+    description: "LDO VOUT OK Inform.\n\nRaw bit values: false (0) = Disabled: LDO output VOUT is not OK.; true (1) = Enabled: LDO output VOUT is OK."
     bit_offset: 31
     bit_size: 1
-    enum: ScgAlphaEnumDeltaEcho
 fieldset/ScgAlphaFieldsetSierra:
   description: Parameter Register.
   fields:
   - name: soscclkpres
-    description: SOSC Clock Present.
+    description: "SOSC Clock Present.\n\nRaw bit values: false (0) = Nopres: SOSC clock source is not present.; true (1) = Pres: SOSC clock source is present."
     bit_offset: 1
     bit_size: 1
-    enum: ScgAlphaEnumCharlieCharlie
   - name: sircclkpres
-    description: SIRC Clock Present.
+    description: "SIRC Clock Present.\n\nRaw bit values: false (0) = Nopres: SIRC clock source is not present.; true (1) = Pres: SIRC clock source is present."
     bit_offset: 2
     bit_size: 1
-    enum: ScgAlphaEnumPapaBravo
   - name: fircclkpres
-    description: FIRC Clock Present.
+    description: "FIRC Clock Present.\n\nRaw bit values: false (0) = Nopres: FIRC clock source is not present.; true (1) = Pres: FIRC clock source is present."
     bit_offset: 3
     bit_size: 1
-    enum: ScgAlphaEnumQuebecAlpha
   - name: roscclkpres
-    description: ROSC Clock Present.
+    description: "ROSC Clock Present.\n\nRaw bit values: false (0) = Nopres: ROSC clock source is not present.; true (1) = Pres: ROSC clock source is present."
     bit_offset: 4
     bit_size: 1
-    enum: ScgAlphaEnumHotelBravo
   - name: apllclkpres
-    description: APLL Clock Present.
+    description: "APLL Clock Present.\n\nRaw bit values: false (0) = Nopres: APLL clock source is not present.; true (1) = Pres: APLL clock source is present."
     bit_offset: 5
     bit_size: 1
-    enum: ScgAlphaEnumFoxtrot
   - name: spllclkpres
-    description: SPLL Clock Present.
+    description: "SPLL Clock Present.\n\nRaw bit values: false (0) = Nopres: SPLL clock source is not present.; true (1) = Pres: SPLL clock source is present."
     bit_offset: 6
     bit_size: 1
-    enum: ScgAlphaEnumRomeoCharlie
   - name: upllclkpres
-    description: UPLL Clock Present.
+    description: "UPLL Clock Present.\n\nRaw bit values: false (0) = Nopres: UPLL clock source is not present.; true (1) = Pres: UPLL clock source is present."
     bit_offset: 7
     bit_size: 1
-    enum: ScgAlphaEnumWhiskeyDelta
 fieldset/ScgAlphaFieldsetUniform:
   description: ROSC Control Status Register.
   fields:
   - name: rosccm
-    description: ROSC Clock Monitor.
+    description: "ROSC Clock Monitor.\n\nRaw bit values: false (0) = Disabled: ROSC clock monitor is disabled.; true (1) = Enabled: ROSC clock monitor is enabled."
     bit_offset: 16
     bit_size: 1
-    enum: ScgAlphaEnumIndiaBravo
   - name: rosccmre
-    description: ROSC Clock Monitor Reset Enable.
+    description: "ROSC Clock Monitor Reset Enable.\n\nRaw bit values: false (0) = GenerateInterrupt: Clock monitor generates an interrupt when an error is detected.; true (1) = GenerateReset: Clock monitor generates a reset when an error is detected."
     bit_offset: 17
     bit_size: 1
-    enum: Apllcmre2
   - name: lk
-    description: Lock Register.
+    description: "Lock Register.\n\nRaw bit values: false (0) = WriteEnabled: Control Status Register can be written.; true (1) = WriteDisabled: Control Status Register cannot be written."
     bit_offset: 23
     bit_size: 1
-    enum: Lk2
   - name: roscvld
-    description: ROSC Valid.
+    description: "ROSC Valid.\n\nRaw bit values: false (0) = DisabledOrNotValid: ROSC is not enabled or clock is not valid.; true (1) = EnabledAndValid: ROSC is enabled and output clock is valid."
     bit_offset: 24
     bit_size: 1
-    enum: ScgAlphaEnumNovemberBravo
   - name: roscsel
-    description: ROSC Selected.
+    description: "ROSC Selected.\n\nRaw bit values: false (0) = NotRosc: ROSC is not the system clock source.; true (1) = Rosc: ROSC is the system clock source."
     bit_offset: 25
     bit_size: 1
-    enum: ScgAlphaEnumMikeBravo
   - name: roscerr
-    description: ROSC Clock Error.
+    description: "ROSC Clock Error.\n\nRaw bit values: false (0) = DisabledOrNoError: ROSC Clock Monitor is disabled or has not detected an error.; true (1) = EnabledAndError: ROSC Clock Monitor is enabled and detected an RTC loss of clock error."
     bit_offset: 26
     bit_size: 1
-    enum: ScgAlphaEnumLimaBravo
 fieldset/ScgAlphaFieldsetVictor:
   description: SIRC Control Status Register.
   fields:
   - name: sircsten
-    description: SIRC Stop Enable.
+    description: "SIRC Stop Enable.\n\nRaw bit values: false (0) = Disabled: SIRC is disabled in Deep Sleep mode.; true (1) = Enabled: SIRC is enabled in Deep Sleep mode."
     bit_offset: 1
     bit_size: 1
-    enum: ScgAlphaEnumWhiskeyBravo
   - name: sirc_clk_periph_en
-    description: SIRC Clock to Peripherals Enable.
+    description: "SIRC Clock to Peripherals Enable.\n\nRaw bit values: false (0) = Disabled: SIRC clock to peripherals is disabled.; true (1) = Enabled: SIRC clock to peripherals is enabled."
     bit_offset: 5
     bit_size: 1
-    enum: ScgAlphaEnumOscarBravo
   - name: sirctren
-    description: SIRC 12 MHz Trim Enable (SIRCCFG[RANGE]=1).
+    description: "SIRC 12 MHz Trim Enable (SIRCCFG[RANGE]=1).\n\nRaw bit values: false (0) = Disabled: Disables trimming SIRC to an external clock source.; true (1) = Enabled: Enables trimming SIRC to an external clock source."
     bit_offset: 8
     bit_size: 1
-    enum: ScgAlphaEnumYankeeBravo
   - name: sirctrup
-    description: SIRC Trim Update.
+    description: "SIRC Trim Update.\n\nRaw bit values: false (0) = Disabled: Disables SIRC trimming updates.; true (1) = Enabled: Enables SIRC trimming updates."
     bit_offset: 9
     bit_size: 1
-    enum: ScgAlphaEnumZuluBravo
   - name: trim_lock
-    description: SIRC TRIM LOCK.
+    description: "SIRC TRIM LOCK.\n\nRaw bit values: false (0) = SircNotLocked: SIRC auto trim not locked to target frequency range.; true (1) = SircLocked: SIRC auto trim locked to target frequency range."
     bit_offset: 10
     bit_size: 1
-    enum: ScgAlphaEnumSierraBravo
   - name: coarse_trim_bypass
-    description: Coarse Auto Trim Bypass.
+    description: "Coarse Auto Trim Bypass.\n\nRaw bit values: false (0) = NotBypassed: SIRC coarse auto-trim is not bypassed.; true (1) = Bypassed: SIRC coarse auto-trim is bypassed."
     bit_offset: 11
     bit_size: 1
-    enum: ScgAlphaEnumQuebecBravo
   - name: lk
-    description: Lock Register.
+    description: "Lock Register.\n\nRaw bit values: false (0) = WriteEnabled: Control Status Register can be written.; true (1) = WriteDisabled: Control Status Register cannot be written."
     bit_offset: 23
     bit_size: 1
-    enum: Lk2
   - name: sircvld
-    description: SIRC Valid.
+    description: "SIRC Valid.\n\nRaw bit values: false (0) = DisabledOrNotValid: SIRC is not enabled or clock is not valid.; true (1) = EnabledAndValid: SIRC is enabled and output clock is valid."
     bit_offset: 24
     bit_size: 1
-    enum: ScgAlphaEnumAlphaCharlie
   - name: sircsel
-    description: SIRC Selected.
+    description: "SIRC Selected.\n\nRaw bit values: false (0) = NotSirc: SIRC is not the system clock source.; true (1) = Sirc: SIRC is the system clock source."
     bit_offset: 25
     bit_size: 1
-    enum: ScgAlphaEnumVictorBravo
   - name: sircerr
-    description: SIRC Clock Error.
+    description: "SIRC Clock Error.\n\nRaw bit values: false (0) = ErrorNotDetected: Error not detected with the SIRC trimming.; true (1) = ErrorDetected: Error detected with the SIRC trimming."
     bit_offset: 26
     bit_size: 1
-    enum: ScgAlphaEnumTangoBravo
   - name: sircerr_ie
-    description: SIRC Clock Error Interrupt Enable.
+    description: "SIRC Clock Error Interrupt Enable.\n\nRaw bit values: false (0) = ErrorNotDetected: SIRCERR interrupt is not enabled.; true (1) = ErrorDetected: SIRCERR interrupt is enabled."
     bit_offset: 27
     bit_size: 1
-    enum: ScgAlphaEnumUniformBravo
 fieldset/ScgAlphaFieldsetWhiskey:
   description: SIRC Auto-trimming Status Register.
   fields:
@@ -769,10 +694,9 @@ fieldset/ScgAlphaFieldsetZulu:
   description: SOSC Configuration Register.
   fields:
   - name: erefs
-    description: External Reference Select.
+    description: "External Reference Select.\n\nRaw bit values: false (0) = External: External reference clock selected. LDO can be disabled in this case.; true (1) = Internal: Internal crystal oscillator of OSC selected."
     bit_offset: 2
     bit_size: 1
-    enum: ScgAlphaEnumKiloAlpha
   - name: range
     description: SOSC Range Select.
     bit_offset: 4
@@ -782,126 +706,103 @@ fieldset/ScgAlphaFieldsetAlphaAlpha:
   description: SOSC Control Status Register.
   fields:
   - name: soscen
-    description: SOSC Enable.
+    description: "SOSC Enable.\n\nRaw bit values: false (0) = Disabled: SOSC is disabled.; true (1) = Enabled: SOSC is enabled."
     bit_offset: 0
     bit_size: 1
-    enum: ScgAlphaEnumGolfCharlie
   - name: soscsten
-    description: SOSC Stop Enable.
+    description: "SOSC Stop Enable.\n\nRaw bit values: false (0) = Disabled: SOSC is disabled in Deep Sleep mode.; true (1) = Enabled: SOSC is enabled in Deep Sleep mode only if SOSCEN is set."
     bit_offset: 1
     bit_size: 1
-    enum: ScgAlphaEnumJulietCharlie
   - name: sosccm
-    description: SOSC Clock Monitor Enable.
+    description: "SOSC Clock Monitor Enable.\n\nRaw bit values: false (0) = Disabled: SOSC Clock Monitor is disabled.; true (1) = Enabled: SOSC Clock Monitor is enabled."
     bit_offset: 16
     bit_size: 1
-    enum: ScgAlphaEnumDeltaCharlie
   - name: sosccmre
-    description: SOSC Clock Monitor Reset Enable.
+    description: "SOSC Clock Monitor Reset Enable.\n\nRaw bit values: false (0) = GenerateInterrupt: Clock monitor generates an interrupt when an error is detected.; true (1) = GenerateReset: Clock monitor generates a reset when an error is detected."
     bit_offset: 17
     bit_size: 1
-    enum: Apllcmre2
   - name: lk
-    description: Lock Register.
+    description: "Lock Register.\n\nRaw bit values: false (0) = WriteEnabled: This Control Status Register can be written.; true (1) = WriteDisabled: This Control Status Register cannot be written."
     bit_offset: 23
     bit_size: 1
-    enum: ScgAlphaEnumFoxtrotCharlie
   - name: soscvld
-    description: SOSC Valid.
+    description: "SOSC Valid.\n\nRaw bit values: false (0) = Disabled: SOSC is not enabled or clock is not valid.; true (1) = Enabled: SOSC is enabled and output clock is valid."
     bit_offset: 24
     bit_size: 1
-    enum: ScgAlphaEnumKiloCharlie
   - name: soscsel
-    description: SOSC Selected.
+    description: "SOSC Selected.\n\nRaw bit values: false (0) = NotSosc: SOSC is not the system clock source.; true (1) = Sosc: SOSC is the system clock source."
     bit_offset: 25
     bit_size: 1
-    enum: ScgAlphaEnumIndiaCharlie
   - name: soscerr
-    description: SOSC Clock Error.
+    description: "SOSC Clock Error.\n\nRaw bit values: false (0) = DisabledOrNoError: SOSC Clock Monitor is disabled or has not detected an error.; true (1) = EnabledAndError: SOSC Clock Monitor is enabled and detected an error."
     bit_offset: 26
     bit_size: 1
-    enum: ScgAlphaEnumHotelCharlie
   - name: soscvld_ie
-    description: SOSC Valid Interrupt Enable.
+    description: "SOSC Valid Interrupt Enable.\n\nRaw bit values: false (0) = NotSosc: SOSCVLD interrupt is not enabled.; true (1) = Sosc: SOSCVLD interrupt is enabled."
     bit_offset: 30
     bit_size: 1
-    enum: ScgAlphaEnumLimaCharlie
 fieldset/ScgAlphaFieldsetBravoAlpha:
   description: SPLL Override Register.
   fields:
   - name: spllpwren_ovrd
-    description: SPLL Power Enable Override if SPLL_OVRD_EN=1.
+    description: "SPLL Power Enable Override if SPLL_OVRD_EN=1.\n\nRaw bit values: false (0) = Disabled: SPLL clock is powered off.; true (1) = Enabled: SPLL clock is powered on."
     bit_offset: 0
     bit_size: 1
-    enum: Spllpwren
   - name: spllclken_ovrd
-    description: SPLL Clock Enable Override if SPLL_OVRD_EN=1.
+    description: "SPLL Clock Enable Override if SPLL_OVRD_EN=1.\n\nRaw bit values: false (0) = Disabled: SPLL clock is disabled.; true (1) = Enabled: SPLL clock is enabled."
     bit_offset: 1
     bit_size: 1
-    enum: Spllclken
   - name: spll_ovrd_en
-    description: SPLL Override Enable.
+    description: "SPLL Override Enable.\n\nRaw bit values: false (0) = Disabled: SPLL override is disabled.; true (1) = Enabled: SPLL override is enabled."
     bit_offset: 31
     bit_size: 1
-    enum: ScgAlphaEnumOscarCharlie
 fieldset/ScgAlphaFieldsetCharlieAlpha:
   description: SPLL Control Status Register.
   fields:
   - name: spllpwren
-    description: SPLL Power Enable.
+    description: "SPLL Power Enable.\n\nRaw bit values: false (0) = Disabled: SPLL clock is powered off.; true (1) = Enabled: SPLL clock is powered on."
     bit_offset: 0
     bit_size: 1
-    enum: Spllpwren
   - name: spllclken
-    description: SPLL Clock Enable.
+    description: "SPLL Clock Enable.\n\nRaw bit values: false (0) = Disabled: SPLL clock is disabled.; true (1) = Enabled: SPLL clock is enabled."
     bit_offset: 1
     bit_size: 1
-    enum: Spllclken
   - name: spllsten
-    description: SPLL Stop Enable.
+    description: "SPLL Stop Enable.\n\nRaw bit values: false (0) = DisabledInStop: SPLL is disabled in Deep Sleep mode.; true (1) = EnabledInStop: SPLL is enabled in Deep Sleep mode."
     bit_offset: 2
     bit_size: 1
-    enum: ScgAlphaEnumUniformDelta
   - name: frm_clockstable
-    description: Free running mode clock stable.
+    description: "Free running mode clock stable.\n\nRaw bit values: false (0) = Disabled: Free running mode clockstable is disabled.; true (1) = Enabled: Free running mode clockstable is enabled."
     bit_offset: 3
     bit_size: 1
-    enum: FrmClockstable
   - name: spllcm
-    description: SPLL Clock Monitor.
+    description: "SPLL Clock Monitor.\n\nRaw bit values: false (0) = Disabled: SPLL Clock Monitor is disabled.; true (1) = Enabled: SPLL Clock Monitor is enabled."
     bit_offset: 16
     bit_size: 1
-    enum: ScgAlphaEnumSierraCharlie
   - name: spllcmre
-    description: SPLL Clock Monitor Reset Enable.
+    description: "SPLL Clock Monitor Reset Enable.\n\nRaw bit values: false (0) = GenerateInterrupt: Clock monitor generates an interrupt when an error is detected.; true (1) = GenerateReset: Clock monitor generates a reset when an error is detected."
     bit_offset: 17
     bit_size: 1
-    enum: Apllcmre2
   - name: lk
-    description: Lock Register.
+    description: "Lock Register.\n\nRaw bit values: false (0) = WriteEnabled: Control Status Register can be written.; true (1) = WriteDisabled: Control Status Register cannot be written."
     bit_offset: 23
     bit_size: 1
-    enum: Lk2
   - name: spll_lock
-    description: SPLL LOCK.
+    description: "SPLL LOCK.\n\nRaw bit values: false (0) = DisabledOrNotValid: SPLL is not powered on or not locked.; true (1) = EnabledAndValid: SPLL is locked."
     bit_offset: 24
     bit_size: 1
-    enum: ScgAlphaEnumMikeCharlie
   - name: spllsel
-    description: SPLL Selected.
+    description: "SPLL Selected.\n\nRaw bit values: false (0) = NotSpll: SPLL is not the system clock source.; true (1) = Spll: SPLL is the system clock source."
     bit_offset: 25
     bit_size: 1
-    enum: ScgAlphaEnumJulietDelta
   - name: spllerr
-    description: SPLL Clock Error.
+    description: "SPLL Clock Error.\n\nRaw bit values: false (0) = DisabledOrNoError: SPLL Clock Monitor is disabled or has not detected an error.; true (1) = EnabledAndError: SPLL Clock Monitor is enabled and detected an error."
     bit_offset: 26
     bit_size: 1
-    enum: ScgAlphaEnumDeltaDelta
   - name: spll_lock_ie
-    description: SPLL LOCK Interrupt Enable.
+    description: "SPLL LOCK Interrupt Enable.\n\nRaw bit values: false (0) = NotSpll: SPLL_LOCK interrupt is not enabled.; true (1) = Spll: SPLL_LOCK interrupt is enabled."
     bit_offset: 30
     bit_size: 1
-    enum: ScgAlphaEnumNovemberCharlie
 fieldset/ScgAlphaFieldsetEchoAlpha:
   description: SPLL LOCK Configuration Register.
   fields:
@@ -920,38 +821,32 @@ fieldset/ScgAlphaFieldsetLimaAlpha:
   description: SPLL Status Register.
   fields:
   - name: ndivack
-    description: Predivider (N) ratio change acknowledge.
+    description: "Predivider (N) ratio change acknowledge.\n\nRaw bit values: false (0) = Disabled: The predivider (N) ratio change is not accepted by the analog PLL.; true (1) = Enabled: The predivider (N) ratio change is accepted by the analog PLL."
     bit_offset: 1
     bit_size: 1
-    enum: Ndivack
   - name: mdivack
-    description: Feedback (M) divider ratio change acknowledge.
+    description: "Feedback (M) divider ratio change acknowledge.\n\nRaw bit values: false (0) = Disabled: The feedback (M) ratio change is not accepted by the analog PLL.; true (1) = Enabled: The feedback (M) ratio change is accepted by the analog PLL."
     bit_offset: 2
     bit_size: 1
-    enum: Mdivack
   - name: pdivack
-    description: Postdivider (P) ratio change acknowledge.
+    description: "Postdivider (P) ratio change acknowledge.\n\nRaw bit values: false (0) = Disabled: The postdivider (P) ratio change is not accepted by the analog PLL.; true (1) = Enabled: The postdivider (P) ratio change is accepted by the analog PLL."
     bit_offset: 3
     bit_size: 1
-    enum: Pdivack
   - name: frmdet
-    description: Free running detector (active high).
+    description: "Free running detector (active high).\n\nRaw bit values: false (0) = Disabled: Free running is not detected.; true (1) = Enabled: Free running is detected."
     bit_offset: 4
     bit_size: 1
-    enum: Frmdet
 fieldset/ScgAlphaFieldsetMikeAlpha:
   description: Trim Lock register.
   fields:
   - name: trim_unlock
-    description: TRIM_UNLOCK.
+    description: "TRIM_UNLOCK.\n\nRaw bit values: false (0) = Locked: SCG Trim registers are locked and not writable.; true (1) = NotLocked: SCG Trim registers are unlocked and writable."
     bit_offset: 0
     bit_size: 1
-    enum: ScgAlphaEnumVictorDelta
   - name: ifr_disable
-    description: IFR_DISABLE.
+    description: "IFR_DISABLE.\n\nRaw bit values: false (0) = Enabled: IFR write access to SCG trim registers not disabled. The SCG Trim registers are reprogrammed with the IFR values after any system reset.; true (1) = Disabled: IFR write access to SCG trim registers during system reset is blocked."
     bit_offset: 1
     bit_size: 1
-    enum: ScgAlphaEnumDeltaBravo
   - name: trim_lock_key
     description: TRIM_LOCK_KEY.
     bit_offset: 16
@@ -960,35 +855,29 @@ fieldset/ScgAlphaFieldsetNovemberAlpha:
   description: UPLL Control Status Register.
   fields:
   - name: upllcm
-    description: UPLL Clock Monitor.
+    description: "UPLL Clock Monitor.\n\nRaw bit values: false (0) = Disabled: UPLL Clock Monitor is disabled.; true (1) = Enabled: UPLL Clock Monitor is enabled."
     bit_offset: 16
     bit_size: 1
-    enum: ScgAlphaEnumXrayDelta
   - name: upllcmre
-    description: UPLL Clock Monitor Reset Enable.
+    description: "UPLL Clock Monitor Reset Enable.\n\nRaw bit values: false (0) = GenerateInterrupt: Clock monitor generates an interrupt when an error is detected.; true (1) = GenerateReset: Clock monitor generates a reset when an error is detected."
     bit_offset: 17
     bit_size: 1
-    enum: Apllcmre2
   - name: lk
-    description: Lock Register.
+    description: "Lock Register.\n\nRaw bit values: false (0) = WriteEnabled: Control Status Register can be written.; true (1) = WriteDisabled: Control Status Register cannot be written."
     bit_offset: 23
     bit_size: 1
-    enum: Lk2
   - name: upllvld
-    description: UPLL Valid.
+    description: "UPLL Valid.\n\nRaw bit values: false (0) = DisabledOrNotValid: UPLL is not enabled or clock is not valid.; true (1) = EnabledAndValid: UPLL is enabled and output clock is valid."
     bit_offset: 24
     bit_size: 1
-    enum: ScgAlphaEnumCharlieEcho
   - name: upllsel
-    description: UPLL Selected.
+    description: "UPLL Selected.\n\nRaw bit values: false (0) = NotUsbPll: UPLL is not the system clock source.; true (1) = UsbPll: UPLL is the system clock source."
     bit_offset: 25
     bit_size: 1
-    enum: ScgAlphaEnumBravoEcho
   - name: upllerr
-    description: UPLL Clock Error.
+    description: "UPLL Clock Error.\n\nRaw bit values: false (0) = DisabledOrNoError: UPLL Clock Monitor is disabled or has not detected an error.; true (1) = EnabledAndError: UPLL Clock Monitor is enabled and detected an error."
     bit_offset: 26
     bit_size: 1
-    enum: ScgAlphaEnumAlphaEcho
 fieldset/ScgAlphaFieldsetOscarAlpha:
   description: Version ID Register.
   fields:
@@ -996,141 +885,6 @@ fieldset/ScgAlphaFieldsetOscarAlpha:
     description: SCG Version Number.
     bit_offset: 0
     bit_size: 32
-enum/ScgAlphaEnumAlpha:
-  bit_size: 1
-  variants:
-  - name: DisabledOrNotValid
-    description: APLL is not powered on or not locked.
-    value: 0
-  - name: EnabledAndValid
-    description: APLL is locked.
-    value: 1
-enum/ScgAlphaEnumBravo:
-  bit_size: 1
-  variants:
-  - name: Apll
-    description: APLL_LOCK interrupt is enabled.
-    value: 1
-  - name: NotApll
-    description: APLL_LOCK interrupt is not enabled.
-    value: 0
-enum/ScgAlphaEnumCharlie:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: APLL override is disabled.
-    value: 0
-  - name: Enabled
-    description: APLL override is enabled.
-    value: 1
-enum/Apllclken:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: APLL clock is disabled.
-    value: 0
-  - name: Enabled
-    description: APLL clock is enabled.
-    value: 1
-enum/ScgAlphaEnumFoxtrot:
-  bit_size: 1
-  variants:
-  - name: Nopres
-    description: APLL clock source is not present.
-    value: 0
-  - name: Pres
-    description: APLL clock source is present.
-    value: 1
-enum/ScgAlphaEnumGolf:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: APLL Clock Monitor is disabled.
-    value: 0
-  - name: Enabled
-    description: APLL Clock Monitor is enabled.
-    value: 1
-enum/Apllcmre2:
-  bit_size: 1
-  variants:
-  - name: GenerateInterrupt
-    description: Clock monitor generates an interrupt when an error is detected.
-    value: 0
-  - name: GenerateReset
-    description: Clock monitor generates a reset when an error is detected.
-    value: 1
-enum/FrmClockstable:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Free running mode clockstable is disabled.
-    value: 0
-  - name: Enabled
-    description: Free running mode clockstable is enabled.
-    value: 1
-enum/Lk2:
-  bit_size: 1
-  variants:
-  - name: WriteDisabled
-    description: Control Status Register cannot be written.
-    value: 1
-  - name: WriteEnabled
-    description: Control Status Register can be written.
-    value: 0
-enum/Banddirect:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: The bandwidth is changed synchronously with the feedback-divider.
-    value: 0
-  - name: Enabled
-    description: Modifies the bandwidth of the PLL directly.
-    value: 1
-enum/Bypasspostdiv2:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Use the postdivider.
-    value: 0
-  - name: Enabled
-    description: Bypass of the postdivider.
-    value: 1
-enum/Bypasspostdiv:
-  bit_size: 1
-  variants:
-  - name: Bypassed
-    description: Bypass of the divide-by-2 divider in the postdivider.
-    value: 1
-  - name: NotBypassed
-    description: Use the divide-by-2 divider in the postdivider.
-    value: 0
-enum/Bypassprediv:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Use the predivider.
-    value: 0
-  - name: Enabled
-    description: Bypass of the predivider.
-    value: 1
-enum/Frm:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Free running mode disabled.
-    value: 0
-  - name: Enabled
-    description: Free running mode enabled.
-    value: 1
-enum/Limupoff:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Application set to non-Spectrum and Fractional applications.
-    value: 0
-  - name: Enabled
-    description: Application set to Spectrum and Fractional applications.
-    value: 1
 enum/Source2:
   bit_size: 2
   variants:
@@ -1143,69 +897,6 @@ enum/Source2:
   - name: Sosc
     description: SOSC.
     value: 0
-enum/ScgAlphaEnumRomeo:
-  bit_size: 1
-  variants:
-  - name: DisabledOrNoError
-    description: APLL Clock Monitor is disabled or has not detected an error.
-    value: 0
-  - name: EnabledAndError
-    description: APLL Clock Monitor is enabled and detected an error.
-    value: 1
-enum/Mreq:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Feedback ratio change is not requested.
-    value: 0
-  - name: Enabled
-    description: Feedback ratio change is requested.
-    value: 1
-enum/Nreq:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Predivider ratio change is not requested.
-    value: 0
-  - name: Enabled
-    description: Predivider ratio change is requested.
-    value: 1
-enum/Preq:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Postdivider ratio change is not requested.
-    value: 0
-  - name: Enabled
-    description: Postdivider ratio change is requested.
-    value: 1
-enum/Apllpwren:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: APLL clock is powered off.
-    value: 0
-  - name: Enabled
-    description: APLL clock is powered on.
-    value: 1
-enum/ScgAlphaEnumXray:
-  bit_size: 1
-  variants:
-  - name: Apll
-    description: APLL is the system clock source.
-    value: 1
-  - name: NotApll
-    description: APLL is not the system clock source.
-    value: 0
-enum/Dither:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Dither is not enabled.
-    value: 0
-  - name: Enabled
-    description: Dither is enabled.
-    value: 1
 enum/Mc:
   bit_size: 2
   variants:
@@ -1215,177 +906,6 @@ enum/Mc:
   - name: NoComp
     description: MC[1:0] no compensation.
     value: 0
-enum/SsMdivReq:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: SS_MDIV change is not requested.
-    value: 0
-  - name: Enabled
-    description: SS_MDIV change is requested.
-    value: 1
-enum/Frmdet:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Free running is not detected.
-    value: 0
-  - name: Enabled
-    description: Free running is detected.
-    value: 1
-enum/Ndivack:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: The predivider (N) ratio change is not accepted by the analog PLL.
-    value: 0
-  - name: Enabled
-    description: The predivider (N) ratio change is accepted by the analog PLL.
-    value: 1
-enum/Pdivack:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: The postdivider (P) ratio change is not accepted by the analog PLL.
-    value: 0
-  - name: Enabled
-    description: The postdivider (P) ratio change is accepted by the analog PLL.
-    value: 1
-enum/ScgAlphaEnumIndiaAlpha:
-  bit_size: 1
-  variants:
-  - name: DisabledInStop
-    description: APLL is disabled in Deep Sleep mode.
-    value: 0
-  - name: EnabledInStop
-    description: APLL is enabled in Deep Sleep mode.
-    value: 1
-enum/ScgAlphaEnumKiloAlpha:
-  bit_size: 1
-  variants:
-  - name: External
-    description: External reference clock selected. LDO can be disabled in this case.
-    value: 0
-  - name: Internal
-    description: Internal crystal oscillator of OSC selected.
-    value: 1
-enum/ScgAlphaEnumLimaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: FIRC 144 MHz to peripherals is disabled.
-    value: 0
-  - name: Enabled
-    description: FIRC 144 MHz to peripherals is enabled.
-    value: 1
-enum/ScgAlphaEnumMikeAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: FIRC 48 MHz to peripherals is disabled.
-    value: 0
-  - name: Enabled
-    description: FIRC 48 MHz to peripherals is enabled.
-    value: 1
-enum/ScgAlphaEnumNovemberAlpha:
-  bit_size: 1
-  variants:
-  - name: EnabledAndValid
-    description: FIRC is enabled and output clock is accurate. The clock is accurate after 4096 clock cycles of 144 MHz (RANGE=1) or 1365 clock cycles of 48 MHz(RANGE=0) from the FIRC analog.
-    value: 1
-  - name: NotEnabledOrNotValid
-    description: FIRC is not enabled or clock is not accurate.
-    value: 0
-enum/ScgAlphaEnumOscarAlpha:
-  bit_size: 1
-  variants:
-  - name: Fircaccnot
-    description: FIRCACC interrupt is not enabled.
-    value: 0
-  - name: Fircaccyes
-    description: FIRCACC interrupt is enabled.
-    value: 1
-enum/ScgAlphaEnumPapaAlpha:
-  bit_size: 1
-  variants:
-  - name: Firc144mhz
-    description: 144 MHz FIRC clock selected.
-    value: 1
-  - name: Firc48mhz
-    description: 48 MHz FIRC clock selected.
-    value: 0
-enum/ScgAlphaEnumQuebecAlpha:
-  bit_size: 1
-  variants:
-  - name: Nopres
-    description: FIRC clock source is not present.
-    value: 0
-  - name: Pres
-    description: FIRC clock source is present.
-    value: 1
-enum/ScgAlphaEnumRomeoAlpha:
-  bit_size: 1
-  variants:
-  - name: Bypassed
-    description: FIRC coarse auto trim is bypassed.
-    value: 1
-  - name: NotBypassed
-    description: FIRC coarse auto trim is not bypassed.
-    value: 0
-enum/ScgAlphaEnumTangoAlpha:
-  bit_size: 1
-  variants:
-  - name: FircLocked
-    description: FIRC auto trim locked to target frequency range.
-    value: 1
-  - name: FircNotLocked
-    description: FIRC auto trim not locked to target frequency range.
-    value: 0
-enum/ScgAlphaEnumUniformAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: FIRC is disabled.
-    value: 0
-  - name: Enabled
-    description: FIRC is enabled.
-    value: 1
-enum/ScgAlphaEnumVictorAlpha:
-  bit_size: 1
-  variants:
-  - name: ErrorDetected
-    description: Error detected with the FIRC trimming.
-    value: 1
-  - name: ErrorNotDetected
-    description: Error not detected with the FIRC trimming.
-    value: 0
-enum/ScgAlphaEnumWhiskeyAlpha:
-  bit_size: 1
-  variants:
-  - name: ErrorDetected
-    description: FIRCERR interrupt is enabled.
-    value: 1
-  - name: ErrorNotDetected
-    description: FIRCERR interrupt is not enabled.
-    value: 0
-enum/ScgAlphaEnumXrayAlpha:
-  bit_size: 1
-  variants:
-  - name: Firc
-    description: FIRC is the system clock source.
-    value: 1
-  - name: NotFirc
-    description: FIRC is not the system clock source.
-    value: 0
-enum/ScgAlphaEnumYankeeAlpha:
-  bit_size: 1
-  variants:
-  - name: DisabledInStopModes
-    description: FIRC is disabled in Deep Sleep mode.
-    value: 0
-  - name: EnabledInStopModes
-    description: FIRC is enabled in Deep Sleep mode.
-    value: 1
 enum/ScgAlphaEnumZuluAlpha:
   bit_size: 2
   variants:
@@ -1398,60 +918,6 @@ enum/ScgAlphaEnumZuluAlpha:
   - name: Usb0
     description: USB0 Start of Frame (1 kHz). This option does not use TRIMDIV.
     value: 0
-enum/ScgAlphaEnumAlphaBravo:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables trimming FIRC to an external clock source.
-    value: 0
-  - name: Enabled
-    description: Enables trimming FIRC to an external clock source.
-    value: 1
-enum/ScgAlphaEnumBravoBravo:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables FIRC trimming updates.
-    value: 0
-  - name: Enabled
-    description: Enables FIRC trimming updates.
-    value: 1
-enum/ScgAlphaEnumCharlieBravo:
-  bit_size: 1
-  variants:
-  - name: EnabledAndValid
-    description: FIRC is enabled and output clock is valid. The clock is valid after there is an output clock from the FIRC analog.
-    value: 1
-  - name: NotEnabledOrNotValid
-    description: FIRC is not enabled or clock is not valid.
-    value: 0
-enum/ScgAlphaEnumDeltaBravo:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: IFR write access to SCG trim registers during system reset is blocked.
-    value: 1
-  - name: Enabled
-    description: IFR write access to SCG trim registers not disabled. The SCG Trim registers are reprogrammed with the IFR values after any system reset.
-    value: 0
-enum/ScgAlphaEnumEchoBravo:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: LDO is not bypassed.
-    value: 0
-  - name: Enabled
-    description: LDO is bypassed.
-    value: 1
-enum/ScgAlphaEnumFoxtrotBravo:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: LDO is disabled.
-    value: 0
-  - name: Enabled
-    description: LDO is enabled.
-    value: 1
 enum/Scs2:
   bit_size: 4
   variants:
@@ -1476,123 +942,6 @@ enum/Scs2:
   - name: Upll
     description: UPLL.
     value: 7
-enum/ScgAlphaEnumHotelBravo:
-  bit_size: 1
-  variants:
-  - name: Nopres
-    description: ROSC clock source is not present.
-    value: 0
-  - name: Pres
-    description: ROSC clock source is present.
-    value: 1
-enum/ScgAlphaEnumIndiaBravo:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: ROSC clock monitor is disabled.
-    value: 0
-  - name: Enabled
-    description: ROSC clock monitor is enabled.
-    value: 1
-enum/ScgAlphaEnumLimaBravo:
-  bit_size: 1
-  variants:
-  - name: DisabledOrNoError
-    description: ROSC Clock Monitor is disabled or has not detected an error.
-    value: 0
-  - name: EnabledAndError
-    description: ROSC Clock Monitor is enabled and detected an RTC loss of clock error.
-    value: 1
-enum/ScgAlphaEnumMikeBravo:
-  bit_size: 1
-  variants:
-  - name: NotRosc
-    description: ROSC is not the system clock source.
-    value: 0
-  - name: Rosc
-    description: ROSC is the system clock source.
-    value: 1
-enum/ScgAlphaEnumNovemberBravo:
-  bit_size: 1
-  variants:
-  - name: DisabledOrNotValid
-    description: ROSC is not enabled or clock is not valid.
-    value: 0
-  - name: EnabledAndValid
-    description: ROSC is enabled and output clock is valid.
-    value: 1
-enum/ScgAlphaEnumOscarBravo:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: SIRC clock to peripherals is disabled.
-    value: 0
-  - name: Enabled
-    description: SIRC clock to peripherals is enabled.
-    value: 1
-enum/ScgAlphaEnumPapaBravo:
-  bit_size: 1
-  variants:
-  - name: Nopres
-    description: SIRC clock source is not present.
-    value: 0
-  - name: Pres
-    description: SIRC clock source is present.
-    value: 1
-enum/ScgAlphaEnumQuebecBravo:
-  bit_size: 1
-  variants:
-  - name: Bypassed
-    description: SIRC coarse auto-trim is bypassed.
-    value: 1
-  - name: NotBypassed
-    description: SIRC coarse auto-trim is not bypassed.
-    value: 0
-enum/ScgAlphaEnumSierraBravo:
-  bit_size: 1
-  variants:
-  - name: SircLocked
-    description: SIRC auto trim locked to target frequency range.
-    value: 1
-  - name: SircNotLocked
-    description: SIRC auto trim not locked to target frequency range.
-    value: 0
-enum/ScgAlphaEnumTangoBravo:
-  bit_size: 1
-  variants:
-  - name: ErrorDetected
-    description: Error detected with the SIRC trimming.
-    value: 1
-  - name: ErrorNotDetected
-    description: Error not detected with the SIRC trimming.
-    value: 0
-enum/ScgAlphaEnumUniformBravo:
-  bit_size: 1
-  variants:
-  - name: ErrorDetected
-    description: SIRCERR interrupt is enabled.
-    value: 1
-  - name: ErrorNotDetected
-    description: SIRCERR interrupt is not enabled.
-    value: 0
-enum/ScgAlphaEnumVictorBravo:
-  bit_size: 1
-  variants:
-  - name: NotSirc
-    description: SIRC is not the system clock source.
-    value: 0
-  - name: Sirc
-    description: SIRC is the system clock source.
-    value: 1
-enum/ScgAlphaEnumWhiskeyBravo:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: SIRC is disabled in Deep Sleep mode.
-    value: 0
-  - name: Enabled
-    description: SIRC is enabled in Deep Sleep mode.
-    value: 1
 enum/ScgAlphaEnumXrayBravo:
   bit_size: 2
   variants:
@@ -1602,33 +951,6 @@ enum/ScgAlphaEnumXrayBravo:
   - name: Sosc
     description: SOSC.
     value: 2
-enum/ScgAlphaEnumYankeeBravo:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables trimming SIRC to an external clock source.
-    value: 0
-  - name: Enabled
-    description: Enables trimming SIRC to an external clock source.
-    value: 1
-enum/ScgAlphaEnumZuluBravo:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables SIRC trimming updates.
-    value: 0
-  - name: Enabled
-    description: Enables SIRC trimming updates.
-    value: 1
-enum/ScgAlphaEnumAlphaCharlie:
-  bit_size: 1
-  variants:
-  - name: DisabledOrNotValid
-    description: SIRC is not enabled or clock is not valid.
-    value: 0
-  - name: EnabledAndValid
-    description: SIRC is enabled and output clock is valid.
-    value: 1
 enum/ScgAlphaEnumBravoCharlie:
   bit_size: 2
   variants:
@@ -1644,276 +966,6 @@ enum/ScgAlphaEnumBravoCharlie:
   - name: MediumFreq
     description: Frequency range select of 30-50 MHz.
     value: 2
-enum/ScgAlphaEnumCharlieCharlie:
-  bit_size: 1
-  variants:
-  - name: Nopres
-    description: SOSC clock source is not present.
-    value: 0
-  - name: Pres
-    description: SOSC clock source is present.
-    value: 1
-enum/ScgAlphaEnumDeltaCharlie:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: SOSC Clock Monitor is disabled.
-    value: 0
-  - name: Enabled
-    description: SOSC Clock Monitor is enabled.
-    value: 1
-enum/ScgAlphaEnumFoxtrotCharlie:
-  bit_size: 1
-  variants:
-  - name: WriteDisabled
-    description: This Control Status Register cannot be written.
-    value: 1
-  - name: WriteEnabled
-    description: This Control Status Register can be written.
-    value: 0
-enum/ScgAlphaEnumGolfCharlie:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: SOSC is disabled.
-    value: 0
-  - name: Enabled
-    description: SOSC is enabled.
-    value: 1
-enum/ScgAlphaEnumHotelCharlie:
-  bit_size: 1
-  variants:
-  - name: DisabledOrNoError
-    description: SOSC Clock Monitor is disabled or has not detected an error.
-    value: 0
-  - name: EnabledAndError
-    description: SOSC Clock Monitor is enabled and detected an error.
-    value: 1
-enum/ScgAlphaEnumIndiaCharlie:
-  bit_size: 1
-  variants:
-  - name: NotSosc
-    description: SOSC is not the system clock source.
-    value: 0
-  - name: Sosc
-    description: SOSC is the system clock source.
-    value: 1
-enum/ScgAlphaEnumJulietCharlie:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: SOSC is disabled in Deep Sleep mode.
-    value: 0
-  - name: Enabled
-    description: SOSC is enabled in Deep Sleep mode only if SOSCEN is set.
-    value: 1
-enum/ScgAlphaEnumKiloCharlie:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: SOSC is not enabled or clock is not valid.
-    value: 0
-  - name: Enabled
-    description: SOSC is enabled and output clock is valid.
-    value: 1
-enum/ScgAlphaEnumLimaCharlie:
-  bit_size: 1
-  variants:
-  - name: NotSosc
-    description: SOSCVLD interrupt is not enabled.
-    value: 0
-  - name: Sosc
-    description: SOSCVLD interrupt is enabled.
-    value: 1
-enum/ScgAlphaEnumMikeCharlie:
-  bit_size: 1
-  variants:
-  - name: DisabledOrNotValid
-    description: SPLL is not powered on or not locked.
-    value: 0
-  - name: EnabledAndValid
-    description: SPLL is locked.
-    value: 1
-enum/ScgAlphaEnumNovemberCharlie:
-  bit_size: 1
-  variants:
-  - name: NotSpll
-    description: SPLL_LOCK interrupt is not enabled.
-    value: 0
-  - name: Spll
-    description: SPLL_LOCK interrupt is enabled.
-    value: 1
-enum/ScgAlphaEnumOscarCharlie:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: SPLL override is disabled.
-    value: 0
-  - name: Enabled
-    description: SPLL override is enabled.
-    value: 1
-enum/Spllclken:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: SPLL clock is disabled.
-    value: 0
-  - name: Enabled
-    description: SPLL clock is enabled.
-    value: 1
-enum/ScgAlphaEnumRomeoCharlie:
-  bit_size: 1
-  variants:
-  - name: Nopres
-    description: SPLL clock source is not present.
-    value: 0
-  - name: Pres
-    description: SPLL clock source is present.
-    value: 1
-enum/ScgAlphaEnumSierraCharlie:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: SPLL Clock Monitor is disabled.
-    value: 0
-  - name: Enabled
-    description: SPLL Clock Monitor is enabled.
-    value: 1
-enum/ScgAlphaEnumDeltaDelta:
-  bit_size: 1
-  variants:
-  - name: DisabledOrNoError
-    description: SPLL Clock Monitor is disabled or has not detected an error.
-    value: 0
-  - name: EnabledAndError
-    description: SPLL Clock Monitor is enabled and detected an error.
-    value: 1
-enum/Spllpwren:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: SPLL clock is powered off.
-    value: 0
-  - name: Enabled
-    description: SPLL clock is powered on.
-    value: 1
-enum/ScgAlphaEnumJulietDelta:
-  bit_size: 1
-  variants:
-  - name: NotSpll
-    description: SPLL is not the system clock source.
-    value: 0
-  - name: Spll
-    description: SPLL is the system clock source.
-    value: 1
-enum/SelSsMdiv:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Feedback divider ratio is MDIV[15:0].
-    value: 0
-  - name: Enabled
-    description: Feedback divider ratio is SS_MDIV[32:0].
-    value: 1
-enum/SsPd:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: SSCG is powered on.
-    value: 0
-  - name: Enabled
-    description: SSCG is powered off.
-    value: 1
-enum/SsMdivAck:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: The SS_MDIV, MF, MR, and MC ratio change is not accepted by the analog PLL.
-    value: 0
-  - name: Enabled
-    description: The SS_MDIV, MF, MR, and MC ratio change is accepted by the analog PLL.
-    value: 1
-enum/Mdivack:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: The feedback (M) ratio change is not accepted by the analog PLL.
-    value: 0
-  - name: Enabled
-    description: The feedback (M) ratio change is accepted by the analog PLL.
-    value: 1
-enum/ScgAlphaEnumUniformDelta:
-  bit_size: 1
-  variants:
-  - name: DisabledInStop
-    description: SPLL is disabled in Deep Sleep mode.
-    value: 0
-  - name: EnabledInStop
-    description: SPLL is enabled in Deep Sleep mode.
-    value: 1
-enum/ScgAlphaEnumVictorDelta:
-  bit_size: 1
-  variants:
-  - name: Locked
-    description: SCG Trim registers are locked and not writable.
-    value: 0
-  - name: NotLocked
-    description: SCG Trim registers are unlocked and writable.
-    value: 1
-enum/ScgAlphaEnumWhiskeyDelta:
-  bit_size: 1
-  variants:
-  - name: Nopres
-    description: UPLL clock source is not present.
-    value: 0
-  - name: Pres
-    description: UPLL clock source is present.
-    value: 1
-enum/ScgAlphaEnumXrayDelta:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: UPLL Clock Monitor is disabled.
-    value: 0
-  - name: Enabled
-    description: UPLL Clock Monitor is enabled.
-    value: 1
-enum/ScgAlphaEnumAlphaEcho:
-  bit_size: 1
-  variants:
-  - name: DisabledOrNoError
-    description: UPLL Clock Monitor is disabled or has not detected an error.
-    value: 0
-  - name: EnabledAndError
-    description: UPLL Clock Monitor is enabled and detected an error.
-    value: 1
-enum/ScgAlphaEnumBravoEcho:
-  bit_size: 1
-  variants:
-  - name: NotUsbPll
-    description: UPLL is not the system clock source.
-    value: 0
-  - name: UsbPll
-    description: UPLL is the system clock source.
-    value: 1
-enum/ScgAlphaEnumCharlieEcho:
-  bit_size: 1
-  variants:
-  - name: DisabledOrNotValid
-    description: UPLL is not enabled or clock is not valid.
-    value: 0
-  - name: EnabledAndValid
-    description: UPLL is enabled and output clock is valid.
-    value: 1
-enum/ScgAlphaEnumDeltaEcho:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: LDO output VOUT is not OK.
-    value: 0
-  - name: Enabled
-    description: LDO output VOUT is OK.
-    value: 1
 enum/ScgAlphaEnumEchoEcho:
   bit_size: 3
   variants:

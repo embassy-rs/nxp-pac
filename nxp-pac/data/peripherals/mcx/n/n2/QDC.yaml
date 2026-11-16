@@ -156,168 +156,137 @@ fieldset/Ctrl3:
   bit_size: 16
   fields:
   - name: cmpie
-    description: Compare Interrupt Enable.
+    description: "Compare Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Cmpie
   - name: cmpirq
-    description: Compare Interrupt Request.
+    description: "Compare Interrupt Request.\n\nRaw bit values: false (0) = Nomat: No match has occurred.; true (1) = Mat: COMP match has occurred."
     bit_offset: 1
     bit_size: 1
-    enum: Cmpirq
   - name: wde
-    description: Watchdog Enable.
+    description: "Watchdog Enable.\n\nRaw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: Cmpie
   - name: die
-    description: Watchdog Timeout Interrupt Enable.
+    description: "Watchdog Timeout Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 3
     bit_size: 1
-    enum: Cmpie
   - name: dirq
-    description: Watchdog Timeout Interrupt Request.
+    description: "Watchdog Timeout Interrupt Request.\n\nRaw bit values: false (0) = Noint: Not occurred.; true (1) = Int: Occurred."
     bit_offset: 4
     bit_size: 1
-    enum: Dirq
   - name: xne
-    description: Select Positive and Negative Edge of INDEX Pulse.
+    description: "Select Positive and Negative Edge of INDEX Pulse.\n\nRaw bit values: false (0) = Xne0: Use positive edge.; true (1) = Xne1: Use negative edge."
     bit_offset: 5
     bit_size: 1
-    enum: Xne2
   - name: xip
-    description: INDEX Triggered Initialization of Position Counters UPOS and LPOS.
+    description: "INDEX Triggered Initialization of Position Counters UPOS and LPOS.\n\nRaw bit values: false (0) = Noint: Does not initialize.; true (1) = Int: Initializes."
     bit_offset: 6
     bit_size: 1
-    enum: Xip2
   - name: xie
-    description: INDEX Pulse Interrupt Enable.
+    description: "INDEX Pulse Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 7
     bit_size: 1
-    enum: Cmpie
   - name: xirq
-    description: INDEX Pulse Interrupt Request.
+    description: "INDEX Pulse Interrupt Request.\n\nRaw bit values: false (0) = Noind: Not occurred.; true (1) = Index: Occurred."
     bit_offset: 8
     bit_size: 1
-    enum: Xirq2
   - name: ph1
-    description: Enable Signal Phase Count Mode.
+    description: "Enable Signal Phase Count Mode.\n\nRaw bit values: false (0) = Use: Uses the standard quadrature decoder, where PHASEA and PHASEB represent a two-phase quadrature signal.; true (1) = Bypass: Bypasses the quadrature decoder. A positive transition of the PHASEA input generates a count signal. PHASEB input and CTRL[REV] controls the counter direction. If the value of CTRL[REV] and PHASEB are identical; then count is up. If the value of CTRL[REV] and PHASEB is different, then count is down."
     bit_offset: 9
     bit_size: 1
-    enum: Ph
   - name: rev
-    description: Enable Reverse Direction Counting.
+    description: "Enable Reverse Direction Counting.\n\nRaw bit values: false (0) = Normal: Counts normally.; true (1) = Reverse: Counts in the reverse direction."
     bit_offset: 10
     bit_size: 1
-    enum: Rev2
   - name: swip
-    description: Software-Triggered Initialization of Position Counters UPOS and LPOS.
+    description: "Software-Triggered Initialization of Position Counters UPOS and LPOS.\n\nRaw bit values: false (0) = Noaction: No action.; true (1) = Init: Initialize position counter."
     bit_offset: 11
     bit_size: 1
-    enum: Swip2
   - name: hne
-    description: Use Negative Edge of HOME Input.
+    description: "Use Negative Edge of HOME Input.\n\nRaw bit values: false (0) = Pos: Use positive-going edge-to-trigger initialization of position counters UPOS and LPOS.; true (1) = Neg: Use negative-going edge-to-trigger initialization of position counters UPOS and LPOS."
     bit_offset: 12
     bit_size: 1
-    enum: Hne2
   - name: hip
-    description: Enable HOME to Initialize Position Counters UPOS and LPOS.
+    description: "Enable HOME to Initialize Position Counters UPOS and LPOS.\n\nRaw bit values: false (0) = Noaction: No action.; true (1) = Home: HOME signal initializes the position counter."
     bit_offset: 13
     bit_size: 1
-    enum: Hip2
   - name: hie
-    description: HOME Interrupt Enable.
+    description: "HOME Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 14
     bit_size: 1
-    enum: Cmpie
   - name: hirq
-    description: HOME Signal Transition Interrupt Request.
+    description: "HOME Signal Transition Interrupt Request.\n\nRaw bit values: false (0) = Notrans: Not occurred.; true (1) = Transi: Occurred."
     bit_offset: 15
     bit_size: 1
-    enum: Hirq2
 fieldset/QdcAlphaFieldsetBravo:
   description: Control 2.
   bit_size: 16
   fields:
   - name: updhld
-    description: Update Hold Registers.
+    description: "Update Hold Registers.\n\nRaw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Cmpie
   - name: updpos
-    description: Update Position Registers.
+    description: "Update Position Registers.\n\nRaw bit values: false (0) = Noaction: No action.; true (1) = Clear: Clear."
     bit_offset: 1
     bit_size: 1
-    enum: Updpos
   - name: mod_
-    description: Enable Modulo Counting.
+    description: "Enable Modulo Counting.\n\nRaw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: Cmpie
   - name: dir
-    description: Count Direction Flag.
+    description: "Count Direction Flag.\n\nRaw bit values: false (0) = Down: Down direction.; true (1) = Up: Up direction."
     bit_offset: 3
     bit_size: 1
-    enum: Dir2
   - name: ruie
-    description: Roll-under Interrupt Enable.
+    description: "Roll-under Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 4
     bit_size: 1
-    enum: Cmpie
   - name: ruirq
-    description: Roll-under Interrupt Request.
+    description: "Roll-under Interrupt Request.\n\nRaw bit values: false (0) = Noroll: No roll-under has occurred.; true (1) = Roll: Roll-under has occurred."
     bit_offset: 5
     bit_size: 1
-    enum: Ruirq2
   - name: roie
-    description: Roll-over Interrupt Enable.
+    description: "Roll-over Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 6
     bit_size: 1
-    enum: Cmpie
   - name: roirq
-    description: Roll-over Interrupt Request.
+    description: "Roll-over Interrupt Request.\n\nRaw bit values: false (0) = Noroll: Did not occur.; true (1) = Roll: Occurred."
     bit_offset: 7
     bit_size: 1
-    enum: Roirq2
   - name: revmod
-    description: Revolution Counter Modulus Enable.
+    description: "Revolution Counter Modulus Enable.\n\nRaw bit values: false (0) = Index: Use INDEX pulse.; true (1) = Count: Use modulus counting roll-over or roll-under."
     bit_offset: 8
     bit_size: 1
-    enum: Revmod2
   - name: outctl
-    description: Output Control.
+    description: "Output Control.\n\nRaw bit values: false (0) = Compare: POSMATCH pulses when a match occurs between the position counters (POS) and the corresponding compare value (COMP ).; true (1) = Read: POSMATCH pulses when the UPOS, LPOS, REV, or POSD registers are read."
     bit_offset: 9
     bit_size: 1
-    enum: Outctl2
   - name: sabie
-    description: Simultaneous PHASEA and PHASEB Change Interrupt Enable.
+    description: "Simultaneous PHASEA and PHASEB Change Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 10
     bit_size: 1
-    enum: Cmpie
   - name: sabirq
-    description: Simultaneous PHASEA and PHASEB Change Interrupt Request.
+    description: "Simultaneous PHASEA and PHASEB Change Interrupt Request.\n\nRaw bit values: false (0) = Nosimul: No simultaneous change has occurred.; true (1) = Simul: A simultaneous change has occurred."
     bit_offset: 11
     bit_size: 1
-    enum: Sabirq2
   - name: initpos
-    description: Initialize Position Registers.
+    description: "Initialize Position Registers.\n\nRaw bit values: false (0) = Noinit: Don't initialize position counter.; true (1) = Init: Initialize position counter."
     bit_offset: 12
     bit_size: 1
-    enum: Initpos2
   - name: emip
-    description: Enables/disables the position counter to be initialized by Index Event Edge Mark.
+    description: "Enables/disables the position counter to be initialized by Index Event Edge Mark.\n\nRaw bit values: false (0) = Emip0: Disable.; true (1) = Emip1: Enable."
     bit_offset: 13
     bit_size: 1
-    enum: QdcAlphaEnumFoxtrot
 fieldset/Ctrl4:
   description: Control 3.
   bit_size: 16
   fields:
   - name: pmen
-    description: Period Measurement Function Enable.
+    description: "Period Measurement Function Enable.\n\nRaw bit values: false (0) = Notused: Not used.; true (1) = Used: Used."
     bit_offset: 0
     bit_size: 1
-    enum: Pmen2
   - name: prsc
     description: Prescaler.
     bit_offset: 4
@@ -499,20 +468,17 @@ fieldset/Tst2:
     bit_offset: 8
     bit_size: 5
   - name: qdn
-    description: Quadrature Decoder Negative Signal.
+    description: "Quadrature Decoder Negative Signal.\n\nRaw bit values: false (0) = Positive: Positive quadrature decoder signal.; true (1) = Negative: Negative quadrature decoder signal."
     bit_offset: 13
     bit_size: 1
-    enum: Qdn2
   - name: tce
-    description: Test Counter Enable.
+    description: "Test Counter Enable.\n\nRaw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 14
     bit_size: 1
-    enum: Cmpie
   - name: ten
-    description: Test Mode Enable.
+    description: "Test Mode Enable.\n\nRaw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 15
     bit_size: 1
-    enum: Cmpie
 fieldset/Wtr2:
   description: Watchdog Timeout.
   bit_size: 16
@@ -521,141 +487,6 @@ fieldset/Wtr2:
     description: WDOG.
     bit_offset: 0
     bit_size: 16
-enum/Cmpirq:
-  bit_size: 1
-  variants:
-  - name: Mat
-    description: COMP match has occurred.
-    value: 1
-  - name: Nomat
-    description: No match has occurred.
-    value: 0
-enum/Dir2:
-  bit_size: 1
-  variants:
-  - name: Down
-    description: Down direction.
-    value: 0
-  - name: Up
-    description: Up direction.
-    value: 1
-enum/Dirq:
-  bit_size: 1
-  variants:
-  - name: Int
-    description: Occurred.
-    value: 1
-  - name: Noint
-    description: Not occurred.
-    value: 0
-enum/QdcAlphaEnumFoxtrot:
-  bit_size: 1
-  variants:
-  - name: Emip0
-    description: Disable.
-    value: 0
-  - name: Emip1
-    description: Enable.
-    value: 1
-enum/Cmpie:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disable.
-    value: 0
-  - name: Enabled
-    description: Enable.
-    value: 1
-enum/Hirq2:
-  bit_size: 1
-  variants:
-  - name: Notrans
-    description: Not occurred.
-    value: 0
-  - name: Transi
-    description: Occurred.
-    value: 1
-enum/Initpos2:
-  bit_size: 1
-  variants:
-  - name: Init
-    description: Initialize position counter.
-    value: 1
-  - name: Noinit
-    description: Don't initialize position counter.
-    value: 0
-enum/Outctl2:
-  bit_size: 1
-  variants:
-  - name: Compare
-    description: POSMATCH pulses when a match occurs between the position counters (POS) and the corresponding compare value (COMP ).
-    value: 0
-  - name: Read
-    description: POSMATCH pulses when the UPOS, LPOS, REV, or POSD registers are read.
-    value: 1
-enum/Pmen2:
-  bit_size: 1
-  variants:
-  - name: Notused
-    description: Not used.
-    value: 0
-  - name: Used
-    description: Used.
-    value: 1
-enum/Qdn2:
-  bit_size: 1
-  variants:
-  - name: Negative
-    description: Negative quadrature decoder signal.
-    value: 1
-  - name: Positive
-    description: Positive quadrature decoder signal.
-    value: 0
-enum/Revmod2:
-  bit_size: 1
-  variants:
-  - name: Count
-    description: Use modulus counting roll-over or roll-under.
-    value: 1
-  - name: Index
-    description: Use INDEX pulse.
-    value: 0
-enum/Roirq2:
-  bit_size: 1
-  variants:
-  - name: Noroll
-    description: Did not occur.
-    value: 0
-  - name: Roll
-    description: Occurred.
-    value: 1
-enum/Ruirq2:
-  bit_size: 1
-  variants:
-  - name: Noroll
-    description: No roll-under has occurred.
-    value: 0
-  - name: Roll
-    description: Roll-under has occurred.
-    value: 1
-enum/Sabirq2:
-  bit_size: 1
-  variants:
-  - name: Nosimul
-    description: No simultaneous change has occurred.
-    value: 0
-  - name: Simul
-    description: A simultaneous change has occurred.
-    value: 1
-enum/Xirq2:
-  bit_size: 1
-  variants:
-  - name: Index
-    description: Occurred.
-    value: 1
-  - name: Noind
-    description: Not occurred.
-    value: 0
 block/QdcBravo:
   description: ENC.
   items:
@@ -804,139 +635,54 @@ fieldset/QdcBravoFieldsetBravo:
   bit_size: 16
   fields:
   - name: updhld
-    description: Update Hold Registers.
+    description: "Update Hold Registers.\n\nRaw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Cmpie
   - name: updpos
-    description: Update Position Registers.
+    description: "Update Position Registers.\n\nRaw bit values: false (0) = Noaction: No action.; true (1) = Clear: Clear."
     bit_offset: 1
     bit_size: 1
-    enum: Updpos
   - name: mod_
-    description: Enable Modulo Counting.
+    description: "Enable Modulo Counting.\n\nRaw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: Cmpie
   - name: dir
-    description: Count Direction Flag.
+    description: "Count Direction Flag.\n\nRaw bit values: false (0) = Down: Down direction.; true (1) = Up: Up direction."
     bit_offset: 3
     bit_size: 1
-    enum: Dir2
   - name: ruie
-    description: Roll-under Interrupt Enable.
+    description: "Roll-under Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 4
     bit_size: 1
-    enum: Cmpie
   - name: ruirq
-    description: Roll-under Interrupt Request.
+    description: "Roll-under Interrupt Request.\n\nRaw bit values: false (0) = Noroll: No roll-under has occurred.; true (1) = Roll: Roll-under has occurred."
     bit_offset: 5
     bit_size: 1
-    enum: Ruirq2
   - name: roie
-    description: Roll-over Interrupt Enable.
+    description: "Roll-over Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 6
     bit_size: 1
-    enum: Cmpie
   - name: roirq
-    description: Roll-over Interrupt Request.
+    description: "Roll-over Interrupt Request.\n\nRaw bit values: false (0) = Noroll: Did not occur.; true (1) = Roll: Occurred."
     bit_offset: 7
     bit_size: 1
-    enum: Roirq2
   - name: revmod
-    description: Revolution Counter Modulus Enable.
+    description: "Revolution Counter Modulus Enable.\n\nRaw bit values: false (0) = Index: Use INDEX pulse.; true (1) = Count: Use modulus counting roll-over or roll-under."
     bit_offset: 8
     bit_size: 1
-    enum: Revmod2
   - name: outctl
-    description: Output Control.
+    description: "Output Control.\n\nRaw bit values: false (0) = Compare: POSMATCH pulses when a match occurs between the position counters (POS) and the corresponding compare value (COMP ).; true (1) = Read: POSMATCH pulses when the UPOS, LPOS, REV, or POSD registers are read."
     bit_offset: 9
     bit_size: 1
-    enum: Outctl2
   - name: sabie
-    description: Simultaneous PHASEA and PHASEB Change Interrupt Enable.
+    description: "Simultaneous PHASEA and PHASEB Change Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 10
     bit_size: 1
-    enum: Cmpie
   - name: sabirq
-    description: Simultaneous PHASEA and PHASEB Change Interrupt Request.
+    description: "Simultaneous PHASEA and PHASEB Change Interrupt Request.\n\nRaw bit values: false (0) = Nosimul: No simultaneous change has occurred.; true (1) = Simul: A simultaneous change has occurred."
     bit_offset: 11
     bit_size: 1
-    enum: Sabirq2
   - name: initpos
-    description: Initialize Position Registers.
+    description: "Initialize Position Registers.\n\nRaw bit values: false (0) = Noinit: Don't initialize position counter.; true (1) = Init: Initialize position counter."
     bit_offset: 12
     bit_size: 1
-    enum: Initpos2
-enum/Hip2:
-  bit_size: 1
-  variants:
-  - name: Home
-    description: HOME signal initializes the position counter.
-    value: 1
-  - name: Noaction
-    description: No action.
-    value: 0
-enum/Hne2:
-  bit_size: 1
-  variants:
-  - name: Neg
-    description: Use negative-going edge-to-trigger initialization of position counters UPOS and LPOS.
-    value: 1
-  - name: Pos
-    description: Use positive-going edge-to-trigger initialization of position counters UPOS and LPOS.
-    value: 0
-enum/Ph:
-  bit_size: 1
-  variants:
-  - name: Bypass
-    description: Bypasses the quadrature decoder. A positive transition of the PHASEA input generates a count signal. PHASEB input and CTRL[REV] controls the counter direction. If the value of CTRL[REV] and PHASEB are identical; then count is up. If the value of CTRL[REV] and PHASEB is different, then count is down.
-    value: 1
-  - name: Use
-    description: Uses the standard quadrature decoder, where PHASEA and PHASEB represent a two-phase quadrature signal.
-    value: 0
-enum/Rev2:
-  bit_size: 1
-  variants:
-  - name: Normal
-    description: Counts normally.
-    value: 0
-  - name: Reverse
-    description: Counts in the reverse direction.
-    value: 1
-enum/Swip2:
-  bit_size: 1
-  variants:
-  - name: Init
-    description: Initialize position counter.
-    value: 1
-  - name: Noaction
-    description: No action.
-    value: 0
-enum/Updpos:
-  bit_size: 1
-  variants:
-  - name: Clear
-    description: Clear.
-    value: 1
-  - name: Noaction
-    description: No action.
-    value: 0
-enum/Xip2:
-  bit_size: 1
-  variants:
-  - name: Int
-    description: Initializes.
-    value: 1
-  - name: Noint
-    description: Does not initialize.
-    value: 0
-enum/Xne2:
-  bit_size: 1
-  variants:
-  - name: Xne0
-    description: Use positive edge.
-    value: 0
-  - name: Xne1
-    description: Use negative edge.
-    value: 1

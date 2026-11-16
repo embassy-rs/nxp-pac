@@ -156,40 +156,34 @@ fieldset/RtcAlphaFieldsetFoxtrot:
   bit_size: 16
   fields:
   - name: fineen
-    description: Fine Compensation Enable.
+    description: "Fine Compensation Enable.\n\nRaw bit values: false (0) = Disabled: Fine compensation is disabled.; true (1) = Enabled: Fine compensation is enabled."
     bit_offset: 0
     bit_size: 1
-    enum: RtcAlphaEnumNovember
   - name: comp_en
-    description: Compensation Enable.
+    description: "Compensation Enable.\n\nRaw bit values: false (0) = Disabled: Coarse compensation is disabled.; true (1) = Enabled: Coarse compensation is enabled."
     bit_offset: 1
     bit_size: 1
-    enum: RtcAlphaEnumIndia
   - name: alm_match
     description: Alarm Match.
     bit_offset: 2
     bit_size: 2
     enum: RtcAlphaEnumCharlie
   - name: dst_en
-    description: Daylight Saving Enable.
+    description: "Daylight Saving Enable.\n\nRaw bit values: false (0) = Disabled: Disabled.; true (1) = Enabled: Enabled."
     bit_offset: 6
     bit_size: 1
-    enum: RtcAlphaEnumMike
   - name: swr
-    description: Software Reset.
+    description: "Software Reset.\n\nRaw bit values: false (0) = Cleared: Software Reset cleared.; true (1) = Asserted: Software Reset asserted."
     bit_offset: 8
     bit_size: 1
-    enum: RtcAlphaEnumOscarAlpha
   - name: clk_sel
-    description: RTC Clock Select.
+    description: "RTC Clock Select.\n\nRaw bit values: false (0) = Clk16384khz: 16.384 kHz clock is selected.; true (1) = Clk32768khz: 32.768 kHz clock is selected."
     bit_offset: 9
     bit_size: 1
-    enum: RtcAlphaEnumEcho
   - name: clko_dis
-    description: Clock Output Disable.
+    description: "Clock Output Disable.\n\nRaw bit values: false (0) = ToOtherPeripherals: The selected clock is output to other peripherals.; true (1) = NotToOtherPeripherals: The selected clock is not output to other peripherals."
     bit_offset: 10
     bit_size: 1
-    enum: RtcAlphaEnumFoxtrot
   - name: clkout
     description: RTC Clock Output Selection.
     bit_offset: 13
@@ -261,149 +255,121 @@ fieldset/RtcAlphaFieldsetLima:
   bit_size: 16
   fields:
   - name: alm_ie
-    description: Alarm Interrupt Enable.
+    description: "Alarm Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Interrupt is disabled.; true (1) = Enabled: Interrupt is enabled."
     bit_offset: 2
     bit_size: 1
-    enum: AlmIe
   - name: day_ie
-    description: Days Interrupt Enable.
+    description: "Days Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Interrupt is disabled.; true (1) = Enabled: Interrupt is enabled."
     bit_offset: 3
     bit_size: 1
-    enum: AlmIe
   - name: hour_ie
-    description: Hours Interrupt Enable.
+    description: "Hours Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Interrupt is disabled.; true (1) = Enabled: Interrupt is enabled."
     bit_offset: 4
     bit_size: 1
-    enum: AlmIe
   - name: min_ie
-    description: Minutes Interrupt Enable.
+    description: "Minutes Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Interrupt is disabled.; true (1) = Enabled: Interrupt is enabled."
     bit_offset: 5
     bit_size: 1
-    enum: AlmIe
   - name: ie_1hz
-    description: 1 Hz Interval Interrupt Enable.
+    description: "1 Hz Interval Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Interrupt is disabled.; true (1) = Enabled: Interrupt is enabled."
     bit_offset: 6
     bit_size: 1
-    enum: AlmIe
   - name: ie_2hz
-    description: 2 Hz Interval Interrupt Enable.
+    description: "2 Hz Interval Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Interrupt is disabled.; true (1) = Enabled: Interrupt is enabled."
     bit_offset: 7
     bit_size: 1
-    enum: AlmIe
   - name: ie_4hz
-    description: 4 Hz Interval Interrupt Enable.
+    description: "4 Hz Interval Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Interrupt is disabled.; true (1) = Enabled: Interrupt is enabled."
     bit_offset: 8
     bit_size: 1
-    enum: AlmIe
   - name: ie_8hz
-    description: 8 Hz Interval Interrupt Enable.
+    description: "8 Hz Interval Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Interrupt is disabled.; true (1) = Enabled: Interrupt is enabled."
     bit_offset: 9
     bit_size: 1
-    enum: AlmIe
   - name: ie_16hz
-    description: 16 Hz Interval Interrupt Enable.
+    description: "16 Hz Interval Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Interrupt is disabled.; true (1) = Enabled: Interrupt is enabled."
     bit_offset: 10
     bit_size: 1
-    enum: AlmIe
   - name: ie_32hz
-    description: 32 Hz Interval Interrupt Enable.
+    description: "32 Hz Interval Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Interrupt is disabled.; true (1) = Enabled: Interrupt is enabled."
     bit_offset: 11
     bit_size: 1
-    enum: AlmIe
   - name: ie_64hz
-    description: 64 Hz Interval Interrupt Enable.
+    description: "64 Hz Interval Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Interrupt is disabled.; true (1) = Enabled: Interrupt is enabled."
     bit_offset: 12
     bit_size: 1
-    enum: AlmIe
   - name: ie_128hz
-    description: 128 Hz Interval Interrupt Enable.
+    description: "128 Hz Interval Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Interrupt is disabled.; true (1) = Enabled: Interrupt is enabled."
     bit_offset: 13
     bit_size: 1
-    enum: AlmIe
   - name: ie_256hz
-    description: 256 Hz Interval Interrupt Enable.
+    description: "256 Hz Interval Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Interrupt is disabled.; true (1) = Enabled: Interrupt is enabled."
     bit_offset: 14
     bit_size: 1
-    enum: AlmIe
   - name: ie_512hz
-    description: 512 Hz Interval Interrupt Enable.
+    description: "512 Hz Interval Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Interrupt is disabled.; true (1) = Enabled: Interrupt is enabled."
     bit_offset: 15
     bit_size: 1
-    enum: AlmIe
 fieldset/RtcAlphaFieldsetMike:
   description: Interrupt Status.
   bit_size: 16
   fields:
   - name: alm_is
-    description: Alarm Interrupt Status.
+    description: "Alarm Interrupt Status.\n\nRaw bit values: false (0) = Deasserted: Interrupt is de-asserted.; true (1) = Asserted: Interrupt is asserted."
     bit_offset: 2
     bit_size: 1
-    enum: AlmIs
   - name: day_is
-    description: Days Interrupt Status.
+    description: "Days Interrupt Status.\n\nRaw bit values: false (0) = Deasserted: Interrupt is de-asserted.; true (1) = Asserted: Interrupt is asserted."
     bit_offset: 3
     bit_size: 1
-    enum: AlmIs
   - name: hour_is
-    description: Hours Interrupt Status.
+    description: "Hours Interrupt Status.\n\nRaw bit values: false (0) = Deasserted: Interrupt is de-asserted.; true (1) = Asserted: Interrupt is asserted."
     bit_offset: 4
     bit_size: 1
-    enum: AlmIs
   - name: min_is
-    description: Minutes Interrupt Status.
+    description: "Minutes Interrupt Status.\n\nRaw bit values: false (0) = Deasserted: Interrupt is de-asserted.; true (1) = Asserted: Interrupt is asserted."
     bit_offset: 5
     bit_size: 1
-    enum: AlmIs
   - name: is_1hz
-    description: 1 Hz Interval Interrupt Status.
+    description: "1 Hz Interval Interrupt Status.\n\nRaw bit values: false (0) = Deasserted: Interrupt is de-asserted.; true (1) = Asserted: Interrupt is asserted."
     bit_offset: 6
     bit_size: 1
-    enum: AlmIs
   - name: is_2hz
-    description: 2 Hz Interval Interrupt Status.
+    description: "2 Hz Interval Interrupt Status.\n\nRaw bit values: false (0) = Deasserted: Interrupt is de-asserted.; true (1) = Asserted: Interrupt is asserted."
     bit_offset: 7
     bit_size: 1
-    enum: AlmIs
   - name: is_4hz
-    description: 4 Hz Interval Interrupt Status.
+    description: "4 Hz Interval Interrupt Status.\n\nRaw bit values: false (0) = Deasserted: Interrupt is de-asserted.; true (1) = Asserted: Interrupt is asserted."
     bit_offset: 8
     bit_size: 1
-    enum: AlmIs
   - name: is_8hz
-    description: 8 Hz Interval Interrupt Status.
+    description: "8 Hz Interval Interrupt Status.\n\nRaw bit values: false (0) = Deasserted: Interrupt is de-asserted.; true (1) = Asserted: Interrupt is asserted."
     bit_offset: 9
     bit_size: 1
-    enum: AlmIs
   - name: is_16hz
-    description: 16 Hz Interval Interrupt Status.
+    description: "16 Hz Interval Interrupt Status.\n\nRaw bit values: false (0) = Deasserted: Interrupt is de-asserted.; true (1) = Asserted: Interrupt is asserted."
     bit_offset: 10
     bit_size: 1
-    enum: AlmIs
   - name: is_32hz
-    description: 32 Hz Interval Interrupt Status.
+    description: "32 Hz Interval Interrupt Status.\n\nRaw bit values: false (0) = Deasserted: Interrupt is de-asserted.; true (1) = Asserted: Interrupt is asserted."
     bit_offset: 11
     bit_size: 1
-    enum: AlmIs
   - name: is_64hz
-    description: 64 Hz Interval Interrupt Status.
+    description: "64 Hz Interval Interrupt Status.\n\nRaw bit values: false (0) = Deasserted: Interrupt is de-asserted.; true (1) = Asserted: Interrupt is asserted."
     bit_offset: 12
     bit_size: 1
-    enum: AlmIs
   - name: is_128hz
-    description: 128 Hz Interval Interrupt Status.
+    description: "128 Hz Interval Interrupt Status.\n\nRaw bit values: false (0) = Deasserted: Interrupt is de-asserted.; true (1) = Asserted: Interrupt is asserted."
     bit_offset: 13
     bit_size: 1
-    enum: AlmIs
   - name: is_256hz
-    description: 256 Hz Interval Interrupt Status.
+    description: "256 Hz Interval Interrupt Status.\n\nRaw bit values: false (0) = Deasserted: Interrupt is de-asserted.; true (1) = Asserted: Interrupt is asserted."
     bit_offset: 14
     bit_size: 1
-    enum: AlmIs
   - name: is_512hz
-    description: 512 Hz Interval Interrupt Status.
+    description: "512 Hz Interval Interrupt Status.\n\nRaw bit values: false (0) = Deasserted: Interrupt is de-asserted.; true (1) = Asserted: Interrupt is asserted."
     bit_offset: 15
     bit_size: 1
-    enum: AlmIs
 fieldset/RtcAlphaFieldsetNovember:
   description: Sub Second Counter.
   bit_size: 16
@@ -425,15 +391,13 @@ fieldset/RtcAlphaFieldsetPapa:
   bit_size: 16
   fields:
   - name: inval_bit
-    description: Invalidate CPU Read/Write Access.
+    description: "Invalidate CPU Read/Write Access.\n\nRaw bit values: false (0) = Valid: Time and date counters can be read or written. Time and date is valid.; true (1) = Invalid: Time and date counter values are changing or time and date is invalid and cannot be read or written."
     bit_offset: 0
     bit_size: 1
-    enum: RtcAlphaEnumAlphaAlpha
   - name: write_prot_en
-    description: Write Protect Enable Status.
+    description: "Write Protect Enable Status.\n\nRaw bit values: false (0) = Unlocked: Registers are unlocked and can be accessed.; true (1) = Locked: Registers are locked and in read-only mode."
     bit_offset: 1
     bit_size: 1
-    enum: RtcAlphaEnumQuebecAlpha
   - name: cmp_int
     description: Compensation Interval.
     bit_offset: 5
@@ -444,15 +408,13 @@ fieldset/RtcAlphaFieldsetPapa:
     bit_size: 2
     enum: RtcAlphaEnumPapaAlpha
   - name: bus_err
-    description: Bus Error.
+    description: "Bus Error.\n\nRaw bit values: false (0) = Normal: Read and write accesses are normal.; true (1) = Asserted: Read or write accesses occurred when STATUS[INVAL_BIT] was asserted."
     bit_offset: 8
     bit_size: 1
-    enum: RtcAlphaEnumDelta
   - name: cmp_done
-    description: Compensation Done.
+    description: "Compensation Done.\n\nRaw bit values: false (0) = Disabled: Compensation busy or not enabled.; true (1) = Enabled: Compensation completed."
     bit_offset: 11
     bit_size: 1
-    enum: RtcAlphaEnumHotel
 fieldset/RtcAlphaFieldsetQuebec:
   description: Year and Month Counters.
   bit_size: 16
@@ -481,33 +443,6 @@ enum/RtcAlphaEnumCharlie:
   - name: Year
     description: Only seconds, minutes, hours, days, months, and year (offset) matched.
     value: 3
-enum/RtcAlphaEnumDelta:
-  bit_size: 1
-  variants:
-  - name: Asserted
-    description: Read or write accesses occurred when STATUS[INVAL_BIT] was asserted.
-    value: 1
-  - name: Normal
-    description: Read and write accesses are normal.
-    value: 0
-enum/RtcAlphaEnumEcho:
-  bit_size: 1
-  variants:
-  - name: Clk16384khz
-    description: 16.384 kHz clock is selected.
-    value: 0
-  - name: Clk32768khz
-    description: 32.768 kHz clock is selected.
-    value: 1
-enum/RtcAlphaEnumFoxtrot:
-  bit_size: 1
-  variants:
-  - name: NotToOtherPeripherals
-    description: The selected clock is not output to other peripherals.
-    value: 1
-  - name: ToOtherPeripherals
-    description: The selected clock is output to other peripherals.
-    value: 0
 enum/RtcAlphaEnumGolf:
   bit_size: 2
   variants:
@@ -522,33 +457,6 @@ enum/RtcAlphaEnumGolf:
     value: 2
   - name: NoOutputClk
     description: No output clock.
-    value: 0
-enum/RtcAlphaEnumHotel:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Compensation busy or not enabled.
-    value: 0
-  - name: Enabled
-    description: Compensation completed.
-    value: 1
-enum/RtcAlphaEnumIndia:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Coarse compensation is disabled.
-    value: 0
-  - name: Enabled
-    description: Coarse compensation is enabled.
-    value: 1
-enum/AlmIs:
-  bit_size: 1
-  variants:
-  - name: Asserted
-    description: Interrupt is asserted.
-    value: 1
-  - name: Deasserted
-    description: Interrupt is de-asserted.
     value: 0
 enum/RtcAlphaEnumLima:
   bit_size: 3
@@ -574,42 +482,6 @@ enum/RtcAlphaEnumLima:
   - name: Wednesday
     description: Wednesday.
     value: 3
-enum/RtcAlphaEnumMike:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disabled.
-    value: 0
-  - name: Enabled
-    description: Enabled.
-    value: 1
-enum/RtcAlphaEnumNovember:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Fine compensation is disabled.
-    value: 0
-  - name: Enabled
-    description: Fine compensation is enabled.
-    value: 1
-enum/AlmIe:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Interrupt is disabled.
-    value: 0
-  - name: Enabled
-    description: Interrupt is enabled.
-    value: 1
-enum/RtcAlphaEnumAlphaAlpha:
-  bit_size: 1
-  variants:
-  - name: Invalid
-    description: Time and date counter values are changing or time and date is invalid and cannot be read or written.
-    value: 1
-  - name: Valid
-    description: Time and date counters can be read or written. Time and date is valid.
-    value: 0
 enum/RtcAlphaEnumNovemberAlpha:
   bit_size: 4
   variants:
@@ -661,27 +533,9 @@ enum/RtcAlphaEnumNovemberAlpha:
   - name: September
     description: September.
     value: 9
-enum/RtcAlphaEnumOscarAlpha:
-  bit_size: 1
-  variants:
-  - name: Asserted
-    description: Software Reset asserted.
-    value: 1
-  - name: Cleared
-    description: Software Reset cleared.
-    value: 0
 enum/RtcAlphaEnumPapaAlpha:
   bit_size: 2
   variants:
   - name: Locked
     description: Enable Write Protection - Registers are locked.
     value: 2
-enum/RtcAlphaEnumQuebecAlpha:
-  bit_size: 1
-  variants:
-  - name: Locked
-    description: Registers are locked and in read-only mode.
-    value: 1
-  - name: Unlocked
-    description: Registers are unlocked and can be accessed.
-    value: 0

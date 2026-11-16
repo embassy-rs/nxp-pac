@@ -381,20 +381,17 @@ fieldset/Clkdiv:
     bit_offset: 0
     bit_size: 4
   - name: reset
-    description: Reset divider counter.
+    description: "Reset divider counter.\n\nRaw bit values: false (0) = On: Divider isn't reset.; true (1) = Off: Divider is reset."
     bit_offset: 29
     bit_size: 1
-    enum: ClkdivReset
   - name: halt
-    description: Halt divider counter.
+    description: "Halt divider counter.\n\nRaw bit values: false (0) = On: Divider clock is running.; true (1) = Off: Divider clock is stopped."
     bit_offset: 30
     bit_size: 1
-    enum: ClkdivHalt
   - name: unstab
-    description: Divider status flag.
+    description: "Divider status flag.\n\nRaw bit values: false (0) = On: Divider clock is stable.; true (1) = Off: Clock frequency isn't stable."
     bit_offset: 31
     bit_size: 1
-    enum: ClkdivUnstab
 fieldset/ClkoutClksel:
   description: CLKOUT clock selection control.
   fields:
@@ -1164,33 +1161,6 @@ enum/AdcClkselMux:
   - name: ClkrootFunc6
     description: PLL1_CLK_DIV.
     value: 6
-enum/ClkdivHalt:
-  bit_size: 1
-  variants:
-  - name: On
-    description: Divider clock is running.
-    value: 0
-  - name: Off
-    description: Divider clock is stopped.
-    value: 1
-enum/ClkdivReset:
-  bit_size: 1
-  variants:
-  - name: On
-    description: Divider isn't reset.
-    value: 0
-  - name: Off
-    description: Divider is reset.
-    value: 1
-enum/ClkdivUnstab:
-  bit_size: 1
-  variants:
-  - name: On
-    description: Divider clock is stable.
-    value: 0
-  - name: Off
-    description: Clock frequency isn't stable.
-    value: 1
 enum/ClkoutClkselMux:
   bit_size: 3
   variants:

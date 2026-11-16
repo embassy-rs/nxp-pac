@@ -257,138 +257,112 @@ fieldset/ItrcAlphaFieldsetDelta:
   description: ITRC outputs and IN0 to IN15 Status.
   fields:
   - name: in0_status
-    description: GDET0 & 1 interrupt.
+    description: "GDET0 & 1 interrupt.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 0
     bit_size: 1
-    enum: InStatus
   - name: in1_status
-    description: TDET tamper output.
+    description: "TDET tamper output.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 1
     bit_size: 1
-    enum: InStatus
   - name: in2_status
-    description: Code Watchdog 0 interrupt.
+    description: "Code Watchdog 0 interrupt.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 2
     bit_size: 1
-    enum: InStatus
   - name: in3_status
-    description: VBAT volt tamper output.
+    description: "VBAT volt tamper output.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 3
     bit_size: 1
-    enum: InStatus
   - name: in4_status
-    description: SPC VDD_CORE_LVD detect.
+    description: "SPC VDD_CORE_LVD detect.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 4
     bit_size: 1
-    enum: InStatus
   - name: in5_status
-    description: Watch Dog timer event occurred.
+    description: "Watch Dog timer event occurred.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 5
     bit_size: 1
-    enum: InStatus
   - name: in6_status
-    description: Flash ECC mismatch event occurred.
+    description: "Flash ECC mismatch event occurred.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 6
     bit_size: 1
-    enum: InStatus
   - name: in7_status
-    description: AHB secure bus checkers detected illegal access.
+    description: "AHB secure bus checkers detected illegal access.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 7
     bit_size: 1
-    enum: InStatus
   - name: in8_status
-    description: ELS error event occurred.
+    description: "ELS error event occurred.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 8
     bit_size: 1
-    enum: InStatus
   - name: in9_status
-    description: SPC VDD_CORE glitch detect event occurred.
+    description: "SPC VDD_CORE glitch detect event occurred.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 9
     bit_size: 1
-    enum: InStatus
   - name: in10_status
-    description: PKC module detected an error event.
+    description: "PKC module detected an error event.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 10
     bit_size: 1
-    enum: InStatus
   - name: in11_status
-    description: Code Watchdog 1 interrupt.
+    description: "Code Watchdog 1 interrupt.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 11
     bit_size: 1
-    enum: InStatus
   - name: in112_status
-    description: Watchdog 1 timer event interrupt.
+    description: "Watchdog 1 timer event interrupt.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 12
     bit_size: 1
-    enum: InStatus
   - name: in113_status
-    description: FREQME out of range status output.
+    description: "FREQME out of range status output.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 13
     bit_size: 1
-    enum: InStatus
   - name: in14_status
-    description: Software event 0 occurred.
+    description: "Software event 0 occurred.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 14
     bit_size: 1
-    enum: InStatus
   - name: in15_status
-    description: Software event 1 occurred.
+    description: "Software event 1 occurred.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 15
     bit_size: 1
-    enum: InStatus
   - name: out0_status
-    description: ITRC triggered ITRC_IRQ output.
+    description: "ITRC triggered ITRC_IRQ output.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 16
     bit_size: 1
-    enum: InStatus
   - name: out1_status
-    description: ITRC triggered ELS_RESET to clear ELS key store.
+    description: "ITRC triggered ELS_RESET to clear ELS key store.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 17
     bit_size: 1
-    enum: InStatus
   - name: out2_status
-    description: ITRC triggered PUF_ZEROIZE to clear PUF key store and RAM.
+    description: "ITRC triggered PUF_ZEROIZE to clear PUF key store and RAM.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 18
     bit_size: 1
-    enum: InStatus
   - name: out3_status
-    description: ITRC triggered RAM_ZEROIZE.
+    description: "ITRC triggered RAM_ZEROIZE.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 19
     bit_size: 1
-    enum: InStatus
   - name: out4_status
-    description: ITRC triggered CHIP_RESET to reset the chip after all other response process finished.
+    description: "ITRC triggered CHIP_RESET to reset the chip after all other response process finished.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 20
     bit_size: 1
-    enum: InStatus
   - name: out5_status
-    description: ITRC triggered TMPR_OUT0 internal signal connected to various on-chip multiplexers.
+    description: "ITRC triggered TMPR_OUT0 internal signal connected to various on-chip multiplexers.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 21
     bit_size: 1
-    enum: InStatus
   - name: out6_status
-    description: ITRC triggered TMPR_OUT1 internal signal connected to various on-chip multiplexers.
+    description: "ITRC triggered TMPR_OUT1 internal signal connected to various on-chip multiplexers.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 22
     bit_size: 1
-    enum: InStatus
 fieldset/ItrcAlphaFieldsetEcho:
   description: ITRC IN16 to IN47 Status.
   fields:
   - name: in16_status
-    description: SSPC VDD_SYS_LVD detect event occurred.
+    description: "SSPC VDD_SYS_LVD detect event occurred.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 0
     bit_size: 1
-    enum: InStatus
   - name: in17_status
-    description: SPC VDD_IO_LVD detect event occurred.
+    description: "SPC VDD_IO_LVD detect event occurred.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 1
     bit_size: 1
-    enum: InStatus
   - name: in20_status
-    description: VBAT clock tamper output event occurred.
+    description: "VBAT clock tamper output event occurred.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 4
     bit_size: 1
-    enum: InStatus
   - name: in24_21_status
     description: INTM interrupt monitor error 3~0 event occurred.
     bit_offset: 5
@@ -400,40 +374,33 @@ fieldset/ItrcAlphaFieldsetEcho:
     bit_size: 8
     enum: ItrcAlphaEnumPapa
   - name: in33_status
-    description: GDET0/1 SFR error event occurred.
+    description: "GDET0/1 SFR error event occurred.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 17
     bit_size: 1
-    enum: InStatus
   - name: in34_status
-    description: SPC VDD_CORE high voltage detect event occurred.
+    description: "SPC VDD_CORE high voltage detect event occurred.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 18
     bit_size: 1
-    enum: InStatus
   - name: in35_status
-    description: SPC VDD_SYS_HVD high voltage detect event occurred.
+    description: "SPC VDD_SYS_HVD high voltage detect event occurred.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 19
     bit_size: 1
-    enum: InStatus
   - name: in36_status
-    description: SPC VDD_IO high voltage detect event occurred.
+    description: "SPC VDD_IO high voltage detect event occurred.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 20
     bit_size: 1
-    enum: InStatus
   - name: in37_status
-    description: FLEXSPI GCM error event occurred.
+    description: "FLEXSPI GCM error event occurred.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 21
     bit_size: 1
-    enum: InStatus
   - name: in46_status
-    description: SM3 SGI error event occurred.
+    description: "SM3 SGI error event occurred.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 30
     bit_size: 1
-    enum: InStatus
   - name: in47_status
-    description: TRNG HW error event occurred.
+    description: "TRNG HW error event occurred.\n\nRaw bit values: false (0) = Disable: Output not triggered.; true (1) = Enable: Output has been triggered."
     bit_offset: 31
     bit_size: 1
-    enum: InStatus
 fieldset/ItrcAlphaFieldsetFoxtrot:
   description: Software event 0.
   fields:
@@ -448,15 +415,6 @@ fieldset/ItrcAlphaFieldsetGolf:
     description: Trigger software event 1.
     bit_offset: 0
     bit_size: 32
-enum/InStatus:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Output not triggered.
-    value: 0
-  - name: Enable
-    description: Output has been triggered.
-    value: 1
 enum/ItrcAlphaEnumNovember:
   bit_size: 4
   variants:

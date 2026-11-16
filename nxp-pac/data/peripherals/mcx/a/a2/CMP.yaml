@@ -123,10 +123,9 @@ fieldset/Rrcr0:
   reset_value: 0
   fields:
   - name: rr_trg_sel
-    description: Round-Robin Trigger Select.
+    description: "Round-Robin Trigger Select.\n\nRaw bit values: false (0) = Enable: External trigger.; true (1) = Disable: Internal trigger."
     bit_offset: 1
     bit_size: 1
-    enum: RrTrgSel
 fieldset/Rrcr0Cmp1:
   extends: Rrcr0
   bit_size: 32
@@ -136,12 +135,3 @@ fieldset/Rrcr0Cmp1:
     description: CMP1 external trigger source. This four-bit field is documented in F61RM section 46.7.10 but omitted by the vendor XML derived from CMP0.
     bit_offset: 2
     bit_size: 4
-enum/RrTrgSel:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: External trigger.
-    value: 0
-  - name: Disable
-    description: Internal trigger.
-    value: 1

@@ -1504,817 +1504,657 @@ fieldset/SecCpu1IntMask0:
   description: Secure Interrupt Mask 0 for CPU1.
   fields:
   - name: int0_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 0
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int1_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 1
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int2_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 2
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int3_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 3
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int4_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 4
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int5_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 5
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int6_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 6
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int7_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 7
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int8_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 8
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int9_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 9
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int10_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 10
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int11_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 11
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int12_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 12
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int13_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 13
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int14_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 14
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int15_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 15
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int16_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 16
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int17_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 17
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int18_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 18
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int19_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 19
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int20_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 20
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int21_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 21
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int22_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 22
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int23_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 23
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int24_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 24
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int25_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 25
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int26_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 26
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int27_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 27
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int28_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 28
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int29_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 29
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int30_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 30
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int31_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 31
     bit_size: 1
-    enum: Pio0Pin16SecMask
 fieldset/SecCpu1IntMask1:
   description: Secure Interrupt Mask 1 for CPU1.
   fields:
   - name: int32_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 0
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int33_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 1
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int34_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 2
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int35_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 3
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int36_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 4
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int37_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 5
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int38_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 6
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int39_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 7
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int40_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 8
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int41_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 9
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int42_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 10
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int43_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 11
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int44_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 12
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int45_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 13
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int46_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 14
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int47_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 15
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int48_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 16
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int49_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 17
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int50_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 18
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int51_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 19
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int52_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 20
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int53_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 21
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int54_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 22
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int55_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 23
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int56_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 24
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int57_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 25
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int58_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 26
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int59_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 27
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int60_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 28
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int61_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 29
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int62_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 30
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int63_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 31
     bit_size: 1
-    enum: Pio0Pin16SecMask
 fieldset/SecCpu1IntMask2:
   description: Secure Interrupt Mask 2 for CPU1.
   fields:
   - name: int64_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 0
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int65_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 1
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int66_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 2
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int67_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 3
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int68_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 4
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int69_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 5
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int70_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 6
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int71_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 7
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int72_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 8
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int73_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 9
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int74_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 10
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int75_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 11
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int76_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 12
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int77_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 13
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int78_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 14
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int79_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 15
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int80_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 16
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int81_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 17
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int82_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 18
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int83_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 19
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int84_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 20
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int85_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 21
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int86_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 22
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int87_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 23
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int88_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 24
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int89_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 25
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int90_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 26
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int91_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 27
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int92_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 28
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int93_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 29
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int94_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 30
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int95_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 31
     bit_size: 1
-    enum: Pio0Pin16SecMask
 fieldset/SecCpu1IntMask3:
   description: Secure Interrupt Mask 3 for CPU1.
   fields:
   - name: int96_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 0
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int97_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 1
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int98_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 2
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int99_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 3
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int100_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 4
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int101_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 5
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int102_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 6
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int103_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 7
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int104_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 8
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int105_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 9
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int106_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 10
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int107_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 11
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int108_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 12
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int109_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 13
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int110_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 14
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int111_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 15
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int112_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 16
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int113_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 17
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int114_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 18
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int115_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 19
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int116_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 20
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int117_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 21
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int118_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 22
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int119_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 23
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int120_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 24
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int121_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 25
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int122_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 26
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int123_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 27
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int124_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 28
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int125_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 29
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int126_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 30
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int127_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 31
     bit_size: 1
-    enum: Pio0Pin16SecMask
 fieldset/SecCpu1IntMask4:
   description: Secure Interrupt Mask 4 for CPU1.
   fields:
   - name: int128_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 0
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int129_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 1
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int130_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 2
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int131_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 3
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int132_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 4
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int133_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 5
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int134_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 6
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int135_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 7
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int136_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 8
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int137_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 9
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int138_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 10
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int139_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 11
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int140_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 12
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int141_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 13
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int142_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 14
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int143_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 15
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int144_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 16
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int145_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 17
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int146_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 18
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int147_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 19
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int148_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 20
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int149_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 21
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int150_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 22
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int151_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 23
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int152_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 24
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int153_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 25
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int154_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 26
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int155_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 27
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int156_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 28
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int157_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 29
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int158_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 30
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: int159_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 31
     bit_size: 1
-    enum: Pio0Pin16SecMask
 fieldset/SecGpRegLock:
   description: Secure Mask Lock.
   fields:
@@ -2357,276 +2197,223 @@ fieldset/SecGpioMask:
   description: GPIO Mask for Port index.
   fields:
   - name: pio0_pin0_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 0
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin1_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 1
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin2_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 2
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin3_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 3
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin4_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 4
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin5_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 5
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin6_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 6
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin7_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 7
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin8_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 8
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin9_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 9
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin10_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 10
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin11_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 11
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin12_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 12
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin13_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 13
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin14_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 14
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin15_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 15
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin16_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 16
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin17_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 17
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin18_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 18
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin19_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 19
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin20_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 20
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin21_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 21
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin22_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 22
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin23_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 23
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin24_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 24
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin25_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 25
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin26_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 26
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin27_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 27
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin28_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 28
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin29_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 29
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin30_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 30
     bit_size: 1
-    enum: Pio0Pin16SecMask
   - name: pio0_pin31_sec_mask
-    description: Mask bit.
+    description: "Mask bit.\n\nRaw bit values: false (0) = Masked: Masked.; true (1) = NotMasked: Not masked."
     bit_offset: 31
     bit_size: 1
-    enum: Pio0Pin16SecMask
 fieldset/SecVioInfoValid2:
   description: Security Violation Info Validity for Address.
   fields:
   - name: vio_info_valid0
-    description: Violation information valid flag for AHB port 0.
+    description: "Violation information valid flag for AHB port 0.\n\nRaw bit values: false (0) = NotValid: Not valid.; true (1) = Valid: Valid."
     bit_offset: 0
     bit_size: 1
-    enum: VioInfoValid18
   - name: vio_info_valid1
-    description: Violation information valid flag for AHB port 1.
+    description: "Violation information valid flag for AHB port 1.\n\nRaw bit values: false (0) = NotValid: Not valid.; true (1) = Valid: Valid."
     bit_offset: 1
     bit_size: 1
-    enum: VioInfoValid18
   - name: vio_info_valid2
-    description: Violation information valid flag for AHB port 2.
+    description: "Violation information valid flag for AHB port 2.\n\nRaw bit values: false (0) = NotValid: Not valid.; true (1) = Valid: Valid."
     bit_offset: 2
     bit_size: 1
-    enum: VioInfoValid18
   - name: vio_info_valid3
-    description: Violation information valid flag for AHB port 3.
+    description: "Violation information valid flag for AHB port 3.\n\nRaw bit values: false (0) = NotValid: Not valid.; true (1) = Valid: Valid."
     bit_offset: 3
     bit_size: 1
-    enum: VioInfoValid18
   - name: vio_info_valid4
-    description: Violation information valid flag for AHB port 4.
+    description: "Violation information valid flag for AHB port 4.\n\nRaw bit values: false (0) = NotValid: Not valid.; true (1) = Valid: Valid."
     bit_offset: 4
     bit_size: 1
-    enum: VioInfoValid18
   - name: vio_info_valid5
-    description: Violation information valid flag for AHB port 5.
+    description: "Violation information valid flag for AHB port 5.\n\nRaw bit values: false (0) = NotValid: Not valid.; true (1) = Valid: Valid."
     bit_offset: 5
     bit_size: 1
-    enum: VioInfoValid18
   - name: vio_info_valid6
-    description: Violation information valid flag for AHB port 6.
+    description: "Violation information valid flag for AHB port 6.\n\nRaw bit values: false (0) = NotValid: Not valid.; true (1) = Valid: Valid."
     bit_offset: 6
     bit_size: 1
-    enum: VioInfoValid18
   - name: vio_info_valid7
-    description: Violation information valid flag for AHB port 7.
+    description: "Violation information valid flag for AHB port 7.\n\nRaw bit values: false (0) = NotValid: Not valid.; true (1) = Valid: Valid."
     bit_offset: 7
     bit_size: 1
-    enum: VioInfoValid18
   - name: vio_info_valid8
-    description: Violation information valid flag for AHB port 8.
+    description: "Violation information valid flag for AHB port 8.\n\nRaw bit values: false (0) = NotValid: Not valid.; true (1) = Valid: Valid."
     bit_offset: 8
     bit_size: 1
-    enum: VioInfoValid18
   - name: vio_info_valid9
-    description: Violation information valid flag for AHB port 9.
+    description: "Violation information valid flag for AHB port 9.\n\nRaw bit values: false (0) = NotValid: Not valid.; true (1) = Valid: Valid."
     bit_offset: 9
     bit_size: 1
-    enum: VioInfoValid18
   - name: vio_info_valid10
-    description: Violation information valid flag for AHB port 10.
+    description: "Violation information valid flag for AHB port 10.\n\nRaw bit values: false (0) = NotValid: Not valid.; true (1) = Valid: Valid."
     bit_offset: 10
     bit_size: 1
-    enum: VioInfoValid18
   - name: vio_info_valid11
-    description: Violation information valid flag for AHB port 11.
+    description: "Violation information valid flag for AHB port 11.\n\nRaw bit values: false (0) = NotValid: Not valid.; true (1) = Valid: Valid."
     bit_offset: 11
     bit_size: 1
-    enum: VioInfoValid18
   - name: vio_info_valid12
-    description: Violation information valid flag for AHB port 12.
+    description: "Violation information valid flag for AHB port 12.\n\nRaw bit values: false (0) = NotValid: Not valid.; true (1) = Valid: Valid."
     bit_offset: 12
     bit_size: 1
-    enum: VioInfoValid18
   - name: vio_info_valid13
-    description: Violation information valid flag for AHB port 13.
+    description: "Violation information valid flag for AHB port 13.\n\nRaw bit values: false (0) = NotValid: Not valid.; true (1) = Valid: Valid."
     bit_offset: 13
     bit_size: 1
-    enum: VioInfoValid18
   - name: vio_info_valid14
-    description: Violation information valid flag for AHB port 14.
+    description: "Violation information valid flag for AHB port 14.\n\nRaw bit values: false (0) = NotValid: Not valid.; true (1) = Valid: Valid."
     bit_offset: 14
     bit_size: 1
-    enum: VioInfoValid18
   - name: vio_info_valid15
-    description: Violation information valid flag for AHB port 15.
+    description: "Violation information valid flag for AHB port 15.\n\nRaw bit values: false (0) = NotValid: Not valid.; true (1) = Valid: Valid."
     bit_offset: 15
     bit_size: 1
-    enum: VioInfoValid18
   - name: vio_info_valid16
-    description: Violation information valid flag for AHB port 16.
+    description: "Violation information valid flag for AHB port 16.\n\nRaw bit values: false (0) = NotValid: Not valid.; true (1) = Valid: Valid."
     bit_offset: 16
     bit_size: 1
-    enum: VioInfoValid18
   - name: vio_info_valid17
-    description: Violation information valid flag for AHB port 17.
+    description: "Violation information valid flag for AHB port 17.\n\nRaw bit values: false (0) = NotValid: Not valid.; true (1) = Valid: Valid."
     bit_offset: 17
     bit_size: 1
-    enum: VioInfoValid18
   - name: vio_info_valid18
-    description: Violation information valid flag for AHB port 18.
+    description: "Violation information valid flag for AHB port 18.\n\nRaw bit values: false (0) = NotValid: Not valid.; true (1) = Valid: Valid."
     bit_offset: 18
     bit_size: 1
-    enum: VioInfoValid18
 fieldset/SecVioMiscInfo2:
   description: Security Violation Miscellaneous Information at Address.
   fields:
   - name: sec_vio_info_write
-    description: Security violation access read/write indicator.
+    description: "Security violation access read/write indicator.\n\nRaw bit values: false (0) = Read: Read access.; true (1) = Write: Write access."
     bit_offset: 0
     bit_size: 1
-    enum: SecVioInfoWrite
   - name: sec_vio_info_data_access
-    description: Security Violation Info Data Access.
+    description: "Security Violation Info Data Access.\n\nRaw bit values: false (0) = Code: Code.; true (1) = Data: Data."
     bit_offset: 1
     bit_size: 1
-    enum: SecVioInfoDataAccess
   - name: sec_vio_info_master_sec_level
     description: Security Violation Info Master Security Level.
     bit_offset: 4
@@ -2641,15 +2428,13 @@ fieldset/SecVioMiscInfo3:
   description: Security Violation Miscellaneous Information at Address.
   fields:
   - name: sec_vio_info_write
-    description: Security violation access read/write indicator.
+    description: "Security violation access read/write indicator.\n\nRaw bit values: false (0) = Read: Read access.; true (1) = Write: Write access."
     bit_offset: 0
     bit_size: 1
-    enum: SecVioInfoWrite
   - name: sec_vio_info_data_access
-    description: Security Violation Info Data Access.
+    description: "Security Violation Info Data Access.\n\nRaw bit values: false (0) = Code: Code.; true (1) = Data: Data."
     bit_offset: 1
     bit_size: 1
-    enum: SecVioInfoDataAccess
   - name: sec_vio_info_master_sec_level
     description: Security Violation Info Master Security Level.
     bit_offset: 4
@@ -2752,15 +2537,6 @@ enum/MasterSecLevelAntipolLock:
   - name: Disable
     description: MASTER_SEC_LEVEL_LOCK can be written.
     value: 2
-enum/Pio0Pin16SecMask:
-  bit_size: 1
-  variants:
-  - name: Masked
-    description: Masked.
-    value: 0
-  - name: NotMasked
-    description: Not masked.
-    value: 1
 enum/SecCpu1IntMask0Lock:
   bit_size: 2
   variants:
@@ -2921,12 +2697,3 @@ enum/SecVioInfoMaster3:
   - name: Usdhc
     description: uSDHC.
     value: 20
-enum/VioInfoValid18:
-  bit_size: 1
-  variants:
-  - name: NotValid
-    description: Not valid.
-    value: 0
-  - name: Valid
-    description: Valid.
-    value: 1

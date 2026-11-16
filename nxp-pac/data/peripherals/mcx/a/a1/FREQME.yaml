@@ -31,10 +31,9 @@ fieldset/CtrlR:
     bit_offset: 0
     bit_size: 31
   - name: measure_in_progress
-    description: Measurement In Progress.
+    description: "Measurement In Progress.\n\nRaw bit values: false (0) = CycleDone: Complete.; true (1) = InProgress: In progress."
     bit_offset: 31
     bit_size: 1
-    enum: CtrlRMeasureInProgress
 fieldset/CtrlW:
   description: Control (in Write mode).
   fields:
@@ -43,15 +42,13 @@ fieldset/CtrlW:
     bit_offset: 0
     bit_size: 5
   - name: pulse_mode
-    description: Pulse Width Measurement Mode Select.
+    description: "Pulse Width Measurement Mode Select.\n\nRaw bit values: false (0) = FreqMeMode: Frequency Measurement mode.; true (1) = PulseMeMode: Pulse Width Measurement mode."
     bit_offset: 8
     bit_size: 1
-    enum: CtrlWPulseMode
   - name: pulse_pol
-    description: Pulse Polarity.
+    description: "Pulse Polarity.\n\nRaw bit values: false (0) = HighPeriod: High period.; true (1) = LowPeriod: Low period."
     bit_offset: 9
     bit_size: 1
-    enum: CtrlWPulsePol
   - name: lt_min_int_en
     description: Less Than Minimum Interrupt Enable.
     bit_offset: 12
@@ -69,10 +66,9 @@ fieldset/CtrlW:
     bit_offset: 30
     bit_size: 1
   - name: measure_in_progress
-    description: Measurement In Progress.
+    description: "Measurement In Progress.\n\nRaw bit values: false (0) = ForceTerminate: Terminates measurement.; true (1) = InitiateAFreqmeCycle: Initiates measurement."
     bit_offset: 31
     bit_size: 1
-    enum: CtrlWMeasureInProgress
 fieldset/Ctrlstat:
   description: Control Status.
   fields:
@@ -81,15 +77,13 @@ fieldset/Ctrlstat:
     bit_offset: 0
     bit_size: 5
   - name: pulse_mode
-    description: Pulse Mode.
+    description: "Pulse Mode.\n\nRaw bit values: false (0) = Freq: Frequency Measurement mode.; true (1) = Pulse: Pulse Width Measurement mode."
     bit_offset: 8
     bit_size: 1
-    enum: CtrlstatPulseMode
   - name: pulse_pol
-    description: Pulse Polarity.
+    description: "Pulse Polarity.\n\nRaw bit values: false (0) = High: High period.; true (1) = Low: Low period."
     bit_offset: 9
     bit_size: 1
-    enum: CtrlstatPulsePol
   - name: lt_min_int_en
     description: Less Than Minimum Interrupt Enable.
     bit_offset: 12
@@ -103,15 +97,13 @@ fieldset/Ctrlstat:
     bit_offset: 14
     bit_size: 1
   - name: lt_min_stat
-    description: Less Than Minimum Results Status.
+    description: "Less Than Minimum Results Status.\n\nRaw bit values: false (0) = InRange: Greater than MIN[MIN_VALUE].; true (1) = LtMin: Less than MIN[MIN_VALUE]."
     bit_offset: 24
     bit_size: 1
-    enum: LtMinStat
   - name: gt_max_stat
-    description: Greater Than Maximum Result Status.
+    description: "Greater Than Maximum Result Status.\n\nRaw bit values: false (0) = InRange: Less than MAX[MAX_VALUE].; true (1) = GtMax: Greater than MAX[MAX_VALUE]."
     bit_offset: 25
     bit_size: 1
-    enum: GtMaxStat
   - name: result_ready_stat
     description: Result Ready Status.
     bit_offset: 26
@@ -121,10 +113,9 @@ fieldset/Ctrlstat:
     bit_offset: 30
     bit_size: 1
   - name: measure_in_progress
-    description: Measurement in Progress Status.
+    description: "Measurement in Progress Status.\n\nRaw bit values: false (0) = Idle: Not in progress.; true (1) = Ongoing: In progress."
     bit_offset: 31
     bit_size: 1
-    enum: CtrlstatMeasureInProgress
 fieldset/Max:
   description: Maximum.
   fields:
@@ -139,84 +130,3 @@ fieldset/Min:
     description: Minimum Value.
     bit_offset: 0
     bit_size: 31
-enum/CtrlRMeasureInProgress:
-  bit_size: 1
-  variants:
-  - name: CycleDone
-    description: Complete.
-    value: 0
-  - name: InProgress
-    description: In progress.
-    value: 1
-enum/CtrlWMeasureInProgress:
-  bit_size: 1
-  variants:
-  - name: ForceTerminate
-    description: Terminates measurement.
-    value: 0
-  - name: InitiateAFreqmeCycle
-    description: Initiates measurement.
-    value: 1
-enum/CtrlWPulseMode:
-  bit_size: 1
-  variants:
-  - name: FreqMeMode
-    description: Frequency Measurement mode.
-    value: 0
-  - name: PulseMeMode
-    description: Pulse Width Measurement mode.
-    value: 1
-enum/CtrlWPulsePol:
-  bit_size: 1
-  variants:
-  - name: HighPeriod
-    description: High period.
-    value: 0
-  - name: LowPeriod
-    description: Low period.
-    value: 1
-enum/CtrlstatMeasureInProgress:
-  bit_size: 1
-  variants:
-  - name: Idle
-    description: Not in progress.
-    value: 0
-  - name: Ongoing
-    description: In progress.
-    value: 1
-enum/CtrlstatPulseMode:
-  bit_size: 1
-  variants:
-  - name: Freq
-    description: Frequency Measurement mode.
-    value: 0
-  - name: Pulse
-    description: Pulse Width Measurement mode.
-    value: 1
-enum/CtrlstatPulsePol:
-  bit_size: 1
-  variants:
-  - name: High
-    description: High period.
-    value: 0
-  - name: Low
-    description: Low period.
-    value: 1
-enum/GtMaxStat:
-  bit_size: 1
-  variants:
-  - name: InRange
-    description: Less than MAX[MAX_VALUE].
-    value: 0
-  - name: GtMax
-    description: Greater than MAX[MAX_VALUE].
-    value: 1
-enum/LtMinStat:
-  bit_size: 1
-  variants:
-  - name: InRange
-    description: Greater than MIN[MIN_VALUE].
-    value: 0
-  - name: LtMin
-    description: Less than MIN[MIN_VALUE].
-    value: 1

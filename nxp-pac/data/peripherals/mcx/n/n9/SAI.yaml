@@ -122,20 +122,18 @@ fieldset/SaiAlphaFieldsetAlpha:
     bit_offset: 0
     bit_size: 8
   - name: diven
-    description: MCLK Post Divide Enable.
+    description: "MCLK Post Divide Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 23
     bit_size: 1
-    enum: Bce
   - name: msel
     description: MCLK Select.
     bit_offset: 24
     bit_size: 2
     enum: SaiAlphaEnumEcho
   - name: moe
-    description: MCLK Output Enable.
+    description: "MCLK Output Enable.\n\nRaw bit values: false (0) = Input: Input.; true (1) = Output: Output."
     bit_offset: 30
     bit_size: 1
-    enum: SaiAlphaEnumFoxtrot
 fieldset/SaiAlphaFieldsetBravo:
   description: Parameter.
   fields:
@@ -167,35 +165,30 @@ fieldset/SaiAlphaFieldsetDelta:
     bit_offset: 0
     bit_size: 8
   - name: byp
-    description: Bit Clock Bypass.
+    description: "Bit Clock Bypass.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 23
     bit_size: 1
-    enum: Bce
   - name: bcd
-    description: Bit Clock Direction.
+    description: "Bit Clock Direction.\n\nRaw bit values: false (0) = ExtTargetMode: Generated externally in Target mode.; true (1) = IntControllerMode: Generated internally in Controller mode."
     bit_offset: 24
     bit_size: 1
-    enum: Bcd
   - name: bcp
-    description: Bit Clock Polarity.
+    description: "Bit Clock Polarity.\n\nRaw bit values: false (0) = ActiveHigh: Active high.; true (1) = ActiveLow: Active low."
     bit_offset: 25
     bit_size: 1
-    enum: Bcp
   - name: msel
     description: MCLK Select.
     bit_offset: 26
     bit_size: 2
     enum: Msel2
   - name: bci
-    description: Bit Clock Input.
+    description: "Bit Clock Input.\n\nRaw bit values: false (0) = NoEffect: Disable.; true (1) = ClockedAsIfExtGenerated: Enable."
     bit_offset: 28
     bit_size: 1
-    enum: SaiAlphaEnumIndia
   - name: bcs
-    description: Bit Clock Swap.
+    description: "Bit Clock Swap.\n\nRaw bit values: false (0) = Normal: Use the normal bit clock source.; true (1) = SwapBitClkSource: Swap the bit clock source."
     bit_offset: 29
     bit_size: 1
-    enum: SaiAlphaEnumKilo
   - name: sync
     description: Synchronous Mode.
     bit_offset: 30
@@ -221,30 +214,25 @@ fieldset/SaiAlphaFieldsetFoxtrot:
   description: Receive Configuration 4.
   fields:
   - name: fsd
-    description: Frame Sync Direction.
+    description: "Frame Sync Direction.\n\nRaw bit values: false (0) = ExtTargetMode: Generated externally in Target mode.; true (1) = IntControllerMode: Generated internally in Controller mode."
     bit_offset: 0
     bit_size: 1
-    enum: Bcd
   - name: fsp
-    description: Frame Sync Polarity.
+    description: "Frame Sync Polarity.\n\nRaw bit values: false (0) = ActiveHigh: Active high.; true (1) = ActiveLow: Active low."
     bit_offset: 1
     bit_size: 1
-    enum: Bcp
   - name: ondem
-    description: On-Demand Mode.
+    description: "On-Demand Mode.\n\nRaw bit values: false (0) = Disable: Generated continuously.; true (1) = Enable: Generated when the FIFO warning flag is 0."
     bit_offset: 2
     bit_size: 1
-    enum: SaiAlphaEnumVictor
   - name: fse
-    description: Frame Sync Early.
+    description: "Frame Sync Early.\n\nRaw bit values: false (0) = Disable: First bit of the frame.; true (1) = Enable: One bit before the first bit of the frame."
     bit_offset: 3
     bit_size: 1
-    enum: Fse
   - name: mf
-    description: MSB First.
+    description: "MSB First.\n\nRaw bit values: false (0) = Disable: LSB.; true (1) = Enable: MSB."
     bit_offset: 4
     bit_size: 1
-    enum: Mf
   - name: sywd
     description: Sync Width.
     bit_offset: 8
@@ -266,10 +254,9 @@ fieldset/SaiAlphaFieldsetFoxtrot:
     bit_size: 2
     enum: SaiAlphaEnumOscar
   - name: fcont
-    description: FIFO Continue on Error.
+    description: "FIFO Continue on Error.\n\nRaw bit values: false (0) = Disable: From the start of the next frame after the FIFO error flag is cleared.; true (1) = Enable: From the same word that caused the FIFO error to become 1 after the FIFO warning flag is cleared."
     bit_offset: 28
     bit_size: 1
-    enum: SaiAlphaEnumPapa
 fieldset/SaiAlphaFieldsetGolf:
   description: Receive Configuration 5.
   fields:
@@ -292,95 +279,77 @@ fieldset/SaiAlphaFieldsetHotel:
   description: Receive Control.
   fields:
   - name: frde
-    description: FIFO Request DMA Enable.
+    description: "FIFO Request DMA Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Bce
   - name: fwde
-    description: FIFO Warning DMA Enable.
+    description: "FIFO Warning DMA Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: Bce
   - name: frie
-    description: FIFO Request Interrupt Enable.
+    description: "FIFO Request Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 8
     bit_size: 1
-    enum: Bce
   - name: fwie
-    description: FIFO Warning Interrupt Enable.
+    description: "FIFO Warning Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 9
     bit_size: 1
-    enum: Bce
   - name: feie
-    description: FIFO Error Interrupt Enable.
+    description: "FIFO Error Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 10
     bit_size: 1
-    enum: Bce
   - name: seie
-    description: Sync Error Interrupt Enable.
+    description: "Sync Error Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 11
     bit_size: 1
-    enum: Bce
   - name: wsie
-    description: Word Start Interrupt Enable.
+    description: "Word Start Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 12
     bit_size: 1
-    enum: Bce
   - name: frf
-    description: FIFO Request Flag.
+    description: "FIFO Request Flag.\n\nRaw bit values: false (0) = BelowWatermark: Watermark not reached.; true (1) = WatermarkReached: Watermark reached."
     bit_offset: 16
     bit_size: 1
-    enum: SaiAlphaEnumFoxtrotAlpha
   - name: fwf
-    description: FIFO Warning Flag.
+    description: "FIFO Warning Flag.\n\nRaw bit values: false (0) = NotFull: Not full.; true (1) = Full: Full."
     bit_offset: 17
     bit_size: 1
-    enum: SaiAlphaEnumIndiaAlpha
   - name: fef
-    description: FIFO Error Flag.
+    description: "FIFO Error Flag.\n\nRaw bit values: false (0) = NoFlag: No error.; true (1) = Flag: Receive overflow detected."
     bit_offset: 18
     bit_size: 1
-    enum: SaiAlphaEnumBravoAlpha
   - name: sef
-    description: Sync Error Flag.
+    description: "Sync Error Flag.\n\nRaw bit values: false (0) = NoFlag: Not detected.; true (1) = Flag: Detected."
     bit_offset: 19
     bit_size: 1
-    enum: Sef2
   - name: wsf
-    description: Word Start Flag.
+    description: "Word Start Flag.\n\nRaw bit values: false (0) = NoFlag: Not detected.; true (1) = Flag: Detected."
     bit_offset: 20
     bit_size: 1
-    enum: Sef2
   - name: sr
-    description: Software Reset.
+    description: "Software Reset.\n\nRaw bit values: false (0) = NoEffect: No effect.; true (1) = SwReset: Software reset."
     bit_offset: 24
     bit_size: 1
-    enum: SaiAlphaEnumMikeAlpha
   - name: fr
-    description: FIFO Reset.
+    description: "FIFO Reset.\n\nRaw bit values: false (0) = NoEffect: No effect.; true (1) = FifoReset: Reset."
     bit_offset: 25
     bit_size: 1
-    enum: SaiAlphaEnumDeltaAlpha
   - name: bce
-    description: Bit Clock Enable.
+    description: "Bit Clock Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 28
     bit_size: 1
-    enum: Bce
   - name: dbge
-    description: Debug Enable.
+    description: "Debug Enable.\n\nRaw bit values: false (0) = Disable: Disable after completing the current frame.; true (1) = Enable: Enable."
     bit_offset: 29
     bit_size: 1
-    enum: SaiAlphaEnumAlphaAlpha
   - name: stope
-    description: Stop Enable.
+    description: "Stop Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 30
     bit_size: 1
-    enum: Bce
   - name: re
-    description: Receiver Enable.
+    description: "Receiver Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable (or receiver disabled and not yet reached end of frame)."
     bit_offset: 31
     bit_size: 1
-    enum: SaiAlphaEnumQuebecAlpha
 fieldset/SaiAlphaFieldsetIndia:
   description: Receive Data.
   fields:
@@ -396,10 +365,9 @@ fieldset/SaiAlphaFieldsetJuliet:
     bit_offset: 0
     bit_size: 4
   - name: rcp
-    description: Read Channel Pointer.
+    description: "Read Channel Pointer.\n\nRaw bit values: false (0) = Disable: No effect.; true (1) = Enable: Next FIFO to be read."
     bit_offset: 15
     bit_size: 1
-    enum: SaiAlphaEnumGolf
   - name: wfp
     description: Write FIFO Pointer.
     bit_offset: 16
@@ -428,35 +396,30 @@ fieldset/SaiAlphaFieldsetMike:
     bit_offset: 0
     bit_size: 8
   - name: byp
-    description: Bit Clock Bypass.
+    description: "Bit Clock Bypass.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 23
     bit_size: 1
-    enum: Bce
   - name: bcd
-    description: Bit Clock Direction.
+    description: "Bit Clock Direction.\n\nRaw bit values: false (0) = ExtInTarget: Generate externally in Target mode.; true (1) = IntInController: Generate internally in Controller mode."
     bit_offset: 24
     bit_size: 1
-    enum: SaiAlphaEnumUniformAlpha
   - name: bcp
-    description: Bit Clock Polarity.
+    description: "Bit Clock Polarity.\n\nRaw bit values: false (0) = ActiveHigh: Active high.; true (1) = ActiveLow: Active low."
     bit_offset: 25
     bit_size: 1
-    enum: Bcp
   - name: msel
     description: MCLK Select.
     bit_offset: 26
     bit_size: 2
     enum: Msel2
   - name: bci
-    description: Bit Clock Input.
+    description: "Bit Clock Input.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 28
     bit_size: 1
-    enum: Bce
   - name: bcs
-    description: Bit Clock Swap.
+    description: "Bit Clock Swap.\n\nRaw bit values: false (0) = Disable: Use the normal bit clock source.; true (1) = Enable: Swap the bit clock source."
     bit_offset: 29
     bit_size: 1
-    enum: SaiAlphaEnumXrayAlpha
   - name: sync
     description: Synchronous Mode.
     bit_offset: 30
@@ -481,35 +444,29 @@ fieldset/SaiAlphaFieldsetOscar:
   description: Transmit Configuration 4.
   fields:
   - name: fsd
-    description: Frame Sync Direction.
+    description: "Frame Sync Direction.\n\nRaw bit values: false (0) = ExtInTargetMode: Generated externally in Target mode.; true (1) = IntInControllerMode: Generated internally in Controller mode."
     bit_offset: 0
     bit_size: 1
-    enum: SaiAlphaEnumEchoBravo
   - name: fsp
-    description: Frame Sync Polarity.
+    description: "Frame Sync Polarity.\n\nRaw bit values: false (0) = ActiveHigh: Active high.; true (1) = ActiveLow: Active low."
     bit_offset: 1
     bit_size: 1
-    enum: Bcp
   - name: ondem
-    description: On-Demand Mode.
+    description: "On-Demand Mode.\n\nRaw bit values: false (0) = ContinuousFrameSync: Generated continuously.; true (1) = OnDemandFrameSync: Generated after the FIFO warning flag is cleared."
     bit_offset: 2
     bit_size: 1
-    enum: SaiAlphaEnumIndiaBravo
   - name: fse
-    description: Frame Sync Early.
+    description: "Frame Sync Early.\n\nRaw bit values: false (0) = Disable: First bit of the frame.; true (1) = Enable: One bit before the first bit of the frame."
     bit_offset: 3
     bit_size: 1
-    enum: Fse
   - name: mf
-    description: MSB First.
+    description: "MSB First.\n\nRaw bit values: false (0) = Disable: LSB.; true (1) = Enable: MSB."
     bit_offset: 4
     bit_size: 1
-    enum: Mf
   - name: chmod
-    description: Channel Mode.
+    description: "Channel Mode.\n\nRaw bit values: false (0) = TdmMode: TDM mode.; true (1) = OutputMode: Output mode."
     bit_offset: 5
     bit_size: 1
-    enum: SaiAlphaEnumAlpha
   - name: sywd
     description: Sync Width.
     bit_offset: 8
@@ -529,10 +486,9 @@ fieldset/SaiAlphaFieldsetOscar:
     bit_size: 2
     enum: SaiAlphaEnumBravoBravo
   - name: fcont
-    description: FIFO Continue on Error.
+    description: "FIFO Continue on Error.\n\nRaw bit values: false (0) = Disable: Continue from the start of the next frame.; true (1) = Enable: Continue from the same word that caused the FIFO error."
     bit_offset: 28
     bit_size: 1
-    enum: SaiAlphaEnumCharlieBravo
 fieldset/SaiAlphaFieldsetPapa:
   description: Transmit Configuration 5.
   fields:
@@ -555,95 +511,77 @@ fieldset/SaiAlphaFieldsetQuebec:
   description: Transmit Control.
   fields:
   - name: frde
-    description: FIFO Request DMA Enable.
+    description: "FIFO Request DMA Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Bce
   - name: fwde
-    description: FIFO Warning DMA Enable.
+    description: "FIFO Warning DMA Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: Bce
   - name: frie
-    description: FIFO Request Interrupt Enable.
+    description: "FIFO Request Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 8
     bit_size: 1
-    enum: Bce
   - name: fwie
-    description: FIFO Warning Interrupt Enable.
+    description: "FIFO Warning Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 9
     bit_size: 1
-    enum: Bce
   - name: feie
-    description: FIFO Error Interrupt Enable.
+    description: "FIFO Error Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 10
     bit_size: 1
-    enum: Bce
   - name: seie
-    description: Sync Error Interrupt Enable.
+    description: "Sync Error Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 11
     bit_size: 1
-    enum: Bce
   - name: wsie
-    description: Word Start Interrupt Enable.
+    description: "Word Start Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 12
     bit_size: 1
-    enum: Bce
   - name: frf
-    description: FIFO Request Flag.
+    description: "FIFO Request Flag.\n\nRaw bit values: false (0) = NoFlag: Watermark not reached.; true (1) = Flag: Watermark reached."
     bit_offset: 16
     bit_size: 1
-    enum: SaiAlphaEnumSierraBravo
   - name: fwf
-    description: FIFO Warning Flag.
+    description: "FIFO Warning Flag.\n\nRaw bit values: false (0) = Disable: Not empty.; true (1) = Enable: Empty."
     bit_offset: 17
     bit_size: 1
-    enum: SaiAlphaEnumVictorBravo
   - name: fef
-    description: FIFO Error Flag.
+    description: "FIFO Error Flag.\n\nRaw bit values: false (0) = NoFlag: Not detected.; true (1) = Flag: Detected."
     bit_offset: 18
     bit_size: 1
-    enum: Sef2
   - name: sef
-    description: Sync Error Flag.
+    description: "Sync Error Flag.\n\nRaw bit values: false (0) = NoFlag: Not detected.; true (1) = Flag: Detected."
     bit_offset: 19
     bit_size: 1
-    enum: Sef2
   - name: wsf
-    description: Word Start Flag.
+    description: "Word Start Flag.\n\nRaw bit values: false (0) = NoFlag: Not detected.; true (1) = Flag: Detected."
     bit_offset: 20
     bit_size: 1
-    enum: Sef2
   - name: sr
-    description: Software Reset.
+    description: "Software Reset.\n\nRaw bit values: false (0) = Disable: No effect.; true (1) = Enable: Software reset."
     bit_offset: 24
     bit_size: 1
-    enum: SaiAlphaEnumZuluBravo
   - name: fr
-    description: FIFO Reset.
+    description: "FIFO Reset.\n\nRaw bit values: false (0) = NoEffect: No effect.; true (1) = Reset: FIFO reset."
     bit_offset: 25
     bit_size: 1
-    enum: SaiAlphaEnumQuebecBravo
   - name: bce
-    description: Bit Clock Enable.
+    description: "Bit Clock Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 28
     bit_size: 1
-    enum: Bce
   - name: dbge
-    description: Debug Enable.
+    description: "Debug Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 29
     bit_size: 1
-    enum: Bce
   - name: stope
-    description: Stop Enable.
+    description: "Stop Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 30
     bit_size: 1
-    enum: Bce
   - name: te
-    description: Transmitter Enable.
+    description: "Transmitter Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable (or transmitter has been disabled and has not yet reached the end of the frame)."
     bit_offset: 31
     bit_size: 1
-    enum: SaiAlphaEnumDeltaCharlie
 fieldset/SaiAlphaFieldsetRomeo:
   description: Transmit Data.
   fields:
@@ -663,10 +601,9 @@ fieldset/SaiAlphaFieldsetSierra:
     bit_offset: 16
     bit_size: 4
   - name: wcp
-    description: Write Channel Pointer.
+    description: "Write Channel Pointer.\n\nRaw bit values: false (0) = Disable: No effect.; true (1) = Enable: Next FIFO to be written."
     bit_offset: 31
     bit_size: 1
-    enum: SaiAlphaEnumGolfCharlie
 fieldset/SaiAlphaFieldsetTango:
   description: Transmit Mask.
   fields:
@@ -691,15 +628,6 @@ fieldset/SaiAlphaFieldsetUniform:
     description: Major Version Number.
     bit_offset: 24
     bit_size: 8
-enum/SaiAlphaEnumAlpha:
-  bit_size: 1
-  variants:
-  - name: OutputMode
-    description: Output mode.
-    value: 1
-  - name: TdmMode
-    description: TDM mode.
-    value: 0
 enum/SaiAlphaEnumCharlie:
   bit_size: 16
   variants:
@@ -778,60 +706,6 @@ enum/SaiAlphaEnumEcho:
   - name: Mclk3
     description: Controller clock (MCLK) option 3.
     value: 3
-enum/SaiAlphaEnumFoxtrot:
-  bit_size: 1
-  variants:
-  - name: Input
-    description: Input.
-    value: 0
-  - name: Output
-    description: Output.
-    value: 1
-enum/SaiAlphaEnumGolf:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: No effect.
-    value: 0
-  - name: Enable
-    description: Next FIFO to be read.
-    value: 1
-enum/Bcd:
-  bit_size: 1
-  variants:
-  - name: ExtTargetMode
-    description: Generated externally in Target mode.
-    value: 0
-  - name: IntControllerMode
-    description: Generated internally in Controller mode.
-    value: 1
-enum/SaiAlphaEnumIndia:
-  bit_size: 1
-  variants:
-  - name: ClockedAsIfExtGenerated
-    description: Enable.
-    value: 1
-  - name: NoEffect
-    description: Disable.
-    value: 0
-enum/SaiAlphaEnumKilo:
-  bit_size: 1
-  variants:
-  - name: Normal
-    description: Use the normal bit clock source.
-    value: 0
-  - name: SwapBitClkSource
-    description: Swap the bit clock source.
-    value: 1
-enum/Bce:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
 enum/Msel2:
   bit_size: 2
   variants:
@@ -877,15 +751,6 @@ enum/SaiAlphaEnumOscar:
   - name: EnaOnFifoWritesReads
     description: Enable on FIFO writes (from receive shift registers) and reads (by software).
     value: 3
-enum/SaiAlphaEnumPapa:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: From the start of the next frame after the FIFO error flag is cleared.
-    value: 0
-  - name: Enable
-    description: From the same word that caused the FIFO error to become 1 after the FIFO warning flag is cleared.
-    value: 1
 enum/SaiAlphaEnumQuebec:
   bit_size: 2
   variants:
@@ -898,42 +763,6 @@ enum/SaiAlphaEnumQuebec:
   - name: SixteenBitPacking
     description: Enable 16-bit FIFO packing.
     value: 3
-enum/Fse:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: First bit of the frame.
-    value: 0
-  - name: Enable
-    description: One bit before the first bit of the frame.
-    value: 1
-enum/Bcp:
-  bit_size: 1
-  variants:
-  - name: ActiveHigh
-    description: Active high.
-    value: 0
-  - name: ActiveLow
-    description: Active low.
-    value: 1
-enum/Mf:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: LSB.
-    value: 0
-  - name: Enable
-    description: MSB.
-    value: 1
-enum/SaiAlphaEnumVictor:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Generated continuously.
-    value: 0
-  - name: Enable
-    description: Generated when the FIFO warning flag is 0.
-    value: 1
 enum/SaiAlphaEnumWhiskey:
   bit_size: 5
   variants:
@@ -1111,78 +940,6 @@ enum/Wnw:
   - name: TenThirtyone9
     description: (WNW value + 1).
     value: 9
-enum/SaiAlphaEnumAlphaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable after completing the current frame.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SaiAlphaEnumBravoAlpha:
-  bit_size: 1
-  variants:
-  - name: Flag
-    description: Receive overflow detected.
-    value: 1
-  - name: NoFlag
-    description: No error.
-    value: 0
-enum/SaiAlphaEnumDeltaAlpha:
-  bit_size: 1
-  variants:
-  - name: FifoReset
-    description: Reset.
-    value: 1
-  - name: NoEffect
-    description: No effect.
-    value: 0
-enum/SaiAlphaEnumFoxtrotAlpha:
-  bit_size: 1
-  variants:
-  - name: BelowWatermark
-    description: Watermark not reached.
-    value: 0
-  - name: WatermarkReached
-    description: Watermark reached.
-    value: 1
-enum/SaiAlphaEnumIndiaAlpha:
-  bit_size: 1
-  variants:
-  - name: Full
-    description: Full.
-    value: 1
-  - name: NotFull
-    description: Not full.
-    value: 0
-enum/Sef2:
-  bit_size: 1
-  variants:
-  - name: Flag
-    description: Detected.
-    value: 1
-  - name: NoFlag
-    description: Not detected.
-    value: 0
-enum/SaiAlphaEnumMikeAlpha:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: No effect.
-    value: 0
-  - name: SwReset
-    description: Software reset.
-    value: 1
-enum/SaiAlphaEnumQuebecAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable (or receiver disabled and not yet reached end of frame).
-    value: 1
 enum/SaiAlphaEnumRomeoAlpha:
   bit_size: 3
   variants:
@@ -1279,24 +1036,6 @@ enum/SaiAlphaEnumTangoAlpha:
   - name: TwoClocks
     description: '2.'
     value: 1
-enum/SaiAlphaEnumUniformAlpha:
-  bit_size: 1
-  variants:
-  - name: ExtInTarget
-    description: Generate externally in Target mode.
-    value: 0
-  - name: IntInController
-    description: Generate internally in Controller mode.
-    value: 1
-enum/SaiAlphaEnumXrayAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Use the normal bit clock source.
-    value: 0
-  - name: Enable
-    description: Swap the bit clock source.
-    value: 1
 enum/SaiAlphaEnumAlphaBravo:
   bit_size: 2
   variants:
@@ -1327,15 +1066,6 @@ enum/SaiAlphaEnumBravoBravo:
   - name: EnabledOnFifoWrites
     description: Enable on FIFO writes (by software).
     value: 2
-enum/SaiAlphaEnumCharlieBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Continue from the start of the next frame.
-    value: 0
-  - name: Enable
-    description: Continue from the same word that caused the FIFO error.
-    value: 1
 enum/SaiAlphaEnumDeltaBravo:
   bit_size: 2
   variants:
@@ -1348,24 +1078,6 @@ enum/SaiAlphaEnumDeltaBravo:
   - name: SixteenBitFifoPacking
     description: Enable 16-bit FIFO packing.
     value: 3
-enum/SaiAlphaEnumEchoBravo:
-  bit_size: 1
-  variants:
-  - name: ExtInTargetMode
-    description: Generated externally in Target mode.
-    value: 0
-  - name: IntInControllerMode
-    description: Generated internally in Controller mode.
-    value: 1
-enum/SaiAlphaEnumIndiaBravo:
-  bit_size: 1
-  variants:
-  - name: ContinuousFrameSync
-    description: Generated continuously.
-    value: 0
-  - name: OnDemandFrameSync
-    description: Generated after the FIFO warning flag is cleared.
-    value: 1
 enum/SaiAlphaEnumJulietBravo:
   bit_size: 5
   variants:
@@ -1483,51 +1195,6 @@ enum/SaiAlphaEnumKiloBravo:
   - name: TenThirtyone9
     description: (W0W value + 1).
     value: 9
-enum/SaiAlphaEnumQuebecBravo:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: No effect.
-    value: 0
-  - name: Reset
-    description: FIFO reset.
-    value: 1
-enum/SaiAlphaEnumSierraBravo:
-  bit_size: 1
-  variants:
-  - name: Flag
-    description: Watermark reached.
-    value: 1
-  - name: NoFlag
-    description: Watermark not reached.
-    value: 0
-enum/SaiAlphaEnumVictorBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Not empty.
-    value: 0
-  - name: Enable
-    description: Empty.
-    value: 1
-enum/SaiAlphaEnumZuluBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: No effect.
-    value: 0
-  - name: Enable
-    description: Software reset.
-    value: 1
-enum/SaiAlphaEnumDeltaCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable (or transmitter has been disabled and has not yet reached the end of the frame).
-    value: 1
 enum/SaiAlphaEnumEchoCharlie:
   bit_size: 3
   variants:
@@ -1555,15 +1222,6 @@ enum/SaiAlphaEnumEchoCharlie:
   - name: WatermarkValue6
     description: (TFW +1).
     value: 6
-enum/SaiAlphaEnumGolfCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: No effect.
-    value: 0
-  - name: Enable
-    description: Next FIFO to be written.
-    value: 1
 enum/SaiAlphaEnumHotelCharlie:
   bit_size: 5
   variants:

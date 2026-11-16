@@ -127,120 +127,97 @@ fieldset/EmvsimAlphaFieldsetDelta:
   description: Control.
   fields:
   - name: ic
-    description: Inverse Convention.
+    description: "Inverse Convention.\n\nRaw bit values: false (0) = DirConvention: Direct.; true (1) = InvConvention: Inverse."
     bit_offset: 0
     bit_size: 1
-    enum: EmvsimAlphaEnumAlphaAlpha
   - name: icm
-    description: Initial Character Mode.
+    description: "Initial Character Mode.\n\nRaw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: Anack
   - name: anack
-    description: Auto NACK Enable.
+    description: "Auto NACK Enable.\n\nRaw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: Anack
   - name: onack
-    description: Overrun NACK Enable.
+    description: "Overrun NACK Enable.\n\nRaw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 3
     bit_size: 1
-    enum: Anack
   - name: flsh_rx
-    description: Flush Receiver.
+    description: "Flush Receiver.\n\nRaw bit values: false (0) = Normalop: Normal.; true (1) = Resethold: Reset."
     bit_offset: 8
     bit_size: 1
-    enum: FlshRx
   - name: flsh_tx
-    description: Flush Transmitter.
+    description: "Flush Transmitter.\n\nRaw bit values: false (0) = Normalop: Normal.; true (1) = Resethold: Reset."
     bit_offset: 9
     bit_size: 1
-    enum: FlshRx
   - name: sw_rst
-    description: Software Reset.
+    description: "Software Reset.\n\nRaw bit values: false (0) = Normalop: Normal.; true (1) = Resethold: Reset."
     bit_offset: 10
     bit_size: 1
-    enum: FlshRx
   - name: kill_clocks
-    description: Kill Internal Clocks.
+    description: "Kill Internal Clocks.\n\nRaw bit values: false (0) = InclkEnabled: Enable.; true (1) = InclkDisabled: Disable."
     bit_offset: 11
     bit_size: 1
-    enum: EmvsimAlphaEnumDeltaAlpha
   - name: doze_en
-    description: Doze Enable.
+    description: "Doze Enable.\n\nRaw bit values: false (0) = DozeGate: Disable.; true (1) = DozeNogate: Enable."
     bit_offset: 12
     bit_size: 1
-    enum: EmvsimAlphaEnumOscar
   - name: stop_en
-    description: STOP Enable.
+    description: "STOP Enable.\n\nRaw bit values: false (0) = StopAllClks: Disable.; true (1) = OnlySckOn: Enable."
     bit_offset: 13
     bit_size: 1
-    enum: EmvsimAlphaEnumEchoBravo
   - name: rcv_en
-    description: Receiver Enable.
+    description: "Receiver Enable.\n\nRaw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 16
     bit_size: 1
-    enum: Anack
   - name: xmt_en
-    description: Transmitter Enable.
+    description: "Transmitter Enable.\n\nRaw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 17
     bit_size: 1
-    enum: Anack
   - name: rcvr_11
-    description: Receiver 11 ETU Mode Enable.
+    description: "Receiver 11 ETU Mode Enable.\n\nRaw bit values: false (0) = Rcvr12: 12 ETU operation.; true (1) = Rcvr11: 11 ETU operation."
     bit_offset: 18
     bit_size: 1
-    enum: EmvsimAlphaEnumKiloAlpha
   - name: rx_dma_en
-    description: Receive DMA Enable.
+    description: "Receive DMA Enable.\n\nRaw bit values: false (0) = NoDmareadReq: Not asserted.; true (1) = DmareadReq: Asserted."
     bit_offset: 19
     bit_size: 1
-    enum: EmvsimAlphaEnumUniformAlpha
   - name: tx_dma_en
-    description: Transmit DMA Enable.
+    description: "Transmit DMA Enable.\n\nRaw bit values: false (0) = NoDmawriteReq: Not asserted.; true (1) = DmawriteReq: Asserted."
     bit_offset: 20
     bit_size: 1
-    enum: EmvsimAlphaEnumSierraBravo
   - name: inv_crc_val
-    description: Invert CRC Output Value Bits.
+    description: "Invert CRC Output Value Bits.\n\nRaw bit values: false (0) = NoInvert: Not inverted.; true (1) = Invert: Inverted."
     bit_offset: 24
     bit_size: 1
-    enum: EmvsimAlphaEnumCharlieAlpha
   - name: crc_out_flip
-    description: CRC Output Value Bit Reversal Or Flip Control.
+    description: "CRC Output Value Bit Reversal Or Flip Control.\n\nRaw bit values: false (0) = NotReversed: Not reversed.; true (1) = Reversed: Reversed."
     bit_offset: 25
     bit_size: 1
-    enum: CrcInFlip
   - name: crc_in_flip
-    description: CRC Input Byte's Bit Reversal Or Flip Control.
+    description: "CRC Input Byte's Bit Reversal Or Flip Control.\n\nRaw bit values: false (0) = NotReversed: Not reversed.; true (1) = Reversed: Reversed."
     bit_offset: 26
     bit_size: 1
-    enum: CrcInFlip
   - name: cwt_en
-    description: CWT Counter Enable.
+    description: "CWT Counter Enable.\n\nRaw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 27
     bit_size: 1
-    enum: Anack
   - name: lrc_en
-    description: LRC Enable.
+    description: "LRC Enable.\n\nRaw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 28
     bit_size: 1
-    enum: Anack
   - name: crc_en
-    description: CRC Enable.
+    description: "CRC Enable.\n\nRaw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 29
     bit_size: 1
-    enum: Anack
   - name: xmt_crc_lrc
-    description: Transmit CRC or LRC Enable.
+    description: "Transmit CRC or LRC Enable.\n\nRaw bit values: false (0) = NoCrcLrcTx: Do not transmit.; true (1) = CrcLrcTx: Transmit."
     bit_offset: 30
     bit_size: 1
-    enum: EmvsimAlphaEnumUniformBravo
   - name: bwt_en
-    description: Block Wait Time Counter Enable.
+    description: "Block Wait Time Counter Enable.\n\nRaw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 31
     bit_size: 1
-    enum: Anack
 fieldset/EmvsimAlphaFieldsetEcho:
   description: Character Wait Time Value.
   fields:
@@ -274,85 +251,69 @@ fieldset/EmvsimAlphaFieldsetIndia:
   description: Interrupt Mask.
   fields:
   - name: rdt_im
-    description: Receive Data Threshold Interrupt Mask.
+    description: "Receive Data Threshold Interrupt Mask.\n\nRaw bit values: false (0) = IntEnabled: Enable.; true (1) = IntMasked: Masked."
     bit_offset: 0
     bit_size: 1
-    enum: GpcntIm
   - name: tc_im
-    description: Transmit Complete Interrupt Mask.
+    description: "Transmit Complete Interrupt Mask.\n\nRaw bit values: false (0) = IntEnabled: Enable.; true (1) = IntMasked: Masked."
     bit_offset: 1
     bit_size: 1
-    enum: GpcntIm
   - name: rfo_im
-    description: Receive FIFO Overflow Interrupt Mask.
+    description: "Receive FIFO Overflow Interrupt Mask.\n\nRaw bit values: false (0) = IntEnabled: Enable.; true (1) = IntMasked: Masked."
     bit_offset: 2
     bit_size: 1
-    enum: GpcntIm
   - name: etc_im
-    description: Early Transmit Complete Interrupt Mask.
+    description: "Early Transmit Complete Interrupt Mask.\n\nRaw bit values: false (0) = IntEnabled: Enable.; true (1) = IntMasked: Masked."
     bit_offset: 3
     bit_size: 1
-    enum: GpcntIm
   - name: tfe_im
-    description: Transmit FIFO Empty Interrupt Mask.
+    description: "Transmit FIFO Empty Interrupt Mask.\n\nRaw bit values: false (0) = IntEnabled: Enable.; true (1) = IntMasked: Masked."
     bit_offset: 4
     bit_size: 1
-    enum: GpcntIm
   - name: tnack_im
-    description: Transmit NACK Threshold Interrupt Mask.
+    description: "Transmit NACK Threshold Interrupt Mask.\n\nRaw bit values: false (0) = IntEnabled: Enable.; true (1) = IntMasked: Masked."
     bit_offset: 5
     bit_size: 1
-    enum: GpcntIm
   - name: tff_im
-    description: Transmit FIFO Full Interrupt Mask.
+    description: "Transmit FIFO Full Interrupt Mask.\n\nRaw bit values: false (0) = IntEnabled: Enable.; true (1) = IntMasked: Masked."
     bit_offset: 6
     bit_size: 1
-    enum: GpcntIm
   - name: tdt_im
-    description: Transmit Data Threshold Interrupt Mask.
+    description: "Transmit Data Threshold Interrupt Mask.\n\nRaw bit values: false (0) = IntEnabled: Enable.; true (1) = IntMasked: Masked."
     bit_offset: 7
     bit_size: 1
-    enum: GpcntIm
   - name: gpcnt0_im
-    description: General Purpose Timer 0 Timeout Interrupt Mask.
+    description: "General Purpose Timer 0 Timeout Interrupt Mask.\n\nRaw bit values: false (0) = IntEnabled: Enable.; true (1) = IntMasked: Masked."
     bit_offset: 8
     bit_size: 1
-    enum: GpcntIm
   - name: cwt_err_im
-    description: Character Wait Time Error Interrupt Mask.
+    description: "Character Wait Time Error Interrupt Mask.\n\nRaw bit values: false (0) = IntEnabled: Enable.; true (1) = IntDisabled: Masked."
     bit_offset: 9
     bit_size: 1
-    enum: EmvsimAlphaEnumMike
   - name: rnack_im
-    description: Receiver NACK Threshold Interrupt Mask.
+    description: "Receiver NACK Threshold Interrupt Mask.\n\nRaw bit values: false (0) = IntEnabled: Enable.; true (1) = IntMasked: Masked."
     bit_offset: 10
     bit_size: 1
-    enum: GpcntIm
   - name: bwt_err_im
-    description: Block Wait Time Error Interrupt Mask.
+    description: "Block Wait Time Error Interrupt Mask.\n\nRaw bit values: false (0) = IntEnabled: Enable.; true (1) = IntMasked: Masked."
     bit_offset: 11
     bit_size: 1
-    enum: GpcntIm
   - name: bgt_err_im
-    description: Block Guard Time Error Interrupt.
+    description: "Block Guard Time Error Interrupt.\n\nRaw bit values: false (0) = IntEnabled: Enable.; true (1) = IntMasked: Masked."
     bit_offset: 12
     bit_size: 1
-    enum: GpcntIm
   - name: gpcnt1_im
-    description: General Purpose Counter 1 Timeout Interrupt Mask.
+    description: "General Purpose Counter 1 Timeout Interrupt Mask.\n\nRaw bit values: false (0) = IntEnabled: Enable.; true (1) = IntMasked: Masked."
     bit_offset: 13
     bit_size: 1
-    enum: GpcntIm
   - name: rx_data_im
-    description: Receive Data Interrupt Mask.
+    description: "Receive Data Interrupt Mask.\n\nRaw bit values: false (0) = IntEnabled: Enable.; true (1) = IntMasked: Masked."
     bit_offset: 14
     bit_size: 1
-    enum: GpcntIm
   - name: pef_im
-    description: Parity Error Interrupt Mask.
+    description: "Parity Error Interrupt Mask.\n\nRaw bit values: false (0) = IntEnabled: Enable.; true (1) = IntMasked: Masked."
     bit_offset: 15
     bit_size: 1
-    enum: GpcntIm
 fieldset/EmvsimAlphaFieldsetJuliet:
   description: Parameters.
   fields:
@@ -368,60 +329,49 @@ fieldset/EmvsimAlphaFieldsetKilo:
   description: Port Control and Status.
   fields:
   - name: sapd
-    description: Auto Power Down Enable.
+    description: "Auto Power Down Enable.\n\nRaw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Anack
   - name: svcc_en
-    description: Vcc Enable for Smart Card.
+    description: "Vcc Enable for Smart Card.\n\nRaw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: Anack
   - name: vccenp
-    description: VCC Enable Polarity Control.
+    description: "VCC Enable Polarity Control.\n\nRaw bit values: false (0) = ActiveHigh: Active high.; true (1) = ActiveLow: Active low."
     bit_offset: 2
     bit_size: 1
-    enum: EmvsimAlphaEnumTangoBravo
   - name: srst
-    description: Reset Smart Card.
+    description: "Reset Smart Card.\n\nRaw bit values: false (0) = Asserted: Assert.; true (1) = DeAsserted: Deassert."
     bit_offset: 3
     bit_size: 1
-    enum: EmvsimAlphaEnumDeltaBravo
   - name: scen
-    description: Clock Enable for Smart Card.
+    description: "Clock Enable for Smart Card.\n\nRaw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 4
     bit_size: 1
-    enum: Anack
   - name: scsp
-    description: Smart Card Clock Stop Polarity.
+    description: "Smart Card Clock Stop Polarity.\n\nRaw bit values: false (0) = ScspLogic0: Logic 0.; true (1) = ScspLogic1: Logic 1."
     bit_offset: 5
     bit_size: 1
-    enum: EmvsimAlphaEnumXrayAlpha
   - name: spd
-    description: Auto Power-Down Control.
+    description: "Auto Power-Down Control.\n\nRaw bit values: false (0) = NoEffect: No.; true (1) = Powerdown: Yes."
     bit_offset: 7
     bit_size: 1
-    enum: EmvsimAlphaEnumYankeeAlpha
   - name: spdim
-    description: Smart Card Presence Detect Interrupt Mask.
+    description: "Smart Card Presence Detect Interrupt Mask.\n\nRaw bit values: false (0) = IntEnabled: Enable.; true (1) = IntMasked: Mask."
     bit_offset: 24
     bit_size: 1
-    enum: EmvsimAlphaEnumBravoBravo
   - name: spdif
-    description: Smart Card Presence Detect Interrupt Flag.
+    description: "Smart Card Presence Detect Interrupt Flag.\n\nRaw bit values: false (0) = NoInsertRemoveDetect: No insertion or removal.; true (1) = InsertRemoveDetect: Insertion or removal."
     bit_offset: 25
     bit_size: 1
-    enum: EmvsimAlphaEnumAlphaBravo
   - name: spdp
-    description: Smart Card Presence Detect Pin Status.
+    description: "Smart Card Presence Detect Pin Status.\n\nRaw bit values: false (0) = LogicLow: Logic low.; true (1) = LogicHigh: Logic high."
     bit_offset: 26
     bit_size: 1
-    enum: EmvsimAlphaEnumCharlieBravo
   - name: spdes
-    description: SIM Presence Detect Edge Select.
+    description: "SIM Presence Detect Edge Select.\n\nRaw bit values: false (0) = FallingEdge: Falling edge.; true (1) = RisingEdge: Rising edge."
     bit_offset: 27
     bit_size: 1
-    enum: EmvsimAlphaEnumZuluAlpha
 fieldset/EmvsimAlphaFieldsetLima:
   description: Receive Data Read Buffer.
   fields:
@@ -433,60 +383,49 @@ fieldset/EmvsimAlphaFieldsetMike:
   description: Receive Status.
   fields:
   - name: rfo
-    description: Receive FIFO Overflow Flag.
+    description: "Receive FIFO Overflow Flag.\n\nRaw bit values: false (0) = NoOverrun: No overrun error.; true (1) = Overflow: Overrun error."
     bit_offset: 0
     bit_size: 1
-    enum: EmvsimAlphaEnumNovemberAlpha
   - name: rx_data
-    description: Receive Data Interrupt Flag.
+    description: "Receive Data Interrupt Flag.\n\nRaw bit values: false (0) = NoByteRx: No new byte.; true (1) = ByteRx: New byte."
     bit_offset: 4
     bit_size: 1
-    enum: EmvsimAlphaEnumSierraAlpha
   - name: rdtf
-    description: Receive Data Threshold Interrupt Flag.
+    description: "Receive Data Threshold Interrupt Flag.\n\nRaw bit values: false (0) = LessthanRxthresh: Less than threshold.; true (1) = GreaterEqRxthresh: Greater than or equal to threshold."
     bit_offset: 5
     bit_size: 1
-    enum: EmvsimAlphaEnumMikeAlpha
   - name: lrc_ok
-    description: LRC Check OK Flag.
+    description: "LRC Check OK Flag.\n\nRaw bit values: false (0) = LrcNotok: No match.; true (1) = LrcOk: Match."
     bit_offset: 6
     bit_size: 1
-    enum: EmvsimAlphaEnumFoxtrotAlpha
   - name: crc_ok
-    description: CRC Check OK Flag.
+    description: "CRC Check OK Flag.\n\nRaw bit values: false (0) = CrcNotok: Current CRC value does not match remainder.; true (1) = CrcOk: Current calculated CRC value matches the expected result."
     bit_offset: 7
     bit_size: 1
-    enum: EmvsimAlphaEnumIndia
   - name: cwt_err
-    description: Character Wait Time Error Flag.
+    description: "Character Wait Time Error Flag.\n\nRaw bit values: false (0) = NoCwtErr: No CWT violation.; true (1) = CwtErr: CWT violation."
     bit_offset: 8
     bit_size: 1
-    enum: EmvsimAlphaEnumLima
   - name: rte
-    description: Received NACK Threshold Error Flag.
+    description: "Received NACK Threshold Error Flag.\n\nRaw bit values: false (0) = LessthanNackthresh: Less than.; true (1) = GreaterEqNackthresh: Equal to."
     bit_offset: 9
     bit_size: 1
-    enum: EmvsimAlphaEnumQuebecAlpha
   - name: bwt_err
-    description: Block Wait Time Error Flag.
+    description: "Block Wait Time Error Flag.\n\nRaw bit values: false (0) = BwtErrNo: Not exceeded.; true (1) = BwtErrYes: Exceeded."
     bit_offset: 10
     bit_size: 1
-    enum: EmvsimAlphaEnumEcho
   - name: bgt_err
-    description: Block Guard Time Error Flag.
+    description: "Block Guard Time Error Flag.\n\nRaw bit values: false (0) = BgtErrSufficient: Sufficient.; true (1) = BgtErrToosmall: Too small."
     bit_offset: 11
     bit_size: 1
-    enum: EmvsimAlphaEnumBravo
   - name: pef
-    description: Parity Error Flag.
+    description: "Parity Error Flag.\n\nRaw bit values: false (0) = NoParityDetect: No error.; true (1) = ParityDetect: Error."
     bit_offset: 12
     bit_size: 1
-    enum: EmvsimAlphaEnumHotelAlpha
   - name: fef
-    description: Frame Error Flag.
+    description: "Frame Error Flag.\n\nRaw bit values: false (0) = NoFefDetect: No error.; true (1) = FefDetect: Error."
     bit_offset: 13
     bit_size: 1
-    enum: EmvsimAlphaEnumRomeo
   - name: rx_wptr
     description: Receive FIFO Write Pointer Value.
     bit_offset: 16
@@ -525,45 +464,37 @@ fieldset/EmvsimAlphaFieldsetQuebec:
   description: Transmitter Status.
   fields:
   - name: tnte
-    description: Transmit NACK Threshold Error Flag.
+    description: "Transmit NACK Threshold Error Flag.\n\nRaw bit values: false (0) = LessthanNackthresh: Threshold not reached.; true (1) = GreaterEqNackthresh: Threshold reached."
     bit_offset: 0
     bit_size: 1
-    enum: EmvsimAlphaEnumQuebecBravo
   - name: tfe
-    description: Transmit FIFO Empty Flag.
+    description: "Transmit FIFO Empty Flag.\n\nRaw bit values: false (0) = FifoEmpty: Not empty.; true (1) = FifoNotempty: Empty."
     bit_offset: 3
     bit_size: 1
-    enum: EmvsimAlphaEnumLimaBravo
   - name: etcf
-    description: Early Transmit Complete Flag.
+    description: "Early Transmit Complete Flag.\n\nRaw bit values: false (0) = EtxPending: Pending or incomplete.; true (1) = EtxComplete: Complete."
     bit_offset: 4
     bit_size: 1
-    enum: EmvsimAlphaEnumQuebec
   - name: tcf
-    description: Transmit Complete Flag.
+    description: "Transmit Complete Flag.\n\nRaw bit values: false (0) = TxPending: Pending or incomplete.; true (1) = TxComplete: Complete."
     bit_offset: 5
     bit_size: 1
-    enum: EmvsimAlphaEnumIndiaBravo
   - name: tff
-    description: Transmit FIFO Full Flag.
+    description: "Transmit FIFO Full Flag.\n\nRaw bit values: false (0) = TxFifoNotfull: Not full.; true (1) = TxFifoFull: Full."
     bit_offset: 6
     bit_size: 1
-    enum: EmvsimAlphaEnumNovemberBravo
   - name: tdtf
-    description: Transmit Data Threshold Flag.
+    description: "Transmit Data Threshold Flag.\n\nRaw bit values: false (0) = LessthanTxthresh: Threshold exceeded or this field written to 0.; true (1) = GreaterEqTxthresh: Threshold not exceeded."
     bit_offset: 7
     bit_size: 1
-    enum: EmvsimAlphaEnumKiloBravo
   - name: gpcnt0_to
-    description: General Purpose Counter 0 Timeout Flag.
+    description: "General Purpose Counter 0 Timeout Flag.\n\nRaw bit values: false (0) = Gpcnt0ToNotreached: GPCNT0 not reached, or flag cleared.; true (1) = Gpcnt0ToReached: GPCNT0 reached."
     bit_offset: 8
     bit_size: 1
-    enum: EmvsimAlphaEnumWhiskey
   - name: gpcnt1_to
-    description: General Purpose Counter 1 Timeout Flag.
+    description: "General Purpose Counter 1 Timeout Flag.\n\nRaw bit values: false (0) = Gpcnt1ToNotreached: GPCNT1 not reached, or flag cleared.; true (1) = Gpcnt1ToReached: GPCNT1 reached."
     bit_offset: 9
     bit_size: 1
-    enum: EmvsimAlphaEnumZulu
   - name: tx_rptr
     description: Transmit FIFO Read Pointer.
     bit_offset: 16
@@ -591,69 +522,6 @@ fieldset/EmvsimAlphaFieldsetSierra:
     description: Version ID.
     bit_offset: 0
     bit_size: 32
-enum/EmvsimAlphaEnumBravo:
-  bit_size: 1
-  variants:
-  - name: BgtErrSufficient
-    description: Sufficient.
-    value: 0
-  - name: BgtErrToosmall
-    description: Too small.
-    value: 1
-enum/EmvsimAlphaEnumEcho:
-  bit_size: 1
-  variants:
-  - name: BwtErrNo
-    description: Not exceeded.
-    value: 0
-  - name: BwtErrYes
-    description: Exceeded.
-    value: 1
-enum/Anack:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disable.
-    value: 0
-  - name: Enabled
-    description: Enable.
-    value: 1
-enum/CrcInFlip:
-  bit_size: 1
-  variants:
-  - name: NotReversed
-    description: Not reversed.
-    value: 0
-  - name: Reversed
-    description: Reversed.
-    value: 1
-enum/EmvsimAlphaEnumIndia:
-  bit_size: 1
-  variants:
-  - name: CrcNotok
-    description: Current CRC value does not match remainder.
-    value: 0
-  - name: CrcOk
-    description: Current calculated CRC value matches the expected result.
-    value: 1
-enum/EmvsimAlphaEnumLima:
-  bit_size: 1
-  variants:
-  - name: CwtErr
-    description: CWT violation.
-    value: 1
-  - name: NoCwtErr
-    description: No CWT violation.
-    value: 0
-enum/EmvsimAlphaEnumMike:
-  bit_size: 1
-  variants:
-  - name: IntDisabled
-    description: Masked.
-    value: 1
-  - name: IntEnabled
-    description: Enable.
-    value: 0
 enum/EmvsimAlphaEnumNovember:
   bit_size: 9
   variants:
@@ -720,60 +588,6 @@ enum/EmvsimAlphaEnumNovember:
   - name: Valid9
     description: Divisor value F/D.
     value: 9
-enum/EmvsimAlphaEnumOscar:
-  bit_size: 1
-  variants:
-  - name: DozeGate
-    description: Disable.
-    value: 0
-  - name: DozeNogate
-    description: Enable.
-    value: 1
-enum/GpcntIm:
-  bit_size: 1
-  variants:
-  - name: IntEnabled
-    description: Enable.
-    value: 0
-  - name: IntMasked
-    description: Masked.
-    value: 1
-enum/EmvsimAlphaEnumQuebec:
-  bit_size: 1
-  variants:
-  - name: EtxComplete
-    description: Complete.
-    value: 1
-  - name: EtxPending
-    description: Pending or incomplete.
-    value: 0
-enum/EmvsimAlphaEnumRomeo:
-  bit_size: 1
-  variants:
-  - name: FefDetect
-    description: Error.
-    value: 1
-  - name: NoFefDetect
-    description: No error.
-    value: 0
-enum/FlshRx:
-  bit_size: 1
-  variants:
-  - name: Normalop
-    description: Normal.
-    value: 0
-  - name: Resethold
-    description: Reset.
-    value: 1
-enum/EmvsimAlphaEnumWhiskey:
-  bit_size: 1
-  variants:
-  - name: Gpcnt0ToNotreached
-    description: GPCNT0 not reached, or flag cleared.
-    value: 0
-  - name: Gpcnt0ToReached
-    description: GPCNT0 reached.
-    value: 1
 enum/GpcntClkSel:
   bit_size: 2
   variants:
@@ -789,261 +603,9 @@ enum/GpcntClkSel:
   - name: Txclk
     description: ETU clock (transmit clock).
     value: 3
-enum/EmvsimAlphaEnumZulu:
-  bit_size: 1
-  variants:
-  - name: Gpcnt1ToNotreached
-    description: GPCNT1 not reached, or flag cleared.
-    value: 0
-  - name: Gpcnt1ToReached
-    description: GPCNT1 reached.
-    value: 1
-enum/EmvsimAlphaEnumAlphaAlpha:
-  bit_size: 1
-  variants:
-  - name: DirConvention
-    description: Direct.
-    value: 0
-  - name: InvConvention
-    description: Inverse.
-    value: 1
-enum/EmvsimAlphaEnumCharlieAlpha:
-  bit_size: 1
-  variants:
-  - name: Invert
-    description: Inverted.
-    value: 1
-  - name: NoInvert
-    description: Not inverted.
-    value: 0
-enum/EmvsimAlphaEnumDeltaAlpha:
-  bit_size: 1
-  variants:
-  - name: InclkDisabled
-    description: Disable.
-    value: 1
-  - name: InclkEnabled
-    description: Enable.
-    value: 0
-enum/EmvsimAlphaEnumFoxtrotAlpha:
-  bit_size: 1
-  variants:
-  - name: LrcNotok
-    description: No match.
-    value: 0
-  - name: LrcOk
-    description: Match.
-    value: 1
-enum/EmvsimAlphaEnumHotelAlpha:
-  bit_size: 1
-  variants:
-  - name: NoParityDetect
-    description: No error.
-    value: 0
-  - name: ParityDetect
-    description: Error.
-    value: 1
-enum/EmvsimAlphaEnumKiloAlpha:
-  bit_size: 1
-  variants:
-  - name: Rcvr11
-    description: 11 ETU operation.
-    value: 1
-  - name: Rcvr12
-    description: 12 ETU operation.
-    value: 0
-enum/EmvsimAlphaEnumMikeAlpha:
-  bit_size: 1
-  variants:
-  - name: GreaterEqRxthresh
-    description: Greater than or equal to threshold.
-    value: 1
-  - name: LessthanRxthresh
-    description: Less than threshold.
-    value: 0
-enum/EmvsimAlphaEnumNovemberAlpha:
-  bit_size: 1
-  variants:
-  - name: NoOverrun
-    description: No overrun error.
-    value: 0
-  - name: Overflow
-    description: Overrun error.
-    value: 1
-enum/EmvsimAlphaEnumQuebecAlpha:
-  bit_size: 1
-  variants:
-  - name: GreaterEqNackthresh
-    description: Equal to.
-    value: 1
-  - name: LessthanNackthresh
-    description: Less than.
-    value: 0
 enum/RxCnt:
   bit_size: 4
   variants:
   - name: FifoEmpty
     description: FIFO empty.
-    value: 0
-enum/EmvsimAlphaEnumSierraAlpha:
-  bit_size: 1
-  variants:
-  - name: ByteRx
-    description: New byte.
-    value: 1
-  - name: NoByteRx
-    description: No new byte.
-    value: 0
-enum/EmvsimAlphaEnumUniformAlpha:
-  bit_size: 1
-  variants:
-  - name: DmareadReq
-    description: Asserted.
-    value: 1
-  - name: NoDmareadReq
-    description: Not asserted.
-    value: 0
-enum/EmvsimAlphaEnumXrayAlpha:
-  bit_size: 1
-  variants:
-  - name: ScspLogic0
-    description: Logic 0.
-    value: 0
-  - name: ScspLogic1
-    description: Logic 1.
-    value: 1
-enum/EmvsimAlphaEnumYankeeAlpha:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: No.
-    value: 0
-  - name: Powerdown
-    description: Yes.
-    value: 1
-enum/EmvsimAlphaEnumZuluAlpha:
-  bit_size: 1
-  variants:
-  - name: FallingEdge
-    description: Falling edge.
-    value: 0
-  - name: RisingEdge
-    description: Rising edge.
-    value: 1
-enum/EmvsimAlphaEnumAlphaBravo:
-  bit_size: 1
-  variants:
-  - name: InsertRemoveDetect
-    description: Insertion or removal.
-    value: 1
-  - name: NoInsertRemoveDetect
-    description: No insertion or removal.
-    value: 0
-enum/EmvsimAlphaEnumBravoBravo:
-  bit_size: 1
-  variants:
-  - name: IntEnabled
-    description: Enable.
-    value: 0
-  - name: IntMasked
-    description: Mask.
-    value: 1
-enum/EmvsimAlphaEnumCharlieBravo:
-  bit_size: 1
-  variants:
-  - name: LogicHigh
-    description: Logic high.
-    value: 1
-  - name: LogicLow
-    description: Logic low.
-    value: 0
-enum/EmvsimAlphaEnumDeltaBravo:
-  bit_size: 1
-  variants:
-  - name: Asserted
-    description: Assert.
-    value: 0
-  - name: DeAsserted
-    description: Deassert.
-    value: 1
-enum/EmvsimAlphaEnumEchoBravo:
-  bit_size: 1
-  variants:
-  - name: OnlySckOn
-    description: Enable.
-    value: 1
-  - name: StopAllClks
-    description: Disable.
-    value: 0
-enum/EmvsimAlphaEnumIndiaBravo:
-  bit_size: 1
-  variants:
-  - name: TxComplete
-    description: Complete.
-    value: 1
-  - name: TxPending
-    description: Pending or incomplete.
-    value: 0
-enum/EmvsimAlphaEnumKiloBravo:
-  bit_size: 1
-  variants:
-  - name: GreaterEqTxthresh
-    description: Threshold not exceeded.
-    value: 1
-  - name: LessthanTxthresh
-    description: Threshold exceeded or this field written to 0.
-    value: 0
-enum/EmvsimAlphaEnumLimaBravo:
-  bit_size: 1
-  variants:
-  - name: FifoEmpty
-    description: Not empty.
-    value: 0
-  - name: FifoNotempty
-    description: Empty.
-    value: 1
-enum/EmvsimAlphaEnumNovemberBravo:
-  bit_size: 1
-  variants:
-  - name: TxFifoFull
-    description: Full.
-    value: 1
-  - name: TxFifoNotfull
-    description: Not full.
-    value: 0
-enum/EmvsimAlphaEnumQuebecBravo:
-  bit_size: 1
-  variants:
-  - name: GreaterEqNackthresh
-    description: Threshold reached.
-    value: 1
-  - name: LessthanNackthresh
-    description: Threshold not reached.
-    value: 0
-enum/EmvsimAlphaEnumSierraBravo:
-  bit_size: 1
-  variants:
-  - name: DmawriteReq
-    description: Asserted.
-    value: 1
-  - name: NoDmawriteReq
-    description: Not asserted.
-    value: 0
-enum/EmvsimAlphaEnumTangoBravo:
-  bit_size: 1
-  variants:
-  - name: ActiveHigh
-    description: Active high.
-    value: 0
-  - name: ActiveLow
-    description: Active low.
-    value: 1
-enum/EmvsimAlphaEnumUniformBravo:
-  bit_size: 1
-  variants:
-  - name: CrcLrcTx
-    description: Transmit.
-    value: 1
-  - name: NoCrcLrcTx
-    description: Do not transmit.
     value: 0

@@ -148,15 +148,13 @@ fieldset/UsdhcAlphaFieldsetAlpha:
     bit_offset: 0
     bit_size: 2
   - name: admalme
-    description: ADMA length mismatch error.
+    description: "ADMA length mismatch error.\n\nRaw bit values: false (0) = AdmaesB: No error.; true (1) = AdmaesA: Error."
     bit_offset: 2
     bit_size: 1
-    enum: UsdhcAlphaEnumMike
   - name: admadce
-    description: ADMA descriptor error.
+    description: "ADMA descriptor error.\n\nRaw bit values: false (0) = AdmadceB: No error.; true (1) = AdmadceA: Error."
     bit_offset: 3
     bit_size: 1
-    enum: UsdhcAlphaEnumLima
 fieldset/UsdhcAlphaFieldsetBravo:
   description: ADMA System Address.
   fields:
@@ -168,45 +166,37 @@ fieldset/UsdhcAlphaFieldsetCharlie:
   description: Auto CMD12 Error Status.
   fields:
   - name: ac12ne
-    description: Auto CMD12 not executed.
+    description: "Auto CMD12 not executed.\n\nRaw bit values: false (0) = Ac12neB: Executed.; true (1) = Ac12neA: Not executed."
     bit_offset: 0
     bit_size: 1
-    enum: UsdhcAlphaEnumHotel
   - name: ac12toe
-    description: Auto CMD12 / 23 timeout error.
+    description: "Auto CMD12 / 23 timeout error.\n\nRaw bit values: false (0) = Ac12toeB: No error.; true (1) = Ac12toeA: Time out."
     bit_offset: 1
     bit_size: 1
-    enum: UsdhcAlphaEnumIndia
   - name: ac12ce
-    description: Auto CMD12 / 23 CRC error.
+    description: "Auto CMD12 / 23 CRC error.\n\nRaw bit values: false (0) = Ac12ceB: No CRC error.; true (1) = Ac12ceA: CRC error met in Auto CMD12/23 response."
     bit_offset: 2
     bit_size: 1
-    enum: UsdhcAlphaEnumBravo
   - name: ac12ebe
-    description: Auto CMD12 / 23 end bit error.
+    description: "Auto CMD12 / 23 end bit error.\n\nRaw bit values: false (0) = Ac12ebeB: No error.; true (1) = Ac12ebeA: End bit error generated."
     bit_offset: 3
     bit_size: 1
-    enum: UsdhcAlphaEnumDelta
   - name: ac12ie
-    description: Auto CMD12 / 23 index error.
+    description: "Auto CMD12 / 23 index error.\n\nRaw bit values: false (0) = Ac12ieB: No error.; true (1) = Ac12ieA: Error, the CMD index in response is not CMD12/23."
     bit_offset: 4
     bit_size: 1
-    enum: UsdhcAlphaEnumGolf
   - name: cnibac12e
-    description: Command not issued by Auto CMD12 error.
+    description: "Command not issued by Auto CMD12 error.\n\nRaw bit values: false (0) = Cnibac12eB: No error.; true (1) = Cnibac12eA: Not issued."
     bit_offset: 7
     bit_size: 1
-    enum: UsdhcAlphaEnumMikeBravo
   - name: execute_tuning
-    description: Execute tuning.
+    description: "Execute tuning.\n\nRaw bit values: false (0) = ExTunB: Tuning procedure is aborted.; true (1) = ExTunA: Start tuning procedure."
     bit_offset: 22
     bit_size: 1
-    enum: UsdhcAlphaEnumZuluCharlie
   - name: smp_clk_sel
-    description: Sample clock select.
+    description: "Sample clock select.\n\nRaw bit values: false (0) = SmpClkB: Fixed clock is used to sample data.; true (1) = SmpClkA: Tuned clock is used to sample data."
     bit_offset: 23
     bit_size: 1
-    enum: UsdhcAlphaEnumPapa
 fieldset/UsdhcAlphaFieldsetDelta:
   description: Block Attributes.
   fields:
@@ -294,65 +284,54 @@ fieldset/UsdhcAlphaFieldsetKilo:
   description: Command Transfer Type.
   fields:
   - name: dmaen
-    description: DMAEN.
+    description: "DMAEN.\n\nRaw bit values: false (0) = CmdXfrTyp0b: Disable.; true (1) = CmdXfrTyp0a: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: UsdhcAlphaEnumIndiaBravo
   - name: bcen
-    description: BCEN.
+    description: "BCEN.\n\nRaw bit values: false (0) = CmdXfrTyp1B: Disable.; true (1) = CmdXfrTyp1A: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: UsdhcAlphaEnumHotelBravo
   - name: ac12en
-    description: AC12EN.
+    description: "AC12EN.\n\nRaw bit values: false (0) = CmdXfrTyp2B: Disable.; true (1) = CmdXfrTyp2A: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: UsdhcAlphaEnumGolfBravo
   - name: ddr_en
-    description: DDR_EN.
+    description: "DDR_EN.\n\nRaw bit values: false (0) = CmdXfrTyp3B: Disable.; true (1) = CmdXfrTyp3A: Enable."
     bit_offset: 3
     bit_size: 1
-    enum: UsdhcAlphaEnumZuluBravo
   - name: dtdsel
-    description: DTDSEL.
+    description: "DTDSEL.\n\nRaw bit values: false (0) = CmdXfrTyp4B: Disable.; true (1) = CmdXfrTyp4A: Enable."
     bit_offset: 4
     bit_size: 1
-    enum: UsdhcAlphaEnumJulietBravo
   - name: msbsel
-    description: MSBSEL.
+    description: "MSBSEL.\n\nRaw bit values: false (0) = CmdXfrTyp5B: Disable.; true (1) = CmdXfrTyp5A: Enable."
     bit_offset: 5
     bit_size: 1
-    enum: UsdhcAlphaEnumKiloBravo
   - name: nibble_pos
-    description: NIBBLE_POS.
+    description: "NIBBLE_POS.\n\nRaw bit values: false (0) = CmdXfrTyp6B: Disable.; true (1) = CmdXfrTyp6A: Enable."
     bit_offset: 6
     bit_size: 1
-    enum: UsdhcAlphaEnumLimaDelta
   - name: ac23en
-    description: AC23EN.
+    description: "AC23EN.\n\nRaw bit values: false (0) = CmdXfrTyp7B: Disable.; true (1) = CmdXfrTyp7A: Enable."
     bit_offset: 7
     bit_size: 1
-    enum: UsdhcAlphaEnumJuliet
   - name: rsptyp
     description: Response type select.
     bit_offset: 16
     bit_size: 2
     enum: UsdhcAlphaEnumNovemberDelta
   - name: cccen
-    description: Command CRC check enable.
+    description: "Command CRC check enable.\n\nRaw bit values: false (0) = CccenB: Disables command CRC check.; true (1) = CccenA: Enables command CRC check."
     bit_offset: 19
     bit_size: 1
-    enum: UsdhcAlphaEnumJulietAlpha
   - name: cicen
-    description: Command index check enable.
+    description: "Command index check enable.\n\nRaw bit values: false (0) = CicenB: Disable command index check.; true (1) = CicenA: Enables command index check."
     bit_offset: 20
     bit_size: 1
-    enum: UsdhcAlphaEnumTangoAlpha
   - name: dpsel
-    description: Data present select.
+    description: "Data present select.\n\nRaw bit values: false (0) = DpselB: No data present.; true (1) = DpselA: Data present."
     bit_offset: 21
     bit_size: 1
-    enum: UsdhcAlphaEnumOscarCharlie
   - name: cmdtyp
     description: Command type.
     bit_offset: 22
@@ -525,211 +504,172 @@ fieldset/UsdhcAlphaFieldsetQuebec:
     bit_offset: 2
     bit_size: 1
   - name: use_tuning_sdr50
-    description: Use Tuning for SDR50.
+    description: "Use Tuning for SDR50.\n\nRaw bit values: false (0) = UseTuningB: SDR50 does not support tuning.; true (1) = UseTuningA: SDR50 supports tuning."
     bit_offset: 13
     bit_size: 1
-    enum: UsdhcAlphaEnumKiloEcho
   - name: mbl
     description: Max block length.
     bit_offset: 16
     bit_size: 3
     enum: UsdhcAlphaEnumEchoDelta
   - name: admas
-    description: ADMA support.
+    description: "ADMA support.\n\nRaw bit values: false (0) = AdmasB: Advanced DMA not supported.; true (1) = AdmasA: Advanced DMA supported."
     bit_offset: 20
     bit_size: 1
-    enum: UsdhcAlphaEnumNovember
   - name: hss
-    description: High speed support.
+    description: "High speed support.\n\nRaw bit values: false (0) = HssB: High speed not supported.; true (1) = HssA: High speed supported."
     bit_offset: 21
     bit_size: 1
-    enum: UsdhcAlphaEnumCharlieDelta
   - name: dmas
-    description: DMA support.
+    description: "DMA support.\n\nRaw bit values: false (0) = DmasB: DMA not supported.; true (1) = DmasA: DMA supported."
     bit_offset: 22
     bit_size: 1
-    enum: UsdhcAlphaEnumMikeCharlie
   - name: srs
-    description: Suspend / resume support.
+    description: "Suspend / resume support.\n\nRaw bit values: false (0) = SrsB: Not supported.; true (1) = SrsA: Supported."
     bit_offset: 23
     bit_size: 1
-    enum: UsdhcAlphaEnumZuluDelta
   - name: vs33
-    description: Voltage support 3.3 V.
+    description: "Voltage support 3.3 V.\n\nRaw bit values: false (0) = Vs33B: 3.3 V not supported.; true (1) = Vs33A: 3.3 V supported."
     bit_offset: 24
     bit_size: 1
-    enum: UsdhcAlphaEnumNovemberEcho
   - name: vs30
-    description: Voltage support 3.0 V.
+    description: "Voltage support 3.0 V.\n\nRaw bit values: false (0) = Vs30B: 3.0 V not supported.; true (1) = Vs30A: 3.0 V supported."
     bit_offset: 25
     bit_size: 1
-    enum: UsdhcAlphaEnumMikeEcho
   - name: vs18
-    description: Voltage support 1.8 V.
+    description: "Voltage support 1.8 V.\n\nRaw bit values: false (0) = Vs18B: 1.8 V not supported.; true (1) = Vs18A: 1.8 V supported."
     bit_offset: 26
     bit_size: 1
-    enum: UsdhcAlphaEnumLimaEcho
 fieldset/UsdhcAlphaFieldsetRomeo:
   description: Interrupt Signal Enable.
   fields:
   - name: ccien
-    description: Command complete interrupt enable.
+    description: "Command complete interrupt enable.\n\nRaw bit values: false (0) = CcienA: Masked.; true (1) = CcienB: Enabled."
     bit_offset: 0
     bit_size: 1
-    enum: UsdhcAlphaEnumNovemberAlpha
   - name: tcien
-    description: Transfer complete interrupt enable.
+    description: "Transfer complete interrupt enable.\n\nRaw bit values: false (0) = TcienA: Masked.; true (1) = TcienB: Enabled."
     bit_offset: 1
     bit_size: 1
-    enum: UsdhcAlphaEnumBravoEcho
   - name: bgeien
-    description: Block gap event interrupt enable.
+    description: "Block gap event interrupt enable.\n\nRaw bit values: false (0) = BgienA: Masked.; true (1) = BgienB: Enabled."
     bit_offset: 2
     bit_size: 1
-    enum: UsdhcAlphaEnumRomeo
   - name: dintien
-    description: DMA interrupt enable.
+    description: "DMA interrupt enable.\n\nRaw bit values: false (0) = DintienB: Masked.; true (1) = DintienA: Enabled."
     bit_offset: 3
     bit_size: 1
-    enum: UsdhcAlphaEnumEchoCharlie
   - name: bwrien
-    description: Buffer write ready interrupt enable.
+    description: "Buffer write ready interrupt enable.\n\nRaw bit values: false (0) = BwrienA: Masked.; true (1) = BwrienB: Enabled."
     bit_offset: 4
     bit_size: 1
-    enum: UsdhcAlphaEnumFoxtrotAlpha
   - name: brrien
-    description: Buffer read ready interrupt enable.
+    description: "Buffer read ready interrupt enable.\n\nRaw bit values: false (0) = BrrienB: Masked.; true (1) = BrrienA: Enabled."
     bit_offset: 5
     bit_size: 1
-    enum: UsdhcAlphaEnumAlphaAlpha
   - name: cinsien
-    description: Card insertion interrupt enable.
+    description: "Card insertion interrupt enable.\n\nRaw bit values: false (0) = CinsienA: Masked.; true (1) = CinsienB: Enabled."
     bit_offset: 6
     bit_size: 1
-    enum: UsdhcAlphaEnumZuluAlpha
   - name: crmien
-    description: Card removal interrupt enable.
+    description: "Card removal interrupt enable.\n\nRaw bit values: false (0) = CrmienA: Masked.; true (1) = CrmienB: Enabled."
     bit_offset: 7
     bit_size: 1
-    enum: UsdhcAlphaEnumQuebecBravo
   - name: cintien
-    description: Card interrupt enable.
+    description: "Card interrupt enable.\n\nRaw bit values: false (0) = CintienB: Masked.; true (1) = CintienA: Enabled."
     bit_offset: 8
     bit_size: 1
-    enum: UsdhcAlphaEnumDeltaBravo
   - name: rteien
-    description: Re-tuning event interrupt enable.
+    description: "Re-tuning event interrupt enable.\n\nRaw bit values: false (0) = RteienO: Masked.; true (1) = RteienN: Enabled."
     bit_offset: 12
     bit_size: 1
-    enum: UsdhcAlphaEnumTangoDelta
   - name: tpien
-    description: Tuning Pass interrupt enable.
+    description: "Tuning Pass interrupt enable.\n\nRaw bit values: false (0) = TpienR: Masked.; true (1) = TpienQ: Enabled."
     bit_offset: 14
     bit_size: 1
-    enum: UsdhcAlphaEnumFoxtrotEcho
   - name: ctoeien
-    description: Command timeout error interrupt enable.
+    description: "Command timeout error interrupt enable.\n\nRaw bit values: false (0) = CtoeienB: Masked.; true (1) = CtoeienA: Enabled."
     bit_offset: 16
     bit_size: 1
-    enum: UsdhcAlphaEnumTangoBravo
   - name: cceien
-    description: Command CRC error interrupt enable.
+    description: "Command CRC error interrupt enable.\n\nRaw bit values: false (0) = CceienB: Masked.; true (1) = CceienA: Enabled."
     bit_offset: 17
     bit_size: 1
-    enum: UsdhcAlphaEnumLimaAlpha
   - name: cebeien
-    description: Command end bit error interrupt enable.
+    description: "Command end bit error interrupt enable.\n\nRaw bit values: false (0) = CebeienB: Masked.; true (1) = CebeienA: Enabled."
     bit_offset: 18
     bit_size: 1
-    enum: UsdhcAlphaEnumRomeoAlpha
   - name: cieien
-    description: Command index error interrupt enable.
+    description: "Command index error interrupt enable.\n\nRaw bit values: false (0) = CieienB: Masked.; true (1) = CieienA: Enabled."
     bit_offset: 19
     bit_size: 1
-    enum: UsdhcAlphaEnumVictorAlpha
   - name: dtoeien
-    description: Data timeout error interrupt enable.
+    description: "Data timeout error interrupt enable.\n\nRaw bit values: false (0) = DtoeienB: Masked.; true (1) = DtoeienA: Enabled."
     bit_offset: 20
     bit_size: 1
-    enum: UsdhcAlphaEnumSierraCharlie
   - name: dceien
-    description: Data CRC error interrupt enable.
+    description: "Data CRC error interrupt enable.\n\nRaw bit values: false (0) = DceienB: Masked.; true (1) = DceienA: Enabled."
     bit_offset: 21
     bit_size: 1
-    enum: UsdhcAlphaEnumXrayBravo
   - name: debeien
-    description: Data end bit error interrupt enable.
+    description: "Data end bit error interrupt enable.\n\nRaw bit values: false (0) = DebeienB: Masked.; true (1) = DebeienA: Enabled."
     bit_offset: 22
     bit_size: 1
-    enum: UsdhcAlphaEnumBravoCharlie
   - name: ac12eien
-    description: Auto CMD12 error interrupt enable.
+    description: "Auto CMD12 error interrupt enable.\n\nRaw bit values: false (0) = Ac12eienB: Masked.; true (1) = Ac12eienA: Enabled."
     bit_offset: 24
     bit_size: 1
-    enum: UsdhcAlphaEnumEcho
   - name: tneien
-    description: Tuning error interrupt enable.
+    description: "Tuning error interrupt enable.\n\nRaw bit values: false (0) = TneienB: Masked.; true (1) = TneienA: Enabled."
     bit_offset: 26
     bit_size: 1
-    enum: UsdhcAlphaEnumDeltaEcho
   - name: dmaeien
-    description: DMA error interrupt enable.
+    description: "DMA error interrupt enable.\n\nRaw bit values: false (0) = DmaeienB: Masked.; true (1) = DmaeienA: Enable."
     bit_offset: 28
     bit_size: 1
-    enum: UsdhcAlphaEnumKiloCharlie
 fieldset/UsdhcAlphaFieldsetSierra:
   description: Interrupt Status.
   fields:
   - name: cc
-    description: Command complete.
+    description: "Command complete.\n\nRaw bit values: false (0) = CcB: Command not complete.; true (1) = CcA: Command complete."
     bit_offset: 0
     bit_size: 1
-    enum: UsdhcAlphaEnumIndiaAlpha
   - name: tc
-    description: Transfer complete.
+    description: "Transfer complete.\n\nRaw bit values: false (0) = TcB: Transfer does not complete.; true (1) = TcA: Transfer complete."
     bit_offset: 1
     bit_size: 1
-    enum: UsdhcAlphaEnumAlphaEcho
   - name: bge
-    description: Block gap event.
+    description: "Block gap event.\n\nRaw bit values: false (0) = BgeB: No block gap event.; true (1) = BgeA: Transaction stopped at block gap."
     bit_offset: 2
     bit_size: 1
-    enum: UsdhcAlphaEnumQuebec
   - name: dint
-    description: DMA interrupt.
+    description: "DMA interrupt.\n\nRaw bit values: false (0) = DintB: No DMA interrupt.; true (1) = DintA: DMA interrupt is generated."
     bit_offset: 3
     bit_size: 1
-    enum: UsdhcAlphaEnumDeltaCharlie
   - name: bwr
-    description: Buffer write ready.
+    description: "Buffer write ready.\n\nRaw bit values: false (0) = BwrB: Not ready to write buffer.; true (1) = BwrA: Ready to write buffer."
     bit_offset: 4
     bit_size: 1
-    enum: UsdhcAlphaEnumEchoAlpha
   - name: brr
-    description: Buffer read ready.
+    description: "Buffer read ready.\n\nRaw bit values: false (0) = BrrB: Not ready to read buffer.; true (1) = BrrA: Ready to read buffer."
     bit_offset: 5
     bit_size: 1
-    enum: UsdhcAlphaEnumZulu
   - name: cins
-    description: Card insertion.
+    description: "Card insertion.\n\nRaw bit values: false (0) = BwrB: Card state unstable or removed.; true (1) = BwrA: Card inserted."
     bit_offset: 6
     bit_size: 1
-    enum: UsdhcAlphaEnumYankeeAlpha
   - name: crm
-    description: Card removal.
+    description: "Card removal.\n\nRaw bit values: false (0) = CrmA: Card state unstable or inserted.; true (1) = CrmB: Card removed."
     bit_offset: 7
     bit_size: 1
-    enum: UsdhcAlphaEnumPapaBravo
   - name: cint
-    description: Card interrupt.
+    description: "Card interrupt.\n\nRaw bit values: false (0) = CintA: No card interrupt.; true (1) = CintB: Generate card interrupt."
     bit_offset: 8
     bit_size: 1
-    enum: UsdhcAlphaEnumCharlieBravo
   - name: rte
-    description: 'Re-tuning event: (only for SD3.0 SDR104 mode).'
+    description: "Re-tuning event: (only for SD3.0 SDR104 mode).\n\nRaw bit values: false (0) = RteA: Re-tuning is not required.; true (1) = RteB: Re-tuning should be performed."
     bit_offset: 12
     bit_size: 1
-    enum: UsdhcAlphaEnumSierraDelta
   - name: tp
     description: Tuning pass:(only for SD3.0 SDR104 mode).
     bit_offset: 14
@@ -739,194 +679,159 @@ fieldset/UsdhcAlphaFieldsetSierra:
     bit_offset: 15
     bit_size: 1
   - name: ctoe
-    description: Command timeout error.
+    description: "Command timeout error.\n\nRaw bit values: false (0) = CtoeA: No error.; true (1) = CtoeB: Time out."
     bit_offset: 16
     bit_size: 1
-    enum: UsdhcAlphaEnumSierraBravo
   - name: cce
-    description: Command CRC error.
+    description: "Command CRC error.\n\nRaw bit values: false (0) = CceA: No error.; true (1) = CceB: CRC error generated."
     bit_offset: 17
     bit_size: 1
-    enum: UsdhcAlphaEnumKiloAlpha
   - name: cebe
-    description: Command end bit error.
+    description: "Command end bit error.\n\nRaw bit values: false (0) = CebeA: No error.; true (1) = CebeB: End bit error generated."
     bit_offset: 18
     bit_size: 1
-    enum: UsdhcAlphaEnumQuebecAlpha
   - name: cie
-    description: Command index error.
+    description: "Command index error.\n\nRaw bit values: false (0) = CieA: No error.; true (1) = CieB: Error."
     bit_offset: 19
     bit_size: 1
-    enum: UsdhcAlphaEnumUniformAlpha
   - name: dtoe
-    description: Data timeout error.
+    description: "Data timeout error.\n\nRaw bit values: false (0) = DtoeA: No error.; true (1) = DtoeB: Time out."
     bit_offset: 20
     bit_size: 1
-    enum: UsdhcAlphaEnumRomeoCharlie
   - name: dce
-    description: Data CRC error.
+    description: "Data CRC error.\n\nRaw bit values: false (0) = DceA: No error.; true (1) = DceB: Error."
     bit_offset: 21
     bit_size: 1
-    enum: UsdhcAlphaEnumWhiskeyBravo
   - name: debe
-    description: Data end bit error.
+    description: "Data end bit error.\n\nRaw bit values: false (0) = DebeA: No error.; true (1) = DebeB: Error."
     bit_offset: 22
     bit_size: 1
-    enum: UsdhcAlphaEnumAlphaCharlie
   - name: ac12e
-    description: Auto CMD12 error.
+    description: "Auto CMD12 error.\n\nRaw bit values: false (0) = Ac12eA: No error.; true (1) = Ac12eB: Error."
     bit_offset: 24
     bit_size: 1
-    enum: UsdhcAlphaEnumCharlie
   - name: tne
     description: 'Tuning error: (only for SD3.0 SDR104 mode).'
     bit_offset: 26
     bit_size: 1
   - name: dmae
-    description: DMA error.
+    description: "DMA error.\n\nRaw bit values: false (0) = DmaeA: No error.; true (1) = DmaeB: Error."
     bit_offset: 28
     bit_size: 1
-    enum: UsdhcAlphaEnumJulietCharlie
 fieldset/UsdhcAlphaFieldsetTango:
   description: Interrupt Status Enable.
   fields:
   - name: ccsen
-    description: Command complete status enable.
+    description: "Command complete status enable.\n\nRaw bit values: false (0) = CcsenA: Masked.; true (1) = CcsenB: Enabled."
     bit_offset: 0
     bit_size: 1
-    enum: UsdhcAlphaEnumOscarAlpha
   - name: tcsen
-    description: Transfer complete status enable.
+    description: "Transfer complete status enable.\n\nRaw bit values: false (0) = TcsenB: Masked.; true (1) = TcsenA: Enabled."
     bit_offset: 1
     bit_size: 1
-    enum: UsdhcAlphaEnumCharlieEcho
   - name: bgesen
-    description: Block gap event status enable.
+    description: "Block gap event status enable.\n\nRaw bit values: false (0) = BgesenA: Masked.; true (1) = BgesenB: Enabled."
     bit_offset: 2
     bit_size: 1
-    enum: UsdhcAlphaEnumSierra
   - name: dintsen
-    description: DMA interrupt status enable.
+    description: "DMA interrupt status enable.\n\nRaw bit values: false (0) = DintsenA: Masked.; true (1) = DintsenB: Enabled."
     bit_offset: 3
     bit_size: 1
-    enum: UsdhcAlphaEnumFoxtrotCharlie
   - name: bwrsen
-    description: Buffer write ready status enable.
+    description: "Buffer write ready status enable.\n\nRaw bit values: false (0) = BwrsenA: Masked.; true (1) = BwrsenB: Enabled."
     bit_offset: 4
     bit_size: 1
-    enum: UsdhcAlphaEnumGolfAlpha
   - name: brrsen
-    description: Buffer read ready status enable.
+    description: "Buffer read ready status enable.\n\nRaw bit values: false (0) = BrrsenA: Masked.; true (1) = BrrenB: Enabled."
     bit_offset: 5
     bit_size: 1
-    enum: UsdhcAlphaEnumBravoAlpha
   - name: cinssen
-    description: Card insertion status enable.
+    description: "Card insertion status enable.\n\nRaw bit values: false (0) = CinsenA: Masked.; true (1) = CinsenB: Enabled."
     bit_offset: 6
     bit_size: 1
-    enum: UsdhcAlphaEnumAlphaBravo
   - name: crmsen
-    description: Card removal status enable.
+    description: "Card removal status enable.\n\nRaw bit values: false (0) = CrmsenA: Masked.; true (1) = CrmsenB: Enabled."
     bit_offset: 7
     bit_size: 1
-    enum: UsdhcAlphaEnumRomeoBravo
   - name: cintsen
-    description: Card interrupt status enable.
+    description: "Card interrupt status enable.\n\nRaw bit values: false (0) = CintsenA: Masked.; true (1) = CintsenB: Enabled."
     bit_offset: 8
     bit_size: 1
-    enum: UsdhcAlphaEnumEchoBravo
   - name: rtesen
-    description: Re-tuning event status enable.
+    description: "Re-tuning event status enable.\n\nRaw bit values: false (0) = RtesenA: Masked.; true (1) = RtesenB: Enabled."
     bit_offset: 12
     bit_size: 1
-    enum: UsdhcAlphaEnumUniformDelta
   - name: tpsen
-    description: Tuning pass status enable.
+    description: "Tuning pass status enable.\n\nRaw bit values: false (0) = TpsenA: Masked.; true (1) = TpsenB: Enabled."
     bit_offset: 14
     bit_size: 1
-    enum: UsdhcAlphaEnumGolfEcho
   - name: ctoesen
-    description: Command timeout error status enable.
+    description: "Command timeout error status enable.\n\nRaw bit values: false (0) = CtosenA: Masked.; true (1) = CtosenB: Enabled."
     bit_offset: 16
     bit_size: 1
-    enum: UsdhcAlphaEnumUniformBravo
   - name: ccesen
-    description: Command CRC error status enable.
+    description: "Command CRC error status enable.\n\nRaw bit values: false (0) = CcesenA: Masked.; true (1) = CcesenB: Enabled."
     bit_offset: 17
     bit_size: 1
-    enum: UsdhcAlphaEnumMikeAlpha
   - name: cebesen
-    description: Command end bit error status enable.
+    description: "Command end bit error status enable.\n\nRaw bit values: false (0) = CebesenA: Masked.; true (1) = CebesenB: Enabled."
     bit_offset: 18
     bit_size: 1
-    enum: UsdhcAlphaEnumSierraAlpha
   - name: ciesen
-    description: Command index error status enable.
+    description: "Command index error status enable.\n\nRaw bit values: false (0) = CiesenA: Masked.; true (1) = CiesenB: Enabled."
     bit_offset: 19
     bit_size: 1
-    enum: UsdhcAlphaEnumWhiskeyAlpha
   - name: dtoesen
-    description: Data timeout error status enable.
+    description: "Data timeout error status enable.\n\nRaw bit values: false (0) = DtoesenA: Masked.; true (1) = DtoesenB: Enabled."
     bit_offset: 20
     bit_size: 1
-    enum: UsdhcAlphaEnumTangoCharlie
   - name: dcesen
-    description: Data CRC error status enable.
+    description: "Data CRC error status enable.\n\nRaw bit values: false (0) = DcesenA: Masked.; true (1) = DcesenB: Enabled."
     bit_offset: 21
     bit_size: 1
-    enum: UsdhcAlphaEnumYankeeBravo
   - name: debesen
-    description: Data end bit error status enable.
+    description: "Data end bit error status enable.\n\nRaw bit values: false (0) = DbesenA: Masked.; true (1) = DbesenB: Enabled."
     bit_offset: 22
     bit_size: 1
-    enum: UsdhcAlphaEnumCharlieCharlie
   - name: ac12esen
-    description: Auto CMD12 error status enable.
+    description: "Auto CMD12 error status enable.\n\nRaw bit values: false (0) = Ac12esenA: Masked.; true (1) = Ac12esenB: Enabled."
     bit_offset: 24
     bit_size: 1
-    enum: UsdhcAlphaEnumFoxtrot
   - name: tnesen
-    description: Tuning error status enable.
+    description: "Tuning error status enable.\n\nRaw bit values: false (0) = TnesenA: Masked.; true (1) = TnesenB: Enabled."
     bit_offset: 26
     bit_size: 1
-    enum: UsdhcAlphaEnumEchoEcho
   - name: dmaesen
-    description: DMA error status enable.
+    description: "DMA error status enable.\n\nRaw bit values: false (0) = DmasenB: Masked.; true (1) = DmasenA: Enabled."
     bit_offset: 28
     bit_size: 1
-    enum: UsdhcAlphaEnumLimaCharlie
 fieldset/UsdhcAlphaFieldsetUniform:
   description: Mixer Control.
   fields:
   - name: dmaen
-    description: DMA enable.
+    description: "DMA enable.\n\nRaw bit values: false (0) = DmainB: Disable.; true (1) = DmainA: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: UsdhcAlphaEnumHotelDelta
   - name: bcen
-    description: Block count enable.
+    description: "Block count enable.\n\nRaw bit values: false (0) = BcenB: Disable.; true (1) = BcenA: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: UsdhcAlphaEnumGolfDelta
   - name: ac12en
-    description: Auto CMD12 enable.
+    description: "Auto CMD12 enable.\n\nRaw bit values: false (0) = Ac12enB: Disable.; true (1) = Ac12enA: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: UsdhcAlphaEnumFoxtrotDelta
   - name: ddr_en
     description: Dual data rate mode selection.
     bit_offset: 3
     bit_size: 1
   - name: dtdsel
-    description: Data transfer direction select.
+    description: "Data transfer direction select.\n\nRaw bit values: false (0) = DtdselB: Write (Host to card).; true (1) = DtdselA: Read (Card to host)."
     bit_offset: 4
     bit_size: 1
-    enum: UsdhcAlphaEnumIndiaDelta
   - name: msbsel
-    description: Multi / Single block select.
+    description: "Multi / Single block select.\n\nRaw bit values: false (0) = MsbselB: Single block.; true (1) = MsbselA: Multiple blocks."
     bit_offset: 5
     bit_size: 1
-    enum: UsdhcAlphaEnumJulietDelta
   - name: nibble_pos
     description: Nibble position indication.
     bit_offset: 6
@@ -936,25 +841,21 @@ fieldset/UsdhcAlphaFieldsetUniform:
     bit_offset: 7
     bit_size: 1
   - name: exe_tune
-    description: 'Execute tuning: (Only used for SD3.0, SDR104 mode).'
+    description: "Execute tuning: (Only used for SD3.0, SDR104 mode).\n\nRaw bit values: false (0) = ExeTuneD: Not tuned or tuning completed.; true (1) = ExeTuneC: Execute tuning."
     bit_offset: 22
     bit_size: 1
-    enum: UsdhcAlphaEnumYankeeCharlie
   - name: smp_clk_sel
-    description: Clock selection.
+    description: "Clock selection.\n\nRaw bit values: false (0) = SmpselB: Fixed clock is used to sample data / cmd.; true (1) = SmpselA: Tuned clock is used to sample data / cmd."
     bit_offset: 23
     bit_size: 1
-    enum: UsdhcAlphaEnumKiloDelta
   - name: auto_tune_en
-    description: Auto tuning enable (Only used for SD3.0, SDR104 mode).
+    description: "Auto tuning enable (Only used for SD3.0, SDR104 mode).\n\nRaw bit values: false (0) = AutotuneB: Disable auto tuning.; true (1) = AutoTuneA: Enable auto tuning."
     bit_offset: 24
     bit_size: 1
-    enum: UsdhcAlphaEnumOscar
   - name: fbclk_sel
-    description: Feedback clock source selection (Only used for SD3.0, SDR104 mode).
+    description: "Feedback clock source selection (Only used for SD3.0, SDR104 mode).\n\nRaw bit values: false (0) = FbclkB: Feedback clock comes from the loopback CLK.; true (1) = FbclkA: Feedback clock comes from the ipp_card_clk_out."
     bit_offset: 25
     bit_size: 1
-    enum: UsdhcAlphaEnumAlphaDelta
 fieldset/UsdhcAlphaFieldsetVictor:
   description: eMMC Boot.
   fields:
@@ -964,29 +865,25 @@ fieldset/UsdhcAlphaFieldsetVictor:
     bit_size: 4
     enum: UsdhcAlphaEnumQuebecCharlie
   - name: boot_ack
-    description: BOOT ACK.
+    description: "BOOT ACK.\n\nRaw bit values: false (0) = BootAckA: No ack.; true (1) = BootAckB: Ack."
     bit_offset: 4
     bit_size: 1
-    enum: UsdhcAlphaEnumVictor
   - name: boot_mode
-    description: Boot mode.
+    description: "Boot mode.\n\nRaw bit values: false (0) = BootModeA: Normal boot.; true (1) = BootModeB: Alternative boot."
     bit_offset: 5
     bit_size: 1
-    enum: UsdhcAlphaEnumXray
   - name: boot_en
-    description: Boot enable.
+    description: "Boot enable.\n\nRaw bit values: false (0) = BootEnA: Fast boot disable.; true (1) = BootEnB: Fast boot enable."
     bit_offset: 6
     bit_size: 1
-    enum: UsdhcAlphaEnumWhiskey
   - name: auto_sabg_en
     description: Auto stop at block gap.
     bit_offset: 7
     bit_size: 1
   - name: disable_time_out
-    description: Time out.
+    description: "Time out.\n\nRaw bit values: false (0) = DisableTimeoutA: Enable time out.; true (1) = DisableTimeoutB: Disable time out."
     bit_offset: 8
     bit_size: 1
-    enum: UsdhcAlphaEnumGolfCharlie
   - name: boot_blk_cnt
     description: Stop At Block Gap value of automatic mode.
     bit_offset: 16
@@ -995,60 +892,49 @@ fieldset/UsdhcAlphaFieldsetWhiskey:
   description: Present State.
   fields:
   - name: cihb
-    description: Command inhibit (CMD).
+    description: "Command inhibit (CMD).\n\nRaw bit values: false (0) = CihbA: Can issue command using only CMD line.; true (1) = CihbB: Cannot issue command."
     bit_offset: 0
     bit_size: 1
-    enum: UsdhcAlphaEnumXrayAlpha
   - name: cdihb
-    description: Command Inhibit Data (DATA).
+    description: "Command Inhibit Data (DATA).\n\nRaw bit values: false (0) = CdihbB: Can issue command that uses the DATA line.; true (1) = CdihbA: Cannot issue command that uses the DATA line."
     bit_offset: 1
     bit_size: 1
-    enum: UsdhcAlphaEnumPapaAlpha
   - name: dla
-    description: Data line active.
+    description: "Data line active.\n\nRaw bit values: false (0) = DlaA: DATA line inactive.; true (1) = DlaB: DATA line active."
     bit_offset: 2
     bit_size: 1
-    enum: UsdhcAlphaEnumHotelCharlie
   - name: sdstb
-    description: SD clock stable.
+    description: "SD clock stable.\n\nRaw bit values: false (0) = SdstbB: Clock is changing frequency and not stable.; true (1) = SdstbA: Clock is stable."
     bit_offset: 3
     bit_size: 1
-    enum: UsdhcAlphaEnumYankeeDelta
   - name: wta
-    description: Write transfer active.
+    description: "Write transfer active.\n\nRaw bit values: false (0) = WtaB: No valid data.; true (1) = WtaA: Transferring data."
     bit_offset: 8
     bit_size: 1
-    enum: UsdhcAlphaEnumRomeoEcho
   - name: rta
-    description: Read transfer active.
+    description: "Read transfer active.\n\nRaw bit values: false (0) = RtaB: No valid data.; true (1) = RtaA: Transferring data."
     bit_offset: 9
     bit_size: 1
-    enum: UsdhcAlphaEnumRomeoDelta
   - name: bwen
-    description: Buffer write enable.
+    description: "Buffer write enable.\n\nRaw bit values: false (0) = BwenB: Write disable.; true (1) = BwenA: Write enable."
     bit_offset: 10
     bit_size: 1
-    enum: UsdhcAlphaEnumDeltaAlpha
   - name: bren
-    description: Buffer read enable.
+    description: "Buffer read enable.\n\nRaw bit values: false (0) = BrenB: Read disable.; true (1) = BrenA: Read enable."
     bit_offset: 11
     bit_size: 1
-    enum: UsdhcAlphaEnumYankee
   - name: rtr
-    description: Re-Tuning Request (only for SD3.0 SDR104 mode).
+    description: "Re-Tuning Request (only for SD3.0 SDR104 mode).\n\nRaw bit values: false (0) = RtrB: Fixed or well tuned sampling clock.; true (1) = RtrA: Sampling clock needs re-tuning."
     bit_offset: 12
     bit_size: 1
-    enum: UsdhcAlphaEnumVictorDelta
   - name: tscd
-    description: Tap select change done.
+    description: "Tap select change done.\n\nRaw bit values: false (0) = TscdB: Delay cell select change is not finished.; true (1) = TscdA: Delay cell select change is finished."
     bit_offset: 15
     bit_size: 1
-    enum: UsdhcAlphaEnumHotelEcho
   - name: cinst
-    description: Card inserted.
+    description: "Card inserted.\n\nRaw bit values: false (0) = CinstA: Power on reset or no card.; true (1) = CinstB: Card inserted."
     bit_offset: 16
     bit_size: 1
-    enum: UsdhcAlphaEnumBravoBravo
   - name: clsl
     description: CMD line signal level.
     bit_offset: 23
@@ -1067,10 +953,9 @@ fieldset/UsdhcAlphaFieldsetXray:
     bit_size: 2
     enum: UsdhcAlphaEnumUniformCharlie
   - name: d3cd
-    description: DATA3 as card detection pin.
+    description: "DATA3 as card detection pin.\n\nRaw bit values: false (0) = D3cdB: DATA3 does not monitor card insertion.; true (1) = D3cdA: DATA3 as card detection pin."
     bit_offset: 3
     bit_size: 1
-    enum: UsdhcAlphaEnumVictorBravo
   - name: emode
     description: Endian mode.
     bit_offset: 4
@@ -1082,54 +967,46 @@ fieldset/UsdhcAlphaFieldsetXray:
     bit_size: 2
     enum: UsdhcAlphaEnumNovemberCharlie
   - name: sabgreq
-    description: Stop at block gap request.
+    description: "Stop at block gap request.\n\nRaw bit values: false (0) = SabgreqB: Transfer.; true (1) = SabgreqA: Stop."
     bit_offset: 16
     bit_size: 1
-    enum: UsdhcAlphaEnumXrayDelta
   - name: creq
-    description: Continue request.
+    description: "Continue request.\n\nRaw bit values: false (0) = CreqB: No effect.; true (1) = CreqA: Restart."
     bit_offset: 17
     bit_size: 1
-    enum: UsdhcAlphaEnumOscarBravo
   - name: rwctl
-    description: Read wait control.
+    description: "Read wait control.\n\nRaw bit values: false (0) = RwctlB: Disables read wait control and stop SD clock at block gap when SABGREQ field is set.; true (1) = RwctlA: Enables read wait control and assert read wait without stopping SD clock at block gap when SABGREQ field is set."
     bit_offset: 18
     bit_size: 1
-    enum: UsdhcAlphaEnumWhiskeyDelta
   - name: iabg
-    description: Interrupt at block gap.
+    description: "Interrupt at block gap.\n\nRaw bit values: false (0) = IabgB: Disables interrupt at block gap.; true (1) = IabgA: Enables interrupt at block gap."
     bit_offset: 19
     bit_size: 1
-    enum: UsdhcAlphaEnumDeltaDelta
   - name: rd_done_no_8clk
     description: Read performed number 8 clock.
     bit_offset: 20
     bit_size: 1
   - name: wecint
-    description: Wakeup event enable on card interrupt.
+    description: "Wakeup event enable on card interrupt.\n\nRaw bit values: false (0) = WecintA: Disables wakeup event enable on card interrupt.; true (1) = WecintB: Enables wakeup event enable on card interrupt."
     bit_offset: 24
     bit_size: 1
-    enum: UsdhcAlphaEnumPapaEcho
   - name: wecins
-    description: Wakeup event enable on SD card insertion.
+    description: "Wakeup event enable on SD card insertion.\n\nRaw bit values: false (0) = WecinsB: Disable wakeup event enable on SD card insertion.; true (1) = WecinsA: Enable wakeup event enable on SD card insertion."
     bit_offset: 25
     bit_size: 1
-    enum: UsdhcAlphaEnumOscarEcho
   - name: wecrm
-    description: Wakeup event enable on SD card removal.
+    description: "Wakeup event enable on SD card removal.\n\nRaw bit values: false (0) = WecrmB: Disables wakeup event enable on SD card removal.; true (1) = WecrmA: Enables wakeup event enable on SD card removal."
     bit_offset: 26
     bit_size: 1
-    enum: UsdhcAlphaEnumQuebecEcho
   - name: burst_len_en
     description: BURST length enable for INCR, INCR4 / INCR8 / INCR16, INCR4-WRAP / INCR8-WRAP / INCR16-WRAP.
     bit_offset: 27
     bit_size: 3
     enum: UsdhcAlphaEnumCharlieAlpha
   - name: non_exact_blk_rd
-    description: Non-exact block read.
+    description: "Non-exact block read.\n\nRaw bit values: false (0) = ExactB: The block read is exact block read. Host driver does not need to issue abort command to terminate this multi-block read.; true (1) = ExactA: The block read is non-exact block read. Host driver needs to issue abort command to terminate this multi-block read."
     bit_offset: 30
     bit_size: 1
-    enum: UsdhcAlphaEnumMikeDelta
 fieldset/UsdhcAlphaFieldsetYankee:
   description: System Control.
   fields:
@@ -1156,20 +1033,17 @@ fieldset/UsdhcAlphaFieldsetYankee:
     bit_offset: 23
     bit_size: 1
   - name: rsta
-    description: Software reset for all.
+    description: "Software reset for all.\n\nRaw bit values: false (0) = RstaB: No reset.; true (1) = RstaA: Reset."
     bit_offset: 24
     bit_size: 1
-    enum: UsdhcAlphaEnumOscarDelta
   - name: rstc
-    description: Software reset for CMD line.
+    description: "Software reset for CMD line.\n\nRaw bit values: false (0) = RstcB: No reset.; true (1) = RstcA: Reset."
     bit_offset: 25
     bit_size: 1
-    enum: UsdhcAlphaEnumPapaDelta
   - name: rstd
-    description: Software reset for data line.
+    description: "Software reset for data line.\n\nRaw bit values: false (0) = RstdB: No reset.; true (1) = RstdA: Reset."
     bit_offset: 26
     bit_size: 1
-    enum: UsdhcAlphaEnumQuebecDelta
   - name: inita
     description: Initialization active.
     bit_offset: 27
@@ -1209,53 +1083,45 @@ fieldset/UsdhcAlphaFieldsetAlphaAlpha:
   description: Vendor Specific Register.
   fields:
   - name: ac12_wr_chkbusy_en
-    description: Check busy enable.
+    description: "Check busy enable.\n\nRaw bit values: false (0) = Ac12WrChkbusyEnA: Do not check busy after auto CMD12 for write data packet.; true (1) = Ac12WrChkbusyEnB: Check busy after auto CMD12 for write data packet."
     bit_offset: 3
     bit_size: 1
-    enum: UsdhcAlphaEnumAlpha
   - name: frc_sdclk_on
-    description: Force CLK.
+    description: "Force CLK.\n\nRaw bit values: false (0) = FrcSdclkOnA: CLK active or inactive is fully controlled by the hardware.; true (1) = FrcSdclkOnB: Force CLK active."
     bit_offset: 8
     bit_size: 1
-    enum: UsdhcAlphaEnumBravoDelta
   - name: crc_chk_dis
-    description: CRC Check Disable.
+    description: "CRC Check Disable.\n\nRaw bit values: false (0) = CrcChkDisA: Check CRC16 for every read data packet and check CRC fields for every write data packet.; true (1) = CrcChkDisB: Ignore CRC16 check for every read data packet and ignore CRC fields check for every write data packet."
     bit_offset: 15
     bit_size: 1
-    enum: UsdhcAlphaEnumNovemberBravo
   - name: cmd_byte_en
-    description: Register byte access for CMD_XFR_TYP.
+    description: "Register byte access for CMD_XFR_TYP.\n\nRaw bit values: false (0) = CmdByteEnA: Disable. MIX_CTRL[7:0] is read/write and CMD_XFR_TYP[7:0] is read-only.; true (1) = CmdByteEnB: Enable. MIX_CTRL[7:0] is read-only and CMD_XFR_TYP[7:0] is read/write."
     bit_offset: 31
     bit_size: 1
-    enum: UsdhcAlphaEnumFoxtrotBravo
 fieldset/UsdhcAlphaFieldsetBravoAlpha:
   description: Vendor Specific 2 Register.
   fields:
   - name: card_int_d3_test
-    description: Card interrupt detection test.
+    description: "Card interrupt detection test.\n\nRaw bit values: false (0) = CardIntD3A: Check the card interrupt only when DATA3 is high.; true (1) = CardIntD3B: Check the card interrupt by ignoring the status of DATA3."
     bit_offset: 3
     bit_size: 1
-    enum: UsdhcAlphaEnumHotelAlpha
   - name: tuning_bit_en
     description: Tuning bit enable.
     bit_offset: 4
     bit_size: 2
     enum: UsdhcAlphaEnumIndiaEcho
   - name: tuning_cmd_en
-    description: Tuning command enable.
+    description: "Tuning command enable.\n\nRaw bit values: false (0) = TuningCmdEnA: Auto tuning circuit does not check the CMD line.; true (1) = TuningCmdEnB: Auto tuning circuit checks the CMD line."
     bit_offset: 6
     bit_size: 1
-    enum: UsdhcAlphaEnumJulietEcho
   - name: acmd23_argu2_en
-    description: Argument2 register enable for ACMD23.
+    description: "Argument2 register enable for ACMD23.\n\nRaw bit values: false (0) = Acmd23Argu2EnB: Disable.; true (1) = Acmd23Argu2EnA: Argument2 register enable for ACMD23 sharing with SDMA system address register. Default is enabled."
     bit_offset: 12
     bit_size: 1
-    enum: UsdhcAlphaEnumKilo
   - name: en_32k_clk
-    description: Select the clock source for host card detection.
+    description: "Select the clock source for host card detection.\n\nRaw bit values: false (0) = CdClkSelA: Use the peripheral clock (ipg_clk) for card detection.; true (1) = CdClkSelB: Use the low power clock (ipg_clk_lp) for card detection."
     bit_offset: 15
     bit_size: 1
-    enum: UsdhcAlphaEnumXrayCharlie
 fieldset/UsdhcAlphaFieldsetCharlieAlpha:
   description: Watermark Level.
   fields:
@@ -1275,177 +1141,6 @@ fieldset/UsdhcAlphaFieldsetCharlieAlpha:
     description: Write burst length due to system restriction, the actual burst length might not exceed 16.
     bit_offset: 24
     bit_size: 5
-enum/UsdhcAlphaEnumAlpha:
-  bit_size: 1
-  variants:
-  - name: Ac12WrChkbusyEnA
-    description: Do not check busy after auto CMD12 for write data packet.
-    value: 0
-  - name: Ac12WrChkbusyEnB
-    description: Check busy after auto CMD12 for write data packet.
-    value: 1
-enum/UsdhcAlphaEnumBravo:
-  bit_size: 1
-  variants:
-  - name: Ac12ceA
-    description: CRC error met in Auto CMD12/23 response.
-    value: 1
-  - name: Ac12ceB
-    description: No CRC error.
-    value: 0
-enum/UsdhcAlphaEnumCharlie:
-  bit_size: 1
-  variants:
-  - name: Ac12eA
-    description: No error.
-    value: 0
-  - name: Ac12eB
-    description: Error.
-    value: 1
-enum/UsdhcAlphaEnumDelta:
-  bit_size: 1
-  variants:
-  - name: Ac12ebeA
-    description: End bit error generated.
-    value: 1
-  - name: Ac12ebeB
-    description: No error.
-    value: 0
-enum/UsdhcAlphaEnumEcho:
-  bit_size: 1
-  variants:
-  - name: Ac12eienA
-    description: Enabled.
-    value: 1
-  - name: Ac12eienB
-    description: Masked.
-    value: 0
-enum/UsdhcAlphaEnumFoxtrot:
-  bit_size: 1
-  variants:
-  - name: Ac12esenA
-    description: Masked.
-    value: 0
-  - name: Ac12esenB
-    description: Enabled.
-    value: 1
-enum/UsdhcAlphaEnumGolf:
-  bit_size: 1
-  variants:
-  - name: Ac12ieA
-    description: Error, the CMD index in response is not CMD12/23.
-    value: 1
-  - name: Ac12ieB
-    description: No error.
-    value: 0
-enum/UsdhcAlphaEnumHotel:
-  bit_size: 1
-  variants:
-  - name: Ac12neA
-    description: Not executed.
-    value: 1
-  - name: Ac12neB
-    description: Executed.
-    value: 0
-enum/UsdhcAlphaEnumIndia:
-  bit_size: 1
-  variants:
-  - name: Ac12toeA
-    description: Time out.
-    value: 1
-  - name: Ac12toeB
-    description: No error.
-    value: 0
-enum/UsdhcAlphaEnumJuliet:
-  bit_size: 1
-  variants:
-  - name: CmdXfrTyp7A
-    description: Enable.
-    value: 1
-  - name: CmdXfrTyp7B
-    description: Disable.
-    value: 0
-enum/UsdhcAlphaEnumKilo:
-  bit_size: 1
-  variants:
-  - name: Acmd23Argu2EnA
-    description: Argument2 register enable for ACMD23 sharing with SDMA system address register. Default is enabled.
-    value: 1
-  - name: Acmd23Argu2EnB
-    description: Disable.
-    value: 0
-enum/UsdhcAlphaEnumLima:
-  bit_size: 1
-  variants:
-  - name: AdmadceA
-    description: Error.
-    value: 1
-  - name: AdmadceB
-    description: No error.
-    value: 0
-enum/UsdhcAlphaEnumMike:
-  bit_size: 1
-  variants:
-  - name: AdmaesA
-    description: Error.
-    value: 1
-  - name: AdmaesB
-    description: No error.
-    value: 0
-enum/UsdhcAlphaEnumNovember:
-  bit_size: 1
-  variants:
-  - name: AdmasA
-    description: Advanced DMA supported.
-    value: 1
-  - name: AdmasB
-    description: Advanced DMA not supported.
-    value: 0
-enum/UsdhcAlphaEnumOscar:
-  bit_size: 1
-  variants:
-  - name: AutoTuneA
-    description: Enable auto tuning.
-    value: 1
-  - name: AutotuneB
-    description: Disable auto tuning.
-    value: 0
-enum/UsdhcAlphaEnumPapa:
-  bit_size: 1
-  variants:
-  - name: SmpClkA
-    description: Tuned clock is used to sample data.
-    value: 1
-  - name: SmpClkB
-    description: Fixed clock is used to sample data.
-    value: 0
-enum/UsdhcAlphaEnumQuebec:
-  bit_size: 1
-  variants:
-  - name: BgeA
-    description: Transaction stopped at block gap.
-    value: 1
-  - name: BgeB
-    description: No block gap event.
-    value: 0
-enum/UsdhcAlphaEnumRomeo:
-  bit_size: 1
-  variants:
-  - name: BgienA
-    description: Masked.
-    value: 0
-  - name: BgienB
-    description: Enabled.
-    value: 1
-enum/UsdhcAlphaEnumSierra:
-  bit_size: 1
-  variants:
-  - name: BgesenA
-    description: Masked.
-    value: 0
-  - name: BgesenB
-    description: Enabled.
-    value: 1
 enum/UsdhcAlphaEnumTango:
   bit_size: 16
   variants:
@@ -1491,69 +1186,6 @@ enum/UsdhcAlphaEnumUniform:
   - name: BlkAttI
     description: No data transfer.
     value: 0
-enum/UsdhcAlphaEnumVictor:
-  bit_size: 1
-  variants:
-  - name: BootAckA
-    description: No ack.
-    value: 0
-  - name: BootAckB
-    description: Ack.
-    value: 1
-enum/UsdhcAlphaEnumWhiskey:
-  bit_size: 1
-  variants:
-  - name: BootEnA
-    description: Fast boot disable.
-    value: 0
-  - name: BootEnB
-    description: Fast boot enable.
-    value: 1
-enum/UsdhcAlphaEnumXray:
-  bit_size: 1
-  variants:
-  - name: BootModeA
-    description: Normal boot.
-    value: 0
-  - name: BootModeB
-    description: Alternative boot.
-    value: 1
-enum/UsdhcAlphaEnumYankee:
-  bit_size: 1
-  variants:
-  - name: BrenA
-    description: Read enable.
-    value: 1
-  - name: BrenB
-    description: Read disable.
-    value: 0
-enum/UsdhcAlphaEnumZulu:
-  bit_size: 1
-  variants:
-  - name: BrrA
-    description: Ready to read buffer.
-    value: 1
-  - name: BrrB
-    description: Not ready to read buffer.
-    value: 0
-enum/UsdhcAlphaEnumAlphaAlpha:
-  bit_size: 1
-  variants:
-  - name: BrrienA
-    description: Enabled.
-    value: 1
-  - name: BrrienB
-    description: Masked.
-    value: 0
-enum/UsdhcAlphaEnumBravoAlpha:
-  bit_size: 1
-  variants:
-  - name: BrrenB
-    description: Enabled.
-    value: 1
-  - name: BrrsenA
-    description: Masked.
-    value: 0
 enum/UsdhcAlphaEnumCharlieAlpha:
   bit_size: 3
   variants:
@@ -1566,312 +1198,6 @@ enum/UsdhcAlphaEnumCharlieAlpha:
   - name: BurstC
     description: Burst length is enabled for INCR4-WRAP / INCR8-WRAP / INCR16-WRAP.
     value: 4
-enum/UsdhcAlphaEnumDeltaAlpha:
-  bit_size: 1
-  variants:
-  - name: BwenA
-    description: Write enable.
-    value: 1
-  - name: BwenB
-    description: Write disable.
-    value: 0
-enum/UsdhcAlphaEnumEchoAlpha:
-  bit_size: 1
-  variants:
-  - name: BwrA
-    description: Ready to write buffer.
-    value: 1
-  - name: BwrB
-    description: Not ready to write buffer.
-    value: 0
-enum/UsdhcAlphaEnumFoxtrotAlpha:
-  bit_size: 1
-  variants:
-  - name: BwrienA
-    description: Masked.
-    value: 0
-  - name: BwrienB
-    description: Enabled.
-    value: 1
-enum/UsdhcAlphaEnumGolfAlpha:
-  bit_size: 1
-  variants:
-  - name: BwrsenA
-    description: Masked.
-    value: 0
-  - name: BwrsenB
-    description: Enabled.
-    value: 1
-enum/UsdhcAlphaEnumHotelAlpha:
-  bit_size: 1
-  variants:
-  - name: CardIntD3A
-    description: Check the card interrupt only when DATA3 is high.
-    value: 0
-  - name: CardIntD3B
-    description: Check the card interrupt by ignoring the status of DATA3.
-    value: 1
-enum/UsdhcAlphaEnumIndiaAlpha:
-  bit_size: 1
-  variants:
-  - name: CcA
-    description: Command complete.
-    value: 1
-  - name: CcB
-    description: Command not complete.
-    value: 0
-enum/UsdhcAlphaEnumJulietAlpha:
-  bit_size: 1
-  variants:
-  - name: CccenA
-    description: Enables command CRC check.
-    value: 1
-  - name: CccenB
-    description: Disables command CRC check.
-    value: 0
-enum/UsdhcAlphaEnumKiloAlpha:
-  bit_size: 1
-  variants:
-  - name: CceA
-    description: No error.
-    value: 0
-  - name: CceB
-    description: CRC error generated.
-    value: 1
-enum/UsdhcAlphaEnumLimaAlpha:
-  bit_size: 1
-  variants:
-  - name: CceienA
-    description: Enabled.
-    value: 1
-  - name: CceienB
-    description: Masked.
-    value: 0
-enum/UsdhcAlphaEnumMikeAlpha:
-  bit_size: 1
-  variants:
-  - name: CcesenA
-    description: Masked.
-    value: 0
-  - name: CcesenB
-    description: Enabled.
-    value: 1
-enum/UsdhcAlphaEnumNovemberAlpha:
-  bit_size: 1
-  variants:
-  - name: CcienA
-    description: Masked.
-    value: 0
-  - name: CcienB
-    description: Enabled.
-    value: 1
-enum/UsdhcAlphaEnumOscarAlpha:
-  bit_size: 1
-  variants:
-  - name: CcsenA
-    description: Masked.
-    value: 0
-  - name: CcsenB
-    description: Enabled.
-    value: 1
-enum/UsdhcAlphaEnumPapaAlpha:
-  bit_size: 1
-  variants:
-  - name: CdihbA
-    description: Cannot issue command that uses the DATA line.
-    value: 1
-  - name: CdihbB
-    description: Can issue command that uses the DATA line.
-    value: 0
-enum/UsdhcAlphaEnumQuebecAlpha:
-  bit_size: 1
-  variants:
-  - name: CebeA
-    description: No error.
-    value: 0
-  - name: CebeB
-    description: End bit error generated.
-    value: 1
-enum/UsdhcAlphaEnumRomeoAlpha:
-  bit_size: 1
-  variants:
-  - name: CebeienA
-    description: Enabled.
-    value: 1
-  - name: CebeienB
-    description: Masked.
-    value: 0
-enum/UsdhcAlphaEnumSierraAlpha:
-  bit_size: 1
-  variants:
-  - name: CebesenA
-    description: Masked.
-    value: 0
-  - name: CebesenB
-    description: Enabled.
-    value: 1
-enum/UsdhcAlphaEnumTangoAlpha:
-  bit_size: 1
-  variants:
-  - name: CicenA
-    description: Enables command index check.
-    value: 1
-  - name: CicenB
-    description: Disable command index check.
-    value: 0
-enum/UsdhcAlphaEnumUniformAlpha:
-  bit_size: 1
-  variants:
-  - name: CieA
-    description: No error.
-    value: 0
-  - name: CieB
-    description: Error.
-    value: 1
-enum/UsdhcAlphaEnumVictorAlpha:
-  bit_size: 1
-  variants:
-  - name: CieienA
-    description: Enabled.
-    value: 1
-  - name: CieienB
-    description: Masked.
-    value: 0
-enum/UsdhcAlphaEnumWhiskeyAlpha:
-  bit_size: 1
-  variants:
-  - name: CiesenA
-    description: Masked.
-    value: 0
-  - name: CiesenB
-    description: Enabled.
-    value: 1
-enum/UsdhcAlphaEnumXrayAlpha:
-  bit_size: 1
-  variants:
-  - name: CihbA
-    description: Can issue command using only CMD line.
-    value: 0
-  - name: CihbB
-    description: Cannot issue command.
-    value: 1
-enum/UsdhcAlphaEnumYankeeAlpha:
-  bit_size: 1
-  variants:
-  - name: BwrA
-    description: Card inserted.
-    value: 1
-  - name: BwrB
-    description: Card state unstable or removed.
-    value: 0
-enum/UsdhcAlphaEnumZuluAlpha:
-  bit_size: 1
-  variants:
-  - name: CinsienA
-    description: Masked.
-    value: 0
-  - name: CinsienB
-    description: Enabled.
-    value: 1
-enum/UsdhcAlphaEnumAlphaBravo:
-  bit_size: 1
-  variants:
-  - name: CinsenA
-    description: Masked.
-    value: 0
-  - name: CinsenB
-    description: Enabled.
-    value: 1
-enum/UsdhcAlphaEnumBravoBravo:
-  bit_size: 1
-  variants:
-  - name: CinstA
-    description: Power on reset or no card.
-    value: 0
-  - name: CinstB
-    description: Card inserted.
-    value: 1
-enum/UsdhcAlphaEnumCharlieBravo:
-  bit_size: 1
-  variants:
-  - name: CintA
-    description: No card interrupt.
-    value: 0
-  - name: CintB
-    description: Generate card interrupt.
-    value: 1
-enum/UsdhcAlphaEnumDeltaBravo:
-  bit_size: 1
-  variants:
-  - name: CintienA
-    description: Enabled.
-    value: 1
-  - name: CintienB
-    description: Masked.
-    value: 0
-enum/UsdhcAlphaEnumEchoBravo:
-  bit_size: 1
-  variants:
-  - name: CintsenA
-    description: Masked.
-    value: 0
-  - name: CintsenB
-    description: Enabled.
-    value: 1
-enum/UsdhcAlphaEnumFoxtrotBravo:
-  bit_size: 1
-  variants:
-  - name: CmdByteEnA
-    description: Disable. MIX_CTRL[7:0] is read/write and CMD_XFR_TYP[7:0] is read-only.
-    value: 0
-  - name: CmdByteEnB
-    description: Enable. MIX_CTRL[7:0] is read-only and CMD_XFR_TYP[7:0] is read/write.
-    value: 1
-enum/UsdhcAlphaEnumGolfBravo:
-  bit_size: 1
-  variants:
-  - name: CmdXfrTyp2A
-    description: Enable.
-    value: 1
-  - name: CmdXfrTyp2B
-    description: Disable.
-    value: 0
-enum/UsdhcAlphaEnumHotelBravo:
-  bit_size: 1
-  variants:
-  - name: CmdXfrTyp1A
-    description: Enable.
-    value: 1
-  - name: CmdXfrTyp1B
-    description: Disable.
-    value: 0
-enum/UsdhcAlphaEnumIndiaBravo:
-  bit_size: 1
-  variants:
-  - name: CmdXfrTyp0a
-    description: Enable.
-    value: 1
-  - name: CmdXfrTyp0b
-    description: Disable.
-    value: 0
-enum/UsdhcAlphaEnumJulietBravo:
-  bit_size: 1
-  variants:
-  - name: CmdXfrTyp4A
-    description: Enable.
-    value: 1
-  - name: CmdXfrTyp4B
-    description: Disable.
-    value: 0
-enum/UsdhcAlphaEnumKiloBravo:
-  bit_size: 1
-  variants:
-  - name: CmdXfrTyp5A
-    description: Enable.
-    value: 1
-  - name: CmdXfrTyp5B
-    description: Disable.
-    value: 0
 enum/UsdhcAlphaEnumLimaBravo:
   bit_size: 2
   variants:
@@ -1887,204 +1213,6 @@ enum/UsdhcAlphaEnumLimaBravo:
   - name: CmdtypD
     description: Normal other commands.
     value: 0
-enum/UsdhcAlphaEnumMikeBravo:
-  bit_size: 1
-  variants:
-  - name: Cnibac12eA
-    description: Not issued.
-    value: 1
-  - name: Cnibac12eB
-    description: No error.
-    value: 0
-enum/UsdhcAlphaEnumNovemberBravo:
-  bit_size: 1
-  variants:
-  - name: CrcChkDisA
-    description: Check CRC16 for every read data packet and check CRC fields for every write data packet.
-    value: 0
-  - name: CrcChkDisB
-    description: Ignore CRC16 check for every read data packet and ignore CRC fields check for every write data packet.
-    value: 1
-enum/UsdhcAlphaEnumOscarBravo:
-  bit_size: 1
-  variants:
-  - name: CreqA
-    description: Restart.
-    value: 1
-  - name: CreqB
-    description: No effect.
-    value: 0
-enum/UsdhcAlphaEnumPapaBravo:
-  bit_size: 1
-  variants:
-  - name: CrmA
-    description: Card state unstable or inserted.
-    value: 0
-  - name: CrmB
-    description: Card removed.
-    value: 1
-enum/UsdhcAlphaEnumQuebecBravo:
-  bit_size: 1
-  variants:
-  - name: CrmienA
-    description: Masked.
-    value: 0
-  - name: CrmienB
-    description: Enabled.
-    value: 1
-enum/UsdhcAlphaEnumRomeoBravo:
-  bit_size: 1
-  variants:
-  - name: CrmsenA
-    description: Masked.
-    value: 0
-  - name: CrmsenB
-    description: Enabled.
-    value: 1
-enum/UsdhcAlphaEnumSierraBravo:
-  bit_size: 1
-  variants:
-  - name: CtoeA
-    description: No error.
-    value: 0
-  - name: CtoeB
-    description: Time out.
-    value: 1
-enum/UsdhcAlphaEnumTangoBravo:
-  bit_size: 1
-  variants:
-  - name: CtoeienA
-    description: Enabled.
-    value: 1
-  - name: CtoeienB
-    description: Masked.
-    value: 0
-enum/UsdhcAlphaEnumUniformBravo:
-  bit_size: 1
-  variants:
-  - name: CtosenA
-    description: Masked.
-    value: 0
-  - name: CtosenB
-    description: Enabled.
-    value: 1
-enum/UsdhcAlphaEnumVictorBravo:
-  bit_size: 1
-  variants:
-  - name: D3cdA
-    description: DATA3 as card detection pin.
-    value: 1
-  - name: D3cdB
-    description: DATA3 does not monitor card insertion.
-    value: 0
-enum/UsdhcAlphaEnumWhiskeyBravo:
-  bit_size: 1
-  variants:
-  - name: DceA
-    description: No error.
-    value: 0
-  - name: DceB
-    description: Error.
-    value: 1
-enum/UsdhcAlphaEnumXrayBravo:
-  bit_size: 1
-  variants:
-  - name: DceienA
-    description: Enabled.
-    value: 1
-  - name: DceienB
-    description: Masked.
-    value: 0
-enum/UsdhcAlphaEnumYankeeBravo:
-  bit_size: 1
-  variants:
-  - name: DcesenA
-    description: Masked.
-    value: 0
-  - name: DcesenB
-    description: Enabled.
-    value: 1
-enum/UsdhcAlphaEnumZuluBravo:
-  bit_size: 1
-  variants:
-  - name: CmdXfrTyp3A
-    description: Enable.
-    value: 1
-  - name: CmdXfrTyp3B
-    description: Disable.
-    value: 0
-enum/UsdhcAlphaEnumAlphaCharlie:
-  bit_size: 1
-  variants:
-  - name: DebeA
-    description: No error.
-    value: 0
-  - name: DebeB
-    description: Error.
-    value: 1
-enum/UsdhcAlphaEnumBravoCharlie:
-  bit_size: 1
-  variants:
-  - name: DebeienA
-    description: Enabled.
-    value: 1
-  - name: DebeienB
-    description: Masked.
-    value: 0
-enum/UsdhcAlphaEnumCharlieCharlie:
-  bit_size: 1
-  variants:
-  - name: DbesenA
-    description: Masked.
-    value: 0
-  - name: DbesenB
-    description: Enabled.
-    value: 1
-enum/UsdhcAlphaEnumDeltaCharlie:
-  bit_size: 1
-  variants:
-  - name: DintA
-    description: DMA interrupt is generated.
-    value: 1
-  - name: DintB
-    description: No DMA interrupt.
-    value: 0
-enum/UsdhcAlphaEnumEchoCharlie:
-  bit_size: 1
-  variants:
-  - name: DintienA
-    description: Enabled.
-    value: 1
-  - name: DintienB
-    description: Masked.
-    value: 0
-enum/UsdhcAlphaEnumFoxtrotCharlie:
-  bit_size: 1
-  variants:
-  - name: DintsenA
-    description: Masked.
-    value: 0
-  - name: DintsenB
-    description: Enabled.
-    value: 1
-enum/UsdhcAlphaEnumGolfCharlie:
-  bit_size: 1
-  variants:
-  - name: DisableTimeoutA
-    description: Enable time out.
-    value: 0
-  - name: DisableTimeoutB
-    description: Disable time out.
-    value: 1
-enum/UsdhcAlphaEnumHotelCharlie:
-  bit_size: 1
-  variants:
-  - name: DlaA
-    description: DATA line inactive.
-    value: 0
-  - name: DlaB
-    description: DATA line active.
-    value: 1
 enum/UsdhcAlphaEnumIndiaCharlie:
   bit_size: 8
   variants:
@@ -2112,42 +1240,6 @@ enum/UsdhcAlphaEnumIndiaCharlie:
   - name: Data7
     description: Data 7 line signal level.
     value: 128
-enum/UsdhcAlphaEnumJulietCharlie:
-  bit_size: 1
-  variants:
-  - name: DmaeA
-    description: No error.
-    value: 0
-  - name: DmaeB
-    description: Error.
-    value: 1
-enum/UsdhcAlphaEnumKiloCharlie:
-  bit_size: 1
-  variants:
-  - name: DmaeienA
-    description: Enable.
-    value: 1
-  - name: DmaeienB
-    description: Masked.
-    value: 0
-enum/UsdhcAlphaEnumLimaCharlie:
-  bit_size: 1
-  variants:
-  - name: DmasenA
-    description: Enabled.
-    value: 1
-  - name: DmasenB
-    description: Masked.
-    value: 0
-enum/UsdhcAlphaEnumMikeCharlie:
-  bit_size: 1
-  variants:
-  - name: DmasA
-    description: DMA supported.
-    value: 1
-  - name: DmasB
-    description: DMA not supported.
-    value: 0
 enum/UsdhcAlphaEnumNovemberCharlie:
   bit_size: 2
   variants:
@@ -2160,15 +1252,6 @@ enum/UsdhcAlphaEnumNovemberCharlie:
   - name: DmaselC
     description: ADMA2 is selected.
     value: 2
-enum/UsdhcAlphaEnumOscarCharlie:
-  bit_size: 1
-  variants:
-  - name: DpselA
-    description: Data present.
-    value: 1
-  - name: DpselB
-    description: No data present.
-    value: 0
 enum/UsdhcAlphaEnumPapaCharlie:
   bit_size: 4
   variants:
@@ -2223,33 +1306,6 @@ enum/UsdhcAlphaEnumQuebecCharlie:
   - name: DtocvAckJ
     description: SDCLK x 2^29.
     value: 15
-enum/UsdhcAlphaEnumRomeoCharlie:
-  bit_size: 1
-  variants:
-  - name: DtoeA
-    description: No error.
-    value: 0
-  - name: DtoeB
-    description: Time out.
-    value: 1
-enum/UsdhcAlphaEnumSierraCharlie:
-  bit_size: 1
-  variants:
-  - name: DtoeienA
-    description: Enabled.
-    value: 1
-  - name: DtoeienB
-    description: Masked.
-    value: 0
-enum/UsdhcAlphaEnumTangoCharlie:
-  bit_size: 1
-  variants:
-  - name: DtoesenA
-    description: Masked.
-    value: 0
-  - name: DtoesenB
-    description: Enabled.
-    value: 1
 enum/UsdhcAlphaEnumUniformCharlie:
   bit_size: 2
   variants:
@@ -2289,69 +1345,6 @@ enum/UsdhcAlphaEnumWhiskeyCharlie:
   - name: EmodeC
     description: Little endian mode.
     value: 2
-enum/UsdhcAlphaEnumXrayCharlie:
-  bit_size: 1
-  variants:
-  - name: CdClkSelA
-    description: Use the peripheral clock (ipg_clk) for card detection.
-    value: 0
-  - name: CdClkSelB
-    description: Use the low power clock (ipg_clk_lp) for card detection.
-    value: 1
-enum/UsdhcAlphaEnumYankeeCharlie:
-  bit_size: 1
-  variants:
-  - name: ExeTuneC
-    description: Execute tuning.
-    value: 1
-  - name: ExeTuneD
-    description: Not tuned or tuning completed.
-    value: 0
-enum/UsdhcAlphaEnumZuluCharlie:
-  bit_size: 1
-  variants:
-  - name: ExTunA
-    description: Start tuning procedure.
-    value: 1
-  - name: ExTunB
-    description: Tuning procedure is aborted.
-    value: 0
-enum/UsdhcAlphaEnumAlphaDelta:
-  bit_size: 1
-  variants:
-  - name: FbclkA
-    description: Feedback clock comes from the ipp_card_clk_out.
-    value: 1
-  - name: FbclkB
-    description: Feedback clock comes from the loopback CLK.
-    value: 0
-enum/UsdhcAlphaEnumBravoDelta:
-  bit_size: 1
-  variants:
-  - name: FrcSdclkOnA
-    description: CLK active or inactive is fully controlled by the hardware.
-    value: 0
-  - name: FrcSdclkOnB
-    description: Force CLK active.
-    value: 1
-enum/UsdhcAlphaEnumCharlieDelta:
-  bit_size: 1
-  variants:
-  - name: HssA
-    description: High speed supported.
-    value: 1
-  - name: HssB
-    description: High speed not supported.
-    value: 0
-enum/UsdhcAlphaEnumDeltaDelta:
-  bit_size: 1
-  variants:
-  - name: IabgA
-    description: Enables interrupt at block gap.
-    value: 1
-  - name: IabgB
-    description: Disables interrupt at block gap.
-    value: 0
 enum/UsdhcAlphaEnumEchoDelta:
   bit_size: 3
   variants:
@@ -2367,78 +1360,6 @@ enum/UsdhcAlphaEnumEchoDelta:
   - name: MblD
     description: 4096 bytes.
     value: 3
-enum/UsdhcAlphaEnumFoxtrotDelta:
-  bit_size: 1
-  variants:
-  - name: Ac12enA
-    description: Enable.
-    value: 1
-  - name: Ac12enB
-    description: Disable.
-    value: 0
-enum/UsdhcAlphaEnumGolfDelta:
-  bit_size: 1
-  variants:
-  - name: BcenA
-    description: Enable.
-    value: 1
-  - name: BcenB
-    description: Disable.
-    value: 0
-enum/UsdhcAlphaEnumHotelDelta:
-  bit_size: 1
-  variants:
-  - name: DmainA
-    description: Enable.
-    value: 1
-  - name: DmainB
-    description: Disable.
-    value: 0
-enum/UsdhcAlphaEnumIndiaDelta:
-  bit_size: 1
-  variants:
-  - name: DtdselA
-    description: Read (Card to host).
-    value: 1
-  - name: DtdselB
-    description: Write (Host to card).
-    value: 0
-enum/UsdhcAlphaEnumJulietDelta:
-  bit_size: 1
-  variants:
-  - name: MsbselA
-    description: Multiple blocks.
-    value: 1
-  - name: MsbselB
-    description: Single block.
-    value: 0
-enum/UsdhcAlphaEnumKiloDelta:
-  bit_size: 1
-  variants:
-  - name: SmpselA
-    description: Tuned clock is used to sample data / cmd.
-    value: 1
-  - name: SmpselB
-    description: Fixed clock is used to sample data / cmd.
-    value: 0
-enum/UsdhcAlphaEnumLimaDelta:
-  bit_size: 1
-  variants:
-  - name: CmdXfrTyp6A
-    description: Enable.
-    value: 1
-  - name: CmdXfrTyp6B
-    description: Disable.
-    value: 0
-enum/UsdhcAlphaEnumMikeDelta:
-  bit_size: 1
-  variants:
-  - name: ExactA
-    description: The block read is non-exact block read. Host driver needs to issue abort command to terminate this multi-block read.
-    value: 1
-  - name: ExactB
-    description: The block read is exact block read. Host driver does not need to issue abort command to terminate this multi-block read.
-    value: 0
 enum/UsdhcAlphaEnumNovemberDelta:
   bit_size: 2
   variants:
@@ -2454,186 +1375,6 @@ enum/UsdhcAlphaEnumNovemberDelta:
   - name: RsptypD
     description: Response length 48, check busy after response.
     value: 3
-enum/UsdhcAlphaEnumOscarDelta:
-  bit_size: 1
-  variants:
-  - name: RstaA
-    description: Reset.
-    value: 1
-  - name: RstaB
-    description: No reset.
-    value: 0
-enum/UsdhcAlphaEnumPapaDelta:
-  bit_size: 1
-  variants:
-  - name: RstcA
-    description: Reset.
-    value: 1
-  - name: RstcB
-    description: No reset.
-    value: 0
-enum/UsdhcAlphaEnumQuebecDelta:
-  bit_size: 1
-  variants:
-  - name: RstdA
-    description: Reset.
-    value: 1
-  - name: RstdB
-    description: No reset.
-    value: 0
-enum/UsdhcAlphaEnumRomeoDelta:
-  bit_size: 1
-  variants:
-  - name: RtaA
-    description: Transferring data.
-    value: 1
-  - name: RtaB
-    description: No valid data.
-    value: 0
-enum/UsdhcAlphaEnumSierraDelta:
-  bit_size: 1
-  variants:
-  - name: RteA
-    description: Re-tuning is not required.
-    value: 0
-  - name: RteB
-    description: Re-tuning should be performed.
-    value: 1
-enum/UsdhcAlphaEnumTangoDelta:
-  bit_size: 1
-  variants:
-  - name: RteienN
-    description: Enabled.
-    value: 1
-  - name: RteienO
-    description: Masked.
-    value: 0
-enum/UsdhcAlphaEnumUniformDelta:
-  bit_size: 1
-  variants:
-  - name: RtesenA
-    description: Masked.
-    value: 0
-  - name: RtesenB
-    description: Enabled.
-    value: 1
-enum/UsdhcAlphaEnumVictorDelta:
-  bit_size: 1
-  variants:
-  - name: RtrA
-    description: Sampling clock needs re-tuning.
-    value: 1
-  - name: RtrB
-    description: Fixed or well tuned sampling clock.
-    value: 0
-enum/UsdhcAlphaEnumWhiskeyDelta:
-  bit_size: 1
-  variants:
-  - name: RwctlA
-    description: Enables read wait control and assert read wait without stopping SD clock at block gap when SABGREQ field is set.
-    value: 1
-  - name: RwctlB
-    description: Disables read wait control and stop SD clock at block gap when SABGREQ field is set.
-    value: 0
-enum/UsdhcAlphaEnumXrayDelta:
-  bit_size: 1
-  variants:
-  - name: SabgreqA
-    description: Stop.
-    value: 1
-  - name: SabgreqB
-    description: Transfer.
-    value: 0
-enum/UsdhcAlphaEnumYankeeDelta:
-  bit_size: 1
-  variants:
-  - name: SdstbA
-    description: Clock is stable.
-    value: 1
-  - name: SdstbB
-    description: Clock is changing frequency and not stable.
-    value: 0
-enum/UsdhcAlphaEnumZuluDelta:
-  bit_size: 1
-  variants:
-  - name: SrsA
-    description: Supported.
-    value: 1
-  - name: SrsB
-    description: Not supported.
-    value: 0
-enum/UsdhcAlphaEnumAlphaEcho:
-  bit_size: 1
-  variants:
-  - name: TcA
-    description: Transfer complete.
-    value: 1
-  - name: TcB
-    description: Transfer does not complete.
-    value: 0
-enum/UsdhcAlphaEnumBravoEcho:
-  bit_size: 1
-  variants:
-  - name: TcienA
-    description: Masked.
-    value: 0
-  - name: TcienB
-    description: Enabled.
-    value: 1
-enum/UsdhcAlphaEnumCharlieEcho:
-  bit_size: 1
-  variants:
-  - name: TcsenA
-    description: Enabled.
-    value: 1
-  - name: TcsenB
-    description: Masked.
-    value: 0
-enum/UsdhcAlphaEnumDeltaEcho:
-  bit_size: 1
-  variants:
-  - name: TneienA
-    description: Enabled.
-    value: 1
-  - name: TneienB
-    description: Masked.
-    value: 0
-enum/UsdhcAlphaEnumEchoEcho:
-  bit_size: 1
-  variants:
-  - name: TnesenA
-    description: Masked.
-    value: 0
-  - name: TnesenB
-    description: Enabled.
-    value: 1
-enum/UsdhcAlphaEnumFoxtrotEcho:
-  bit_size: 1
-  variants:
-  - name: TpienQ
-    description: Enabled.
-    value: 1
-  - name: TpienR
-    description: Masked.
-    value: 0
-enum/UsdhcAlphaEnumGolfEcho:
-  bit_size: 1
-  variants:
-  - name: TpsenA
-    description: Masked.
-    value: 0
-  - name: TpsenB
-    description: Enabled.
-    value: 1
-enum/UsdhcAlphaEnumHotelEcho:
-  bit_size: 1
-  variants:
-  - name: TscdA
-    description: Delay cell select change is finished.
-    value: 1
-  - name: TscdB
-    description: Delay cell select change is not finished.
-    value: 0
 enum/UsdhcAlphaEnumIndiaEcho:
   bit_size: 2
   variants:
@@ -2649,84 +1390,3 @@ enum/UsdhcAlphaEnumIndiaEcho:
   - name: TuningBitEn3
     description: Invalid.
     value: 3
-enum/UsdhcAlphaEnumJulietEcho:
-  bit_size: 1
-  variants:
-  - name: TuningCmdEnA
-    description: Auto tuning circuit does not check the CMD line.
-    value: 0
-  - name: TuningCmdEnB
-    description: Auto tuning circuit checks the CMD line.
-    value: 1
-enum/UsdhcAlphaEnumKiloEcho:
-  bit_size: 1
-  variants:
-  - name: UseTuningA
-    description: SDR50 supports tuning.
-    value: 1
-  - name: UseTuningB
-    description: SDR50 does not support tuning.
-    value: 0
-enum/UsdhcAlphaEnumLimaEcho:
-  bit_size: 1
-  variants:
-  - name: Vs18A
-    description: 1.8 V supported.
-    value: 1
-  - name: Vs18B
-    description: 1.8 V not supported.
-    value: 0
-enum/UsdhcAlphaEnumMikeEcho:
-  bit_size: 1
-  variants:
-  - name: Vs30A
-    description: 3.0 V supported.
-    value: 1
-  - name: Vs30B
-    description: 3.0 V not supported.
-    value: 0
-enum/UsdhcAlphaEnumNovemberEcho:
-  bit_size: 1
-  variants:
-  - name: Vs33A
-    description: 3.3 V supported.
-    value: 1
-  - name: Vs33B
-    description: 3.3 V not supported.
-    value: 0
-enum/UsdhcAlphaEnumOscarEcho:
-  bit_size: 1
-  variants:
-  - name: WecinsA
-    description: Enable wakeup event enable on SD card insertion.
-    value: 1
-  - name: WecinsB
-    description: Disable wakeup event enable on SD card insertion.
-    value: 0
-enum/UsdhcAlphaEnumPapaEcho:
-  bit_size: 1
-  variants:
-  - name: WecintA
-    description: Disables wakeup event enable on card interrupt.
-    value: 0
-  - name: WecintB
-    description: Enables wakeup event enable on card interrupt.
-    value: 1
-enum/UsdhcAlphaEnumQuebecEcho:
-  bit_size: 1
-  variants:
-  - name: WecrmA
-    description: Enables wakeup event enable on SD card removal.
-    value: 1
-  - name: WecrmB
-    description: Disables wakeup event enable on SD card removal.
-    value: 0
-enum/UsdhcAlphaEnumRomeoEcho:
-  bit_size: 1
-  variants:
-  - name: WtaA
-    description: Transferring data.
-    value: 1
-  - name: WtaB
-    description: No valid data.
-    value: 0

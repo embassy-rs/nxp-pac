@@ -244,15 +244,13 @@ fieldset/Protlvl:
     bit_offset: 0
     bit_size: 1
   - name: locknsmpu
-    description: Control write access to Nonsecure MPU memory regions.
+    description: "Control write access to Nonsecure MPU memory regions.\n\nRaw bit values: false (0) = Enable: Unlock these registers. privileged access to Nonsecure MPU memory regions is allowed.; true (1) = Disable: Disable writes to the MPU_CTRL_NS, MPU_RNR_NS, MPU_RBAR_NS, MPU_RLAR_NS, MPU_RBAR_A_NSn and MPU_RLAR_A_NSn. All writes to the registers are ignored."
     bit_offset: 16
     bit_size: 1
-    enum: Locknsmpu
   - name: lock
-    description: This 1-bit field provides a mechanism to limit writes to the this register to protect its contents. Once set, this bit remains asserted until a system reset.
+    description: "This 1-bit field provides a mechanism to limit writes to the this register to protect its contents. Once set, this bit remains asserted until a system reset.\n\nRaw bit values: false (0) = Lock0: This register is not locked and can be altered.; true (1) = Lock1: This register is locked and cannot be altered until a system reset."
     bit_offset: 31
     bit_size: 1
-    enum: ProtlvlLock
 fieldset/RamCtrl:
   description: RAM Control.
   fields:
@@ -310,10 +308,9 @@ fieldset/Remap:
     bit_size: 2
     enum: Usb0
   - name: lock
-    description: This 1-bit field provides a mechanism to limit writes to the this register to protect its contents. Once set, this bit remains asserted until a system reset.
+    description: "This 1-bit field provides a mechanism to limit writes to the this register to protect its contents. Once set, this bit remains asserted until a system reset.\n\nRaw bit values: false (0) = Lock0: This register is not locked and can be altered.; true (1) = Lock1: This register is locked and cannot be altered until a system reset."
     bit_offset: 31
     bit_size: 1
-    enum: ProtlvlLock
 fieldset/SmartDmaint:
   description: SmartDMA Interrupt Hijack.
   fields:
@@ -441,7 +438,6 @@ fieldset/SramXen:
     bit_offset: 5
     bit_size: 1
   - name: lock
-    description: This 1-bit field provides a mechanism to limit writes to the this register (and SRAM_XEN_DP) to protect its contents. Once set, this bit remains asserted until a system reset.
+    description: "This 1-bit field provides a mechanism to limit writes to the this register (and SRAM_XEN_DP) to protect its contents. Once set, this bit remains asserted until a system reset.\n\nRaw bit values: false (0) = Lock0: This register is not locked and can be altered.; true (1) = Lock1: This register is locked and cannot be altered."
     bit_offset: 31
     bit_size: 1
-    enum: SramXenLock

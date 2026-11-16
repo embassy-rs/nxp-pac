@@ -149,6 +149,13 @@ automatic sharing; fieldset-level descriptions do not define a distinct layout.
 
 ### Exact enum and fieldset sharing
 
+MCXA/MCXN one-bit fields use primitive `bool`. Do not add one-bit enum definitions
+or references: `false` means raw 0 and `true` means raw 1. Preserve the meaning of
+both values in the field documentation, especially inverted enable controls,
+write-one commands, and status flags. This does not change field geometry,
+register access policies, or software construction defaults. An enum with two
+named variants in a wider field is not a one-bit field and is retained.
+
 MCX models also share identical enum and fieldset types within each composed
 peripheral model. Repeated SRAM policies, timer modes, endpoint settings, tamper
 flags and similar fields do not need a separate Rust type for every bit or

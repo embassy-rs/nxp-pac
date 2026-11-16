@@ -141,165 +141,133 @@ fieldset/ResStatus:
   description: Result Status.
   fields:
   - name: res0_nx
-    description: RES0 IEEE Inexact Flag.
+    description: "RES0 IEEE Inexact Flag.\n\nRaw bit values: false (0) = Res0NxNo: The result is not rounded.; true (1) = Res0NxYes: The result is rounded, and as a result some digits lost."
     bit_offset: 0
     bit_size: 1
-    enum: Res0Nx
   - name: res0_uf
-    description: RES0 IEEE Underflow Flag.
+    description: "RES0 IEEE Underflow Flag.\n\nRaw bit values: false (0) = Res0UfNo: No tiny non-zero result is detected.; true (1) = Res0UfYes: A tiny non-zero result is detected."
     bit_offset: 1
     bit_size: 1
-    enum: Res0Uf
   - name: res0_of
-    description: RES0 IEEE Overflow Flag.
+    description: "RES0 IEEE Overflow Flag.\n\nRaw bit values: false (0) = Res0OfNo: The result format's largest finite number is not exceeded.; true (1) = Res0OfYes: The result format's largest finite number is exceeded."
     bit_offset: 2
     bit_size: 1
-    enum: Res0Of
   - name: res0_dz
-    description: RES0 IEEE Divide by Zero Flag.
+    description: "RES0 IEEE Divide by Zero Flag.\n\nRaw bit values: false (0) = Res0DzNo: No exact infinite result is defined for an operation on finite operands.; true (1) = Res0DzYes: An exact infinite result is defined for an operation on finite operands."
     bit_offset: 3
     bit_size: 1
-    enum: Res0Dz
   - name: res0_nv
-    description: RES0 IEEE Invalid Flag.
+    description: "RES0 IEEE Invalid Flag.\n\nRaw bit values: false (0) = Res0NvNo: There is usefully definable result.; true (1) = Res0NvYes: There is no usefully definable result."
     bit_offset: 4
     bit_size: 1
-    enum: Res0Nv
   - name: res0_err
-    description: RES0 Indirect Operation Error Flag.
+    description: "RES0 Indirect Operation Error Flag.\n\nRaw bit values: false (0) = Res0ErrNo: No invalid indirect operation is detected.; true (1) = Res0ErrYes: An invalid indirect operation error is detected."
     bit_offset: 5
     bit_size: 1
-    enum: Res0Err
   - name: res0_ovwr
-    description: RES0 Overwrite Flag.
+    description: "RES0 Overwrite Flag.\n\nRaw bit values: false (0) = Res0OvwrNo: The value of RES0 has been read.; true (1) = Res0OvwrYes: The value of RES0 has not been read yet and is overwritten by a new MAUWRAP result."
     bit_offset: 6
     bit_size: 1
-    enum: Res0Ovwr
   - name: res0_full
-    description: RES0 Full Flag.
+    description: "RES0 Full Flag.\n\nRaw bit values: false (0) = Res0FullNo: RES0 has not updated and cannot be read.; true (1) = Res0FullYes: RES0 has updated and can be read."
     bit_offset: 7
     bit_size: 1
-    enum: Res0Full
   - name: res1_nx
-    description: RES1 IEEE Inexact Flag.
+    description: "RES1 IEEE Inexact Flag.\n\nRaw bit values: false (0) = Res1NxNo: The result is not rounded.; true (1) = Res1NxYes: The result is rounded, and as a result some digits lost."
     bit_offset: 8
     bit_size: 1
-    enum: Res1Nx
   - name: res1_uf
-    description: RES1 IEEE Underflow Flag.
+    description: "RES1 IEEE Underflow Flag.\n\nRaw bit values: false (0) = Res1UfNo: No tiny non-zero result is detected.; true (1) = Res1UfYes: A tiny non-zero result is detected."
     bit_offset: 9
     bit_size: 1
-    enum: Res1Uf
   - name: res1_of
-    description: RES1 IEEE Overflow Flag.
+    description: "RES1 IEEE Overflow Flag.\n\nRaw bit values: false (0) = Res1OfNo: The result format's largest finite number is not exceeded.; true (1) = Res1OfYes: The result format's largest finite number is exceeded."
     bit_offset: 10
     bit_size: 1
-    enum: Res1Of
   - name: res1_dz
-    description: RES1 IEEE Divide by Zero Flag.
+    description: "RES1 IEEE Divide by Zero Flag.\n\nRaw bit values: false (0) = Res1DzNo: No exact infinite result is defined for an operation on finite operands.; true (1) = Res1DzYes: An exact infinite result is defined for an operation on finite operands."
     bit_offset: 11
     bit_size: 1
-    enum: Res1Dz
   - name: res1_nv
-    description: RES1 IEEE Invalid Flag.
+    description: "RES1 IEEE Invalid Flag.\n\nRaw bit values: false (0) = Res1NvNo: There is usefully definable result.; true (1) = Res1NvYes: There is no usefully definable result."
     bit_offset: 12
     bit_size: 1
-    enum: Res1Nv
   - name: res1_err
-    description: RES1 Indirect Operation Error Flag.
+    description: "RES1 Indirect Operation Error Flag.\n\nRaw bit values: false (0) = Res1ErrNo: No invalid indirect operation is detected.; true (1) = Res1ErrYes: An invalid indirect operation error is detected."
     bit_offset: 13
     bit_size: 1
-    enum: Res1Err
   - name: res1_ovwr
-    description: RES1 Overwrite Flag.
+    description: "RES1 Overwrite Flag.\n\nRaw bit values: false (0) = Res1OvwrNo: The value of RES1 has been read.; true (1) = Res1OvwrYes: The value of RES1 has not been read yet and is overwritten by a new MAUWRAP result."
     bit_offset: 14
     bit_size: 1
-    enum: Res1Ovwr
   - name: res1_full
-    description: RES1 Full Flag.
+    description: "RES1 Full Flag.\n\nRaw bit values: false (0) = Res1FullNo: RES1 has not updated and cannot be read.; true (1) = Res1FullYes: RES1 has updated and can be read."
     bit_offset: 15
     bit_size: 1
-    enum: Res1Full
   - name: res2_nx
-    description: RES2 IEEE Inexact Flag.
+    description: "RES2 IEEE Inexact Flag.\n\nRaw bit values: false (0) = Res2NxNo: The result is not rounded.; true (1) = Res2NxYes: The result is rounded, and as a result some digits lost."
     bit_offset: 16
     bit_size: 1
-    enum: Res2Nx
   - name: res2_uf
-    description: RES2 IEEE Underflow Flag.
+    description: "RES2 IEEE Underflow Flag.\n\nRaw bit values: false (0) = Res2UfNo: No tiny non-zero result is detected.; true (1) = Res2UfYes: A tiny non-zero result is detected."
     bit_offset: 17
     bit_size: 1
-    enum: Res2Uf
   - name: res2_of
-    description: RES2 IEEE Overflow Flag.
+    description: "RES2 IEEE Overflow Flag.\n\nRaw bit values: false (0) = Res2OfNo: The result format's largest finite number is not exceeded.; true (1) = Res2OfYes: The result format's largest finite number is exceeded."
     bit_offset: 18
     bit_size: 1
-    enum: Res2Of
   - name: res2_dz
-    description: RES2 IEEE Divide by Zero Flag.
+    description: "RES2 IEEE Divide by Zero Flag.\n\nRaw bit values: false (0) = Res2DzNo: No exact infinite result is defined for an operation on finite operands.; true (1) = Res2DzYes: An exact infinite result is defined for an operation on finite operands."
     bit_offset: 19
     bit_size: 1
-    enum: Res2Dz
   - name: res2_nv
-    description: RES2 IEEE Invalid Flag.
+    description: "RES2 IEEE Invalid Flag.\n\nRaw bit values: false (0) = Res2NvNo: There is usefully definable result.; true (1) = Res2NvYes: There is no usefully definable result."
     bit_offset: 20
     bit_size: 1
-    enum: Res2Nv
   - name: res2_err
-    description: RES2 Indirect Operation Error Flag.
+    description: "RES2 Indirect Operation Error Flag.\n\nRaw bit values: false (0) = Res2ErrNo: No invalid indirect operation is detected.; true (1) = Res2ErrYes: An invalid indirect operation error is detected."
     bit_offset: 21
     bit_size: 1
-    enum: Res2Err
   - name: res2_ovwr
-    description: RES2 Overwrite Flag.
+    description: "RES2 Overwrite Flag.\n\nRaw bit values: false (0) = Res2OvwrNo: The value of RES2 has been read.; true (1) = Res2OvwrYes: The value of RES2 has not been read yet and is overwritten by a new MAUWRAP result."
     bit_offset: 22
     bit_size: 1
-    enum: Res2Ovwr
   - name: res2_full
-    description: RES2 Full Flag.
+    description: "RES2 Full Flag.\n\nRaw bit values: false (0) = Res2FullNo: RES2 has not updated and cannot be read.; true (1) = Res2FullYes: RES2 has updated and can be read."
     bit_offset: 23
     bit_size: 1
-    enum: Res2Full
   - name: res3_nx
-    description: RES3 IEEE Inexact Flag.
+    description: "RES3 IEEE Inexact Flag.\n\nRaw bit values: false (0) = Res3NxNo: The result is not rounded.; true (1) = Res3NxYes: The result is rounded, and as a result some digits lost."
     bit_offset: 24
     bit_size: 1
-    enum: Res3Nx
   - name: res3_uf
-    description: RES3 IEEE Underflow Flag.
+    description: "RES3 IEEE Underflow Flag.\n\nRaw bit values: false (0) = Res3UfNo: No tiny non-zero result is detected.; true (1) = Res3UfYes: A tiny non-zero result is detected."
     bit_offset: 25
     bit_size: 1
-    enum: Res3Uf
   - name: res3_of
-    description: RES3 IEEE Overflow Flag.
+    description: "RES3 IEEE Overflow Flag.\n\nRaw bit values: false (0) = Res3OfNo: The result format's largest finite number is not exceeded.; true (1) = Res3OfYes: The result format's largest finite number is exceeded."
     bit_offset: 26
     bit_size: 1
-    enum: Res3Of
   - name: res3_dz
-    description: RES3 IEEE Divide by Zero Flag.
+    description: "RES3 IEEE Divide by Zero Flag.\n\nRaw bit values: false (0) = Res3DzNo: No exact infinite result is defined for an operation on finite operands.; true (1) = Res3DzYes: An exact infinite result is defined for an operation on finite operands."
     bit_offset: 27
     bit_size: 1
-    enum: Res3Dz
   - name: res3_nv
-    description: RES3 IEEE Invalid Flag.
+    description: "RES3 IEEE Invalid Flag.\n\nRaw bit values: false (0) = Res3NvNo: There is usefully definable result.; true (1) = Res3NvYes: There is no usefully definable result."
     bit_offset: 28
     bit_size: 1
-    enum: Res3Nv
   - name: res3_err
-    description: RES3 Indirect Operation Error Flag.
+    description: "RES3 Indirect Operation Error Flag.\n\nRaw bit values: false (0) = Res3ErrNo: No invalid indirect operation is detected.; true (1) = Res3ErrYes: An invalid indirect operation error is detected."
     bit_offset: 29
     bit_size: 1
-    enum: Res3Err
   - name: res3_ovwr
-    description: RES3 Overwrite Flag.
+    description: "RES3 Overwrite Flag.\n\nRaw bit values: false (0) = Res3OvwrNo: The value of RES3 has been read.; true (1) = Res3OvwrYes: The value of RES3 has not been read yet and is overwritten by a new MAUWRAP result."
     bit_offset: 30
     bit_size: 1
-    enum: Res3Ovwr
   - name: res3_full
-    description: RES3 Full Flag.
+    description: "RES3 Full Flag.\n\nRaw bit values: false (0) = Res3FullNo: RES3 has not updated and cannot be read.; true (1) = Res3FullYes: RES3 has updated and can be read."
     bit_offset: 31
     bit_size: 1
-    enum: Res3Full
   bit_size: 32
   reset_value: 0
 fieldset/ResStatusIe:
@@ -347,291 +315,3 @@ enum/OvdtRes0:
   - name: Float
     description: FLOAT.
     value: 3
-enum/Res0Dz:
-  bit_size: 1
-  variants:
-  - name: Res0DzNo
-    description: No exact infinite result is defined for an operation on finite operands.
-    value: 0
-  - name: Res0DzYes
-    description: An exact infinite result is defined for an operation on finite operands.
-    value: 1
-enum/Res0Err:
-  bit_size: 1
-  variants:
-  - name: Res0ErrNo
-    description: No invalid indirect operation is detected.
-    value: 0
-  - name: Res0ErrYes
-    description: An invalid indirect operation error is detected.
-    value: 1
-enum/Res0Full:
-  bit_size: 1
-  variants:
-  - name: Res0FullNo
-    description: RES0 has not updated and cannot be read.
-    value: 0
-  - name: Res0FullYes
-    description: RES0 has updated and can be read.
-    value: 1
-enum/Res0Nv:
-  bit_size: 1
-  variants:
-  - name: Res0NvNo
-    description: There is usefully definable result.
-    value: 0
-  - name: Res0NvYes
-    description: There is no usefully definable result.
-    value: 1
-enum/Res0Nx:
-  bit_size: 1
-  variants:
-  - name: Res0NxNo
-    description: The result is not rounded.
-    value: 0
-  - name: Res0NxYes
-    description: The result is rounded, and as a result some digits lost.
-    value: 1
-enum/Res0Of:
-  bit_size: 1
-  variants:
-  - name: Res0OfNo
-    description: The result format's largest finite number is not exceeded.
-    value: 0
-  - name: Res0OfYes
-    description: The result format's largest finite number is exceeded.
-    value: 1
-enum/Res0Ovwr:
-  bit_size: 1
-  variants:
-  - name: Res0OvwrNo
-    description: The value of RES0 has been read.
-    value: 0
-  - name: Res0OvwrYes
-    description: The value of RES0 has not been read yet and is overwritten by a new MAUWRAP result.
-    value: 1
-enum/Res0Uf:
-  bit_size: 1
-  variants:
-  - name: Res0UfNo
-    description: No tiny non-zero result is detected.
-    value: 0
-  - name: Res0UfYes
-    description: A tiny non-zero result is detected.
-    value: 1
-enum/Res1Dz:
-  bit_size: 1
-  variants:
-  - name: Res1DzNo
-    description: No exact infinite result is defined for an operation on finite operands.
-    value: 0
-  - name: Res1DzYes
-    description: An exact infinite result is defined for an operation on finite operands.
-    value: 1
-enum/Res1Err:
-  bit_size: 1
-  variants:
-  - name: Res1ErrNo
-    description: No invalid indirect operation is detected.
-    value: 0
-  - name: Res1ErrYes
-    description: An invalid indirect operation error is detected.
-    value: 1
-enum/Res1Full:
-  bit_size: 1
-  variants:
-  - name: Res1FullNo
-    description: RES1 has not updated and cannot be read.
-    value: 0
-  - name: Res1FullYes
-    description: RES1 has updated and can be read.
-    value: 1
-enum/Res1Nv:
-  bit_size: 1
-  variants:
-  - name: Res1NvNo
-    description: There is usefully definable result.
-    value: 0
-  - name: Res1NvYes
-    description: There is no usefully definable result.
-    value: 1
-enum/Res1Nx:
-  bit_size: 1
-  variants:
-  - name: Res1NxNo
-    description: The result is not rounded.
-    value: 0
-  - name: Res1NxYes
-    description: The result is rounded, and as a result some digits lost.
-    value: 1
-enum/Res1Of:
-  bit_size: 1
-  variants:
-  - name: Res1OfNo
-    description: The result format's largest finite number is not exceeded.
-    value: 0
-  - name: Res1OfYes
-    description: The result format's largest finite number is exceeded.
-    value: 1
-enum/Res1Ovwr:
-  bit_size: 1
-  variants:
-  - name: Res1OvwrNo
-    description: The value of RES1 has been read.
-    value: 0
-  - name: Res1OvwrYes
-    description: The value of RES1 has not been read yet and is overwritten by a new MAUWRAP result.
-    value: 1
-enum/Res1Uf:
-  bit_size: 1
-  variants:
-  - name: Res1UfNo
-    description: No tiny non-zero result is detected.
-    value: 0
-  - name: Res1UfYes
-    description: A tiny non-zero result is detected.
-    value: 1
-enum/Res2Dz:
-  bit_size: 1
-  variants:
-  - name: Res2DzNo
-    description: No exact infinite result is defined for an operation on finite operands.
-    value: 0
-  - name: Res2DzYes
-    description: An exact infinite result is defined for an operation on finite operands.
-    value: 1
-enum/Res2Err:
-  bit_size: 1
-  variants:
-  - name: Res2ErrNo
-    description: No invalid indirect operation is detected.
-    value: 0
-  - name: Res2ErrYes
-    description: An invalid indirect operation error is detected.
-    value: 1
-enum/Res2Full:
-  bit_size: 1
-  variants:
-  - name: Res2FullNo
-    description: RES2 has not updated and cannot be read.
-    value: 0
-  - name: Res2FullYes
-    description: RES2 has updated and can be read.
-    value: 1
-enum/Res2Nv:
-  bit_size: 1
-  variants:
-  - name: Res2NvNo
-    description: There is usefully definable result.
-    value: 0
-  - name: Res2NvYes
-    description: There is no usefully definable result.
-    value: 1
-enum/Res2Nx:
-  bit_size: 1
-  variants:
-  - name: Res2NxNo
-    description: The result is not rounded.
-    value: 0
-  - name: Res2NxYes
-    description: The result is rounded, and as a result some digits lost.
-    value: 1
-enum/Res2Of:
-  bit_size: 1
-  variants:
-  - name: Res2OfNo
-    description: The result format's largest finite number is not exceeded.
-    value: 0
-  - name: Res2OfYes
-    description: The result format's largest finite number is exceeded.
-    value: 1
-enum/Res2Ovwr:
-  bit_size: 1
-  variants:
-  - name: Res2OvwrNo
-    description: The value of RES2 has been read.
-    value: 0
-  - name: Res2OvwrYes
-    description: The value of RES2 has not been read yet and is overwritten by a new MAUWRAP result.
-    value: 1
-enum/Res2Uf:
-  bit_size: 1
-  variants:
-  - name: Res2UfNo
-    description: No tiny non-zero result is detected.
-    value: 0
-  - name: Res2UfYes
-    description: A tiny non-zero result is detected.
-    value: 1
-enum/Res3Dz:
-  bit_size: 1
-  variants:
-  - name: Res3DzNo
-    description: No exact infinite result is defined for an operation on finite operands.
-    value: 0
-  - name: Res3DzYes
-    description: An exact infinite result is defined for an operation on finite operands.
-    value: 1
-enum/Res3Err:
-  bit_size: 1
-  variants:
-  - name: Res3ErrNo
-    description: No invalid indirect operation is detected.
-    value: 0
-  - name: Res3ErrYes
-    description: An invalid indirect operation error is detected.
-    value: 1
-enum/Res3Full:
-  bit_size: 1
-  variants:
-  - name: Res3FullNo
-    description: RES3 has not updated and cannot be read.
-    value: 0
-  - name: Res3FullYes
-    description: RES3 has updated and can be read.
-    value: 1
-enum/Res3Nv:
-  bit_size: 1
-  variants:
-  - name: Res3NvNo
-    description: There is usefully definable result.
-    value: 0
-  - name: Res3NvYes
-    description: There is no usefully definable result.
-    value: 1
-enum/Res3Nx:
-  bit_size: 1
-  variants:
-  - name: Res3NxNo
-    description: The result is not rounded.
-    value: 0
-  - name: Res3NxYes
-    description: The result is rounded, and as a result some digits lost.
-    value: 1
-enum/Res3Of:
-  bit_size: 1
-  variants:
-  - name: Res3OfNo
-    description: The result format's largest finite number is not exceeded.
-    value: 0
-  - name: Res3OfYes
-    description: The result format's largest finite number is exceeded.
-    value: 1
-enum/Res3Ovwr:
-  bit_size: 1
-  variants:
-  - name: Res3OvwrNo
-    description: The value of RES3 has been read.
-    value: 0
-  - name: Res3OvwrYes
-    description: The value of RES3 has not been read yet and is overwritten by a new MAUWRAP result.
-    value: 1
-enum/Res3Uf:
-  bit_size: 1
-  variants:
-  - name: Res3UfNo
-    description: No tiny non-zero result is detected.
-    value: 0
-  - name: Res3UfYes
-    description: A tiny non-zero result is detected.
-    value: 1

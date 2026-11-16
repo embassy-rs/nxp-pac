@@ -47,9 +47,11 @@ serde_yaml = { version = "=0.9.34", optional = true }
 syn = { version = "2.0", features = ["full"], optional = true }
 
 [features]
+# Formatting must remain opt-in, including through chip-selection features.
 default = ["pac"]
 rt = ["cortex-m-rt/device"]
 pac = []
+# Enable explicitly when formatted register/enum output is needed.
 defmt = ["dep:defmt"]
 
 metadata = []

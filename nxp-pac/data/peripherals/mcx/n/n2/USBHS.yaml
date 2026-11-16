@@ -239,10 +239,9 @@ fieldset/UsbhsAlphaFieldsetDelta:
   description: Configure Flag.
   fields:
   - name: cf
-    description: Configure Flag.
+    description: "Configure Flag.\n\nRaw bit values: false (0) = PortRoutingClassicHost: Port routing control logic default-routes each port to an implementation dependent classic host controller.; true (1) = PortRoutingHost: Port routing control logic default-routes all ports to this host controller."
     bit_offset: 0
     bit_size: 1
-    enum: UsbhsAlphaEnumDelta
 fieldset/UsbhsAlphaFieldsetEcho:
   description: Device Controller Capability Parameters.
   fields:
@@ -292,98 +291,84 @@ fieldset/UsbhsAlphaFieldsetIndia:
   description: Endpoint Control 0.
   fields:
   - name: rxs
-    description: RX Endpoint Stall.
+    description: "RX Endpoint Stall.\n\nRaw bit values: false (0) = Disable: Endpoint OK.; true (1) = Enable: Endpoint stalled."
     bit_offset: 0
     bit_size: 1
-    enum: Rxs
   - name: rxt
     description: RX Endpoint Type.
     bit_offset: 2
     bit_size: 2
     enum: Rxt2
   - name: rxe
-    description: RX Endpoint Enable.
+    description: "RX Endpoint Enable.\n\nRaw bit values: false (0) = Disable: Disabled.; true (1) = Enable: Enabled."
     bit_offset: 7
     bit_size: 1
-    enum: Rxe
   - name: txs
-    description: TX Endpoint Stall.
+    description: "TX Endpoint Stall.\n\nRaw bit values: false (0) = Disable: Endpoint OK.; true (1) = Enable: Endpoint stalled."
     bit_offset: 16
     bit_size: 1
-    enum: Rxs
   - name: txt
     description: TX Endpoint Type.
     bit_offset: 18
     bit_size: 2
     enum: Rxt2
   - name: txe
-    description: TX Endpoint Enable.
+    description: "TX Endpoint Enable.\n\nRaw bit values: false (0) = Disable: Disabled.; true (1) = Enable: Enabled."
     bit_offset: 23
     bit_size: 1
-    enum: Rxe
 fieldset/Endptctrl2:
   description: Endpoint Control 2.
   fields:
   - name: rxs
-    description: RX Endpoint Stall.
+    description: "RX Endpoint Stall.\n\nRaw bit values: false (0) = Disable: Endpoint OK.; true (1) = Enable: Endpoint stalled."
     bit_offset: 0
     bit_size: 1
-    enum: Rxs
   - name: rxd
-    description: RX Endpoint Data Sink.
+    description: "RX Endpoint Data Sink.\n\nRaw bit values: false (0) = Disable: Dual Port Memory Buffer/DMA Engine."
     bit_offset: 1
     bit_size: 1
-    enum: Rxd
   - name: rxt
     description: RX Endpoint Type.
     bit_offset: 2
     bit_size: 2
     enum: Rxt
   - name: rxi
-    description: RX Data Toggle Inhibit.
+    description: "RX Data Toggle Inhibit.\n\nRaw bit values: false (0) = Disable: Disabled.; true (1) = Enable: Enabled."
     bit_offset: 5
     bit_size: 1
-    enum: Rxe
   - name: rxr
-    description: RX Data Toggle Reset (WS).
+    description: "RX Data Toggle Reset (WS).\n\nRaw bit values: true (1) = W1: Reset PID sequence."
     bit_offset: 6
     bit_size: 1
-    enum: Rxr
   - name: rxe
-    description: RX Endpoint Enable.
+    description: "RX Endpoint Enable.\n\nRaw bit values: false (0) = Disable: Disabled.; true (1) = Enable: Enabled."
     bit_offset: 7
     bit_size: 1
-    enum: Rxe
   - name: txs
-    description: TX Endpoint Stall.
+    description: "TX Endpoint Stall.\n\nRaw bit values: false (0) = Disable: Endpoint OK.; true (1) = Enable: Endpoint stalled."
     bit_offset: 16
     bit_size: 1
-    enum: Rxs
   - name: txd
-    description: TX Endpoint Data Source.
+    description: "TX Endpoint Data Source.\n\nRaw bit values: false (0) = Dma: Dual Port Memory Buffer/DMA Engine."
     bit_offset: 17
     bit_size: 1
-    enum: Txd
   - name: txt
     description: TX Endpoint Type.
     bit_offset: 18
     bit_size: 2
     enum: Rxt
   - name: txi
-    description: TX Data Toggle Inhibit.
+    description: "TX Data Toggle Inhibit.\n\nRaw bit values: false (0) = PidEn: PID sequencing enabled.; true (1) = PidDis: PID sequencing disabled."
     bit_offset: 21
     bit_size: 1
-    enum: Txi
   - name: txr
-    description: TX Data Toggle Reset (WS).
+    description: "TX Data Toggle Reset (WS).\n\nRaw bit values: true (1) = W1: Reset PID sequence."
     bit_offset: 22
     bit_size: 1
-    enum: Rxr
   - name: txe
-    description: TX Endpoint Enable.
+    description: "TX Endpoint Enable.\n\nRaw bit values: false (0) = Disable: Disabled.; true (1) = Enable: Enabled."
     bit_offset: 23
     bit_size: 1
-    enum: Rxe
 fieldset/UsbhsAlphaFieldsetQuebec:
   description: Endpoint Flush.
   fields:
@@ -469,20 +454,17 @@ fieldset/UsbhsAlphaFieldsetYankee:
     bit_offset: 0
     bit_size: 24
   - name: gptmode
-    description: General Purpose Timer Mode.
+    description: "General Purpose Timer Mode.\n\nRaw bit values: false (0) = OneShot: One Shot Mode.; true (1) = Repeat: Repeat Mode."
     bit_offset: 24
     bit_size: 1
-    enum: Gptmode
   - name: gptrst
-    description: General Purpose Timer Reset.
+    description: "General Purpose Timer Reset.\n\nRaw bit values: false (0) = NoAction: No action.; true (1) = LoadCntr: Load counter value from GPTLD bits in n_GPTIMER0LD."
     bit_offset: 30
     bit_size: 1
-    enum: UsbhsAlphaEnumXrayCharlie
   - name: gptrun
-    description: General Purpose Timer Run.
+    description: "General Purpose Timer Run.\n\nRaw bit values: false (0) = StopCntr: Stop counting.; true (1) = Run: Run."
     bit_offset: 31
     bit_size: 1
-    enum: Gptrun
 fieldset/Gptimer0ld2:
   description: 'General Purpose Timer #0 Load.'
   fields:
@@ -498,20 +480,17 @@ fieldset/UsbhsAlphaFieldsetAlphaAlpha:
     bit_offset: 0
     bit_size: 24
   - name: gptmode
-    description: General Purpose Timer Mode.
+    description: "General Purpose Timer Mode.\n\nRaw bit values: false (0) = OneShot: One Shot Mode.; true (1) = Repeat: Repeat Mode."
     bit_offset: 24
     bit_size: 1
-    enum: Gptmode
   - name: gptrst
-    description: General Purpose Timer Reset.
+    description: "General Purpose Timer Reset.\n\nRaw bit values: false (0) = NoAction: No action.; true (1) = LoadCntr: Load counter value from GPTLD bits in USB_n_GPTIMER0LD."
     bit_offset: 30
     bit_size: 1
-    enum: UsbhsAlphaEnumAlphaDelta
   - name: gptrun
-    description: General Purpose Timer Run.
+    description: "General Purpose Timer Run.\n\nRaw bit values: false (0) = StopCntr: Stop counting.; true (1) = Run: Run."
     bit_offset: 31
     bit_size: 1
-    enum: Gptrun
 fieldset/UsbhsAlphaFieldsetCharlieAlpha:
   description: Host Controller Capability Parameters.
   fields:
@@ -579,10 +558,9 @@ fieldset/UsbhsAlphaFieldsetFoxtrotAlpha:
   description: Device Hardware Parameters.
   fields:
   - name: dc
-    description: Device Capable.
+    description: "Device Capable.\n\nRaw bit values: false (0) = DeviceOpDis: Not supported.; true (1) = DeviceOpEn: Supported."
     bit_offset: 0
     bit_size: 1
-    enum: UsbhsAlphaEnumGolf
   - name: devep
     description: Device Endpoint Number.
     bit_offset: 1
@@ -609,10 +587,9 @@ fieldset/UsbhsAlphaFieldsetHotelAlpha:
   description: Host Hardware Parameters.
   fields:
   - name: hc
-    description: Host Capable.
+    description: "Host Capable.\n\nRaw bit values: false (0) = HostOpDis: Not supported.; true (1) = HostOpEn: Supported."
     bit_offset: 0
     bit_size: 1
-    enum: UsbhsAlphaEnumCharlieDelta
   - name: nport
     description: The Number of downstream ports supported by the host controller is (NPORT+1).
     bit_offset: 1
@@ -674,15 +651,13 @@ fieldset/UsbhsAlphaFieldsetLimaAlpha:
     bit_offset: 4
     bit_size: 1
   - name: idpu
-    description: ID Pullup.
+    description: "ID Pullup.\n\nRaw bit values: false (0) = Disable: Off.; true (1) = Enable: On."
     bit_offset: 5
     bit_size: 1
-    enum: UsbhsAlphaEnumEchoDelta
   - name: id
-    description: USB ID.
+    description: "USB ID.\n\nRaw bit values: false (0) = Disable: A device.; true (1) = Enable: B device."
     bit_offset: 8
     bit_size: 1
-    enum: UsbhsAlphaEnumDeltaDelta
   - name: avv
     description: A VBus Valid.
     bit_offset: 9
@@ -774,49 +749,41 @@ fieldset/UsbhsAlphaFieldsetNovemberAlpha:
   description: Port Status & Control.
   fields:
   - name: ccs
-    description: Current Connect Status.
+    description: "Current Connect Status.\n\nRaw bit values: false (0) = Disable: In Host mode: No device is present. In Device mode: Not attached.; true (1) = Enable: In Host mode: Device is present on port. In Device mode: Attached."
     bit_offset: 0
     bit_size: 1
-    enum: UsbhsAlphaEnumCharlie
   - name: csc
-    description: Connect Status Change.
+    description: "Connect Status Change.\n\nRaw bit values: false (0) = Disable: No change.; true (1) = Enable: Change in current connect status."
     bit_offset: 1
     bit_size: 1
-    enum: UsbhsAlphaEnumFoxtrot
   - name: pe
-    description: Port Enabled/Disabled.
+    description: "Port Enabled/Disabled.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: UsbhsAlphaEnumJulietDelta
   - name: pec
-    description: Port Enable/Disable Change.
+    description: "Port Enable/Disable Change.\n\nRaw bit values: false (0) = Disable: No change.; true (1) = Enable: Port enabled/disabled status has changed."
     bit_offset: 3
     bit_size: 1
-    enum: UsbhsAlphaEnumKiloDelta
   - name: oca
-    description: Over-Current Active.
+    description: "Over-Current Active.\n\nRaw bit values: false (0) = NoOvercurrent: This port does not have an over-current condition.; true (1) = Overcurrent: This port currently has an over-current condition."
     bit_offset: 4
     bit_size: 1
-    enum: UsbhsAlphaEnumIndiaDelta
   - name: occ
     description: Over-current Change.
     bit_offset: 5
     bit_size: 1
   - name: fpr
-    description: Force Port Resume.
+    description: "Force Port Resume.\n\nRaw bit values: false (0) = Disable: No resume (K-state) detected/driven on port.; true (1) = Enable: Resume detected/driven on port."
     bit_offset: 6
     bit_size: 1
-    enum: UsbhsAlphaEnumUniformCharlie
   - name: susp
-    description: Suspend.
+    description: "Suspend.\n\nRaw bit values: false (0) = Disable: Port not in suspend state.; true (1) = Enable: Port in suspend state."
     bit_offset: 7
     bit_size: 1
-    enum: UsbhsAlphaEnumAlphaEcho
   - name: pr
-    description: Port Reset.
+    description: "Port Reset.\n\nRaw bit values: false (0) = Disable: Port is not in reset.; true (1) = Enable: Port is in reset."
     bit_offset: 8
     bit_size: 1
-    enum: UsbhsAlphaEnumQuebecDelta
   - name: hsp
     description: High-Speed Port.
     bit_offset: 9
@@ -857,15 +824,13 @@ fieldset/UsbhsAlphaFieldsetNovemberAlpha:
     bit_offset: 22
     bit_size: 1
   - name: phcd
-    description: PHY Low Power Suspend - Clock Disable (PLPSCD).
+    description: "PHY Low Power Suspend - Clock Disable (PLPSCD).\n\nRaw bit values: false (0) = PhyClkEn: Enable PHY clock.; true (1) = PhyClkDis: Disable PHY clock."
     bit_offset: 23
     bit_size: 1
-    enum: UsbhsAlphaEnumMikeDelta
   - name: pfsc
-    description: Port Force Full Speed Connect.
+    description: "Port Force Full Speed Connect.\n\nRaw bit values: false (0) = Normal: Normal operation.; true (1) = FullSpeed: Forced to full speed."
     bit_offset: 24
     bit_size: 1
-    enum: UsbhsAlphaEnumLimaDelta
   - name: pts_2
     description: Parallel Transceiver Select.
     bit_offset: 25
@@ -876,15 +841,13 @@ fieldset/UsbhsAlphaFieldsetNovemberAlpha:
     bit_size: 2
     enum: UsbhsAlphaEnumSierraDelta
   - name: ptw
-    description: Parallel Transceiver Width - Read/Write.
+    description: "Parallel Transceiver Width - Read/Write.\n\nRaw bit values: false (0) = Utmi8: Select the 8-bit UTMI interface [60 MHz].; true (1) = Utmi16: Select the 16-bit UTMI interface [30 MHz]."
     bit_offset: 28
     bit_size: 1
-    enum: UsbhsAlphaEnumUniformDelta
   - name: sts
-    description: Serial Transceiver Select.
+    description: "Serial Transceiver Select.\n\nRaw bit values: false (0) = Disable: Parallel Interface signals is selected.; true (1) = Enable: Serial Interface Engine is selected."
     bit_offset: 29
     bit_size: 1
-    enum: UsbhsAlphaEnumZuluDelta
   - name: pts_1
     description: Parallel Transceiver Select.
     bit_offset: 30
@@ -916,10 +879,9 @@ fieldset/UsbhsAlphaFieldsetQuebecAlpha:
   description: USB Command.
   fields:
   - name: rs
-    description: Run/Stop.
+    description: "Run/Stop.\n\nRaw bit values: false (0) = Disable: Stop.; true (1) = Enable: Run."
     bit_offset: 0
     bit_size: 1
-    enum: UsbhsAlphaEnumVictorDelta
   - name: rst
     description: Controller Reset.
     bit_offset: 1
@@ -929,15 +891,13 @@ fieldset/UsbhsAlphaFieldsetQuebecAlpha:
     bit_offset: 2
     bit_size: 2
   - name: pse
-    description: Periodic Schedule Enable.
+    description: "Periodic Schedule Enable.\n\nRaw bit values: false (0) = DontProcessPt: Do not process the Periodic Schedule.; true (1) = ProcessPtPeriodiclistbase: Use the PERIODICLISTBASE register to access the Periodic Schedule."
     bit_offset: 4
     bit_size: 1
-    enum: UsbhsAlphaEnumRomeoDelta
   - name: ase
-    description: Asynchronous Schedule Enable.
+    description: "Asynchronous Schedule Enable.\n\nRaw bit values: false (0) = DontProcessAsync: Do not process the Asynchronous Schedule.; true (1) = AccessAsync: Use the ASYNCLISTADDR register to access the Asynchronous Schedule."
     bit_offset: 5
     bit_size: 1
-    enum: UsbhsAlphaEnumBravo
   - name: iaa
     description: Interrupt on Async Advance Doorbell.
     bit_offset: 6
@@ -1035,20 +995,17 @@ fieldset/UsbhsAlphaFieldsetSierraAlpha:
     bit_size: 2
     enum: UsbhsAlphaEnumEcho
   - name: es
-    description: Endian Select.
+    description: "Endian Select.\n\nRaw bit values: false (0) = LittleEndian: Little Endian.; true (1) = BigEndian: Big Endian."
     bit_offset: 2
     bit_size: 1
-    enum: UsbhsAlphaEnumTangoCharlie
   - name: slom
-    description: Setup Lockout Mode.
+    description: "Setup Lockout Mode.\n\nRaw bit values: false (0) = LockoutOn: Setup Lockouts On (default);.; true (1) = LockoutOff: Setup Lockouts Off."
     bit_offset: 3
     bit_size: 1
-    enum: UsbhsAlphaEnumXrayDelta
   - name: sdis
-    description: Stream Disable Mode.
+    description: "Stream Disable Mode.\n\nRaw bit values: false (0) = Disable: Inactive.; true (1) = Enable: Active."
     bit_offset: 4
     bit_size: 1
-    enum: UsbhsAlphaEnumWhiskeyDelta
 fieldset/UsbhsAlphaFieldsetTangoAlpha:
   description: USB Status.
   fields:
@@ -1144,33 +1101,6 @@ enum/UsbhsAlphaEnumAlpha:
   - name: IncrBurst
     description: Incremental burst of unspecified length only.
     value: 0
-enum/UsbhsAlphaEnumBravo:
-  bit_size: 1
-  variants:
-  - name: AccessAsync
-    description: Use the ASYNCLISTADDR register to access the Asynchronous Schedule.
-    value: 1
-  - name: DontProcessAsync
-    description: Do not process the Asynchronous Schedule.
-    value: 0
-enum/UsbhsAlphaEnumCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: 'In Host mode: No device is present. In Device mode: Not attached.'
-    value: 0
-  - name: Enable
-    description: 'In Host mode: Device is present on port. In Device mode: Attached.'
-    value: 1
-enum/UsbhsAlphaEnumDelta:
-  bit_size: 1
-  variants:
-  - name: PortRoutingClassicHost
-    description: Port routing control logic default-routes each port to an implementation dependent classic host controller.
-    value: 0
-  - name: PortRoutingHost
-    description: Port routing control logic default-routes all ports to this host controller.
-    value: 1
 enum/UsbhsAlphaEnumEcho:
   bit_size: 2
   variants:
@@ -1183,54 +1113,12 @@ enum/UsbhsAlphaEnumEcho:
   - name: Idl
     description: Idle [Default for combination host/device].
     value: 0
-enum/UsbhsAlphaEnumFoxtrot:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: No change.
-    value: 0
-  - name: Enable
-    description: Change in current connect status.
-    value: 1
-enum/UsbhsAlphaEnumGolf:
-  bit_size: 1
-  variants:
-  - name: DeviceOpDis
-    description: Not supported.
-    value: 0
-  - name: DeviceOpEn
-    description: Supported.
-    value: 1
-enum/Rxe:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/Rxs:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Endpoint OK.
-    value: 0
-  - name: Enable
-    description: Endpoint stalled.
-    value: 1
 enum/Rxt2:
   bit_size: 2
   variants:
   - name: Ctrl
     description: Control.
     value: 0
-enum/Rxr:
-  bit_size: 1
-  variants:
-  - name: W1
-    description: Reset PID sequence.
-    value: 1
 enum/Rxt:
   bit_size: 2
   variants:
@@ -1245,45 +1133,6 @@ enum/Rxt:
     value: 3
   - name: Iso
     description: Isochronous.
-    value: 1
-enum/Txd:
-  bit_size: 1
-  variants:
-  - name: Dma
-    description: Dual Port Memory Buffer/DMA Engine.
-    value: 0
-enum/Txi:
-  bit_size: 1
-  variants:
-  - name: PidDis
-    description: PID sequencing disabled.
-    value: 1
-  - name: PidEn
-    description: PID sequencing enabled.
-    value: 0
-enum/Rxd:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Dual Port Memory Buffer/DMA Engine.
-    value: 0
-enum/UsbhsAlphaEnumTangoCharlie:
-  bit_size: 1
-  variants:
-  - name: BigEndian
-    description: Big Endian.
-    value: 1
-  - name: LittleEndian
-    description: Little Endian.
-    value: 0
-enum/UsbhsAlphaEnumUniformCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: No resume (K-state) detected/driven on port.
-    value: 0
-  - name: Enable
-    description: Resume detected/driven on port.
     value: 1
 enum/UsbhsAlphaEnumVictorCharlie:
   bit_size: 14
@@ -1312,69 +1161,6 @@ enum/UsbhsAlphaEnumVictorCharlie:
   - name: Frindex8
     description: (8) 5.
     value: 7
-enum/UsbhsAlphaEnumXrayCharlie:
-  bit_size: 1
-  variants:
-  - name: LoadCntr
-    description: Load counter value from GPTLD bits in n_GPTIMER0LD.
-    value: 1
-  - name: NoAction
-    description: No action.
-    value: 0
-enum/Gptmode:
-  bit_size: 1
-  variants:
-  - name: OneShot
-    description: One Shot Mode.
-    value: 0
-  - name: Repeat
-    description: Repeat Mode.
-    value: 1
-enum/UsbhsAlphaEnumAlphaDelta:
-  bit_size: 1
-  variants:
-  - name: LoadCntr
-    description: Load counter value from GPTLD bits in USB_n_GPTIMER0LD.
-    value: 1
-  - name: NoAction
-    description: No action.
-    value: 0
-enum/Gptrun:
-  bit_size: 1
-  variants:
-  - name: Run
-    description: Run.
-    value: 1
-  - name: StopCntr
-    description: Stop counting.
-    value: 0
-enum/UsbhsAlphaEnumCharlieDelta:
-  bit_size: 1
-  variants:
-  - name: HostOpDis
-    description: Not supported.
-    value: 0
-  - name: HostOpEn
-    description: Supported.
-    value: 1
-enum/UsbhsAlphaEnumDeltaDelta:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: A device.
-    value: 0
-  - name: Enable
-    description: B device.
-    value: 1
-enum/UsbhsAlphaEnumEchoDelta:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Off.
-    value: 0
-  - name: Enable
-    description: On.
-    value: 1
 enum/UsbhsAlphaEnumFoxtrotDelta:
   bit_size: 8
   variants:
@@ -1425,51 +1211,6 @@ enum/UsbhsAlphaEnumHotelDelta:
     value: 1
   - name: NoCompController
     description: There is no internal Companion Controller and port-ownership hand-off is not supported.
-    value: 0
-enum/UsbhsAlphaEnumIndiaDelta:
-  bit_size: 1
-  variants:
-  - name: NoOvercurrent
-    description: This port does not have an over-current condition.
-    value: 0
-  - name: Overcurrent
-    description: This port currently has an over-current condition.
-    value: 1
-enum/UsbhsAlphaEnumJulietDelta:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/UsbhsAlphaEnumKiloDelta:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: No change.
-    value: 0
-  - name: Enable
-    description: Port enabled/disabled status has changed.
-    value: 1
-enum/UsbhsAlphaEnumLimaDelta:
-  bit_size: 1
-  variants:
-  - name: FullSpeed
-    description: Forced to full speed.
-    value: 1
-  - name: Normal
-    description: Normal operation.
-    value: 0
-enum/UsbhsAlphaEnumMikeDelta:
-  bit_size: 1
-  variants:
-  - name: PhyClkDis
-    description: Disable PHY clock.
-    value: 1
-  - name: PhyClkEn
-    description: Enable PHY clock.
     value: 0
 enum/UsbhsAlphaEnumNovemberDelta:
   bit_size: 3
@@ -1528,24 +1269,6 @@ enum/UsbhsAlphaEnumPapaDelta:
   - name: Undefined
     description: Undefined.
     value: 3
-enum/UsbhsAlphaEnumQuebecDelta:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Port is not in reset.
-    value: 0
-  - name: Enable
-    description: Port is in reset.
-    value: 1
-enum/UsbhsAlphaEnumRomeoDelta:
-  bit_size: 1
-  variants:
-  - name: DontProcessPt
-    description: Do not process the Periodic Schedule.
-    value: 0
-  - name: ProcessPtPeriodiclistbase
-    description: Use the PERIODICLISTBASE register to access the Periodic Schedule.
-    value: 1
 enum/UsbhsAlphaEnumSierraDelta:
   bit_size: 2
   variants:
@@ -1588,42 +1311,6 @@ enum/UsbhsAlphaEnumTangoDelta:
   - name: TstModeDis
     description: TEST_MODE_DISABLE.
     value: 0
-enum/UsbhsAlphaEnumUniformDelta:
-  bit_size: 1
-  variants:
-  - name: Utmi16
-    description: Select the 16-bit UTMI interface [30 MHz].
-    value: 1
-  - name: Utmi8
-    description: Select the 8-bit UTMI interface [60 MHz].
-    value: 0
-enum/UsbhsAlphaEnumVictorDelta:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Stop.
-    value: 0
-  - name: Enable
-    description: Run.
-    value: 1
-enum/UsbhsAlphaEnumWhiskeyDelta:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Inactive.
-    value: 0
-  - name: Enable
-    description: Active.
-    value: 1
-enum/UsbhsAlphaEnumXrayDelta:
-  bit_size: 1
-  variants:
-  - name: LockoutOff
-    description: Setup Lockouts Off.
-    value: 1
-  - name: LockoutOn
-    description: Setup Lockouts On (default);.
-    value: 0
 enum/UsbhsAlphaEnumYankeeDelta:
   bit_size: 2
   variants:
@@ -1639,21 +1326,3 @@ enum/UsbhsAlphaEnumYankeeDelta:
   - name: SwRstSerialEng
     description: Software programmable - Reset to use serial signalling for FS/LS.
     value: 3
-enum/UsbhsAlphaEnumZuluDelta:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Parallel Interface signals is selected.
-    value: 0
-  - name: Enable
-    description: Serial Interface Engine is selected.
-    value: 1
-enum/UsbhsAlphaEnumAlphaEcho:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Port not in suspend state.
-    value: 0
-  - name: Enable
-    description: Port in suspend state.
-    value: 1

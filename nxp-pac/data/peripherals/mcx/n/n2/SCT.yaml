@@ -419,63 +419,52 @@ fieldset/SctAlphaFieldsetGolfAlpha:
   description: Conflict Interrupt Enable.
   fields:
   - name: ncen0
-    description: No Change Conflict Event and Interrupt Enable.
+    description: "No Change Conflict Event and Interrupt Enable.\n\nRaw bit values: false (0) = NoInterrupt: No interrupt.; true (1) = Interrupt: Interrupt."
     bit_offset: 0
     bit_size: 1
-    enum: Ncen
   - name: ncen1
-    description: No Change Conflict Event and Interrupt Enable.
+    description: "No Change Conflict Event and Interrupt Enable.\n\nRaw bit values: false (0) = NoInterrupt: No interrupt.; true (1) = Interrupt: Interrupt."
     bit_offset: 1
     bit_size: 1
-    enum: Ncen
   - name: ncen2
-    description: No Change Conflict Event and Interrupt Enable.
+    description: "No Change Conflict Event and Interrupt Enable.\n\nRaw bit values: false (0) = NoInterrupt: No interrupt.; true (1) = Interrupt: Interrupt."
     bit_offset: 2
     bit_size: 1
-    enum: Ncen
   - name: ncen3
-    description: No Change Conflict Event and Interrupt Enable.
+    description: "No Change Conflict Event and Interrupt Enable.\n\nRaw bit values: false (0) = NoInterrupt: No interrupt.; true (1) = Interrupt: Interrupt."
     bit_offset: 3
     bit_size: 1
-    enum: Ncen
   - name: ncen4
-    description: No Change Conflict Event and Interrupt Enable.
+    description: "No Change Conflict Event and Interrupt Enable.\n\nRaw bit values: false (0) = NoInterrupt: No interrupt.; true (1) = Interrupt: Interrupt."
     bit_offset: 4
     bit_size: 1
-    enum: Ncen
   - name: ncen5
-    description: No Change Conflict Event and Interrupt Enable.
+    description: "No Change Conflict Event and Interrupt Enable.\n\nRaw bit values: false (0) = NoInterrupt: No interrupt.; true (1) = Interrupt: Interrupt."
     bit_offset: 5
     bit_size: 1
-    enum: Ncen
   - name: ncen6
-    description: No Change Conflict Event and Interrupt Enable.
+    description: "No Change Conflict Event and Interrupt Enable.\n\nRaw bit values: false (0) = NoInterrupt: No interrupt.; true (1) = Interrupt: Interrupt."
     bit_offset: 6
     bit_size: 1
-    enum: Ncen
   - name: ncen7
-    description: No Change Conflict Event and Interrupt Enable.
+    description: "No Change Conflict Event and Interrupt Enable.\n\nRaw bit values: false (0) = NoInterrupt: No interrupt.; true (1) = Interrupt: Interrupt."
     bit_offset: 7
     bit_size: 1
-    enum: Ncen
   - name: ncen8
-    description: No Change Conflict Event and Interrupt Enable.
+    description: "No Change Conflict Event and Interrupt Enable.\n\nRaw bit values: false (0) = NoInterrupt: No interrupt.; true (1) = Interrupt: Interrupt."
     bit_offset: 8
     bit_size: 1
-    enum: Ncen
   - name: ncen9
-    description: No Change Conflict Event and Interrupt Enable.
+    description: "No Change Conflict Event and Interrupt Enable.\n\nRaw bit values: false (0) = NoInterrupt: No interrupt.; true (1) = Interrupt: Interrupt."
     bit_offset: 9
     bit_size: 1
-    enum: Ncen
 fieldset/SctAlphaFieldsetHotelAlpha:
   description: SCT Configuration.
   fields:
   - name: unify
-    description: SCT Operation.
+    description: "SCT Operation.\n\nRaw bit values: false (0) = DualCounter: Dual counters, COUNTER_L and COUNTER_H.; true (1) = UnifiedCounter: Unified counter."
     bit_offset: 0
     bit_size: 1
-    enum: SctAlphaEnumEchoEcho
   - name: clkmode
     description: SCT Clock Mode.
     bit_offset: 1
@@ -487,82 +476,68 @@ fieldset/SctAlphaFieldsetHotelAlpha:
     bit_size: 4
     enum: SctAlphaEnumEcho
   - name: noreload_l
-    description: No Reload Lower Match.
+    description: "No Reload Lower Match.\n\nRaw bit values: false (0) = Reload: Reloaded.; true (1) = NoReload: Not reloaded."
     bit_offset: 7
     bit_size: 1
-    enum: SctAlphaEnumPapaBravo
   - name: noreload_h
-    description: No Reload Higher Match.
+    description: "No Reload Higher Match.\n\nRaw bit values: false (0) = ReloadH: Reloaded.; true (1) = NoReloadH: Not reloaded."
     bit_offset: 8
     bit_size: 1
-    enum: SctAlphaEnumOscarBravo
   - name: insync
     description: Input Synchronization.
     bit_offset: 9
     bit_size: 8
   - name: autolimit_l
-    description: Auto Limit Lower.
+    description: "Auto Limit Lower.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 17
     bit_size: 1
-    enum: Ien
   - name: autolimit_h
-    description: Auto Limit Higher.
+    description: "Auto Limit Higher.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 18
     bit_size: 1
-    enum: Ien
 fieldset/SctAlphaFieldsetIndiaAlpha:
   description: Conflict Flag.
   fields:
   - name: ncflag0
-    description: No Change Conflict Event Flag.
+    description: "No Change Conflict Event Flag.\n\nRaw bit values: false (0) = NoNcConflict: Did not occur.; true (1) = NcConflict: Occurred."
     bit_offset: 0
     bit_size: 1
-    enum: Ncflag
   - name: ncflag1
-    description: No Change Conflict Event Flag.
+    description: "No Change Conflict Event Flag.\n\nRaw bit values: false (0) = NoNcConflict: Did not occur.; true (1) = NcConflict: Occurred."
     bit_offset: 1
     bit_size: 1
-    enum: Ncflag
   - name: ncflag2
-    description: No Change Conflict Event Flag.
+    description: "No Change Conflict Event Flag.\n\nRaw bit values: false (0) = NoNcConflict: Did not occur.; true (1) = NcConflict: Occurred."
     bit_offset: 2
     bit_size: 1
-    enum: Ncflag
   - name: ncflag3
-    description: No Change Conflict Event Flag.
+    description: "No Change Conflict Event Flag.\n\nRaw bit values: false (0) = NoNcConflict: Did not occur.; true (1) = NcConflict: Occurred."
     bit_offset: 3
     bit_size: 1
-    enum: Ncflag
   - name: ncflag4
-    description: No Change Conflict Event Flag.
+    description: "No Change Conflict Event Flag.\n\nRaw bit values: false (0) = NoNcConflict: Did not occur.; true (1) = NcConflict: Occurred."
     bit_offset: 4
     bit_size: 1
-    enum: Ncflag
   - name: ncflag5
-    description: No Change Conflict Event Flag.
+    description: "No Change Conflict Event Flag.\n\nRaw bit values: false (0) = NoNcConflict: Did not occur.; true (1) = NcConflict: Occurred."
     bit_offset: 5
     bit_size: 1
-    enum: Ncflag
   - name: ncflag6
-    description: No Change Conflict Event Flag.
+    description: "No Change Conflict Event Flag.\n\nRaw bit values: false (0) = NoNcConflict: Did not occur.; true (1) = NcConflict: Occurred."
     bit_offset: 6
     bit_size: 1
-    enum: Ncflag
   - name: ncflag7
-    description: No Change Conflict Event Flag.
+    description: "No Change Conflict Event Flag.\n\nRaw bit values: false (0) = NoNcConflict: Did not occur.; true (1) = NcConflict: Occurred."
     bit_offset: 7
     bit_size: 1
-    enum: Ncflag
   - name: ncflag8
-    description: No Change Conflict Event Flag.
+    description: "No Change Conflict Event Flag.\n\nRaw bit values: false (0) = NoNcConflict: Did not occur.; true (1) = NcConflict: Occurred."
     bit_offset: 8
     bit_size: 1
-    enum: Ncflag
   - name: ncflag9
-    description: No Change Conflict Event Flag.
+    description: "No Change Conflict Event Flag.\n\nRaw bit values: false (0) = NoNcConflict: Did not occur.; true (1) = NcConflict: Occurred."
     bit_offset: 9
     bit_size: 1
-    enum: Ncflag
   - name: buserrl
     description: Bus Error Low or Unified.
     bit_offset: 30
@@ -586,57 +561,49 @@ fieldset/SctAlphaFieldsetKiloAlpha:
   description: SCT Control.
   fields:
   - name: down_l
-    description: Down Counter Low.
+    description: "Down Counter Low.\n\nRaw bit values: false (0) = Up: Up.; true (1) = Down: Down."
     bit_offset: 0
     bit_size: 1
-    enum: DownH
   - name: stop_l
-    description: Stop Counter Low.
+    description: "Stop Counter Low.\n\nRaw bit values: false (0) = Disable: Disabled.; true (1) = Enable: Enabled."
     bit_offset: 1
     bit_size: 1
-    enum: HaltL
   - name: halt_l
-    description: Halt Counter Low.
+    description: "Halt Counter Low.\n\nRaw bit values: false (0) = Disable: Disabled.; true (1) = Enable: Enabled."
     bit_offset: 2
     bit_size: 1
-    enum: HaltL
   - name: clrctr_l
     description: Clear Counter Low.
     bit_offset: 3
     bit_size: 1
   - name: bidir_l
-    description: Bidirectional Select Low.
+    description: "Bidirectional Select Low.\n\nRaw bit values: false (0) = Up: Up.; true (1) = UpDown: Up-down."
     bit_offset: 4
     bit_size: 1
-    enum: BidirH
   - name: pre_l
     description: Prescaler for Low Counter.
     bit_offset: 5
     bit_size: 8
   - name: down_h
-    description: Down Counter High.
+    description: "Down Counter High.\n\nRaw bit values: false (0) = Up: Up.; true (1) = Down: Down."
     bit_offset: 16
     bit_size: 1
-    enum: DownH
   - name: stop_h
-    description: Stop Counter High.
+    description: "Stop Counter High.\n\nRaw bit values: false (0) = Disable: Disabled.; true (1) = Enable: Enabled."
     bit_offset: 17
     bit_size: 1
-    enum: HaltL
   - name: halt_h
-    description: Halt Counter High.
+    description: "Halt Counter High.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 18
     bit_size: 1
-    enum: SctAlphaEnumAlphaAlpha
   - name: clrctr_h
     description: Clear Counter High.
     bit_offset: 19
     bit_size: 1
   - name: bidir_h
-    description: Bidirectional Select High.
+    description: "Bidirectional Select High.\n\nRaw bit values: false (0) = Up: Up.; true (1) = UpDown: Up-down."
     bit_offset: 20
     bit_size: 1
-    enum: BidirH
   - name: pre_h
     description: Prescaler for High Counter.
     bit_offset: 21
@@ -810,15 +777,13 @@ fieldset/SctAlphaFieldsetOscarAlpha:
     bit_offset: 0
     bit_size: 4
   - name: hevent
-    description: High Event.
+    description: "High Event.\n\nRaw bit values: false (0) = LCounter: Low counter (selects the L state and the L match register that the MATCHSEL field specifies).; true (1) = HCounter: High counter (selects the H state and the H match register that the MATCHSEL field specifies)."
     bit_offset: 4
     bit_size: 1
-    enum: SctAlphaEnumCharlieAlpha
   - name: outsel
-    description: Input and Output Select.
+    description: "Input and Output Select.\n\nRaw bit values: false (0) = Input: Inputs.; true (1) = Output: Outputs."
     bit_offset: 5
     bit_size: 1
-    enum: SctAlphaEnumKiloCharlie
   - name: iosel
     description: Input or Output Signal Select.
     bit_offset: 6
@@ -834,10 +799,9 @@ fieldset/SctAlphaFieldsetOscarAlpha:
     bit_size: 2
     enum: SctAlphaEnumGolf
   - name: stateld
-    description: State Load.
+    description: "State Load.\n\nRaw bit values: false (0) = Add: Value of STATEV added to that of STATE (the carry out is ignored).; true (1) = Load: Value of STATEV loaded into that of STATE."
     bit_offset: 14
     bit_size: 1
-    enum: SctAlphaEnumBravoEcho
   - name: statev
     description: State Value.
     bit_offset: 15
@@ -862,168 +826,136 @@ fieldset/SctAlphaFieldsetQuebecAlpha:
   description: Event Interrupt Enable.
   fields:
   - name: ien0
-    description: Event Interrupt Enable.
+    description: "Event Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 0
     bit_size: 1
-    enum: Ien
   - name: ien1
-    description: Event Interrupt Enable.
+    description: "Event Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 1
     bit_size: 1
-    enum: Ien
   - name: ien2
-    description: Event Interrupt Enable.
+    description: "Event Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 2
     bit_size: 1
-    enum: Ien
   - name: ien3
-    description: Event Interrupt Enable.
+    description: "Event Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 3
     bit_size: 1
-    enum: Ien
   - name: ien4
-    description: Event Interrupt Enable.
+    description: "Event Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 4
     bit_size: 1
-    enum: Ien
   - name: ien5
-    description: Event Interrupt Enable.
+    description: "Event Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 5
     bit_size: 1
-    enum: Ien
   - name: ien6
-    description: Event Interrupt Enable.
+    description: "Event Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 6
     bit_size: 1
-    enum: Ien
   - name: ien7
-    description: Event Interrupt Enable.
+    description: "Event Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 7
     bit_size: 1
-    enum: Ien
   - name: ien8
-    description: Event Interrupt Enable.
+    description: "Event Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 8
     bit_size: 1
-    enum: Ien
   - name: ien9
-    description: Event Interrupt Enable.
+    description: "Event Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 9
     bit_size: 1
-    enum: Ien
   - name: ien10
-    description: Event Interrupt Enable.
+    description: "Event Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 10
     bit_size: 1
-    enum: Ien
   - name: ien11
-    description: Event Interrupt Enable.
+    description: "Event Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 11
     bit_size: 1
-    enum: Ien
   - name: ien12
-    description: Event Interrupt Enable.
+    description: "Event Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 12
     bit_size: 1
-    enum: Ien
   - name: ien13
-    description: Event Interrupt Enable.
+    description: "Event Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 13
     bit_size: 1
-    enum: Ien
   - name: ien14
-    description: Event Interrupt Enable.
+    description: "Event Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 14
     bit_size: 1
-    enum: Ien
   - name: ien15
-    description: Event Interrupt Enable.
+    description: "Event Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 15
     bit_size: 1
-    enum: Ien
 fieldset/SctAlphaFieldsetRomeoAlpha:
   description: Event Flag.
   fields:
   - name: flag0
-    description: Event Flag.
+    description: "Event Flag.\n\nRaw bit values: false (0) = NoFlag: No flag.; true (1) = Flag: Event n flag."
     bit_offset: 0
     bit_size: 1
-    enum: Flag
   - name: flag1
-    description: Event Flag.
+    description: "Event Flag.\n\nRaw bit values: false (0) = NoFlag: No flag.; true (1) = Flag: Event n flag."
     bit_offset: 1
     bit_size: 1
-    enum: Flag
   - name: flag2
-    description: Event Flag.
+    description: "Event Flag.\n\nRaw bit values: false (0) = NoFlag: No flag.; true (1) = Flag: Event n flag."
     bit_offset: 2
     bit_size: 1
-    enum: Flag
   - name: flag3
-    description: Event Flag.
+    description: "Event Flag.\n\nRaw bit values: false (0) = NoFlag: No flag.; true (1) = Flag: Event n flag."
     bit_offset: 3
     bit_size: 1
-    enum: Flag
   - name: flag4
-    description: Event Flag.
+    description: "Event Flag.\n\nRaw bit values: false (0) = NoFlag: No flag.; true (1) = Flag: Event n flag."
     bit_offset: 4
     bit_size: 1
-    enum: Flag
   - name: flag5
-    description: Event Flag.
+    description: "Event Flag.\n\nRaw bit values: false (0) = NoFlag: No flag.; true (1) = Flag: Event n flag."
     bit_offset: 5
     bit_size: 1
-    enum: Flag
   - name: flag6
-    description: Event Flag.
+    description: "Event Flag.\n\nRaw bit values: false (0) = NoFlag: No flag.; true (1) = Flag: Event n flag."
     bit_offset: 6
     bit_size: 1
-    enum: Flag
   - name: flag7
-    description: Event Flag.
+    description: "Event Flag.\n\nRaw bit values: false (0) = NoFlag: No flag.; true (1) = Flag: Event n flag."
     bit_offset: 7
     bit_size: 1
-    enum: Flag
   - name: flag8
-    description: Event Flag.
+    description: "Event Flag.\n\nRaw bit values: false (0) = NoFlag: No flag.; true (1) = Flag: Event n flag."
     bit_offset: 8
     bit_size: 1
-    enum: Flag
   - name: flag9
-    description: Event Flag.
+    description: "Event Flag.\n\nRaw bit values: false (0) = NoFlag: No flag.; true (1) = Flag: Event n flag."
     bit_offset: 9
     bit_size: 1
-    enum: Flag
   - name: flag10
-    description: Event Flag.
+    description: "Event Flag.\n\nRaw bit values: false (0) = NoFlag: No flag.; true (1) = Flag: Event n flag."
     bit_offset: 10
     bit_size: 1
-    enum: Flag
   - name: flag11
-    description: Event Flag.
+    description: "Event Flag.\n\nRaw bit values: false (0) = NoFlag: No flag.; true (1) = Flag: Event n flag."
     bit_offset: 11
     bit_size: 1
-    enum: Flag
   - name: flag12
-    description: Event Flag.
+    description: "Event Flag.\n\nRaw bit values: false (0) = NoFlag: No flag.; true (1) = Flag: Event n flag."
     bit_offset: 12
     bit_size: 1
-    enum: Flag
   - name: flag13
-    description: Event Flag.
+    description: "Event Flag.\n\nRaw bit values: false (0) = NoFlag: No flag.; true (1) = Flag: Event n flag."
     bit_offset: 13
     bit_size: 1
-    enum: Flag
   - name: flag14
-    description: Event Flag.
+    description: "Event Flag.\n\nRaw bit values: false (0) = NoFlag: No flag.; true (1) = Flag: Event n flag."
     bit_offset: 14
     bit_size: 1
-    enum: Flag
   - name: flag15
-    description: Event Flag.
+    description: "Event Flag.\n\nRaw bit values: false (0) = NoFlag: No flag.; true (1) = Flag: Event n flag."
     bit_offset: 15
     bit_size: 1
-    enum: Flag
 fieldset/SctAlphaFieldsetSierraAlpha:
   description: Fractional Match.
   fields:
@@ -1239,55 +1171,45 @@ fieldset/SctAlphaFieldsetFoxtrotCharlie:
   description: Output State.
   fields:
   - name: out0
-    description: Output Low and High.
+    description: "Output Low and High.\n\nRaw bit values: false (0) = Low: Forces the corresponding output low.; true (1) = High: Forces the corresponding output high."
     bit_offset: 0
     bit_size: 1
-    enum: Out2
   - name: out1
-    description: Output Low and High.
+    description: "Output Low and High.\n\nRaw bit values: false (0) = Low: Forces the corresponding output low.; true (1) = High: Forces the corresponding output high."
     bit_offset: 1
     bit_size: 1
-    enum: Out2
   - name: out2
-    description: Output Low and High.
+    description: "Output Low and High.\n\nRaw bit values: false (0) = Low: Forces the corresponding output low.; true (1) = High: Forces the corresponding output high."
     bit_offset: 2
     bit_size: 1
-    enum: Out2
   - name: out3
-    description: Output Low and High.
+    description: "Output Low and High.\n\nRaw bit values: false (0) = Low: Forces the corresponding output low.; true (1) = High: Forces the corresponding output high."
     bit_offset: 3
     bit_size: 1
-    enum: Out2
   - name: out4
-    description: Output Low and High.
+    description: "Output Low and High.\n\nRaw bit values: false (0) = Low: Forces the corresponding output low.; true (1) = High: Forces the corresponding output high."
     bit_offset: 4
     bit_size: 1
-    enum: Out2
   - name: out5
-    description: Output Low and High.
+    description: "Output Low and High.\n\nRaw bit values: false (0) = Low: Forces the corresponding output low.; true (1) = High: Forces the corresponding output high."
     bit_offset: 5
     bit_size: 1
-    enum: Out2
   - name: out6
-    description: Output Low and High.
+    description: "Output Low and High.\n\nRaw bit values: false (0) = Low: Forces the corresponding output low.; true (1) = High: Forces the corresponding output high."
     bit_offset: 6
     bit_size: 1
-    enum: Out2
   - name: out7
-    description: Output Low and High.
+    description: "Output Low and High.\n\nRaw bit values: false (0) = Low: Forces the corresponding output low.; true (1) = High: Forces the corresponding output high."
     bit_offset: 7
     bit_size: 1
-    enum: Out2
   - name: out8
-    description: Output Low and High.
+    description: "Output Low and High.\n\nRaw bit values: false (0) = Low: Forces the corresponding output low.; true (1) = High: Forces the corresponding output high."
     bit_offset: 8
     bit_size: 1
-    enum: Out2
   - name: out9
-    description: Output Low and High.
+    description: "Output Low and High.\n\nRaw bit values: false (0) = Low: Forces the corresponding output low.; true (1) = High: Forces the corresponding output high."
     bit_offset: 9
     bit_size: 1
-    enum: Out2
 fieldset/SctAlphaFieldsetGolfCharlie:
   description: Output Counter Direction Control.
   fields:
@@ -1345,165 +1267,133 @@ fieldset/SctAlphaFieldsetHotelCharlie:
   description: Match and Capture Register Mode.
   fields:
   - name: regmod_l0
-    description: Register Mode Low.
+    description: "Register Mode Low.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 0
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_l1
-    description: Register Mode Low.
+    description: "Register Mode Low.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 1
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_l2
-    description: Register Mode Low.
+    description: "Register Mode Low.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 2
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_l3
-    description: Register Mode Low.
+    description: "Register Mode Low.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 3
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_l4
-    description: Register Mode Low.
+    description: "Register Mode Low.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 4
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_l5
-    description: Register Mode Low.
+    description: "Register Mode Low.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 5
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_l6
-    description: Register Mode Low.
+    description: "Register Mode Low.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 6
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_l7
-    description: Register Mode Low.
+    description: "Register Mode Low.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 7
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_l8
-    description: Register Mode Low.
+    description: "Register Mode Low.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 8
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_l9
-    description: Register Mode Low.
+    description: "Register Mode Low.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 9
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_l10
-    description: Register Mode Low.
+    description: "Register Mode Low.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 10
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_l11
-    description: Register Mode Low.
+    description: "Register Mode Low.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 11
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_l12
-    description: Register Mode Low.
+    description: "Register Mode Low.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 12
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_l13
-    description: Register Mode Low.
+    description: "Register Mode Low.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 13
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_l14
-    description: Register Mode Low.
+    description: "Register Mode Low.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 14
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_l15
-    description: Register Mode Low.
+    description: "Register Mode Low.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 15
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_h0
-    description: Register Mode High.
+    description: "Register Mode High.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 16
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_h1
-    description: Register Mode High.
+    description: "Register Mode High.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 17
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_h2
-    description: Register Mode High.
+    description: "Register Mode High.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 18
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_h3
-    description: Register Mode High.
+    description: "Register Mode High.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 19
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_h4
-    description: Register Mode High.
+    description: "Register Mode High.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 20
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_h5
-    description: Register Mode High.
+    description: "Register Mode High.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 21
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_h6
-    description: Register Mode High.
+    description: "Register Mode High.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 22
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_h7
-    description: Register Mode High.
+    description: "Register Mode High.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 23
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_h8
-    description: Register Mode High.
+    description: "Register Mode High.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 24
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_h9
-    description: Register Mode High.
+    description: "Register Mode High.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 25
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_h10
-    description: Register Mode High.
+    description: "Register Mode High.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 26
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_h11
-    description: Register Mode High.
+    description: "Register Mode High.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 27
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_h12
-    description: Register Mode High.
+    description: "Register Mode High.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 28
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_h13
-    description: Register Mode High.
+    description: "Register Mode High.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 29
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_h14
-    description: Register Mode High.
+    description: "Register Mode High.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 30
     bit_size: 1
-    enum: RegisterMode
   - name: regmod_h15
-    description: Register Mode High.
+    description: "Register Mode High.\n\nRaw bit values: false (0) = Match: Match.; true (1) = Capture: Capture."
     bit_offset: 31
     bit_size: 1
-    enum: RegisterMode
 fieldset/SctAlphaFieldsetIndiaCharlie:
   description: Output Conflict Resolution.
   fields:
@@ -1590,24 +1480,6 @@ fieldset/SctAlphaFieldsetLimaCharlie:
     description: Stop Event High.
     bit_offset: 16
     bit_size: 16
-enum/Ien:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/BidirH:
-  bit_size: 1
-  variants:
-  - name: Up
-    description: Up.
-    value: 0
-  - name: UpDown
-    description: Up-down.
-    value: 1
 enum/SctAlphaEnumEcho:
   bit_size: 4
   variants:
@@ -1701,42 +1573,6 @@ enum/SctAlphaEnumHotel:
   - name: DirectionIndependent
     description: Direction independent (event triggered regardless of the count direction).
     value: 0
-enum/DownH:
-  bit_size: 1
-  variants:
-  - name: Down
-    description: Down.
-    value: 1
-  - name: Up
-    description: Up.
-    value: 0
-enum/Flag:
-  bit_size: 1
-  variants:
-  - name: Flag
-    description: Event n flag.
-    value: 1
-  - name: NoFlag
-    description: No flag.
-    value: 0
-enum/SctAlphaEnumAlphaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SctAlphaEnumCharlieAlpha:
-  bit_size: 1
-  variants:
-  - name: HCounter
-    description: High counter (selects the H state and the H match register that the MATCHSEL field specifies).
-    value: 1
-  - name: LCounter
-    description: Low counter (selects the L state and the L match register that the MATCHSEL field specifies).
-    value: 0
 enum/SctAlphaEnumTangoAlpha:
   bit_size: 2
   variants:
@@ -1752,42 +1588,6 @@ enum/SctAlphaEnumTangoAlpha:
   - name: Rise
     description: Rise.
     value: 1
-enum/Ncen:
-  bit_size: 1
-  variants:
-  - name: Interrupt
-    description: Interrupt.
-    value: 1
-  - name: NoInterrupt
-    description: No interrupt.
-    value: 0
-enum/Ncflag:
-  bit_size: 1
-  variants:
-  - name: NcConflict
-    description: Occurred.
-    value: 1
-  - name: NoNcConflict
-    description: Did not occur.
-    value: 0
-enum/SctAlphaEnumOscarBravo:
-  bit_size: 1
-  variants:
-  - name: NoReloadH
-    description: Not reloaded.
-    value: 1
-  - name: ReloadH
-    description: Reloaded.
-    value: 0
-enum/SctAlphaEnumPapaBravo:
-  bit_size: 1
-  variants:
-  - name: NoReload
-    description: Not reloaded.
-    value: 1
-  - name: Reload
-    description: Reloaded.
-    value: 0
 enum/O0res:
   bit_size: 2
   variants:
@@ -1803,33 +1603,6 @@ enum/O0res:
   - name: ToggleOutput
     description: Toggle output.
     value: 3
-enum/Out2:
-  bit_size: 1
-  variants:
-  - name: High
-    description: Forces the corresponding output high.
-    value: 1
-  - name: Low
-    description: Forces the corresponding output low.
-    value: 0
-enum/SctAlphaEnumKiloCharlie:
-  bit_size: 1
-  variants:
-  - name: Input
-    description: Inputs.
-    value: 0
-  - name: Output
-    description: Outputs.
-    value: 1
-enum/RegisterMode:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
 enum/Setclr:
   bit_size: 2
   variants:
@@ -1841,31 +1614,4 @@ enum/Setclr:
     value: 0
   - name: LReversed
     description: Reversed when counter L or the unified counter is counting down.
-    value: 1
-enum/SctAlphaEnumBravoEcho:
-  bit_size: 1
-  variants:
-  - name: Add
-    description: Value of STATEV added to that of STATE (the carry out is ignored).
-    value: 0
-  - name: Load
-    description: Value of STATEV loaded into that of STATE.
-    value: 1
-enum/HaltL:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/SctAlphaEnumEchoEcho:
-  bit_size: 1
-  variants:
-  - name: DualCounter
-    description: Dual counters, COUNTER_L and COUNTER_H.
-    value: 0
-  - name: UnifiedCounter
-    description: Unified counter.
     value: 1

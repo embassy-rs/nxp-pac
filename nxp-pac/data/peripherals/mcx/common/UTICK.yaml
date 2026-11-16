@@ -59,10 +59,9 @@ fieldset/Ctrl:
     bit_offset: 0
     bit_size: 31
   - name: repeat
-    description: Repeat continuously instead of performing a one-time delay.
+    description: "Repeat continuously instead of performing a one-time delay.\n\nRaw bit values: false (0) = Once: One-time delay.; true (1) = Repeat: Delay repeats continuously."
     bit_offset: 31
     bit_size: 1
-    enum: Repeat
 fieldset/Stat:
   bit_size: 32
   reset_value: 0
@@ -73,10 +72,9 @@ fieldset/Stat:
     bit_size: 1
   - name: active
     only_in: '^MCXA[0-9]+$'
-    description: Timer is active.
+    description: "Timer is active.\n\nRaw bit values: false (0) = Inactive: Inactive (stopped).; true (1) = Active: Active."
     bit_offset: 1
     bit_size: 1
-    enum: StatActive
   - name: active
     only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: >-
@@ -90,41 +88,37 @@ fieldset/Cfg:
   reset_value: 0
   fields:
   - name: capen0
+    description: "Raw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Capen
   - name: capen1
+    description: "Raw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: Capen
   - name: capen2
+    description: "Raw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: Capen
   - name: capen3
+    description: "Raw bit values: false (0) = Disabled: Disable.; true (1) = Enabled: Enable."
     bit_offset: 3
     bit_size: 1
-    enum: Capen
   - name: cappol0
-    description: Capture on a negative edge when set, positive edge when clear.
+    description: "Capture on a negative edge when set, positive edge when clear.\n\nRaw bit values: false (0) = Rising: Rising (positive) edge.; true (1) = Falling: Falling (negative) edge."
     bit_offset: 8
     bit_size: 1
-    enum: Cappol
   - name: cappol1
-    description: Capture on a negative edge when set, positive edge when clear.
+    description: "Capture on a negative edge when set, positive edge when clear.\n\nRaw bit values: false (0) = Rising: Rising (positive) edge.; true (1) = Falling: Falling (negative) edge."
     bit_offset: 9
     bit_size: 1
-    enum: Cappol
   - name: cappol2
-    description: Capture on a negative edge when set, positive edge when clear.
+    description: "Capture on a negative edge when set, positive edge when clear.\n\nRaw bit values: false (0) = Rising: Rising (positive) edge.; true (1) = Falling: Falling (negative) edge."
     bit_offset: 10
     bit_size: 1
-    enum: Cappol
   - name: cappol3
-    description: Capture on a negative edge when set, positive edge when clear.
+    description: "Capture on a negative edge when set, positive edge when clear.\n\nRaw bit values: false (0) = Rising: Rising (positive) edge.; true (1) = Falling: Falling (negative) edge."
     bit_offset: 11
     bit_size: 1
-    enum: Cappol
 fieldset/Capclr:
   bit_size: 32
   reset_value: 0
@@ -152,40 +146,3 @@ fieldset/Cap:
     description: Valid captured value. Clear using the corresponding CAPCLR bit.
     bit_offset: 31
     bit_size: 1
-enum/Repeat:
-  bit_size: 1
-  variants:
-  - name: Once
-    description: One-time delay.
-    value: 0
-  - name: Repeat
-    description: Delay repeats continuously.
-    value: 1
-enum/StatActive:
-  only_in: '^(MCXA175|MCXA176|MCXA185|MCXA186|MCXA255|MCXA256|MCXA265|MCXA266|MCXA286|MCXA287|MCXA456|MCXA457|MCXA536|MCXA537|MCXA556|MCXA557|MCXA566|MCXA567|MCXA577)$'
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Inactive (stopped).
-    value: 0
-  - name: Active
-    description: Active.
-    value: 1
-enum/Capen:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disable.
-    value: 0
-  - name: Enabled
-    description: Enable.
-    value: 1
-enum/Cappol:
-  bit_size: 1
-  variants:
-  - name: Rising
-    description: Rising (positive) edge.
-    value: 0
-  - name: Falling
-    description: Falling (negative) edge.
-    value: 1

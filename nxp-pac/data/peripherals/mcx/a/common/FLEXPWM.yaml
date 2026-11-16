@@ -582,10 +582,9 @@ fieldset/Smcaptctrlx:
     bit_offset: 0
     bit_size: 1
   - name: oneshotx
-    description: One Shot Mode Aux.
+    description: "One Shot Mode Aux.\n\nRaw bit values: false (0) = FreeRunning: Free Running.; true (1) = OneShot: One Shot."
     bit_offset: 1
     bit_size: 1
-    enum: SmcaptctrlxOneshotx
   - name: edgx0
     description: Edge X 0.
     bit_offset: 2
@@ -597,10 +596,9 @@ fieldset/Smcaptctrlx:
     bit_size: 2
     enum: SmcaptctrlxEdgx
   - name: inp_selx
-    description: Input Select X.
+    description: "Input Select X.\n\nRaw bit values: false (0) = PwmX: Raw PWM_X input signal selected as source.; true (1) = EdgeCounter: Edge Counter."
     bit_offset: 6
     bit_size: 1
-    enum: SmcaptctrlxInpSelx
   - name: edgcntx_en
     description: Edge Counter X Enable.
     bit_offset: 7
@@ -630,10 +628,9 @@ fieldset/Smctrl:
     bit_offset: 1
     bit_size: 1
   - name: ldmod
-    description: Load Mode Select.
+    description: "Load Mode Select.\n\nRaw bit values: false (0) = NextPwmReload: Buffered registers of this submodule are loaded and take effect at the next PWM reload if MCTRL[LDOK] is set.; true (1) = MtctrlLdokSet: Buffered registers of this submodule are loaded and take effect immediately upon MCTRL[LDOK] being set. In this case, it is not necessary to set CTRL[FULL] or CTRL[HALF]."
     bit_offset: 2
     bit_size: 1
-    enum: SmctrlLdmod
   - name: split
     description: Split the DBLPWM signal to PWM_A and PWM_B.
     bit_offset: 3
@@ -644,10 +641,9 @@ fieldset/Smctrl:
     bit_size: 3
     enum: SmctrlPrsc
   - name: compmode
-    description: Compare Mode.
+    description: "Compare Mode.\n\nRaw bit values: false (0) = EqualTo: The VAL* registers and the PWM counter are compared using an \"equal to\" method. This means that PWM edges are only produced when the counter is equal to one of the VAL* register values. This implies that a PWM_A output that is high at the end of a period maintains this state until a match with VAL3 clears the output in the following period.; true (1) = EqualToOrGreaterThan: The VAL* registers and the PWM counter are compared using an \"equal to or greater than\" method. This means that PWM edges are produced when the counter is equal to or greater than one of the VAL* register values. This implies that a PWM_A output that is high at the end of a period could go low at the start of the next period if the starting counter value is greater than (but not necessarily equal to) the new VAL3 value."
     bit_offset: 7
     bit_size: 1
-    enum: SmctrlCompmode
   - name: dt
     description: Deadtime.
     bit_offset: 8
@@ -675,10 +671,9 @@ fieldset/Smctrl2:
     bit_size: 2
     enum: SmctrlClkSel
   - name: reload_sel
-    description: Reload Source Select.
+    description: "Reload Source Select.\n\nRaw bit values: false (0) = Local: The local RELOAD signal is used to reload registers.; true (1) = Master: The master RELOAD signal (from submodule 0) is used to reload registers. This setting should not be used in submodule 0 as it forces the RELOAD signal to logic 0."
     bit_offset: 2
     bit_size: 1
-    enum: SmctrlReloadSel
   - name: force_sel
     description: Force Select.
     bit_offset: 3
@@ -710,10 +705,9 @@ fieldset/Smctrl2:
     bit_offset: 12
     bit_size: 1
   - name: indep
-    description: Independent or Complementary Pair Operation.
+    description: "Independent or Complementary Pair Operation.\n\nRaw bit values: false (0) = Complementary: PWM_A and PWM_B form a complementary PWM pair.; true (1) = Independent: PWM_A and PWM_B outputs are independent PWMs."
     bit_offset: 13
     bit_size: 1
-    enum: SmctrlIndep
   - name: dbgen
     description: Debug Enable.
     bit_offset: 15
@@ -736,10 +730,9 @@ fieldset/Smdmaen:
     bit_size: 2
     enum: SmdmaenCaptde
   - name: fand
-    description: FIFO Watermark AND Control.
+    description: "FIFO Watermark AND Control.\n\nRaw bit values: false (0) = Or: Selected FIFO watermarks are OR'ed together.; true (1) = And: Selected FIFO watermarks are AND'ed together."
     bit_offset: 8
     bit_size: 1
-    enum: SmdmaenFand
   - name: valde
     description: Value Registers DMA Enable.
     bit_offset: 9
@@ -851,20 +844,17 @@ fieldset/Smtctrl:
     bit_size: 6
     enum: SmtctrlOutTrigEn
   - name: trgfrq
-    description: Trigger Frequency.
+    description: "Trigger Frequency.\n\nRaw bit values: false (0) = Everypwm: Trigger outputs are generated during every PWM period even if the PWM is not reloaded every period due to CTRL[LDFQ] being non-zero.; true (1) = Finalpwm: Trigger outputs are generated only during the final PWM period prior to a reload opportunity when the PWM is not reloaded every period due to CTRL[LDFQ] being non-zero."
     bit_offset: 12
     bit_size: 1
-    enum: SmtctrlTrgfrq
   - name: pwbot1
-    description: Mux Output Trigger 1 Source Select.
+    description: "Mux Output Trigger 1 Source Select.\n\nRaw bit values: false (0) = PwmOutTrig1Signal: Route the PWM_OUT_TRIG1 signal to PWM_MUX_TRIG1 port.; true (1) = PwmbOutput: Route the PWM_B output to the PWM_MUX_TRIG1 port."
     bit_offset: 14
     bit_size: 1
-    enum: SmtctrlPwbot
   - name: pwaot0
-    description: Mux Output Trigger 0 Source Select.
+    description: "Mux Output Trigger 0 Source Select.\n\nRaw bit values: false (0) = PwmOutTrig0Signal: Route the PWM_OUT_TRIG0 signal to PWM_MUX_TRIG0 port.; true (1) = PwmaOutput: Route the PWM_A output to the PWM_MUX_TRIG0 port."
     bit_offset: 15
     bit_size: 1
-    enum: SmtctrlPwaot
 fieldset/Smval:
   description: Value Register 0.
   bit_size: 16
@@ -878,45 +868,37 @@ fieldset/Swcout:
   bit_size: 16
   fields:
   - name: sm0out45
-    description: Submodule 0 Software Controlled Output 45.
+    description: "Submodule 0 Software Controlled Output 45.\n\nRaw bit values: false (0) = Logic0: A logic 0 is supplied to the deadtime generator of submodule 0 instead of PWM23.; true (1) = Logic1: A logic 1 is supplied to the deadtime generator of submodule 0 instead of PWM23."
     bit_offset: 0
     bit_size: 1
-    enum: Smout
   - name: sm0out23
-    description: Submodule 0 Software Controlled Output 23.
+    description: "Submodule 0 Software Controlled Output 23.\n\nRaw bit values: false (0) = Logic0: A logic 0 is supplied to the deadtime generator of submodule 0 instead of PWM23.; true (1) = Logic1: A logic 1 is supplied to the deadtime generator of submodule 0 instead of PWM23."
     bit_offset: 1
     bit_size: 1
-    enum: Smout
   - name: sm1out45
-    description: Submodule 1 Software Controlled Output 45.
+    description: "Submodule 1 Software Controlled Output 45.\n\nRaw bit values: false (0) = Logic0: A logic 0 is supplied to the deadtime generator of submodule 0 instead of PWM23.; true (1) = Logic1: A logic 1 is supplied to the deadtime generator of submodule 0 instead of PWM23."
     bit_offset: 2
     bit_size: 1
-    enum: Smout
   - name: sm1out23
-    description: Submodule 1 Software Controlled Output 23.
+    description: "Submodule 1 Software Controlled Output 23.\n\nRaw bit values: false (0) = Logic0: A logic 0 is supplied to the deadtime generator of submodule 0 instead of PWM23.; true (1) = Logic1: A logic 1 is supplied to the deadtime generator of submodule 0 instead of PWM23."
     bit_offset: 3
     bit_size: 1
-    enum: Smout
   - name: sm2out45
-    description: Submodule 2 Software Controlled Output 45.
+    description: "Submodule 2 Software Controlled Output 45.\n\nRaw bit values: false (0) = Logic0: A logic 0 is supplied to the deadtime generator of submodule 0 instead of PWM23.; true (1) = Logic1: A logic 1 is supplied to the deadtime generator of submodule 0 instead of PWM23."
     bit_offset: 4
     bit_size: 1
-    enum: Smout
   - name: sm2out23
-    description: Submodule 2 Software Controlled Output 23.
+    description: "Submodule 2 Software Controlled Output 23.\n\nRaw bit values: false (0) = Logic0: A logic 0 is supplied to the deadtime generator of submodule 0 instead of PWM23.; true (1) = Logic1: A logic 1 is supplied to the deadtime generator of submodule 0 instead of PWM23."
     bit_offset: 5
     bit_size: 1
-    enum: Smout
   - name: sm3out45
-    description: Submodule 3 Software Controlled Output 45.
+    description: "Submodule 3 Software Controlled Output 45.\n\nRaw bit values: false (0) = Logic0: A logic 0 is supplied to the deadtime generator of submodule 0 instead of PWM23.; true (1) = Logic1: A logic 1 is supplied to the deadtime generator of submodule 0 instead of PWM23."
     bit_offset: 6
     bit_size: 1
-    enum: Smout
   - name: sm3out23
-    description: Submodule 3 Software Controlled Output 23.
+    description: "Submodule 3 Software Controlled Output 23.\n\nRaw bit values: false (0) = Logic0: A logic 0 is supplied to the deadtime generator of submodule 0 instead of PWM23.; true (1) = Logic1: A logic 1 is supplied to the deadtime generator of submodule 0 instead of PWM23."
     bit_offset: 7
     bit_size: 1
-    enum: Smout
 enum/Smsel23:
   bit_size: 2
   variants:

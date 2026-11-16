@@ -7,55 +7,45 @@ fieldset/De2:
   description: Module DMA/Trigger Enable.
   fields:
   - name: wude0
-    description: DMA/Trigger Wake-up Enable for Module 0.
+    description: "DMA/Trigger Wake-up Enable for Module 0.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Wude1
   - name: wude1
-    description: DMA/Trigger Wake-up Enable for Module 1.
+    description: "DMA/Trigger Wake-up Enable for Module 1.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: Wude1
   - name: wude2
-    description: DMA/Trigger Wake-up Enable for Module 2.
+    description: "DMA/Trigger Wake-up Enable for Module 2.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: Wude1
   - name: wude3
-    description: DMA/Trigger Wake-up Enable for Module 3.
+    description: "DMA/Trigger Wake-up Enable for Module 3.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 3
     bit_size: 1
-    enum: Wude1
   - name: wude4
-    description: DMA/Trigger Wake-up Enable for Module 4.
+    description: "DMA/Trigger Wake-up Enable for Module 4.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 4
     bit_size: 1
-    enum: Wude1
   - name: wude5
-    description: DMA/Trigger Wake-up Enable for Module 5.
+    description: "DMA/Trigger Wake-up Enable for Module 5.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 5
     bit_size: 1
-    enum: Wude1
   - name: wude6
-    description: DMA/Trigger Wake-up Enable for Module 6.
+    description: "DMA/Trigger Wake-up Enable for Module 6.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 6
     bit_size: 1
-    enum: Wude1
   - name: wude7
-    description: DMA/Trigger Wake-up Enable for Module 7.
+    description: "DMA/Trigger Wake-up Enable for Module 7.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 7
     bit_size: 1
-    enum: Wude1
   - name: wude8
-    description: DMA/Trigger Wake-up Enable for Module 8.
+    description: "DMA/Trigger Wake-up Enable for Module 8.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 8
     bit_size: 1
-    enum: Wude1
   - name: wude9
-    description: DMA/Trigger Wake-up Enable for Module 9.
+    description: "DMA/Trigger Wake-up Enable for Module 9.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 9
     bit_size: 1
-    enum: Wude1
 fieldset/Fdc2:
   description: Pin Filter DMA/Trigger Configuration.
   fields:
@@ -82,10 +72,9 @@ fieldset/Filt2:
     bit_size: 2
     enum: Filte2
   - name: filtf1
-    description: Filter 1 Flag.
+    description: "Filter 1 Flag.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 7
     bit_size: 1
-    enum: Wuf24
   - name: filtsel2
     description: Filter 2 Pin Select.
     bit_offset: 8
@@ -96,76 +85,63 @@ fieldset/Filt2:
     bit_size: 2
     enum: Filte2
   - name: filtf2
-    description: Filter 2 Flag.
+    description: "Filter 2 Flag.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 15
     bit_size: 1
-    enum: Wuf24
 fieldset/Fmc2:
   description: Pin Filter Mode Configuration.
   fields:
   - name: filtm1
-    description: Filter Mode for FILTn.
+    description: "Filter Mode for FILTn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during Power Down/Deep Power Down mode.; true (1) = AnyPwr: Active during all power modes."
     bit_offset: 0
     bit_size: 1
-    enum: Filtm2
   - name: filtm2
-    description: Filter Mode for FILTn.
+    description: "Filter Mode for FILTn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during Power Down/Deep Power Down mode.; true (1) = AnyPwr: Active during all power modes."
     bit_offset: 1
     bit_size: 1
-    enum: Filtm2
 fieldset/Me2:
   description: Module Interrupt Enable.
   fields:
   - name: wume0
-    description: Module Interrupt Wake-up Enable for Module 0.
+    description: "Module Interrupt Wake-up Enable for Module 0.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Wude1
   - name: wume1
-    description: Module Interrupt Wake-up Enable for Module 1.
+    description: "Module Interrupt Wake-up Enable for Module 1.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: Wude1
   - name: wume2
-    description: Module Interrupt Wake-up Enable for Module 2.
+    description: "Module Interrupt Wake-up Enable for Module 2.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: Wude1
   - name: wume3
-    description: Module Interrupt Wake-up Enable for Module 3.
+    description: "Module Interrupt Wake-up Enable for Module 3.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 3
     bit_size: 1
-    enum: Wude1
   - name: wume4
-    description: Module Interrupt Wake-up Enable for Module 4.
+    description: "Module Interrupt Wake-up Enable for Module 4.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 4
     bit_size: 1
-    enum: Wude1
   - name: wume5
-    description: Module Interrupt Wake-up Enable for Module 5.
+    description: "Module Interrupt Wake-up Enable for Module 5.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 5
     bit_size: 1
-    enum: Wude1
   - name: wume6
-    description: Module Interrupt Wake-up Enable for Module 6.
+    description: "Module Interrupt Wake-up Enable for Module 6.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 6
     bit_size: 1
-    enum: Wude1
   - name: wume7
-    description: Module Interrupt Wake-up Enable for Module 7.
+    description: "Module Interrupt Wake-up Enable for Module 7.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 7
     bit_size: 1
-    enum: Wude1
   - name: wume8
-    description: Module Interrupt Wake-up Enable for Module 8.
+    description: "Module Interrupt Wake-up Enable for Module 8.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 8
     bit_size: 1
-    enum: Wude1
   - name: wume9
-    description: Module Interrupt Wake-up Enable for Module 9.
+    description: "Module Interrupt Wake-up Enable for Module 9.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 9
     bit_size: 1
-    enum: Wude1
 fieldset/Pdc12:
   description: Pin DMA/Trigger Configuration 1.
   fields:
@@ -615,601 +591,484 @@ fieldset/Pf2:
   description: Pin Flag.
   fields:
   - name: wuf0
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 0
     bit_size: 1
-    enum: Wuf24
   - name: wuf1
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 1
     bit_size: 1
-    enum: Wuf24
   - name: wuf2
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 2
     bit_size: 1
-    enum: Wuf24
   - name: wuf3
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 3
     bit_size: 1
-    enum: Wuf24
   - name: wuf4
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 4
     bit_size: 1
-    enum: Wuf24
   - name: wuf5
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 5
     bit_size: 1
-    enum: Wuf24
   - name: wuf6
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 6
     bit_size: 1
-    enum: Wuf24
   - name: wuf7
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 7
     bit_size: 1
-    enum: Wuf24
   - name: wuf8
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 8
     bit_size: 1
-    enum: Wuf24
   - name: wuf9
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 9
     bit_size: 1
-    enum: Wuf24
   - name: wuf10
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 10
     bit_size: 1
-    enum: Wuf24
   - name: wuf11
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 11
     bit_size: 1
-    enum: Wuf24
   - name: wuf12
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 12
     bit_size: 1
-    enum: Wuf24
   - name: wuf13
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 13
     bit_size: 1
-    enum: Wuf24
   - name: wuf14
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 14
     bit_size: 1
-    enum: Wuf24
   - name: wuf15
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 15
     bit_size: 1
-    enum: Wuf24
   - name: wuf16
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 16
     bit_size: 1
-    enum: Wuf24
   - name: wuf17
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 17
     bit_size: 1
-    enum: Wuf24
   - name: wuf18
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 18
     bit_size: 1
-    enum: Wuf24
   - name: wuf19
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 19
     bit_size: 1
-    enum: Wuf24
   - name: wuf20
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 20
     bit_size: 1
-    enum: Wuf24
   - name: wuf21
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 21
     bit_size: 1
-    enum: Wuf24
   - name: wuf22
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 22
     bit_size: 1
-    enum: Wuf24
   - name: wuf23
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 23
     bit_size: 1
-    enum: Wuf24
   - name: wuf24
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 24
     bit_size: 1
-    enum: Wuf24
   - name: wuf25
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 25
     bit_size: 1
-    enum: Wuf24
   - name: wuf26
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 26
     bit_size: 1
-    enum: Wuf24
   - name: wuf27
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 27
     bit_size: 1
-    enum: Wuf24
   only_in: ^(MCXN2[0-9]{2})$
 fieldset/Pf3:
   description: Pin Flag.
   fields:
   - name: wuf0
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 0
     bit_size: 1
-    enum: Wuf24
   - name: wuf1
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 1
     bit_size: 1
-    enum: Wuf24
   - name: wuf2
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 2
     bit_size: 1
-    enum: Wuf24
   - name: wuf3
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 3
     bit_size: 1
-    enum: Wuf24
   - name: wuf4
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 4
     bit_size: 1
-    enum: Wuf24
   - name: wuf5
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 5
     bit_size: 1
-    enum: Wuf24
   - name: wuf6
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 6
     bit_size: 1
-    enum: Wuf24
   - name: wuf7
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 7
     bit_size: 1
-    enum: Wuf24
   - name: wuf8
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 8
     bit_size: 1
-    enum: Wuf24
   - name: wuf9
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 9
     bit_size: 1
-    enum: Wuf24
   - name: wuf10
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 10
     bit_size: 1
-    enum: Wuf24
   - name: wuf11
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 11
     bit_size: 1
-    enum: Wuf24
   - name: wuf12
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 12
     bit_size: 1
-    enum: Wuf24
   - name: wuf13
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 13
     bit_size: 1
-    enum: Wuf24
   - name: wuf14
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 14
     bit_size: 1
-    enum: Wuf24
   - name: wuf15
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 15
     bit_size: 1
-    enum: Wuf24
   - name: wuf16
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 16
     bit_size: 1
-    enum: Wuf24
   - name: wuf17
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 17
     bit_size: 1
-    enum: Wuf24
   - name: wuf18
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 18
     bit_size: 1
-    enum: Wuf24
   - name: wuf19
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 19
     bit_size: 1
-    enum: Wuf24
   - name: wuf20
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 20
     bit_size: 1
-    enum: Wuf24
   - name: wuf21
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 21
     bit_size: 1
-    enum: Wuf24
   - name: wuf22
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 22
     bit_size: 1
-    enum: Wuf24
   - name: wuf23
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 23
     bit_size: 1
-    enum: Wuf24
   - name: wuf24
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 24
     bit_size: 1
-    enum: Wuf24
   - name: wuf25
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 25
     bit_size: 1
-    enum: Wuf24
   - name: wuf26
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 26
     bit_size: 1
-    enum: Wuf24
   - name: wuf27
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 27
     bit_size: 1
-    enum: Wuf24
   - name: wuf28
-    description: Wake-up Flag for WUU_Pn.
+    description: "Wake-up Flag for WUU_Pn.\n\nRaw bit values: false (0) = NoFlag: No.; true (1) = Flag: Yes."
     bit_offset: 28
     bit_size: 1
-    enum: Wuf24
 fieldset/Pmc2:
   description: Pin Mode Configuration.
   fields:
   - name: wupmc0
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 0
     bit_size: 1
-    enum: Wupmc
   - name: wupmc1
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 1
     bit_size: 1
-    enum: Wupmc
   - name: wupmc2
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 2
     bit_size: 1
-    enum: Wupmc
   - name: wupmc3
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 3
     bit_size: 1
-    enum: Wupmc
   - name: wupmc4
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 4
     bit_size: 1
-    enum: Wupmc
   - name: wupmc5
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 5
     bit_size: 1
-    enum: Wupmc
   - name: wupmc6
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 6
     bit_size: 1
-    enum: Wupmc
   - name: wupmc7
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 7
     bit_size: 1
-    enum: Wupmc
   - name: wupmc8
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 8
     bit_size: 1
-    enum: Wupmc
   - name: wupmc9
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 9
     bit_size: 1
-    enum: Wupmc
   - name: wupmc10
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 10
     bit_size: 1
-    enum: Wupmc
   - name: wupmc11
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 11
     bit_size: 1
-    enum: Wupmc
   - name: wupmc12
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 12
     bit_size: 1
-    enum: Wupmc
   - name: wupmc13
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 13
     bit_size: 1
-    enum: Wupmc
   - name: wupmc14
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 14
     bit_size: 1
-    enum: Wupmc
   - name: wupmc15
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 15
     bit_size: 1
-    enum: Wupmc
   - name: wupmc16
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 16
     bit_size: 1
-    enum: Wupmc
   - name: wupmc17
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 17
     bit_size: 1
-    enum: Wupmc
   - name: wupmc18
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 18
     bit_size: 1
-    enum: Wupmc
   - name: wupmc19
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 19
     bit_size: 1
-    enum: Wupmc
   - name: wupmc20
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 20
     bit_size: 1
-    enum: Wupmc
   - name: wupmc21
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 21
     bit_size: 1
-    enum: Wupmc
   - name: wupmc22
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 22
     bit_size: 1
-    enum: Wupmc
   - name: wupmc23
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 23
     bit_size: 1
-    enum: Wupmc
   - name: wupmc24
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 24
     bit_size: 1
-    enum: Wupmc
   - name: wupmc25
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 25
     bit_size: 1
-    enum: Wupmc
   - name: wupmc26
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 26
     bit_size: 1
-    enum: Wupmc
   - name: wupmc27
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 27
     bit_size: 1
-    enum: Wupmc
   only_in: ^(MCXN2[0-9]{2})$
 fieldset/Pmc3:
   description: Pin Mode Configuration.
   fields:
   - name: wupmc0
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 0
     bit_size: 1
-    enum: Wupmc
   - name: wupmc1
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 1
     bit_size: 1
-    enum: Wupmc
   - name: wupmc2
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 2
     bit_size: 1
-    enum: Wupmc
   - name: wupmc3
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 3
     bit_size: 1
-    enum: Wupmc
   - name: wupmc4
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 4
     bit_size: 1
-    enum: Wupmc
   - name: wupmc5
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 5
     bit_size: 1
-    enum: Wupmc
   - name: wupmc6
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 6
     bit_size: 1
-    enum: Wupmc
   - name: wupmc7
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 7
     bit_size: 1
-    enum: Wupmc
   - name: wupmc8
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 8
     bit_size: 1
-    enum: Wupmc
   - name: wupmc9
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 9
     bit_size: 1
-    enum: Wupmc
   - name: wupmc10
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 10
     bit_size: 1
-    enum: Wupmc
   - name: wupmc11
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 11
     bit_size: 1
-    enum: Wupmc
   - name: wupmc12
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 12
     bit_size: 1
-    enum: Wupmc
   - name: wupmc13
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 13
     bit_size: 1
-    enum: Wupmc
   - name: wupmc14
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 14
     bit_size: 1
-    enum: Wupmc
   - name: wupmc15
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 15
     bit_size: 1
-    enum: Wupmc
   - name: wupmc16
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 16
     bit_size: 1
-    enum: Wupmc
   - name: wupmc17
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 17
     bit_size: 1
-    enum: Wupmc
   - name: wupmc18
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 18
     bit_size: 1
-    enum: Wupmc
   - name: wupmc19
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 19
     bit_size: 1
-    enum: Wupmc
   - name: wupmc20
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 20
     bit_size: 1
-    enum: Wupmc
   - name: wupmc21
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 21
     bit_size: 1
-    enum: Wupmc
   - name: wupmc22
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 22
     bit_size: 1
-    enum: Wupmc
   - name: wupmc23
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 23
     bit_size: 1
-    enum: Wupmc
   - name: wupmc24
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 24
     bit_size: 1
-    enum: Wupmc
   - name: wupmc25
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 25
     bit_size: 1
-    enum: Wupmc
   - name: wupmc26
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 26
     bit_size: 1
-    enum: Wupmc
   - name: wupmc27
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 27
     bit_size: 1
-    enum: Wupmc
   - name: wupmc28
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 28
     bit_size: 1
-    enum: Wupmc
   - name: wupmc29
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 29
     bit_size: 1
-    enum: Wupmc
   - name: wupmc30
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 30
     bit_size: 1
-    enum: Wupmc
   - name: wupmc31
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 31
     bit_size: 1
-    enum: Wupmc
 enum/UnsupportedPinDmaConfig:
   bit_size: 2
   variants:
@@ -1242,41 +1101,3 @@ enum/UnsupportedPinEnable:
     description: Not supported.
     value: 3
   only_in: ^(MCXN2[0-9]{2})$
-enum/UnsupportedPinFlag:
-  bit_size: 1
-  variants:
-  - name: NoFlag
-    description: Not supported.
-    value: 0
-  - name: Flag
-    description: Not supported.
-    value: 1
-  only_in: ^(MCXN2[0-9]{2})$
-enum/UnsupportedPinModeConfig:
-  bit_size: 1
-  variants:
-  - name: LowPwrOnly
-    description: Not supported.
-    value: 0
-  - name: AnyPwr
-    description: Not supported.
-    value: 1
-  only_in: ^(MCXN2[0-9]{2})$
-enum/Wude1:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/Wuf24:
-  bit_size: 1
-  variants:
-  - name: NoFlag
-    description: No.
-    value: 0
-  - name: Flag
-    description: Yes.
-    value: 1

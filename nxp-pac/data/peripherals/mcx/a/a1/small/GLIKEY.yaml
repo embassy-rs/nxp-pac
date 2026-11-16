@@ -104,10 +104,9 @@ fieldset/Status:
     bit_offset: 0
     bit_size: 1
   - name: lock_status
-    description: Provides the current lock status of indexes.
+    description: "Provides the current lock status of indexes.\n\nRaw bit values: false (0) = Lock0: Current read index is not locked.; true (1) = Lock1: Current read index is locked."
     bit_offset: 1
     bit_size: 1
-    enum: LockStatus
   - name: error_status
     description: Status of the Error.
     bit_offset: 2
@@ -182,12 +181,3 @@ enum/ErrorStatus:
   - name: Stat6
     description: Read index OOB, write index OOB, and FSM error.
     value: 7
-enum/LockStatus:
-  bit_size: 1
-  variants:
-  - name: Lock0
-    description: Current read index is not locked.
-    value: 0
-  - name: Lock1
-    description: Current read index is locked.
-    value: 1

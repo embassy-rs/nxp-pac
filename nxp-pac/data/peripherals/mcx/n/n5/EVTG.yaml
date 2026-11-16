@@ -203,15 +203,13 @@ fieldset/EvtgAlphaFieldsetGolf:
   bit_size: 16
   fields:
   - name: ff_init
-    description: Flip flop Initial Value Configuration.
+    description: "Flip flop Initial Value Configuration.\n\nRaw bit values: false (0) = Ff0: 0.; true (1) = Ff1: 1."
     bit_offset: 0
     bit_size: 1
-    enum: EvtgAlphaEnumHotelAlpha
   - name: init_en
-    description: Flip-Flop Initial Output Enable Control.
+    description: "Flip-Flop Initial Output Enable Control.\n\nRaw bit values: false (0) = Pulse: Write 0 does not generate enable pulse.; true (1) = NoPulse: Write 1 generates enable pulse."
     bit_offset: 1
     bit_size: 1
-    enum: EvtgAlphaEnumJulietAlpha
   - name: mode_sel
     description: Flip-Flop Mode Selection.
     bit_offset: 2
@@ -562,15 +560,6 @@ enum/EvtgAlphaEnumGolfAlpha:
   - name: Dn
     description: Replace Dn.
     value: 3
-enum/EvtgAlphaEnumHotelAlpha:
-  bit_size: 1
-  variants:
-  - name: Ff0
-    description: '0.'
-    value: 0
-  - name: Ff1
-    description: '1.'
-    value: 1
 enum/EvtgAlphaEnumIndiaAlpha:
   bit_size: 2
   variants:
@@ -585,15 +574,6 @@ enum/EvtgAlphaEnumIndiaAlpha:
     value: 0
   - name: Nfb1
     description: Will not force the bypass.
-    value: 0
-enum/EvtgAlphaEnumJulietAlpha:
-  bit_size: 1
-  variants:
-  - name: NoPulse
-    description: Write 1 generates enable pulse.
-    value: 1
-  - name: Pulse
-    description: Write 0 does not generate enable pulse.
     value: 0
 enum/EvtgAlphaEnumKiloAlpha:
   bit_size: 3

@@ -41,20 +41,17 @@ fieldset/FmuAlphaFieldsetBravo:
   description: Flash Configuration Register.
   fields:
   - name: ccie
-    description: Command Complete Interrupt Enable.
+    description: "Command Complete Interrupt Enable.\n\nRaw bit values: false (0) = Ccie0: Command complete interrupt disabled.; true (1) = Ccie1: Command complete interrupt enabled."
     bit_offset: 7
     bit_size: 1
-    enum: FmuAlphaEnumCharlie
   - name: ersreq
-    description: Mass Erase Request.
+    description: "Mass Erase Request.\n\nRaw bit values: false (0) = Ersreq0: No request or request complete.; true (1) = Ersreq1: Request to run the Mass Erase operation."
     bit_offset: 8
     bit_size: 1
-    enum: FmuAlphaEnumMike
   - name: dfdie
-    description: Double Bit Fault Detect Interrupt Enable.
+    description: "Double Bit Fault Detect Interrupt Enable.\n\nRaw bit values: false (0) = Dfdie0: Double bit fault detect interrupt disabled.; true (1) = Dfdie1: Double bit fault detect interrupt enabled."
     bit_offset: 16
     bit_size: 1
-    enum: FmuAlphaEnumIndia
   - name: ersien0
     description: Erase IFR Sector Enable - Block 0.
     bit_offset: 24
@@ -73,136 +70,70 @@ fieldset/FmuAlphaFieldsetCharlie:
     bit_offset: 0
     bit_size: 4
   - name: fdfd
-    description: Force Double Bit Fault Detect.
+    description: "Force Double Bit Fault Detect.\n\nRaw bit values: false (0) = Fdfd0: FSTAT[DFDIF] sets only if a double bit fault is detected during a valid flash read access from the platform flash controller.; true (1) = Fdfd1: FSTAT[DFDIF] sets during any valid flash read access from the platform flash controller. An interrupt request is generated if the DFDIE bit is set."
     bit_offset: 16
     bit_size: 1
-    enum: FmuAlphaEnumOscar
   - name: abtreq
-    description: Abort Request.
+    description: "Abort Request.\n\nRaw bit values: false (0) = Abtreq0: No request to abort a command write sequence.; true (1) = Abtreq1: Request to abort a command write sequence."
     bit_offset: 24
     bit_size: 1
-    enum: FmuAlphaEnumAlpha
 fieldset/FmuAlphaFieldsetDelta:
   description: Flash Status Register.
   fields:
   - name: fail
-    description: Command Fail Flag.
+    description: "Command Fail Flag.\n\nRaw bit values: false (0) = Fail0: Error not detected.; true (1) = Fail1: Error detected."
     bit_offset: 0
     bit_size: 1
-    enum: FmuAlphaEnumNovember
   - name: cmdabt
-    description: Command Abort Flag.
+    description: "Command Abort Flag.\n\nRaw bit values: false (0) = Cmdabt0: No command abort detected.; true (1) = Cmdabt1: Command abort detected."
     bit_offset: 2
     bit_size: 1
-    enum: FmuAlphaEnumEcho
   - name: pviol
-    description: Command Protection Violation Flag.
+    description: "Command Protection Violation Flag.\n\nRaw bit values: false (0) = Pviol0: No protection violation detected.; true (1) = Pviol1: Protection violation detected."
     bit_offset: 4
     bit_size: 1
-    enum: FmuAlphaEnumRomeo
   - name: accerr
-    description: Command Access Error Flag.
+    description: "Command Access Error Flag.\n\nRaw bit values: false (0) = Accerr0: No access error detected.; true (1) = Accerr1: Access error detected."
     bit_offset: 5
     bit_size: 1
-    enum: FmuAlphaEnumBravo
   - name: cwsabt
-    description: Command Write Sequence Abort Flag.
+    description: "Command Write Sequence Abort Flag.\n\nRaw bit values: false (0) = Cwsabt0: Command write sequence not aborted.; true (1) = Cwsabt1: Command write sequence aborted."
     bit_offset: 6
     bit_size: 1
-    enum: FmuAlphaEnumHotel
   - name: ccif
-    description: Command Complete Interrupt Flag.
+    description: "Command Complete Interrupt Flag.\n\nRaw bit values: false (0) = Ccif0: Flash command, initialization, or power mode recovery in progress.; true (1) = Ccif1: Flash command, initialization, or power mode recovery has completed."
     bit_offset: 7
     bit_size: 1
-    enum: FmuAlphaEnumDelta
   - name: cmdprt
     description: Command protection level.
     bit_offset: 8
     bit_size: 2
     enum: FmuAlphaEnumGolf
   - name: cmdp
-    description: Command protection status flag.
+    description: "Command protection status flag.\n\nRaw bit values: false (0) = Cmdp0: Command protection level and domain ID are stale.; true (1) = Cmdp1: Command protection level (CMDPRT) and domain ID (CMDDID) are set."
     bit_offset: 11
     bit_size: 1
-    enum: FmuAlphaEnumFoxtrot
   - name: cmddid
     description: Command domain ID.
     bit_offset: 12
     bit_size: 4
   - name: dfdif
-    description: Double Bit Fault Detect Interrupt Flag.
+    description: "Double Bit Fault Detect Interrupt Flag.\n\nRaw bit values: false (0) = Dfdif0: Double bit fault not detected during a valid flash read access.; true (1) = Dfdif1: Double bit fault detected (or FCTRL[FDFD] is set) during a valid flash read access."
     bit_offset: 16
     bit_size: 1
-    enum: FmuAlphaEnumJuliet
   - name: salv_used
-    description: Salvage Used for Erase operation.
+    description: "Salvage Used for Erase operation.\n\nRaw bit values: false (0) = SalvUsed0: Salvage not used during last operation.; true (1) = SalvUsed1: Salvage used during the last erase operation."
     bit_offset: 17
     bit_size: 1
-    enum: FmuAlphaEnumSierra
   - name: pewen
     description: Program-Erase Write Enable Control.
     bit_offset: 24
     bit_size: 2
     enum: FmuAlphaEnumQuebec
   - name: perdy
-    description: Program-Erase Ready Control/Status Flag.
+    description: "Program-Erase Ready Control/Status Flag.\n\nRaw bit values: false (0) = Perdy0: Program or sector erase command operation not stalled.; true (1) = Perdy1: Program or sector erase command operation ready to execute."
     bit_offset: 31
     bit_size: 1
-    enum: FmuAlphaEnumPapa
-enum/FmuAlphaEnumAlpha:
-  bit_size: 1
-  variants:
-  - name: Abtreq0
-    description: No request to abort a command write sequence.
-    value: 0
-  - name: Abtreq1
-    description: Request to abort a command write sequence.
-    value: 1
-enum/FmuAlphaEnumBravo:
-  bit_size: 1
-  variants:
-  - name: Accerr0
-    description: No access error detected.
-    value: 0
-  - name: Accerr1
-    description: Access error detected.
-    value: 1
-enum/FmuAlphaEnumCharlie:
-  bit_size: 1
-  variants:
-  - name: Ccie0
-    description: Command complete interrupt disabled.
-    value: 0
-  - name: Ccie1
-    description: Command complete interrupt enabled.
-    value: 1
-enum/FmuAlphaEnumDelta:
-  bit_size: 1
-  variants:
-  - name: Ccif0
-    description: Flash command, initialization, or power mode recovery in progress.
-    value: 0
-  - name: Ccif1
-    description: Flash command, initialization, or power mode recovery has completed.
-    value: 1
-enum/FmuAlphaEnumEcho:
-  bit_size: 1
-  variants:
-  - name: Cmdabt0
-    description: No command abort detected.
-    value: 0
-  - name: Cmdabt1
-    description: Command abort detected.
-    value: 1
-enum/FmuAlphaEnumFoxtrot:
-  bit_size: 1
-  variants:
-  - name: Cmdp0
-    description: Command protection level and domain ID are stale.
-    value: 0
-  - name: Cmdp1
-    description: Command protection level (CMDPRT) and domain ID (CMDDID) are set.
-    value: 1
 enum/FmuAlphaEnumGolf:
   bit_size: 2
   variants:
@@ -218,33 +149,6 @@ enum/FmuAlphaEnumGolf:
   - name: Cmdprt11
     description: Nonsecure, privileged access.
     value: 3
-enum/FmuAlphaEnumHotel:
-  bit_size: 1
-  variants:
-  - name: Cwsabt0
-    description: Command write sequence not aborted.
-    value: 0
-  - name: Cwsabt1
-    description: Command write sequence aborted.
-    value: 1
-enum/FmuAlphaEnumIndia:
-  bit_size: 1
-  variants:
-  - name: Dfdie0
-    description: Double bit fault detect interrupt disabled.
-    value: 0
-  - name: Dfdie1
-    description: Double bit fault detect interrupt enabled.
-    value: 1
-enum/FmuAlphaEnumJuliet:
-  bit_size: 1
-  variants:
-  - name: Dfdif0
-    description: Double bit fault not detected during a valid flash read access.
-    value: 0
-  - name: Dfdif1
-    description: Double bit fault detected (or FCTRL[FDFD] is set) during a valid flash read access.
-    value: 1
 enum/FmuAlphaEnumKilo:
   bit_size: 4
   variants:
@@ -263,42 +167,6 @@ enum/FmuAlphaEnumLima:
   - name: Ersien11
     description: Block 1 IFR Sector X is not protected from erase by ERSSCR command.
     value: 1
-enum/FmuAlphaEnumMike:
-  bit_size: 1
-  variants:
-  - name: Ersreq0
-    description: No request or request complete.
-    value: 0
-  - name: Ersreq1
-    description: Request to run the Mass Erase operation.
-    value: 1
-enum/FmuAlphaEnumNovember:
-  bit_size: 1
-  variants:
-  - name: Fail0
-    description: Error not detected.
-    value: 0
-  - name: Fail1
-    description: Error detected.
-    value: 1
-enum/FmuAlphaEnumOscar:
-  bit_size: 1
-  variants:
-  - name: Fdfd0
-    description: FSTAT[DFDIF] sets only if a double bit fault is detected during a valid flash read access from the platform flash controller.
-    value: 0
-  - name: Fdfd1
-    description: FSTAT[DFDIF] sets during any valid flash read access from the platform flash controller. An interrupt request is generated if the DFDIE bit is set.
-    value: 1
-enum/FmuAlphaEnumPapa:
-  bit_size: 1
-  variants:
-  - name: Perdy0
-    description: Program or sector erase command operation not stalled.
-    value: 0
-  - name: Perdy1
-    description: Program or sector erase command operation ready to execute.
-    value: 1
 enum/FmuAlphaEnumQuebec:
   bit_size: 2
   variants:
@@ -311,21 +179,3 @@ enum/FmuAlphaEnumQuebec:
   - name: Pewen10
     description: Writes are enabled for one flash or IFR page (page programming).
     value: 2
-enum/FmuAlphaEnumRomeo:
-  bit_size: 1
-  variants:
-  - name: Pviol0
-    description: No protection violation detected.
-    value: 0
-  - name: Pviol1
-    description: Protection violation detected.
-    value: 1
-enum/FmuAlphaEnumSierra:
-  bit_size: 1
-  variants:
-  - name: SalvUsed0
-    description: Salvage not used during last operation.
-    value: 0
-  - name: SalvUsed1
-    description: Salvage used during the last erase operation.
-    value: 1

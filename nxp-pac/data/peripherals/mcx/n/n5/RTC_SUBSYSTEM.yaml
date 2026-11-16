@@ -45,10 +45,9 @@ fieldset/RtcSubsystemAlphaFieldsetBravo:
   description: Subsecond Control.
   fields:
   - name: sub_second_cnt_en
-    description: Subsecond Counter Enable.
+    description: "Subsecond Counter Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: IntrEn
 fieldset/RtcSubsystemAlphaFieldsetCharlie:
   description: Wake Timer Counter.
   fields:
@@ -60,49 +59,18 @@ fieldset/RtcSubsystemAlphaFieldsetDelta:
   description: Wake Timer Control.
   fields:
   - name: wake_flag
-    description: Wake Timer Status Flag.
+    description: "Wake Timer Status Flag.\n\nRaw bit values: false (0) = Disable: Not timed out.; true (1) = Enable: Timed out."
     bit_offset: 1
     bit_size: 1
-    enum: RtcSubsystemAlphaEnumEcho
   - name: clr_wake_timer
-    description: Clear Wake Timer.
+    description: "Clear Wake Timer.\n\nRaw bit values: false (0) = Disable: No effect.; true (1) = Enable: Clear the wake timer counter."
     bit_offset: 2
     bit_size: 1
-    enum: RtcSubsystemAlphaEnumAlpha
   - name: osc_div_ena
-    description: OSC Divide Enable.
+    description: "OSC Divide Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 4
     bit_size: 1
-    enum: IntrEn
   - name: intr_en
-    description: Enable Interrupt.
+    description: "Enable Interrupt.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 5
     bit_size: 1
-    enum: IntrEn
-enum/RtcSubsystemAlphaEnumAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: No effect.
-    value: 0
-  - name: Enable
-    description: Clear the wake timer counter.
-    value: 1
-enum/IntrEn:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/RtcSubsystemAlphaEnumEcho:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Not timed out.
-    value: 0
-  - name: Enable
-    description: Timed out.
-    value: 1

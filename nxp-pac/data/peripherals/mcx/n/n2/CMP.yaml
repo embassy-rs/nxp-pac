@@ -69,63 +69,52 @@ fieldset/CmpAlphaFieldsetAlpha:
   description: Comparator Control Register 0.
   fields:
   - name: cmp_en
-    description: Comparator Enable.
+    description: "Comparator Enable.\n\nRaw bit values: false (0) = Disable: Disable (The analog logic remains off and consumes no power.).; true (1) = Enable: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: CmpAlphaEnumEcho
 fieldset/CmpAlphaFieldsetBravo:
   description: Comparator Control Register 1.
   fields:
   - name: window_en
-    description: Windowing Enable.
+    description: "Windowing Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: DacEn
   - name: sample_en
-    description: Sampling Enable.
+    description: "Sampling Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: DacEn
   - name: dma_en
-    description: DMA Enable.
+    description: "DMA Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: DacEn
   - name: cout_inv
-    description: Comparator Invert.
+    description: "Comparator Invert.\n\nRaw bit values: false (0) = NoInvert: Do not invert.; true (1) = Invert: Invert."
     bit_offset: 3
     bit_size: 1
-    enum: CoutInv
   - name: cout_sel
-    description: Comparator Output Select.
+    description: "Comparator Output Select.\n\nRaw bit values: false (0) = Cout: Use COUT (filtered).; true (1) = Couta: Use COUTA (unfiltered)."
     bit_offset: 4
     bit_size: 1
-    enum: CmpAlphaEnumJuliet
   - name: cout_pen
-    description: Comparator Output Pin Enable.
+    description: "Comparator Output Pin Enable.\n\nRaw bit values: false (0) = Unavailable: Not available.; true (1) = Available: Available."
     bit_offset: 5
     bit_size: 1
-    enum: CmpAlphaEnumIndia
   - name: couta_owen
-    description: COUTA_OW Enable.
+    description: "COUTA_OW Enable.\n\nRaw bit values: false (0) = Sampled: COUTA holds the last sampled value.; true (1) = CoutaOw: Enables the COUTA signal value to be defined by COUTA_OW."
     bit_offset: 6
     bit_size: 1
-    enum: CmpAlphaEnumLima
   - name: couta_ow
-    description: COUTA Output Level for Closed Window.
+    description: "COUTA Output Level for Closed Window.\n\nRaw bit values: false (0) = Couta0: COUTA is 0.; true (1) = Couta1: COUTA is 1."
     bit_offset: 7
     bit_size: 1
-    enum: CmpAlphaEnumKilo
   - name: window_inv
-    description: WINDOW/SAMPLE Signal Invert.
+    description: "WINDOW/SAMPLE Signal Invert.\n\nRaw bit values: false (0) = NoInvert: Do not invert.; true (1) = Invert: Invert."
     bit_offset: 8
     bit_size: 1
-    enum: CoutInv
   - name: window_cls
-    description: COUT Event Window Close.
+    description: "COUT Event Window Close.\n\nRaw bit values: false (0) = NoClose: COUT event cannot close the window.; true (1) = Close: COUT event can close the window."
     bit_offset: 9
     bit_size: 1
-    enum: CmpAlphaEnumBravoBravo
   - name: evt_sel
     description: COUT Event Select.
     bit_offset: 10
@@ -149,15 +138,13 @@ fieldset/CmpAlphaFieldsetCharlie:
   description: Comparator Control Register 2.
   fields:
   - name: cmp_hpmd
-    description: CMP High Power Mode Select.
+    description: "CMP High Power Mode Select.\n\nRaw bit values: false (0) = Low: Low power (speed) comparison mode.; true (1) = High: High power (speed) comparison mode."
     bit_offset: 0
     bit_size: 1
-    enum: CmpAlphaEnumFoxtrot
   - name: cmp_npmd
-    description: CMP Nano Power Mode Select.
+    description: "CMP Nano Power Mode Select.\n\nRaw bit values: false (0) = NoNano: Disables CMP Nano power mode. CCR2[CMP_HPMD] determines the mode for the comparator.; true (1) = Nano: Enables CMP Nano power mode."
     bit_offset: 1
     bit_size: 1
-    enum: CmpAlphaEnumGolf
   - name: hystctr
     description: Comparator Hysteresis Control.
     bit_offset: 4
@@ -177,20 +164,17 @@ fieldset/CmpAlphaFieldsetDelta:
   description: Comparator Status.
   fields:
   - name: cfr
-    description: Analog Comparator Flag Rising.
+    description: "Analog Comparator Flag Rising.\n\nRaw bit values: false (0) = NotDetected: Not detected.; true (1) = Detected: Detected."
     bit_offset: 0
     bit_size: 1
-    enum: Cff
   - name: cff
-    description: Analog Comparator Flag Falling.
+    description: "Analog Comparator Flag Falling.\n\nRaw bit values: false (0) = NotDetected: Not detected.; true (1) = Detected: Detected."
     bit_offset: 1
     bit_size: 1
-    enum: Cff
   - name: rrf
-    description: Round-Robin Flag.
+    description: "Round-Robin Flag.\n\nRaw bit values: false (0) = NotDetected: Not detected.; true (1) = Detected: Detected."
     bit_offset: 2
     bit_size: 1
-    enum: Cff
   - name: cout
     description: Analog Comparator Output.
     bit_offset: 8
@@ -199,20 +183,17 @@ fieldset/CmpAlphaFieldsetEcho:
   description: DAC Control.
   fields:
   - name: dac_en
-    description: DAC Enable.
+    description: "DAC Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: DacEn
   - name: dac_hpmd
-    description: DAC High Power Mode.
+    description: "DAC High Power Mode.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: DacEn
   - name: vrsel
-    description: DAC Reference High Voltage Source Select.
+    description: "DAC Reference High Voltage Source Select.\n\nRaw bit values: false (0) = Vref0: VREFH0.; true (1) = Vref1: VREFH1."
     bit_offset: 8
     bit_size: 1
-    enum: CmpAlphaEnumAlphaBravo
   - name: dac_data
     description: DAC Output Voltage Select.
     bit_offset: 16
@@ -221,20 +202,17 @@ fieldset/CmpAlphaFieldsetFoxtrot:
   description: Interrupt Enable.
   fields:
   - name: cfr_ie
-    description: Comparator Flag Rising Interrupt Enable.
+    description: "Comparator Flag Rising Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables the comparator flag rising interrupt.; true (1) = Enable: Enables the comparator flag rising interrupt when CFR is set."
     bit_offset: 0
     bit_size: 1
-    enum: CmpAlphaEnumDelta
   - name: cff_ie
-    description: Comparator Flag Falling Interrupt Enable.
+    description: "Comparator Flag Falling Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables the comparator flag falling interrupt.; true (1) = Enable: Enables the comparator flag falling interrupt when CFF is set."
     bit_offset: 1
     bit_size: 1
-    enum: CmpAlphaEnumBravo
   - name: rrf_ie
-    description: Round-Robin Flag Interrupt Enable.
+    description: "Round-Robin Flag Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disables the round-robin flag interrupt.; true (1) = Enable: Enables the round-robin flag interrupt when the comparison result changes for a given channel."
     bit_offset: 2
     bit_size: 1
-    enum: CmpAlphaEnumYankeeAlpha
 fieldset/CmpAlphaFieldsetGolf:
   description: Parameter.
   fields:
@@ -247,15 +225,13 @@ fieldset/CmpAlphaFieldsetHotel:
   description: Round Robin Control Register 0.
   fields:
   - name: rr_en
-    description: Round-Robin Enable.
+    description: "Round-Robin Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: DacEn
   - name: rr_trg_sel
-    description: Round-Robin Trigger Select.
+    description: "Round-Robin Trigger Select.\n\nRaw bit values: false (0) = Enable: External trigger.; true (1) = Disable: Internal trigger."
     bit_offset: 1
     bit_size: 1
-    enum: CmpAlphaEnumWhiskeyAlpha
   - name: rr_nsam
     description: Number of Sample Clocks.
     bit_offset: 8
@@ -285,50 +261,41 @@ fieldset/CmpAlphaFieldsetIndia:
   description: Round Robin Control Register 1.
   fields:
   - name: rr_ch0en
-    description: Channel 0 Input Enable in Trigger Mode.
+    description: "Channel 0 Input Enable in Trigger Mode.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: DacEn
   - name: rr_ch1en
-    description: Channel 1 Input Enable in Trigger Mode.
+    description: "Channel 1 Input Enable in Trigger Mode.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: DacEn
   - name: rr_ch2en
-    description: Channel 2 Input Enable in Trigger Mode.
+    description: "Channel 2 Input Enable in Trigger Mode.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: DacEn
   - name: rr_ch3en
-    description: Channel 3 Input Enable in Trigger Mode.
+    description: "Channel 3 Input Enable in Trigger Mode.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 3
     bit_size: 1
-    enum: DacEn
   - name: rr_ch4en
-    description: Channel 4 Input Enable in Trigger Mode.
+    description: "Channel 4 Input Enable in Trigger Mode.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 4
     bit_size: 1
-    enum: DacEn
   - name: rr_ch5en
-    description: Channel 5 Input Enable in Trigger Mode.
+    description: "Channel 5 Input Enable in Trigger Mode.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 5
     bit_size: 1
-    enum: DacEn
   - name: rr_ch6en
-    description: Channel 6 Input Enable in Trigger Mode.
+    description: "Channel 6 Input Enable in Trigger Mode.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 6
     bit_size: 1
-    enum: DacEn
   - name: rr_ch7en
-    description: Channel 7 Input Enable in Trigger Mode.
+    description: "Channel 7 Input Enable in Trigger Mode.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 7
     bit_size: 1
-    enum: DacEn
   - name: fixp
-    description: Fixed Port.
+    description: "Fixed Port.\n\nRaw bit values: false (0) = FixPlus: Fix the plus port. Sweep only the inputs to the minus port.; true (1) = FixMinus: Fix the minus port. Sweep only the inputs to the plus port."
     bit_offset: 16
     bit_size: 1
-    enum: CmpAlphaEnumUniform
   - name: fixch
     description: Fixed Channel Select.
     bit_offset: 20
@@ -342,10 +309,9 @@ fieldset/CmpAlphaFieldsetJuliet:
     bit_offset: 0
     bit_size: 28
   - name: rr_timer_en
-    description: Round-Robin Internal Timer Enable.
+    description: "Round-Robin Internal Timer Enable.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 31
     bit_size: 1
-    enum: CmpAlphaEnumVictorAlpha
 fieldset/CmpAlphaFieldsetKilo:
   description: Round Robin Control and Status.
   fields:
@@ -385,45 +351,37 @@ fieldset/CmpAlphaFieldsetLima:
   description: Round Robin Status.
   fields:
   - name: rr_ch0f
-    description: Channel 0 Input Changed Flag.
+    description: "Channel 0 Input Changed Flag.\n\nRaw bit values: false (0) = NotDifferent: No different.; true (1) = Different: Different."
     bit_offset: 0
     bit_size: 1
-    enum: RrCh0f
   - name: rr_ch1f
-    description: Channel 1 Input Changed Flag.
+    description: "Channel 1 Input Changed Flag.\n\nRaw bit values: false (0) = NotDifferent: No different.; true (1) = Different: Different."
     bit_offset: 1
     bit_size: 1
-    enum: RrCh0f
   - name: rr_ch2f
-    description: Channel 2 Input Changed Flag.
+    description: "Channel 2 Input Changed Flag.\n\nRaw bit values: false (0) = NotDifferent: No different.; true (1) = Different: Different."
     bit_offset: 2
     bit_size: 1
-    enum: RrCh0f
   - name: rr_ch3f
-    description: Channel 3 Input Changed Flag.
+    description: "Channel 3 Input Changed Flag.\n\nRaw bit values: false (0) = NotDifferent: No different.; true (1) = Different: Different."
     bit_offset: 3
     bit_size: 1
-    enum: RrCh0f
   - name: rr_ch4f
-    description: Channel 4 Input Changed Flag.
+    description: "Channel 4 Input Changed Flag.\n\nRaw bit values: false (0) = NotDifferent: No different.; true (1) = Different: Different."
     bit_offset: 4
     bit_size: 1
-    enum: RrCh0f
   - name: rr_ch5f
-    description: Channel 5 Input Changed Flag.
+    description: "Channel 5 Input Changed Flag.\n\nRaw bit values: false (0) = NotDifferent: No different.; true (1) = Different: Different."
     bit_offset: 5
     bit_size: 1
-    enum: RrCh0f
   - name: rr_ch6f
-    description: Channel 6 Input Changed Flag.
+    description: "Channel 6 Input Changed Flag.\n\nRaw bit values: false (0) = NotDifferent: No different.; true (1) = Different: Different."
     bit_offset: 6
     bit_size: 1
-    enum: RrCh0f
   - name: rr_ch7f
-    description: Channel 7 Input Changed Flag.
+    description: "Channel 7 Input Changed Flag.\n\nRaw bit values: false (0) = NotDifferent: No different.; true (1) = Different: Different."
     bit_offset: 7
     bit_size: 1
-    enum: RrCh0f
 fieldset/CmpAlphaFieldsetMike:
   description: Version ID.
   fields:
@@ -440,114 +398,6 @@ fieldset/CmpAlphaFieldsetMike:
     description: Major Version Number.
     bit_offset: 24
     bit_size: 8
-enum/Cff:
-  bit_size: 1
-  variants:
-  - name: Detected
-    description: Detected.
-    value: 1
-  - name: NotDetected
-    description: Not detected.
-    value: 0
-enum/CmpAlphaEnumBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables the comparator flag falling interrupt.
-    value: 0
-  - name: Enable
-    description: Enables the comparator flag falling interrupt when CFF is set.
-    value: 1
-enum/CmpAlphaEnumDelta:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables the comparator flag rising interrupt.
-    value: 0
-  - name: Enable
-    description: Enables the comparator flag rising interrupt when CFR is set.
-    value: 1
-enum/CmpAlphaEnumEcho:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable (The analog logic remains off and consumes no power.).
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/CmpAlphaEnumFoxtrot:
-  bit_size: 1
-  variants:
-  - name: High
-    description: High power (speed) comparison mode.
-    value: 1
-  - name: Low
-    description: Low power (speed) comparison mode.
-    value: 0
-enum/CmpAlphaEnumGolf:
-  bit_size: 1
-  variants:
-  - name: Nano
-    description: Enables CMP Nano power mode.
-    value: 1
-  - name: NoNano
-    description: Disables CMP Nano power mode. CCR2[CMP_HPMD] determines the mode for the comparator.
-    value: 0
-enum/CoutInv:
-  bit_size: 1
-  variants:
-  - name: Invert
-    description: Invert.
-    value: 1
-  - name: NoInvert
-    description: Do not invert.
-    value: 0
-enum/CmpAlphaEnumIndia:
-  bit_size: 1
-  variants:
-  - name: Available
-    description: Available.
-    value: 1
-  - name: Unavailable
-    description: Not available.
-    value: 0
-enum/CmpAlphaEnumJuliet:
-  bit_size: 1
-  variants:
-  - name: Cout
-    description: Use COUT (filtered).
-    value: 0
-  - name: Couta
-    description: Use COUTA (unfiltered).
-    value: 1
-enum/CmpAlphaEnumKilo:
-  bit_size: 1
-  variants:
-  - name: Couta0
-    description: COUTA is 0.
-    value: 0
-  - name: Couta1
-    description: COUTA is 1.
-    value: 1
-enum/CmpAlphaEnumLima:
-  bit_size: 1
-  variants:
-  - name: CoutaOw
-    description: Enables the COUTA signal value to be defined by COUTA_OW.
-    value: 1
-  - name: Sampled
-    description: COUTA holds the last sampled value.
-    value: 0
-enum/DacEn:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
 enum/CmpAlphaEnumOscar:
   bit_size: 4
   variants:
@@ -644,15 +494,6 @@ enum/CmpAlphaEnumTango:
   - name: FixCh7
     description: Channel 7.
     value: 7
-enum/CmpAlphaEnumUniform:
-  bit_size: 1
-  variants:
-  - name: FixMinus
-    description: Fix the minus port. Sweep only the inputs to the plus port.
-    value: 1
-  - name: FixPlus
-    description: Fix the plus port. Sweep only the inputs to the minus port.
-    value: 0
 enum/CmpAlphaEnumVictor:
   bit_size: 2
   variants:
@@ -731,15 +572,6 @@ enum/CmpAlphaEnumYankee:
   - name: Input7
     description: Internal DAC output.
     value: 7
-enum/RrCh0f:
-  bit_size: 1
-  variants:
-  - name: Different
-    description: Different.
-    value: 1
-  - name: NotDifferent
-    description: No different.
-    value: 0
 enum/CmpAlphaEnumPapaAlpha:
   bit_size: 2
   variants:
@@ -926,48 +758,3 @@ enum/CmpAlphaEnumUniformAlpha:
   - name: Sample9
     description: At least 10 sampled "1", the final result is "1".
     value: 9
-enum/CmpAlphaEnumVictorAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/CmpAlphaEnumWhiskeyAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Internal trigger.
-    value: 1
-  - name: Enable
-    description: External trigger.
-    value: 0
-enum/CmpAlphaEnumYankeeAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables the round-robin flag interrupt.
-    value: 0
-  - name: Enable
-    description: Enables the round-robin flag interrupt when the comparison result changes for a given channel.
-    value: 1
-enum/CmpAlphaEnumAlphaBravo:
-  bit_size: 1
-  variants:
-  - name: Vref0
-    description: VREFH0.
-    value: 0
-  - name: Vref1
-    description: VREFH1.
-    value: 1
-enum/CmpAlphaEnumBravoBravo:
-  bit_size: 1
-  variants:
-  - name: Close
-    description: COUT event can close the window.
-    value: 1
-  - name: NoClose
-    description: COUT event cannot close the window.
-    value: 0

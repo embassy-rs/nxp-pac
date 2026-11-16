@@ -16,6 +16,8 @@ fn ident(name: &str) -> anyhow::Result<Ident> {
 
 pub fn peripheral(model: &Model) -> anyhow::Result<TokenStream> {
     let options = chiptool::generate::Options::new()
+        // Formatting is always an explicit Cargo feature, never a renderer default.
+        .with_defmt(chiptool::generate::DefmtOption::Feature("defmt".into()))
         .with_common_module(chiptool::generate::CommonModule::External(quote!(
             crate::pac::common
         )))

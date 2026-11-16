@@ -680,75 +680,62 @@ fieldset/TrigfilPrsc:
     bit_size: 2
     enum: FiltScaleVal
   - name: filt_scale_en
-    description: Enable trigger filter prescaller.
+    description: "Enable trigger filter prescaller.\n\nRaw bit values: false (0) = Val2: Disable prescaller.; true (1) = Val1: Enabled prescaller."
     bit_offset: 31
     bit_size: 1
-    enum: FiltScaleEn
   bit_size: 32
   reset_value: 0
 fieldset/TrigfilStat0:
   description: Trigger filter stat.
   fields:
   - name: trig_in0_val
-    description: TRIG_IN value.
+    description: "TRIG_IN value.\n\nRaw bit values: false (0) = Val0: TRIG_IN0 is 0.; true (1) = Val1: TRIG_IN0 is 1."
     bit_offset: 0
     bit_size: 1
-    enum: TrigIn0Val
   - name: trig_in1_val
-    description: TRIG_IN value.
+    description: "TRIG_IN value.\n\nRaw bit values: false (0) = Val0: TRIG_IN1 is 0.; true (1) = Val1: TRIG_IN1 is 1."
     bit_offset: 1
     bit_size: 1
-    enum: TrigIn1Val
   - name: trig_in2_val
-    description: TRIG_IN value.
+    description: "TRIG_IN value.\n\nRaw bit values: false (0) = Val0: TRIG_IN2 is 0.; true (1) = Val1: TRIG_IN2 is 1."
     bit_offset: 2
     bit_size: 1
-    enum: TrigIn2Val
   - name: trig_in3_val
-    description: TRIG_IN value.
+    description: "TRIG_IN value.\n\nRaw bit values: false (0) = Val0: TRIG_IN3 is 0.; true (1) = Val1: TRIG_IN3 is 1."
     bit_offset: 3
     bit_size: 1
-    enum: TrigIn3Val
   - name: trig_in4_val
-    description: TRIG_IN value.
+    description: "TRIG_IN value.\n\nRaw bit values: false (0) = Val0: TRIG_IN4 is 0.; true (1) = Val1: TRIG_IN4 is 1."
     bit_offset: 4
     bit_size: 1
-    enum: TrigIn4Val
   - name: trig_in5_val
-    description: TRIG_IN value.
+    description: "TRIG_IN value.\n\nRaw bit values: false (0) = Val0: TRIG_IN5 is 0.; true (1) = Val1: TRIG_IN5 is 1."
     bit_offset: 5
     bit_size: 1
-    enum: TrigIn5Val
   - name: trig_in6_val
-    description: TRIG_IN value.
+    description: "TRIG_IN value.\n\nRaw bit values: false (0) = Val0: TRIG_IN6 is 0.; true (1) = Val1: TRIG_IN6 is 1."
     bit_offset: 6
     bit_size: 1
-    enum: TrigIn6Val
   - name: trig_in7_val
-    description: TRIG_IN value.
+    description: "TRIG_IN value.\n\nRaw bit values: false (0) = Val0: TRIG_IN7 is 0.; true (1) = Val1: TRIG_IN7 is 1."
     bit_offset: 7
     bit_size: 1
-    enum: TrigIn7Val
   - name: trig_in8_val
-    description: TRIG_IN value.
+    description: "TRIG_IN value.\n\nRaw bit values: false (0) = Val0: TRIG_IN8 is 0.; true (1) = Val1: TRIG_IN8 is 1."
     bit_offset: 8
     bit_size: 1
-    enum: TrigIn8Val
   - name: trig_in9_val
-    description: TRIG_IN value.
+    description: "TRIG_IN value.\n\nRaw bit values: false (0) = Val0: TRIG_IN9 is 0.; true (1) = Val1: TRIG_IN9 is 1."
     bit_offset: 9
     bit_size: 1
-    enum: TrigIn9Val
   - name: trig_in10_val
-    description: TRIG_IN value.
+    description: "TRIG_IN value.\n\nRaw bit values: false (0) = Val0: TRIG_IN10 is 0.; true (1) = Val1: TRIG_IN10 is 1."
     bit_offset: 10
     bit_size: 1
-    enum: TrigIn10Val
   - name: trig_in11_val
-    description: TRIG_IN value.
+    description: "TRIG_IN value.\n\nRaw bit values: false (0) = Val0: TRIG_IN11 is 0.; true (1) = Val1: TRIG_IN11 is 1."
     bit_offset: 11
     bit_size: 1
-    enum: TrigIn11Val
   bit_size: 32
   reset_value: 0
 enum/Adc0TrigTrigin:
@@ -2392,15 +2379,6 @@ enum/Ctimer2capInp:
   - name: Val93
     description: PWM1_SM2_MUX_TRIG0 input is selected.
     value: 93
-enum/FiltScaleEn:
-  bit_size: 1
-  variants:
-  - name: Val2
-    description: Disable prescaller.
-    value: 0
-  - name: Val1
-    description: Enabled prescaller.
-    value: 1
 enum/FiltScaleVal:
   bit_size: 2
   variants:
@@ -4396,114 +4374,6 @@ enum/Timer1trigInp:
   - name: Val93
     description: PWM1_SM2_MUX_TRIG0 input is selected.
     value: 93
-enum/TrigIn0Val:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: TRIG_IN0 is 0.
-    value: 0
-  - name: Val1
-    description: TRIG_IN0 is 1.
-    value: 1
-enum/TrigIn10Val:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: TRIG_IN10 is 0.
-    value: 0
-  - name: Val1
-    description: TRIG_IN10 is 1.
-    value: 1
-enum/TrigIn11Val:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: TRIG_IN11 is 0.
-    value: 0
-  - name: Val1
-    description: TRIG_IN11 is 1.
-    value: 1
-enum/TrigIn1Val:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: TRIG_IN1 is 0.
-    value: 0
-  - name: Val1
-    description: TRIG_IN1 is 1.
-    value: 1
-enum/TrigIn2Val:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: TRIG_IN2 is 0.
-    value: 0
-  - name: Val1
-    description: TRIG_IN2 is 1.
-    value: 1
-enum/TrigIn3Val:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: TRIG_IN3 is 0.
-    value: 0
-  - name: Val1
-    description: TRIG_IN3 is 1.
-    value: 1
-enum/TrigIn4Val:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: TRIG_IN4 is 0.
-    value: 0
-  - name: Val1
-    description: TRIG_IN4 is 1.
-    value: 1
-enum/TrigIn5Val:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: TRIG_IN5 is 0.
-    value: 0
-  - name: Val1
-    description: TRIG_IN5 is 1.
-    value: 1
-enum/TrigIn6Val:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: TRIG_IN6 is 0.
-    value: 0
-  - name: Val1
-    description: TRIG_IN6 is 1.
-    value: 1
-enum/TrigIn7Val:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: TRIG_IN7 is 0.
-    value: 0
-  - name: Val1
-    description: TRIG_IN7 is 1.
-    value: 1
-enum/TrigIn8Val:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: TRIG_IN8 is 0.
-    value: 0
-  - name: Val1
-    description: TRIG_IN8 is 1.
-    value: 1
-enum/TrigIn9Val:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: TRIG_IN9 is 0.
-    value: 0
-  - name: Val1
-    description: TRIG_IN9 is 1.
-    value: 1
 enum/TrigOutInp:
   bit_size: 5
   variants:

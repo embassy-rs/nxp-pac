@@ -202,40 +202,33 @@ fieldset/CdogAlphaFieldsetGolf:
   description: Flags Register.
   fields:
   - name: to_flag
-    description: TIMEOUT fault flag.
+    description: "TIMEOUT fault flag.\n\nRaw bit values: false (0) = NoFlag: A TIMEOUT fault has not occurred.; true (1) = Flag: A TIMEOUT fault has occurred."
     bit_offset: 0
     bit_size: 1
-    enum: CdogAlphaEnumOscar
   - name: miscom_flag
-    description: MISCOMPARE fault flag.
+    description: "MISCOMPARE fault flag.\n\nRaw bit values: false (0) = NoFlag: A MISCOMPARE fault has not occurred.; true (1) = Flag: A MISCOMPARE fault has occurred."
     bit_offset: 1
     bit_size: 1
-    enum: CdogAlphaEnumGolf
   - name: seq_flag
-    description: SEQUENCE fault flag.
+    description: "SEQUENCE fault flag.\n\nRaw bit values: false (0) = NoFlag: A SEQUENCE fault has not occurred.; true (1) = Flag: A SEQUENCE fault has occurred."
     bit_offset: 2
     bit_size: 1
-    enum: CdogAlphaEnumJuliet
   - name: cnt_flag
-    description: CONTROL fault flag.
+    description: "CONTROL fault flag.\n\nRaw bit values: false (0) = NoFlag: A CONTROL fault has not occurred.; true (1) = Flag: A CONTROL fault has occurred."
     bit_offset: 3
     bit_size: 1
-    enum: CdogAlphaEnumCharlie
   - name: state_flag
-    description: STATE fault flag.
+    description: "STATE fault flag.\n\nRaw bit values: false (0) = NoFlag: A STATE fault has not occurred.; true (1) = Flag: A STATE fault has occurred."
     bit_offset: 4
     bit_size: 1
-    enum: CdogAlphaEnumMike
   - name: addr_flag
-    description: ADDRESS fault flag.
+    description: "ADDRESS fault flag.\n\nRaw bit values: false (0) = NoFlag: An ADDRESS fault has not occurred.; true (1) = Flag: An ADDRESS fault has occurred."
     bit_offset: 5
     bit_size: 1
-    enum: CdogAlphaEnumAlpha
   - name: por_flag
-    description: Power-on reset flag.
+    description: "Power-on reset flag.\n\nRaw bit values: false (0) = NoFlag: A Power-on reset event has not occurred.; true (1) = Flag: A Power-on reset event has occurred."
     bit_offset: 16
     bit_size: 1
-    enum: CdogAlphaEnumIndia
 fieldset/CdogAlphaFieldsetHotel:
   description: Instruction Timer Register.
   fields:
@@ -340,24 +333,6 @@ fieldset/CdogAlphaFieldsetSierra:
     description: Subtract 256.
     bit_offset: 0
     bit_size: 32
-enum/CdogAlphaEnumAlpha:
-  bit_size: 1
-  variants:
-  - name: Flag
-    description: An ADDRESS fault has occurred.
-    value: 1
-  - name: NoFlag
-    description: An ADDRESS fault has not occurred.
-    value: 0
-enum/CdogAlphaEnumCharlie:
-  bit_size: 1
-  variants:
-  - name: Flag
-    description: A CONTROL fault has occurred.
-    value: 1
-  - name: NoFlag
-    description: A CONTROL fault has not occurred.
-    value: 0
 enum/DebugHaltCtrl2:
   bit_size: 2
   variants:
@@ -376,33 +351,6 @@ enum/CdogAlphaEnumFoxtrot:
   - name: Unlocked
     description: Unlocked.
     value: 2
-enum/CdogAlphaEnumGolf:
-  bit_size: 1
-  variants:
-  - name: Flag
-    description: A MISCOMPARE fault has occurred.
-    value: 1
-  - name: NoFlag
-    description: A MISCOMPARE fault has not occurred.
-    value: 0
-enum/CdogAlphaEnumIndia:
-  bit_size: 1
-  variants:
-  - name: Flag
-    description: A Power-on reset event has occurred.
-    value: 1
-  - name: NoFlag
-    description: A Power-on reset event has not occurred.
-    value: 0
-enum/CdogAlphaEnumJuliet:
-  bit_size: 1
-  variants:
-  - name: Flag
-    description: A SEQUENCE fault has occurred.
-    value: 1
-  - name: NoFlag
-    description: A SEQUENCE fault has not occurred.
-    value: 0
 enum/AddressCtrl2:
   bit_size: 3
   variants:
@@ -415,21 +363,3 @@ enum/AddressCtrl2:
   - name: EnableReset
     description: Enable reset.
     value: 1
-enum/CdogAlphaEnumMike:
-  bit_size: 1
-  variants:
-  - name: Flag
-    description: A STATE fault has occurred.
-    value: 1
-  - name: NoFlag
-    description: A STATE fault has not occurred.
-    value: 0
-enum/CdogAlphaEnumOscar:
-  bit_size: 1
-  variants:
-  - name: Flag
-    description: A TIMEOUT fault has occurred.
-    value: 1
-  - name: NoFlag
-    description: A TIMEOUT fault has not occurred.
-    value: 0

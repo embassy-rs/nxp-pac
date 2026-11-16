@@ -9,10 +9,9 @@ fieldset/Remap:
   description: Data Remap.
   fields:
   - name: remaplk
-    description: Remap Lock Enable.
+    description: "Remap Lock Enable.\n\nRaw bit values: false (0) = LockDisabled: Lock disabled: can write to REMAP.; true (1) = LockEnabled: Lock enabled: cannot write to REMAP."
     bit_offset: 0
     bit_size: 1
-    enum: Remaplk
   - name: lim
     description: LIM Remapping Address.
     bit_offset: 16
@@ -21,12 +20,3 @@ fieldset/Remap:
     description: LIMDP Remapping Address.
     bit_offset: 24
     bit_size: 7
-enum/Remaplk:
-  bit_size: 1
-  variants:
-  - name: LockDisabled
-    description: 'Lock disabled: can write to REMAP.'
-    value: 0
-  - name: LockEnabled
-    description: 'Lock enabled: cannot write to REMAP.'
-    value: 1

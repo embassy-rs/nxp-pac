@@ -160,39 +160,34 @@ fieldset/Cfgr0:
     bit_offset: 1
     bit_size: 1
   - name: hrsel
-    description: Host Request Select.
+    description: "Host Request Select.\n\nRaw bit values: false (0) = Hreqpin: HREQ pin.; true (1) = InputTrigger: Input trigger."
     bit_offset: 2
     bit_size: 1
-    enum: Hrsel
   - name: hrdir
-    description: Host Request Direction.
+    description: "Host Request Direction.\n\nRaw bit values: false (0) = Input: Input.; true (1) = Output: Output."
     bit_offset: 3
     bit_size: 1
-    enum: Hrdir
   - name: cirfifo
     description: Circular FIFO Enable.
     bit_offset: 8
     bit_size: 1
   - name: rdmo
-    description: Receive Data Match Only.
+    description: "Receive Data Match Only.\n\nRaw bit values: false (0) = Stored: Disable.; true (1) = Discarded: Enable."
     bit_offset: 9
     bit_size: 1
-    enum: Rdmo
   bit_size: 32
   reset_value: 0
 fieldset/Cfgr1:
   description: Configuration 1.
   fields:
   - name: master
-    description: Controller Mode.
+    description: "Controller Mode.\n\nRaw bit values: false (0) = SlaveMode: Peripheral mode.; true (1) = MasterMode: Controller mode."
     bit_offset: 0
     bit_size: 1
-    enum: Master
   - name: sample
-    description: Sample Point.
+    description: "Sample Point.\n\nRaw bit values: false (0) = OnSckEdge: SCK edge.; true (1) = OnDelayedSckEdge: Delayed SCK edge."
     bit_offset: 1
     bit_size: 1
-    enum: Sample
   - name: autopcs
     description: Automatic PCS.
     bit_offset: 2
@@ -202,10 +197,9 @@ fieldset/Cfgr1:
     bit_offset: 3
     bit_size: 1
   - name: partial
-    description: Partial Enable.
+    description: "Partial Enable.\n\nRaw bit values: false (0) = Discarded: Discard.; true (1) = Stored: Store."
     bit_offset: 4
     bit_size: 1
-    enum: Partial
   - name: pcspol
     description: Peripheral Chip Select Polarity.
     bit_offset: 8
@@ -222,15 +216,13 @@ fieldset/Cfgr1:
     bit_size: 2
     enum: Pincfg
   - name: outcfg
-    description: Output Configuration.
+    description: "Output Configuration.\n\nRaw bit values: false (0) = RetainLastvalue: Retain last value.; true (1) = Tristated: 3-stated."
     bit_offset: 26
     bit_size: 1
-    enum: Outcfg
   - name: pcscfg
-    description: Peripheral Chip Select Configuration.
+    description: "Peripheral Chip Select Configuration.\n\nRaw bit values: false (0) = ChipSelect: PCS[3:2] configured for chip select function.; true (1) = Halfduplex4bit: PCS[3:2] configured for half-duplex 4-bit transfers (PCS[3:2] = DATA[3:2])."
     bit_offset: 27
     bit_size: 1
-    enum: Pcscfg
   bit_size: 32
   reset_value: 0
 fieldset/Cr:
@@ -249,15 +241,13 @@ fieldset/Cr:
     bit_offset: 3
     bit_size: 1
   - name: rtf
-    description: Reset Transmit FIFO.
+    description: "Reset Transmit FIFO.\n\nRaw bit values: false (0) = NoEffect: No effect.; true (1) = TxfifoRst: Reset."
     bit_offset: 8
     bit_size: 1
-    enum: Rtf
   - name: rrf
-    description: Reset Receive FIFO.
+    description: "Reset Receive FIFO.\n\nRaw bit values: false (0) = NoEffect: No effect.; true (1) = RxfifoRst: Reset."
     bit_offset: 9
     bit_size: 1
-    enum: Rrf
   bit_size: 32
   reset_value: 0
 fieldset/Der:
@@ -397,10 +387,9 @@ fieldset/Rsr:
   description: Receive Status.
   fields:
   - name: sof
-    description: Start of Frame.
+    description: "Start of Frame.\n\nRaw bit values: false (0) = NextDataword: Subsequent data word or RX FIFO is empty (RXEMPTY=1).; true (1) = FirstDataword: First data word."
     bit_offset: 0
     bit_size: 1
-    enum: Sof
   - name: rxempty
     description: RX FIFO Empty.
     bit_offset: 1
@@ -411,10 +400,9 @@ fieldset/Sr:
   description: Status.
   fields:
   - name: tdf
-    description: Transmit Data Flag.
+    description: "Transmit Data Flag.\n\nRaw bit values: false (0) = TxdataNotReqst: Transmit data not requested.; true (1) = TxdataReqst: Transmit data requested."
     bit_offset: 0
     bit_size: 1
-    enum: Tdf
   - name: rdf
     description: Receive Data Flag.
     bit_offset: 1
@@ -444,10 +432,9 @@ fieldset/Sr:
     bit_offset: 13
     bit_size: 1
   - name: mbf
-    description: Module Busy Flag.
+    description: "Module Busy Flag.\n\nRaw bit values: false (0) = Idle: LPSPI is idle.; true (1) = Busy: LPSPI is busy."
     bit_offset: 24
     bit_size: 1
-    enum: Mbf
   bit_size: 32
   reset_value: 1
 fieldset/Tcbr:
@@ -472,20 +459,17 @@ fieldset/Tcr:
     bit_size: 2
     enum: Width
   - name: txmsk
-    description: Transmit Data Mask.
+    description: "Transmit Data Mask.\n\nRaw bit values: false (0) = Normal: Normal transfer.; true (1) = Mask: Mask transmit data."
     bit_offset: 18
     bit_size: 1
-    enum: Txmsk
   - name: rxmsk
-    description: Receive Data Mask.
+    description: "Receive Data Mask.\n\nRaw bit values: false (0) = Normal: Normal transfer.; true (1) = Mask: Mask receive data."
     bit_offset: 19
     bit_size: 1
-    enum: Rxmsk
   - name: contc
-    description: Continuing Command.
+    description: "Continuing Command.\n\nRaw bit values: false (0) = Start: Command word for start of new transfer.; true (1) = Continue: Command word for continuing transfer."
     bit_offset: 20
     bit_size: 1
-    enum: Contc
   - name: cont
     description: Continuous Transfer.
     bit_offset: 21
@@ -495,10 +479,9 @@ fieldset/Tcr:
     bit_offset: 22
     bit_size: 1
   - name: lsbf
-    description: LSB First.
+    description: "LSB First.\n\nRaw bit values: false (0) = MsbFirst: MSB first.; true (1) = LsbFirst: LSB first."
     bit_offset: 23
     bit_size: 1
-    enum: Lsbf
   - name: pcs
     description: Peripheral Chip Select.
     bit_offset: 24
@@ -510,15 +493,13 @@ fieldset/Tcr:
     bit_size: 3
     enum: Prescale
   - name: cpha
-    description: Clock Phase.
+    description: "Clock Phase.\n\nRaw bit values: false (0) = Captured: Captured.; true (1) = Changed: Changed."
     bit_offset: 30
     bit_size: 1
-    enum: Cpha
   - name: cpol
-    description: Clock Polarity.
+    description: "Clock Polarity.\n\nRaw bit values: false (0) = InactiveLow: Inactive low.; true (1) = InactiveHigh: Inactive high."
     bit_offset: 31
     bit_size: 1
-    enum: Cpol
   bit_size: 32
   reset_value: 31
 fieldset/Tdr:
@@ -548,75 +529,12 @@ fieldset/Verid:
     bit_size: 8
   bit_size: 32
   reset_value: 33554436
-enum/Contc:
-  bit_size: 1
-  variants:
-  - name: Start
-    description: Command word for start of new transfer.
-    value: 0
-  - name: Continue
-    description: Command word for continuing transfer.
-    value: 1
-enum/Cpha:
-  bit_size: 1
-  variants:
-  - name: Captured
-    description: Captured.
-    value: 0
-  - name: Changed
-    description: Changed.
-    value: 1
-enum/Cpol:
-  bit_size: 1
-  variants:
-  - name: InactiveLow
-    description: Inactive low.
-    value: 0
-  - name: InactiveHigh
-    description: Inactive high.
-    value: 1
 enum/Feature:
   bit_size: 16
   variants:
   - name: Standard
     description: Standard feature set supporting a 32-bit shift register.
     value: 4
-enum/Hrdir:
-  bit_size: 1
-  variants:
-  - name: Input
-    description: Input.
-    value: 0
-  - name: Output
-    description: Output.
-    value: 1
-enum/Hrsel:
-  bit_size: 1
-  variants:
-  - name: Hreqpin
-    description: HREQ pin.
-    value: 0
-  - name: InputTrigger
-    description: Input trigger.
-    value: 1
-enum/Lsbf:
-  bit_size: 1
-  variants:
-  - name: MsbFirst
-    description: MSB first.
-    value: 0
-  - name: LsbFirst
-    description: LSB first.
-    value: 1
-enum/Master:
-  bit_size: 1
-  variants:
-  - name: SlaveMode
-    description: Peripheral mode.
-    value: 0
-  - name: MasterMode
-    description: Controller mode.
-    value: 1
 enum/Matcfg:
   bit_size: 3
   variants:
@@ -641,33 +559,6 @@ enum/Matcfg:
   - name: EnabledDatamatch111
     description: Match any data word (masked) with compare word (masked).
     value: 7
-enum/Mbf:
-  bit_size: 1
-  variants:
-  - name: Idle
-    description: LPSPI is idle.
-    value: 0
-  - name: Busy
-    description: LPSPI is busy.
-    value: 1
-enum/Outcfg:
-  bit_size: 1
-  variants:
-  - name: RetainLastvalue
-    description: Retain last value.
-    value: 0
-  - name: Tristated
-    description: 3-stated.
-    value: 1
-enum/Partial:
-  bit_size: 1
-  variants:
-  - name: Discarded
-    description: Discard.
-    value: 0
-  - name: Stored
-    description: Store.
-    value: 1
 enum/Pcs:
   bit_size: 2
   variants:
@@ -683,15 +574,6 @@ enum/Pcs:
   - name: TxPcs3
     description: Transfer using PCS[3].
     value: 3
-enum/Pcscfg:
-  bit_size: 1
-  variants:
-  - name: ChipSelect
-    description: PCS[3:2] configured for chip select function.
-    value: 0
-  - name: Halfduplex4bit
-    description: PCS[3:2] configured for half-duplex 4-bit transfers (PCS[3:2] = DATA[3:2]).
-    value: 1
 enum/Pcspol:
   bit_size: 4
   variants:
@@ -743,78 +625,6 @@ enum/Prescale:
   - name: DivideBy128
     description: Divide by 128.
     value: 7
-enum/Rdmo:
-  bit_size: 1
-  variants:
-  - name: Stored
-    description: Disable.
-    value: 0
-  - name: Discarded
-    description: Enable.
-    value: 1
-enum/Rrf:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: No effect.
-    value: 0
-  - name: RxfifoRst
-    description: Reset.
-    value: 1
-enum/Rtf:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: No effect.
-    value: 0
-  - name: TxfifoRst
-    description: Reset.
-    value: 1
-enum/Rxmsk:
-  bit_size: 1
-  variants:
-  - name: Normal
-    description: Normal transfer.
-    value: 0
-  - name: Mask
-    description: Mask receive data.
-    value: 1
-enum/Sample:
-  bit_size: 1
-  variants:
-  - name: OnSckEdge
-    description: SCK edge.
-    value: 0
-  - name: OnDelayedSckEdge
-    description: Delayed SCK edge.
-    value: 1
-enum/Sof:
-  bit_size: 1
-  variants:
-  - name: NextDataword
-    description: Subsequent data word or RX FIFO is empty (RXEMPTY=1).
-    value: 0
-  - name: FirstDataword
-    description: First data word.
-    value: 1
-enum/Tdf:
-  bit_size: 1
-  variants:
-  - name: TxdataNotReqst
-    description: Transmit data not requested.
-    value: 0
-  - name: TxdataReqst
-    description: Transmit data requested.
-    value: 1
-enum/Txmsk:
-  bit_size: 1
-  variants:
-  - name: Normal
-    description: Normal transfer.
-    value: 0
-  - name: Mask
-    description: Mask transmit data.
-    value: 1
 enum/Width:
   bit_size: 2
   variants:

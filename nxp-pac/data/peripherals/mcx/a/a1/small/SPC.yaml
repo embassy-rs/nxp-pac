@@ -87,10 +87,9 @@ fieldset/ActiveCfg:
   description: Active Power Mode Configuration.
   fields:
   - name: coreldo_vdd_ds
-    description: LDO_CORE VDD Drive Strength.
+    description: "LDO_CORE VDD Drive Strength.\n\nRaw bit values: false (0) = Low: Low.; true (1) = Normal: Normal."
     bit_offset: 0
     bit_size: 1
-    enum: LpCfgCoreldoVddDs
   - name: coreldo_vdd_lvl
     description: LDO_CORE VDD Regulator Voltage Level.
     bit_offset: 2
@@ -102,10 +101,9 @@ fieldset/ActiveCfg:
     bit_size: 2
     enum: LpCfgBgmode
   - name: vdd_vd_disable
-    description: VDD Voltage Detect Disable.
+    description: "VDD Voltage Detect Disable.\n\nRaw bit values: false (0) = Enable: Enable.; true (1) = Disable: Disable."
     bit_offset: 23
     bit_size: 1
-    enum: VddVdDisable
   - name: core_lvde
     description: Core Low-Voltage Detection Enable.
     bit_offset: 24
@@ -175,10 +173,9 @@ fieldset/LpCfg:
   description: Low-Power Mode Configuration.
   fields:
   - name: coreldo_vdd_ds
-    description: LDO_CORE VDD Drive Strength.
+    description: "LDO_CORE VDD Drive Strength.\n\nRaw bit values: false (0) = Low: Low.; true (1) = Normal: Normal."
     bit_offset: 0
     bit_size: 1
-    enum: LpCfgCoreldoVddDs
   - name: coreldo_vdd_lvl
     description: LDO_CORE VDD Regulator Voltage Level.
     bit_offset: 2
@@ -226,10 +223,9 @@ fieldset/LpreqCfg:
     bit_offset: 0
     bit_size: 1
   - name: lpreqpol
-    description: Low-Power Request Output Pin Polarity Control.
+    description: "Low-Power Request Output Pin Polarity Control.\n\nRaw bit values: false (0) = High: High.; true (1) = Low: Low."
     bit_offset: 1
     bit_size: 1
-    enum: Lpreqpol
   - name: lpreqov
     description: Low-Power Request Output Override.
     bit_offset: 2
@@ -248,15 +244,13 @@ fieldset/PdStatus0:
   description: SPC Power Domain Mode Status.
   fields:
   - name: pwr_req_status
-    description: Power Request Status Flag.
+    description: "Power Request Status Flag.\n\nRaw bit values: false (0) = ReqNo: Did not request.; true (1) = ReqYes: Requested."
     bit_offset: 0
     bit_size: 1
-    enum: PdLpReq
   - name: pd_lp_req
-    description: Power Domain Low Power Request Flag.
+    description: "Power Domain Low Power Request Flag.\n\nRaw bit values: false (0) = ReqNo: Did not request.; true (1) = ReqYes: Requested."
     bit_offset: 4
     bit_size: 1
-    enum: PdLpReq
   - name: lp_mode
     description: Power Domain Low Power Mode Request.
     bit_offset: 8
@@ -271,10 +265,9 @@ fieldset/Sc:
     bit_offset: 0
     bit_size: 1
   - name: spc_lp_req
-    description: SPC Power Mode Configuration Status Flag.
+    description: "SPC Power Mode Configuration Status Flag.\n\nRaw bit values: false (0) = Active: SPC is in Active mode; the ACTIVE_CFG register has control.; true (1) = LowPower: All power domains requested low-power mode; SPC entered a low-power state; power-mode configuration based on the LP_CFG register."
     bit_offset: 1
     bit_size: 1
-    enum: SpcLpReq
   - name: spc_lp_mode
     description: Power Domain Low-Power Mode Request.
     bit_offset: 4
@@ -338,29 +331,25 @@ fieldset/VdCoreCfg:
     bit_offset: 1
     bit_size: 1
   - name: lock
-    description: Core Voltage Detect Reset Enable Lock.
+    description: "Core Voltage Detect Reset Enable Lock.\n\nRaw bit values: false (0) = Allow: Allow.; true (1) = Deny: Deny."
     bit_offset: 16
     bit_size: 1
-    enum: VdSysCfgLock
   reset_value: 1
 fieldset/VdStat:
   description: Voltage Detect Status.
   fields:
   - name: corevdd_lvdf
-    description: Core Low-Voltage Detect Flag.
+    description: "Core Low-Voltage Detect Flag.\n\nRaw bit values: false (0) = EventNo: Event not detected.; true (1) = EventYes: Event detected."
     bit_offset: 0
     bit_size: 1
-    enum: SysvddHvdf
   - name: sysvdd_lvdf
-    description: System Low-Voltage Detect Flag.
+    description: "System Low-Voltage Detect Flag.\n\nRaw bit values: false (0) = EventNo: Event not detected.; true (1) = EventYes: Event detected."
     bit_offset: 1
     bit_size: 1
-    enum: SysvddHvdf
   - name: sysvdd_hvdf
-    description: System HVD Flag.
+    description: "System HVD Flag.\n\nRaw bit values: false (0) = EventNo: Event not detected.; true (1) = EventYes: Event detected."
     bit_offset: 5
     bit_size: 1
-    enum: SysvddHvdf
   reset_value: 0
 fieldset/VdSysCfg:
   description: System Voltage Detect Configuration.
@@ -382,15 +371,13 @@ fieldset/VdSysCfg:
     bit_offset: 3
     bit_size: 1
   - name: lvsel
-    description: System Low-Voltage Level Select.
+    description: "System Low-Voltage Level Select.\n\nRaw bit values: false (0) = Normal: Normal.; true (1) = Safe: Safe."
     bit_offset: 8
     bit_size: 1
-    enum: Lvsel
   - name: lock
-    description: System Voltage Detect Reset Enable Lock.
+    description: "System Voltage Detect Reset Enable Lock.\n\nRaw bit values: false (0) = Allow: Allow.; true (1) = Deny: Deny."
     bit_offset: 16
     bit_size: 1
-    enum: VdSysCfgLock
   reset_value: 257
 fieldset/Verid:
   description: Version ID.
@@ -439,15 +426,6 @@ enum/LpCfgBgmode:
   - name: Bgmode10
     description: Bandgap enabled, buffer enabled.
     value: 2
-enum/LpCfgCoreldoVddDs:
-  bit_size: 1
-  variants:
-  - name: Low
-    description: Low.
-    value: 0
-  - name: Normal
-    description: Normal.
-    value: 1
 enum/LpCfgCoreldoVddLvl:
   bit_size: 2
   variants:
@@ -487,33 +465,6 @@ enum/Lpreqov:
   - name: ForceHigh
     description: Forced high (ignore LPREQPOL settings).
     value: 3
-enum/Lpreqpol:
-  bit_size: 1
-  variants:
-  - name: High
-    description: High.
-    value: 0
-  - name: Low
-    description: Low.
-    value: 1
-enum/Lvsel:
-  bit_size: 1
-  variants:
-  - name: Normal
-    description: Normal.
-    value: 0
-  - name: Safe
-    description: Safe.
-    value: 1
-enum/PdLpReq:
-  bit_size: 1
-  variants:
-  - name: ReqNo
-    description: Did not request.
-    value: 0
-  - name: ReqYes
-    description: Requested.
-    value: 1
 enum/SpcLpMode:
   bit_size: 4
   variants:
@@ -529,43 +480,6 @@ enum/SpcLpMode:
   - name: Mode8
     description: DPDOWN with system clock off.
     value: 8
-enum/SpcLpReq:
-  bit_size: 1
-  variants:
-  - name: Active
-    description: SPC is in Active mode; the ACTIVE_CFG register has control.
-    value: 0
-  - name: LowPower
-    description: All power domains requested low-power mode; SPC entered a low-power state; power-mode configuration based
-      on the LP_CFG register.
-    value: 1
-enum/SysvddHvdf:
-  bit_size: 1
-  variants:
-  - name: EventNo
-    description: Event not detected.
-    value: 0
-  - name: EventYes
-    description: Event detected.
-    value: 1
-enum/VdSysCfgLock:
-  bit_size: 1
-  variants:
-  - name: Allow
-    description: Allow.
-    value: 0
-  - name: Deny
-    description: Deny.
-    value: 1
-enum/VddVdDisable:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Enable.
-    value: 0
-  - name: Disable
-    description: Disable.
-    value: 1
 enum/Vsm:
   bit_size: 2
   variants:

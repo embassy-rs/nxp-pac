@@ -208,10 +208,9 @@ fieldset/Baud:
     bit_offset: 0
     bit_size: 13
   - name: sbns
-    description: Stop Bit Number Select.
+    description: "Stop Bit Number Select.\n\nRaw bit values: false (0) = One: One stop bit.; true (1) = Two: Two stop bits."
     bit_offset: 13
     bit_size: 1
-    enum: Sbns
   - name: rxedgie
     description: RX Input Active Edge Interrupt Enable.
     bit_offset: 14
@@ -221,10 +220,9 @@ fieldset/Baud:
     bit_offset: 15
     bit_size: 1
   - name: resyncdis
-    description: Resynchronization Disable.
+    description: "Resynchronization Disable.\n\nRaw bit values: false (0) = Resync: Enable.; true (1) = NoResync: Disable."
     bit_offset: 16
     bit_size: 1
-    enum: Resyncdis
   - name: bothedge
     description: Both Edge Sampling.
     bit_offset: 17
@@ -244,10 +242,9 @@ fieldset/Baud:
     bit_size: 1
   - name: hlfm
     only_in: '^MCXA(175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)$'
-    description: Reduced Oversample Mode Selection.
+    description: "Reduced Oversample Mode Selection.\n\nRaw bit values: false (0) = Regular: Regular Oversampling.; true (1) = Reduced: Reduced Oversampling by 0.5."
     bit_offset: 22
     bit_size: 1
-    enum: Hlfm
   - name: tdmae
     description: Transmitter DMA Enable.
     bit_offset: 23
@@ -273,67 +270,57 @@ fieldset/Ctrl:
   description: Control.
   fields:
   - name: pt
-    description: Parity Type.
+    description: "Parity Type.\n\nRaw bit values: false (0) = Even: Even parity.; true (1) = Odd: Odd parity."
     bit_offset: 0
     bit_size: 1
-    enum: Pt
   - name: pe
     description: Parity Enable.
     bit_offset: 1
     bit_size: 1
   - name: ilt
-    description: Idle Line Type Select.
+    description: "Idle Line Type Select.\n\nRaw bit values: false (0) = FromStart: After the start bit.; true (1) = FromStop: After the stop bit."
     bit_offset: 2
     bit_size: 1
-    enum: Ilt
   - name: wake
-    description: Receiver Wake-Up Method Select.
+    description: "Receiver Wake-Up Method Select.\n\nRaw bit values: false (0) = Idle: Idle.; true (1) = Mark: Mark."
     bit_offset: 3
     bit_size: 1
-    enum: Wake
   - name: m
-    description: 9-Bit Or 8-Bit Mode Select.
+    description: "9-Bit Or 8-Bit Mode Select.\n\nRaw bit values: false (0) = Data8: 8-bit.; true (1) = Data9: 9-bit."
     bit_offset: 4
     bit_size: 1
-    enum: M
   - name: rsrc
-    description: Receiver Source Select.
+    description: "Receiver Source Select.\n\nRaw bit values: false (0) = NoEffect: Internal Loopback mode.; true (1) = Onewire: Single-wire mode."
     bit_offset: 5
     bit_size: 1
-    enum: Rsrc
   - name: dozeen
     only_in: '^MCXA'
-    description: Doze Mode.
+    description: "Doze Mode.\n\nRaw bit values: false (0) = Enabled: Enable.; true (1) = Disabled: Disable."
     bit_offset: 6
     bit_size: 1
-    enum: Dozeen
   - name: loops
-    description: Loop Mode Select.
+    description: "Loop Mode Select.\n\nRaw bit values: false (0) = Noffect: Normal operation: RXD and TXD use separate pins.; true (1) = Loopback: Loop mode or Single-Wire mode."
     bit_offset: 7
     bit_size: 1
-    enum: Loops
   - name: idlecfg
     description: Idle Configuration.
     bit_offset: 8
     bit_size: 3
     enum: Idlecfg
   - name: m7
-    description: 7-Bit Mode Select.
+    description: "7-Bit Mode Select.\n\nRaw bit values: false (0) = NoEffect: 8-bit to 10-bit.; true (1) = Data7: 7-bit."
     bit_offset: 11
     bit_size: 1
-    enum: M7
   - name: swap
     only_in: '^MCXA(175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)$'
-    description: TXD and RXD Pin Swap.
+    description: "TXD and RXD Pin Swap.\n\nRaw bit values: false (0) = Standard: Use the standard way.; true (1) = Swap: Swap."
     bit_offset: 12
     bit_size: 1
-    enum: Swap
   - name: erlsmp
     only_in: '^MCXA(175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)$'
-    description: Early Sample Selection.
+    description: "Early Sample Selection.\n\nRaw bit values: false (0) = Midpoint: Regular midpoint bit sampling.; true (1) = Reduced: Early bit sampling at 1/2 duration of bit timing."
     bit_offset: 13
     bit_size: 1
-    enum: Erlsmp
   - name: ma2ie
     description: Match 2 (MA2F) Interrupt Enable.
     bit_offset: 14
@@ -343,15 +330,13 @@ fieldset/Ctrl:
     bit_offset: 15
     bit_size: 1
   - name: sbk
-    description: Send Break.
+    description: "Send Break.\n\nRaw bit values: false (0) = NoEffect: Normal transmitter operation.; true (1) = TxBreak: Queue break character(s) to be sent."
     bit_offset: 16
     bit_size: 1
-    enum: Sbk
   - name: rwu
-    description: Receiver Wake-Up Control.
+    description: "Receiver Wake-Up Control.\n\nRaw bit values: false (0) = NoEffect: Normal receiver operation.; true (1) = RxWakeup: LPUART receiver in standby, waiting for a wake-up condition."
     bit_offset: 17
     bit_size: 1
-    enum: Rwu
   - name: re
     description: Receiver Enable.
     bit_offset: 18
@@ -397,10 +382,9 @@ fieldset/Ctrl:
     bit_offset: 28
     bit_size: 1
   - name: txdir
-    description: TXD Pin Direction in Single-Wire Mode.
+    description: "TXD Pin Direction in Single-Wire Mode.\n\nRaw bit values: false (0) = TxInput: Input.; true (1) = TxOutput: Output."
     bit_offset: 29
     bit_size: 1
-    enum: Txdir
   - name: r9t8
     description: Receive Bit 9 Transmit Bit 8.
     bit_offset: 30
@@ -518,15 +502,13 @@ fieldset/Fifo:
     bit_size: 3
     enum: Rxiden
   - name: rxflush
-    description: Receive FIFO Flush.
+    description: "Receive FIFO Flush.\n\nRaw bit values: false (0) = NoEffect: No effect.; true (1) = RxfifoRst: All data flushed out."
     bit_offset: 14
     bit_size: 1
-    enum: Rxflush
   - name: txflush
-    description: Transmit FIFO Flush.
+    description: "Transmit FIFO Flush.\n\nRaw bit values: false (0) = NoEffect: No effect.; true (1) = TxfifoRst: All data flushed out."
     bit_offset: 15
     bit_size: 1
-    enum: Txflush
   - name: rxuf
     description: Receiver FIFO Underflow Flag.
     bit_offset: 16
@@ -547,10 +529,9 @@ fieldset/Global:
   description: Global.
   fields:
   - name: rst
-    description: Software Reset.
+    description: "Software Reset.\n\nRaw bit values: false (0) = NoEffect: Not reset.; true (1) = Reset: Reset."
     bit_offset: 1
     bit_size: 1
-    enum: Rst
 fieldset/Match:
   description: Match Address.
   fields:
@@ -574,24 +555,21 @@ fieldset/Modir:
     bit_offset: 1
     bit_size: 1
   - name: txrtspol
-    description: Transmitter RTS Polarity.
+    description: "Transmitter RTS Polarity.\n\nRaw bit values: false (0) = Low: Active low.; true (1) = High: Active high."
     bit_offset: 2
     bit_size: 1
-    enum: Txrtspol
   - name: rxrtse
     description: Receiver RTS Enable.
     bit_offset: 3
     bit_size: 1
   - name: txctsc
-    description: Transmit CTS Configuration.
+    description: "Transmit CTS Configuration.\n\nRaw bit values: false (0) = Start: Sampled at the start of each character.; true (1) = Idle: Sampled when the transmitter is idle."
     bit_offset: 4
     bit_size: 1
-    enum: Txctsc
   - name: txctssrc
-    description: Transmit CTS Source.
+    description: "Transmit CTS Source.\n\nRaw bit values: false (0) = Cts: The CTS_B pin.; true (1) = Match: An internal connection to the receiver address match result."
     bit_offset: 5
     bit_size: 1
-    enum: Txctssrc
   - name: rtswater
     description: Receive RTS Configuration.
     bit_offset: 8
@@ -668,43 +646,37 @@ fieldset/Stat:
     bit_offset: 21
     bit_size: 1
   - name: tc
-    description: Transmission Complete Flag.
+    description: "Transmission Complete Flag.\n\nRaw bit values: false (0) = Active: Transmitter active.; true (1) = Complete: Transmitter idle."
     bit_offset: 22
     bit_size: 1
-    enum: Tc
   - name: tdre
-    description: Transmit Data Register Empty Flag.
+    description: "Transmit Data Register Empty Flag.\n\nRaw bit values: false (0) = Txdata: Greater than watermark.; true (1) = NoTxdata: Equal to or less than watermark."
     bit_offset: 23
     bit_size: 1
-    enum: Tdre
   - name: raf
-    description: Receiver Active Flag.
+    description: "Receiver Active Flag.\n\nRaw bit values: false (0) = Idle: Idle, waiting for a start bit.; true (1) = Active: Receiver active (RXD pin input not idle)."
     bit_offset: 24
     bit_size: 1
-    enum: Raf
   - name: lbkde
     description: LIN Break Detection Enable.
     bit_offset: 25
     bit_size: 1
   - name: brk13
-    description: Break Character Generation Length.
+    description: "Break Character Generation Length.\n\nRaw bit values: false (0) = Short: 9 to 13 bit times.; true (1) = Long: 12 to 15 bit times."
     bit_offset: 26
     bit_size: 1
-    enum: Brk13
   - name: rwuid
-    description: Receive Wake Up Idle Detect.
+    description: "Receive Wake Up Idle Detect.\n\nRaw bit values: false (0) = IdleNotset: STAT[IDLE] does not become 1.; true (1) = IdleSet: STAT[IDLE] becomes 1."
     bit_offset: 27
     bit_size: 1
-    enum: Rwuid
   - name: rxinv
     description: Receive Data Inversion.
     bit_offset: 28
     bit_size: 1
   - name: msbf
-    description: MSB First.
+    description: "MSB First.\n\nRaw bit values: false (0) = LsbFirst: LSB.; true (1) = MsbFirst: MSB."
     bit_offset: 29
     bit_size: 1
-    enum: Msbf
   - name: rxedgif
     description: RXD Pin Active Edge Interrupt Flag.
     bit_offset: 30
@@ -748,35 +720,6 @@ fieldset/Water:
     description: Receive Counter.
     bit_offset: 24
     bit_size: 3
-enum/Brk13:
-  bit_size: 1
-  variants:
-  - name: Short
-    description: 9 to 13 bit times.
-    value: 0
-  - name: Long
-    description: 12 to 15 bit times.
-    value: 1
-enum/Dozeen:
-  only_in: '^(MCXA144|MCXA145|MCXA146|MCXA154|MCXA155|MCXA156|MCXA175|MCXA176|MCXA185|MCXA186|MCXA255|MCXA256|MCXA265|MCXA266|MCXA286|MCXA287|MCXA456|MCXA457|MCXA536|MCXA537|MCXA556|MCXA557|MCXA566|MCXA567|MCXA577)$'
-  bit_size: 1
-  variants:
-  - name: Enabled
-    description: Enable.
-    value: 0
-  - name: Disabled
-    description: Disable.
-    value: 1
-enum/Erlsmp:
-  only_in: '^MCXA(175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)$'
-  bit_size: 1
-  variants:
-  - name: Midpoint
-    description: Regular midpoint bit sampling.
-    value: 0
-  - name: Reduced
-    description: Early bit sampling at 1/2 duration of bit timing.
-    value: 1
 enum/Feature:
   bit_size: 16
   variants:
@@ -790,16 +733,6 @@ enum/Feature:
     only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Enhanced feature set with full MODEM, IrDA, and enhanced idle detection.
     value: 7
-enum/Hlfm:
-  only_in: '^MCXA(175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)$'
-  bit_size: 1
-  variants:
-  - name: Regular
-    description: Regular Oversampling.
-    value: 0
-  - name: Reduced
-    description: Reduced Oversampling by 0.5.
-    value: 1
 enum/Idlecfg:
   bit_size: 3
   variants:
@@ -827,42 +760,6 @@ enum/Idlecfg:
   - name: Idle128
     description: '128.'
     value: 7
-enum/Ilt:
-  bit_size: 1
-  variants:
-  - name: FromStart
-    description: After the start bit.
-    value: 0
-  - name: FromStop
-    description: After the stop bit.
-    value: 1
-enum/Loops:
-  bit_size: 1
-  variants:
-  - name: Noffect
-    description: 'Normal operation: RXD and TXD use separate pins.'
-    value: 0
-  - name: Loopback
-    description: Loop mode or Single-Wire mode.
-    value: 1
-enum/M:
-  bit_size: 1
-  variants:
-  - name: Data8
-    description: 8-bit.
-    value: 0
-  - name: Data9
-    description: 9-bit.
-    value: 1
-enum/M7:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: 8-bit to 10-bit.
-    value: 0
-  - name: Data7
-    description: 7-bit.
-    value: 1
 enum/Matcfg:
   bit_size: 2
   variants:
@@ -878,78 +775,6 @@ enum/Matcfg:
   - name: RwuMatch
     description: Enables RWU on data match and match on or off for the transmitter CTS input.
     value: 3
-enum/Msbf:
-  bit_size: 1
-  variants:
-  - name: LsbFirst
-    description: LSB.
-    value: 0
-  - name: MsbFirst
-    description: MSB.
-    value: 1
-enum/Pt:
-  bit_size: 1
-  variants:
-  - name: Even
-    description: Even parity.
-    value: 0
-  - name: Odd
-    description: Odd parity.
-    value: 1
-enum/Raf:
-  bit_size: 1
-  variants:
-  - name: Idle
-    description: Idle, waiting for a start bit.
-    value: 0
-  - name: Active
-    description: Receiver active (RXD pin input not idle).
-    value: 1
-enum/Resyncdis:
-  bit_size: 1
-  variants:
-  - name: Resync
-    description: Enable.
-    value: 0
-  - name: NoResync
-    description: Disable.
-    value: 1
-enum/Rsrc:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: Internal Loopback mode.
-    value: 0
-  - name: Onewire
-    description: Single-wire mode.
-    value: 1
-enum/Rst:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: Not reset.
-    value: 0
-  - name: Reset
-    description: Reset.
-    value: 1
-enum/Rwu:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: Normal receiver operation.
-    value: 0
-  - name: RxWakeup
-    description: LPUART receiver in standby, waiting for a wake-up condition.
-    value: 1
-enum/Rwuid:
-  bit_size: 1
-  variants:
-  - name: IdleNotset
-    description: STAT[IDLE] does not become 1.
-    value: 0
-  - name: IdleSet
-    description: STAT[IDLE] becomes 1.
-    value: 1
 enum/Rxfifosize:
   bit_size: 3
   variants:
@@ -977,15 +802,6 @@ enum/Rxfifosize:
   - name: Fifo256
     description: '256.'
     value: 7
-enum/Rxflush:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: No effect.
-    value: 0
-  - name: RxfifoRst
-    description: All data flushed out.
-    value: 1
 enum/Rxiden:
   bit_size: 3
   variants:
@@ -1013,52 +829,6 @@ enum/Rxiden:
   - name: Idle64
     description: Enable STAT[RDRF] to become 1 because of partially filled FIFO when the receiver is idle for 64 characters.
     value: 7
-enum/Sbk:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: Normal transmitter operation.
-    value: 0
-  - name: TxBreak
-    description: Queue break character(s) to be sent.
-    value: 1
-enum/Sbns:
-  bit_size: 1
-  variants:
-  - name: One
-    description: One stop bit.
-    value: 0
-  - name: Two
-    description: Two stop bits.
-    value: 1
-enum/Swap:
-  only_in: '^MCXA(175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)$'
-  bit_size: 1
-  variants:
-  - name: Standard
-    description: Use the standard way.
-    value: 0
-  - name: Swap
-    description: Swap.
-    value: 1
-enum/Tc:
-  bit_size: 1
-  variants:
-  - name: Active
-    description: Transmitter active.
-    value: 0
-  - name: Complete
-    description: Transmitter idle.
-    value: 1
-enum/Tdre:
-  bit_size: 1
-  variants:
-  - name: Txdata
-    description: Greater than watermark.
-    value: 0
-  - name: NoTxdata
-    description: Equal to or less than watermark.
-    value: 1
 enum/Tnp:
   bit_size: 2
   variants:
@@ -1089,60 +859,6 @@ enum/Trgsel:
   - name: TrgTxd
     description: Input trigger used to modulate the TXD pin output, which (after TXINV configuration) is internally ANDed with the input trigger.
     value: 3
-enum/Txctsc:
-  bit_size: 1
-  variants:
-  - name: Start
-    description: Sampled at the start of each character.
-    value: 0
-  - name: Idle
-    description: Sampled when the transmitter is idle.
-    value: 1
-enum/Txctssrc:
-  bit_size: 1
-  variants:
-  - name: Cts
-    description: The CTS_B pin.
-    value: 0
-  - name: Match
-    description: An internal connection to the receiver address match result.
-    value: 1
-enum/Txdir:
-  bit_size: 1
-  variants:
-  - name: TxInput
-    description: Input.
-    value: 0
-  - name: TxOutput
-    description: Output.
-    value: 1
-enum/Txflush:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: No effect.
-    value: 0
-  - name: TxfifoRst
-    description: All data flushed out.
-    value: 1
-enum/Txrtspol:
-  bit_size: 1
-  variants:
-  - name: Low
-    description: Active low.
-    value: 0
-  - name: High
-    description: Active high.
-    value: 1
-enum/Wake:
-  bit_size: 1
-  variants:
-  - name: Idle
-    description: Idle.
-    value: 0
-  - name: Mark
-    description: Mark.
-    value: 1
 # N23 RM Rev.4 50.5.5 and MCX N RM Rev.7 66.5.5. Separate reset views
 # retain A defaults. Both detailed CTRL tables reserve bit6, despite N23 XML.
 fieldset/NVerid:
@@ -1202,24 +918,21 @@ fieldset/NModir:
     bit_offset: 1
     bit_size: 1
   - name: txrtspol
-    description: Transmitter RTS Polarity.
+    description: "Transmitter RTS Polarity.\n\nRaw bit values: false (0) = Low: Active low.; true (1) = High: Active high."
     bit_offset: 2
     bit_size: 1
-    enum: Txrtspol
   - name: rxrtse
     description: Receiver RTS Enable.
     bit_offset: 3
     bit_size: 1
   - name: txctsc
-    description: Transmit CTS Configuration.
+    description: "Transmit CTS Configuration.\n\nRaw bit values: false (0) = Start: Sampled at the start of each character.; true (1) = Idle: Sampled when the transmitter is idle."
     bit_offset: 4
     bit_size: 1
-    enum: Txctsc
   - name: txctssrc
-    description: Transmit CTS Source.
+    description: "Transmit CTS Source.\n\nRaw bit values: false (0) = Cts: The CTS_B pin.; true (1) = Match: An internal connection to the receiver address match result."
     bit_offset: 5
     bit_size: 1
-    enum: Txctssrc
   - name: rtswater
     description: Receive RTS Configuration. Change only with receiver disabled.
     bit_offset: 8
@@ -1276,15 +989,13 @@ fieldset/Mcr:
     bit_offset: 3
     bit_size: 1
   - name: dtr
-    description: DTR_B default state. Zero drives logic one; one drives logic zero.
+    description: "DTR_B default state. Zero drives logic one; one drives logic zero.\n\nRaw bit values: false (0) = Deasserted: Logic one (deasserted).; true (1) = Asserted: Logic zero (asserted)."
     bit_offset: 8
     bit_size: 1
-    enum: Dtr
   - name: rts
-    description: RTS_B default state when its function is disabled. Zero drives logic one; one drives logic zero.
+    description: "RTS_B default state when its function is disabled. Zero drives logic one; one drives logic zero.\n\nRaw bit values: false (0) = Deasserted: Logic one (deasserted).; true (1) = Asserted: Logic zero (asserted)."
     bit_offset: 9
     bit_size: 1
-    enum: Dtr
 fieldset/Msr:
   only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   description: MODEM Status. Pin states are read-only and inverted; delta flags are W1C. Pad configuration affects observed reset states.
@@ -1307,25 +1018,21 @@ fieldset/Msr:
     bit_offset: 3
     bit_size: 1
   - name: cts
-    description: Read-only CTS_B state. Zero indicates logic one; one indicates logic zero.
+    description: "Read-only CTS_B state. Zero indicates logic one; one indicates logic zero.\n\nRaw bit values: false (0) = Deasserted: Logic one (deasserted).; true (1) = Asserted: Logic zero (asserted)."
     bit_offset: 4
     bit_size: 1
-    enum: Dtr
   - name: dsr
-    description: Read-only DSR_B state. Zero indicates logic one; one indicates logic zero.
+    description: "Read-only DSR_B state. Zero indicates logic one; one indicates logic zero.\n\nRaw bit values: false (0) = Deasserted: Logic one (deasserted).; true (1) = Asserted: Logic zero (asserted)."
     bit_offset: 5
     bit_size: 1
-    enum: Dtr
   - name: rin
-    description: Read-only RIN_B state. Zero indicates logic one; one indicates logic zero.
+    description: "Read-only RIN_B state. Zero indicates logic one; one indicates logic zero.\n\nRaw bit values: false (0) = Deasserted: Logic one (deasserted).; true (1) = Asserted: Logic zero (asserted)."
     bit_offset: 6
     bit_size: 1
-    enum: Dtr
   - name: dcd
-    description: Read-only DCD_B state. Zero indicates logic one; one indicates logic zero.
+    description: "Read-only DCD_B state. Zero indicates logic one; one indicates logic zero.\n\nRaw bit values: false (0) = Deasserted: Logic one (deasserted).; true (1) = Asserted: Logic zero (asserted)."
     bit_offset: 7
     bit_size: 1
-    enum: Dtr
 fieldset/Reir:
   only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   description: Receiver Extended Idle. Change only with receiver disabled.
@@ -1350,25 +1057,21 @@ fieldset/Hdcr:
   reset_value: 0
   fields:
   - name: txstall
-    description: Prevent transmitter from becoming busy or asserting RTS_B while the receiver is active.
+    description: "Prevent transmitter from becoming busy or asserting RTS_B while the receiver is active.\n\nRaw bit values: false (0) = Disabled: No effect.; true (1) = Enabled: Does not become busy."
     bit_offset: 0
     bit_size: 1
-    enum: Txstall
   - name: rxsel
-    description: Receive data source. Zero selects RXD; one selects TXD.
+    description: "Receive data source. Zero selects RXD; one selects TXD.\n\nRaw bit values: false (0) = PinRxd: RXD.; true (1) = PinTxd: TXD."
     bit_offset: 1
     bit_size: 1
-    enum: Rxsel
   - name: rxwrmsk
-    description: Allow transmitter RTS_B to mask receive FIFO writes, without affecting the idle flag.
+    description: "Allow transmitter RTS_B to mask receive FIFO writes, without affecting the idle flag.\n\nRaw bit values: false (0) = NotMasked: Do not mask.; true (1) = Masked: Mask."
     bit_offset: 2
     bit_size: 1
-    enum: Rxmsk
   - name: rxmsk
-    description: Allow transmitter RTS_B to mask the receive data pin.
+    description: "Allow transmitter RTS_B to mask the receive data pin.\n\nRaw bit values: false (0) = NotMasked: Do not mask.; true (1) = Masked: Mask."
     bit_offset: 3
     bit_size: 1
-    enum: Rxmsk
   - name: rtsext
     description: RTS_B remains asserted for RTSEXT+1 bit times after the last stop bit, including internally when transmitter RTS output is disabled.
     bit_offset: 8
@@ -1552,43 +1255,3 @@ enum/Osr:
   - name: Osr32
     description: Results in an OSR of 32.
     value: 31
-enum/Dtr:
-  only_in: '^(MCXN235|MCXN236|MCXN246|MCXN247|MCXN526|MCXN527|MCXN536|MCXN537|MCXN546|MCXN547|MCXN556|MCXN557|MCXN946|MCXN947)$'
-  bit_size: 1
-  variants:
-  - name: Deasserted
-    description: Logic one (deasserted).
-    value: 0
-  - name: Asserted
-    description: Logic zero (asserted).
-    value: 1
-enum/Txstall:
-  only_in: '^(MCXN235|MCXN236|MCXN246|MCXN247|MCXN526|MCXN527|MCXN536|MCXN537|MCXN546|MCXN547|MCXN556|MCXN557|MCXN946|MCXN947)$'
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: No effect.
-    value: 0
-  - name: Enabled
-    description: Does not become busy.
-    value: 1
-enum/Rxmsk:
-  only_in: '^(MCXN235|MCXN236|MCXN246|MCXN247|MCXN526|MCXN527|MCXN536|MCXN537|MCXN546|MCXN547|MCXN556|MCXN557|MCXN946|MCXN947)$'
-  bit_size: 1
-  variants:
-  - name: NotMasked
-    description: Do not mask.
-    value: 0
-  - name: Masked
-    description: Mask.
-    value: 1
-enum/Rxsel:
-  only_in: '^(MCXN235|MCXN236|MCXN246|MCXN247|MCXN526|MCXN527|MCXN536|MCXN537|MCXN546|MCXN547|MCXN556|MCXN557|MCXN946|MCXN947)$'
-  bit_size: 1
-  variants:
-  - name: PinRxd
-    description: RXD.
-    value: 0
-  - name: PinTxd
-    description: TXD.
-    value: 1

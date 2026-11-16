@@ -189,15 +189,13 @@ fieldset/Fmc:
   description: Pin Filter Mode Configuration.
   fields:
   - name: filtm1
-    description: Filter Mode for FILTn.
+    description: "Filter Mode for FILTn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during Power Down/Deep Power Down mode.; true (1) = AnyPwr: Active during all power modes."
     bit_offset: 0
     bit_size: 1
-    enum: Filtm2
   - name: filtm2
-    description: Filter Mode for FILTn.
+    description: "Filter Mode for FILTn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during Power Down/Deep Power Down mode.; true (1) = AnyPwr: Active during all power modes."
     bit_offset: 1
     bit_size: 1
-    enum: Filtm2
 fieldset/Me:
   description: Module Interrupt Enable.
   fields:
@@ -283,13 +281,12 @@ fieldset/Pmc:
   description: Pin Mode Configuration.
   fields:
   - name: wupmc
-    description: Wake-up Pin Mode Configuration for WUU_Pn.
+    description: "Wake-up Pin Mode Configuration for WUU_Pn.\n\nRaw bit values: false (0) = LowPwrOnly: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).; true (1) = AnyPwr: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn)."
     bit_offset: 0
     bit_size: 1
     array:
       len: 32
       stride: 1
-    enum: Wupmc
 enum/Wupdc:
   bit_size: 2
   variants:
