@@ -40,7 +40,7 @@ block/Seccon:
     description: Reset on PoR only. Hardware reset bits are unknown, not guaranteed disabled or zero.
   - name: debug_features_dp
     byte_offset: 1960
-    fieldset: DebugFeaturesDp
+    fieldset: DebugFeatures
     description: Protected by GLIKEY index1 with GLIKEY reset function. Do not assume the same reset behavior as PoR-only DEBUG_FEATURES.
   - name: swd_access_cpu0
     byte_offset: 1972
@@ -97,69 +97,6 @@ enum/MsfcfgIfrBlock0EraseDis0:
   - name: Disable
     description: Disable IFR sector erase, write one lock until a system reset.
     value: 1
-enum/MsfcfgIfrBlock0EraseDis1:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Enable IFR sector erase.
-    value: 0
-  - name: Disable
-    description: Disable IFR sector erase, write one lock until a system reset.
-    value: 1
-enum/MsfcfgIfrBlock0EraseDis2:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Enable IFR sector erase.
-    value: 0
-  - name: Disable
-    description: Disable IFR sector erase, write one lock until a system reset.
-    value: 1
-enum/MsfcfgIfrBlock0EraseDis3:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Enable IFR sector erase.
-    value: 0
-  - name: Disable
-    description: Disable IFR sector erase, write one lock until a system reset.
-    value: 1
-enum/MsfcfgIfrBlock1EraseDis0:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Enable IFR sector erase.
-    value: 0
-  - name: Disable
-    description: Disable IFR sector erase, write one lock until a system reset.
-    value: 1
-enum/MsfcfgIfrBlock1EraseDis1:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Enable IFR sector erase.
-    value: 0
-  - name: Disable
-    description: Disable IFR sector erase, write one lock until a system reset.
-    value: 1
-enum/MsfcfgIfrBlock1EraseDis2:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Enable IFR sector erase.
-    value: 0
-  - name: Disable
-    description: Disable IFR sector erase, write one lock until a system reset.
-    value: 1
-enum/MsfcfgIfrBlock1EraseDis3:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Enable IFR sector erase.
-    value: 0
-  - name: Disable
-    description: Disable IFR sector erase, write one lock until a system reset.
-    value: 1
 enum/MsfcfgMassEraseDis:
   bit_size: 1
   variants:
@@ -192,37 +129,37 @@ fieldset/Msfcfg:
     description: user IFR block0 sector 1 erase control
     bit_offset: 1
     bit_size: 1
-    enum: MsfcfgIfrBlock0EraseDis1
+    enum: MsfcfgIfrBlock0EraseDis0
   - name: ifr_block0_erase_dis2
     description: user IFR block0 sector 2 erase control
     bit_offset: 2
     bit_size: 1
-    enum: MsfcfgIfrBlock0EraseDis2
+    enum: MsfcfgIfrBlock0EraseDis0
   - name: ifr_block0_erase_dis3
     description: user IFR block0 sector 3 erase control
     bit_offset: 3
     bit_size: 1
-    enum: MsfcfgIfrBlock0EraseDis3
+    enum: MsfcfgIfrBlock0EraseDis0
   - name: ifr_block1_erase_dis0
     description: user IFR block1 sector 0 erase control
     bit_offset: 4
     bit_size: 1
-    enum: MsfcfgIfrBlock1EraseDis0
+    enum: MsfcfgIfrBlock0EraseDis0
   - name: ifr_block1_erase_dis1
     description: user IFR block1 sector 1 erase control
     bit_offset: 5
     bit_size: 1
-    enum: MsfcfgIfrBlock1EraseDis1
+    enum: MsfcfgIfrBlock0EraseDis0
   - name: ifr_block1_erase_dis2
     description: user IFR block1 sector 2 erase control
     bit_offset: 6
     bit_size: 1
-    enum: MsfcfgIfrBlock1EraseDis2
+    enum: MsfcfgIfrBlock0EraseDis0
   - name: ifr_block1_erase_dis3
     description: user IFR block1 sector 3 erase control
     bit_offset: 7
     bit_size: 1
-    enum: MsfcfgIfrBlock1EraseDis3
+    enum: MsfcfgIfrBlock0EraseDis0
   - name: mass_erase_dis
     description: Mass erase control
     bit_offset: 8
@@ -241,33 +178,6 @@ fieldset/CfpaLcState:
     description: CFPA state
     bit_offset: 0
     bit_size: 32
-enum/RamXenRamx0Xen:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Execute permission is disabled, R/W are enabled.
-    value: 0
-  - name: Enable
-    description: Execute permission is enabled, R/W/X are enabled.
-    value: 1
-enum/RamXenRama0Xen:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Execute permission is disabled, R/W are enabled.
-    value: 0
-  - name: Enable
-    description: Execute permission is enabled, R/W/X are enabled.
-    value: 1
-enum/RamXenRama1Xen:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Execute permission is disabled, R/W are enabled.
-    value: 0
-  - name: Enable
-    description: Execute permission is enabled, R/W/X are enabled.
-    value: 1
 enum/RamXenRambXen:
   bit_size: 1
   variants:
@@ -295,17 +205,17 @@ fieldset/RamXen:
     description: RAMX0 to RAMX3 Execute Permission Control.
     bit_offset: 0
     bit_size: 1
-    enum: RamXenRamx0Xen
+    enum: RamXenRambXen
   - name: rama0_xen
     description: RAMA0 Execute Permission Control.
     bit_offset: 2
     bit_size: 1
-    enum: RamXenRama0Xen
+    enum: RamXenRambXen
   - name: rama1_xen
     description: RAMAx (excluding RAMA0) Execute Permission Control.
     bit_offset: 3
     bit_size: 1
-    enum: RamXenRama1Xen
+    enum: RamXenRambXen
   - name: ramb_xen
     description: RAMBx Execute Permission Control.
     bit_offset: 4
@@ -463,30 +373,6 @@ fieldset/DebugLockEn:
     bit_size: 4
 fieldset/DebugFeatures:
   description: Cortex Debug Features Control Hardware reset contains unknown bits. Known-zero mask0x00000000; all other reset bits are unknown. Generated zero default is only a construction value, NOT a complete hardware reset value. Reset on PoR only.
-  bit_size: 32
-  fields:
-  - name: cpu0_dbgen
-    description: Encoding1 disables,2 enables;0 and3 are reserved. Hardware reset value is unknown.
-    bit_offset: 0
-    bit_size: 2
-    enum: DebugFeature
-  - name: cpu0_niden
-    description: Encoding1 disables,2 enables;0 and3 are reserved. Hardware reset value is unknown.
-    bit_offset: 2
-    bit_size: 2
-    enum: DebugFeature
-  - name: cpu0_spiden
-    description: Encoding1 disables,2 enables;0 and3 are reserved. Hardware reset value is unknown.
-    bit_offset: 4
-    bit_size: 2
-    enum: DebugFeature
-  - name: cpu0_spniden
-    description: Encoding1 disables,2 enables;0 and3 are reserved. Hardware reset value is unknown.
-    bit_offset: 6
-    bit_size: 2
-    enum: DebugFeature
-fieldset/DebugFeaturesDp:
-  description: Cortex Debug Features Control (Duplicate) Hardware reset contains unknown bits. Known-zero mask0x00000000; all other reset bits are unknown. Generated zero default is only a construction value, NOT a complete hardware reset value. Protected by GLIKEY index1 with GLIKEY reset function, distinct from DEBUG_FEATURES.
   bit_size: 32
   fields:
   - name: cpu0_dbgen

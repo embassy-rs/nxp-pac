@@ -1,4 +1,6 @@
 # MCXAP144M240F61RM Rev. 2, sections51.1/51.5.1. Only four MEM2 blocks exist.
+includes:
+  - ../../common/MBC.yaml
 block/Mbc:
   description: Memory block checker. Word writes only. GLIKEY index15 protects MBC registers. Choosing a locked global policy locks the corresponding block selector until reset. Chip-specific flash accesses are SecureUser; the manual advises not setting NSE.
   items:
@@ -131,91 +133,6 @@ fieldset/Mem3Glbcfg:
     description: 'Write-only clear command: encoding1 clears error; all other writes have no effect. MEM3 itself is not an implemented memory.'
     bit_offset: 30
     bit_size: 2
-  bit_size: 32
-  reset_value: 0
-fieldset/MemnBlkCfgW:
-  description: MBC Memory Block Configuration Word.
-  fields:
-  - name: mbacsel0
-    description: Memory Block Access Control Select for block B.
-    bit_offset: 0
-    bit_size: 3
-    enum: Mbacsel
-  - name: nse0
-    description: NonSecure Enable for block B.
-    bit_offset: 3
-    bit_size: 1
-    enum: Nse
-  - name: mbacsel1
-    description: Memory Block Access Control Select for block B.
-    bit_offset: 4
-    bit_size: 3
-    enum: Mbacsel
-  - name: nse1
-    description: NonSecure Enable for block B.
-    bit_offset: 7
-    bit_size: 1
-    enum: Nse
-  - name: mbacsel2
-    description: Memory Block Access Control Select for block B.
-    bit_offset: 8
-    bit_size: 3
-    enum: Mbacsel
-  - name: nse2
-    description: NonSecure Enable for block B.
-    bit_offset: 11
-    bit_size: 1
-    enum: Nse
-  - name: mbacsel3
-    description: Memory Block Access Control Select for block B.
-    bit_offset: 12
-    bit_size: 3
-    enum: Mbacsel
-  - name: nse3
-    description: NonSecure Enable for block B.
-    bit_offset: 15
-    bit_size: 1
-    enum: Nse
-  - name: mbacsel4
-    description: Memory Block Access Control Select for block B.
-    bit_offset: 16
-    bit_size: 3
-    enum: Mbacsel
-  - name: nse4
-    description: NonSecure Enable for block B.
-    bit_offset: 19
-    bit_size: 1
-    enum: Nse
-  - name: mbacsel5
-    description: Memory Block Access Control Select for block B.
-    bit_offset: 20
-    bit_size: 3
-    enum: Mbacsel
-  - name: nse5
-    description: NonSecure Enable for block B.
-    bit_offset: 23
-    bit_size: 1
-    enum: Nse
-  - name: mbacsel6
-    description: Memory Block Access Control Select for block B.
-    bit_offset: 24
-    bit_size: 3
-    enum: Mbacsel
-  - name: nse6
-    description: NonSecure Enable for block B.
-    bit_offset: 27
-    bit_size: 1
-    enum: Nse
-  - name: mbacsel7
-    description: Memory Block Access Control Select for block B.
-    bit_offset: 28
-    bit_size: 3
-    enum: Mbacsel
-  - name: nse7
-    description: NonSecure Enable for block B.
-    bit_offset: 31
-    bit_size: 1
-    enum: Nse
   bit_size: 32
   reset_value: 0
 fieldset/MemnGlbac0:
@@ -670,42 +587,6 @@ fieldset/MemnGlbac7:
     bit_size: 1
   bit_size: 32
   reset_value: 2147483648
-enum/Mbacsel:
-  bit_size: 3
-  variants:
-  - name: Glbac0
-    description: select MBC_MEMN_GLBAC0 access control policy for block B.
-    value: 0
-  - name: Glbac1
-    description: select MBC_MEMN_GLBAC1 access control policy for block B.
-    value: 1
-  - name: Glbac2
-    description: select MBC_MEMN_GLBAC2 access control policy for block B.
-    value: 2
-  - name: Glbac3
-    description: select MBC_MEMN_GLBAC3 access control policy for block B.
-    value: 3
-  - name: Glbac4
-    description: select MBC_MEMN_GLBAC4 access control policy for block B.
-    value: 4
-  - name: Glbac5
-    description: select MBC_MEMN_GLBAC5 access control policy for block B.
-    value: 5
-  - name: Glbac6
-    description: select MBC_MEMN_GLBAC6 access control policy for block B.
-    value: 6
-  - name: Glbac7
-    description: select MBC_MEMN_GLBAC7 access control policy for block B.
-    value: 7
-enum/Nse:
-  bit_size: 1
-  variants:
-  - name: Allowed
-    description: Secure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
-    value: 0
-  - name: Notallowed
-    description: Secure accesses to block B are not allowed, nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
-    value: 1
 fieldset/Mem2Block:
   description: MBC Memory Block Configuration Word.
   fields:

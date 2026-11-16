@@ -126,7 +126,7 @@ block/Usb:
     description: BDT Page 3.
     byte_offset: 180
     bit_size: 8
-    fieldset: Bdtpage3
+    fieldset: Bdtpage2
   - name: endpoint
     description: 'Array of registers: ENDPT.'
     array:
@@ -243,14 +243,6 @@ fieldset/Bdtpage1:
     bit_size: 7
 fieldset/Bdtpage2:
   description: BDT Page 2.
-  bit_size: 8
-  fields:
-  - name: bdtba
-    description: BDT Base Address.
-    bit_offset: 0
-    bit_size: 8
-fieldset/Bdtpage3:
-  description: BDT Page 3.
   bit_size: 8
   fields:
   - name: bdtba
@@ -456,7 +448,7 @@ fieldset/Errstat:
     description: CRC5 Error or End of Frame Error Flag.
     bit_offset: 1
     bit_size: 1
-    enum: Crc5eof
+    enum: Sleep
   - name: crc16
     description: CRC16 Error Flag.
     bit_offset: 2
@@ -476,12 +468,12 @@ fieldset/Errstat:
     description: DMA Access Error Flag.
     bit_offset: 5
     bit_size: 1
-    enum: Dmaerr
+    enum: Sleep
   - name: ownerr
     description: BD Unavailable Error Flag.
     bit_offset: 6
     bit_size: 1
-    enum: Ownerr
+    enum: Sleep
   - name: btserr
     description: Bit Stuff Error Flag.
     bit_offset: 7
@@ -563,7 +555,7 @@ fieldset/Istat:
     description: USB Reset Flag.
     bit_offset: 0
     bit_size: 1
-    enum: Usbrst
+    enum: Attach
   - name: error
     description: Error Flag.
     bit_offset: 1
@@ -588,7 +580,7 @@ fieldset/Istat:
     description: Resume Flag.
     bit_offset: 5
     bit_size: 1
-    enum: Resume
+    enum: Sleep
   - name: attach
     description: Attach Interrupt Flag.
     bit_offset: 6
@@ -598,7 +590,7 @@ fieldset/Istat:
     description: Stall Interrupt Flag.
     bit_offset: 7
     bit_size: 1
-    enum: Stall
+    enum: Sleep
 fieldset/Miscctrl:
   description: Miscellaneous Control.
   bit_size: 8
@@ -698,12 +690,12 @@ fieldset/Otgistat:
     description: Line State Change Interrupt Flag.
     bit_offset: 5
     bit_size: 1
-    enum: LineStateChg
+    enum: Sleep
   - name: onemsec
     description: One Millisecond Timer Timeout Flag.
     bit_offset: 6
     bit_size: 1
-    enum: Onemsec
+    enum: Btoerr
 fieldset/Otgstat:
   description: OTG Status.
   bit_size: 8
@@ -1113,15 +1105,6 @@ enum/Crc16en:
   - name: EnCrc16Int
     description: Enable.
     value: 1
-enum/Crc5eof:
-  bit_size: 1
-  variants:
-  - name: IntNo
-    description: Interrupt did not occur.
-    value: 0
-  - name: IntYes
-    description: Interrupt occurred.
-    value: 1
 enum/Crc5eofen:
   bit_size: 1
   variants:
@@ -1148,15 +1131,6 @@ enum/Dfn8en:
     value: 0
   - name: EnDfn8Int
     description: Enable.
-    value: 1
-enum/Dmaerr:
-  bit_size: 1
-  variants:
-  - name: IntNo
-    description: Interrupt did not occur.
-    value: 0
-  - name: IntYes
-    description: Interrupt occurred.
     value: 1
 enum/Dmaerren:
   bit_size: 1
@@ -1302,15 +1276,6 @@ enum/IrcEn:
   - name: EnIrc
     description: Enable.
     value: 1
-enum/LineStateChg:
-  bit_size: 1
-  variants:
-  - name: IntNo
-    description: Interrupt did not occur.
-    value: 0
-  - name: IntYes
-    description: Interrupt occurred.
-    value: 1
 enum/Linestateen:
   bit_size: 1
   variants:
@@ -1337,15 +1302,6 @@ enum/Odd:
     value: 0
   - name: OddBank
     description: In the odd bank.
-    value: 1
-enum/Onemsec:
-  bit_size: 1
-  variants:
-  - name: IntNo
-    description: Not timed out.
-    value: 0
-  - name: IntYes
-    description: Timed out.
     value: 1
 enum/Onemsecen:
   bit_size: 1
@@ -1382,15 +1338,6 @@ enum/OvfErrorEn:
     value: 0
   - name: EnOvfErrInt
     description: The interrupt is enabled.
-    value: 1
-enum/Ownerr:
-  bit_size: 1
-  variants:
-  - name: IntNo
-    description: Interrupt did not occur.
-    value: 0
-  - name: IntYes
-    description: Interrupt occurred.
     value: 1
 enum/Ownerren:
   bit_size: 1
@@ -1454,15 +1401,6 @@ enum/RestartIfrtrimEn:
     value: 0
   - name: LoadTrimFineIfr
     description: Trim fine restarts from the IFR trim value whenever you detect bus_reset or bus_resume or deassert module enable.
-    value: 1
-enum/Resume:
-  bit_size: 1
-  variants:
-  - name: IntNo
-    description: Interrupt did not occur.
-    value: 0
-  - name: IntYes
-    description: Interrupt occurred.
     value: 1
 enum/Resumeen:
   bit_size: 1
@@ -1544,15 +1482,6 @@ enum/Softoken:
     value: 0
   - name: EnSoftokInt
     description: Enable.
-    value: 1
-enum/Stall:
-  bit_size: 1
-  variants:
-  - name: IntNo
-    description: Interrupt did not occur.
-    value: 0
-  - name: IntYes
-    description: Interrupt occurred.
     value: 1
 enum/StallIDis0:
   bit_size: 1
@@ -1979,15 +1908,6 @@ enum/Usbresmen:
     value: 0
   - name: EnAsyncWakeup
     description: Enable.
-    value: 1
-enum/Usbrst:
-  bit_size: 1
-  variants:
-  - name: IntNo
-    description: Not detected.
-    value: 0
-  - name: IntYes
-    description: Detected.
     value: 1
 enum/Usbrsten:
   bit_size: 1

@@ -35,11 +35,11 @@ block/PkcAlpha:
   - name: pkc_mode1
     description: Mode register, parameter set 1.
     byte_offset: 16
-    fieldset: PkcAlphaFieldsetNovember
+    fieldset: PkcMode
   - name: pkc_xyptr1
     description: X+Y pointer register, parameter set 1.
     byte_offset: 20
-    fieldset: PkcAlphaFieldsetWhiskey
+    fieldset: PkcXyptr
   - name: pkc_zrptr1
     description: Z+R pointer register, parameter set 1.
     byte_offset: 24
@@ -47,15 +47,15 @@ block/PkcAlpha:
   - name: pkc_len1
     description: Length register, parameter set 1.
     byte_offset: 28
-    fieldset: PkcAlphaFieldsetKilo
+    fieldset: PkcLen
   - name: pkc_mode2
     description: Mode register, parameter set 2.
     byte_offset: 32
-    fieldset: PkcAlphaFieldsetOscar
+    fieldset: PkcMode
   - name: pkc_xyptr2
     description: X+Y pointer register, parameter set 2.
     byte_offset: 36
-    fieldset: PkcAlphaFieldsetXray
+    fieldset: PkcXyptr
   - name: pkc_zrptr2
     description: Z+R pointer register, parameter set 2.
     byte_offset: 40
@@ -63,7 +63,7 @@ block/PkcAlpha:
   - name: pkc_len2
     description: Length register, parameter set 2.
     byte_offset: 44
-    fieldset: PkcAlphaFieldsetLima
+    fieldset: PkcLen
   - name: pkc_uptr
     description: Universal pointer FUP program.
     byte_offset: 64
@@ -298,19 +298,8 @@ fieldset/PkcAlphaFieldsetJuliet:
     description: End-of-computation status flag.
     bit_offset: 0
     bit_size: 1
-fieldset/PkcAlphaFieldsetKilo:
+fieldset/PkcLen:
   description: Length register, parameter set 1.
-  fields:
-  - name: len
-    description: Operand length.
-    bit_offset: 0
-    bit_size: 16
-  - name: mclen
-    description: Loop counter for microcode pattern.
-    bit_offset: 16
-    bit_size: 16
-fieldset/PkcAlphaFieldsetLima:
-  description: Length register, parameter set 2.
   fields:
   - name: len
     description: Operand length.
@@ -327,14 +316,7 @@ fieldset/PkcAlphaFieldsetMike:
     description: Microcode read/write data.
     bit_offset: 0
     bit_size: 32
-fieldset/PkcAlphaFieldsetNovember:
-  description: Mode register, parameter set 1.
-  fields:
-  - name: mode
-    description: Calculation Mode / MC Start address.
-    bit_offset: 0
-    bit_size: 8
-fieldset/PkcAlphaFieldsetOscar:
+fieldset/PkcMode:
   description: Mode register, parameter set 2.
   fields:
   - name: mode
@@ -459,18 +441,7 @@ fieldset/PkcAlphaFieldsetVictor:
     description: Size of reconfigurable MC table in bytes.
     bit_offset: 12
     bit_size: 8
-fieldset/PkcAlphaFieldsetWhiskey:
-  description: X+Y pointer register, parameter set 1.
-  fields:
-  - name: xptr
-    description: Start address of X operand in PKCRAM with byte granularity.
-    bit_offset: 0
-    bit_size: 16
-  - name: yptr
-    description: Start address of Y operand in PKCRAM with byte granularity.
-    bit_offset: 16
-    bit_size: 16
-fieldset/PkcAlphaFieldsetXray:
+fieldset/PkcXyptr:
   description: X+Y pointer register, parameter set 2.
   fields:
   - name: xptr

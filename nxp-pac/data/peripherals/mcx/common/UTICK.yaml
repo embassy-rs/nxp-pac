@@ -162,6 +162,7 @@ enum/Repeat:
     description: Delay repeats continuously.
     value: 1
 enum/StatActive:
+  only_in: '^(MCXA175|MCXA176|MCXA185|MCXA186|MCXA255|MCXA256|MCXA265|MCXA266|MCXA286|MCXA287|MCXA456|MCXA457|MCXA536|MCXA537|MCXA556|MCXA557|MCXA566|MCXA567|MCXA577)$'
   bit_size: 1
   variants:
   - name: Inactive

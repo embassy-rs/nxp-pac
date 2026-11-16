@@ -706,7 +706,7 @@
   "peripherals": [
     {
       "name": "SYSCON0",
-      "block": "mcx/n/n5/SYSCON::SysconAlpha",
+      "block": "mcx/n/common/SYSCON",
       "address": "0x40000000",
       "signals": []
     },
@@ -2744,7 +2744,7 @@
     },
     {
       "name": "PORT5",
-      "block": "mcx/n/n5/PORT::PortAlpha",
+      "block": "mcx/n/n5/PORT::Port5",
       "address": "0x40042000",
       "signals": []
     },
@@ -10304,7 +10304,7 @@
     },
     {
       "name": "MBC0",
-      "block": "mcx/n/n5/MBC::MbcAlpha",
+      "block": "mcx/n/common/MBC",
       "address": "0x400C7000",
       "signals": []
     },
@@ -13584,7 +13584,7 @@
     },
     {
       "name": "PORT0",
-      "block": "mcx/n/n5/PORT::PortBravo",
+      "block": "mcx/n/n5/PORT::Port0",
       "address": "0x40116000",
       "signals": [],
       "gate": {
@@ -13596,7 +13596,7 @@
     },
     {
       "name": "PORT1",
-      "block": "mcx/n/n5/PORT::PortCharlie",
+      "block": "mcx/n/n5/PORT::Port1",
       "address": "0x40117000",
       "signals": [],
       "gate": {
@@ -13608,7 +13608,7 @@
     },
     {
       "name": "PORT2",
-      "block": "mcx/n/n5/PORT::PortDelta",
+      "block": "mcx/n/n5/PORT::Port2",
       "address": "0x40118000",
       "signals": [],
       "gate": {
@@ -13620,7 +13620,7 @@
     },
     {
       "name": "PORT3",
-      "block": "mcx/n/n5/PORT::PortEcho",
+      "block": "mcx/n/n5/PORT::Port3",
       "address": "0x40119000",
       "signals": [],
       "gate": {
@@ -13632,7 +13632,7 @@
     },
     {
       "name": "PORT4",
-      "block": "mcx/n/n5/PORT::PortFoxtrot",
+      "block": "mcx/n/n5/PORT::Port4",
       "address": "0x4011A000",
       "signals": [],
       "gate": {

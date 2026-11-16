@@ -82,7 +82,7 @@ fieldset/ActiveCfg:
     description: LDO_CORE VDD Drive Strength.
     bit_offset: 0
     bit_size: 1
-    enum: ActiveCfgCoreldoVddDs
+    enum: LpCfgCoreldoVddDs
   - name: coreldo_vdd_lvl
     description: LDO_CORE VDD Regulator Voltage Level.
     bit_offset: 2
@@ -92,7 +92,7 @@ fieldset/ActiveCfg:
     description: Bandgap Mode.
     bit_offset: 20
     bit_size: 2
-    enum: ActiveCfgBgmode
+    enum: LpCfgBgmode
   - name: vdd_vd_disable
     description: VDD Voltage Detect Disable.
     bit_offset: 23
@@ -200,7 +200,7 @@ fieldset/PdStatus0:
     description: Power Request Status Flag.
     bit_offset: 0
     bit_size: 1
-    enum: PwrReqStatus
+    enum: PdLpReq
   - name: pd_lp_req
     description: Power Domain Low Power Request Flag.
     bit_offset: 4
@@ -281,7 +281,7 @@ fieldset/VdCoreCfg:
     description: Core Voltage Detect Reset Enable Lock.
     bit_offset: 16
     bit_size: 1
-    enum: VdCoreCfgLock
+    enum: VdSysCfgLock
 fieldset/VdStat:
   description: Voltage Detect Status.
   fields:
@@ -289,12 +289,12 @@ fieldset/VdStat:
     description: Core Low-Voltage Detect Flag.
     bit_offset: 0
     bit_size: 1
-    enum: CorevddLvdf
+    enum: SysvddHvdf
   - name: sysvdd_lvdf
     description: System Low-Voltage Detect Flag.
     bit_offset: 1
     bit_size: 1
-    enum: SysvddLvdf
+    enum: SysvddHvdf
   - name: sysvdd_hvdf
     description: System HVD Flag.
     bit_offset: 5
@@ -340,27 +340,6 @@ fieldset/Verid:
     description: Major Version Number.
     bit_offset: 24
     bit_size: 8
-enum/ActiveCfgBgmode:
-  bit_size: 2
-  variants:
-  - name: Bgmode0
-    description: Bandgap disabled.
-    value: 0
-  - name: Bgmode01
-    description: Bandgap enabled, buffer disabled.
-    value: 1
-  - name: Bgmode10
-    description: Bandgap enabled, buffer enabled.
-    value: 2
-enum/ActiveCfgCoreldoVddDs:
-  bit_size: 1
-  variants:
-  - name: Low
-    description: Low.
-    value: 0
-  - name: Normal
-    description: Normal.
-    value: 1
 enum/ActiveCfgCoreldoVddLvl:
   bit_size: 2
   variants:
@@ -373,15 +352,6 @@ enum/ActiveCfgCoreldoVddLvl:
   - name: Over
     description: Regulate to overdrive voltage (1.15 V).
     value: 3
-enum/CorevddLvdf:
-  bit_size: 1
-  variants:
-  - name: EventNo
-    description: Event not detected.
-    value: 0
-  - name: EventYes
-    description: Event detected.
-    value: 1
 enum/Feature:
   bit_size: 16
   variants:
@@ -466,15 +436,6 @@ enum/PdLpReq:
   - name: ReqYes
     description: Requested.
     value: 1
-enum/PwrReqStatus:
-  bit_size: 1
-  variants:
-  - name: ReqNo
-    description: Did not request.
-    value: 0
-  - name: ReqYes
-    description: Requested.
-    value: 1
 enum/SpcLpMode:
   bit_size: 4
   variants:
@@ -507,24 +468,6 @@ enum/SysvddHvdf:
     value: 0
   - name: EventYes
     description: Event detected.
-    value: 1
-enum/SysvddLvdf:
-  bit_size: 1
-  variants:
-  - name: EventNo
-    description: Event not detected.
-    value: 0
-  - name: EventYes
-    description: Event detected.
-    value: 1
-enum/VdCoreCfgLock:
-  bit_size: 1
-  variants:
-  - name: Allow
-    description: Allow.
-    value: 0
-  - name: Deny
-    description: Deny.
     value: 1
 enum/VdSysCfgLock:
   bit_size: 1

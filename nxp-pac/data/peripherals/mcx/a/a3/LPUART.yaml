@@ -349,7 +349,7 @@ fieldset/Fifo:
     description: Transmit FIFO Buffer Depth.
     bit_offset: 4
     bit_size: 3
-    enum: Txfifosize
+    enum: Rxfifosize
   - name: txfe
     description: Transmit FIFO Enable.
     bit_offset: 7
@@ -966,33 +966,6 @@ enum/Txdir:
   - name: TxOutput
     description: Output.
     value: 1
-enum/Txfifosize:
-  bit_size: 3
-  variants:
-  - name: Fifo1
-    description: '1.'
-    value: 0
-  - name: Fifo4
-    description: '4.'
-    value: 1
-  - name: Fifo8
-    description: '8.'
-    value: 2
-  - name: Fifo16
-    description: '16.'
-    value: 3
-  - name: Fifo32
-    description: '32.'
-    value: 4
-  - name: Fifo64
-    description: '64.'
-    value: 5
-  - name: Fifo128
-    description: '128.'
-    value: 6
-  - name: Fifo256
-    description: '256.'
-    value: 7
 enum/Txflush:
   bit_size: 1
   variants:

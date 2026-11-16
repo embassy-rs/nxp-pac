@@ -1,0 +1,762 @@
+# NXP mcux-soc-svd 7c1f00bdd6263f0b93466f5e73e5fc55a744b879; native chiptool import.
+# Source instance geometry is retained in explicit block variants; see private source bindings.
+# Unannotated fieldsets construct zero in software, not a claimed hardware reset.
+# Command/W1C/SET/CLR/TOG construction defaults are zero masks; no RMW semantics are implied.
+# Source: MCXN526_cm33_core0.xml SYSCON0 sha256 ccb0c8ecf3573e24bb8c15a32bdec8a6f63b8870ced5bb7b9b629177f5f990f3
+# Source: MCXN526_cm33_core1.xml SYSCON0 sha256 caf054982956506a2f2e6896e0b1e0eb1c3035684fd3093778a21bda218bfa09
+# Source: MCXN527_cm33_core0.xml SYSCON0 sha256 5547fbb406e6e825ebc2f983518a5893814d62c3a6e2c5ad6075c49d939c8e17
+# Source: MCXN527_cm33_core1.xml SYSCON0 sha256 daac6c4d6fdbbdc87d7557ed9e567801921eca1e8107fc3f9f38173be3c936e0
+# Source: MCXN536_cm33_core0.xml SYSCON0 sha256 f9533e58d74eab222fc38608bd1d8dc45087e87b80a93f8b693e6cf2eb25cba4
+# Source: MCXN536_cm33_core1.xml SYSCON0 sha256 c089aecac3d73a7d8fc4a8c0cccf77ea8446b22a2ea99f4f2f01a4e0ca3a2fdd
+# Source: MCXN537_cm33_core0.xml SYSCON0 sha256 e72dbd80d33e6f53f05f11156fc20f6d53cf9848bc74fed80b5c34157455b11a
+# Source: MCXN537_cm33_core1.xml SYSCON0 sha256 4d5f7d121166c4d720a9da81b90be1b2f93be5e71fd25b9dd74b8715ebe30dce
+# Source: MCXN546_cm33_core0.xml SYSCON0 sha256 54e1fc060f9ccc17299bdb2da84159e699e87456276f2e695d440a6eb4aa9aad
+# Source: MCXN546_cm33_core1.xml SYSCON0 sha256 ddb7e932730a51c75f544efd6564ad6dbce5b3eca0a7befb7ab5b74a9951b937
+# Source: MCXN547_cm33_core0.xml SYSCON0 sha256 a276aee072bebd57c18929fe9a74408366fdbb42b918e06be5a3783a4aae4db7
+# Source: MCXN547_cm33_core1.xml SYSCON0 sha256 4a265743bdd2130cdd37ef12b9fd1d538cce9a2eac1c9149db291b7638e61423
+# Source: MCXN946_cm33_core0.xml SYSCON0 sha256 b986328ff1224adaeea70522fa61383a5f89f6313dfc3e7df92e8894fdab72d7
+# Source: MCXN946_cm33_core1.xml SYSCON0 sha256 57e8910317a1cb467d56726cb822c57806aa247542969bcf12dbcc8822187916
+# Source: MCXN947_cm33_core0.xml SYSCON0 sha256 629ac7cdc82684e467b0cf36a8aef697bc1eb65c2047d6610b7b5df65692e590
+# Source: MCXN947_cm33_core1.xml SYSCON0 sha256 0d77f3d23cad1d5eab631fd7f5ade4044d8aaca2d9d13cd11f3836d27fe089fb
+# N5/N9 register, field, enum and software-default contracts match.
+includes:
+  - SYSCON.yaml
+block/Syscon:
+  description: SYSCON.
+  items:
+  - name: ahbmatprio
+    description: AHB Matrix Priority Control.
+    byte_offset: 16
+    fieldset: AhbmatprioN5
+  - name: cpu0stckcal
+    description: Secure CPU0 System Tick Calibration.
+    byte_offset: 56
+    fieldset: Cpu0stckcal
+  - name: cpu0nstckcal
+    description: Non-Secure CPU0 System Tick Calibration.
+    byte_offset: 60
+    fieldset: Cpu0nstckcal
+  - name: cpu1stckcal
+    description: System tick calibration for CPU1.
+    byte_offset: 64
+    fieldset: Cpu1stckcal
+  - name: nmisrc
+    description: NMI Source Select.
+    byte_offset: 72
+    fieldset: NmisrcN5
+  - name: presetctrl0
+    description: Peripheral Reset Control 0.
+    byte_offset: 256
+    fieldset: Presetctrl0
+  - name: presetctrl1
+    description: Peripheral Reset Control 1.
+    byte_offset: 260
+    fieldset: Presetctrl1
+  - name: presetctrl2
+    description: Peripheral Reset Control 2.
+    byte_offset: 264
+    fieldset: Presetctrl2
+  - name: presetctrl3
+    description: Peripheral Reset Control 3.
+    byte_offset: 268
+    fieldset: Presetctrl3
+  - name: presetctrlset
+    description: Peripheral Reset Control Set.
+    array:
+      len: 4
+      stride: 4
+    byte_offset: 288
+    access: Write
+    fieldset: Presetctrlclr
+  - name: presetctrlclr
+    description: Peripheral Reset Control Clear.
+    array:
+      len: 4
+      stride: 4
+    byte_offset: 320
+    access: Write
+    fieldset: Presetctrlclr
+  - name: ahbclkctrl0
+    description: AHB Clock Control 0.
+    byte_offset: 512
+    fieldset: Ahbclkctrl0
+  - name: ahbclkctrl1
+    description: AHB Clock Control 1.
+    byte_offset: 516
+    fieldset: Ahbclkctrl1
+  - name: ahbclkctrl2
+    description: AHB Clock Control 2.
+    byte_offset: 520
+    fieldset: Ahbclkctrl2
+  - name: ahbclkctrl3
+    description: AHB Clock Control 3.
+    byte_offset: 524
+    fieldset: Ahbclkctrl3
+  - name: ahbclkctrlset
+    description: AHB Clock Control Set.
+    array:
+      len: 4
+      stride: 4
+    byte_offset: 544
+    access: Write
+    fieldset: Ahbclkctrlclr
+  - name: ahbclkctrlclr
+    description: AHB Clock Control Clear.
+    array:
+      len: 4
+      stride: 4
+    byte_offset: 576
+    access: Write
+    fieldset: Ahbclkctrlclr
+  - name: systickclksel0
+    description: CPU0 System Tick Timer Source Select.
+    byte_offset: 608
+    fieldset: Systickclksel0
+  - name: systickclksel1
+    description: CPU1 System Tick Timer Source Select.
+    byte_offset: 612
+    fieldset: Systickclksel1
+  - name: traceclksel
+    description: Trace Clock Source Select.
+    byte_offset: 616
+    fieldset: Traceclksel
+  - name: ctimerclksel
+    description: CTIMER Clock Source Select.
+    array:
+      len: 5
+      stride: 4
+    byte_offset: 620
+    fieldset: Ctimerclksel
+  - name: clkoutsel
+    description: CLKOUT Clock Source Select.
+    byte_offset: 648
+    fieldset: Clkoutsel
+  - name: adc0clksel
+    description: ADC0 Clock Source Select.
+    byte_offset: 676
+    fieldset: Adc0clksel
+  - name: usb0clksel
+    description: USB-FS Clock Source Select.
+    byte_offset: 680
+    fieldset: Usb0clksel
+  - name: fcclksel
+    description: LP_FLEXCOMM Clock Source Select for Fractional Rate Divider.
+    array:
+      len: 10
+      stride: 4
+    byte_offset: 688
+    fieldset: Fcclksel
+  - name: sctclksel
+    description: SCTimer/PWM Clock Source Select.
+    byte_offset: 752
+    fieldset: Sctclksel
+  - name: systickclkdiv0
+    description: CPU0 System Tick Timer Divider.
+    byte_offset: 768
+    fieldset: Busclkdiv
+  - name: systickclkdiv1
+    description: CPU1 System Tick Timer Divider.
+    byte_offset: 772
+    fieldset: Busclkdiv
+  - name: traceclkdiv
+    description: TRACE Clock Divider.
+    byte_offset: 776
+    fieldset: Busclkdiv
+  - name: tsiclksel
+    description: TSI Function Clock Source Select.
+    byte_offset: 848
+    fieldset: Tsiclksel
+  - name: sincfiltclksel
+    description: SINC FILTER Function Clock Source Select.
+    byte_offset: 864
+    fieldset: Sincfiltclksel
+  - name: slowclkdiv
+    description: SLOW_CLK Clock Divider.
+    byte_offset: 888
+    fieldset: Slowclkdiv
+  - name: tsiclkdiv
+    description: TSI Function Clock Divider.
+    byte_offset: 892
+    fieldset: Tsiclkdiv
+  - name: ahbclkdiv
+    description: System Clock Divider.
+    byte_offset: 896
+    fieldset: Ahbclkdiv
+  - name: clkoutdiv
+    description: CLKOUT Clock Divider.
+    byte_offset: 900
+    fieldset: Busclkdiv
+  - name: frohfdiv
+    description: FRO_HF_DIV Clock Divider.
+    byte_offset: 904
+    fieldset: FrohfdivN5
+  - name: wdt0clkdiv
+    description: WDT0 Clock Divider.
+    byte_offset: 908
+    fieldset: Utickclkdiv
+  - name: adc0clkdiv
+    description: ADC0 Clock Divider.
+    byte_offset: 916
+    fieldset: Adc0clkdiv
+  - name: usb0clkdiv
+    description: USB-FS Clock Divider.
+    byte_offset: 920
+    fieldset: Busclkdiv
+  - name: sctclkdiv
+    description: SCT/PWM Clock Divider.
+    byte_offset: 948
+    fieldset: Busclkdiv
+  - name: pllclkdiv
+    description: PLL Clock Divider.
+    byte_offset: 964
+    fieldset: Busclkdiv
+  - name: ctimerclkdiv
+    description: CTimer Clock Divider.
+    array:
+      len: 5
+      stride: 4
+    byte_offset: 976
+    fieldset: Ctimerclkdiv
+  - name: pll1clk0div
+    description: PLL1 Clock 0 Divider.
+    byte_offset: 996
+    fieldset: Busclkdiv
+  - name: pll1clk1div
+    description: PLL1 Clock 1 Divider.
+    byte_offset: 1000
+    fieldset: Busclkdiv
+  - name: utickclkdiv
+    description: UTICK Clock Divider.
+    byte_offset: 1008
+    fieldset: Utickclkdiv
+  - name: clkout_frgctrl
+    description: CLKOUT FRG Control.
+    byte_offset: 1012
+    fieldset: ClkoutFrgctrl
+  - name: clkunlock
+    description: Clock Configuration Unlock.
+    byte_offset: 1020
+    fieldset: ClkunlockN5
+  - name: nvm_ctrl
+    description: NVM Control.
+    byte_offset: 1024
+    fieldset: NvmCtrlN5
+  - name: romcr
+    description: ROM Wait State.
+    byte_offset: 1028
+    fieldset: RomcrN5
+  - name: smart_dmaint
+    description: SmartDMA Interrupt Hijack.
+    byte_offset: 1044
+    fieldset: SmartDmaintN5
+  - name: adc1clksel
+    description: ADC1 Clock Source Select.
+    byte_offset: 1124
+    fieldset: Adc1clksel
+  - name: adc1clkdiv
+    description: ADC1 Clock Divider.
+    byte_offset: 1128
+    fieldset: Adc0clkdiv
+  - name: ram_interleave
+    description: Control PKC RAM Interleave Access.
+    byte_offset: 1136
+    fieldset: RamInterleaveN5
+  - name: dac0clksel
+    description: DAC0 Functional Clock Selection.
+    byte_offset: 1168
+    fieldset: Dac0clksel
+  - name: dac0clkdiv
+    description: DAC0 functional clock divider.
+    byte_offset: 1172
+    fieldset: Adc0clkdiv
+  - name: dac1clksel
+    description: DAC1 Functional Clock Selection.
+    byte_offset: 1176
+    fieldset: Dac0clksel
+  - name: dac1clkdiv
+    description: DAC1 functional clock divider.
+    byte_offset: 1180
+    fieldset: Adc0clkdiv
+  - name: dac2clksel
+    description: DAC2 Functional Clock Selection.
+    byte_offset: 1184
+    fieldset: Dac0clksel
+  - name: dac2clkdiv
+    description: DAC2 functional clock divider.
+    byte_offset: 1188
+    fieldset: Adc0clkdiv
+  - name: flex_spiclksel
+    description: FlexSPI Clock Selection.
+    byte_offset: 1192
+    fieldset: FlexSpiclksel
+  - name: flex_spiclkdiv
+    description: FlexSPI Clock Divider.
+    byte_offset: 1196
+    fieldset: Adc0clkdiv
+  - name: pllclkdivsel
+    description: PLL Clock Divider Clock Selection.
+    byte_offset: 1324
+    fieldset: Pllclkdivsel
+  - name: i3c0fclksel
+    description: I3C0 Functional Clock Selection.
+    byte_offset: 1328
+    fieldset: I3c0fclksel
+  - name: i3c0fclkstcsel
+    description: I3C0 FCLK_STC Clock Selection.
+    byte_offset: 1332
+    fieldset: I3c0fclkstcsel
+  - name: i3c0fclkstcdiv
+    description: I3C0 FCLK_STC Clock Divider.
+    byte_offset: 1336
+    fieldset: Busclkdiv
+  - name: i3c0fclksdiv
+    description: I3C0 FCLK Slow Clock Divider.
+    byte_offset: 1340
+    fieldset: Busclkdiv
+  - name: i3c0fclkdiv
+    description: I3C0 Functional Clock FCLK Divider.
+    byte_offset: 1344
+    fieldset: Busclkdiv
+  - name: i3c0fclkssel
+    description: I3C0 FCLK Slow Selection.
+    byte_offset: 1348
+    fieldset: I3c0fclkssel
+  - name: micfilfclksel
+    description: MICFIL Clock Selection.
+    byte_offset: 1352
+    fieldset: Micfilfclksel
+  - name: micfilfclkdiv
+    description: MICFIL Clock Division.
+    byte_offset: 1356
+    fieldset: Adc0clkdiv
+  - name: u_sdhcclksel
+    description: uSDHC Clock Selection.
+    byte_offset: 1368
+    fieldset: USdhcclksel
+  - name: u_sdhcclkdiv
+    description: uSDHC Function Clock Divider.
+    byte_offset: 1372
+    fieldset: Busclkdiv
+  - name: flexioclksel
+    description: FLEXIO Clock Selection.
+    byte_offset: 1376
+    fieldset: Flexioclksel
+  - name: flexioclkdiv
+    description: FLEXIO Function Clock Divider.
+    byte_offset: 1380
+    fieldset: Busclkdiv
+  - name: flexcan0clksel
+    description: FLEXCAN0 Clock Selection.
+    byte_offset: 1440
+    fieldset: Flexcan0clksel
+  - name: flexcan0clkdiv
+    description: FLEXCAN0 Function Clock Divider.
+    byte_offset: 1444
+    fieldset: Busclkdiv
+  - name: flexcan1clksel
+    description: FLEXCAN1 Clock Selection.
+    byte_offset: 1448
+    fieldset: Flexcan1clksel
+  - name: flexcan1clkdiv
+    description: FLEXCAN1 Function Clock Divider.
+    byte_offset: 1452
+    fieldset: Busclkdiv
+  - name: enetrmiiclksel
+    description: Ethernet RMII Clock Selection.
+    byte_offset: 1456
+    fieldset: Enetrmiiclksel
+  - name: enetrmiiclkdiv
+    description: Ethernet RMII Function Clock Divider.
+    byte_offset: 1460
+    fieldset: Busclkdiv
+  - name: enetptprefclksel
+    description: Ethernet PTP REF Clock Selection.
+    byte_offset: 1464
+    fieldset: Enetptprefclksel
+  - name: enetptprefclkdiv
+    description: Ethernet PTP REF Function Clock Divider.
+    byte_offset: 1468
+    fieldset: Busclkdiv
+  - name: enet_phy_intf_sel
+    description: Ethernet PHY Interface Select.
+    byte_offset: 1472
+    fieldset: EnetPhyIntfSel
+  - name: enet_sbd_flow_ctrl
+    description: Sideband Flow Control.
+    byte_offset: 1476
+    fieldset: EnetSbdFlowCtrlN5
+  - name: ewm0clksel
+    description: EWM0 Clock Selection.
+    byte_offset: 1492
+    fieldset: Ewm0clksel
+  - name: wdt1clksel
+    description: WDT1 Clock Selection.
+    byte_offset: 1496
+    fieldset: Wdt1clksel
+  - name: wdt1clkdiv
+    description: WDT1 Function Clock Divider.
+    byte_offset: 1500
+    fieldset: Utickclkdiv
+  - name: ostimerclksel
+    description: OSTIMER Clock Selection.
+    byte_offset: 1504
+    fieldset: Ostimerclksel
+  - name: cmp0fclksel
+    description: CMP0 Function Clock Selection.
+    byte_offset: 1520
+    fieldset: Cmp0fclksel
+  - name: cmp0fclkdiv
+    description: CMP0 Function Clock Divider.
+    byte_offset: 1524
+    fieldset: Cmp1rrclkdiv
+  - name: cmp0rrclksel
+    description: CMP0 Round Robin Clock Selection.
+    byte_offset: 1528
+    fieldset: Cmp0rrclksel
+  - name: cmp0rrclkdiv
+    description: CMP0 Round Robin Clock Divider.
+    byte_offset: 1532
+    fieldset: Cmp1rrclkdiv
+  - name: cmp1fclksel
+    description: CMP1 Function Clock Selection.
+    byte_offset: 1536
+    fieldset: Cmp1fclksel
+  - name: cmp1fclkdiv
+    description: CMP1 Function Clock Divider.
+    byte_offset: 1540
+    fieldset: Cmp1rrclkdiv
+  - name: cmp1rrclksel
+    description: CMP1 Round Robin Clock Source Select.
+    byte_offset: 1544
+    fieldset: Cmp1rrclksel
+  - name: cmp1rrclkdiv
+    description: CMP1 Round Robin Clock Division.
+    byte_offset: 1548
+    fieldset: Cmp1rrclkdiv
+  - name: cmp2fclksel
+    description: CMP2 Function Clock Source Select.
+    byte_offset: 1552
+    fieldset: Cmp2fclksel
+  - name: cmp2fclkdiv
+    description: CMP2 Function Clock Division.
+    byte_offset: 1556
+    fieldset: Cmp1rrclkdiv
+  - name: cmp2rrclksel
+    description: CMP2 Round Robin Clock Source Select.
+    byte_offset: 1560
+    fieldset: Cmp2rrclksel
+  - name: cmp2rrclkdiv
+    description: CMP2 Round Robin Clock Division.
+    byte_offset: 1564
+    fieldset: Cmp1rrclkdiv
+  - name: cpuctrl
+    description: CPU Control for Multiple Processors.
+    byte_offset: 2048
+    fieldset: Cpuctrl
+  - name: cpboot
+    description: Coprocessor Boot Address.
+    byte_offset: 2052
+    fieldset: Cpboot
+  - name: cpustat
+    description: CPU Status.
+    byte_offset: 2060
+    access: Read
+    fieldset: CpustatN5
+  - name: lpcac_ctrl
+    description: LPCAC Control.
+    byte_offset: 2084
+    fieldset: LpcacCtrlN5
+  - name: flexcommclkdiv
+    description: LP_FLEXCOMM Clock Divider.
+    array:
+      len: 10
+      stride: 4
+    byte_offset: 2128
+    fieldset: Busclkdiv
+  - name: utickclksel
+    description: UTICK Function Clock Source Select.
+    byte_offset: 2168
+    fieldset: Utickclksel
+  - name: sai0clksel
+    description: SAI0 Function Clock Source Select.
+    byte_offset: 2176
+    fieldset: Sai0clksel
+  - name: sai1clksel
+    description: SAI1 Function Clock Source Select.
+    byte_offset: 2180
+    fieldset: Sai0clksel
+  - name: sai0clkdiv
+    description: SAI0 Function Clock Division.
+    byte_offset: 2184
+    fieldset: Adc0clkdiv
+  - name: sai1clkdiv
+    description: SAI1 Function Clock Division.
+    byte_offset: 2188
+    fieldset: Adc0clkdiv
+  - name: emvsim0clksel
+    description: EMVSIM0 Clock Source Select.
+    byte_offset: 2192
+    fieldset: Emvsim0clksel
+  - name: emvsim1clksel
+    description: EMVSIM1 Clock Source Select.
+    byte_offset: 2196
+    fieldset: Emvsim1clksel
+  - name: emvsim0clkdiv
+    description: EMVSIM0 Function Clock Division.
+    byte_offset: 2200
+    fieldset: Adc0clkdiv
+  - name: emvsim1clkdiv
+    description: EMVSIM1 Function Clock Division.
+    byte_offset: 2204
+    fieldset: Adc0clkdiv
+  - name: key_retain_ctrl
+    description: Key Retain Control.
+    byte_offset: 2384
+    fieldset: KeyRetainCtrl
+  - name: ref_clk_ctrl
+    description: FRO 48MHz Reference Clock Control.
+    byte_offset: 2400
+    fieldset: RefClkCtrlN5
+  - name: ref_clk_ctrl_set
+    description: FRO 48MHz Reference Clock Control Set.
+    byte_offset: 2404
+    access: Write
+    fieldset: RefClkCtrlSetN5
+  - name: ref_clk_ctrl_clr
+    description: FRO 48MHz Reference Clock Control Clear.
+    byte_offset: 2408
+    access: Write
+    fieldset: RefClkCtrlClrN5
+  - name: gdet_ctrl
+    description: GDET Control Register.
+    array:
+      len: 2
+      stride: 4
+    byte_offset: 2412
+    fieldset: GdetCtrl
+  - name: els_asset_prot
+    description: ELS Asset Protection Register.
+    byte_offset: 2420
+    fieldset: ElsAssetProt
+  - name: els_lock_ctrl
+    description: ELS Lock Control.
+    byte_offset: 2424
+    fieldset: ElsLockCtrl
+  - name: els_lock_ctrl_dp
+    description: ELS Lock Control DP.
+    byte_offset: 2428
+    fieldset: ElsLockCtrlDp
+  - name: els_otp_lc_state
+    description: Life Cycle State Register.
+    byte_offset: 2432
+    access: Read
+    fieldset: ElsOtpLcState
+  - name: els_otp_lc_state_dp
+    description: Life Cycle State Register (Duplicate).
+    byte_offset: 2436
+    access: Read
+    fieldset: ElsOtpLcStateDp
+  - name: els_temporal_state
+    description: ELS Temporal State.
+    byte_offset: 2440
+    fieldset: ElsTemporalState
+  - name: els_kdf_mask
+    description: Key Derivation Function Mask.
+    byte_offset: 2444
+    fieldset: ElsKdfMask
+  - name: els_as_cfg0
+    description: ELS AS Configuration.
+    byte_offset: 2512
+    access: Read
+    fieldset: ElsAsCfg0
+  - name: els_as_cfg1
+    description: ELS AS Configuration1.
+    byte_offset: 2516
+    access: Read
+    fieldset: ElsAsCfg1
+  - name: els_as_cfg2
+    description: ELS AS Configuration2.
+    byte_offset: 2520
+    access: Read
+    fieldset: ElsAsCfg2
+  - name: els_as_cfg3
+    description: ELS AS Configuration3.
+    byte_offset: 2524
+    access: Read
+    fieldset: ElsAsCfg3
+  - name: els_as_st0
+    description: ELS AS State Register.
+    byte_offset: 2528
+    access: Read
+    fieldset: ElsAsSt0
+  - name: els_as_st1
+    description: ELS AS State1.
+    byte_offset: 2532
+    access: Read
+    fieldset: ElsAsSt1
+  - name: els_as_boot_log0
+    description: 'Boot state captured during boot: Main ROM log.'
+    byte_offset: 2536
+    access: Read
+    fieldset: ElsAsBootLog0
+  - name: els_as_boot_log1
+    description: 'Boot state captured during boot: Library log.'
+    byte_offset: 2540
+    access: Read
+    fieldset: ElsAsBootLog1
+  - name: els_as_boot_log2
+    description: 'Boot state captured during boot: Hardware status signals log.'
+    byte_offset: 2544
+    access: Read
+    fieldset: ElsAsBootLog2
+  - name: els_as_boot_log3
+    description: 'Boot state captured during boot: Security log.'
+    byte_offset: 2548
+    access: Read
+    fieldset: ElsAsBootLog3
+  - name: els_as_flag0
+    description: ELS AS Flag0.
+    byte_offset: 2552
+    access: Read
+    fieldset: ElsAsFlag0
+  - name: els_as_flag1
+    description: ELS AS Flag1.
+    byte_offset: 2556
+    access: Read
+    fieldset: ElsAsFlag1
+  - name: clock_ctrl
+    description: Clock Control.
+    byte_offset: 2584
+    fieldset: ClockCtrl
+  - name: i3c1fclksel
+    description: I3C1 Functional Clock Selection.
+    byte_offset: 2864
+    fieldset: I3c1fclksel
+  - name: i3c1fclkstcsel
+    description: Selects the I3C1 Time Control clock.
+    byte_offset: 2868
+    fieldset: I3c1fclkstcsel
+  - name: i3c1fclkstcdiv
+    description: I3C1 FCLK_STC Clock Divider.
+    byte_offset: 2872
+    fieldset: Busclkdiv
+  - name: i3c1fclksdiv
+    description: I3C1 FCLK Slow clock Divider.
+    byte_offset: 2876
+    fieldset: Busclkdiv
+  - name: i3c1fclkdiv
+    description: I3C1 Functional Clock FCLK Divider.
+    byte_offset: 2880
+    fieldset: Busclkdiv
+  - name: i3c1fclkssel
+    description: I3C1 FCLK Slow Selection.
+    byte_offset: 2884
+    fieldset: I3c1fclkssel
+  - name: etb_status
+    description: ETB Counter Status Register.
+    byte_offset: 2896
+    fieldset: EtbStatus
+  - name: etb_counter_ctrl
+    description: ETB Counter Control Register.
+    byte_offset: 2900
+    fieldset: EtbCounterCtrl
+  - name: etb_counter_reload
+    description: ETB Counter Reload Register.
+    byte_offset: 2904
+    fieldset: EtbCounterReload
+  - name: etb_counter_value
+    description: ETB Counter Value Register.
+    byte_offset: 2908
+    access: Read
+    fieldset: EtbCounterValue
+  - name: gray_code_lsb
+    description: Gray to Binary Converter Gray code_gray[31:0].
+    byte_offset: 2912
+    fieldset: GrayCodeLsb
+  - name: gray_code_msb
+    description: Gray to Binary Converter Gray code_gray[41:32].
+    byte_offset: 2916
+    fieldset: GrayCodeMsb
+  - name: binary_code_lsb
+    description: Gray to Binary Converter Binary Code [31:0].
+    byte_offset: 2920
+    access: Read
+    fieldset: BinaryCodeLsb
+  - name: binary_code_msb
+    description: Gray to Binary Converter Binary Code [41:32].
+    byte_offset: 2924
+    access: Read
+    fieldset: BinaryCodeMsb
+  - name: autoclkgateoverride
+    description: Control Automatic Clock Gating.
+    byte_offset: 3588
+    fieldset: Autoclkgateoverride
+  - name: autoclkgateoverridec
+    description: Control Automatic Clock Gating C.
+    byte_offset: 3628
+    fieldset: Autoclkgateoverridec
+  - name: pwm0subctl
+    description: PWM0 Submodule Control.
+    byte_offset: 3640
+    fieldset: Pwm0subctlN5
+  - name: pwm1subctl
+    description: PWM1 Submodule Control.
+    byte_offset: 3644
+    fieldset: Pwm1subctlN5
+  - name: ctimerglobalstarten
+    description: CTIMER Global Start Enable.
+    byte_offset: 3648
+    fieldset: CtimerglobalstartenN5
+  - name: ecc_enable_ctrl
+    description: RAM ECC Enable Control.
+    byte_offset: 3652
+    fieldset: EccEnableCtrl
+  - name: debug_lock_en
+    description: Control Write Access to Security.
+    byte_offset: 4000
+    fieldset: DebugLockEn
+  - name: debug_features
+    description: Cortex Debug Features Control.
+    byte_offset: 4004
+    fieldset: DebugFeaturesN5
+  - name: debug_features_dp
+    description: Cortex Debug Features Control (Duplicate).
+    byte_offset: 4008
+    fieldset: DebugFeaturesDp
+  - name: swd_access_cpu0
+    description: CPU0 Software Debug Access.
+    byte_offset: 4020
+    fieldset: SwdAccessCpu0
+  - name: swd_access_cpu1
+    description: CPU1 Software Debug Access.
+    byte_offset: 4024
+    access: Write
+    fieldset: SwdAccessCpu1
+  - name: debug_auth_beacon
+    description: Debug Authentication BEACON.
+    byte_offset: 4032
+    fieldset: DebugAuthBeacon
+  - name: swd_access_dsp
+    description: DSP Software Debug Access.
+    byte_offset: 4036
+    fieldset: SwdAccessDsp
+  - name: jtag_id
+    description: JTAG Chip ID.
+    byte_offset: 4080
+    access: Read
+    fieldset: JtagId
+  - name: device_type
+    description: Device Type.
+    byte_offset: 4084
+    access: Read
+    fieldset: DeviceTypeN5
+  - name: device_id0
+    description: Device ID.
+    byte_offset: 4088
+    access: Read
+    fieldset: DeviceId0A1Small
+  - name: dieid
+    description: Chip Revision ID and Number.
+    byte_offset: 4092
+    access: Read
+    fieldset: Dieid

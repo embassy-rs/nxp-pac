@@ -80,7 +80,7 @@ fieldset/OpCtrl:
     description: Override RES1 Data Type.
     bit_offset: 9
     bit_size: 2
-    enum: OvdtRes1
+    enum: OvdtRes0
   - name: ovdt_en_res2
     description: Override RES2 Data Type Enable.
     bit_offset: 16
@@ -89,7 +89,7 @@ fieldset/OpCtrl:
     description: Override RES2 Data Type.
     bit_offset: 17
     bit_size: 2
-    enum: OvdtRes2
+    enum: OvdtRes0
   - name: ovdt_en_res3
     description: Override RES3 Data Type Enable.
     bit_offset: 24
@@ -98,7 +98,7 @@ fieldset/OpCtrl:
     description: Override RES3 Data Type.
     bit_offset: 25
     bit_size: 2
-    enum: OvdtRes3
+    enum: OvdtRes0
   bit_size: 32
   reset_value: 0
 fieldset/Res0:
@@ -333,51 +333,6 @@ fieldset/SysCtlr:
   bit_size: 32
   reset_value: 1
 enum/OvdtRes0:
-  bit_size: 2
-  variants:
-  - name: Uint
-    description: UINT.
-    value: 0
-  - name: Int
-    description: INT.
-    value: 1
-  - name: Q1X
-    description: Q1.X.
-    value: 2
-  - name: Float
-    description: FLOAT.
-    value: 3
-enum/OvdtRes1:
-  bit_size: 2
-  variants:
-  - name: Uint
-    description: UINT.
-    value: 0
-  - name: Int
-    description: INT.
-    value: 1
-  - name: Q1X
-    description: Q1.X.
-    value: 2
-  - name: Float
-    description: FLOAT.
-    value: 3
-enum/OvdtRes2:
-  bit_size: 2
-  variants:
-  - name: Uint
-    description: UINT.
-    value: 0
-  - name: Int
-    description: INT.
-    value: 1
-  - name: Q1X
-    description: Q1.X.
-    value: 2
-  - name: Float
-    description: FLOAT.
-    value: 3
-enum/OvdtRes3:
   bit_size: 2
   variants:
   - name: Uint

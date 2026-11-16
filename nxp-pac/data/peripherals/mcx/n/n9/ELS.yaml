@@ -360,7 +360,7 @@ fieldset/ElsAlphaFieldsetNovember:
     description: Key size.
     bit_offset: 0
     bit_size: 2
-    enum: ElsAlphaEnumSierra
+    enum: KsKsize
   - name: ks0_kact
     description: Key is active.
     bit_offset: 5
@@ -468,7 +468,7 @@ fieldset/ElsAlphaFieldsetOscar:
     description: Key size.
     bit_offset: 0
     bit_size: 2
-    enum: ElsAlphaEnumDeltaAlpha
+    enum: KsKsize
   - name: ks1_kact
     description: Key is active.
     bit_offset: 5
@@ -576,7 +576,7 @@ fieldset/ElsAlphaFieldsetPapa:
     description: Key size.
     bit_offset: 0
     bit_size: 2
-    enum: ElsAlphaEnumTango
+    enum: KsKsize
   - name: ks10_kact
     description: Key is active.
     bit_offset: 5
@@ -684,7 +684,7 @@ fieldset/ElsAlphaFieldsetQuebec:
     description: Key size.
     bit_offset: 0
     bit_size: 2
-    enum: ElsAlphaEnumUniform
+    enum: KsKsize
   - name: ks11_kact
     description: Key is active.
     bit_offset: 5
@@ -792,7 +792,7 @@ fieldset/ElsAlphaFieldsetRomeo:
     description: Key size.
     bit_offset: 0
     bit_size: 2
-    enum: ElsAlphaEnumVictor
+    enum: KsKsize
   - name: ks12_kact
     description: Key is active.
     bit_offset: 5
@@ -900,7 +900,7 @@ fieldset/ElsAlphaFieldsetSierra:
     description: Key size.
     bit_offset: 0
     bit_size: 2
-    enum: ElsAlphaEnumWhiskey
+    enum: KsKsize
   - name: ks13_kact
     description: Key is active.
     bit_offset: 5
@@ -1008,7 +1008,7 @@ fieldset/ElsAlphaFieldsetTango:
     description: Key size.
     bit_offset: 0
     bit_size: 2
-    enum: ElsAlphaEnumXray
+    enum: KsKsize
   - name: ks14_kact
     description: Key is active.
     bit_offset: 5
@@ -1116,7 +1116,7 @@ fieldset/ElsAlphaFieldsetUniform:
     description: Key size.
     bit_offset: 0
     bit_size: 2
-    enum: ElsAlphaEnumYankee
+    enum: KsKsize
   - name: ks15_kact
     description: Key is active.
     bit_offset: 5
@@ -1224,7 +1224,7 @@ fieldset/ElsAlphaFieldsetVictor:
     description: Key size.
     bit_offset: 0
     bit_size: 2
-    enum: ElsAlphaEnumZulu
+    enum: KsKsize
   - name: ks16_kact
     description: Key is active.
     bit_offset: 5
@@ -1332,7 +1332,7 @@ fieldset/ElsAlphaFieldsetWhiskey:
     description: Key size.
     bit_offset: 0
     bit_size: 2
-    enum: ElsAlphaEnumAlphaAlpha
+    enum: KsKsize
   - name: ks17_kact
     description: Key is active.
     bit_offset: 5
@@ -1440,7 +1440,7 @@ fieldset/ElsAlphaFieldsetXray:
     description: Key size.
     bit_offset: 0
     bit_size: 2
-    enum: ElsAlphaEnumBravoAlpha
+    enum: KsKsize
   - name: ks18_kact
     description: Key is active.
     bit_offset: 5
@@ -1548,7 +1548,7 @@ fieldset/ElsAlphaFieldsetYankee:
     description: Key size.
     bit_offset: 0
     bit_size: 2
-    enum: ElsAlphaEnumCharlieAlpha
+    enum: KsKsize
   - name: ks19_kact
     description: Key is active.
     bit_offset: 5
@@ -1656,7 +1656,7 @@ fieldset/ElsAlphaFieldsetZulu:
     description: Key size.
     bit_offset: 0
     bit_size: 2
-    enum: ElsAlphaEnumEchoAlpha
+    enum: KsKsize
   - name: ks2_kact
     description: Key is active.
     bit_offset: 5
@@ -1764,7 +1764,7 @@ fieldset/ElsAlphaFieldsetAlphaAlpha:
     description: Key size.
     bit_offset: 0
     bit_size: 2
-    enum: ElsAlphaEnumFoxtrotAlpha
+    enum: KsKsize
   - name: ks3_kact
     description: Key is active.
     bit_offset: 5
@@ -1872,7 +1872,7 @@ fieldset/ElsAlphaFieldsetBravoAlpha:
     description: Key size.
     bit_offset: 0
     bit_size: 2
-    enum: ElsAlphaEnumGolfAlpha
+    enum: KsKsize
   - name: ks4_kact
     description: Key is active.
     bit_offset: 5
@@ -1980,7 +1980,7 @@ fieldset/ElsAlphaFieldsetCharlieAlpha:
     description: Key size.
     bit_offset: 0
     bit_size: 2
-    enum: ElsAlphaEnumHotelAlpha
+    enum: KsKsize
   - name: ks5_kact
     description: Key is active.
     bit_offset: 5
@@ -2088,7 +2088,7 @@ fieldset/ElsAlphaFieldsetDeltaAlpha:
     description: Key size.
     bit_offset: 0
     bit_size: 2
-    enum: ElsAlphaEnumIndiaAlpha
+    enum: KsKsize
   - name: ks6_kact
     description: Key is active.
     bit_offset: 5
@@ -2196,7 +2196,7 @@ fieldset/ElsAlphaFieldsetEchoAlpha:
     description: Key size.
     bit_offset: 0
     bit_size: 2
-    enum: ElsAlphaEnumJulietAlpha
+    enum: KsKsize
   - name: ks7_kact
     description: Key is active.
     bit_offset: 5
@@ -2304,7 +2304,7 @@ fieldset/ElsAlphaFieldsetFoxtrotAlpha:
     description: Key size.
     bit_offset: 0
     bit_size: 2
-    enum: ElsAlphaEnumKiloAlpha
+    enum: KsKsize
   - name: ks8_kact
     description: Key is active.
     bit_offset: 5
@@ -2412,7 +2412,7 @@ fieldset/ElsAlphaFieldsetGolfAlpha:
     description: Key size.
     bit_offset: 0
     bit_size: 2
-    enum: ElsAlphaEnumLimaAlpha
+    enum: KsKsize
   - name: ks9_kact
     description: Key is active.
     bit_offset: 5
@@ -2520,32 +2520,32 @@ fieldset/ElsAlphaFieldsetHotelAlpha:
     description: Indicates public or private bus access error.
     bit_offset: 0
     bit_size: 1
-    enum: ElsAlphaEnumBravo
+    enum: AlgErr
   - name: opn_err
     description: Indicates operational error, that is, ELS has been incorrectly operated.
     bit_offset: 1
     bit_size: 1
-    enum: ElsAlphaEnumMikeAlpha
+    enum: AlgErr
   - name: alg_err
     description: Indicates algorithm error; an internal algorithm has produced an unexpected result.
     bit_offset: 2
     bit_size: 1
-    enum: ElsAlphaEnumAlpha
+    enum: AlgErr
   - name: itg_err
     description: Indicates data integrity error, that is, internal data integrity check has failed.
     bit_offset: 3
     bit_size: 1
-    enum: ElsAlphaEnumRomeo
+    enum: AlgErr
   - name: flt_err
     description: Indicates hardware fault error; an attempt to change the value of an internal register.
     bit_offset: 4
     bit_size: 1
-    enum: ElsAlphaEnumPapa
+    enum: AlgErr
   - name: prng_err
     description: Indicates user read of PRNG_DATOUT when STATUS[PRNG_RDY] is 0.
     bit_offset: 5
     bit_size: 1
-    enum: ElsAlphaEnumOscarAlpha
+    enum: AlgErr
   - name: err_lvl
     description: 'Indicates the triggered error level: 0, 1 ,2.'
     bit_offset: 6
@@ -2717,24 +2717,6 @@ fieldset/ElsAlphaFieldsetUniformAlpha:
     description: Specifies the software major release version; possible values are from 1-9.
     bit_offset: 28
     bit_size: 4
-enum/ElsAlphaEnumAlpha:
-  bit_size: 1
-  variants:
-  - name: Dis
-    description: No error.
-    value: 0
-  - name: En
-    description: Error occurred.
-    value: 1
-enum/ElsAlphaEnumBravo:
-  bit_size: 1
-  variants:
-  - name: Dis
-    description: No error.
-    value: 0
-  - name: En
-    description: Error occurred.
-    value: 1
 enum/ElsAlphaEnumCharlie:
   bit_size: 1
   variants:
@@ -2861,7 +2843,7 @@ enum/ElsAlphaEnumOscar:
   - name: Exit
     description: Exits ELS error state.
     value: 0
-enum/ElsAlphaEnumPapa:
+enum/AlgErr:
   bit_size: 1
   variants:
   - name: Dis
@@ -2879,16 +2861,7 @@ enum/ElsAlphaEnumQuebec:
   - name: En
     description: Enables.
     value: 1
-enum/ElsAlphaEnumRomeo:
-  bit_size: 1
-  variants:
-  - name: Dis
-    description: No error.
-    value: 0
-  - name: En
-    description: Error occurred.
-    value: 1
-enum/ElsAlphaEnumSierra:
+enum/KsKsize:
   bit_size: 2
   variants:
   - name: Size128
@@ -2896,186 +2869,6 @@ enum/ElsAlphaEnumSierra:
     value: 0
   - name: Size256
     description: '256.'
-    value: 1
-enum/ElsAlphaEnumTango:
-  bit_size: 2
-  variants:
-  - name: Size128
-    description: '128.'
-    value: 0
-  - name: Size256
-    description: '256.'
-    value: 1
-enum/ElsAlphaEnumUniform:
-  bit_size: 2
-  variants:
-  - name: Size128
-    description: '128.'
-    value: 0
-  - name: Size256
-    description: '256.'
-    value: 1
-enum/ElsAlphaEnumVictor:
-  bit_size: 2
-  variants:
-  - name: Size128
-    description: '128.'
-    value: 0
-  - name: Size256
-    description: '256.'
-    value: 1
-enum/ElsAlphaEnumWhiskey:
-  bit_size: 2
-  variants:
-  - name: Size128
-    description: '128.'
-    value: 0
-  - name: Size256
-    description: '256.'
-    value: 1
-enum/ElsAlphaEnumXray:
-  bit_size: 2
-  variants:
-  - name: Size128
-    description: '128.'
-    value: 0
-  - name: Size256
-    description: '256.'
-    value: 1
-enum/ElsAlphaEnumYankee:
-  bit_size: 2
-  variants:
-  - name: Size128
-    description: '128.'
-    value: 0
-  - name: Size256
-    description: '256.'
-    value: 1
-enum/ElsAlphaEnumZulu:
-  bit_size: 2
-  variants:
-  - name: Size128
-    description: '128.'
-    value: 0
-  - name: Size256
-    description: '256.'
-    value: 1
-enum/ElsAlphaEnumAlphaAlpha:
-  bit_size: 2
-  variants:
-  - name: Size128
-    description: '128.'
-    value: 0
-  - name: Size256
-    description: '256.'
-    value: 1
-enum/ElsAlphaEnumBravoAlpha:
-  bit_size: 2
-  variants:
-  - name: Size128
-    description: '128.'
-    value: 0
-  - name: Size256
-    description: '256.'
-    value: 1
-enum/ElsAlphaEnumCharlieAlpha:
-  bit_size: 2
-  variants:
-  - name: Size128
-    description: '128.'
-    value: 0
-  - name: Size256
-    description: '256.'
-    value: 1
-enum/ElsAlphaEnumDeltaAlpha:
-  bit_size: 2
-  variants:
-  - name: Size128
-    description: '128.'
-    value: 0
-  - name: Size256
-    description: '256.'
-    value: 1
-enum/ElsAlphaEnumEchoAlpha:
-  bit_size: 2
-  variants:
-  - name: Size128
-    description: '128.'
-    value: 0
-  - name: Size256
-    description: '256.'
-    value: 1
-enum/ElsAlphaEnumFoxtrotAlpha:
-  bit_size: 2
-  variants:
-  - name: Size128
-    description: '128.'
-    value: 0
-  - name: Size256
-    description: '256.'
-    value: 1
-enum/ElsAlphaEnumGolfAlpha:
-  bit_size: 2
-  variants:
-  - name: Size128
-    description: '128.'
-    value: 0
-  - name: Size256
-    description: '256.'
-    value: 1
-enum/ElsAlphaEnumHotelAlpha:
-  bit_size: 2
-  variants:
-  - name: Size128
-    description: '128.'
-    value: 0
-  - name: Size256
-    description: '256.'
-    value: 1
-enum/ElsAlphaEnumIndiaAlpha:
-  bit_size: 2
-  variants:
-  - name: Size128
-    description: '128.'
-    value: 0
-  - name: Size256
-    description: '256.'
-    value: 1
-enum/ElsAlphaEnumJulietAlpha:
-  bit_size: 2
-  variants:
-  - name: Size128
-    description: '128.'
-    value: 0
-  - name: Size256
-    description: '256.'
-    value: 1
-enum/ElsAlphaEnumKiloAlpha:
-  bit_size: 2
-  variants:
-  - name: Size128
-    description: '128.'
-    value: 0
-  - name: Size256
-    description: '256.'
-    value: 1
-enum/ElsAlphaEnumLimaAlpha:
-  bit_size: 2
-  variants:
-  - name: Size128
-    description: '128.'
-    value: 0
-  - name: Size256
-    description: '256.'
-    value: 1
-enum/ElsAlphaEnumMikeAlpha:
-  bit_size: 1
-  variants:
-  - name: Dis
-    description: No error.
-    value: 0
-  - name: En
-    description: Error occurred.
     value: 1
 enum/ElsAlphaEnumNovemberAlpha:
   bit_size: 2
@@ -3091,15 +2884,6 @@ enum/ElsAlphaEnumNovemberAlpha:
     value: 0
   - name: Secp
     description: Secure, privileged.
-    value: 1
-enum/ElsAlphaEnumOscarAlpha:
-  bit_size: 1
-  variants:
-  - name: Dis
-    description: No error.
-    value: 0
-  - name: En
-    description: Error occurred.
     value: 1
 enum/ElsAlphaEnumPapaAlpha:
   bit_size: 1

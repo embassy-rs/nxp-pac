@@ -1039,12 +1039,12 @@ fieldset/Smoctrl:
     description: PWM_X Fault State.
     bit_offset: 0
     bit_size: 2
-    enum: SmoctrlPwmxfs
+    enum: SmoctrlPwmafs
   - name: pwmbfs
     description: PWM_B Fault State.
     bit_offset: 2
     bit_size: 2
-    enum: SmoctrlPwmbfs
+    enum: SmoctrlPwmafs
   - name: pwmafs
     description: PWM_A Fault State.
     bit_offset: 4
@@ -1560,36 +1560,6 @@ enum/SmintenCmpie:
     description: The corresponding STS[CMPF] bit will cause an interrupt request.
     value: 1
 enum/SmoctrlPwmafs:
-  bit_size: 2
-  variants:
-  - name: Logic0
-    description: Output is forced to logic 0 state prior to consideration of output polarity control.
-    value: 0
-  - name: Logic1
-    description: Output is forced to logic 1 state prior to consideration of output polarity control.
-    value: 1
-  - name: Tristated2
-    description: Output is put in a high-impedance state.
-    value: 2
-  - name: Tristated3
-    description: Output is put in a high-impedance state.
-    value: 3
-enum/SmoctrlPwmbfs:
-  bit_size: 2
-  variants:
-  - name: Logic0
-    description: Output is forced to logic 0 state prior to consideration of output polarity control.
-    value: 0
-  - name: Logic1
-    description: Output is forced to logic 1 state prior to consideration of output polarity control.
-    value: 1
-  - name: Tristated2
-    description: Output is put in a high-impedance state.
-    value: 2
-  - name: Tristated3
-    description: Output is put in a high-impedance state.
-    value: 3
-enum/SmoctrlPwmxfs:
   bit_size: 2
   variants:
   - name: Logic0

@@ -268,7 +268,7 @@ fieldset/Ctrl:
     description: Auto-Calibration Averages.
     bit_offset: 16
     bit_size: 4
-    enum: CalAvgs
+    enum: Avgs
 fieldset/Cv:
   description: Compare Value Register.
   fields:
@@ -569,42 +569,6 @@ enum/AdcActive:
     description: The ADC is processing a conversion, running through the power up delay, or servicing a trigger.
     value: 1
 enum/Avgs:
-  bit_size: 4
-  variants:
-  - name: NoAverage
-    description: Single conversion.
-    value: 0
-  - name: Average2
-    description: 2 conversions averaged.
-    value: 1
-  - name: Average4
-    description: 4 conversions averaged.
-    value: 2
-  - name: Average8
-    description: 8 conversions averaged.
-    value: 3
-  - name: Average16
-    description: 16 conversions averaged.
-    value: 4
-  - name: Average32
-    description: 32 conversions averaged.
-    value: 5
-  - name: Average64
-    description: 64 conversions averaged.
-    value: 6
-  - name: Average128
-    description: 128 conversions averaged.
-    value: 7
-  - name: Average256
-    description: 256 conversions averaged.
-    value: 8
-  - name: Average512
-    description: 512 conversions averaged.
-    value: 9
-  - name: Average1024
-    description: 1024 conversions averaged.
-    value: 10
-enum/CalAvgs:
   bit_size: 4
   variants:
   - name: NoAverage

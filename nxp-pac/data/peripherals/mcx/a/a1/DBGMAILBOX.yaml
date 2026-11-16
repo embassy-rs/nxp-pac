@@ -46,7 +46,7 @@ fieldset/Csw:
     description: Chip Reset Request.
     bit_offset: 5
     bit_size: 1
-    enum: ChipResetReq
+    enum: SoftReset
 fieldset/Id:
   description: Identification.
   fields:
@@ -68,15 +68,6 @@ fieldset/Return:
     description: Return Value.
     bit_offset: 0
     bit_size: 32
-enum/ChipResetReq:
-  bit_size: 1
-  variants:
-  - name: NoEff
-    description: No effect.
-    value: 0
-  - name: Reset
-    description: Reset.
-    value: 1
 enum/SoftReset:
   bit_size: 1
   variants:

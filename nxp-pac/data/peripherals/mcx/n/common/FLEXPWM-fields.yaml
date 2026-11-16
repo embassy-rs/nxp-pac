@@ -1,0 +1,1277 @@
+# MCXN field definitions; identical layouts share one type, including software defaults.
+# Field/variant documentation is retained rather than width-based merging.
+# Curated from N2/N5/N9 native imports; source hashes remain on block entries.
+includes:
+  - ../../common/FLEXPWM-fields.yaml
+fieldset/Dtsrcsel2:
+  description: PWM Source Select Register.
+  bit_size: 16
+  fields:
+  - name: sm0sel45
+    description: Submodule 0 PWM45 Control Select.
+    bit_offset: 0
+    bit_size: 2
+    enum: Sm0sel45
+  - name: sm0sel23
+    description: Submodule 0 PWM23 Control Select.
+    bit_offset: 2
+    bit_size: 2
+    enum: Sm0sel23
+  - name: sm1sel45
+    description: Submodule 1 PWM45 Control Select.
+    bit_offset: 4
+    bit_size: 2
+    enum: Sm1sel45
+  - name: sm1sel23
+    description: Submodule 1 PWM23 Control Select.
+    bit_offset: 6
+    bit_size: 2
+    enum: Sm1sel23
+  - name: sm2sel45
+    description: Submodule 2 PWM45 Control Select.
+    bit_offset: 8
+    bit_size: 2
+    enum: Sm2sel45
+  - name: sm2sel23
+    description: Submodule 2 PWM23 Control Select.
+    bit_offset: 10
+    bit_size: 2
+    enum: Sm2sel23
+  - name: sm3sel45
+    description: Submodule 3 PWM45 Control Select.
+    bit_offset: 12
+    bit_size: 2
+    enum: Sm3sel45
+  - name: sm3sel23
+    description: Submodule 3 PWM23 Control Select.
+    bit_offset: 14
+    bit_size: 2
+    enum: Sm3sel23
+fieldset/Ffilt02:
+  description: Fault Filter Register.
+  bit_size: 16
+  fields:
+  - name: filt_per
+    description: Fault Filter Period.
+    bit_offset: 0
+    bit_size: 8
+  - name: filt_cnt
+    description: Fault Filter Count.
+    bit_offset: 8
+    bit_size: 3
+  - name: gstr
+    description: Fault Glitch Stretch Enable.
+    bit_offset: 15
+    bit_size: 1
+    enum: Gstr
+fieldset/Ftst02:
+  description: Fault Test Register.
+  bit_size: 16
+  fields:
+  - name: ftest
+    description: Fault Test.
+    bit_offset: 0
+    bit_size: 1
+    enum: Ftest
+fieldset/Sm0cval2:
+  description: Capture Value 2 Register.
+  bit_size: 16
+  fields:
+  - name: captval2
+    description: Capture Value 2.
+    bit_offset: 0
+    bit_size: 16
+fieldset/Sm0cval2cyc:
+  description: Capture Value 2 Cycle Register.
+  bit_size: 16
+  fields:
+  - name: cval2cyc
+    description: Capture Value 2 Cycle.
+    bit_offset: 0
+    bit_size: 4
+fieldset/Sm0cval3:
+  description: Capture Value 3 Register.
+  bit_size: 16
+  fields:
+  - name: captval3
+    description: Capture Value 3.
+    bit_offset: 0
+    bit_size: 16
+fieldset/Sm0cval3cyc:
+  description: Capture Value 3 Cycle Register.
+  bit_size: 16
+  fields:
+  - name: cval3cyc
+    description: Capture Value 3 Cycle.
+    bit_offset: 0
+    bit_size: 4
+fieldset/Sm0cval4:
+  description: Capture Value 4 Register.
+  bit_size: 16
+  fields:
+  - name: captval4
+    description: Capture Value 4.
+    bit_offset: 0
+    bit_size: 16
+fieldset/Sm0cval4cyc:
+  description: Capture Value 4 Cycle Register.
+  bit_size: 16
+  fields:
+  - name: cval4cyc
+    description: Capture Value 4 Cycle.
+    bit_offset: 0
+    bit_size: 4
+fieldset/Sm0cval5:
+  description: Capture Value 5 Register.
+  bit_size: 16
+  fields:
+  - name: captval5
+    description: Capture Value 5.
+    bit_offset: 0
+    bit_size: 16
+fieldset/Sm0val3:
+  description: Value Register 3.
+  bit_size: 16
+  fields:
+  - name: val3
+    description: Value 3.
+    bit_offset: 0
+    bit_size: 16
+fieldset/Sm0val4:
+  description: Value Register 4.
+  bit_size: 16
+  fields:
+  - name: val4
+    description: Value 4.
+    bit_offset: 0
+    bit_size: 16
+fieldset/Sm0val5:
+  description: Value Register 5.
+  bit_size: 16
+  fields:
+  - name: val5
+    description: Value 5.
+    bit_offset: 0
+    bit_size: 16
+fieldset/Sm1captcompa:
+  description: Capture Compare A Register.
+  bit_size: 16
+  fields:
+  - name: edgcmpa
+    description: Edge Compare A.
+    bit_offset: 0
+    bit_size: 8
+  - name: edgcnta
+    description: Edge Counter A.
+    bit_offset: 8
+    bit_size: 8
+fieldset/Sm1captcompb:
+  description: Capture Compare B Register.
+  bit_size: 16
+  fields:
+  - name: edgcmpb
+    description: Edge Compare B.
+    bit_offset: 0
+    bit_size: 8
+  - name: edgcntb
+    description: Edge Counter B.
+    bit_offset: 8
+    bit_size: 8
+fieldset/Sm1cval5cyc:
+  description: Capture Value 5 Cycle Register.
+  bit_size: 16
+  fields:
+  - name: cval5cyc
+    description: Capture Value 5 Cycle.
+    bit_offset: 0
+    bit_size: 4
+fieldset/Sm1dmaen:
+  description: DMA Enable Register.
+  bit_size: 16
+  fields:
+  - name: cx0de
+    description: Capture X0 FIFO DMA Enable.
+    bit_offset: 0
+    bit_size: 1
+  - name: cx1de
+    description: Capture X1 FIFO DMA Enable.
+    bit_offset: 1
+    bit_size: 1
+  - name: cb0de
+    description: Capture B0 FIFO DMA Enable.
+    bit_offset: 2
+    bit_size: 1
+  - name: cb1de
+    description: Capture B1 FIFO DMA Enable.
+    bit_offset: 3
+    bit_size: 1
+  - name: ca0de
+    description: Capture A0 FIFO DMA Enable.
+    bit_offset: 4
+    bit_size: 1
+  - name: ca1de
+    description: Capture A1 FIFO DMA Enable.
+    bit_offset: 5
+    bit_size: 1
+  - name: captde
+    description: Capture DMA Enable Source Select.
+    bit_offset: 6
+    bit_size: 2
+    enum: SmdmaenCaptde
+  - name: fand
+    description: FIFO Watermark AND Control.
+    bit_offset: 8
+    bit_size: 1
+    enum: SmdmaenFand
+  - name: valde
+    description: Value Registers DMA Enable.
+    bit_offset: 9
+    bit_size: 1
+    enum: Valde
+fieldset/Sm1fracval1:
+  description: Fractional Value Register 1.
+  bit_size: 16
+  fields:
+  - name: fracval1
+    description: Fractional Value 1.
+    bit_offset: 11
+    bit_size: 5
+fieldset/Sm2captctrla:
+  description: Capture Control A Register.
+  bit_size: 16
+  fields:
+  - name: arma
+    description: Arm A.
+    bit_offset: 0
+    bit_size: 1
+    enum: Arma
+  - name: oneshota
+    description: One Shot Mode A.
+    bit_offset: 1
+    bit_size: 1
+    enum: SmcaptctrlxOneshotx
+  - name: edga0
+    description: Edge A 0.
+    bit_offset: 2
+    bit_size: 2
+    enum: SmcaptctrlxEdgx
+  - name: edga1
+    description: Edge A 1.
+    bit_offset: 4
+    bit_size: 2
+    enum: SmcaptctrlxEdgx
+  - name: inp_sela
+    description: Input Select A.
+    bit_offset: 6
+    bit_size: 1
+    enum: InpSela
+  - name: edgcnta_en
+    description: Edge Counter A Enable.
+    bit_offset: 7
+    bit_size: 1
+    enum: EdgcntxEn
+  - name: cfawm
+    description: Capture A FIFOs Water Mark.
+    bit_offset: 8
+    bit_size: 2
+  - name: ca0cnt
+    description: Capture A0 FIFO Word Count.
+    bit_offset: 10
+    bit_size: 3
+  - name: ca1cnt
+    description: Capture A1 FIFO Word Count.
+    bit_offset: 13
+    bit_size: 3
+fieldset/Sm2captctrlb:
+  description: Capture Control B Register.
+  bit_size: 16
+  fields:
+  - name: armb
+    description: Arm B.
+    bit_offset: 0
+    bit_size: 1
+    enum: Armb
+  - name: oneshotb
+    description: One Shot Mode B.
+    bit_offset: 1
+    bit_size: 1
+    enum: SmcaptctrlxOneshotx
+  - name: edgb0
+    description: Edge B 0.
+    bit_offset: 2
+    bit_size: 2
+    enum: SmcaptctrlxEdgx
+  - name: edgb1
+    description: Edge B 1.
+    bit_offset: 4
+    bit_size: 2
+    enum: SmcaptctrlxEdgx
+  - name: inp_selb
+    description: Input Select B.
+    bit_offset: 6
+    bit_size: 1
+    enum: InpSelb
+  - name: edgcntb_en
+    description: Edge Counter B Enable.
+    bit_offset: 7
+    bit_size: 1
+    enum: EdgcntxEn
+  - name: cfbwm
+    description: Capture B FIFOs Water Mark.
+    bit_offset: 8
+    bit_size: 2
+  - name: cb0cnt
+    description: Capture B0 FIFO Word Count.
+    bit_offset: 10
+    bit_size: 3
+  - name: cb1cnt
+    description: Capture B1 FIFO Word Count.
+    bit_offset: 13
+    bit_size: 3
+fieldset/Sm2captctrlx:
+  description: Capture Control X Register.
+  bit_size: 16
+  fields:
+  - name: armx
+    description: Arm X.
+    bit_offset: 0
+    bit_size: 1
+    enum: Armx
+  - name: oneshotx
+    description: One Shot Mode Aux.
+    bit_offset: 1
+    bit_size: 1
+    enum: SmcaptctrlxOneshotx
+  - name: edgx0
+    description: Edge X 0.
+    bit_offset: 2
+    bit_size: 2
+    enum: SmcaptctrlxEdgx
+  - name: edgx1
+    description: Edge X 1.
+    bit_offset: 4
+    bit_size: 2
+    enum: SmcaptctrlxEdgx
+  - name: inp_selx
+    description: Input Select X.
+    bit_offset: 6
+    bit_size: 1
+    enum: SmcaptctrlxInpSelx
+  - name: edgcntx_en
+    description: Edge Counter X Enable.
+    bit_offset: 7
+    bit_size: 1
+    enum: EdgcntxEn
+  - name: cfxwm
+    description: Capture X FIFOs Water Mark.
+    bit_offset: 8
+    bit_size: 2
+  - name: cx0cnt
+    description: Capture X0 FIFO Word Count.
+    bit_offset: 10
+    bit_size: 3
+  - name: cx1cnt
+    description: Capture X1 FIFO Word Count.
+    bit_offset: 13
+    bit_size: 3
+fieldset/Sm2captfilta:
+  description: Capture PWM_A Input Filter Register.
+  bit_size: 16
+  fields:
+  - name: capta_filt_per
+    description: Input Capture Filter Period.
+    bit_offset: 0
+    bit_size: 8
+  - name: capta_filt_cnt
+    description: Input Capture Filter Count.
+    bit_offset: 8
+    bit_size: 3
+fieldset/Sm2captfiltb:
+  description: Capture PWM_B Input Filter Register.
+  bit_size: 16
+  fields:
+  - name: captb_filt_per
+    description: Input Capture Filter Period.
+    bit_offset: 0
+    bit_size: 8
+  - name: captb_filt_cnt
+    description: Input Capture Filter Count.
+    bit_offset: 8
+    bit_size: 3
+fieldset/Sm2fracval2:
+  description: Fractional Value Register 2.
+  bit_size: 16
+  fields:
+  - name: fracval2
+    description: Fractional Value 2.
+    bit_offset: 11
+    bit_size: 5
+fieldset/Sm2fracval3:
+  description: Fractional Value Register 3.
+  bit_size: 16
+  fields:
+  - name: fracval3
+    description: Fractional Value 3.
+    bit_offset: 11
+    bit_size: 5
+fieldset/Sm2fracval4:
+  description: Fractional Value Register 4.
+  bit_size: 16
+  fields:
+  - name: fracval4
+    description: Fractional Value 4.
+    bit_offset: 11
+    bit_size: 5
+fieldset/Sm2fracval5:
+  description: Fractional Value Register 5.
+  bit_size: 16
+  fields:
+  - name: fracval5
+    description: Fractional Value 5.
+    bit_offset: 11
+    bit_size: 5
+fieldset/Sm2frctrl:
+  description: Fractional Control Register.
+  bit_size: 16
+  fields:
+  - name: frac1_en
+    description: Fractional Cycle PWM Period Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: Frac1En
+  - name: frac23_en
+    description: Fractional Cycle Placement Enable for PWM_A.
+    bit_offset: 2
+    bit_size: 1
+    enum: Frac23En
+  - name: frac45_en
+    description: Fractional Cycle Placement Enable for PWM_B.
+    bit_offset: 4
+    bit_size: 1
+    enum: Frac45En
+  - name: test
+    description: Test Status Bit.
+    bit_offset: 15
+    bit_size: 1
+fieldset/Sm3ctrl:
+  description: Control Register.
+  bit_size: 16
+  fields:
+  - name: dblen
+    description: Double Switching Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: Dblen
+  - name: dblx
+    description: PWM_X Double Switching Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: Dblx
+  - name: ldmod
+    description: Load Mode Select.
+    bit_offset: 2
+    bit_size: 1
+    enum: SmctrlLdmod
+  - name: split
+    description: Split the DBLPWM signal to PWM_A and PWM_B.
+    bit_offset: 3
+    bit_size: 1
+    enum: Split
+  - name: prsc
+    description: Prescaler.
+    bit_offset: 4
+    bit_size: 3
+    enum: SmctrlPrsc
+  - name: compmode
+    description: Compare Mode.
+    bit_offset: 7
+    bit_size: 1
+    enum: SmctrlCompmode
+  - name: dt
+    description: Deadtime.
+    bit_offset: 8
+    bit_size: 2
+  - name: full
+    description: Full Cycle Reload.
+    bit_offset: 10
+    bit_size: 1
+    enum: Full
+  - name: half
+    description: Half Cycle Reload.
+    bit_offset: 11
+    bit_size: 1
+    enum: Half
+  - name: ldfq
+    description: Load Frequency.
+    bit_offset: 12
+    bit_size: 4
+    enum: SmctrlLdfq
+fieldset/Sm3ctrl2:
+  description: Control 2 Register.
+  bit_size: 16
+  fields:
+  - name: clk_sel
+    description: Clock Source Select.
+    bit_offset: 0
+    bit_size: 2
+    enum: SmctrlClkSel
+  - name: reload_sel
+    description: Reload Source Select.
+    bit_offset: 2
+    bit_size: 1
+    enum: SmctrlReloadSel
+  - name: force_sel
+    description: Force Select.
+    bit_offset: 3
+    bit_size: 3
+    enum: SmctrlForceSel
+  - name: force
+    description: Force Initialization.
+    bit_offset: 6
+    bit_size: 1
+  - name: frcen
+    description: Force Enable.
+    bit_offset: 7
+    bit_size: 1
+    enum: Frcen
+  - name: init_sel
+    description: Initialization Control Select.
+    bit_offset: 8
+    bit_size: 2
+    enum: SmctrlInitSel
+  - name: pwmx_init
+    description: PWM_X Initial Value.
+    bit_offset: 10
+    bit_size: 1
+  - name: pwm45_init
+    description: PWM45 Initial Value.
+    bit_offset: 11
+    bit_size: 1
+  - name: pwm23_init
+    description: PWM23 Initial Value.
+    bit_offset: 12
+    bit_size: 1
+  - name: indep
+    description: Independent or Complementary Pair Operation.
+    bit_offset: 13
+    bit_size: 1
+    enum: SmctrlIndep
+  - name: dbgen
+    description: Debug Enable.
+    bit_offset: 15
+    bit_size: 1
+fieldset/Sm3inten:
+  description: Interrupt Enable Register.
+  bit_size: 16
+  fields:
+  - name: cmpie
+    description: Compare Interrupt Enables.
+    bit_offset: 0
+    bit_size: 6
+    enum: SmintenCmpie
+  - name: cx0ie
+    description: Capture X 0 Interrupt Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: Cx0ie
+  - name: cx1ie
+    description: Capture X 1 Interrupt Enable.
+    bit_offset: 7
+    bit_size: 1
+    enum: Cx1ie
+  - name: cb0ie
+    description: Capture B 0 Interrupt Enable.
+    bit_offset: 8
+    bit_size: 1
+    enum: Cb0ie
+  - name: cb1ie
+    description: Capture B 1 Interrupt Enable.
+    bit_offset: 9
+    bit_size: 1
+    enum: Cb1ie
+  - name: ca0ie
+    description: Capture A 0 Interrupt Enable.
+    bit_offset: 10
+    bit_size: 1
+    enum: Ca0ie
+  - name: ca1ie
+    description: Capture A 1 Interrupt Enable.
+    bit_offset: 11
+    bit_size: 1
+    enum: Ca1ie
+  - name: rie
+    description: Reload Interrupt Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: Rie
+  - name: reie
+    description: Reload Error Interrupt Enable.
+    bit_offset: 13
+    bit_size: 1
+    enum: Reie
+fieldset/Sm3octrl:
+  description: Output Control Register.
+  bit_size: 16
+  fields:
+  - name: pwmxfs
+    description: PWM_X Fault State.
+    bit_offset: 0
+    bit_size: 2
+    enum: SmoctrlPwmxfs
+  - name: pwmbfs
+    description: PWM_B Fault State.
+    bit_offset: 2
+    bit_size: 2
+    enum: SmoctrlPwmxfs
+  - name: pwmafs
+    description: PWM_A Fault State.
+    bit_offset: 4
+    bit_size: 2
+    enum: SmoctrlPwmxfs
+  - name: polx
+    description: PWM_X Output Polarity.
+    bit_offset: 8
+    bit_size: 1
+    enum: Polx
+  - name: polb
+    description: PWM_B Output Polarity.
+    bit_offset: 9
+    bit_size: 1
+    enum: Polb
+  - name: pola
+    description: PWM_A Output Polarity.
+    bit_offset: 10
+    bit_size: 1
+    enum: Pola
+  - name: pwmx_in
+    description: PWM_X Input.
+    bit_offset: 13
+    bit_size: 1
+  - name: pwmb_in
+    description: PWM_B Input.
+    bit_offset: 14
+    bit_size: 1
+  - name: pwma_in
+    description: PWM_A Input.
+    bit_offset: 15
+    bit_size: 1
+fieldset/Sm3sts:
+  description: Status Register.
+  bit_size: 16
+  fields:
+  - name: cmpf
+    description: Compare Flags.
+    bit_offset: 0
+    bit_size: 6
+    enum: SmstsCmpf
+  - name: cfx0
+    description: Capture Flag X0.
+    bit_offset: 6
+    bit_size: 1
+  - name: cfx1
+    description: Capture Flag X1.
+    bit_offset: 7
+    bit_size: 1
+  - name: cfb0
+    description: Capture Flag B0.
+    bit_offset: 8
+    bit_size: 1
+  - name: cfb1
+    description: Capture Flag B1.
+    bit_offset: 9
+    bit_size: 1
+  - name: cfa0
+    description: Capture Flag A0.
+    bit_offset: 10
+    bit_size: 1
+  - name: cfa1
+    description: Capture Flag A1.
+    bit_offset: 11
+    bit_size: 1
+  - name: rf
+    description: Reload Flag.
+    bit_offset: 12
+    bit_size: 1
+    enum: Rf
+  - name: ref_
+    description: Reload Error Flag.
+    bit_offset: 13
+    bit_size: 1
+    enum: Ref
+  - name: ruf
+    description: Registers Updated Flag.
+    bit_offset: 14
+    bit_size: 1
+    enum: Ruf
+fieldset/Sm3tctrl:
+  description: Output Trigger Control Register.
+  bit_size: 16
+  fields:
+  - name: out_trig_en
+    description: Output Trigger Enables.
+    bit_offset: 0
+    bit_size: 6
+    enum: OutTrigEn
+  - name: trgfrq
+    description: Trigger Frequency.
+    bit_offset: 12
+    bit_size: 1
+    enum: SmtctrlTrgfrq
+  - name: pwbot1
+    description: Mux Output Trigger 1 Source Select.
+    bit_offset: 14
+    bit_size: 1
+    enum: SmtctrlPwbot
+  - name: pwaot0
+    description: Mux Output Trigger 0 Source Select.
+    bit_offset: 15
+    bit_size: 1
+    enum: SmtctrlPwaot
+fieldset/Sm3val0:
+  description: Value Register 0.
+  bit_size: 16
+  fields:
+  - name: val0
+    description: Value 0.
+    bit_offset: 0
+    bit_size: 16
+fieldset/Sm3val1:
+  description: Value Register 1.
+  bit_size: 16
+  fields:
+  - name: val1
+    description: Value 1.
+    bit_offset: 0
+    bit_size: 16
+fieldset/Sm3val2:
+  description: Value Register 2.
+  bit_size: 16
+  fields:
+  - name: val2
+    description: Value 2.
+    bit_offset: 0
+    bit_size: 16
+fieldset/Swcout2:
+  description: Software Controlled Output Register.
+  bit_size: 16
+  fields:
+  - name: sm0out45
+    description: Submodule 0 Software Controlled Output 45.
+    bit_offset: 0
+    bit_size: 1
+    enum: Sm0out45
+  - name: sm0out23
+    description: Submodule 0 Software Controlled Output 23.
+    bit_offset: 1
+    bit_size: 1
+    enum: Smout
+  - name: sm1out45
+    description: Submodule 1 Software Controlled Output 45.
+    bit_offset: 2
+    bit_size: 1
+    enum: Sm1out45
+  - name: sm1out23
+    description: Submodule 1 Software Controlled Output 23.
+    bit_offset: 3
+    bit_size: 1
+    enum: Sm1out23
+  - name: sm2out45
+    description: Submodule 2 Software Controlled Output 45.
+    bit_offset: 4
+    bit_size: 1
+    enum: Sm2out45
+  - name: sm2out23
+    description: Submodule 2 Software Controlled Output 23.
+    bit_offset: 5
+    bit_size: 1
+    enum: Sm2out23
+  - name: sm3out45
+    description: Submodule 3 Software Controlled Output 45.
+    bit_offset: 6
+    bit_size: 1
+    enum: Sm3out45
+  - name: sm3out23
+    description: Submodule 3 Software Controlled Output 23.
+    bit_offset: 7
+    bit_size: 1
+    enum: Sm3out23
+enum/Arma:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Input capture operation is disabled.
+    value: 0
+  - name: Enabled
+    description: Input capture operation as specified by CAPTCTRLA[EDGAx] is enabled.
+    value: 1
+enum/Armb:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Input capture operation is disabled.
+    value: 0
+  - name: Enabled
+    description: Input capture operation as specified by CAPTCTRLB[EDGBx] is enabled.
+    value: 1
+enum/Armx:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Input capture operation is disabled.
+    value: 0
+  - name: Enabled
+    description: Input capture operation as specified by CAPTCTRLX[EDGXx] is enabled.
+    value: 1
+enum/Ca0ie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt request disabled for STS[CFA0].
+    value: 0
+  - name: Enabled
+    description: Interrupt request enabled for STS[CFA0].
+    value: 1
+enum/Ca1ie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt request disabled for STS[CFA1].
+    value: 0
+  - name: Enabled
+    description: Interrupt request enabled for STS[CFA1].
+    value: 1
+enum/Cb0ie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt request disabled for STS[CFB0].
+    value: 0
+  - name: Enabled
+    description: Interrupt request enabled for STS[CFB0].
+    value: 1
+enum/Cb1ie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt request disabled for STS[CFB1].
+    value: 0
+  - name: Enabled
+    description: Interrupt request enabled for STS[CFB1].
+    value: 1
+enum/Cx0ie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt request disabled for STS[CFX0].
+    value: 0
+  - name: Enabled
+    description: Interrupt request enabled for STS[CFX0].
+    value: 1
+enum/Cx1ie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Interrupt request disabled for STS[CFX1].
+    value: 0
+  - name: Enabled
+    description: Interrupt request enabled for STS[CFX1].
+    value: 1
+enum/Dblen:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Double switching disabled.
+    value: 0
+  - name: Enabled
+    description: Double switching enabled.
+    value: 1
+enum/Dblx:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: PWM_X double pulse disabled.
+    value: 0
+  - name: Enabled
+    description: PWM_X double pulse enabled.
+    value: 1
+enum/EdgcntxEn:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Edge counter disabled and held in reset.
+    value: 0
+  - name: Enabled
+    description: Edge counter enabled.
+    value: 1
+enum/Frac1En:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disable fractional cycle length for the PWM period.
+    value: 0
+  - name: Enabled
+    description: Enable fractional cycle length for the PWM period.
+    value: 1
+enum/Frac23En:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disable fractional cycle placement for PWM_A.
+    value: 0
+  - name: Enabled
+    description: Enable fractional cycle placement for PWM_A.
+    value: 1
+enum/Frac45En:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Disable fractional cycle placement for PWM_B.
+    value: 0
+  - name: Enabled
+    description: Enable fractional cycle placement for PWM_B.
+    value: 1
+enum/Frcen:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Initialization from a FORCE_OUT is disabled.
+    value: 0
+  - name: Enabled
+    description: Initialization from a FORCE_OUT is enabled.
+    value: 1
+enum/Ftest:
+  bit_size: 1
+  variants:
+  - name: NoFault
+    description: No fault.
+    value: 0
+  - name: Fault
+    description: Cause a simulated fault.
+    value: 1
+enum/Full:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Full-cycle reloads disabled.
+    value: 0
+  - name: Enabled
+    description: Full-cycle reloads enabled.
+    value: 1
+enum/Gstr:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Fault input glitch stretching is disabled.
+    value: 0
+  - name: Enabled
+    description: Input fault signals are stretched to at least 2 IPBus clock cycles.
+    value: 1
+enum/Half:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: Half-cycle reloads disabled.
+    value: 0
+  - name: Enabled
+    description: Half-cycle reloads enabled.
+    value: 1
+enum/InpSela:
+  bit_size: 1
+  variants:
+  - name: PwmA
+    description: Raw PWM_A input signal selected as source.
+    value: 0
+  - name: EdgeCounter
+    description: Edge Counter.
+    value: 1
+enum/InpSelb:
+  bit_size: 1
+  variants:
+  - name: PwmB
+    description: Raw PWM_B input signal selected as source.
+    value: 0
+  - name: EdgeCounter
+    description: Edge Counter.
+    value: 1
+enum/OutTrigEn:
+  bit_size: 6
+  variants:
+  - name: Val0
+    description: PWM_OUT_TRIG0 will set when the counter value matches the VAL0 value.
+    value: 1
+  - name: Val1
+    description: PWM_OUT_TRIG1 will set when the counter value matches the VAL1 value.
+    value: 2
+  - name: Val2
+    description: PWM_OUT_TRIG0 will set when the counter value matches the VAL2 value.
+    value: 4
+  - name: Val3
+    description: PWM_OUT_TRIG1 will set when the counter value matches the VAL3 value.
+    value: 8
+  - name: Val4
+    description: PWM_OUT_TRIG0 will set when the counter value matches the VAL4 value.
+    value: 16
+  - name: Val5
+    description: PWM_OUT_TRIG1 will set when the counter value matches the VAL5 value.
+    value: 32
+enum/Pola:
+  bit_size: 1
+  variants:
+  - name: NotInverted
+    description: PWM_A output not inverted. A high level on the PWM_A pin represents the "on" or "active" state.
+    value: 0
+  - name: Inverted
+    description: PWM_A output inverted. A low level on the PWM_A pin represents the "on" or "active" state.
+    value: 1
+enum/Polb:
+  bit_size: 1
+  variants:
+  - name: NotInverted
+    description: PWM_B output not inverted. A high level on the PWM_B pin represents the "on" or "active" state.
+    value: 0
+  - name: Inverted
+    description: PWM_B output inverted. A low level on the PWM_B pin represents the "on" or "active" state.
+    value: 1
+enum/Polx:
+  bit_size: 1
+  variants:
+  - name: NotInverted
+    description: PWM_X output not inverted. A high level on the PWM_X pin represents the "on" or "active" state.
+    value: 0
+  - name: Inverted
+    description: PWM_X output inverted. A low level on the PWM_X pin represents the "on" or "active" state.
+    value: 1
+enum/Ref:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No reload error occurred.
+    value: 0
+  - name: Flag
+    description: Reload signal occurred with non-coherent data and MCTRL[LDOK] = 0.
+    value: 1
+enum/Reie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: STS[REF] CPU interrupt requests disabled.
+    value: 0
+  - name: Enabled
+    description: STS[REF] CPU interrupt requests enabled.
+    value: 1
+enum/Rf:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No new reload cycle since last STS[RF] clearing.
+    value: 0
+  - name: Flag
+    description: New reload cycle since last STS[RF] clearing.
+    value: 1
+enum/Rie:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: STS[RF] CPU interrupt requests disabled.
+    value: 0
+  - name: Enabled
+    description: STS[RF] CPU interrupt requests enabled.
+    value: 1
+enum/Ruf:
+  bit_size: 1
+  variants:
+  - name: NoFlag
+    description: No register update has occurred since last reload.
+    value: 0
+  - name: Flag
+    description: At least one of the double buffered registers has been updated since the last reload.
+    value: 1
+enum/Sm0out45:
+  bit_size: 1
+  variants:
+  - name: Logic0
+    description: A logic 0 is supplied to the deadtime generator of submodule 0 instead of PWM45.
+    value: 0
+  - name: Logic1
+    description: A logic 1 is supplied to the deadtime generator of submodule 0 instead of PWM45.
+    value: 1
+enum/Sm0sel23:
+  bit_size: 2
+  variants:
+  - name: Sm0pwm23
+    description: Generated SM0PWM23 signal used by the deadtime logic.
+    value: 0
+  - name: InvertedSm0pwm23
+    description: Inverted generated SM0PWM23 signal used by the deadtime logic.
+    value: 1
+  - name: Sm0out23
+    description: SWCOUT[SM0OUT23] used by the deadtime logic.
+    value: 2
+  - name: Pwm0Exta
+    description: PWM0_EXTA signal used by the deadtime logic.
+    value: 3
+enum/Sm0sel45:
+  bit_size: 2
+  variants:
+  - name: Sm0pwm45
+    description: Generated SM0PWM45 signal used by the deadtime logic.
+    value: 0
+  - name: InvertedSm0pwm45
+    description: Inverted generated SM0PWM45 signal used by the deadtime logic.
+    value: 1
+  - name: Sm0out45
+    description: SWCOUT[SM0OUT45] used by the deadtime logic.
+    value: 2
+enum/Sm1out23:
+  bit_size: 1
+  variants:
+  - name: Logic0
+    description: A logic 0 is supplied to the deadtime generator of submodule 1 instead of PWM23.
+    value: 0
+  - name: Logic1
+    description: A logic 1 is supplied to the deadtime generator of submodule 1 instead of PWM23.
+    value: 1
+enum/Sm1out45:
+  bit_size: 1
+  variants:
+  - name: Logic0
+    description: A logic 0 is supplied to the deadtime generator of submodule 1 instead of PWM45.
+    value: 0
+  - name: Logic1
+    description: A logic 1 is supplied to the deadtime generator of submodule 1 instead of PWM45.
+    value: 1
+enum/Sm1sel23:
+  bit_size: 2
+  variants:
+  - name: Sm1pwm23
+    description: Generated SM1PWM23 signal used by the deadtime logic.
+    value: 0
+  - name: InvertedSm1pwm23
+    description: Inverted generated SM1PWM23 signal used by the deadtime logic.
+    value: 1
+  - name: Sm1out23
+    description: SWCOUT[SM1OUT23] used by the deadtime logic.
+    value: 2
+  - name: Pwm1Exta
+    description: PWM1_EXTA signal used by the deadtime logic.
+    value: 3
+enum/Sm1sel45:
+  bit_size: 2
+  variants:
+  - name: Sm1pwm45
+    description: Generated SM1PWM45 signal used by the deadtime logic.
+    value: 0
+  - name: InvertedSm1pwm45
+    description: Inverted generated SM1PWM45 signal used by the deadtime logic.
+    value: 1
+  - name: Sm1out45
+    description: SWCOUT[SM1OUT45] used by the deadtime logic.
+    value: 2
+enum/Sm2out23:
+  bit_size: 1
+  variants:
+  - name: Logic0
+    description: A logic 0 is supplied to the deadtime generator of submodule 2 instead of PWM23.
+    value: 0
+  - name: Logic1
+    description: A logic 1 is supplied to the deadtime generator of submodule 2 instead of PWM23.
+    value: 1
+enum/Sm2out45:
+  bit_size: 1
+  variants:
+  - name: Logic0
+    description: A logic 0 is supplied to the deadtime generator of submodule 2 instead of PWM45.
+    value: 0
+  - name: Logic1
+    description: A logic 1 is supplied to the deadtime generator of submodule 2 instead of PWM45.
+    value: 1
+enum/Sm2sel23:
+  bit_size: 2
+  variants:
+  - name: Sm2pwm23
+    description: Generated SM2PWM23 signal used by the deadtime logic.
+    value: 0
+  - name: InvertedSm2pwm23
+    description: Inverted generated SM2PWM23 signal used by the deadtime logic.
+    value: 1
+  - name: Sm2out23
+    description: SWCOUT[SM2OUT23] used by the deadtime logic.
+    value: 2
+  - name: Pwm2Exta
+    description: PWM2_EXTA signal used by the deadtime logic.
+    value: 3
+enum/Sm2sel45:
+  bit_size: 2
+  variants:
+  - name: Sm2pwm45
+    description: Generated SM2PWM45 signal used by the deadtime logic.
+    value: 0
+  - name: InvertedSm2pwm45
+    description: Inverted generated SM2PWM45 signal used by the deadtime logic.
+    value: 1
+  - name: Sm2out45
+    description: SWCOUT[SM2OUT45] used by the deadtime logic.
+    value: 2
+enum/Sm3out23:
+  bit_size: 1
+  variants:
+  - name: Logic0
+    description: A logic 0 is supplied to the deadtime generator of submodule 3 instead of PWM23.
+    value: 0
+  - name: Logic1
+    description: A logic 1 is supplied to the deadtime generator of submodule 3 instead of PWM23.
+    value: 1
+enum/Sm3out45:
+  bit_size: 1
+  variants:
+  - name: Logic0
+    description: A logic 0 is supplied to the deadtime generator of submodule 3 instead of PWM45.
+    value: 0
+  - name: Logic1
+    description: A logic 1 is supplied to the deadtime generator of submodule 3 instead of PWM45.
+    value: 1
+enum/Sm3sel23:
+  bit_size: 2
+  variants:
+  - name: Sm3pwm23
+    description: Generated SM3PWM23 signal used by the deadtime logic.
+    value: 0
+  - name: InvertedSm3pwm23
+    description: Inverted generated SM3PWM23 signal used by the deadtime logic.
+    value: 1
+  - name: Sm3out23
+    description: SWCOUT[SM3OUT23] used by the deadtime logic.
+    value: 2
+  - name: Pwm3Exta
+    description: PWM3_EXTA signal used by the deadtime logic.
+    value: 3
+enum/Sm3sel45:
+  bit_size: 2
+  variants:
+  - name: Sm3pwm45
+    description: Generated SM3PWM45 signal used by the deadtime logic.
+    value: 0
+  - name: InvertedSm3pwm45
+    description: Inverted generated SM3PWM45 signal used by the deadtime logic.
+    value: 1
+  - name: Sm3out45
+    description: SWCOUT[SM3OUT45] used by the deadtime logic.
+    value: 2
+enum/Split:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: DBLPWM is not split. PWM_A and PWM_B each have double pulses.
+    value: 0
+  - name: Enabled
+    description: DBLPWM is split to PWM_A and PWM_B.
+    value: 1
+enum/Valde:
+  bit_size: 1
+  variants:
+  - name: Disabled
+    description: DMA write requests disabled.
+    value: 0
+  - name: Enabled
+    description: Enabled.
+    value: 1

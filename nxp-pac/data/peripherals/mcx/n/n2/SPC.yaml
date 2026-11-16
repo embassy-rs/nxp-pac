@@ -12,30 +12,30 @@ block/SpcAlpha:
     description: Version ID.
     byte_offset: 0
     access: Read
-    fieldset: SpcAlphaFieldsetVictor
+    fieldset: Verid3
   - name: sc
     description: Status Control.
     byte_offset: 16
-    fieldset: SpcAlphaFieldsetOscar
+    fieldset: Sc2
   - name: cntrl
     description: SPC Regulator Control.
     byte_offset: 20
-    fieldset: SpcAlphaFieldsetDelta
+    fieldset: Cntrl2
   - name: lpreq_cfg
     description: Low-Power Request Configuration.
     byte_offset: 28
-    fieldset: SpcAlphaFieldsetLima
+    fieldset: LpreqCfg2
   - name: pd_status
     description: SPC Power Domain Mode Status.
     array:
       len: 2
       stride: 4
     byte_offset: 48
-    fieldset: SpcAlphaFieldsetNovember
+    fieldset: PdStatus
   - name: sramctl
     description: SRAM Control.
     byte_offset: 64
-    fieldset: SpcAlphaFieldsetPapa
+    fieldset: Sramctl2
   - name: active_cfg
     description: Active Power Mode Configuration.
     byte_offset: 256
@@ -43,7 +43,7 @@ block/SpcAlpha:
   - name: active_cfg1
     description: Active Power Mode Configuration 1.
     byte_offset: 260
-    fieldset: SpcAlphaFieldsetBravo
+    fieldset: ActiveCfg2
   - name: lp_cfg
     description: Low-Power Mode Configuration.
     byte_offset: 264
@@ -51,23 +51,23 @@ block/SpcAlpha:
   - name: lp_cfg1
     description: Low Power Mode Configuration 1.
     byte_offset: 268
-    fieldset: SpcAlphaFieldsetKilo
+    fieldset: LpCfg2
   - name: lpwkup_delay
     description: Low Power Wake-Up Delay.
     byte_offset: 288
-    fieldset: SpcAlphaFieldsetMike
+    fieldset: LpwkupDelay2
   - name: active_vdelay
     description: Active Voltage Trim Delay.
     byte_offset: 292
-    fieldset: SpcAlphaFieldsetCharlie
+    fieldset: ActiveVdelay2
   - name: vd_stat
     description: Voltage Detect Status.
     byte_offset: 304
-    fieldset: SpcAlphaFieldsetTango
+    fieldset: VdStat2
   - name: vd_core_cfg
     description: Core Voltage Detect Configuration.
     byte_offset: 308
-    fieldset: SpcAlphaFieldsetRomeo
+    fieldset: VdCoreCfg2
   - name: vd_sys_cfg
     description: System Voltage Detect Configuration.
     byte_offset: 312
@@ -79,27 +79,27 @@ block/SpcAlpha:
   - name: evd_cfg
     description: External Voltage Domain Configuration.
     byte_offset: 320
-    fieldset: SpcAlphaFieldsetHotel
+    fieldset: EvdCfg2
   - name: glitch_detect_sc
     description: Glitch Detect Status Control.
     byte_offset: 324
-    fieldset: SpcAlphaFieldsetIndia
+    fieldset: GlitchDetectSc2
   - name: coreldo_cfg
     description: LDO_CORE Configuration.
     byte_offset: 768
-    fieldset: SpcAlphaFieldsetEcho
+    fieldset: CoreldoCfg2
   - name: sysldo_cfg
     description: LDO_SYS Configuration.
     byte_offset: 1024
-    fieldset: SpcAlphaFieldsetQuebec
+    fieldset: SysldoCfg
   - name: dcdc_cfg
     description: DCDC Configuration.
     byte_offset: 1280
-    fieldset: SpcAlphaFieldsetGolf
+    fieldset: DcdcCfg
   - name: dcdc_burst_cfg
     description: DCDC Burst Configuration.
     byte_offset: 1284
-    fieldset: SpcAlphaFieldsetFoxtrot
+    fieldset: DcdcBurstCfg
 fieldset/SpcAlphaFieldsetAlpha:
   description: Active Power Mode Configuration.
   fields:
@@ -107,7 +107,7 @@ fieldset/SpcAlphaFieldsetAlpha:
     description: LDO_CORE VDD Drive Strength.
     bit_offset: 0
     bit_size: 1
-    enum: SpcAlphaEnumEcho
+    enum: CoreldoVddDs
   - name: coreldo_vdd_lvl
     description: LDO_CORE VDD Regulator Voltage Level.
     bit_offset: 2
@@ -117,142 +117,142 @@ fieldset/SpcAlphaFieldsetAlpha:
     description: LDO_SYS VDD Drive Strength.
     bit_offset: 4
     bit_size: 1
-    enum: SpcAlphaEnumOscar
+    enum: CoreldoVddDs
   - name: sysldo_vdd_lvl
     description: LDO_SYS VDD Regulator Voltage Level.
     bit_offset: 6
     bit_size: 1
-    enum: SpcAlphaEnumIndiaBravo
+    enum: SysldoVddLvl
   - name: dcdc_vdd_ds
     description: DCDC VDD Drive Strength.
     bit_offset: 8
     bit_size: 2
-    enum: SpcAlphaEnumGolf
+    enum: DcdcVddDs2
   - name: dcdc_vdd_lvl
     description: DCDC VDD Regulator Voltage Level.
     bit_offset: 10
     bit_size: 2
-    enum: SpcAlphaEnumHotel
+    enum: DcdcVddLvl
   - name: glitch_detect_disable
     description: Glitch Detect Disable.
     bit_offset: 12
     bit_size: 1
-    enum: SpcAlphaEnumIndia
+    enum: GlitchDetectDisable2
   - name: lpbuff_en
     description: CMP Bandgap Buffer Enable.
     bit_offset: 18
     bit_size: 1
-    enum: SpcAlphaEnumLima
+    enum: Hvdie
   - name: bgmode
     description: Bandgap Mode.
     bit_offset: 20
     bit_size: 2
-    enum: SpcAlphaEnumBravo
+    enum: Bgmode
   - name: vdd_vd_disable
     description: VDD Voltage Detect Disable.
     bit_offset: 23
     bit_size: 1
-    enum: SpcAlphaEnumCharlieCharlie
+    enum: GlitchDetectDisable
   - name: core_lvde
     description: Core Low-Voltage Detection Enable.
     bit_offset: 24
     bit_size: 1
-    enum: SpcAlphaEnumDelta
+    enum: Hvdie
   - name: sys_lvde
     description: System Low-Voltage Detection Enable.
     bit_offset: 25
     bit_size: 1
-    enum: SpcAlphaEnumNovember
+    enum: Hvdie
   - name: io_lvde
     description: IO Low-Voltage Detection Enable.
     bit_offset: 26
     bit_size: 1
-    enum: SpcAlphaEnumKilo
+    enum: Hvdie
   - name: core_hvde
     description: Core High-Voltage Detection Enable.
     bit_offset: 27
     bit_size: 1
-    enum: SpcAlphaEnumCharlie
+    enum: Hvdie
   - name: sys_hvde
     description: System High-Voltage Detection Enable.
     bit_offset: 28
     bit_size: 1
-    enum: SpcAlphaEnumMike
+    enum: Hvdie
   - name: io_hvde
     description: IO High-Voltage Detection Enable.
     bit_offset: 29
     bit_size: 1
-    enum: SpcAlphaEnumJuliet
-fieldset/SpcAlphaFieldsetBravo:
+    enum: Hvdie
+fieldset/ActiveCfg2:
   description: Active Power Mode Configuration 1.
   fields:
   - name: soc_cntrl
     description: Active Config Chip Control.
     bit_offset: 0
     bit_size: 32
-fieldset/SpcAlphaFieldsetCharlie:
+fieldset/ActiveVdelay2:
   description: Active Voltage Trim Delay.
   fields:
   - name: active_vdelay
     description: Active Voltage Delay.
     bit_offset: 0
     bit_size: 16
-fieldset/SpcAlphaFieldsetDelta:
+fieldset/Cntrl2:
   description: SPC Regulator Control.
   fields:
   - name: coreldo_en
     description: LDO_CORE Regulator Enable.
     bit_offset: 0
     bit_size: 1
-    enum: SpcAlphaEnumUniform
+    enum: Hvdie
   - name: sysldo_en
     description: LDO_SYS Regulator Enable.
     bit_offset: 1
     bit_size: 1
-    enum: SpcAlphaEnumHotelBravo
+    enum: Hvdie
   - name: dcdc_en
     description: DCDC_CORE Regulator Enable.
     bit_offset: 2
     bit_size: 1
-    enum: SpcAlphaEnumYankee
-fieldset/SpcAlphaFieldsetEcho:
+    enum: Hvdie
+fieldset/CoreldoCfg2:
   description: LDO_CORE Configuration.
   fields:
   - name: dpdown_pulldown_disable
     description: LDO_CORE Deep Power Down Pulldown Disable.
     bit_offset: 16
     bit_size: 1
-    enum: SpcAlphaEnumZulu
-fieldset/SpcAlphaFieldsetFoxtrot:
+    enum: DpdownPulldownDisable
+fieldset/DcdcBurstCfg:
   description: DCDC Burst Configuration.
   fields:
   - name: burst_req
     description: Software Burst Request.
     bit_offset: 0
     bit_size: 1
-    enum: SpcAlphaEnumRomeo
+    enum: BurstReq
   - name: ext_burst_en
     description: External Burst Request Enable.
     bit_offset: 1
     bit_size: 1
-    enum: SpcAlphaEnumAlphaAlpha
+    enum: Hvdie
   - name: burst_ack
     description: Burst Acknowledge Flag.
     bit_offset: 3
     bit_size: 1
-    enum: SpcAlphaEnumQuebec
+    enum: BurstAck
   - name: pulse_refresh_cnt
     description: Refresh Count Value.
     bit_offset: 16
     bit_size: 16
-fieldset/SpcAlphaFieldsetGolf:
+fieldset/DcdcCfg:
   description: DCDC Configuration.
   fields:
   - name: freq_cntrl_on
     description: DCDC Burst Frequency Control Enable.
     bit_offset: 0
     bit_size: 1
-    enum: SpcAlphaEnumCharlieAlpha
+    enum: Hvdie
   - name: freq_cntrl
     description: DCDC Burst Frequency Control.
     bit_offset: 8
@@ -261,8 +261,8 @@ fieldset/SpcAlphaFieldsetGolf:
     description: DCDC Bleed Enable.
     bit_offset: 19
     bit_size: 1
-    enum: SpcAlphaEnumPapa
-fieldset/SpcAlphaFieldsetHotel:
+    enum: BleedEn
+fieldset/EvdCfg2:
   description: External Voltage Domain Configuration.
   fields:
   - name: evdiso
@@ -277,14 +277,14 @@ fieldset/SpcAlphaFieldsetHotel:
     description: External Voltage Domain Status.
     bit_offset: 16
     bit_size: 6
-fieldset/SpcAlphaFieldsetIndia:
+fieldset/GlitchDetectSc2:
   description: Glitch Detect Status Control.
   fields:
   - name: cnt_select
     description: Counter Select.
     bit_offset: 0
     bit_size: 2
-    enum: SpcAlphaEnumTango
+    enum: CntSelect2
   - name: timeout
     description: Timeout.
     bit_offset: 2
@@ -293,12 +293,12 @@ fieldset/SpcAlphaFieldsetIndia:
     description: Glitch Detect Reset Enable.
     bit_offset: 6
     bit_size: 1
-    enum: SpcAlphaEnumDeltaBravo
+    enum: Re2
   - name: ie
     description: Glitch Detect Interrupt Enable.
     bit_offset: 7
     bit_size: 1
-    enum: SpcAlphaEnumEchoAlpha
+    enum: Ie3
   - name: glitch_detect_flag
     description: GLITCH_DETECT_FLAG.
     bit_offset: 8
@@ -307,7 +307,7 @@ fieldset/SpcAlphaFieldsetIndia:
     description: Glitch Detect Reset Enable Lock Bit.
     bit_offset: 16
     bit_size: 1
-    enum: SpcAlphaEnumDeltaAlpha
+    enum: Lock3
 fieldset/SpcAlphaFieldsetJuliet:
   description: Low-Power Mode Configuration.
   fields:
@@ -315,7 +315,7 @@ fieldset/SpcAlphaFieldsetJuliet:
     description: LDO_CORE VDD Drive Strength.
     bit_offset: 0
     bit_size: 1
-    enum: SpcAlphaEnumLimaAlpha
+    enum: CoreldoVddDs
   - name: coreldo_vdd_lvl
     description: LDO_CORE VDD Regulator Voltage Level.
     bit_offset: 2
@@ -325,198 +325,198 @@ fieldset/SpcAlphaFieldsetJuliet:
     description: LDO_SYS VDD Drive Strength.
     bit_offset: 4
     bit_size: 1
-    enum: SpcAlphaEnumVictorAlpha
+    enum: CoreldoVddDs
   - name: dcdc_vdd_ds
     description: DCDC VDD Drive Strength.
     bit_offset: 8
     bit_size: 2
-    enum: SpcAlphaEnumNovemberAlpha
+    enum: DcdcVddDs
   - name: dcdc_vdd_lvl
     description: DCDC VDD Regulator Voltage Level.
     bit_offset: 10
     bit_size: 2
-    enum: SpcAlphaEnumOscarAlpha
+    enum: DcdcVddLvl2
   - name: glitch_detect_disable
     description: Glitch Detect Disable.
     bit_offset: 12
     bit_size: 1
-    enum: SpcAlphaEnumPapaAlpha
+    enum: GlitchDetectDisable
   - name: corevdd_ivs_en
     description: CORE VDD Internal Voltage Scaling (IVS) Enable.
     bit_offset: 17
     bit_size: 1
-    enum: SpcAlphaEnumWhiskey
+    enum: Hvdie
   - name: lpbuff_en
     description: CMP Bandgap Buffer Enable.
     bit_offset: 18
     bit_size: 1
-    enum: SpcAlphaEnumSierraAlpha
+    enum: Hvdie
   - name: bgmode
     description: Bandgap Mode.
     bit_offset: 20
     bit_size: 2
-    enum: SpcAlphaEnumIndiaAlpha
+    enum: Bgmode
   - name: lp_irefen
     description: Low-Power IREF Enable.
     bit_offset: 23
     bit_size: 1
-    enum: SpcAlphaEnumWhiskeyAlpha
+    enum: LpIrefen
   - name: core_lvde
     description: Core Low Voltage Detect Enable.
     bit_offset: 24
     bit_size: 1
-    enum: SpcAlphaEnumKiloAlpha
+    enum: Hvdie
   - name: sys_lvde
     description: System Low Voltage Detect Enable.
     bit_offset: 25
     bit_size: 1
-    enum: SpcAlphaEnumUniformAlpha
+    enum: Hvdie
   - name: io_lvde
     description: IO Low Voltage Detect Enable.
     bit_offset: 26
     bit_size: 1
-    enum: SpcAlphaEnumRomeoAlpha
+    enum: Hvdie
   - name: core_hvde
     description: Core High Voltage Detect Enable.
     bit_offset: 27
     bit_size: 1
-    enum: SpcAlphaEnumJulietAlpha
+    enum: Hvdie
   - name: sys_hvde
     description: System High Voltage Detect Enable.
     bit_offset: 28
     bit_size: 1
-    enum: SpcAlphaEnumTangoAlpha
+    enum: Hvdie
   - name: io_hvde
     description: IO High Voltage Detect Enable.
     bit_offset: 29
     bit_size: 1
-    enum: SpcAlphaEnumQuebecAlpha
-fieldset/SpcAlphaFieldsetKilo:
+    enum: Hvdie
+fieldset/LpCfg2:
   description: Low Power Mode Configuration 1.
   fields:
   - name: soc_cntrl
     description: Low-Power Configuration Chip Control.
     bit_offset: 0
     bit_size: 32
-fieldset/SpcAlphaFieldsetLima:
+fieldset/LpreqCfg2:
   description: Low-Power Request Configuration.
   fields:
   - name: lpreqoe
     description: Low-Power Request Output Enable.
     bit_offset: 0
     bit_size: 1
-    enum: SpcAlphaEnumYankeeAlpha
+    enum: Hvdie
   - name: lpreqpol
     description: Low-Power Request Output Pin Polarity Control.
     bit_offset: 1
     bit_size: 1
-    enum: SpcAlphaEnumAlphaBravo
+    enum: Lpreqpol2
   - name: lpreqov
     description: Low-Power Request Output Override.
     bit_offset: 2
     bit_size: 2
-    enum: SpcAlphaEnumZuluAlpha
-fieldset/SpcAlphaFieldsetMike:
+    enum: Lpreqov2
+fieldset/LpwkupDelay2:
   description: Low Power Wake-Up Delay.
   fields:
   - name: lpwkup_delay
     description: Low-Power Wake-Up Delay.
     bit_offset: 0
     bit_size: 16
-fieldset/SpcAlphaFieldsetNovember:
+fieldset/PdStatus:
   description: SPC Power Domain Mode Status.
   fields:
   - name: pwr_req_status
     description: Power Request Status Flag.
     bit_offset: 0
     bit_size: 1
-    enum: SpcAlphaEnumCharlieBravo
+    enum: PdLpReq2
   - name: pd_lp_req
     description: Power Domain Low Power Request Flag.
     bit_offset: 4
     bit_size: 1
-    enum: SpcAlphaEnumBravoBravo
+    enum: PdLpReq2
   - name: lp_mode
     description: Power Domain Low Power Mode Request.
     bit_offset: 8
     bit_size: 4
-    enum: SpcAlphaEnumXrayAlpha
-fieldset/SpcAlphaFieldsetOscar:
+    enum: LpMode2
+fieldset/Sc2:
   description: Status Control.
   fields:
   - name: busy
     description: SPC Busy Status Flag.
     bit_offset: 0
     bit_size: 1
-    enum: SpcAlphaEnumSierra
+    enum: Busy2
   - name: spc_lp_req
     description: SPC Power Mode Configuration Status Flag.
     bit_offset: 1
     bit_size: 1
-    enum: SpcAlphaEnumGolfBravo
+    enum: SpcLpReq2
   - name: spc_lp_mode
     description: Power Domain Low-Power Mode Request.
     bit_offset: 4
     bit_size: 4
-    enum: SpcAlphaEnumFoxtrotBravo
+    enum: SpcLpMode2
   - name: iso_clr
     description: Isolation Clear Flags.
     bit_offset: 16
     bit_size: 2
-fieldset/SpcAlphaFieldsetPapa:
+fieldset/Sramctl2:
   description: SRAM Control.
   fields:
   - name: vsm
     description: Voltage Select Margin.
     bit_offset: 0
     bit_size: 2
-    enum: SpcAlphaEnumDeltaCharlie
+    enum: Vsm2
   - name: req
     description: SRAM Voltage Update Request.
     bit_offset: 30
     bit_size: 1
-    enum: SpcAlphaEnumEchoBravo
+    enum: Req
   - name: ack
     description: SRAM Voltage Update Request Acknowledge.
     bit_offset: 31
     bit_size: 1
-    enum: SpcAlphaEnumAlpha
-fieldset/SpcAlphaFieldsetQuebec:
+    enum: Ack
+fieldset/SysldoCfg:
   description: LDO_SYS Configuration.
   fields:
   - name: isinken
     description: Current Sink Enable.
     bit_offset: 0
     bit_size: 1
-    enum: SpcAlphaEnumHotelAlpha
-fieldset/SpcAlphaFieldsetRomeo:
+    enum: Isinken
+fieldset/VdCoreCfg2:
   description: Core Voltage Detect Configuration.
   fields:
   - name: lvdre
     description: Core LVD Reset Enable.
     bit_offset: 0
     bit_size: 1
-    enum: SpcAlphaEnumPapaBravo
+    enum: Hvdie
   - name: lvdie
     description: Core LVD Interrupt Enable.
     bit_offset: 1
     bit_size: 1
-    enum: SpcAlphaEnumOscarBravo
+    enum: Hvdie
   - name: hvdre
     description: Core VDD HVD Reset Enable.
     bit_offset: 2
     bit_size: 1
-    enum: SpcAlphaEnumMikeBravo
+    enum: Hvdie
   - name: hvdie
     description: Core VDD HVD Interrupt Enable.
     bit_offset: 3
     bit_size: 1
-    enum: SpcAlphaEnumLimaBravo
+    enum: Hvdie
   - name: lock
     description: Core Voltage Detect Reset Enable Lock.
     bit_offset: 16
     bit_size: 1
-    enum: SpcAlphaEnumNovemberBravo
+    enum: Lock2
 fieldset/SpcAlphaFieldsetSierra:
   description: IO Voltage Detect Configuration.
   fields:
@@ -524,65 +524,65 @@ fieldset/SpcAlphaFieldsetSierra:
     description: IO VDD LVD Reset Enable.
     bit_offset: 0
     bit_size: 1
-    enum: SpcAlphaEnumUniformBravo
+    enum: Hvdie
   - name: lvdie
     description: IO VDD LVD Interrupt Enable.
     bit_offset: 1
     bit_size: 1
-    enum: SpcAlphaEnumTangoBravo
+    enum: Hvdie
   - name: hvdre
     description: IO VDD HVD Reset Enable.
     bit_offset: 2
     bit_size: 1
-    enum: SpcAlphaEnumRomeoBravo
+    enum: Hvdie
   - name: hvdie
     description: IO VDD HVD Interrupt Enable.
     bit_offset: 3
     bit_size: 1
-    enum: SpcAlphaEnumQuebecBravo
+    enum: Hvdie
   - name: lvsel
     description: IO VDD Low-Voltage Level Select.
     bit_offset: 8
     bit_size: 1
-    enum: SpcAlphaEnumVictorBravo
+    enum: Lvsel2
   - name: lock
     description: IO Voltage Detect Reset Enable Lock.
     bit_offset: 16
     bit_size: 1
-    enum: SpcAlphaEnumSierraBravo
-fieldset/SpcAlphaFieldsetTango:
+    enum: Lock2
+fieldset/VdStat2:
   description: Voltage Detect Status.
   fields:
   - name: corevdd_lvdf
     description: Core Low-Voltage Detect Flag.
     bit_offset: 0
     bit_size: 1
-    enum: SpcAlphaEnumXray
+    enum: CorevddHvdf
   - name: sysvdd_lvdf
     description: System Low-Voltage Detect Flag.
     bit_offset: 1
     bit_size: 1
-    enum: SpcAlphaEnumKiloBravo
+    enum: CorevddHvdf
   - name: iovdd_lvdf
     description: IO VDD LVD Flag.
     bit_offset: 2
     bit_size: 1
-    enum: SpcAlphaEnumGolfAlpha
+    enum: CorevddHvdf
   - name: corevdd_hvdf
     description: Core VDD HVD Flag.
     bit_offset: 4
     bit_size: 1
-    enum: SpcAlphaEnumVictor
+    enum: CorevddHvdf
   - name: sysvdd_hvdf
     description: System HVD Flag.
     bit_offset: 5
     bit_size: 1
-    enum: SpcAlphaEnumJulietBravo
+    enum: CorevddHvdf
   - name: iovdd_hvdf
     description: IO VDD HVD Flag.
     bit_offset: 6
     bit_size: 1
-    enum: SpcAlphaEnumFoxtrotAlpha
+    enum: CorevddHvdf
 fieldset/SpcAlphaFieldsetUniform:
   description: System Voltage Detect Configuration.
   fields:
@@ -590,40 +590,40 @@ fieldset/SpcAlphaFieldsetUniform:
     description: System LVD Reset Enable.
     bit_offset: 0
     bit_size: 1
-    enum: SpcAlphaEnumAlphaCharlie
+    enum: Hvdie
   - name: lvdie
     description: System LVD Interrupt Enable.
     bit_offset: 1
     bit_size: 1
-    enum: SpcAlphaEnumZuluBravo
+    enum: Hvdie
   - name: hvdre
     description: System HVD Reset Enable.
     bit_offset: 2
     bit_size: 1
-    enum: SpcAlphaEnumXrayBravo
+    enum: Hvdie
   - name: hvdie
     description: System HVD Interrupt Enable.
     bit_offset: 3
     bit_size: 1
-    enum: SpcAlphaEnumWhiskeyBravo
+    enum: Hvdie
   - name: lvsel
     description: System Low-Voltage Level Select.
     bit_offset: 8
     bit_size: 1
-    enum: SpcAlphaEnumBravoCharlie
+    enum: Lvsel2
   - name: lock
     description: System Voltage Detect Reset Enable Lock.
     bit_offset: 16
     bit_size: 1
-    enum: SpcAlphaEnumYankeeBravo
-fieldset/SpcAlphaFieldsetVictor:
+    enum: Lock2
+fieldset/Verid3:
   description: Version ID.
   fields:
   - name: feature
     description: Feature Specification Number.
     bit_offset: 0
     bit_size: 16
-    enum: SpcAlphaEnumBravoAlpha
+    enum: Feature2
   - name: minor
     description: Minor Version Number.
     bit_offset: 16
@@ -632,7 +632,7 @@ fieldset/SpcAlphaFieldsetVictor:
     description: Major Version Number.
     bit_offset: 24
     bit_size: 8
-enum/SpcAlphaEnumAlpha:
+enum/Ack:
   bit_size: 1
   variants:
   - name: AckNo
@@ -641,7 +641,7 @@ enum/SpcAlphaEnumAlpha:
   - name: AckYes
     description: Acknowledged.
     value: 1
-enum/SpcAlphaEnumBravo:
+enum/Bgmode:
   bit_size: 2
   variants:
   - name: Bgmode0
@@ -653,25 +653,7 @@ enum/SpcAlphaEnumBravo:
   - name: Bgmode10
     description: Bandgap enabled, buffer enabled.
     value: 2
-enum/SpcAlphaEnumCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumDelta:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumEcho:
+enum/CoreldoVddDs:
   bit_size: 1
   variants:
   - name: Low
@@ -689,7 +671,7 @@ enum/SpcAlphaEnumFoxtrot:
   - name: Normal
     description: Regulate to normal voltage (1.1 V).
     value: 2
-enum/SpcAlphaEnumGolf:
+enum/DcdcVddDs2:
   bit_size: 2
   variants:
   - name: Low
@@ -698,7 +680,7 @@ enum/SpcAlphaEnumGolf:
   - name: Normal
     description: Normal.
     value: 2
-enum/SpcAlphaEnumHotel:
+enum/DcdcVddLvl:
   bit_size: 2
   variants:
   - name: Dcdc01
@@ -710,7 +692,7 @@ enum/SpcAlphaEnumHotel:
   - name: Dcdc11
     description: Overdrive voltage (1.2 V).
     value: 3
-enum/SpcAlphaEnumIndia:
+enum/GlitchDetectDisable2:
   bit_size: 1
   variants:
   - name: Disabled
@@ -719,7 +701,7 @@ enum/SpcAlphaEnumIndia:
   - name: Enabled
     description: Low Voltage Glitch Detect disabled.
     value: 1
-enum/SpcAlphaEnumJuliet:
+enum/Hvdie:
   bit_size: 1
   variants:
   - name: Disable
@@ -728,52 +710,7 @@ enum/SpcAlphaEnumJuliet:
   - name: Enable
     description: Enable.
     value: 1
-enum/SpcAlphaEnumKilo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumLima:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumMike:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumNovember:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumOscar:
-  bit_size: 1
-  variants:
-  - name: Low
-    description: Low.
-    value: 0
-  - name: Normal
-    description: Normal.
-    value: 1
-enum/SpcAlphaEnumPapa:
+enum/BleedEn:
   bit_size: 1
   variants:
   - name: AddNo
@@ -782,7 +719,7 @@ enum/SpcAlphaEnumPapa:
   - name: AddYes
     description: Add.
     value: 1
-enum/SpcAlphaEnumQuebec:
+enum/BurstAck:
   bit_size: 1
   variants:
   - name: ComplNo
@@ -791,7 +728,7 @@ enum/SpcAlphaEnumQuebec:
   - name: ComplYes
     description: Completed.
     value: 1
-enum/SpcAlphaEnumRomeo:
+enum/BurstReq:
   bit_size: 1
   variants:
   - name: GenNo
@@ -800,7 +737,7 @@ enum/SpcAlphaEnumRomeo:
   - name: GenYes
     description: Generate.
     value: 1
-enum/SpcAlphaEnumSierra:
+enum/Busy2:
   bit_size: 1
   variants:
   - name: BusyNo
@@ -809,7 +746,7 @@ enum/SpcAlphaEnumSierra:
   - name: BusyYes
     description: Busy.
     value: 1
-enum/SpcAlphaEnumTango:
+enum/CntSelect2:
   bit_size: 2
   variants:
   - name: Bit0
@@ -824,16 +761,7 @@ enum/SpcAlphaEnumTango:
   - name: Bit3
     description: '3.'
     value: 3
-enum/SpcAlphaEnumUniform:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumVictor:
+enum/CorevddHvdf:
   bit_size: 1
   variants:
   - name: EventNo
@@ -842,34 +770,7 @@ enum/SpcAlphaEnumVictor:
   - name: EventYes
     description: Event detected.
     value: 1
-enum/SpcAlphaEnumWhiskey:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumXray:
-  bit_size: 1
-  variants:
-  - name: EventNo
-    description: Event not detected.
-    value: 0
-  - name: EventYes
-    description: Event detected.
-    value: 1
-enum/SpcAlphaEnumYankee:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumZulu:
+enum/DpdownPulldownDisable:
   bit_size: 1
   variants:
   - name: Disabled
@@ -878,31 +779,13 @@ enum/SpcAlphaEnumZulu:
   - name: Enabled
     description: LDO_CORE pulldown in Deep Power Down disabled.
     value: 1
-enum/SpcAlphaEnumAlphaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumBravoAlpha:
+enum/Feature2:
   bit_size: 16
   variants:
   - name: Standard
     description: Standard features.
     value: 0
-enum/SpcAlphaEnumCharlieAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumDeltaAlpha:
+enum/Lock3:
   bit_size: 1
   variants:
   - name: Disabled
@@ -911,7 +794,7 @@ enum/SpcAlphaEnumDeltaAlpha:
   - name: Enabled
     description: Writes to RE are ignored.
     value: 1
-enum/SpcAlphaEnumEchoAlpha:
+enum/Ie3:
   bit_size: 1
   variants:
   - name: Disabled
@@ -920,25 +803,7 @@ enum/SpcAlphaEnumEchoAlpha:
   - name: Enabled
     description: GLITCH_DETECT_FLAG[CNT_SELECT] does generate hardware interrupt.
     value: 1
-enum/SpcAlphaEnumFoxtrotAlpha:
-  bit_size: 1
-  variants:
-  - name: EventNo
-    description: Event not detected.
-    value: 0
-  - name: EventYes
-    description: Event detected.
-    value: 1
-enum/SpcAlphaEnumGolfAlpha:
-  bit_size: 1
-  variants:
-  - name: EventNo
-    description: Event not detected.
-    value: 0
-  - name: EventYes
-    description: Event detected.
-    value: 1
-enum/SpcAlphaEnumHotelAlpha:
+enum/Isinken:
   bit_size: 1
   variants:
   - name: Disable
@@ -946,45 +811,6 @@ enum/SpcAlphaEnumHotelAlpha:
     value: 0
   - name: Enabled
     description: Enable.
-    value: 1
-enum/SpcAlphaEnumIndiaAlpha:
-  bit_size: 2
-  variants:
-  - name: Bgmode0
-    description: Bandgap disabled.
-    value: 0
-  - name: Bgmode01
-    description: Bandgap enabled, buffer disabled.
-    value: 1
-  - name: Bgmode10
-    description: Bandgap enabled, buffer enabled.
-    value: 2
-enum/SpcAlphaEnumJulietAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumKiloAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumLimaAlpha:
-  bit_size: 1
-  variants:
-  - name: Low
-    description: Low.
-    value: 0
-  - name: Normal
-    description: Normal.
     value: 1
 enum/SpcAlphaEnumMikeAlpha:
   bit_size: 2
@@ -1001,7 +827,7 @@ enum/SpcAlphaEnumMikeAlpha:
   - name: Under
     description: Retention voltage.
     value: 0
-enum/SpcAlphaEnumNovemberAlpha:
+enum/DcdcVddDs:
   bit_size: 2
   variants:
   - name: Low
@@ -1013,7 +839,7 @@ enum/SpcAlphaEnumNovemberAlpha:
   - name: Pulse
     description: Pulse refresh.
     value: 0
-enum/SpcAlphaEnumOscarAlpha:
+enum/DcdcVddLvl2:
   bit_size: 2
   variants:
   - name: Vdd00
@@ -1028,7 +854,7 @@ enum/SpcAlphaEnumOscarAlpha:
   - name: Vdd11
     description: Overdrive voltage (1.2 V).
     value: 3
-enum/SpcAlphaEnumPapaAlpha:
+enum/GlitchDetectDisable:
   bit_size: 1
   variants:
   - name: Disable
@@ -1037,61 +863,7 @@ enum/SpcAlphaEnumPapaAlpha:
   - name: Enable
     description: Enable.
     value: 0
-enum/SpcAlphaEnumQuebecAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumRomeoAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumSierraAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumTangoAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumUniformAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumVictorAlpha:
-  bit_size: 1
-  variants:
-  - name: Low
-    description: Low.
-    value: 0
-  - name: Normal
-    description: Normal.
-    value: 1
-enum/SpcAlphaEnumWhiskeyAlpha:
+enum/LpIrefen:
   bit_size: 1
   variants:
   - name: Disable
@@ -1100,7 +872,7 @@ enum/SpcAlphaEnumWhiskeyAlpha:
   - name: Enable
     description: Enable.
     value: 1
-enum/SpcAlphaEnumXrayAlpha:
+enum/LpMode2:
   bit_size: 4
   variants:
   - name: Mode0
@@ -1115,16 +887,7 @@ enum/SpcAlphaEnumXrayAlpha:
   - name: Mode8
     description: DPDOWN with system clock off.
     value: 8
-enum/SpcAlphaEnumYankeeAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumZuluAlpha:
+enum/Lpreqov2:
   bit_size: 2
   variants:
   - name: ForceHigh
@@ -1136,7 +899,7 @@ enum/SpcAlphaEnumZuluAlpha:
   - name: ForceNo
     description: Not forced.
     value: 0
-enum/SpcAlphaEnumAlphaBravo:
+enum/Lpreqpol2:
   bit_size: 1
   variants:
   - name: High
@@ -1145,7 +908,7 @@ enum/SpcAlphaEnumAlphaBravo:
   - name: Low
     description: Low.
     value: 1
-enum/SpcAlphaEnumBravoBravo:
+enum/PdLpReq2:
   bit_size: 1
   variants:
   - name: ReqNo
@@ -1154,25 +917,7 @@ enum/SpcAlphaEnumBravoBravo:
   - name: ReqYes
     description: Requested.
     value: 1
-enum/SpcAlphaEnumCharlieBravo:
-  bit_size: 1
-  variants:
-  - name: ReqNo
-    description: Did not request.
-    value: 0
-  - name: ReqYes
-    description: Requested.
-    value: 1
-enum/SpcAlphaEnumDeltaBravo:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: GLITCH_DETECT_FLAG[CNT_SELECT] does not generate POR/LVD reset.
-    value: 0
-  - name: Enabled
-    description: GLITCH_DETECT_FLAG[CNT_SELECT] does generate POR/LVD reset.
-    value: 1
-enum/SpcAlphaEnumEchoBravo:
+enum/Req:
   bit_size: 1
   variants:
   - name: ReqNo
@@ -1181,22 +926,7 @@ enum/SpcAlphaEnumEchoBravo:
   - name: ReqYes
     description: Request.
     value: 1
-enum/SpcAlphaEnumFoxtrotBravo:
-  bit_size: 4
-  variants:
-  - name: Mode0
-    description: Sleep mode with system clock running.
-    value: 0
-  - name: Mode1
-    description: DSLEEP with system clock off.
-    value: 1
-  - name: Mode2
-    description: PDOWN with system clock off.
-    value: 2
-  - name: Mode8
-    description: DPDOWN with system clock off.
-    value: 8
-enum/SpcAlphaEnumGolfBravo:
+enum/SpcLpReq2:
   bit_size: 1
   variants:
   - name: Active
@@ -1205,16 +935,7 @@ enum/SpcAlphaEnumGolfBravo:
   - name: LowPower
     description: All power domains requested low-power mode; SPC entered a low-power state; power-mode configuration based on the LP_CFG register.
     value: 1
-enum/SpcAlphaEnumHotelBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumIndiaBravo:
+enum/SysldoVddLvl:
   bit_size: 1
   variants:
   - name: Normal
@@ -1223,115 +944,7 @@ enum/SpcAlphaEnumIndiaBravo:
   - name: Over
     description: Overdrive voltage (2.5 V).
     value: 1
-enum/SpcAlphaEnumJulietBravo:
-  bit_size: 1
-  variants:
-  - name: EventNo
-    description: Event not detected.
-    value: 0
-  - name: EventYes
-    description: Event detected.
-    value: 1
-enum/SpcAlphaEnumKiloBravo:
-  bit_size: 1
-  variants:
-  - name: EventNo
-    description: Event not detected.
-    value: 0
-  - name: EventYes
-    description: Event detected.
-    value: 1
-enum/SpcAlphaEnumLimaBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumMikeBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumNovemberBravo:
-  bit_size: 1
-  variants:
-  - name: Allow
-    description: Allow.
-    value: 0
-  - name: Deny
-    description: Deny.
-    value: 1
-enum/SpcAlphaEnumOscarBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumPapaBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumQuebecBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumRomeoBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumSierraBravo:
-  bit_size: 1
-  variants:
-  - name: Allow
-    description: Allow.
-    value: 0
-  - name: Deny
-    description: Deny.
-    value: 1
-enum/SpcAlphaEnumTangoBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumUniformBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumVictorBravo:
+enum/Lvsel2:
   bit_size: 1
   variants:
   - name: Normal
@@ -1340,70 +953,7 @@ enum/SpcAlphaEnumVictorBravo:
   - name: Safe
     description: Safe.
     value: 1
-enum/SpcAlphaEnumWhiskeyBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumXrayBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumYankeeBravo:
-  bit_size: 1
-  variants:
-  - name: Allow
-    description: Allow.
-    value: 0
-  - name: Deny
-    description: Deny.
-    value: 1
-enum/SpcAlphaEnumZuluBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumAlphaCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcAlphaEnumBravoCharlie:
-  bit_size: 1
-  variants:
-  - name: Normal
-    description: Normal.
-    value: 0
-  - name: Safe
-    description: Safe.
-    value: 1
-enum/SpcAlphaEnumCharlieCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 1
-  - name: Enable
-    description: Enable.
-    value: 0
-enum/SpcAlphaEnumDeltaCharlie:
+enum/Vsm2:
   bit_size: 2
   variants:
   - name: Vsm1
@@ -1419,30 +969,30 @@ block/SpcBravo:
     description: Version ID.
     byte_offset: 0
     access: Read
-    fieldset: SpcBravoFieldsetVictor
+    fieldset: Verid3
   - name: sc
     description: Status Control.
     byte_offset: 16
-    fieldset: SpcBravoFieldsetOscar
+    fieldset: Sc2
   - name: cntrl
     description: SPC Regulator Control.
     byte_offset: 20
-    fieldset: SpcBravoFieldsetDelta
+    fieldset: Cntrl2
   - name: lpreq_cfg
     description: Low-Power Request Configuration.
     byte_offset: 28
-    fieldset: SpcBravoFieldsetLima
+    fieldset: LpreqCfg2
   - name: pd_status
     description: SPC Power Domain Mode Status.
     array:
       len: 2
       stride: 4
     byte_offset: 48
-    fieldset: SpcBravoFieldsetNovember
+    fieldset: PdStatus
   - name: sramctl
     description: SRAM Control.
     byte_offset: 64
-    fieldset: SpcBravoFieldsetPapa
+    fieldset: Sramctl2
   - name: active_cfg
     description: Active Power Mode Configuration.
     byte_offset: 256
@@ -1450,7 +1000,7 @@ block/SpcBravo:
   - name: active_cfg1
     description: Active Power Mode Configuration 1.
     byte_offset: 260
-    fieldset: SpcBravoFieldsetBravo
+    fieldset: ActiveCfg2
   - name: lp_cfg
     description: Low-Power Mode Configuration.
     byte_offset: 264
@@ -1458,23 +1008,23 @@ block/SpcBravo:
   - name: lp_cfg1
     description: Low Power Mode Configuration 1.
     byte_offset: 268
-    fieldset: SpcBravoFieldsetKilo
+    fieldset: LpCfg2
   - name: lpwkup_delay
     description: Low Power Wake-Up Delay.
     byte_offset: 288
-    fieldset: SpcBravoFieldsetMike
+    fieldset: LpwkupDelay2
   - name: active_vdelay
     description: Active Voltage Trim Delay.
     byte_offset: 292
-    fieldset: SpcBravoFieldsetCharlie
+    fieldset: ActiveVdelay2
   - name: vd_stat
     description: Voltage Detect Status.
     byte_offset: 304
-    fieldset: SpcBravoFieldsetTango
+    fieldset: VdStat2
   - name: vd_core_cfg
     description: Core Voltage Detect Configuration.
     byte_offset: 308
-    fieldset: SpcBravoFieldsetRomeo
+    fieldset: VdCoreCfg2
   - name: vd_sys_cfg
     description: System Voltage Detect Configuration.
     byte_offset: 312
@@ -1486,27 +1036,27 @@ block/SpcBravo:
   - name: evd_cfg
     description: External Voltage Domain Configuration.
     byte_offset: 320
-    fieldset: SpcBravoFieldsetHotel
+    fieldset: EvdCfg2
   - name: glitch_detect_sc
     description: Glitch Detect Status Control.
     byte_offset: 324
-    fieldset: SpcBravoFieldsetIndia
+    fieldset: GlitchDetectSc2
   - name: coreldo_cfg
     description: LDO_CORE Configuration.
     byte_offset: 768
-    fieldset: SpcBravoFieldsetEcho
+    fieldset: CoreldoCfg2
   - name: sysldo_cfg
     description: LDO_SYS Configuration.
     byte_offset: 1024
-    fieldset: SpcBravoFieldsetQuebec
+    fieldset: SysldoCfg
   - name: dcdc_cfg
     description: DCDC Configuration.
     byte_offset: 1280
-    fieldset: SpcBravoFieldsetGolf
+    fieldset: DcdcCfg
   - name: dcdc_burst_cfg
     description: DCDC Burst Configuration.
     byte_offset: 1284
-    fieldset: SpcBravoFieldsetFoxtrot
+    fieldset: DcdcBurstCfg
 fieldset/SpcBravoFieldsetAlpha:
   description: Active Power Mode Configuration.
   fields:
@@ -1514,7 +1064,7 @@ fieldset/SpcBravoFieldsetAlpha:
     description: LDO_CORE VDD Drive Strength.
     bit_offset: 0
     bit_size: 1
-    enum: SpcBravoEnumEcho
+    enum: CoreldoVddDs
   - name: coreldo_vdd_lvl
     description: LDO_CORE VDD Regulator Voltage Level.
     bit_offset: 2
@@ -1524,197 +1074,72 @@ fieldset/SpcBravoFieldsetAlpha:
     description: LDO_SYS VDD Drive Strength.
     bit_offset: 4
     bit_size: 1
-    enum: SpcBravoEnumOscar
+    enum: CoreldoVddDs
   - name: sysldo_vdd_lvl
     description: LDO_SYS VDD Regulator Voltage Level.
     bit_offset: 6
     bit_size: 1
-    enum: SpcBravoEnumJulietBravo
+    enum: SysldoVddLvl
   - name: dcdc_vdd_ds
     description: DCDC VDD Drive Strength.
     bit_offset: 8
     bit_size: 2
-    enum: SpcBravoEnumGolf
+    enum: DcdcVddDs2
   - name: dcdc_vdd_lvl
     description: DCDC VDD Regulator Voltage Level.
     bit_offset: 10
     bit_size: 2
-    enum: SpcBravoEnumHotel
+    enum: DcdcVddLvl
   - name: glitch_detect_disable
     description: Glitch Detect Disable.
     bit_offset: 12
     bit_size: 1
-    enum: SpcBravoEnumIndia
+    enum: GlitchDetectDisable2
   - name: lpbuff_en
     description: CMP Bandgap Buffer Enable.
     bit_offset: 18
     bit_size: 1
-    enum: SpcBravoEnumLima
+    enum: Hvdie
   - name: bgmode
     description: Bandgap Mode.
     bit_offset: 20
     bit_size: 2
-    enum: SpcBravoEnumBravo
+    enum: Bgmode
   - name: vdd_vd_disable
     description: VDD Voltage Detect Disable.
     bit_offset: 23
     bit_size: 1
-    enum: SpcBravoEnumBravoCharlie
+    enum: GlitchDetectDisable
   - name: core_lvde
     description: Core Low-Voltage Detection Enable.
     bit_offset: 24
     bit_size: 1
-    enum: SpcBravoEnumDelta
+    enum: Hvdie
   - name: sys_lvde
     description: System Low-Voltage Detection Enable.
     bit_offset: 25
     bit_size: 1
-    enum: SpcBravoEnumNovember
+    enum: Hvdie
   - name: io_lvde
     description: IO Low-Voltage Detection Enable.
     bit_offset: 26
     bit_size: 1
-    enum: SpcBravoEnumKilo
+    enum: Hvdie
   - name: core_hvde
     description: Core High-Voltage Detection Enable.
     bit_offset: 27
     bit_size: 1
-    enum: SpcBravoEnumCharlie
+    enum: Hvdie
   - name: sys_hvde
     description: System High-Voltage Detection Enable.
     bit_offset: 28
     bit_size: 1
-    enum: SpcBravoEnumMike
+    enum: Hvdie
   - name: io_hvde
     description: IO High-Voltage Detection Enable.
     bit_offset: 29
     bit_size: 1
-    enum: SpcBravoEnumJuliet
-fieldset/SpcBravoFieldsetBravo:
-  description: Active Power Mode Configuration 1.
-  fields:
-  - name: soc_cntrl
-    description: Active Config Chip Control.
-    bit_offset: 0
-    bit_size: 32
-fieldset/SpcBravoFieldsetCharlie:
-  description: Active Voltage Trim Delay.
-  fields:
-  - name: active_vdelay
-    description: Active Voltage Delay.
-    bit_offset: 0
-    bit_size: 16
-fieldset/SpcBravoFieldsetDelta:
-  description: SPC Regulator Control.
-  fields:
-  - name: coreldo_en
-    description: LDO_CORE Regulator Enable.
-    bit_offset: 0
-    bit_size: 1
-    enum: SpcBravoEnumUniform
-  - name: sysldo_en
-    description: LDO_SYS Regulator Enable.
-    bit_offset: 1
-    bit_size: 1
-    enum: SpcBravoEnumIndiaBravo
-  - name: dcdc_en
-    description: DCDC_CORE Regulator Enable.
-    bit_offset: 2
-    bit_size: 1
-    enum: SpcBravoEnumYankee
-fieldset/SpcBravoFieldsetEcho:
-  description: LDO_CORE Configuration.
-  fields:
-  - name: dpdown_pulldown_disable
-    description: LDO_CORE Deep Power Down Pulldown Disable.
-    bit_offset: 16
-    bit_size: 1
-    enum: SpcBravoEnumZulu
-fieldset/SpcBravoFieldsetFoxtrot:
-  description: DCDC Burst Configuration.
-  fields:
-  - name: burst_req
-    description: Software Burst Request.
-    bit_offset: 0
-    bit_size: 1
-    enum: SpcBravoEnumRomeo
-  - name: ext_burst_en
-    description: External Burst Request Enable.
-    bit_offset: 1
-    bit_size: 1
-    enum: SpcBravoEnumAlphaAlpha
-  - name: burst_ack
-    description: Burst Acknowledge Flag.
-    bit_offset: 3
-    bit_size: 1
-    enum: SpcBravoEnumQuebec
-  - name: pulse_refresh_cnt
-    description: Refresh Count Value.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SpcBravoFieldsetGolf:
-  description: DCDC Configuration.
-  fields:
-  - name: freq_cntrl_on
-    description: DCDC Burst Frequency Control Enable.
-    bit_offset: 0
-    bit_size: 1
-    enum: SpcBravoEnumCharlieAlpha
-  - name: freq_cntrl
-    description: DCDC Burst Frequency Control.
-    bit_offset: 8
-    bit_size: 6
-  - name: bleed_en
-    description: DCDC Bleed Enable.
-    bit_offset: 19
-    bit_size: 1
-    enum: SpcBravoEnumPapa
-fieldset/SpcBravoFieldsetHotel:
-  description: External Voltage Domain Configuration.
-  fields:
-  - name: evdiso
-    description: External Voltage Domain Isolation.
-    bit_offset: 0
-    bit_size: 6
-  - name: evdlpiso
-    description: External Voltage Domain Low-Power Isolation.
-    bit_offset: 8
-    bit_size: 6
-  - name: evdstat
-    description: External Voltage Domain Status.
-    bit_offset: 16
-    bit_size: 6
-fieldset/SpcBravoFieldsetIndia:
-  description: Glitch Detect Status Control.
-  fields:
-  - name: cnt_select
-    description: Counter Select.
-    bit_offset: 0
-    bit_size: 2
-    enum: SpcBravoEnumTango
-  - name: timeout
-    description: Timeout.
-    bit_offset: 2
-    bit_size: 4
-  - name: re
-    description: Glitch Detect Reset Enable.
-    bit_offset: 6
-    bit_size: 1
-    enum: SpcBravoEnumEchoBravo
-  - name: ie
-    description: Glitch Detect Interrupt Enable.
-    bit_offset: 7
-    bit_size: 1
-    enum: SpcBravoEnumEchoAlpha
-  - name: glitch_detect_flag
-    description: GLITCH_DETECT_FLAG.
-    bit_offset: 8
-    bit_size: 4
-  - name: lock
-    description: Glitch Detect Reset Enable Lock Bit.
-    bit_offset: 16
-    bit_size: 1
-    enum: SpcBravoEnumDeltaAlpha
+    enum: Hvdie
 fieldset/SpcBravoFieldsetJuliet:
   description: Low-Power Mode Configuration.
   fields:
@@ -1722,7 +1147,7 @@ fieldset/SpcBravoFieldsetJuliet:
     description: LDO_CORE VDD Drive Strength.
     bit_offset: 0
     bit_size: 1
-    enum: SpcBravoEnumLimaAlpha
+    enum: CoreldoVddDs
   - name: coreldo_vdd_lvl
     description: LDO_CORE VDD Regulator Voltage Level.
     bit_offset: 2
@@ -1732,198 +1157,72 @@ fieldset/SpcBravoFieldsetJuliet:
     description: LDO_SYS VDD Drive Strength.
     bit_offset: 4
     bit_size: 1
-    enum: SpcBravoEnumVictorAlpha
+    enum: CoreldoVddDs
   - name: dcdc_vdd_ds
     description: DCDC VDD Drive Strength.
     bit_offset: 8
     bit_size: 2
-    enum: SpcBravoEnumNovemberAlpha
+    enum: DcdcVddDs
   - name: dcdc_vdd_lvl
     description: DCDC VDD Regulator Voltage Level.
     bit_offset: 10
     bit_size: 2
-    enum: SpcBravoEnumOscarAlpha
+    enum: DcdcVddLvl2
   - name: glitch_detect_disable
     description: Glitch Detect Disable.
     bit_offset: 12
     bit_size: 1
-    enum: SpcBravoEnumPapaAlpha
+    enum: GlitchDetectDisable
   - name: corevdd_ivs_en
     description: CORE VDD Internal Voltage Scaling (IVS) Enable.
     bit_offset: 17
     bit_size: 1
-    enum: SpcBravoEnumWhiskey
+    enum: Hvdie
   - name: lpbuff_en
     description: CMP Bandgap Buffer Enable.
     bit_offset: 18
     bit_size: 1
-    enum: SpcBravoEnumSierraAlpha
+    enum: Hvdie
   - name: bgmode
     description: Bandgap Mode.
     bit_offset: 20
     bit_size: 2
-    enum: SpcBravoEnumIndiaAlpha
+    enum: Bgmode
   - name: lp_irefen
     description: Low-Power IREF Enable.
     bit_offset: 23
     bit_size: 1
-    enum: SpcBravoEnumWhiskeyAlpha
+    enum: LpIrefen
   - name: core_lvde
     description: Core Low Voltage Detect Enable.
     bit_offset: 24
     bit_size: 1
-    enum: SpcBravoEnumKiloAlpha
+    enum: Hvdie
   - name: sys_lvde
     description: System Low Voltage Detect Enable.
     bit_offset: 25
     bit_size: 1
-    enum: SpcBravoEnumUniformAlpha
+    enum: Hvdie
   - name: io_lvde
     description: IO Low Voltage Detect Enable.
     bit_offset: 26
     bit_size: 1
-    enum: SpcBravoEnumRomeoAlpha
+    enum: Hvdie
   - name: core_hvde
     description: Core High Voltage Detect Enable.
     bit_offset: 27
     bit_size: 1
-    enum: SpcBravoEnumJulietAlpha
+    enum: Hvdie
   - name: sys_hvde
     description: System High Voltage Detect Enable.
     bit_offset: 28
     bit_size: 1
-    enum: SpcBravoEnumTangoAlpha
+    enum: Hvdie
   - name: io_hvde
     description: IO High Voltage Detect Enable.
     bit_offset: 29
     bit_size: 1
-    enum: SpcBravoEnumQuebecAlpha
-fieldset/SpcBravoFieldsetKilo:
-  description: Low Power Mode Configuration 1.
-  fields:
-  - name: soc_cntrl
-    description: Low-Power Configuration Chip Control.
-    bit_offset: 0
-    bit_size: 32
-fieldset/SpcBravoFieldsetLima:
-  description: Low-Power Request Configuration.
-  fields:
-  - name: lpreqoe
-    description: Low-Power Request Output Enable.
-    bit_offset: 0
-    bit_size: 1
-    enum: SpcBravoEnumYankeeAlpha
-  - name: lpreqpol
-    description: Low-Power Request Output Pin Polarity Control.
-    bit_offset: 1
-    bit_size: 1
-    enum: SpcBravoEnumAlphaBravo
-  - name: lpreqov
-    description: Low-Power Request Output Override.
-    bit_offset: 2
-    bit_size: 2
-    enum: SpcBravoEnumZuluAlpha
-fieldset/SpcBravoFieldsetMike:
-  description: Low Power Wake-Up Delay.
-  fields:
-  - name: lpwkup_delay
-    description: Low-Power Wake-Up Delay.
-    bit_offset: 0
-    bit_size: 16
-fieldset/SpcBravoFieldsetNovember:
-  description: SPC Power Domain Mode Status.
-  fields:
-  - name: pwr_req_status
-    description: Power Request Status Flag.
-    bit_offset: 0
-    bit_size: 1
-    enum: SpcBravoEnumDeltaBravo
-  - name: pd_lp_req
-    description: Power Domain Low Power Request Flag.
-    bit_offset: 4
-    bit_size: 1
-    enum: SpcBravoEnumCharlieBravo
-  - name: lp_mode
-    description: Power Domain Low Power Mode Request.
-    bit_offset: 8
-    bit_size: 4
-    enum: SpcBravoEnumXrayAlpha
-fieldset/SpcBravoFieldsetOscar:
-  description: Status Control.
-  fields:
-  - name: busy
-    description: SPC Busy Status Flag.
-    bit_offset: 0
-    bit_size: 1
-    enum: SpcBravoEnumSierra
-  - name: spc_lp_req
-    description: SPC Power Mode Configuration Status Flag.
-    bit_offset: 1
-    bit_size: 1
-    enum: SpcBravoEnumHotelBravo
-  - name: spc_lp_mode
-    description: Power Domain Low-Power Mode Request.
-    bit_offset: 4
-    bit_size: 4
-    enum: SpcBravoEnumGolfBravo
-  - name: iso_clr
-    description: Isolation Clear Flags.
-    bit_offset: 16
-    bit_size: 2
-fieldset/SpcBravoFieldsetPapa:
-  description: SRAM Control.
-  fields:
-  - name: vsm
-    description: Voltage Select Margin.
-    bit_offset: 0
-    bit_size: 2
-    enum: SpcBravoEnumCharlieCharlie
-  - name: req
-    description: SRAM Voltage Update Request.
-    bit_offset: 30
-    bit_size: 1
-    enum: SpcBravoEnumFoxtrotBravo
-  - name: ack
-    description: SRAM Voltage Update Request Acknowledge.
-    bit_offset: 31
-    bit_size: 1
-    enum: SpcBravoEnumAlpha
-fieldset/SpcBravoFieldsetQuebec:
-  description: LDO_SYS Configuration.
-  fields:
-  - name: isinken
-    description: Current Sink Enable.
-    bit_offset: 0
-    bit_size: 1
-    enum: SpcBravoEnumHotelAlpha
-fieldset/SpcBravoFieldsetRomeo:
-  description: Core Voltage Detect Configuration.
-  fields:
-  - name: lvdre
-    description: Core LVD Reset Enable.
-    bit_offset: 0
-    bit_size: 1
-    enum: SpcBravoEnumQuebecBravo
-  - name: lvdie
-    description: Core LVD Interrupt Enable.
-    bit_offset: 1
-    bit_size: 1
-    enum: SpcBravoEnumPapaBravo
-  - name: hvdre
-    description: Core VDD HVD Reset Enable.
-    bit_offset: 2
-    bit_size: 1
-    enum: SpcBravoEnumNovemberBravo
-  - name: hvdie
-    description: Core VDD HVD Interrupt Enable.
-    bit_offset: 3
-    bit_size: 1
-    enum: SpcBravoEnumMikeBravo
-  - name: lock
-    description: Core Voltage Detect Reset Enable Lock.
-    bit_offset: 16
-    bit_size: 1
-    enum: SpcBravoEnumOscarBravo
+    enum: Hvdie
 fieldset/SpcBravoFieldsetSierra:
   description: IO Voltage Detect Configuration.
   fields:
@@ -1931,22 +1230,22 @@ fieldset/SpcBravoFieldsetSierra:
     description: IO VDD LVD Reset Enable.
     bit_offset: 0
     bit_size: 1
-    enum: SpcBravoEnumVictorBravo
+    enum: Hvdie
   - name: lvdie
     description: IO VDD LVD Interrupt Enable.
     bit_offset: 1
     bit_size: 1
-    enum: SpcBravoEnumUniformBravo
+    enum: Hvdie
   - name: hvdre
     description: IO VDD HVD Reset Enable.
     bit_offset: 2
     bit_size: 1
-    enum: SpcBravoEnumSierraBravo
+    enum: Hvdie
   - name: hvdie
     description: IO VDD HVD Interrupt Enable.
     bit_offset: 3
     bit_size: 1
-    enum: SpcBravoEnumRomeoBravo
+    enum: Hvdie
   - name: lvsel
     description: IO VDD Low-Voltage Level Select.
     bit_offset: 8
@@ -1956,40 +1255,7 @@ fieldset/SpcBravoFieldsetSierra:
     description: IO Voltage Detect Reset Enable Lock.
     bit_offset: 16
     bit_size: 1
-    enum: SpcBravoEnumTangoBravo
-fieldset/SpcBravoFieldsetTango:
-  description: Voltage Detect Status.
-  fields:
-  - name: corevdd_lvdf
-    description: Core Low-Voltage Detect Flag.
-    bit_offset: 0
-    bit_size: 1
-    enum: SpcBravoEnumXray
-  - name: sysvdd_lvdf
-    description: System Low-Voltage Detect Flag.
-    bit_offset: 1
-    bit_size: 1
-    enum: SpcBravoEnumLimaBravo
-  - name: iovdd_lvdf
-    description: IO VDD LVD Flag.
-    bit_offset: 2
-    bit_size: 1
-    enum: SpcBravoEnumGolfAlpha
-  - name: corevdd_hvdf
-    description: Core VDD HVD Flag.
-    bit_offset: 4
-    bit_size: 1
-    enum: SpcBravoEnumVictor
-  - name: sysvdd_hvdf
-    description: System HVD Flag.
-    bit_offset: 5
-    bit_size: 1
-    enum: SpcBravoEnumKiloBravo
-  - name: iovdd_hvdf
-    description: IO VDD HVD Flag.
-    bit_offset: 6
-    bit_size: 1
-    enum: SpcBravoEnumFoxtrotAlpha
+    enum: Lock2
 fieldset/SpcBravoFieldsetUniform:
   description: System Voltage Detect Configuration.
   fields:
@@ -1997,91 +1263,27 @@ fieldset/SpcBravoFieldsetUniform:
     description: System LVD Reset Enable.
     bit_offset: 0
     bit_size: 1
-    enum: SpcBravoEnumAlphaCharlie
+    enum: Hvdie
   - name: lvdie
     description: System LVD Interrupt Enable.
     bit_offset: 1
     bit_size: 1
-    enum: SpcBravoEnumZuluBravo
+    enum: Hvdie
   - name: hvdre
     description: System HVD Reset Enable.
     bit_offset: 2
     bit_size: 1
-    enum: SpcBravoEnumXrayBravo
+    enum: Hvdie
   - name: hvdie
     description: System HVD Interrupt Enable.
     bit_offset: 3
     bit_size: 1
-    enum: SpcBravoEnumWhiskeyBravo
+    enum: Hvdie
   - name: lock
     description: System Voltage Detect Reset Enable Lock.
     bit_offset: 16
     bit_size: 1
-    enum: SpcBravoEnumYankeeBravo
-fieldset/SpcBravoFieldsetVictor:
-  description: Version ID.
-  fields:
-  - name: feature
-    description: Feature Specification Number.
-    bit_offset: 0
-    bit_size: 16
-    enum: SpcBravoEnumBravoAlpha
-  - name: minor
-    description: Minor Version Number.
-    bit_offset: 16
-    bit_size: 8
-  - name: major
-    description: Major Version Number.
-    bit_offset: 24
-    bit_size: 8
-enum/SpcBravoEnumAlpha:
-  bit_size: 1
-  variants:
-  - name: AckNo
-    description: Not acknowledged.
-    value: 0
-  - name: AckYes
-    description: Acknowledged.
-    value: 1
-enum/SpcBravoEnumBravo:
-  bit_size: 2
-  variants:
-  - name: Bgmode0
-    description: Bandgap disabled.
-    value: 0
-  - name: Bgmode01
-    description: Bandgap enabled, buffer disabled.
-    value: 1
-  - name: Bgmode10
-    description: Bandgap enabled, buffer enabled.
-    value: 2
-enum/SpcBravoEnumCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumDelta:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumEcho:
-  bit_size: 1
-  variants:
-  - name: Low
-    description: Low.
-    value: 0
-  - name: Normal
-    description: Normal.
-    value: 1
+    enum: Lock2
 enum/SpcBravoEnumFoxtrot:
   bit_size: 2
   variants:
@@ -2094,303 +1296,6 @@ enum/SpcBravoEnumFoxtrot:
   - name: Over
     description: Regulate to overdrive voltage (1.2 V).
     value: 3
-enum/SpcBravoEnumGolf:
-  bit_size: 2
-  variants:
-  - name: Low
-    description: Low.
-    value: 1
-  - name: Normal
-    description: Normal.
-    value: 2
-enum/SpcBravoEnumHotel:
-  bit_size: 2
-  variants:
-  - name: Dcdc01
-    description: Midvoltage (1.0 V).
-    value: 1
-  - name: Dcdc10
-    description: Normal voltage (1.1 V).
-    value: 2
-  - name: Dcdc11
-    description: Overdrive voltage (1.2 V).
-    value: 3
-enum/SpcBravoEnumIndia:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Low Voltage Glitch Detect enabled.
-    value: 0
-  - name: Enabled
-    description: Low Voltage Glitch Detect disabled.
-    value: 1
-enum/SpcBravoEnumJuliet:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumKilo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumLima:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumMike:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumNovember:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumOscar:
-  bit_size: 1
-  variants:
-  - name: Low
-    description: Low.
-    value: 0
-  - name: Normal
-    description: Normal.
-    value: 1
-enum/SpcBravoEnumPapa:
-  bit_size: 1
-  variants:
-  - name: AddNo
-    description: Do not add.
-    value: 0
-  - name: AddYes
-    description: Add.
-    value: 1
-enum/SpcBravoEnumQuebec:
-  bit_size: 1
-  variants:
-  - name: ComplNo
-    description: Did not complete.
-    value: 0
-  - name: ComplYes
-    description: Completed.
-    value: 1
-enum/SpcBravoEnumRomeo:
-  bit_size: 1
-  variants:
-  - name: GenNo
-    description: Do not generate.
-    value: 0
-  - name: GenYes
-    description: Generate.
-    value: 1
-enum/SpcBravoEnumSierra:
-  bit_size: 1
-  variants:
-  - name: BusyNo
-    description: Not busy.
-    value: 0
-  - name: BusyYes
-    description: Busy.
-    value: 1
-enum/SpcBravoEnumTango:
-  bit_size: 2
-  variants:
-  - name: Bit0
-    description: '0.'
-    value: 0
-  - name: Bit1
-    description: '1.'
-    value: 1
-  - name: Bit2
-    description: '2.'
-    value: 2
-  - name: Bit3
-    description: '3.'
-    value: 3
-enum/SpcBravoEnumUniform:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumVictor:
-  bit_size: 1
-  variants:
-  - name: EventNo
-    description: Event not detected.
-    value: 0
-  - name: EventYes
-    description: Event detected.
-    value: 1
-enum/SpcBravoEnumWhiskey:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumXray:
-  bit_size: 1
-  variants:
-  - name: EventNo
-    description: Event not detected.
-    value: 0
-  - name: EventYes
-    description: Event detected.
-    value: 1
-enum/SpcBravoEnumYankee:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumZulu:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: LDO_CORE pulldown in Deep Power Down not disabled.
-    value: 0
-  - name: Enabled
-    description: LDO_CORE pulldown in Deep Power Down disabled.
-    value: 1
-enum/SpcBravoEnumAlphaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumBravoAlpha:
-  bit_size: 16
-  variants:
-  - name: Standard
-    description: Standard features.
-    value: 0
-enum/SpcBravoEnumCharlieAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumDeltaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Writes to RE are allowed.
-    value: 0
-  - name: Enabled
-    description: Writes to RE are ignored.
-    value: 1
-enum/SpcBravoEnumEchoAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: GLITCH_DETECT_FLAG[CNT_SELECT] does not generate hardware interrupt (user polling).
-    value: 0
-  - name: Enabled
-    description: GLITCH_DETECT_FLAG[CNT_SELECT] does generate hardware interrupt.
-    value: 1
-enum/SpcBravoEnumFoxtrotAlpha:
-  bit_size: 1
-  variants:
-  - name: EventNo
-    description: Event not detected.
-    value: 0
-  - name: EventYes
-    description: Event detected.
-    value: 1
-enum/SpcBravoEnumGolfAlpha:
-  bit_size: 1
-  variants:
-  - name: EventNo
-    description: Event not detected.
-    value: 0
-  - name: EventYes
-    description: Event detected.
-    value: 1
-enum/SpcBravoEnumHotelAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enabled
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumIndiaAlpha:
-  bit_size: 2
-  variants:
-  - name: Bgmode0
-    description: Bandgap disabled.
-    value: 0
-  - name: Bgmode01
-    description: Bandgap enabled, buffer disabled.
-    value: 1
-  - name: Bgmode10
-    description: Bandgap enabled, buffer enabled.
-    value: 2
-enum/SpcBravoEnumJulietAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumKiloAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumLimaAlpha:
-  bit_size: 1
-  variants:
-  - name: Low
-    description: Low.
-    value: 0
-  - name: Normal
-    description: Normal.
-    value: 1
 enum/SpcBravoEnumMikeAlpha:
   bit_size: 2
   variants:
@@ -2406,150 +1311,6 @@ enum/SpcBravoEnumMikeAlpha:
   - name: Under
     description: Retention voltage.
     value: 0
-enum/SpcBravoEnumNovemberAlpha:
-  bit_size: 2
-  variants:
-  - name: Low
-    description: Low.
-    value: 1
-  - name: Normal
-    description: Normal.
-    value: 2
-  - name: Pulse
-    description: Pulse refresh.
-    value: 0
-enum/SpcBravoEnumOscarAlpha:
-  bit_size: 2
-  variants:
-  - name: Vdd00
-    description: Retention voltage (0.7 V).
-    value: 0
-  - name: Vdd01
-    description: Mid voltage (1.0 V).
-    value: 1
-  - name: Vdd10
-    description: Normal voltage (1.1 V).
-    value: 2
-  - name: Vdd11
-    description: Overdrive voltage (1.2 V).
-    value: 3
-enum/SpcBravoEnumPapaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 1
-  - name: Enable
-    description: Enable.
-    value: 0
-enum/SpcBravoEnumQuebecAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumRomeoAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumSierraAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumTangoAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumUniformAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumVictorAlpha:
-  bit_size: 1
-  variants:
-  - name: Low
-    description: Low.
-    value: 0
-  - name: Normal
-    description: Normal.
-    value: 1
-enum/SpcBravoEnumWhiskeyAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable for power saving in Deep Power Down mode.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumXrayAlpha:
-  bit_size: 4
-  variants:
-  - name: Mode0
-    description: SLEEP with system clock running.
-    value: 0
-  - name: Mode1
-    description: DSLEEP with system clock off.
-    value: 1
-  - name: Mode2
-    description: PDOWN with system clock off.
-    value: 2
-  - name: Mode8
-    description: DPDOWN with system clock off.
-    value: 8
-enum/SpcBravoEnumYankeeAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumZuluAlpha:
-  bit_size: 2
-  variants:
-  - name: ForceHigh
-    description: Forced high (ignore LPREQPOL settings).
-    value: 3
-  - name: ForceLow
-    description: Forced low (ignore LPREQPOL settings).
-    value: 2
-  - name: ForceNo
-    description: Not forced.
-    value: 0
-enum/SpcBravoEnumAlphaBravo:
-  bit_size: 1
-  variants:
-  - name: High
-    description: High.
-    value: 0
-  - name: Low
-    description: Low.
-    value: 1
 enum/SpcBravoEnumBravoBravo:
   bit_size: 1
   variants:
@@ -2559,25 +1320,7 @@ enum/SpcBravoEnumBravoBravo:
   - name: Safe
     description: Low range.
     value: 1
-enum/SpcBravoEnumCharlieBravo:
-  bit_size: 1
-  variants:
-  - name: ReqNo
-    description: Did not request.
-    value: 0
-  - name: ReqYes
-    description: Requested.
-    value: 1
-enum/SpcBravoEnumDeltaBravo:
-  bit_size: 1
-  variants:
-  - name: ReqNo
-    description: Did not request.
-    value: 0
-  - name: ReqYes
-    description: Requested.
-    value: 1
-enum/SpcBravoEnumEchoBravo:
+enum/Re2:
   bit_size: 1
   variants:
   - name: Disabled
@@ -2586,16 +1329,7 @@ enum/SpcBravoEnumEchoBravo:
   - name: Enabled
     description: GLITCH_DETECT_FLAG[CNT_SELECT] does generate POR/LVD reset.
     value: 1
-enum/SpcBravoEnumFoxtrotBravo:
-  bit_size: 1
-  variants:
-  - name: ReqNo
-    description: Do not request.
-    value: 0
-  - name: ReqYes
-    description: Request.
-    value: 1
-enum/SpcBravoEnumGolfBravo:
+enum/SpcLpMode2:
   bit_size: 4
   variants:
   - name: Mode0
@@ -2610,70 +1344,7 @@ enum/SpcBravoEnumGolfBravo:
   - name: Mode8
     description: DPDOWN with system clock off.
     value: 8
-enum/SpcBravoEnumHotelBravo:
-  bit_size: 1
-  variants:
-  - name: Active
-    description: SPC is in Active or Sleep mode; the ACTIVE_CFG register has control.
-    value: 0
-  - name: LowPower
-    description: All power domains requested low-power mode; SPC entered a low-power state; power-mode configuration based on the LP_CFG register.
-    value: 1
-enum/SpcBravoEnumIndiaBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumJulietBravo:
-  bit_size: 1
-  variants:
-  - name: Normal
-    description: Normal voltage (1.8 V).
-    value: 0
-  - name: Over
-    description: Overdrive voltage (2.5 V).
-    value: 1
-enum/SpcBravoEnumKiloBravo:
-  bit_size: 1
-  variants:
-  - name: EventNo
-    description: Event not detected.
-    value: 0
-  - name: EventYes
-    description: Event detected.
-    value: 1
-enum/SpcBravoEnumLimaBravo:
-  bit_size: 1
-  variants:
-  - name: EventNo
-    description: Event not detected.
-    value: 0
-  - name: EventYes
-    description: Event detected.
-    value: 1
-enum/SpcBravoEnumMikeBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumNovemberBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumOscarBravo:
+enum/Lock2:
   bit_size: 1
   variants:
   - name: Allow
@@ -2682,129 +1353,3 @@ enum/SpcBravoEnumOscarBravo:
   - name: Deny
     description: Deny.
     value: 1
-enum/SpcBravoEnumPapaBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumQuebecBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumRomeoBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumSierraBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumTangoBravo:
-  bit_size: 1
-  variants:
-  - name: Allow
-    description: Allow.
-    value: 0
-  - name: Deny
-    description: Deny.
-    value: 1
-enum/SpcBravoEnumUniformBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumVictorBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumWhiskeyBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumXrayBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumYankeeBravo:
-  bit_size: 1
-  variants:
-  - name: Allow
-    description: Allow.
-    value: 0
-  - name: Deny
-    description: Deny.
-    value: 1
-enum/SpcBravoEnumZuluBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumAlphaCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/SpcBravoEnumBravoCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 1
-  - name: Enable
-    description: Enable.
-    value: 0
-enum/SpcBravoEnumCharlieCharlie:
-  bit_size: 2
-  variants:
-  - name: Vsm1
-    description: 1.0 V.
-    value: 1
-  - name: Vsm2
-    description: 1.1 V.
-    value: 2

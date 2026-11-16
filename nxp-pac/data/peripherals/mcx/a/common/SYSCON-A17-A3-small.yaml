@@ -1,0 +1,166 @@
+# MCXA173/174: MCXAP100M180F41RM Rev.2; explicit MCXA174 XML onboarding.
+# Backing widths and resets restored from the pinned XML; no build-time SVD input.
+# Small MCXA3 uses the same curated register, field, enum and default contracts.
+# MCXA3: explicit pinned XML onboarding; backing widths and resets retained.
+includes:
+  - SYSCON.yaml
+block/Syscon:
+  description: SYSCON.
+  items:
+  - name: remap
+    description: AHB Matrix Remap Control.
+    byte_offset: 512
+    fieldset: RemapA17
+  - name: ahbmatprio
+    description: AHB Matrix Priority Control.
+    byte_offset: 528
+    fieldset: AhbmatprioA17
+  - name: cpu0nstckcal
+    description: Non-Secure CPU0 System Tick Calibration.
+    byte_offset: 572
+    fieldset: Cpu0nstckcal
+  - name: nmisrc
+    description: NMI Source Select.
+    byte_offset: 584
+    fieldset: Nmisrc
+  - name: protlvl
+    description: Protect Level Control.
+    byte_offset: 588
+    fieldset: ProtlvlA5
+  - name: slowclkdiv
+    description: SLOW_CLK Clock Divider.
+    byte_offset: 888
+    fieldset: SlowclkdivA17
+  - name: busclkdiv
+    description: BUS_CLK Clock Divider.
+    byte_offset: 892
+    fieldset: BusclkdivA17
+  - name: ahbclkdiv
+    description: System Clock Divider.
+    byte_offset: 896
+    fieldset: Ahbclkdiv
+  - name: frohfdiv
+    description: FRO_HF_DIV Clock Divider.
+    byte_offset: 904
+    fieldset: Frohfdiv
+  - name: frolfdiv
+    description: FRO_LF_DIV Clock Divider.
+    byte_offset: 908
+    fieldset: Frohfdiv
+  - name: clkunlock
+    description: Clock Configuration Unlock.
+    byte_offset: 1020
+    fieldset: Clkunlock
+  - name: nvm_ctrl
+    description: NVM Control.
+    byte_offset: 1024
+    fieldset: NvmCtrlA1Small
+  - name: smart_dmaint
+    description: SmartDMA Interrupt Hijack.
+    byte_offset: 1044
+    fieldset: SmartDmaintA17
+  - name: cpustat
+    description: CPU Status.
+    byte_offset: 2060
+    access: Read
+    fieldset: Cpustat
+  - name: lpcac_ctrl
+    description: LPCAC Control.
+    byte_offset: 2084
+    fieldset: LpcacCtrlA1Small
+  - name: pwm0subctl
+    description: PWM0 Submodule Control.
+    byte_offset: 2360
+    fieldset: Pwm0subctl
+  - name: pwm1subctl
+    description: PWM1 Submodule Control.
+    byte_offset: 2364
+    fieldset: Pwm1subctl
+  - name: ctimerglobalstarten
+    description: CTIMER Global Start Enable.
+    byte_offset: 2368
+    fieldset: CtimerglobalstartenA1Small
+  - name: ram_ctrl
+    description: RAM Control.
+    byte_offset: 2372
+    fieldset: RamCtrlA17
+  - name: gray_code_lsb
+    description: Gray to Binary Converter Gray Code [31:0].
+    byte_offset: 2912
+    fieldset: GrayCodeLsb
+  - name: gray_code_msb
+    description: Gray to Binary Converter Gray Code [41:32].
+    byte_offset: 2916
+    fieldset: GrayCodeMsb
+  - name: binary_code_lsb
+    description: Gray to Binary Converter Binary Code [31:0].
+    byte_offset: 2920
+    access: Read
+    fieldset: BinaryCodeLsb
+  - name: binary_code_msb
+    description: Gray to Binary Converter Binary Code [41:32].
+    byte_offset: 2924
+    access: Read
+    fieldset: BinaryCodeMsb
+  - name: msfcfg
+    description: MSF Configuration.
+    byte_offset: 3612
+    fieldset: Msfcfg
+  - name: rop_state
+    description: ROP State Register.
+    byte_offset: 3644
+    access: Read
+    fieldset: RopState
+  - name: sram_xen
+    description: RAM XEN Control.
+    byte_offset: 3672
+    fieldset: SramXenA17
+  - name: sram_xen_dp
+    description: RAM XEN Control (Duplicate).
+    byte_offset: 3676
+    fieldset: SramXenDp
+  - name: els_otp_lc_state
+    description: Life Cycle State Register.
+    byte_offset: 3712
+    access: Read
+    fieldset: ElsOtpLcState
+  - name: els_otp_lc_state_dp
+    description: Life Cycle State Register (Duplicate).
+    byte_offset: 3716
+    access: Read
+    fieldset: ElsOtpLcStateDp
+  - name: debug_lock_en
+    description: Control Write Access to Security.
+    byte_offset: 4000
+    fieldset: DebugLockEnA1Small
+  - name: debug_features
+    description: Cortex Debug Features Control.
+    byte_offset: 4004
+    fieldset: DebugFeatures
+  - name: debug_features_dp
+    description: Cortex Debug Features Control (Duplicate).
+    byte_offset: 4008
+    fieldset: DebugFeatures
+  - name: swd_access_cpu0
+    description: CPU0 Software Debug Access.
+    byte_offset: 4020
+    fieldset: SwdAccessCpu0
+  - name: debug_auth_beacon
+    description: Debug Authentication BEACON.
+    byte_offset: 4032
+    fieldset: DebugAuthBeacon
+  - name: jtag_id
+    description: JTAG Chip ID.
+    byte_offset: 4080
+    access: Read
+    fieldset: JtagIdA17
+  - name: device_type
+    description: Device Type.
+    byte_offset: 4084
+    access: Read
+    fieldset: DeviceTypeA17
+  - name: device_id0
+    description: Device ID.
+    byte_offset: 4088
+    access: Read
+    fieldset: DeviceId0A17

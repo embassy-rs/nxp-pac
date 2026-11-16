@@ -158,62 +158,62 @@ fieldset/Lr:
     description: Status Register Lock.
     bit_offset: 5
     bit_size: 1
-    enum: Srl
+    enum: Crl
   - name: lrl
     description: Lock Register Lock.
     bit_offset: 6
     bit_size: 1
-    enum: Lrl
+    enum: Crl
   - name: iel
     description: Interrupt Enable Lock.
     bit_offset: 7
     bit_size: 1
-    enum: Iel
+    enum: Crl
   - name: tsl
     description: Tamper Seconds Lock.
     bit_offset: 8
     bit_size: 1
-    enum: Tsl
+    enum: Crl
   - name: tel
     description: Tamper Enable Lock.
     bit_offset: 9
     bit_size: 1
-    enum: Tel
+    enum: Crl
   - name: ppl
     description: Pin Polarity Lock.
     bit_offset: 11
     bit_size: 1
-    enum: Ppl
+    enum: Crl
   - name: gfl0
     description: Glitch Filter Lock.
     bit_offset: 16
     bit_size: 1
-    enum: Gfl0
+    enum: Crl
   - name: gfl1
     description: Glitch Filter Lock.
     bit_offset: 17
     bit_size: 1
-    enum: Gfl1
+    enum: Crl
   - name: gfl2
     description: Glitch Filter Lock.
     bit_offset: 18
     bit_size: 1
-    enum: Gfl2
+    enum: Crl
   - name: gfl3
     description: Glitch Filter Lock.
     bit_offset: 19
     bit_size: 1
-    enum: Gfl3
+    enum: Crl
   - name: gfl4
     description: Glitch Filter Lock.
     bit_offset: 20
     bit_size: 1
-    enum: Gfl4
+    enum: Crl
   - name: gfl5
     description: Glitch Filter Lock.
     bit_offset: 21
     bit_size: 1
-    enum: Gfl5
+    enum: Crl
   bit_size: 32
   reset_value: 4131824
 fieldset/Pgfr:
@@ -290,27 +290,27 @@ fieldset/Ppr:
     description: Tamper Pin n Input Data.
     bit_offset: 17
     bit_size: 1
-    enum: Tpid1
+    enum: Tpid0
   - name: tpid2
     description: Tamper Pin n Input Data.
     bit_offset: 18
     bit_size: 1
-    enum: Tpid2
+    enum: Tpid0
   - name: tpid3
     description: Tamper Pin n Input Data.
     bit_offset: 19
     bit_size: 1
-    enum: Tpid3
+    enum: Tpid0
   - name: tpid4
     description: Tamper Pin n Input Data.
     bit_offset: 20
     bit_size: 1
-    enum: Tpid4
+    enum: Tpid0
   - name: tpid5
     description: Tamper Pin n Input Data.
     bit_offset: 21
     bit_size: 1
-    enum: Tpid5
+    enum: Tpid0
   bit_size: 32
   reset_value: 0
 fieldset/Sr:
@@ -503,60 +503,6 @@ enum/Gfe:
   - name: Enable
     description: Enables.
     value: 1
-enum/Gfl0:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
-    value: 1
-enum/Gfl1:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
-    value: 1
-enum/Gfl2:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
-    value: 1
-enum/Gfl3:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
-    value: 1
-enum/Gfl4:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
-    value: 1
-enum/Gfl5:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
-    value: 1
 enum/Gfp:
   bit_size: 1
   variants:
@@ -565,42 +511,6 @@ enum/Gfp:
     value: 0
   - name: Freq32Khz
     description: 16.384 kHz clock.
-    value: 1
-enum/Iel:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
-    value: 1
-enum/Lrl:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
-    value: 1
-enum/Ppl:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
-    value: 1
-enum/Srl:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
     value: 1
 enum/Swr:
   bit_size: 1
@@ -611,61 +521,7 @@ enum/Swr:
   - name: SwReset
     description: Perform a software reset.
     value: 1
-enum/Tel:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
-    value: 1
 enum/Tpid0:
-  bit_size: 1
-  variants:
-  - name: Zero
-    description: Zero.
-    value: 0
-  - name: One
-    description: One.
-    value: 1
-enum/Tpid1:
-  bit_size: 1
-  variants:
-  - name: Zero
-    description: Zero.
-    value: 0
-  - name: One
-    description: One.
-    value: 1
-enum/Tpid2:
-  bit_size: 1
-  variants:
-  - name: Zero
-    description: Zero.
-    value: 0
-  - name: One
-    description: One.
-    value: 1
-enum/Tpid3:
-  bit_size: 1
-  variants:
-  - name: Zero
-    description: Zero.
-    value: 0
-  - name: One
-    description: One.
-    value: 1
-enum/Tpid4:
-  bit_size: 1
-  variants:
-  - name: Zero
-    description: Zero.
-    value: 0
-  - name: One
-    description: One.
-    value: 1
-enum/Tpid5:
   bit_size: 1
   variants:
   - name: Zero
@@ -713,15 +569,6 @@ enum/Tpsw:
   - name: Cycles8
     description: 8 cycles for pull enable and 4 cycles for input buffer enable.
     value: 3
-enum/Tsl:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
-    value: 1
 enum/Um:
   bit_size: 1
   variants:

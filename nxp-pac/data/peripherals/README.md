@@ -70,6 +70,106 @@ vendor extraction input is not a public support contract.
 
 ## Includes and per-chip availability
 
+### Shared PORT definitions
+
+MCXA2/A5 metadata references the same `mcx/common/PORT` model, including its
+generic `Port` register-block type. Instance names (`PORT0`, `PORT1`, etc.),
+addresses, signals and gates belong to chip metadata; they do not justify
+duplicating an identical register-block model. The same source also provides
+compatible fieldsets and enums used by MCXN. MCXA1/A3 retain their differing
+register layouts.
+
+MCXN blocks share `mcx/n/common/PORT.yaml`, with EFT masks, calibration, numbered
+global-write-enable fields and PCR capabilities in `PORT-fields.yaml`. Canonical
+N2/N5/N9 model identities remain separate in the catalog. N23x pad differences
+are expressed on individual registers with `only_in`, rather than retaining
+separate alphabetical block-type families.
+
+MCXN blocks retain explicit PCR registers rather than exposing the MCXA 32-pad
+array. In particular, two-bit mux pads do not gain slew/drive-strength fields,
+and absent PCRs and EFT bits remain absent. N23x and N24x register variants use
+`only_in` so unrelated variants are not compiled. EFT type suffixes encode the
+exact implemented-pad mask, including holes; inheritance only shares subsets.
+
+This curation replaces imported per-pad `Port*Fieldset*` and `Port*Enum*` names
+with shared types such as `PcrMux4`, `PcrPfeMux4`, `PcrPvPfeMux2` and `Mux4`.
+It intentionally changes those initial MCXN type identities and formatting
+type names. MCXN layout-view type names were normalized from the imported
+alphabetical labels; HAL users naming those initial types must update.
+MCXA2/A5 keep their shared generic `Port` type. Peripheral constants,
+register accessor names, field
+names/encodings, access widths and software construction defaults are preserved.
+The source's binary-spelled MCXN mux variants are retained; they are
+not silently replaced by the MCXA enum's differently spelled variants.
+
+### Shared MBC definitions
+
+N2/N5/N9 metadata uses the single `mcx/n/common/MBC` model and generic `Mbc`
+block. `mcx/common/MBC.yaml` shares compatible MCXA2/MCXN block-policy fields;
+`MBC-enums.yaml` also shares their selector enum with MCXA5. Permission enums
+remain access/mode-specific, rather than being merged solely by bit width.
+MCXA5 retains its curated effective read-only policies, nonzero construction
+defaults and untyped NSE fields; those differences are not overwritten by the
+native MCXN model.
+
+### Shared SYSCON definitions
+
+`mcx/common/SYSCON.yaml` contains matching A/N enums and fieldsets. Curated
+A-specific and N-specific definitions remain in their corresponding common
+directories. Equivalent enums share one definition only when variant names,
+values and documentation agree; storage widths, field geometry and software
+construction defaults also participate in fieldset matching.
+
+N5 and N9 use the single `mcx/n/common/SYSCON` catalog model and generic `Syscon`
+block. Their complete layout is in `mcx/n/common/SYSCON-N5-N9.yaml`. N2 retains
+its differing N23x/N24x layouts, while reusing compatible field definitions.
+MCXA17 and small MCXA3 also share one complete source layout. Other A2/A5 and
+A1/A3 register layouts stay separate where they differ; sharing enums does not
+justify changing register availability, access, offsets or reset policies.
+
+Shared enum/fieldset type names replace redundant imported types. This can
+require updates to callers naming the previous types; field values and register
+semantics are unchanged. Metadata instance names and addresses are independent
+of these shared definitions.
+
+### Other shared A/N definitions
+
+Compatible A/N CAN, AHBSC, ADC, FLEXPWM and WUU definitions are factored into
+the corresponding `mcx/common/*-fields.yaml` files. MCXN-specific definitions
+stay in `mcx/n/common/*-fields.yaml`; existing MCXA layouts and software defaults
+are preserved. INPUTMUX and ENET currently have no exact MCXA matches selected
+for this sharing pass.
+
+Identical N2/N5/N9 CAN, ADC, FLEXPWM and ENET layouts share complete sources in
+`mcx/n/common`. N5/N9 AHBSC, INPUTMUX and WUU also share complete sources there;
+their genuinely different N2 layouts remain local. Register models may be shared
+by many instances without duplicating enums or fieldsets for each field or
+instance. Register, field and enum documentation differences still prevent
+automatic sharing; fieldset-level descriptions do not define a distinct layout.
+
+### Exact enum and fieldset sharing
+
+MCX models also share identical enum and fieldset types within each composed
+peripheral model. Repeated SRAM policies, timer modes, endpoint settings, tamper
+flags and similar fields do not need a separate Rust type for every bit or
+register. Imported per-field type labels are replaced by shared types where the
+complete enum definition agrees, including its width, variant names, values and
+documentation. Inverse enable encodings and different command/status meanings
+remain separate.
+
+Fieldsets share a type only when their fields, field documentation, geometry and
+software construction defaults agree after enum references are normalized.
+Register documentation, access policies, arrays and genuinely different block
+views remain local; sharing field types does not add registers or capabilities.
+Redundant inheritance-only fieldset views are removed on the same basis.
+
+Enum availability follows its actual referencing fields. In particular, A-only
+and N-only enums in common LPUART, LPI2C, OSTIMER and UTICK sources are not emitted
+for unrelated chips. Definitions needed on another chip are gated rather than
+deleted. The four unsupported-pin enums in the N2 WUU source remain intentionally
+preserved. These changes replace redundant public type identities, not enum
+encodings, field names, peripheral instances or HAL driver identities.
+
 An entry YAML can compose uniquely named IR definitions from relative includes:
 
 ```yaml

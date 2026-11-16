@@ -1,0 +1,720 @@
+# Exact enum definitions and field layouts shared by MCXA and MCXN.
+# Shared from mcx/a/common/FLEXPWM.yaml; source comments and software defaults are retained.
+# MCXN source revisions and hashes remain on the register-block entries.
+fieldset/Fctrl0:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  description: Fault Control Register.
+  bit_size: 16
+  fields:
+  - name: fie
+    description: Fault Interrupt Enables.
+    bit_offset: 0
+    bit_size: 4
+    enum: Fie
+  - name: fsafe
+    description: Fault Safety Mode.
+    bit_offset: 4
+    bit_size: 4
+    enum: Fsafe
+  - name: fauto
+    description: Automatic Fault Clearing.
+    bit_offset: 8
+    bit_size: 4
+    enum: Fauto
+  - name: flvl
+    description: Fault Level.
+    bit_offset: 12
+    bit_size: 4
+    enum: Flvl
+fieldset/Fctrl20:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  description: Fault Control 2 Register.
+  bit_size: 16
+  fields:
+  - name: nocomb
+    description: No Combinational Path From Fault Input To PWM Output.
+    bit_offset: 0
+    bit_size: 4
+    enum: Nocomb
+fieldset/Fsts0:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  description: Fault Status Register.
+  bit_size: 16
+  fields:
+  - name: fflag
+    description: Fault Flags.
+    bit_offset: 0
+    bit_size: 4
+    enum: Fflag
+  - name: ffull
+    description: Full Cycle.
+    bit_offset: 4
+    bit_size: 4
+    enum: Ffull
+  - name: ffpin
+    description: Filtered Fault Pins.
+    bit_offset: 8
+    bit_size: 4
+  - name: fhalf
+    description: Half Cycle Fault Recovery.
+    bit_offset: 12
+    bit_size: 4
+    enum: Fhalf
+fieldset/Mask:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  description: Mask Register.
+  bit_size: 16
+  fields:
+  - name: maskx
+    description: PWM_X Masks.
+    bit_offset: 0
+    bit_size: 4
+  - name: maskb
+    description: PWM_B Masks.
+    bit_offset: 4
+    bit_size: 4
+  - name: maska
+    description: PWM_A Masks.
+    bit_offset: 8
+    bit_size: 4
+  - name: update_mask
+    description: Update Mask Bits Immediately.
+    bit_offset: 12
+    bit_size: 4
+fieldset/Mctrl:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  description: Master Control Register.
+  bit_size: 16
+  fields:
+  - name: ldok
+    description: Load Okay.
+    bit_offset: 0
+    bit_size: 4
+    enum: Ldok
+  - name: cldok
+    description: Clear Load Okay.
+    bit_offset: 4
+    bit_size: 4
+  - name: run
+    description: Run.
+    bit_offset: 8
+    bit_size: 4
+    enum: Run
+  - name: ipol
+    description: Current Polarity.
+    bit_offset: 12
+    bit_size: 4
+    enum: Ipol
+fieldset/Mctrl2:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  description: Master Control 2 Register.
+  bit_size: 16
+  fields:
+  - name: wrprot
+    description: Write protect.
+    bit_offset: 2
+    bit_size: 2
+    enum: Wrprot
+  - name: stretch_cnt_prsc
+    description: Stretch IPBus clock count prescaler for mux0_trig/mux1_trig/out0_trig/out1_trig/pwma_trig/pwmb_trig.
+    bit_offset: 6
+    bit_size: 2
+    enum: StretchCntPrsc
+fieldset/Outen:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  description: Output Enable Register.
+  bit_size: 16
+  fields:
+  - name: pwmx_en
+    description: PWM_X Output Enables.
+    bit_offset: 0
+    bit_size: 4
+  - name: pwmb_en
+    description: PWM_B Output Enables.
+    bit_offset: 4
+    bit_size: 4
+  - name: pwma_en
+    description: PWM_A Output Enables.
+    bit_offset: 8
+    bit_size: 4
+fieldset/Smcaptcompx:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  description: Capture Compare X Register.
+  bit_size: 16
+  fields:
+  - name: edgcmpx
+    description: Edge Compare X.
+    bit_offset: 0
+    bit_size: 8
+  - name: edgcntx
+    description: Edge Counter X.
+    bit_offset: 8
+    bit_size: 8
+fieldset/Smcaptfiltx:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  description: Capture PWM_X Input Filter Register.
+  bit_size: 16
+  fields:
+  - name: captx_filt_per
+    description: Input Capture Filter Period.
+    bit_offset: 0
+    bit_size: 8
+  - name: captx_filt_cnt
+    description: Input Capture Filter Count.
+    bit_offset: 8
+    bit_size: 3
+fieldset/Smcnt:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  description: Counter Register.
+  bit_size: 16
+  fields:
+  - name: cnt
+    description: Counter Register Bits.
+    bit_offset: 0
+    bit_size: 16
+fieldset/Smcval0:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  description: Capture Value 0 Register.
+  bit_size: 16
+  fields:
+  - name: captval0
+    description: Capture Value 0.
+    bit_offset: 0
+    bit_size: 16
+fieldset/Smcval0cyc:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  description: Capture Value 0 Cycle Register.
+  bit_size: 16
+  fields:
+  - name: cval0cyc
+    description: Capture Value 0 Cycle.
+    bit_offset: 0
+    bit_size: 4
+fieldset/Smcval1:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  description: Capture Value 1 Register.
+  bit_size: 16
+  fields:
+  - name: captval1
+    description: Capture Value 1.
+    bit_offset: 0
+    bit_size: 16
+fieldset/Smcval1cyc:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  description: Capture Value 1 Cycle Register.
+  bit_size: 16
+  fields:
+  - name: cval1cyc
+    description: Capture Value 1 Cycle.
+    bit_offset: 0
+    bit_size: 4
+fieldset/Smdismap0:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  description: Fault Disable Mapping Register 0.
+  bit_size: 16
+  fields:
+  - name: dis0a
+    description: PWM_A Fault Disable Mask 0.
+    bit_offset: 0
+    bit_size: 4
+  - name: dis0b
+    description: PWM_B Fault Disable Mask 0.
+    bit_offset: 4
+    bit_size: 4
+  - name: dis0x
+    description: PWM_X Fault Disable Mask 0.
+    bit_offset: 8
+    bit_size: 4
+fieldset/Smdtcnt0:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  description: Deadtime Count Register 0.
+  bit_size: 16
+  fields:
+  - name: dtcnt0
+    description: Deadtime Count Register 0.
+    bit_offset: 0
+    bit_size: 11
+fieldset/Smdtcnt1:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  description: Deadtime Count Register 1.
+  bit_size: 16
+  fields:
+  - name: dtcnt1
+    description: Deadtime Count Register 1.
+    bit_offset: 0
+    bit_size: 11
+fieldset/Sminit:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  description: Initial Count Register.
+  bit_size: 16
+  fields:
+  - name: init
+    description: Initial Count Register Bits.
+    bit_offset: 0
+    bit_size: 16
+fieldset/Smphasedly:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  description: Phase Delay Register.
+  bit_size: 16
+  fields:
+  - name: phasedly
+    description: Initial Count Register Bits.
+    bit_offset: 0
+    bit_size: 16
+enum/Fauto:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 4
+  variants:
+  - name: Manual
+    description: Manual fault clearing. PWM outputs disabled by this fault are not enabled until FSTS[FFLAGx] is clear at the start of a half cycle or full cycle depending on the states of FSTS[FHALF] and FSTS[FFULL]. If neither FFULL nor FHALF is set, then the fault condition cannot be cleared. This is further controlled by FCTRL[FSAFE].
+    value: 0
+  - name: Automatic
+    description: Automatic fault clearing. PWM outputs disabled by this fault are enabled when FSTS[FFPINx] is clear at the start of a half cycle or full cycle depending on the states of FSTS[FHALF] and FSTS[FFULL] without regard to the state of FSTS[FFLAGx]. If neither FFULL nor FHALF is set, then the fault condition cannot be cleared.
+    value: 1
+enum/Fflag:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 4
+  variants:
+  - name: NoFlag
+    description: No fault on the FAULTx pin.
+    value: 0
+  - name: Flag
+    description: Fault on the FAULTx pin.
+    value: 1
+enum/Ffull:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 4
+  variants:
+  - name: PwmOutputsNotReenabled
+    description: PWM outputs are not re-enabled at the start of a full cycle.
+    value: 0
+  - name: PwmOutputsReenabled
+    description: PWM outputs are re-enabled at the start of a full cycle.
+    value: 1
+enum/Fhalf:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 4
+  variants:
+  - name: PwmOutputsNotReenabled
+    description: PWM outputs are not re-enabled at the start of a half cycle.
+    value: 0
+  - name: PwmOutputsReenabled
+    description: PWM outputs are re-enabled at the start of a half cycle (as defined by VAL0).
+    value: 1
+enum/Fie:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 4
+  variants:
+  - name: Disabled
+    description: FAULTx CPU interrupt requests disabled.
+    value: 0
+  - name: Enabled
+    description: FAULTx CPU interrupt requests enabled.
+    value: 1
+enum/Flvl:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 4
+  variants:
+  - name: Logic0
+    description: A logic 0 on the fault input indicates a fault condition.
+    value: 0
+  - name: Logic1
+    description: A logic 1 on the fault input indicates a fault condition.
+    value: 1
+enum/Fsafe:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 4
+  variants:
+  - name: Normal
+    description: Normal mode. PWM outputs disabled by this fault are not enabled until FSTS[FFLAGx] is clear at the start of a half cycle or full cycle depending on the states of FSTS[FHALF] and FSTS[FFULL] without regard to the state of FSTS[FFPINx]. If neither FHALF nor FFULL is set, then the fault condition cannot be cleared. The PWM outputs disabled by this fault input will not be re-enabled until the actual FAULTx input signal de-asserts since the fault input will combinationally disable the PWM outputs (as programmed in DISMAPn).
+    value: 0
+  - name: Safe
+    description: Safe mode. PWM outputs disabled by this fault are not enabled until FSTS[FFLAGx] is clear and FSTS[FFPINx] is clear at the start of a half cycle or full cycle depending on the states of FSTS[FHALF] and FSTS[FFULL]. If neither FHLAF nor FFULL is set, then the fault condition cannot be cleared.
+    value: 1
+enum/Ipol:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 4
+  variants:
+  - name: Pwm23
+    description: PWM23 is used to generate complementary PWM pair in the corresponding submodule.
+    value: 0
+  - name: Pwm45
+    description: PWM45 is used to generate complementary PWM pair in the corresponding submodule.
+    value: 1
+enum/Ldok:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 4
+  variants:
+  - name: Disabled
+    description: Do not load new values.
+    value: 0
+  - name: Enabled
+    description: Load prescaler, modulus, and PWM values of the corresponding submodule.
+    value: 1
+enum/Nocomb:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 4
+  variants:
+  - name: Enabled
+    description: There is a combinational link from the fault inputs to the PWM outputs. The fault inputs are combined with the filtered and latched fault signals to disable the PWM outputs.
+    value: 0
+  - name: Disabled
+    description: The direct combinational path from the fault inputs to the PWM outputs is disabled and the filtered and latched fault signals are used to disable the PWM outputs.
+    value: 1
+enum/Run:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 4
+  variants:
+  - name: Disabled
+    description: PWM counter is stopped, but PWM outputs hold the current state.
+    value: 0
+  - name: Enabled
+    description: PWM counter is started in the corresponding submodule.
+    value: 1
+enum/SmcaptctrlxEdgx:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 2
+  variants:
+  - name: Disabled
+    description: Disabled.
+    value: 0
+  - name: FallingEdge
+    description: Capture falling edges.
+    value: 1
+  - name: RisingEdge
+    description: Capture rising edges.
+    value: 2
+  - name: AnyEdge
+    description: Capture any edge.
+    value: 3
+enum/SmcaptctrlxInpSelx:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 1
+  variants:
+  - name: PwmX
+    description: Raw PWM_X input signal selected as source.
+    value: 0
+  - name: EdgeCounter
+    description: Edge Counter.
+    value: 1
+enum/SmcaptctrlxOneshotx:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 1
+  variants:
+  - name: FreeRunning
+    description: Free Running.
+    value: 0
+  - name: OneShot
+    description: One Shot.
+    value: 1
+enum/SmctrlClkSel:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 2
+  variants:
+  - name: Ipbus
+    description: The IPBus clock is used as the clock for the local prescaler and counter.
+    value: 0
+  - name: ExtClk
+    description: EXT_CLK is used as the clock for the local prescaler and counter.
+    value: 1
+  - name: AuxClk
+    description: Submodule 0's clock (AUX_CLK) is used as the source clock for the local prescaler and counter. This setting should not be used in submodule 0 as it forces the clock to logic 0.
+    value: 2
+enum/SmctrlCompmode:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 1
+  variants:
+  - name: EqualTo
+    description: The VAL* registers and the PWM counter are compared using an "equal to" method. This means that PWM edges are only produced when the counter is equal to one of the VAL* register values. This implies that a PWM_A output that is high at the end of a period maintains this state until a match with VAL3 clears the output in the following period.
+    value: 0
+  - name: EqualToOrGreaterThan
+    description: The VAL* registers and the PWM counter are compared using an "equal to or greater than" method. This means that PWM edges are produced when the counter is equal to or greater than one of the VAL* register values. This implies that a PWM_A output that is high at the end of a period could go low at the start of the next period if the starting counter value is greater than (but not necessarily equal to) the new VAL3 value.
+    value: 1
+enum/SmctrlForceSel:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 3
+  variants:
+  - name: Local
+    description: The local force signal, CTRL2[FORCE], from this submodule is used to force updates.
+    value: 0
+  - name: Master
+    description: The master force signal from submodule 0 is used to force updates. This setting should not be used in submodule 0 as it holds the FORCE OUTPUT signal to logic 0.
+    value: 1
+  - name: LocalReload
+    description: The local reload signal from this submodule is used to force updates without regard to the state of LDOK.
+    value: 2
+  - name: MasterReload
+    description: The master reload signal from submodule0 is used to force updates if LDOK is set. This setting should not be used in submodule0 as it holds the FORCE OUTPUT signal to logic 0.
+    value: 3
+  - name: LocalSync
+    description: The local sync signal from this submodule is used to force updates.
+    value: 4
+  - name: MasterSync
+    description: The master sync signal from submodule0 is used to force updates. This setting should not be used in submodule0 as it holds the FORCE OUTPUT signal to logic 0.
+    value: 5
+  - name: ExtForce
+    description: The external force signal, EXT_FORCE, from outside the PWM module causes updates.
+    value: 6
+  - name: ExtSync
+    description: The external sync signal, EXT_SYNC, from outside the PWM module causes updates.
+    value: 7
+enum/SmctrlIndep:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 1
+  variants:
+  - name: Complementary
+    description: PWM_A and PWM_B form a complementary PWM pair.
+    value: 0
+  - name: Independent
+    description: PWM_A and PWM_B outputs are independent PWMs.
+    value: 1
+enum/SmctrlInitSel:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 2
+  variants:
+  - name: PwmX
+    description: Local sync (PWM_X) causes initialization.
+    value: 0
+  - name: MasterReload
+    description: Master reload from submodule 0 causes initialization. This setting should not be used in submodule 0 as it forces the INIT signal to logic 0. The submodule counter will only re-initialize when a master reload occurs.
+    value: 1
+  - name: MasterSync
+    description: Master sync from submodule 0 causes initialization. This setting should not be used in submodule 0 as it forces the INIT signal to logic 0.
+    value: 2
+  - name: ExtSync
+    description: EXT_SYNC causes initialization.
+    value: 3
+enum/SmctrlLdfq:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 4
+  variants:
+  - name: Everypwm
+    description: Every PWM opportunity.
+    value: 0
+  - name: Every2pwm
+    description: Every 2 PWM opportunities.
+    value: 1
+  - name: Every3pwm
+    description: Every 3 PWM opportunities.
+    value: 2
+  - name: Every4pwm
+    description: Every 4 PWM opportunities.
+    value: 3
+  - name: Every5pwm
+    description: Every 5 PWM opportunities.
+    value: 4
+  - name: Every6pwm
+    description: Every 6 PWM opportunities.
+    value: 5
+  - name: Every7pwm
+    description: Every 7 PWM opportunities.
+    value: 6
+  - name: Every8pwm
+    description: Every 8 PWM opportunities.
+    value: 7
+  - name: Every9pwm
+    description: Every 9 PWM opportunities.
+    value: 8
+  - name: Every10pwm
+    description: Every 10 PWM opportunities.
+    value: 9
+  - name: Every11pwm
+    description: Every 11 PWM opportunities.
+    value: 10
+  - name: Every12pwm
+    description: Every 12 PWM opportunities.
+    value: 11
+  - name: Every13pwm
+    description: Every 13 PWM opportunities.
+    value: 12
+  - name: Every14pwm
+    description: Every 14 PWM opportunities.
+    value: 13
+  - name: Every15pwm
+    description: Every 15 PWM opportunities.
+    value: 14
+  - name: Every16pwm
+    description: Every 16 PWM opportunities.
+    value: 15
+enum/SmctrlLdmod:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 1
+  variants:
+  - name: NextPwmReload
+    description: Buffered registers of this submodule are loaded and take effect at the next PWM reload if MCTRL[LDOK] is set.
+    value: 0
+  - name: MtctrlLdokSet
+    description: Buffered registers of this submodule are loaded and take effect immediately upon MCTRL[LDOK] being set. In this case, it is not necessary to set CTRL[FULL] or CTRL[HALF].
+    value: 1
+enum/SmctrlPrsc:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 3
+  variants:
+  - name: One
+    description: Prescaler 1.
+    value: 0
+  - name: Two
+    description: Prescaler 2.
+    value: 1
+  - name: Four
+    description: Prescaler 4.
+    value: 2
+  - name: Eight
+    description: Prescaler 8.
+    value: 3
+  - name: Sixteen
+    description: Prescaler 16.
+    value: 4
+  - name: Thirtytwo
+    description: Prescaler 32.
+    value: 5
+  - name: Sixtyfour
+    description: Prescaler 64.
+    value: 6
+  - name: Hundredtwentyeight
+    description: Prescaler 128.
+    value: 7
+enum/SmctrlReloadSel:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 1
+  variants:
+  - name: Local
+    description: The local RELOAD signal is used to reload registers.
+    value: 0
+  - name: Master
+    description: The master RELOAD signal (from submodule 0) is used to reload registers. This setting should not be used in submodule 0 as it forces the RELOAD signal to logic 0.
+    value: 1
+enum/SmdmaenCaptde:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 2
+  variants:
+  - name: Disabled
+    description: Read DMA requests disabled.
+    value: 0
+  - name: Exceedfifo
+    description: Exceeding a FIFO watermark sets the DMA read request. This requires at least one of DMAEN[CA1DE], DMAEN[CA0DE], DMAEN[CB1DE], DMAEN[CB0DE], DMAEN[CX1DE], or DMAEN[CX0DE] to be set to determine which watermark(s) the DMA request is sensitive.
+    value: 1
+  - name: LocalSync
+    description: A local synchronization (VAL1 matches counter) sets the read DMA request.
+    value: 2
+  - name: LocalReload
+    description: A local reload (STS[RF] being set) sets the read DMA request.
+    value: 3
+enum/SmdmaenFand:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 1
+  variants:
+  - name: Or
+    description: Selected FIFO watermarks are OR'ed together.
+    value: 0
+  - name: And
+    description: Selected FIFO watermarks are AND'ed together.
+    value: 1
+enum/SmintenCmpie:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 6
+  variants:
+  - name: Disabled
+    description: The corresponding STS[CMPF] bit will not cause an interrupt request.
+    value: 0
+  - name: Enabled
+    description: The corresponding STS[CMPF] bit will cause an interrupt request.
+    value: 1
+enum/SmoctrlPwmxfs:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 2
+  variants:
+  - name: Logic0
+    description: Output is forced to logic 0 state prior to consideration of output polarity control.
+    value: 0
+  - name: Logic1
+    description: Output is forced to logic 1 state prior to consideration of output polarity control.
+    value: 1
+  - name: Tristated2
+    description: Output is put in a high-impedance state.
+    value: 2
+  - name: Tristated3
+    description: Output is put in a high-impedance state.
+    value: 3
+enum/Smout:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 1
+  variants:
+  - name: Logic0
+    description: A logic 0 is supplied to the deadtime generator of submodule 0 instead of PWM23.
+    value: 0
+  - name: Logic1
+    description: A logic 1 is supplied to the deadtime generator of submodule 0 instead of PWM23.
+    value: 1
+enum/SmstsCmpf:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 6
+  variants:
+  - name: NoEvent
+    description: No compare event has occurred for a particular VALx value.
+    value: 0
+  - name: Event
+    description: A compare event has occurred for a particular VALx value.
+    value: 1
+enum/SmtctrlPwaot:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 1
+  variants:
+  - name: PwmOutTrig0Signal
+    description: Route the PWM_OUT_TRIG0 signal to PWM_MUX_TRIG0 port.
+    value: 0
+  - name: PwmaOutput
+    description: Route the PWM_A output to the PWM_MUX_TRIG0 port.
+    value: 1
+enum/SmtctrlPwbot:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 1
+  variants:
+  - name: PwmOutTrig1Signal
+    description: Route the PWM_OUT_TRIG1 signal to PWM_MUX_TRIG1 port.
+    value: 0
+  - name: PwmbOutput
+    description: Route the PWM_B output to the PWM_MUX_TRIG1 port.
+    value: 1
+enum/SmtctrlTrgfrq:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 1
+  variants:
+  - name: Everypwm
+    description: Trigger outputs are generated during every PWM period even if the PWM is not reloaded every period due to CTRL[LDFQ] being non-zero.
+    value: 0
+  - name: Finalpwm
+    description: Trigger outputs are generated only during the final PWM period prior to a reload opportunity when the PWM is not reloaded every period due to CTRL[LDFQ] being non-zero.
+    value: 1
+enum/StretchCntPrsc:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 2
+  variants:
+  - name: Disabled
+    description: Stretch count is zero, no stretch.
+    value: 0
+  - name: Enabled
+    description: Stretch mux0_trig/mux1_trig/out0_trig/out1_trig/pwma_trig/pwmb_trig for 2 IPBus clock period.
+    value: 1
+  - name: DisabledLocked
+    description: Stretch mux0_trig/mux1_trig/out0_trig/out1_trig/pwma_trig/pwmb_trig for 4 IPBus clock period.
+    value: 2
+  - name: EnabledLocked
+    description: Stretch mux0_trig/mux1_trig/out0_trig/out1_trig/pwma_trig/pwmb_trig for 8 IPBus clock period.
+    value: 3
+enum/Wrprot:
+  only_in: '^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$'
+  bit_size: 2
+  variants:
+  - name: Disabled
+    description: Write protection off (default).
+    value: 0
+  - name: Enabled
+    description: Write protection on.
+    value: 1
+  - name: DisabledLocked
+    description: Write protection off and locked until chip reset.
+    value: 2
+  - name: EnabledLocked
+    description: Write protection on and locked until chip reset.
+    value: 3

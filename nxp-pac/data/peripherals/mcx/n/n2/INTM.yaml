@@ -16,7 +16,7 @@ block/IntmAlpha:
     description: Interrupt Acknowledge.
     byte_offset: 4
     access: Write
-    fieldset: IntmAlphaFieldsetAlpha
+    fieldset: IntmIack
   - name: mon
     description: Monitoring.
     array:
@@ -30,7 +30,7 @@ block/IntmAlphaBlockBravo:
   - name: intm_irqsel
     description: Interrupt Request Select for Monitor mon_index.
     byte_offset: 0
-    fieldset: IntmAlphaFieldsetBravo
+    fieldset: IntmIack
   - name: intm_latency
     description: Interrupt Latency for Monitor mon_index.
     byte_offset: 4
@@ -44,15 +44,8 @@ block/IntmAlphaBlockBravo:
     byte_offset: 12
     access: Read
     fieldset: IntmAlphaFieldsetEcho
-fieldset/IntmAlphaFieldsetAlpha:
+fieldset/IntmIack:
   description: Interrupt Acknowledge.
-  fields:
-  - name: irq
-    description: Interrupt Request.
-    bit_offset: 0
-    bit_size: 10
-fieldset/IntmAlphaFieldsetBravo:
-  description: Interrupt Request Select for Monitor mon_index.
   fields:
   - name: irq
     description: Interrupt Request.

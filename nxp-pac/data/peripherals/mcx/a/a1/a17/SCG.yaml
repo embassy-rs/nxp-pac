@@ -25,7 +25,7 @@ block/Scg:
   - name: rccr
     description: Run Clock Control.
     byte_offset: 20
-    fieldset: Rccr
+    fieldset: Csr
   - name: sosccsr
     description: SOSC Control Status.
     byte_offset: 256
@@ -210,16 +210,6 @@ fieldset/Param:
     bit_size: 1
   bit_size: 32
   reset_value: 30
-fieldset/Rccr:
-  description: Run Clock Control.
-  fields:
-  - name: scs
-    description: System Clock Source.
-    bit_offset: 24
-    bit_size: 3
-    enum: Scs
-  bit_size: 32
-  reset_value: 50331648
 fieldset/Rosccsr:
   description: ROSC Control Status.
   fields:
@@ -227,7 +217,7 @@ fieldset/Rosccsr:
     description: Lock.
     bit_offset: 23
     bit_size: 1
-    enum: RosccsrLk
+    enum: FirccsrLk
   - name: roscvld
     description: ROSC Valid.
     bit_offset: 24
@@ -276,7 +266,7 @@ fieldset/Sirccsr:
     description: Lock.
     bit_offset: 23
     bit_size: 1
-    enum: SirccsrLk
+    enum: FirccsrLk
   - name: sircvld
     description: SIRC Valid.
     bit_offset: 24
@@ -543,15 +533,6 @@ enum/Range:
   - name: HighFreq
     description: Frequency range select of 40-50 MHz.
     value: 3
-enum/RosccsrLk:
-  bit_size: 1
-  variants:
-  - name: WriteEnabled
-    description: Control Status Register can be written.
-    value: 0
-  - name: WriteDisabled
-    description: Control Status Register cannot be written.
-    value: 1
 enum/Roscerr:
   bit_size: 1
   variants:
@@ -585,15 +566,6 @@ enum/Scs:
   - name: Rosc
     description: ROSC.
     value: 4
-enum/SirccsrLk:
-  bit_size: 1
-  variants:
-  - name: WriteEnabled
-    description: Control Status Register can be written.
-    value: 0
-  - name: WriteDisabled
-    description: Control Status Register cannot be written.
-    value: 1
 enum/Sircerr:
   bit_size: 1
   variants:

@@ -388,12 +388,12 @@ fieldset/SgiCtrl2:
     description: Start KEY register-bank Flush.
     bit_offset: 1
     bit_size: 1
-    enum: KeyFlush
+    enum: Flush
   - name: datin_flush
     description: Start DATIN register-bank Flush.
     bit_offset: 2
     bit_size: 1
-    enum: DatinFlush
+    enum: Flush
   - name: incr
     description: Increment(Triggered by SFR write).
     bit_offset: 3
@@ -807,15 +807,6 @@ enum/CryptoOp:
   - name: Others7
     description: others - RFU (Defaults to 1st available OP).
     value: 7
-enum/DatinFlush:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: Clr has no effect.
-    value: 0
-  - name: Flush
-    description: Set to start flush.
-    value: 1
 enum/DatoutRes:
   bit_size: 2
   variants:
@@ -948,15 +939,6 @@ enum/Insel:
   - name: Others9
     description: others - DATIN[0] * - only if DATIN[num] exists, else [0].
     value: 9
-enum/KeyFlush:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: Clr has no effect.
-    value: 0
-  - name: Flush
-    description: Set to start flush.
-    value: 1
 enum/Milestone:
   bit_size: 2
   variants:

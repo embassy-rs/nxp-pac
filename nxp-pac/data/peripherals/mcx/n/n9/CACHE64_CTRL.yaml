@@ -32,12 +32,12 @@ fieldset/CachesixfourCtrlAlphaFieldsetAlpha:
     description: Cache Enable.
     bit_offset: 0
     bit_size: 1
-    enum: CachesixfourCtrlAlphaEnumCharlie
+    enum: Encache
   - name: enwrbuf
     description: Enable Write Buffer.
     bit_offset: 1
     bit_size: 1
-    enum: CachesixfourCtrlAlphaEnumDelta
+    enum: Encache
   - name: frcwt
     description: Force Write Through Mode.
     bit_offset: 2
@@ -87,7 +87,7 @@ fieldset/CachesixfourCtrlAlphaFieldsetCharlie:
     description: Initiate Cache Line Command.
     bit_offset: 0
     bit_size: 1
-    enum: CachesixfourCtrlAlphaEnumAlpha
+    enum: Lgo
   - name: cacheaddr
     description: Cache Address.
     bit_offset: 2
@@ -96,7 +96,7 @@ fieldset/CachesixfourCtrlAlphaFieldsetCharlie:
     description: Way Select.
     bit_offset: 14
     bit_size: 1
-    enum: CachesixfourCtrlAlphaEnumSierra
+    enum: Lcway
   - name: tdsel
     description: Tag Or Data Select.
     bit_offset: 16
@@ -116,7 +116,7 @@ fieldset/CachesixfourCtrlAlphaFieldsetCharlie:
     description: Line Command Way.
     bit_offset: 22
     bit_size: 1
-    enum: CachesixfourCtrlAlphaEnumOscar
+    enum: Lcway
   - name: lcmd
     description: Line Command.
     bit_offset: 24
@@ -139,12 +139,12 @@ fieldset/CachesixfourCtrlAlphaFieldsetDelta:
     description: Initiate Cache Line Command.
     bit_offset: 0
     bit_size: 1
-    enum: CachesixfourCtrlAlphaEnumBravo
+    enum: Lgo
   - name: phyaddr
     description: Physical Address.
     bit_offset: 1
     bit_size: 31
-enum/CachesixfourCtrlAlphaEnumAlpha:
+enum/Lgo:
   bit_size: 1
   variants:
   - name: InitCmd
@@ -153,25 +153,7 @@ enum/CachesixfourCtrlAlphaEnumAlpha:
   - name: NoEffect
     description: 'Write: no effect; Read: no line command active.'
     value: 0
-enum/CachesixfourCtrlAlphaEnumBravo:
-  bit_size: 1
-  variants:
-  - name: InitCmd
-    description: 'Write: initiate line command; Read: line command active.'
-    value: 1
-  - name: NoEffect
-    description: 'Write: no effect; Read: no line command active.'
-    value: 0
-enum/CachesixfourCtrlAlphaEnumCharlie:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
-enum/CachesixfourCtrlAlphaEnumDelta:
+enum/Encache:
   bit_size: 1
   variants:
   - name: Disabled
@@ -276,7 +258,7 @@ enum/CachesixfourCtrlAlphaEnumNovember:
   - name: SearchRw
     description: Search and read or write.
     value: 0
-enum/CachesixfourCtrlAlphaEnumOscar:
+enum/Lcway:
   bit_size: 1
   variants:
   - name: Way0
@@ -311,13 +293,4 @@ enum/CachesixfourCtrlAlphaEnumRomeo:
     value: 0
   - name: Tag
     description: Tag.
-    value: 1
-enum/CachesixfourCtrlAlphaEnumSierra:
-  bit_size: 1
-  variants:
-  - name: Way0
-    description: Way 0.
-    value: 0
-  - name: Way1
-    description: Way 1.
     value: 1

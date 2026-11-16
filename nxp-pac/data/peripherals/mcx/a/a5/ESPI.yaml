@@ -152,7 +152,7 @@ block/Espi:
     byte_offset: 92
     bit_size: 32
     access: Read
-    fieldset: WireoutGpio
+    fieldset: WireinGpio
   - name: pcfg
     description: 'Port Configuration. Configure type/address before enabling the port; TYPE must not change while
       enabled. Only one port may be OOB; if multiple ports are marked OOB, only the lowest-numbered port receives
@@ -607,7 +607,7 @@ fieldset/Dmactrl:
       complete/ready (whether endpoint and a byte or mailbox and many bytes).'
     bit_offset: 2
     bit_size: 2
-    enum: DmactrlDma1en
+    enum: DmactrlDma0en
   - name: dma0port
     description: DMA 0 Port
     bit_offset: 8
@@ -618,7 +618,7 @@ fieldset/Dmactrl:
       8: Port80. Used to offload the Port80 bytes (only host writes apply to Port80).'
     bit_offset: 12
     bit_size: 4
-    enum: DmactrlDma1port
+    enum: DmactrlDma0port
   - name: cnt0
     description: Reload Count 0
     bit_offset: 16
@@ -1057,25 +1057,6 @@ fieldset/WireinGpio:
     description: Index
     bit_offset: 8
     bit_size: 8
-fieldset/WireoutGpio:
-  description: 'WIREOUT_GPIO. SOURCE CONFLICT: memory map/XML mark read-only, but 52.8.1.21 says the target CPU
-    writes this register to transmit virtual wires. Conservatively retain Read access pending vendor clarification;
-    no write accessor is proposed. LEVEL and VALID are independent bit masks.'
-  bit_size: 32
-  reset_value: 0
-  fields:
-  - name: level
-    description: 'Level. Encodings: 0: Low; 1: High'
-    bit_offset: 0
-    bit_size: 4
-  - name: valid
-    description: 'Valid. Encodings: 0: Not valid; 1: Valid'
-    bit_offset: 4
-    bit_size: 4
-  - name: index
-    description: Index
-    bit_offset: 8
-    bit_size: 8
 fieldset/Pcfg:
   description: 'Port Configuration. Configure type/address before enabling the port; TYPE must not change while
     enabled. Only one port may be OOB; if multiple ports are marked OOB, only the lowest-numbered port receives
@@ -1363,31 +1344,7 @@ enum/DmactrlDma0en:
     value: 1
   - name: HostWriteReady
     value: 2
-enum/DmactrlDma1en:
-  bit_size: 2
-  variants:
-  - name: Disabled
-    value: 0
-  - name: HostReadEmpty
-    value: 1
-  - name: HostWriteReady
-    value: 2
 enum/DmactrlDma0port:
-  bit_size: 4
-  variants:
-  - name: Port0
-    value: 0
-  - name: Port1
-    value: 1
-  - name: Port2
-    value: 2
-  - name: Port3
-    value: 3
-  - name: Port4
-    value: 4
-  - name: Port80
-    value: 8
-enum/DmactrlDma1port:
   bit_size: 4
   variants:
   - name: Port0

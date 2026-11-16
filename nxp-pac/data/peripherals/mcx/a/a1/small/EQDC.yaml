@@ -41,7 +41,7 @@ block/Eqdc:
     description: Upper Position Counter Register.
     byte_offset: 12
     bit_size: 16
-    fieldset: Upos
+    fieldset: Lpos
   - name: lpos
     description: Lower Position Counter Register.
     byte_offset: 14
@@ -97,7 +97,7 @@ block/Eqdc:
     description: Upper Initialization Register.
     byte_offset: 32
     bit_size: 16
-    fieldset: Uinit
+    fieldset: Linit
   - name: linit
     description: Lower Initialization Register.
     byte_offset: 34
@@ -107,7 +107,7 @@ block/Eqdc:
     description: Upper Modulus Register.
     byte_offset: 36
     bit_size: 16
-    fieldset: Umod
+    fieldset: Lmod
   - name: lmod
     description: Lower Modulus Register.
     byte_offset: 38
@@ -795,33 +795,6 @@ fieldset/Ucomp3:
     bit_offset: 0
     bit_size: 16
   reset_value: 32768
-fieldset/Uinit:
-  description: Upper Initialization Register.
-  bit_size: 16
-  fields:
-  - name: init
-    description: INIT.
-    bit_offset: 0
-    bit_size: 16
-  reset_value: 0
-fieldset/Umod:
-  description: Upper Modulus Register.
-  bit_size: 16
-  fields:
-  - name: mod_
-    description: MOD.
-    bit_offset: 0
-    bit_size: 16
-  reset_value: 0
-fieldset/Upos:
-  description: Upper Position Counter Register.
-  bit_size: 16
-  fields:
-  - name: pos
-    description: POS.
-    bit_offset: 0
-    bit_size: 16
-  reset_value: 0
 fieldset/Uposh:
   description: Upper Position Hold Register.
   bit_size: 16

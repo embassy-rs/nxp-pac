@@ -1,0 +1,164 @@
+# Exact enum definitions and field layouts shared by MCXA and MCXN.
+# Availability retains family-specific types, encodings and software defaults.
+# MCXA definitions retain the manually curated mcux-soc-svd 13bbf70 source.
+# Native MCXN source revisions and hashes remain on the register-block entries.
+fieldset/SecVioAddr:
+  description: Security Violation Address.
+  fields:
+  - name: sec_vio_addr
+    description: Security violation address for AHB layer a reset value 0.
+    bit_offset: 0
+    bit_size: 32
+  only_in: ^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$
+enum/LockNsMpu:
+  bit_size: 2
+  variants:
+  - name: LockNsMpuEq1
+    description: CM33 (CPU0) LOCK_NS_MPU is 1.
+    value: 1
+  - name: LockNsMpuEq0
+    description: CM33 (CPU0) LOCK_NS_MPU is 0.
+    value: 2
+  only_in: ^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$
+enum/LockNsVtor:
+  bit_size: 2
+  variants:
+  - name: LockNsVtorEq1
+    description: CM33 (CPU0) LOCKNSVTOR is 1.
+    value: 1
+  - name: LockNsVtorEq0
+    description: CM33 (CPU0) LOCKNSVTOR is 0.
+    value: 2
+  only_in: ^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$
+enum/LockSMpu:
+  bit_size: 2
+  variants:
+  - name: LockSMpuEq1
+    description: CM33 (CPU0) LOCK_S_MPU is 1.
+    value: 1
+  - name: LockSMpuEq0
+    description: CM33 (CPU0) LOCK_S_MPU is 0.
+    value: 2
+  only_in: ^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$
+enum/LockSVtaircr:
+  bit_size: 2
+  variants:
+  - name: LockSVtaircrEq1
+    description: CM33 (CPU0) LOCK_S_VTAIRCR is 1.
+    value: 1
+  - name: LockSVtaircrEq0
+    description: CM33 (CPU0) LOCK_S_VTAIRCR is 0.
+    value: 2
+  only_in: ^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$
+enum/LockSau:
+  bit_size: 2
+  variants:
+  - name: LockSauEq1
+    description: CM33 (CPU0) LOCK_SAU is 1.
+    value: 1
+  - name: LockSauEq0
+    description: CM33 (CPU0) LOCK_SAU is 0.
+    value: 2
+  only_in: ^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$
+enum/MasterSec:
+  bit_size: 2
+  variants:
+  - name: NonsecureNonprivMaster
+    description: Non-secure and non-privileged Master.
+    value: 0
+  - name: NonsecurePrivMaster
+    description: Non-secure and privileged Master.
+    value: 1
+  - name: SecureNonprivMaster
+    description: Secure and non-privileged Master.
+    value: 2
+  - name: SecurePrivMaster
+    description: Secure and privileged Master.
+    value: 3
+  only_in: ^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$
+enum/MiscCtrlEnable:
+  bit_size: 2
+  variants:
+  - name: Enabled
+    description: Enables the privilege checking of non-secure mode access.
+    value: 1
+  - name: Disabled
+    description: Disables the privilege checking of non-secure mode access.
+    value: 2
+  only_in: ^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$
+enum/MiscCtrlRegDisableStrictMode:
+  bit_size: 2
+  variants:
+  - name: Ahbtm
+    description: Master can access memories and peripherals at the same level or below that level.
+    value: 1
+  - name: Ahbsm1
+    description: Master can access memories and peripherals at same level only.
+    value: 2
+  only_in: ^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$
+enum/MiscCtrlRegDisableViolationAbort:
+  bit_size: 2
+  variants:
+  - name: NoAbort
+    description: The violation detected by the secure checker will not cause an abort, but a secure_violation_irq (interrupt request) will still be asserted and serviced by ISR.
+    value: 1
+  - name: Abort
+    description: The violation detected by the secure checker will cause an abort.
+    value: 2
+  only_in: ^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$
+enum/MiscCtrlRegIdauAllNs:
+  bit_size: 2
+  variants:
+  - name: Disabled
+    description: IDAU is disabled, which means that all memories are attributed as non-secure memory.
+    value: 1
+  - name: Enabled
+    description: IDAU is enabled (restrictive mode).
+    value: 2
+  only_in: ^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$
+enum/MiscCtrlRegWriteLock:
+  bit_size: 2
+  variants:
+  - name: Locked
+    description: Writes to this register and to the Memory and Peripheral RULE registers are not allowed.
+    value: 1
+  - name: NotLocked
+    description: Writes to this register and to the Memory and Peripheral RULE registers are allowed.
+    value: 2
+  only_in: ^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$
+enum/Rule:
+  bit_size: 2
+  variants:
+  - name: NonsecureNonprivUserAllowed
+    description: Non-secure and non-privilege user access allowed.
+    value: 0
+  - name: NonsecurePrivUserAllowed
+    description: Non-secure and privilege access allowed.
+    value: 1
+  - name: SecureNonprivUserAllowed
+    description: Secure and non-privilege user access allowed.
+    value: 2
+  - name: SecurePrivUserAllowed
+    description: Secure and privilege user access allowed.
+    value: 3
+  only_in: ^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$
+enum/SecVioInfoDataAccess:
+  bit_size: 1
+  variants:
+  - name: Code
+    description: Code.
+    value: 0
+  - name: Data
+    description: Data.
+    value: 1
+  only_in: ^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$
+enum/SecVioInfoWrite:
+  bit_size: 1
+  variants:
+  - name: Read
+    description: Read access.
+    value: 0
+  - name: Write
+    description: Write access.
+    value: 1
+  only_in: ^(MCXN2[0-9]{2}|MCXN5[0-9]{2}|MCXN9[0-9]{2}|MCXA[0-9]+)$

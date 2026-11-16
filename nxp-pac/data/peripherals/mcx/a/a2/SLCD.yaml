@@ -43,157 +43,157 @@ fieldset/Bpen0:
     description: LCD Pin 1 Back Plane Enable.
     bit_offset: 1
     bit_size: 1
-    enum: Pin1Bpen
+    enum: Pin0Bpen
   - name: pin_2_bpen
     description: LCD Pin 2 Back Plane Enable.
     bit_offset: 2
     bit_size: 1
-    enum: Pin2Bpen
+    enum: Pin0Bpen
   - name: pin_3_bpen
     description: LCD Pin 3 Back Plane Enable.
     bit_offset: 3
     bit_size: 1
-    enum: Pin3Bpen
+    enum: Pin0Bpen
   - name: pin_4_bpen
     description: LCD Pin 4 Back Plane Enable.
     bit_offset: 4
     bit_size: 1
-    enum: Pin4Bpen
+    enum: Pin0Bpen
   - name: pin_5_bpen
     description: LCD Pin 5 Back Plane Enable.
     bit_offset: 5
     bit_size: 1
-    enum: Pin5Bpen
+    enum: Pin0Bpen
   - name: pin_6_bpen
     description: LCD Pin 6 Back Plane Enable.
     bit_offset: 6
     bit_size: 1
-    enum: Pin6Bpen
+    enum: Pin0Bpen
   - name: pin_7_bpen
     description: LCD Pin 7 Back Plane Enable.
     bit_offset: 7
     bit_size: 1
-    enum: Pin7Bpen
+    enum: Pin0Bpen
   - name: pin_8_bpen
     description: LCD Pin 8 Back Plane Enable.
     bit_offset: 8
     bit_size: 1
-    enum: Pin8Bpen
+    enum: Pin0Bpen
   - name: pin_9_bpen
     description: LCD Pin 9 Back Plane Enable.
     bit_offset: 9
     bit_size: 1
-    enum: Pin9Bpen
+    enum: Pin0Bpen
   - name: pin_10_bpen
     description: LCD Pin 10 Back Plane Enable.
     bit_offset: 10
     bit_size: 1
-    enum: Pin10Bpen
+    enum: Pin0Bpen
   - name: pin_11_bpen
     description: LCD Pin 11 Back Plane Enable.
     bit_offset: 11
     bit_size: 1
-    enum: Pin11Bpen
+    enum: Pin0Bpen
   - name: pin_12_bpen
     description: LCD Pin 12 Back Plane Enable.
     bit_offset: 12
     bit_size: 1
-    enum: Pin12Bpen
+    enum: Pin0Bpen
   - name: pin_13_bpen
     description: LCD Pin 13 Back Plane Enable.
     bit_offset: 13
     bit_size: 1
-    enum: Pin13Bpen
+    enum: Pin0Bpen
   - name: pin_14_bpen
     description: LCD Pin 14 Back Plane Enable.
     bit_offset: 14
     bit_size: 1
-    enum: Pin14Bpen
+    enum: Pin0Bpen
   - name: pin_15_bpen
     description: LCD Pin 15 Back Plane Enable.
     bit_offset: 15
     bit_size: 1
-    enum: Pin15Bpen
+    enum: Pin0Bpen
   - name: pin_16_bpen
     description: LCD Pin 16 Back Plane Enable.
     bit_offset: 16
     bit_size: 1
-    enum: Pin16Bpen
+    enum: Pin0Bpen
   - name: pin_17_bpen
     description: LCD Pin 17 Back Plane Enable.
     bit_offset: 17
     bit_size: 1
-    enum: Pin17Bpen
+    enum: Pin0Bpen
   - name: pin_18_bpen
     description: LCD Pin 18 Back Plane Enable.
     bit_offset: 18
     bit_size: 1
-    enum: Pin18Bpen
+    enum: Pin0Bpen
   - name: pin_19_bpen
     description: LCD Pin 19 Back Plane Enable.
     bit_offset: 19
     bit_size: 1
-    enum: Pin19Bpen
+    enum: Pin0Bpen
   - name: pin_20_bpen
     description: LCD Pin 20 Back Plane Enable.
     bit_offset: 20
     bit_size: 1
-    enum: Pin20Bpen
+    enum: Pin0Bpen
   - name: pin_21_bpen
     description: LCD Pin 21 Back Plane Enable.
     bit_offset: 21
     bit_size: 1
-    enum: Pin21Bpen
+    enum: Pin0Bpen
   - name: pin_22_bpen
     description: LCD Pin 22 Back Plane Enable.
     bit_offset: 22
     bit_size: 1
-    enum: Pin22Bpen
+    enum: Pin0Bpen
   - name: pin_23_bpen
     description: LCD Pin 23 Back Plane Enable.
     bit_offset: 23
     bit_size: 1
-    enum: Pin23Bpen
+    enum: Pin0Bpen
   - name: pin_24_bpen
     description: LCD Pin 24 Back Plane Enable.
     bit_offset: 24
     bit_size: 1
-    enum: Pin24Bpen
+    enum: Pin0Bpen
   - name: pin_25_bpen
     description: LCD Pin 25 Back Plane Enable.
     bit_offset: 25
     bit_size: 1
-    enum: Pin25Bpen
+    enum: Pin0Bpen
   - name: pin_26_bpen
     description: LCD Pin 26 Back Plane Enable.
     bit_offset: 26
     bit_size: 1
-    enum: Pin26Bpen
+    enum: Pin0Bpen
   - name: pin_27_bpen
     description: LCD Pin 27 Back Plane Enable.
     bit_offset: 27
     bit_size: 1
-    enum: Pin27Bpen
+    enum: Pin0Bpen
   - name: pin_28_bpen
     description: LCD Pin 28 Back Plane Enable.
     bit_offset: 28
     bit_size: 1
-    enum: Pin28Bpen
+    enum: Pin0Bpen
   - name: pin_29_bpen
     description: LCD Pin 29 Back Plane Enable.
     bit_offset: 29
     bit_size: 1
-    enum: Pin29Bpen
+    enum: Pin0Bpen
   - name: pin_30_bpen
     description: LCD Pin 30 Back Plane Enable.
     bit_offset: 30
     bit_size: 1
-    enum: Pin30Bpen
+    enum: Pin0Bpen
   - name: pin_31_bpen
     description: LCD Pin 31 Back Plane Enable.
     bit_offset: 31
     bit_size: 1
-    enum: Pin31Bpen
+    enum: Pin0Bpen
   bit_size: 32
   reset_value: 0
 fieldset/Bpen1:
@@ -203,82 +203,82 @@ fieldset/Bpen1:
     description: LCD Pin 32 Back Plane Enable.
     bit_offset: 0
     bit_size: 1
-    enum: Pin32Bpen
+    enum: Pin0Bpen
   - name: pin_33_bpen
     description: LCD Pin 33 Back Plane Enable.
     bit_offset: 1
     bit_size: 1
-    enum: Pin33Bpen
+    enum: Pin0Bpen
   - name: pin_34_bpen
     description: LCD Pin 34 Back Plane Enable.
     bit_offset: 2
     bit_size: 1
-    enum: Pin34Bpen
+    enum: Pin0Bpen
   - name: pin_35_bpen
     description: LCD Pin 35 Back Plane Enable.
     bit_offset: 3
     bit_size: 1
-    enum: Pin35Bpen
+    enum: Pin0Bpen
   - name: pin_36_bpen
     description: LCD Pin 36 Back Plane Enable.
     bit_offset: 4
     bit_size: 1
-    enum: Pin36Bpen
+    enum: Pin0Bpen
   - name: pin_37_bpen
     description: LCD Pin 37 Back Plane Enable.
     bit_offset: 5
     bit_size: 1
-    enum: Pin37Bpen
+    enum: Pin0Bpen
   - name: pin_38_bpen
     description: LCD Pin 38 Back Plane Enable.
     bit_offset: 6
     bit_size: 1
-    enum: Pin38Bpen
+    enum: Pin0Bpen
   - name: pin_39_bpen
     description: LCD Pin 39 Back Plane Enable.
     bit_offset: 7
     bit_size: 1
-    enum: Pin39Bpen
+    enum: Pin0Bpen
   - name: pin_40_bpen
     description: LCD Pin 40 Back Plane Enable.
     bit_offset: 8
     bit_size: 1
-    enum: Pin40Bpen
+    enum: Pin0Bpen
   - name: pin_41_bpen
     description: LCD Pin 41 Back Plane Enable.
     bit_offset: 9
     bit_size: 1
-    enum: Pin41Bpen
+    enum: Pin0Bpen
   - name: pin_42_bpen
     description: LCD Pin 42 Back Plane Enable.
     bit_offset: 10
     bit_size: 1
-    enum: Pin42Bpen
+    enum: Pin0Bpen
   - name: pin_43_bpen
     description: LCD Pin 43 Back Plane Enable.
     bit_offset: 11
     bit_size: 1
-    enum: Pin43Bpen
+    enum: Pin0Bpen
   - name: pin_44_bpen
     description: LCD Pin 44 Back Plane Enable.
     bit_offset: 12
     bit_size: 1
-    enum: Pin44Bpen
+    enum: Pin0Bpen
   - name: pin_45_bpen
     description: LCD Pin 45 Back Plane Enable.
     bit_offset: 13
     bit_size: 1
-    enum: Pin45Bpen
+    enum: Pin0Bpen
   - name: pin_46_bpen
     description: LCD Pin 46 Back Plane Enable.
     bit_offset: 14
     bit_size: 1
-    enum: Pin46Bpen
+    enum: Pin0Bpen
   - name: pin_47_bpen
     description: LCD Pin 47 Back Plane Enable.
     bit_offset: 15
     bit_size: 1
-    enum: Pin47Bpen
+    enum: Pin0Bpen
   bit_size: 32
   reset_value: 0
 fieldset/Fdcr:
@@ -843,429 +843,6 @@ fieldset/Wf8b0:
     bit_offset: 0
     bit_size: 8
   reset_value: 0
-fieldset/Wf8b1:
-  description: LCD Waveform 1 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b10:
-  description: LCD Waveform 10 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b11:
-  description: LCD Waveform 11 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b12:
-  description: LCD Waveform 12 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b13:
-  description: LCD Waveform 13 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b14:
-  description: LCD Waveform 14 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b15:
-  description: LCD Waveform 15 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b16:
-  description: LCD Waveform 16 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b17:
-  description: LCD Waveform 17 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b18:
-  description: LCD Waveform 18 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b19:
-  description: LCD Waveform 19 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b2:
-  description: LCD Waveform 2 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b20:
-  description: LCD Waveform 20 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b21:
-  description: LCD Waveform 21 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b22:
-  description: LCD Waveform 22 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b23:
-  description: LCD Waveform 23 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b24:
-  description: LCD Waveform 24 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b25:
-  description: LCD Waveform 25 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b26:
-  description: LCD Waveform 26 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b27:
-  description: LCD Waveform 27 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b28:
-  description: LCD Waveform 28 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b29:
-  description: LCD Waveform 29 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b3:
-  description: LCD Waveform 3 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b30:
-  description: LCD Waveform 30 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b31:
-  description: LCD Waveform 31 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b32:
-  description: LCD Waveform 32 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b33:
-  description: LCD Waveform 33 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b34:
-  description: LCD Waveform 34 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b35:
-  description: LCD Waveform 35 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b36:
-  description: LCD Waveform 36 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b37:
-  description: LCD Waveform 37 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b38:
-  description: LCD Waveform 38 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b39:
-  description: LCD Waveform 39 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b4:
-  description: LCD Waveform 4 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b40:
-  description: LCD Waveform 40 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b41:
-  description: LCD Waveform 41 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b42:
-  description: LCD Waveform 42 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b43:
-  description: LCD Waveform 43 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b44:
-  description: LCD Waveform 44 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b45:
-  description: LCD Waveform 45 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b46:
-  description: LCD Waveform 46 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b47:
-  description: LCD Waveform 47 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b5:
-  description: LCD Waveform 5 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b6:
-  description: LCD Waveform 6 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b7:
-  description: LCD Waveform 7 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b8:
-  description: LCD Waveform 8 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
-fieldset/Wf8b9:
-  description: LCD Waveform 9 Register.
-  bit_size: 8
-  fields:
-  - name: wf
-    description: Pin Waveform.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
 enum/Alt:
   bit_size: 1
   variants:
@@ -1398,429 +975,6 @@ enum/Pin0Bpen:
   - name: Bp
     description: Pin as Back Plane.
     value: 1
-enum/Pin10Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin11Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin12Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin13Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin14Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin15Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin16Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin17Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin18Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin19Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin1Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin20Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin21Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin22Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin23Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin24Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin25Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin26Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin27Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin28Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin29Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin2Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin30Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin31Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin32Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin33Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin34Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin35Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin36Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin37Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin38Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin39Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin3Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin40Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin41Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin42Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin43Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin44Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin45Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin46Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin47Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin4Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin5Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin6Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin7Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin8Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
-enum/Pin9Bpen:
-  bit_size: 1
-  variants:
-  - name: Fp
-    description: Pin as Front Plane.
-    value: 0
-  - name: Bp
-    description: Pin as Back Plane.
-    value: 1
 enum/Shcycle:
   bit_size: 1
   variants:
@@ -1878,17 +1032,17 @@ block/Slcd:
     description: LCD Waveform 1 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 33
     bit_size: 8
-    fieldset: Wf8b1
+    fieldset: Wf8b0
   - name: wf8b_2
     description: LCD Waveform 2 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 34
     bit_size: 8
-    fieldset: Wf8b2
+    fieldset: Wf8b0
   - name: wf8b_3
     description: LCD Waveform 3 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 35
     bit_size: 8
-    fieldset: Wf8b3
+    fieldset: Wf8b0
   - name: wf7_4
     description: LCD Waveform 7 to 4 Register.
     byte_offset: 36
@@ -1897,22 +1051,22 @@ block/Slcd:
     description: LCD Waveform 4 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 36
     bit_size: 8
-    fieldset: Wf8b4
+    fieldset: Wf8b0
   - name: wf8b_5
     description: LCD Waveform 5 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 37
     bit_size: 8
-    fieldset: Wf8b5
+    fieldset: Wf8b0
   - name: wf8b_6
     description: LCD Waveform 6 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 38
     bit_size: 8
-    fieldset: Wf8b6
+    fieldset: Wf8b0
   - name: wf8b_7
     description: LCD Waveform 7 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 39
     bit_size: 8
-    fieldset: Wf8b7
+    fieldset: Wf8b0
   - name: wf11_8
     description: LCD Waveform 11 to 8 Register.
     byte_offset: 40
@@ -1921,22 +1075,22 @@ block/Slcd:
     description: LCD Waveform 8 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 40
     bit_size: 8
-    fieldset: Wf8b8
+    fieldset: Wf8b0
   - name: wf8b_9
     description: LCD Waveform 9 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 41
     bit_size: 8
-    fieldset: Wf8b9
+    fieldset: Wf8b0
   - name: wf8b_10
     description: LCD Waveform 10 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 42
     bit_size: 8
-    fieldset: Wf8b10
+    fieldset: Wf8b0
   - name: wf8b_11
     description: LCD Waveform 11 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 43
     bit_size: 8
-    fieldset: Wf8b11
+    fieldset: Wf8b0
   - name: wf15_12
     description: LCD Waveform 15 to 12 Register.
     byte_offset: 44
@@ -1945,22 +1099,22 @@ block/Slcd:
     description: LCD Waveform 12 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 44
     bit_size: 8
-    fieldset: Wf8b12
+    fieldset: Wf8b0
   - name: wf8b_13
     description: LCD Waveform 13 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 45
     bit_size: 8
-    fieldset: Wf8b13
+    fieldset: Wf8b0
   - name: wf8b_14
     description: LCD Waveform 14 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 46
     bit_size: 8
-    fieldset: Wf8b14
+    fieldset: Wf8b0
   - name: wf8b_15
     description: LCD Waveform 15 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 47
     bit_size: 8
-    fieldset: Wf8b15
+    fieldset: Wf8b0
   - name: wf19_16
     description: LCD Waveform 19 to 16 Register.
     byte_offset: 48
@@ -1969,22 +1123,22 @@ block/Slcd:
     description: LCD Waveform 16 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 48
     bit_size: 8
-    fieldset: Wf8b16
+    fieldset: Wf8b0
   - name: wf8b_17
     description: LCD Waveform 17 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 49
     bit_size: 8
-    fieldset: Wf8b17
+    fieldset: Wf8b0
   - name: wf8b_18
     description: LCD Waveform 18 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 50
     bit_size: 8
-    fieldset: Wf8b18
+    fieldset: Wf8b0
   - name: wf8b_19
     description: LCD Waveform 19 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 51
     bit_size: 8
-    fieldset: Wf8b19
+    fieldset: Wf8b0
   - name: wf23_20
     description: LCD Waveform 23 to 20 Register.
     byte_offset: 52
@@ -1993,22 +1147,22 @@ block/Slcd:
     description: LCD Waveform 20 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 52
     bit_size: 8
-    fieldset: Wf8b20
+    fieldset: Wf8b0
   - name: wf8b_21
     description: LCD Waveform 21 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 53
     bit_size: 8
-    fieldset: Wf8b21
+    fieldset: Wf8b0
   - name: wf8b_22
     description: LCD Waveform 22 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 54
     bit_size: 8
-    fieldset: Wf8b22
+    fieldset: Wf8b0
   - name: wf8b_23
     description: LCD Waveform 23 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 55
     bit_size: 8
-    fieldset: Wf8b23
+    fieldset: Wf8b0
   - name: wf27_24
     description: LCD Waveform 27 to 24 Register.
     byte_offset: 56
@@ -2017,22 +1171,22 @@ block/Slcd:
     description: LCD Waveform 24 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 56
     bit_size: 8
-    fieldset: Wf8b24
+    fieldset: Wf8b0
   - name: wf8b_25
     description: LCD Waveform 25 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 57
     bit_size: 8
-    fieldset: Wf8b25
+    fieldset: Wf8b0
   - name: wf8b_26
     description: LCD Waveform 26 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 58
     bit_size: 8
-    fieldset: Wf8b26
+    fieldset: Wf8b0
   - name: wf8b_27
     description: LCD Waveform 27 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 59
     bit_size: 8
-    fieldset: Wf8b27
+    fieldset: Wf8b0
   - name: wf31_28
     description: LCD Waveform 31 to 28 Register.
     byte_offset: 60
@@ -2041,22 +1195,22 @@ block/Slcd:
     description: LCD Waveform 28 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 60
     bit_size: 8
-    fieldset: Wf8b28
+    fieldset: Wf8b0
   - name: wf8b_29
     description: LCD Waveform 29 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 61
     bit_size: 8
-    fieldset: Wf8b29
+    fieldset: Wf8b0
   - name: wf8b_30
     description: LCD Waveform 30 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 62
     bit_size: 8
-    fieldset: Wf8b30
+    fieldset: Wf8b0
   - name: wf8b_31
     description: LCD Waveform 31 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 63
     bit_size: 8
-    fieldset: Wf8b31
+    fieldset: Wf8b0
   - name: wf35_32
     description: LCD Waveform 35 to 32 Register.
     byte_offset: 64
@@ -2065,22 +1219,22 @@ block/Slcd:
     description: LCD Waveform 32 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 64
     bit_size: 8
-    fieldset: Wf8b32
+    fieldset: Wf8b0
   - name: wf8b_33
     description: LCD Waveform 33 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 65
     bit_size: 8
-    fieldset: Wf8b33
+    fieldset: Wf8b0
   - name: wf8b_34
     description: LCD Waveform 34 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 66
     bit_size: 8
-    fieldset: Wf8b34
+    fieldset: Wf8b0
   - name: wf8b_35
     description: LCD Waveform 35 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 67
     bit_size: 8
-    fieldset: Wf8b35
+    fieldset: Wf8b0
   - name: wf39_36
     description: LCD Waveform 39 to 36 Register.
     byte_offset: 68
@@ -2089,22 +1243,22 @@ block/Slcd:
     description: LCD Waveform 36 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 68
     bit_size: 8
-    fieldset: Wf8b36
+    fieldset: Wf8b0
   - name: wf8b_37
     description: LCD Waveform 37 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 69
     bit_size: 8
-    fieldset: Wf8b37
+    fieldset: Wf8b0
   - name: wf8b_38
     description: LCD Waveform 38 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 70
     bit_size: 8
-    fieldset: Wf8b38
+    fieldset: Wf8b0
   - name: wf8b_39
     description: LCD Waveform 39 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 71
     bit_size: 8
-    fieldset: Wf8b39
+    fieldset: Wf8b0
   - name: wf43_40
     description: LCD Waveform 43 to 40 Register.
     byte_offset: 72
@@ -2113,22 +1267,22 @@ block/Slcd:
     description: LCD Waveform 40 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 72
     bit_size: 8
-    fieldset: Wf8b40
+    fieldset: Wf8b0
   - name: wf8b_41
     description: LCD Waveform 41 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 73
     bit_size: 8
-    fieldset: Wf8b41
+    fieldset: Wf8b0
   - name: wf8b_42
     description: LCD Waveform 42 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 74
     bit_size: 8
-    fieldset: Wf8b42
+    fieldset: Wf8b0
   - name: wf8b_43
     description: LCD Waveform 43 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 75
     bit_size: 8
-    fieldset: Wf8b43
+    fieldset: Wf8b0
   - name: wf47_44
     description: LCD Waveform 47 to 44 Register.
     byte_offset: 76
@@ -2137,19 +1291,19 @@ block/Slcd:
     description: LCD Waveform 44 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 76
     bit_size: 8
-    fieldset: Wf8b44
+    fieldset: Wf8b0
   - name: wf8b_45
     description: LCD Waveform 45 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 77
     bit_size: 8
-    fieldset: Wf8b45
+    fieldset: Wf8b0
   - name: wf8b_46
     description: LCD Waveform 46 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 78
     bit_size: 8
-    fieldset: Wf8b46
+    fieldset: Wf8b0
   - name: wf8b_47
     description: LCD Waveform 47 Register. Byte-wide alias. Phases E-H are alternate-display phases, not four extra physical backplanes.
     byte_offset: 79
     bit_size: 8
-    fieldset: Wf8b47
+    fieldset: Wf8b0

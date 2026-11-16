@@ -42,6 +42,8 @@
 # Base text is the MCXA256 extract, which also carries the current "WUU_Pn" wording
 # in field descriptions where MCXA577 still uses the legacy "LLWU_Pn" naming
 # inherited from the Kinetis LLWU block.
+includes:
+  - ../../common/WUU-fields.yaml
 block/Wuu:
   description: Low-Leakage Wakeup Unit.
   items:
@@ -62,7 +64,7 @@ block/Wuu:
   - name: pe2
     description: Pin Enable 2.
     byte_offset: 12
-    fieldset: Pe2
+    fieldset: Pe1
   - name: me
     description: Module Interrupt Enable.
     byte_offset: 24
@@ -86,7 +88,7 @@ block/Wuu:
   - name: pdc2
     description: Pin DMA/Trigger Configuration 2.
     byte_offset: 60
-    fieldset: Pdc2
+    fieldset: Pdc1
   - name: fdc
     description: Pin Filter DMA/Trigger Configuration.
     byte_offset: 72
@@ -148,7 +150,7 @@ fieldset/Fdc:
     description: Filter Configuration for FILTn.
     bit_offset: 0
     bit_size: 2
-    enum: Filtc1
+    enum: Filtc2
   - name: filtc2
     description: Filter Configuration for FILTn.
     bit_offset: 2
@@ -165,7 +167,7 @@ fieldset/Filt:
     description: Filter 1 Enable.
     bit_offset: 5
     bit_size: 2
-    enum: Filte1
+    enum: Filte2
   - name: filtf1
     description: Filter 1 Flag.
     bit_offset: 7
@@ -190,7 +192,7 @@ fieldset/Fmc:
     description: Filter Mode for FILTn.
     bit_offset: 0
     bit_size: 1
-    enum: Filtm1
+    enum: Filtm2
   - name: filtm2
     description: Filter Mode for FILTn.
     bit_offset: 1
@@ -245,25 +247,6 @@ fieldset/Me:
     description: Module Interrupt Wake-up Enable for Module 10.
     bit_offset: 10
     bit_size: 1
-fieldset/Param:
-  description: Parameter.
-  fields:
-  - name: filters
-    description: Filter Number.
-    bit_offset: 0
-    bit_size: 8
-  - name: dmas
-    description: DMA Number.
-    bit_offset: 8
-    bit_size: 8
-  - name: modules
-    description: Module Number.
-    bit_offset: 16
-    bit_size: 8
-  - name: pins
-    description: Pin Number.
-    bit_offset: 24
-    bit_size: 8
 fieldset/Pdc1:
   description: Pin DMA/Trigger Configuration 1.
   fields:
@@ -275,30 +258,8 @@ fieldset/Pdc1:
       len: 16
       stride: 2
     enum: Wupdc
-fieldset/Pdc2:
-  description: Pin DMA/Trigger Configuration 2.
-  fields:
-  - name: wupdc
-    description: Wake-up Pin Configuration for WUU_Pn.
-    bit_offset: 0
-    bit_size: 2
-    array:
-      len: 16
-      stride: 2
-    enum: Wupdc
 fieldset/Pe1:
   description: Pin Enable 1.
-  fields:
-  - name: wupe
-    description: Wake-up Pin Enable for WUU_Pn.
-    bit_offset: 0
-    bit_size: 2
-    array:
-      len: 16
-      stride: 2
-    enum: Wupe
-fieldset/Pe2:
-  description: Pin Enable 2.
   fields:
   - name: wupe
     description: Wake-up Pin Enable for WUU_Pn.
@@ -329,103 +290,6 @@ fieldset/Pmc:
       len: 32
       stride: 1
     enum: Wupmc
-fieldset/Verid:
-  description: Version ID.
-  fields:
-  - name: feature
-    description: Feature Specification Number.
-    bit_offset: 0
-    bit_size: 16
-    enum: Feature
-  - name: minor
-    description: Minor Version Number.
-    bit_offset: 16
-    bit_size: 8
-  - name: major
-    description: Major Version Number.
-    bit_offset: 24
-    bit_size: 8
-enum/Feature:
-  bit_size: 16
-  variants:
-  - name: Standard
-    description: Standard features implemented.
-    value: 0
-  - name: FiltAllPwr
-    description: Support for DMA/Trigger generation from wake-up pins and filters enabled. Support for external pin/filter detection during all power modes enabled.
-    value: 1
-enum/Filtc1:
-  bit_size: 2
-  variants:
-  - name: Interrupt
-    description: Interrupt.
-    value: 0
-  - name: DmaReq
-    description: DMA request.
-    value: 1
-  - name: Trigger
-    description: Trigger event.
-    value: 2
-enum/Filtc2:
-  bit_size: 2
-  variants:
-  - name: Interrupt
-    description: Interrupt.
-    value: 0
-  - name: DmaReq
-    description: DMA request.
-    value: 1
-  - name: Trigger
-    description: Trigger event.
-    value: 2
-enum/Filte1:
-  bit_size: 2
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: EnRiseHi
-    description: Enable (Detect on rising edge or high level).
-    value: 1
-  - name: EnFallLo
-    description: Enable (Detect on falling edge or low level).
-    value: 2
-  - name: EnAny
-    description: Enable (Detect on any edge).
-    value: 3
-enum/Filte2:
-  bit_size: 2
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: EnRiseHi
-    description: Enable (Detect on rising edge or high level).
-    value: 1
-  - name: EnFallLo
-    description: Enable (Detect on falling edge or low level).
-    value: 2
-  - name: EnAny
-    description: Enable (Detect on any edge).
-    value: 3
-enum/Filtm1:
-  bit_size: 1
-  variants:
-  - name: LowPwrOnly
-    description: Active only during Power Down/Deep Power Down mode.
-    value: 0
-  - name: AnyPwr
-    description: Active during all power modes.
-    value: 1
-enum/Filtm2:
-  bit_size: 1
-  variants:
-  - name: LowPwrOnly
-    description: Active only during Power Down/Deep Power Down mode.
-    value: 0
-  - name: AnyPwr
-    description: Active during all power modes.
-    value: 1
 enum/Wupdc:
   bit_size: 2
   variants:
@@ -441,27 +305,3 @@ enum/Wupdc:
   - name: Res
     description: Reserved.
     value: 3
-enum/Wupe:
-  bit_size: 2
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: EnRiseHi
-    description: Enable (detect on rising edge or high level).
-    value: 1
-  - name: EnFallLo
-    description: Enable (detect on falling edge or low level).
-    value: 2
-  - name: EnAny
-    description: Enable (detect on any edge).
-    value: 3
-enum/Wupmc:
-  bit_size: 1
-  variants:
-  - name: LowPwrOnly
-    description: Active only during a low-leakage mode. You can modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
-    value: 0
-  - name: AnyPwr
-    description: Active during all power modes. Do not modify the corresponding fields within Pin Enable (PEn) or Pin DMA/Trigger Configuration (PDCn).
-    value: 1

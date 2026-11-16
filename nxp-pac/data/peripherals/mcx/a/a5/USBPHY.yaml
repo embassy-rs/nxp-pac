@@ -98,7 +98,7 @@ block/Usbphy:
     byte_offset: 36
     access: ReadWrite
     bit_size: 32
-    fieldset: RxMask
+    fieldset: Rx
   - name: rx_clr
     description: 'RX Control. Write-one-to-clear alias: write a mask, not a stored register value. Avoid
       read-modify-write; register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618)
@@ -108,7 +108,7 @@ block/Usbphy:
     byte_offset: 40
     access: ReadWrite
     bit_size: 32
-    fieldset: RxMask
+    fieldset: Rx
   - name: rx_tog
     description: 'RX Control. Write-one-to-toggle alias: write a mask, not a stored register value. Avoid
       read-modify-write; register-map RW access is retained. Source conflict: RM 42.8 (text lines 106616-106618)
@@ -118,7 +118,7 @@ block/Usbphy:
     byte_offset: 44
     access: ReadWrite
     bit_size: 32
-    fieldset: RxMask
+    fieldset: Rx
   - name: ctrl
     description: General Purpose Control.
     byte_offset: 48
@@ -623,16 +623,6 @@ fieldset/Rx:
       - 0.58125 V; 011b - 0.60000 V; 1xxb - Reserved.'
     bit_offset: 4
     bit_size: 3
-fieldset/RxMask:
-  description: 'RX SCT command mask. Zero construction default ensures only explicitly selected bits are
-    written. Register-map hardware reset values are not command payload defaults. Source conflict: RM
-    42.8 (text lines 106616-106618) says SCT aliases always read 0, must be write-only, and cannot exist
-    for read-only primaries; RM 42.7.1 maps writable primary aliases as RW and also lists aliases of read-only
-    status registers. Mapped access is retained; no reliable alias readback is inferred.'
-  extends: Rx
-  bit_size: 32
-  reset_value: 0
-  fields: []
 fieldset/Ctrl:
   description: General Purpose Control. F70RM 42.7.5 (text line 104092). Mixed control/read-only status
     and sticky IRQ flags. Clear HOSTDISCONDETECT_IRQ, OTG_ID_CHG_IRQ, DEVPLUGIN_IRQ and WAKEUP_IRQ by

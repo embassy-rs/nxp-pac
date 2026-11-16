@@ -61,13 +61,13 @@ block/Usbhs:
     byte_offset: 136
     access: ReadWrite
     bit_size: 32
-    fieldset: Gptimer1ld
+    fieldset: Gptimer0ld
   - name: gptimer1ctrl
     description: General Purpose Timer 1 Controller.
     byte_offset: 140
     access: ReadWrite
     bit_size: 32
-    fieldset: Gptimer1ctrl
+    fieldset: Gptimer0ctrl
   - name: sbuscfg
     description: System Bus Configuration.
     byte_offset: 144
@@ -375,39 +375,6 @@ fieldset/Gptimer0ld:
 fieldset/Gptimer0ctrl:
   description: General Purpose Timer 0 Controller. F70RM 44.6.1.9 (text line 112604). GPTCNT is read-only;
     GPTRST is a write-only load command. Avoid read-modify-write on command bits.
-  bit_size: 32
-  reset_value: 0
-  fields:
-  - name: gptcnt
-    description: General Purpose Timer Counter. Read-only status/value; writes do not configure this field.
-    bit_offset: 0
-    bit_size: 24
-  - name: gptmode
-    description: 'General Purpose Timer Mode. Raw encoding: 0b - One Shot mode; 1b - Repeat mode.'
-    bit_offset: 24
-    bit_size: 1
-  - name: gptrst
-    description: 'General Purpose Timer Reset. Write-only command. Raw encoding: 0b - No action; 1b -
-      Load counter value.'
-    bit_offset: 30
-    bit_size: 1
-  - name: gptrun
-    description: 'General Purpose Timer Run. Raw encoding: 0b - Stopped counting; 1b - Running.'
-    bit_offset: 31
-    bit_size: 1
-fieldset/Gptimer1ld:
-  description: 'General Purpose Timer 1 Load. F70RM 44.6.1.10 (text line 112693). '
-  bit_size: 32
-  reset_value: 0
-  fields:
-  - name: gptld
-    description: General Purpose Timer Load Value.
-    bit_offset: 0
-    bit_size: 24
-fieldset/Gptimer1ctrl:
-  description: General Purpose Timer 1 Controller. F70RM 44.6.1.11 (text line 112748). GPTCNT is read-only;
-    GPTRST is a write-only load command. RM .10-.11 refer to timer 0 in timer 1 prose; those cross-references
-    conflict with the timer 1 register names and are not resolved here.
   bit_size: 32
   reset_value: 0
   fields:

@@ -163,6 +163,7 @@ fieldset/OseventCtrlN:
     bit_offset: 2
     bit_size: 1
 enum/OstimerIntena:
+  only_in: '^(MCXN235|MCXN236|MCXN246|MCXN247|MCXN526|MCXN527|MCXN536|MCXN537|MCXN546|MCXN547|MCXN556|MCXN557|MCXN946|MCXN947)$'
   bit_size: 1
   variants:
   - name: InterruptsBlocked

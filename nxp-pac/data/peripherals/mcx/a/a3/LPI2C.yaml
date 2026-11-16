@@ -55,7 +55,7 @@ block/Lpi2c:
   - name: mccr1
     description: Controller Clock Configuration 1.
     byte_offset: 80
-    fieldset: Mccr1
+    fieldset: Mccr0
   - name: mfcr
     description: Controller FIFO Control.
     byte_offset: 88
@@ -138,27 +138,6 @@ block/Lpi2c:
     fieldset: Srdror
 fieldset/Mccr0:
   description: Controller Clock Configuration 0.
-  fields:
-  - name: clklo
-    description: Clock Low Period.
-    bit_offset: 0
-    bit_size: 6
-  - name: clkhi
-    description: Clock High Period.
-    bit_offset: 8
-    bit_size: 6
-  - name: sethold
-    description: Setup Hold Delay.
-    bit_offset: 16
-    bit_size: 6
-  - name: datavd
-    description: Data Valid Delay.
-    bit_offset: 24
-    bit_size: 6
-  bit_size: 32
-  reset_value: 0
-fieldset/Mccr1:
-  description: Controller Clock Configuration 1.
   fields:
   - name: clklo
     description: Clock Low Period.
@@ -502,7 +481,7 @@ fieldset/Msr:
     description: Bus Busy Flag.
     bit_offset: 25
     bit_size: 1
-    enum: MsrBbf
+    enum: Mbf
   bit_size: 32
   reset_value: 1
 fieldset/Mtdr:
@@ -872,12 +851,12 @@ fieldset/Ssr:
     description: Target Busy Flag.
     bit_offset: 24
     bit_size: 1
-    enum: Sbf
+    enum: Mbf
   - name: bbf
     description: Bus Busy Flag.
     bit_offset: 25
     bit_size: 1
-    enum: SsrBbf
+    enum: Mbf
   bit_size: 32
   reset_value: 0
 fieldset/Star:
@@ -1105,15 +1084,6 @@ enum/McrRtf:
   - name: Reset
     description: Reset transmit FIFO.
     value: 1
-enum/MsrBbf:
-  bit_size: 1
-  variants:
-  - name: Idle
-    description: Idle.
-    value: 0
-  - name: Busy
-    description: Busy.
-    value: 1
 enum/MsrFef:
   bit_size: 1
   variants:
@@ -1242,15 +1212,6 @@ enum/Rxnack:
     description: NACK always generated on address overrun or receive data overrun, otherwise ACK or NACK is determined
       by STAR[TXNACK].
     value: 1
-enum/Sbf:
-  bit_size: 1
-  variants:
-  - name: Idle
-    description: Idle.
-    value: 0
-  - name: Busy
-    description: Busy.
-    value: 1
 enum/Scfgr1Ignack:
   bit_size: 1
   variants:
@@ -1286,15 +1247,6 @@ enum/Sdcfg:
     value: 0
   - name: AnyStop
     description: Any Stop condition.
-    value: 1
-enum/SsrBbf:
-  bit_size: 1
-  variants:
-  - name: Idle
-    description: Idle.
-    value: 0
-  - name: Busy
-    description: Busy.
     value: 1
 enum/Startcfg:
   bit_size: 1

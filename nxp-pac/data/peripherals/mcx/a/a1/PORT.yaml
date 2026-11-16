@@ -10,7 +10,7 @@ block/Port:
   - name: gpclr
     description: Global Pin Control Low.
     byte_offset: 16
-    fieldset: Gpclr
+    fieldset: Gpchr
   - name: gpchr
     description: Global Pin Control High.
     byte_offset: 20
@@ -26,7 +26,7 @@ block/Port:
   - name: calib1
     description: Calibration 1.
     byte_offset: 100
-    fieldset: Calib1
+    fieldset: Calib0
   - name: pcr0
     description: Pin Control 0.
     byte_offset: 128
@@ -90,7 +90,7 @@ block/Port1:
   - name: gpclr
     description: Global Pin Control Low.
     byte_offset: 16
-    fieldset: Gpclr
+    fieldset: Gpchr
   - name: gpchr
     description: Global Pin Control High.
     byte_offset: 20
@@ -106,7 +106,7 @@ block/Port1:
   - name: calib1
     description: Calibration 1.
     byte_offset: 100
-    fieldset: Calib1
+    fieldset: Calib0
   - name: pcr0
     description: Pin Control 0.
     byte_offset: 128
@@ -194,7 +194,7 @@ block/Port2:
   - name: gpclr
     description: Global Pin Control Low.
     byte_offset: 16
-    fieldset: Gpclr
+    fieldset: Gpchr
   - name: gpchr
     description: Global Pin Control High.
     byte_offset: 20
@@ -290,7 +290,7 @@ block/Port3:
   - name: gpclr
     description: Global Pin Control Low.
     byte_offset: 16
-    fieldset: Gpclr
+    fieldset: Gpchr
   - name: gpchr
     description: Global Pin Control High.
     byte_offset: 20
@@ -306,7 +306,7 @@ block/Port3:
   - name: calib1
     description: Calibration 1.
     byte_offset: 100
-    fieldset: Calib1
+    fieldset: Calib0
   - name: pcr0
     description: Pin Control 0.
     byte_offset: 128
@@ -418,7 +418,7 @@ block/Port4:
   - name: gpclr
     description: Global Pin Control Low.
     byte_offset: 16
-    fieldset: Gpclr
+    fieldset: Gpchr
   - name: gpchr
     description: Global Pin Control High.
     byte_offset: 20
@@ -434,7 +434,7 @@ block/Port4:
   - name: calib1
     description: Calibration 1.
     byte_offset: 100
-    fieldset: Calib1
+    fieldset: Calib0
   - name: pcr2
     description: Pin Control 2.
     byte_offset: 136
@@ -470,17 +470,6 @@ fieldset/Calib0:
     description: Calibration of PMOS Output Driver.
     bit_offset: 16
     bit_size: 6
-fieldset/Calib1:
-  description: Calibration 1.
-  fields:
-  - name: ncal
-    description: Calibration of NMOS Output Driver.
-    bit_offset: 0
-    bit_size: 6
-  - name: pcal
-    description: Calibration of PMOS Output Driver.
-    bit_offset: 16
-    bit_size: 6
 fieldset/Config:
   description: Configuration.
   fields:
@@ -491,21 +480,6 @@ fieldset/Config:
     enum: Range
 fieldset/Gpchr:
   description: Global Pin Control High.
-  fields:
-  - name: gpwd
-    description: Global Pin Write Data.
-    bit_offset: 0
-    bit_size: 16
-  - name: gpwe
-    description: Global Pin Write Enable.
-    bit_offset: 16
-    bit_size: 1
-    array:
-      len: 16
-      stride: 1
-    enum: Gpwe
-fieldset/Gpclr:
-  description: Global Pin Control Low.
   fields:
   - name: gpwd
     description: Global Pin Write Data.

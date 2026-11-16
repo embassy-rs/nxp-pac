@@ -54,34 +54,34 @@ block/QdcAlpha:
     description: Upper Position Counter.
     byte_offset: 14
     bit_size: 16
-    fieldset: QdcAlphaFieldsetXray
+    fieldset: Lpos2
   - name: lpos
     description: Lower Position Counter.
     byte_offset: 16
     bit_size: 16
-    fieldset: QdcAlphaFieldsetKilo
+    fieldset: Lpos2
   - name: uposh
     description: Upper Position Hold.
     byte_offset: 18
     access: Read
     bit_size: 16
-    fieldset: QdcAlphaFieldsetYankee
+    fieldset: Lposh4
   - name: lposh
     description: Lower Position Hold.
     byte_offset: 20
     access: Read
     bit_size: 16
-    fieldset: QdcAlphaFieldsetLima
+    fieldset: Lposh4
   - name: uinit
     description: Upper Initialization.
     byte_offset: 22
     bit_size: 16
-    fieldset: QdcAlphaFieldsetVictor
+    fieldset: Linit2
   - name: linit
     description: Lower Initialization.
     byte_offset: 24
     bit_size: 16
-    fieldset: QdcAlphaFieldsetIndia
+    fieldset: Linit2
   - name: imr
     description: Input Monitor.
     byte_offset: 26
@@ -102,22 +102,22 @@ block/QdcAlpha:
     description: Upper Modulus.
     byte_offset: 32
     bit_size: 16
-    fieldset: QdcAlphaFieldsetWhiskey
+    fieldset: Lmod2
   - name: lmod
     description: Lower Modulus.
     byte_offset: 34
     bit_size: 16
-    fieldset: QdcAlphaFieldsetJuliet
+    fieldset: Lmod2
   - name: ucomp
     description: Upper Position Compare.
     byte_offset: 36
     bit_size: 16
-    fieldset: QdcAlphaFieldsetUniform
+    fieldset: Lcomp
   - name: lcomp
     description: Lower Position Compare.
     byte_offset: 38
     bit_size: 16
-    fieldset: QdcAlphaFieldsetHotel
+    fieldset: Lcomp
   - name: lastedge
     description: Last Edge Time.
     byte_offset: 40
@@ -161,7 +161,7 @@ fieldset/QdcAlphaFieldsetAlpha:
     description: Compare Interrupt Enable.
     bit_offset: 0
     bit_size: 1
-    enum: QdcAlphaEnumAlpha
+    enum: Cmpie
   - name: cmpirq
     description: Compare Interrupt Request.
     bit_offset: 1
@@ -171,12 +171,12 @@ fieldset/QdcAlphaFieldsetAlpha:
     description: Watchdog Enable.
     bit_offset: 2
     bit_size: 1
-    enum: QdcAlphaEnumCharlieAlpha
+    enum: Cmpie
   - name: die
     description: Watchdog Timeout Interrupt Enable.
     bit_offset: 3
     bit_size: 1
-    enum: QdcAlphaEnumCharlie
+    enum: Cmpie
   - name: dirq
     description: Watchdog Timeout Interrupt Request.
     bit_offset: 4
@@ -196,7 +196,7 @@ fieldset/QdcAlphaFieldsetAlpha:
     description: INDEX Pulse Interrupt Enable.
     bit_offset: 7
     bit_size: 1
-    enum: QdcAlphaEnumDeltaAlpha
+    enum: Cmpie
   - name: xirq
     description: INDEX Pulse Interrupt Request.
     bit_offset: 8
@@ -231,7 +231,7 @@ fieldset/QdcAlphaFieldsetAlpha:
     description: HOME Interrupt Enable.
     bit_offset: 14
     bit_size: 1
-    enum: QdcAlphaEnumFoxtrot
+    enum: Cmpie
   - name: hirq
     description: HOME Signal Transition Interrupt Request.
     bit_offset: 15
@@ -245,7 +245,7 @@ fieldset/QdcAlphaFieldsetBravo:
     description: Update Hold Registers.
     bit_offset: 0
     bit_size: 1
-    enum: QdcAlphaEnumAlphaAlpha
+    enum: Cmpie
   - name: updpos
     description: Update Position Registers.
     bit_offset: 1
@@ -255,7 +255,7 @@ fieldset/QdcAlphaFieldsetBravo:
     description: Enable Modulo Counting.
     bit_offset: 2
     bit_size: 1
-    enum: QdcAlphaEnumKilo
+    enum: Cmpie
   - name: dir
     description: Count Direction Flag.
     bit_offset: 3
@@ -265,7 +265,7 @@ fieldset/QdcAlphaFieldsetBravo:
     description: Roll-under Interrupt Enable.
     bit_offset: 4
     bit_size: 1
-    enum: QdcAlphaEnumTango
+    enum: Cmpie
   - name: ruirq
     description: Roll-under Interrupt Request.
     bit_offset: 5
@@ -275,7 +275,7 @@ fieldset/QdcAlphaFieldsetBravo:
     description: Roll-over Interrupt Enable.
     bit_offset: 6
     bit_size: 1
-    enum: QdcAlphaEnumRomeo
+    enum: Cmpie
   - name: roirq
     description: Roll-over Interrupt Request.
     bit_offset: 7
@@ -295,7 +295,7 @@ fieldset/QdcAlphaFieldsetBravo:
     description: Simultaneous PHASEA and PHASEB Change Interrupt Enable.
     bit_offset: 10
     bit_size: 1
-    enum: QdcAlphaEnumVictor
+    enum: Cmpie
   - name: sabirq
     description: Simultaneous PHASEA and PHASEB Change Interrupt Request.
     bit_offset: 11
@@ -387,7 +387,7 @@ fieldset/QdcAlphaFieldsetGolf:
     description: Last Edge Time Hold.
     bit_offset: 0
     bit_size: 16
-fieldset/QdcAlphaFieldsetHotel:
+fieldset/Lcomp:
   description: Lower Position Compare.
   bit_size: 16
   fields:
@@ -395,7 +395,7 @@ fieldset/QdcAlphaFieldsetHotel:
     description: COMP.
     bit_offset: 0
     bit_size: 16
-fieldset/QdcAlphaFieldsetIndia:
+fieldset/Linit2:
   description: Lower Initialization.
   bit_size: 16
   fields:
@@ -403,7 +403,7 @@ fieldset/QdcAlphaFieldsetIndia:
     description: INIT.
     bit_offset: 0
     bit_size: 16
-fieldset/QdcAlphaFieldsetJuliet:
+fieldset/Lmod2:
   description: Lower Modulus.
   bit_size: 16
   fields:
@@ -411,7 +411,7 @@ fieldset/QdcAlphaFieldsetJuliet:
     description: MOD.
     bit_offset: 0
     bit_size: 16
-fieldset/QdcAlphaFieldsetKilo:
+fieldset/Lpos2:
   description: Lower Position Counter.
   bit_size: 16
   fields:
@@ -419,7 +419,7 @@ fieldset/QdcAlphaFieldsetKilo:
     description: POS.
     bit_offset: 0
     bit_size: 16
-fieldset/QdcAlphaFieldsetLima:
+fieldset/Lposh4:
   description: Lower Position Hold.
   bit_size: 16
   fields:
@@ -504,52 +504,12 @@ fieldset/QdcAlphaFieldsetTango:
     description: Test Counter Enable.
     bit_offset: 14
     bit_size: 1
-    enum: QdcAlphaEnumYankee
+    enum: Cmpie
   - name: ten
     description: Test Mode Enable.
     bit_offset: 15
     bit_size: 1
-    enum: QdcAlphaEnumZulu
-fieldset/QdcAlphaFieldsetUniform:
-  description: Upper Position Compare.
-  bit_size: 16
-  fields:
-  - name: comp
-    description: COMP.
-    bit_offset: 0
-    bit_size: 16
-fieldset/QdcAlphaFieldsetVictor:
-  description: Upper Initialization.
-  bit_size: 16
-  fields:
-  - name: init
-    description: INIT.
-    bit_offset: 0
-    bit_size: 16
-fieldset/QdcAlphaFieldsetWhiskey:
-  description: Upper Modulus.
-  bit_size: 16
-  fields:
-  - name: mod_
-    description: MOD.
-    bit_offset: 0
-    bit_size: 16
-fieldset/QdcAlphaFieldsetXray:
-  description: Upper Position Counter.
-  bit_size: 16
-  fields:
-  - name: pos
-    description: POS.
-    bit_offset: 0
-    bit_size: 16
-fieldset/QdcAlphaFieldsetYankee:
-  description: Upper Position Hold.
-  bit_size: 16
-  fields:
-  - name: posh
-    description: POSH.
-    bit_offset: 0
-    bit_size: 16
+    enum: Cmpie
 fieldset/QdcAlphaFieldsetZulu:
   description: Watchdog Timeout.
   bit_size: 16
@@ -558,15 +518,6 @@ fieldset/QdcAlphaFieldsetZulu:
     description: WDOG.
     bit_offset: 0
     bit_size: 16
-enum/QdcAlphaEnumAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disable.
-    value: 0
-  - name: Enabled
-    description: Enable.
-    value: 1
 enum/QdcAlphaEnumBravo:
   bit_size: 1
   variants:
@@ -576,15 +527,6 @@ enum/QdcAlphaEnumBravo:
   - name: Nomat
     description: No match has occurred.
     value: 0
-enum/QdcAlphaEnumCharlie:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disable.
-    value: 0
-  - name: Enabled
-    description: Enable.
-    value: 1
 enum/QdcAlphaEnumDelta:
   bit_size: 1
   variants:
@@ -603,15 +545,6 @@ enum/QdcAlphaEnumEcho:
   - name: Noint
     description: Not occurred.
     value: 0
-enum/QdcAlphaEnumFoxtrot:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disable.
-    value: 0
-  - name: Enabled
-    description: Enable.
-    value: 1
 enum/QdcAlphaEnumGolf:
   bit_size: 1
   variants:
@@ -648,7 +581,7 @@ enum/QdcAlphaEnumJuliet:
   - name: Noinit
     description: Don't initialize position counter.
     value: 0
-enum/QdcAlphaEnumKilo:
+enum/Cmpie:
   bit_size: 1
   variants:
   - name: Disabled
@@ -711,15 +644,6 @@ enum/QdcAlphaEnumQuebec:
   - name: Index
     description: Use INDEX pulse.
     value: 0
-enum/QdcAlphaEnumRomeo:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disable.
-    value: 0
-  - name: Enabled
-    description: Enable.
-    value: 1
 enum/QdcAlphaEnumSierra:
   bit_size: 1
   variants:
@@ -729,15 +653,6 @@ enum/QdcAlphaEnumSierra:
   - name: Roll
     description: Occurred.
     value: 1
-enum/QdcAlphaEnumTango:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disable.
-    value: 0
-  - name: Enabled
-    description: Enable.
-    value: 1
 enum/QdcAlphaEnumUniform:
   bit_size: 1
   variants:
@@ -746,15 +661,6 @@ enum/QdcAlphaEnumUniform:
     value: 0
   - name: Roll
     description: Roll-under has occurred.
-    value: 1
-enum/QdcAlphaEnumVictor:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disable.
-    value: 0
-  - name: Enabled
-    description: Enable.
     value: 1
 enum/QdcAlphaEnumWhiskey:
   bit_size: 1
@@ -774,33 +680,6 @@ enum/QdcAlphaEnumXray:
   - name: Noaction
     description: No action.
     value: 0
-enum/QdcAlphaEnumYankee:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disable.
-    value: 0
-  - name: Enabled
-    description: Enable.
-    value: 1
-enum/QdcAlphaEnumZulu:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disable.
-    value: 0
-  - name: Enabled
-    description: Enable.
-    value: 1
-enum/QdcAlphaEnumAlphaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disable.
-    value: 0
-  - name: Enabled
-    description: Enable.
-    value: 1
 enum/QdcAlphaEnumBravoAlpha:
   bit_size: 1
   variants:
@@ -810,24 +689,6 @@ enum/QdcAlphaEnumBravoAlpha:
   - name: Noaction
     description: No action.
     value: 0
-enum/QdcAlphaEnumCharlieAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disable.
-    value: 0
-  - name: Enabled
-    description: Enable.
-    value: 1
-enum/QdcAlphaEnumDeltaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disable.
-    value: 0
-  - name: Enabled
-    description: Enable.
-    value: 1
 enum/QdcAlphaEnumEchoAlpha:
   bit_size: 1
   variants:

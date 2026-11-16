@@ -423,12 +423,12 @@ fieldset/TcdNbytesMloffyes:
       description: Destination Minor Loop Offset Enable.
       bit_offset: 30
       bit_size: 1
-      enum: TcdNbytesMloffyesDmloe
+      enum: TcdNbytesMloffnoDmloe
     - name: smloe
       description: Source Minor Loop Offset Enable.
       bit_offset: 31
       bit_size: 1
-      enum: TcdNbytesMloffyesSmloe
+      enum: TcdNbytesMloffnoSmloe
 fieldset/TcdSaddr:
   description: TCD Source Address.
   fields:
@@ -565,25 +565,6 @@ enum/TcdNbytesMloffnoSmloe:
     - name: OffsetApplied
       description: Minor loop offset applied to SADDR.
       value: 1
-enum/TcdNbytesMloffyesDmloe:
-  bit_size: 1
-  variants:
-    - name: OffsetNotApplied
-      description: Minor loop offset not applied to DADDR.
-      value: 0
-    - name: OffsetApplied
-      description: Minor loop offset applied to DADDR.
-      value: 1
-enum/TcdNbytesMloffyesSmloe:
-  bit_size: 1
-  variants:
-    - name: OffsetNotApplied
-      description: Minor loop offset not applied to SADDR.
-      value: 0
-    - name: OffsetApplied
-      description: Minor loop offset applied to SADDR.
-      value: 1
-
 # MCXN23x RM Rev. 4, 16.6.2; MCXN RM Rev. 7, 23.6.3-4.
 # Controller-specific types are required even when channel counts match:
 # CH_SBR resets to 6 on DMA0 and 7 on DMA1. No chip predicate can select an instance.
@@ -628,12 +609,12 @@ block/ChannelDma0:
   - name: ch_csr
     description: Channel Control and Status. ACTIVE is read-only. DONE is W1C and must be cleared before writing MAJORELINK or ESG. Disable the channel's hardware service request at the source before clearing ERQ.
     byte_offset: 0
-    fieldset: ChCsrN
+    fieldset: ChCsr
   - name: ch_es
     description: Channel Error Status. Error-cause bits are read-only; ERR is W1C to acknowledge the channel error. Do not use read-modify-write to acknowledge unrelated status.
     byte_offset: 4
     access: ReadWrite
-    fieldset: ChEsN
+    fieldset: ChEs
   - name: ch_int
     description: Channel Interrupt Status. INT is W1C to acknowledge the interrupt.
     byte_offset: 8
@@ -711,16 +692,6 @@ block/ChannelEightDma1:
     byte_offset: 62
     bit_size: 16
     fieldset: TcdBiterEight
-fieldset/ChCsrN:
-  only_in: '^MCXN'
-  description: Channel Control and Status. ACTIVE is read-only; DONE is W1C. Clear DONE before modifying ESG or MAJORELINK. Disable the channel's hardware service request at the source before clearing ERQ.
-  extends: ChCsr
-  fields: []
-fieldset/ChEsN:
-  only_in: '^MCXN'
-  description: Channel Error Status. Cause bits 0 through 7 are read-only; writing one to ERR clears the channel error.
-  extends: ChEs
-  fields: []
 fieldset/ChSbrDma0:
   only_in: '^MCXN'
   description: DMA0 Channel System Bus. Known reset bits construct 0x6, not a live security or privilege observation. Attribute-output bits 17 through 20 are reserved on N.

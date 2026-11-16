@@ -150,17 +150,17 @@ fieldset/Control:
     description: TIMEOUT fault control.
     bit_offset: 2
     bit_size: 3
-    enum: TimeoutCtrl
+    enum: StateCtrl
   - name: miscompare_ctrl
     description: MISCOMPARE fault control.
     bit_offset: 5
     bit_size: 3
-    enum: MiscompareCtrl
+    enum: StateCtrl
   - name: sequence_ctrl
     description: SEQUENCE fault control.
     bit_offset: 8
     bit_size: 3
-    enum: SequenceCtrl
+    enum: StateCtrl
   - name: state_ctrl
     description: STATE fault control.
     bit_offset: 14
@@ -170,7 +170,7 @@ fieldset/Control:
     description: ADDRESS fault control.
     bit_offset: 17
     bit_size: 3
-    enum: AddressCtrl
+    enum: StateCtrl
   - name: irq_pause
     description: IRQ pause control.
     bit_offset: 28
@@ -180,7 +180,7 @@ fieldset/Control:
     description: DEBUG_HALT control.
     bit_offset: 30
     bit_size: 2
-    enum: DebugHaltCtrl
+    enum: IrqPause
   bit_size: 32
   reset_value: 1342776466
 fieldset/Flags:
@@ -345,27 +345,6 @@ fieldset/Sub256:
     bit_size: 32
   bit_size: 32
   reset_value: 0
-enum/AddressCtrl:
-  bit_size: 3
-  variants:
-  - name: EnableReset
-    description: Enable reset.
-    value: 1
-  - name: EnableInterrupt
-    description: Enable interrupt.
-    value: 2
-  - name: DisableBoth
-    description: Disable both reset and interrupt.
-    value: 4
-enum/DebugHaltCtrl:
-  bit_size: 2
-  variants:
-  - name: RunTimer
-    description: Keep the timer running.
-    value: 1
-  - name: PauseTimer
-    description: Stop the timer.
-    value: 2
 enum/IrqPause:
   bit_size: 2
   variants:
@@ -384,43 +363,7 @@ enum/LockCtrl:
   - name: Unlocked
     description: Unlocked.
     value: 2
-enum/MiscompareCtrl:
-  bit_size: 3
-  variants:
-  - name: EnableReset
-    description: Enable reset.
-    value: 1
-  - name: EnableInterrupt
-    description: Enable interrupt.
-    value: 2
-  - name: DisableBoth
-    description: Disable both reset and interrupt.
-    value: 4
-enum/SequenceCtrl:
-  bit_size: 3
-  variants:
-  - name: EnableReset
-    description: Enable reset.
-    value: 1
-  - name: EnableInterrupt
-    description: Enable interrupt.
-    value: 2
-  - name: DisableBoth
-    description: Disable both reset and interrupt.
-    value: 4
 enum/StateCtrl:
-  bit_size: 3
-  variants:
-  - name: EnableReset
-    description: Enable reset.
-    value: 1
-  - name: EnableInterrupt
-    description: Enable interrupt.
-    value: 2
-  - name: DisableBoth
-    description: Disable both reset and interrupt.
-    value: 4
-enum/TimeoutCtrl:
   bit_size: 3
   variants:
   - name: EnableReset

@@ -1,0 +1,2736 @@
+# NXP mcux-soc-svd 7c1f00bdd6263f0b93466f5e73e5fc55a744b879; native chiptool import.
+# Source instance geometry is retained in explicit block variants; see private source bindings.
+# Unannotated fieldsets construct zero in software, not a claimed hardware reset.
+# Command/W1C/SET/CLR/TOG construction defaults are zero masks; no RMW semantics are implied.
+# Source: MCXN235.xml CAN0 sha256 a498ada26162c88f6767738bffcd22801318264c9cb2cbecbd190403b4dbd6a7
+# Source: MCXN235.xml CAN1 sha256 a498ada26162c88f6767738bffcd22801318264c9cb2cbecbd190403b4dbd6a7
+# Source: MCXN236.xml CAN0 sha256 ec813b3b24a785c33c5035ebc25a9c713a18018daf1fdb440035a13bf3549e14
+# Source: MCXN236.xml CAN1 sha256 ec813b3b24a785c33c5035ebc25a9c713a18018daf1fdb440035a13bf3549e14
+# Source: MCXN247.xml CAN0 sha256 dbbed5781a39012768344882dad168430c742f26e4261c6fd0bda9a34ca4a652
+# Source: MCXN247.xml CAN1 sha256 dbbed5781a39012768344882dad168430c742f26e4261c6fd0bda9a34ca4a652
+# Curated shared types replace imported per-field/per-register type clones.
+# Source: MCXN536_cm33_core0.xml CAN0 sha256 f9533e58d74eab222fc38608bd1d8dc45087e87b80a93f8b693e6cf2eb25cba4
+# Source: MCXN536_cm33_core1.xml CAN0 sha256 c089aecac3d73a7d8fc4a8c0cccf77ea8446b22a2ea99f4f2f01a4e0ca3a2fdd
+# Source: MCXN537_cm33_core0.xml CAN0 sha256 e72dbd80d33e6f53f05f11156fc20f6d53cf9848bc74fed80b5c34157455b11a
+# Source: MCXN537_cm33_core1.xml CAN0 sha256 4d5f7d121166c4d720a9da81b90be1b2f93be5e71fd25b9dd74b8715ebe30dce
+# Source: MCXN546_cm33_core0.xml CAN0 sha256 54e1fc060f9ccc17299bdb2da84159e699e87456276f2e695d440a6eb4aa9aad
+# Source: MCXN546_cm33_core1.xml CAN0 sha256 ddb7e932730a51c75f544efd6564ad6dbce5b3eca0a7befb7ab5b74a9951b937
+# Source: MCXN547_cm33_core0.xml CAN0 sha256 a276aee072bebd57c18929fe9a74408366fdbb42b918e06be5a3783a4aae4db7
+# Source: MCXN547_cm33_core1.xml CAN0 sha256 4a265743bdd2130cdd37ef12b9fd1d538cce9a2eac1c9149db291b7638e61423
+# Source: MCXN946_cm33_core0.xml CAN0 sha256 b986328ff1224adaeea70522fa61383a5f89f6313dfc3e7df92e8894fdab72d7
+# Source: MCXN946_cm33_core0.xml CAN1 sha256 b986328ff1224adaeea70522fa61383a5f89f6313dfc3e7df92e8894fdab72d7
+# Source: MCXN946_cm33_core1.xml CAN0 sha256 57e8910317a1cb467d56726cb822c57806aa247542969bcf12dbcc8822187916
+# Source: MCXN946_cm33_core1.xml CAN1 sha256 57e8910317a1cb467d56726cb822c57806aa247542969bcf12dbcc8822187916
+# Source: MCXN947_cm33_core0.xml CAN0 sha256 629ac7cdc82684e467b0cf36a8aef697bc1eb65c2047d6610b7b5df65692e590
+# Source: MCXN947_cm33_core0.xml CAN1 sha256 629ac7cdc82684e467b0cf36a8aef697bc1eb65c2047d6610b7b5df65692e590
+# Source: MCXN947_cm33_core1.xml CAN0 sha256 0d77f3d23cad1d5eab631fd7f5ade4044d8aaca2d9d13cd11f3836d27fe089fb
+# Source: MCXN947_cm33_core1.xml CAN1 sha256 0d77f3d23cad1d5eab631fd7f5ade4044d8aaca2d9d13cd11f3836d27fe089fb
+includes:
+  - CAN-fields.yaml
+block/CanAlpha:
+  description: CAN.
+  items:
+  - name: mcr
+    description: Module Configuration.
+    byte_offset: 0
+    fieldset: Mcr2
+  - name: ctrl1
+    description: Control 1.
+    byte_offset: 4
+    fieldset: Ctrl1
+  - name: timer
+    description: Free-Running Timer.
+    byte_offset: 8
+    fieldset: Timer
+  - name: rxmgmask
+    description: RX Message Buffers Global Mask.
+    byte_offset: 16
+    fieldset: Rxmgmask
+  - name: rx14mask
+    description: Receive 14 Mask.
+    byte_offset: 20
+    fieldset: Rx14mask
+  - name: rx15mask
+    description: Receive 15 Mask.
+    byte_offset: 24
+    fieldset: Rx15mask
+  - name: ecr
+    description: Error Counter.
+    byte_offset: 28
+    fieldset: Ecr
+  - name: esr1
+    description: Error and Status 1.
+    byte_offset: 32
+    fieldset: Esr12
+  - name: imask1
+    description: Interrupt Masks 1.
+    byte_offset: 40
+    fieldset: Imask1
+  - name: iflag1
+    description: Interrupt Flags 1.
+    byte_offset: 48
+    fieldset: Iflag1
+  - name: ctrl2
+    description: Control 2.
+    byte_offset: 52
+    fieldset: Ctrl22
+  - name: esr2
+    description: Error and Status 2.
+    byte_offset: 56
+    access: Read
+    fieldset: Esr22
+  - name: crcr
+    description: Cyclic Redundancy Check.
+    byte_offset: 68
+    access: Read
+    fieldset: Crcr
+  - name: rxfgmask
+    description: Legacy RX FIFO Global Mask.
+    byte_offset: 72
+    fieldset: Rxfgmask
+  - name: rxfir
+    description: Legacy RX FIFO Information.
+    byte_offset: 76
+    access: Read
+    fieldset: Rxfir
+  - name: cbt
+    description: CAN Bit Timing.
+    byte_offset: 80
+    fieldset: Cbt2
+  - name: cs0
+    description: Message Buffer 0 CS Register.
+    byte_offset: 128
+    fieldset: MbbCs
+  - name: mb0_16b_cs
+    description: Message Buffer 0 CS Register.
+    byte_offset: 128
+    fieldset: MbbCs
+  - name: mb0_32b_cs
+    description: Message Buffer 0 CS Register.
+    byte_offset: 128
+    fieldset: MbbCs
+  - name: mb0_64b_cs
+    description: Message Buffer 0 CS Register.
+    byte_offset: 128
+    fieldset: MbbCs
+  - name: mb0_8b_cs
+    description: Message Buffer 0 CS Register.
+    byte_offset: 128
+    fieldset: MbbCs
+  - name: id0
+    description: Message Buffer 0 ID Register.
+    byte_offset: 132
+    fieldset: MbbId
+  - name: mb0_16b_id
+    description: Message Buffer 0 ID Register.
+    byte_offset: 132
+    fieldset: MbbId
+  - name: mb0_32b_id
+    description: Message Buffer 0 ID Register.
+    byte_offset: 132
+    fieldset: MbbId
+  - name: mb0_64b_id
+    description: Message Buffer 0 ID Register.
+    byte_offset: 132
+    fieldset: MbbId
+  - name: mb0_8b_id
+    description: Message Buffer 0 ID Register.
+    byte_offset: 132
+    fieldset: MbbId
+  - name: mb0_16b_word0
+    description: Message Buffer 0 WORD_16B Register.
+    byte_offset: 136
+    fieldset: Word026
+  - name: mb0_32b_word0
+    description: Message Buffer 0 WORD_32B Register.
+    byte_offset: 136
+    fieldset: Word026
+  - name: mb0_64b_word0
+    description: Message Buffer 0 WORD_64B Register.
+    byte_offset: 136
+    fieldset: Word026
+  - name: mb0_8b_word0
+    description: Message Buffer 0 WORD_8B Register.
+    byte_offset: 136
+    fieldset: Word026
+  - name: word00
+    description: Message Buffer 0 WORD0 Register.
+    byte_offset: 136
+    fieldset: Word026
+  - name: mb0_16b_word1
+    description: Message Buffer 0 WORD_16B Register.
+    byte_offset: 140
+    fieldset: Mb1016bWord1
+  - name: mb0_32b_word1
+    description: Message Buffer 0 WORD_32B Register.
+    byte_offset: 140
+    fieldset: Mb1016bWord1
+  - name: mb0_64b_word1
+    description: Message Buffer 0 WORD_64B Register.
+    byte_offset: 140
+    fieldset: Mb1016bWord1
+  - name: mb0_8b_word1
+    description: Message Buffer 0 WORD_8B Register.
+    byte_offset: 140
+    fieldset: Mb1016bWord1
+  - name: word10
+    description: Message Buffer 0 WORD1 Register.
+    byte_offset: 140
+    fieldset: Mb1016bWord1
+  - name: cs1
+    description: Message Buffer 1 CS Register.
+    byte_offset: 144
+    fieldset: MbbCs
+  - name: mb0_16b_word2
+    description: Message Buffer 0 WORD_16B Register.
+    byte_offset: 144
+    fieldset: Mb1016bWord2
+  - name: mb0_32b_word2
+    description: Message Buffer 0 WORD_32B Register.
+    byte_offset: 144
+    fieldset: Mb1016bWord2
+  - name: mb0_64b_word2
+    description: Message Buffer 0 WORD_64B Register.
+    byte_offset: 144
+    fieldset: Mb1016bWord2
+  - name: mb1_8b_cs
+    description: Message Buffer 1 CS Register.
+    byte_offset: 144
+    fieldset: MbbCs
+  - name: id1
+    description: Message Buffer 1 ID Register.
+    byte_offset: 148
+    fieldset: MbbId
+  - name: mb0_16b_word3
+    description: Message Buffer 0 WORD_16B Register.
+    byte_offset: 148
+    fieldset: Mb1416bWord3
+  - name: mb0_32b_word3
+    description: Message Buffer 0 WORD_32B Register.
+    byte_offset: 148
+    fieldset: Mb1416bWord3
+  - name: mb0_64b_word3
+    description: Message Buffer 0 WORD_64B Register.
+    byte_offset: 148
+    fieldset: Mb1416bWord3
+  - name: mb1_8b_id
+    description: Message Buffer 1 ID Register.
+    byte_offset: 148
+    fieldset: MbbId
+  - name: mb0_32b_word4
+    description: Message Buffer 0 WORD_32B Register.
+    byte_offset: 152
+    fieldset: Mb464bWord4
+  - name: mb0_64b_word4
+    description: Message Buffer 0 WORD_64B Register.
+    byte_offset: 152
+    fieldset: Mb464bWord4
+  - name: mb1_16b_cs
+    description: Message Buffer 1 CS Register.
+    byte_offset: 152
+    fieldset: MbbCs
+  - name: mb1_8b_word0
+    description: Message Buffer 1 WORD_8B Register.
+    byte_offset: 152
+    fieldset: Word026
+  - name: word01
+    description: Message Buffer 1 WORD0 Register.
+    byte_offset: 152
+    fieldset: Word026
+  - name: mb0_32b_word5
+    description: Message Buffer 0 WORD_32B Register.
+    byte_offset: 156
+    fieldset: Mb332bWord5
+  - name: mb0_64b_word5
+    description: Message Buffer 0 WORD_64B Register.
+    byte_offset: 156
+    fieldset: Mb332bWord5
+  - name: mb1_16b_id
+    description: Message Buffer 1 ID Register.
+    byte_offset: 156
+    fieldset: MbbId
+  - name: mb1_8b_word1
+    description: Message Buffer 1 WORD_8B Register.
+    byte_offset: 156
+    fieldset: Mb1016bWord1
+  - name: word11
+    description: Message Buffer 1 WORD1 Register.
+    byte_offset: 156
+    fieldset: Mb1016bWord1
+  - name: cs2
+    description: Message Buffer 2 CS Register.
+    byte_offset: 160
+    fieldset: MbbCs
+  - name: mb0_32b_word6
+    description: Message Buffer 0 WORD_32B Register.
+    byte_offset: 160
+    fieldset: Mb332bWord6
+  - name: mb0_64b_word6
+    description: Message Buffer 0 WORD_64B Register.
+    byte_offset: 160
+    fieldset: Mb332bWord6
+  - name: mb1_16b_word0
+    description: Message Buffer 1 WORD_16B Register.
+    byte_offset: 160
+    fieldset: Word026
+  - name: mb2_8b_cs
+    description: Message Buffer 2 CS Register.
+    byte_offset: 160
+    fieldset: MbbCs
+  - name: id2
+    description: Message Buffer 2 ID Register.
+    byte_offset: 164
+    fieldset: MbbId
+  - name: mb0_32b_word7
+    description: Message Buffer 0 WORD_32B Register.
+    byte_offset: 164
+    fieldset: Mb032bWord7
+  - name: mb0_64b_word7
+    description: Message Buffer 0 WORD_64B Register.
+    byte_offset: 164
+    fieldset: Mb032bWord7
+  - name: mb1_16b_word1
+    description: Message Buffer 1 WORD_16B Register.
+    byte_offset: 164
+    fieldset: Mb1016bWord1
+  - name: mb2_8b_id
+    description: Message Buffer 2 ID Register.
+    byte_offset: 164
+    fieldset: MbbId
+  - name: mb0_64b_word8
+    description: Message Buffer 0 WORD_64B Register.
+    byte_offset: 168
+    fieldset: Mb664bWord8
+  - name: mb1_16b_word2
+    description: Message Buffer 1 WORD_16B Register.
+    byte_offset: 168
+    fieldset: Mb1016bWord2
+  - name: mb1_32b_cs
+    description: Message Buffer 1 CS Register.
+    byte_offset: 168
+    fieldset: MbbCs
+  - name: mb2_8b_word0
+    description: Message Buffer 2 WORD_8B Register.
+    byte_offset: 168
+    fieldset: Word026
+  - name: word02
+    description: Message Buffer 2 WORD0 Register.
+    byte_offset: 168
+    fieldset: Word026
+  - name: mb0_64b_word9
+    description: Message Buffer 0 WORD_64B Register.
+    byte_offset: 172
+    fieldset: Mb664bWord9
+  - name: mb1_16b_word3
+    description: Message Buffer 1 WORD_16B Register.
+    byte_offset: 172
+    fieldset: Mb1416bWord3
+  - name: mb1_32b_id
+    description: Message Buffer 1 ID Register.
+    byte_offset: 172
+    fieldset: MbbId
+  - name: mb2_8b_word1
+    description: Message Buffer 2 WORD_8B Register.
+    byte_offset: 172
+    fieldset: Mb1016bWord1
+  - name: word12
+    description: Message Buffer 2 WORD1 Register.
+    byte_offset: 172
+    fieldset: Mb1016bWord1
+  - name: cs3
+    description: Message Buffer 3 CS Register.
+    byte_offset: 176
+    fieldset: MbbCs
+  - name: mb0_64b_word10
+    description: Message Buffer 0 WORD_64B Register.
+    byte_offset: 176
+    fieldset: Mb064bWord10
+  - name: mb1_32b_word0
+    description: Message Buffer 1 WORD_32B Register.
+    byte_offset: 176
+    fieldset: Word026
+  - name: mb2_16b_cs
+    description: Message Buffer 2 CS Register.
+    byte_offset: 176
+    fieldset: MbbCs
+  - name: mb3_8b_cs
+    description: Message Buffer 3 CS Register.
+    byte_offset: 176
+    fieldset: MbbCs
+  - name: id3
+    description: Message Buffer 3 ID Register.
+    byte_offset: 180
+    fieldset: MbbId
+  - name: mb0_64b_word11
+    description: Message Buffer 0 WORD_64B Register.
+    byte_offset: 180
+    fieldset: Mb164bWord11
+  - name: mb1_32b_word1
+    description: Message Buffer 1 WORD_32B Register.
+    byte_offset: 180
+    fieldset: Mb1016bWord1
+  - name: mb2_16b_id
+    description: Message Buffer 2 ID Register.
+    byte_offset: 180
+    fieldset: MbbId
+  - name: mb3_8b_id
+    description: Message Buffer 3 ID Register.
+    byte_offset: 180
+    fieldset: MbbId
+  - name: mb0_64b_word12
+    description: Message Buffer 0 WORD_64B Register.
+    byte_offset: 184
+    fieldset: Mb164bWord12
+  - name: mb1_32b_word2
+    description: Message Buffer 1 WORD_32B Register.
+    byte_offset: 184
+    fieldset: Mb1016bWord2
+  - name: mb2_16b_word0
+    description: Message Buffer 2 WORD_16B Register.
+    byte_offset: 184
+    fieldset: Word026
+  - name: mb3_8b_word0
+    description: Message Buffer 3 WORD_8B Register.
+    byte_offset: 184
+    fieldset: Word026
+  - name: word03
+    description: Message Buffer 3 WORD0 Register.
+    byte_offset: 184
+    fieldset: Word026
+  - name: mb0_64b_word13
+    description: Message Buffer 0 WORD_64B Register.
+    byte_offset: 188
+    fieldset: Mb264bWord13
+  - name: mb1_32b_word3
+    description: Message Buffer 1 WORD_32B Register.
+    byte_offset: 188
+    fieldset: Mb1416bWord3
+  - name: mb2_16b_word1
+    description: Message Buffer 2 WORD_16B Register.
+    byte_offset: 188
+    fieldset: Mb1016bWord1
+  - name: mb3_8b_word1
+    description: Message Buffer 3 WORD_8B Register.
+    byte_offset: 188
+    fieldset: Mb1016bWord1
+  - name: word13
+    description: Message Buffer 3 WORD1 Register.
+    byte_offset: 188
+    fieldset: Mb1016bWord1
+  - name: cs4
+    description: Message Buffer 4 CS Register.
+    byte_offset: 192
+    fieldset: MbbCs
+  - name: mb0_64b_word14
+    description: Message Buffer 0 WORD_64B Register.
+    byte_offset: 192
+    fieldset: Mb264bWord14
+  - name: mb1_32b_word4
+    description: Message Buffer 1 WORD_32B Register.
+    byte_offset: 192
+    fieldset: Mb464bWord4
+  - name: mb2_16b_word2
+    description: Message Buffer 2 WORD_16B Register.
+    byte_offset: 192
+    fieldset: Mb1016bWord2
+  - name: mb4_8b_cs
+    description: Message Buffer 4 CS Register.
+    byte_offset: 192
+    fieldset: MbbCs
+  - name: id4
+    description: Message Buffer 4 ID Register.
+    byte_offset: 196
+    fieldset: MbbId
+  - name: mb0_64b_word15
+    description: Message Buffer 0 WORD_64B Register.
+    byte_offset: 196
+    fieldset: Mb264bWord15
+  - name: mb1_32b_word5
+    description: Message Buffer 1 WORD_32B Register.
+    byte_offset: 196
+    fieldset: Mb332bWord5
+  - name: mb2_16b_word3
+    description: Message Buffer 2 WORD_16B Register.
+    byte_offset: 196
+    fieldset: Mb1416bWord3
+  - name: mb4_8b_id
+    description: Message Buffer 4 ID Register.
+    byte_offset: 196
+    fieldset: MbbId
+  - name: mb1_32b_word6
+    description: Message Buffer 1 WORD_32B Register.
+    byte_offset: 200
+    fieldset: Mb332bWord6
+  - name: mb1_64b_cs
+    description: Message Buffer 1 CS Register.
+    byte_offset: 200
+    fieldset: MbbCs
+  - name: mb3_16b_cs
+    description: Message Buffer 3 CS Register.
+    byte_offset: 200
+    fieldset: MbbCs
+  - name: mb4_8b_word0
+    description: Message Buffer 4 WORD_8B Register.
+    byte_offset: 200
+    fieldset: Word026
+  - name: word04
+    description: Message Buffer 4 WORD0 Register.
+    byte_offset: 200
+    fieldset: Word026
+  - name: mb1_32b_word7
+    description: Message Buffer 1 WORD_32B Register.
+    byte_offset: 204
+    fieldset: Mb032bWord7
+  - name: mb1_64b_id
+    description: Message Buffer 1 ID Register.
+    byte_offset: 204
+    fieldset: MbbId
+  - name: mb3_16b_id
+    description: Message Buffer 3 ID Register.
+    byte_offset: 204
+    fieldset: MbbId
+  - name: mb4_8b_word1
+    description: Message Buffer 4 WORD_8B Register.
+    byte_offset: 204
+    fieldset: Mb1016bWord1
+  - name: word14
+    description: Message Buffer 4 WORD1 Register.
+    byte_offset: 204
+    fieldset: Mb1016bWord1
+  - name: cs5
+    description: Message Buffer 5 CS Register.
+    byte_offset: 208
+    fieldset: MbbCs
+  - name: mb1_64b_word0
+    description: Message Buffer 1 WORD_64B Register.
+    byte_offset: 208
+    fieldset: Word026
+  - name: mb2_32b_cs
+    description: Message Buffer 2 CS Register.
+    byte_offset: 208
+    fieldset: MbbCs
+  - name: mb3_16b_word0
+    description: Message Buffer 3 WORD_16B Register.
+    byte_offset: 208
+    fieldset: Word026
+  - name: mb5_8b_cs
+    description: Message Buffer 5 CS Register.
+    byte_offset: 208
+    fieldset: MbbCs
+  - name: id5
+    description: Message Buffer 5 ID Register.
+    byte_offset: 212
+    fieldset: MbbId
+  - name: mb1_64b_word1
+    description: Message Buffer 1 WORD_64B Register.
+    byte_offset: 212
+    fieldset: Mb1016bWord1
+  - name: mb2_32b_id
+    description: Message Buffer 2 ID Register.
+    byte_offset: 212
+    fieldset: MbbId
+  - name: mb3_16b_word1
+    description: Message Buffer 3 WORD_16B Register.
+    byte_offset: 212
+    fieldset: Mb1016bWord1
+  - name: mb5_8b_id
+    description: Message Buffer 5 ID Register.
+    byte_offset: 212
+    fieldset: MbbId
+  - name: mb1_64b_word2
+    description: Message Buffer 1 WORD_64B Register.
+    byte_offset: 216
+    fieldset: Mb1016bWord2
+  - name: mb2_32b_word0
+    description: Message Buffer 2 WORD_32B Register.
+    byte_offset: 216
+    fieldset: Word026
+  - name: mb3_16b_word2
+    description: Message Buffer 3 WORD_16B Register.
+    byte_offset: 216
+    fieldset: Mb1016bWord2
+  - name: mb5_8b_word0
+    description: Message Buffer 5 WORD_8B Register.
+    byte_offset: 216
+    fieldset: Word026
+  - name: word05
+    description: Message Buffer 5 WORD0 Register.
+    byte_offset: 216
+    fieldset: Word026
+  - name: mb1_64b_word3
+    description: Message Buffer 1 WORD_64B Register.
+    byte_offset: 220
+    fieldset: Mb1416bWord3
+  - name: mb2_32b_word1
+    description: Message Buffer 2 WORD_32B Register.
+    byte_offset: 220
+    fieldset: Mb1016bWord1
+  - name: mb3_16b_word3
+    description: Message Buffer 3 WORD_16B Register.
+    byte_offset: 220
+    fieldset: Mb1416bWord3
+  - name: mb5_8b_word1
+    description: Message Buffer 5 WORD_8B Register.
+    byte_offset: 220
+    fieldset: Mb1016bWord1
+  - name: word15
+    description: Message Buffer 5 WORD1 Register.
+    byte_offset: 220
+    fieldset: Mb1016bWord1
+  - name: cs6
+    description: Message Buffer 6 CS Register.
+    byte_offset: 224
+    fieldset: MbbCs
+  - name: mb1_64b_word4
+    description: Message Buffer 1 WORD_64B Register.
+    byte_offset: 224
+    fieldset: Mb464bWord4
+  - name: mb2_32b_word2
+    description: Message Buffer 2 WORD_32B Register.
+    byte_offset: 224
+    fieldset: Mb1016bWord2
+  - name: mb4_16b_cs
+    description: Message Buffer 4 CS Register.
+    byte_offset: 224
+    fieldset: MbbCs
+  - name: mb6_8b_cs
+    description: Message Buffer 6 CS Register.
+    byte_offset: 224
+    fieldset: MbbCs
+  - name: id6
+    description: Message Buffer 6 ID Register.
+    byte_offset: 228
+    fieldset: MbbId
+  - name: mb1_64b_word5
+    description: Message Buffer 1 WORD_64B Register.
+    byte_offset: 228
+    fieldset: Mb332bWord5
+  - name: mb2_32b_word3
+    description: Message Buffer 2 WORD_32B Register.
+    byte_offset: 228
+    fieldset: Mb1416bWord3
+  - name: mb4_16b_id
+    description: Message Buffer 4 ID Register.
+    byte_offset: 228
+    fieldset: MbbId
+  - name: mb6_8b_id
+    description: Message Buffer 6 ID Register.
+    byte_offset: 228
+    fieldset: MbbId
+  - name: mb1_64b_word6
+    description: Message Buffer 1 WORD_64B Register.
+    byte_offset: 232
+    fieldset: Mb332bWord6
+  - name: mb2_32b_word4
+    description: Message Buffer 2 WORD_32B Register.
+    byte_offset: 232
+    fieldset: Mb464bWord4
+  - name: mb4_16b_word0
+    description: Message Buffer 4 WORD_16B Register.
+    byte_offset: 232
+    fieldset: Word026
+  - name: mb6_8b_word0
+    description: Message Buffer 6 WORD_8B Register.
+    byte_offset: 232
+    fieldset: Word026
+  - name: word06
+    description: Message Buffer 6 WORD0 Register.
+    byte_offset: 232
+    fieldset: Word026
+  - name: mb1_64b_word7
+    description: Message Buffer 1 WORD_64B Register.
+    byte_offset: 236
+    fieldset: Mb032bWord7
+  - name: mb2_32b_word5
+    description: Message Buffer 2 WORD_32B Register.
+    byte_offset: 236
+    fieldset: Mb332bWord5
+  - name: mb4_16b_word1
+    description: Message Buffer 4 WORD_16B Register.
+    byte_offset: 236
+    fieldset: Mb1016bWord1
+  - name: mb6_8b_word1
+    description: Message Buffer 6 WORD_8B Register.
+    byte_offset: 236
+    fieldset: Mb1016bWord1
+  - name: word16
+    description: Message Buffer 6 WORD1 Register.
+    byte_offset: 236
+    fieldset: Mb1016bWord1
+  - name: cs7
+    description: Message Buffer 7 CS Register.
+    byte_offset: 240
+    fieldset: MbbCs
+  - name: mb1_64b_word8
+    description: Message Buffer 1 WORD_64B Register.
+    byte_offset: 240
+    fieldset: Mb664bWord8
+  - name: mb2_32b_word6
+    description: Message Buffer 2 WORD_32B Register.
+    byte_offset: 240
+    fieldset: Mb332bWord6
+  - name: mb4_16b_word2
+    description: Message Buffer 4 WORD_16B Register.
+    byte_offset: 240
+    fieldset: Mb1016bWord2
+  - name: mb7_8b_cs
+    description: Message Buffer 7 CS Register.
+    byte_offset: 240
+    fieldset: MbbCs
+  - name: id7
+    description: Message Buffer 7 ID Register.
+    byte_offset: 244
+    fieldset: MbbId
+  - name: mb1_64b_word9
+    description: Message Buffer 1 WORD_64B Register.
+    byte_offset: 244
+    fieldset: Mb664bWord9
+  - name: mb2_32b_word7
+    description: Message Buffer 2 WORD_32B Register.
+    byte_offset: 244
+    fieldset: Mb032bWord7
+  - name: mb4_16b_word3
+    description: Message Buffer 4 WORD_16B Register.
+    byte_offset: 244
+    fieldset: Mb1416bWord3
+  - name: mb7_8b_id
+    description: Message Buffer 7 ID Register.
+    byte_offset: 244
+    fieldset: MbbId
+  - name: mb1_64b_word10
+    description: Message Buffer 1 WORD_64B Register.
+    byte_offset: 248
+    fieldset: Mb064bWord10
+  - name: mb3_32b_cs
+    description: Message Buffer 3 CS Register.
+    byte_offset: 248
+    fieldset: MbbCs
+  - name: mb5_16b_cs
+    description: Message Buffer 5 CS Register.
+    byte_offset: 248
+    fieldset: MbbCs
+  - name: mb7_8b_word0
+    description: Message Buffer 7 WORD_8B Register.
+    byte_offset: 248
+    fieldset: Word026
+  - name: word07
+    description: Message Buffer 7 WORD0 Register.
+    byte_offset: 248
+    fieldset: Word026
+  - name: mb1_64b_word11
+    description: Message Buffer 1 WORD_64B Register.
+    byte_offset: 252
+    fieldset: Mb164bWord11
+  - name: mb3_32b_id
+    description: Message Buffer 3 ID Register.
+    byte_offset: 252
+    fieldset: MbbId
+  - name: mb5_16b_id
+    description: Message Buffer 5 ID Register.
+    byte_offset: 252
+    fieldset: MbbId
+  - name: mb7_8b_word1
+    description: Message Buffer 7 WORD_8B Register.
+    byte_offset: 252
+    fieldset: Mb1016bWord1
+  - name: word17
+    description: Message Buffer 7 WORD1 Register.
+    byte_offset: 252
+    fieldset: Mb1016bWord1
+  - name: cs8
+    description: Message Buffer 8 CS Register.
+    byte_offset: 256
+    fieldset: MbbCs
+  - name: mb1_64b_word12
+    description: Message Buffer 1 WORD_64B Register.
+    byte_offset: 256
+    fieldset: Mb164bWord12
+  - name: mb3_32b_word0
+    description: Message Buffer 3 WORD_32B Register.
+    byte_offset: 256
+    fieldset: Word026
+  - name: mb5_16b_word0
+    description: Message Buffer 5 WORD_16B Register.
+    byte_offset: 256
+    fieldset: Word026
+  - name: mb8_8b_cs
+    description: Message Buffer 8 CS Register.
+    byte_offset: 256
+    fieldset: MbbCs
+  - name: id8
+    description: Message Buffer 8 ID Register.
+    byte_offset: 260
+    fieldset: MbbId
+  - name: mb1_64b_word13
+    description: Message Buffer 1 WORD_64B Register.
+    byte_offset: 260
+    fieldset: Mb264bWord13
+  - name: mb3_32b_word1
+    description: Message Buffer 3 WORD_32B Register.
+    byte_offset: 260
+    fieldset: Mb1016bWord1
+  - name: mb5_16b_word1
+    description: Message Buffer 5 WORD_16B Register.
+    byte_offset: 260
+    fieldset: Mb1016bWord1
+  - name: mb8_8b_id
+    description: Message Buffer 8 ID Register.
+    byte_offset: 260
+    fieldset: MbbId
+  - name: mb1_64b_word14
+    description: Message Buffer 1 WORD_64B Register.
+    byte_offset: 264
+    fieldset: Mb264bWord14
+  - name: mb3_32b_word2
+    description: Message Buffer 3 WORD_32B Register.
+    byte_offset: 264
+    fieldset: Mb1016bWord2
+  - name: mb5_16b_word2
+    description: Message Buffer 5 WORD_16B Register.
+    byte_offset: 264
+    fieldset: Mb1016bWord2
+  - name: mb8_8b_word0
+    description: Message Buffer 8 WORD_8B Register.
+    byte_offset: 264
+    fieldset: Word026
+  - name: word08
+    description: Message Buffer 8 WORD0 Register.
+    byte_offset: 264
+    fieldset: Word026
+  - name: mb1_64b_word15
+    description: Message Buffer 1 WORD_64B Register.
+    byte_offset: 268
+    fieldset: Mb264bWord15
+  - name: mb3_32b_word3
+    description: Message Buffer 3 WORD_32B Register.
+    byte_offset: 268
+    fieldset: Mb1416bWord3
+  - name: mb5_16b_word3
+    description: Message Buffer 5 WORD_16B Register.
+    byte_offset: 268
+    fieldset: Mb1416bWord3
+  - name: mb8_8b_word1
+    description: Message Buffer 8 WORD_8B Register.
+    byte_offset: 268
+    fieldset: Mb1016bWord1
+  - name: word18
+    description: Message Buffer 8 WORD1 Register.
+    byte_offset: 268
+    fieldset: Mb1016bWord1
+  - name: cs9
+    description: Message Buffer 9 CS Register.
+    byte_offset: 272
+    fieldset: MbbCs
+  - name: mb2_64b_cs
+    description: Message Buffer 2 CS Register.
+    byte_offset: 272
+    fieldset: MbbCs
+  - name: mb3_32b_word4
+    description: Message Buffer 3 WORD_32B Register.
+    byte_offset: 272
+    fieldset: Mb464bWord4
+  - name: mb6_16b_cs
+    description: Message Buffer 6 CS Register.
+    byte_offset: 272
+    fieldset: MbbCs
+  - name: mb9_8b_cs
+    description: Message Buffer 9 CS Register.
+    byte_offset: 272
+    fieldset: MbbCs
+  - name: id9
+    description: Message Buffer 9 ID Register.
+    byte_offset: 276
+    fieldset: MbbId
+  - name: mb2_64b_id
+    description: Message Buffer 2 ID Register.
+    byte_offset: 276
+    fieldset: MbbId
+  - name: mb3_32b_word5
+    description: Message Buffer 3 WORD_32B Register.
+    byte_offset: 276
+    fieldset: Mb332bWord5
+  - name: mb6_16b_id
+    description: Message Buffer 6 ID Register.
+    byte_offset: 276
+    fieldset: MbbId
+  - name: mb9_8b_id
+    description: Message Buffer 9 ID Register.
+    byte_offset: 276
+    fieldset: MbbId
+  - name: mb2_64b_word0
+    description: Message Buffer 2 WORD_64B Register.
+    byte_offset: 280
+    fieldset: Word026
+  - name: mb3_32b_word6
+    description: Message Buffer 3 WORD_32B Register.
+    byte_offset: 280
+    fieldset: Mb332bWord6
+  - name: mb6_16b_word0
+    description: Message Buffer 6 WORD_16B Register.
+    byte_offset: 280
+    fieldset: Word026
+  - name: mb9_8b_word0
+    description: Message Buffer 9 WORD_8B Register.
+    byte_offset: 280
+    fieldset: Word026
+  - name: word09
+    description: Message Buffer 9 WORD0 Register.
+    byte_offset: 280
+    fieldset: Word026
+  - name: mb2_64b_word1
+    description: Message Buffer 2 WORD_64B Register.
+    byte_offset: 284
+    fieldset: Mb1016bWord1
+  - name: mb3_32b_word7
+    description: Message Buffer 3 WORD_32B Register.
+    byte_offset: 284
+    fieldset: Mb032bWord7
+  - name: mb6_16b_word1
+    description: Message Buffer 6 WORD_16B Register.
+    byte_offset: 284
+    fieldset: Mb1016bWord1
+  - name: mb9_8b_word1
+    description: Message Buffer 9 WORD_8B Register.
+    byte_offset: 284
+    fieldset: Mb1016bWord1
+  - name: word19
+    description: Message Buffer 9 WORD1 Register.
+    byte_offset: 284
+    fieldset: Mb1016bWord1
+  - name: cs10
+    description: Message Buffer 10 CS Register.
+    byte_offset: 288
+    fieldset: MbbCs
+  - name: mb10_8b_cs
+    description: Message Buffer 10 CS Register.
+    byte_offset: 288
+    fieldset: MbbCs
+  - name: mb2_64b_word2
+    description: Message Buffer 2 WORD_64B Register.
+    byte_offset: 288
+    fieldset: Mb1016bWord2
+  - name: mb4_32b_cs
+    description: Message Buffer 4 CS Register.
+    byte_offset: 288
+    fieldset: MbbCs
+  - name: mb6_16b_word2
+    description: Message Buffer 6 WORD_16B Register.
+    byte_offset: 288
+    fieldset: Mb1016bWord2
+  - name: id10
+    description: Message Buffer 10 ID Register.
+    byte_offset: 292
+    fieldset: MbbId
+  - name: mb10_8b_id
+    description: Message Buffer 10 ID Register.
+    byte_offset: 292
+    fieldset: MbbId
+  - name: mb2_64b_word3
+    description: Message Buffer 2 WORD_64B Register.
+    byte_offset: 292
+    fieldset: Mb1416bWord3
+  - name: mb4_32b_id
+    description: Message Buffer 4 ID Register.
+    byte_offset: 292
+    fieldset: MbbId
+  - name: mb6_16b_word3
+    description: Message Buffer 6 WORD_16B Register.
+    byte_offset: 292
+    fieldset: Mb1416bWord3
+  - name: mb10_8b_word0
+    description: Message Buffer 10 WORD_8B Register.
+    byte_offset: 296
+    fieldset: Word026
+  - name: mb2_64b_word4
+    description: Message Buffer 2 WORD_64B Register.
+    byte_offset: 296
+    fieldset: Mb464bWord4
+  - name: mb4_32b_word0
+    description: Message Buffer 4 WORD_32B Register.
+    byte_offset: 296
+    fieldset: Word026
+  - name: mb7_16b_cs
+    description: Message Buffer 7 CS Register.
+    byte_offset: 296
+    fieldset: MbbCs
+  - name: word010
+    description: Message Buffer 10 WORD0 Register.
+    byte_offset: 296
+    fieldset: Word026
+  - name: mb10_8b_word1
+    description: Message Buffer 10 WORD_8B Register.
+    byte_offset: 300
+    fieldset: Mb1016bWord1
+  - name: mb2_64b_word5
+    description: Message Buffer 2 WORD_64B Register.
+    byte_offset: 300
+    fieldset: Mb332bWord5
+  - name: mb4_32b_word1
+    description: Message Buffer 4 WORD_32B Register.
+    byte_offset: 300
+    fieldset: Mb1016bWord1
+  - name: mb7_16b_id
+    description: Message Buffer 7 ID Register.
+    byte_offset: 300
+    fieldset: MbbId
+  - name: word110
+    description: Message Buffer 10 WORD1 Register.
+    byte_offset: 300
+    fieldset: Mb1016bWord1
+  - name: cs11
+    description: Message Buffer 11 CS Register.
+    byte_offset: 304
+    fieldset: MbbCs
+  - name: mb11_8b_cs
+    description: Message Buffer 11 CS Register.
+    byte_offset: 304
+    fieldset: MbbCs
+  - name: mb2_64b_word6
+    description: Message Buffer 2 WORD_64B Register.
+    byte_offset: 304
+    fieldset: Mb332bWord6
+  - name: mb4_32b_word2
+    description: Message Buffer 4 WORD_32B Register.
+    byte_offset: 304
+    fieldset: Mb1016bWord2
+  - name: mb7_16b_word0
+    description: Message Buffer 7 WORD_16B Register.
+    byte_offset: 304
+    fieldset: Word026
+  - name: id11
+    description: Message Buffer 11 ID Register.
+    byte_offset: 308
+    fieldset: MbbId
+  - name: mb11_8b_id
+    description: Message Buffer 11 ID Register.
+    byte_offset: 308
+    fieldset: MbbId
+  - name: mb2_64b_word7
+    description: Message Buffer 2 WORD_64B Register.
+    byte_offset: 308
+    fieldset: Mb032bWord7
+  - name: mb4_32b_word3
+    description: Message Buffer 4 WORD_32B Register.
+    byte_offset: 308
+    fieldset: Mb1416bWord3
+  - name: mb7_16b_word1
+    description: Message Buffer 7 WORD_16B Register.
+    byte_offset: 308
+    fieldset: Mb1016bWord1
+  - name: mb11_8b_word0
+    description: Message Buffer 11 WORD_8B Register.
+    byte_offset: 312
+    fieldset: Word026
+  - name: mb2_64b_word8
+    description: Message Buffer 2 WORD_64B Register.
+    byte_offset: 312
+    fieldset: Mb664bWord8
+  - name: mb4_32b_word4
+    description: Message Buffer 4 WORD_32B Register.
+    byte_offset: 312
+    fieldset: Mb464bWord4
+  - name: mb7_16b_word2
+    description: Message Buffer 7 WORD_16B Register.
+    byte_offset: 312
+    fieldset: Mb1016bWord2
+  - name: word011
+    description: Message Buffer 11 WORD0 Register.
+    byte_offset: 312
+    fieldset: Word026
+  - name: mb11_8b_word1
+    description: Message Buffer 11 WORD_8B Register.
+    byte_offset: 316
+    fieldset: Mb1016bWord1
+  - name: mb2_64b_word9
+    description: Message Buffer 2 WORD_64B Register.
+    byte_offset: 316
+    fieldset: Mb664bWord9
+  - name: mb4_32b_word5
+    description: Message Buffer 4 WORD_32B Register.
+    byte_offset: 316
+    fieldset: Mb332bWord5
+  - name: mb7_16b_word3
+    description: Message Buffer 7 WORD_16B Register.
+    byte_offset: 316
+    fieldset: Mb1416bWord3
+  - name: word111
+    description: Message Buffer 11 WORD1 Register.
+    byte_offset: 316
+    fieldset: Mb1016bWord1
+  - name: cs12
+    description: Message Buffer 12 CS Register.
+    byte_offset: 320
+    fieldset: MbbCs
+  - name: mb12_8b_cs
+    description: Message Buffer 12 CS Register.
+    byte_offset: 320
+    fieldset: MbbCs
+  - name: mb2_64b_word10
+    description: Message Buffer 2 WORD_64B Register.
+    byte_offset: 320
+    fieldset: Mb064bWord10
+  - name: mb4_32b_word6
+    description: Message Buffer 4 WORD_32B Register.
+    byte_offset: 320
+    fieldset: Mb332bWord6
+  - name: mb8_16b_cs
+    description: Message Buffer 8 CS Register.
+    byte_offset: 320
+    fieldset: MbbCs
+  - name: id12
+    description: Message Buffer 12 ID Register.
+    byte_offset: 324
+    fieldset: MbbId
+  - name: mb12_8b_id
+    description: Message Buffer 12 ID Register.
+    byte_offset: 324
+    fieldset: MbbId
+  - name: mb2_64b_word11
+    description: Message Buffer 2 WORD_64B Register.
+    byte_offset: 324
+    fieldset: Mb164bWord11
+  - name: mb4_32b_word7
+    description: Message Buffer 4 WORD_32B Register.
+    byte_offset: 324
+    fieldset: Mb032bWord7
+  - name: mb8_16b_id
+    description: Message Buffer 8 ID Register.
+    byte_offset: 324
+    fieldset: MbbId
+  - name: mb12_8b_word0
+    description: Message Buffer 12 WORD_8B Register.
+    byte_offset: 328
+    fieldset: Word026
+  - name: mb2_64b_word12
+    description: Message Buffer 2 WORD_64B Register.
+    byte_offset: 328
+    fieldset: Mb164bWord12
+  - name: mb5_32b_cs
+    description: Message Buffer 5 CS Register.
+    byte_offset: 328
+    fieldset: MbbCs
+  - name: mb8_16b_word0
+    description: Message Buffer 8 WORD_16B Register.
+    byte_offset: 328
+    fieldset: Word026
+  - name: word012
+    description: Message Buffer 12 WORD0 Register.
+    byte_offset: 328
+    fieldset: Word026
+  - name: mb12_8b_word1
+    description: Message Buffer 12 WORD_8B Register.
+    byte_offset: 332
+    fieldset: Mb1016bWord1
+  - name: mb2_64b_word13
+    description: Message Buffer 2 WORD_64B Register.
+    byte_offset: 332
+    fieldset: Mb264bWord13
+  - name: mb5_32b_id
+    description: Message Buffer 5 ID Register.
+    byte_offset: 332
+    fieldset: MbbId
+  - name: mb8_16b_word1
+    description: Message Buffer 8 WORD_16B Register.
+    byte_offset: 332
+    fieldset: Mb1016bWord1
+  - name: word112
+    description: Message Buffer 12 WORD1 Register.
+    byte_offset: 332
+    fieldset: Mb1016bWord1
+  - name: cs13
+    description: Message Buffer 13 CS Register.
+    byte_offset: 336
+    fieldset: MbbCs
+  - name: mb13_8b_cs
+    description: Message Buffer 13 CS Register.
+    byte_offset: 336
+    fieldset: MbbCs
+  - name: mb2_64b_word14
+    description: Message Buffer 2 WORD_64B Register.
+    byte_offset: 336
+    fieldset: Mb264bWord14
+  - name: mb5_32b_word0
+    description: Message Buffer 5 WORD_32B Register.
+    byte_offset: 336
+    fieldset: Word026
+  - name: mb8_16b_word2
+    description: Message Buffer 8 WORD_16B Register.
+    byte_offset: 336
+    fieldset: Mb1016bWord2
+  - name: id13
+    description: Message Buffer 13 ID Register.
+    byte_offset: 340
+    fieldset: MbbId
+  - name: mb13_8b_id
+    description: Message Buffer 13 ID Register.
+    byte_offset: 340
+    fieldset: MbbId
+  - name: mb2_64b_word15
+    description: Message Buffer 2 WORD_64B Register.
+    byte_offset: 340
+    fieldset: Mb264bWord15
+  - name: mb5_32b_word1
+    description: Message Buffer 5 WORD_32B Register.
+    byte_offset: 340
+    fieldset: Mb1016bWord1
+  - name: mb8_16b_word3
+    description: Message Buffer 8 WORD_16B Register.
+    byte_offset: 340
+    fieldset: Mb1416bWord3
+  - name: mb13_8b_word0
+    description: Message Buffer 13 WORD_8B Register.
+    byte_offset: 344
+    fieldset: Word026
+  - name: mb3_64b_cs
+    description: Message Buffer 3 CS Register.
+    byte_offset: 344
+    fieldset: MbbCs
+  - name: mb5_32b_word2
+    description: Message Buffer 5 WORD_32B Register.
+    byte_offset: 344
+    fieldset: Mb1016bWord2
+  - name: mb9_16b_cs
+    description: Message Buffer 9 CS Register.
+    byte_offset: 344
+    fieldset: MbbCs
+  - name: word013
+    description: Message Buffer 13 WORD0 Register.
+    byte_offset: 344
+    fieldset: Word026
+  - name: mb13_8b_word1
+    description: Message Buffer 13 WORD_8B Register.
+    byte_offset: 348
+    fieldset: Mb1016bWord1
+  - name: mb3_64b_id
+    description: Message Buffer 3 ID Register.
+    byte_offset: 348
+    fieldset: MbbId
+  - name: mb5_32b_word3
+    description: Message Buffer 5 WORD_32B Register.
+    byte_offset: 348
+    fieldset: Mb1416bWord3
+  - name: mb9_16b_id
+    description: Message Buffer 9 ID Register.
+    byte_offset: 348
+    fieldset: MbbId
+  - name: word113
+    description: Message Buffer 13 WORD1 Register.
+    byte_offset: 348
+    fieldset: Mb1016bWord1
+  - name: cs14
+    description: Message Buffer 14 CS Register.
+    byte_offset: 352
+    fieldset: MbbCs
+  - name: mb14_8b_cs
+    description: Message Buffer 14 CS Register.
+    byte_offset: 352
+    fieldset: MbbCs
+  - name: mb3_64b_word0
+    description: Message Buffer 3 WORD_64B Register.
+    byte_offset: 352
+    fieldset: Word026
+  - name: mb5_32b_word4
+    description: Message Buffer 5 WORD_32B Register.
+    byte_offset: 352
+    fieldset: Mb464bWord4
+  - name: mb9_16b_word0
+    description: Message Buffer 9 WORD_16B Register.
+    byte_offset: 352
+    fieldset: Word026
+  - name: id14
+    description: Message Buffer 14 ID Register.
+    byte_offset: 356
+    fieldset: MbbId
+  - name: mb14_8b_id
+    description: Message Buffer 14 ID Register.
+    byte_offset: 356
+    fieldset: MbbId
+  - name: mb3_64b_word1
+    description: Message Buffer 3 WORD_64B Register.
+    byte_offset: 356
+    fieldset: Mb1016bWord1
+  - name: mb5_32b_word5
+    description: Message Buffer 5 WORD_32B Register.
+    byte_offset: 356
+    fieldset: Mb332bWord5
+  - name: mb9_16b_word1
+    description: Message Buffer 9 WORD_16B Register.
+    byte_offset: 356
+    fieldset: Mb1016bWord1
+  - name: mb14_8b_word0
+    description: Message Buffer 14 WORD_8B Register.
+    byte_offset: 360
+    fieldset: Word026
+  - name: mb3_64b_word2
+    description: Message Buffer 3 WORD_64B Register.
+    byte_offset: 360
+    fieldset: Mb1016bWord2
+  - name: mb5_32b_word6
+    description: Message Buffer 5 WORD_32B Register.
+    byte_offset: 360
+    fieldset: Mb332bWord6
+  - name: mb9_16b_word2
+    description: Message Buffer 9 WORD_16B Register.
+    byte_offset: 360
+    fieldset: Mb1016bWord2
+  - name: word014
+    description: Message Buffer 14 WORD0 Register.
+    byte_offset: 360
+    fieldset: Word026
+  - name: mb14_8b_word1
+    description: Message Buffer 14 WORD_8B Register.
+    byte_offset: 364
+    fieldset: Mb1016bWord1
+  - name: mb3_64b_word3
+    description: Message Buffer 3 WORD_64B Register.
+    byte_offset: 364
+    fieldset: Mb1416bWord3
+  - name: mb5_32b_word7
+    description: Message Buffer 5 WORD_32B Register.
+    byte_offset: 364
+    fieldset: Mb032bWord7
+  - name: mb9_16b_word3
+    description: Message Buffer 9 WORD_16B Register.
+    byte_offset: 364
+    fieldset: Mb1416bWord3
+  - name: word114
+    description: Message Buffer 14 WORD1 Register.
+    byte_offset: 364
+    fieldset: Mb1016bWord1
+  - name: cs15
+    description: Message Buffer 15 CS Register.
+    byte_offset: 368
+    fieldset: MbbCs
+  - name: mb10_16b_cs
+    description: Message Buffer 10 CS Register.
+    byte_offset: 368
+    fieldset: MbbCs
+  - name: mb15_8b_cs
+    description: Message Buffer 15 CS Register.
+    byte_offset: 368
+    fieldset: MbbCs
+  - name: mb3_64b_word4
+    description: Message Buffer 3 WORD_64B Register.
+    byte_offset: 368
+    fieldset: Mb464bWord4
+  - name: mb6_32b_cs
+    description: Message Buffer 6 CS Register.
+    byte_offset: 368
+    fieldset: MbbCs
+  - name: id15
+    description: Message Buffer 15 ID Register.
+    byte_offset: 372
+    fieldset: MbbId
+  - name: mb10_16b_id
+    description: Message Buffer 10 ID Register.
+    byte_offset: 372
+    fieldset: MbbId
+  - name: mb15_8b_id
+    description: Message Buffer 15 ID Register.
+    byte_offset: 372
+    fieldset: MbbId
+  - name: mb3_64b_word5
+    description: Message Buffer 3 WORD_64B Register.
+    byte_offset: 372
+    fieldset: Mb332bWord5
+  - name: mb6_32b_id
+    description: Message Buffer 6 ID Register.
+    byte_offset: 372
+    fieldset: MbbId
+  - name: mb10_16b_word0
+    description: Message Buffer 10 WORD_16B Register.
+    byte_offset: 376
+    fieldset: Word026
+  - name: mb15_8b_word0
+    description: Message Buffer 15 WORD_8B Register.
+    byte_offset: 376
+    fieldset: Word026
+  - name: mb3_64b_word6
+    description: Message Buffer 3 WORD_64B Register.
+    byte_offset: 376
+    fieldset: Mb332bWord6
+  - name: mb6_32b_word0
+    description: Message Buffer 6 WORD_32B Register.
+    byte_offset: 376
+    fieldset: Word026
+  - name: word015
+    description: Message Buffer 15 WORD0 Register.
+    byte_offset: 376
+    fieldset: Word026
+  - name: mb10_16b_word1
+    description: Message Buffer 10 WORD_16B Register.
+    byte_offset: 380
+    fieldset: Mb1016bWord1
+  - name: mb15_8b_word1
+    description: Message Buffer 15 WORD_8B Register.
+    byte_offset: 380
+    fieldset: Mb1016bWord1
+  - name: mb3_64b_word7
+    description: Message Buffer 3 WORD_64B Register.
+    byte_offset: 380
+    fieldset: Mb032bWord7
+  - name: mb6_32b_word1
+    description: Message Buffer 6 WORD_32B Register.
+    byte_offset: 380
+    fieldset: Mb1016bWord1
+  - name: word115
+    description: Message Buffer 15 WORD1 Register.
+    byte_offset: 380
+    fieldset: Mb1016bWord1
+  - name: cs16
+    description: Message Buffer 16 CS Register.
+    byte_offset: 384
+    fieldset: MbbCs
+  - name: mb10_16b_word2
+    description: Message Buffer 10 WORD_16B Register.
+    byte_offset: 384
+    fieldset: Mb1016bWord2
+  - name: mb16_8b_cs
+    description: Message Buffer 16 CS Register.
+    byte_offset: 384
+    fieldset: MbbCs
+  - name: mb3_64b_word8
+    description: Message Buffer 3 WORD_64B Register.
+    byte_offset: 384
+    fieldset: Mb664bWord8
+  - name: mb6_32b_word2
+    description: Message Buffer 6 WORD_32B Register.
+    byte_offset: 384
+    fieldset: Mb1016bWord2
+  - name: id16
+    description: Message Buffer 16 ID Register.
+    byte_offset: 388
+    fieldset: MbbId
+  - name: mb10_16b_word3
+    description: Message Buffer 10 WORD_16B Register.
+    byte_offset: 388
+    fieldset: Mb1416bWord3
+  - name: mb16_8b_id
+    description: Message Buffer 16 ID Register.
+    byte_offset: 388
+    fieldset: MbbId
+  - name: mb3_64b_word9
+    description: Message Buffer 3 WORD_64B Register.
+    byte_offset: 388
+    fieldset: Mb664bWord9
+  - name: mb6_32b_word3
+    description: Message Buffer 6 WORD_32B Register.
+    byte_offset: 388
+    fieldset: Mb1416bWord3
+  - name: mb11_16b_cs
+    description: Message Buffer 11 CS Register.
+    byte_offset: 392
+    fieldset: MbbCs
+  - name: mb16_8b_word0
+    description: Message Buffer 16 WORD_8B Register.
+    byte_offset: 392
+    fieldset: Word026
+  - name: mb3_64b_word10
+    description: Message Buffer 3 WORD_64B Register.
+    byte_offset: 392
+    fieldset: Mb064bWord10
+  - name: mb6_32b_word4
+    description: Message Buffer 6 WORD_32B Register.
+    byte_offset: 392
+    fieldset: Mb464bWord4
+  - name: word016
+    description: Message Buffer 16 WORD0 Register.
+    byte_offset: 392
+    fieldset: Word026
+  - name: mb11_16b_id
+    description: Message Buffer 11 ID Register.
+    byte_offset: 396
+    fieldset: MbbId
+  - name: mb16_8b_word1
+    description: Message Buffer 16 WORD_8B Register.
+    byte_offset: 396
+    fieldset: Mb1016bWord1
+  - name: mb3_64b_word11
+    description: Message Buffer 3 WORD_64B Register.
+    byte_offset: 396
+    fieldset: Mb164bWord11
+  - name: mb6_32b_word5
+    description: Message Buffer 6 WORD_32B Register.
+    byte_offset: 396
+    fieldset: Mb332bWord5
+  - name: word116
+    description: Message Buffer 16 WORD1 Register.
+    byte_offset: 396
+    fieldset: Mb1016bWord1
+  - name: cs17
+    description: Message Buffer 17 CS Register.
+    byte_offset: 400
+    fieldset: MbbCs
+  - name: mb11_16b_word0
+    description: Message Buffer 11 WORD_16B Register.
+    byte_offset: 400
+    fieldset: Word026
+  - name: mb17_8b_cs
+    description: Message Buffer 17 CS Register.
+    byte_offset: 400
+    fieldset: MbbCs
+  - name: mb3_64b_word12
+    description: Message Buffer 3 WORD_64B Register.
+    byte_offset: 400
+    fieldset: Mb164bWord12
+  - name: mb6_32b_word6
+    description: Message Buffer 6 WORD_32B Register.
+    byte_offset: 400
+    fieldset: Mb332bWord6
+  - name: id17
+    description: Message Buffer 17 ID Register.
+    byte_offset: 404
+    fieldset: MbbId
+  - name: mb11_16b_word1
+    description: Message Buffer 11 WORD_16B Register.
+    byte_offset: 404
+    fieldset: Mb1016bWord1
+  - name: mb17_8b_id
+    description: Message Buffer 17 ID Register.
+    byte_offset: 404
+    fieldset: MbbId
+  - name: mb3_64b_word13
+    description: Message Buffer 3 WORD_64B Register.
+    byte_offset: 404
+    fieldset: Mb264bWord13
+  - name: mb6_32b_word7
+    description: Message Buffer 6 WORD_32B Register.
+    byte_offset: 404
+    fieldset: Mb032bWord7
+  - name: mb11_16b_word2
+    description: Message Buffer 11 WORD_16B Register.
+    byte_offset: 408
+    fieldset: Mb1016bWord2
+  - name: mb17_8b_word0
+    description: Message Buffer 17 WORD_8B Register.
+    byte_offset: 408
+    fieldset: Word026
+  - name: mb3_64b_word14
+    description: Message Buffer 3 WORD_64B Register.
+    byte_offset: 408
+    fieldset: Mb264bWord14
+  - name: mb7_32b_cs
+    description: Message Buffer 7 CS Register.
+    byte_offset: 408
+    fieldset: MbbCs
+  - name: word017
+    description: Message Buffer 17 WORD0 Register.
+    byte_offset: 408
+    fieldset: Word026
+  - name: mb11_16b_word3
+    description: Message Buffer 11 WORD_16B Register.
+    byte_offset: 412
+    fieldset: Mb1416bWord3
+  - name: mb17_8b_word1
+    description: Message Buffer 17 WORD_8B Register.
+    byte_offset: 412
+    fieldset: Mb1016bWord1
+  - name: mb3_64b_word15
+    description: Message Buffer 3 WORD_64B Register.
+    byte_offset: 412
+    fieldset: Mb264bWord15
+  - name: mb7_32b_id
+    description: Message Buffer 7 ID Register.
+    byte_offset: 412
+    fieldset: MbbId
+  - name: word117
+    description: Message Buffer 17 WORD1 Register.
+    byte_offset: 412
+    fieldset: Mb1016bWord1
+  - name: cs18
+    description: Message Buffer 18 CS Register.
+    byte_offset: 416
+    fieldset: MbbCs
+  - name: mb12_16b_cs
+    description: Message Buffer 12 CS Register.
+    byte_offset: 416
+    fieldset: MbbCs
+  - name: mb18_8b_cs
+    description: Message Buffer 18 CS Register.
+    byte_offset: 416
+    fieldset: MbbCs
+  - name: mb4_64b_cs
+    description: Message Buffer 4 CS Register.
+    byte_offset: 416
+    fieldset: MbbCs
+  - name: mb7_32b_word0
+    description: Message Buffer 7 WORD_32B Register.
+    byte_offset: 416
+    fieldset: Word026
+  - name: id18
+    description: Message Buffer 18 ID Register.
+    byte_offset: 420
+    fieldset: MbbId
+  - name: mb12_16b_id
+    description: Message Buffer 12 ID Register.
+    byte_offset: 420
+    fieldset: MbbId
+  - name: mb18_8b_id
+    description: Message Buffer 18 ID Register.
+    byte_offset: 420
+    fieldset: MbbId
+  - name: mb4_64b_id
+    description: Message Buffer 4 ID Register.
+    byte_offset: 420
+    fieldset: MbbId
+  - name: mb7_32b_word1
+    description: Message Buffer 7 WORD_32B Register.
+    byte_offset: 420
+    fieldset: Mb1016bWord1
+  - name: mb12_16b_word0
+    description: Message Buffer 12 WORD_16B Register.
+    byte_offset: 424
+    fieldset: Word026
+  - name: mb18_8b_word0
+    description: Message Buffer 18 WORD_8B Register.
+    byte_offset: 424
+    fieldset: Word026
+  - name: mb4_64b_word0
+    description: Message Buffer 4 WORD_64B Register.
+    byte_offset: 424
+    fieldset: Word026
+  - name: mb7_32b_word2
+    description: Message Buffer 7 WORD_32B Register.
+    byte_offset: 424
+    fieldset: Mb1016bWord2
+  - name: word018
+    description: Message Buffer 18 WORD0 Register.
+    byte_offset: 424
+    fieldset: Word026
+  - name: mb12_16b_word1
+    description: Message Buffer 12 WORD_16B Register.
+    byte_offset: 428
+    fieldset: Mb1016bWord1
+  - name: mb18_8b_word1
+    description: Message Buffer 18 WORD_8B Register.
+    byte_offset: 428
+    fieldset: Mb1016bWord1
+  - name: mb4_64b_word1
+    description: Message Buffer 4 WORD_64B Register.
+    byte_offset: 428
+    fieldset: Mb1016bWord1
+  - name: mb7_32b_word3
+    description: Message Buffer 7 WORD_32B Register.
+    byte_offset: 428
+    fieldset: Mb1416bWord3
+  - name: word118
+    description: Message Buffer 18 WORD1 Register.
+    byte_offset: 428
+    fieldset: Mb1016bWord1
+  - name: cs19
+    description: Message Buffer 19 CS Register.
+    byte_offset: 432
+    fieldset: MbbCs
+  - name: mb12_16b_word2
+    description: Message Buffer 12 WORD_16B Register.
+    byte_offset: 432
+    fieldset: Mb1016bWord2
+  - name: mb19_8b_cs
+    description: Message Buffer 19 CS Register.
+    byte_offset: 432
+    fieldset: MbbCs
+  - name: mb4_64b_word2
+    description: Message Buffer 4 WORD_64B Register.
+    byte_offset: 432
+    fieldset: Mb1016bWord2
+  - name: mb7_32b_word4
+    description: Message Buffer 7 WORD_32B Register.
+    byte_offset: 432
+    fieldset: Mb464bWord4
+  - name: id19
+    description: Message Buffer 19 ID Register.
+    byte_offset: 436
+    fieldset: MbbId
+  - name: mb12_16b_word3
+    description: Message Buffer 12 WORD_16B Register.
+    byte_offset: 436
+    fieldset: Mb1416bWord3
+  - name: mb19_8b_id
+    description: Message Buffer 19 ID Register.
+    byte_offset: 436
+    fieldset: MbbId
+  - name: mb4_64b_word3
+    description: Message Buffer 4 WORD_64B Register.
+    byte_offset: 436
+    fieldset: Mb1416bWord3
+  - name: mb7_32b_word5
+    description: Message Buffer 7 WORD_32B Register.
+    byte_offset: 436
+    fieldset: Mb332bWord5
+  - name: mb13_16b_cs
+    description: Message Buffer 13 CS Register.
+    byte_offset: 440
+    fieldset: MbbCs
+  - name: mb19_8b_word0
+    description: Message Buffer 19 WORD_8B Register.
+    byte_offset: 440
+    fieldset: Word026
+  - name: mb4_64b_word4
+    description: Message Buffer 4 WORD_64B Register.
+    byte_offset: 440
+    fieldset: Mb464bWord4
+  - name: mb7_32b_word6
+    description: Message Buffer 7 WORD_32B Register.
+    byte_offset: 440
+    fieldset: Mb332bWord6
+  - name: word019
+    description: Message Buffer 19 WORD0 Register.
+    byte_offset: 440
+    fieldset: Word026
+  - name: mb13_16b_id
+    description: Message Buffer 13 ID Register.
+    byte_offset: 444
+    fieldset: MbbId
+  - name: mb19_8b_word1
+    description: Message Buffer 19 WORD_8B Register.
+    byte_offset: 444
+    fieldset: Mb1016bWord1
+  - name: mb4_64b_word5
+    description: Message Buffer 4 WORD_64B Register.
+    byte_offset: 444
+    fieldset: Mb332bWord5
+  - name: mb7_32b_word7
+    description: Message Buffer 7 WORD_32B Register.
+    byte_offset: 444
+    fieldset: Mb032bWord7
+  - name: word119
+    description: Message Buffer 19 WORD1 Register.
+    byte_offset: 444
+    fieldset: Mb1016bWord1
+  - name: cs20
+    description: Message Buffer 20 CS Register.
+    byte_offset: 448
+    fieldset: MbbCs
+  - name: mb13_16b_word0
+    description: Message Buffer 13 WORD_16B Register.
+    byte_offset: 448
+    fieldset: Word026
+  - name: mb20_8b_cs
+    description: Message Buffer 20 CS Register.
+    byte_offset: 448
+    fieldset: MbbCs
+  - name: mb4_64b_word6
+    description: Message Buffer 4 WORD_64B Register.
+    byte_offset: 448
+    fieldset: Mb332bWord6
+  - name: mb8_32b_cs
+    description: Message Buffer 8 CS Register.
+    byte_offset: 448
+    fieldset: MbbCs
+  - name: id20
+    description: Message Buffer 20 ID Register.
+    byte_offset: 452
+    fieldset: MbbId
+  - name: mb13_16b_word1
+    description: Message Buffer 13 WORD_16B Register.
+    byte_offset: 452
+    fieldset: Mb1016bWord1
+  - name: mb20_8b_id
+    description: Message Buffer 20 ID Register.
+    byte_offset: 452
+    fieldset: MbbId
+  - name: mb4_64b_word7
+    description: Message Buffer 4 WORD_64B Register.
+    byte_offset: 452
+    fieldset: Mb032bWord7
+  - name: mb8_32b_id
+    description: Message Buffer 8 ID Register.
+    byte_offset: 452
+    fieldset: MbbId
+  - name: mb13_16b_word2
+    description: Message Buffer 13 WORD_16B Register.
+    byte_offset: 456
+    fieldset: Mb1016bWord2
+  - name: mb20_8b_word0
+    description: Message Buffer 20 WORD_8B Register.
+    byte_offset: 456
+    fieldset: Word026
+  - name: mb4_64b_word8
+    description: Message Buffer 4 WORD_64B Register.
+    byte_offset: 456
+    fieldset: Mb664bWord8
+  - name: mb8_32b_word0
+    description: Message Buffer 8 WORD_32B Register.
+    byte_offset: 456
+    fieldset: Word026
+  - name: word020
+    description: Message Buffer 20 WORD0 Register.
+    byte_offset: 456
+    fieldset: Word026
+  - name: mb13_16b_word3
+    description: Message Buffer 13 WORD_16B Register.
+    byte_offset: 460
+    fieldset: Mb1416bWord3
+  - name: mb20_8b_word1
+    description: Message Buffer 20 WORD_8B Register.
+    byte_offset: 460
+    fieldset: Mb1016bWord1
+  - name: mb4_64b_word9
+    description: Message Buffer 4 WORD_64B Register.
+    byte_offset: 460
+    fieldset: Mb664bWord9
+  - name: mb8_32b_word1
+    description: Message Buffer 8 WORD_32B Register.
+    byte_offset: 460
+    fieldset: Mb1016bWord1
+  - name: word120
+    description: Message Buffer 20 WORD1 Register.
+    byte_offset: 460
+    fieldset: Mb1016bWord1
+  - name: cs21
+    description: Message Buffer 21 CS Register.
+    byte_offset: 464
+    fieldset: MbbCs
+  - name: mb14_16b_cs
+    description: Message Buffer 14 CS Register.
+    byte_offset: 464
+    fieldset: MbbCs
+  - name: mb21_8b_cs
+    description: Message Buffer 21 CS Register.
+    byte_offset: 464
+    fieldset: MbbCs
+  - name: mb4_64b_word10
+    description: Message Buffer 4 WORD_64B Register.
+    byte_offset: 464
+    fieldset: Mb064bWord10
+  - name: mb8_32b_word2
+    description: Message Buffer 8 WORD_32B Register.
+    byte_offset: 464
+    fieldset: Mb1016bWord2
+  - name: id21
+    description: Message Buffer 21 ID Register.
+    byte_offset: 468
+    fieldset: MbbId
+  - name: mb14_16b_id
+    description: Message Buffer 14 ID Register.
+    byte_offset: 468
+    fieldset: MbbId
+  - name: mb21_8b_id
+    description: Message Buffer 21 ID Register.
+    byte_offset: 468
+    fieldset: MbbId
+  - name: mb4_64b_word11
+    description: Message Buffer 4 WORD_64B Register.
+    byte_offset: 468
+    fieldset: Mb164bWord11
+  - name: mb8_32b_word3
+    description: Message Buffer 8 WORD_32B Register.
+    byte_offset: 468
+    fieldset: Mb1416bWord3
+  - name: mb14_16b_word0
+    description: Message Buffer 14 WORD_16B Register.
+    byte_offset: 472
+    fieldset: Word026
+  - name: mb21_8b_word0
+    description: Message Buffer 21 WORD_8B Register.
+    byte_offset: 472
+    fieldset: Word026
+  - name: mb4_64b_word12
+    description: Message Buffer 4 WORD_64B Register.
+    byte_offset: 472
+    fieldset: Mb164bWord12
+  - name: mb8_32b_word4
+    description: Message Buffer 8 WORD_32B Register.
+    byte_offset: 472
+    fieldset: Mb464bWord4
+  - name: word021
+    description: Message Buffer 21 WORD0 Register.
+    byte_offset: 472
+    fieldset: Word026
+  - name: mb14_16b_word1
+    description: Message Buffer 14 WORD_16B Register.
+    byte_offset: 476
+    fieldset: Mb1016bWord1
+  - name: mb21_8b_word1
+    description: Message Buffer 21 WORD_8B Register.
+    byte_offset: 476
+    fieldset: Mb1016bWord1
+  - name: mb4_64b_word13
+    description: Message Buffer 4 WORD_64B Register.
+    byte_offset: 476
+    fieldset: Mb264bWord13
+  - name: mb8_32b_word5
+    description: Message Buffer 8 WORD_32B Register.
+    byte_offset: 476
+    fieldset: Mb332bWord5
+  - name: word121
+    description: Message Buffer 21 WORD1 Register.
+    byte_offset: 476
+    fieldset: Mb1016bWord1
+  - name: cs22
+    description: Message Buffer 22 CS Register.
+    byte_offset: 480
+    fieldset: MbbCs
+  - name: mb14_16b_word2
+    description: Message Buffer 14 WORD_16B Register.
+    byte_offset: 480
+    fieldset: Mb1016bWord2
+  - name: mb22_8b_cs
+    description: Message Buffer 22 CS Register.
+    byte_offset: 480
+    fieldset: MbbCs
+  - name: mb4_64b_word14
+    description: Message Buffer 4 WORD_64B Register.
+    byte_offset: 480
+    fieldset: Mb264bWord14
+  - name: mb8_32b_word6
+    description: Message Buffer 8 WORD_32B Register.
+    byte_offset: 480
+    fieldset: Mb332bWord6
+  - name: id22
+    description: Message Buffer 22 ID Register.
+    byte_offset: 484
+    fieldset: MbbId
+  - name: mb14_16b_word3
+    description: Message Buffer 14 WORD_16B Register.
+    byte_offset: 484
+    fieldset: Mb1416bWord3
+  - name: mb22_8b_id
+    description: Message Buffer 22 ID Register.
+    byte_offset: 484
+    fieldset: MbbId
+  - name: mb4_64b_word15
+    description: Message Buffer 4 WORD_64B Register.
+    byte_offset: 484
+    fieldset: Mb264bWord15
+  - name: mb8_32b_word7
+    description: Message Buffer 8 WORD_32B Register.
+    byte_offset: 484
+    fieldset: Mb032bWord7
+  - name: mb15_16b_cs
+    description: Message Buffer 15 CS Register.
+    byte_offset: 488
+    fieldset: MbbCs
+  - name: mb22_8b_word0
+    description: Message Buffer 22 WORD_8B Register.
+    byte_offset: 488
+    fieldset: Word026
+  - name: mb5_64b_cs
+    description: Message Buffer 5 CS Register.
+    byte_offset: 488
+    fieldset: MbbCs
+  - name: mb9_32b_cs
+    description: Message Buffer 9 CS Register.
+    byte_offset: 488
+    fieldset: MbbCs
+  - name: word022
+    description: Message Buffer 22 WORD0 Register.
+    byte_offset: 488
+    fieldset: Word026
+  - name: mb15_16b_id
+    description: Message Buffer 15 ID Register.
+    byte_offset: 492
+    fieldset: MbbId
+  - name: mb22_8b_word1
+    description: Message Buffer 22 WORD_8B Register.
+    byte_offset: 492
+    fieldset: Mb1016bWord1
+  - name: mb5_64b_id
+    description: Message Buffer 5 ID Register.
+    byte_offset: 492
+    fieldset: MbbId
+  - name: mb9_32b_id
+    description: Message Buffer 9 ID Register.
+    byte_offset: 492
+    fieldset: MbbId
+  - name: word122
+    description: Message Buffer 22 WORD1 Register.
+    byte_offset: 492
+    fieldset: Mb1016bWord1
+  - name: cs23
+    description: Message Buffer 23 CS Register.
+    byte_offset: 496
+    fieldset: MbbCs
+  - name: mb15_16b_word0
+    description: Message Buffer 15 WORD_16B Register.
+    byte_offset: 496
+    fieldset: Word026
+  - name: mb23_8b_cs
+    description: Message Buffer 23 CS Register.
+    byte_offset: 496
+    fieldset: MbbCs
+  - name: mb5_64b_word0
+    description: Message Buffer 5 WORD_64B Register.
+    byte_offset: 496
+    fieldset: Word026
+  - name: mb9_32b_word0
+    description: Message Buffer 9 WORD_32B Register.
+    byte_offset: 496
+    fieldset: Word026
+  - name: id23
+    description: Message Buffer 23 ID Register.
+    byte_offset: 500
+    fieldset: MbbId
+  - name: mb15_16b_word1
+    description: Message Buffer 15 WORD_16B Register.
+    byte_offset: 500
+    fieldset: Mb1016bWord1
+  - name: mb23_8b_id
+    description: Message Buffer 23 ID Register.
+    byte_offset: 500
+    fieldset: MbbId
+  - name: mb5_64b_word1
+    description: Message Buffer 5 WORD_64B Register.
+    byte_offset: 500
+    fieldset: Mb1016bWord1
+  - name: mb9_32b_word1
+    description: Message Buffer 9 WORD_32B Register.
+    byte_offset: 500
+    fieldset: Mb1016bWord1
+  - name: mb15_16b_word2
+    description: Message Buffer 15 WORD_16B Register.
+    byte_offset: 504
+    fieldset: Mb1016bWord2
+  - name: mb23_8b_word0
+    description: Message Buffer 23 WORD_8B Register.
+    byte_offset: 504
+    fieldset: Word026
+  - name: mb5_64b_word2
+    description: Message Buffer 5 WORD_64B Register.
+    byte_offset: 504
+    fieldset: Mb1016bWord2
+  - name: mb9_32b_word2
+    description: Message Buffer 9 WORD_32B Register.
+    byte_offset: 504
+    fieldset: Mb1016bWord2
+  - name: word023
+    description: Message Buffer 23 WORD0 Register.
+    byte_offset: 504
+    fieldset: Word026
+  - name: mb15_16b_word3
+    description: Message Buffer 15 WORD_16B Register.
+    byte_offset: 508
+    fieldset: Mb1416bWord3
+  - name: mb23_8b_word1
+    description: Message Buffer 23 WORD_8B Register.
+    byte_offset: 508
+    fieldset: Mb1016bWord1
+  - name: mb5_64b_word3
+    description: Message Buffer 5 WORD_64B Register.
+    byte_offset: 508
+    fieldset: Mb1416bWord3
+  - name: mb9_32b_word3
+    description: Message Buffer 9 WORD_32B Register.
+    byte_offset: 508
+    fieldset: Mb1416bWord3
+  - name: word123
+    description: Message Buffer 23 WORD1 Register.
+    byte_offset: 508
+    fieldset: Mb1016bWord1
+  - name: cs24
+    description: Message Buffer 24 CS Register.
+    byte_offset: 512
+    fieldset: MbbCs
+  - name: mb16_16b_cs
+    description: Message Buffer 16 CS Register.
+    byte_offset: 512
+    fieldset: MbbCs
+  - name: mb24_8b_cs
+    description: Message Buffer 24 CS Register.
+    byte_offset: 512
+    fieldset: MbbCs
+  - name: mb5_64b_word4
+    description: Message Buffer 5 WORD_64B Register.
+    byte_offset: 512
+    fieldset: Mb464bWord4
+  - name: mb9_32b_word4
+    description: Message Buffer 9 WORD_32B Register.
+    byte_offset: 512
+    fieldset: Mb464bWord4
+  - name: id24
+    description: Message Buffer 24 ID Register.
+    byte_offset: 516
+    fieldset: MbbId
+  - name: mb16_16b_id
+    description: Message Buffer 16 ID Register.
+    byte_offset: 516
+    fieldset: MbbId
+  - name: mb24_8b_id
+    description: Message Buffer 24 ID Register.
+    byte_offset: 516
+    fieldset: MbbId
+  - name: mb5_64b_word5
+    description: Message Buffer 5 WORD_64B Register.
+    byte_offset: 516
+    fieldset: Mb332bWord5
+  - name: mb9_32b_word5
+    description: Message Buffer 9 WORD_32B Register.
+    byte_offset: 516
+    fieldset: Mb332bWord5
+  - name: mb16_16b_word0
+    description: Message Buffer 16 WORD_16B Register.
+    byte_offset: 520
+    fieldset: Word026
+  - name: mb24_8b_word0
+    description: Message Buffer 24 WORD_8B Register.
+    byte_offset: 520
+    fieldset: Word026
+  - name: mb5_64b_word6
+    description: Message Buffer 5 WORD_64B Register.
+    byte_offset: 520
+    fieldset: Mb332bWord6
+  - name: mb9_32b_word6
+    description: Message Buffer 9 WORD_32B Register.
+    byte_offset: 520
+    fieldset: Mb332bWord6
+  - name: word024
+    description: Message Buffer 24 WORD0 Register.
+    byte_offset: 520
+    fieldset: Word026
+  - name: mb16_16b_word1
+    description: Message Buffer 16 WORD_16B Register.
+    byte_offset: 524
+    fieldset: Mb1016bWord1
+  - name: mb24_8b_word1
+    description: Message Buffer 24 WORD_8B Register.
+    byte_offset: 524
+    fieldset: Mb1016bWord1
+  - name: mb5_64b_word7
+    description: Message Buffer 5 WORD_64B Register.
+    byte_offset: 524
+    fieldset: Mb032bWord7
+  - name: mb9_32b_word7
+    description: Message Buffer 9 WORD_32B Register.
+    byte_offset: 524
+    fieldset: Mb032bWord7
+  - name: word124
+    description: Message Buffer 24 WORD1 Register.
+    byte_offset: 524
+    fieldset: Mb1016bWord1
+  - name: cs25
+    description: Message Buffer 25 CS Register.
+    byte_offset: 528
+    fieldset: MbbCs
+  - name: mb10_32b_cs
+    description: Message Buffer 10 CS Register.
+    byte_offset: 528
+    fieldset: MbbCs
+  - name: mb16_16b_word2
+    description: Message Buffer 16 WORD_16B Register.
+    byte_offset: 528
+    fieldset: Mb1016bWord2
+  - name: mb25_8b_cs
+    description: Message Buffer 25 CS Register.
+    byte_offset: 528
+    fieldset: MbbCs
+  - name: mb5_64b_word8
+    description: Message Buffer 5 WORD_64B Register.
+    byte_offset: 528
+    fieldset: Mb664bWord8
+  - name: id25
+    description: Message Buffer 25 ID Register.
+    byte_offset: 532
+    fieldset: MbbId
+  - name: mb10_32b_id
+    description: Message Buffer 10 ID Register.
+    byte_offset: 532
+    fieldset: MbbId
+  - name: mb16_16b_word3
+    description: Message Buffer 16 WORD_16B Register.
+    byte_offset: 532
+    fieldset: Mb1416bWord3
+  - name: mb25_8b_id
+    description: Message Buffer 25 ID Register.
+    byte_offset: 532
+    fieldset: MbbId
+  - name: mb5_64b_word9
+    description: Message Buffer 5 WORD_64B Register.
+    byte_offset: 532
+    fieldset: Mb664bWord9
+  - name: mb10_32b_word0
+    description: Message Buffer 10 WORD_32B Register.
+    byte_offset: 536
+    fieldset: Word026
+  - name: mb17_16b_cs
+    description: Message Buffer 17 CS Register.
+    byte_offset: 536
+    fieldset: MbbCs
+  - name: mb25_8b_word0
+    description: Message Buffer 25 WORD_8B Register.
+    byte_offset: 536
+    fieldset: Word026
+  - name: mb5_64b_word10
+    description: Message Buffer 5 WORD_64B Register.
+    byte_offset: 536
+    fieldset: Mb064bWord10
+  - name: word025
+    description: Message Buffer 25 WORD0 Register.
+    byte_offset: 536
+    fieldset: Word026
+  - name: mb10_32b_word1
+    description: Message Buffer 10 WORD_32B Register.
+    byte_offset: 540
+    fieldset: Mb1016bWord1
+  - name: mb17_16b_id
+    description: Message Buffer 17 ID Register.
+    byte_offset: 540
+    fieldset: MbbId
+  - name: mb25_8b_word1
+    description: Message Buffer 25 WORD_8B Register.
+    byte_offset: 540
+    fieldset: Mb1016bWord1
+  - name: mb5_64b_word11
+    description: Message Buffer 5 WORD_64B Register.
+    byte_offset: 540
+    fieldset: Mb164bWord11
+  - name: word125
+    description: Message Buffer 25 WORD1 Register.
+    byte_offset: 540
+    fieldset: Mb1016bWord1
+  - name: cs26
+    description: Message Buffer 26 CS Register.
+    byte_offset: 544
+    fieldset: MbbCs
+  - name: mb10_32b_word2
+    description: Message Buffer 10 WORD_32B Register.
+    byte_offset: 544
+    fieldset: Mb1016bWord2
+  - name: mb17_16b_word0
+    description: Message Buffer 17 WORD_16B Register.
+    byte_offset: 544
+    fieldset: Word026
+  - name: mb26_8b_cs
+    description: Message Buffer 26 CS Register.
+    byte_offset: 544
+    fieldset: MbbCs
+  - name: mb5_64b_word12
+    description: Message Buffer 5 WORD_64B Register.
+    byte_offset: 544
+    fieldset: Mb164bWord12
+  - name: id26
+    description: Message Buffer 26 ID Register.
+    byte_offset: 548
+    fieldset: MbbId
+  - name: mb10_32b_word3
+    description: Message Buffer 10 WORD_32B Register.
+    byte_offset: 548
+    fieldset: Mb1416bWord3
+  - name: mb17_16b_word1
+    description: Message Buffer 17 WORD_16B Register.
+    byte_offset: 548
+    fieldset: Mb1016bWord1
+  - name: mb26_8b_id
+    description: Message Buffer 26 ID Register.
+    byte_offset: 548
+    fieldset: MbbId
+  - name: mb5_64b_word13
+    description: Message Buffer 5 WORD_64B Register.
+    byte_offset: 548
+    fieldset: Mb264bWord13
+  - name: mb10_32b_word4
+    description: Message Buffer 10 WORD_32B Register.
+    byte_offset: 552
+    fieldset: Mb464bWord4
+  - name: mb17_16b_word2
+    description: Message Buffer 17 WORD_16B Register.
+    byte_offset: 552
+    fieldset: Mb1016bWord2
+  - name: mb26_8b_word0
+    description: Message Buffer 26 WORD_8B Register.
+    byte_offset: 552
+    fieldset: Word026
+  - name: mb5_64b_word14
+    description: Message Buffer 5 WORD_64B Register.
+    byte_offset: 552
+    fieldset: Mb264bWord14
+  - name: word026
+    description: Message Buffer 26 WORD0 Register.
+    byte_offset: 552
+    fieldset: Word026
+  - name: mb10_32b_word5
+    description: Message Buffer 10 WORD_32B Register.
+    byte_offset: 556
+    fieldset: Mb332bWord5
+  - name: mb17_16b_word3
+    description: Message Buffer 17 WORD_16B Register.
+    byte_offset: 556
+    fieldset: Mb1416bWord3
+  - name: mb26_8b_word1
+    description: Message Buffer 26 WORD_8B Register.
+    byte_offset: 556
+    fieldset: Mb1016bWord1
+  - name: mb5_64b_word15
+    description: Message Buffer 5 WORD_64B Register.
+    byte_offset: 556
+    fieldset: Mb264bWord15
+  - name: word126
+    description: Message Buffer 26 WORD1 Register.
+    byte_offset: 556
+    fieldset: Mb1016bWord1
+  - name: cs27
+    description: Message Buffer 27 CS Register.
+    byte_offset: 560
+    fieldset: MbbCs
+  - name: mb10_32b_word6
+    description: Message Buffer 10 WORD_32B Register.
+    byte_offset: 560
+    fieldset: Mb332bWord6
+  - name: mb18_16b_cs
+    description: Message Buffer 18 CS Register.
+    byte_offset: 560
+    fieldset: MbbCs
+  - name: mb27_8b_cs
+    description: Message Buffer 27 CS Register.
+    byte_offset: 560
+    fieldset: MbbCs
+  - name: mb6_64b_cs
+    description: Message Buffer 6 CS Register.
+    byte_offset: 560
+    fieldset: MbbCs
+  - name: id27
+    description: Message Buffer 27 ID Register.
+    byte_offset: 564
+    fieldset: MbbId
+  - name: mb10_32b_word7
+    description: Message Buffer 10 WORD_32B Register.
+    byte_offset: 564
+    fieldset: Mb032bWord7
+  - name: mb18_16b_id
+    description: Message Buffer 18 ID Register.
+    byte_offset: 564
+    fieldset: MbbId
+  - name: mb27_8b_id
+    description: Message Buffer 27 ID Register.
+    byte_offset: 564
+    fieldset: MbbId
+  - name: mb6_64b_id
+    description: Message Buffer 6 ID Register.
+    byte_offset: 564
+    fieldset: MbbId
+  - name: mb11_32b_cs
+    description: Message Buffer 11 CS Register.
+    byte_offset: 568
+    fieldset: MbbCs
+  - name: mb18_16b_word0
+    description: Message Buffer 18 WORD_16B Register.
+    byte_offset: 568
+    fieldset: Word026
+  - name: mb27_8b_word0
+    description: Message Buffer 27 WORD_8B Register.
+    byte_offset: 568
+    fieldset: Word026
+  - name: mb6_64b_word0
+    description: Message Buffer 6 WORD_64B Register.
+    byte_offset: 568
+    fieldset: Word026
+  - name: word027
+    description: Message Buffer 27 WORD0 Register.
+    byte_offset: 568
+    fieldset: Word026
+  - name: mb11_32b_id
+    description: Message Buffer 11 ID Register.
+    byte_offset: 572
+    fieldset: MbbId
+  - name: mb18_16b_word1
+    description: Message Buffer 18 WORD_16B Register.
+    byte_offset: 572
+    fieldset: Mb1016bWord1
+  - name: mb27_8b_word1
+    description: Message Buffer 27 WORD_8B Register.
+    byte_offset: 572
+    fieldset: Mb1016bWord1
+  - name: mb6_64b_word1
+    description: Message Buffer 6 WORD_64B Register.
+    byte_offset: 572
+    fieldset: Mb1016bWord1
+  - name: word127
+    description: Message Buffer 27 WORD1 Register.
+    byte_offset: 572
+    fieldset: Mb1016bWord1
+  - name: cs28
+    description: Message Buffer 28 CS Register.
+    byte_offset: 576
+    fieldset: MbbCs
+  - name: mb11_32b_word0
+    description: Message Buffer 11 WORD_32B Register.
+    byte_offset: 576
+    fieldset: Word026
+  - name: mb18_16b_word2
+    description: Message Buffer 18 WORD_16B Register.
+    byte_offset: 576
+    fieldset: Mb1016bWord2
+  - name: mb28_8b_cs
+    description: Message Buffer 28 CS Register.
+    byte_offset: 576
+    fieldset: MbbCs
+  - name: mb6_64b_word2
+    description: Message Buffer 6 WORD_64B Register.
+    byte_offset: 576
+    fieldset: Mb1016bWord2
+  - name: id28
+    description: Message Buffer 28 ID Register.
+    byte_offset: 580
+    fieldset: MbbId
+  - name: mb11_32b_word1
+    description: Message Buffer 11 WORD_32B Register.
+    byte_offset: 580
+    fieldset: Mb1016bWord1
+  - name: mb18_16b_word3
+    description: Message Buffer 18 WORD_16B Register.
+    byte_offset: 580
+    fieldset: Mb1416bWord3
+  - name: mb28_8b_id
+    description: Message Buffer 28 ID Register.
+    byte_offset: 580
+    fieldset: MbbId
+  - name: mb6_64b_word3
+    description: Message Buffer 6 WORD_64B Register.
+    byte_offset: 580
+    fieldset: Mb1416bWord3
+  - name: mb11_32b_word2
+    description: Message Buffer 11 WORD_32B Register.
+    byte_offset: 584
+    fieldset: Mb1016bWord2
+  - name: mb19_16b_cs
+    description: Message Buffer 19 CS Register.
+    byte_offset: 584
+    fieldset: MbbCs
+  - name: mb28_8b_word0
+    description: Message Buffer 28 WORD_8B Register.
+    byte_offset: 584
+    fieldset: Word026
+  - name: mb6_64b_word4
+    description: Message Buffer 6 WORD_64B Register.
+    byte_offset: 584
+    fieldset: Mb464bWord4
+  - name: word028
+    description: Message Buffer 28 WORD0 Register.
+    byte_offset: 584
+    fieldset: Word026
+  - name: mb11_32b_word3
+    description: Message Buffer 11 WORD_32B Register.
+    byte_offset: 588
+    fieldset: Mb1416bWord3
+  - name: mb19_16b_id
+    description: Message Buffer 19 ID Register.
+    byte_offset: 588
+    fieldset: MbbId
+  - name: mb28_8b_word1
+    description: Message Buffer 28 WORD_8B Register.
+    byte_offset: 588
+    fieldset: Mb1016bWord1
+  - name: mb6_64b_word5
+    description: Message Buffer 6 WORD_64B Register.
+    byte_offset: 588
+    fieldset: Mb332bWord5
+  - name: word128
+    description: Message Buffer 28 WORD1 Register.
+    byte_offset: 588
+    fieldset: Mb1016bWord1
+  - name: cs29
+    description: Message Buffer 29 CS Register.
+    byte_offset: 592
+    fieldset: MbbCs
+  - name: mb11_32b_word4
+    description: Message Buffer 11 WORD_32B Register.
+    byte_offset: 592
+    fieldset: Mb464bWord4
+  - name: mb19_16b_word0
+    description: Message Buffer 19 WORD_16B Register.
+    byte_offset: 592
+    fieldset: Word026
+  - name: mb29_8b_cs
+    description: Message Buffer 29 CS Register.
+    byte_offset: 592
+    fieldset: MbbCs
+  - name: mb6_64b_word6
+    description: Message Buffer 6 WORD_64B Register.
+    byte_offset: 592
+    fieldset: Mb332bWord6
+  - name: id29
+    description: Message Buffer 29 ID Register.
+    byte_offset: 596
+    fieldset: MbbId
+  - name: mb11_32b_word5
+    description: Message Buffer 11 WORD_32B Register.
+    byte_offset: 596
+    fieldset: Mb332bWord5
+  - name: mb19_16b_word1
+    description: Message Buffer 19 WORD_16B Register.
+    byte_offset: 596
+    fieldset: Mb1016bWord1
+  - name: mb29_8b_id
+    description: Message Buffer 29 ID Register.
+    byte_offset: 596
+    fieldset: MbbId
+  - name: mb6_64b_word7
+    description: Message Buffer 6 WORD_64B Register.
+    byte_offset: 596
+    fieldset: Mb032bWord7
+  - name: mb11_32b_word6
+    description: Message Buffer 11 WORD_32B Register.
+    byte_offset: 600
+    fieldset: Mb332bWord6
+  - name: mb19_16b_word2
+    description: Message Buffer 19 WORD_16B Register.
+    byte_offset: 600
+    fieldset: Mb1016bWord2
+  - name: mb29_8b_word0
+    description: Message Buffer 29 WORD_8B Register.
+    byte_offset: 600
+    fieldset: Word026
+  - name: mb6_64b_word8
+    description: Message Buffer 6 WORD_64B Register.
+    byte_offset: 600
+    fieldset: Mb664bWord8
+  - name: word029
+    description: Message Buffer 29 WORD0 Register.
+    byte_offset: 600
+    fieldset: Word026
+  - name: mb11_32b_word7
+    description: Message Buffer 11 WORD_32B Register.
+    byte_offset: 604
+    fieldset: Mb032bWord7
+  - name: mb19_16b_word3
+    description: Message Buffer 19 WORD_16B Register.
+    byte_offset: 604
+    fieldset: Mb1416bWord3
+  - name: mb29_8b_word1
+    description: Message Buffer 29 WORD_8B Register.
+    byte_offset: 604
+    fieldset: Mb1016bWord1
+  - name: mb6_64b_word9
+    description: Message Buffer 6 WORD_64B Register.
+    byte_offset: 604
+    fieldset: Mb664bWord9
+  - name: word129
+    description: Message Buffer 29 WORD1 Register.
+    byte_offset: 604
+    fieldset: Mb1016bWord1
+  - name: cs30
+    description: Message Buffer 30 CS Register.
+    byte_offset: 608
+    fieldset: MbbCs
+  - name: mb20_16b_cs
+    description: Message Buffer 20 CS Register.
+    byte_offset: 608
+    fieldset: MbbCs
+  - name: mb30_8b_cs
+    description: Message Buffer 30 CS Register.
+    byte_offset: 608
+    fieldset: MbbCs
+  - name: mb6_64b_word10
+    description: Message Buffer 6 WORD_64B Register.
+    byte_offset: 608
+    fieldset: Mb064bWord10
+  - name: id30
+    description: Message Buffer 30 ID Register.
+    byte_offset: 612
+    fieldset: MbbId
+  - name: mb20_16b_id
+    description: Message Buffer 20 ID Register.
+    byte_offset: 612
+    fieldset: MbbId
+  - name: mb30_8b_id
+    description: Message Buffer 30 ID Register.
+    byte_offset: 612
+    fieldset: MbbId
+  - name: mb6_64b_word11
+    description: Message Buffer 6 WORD_64B Register.
+    byte_offset: 612
+    fieldset: Mb164bWord11
+  - name: mb20_16b_word0
+    description: Message Buffer 20 WORD_16B Register.
+    byte_offset: 616
+    fieldset: Word026
+  - name: mb30_8b_word0
+    description: Message Buffer 30 WORD_8B Register.
+    byte_offset: 616
+    fieldset: Word026
+  - name: mb6_64b_word12
+    description: Message Buffer 6 WORD_64B Register.
+    byte_offset: 616
+    fieldset: Mb164bWord12
+  - name: word030
+    description: Message Buffer 30 WORD0 Register.
+    byte_offset: 616
+    fieldset: Word026
+  - name: mb20_16b_word1
+    description: Message Buffer 20 WORD_16B Register.
+    byte_offset: 620
+    fieldset: Mb1016bWord1
+  - name: mb30_8b_word1
+    description: Message Buffer 30 WORD_8B Register.
+    byte_offset: 620
+    fieldset: Mb1016bWord1
+  - name: mb6_64b_word13
+    description: Message Buffer 6 WORD_64B Register.
+    byte_offset: 620
+    fieldset: Mb264bWord13
+  - name: word130
+    description: Message Buffer 30 WORD1 Register.
+    byte_offset: 620
+    fieldset: Mb1016bWord1
+  - name: cs31
+    description: Message Buffer 31 CS Register.
+    byte_offset: 624
+    fieldset: MbbCs
+  - name: mb20_16b_word2
+    description: Message Buffer 20 WORD_16B Register.
+    byte_offset: 624
+    fieldset: Mb1016bWord2
+  - name: mb31_8b_cs
+    description: Message Buffer 31 CS Register.
+    byte_offset: 624
+    fieldset: MbbCs
+  - name: mb6_64b_word14
+    description: Message Buffer 6 WORD_64B Register.
+    byte_offset: 624
+    fieldset: Mb264bWord14
+  - name: id31
+    description: Message Buffer 31 ID Register.
+    byte_offset: 628
+    fieldset: MbbId
+  - name: mb20_16b_word3
+    description: Message Buffer 20 WORD_16B Register.
+    byte_offset: 628
+    fieldset: Mb1416bWord3
+  - name: mb31_8b_id
+    description: Message Buffer 31 ID Register.
+    byte_offset: 628
+    fieldset: MbbId
+  - name: mb6_64b_word15
+    description: Message Buffer 6 WORD_64B Register.
+    byte_offset: 628
+    fieldset: Mb264bWord15
+  - name: mb31_8b_word0
+    description: Message Buffer 31 WORD_8B Register.
+    byte_offset: 632
+    fieldset: Word026
+  - name: word031
+    description: Message Buffer 31 WORD0 Register.
+    byte_offset: 632
+    fieldset: Word026
+  - name: mb31_8b_word1
+    description: Message Buffer 31 WORD_8B Register.
+    byte_offset: 636
+    fieldset: Mb1016bWord1
+  - name: word131
+    description: Message Buffer 31 WORD1 Register.
+    byte_offset: 636
+    fieldset: Mb1016bWord1
+  - name: rximr
+    description: Receive Individual Mask.
+    array:
+      len: 32
+      stride: 4
+    byte_offset: 2176
+    fieldset: Rximr
+  - name: ctrl1_pn
+    description: Pretended Networking Control 1.
+    byte_offset: 2816
+    fieldset: Ctrl1Pn2
+  - name: ctrl2_pn
+    description: Pretended Networking Control 2.
+    byte_offset: 2820
+    fieldset: Ctrl2Pn
+  - name: wu_mtc
+    description: Pretended Networking Wake-Up Match.
+    byte_offset: 2824
+    fieldset: WuMtc2
+  - name: flt_id1
+    description: Pretended Networking ID Filter 1.
+    byte_offset: 2828
+    fieldset: FltId12
+  - name: flt_dlc
+    description: Pretended Networking Data Length Code (DLC) Filter.
+    byte_offset: 2832
+    fieldset: FltDlc
+  - name: pl1_lo
+    description: Pretended Networking Payload Low Filter 1.
+    byte_offset: 2836
+    fieldset: Pl1Lo
+  - name: pl1_hi
+    description: Pretended Networking Payload High Filter 1.
+    byte_offset: 2840
+    fieldset: Pl1Hi
+  - name: flt_id2_idmask
+    description: Pretended Networking ID Filter 2 or ID Mask.
+    byte_offset: 2844
+    fieldset: FltId2Idmask
+  - name: pl2_plmask_lo
+    description: Pretended Networking Payload Low Filter 2 and Payload Low Mask.
+    byte_offset: 2848
+    fieldset: WmbD03
+  - name: pl2_plmask_hi
+    description: Pretended Networking Payload High Filter 2 and Payload High Mask.
+    byte_offset: 2852
+    fieldset: WmbD47
+  - name: wmb
+    description: 'Array of registers: WMB_CS, WMB_D03, WMB_D47, WMB_ID.'
+    array:
+      len: 4
+      stride: 16
+    byte_offset: 2880
+    block: CanAlphaBlockBravo
+  - name: eprs
+    description: Enhanced CAN Bit Timing Prescalers.
+    byte_offset: 3056
+    fieldset: Eprs
+  - name: encbt
+    description: Enhanced Nominal CAN Bit Timing.
+    byte_offset: 3060
+    fieldset: Encbt
+  - name: edcbt
+    description: Enhanced Data Phase CAN Bit Timing.
+    byte_offset: 3064
+    fieldset: Edcbt
+  - name: etdc
+    description: Enhanced Transceiver Delay Compensation.
+    byte_offset: 3068
+    fieldset: Etdc2
+  - name: fdctrl
+    description: CAN FD Control.
+    byte_offset: 3072
+    fieldset: Fdctrl2
+  - name: fdcbt
+    description: CAN FD Bit Timing.
+    byte_offset: 3076
+    fieldset: Fdcbt
+  - name: fdcrc
+    description: CAN FD CRC.
+    byte_offset: 3080
+    access: Read
+    fieldset: Fdcrc
+  - name: erfcr
+    description: Enhanced RX FIFO Control.
+    byte_offset: 3084
+    fieldset: Erfcr2
+  - name: erfier
+    description: Enhanced RX FIFO Interrupt Enable.
+    byte_offset: 3088
+    fieldset: Erfier2
+  - name: erfsr
+    description: Enhanced RX FIFO Status.
+    byte_offset: 3092
+    fieldset: Erfsr2
+  - name: erffel
+    description: Enhanced RX FIFO Filter Element.
+    array:
+      len: 32
+      stride: 4
+    byte_offset: 12288
+    fieldset: Erffel
+block/CanAlphaBlockBravo:
+  description: 'Array of registers: WMB_CS, WMB_D03, WMB_D47, WMB_ID.'
+  items:
+  - name: wmb_cs
+    description: Wake-Up Message Buffer.
+    byte_offset: 0
+    access: Read
+    fieldset: WmbCs2
+  - name: wmb_id
+    description: Wake-Up Message Buffer for ID.
+    byte_offset: 4
+    access: Read
+    fieldset: WmbId
+  - name: wmb_d03
+    description: Wake-Up Message Buffer for Data 0-3.
+    byte_offset: 8
+    access: Read
+    fieldset: WmbD03
+  - name: wmb_d47
+    description: Wake-Up Message Buffer Register Data 4-7.
+    byte_offset: 12
+    access: Read
+    fieldset: WmbD47

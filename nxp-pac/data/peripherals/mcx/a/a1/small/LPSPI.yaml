@@ -86,7 +86,7 @@ block/Lpspi:
     description: Receive Data Read Only.
     byte_offset: 120
     access: Read
-    fieldset: Rdror
+    fieldset: Rdr
   - name: tcbr
     description: Transmit Command Burst.
     byte_offset: 1020
@@ -99,7 +99,7 @@ block/Lpspi:
       stride: 4
     byte_offset: 1024
     access: Write
-    fieldset: Tdbr
+    fieldset: Rdbr
   - name: rdbr
     description: Receive Data Burst.
     array:
@@ -381,14 +381,6 @@ fieldset/Rdr:
     bit_offset: 0
     bit_size: 32
   reset_value: 0
-fieldset/Rdror:
-  description: Receive Data Read Only.
-  fields:
-  - name: data
-    description: Receive Data.
-    bit_offset: 0
-    bit_size: 32
-  reset_value: 0
 fieldset/Rsr:
   description: Receive Status.
   fields:
@@ -513,14 +505,6 @@ fieldset/Tcr:
     bit_size: 1
     enum: Cpol
   reset_value: 31
-fieldset/Tdbr:
-  description: Transmit Data Burst.
-  fields:
-  - name: data
-    description: Data.
-    bit_offset: 0
-    bit_size: 32
-  reset_value: 0
 fieldset/Tdr:
   description: Transmit Data.
   fields:

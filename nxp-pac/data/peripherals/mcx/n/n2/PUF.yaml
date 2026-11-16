@@ -500,12 +500,12 @@ fieldset/PufAlphaFieldsetTango:
     description: PUF SRAM Controller activation.
     bit_offset: 0
     bit_size: 1
-    enum: PufAlphaEnumPapa
+    enum: Ckgating
   - name: ckgating
     description: PUF SRAM Clock Gating control.
     bit_offset: 2
     bit_size: 1
-    enum: PufAlphaEnumLima
+    enum: Ckgating
 fieldset/PufAlphaFieldsetUniform:
   description: Interrupt Enable Clear.
   fields:
@@ -528,7 +528,7 @@ fieldset/PufAlphaFieldsetVictor:
     description: APB_ERR Interrupt Status Clear.
     bit_offset: 1
     bit_size: 1
-    enum: PufAlphaEnumWhiskey
+    enum: ApbErr
 fieldset/PufAlphaFieldsetWhiskey:
   description: Interrupt Enable.
   fields:
@@ -536,12 +536,12 @@ fieldset/PufAlphaFieldsetWhiskey:
     description: READY Interrupt Enable.
     bit_offset: 0
     bit_size: 1
-    enum: PufAlphaEnumTango
+    enum: Ckgating
   - name: sram_apb_err
     description: APB_ERR Interrupt Enable.
     bit_offset: 1
     bit_size: 1
-    enum: PufAlphaEnumVictor
+    enum: Ckgating
 fieldset/PufAlphaFieldsetXray:
   description: Interrupt Enable Set.
   fields:
@@ -564,7 +564,7 @@ fieldset/PufAlphaFieldsetYankee:
     description: APB_ERR Interrupt Status Set.
     bit_offset: 1
     bit_size: 1
-    enum: PufAlphaEnumXray
+    enum: ApbErr
 fieldset/PufAlphaFieldsetZulu:
   description: Interrupt Status.
   fields:
@@ -682,7 +682,7 @@ enum/PufAlphaEnumKilo:
   - name: Enable
     description: Indicates that the Wrap Generated Random operation is allowed.
     value: 1
-enum/PufAlphaEnumLima:
+enum/Ckgating:
   bit_size: 1
   variants:
   - name: Disable
@@ -717,15 +717,6 @@ enum/PufAlphaEnumOscar:
     value: 0
   - name: Enable
     description: Big endian (default).
-    value: 1
-enum/PufAlphaEnumPapa:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
     value: 1
 enum/PufAlphaEnumQuebec:
   bit_size: 1
@@ -805,15 +796,6 @@ enum/PufAlphaEnumSierra:
   - name: OemShredded
     description: Bricked.
     value: 255
-enum/PufAlphaEnumTango:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
 enum/PufAlphaEnumUniform:
   bit_size: 8
   variants:
@@ -850,25 +832,7 @@ enum/PufAlphaEnumUniform:
   - name: Ok
     description: Indicates that the last operation was successful or operation is in progress.
     value: 0
-enum/PufAlphaEnumVictor:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/PufAlphaEnumWhiskey:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Clears the APB_ERR bit field in register INT_STATUS. Automatically reset by the Hardware.
-    value: 1
-  - name: NoEffect
-    description: No effect.
-    value: 0
-enum/PufAlphaEnumXray:
+enum/ApbErr:
   bit_size: 1
   variants:
   - name: Enable

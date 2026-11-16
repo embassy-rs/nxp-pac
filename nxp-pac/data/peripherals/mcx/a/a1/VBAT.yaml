@@ -28,7 +28,7 @@ block/Vbat:
   - name: waklcka
     description: Wakeup Lock A.
     byte_offset: 2040
-    fieldset: Waklcka
+    fieldset: Frolcka
 block/Wakeup:
   description: 'Array of registers: WAKEUPA.'
   items:
@@ -79,10 +79,3 @@ fieldset/Wakeupa:
     description: Register.
     bit_offset: 0
     bit_size: 32
-fieldset/Waklcka:
-  description: Wakeup Lock A.
-  fields:
-  - name: lock
-    description: Lock.
-    bit_offset: 0
-    bit_size: 1

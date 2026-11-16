@@ -61,7 +61,7 @@ block/Gpio:
   - name: giclr
     description: Global Interrupt Control Low.
     byte_offset: 256
-    fieldset: Giclr
+    fieldset: Gichr
   - name: gichr
     description: Global Interrupt Control High.
     byte_offset: 260
@@ -75,21 +75,6 @@ block/Gpio:
     fieldset: Isfr
 fieldset/Gichr:
   description: Global Interrupt Control High.
-  fields:
-  - name: giwe
-    description: Global Interrupt Write Enable.
-    bit_offset: 0
-    bit_size: 1
-    array:
-      len: 16
-      stride: 1
-  - name: giwd
-    description: Global Interrupt Write Data.
-    bit_offset: 16
-    bit_size: 16
-  reset_value: 0
-fieldset/Giclr:
-  description: Global Interrupt Control Low.
   fields:
   - name: giwe
     description: Global Interrupt Write Enable.

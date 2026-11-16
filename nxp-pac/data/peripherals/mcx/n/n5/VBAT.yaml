@@ -39,7 +39,7 @@ block/VbatAlpha:
   - name: irqenb
     description: Interrupt Enable B.
     byte_offset: 28
-    fieldset: VbatAlphaFieldsetGolf
+    fieldset: Irqenb
   - name: wakena
     description: Wake-up Enable A.
     byte_offset: 32
@@ -47,7 +47,7 @@ block/VbatAlpha:
   - name: wakenb
     description: Wake-up Enable B.
     byte_offset: 36
-    fieldset: VbatAlphaFieldsetSierraAlpha
+    fieldset: Irqenb
   - name: tampera
     description: Tamper Enable A.
     byte_offset: 40
@@ -75,7 +75,7 @@ block/VbatAlpha:
   - name: oscctlb
     description: Oscillator Control B.
     byte_offset: 260
-    fieldset: VbatAlphaFieldsetAlphaAlpha
+    fieldset: Irqenb
   - name: osccfga
     description: Oscillator Configuration A.
     byte_offset: 264
@@ -87,15 +87,15 @@ block/VbatAlpha:
   - name: osclcka
     description: Oscillator Lock A.
     byte_offset: 280
-    fieldset: VbatAlphaFieldsetBravoAlpha
+    fieldset: Frolcka2
   - name: osclckb
     description: Oscillator Lock B.
     byte_offset: 284
-    fieldset: VbatAlphaFieldsetCharlieAlpha
+    fieldset: Frolckb
   - name: oscclke
     description: Oscillator Clock Enable.
     byte_offset: 288
-    fieldset: VbatAlphaFieldsetYankee
+    fieldset: Froclke2
   - name: froctla
     description: FRO16K Control A.
     byte_offset: 512
@@ -107,15 +107,15 @@ block/VbatAlpha:
   - name: frolcka
     description: FRO16K Lock A.
     byte_offset: 536
-    fieldset: VbatAlphaFieldsetDelta
+    fieldset: Frolcka2
   - name: frolckb
     description: FRO16K Lock B.
     byte_offset: 540
-    fieldset: VbatAlphaFieldsetEcho
+    fieldset: Frolckb
   - name: froclke
     description: FRO16K Clock Enable.
     byte_offset: 544
-    fieldset: VbatAlphaFieldsetAlpha
+    fieldset: Froclke2
   - name: ldoctla
     description: LDO_RAM Control A.
     byte_offset: 768
@@ -127,11 +127,11 @@ block/VbatAlpha:
   - name: ldolcka
     description: LDO_RAM Lock A.
     byte_offset: 792
-    fieldset: VbatAlphaFieldsetJuliet
+    fieldset: Frolcka2
   - name: ldolckb
     description: LDO_RAM Lock B.
     byte_offset: 796
-    fieldset: VbatAlphaFieldsetKilo
+    fieldset: Frolckb
   - name: ldoramc
     description: RAM Control.
     byte_offset: 800
@@ -163,11 +163,11 @@ block/VbatAlpha:
   - name: monlcka
     description: CLKMON Lock A.
     byte_offset: 1048
-    fieldset: VbatAlphaFieldsetUniform
+    fieldset: Monlcka
   - name: monlckb
     description: CLKMON Lock B.
     byte_offset: 1052
-    fieldset: VbatAlphaFieldsetVictor
+    fieldset: Monlckb
   - name: tamctla
     description: TAMPER Control A.
     byte_offset: 1280
@@ -179,11 +179,11 @@ block/VbatAlpha:
   - name: tamlcka
     description: TAMPER Lock A.
     byte_offset: 1304
-    fieldset: VbatAlphaFieldsetLimaAlpha
+    fieldset: Monlcka
   - name: tamlckb
     description: TAMPER Lock B.
     byte_offset: 1308
-    fieldset: VbatAlphaFieldsetMikeAlpha
+    fieldset: Monlckb
   - name: swictla
     description: Switch Control A.
     byte_offset: 1536
@@ -195,11 +195,11 @@ block/VbatAlpha:
   - name: swilcka
     description: Switch Lock A.
     byte_offset: 1560
-    fieldset: VbatAlphaFieldsetHotelAlpha
+    fieldset: Frolcka2
   - name: swilckb
     description: Switch Lock B.
     byte_offset: 1564
-    fieldset: VbatAlphaFieldsetIndiaAlpha
+    fieldset: Frolckb
   - name: wakeup
     description: 'Array of registers: WAKEUPA, WAKEUPB.'
     array:
@@ -210,11 +210,11 @@ block/VbatAlpha:
   - name: waklcka
     description: Wakeup Lock A.
     byte_offset: 2040
-    fieldset: VbatAlphaFieldsetVictorAlpha
+    fieldset: Monlcka
   - name: waklckb
     description: Wakeup Lock B.
     byte_offset: 2044
-    fieldset: VbatAlphaFieldsetWhiskeyAlpha
+    fieldset: Monlckb
 block/VbatAlphaBlockBravo:
   description: 'Array of registers: WAKEUPA, WAKEUPB.'
   items:
@@ -226,20 +226,13 @@ block/VbatAlphaBlockBravo:
     description: Wakeup 0 Register B.
     byte_offset: 4
     fieldset: VbatAlphaFieldsetUniformAlpha
-fieldset/VbatAlphaFieldsetAlpha:
+fieldset/Froclke2:
   description: FRO16K Clock Enable.
   fields:
   - name: clke
     description: Clock Enable.
     bit_offset: 0
     bit_size: 4
-fieldset/VbatAlphaFieldsetAlphaAlpha:
-  description: Oscillator Control B.
-  fields:
-  - name: inverse
-    description: Inverse Value.
-    bit_offset: 0
-    bit_size: 20
 fieldset/VbatAlphaFieldsetBravo:
   description: FRO16K Control A.
   fields:
@@ -247,15 +240,7 @@ fieldset/VbatAlphaFieldsetBravo:
     description: FRO16K Enable.
     bit_offset: 0
     bit_size: 1
-    enum: VbatAlphaEnumJuliet
-fieldset/VbatAlphaFieldsetBravoAlpha:
-  description: Oscillator Lock A.
-  fields:
-  - name: lock
-    description: Lock.
-    bit_offset: 0
-    bit_size: 1
-    enum: VbatAlphaEnumTangoAlpha
+    enum: IrqDet2
 fieldset/VbatAlphaFieldsetCharlie:
   description: FRO16K Control B.
   fields:
@@ -263,22 +248,14 @@ fieldset/VbatAlphaFieldsetCharlie:
     description: Inverse Value.
     bit_offset: 0
     bit_size: 1
-fieldset/VbatAlphaFieldsetCharlieAlpha:
-  description: Oscillator Lock B.
-  fields:
-  - name: lock
-    description: Lock.
-    bit_offset: 0
-    bit_size: 1
-    enum: VbatAlphaEnumUniformAlpha
-fieldset/VbatAlphaFieldsetDelta:
+fieldset/Frolcka2:
   description: FRO16K Lock A.
   fields:
   - name: lock
     description: Lock.
     bit_offset: 0
     bit_size: 1
-    enum: VbatAlphaEnumKilo
+    enum: Lock2
 fieldset/VbatAlphaFieldsetDeltaAlpha:
   description: Status A.
   fields:
@@ -291,17 +268,17 @@ fieldset/VbatAlphaFieldsetDeltaAlpha:
     description: Wakeup Pin Flag.
     bit_offset: 1
     bit_size: 1
-    enum: VbatAlphaEnumQuebecBravo
+    enum: IrqDet
   - name: timer0_flag
     description: Bandgap Timer 0 Flag.
     bit_offset: 2
     bit_size: 1
-    enum: VbatAlphaEnumNovemberBravo
+    enum: TimerFlag
   - name: timer1_flag
     description: Bandgap Timer 1 Flag.
     bit_offset: 3
     bit_size: 1
-    enum: VbatAlphaEnumOscarBravo
+    enum: TimerFlag
   - name: ldo_rdy
     description: LDO Ready.
     bit_offset: 4
@@ -321,12 +298,12 @@ fieldset/VbatAlphaFieldsetDeltaAlpha:
     description: Configuration Detect Flag.
     bit_offset: 7
     bit_size: 1
-    enum: VbatAlphaEnumCharlieBravo
+    enum: ConfigDet2
   - name: volt_det
     description: Voltage Detect.
     bit_offset: 8
     bit_size: 1
-    enum: VbatAlphaEnumPapaBravo
+    enum: ConfigDet2
   - name: temp_det
     description: Temperature Detect.
     bit_offset: 9
@@ -346,30 +323,30 @@ fieldset/VbatAlphaFieldsetDeltaAlpha:
     description: Interrupt 0 Detect.
     bit_offset: 16
     bit_size: 1
-    enum: VbatAlphaEnumDeltaBravo
+    enum: IrqDet
   - name: irq1_det
     description: Interrupt 1 Detect.
     bit_offset: 17
     bit_size: 1
-    enum: VbatAlphaEnumEchoBravo
+    enum: IrqDet
   - name: irq2_det
     description: Interrupt 2 Detect.
     bit_offset: 18
     bit_size: 1
-    enum: VbatAlphaEnumFoxtrotBravo
+    enum: IrqDet
   - name: irq3_det
     description: Interrupt 3 Detect.
     bit_offset: 19
     bit_size: 1
-    enum: VbatAlphaEnumGolfBravo
-fieldset/VbatAlphaFieldsetEcho:
+    enum: IrqDet
+fieldset/Frolckb:
   description: FRO16K Lock B.
   fields:
   - name: lock
     description: Lock.
     bit_offset: 0
     bit_size: 1
-    enum: VbatAlphaEnumLima
+    enum: Lock4
 fieldset/VbatAlphaFieldsetEchoAlpha:
   description: Status B.
   fields:
@@ -384,47 +361,47 @@ fieldset/VbatAlphaFieldsetFoxtrot:
     description: POR Detect.
     bit_offset: 0
     bit_size: 1
-    enum: VbatAlphaEnumWhiskey
+    enum: IrqDet2
   - name: wakeup_flag
     description: Wakeup Pin Flag.
     bit_offset: 1
     bit_size: 1
-    enum: VbatAlphaEnumCharlieAlpha
+    enum: ConfigDet
   - name: timer0_flag
     description: Bandgap Timer 0.
     bit_offset: 2
     bit_size: 1
-    enum: VbatAlphaEnumZulu
+    enum: IrqDet2
   - name: timer1_flag
     description: Bandgap Timer 2.
     bit_offset: 3
     bit_size: 1
-    enum: VbatAlphaEnumAlphaAlpha
+    enum: IrqDet2
   - name: ldo_rdy
     description: LDO Ready.
     bit_offset: 4
     bit_size: 1
-    enum: VbatAlphaEnumTango
+    enum: IrqDet2
   - name: osc_rdy
     description: OSC32k Ready.
     bit_offset: 5
     bit_size: 1
-    enum: VbatAlphaEnumVictor
+    enum: IrqDet2
   - name: clock_det
     description: Clock Detect.
     bit_offset: 6
     bit_size: 1
-    enum: VbatAlphaEnumNovember
+    enum: IrqDet2
   - name: config_det
     description: Configuration Detect.
     bit_offset: 7
     bit_size: 1
-    enum: VbatAlphaEnumOscar
+    enum: ConfigDet
   - name: volt_det
     description: Voltage Detect.
     bit_offset: 8
     bit_size: 1
-    enum: VbatAlphaEnumBravoAlpha
+    enum: IrqDet2
   - name: temp_det
     description: Temperature Detect.
     bit_offset: 9
@@ -434,32 +411,32 @@ fieldset/VbatAlphaFieldsetFoxtrot:
     description: Light Detect.
     bit_offset: 10
     bit_size: 1
-    enum: VbatAlphaEnumUniform
+    enum: IrqDet2
   - name: sec0_det
     description: Input 0 Detect.
     bit_offset: 12
     bit_size: 1
-    enum: VbatAlphaEnumXray
+    enum: IrqDet2
   - name: irq0_det
     description: Interrupt 0 Detect.
     bit_offset: 16
     bit_size: 1
-    enum: VbatAlphaEnumPapa
+    enum: IrqDet2
   - name: irq1_det
     description: Interrupt 1 Detect.
     bit_offset: 17
     bit_size: 1
-    enum: VbatAlphaEnumQuebec
+    enum: IrqDet2
   - name: irq2_det
     description: Interrupt 2 Detect.
     bit_offset: 18
     bit_size: 1
-    enum: VbatAlphaEnumRomeo
+    enum: IrqDet2
   - name: irq3_det
     description: Interrupt 3 Detect.
     bit_offset: 19
     bit_size: 1
-    enum: VbatAlphaEnumSierra
+    enum: IrqDet2
 fieldset/VbatAlphaFieldsetFoxtrotAlpha:
   description: Switch Control A.
   fields:
@@ -473,7 +450,7 @@ fieldset/VbatAlphaFieldsetFoxtrotAlpha:
     bit_offset: 1
     bit_size: 1
     enum: VbatAlphaEnumMikeAlpha
-fieldset/VbatAlphaFieldsetGolf:
+fieldset/Irqenb:
   description: Interrupt Enable B.
   fields:
   - name: inverse
@@ -494,25 +471,17 @@ fieldset/VbatAlphaFieldsetHotel:
     description: Bandgap Enable.
     bit_offset: 0
     bit_size: 1
-    enum: VbatAlphaEnumAlpha
+    enum: IrqDet2
   - name: ldo_en
     description: LDO Enable.
     bit_offset: 1
     bit_size: 1
-    enum: VbatAlphaEnumEchoAlpha
+    enum: IrqDet2
   - name: refresh_en
     description: Refresh Enable.
     bit_offset: 2
     bit_size: 1
     enum: VbatAlphaEnumWhiskeyAlpha
-fieldset/VbatAlphaFieldsetHotelAlpha:
-  description: Switch Lock A.
-  fields:
-  - name: lock
-    description: Lock.
-    bit_offset: 0
-    bit_size: 1
-    enum: VbatAlphaEnumUniformBravo
 fieldset/VbatAlphaFieldsetIndia:
   description: LDO_RAM Control B.
   fields:
@@ -520,22 +489,6 @@ fieldset/VbatAlphaFieldsetIndia:
     description: Inverse Value.
     bit_offset: 0
     bit_size: 3
-fieldset/VbatAlphaFieldsetIndiaAlpha:
-  description: Switch Lock B.
-  fields:
-  - name: lock
-    description: Lock.
-    bit_offset: 0
-    bit_size: 1
-    enum: VbatAlphaEnumVictorBravo
-fieldset/VbatAlphaFieldsetJuliet:
-  description: LDO_RAM Lock A.
-  fields:
-  - name: lock
-    description: Lock.
-    bit_offset: 0
-    bit_size: 1
-    enum: VbatAlphaEnumFoxtrotAlpha
 fieldset/VbatAlphaFieldsetJulietAlpha:
   description: TAMPER Control A.
   fields:
@@ -554,14 +507,6 @@ fieldset/VbatAlphaFieldsetJulietAlpha:
     bit_offset: 2
     bit_size: 1
     enum: VbatAlphaEnumJulietAlpha
-fieldset/VbatAlphaFieldsetKilo:
-  description: LDO_RAM Lock B.
-  fields:
-  - name: lock
-    description: Lock.
-    bit_offset: 0
-    bit_size: 1
-    enum: VbatAlphaEnumGolfAlpha
 fieldset/VbatAlphaFieldsetKiloAlpha:
   description: TAMPER Control B.
   fields:
@@ -586,30 +531,22 @@ fieldset/VbatAlphaFieldsetLima:
     description: Retention.
     bit_offset: 8
     bit_size: 1
-    enum: VbatAlphaEnumXrayAlpha
+    enum: Ret
   - name: ret1
     description: Retention.
     bit_offset: 9
     bit_size: 1
-    enum: VbatAlphaEnumYankeeAlpha
+    enum: Ret
   - name: ret2
     description: Retention.
     bit_offset: 10
     bit_size: 1
-    enum: VbatAlphaEnumZuluAlpha
+    enum: Ret
   - name: ret3
     description: Retention.
     bit_offset: 11
     bit_size: 1
-    enum: VbatAlphaEnumAlphaBravo
-fieldset/VbatAlphaFieldsetLimaAlpha:
-  description: TAMPER Lock A.
-  fields:
-  - name: lock
-    description: Lock.
-    bit_offset: 0
-    bit_size: 1
-    enum: VbatAlphaEnumWhiskeyBravo
+    enum: Ret
 fieldset/VbatAlphaFieldsetMike:
   description: Bandgap Timer 0.
   fields:
@@ -622,15 +559,7 @@ fieldset/VbatAlphaFieldsetMike:
     description: Bandgap Timeout Period Enable.
     bit_offset: 31
     bit_size: 1
-    enum: VbatAlphaEnumHotelAlpha
-fieldset/VbatAlphaFieldsetMikeAlpha:
-  description: TAMPER Lock B.
-  fields:
-  - name: lock
-    description: Lock.
-    bit_offset: 0
-    bit_size: 1
-    enum: VbatAlphaEnumXrayBravo
+    enum: IrqDet2
 fieldset/VbatAlphaFieldsetNovember:
   description: Bandgap Timer 1.
   fields:
@@ -642,7 +571,7 @@ fieldset/VbatAlphaFieldsetNovember:
     description: Bandgap Timeout Period Enable.
     bit_offset: 31
     bit_size: 1
-    enum: VbatAlphaEnumIndiaAlpha
+    enum: IrqDet2
 fieldset/VbatAlphaFieldsetNovemberAlpha:
   description: Tamper Enable A.
   fields:
@@ -650,12 +579,12 @@ fieldset/VbatAlphaFieldsetNovemberAlpha:
     description: POR Detect.
     bit_offset: 0
     bit_size: 1
-    enum: VbatAlphaEnumBravoCharlie
+    enum: ClockDet
   - name: clock_det
     description: Clock Detect.
     bit_offset: 6
     bit_size: 1
-    enum: VbatAlphaEnumYankeeBravo
+    enum: ClockDet
   - name: config_det
     description: Configuration Detect.
     bit_offset: 7
@@ -665,22 +594,22 @@ fieldset/VbatAlphaFieldsetNovemberAlpha:
     description: Voltage Detect.
     bit_offset: 8
     bit_size: 1
-    enum: VbatAlphaEnumEchoCharlie
+    enum: ClockDet
   - name: temp_det
     description: Temperature Detect.
     bit_offset: 9
     bit_size: 1
-    enum: VbatAlphaEnumDeltaCharlie
+    enum: ClockDet
   - name: light_det
     description: Light Detect.
     bit_offset: 10
     bit_size: 1
-    enum: VbatAlphaEnumAlphaCharlie
+    enum: ClockDet
   - name: sec0_det
     description: Input 0 Detect.
     bit_offset: 12
     bit_size: 1
-    enum: VbatAlphaEnumCharlieCharlie
+    enum: ClockDet
 fieldset/VbatAlphaFieldsetOscar:
   description: Lock A.
   fields:
@@ -754,57 +683,57 @@ fieldset/VbatAlphaFieldsetRomeoAlpha:
     description: POR Detect.
     bit_offset: 0
     bit_size: 1
-    enum: VbatAlphaEnumRomeoCharlie
+    enum: IrqDet2
   - name: wakeup_flag
     description: Wake-up Pin Flag.
     bit_offset: 1
     bit_size: 1
-    enum: VbatAlphaEnumXrayCharlie
+    enum: ConfigDet
   - name: timer0_flag
     description: Bandgap Timer 0.
     bit_offset: 2
     bit_size: 1
-    enum: VbatAlphaEnumUniformCharlie
+    enum: IrqDet2
   - name: timer1_flag
     description: Bandgap Timer 2.
     bit_offset: 3
     bit_size: 1
-    enum: VbatAlphaEnumVictorCharlie
+    enum: IrqDet2
   - name: ldo_rdy
     description: LDO Ready.
     bit_offset: 4
     bit_size: 1
-    enum: VbatAlphaEnumOscarCharlie
+    enum: IrqDet2
   - name: osc_rdy
     description: OSC32K Ready.
     bit_offset: 5
     bit_size: 1
-    enum: VbatAlphaEnumQuebecCharlie
+    enum: IrqDet2
   - name: clock_det
     description: Clock Detect.
     bit_offset: 6
     bit_size: 1
-    enum: VbatAlphaEnumIndiaCharlie
+    enum: IrqDet2
   - name: config_det
     description: Configuration Detect.
     bit_offset: 7
     bit_size: 1
-    enum: VbatAlphaEnumJulietCharlie
+    enum: ConfigDet
   - name: volt_det
     description: Voltage Detect.
     bit_offset: 8
     bit_size: 1
-    enum: VbatAlphaEnumWhiskeyCharlie
+    enum: IrqDet2
   - name: temp_det
     description: Temperature Detect.
     bit_offset: 9
     bit_size: 1
-    enum: VbatAlphaEnumTangoCharlie
+    enum: IrqDet2
   - name: light_det
     description: Light Detect.
     bit_offset: 10
     bit_size: 1
-    enum: VbatAlphaEnumPapaCharlie
+    enum: IrqDet2
   - name: sec0_det
     description: Input 0 Detect.
     bit_offset: 12
@@ -814,22 +743,22 @@ fieldset/VbatAlphaFieldsetRomeoAlpha:
     description: Interrupt 0 Detect.
     bit_offset: 16
     bit_size: 1
-    enum: VbatAlphaEnumKiloCharlie
+    enum: IrqDet2
   - name: irq1_det
     description: Interrupt 1 Detect.
     bit_offset: 17
     bit_size: 1
-    enum: VbatAlphaEnumLimaCharlie
+    enum: IrqDet2
   - name: irq2_det
     description: Interrupt 2 Detect.
     bit_offset: 18
     bit_size: 1
-    enum: VbatAlphaEnumMikeCharlie
+    enum: IrqDet2
   - name: irq3_det
     description: Interrupt 3 Detect.
     bit_offset: 19
     bit_size: 1
-    enum: VbatAlphaEnumNovemberCharlie
+    enum: IrqDet2
 fieldset/VbatAlphaFieldsetSierra:
   description: CLKMON Control A.
   fields:
@@ -838,13 +767,6 @@ fieldset/VbatAlphaFieldsetSierra:
     bit_offset: 0
     bit_size: 1
     enum: VbatAlphaEnumOscarAlpha
-fieldset/VbatAlphaFieldsetSierraAlpha:
-  description: Wake-up Enable B.
-  fields:
-  - name: inverse
-    description: Inverse Value.
-    bit_offset: 0
-    bit_size: 20
 fieldset/VbatAlphaFieldsetTango:
   description: CLKMON Control B.
   fields:
@@ -859,14 +781,14 @@ fieldset/VbatAlphaFieldsetTangoAlpha:
     description: Register.
     bit_offset: 0
     bit_size: 32
-fieldset/VbatAlphaFieldsetUniform:
+fieldset/Monlcka:
   description: CLKMON Lock A.
   fields:
   - name: lock
     description: Lock.
     bit_offset: 0
     bit_size: 1
-    enum: VbatAlphaEnumPapaAlpha
+    enum: Lock3
 fieldset/VbatAlphaFieldsetUniformAlpha:
   description: Wakeup 0 Register B.
   fields:
@@ -874,22 +796,14 @@ fieldset/VbatAlphaFieldsetUniformAlpha:
     description: Inverse value.
     bit_offset: 0
     bit_size: 32
-fieldset/VbatAlphaFieldsetVictor:
+fieldset/Monlckb:
   description: CLKMON Lock B.
   fields:
   - name: lock
     description: Lock.
     bit_offset: 0
     bit_size: 1
-    enum: VbatAlphaEnumQuebecAlpha
-fieldset/VbatAlphaFieldsetVictorAlpha:
-  description: Wakeup Lock A.
-  fields:
-  - name: lock
-    description: Lock.
-    bit_offset: 0
-    bit_size: 1
-    enum: VbatAlphaEnumYankeeCharlie
+    enum: Lock5
 fieldset/VbatAlphaFieldsetWhiskey:
   description: Oscillator Configuration A.
   fields:
@@ -917,14 +831,6 @@ fieldset/VbatAlphaFieldsetWhiskey:
     bit_offset: 9
     bit_size: 3
     enum: VbatAlphaEnumMike
-fieldset/VbatAlphaFieldsetWhiskeyAlpha:
-  description: Wakeup Lock B.
-  fields:
-  - name: lock
-    description: Lock.
-    bit_offset: 0
-    bit_size: 1
-    enum: VbatAlphaEnumZuluCharlie
 fieldset/VbatAlphaFieldsetXray:
   description: Oscillator Configuration B.
   fields:
@@ -932,13 +838,6 @@ fieldset/VbatAlphaFieldsetXray:
     description: Inverse Value.
     bit_offset: 0
     bit_size: 12
-fieldset/VbatAlphaFieldsetYankee:
-  description: Oscillator Clock Enable.
-  fields:
-  - name: clke
-    description: Clock Enable.
-    bit_offset: 0
-    bit_size: 4
 fieldset/VbatAlphaFieldsetZulu:
   description: Oscillator Control A.
   fields:
@@ -946,7 +845,7 @@ fieldset/VbatAlphaFieldsetZulu:
     description: Crystal Oscillator Enable.
     bit_offset: 0
     bit_size: 1
-    enum: VbatAlphaEnumSierraAlpha
+    enum: IrqDet2
   - name: osc_byp_en
     description: Crystal Oscillator Bypass Enable.
     bit_offset: 1
@@ -961,17 +860,17 @@ fieldset/VbatAlphaFieldsetZulu:
     description: Crystal Load Capacitance Selection Enable.
     bit_offset: 7
     bit_size: 1
-    enum: VbatAlphaEnumBravo
+    enum: IrqDet2
   - name: extal_cap_sel
     description: Crystal Load Capacitance Selection.
     bit_offset: 8
     bit_size: 4
-    enum: VbatAlphaEnumHotel
+    enum: ExtalCapSel2
   - name: xtal_cap_sel
     description: Crystal Load Capacitance Selection.
     bit_offset: 12
     bit_size: 4
-    enum: VbatAlphaEnumAlphaDelta
+    enum: ExtalCapSel2
   - name: mode_en
     description: Mode Enable.
     bit_offset: 16
@@ -982,111 +881,6 @@ fieldset/VbatAlphaFieldsetZulu:
     bit_offset: 18
     bit_size: 2
     enum: VbatAlphaEnumRomeoBravo
-enum/VbatAlphaEnumAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/VbatAlphaEnumAlphaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/VbatAlphaEnumAlphaBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Corresponding SRAM array is retained in low-power modes.
-    value: 0
-  - name: Enable
-    description: Corresponding SRAM array is not retained in low-power modes.
-    value: 1
-enum/VbatAlphaEnumAlphaCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Tamper disabled.
-    value: 0
-  - name: Enable
-    description: Tamper enabled.
-    value: 1
-enum/VbatAlphaEnumAlphaDelta:
-  bit_size: 4
-  variants:
-  - name: Sel0
-    description: 0 pF.
-    value: 0
-  - name: Sel2
-    description: 2 pF.
-    value: 1
-  - name: Sel4
-    description: 4 pF.
-    value: 2
-  - name: Sel6
-    description: 6 pF.
-    value: 3
-  - name: Sel8
-    description: 8 pF.
-    value: 4
-  - name: Sel10
-    description: 10 pF.
-    value: 5
-  - name: Sel12
-    description: 12 pF.
-    value: 6
-  - name: Sel14
-    description: 14 pF.
-    value: 7
-  - name: Sel16
-    description: 16 pF.
-    value: 8
-  - name: Sel18
-    description: 18 pF.
-    value: 9
-  - name: Sel20
-    description: 20 pF.
-    value: 10
-  - name: Sel22
-    description: 22 pF.
-    value: 11
-  - name: Sel24
-    description: 24 pF.
-    value: 12
-  - name: Sel26
-    description: 26 pF.
-    value: 13
-  - name: Sel28
-    description: 28 pF.
-    value: 14
-  - name: Sel30
-    description: 30 pF.
-    value: 15
-enum/VbatAlphaEnumBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/VbatAlphaEnumBravoAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
 enum/VbatAlphaEnumBravoBravo:
   bit_size: 1
   variants:
@@ -1095,15 +889,6 @@ enum/VbatAlphaEnumBravoBravo:
     value: 0
   - name: Set
     description: Clock error detected.
-    value: 1
-enum/VbatAlphaEnumBravoCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Tamper disabled.
-    value: 0
-  - name: Enable
-    description: Tamper enabled.
     value: 1
 enum/VbatAlphaEnumCharlie:
   bit_size: 2
@@ -1120,33 +905,6 @@ enum/VbatAlphaEnumCharlie:
   - name: Val3
     description: -2.5us (when CAP2_TRIM = 0 and CAP_TRIM[1:0] = 11) or +1us (when CAP2_TRIM = 1 and CAP_TRIM[1:0] = 11).
     value: 3
-enum/VbatAlphaEnumCharlieAlpha:
-  bit_size: 1
-  variants:
-  - name: Clr
-    description: Disable.
-    value: 0
-  - name: Set
-    description: Enable.
-    value: 1
-enum/VbatAlphaEnumCharlieBravo:
-  bit_size: 1
-  variants:
-  - name: Clr
-    description: Not detected.
-    value: 0
-  - name: Set
-    description: Detected.
-    value: 1
-enum/VbatAlphaEnumCharlieCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Tamper disabled.
-    value: 0
-  - name: Enable
-    description: Tamper enabled.
-    value: 1
 enum/VbatAlphaEnumDelta:
   bit_size: 2
   variants:
@@ -1168,24 +926,6 @@ enum/VbatAlphaEnumDeltaAlpha:
   - name: Enable
     description: Isolates SRAM and places it in Low-Power Retention mode.
     value: 1
-enum/VbatAlphaEnumDeltaBravo:
-  bit_size: 1
-  variants:
-  - name: Clr
-    description: Not asserted.
-    value: 0
-  - name: Set
-    description: Asserted.
-    value: 1
-enum/VbatAlphaEnumDeltaCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Tamper disabled.
-    value: 0
-  - name: Enable
-    description: Tamper enabled.
-    value: 1
 enum/VbatAlphaEnumEcho:
   bit_size: 2
   variants:
@@ -1201,16 +941,7 @@ enum/VbatAlphaEnumEcho:
   - name: Gain33
     description: ESR Range 3.
     value: 3
-enum/VbatAlphaEnumEchoAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/VbatAlphaEnumEchoBravo:
+enum/IrqDet:
   bit_size: 1
   variants:
   - name: Clr
@@ -1219,7 +950,7 @@ enum/VbatAlphaEnumEchoBravo:
   - name: Set
     description: Asserted.
     value: 1
-enum/VbatAlphaEnumEchoCharlie:
+enum/ClockDet:
   bit_size: 1
   variants:
   - name: Disable
@@ -1236,24 +967,6 @@ enum/VbatAlphaEnumFoxtrot:
     value: 0
   - name: Cfg1
     description: Clock monitor operates at 64 Hz.
-    value: 1
-enum/VbatAlphaEnumFoxtrotAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Do not block.
-    value: 0
-  - name: Enable
-    description: Block.
-    value: 1
-enum/VbatAlphaEnumFoxtrotBravo:
-  bit_size: 1
-  variants:
-  - name: Clr
-    description: Not asserted.
-    value: 0
-  - name: Set
-    description: Asserted.
     value: 1
 enum/VbatAlphaEnumFoxtrotCharlie:
   bit_size: 1
@@ -1294,24 +1007,6 @@ enum/VbatAlphaEnumGolf:
   - name: DlyTrim11
     description: P current 4(nA) and N Current 2(nA).
     value: 11
-enum/VbatAlphaEnumGolfAlpha:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Block.
-    value: 0
-  - name: Disable
-    description: Do not block.
-    value: 1
-enum/VbatAlphaEnumGolfBravo:
-  bit_size: 1
-  variants:
-  - name: Clr
-    description: Not asserted.
-    value: 0
-  - name: Set
-    description: Asserted.
-    value: 1
 enum/VbatAlphaEnumGolfCharlie:
   bit_size: 3
   variants:
@@ -1339,7 +1034,7 @@ enum/VbatAlphaEnumGolfCharlie:
   - name: Cfg7
     description: 7.8125 ms.
     value: 7
-enum/VbatAlphaEnumHotel:
+enum/ExtalCapSel2:
   bit_size: 4
   variants:
   - name: Sel0
@@ -1390,15 +1085,6 @@ enum/VbatAlphaEnumHotel:
   - name: Sel30
     description: 30 pF.
     value: 15
-enum/VbatAlphaEnumHotelAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
 enum/VbatAlphaEnumHotelBravo:
   bit_size: 1
   variants:
@@ -1432,15 +1118,6 @@ enum/VbatAlphaEnumIndia:
   - name: Cfg3
     description: Clock monitor asserts 8 cycles after expected edge.
     value: 3
-enum/VbatAlphaEnumIndiaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
 enum/VbatAlphaEnumIndiaBravo:
   bit_size: 1
   variants:
@@ -1449,24 +1126,6 @@ enum/VbatAlphaEnumIndiaBravo:
     value: 0
   - name: Set
     description: Light error detected.
-    value: 1
-enum/VbatAlphaEnumIndiaCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/VbatAlphaEnumJuliet:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
     value: 1
 enum/VbatAlphaEnumJulietAlpha:
   bit_size: 1
@@ -1486,16 +1145,7 @@ enum/VbatAlphaEnumJulietBravo:
   - name: Set
     description: Enabled (clock ready).
     value: 1
-enum/VbatAlphaEnumJulietCharlie:
-  bit_size: 1
-  variants:
-  - name: Clr
-    description: Disable.
-    value: 0
-  - name: Set
-    description: Enable.
-    value: 1
-enum/VbatAlphaEnumKilo:
+enum/Lock2:
   bit_size: 1
   variants:
   - name: Disable
@@ -1522,16 +1172,7 @@ enum/VbatAlphaEnumKiloBravo:
   - name: Set
     description: Reset.
     value: 1
-enum/VbatAlphaEnumKiloCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/VbatAlphaEnumLima:
+enum/Lock4:
   bit_size: 1
   variants:
   - name: Enable
@@ -1557,15 +1198,6 @@ enum/VbatAlphaEnumLimaBravo:
     value: 0
   - name: Set
     description: Security input 0 detected.
-    value: 1
-enum/VbatAlphaEnumLimaCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
     value: 1
 enum/VbatAlphaEnumMike:
   bit_size: 3
@@ -1612,24 +1244,6 @@ enum/VbatAlphaEnumMikeBravo:
   - name: Set
     description: Temperature error detected.
     value: 1
-enum/VbatAlphaEnumMikeCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/VbatAlphaEnumNovember:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
 enum/VbatAlphaEnumNovemberAlpha:
   bit_size: 2
   variants:
@@ -1642,25 +1256,7 @@ enum/VbatAlphaEnumNovemberAlpha:
   - name: Sw
     description: Low power mode.
     value: 3
-enum/VbatAlphaEnumNovemberBravo:
-  bit_size: 1
-  variants:
-  - name: Clr
-    description: Not reached.
-    value: 0
-  - name: Set
-    description: Reached.
-    value: 1
-enum/VbatAlphaEnumNovemberCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/VbatAlphaEnumOscar:
+enum/ConfigDet:
   bit_size: 1
   variants:
   - name: Clr
@@ -1678,7 +1274,7 @@ enum/VbatAlphaEnumOscarAlpha:
   - name: Enable
     description: CLKMON is enabled.
     value: 1
-enum/VbatAlphaEnumOscarBravo:
+enum/TimerFlag:
   bit_size: 1
   variants:
   - name: Clr
@@ -1687,7 +1283,7 @@ enum/VbatAlphaEnumOscarBravo:
   - name: Set
     description: Reached.
     value: 1
-enum/VbatAlphaEnumOscarCharlie:
+enum/IrqDet2:
   bit_size: 1
   variants:
   - name: Disable
@@ -1696,16 +1292,7 @@ enum/VbatAlphaEnumOscarCharlie:
   - name: Enable
     description: Enable.
     value: 1
-enum/VbatAlphaEnumPapa:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/VbatAlphaEnumPapaAlpha:
+enum/Lock3:
   bit_size: 1
   variants:
   - name: Disable
@@ -1714,7 +1301,7 @@ enum/VbatAlphaEnumPapaAlpha:
   - name: Enable
     description: Lock is enabled.
     value: 1
-enum/VbatAlphaEnumPapaBravo:
+enum/ConfigDet2:
   bit_size: 1
   variants:
   - name: Clr
@@ -1722,60 +1309,6 @@ enum/VbatAlphaEnumPapaBravo:
     value: 0
   - name: Set
     description: Detected.
-    value: 1
-enum/VbatAlphaEnumPapaCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/VbatAlphaEnumQuebec:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/VbatAlphaEnumQuebecAlpha:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Lock is enabled.
-    value: 0
-  - name: Disable
-    description: Lock is disabled.
-    value: 1
-enum/VbatAlphaEnumQuebecBravo:
-  bit_size: 1
-  variants:
-  - name: Clr
-    description: Not asserted.
-    value: 0
-  - name: Set
-    description: Asserted.
-    value: 1
-enum/VbatAlphaEnumQuebecCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/VbatAlphaEnumRomeo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
     value: 1
 enum/VbatAlphaEnumRomeoAlpha:
   bit_size: 1
@@ -1795,33 +1328,6 @@ enum/VbatAlphaEnumRomeoBravo:
   - name: SupplyDet1
     description: VBAT supply is greater than 3V.
     value: 1
-enum/VbatAlphaEnumRomeoCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/VbatAlphaEnumSierra:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/VbatAlphaEnumSierraAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
 enum/VbatAlphaEnumSierraBravo:
   bit_size: 1
   variants:
@@ -1840,24 +1346,6 @@ enum/VbatAlphaEnumSierraCharlie:
   - name: Enable
     description: Enabled.
     value: 1
-enum/VbatAlphaEnumTango:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/VbatAlphaEnumTangoAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Do not block.
-    value: 0
-  - name: Enable
-    description: Block.
-    value: 1
 enum/VbatAlphaEnumTangoBravo:
   bit_size: 1
   variants:
@@ -1866,60 +1354,6 @@ enum/VbatAlphaEnumTangoBravo:
     value: 0
   - name: Enable
     description: VDD_SYS.
-    value: 1
-enum/VbatAlphaEnumTangoCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/VbatAlphaEnumUniform:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/VbatAlphaEnumUniformAlpha:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Block.
-    value: 0
-  - name: Disable
-    description: Do not block.
-    value: 1
-enum/VbatAlphaEnumUniformBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Do not block.
-    value: 0
-  - name: Enable
-    description: Block.
-    value: 1
-enum/VbatAlphaEnumUniformCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/VbatAlphaEnumVictor:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
     value: 1
 enum/VbatAlphaEnumVictorAlpha:
   bit_size: 1
@@ -1930,33 +1364,6 @@ enum/VbatAlphaEnumVictorAlpha:
   - name: Off
     description: Logic one.
     value: 1
-enum/VbatAlphaEnumVictorBravo:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Block.
-    value: 0
-  - name: Disable
-    description: Do not block.
-    value: 1
-enum/VbatAlphaEnumVictorCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/VbatAlphaEnumWhiskey:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
 enum/VbatAlphaEnumWhiskeyAlpha:
   bit_size: 1
   variants:
@@ -1966,34 +1373,7 @@ enum/VbatAlphaEnumWhiskeyAlpha:
   - name: Enable
     description: Refresh mode is enabled for low power operation.
     value: 1
-enum/VbatAlphaEnumWhiskeyBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Lock is disabled.
-    value: 0
-  - name: Enable
-    description: Lock is enabled.
-    value: 1
-enum/VbatAlphaEnumWhiskeyCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/VbatAlphaEnumXray:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/VbatAlphaEnumXrayAlpha:
+enum/Ret:
   bit_size: 1
   variants:
   - name: Disable
@@ -2002,7 +1382,7 @@ enum/VbatAlphaEnumXrayAlpha:
   - name: Enable
     description: Corresponding SRAM array is not retained in low-power modes.
     value: 1
-enum/VbatAlphaEnumXrayBravo:
+enum/Lock5:
   bit_size: 1
   variants:
   - name: Enable
@@ -2010,15 +1390,6 @@ enum/VbatAlphaEnumXrayBravo:
     value: 0
   - name: Disable
     description: Lock is disabled.
-    value: 1
-enum/VbatAlphaEnumXrayCharlie:
-  bit_size: 1
-  variants:
-  - name: Clr
-    description: Disable.
-    value: 0
-  - name: Set
-    description: Enable.
     value: 1
 enum/VbatAlphaEnumYankee:
   bit_size: 1
@@ -2029,51 +1400,6 @@ enum/VbatAlphaEnumYankee:
   - name: Enable
     description: Interrupt enabled.
     value: 1
-enum/VbatAlphaEnumYankeeAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Corresponding SRAM array is retained in low-power modes.
-    value: 0
-  - name: Enable
-    description: Corresponding SRAM array is not retained in low-power modes.
-    value: 1
-enum/VbatAlphaEnumYankeeBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Tamper disabled.
-    value: 0
-  - name: Enable
-    description: Tamper enabled.
-    value: 1
-enum/VbatAlphaEnumYankeeCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Lock is disabled.
-    value: 0
-  - name: Enable
-    description: Lock is enabled.
-    value: 1
-enum/VbatAlphaEnumZulu:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/VbatAlphaEnumZuluAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Corresponding SRAM array is retained in low-power modes.
-    value: 0
-  - name: Enable
-    description: Corresponding SRAM array is not retained in low-power modes.
-    value: 1
 enum/VbatAlphaEnumZuluBravo:
   bit_size: 1
   variants:
@@ -2082,13 +1408,4 @@ enum/VbatAlphaEnumZuluBravo:
     value: 0
   - name: Set
     description: Tamper enabled.
-    value: 1
-enum/VbatAlphaEnumZuluCharlie:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Lock is enabled.
-    value: 0
-  - name: Disable
-    description: Lock is disabled.
     value: 1

@@ -1,0 +1,371 @@
+# Compatible MCXA/MCXN SYSCON field definitions. Register geometry stays local.
+# Enum variants, values and documentation match exactly; software defaults are preserved.
+enum/AhbclkdivUnstab:
+  bit_size: 1
+  variants:
+  - name: Stable
+    description: Divider clock is stable.
+    value: 0
+  - name: Ongoing
+    description: Clock frequency is not stable.
+    value: 1
+enum/AhbmatprioCpu0Sbus:
+  bit_size: 2
+  variants:
+  - name: Level0
+    description: level 0.
+    value: 0
+  - name: Level1
+    description: level 1.
+    value: 1
+  - name: Level2
+    description: level 2.
+    value: 2
+  - name: Level3
+    description: level 3.
+    value: 3
+enum/BusclkdivHalt:
+  bit_size: 1
+  variants:
+  - name: Run
+    description: Divider clock is running.
+    value: 0
+  - name: Halt
+    description: Divider clock is stopped.
+    value: 1
+enum/BusclkdivReset:
+  bit_size: 1
+  variants:
+  - name: Released
+    description: Divider is not reset.
+    value: 0
+  - name: Asserted
+    description: Divider is reset.
+    value: 1
+enum/ClrLpcac:
+  bit_size: 1
+  variants:
+  - name: Enable
+    description: Unclears the cache.
+    value: 0
+  - name: Disable
+    description: Clears the cache.
+    value: 1
+enum/Cpu0lockup:
+  bit_size: 1
+  variants:
+  - name: Awake
+    description: CPU is not in lockup.
+    value: 0
+  - name: Sleeping
+    description: CPU is in lockup.
+    value: 1
+enum/Cpu0sleeping:
+  bit_size: 1
+  variants:
+  - name: Awake
+    description: CPU is not sleeping.
+    value: 0
+  - name: Sleeping
+    description: CPU is sleeping.
+    value: 1
+enum/DebugFeaturesCpu0Dbgen:
+  bit_size: 2
+  variants:
+  - name: Disable
+    description: Disables debug.
+    value: 1
+  - name: Enable
+    description: Enables debug.
+    value: 2
+  only_in: ^(MCXA(132|133|142|143|144|145|146|152|153|154|155|156|173|174|175|176|185|186|255|256|265|266|343|344|345|346|355|356|365|366)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$
+enum/DisDataSpec:
+  bit_size: 1
+  variants:
+  - name: Enable
+    description: Enables data speculation.
+    value: 0
+  - name: Disable
+    description: Disables data speculation.
+    value: 1
+enum/DisFlashSpec:
+  bit_size: 1
+  variants:
+  - name: Enable
+    description: Enables flash speculation.
+    value: 0
+  - name: Disable
+    description: Disables flash speculation.
+    value: 1
+enum/DisLpcac:
+  bit_size: 1
+  variants:
+  - name: Enable
+    description: Enabled.
+    value: 0
+  - name: Disable
+    description: Disabled.
+    value: 1
+enum/DisMbeccErrData:
+  bit_size: 1
+  variants:
+  - name: Enable
+    description: Enables bus error on multi-bit ECC error for data.
+    value: 0
+  - name: Disable
+    description: Disables bus error on multi-bit ECC error for data.
+    value: 1
+enum/DisMbeccErrInst:
+  bit_size: 1
+  variants:
+  - name: Enable
+    description: Enables bus error on multi-bit ECC error for instruction.
+    value: 0
+  - name: Disable
+    description: Disables bus error on multi-bit ECC error for instruction.
+    value: 1
+enum/FlashStallEn:
+  bit_size: 1
+  variants:
+  - name: Enable
+    description: No stall on FLASH busy.
+    value: 0
+  - name: Disable
+    description: Stall on FLASH busy.
+    value: 1
+enum/FrcNoAlloc:
+  bit_size: 1
+  variants:
+  - name: Enable
+    description: Forces allocation.
+    value: 0
+  - name: Disable
+    description: Forces no allocation.
+    value: 1
+enum/LockAll:
+  bit_size: 4
+  variants:
+  - name: Disable
+    description: 'Any other value than b1010: disables write access to all registers.'
+    value: 0
+  - name: Enable
+    description: Enables write access to all registers.
+    value: 10
+  only_in: ^(MCXA(132|133|142|143|144|145|146|152|153|154|155|156|173|174|175|176|185|186|255|256|265|266|343|344|345|346|355|356|365|366)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$
+enum/Noref:
+  bit_size: 1
+  variants:
+  - name: YesRef
+    description: Reference clock is provided.
+    value: 0
+  - name: NoRef
+    description: No reference clock is provided.
+    value: 1
+enum/PhyIntf:
+  bit_size: 1
+  variants:
+  - name: Mii
+    description: Selects MII PHY Interface.
+    value: 0
+  - name: Rmii
+    description: Selects RMII PHY Interface.
+    value: 1
+  only_in: ^(MCXA(286|287|456|457|536|537|556|557|566|567|577)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$
+enum/SecCode:
+  bit_size: 32
+  variants:
+  - name: Disable
+    description: CPU0 DAP is not allowed. Reading back register is read as 0x5.
+    value: 0
+  - name: Enable
+    description: Value to write to enable CPU0 SWD access. Reading back register is read as 0xA.
+    value: 305419896
+  only_in: ^(MCXA(132|133|142|143|144|145|146|152|153|154|155|156|173|174|175|176|185|186|255|256|265|266|343|344|345|346|355|356|365|366)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$
+enum/Skew:
+  bit_size: 1
+  variants:
+  - name: Exact
+    description: TENMS value is exact.
+    value: 0
+  - name: Inexact
+    description: TENMS value is not exact or not given.
+    value: 1
+enum/Unlock:
+  bit_size: 1
+  variants:
+  - name: Enable
+    description: Updates are allowed to all clock configuration registers.
+    value: 0
+  - name: Freeze
+    description: Freezes all clock configuration registers update.
+    value: 1
+fieldset/Ahbclkdiv:
+  fields:
+  - name: div
+    description: Clock divider value.
+    bit_offset: 0
+    bit_size: 8
+  - name: unstab
+    description: Divider status flag.
+    bit_offset: 31
+    bit_size: 1
+    enum: AhbclkdivUnstab
+fieldset/BinaryCodeLsb:
+  fields:
+  - name: code_bin_31_0
+    description: Binary code [31:0].
+    bit_offset: 0
+    bit_size: 32
+fieldset/BinaryCodeMsb:
+  fields:
+  - name: code_bin_41_32
+    description: Binary code [41:32].
+    bit_offset: 0
+    bit_size: 10
+fieldset/Busclkdiv:
+  fields:
+  - name: div
+    description: Clock divider value.
+    bit_offset: 0
+    bit_size: 8
+  - name: reset
+    description: Resets the divider counter.
+    bit_offset: 29
+    bit_size: 1
+    enum: BusclkdivReset
+  - name: halt
+    description: Halts the divider counter.
+    bit_offset: 30
+    bit_size: 1
+    enum: BusclkdivHalt
+  - name: unstab
+    description: Divider status flag.
+    bit_offset: 31
+    bit_size: 1
+    enum: AhbclkdivUnstab
+  only_in: ^(MCXA(175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$
+fieldset/Cpu0nstckcal:
+  fields:
+  - name: tenms
+    description: Reload value for 10 ms (100 Hz) timing, subject to system clock skew errors. If the value reads as zero, the calibration value is not known.
+    bit_offset: 0
+    bit_size: 24
+  - name: skew
+    description: Indicates whether the TENMS value is exact.
+    bit_offset: 24
+    bit_size: 1
+    enum: Skew
+  - name: noref
+    description: Indicates whether the device provides a reference clock to the processor.
+    bit_offset: 25
+    bit_size: 1
+    enum: Noref
+fieldset/Cpustat:
+  fields:
+  - name: cpu0sleeping
+    description: CPU0 sleeping state.
+    bit_offset: 0
+    bit_size: 1
+    enum: Cpu0sleeping
+  - name: cpu0lockup
+    description: CPU0 lockup state.
+    bit_offset: 2
+    bit_size: 1
+    enum: Cpu0lockup
+  only_in: ^(MCXA(132|133|142|143|144|145|146|152|153|154|155|156|173|174|175|176|185|186|255|256|265|266|286|287|343|344|345|346|355|356|365|366|456|457|536|537|556|557|566|567|577)|MCXN(235|236|246|247))$
+fieldset/DebugAuthBeacon:
+  fields:
+  - name: beacon
+    description: Sets by the debug authentication code in ROM to pass the debug beacons (Credential Beacon and Authentication Beacon) to the application code.
+    bit_offset: 0
+    bit_size: 32
+  only_in: ^(MCXA(132|133|142|143|144|145|146|152|153|154|155|156|173|174|175|176|185|186|255|256|265|266|343|344|345|346|355|356|365|366)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$
+fieldset/DebugLockEn:
+  fields:
+  - name: lock_all
+    description: Controls write access to the security registers.
+    bit_offset: 0
+    bit_size: 4
+    enum: LockAll
+  only_in: ^(MCXA(144|145|146|154|155|156|175|176|185|186|255|256|265|266)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$
+fieldset/DeviceId0A1Small:
+  fields:
+  - name: rom_rev_minor
+    description: ROM revision.
+    bit_offset: 20
+    bit_size: 4
+  only_in: ^(MCXA(132|133|142|143|152|153)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$
+fieldset/Dieid:
+  fields:
+  - name: minor_revision
+    description: Chip minor revision.
+    bit_offset: 0
+    bit_size: 4
+  - name: major_revision
+    description: Chip major revision.
+    bit_offset: 4
+    bit_size: 4
+  - name: mco_num_in_die_id
+    description: Chip number.
+    bit_offset: 8
+    bit_size: 20
+  only_in: ^(MCXA(144|145|146|154|155|156|175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$
+fieldset/ElsOtpLcState:
+  fields:
+  - name: otp_lc_state
+    description: OTP life cycle state.
+    bit_offset: 0
+    bit_size: 8
+  only_in: ^(MCXA(132|133|142|143|144|145|146|152|153|154|155|156|173|174|175|176|185|186|255|256|265|266|343|344|345|346|355|356|365|366)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$
+fieldset/ElsOtpLcStateDp:
+  fields:
+  - name: otp_lc_state_dp
+    description: OTP life cycle state.
+    bit_offset: 0
+    bit_size: 8
+  only_in: ^(MCXA(132|133|142|143|144|145|146|152|153|154|155|156|173|174|175|176|185|186|255|256|265|266|343|344|345|346|355|356|365|366)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$
+fieldset/GrayCodeLsb:
+  fields:
+  - name: code_gray_31_0
+    description: Gray code [31:0].
+    bit_offset: 0
+    bit_size: 32
+fieldset/GrayCodeMsb:
+  fields:
+  - name: code_gray_41_32
+    description: Gray code [41:32].
+    bit_offset: 0
+    bit_size: 10
+fieldset/JtagId:
+  fields:
+  - name: jtag_id
+    description: Indicates the device ID.
+    bit_offset: 0
+    bit_size: 32
+  only_in: ^(MCXA(144|145|146|154|155|156|175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$
+fieldset/Slowclkdiv:
+  fields:
+  - name: reset
+    description: Resets the divider counter.
+    bit_offset: 29
+    bit_size: 1
+    enum: BusclkdivReset
+  - name: halt
+    description: Halts the divider counter.
+    bit_offset: 30
+    bit_size: 1
+    enum: BusclkdivHalt
+  - name: unstab
+    description: Divider status flag.
+    bit_offset: 31
+    bit_size: 1
+    enum: AhbclkdivUnstab
+  only_in: ^(MCXA(132|133|142|143|144|145|146|152|153|154|155|156)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$
+fieldset/SwdAccessCpu0:
+  fields:
+  - name: sec_code
+    description: 'CPU0 SWD-AP: 0x12345678.'
+    bit_offset: 0
+    bit_size: 32
+    enum: SecCode
+  only_in: ^(MCXA(132|133|142|143|144|145|146|152|153|154|155|156|173|174|175|176|185|186|255|256|265|266|343|344|345|346|355|356|365|366)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$

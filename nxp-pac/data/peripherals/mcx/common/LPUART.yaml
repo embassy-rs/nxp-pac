@@ -499,7 +499,7 @@ fieldset/Fifo:
     description: Transmit FIFO Buffer Depth.
     bit_offset: 4
     bit_size: 3
-    enum: Txfifosize
+    enum: Rxfifosize
   - name: txfe
     description: Transmit FIFO Enable.
     bit_offset: 7
@@ -758,6 +758,7 @@ enum/Brk13:
     description: 12 to 15 bit times.
     value: 1
 enum/Dozeen:
+  only_in: '^(MCXA144|MCXA145|MCXA146|MCXA154|MCXA155|MCXA156|MCXA175|MCXA176|MCXA185|MCXA186|MCXA255|MCXA256|MCXA265|MCXA266|MCXA286|MCXA287|MCXA456|MCXA457|MCXA536|MCXA537|MCXA556|MCXA557|MCXA566|MCXA567|MCXA577)$'
   bit_size: 1
   variants:
   - name: Enabled
@@ -1115,33 +1116,6 @@ enum/Txdir:
   - name: TxOutput
     description: Output.
     value: 1
-enum/Txfifosize:
-  bit_size: 3
-  variants:
-  - name: Fifo1
-    description: '1.'
-    value: 0
-  - name: Fifo4
-    description: '4.'
-    value: 1
-  - name: Fifo8
-    description: '8.'
-    value: 2
-  - name: Fifo16
-    description: '16.'
-    value: 3
-  - name: Fifo32
-    description: '32.'
-    value: 4
-  - name: Fifo64
-    description: '64.'
-    value: 5
-  - name: Fifo128
-    description: '128.'
-    value: 6
-  - name: Fifo256
-    description: '256.'
-    value: 7
 enum/Txflush:
   bit_size: 1
   variants:
@@ -1310,7 +1284,7 @@ fieldset/Mcr:
     description: RTS_B default state when its function is disabled. Zero drives logic one; one drives logic zero.
     bit_offset: 9
     bit_size: 1
-    enum: Rts
+    enum: Dtr
 fieldset/Msr:
   only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   description: MODEM Status. Pin states are read-only and inverted; delta flags are W1C. Pad configuration affects observed reset states.
@@ -1336,22 +1310,22 @@ fieldset/Msr:
     description: Read-only CTS_B state. Zero indicates logic one; one indicates logic zero.
     bit_offset: 4
     bit_size: 1
-    enum: MsrCts
+    enum: Dtr
   - name: dsr
     description: Read-only DSR_B state. Zero indicates logic one; one indicates logic zero.
     bit_offset: 5
     bit_size: 1
-    enum: MsrDsr
+    enum: Dtr
   - name: rin
     description: Read-only RIN_B state. Zero indicates logic one; one indicates logic zero.
     bit_offset: 6
     bit_size: 1
-    enum: MsrRin
+    enum: Dtr
   - name: dcd
     description: Read-only DCD_B state. Zero indicates logic one; one indicates logic zero.
     bit_offset: 7
     bit_size: 1
-    enum: MsrDcd
+    enum: Dtr
 fieldset/Reir:
   only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   description: Receiver Extended Idle. Change only with receiver disabled.
@@ -1389,7 +1363,7 @@ fieldset/Hdcr:
     description: Allow transmitter RTS_B to mask receive FIFO writes, without affecting the idle flag.
     bit_offset: 2
     bit_size: 1
-    enum: Rxwrmsk
+    enum: Rxmsk
   - name: rxmsk
     description: Allow transmitter RTS_B to mask the receive data pin.
     bit_offset: 3
@@ -1579,51 +1553,7 @@ enum/Osr:
     description: Results in an OSR of 32.
     value: 31
 enum/Dtr:
-  bit_size: 1
-  variants:
-  - name: Deasserted
-    description: Logic one (deasserted).
-    value: 0
-  - name: Asserted
-    description: Logic zero (asserted).
-    value: 1
-enum/Rts:
-  bit_size: 1
-  variants:
-  - name: Deasserted
-    description: Logic one (deasserted).
-    value: 0
-  - name: Asserted
-    description: Logic zero (asserted).
-    value: 1
-enum/MsrDcd:
-  bit_size: 1
-  variants:
-  - name: Deasserted
-    description: Logic one (deasserted).
-    value: 0
-  - name: Asserted
-    description: Logic zero (asserted).
-    value: 1
-enum/MsrRin:
-  bit_size: 1
-  variants:
-  - name: Deasserted
-    description: Logic one (deasserted).
-    value: 0
-  - name: Asserted
-    description: Logic zero (asserted).
-    value: 1
-enum/MsrDsr:
-  bit_size: 1
-  variants:
-  - name: Deasserted
-    description: Logic one (deasserted).
-    value: 0
-  - name: Asserted
-    description: Logic zero (asserted).
-    value: 1
-enum/MsrCts:
+  only_in: '^(MCXN235|MCXN236|MCXN246|MCXN247|MCXN526|MCXN527|MCXN536|MCXN537|MCXN546|MCXN547|MCXN556|MCXN557|MCXN946|MCXN947)$'
   bit_size: 1
   variants:
   - name: Deasserted
@@ -1633,6 +1563,7 @@ enum/MsrCts:
     description: Logic zero (asserted).
     value: 1
 enum/Txstall:
+  only_in: '^(MCXN235|MCXN236|MCXN246|MCXN247|MCXN526|MCXN527|MCXN536|MCXN537|MCXN546|MCXN547|MCXN556|MCXN557|MCXN946|MCXN947)$'
   bit_size: 1
   variants:
   - name: Disabled
@@ -1641,16 +1572,8 @@ enum/Txstall:
   - name: Enabled
     description: Does not become busy.
     value: 1
-enum/Rxwrmsk:
-  bit_size: 1
-  variants:
-  - name: NotMasked
-    description: Do not mask.
-    value: 0
-  - name: Masked
-    description: Mask.
-    value: 1
 enum/Rxmsk:
+  only_in: '^(MCXN235|MCXN236|MCXN246|MCXN247|MCXN526|MCXN527|MCXN536|MCXN537|MCXN546|MCXN547|MCXN556|MCXN557|MCXN946|MCXN947)$'
   bit_size: 1
   variants:
   - name: NotMasked
@@ -1660,6 +1583,7 @@ enum/Rxmsk:
     description: Mask.
     value: 1
 enum/Rxsel:
+  only_in: '^(MCXN235|MCXN236|MCXN246|MCXN247|MCXN526|MCXN527|MCXN536|MCXN537|MCXN546|MCXN547|MCXN556|MCXN557|MCXN946|MCXN947)$'
   bit_size: 1
   variants:
   - name: PinRxd

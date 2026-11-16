@@ -240,27 +240,27 @@ block/TenbasetPhy:
     byte_offset: 368
     bit_size: 16
     access: ReadWrite
-    fieldset: Intencapt2
+    fieldset: Intencapt1
   - name: intenset2
     description: 'Interrupt Enable Set1. Set alias for interrupt enable state: writing one enables the corresponding
       interrupt; zero has no effect.'
     byte_offset: 370
     bit_size: 16
     access: ReadWrite
-    fieldset: Intenset2
+    fieldset: Intenset1
   - name: intenclr2
     description: 'Interrupt Enable Clear2. Clear alias for interrupt enable state: writing one disables the corresponding
       interrupt; zero has no effect.'
     byte_offset: 372
     bit_size: 16
     access: ReadWrite
-    fieldset: Intenclr2
+    fieldset: Intenclr1
   - name: intstat2
     description: Interrupt Status2.
     byte_offset: 374
     bit_size: 16
     access: Read
-    fieldset: Intstat2
+    fieldset: Intstat1
   - name: plcadiag1
     description: PLCA TC14 Adv diagnostics. Diagnostic flags are write-one-to-clear.
     byte_offset: 416
@@ -984,267 +984,6 @@ fieldset/Intenclr1:
     bit_size: 1
 fieldset/Intstat1:
   description: F70RM Rev. 1 section 54.5.1.37; manual text line 173494.
-  bit_size: 16
-  reset_value: 0
-  fields:
-  - name: physcol
-    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
-    bit_offset: 0
-    bit_size: 1
-  - name: plcarec
-    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
-    bit_offset: 1
-    bit_size: 1
-  - name: plcastat
-    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
-    bit_offset: 2
-    bit_size: 1
-  - name: modestat
-    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
-    bit_offset: 3
-    bit_size: 1
-  - name: invldapb
-    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
-    bit_offset: 4
-    bit_size: 1
-  - name: locjab
-    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
-    bit_offset: 5
-    bit_size: 1
-  - name: remjab
-    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
-    bit_offset: 6
-    bit_size: 1
-  - name: pinfault
-    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
-    bit_offset: 7
-    bit_size: 1
-  - name: plcadiag
-    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
-    bit_offset: 8
-    bit_size: 1
-  - name: smiaccess
-    description: Read-only. status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
-    bit_offset: 9
-    bit_size: 1
-  - name: lclwk
-    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
-    bit_offset: 10
-    bit_size: 1
-  - name: sspdet
-    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
-    bit_offset: 11
-    bit_size: 1
-  - name: wutdet
-    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
-    bit_offset: 12
-    bit_size: 1
-  - name: wupdone
-    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
-    bit_offset: 13
-    bit_size: 1
-  - name: apbparity
-    description: Read-only. Status of corresponding interrupt after enable stage. 0b - Not Pending 1b - Pending
-    bit_offset: 14
-    bit_size: 1
-fieldset/Intencapt2:
-  description: F70RM Rev. 1 section 54.5.1.38; manual text line 173637.
-  bit_size: 16
-  reset_value: 0
-  fields:
-  - name: physcol
-    description: Physical Collision. Physical collision event Write 1 clears bits. 0b - NO Effect 1b - Clear
-    bit_offset: 0
-    bit_size: 1
-  - name: plcarec
-    description: PLCA Recovery. PLCA recovery event Write 1 clears bits. 0b - NO Effect 1b - Clear
-    bit_offset: 1
-    bit_size: 1
-  - name: plcastat
-    description: PLCA Status. PLCA status change Write 1 clears bits. 0b - NO Effect 1b - Clear
-    bit_offset: 2
-    bit_size: 1
-  - name: modestat
-    description: MODE Status. Mode controller status change Write 1 clears bits. 0b - NO Effect 1b - Clear
-    bit_offset: 3
-    bit_size: 1
-  - name: invldapb
-    description: Invalid APB. Invalid APB write access detected Write 1 clears bits. 0b - NO Effect 1b - Clear
-    bit_offset: 4
-    bit_size: 1
-  - name: locjab
-    description: Local Jabber. Local jabber event Write 1 clears bits. 0b - NO Effect 1b - Clear
-    bit_offset: 5
-    bit_size: 1
-  - name: remjab
-    description: Remote Jabber. Remote jabber event Write 1 clears bits. 0b - NO Effect 1b - Clear
-    bit_offset: 6
-    bit_size: 1
-  - name: pinfault
-    description: PIN Fault Monitor. TXC pin monitor has detected a ED, RX or TX pin fault Write 1 clears bits. 0b
-      - NO Effect 1b - Clear
-    bit_offset: 7
-    bit_size: 1
-  - name: plcadiag
-    description: PLCA Diagnostics. Adv PLCA diagnostics interrupt Write 1 clears bits. 0b - NO Effect 1b - Clear
-    bit_offset: 8
-    bit_size: 1
-  - name: smiaccess
-    description: SMI Access. SMI read/write access done interrupt Write 1 clears bits. 0b - NO Effect 1b - Clear
-    bit_offset: 9
-    bit_size: 1
-  - name: lclwk
-    description: Local Wake. Local wake event detected Write 1 clears bits. 0b - NO Effect 1b - Clear
-    bit_offset: 10
-    bit_size: 1
-  - name: sspdet
-    description: Suspend Symbol Detects. Suspend symbols received Write 1 clears bits. 0b - NO Effect 1b - Clear
-    bit_offset: 11
-    bit_size: 1
-  - name: wutdet
-    description: WUT Detect. WUT detected by the AFE Write 1 clears bits. 0b - NO Effect 1b - Clear
-    bit_offset: 12
-    bit_size: 1
-  - name: wupdone
-    description: WUP transmission completed Write 1 clears bits.. WUP Transmission 0b - NO Effect 1b - Clear
-    bit_offset: 13
-    bit_size: 1
-  - name: apbparity
-    description: APB Parity. Change in APB parity detected Write 1 clears bits. 0b - NO Effect 1b - Clear
-    bit_offset: 14
-    bit_size: 1
-fieldset/Intenset2:
-  description: F70RM Rev. 1 section 54.5.1.39; manual text line 173791.
-  bit_size: 16
-  reset_value: 0
-  fields:
-  - name: physcol
-    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
-    bit_offset: 0
-    bit_size: 1
-  - name: plcarec
-    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
-    bit_offset: 1
-    bit_size: 1
-  - name: plcastat
-    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
-    bit_offset: 2
-    bit_size: 1
-  - name: modestat
-    description: Mode status. 0b - Disabled 1b - ENABLED
-    bit_offset: 3
-    bit_size: 1
-  - name: invldapb
-    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
-    bit_offset: 4
-    bit_size: 1
-  - name: locjab
-    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
-    bit_offset: 5
-    bit_size: 1
-  - name: remjab
-    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
-    bit_offset: 6
-    bit_size: 1
-  - name: pinfault
-    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
-    bit_offset: 7
-    bit_size: 1
-  - name: plcadiag
-    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
-    bit_offset: 8
-    bit_size: 1
-  - name: smiaccess
-    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
-    bit_offset: 9
-    bit_size: 1
-  - name: lclwk
-    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
-    bit_offset: 10
-    bit_size: 1
-  - name: sspdet
-    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
-    bit_offset: 11
-    bit_size: 1
-  - name: wutdet
-    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
-    bit_offset: 12
-    bit_size: 1
-  - name: wupdone
-    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
-    bit_offset: 13
-    bit_size: 1
-  - name: apbparity
-    description: write 1 enables corresponding interrupt. 0b - Disabled 1b - ENABLED
-    bit_offset: 14
-    bit_size: 1
-fieldset/Intenclr2:
-  description: F70RM Rev. 1 section 54.5.1.40; manual text line 173928.
-  bit_size: 16
-  reset_value: 0
-  fields:
-  - name: physcol
-    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
-    bit_offset: 0
-    bit_size: 1
-  - name: plcarec
-    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
-    bit_offset: 1
-    bit_size: 1
-  - name: plcastat
-    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
-    bit_offset: 2
-    bit_size: 1
-  - name: modestat
-    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
-    bit_offset: 3
-    bit_size: 1
-  - name: invldapb
-    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
-    bit_offset: 4
-    bit_size: 1
-  - name: locjab
-    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
-    bit_offset: 5
-    bit_size: 1
-  - name: remjab
-    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
-    bit_offset: 6
-    bit_size: 1
-  - name: pinfault
-    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
-    bit_offset: 7
-    bit_size: 1
-  - name: plcadiag
-    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
-    bit_offset: 8
-    bit_size: 1
-  - name: smiaccess
-    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
-    bit_offset: 9
-    bit_size: 1
-  - name: lclwk
-    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
-    bit_offset: 10
-    bit_size: 1
-  - name: sspdet
-    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
-    bit_offset: 11
-    bit_size: 1
-  - name: wutdet
-    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
-    bit_offset: 12
-    bit_size: 1
-  - name: wupdone
-    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
-    bit_offset: 13
-    bit_size: 1
-  - name: apbparity
-    description: write 1 disables corresponding interrupt. 0b - NO_EFFECT 1b - DISABLE
-    bit_offset: 14
-    bit_size: 1
-fieldset/Intstat2:
-  description: F70RM Rev. 1 section 54.5.1.41; manual text line 174065.
   bit_size: 16
   reset_value: 0
   fields:

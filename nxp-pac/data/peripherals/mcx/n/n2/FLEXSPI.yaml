@@ -41,51 +41,51 @@ block/FlexspiAlpha:
   - name: ahbrxbuf0cr0
     description: AHB Receive Buffer 0 Control 0.
     byte_offset: 32
-    fieldset: FlexspiAlphaFieldsetJuliet
+    fieldset: Ahbrxbuf0cr
   - name: ahbrxbuf1cr0
     description: AHB Receive Buffer 1 Control 0.
     byte_offset: 36
-    fieldset: FlexspiAlphaFieldsetKilo
+    fieldset: Ahbrxbuf0cr
   - name: ahbrxbuf2cr0
     description: AHB Receive Buffer 2 Control 0.
     byte_offset: 40
-    fieldset: FlexspiAlphaFieldsetLima
+    fieldset: Ahbrxbuf0cr
   - name: ahbrxbuf3cr0
     description: AHB Receive Buffer 3 Control 0.
     byte_offset: 44
-    fieldset: FlexspiAlphaFieldsetMike
+    fieldset: Ahbrxbuf0cr
   - name: ahbrxbuf4cr0
     description: AHB Receive Buffer 4 Control 0.
     byte_offset: 48
-    fieldset: FlexspiAlphaFieldsetNovember
+    fieldset: Ahbrxbuf0cr
   - name: ahbrxbuf5cr0
     description: AHB Receive Buffer 5 Control 0.
     byte_offset: 52
-    fieldset: FlexspiAlphaFieldsetOscar
+    fieldset: Ahbrxbuf0cr
   - name: ahbrxbuf6cr0
     description: AHB Receive Buffer 6 Control 0.
     byte_offset: 56
-    fieldset: FlexspiAlphaFieldsetPapa
+    fieldset: Ahbrxbuf0cr
   - name: ahbrxbuf7cr0
     description: AHB Receive Buffer 7 Control 0.
     byte_offset: 60
-    fieldset: FlexspiAlphaFieldsetQuebec
+    fieldset: Ahbrxbuf0cr
   - name: flsha1cr0
     description: Flash Control 0.
     byte_offset: 96
-    fieldset: FlexspiAlphaFieldsetUniform
+    fieldset: Flsha1cr
   - name: flsha2cr0
     description: Flash Control 0.
     byte_offset: 100
-    fieldset: FlexspiAlphaFieldsetVictor
+    fieldset: Flsha1cr
   - name: flshb1cr0
     description: Flash Control 0.
     byte_offset: 104
-    fieldset: FlexspiAlphaFieldsetWhiskey
+    fieldset: Flsha1cr
   - name: flshb2cr0
     description: Flash Control 0.
     byte_offset: 108
-    fieldset: FlexspiAlphaFieldsetXray
+    fieldset: Flsha1cr
   - name: flshcr1
     description: Flash Control 1.
     array:
@@ -211,51 +211,51 @@ block/FlexspiAlpha:
   - name: ipsnszstart0
     description: IPS Nonsecure Region 0 Start Address.
     byte_offset: 1072
-    fieldset: FlexspiAlphaFieldsetHotelCharlie
+    fieldset: Ipsnszstart
   - name: ipsnszend0
     description: IPS Nonsecure Region 0 End Address.
     byte_offset: 1076
-    fieldset: FlexspiAlphaFieldsetFoxtrotCharlie
+    fieldset: Ipsnszend
   - name: ipsnszstart1
     description: IPS Nonsecure Region 1 Start Address.
     byte_offset: 1080
-    fieldset: FlexspiAlphaFieldsetIndiaCharlie
+    fieldset: Ipsnszstart
   - name: ipsnszend1
     description: IPS Nonsecure Region 1 End Address.
     byte_offset: 1084
-    fieldset: FlexspiAlphaFieldsetGolfCharlie
+    fieldset: Ipsnszend
   - name: ahbbufregionstart0
     description: Receive Buffer Start Address of Region 0.
     byte_offset: 1088
-    fieldset: FlexspiAlphaFieldsetEcho
+    fieldset: Ahbbufregionstart
   - name: ahbbufregionend0
     description: Receive Buffer Region 0 End Address.
     byte_offset: 1092
-    fieldset: FlexspiAlphaFieldsetAlpha
+    fieldset: Ahbbufregionend
   - name: ahbbufregionstart1
     description: Receive Buffer Start Address of Region 1.
     byte_offset: 1096
-    fieldset: FlexspiAlphaFieldsetFoxtrot
+    fieldset: Ahbbufregionstart
   - name: ahbbufregionend1
     description: Receive Buffer Region 1 End Address.
     byte_offset: 1100
-    fieldset: FlexspiAlphaFieldsetBravo
+    fieldset: Ahbbufregionend
   - name: ahbbufregionstart2
     description: Receive Buffer Start Address of Region 2.
     byte_offset: 1104
-    fieldset: FlexspiAlphaFieldsetGolf
+    fieldset: Ahbbufregionstart
   - name: ahbbufregionend2
     description: Receive Buffer Region 2 End Address.
     byte_offset: 1108
-    fieldset: FlexspiAlphaFieldsetCharlie
+    fieldset: Ahbbufregionend
   - name: ahbbufregionstart3
     description: Receive Buffer Start Address of Region 3.
     byte_offset: 1112
-    fieldset: FlexspiAlphaFieldsetHotel
+    fieldset: Ahbbufregionstart
   - name: ahbbufregionend3
     description: Receive Buffer Region 3 End Address.
     byte_offset: 1116
-    fieldset: FlexspiAlphaFieldsetDelta
+    fieldset: Ahbbufregionend
   - name: ipedctxctrl0
     description: IPED context control 0.
     byte_offset: 1280
@@ -275,11 +275,11 @@ block/FlexspiAlpha:
   - name: ipedctx0start
     description: Start Address of Region.
     byte_offset: 1320
-    fieldset: FlexspiAlphaFieldsetQuebecAlpha
+    fieldset: Ipedctx0start2
   - name: ipedctx0end
     description: End Address of Region.
     byte_offset: 1324
-    fieldset: FlexspiAlphaFieldsetNovemberAlpha
+    fieldset: Ipedctx0end2
   - name: ipedctx0aad0
     description: IPED Context0 Additional Authenticated Data0.
     byte_offset: 1328
@@ -299,11 +299,11 @@ block/FlexspiAlpha:
   - name: ipedctx1start
     description: Start Address of Region.
     byte_offset: 1352
-    fieldset: FlexspiAlphaFieldsetWhiskeyAlpha
+    fieldset: Ipedctx0start2
   - name: ipedctx1end
     description: End Address of Region.
     byte_offset: 1356
-    fieldset: FlexspiAlphaFieldsetTangoAlpha
+    fieldset: Ipedctx0end2
   - name: ipedctx1aad0
     description: IPED Context1 Additional Authenticated Data0.
     byte_offset: 1360
@@ -323,11 +323,11 @@ block/FlexspiAlpha:
   - name: ipedctx2start
     description: Start Address of Region.
     byte_offset: 1384
-    fieldset: FlexspiAlphaFieldsetCharlieBravo
+    fieldset: Ipedctx0start2
   - name: ipedctx2end
     description: End Address of Region.
     byte_offset: 1388
-    fieldset: FlexspiAlphaFieldsetZuluAlpha
+    fieldset: Ipedctx0end2
   - name: ipedctx2aad0
     description: IPED Context2 Additional Authenticated Data0.
     byte_offset: 1392
@@ -347,11 +347,11 @@ block/FlexspiAlpha:
   - name: ipedctx3start
     description: Start Address of Region.
     byte_offset: 1416
-    fieldset: FlexspiAlphaFieldsetIndiaBravo
+    fieldset: Ipedctx0start2
   - name: ipedctx3end
     description: End Address of Region.
     byte_offset: 1420
-    fieldset: FlexspiAlphaFieldsetFoxtrotBravo
+    fieldset: Ipedctx0end2
   - name: ipedctx3aad0
     description: IPED Context3 Additional Authenticated Data0.
     byte_offset: 1424
@@ -371,11 +371,11 @@ block/FlexspiAlpha:
   - name: ipedctx4start
     description: Start Address of Region.
     byte_offset: 1448
-    fieldset: FlexspiAlphaFieldsetOscarBravo
+    fieldset: Ipedctx0start2
   - name: ipedctx4end
     description: End Address of Region.
     byte_offset: 1452
-    fieldset: FlexspiAlphaFieldsetLimaBravo
+    fieldset: Ipedctx0end2
   - name: ipedctx4aad0
     description: IPED Context4 Additional Authenticated Data0.
     byte_offset: 1456
@@ -395,11 +395,11 @@ block/FlexspiAlpha:
   - name: ipedctx5start
     description: Start Address of Region.
     byte_offset: 1480
-    fieldset: FlexspiAlphaFieldsetUniformBravo
+    fieldset: Ipedctx0start2
   - name: ipedctx5end
     description: End Address of Region.
     byte_offset: 1484
-    fieldset: FlexspiAlphaFieldsetRomeoBravo
+    fieldset: Ipedctx0end2
   - name: ipedctx5aad0
     description: IPED Context5 Additional Authenticated Data0.
     byte_offset: 1488
@@ -419,11 +419,11 @@ block/FlexspiAlpha:
   - name: ipedctx6start
     description: Start Address of Region.
     byte_offset: 1512
-    fieldset: FlexspiAlphaFieldsetAlphaCharlie
+    fieldset: Ipedctx0start2
   - name: ipedctx6end
     description: End Address of Region.
     byte_offset: 1516
-    fieldset: FlexspiAlphaFieldsetXrayBravo
+    fieldset: Ipedctx0end2
   - name: ipedctx6aad0
     description: IPED Context6 Additional Authenticated Data0.
     byte_offset: 1520
@@ -432,57 +432,15 @@ block/FlexspiAlpha:
     description: IPED Context6 Additional Authenticated Data1.
     byte_offset: 1524
     fieldset: FlexspiAlphaFieldsetWhiskeyBravo
-fieldset/FlexspiAlphaFieldsetAlpha:
+fieldset/Ahbbufregionend:
   description: Receive Buffer Region 0 End Address.
   fields:
   - name: end_address
     description: End Address of Prefetch Sub-Buffer Region.
     bit_offset: 12
     bit_size: 20
-fieldset/FlexspiAlphaFieldsetBravo:
-  description: Receive Buffer Region 1 End Address.
-  fields:
-  - name: end_address
-    description: End Address of Prefetch Sub-Buffer Region.
-    bit_offset: 12
-    bit_size: 20
-fieldset/FlexspiAlphaFieldsetCharlie:
-  description: Receive Buffer Region 2 End Address.
-  fields:
-  - name: end_address
-    description: End Address of Prefetch Sub-Buffer Region.
-    bit_offset: 12
-    bit_size: 20
-fieldset/FlexspiAlphaFieldsetDelta:
-  description: Receive Buffer Region 3 End Address.
-  fields:
-  - name: end_address
-    description: End Address of Prefetch Sub-Buffer Region.
-    bit_offset: 12
-    bit_size: 20
-fieldset/FlexspiAlphaFieldsetEcho:
+fieldset/Ahbbufregionstart:
   description: Receive Buffer Start Address of Region 0.
-  fields:
-  - name: start_address
-    description: Start Address of Prefetch Sub-Buffer Region.
-    bit_offset: 12
-    bit_size: 20
-fieldset/FlexspiAlphaFieldsetFoxtrot:
-  description: Receive Buffer Start Address of Region 1.
-  fields:
-  - name: start_address
-    description: Start Address of Prefetch Sub-Buffer Region.
-    bit_offset: 12
-    bit_size: 20
-fieldset/FlexspiAlphaFieldsetGolf:
-  description: Receive Buffer Start Address of Region 2.
-  fields:
-  - name: start_address
-    description: Start Address of Prefetch Sub-Buffer Region.
-    bit_offset: 12
-    bit_size: 20
-fieldset/FlexspiAlphaFieldsetHotel:
-  description: Receive Buffer Start Address of Region 3.
   fields:
   - name: start_address
     description: Start Address of Prefetch Sub-Buffer Region.
@@ -500,12 +458,12 @@ fieldset/FlexspiAlphaFieldsetIndia:
     description: Clear AHB Receive Buffer.
     bit_offset: 1
     bit_size: 1
-    enum: FlexspiAlphaEnumRomeoAlpha
+    enum: Clrahbrxbuf2
   - name: clrahbtxbuf
     description: Clear AHB Transmit Buffer.
     bit_offset: 2
     bit_size: 1
-    enum: FlexspiAlphaEnumSierraAlpha
+    enum: Clrahbrxbuf2
   - name: cachableen
     description: Cacheable Read Access Enable.
     bit_offset: 3
@@ -520,7 +478,7 @@ fieldset/FlexspiAlphaFieldsetIndia:
     description: AHB Read Prefetch Enable.
     bit_offset: 5
     bit_size: 1
-    enum: FlexspiAlphaEnumIndia
+    enum: Dllen2
   - name: readaddropt
     description: AHB Read Address Option.
     bit_offset: 6
@@ -545,32 +503,7 @@ fieldset/FlexspiAlphaFieldsetIndia:
     description: AHB Memory-Mapped Flash Base Address.
     bit_offset: 29
     bit_size: 3
-fieldset/FlexspiAlphaFieldsetJuliet:
-  description: AHB Receive Buffer 0 Control 0.
-  fields:
-  - name: bufsz
-    description: AHB Receive Buffer Size.
-    bit_offset: 0
-    bit_size: 8
-  - name: mstrid
-    description: AHB Controller ID.
-    bit_offset: 16
-    bit_size: 5
-  - name: priority
-    description: AHB Controller Read Priority.
-    bit_offset: 24
-    bit_size: 3
-  - name: regionen
-    description: AHB Receive Buffer Address Region Enable.
-    bit_offset: 30
-    bit_size: 1
-    enum: FlexspiAlphaEnumOscar
-  - name: prefetchen
-    description: AHB Read Prefetch Enable.
-    bit_offset: 31
-    bit_size: 1
-    enum: FlexspiAlphaEnumNovember
-fieldset/FlexspiAlphaFieldsetKilo:
+fieldset/Ahbrxbuf0cr:
   description: AHB Receive Buffer 1 Control 0.
   fields:
   - name: bufsz
@@ -589,162 +522,12 @@ fieldset/FlexspiAlphaFieldsetKilo:
     description: AHB Receive Buffer Address Region Enable.
     bit_offset: 30
     bit_size: 1
-    enum: FlexspiAlphaEnumQuebec
+    enum: Regionen
   - name: prefetchen
     description: AHB Read Prefetch Enable.
     bit_offset: 31
     bit_size: 1
-    enum: FlexspiAlphaEnumPapa
-fieldset/FlexspiAlphaFieldsetLima:
-  description: AHB Receive Buffer 2 Control 0.
-  fields:
-  - name: bufsz
-    description: AHB Receive Buffer Size.
-    bit_offset: 0
-    bit_size: 8
-  - name: mstrid
-    description: AHB Controller ID.
-    bit_offset: 16
-    bit_size: 5
-  - name: priority
-    description: AHB Controller Read Priority.
-    bit_offset: 24
-    bit_size: 3
-  - name: regionen
-    description: AHB Receive Buffer Address Region Enable.
-    bit_offset: 30
-    bit_size: 1
-    enum: FlexspiAlphaEnumSierra
-  - name: prefetchen
-    description: AHB Read Prefetch Enable.
-    bit_offset: 31
-    bit_size: 1
-    enum: FlexspiAlphaEnumRomeo
-fieldset/FlexspiAlphaFieldsetMike:
-  description: AHB Receive Buffer 3 Control 0.
-  fields:
-  - name: bufsz
-    description: AHB Receive Buffer Size.
-    bit_offset: 0
-    bit_size: 8
-  - name: mstrid
-    description: AHB Controller ID.
-    bit_offset: 16
-    bit_size: 5
-  - name: priority
-    description: AHB Controller Read Priority.
-    bit_offset: 24
-    bit_size: 3
-  - name: regionen
-    description: AHB Receive Buffer Address Region Enable.
-    bit_offset: 30
-    bit_size: 1
-    enum: FlexspiAlphaEnumUniform
-  - name: prefetchen
-    description: AHB Read Prefetch Enable.
-    bit_offset: 31
-    bit_size: 1
-    enum: FlexspiAlphaEnumTango
-fieldset/FlexspiAlphaFieldsetNovember:
-  description: AHB Receive Buffer 4 Control 0.
-  fields:
-  - name: bufsz
-    description: AHB Receive Buffer Size.
-    bit_offset: 0
-    bit_size: 8
-  - name: mstrid
-    description: AHB Controller ID.
-    bit_offset: 16
-    bit_size: 5
-  - name: priority
-    description: AHB Controller Read Priority.
-    bit_offset: 24
-    bit_size: 3
-  - name: regionen
-    description: AHB Receive Buffer Address Region Enable.
-    bit_offset: 30
-    bit_size: 1
-    enum: FlexspiAlphaEnumWhiskey
-  - name: prefetchen
-    description: AHB Read Prefetch Enable.
-    bit_offset: 31
-    bit_size: 1
-    enum: FlexspiAlphaEnumVictor
-fieldset/FlexspiAlphaFieldsetOscar:
-  description: AHB Receive Buffer 5 Control 0.
-  fields:
-  - name: bufsz
-    description: AHB Receive Buffer Size.
-    bit_offset: 0
-    bit_size: 8
-  - name: mstrid
-    description: AHB Controller ID.
-    bit_offset: 16
-    bit_size: 5
-  - name: priority
-    description: AHB Controller Read Priority.
-    bit_offset: 24
-    bit_size: 3
-  - name: regionen
-    description: AHB Receive Buffer Address Region Enable.
-    bit_offset: 30
-    bit_size: 1
-    enum: FlexspiAlphaEnumYankee
-  - name: prefetchen
-    description: AHB Read Prefetch Enable.
-    bit_offset: 31
-    bit_size: 1
-    enum: FlexspiAlphaEnumXray
-fieldset/FlexspiAlphaFieldsetPapa:
-  description: AHB Receive Buffer 6 Control 0.
-  fields:
-  - name: bufsz
-    description: AHB Receive Buffer Size.
-    bit_offset: 0
-    bit_size: 8
-  - name: mstrid
-    description: AHB Controller ID.
-    bit_offset: 16
-    bit_size: 5
-  - name: priority
-    description: AHB Controller Read Priority.
-    bit_offset: 24
-    bit_size: 3
-  - name: regionen
-    description: AHB Receive Buffer Address Region Enable.
-    bit_offset: 30
-    bit_size: 1
-    enum: FlexspiAlphaEnumAlphaAlpha
-  - name: prefetchen
-    description: AHB Read Prefetch Enable.
-    bit_offset: 31
-    bit_size: 1
-    enum: FlexspiAlphaEnumZulu
-fieldset/FlexspiAlphaFieldsetQuebec:
-  description: AHB Receive Buffer 7 Control 0.
-  fields:
-  - name: bufsz
-    description: AHB Receive Buffer Size.
-    bit_offset: 0
-    bit_size: 8
-  - name: mstrid
-    description: AHB Controller ID.
-    bit_offset: 16
-    bit_size: 5
-  - name: priority
-    description: AHB Controller Read Priority.
-    bit_offset: 24
-    bit_size: 3
-  - name: regionen
-    description: AHB Receive Buffer Address Region Enable.
-    bit_offset: 30
-    bit_size: 1
-    enum: FlexspiAlphaEnumCharlieAlpha
-  - name: prefetchen
-    description: AHB Read Prefetch Enable.
-    bit_offset: 31
-    bit_size: 1
-    enum: FlexspiAlphaEnumBravoAlpha
+    enum: Prefetchen
 fieldset/FlexspiAlphaFieldsetRomeo:
   description: AHB Suspend Status.
   fields:
@@ -768,7 +551,7 @@ fieldset/FlexspiAlphaFieldsetSierra:
     description: DLL Calibration Enable.
     bit_offset: 0
     bit_size: 1
-    enum: FlexspiAlphaEnumBravoBravo
+    enum: Dllen2
   - name: dllreset
     description: DLL reset.
     bit_offset: 1
@@ -782,7 +565,7 @@ fieldset/FlexspiAlphaFieldsetSierra:
     description: Target Clock Delay Line Override Value Enable.
     bit_offset: 8
     bit_size: 1
-    enum: FlexspiAlphaEnumEchoDelta
+    enum: Dllen2
   - name: ovrdval
     description: Target Clock Delay Line Override Value.
     bit_offset: 9
@@ -798,7 +581,7 @@ fieldset/FlexspiAlphaFieldsetTango:
     description: Data Learning Pattern.
     bit_offset: 0
     bit_size: 32
-fieldset/FlexspiAlphaFieldsetUniform:
+fieldset/Flsha1cr:
   description: Flash Control 0.
   fields:
   - name: flshsz
@@ -809,83 +592,17 @@ fieldset/FlexspiAlphaFieldsetUniform:
     description: AHB Address Shift Function control.
     bit_offset: 29
     bit_size: 1
-    enum: FlexspiAlphaEnumEchoBravo
+    enum: Addrshift
   - name: splitwren
     description: AHB Write Access Split Function Enable.
     bit_offset: 30
     bit_size: 1
-    enum: FlexspiAlphaEnumGolfBravo
+    enum: Splitrden
   - name: splitrden
     description: AHB Read Access Split Function Enable.
     bit_offset: 31
     bit_size: 1
-    enum: FlexspiAlphaEnumFoxtrotBravo
-fieldset/FlexspiAlphaFieldsetVictor:
-  description: Flash Control 0.
-  fields:
-  - name: flshsz
-    description: Flash Size in KB.
-    bit_offset: 0
-    bit_size: 23
-  - name: addrshift
-    description: AHB Address Shift Function control.
-    bit_offset: 29
-    bit_size: 1
-    enum: FlexspiAlphaEnumHotelBravo
-  - name: splitwren
-    description: AHB Write Access Split Function Enable.
-    bit_offset: 30
-    bit_size: 1
-    enum: FlexspiAlphaEnumJulietBravo
-  - name: splitrden
-    description: AHB Read Access Split Function Enable.
-    bit_offset: 31
-    bit_size: 1
-    enum: FlexspiAlphaEnumIndiaBravo
-fieldset/FlexspiAlphaFieldsetWhiskey:
-  description: Flash Control 0.
-  fields:
-  - name: flshsz
-    description: Flash Size in KB.
-    bit_offset: 0
-    bit_size: 23
-  - name: addrshift
-    description: AHB Address Shift Function control.
-    bit_offset: 29
-    bit_size: 1
-    enum: FlexspiAlphaEnumKiloBravo
-  - name: splitwren
-    description: AHB Write Access Split Function Enable.
-    bit_offset: 30
-    bit_size: 1
-    enum: FlexspiAlphaEnumMikeBravo
-  - name: splitrden
-    description: AHB Read Access Split Function Enable.
-    bit_offset: 31
-    bit_size: 1
-    enum: FlexspiAlphaEnumLimaBravo
-fieldset/FlexspiAlphaFieldsetXray:
-  description: Flash Control 0.
-  fields:
-  - name: flshsz
-    description: Flash Size in KB.
-    bit_offset: 0
-    bit_size: 23
-  - name: addrshift
-    description: AHB Address Shift Function control.
-    bit_offset: 29
-    bit_size: 1
-    enum: FlexspiAlphaEnumNovemberBravo
-  - name: splitwren
-    description: AHB Write Access Split Function Enable.
-    bit_offset: 30
-    bit_size: 1
-    enum: FlexspiAlphaEnumPapaBravo
-  - name: splitrden
-    description: AHB Read Access Split Function Enable.
-    bit_offset: 31
-    bit_size: 1
-    enum: FlexspiAlphaEnumOscarBravo
+    enum: Splitrden
 fieldset/FlexspiAlphaFieldsetYankee:
   description: Flash Control 1.
   fields:
@@ -959,12 +676,12 @@ fieldset/FlexspiAlphaFieldsetAlphaAlpha:
     description: Write Mask Enable for Port A.
     bit_offset: 2
     bit_size: 1
-    enum: FlexspiAlphaEnumEchoEcho
+    enum: Wmena2
   - name: wmenb
     description: Write Mask Enable for Port B.
     bit_offset: 3
     bit_size: 1
-    enum: FlexspiAlphaEnumFoxtrotEcho
+    enum: Wmena2
 fieldset/FlexspiAlphaFieldsetBravoAlpha:
   description: HADDR REMAP END ADDR.
   fields:
@@ -998,72 +715,72 @@ fieldset/FlexspiAlphaFieldsetEchoAlpha:
     description: IP-Triggered Command Sequences Execution Finished Interrupt Enable.
     bit_offset: 0
     bit_size: 1
-    enum: FlexspiAlphaEnumWhiskeyBravo
+    enum: Ahbbustimeouten2
   - name: ipcmdgeen
     description: IP-Triggered Command Sequences Grant Timeout Interrupt Enable.
     bit_offset: 1
     bit_size: 1
-    enum: FlexspiAlphaEnumBravoCharlie
+    enum: Ahbbustimeouten2
   - name: ahbcmdgeen
     description: AHB-Triggered Command Sequences Grant Timeout Interrupt Enable.
     bit_offset: 2
     bit_size: 1
-    enum: FlexspiAlphaEnumHotel
+    enum: Ahbbustimeouten2
   - name: ipcmderren
     description: IP-Triggered Command Sequences Error Detected Interrupt Enable.
     bit_offset: 3
     bit_size: 1
-    enum: FlexspiAlphaEnumZuluBravo
+    enum: Ahbbustimeouten2
   - name: ahbcmderren
     description: AHB-Triggered Command Sequences Error Detected Interrupt Enable.
     bit_offset: 4
     bit_size: 1
-    enum: FlexspiAlphaEnumFoxtrot
+    enum: Ahbbustimeouten2
   - name: iprxwaen
     description: IP Receive FIFO Watermark Available Interrupt Enable.
     bit_offset: 5
     bit_size: 1
-    enum: FlexspiAlphaEnumXrayCharlie
+    enum: Ahbbustimeouten2
   - name: iptxween
     description: IP Transmit FIFO Watermark Empty Interrupt Enable.
     bit_offset: 6
     bit_size: 1
-    enum: FlexspiAlphaEnumZuluCharlie
+    enum: Ahbbustimeouten2
   - name: datalearnfailen
     description: Data Learning Failed Interrupt Enable.
     bit_offset: 7
     bit_size: 1
-    enum: FlexspiAlphaEnumAlphaBravo
+    enum: Ahbbustimeouten2
   - name: sckstopbyrden
     description: SCLK Stopped By Read Interrupt Enable.
     bit_offset: 8
     bit_size: 1
-    enum: FlexspiAlphaEnumSierraDelta
+    enum: Ahbbustimeouten2
   - name: sckstopbywren
     description: SCLK Stopped By Write Interrupt Enable.
     bit_offset: 9
     bit_size: 1
-    enum: FlexspiAlphaEnumUniformDelta
+    enum: Ahbbustimeouten2
   - name: ahbbustimeouten
     description: AHB Bus Timeout Interrupt Enable.
     bit_offset: 10
     bit_size: 1
-    enum: FlexspiAlphaEnumCharlie
+    enum: Ahbbustimeouten2
   - name: seqtimeouten
     description: Sequence execution Timeout Interrupt Enable.
     bit_offset: 11
     bit_size: 1
-    enum: FlexspiAlphaEnumXrayDelta
+    enum: Ahbbustimeouten2
   - name: ipcmdsecurevioen
     description: IP Command Security Violation Interrupt Enable.
     bit_offset: 16
     bit_size: 1
-    enum: FlexspiAlphaEnumDeltaCharlie
+    enum: Ahbbustimeouten2
   - name: ahbgcmerren
     description: AHB Read GCM Error Interrupt Enable.
     bit_offset: 17
     bit_size: 1
-    enum: FlexspiAlphaEnumKilo
+    enum: Ahbbustimeouten2
 fieldset/FlexspiAlphaFieldsetFoxtrotAlpha:
   description: Interrupt.
   fields:
@@ -1071,72 +788,72 @@ fieldset/FlexspiAlphaFieldsetFoxtrotAlpha:
     description: IP-Triggered Command Sequences Execution Finished.
     bit_offset: 0
     bit_size: 1
-    enum: FlexspiAlphaEnumVictorBravo
+    enum: Ahbbustimeout
   - name: ipcmdge
     description: IP-Triggered Command Sequences Grant Timeout.
     bit_offset: 1
     bit_size: 1
-    enum: FlexspiAlphaEnumAlphaCharlie
+    enum: Ahbbustimeout
   - name: ahbcmdge
     description: AHB-Triggered Command Sequences Grant Timeout.
     bit_offset: 2
     bit_size: 1
-    enum: FlexspiAlphaEnumGolf
+    enum: Ahbbustimeout
   - name: ipcmderr
     description: IP-Triggered Command Sequences Error.
     bit_offset: 3
     bit_size: 1
-    enum: FlexspiAlphaEnumXrayBravo
+    enum: Ahbbustimeout
   - name: ahbcmderr
     description: AHB-Triggered Command Sequences Error.
     bit_offset: 4
     bit_size: 1
-    enum: FlexspiAlphaEnumDelta
+    enum: Ahbbustimeout
   - name: iprxwa
     description: IP Receive FIFO Watermark Available.
     bit_offset: 5
     bit_size: 1
-    enum: FlexspiAlphaEnumWhiskeyCharlie
+    enum: Ahbbustimeout
   - name: iptxwe
     description: IP Transmit FIFO Watermark Empty.
     bit_offset: 6
     bit_size: 1
-    enum: FlexspiAlphaEnumYankeeCharlie
+    enum: Ahbbustimeout
   - name: datalearnfail
     description: Data Learning Failed.
     bit_offset: 7
     bit_size: 1
-    enum: FlexspiAlphaEnumZuluAlpha
+    enum: Ahbbustimeout
   - name: sckstopbyrd
     description: SCLK Stopped Due To Full Receive FIFO.
     bit_offset: 8
     bit_size: 1
-    enum: FlexspiAlphaEnumRomeoDelta
+    enum: Ahbbustimeout
   - name: sckstopbywr
     description: SCLK Stopped Due To Empty Transmit FIFO.
     bit_offset: 9
     bit_size: 1
-    enum: FlexspiAlphaEnumTangoDelta
+    enum: Ahbbustimeout
   - name: ahbbustimeout
     description: AHB Bus Timeout.
     bit_offset: 10
     bit_size: 1
-    enum: FlexspiAlphaEnumBravo
+    enum: Ahbbustimeout
   - name: seqtimeout
     description: Sequence Execution Timeout.
     bit_offset: 11
     bit_size: 1
-    enum: FlexspiAlphaEnumWhiskeyDelta
+    enum: Ahbbustimeout
   - name: ipcmdsecurevio
     description: IP Command Security Violation.
     bit_offset: 16
     bit_size: 1
-    enum: FlexspiAlphaEnumCharlieCharlie
+    enum: Ahbbustimeout
   - name: ahbgcmerr
     description: AHB Read GCM Error.
     bit_offset: 17
     bit_size: 1
-    enum: FlexspiAlphaEnumJuliet
+    enum: Ahbbustimeout
 fieldset/FlexspiAlphaFieldsetGolfAlpha:
   description: IP Command.
   fields:
@@ -1202,22 +919,22 @@ fieldset/FlexspiAlphaFieldsetKiloAlpha:
     description: IPED Encryption and Decryption Enable.
     bit_offset: 1
     bit_size: 1
-    enum: FlexspiAlphaEnumEchoCharlie
+    enum: Ahbgcmrd
   - name: ipwr_en
     description: IP Write IPED CTR Mode Encryption Enable.
     bit_offset: 2
     bit_size: 1
-    enum: FlexspiAlphaEnumAlphaDelta
+    enum: Ahbgcmrd
   - name: ahbwr_en
     description: AHB Write IPED CTR Mode Encryption Enable.
     bit_offset: 3
     bit_size: 1
-    enum: FlexspiAlphaEnumDeltaAlpha
+    enum: Ahbgcmrd
   - name: ahbrd_en
     description: AHB Read IPED CTR Mode Decryption Enable.
     bit_offset: 4
     bit_size: 1
-    enum: FlexspiAlphaEnumMike
+    enum: Ahbgcmrd
   - name: ipgcmwr
     description: IP Write GCM Mode Enable.
     bit_offset: 6
@@ -1227,12 +944,12 @@ fieldset/FlexspiAlphaFieldsetKiloAlpha:
     description: AHB Write IPED GCM Mode Encryption Enable.
     bit_offset: 7
     bit_size: 1
-    enum: FlexspiAlphaEnumEchoAlpha
+    enum: Ahbgcmrd
   - name: ahbgcmrd
     description: AHB Read IPED GCM Mode Decryption Enable.
     bit_offset: 8
     bit_size: 1
-    enum: FlexspiAlphaEnumLima
+    enum: Ahbgcmrd
   - name: iped_protect
     description: IPED Protection.
     bit_offset: 9
@@ -1257,13 +974,6 @@ fieldset/FlexspiAlphaFieldsetMikeAlpha:
     description: CTX AAD.
     bit_offset: 0
     bit_size: 32
-fieldset/FlexspiAlphaFieldsetNovemberAlpha:
-  description: End Address of Region.
-  fields:
-  - name: end_address
-    description: End Address of IPED Region.
-    bit_offset: 8
-    bit_size: 24
 fieldset/FlexspiAlphaFieldsetOscarAlpha:
   description: IPED Context0 IV0.
   fields:
@@ -1278,23 +988,6 @@ fieldset/FlexspiAlphaFieldsetPapaAlpha:
     description: Highest 32 bits of IV for region 0.
     bit_offset: 0
     bit_size: 32
-fieldset/FlexspiAlphaFieldsetQuebecAlpha:
-  description: Start Address of Region.
-  fields:
-  - name: gcm
-    description: GCM Mode Enable.
-    bit_offset: 0
-    bit_size: 1
-    enum: FlexspiAlphaEnumIndiaCharlie
-  - name: ahbbuserror_dis
-    description: AHB Bus Error Disable.
-    bit_offset: 1
-    bit_size: 1
-    enum: FlexspiAlphaEnumHotelCharlie
-  - name: start_address
-    description: Start Address.
-    bit_offset: 8
-    bit_size: 24
 fieldset/FlexspiAlphaFieldsetRomeoAlpha:
   description: IPED Context1 Additional Authenticated Data0.
   fields:
@@ -1309,13 +1002,6 @@ fieldset/FlexspiAlphaFieldsetSierraAlpha:
     description: CTX AAD.
     bit_offset: 0
     bit_size: 32
-fieldset/FlexspiAlphaFieldsetTangoAlpha:
-  description: End Address of Region.
-  fields:
-  - name: end_address
-    description: End Address of IPED Region.
-    bit_offset: 8
-    bit_size: 24
 fieldset/FlexspiAlphaFieldsetUniformAlpha:
   description: IPED Context1 IV0.
   fields:
@@ -1330,23 +1016,6 @@ fieldset/FlexspiAlphaFieldsetVictorAlpha:
     description: Highest 32 bits of IV for region 1.
     bit_offset: 0
     bit_size: 32
-fieldset/FlexspiAlphaFieldsetWhiskeyAlpha:
-  description: Start Address of Region.
-  fields:
-  - name: gcm
-    description: GCM Mode Enable.
-    bit_offset: 0
-    bit_size: 1
-    enum: FlexspiAlphaEnumKiloCharlie
-  - name: ahbbuserror_dis
-    description: AHB Bus Error Disable.
-    bit_offset: 1
-    bit_size: 1
-    enum: FlexspiAlphaEnumJulietCharlie
-  - name: start_address
-    description: Start Address.
-    bit_offset: 8
-    bit_size: 24
 fieldset/FlexspiAlphaFieldsetXrayAlpha:
   description: IPED Context2 Additional Authenticated Data0.
   fields:
@@ -1361,13 +1030,6 @@ fieldset/FlexspiAlphaFieldsetYankeeAlpha:
     description: CTX AAD.
     bit_offset: 0
     bit_size: 32
-fieldset/FlexspiAlphaFieldsetZuluAlpha:
-  description: End Address of Region.
-  fields:
-  - name: end_address
-    description: End Address of IPED Region.
-    bit_offset: 8
-    bit_size: 24
 fieldset/FlexspiAlphaFieldsetAlphaBravo:
   description: IPED Context2 IV0.
   fields:
@@ -1382,23 +1044,6 @@ fieldset/FlexspiAlphaFieldsetBravoBravo:
     description: Highest 32 bits of IV for region 2.
     bit_offset: 0
     bit_size: 32
-fieldset/FlexspiAlphaFieldsetCharlieBravo:
-  description: Start Address of Region.
-  fields:
-  - name: gcm
-    description: GCM Mode Enable.
-    bit_offset: 0
-    bit_size: 1
-    enum: FlexspiAlphaEnumMikeCharlie
-  - name: ahbbuserror_dis
-    description: AHB Bus Error Disable.
-    bit_offset: 1
-    bit_size: 1
-    enum: FlexspiAlphaEnumLimaCharlie
-  - name: start_address
-    description: Start Address.
-    bit_offset: 8
-    bit_size: 24
 fieldset/FlexspiAlphaFieldsetDeltaBravo:
   description: IPED Context3 Additional Authenticated Data0.
   fields:
@@ -1413,13 +1058,6 @@ fieldset/FlexspiAlphaFieldsetEchoBravo:
     description: CTX AAD.
     bit_offset: 0
     bit_size: 32
-fieldset/FlexspiAlphaFieldsetFoxtrotBravo:
-  description: End Address of Region.
-  fields:
-  - name: end_address
-    description: End Address of IPED Region.
-    bit_offset: 8
-    bit_size: 24
 fieldset/FlexspiAlphaFieldsetGolfBravo:
   description: IPED Context3 IV0.
   fields:
@@ -1434,19 +1072,19 @@ fieldset/FlexspiAlphaFieldsetHotelBravo:
     description: Highest 32 bits of IV for region 3.
     bit_offset: 0
     bit_size: 32
-fieldset/FlexspiAlphaFieldsetIndiaBravo:
+fieldset/Ipedctx0start2:
   description: Start Address of Region.
   fields:
   - name: gcm
     description: GCM Mode Enable.
     bit_offset: 0
     bit_size: 1
-    enum: FlexspiAlphaEnumOscarCharlie
+    enum: Gcm
   - name: ahbbuserror_dis
     description: AHB Bus Error Disable.
     bit_offset: 1
     bit_size: 1
-    enum: FlexspiAlphaEnumNovemberCharlie
+    enum: AhbbuserrorDis
   - name: start_address
     description: Start Address.
     bit_offset: 8
@@ -1465,7 +1103,7 @@ fieldset/FlexspiAlphaFieldsetKiloBravo:
     description: CTX AAD.
     bit_offset: 0
     bit_size: 32
-fieldset/FlexspiAlphaFieldsetLimaBravo:
+fieldset/Ipedctx0end2:
   description: End Address of Region.
   fields:
   - name: end_address
@@ -1486,23 +1124,6 @@ fieldset/FlexspiAlphaFieldsetNovemberBravo:
     description: Highest 32 bits of IV for region 4.
     bit_offset: 0
     bit_size: 32
-fieldset/FlexspiAlphaFieldsetOscarBravo:
-  description: Start Address of Region.
-  fields:
-  - name: gcm
-    description: GCM Mode Enable.
-    bit_offset: 0
-    bit_size: 1
-    enum: FlexspiAlphaEnumQuebecCharlie
-  - name: ahbbuserror_dis
-    description: AHB Bus Error Disable.
-    bit_offset: 1
-    bit_size: 1
-    enum: FlexspiAlphaEnumPapaCharlie
-  - name: start_address
-    description: Start Address.
-    bit_offset: 8
-    bit_size: 24
 fieldset/FlexspiAlphaFieldsetPapaBravo:
   description: IPED Context5 Additional Authenticated Data0.
   fields:
@@ -1517,13 +1138,6 @@ fieldset/FlexspiAlphaFieldsetQuebecBravo:
     description: CTX AAD.
     bit_offset: 0
     bit_size: 32
-fieldset/FlexspiAlphaFieldsetRomeoBravo:
-  description: End Address of Region.
-  fields:
-  - name: end_address
-    description: End Address of IPED Region.
-    bit_offset: 8
-    bit_size: 24
 fieldset/FlexspiAlphaFieldsetSierraBravo:
   description: IPED Context5 IV0.
   fields:
@@ -1538,23 +1152,6 @@ fieldset/FlexspiAlphaFieldsetTangoBravo:
     description: Highest 32 bits of IV for region 5.
     bit_offset: 0
     bit_size: 32
-fieldset/FlexspiAlphaFieldsetUniformBravo:
-  description: Start Address of Region.
-  fields:
-  - name: gcm
-    description: GCM Mode Enable.
-    bit_offset: 0
-    bit_size: 1
-    enum: FlexspiAlphaEnumSierraCharlie
-  - name: ahbbuserror_dis
-    description: AHB Bus Error Disable.
-    bit_offset: 1
-    bit_size: 1
-    enum: FlexspiAlphaEnumRomeoCharlie
-  - name: start_address
-    description: Start Address.
-    bit_offset: 8
-    bit_size: 24
 fieldset/FlexspiAlphaFieldsetVictorBravo:
   description: IPED Context6 Additional Authenticated Data0.
   fields:
@@ -1569,13 +1166,6 @@ fieldset/FlexspiAlphaFieldsetWhiskeyBravo:
     description: CTX AAD.
     bit_offset: 0
     bit_size: 32
-fieldset/FlexspiAlphaFieldsetXrayBravo:
-  description: End Address of Region.
-  fields:
-  - name: end_address
-    description: End Address of IPED Region.
-    bit_offset: 8
-    bit_size: 24
 fieldset/FlexspiAlphaFieldsetYankeeBravo:
   description: IPED Context6 IV0.
   fields:
@@ -1590,23 +1180,6 @@ fieldset/FlexspiAlphaFieldsetZuluBravo:
     description: Highest 32 bits of IV for region 6.
     bit_offset: 0
     bit_size: 32
-fieldset/FlexspiAlphaFieldsetAlphaCharlie:
-  description: Start Address of Region.
-  fields:
-  - name: gcm
-    description: GCM Mode Enable.
-    bit_offset: 0
-    bit_size: 1
-    enum: FlexspiAlphaEnumUniformCharlie
-  - name: ahbbuserror_dis
-    description: AHB Bus Error Disable.
-    bit_offset: 1
-    bit_size: 1
-    enum: FlexspiAlphaEnumTangoCharlie
-  - name: start_address
-    description: Start Address.
-    bit_offset: 8
-    bit_size: 24
 fieldset/FlexspiAlphaFieldsetBravoCharlie:
   description: IPED context control 0.
   fields:
@@ -1697,29 +1270,15 @@ fieldset/FlexspiAlphaFieldsetEchoCharlie:
     description: Read Data Counter.
     bit_offset: 16
     bit_size: 16
-fieldset/FlexspiAlphaFieldsetFoxtrotCharlie:
-  description: IPS Nonsecure Region 0 End Address.
-  fields:
-  - name: end_address
-    description: End Address of Nonsecure Region.
-    bit_offset: 12
-    bit_size: 20
-fieldset/FlexspiAlphaFieldsetGolfCharlie:
+fieldset/Ipsnszend:
   description: IPS Nonsecure Region 1 End Address.
   fields:
   - name: end_address
     description: End Address of Nonsecure Region.
     bit_offset: 12
     bit_size: 20
-fieldset/FlexspiAlphaFieldsetHotelCharlie:
+fieldset/Ipsnszstart:
   description: IPS Nonsecure Region 0 Start Address.
-  fields:
-  - name: start_address
-    description: Start Address of Nonsecure Region.
-    bit_offset: 12
-    bit_size: 20
-fieldset/FlexspiAlphaFieldsetIndiaCharlie:
-  description: IPS Nonsecure Region 1 Start Address.
   fields:
   - name: start_address
     description: Start Address of Nonsecure Region.
@@ -1832,27 +1391,27 @@ fieldset/FlexspiAlphaFieldsetOscarCharlie:
     description: Half Speed Serial Flash Memory Access Enable.
     bit_offset: 11
     bit_size: 1
-    enum: FlexspiAlphaEnumQuebecBravo
+    enum: Ahbgcmrd
   - name: dozeen
     description: Doze Mode Enable.
     bit_offset: 12
     bit_size: 1
-    enum: FlexspiAlphaEnumDeltaBravo
+    enum: Ahbgcmrd
   - name: combinationen
     description: Combination Mode Enable.
     bit_offset: 13
     bit_size: 1
-    enum: FlexspiAlphaEnumWhiskeyAlpha
+    enum: Splitrden
   - name: sckfreerunen
     description: SCLK Free-running Enable.
     bit_offset: 14
     bit_size: 1
-    enum: FlexspiAlphaEnumQuebecDelta
+    enum: Splitrden
   - name: learnen
     description: Data Learning Enable.
     bit_offset: 15
     bit_size: 1
-    enum: FlexspiAlphaEnumBravoDelta
+    enum: Splitrden
   - name: ipgrantwait
     description: Timeout Wait Cycle for IP Command Grant.
     bit_offset: 16
@@ -1923,12 +1482,12 @@ fieldset/FlexspiAlphaFieldsetSierraCharlie:
     description: SEQ_CTL State Machine Idle.
     bit_offset: 0
     bit_size: 1
-    enum: FlexspiAlphaEnumVictorDelta
+    enum: Arbidle2
   - name: arbidle
     description: ARB_CTL State Machine Idle.
     bit_offset: 1
     bit_size: 1
-    enum: FlexspiAlphaEnumIndiaAlpha
+    enum: Arbidle2
   - name: arbcmdsrc
     description: ARB Command Source.
     bit_offset: 2
@@ -1970,12 +1529,12 @@ fieldset/FlexspiAlphaFieldsetUniformCharlie:
     description: Flash A Sample Target Delay Line Locked.
     bit_offset: 0
     bit_size: 1
-    enum: FlexspiAlphaEnumKiloAlpha
+    enum: Areflock2
   - name: areflock
     description: Flash A Sample Clock Reference Delay Line Locked.
     bit_offset: 1
     bit_size: 1
-    enum: FlexspiAlphaEnumJulietAlpha
+    enum: Areflock2
   - name: aslvsel
     description: Flash A Sample Clock Target Delay Line Delay Cell Number.
     bit_offset: 2
@@ -1988,12 +1547,12 @@ fieldset/FlexspiAlphaFieldsetUniformCharlie:
     description: Flash B Sample Target Reference Delay Line Locked.
     bit_offset: 16
     bit_size: 1
-    enum: FlexspiAlphaEnumNovemberAlpha
+    enum: Areflock2
   - name: breflock
     description: Flash B Sample Clock Reference Delay Line Locked.
     bit_offset: 17
     bit_size: 1
-    enum: FlexspiAlphaEnumMikeAlpha
+    enum: Areflock2
   - name: bslvsel
     description: Flash B Sample Clock Target Delay Line Delay Cell Number.
     bit_offset: 18
@@ -2018,33 +1577,6 @@ enum/FlexspiAlphaEnumAlpha:
   - name: Val1
     description: An AHB read prefetch command sequence has been suspended.
     value: 1
-enum/FlexspiAlphaEnumBravo:
-  bit_size: 1
-  variants:
-  - name: Interrupt
-    description: Interrupt condition has occurred.
-    value: 1
-  - name: NoInterrupt
-    description: Interrupt condition has not occurred.
-    value: 0
-enum/FlexspiAlphaEnumCharlie:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disable interrupt or no impact.
-    value: 0
-  - name: Value1
-    description: Enable interrupt.
-    value: 1
-enum/FlexspiAlphaEnumDelta:
-  bit_size: 1
-  variants:
-  - name: Interrupt
-    description: Interrupt condition has occurred.
-    value: 1
-  - name: NoInterrupt
-    description: Interrupt condition has not occurred.
-    value: 0
 enum/FlexspiAlphaEnumEcho:
   bit_size: 4
   variants:
@@ -2066,16 +1598,7 @@ enum/FlexspiAlphaEnumEcho:
   - name: Val6
     description: Sequence execution timeout.
     value: 14
-enum/FlexspiAlphaEnumFoxtrot:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disable interrupt or no impact.
-    value: 0
-  - name: Value1
-    description: Enable interrupt.
-    value: 1
-enum/FlexspiAlphaEnumGolf:
+enum/Ahbbustimeout:
   bit_size: 1
   variants:
   - name: Interrupt
@@ -2084,7 +1607,16 @@ enum/FlexspiAlphaEnumGolf:
   - name: NoInterrupt
     description: Interrupt condition has not occurred.
     value: 0
-enum/FlexspiAlphaEnumHotel:
+enum/Dllen2:
+  bit_size: 1
+  variants:
+  - name: Value0
+    description: Disable.
+    value: 0
+  - name: Value1
+    description: Enable.
+    value: 1
+enum/Ahbbustimeouten2:
   bit_size: 1
   variants:
   - name: Value0
@@ -2093,34 +1625,7 @@ enum/FlexspiAlphaEnumHotel:
   - name: Value1
     description: Enable interrupt.
     value: 1
-enum/FlexspiAlphaEnumIndia:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disable.
-    value: 0
-  - name: Value1
-    description: Enable.
-    value: 1
-enum/FlexspiAlphaEnumJuliet:
-  bit_size: 1
-  variants:
-  - name: Interrupt
-    description: Interrupt condition has occurred.
-    value: 1
-  - name: NoInterrupt
-    description: Interrupt condition has not occurred.
-    value: 0
-enum/FlexspiAlphaEnumKilo:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disable interrupt or no impact.
-    value: 0
-  - name: Value1
-    description: Enable interrupt.
-    value: 1
-enum/FlexspiAlphaEnumLima:
+enum/Ahbgcmrd:
   bit_size: 1
   variants:
   - name: Val0
@@ -2129,25 +1634,7 @@ enum/FlexspiAlphaEnumLima:
   - name: Val1
     description: Enable.
     value: 1
-enum/FlexspiAlphaEnumMike:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: Disable.
-    value: 0
-  - name: Val1
-    description: Enable.
-    value: 1
-enum/FlexspiAlphaEnumNovember:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disabled.
-    value: 0
-  - name: Value1
-    description: Enabled when is enabled.
-    value: 1
-enum/FlexspiAlphaEnumOscar:
+enum/Regionen:
   bit_size: 1
   variants:
   - name: Value0
@@ -2156,7 +1643,7 @@ enum/FlexspiAlphaEnumOscar:
   - name: Value1
     description: Enabled. The buffer hit is based on the value of MSTRID and the address within AHBBUFREGIONSTARTn and AHBREGIONENDn.
     value: 1
-enum/FlexspiAlphaEnumPapa:
+enum/Prefetchen:
   bit_size: 1
   variants:
   - name: Value0
@@ -2164,141 +1651,6 @@ enum/FlexspiAlphaEnumPapa:
     value: 0
   - name: Value1
     description: Enabled when is enabled.
-    value: 1
-enum/FlexspiAlphaEnumQuebec:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disabled. The buffer hit is based on the value of MSTRID only.
-    value: 0
-  - name: Value1
-    description: Enabled. The buffer hit is based on the value of MSTRID and the address within AHBBUFREGIONSTARTn and AHBREGIONENDn.
-    value: 1
-enum/FlexspiAlphaEnumRomeo:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disabled.
-    value: 0
-  - name: Value1
-    description: Enabled when is enabled.
-    value: 1
-enum/FlexspiAlphaEnumSierra:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disabled. The buffer hit is based on the value of MSTRID only.
-    value: 0
-  - name: Value1
-    description: Enabled. The buffer hit is based on the value of MSTRID and the address within AHBBUFREGIONSTARTn and AHBREGIONENDn.
-    value: 1
-enum/FlexspiAlphaEnumTango:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disabled.
-    value: 0
-  - name: Value1
-    description: Enabled when is enabled.
-    value: 1
-enum/FlexspiAlphaEnumUniform:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disabled. The buffer hit is based on the value of MSTRID only.
-    value: 0
-  - name: Value1
-    description: Enabled. The buffer hit is based on the value of MSTRID and the address within AHBBUFREGIONSTARTn and AHBREGIONENDn.
-    value: 1
-enum/FlexspiAlphaEnumVictor:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disabled.
-    value: 0
-  - name: Value1
-    description: Enabled when is enabled.
-    value: 1
-enum/FlexspiAlphaEnumWhiskey:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disabled. The buffer hit is based on the value of MSTRID only.
-    value: 0
-  - name: Value1
-    description: Enabled. The buffer hit is based on the value of MSTRID and the address within AHBBUFREGIONSTARTn and AHBREGIONENDn.
-    value: 1
-enum/FlexspiAlphaEnumXray:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disabled.
-    value: 0
-  - name: Value1
-    description: Enabled when is enabled.
-    value: 1
-enum/FlexspiAlphaEnumYankee:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disabled. The buffer hit is based on the value of MSTRID only.
-    value: 0
-  - name: Value1
-    description: Enabled. The buffer hit is based on the value of MSTRID and the address within AHBBUFREGIONSTARTn and AHBREGIONENDn.
-    value: 1
-enum/FlexspiAlphaEnumZulu:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disabled.
-    value: 0
-  - name: Value1
-    description: Enabled when is enabled.
-    value: 1
-enum/FlexspiAlphaEnumAlphaAlpha:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disabled. The buffer hit is based on the value of MSTRID only.
-    value: 0
-  - name: Value1
-    description: Enabled. The buffer hit is based on the value of MSTRID and the address within AHBBUFREGIONSTARTn and AHBREGIONENDn.
-    value: 1
-enum/FlexspiAlphaEnumBravoAlpha:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disabled.
-    value: 0
-  - name: Value1
-    description: Enabled when is enabled.
-    value: 1
-enum/FlexspiAlphaEnumCharlieAlpha:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disabled. The buffer hit is based on the value of MSTRID only.
-    value: 0
-  - name: Value1
-    description: Enabled. The buffer hit is based on the value of MSTRID and the address within AHBBUFREGIONSTARTn and AHBREGIONENDn.
-    value: 1
-enum/FlexspiAlphaEnumDeltaAlpha:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: Disable.
-    value: 0
-  - name: Val1
-    description: Enable.
-    value: 1
-enum/FlexspiAlphaEnumEchoAlpha:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: Disable.
-    value: 0
-  - name: Val1
-    description: Enable.
     value: 1
 enum/FlexspiAlphaEnumFoxtrotAlpha:
   bit_size: 2
@@ -2339,7 +1691,7 @@ enum/FlexspiAlphaEnumHotelAlpha:
   - name: Val3
     description: Trigger source is a suspended command that has resumed.
     value: 3
-enum/FlexspiAlphaEnumIndiaAlpha:
+enum/Arbidle2:
   bit_size: 1
   variants:
   - name: Value0
@@ -2348,16 +1700,7 @@ enum/FlexspiAlphaEnumIndiaAlpha:
   - name: Value1
     description: Idle.
     value: 1
-enum/FlexspiAlphaEnumJulietAlpha:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: Not locked.
-    value: 0
-  - name: Val1
-    description: Locked.
-    value: 1
-enum/FlexspiAlphaEnumKiloAlpha:
+enum/Areflock2:
   bit_size: 1
   variants:
   - name: Val0
@@ -2393,24 +1736,6 @@ enum/FlexspiAlphaEnumLimaAlpha:
   - name: Val7
     description: '32768.'
     value: 7
-enum/FlexspiAlphaEnumMikeAlpha:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: Not locked.
-    value: 0
-  - name: Val1
-    description: Locked.
-    value: 1
-enum/FlexspiAlphaEnumNovemberAlpha:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: Not locked.
-    value: 0
-  - name: Val1
-    description: Locked.
-    value: 1
 enum/FlexspiAlphaEnumOscarAlpha:
   bit_size: 1
   variants:
@@ -2438,16 +1763,7 @@ enum/FlexspiAlphaEnumQuebecAlpha:
   - name: Val1
     description: Cleared automatically.
     value: 1
-enum/FlexspiAlphaEnumRomeoAlpha:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: No impact.
-    value: 0
-  - name: Val1
-    description: Enable clear operation.
-    value: 1
-enum/FlexspiAlphaEnumSierraAlpha:
+enum/Clrahbrxbuf2:
   bit_size: 1
   variants:
   - name: Val0
@@ -2483,15 +1799,6 @@ enum/FlexspiAlphaEnumVictorAlpha:
   - name: Val1
     description: Reset sample clock phase selection to 0.
     value: 1
-enum/FlexspiAlphaEnumWhiskeyAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
 enum/FlexspiAlphaEnumXrayAlpha:
   bit_size: 1
   variants:
@@ -2510,33 +1817,6 @@ enum/FlexspiAlphaEnumYankeeAlpha:
   - name: Val1
     description: 256 serial clock cycles.
     value: 1
-enum/FlexspiAlphaEnumZuluAlpha:
-  bit_size: 1
-  variants:
-  - name: Interrupt
-    description: Interrupt condition has occurred.
-    value: 1
-  - name: NoInterrupt
-    description: Interrupt condition has not occurred.
-    value: 0
-enum/FlexspiAlphaEnumAlphaBravo:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disable interrupt or no impact.
-    value: 0
-  - name: Value1
-    description: Enable interrupt.
-    value: 1
-enum/FlexspiAlphaEnumBravoBravo:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disable.
-    value: 0
-  - name: Value1
-    description: Enable.
-    value: 1
 enum/FlexspiAlphaEnumCharlieBravo:
   bit_size: 1
   variants:
@@ -2546,16 +1826,7 @@ enum/FlexspiAlphaEnumCharlieBravo:
   - name: Value1
     description: Force DLL reset.
     value: 1
-enum/FlexspiAlphaEnumDeltaBravo:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: Disable.
-    value: 0
-  - name: Val1
-    description: Enable.
-    value: 1
-enum/FlexspiAlphaEnumEchoBravo:
+enum/Addrshift:
   bit_size: 1
   variants:
   - name: Disable
@@ -2564,112 +1835,13 @@ enum/FlexspiAlphaEnumEchoBravo:
   - name: Enable
     description: Enabled.
     value: 1
-enum/FlexspiAlphaEnumFoxtrotBravo:
+enum/Splitrden:
   bit_size: 1
   variants:
   - name: Disable
     description: Disable.
     value: 0
   - name: Enable
-    description: Enable.
-    value: 1
-enum/FlexspiAlphaEnumGolfBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FlexspiAlphaEnumHotelBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/FlexspiAlphaEnumIndiaBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FlexspiAlphaEnumJulietBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FlexspiAlphaEnumKiloBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/FlexspiAlphaEnumLimaBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FlexspiAlphaEnumMikeBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FlexspiAlphaEnumNovemberBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/FlexspiAlphaEnumOscarBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FlexspiAlphaEnumPapaBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FlexspiAlphaEnumQuebecBravo:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: Disable.
-    value: 0
-  - name: Val1
     description: Enable.
     value: 1
 enum/FlexspiAlphaEnumRomeoBravo:
@@ -2708,33 +1880,6 @@ enum/FlexspiAlphaEnumUniformBravo:
   - name: Value1
     description: IP commands block all AHB commands.
     value: 1
-enum/FlexspiAlphaEnumVictorBravo:
-  bit_size: 1
-  variants:
-  - name: Interrupt
-    description: Interrupt condition has occurred.
-    value: 1
-  - name: NoInterrupt
-    description: Interrupt condition has not occurred.
-    value: 0
-enum/FlexspiAlphaEnumWhiskeyBravo:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disable interrupt or no impact.
-    value: 0
-  - name: Value1
-    description: Enable interrupt.
-    value: 1
-enum/FlexspiAlphaEnumXrayBravo:
-  bit_size: 1
-  variants:
-  - name: Interrupt
-    description: Interrupt condition has occurred.
-    value: 1
-  - name: NoInterrupt
-    description: Interrupt condition has not occurred.
-    value: 0
 enum/FlexspiAlphaEnumYankeeBravo:
   bit_size: 4
   variants:
@@ -2762,60 +1907,6 @@ enum/FlexspiAlphaEnumYankeeBravo:
   - name: Val8
     description: Flash boundary crossed.
     value: 15
-enum/FlexspiAlphaEnumZuluBravo:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disable interrupt or no impact.
-    value: 0
-  - name: Value1
-    description: Enable interrupt.
-    value: 1
-enum/FlexspiAlphaEnumAlphaCharlie:
-  bit_size: 1
-  variants:
-  - name: Interrupt
-    description: Interrupt condition has occurred.
-    value: 1
-  - name: NoInterrupt
-    description: Interrupt condition has not occurred.
-    value: 0
-enum/FlexspiAlphaEnumBravoCharlie:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disable interrupt or no impact.
-    value: 0
-  - name: Value1
-    description: Enable interrupt.
-    value: 1
-enum/FlexspiAlphaEnumCharlieCharlie:
-  bit_size: 1
-  variants:
-  - name: Interrupt
-    description: Interrupt condition has occurred.
-    value: 1
-  - name: NoInterrupt
-    description: Interrupt condition has not occurred.
-    value: 0
-enum/FlexspiAlphaEnumDeltaCharlie:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disable interrupt or no impact.
-    value: 0
-  - name: Value1
-    description: Enable interrupt.
-    value: 1
-enum/FlexspiAlphaEnumEchoCharlie:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: Disable.
-    value: 0
-  - name: Val1
-    description: Enable.
-    value: 1
 enum/FlexspiAlphaEnumFoxtrotCharlie:
   bit_size: 1
   variants:
@@ -2834,16 +1925,7 @@ enum/FlexspiAlphaEnumGolfCharlie:
   - name: Val1
     description: Aborts current decryption or encryption and waits for the next start operation.
     value: 1
-enum/FlexspiAlphaEnumHotelCharlie:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: AHB bus errors enabled.
-    value: 0
-  - name: Value1
-    description: AHB bus errors disabled.
-    value: 1
-enum/FlexspiAlphaEnumIndiaCharlie:
+enum/Gcm:
   bit_size: 1
   variants:
   - name: Value0
@@ -2852,7 +1934,7 @@ enum/FlexspiAlphaEnumIndiaCharlie:
   - name: Value1
     description: Enabled. GCM mode is used.
     value: 1
-enum/FlexspiAlphaEnumJulietCharlie:
+enum/AhbbuserrorDis:
   bit_size: 1
   variants:
   - name: Value0
@@ -2860,105 +1942,6 @@ enum/FlexspiAlphaEnumJulietCharlie:
     value: 0
   - name: Value1
     description: AHB bus errors disabled.
-    value: 1
-enum/FlexspiAlphaEnumKiloCharlie:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disabled. CTR mode is used.
-    value: 0
-  - name: Value1
-    description: Enabled. GCM mode is used.
-    value: 1
-enum/FlexspiAlphaEnumLimaCharlie:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: AHB bus errors enabled.
-    value: 0
-  - name: Value1
-    description: AHB bus errors disabled.
-    value: 1
-enum/FlexspiAlphaEnumMikeCharlie:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disabled. CTR mode is used.
-    value: 0
-  - name: Value1
-    description: Enabled. GCM mode is used.
-    value: 1
-enum/FlexspiAlphaEnumNovemberCharlie:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: AHB bus errors enabled.
-    value: 0
-  - name: Value1
-    description: AHB bus errors disabled.
-    value: 1
-enum/FlexspiAlphaEnumOscarCharlie:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disabled. CTR mode is used.
-    value: 0
-  - name: Value1
-    description: Enabled. GCM mode is used.
-    value: 1
-enum/FlexspiAlphaEnumPapaCharlie:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: AHB bus errors enabled.
-    value: 0
-  - name: Value1
-    description: AHB bus errors disabled.
-    value: 1
-enum/FlexspiAlphaEnumQuebecCharlie:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disabled. CTR mode is used.
-    value: 0
-  - name: Value1
-    description: Enabled. GCM mode is used.
-    value: 1
-enum/FlexspiAlphaEnumRomeoCharlie:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: AHB bus errors enabled.
-    value: 0
-  - name: Value1
-    description: AHB bus errors disabled.
-    value: 1
-enum/FlexspiAlphaEnumSierraCharlie:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disabled. CTR mode is used.
-    value: 0
-  - name: Value1
-    description: Enabled. GCM mode is used.
-    value: 1
-enum/FlexspiAlphaEnumTangoCharlie:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: AHB bus errors enabled.
-    value: 0
-  - name: Value1
-    description: AHB bus errors disabled.
-    value: 1
-enum/FlexspiAlphaEnumUniformCharlie:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disabled. CTR mode is used.
-    value: 0
-  - name: Value1
-    description: Enabled. GCM mode is used.
     value: 1
 enum/FlexspiAlphaEnumVictorCharlie:
   bit_size: 1
@@ -2968,60 +1951,6 @@ enum/FlexspiAlphaEnumVictorCharlie:
     value: 0
   - name: Val1
     description: Enabled.
-    value: 1
-enum/FlexspiAlphaEnumWhiskeyCharlie:
-  bit_size: 1
-  variants:
-  - name: Interrupt
-    description: Interrupt condition has occurred.
-    value: 1
-  - name: NoInterrupt
-    description: Interrupt condition has not occurred.
-    value: 0
-enum/FlexspiAlphaEnumXrayCharlie:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disable interrupt or no impact.
-    value: 0
-  - name: Value1
-    description: Enable interrupt.
-    value: 1
-enum/FlexspiAlphaEnumYankeeCharlie:
-  bit_size: 1
-  variants:
-  - name: Interrupt
-    description: Interrupt condition has occurred.
-    value: 1
-  - name: NoInterrupt
-    description: Interrupt condition has not occurred.
-    value: 0
-enum/FlexspiAlphaEnumZuluCharlie:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disable interrupt or no impact.
-    value: 0
-  - name: Value1
-    description: Enable interrupt.
-    value: 1
-enum/FlexspiAlphaEnumAlphaDelta:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: Disable.
-    value: 0
-  - name: Val1
-    description: Enable.
-    value: 1
-enum/FlexspiAlphaEnumBravoDelta:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
     value: 1
 enum/FlexspiAlphaEnumCharlieDelta:
   bit_size: 1
@@ -3040,15 +1969,6 @@ enum/FlexspiAlphaEnumDeltaDelta:
     value: 0
   - name: Val1
     description: Module disable.
-    value: 1
-enum/FlexspiAlphaEnumEchoDelta:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disable.
-    value: 0
-  - name: Value1
-    description: Enable.
     value: 1
 enum/FlexspiAlphaEnumFoxtrotDelta:
   bit_size: 1
@@ -3161,78 +2081,6 @@ enum/FlexspiAlphaEnumPapaDelta:
   - name: Val1
     description: Use B_SCLK pad as port B SCLK clock output. Port B flash memory access is available.
     value: 0
-enum/FlexspiAlphaEnumQuebecDelta:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FlexspiAlphaEnumRomeoDelta:
-  bit_size: 1
-  variants:
-  - name: Interrupt
-    description: Interrupt condition has occurred.
-    value: 1
-  - name: NoInterrupt
-    description: Interrupt condition has not occurred.
-    value: 0
-enum/FlexspiAlphaEnumSierraDelta:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disable interrupt or no impact.
-    value: 0
-  - name: Value1
-    description: Enable interrupt.
-    value: 1
-enum/FlexspiAlphaEnumTangoDelta:
-  bit_size: 1
-  variants:
-  - name: Interrupt
-    description: Interrupt condition has occurred.
-    value: 1
-  - name: NoInterrupt
-    description: Interrupt condition has not occurred.
-    value: 0
-enum/FlexspiAlphaEnumUniformDelta:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disable interrupt or no impact.
-    value: 0
-  - name: Value1
-    description: Enable interrupt.
-    value: 1
-enum/FlexspiAlphaEnumVictorDelta:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Not idle.
-    value: 0
-  - name: Value1
-    description: Idle.
-    value: 1
-enum/FlexspiAlphaEnumWhiskeyDelta:
-  bit_size: 1
-  variants:
-  - name: Interrupt
-    description: Interrupt condition has occurred.
-    value: 1
-  - name: NoInterrupt
-    description: Interrupt condition has not occurred.
-    value: 0
-enum/FlexspiAlphaEnumXrayDelta:
-  bit_size: 1
-  variants:
-  - name: Value0
-    description: Disable interrupt or no impact.
-    value: 0
-  - name: Value1
-    description: Enable interrupt.
-    value: 1
 enum/FlexspiAlphaEnumYankeeDelta:
   bit_size: 3
   variants:
@@ -3305,16 +2153,7 @@ enum/FlexspiAlphaEnumDeltaEcho:
   - name: Value1
     description: Word-addressable.
     value: 1
-enum/FlexspiAlphaEnumEchoEcho:
-  bit_size: 1
-  variants:
-  - name: Val0
-    description: Disabled. When writing to external device, DQS(RWDS) pin is not driven.
-    value: 0
-  - name: Val1
-    description: Enabled. When writing to external device, FlexSPI drives DQS(RWDS) pin as write mask output.
-    value: 1
-enum/FlexspiAlphaEnumFoxtrotEcho:
+enum/Wmena2:
   bit_size: 1
   variants:
   - name: Val0

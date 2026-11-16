@@ -1,0 +1,1054 @@
+# NXP mcux-soc-svd 7c1f00bdd6263f0b93466f5e73e5fc55a744b879; native chiptool import.
+# Source instance geometry is retained in explicit block variants; see private source bindings.
+# Unannotated fieldsets construct zero in software, not a claimed hardware reset.
+# Command/W1C/SET/CLR/TOG construction defaults are zero masks; no RMW semantics are implied.
+# Source: MCXN235.xml PWM0 sha256 a498ada26162c88f6767738bffcd22801318264c9cb2cbecbd190403b4dbd6a7
+# Source: MCXN235.xml PWM1 sha256 a498ada26162c88f6767738bffcd22801318264c9cb2cbecbd190403b4dbd6a7
+# Source: MCXN236.xml PWM0 sha256 ec813b3b24a785c33c5035ebc25a9c713a18018daf1fdb440035a13bf3549e14
+# Source: MCXN236.xml PWM1 sha256 ec813b3b24a785c33c5035ebc25a9c713a18018daf1fdb440035a13bf3549e14
+# Source: MCXN247.xml PWM0 sha256 dbbed5781a39012768344882dad168430c742f26e4261c6fd0bda9a34ca4a652
+# Source: MCXN247.xml PWM1 sha256 dbbed5781a39012768344882dad168430c742f26e4261c6fd0bda9a34ca4a652
+# Curated shared types replace imported per-field/per-register type clones.
+# Source: MCXN536_cm33_core0.xml PWM0 sha256 f9533e58d74eab222fc38608bd1d8dc45087e87b80a93f8b693e6cf2eb25cba4
+# Source: MCXN536_cm33_core1.xml PWM0 sha256 c089aecac3d73a7d8fc4a8c0cccf77ea8446b22a2ea99f4f2f01a4e0ca3a2fdd
+# Source: MCXN537_cm33_core0.xml PWM0 sha256 e72dbd80d33e6f53f05f11156fc20f6d53cf9848bc74fed80b5c34157455b11a
+# Source: MCXN537_cm33_core1.xml PWM0 sha256 4d5f7d121166c4d720a9da81b90be1b2f93be5e71fd25b9dd74b8715ebe30dce
+# Source: MCXN546_cm33_core0.xml PWM0 sha256 54e1fc060f9ccc17299bdb2da84159e699e87456276f2e695d440a6eb4aa9aad
+# Source: MCXN546_cm33_core1.xml PWM0 sha256 ddb7e932730a51c75f544efd6564ad6dbce5b3eca0a7befb7ab5b74a9951b937
+# Source: MCXN547_cm33_core0.xml PWM0 sha256 a276aee072bebd57c18929fe9a74408366fdbb42b918e06be5a3783a4aae4db7
+# Source: MCXN547_cm33_core1.xml PWM0 sha256 4a265743bdd2130cdd37ef12b9fd1d538cce9a2eac1c9149db291b7638e61423
+# Source: MCXN946_cm33_core0.xml PWM0 sha256 b986328ff1224adaeea70522fa61383a5f89f6313dfc3e7df92e8894fdab72d7
+# Source: MCXN946_cm33_core0.xml PWM1 sha256 b986328ff1224adaeea70522fa61383a5f89f6313dfc3e7df92e8894fdab72d7
+# Source: MCXN946_cm33_core1.xml PWM0 sha256 57e8910317a1cb467d56726cb822c57806aa247542969bcf12dbcc8822187916
+# Source: MCXN946_cm33_core1.xml PWM1 sha256 57e8910317a1cb467d56726cb822c57806aa247542969bcf12dbcc8822187916
+# Source: MCXN947_cm33_core0.xml PWM0 sha256 629ac7cdc82684e467b0cf36a8aef697bc1eb65c2047d6610b7b5df65692e590
+# Source: MCXN947_cm33_core0.xml PWM1 sha256 629ac7cdc82684e467b0cf36a8aef697bc1eb65c2047d6610b7b5df65692e590
+# Source: MCXN947_cm33_core1.xml PWM0 sha256 0d77f3d23cad1d5eab631fd7f5ade4044d8aaca2d9d13cd11f3836d27fe089fb
+# Source: MCXN947_cm33_core1.xml PWM1 sha256 0d77f3d23cad1d5eab631fd7f5ade4044d8aaca2d9d13cd11f3836d27fe089fb
+includes:
+  - FLEXPWM-fields.yaml
+block/FlexpwmAlpha:
+  description: PWM.
+  items:
+  - name: sm0cnt
+    description: Counter Register.
+    byte_offset: 0
+    access: Read
+    bit_size: 16
+    fieldset: Smcnt
+  - name: sm0init
+    description: Initial Count Register.
+    byte_offset: 2
+    bit_size: 16
+    fieldset: Sminit
+  - name: sm0ctrl2
+    description: Control 2 Register.
+    byte_offset: 4
+    bit_size: 16
+    fieldset: Sm3ctrl2
+  - name: sm0ctrl
+    description: Control Register.
+    byte_offset: 6
+    bit_size: 16
+    fieldset: Sm3ctrl
+  - name: sm0val0
+    description: Value Register 0.
+    byte_offset: 10
+    bit_size: 16
+    fieldset: Sm3val0
+  - name: sm0fracval1
+    description: Fractional Value Register 1.
+    byte_offset: 12
+    bit_size: 16
+    fieldset: Sm1fracval1
+  - name: sm0val1
+    description: Value Register 1.
+    byte_offset: 14
+    bit_size: 16
+    fieldset: Sm3val1
+  - name: sm0fracval2
+    description: Fractional Value Register 2.
+    byte_offset: 16
+    bit_size: 16
+    fieldset: Sm2fracval2
+  - name: sm0val2
+    description: Value Register 2.
+    byte_offset: 18
+    bit_size: 16
+    fieldset: Sm3val2
+  - name: sm0fracval3
+    description: Fractional Value Register 3.
+    byte_offset: 20
+    bit_size: 16
+    fieldset: Sm2fracval3
+  - name: sm0val3
+    description: Value Register 3.
+    byte_offset: 22
+    bit_size: 16
+    fieldset: Sm0val3
+  - name: sm0fracval4
+    description: Fractional Value Register 4.
+    byte_offset: 24
+    bit_size: 16
+    fieldset: Sm2fracval4
+  - name: sm0val4
+    description: Value Register 4.
+    byte_offset: 26
+    bit_size: 16
+    fieldset: Sm0val4
+  - name: sm0fracval5
+    description: Fractional Value Register 5.
+    byte_offset: 28
+    bit_size: 16
+    fieldset: Sm2fracval5
+  - name: sm0val5
+    description: Value Register 5.
+    byte_offset: 30
+    bit_size: 16
+    fieldset: Sm0val5
+  - name: sm0frctrl
+    description: Fractional Control Register.
+    byte_offset: 32
+    bit_size: 16
+    fieldset: Sm2frctrl
+  - name: sm0octrl
+    description: Output Control Register.
+    byte_offset: 34
+    bit_size: 16
+    fieldset: Sm3octrl
+  - name: sm0sts
+    description: Status Register.
+    byte_offset: 36
+    bit_size: 16
+    fieldset: Sm3sts
+  - name: sm0inten
+    description: Interrupt Enable Register.
+    byte_offset: 38
+    bit_size: 16
+    fieldset: Sm3inten
+  - name: sm0dmaen
+    description: DMA Enable Register.
+    byte_offset: 40
+    bit_size: 16
+    fieldset: Sm1dmaen
+  - name: sm0tctrl
+    description: Output Trigger Control Register.
+    byte_offset: 42
+    bit_size: 16
+    fieldset: Sm3tctrl
+  - name: sm0dismap0
+    description: Fault Disable Mapping Register 0.
+    byte_offset: 44
+    bit_size: 16
+    fieldset: Smdismap0
+  - name: sm0dtcnt0
+    description: Deadtime Count Register 0.
+    byte_offset: 48
+    bit_size: 16
+    fieldset: Smdtcnt0
+  - name: sm0dtcnt1
+    description: Deadtime Count Register 1.
+    byte_offset: 50
+    bit_size: 16
+    fieldset: Smdtcnt1
+  - name: sm0captctrla
+    description: Capture Control A Register.
+    byte_offset: 52
+    bit_size: 16
+    fieldset: Sm2captctrla
+  - name: sm0captcompa
+    description: Capture Compare A Register.
+    byte_offset: 54
+    bit_size: 16
+    fieldset: Sm1captcompa
+  - name: sm0captctrlb
+    description: Capture Control B Register.
+    byte_offset: 56
+    bit_size: 16
+    fieldset: Sm2captctrlb
+  - name: sm0captcompb
+    description: Capture Compare B Register.
+    byte_offset: 58
+    bit_size: 16
+    fieldset: Sm1captcompb
+  - name: sm0captctrlx
+    description: Capture Control X Register.
+    byte_offset: 60
+    bit_size: 16
+    fieldset: Sm2captctrlx
+  - name: sm0captcompx
+    description: Capture Compare X Register.
+    byte_offset: 62
+    bit_size: 16
+    fieldset: Smcaptcompx
+  - name: sm0cval0
+    description: Capture Value 0 Register.
+    byte_offset: 64
+    access: Read
+    bit_size: 16
+    fieldset: Smcval0
+  - name: sm0cval0cyc
+    description: Capture Value 0 Cycle Register.
+    byte_offset: 66
+    access: Read
+    bit_size: 16
+    fieldset: Smcval0cyc
+  - name: sm0cval1
+    description: Capture Value 1 Register.
+    byte_offset: 68
+    access: Read
+    bit_size: 16
+    fieldset: Smcval1
+  - name: sm0cval1cyc
+    description: Capture Value 1 Cycle Register.
+    byte_offset: 70
+    access: Read
+    bit_size: 16
+    fieldset: Smcval1cyc
+  - name: sm0cval2
+    description: Capture Value 2 Register.
+    byte_offset: 72
+    access: Read
+    bit_size: 16
+    fieldset: Sm0cval2
+  - name: sm0cval2cyc
+    description: Capture Value 2 Cycle Register.
+    byte_offset: 74
+    access: Read
+    bit_size: 16
+    fieldset: Sm0cval2cyc
+  - name: sm0cval3
+    description: Capture Value 3 Register.
+    byte_offset: 76
+    access: Read
+    bit_size: 16
+    fieldset: Sm0cval3
+  - name: sm0cval3cyc
+    description: Capture Value 3 Cycle Register.
+    byte_offset: 78
+    access: Read
+    bit_size: 16
+    fieldset: Sm0cval3cyc
+  - name: sm0cval4
+    description: Capture Value 4 Register.
+    byte_offset: 80
+    access: Read
+    bit_size: 16
+    fieldset: Sm0cval4
+  - name: sm0cval4cyc
+    description: Capture Value 4 Cycle Register.
+    byte_offset: 82
+    access: Read
+    bit_size: 16
+    fieldset: Sm0cval4cyc
+  - name: sm0cval5
+    description: Capture Value 5 Register.
+    byte_offset: 84
+    access: Read
+    bit_size: 16
+    fieldset: Sm0cval5
+  - name: sm0cval5cyc
+    description: Capture Value 5 Cycle Register.
+    byte_offset: 86
+    access: Read
+    bit_size: 16
+    fieldset: Sm1cval5cyc
+  - name: sm0captfilta
+    description: Capture PWM_A Input Filter Register.
+    byte_offset: 90
+    bit_size: 16
+    fieldset: Sm2captfilta
+  - name: sm0captfiltb
+    description: Capture PWM_B Input Filter Register.
+    byte_offset: 92
+    bit_size: 16
+    fieldset: Sm2captfiltb
+  - name: sm0captfiltx
+    description: Capture PWM_X Input Filter Register.
+    byte_offset: 94
+    bit_size: 16
+    fieldset: Smcaptfiltx
+  - name: sm1cnt
+    description: Counter Register.
+    byte_offset: 96
+    access: Read
+    bit_size: 16
+    fieldset: Smcnt
+  - name: sm1init
+    description: Initial Count Register.
+    byte_offset: 98
+    bit_size: 16
+    fieldset: Sminit
+  - name: sm1ctrl2
+    description: Control 2 Register.
+    byte_offset: 100
+    bit_size: 16
+    fieldset: Sm3ctrl2
+  - name: sm1ctrl
+    description: Control Register.
+    byte_offset: 102
+    bit_size: 16
+    fieldset: Sm3ctrl
+  - name: sm1val0
+    description: Value Register 0.
+    byte_offset: 106
+    bit_size: 16
+    fieldset: Sm3val0
+  - name: sm1fracval1
+    description: Fractional Value Register 1.
+    byte_offset: 108
+    bit_size: 16
+    fieldset: Sm1fracval1
+  - name: sm1val1
+    description: Value Register 1.
+    byte_offset: 110
+    bit_size: 16
+    fieldset: Sm3val1
+  - name: sm1fracval2
+    description: Fractional Value Register 2.
+    byte_offset: 112
+    bit_size: 16
+    fieldset: Sm2fracval2
+  - name: sm1val2
+    description: Value Register 2.
+    byte_offset: 114
+    bit_size: 16
+    fieldset: Sm3val2
+  - name: sm1fracval3
+    description: Fractional Value Register 3.
+    byte_offset: 116
+    bit_size: 16
+    fieldset: Sm2fracval3
+  - name: sm1val3
+    description: Value Register 3.
+    byte_offset: 118
+    bit_size: 16
+    fieldset: Sm0val3
+  - name: sm1fracval4
+    description: Fractional Value Register 4.
+    byte_offset: 120
+    bit_size: 16
+    fieldset: Sm2fracval4
+  - name: sm1val4
+    description: Value Register 4.
+    byte_offset: 122
+    bit_size: 16
+    fieldset: Sm0val4
+  - name: sm1fracval5
+    description: Fractional Value Register 5.
+    byte_offset: 124
+    bit_size: 16
+    fieldset: Sm2fracval5
+  - name: sm1val5
+    description: Value Register 5.
+    byte_offset: 126
+    bit_size: 16
+    fieldset: Sm0val5
+  - name: sm1frctrl
+    description: Fractional Control Register.
+    byte_offset: 128
+    bit_size: 16
+    fieldset: Sm2frctrl
+  - name: sm1octrl
+    description: Output Control Register.
+    byte_offset: 130
+    bit_size: 16
+    fieldset: Sm3octrl
+  - name: sm1sts
+    description: Status Register.
+    byte_offset: 132
+    bit_size: 16
+    fieldset: Sm3sts
+  - name: sm1inten
+    description: Interrupt Enable Register.
+    byte_offset: 134
+    bit_size: 16
+    fieldset: Sm3inten
+  - name: sm1dmaen
+    description: DMA Enable Register.
+    byte_offset: 136
+    bit_size: 16
+    fieldset: Sm1dmaen
+  - name: sm1tctrl
+    description: Output Trigger Control Register.
+    byte_offset: 138
+    bit_size: 16
+    fieldset: Sm3tctrl
+  - name: sm1dismap0
+    description: Fault Disable Mapping Register 0.
+    byte_offset: 140
+    bit_size: 16
+    fieldset: Smdismap0
+  - name: sm1dtcnt0
+    description: Deadtime Count Register 0.
+    byte_offset: 144
+    bit_size: 16
+    fieldset: Smdtcnt0
+  - name: sm1dtcnt1
+    description: Deadtime Count Register 1.
+    byte_offset: 146
+    bit_size: 16
+    fieldset: Smdtcnt1
+  - name: sm1captctrla
+    description: Capture Control A Register.
+    byte_offset: 148
+    bit_size: 16
+    fieldset: Sm2captctrla
+  - name: sm1captcompa
+    description: Capture Compare A Register.
+    byte_offset: 150
+    bit_size: 16
+    fieldset: Sm1captcompa
+  - name: sm1captctrlb
+    description: Capture Control B Register.
+    byte_offset: 152
+    bit_size: 16
+    fieldset: Sm2captctrlb
+  - name: sm1captcompb
+    description: Capture Compare B Register.
+    byte_offset: 154
+    bit_size: 16
+    fieldset: Sm1captcompb
+  - name: sm1captctrlx
+    description: Capture Control X Register.
+    byte_offset: 156
+    bit_size: 16
+    fieldset: Sm2captctrlx
+  - name: sm1captcompx
+    description: Capture Compare X Register.
+    byte_offset: 158
+    bit_size: 16
+    fieldset: Smcaptcompx
+  - name: sm1cval0
+    description: Capture Value 0 Register.
+    byte_offset: 160
+    access: Read
+    bit_size: 16
+    fieldset: Smcval0
+  - name: sm1cval0cyc
+    description: Capture Value 0 Cycle Register.
+    byte_offset: 162
+    access: Read
+    bit_size: 16
+    fieldset: Smcval0cyc
+  - name: sm1cval1
+    description: Capture Value 1 Register.
+    byte_offset: 164
+    access: Read
+    bit_size: 16
+    fieldset: Smcval1
+  - name: sm1cval1cyc
+    description: Capture Value 1 Cycle Register.
+    byte_offset: 166
+    access: Read
+    bit_size: 16
+    fieldset: Smcval1cyc
+  - name: sm1cval2
+    description: Capture Value 2 Register.
+    byte_offset: 168
+    access: Read
+    bit_size: 16
+    fieldset: Sm0cval2
+  - name: sm1cval2cyc
+    description: Capture Value 2 Cycle Register.
+    byte_offset: 170
+    access: Read
+    bit_size: 16
+    fieldset: Sm0cval2cyc
+  - name: sm1cval3
+    description: Capture Value 3 Register.
+    byte_offset: 172
+    access: Read
+    bit_size: 16
+    fieldset: Sm0cval3
+  - name: sm1cval3cyc
+    description: Capture Value 3 Cycle Register.
+    byte_offset: 174
+    access: Read
+    bit_size: 16
+    fieldset: Sm0cval3cyc
+  - name: sm1cval4
+    description: Capture Value 4 Register.
+    byte_offset: 176
+    access: Read
+    bit_size: 16
+    fieldset: Sm0cval4
+  - name: sm1cval4cyc
+    description: Capture Value 4 Cycle Register.
+    byte_offset: 178
+    access: Read
+    bit_size: 16
+    fieldset: Sm0cval4cyc
+  - name: sm1cval5
+    description: Capture Value 5 Register.
+    byte_offset: 180
+    access: Read
+    bit_size: 16
+    fieldset: Sm0cval5
+  - name: sm1cval5cyc
+    description: Capture Value 5 Cycle Register.
+    byte_offset: 182
+    access: Read
+    bit_size: 16
+    fieldset: Sm1cval5cyc
+  - name: sm1phasedly
+    description: Phase Delay Register.
+    byte_offset: 184
+    bit_size: 16
+    fieldset: Smphasedly
+  - name: sm1captfilta
+    description: Capture PWM_A Input Filter Register.
+    byte_offset: 186
+    bit_size: 16
+    fieldset: Sm2captfilta
+  - name: sm1captfiltb
+    description: Capture PWM_B Input Filter Register.
+    byte_offset: 188
+    bit_size: 16
+    fieldset: Sm2captfiltb
+  - name: sm1captfiltx
+    description: Capture PWM_X Input Filter Register.
+    byte_offset: 190
+    bit_size: 16
+    fieldset: Smcaptfiltx
+  - name: sm2cnt
+    description: Counter Register.
+    byte_offset: 192
+    access: Read
+    bit_size: 16
+    fieldset: Smcnt
+  - name: sm2init
+    description: Initial Count Register.
+    byte_offset: 194
+    bit_size: 16
+    fieldset: Sminit
+  - name: sm2ctrl2
+    description: Control 2 Register.
+    byte_offset: 196
+    bit_size: 16
+    fieldset: Sm3ctrl2
+  - name: sm2ctrl
+    description: Control Register.
+    byte_offset: 198
+    bit_size: 16
+    fieldset: Sm3ctrl
+  - name: sm2val0
+    description: Value Register 0.
+    byte_offset: 202
+    bit_size: 16
+    fieldset: Sm3val0
+  - name: sm2fracval1
+    description: Fractional Value Register 1.
+    byte_offset: 204
+    bit_size: 16
+    fieldset: Sm1fracval1
+  - name: sm2val1
+    description: Value Register 1.
+    byte_offset: 206
+    bit_size: 16
+    fieldset: Sm3val1
+  - name: sm2fracval2
+    description: Fractional Value Register 2.
+    byte_offset: 208
+    bit_size: 16
+    fieldset: Sm2fracval2
+  - name: sm2val2
+    description: Value Register 2.
+    byte_offset: 210
+    bit_size: 16
+    fieldset: Sm3val2
+  - name: sm2fracval3
+    description: Fractional Value Register 3.
+    byte_offset: 212
+    bit_size: 16
+    fieldset: Sm2fracval3
+  - name: sm2val3
+    description: Value Register 3.
+    byte_offset: 214
+    bit_size: 16
+    fieldset: Sm0val3
+  - name: sm2fracval4
+    description: Fractional Value Register 4.
+    byte_offset: 216
+    bit_size: 16
+    fieldset: Sm2fracval4
+  - name: sm2val4
+    description: Value Register 4.
+    byte_offset: 218
+    bit_size: 16
+    fieldset: Sm0val4
+  - name: sm2fracval5
+    description: Fractional Value Register 5.
+    byte_offset: 220
+    bit_size: 16
+    fieldset: Sm2fracval5
+  - name: sm2val5
+    description: Value Register 5.
+    byte_offset: 222
+    bit_size: 16
+    fieldset: Sm0val5
+  - name: sm2frctrl
+    description: Fractional Control Register.
+    byte_offset: 224
+    bit_size: 16
+    fieldset: Sm2frctrl
+  - name: sm2octrl
+    description: Output Control Register.
+    byte_offset: 226
+    bit_size: 16
+    fieldset: Sm3octrl
+  - name: sm2sts
+    description: Status Register.
+    byte_offset: 228
+    bit_size: 16
+    fieldset: Sm3sts
+  - name: sm2inten
+    description: Interrupt Enable Register.
+    byte_offset: 230
+    bit_size: 16
+    fieldset: Sm3inten
+  - name: sm2dmaen
+    description: DMA Enable Register.
+    byte_offset: 232
+    bit_size: 16
+    fieldset: Sm1dmaen
+  - name: sm2tctrl
+    description: Output Trigger Control Register.
+    byte_offset: 234
+    bit_size: 16
+    fieldset: Sm3tctrl
+  - name: sm2dismap0
+    description: Fault Disable Mapping Register 0.
+    byte_offset: 236
+    bit_size: 16
+    fieldset: Smdismap0
+  - name: sm2dtcnt0
+    description: Deadtime Count Register 0.
+    byte_offset: 240
+    bit_size: 16
+    fieldset: Smdtcnt0
+  - name: sm2dtcnt1
+    description: Deadtime Count Register 1.
+    byte_offset: 242
+    bit_size: 16
+    fieldset: Smdtcnt1
+  - name: sm2captctrla
+    description: Capture Control A Register.
+    byte_offset: 244
+    bit_size: 16
+    fieldset: Sm2captctrla
+  - name: sm2captcompa
+    description: Capture Compare A Register.
+    byte_offset: 246
+    bit_size: 16
+    fieldset: Sm1captcompa
+  - name: sm2captctrlb
+    description: Capture Control B Register.
+    byte_offset: 248
+    bit_size: 16
+    fieldset: Sm2captctrlb
+  - name: sm2captcompb
+    description: Capture Compare B Register.
+    byte_offset: 250
+    bit_size: 16
+    fieldset: Sm1captcompb
+  - name: sm2captctrlx
+    description: Capture Control X Register.
+    byte_offset: 252
+    bit_size: 16
+    fieldset: Sm2captctrlx
+  - name: sm2captcompx
+    description: Capture Compare X Register.
+    byte_offset: 254
+    bit_size: 16
+    fieldset: Smcaptcompx
+  - name: sm2cval0
+    description: Capture Value 0 Register.
+    byte_offset: 256
+    access: Read
+    bit_size: 16
+    fieldset: Smcval0
+  - name: sm2cval0cyc
+    description: Capture Value 0 Cycle Register.
+    byte_offset: 258
+    access: Read
+    bit_size: 16
+    fieldset: Smcval0cyc
+  - name: sm2cval1
+    description: Capture Value 1 Register.
+    byte_offset: 260
+    access: Read
+    bit_size: 16
+    fieldset: Smcval1
+  - name: sm2cval1cyc
+    description: Capture Value 1 Cycle Register.
+    byte_offset: 262
+    access: Read
+    bit_size: 16
+    fieldset: Smcval1cyc
+  - name: sm2cval2
+    description: Capture Value 2 Register.
+    byte_offset: 264
+    access: Read
+    bit_size: 16
+    fieldset: Sm0cval2
+  - name: sm2cval2cyc
+    description: Capture Value 2 Cycle Register.
+    byte_offset: 266
+    access: Read
+    bit_size: 16
+    fieldset: Sm0cval2cyc
+  - name: sm2cval3
+    description: Capture Value 3 Register.
+    byte_offset: 268
+    access: Read
+    bit_size: 16
+    fieldset: Sm0cval3
+  - name: sm2cval3cyc
+    description: Capture Value 3 Cycle Register.
+    byte_offset: 270
+    access: Read
+    bit_size: 16
+    fieldset: Sm0cval3cyc
+  - name: sm2cval4
+    description: Capture Value 4 Register.
+    byte_offset: 272
+    access: Read
+    bit_size: 16
+    fieldset: Sm0cval4
+  - name: sm2cval4cyc
+    description: Capture Value 4 Cycle Register.
+    byte_offset: 274
+    access: Read
+    bit_size: 16
+    fieldset: Sm0cval4cyc
+  - name: sm2cval5
+    description: Capture Value 5 Register.
+    byte_offset: 276
+    access: Read
+    bit_size: 16
+    fieldset: Sm0cval5
+  - name: sm2cval5cyc
+    description: Capture Value 5 Cycle Register.
+    byte_offset: 278
+    access: Read
+    bit_size: 16
+    fieldset: Sm1cval5cyc
+  - name: sm2phasedly
+    description: Phase Delay Register.
+    byte_offset: 280
+    bit_size: 16
+    fieldset: Smphasedly
+  - name: sm2captfilta
+    description: Capture PWM_A Input Filter Register.
+    byte_offset: 282
+    bit_size: 16
+    fieldset: Sm2captfilta
+  - name: sm2captfiltb
+    description: Capture PWM_B Input Filter Register.
+    byte_offset: 284
+    bit_size: 16
+    fieldset: Sm2captfiltb
+  - name: sm2captfiltx
+    description: Capture PWM_X Input Filter Register.
+    byte_offset: 286
+    bit_size: 16
+    fieldset: Smcaptfiltx
+  - name: sm3cnt
+    description: Counter Register.
+    byte_offset: 288
+    access: Read
+    bit_size: 16
+    fieldset: Smcnt
+  - name: sm3init
+    description: Initial Count Register.
+    byte_offset: 290
+    bit_size: 16
+    fieldset: Sminit
+  - name: sm3ctrl2
+    description: Control 2 Register.
+    byte_offset: 292
+    bit_size: 16
+    fieldset: Sm3ctrl2
+  - name: sm3ctrl
+    description: Control Register.
+    byte_offset: 294
+    bit_size: 16
+    fieldset: Sm3ctrl
+  - name: sm3val0
+    description: Value Register 0.
+    byte_offset: 298
+    bit_size: 16
+    fieldset: Sm3val0
+  - name: sm3fracval1
+    description: Fractional Value Register 1.
+    byte_offset: 300
+    bit_size: 16
+    fieldset: Sm1fracval1
+  - name: sm3val1
+    description: Value Register 1.
+    byte_offset: 302
+    bit_size: 16
+    fieldset: Sm3val1
+  - name: sm3fracval2
+    description: Fractional Value Register 2.
+    byte_offset: 304
+    bit_size: 16
+    fieldset: Sm2fracval2
+  - name: sm3val2
+    description: Value Register 2.
+    byte_offset: 306
+    bit_size: 16
+    fieldset: Sm3val2
+  - name: sm3fracval3
+    description: Fractional Value Register 3.
+    byte_offset: 308
+    bit_size: 16
+    fieldset: Sm2fracval3
+  - name: sm3val3
+    description: Value Register 3.
+    byte_offset: 310
+    bit_size: 16
+    fieldset: Sm0val3
+  - name: sm3fracval4
+    description: Fractional Value Register 4.
+    byte_offset: 312
+    bit_size: 16
+    fieldset: Sm2fracval4
+  - name: sm3val4
+    description: Value Register 4.
+    byte_offset: 314
+    bit_size: 16
+    fieldset: Sm0val4
+  - name: sm3fracval5
+    description: Fractional Value Register 5.
+    byte_offset: 316
+    bit_size: 16
+    fieldset: Sm2fracval5
+  - name: sm3val5
+    description: Value Register 5.
+    byte_offset: 318
+    bit_size: 16
+    fieldset: Sm0val5
+  - name: sm3frctrl
+    description: Fractional Control Register.
+    byte_offset: 320
+    bit_size: 16
+    fieldset: Sm2frctrl
+  - name: sm3octrl
+    description: Output Control Register.
+    byte_offset: 322
+    bit_size: 16
+    fieldset: Sm3octrl
+  - name: sm3sts
+    description: Status Register.
+    byte_offset: 324
+    bit_size: 16
+    fieldset: Sm3sts
+  - name: sm3inten
+    description: Interrupt Enable Register.
+    byte_offset: 326
+    bit_size: 16
+    fieldset: Sm3inten
+  - name: sm3dmaen
+    description: DMA Enable Register.
+    byte_offset: 328
+    bit_size: 16
+    fieldset: Sm1dmaen
+  - name: sm3tctrl
+    description: Output Trigger Control Register.
+    byte_offset: 330
+    bit_size: 16
+    fieldset: Sm3tctrl
+  - name: sm3dismap0
+    description: Fault Disable Mapping Register 0.
+    byte_offset: 332
+    bit_size: 16
+    fieldset: Smdismap0
+  - name: sm3dtcnt0
+    description: Deadtime Count Register 0.
+    byte_offset: 336
+    bit_size: 16
+    fieldset: Smdtcnt0
+  - name: sm3dtcnt1
+    description: Deadtime Count Register 1.
+    byte_offset: 338
+    bit_size: 16
+    fieldset: Smdtcnt1
+  - name: sm3captctrla
+    description: Capture Control A Register.
+    byte_offset: 340
+    bit_size: 16
+    fieldset: Sm2captctrla
+  - name: sm3captcompa
+    description: Capture Compare A Register.
+    byte_offset: 342
+    bit_size: 16
+    fieldset: Sm1captcompa
+  - name: sm3captctrlb
+    description: Capture Control B Register.
+    byte_offset: 344
+    bit_size: 16
+    fieldset: Sm2captctrlb
+  - name: sm3captcompb
+    description: Capture Compare B Register.
+    byte_offset: 346
+    bit_size: 16
+    fieldset: Sm1captcompb
+  - name: sm3captctrlx
+    description: Capture Control X Register.
+    byte_offset: 348
+    bit_size: 16
+    fieldset: Sm2captctrlx
+  - name: sm3captcompx
+    description: Capture Compare X Register.
+    byte_offset: 350
+    bit_size: 16
+    fieldset: Smcaptcompx
+  - name: sm3cval0
+    description: Capture Value 0 Register.
+    byte_offset: 352
+    access: Read
+    bit_size: 16
+    fieldset: Smcval0
+  - name: sm3cval0cyc
+    description: Capture Value 0 Cycle Register.
+    byte_offset: 354
+    access: Read
+    bit_size: 16
+    fieldset: Smcval0cyc
+  - name: sm3cval1
+    description: Capture Value 1 Register.
+    byte_offset: 356
+    access: Read
+    bit_size: 16
+    fieldset: Smcval1
+  - name: sm3cval1cyc
+    description: Capture Value 1 Cycle Register.
+    byte_offset: 358
+    access: Read
+    bit_size: 16
+    fieldset: Smcval1cyc
+  - name: sm3cval2
+    description: Capture Value 2 Register.
+    byte_offset: 360
+    access: Read
+    bit_size: 16
+    fieldset: Sm0cval2
+  - name: sm3cval2cyc
+    description: Capture Value 2 Cycle Register.
+    byte_offset: 362
+    access: Read
+    bit_size: 16
+    fieldset: Sm0cval2cyc
+  - name: sm3cval3
+    description: Capture Value 3 Register.
+    byte_offset: 364
+    access: Read
+    bit_size: 16
+    fieldset: Sm0cval3
+  - name: sm3cval3cyc
+    description: Capture Value 3 Cycle Register.
+    byte_offset: 366
+    access: Read
+    bit_size: 16
+    fieldset: Sm0cval3cyc
+  - name: sm3cval4
+    description: Capture Value 4 Register.
+    byte_offset: 368
+    access: Read
+    bit_size: 16
+    fieldset: Sm0cval4
+  - name: sm3cval4cyc
+    description: Capture Value 4 Cycle Register.
+    byte_offset: 370
+    access: Read
+    bit_size: 16
+    fieldset: Sm0cval4cyc
+  - name: sm3cval5
+    description: Capture Value 5 Register.
+    byte_offset: 372
+    access: Read
+    bit_size: 16
+    fieldset: Sm0cval5
+  - name: sm3cval5cyc
+    description: Capture Value 5 Cycle Register.
+    byte_offset: 374
+    access: Read
+    bit_size: 16
+    fieldset: Sm1cval5cyc
+  - name: sm3phasedly
+    description: Phase Delay Register.
+    byte_offset: 376
+    bit_size: 16
+    fieldset: Smphasedly
+  - name: sm3captfilta
+    description: Capture PWM_A Input Filter Register.
+    byte_offset: 378
+    bit_size: 16
+    fieldset: Sm2captfilta
+  - name: sm3captfiltb
+    description: Capture PWM_B Input Filter Register.
+    byte_offset: 380
+    bit_size: 16
+    fieldset: Sm2captfiltb
+  - name: sm3captfiltx
+    description: Capture PWM_X Input Filter Register.
+    byte_offset: 382
+    bit_size: 16
+    fieldset: Smcaptfiltx
+  - name: outen
+    description: Output Enable Register.
+    byte_offset: 384
+    bit_size: 16
+    fieldset: Outen
+  - name: mask
+    description: Mask Register.
+    byte_offset: 386
+    bit_size: 16
+    fieldset: Mask
+  - name: swcout
+    description: Software Controlled Output Register.
+    byte_offset: 388
+    bit_size: 16
+    fieldset: Swcout2
+  - name: dtsrcsel
+    description: PWM Source Select Register.
+    byte_offset: 390
+    bit_size: 16
+    fieldset: Dtsrcsel2
+  - name: mctrl
+    description: Master Control Register.
+    byte_offset: 392
+    bit_size: 16
+    fieldset: Mctrl
+  - name: mctrl2
+    description: Master Control 2 Register.
+    byte_offset: 394
+    bit_size: 16
+    fieldset: Mctrl2
+  - name: fctrl0
+    description: Fault Control Register.
+    byte_offset: 396
+    bit_size: 16
+    fieldset: Fctrl0
+  - name: fsts0
+    description: Fault Status Register.
+    byte_offset: 398
+    bit_size: 16
+    fieldset: Fsts0
+  - name: ffilt0
+    description: Fault Filter Register.
+    byte_offset: 400
+    bit_size: 16
+    fieldset: Ffilt02
+  - name: ftst0
+    description: Fault Test Register.
+    byte_offset: 402
+    bit_size: 16
+    fieldset: Ftst02
+  - name: fctrl20
+    description: Fault Control 2 Register.
+    byte_offset: 404
+    bit_size: 16
+    fieldset: Fctrl20

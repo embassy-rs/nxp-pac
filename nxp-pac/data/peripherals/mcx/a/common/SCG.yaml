@@ -23,7 +23,7 @@ block/Scg:
   - name: rccr
     description: Run Clock Control Register.
     byte_offset: 20
-    fieldset: Rccr
+    fieldset: Csr
   - name: sosccsr
     description: SOSC Control Status Register.
     byte_offset: 256
@@ -150,15 +150,15 @@ block/Scg:
   - name: spllndiv
     description: SPLL N Divider Register.
     byte_offset: 1548
-    fieldset: Spllndiv
+    fieldset: Apllndiv
   - name: spllmdiv
     description: SPLL M Divider Register.
     byte_offset: 1552
-    fieldset: Spllmdiv
+    fieldset: Apllmdiv
   - name: spllpdiv
     description: SPLL P Divider Register.
     byte_offset: 1556
-    fieldset: Spllpdiv
+    fieldset: Apllpdiv
   - name: splllock_cnfg
     description: SPLL LOCK Configuration Register.
     byte_offset: 1560
@@ -167,7 +167,7 @@ block/Scg:
     description: SPLL SSCG Status Register.
     byte_offset: 1568
     access: Read
-    fieldset: Spllsscgstat
+    fieldset: Apllsscgstat
   - name: spllsscg0
     description: SPLL Spread Spectrum Control 0 Register.
     byte_offset: 1572
@@ -175,7 +175,7 @@ block/Scg:
   - name: spllsscg1
     description: SPLL Spread Spectrum Control 1 Register.
     byte_offset: 1576
-    fieldset: Spllsscg1
+    fieldset: Apllsscg1
   - name: spllteststat
     description: SPLL Test Status Register.
     byte_offset: 1784
@@ -521,7 +521,7 @@ fieldset/Firccsr:
     description: Lock Register.
     bit_offset: 23
     bit_size: 1
-    enum: FirccsrLk
+    enum: ApllcsrLk
   - name: fircvld
     description: FIRC Valid status.
     bit_offset: 24
@@ -690,14 +690,6 @@ fieldset/Param:
     description: UPLL Clock Present.
     bit_offset: 7
     bit_size: 1
-fieldset/Rccr:
-  description: Run Clock Control Register.
-  fields:
-  - name: scs
-    description: System Clock Source.
-    bit_offset: 24
-    bit_size: 4
-    enum: Scs
 fieldset/Rosccsr:
   description: ROSC Control Status Register.
   fields:
@@ -709,12 +701,12 @@ fieldset/Rosccsr:
     description: ROSC Clock Monitor Reset Enable.
     bit_offset: 17
     bit_size: 1
-    enum: Rosccmre
+    enum: Apllcmre
   - name: lk
     description: Lock Register.
     bit_offset: 23
     bit_size: 1
-    enum: RosccsrLk
+    enum: ApllcsrLk
   - name: roscvld
     description: ROSC Valid.
     bit_offset: 24
@@ -761,7 +753,7 @@ fieldset/Sirccsr:
     description: Lock Register.
     bit_offset: 23
     bit_size: 1
-    enum: SirccsrLk
+    enum: ApllcsrLk
   - name: sircvld
     description: SIRC Valid.
     bit_offset: 24
@@ -882,7 +874,7 @@ fieldset/Sosccsr:
     description: SOSC Clock Monitor Reset Enable.
     bit_offset: 17
     bit_size: 1
-    enum: Sosccmre
+    enum: Apllcmre
   - name: lk
     description: Lock Register.
     bit_offset: 23
@@ -949,12 +941,12 @@ fieldset/Spllcsr:
     description: SPLL Clock Monitor Reset Enable.
     bit_offset: 17
     bit_size: 1
-    enum: Spllcmre
+    enum: Apllcmre
   - name: lk
     description: Lock Register.
     bit_offset: 23
     bit_size: 1
-    enum: SpllcsrLk
+    enum: ApllcsrLk
   - name: spll_lock
     description: SPLL LOCK.
     bit_offset: 24
@@ -1028,39 +1020,6 @@ fieldset/SplllockCnfg:
     description: Configures the number of reference clocks to count before SPLL is considered locked.
     bit_offset: 0
     bit_size: 17
-fieldset/Spllmdiv:
-  description: SPLL M Divider Register.
-  fields:
-  - name: mdiv
-    description: Feedback divider divider ratio (M-divider).
-    bit_offset: 0
-    bit_size: 16
-  - name: mreq
-    description: Feedback ratio change request.
-    bit_offset: 31
-    bit_size: 1
-fieldset/Spllndiv:
-  description: SPLL N Divider Register.
-  fields:
-  - name: ndiv
-    description: Predivider divider ratio (N-divider).
-    bit_offset: 0
-    bit_size: 8
-  - name: nreq
-    description: Predivider ratio change request.
-    bit_offset: 31
-    bit_size: 1
-fieldset/Spllpdiv:
-  description: SPLL P Divider Register.
-  fields:
-  - name: pdiv
-    description: Postdivider divider ratio (P-divider).
-    bit_offset: 0
-    bit_size: 5
-  - name: preq
-    description: Postdivider ratio change request.
-    bit_offset: 31
-    bit_size: 1
 fieldset/Spllsscg0:
   description: SPLL Spread Spectrum Control 0 Register.
   fields:
@@ -1068,49 +1027,6 @@ fieldset/Spllsscg0:
     description: SS_MDIV[31:0].
     bit_offset: 0
     bit_size: 32
-fieldset/Spllsscg1:
-  description: SPLL Spread Spectrum Control 1 Register.
-  fields:
-  - name: ss_mdiv_msb
-    description: SS_MDIV[32].
-    bit_offset: 0
-    bit_size: 1
-  - name: ss_mdiv_req
-    description: SS_MDIV[32:0] change request.
-    bit_offset: 1
-    bit_size: 1
-  - name: mf
-    description: Modulation Frequency Control.
-    bit_offset: 2
-    bit_size: 3
-  - name: mr
-    description: Modulation Depth Control.
-    bit_offset: 5
-    bit_size: 3
-  - name: mc
-    description: Modulation Waveform Control.
-    bit_offset: 8
-    bit_size: 2
-    enum: Spllsscg1Mc
-  - name: dither
-    description: Dither Enable.
-    bit_offset: 10
-    bit_size: 1
-  - name: sel_ss_mdiv
-    description: SS_MDIV select.
-    bit_offset: 11
-    bit_size: 1
-  - name: ss_pd
-    description: SSCG Power Down.
-    bit_offset: 31
-    bit_size: 1
-fieldset/Spllsscgstat:
-  description: SPLL SSCG Status Register.
-  fields:
-  - name: ss_mdiv_ack
-    description: SS_MDIV change acknowledge.
-    bit_offset: 0
-    bit_size: 1
 fieldset/Spllstat:
   description: SPLL Status Register.
   fields:
@@ -1157,7 +1073,7 @@ fieldset/Splltestctrl:
     description: Select analog signal channel that need to be test.
     bit_offset: 27
     bit_size: 3
-    enum: SplltestctrlTestvSel
+    enum: AplltestctrlTestvSel
   - name: bypasspll
     description: Bypass PLL.
     bit_offset: 31
@@ -1217,12 +1133,12 @@ fieldset/Upllcsr:
     description: UPLL Clock Monitor Reset Enable.
     bit_offset: 17
     bit_size: 1
-    enum: Upllcmre
+    enum: Apllcmre
   - name: lk
     description: Lock Register.
     bit_offset: 23
     bit_size: 1
-    enum: UpllcsrLk
+    enum: ApllcsrLk
   - name: upllvld
     description: UPLL Valid.
     bit_offset: 24
@@ -1367,15 +1283,6 @@ enum/FircaccIe:
   - name: Fircaccyes
     description: FIRCACC interrupt is enabled.
     value: 1
-enum/FirccsrLk:
-  bit_size: 1
-  variants:
-  - name: WriteEnabled
-    description: Control Status Register can be written.
-    value: 0
-  - name: WriteDisabled
-    description: Control Status Register cannot be written.
-    value: 1
 enum/FirccsrTrimLock:
   bit_size: 1
   variants:
@@ -1486,24 +1393,6 @@ enum/Range:
   - name: HighFreq
     description: Frequency range select of 50-66 MHz.
     value: 3
-enum/Rosccmre:
-  bit_size: 1
-  variants:
-  - name: GenerateInterrupt
-    description: Clock monitor generates an interrupt when an error is detected.
-    value: 0
-  - name: GenerateReset
-    description: Clock monitor generates a reset when an error is detected.
-    value: 1
-enum/RosccsrLk:
-  bit_size: 1
-  variants:
-  - name: WriteEnabled
-    description: Control Status Register can be written.
-    value: 0
-  - name: WriteDisabled
-    description: Control Status Register cannot be written.
-    value: 1
 enum/Roscerr:
   bit_size: 1
   variants:
@@ -1561,15 +1450,6 @@ enum/SelAtx:
   - name: LdoP8v
     description: 'ldo1p1v_atxout_ana_atx3v_a: ldo1p1v_vout_ok_lv; ldo1p1v_atxout_ana_atx3v_b: ldo1p1v_vout_1p1v_ana_1p8v.'
     value: 3
-enum/SirccsrLk:
-  bit_size: 1
-  variants:
-  - name: WriteEnabled
-    description: Control Status Register can be written.
-    value: 0
-  - name: WriteDisabled
-    description: Control Status Register cannot be written.
-    value: 1
 enum/SirccsrTrimLock:
   bit_size: 1
   variants:
@@ -1615,15 +1495,6 @@ enum/Sircvld:
   - name: EnabledAndValid
     description: SIRC is enabled and output clock is valid.
     value: 1
-enum/Sosccmre:
-  bit_size: 1
-  variants:
-  - name: GenerateInterrupt
-    description: Clock monitor generates an interrupt when an error is detected.
-    value: 0
-  - name: GenerateReset
-    description: Clock monitor generates a reset when an error is detected.
-    value: 1
 enum/SosccsrLk:
   bit_size: 1
   variants:
@@ -1666,24 +1537,6 @@ enum/SpllLock:
   - name: EnabledAndValid
     description: SPLL is locked.
     value: 1
-enum/Spllcmre:
-  bit_size: 1
-  variants:
-  - name: GenerateInterrupt
-    description: Clock monitor generates an interrupt when an error is detected.
-    value: 0
-  - name: GenerateReset
-    description: Clock monitor generates a reset when an error is detected.
-    value: 1
-enum/SpllcsrLk:
-  bit_size: 1
-  variants:
-  - name: WriteEnabled
-    description: Control Status Register can be written.
-    value: 0
-  - name: WriteDisabled
-    description: Control Status Register cannot be written.
-    value: 1
 enum/Spllerr:
   bit_size: 1
   variants:
@@ -1693,15 +1546,6 @@ enum/Spllerr:
   - name: EnabledAndError
     description: SPLL Clock Monitor is enabled and detected an error.
     value: 1
-enum/Spllsscg1Mc:
-  bit_size: 2
-  variants:
-  - name: NoComp
-    description: MC[1:0] no compensation.
-    value: 0
-  - name: MaxComp
-    description: MC[1:0] maximum compensation.
-    value: 3
 enum/Spllsten:
   bit_size: 1
   variants:
@@ -1711,18 +1555,6 @@ enum/Spllsten:
   - name: EnabledInStop
     description: SPLL is enabled in Deep Sleep mode.
     value: 1
-enum/SplltestctrlTestvSel:
-  bit_size: 3
-  variants:
-  - name: PllBias
-    description: pll_bias_source.
-    value: 0
-  - name: PllCco
-    description: pll_cco_current.
-    value: 1
-  - name: Ldo
-    description: ldo_ldo1p1.
-    value: 4
 enum/StartValid:
   bit_size: 1
   variants:
@@ -1819,24 +1651,6 @@ enum/Tstmd:
   - name: Tstmd11
     description: ipt_test_ana_atx3v_a=osc_in(EXTAL); ipt_test_ana_atx3v_b=osc_out(XTAL).
     value: 3
-enum/Upllcmre:
-  bit_size: 1
-  variants:
-  - name: GenerateInterrupt
-    description: Clock monitor generates an interrupt when an error is detected.
-    value: 0
-  - name: GenerateReset
-    description: Clock monitor generates a reset when an error is detected.
-    value: 1
-enum/UpllcsrLk:
-  bit_size: 1
-  variants:
-  - name: WriteEnabled
-    description: Control Status Register can be written.
-    value: 0
-  - name: WriteDisabled
-    description: Control Status Register cannot be written.
-    value: 1
 enum/Upllerr:
   bit_size: 1
   variants:

@@ -41,7 +41,7 @@ block/UsbhsAlpha:
   - name: gptimer0ld
     description: 'General Purpose Timer #0 Load.'
     byte_offset: 128
-    fieldset: UsbhsAlphaFieldsetZulu
+    fieldset: Gptimer0ld2
   - name: gptimer0ctrl
     description: 'General Purpose Timer #0 Controller.'
     byte_offset: 132
@@ -49,7 +49,7 @@ block/UsbhsAlpha:
   - name: gptimer1ld
     description: 'General Purpose Timer #1 Load.'
     byte_offset: 136
-    fieldset: UsbhsAlphaFieldsetBravoAlpha
+    fieldset: Gptimer0ld2
   - name: gptimer1ctrl
     description: 'General Purpose Timer #1 Controller.'
     byte_offset: 140
@@ -184,31 +184,31 @@ block/UsbhsAlpha:
   - name: endptctrl1
     description: Endpoint Control 1.
     byte_offset: 452
-    fieldset: UsbhsAlphaFieldsetJuliet
+    fieldset: Endptctrl2
   - name: endptctrl2
     description: Endpoint Control 2.
     byte_offset: 456
-    fieldset: UsbhsAlphaFieldsetKilo
+    fieldset: Endptctrl2
   - name: endptctrl3
     description: Endpoint Control 3.
     byte_offset: 460
-    fieldset: UsbhsAlphaFieldsetLima
+    fieldset: Endptctrl2
   - name: endptctrl4
     description: Endpoint Control 4.
     byte_offset: 464
-    fieldset: UsbhsAlphaFieldsetMike
+    fieldset: Endptctrl2
   - name: endptctrl5
     description: Endpoint Control 5.
     byte_offset: 468
-    fieldset: UsbhsAlphaFieldsetNovember
+    fieldset: Endptctrl2
   - name: endptctrl6
     description: Endpoint Control 6.
     byte_offset: 472
-    fieldset: UsbhsAlphaFieldsetOscar
+    fieldset: Endptctrl2
   - name: endptctrl7
     description: Endpoint Control 7.
     byte_offset: 476
-    fieldset: UsbhsAlphaFieldsetPapa
+    fieldset: Endptctrl2
 fieldset/UsbhsAlphaFieldsetAlpha:
   description: Next Asynch. Address.
   fields:
@@ -295,473 +295,95 @@ fieldset/UsbhsAlphaFieldsetIndia:
     description: RX Endpoint Stall.
     bit_offset: 0
     bit_size: 1
-    enum: UsbhsAlphaEnumIndia
+    enum: Rxs
   - name: rxt
     description: RX Endpoint Type.
     bit_offset: 2
     bit_size: 2
-    enum: UsbhsAlphaEnumJuliet
+    enum: Rxt2
   - name: rxe
     description: RX Endpoint Enable.
     bit_offset: 7
     bit_size: 1
-    enum: UsbhsAlphaEnumHotel
+    enum: Rxe
   - name: txs
     description: TX Endpoint Stall.
     bit_offset: 16
     bit_size: 1
-    enum: UsbhsAlphaEnumLima
+    enum: Rxs
   - name: txt
     description: TX Endpoint Type.
     bit_offset: 18
     bit_size: 2
-    enum: UsbhsAlphaEnumMike
+    enum: Rxt2
   - name: txe
     description: TX Endpoint Enable.
     bit_offset: 23
     bit_size: 1
-    enum: UsbhsAlphaEnumKilo
-fieldset/UsbhsAlphaFieldsetJuliet:
-  description: Endpoint Control 1.
-  fields:
-  - name: rxs
-    description: RX Endpoint Stall.
-    bit_offset: 0
-    bit_size: 1
-    enum: UsbhsAlphaEnumRomeo
-  - name: rxd
-    description: RX Endpoint Data Sink.
-    bit_offset: 1
-    bit_size: 1
-    enum: UsbhsAlphaEnumNovember
-  - name: rxt
-    description: RX Endpoint Type.
-    bit_offset: 2
-    bit_size: 2
-    enum: UsbhsAlphaEnumSierra
-  - name: rxi
-    description: RX Data Toggle Inhibit.
-    bit_offset: 5
-    bit_size: 1
-    enum: UsbhsAlphaEnumPapa
-  - name: rxr
-    description: RX Data Toggle Reset (WS).
-    bit_offset: 6
-    bit_size: 1
-    enum: UsbhsAlphaEnumQuebec
-  - name: rxe
-    description: RX Endpoint Enable.
-    bit_offset: 7
-    bit_size: 1
-    enum: UsbhsAlphaEnumOscar
-  - name: txs
-    description: TX Endpoint Stall.
-    bit_offset: 16
-    bit_size: 1
-    enum: UsbhsAlphaEnumXray
-  - name: txd
-    description: TX Endpoint Data Source.
-    bit_offset: 17
-    bit_size: 1
-    enum: UsbhsAlphaEnumTango
-  - name: txt
-    description: TX Endpoint Type.
-    bit_offset: 18
-    bit_size: 2
-    enum: UsbhsAlphaEnumYankee
-  - name: txi
-    description: TX Data Toggle Inhibit.
-    bit_offset: 21
-    bit_size: 1
-    enum: UsbhsAlphaEnumVictor
-  - name: txr
-    description: TX Data Toggle Reset (WS).
-    bit_offset: 22
-    bit_size: 1
-    enum: UsbhsAlphaEnumWhiskey
-  - name: txe
-    description: TX Endpoint Enable.
-    bit_offset: 23
-    bit_size: 1
-    enum: UsbhsAlphaEnumUniform
-fieldset/UsbhsAlphaFieldsetKilo:
+    enum: Rxe
+fieldset/Endptctrl2:
   description: Endpoint Control 2.
   fields:
   - name: rxs
     description: RX Endpoint Stall.
     bit_offset: 0
     bit_size: 1
-    enum: UsbhsAlphaEnumDeltaAlpha
+    enum: Rxs
   - name: rxd
     description: RX Endpoint Data Sink.
     bit_offset: 1
     bit_size: 1
-    enum: UsbhsAlphaEnumZulu
+    enum: Rxd
   - name: rxt
     description: RX Endpoint Type.
     bit_offset: 2
     bit_size: 2
-    enum: UsbhsAlphaEnumEchoAlpha
+    enum: Rxt
   - name: rxi
     description: RX Data Toggle Inhibit.
     bit_offset: 5
     bit_size: 1
-    enum: UsbhsAlphaEnumBravoAlpha
+    enum: Rxe
   - name: rxr
     description: RX Data Toggle Reset (WS).
     bit_offset: 6
     bit_size: 1
-    enum: UsbhsAlphaEnumCharlieAlpha
+    enum: Rxr
   - name: rxe
     description: RX Endpoint Enable.
     bit_offset: 7
     bit_size: 1
-    enum: UsbhsAlphaEnumAlphaAlpha
+    enum: Rxe
   - name: txs
     description: TX Endpoint Stall.
     bit_offset: 16
     bit_size: 1
-    enum: UsbhsAlphaEnumJulietAlpha
+    enum: Rxs
   - name: txd
     description: TX Endpoint Data Source.
     bit_offset: 17
     bit_size: 1
-    enum: UsbhsAlphaEnumFoxtrotAlpha
+    enum: Txd
   - name: txt
     description: TX Endpoint Type.
     bit_offset: 18
     bit_size: 2
-    enum: UsbhsAlphaEnumKiloAlpha
+    enum: Rxt
   - name: txi
     description: TX Data Toggle Inhibit.
     bit_offset: 21
     bit_size: 1
-    enum: UsbhsAlphaEnumHotelAlpha
+    enum: Txi
   - name: txr
     description: TX Data Toggle Reset (WS).
     bit_offset: 22
     bit_size: 1
-    enum: UsbhsAlphaEnumIndiaAlpha
+    enum: Rxr
   - name: txe
     description: TX Endpoint Enable.
     bit_offset: 23
     bit_size: 1
-    enum: UsbhsAlphaEnumGolfAlpha
-fieldset/UsbhsAlphaFieldsetLima:
-  description: Endpoint Control 3.
-  fields:
-  - name: rxs
-    description: RX Endpoint Stall.
-    bit_offset: 0
-    bit_size: 1
-    enum: UsbhsAlphaEnumPapaAlpha
-  - name: rxd
-    description: RX Endpoint Data Sink.
-    bit_offset: 1
-    bit_size: 1
-    enum: UsbhsAlphaEnumLimaAlpha
-  - name: rxt
-    description: RX Endpoint Type.
-    bit_offset: 2
-    bit_size: 2
-    enum: UsbhsAlphaEnumQuebecAlpha
-  - name: rxi
-    description: RX Data Toggle Inhibit.
-    bit_offset: 5
-    bit_size: 1
-    enum: UsbhsAlphaEnumNovemberAlpha
-  - name: rxr
-    description: RX Data Toggle Reset (WS).
-    bit_offset: 6
-    bit_size: 1
-    enum: UsbhsAlphaEnumOscarAlpha
-  - name: rxe
-    description: RX Endpoint Enable.
-    bit_offset: 7
-    bit_size: 1
-    enum: UsbhsAlphaEnumMikeAlpha
-  - name: txs
-    description: TX Endpoint Stall.
-    bit_offset: 16
-    bit_size: 1
-    enum: UsbhsAlphaEnumVictorAlpha
-  - name: txd
-    description: TX Endpoint Data Source.
-    bit_offset: 17
-    bit_size: 1
-    enum: UsbhsAlphaEnumRomeoAlpha
-  - name: txt
-    description: TX Endpoint Type.
-    bit_offset: 18
-    bit_size: 2
-    enum: UsbhsAlphaEnumWhiskeyAlpha
-  - name: txi
-    description: TX Data Toggle Inhibit.
-    bit_offset: 21
-    bit_size: 1
-    enum: UsbhsAlphaEnumTangoAlpha
-  - name: txr
-    description: TX Data Toggle Reset (WS).
-    bit_offset: 22
-    bit_size: 1
-    enum: UsbhsAlphaEnumUniformAlpha
-  - name: txe
-    description: TX Endpoint Enable.
-    bit_offset: 23
-    bit_size: 1
-    enum: UsbhsAlphaEnumSierraAlpha
-fieldset/UsbhsAlphaFieldsetMike:
-  description: Endpoint Control 4.
-  fields:
-  - name: rxs
-    description: RX Endpoint Stall.
-    bit_offset: 0
-    bit_size: 1
-    enum: UsbhsAlphaEnumBravoBravo
-  - name: rxd
-    description: RX Endpoint Data Sink.
-    bit_offset: 1
-    bit_size: 1
-    enum: UsbhsAlphaEnumXrayAlpha
-  - name: rxt
-    description: RX Endpoint Type.
-    bit_offset: 2
-    bit_size: 2
-    enum: UsbhsAlphaEnumCharlieBravo
-  - name: rxi
-    description: RX Data Toggle Inhibit.
-    bit_offset: 5
-    bit_size: 1
-    enum: UsbhsAlphaEnumZuluAlpha
-  - name: rxr
-    description: RX Data Toggle Reset (WS).
-    bit_offset: 6
-    bit_size: 1
-    enum: UsbhsAlphaEnumAlphaBravo
-  - name: rxe
-    description: RX Endpoint Enable.
-    bit_offset: 7
-    bit_size: 1
-    enum: UsbhsAlphaEnumYankeeAlpha
-  - name: txs
-    description: TX Endpoint Stall.
-    bit_offset: 16
-    bit_size: 1
-    enum: UsbhsAlphaEnumHotelBravo
-  - name: txd
-    description: TX Endpoint Data Source.
-    bit_offset: 17
-    bit_size: 1
-    enum: UsbhsAlphaEnumDeltaBravo
-  - name: txt
-    description: TX Endpoint Type.
-    bit_offset: 18
-    bit_size: 2
-    enum: UsbhsAlphaEnumIndiaBravo
-  - name: txi
-    description: TX Data Toggle Inhibit.
-    bit_offset: 21
-    bit_size: 1
-    enum: UsbhsAlphaEnumFoxtrotBravo
-  - name: txr
-    description: TX Data Toggle Reset (WS).
-    bit_offset: 22
-    bit_size: 1
-    enum: UsbhsAlphaEnumGolfBravo
-  - name: txe
-    description: TX Endpoint Enable.
-    bit_offset: 23
-    bit_size: 1
-    enum: UsbhsAlphaEnumEchoBravo
-fieldset/UsbhsAlphaFieldsetNovember:
-  description: Endpoint Control 5.
-  fields:
-  - name: rxs
-    description: RX Endpoint Stall.
-    bit_offset: 0
-    bit_size: 1
-    enum: UsbhsAlphaEnumNovemberBravo
-  - name: rxd
-    description: RX Endpoint Data Sink.
-    bit_offset: 1
-    bit_size: 1
-    enum: UsbhsAlphaEnumJulietBravo
-  - name: rxt
-    description: RX Endpoint Type.
-    bit_offset: 2
-    bit_size: 2
-    enum: UsbhsAlphaEnumOscarBravo
-  - name: rxi
-    description: RX Data Toggle Inhibit.
-    bit_offset: 5
-    bit_size: 1
-    enum: UsbhsAlphaEnumLimaBravo
-  - name: rxr
-    description: RX Data Toggle Reset (WS).
-    bit_offset: 6
-    bit_size: 1
-    enum: UsbhsAlphaEnumMikeBravo
-  - name: rxe
-    description: RX Endpoint Enable.
-    bit_offset: 7
-    bit_size: 1
-    enum: UsbhsAlphaEnumKiloBravo
-  - name: txs
-    description: TX Endpoint Stall.
-    bit_offset: 16
-    bit_size: 1
-    enum: UsbhsAlphaEnumTangoBravo
-  - name: txd
-    description: TX Endpoint Data Source.
-    bit_offset: 17
-    bit_size: 1
-    enum: UsbhsAlphaEnumPapaBravo
-  - name: txt
-    description: TX Endpoint Type.
-    bit_offset: 18
-    bit_size: 2
-    enum: UsbhsAlphaEnumUniformBravo
-  - name: txi
-    description: TX Data Toggle Inhibit.
-    bit_offset: 21
-    bit_size: 1
-    enum: UsbhsAlphaEnumRomeoBravo
-  - name: txr
-    description: TX Data Toggle Reset (WS).
-    bit_offset: 22
-    bit_size: 1
-    enum: UsbhsAlphaEnumSierraBravo
-  - name: txe
-    description: TX Endpoint Enable.
-    bit_offset: 23
-    bit_size: 1
-    enum: UsbhsAlphaEnumQuebecBravo
-fieldset/UsbhsAlphaFieldsetOscar:
-  description: Endpoint Control 6.
-  fields:
-  - name: rxs
-    description: RX Endpoint Stall.
-    bit_offset: 0
-    bit_size: 1
-    enum: UsbhsAlphaEnumZuluBravo
-  - name: rxd
-    description: RX Endpoint Data Sink.
-    bit_offset: 1
-    bit_size: 1
-    enum: UsbhsAlphaEnumVictorBravo
-  - name: rxt
-    description: RX Endpoint Type.
-    bit_offset: 2
-    bit_size: 2
-    enum: UsbhsAlphaEnumAlphaCharlie
-  - name: rxi
-    description: RX Data Toggle Inhibit.
-    bit_offset: 5
-    bit_size: 1
-    enum: UsbhsAlphaEnumXrayBravo
-  - name: rxr
-    description: RX Data Toggle Reset (WS).
-    bit_offset: 6
-    bit_size: 1
-    enum: UsbhsAlphaEnumYankeeBravo
-  - name: rxe
-    description: RX Endpoint Enable.
-    bit_offset: 7
-    bit_size: 1
-    enum: UsbhsAlphaEnumWhiskeyBravo
-  - name: txs
-    description: TX Endpoint Stall.
-    bit_offset: 16
-    bit_size: 1
-    enum: UsbhsAlphaEnumFoxtrotCharlie
-  - name: txd
-    description: TX Endpoint Data Source.
-    bit_offset: 17
-    bit_size: 1
-    enum: UsbhsAlphaEnumBravoCharlie
-  - name: txt
-    description: TX Endpoint Type.
-    bit_offset: 18
-    bit_size: 2
-    enum: UsbhsAlphaEnumGolfCharlie
-  - name: txi
-    description: TX Data Toggle Inhibit.
-    bit_offset: 21
-    bit_size: 1
-    enum: UsbhsAlphaEnumDeltaCharlie
-  - name: txr
-    description: TX Data Toggle Reset (WS).
-    bit_offset: 22
-    bit_size: 1
-    enum: UsbhsAlphaEnumEchoCharlie
-  - name: txe
-    description: TX Endpoint Enable.
-    bit_offset: 23
-    bit_size: 1
-    enum: UsbhsAlphaEnumCharlieCharlie
-fieldset/UsbhsAlphaFieldsetPapa:
-  description: Endpoint Control 7.
-  fields:
-  - name: rxs
-    description: RX Endpoint Stall.
-    bit_offset: 0
-    bit_size: 1
-    enum: UsbhsAlphaEnumLimaCharlie
-  - name: rxd
-    description: RX Endpoint Data Sink.
-    bit_offset: 1
-    bit_size: 1
-    enum: UsbhsAlphaEnumHotelCharlie
-  - name: rxt
-    description: RX Endpoint Type.
-    bit_offset: 2
-    bit_size: 2
-    enum: UsbhsAlphaEnumMikeCharlie
-  - name: rxi
-    description: RX Data Toggle Inhibit.
-    bit_offset: 5
-    bit_size: 1
-    enum: UsbhsAlphaEnumJulietCharlie
-  - name: rxr
-    description: RX Data Toggle Reset (WS).
-    bit_offset: 6
-    bit_size: 1
-    enum: UsbhsAlphaEnumKiloCharlie
-  - name: rxe
-    description: RX Endpoint Enable.
-    bit_offset: 7
-    bit_size: 1
-    enum: UsbhsAlphaEnumIndiaCharlie
-  - name: txs
-    description: TX Endpoint Stall.
-    bit_offset: 16
-    bit_size: 1
-    enum: UsbhsAlphaEnumRomeoCharlie
-  - name: txd
-    description: TX Endpoint Data Source.
-    bit_offset: 17
-    bit_size: 1
-    enum: UsbhsAlphaEnumNovemberCharlie
-  - name: txt
-    description: TX Endpoint Type.
-    bit_offset: 18
-    bit_size: 2
-    enum: UsbhsAlphaEnumSierraCharlie
-  - name: txi
-    description: TX Data Toggle Inhibit.
-    bit_offset: 21
-    bit_size: 1
-    enum: UsbhsAlphaEnumPapaCharlie
-  - name: txr
-    description: TX Data Toggle Reset (WS).
-    bit_offset: 22
-    bit_size: 1
-    enum: UsbhsAlphaEnumQuebecCharlie
-  - name: txe
-    description: TX Endpoint Enable.
-    bit_offset: 23
-    bit_size: 1
-    enum: UsbhsAlphaEnumOscarCharlie
+    enum: Rxe
 fieldset/UsbhsAlphaFieldsetQuebec:
   description: Endpoint Flush.
   fields:
@@ -850,7 +472,7 @@ fieldset/UsbhsAlphaFieldsetYankee:
     description: General Purpose Timer Mode.
     bit_offset: 24
     bit_size: 1
-    enum: UsbhsAlphaEnumWhiskeyCharlie
+    enum: Gptmode
   - name: gptrst
     description: General Purpose Timer Reset.
     bit_offset: 30
@@ -860,8 +482,8 @@ fieldset/UsbhsAlphaFieldsetYankee:
     description: General Purpose Timer Run.
     bit_offset: 31
     bit_size: 1
-    enum: UsbhsAlphaEnumYankeeCharlie
-fieldset/UsbhsAlphaFieldsetZulu:
+    enum: Gptrun
+fieldset/Gptimer0ld2:
   description: 'General Purpose Timer #0 Load.'
   fields:
   - name: gptld
@@ -879,7 +501,7 @@ fieldset/UsbhsAlphaFieldsetAlphaAlpha:
     description: General Purpose Timer Mode.
     bit_offset: 24
     bit_size: 1
-    enum: UsbhsAlphaEnumZuluCharlie
+    enum: Gptmode
   - name: gptrst
     description: General Purpose Timer Reset.
     bit_offset: 30
@@ -889,14 +511,7 @@ fieldset/UsbhsAlphaFieldsetAlphaAlpha:
     description: General Purpose Timer Run.
     bit_offset: 31
     bit_size: 1
-    enum: UsbhsAlphaEnumBravoDelta
-fieldset/UsbhsAlphaFieldsetBravoAlpha:
-  description: 'General Purpose Timer #1 Load.'
-  fields:
-  - name: gptld
-    description: General Purpose Timer Load Value.
-    bit_offset: 0
-    bit_size: 24
+    enum: Gptrun
 fieldset/UsbhsAlphaFieldsetCharlieAlpha:
   description: Host Controller Capability Parameters.
   fields:
@@ -1586,7 +1201,7 @@ enum/UsbhsAlphaEnumGolf:
   - name: DeviceOpEn
     description: Supported.
     value: 1
-enum/UsbhsAlphaEnumHotel:
+enum/Rxe:
   bit_size: 1
   variants:
   - name: Disable
@@ -1595,7 +1210,7 @@ enum/UsbhsAlphaEnumHotel:
   - name: Enable
     description: Enabled.
     value: 1
-enum/UsbhsAlphaEnumIndia:
+enum/Rxs:
   bit_size: 1
   variants:
   - name: Disable
@@ -1604,76 +1219,19 @@ enum/UsbhsAlphaEnumIndia:
   - name: Enable
     description: Endpoint stalled.
     value: 1
-enum/UsbhsAlphaEnumJuliet:
+enum/Rxt2:
   bit_size: 2
   variants:
   - name: Ctrl
     description: Control.
     value: 0
-enum/UsbhsAlphaEnumKilo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/UsbhsAlphaEnumLima:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Endpoint OK.
-    value: 0
-  - name: Enable
-    description: Endpoint stalled.
-    value: 1
-enum/UsbhsAlphaEnumMike:
-  bit_size: 2
-  variants:
-  - name: Ctrl
-    description: Control.
-    value: 0
-enum/UsbhsAlphaEnumNovember:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Dual Port Memory Buffer/DMA Engine.
-    value: 0
-enum/UsbhsAlphaEnumOscar:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/UsbhsAlphaEnumPapa:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/UsbhsAlphaEnumQuebec:
+enum/Rxr:
   bit_size: 1
   variants:
   - name: W1
     description: Reset PID sequence.
     value: 1
-enum/UsbhsAlphaEnumRomeo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Endpoint OK.
-    value: 0
-  - name: Enable
-    description: Endpoint stalled.
-    value: 1
-enum/UsbhsAlphaEnumSierra:
+enum/Rxt:
   bit_size: 2
   variants:
   - name: Blk
@@ -1688,22 +1246,13 @@ enum/UsbhsAlphaEnumSierra:
   - name: Iso
     description: Isochronous.
     value: 1
-enum/UsbhsAlphaEnumTango:
+enum/Txd:
   bit_size: 1
   variants:
   - name: Dma
     description: Dual Port Memory Buffer/DMA Engine.
     value: 0
-enum/UsbhsAlphaEnumUniform:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/UsbhsAlphaEnumVictor:
+enum/Txi:
   bit_size: 1
   variants:
   - name: PidDis
@@ -1712,684 +1261,12 @@ enum/UsbhsAlphaEnumVictor:
   - name: PidEn
     description: PID sequencing enabled.
     value: 0
-enum/UsbhsAlphaEnumWhiskey:
-  bit_size: 1
-  variants:
-  - name: W1
-    description: Reset PID sequence.
-    value: 1
-enum/UsbhsAlphaEnumXray:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Endpoint OK.
-    value: 0
-  - name: Enable
-    description: Endpoint stalled.
-    value: 1
-enum/UsbhsAlphaEnumYankee:
-  bit_size: 2
-  variants:
-  - name: Blk
-    description: Bulk.
-    value: 2
-  - name: Ctl
-    description: Control.
-    value: 0
-  - name: Irq
-    description: Interrupt.
-    value: 3
-  - name: Iso
-    description: Isochronous.
-    value: 1
-enum/UsbhsAlphaEnumZulu:
+enum/Rxd:
   bit_size: 1
   variants:
   - name: Disable
     description: Dual Port Memory Buffer/DMA Engine.
     value: 0
-enum/UsbhsAlphaEnumAlphaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/UsbhsAlphaEnumBravoAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/UsbhsAlphaEnumCharlieAlpha:
-  bit_size: 1
-  variants:
-  - name: W1
-    description: Reset PID sequence.
-    value: 1
-enum/UsbhsAlphaEnumDeltaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Endpoint OK.
-    value: 0
-  - name: Enable
-    description: Endpoint stalled.
-    value: 1
-enum/UsbhsAlphaEnumEchoAlpha:
-  bit_size: 2
-  variants:
-  - name: Blk
-    description: Bulk.
-    value: 2
-  - name: Ctl
-    description: Control.
-    value: 0
-  - name: Irq
-    description: Interrupt.
-    value: 3
-  - name: Iso
-    description: Isochronous.
-    value: 1
-enum/UsbhsAlphaEnumFoxtrotAlpha:
-  bit_size: 1
-  variants:
-  - name: Dma
-    description: Dual Port Memory Buffer/DMA Engine.
-    value: 0
-enum/UsbhsAlphaEnumGolfAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/UsbhsAlphaEnumHotelAlpha:
-  bit_size: 1
-  variants:
-  - name: PidDis
-    description: PID sequencing disabled.
-    value: 1
-  - name: PidEn
-    description: PID sequencing enabled.
-    value: 0
-enum/UsbhsAlphaEnumIndiaAlpha:
-  bit_size: 1
-  variants:
-  - name: W1
-    description: Reset PID sequence.
-    value: 1
-enum/UsbhsAlphaEnumJulietAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Endpoint OK.
-    value: 0
-  - name: Enable
-    description: Endpoint stalled.
-    value: 1
-enum/UsbhsAlphaEnumKiloAlpha:
-  bit_size: 2
-  variants:
-  - name: Blk
-    description: Bulk.
-    value: 2
-  - name: Ctl
-    description: Control.
-    value: 0
-  - name: Irq
-    description: Interrupt.
-    value: 3
-  - name: Iso
-    description: Isochronous.
-    value: 1
-enum/UsbhsAlphaEnumLimaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Dual Port Memory Buffer/DMA Engine.
-    value: 0
-enum/UsbhsAlphaEnumMikeAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/UsbhsAlphaEnumNovemberAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/UsbhsAlphaEnumOscarAlpha:
-  bit_size: 1
-  variants:
-  - name: W1
-    description: Reset PID sequence.
-    value: 1
-enum/UsbhsAlphaEnumPapaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Endpoint OK.
-    value: 0
-  - name: Enable
-    description: Endpoint stalled.
-    value: 1
-enum/UsbhsAlphaEnumQuebecAlpha:
-  bit_size: 2
-  variants:
-  - name: Blk
-    description: Bulk.
-    value: 2
-  - name: Ctl
-    description: Control.
-    value: 0
-  - name: Irq
-    description: Interrupt.
-    value: 3
-  - name: Iso
-    description: Isochronous.
-    value: 1
-enum/UsbhsAlphaEnumRomeoAlpha:
-  bit_size: 1
-  variants:
-  - name: Dma
-    description: Dual Port Memory Buffer/DMA Engine.
-    value: 0
-enum/UsbhsAlphaEnumSierraAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/UsbhsAlphaEnumTangoAlpha:
-  bit_size: 1
-  variants:
-  - name: PidDis
-    description: PID sequencing disabled.
-    value: 1
-  - name: PidEn
-    description: PID sequencing enabled.
-    value: 0
-enum/UsbhsAlphaEnumUniformAlpha:
-  bit_size: 1
-  variants:
-  - name: W1
-    description: Reset PID sequence.
-    value: 1
-enum/UsbhsAlphaEnumVictorAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Endpoint OK.
-    value: 0
-  - name: Enable
-    description: Endpoint stalled.
-    value: 1
-enum/UsbhsAlphaEnumWhiskeyAlpha:
-  bit_size: 2
-  variants:
-  - name: Blk
-    description: Bulk.
-    value: 2
-  - name: Ctl
-    description: Control.
-    value: 0
-  - name: Irq
-    description: Interrupt.
-    value: 3
-  - name: Iso
-    description: Isochronous.
-    value: 1
-enum/UsbhsAlphaEnumXrayAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Dual Port Memory Buffer/DMA Engine.
-    value: 0
-enum/UsbhsAlphaEnumYankeeAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/UsbhsAlphaEnumZuluAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/UsbhsAlphaEnumAlphaBravo:
-  bit_size: 1
-  variants:
-  - name: W1
-    description: Reset PID sequence.
-    value: 1
-enum/UsbhsAlphaEnumBravoBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Endpoint OK.
-    value: 0
-  - name: Enable
-    description: Endpoint stalled.
-    value: 1
-enum/UsbhsAlphaEnumCharlieBravo:
-  bit_size: 2
-  variants:
-  - name: Blk
-    description: Bulk.
-    value: 2
-  - name: Ctl
-    description: Control.
-    value: 0
-  - name: Irq
-    description: Interrupt.
-    value: 3
-  - name: Iso
-    description: Isochronous.
-    value: 1
-enum/UsbhsAlphaEnumDeltaBravo:
-  bit_size: 1
-  variants:
-  - name: Dma
-    description: Dual Port Memory Buffer/DMA Engine.
-    value: 0
-enum/UsbhsAlphaEnumEchoBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/UsbhsAlphaEnumFoxtrotBravo:
-  bit_size: 1
-  variants:
-  - name: PidDis
-    description: PID sequencing disabled.
-    value: 1
-  - name: PidEn
-    description: PID sequencing enabled.
-    value: 0
-enum/UsbhsAlphaEnumGolfBravo:
-  bit_size: 1
-  variants:
-  - name: W1
-    description: Reset PID sequence.
-    value: 1
-enum/UsbhsAlphaEnumHotelBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Endpoint OK.
-    value: 0
-  - name: Enable
-    description: Endpoint stalled.
-    value: 1
-enum/UsbhsAlphaEnumIndiaBravo:
-  bit_size: 2
-  variants:
-  - name: Blk
-    description: Bulk.
-    value: 2
-  - name: Ctl
-    description: Control.
-    value: 0
-  - name: Irq
-    description: Interrupt.
-    value: 3
-  - name: Iso
-    description: Isochronous.
-    value: 1
-enum/UsbhsAlphaEnumJulietBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Dual Port Memory Buffer/DMA Engine.
-    value: 0
-enum/UsbhsAlphaEnumKiloBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/UsbhsAlphaEnumLimaBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/UsbhsAlphaEnumMikeBravo:
-  bit_size: 1
-  variants:
-  - name: W1
-    description: Reset PID sequence.
-    value: 1
-enum/UsbhsAlphaEnumNovemberBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Endpoint OK.
-    value: 0
-  - name: Enable
-    description: Endpoint stalled.
-    value: 1
-enum/UsbhsAlphaEnumOscarBravo:
-  bit_size: 2
-  variants:
-  - name: Blk
-    description: Bulk.
-    value: 2
-  - name: Ctl
-    description: Control.
-    value: 0
-  - name: Irq
-    description: Interrupt.
-    value: 3
-  - name: Iso
-    description: Isochronous.
-    value: 1
-enum/UsbhsAlphaEnumPapaBravo:
-  bit_size: 1
-  variants:
-  - name: Dma
-    description: Dual Port Memory Buffer/DMA Engine.
-    value: 0
-enum/UsbhsAlphaEnumQuebecBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/UsbhsAlphaEnumRomeoBravo:
-  bit_size: 1
-  variants:
-  - name: PidDis
-    description: PID sequencing disabled.
-    value: 1
-  - name: PidEn
-    description: PID sequencing enabled.
-    value: 0
-enum/UsbhsAlphaEnumSierraBravo:
-  bit_size: 1
-  variants:
-  - name: W1
-    description: Reset PID sequence.
-    value: 1
-enum/UsbhsAlphaEnumTangoBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Endpoint OK.
-    value: 0
-  - name: Enable
-    description: Endpoint stalled.
-    value: 1
-enum/UsbhsAlphaEnumUniformBravo:
-  bit_size: 2
-  variants:
-  - name: Blk
-    description: Bulk.
-    value: 2
-  - name: Ctl
-    description: Control.
-    value: 0
-  - name: Irq
-    description: Interrupt.
-    value: 3
-  - name: Iso
-    description: Isochronous.
-    value: 1
-enum/UsbhsAlphaEnumVictorBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Dual Port Memory Buffer/DMA Engine.
-    value: 0
-enum/UsbhsAlphaEnumWhiskeyBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/UsbhsAlphaEnumXrayBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/UsbhsAlphaEnumYankeeBravo:
-  bit_size: 1
-  variants:
-  - name: W1
-    description: Reset PID sequence.
-    value: 1
-enum/UsbhsAlphaEnumZuluBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Endpoint OK.
-    value: 0
-  - name: Enable
-    description: Endpoint stalled.
-    value: 1
-enum/UsbhsAlphaEnumAlphaCharlie:
-  bit_size: 2
-  variants:
-  - name: Blk
-    description: Bulk.
-    value: 2
-  - name: Ctl
-    description: Control.
-    value: 0
-  - name: Irq
-    description: Interrupt.
-    value: 3
-  - name: Iso
-    description: Isochronous.
-    value: 1
-enum/UsbhsAlphaEnumBravoCharlie:
-  bit_size: 1
-  variants:
-  - name: Dma
-    description: Dual Port Memory Buffer/DMA Engine.
-    value: 0
-enum/UsbhsAlphaEnumCharlieCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/UsbhsAlphaEnumDeltaCharlie:
-  bit_size: 1
-  variants:
-  - name: PidDis
-    description: PID sequencing disabled.
-    value: 1
-  - name: PidEn
-    description: PID sequencing enabled.
-    value: 0
-enum/UsbhsAlphaEnumEchoCharlie:
-  bit_size: 1
-  variants:
-  - name: W1
-    description: Reset PID sequence.
-    value: 1
-enum/UsbhsAlphaEnumFoxtrotCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Endpoint OK.
-    value: 0
-  - name: Enable
-    description: Endpoint stalled.
-    value: 1
-enum/UsbhsAlphaEnumGolfCharlie:
-  bit_size: 2
-  variants:
-  - name: Blk
-    description: Bulk.
-    value: 2
-  - name: Ctl
-    description: Control.
-    value: 0
-  - name: Irq
-    description: Interrupt.
-    value: 3
-  - name: Iso
-    description: Isochronous.
-    value: 1
-enum/UsbhsAlphaEnumHotelCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Dual Port Memory Buffer/DMA Engine.
-    value: 0
-enum/UsbhsAlphaEnumIndiaCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/UsbhsAlphaEnumJulietCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/UsbhsAlphaEnumKiloCharlie:
-  bit_size: 1
-  variants:
-  - name: W1
-    description: Reset PID sequence.
-    value: 1
-enum/UsbhsAlphaEnumLimaCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Endpoint OK.
-    value: 0
-  - name: Enable
-    description: Endpoint stalled.
-    value: 1
-enum/UsbhsAlphaEnumMikeCharlie:
-  bit_size: 2
-  variants:
-  - name: Blk
-    description: Bulk.
-    value: 2
-  - name: Ctl
-    description: Control.
-    value: 0
-  - name: Irq
-    description: Interrupt.
-    value: 3
-  - name: Iso
-    description: Isochronous.
-    value: 1
-enum/UsbhsAlphaEnumNovemberCharlie:
-  bit_size: 1
-  variants:
-  - name: Dma
-    description: Dual Port Memory Buffer/DMA Engine.
-    value: 0
-enum/UsbhsAlphaEnumOscarCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/UsbhsAlphaEnumPapaCharlie:
-  bit_size: 1
-  variants:
-  - name: PidDis
-    description: PID sequencing disabled.
-    value: 1
-  - name: PidEn
-    description: PID sequencing enabled.
-    value: 0
-enum/UsbhsAlphaEnumQuebecCharlie:
-  bit_size: 1
-  variants:
-  - name: W1
-    description: Reset PID sequence.
-    value: 1
-enum/UsbhsAlphaEnumRomeoCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Endpoint OK.
-    value: 0
-  - name: Enable
-    description: Endpoint stalled.
-    value: 1
-enum/UsbhsAlphaEnumSierraCharlie:
-  bit_size: 2
-  variants:
-  - name: Blk
-    description: Bulk.
-    value: 2
-  - name: Ctl
-    description: Control.
-    value: 0
-  - name: Irq
-    description: Interrupt.
-    value: 3
-  - name: Iso
-    description: Isochronous.
-    value: 1
 enum/UsbhsAlphaEnumTangoCharlie:
   bit_size: 1
   variants:
@@ -2435,15 +1312,6 @@ enum/UsbhsAlphaEnumVictorCharlie:
   - name: Frindex8
     description: (8) 5.
     value: 7
-enum/UsbhsAlphaEnumWhiskeyCharlie:
-  bit_size: 1
-  variants:
-  - name: OneShot
-    description: One Shot Mode.
-    value: 0
-  - name: Repeat
-    description: Repeat Mode.
-    value: 1
 enum/UsbhsAlphaEnumXrayCharlie:
   bit_size: 1
   variants:
@@ -2453,16 +1321,7 @@ enum/UsbhsAlphaEnumXrayCharlie:
   - name: NoAction
     description: No action.
     value: 0
-enum/UsbhsAlphaEnumYankeeCharlie:
-  bit_size: 1
-  variants:
-  - name: Run
-    description: Run.
-    value: 1
-  - name: StopCntr
-    description: Stop counting.
-    value: 0
-enum/UsbhsAlphaEnumZuluCharlie:
+enum/Gptmode:
   bit_size: 1
   variants:
   - name: OneShot
@@ -2480,7 +1339,7 @@ enum/UsbhsAlphaEnumAlphaDelta:
   - name: NoAction
     description: No action.
     value: 0
-enum/UsbhsAlphaEnumBravoDelta:
+enum/Gptrun:
   bit_size: 1
   variants:
   - name: Run

@@ -98,7 +98,7 @@ fieldset/TsiAlphaFieldsetAlpha:
     description: Threshold Trace Enable.
     bit_offset: 31
     bit_size: 1
-    enum: TsiAlphaEnumIndiaBravo
+    enum: DmaenEos
 fieldset/TsiAlphaFieldsetBravo:
   description: TSI Channel Merge.
   fields:
@@ -124,7 +124,7 @@ fieldset/TsiAlphaFieldsetCharlie:
     description: Self-Capacitance Noise Cancelation.
     bit_offset: 19
     bit_size: 1
-    enum: TsiAlphaEnumMikeAlpha
+    enum: DmaenEos
   - name: s_xch
     description: Self-Capacitance Charge Current Multiple.
     bit_offset: 20
@@ -144,7 +144,7 @@ fieldset/TsiAlphaFieldsetCharlie:
     description: Self-Capacitance Sensitivity Boost.
     bit_offset: 27
     bit_size: 1
-    enum: TsiAlphaEnumOscarAlpha
+    enum: DmaenEos
   - name: s_xdn
     description: Self-Capacitance Discharge Current Multiple.
     bit_offset: 28
@@ -192,12 +192,12 @@ fieldset/TsiAlphaFieldsetDelta:
     description: Mutual-Capacitance Counter Enable.
     bit_offset: 16
     bit_size: 1
-    enum: TsiAlphaEnumOscar
+    enum: DmaenEos
   - name: m_tx_pd_en
     description: Mutual-Capacitance TX Pulldown Enable.
     bit_offset: 17
     bit_size: 1
-    enum: TsiAlphaEnumAlphaAlpha
+    enum: DmaenEos
   - name: m_sen_boost
     description: Mutual-Capacitance Sensitivity Boost.
     bit_offset: 18
@@ -240,12 +240,12 @@ fieldset/TsiAlphaFieldsetFoxtrot:
     description: In-Progress DMA Transfer Request Enable.
     bit_offset: 0
     bit_size: 1
-    enum: TsiAlphaEnumKilo
+    enum: DmaenEos
   - name: dmaen_outrg
     description: Out-of-Range DMA Transfer Request Enable.
     bit_offset: 2
     bit_size: 1
-    enum: TsiAlphaEnumLima
+    enum: DmaenEos
   - name: stm
     description: Scan Trigger Mode.
     bit_offset: 3
@@ -255,12 +255,12 @@ fieldset/TsiAlphaFieldsetFoxtrot:
     description: TSI Stop Enable.
     bit_offset: 4
     bit_size: 1
-    enum: TsiAlphaEnumCharlieBravo
+    enum: DmaenEos
   - name: tsien
     description: TSI Enable.
     bit_offset: 5
     bit_size: 1
-    enum: TsiAlphaEnumNovemberBravo
+    enum: DmaenEos
   - name: swts
     description: Software Trigger Start.
     bit_offset: 7
@@ -285,7 +285,7 @@ fieldset/TsiAlphaFieldsetFoxtrot:
     description: Proximity Enable Signal.
     bit_offset: 22
     bit_size: 1
-    enum: TsiAlphaEnumNovemberAlpha
+    enum: DmaenEos
   - name: setclk
     description: Set Clock.
     bit_offset: 24
@@ -295,12 +295,12 @@ fieldset/TsiAlphaFieldsetFoxtrot:
     description: End-of-Scan Interrupt Enable.
     bit_offset: 27
     bit_size: 1
-    enum: TsiAlphaEnumNovember
+    enum: DmaenEos
   - name: outrg_en
     description: Out-of-Range Interrupt Enable.
     bit_offset: 30
     bit_size: 1
-    enum: TsiAlphaEnumIndiaAlpha
+    enum: DmaenEos
 fieldset/TsiAlphaFieldsetGolf:
   description: TSI Miscellaneous.
   fields:
@@ -318,7 +318,7 @@ fieldset/TsiAlphaFieldsetGolf:
     description: Test Finger Function Enable Signals.
     bit_offset: 23
     bit_size: 1
-    enum: TsiAlphaEnumGolfBravo
+    enum: DmaenEos
   - name: clkdivider
     description: TSI Clock Divider.
     bit_offset: 24
@@ -375,7 +375,7 @@ fieldset/TsiAlphaFieldsetJuliet:
     description: SINC Valid.
     bit_offset: 1
     bit_size: 1
-    enum: TsiAlphaEnumWhiskeyAlpha
+    enum: SincValid
   - name: sinc_overflow_flag
     description: SINC Overflow Flag.
     bit_offset: 2
@@ -385,7 +385,7 @@ fieldset/TsiAlphaFieldsetJuliet:
     description: Switch Enable.
     bit_offset: 3
     bit_size: 1
-    enum: TsiAlphaEnumDeltaBravo
+    enum: SincValid
   - name: decimation
     description: Decimation.
     bit_offset: 16
@@ -413,12 +413,12 @@ fieldset/TsiAlphaFieldsetKilo:
     description: Base Nocharge Number.
     bit_offset: 16
     bit_size: 4
-    enum: TsiAlphaEnumAlpha
+    enum: BaseNochargeNum
   - name: charge_num
     description: Charge Number.
     bit_offset: 20
     bit_size: 4
-    enum: TsiAlphaEnumDelta
+    enum: BaseNochargeNum
   - name: ssc_control_reverse
     description: SSC Control Reverse.
     bit_offset: 24
@@ -491,7 +491,7 @@ fieldset/TsiAlphaFieldsetNovember:
     description: Trigger Enable.
     bit_offset: 30
     bit_size: 1
-    enum: TsiAlphaEnumLimaBravo
+    enum: SincValid
   - name: trig_clk_sel
     description: Trigger Clock Select.
     bit_offset: 31
@@ -508,7 +508,7 @@ fieldset/TsiAlphaFieldsetOscar:
     description: TSI Wakeup Channel High Threshold.
     bit_offset: 16
     bit_size: 16
-enum/TsiAlphaEnumAlpha:
+enum/BaseNochargeNum:
   bit_size: 4
   variants:
   - name: Ssc1
@@ -589,57 +589,6 @@ enum/TsiAlphaEnumCharlie:
   - name: Notchosen
     description: Channel not chosen for proximity pad.
     value: 0
-enum/TsiAlphaEnumDelta:
-  bit_size: 4
-  variants:
-  - name: Ssc1
-    description: '1.'
-    value: 0
-  - name: Ssc10
-    description: '10.'
-    value: 9
-  - name: Ssc11
-    description: '11.'
-    value: 10
-  - name: Ssc12
-    description: '12.'
-    value: 11
-  - name: Ssc13
-    description: '13.'
-    value: 12
-  - name: Ssc14
-    description: '14.'
-    value: 13
-  - name: Ssc15
-    description: '15.'
-    value: 14
-  - name: Ssc16
-    description: '16.'
-    value: 15
-  - name: Ssc2
-    description: '2.'
-    value: 1
-  - name: Ssc3
-    description: '3.'
-    value: 2
-  - name: Ssc4
-    description: '4.'
-    value: 3
-  - name: Ssc5
-    description: '5.'
-    value: 4
-  - name: Ssc6
-    description: '6.'
-    value: 5
-  - name: Ssc7
-    description: '7.'
-    value: 6
-  - name: Ssc8
-    description: '8.'
-    value: 7
-  - name: Ssc9
-    description: '9.'
-    value: 8
 enum/TsiAlphaEnumEcho:
   bit_size: 1
   variants:
@@ -850,16 +799,7 @@ enum/TsiAlphaEnumJuliet:
   - name: Dec9
     description: '9.'
     value: 8
-enum/TsiAlphaEnumKilo:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
-enum/TsiAlphaEnumLima:
+enum/DmaenEos:
   bit_size: 1
   variants:
   - name: Disabled
@@ -889,24 +829,6 @@ enum/TsiAlphaEnumMike:
   - name: Volt27
     description: Vm = 0.6 V, Vp = 2.7 V.
     value: 5
-enum/TsiAlphaEnumNovember:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
-enum/TsiAlphaEnumOscar:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
 enum/TsiAlphaEnumPapa:
   bit_size: 1
   variants:
@@ -1171,15 +1093,6 @@ enum/TsiAlphaEnumZulu:
   - name: Cp20
     description: 20 pF.
     value: 3
-enum/TsiAlphaEnumAlphaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
 enum/TsiAlphaEnumBravoAlpha:
   bit_size: 8
   variants:
@@ -1318,15 +1231,6 @@ enum/TsiAlphaEnumHotelAlpha:
   - name: OscTsi
     description: Analog oscillator.
     value: 0
-enum/TsiAlphaEnumIndiaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
 enum/TsiAlphaEnumJulietAlpha:
   bit_size: 1
   variants:
@@ -1414,33 +1318,6 @@ enum/TsiAlphaEnumLimaAlpha:
   - name: Ctrim75
     description: 7.5 pF.
     value: 2
-enum/TsiAlphaEnumMikeAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
-enum/TsiAlphaEnumNovemberAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
-enum/TsiAlphaEnumOscarAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
 enum/TsiAlphaEnumPapaAlpha:
   bit_size: 3
   variants:
@@ -1534,15 +1411,6 @@ enum/TsiAlphaEnumVictorAlpha:
   - name: Enabled
     description: Overflow.
     value: 1
-enum/TsiAlphaEnumWhiskeyAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disabled.
-    value: 0
-  - name: Enabled
-    description: Enabled.
-    value: 1
 enum/TsiAlphaEnumXrayAlpha:
   bit_size: 1
   variants:
@@ -1615,24 +1483,6 @@ enum/TsiAlphaEnumBravoBravo:
   - name: SwtrigScn
     description: Software trigger scan.
     value: 0
-enum/TsiAlphaEnumCharlieBravo:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
-enum/TsiAlphaEnumDeltaBravo:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disabled.
-    value: 0
-  - name: Enabled
-    description: Enabled.
-    value: 1
 enum/TsiAlphaEnumEchoBravo:
   bit_size: 1
   variants:
@@ -1669,15 +1519,6 @@ enum/TsiAlphaEnumFoxtrotBravo:
   - name: Fin888
     description: Finger capacitor is 888 pF.
     value: 5
-enum/TsiAlphaEnumGolfBravo:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
 enum/TsiAlphaEnumHotelBravo:
   bit_size: 3
   variants:
@@ -1705,15 +1546,6 @@ enum/TsiAlphaEnumHotelBravo:
   - name: Tshd8
     description: thresholdh = (baseline + counter) / 8 and thresholdl = (baseline - counter) / 8.
     value: 2
-enum/TsiAlphaEnumIndiaBravo:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
 enum/TsiAlphaEnumJulietBravo:
   bit_size: 5
   variants:
@@ -1741,7 +1573,7 @@ enum/TsiAlphaEnumKiloBravo:
   - name: ClkSoc
     description: clksoc.
     value: 1
-enum/TsiAlphaEnumLimaBravo:
+enum/SincValid:
   bit_size: 1
   variants:
   - name: Disabled
@@ -1828,12 +1660,3 @@ enum/TsiAlphaEnumMikeBravo:
   - name: SelfCp9
     description: Channel 9.
     value: 9
-enum/TsiAlphaEnumNovemberBravo:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
