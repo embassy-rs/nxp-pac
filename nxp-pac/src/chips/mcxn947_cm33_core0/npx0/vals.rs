@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctx0lk {
     #[doc = "Lock disabled: VMAPCTX0 remains read-write."]
@@ -30,7 +31,8 @@ impl From<Ctx0lk> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctx1lk {
     #[doc = "Lock disabled: VMAPCTX1 remains read-write."]
@@ -61,7 +63,8 @@ impl From<Ctx1lk> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctx2lk {
     #[doc = "Lock disabled: VMAPCTX2 remains read-write."]
@@ -92,7 +95,8 @@ impl From<Ctx2lk> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctx3lk {
     #[doc = "Lock disabled: VMAPCTX3 remains read-write."]
@@ -123,7 +127,8 @@ impl From<Ctx3lk> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gde {
     #[doc = "Global decryption disabled. NPX on-the-fly decryption is globally disabled. Subsequent reads return 0."]
@@ -154,7 +159,8 @@ impl From<Gde> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gee {
     #[doc = "Global encryption disabled. NPX on-the-fly encryption is disabled. Subsequent reads return 0."]
@@ -185,7 +191,8 @@ impl From<Gee> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Glk {
     #[doc = "Lock disabled. Subsequent reads return 0."]
@@ -216,7 +223,8 @@ impl From<Glk> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mlk {
     #[doc = "Lock disabled. Subsequent reads return 0."]
@@ -247,7 +255,8 @@ impl From<Mlk> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Numctx {
     #[doc = "No (zero) implemented memory contexts."]
@@ -295,7 +304,8 @@ impl From<Numctx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Remaplk {
     #[doc = "Lock disabled: can write to REMAP."]
@@ -326,7 +336,8 @@ impl From<Remaplk> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum V0 {
     #[doc = "Not valid."]
@@ -357,7 +368,8 @@ impl From<V0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum V1 {
     #[doc = "Not valid."]
@@ -388,7 +400,8 @@ impl From<V1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum V2 {
     #[doc = "Not valid."]
@@ -419,7 +432,8 @@ impl From<V2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum V3 {
     #[doc = "Not valid."]

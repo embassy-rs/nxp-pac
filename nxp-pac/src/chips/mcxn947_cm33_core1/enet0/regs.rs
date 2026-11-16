@@ -34,6 +34,7 @@ impl Default for DmaCh0Control {
         DmaCh0Control(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh0Control {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh0Control")
@@ -77,6 +78,7 @@ impl Default for DmaCh0CurrentAppRxbuffer {
         DmaCh0CurrentAppRxbuffer(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh0CurrentAppRxbuffer {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh0CurrentAppRxbuffer")
@@ -118,6 +120,7 @@ impl Default for DmaCh0CurrentAppRxdesc {
         DmaCh0CurrentAppRxdesc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh0CurrentAppRxdesc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh0CurrentAppRxdesc")
@@ -159,6 +162,7 @@ impl Default for DmaCh0CurrentAppTxbuffer {
         DmaCh0CurrentAppTxbuffer(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh0CurrentAppTxbuffer {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh0CurrentAppTxbuffer")
@@ -200,6 +204,7 @@ impl Default for DmaCh0CurrentAppTxdesc {
         DmaCh0CurrentAppTxdesc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh0CurrentAppTxdesc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh0CurrentAppTxdesc")
@@ -385,6 +390,7 @@ impl Default for DmaCh0InterruptEnable {
         DmaCh0InterruptEnable(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh0InterruptEnable {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh0InterruptEnable")
@@ -462,6 +468,7 @@ impl Default for DmaCh0MissFrameCnt {
         DmaCh0MissFrameCnt(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh0MissFrameCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh0MissFrameCnt")
@@ -565,6 +572,7 @@ impl Default for DmaCh0RxControl {
         DmaCh0RxControl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh0RxControl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh0RxControl")
@@ -628,6 +636,7 @@ impl Default for DmaCh0RxControl2 {
         DmaCh0RxControl2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh0RxControl2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh0RxControl2")
@@ -671,6 +680,7 @@ impl Default for DmaCh0RxEriCnt {
         DmaCh0RxEriCnt(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh0RxEriCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh0RxEriCnt")
@@ -720,6 +730,7 @@ impl Default for DmaCh0RxInterruptWatchdogTimer {
         DmaCh0RxInterruptWatchdogTimer(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh0RxInterruptWatchdogTimer {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh0RxInterruptWatchdogTimer")
@@ -763,6 +774,7 @@ impl Default for DmaCh0RxdescListAddress {
         DmaCh0RxdescListAddress(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh0RxdescListAddress {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh0RxdescListAddress")
@@ -804,6 +816,7 @@ impl Default for DmaCh0RxdescTailPointer {
         DmaCh0RxdescTailPointer(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh0RxdescTailPointer {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh0RxdescTailPointer")
@@ -881,6 +894,7 @@ impl Default for DmaCh0SlotFunctionControlStatus {
         DmaCh0SlotFunctionControlStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh0SlotFunctionControlStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh0SlotFunctionControlStatus")
@@ -1096,6 +1110,7 @@ impl Default for DmaCh0Status {
         DmaCh0Status(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh0Status {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh0Status")
@@ -1213,6 +1228,7 @@ impl Default for DmaCh0TxControl {
         DmaCh0TxControl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh0TxControl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh0TxControl")
@@ -1262,6 +1278,7 @@ impl Default for DmaCh0TxdescListAddress {
         DmaCh0TxdescListAddress(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh0TxdescListAddress {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh0TxdescListAddress")
@@ -1303,6 +1320,7 @@ impl Default for DmaCh0TxdescRingLength {
         DmaCh0TxdescRingLength(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh0TxdescRingLength {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh0TxdescRingLength")
@@ -1344,6 +1362,7 @@ impl Default for DmaCh0TxdescTailPointer {
         DmaCh0TxdescTailPointer(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh0TxdescTailPointer {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh0TxdescTailPointer")
@@ -1397,6 +1416,7 @@ impl Default for DmaCh1Control {
         DmaCh1Control(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh1Control {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh1Control")
@@ -1440,6 +1460,7 @@ impl Default for DmaCh1CurrentAppRxbuffer {
         DmaCh1CurrentAppRxbuffer(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh1CurrentAppRxbuffer {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh1CurrentAppRxbuffer")
@@ -1481,6 +1502,7 @@ impl Default for DmaCh1CurrentAppRxdesc {
         DmaCh1CurrentAppRxdesc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh1CurrentAppRxdesc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh1CurrentAppRxdesc")
@@ -1522,6 +1544,7 @@ impl Default for DmaCh1CurrentAppTxbuffer {
         DmaCh1CurrentAppTxbuffer(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh1CurrentAppTxbuffer {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh1CurrentAppTxbuffer")
@@ -1563,6 +1586,7 @@ impl Default for DmaCh1CurrentAppTxdesc {
         DmaCh1CurrentAppTxdesc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh1CurrentAppTxdesc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh1CurrentAppTxdesc")
@@ -1748,6 +1772,7 @@ impl Default for DmaCh1InterruptEnable {
         DmaCh1InterruptEnable(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh1InterruptEnable {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh1InterruptEnable")
@@ -1825,6 +1850,7 @@ impl Default for DmaCh1MissFrameCnt {
         DmaCh1MissFrameCnt(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh1MissFrameCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh1MissFrameCnt")
@@ -1928,6 +1954,7 @@ impl Default for DmaCh1RxControl {
         DmaCh1RxControl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh1RxControl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh1RxControl")
@@ -1991,6 +2018,7 @@ impl Default for DmaCh1RxControl2 {
         DmaCh1RxControl2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh1RxControl2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh1RxControl2")
@@ -2034,6 +2062,7 @@ impl Default for DmaCh1RxEriCnt {
         DmaCh1RxEriCnt(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh1RxEriCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh1RxEriCnt")
@@ -2083,6 +2112,7 @@ impl Default for DmaCh1RxInterruptWatchdogTimer {
         DmaCh1RxInterruptWatchdogTimer(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh1RxInterruptWatchdogTimer {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh1RxInterruptWatchdogTimer")
@@ -2126,6 +2156,7 @@ impl Default for DmaCh1RxdescListAddress {
         DmaCh1RxdescListAddress(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh1RxdescListAddress {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh1RxdescListAddress")
@@ -2167,6 +2198,7 @@ impl Default for DmaCh1RxdescTailPointer {
         DmaCh1RxdescTailPointer(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh1RxdescTailPointer {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh1RxdescTailPointer")
@@ -2244,6 +2276,7 @@ impl Default for DmaCh1SlotFunctionControlStatus {
         DmaCh1SlotFunctionControlStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh1SlotFunctionControlStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh1SlotFunctionControlStatus")
@@ -2459,6 +2492,7 @@ impl Default for DmaCh1Status {
         DmaCh1Status(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh1Status {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh1Status")
@@ -2576,6 +2610,7 @@ impl Default for DmaCh1TxControl {
         DmaCh1TxControl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh1TxControl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh1TxControl")
@@ -2625,6 +2660,7 @@ impl Default for DmaCh1TxdescListAddress {
         DmaCh1TxdescListAddress(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh1TxdescListAddress {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh1TxdescListAddress")
@@ -2666,6 +2702,7 @@ impl Default for DmaCh1TxdescRingLength {
         DmaCh1TxdescRingLength(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh1TxdescRingLength {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh1TxdescRingLength")
@@ -2707,6 +2744,7 @@ impl Default for DmaCh1TxdescTailPointer {
         DmaCh1TxdescTailPointer(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCh1TxdescTailPointer {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCh1TxdescTailPointer")
@@ -2796,6 +2834,7 @@ impl Default for DmaDebugStatus0 {
         DmaDebugStatus0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaDebugStatus0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaDebugStatus0")
@@ -2881,6 +2920,7 @@ impl Default for DmaInterruptStatus {
         DmaInterruptStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaInterruptStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaInterruptStatus")
@@ -2976,6 +3016,7 @@ impl Default for DmaMode {
         DmaMode(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaMode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaMode")
@@ -3061,6 +3102,7 @@ impl Default for DmaSysbusMode {
         DmaSysbusMode(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaSysbusMode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaSysbusMode")
@@ -3156,6 +3198,7 @@ impl Default for IndirAccessCtrl {
         IndirAccessCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IndirAccessCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IndirAccessCtrl")
@@ -3205,6 +3248,7 @@ impl Default for IndirAccessData {
         IndirAccessData(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IndirAccessData {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IndirAccessData")
@@ -3266,6 +3310,7 @@ impl Default for MacAddress0High {
         MacAddress0High(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacAddress0High {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacAddress0High")
@@ -3311,6 +3356,7 @@ impl Default for MacAddress0Low {
         MacAddress0Low(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacAddress0Low {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacAddress0Low")
@@ -3612,6 +3658,7 @@ impl Default for MacConfiguration {
         MacConfiguration(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacConfiguration {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacConfiguration")
@@ -3697,6 +3744,7 @@ impl Default for MacCsrSwCtrl {
         MacCsrSwCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacCsrSwCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacCsrSwCtrl")
@@ -3770,6 +3818,7 @@ impl Default for MacDebug {
         MacDebug(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacDebug {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacDebug")
@@ -3889,6 +3938,7 @@ impl Default for MacExtConfiguration {
         MacExtConfiguration(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacExtConfiguration {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacExtConfiguration")
@@ -4170,6 +4220,7 @@ impl Default for MacHwFeature0 {
         MacHwFeature0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacHwFeature0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacHwFeature0")
@@ -4429,6 +4480,7 @@ impl Default for MacHwFeature1 {
         MacHwFeature1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacHwFeature1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacHwFeature1")
@@ -4584,6 +4636,7 @@ impl Default for MacHwFeature2 {
         MacHwFeature2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacHwFeature2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacHwFeature2")
@@ -4783,6 +4836,7 @@ impl Default for MacHwFeature3 {
         MacHwFeature3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacHwFeature3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacHwFeature3")
@@ -4896,6 +4950,7 @@ impl Default for MacInnerVlanIncl {
         MacInnerVlanIncl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacInnerVlanIncl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacInnerVlanIncl")
@@ -5017,6 +5072,7 @@ impl Default for MacInterruptEnable {
         MacInterruptEnable(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacInterruptEnable {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacInterruptEnable")
@@ -5142,6 +5198,7 @@ impl Default for MacInterruptStatus {
         MacInterruptStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacInterruptStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacInterruptStatus")
@@ -5315,6 +5372,7 @@ impl Default for MacLpiControlStatus {
         MacLpiControlStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacLpiControlStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacLpiControlStatus")
@@ -5376,6 +5434,7 @@ impl Default for MacLpiEntryTimer {
         MacLpiEntryTimer(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacLpiEntryTimer {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacLpiEntryTimer")
@@ -5425,6 +5484,7 @@ impl Default for MacLpiTimersControl {
         MacLpiTimersControl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacLpiTimersControl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacLpiTimersControl")
@@ -5588,6 +5648,7 @@ impl Default for MacMdioAddress {
         MacMdioAddress(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacMdioAddress {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacMdioAddress")
@@ -5661,6 +5722,7 @@ impl Default for MacMdioData {
         MacMdioData(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacMdioData {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacMdioData")
@@ -5704,6 +5766,7 @@ impl Default for MacOneusTicCounter {
         MacOneusTicCounter(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacOneusTicCounter {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacOneusTicCounter")
@@ -5817,6 +5880,7 @@ impl Default for MacPacketFilter {
         MacPacketFilter(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacPacketFilter {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacPacketFilter")
@@ -5966,6 +6030,7 @@ impl Default for MacPmtControlStatus {
         MacPmtControlStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacPmtControlStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacPmtControlStatus")
@@ -6023,6 +6088,7 @@ impl Default for MacPpsControl {
         MacPpsControl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacPpsControl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacPpsControl")
@@ -6112,6 +6178,7 @@ impl Default for MacQ0TxFlowCtrl {
         MacQ0TxFlowCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacQ0TxFlowCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacQ0TxFlowCtrl")
@@ -6161,6 +6228,7 @@ impl Default for MacRwkPacketFilter {
         MacRwkPacketFilter(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacRwkPacketFilter {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacRwkPacketFilter")
@@ -6214,6 +6282,7 @@ impl Default for MacRxFlowCtrl {
         MacRxFlowCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacRxFlowCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacRxFlowCtrl")
@@ -6329,6 +6398,7 @@ impl Default for MacRxTxStatus {
         MacRxTxStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacRxTxStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacRxTxStatus")
@@ -6394,6 +6464,7 @@ impl Default for MacRxqCtrl0 {
         MacRxqCtrl0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacRxqCtrl0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacRxqCtrl0")
@@ -6533,6 +6604,7 @@ impl Default for MacRxqCtrl1 {
         MacRxqCtrl1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacRxqCtrl1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacRxqCtrl1")
@@ -6602,6 +6674,7 @@ impl Default for MacRxqCtrl2 {
         MacRxqCtrl2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacRxqCtrl2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacRxqCtrl2")
@@ -6705,6 +6778,7 @@ impl Default for MacRxqCtrl4 {
         MacRxqCtrl4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacRxqCtrl4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacRxqCtrl4")
@@ -6756,6 +6830,7 @@ impl Default for MacSubSecondIncrement {
         MacSubSecondIncrement(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacSubSecondIncrement {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacSubSecondIncrement")
@@ -6797,6 +6872,7 @@ impl Default for MacSystemTimeNanoseconds {
         MacSystemTimeNanoseconds(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacSystemTimeNanoseconds {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacSystemTimeNanoseconds")
@@ -6850,6 +6926,7 @@ impl Default for MacSystemTimeNanosecondsUpdate {
         MacSystemTimeNanosecondsUpdate(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacSystemTimeNanosecondsUpdate {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacSystemTimeNanosecondsUpdate")
@@ -6893,6 +6970,7 @@ impl Default for MacSystemTimeSeconds {
         MacSystemTimeSeconds(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacSystemTimeSeconds {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacSystemTimeSeconds")
@@ -6930,6 +7008,7 @@ impl Default for MacSystemTimeSecondsUpdate {
         MacSystemTimeSecondsUpdate(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacSystemTimeSecondsUpdate {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacSystemTimeSecondsUpdate")
@@ -6971,6 +7050,7 @@ impl Default for MacTimestampAddend {
         MacTimestampAddend(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacTimestampAddend {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacTimestampAddend")
@@ -7224,6 +7304,7 @@ impl Default for MacTimestampControl {
         MacTimestampControl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacTimestampControl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacTimestampControl")
@@ -7301,6 +7382,7 @@ impl Default for MacTimestampEgressCorrNanosecond {
         MacTimestampEgressCorrNanosecond(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacTimestampEgressCorrNanosecond {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacTimestampEgressCorrNanosecond")
@@ -7354,6 +7436,7 @@ impl Default for MacTimestampEgressLatency {
         MacTimestampEgressLatency(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacTimestampEgressLatency {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacTimestampEgressLatency")
@@ -7397,6 +7480,7 @@ impl Default for MacTimestampIngressCorrNanosecond {
         MacTimestampIngressCorrNanosecond(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacTimestampIngressCorrNanosecond {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacTimestampIngressCorrNanosecond")
@@ -7450,6 +7534,7 @@ impl Default for MacTimestampIngressLatency {
         MacTimestampIngressLatency(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacTimestampIngressLatency {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacTimestampIngressLatency")
@@ -7529,6 +7614,7 @@ impl Default for MacTimestampStatus {
         MacTimestampStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacTimestampStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacTimestampStatus")
@@ -7588,6 +7674,7 @@ impl Default for MacTxTimestampStatusNanoseconds {
         MacTxTimestampStatusNanoseconds(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacTxTimestampStatusNanoseconds {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacTxTimestampStatusNanoseconds")
@@ -7631,6 +7718,7 @@ impl Default for MacTxTimestampStatusSeconds {
         MacTxTimestampStatusSeconds(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacTxTimestampStatusSeconds {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacTxTimestampStatusSeconds")
@@ -7684,6 +7772,7 @@ impl Default for MacVersion {
         MacVersion(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacVersion {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacVersion")
@@ -7823,6 +7912,7 @@ impl Default for MacVlanIncl {
         MacVlanIncl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacVlanIncl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacVlanIncl")
@@ -8012,6 +8102,7 @@ impl Default for MacVlanTagCtrl {
         MacVlanTagCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacVlanTagCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacVlanTagCtrl")
@@ -8087,6 +8178,7 @@ impl Default for MacWatchdogTimeout {
         MacWatchdogTimeout(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MacWatchdogTimeout {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MacWatchdogTimeout")
@@ -8142,6 +8234,7 @@ impl Default for MtlInterruptStatus {
         MtlInterruptStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MtlInterruptStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MtlInterruptStatus")
@@ -8233,6 +8326,7 @@ impl Default for MtlOperationMode {
         MtlOperationMode(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MtlOperationMode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MtlOperationMode")
@@ -8342,6 +8436,7 @@ impl Default for MtlQ0InterruptControlStatus {
         MtlQ0InterruptControlStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MtlQ0InterruptControlStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MtlQ0InterruptControlStatus")
@@ -8453,6 +8548,7 @@ impl Default for MtlQ1InterruptControlStatus {
         MtlQ1InterruptControlStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MtlQ1InterruptControlStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MtlQ1InterruptControlStatus")
@@ -8516,6 +8612,7 @@ impl Default for MtlRxq0Control {
         MtlRxq0Control(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MtlRxq0Control {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MtlRxq0Control")
@@ -8595,6 +8692,7 @@ impl Default for MtlRxq0Debug {
         MtlRxq0Debug(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MtlRxq0Debug {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MtlRxq0Debug")
@@ -8678,6 +8776,7 @@ impl Default for MtlRxq0MissedPacketOverflowCnt {
         MtlRxq0MissedPacketOverflowCnt(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MtlRxq0MissedPacketOverflowCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MtlRxq0MissedPacketOverflowCnt")
@@ -8785,6 +8884,7 @@ impl Default for MtlRxq0OperationMode {
         MtlRxq0OperationMode(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MtlRxq0OperationMode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MtlRxq0OperationMode")
@@ -8848,6 +8948,7 @@ impl Default for MtlRxq1Control {
         MtlRxq1Control(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MtlRxq1Control {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MtlRxq1Control")
@@ -8927,6 +9028,7 @@ impl Default for MtlRxq1Debug {
         MtlRxq1Debug(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MtlRxq1Debug {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MtlRxq1Debug")
@@ -9010,6 +9112,7 @@ impl Default for MtlRxq1MissedPacketOverflowCnt {
         MtlRxq1MissedPacketOverflowCnt(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MtlRxq1MissedPacketOverflowCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MtlRxq1MissedPacketOverflowCnt")
@@ -9117,6 +9220,7 @@ impl Default for MtlRxq1OperationMode {
         MtlRxq1OperationMode(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MtlRxq1OperationMode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MtlRxq1OperationMode")
@@ -9204,6 +9308,7 @@ impl Default for MtlRxqDmaMap0 {
         MtlRxqDmaMap0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MtlRxqDmaMap0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MtlRxqDmaMap0")
@@ -9323,6 +9428,7 @@ impl Default for MtlTxq0Debug {
         MtlTxq0Debug(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MtlTxq0Debug {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MtlTxq0Debug")
@@ -9376,6 +9482,7 @@ impl Default for MtlTxq0EtsStatus {
         MtlTxq0EtsStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MtlTxq0EtsStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MtlTxq0EtsStatus")
@@ -9461,6 +9568,7 @@ impl Default for MtlTxq0OperationMode {
         MtlTxq0OperationMode(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MtlTxq0OperationMode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MtlTxq0OperationMode")
@@ -9510,6 +9618,7 @@ impl Default for MtlTxq0QuantumWeight {
         MtlTxq0QuantumWeight(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MtlTxq0QuantumWeight {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MtlTxq0QuantumWeight")
@@ -9563,6 +9672,7 @@ impl Default for MtlTxq0Underflow {
         MtlTxq0Underflow(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MtlTxq0Underflow {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MtlTxq0Underflow")
@@ -9678,6 +9788,7 @@ impl Default for MtlTxq1Debug {
         MtlTxq1Debug(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MtlTxq1Debug {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MtlTxq1Debug")
@@ -9755,6 +9866,7 @@ impl Default for MtlTxq1EtsControl {
         MtlTxq1EtsControl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MtlTxq1EtsControl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MtlTxq1EtsControl")
@@ -9800,6 +9912,7 @@ impl Default for MtlTxq1EtsStatus {
         MtlTxq1EtsStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MtlTxq1EtsStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MtlTxq1EtsStatus")
@@ -9837,6 +9950,7 @@ impl Default for MtlTxq1Hicredit {
         MtlTxq1Hicredit(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MtlTxq1Hicredit {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MtlTxq1Hicredit")
@@ -9874,6 +9988,7 @@ impl Default for MtlTxq1Locredit {
         MtlTxq1Locredit(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MtlTxq1Locredit {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MtlTxq1Locredit")
@@ -9959,6 +10074,7 @@ impl Default for MtlTxq1OperationMode {
         MtlTxq1OperationMode(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MtlTxq1OperationMode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MtlTxq1OperationMode")
@@ -10008,6 +10124,7 @@ impl Default for MtlTxq1QuantumWeight {
         MtlTxq1QuantumWeight(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MtlTxq1QuantumWeight {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MtlTxq1QuantumWeight")
@@ -10049,6 +10166,7 @@ impl Default for MtlTxq1Sendslopecredit {
         MtlTxq1Sendslopecredit(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MtlTxq1Sendslopecredit {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MtlTxq1Sendslopecredit")
@@ -10098,6 +10216,7 @@ impl Default for MtlTxq1Underflow {
         MtlTxq1Underflow(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MtlTxq1Underflow {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MtlTxq1Underflow")
@@ -10141,6 +10260,7 @@ impl Default for Pps0TargetTimeNanoseconds {
         Pps0TargetTimeNanoseconds(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pps0TargetTimeNanoseconds {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pps0TargetTimeNanoseconds")
@@ -10182,6 +10302,7 @@ impl Default for Pps0TargetTimeSeconds {
         Pps0TargetTimeSeconds(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pps0TargetTimeSeconds {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pps0TargetTimeSeconds")

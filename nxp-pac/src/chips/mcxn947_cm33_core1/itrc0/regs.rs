@@ -202,6 +202,7 @@ impl Default for OutSel {
         OutSel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OutSel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OutSel")
@@ -453,6 +454,7 @@ impl Default for OutSel1 {
         OutSel1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OutSel1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OutSel1")
@@ -608,6 +610,7 @@ impl Default for OutSel2 {
         OutSel2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OutSel2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OutSel2")
@@ -927,6 +930,7 @@ impl Default for Status {
         Status(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Status {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Status")
@@ -1168,6 +1172,7 @@ impl Default for Status1 {
         Status1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Status1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Status1")
@@ -1235,6 +1240,7 @@ impl Default for SwEvent0 {
         SwEvent0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SwEvent0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SwEvent0")
@@ -1276,6 +1282,7 @@ impl Default for SwEvent1 {
         SwEvent1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SwEvent1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SwEvent1")

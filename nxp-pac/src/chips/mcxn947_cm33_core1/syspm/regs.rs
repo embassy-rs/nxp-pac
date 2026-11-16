@@ -118,6 +118,7 @@ impl Default for Pmcr {
         Pmcr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pmcr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pmcr")
@@ -175,6 +176,7 @@ impl Default for Pmectr1Hi {
         Pmectr1Hi(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pmectr1Hi {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pmectr1Hi")
@@ -212,6 +214,7 @@ impl Default for Pmectr1Lo {
         Pmectr1Lo(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pmectr1Lo {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pmectr1Lo")
@@ -249,6 +252,7 @@ impl Default for Pmectr2Hi {
         Pmectr2Hi(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pmectr2Hi {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pmectr2Hi")
@@ -286,6 +290,7 @@ impl Default for Pmectr2Lo {
         Pmectr2Lo(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pmectr2Lo {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pmectr2Lo")
@@ -323,6 +328,7 @@ impl Default for Pmectr3Hi {
         Pmectr3Hi(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pmectr3Hi {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pmectr3Hi")
@@ -360,6 +366,7 @@ impl Default for Pmectr3Lo {
         Pmectr3Lo(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pmectr3Lo {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pmectr3Lo")

@@ -1,12 +1,13 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mulsize {
     _RESERVED_0 = 0x0,
-    #[doc = "32-bit multiplier."]
-    Value32b = 0x01,
     #[doc = "64-bit multiplier."]
-    Value64b = 0x02,
+    Bit64 = 0x01,
+    #[doc = "128-bit multiplier."]
+    Bit128 = 0x02,
     #[doc = "128-bit multiplier."]
     Value128b = 0x03,
 }
@@ -33,7 +34,8 @@ impl From<Mulsize> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Redmul {
     #[doc = "full size mode, 3 least significant bits of pointer and length are ignored, minimum supported length 0x0008."]

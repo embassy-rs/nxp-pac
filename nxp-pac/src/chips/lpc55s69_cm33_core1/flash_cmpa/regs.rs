@@ -46,6 +46,7 @@ impl Default for BootCfg {
         BootCfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for BootCfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BootCfg")
@@ -211,6 +212,7 @@ impl Default for CcSocuDflt {
         CcSocuDflt(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CcSocuDflt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CcSocuDflt")
@@ -404,6 +406,7 @@ impl Default for CcSocuPin {
         CcSocuPin(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CcSocuPin {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CcSocuPin")
@@ -467,6 +470,7 @@ impl Default for CustomerDefined {
         CustomerDefined(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CustomerDefined {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CustomerDefined")
@@ -588,6 +592,7 @@ impl Default for PrinceBaseAddr {
         PrinceBaseAddr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceBaseAddr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceBaseAddr")
@@ -643,6 +648,7 @@ impl Default for PrinceSr0 {
         PrinceSr0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceSr0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceSr0")
@@ -680,6 +686,7 @@ impl Default for PrinceSr1 {
         PrinceSr1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceSr1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceSr1")
@@ -717,6 +724,7 @@ impl Default for PrinceSr2 {
         PrinceSr2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PrinceSr2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PrinceSr2")
@@ -754,6 +762,7 @@ impl Default for Rotkh {
         Rotkh(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Rotkh {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Rotkh")
@@ -791,6 +800,7 @@ impl Default for SdioCfg {
         SdioCfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SdioCfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SdioCfg")
@@ -924,6 +934,7 @@ impl Default for SecureBootCfg {
         SecureBootCfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecureBootCfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecureBootCfg")
@@ -981,6 +992,7 @@ impl Default for Sha256Digest {
         Sha256Digest(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sha256Digest {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sha256Digest")
@@ -1018,6 +1030,7 @@ impl Default for SpiFlashCfg {
         SpiFlashCfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SpiFlashCfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SpiFlashCfg")
@@ -1071,6 +1084,7 @@ impl Default for UsbId {
         UsbId(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UsbId {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UsbId")
@@ -1114,6 +1128,7 @@ impl Default for VendorUsage {
         VendorUsage(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for VendorUsage {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VendorUsage")
@@ -1191,6 +1206,7 @@ impl Default for Xtal16mhzCapabankTrim {
         Xtal16mhzCapabankTrim(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Xtal16mhzCapabankTrim {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Xtal16mhzCapabankTrim")
@@ -1280,6 +1296,7 @@ impl Default for Xtal32khzCapabankTrim {
         Xtal32khzCapabankTrim(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Xtal32khzCapabankTrim {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Xtal32khzCapabankTrim")

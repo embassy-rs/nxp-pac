@@ -46,6 +46,7 @@ impl Default for DtcmMagicAddr {
         DtcmMagicAddr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DtcmMagicAddr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DtcmMagicAddr")
@@ -163,6 +164,7 @@ impl Default for IntSigEn {
         IntSigEn(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IntSigEn {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IntSigEn")
@@ -288,6 +290,7 @@ impl Default for IntStatEn {
         IntStatEn(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IntStatEn {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IntStatEn")
@@ -413,6 +416,7 @@ impl Default for IntStatus {
         IntStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IntStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IntStatus")
@@ -490,6 +494,7 @@ impl Default for ItcmMagicAddr {
         ItcmMagicAddr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ItcmMagicAddr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ItcmMagicAddr")
@@ -559,6 +564,7 @@ impl Default for OcramMagicAddr {
         OcramMagicAddr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OcramMagicAddr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OcramMagicAddr")
@@ -640,6 +646,7 @@ impl Default for TcmCtrl {
         TcmCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TcmCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TcmCtrl")

@@ -34,6 +34,7 @@ impl Default for AuxBiasCurveAmbient0 {
         AuxBiasCurveAmbient0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AuxBiasCurveAmbient0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AuxBiasCurveAmbient0")
@@ -89,6 +90,7 @@ impl Default for AuxBiasCurveAmbient1 {
         AuxBiasCurveAmbient1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AuxBiasCurveAmbient1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AuxBiasCurveAmbient1")
@@ -144,6 +146,7 @@ impl Default for AuxBiasCurveAmbient2 {
         AuxBiasCurveAmbient2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AuxBiasCurveAmbient2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AuxBiasCurveAmbient2")
@@ -199,6 +202,7 @@ impl Default for AuxBiasCurveAmbient3 {
         AuxBiasCurveAmbient3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AuxBiasCurveAmbient3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AuxBiasCurveAmbient3")
@@ -242,6 +246,7 @@ impl Default for AuxBiasCurveAmbientArray0 {
         AuxBiasCurveAmbientArray0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AuxBiasCurveAmbientArray0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AuxBiasCurveAmbientArray0")
@@ -283,6 +288,7 @@ impl Default for AuxBiasCurveAmbientArray1 {
         AuxBiasCurveAmbientArray1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AuxBiasCurveAmbientArray1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AuxBiasCurveAmbientArray1")
@@ -324,6 +330,7 @@ impl Default for AuxBiasCurveAmbientArray2 {
         AuxBiasCurveAmbientArray2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AuxBiasCurveAmbientArray2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AuxBiasCurveAmbientArray2")
@@ -365,6 +372,7 @@ impl Default for AuxBiasCurveAmbientArray3 {
         AuxBiasCurveAmbientArray3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AuxBiasCurveAmbientArray3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AuxBiasCurveAmbientArray3")
@@ -418,6 +426,7 @@ impl Default for AuxBiasCurveTemp0 {
         AuxBiasCurveTemp0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AuxBiasCurveTemp0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AuxBiasCurveTemp0")
@@ -473,6 +482,7 @@ impl Default for AuxBiasCurveTemp1 {
         AuxBiasCurveTemp1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AuxBiasCurveTemp1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AuxBiasCurveTemp1")
@@ -528,6 +538,7 @@ impl Default for AuxBiasCurveTemp2 {
         AuxBiasCurveTemp2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AuxBiasCurveTemp2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AuxBiasCurveTemp2")
@@ -583,6 +594,7 @@ impl Default for AuxBiasCurveTemp3 {
         AuxBiasCurveTemp3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AuxBiasCurveTemp3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AuxBiasCurveTemp3")
@@ -626,6 +638,7 @@ impl Default for AuxBiasCurveTempArray0 {
         AuxBiasCurveTempArray0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AuxBiasCurveTempArray0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AuxBiasCurveTempArray0")
@@ -667,6 +680,7 @@ impl Default for AuxBiasCurveTempArray1 {
         AuxBiasCurveTempArray1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AuxBiasCurveTempArray1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AuxBiasCurveTempArray1")
@@ -708,6 +722,7 @@ impl Default for AuxBiasCurveTempArray2 {
         AuxBiasCurveTempArray2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AuxBiasCurveTempArray2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AuxBiasCurveTempArray2")
@@ -749,6 +764,7 @@ impl Default for AuxBiasCurveTempArray3 {
         AuxBiasCurveTempArray3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AuxBiasCurveTempArray3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AuxBiasCurveTempArray3")
@@ -850,6 +866,7 @@ impl Default for Bod {
         Bod(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Bod {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Bod")
@@ -1021,6 +1038,7 @@ impl Default for DcdcPowerProfileHigh0 {
         DcdcPowerProfileHigh0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DcdcPowerProfileHigh0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DcdcPowerProfileHigh0")
@@ -1226,6 +1244,7 @@ impl Default for DcdcPowerProfileHigh1 {
         DcdcPowerProfileHigh1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DcdcPowerProfileHigh1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DcdcPowerProfileHigh1")
@@ -1291,6 +1310,7 @@ impl Default for DcdcPowerProfileHighArray0 {
         DcdcPowerProfileHighArray0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DcdcPowerProfileHighArray0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DcdcPowerProfileHighArray0")
@@ -1332,6 +1352,7 @@ impl Default for DcdcPowerProfileHighArray1 {
         DcdcPowerProfileHighArray1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DcdcPowerProfileHighArray1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DcdcPowerProfileHighArray1")
@@ -1493,6 +1514,7 @@ impl Default for DcdcPowerProfileLow0 {
         DcdcPowerProfileLow0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DcdcPowerProfileLow0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DcdcPowerProfileLow0")
@@ -1698,6 +1720,7 @@ impl Default for DcdcPowerProfileLow1 {
         DcdcPowerProfileLow1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DcdcPowerProfileLow1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DcdcPowerProfileLow1")
@@ -1763,6 +1786,7 @@ impl Default for DcdcPowerProfileLowArray0 {
         DcdcPowerProfileLowArray0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DcdcPowerProfileLowArray0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DcdcPowerProfileLowArray0")
@@ -1804,6 +1828,7 @@ impl Default for DcdcPowerProfileLowArray1 {
         DcdcPowerProfileLowArray1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DcdcPowerProfileLowArray1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DcdcPowerProfileLowArray1")
@@ -1965,6 +1990,7 @@ impl Default for DcdcPowerProfileMedium0 {
         DcdcPowerProfileMedium0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DcdcPowerProfileMedium0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DcdcPowerProfileMedium0")
@@ -2170,6 +2196,7 @@ impl Default for DcdcPowerProfileMedium1 {
         DcdcPowerProfileMedium1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DcdcPowerProfileMedium1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DcdcPowerProfileMedium1")
@@ -2235,6 +2262,7 @@ impl Default for DcdcPowerProfileMediumArray0 {
         DcdcPowerProfileMediumArray0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DcdcPowerProfileMediumArray0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DcdcPowerProfileMediumArray0")
@@ -2276,6 +2304,7 @@ impl Default for DcdcPowerProfileMediumArray1 {
         DcdcPowerProfileMediumArray1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DcdcPowerProfileMediumArray1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DcdcPowerProfileMediumArray1")
@@ -2353,6 +2382,7 @@ impl Default for DeviceType {
         DeviceType(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DeviceType {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DeviceType")
@@ -2400,6 +2430,7 @@ impl Default for DisRomHiding {
         DisRomHiding(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DisRomHiding {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DisRomHiding")
@@ -2453,6 +2484,7 @@ impl Default for EcidBackup0 {
         EcidBackup0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EcidBackup0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EcidBackup0")
@@ -2496,6 +2528,7 @@ impl Default for EcidBackup1 {
         EcidBackup1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EcidBackup1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EcidBackup1")
@@ -2533,6 +2566,7 @@ impl Default for EcidBackup2 {
         EcidBackup2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EcidBackup2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EcidBackup2")
@@ -2570,6 +2604,7 @@ impl Default for EcidBackup3 {
         EcidBackup3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EcidBackup3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EcidBackup3")
@@ -2607,6 +2642,7 @@ impl Default for EcidBackupArray0 {
         EcidBackupArray0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EcidBackupArray0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EcidBackupArray0")
@@ -2644,6 +2680,7 @@ impl Default for EcidBackupArray1 {
         EcidBackupArray1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EcidBackupArray1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EcidBackupArray1")
@@ -2681,6 +2718,7 @@ impl Default for EcidBackupArray2 {
         EcidBackupArray2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EcidBackupArray2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EcidBackupArray2")
@@ -2718,6 +2756,7 @@ impl Default for EcidBackupArray3 {
         EcidBackupArray3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EcidBackupArray3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EcidBackupArray3")
@@ -2755,6 +2794,7 @@ impl Default for FinalTestBatchId0 {
         FinalTestBatchId0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FinalTestBatchId0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FinalTestBatchId0")
@@ -2792,6 +2832,7 @@ impl Default for FinalTestBatchId1 {
         FinalTestBatchId1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FinalTestBatchId1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FinalTestBatchId1")
@@ -2829,6 +2870,7 @@ impl Default for FinalTestBatchId2 {
         FinalTestBatchId2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FinalTestBatchId2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FinalTestBatchId2")
@@ -2866,6 +2908,7 @@ impl Default for FinalTestBatchId3 {
         FinalTestBatchId3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FinalTestBatchId3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FinalTestBatchId3")
@@ -2903,6 +2946,7 @@ impl Default for FinalTestBatchIdArray0 {
         FinalTestBatchIdArray0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FinalTestBatchIdArray0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FinalTestBatchIdArray0")
@@ -2944,6 +2988,7 @@ impl Default for FinalTestBatchIdArray1 {
         FinalTestBatchIdArray1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FinalTestBatchIdArray1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FinalTestBatchIdArray1")
@@ -2985,6 +3030,7 @@ impl Default for FinalTestBatchIdArray2 {
         FinalTestBatchIdArray2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FinalTestBatchIdArray2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FinalTestBatchIdArray2")
@@ -3026,6 +3072,7 @@ impl Default for FinalTestBatchIdArray3 {
         FinalTestBatchIdArray3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FinalTestBatchIdArray3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FinalTestBatchIdArray3")
@@ -3067,6 +3114,7 @@ impl Default for FinalTestDate {
         FinalTestDate(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FinalTestDate {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FinalTestDate")
@@ -3104,6 +3152,7 @@ impl Default for FinalTestProgramVersion {
         FinalTestProgramVersion(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FinalTestProgramVersion {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FinalTestProgramVersion")
@@ -3145,6 +3194,7 @@ impl Default for FinalTestTime {
         FinalTestTime(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FinalTestTime {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FinalTestTime")
@@ -3182,6 +3232,7 @@ impl Default for Flashsizecfg {
         Flashsizecfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flashsizecfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flashsizecfg")
@@ -3259,6 +3310,7 @@ impl Default for Fro192mhz {
         Fro192mhz(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fro192mhz {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fro192mhz")
@@ -3318,6 +3370,7 @@ impl Default for Fro1mhz {
         Fro1mhz(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fro1mhz {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fro1mhz")
@@ -3409,6 +3462,7 @@ impl Default for Gpo00 {
         Gpo00(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo00 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo00")
@@ -3458,6 +3512,7 @@ impl Default for Gpo01 {
         Gpo01(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo01 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo01")
@@ -3519,6 +3574,7 @@ impl Default for Gpo02 {
         Gpo02(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo02 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo02")
@@ -3564,6 +3620,7 @@ impl Default for Gpo03 {
         Gpo03(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo03 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo03")
@@ -3601,6 +3658,7 @@ impl Default for Gpo0Array0 {
         Gpo0Array0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo0Array0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo0Array0")
@@ -3638,6 +3696,7 @@ impl Default for Gpo0Array1 {
         Gpo0Array1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo0Array1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo0Array1")
@@ -3675,6 +3734,7 @@ impl Default for Gpo0Array2 {
         Gpo0Array2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo0Array2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo0Array2")
@@ -3712,6 +3772,7 @@ impl Default for Gpo0Array3 {
         Gpo0Array3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo0Array3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo0Array3")
@@ -3833,6 +3894,7 @@ impl Default for Gpo10 {
         Gpo10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo10")
@@ -3915,6 +3977,7 @@ impl Default for Gpo11 {
         Gpo11(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo11 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo11")
@@ -3972,6 +4035,7 @@ impl Default for Gpo12 {
         Gpo12(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo12 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo12")
@@ -4015,6 +4079,7 @@ impl Default for Gpo13 {
         Gpo13(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo13 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo13")
@@ -4052,6 +4117,7 @@ impl Default for Gpo1Array0 {
         Gpo1Array0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo1Array0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo1Array0")
@@ -4089,6 +4155,7 @@ impl Default for Gpo1Array1 {
         Gpo1Array1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo1Array1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo1Array1")
@@ -4126,6 +4193,7 @@ impl Default for Gpo1Array2 {
         Gpo1Array2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo1Array2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo1Array2")
@@ -4163,6 +4231,7 @@ impl Default for Gpo1Array3 {
         Gpo1Array3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo1Array3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo1Array3")
@@ -4308,6 +4377,7 @@ impl Default for Gpo20 {
         Gpo20(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo20 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo20")
@@ -4373,6 +4443,7 @@ impl Default for Gpo21 {
         Gpo21(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo21 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo21")
@@ -4410,6 +4481,7 @@ impl Default for Gpo22 {
         Gpo22(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo22 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo22")
@@ -4447,6 +4519,7 @@ impl Default for Gpo23 {
         Gpo23(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo23 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo23")
@@ -4484,6 +4557,7 @@ impl Default for Gpo2Array0 {
         Gpo2Array0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo2Array0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo2Array0")
@@ -4521,6 +4595,7 @@ impl Default for Gpo2Array1 {
         Gpo2Array1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo2Array1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo2Array1")
@@ -4558,6 +4633,7 @@ impl Default for Gpo2Array2 {
         Gpo2Array2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo2Array2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo2Array2")
@@ -4595,6 +4671,7 @@ impl Default for Gpo2Array3 {
         Gpo2Array3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo2Array3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo2Array3")
@@ -4716,6 +4793,7 @@ impl Default for Gpo30 {
         Gpo30(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo30 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo30")
@@ -4774,6 +4852,7 @@ impl Default for Gpo31 {
         Gpo31(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo31 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo31")
@@ -4811,6 +4890,7 @@ impl Default for Gpo32 {
         Gpo32(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo32 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo32")
@@ -4848,6 +4928,7 @@ impl Default for Gpo33 {
         Gpo33(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo33 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo33")
@@ -4885,6 +4966,7 @@ impl Default for Gpo3Array0 {
         Gpo3Array0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo3Array0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo3Array0")
@@ -4922,6 +5004,7 @@ impl Default for Gpo3Array1 {
         Gpo3Array1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo3Array1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo3Array1")
@@ -4959,6 +5042,7 @@ impl Default for Gpo3Array2 {
         Gpo3Array2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo3Array2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo3Array2")
@@ -4996,6 +5080,7 @@ impl Default for Gpo3Array3 {
         Gpo3Array3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpo3Array3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpo3Array3")
@@ -5033,6 +5118,7 @@ impl Default for GpoChecksum0 {
         GpoChecksum0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for GpoChecksum0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GpoChecksum0")
@@ -5070,6 +5156,7 @@ impl Default for GpoChecksum1 {
         GpoChecksum1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for GpoChecksum1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GpoChecksum1")
@@ -5107,6 +5194,7 @@ impl Default for GpoChecksum2 {
         GpoChecksum2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for GpoChecksum2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GpoChecksum2")
@@ -5144,6 +5232,7 @@ impl Default for GpoChecksum3 {
         GpoChecksum3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for GpoChecksum3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GpoChecksum3")
@@ -5181,6 +5270,7 @@ impl Default for GpoChecksumArray0 {
         GpoChecksumArray0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for GpoChecksumArray0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GpoChecksumArray0")
@@ -5218,6 +5308,7 @@ impl Default for GpoChecksumArray1 {
         GpoChecksumArray1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for GpoChecksumArray1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GpoChecksumArray1")
@@ -5255,6 +5346,7 @@ impl Default for GpoChecksumArray2 {
         GpoChecksumArray2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for GpoChecksumArray2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GpoChecksumArray2")
@@ -5292,6 +5384,7 @@ impl Default for GpoChecksumArray3 {
         GpoChecksumArray3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for GpoChecksumArray3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GpoChecksumArray3")
@@ -5413,6 +5506,7 @@ impl Default for LdoAo {
         LdoAo(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for LdoAo {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LdoAo")
@@ -5468,6 +5562,7 @@ impl Default for NxpDeviceCertificate0 {
         NxpDeviceCertificate0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for NxpDeviceCertificate0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("NxpDeviceCertificate0")
@@ -5509,6 +5604,7 @@ impl Default for NxpDeviceCertificate1 {
         NxpDeviceCertificate1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for NxpDeviceCertificate1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("NxpDeviceCertificate1")
@@ -5550,6 +5646,7 @@ impl Default for NxpDeviceCertificate2 {
         NxpDeviceCertificate2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for NxpDeviceCertificate2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("NxpDeviceCertificate2")
@@ -5591,6 +5688,7 @@ impl Default for NxpDeviceCertificate3 {
         NxpDeviceCertificate3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for NxpDeviceCertificate3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("NxpDeviceCertificate3")
@@ -5632,6 +5730,7 @@ impl Default for NxpDevicePrivateKey {
         NxpDevicePrivateKey(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for NxpDevicePrivateKey {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("NxpDevicePrivateKey")
@@ -5681,6 +5780,7 @@ impl Default for Periphencfg {
         Periphencfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Periphencfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Periphencfg")
@@ -5856,6 +5956,7 @@ impl Default for PufSram {
         PufSram(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PufSram {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PufSram")
@@ -5919,6 +6020,7 @@ impl Default for PvtMonitor0Array0 {
         PvtMonitor0Array0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PvtMonitor0Array0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PvtMonitor0Array0")
@@ -5956,6 +6058,7 @@ impl Default for PvtMonitor0Array1 {
         PvtMonitor0Array1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PvtMonitor0Array1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PvtMonitor0Array1")
@@ -5993,6 +6096,7 @@ impl Default for PvtMonitor0Array2 {
         PvtMonitor0Array2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PvtMonitor0Array2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PvtMonitor0Array2")
@@ -6066,6 +6170,7 @@ impl Default for PvtMonitor0DelaysLsb {
         PvtMonitor0DelaysLsb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PvtMonitor0DelaysLsb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PvtMonitor0DelaysLsb")
@@ -6137,6 +6242,7 @@ impl Default for PvtMonitor0DelaysMsb {
         PvtMonitor0DelaysMsb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PvtMonitor0DelaysMsb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PvtMonitor0DelaysMsb")
@@ -6194,6 +6300,7 @@ impl Default for PvtMonitor0Ringo {
         PvtMonitor0Ringo(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PvtMonitor0Ringo {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PvtMonitor0Ringo")
@@ -6237,6 +6344,7 @@ impl Default for PvtMonitor1Array0 {
         PvtMonitor1Array0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PvtMonitor1Array0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PvtMonitor1Array0")
@@ -6274,6 +6382,7 @@ impl Default for PvtMonitor1Array1 {
         PvtMonitor1Array1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PvtMonitor1Array1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PvtMonitor1Array1")
@@ -6311,6 +6420,7 @@ impl Default for PvtMonitor1Array2 {
         PvtMonitor1Array2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PvtMonitor1Array2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PvtMonitor1Array2")
@@ -6384,6 +6494,7 @@ impl Default for PvtMonitor1DelaysLsb {
         PvtMonitor1DelaysLsb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PvtMonitor1DelaysLsb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PvtMonitor1DelaysLsb")
@@ -6455,6 +6566,7 @@ impl Default for PvtMonitor1DelaysMsb {
         PvtMonitor1DelaysMsb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PvtMonitor1DelaysMsb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PvtMonitor1DelaysMsb")
@@ -6512,6 +6624,7 @@ impl Default for PvtMonitor1Ringo {
         PvtMonitor1Ringo(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PvtMonitor1Ringo {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PvtMonitor1Ringo")
@@ -6555,6 +6668,7 @@ impl Default for Ramsizecfg {
         Ramsizecfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ramsizecfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ramsizecfg")
@@ -6608,6 +6722,7 @@ impl Default for Ringo0 {
         Ringo0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ringo0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ringo0")
@@ -6663,6 +6778,7 @@ impl Default for Ringo1 {
         Ringo1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ringo1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ringo1")
@@ -6718,6 +6834,7 @@ impl Default for Ringo2 {
         Ringo2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ringo2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ringo2")
@@ -6773,6 +6890,7 @@ impl Default for SdioDelay {
         SdioDelay(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SdioDelay {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SdioDelay")
@@ -6816,6 +6934,7 @@ impl Default for Sha256Digest {
         Sha256Digest(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sha256Digest {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sha256Digest")
@@ -6865,6 +6984,7 @@ impl Default for TempSensOffset {
         TempSensOffset(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TempSensOffset {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TempSensOffset")
@@ -6920,6 +7040,7 @@ impl Default for TempSensSlope {
         TempSensSlope(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TempSensSlope {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TempSensSlope")
@@ -6975,6 +7096,7 @@ impl Default for TempSensVbe1vbe8Ref1 {
         TempSensVbe1vbe8Ref1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TempSensVbe1vbe8Ref1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TempSensVbe1vbe8Ref1")
@@ -7030,6 +7152,7 @@ impl Default for TempSensVbe1vbe8Ref2 {
         TempSensVbe1vbe8Ref2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TempSensVbe1vbe8Ref2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TempSensVbe1vbe8Ref2")
@@ -7097,6 +7220,7 @@ impl Default for Usbcfg {
         Usbcfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Usbcfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Usbcfg")
@@ -7142,6 +7266,7 @@ impl Default for Uuid0 {
         Uuid0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Uuid0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Uuid0")
@@ -7179,6 +7304,7 @@ impl Default for Uuid1 {
         Uuid1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Uuid1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Uuid1")
@@ -7216,6 +7342,7 @@ impl Default for Uuid2 {
         Uuid2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Uuid2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Uuid2")
@@ -7253,6 +7380,7 @@ impl Default for Uuid3 {
         Uuid3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Uuid3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Uuid3")
@@ -7290,6 +7418,7 @@ impl Default for UuidArray0 {
         UuidArray0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UuidArray0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UuidArray0")
@@ -7327,6 +7456,7 @@ impl Default for UuidArray1 {
         UuidArray1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UuidArray1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UuidArray1")
@@ -7364,6 +7494,7 @@ impl Default for UuidArray2 {
         UuidArray2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UuidArray2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UuidArray2")
@@ -7401,6 +7532,7 @@ impl Default for UuidArray3 {
         UuidArray3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UuidArray3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UuidArray3")
@@ -7438,6 +7570,7 @@ impl Default for WaferTest1Date {
         WaferTest1Date(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for WaferTest1Date {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WaferTest1Date")
@@ -7479,6 +7612,7 @@ impl Default for WaferTest1ProgramVersion {
         WaferTest1ProgramVersion(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for WaferTest1ProgramVersion {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WaferTest1ProgramVersion")
@@ -7520,6 +7654,7 @@ impl Default for WaferTest1Time {
         WaferTest1Time(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for WaferTest1Time {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WaferTest1Time")
@@ -7561,6 +7696,7 @@ impl Default for WaferTest2Date {
         WaferTest2Date(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for WaferTest2Date {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WaferTest2Date")
@@ -7602,6 +7738,7 @@ impl Default for WaferTest2ProgramVersion {
         WaferTest2ProgramVersion(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for WaferTest2ProgramVersion {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WaferTest2ProgramVersion")
@@ -7643,6 +7780,7 @@ impl Default for WaferTest2Time {
         WaferTest2Time(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for WaferTest2Time {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WaferTest2Time")
@@ -7744,6 +7882,7 @@ impl Default for Xo32khz {
         Xo32khz(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Xo32khz {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Xo32khz")
@@ -7879,6 +8018,7 @@ impl Default for Xo32mhz {
         Xo32mhz(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Xo32mhz {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Xo32mhz")

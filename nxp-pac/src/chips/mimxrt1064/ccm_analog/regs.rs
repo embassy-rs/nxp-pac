@@ -166,6 +166,7 @@ impl Default for Misc0 {
         Misc0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Misc0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Misc0")
@@ -375,6 +376,7 @@ impl Default for Misc0Clr {
         Misc0Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Misc0Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Misc0Clr")
@@ -584,6 +586,7 @@ impl Default for Misc0Set {
         Misc0Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Misc0Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Misc0Set")
@@ -793,6 +796,7 @@ impl Default for Misc0Tog {
         Misc0Tog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Misc0Tog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Misc0Tog")
@@ -966,6 +970,7 @@ impl Default for Misc1 {
         Misc1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Misc1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Misc1")
@@ -1133,6 +1138,7 @@ impl Default for Misc1Clr {
         Misc1Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Misc1Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Misc1Clr")
@@ -1300,6 +1306,7 @@ impl Default for Misc1Set {
         Misc1Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Misc1Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Misc1Set")
@@ -1467,6 +1474,7 @@ impl Default for Misc1Tog {
         Misc1Tog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Misc1Tog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Misc1Tog")
@@ -1742,6 +1750,7 @@ impl Default for Misc2 {
         Misc2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Misc2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Misc2")
@@ -2035,6 +2044,7 @@ impl Default for Misc2Clr {
         Misc2Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Misc2Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Misc2Clr")
@@ -2328,6 +2338,7 @@ impl Default for Misc2Set {
         Misc2Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Misc2Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Misc2Set")
@@ -2621,6 +2632,7 @@ impl Default for Misc2Tog {
         Misc2Tog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Misc2Tog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Misc2Tog")
@@ -2830,6 +2842,7 @@ impl Default for Pfd480 {
         Pfd480(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pfd480 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pfd480")
@@ -3025,6 +3038,7 @@ impl Default for Pfd480Clr {
         Pfd480Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pfd480Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pfd480Clr")
@@ -3220,6 +3234,7 @@ impl Default for Pfd480Set {
         Pfd480Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pfd480Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pfd480Set")
@@ -3415,6 +3430,7 @@ impl Default for Pfd480Tog {
         Pfd480Tog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pfd480Tog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pfd480Tog")
@@ -3610,6 +3626,7 @@ impl Default for Pfd528 {
         Pfd528(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pfd528 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pfd528")
@@ -3805,6 +3822,7 @@ impl Default for Pfd528Clr {
         Pfd528Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pfd528Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pfd528Clr")
@@ -4000,6 +4018,7 @@ impl Default for Pfd528Set {
         Pfd528Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pfd528Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pfd528Set")
@@ -4195,6 +4214,7 @@ impl Default for Pfd528Tog {
         Pfd528Tog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pfd528Tog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pfd528Tog")
@@ -4330,6 +4350,7 @@ impl Default for PllArm {
         PllArm(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllArm {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllArm")
@@ -4455,6 +4476,7 @@ impl Default for PllArmClr {
         PllArmClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllArmClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllArmClr")
@@ -4580,6 +4602,7 @@ impl Default for PllArmSet {
         PllArmSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllArmSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllArmSet")
@@ -4705,6 +4728,7 @@ impl Default for PllArmTog {
         PllArmTog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllArmTog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllArmTog")
@@ -4830,6 +4854,7 @@ impl Default for PllAudio {
         PllAudio(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllAudio {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllAudio")
@@ -4955,6 +4980,7 @@ impl Default for PllAudioClr {
         PllAudioClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllAudioClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllAudioClr")
@@ -5008,6 +5034,7 @@ impl Default for PllAudioDenom {
         PllAudioDenom(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllAudioDenom {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllAudioDenom")
@@ -5045,6 +5072,7 @@ impl Default for PllAudioNum {
         PllAudioNum(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllAudioNum {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllAudioNum").field("a", &self.a()).finish()
@@ -5152,6 +5180,7 @@ impl Default for PllAudioSet {
         PllAudioSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllAudioSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllAudioSet")
@@ -5277,6 +5306,7 @@ impl Default for PllAudioTog {
         PllAudioTog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllAudioTog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllAudioTog")
@@ -5426,6 +5456,7 @@ impl Default for PllEnet {
         PllEnet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllEnet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllEnet")
@@ -5579,6 +5610,7 @@ impl Default for PllEnetClr {
         PllEnetClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllEnetClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllEnetClr")
@@ -5732,6 +5764,7 @@ impl Default for PllEnetSet {
         PllEnetSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllEnetSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllEnetSet")
@@ -5885,6 +5918,7 @@ impl Default for PllEnetTog {
         PllEnetTog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllEnetTog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllEnetTog")
@@ -6002,6 +6036,7 @@ impl Default for PllSys {
         PllSys(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllSys {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllSys")
@@ -6113,6 +6148,7 @@ impl Default for PllSysClr {
         PllSysClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllSysClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllSysClr")
@@ -6164,6 +6200,7 @@ impl Default for PllSysDenom {
         PllSysDenom(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllSysDenom {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllSysDenom").field("b", &self.b()).finish()
@@ -6199,6 +6236,7 @@ impl Default for PllSysNum {
         PllSysNum(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllSysNum {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllSysNum").field("a", &self.a()).finish()
@@ -6294,6 +6332,7 @@ impl Default for PllSysSet {
         PllSysSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllSysSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllSysSet")
@@ -6369,6 +6408,7 @@ impl Default for PllSysSs {
         PllSysSs(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllSysSs {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllSysSs")
@@ -6474,6 +6514,7 @@ impl Default for PllSysTog {
         PllSysTog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllSysTog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllSysTog")
@@ -6597,6 +6638,7 @@ impl Default for PllUsb1 {
         PllUsb1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllUsb1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllUsb1")
@@ -6722,6 +6764,7 @@ impl Default for PllUsb1Clr {
         PllUsb1Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllUsb1Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllUsb1Clr")
@@ -6847,6 +6890,7 @@ impl Default for PllUsb1Set {
         PllUsb1Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllUsb1Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllUsb1Set")
@@ -6972,6 +7016,7 @@ impl Default for PllUsb1Tog {
         PllUsb1Tog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllUsb1Tog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllUsb1Tog")
@@ -7097,6 +7142,7 @@ impl Default for PllUsb2 {
         PllUsb2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllUsb2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllUsb2")
@@ -7222,6 +7268,7 @@ impl Default for PllUsb2Clr {
         PllUsb2Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllUsb2Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllUsb2Clr")
@@ -7347,6 +7394,7 @@ impl Default for PllUsb2Set {
         PllUsb2Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllUsb2Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllUsb2Set")
@@ -7472,6 +7520,7 @@ impl Default for PllUsb2Tog {
         PllUsb2Tog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllUsb2Tog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllUsb2Tog")
@@ -7597,6 +7646,7 @@ impl Default for PllVideo {
         PllVideo(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllVideo {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllVideo")
@@ -7722,6 +7772,7 @@ impl Default for PllVideoClr {
         PllVideoClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllVideoClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllVideoClr")
@@ -7775,6 +7826,7 @@ impl Default for PllVideoDenom {
         PllVideoDenom(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllVideoDenom {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllVideoDenom")
@@ -7812,6 +7864,7 @@ impl Default for PllVideoNum {
         PllVideoNum(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllVideoNum {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllVideoNum").field("a", &self.a()).finish()
@@ -7919,6 +7972,7 @@ impl Default for PllVideoSet {
         PllVideoSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllVideoSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllVideoSet")
@@ -8044,6 +8098,7 @@ impl Default for PllVideoTog {
         PllVideoTog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PllVideoTog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PllVideoTog")

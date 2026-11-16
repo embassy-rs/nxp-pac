@@ -82,6 +82,7 @@ impl Default for Cpu0LockReg {
         Cpu0LockReg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cpu0LockReg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cpu0LockReg")
@@ -157,6 +158,7 @@ impl Default for Cpu1LockReg {
         Cpu1LockReg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cpu1LockReg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cpu1LockReg")
@@ -313,6 +315,7 @@ impl Default for MasterSecAntiPolReg {
         MasterSecAntiPolReg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MasterSecAntiPolReg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MasterSecAntiPolReg")
@@ -483,6 +486,7 @@ impl Default for MasterSecLevel {
         MasterSecLevel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MasterSecLevel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MasterSecLevel")
@@ -648,6 +652,7 @@ impl Default for MiscCtrlDpReg {
         MiscCtrlDpReg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MiscCtrlDpReg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MiscCtrlDpReg")
@@ -812,6 +817,7 @@ impl Default for MiscCtrlReg {
         MiscCtrlReg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MiscCtrlReg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MiscCtrlReg")
@@ -1245,6 +1251,7 @@ impl Default for SecCpuIntMask0 {
         SecCpuIntMask0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCpuIntMask0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCpuIntMask0")
@@ -1672,6 +1679,7 @@ impl Default for SecCpuIntMask1 {
         SecCpuIntMask1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCpuIntMask1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCpuIntMask1")
@@ -1839,6 +1847,7 @@ impl Default for SecCtrlAhbPort10Slave0Rule {
         SecCtrlAhbPort10Slave0Rule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlAhbPort10Slave0Rule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlAhbPort10Slave0Rule")
@@ -1904,6 +1913,7 @@ impl Default for SecCtrlAhbPort10Slave1Rule {
         SecCtrlAhbPort10Slave1Rule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlAhbPort10Slave1Rule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlAhbPort10Slave1Rule")
@@ -1995,6 +2005,7 @@ impl Default for SecCtrlAhbPort8Slave0Rule {
         SecCtrlAhbPort8Slave0Rule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlAhbPort8Slave0Rule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlAhbPort8Slave0Rule")
@@ -2092,6 +2103,7 @@ impl Default for SecCtrlAhbPort8Slave1Rule {
         SecCtrlAhbPort8Slave1Rule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlAhbPort8Slave1Rule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlAhbPort8Slave1Rule")
@@ -2177,6 +2189,7 @@ impl Default for SecCtrlAhbPort9Slave0Rule {
         SecCtrlAhbPort9Slave0Rule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlAhbPort9Slave0Rule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlAhbPort9Slave0Rule")
@@ -2260,6 +2273,7 @@ impl Default for SecCtrlAhbPort9Slave1Rule {
         SecCtrlAhbPort9Slave1Rule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlAhbPort9Slave1Rule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlAhbPort9Slave1Rule")
@@ -2343,6 +2357,7 @@ impl Default for SecCtrlAhbSecCtrlMemRule {
         SecCtrlAhbSecCtrlMemRule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlAhbSecCtrlMemRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlAhbSecCtrlMemRule")
@@ -2462,6 +2477,7 @@ impl Default for SecCtrlApbBridge0MemCtrl0 {
         SecCtrlApbBridge0MemCtrl0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlApbBridge0MemCtrl0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlApbBridge0MemCtrl0")
@@ -2563,6 +2579,7 @@ impl Default for SecCtrlApbBridge0MemCtrl1 {
         SecCtrlApbBridge0MemCtrl1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlApbBridge0MemCtrl1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlApbBridge0MemCtrl1")
@@ -2612,6 +2629,7 @@ impl Default for SecCtrlApbBridge0MemCtrl2 {
         SecCtrlApbBridge0MemCtrl2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlApbBridge0MemCtrl2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlApbBridge0MemCtrl2")
@@ -2665,6 +2683,7 @@ impl Default for SecCtrlApbBridge1MemCtrl0 {
         SecCtrlApbBridge1MemCtrl0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlApbBridge1MemCtrl0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlApbBridge1MemCtrl0")
@@ -2756,6 +2775,7 @@ impl Default for SecCtrlApbBridge1MemCtrl1 {
         SecCtrlApbBridge1MemCtrl1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlApbBridge1MemCtrl1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlApbBridge1MemCtrl1")
@@ -2817,6 +2837,7 @@ impl Default for SecCtrlApbBridge1MemCtrl2 {
         SecCtrlApbBridge1MemCtrl2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlApbBridge1MemCtrl2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlApbBridge1MemCtrl2")
@@ -2896,6 +2917,7 @@ impl Default for SecCtrlApbBridge1MemCtrl3 {
         SecCtrlApbBridge1MemCtrl3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlApbBridge1MemCtrl3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlApbBridge1MemCtrl3")
@@ -2955,6 +2977,7 @@ impl Default for SecCtrlApbBridgeSlaveRule {
         SecCtrlApbBridgeSlaveRule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlApbBridgeSlaveRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlApbBridgeSlaveRule")
@@ -3082,6 +3105,7 @@ impl Default for SecCtrlFlashMemRule0 {
         SecCtrlFlashMemRule0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlFlashMemRule0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlFlashMemRule0")
@@ -3221,6 +3245,7 @@ impl Default for SecCtrlFlashMemRule1 {
         SecCtrlFlashMemRule1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlFlashMemRule1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlFlashMemRule1")
@@ -3360,6 +3385,7 @@ impl Default for SecCtrlFlashMemRule2 {
         SecCtrlFlashMemRule2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlFlashMemRule2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlFlashMemRule2")
@@ -3427,6 +3453,7 @@ impl Default for SecCtrlFlashRomSlaveRule {
         SecCtrlFlashRomSlaveRule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlFlashRomSlaveRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlFlashRomSlaveRule")
@@ -3554,6 +3581,7 @@ impl Default for SecCtrlRam0MemRule0 {
         SecCtrlRam0MemRule0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlRam0MemRule0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlRam0MemRule0")
@@ -3693,6 +3721,7 @@ impl Default for SecCtrlRam0MemRule1 {
         SecCtrlRam0MemRule1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlRam0MemRule1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlRam0MemRule1")
@@ -3748,6 +3777,7 @@ impl Default for SecCtrlRam0SlaveRule {
         SecCtrlRam0SlaveRule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlRam0SlaveRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlRam0SlaveRule")
@@ -3873,6 +3903,7 @@ impl Default for SecCtrlRam1MemRule0 {
         SecCtrlRam1MemRule0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlRam1MemRule0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlRam1MemRule0")
@@ -4012,6 +4043,7 @@ impl Default for SecCtrlRam1MemRule1 {
         SecCtrlRam1MemRule1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlRam1MemRule1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlRam1MemRule1")
@@ -4067,6 +4099,7 @@ impl Default for SecCtrlRam1SlaveRule {
         SecCtrlRam1SlaveRule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlRam1SlaveRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlRam1SlaveRule")
@@ -4192,6 +4225,7 @@ impl Default for SecCtrlRam2MemRule0 {
         SecCtrlRam2MemRule0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlRam2MemRule0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlRam2MemRule0")
@@ -4331,6 +4365,7 @@ impl Default for SecCtrlRam2MemRule1 {
         SecCtrlRam2MemRule1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlRam2MemRule1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlRam2MemRule1")
@@ -4386,6 +4421,7 @@ impl Default for SecCtrlRam2SlaveRule {
         SecCtrlRam2SlaveRule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlRam2SlaveRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlRam2SlaveRule")
@@ -4511,6 +4547,7 @@ impl Default for SecCtrlRam3MemRule0 {
         SecCtrlRam3MemRule0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlRam3MemRule0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlRam3MemRule0")
@@ -4650,6 +4687,7 @@ impl Default for SecCtrlRam3MemRule1 {
         SecCtrlRam3MemRule1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlRam3MemRule1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlRam3MemRule1")
@@ -4705,6 +4743,7 @@ impl Default for SecCtrlRam3SlaveRule {
         SecCtrlRam3SlaveRule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlRam3SlaveRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlRam3SlaveRule")
@@ -4782,6 +4821,7 @@ impl Default for SecCtrlRam4MemRule0 {
         SecCtrlRam4MemRule0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlRam4MemRule0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlRam4MemRule0")
@@ -4829,6 +4869,7 @@ impl Default for SecCtrlRam4SlaveRule {
         SecCtrlRam4SlaveRule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlRam4SlaveRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlRam4SlaveRule")
@@ -4954,6 +4995,7 @@ impl Default for SecCtrlRamxMemRule0 {
         SecCtrlRamxMemRule0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlRamxMemRule0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlRamxMemRule0")
@@ -5009,6 +5051,7 @@ impl Default for SecCtrlRamxSlaveRule {
         SecCtrlRamxSlaveRule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlRamxSlaveRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlRamxSlaveRule")
@@ -5134,6 +5177,7 @@ impl Default for SecCtrlRomMemRule0 {
         SecCtrlRomMemRule0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlRomMemRule0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlRomMemRule0")
@@ -5273,6 +5317,7 @@ impl Default for SecCtrlRomMemRule1 {
         SecCtrlRomMemRule1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlRomMemRule1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlRomMemRule1")
@@ -5412,6 +5457,7 @@ impl Default for SecCtrlRomMemRule2 {
         SecCtrlRomMemRule2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlRomMemRule2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlRomMemRule2")
@@ -5551,6 +5597,7 @@ impl Default for SecCtrlRomMemRule3 {
         SecCtrlRomMemRule3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlRomMemRule3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlRomMemRule3")
@@ -5642,6 +5689,7 @@ impl Default for SecCtrlUsbHsMemRule {
         SecCtrlUsbHsMemRule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlUsbHsMemRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlUsbHsMemRule")
@@ -5689,6 +5737,7 @@ impl Default for SecCtrlUsbHsSlaveRule {
         SecCtrlUsbHsSlaveRule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCtrlUsbHsSlaveRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCtrlUsbHsSlaveRule")
@@ -6102,6 +6151,7 @@ impl Default for SecGpioMask0 {
         SecGpioMask0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecGpioMask0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecGpioMask0")
@@ -6577,6 +6627,7 @@ impl Default for SecGpioMask1 {
         SecGpioMask1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecGpioMask1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecGpioMask1")
@@ -6716,6 +6767,7 @@ impl Default for SecMaskLock {
         SecMaskLock(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecMaskLock {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecMaskLock")
@@ -6763,6 +6815,7 @@ impl Default for SecVioAddr {
         SecVioAddr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecVioAddr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecVioAddr")
@@ -6936,6 +6989,7 @@ impl Default for SecVioInfoValid {
         SecVioInfoValid(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecVioInfoValid {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecVioInfoValid")
@@ -7035,6 +7089,7 @@ impl Default for SecVioMiscInfo {
         SecVioMiscInfo(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecVioMiscInfo {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecVioMiscInfo")

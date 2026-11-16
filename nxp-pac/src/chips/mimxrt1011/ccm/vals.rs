@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AdcAclkEn {
     #[doc = "ADC alt_clk source is disabled."]
@@ -30,7 +31,8 @@ impl From<AdcAclkEn> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AdcAclkPodf {
     _RESERVED_0 = 0x0,
@@ -76,7 +78,8 @@ impl From<AdcAclkPodf> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbPodf {
     #[doc = "divide by 1."]
@@ -119,7 +122,8 @@ impl From<AhbPodf> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbPodfBusy {
     #[doc = "divider is not busy and its value represents the actual division."]
@@ -150,7 +154,8 @@ impl From<AhbPodfBusy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbPodfLoaded {
     #[doc = "interrupt is not generated due to frequency change of ahb_podf."]
@@ -181,7 +186,8 @@ impl From<AhbPodfLoaded> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ArmClkDisOnLpm {
     #[doc = "Arm clock enabled on wait mode."]
@@ -212,7 +218,8 @@ impl From<ArmClkDisOnLpm> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Camp2Ready {
     #[doc = "CAMP2 is not ready."]
@@ -243,7 +250,8 @@ impl From<Camp2Ready> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CisrCoscReady {
     #[doc = "interrupt is not generated due to on board oscillator ready."]
@@ -274,7 +282,8 @@ impl From<CisrCoscReady> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ClkOutSel {
     #[doc = "CCM_CLKO1 output drives CCM_CLKO1 clock."]
@@ -305,7 +314,8 @@ impl From<ClkOutSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Clko1Div {
     #[doc = "divide by 1."]
@@ -348,7 +358,8 @@ impl From<Clko1Div> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Clko1En {
     #[doc = "CCM_CLKO1 disabled."]
@@ -379,7 +390,8 @@ impl From<Clko1En> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Clko1Sel {
     #[doc = "pll3_sw_clk (divided by 2)."]
@@ -429,7 +441,8 @@ impl From<Clko1Sel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Clko2Div {
     #[doc = "divide by 1."]
@@ -472,7 +485,8 @@ impl From<Clko2Div> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Clko2En {
     #[doc = "CCM_CLKO2 disabled."]
@@ -503,7 +517,8 @@ impl From<Clko2En> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Clko2Sel {
     _RESERVED_0 = 0x0,
@@ -571,7 +586,8 @@ impl From<Clko2Sel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CoscEn {
     #[doc = "disable on chip oscillator."]
@@ -602,7 +618,8 @@ impl From<CoscEn> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CoscPwrdown {
     #[doc = "On chip oscillator will not be powered down, i.e. cosc_pwrdown = '0'."]
@@ -633,7 +650,8 @@ impl From<CoscPwrdown> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CsrCoscReady {
     #[doc = "on board oscillator is not ready."]
@@ -664,7 +682,8 @@ impl From<CsrCoscReady> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DisRefOsc {
     #[doc = "external high frequency oscillator will be enabled, i.e. CCM_REF_EN_B = '0'."]
@@ -695,7 +714,8 @@ impl From<DisRefOsc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EfuseProgSupplyGate {
     #[doc = "fuse programing supply voltage is gated off to the efuse module."]
@@ -726,7 +746,8 @@ impl From<EfuseProgSupplyGate> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexio1ClkPodf {
     #[doc = "Divide by 1."]
@@ -785,7 +806,8 @@ impl From<Flexio1ClkPodf> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexio1ClkPred {
     #[doc = "divide by 1."]
@@ -828,7 +850,8 @@ impl From<Flexio1ClkPred> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexio1ClkSel {
     #[doc = "derive clock from PLL4 divided clock."]
@@ -863,7 +886,8 @@ impl From<Flexio1ClkSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlexspiClkSel {
     #[doc = "derive clock from PLL2."]
@@ -898,7 +922,8 @@ impl From<FlexspiClkSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlexspiClkSrc {
     #[doc = "derive clock selected by CCM_CSCMR1\\[FLEXSPI_CLK_SEL\\]."]
@@ -929,7 +954,8 @@ impl From<FlexspiClkSrc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlexspiPodf {
     #[doc = "divide by 1."]
@@ -972,7 +998,8 @@ impl From<FlexspiPodf> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlexspiPodfBusy {
     #[doc = "divider is not busy and its value represents the actual division."]
@@ -1003,7 +1030,8 @@ impl From<FlexspiPodfBusy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlexspiPodfLoaded {
     #[doc = "interrupt is not generated due to frequency change of flexspi_podf."]
@@ -1034,7 +1062,8 @@ impl From<FlexspiPodfLoaded> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fpl {
     #[doc = "Engage PLL enable default way."]
@@ -1065,7 +1094,8 @@ impl From<Fpl> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IntMemClkLpm {
     #[doc = "Disable the clock to the Arm platform memories when entering Low Power Mode."]
@@ -1096,7 +1126,8 @@ impl From<IntMemClkLpm> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IpgPodf {
     #[doc = "divide by 1."]
@@ -1131,7 +1162,8 @@ impl From<IpgPodf> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpi2cClkPodf {
     #[doc = "Divide by 1."]
@@ -1286,7 +1318,8 @@ impl From<Lpi2cClkPodf> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpi2cClkSel {
     #[doc = "derive clock from pll3_60m."]
@@ -1317,7 +1350,8 @@ impl From<Lpi2cClkSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpm {
     #[doc = "Remain in run mode."]
@@ -1351,7 +1385,8 @@ impl From<Lpm> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpspiClkSel {
     #[doc = "derive clock from PLL3 PFD1 clk."]
@@ -1386,7 +1421,8 @@ impl From<LpspiClkSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpspiPodf {
     #[doc = "divide by 1."]
@@ -1445,7 +1481,8 @@ impl From<LpspiPodf> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LrfPll {
     #[doc = "interrupt is not generated due to lock ready of all enabled and not bypaseed PLLs."]
@@ -1476,7 +1513,8 @@ impl From<LrfPll> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MaskAhbPodfLoaded {
     #[doc = "don't mask interrupt due to frequency change of ahb_podf - interrupt will be created."]
@@ -1507,7 +1545,8 @@ impl From<MaskAhbPodfLoaded> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MaskCore0Wfi {
     #[doc = "WFI of core0 is not masked."]
@@ -1538,7 +1577,8 @@ impl From<MaskCore0Wfi> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MaskCoscReady {
     #[doc = "don't mask interrupt due to on board oscillator ready - interrupt will be created."]
@@ -1569,7 +1609,8 @@ impl From<MaskCoscReady> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MaskFlexspiPodfLoaded {
     #[doc = "don't mask interrupt due to update of flexspi_podf."]
@@ -1600,7 +1641,8 @@ impl From<MaskFlexspiPodfLoaded> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MaskL2ccIdle {
     #[doc = "L2CC IDLE is not masked."]
@@ -1631,7 +1673,8 @@ impl From<MaskL2ccIdle> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MaskLrfPll {
     #[doc = "don't mask interrupt due to lrf of PLLs - interrupt will be created."]
@@ -1662,7 +1705,8 @@ impl From<MaskLrfPll> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MaskPerclkPodfLoaded {
     #[doc = "don't mask interrupt due to update of perclk_podf."]
@@ -1693,7 +1737,8 @@ impl From<MaskPerclkPodfLoaded> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MaskPeriphClkSelLoaded {
     #[doc = "don't mask interrupt due to update of periph_clk_sel - interrupt will be created."]
@@ -1724,7 +1769,8 @@ impl From<MaskPeriphClkSelLoaded> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MaskScuIdle {
     #[doc = "SCU IDLE is not masked."]
@@ -1755,7 +1801,8 @@ impl From<MaskScuIdle> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ModEnOvGpt {
     #[doc = "don't override module enable signal."]
@@ -1786,7 +1833,8 @@ impl From<ModEnOvGpt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ModEnOvPit {
     #[doc = "don't override module enable signal."]
@@ -1817,7 +1865,8 @@ impl From<ModEnOvPit> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ModEnOvTrng {
     #[doc = "don't override module enable signal."]
@@ -1848,7 +1897,8 @@ impl From<ModEnOvTrng> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PerclkClkSel {
     #[doc = "derive clock from ipg clk root."]
@@ -1879,7 +1929,8 @@ impl From<PerclkClkSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PerclkPodf {
     #[doc = "Divide by 1."]
@@ -2034,7 +2085,8 @@ impl From<PerclkPodf> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PerclkPodfBusy {
     #[doc = "divider is not busy and its value represents the actual division."]
@@ -2065,7 +2117,8 @@ impl From<PerclkPodfBusy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PerclkPodfLoaded {
     #[doc = "interrupt is not generated due to frequency change of perclk_podf."]
@@ -2096,7 +2149,8 @@ impl From<PerclkPodfLoaded> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PeriphClk2Sel {
     #[doc = "derive clock from pll3_sw_clk."]
@@ -2130,7 +2184,8 @@ impl From<PeriphClk2Sel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PeriphClkSel {
     #[doc = "derive clock selected by CCM_CBCMR\\[CORE_CLK_PRE_SEL\\]."]
@@ -2161,7 +2216,8 @@ impl From<PeriphClkSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PeriphClkSelBusy {
     #[doc = "mux is not busy and its value represents the actual division."]
@@ -2192,7 +2248,8 @@ impl From<PeriphClkSelBusy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PeriphClkSelLoaded {
     #[doc = "interrupt is not generated due to update of periph_clk_sel."]
@@ -2223,7 +2280,8 @@ impl From<PeriphClkSelLoaded> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pll3SwClkSel {
     #[doc = "pll3_main_clk."]
@@ -2254,7 +2312,8 @@ impl From<Pll3SwClkSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PmicDelayScaler {
     #[doc = "clock is not divided."]
@@ -2285,7 +2344,8 @@ impl From<PmicDelayScaler> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PrePeriphClkSel {
     #[doc = "derive clock from PLL2."]
@@ -2320,7 +2380,8 @@ impl From<PrePeriphClkSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RbcEn {
     #[doc = "REG_BYPASS_COUNTER disabled."]
@@ -2351,7 +2412,8 @@ impl From<RbcEn> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RefEnB {
     #[doc = "value of CCM_REF_EN_B is '0'."]
@@ -2382,7 +2444,8 @@ impl From<RefEnB> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegBypassCount {
     #[doc = "no delay."]
@@ -2476,7 +2539,8 @@ impl From<RegBypassCount> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai1ClkPodf {
     #[doc = "Divide by 1."]
@@ -2631,7 +2695,8 @@ impl From<Sai1ClkPodf> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai1ClkPred {
     #[doc = "divide by 1."]
@@ -2674,7 +2739,8 @@ impl From<Sai1ClkPred> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai1ClkSel {
     #[doc = "derive clock from PLL3 PFD2."]
@@ -2708,7 +2774,8 @@ impl From<Sai1ClkSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai3ClkPodf {
     #[doc = "Divide by 1."]
@@ -2863,7 +2930,8 @@ impl From<Sai3ClkPodf> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai3ClkPred {
     #[doc = "divide by 1."]
@@ -2906,7 +2974,8 @@ impl From<Sai3ClkPred> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai3ClkSel {
     #[doc = "derive clock from PLL3 PFD2."]
@@ -2940,7 +3009,8 @@ impl From<Sai3ClkSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sbyos {
     #[doc = "On-chip oscillator will not be powered down, after next entrance to STOP mode. (CCM_REF_EN_B will remain asserted - '0' and cosc_pwrdown will remain de asserted - '0')."]
@@ -2971,7 +3041,8 @@ impl From<Sbyos> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Spdif0ClkPodf {
     #[doc = "Divide by 1."]
@@ -3014,7 +3085,8 @@ impl From<Spdif0ClkPodf> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Spdif0ClkPred {
     #[doc = "Divide by 1."]
@@ -3057,7 +3129,8 @@ impl From<Spdif0ClkPred> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Spdif0ClkSel {
     #[doc = "derive clock from PLL4."]
@@ -3091,7 +3164,8 @@ impl From<Spdif0ClkSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StbyCount {
     #[doc = "CCM will wait (1*pmic_delay_scaler)+1 ckil clock cycles."]
@@ -3126,7 +3200,8 @@ impl From<StbyCount> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SysMemDsCtrl {
     #[doc = "Disable memory DS mode always."]
@@ -3160,7 +3235,8 @@ impl From<SysMemDsCtrl> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TraceClkSel {
     #[doc = "derive clock from PLL2."]
@@ -3195,7 +3271,8 @@ impl From<TraceClkSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TracePodf {
     #[doc = "divide by 1."]
@@ -3254,7 +3331,8 @@ impl From<TracePodf> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum UartClkPodf {
     #[doc = "Divide by 1."]
@@ -3409,7 +3487,8 @@ impl From<UartClkPodf> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum UartClkSel {
     #[doc = "derive clock from pll3_80m."]
@@ -3443,7 +3522,8 @@ impl From<UartClkSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Vstby {
     #[doc = "Voltage will not be changed to standby voltage after next entrance to STOP mode. ( PMIC_STBY_REQ will remain negated - '0')."]

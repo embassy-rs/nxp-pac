@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Actphysel {
     #[doc = "GMII or MII."]
@@ -42,7 +43,8 @@ impl From<Actphysel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Addr64 {
     #[doc = "32."]
@@ -76,7 +78,8 @@ impl From<Addr64> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Addsub {
     #[doc = "Add time."]
@@ -107,7 +110,8 @@ impl From<Addsub> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Asp {
     #[doc = "No Safety features selected."]
@@ -142,7 +146,8 @@ impl From<Asp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Auxsnapnum {
     #[doc = "No auxiliary input."]
@@ -182,7 +187,8 @@ impl From<Auxsnapnum> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Avcpq {
     #[doc = "Receive Queue 0."]
@@ -219,7 +225,8 @@ impl From<Avcpq> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bl {
     #[doc = "k = min(n,10)."]
@@ -254,7 +261,8 @@ impl From<Bl> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Com {
     #[doc = "Write operation."]
@@ -285,7 +293,8 @@ impl From<Com> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Da {
     #[doc = "Weighted Round-Robin with Rx:Tx or Tx:Rx."]
@@ -316,7 +325,8 @@ impl From<Da> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dbf {
     #[doc = "Enable Broadcast Packets."]
@@ -347,7 +357,8 @@ impl From<Dbf> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dcrcc {
     #[doc = "CRC Checking is enabled."]
@@ -378,7 +389,8 @@ impl From<Dcrcc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dcrs {
     #[doc = "Enable Carrier Sense During Transmission."]
@@ -409,7 +421,8 @@ impl From<Dcrs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dm {
     #[doc = "Half-duplex mode."]
@@ -440,7 +453,8 @@ impl From<Dm> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DmaCh0RxControlSr {
     #[doc = "Stop Receive."]
@@ -471,7 +485,8 @@ impl From<DmaCh0RxControlSr> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DmaCh0TxControlSt {
     #[doc = "Stop Transmission Command."]
@@ -502,7 +517,8 @@ impl From<DmaCh0TxControlSt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DmaCh1RxControlSr {
     #[doc = "Stop Receive."]
@@ -533,7 +549,8 @@ impl From<DmaCh1RxControlSr> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DmaCh1TxControlSt {
     #[doc = "Stop Transmission Command."]
@@ -564,7 +581,8 @@ impl From<DmaCh1TxControlSt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DmaModePr {
     #[doc = "The priority ratio is 1:1."]
@@ -607,7 +625,8 @@ impl From<DmaModePr> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Do {
     #[doc = "Enable Receive Own."]
@@ -638,7 +657,8 @@ impl From<Do> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dovltc {
     #[doc = "VLAN Type Check is enabled."]
@@ -669,7 +689,8 @@ impl From<Dovltc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dr {
     #[doc = "Enable Retry."]
@@ -700,7 +721,8 @@ impl From<Dr> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dzpq {
     #[doc = "Zero-Quanta Pause packet generation is enabled."]
@@ -731,7 +753,8 @@ impl From<Dzpq> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Eivls {
     #[doc = "Do not strip."]
@@ -766,7 +789,8 @@ impl From<Eivls> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Estdep {
     #[doc = "No Depth configured."]
@@ -807,7 +831,8 @@ impl From<Estdep> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Estwid {
     #[doc = "Width not configured."]
@@ -842,7 +867,8 @@ impl From<Estwid> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Evls {
     #[doc = "Do not strip."]
@@ -877,7 +903,8 @@ impl From<Evls> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fes {
     #[doc = "10 Mbps when PS bit is 1 and 1 Gbps when PS bit is 0."]
@@ -908,7 +935,8 @@ impl From<Fes> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Frpbs {
     #[doc = "64 Bytes."]
@@ -942,7 +970,8 @@ impl From<Frpbs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Frpes {
     #[doc = "64 Entries."]
@@ -976,7 +1005,8 @@ impl From<Frpes> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hashtblsz {
     #[doc = "No hash table."]
@@ -1011,7 +1041,8 @@ impl From<Hashtblsz> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ipg {
     #[doc = "96 bit times IPG."]
@@ -1054,7 +1085,8 @@ impl From<Ipg> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Jd {
     #[doc = "Jabber is enabled."]
@@ -1085,7 +1117,8 @@ impl From<Jd> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum L3l4fnum {
     #[doc = "No L3 or L4 Filter."]
@@ -1137,7 +1170,8 @@ impl From<L3l4fnum> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MacInnerVlanInclCsvl {
     #[doc = "C-VLAN type (0x8100) is inserted."]
@@ -1168,7 +1202,8 @@ impl From<MacInnerVlanInclCsvl> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MacInnerVlanInclVlc {
     #[doc = "No VLAN tag deletion, insertion, or replacement."]
@@ -1203,7 +1238,8 @@ impl From<MacInnerVlanInclVlc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MacVlanInclCsvl {
     #[doc = "C-VLAN type (0x8100) is inserted or replaced."]
@@ -1234,7 +1270,8 @@ impl From<MacVlanInclCsvl> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MacVlanInclVlc {
     #[doc = "No VLAN tag deletion, insertion, or replacement."]
@@ -1269,7 +1306,8 @@ impl From<MacVlanInclVlc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mcbcq {
     #[doc = "Receive Queue 0."]
@@ -1306,7 +1344,8 @@ impl From<Mcbcq> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MtlRxq0DebugRrcsts {
     #[doc = "Idle state."]
@@ -1341,7 +1380,8 @@ impl From<MtlRxq0DebugRrcsts> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MtlRxq0DebugRxqsts {
     #[doc = "Rx Queue empty."]
@@ -1376,7 +1416,8 @@ impl From<MtlRxq0DebugRxqsts> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MtlRxq0OperationModeDisTcpEf {
     #[doc = "Dropping of TCP/IP Checksum Error Packets is enabled."]
@@ -1407,7 +1448,8 @@ impl From<MtlRxq0OperationModeDisTcpEf> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MtlRxq0OperationModeRtc {
     #[doc = "64."]
@@ -1442,7 +1484,8 @@ impl From<MtlRxq0OperationModeRtc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MtlRxq1DebugRrcsts {
     #[doc = "Idle state."]
@@ -1477,7 +1520,8 @@ impl From<MtlRxq1DebugRrcsts> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MtlRxq1DebugRxqsts {
     #[doc = "Rx Queue empty."]
@@ -1512,7 +1556,8 @@ impl From<MtlRxq1DebugRxqsts> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MtlRxq1OperationModeDisTcpEf {
     #[doc = "Dropping of TCP/IP Checksum Error Packets is enabled."]
@@ -1543,7 +1588,8 @@ impl From<MtlRxq1OperationModeDisTcpEf> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MtlRxq1OperationModeRtc {
     #[doc = "64."]
@@ -1578,7 +1624,8 @@ impl From<MtlRxq1OperationModeRtc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MtlTxq0DebugTrcsts {
     #[doc = "Idle state."]
@@ -1613,7 +1660,8 @@ impl From<MtlTxq0DebugTrcsts> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MtlTxq0OperationModeTtc {
     #[doc = "32."]
@@ -1656,7 +1704,8 @@ impl From<MtlTxq0OperationModeTtc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MtlTxq0OperationModeTxqen {
     #[doc = "Not enabled."]
@@ -1690,7 +1739,8 @@ impl From<MtlTxq0OperationModeTxqen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MtlTxq1DebugTrcsts {
     #[doc = "Idle state."]
@@ -1725,7 +1775,8 @@ impl From<MtlTxq1DebugTrcsts> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MtlTxq1OperationModeTtc {
     #[doc = "32."]
@@ -1768,7 +1819,8 @@ impl From<MtlTxq1OperationModeTtc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MtlTxq1OperationModeTxqen {
     #[doc = "Not enabled."]
@@ -1802,7 +1854,8 @@ impl From<MtlTxq1OperationModeTxqen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nrvf {
     #[doc = "No Extended Rx VLAN Filters."]
@@ -1843,7 +1896,8 @@ impl From<Nrvf> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcf {
     #[doc = "MAC filters all control packets from reaching the application."]
@@ -1878,7 +1932,8 @@ impl From<Pcf> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Plt {
     #[doc = "Pause Time minus 4 Slot Times (PT -4 slot times)."]
@@ -1919,7 +1974,8 @@ impl From<Plt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ppsoutnum {
     #[doc = "No PPS output."]
@@ -1959,7 +2015,8 @@ impl From<Ppsoutnum> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prelen {
     #[doc = "7 bytes of preamble."]
@@ -1993,7 +2050,8 @@ impl From<Prelen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ps {
     #[doc = "For 1000 or 2500 Mbps operations."]
@@ -2024,7 +2082,8 @@ impl From<Ps> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptpq {
     #[doc = "Receive Queue 0."]
@@ -2061,7 +2120,8 @@ impl From<Ptpq> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Raa {
     #[doc = "Strict priority (SP)."]
@@ -2092,7 +2152,8 @@ impl From<Raa> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rdwr {
     #[doc = "Read operation of indirect access."]
@@ -2123,7 +2184,8 @@ impl From<Rdwr> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rps0 {
     #[doc = "Stopped (Reset or Stop Receive Command issued)."]
@@ -2173,7 +2235,8 @@ impl From<Rps0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rps1 {
     #[doc = "Stopped (Reset or Stop Receive Command issued)."]
@@ -2223,7 +2286,8 @@ impl From<Rps1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rxchcnt {
     #[doc = "1 MTL Rx Channel."]
@@ -2274,7 +2338,8 @@ impl From<Rxchcnt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rxfifosize {
     #[doc = "128 bytes."]
@@ -2345,7 +2410,8 @@ impl From<Rxfifosize> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rxq0en {
     #[doc = "Queue not enabled."]
@@ -2379,7 +2445,8 @@ impl From<Rxq0en> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rxq1en {
     #[doc = "Queue not enabled."]
@@ -2413,7 +2480,8 @@ impl From<Rxq1en> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rxqcnt {
     #[doc = "1 MTL Rx Queue."]
@@ -2464,7 +2532,8 @@ impl From<Rxqcnt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sarc {
     #[doc = "mti_sa_ctrl_i and ati_sa_ctrl_i input signals control the SA field generation."]
@@ -2504,7 +2573,8 @@ impl From<Sarc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Schalg {
     #[doc = "WRR algorithm."]
@@ -2539,7 +2609,8 @@ impl From<Schalg> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Slc {
     #[doc = "1 slot."]
@@ -2579,7 +2650,8 @@ impl From<Slc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Taa {
     #[doc = "Fixed priority."]
@@ -2617,7 +2689,8 @@ impl From<Taa> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tfcsts {
     #[doc = "Idle state."]
@@ -2652,7 +2725,8 @@ impl From<Tfcsts> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tps0 {
     #[doc = "Stopped (Reset or Stop Transmit Command issued)."]
@@ -2702,7 +2776,8 @@ impl From<Tps0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tps1 {
     #[doc = "Stopped (Reset or Stop Transmit Command issued)."]
@@ -2752,7 +2827,8 @@ impl From<Tps1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tscfupdt {
     #[doc = "Coarse method is used to update system timestamp."]
@@ -2783,7 +2859,8 @@ impl From<Tscfupdt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tsctrlssr {
     #[doc = "Timestamp Digital Rollover Control is disabled and Binary Rollover Control is enabled."]
@@ -2814,7 +2891,8 @@ impl From<Tsctrlssr> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tsstssel {
     #[doc = "Internal."]
@@ -2848,7 +2926,8 @@ impl From<Tsstssel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Txchcnt {
     #[doc = "1 MTL Tx Channel."]
@@ -2899,7 +2978,8 @@ impl From<Txchcnt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Txfifosize {
     #[doc = "128 bytes."]
@@ -2969,7 +3049,8 @@ impl From<Txfifosize> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Txqcnt {
     #[doc = "1 MTL Tx Queue."]
@@ -3020,7 +3101,8 @@ impl From<Txqcnt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Upq {
     #[doc = "Receive Queue 0."]
@@ -3057,7 +3139,8 @@ impl From<Upq> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wd {
     #[doc = "Watchdog is enabled."]
@@ -3088,7 +3171,8 @@ impl From<Wd> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wto {
     #[doc = "2 KB."]

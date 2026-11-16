@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlashPwrdwn {
     #[doc = "Flash is not in power down mode."]
@@ -30,7 +31,8 @@ impl From<FlashPwrdwn> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fro192mTrimSrc {
     #[doc = "FRO192M trimming and 'Enable' comes from eFUSE."]
@@ -61,7 +63,8 @@ impl From<Fro192mTrimSrc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Highz {
     #[doc = "Output in High normal state."]
@@ -92,7 +95,8 @@ impl From<Highz> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ringo0CtrlFs {
     #[doc = "High frequency output (frequency lower than 100 MHz)."]
@@ -123,7 +127,8 @@ impl From<Ringo0CtrlFs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ringo0CtrlPd {
     #[doc = "The Ringo module is enabled."]
@@ -154,7 +159,8 @@ impl From<Ringo0CtrlPd> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ringo1CtrlFs {
     #[doc = "High frequency output (frequency lower than 100 MHz)."]
@@ -185,7 +191,8 @@ impl From<Ringo1CtrlFs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ringo1CtrlPd {
     #[doc = "The Ringo module is enabled."]
@@ -216,7 +223,8 @@ impl From<Ringo1CtrlPd> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ringo1CtrlS {
     #[doc = "Select short ringo (few elements)."]
@@ -247,7 +255,8 @@ impl From<Ringo1CtrlS> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ringo2CtrlFs {
     #[doc = "High frequency output (frequency lower than 100 MHz)."]
@@ -278,7 +287,8 @@ impl From<Ringo2CtrlFs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ringo2CtrlPd {
     #[doc = "The Ringo module is enabled."]
@@ -309,7 +319,8 @@ impl From<Ringo2CtrlPd> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ringo2CtrlS {
     #[doc = "Select short ringo (few elements)."]
@@ -340,7 +351,8 @@ impl From<Ringo2CtrlS> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sl {
     #[doc = "Select short ringo (few elements)."]
@@ -371,7 +383,8 @@ impl From<Sl> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwnSwp {
     #[doc = "Normal mode."]
@@ -406,7 +419,8 @@ impl From<SwnSwp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Vout {
     #[doc = "0.750 V."]

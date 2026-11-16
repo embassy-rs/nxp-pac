@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi0Bft01Pt0Ac {
     #[doc = "Force the A input in this product term to a logical zero."]
@@ -34,7 +35,8 @@ impl From<EvtgAoi0Bft01Pt0Ac> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi0Bft01Pt0Bc {
     #[doc = "Force the B input in this product term to a logical zero."]
@@ -69,7 +71,8 @@ impl From<EvtgAoi0Bft01Pt0Bc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi0Bft01Pt0Cc {
     #[doc = "Force the C input in this product term to a logical zero."]
@@ -104,7 +107,8 @@ impl From<EvtgAoi0Bft01Pt0Cc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi0Bft01Pt0Dc {
     #[doc = "Force the D input in this product term to a logical zero."]
@@ -139,7 +143,8 @@ impl From<EvtgAoi0Bft01Pt0Dc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi0Bft01Pt1Ac {
     #[doc = "Force the A input in this product term to a logical zero."]
@@ -174,7 +179,8 @@ impl From<EvtgAoi0Bft01Pt1Ac> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi0Bft01Pt1Bc {
     #[doc = "Force the B input in this product term to a logical zero."]
@@ -209,7 +215,8 @@ impl From<EvtgAoi0Bft01Pt1Bc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi0Bft01Pt1Cc {
     #[doc = "Force the C input in this product term to a logical zero."]
@@ -244,7 +251,8 @@ impl From<EvtgAoi0Bft01Pt1Cc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi0Bft01Pt1Dc {
     #[doc = "Force the D input in this product term to a logical zero."]
@@ -279,7 +287,8 @@ impl From<EvtgAoi0Bft01Pt1Dc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi0Bft23Pt2Ac {
     #[doc = "Force the A input in this product term to a logical zero."]
@@ -314,7 +323,8 @@ impl From<EvtgAoi0Bft23Pt2Ac> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi0Bft23Pt2Bc {
     #[doc = "Force the B input in this product term to a logical zero."]
@@ -349,7 +359,8 @@ impl From<EvtgAoi0Bft23Pt2Bc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi0Bft23Pt2Cc {
     #[doc = "Force the C input in this product term to a logical zero."]
@@ -384,7 +395,8 @@ impl From<EvtgAoi0Bft23Pt2Cc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi0Bft23Pt2Dc {
     #[doc = "Force the D input in this product term to a logical zero."]
@@ -419,7 +431,8 @@ impl From<EvtgAoi0Bft23Pt2Dc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi0Bft23Pt3Ac {
     #[doc = "Force the A input in this product term to a logical zero."]
@@ -454,7 +467,8 @@ impl From<EvtgAoi0Bft23Pt3Ac> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi0Bft23Pt3Bc {
     #[doc = "Force the B input in this product term to a logical zero."]
@@ -489,7 +503,8 @@ impl From<EvtgAoi0Bft23Pt3Bc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi0Bft23Pt3Cc {
     #[doc = "Force the C input in this product term to a logical zero."]
@@ -524,7 +539,8 @@ impl From<EvtgAoi0Bft23Pt3Cc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi0Bft23Pt3Dc {
     #[doc = "Force the D input in this product term to a logical zero."]
@@ -559,7 +575,8 @@ impl From<EvtgAoi0Bft23Pt3Dc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi1Bft01Pt0Ac {
     #[doc = "Force the A input in this product term to a logical zero."]
@@ -594,7 +611,8 @@ impl From<EvtgAoi1Bft01Pt0Ac> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi1Bft01Pt0Bc {
     #[doc = "Force the B input in this product term to a logical zero."]
@@ -629,7 +647,8 @@ impl From<EvtgAoi1Bft01Pt0Bc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi1Bft01Pt0Cc {
     #[doc = "Force the C input in this product term to a logical zero."]
@@ -664,7 +683,8 @@ impl From<EvtgAoi1Bft01Pt0Cc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi1Bft01Pt0Dc {
     #[doc = "Force the D input in this product term to a logical zero."]
@@ -699,7 +719,8 @@ impl From<EvtgAoi1Bft01Pt0Dc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi1Bft01Pt1Ac {
     #[doc = "Force the A input in this product term to a logical zero."]
@@ -734,7 +755,8 @@ impl From<EvtgAoi1Bft01Pt1Ac> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi1Bft01Pt1Bc {
     #[doc = "Force the B input in this product term to a logical zero."]
@@ -769,7 +791,8 @@ impl From<EvtgAoi1Bft01Pt1Bc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi1Bft01Pt1Cc {
     #[doc = "Force the C input in this product term to a logical zero."]
@@ -804,7 +827,8 @@ impl From<EvtgAoi1Bft01Pt1Cc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi1Bft01Pt1Dc {
     #[doc = "Force the D input in this product term to a logical zero."]
@@ -839,7 +863,8 @@ impl From<EvtgAoi1Bft01Pt1Dc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi1Bft23Pt2Ac {
     #[doc = "Force the A input in this product term to a logical zero."]
@@ -874,7 +899,8 @@ impl From<EvtgAoi1Bft23Pt2Ac> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi1Bft23Pt2Bc {
     #[doc = "Force the B input in this product term to a logical zero."]
@@ -909,7 +935,8 @@ impl From<EvtgAoi1Bft23Pt2Bc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi1Bft23Pt2Cc {
     #[doc = "Force the C input in this product term to a logical zero."]
@@ -944,7 +971,8 @@ impl From<EvtgAoi1Bft23Pt2Cc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi1Bft23Pt2Dc {
     #[doc = "Force the D input in this product term to a logical zero."]
@@ -979,7 +1007,8 @@ impl From<EvtgAoi1Bft23Pt2Dc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi1Bft23Pt3Ac {
     #[doc = "Force the A input in this product term to a logical zero."]
@@ -1014,7 +1043,8 @@ impl From<EvtgAoi1Bft23Pt3Ac> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi1Bft23Pt3Bc {
     #[doc = "Force the B input in this product term to a logical zero."]
@@ -1049,7 +1079,8 @@ impl From<EvtgAoi1Bft23Pt3Bc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi1Bft23Pt3Cc {
     #[doc = "Force the C input in this product term to a logical zero."]
@@ -1084,7 +1115,8 @@ impl From<EvtgAoi1Bft23Pt3Cc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtgAoi1Bft23Pt3Dc {
     #[doc = "Force the D input in this product term to a logical zero."]
@@ -1119,7 +1151,8 @@ impl From<EvtgAoi1Bft23Pt3Dc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FbOvrd {
     #[doc = "Replace An."]
@@ -1154,7 +1187,8 @@ impl From<FbOvrd> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FfInit {
     #[doc = "0."]
@@ -1184,25 +1218,49 @@ impl From<FfInit> for u8 {
         FfInit::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum ForceBypass {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct ForceBypass(u8);
+impl ForceBypass {
     #[doc = "Will not force the bypass."]
-    Nfb0 = 0x0,
+    pub const Nfb0: Self = Self(0x0);
+    #[doc = "Will not force the bypass."]
+    pub const Nfb1: Self = Self(0x0);
     #[doc = "Whatever MODE_SEL is, will force bypass flip-flop and route the AOI_0(Filter_0) value directly to EVTG_OUTA."]
-    FFfA = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
+    pub const FFfA: Self = Self(0x01);
+    #[doc = "Whatever MODE_SEL is, will force bypass flip-flop and route the AOI_1(Filter_1) value directly to EVTG_OUTB."]
+    pub const FFfB: Self = Self(0x02);
 }
 impl ForceBypass {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> ForceBypass {
-        unsafe { core::mem::transmute(val & 0x03) }
+        Self(val & 0x03)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for ForceBypass {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("Nfb0"),
+            0x0 => f.write_str("Nfb1"),
+            0x01 => f.write_str("FFfA"),
+            0x02 => f.write_str("FFfB"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for ForceBypass {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "Nfb0"),
+            0x0 => defmt::write!(f, "Nfb1"),
+            0x01 => defmt::write!(f, "FFfA"),
+            0x02 => defmt::write!(f, "FFfB"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for ForceBypass {
@@ -1218,7 +1276,8 @@ impl From<ForceBypass> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum InitEn {
     #[doc = "Write 0 does not generate enable pulse."]
@@ -1249,7 +1308,8 @@ impl From<InitEn> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ModeSel {
     #[doc = "Bypass mode."]
@@ -1289,37 +1349,65 @@ impl From<ModeSel> for u8 {
         ModeSel::to_bits(val)
     }
 }
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum SyncCtrl {
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+pub struct SyncCtrl(u8);
+impl SyncCtrl {
     #[doc = "EVTG input \"An\" will not be synced."]
-    ANotsync = 0x0,
+    pub const ANotsync: Self = Self(0x0);
+    #[doc = "EVTG input \"Bn\" will not be synced."]
+    pub const BNotsync: Self = Self(0x0);
+    #[doc = "EVTG input \"Cn\" will not be synced."]
+    pub const CNotsync: Self = Self(0x0);
+    #[doc = "EVTG input \"Dn\" will not be synced."]
+    pub const DNotsync: Self = Self(0x0);
     #[doc = "EVTG input \"An\" will be synced by two bus clk cycles."]
-    ASync = 0x01,
-    _RESERVED_2 = 0x02,
-    _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
-    _RESERVED_9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    pub const ASync: Self = Self(0x01);
+    #[doc = "EVTG input \"Bn\" will be synced by two bus clk cycles."]
+    pub const BSync: Self = Self(0x02);
+    #[doc = "EVTG input \"Cn\" will be synced by two bus clk cycles."]
+    pub const CSync: Self = Self(0x04);
+    #[doc = "EVTG input \"Dn\" will be synced by two bus clk cycles."]
+    pub const DSync: Self = Self(0x08);
 }
 impl SyncCtrl {
-    #[inline(always)]
     pub const fn from_bits(val: u8) -> SyncCtrl {
-        unsafe { core::mem::transmute(val & 0x0f) }
+        Self(val & 0x0f)
     }
-    #[inline(always)]
     pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
+        self.0
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for SyncCtrl {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        match self.0 {
+            0x0 => f.write_str("ANotsync"),
+            0x0 => f.write_str("BNotsync"),
+            0x0 => f.write_str("CNotsync"),
+            0x0 => f.write_str("DNotsync"),
+            0x01 => f.write_str("ASync"),
+            0x02 => f.write_str("BSync"),
+            0x04 => f.write_str("CSync"),
+            0x08 => f.write_str("DSync"),
+            other => core::write!(f, "0x{:02X}", other),
+        }
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for SyncCtrl {
+    fn format(&self, f: defmt::Formatter) {
+        match self.0 {
+            0x0 => defmt::write!(f, "ANotsync"),
+            0x0 => defmt::write!(f, "BNotsync"),
+            0x0 => defmt::write!(f, "CNotsync"),
+            0x0 => defmt::write!(f, "DNotsync"),
+            0x01 => defmt::write!(f, "ASync"),
+            0x02 => defmt::write!(f, "BSync"),
+            0x04 => defmt::write!(f, "CSync"),
+            0x08 => defmt::write!(f, "DSync"),
+            other => defmt::write!(f, "0x{:02X}", other),
+        }
     }
 }
 impl From<u8> for SyncCtrl {

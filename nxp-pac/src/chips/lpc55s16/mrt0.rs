@@ -1,4 +1,4 @@
-#[doc = "no description available."]
+#[doc = "Array of registers: CTRL, INTVAL, STAT, TIMER."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Channel {
     ptr: *mut u8,
@@ -51,7 +51,7 @@ impl Mrt0 {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "no description available."]
+    #[doc = "Array of registers: CTRL, INTVAL, STAT, TIMER."]
     #[inline(always)]
     pub const fn channel(self, n: usize) -> Channel {
         assert!(n < 4usize);

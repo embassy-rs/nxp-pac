@@ -70,6 +70,7 @@ impl Default for Baseline {
         Baseline(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Baseline {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Baseline")
@@ -120,6 +121,7 @@ impl Default for Chmerge {
         Chmerge(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Chmerge {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Chmerge")
@@ -257,6 +259,7 @@ impl Default for Config {
         Config(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Config {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Config")
@@ -434,6 +437,7 @@ impl Default for ConfigMutual {
         ConfigMutual(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ConfigMutual {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ConfigMutual")
@@ -531,6 +535,7 @@ impl Default for Data {
         Data(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Data {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Data")
@@ -722,6 +727,7 @@ impl Default for Gencs {
         Gencs(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gencs {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gencs")
@@ -823,6 +829,7 @@ impl Default for Misc {
         Misc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Misc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Misc")
@@ -918,6 +925,7 @@ impl Default for Mul {
         Mul(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mul {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mul")
@@ -979,6 +987,7 @@ impl Default for Shield {
         Shield(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Shield {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Shield")
@@ -1094,6 +1103,7 @@ impl Default for Sinc {
         Sinc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sinc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sinc")
@@ -1207,6 +1217,7 @@ impl Default for Ssc0 {
         Ssc0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ssc0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ssc0")
@@ -1294,6 +1305,7 @@ impl Default for Ssc1 {
         Ssc1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ssc1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ssc1")
@@ -1377,6 +1389,7 @@ impl Default for Ssc2 {
         Ssc2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ssc2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ssc2")
@@ -1460,6 +1473,7 @@ impl Default for Trig {
         Trig(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig")
@@ -1519,6 +1533,7 @@ impl Default for Tshd {
         Tshd(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tshd {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tshd")

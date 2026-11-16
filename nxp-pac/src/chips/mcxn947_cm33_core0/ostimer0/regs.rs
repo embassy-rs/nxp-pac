@@ -22,6 +22,7 @@ impl Default for CaptureH {
         CaptureH(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CaptureH {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CaptureH")
@@ -63,6 +64,7 @@ impl Default for CaptureL {
         CaptureL(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CaptureL {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CaptureL")
@@ -104,6 +106,7 @@ impl Default for Evtimerh {
         Evtimerh(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Evtimerh {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Evtimerh")
@@ -145,6 +148,7 @@ impl Default for Evtimerl {
         Evtimerl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Evtimerl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Evtimerl")
@@ -186,6 +190,7 @@ impl Default for MatchH {
         MatchH(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MatchH {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MatchH")
@@ -223,6 +228,7 @@ impl Default for MatchL {
         MatchL(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MatchL {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MatchL")
@@ -284,6 +290,7 @@ impl Default for OseventCtrl {
         OseventCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OseventCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OseventCtrl")

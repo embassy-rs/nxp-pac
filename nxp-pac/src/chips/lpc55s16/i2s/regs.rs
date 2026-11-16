@@ -142,6 +142,7 @@ impl Default for Cfg1 {
         Cfg1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cfg1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cfg1")
@@ -215,6 +216,7 @@ impl Default for Cfg2 {
         Cfg2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cfg2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cfg2")
@@ -258,6 +260,7 @@ impl Default for Div {
         Div(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Div {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Div").field("div", &self.div()).finish()
@@ -413,6 +416,7 @@ impl Default for Fifocfg {
         Fifocfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fifocfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fifocfg")
@@ -510,6 +514,7 @@ impl Default for Fifointenclr {
         Fifointenclr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fifointenclr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fifointenclr")
@@ -593,6 +598,7 @@ impl Default for Fifointenset {
         Fifointenset(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fifointenset {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fifointenset")
@@ -688,6 +694,7 @@ impl Default for Fifointstat {
         Fifointstat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fifointstat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fifointstat")
@@ -737,6 +744,7 @@ impl Default for Fiford {
         Fiford(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fiford {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fiford")
@@ -774,6 +782,7 @@ impl Default for Fiford48h {
         Fiford48h(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fiford48h {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fiford48h")
@@ -811,6 +820,7 @@ impl Default for Fiford48hnopop {
         Fiford48hnopop(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fiford48hnopop {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fiford48hnopop")
@@ -848,6 +858,7 @@ impl Default for Fifordnopop {
         Fifordnopop(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fifordnopop {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fifordnopop")
@@ -885,6 +896,7 @@ impl Default for Fifosize {
         Fifosize(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fifosize {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fifosize")
@@ -1018,6 +1030,7 @@ impl Default for Fifostat {
         Fifostat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fifostat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fifostat")
@@ -1111,6 +1124,7 @@ impl Default for Fifotrig {
         Fifotrig(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fifotrig {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fifotrig")
@@ -1158,6 +1172,7 @@ impl Default for Fifowr {
         Fifowr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fifowr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fifowr")
@@ -1195,6 +1210,7 @@ impl Default for Fifowr48h {
         Fifowr48h(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fifowr48h {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fifowr48h")
@@ -1268,6 +1284,7 @@ impl Default for Id {
         Id(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Id {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Id")
@@ -1294,8 +1311,8 @@ impl defmt::Format for Id {
 #[doc = "Configuration register 1 for channel pair."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Pcfg1(pub u32);
-impl Pcfg1 {
+pub struct Pcfg11(pub u32);
+impl Pcfg11 {
     #[doc = "Enable for this channel pair."]
     #[must_use]
     #[inline(always)]
@@ -1311,36 +1328,149 @@ impl Pcfg1 {
     #[doc = "Single channel mode."]
     #[must_use]
     #[inline(always)]
-    pub const fn onechannel(&self) -> super::vals::Pcfg1Onechannel {
+    pub const fn onechannel(&self) -> super::vals::Pcfg11Onechannel {
         let val = (self.0 >> 10usize) & 0x01;
-        super::vals::Pcfg1Onechannel::from_bits(val as u8)
+        super::vals::Pcfg11Onechannel::from_bits(val as u8)
     }
     #[doc = "Single channel mode."]
     #[inline(always)]
-    pub const fn set_onechannel(&mut self, val: super::vals::Pcfg1Onechannel) {
+    pub const fn set_onechannel(&mut self, val: super::vals::Pcfg11Onechannel) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
 }
-impl Default for Pcfg1 {
+impl Default for Pcfg11 {
     #[inline(always)]
-    fn default() -> Pcfg1 {
-        Pcfg1(0)
+    fn default() -> Pcfg11 {
+        Pcfg11(0)
     }
 }
-impl core::fmt::Debug for Pcfg1 {
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Pcfg11 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Pcfg1")
+        f.debug_struct("Pcfg11")
             .field("pairenable", &self.pairenable())
             .field("onechannel", &self.onechannel())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for Pcfg1 {
+impl defmt::Format for Pcfg11 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Pcfg1 {{ pairenable: {=bool:?}, onechannel: {:?} }}",
+            "Pcfg11 {{ pairenable: {=bool:?}, onechannel: {:?} }}",
+            self.pairenable(),
+            self.onechannel()
+        )
+    }
+}
+#[doc = "Configuration register 1 for channel pair."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Pcfg12(pub u32);
+impl Pcfg12 {
+    #[doc = "Enable for this channel pair."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pairenable(&self) -> bool {
+        let val = (self.0 >> 0usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Enable for this channel pair."]
+    #[inline(always)]
+    pub const fn set_pairenable(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
+    }
+    #[doc = "Single channel mode."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn onechannel(&self) -> super::vals::Pcfg12Onechannel {
+        let val = (self.0 >> 10usize) & 0x01;
+        super::vals::Pcfg12Onechannel::from_bits(val as u8)
+    }
+    #[doc = "Single channel mode."]
+    #[inline(always)]
+    pub const fn set_onechannel(&mut self, val: super::vals::Pcfg12Onechannel) {
+        self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
+    }
+}
+impl Default for Pcfg12 {
+    #[inline(always)]
+    fn default() -> Pcfg12 {
+        Pcfg12(0)
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Pcfg12 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Pcfg12")
+            .field("pairenable", &self.pairenable())
+            .field("onechannel", &self.onechannel())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Pcfg12 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Pcfg12 {{ pairenable: {=bool:?}, onechannel: {:?} }}",
+            self.pairenable(),
+            self.onechannel()
+        )
+    }
+}
+#[doc = "Configuration register 1 for channel pair."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Pcfg13(pub u32);
+impl Pcfg13 {
+    #[doc = "Enable for this channel pair."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pairenable(&self) -> bool {
+        let val = (self.0 >> 0usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Enable for this channel pair."]
+    #[inline(always)]
+    pub const fn set_pairenable(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
+    }
+    #[doc = "Single channel mode."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn onechannel(&self) -> super::vals::Pcfg13Onechannel {
+        let val = (self.0 >> 10usize) & 0x01;
+        super::vals::Pcfg13Onechannel::from_bits(val as u8)
+    }
+    #[doc = "Single channel mode."]
+    #[inline(always)]
+    pub const fn set_onechannel(&mut self, val: super::vals::Pcfg13Onechannel) {
+        self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
+    }
+}
+impl Default for Pcfg13 {
+    #[inline(always)]
+    fn default() -> Pcfg13 {
+        Pcfg13(0)
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Pcfg13 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Pcfg13")
+            .field("pairenable", &self.pairenable())
+            .field("onechannel", &self.onechannel())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Pcfg13 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Pcfg13 {{ pairenable: {=bool:?}, onechannel: {:?} }}",
             self.pairenable(),
             self.onechannel()
         )
@@ -1349,8 +1479,8 @@ impl defmt::Format for Pcfg1 {
 #[doc = "Configuration register 2 for channel pair."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Pcfg2(pub u32);
-impl Pcfg2 {
+pub struct Pcfg21(pub u32);
+impl Pcfg21 {
     #[doc = "Data Position."]
     #[must_use]
     #[inline(always)]
@@ -1364,40 +1494,117 @@ impl Pcfg2 {
         self.0 = (self.0 & !(0x01ff << 16usize)) | (((val as u32) & 0x01ff) << 16usize);
     }
 }
-impl Default for Pcfg2 {
+impl Default for Pcfg21 {
     #[inline(always)]
-    fn default() -> Pcfg2 {
-        Pcfg2(0)
+    fn default() -> Pcfg21 {
+        Pcfg21(0)
     }
 }
-impl core::fmt::Debug for Pcfg2 {
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Pcfg21 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Pcfg2")
+        f.debug_struct("Pcfg21")
             .field("position", &self.position())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for Pcfg2 {
+impl defmt::Format for Pcfg21 {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Pcfg2 {{ position: {=u16:?} }}", self.position())
+        defmt::write!(f, "Pcfg21 {{ position: {=u16:?} }}", self.position())
+    }
+}
+#[doc = "Configuration register 2 for channel pair."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Pcfg22(pub u32);
+impl Pcfg22 {
+    #[doc = "Data Position."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn position(&self) -> u16 {
+        let val = (self.0 >> 16usize) & 0x01ff;
+        val as u16
+    }
+    #[doc = "Data Position."]
+    #[inline(always)]
+    pub const fn set_position(&mut self, val: u16) {
+        self.0 = (self.0 & !(0x01ff << 16usize)) | (((val as u32) & 0x01ff) << 16usize);
+    }
+}
+impl Default for Pcfg22 {
+    #[inline(always)]
+    fn default() -> Pcfg22 {
+        Pcfg22(0)
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Pcfg22 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Pcfg22")
+            .field("position", &self.position())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Pcfg22 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Pcfg22 {{ position: {=u16:?} }}", self.position())
+    }
+}
+#[doc = "Configuration register 2 for channel pair."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Pcfg23(pub u32);
+impl Pcfg23 {
+    #[doc = "Data Position."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn position(&self) -> u16 {
+        let val = (self.0 >> 16usize) & 0x01ff;
+        val as u16
+    }
+    #[doc = "Data Position."]
+    #[inline(always)]
+    pub const fn set_position(&mut self, val: u16) {
+        self.0 = (self.0 & !(0x01ff << 16usize)) | (((val as u32) & 0x01ff) << 16usize);
+    }
+}
+impl Default for Pcfg23 {
+    #[inline(always)]
+    fn default() -> Pcfg23 {
+        Pcfg23(0)
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Pcfg23 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Pcfg23")
+            .field("position", &self.position())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Pcfg23 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Pcfg23 {{ position: {=u16:?} }}", self.position())
     }
 }
 #[doc = "Status register for channel pair."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Pstat(pub u32);
-impl Pstat {
+pub struct Pstat1(pub u32);
+impl Pstat1 {
     #[doc = "Busy status for this channel pair."]
     #[must_use]
     #[inline(always)]
-    pub const fn busy(&self) -> super::vals::PstatBusy {
+    pub const fn busy(&self) -> super::vals::Pstat1Busy {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::PstatBusy::from_bits(val as u8)
+        super::vals::Pstat1Busy::from_bits(val as u8)
     }
     #[doc = "Busy status for this channel pair."]
     #[inline(always)]
-    pub const fn set_busy(&mut self, val: super::vals::PstatBusy) {
+    pub const fn set_busy(&mut self, val: super::vals::Pstat1Busy) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Save Frame Error flag."]
@@ -1427,25 +1634,26 @@ impl Pstat {
     #[doc = "Data Paused status flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn datapaused(&self) -> super::vals::PstatDatapaused {
+    pub const fn datapaused(&self) -> super::vals::Pstat1Datapaused {
         let val = (self.0 >> 3usize) & 0x01;
-        super::vals::PstatDatapaused::from_bits(val as u8)
+        super::vals::Pstat1Datapaused::from_bits(val as u8)
     }
     #[doc = "Data Paused status flag."]
     #[inline(always)]
-    pub const fn set_datapaused(&mut self, val: super::vals::PstatDatapaused) {
+    pub const fn set_datapaused(&mut self, val: super::vals::Pstat1Datapaused) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
 }
-impl Default for Pstat {
+impl Default for Pstat1 {
     #[inline(always)]
-    fn default() -> Pstat {
-        Pstat(0)
+    fn default() -> Pstat1 {
+        Pstat1(0)
     }
 }
-impl core::fmt::Debug for Pstat {
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Pstat1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Pstat")
+        f.debug_struct("Pstat1")
             .field("busy", &self.busy())
             .field("slvfrmerr", &self.slvfrmerr())
             .field("lr", &self.lr())
@@ -1454,11 +1662,179 @@ impl core::fmt::Debug for Pstat {
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for Pstat {
+impl defmt::Format for Pstat1 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Pstat {{ busy: {:?}, slvfrmerr: {=bool:?}, lr: {=bool:?}, datapaused: {:?} }}",
+            "Pstat1 {{ busy: {:?}, slvfrmerr: {=bool:?}, lr: {=bool:?}, datapaused: {:?} }}",
+            self.busy(),
+            self.slvfrmerr(),
+            self.lr(),
+            self.datapaused()
+        )
+    }
+}
+#[doc = "Status register for channel pair."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Pstat2(pub u32);
+impl Pstat2 {
+    #[doc = "Busy status for this channel pair."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn busy(&self) -> super::vals::Pstat2Busy {
+        let val = (self.0 >> 0usize) & 0x01;
+        super::vals::Pstat2Busy::from_bits(val as u8)
+    }
+    #[doc = "Busy status for this channel pair."]
+    #[inline(always)]
+    pub const fn set_busy(&mut self, val: super::vals::Pstat2Busy) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    }
+    #[doc = "Save Frame Error flag."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn slvfrmerr(&self) -> bool {
+        let val = (self.0 >> 1usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Save Frame Error flag."]
+    #[inline(always)]
+    pub const fn set_slvfrmerr(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
+    }
+    #[doc = "Left/Right indication."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn lr(&self) -> bool {
+        let val = (self.0 >> 2usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Left/Right indication."]
+    #[inline(always)]
+    pub const fn set_lr(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
+    }
+    #[doc = "Data Paused status flag."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn datapaused(&self) -> super::vals::Pstat2Datapaused {
+        let val = (self.0 >> 3usize) & 0x01;
+        super::vals::Pstat2Datapaused::from_bits(val as u8)
+    }
+    #[doc = "Data Paused status flag."]
+    #[inline(always)]
+    pub const fn set_datapaused(&mut self, val: super::vals::Pstat2Datapaused) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
+    }
+}
+impl Default for Pstat2 {
+    #[inline(always)]
+    fn default() -> Pstat2 {
+        Pstat2(0)
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Pstat2 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Pstat2")
+            .field("busy", &self.busy())
+            .field("slvfrmerr", &self.slvfrmerr())
+            .field("lr", &self.lr())
+            .field("datapaused", &self.datapaused())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Pstat2 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Pstat2 {{ busy: {:?}, slvfrmerr: {=bool:?}, lr: {=bool:?}, datapaused: {:?} }}",
+            self.busy(),
+            self.slvfrmerr(),
+            self.lr(),
+            self.datapaused()
+        )
+    }
+}
+#[doc = "Status register for channel pair."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Pstat3(pub u32);
+impl Pstat3 {
+    #[doc = "Busy status for this channel pair."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn busy(&self) -> super::vals::Pstat3Busy {
+        let val = (self.0 >> 0usize) & 0x01;
+        super::vals::Pstat3Busy::from_bits(val as u8)
+    }
+    #[doc = "Busy status for this channel pair."]
+    #[inline(always)]
+    pub const fn set_busy(&mut self, val: super::vals::Pstat3Busy) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    }
+    #[doc = "Save Frame Error flag."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn slvfrmerr(&self) -> bool {
+        let val = (self.0 >> 1usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Save Frame Error flag."]
+    #[inline(always)]
+    pub const fn set_slvfrmerr(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
+    }
+    #[doc = "Left/Right indication."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn lr(&self) -> bool {
+        let val = (self.0 >> 2usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Left/Right indication."]
+    #[inline(always)]
+    pub const fn set_lr(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
+    }
+    #[doc = "Data Paused status flag."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn datapaused(&self) -> super::vals::Pstat3Datapaused {
+        let val = (self.0 >> 3usize) & 0x01;
+        super::vals::Pstat3Datapaused::from_bits(val as u8)
+    }
+    #[doc = "Data Paused status flag."]
+    #[inline(always)]
+    pub const fn set_datapaused(&mut self, val: super::vals::Pstat3Datapaused) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
+    }
+}
+impl Default for Pstat3 {
+    #[inline(always)]
+    fn default() -> Pstat3 {
+        Pstat3(0)
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Pstat3 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Pstat3")
+            .field("busy", &self.busy())
+            .field("slvfrmerr", &self.slvfrmerr())
+            .field("lr", &self.lr())
+            .field("datapaused", &self.datapaused())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Pstat3 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Pstat3 {{ busy: {:?}, slvfrmerr: {=bool:?}, lr: {=bool:?}, datapaused: {:?} }}",
             self.busy(),
             self.slvfrmerr(),
             self.lr(),
@@ -1526,6 +1902,7 @@ impl Default for Stat {
         Stat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Stat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Stat")

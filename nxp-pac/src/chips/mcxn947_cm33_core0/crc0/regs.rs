@@ -70,6 +70,7 @@ impl Default for Ctrl {
         Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl")
@@ -155,6 +156,7 @@ impl Default for Data {
         Data(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Data {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Data")
@@ -214,6 +216,7 @@ impl Default for Gpoly {
         Gpoly(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpoly {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpoly")

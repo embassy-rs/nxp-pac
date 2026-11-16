@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfhfnmins {
     #[doc = "BusFault, HardFault, and NMI are Secure."]
@@ -30,7 +31,358 @@ impl From<Bfhfnmins> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Cp11 {
+    #[doc = "Access Denied. All accesses to the Floating-point Extension result in NOCP UsageFault."]
+    AccessDenied = 0x0,
+    #[doc = "Privileged access only. Unprivileged access to the Floatingpoint Extension result in NOCP UsageFault."]
+    PrivilegedOnly = 0x01,
+    _RESERVED_2 = 0x02,
+    #[doc = "Full access. Full access rights to the Floatingpoint Extension."]
+    FullAccess = 0x03,
+}
+impl Cp11 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Cp11 {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Cp11 {
+    #[inline(always)]
+    fn from(val: u8) -> Cp11 {
+        Cp11::from_bits(val)
+    }
+}
+impl From<Cp11> for u8 {
+    #[inline(always)]
+    fn from(val: Cp11) -> u8 {
+        Cp11::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum CpacrCp0 {
+    #[doc = "Access Denied. Any attempted accesses to this coprocessor generates a NOCP UsageFault."]
+    AccessDenied = 0x0,
+    #[doc = "Privileged access only. An unprivileged access generates a NOCP UsageFault."]
+    PrivilegedOnly = 0x01,
+    _RESERVED_2 = 0x02,
+    #[doc = "Full access. Full access rights for this coprocessor."]
+    FullAccess = 0x03,
+}
+impl CpacrCp0 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> CpacrCp0 {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for CpacrCp0 {
+    #[inline(always)]
+    fn from(val: u8) -> CpacrCp0 {
+        CpacrCp0::from_bits(val)
+    }
+}
+impl From<CpacrCp0> for u8 {
+    #[inline(always)]
+    fn from(val: CpacrCp0) -> u8 {
+        CpacrCp0::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum CpacrCp1 {
+    #[doc = "Access Denied. Any attempted accesses to this coprocessor generates a NOCP UsageFault."]
+    AccessDenied = 0x0,
+    #[doc = "Privileged access only. An unprivileged access generates a NOCP UsageFault."]
+    PrivilegedOnly = 0x01,
+    _RESERVED_2 = 0x02,
+    #[doc = "Full access. Full access rights for this coprocessor."]
+    FullAccess = 0x03,
+}
+impl CpacrCp1 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> CpacrCp1 {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for CpacrCp1 {
+    #[inline(always)]
+    fn from(val: u8) -> CpacrCp1 {
+        CpacrCp1::from_bits(val)
+    }
+}
+impl From<CpacrCp1> for u8 {
+    #[inline(always)]
+    fn from(val: CpacrCp1) -> u8 {
+        CpacrCp1::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum CpacrCp10 {
+    #[doc = "Access Denied. All accesses to the Floating-point Extension result in NOCP UsageFault."]
+    AccessDenied = 0x0,
+    #[doc = "Privileged access only. Unprivileged access to the Floatingpoint Extension result in NOCP UsageFault."]
+    PrivilegedOnly = 0x01,
+    _RESERVED_2 = 0x02,
+    #[doc = "Full access. Full access rights to the Floatingpoint Extension."]
+    FullAccess = 0x03,
+}
+impl CpacrCp10 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> CpacrCp10 {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for CpacrCp10 {
+    #[inline(always)]
+    fn from(val: u8) -> CpacrCp10 {
+        CpacrCp10::from_bits(val)
+    }
+}
+impl From<CpacrCp10> for u8 {
+    #[inline(always)]
+    fn from(val: CpacrCp10) -> u8 {
+        CpacrCp10::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum CpacrCp2 {
+    #[doc = "Access Denied. Any attempted accesses to this coprocessor generates a NOCP UsageFault."]
+    AccessDenied = 0x0,
+    #[doc = "Privileged access only. An unprivileged access generates a NOCP UsageFault."]
+    PrivilegedOnly = 0x01,
+    _RESERVED_2 = 0x02,
+    #[doc = "Full access. Full access rights for this coprocessor."]
+    FullAccess = 0x03,
+}
+impl CpacrCp2 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> CpacrCp2 {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for CpacrCp2 {
+    #[inline(always)]
+    fn from(val: u8) -> CpacrCp2 {
+        CpacrCp2::from_bits(val)
+    }
+}
+impl From<CpacrCp2> for u8 {
+    #[inline(always)]
+    fn from(val: CpacrCp2) -> u8 {
+        CpacrCp2::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum CpacrCp3 {
+    #[doc = "Access Denied. Any attempted accesses to this coprocessor generates a NOCP UsageFault."]
+    AccessDenied = 0x0,
+    #[doc = "Privileged access only. An unprivileged access generates a NOCP UsageFault."]
+    PrivilegedOnly = 0x01,
+    _RESERVED_2 = 0x02,
+    #[doc = "Full access. Full access rights for this coprocessor."]
+    FullAccess = 0x03,
+}
+impl CpacrCp3 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> CpacrCp3 {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for CpacrCp3 {
+    #[inline(always)]
+    fn from(val: u8) -> CpacrCp3 {
+        CpacrCp3::from_bits(val)
+    }
+}
+impl From<CpacrCp3> for u8 {
+    #[inline(always)]
+    fn from(val: CpacrCp3) -> u8 {
+        CpacrCp3::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum CpacrCp4 {
+    #[doc = "Access Denied. Any attempted accesses to this coprocessor generates a NOCP UsageFault."]
+    AccessDenied = 0x0,
+    #[doc = "Privileged access only. An unprivileged access generates a NOCP UsageFault."]
+    PrivilegedOnly = 0x01,
+    _RESERVED_2 = 0x02,
+    #[doc = "Full access. Full access rights for this coprocessor."]
+    FullAccess = 0x03,
+}
+impl CpacrCp4 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> CpacrCp4 {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for CpacrCp4 {
+    #[inline(always)]
+    fn from(val: u8) -> CpacrCp4 {
+        CpacrCp4::from_bits(val)
+    }
+}
+impl From<CpacrCp4> for u8 {
+    #[inline(always)]
+    fn from(val: CpacrCp4) -> u8 {
+        CpacrCp4::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum CpacrCp5 {
+    #[doc = "Access Denied. Any attempted accesses to this coprocessor generates a NOCP UsageFault."]
+    AccessDenied = 0x0,
+    #[doc = "Privileged access only. An unprivileged access generates a NOCP UsageFault."]
+    PrivilegedOnly = 0x01,
+    _RESERVED_2 = 0x02,
+    #[doc = "Full access. Full access rights for this coprocessor."]
+    FullAccess = 0x03,
+}
+impl CpacrCp5 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> CpacrCp5 {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for CpacrCp5 {
+    #[inline(always)]
+    fn from(val: u8) -> CpacrCp5 {
+        CpacrCp5::from_bits(val)
+    }
+}
+impl From<CpacrCp5> for u8 {
+    #[inline(always)]
+    fn from(val: CpacrCp5) -> u8 {
+        CpacrCp5::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum CpacrCp6 {
+    #[doc = "Access Denied. Any attempted accesses to this coprocessor generates a NOCP UsageFault."]
+    AccessDenied = 0x0,
+    #[doc = "Privileged access only. An unprivileged access generates a NOCP UsageFault."]
+    PrivilegedOnly = 0x01,
+    _RESERVED_2 = 0x02,
+    #[doc = "Full access. Full access rights for this coprocessor."]
+    FullAccess = 0x03,
+}
+impl CpacrCp6 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> CpacrCp6 {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for CpacrCp6 {
+    #[inline(always)]
+    fn from(val: u8) -> CpacrCp6 {
+        CpacrCp6::from_bits(val)
+    }
+}
+impl From<CpacrCp6> for u8 {
+    #[inline(always)]
+    fn from(val: CpacrCp6) -> u8 {
+        CpacrCp6::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum CpacrCp7 {
+    #[doc = "Access Denied. Any attempted accesses to this coprocessor generates a NOCP UsageFault."]
+    AccessDenied = 0x0,
+    #[doc = "Privileged access only. An unprivileged access generates a NOCP UsageFault."]
+    PrivilegedOnly = 0x01,
+    _RESERVED_2 = 0x02,
+    #[doc = "Full access. Full access rights for this coprocessor."]
+    FullAccess = 0x03,
+}
+impl CpacrCp7 {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> CpacrCp7 {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for CpacrCp7 {
+    #[inline(always)]
+    fn from(val: u8) -> CpacrCp7 {
+        CpacrCp7::from_bits(val)
+    }
+}
+impl From<CpacrCp7> for u8 {
+    #[inline(always)]
+    fn from(val: CpacrCp7) -> u8 {
+        CpacrCp7::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Endianness {
     #[doc = "Little-endian."]
@@ -61,7 +413,8 @@ impl From<Endianness> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pris {
     #[doc = "Priority ranges of Secure and Non-secure exceptions are identical."]
@@ -92,7 +445,8 @@ impl From<Pris> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sevonpend {
     #[doc = "Only enabled interrupts or events can wakeup the processor, disabled interrupts are excluded."]
@@ -123,7 +477,8 @@ impl From<Sevonpend> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sleepdeep {
     #[doc = "Sleep."]
@@ -154,7 +509,8 @@ impl From<Sleepdeep> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sleepdeeps {
     #[doc = "The SLEEPDEEP bit is accessible from both Security states."]
@@ -185,7 +541,8 @@ impl From<Sleepdeeps> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sysresetreq {
     #[doc = "Do not request a system reset."]
@@ -216,7 +573,8 @@ impl From<Sysresetreq> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sysresetreqs {
     #[doc = "SYSRESETREQ functionality is available to both Security states."]

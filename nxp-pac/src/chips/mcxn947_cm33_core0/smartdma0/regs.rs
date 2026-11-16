@@ -34,6 +34,7 @@ impl Default for Arm2ezh {
         Arm2ezh(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Arm2ezh {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Arm2ezh")
@@ -77,6 +78,7 @@ impl Default for Bootadr {
         Bootadr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Bootadr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Bootadr")
@@ -114,6 +116,7 @@ impl Default for BreakAddr {
         BreakAddr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for BreakAddr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BreakAddr")
@@ -151,6 +154,7 @@ impl Default for BreakVect {
         BreakVect(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for BreakVect {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BreakVect")
@@ -248,6 +252,7 @@ impl Default for Ctrl {
         Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl")
@@ -311,6 +316,7 @@ impl Default for EmerSel {
         EmerSel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EmerSel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EmerSel")
@@ -354,6 +360,7 @@ impl Default for EmerVect {
         EmerVect(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EmerVect {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EmerVect")
@@ -391,6 +398,7 @@ impl Default for Ezh2arm {
         Ezh2arm(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ezh2arm {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ezh2arm").field("gp", &self.gp()).finish()
@@ -426,6 +434,7 @@ impl Default for Pc {
         Pc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pc").field("pc", &self.pc()).finish()
@@ -485,6 +494,7 @@ impl Default for Pendtrap {
         Pendtrap(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pendtrap {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pendtrap")
@@ -530,6 +540,7 @@ impl Default for Sp {
         Sp(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sp {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sp").field("sp", &self.sp()).finish()

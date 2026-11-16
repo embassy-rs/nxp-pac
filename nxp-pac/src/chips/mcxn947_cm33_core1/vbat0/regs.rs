@@ -22,6 +22,7 @@ impl Default for Froclke {
         Froclke(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Froclke {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Froclke")
@@ -59,6 +60,7 @@ impl Default for Froctla {
         Froctla(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Froctla {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Froctla")
@@ -96,6 +98,7 @@ impl Default for Froctlb {
         Froctlb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Froctlb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Froctlb")
@@ -133,6 +136,7 @@ impl Default for Frolcka {
         Frolcka(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Frolcka {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Frolcka")
@@ -170,6 +174,7 @@ impl Default for Frolckb {
         Frolckb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Frolckb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Frolckb")
@@ -387,6 +392,7 @@ impl Default for Irqena {
         Irqena(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Irqena {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Irqena")
@@ -458,6 +464,7 @@ impl Default for Irqenb {
         Irqenb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Irqenb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Irqenb")
@@ -519,6 +526,7 @@ impl Default for Ldoctla {
         Ldoctla(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ldoctla {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ldoctla")
@@ -564,6 +572,7 @@ impl Default for Ldoctlb {
         Ldoctlb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ldoctlb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ldoctlb")
@@ -601,6 +610,7 @@ impl Default for Ldolcka {
         Ldolcka(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ldolcka {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ldolcka")
@@ -638,6 +648,7 @@ impl Default for Ldolckb {
         Ldolckb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ldolckb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ldolckb")
@@ -735,6 +746,7 @@ impl Default for Ldoramc {
         Ldoramc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ldoramc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ldoramc")
@@ -798,6 +810,7 @@ impl Default for Ldotimer0 {
         Ldotimer0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ldotimer0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ldotimer0")
@@ -853,6 +866,7 @@ impl Default for Ldotimer1 {
         Ldotimer1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ldotimer1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ldotimer1")
@@ -896,6 +910,7 @@ impl Default for Locka {
         Locka(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Locka {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Locka").field("lock", &self.lock()).finish()
@@ -931,6 +946,7 @@ impl Default for Lockb {
         Lockb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lockb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lockb").field("lock", &self.lock()).finish()
@@ -990,6 +1006,7 @@ impl Default for Moncfga {
         Moncfga(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Moncfga {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Moncfga")
@@ -1035,6 +1052,7 @@ impl Default for Moncfgb {
         Moncfgb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Moncfgb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Moncfgb")
@@ -1072,6 +1090,7 @@ impl Default for Monctla {
         Monctla(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Monctla {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Monctla")
@@ -1109,6 +1128,7 @@ impl Default for Monctlb {
         Monctlb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Monctlb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Monctlb")
@@ -1146,6 +1166,7 @@ impl Default for Monlcka {
         Monlcka(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Monlcka {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Monlcka")
@@ -1183,6 +1204,7 @@ impl Default for Monlckb {
         Monlckb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Monlckb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Monlckb")
@@ -1268,6 +1290,7 @@ impl Default for Osccfga {
         Osccfga(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Osccfga {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Osccfga")
@@ -1317,6 +1340,7 @@ impl Default for Osccfgb {
         Osccfgb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Osccfgb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Osccfgb")
@@ -1354,6 +1378,7 @@ impl Default for Oscclke {
         Oscclke(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Oscclke {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Oscclke")
@@ -1475,6 +1500,7 @@ impl Default for Oscctla {
         Oscctla(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Oscctla {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Oscctla")
@@ -1530,6 +1556,7 @@ impl Default for Oscctlb {
         Oscctlb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Oscctlb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Oscctlb")
@@ -1567,6 +1594,7 @@ impl Default for Osclcka {
         Osclcka(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Osclcka {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Osclcka")
@@ -1604,6 +1632,7 @@ impl Default for Osclckb {
         Osclckb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Osclckb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Osclckb")
@@ -1821,6 +1850,7 @@ impl Default for Statusa {
         Statusa(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Statusa {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Statusa")
@@ -1892,6 +1922,7 @@ impl Default for Statusb {
         Statusb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Statusb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Statusb")
@@ -1941,6 +1972,7 @@ impl Default for Swictla {
         Swictla(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Swictla {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Swictla")
@@ -1984,6 +2016,7 @@ impl Default for Swictlb {
         Swictlb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Swictlb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Swictlb")
@@ -2021,6 +2054,7 @@ impl Default for Swilcka {
         Swilcka(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Swilcka {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Swilcka")
@@ -2058,6 +2092,7 @@ impl Default for Swilckb {
         Swilckb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Swilckb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Swilckb")
@@ -2119,6 +2154,7 @@ impl Default for Tamctla {
         Tamctla(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tamctla {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tamctla")
@@ -2164,6 +2200,7 @@ impl Default for Tamctlb {
         Tamctlb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tamctlb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tamctlb")
@@ -2201,6 +2238,7 @@ impl Default for Tamlcka {
         Tamlcka(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tamlcka {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tamlcka")
@@ -2238,6 +2276,7 @@ impl Default for Tamlckb {
         Tamlckb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tamlckb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tamlckb")
@@ -2347,6 +2386,7 @@ impl Default for Tampera {
         Tampera(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tampera {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tampera")
@@ -2400,6 +2440,7 @@ impl Default for Tamperb {
         Tamperb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tamperb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tamperb")
@@ -2461,6 +2502,7 @@ impl Default for Verid {
         Verid(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Verid {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Verid")
@@ -2506,6 +2548,7 @@ impl Default for Wakecfg {
         Wakecfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Wakecfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Wakecfg").field("out", &self.out()).finish()
@@ -2721,6 +2764,7 @@ impl Default for Wakena {
         Wakena(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Wakena {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Wakena")
@@ -2792,6 +2836,7 @@ impl Default for Wakenb {
         Wakenb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Wakenb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Wakenb")
@@ -2829,6 +2874,7 @@ impl Default for Wakeupa {
         Wakeupa(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Wakeupa {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Wakeupa").field("reg", &self.reg()).finish()
@@ -2864,6 +2910,7 @@ impl Default for Wakeupb {
         Wakeupb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Wakeupb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Wakeupb")
@@ -2901,6 +2948,7 @@ impl Default for Waklcka {
         Waklcka(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Waklcka {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Waklcka")
@@ -2938,6 +2986,7 @@ impl Default for Waklckb {
         Waklckb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Waklckb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Waklckb")

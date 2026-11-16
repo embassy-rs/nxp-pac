@@ -46,6 +46,7 @@ impl Default for AdmaErrStatus {
         AdmaErrStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AdmaErrStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AdmaErrStatus")
@@ -91,6 +92,7 @@ impl Default for AdmaSysAddr {
         AdmaSysAddr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AdmaSysAddr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AdmaSysAddr")
@@ -212,6 +214,7 @@ impl Default for Autocmd12ErrStatus {
         Autocmd12ErrStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Autocmd12ErrStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Autocmd12ErrStatus")
@@ -279,6 +282,7 @@ impl Default for BlkAtt {
         BlkAtt(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for BlkAtt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BlkAtt")
@@ -406,6 +410,7 @@ impl Default for ClkTuneCtrlStatus {
         ClkTuneCtrlStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ClkTuneCtrlStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ClkTuneCtrlStatus")
@@ -461,6 +466,7 @@ impl Default for CmdArg {
         CmdArg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CmdArg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CmdArg")
@@ -498,6 +504,7 @@ impl Default for CmdRsp0 {
         CmdRsp0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CmdRsp0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CmdRsp0")
@@ -535,6 +542,7 @@ impl Default for CmdRsp1 {
         CmdRsp1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CmdRsp1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CmdRsp1")
@@ -572,6 +580,7 @@ impl Default for CmdRsp2 {
         CmdRsp2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CmdRsp2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CmdRsp2")
@@ -609,6 +618,7 @@ impl Default for CmdRsp3 {
         CmdRsp3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CmdRsp3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CmdRsp3")
@@ -706,6 +716,7 @@ impl Default for CmdXfrTyp {
         CmdXfrTyp(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CmdXfrTyp {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CmdXfrTyp")
@@ -757,6 +768,7 @@ impl Default for DataBuffAccPort {
         DataBuffAccPort(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DataBuffAccPort {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DataBuffAccPort")
@@ -902,6 +914,7 @@ impl Default for DllCtrl {
         DllCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DllCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DllCtrl")
@@ -1000,6 +1013,7 @@ impl Default for DllStatus {
         DllStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DllStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DllStatus")
@@ -1047,6 +1061,7 @@ impl Default for DsAddr {
         DsAddr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DsAddr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DsAddr")
@@ -1276,6 +1291,7 @@ impl Default for ForceEvent {
         ForceEvent(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ForceEvent {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ForceEvent")
@@ -1505,6 +1521,7 @@ impl Default for HostCtrlCap {
         HostCtrlCap(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HostCtrlCap {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HostCtrlCap")
@@ -1812,6 +1829,7 @@ impl Default for IntSignalEn {
         IntSignalEn(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IntSignalEn {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IntSignalEn")
@@ -2133,6 +2151,7 @@ impl Default for IntStatus {
         IntStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IntStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IntStatus")
@@ -2454,6 +2473,7 @@ impl Default for IntStatusEn {
         IntStatusEn(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IntStatusEn {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IntStatusEn")
@@ -2679,6 +2699,7 @@ impl Default for MixCtrl {
         MixCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MixCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MixCtrl")
@@ -2816,6 +2837,7 @@ impl Default for MmcBoot {
         MmcBoot(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MmcBoot {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MmcBoot")
@@ -3085,6 +3107,7 @@ impl Default for PresState {
         PresState(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PresState {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PresState")
@@ -3366,6 +3389,7 @@ impl Default for ProtCtrl {
         ProtCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ProtCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ProtCtrl")
@@ -3549,6 +3573,7 @@ impl Default for StrobeDllCtrl {
         StrobeDllCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for StrobeDllCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("StrobeDllCtrl")
@@ -3668,6 +3693,7 @@ impl Default for StrobeDllStatus {
         StrobeDllStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for StrobeDllStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("StrobeDllStatus")
@@ -3811,6 +3837,7 @@ impl Default for SysCtrl {
         SysCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SysCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SysCtrl")
@@ -3916,6 +3943,7 @@ impl Default for TuningCtrl {
         TuningCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TuningCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TuningCtrl")
@@ -4013,6 +4041,7 @@ impl Default for VendSpec {
         VendSpec(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for VendSpec {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VendSpec")
@@ -4146,6 +4175,7 @@ impl Default for VendSpec2 {
         VendSpec2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for VendSpec2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VendSpec2")
@@ -4237,6 +4267,7 @@ impl Default for WtmkLvl {
         WtmkLvl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for WtmkLvl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WtmkLvl")

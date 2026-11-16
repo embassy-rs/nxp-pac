@@ -22,6 +22,7 @@ impl Default for Compreg {
         Compreg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Compreg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Compreg")
@@ -83,6 +84,7 @@ impl Default for Control {
         Control(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Control {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Control")
@@ -128,6 +130,7 @@ impl Default for CordicX {
         CordicX(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CordicX {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CordicX")
@@ -165,6 +168,7 @@ impl Default for CordicY {
         CordicY(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CordicY {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CordicY")
@@ -202,6 +206,7 @@ impl Default for CordicZ {
         CordicZ(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CordicZ {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CordicZ")
@@ -275,6 +280,7 @@ impl Default for Cppre {
         Cppre(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cppre {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cppre")
@@ -322,6 +328,7 @@ impl Default for Cursory {
         Cursory(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cursory {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cursory")
@@ -407,6 +414,7 @@ impl Default for Errstat {
         Errstat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Errstat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Errstat")
@@ -516,6 +524,7 @@ impl Default for Eventen {
         Eventen(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Eventen {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Eventen")
@@ -567,6 +576,7 @@ impl Default for Gpreg {
         Gpreg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpreg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpreg")
@@ -604,6 +614,7 @@ impl Default for Inabase {
         Inabase(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Inabase {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Inabase")
@@ -665,6 +676,7 @@ impl Default for Inaformat {
         Inaformat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Inaformat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Inaformat")
@@ -710,6 +722,7 @@ impl Default for Inbbase {
         Inbbase(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Inbbase {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Inbbase")
@@ -771,6 +784,7 @@ impl Default for Inbformat {
         Inbformat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Inbformat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Inbformat")
@@ -876,6 +890,7 @@ impl Default for Intren {
         Intren(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Intren {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Intren")
@@ -927,6 +942,7 @@ impl Default for Intrstat {
         Intrstat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Intrstat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Intrstat")
@@ -964,6 +980,7 @@ impl Default for Length {
         Length(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Length {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Length")
@@ -1001,6 +1018,7 @@ impl Default for Misc {
         Misc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Misc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Misc")
@@ -1038,6 +1056,7 @@ impl Default for Outbase {
         Outbase(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Outbase {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Outbase")
@@ -1099,6 +1118,7 @@ impl Default for Outformat {
         Outformat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Outformat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Outformat")
@@ -1144,6 +1164,7 @@ impl Default for Tmpbase {
         Tmpbase(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tmpbase {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tmpbase")
@@ -1205,6 +1226,7 @@ impl Default for Tmpformat {
         Tmpformat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tmpformat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tmpformat")

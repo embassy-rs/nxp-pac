@@ -178,6 +178,7 @@ impl Default for Ctrl1 {
         Ctrl1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl1")
@@ -281,6 +282,7 @@ impl Default for Ctrl2 {
         Ctrl2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl2")
@@ -328,6 +330,7 @@ impl Default for Datach {
         Datach(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Datach {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Datach")
@@ -401,6 +404,7 @@ impl Default for DcCtrl {
         DcCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DcCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DcCtrl")
@@ -484,6 +488,7 @@ impl Default for DcOutCtrl {
         DcOutCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DcOutCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DcOutCtrl")
@@ -531,6 +536,7 @@ impl Default for FifoCtrl {
         FifoCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FifoCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FifoCtrl")
@@ -652,6 +658,7 @@ impl Default for FifoStat {
         FifoStat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FifoStat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FifoStat")
@@ -707,6 +714,7 @@ impl Default for FsyncCtrl {
         FsyncCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FsyncCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FsyncCtrl")
@@ -804,6 +812,7 @@ impl Default for Param {
         Param(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Param {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Param")
@@ -891,6 +900,7 @@ impl Default for RangeCtrl {
         RangeCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for RangeCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RangeCtrl")
@@ -1022,6 +1032,7 @@ impl Default for RangeStat {
         RangeStat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for RangeStat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RangeStat")
@@ -1125,6 +1136,7 @@ impl Default for Stat {
         Stat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Stat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Stat")
@@ -1198,6 +1210,7 @@ impl Default for Verid {
         Verid(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Verid {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Verid")

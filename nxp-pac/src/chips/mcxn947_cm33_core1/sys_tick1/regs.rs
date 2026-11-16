@@ -46,6 +46,7 @@ impl Default for SystCalib {
         SystCalib(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SystCalib {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SystCalib")
@@ -127,6 +128,7 @@ impl Default for SystCsr {
         SystCsr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SystCsr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SystCsr")
@@ -174,6 +176,7 @@ impl Default for SystCvr {
         SystCvr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SystCvr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SystCvr")
@@ -211,6 +214,7 @@ impl Default for SystRvr {
         SystRvr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SystRvr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SystRvr")

@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Axibuserr {
     #[doc = "No AXI bus error."]
@@ -30,7 +31,8 @@ impl From<Axibuserr> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Axibuserren {
     #[doc = "Interrupt is disabled."]
@@ -61,7 +63,8 @@ impl From<Axibuserren> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Axicmderr {
     #[doc = "No AXI command error."]
@@ -92,7 +95,8 @@ impl From<Axicmderr> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Axicmderren {
     #[doc = "Interrupt is disabled."]
@@ -123,7 +127,8 @@ impl From<Axicmderren> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bank2 {
     #[doc = "SDRAM device has 4 banks."]
@@ -154,7 +159,8 @@ impl From<Bank2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bm0 {
     #[doc = "Byte is unmasked."]
@@ -185,7 +191,8 @@ impl From<Bm0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bm1 {
     #[doc = "Byte is unmasked."]
@@ -216,7 +223,8 @@ impl From<Bm1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bm2 {
     #[doc = "Byte is unmasked."]
@@ -247,7 +255,8 @@ impl From<Bm2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bm3 {
     #[doc = "Byte is unmasked."]
@@ -278,7 +287,8 @@ impl From<Bm3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bto {
     #[doc = "255*1."]
@@ -340,7 +350,8 @@ impl From<Bto> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cl {
     #[doc = "1."]
@@ -375,7 +386,8 @@ impl From<Cl> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Col8 {
     #[doc = "Column address bit number is decided by COL field."]
@@ -406,7 +418,8 @@ impl From<Col8> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Datsz {
     #[doc = "4."]
@@ -449,7 +462,8 @@ impl From<Datsz> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dbicr0Bl {
     #[doc = "1."]
@@ -492,7 +506,8 @@ impl From<Dbicr0Bl> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dbicr0Col {
     #[doc = "12 Bits."]
@@ -551,7 +566,8 @@ impl From<Dbicr0Col> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dbicr0Ps {
     #[doc = "8bit."]
@@ -582,7 +598,8 @@ impl From<Dbicr0Ps> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dllen {
     #[doc = "DLL calibration is disabled."]
@@ -613,7 +630,8 @@ impl From<Dllen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dllreset {
     #[doc = "DLL is not reset."]
@@ -644,7 +662,8 @@ impl From<Dllreset> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dqsmd {
     #[doc = "Dummy read strobe loopbacked internally."]
@@ -675,7 +694,8 @@ impl From<Dqsmd> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edo {
     #[doc = "EDO mode disabled."]
@@ -706,7 +726,8 @@ impl From<Edo> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ipcmddone {
     #[doc = "IP command is not done."]
@@ -737,7 +758,8 @@ impl From<Ipcmddone> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ipcmddoneen {
     #[doc = "Interrupt is disabled."]
@@ -768,7 +790,8 @@ impl From<Ipcmddoneen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ipcmderr {
     #[doc = "No IP command error."]
@@ -799,7 +822,8 @@ impl From<Ipcmderr> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ipcmderren {
     #[doc = "Interrupt is disabled."]
@@ -853,6 +877,20 @@ impl Ito {
     pub const Ito8: Self = Self(0x08);
     #[doc = "IDLE timeout period is ITO*Prescale period."]
     pub const Ito9: Self = Self(0x09);
+    #[doc = "IDLE timeout period is ITO*Prescale period."]
+    pub const Ito10: Self = Self(0x0a);
+    #[doc = "IDLE timeout period is ITO*Prescale period."]
+    pub const Ito250: Self = Self(0xfa);
+    #[doc = "IDLE timeout period is ITO*Prescale period."]
+    pub const Ito251: Self = Self(0xfb);
+    #[doc = "IDLE timeout period is ITO*Prescale period."]
+    pub const Ito252: Self = Self(0xfc);
+    #[doc = "IDLE timeout period is ITO*Prescale period."]
+    pub const Ito253: Self = Self(0xfd);
+    #[doc = "IDLE timeout period is ITO*Prescale period."]
+    pub const Ito254: Self = Self(0xfe);
+    #[doc = "IDLE timeout period is ITO*Prescale period."]
+    pub const Ito255: Self = Self(0xff);
 }
 impl Ito {
     pub const fn from_bits(val: u8) -> Ito {
@@ -862,6 +900,7 @@ impl Ito {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ito {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -875,6 +914,13 @@ impl core::fmt::Debug for Ito {
             0x07 => f.write_str("Ito7"),
             0x08 => f.write_str("Ito8"),
             0x09 => f.write_str("Ito9"),
+            0x0a => f.write_str("Ito10"),
+            0xfa => f.write_str("Ito250"),
+            0xfb => f.write_str("Ito251"),
+            0xfc => f.write_str("Ito252"),
+            0xfd => f.write_str("Ito253"),
+            0xfe => f.write_str("Ito254"),
+            0xff => f.write_str("Ito255"),
             other => core::write!(f, "0x{:02X}", other),
         }
     }
@@ -893,6 +939,13 @@ impl defmt::Format for Ito {
             0x07 => defmt::write!(f, "Ito7"),
             0x08 => defmt::write!(f, "Ito8"),
             0x09 => defmt::write!(f, "Ito9"),
+            0x0a => defmt::write!(f, "Ito10"),
+            0xfa => defmt::write!(f, "Ito250"),
+            0xfb => defmt::write!(f, "Ito251"),
+            0xfc => defmt::write!(f, "Ito252"),
+            0xfd => defmt::write!(f, "Ito253"),
+            0xfe => defmt::write!(f, "Ito254"),
+            0xff => defmt::write!(f, "Ito255"),
             other => defmt::write!(f, "0x{:02X}", other),
         }
     }
@@ -910,7 +963,8 @@ impl From<Ito> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mdis {
     #[doc = "Module enabled."]
@@ -941,7 +995,8 @@ impl From<Mdis> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ms {
     #[doc = "4KB."]
@@ -1032,7 +1087,8 @@ impl From<Ms> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MuxA8 {
     #[doc = "SDRAM Address bit 8 (A8) or NOR/SRAM Address bit 24 (A24) in ADMUX 16bit mode."]
@@ -1075,7 +1131,8 @@ impl From<MuxA8> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MuxClkx0 {
     #[doc = "NOR clock."]
@@ -1106,7 +1163,8 @@ impl From<MuxClkx0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MuxClkx1 {
     #[doc = "NOR clock."]
@@ -1137,7 +1195,8 @@ impl From<MuxClkx1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MuxCsx0 {
     _RESERVED_0 = 0x0,
@@ -1179,7 +1238,8 @@ impl From<MuxCsx0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MuxCsx1 {
     _RESERVED_0 = 0x0,
@@ -1221,7 +1281,8 @@ impl From<MuxCsx1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MuxCsx2 {
     _RESERVED_0 = 0x0,
@@ -1263,7 +1324,8 @@ impl From<MuxCsx2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MuxCsx3 {
     _RESERVED_0 = 0x0,
@@ -1305,7 +1367,8 @@ impl From<MuxCsx3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MuxRdy {
     #[doc = "NAND R/B# input."]
@@ -1347,7 +1410,8 @@ impl From<MuxRdy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nandcr0Bl {
     #[doc = "1."]
@@ -1390,7 +1454,8 @@ impl From<Nandcr0Bl> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nandcr0Col {
     #[doc = "16."]
@@ -1433,7 +1498,8 @@ impl From<Nandcr0Col> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nandcr0Ps {
     #[doc = "8bit."]
@@ -1464,7 +1530,8 @@ impl From<Nandcr0Ps> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nandcr0Syncen {
     #[doc = "Asynchronous mode is enabled."]
@@ -1495,7 +1562,8 @@ impl From<Nandcr0Syncen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nardy {
     #[doc = "NAND device is not ready."]
@@ -1526,7 +1594,8 @@ impl From<Nardy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ndnopend {
     #[doc = "At least one NAND AXI write transaction is pending or no NAND write transaction is sent to the queue."]
@@ -1557,7 +1626,8 @@ impl From<Ndnopend> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ndnopenden {
     #[doc = "Interrupt is disabled."]
@@ -1588,7 +1658,8 @@ impl From<Ndnopenden> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ndpageend {
     #[doc = "The last address of main space in the NAND is not written by AXI command."]
@@ -1619,7 +1690,8 @@ impl From<Ndpageend> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ndpageenden {
     #[doc = "Interrupt is disabled."]
@@ -1650,7 +1722,8 @@ impl From<Ndpageenden> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ndwrpend {
     #[doc = "No pending."]
@@ -1681,7 +1754,8 @@ impl From<Ndwrpend> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Norcr0Advh {
     #[doc = "ADV# is high during address hold state."]
@@ -1712,7 +1786,8 @@ impl From<Norcr0Advh> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Norcr0Advp {
     #[doc = "ADV# is active low."]
@@ -1743,7 +1818,8 @@ impl From<Norcr0Advp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Norcr0Am {
     #[doc = "Address/Data MUX mode (ADMUX)."]
@@ -1776,7 +1852,8 @@ impl From<Norcr0Am> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Norcr0Bl {
     #[doc = "1."]
@@ -1819,7 +1896,8 @@ impl From<Norcr0Bl> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Norcr0Col {
     #[doc = "12 Bits."]
@@ -1878,7 +1956,8 @@ impl From<Norcr0Col> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Norcr0Ps {
     #[doc = "8bit."]
@@ -1909,7 +1988,8 @@ impl From<Norcr0Ps> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Norcr0Syncen {
     #[doc = "Asynchronous mode is enabled."]
@@ -1940,7 +2020,8 @@ impl From<Norcr0Syncen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ovrden {
     #[doc = "The delay cell number is not overridden."]
@@ -1994,6 +2075,20 @@ impl Prescale {
     pub const Prescale8: Self = Self(0x08);
     #[doc = "(PRESCALE*16+1) clock cycles."]
     pub const Prescale9: Self = Self(0x09);
+    #[doc = "(PRESCALE*16+1) clock cycles."]
+    pub const Prescale10: Self = Self(0x0a);
+    #[doc = "(PRESCALE*16+1) clock cycles."]
+    pub const Prescale250: Self = Self(0xfa);
+    #[doc = "(PRESCALE*16+1) clock cycles."]
+    pub const Prescale251: Self = Self(0xfb);
+    #[doc = "(PRESCALE*16+1) clock cycles."]
+    pub const Prescale252: Self = Self(0xfc);
+    #[doc = "(PRESCALE*16+1) clock cycles."]
+    pub const Prescale253: Self = Self(0xfd);
+    #[doc = "(PRESCALE*16+1) clock cycles."]
+    pub const Prescale254: Self = Self(0xfe);
+    #[doc = "(PRESCALE*16+1) clock cycles."]
+    pub const Prescale255: Self = Self(0xff);
 }
 impl Prescale {
     pub const fn from_bits(val: u8) -> Prescale {
@@ -2003,6 +2098,7 @@ impl Prescale {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Prescale {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -2016,6 +2112,13 @@ impl core::fmt::Debug for Prescale {
             0x07 => f.write_str("Prescale7"),
             0x08 => f.write_str("Prescale8"),
             0x09 => f.write_str("Prescale9"),
+            0x0a => f.write_str("Prescale10"),
+            0xfa => f.write_str("Prescale250"),
+            0xfb => f.write_str("Prescale251"),
+            0xfc => f.write_str("Prescale252"),
+            0xfd => f.write_str("Prescale253"),
+            0xfe => f.write_str("Prescale254"),
+            0xff => f.write_str("Prescale255"),
             other => core::write!(f, "0x{:02X}", other),
         }
     }
@@ -2034,6 +2137,13 @@ impl defmt::Format for Prescale {
             0x07 => defmt::write!(f, "Prescale7"),
             0x08 => defmt::write!(f, "Prescale8"),
             0x09 => defmt::write!(f, "Prescale9"),
+            0x0a => defmt::write!(f, "Prescale10"),
+            0xfa => defmt::write!(f, "Prescale250"),
+            0xfb => defmt::write!(f, "Prescale251"),
+            0xfc => defmt::write!(f, "Prescale252"),
+            0xfd => defmt::write!(f, "Prescale253"),
+            0xfe => defmt::write!(f, "Prescale254"),
+            0xff => defmt::write!(f, "Prescale255"),
             other => defmt::write!(f, "0x{:02X}", other),
         }
     }
@@ -2051,7 +2161,8 @@ impl From<Prescale> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rebl {
     #[doc = "1."]
@@ -2094,7 +2205,8 @@ impl From<Rebl> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reflock {
     #[doc = "Reference delay line is not locked."]
@@ -2125,7 +2237,8 @@ impl From<Reflock> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ren {
     #[doc = "The SEMC does not send AUTO REFRESH command automatically."]
@@ -2179,6 +2292,20 @@ impl Rt {
     pub const Rt8: Self = Self(0x08);
     #[doc = "(RT+1)*(Prescaler period)."]
     pub const Rt9: Self = Self(0x09);
+    #[doc = "(RT+1)*(Prescaler period)."]
+    pub const Rt10: Self = Self(0x0a);
+    #[doc = "(RT+1)*(Prescaler period)."]
+    pub const Rt250: Self = Self(0xfa);
+    #[doc = "(RT+1)*(Prescaler period)."]
+    pub const Rt251: Self = Self(0xfb);
+    #[doc = "(RT+1)*(Prescaler period)."]
+    pub const Rt252: Self = Self(0xfc);
+    #[doc = "(RT+1)*(Prescaler period)."]
+    pub const Rt253: Self = Self(0xfd);
+    #[doc = "(RT+1)*(Prescaler period)."]
+    pub const Rt254: Self = Self(0xfe);
+    #[doc = "(RT+1)*(Prescaler period)."]
+    pub const Rt255: Self = Self(0xff);
 }
 impl Rt {
     pub const fn from_bits(val: u8) -> Rt {
@@ -2188,6 +2315,7 @@ impl Rt {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Rt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -2201,6 +2329,13 @@ impl core::fmt::Debug for Rt {
             0x07 => f.write_str("Rt7"),
             0x08 => f.write_str("Rt8"),
             0x09 => f.write_str("Rt9"),
+            0x0a => f.write_str("Rt10"),
+            0xfa => f.write_str("Rt250"),
+            0xfb => f.write_str("Rt251"),
+            0xfc => f.write_str("Rt252"),
+            0xfd => f.write_str("Rt253"),
+            0xfe => f.write_str("Rt254"),
+            0xff => f.write_str("Rt255"),
             other => core::write!(f, "0x{:02X}", other),
         }
     }
@@ -2219,6 +2354,13 @@ impl defmt::Format for Rt {
             0x07 => defmt::write!(f, "Rt7"),
             0x08 => defmt::write!(f, "Rt8"),
             0x09 => defmt::write!(f, "Rt9"),
+            0x0a => defmt::write!(f, "Rt10"),
+            0xfa => defmt::write!(f, "Rt250"),
+            0xfb => defmt::write!(f, "Rt251"),
+            0xfc => defmt::write!(f, "Rt252"),
+            0xfd => defmt::write!(f, "Rt253"),
+            0xfe => defmt::write!(f, "Rt254"),
+            0xff => defmt::write!(f, "Rt255"),
             other => defmt::write!(f, "0x{:02X}", other),
         }
     }
@@ -2236,7 +2378,8 @@ impl From<Rt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sdramcr0Bl {
     #[doc = "1."]
@@ -2279,7 +2422,8 @@ impl From<Sdramcr0Bl> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sdramcr0Col {
     #[doc = "12."]
@@ -2314,7 +2458,8 @@ impl From<Sdramcr0Col> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sdramcr0Ps {
     #[doc = "8bit."]
@@ -2345,7 +2490,8 @@ impl From<Sdramcr0Ps> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Slvlock {
     #[doc = "Slave delay line is not locked."]
@@ -2376,7 +2522,8 @@ impl From<Slvlock> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sramcr0Advh {
     #[doc = "ADV# is high during address hold state."]
@@ -2407,7 +2554,8 @@ impl From<Sramcr0Advh> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sramcr0Advp {
     #[doc = "ADV# is active low."]
@@ -2438,7 +2586,8 @@ impl From<Sramcr0Advp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sramcr0Am {
     #[doc = "Address/Data MUX mode (ADMUX)."]
@@ -2471,7 +2620,8 @@ impl From<Sramcr0Am> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sramcr0Bl {
     #[doc = "1."]
@@ -2514,7 +2664,8 @@ impl From<Sramcr0Bl> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sramcr0Col {
     #[doc = "12 Bits."]
@@ -2573,7 +2724,8 @@ impl From<Sramcr0Col> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sramcr0Ps {
     #[doc = "8bit."]
@@ -2604,7 +2756,8 @@ impl From<Sramcr0Ps> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sramcr0Syncen {
     #[doc = "Asynchronous mode is enabled."]
@@ -2635,7 +2788,8 @@ impl From<Sramcr0Syncen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swrst {
     #[doc = "No reset."]
@@ -2689,6 +2843,20 @@ impl Ut {
     pub const Ut8: Self = Self(0x08);
     #[doc = "UT*(Prescaler period)."]
     pub const Ut9: Self = Self(0x09);
+    #[doc = "UT*(Prescaler period)."]
+    pub const Ut10: Self = Self(0x0a);
+    #[doc = "UT*(Prescaler period)."]
+    pub const Ut250: Self = Self(0xfa);
+    #[doc = "UT*(Prescaler period)."]
+    pub const Ut251: Self = Self(0xfb);
+    #[doc = "UT*(Prescaler period)."]
+    pub const Ut252: Self = Self(0xfc);
+    #[doc = "UT*(Prescaler period)."]
+    pub const Ut253: Self = Self(0xfd);
+    #[doc = "UT*(Prescaler period)."]
+    pub const Ut254: Self = Self(0xfe);
+    #[doc = "UT*(Prescaler period)."]
+    pub const Ut255: Self = Self(0xff);
 }
 impl Ut {
     pub const fn from_bits(val: u8) -> Ut {
@@ -2698,6 +2866,7 @@ impl Ut {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ut {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -2711,6 +2880,13 @@ impl core::fmt::Debug for Ut {
             0x07 => f.write_str("Ut7"),
             0x08 => f.write_str("Ut8"),
             0x09 => f.write_str("Ut9"),
+            0x0a => f.write_str("Ut10"),
+            0xfa => f.write_str("Ut250"),
+            0xfb => f.write_str("Ut251"),
+            0xfc => f.write_str("Ut252"),
+            0xfd => f.write_str("Ut253"),
+            0xfe => f.write_str("Ut254"),
+            0xff => f.write_str("Ut255"),
             other => core::write!(f, "0x{:02X}", other),
         }
     }
@@ -2729,6 +2905,13 @@ impl defmt::Format for Ut {
             0x07 => defmt::write!(f, "Ut7"),
             0x08 => defmt::write!(f, "Ut8"),
             0x09 => defmt::write!(f, "Ut9"),
+            0x0a => defmt::write!(f, "Ut10"),
+            0xfa => defmt::write!(f, "Ut250"),
+            0xfb => defmt::write!(f, "Ut251"),
+            0xfc => defmt::write!(f, "Ut252"),
+            0xfd => defmt::write!(f, "Ut253"),
+            0xfe => defmt::write!(f, "Ut254"),
+            0xff => defmt::write!(f, "Ut255"),
             other => defmt::write!(f, "0x{:02X}", other),
         }
     }
@@ -2746,7 +2929,8 @@ impl From<Ut> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Vld {
     #[doc = "The memory is invalid, can not be accessed."]
@@ -2777,7 +2961,8 @@ impl From<Vld> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wpol0 {
     #[doc = "WAIT/RDY polarity is not changed."]
@@ -2808,7 +2993,8 @@ impl From<Wpol0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wpol1 {
     #[doc = "R/B# polarity is not changed."]

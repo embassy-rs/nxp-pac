@@ -34,6 +34,7 @@ impl Default for Cnt {
         Cnt(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cnt")
@@ -233,6 +234,7 @@ impl Default for Cs {
         Cs(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cs {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cs")
@@ -312,6 +314,7 @@ impl Default for Toval {
         Toval(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Toval {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Toval")
@@ -367,6 +370,7 @@ impl Default for Win {
         Win(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Win {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Win")

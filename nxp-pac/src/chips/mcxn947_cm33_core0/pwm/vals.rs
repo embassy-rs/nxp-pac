@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fauto {
     #[doc = "Manual fault clearing. PWM outputs disabled by this fault are not enabled until FSTS\\[FFLAGx\\] is clear at the start of a half cycle or full cycle depending on the states of FSTS\\[FHALF\\] and FSTS\\[FFULL\\]. If neither FFULL nor FHALF is set, then the fault condition cannot be cleared. This is further controlled by FCTRL\\[FSAFE\\]."]
@@ -44,7 +45,8 @@ impl From<Fauto> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fflag {
     #[doc = "No fault on the FAULTx pin."]
@@ -89,7 +91,8 @@ impl From<Fflag> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ffull {
     #[doc = "PWM outputs are not re-enabled at the start of a full cycle."]
@@ -134,7 +137,8 @@ impl From<Ffull> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fhalf {
     #[doc = "PWM outputs are not re-enabled at the start of a half cycle."]
@@ -179,7 +183,8 @@ impl From<Fhalf> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fie {
     #[doc = "FAULTx CPU interrupt requests disabled."]
@@ -224,7 +229,8 @@ impl From<Fie> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flvl {
     #[doc = "A logic 0 on the fault input indicates a fault condition."]
@@ -269,7 +275,8 @@ impl From<Flvl> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fsafe {
     #[doc = "Normal mode. PWM outputs disabled by this fault are not enabled until FSTS\\[FFLAGx\\] is clear at the start of a half cycle or full cycle depending on the states of FSTS\\[FHALF\\] and FSTS\\[FFULL\\] without regard to the state of FSTS\\[FFPINx\\]. If neither FHALF nor FFULL is set, then the fault condition cannot be cleared. The PWM outputs disabled by this fault input will not be re-enabled until the actual FAULTx input signal de-asserts since the fault input will combinationally disable the PWM outputs (as programmed in DISMAPn)."]
@@ -314,7 +321,8 @@ impl From<Fsafe> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ipol {
     #[doc = "PWM23 is used to generate complementary PWM pair in the corresponding submodule."]
@@ -359,7 +367,8 @@ impl From<Ipol> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ldok {
     #[doc = "Do not load new values."]
@@ -404,7 +413,8 @@ impl From<Ldok> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nocomb {
     #[doc = "There is a combinational link from the fault inputs to the PWM outputs. The fault inputs are combined with the filtered and latched fault signals to disable the PWM outputs."]
@@ -449,7 +459,8 @@ impl From<Nocomb> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Run {
     #[doc = "PWM counter is stopped, but PWM outputs hold the current state."]
@@ -494,7 +505,8 @@ impl From<Run> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0captctrlaEdga0 {
     #[doc = "Disabled."]
@@ -529,7 +541,8 @@ impl From<Sm0captctrlaEdga0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0captctrlaEdga1 {
     #[doc = "Disabled."]
@@ -564,7 +577,8 @@ impl From<Sm0captctrlaEdga1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0captctrlaInpSela {
     #[doc = "Raw PWM_A input signal selected as source."]
@@ -595,7 +609,8 @@ impl From<Sm0captctrlaInpSela> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0captctrlaOneshota {
     #[doc = "Free Running."]
@@ -626,7 +641,8 @@ impl From<Sm0captctrlaOneshota> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0captctrlbEdgb0 {
     #[doc = "Disabled."]
@@ -661,7 +677,8 @@ impl From<Sm0captctrlbEdgb0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0captctrlbEdgb1 {
     #[doc = "Disabled."]
@@ -696,7 +713,8 @@ impl From<Sm0captctrlbEdgb1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0captctrlbInpSelb {
     #[doc = "Raw PWM_B input signal selected as source."]
@@ -727,7 +745,8 @@ impl From<Sm0captctrlbInpSelb> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0captctrlbOneshotb {
     #[doc = "Free Running."]
@@ -758,7 +777,8 @@ impl From<Sm0captctrlbOneshotb> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0captctrlxEdgx0 {
     #[doc = "Disabled."]
@@ -793,7 +813,8 @@ impl From<Sm0captctrlxEdgx0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0captctrlxEdgx1 {
     #[doc = "Disabled."]
@@ -828,7 +849,8 @@ impl From<Sm0captctrlxEdgx1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0captctrlxInpSelx {
     #[doc = "Raw PWM_X input signal selected as source."]
@@ -859,7 +881,8 @@ impl From<Sm0captctrlxInpSelx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0captctrlxOneshotx {
     #[doc = "Free Running."]
@@ -890,7 +913,8 @@ impl From<Sm0captctrlxOneshotx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0ctrl2ClkSel {
     #[doc = "The IPBus clock is used as the clock for the local prescaler and counter."]
@@ -924,7 +948,8 @@ impl From<Sm0ctrl2ClkSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0ctrl2ForceSel {
     #[doc = "The local force signal, CTRL2\\[FORCE\\], from this submodule is used to force updates."]
@@ -967,7 +992,8 @@ impl From<Sm0ctrl2ForceSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0ctrl2Indep {
     #[doc = "PWM_A and PWM_B form a complementary PWM pair."]
@@ -998,7 +1024,8 @@ impl From<Sm0ctrl2Indep> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0ctrl2InitSel {
     #[doc = "Local sync (PWM_X) causes initialization."]
@@ -1033,7 +1060,8 @@ impl From<Sm0ctrl2InitSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0ctrl2ReloadSel {
     #[doc = "The local RELOAD signal is used to reload registers."]
@@ -1064,7 +1092,8 @@ impl From<Sm0ctrl2ReloadSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0ctrlCompmode {
     #[doc = "The VAL* registers and the PWM counter are compared using an \"equal to\" method. This means that PWM edges are only produced when the counter is equal to one of the VAL* register values. This implies that a PWM_A output that is high at the end of a period maintains this state until a match with VAL3 clears the output in the following period."]
@@ -1095,7 +1124,8 @@ impl From<Sm0ctrlCompmode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0ctrlLdfq {
     #[doc = "Every PWM opportunity."]
@@ -1154,7 +1184,8 @@ impl From<Sm0ctrlLdfq> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0ctrlLdmod {
     #[doc = "Buffered registers of this submodule are loaded and take effect at the next PWM reload if MCTRL\\[LDOK\\] is set."]
@@ -1185,7 +1216,8 @@ impl From<Sm0ctrlLdmod> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0ctrlPrsc {
     #[doc = "Prescaler 1."]
@@ -1228,7 +1260,8 @@ impl From<Sm0ctrlPrsc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0dmaenCaptde {
     #[doc = "Read DMA requests disabled."]
@@ -1263,7 +1296,8 @@ impl From<Sm0dmaenCaptde> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0dmaenFand {
     #[doc = "Selected FIFO watermarks are OR'ed together."]
@@ -1294,7 +1328,8 @@ impl From<Sm0dmaenFand> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0intenCmpie {
     #[doc = "The corresponding STS\\[CMPF\\] bit will not cause an interrupt request."]
@@ -1387,7 +1422,8 @@ impl From<Sm0intenCmpie> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0octrlPwmafs {
     #[doc = "Output is forced to logic 0 state prior to consideration of output polarity control."]
@@ -1422,7 +1458,8 @@ impl From<Sm0octrlPwmafs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0octrlPwmbfs {
     #[doc = "Output is forced to logic 0 state prior to consideration of output polarity control."]
@@ -1457,7 +1494,8 @@ impl From<Sm0octrlPwmbfs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0octrlPwmxfs {
     #[doc = "Output is forced to logic 0 state prior to consideration of output polarity control."]
@@ -1492,7 +1530,8 @@ impl From<Sm0octrlPwmxfs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0out23 {
     #[doc = "A logic 0 is supplied to the deadtime generator of submodule 0 instead of PWM23."]
@@ -1523,7 +1562,8 @@ impl From<Sm0out23> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0out45 {
     #[doc = "A logic 0 is supplied to the deadtime generator of submodule 0 instead of PWM45."]
@@ -1554,7 +1594,8 @@ impl From<Sm0out45> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0sel23 {
     #[doc = "Generated SM0PWM23 signal used by the deadtime logic."]
@@ -1589,7 +1630,8 @@ impl From<Sm0sel23> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0sel45 {
     #[doc = "Generated SM0PWM45 signal used by the deadtime logic."]
@@ -1623,7 +1665,8 @@ impl From<Sm0sel45> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0stsCmpf {
     #[doc = "No compare event has occurred for a particular VALx value."]
@@ -1716,19 +1759,23 @@ impl From<Sm0stsCmpf> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0tctrlOutTrigEn {
     _RESERVED_0 = 0x0,
     #[doc = "PWM_OUT_TRIG0 will set when the counter value matches the VAL0 value."]
     Val0 = 0x01,
-    _RESERVED_2 = 0x02,
+    #[doc = "PWM_OUT_TRIG1 will set when the counter value matches the VAL1 value."]
+    Val1 = 0x02,
     _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
+    #[doc = "PWM_OUT_TRIG0 will set when the counter value matches the VAL2 value."]
+    Val2 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
+    #[doc = "PWM_OUT_TRIG1 will set when the counter value matches the VAL3 value."]
+    Val3 = 0x08,
     _RESERVED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -1736,7 +1783,8 @@ pub enum Sm0tctrlOutTrigEn {
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
-    _RESERVED_10 = 0x10,
+    #[doc = "PWM_OUT_TRIG0 will set when the counter value matches the VAL4 value."]
+    Val4 = 0x10,
     _RESERVED_11 = 0x11,
     _RESERVED_12 = 0x12,
     _RESERVED_13 = 0x13,
@@ -1752,7 +1800,8 @@ pub enum Sm0tctrlOutTrigEn {
     _RESERVED_1d = 0x1d,
     _RESERVED_1e = 0x1e,
     _RESERVED_1f = 0x1f,
-    _RESERVED_20 = 0x20,
+    #[doc = "PWM_OUT_TRIG1 will set when the counter value matches the VAL5 value."]
+    Val5 = 0x20,
     _RESERVED_21 = 0x21,
     _RESERVED_22 = 0x22,
     _RESERVED_23 = 0x23,
@@ -1808,7 +1857,8 @@ impl From<Sm0tctrlOutTrigEn> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0tctrlPwaot0 {
     #[doc = "Route the PWM_OUT_TRIG0 signal to PWM_MUX_TRIG0 port."]
@@ -1839,7 +1889,8 @@ impl From<Sm0tctrlPwaot0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0tctrlPwbot1 {
     #[doc = "Route the PWM_OUT_TRIG1 signal to PWM_MUX_TRIG1 port."]
@@ -1870,7 +1921,8 @@ impl From<Sm0tctrlPwbot1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0tctrlTrgfrq {
     #[doc = "Trigger outputs are generated during every PWM period even if the PWM is not reloaded every period due to CTRL\\[LDFQ\\] being non-zero."]
@@ -1901,7 +1953,8 @@ impl From<Sm0tctrlTrgfrq> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1captctrlaEdga0 {
     #[doc = "Disabled."]
@@ -1936,7 +1989,8 @@ impl From<Sm1captctrlaEdga0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1captctrlaEdga1 {
     #[doc = "Disabled."]
@@ -1971,7 +2025,8 @@ impl From<Sm1captctrlaEdga1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1captctrlaInpSela {
     #[doc = "Raw PWM_A input signal selected as source."]
@@ -2002,7 +2057,8 @@ impl From<Sm1captctrlaInpSela> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1captctrlaOneshota {
     #[doc = "Free Running."]
@@ -2033,7 +2089,8 @@ impl From<Sm1captctrlaOneshota> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1captctrlbEdgb0 {
     #[doc = "Disabled."]
@@ -2068,7 +2125,8 @@ impl From<Sm1captctrlbEdgb0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1captctrlbEdgb1 {
     #[doc = "Disabled."]
@@ -2103,7 +2161,8 @@ impl From<Sm1captctrlbEdgb1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1captctrlbInpSelb {
     #[doc = "Raw PWM_B input signal selected as source."]
@@ -2134,7 +2193,8 @@ impl From<Sm1captctrlbInpSelb> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1captctrlbOneshotb {
     #[doc = "Free Running."]
@@ -2165,7 +2225,8 @@ impl From<Sm1captctrlbOneshotb> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1captctrlxEdgx0 {
     #[doc = "Disabled."]
@@ -2200,7 +2261,8 @@ impl From<Sm1captctrlxEdgx0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1captctrlxEdgx1 {
     #[doc = "Disabled."]
@@ -2235,7 +2297,8 @@ impl From<Sm1captctrlxEdgx1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1captctrlxInpSelx {
     #[doc = "Raw PWM_X input signal selected as source."]
@@ -2266,7 +2329,8 @@ impl From<Sm1captctrlxInpSelx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1captctrlxOneshotx {
     #[doc = "Free Running."]
@@ -2297,7 +2361,8 @@ impl From<Sm1captctrlxOneshotx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1ctrl2ClkSel {
     #[doc = "The IPBus clock is used as the clock for the local prescaler and counter."]
@@ -2331,7 +2396,8 @@ impl From<Sm1ctrl2ClkSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1ctrl2ForceSel {
     #[doc = "The local force signal, CTRL2\\[FORCE\\], from this submodule is used to force updates."]
@@ -2374,7 +2440,8 @@ impl From<Sm1ctrl2ForceSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1ctrl2Indep {
     #[doc = "PWM_A and PWM_B form a complementary PWM pair."]
@@ -2405,7 +2472,8 @@ impl From<Sm1ctrl2Indep> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1ctrl2InitSel {
     #[doc = "Local sync (PWM_X) causes initialization."]
@@ -2440,7 +2508,8 @@ impl From<Sm1ctrl2InitSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1ctrl2ReloadSel {
     #[doc = "The local RELOAD signal is used to reload registers."]
@@ -2471,7 +2540,8 @@ impl From<Sm1ctrl2ReloadSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1ctrlCompmode {
     #[doc = "The VAL* registers and the PWM counter are compared using an \"equal to\" method. This means that PWM edges are only produced when the counter is equal to one of the VAL* register values. This implies that a PWM_A output that is high at the end of a period maintains this state until a match with VAL3 clears the output in the following period."]
@@ -2502,7 +2572,8 @@ impl From<Sm1ctrlCompmode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1ctrlLdfq {
     #[doc = "Every PWM opportunity."]
@@ -2561,7 +2632,8 @@ impl From<Sm1ctrlLdfq> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1ctrlLdmod {
     #[doc = "Buffered registers of this submodule are loaded and take effect at the next PWM reload if MCTRL\\[LDOK\\] is set."]
@@ -2592,7 +2664,8 @@ impl From<Sm1ctrlLdmod> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1ctrlPrsc {
     #[doc = "Prescaler 1."]
@@ -2635,7 +2708,8 @@ impl From<Sm1ctrlPrsc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1dmaenCaptde {
     #[doc = "Read DMA requests disabled."]
@@ -2670,7 +2744,8 @@ impl From<Sm1dmaenCaptde> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1dmaenFand {
     #[doc = "Selected FIFO watermarks are OR'ed together."]
@@ -2701,7 +2776,8 @@ impl From<Sm1dmaenFand> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1intenCmpie {
     #[doc = "The corresponding STS\\[CMPF\\] bit will not cause an interrupt request."]
@@ -2794,7 +2870,8 @@ impl From<Sm1intenCmpie> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1octrlPwmafs {
     #[doc = "Output is forced to logic 0 state prior to consideration of output polarity control."]
@@ -2829,7 +2906,8 @@ impl From<Sm1octrlPwmafs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1octrlPwmbfs {
     #[doc = "Output is forced to logic 0 state prior to consideration of output polarity control."]
@@ -2864,7 +2942,8 @@ impl From<Sm1octrlPwmbfs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1octrlPwmxfs {
     #[doc = "Output is forced to logic 0 state prior to consideration of output polarity control."]
@@ -2899,7 +2978,8 @@ impl From<Sm1octrlPwmxfs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1out23 {
     #[doc = "A logic 0 is supplied to the deadtime generator of submodule 1 instead of PWM23."]
@@ -2930,7 +3010,8 @@ impl From<Sm1out23> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1out45 {
     #[doc = "A logic 0 is supplied to the deadtime generator of submodule 1 instead of PWM45."]
@@ -2961,7 +3042,8 @@ impl From<Sm1out45> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1sel23 {
     #[doc = "Generated SM1PWM23 signal used by the deadtime logic."]
@@ -2996,7 +3078,8 @@ impl From<Sm1sel23> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1sel45 {
     #[doc = "Generated SM1PWM45 signal used by the deadtime logic."]
@@ -3030,7 +3113,8 @@ impl From<Sm1sel45> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1stsCmpf {
     #[doc = "No compare event has occurred for a particular VALx value."]
@@ -3123,19 +3207,23 @@ impl From<Sm1stsCmpf> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1tctrlOutTrigEn {
     _RESERVED_0 = 0x0,
     #[doc = "PWM_OUT_TRIG0 will set when the counter value matches the VAL0 value."]
     Val0 = 0x01,
-    _RESERVED_2 = 0x02,
+    #[doc = "PWM_OUT_TRIG1 will set when the counter value matches the VAL1 value."]
+    Val1 = 0x02,
     _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
+    #[doc = "PWM_OUT_TRIG0 will set when the counter value matches the VAL2 value."]
+    Val2 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
+    #[doc = "PWM_OUT_TRIG1 will set when the counter value matches the VAL3 value."]
+    Val3 = 0x08,
     _RESERVED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -3143,7 +3231,8 @@ pub enum Sm1tctrlOutTrigEn {
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
-    _RESERVED_10 = 0x10,
+    #[doc = "PWM_OUT_TRIG0 will set when the counter value matches the VAL4 value."]
+    Val4 = 0x10,
     _RESERVED_11 = 0x11,
     _RESERVED_12 = 0x12,
     _RESERVED_13 = 0x13,
@@ -3159,7 +3248,8 @@ pub enum Sm1tctrlOutTrigEn {
     _RESERVED_1d = 0x1d,
     _RESERVED_1e = 0x1e,
     _RESERVED_1f = 0x1f,
-    _RESERVED_20 = 0x20,
+    #[doc = "PWM_OUT_TRIG1 will set when the counter value matches the VAL5 value."]
+    Val5 = 0x20,
     _RESERVED_21 = 0x21,
     _RESERVED_22 = 0x22,
     _RESERVED_23 = 0x23,
@@ -3215,7 +3305,8 @@ impl From<Sm1tctrlOutTrigEn> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1tctrlPwaot0 {
     #[doc = "Route the PWM_OUT_TRIG0 signal to PWM_MUX_TRIG0 port."]
@@ -3246,7 +3337,8 @@ impl From<Sm1tctrlPwaot0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1tctrlPwbot1 {
     #[doc = "Route the PWM_OUT_TRIG1 signal to PWM_MUX_TRIG1 port."]
@@ -3277,7 +3369,8 @@ impl From<Sm1tctrlPwbot1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1tctrlTrgfrq {
     #[doc = "Trigger outputs are generated during every PWM period even if the PWM is not reloaded every period due to CTRL\\[LDFQ\\] being non-zero."]
@@ -3308,7 +3401,8 @@ impl From<Sm1tctrlTrgfrq> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2captctrlaEdga0 {
     #[doc = "Disabled."]
@@ -3343,7 +3437,8 @@ impl From<Sm2captctrlaEdga0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2captctrlaEdga1 {
     #[doc = "Disabled."]
@@ -3378,7 +3473,8 @@ impl From<Sm2captctrlaEdga1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2captctrlaInpSela {
     #[doc = "Raw PWM_A input signal selected as source."]
@@ -3409,7 +3505,8 @@ impl From<Sm2captctrlaInpSela> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2captctrlaOneshota {
     #[doc = "Free Running."]
@@ -3440,7 +3537,8 @@ impl From<Sm2captctrlaOneshota> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2captctrlbEdgb0 {
     #[doc = "Disabled."]
@@ -3475,7 +3573,8 @@ impl From<Sm2captctrlbEdgb0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2captctrlbEdgb1 {
     #[doc = "Disabled."]
@@ -3510,7 +3609,8 @@ impl From<Sm2captctrlbEdgb1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2captctrlbInpSelb {
     #[doc = "Raw PWM_B input signal selected as source."]
@@ -3541,7 +3641,8 @@ impl From<Sm2captctrlbInpSelb> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2captctrlbOneshotb {
     #[doc = "Free Running."]
@@ -3572,7 +3673,8 @@ impl From<Sm2captctrlbOneshotb> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2captctrlxEdgx0 {
     #[doc = "Disabled."]
@@ -3607,7 +3709,8 @@ impl From<Sm2captctrlxEdgx0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2captctrlxEdgx1 {
     #[doc = "Disabled."]
@@ -3642,7 +3745,8 @@ impl From<Sm2captctrlxEdgx1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2captctrlxInpSelx {
     #[doc = "Raw PWM_X input signal selected as source."]
@@ -3673,7 +3777,8 @@ impl From<Sm2captctrlxInpSelx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2captctrlxOneshotx {
     #[doc = "Free Running."]
@@ -3704,7 +3809,8 @@ impl From<Sm2captctrlxOneshotx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2ctrl2ClkSel {
     #[doc = "The IPBus clock is used as the clock for the local prescaler and counter."]
@@ -3738,7 +3844,8 @@ impl From<Sm2ctrl2ClkSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2ctrl2ForceSel {
     #[doc = "The local force signal, CTRL2\\[FORCE\\], from this submodule is used to force updates."]
@@ -3781,7 +3888,8 @@ impl From<Sm2ctrl2ForceSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2ctrl2Indep {
     #[doc = "PWM_A and PWM_B form a complementary PWM pair."]
@@ -3812,7 +3920,8 @@ impl From<Sm2ctrl2Indep> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2ctrl2InitSel {
     #[doc = "Local sync (PWM_X) causes initialization."]
@@ -3847,7 +3956,8 @@ impl From<Sm2ctrl2InitSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2ctrl2ReloadSel {
     #[doc = "The local RELOAD signal is used to reload registers."]
@@ -3878,7 +3988,8 @@ impl From<Sm2ctrl2ReloadSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2ctrlCompmode {
     #[doc = "The VAL* registers and the PWM counter are compared using an \"equal to\" method. This means that PWM edges are only produced when the counter is equal to one of the VAL* register values. This implies that a PWM_A output that is high at the end of a period maintains this state until a match with VAL3 clears the output in the following period."]
@@ -3909,7 +4020,8 @@ impl From<Sm2ctrlCompmode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2ctrlLdfq {
     #[doc = "Every PWM opportunity."]
@@ -3968,7 +4080,8 @@ impl From<Sm2ctrlLdfq> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2ctrlLdmod {
     #[doc = "Buffered registers of this submodule are loaded and take effect at the next PWM reload if MCTRL\\[LDOK\\] is set."]
@@ -3999,7 +4112,8 @@ impl From<Sm2ctrlLdmod> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2ctrlPrsc {
     #[doc = "Prescaler 1."]
@@ -4042,7 +4156,8 @@ impl From<Sm2ctrlPrsc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2dmaenCaptde {
     #[doc = "Read DMA requests disabled."]
@@ -4077,7 +4192,8 @@ impl From<Sm2dmaenCaptde> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2dmaenFand {
     #[doc = "Selected FIFO watermarks are OR'ed together."]
@@ -4108,7 +4224,8 @@ impl From<Sm2dmaenFand> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2intenCmpie {
     #[doc = "The corresponding STS\\[CMPF\\] bit will not cause an interrupt request."]
@@ -4201,7 +4318,8 @@ impl From<Sm2intenCmpie> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2octrlPwmafs {
     #[doc = "Output is forced to logic 0 state prior to consideration of output polarity control."]
@@ -4236,7 +4354,8 @@ impl From<Sm2octrlPwmafs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2octrlPwmbfs {
     #[doc = "Output is forced to logic 0 state prior to consideration of output polarity control."]
@@ -4271,7 +4390,8 @@ impl From<Sm2octrlPwmbfs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2octrlPwmxfs {
     #[doc = "Output is forced to logic 0 state prior to consideration of output polarity control."]
@@ -4306,7 +4426,8 @@ impl From<Sm2octrlPwmxfs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2out23 {
     #[doc = "A logic 0 is supplied to the deadtime generator of submodule 2 instead of PWM23."]
@@ -4337,7 +4458,8 @@ impl From<Sm2out23> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2out45 {
     #[doc = "A logic 0 is supplied to the deadtime generator of submodule 2 instead of PWM45."]
@@ -4368,7 +4490,8 @@ impl From<Sm2out45> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2sel23 {
     #[doc = "Generated SM2PWM23 signal used by the deadtime logic."]
@@ -4403,7 +4526,8 @@ impl From<Sm2sel23> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2sel45 {
     #[doc = "Generated SM2PWM45 signal used by the deadtime logic."]
@@ -4437,7 +4561,8 @@ impl From<Sm2sel45> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2stsCmpf {
     #[doc = "No compare event has occurred for a particular VALx value."]
@@ -4530,19 +4655,23 @@ impl From<Sm2stsCmpf> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2tctrlOutTrigEn {
     _RESERVED_0 = 0x0,
     #[doc = "PWM_OUT_TRIG0 will set when the counter value matches the VAL0 value."]
     Val0 = 0x01,
-    _RESERVED_2 = 0x02,
+    #[doc = "PWM_OUT_TRIG1 will set when the counter value matches the VAL1 value."]
+    Val1 = 0x02,
     _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
+    #[doc = "PWM_OUT_TRIG0 will set when the counter value matches the VAL2 value."]
+    Val2 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
+    #[doc = "PWM_OUT_TRIG1 will set when the counter value matches the VAL3 value."]
+    Val3 = 0x08,
     _RESERVED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -4550,7 +4679,8 @@ pub enum Sm2tctrlOutTrigEn {
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
-    _RESERVED_10 = 0x10,
+    #[doc = "PWM_OUT_TRIG0 will set when the counter value matches the VAL4 value."]
+    Val4 = 0x10,
     _RESERVED_11 = 0x11,
     _RESERVED_12 = 0x12,
     _RESERVED_13 = 0x13,
@@ -4566,7 +4696,8 @@ pub enum Sm2tctrlOutTrigEn {
     _RESERVED_1d = 0x1d,
     _RESERVED_1e = 0x1e,
     _RESERVED_1f = 0x1f,
-    _RESERVED_20 = 0x20,
+    #[doc = "PWM_OUT_TRIG1 will set when the counter value matches the VAL5 value."]
+    Val5 = 0x20,
     _RESERVED_21 = 0x21,
     _RESERVED_22 = 0x22,
     _RESERVED_23 = 0x23,
@@ -4622,7 +4753,8 @@ impl From<Sm2tctrlOutTrigEn> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2tctrlPwaot0 {
     #[doc = "Route the PWM_OUT_TRIG0 signal to PWM_MUX_TRIG0 port."]
@@ -4653,7 +4785,8 @@ impl From<Sm2tctrlPwaot0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2tctrlPwbot1 {
     #[doc = "Route the PWM_OUT_TRIG1 signal to PWM_MUX_TRIG1 port."]
@@ -4684,7 +4817,8 @@ impl From<Sm2tctrlPwbot1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2tctrlTrgfrq {
     #[doc = "Trigger outputs are generated during every PWM period even if the PWM is not reloaded every period due to CTRL\\[LDFQ\\] being non-zero."]
@@ -4715,7 +4849,8 @@ impl From<Sm2tctrlTrgfrq> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3captctrlaEdga0 {
     #[doc = "Disabled."]
@@ -4750,7 +4885,8 @@ impl From<Sm3captctrlaEdga0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3captctrlaEdga1 {
     #[doc = "Disabled."]
@@ -4785,7 +4921,8 @@ impl From<Sm3captctrlaEdga1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3captctrlaInpSela {
     #[doc = "Raw PWM_A input signal selected as source."]
@@ -4816,7 +4953,8 @@ impl From<Sm3captctrlaInpSela> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3captctrlaOneshota {
     #[doc = "Free Running."]
@@ -4847,7 +4985,8 @@ impl From<Sm3captctrlaOneshota> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3captctrlbEdgb0 {
     #[doc = "Disabled."]
@@ -4882,7 +5021,8 @@ impl From<Sm3captctrlbEdgb0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3captctrlbEdgb1 {
     #[doc = "Disabled."]
@@ -4917,7 +5057,8 @@ impl From<Sm3captctrlbEdgb1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3captctrlbInpSelb {
     #[doc = "Raw PWM_B input signal selected as source."]
@@ -4948,7 +5089,8 @@ impl From<Sm3captctrlbInpSelb> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3captctrlbOneshotb {
     #[doc = "Free Running."]
@@ -4979,7 +5121,8 @@ impl From<Sm3captctrlbOneshotb> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3captctrlxEdgx0 {
     #[doc = "Disabled."]
@@ -5014,7 +5157,8 @@ impl From<Sm3captctrlxEdgx0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3captctrlxEdgx1 {
     #[doc = "Disabled."]
@@ -5049,7 +5193,8 @@ impl From<Sm3captctrlxEdgx1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3captctrlxInpSelx {
     #[doc = "Raw PWM_X input signal selected as source."]
@@ -5080,7 +5225,8 @@ impl From<Sm3captctrlxInpSelx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3captctrlxOneshotx {
     #[doc = "Free Running."]
@@ -5111,7 +5257,8 @@ impl From<Sm3captctrlxOneshotx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3ctrl2ClkSel {
     #[doc = "The IPBus clock is used as the clock for the local prescaler and counter."]
@@ -5145,7 +5292,8 @@ impl From<Sm3ctrl2ClkSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3ctrl2ForceSel {
     #[doc = "The local force signal, CTRL2\\[FORCE\\], from this submodule is used to force updates."]
@@ -5188,7 +5336,8 @@ impl From<Sm3ctrl2ForceSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3ctrl2Indep {
     #[doc = "PWM_A and PWM_B form a complementary PWM pair."]
@@ -5219,7 +5368,8 @@ impl From<Sm3ctrl2Indep> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3ctrl2InitSel {
     #[doc = "Local sync (PWM_X) causes initialization."]
@@ -5254,7 +5404,8 @@ impl From<Sm3ctrl2InitSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3ctrl2ReloadSel {
     #[doc = "The local RELOAD signal is used to reload registers."]
@@ -5285,7 +5436,8 @@ impl From<Sm3ctrl2ReloadSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3ctrlCompmode {
     #[doc = "The VAL* registers and the PWM counter are compared using an \"equal to\" method. This means that PWM edges are only produced when the counter is equal to one of the VAL* register values. This implies that a PWM_A output that is high at the end of a period maintains this state until a match with VAL3 clears the output in the following period."]
@@ -5316,7 +5468,8 @@ impl From<Sm3ctrlCompmode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3ctrlLdfq {
     #[doc = "Every PWM opportunity."]
@@ -5375,7 +5528,8 @@ impl From<Sm3ctrlLdfq> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3ctrlLdmod {
     #[doc = "Buffered registers of this submodule are loaded and take effect at the next PWM reload if MCTRL\\[LDOK\\] is set."]
@@ -5406,7 +5560,8 @@ impl From<Sm3ctrlLdmod> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3ctrlPrsc {
     #[doc = "Prescaler 1."]
@@ -5449,7 +5604,8 @@ impl From<Sm3ctrlPrsc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3dmaenCaptde {
     #[doc = "Read DMA requests disabled."]
@@ -5484,7 +5640,8 @@ impl From<Sm3dmaenCaptde> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3dmaenFand {
     #[doc = "Selected FIFO watermarks are OR'ed together."]
@@ -5515,7 +5672,8 @@ impl From<Sm3dmaenFand> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3intenCmpie {
     #[doc = "The corresponding STS\\[CMPF\\] bit will not cause an interrupt request."]
@@ -5608,7 +5766,8 @@ impl From<Sm3intenCmpie> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3octrlPwmafs {
     #[doc = "Output is forced to logic 0 state prior to consideration of output polarity control."]
@@ -5643,7 +5802,8 @@ impl From<Sm3octrlPwmafs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3octrlPwmbfs {
     #[doc = "Output is forced to logic 0 state prior to consideration of output polarity control."]
@@ -5678,7 +5838,8 @@ impl From<Sm3octrlPwmbfs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3octrlPwmxfs {
     #[doc = "Output is forced to logic 0 state prior to consideration of output polarity control."]
@@ -5713,7 +5874,8 @@ impl From<Sm3octrlPwmxfs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3out23 {
     #[doc = "A logic 0 is supplied to the deadtime generator of submodule 3 instead of PWM23."]
@@ -5744,7 +5906,8 @@ impl From<Sm3out23> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3out45 {
     #[doc = "A logic 0 is supplied to the deadtime generator of submodule 3 instead of PWM45."]
@@ -5775,7 +5938,8 @@ impl From<Sm3out45> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3sel23 {
     #[doc = "Generated SM3PWM23 signal used by the deadtime logic."]
@@ -5810,7 +5974,8 @@ impl From<Sm3sel23> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3sel45 {
     #[doc = "Generated SM3PWM45 signal used by the deadtime logic."]
@@ -5844,7 +6009,8 @@ impl From<Sm3sel45> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3stsCmpf {
     #[doc = "No compare event has occurred for a particular VALx value."]
@@ -5937,19 +6103,23 @@ impl From<Sm3stsCmpf> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3tctrlOutTrigEn {
     _RESERVED_0 = 0x0,
     #[doc = "PWM_OUT_TRIG0 will set when the counter value matches the VAL0 value."]
     Val0 = 0x01,
-    _RESERVED_2 = 0x02,
+    #[doc = "PWM_OUT_TRIG1 will set when the counter value matches the VAL1 value."]
+    Val1 = 0x02,
     _RESERVED_3 = 0x03,
-    _RESERVED_4 = 0x04,
+    #[doc = "PWM_OUT_TRIG0 will set when the counter value matches the VAL2 value."]
+    Val2 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
-    _RESERVED_8 = 0x08,
+    #[doc = "PWM_OUT_TRIG1 will set when the counter value matches the VAL3 value."]
+    Val3 = 0x08,
     _RESERVED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -5957,7 +6127,8 @@ pub enum Sm3tctrlOutTrigEn {
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
-    _RESERVED_10 = 0x10,
+    #[doc = "PWM_OUT_TRIG0 will set when the counter value matches the VAL4 value."]
+    Val4 = 0x10,
     _RESERVED_11 = 0x11,
     _RESERVED_12 = 0x12,
     _RESERVED_13 = 0x13,
@@ -5973,7 +6144,8 @@ pub enum Sm3tctrlOutTrigEn {
     _RESERVED_1d = 0x1d,
     _RESERVED_1e = 0x1e,
     _RESERVED_1f = 0x1f,
-    _RESERVED_20 = 0x20,
+    #[doc = "PWM_OUT_TRIG1 will set when the counter value matches the VAL5 value."]
+    Val5 = 0x20,
     _RESERVED_21 = 0x21,
     _RESERVED_22 = 0x22,
     _RESERVED_23 = 0x23,
@@ -6029,7 +6201,8 @@ impl From<Sm3tctrlOutTrigEn> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3tctrlPwaot0 {
     #[doc = "Route the PWM_OUT_TRIG0 signal to PWM_MUX_TRIG0 port."]
@@ -6060,7 +6233,8 @@ impl From<Sm3tctrlPwaot0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3tctrlPwbot1 {
     #[doc = "Route the PWM_OUT_TRIG1 signal to PWM_MUX_TRIG1 port."]
@@ -6091,7 +6265,8 @@ impl From<Sm3tctrlPwbot1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3tctrlTrgfrq {
     #[doc = "Trigger outputs are generated during every PWM period even if the PWM is not reloaded every period due to CTRL\\[LDFQ\\] being non-zero."]
@@ -6122,7 +6297,8 @@ impl From<Sm3tctrlTrgfrq> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StretchCntPrsc {
     #[doc = "Stretch count is zero, no stretch."]
@@ -6157,7 +6333,8 @@ impl From<StretchCntPrsc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wrprot {
     #[doc = "Write protection off (default)."]

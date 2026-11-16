@@ -46,6 +46,7 @@ impl Default for Cdne {
         Cdne(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cdne {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cdne")
@@ -115,6 +116,7 @@ impl Default for Ceei {
         Ceei(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ceei {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ceei")
@@ -184,6 +186,7 @@ impl Default for Cerq {
         Cerq(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cerq {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cerq")
@@ -253,6 +256,7 @@ impl Default for Cerr {
         Cerr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cerr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cerr")
@@ -322,6 +326,7 @@ impl Default for Cint {
         Cint(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cint {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cint")
@@ -463,6 +468,7 @@ impl Default for Cr {
         Cr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cr")
@@ -544,6 +550,7 @@ impl Default for Dchpri {
         Dchpri(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dchpri {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dchpri")
@@ -593,6 +600,7 @@ impl Default for Ears {
         Ears(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ears {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ears")
@@ -668,6 +676,7 @@ impl Default for Eei {
         Eei(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Eei {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Eei")
@@ -743,6 +752,7 @@ impl Default for Erq {
         Erq(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Erq {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Erq")
@@ -818,6 +828,7 @@ impl Default for Err {
         Err(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Err {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Err")
@@ -1021,6 +1032,7 @@ impl Default for Es {
         Es(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Es {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Es")
@@ -1088,6 +1100,7 @@ impl Default for Hrs {
         Hrs(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hrs {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hrs")
@@ -1163,6 +1176,7 @@ impl Default for Int {
         Int(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Int {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Int")
@@ -1258,6 +1272,7 @@ impl Default for Seei {
         Seei(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Seei {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Seei")
@@ -1327,6 +1342,7 @@ impl Default for Serq {
         Serq(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Serq {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Serq")
@@ -1396,6 +1412,7 @@ impl Default for Ssrt {
         Ssrt(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ssrt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ssrt")
@@ -1449,26 +1466,26 @@ impl TcdAttr {
     #[doc = "Source data transfer size."]
     #[must_use]
     #[inline(always)]
-    pub const fn ssize(&self) -> super::vals::TcdAttrSsize {
+    pub const fn ssize(&self) -> super::vals::Ssize {
         let val = (self.0 >> 8usize) & 0x07;
-        super::vals::TcdAttrSsize::from_bits(val as u8)
+        super::vals::Ssize::from_bits(val as u8)
     }
     #[doc = "Source data transfer size."]
     #[inline(always)]
-    pub const fn set_ssize(&mut self, val: super::vals::TcdAttrSsize) {
+    pub const fn set_ssize(&mut self, val: super::vals::Ssize) {
         self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u16) & 0x07) << 8usize);
     }
     #[doc = "Source Address Modulo."]
     #[must_use]
     #[inline(always)]
-    pub const fn smod(&self) -> u8 {
+    pub const fn smod(&self) -> super::vals::Smod {
         let val = (self.0 >> 11usize) & 0x1f;
-        val as u8
+        super::vals::Smod::from_bits(val as u8)
     }
     #[doc = "Source Address Modulo."]
     #[inline(always)]
-    pub const fn set_smod(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x1f << 11usize)) | (((val as u16) & 0x1f) << 11usize);
+    pub const fn set_smod(&mut self, val: super::vals::Smod) {
+        self.0 = (self.0 & !(0x1f << 11usize)) | (((val.to_bits() as u16) & 0x1f) << 11usize);
     }
 }
 impl Default for TcdAttr {
@@ -1477,6 +1494,7 @@ impl Default for TcdAttr {
         TcdAttr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TcdAttr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TcdAttr")
@@ -1492,7 +1510,7 @@ impl defmt::Format for TcdAttr {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "TcdAttr {{ dsize: {=u8:?}, dmod: {=u8:?}, ssize: {:?}, smod: {=u8:?} }}",
+            "TcdAttr {{ dsize: {=u8:?}, dmod: {=u8:?}, ssize: {:?}, smod: {:?} }}",
             self.dsize(),
             self.dmod(),
             self.ssize(),
@@ -1536,6 +1554,7 @@ impl Default for TcdBiterElinkno {
         TcdBiterElinkno(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TcdBiterElinkno {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TcdBiterElinkno")
@@ -1603,6 +1622,7 @@ impl Default for TcdBiterElinkyes {
         TcdBiterElinkyes(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TcdBiterElinkyes {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TcdBiterElinkyes")
@@ -1660,6 +1680,7 @@ impl Default for TcdCiterElinkno {
         TcdCiterElinkno(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TcdCiterElinkno {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TcdCiterElinkno")
@@ -1727,6 +1748,7 @@ impl Default for TcdCiterElinkyes {
         TcdCiterElinkyes(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TcdCiterElinkyes {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TcdCiterElinkyes")
@@ -1804,13 +1826,13 @@ impl TcdCsr {
     #[doc = "Enable Scatter/Gather Processing."]
     #[must_use]
     #[inline(always)]
-    pub const fn esg(&self) -> super::vals::TcdCsrEsg {
+    pub const fn esg(&self) -> super::vals::Esg {
         let val = (self.0 >> 4usize) & 0x01;
-        super::vals::TcdCsrEsg::from_bits(val as u8)
+        super::vals::Esg::from_bits(val as u8)
     }
     #[doc = "Enable Scatter/Gather Processing."]
     #[inline(always)]
-    pub const fn set_esg(&mut self, val: super::vals::TcdCsrEsg) {
+    pub const fn set_esg(&mut self, val: super::vals::Esg) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u16) & 0x01) << 4usize);
     }
     #[doc = "Enable channel-to-channel linking on major loop complete."]
@@ -1864,13 +1886,13 @@ impl TcdCsr {
     #[doc = "Bandwidth Control."]
     #[must_use]
     #[inline(always)]
-    pub const fn bwc(&self) -> super::vals::TcdCsrBwc {
+    pub const fn bwc(&self) -> super::vals::Bwc {
         let val = (self.0 >> 14usize) & 0x03;
-        super::vals::TcdCsrBwc::from_bits(val as u8)
+        super::vals::Bwc::from_bits(val as u8)
     }
     #[doc = "Bandwidth Control."]
     #[inline(always)]
-    pub const fn set_bwc(&mut self, val: super::vals::TcdCsrBwc) {
+    pub const fn set_bwc(&mut self, val: super::vals::Bwc) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val.to_bits() as u16) & 0x03) << 14usize);
     }
 }
@@ -1880,6 +1902,7 @@ impl Default for TcdCsr {
         TcdCsr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TcdCsr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TcdCsr")
@@ -1939,6 +1962,7 @@ impl Default for TcdDaddr {
         TcdDaddr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TcdDaddr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TcdDaddr")
@@ -1976,6 +2000,7 @@ impl Default for TcdDlastsga {
         TcdDlastsga(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TcdDlastsga {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TcdDlastsga")
@@ -2013,6 +2038,7 @@ impl Default for TcdDoff {
         TcdDoff(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TcdDoff {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TcdDoff")
@@ -2050,6 +2076,7 @@ impl Default for TcdNbytesMlno {
         TcdNbytesMlno(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TcdNbytesMlno {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TcdNbytesMlno")
@@ -2111,6 +2138,7 @@ impl Default for TcdNbytesMloffno {
         TcdNbytesMloffno(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TcdNbytesMloffno {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TcdNbytesMloffno")
@@ -2192,6 +2220,7 @@ impl Default for TcdNbytesMloffyes {
         TcdNbytesMloffyes(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TcdNbytesMloffyes {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TcdNbytesMloffyes")
@@ -2239,6 +2268,7 @@ impl Default for TcdSaddr {
         TcdSaddr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TcdSaddr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TcdSaddr")
@@ -2276,6 +2306,7 @@ impl Default for TcdSlast {
         TcdSlast(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TcdSlast {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TcdSlast")
@@ -2313,6 +2344,7 @@ impl Default for TcdSoff {
         TcdSoff(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TcdSoff {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TcdSoff")

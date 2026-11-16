@@ -46,6 +46,7 @@ impl Default for ApllOvrd {
         ApllOvrd(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ApllOvrd {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ApllOvrd")
@@ -107,6 +108,18 @@ impl Apllcsr {
     #[inline(always)]
     pub const fn set_apllsten(&mut self, val: super::vals::Apllsten) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
+    }
+    #[doc = "Free running mode clock stable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn frm_clockstable(&self) -> bool {
+        let val = (self.0 >> 3usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Free running mode clock stable."]
+    #[inline(always)]
+    pub const fn set_frm_clockstable(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
     #[doc = "APLL Clock Monitor."]
     #[must_use]
@@ -199,12 +212,14 @@ impl Default for Apllcsr {
         Apllcsr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Apllcsr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Apllcsr")
             .field("apllpwren", &self.apllpwren())
             .field("apllclken", &self.apllclken())
             .field("apllsten", &self.apllsten())
+            .field("frm_clockstable", &self.frm_clockstable())
             .field("apllcm", &self.apllcm())
             .field("apllcmre", &self.apllcmre())
             .field("lk", &self.lk())
@@ -220,10 +235,11 @@ impl defmt::Format for Apllcsr {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Apllcsr {{ apllpwren: {=bool:?}, apllclken: {=bool:?}, apllsten: {:?}, apllcm: {=bool:?}, apllcmre: {:?}, lk: {:?}, apll_lock: {:?}, apllsel: {=bool:?}, apllerr: {:?}, apll_lock_ie: {=bool:?} }}",
+            "Apllcsr {{ apllpwren: {=bool:?}, apllclken: {=bool:?}, apllsten: {:?}, frm_clockstable: {=bool:?}, apllcm: {=bool:?}, apllcmre: {:?}, lk: {:?}, apll_lock: {:?}, apllsel: {=bool:?}, apllerr: {:?}, apll_lock_ie: {=bool:?} }}",
             self.apllpwren(),
             self.apllclken(),
             self.apllsten(),
+            self.frm_clockstable(),
             self.apllcm(),
             self.apllcmre(),
             self.lk(),
@@ -335,6 +351,18 @@ impl Apllctrl {
     pub const fn set_bypasspostdiv(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
+    #[doc = "Free Running Mode Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn frm(&self) -> bool {
+        let val = (self.0 >> 22usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Free Running Mode Enable."]
+    #[inline(always)]
+    pub const fn set_frm(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
+    }
     #[doc = "Clock Source."]
     #[must_use]
     #[inline(always)]
@@ -354,6 +382,7 @@ impl Default for Apllctrl {
         Apllctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Apllctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Apllctrl")
@@ -365,6 +394,7 @@ impl core::fmt::Debug for Apllctrl {
             .field("banddirect", &self.banddirect())
             .field("bypassprediv", &self.bypassprediv())
             .field("bypasspostdiv", &self.bypasspostdiv())
+            .field("frm", &self.frm())
             .field("source", &self.source())
             .finish()
     }
@@ -374,7 +404,7 @@ impl defmt::Format for Apllctrl {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Apllctrl {{ selr: {=u8:?}, seli: {=u8:?}, selp: {=u8:?}, bypasspostdiv2: {=bool:?}, limupoff: {=bool:?}, banddirect: {=bool:?}, bypassprediv: {=bool:?}, bypasspostdiv: {=bool:?}, source: {:?} }}",
+            "Apllctrl {{ selr: {=u8:?}, seli: {=u8:?}, selp: {=u8:?}, bypasspostdiv2: {=bool:?}, limupoff: {=bool:?}, banddirect: {=bool:?}, bypassprediv: {=bool:?}, bypasspostdiv: {=bool:?}, frm: {=bool:?}, source: {:?} }}",
             self.selr(),
             self.seli(),
             self.selp(),
@@ -383,6 +413,7 @@ impl defmt::Format for Apllctrl {
             self.banddirect(),
             self.bypassprediv(),
             self.bypasspostdiv(),
+            self.frm(),
             self.source()
         )
     }
@@ -411,6 +442,7 @@ impl Default for AplllockCnfg {
         AplllockCnfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AplllockCnfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AplllockCnfg")
@@ -464,6 +496,7 @@ impl Default for Apllmdiv {
         Apllmdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Apllmdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Apllmdiv")
@@ -519,6 +552,7 @@ impl Default for Apllndiv {
         Apllndiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Apllndiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Apllndiv")
@@ -574,6 +608,7 @@ impl Default for Apllpdiv {
         Apllpdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Apllpdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Apllpdiv")
@@ -617,6 +652,7 @@ impl Default for Apllsscg0 {
         Apllsscg0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Apllsscg0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Apllsscg0")
@@ -742,6 +778,7 @@ impl Default for Apllsscg1 {
         Apllsscg1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Apllsscg1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Apllsscg1")
@@ -797,6 +834,7 @@ impl Default for Apllsscgstat {
         Apllsscgstat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Apllsscgstat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Apllsscgstat")
@@ -855,6 +893,18 @@ impl Apllstat {
     pub const fn set_pdivack(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
+    #[doc = "Free running detector (active high)."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn frmdet(&self) -> bool {
+        let val = (self.0 >> 4usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Free running detector (active high)."]
+    #[inline(always)]
+    pub const fn set_frmdet(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
+    }
 }
 impl Default for Apllstat {
     #[inline(always)]
@@ -862,12 +912,14 @@ impl Default for Apllstat {
         Apllstat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Apllstat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Apllstat")
             .field("ndivack", &self.ndivack())
             .field("mdivack", &self.mdivack())
             .field("pdivack", &self.pdivack())
+            .field("frmdet", &self.frmdet())
             .finish()
     }
 }
@@ -876,10 +928,11 @@ impl defmt::Format for Apllstat {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Apllstat {{ ndivack: {=bool:?}, mdivack: {=bool:?}, pdivack: {=bool:?} }}",
+            "Apllstat {{ ndivack: {=bool:?}, mdivack: {=bool:?}, pdivack: {=bool:?}, frmdet: {=bool:?} }}",
             self.ndivack(),
             self.mdivack(),
-            self.pdivack()
+            self.pdivack(),
+            self.frmdet()
         )
     }
 }
@@ -907,6 +960,7 @@ impl Default for Csr {
         Csr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Csr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Csr").field("scs", &self.scs()).finish()
@@ -942,6 +996,7 @@ impl Default for Firccfg {
         Firccfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Firccfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Firccfg")
@@ -1147,6 +1202,7 @@ impl Default for Firccsr {
         Firccsr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Firccsr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Firccsr")
@@ -1228,6 +1284,7 @@ impl Default for Fircstat {
         Fircstat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fircstat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fircstat")
@@ -1283,6 +1340,7 @@ impl Default for Firctcfg {
         Firctcfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Firctcfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Firctcfg")
@@ -1362,6 +1420,7 @@ impl Default for Firctrim {
         Firctrim(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Firctrim {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Firctrim")
@@ -1445,6 +1504,7 @@ impl Default for Ldocsr {
         Ldocsr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ldocsr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ldocsr")
@@ -1564,6 +1624,7 @@ impl Default for Param {
         Param(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Param {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Param")
@@ -1617,6 +1678,7 @@ impl Default for Rccr {
         Rccr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Rccr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Rccr").field("scs", &self.scs()).finish()
@@ -1712,6 +1774,7 @@ impl Default for Rosccsr {
         Rosccsr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Rosccsr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Rosccsr")
@@ -1883,6 +1946,7 @@ impl Default for Sirccsr {
         Sirccsr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sirccsr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sirccsr")
@@ -1956,6 +2020,7 @@ impl Default for Sircstat {
         Sircstat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sircstat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sircstat")
@@ -2011,6 +2076,7 @@ impl Default for Sirctcfg {
         Sirctcfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sirctcfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sirctcfg")
@@ -2090,6 +2156,7 @@ impl Default for Sirctrim {
         Sirctrim(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sirctrim {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sirctrim")
@@ -2149,6 +2216,7 @@ impl Default for Sosccfg {
         Sosccfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sosccfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sosccfg")
@@ -2288,6 +2356,7 @@ impl Default for Sosccsr {
         Sosccsr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sosccsr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sosccsr")
@@ -2369,6 +2438,7 @@ impl Default for SpllOvrd {
         SpllOvrd(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SpllOvrd {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SpllOvrd")
@@ -2430,6 +2500,18 @@ impl Spllcsr {
     #[inline(always)]
     pub const fn set_spllsten(&mut self, val: super::vals::Spllsten) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
+    }
+    #[doc = "Free running mode clock stable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn frm_clockstable(&self) -> bool {
+        let val = (self.0 >> 3usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Free running mode clock stable."]
+    #[inline(always)]
+    pub const fn set_frm_clockstable(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
     #[doc = "SPLL Clock Monitor."]
     #[must_use]
@@ -2522,12 +2604,14 @@ impl Default for Spllcsr {
         Spllcsr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Spllcsr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Spllcsr")
             .field("spllpwren", &self.spllpwren())
             .field("spllclken", &self.spllclken())
             .field("spllsten", &self.spllsten())
+            .field("frm_clockstable", &self.frm_clockstable())
             .field("spllcm", &self.spllcm())
             .field("spllcmre", &self.spllcmre())
             .field("lk", &self.lk())
@@ -2543,10 +2627,11 @@ impl defmt::Format for Spllcsr {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Spllcsr {{ spllpwren: {=bool:?}, spllclken: {=bool:?}, spllsten: {:?}, spllcm: {=bool:?}, spllcmre: {:?}, lk: {:?}, spll_lock: {:?}, spllsel: {=bool:?}, spllerr: {:?}, spll_lock_ie: {=bool:?} }}",
+            "Spllcsr {{ spllpwren: {=bool:?}, spllclken: {=bool:?}, spllsten: {:?}, frm_clockstable: {=bool:?}, spllcm: {=bool:?}, spllcmre: {:?}, lk: {:?}, spll_lock: {:?}, spllsel: {=bool:?}, spllerr: {:?}, spll_lock_ie: {=bool:?} }}",
             self.spllpwren(),
             self.spllclken(),
             self.spllsten(),
+            self.frm_clockstable(),
             self.spllcm(),
             self.spllcmre(),
             self.lk(),
@@ -2658,6 +2743,18 @@ impl Spllctrl {
     pub const fn set_bypasspostdiv(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
+    #[doc = "Free Running Mode Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn frm(&self) -> bool {
+        let val = (self.0 >> 22usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Free Running Mode Enable."]
+    #[inline(always)]
+    pub const fn set_frm(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
+    }
     #[doc = "Clock Source."]
     #[must_use]
     #[inline(always)]
@@ -2677,6 +2774,7 @@ impl Default for Spllctrl {
         Spllctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Spllctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Spllctrl")
@@ -2688,6 +2786,7 @@ impl core::fmt::Debug for Spllctrl {
             .field("banddirect", &self.banddirect())
             .field("bypassprediv", &self.bypassprediv())
             .field("bypasspostdiv", &self.bypasspostdiv())
+            .field("frm", &self.frm())
             .field("source", &self.source())
             .finish()
     }
@@ -2697,7 +2796,7 @@ impl defmt::Format for Spllctrl {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Spllctrl {{ selr: {=u8:?}, seli: {=u8:?}, selp: {=u8:?}, bypasspostdiv2: {=bool:?}, limupoff: {=bool:?}, banddirect: {=bool:?}, bypassprediv: {=bool:?}, bypasspostdiv: {=bool:?}, source: {:?} }}",
+            "Spllctrl {{ selr: {=u8:?}, seli: {=u8:?}, selp: {=u8:?}, bypasspostdiv2: {=bool:?}, limupoff: {=bool:?}, banddirect: {=bool:?}, bypassprediv: {=bool:?}, bypasspostdiv: {=bool:?}, frm: {=bool:?}, source: {:?} }}",
             self.selr(),
             self.seli(),
             self.selp(),
@@ -2706,6 +2805,7 @@ impl defmt::Format for Spllctrl {
             self.banddirect(),
             self.bypassprediv(),
             self.bypasspostdiv(),
+            self.frm(),
             self.source()
         )
     }
@@ -2734,6 +2834,7 @@ impl Default for SplllockCnfg {
         SplllockCnfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SplllockCnfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SplllockCnfg")
@@ -2787,6 +2888,7 @@ impl Default for Spllmdiv {
         Spllmdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Spllmdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Spllmdiv")
@@ -2842,6 +2944,7 @@ impl Default for Spllndiv {
         Spllndiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Spllndiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Spllndiv")
@@ -2897,6 +3000,7 @@ impl Default for Spllpdiv {
         Spllpdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Spllpdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Spllpdiv")
@@ -2940,6 +3044,7 @@ impl Default for Spllsscg0 {
         Spllsscg0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Spllsscg0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Spllsscg0")
@@ -3065,6 +3170,7 @@ impl Default for Spllsscg1 {
         Spllsscg1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Spllsscg1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Spllsscg1")
@@ -3120,6 +3226,7 @@ impl Default for Spllsscgstat {
         Spllsscgstat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Spllsscgstat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Spllsscgstat")
@@ -3178,6 +3285,18 @@ impl Spllstat {
     pub const fn set_pdivack(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
+    #[doc = "Free running detector (active high)."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn frmdet(&self) -> bool {
+        let val = (self.0 >> 4usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Free running detector (active high)."]
+    #[inline(always)]
+    pub const fn set_frmdet(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
+    }
 }
 impl Default for Spllstat {
     #[inline(always)]
@@ -3185,12 +3304,14 @@ impl Default for Spllstat {
         Spllstat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Spllstat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Spllstat")
             .field("ndivack", &self.ndivack())
             .field("mdivack", &self.mdivack())
             .field("pdivack", &self.pdivack())
+            .field("frmdet", &self.frmdet())
             .finish()
     }
 }
@@ -3199,10 +3320,11 @@ impl defmt::Format for Spllstat {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Spllstat {{ ndivack: {=bool:?}, mdivack: {=bool:?}, pdivack: {=bool:?} }}",
+            "Spllstat {{ ndivack: {=bool:?}, mdivack: {=bool:?}, pdivack: {=bool:?}, frmdet: {=bool:?} }}",
             self.ndivack(),
             self.mdivack(),
-            self.pdivack()
+            self.pdivack(),
+            self.frmdet()
         )
     }
 }
@@ -3254,6 +3376,7 @@ impl Default for TrimLock {
         TrimLock(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TrimLock {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TrimLock")
@@ -3359,6 +3482,7 @@ impl Default for Upllcsr {
         Upllcsr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Upllcsr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Upllcsr")
@@ -3410,6 +3534,7 @@ impl Default for Verid {
         Verid(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Verid {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Verid")

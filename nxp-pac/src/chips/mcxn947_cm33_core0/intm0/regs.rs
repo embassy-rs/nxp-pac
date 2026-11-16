@@ -22,6 +22,7 @@ impl Default for IntmIack {
         IntmIack(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IntmIack {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IntmIack")
@@ -59,6 +60,7 @@ impl Default for IntmIrqsel {
         IntmIrqsel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IntmIrqsel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IntmIrqsel")
@@ -96,6 +98,7 @@ impl Default for IntmLatency {
         IntmLatency(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IntmLatency {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IntmLatency")
@@ -133,6 +136,7 @@ impl Default for IntmMm {
         IntmMm(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IntmMm {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IntmMm").field("mm", &self.mm()).finish()
@@ -168,6 +172,7 @@ impl Default for IntmStatus {
         IntmStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IntmStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IntmStatus")
@@ -205,6 +210,7 @@ impl Default for IntmTimer {
         IntmTimer(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IntmTimer {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IntmTimer")

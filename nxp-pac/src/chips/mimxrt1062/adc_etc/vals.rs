@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DmaModeSel {
     #[doc = "Trig DMA_REQ with latched signal, REQ will be cleared when ACK and source request cleared."]
@@ -30,7 +31,8 @@ impl From<DmaModeSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ext0TrigEnable {
     #[doc = "disable external TSC0 trigger."]
@@ -61,7 +63,8 @@ impl From<Ext0TrigEnable> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ext1TrigEnable {
     #[doc = "disable external TSC1 trigger."]
@@ -92,7 +95,8 @@ impl From<Ext1TrigEnable> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Softrst {
     #[doc = "ADC_ETC works normally."]
@@ -123,7 +127,8 @@ impl From<Softrst> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain10B2b0 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG0_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -154,7 +159,8 @@ impl From<Trig0Chain10B2b0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain10B2b1 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG1_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -185,7 +191,8 @@ impl From<Trig0Chain10B2b1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain10Csel0 {
     #[doc = "ADC Channel 0 selected."]
@@ -244,7 +251,8 @@ impl From<Trig0Chain10Csel0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain10Csel1 {
     #[doc = "ADC Channel 0 selected."]
@@ -333,6 +341,7 @@ impl Trig0Chain10Hwts0 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig0Chain10Hwts0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -409,6 +418,7 @@ impl Trig0Chain10Hwts1 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig0Chain10Hwts1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -455,7 +465,8 @@ impl From<Trig0Chain10Hwts1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain10Ie0 {
     #[doc = "No interrupt when finished."]
@@ -490,7 +501,8 @@ impl From<Trig0Chain10Ie0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain10Ie1 {
     #[doc = "No interrupt when finished."]
@@ -525,7 +537,8 @@ impl From<Trig0Chain10Ie1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain32B2b2 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG2_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -556,7 +569,8 @@ impl From<Trig0Chain32B2b2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain32B2b3 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG3_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -587,7 +601,8 @@ impl From<Trig0Chain32B2b3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain32Csel2 {
     #[doc = "ADC Channel 0 selected."]
@@ -646,7 +661,8 @@ impl From<Trig0Chain32Csel2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain32Csel3 {
     #[doc = "ADC Channel 0 selected."]
@@ -735,6 +751,7 @@ impl Trig0Chain32Hwts2 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig0Chain32Hwts2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -811,6 +828,7 @@ impl Trig0Chain32Hwts3 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig0Chain32Hwts3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -857,7 +875,8 @@ impl From<Trig0Chain32Hwts3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain32Ie2 {
     #[doc = "No interrupt when finished."]
@@ -892,7 +911,8 @@ impl From<Trig0Chain32Ie2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain32Ie3 {
     #[doc = "No interrupt when finished."]
@@ -927,7 +947,8 @@ impl From<Trig0Chain32Ie3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain54B2b4 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG4_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -958,7 +979,8 @@ impl From<Trig0Chain54B2b4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain54B2b5 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG5_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -989,7 +1011,8 @@ impl From<Trig0Chain54B2b5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain54Csel4 {
     #[doc = "ADC Channel 0 selected."]
@@ -1048,7 +1071,8 @@ impl From<Trig0Chain54Csel4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain54Csel5 {
     #[doc = "ADC Channel 0 selected."]
@@ -1137,6 +1161,7 @@ impl Trig0Chain54Hwts4 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig0Chain54Hwts4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -1213,6 +1238,7 @@ impl Trig0Chain54Hwts5 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig0Chain54Hwts5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -1259,7 +1285,8 @@ impl From<Trig0Chain54Hwts5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain54Ie4 {
     #[doc = "No interrupt when finished."]
@@ -1294,7 +1321,8 @@ impl From<Trig0Chain54Ie4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain54Ie5 {
     #[doc = "No interrupt when finished."]
@@ -1329,7 +1357,8 @@ impl From<Trig0Chain54Ie5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain76B2b6 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG6_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -1360,7 +1389,8 @@ impl From<Trig0Chain76B2b6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain76B2b7 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG7_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -1391,7 +1421,8 @@ impl From<Trig0Chain76B2b7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain76Csel6 {
     #[doc = "ADC Channel 0 selected."]
@@ -1450,7 +1481,8 @@ impl From<Trig0Chain76Csel6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain76Csel7 {
     #[doc = "ADC Channel 0 selected."]
@@ -1539,6 +1571,7 @@ impl Trig0Chain76Hwts6 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig0Chain76Hwts6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -1615,6 +1648,7 @@ impl Trig0Chain76Hwts7 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig0Chain76Hwts7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -1661,7 +1695,8 @@ impl From<Trig0Chain76Hwts7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain76Ie6 {
     #[doc = "No interrupt when finished."]
@@ -1696,7 +1731,8 @@ impl From<Trig0Chain76Ie6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain76Ie7 {
     #[doc = "No interrupt when finished."]
@@ -1731,7 +1767,8 @@ impl From<Trig0Chain76Ie7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0CtrlSwTrig {
     #[doc = "No software trigger event generated."]
@@ -1762,7 +1799,8 @@ impl From<Trig0CtrlSwTrig> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0CtrlSyncMode {
     #[doc = "Synchronization mode disabled, TRIGa and TRIG(a+4) are triggered independently."]
@@ -1793,7 +1831,8 @@ impl From<Trig0CtrlSyncMode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0CtrlTrigChain {
     #[doc = "Trigger chain length is 1."]
@@ -1836,7 +1875,8 @@ impl From<Trig0CtrlTrigChain> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0CtrlTrigMode {
     #[doc = "Hardware trigger. The softerware trigger will be ignored."]
@@ -1867,7 +1907,8 @@ impl From<Trig0CtrlTrigMode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Done0 {
     #[doc = "No TRIG0_DONE0 interrupt detected."]
@@ -1898,7 +1939,8 @@ impl From<Trig0Done0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Done1 {
     #[doc = "No TRIG0_DONE1 interrupt detected."]
@@ -1929,7 +1971,8 @@ impl From<Trig0Done1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Done2 {
     #[doc = "No TRIG0_DONE2 interrupt detected."]
@@ -1960,7 +2003,8 @@ impl From<Trig0Done2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Enable {
     #[doc = "TRIG0 DMA request disabled."]
@@ -1991,7 +2035,8 @@ impl From<Trig0Enable> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Err {
     #[doc = "No TRIG0_ERR interrupt detected."]
@@ -2022,7 +2067,8 @@ impl From<Trig0Err> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Req {
     #[doc = "TRIG0_REQ not detected."]
@@ -2053,7 +2099,8 @@ impl From<Trig0Req> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain10B2b0 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG0_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -2084,7 +2131,8 @@ impl From<Trig1Chain10B2b0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain10B2b1 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG1_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -2115,7 +2163,8 @@ impl From<Trig1Chain10B2b1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain10Csel0 {
     #[doc = "ADC Channel 0 selected."]
@@ -2174,7 +2223,8 @@ impl From<Trig1Chain10Csel0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain10Csel1 {
     #[doc = "ADC Channel 0 selected."]
@@ -2263,6 +2313,7 @@ impl Trig1Chain10Hwts0 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig1Chain10Hwts0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -2339,6 +2390,7 @@ impl Trig1Chain10Hwts1 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig1Chain10Hwts1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -2385,7 +2437,8 @@ impl From<Trig1Chain10Hwts1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain10Ie0 {
     #[doc = "No interrupt when finished."]
@@ -2420,7 +2473,8 @@ impl From<Trig1Chain10Ie0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain10Ie1 {
     #[doc = "No interrupt when finished."]
@@ -2455,7 +2509,8 @@ impl From<Trig1Chain10Ie1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain32B2b2 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG2_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -2486,7 +2541,8 @@ impl From<Trig1Chain32B2b2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain32B2b3 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG3_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -2517,7 +2573,8 @@ impl From<Trig1Chain32B2b3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain32Csel2 {
     #[doc = "ADC Channel 0 selected."]
@@ -2576,7 +2633,8 @@ impl From<Trig1Chain32Csel2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain32Csel3 {
     #[doc = "ADC Channel 0 selected."]
@@ -2665,6 +2723,7 @@ impl Trig1Chain32Hwts2 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig1Chain32Hwts2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -2741,6 +2800,7 @@ impl Trig1Chain32Hwts3 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig1Chain32Hwts3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -2787,7 +2847,8 @@ impl From<Trig1Chain32Hwts3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain32Ie2 {
     #[doc = "No interrupt when finished."]
@@ -2822,7 +2883,8 @@ impl From<Trig1Chain32Ie2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain32Ie3 {
     #[doc = "No interrupt when finished."]
@@ -2857,7 +2919,8 @@ impl From<Trig1Chain32Ie3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain54B2b4 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG4_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -2888,7 +2951,8 @@ impl From<Trig1Chain54B2b4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain54B2b5 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG5_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -2919,7 +2983,8 @@ impl From<Trig1Chain54B2b5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain54Csel4 {
     #[doc = "ADC Channel 0 selected."]
@@ -2978,7 +3043,8 @@ impl From<Trig1Chain54Csel4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain54Csel5 {
     #[doc = "ADC Channel 0 selected."]
@@ -3067,6 +3133,7 @@ impl Trig1Chain54Hwts4 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig1Chain54Hwts4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -3143,6 +3210,7 @@ impl Trig1Chain54Hwts5 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig1Chain54Hwts5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -3189,7 +3257,8 @@ impl From<Trig1Chain54Hwts5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain54Ie4 {
     #[doc = "No interrupt when finished."]
@@ -3224,7 +3293,8 @@ impl From<Trig1Chain54Ie4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain54Ie5 {
     #[doc = "No interrupt when finished."]
@@ -3259,7 +3329,8 @@ impl From<Trig1Chain54Ie5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain76B2b6 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG6_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -3290,7 +3361,8 @@ impl From<Trig1Chain76B2b6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain76B2b7 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG7_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -3321,7 +3393,8 @@ impl From<Trig1Chain76B2b7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain76Csel6 {
     #[doc = "ADC Channel 0 selected."]
@@ -3380,7 +3453,8 @@ impl From<Trig1Chain76Csel6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain76Csel7 {
     #[doc = "ADC Channel 0 selected."]
@@ -3469,6 +3543,7 @@ impl Trig1Chain76Hwts6 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig1Chain76Hwts6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -3545,6 +3620,7 @@ impl Trig1Chain76Hwts7 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig1Chain76Hwts7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -3591,7 +3667,8 @@ impl From<Trig1Chain76Hwts7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain76Ie6 {
     #[doc = "No interrupt when finished."]
@@ -3626,7 +3703,8 @@ impl From<Trig1Chain76Ie6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain76Ie7 {
     #[doc = "No interrupt when finished."]
@@ -3661,7 +3739,8 @@ impl From<Trig1Chain76Ie7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1CtrlSwTrig {
     #[doc = "No software trigger event generated."]
@@ -3692,7 +3771,8 @@ impl From<Trig1CtrlSwTrig> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1CtrlSyncMode {
     #[doc = "Synchronization mode disabled, TRIGa and TRIG(a+4) are triggered independently."]
@@ -3723,7 +3803,8 @@ impl From<Trig1CtrlSyncMode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1CtrlTrigChain {
     #[doc = "Trigger chain length is 1."]
@@ -3766,7 +3847,8 @@ impl From<Trig1CtrlTrigChain> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1CtrlTrigMode {
     #[doc = "Hardware trigger. The softerware trigger will be ignored."]
@@ -3797,7 +3879,8 @@ impl From<Trig1CtrlTrigMode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Done0 {
     #[doc = "No TRIG1_DONE0 interrupt detected."]
@@ -3828,7 +3911,8 @@ impl From<Trig1Done0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Done1 {
     #[doc = "No TRIG1_DONE1 interrupt detected."]
@@ -3859,7 +3943,8 @@ impl From<Trig1Done1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Done2 {
     #[doc = "No TRIG1_DONE2 interrupt detected."]
@@ -3890,7 +3975,8 @@ impl From<Trig1Done2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Enable {
     #[doc = "TRIG1 DMA request disabled."]
@@ -3921,7 +4007,8 @@ impl From<Trig1Enable> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Err {
     #[doc = "No TRIG1_ERR interrupt detected."]
@@ -3952,7 +4039,8 @@ impl From<Trig1Err> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Req {
     #[doc = "TRIG1_REQ not detected."]
@@ -3983,7 +4071,8 @@ impl From<Trig1Req> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain10B2b0 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG0_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -4014,7 +4103,8 @@ impl From<Trig2Chain10B2b0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain10B2b1 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG1_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -4045,7 +4135,8 @@ impl From<Trig2Chain10B2b1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain10Csel0 {
     #[doc = "ADC Channel 0 selected."]
@@ -4104,7 +4195,8 @@ impl From<Trig2Chain10Csel0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain10Csel1 {
     #[doc = "ADC Channel 0 selected."]
@@ -4193,6 +4285,7 @@ impl Trig2Chain10Hwts0 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig2Chain10Hwts0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -4269,6 +4362,7 @@ impl Trig2Chain10Hwts1 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig2Chain10Hwts1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -4315,7 +4409,8 @@ impl From<Trig2Chain10Hwts1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain10Ie0 {
     #[doc = "No interrupt when finished."]
@@ -4350,7 +4445,8 @@ impl From<Trig2Chain10Ie0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain10Ie1 {
     #[doc = "No interrupt when finished."]
@@ -4385,7 +4481,8 @@ impl From<Trig2Chain10Ie1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain32B2b2 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG2_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -4416,7 +4513,8 @@ impl From<Trig2Chain32B2b2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain32B2b3 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG3_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -4447,7 +4545,8 @@ impl From<Trig2Chain32B2b3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain32Csel2 {
     #[doc = "ADC Channel 0 selected."]
@@ -4506,7 +4605,8 @@ impl From<Trig2Chain32Csel2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain32Csel3 {
     #[doc = "ADC Channel 0 selected."]
@@ -4595,6 +4695,7 @@ impl Trig2Chain32Hwts2 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig2Chain32Hwts2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -4671,6 +4772,7 @@ impl Trig2Chain32Hwts3 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig2Chain32Hwts3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -4717,7 +4819,8 @@ impl From<Trig2Chain32Hwts3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain32Ie2 {
     #[doc = "No interrupt when finished."]
@@ -4752,7 +4855,8 @@ impl From<Trig2Chain32Ie2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain32Ie3 {
     #[doc = "No interrupt when finished."]
@@ -4787,7 +4891,8 @@ impl From<Trig2Chain32Ie3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain54B2b4 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG4_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -4818,7 +4923,8 @@ impl From<Trig2Chain54B2b4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain54B2b5 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG5_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -4849,7 +4955,8 @@ impl From<Trig2Chain54B2b5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain54Csel4 {
     #[doc = "ADC Channel 0 selected."]
@@ -4908,7 +5015,8 @@ impl From<Trig2Chain54Csel4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain54Csel5 {
     #[doc = "ADC Channel 0 selected."]
@@ -4997,6 +5105,7 @@ impl Trig2Chain54Hwts4 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig2Chain54Hwts4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -5073,6 +5182,7 @@ impl Trig2Chain54Hwts5 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig2Chain54Hwts5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -5119,7 +5229,8 @@ impl From<Trig2Chain54Hwts5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain54Ie4 {
     #[doc = "No interrupt when finished."]
@@ -5154,7 +5265,8 @@ impl From<Trig2Chain54Ie4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain54Ie5 {
     #[doc = "No interrupt when finished."]
@@ -5189,7 +5301,8 @@ impl From<Trig2Chain54Ie5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain76B2b6 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG6_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -5220,7 +5333,8 @@ impl From<Trig2Chain76B2b6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain76B2b7 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG7_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -5251,7 +5365,8 @@ impl From<Trig2Chain76B2b7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain76Csel6 {
     #[doc = "ADC Channel 0 selected."]
@@ -5310,7 +5425,8 @@ impl From<Trig2Chain76Csel6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain76Csel7 {
     #[doc = "ADC Channel 0 selected."]
@@ -5399,6 +5515,7 @@ impl Trig2Chain76Hwts6 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig2Chain76Hwts6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -5475,6 +5592,7 @@ impl Trig2Chain76Hwts7 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig2Chain76Hwts7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -5521,7 +5639,8 @@ impl From<Trig2Chain76Hwts7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain76Ie6 {
     #[doc = "No interrupt when finished."]
@@ -5556,7 +5675,8 @@ impl From<Trig2Chain76Ie6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain76Ie7 {
     #[doc = "No interrupt when finished."]
@@ -5591,7 +5711,8 @@ impl From<Trig2Chain76Ie7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2CtrlSwTrig {
     #[doc = "No software trigger event generated."]
@@ -5622,7 +5743,8 @@ impl From<Trig2CtrlSwTrig> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2CtrlSyncMode {
     #[doc = "Synchronization mode disabled, TRIGa and TRIG(a+4) are triggered independently."]
@@ -5653,7 +5775,8 @@ impl From<Trig2CtrlSyncMode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2CtrlTrigChain {
     #[doc = "Trigger chain length is 1."]
@@ -5696,7 +5819,8 @@ impl From<Trig2CtrlTrigChain> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2CtrlTrigMode {
     #[doc = "Hardware trigger. The softerware trigger will be ignored."]
@@ -5727,7 +5851,8 @@ impl From<Trig2CtrlTrigMode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Done0 {
     #[doc = "No TRIG2_DONE0 interrupt detected."]
@@ -5758,7 +5883,8 @@ impl From<Trig2Done0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Done1 {
     #[doc = "No TRIG2_DONE1 interrupt detected."]
@@ -5789,7 +5915,8 @@ impl From<Trig2Done1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Done2 {
     #[doc = "No TRIG2_DONE2 interrupt detected."]
@@ -5820,7 +5947,8 @@ impl From<Trig2Done2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Enable {
     #[doc = "TRIG2 DMA request disabled."]
@@ -5851,7 +5979,8 @@ impl From<Trig2Enable> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Err {
     #[doc = "No TRIG2_ERR interrupt detected."]
@@ -5882,7 +6011,8 @@ impl From<Trig2Err> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Req {
     #[doc = "TRIG2_REQ not detected."]
@@ -5913,7 +6043,8 @@ impl From<Trig2Req> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain10B2b0 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG0_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -5944,7 +6075,8 @@ impl From<Trig3Chain10B2b0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain10B2b1 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG1_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -5975,7 +6107,8 @@ impl From<Trig3Chain10B2b1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain10Csel0 {
     #[doc = "ADC Channel 0 selected."]
@@ -6034,7 +6167,8 @@ impl From<Trig3Chain10Csel0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain10Csel1 {
     #[doc = "ADC Channel 0 selected."]
@@ -6123,6 +6257,7 @@ impl Trig3Chain10Hwts0 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig3Chain10Hwts0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -6199,6 +6334,7 @@ impl Trig3Chain10Hwts1 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig3Chain10Hwts1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -6245,7 +6381,8 @@ impl From<Trig3Chain10Hwts1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain10Ie0 {
     #[doc = "No interrupt when finished."]
@@ -6280,7 +6417,8 @@ impl From<Trig3Chain10Ie0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain10Ie1 {
     #[doc = "No interrupt when finished."]
@@ -6315,7 +6453,8 @@ impl From<Trig3Chain10Ie1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain32B2b2 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG2_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -6346,7 +6485,8 @@ impl From<Trig3Chain32B2b2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain32B2b3 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG3_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -6377,7 +6517,8 @@ impl From<Trig3Chain32B2b3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain32Csel2 {
     #[doc = "ADC Channel 0 selected."]
@@ -6436,7 +6577,8 @@ impl From<Trig3Chain32Csel2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain32Csel3 {
     #[doc = "ADC Channel 0 selected."]
@@ -6525,6 +6667,7 @@ impl Trig3Chain32Hwts2 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig3Chain32Hwts2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -6601,6 +6744,7 @@ impl Trig3Chain32Hwts3 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig3Chain32Hwts3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -6647,7 +6791,8 @@ impl From<Trig3Chain32Hwts3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain32Ie2 {
     #[doc = "No interrupt when finished."]
@@ -6682,7 +6827,8 @@ impl From<Trig3Chain32Ie2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain32Ie3 {
     #[doc = "No interrupt when finished."]
@@ -6717,7 +6863,8 @@ impl From<Trig3Chain32Ie3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain54B2b4 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG4_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -6748,7 +6895,8 @@ impl From<Trig3Chain54B2b4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain54B2b5 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG5_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -6779,7 +6927,8 @@ impl From<Trig3Chain54B2b5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain54Csel4 {
     #[doc = "ADC Channel 0 selected."]
@@ -6838,7 +6987,8 @@ impl From<Trig3Chain54Csel4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain54Csel5 {
     #[doc = "ADC Channel 0 selected."]
@@ -6927,6 +7077,7 @@ impl Trig3Chain54Hwts4 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig3Chain54Hwts4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -7003,6 +7154,7 @@ impl Trig3Chain54Hwts5 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig3Chain54Hwts5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -7049,7 +7201,8 @@ impl From<Trig3Chain54Hwts5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain54Ie4 {
     #[doc = "No interrupt when finished."]
@@ -7084,7 +7237,8 @@ impl From<Trig3Chain54Ie4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain54Ie5 {
     #[doc = "No interrupt when finished."]
@@ -7119,7 +7273,8 @@ impl From<Trig3Chain54Ie5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain76B2b6 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG6_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -7150,7 +7305,8 @@ impl From<Trig3Chain76B2b6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain76B2b7 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG7_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -7181,7 +7337,8 @@ impl From<Trig3Chain76B2b7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain76Csel6 {
     #[doc = "ADC Channel 0 selected."]
@@ -7240,7 +7397,8 @@ impl From<Trig3Chain76Csel6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain76Csel7 {
     #[doc = "ADC Channel 0 selected."]
@@ -7329,6 +7487,7 @@ impl Trig3Chain76Hwts6 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig3Chain76Hwts6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -7405,6 +7564,7 @@ impl Trig3Chain76Hwts7 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig3Chain76Hwts7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -7451,7 +7611,8 @@ impl From<Trig3Chain76Hwts7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain76Ie6 {
     #[doc = "No interrupt when finished."]
@@ -7486,7 +7647,8 @@ impl From<Trig3Chain76Ie6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain76Ie7 {
     #[doc = "No interrupt when finished."]
@@ -7521,7 +7683,8 @@ impl From<Trig3Chain76Ie7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3CtrlSwTrig {
     #[doc = "No software trigger event generated."]
@@ -7552,7 +7715,8 @@ impl From<Trig3CtrlSwTrig> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3CtrlSyncMode {
     #[doc = "Synchronization mode disabled, TRIGa and TRIG(a+4) are triggered independently."]
@@ -7583,7 +7747,8 @@ impl From<Trig3CtrlSyncMode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3CtrlTrigChain {
     #[doc = "Trigger chain length is 1."]
@@ -7626,7 +7791,8 @@ impl From<Trig3CtrlTrigChain> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3CtrlTrigMode {
     #[doc = "Hardware trigger. The softerware trigger will be ignored."]
@@ -7657,7 +7823,8 @@ impl From<Trig3CtrlTrigMode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Done0 {
     #[doc = "No TRIG3_DONE0 interrupt detected."]
@@ -7688,7 +7855,8 @@ impl From<Trig3Done0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Done1 {
     #[doc = "No TRIG3_DONE1 interrupt detected."]
@@ -7719,7 +7887,8 @@ impl From<Trig3Done1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Done2 {
     #[doc = "No TRIG3_DONE2 interrupt detected."]
@@ -7750,7 +7919,8 @@ impl From<Trig3Done2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Enable {
     #[doc = "TRIG3 DMA request disabled."]
@@ -7781,7 +7951,8 @@ impl From<Trig3Enable> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Err {
     #[doc = "No TRIG3_ERR interrupt detected."]
@@ -7812,7 +7983,8 @@ impl From<Trig3Err> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Req {
     #[doc = "TRIG3_REQ not detected."]
@@ -7843,7 +8015,8 @@ impl From<Trig3Req> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain10B2b0 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG0_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -7874,7 +8047,8 @@ impl From<Trig4Chain10B2b0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain10B2b1 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG1_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -7905,7 +8079,8 @@ impl From<Trig4Chain10B2b1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain10Csel0 {
     #[doc = "ADC Channel 0 selected."]
@@ -7964,7 +8139,8 @@ impl From<Trig4Chain10Csel0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain10Csel1 {
     #[doc = "ADC Channel 0 selected."]
@@ -8053,6 +8229,7 @@ impl Trig4Chain10Hwts0 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig4Chain10Hwts0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -8129,6 +8306,7 @@ impl Trig4Chain10Hwts1 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig4Chain10Hwts1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -8175,7 +8353,8 @@ impl From<Trig4Chain10Hwts1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain10Ie0 {
     #[doc = "No interrupt when finished."]
@@ -8210,7 +8389,8 @@ impl From<Trig4Chain10Ie0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain10Ie1 {
     #[doc = "No interrupt when finished."]
@@ -8245,7 +8425,8 @@ impl From<Trig4Chain10Ie1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain32B2b2 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG2_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -8276,7 +8457,8 @@ impl From<Trig4Chain32B2b2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain32B2b3 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG3_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -8307,7 +8489,8 @@ impl From<Trig4Chain32B2b3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain32Csel2 {
     #[doc = "ADC Channel 0 selected."]
@@ -8366,7 +8549,8 @@ impl From<Trig4Chain32Csel2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain32Csel3 {
     #[doc = "ADC Channel 0 selected."]
@@ -8455,6 +8639,7 @@ impl Trig4Chain32Hwts2 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig4Chain32Hwts2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -8531,6 +8716,7 @@ impl Trig4Chain32Hwts3 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig4Chain32Hwts3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -8577,7 +8763,8 @@ impl From<Trig4Chain32Hwts3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain32Ie2 {
     #[doc = "No interrupt when finished."]
@@ -8612,7 +8799,8 @@ impl From<Trig4Chain32Ie2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain32Ie3 {
     #[doc = "No interrupt when finished."]
@@ -8647,7 +8835,8 @@ impl From<Trig4Chain32Ie3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain54B2b4 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG4_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -8678,7 +8867,8 @@ impl From<Trig4Chain54B2b4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain54B2b5 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG5_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -8709,7 +8899,8 @@ impl From<Trig4Chain54B2b5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain54Csel4 {
     #[doc = "ADC Channel 0 selected."]
@@ -8768,7 +8959,8 @@ impl From<Trig4Chain54Csel4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain54Csel5 {
     #[doc = "ADC Channel 0 selected."]
@@ -8857,6 +9049,7 @@ impl Trig4Chain54Hwts4 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig4Chain54Hwts4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -8933,6 +9126,7 @@ impl Trig4Chain54Hwts5 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig4Chain54Hwts5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -8979,7 +9173,8 @@ impl From<Trig4Chain54Hwts5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain54Ie4 {
     #[doc = "No interrupt when finished."]
@@ -9014,7 +9209,8 @@ impl From<Trig4Chain54Ie4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain54Ie5 {
     #[doc = "No interrupt when finished."]
@@ -9049,7 +9245,8 @@ impl From<Trig4Chain54Ie5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain76B2b6 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG6_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -9080,7 +9277,8 @@ impl From<Trig4Chain76B2b6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain76B2b7 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG7_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -9111,7 +9309,8 @@ impl From<Trig4Chain76B2b7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain76Csel6 {
     #[doc = "ADC Channel 0 selected."]
@@ -9170,7 +9369,8 @@ impl From<Trig4Chain76Csel6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain76Csel7 {
     #[doc = "ADC Channel 0 selected."]
@@ -9259,6 +9459,7 @@ impl Trig4Chain76Hwts6 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig4Chain76Hwts6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -9335,6 +9536,7 @@ impl Trig4Chain76Hwts7 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig4Chain76Hwts7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -9381,7 +9583,8 @@ impl From<Trig4Chain76Hwts7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain76Ie6 {
     #[doc = "No interrupt when finished."]
@@ -9416,7 +9619,8 @@ impl From<Trig4Chain76Ie6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain76Ie7 {
     #[doc = "No interrupt when finished."]
@@ -9451,7 +9655,8 @@ impl From<Trig4Chain76Ie7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4CtrlSwTrig {
     #[doc = "No software trigger event generated."]
@@ -9482,7 +9687,8 @@ impl From<Trig4CtrlSwTrig> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4CtrlSyncMode {
     #[doc = "Synchronization mode disabled, TRIGa and TRIG(a+4) are triggered independently."]
@@ -9513,7 +9719,8 @@ impl From<Trig4CtrlSyncMode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4CtrlTrigChain {
     #[doc = "Trigger chain length is 1."]
@@ -9556,7 +9763,8 @@ impl From<Trig4CtrlTrigChain> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4CtrlTrigMode {
     #[doc = "Hardware trigger. The softerware trigger will be ignored."]
@@ -9587,7 +9795,8 @@ impl From<Trig4CtrlTrigMode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Done0 {
     #[doc = "No TRIG4_DONE0 interrupt detected."]
@@ -9618,7 +9827,8 @@ impl From<Trig4Done0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Done1 {
     #[doc = "No TRIG4_DONE1 interrupt detected."]
@@ -9649,7 +9859,8 @@ impl From<Trig4Done1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Done2 {
     #[doc = "No TRIG4_DONE2 interrupt detected."]
@@ -9680,7 +9891,8 @@ impl From<Trig4Done2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Enable {
     #[doc = "TRIG4 DMA request disabled."]
@@ -9711,7 +9923,8 @@ impl From<Trig4Enable> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Err {
     #[doc = "No TRIG4_ERR interrupt detected."]
@@ -9742,7 +9955,8 @@ impl From<Trig4Err> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Req {
     #[doc = "TRIG4_REQ not detected."]
@@ -9773,7 +9987,8 @@ impl From<Trig4Req> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain10B2b0 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG0_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -9804,7 +10019,8 @@ impl From<Trig5Chain10B2b0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain10B2b1 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG1_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -9835,7 +10051,8 @@ impl From<Trig5Chain10B2b1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain10Csel0 {
     #[doc = "ADC Channel 0 selected."]
@@ -9894,7 +10111,8 @@ impl From<Trig5Chain10Csel0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain10Csel1 {
     #[doc = "ADC Channel 0 selected."]
@@ -9983,6 +10201,7 @@ impl Trig5Chain10Hwts0 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig5Chain10Hwts0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -10059,6 +10278,7 @@ impl Trig5Chain10Hwts1 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig5Chain10Hwts1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -10105,7 +10325,8 @@ impl From<Trig5Chain10Hwts1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain10Ie0 {
     #[doc = "No interrupt when finished."]
@@ -10140,7 +10361,8 @@ impl From<Trig5Chain10Ie0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain10Ie1 {
     #[doc = "No interrupt when finished."]
@@ -10175,7 +10397,8 @@ impl From<Trig5Chain10Ie1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain32B2b2 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG2_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -10206,7 +10429,8 @@ impl From<Trig5Chain32B2b2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain32B2b3 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG3_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -10237,7 +10461,8 @@ impl From<Trig5Chain32B2b3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain32Csel2 {
     #[doc = "ADC Channel 0 selected."]
@@ -10296,7 +10521,8 @@ impl From<Trig5Chain32Csel2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain32Csel3 {
     #[doc = "ADC Channel 0 selected."]
@@ -10385,6 +10611,7 @@ impl Trig5Chain32Hwts2 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig5Chain32Hwts2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -10461,6 +10688,7 @@ impl Trig5Chain32Hwts3 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig5Chain32Hwts3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -10507,7 +10735,8 @@ impl From<Trig5Chain32Hwts3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain32Ie2 {
     #[doc = "No interrupt when finished."]
@@ -10542,7 +10771,8 @@ impl From<Trig5Chain32Ie2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain32Ie3 {
     #[doc = "No interrupt when finished."]
@@ -10577,7 +10807,8 @@ impl From<Trig5Chain32Ie3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain54B2b4 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG4_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -10608,7 +10839,8 @@ impl From<Trig5Chain54B2b4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain54B2b5 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG5_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -10639,7 +10871,8 @@ impl From<Trig5Chain54B2b5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain54Csel4 {
     #[doc = "ADC Channel 0 selected."]
@@ -10698,7 +10931,8 @@ impl From<Trig5Chain54Csel4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain54Csel5 {
     #[doc = "ADC Channel 0 selected."]
@@ -10787,6 +11021,7 @@ impl Trig5Chain54Hwts4 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig5Chain54Hwts4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -10863,6 +11098,7 @@ impl Trig5Chain54Hwts5 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig5Chain54Hwts5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -10909,7 +11145,8 @@ impl From<Trig5Chain54Hwts5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain54Ie4 {
     #[doc = "No interrupt when finished."]
@@ -10944,7 +11181,8 @@ impl From<Trig5Chain54Ie4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain54Ie5 {
     #[doc = "No interrupt when finished."]
@@ -10979,7 +11217,8 @@ impl From<Trig5Chain54Ie5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain76B2b6 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG6_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -11010,7 +11249,8 @@ impl From<Trig5Chain76B2b6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain76B2b7 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG7_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -11041,7 +11281,8 @@ impl From<Trig5Chain76B2b7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain76Csel6 {
     #[doc = "ADC Channel 0 selected."]
@@ -11100,7 +11341,8 @@ impl From<Trig5Chain76Csel6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain76Csel7 {
     #[doc = "ADC Channel 0 selected."]
@@ -11189,6 +11431,7 @@ impl Trig5Chain76Hwts6 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig5Chain76Hwts6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -11265,6 +11508,7 @@ impl Trig5Chain76Hwts7 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig5Chain76Hwts7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -11311,7 +11555,8 @@ impl From<Trig5Chain76Hwts7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain76Ie6 {
     #[doc = "No interrupt when finished."]
@@ -11346,7 +11591,8 @@ impl From<Trig5Chain76Ie6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain76Ie7 {
     #[doc = "No interrupt when finished."]
@@ -11381,7 +11627,8 @@ impl From<Trig5Chain76Ie7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5CtrlSwTrig {
     #[doc = "No software trigger event generated."]
@@ -11412,7 +11659,8 @@ impl From<Trig5CtrlSwTrig> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5CtrlSyncMode {
     #[doc = "Synchronization mode disabled, TRIGa and TRIG(a+4) are triggered independently."]
@@ -11443,7 +11691,8 @@ impl From<Trig5CtrlSyncMode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5CtrlTrigChain {
     #[doc = "Trigger chain length is 1."]
@@ -11486,7 +11735,8 @@ impl From<Trig5CtrlTrigChain> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5CtrlTrigMode {
     #[doc = "Hardware trigger. The softerware trigger will be ignored."]
@@ -11517,7 +11767,8 @@ impl From<Trig5CtrlTrigMode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Done0 {
     #[doc = "No TRIG5_DONE0 interrupt detected."]
@@ -11548,7 +11799,8 @@ impl From<Trig5Done0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Done1 {
     #[doc = "No TRIG5_DONE1 interrupt detected."]
@@ -11579,7 +11831,8 @@ impl From<Trig5Done1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Done2 {
     #[doc = "No TRIG5_DONE2 interrupt detected."]
@@ -11610,7 +11863,8 @@ impl From<Trig5Done2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Enable {
     #[doc = "TRIG5 DMA request disabled."]
@@ -11641,7 +11895,8 @@ impl From<Trig5Enable> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Err {
     #[doc = "No TRIG5_ERR interrupt detected."]
@@ -11672,7 +11927,8 @@ impl From<Trig5Err> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Req {
     #[doc = "TRIG5_REQ not detected."]
@@ -11703,7 +11959,8 @@ impl From<Trig5Req> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain10B2b0 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG0_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -11734,7 +11991,8 @@ impl From<Trig6Chain10B2b0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain10B2b1 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG1_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -11765,7 +12023,8 @@ impl From<Trig6Chain10B2b1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain10Csel0 {
     #[doc = "ADC Channel 0 selected."]
@@ -11824,7 +12083,8 @@ impl From<Trig6Chain10Csel0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain10Csel1 {
     #[doc = "ADC Channel 0 selected."]
@@ -11913,6 +12173,7 @@ impl Trig6Chain10Hwts0 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig6Chain10Hwts0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -11989,6 +12250,7 @@ impl Trig6Chain10Hwts1 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig6Chain10Hwts1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -12035,7 +12297,8 @@ impl From<Trig6Chain10Hwts1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain10Ie0 {
     #[doc = "No interrupt when finished."]
@@ -12070,7 +12333,8 @@ impl From<Trig6Chain10Ie0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain10Ie1 {
     #[doc = "No interrupt when finished."]
@@ -12105,7 +12369,8 @@ impl From<Trig6Chain10Ie1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain32B2b2 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG2_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -12136,7 +12401,8 @@ impl From<Trig6Chain32B2b2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain32B2b3 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG3_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -12167,7 +12433,8 @@ impl From<Trig6Chain32B2b3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain32Csel2 {
     #[doc = "ADC Channel 0 selected."]
@@ -12226,7 +12493,8 @@ impl From<Trig6Chain32Csel2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain32Csel3 {
     #[doc = "ADC Channel 0 selected."]
@@ -12315,6 +12583,7 @@ impl Trig6Chain32Hwts2 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig6Chain32Hwts2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -12391,6 +12660,7 @@ impl Trig6Chain32Hwts3 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig6Chain32Hwts3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -12437,7 +12707,8 @@ impl From<Trig6Chain32Hwts3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain32Ie2 {
     #[doc = "No interrupt when finished."]
@@ -12472,7 +12743,8 @@ impl From<Trig6Chain32Ie2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain32Ie3 {
     #[doc = "No interrupt when finished."]
@@ -12507,7 +12779,8 @@ impl From<Trig6Chain32Ie3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain54B2b4 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG4_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -12538,7 +12811,8 @@ impl From<Trig6Chain54B2b4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain54B2b5 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG5_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -12569,7 +12843,8 @@ impl From<Trig6Chain54B2b5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain54Csel4 {
     #[doc = "ADC Channel 0 selected."]
@@ -12628,7 +12903,8 @@ impl From<Trig6Chain54Csel4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain54Csel5 {
     #[doc = "ADC Channel 0 selected."]
@@ -12717,6 +12993,7 @@ impl Trig6Chain54Hwts4 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig6Chain54Hwts4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -12793,6 +13070,7 @@ impl Trig6Chain54Hwts5 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig6Chain54Hwts5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -12839,7 +13117,8 @@ impl From<Trig6Chain54Hwts5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain54Ie4 {
     #[doc = "No interrupt when finished."]
@@ -12874,7 +13153,8 @@ impl From<Trig6Chain54Ie4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain54Ie5 {
     #[doc = "No interrupt when finished."]
@@ -12909,7 +13189,8 @@ impl From<Trig6Chain54Ie5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain76B2b6 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG6_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -12940,7 +13221,8 @@ impl From<Trig6Chain76B2b6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain76B2b7 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG7_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -12971,7 +13253,8 @@ impl From<Trig6Chain76B2b7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain76Csel6 {
     #[doc = "ADC Channel 0 selected."]
@@ -13030,7 +13313,8 @@ impl From<Trig6Chain76Csel6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain76Csel7 {
     #[doc = "ADC Channel 0 selected."]
@@ -13119,6 +13403,7 @@ impl Trig6Chain76Hwts6 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig6Chain76Hwts6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -13195,6 +13480,7 @@ impl Trig6Chain76Hwts7 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig6Chain76Hwts7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -13241,7 +13527,8 @@ impl From<Trig6Chain76Hwts7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain76Ie6 {
     #[doc = "No interrupt when finished."]
@@ -13276,7 +13563,8 @@ impl From<Trig6Chain76Ie6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain76Ie7 {
     #[doc = "No interrupt when finished."]
@@ -13311,7 +13599,8 @@ impl From<Trig6Chain76Ie7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6CtrlSwTrig {
     #[doc = "No software trigger event generated."]
@@ -13342,7 +13631,8 @@ impl From<Trig6CtrlSwTrig> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6CtrlSyncMode {
     #[doc = "Synchronization mode disabled, TRIGa and TRIG(a+4) are triggered independently."]
@@ -13373,7 +13663,8 @@ impl From<Trig6CtrlSyncMode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6CtrlTrigChain {
     #[doc = "Trigger chain length is 1."]
@@ -13416,7 +13707,8 @@ impl From<Trig6CtrlTrigChain> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6CtrlTrigMode {
     #[doc = "Hardware trigger. The softerware trigger will be ignored."]
@@ -13447,7 +13739,8 @@ impl From<Trig6CtrlTrigMode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Done0 {
     #[doc = "No TRIG6_DONE0 interrupt detected."]
@@ -13478,7 +13771,8 @@ impl From<Trig6Done0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Done1 {
     #[doc = "No TRIG6_DONE1 interrupt detected."]
@@ -13509,7 +13803,8 @@ impl From<Trig6Done1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Done2 {
     #[doc = "No TRIG6_DONE2 interrupt detected."]
@@ -13540,7 +13835,8 @@ impl From<Trig6Done2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Enable {
     #[doc = "TRIG6 DMA request disabled."]
@@ -13571,7 +13867,8 @@ impl From<Trig6Enable> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Err {
     #[doc = "No TRIG6_ERR interrupt detected."]
@@ -13602,7 +13899,8 @@ impl From<Trig6Err> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Req {
     #[doc = "TRIG6_REQ not detected."]
@@ -13633,7 +13931,8 @@ impl From<Trig6Req> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain10B2b0 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG0_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -13664,7 +13963,8 @@ impl From<Trig7Chain10B2b0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain10B2b1 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG1_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -13695,7 +13995,8 @@ impl From<Trig7Chain10B2b1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain10Csel0 {
     #[doc = "ADC Channel 0 selected."]
@@ -13754,7 +14055,8 @@ impl From<Trig7Chain10Csel0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain10Csel1 {
     #[doc = "ADC Channel 0 selected."]
@@ -13843,6 +14145,7 @@ impl Trig7Chain10Hwts0 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig7Chain10Hwts0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -13919,6 +14222,7 @@ impl Trig7Chain10Hwts1 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig7Chain10Hwts1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -13965,7 +14269,8 @@ impl From<Trig7Chain10Hwts1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain10Ie0 {
     #[doc = "No interrupt when finished."]
@@ -14000,7 +14305,8 @@ impl From<Trig7Chain10Ie0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain10Ie1 {
     #[doc = "No interrupt when finished."]
@@ -14035,7 +14341,8 @@ impl From<Trig7Chain10Ie1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain32B2b2 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG2_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -14066,7 +14373,8 @@ impl From<Trig7Chain32B2b2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain32B2b3 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG3_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -14097,7 +14405,8 @@ impl From<Trig7Chain32B2b3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain32Csel2 {
     #[doc = "ADC Channel 0 selected."]
@@ -14156,7 +14465,8 @@ impl From<Trig7Chain32Csel2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain32Csel3 {
     #[doc = "ADC Channel 0 selected."]
@@ -14245,6 +14555,7 @@ impl Trig7Chain32Hwts2 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig7Chain32Hwts2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -14321,6 +14632,7 @@ impl Trig7Chain32Hwts3 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig7Chain32Hwts3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -14367,7 +14679,8 @@ impl From<Trig7Chain32Hwts3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain32Ie2 {
     #[doc = "No interrupt when finished."]
@@ -14402,7 +14715,8 @@ impl From<Trig7Chain32Ie2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain32Ie3 {
     #[doc = "No interrupt when finished."]
@@ -14437,7 +14751,8 @@ impl From<Trig7Chain32Ie3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain54B2b4 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG4_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -14468,7 +14783,8 @@ impl From<Trig7Chain54B2b4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain54B2b5 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG5_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -14499,7 +14815,8 @@ impl From<Trig7Chain54B2b5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain54Csel4 {
     #[doc = "ADC Channel 0 selected."]
@@ -14558,7 +14875,8 @@ impl From<Trig7Chain54Csel4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain54Csel5 {
     #[doc = "ADC Channel 0 selected."]
@@ -14647,6 +14965,7 @@ impl Trig7Chain54Hwts4 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig7Chain54Hwts4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -14723,6 +15042,7 @@ impl Trig7Chain54Hwts5 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig7Chain54Hwts5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -14769,7 +15089,8 @@ impl From<Trig7Chain54Hwts5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain54Ie4 {
     #[doc = "No interrupt when finished."]
@@ -14804,7 +15125,8 @@ impl From<Trig7Chain54Ie4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain54Ie5 {
     #[doc = "No interrupt when finished."]
@@ -14839,7 +15161,8 @@ impl From<Trig7Chain54Ie5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain76B2b6 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG6_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -14870,7 +15193,8 @@ impl From<Trig7Chain76B2b6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain76B2b7 {
     #[doc = "Disable B2B. Wait until delay value defined by TRIG7_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
@@ -14901,7 +15225,8 @@ impl From<Trig7Chain76B2b7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain76Csel6 {
     #[doc = "ADC Channel 0 selected."]
@@ -14960,7 +15285,8 @@ impl From<Trig7Chain76Csel6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain76Csel7 {
     #[doc = "ADC Channel 0 selected."]
@@ -15049,6 +15375,7 @@ impl Trig7Chain76Hwts6 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig7Chain76Hwts6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -15125,6 +15452,7 @@ impl Trig7Chain76Hwts7 {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig7Chain76Hwts7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -15171,7 +15499,8 @@ impl From<Trig7Chain76Hwts7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain76Ie6 {
     #[doc = "No interrupt when finished."]
@@ -15206,7 +15535,8 @@ impl From<Trig7Chain76Ie6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain76Ie7 {
     #[doc = "No interrupt when finished."]
@@ -15241,7 +15571,8 @@ impl From<Trig7Chain76Ie7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7CtrlSwTrig {
     #[doc = "No software trigger event generated."]
@@ -15272,7 +15603,8 @@ impl From<Trig7CtrlSwTrig> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7CtrlSyncMode {
     #[doc = "Synchronization mode disabled, TRIGa and TRIG(a+4) are triggered independently."]
@@ -15303,7 +15635,8 @@ impl From<Trig7CtrlSyncMode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7CtrlTrigChain {
     #[doc = "Trigger chain length is 1."]
@@ -15346,7 +15679,8 @@ impl From<Trig7CtrlTrigChain> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7CtrlTrigMode {
     #[doc = "Hardware trigger. The softerware trigger will be ignored."]
@@ -15377,7 +15711,8 @@ impl From<Trig7CtrlTrigMode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Done0 {
     #[doc = "No TRIG7_DONE0 interrupt detected."]
@@ -15408,7 +15743,8 @@ impl From<Trig7Done0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Done1 {
     #[doc = "No TRIG7_DONE1 interrupt detected."]
@@ -15439,7 +15775,8 @@ impl From<Trig7Done1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Done2 {
     #[doc = "No TRIG7_DONE2 interrupt detected."]
@@ -15470,7 +15807,8 @@ impl From<Trig7Done2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Enable {
     #[doc = "TRIG7 DMA request disabled."]
@@ -15501,7 +15839,8 @@ impl From<Trig7Enable> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Err {
     #[doc = "No TRIG7_ERR interrupt detected."]
@@ -15532,7 +15871,8 @@ impl From<Trig7Err> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Req {
     #[doc = "TRIG7_REQ not detected."]
@@ -15585,6 +15925,7 @@ impl TrigEnable {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TrigEnable {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -15623,7 +15964,8 @@ impl From<TrigEnable> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TscBypass {
     #[doc = "TSC not bypassed."]

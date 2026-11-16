@@ -70,6 +70,7 @@ impl Default for Tempsense0 {
         Tempsense0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tempsense0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tempsense0")
@@ -167,6 +168,7 @@ impl Default for Tempsense0Clr {
         Tempsense0Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tempsense0Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tempsense0Clr")
@@ -264,6 +266,7 @@ impl Default for Tempsense0Set {
         Tempsense0Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tempsense0Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tempsense0Set")
@@ -361,6 +364,7 @@ impl Default for Tempsense0Tog {
         Tempsense0Tog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tempsense0Tog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tempsense0Tog")
@@ -394,14 +398,14 @@ impl Tempsense1 {
     #[doc = "This bits determines how many RTC clocks to wait before automatically repeating a temperature measurement."]
     #[must_use]
     #[inline(always)]
-    pub const fn measure_freq(&self) -> u16 {
+    pub const fn measure_freq(&self) -> super::vals::Tempsense1MeasureFreq {
         let val = (self.0 >> 0usize) & 0xffff;
-        val as u16
+        super::vals::Tempsense1MeasureFreq::from_bits(val as u16)
     }
     #[doc = "This bits determines how many RTC clocks to wait before automatically repeating a temperature measurement."]
     #[inline(always)]
-    pub const fn set_measure_freq(&mut self, val: u16) {
-        self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
+    pub const fn set_measure_freq(&mut self, val: super::vals::Tempsense1MeasureFreq) {
+        self.0 = (self.0 & !(0xffff << 0usize)) | (((val.to_bits() as u32) & 0xffff) << 0usize);
     }
 }
 impl Default for Tempsense1 {
@@ -410,6 +414,7 @@ impl Default for Tempsense1 {
         Tempsense1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tempsense1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tempsense1")
@@ -422,7 +427,7 @@ impl defmt::Format for Tempsense1 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Tempsense1 {{ measure_freq: {=u16:?} }}",
+            "Tempsense1 {{ measure_freq: {:?} }}",
             self.measure_freq()
         )
     }
@@ -435,14 +440,14 @@ impl Tempsense1Clr {
     #[doc = "This bits determines how many RTC clocks to wait before automatically repeating a temperature measurement."]
     #[must_use]
     #[inline(always)]
-    pub const fn measure_freq(&self) -> u16 {
+    pub const fn measure_freq(&self) -> super::vals::Tempsense1ClrMeasureFreq {
         let val = (self.0 >> 0usize) & 0xffff;
-        val as u16
+        super::vals::Tempsense1ClrMeasureFreq::from_bits(val as u16)
     }
     #[doc = "This bits determines how many RTC clocks to wait before automatically repeating a temperature measurement."]
     #[inline(always)]
-    pub const fn set_measure_freq(&mut self, val: u16) {
-        self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
+    pub const fn set_measure_freq(&mut self, val: super::vals::Tempsense1ClrMeasureFreq) {
+        self.0 = (self.0 & !(0xffff << 0usize)) | (((val.to_bits() as u32) & 0xffff) << 0usize);
     }
 }
 impl Default for Tempsense1Clr {
@@ -451,6 +456,7 @@ impl Default for Tempsense1Clr {
         Tempsense1Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tempsense1Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tempsense1Clr")
@@ -463,7 +469,7 @@ impl defmt::Format for Tempsense1Clr {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Tempsense1Clr {{ measure_freq: {=u16:?} }}",
+            "Tempsense1Clr {{ measure_freq: {:?} }}",
             self.measure_freq()
         )
     }
@@ -476,14 +482,14 @@ impl Tempsense1Set {
     #[doc = "This bits determines how many RTC clocks to wait before automatically repeating a temperature measurement."]
     #[must_use]
     #[inline(always)]
-    pub const fn measure_freq(&self) -> u16 {
+    pub const fn measure_freq(&self) -> super::vals::Tempsense1SetMeasureFreq {
         let val = (self.0 >> 0usize) & 0xffff;
-        val as u16
+        super::vals::Tempsense1SetMeasureFreq::from_bits(val as u16)
     }
     #[doc = "This bits determines how many RTC clocks to wait before automatically repeating a temperature measurement."]
     #[inline(always)]
-    pub const fn set_measure_freq(&mut self, val: u16) {
-        self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
+    pub const fn set_measure_freq(&mut self, val: super::vals::Tempsense1SetMeasureFreq) {
+        self.0 = (self.0 & !(0xffff << 0usize)) | (((val.to_bits() as u32) & 0xffff) << 0usize);
     }
 }
 impl Default for Tempsense1Set {
@@ -492,6 +498,7 @@ impl Default for Tempsense1Set {
         Tempsense1Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tempsense1Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tempsense1Set")
@@ -504,7 +511,7 @@ impl defmt::Format for Tempsense1Set {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Tempsense1Set {{ measure_freq: {=u16:?} }}",
+            "Tempsense1Set {{ measure_freq: {:?} }}",
             self.measure_freq()
         )
     }
@@ -517,14 +524,14 @@ impl Tempsense1Tog {
     #[doc = "This bits determines how many RTC clocks to wait before automatically repeating a temperature measurement."]
     #[must_use]
     #[inline(always)]
-    pub const fn measure_freq(&self) -> u16 {
+    pub const fn measure_freq(&self) -> super::vals::Tempsense1TogMeasureFreq {
         let val = (self.0 >> 0usize) & 0xffff;
-        val as u16
+        super::vals::Tempsense1TogMeasureFreq::from_bits(val as u16)
     }
     #[doc = "This bits determines how many RTC clocks to wait before automatically repeating a temperature measurement."]
     #[inline(always)]
-    pub const fn set_measure_freq(&mut self, val: u16) {
-        self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
+    pub const fn set_measure_freq(&mut self, val: super::vals::Tempsense1TogMeasureFreq) {
+        self.0 = (self.0 & !(0xffff << 0usize)) | (((val.to_bits() as u32) & 0xffff) << 0usize);
     }
 }
 impl Default for Tempsense1Tog {
@@ -533,6 +540,7 @@ impl Default for Tempsense1Tog {
         Tempsense1Tog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tempsense1Tog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tempsense1Tog")
@@ -545,7 +553,7 @@ impl defmt::Format for Tempsense1Tog {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Tempsense1Tog {{ measure_freq: {=u16:?} }}",
+            "Tempsense1Tog {{ measure_freq: {:?} }}",
             self.measure_freq()
         )
     }
@@ -586,6 +594,7 @@ impl Default for Tempsense2 {
         Tempsense2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tempsense2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tempsense2")
@@ -641,6 +650,7 @@ impl Default for Tempsense2Clr {
         Tempsense2Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tempsense2Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tempsense2Clr")
@@ -696,6 +706,7 @@ impl Default for Tempsense2Set {
         Tempsense2Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tempsense2Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tempsense2Set")
@@ -751,6 +762,7 @@ impl Default for Tempsense2Tog {
         Tempsense2Tog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tempsense2Tog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tempsense2Tog")

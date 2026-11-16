@@ -34,6 +34,7 @@ impl Default for Dspnmisrcsel {
         Dspnmisrcsel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dspnmisrcsel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dspnmisrcsel")
@@ -113,6 +114,7 @@ impl Default for Fcctrlsel {
         Fcctrlsel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fcctrlsel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fcctrlsel")
@@ -160,6 +162,7 @@ impl Default for Mclkpindir {
         Mclkpindir(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mclkpindir {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mclkpindir")
@@ -197,6 +200,7 @@ impl Default for Rxevpulsegen {
         Rxevpulsegen(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Rxevpulsegen {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Rxevpulsegen")
@@ -358,6 +362,7 @@ impl Default for Sharedctrlset {
         Sharedctrlset(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sharedctrlset {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sharedctrlset")

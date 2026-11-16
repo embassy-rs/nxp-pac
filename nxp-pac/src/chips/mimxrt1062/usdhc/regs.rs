@@ -46,6 +46,7 @@ impl Default for AdmaErrStatus {
         AdmaErrStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AdmaErrStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AdmaErrStatus")
@@ -91,6 +92,7 @@ impl Default for AdmaSysAddr {
         AdmaSysAddr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AdmaSysAddr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AdmaSysAddr")
@@ -212,6 +214,7 @@ impl Default for Autocmd12ErrStatus {
         Autocmd12ErrStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Autocmd12ErrStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Autocmd12ErrStatus")
@@ -279,6 +282,7 @@ impl Default for BlkAtt {
         BlkAtt(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for BlkAtt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BlkAtt")
@@ -406,6 +410,7 @@ impl Default for ClkTuneCtrlStatus {
         ClkTuneCtrlStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ClkTuneCtrlStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ClkTuneCtrlStatus")
@@ -461,6 +466,7 @@ impl Default for CmdArg {
         CmdArg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CmdArg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CmdArg")
@@ -498,6 +504,7 @@ impl Default for CmdRsp0 {
         CmdRsp0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CmdRsp0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CmdRsp0")
@@ -535,6 +542,7 @@ impl Default for CmdRsp1 {
         CmdRsp1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CmdRsp1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CmdRsp1")
@@ -572,6 +580,7 @@ impl Default for CmdRsp2 {
         CmdRsp2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CmdRsp2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CmdRsp2")
@@ -609,6 +618,7 @@ impl Default for CmdRsp3 {
         CmdRsp3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CmdRsp3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CmdRsp3")
@@ -706,6 +716,7 @@ impl Default for CmdXfrTyp {
         CmdXfrTyp(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CmdXfrTyp {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CmdXfrTyp")
@@ -757,6 +768,7 @@ impl Default for DataBuffAccPort {
         DataBuffAccPort(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DataBuffAccPort {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DataBuffAccPort")
@@ -902,6 +914,7 @@ impl Default for DllCtrl {
         DllCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DllCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DllCtrl")
@@ -1000,6 +1013,7 @@ impl Default for DllStatus {
         DllStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DllStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DllStatus")
@@ -1047,6 +1061,7 @@ impl Default for DsAddr {
         DsAddr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DsAddr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DsAddr")
@@ -1276,6 +1291,7 @@ impl Default for ForceEvent {
         ForceEvent(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ForceEvent {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ForceEvent")
@@ -1481,6 +1497,7 @@ impl Default for HostCtrlCap {
         HostCtrlCap(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for HostCtrlCap {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HostCtrlCap")
@@ -1784,6 +1801,7 @@ impl Default for IntSignalEn {
         IntSignalEn(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IntSignalEn {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IntSignalEn")
@@ -2117,6 +2135,7 @@ impl Default for IntStatus {
         IntStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IntStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IntStatus")
@@ -2440,6 +2459,7 @@ impl Default for IntStatusEn {
         IntStatusEn(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IntStatusEn {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IntStatusEn")
@@ -2653,6 +2673,7 @@ impl Default for MixCtrl {
         MixCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MixCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MixCtrl")
@@ -2788,6 +2809,7 @@ impl Default for MmcBoot {
         MmcBoot(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MmcBoot {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MmcBoot")
@@ -3002,6 +3024,30 @@ impl PresState {
     pub const fn set_cinst(&mut self, val: super::vals::Cinst) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
+    #[doc = "Card detect pin level."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn cdpl(&self) -> super::vals::Cdpl {
+        let val = (self.0 >> 18usize) & 0x01;
+        super::vals::Cdpl::from_bits(val as u8)
+    }
+    #[doc = "Card detect pin level."]
+    #[inline(always)]
+    pub const fn set_cdpl(&mut self, val: super::vals::Cdpl) {
+        self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
+    }
+    #[doc = "Write protect switch pin level."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn wpspl(&self) -> super::vals::Wpspl {
+        let val = (self.0 >> 19usize) & 0x01;
+        super::vals::Wpspl::from_bits(val as u8)
+    }
+    #[doc = "Write protect switch pin level."]
+    #[inline(always)]
+    pub const fn set_wpspl(&mut self, val: super::vals::Wpspl) {
+        self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
+    }
     #[doc = "CMD line signal level."]
     #[must_use]
     #[inline(always)]
@@ -3033,6 +3079,7 @@ impl Default for PresState {
         PresState(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PresState {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PresState")
@@ -3051,6 +3098,8 @@ impl core::fmt::Debug for PresState {
             .field("rtr", &self.rtr())
             .field("tscd", &self.tscd())
             .field("cinst", &self.cinst())
+            .field("cdpl", &self.cdpl())
+            .field("wpspl", &self.wpspl())
             .field("clsl", &self.clsl())
             .field("dlsl", &self.dlsl())
             .finish()
@@ -3061,7 +3110,7 @@ impl defmt::Format for PresState {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "PresState {{ cihb: {:?}, cdihb: {:?}, dla: {:?}, sdstb: {:?}, ipgoff: {:?}, hckoff: {:?}, peroff: {:?}, sdoff: {:?}, wta: {:?}, rta: {:?}, bwen: {:?}, bren: {:?}, rtr: {:?}, tscd: {:?}, cinst: {:?}, clsl: {=bool:?}, dlsl: {:?} }}",
+            "PresState {{ cihb: {:?}, cdihb: {:?}, dla: {:?}, sdstb: {:?}, ipgoff: {:?}, hckoff: {:?}, peroff: {:?}, sdoff: {:?}, wta: {:?}, rta: {:?}, bwen: {:?}, bren: {:?}, rtr: {:?}, tscd: {:?}, cinst: {:?}, cdpl: {:?}, wpspl: {:?}, clsl: {=bool:?}, dlsl: {:?} }}",
             self.cihb(),
             self.cdihb(),
             self.dla(),
@@ -3077,6 +3126,8 @@ impl defmt::Format for PresState {
             self.rtr(),
             self.tscd(),
             self.cinst(),
+            self.cdpl(),
+            self.wpspl(),
             self.clsl(),
             self.dlsl()
         )
@@ -3122,6 +3173,30 @@ impl ProtCtrl {
     #[inline(always)]
     pub const fn set_emode(&mut self, val: super::vals::Emode) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
+    }
+    #[doc = "Card detect test level."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn cdtl(&self) -> super::vals::Cdtl {
+        let val = (self.0 >> 6usize) & 0x01;
+        super::vals::Cdtl::from_bits(val as u8)
+    }
+    #[doc = "Card detect test level."]
+    #[inline(always)]
+    pub const fn set_cdtl(&mut self, val: super::vals::Cdtl) {
+        self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
+    }
+    #[doc = "Card detect signal selection."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn cdss(&self) -> super::vals::Cdss {
+        let val = (self.0 >> 7usize) & 0x01;
+        super::vals::Cdss::from_bits(val as u8)
+    }
+    #[doc = "Card detect signal selection."]
+    #[inline(always)]
+    pub const fn set_cdss(&mut self, val: super::vals::Cdss) {
+        self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
     #[doc = "DMA select."]
     #[must_use]
@@ -3262,12 +3337,15 @@ impl Default for ProtCtrl {
         ProtCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ProtCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ProtCtrl")
             .field("dtw", &self.dtw())
             .field("d3cd", &self.d3cd())
             .field("emode", &self.emode())
+            .field("cdtl", &self.cdtl())
+            .field("cdss", &self.cdss())
             .field("dmasel", &self.dmasel())
             .field("sabgreq", &self.sabgreq())
             .field("creq", &self.creq())
@@ -3287,10 +3365,12 @@ impl defmt::Format for ProtCtrl {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "ProtCtrl {{ dtw: {:?}, d3cd: {:?}, emode: {:?}, dmasel: {:?}, sabgreq: {:?}, creq: {:?}, rwctl: {:?}, iabg: {:?}, rd_done_no_8clk: {=bool:?}, wecint: {:?}, wecins: {:?}, wecrm: {:?}, burst_len_en: {:?}, non_exact_blk_rd: {:?} }}",
+            "ProtCtrl {{ dtw: {:?}, d3cd: {:?}, emode: {:?}, cdtl: {:?}, cdss: {:?}, dmasel: {:?}, sabgreq: {:?}, creq: {:?}, rwctl: {:?}, iabg: {:?}, rd_done_no_8clk: {=bool:?}, wecint: {:?}, wecins: {:?}, wecrm: {:?}, burst_len_en: {:?}, non_exact_blk_rd: {:?} }}",
             self.dtw(),
             self.d3cd(),
             self.emode(),
+            self.cdtl(),
+            self.cdss(),
             self.dmasel(),
             self.sabgreq(),
             self.creq(),
@@ -3425,6 +3505,7 @@ impl Default for SysCtrl {
         SysCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SysCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SysCtrl")
@@ -3542,6 +3623,7 @@ impl Default for TuningCtrl {
         TuningCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TuningCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TuningCtrl")
@@ -3656,6 +3738,7 @@ impl Default for VendSpec {
         VendSpec(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for VendSpec {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VendSpec")
@@ -3755,6 +3838,7 @@ impl Default for VendSpec2 {
         VendSpec2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for VendSpec2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VendSpec2")
@@ -3840,6 +3924,7 @@ impl Default for WtmkLvl {
         WtmkLvl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for WtmkLvl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WtmkLvl")

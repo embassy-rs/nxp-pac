@@ -1,4 +1,4 @@
-#[doc = "no description available."]
+#[doc = "System Control Block."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Scb {
     ptr: *mut u8,
@@ -28,6 +28,11 @@ impl Scb {
     #[inline(always)]
     pub const fn shcsr(self) -> crate::common::Reg<regs::Shcsr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x24usize) as _) }
+    }
+    #[doc = "Coprocessor Access Control Register."]
+    #[inline(always)]
+    pub const fn cpacr(self) -> crate::common::Reg<regs::Cpacr, crate::common::RW> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x88usize) as _) }
     }
     #[doc = "Non-secure Access Control Register."]
     #[inline(always)]

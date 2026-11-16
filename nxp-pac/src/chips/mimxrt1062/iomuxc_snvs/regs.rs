@@ -34,6 +34,7 @@ impl Default for MuxCtl {
         MuxCtl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MuxCtl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MuxCtl")
@@ -161,6 +162,7 @@ impl Default for SwPadCtlPadOnoff {
         SwPadCtlPadOnoff(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SwPadCtlPadOnoff {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SwPadCtlPadOnoff")
@@ -300,6 +302,7 @@ impl Default for SwPadCtlPadPmicOnReq {
         SwPadCtlPadPmicOnReq(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SwPadCtlPadPmicOnReq {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SwPadCtlPadPmicOnReq")
@@ -439,6 +442,7 @@ impl Default for SwPadCtlPadPmicStbyReq {
         SwPadCtlPadPmicStbyReq(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SwPadCtlPadPmicStbyReq {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SwPadCtlPadPmicStbyReq")
@@ -578,6 +582,7 @@ impl Default for SwPadCtlPadPorB {
         SwPadCtlPadPorB(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SwPadCtlPadPorB {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SwPadCtlPadPorB")
@@ -717,6 +722,7 @@ impl Default for SwPadCtlPadTestMode {
         SwPadCtlPadTestMode(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SwPadCtlPadTestMode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SwPadCtlPadTestMode")
@@ -856,6 +862,7 @@ impl Default for SwPadCtlPadWakeup {
         SwPadCtlPadWakeup(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SwPadCtlPadWakeup {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SwPadCtlPadWakeup")

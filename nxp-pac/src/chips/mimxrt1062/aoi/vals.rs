@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt010Pt0Ac {
     #[doc = "Force the A input in this product term to a logical zero."]
@@ -34,7 +35,8 @@ impl From<Bfcrt010Pt0Ac> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt010Pt0Bc {
     #[doc = "Force the B input in this product term to a logical zero."]
@@ -69,7 +71,8 @@ impl From<Bfcrt010Pt0Bc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt010Pt0Cc {
     #[doc = "Force the C input in this product term to a logical zero."]
@@ -104,7 +107,8 @@ impl From<Bfcrt010Pt0Cc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt010Pt0Dc {
     #[doc = "Force the D input in this product term to a logical zero."]
@@ -139,7 +143,8 @@ impl From<Bfcrt010Pt0Dc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt010Pt1Ac {
     #[doc = "Force the A input in this product term to a logical zero."]
@@ -174,7 +179,8 @@ impl From<Bfcrt010Pt1Ac> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt010Pt1Bc {
     #[doc = "Force the B input in this product term to a logical zero."]
@@ -209,7 +215,8 @@ impl From<Bfcrt010Pt1Bc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt010Pt1Cc {
     #[doc = "Force the C input in this product term to a logical zero."]
@@ -244,7 +251,8 @@ impl From<Bfcrt010Pt1Cc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt010Pt1Dc {
     #[doc = "Force the D input in this product term to a logical zero."]
@@ -279,7 +287,8 @@ impl From<Bfcrt010Pt1Dc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt011Pt0Ac {
     #[doc = "Force the A input in this product term to a logical zero."]
@@ -314,7 +323,8 @@ impl From<Bfcrt011Pt0Ac> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt011Pt0Bc {
     #[doc = "Force the B input in this product term to a logical zero."]
@@ -349,7 +359,8 @@ impl From<Bfcrt011Pt0Bc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt011Pt0Cc {
     #[doc = "Force the C input in this product term to a logical zero."]
@@ -384,7 +395,8 @@ impl From<Bfcrt011Pt0Cc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt011Pt0Dc {
     #[doc = "Force the D input in this product term to a logical zero."]
@@ -419,7 +431,8 @@ impl From<Bfcrt011Pt0Dc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt011Pt1Ac {
     #[doc = "Force the A input in this product term to a logical zero."]
@@ -454,7 +467,8 @@ impl From<Bfcrt011Pt1Ac> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt011Pt1Bc {
     #[doc = "Force the B input in this product term to a logical zero."]
@@ -489,7 +503,8 @@ impl From<Bfcrt011Pt1Bc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt011Pt1Cc {
     #[doc = "Force the C input in this product term to a logical zero."]
@@ -524,7 +539,8 @@ impl From<Bfcrt011Pt1Cc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt011Pt1Dc {
     #[doc = "Force the D input in this product term to a logical zero."]
@@ -559,7 +575,8 @@ impl From<Bfcrt011Pt1Dc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt012Pt0Ac {
     #[doc = "Force the A input in this product term to a logical zero."]
@@ -594,7 +611,8 @@ impl From<Bfcrt012Pt0Ac> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt012Pt0Bc {
     #[doc = "Force the B input in this product term to a logical zero."]
@@ -629,7 +647,8 @@ impl From<Bfcrt012Pt0Bc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt012Pt0Cc {
     #[doc = "Force the C input in this product term to a logical zero."]
@@ -664,7 +683,8 @@ impl From<Bfcrt012Pt0Cc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt012Pt0Dc {
     #[doc = "Force the D input in this product term to a logical zero."]
@@ -699,7 +719,8 @@ impl From<Bfcrt012Pt0Dc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt012Pt1Ac {
     #[doc = "Force the A input in this product term to a logical zero."]
@@ -734,7 +755,8 @@ impl From<Bfcrt012Pt1Ac> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt012Pt1Bc {
     #[doc = "Force the B input in this product term to a logical zero."]
@@ -769,7 +791,8 @@ impl From<Bfcrt012Pt1Bc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt012Pt1Cc {
     #[doc = "Force the C input in this product term to a logical zero."]
@@ -804,7 +827,8 @@ impl From<Bfcrt012Pt1Cc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt012Pt1Dc {
     #[doc = "Force the D input in this product term to a logical zero."]
@@ -839,7 +863,8 @@ impl From<Bfcrt012Pt1Dc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt013Pt0Ac {
     #[doc = "Force the A input in this product term to a logical zero."]
@@ -874,7 +899,8 @@ impl From<Bfcrt013Pt0Ac> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt013Pt0Bc {
     #[doc = "Force the B input in this product term to a logical zero."]
@@ -909,7 +935,8 @@ impl From<Bfcrt013Pt0Bc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt013Pt0Cc {
     #[doc = "Force the C input in this product term to a logical zero."]
@@ -944,7 +971,8 @@ impl From<Bfcrt013Pt0Cc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt013Pt0Dc {
     #[doc = "Force the D input in this product term to a logical zero."]
@@ -979,7 +1007,8 @@ impl From<Bfcrt013Pt0Dc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt013Pt1Ac {
     #[doc = "Force the A input in this product term to a logical zero."]
@@ -1014,7 +1043,8 @@ impl From<Bfcrt013Pt1Ac> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt013Pt1Bc {
     #[doc = "Force the B input in this product term to a logical zero."]
@@ -1049,7 +1079,8 @@ impl From<Bfcrt013Pt1Bc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt013Pt1Cc {
     #[doc = "Force the C input in this product term to a logical zero."]
@@ -1084,7 +1115,8 @@ impl From<Bfcrt013Pt1Cc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt013Pt1Dc {
     #[doc = "Force the D input in this product term to a logical zero."]
@@ -1119,7 +1151,8 @@ impl From<Bfcrt013Pt1Dc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt230Pt2Ac {
     #[doc = "Force the A input in this product term to a logical zero."]
@@ -1154,7 +1187,8 @@ impl From<Bfcrt230Pt2Ac> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt230Pt2Bc {
     #[doc = "Force the B input in this product term to a logical zero."]
@@ -1189,7 +1223,8 @@ impl From<Bfcrt230Pt2Bc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt230Pt2Cc {
     #[doc = "Force the C input in this product term to a logical zero."]
@@ -1224,7 +1259,8 @@ impl From<Bfcrt230Pt2Cc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt230Pt2Dc {
     #[doc = "Force the D input in this product term to a logical zero."]
@@ -1259,7 +1295,8 @@ impl From<Bfcrt230Pt2Dc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt230Pt3Ac {
     #[doc = "Force the A input in this product term to a logical zero."]
@@ -1294,7 +1331,8 @@ impl From<Bfcrt230Pt3Ac> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt230Pt3Bc {
     #[doc = "Force the B input in this product term to a logical zero."]
@@ -1329,7 +1367,8 @@ impl From<Bfcrt230Pt3Bc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt230Pt3Cc {
     #[doc = "Force the C input in this product term to a logical zero."]
@@ -1364,7 +1403,8 @@ impl From<Bfcrt230Pt3Cc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt230Pt3Dc {
     #[doc = "Force the D input in this product term to a logical zero."]
@@ -1399,7 +1439,8 @@ impl From<Bfcrt230Pt3Dc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt231Pt2Ac {
     #[doc = "Force the A input in this product term to a logical zero."]
@@ -1434,7 +1475,8 @@ impl From<Bfcrt231Pt2Ac> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt231Pt2Bc {
     #[doc = "Force the B input in this product term to a logical zero."]
@@ -1469,7 +1511,8 @@ impl From<Bfcrt231Pt2Bc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt231Pt2Cc {
     #[doc = "Force the C input in this product term to a logical zero."]
@@ -1504,7 +1547,8 @@ impl From<Bfcrt231Pt2Cc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt231Pt2Dc {
     #[doc = "Force the D input in this product term to a logical zero."]
@@ -1539,7 +1583,8 @@ impl From<Bfcrt231Pt2Dc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt231Pt3Ac {
     #[doc = "Force the A input in this product term to a logical zero."]
@@ -1574,7 +1619,8 @@ impl From<Bfcrt231Pt3Ac> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt231Pt3Bc {
     #[doc = "Force the B input in this product term to a logical zero."]
@@ -1609,7 +1655,8 @@ impl From<Bfcrt231Pt3Bc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt231Pt3Cc {
     #[doc = "Force the C input in this product term to a logical zero."]
@@ -1644,7 +1691,8 @@ impl From<Bfcrt231Pt3Cc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt231Pt3Dc {
     #[doc = "Force the D input in this product term to a logical zero."]
@@ -1679,7 +1727,8 @@ impl From<Bfcrt231Pt3Dc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt232Pt2Ac {
     #[doc = "Force the A input in this product term to a logical zero."]
@@ -1714,7 +1763,8 @@ impl From<Bfcrt232Pt2Ac> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt232Pt2Bc {
     #[doc = "Force the B input in this product term to a logical zero."]
@@ -1749,7 +1799,8 @@ impl From<Bfcrt232Pt2Bc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt232Pt2Cc {
     #[doc = "Force the C input in this product term to a logical zero."]
@@ -1784,7 +1835,8 @@ impl From<Bfcrt232Pt2Cc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt232Pt2Dc {
     #[doc = "Force the D input in this product term to a logical zero."]
@@ -1819,7 +1871,8 @@ impl From<Bfcrt232Pt2Dc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt232Pt3Ac {
     #[doc = "Force the A input in this product term to a logical zero."]
@@ -1854,7 +1907,8 @@ impl From<Bfcrt232Pt3Ac> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt232Pt3Bc {
     #[doc = "Force the B input in this product term to a logical zero."]
@@ -1889,7 +1943,8 @@ impl From<Bfcrt232Pt3Bc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt232Pt3Cc {
     #[doc = "Force the C input in this product term to a logical zero."]
@@ -1924,7 +1979,8 @@ impl From<Bfcrt232Pt3Cc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt232Pt3Dc {
     #[doc = "Force the D input in this product term to a logical zero."]
@@ -1959,7 +2015,8 @@ impl From<Bfcrt232Pt3Dc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt233Pt2Ac {
     #[doc = "Force the A input in this product term to a logical zero."]
@@ -1994,7 +2051,8 @@ impl From<Bfcrt233Pt2Ac> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt233Pt2Bc {
     #[doc = "Force the B input in this product term to a logical zero."]
@@ -2029,7 +2087,8 @@ impl From<Bfcrt233Pt2Bc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt233Pt2Cc {
     #[doc = "Force the C input in this product term to a logical zero."]
@@ -2064,7 +2123,8 @@ impl From<Bfcrt233Pt2Cc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt233Pt2Dc {
     #[doc = "Force the D input in this product term to a logical zero."]
@@ -2099,7 +2159,8 @@ impl From<Bfcrt233Pt2Dc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt233Pt3Ac {
     #[doc = "Force the A input in this product term to a logical zero."]
@@ -2134,7 +2195,8 @@ impl From<Bfcrt233Pt3Ac> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt233Pt3Bc {
     #[doc = "Force the B input in this product term to a logical zero."]
@@ -2169,7 +2231,8 @@ impl From<Bfcrt233Pt3Bc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt233Pt3Cc {
     #[doc = "Force the C input in this product term to a logical zero."]
@@ -2204,7 +2267,8 @@ impl From<Bfcrt233Pt3Cc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bfcrt233Pt3Dc {
     #[doc = "Force the D input in this product term to a logical zero."]

@@ -34,6 +34,7 @@ impl Default for Ctrl {
         Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl")
@@ -77,6 +78,7 @@ impl Default for IdleCh {
         IdleCh(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IdleCh {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IdleCh")
@@ -126,6 +128,7 @@ impl Default for Intval {
         Intval(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Intval {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Intval")
@@ -205,6 +208,7 @@ impl Default for IrqFlag {
         IrqFlag(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IrqFlag {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IrqFlag")
@@ -276,6 +280,7 @@ impl Default for Modcfg {
         Modcfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Modcfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Modcfg")
@@ -345,6 +350,7 @@ impl Default for Stat {
         Stat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Stat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Stat")
@@ -390,6 +396,7 @@ impl Default for Timer {
         Timer(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Timer {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Timer")

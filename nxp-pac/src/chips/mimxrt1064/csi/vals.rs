@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Afs {
     #[doc = "Abs Diff on consecutive green pixels."]
@@ -33,7 +34,8 @@ impl From<Afs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BaseaddrChangeErrorIe {
     #[doc = "Interrupt disabled."]
@@ -64,7 +66,8 @@ impl From<BaseaddrChangeErrorIe> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BaseaddrSwitchSel {
     #[doc = "Switching base address at the edge of the vsync."]
@@ -95,7 +98,8 @@ impl From<BaseaddrSwitchSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bts {
     #[doc = "GR."]
@@ -130,7 +134,8 @@ impl From<Bts> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CcirEn {
     #[doc = "Traditional interface is selected."]
@@ -161,7 +166,8 @@ impl From<CcirEn> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CcirMode {
     #[doc = "Progressive mode is selected."]
@@ -192,7 +198,8 @@ impl From<CcirMode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CofInt {
     #[doc = "Video field has no change."]
@@ -223,7 +230,8 @@ impl From<CofInt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CofIntEn {
     #[doc = "COF interrupt is disabled."]
@@ -254,7 +262,8 @@ impl From<CofIntEn> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DeinterlaceEn {
     #[doc = "Deinterlace disabled."]
@@ -285,7 +294,8 @@ impl From<DeinterlaceEn> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DmaBurstTypeRff {
     #[doc = "INCR8."]
@@ -319,7 +329,8 @@ impl From<DmaBurstTypeRff> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DmaBurstTypeSff {
     #[doc = "INCR8."]
@@ -353,7 +364,8 @@ impl From<DmaBurstTypeSff> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DmaField1DoneIe {
     #[doc = "Interrupt disabled."]
@@ -384,7 +396,8 @@ impl From<DmaField1DoneIe> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DmaReflashRff {
     #[doc = "No reflashing."]
@@ -415,7 +428,8 @@ impl From<DmaReflashRff> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DmaReflashSff {
     #[doc = "No reflashing."]
@@ -446,7 +460,8 @@ impl From<DmaReflashSff> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DmaReqEnRff {
     #[doc = "Disable the dma request."]
@@ -477,7 +492,8 @@ impl From<DmaReqEnRff> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DmaReqEnSff {
     #[doc = "Disable the dma request."]
@@ -508,7 +524,8 @@ impl From<DmaReqEnSff> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DmaTsfDoneFb1 {
     #[doc = "DMA transfer is not completed."]
@@ -539,7 +556,8 @@ impl From<DmaTsfDoneFb1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DmaTsfDoneFb2 {
     #[doc = "DMA transfer is not completed."]
@@ -570,7 +588,8 @@ impl From<DmaTsfDoneFb2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DmaTsfDoneSff {
     #[doc = "DMA transfer is not completed."]
@@ -601,7 +620,8 @@ impl From<DmaTsfDoneSff> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Drdy {
     #[doc = "No data (word) is ready."]
@@ -632,7 +652,8 @@ impl From<Drdy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Drm {
     #[doc = "Stats grid of 8 x 6."]
@@ -663,7 +684,8 @@ impl From<Drm> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EccAutoEn {
     #[doc = "Auto Error correction is disabled."]
@@ -694,7 +716,8 @@ impl From<EccAutoEn> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EccInt {
     #[doc = "No error detected."]
@@ -725,7 +748,8 @@ impl From<EccInt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EccIntEn {
     #[doc = "No interrupt is generated when error is detected. Only the status bit ECC_INT is set."]
@@ -756,7 +780,8 @@ impl From<EccIntEn> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EofInt {
     #[doc = "EOF is not detected."]
@@ -787,7 +812,8 @@ impl From<EofInt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EofIntEn {
     #[doc = "EOF interrupt is disabled."]
@@ -818,7 +844,8 @@ impl From<EofIntEn> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ExtVsync {
     #[doc = "Internal VSYNC mode."]
@@ -849,7 +876,8 @@ impl From<ExtVsync> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum F1Int {
     #[doc = "Field 1 of video is not detected."]
@@ -880,7 +908,8 @@ impl From<F1Int> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum F2Int {
     #[doc = "Field 2 of video is not detected."]
@@ -911,7 +940,8 @@ impl From<F2Int> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fb1DmaDoneInten {
     #[doc = "Frame Buffer1 DMA Transfer Done interrupt disable."]
@@ -942,7 +972,8 @@ impl From<Fb1DmaDoneInten> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fb2DmaDoneInten {
     #[doc = "Frame Buffer2 DMA Transfer Done interrupt disable."]
@@ -973,7 +1004,8 @@ impl From<Fb2DmaDoneInten> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fcc {
     #[doc = "Asynchronous FIFO clear is selected."]
@@ -1004,7 +1036,8 @@ impl From<Fcc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Field0DoneIe {
     #[doc = "Interrupt disabled."]
@@ -1035,7 +1068,8 @@ impl From<Field0DoneIe> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FrmcntRst {
     #[doc = "Do not reset."]
@@ -1066,7 +1100,8 @@ impl From<FrmcntRst> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum GclkMode {
     #[doc = "Non-gated clock mode. All incoming pixel clocks are valid. HSYNC is ignored."]
@@ -1097,7 +1132,8 @@ impl From<GclkMode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HrespErrEn {
     #[doc = "Disable hresponse error interrupt."]
@@ -1128,7 +1164,8 @@ impl From<HrespErrEn> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HrespErrInt {
     #[doc = "No hresponse error."]
@@ -1182,6 +1219,18 @@ impl Hsc {
     pub const Hsc8: Self = Self(0x08);
     #[doc = "Number of pixels to skip minus 1."]
     pub const Hsc9: Self = Self(0x09);
+    #[doc = "Number of pixels to skip minus 1."]
+    pub const Hsc250: Self = Self(0xfa);
+    #[doc = "Number of pixels to skip minus 1."]
+    pub const Hsc251: Self = Self(0xfb);
+    #[doc = "Number of pixels to skip minus 1."]
+    pub const Hsc252: Self = Self(0xfc);
+    #[doc = "Number of pixels to skip minus 1."]
+    pub const Hsc253: Self = Self(0xfd);
+    #[doc = "Number of pixels to skip minus 1."]
+    pub const Hsc254: Self = Self(0xfe);
+    #[doc = "Number of pixels to skip minus 1."]
+    pub const Hsc255: Self = Self(0xff);
 }
 impl Hsc {
     pub const fn from_bits(val: u8) -> Hsc {
@@ -1191,6 +1240,7 @@ impl Hsc {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hsc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -1204,6 +1254,12 @@ impl core::fmt::Debug for Hsc {
             0x07 => f.write_str("Hsc7"),
             0x08 => f.write_str("Hsc8"),
             0x09 => f.write_str("Hsc9"),
+            0xfa => f.write_str("Hsc250"),
+            0xfb => f.write_str("Hsc251"),
+            0xfc => f.write_str("Hsc252"),
+            0xfd => f.write_str("Hsc253"),
+            0xfe => f.write_str("Hsc254"),
+            0xff => f.write_str("Hsc255"),
             other => core::write!(f, "0x{:02X}", other),
         }
     }
@@ -1222,6 +1278,12 @@ impl defmt::Format for Hsc {
             0x07 => defmt::write!(f, "Hsc7"),
             0x08 => defmt::write!(f, "Hsc8"),
             0x09 => defmt::write!(f, "Hsc9"),
+            0xfa => defmt::write!(f, "Hsc250"),
+            0xfb => defmt::write!(f, "Hsc251"),
+            0xfc => defmt::write!(f, "Hsc252"),
+            0xfd => defmt::write!(f, "Hsc253"),
+            0xfe => defmt::write!(f, "Hsc254"),
+            0xff => defmt::write!(f, "Hsc255"),
             other => defmt::write!(f, "0x{:02X}", other),
         }
     }
@@ -1239,7 +1301,8 @@ impl From<Hsc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HsyncPol {
     #[doc = "HSYNC is active low."]
@@ -1270,7 +1333,8 @@ impl From<HsyncPol> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum InvData {
     #[doc = "CSI_D\\[7:0\\] data lines are directly applied to internal circuitry."]
@@ -1301,7 +1365,8 @@ impl From<InvData> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum InvPclk {
     #[doc = "CSI_PIXCLK is directly applied to internal circuitry."]
@@ -1332,7 +1397,8 @@ impl From<InvPclk> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LastDmaReqSel {
     #[doc = "fifo_full_level."]
@@ -1363,7 +1429,8 @@ impl From<LastDmaReqSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lvrm {
     #[doc = "512 x 384."]
@@ -1405,7 +1472,8 @@ impl From<Lvrm> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MaskOption {
     #[doc = "Writing to memory (OCRAM or external DDR) from first completely frame, when using this option, the CSI_ENABLE should be 1."]
@@ -1440,7 +1508,8 @@ impl From<MaskOption> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PackDir {
     #[doc = "Pack from LSB first. For image data, 0x11, 0x22, 0x33, 0x44, it will appear as 0x44332211 in RX FIFO. For stat data, 0xAAAA, 0xBBBB, it will appear as 0xBBBBAAAA in STAT FIFO."]
@@ -1471,7 +1540,8 @@ impl From<PackDir> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Parallel24En {
     #[doc = "Input is disabled."]
@@ -1502,7 +1572,8 @@ impl From<Parallel24En> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PixelBit {
     #[doc = "8-bit data for each pixel."]
@@ -1533,7 +1604,8 @@ impl From<PixelBit> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PrPIfEn {
     #[doc = "CSI to PrP bus is disabled."]
@@ -1564,7 +1636,8 @@ impl From<PrPIfEn> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Redge {
     #[doc = "Pixel data is latched at the falling edge of CSI_PIXCLK."]
@@ -1595,7 +1668,8 @@ impl From<Redge> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RfOrInt {
     #[doc = "RXFIFO has not overflowed."]
@@ -1626,7 +1700,8 @@ impl From<RfOrInt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RfOrInten {
     #[doc = "RxFIFO overrun interrupt is disabled."]
@@ -1657,7 +1732,8 @@ impl From<RfOrInten> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rgb888aFormatSel {
     #[doc = "{8'h0, data\\[23:0\\]}."]
@@ -1688,7 +1764,8 @@ impl From<Rgb888aFormatSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RxFfInt {
     #[doc = "RxFIFO is not full."]
@@ -1719,7 +1796,8 @@ impl From<RxFfInt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RxFfLevel {
     #[doc = "4 Double words."]
@@ -1762,7 +1840,8 @@ impl From<RxFfLevel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RxffInten {
     #[doc = "RxFIFO full interrupt disable."]
@@ -1793,7 +1872,8 @@ impl From<RxffInten> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sce {
     #[doc = "Skip count disable."]
@@ -1824,7 +1904,8 @@ impl From<Sce> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sensor16bits {
     #[doc = "Only one 8-bit sensor is connected."]
@@ -1855,7 +1936,8 @@ impl From<Sensor16bits> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SfOrInt {
     #[doc = "STATFIFO has not overflowed."]
@@ -1886,7 +1968,8 @@ impl From<SfOrInt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SfOrInten {
     #[doc = "STATFIFO overrun interrupt is disabled."]
@@ -1917,7 +2000,8 @@ impl From<SfOrInten> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SffDmaDoneInten {
     #[doc = "STATFIFO DMA Transfer Done interrupt disable."]
@@ -1948,7 +2032,8 @@ impl From<SffDmaDoneInten> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SofInt {
     #[doc = "SOF is not detected."]
@@ -1979,7 +2064,8 @@ impl From<SofInt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SofInten {
     #[doc = "SOF interrupt disable."]
@@ -2010,7 +2096,8 @@ impl From<SofInten> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SofPol {
     #[doc = "SOF interrupt is generated on SOF falling edge."]
@@ -2041,7 +2128,8 @@ impl From<SofPol> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatffInt {
     #[doc = "STATFIFO is not full."]
@@ -2072,7 +2160,8 @@ impl From<StatffInt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatffInten {
     #[doc = "STATFIFO full interrupt disable."]
@@ -2103,7 +2192,8 @@ impl From<StatffInten> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatffLevel {
     #[doc = "4 Double words."]
@@ -2146,7 +2236,8 @@ impl From<StatffLevel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swap16En {
     #[doc = "Disable swapping."]
@@ -2200,6 +2291,18 @@ impl Vsc {
     pub const Vsc8: Self = Self(0x08);
     #[doc = "Number of rows to skip minus 1."]
     pub const Vsc9: Self = Self(0x09);
+    #[doc = "Number of rows to skip minus 1."]
+    pub const Vsc250: Self = Self(0xfa);
+    #[doc = "Number of rows to skip minus 1."]
+    pub const Vsc251: Self = Self(0xfb);
+    #[doc = "Number of rows to skip minus 1."]
+    pub const Vsc252: Self = Self(0xfc);
+    #[doc = "Number of rows to skip minus 1."]
+    pub const Vsc253: Self = Self(0xfd);
+    #[doc = "Number of rows to skip minus 1."]
+    pub const Vsc254: Self = Self(0xfe);
+    #[doc = "Number of rows to skip minus 1."]
+    pub const Vsc255: Self = Self(0xff);
 }
 impl Vsc {
     pub const fn from_bits(val: u8) -> Vsc {
@@ -2209,6 +2312,7 @@ impl Vsc {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Vsc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -2222,6 +2326,12 @@ impl core::fmt::Debug for Vsc {
             0x07 => f.write_str("Vsc7"),
             0x08 => f.write_str("Vsc8"),
             0x09 => f.write_str("Vsc9"),
+            0xfa => f.write_str("Vsc250"),
+            0xfb => f.write_str("Vsc251"),
+            0xfc => f.write_str("Vsc252"),
+            0xfd => f.write_str("Vsc253"),
+            0xfe => f.write_str("Vsc254"),
+            0xff => f.write_str("Vsc255"),
             other => core::write!(f, "0x{:02X}", other),
         }
     }
@@ -2240,6 +2350,12 @@ impl defmt::Format for Vsc {
             0x07 => defmt::write!(f, "Vsc7"),
             0x08 => defmt::write!(f, "Vsc8"),
             0x09 => defmt::write!(f, "Vsc9"),
+            0xfa => defmt::write!(f, "Vsc250"),
+            0xfb => defmt::write!(f, "Vsc251"),
+            0xfc => defmt::write!(f, "Vsc252"),
+            0xfd => defmt::write!(f, "Vsc253"),
+            0xfe => defmt::write!(f, "Vsc254"),
+            0xff => defmt::write!(f, "Vsc255"),
             other => defmt::write!(f, "0x{:02X}", other),
         }
     }
@@ -2257,7 +2373,8 @@ impl From<Vsc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ZeroPackEn {
     #[doc = "Zero packing disabled."]

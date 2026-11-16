@@ -22,6 +22,7 @@ impl Default for CfGatingOverride {
         CfGatingOverride(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CfGatingOverride {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CfGatingOverride")
@@ -59,6 +60,7 @@ impl Default for InterruptsExternal {
         InterruptsExternal(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for InterruptsExternal {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("InterruptsExternal")
@@ -96,6 +98,7 @@ impl Default for InterruptsStatus {
         InterruptsStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for InterruptsStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("InterruptsStatus")
@@ -133,6 +136,7 @@ impl Default for Ivt0 {
         Ivt0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ivt0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ivt0").field("val", &self.val()).finish()
@@ -168,6 +172,7 @@ impl Default for Ivt1 {
         Ivt1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ivt1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ivt1").field("val", &self.val()).finish()
@@ -203,6 +208,7 @@ impl Default for Ivt2 {
         Ivt2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ivt2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ivt2").field("val", &self.val()).finish()
@@ -238,6 +244,7 @@ impl Default for Ivt3 {
         Ivt3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ivt3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ivt3").field("val", &self.val()).finish()
@@ -273,6 +280,7 @@ impl Default for IvtDisable {
         IvtDisable(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IvtDisable {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IvtDisable")
@@ -310,6 +318,7 @@ impl Default for IvtOffset {
         IvtOffset(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IvtOffset {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IvtOffset")
@@ -347,6 +356,7 @@ impl Default for OffsetMailbox {
         OffsetMailbox(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OffsetMailbox {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OffsetMailbox")
@@ -384,6 +394,7 @@ impl Default for OffsetPmem {
         OffsetPmem(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OffsetPmem {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OffsetPmem")
@@ -421,6 +432,7 @@ impl Default for OffsetXmem {
         OffsetXmem(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OffsetXmem {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OffsetXmem")
@@ -458,6 +470,7 @@ impl Default for OffsetYmem {
         OffsetYmem(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OffsetYmem {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OffsetYmem")
@@ -495,6 +508,7 @@ impl Default for SleepMode {
         SleepMode(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SleepMode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SleepMode")

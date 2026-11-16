@@ -58,6 +58,7 @@ impl Default for Mpr {
         Mpr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mpr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mpr")
@@ -189,6 +190,7 @@ impl Default for Opacr {
         Opacr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Opacr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Opacr")
@@ -328,6 +330,7 @@ impl Default for Opacr1 {
         Opacr1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Opacr1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Opacr1")
@@ -467,6 +470,7 @@ impl Default for Opacr2 {
         Opacr2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Opacr2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Opacr2")
@@ -606,6 +610,7 @@ impl Default for Opacr3 {
         Opacr3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Opacr3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Opacr3")
@@ -673,6 +678,7 @@ impl Default for Opacr4 {
         Opacr4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Opacr4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Opacr4")

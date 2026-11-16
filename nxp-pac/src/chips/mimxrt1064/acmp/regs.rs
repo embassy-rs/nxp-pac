@@ -34,6 +34,7 @@ impl Default for Cr0 {
         Cr0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cr0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cr0")
@@ -149,6 +150,7 @@ impl Default for Cr1 {
         Cr1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cr1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cr1")
@@ -226,6 +228,7 @@ impl Default for Daccr {
         Daccr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Daccr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Daccr")
@@ -271,6 +274,7 @@ impl Default for Fpr {
         Fpr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fpr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fpr")
@@ -320,6 +324,7 @@ impl Default for Muxcr {
         Muxcr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Muxcr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Muxcr")
@@ -423,6 +428,7 @@ impl Default for Scr {
         Scr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Scr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Scr")

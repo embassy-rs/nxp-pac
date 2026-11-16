@@ -34,6 +34,7 @@ impl Default for Clock {
         Clock(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Clock {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Clock")
@@ -137,6 +138,7 @@ impl Default for Control {
         Control(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Control {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Control")
@@ -188,6 +190,7 @@ impl Default for SignalOverride {
         SignalOverride(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SignalOverride {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SignalOverride")
@@ -273,6 +276,7 @@ impl Default for Status {
         Status(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Status {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Status")
@@ -334,6 +338,7 @@ impl Default for Timer0 {
         Timer0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Timer0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Timer0")
@@ -389,6 +394,7 @@ impl Default for Timer1 {
         Timer1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Timer1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Timer1")
@@ -444,6 +450,7 @@ impl Default for Timer2Bc11 {
         Timer2Bc11(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Timer2Bc11 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Timer2Bc11")
@@ -499,6 +506,7 @@ impl Default for Timer2Bc12 {
         Timer2Bc12(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Timer2Bc12 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Timer2Bc12")

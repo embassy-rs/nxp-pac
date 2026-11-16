@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Active {
     #[doc = "eDMA is idle."]
@@ -30,7 +31,43 @@ impl From<Active> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Bwc {
+    #[doc = "No eDMA engine stalls."]
+    Disabled = 0x0,
+    _RESERVED_1 = 0x01,
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
+    Stall4 = 0x02,
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
+    Stall8 = 0x03,
+}
+impl Bwc {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Bwc {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Bwc {
+    #[inline(always)]
+    fn from(val: u8) -> Bwc {
+        Bwc::from_bits(val)
+    }
+}
+impl From<Bwc> for u8 {
+    #[inline(always)]
+    fn from(val: Bwc) -> u8 {
+        Bwc::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cadn {
     #[doc = "Writes 0 to only the TCDn_CSR\\[DONE\\] field specified in the CDNE field."]
@@ -61,7 +98,8 @@ impl From<Cadn> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Caee {
     #[doc = "Write 0 only to the EEI field specified in the CEEI field."]
@@ -92,7 +130,8 @@ impl From<Caee> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Caei {
     #[doc = "Write 0 to only the ERR field specified in the CERR field."]
@@ -123,7 +162,8 @@ impl From<Caei> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Caer {
     #[doc = "Write 0 to only the ERQ field specified in the CERQ field."]
@@ -154,7 +194,8 @@ impl From<Caer> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cair {
     #[doc = "Clear only the INT field specified in the CINT field."]
@@ -185,7 +226,8 @@ impl From<Cair> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CdneNop {
     #[doc = "Normal operation."]
@@ -216,7 +258,8 @@ impl From<CdneNop> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CeeiNop {
     #[doc = "Normal operation."]
@@ -247,7 +290,8 @@ impl From<CeeiNop> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CerqNop {
     #[doc = "Normal operation."]
@@ -278,7 +322,8 @@ impl From<CerqNop> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CerrNop {
     #[doc = "Normal operation."]
@@ -309,7 +354,8 @@ impl From<CerrNop> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CintNop {
     #[doc = "Normal operation."]
@@ -340,7 +386,8 @@ impl From<CintNop> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Clm {
     #[doc = "Continuous link mode is off."]
@@ -371,7 +418,8 @@ impl From<Clm> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CrEcx {
     #[doc = "Normal operation."]
@@ -402,7 +450,8 @@ impl From<CrEcx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cx {
     #[doc = "Normal operation."]
@@ -433,7 +482,8 @@ impl From<Cx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DchpriDpa {
     #[doc = "Channel n can suspend a lower priority channel."]
@@ -464,7 +514,8 @@ impl From<DchpriDpa> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EsEcx {
     #[doc = "No canceled transfers."]
@@ -495,7 +546,40 @@ impl From<EsEcx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Esg {
+    #[doc = "The current channel's TCD is normal format."]
+    Normal = 0x0,
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
+    Scatter = 0x01,
+}
+impl Esg {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Esg {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Esg {
+    #[inline(always)]
+    fn from(val: u8) -> Esg {
+        Esg::from_bits(val)
+    }
+}
+impl From<Esg> for u8 {
+    #[inline(always)]
+    fn from(val: Esg) -> u8 {
+        Esg::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Halt {
     #[doc = "Normal operation."]
@@ -526,7 +610,8 @@ impl From<Halt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hoe {
     #[doc = "Normal operation."]
@@ -557,7 +642,8 @@ impl From<Hoe> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Saee {
     #[doc = "Write 1 only to the EEI field specified in the SEEI field."]
@@ -588,7 +674,8 @@ impl From<Saee> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Saer {
     #[doc = "Write 1 to only the ERQ field specified in the SERQ field."]
@@ -619,7 +706,8 @@ impl From<Saer> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sast {
     #[doc = "Write 1 to only the TCDn_CSR\\[START\\] field specified in the SSRT field."]
@@ -650,7 +738,8 @@ impl From<Sast> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SeeiNop {
     #[doc = "Normal operation."]
@@ -681,7 +770,8 @@ impl From<SeeiNop> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SerqNop {
     #[doc = "Normal operation."]
@@ -712,7 +802,126 @@ impl From<SerqNop> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Smod {
+    #[doc = "Source address modulo feature is disabled."]
+    Disabled = 0x0,
+    #[doc = "Value defines address range used to set up circular data queue."]
+    Enabled1 = 0x01,
+    #[doc = "Value defines address range used to set up circular data queue."]
+    Enabled2 = 0x02,
+    #[doc = "Value defines address range used to set up circular data queue."]
+    Enabled3 = 0x03,
+    #[doc = "Value defines address range used to set up circular data queue."]
+    Enabled4 = 0x04,
+    #[doc = "Value defines address range used to set up circular data queue."]
+    Enabled5 = 0x05,
+    #[doc = "Value defines address range used to set up circular data queue."]
+    Enabled6 = 0x06,
+    #[doc = "Value defines address range used to set up circular data queue."]
+    Enabled7 = 0x07,
+    #[doc = "Value defines address range used to set up circular data queue."]
+    Enabled8 = 0x08,
+    #[doc = "Value defines address range used to set up circular data queue."]
+    Enabled9 = 0x09,
+    #[doc = "Value defines address range used to set up circular data queue."]
+    Enabled10 = 0x0a,
+    _RESERVED_b = 0x0b,
+    _RESERVED_c = 0x0c,
+    _RESERVED_d = 0x0d,
+    _RESERVED_e = 0x0e,
+    _RESERVED_f = 0x0f,
+    _RESERVED_10 = 0x10,
+    _RESERVED_11 = 0x11,
+    _RESERVED_12 = 0x12,
+    _RESERVED_13 = 0x13,
+    _RESERVED_14 = 0x14,
+    _RESERVED_15 = 0x15,
+    _RESERVED_16 = 0x16,
+    _RESERVED_17 = 0x17,
+    _RESERVED_18 = 0x18,
+    _RESERVED_19 = 0x19,
+    #[doc = "Value defines address range used to set up circular data queue."]
+    Enabled26 = 0x1a,
+    #[doc = "Value defines address range used to set up circular data queue."]
+    Enabled27 = 0x1b,
+    #[doc = "Value defines address range used to set up circular data queue."]
+    Enabled28 = 0x1c,
+    #[doc = "Value defines address range used to set up circular data queue."]
+    Enabled29 = 0x1d,
+    #[doc = "Value defines address range used to set up circular data queue."]
+    Enabled30 = 0x1e,
+    #[doc = "Value defines address range used to set up circular data queue."]
+    Enabled31 = 0x1f,
+}
+impl Smod {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Smod {
+        unsafe { core::mem::transmute(val & 0x1f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Smod {
+    #[inline(always)]
+    fn from(val: u8) -> Smod {
+        Smod::from_bits(val)
+    }
+}
+impl From<Smod> for u8 {
+    #[inline(always)]
+    fn from(val: Smod) -> u8 {
+        Smod::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Ssize {
+    #[doc = "8-bit."]
+    Eight = 0x0,
+    #[doc = "16-bit."]
+    SixteenBit = 0x01,
+    #[doc = "32-bit."]
+    ThirtytwoBit = 0x02,
+    #[doc = "64-bit."]
+    Sixtyfour = 0x03,
+    _RESERVED_4 = 0x04,
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
+    ThirtytwoByte = 0x05,
+    _RESERVED_6 = 0x06,
+    _RESERVED_7 = 0x07,
+}
+impl Ssize {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Ssize {
+        unsafe { core::mem::transmute(val & 0x07) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Ssize {
+    #[inline(always)]
+    fn from(val: u8) -> Ssize {
+        Ssize::from_bits(val)
+    }
+}
+impl From<Ssize> for u8 {
+    #[inline(always)]
+    fn from(val: Ssize) -> u8 {
+        Ssize::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SsrtNop {
     #[doc = "Normal operation."]
@@ -740,110 +949,5 @@ impl From<SsrtNop> for u8 {
     #[inline(always)]
     fn from(val: SsrtNop) -> u8 {
         SsrtNop::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum TcdAttrSsize {
-    #[doc = "8-bit."]
-    Eight = 0x0,
-    #[doc = "16-bit."]
-    SixteenBit = 0x01,
-    #[doc = "32-bit."]
-    ThirtytwoBit = 0x02,
-    #[doc = "64-bit."]
-    Sixtyfour = 0x03,
-    _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)."]
-    ThirtytwoByte = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-}
-impl TcdAttrSsize {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> TcdAttrSsize {
-        unsafe { core::mem::transmute(val & 0x07) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for TcdAttrSsize {
-    #[inline(always)]
-    fn from(val: u8) -> TcdAttrSsize {
-        TcdAttrSsize::from_bits(val)
-    }
-}
-impl From<TcdAttrSsize> for u8 {
-    #[inline(always)]
-    fn from(val: TcdAttrSsize) -> u8 {
-        TcdAttrSsize::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum TcdCsrBwc {
-    #[doc = "No eDMA engine stalls."]
-    Disabled = 0x0,
-    _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
-    Stall4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
-    Stall8 = 0x03,
-}
-impl TcdCsrBwc {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> TcdCsrBwc {
-        unsafe { core::mem::transmute(val & 0x03) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for TcdCsrBwc {
-    #[inline(always)]
-    fn from(val: u8) -> TcdCsrBwc {
-        TcdCsrBwc::from_bits(val)
-    }
-}
-impl From<TcdCsrBwc> for u8 {
-    #[inline(always)]
-    fn from(val: TcdCsrBwc) -> u8 {
-        TcdCsrBwc::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum TcdCsrEsg {
-    #[doc = "The current channel's TCD is normal format."]
-    Normal = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format."]
-    Scatter = 0x01,
-}
-impl TcdCsrEsg {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> TcdCsrEsg {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for TcdCsrEsg {
-    #[inline(always)]
-    fn from(val: u8) -> TcdCsrEsg {
-        TcdCsrEsg::from_bits(val)
-    }
-}
-impl From<TcdCsrEsg> for u8 {
-    #[inline(always)]
-    fn from(val: TcdCsrEsg) -> u8 {
-        TcdCsrEsg::to_bits(val)
     }
 }

@@ -190,6 +190,7 @@ impl Default for Hpcomr {
         Hpcomr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hpcomr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hpcomr")
@@ -367,6 +368,7 @@ impl Default for Hpcr {
         Hpcr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hpcr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hpcr")
@@ -426,6 +428,7 @@ impl Default for Hphacivr {
         Hphacivr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hphacivr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hphacivr")
@@ -467,6 +470,7 @@ impl Default for Hphacr {
         Hphacr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hphacr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hphacr")
@@ -648,6 +652,7 @@ impl Default for Hplr {
         Hplr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hplr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hplr")
@@ -713,6 +718,7 @@ impl Default for Hprtclr {
         Hprtclr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hprtclr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hprtclr").field("rtc", &self.rtc()).finish()
@@ -748,6 +754,7 @@ impl Default for Hprtcmr {
         Hprtcmr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hprtcmr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hprtcmr").field("rtc", &self.rtc()).finish()
@@ -855,6 +862,7 @@ impl Default for Hpsicr {
         Hpsicr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hpsicr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hpsicr")
@@ -1028,6 +1036,7 @@ impl Default for Hpsr {
         Hpsr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hpsr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hpsr")
@@ -1161,6 +1170,7 @@ impl Default for Hpsvcr {
         Hpsvcr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hpsvcr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hpsvcr")
@@ -1346,6 +1356,7 @@ impl Default for Hpsvsr {
         Hpsvsr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hpsvsr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hpsvsr")
@@ -1409,6 +1420,7 @@ impl Default for Hptalr {
         Hptalr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hptalr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hptalr")
@@ -1446,6 +1458,7 @@ impl Default for Hptamr {
         Hptamr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hptamr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hptamr")
@@ -1507,6 +1520,7 @@ impl Default for Hpvidr1 {
         Hpvidr1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hpvidr1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hpvidr1")
@@ -1588,6 +1602,7 @@ impl Default for Hpvidr2 {
         Hpvidr2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hpvidr2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hpvidr2")
@@ -1815,6 +1830,7 @@ impl Default for Lpcr {
         Lpcr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpcr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpcr")
@@ -1886,6 +1902,7 @@ impl Default for Lpgpr {
         Lpgpr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpgpr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpgpr").field("gpr", &self.gpr()).finish()
@@ -1921,6 +1938,7 @@ impl Default for Lpgpr0LegacyAlias {
         Lpgpr0LegacyAlias(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpgpr0LegacyAlias {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpgpr0LegacyAlias")
@@ -1958,6 +1976,7 @@ impl Default for LpgprAlias {
         LpgprAlias(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for LpgprAlias {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LpgprAlias")
@@ -2103,6 +2122,7 @@ impl Default for Lplr {
         Lplr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lplr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lplr")
@@ -2162,6 +2182,7 @@ impl Default for Lplvdr {
         Lplvdr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lplvdr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lplvdr").field("lvd", &self.lvd()).finish()
@@ -2245,6 +2266,7 @@ impl Default for Lpmkcr {
         Lpmkcr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpmkcr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpmkcr")
@@ -2294,6 +2316,7 @@ impl Default for Lpsmclr {
         Lpsmclr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpsmclr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpsmclr")
@@ -2343,6 +2366,7 @@ impl Default for Lpsmcmr {
         Lpsmcmr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpsmcmr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpsmcmr")
@@ -2578,6 +2602,7 @@ impl Default for Lpsr {
         Lpsr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpsr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpsr")
@@ -2651,6 +2676,7 @@ impl Default for Lpsrtclr {
         Lpsrtclr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpsrtclr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpsrtclr")
@@ -2688,6 +2714,7 @@ impl Default for Lpsrtcmr {
         Lpsrtcmr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpsrtcmr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpsrtcmr")
@@ -2785,6 +2812,7 @@ impl Default for Lpsvcr {
         Lpsvcr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpsvcr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpsvcr")
@@ -2836,6 +2864,7 @@ impl Default for Lptar {
         Lptar(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lptar {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lptar").field("lpta", &self.lpta()).finish()
@@ -3063,6 +3092,7 @@ impl Default for Lptdcr {
         Lptdcr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lptdcr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lptdcr")
@@ -3196,6 +3226,7 @@ impl Default for Lptgfcr {
         Lptgfcr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lptgfcr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lptgfcr")
@@ -3247,6 +3278,7 @@ impl Default for Lpzmkr {
         Lpzmkr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpzmkr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpzmkr").field("zmk", &self.zmk()).finish()

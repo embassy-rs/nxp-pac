@@ -15,6 +15,7 @@ impl Cenaf {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cenaf {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -63,6 +64,7 @@ impl Cenrl {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cenrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -95,7 +97,8 @@ impl From<Cenrl> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cfg0 {
     #[doc = "Constant HIGH."]
@@ -138,7 +141,8 @@ impl From<Cfg0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cfg1 {
     #[doc = "Constant HIGH."]
@@ -181,7 +185,8 @@ impl From<Cfg1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cfg2 {
     #[doc = "Constant HIGH."]
@@ -224,7 +229,8 @@ impl From<Cfg2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cfg3 {
     #[doc = "Constant HIGH."]
@@ -267,7 +273,8 @@ impl From<Cfg3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cfg4 {
     #[doc = "Constant HIGH."]
@@ -310,7 +317,8 @@ impl From<Cfg4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cfg5 {
     #[doc = "Constant HIGH."]
@@ -353,7 +361,8 @@ impl From<Cfg5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cfg6 {
     #[doc = "Constant HIGH."]
@@ -396,7 +405,8 @@ impl From<Cfg6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cfg7 {
     #[doc = "Constant HIGH."]
@@ -455,6 +465,7 @@ impl Enaf {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Enaf {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -503,6 +514,7 @@ impl Enrl {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Enrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -551,6 +563,7 @@ impl Fdet {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fdet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -597,6 +610,7 @@ impl Pmat {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pmat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -643,6 +657,7 @@ impl Pmode {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pmode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -675,7 +690,8 @@ impl From<Pmode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ProdEndpts0 {
     #[doc = "No effect."]
@@ -706,7 +722,8 @@ impl From<ProdEndpts0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ProdEndpts1 {
     #[doc = "No effect."]
@@ -737,7 +754,8 @@ impl From<ProdEndpts1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ProdEndpts2 {
     #[doc = "No effect."]
@@ -768,7 +786,8 @@ impl From<ProdEndpts2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ProdEndpts3 {
     #[doc = "No effect."]
@@ -799,7 +818,8 @@ impl From<ProdEndpts3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ProdEndpts4 {
     #[doc = "No effect."]
@@ -830,7 +850,8 @@ impl From<ProdEndpts4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ProdEndpts5 {
     #[doc = "No effect."]
@@ -861,7 +882,8 @@ impl From<ProdEndpts5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ProdEndpts6 {
     #[doc = "No effect."]
@@ -908,6 +930,7 @@ impl Pstat {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pstat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -956,6 +979,7 @@ impl Rdet {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Rdet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -988,7 +1012,8 @@ impl From<Rdet> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SelPmatch {
     #[doc = "Pin interrupt."]
@@ -1035,6 +1060,7 @@ impl Setenaf {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Setenaf {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -1083,6 +1109,7 @@ impl Setenrl {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Setenrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -1115,7 +1142,8 @@ impl From<Setenrl> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Src0 {
     #[doc = "Input 0 (selects the pin identified in PINSEL0)."]
@@ -1158,7 +1186,8 @@ impl From<Src0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Src1 {
     #[doc = "Input 0 (selects the pin identified in PINSEL0)."]
@@ -1201,7 +1230,8 @@ impl From<Src1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Src2 {
     #[doc = "Input 0 (selects the pin identified in PINSEL0)."]
@@ -1244,7 +1274,8 @@ impl From<Src2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Src3 {
     #[doc = "Input 0 (selects the pin identified in PINSEL0)."]
@@ -1287,7 +1318,8 @@ impl From<Src3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Src4 {
     #[doc = "Input 0 (selects the pin identified in PINSEL0)."]
@@ -1330,7 +1362,8 @@ impl From<Src4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Src5 {
     #[doc = "Input 0 (selects the pin identified in PINSEL0)."]
@@ -1373,7 +1406,8 @@ impl From<Src5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Src6 {
     #[doc = "Input 0 (selects the pin identified in PINSEL0)."]
@@ -1416,7 +1450,8 @@ impl From<Src6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Src7 {
     #[doc = "Input 0 (selects the pin identified in PINSEL0)."]

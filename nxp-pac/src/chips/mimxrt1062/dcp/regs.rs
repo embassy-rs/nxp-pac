@@ -58,6 +58,7 @@ impl Default for Capability0 {
         Capability0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Capability0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Capability0")
@@ -117,6 +118,7 @@ impl Default for Capability1 {
         Capability1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Capability1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Capability1")
@@ -160,6 +162,7 @@ impl Default for Ch0cmdptr {
         Ch0cmdptr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch0cmdptr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch0cmdptr")
@@ -197,6 +200,7 @@ impl Default for Ch0opts {
         Ch0opts(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch0opts {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch0opts")
@@ -238,6 +242,7 @@ impl Default for Ch0optsClr {
         Ch0optsClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch0optsClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch0optsClr")
@@ -279,6 +284,7 @@ impl Default for Ch0optsSet {
         Ch0optsSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch0optsSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch0optsSet")
@@ -320,6 +326,7 @@ impl Default for Ch0optsTog {
         Ch0optsTog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch0optsTog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch0optsTog")
@@ -373,6 +380,7 @@ impl Default for Ch0sema {
         Ch0sema(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch0sema {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch0sema")
@@ -500,6 +508,7 @@ impl Default for Ch0stat {
         Ch0stat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch0stat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch0stat")
@@ -639,6 +648,7 @@ impl Default for Ch0statClr {
         Ch0statClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch0statClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch0statClr")
@@ -778,6 +788,7 @@ impl Default for Ch0statSet {
         Ch0statSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch0statSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch0statSet")
@@ -917,6 +928,7 @@ impl Default for Ch0statTog {
         Ch0statTog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch0statTog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch0statTog")
@@ -972,6 +984,7 @@ impl Default for Ch1cmdptr {
         Ch1cmdptr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch1cmdptr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch1cmdptr")
@@ -1009,6 +1022,7 @@ impl Default for Ch1opts {
         Ch1opts(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch1opts {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch1opts")
@@ -1050,6 +1064,7 @@ impl Default for Ch1optsClr {
         Ch1optsClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch1optsClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch1optsClr")
@@ -1091,6 +1106,7 @@ impl Default for Ch1optsSet {
         Ch1optsSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch1optsSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch1optsSet")
@@ -1132,6 +1148,7 @@ impl Default for Ch1optsTog {
         Ch1optsTog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch1optsTog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch1optsTog")
@@ -1185,6 +1202,7 @@ impl Default for Ch1sema {
         Ch1sema(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch1sema {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch1sema")
@@ -1312,6 +1330,7 @@ impl Default for Ch1stat {
         Ch1stat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch1stat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch1stat")
@@ -1451,6 +1470,7 @@ impl Default for Ch1statClr {
         Ch1statClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch1statClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch1statClr")
@@ -1590,6 +1610,7 @@ impl Default for Ch1statSet {
         Ch1statSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch1statSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch1statSet")
@@ -1729,6 +1750,7 @@ impl Default for Ch1statTog {
         Ch1statTog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch1statTog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch1statTog")
@@ -1784,6 +1806,7 @@ impl Default for Ch2cmdptr {
         Ch2cmdptr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch2cmdptr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch2cmdptr")
@@ -1821,6 +1844,7 @@ impl Default for Ch2opts {
         Ch2opts(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch2opts {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch2opts")
@@ -1862,6 +1886,7 @@ impl Default for Ch2optsClr {
         Ch2optsClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch2optsClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch2optsClr")
@@ -1903,6 +1928,7 @@ impl Default for Ch2optsSet {
         Ch2optsSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch2optsSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch2optsSet")
@@ -1944,6 +1970,7 @@ impl Default for Ch2optsTog {
         Ch2optsTog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch2optsTog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch2optsTog")
@@ -1997,6 +2024,7 @@ impl Default for Ch2sema {
         Ch2sema(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch2sema {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch2sema")
@@ -2124,6 +2152,7 @@ impl Default for Ch2stat {
         Ch2stat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch2stat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch2stat")
@@ -2263,6 +2292,7 @@ impl Default for Ch2statClr {
         Ch2statClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch2statClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch2statClr")
@@ -2402,6 +2432,7 @@ impl Default for Ch2statSet {
         Ch2statSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch2statSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch2statSet")
@@ -2541,6 +2572,7 @@ impl Default for Ch2statTog {
         Ch2statTog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch2statTog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch2statTog")
@@ -2596,6 +2628,7 @@ impl Default for Ch3cmdptr {
         Ch3cmdptr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch3cmdptr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch3cmdptr")
@@ -2633,6 +2666,7 @@ impl Default for Ch3opts {
         Ch3opts(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch3opts {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch3opts")
@@ -2674,6 +2708,7 @@ impl Default for Ch3optsClr {
         Ch3optsClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch3optsClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch3optsClr")
@@ -2715,6 +2750,7 @@ impl Default for Ch3optsSet {
         Ch3optsSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch3optsSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch3optsSet")
@@ -2756,6 +2792,7 @@ impl Default for Ch3optsTog {
         Ch3optsTog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch3optsTog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch3optsTog")
@@ -2809,6 +2846,7 @@ impl Default for Ch3sema {
         Ch3sema(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch3sema {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch3sema")
@@ -2936,6 +2974,7 @@ impl Default for Ch3stat {
         Ch3stat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch3stat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch3stat")
@@ -3075,6 +3114,7 @@ impl Default for Ch3statClr {
         Ch3statClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch3statClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch3statClr")
@@ -3214,6 +3254,7 @@ impl Default for Ch3statSet {
         Ch3statSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch3statSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch3statSet")
@@ -3353,6 +3394,7 @@ impl Default for Ch3statTog {
         Ch3statTog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ch3statTog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ch3statTog")
@@ -3435,6 +3477,7 @@ impl Default for Channelctrl {
         Channelctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Channelctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Channelctrl")
@@ -3507,6 +3550,7 @@ impl Default for ChannelctrlClr {
         ChannelctrlClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ChannelctrlClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ChannelctrlClr")
@@ -3579,6 +3623,7 @@ impl Default for ChannelctrlSet {
         ChannelctrlSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ChannelctrlSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ChannelctrlSet")
@@ -3651,6 +3696,7 @@ impl Default for ChannelctrlTog {
         ChannelctrlTog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ChannelctrlTog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ChannelctrlTog")
@@ -3696,6 +3742,7 @@ impl Default for Context {
         Context(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Context {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Context")
@@ -3820,6 +3867,7 @@ impl Default for Ctrl {
         Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl")
@@ -3962,6 +4010,7 @@ impl Default for CtrlClr {
         CtrlClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CtrlClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CtrlClr")
@@ -4104,6 +4153,7 @@ impl Default for CtrlSet {
         CtrlSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CtrlSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CtrlSet")
@@ -4246,6 +4296,7 @@ impl Default for CtrlTog {
         CtrlTog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CtrlTog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CtrlTog")
@@ -4301,6 +4352,7 @@ impl Default for Dbgdata {
         Dbgdata(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dbgdata {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dbgdata")
@@ -4338,6 +4390,7 @@ impl Default for Dbgselect {
         Dbgselect(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dbgselect {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dbgselect")
@@ -4387,6 +4440,7 @@ impl Default for Key {
         Key(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Key {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Key")
@@ -4430,6 +4484,7 @@ impl Default for Keydata {
         Keydata(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Keydata {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Keydata")
@@ -4467,6 +4522,7 @@ impl Default for Packet0 {
         Packet0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Packet0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Packet0")
@@ -4792,6 +4848,7 @@ impl Default for Packet1 {
         Packet1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Packet1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Packet1")
@@ -4929,6 +4986,7 @@ impl Default for Packet2 {
         Packet2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Packet2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Packet2")
@@ -4978,6 +5036,7 @@ impl Default for Packet3 {
         Packet3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Packet3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Packet3")
@@ -5015,6 +5074,7 @@ impl Default for Packet4 {
         Packet4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Packet4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Packet4")
@@ -5052,6 +5112,7 @@ impl Default for Packet5 {
         Packet5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Packet5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Packet5")
@@ -5089,6 +5150,7 @@ impl Default for Packet6 {
         Packet6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Packet6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Packet6")
@@ -5150,6 +5212,7 @@ impl Default for Pagetable {
         Pagetable(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pagetable {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pagetable")
@@ -5231,6 +5294,7 @@ impl Default for Stat {
         Stat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Stat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Stat")
@@ -5314,6 +5378,7 @@ impl Default for StatClr {
         StatClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for StatClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("StatClr")
@@ -5397,6 +5462,7 @@ impl Default for StatSet {
         StatSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for StatSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("StatSet")
@@ -5480,6 +5546,7 @@ impl Default for StatTog {
         StatTog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for StatTog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("StatTog")
@@ -5551,6 +5618,7 @@ impl Default for Version {
         Version(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Version {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Version")

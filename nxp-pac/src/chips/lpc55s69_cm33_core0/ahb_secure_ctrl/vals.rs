@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AdcRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -34,7 +35,8 @@ impl From<AdcRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSecCtrlRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -69,7 +71,8 @@ impl From<AhbSecCtrlRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSecCtrlSect0Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -104,7 +107,8 @@ impl From<AhbSecCtrlSect0Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSecCtrlSect1Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -139,7 +143,8 @@ impl From<AhbSecCtrlSect1Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSecCtrlSect2Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -174,7 +179,8 @@ impl From<AhbSecCtrlSect2Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSecCtrlSect3Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -209,7 +215,8 @@ impl From<AhbSecCtrlSect3Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AnactrlRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -244,7 +251,8 @@ impl From<AnactrlRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Apbbridge0Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -279,7 +287,8 @@ impl From<Apbbridge0Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Apbbridge1Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -314,7 +323,8 @@ impl From<Apbbridge1Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CasperRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -349,7 +359,8 @@ impl From<CasperRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cpu0LockRegLock {
     _RESERVED_0 = 0x0,
@@ -382,7 +393,8 @@ impl From<Cpu0LockRegLock> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cpu0LockRegLockNsMpu {
     _RESERVED_0 = 0x0,
@@ -415,7 +427,8 @@ impl From<Cpu0LockRegLockNsMpu> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cpu0LockRegLockNsVtor {
     _RESERVED_0 = 0x0,
@@ -448,7 +461,8 @@ impl From<Cpu0LockRegLockNsVtor> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cpu1LockRegLock {
     _RESERVED_0 = 0x0,
@@ -481,7 +495,8 @@ impl From<Cpu1LockRegLock> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cpu1LockRegLockNsMpu {
     _RESERVED_0 = 0x0,
@@ -514,7 +529,8 @@ impl From<Cpu1LockRegLockNsMpu> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cpu1LockRegLockNsVtor {
     _RESERVED_0 = 0x0,
@@ -547,7 +563,8 @@ impl From<Cpu1LockRegLockNsVtor> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CrcRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -582,7 +599,8 @@ impl From<CrcRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctimer0Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -617,7 +635,8 @@ impl From<Ctimer0Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctimer1Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -652,7 +671,8 @@ impl From<Ctimer1Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctimer2Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -687,7 +707,8 @@ impl From<Ctimer2Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctimer3Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -722,7 +743,8 @@ impl From<Ctimer3Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctimer4Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -757,7 +779,8 @@ impl From<Ctimer4Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DbgMailboxRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -792,7 +815,8 @@ impl From<DbgMailboxRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dma0Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -827,7 +851,8 @@ impl From<Dma0Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dma1Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -862,7 +887,8 @@ impl From<Dma1Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlashCtrlRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -897,7 +923,8 @@ impl From<FlashCtrlRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlashRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -932,7 +959,8 @@ impl From<FlashRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexcomm0Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -967,7 +995,8 @@ impl From<Flexcomm0Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexcomm1Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -1002,7 +1031,8 @@ impl From<Flexcomm1Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexcomm2Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -1037,7 +1067,8 @@ impl From<Flexcomm2Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexcomm3Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -1072,7 +1103,8 @@ impl From<Flexcomm3Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexcomm4Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -1107,7 +1139,8 @@ impl From<Flexcomm4Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexcomm5Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -1142,7 +1175,8 @@ impl From<Flexcomm5Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexcomm6Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -1177,7 +1211,8 @@ impl From<Flexcomm6Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexcomm7Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -1212,7 +1247,8 @@ impl From<Flexcomm7Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FsUsbDevRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -1247,7 +1283,8 @@ impl From<FsUsbDevRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gint0Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -1282,7 +1319,8 @@ impl From<Gint0Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gint1Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -1317,7 +1355,8 @@ impl From<Gint1Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpio0Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -1352,7 +1391,8 @@ impl From<Gpio0Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpio1Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -1387,7 +1427,8 @@ impl From<Gpio1Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HashRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -1422,7 +1463,8 @@ impl From<HashRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HsLspiRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -1457,7 +1499,8 @@ impl From<HsLspiRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum InputmuxRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -1492,7 +1535,8 @@ impl From<InputmuxRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IoconRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -1527,7 +1571,8 @@ impl From<IoconRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LockSMpu {
     _RESERVED_0 = 0x0,
@@ -1560,7 +1605,8 @@ impl From<LockSMpu> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LockSVtaircr {
     _RESERVED_0 = 0x0,
@@ -1593,7 +1639,8 @@ impl From<LockSVtaircr> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LockSau {
     _RESERVED_0 = 0x0,
@@ -1626,7 +1673,8 @@ impl From<LockSau> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MailboxRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -1661,7 +1709,8 @@ impl From<MailboxRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecAntiPolRegCpu1c {
     #[doc = "Secure and Priviledge user access allowed."]
@@ -1696,7 +1745,8 @@ impl From<MasterSecAntiPolRegCpu1c> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecAntiPolRegCpu1s {
     #[doc = "Secure and Priviledge user access allowed."]
@@ -1731,7 +1781,8 @@ impl From<MasterSecAntiPolRegCpu1s> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecAntiPolRegHash {
     #[doc = "Secure and Priviledge user access allowed."]
@@ -1766,7 +1817,8 @@ impl From<MasterSecAntiPolRegHash> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecAntiPolRegPq {
     #[doc = "Secure and Priviledge user access allowed."]
@@ -1801,7 +1853,8 @@ impl From<MasterSecAntiPolRegPq> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecAntiPolRegSdio {
     #[doc = "Secure and Priviledge user access allowed."]
@@ -1836,7 +1889,8 @@ impl From<MasterSecAntiPolRegSdio> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecAntiPolRegSdma0 {
     #[doc = "Secure and Priviledge user access allowed."]
@@ -1871,7 +1925,8 @@ impl From<MasterSecAntiPolRegSdma0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecAntiPolRegSdma1 {
     #[doc = "Secure and Priviledge user access allowed."]
@@ -1906,7 +1961,8 @@ impl From<MasterSecAntiPolRegSdma1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecAntiPolRegUsbfsd {
     #[doc = "Secure and Priviledge user access allowed."]
@@ -1941,7 +1997,8 @@ impl From<MasterSecAntiPolRegUsbfsd> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecAntiPolRegUsbfsh {
     #[doc = "Secure and Priviledge user access allowed."]
@@ -1976,7 +2033,8 @@ impl From<MasterSecAntiPolRegUsbfsh> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecLevelAntipolLock {
     _RESERVED_0 = 0x0,
@@ -2009,7 +2067,8 @@ impl From<MasterSecLevelAntipolLock> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecLevelCpu1c {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -2044,7 +2103,8 @@ impl From<MasterSecLevelCpu1c> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecLevelCpu1s {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -2079,7 +2139,8 @@ impl From<MasterSecLevelCpu1s> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecLevelHash {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -2114,7 +2175,8 @@ impl From<MasterSecLevelHash> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecLevelLock {
     _RESERVED_0 = 0x0,
@@ -2147,7 +2209,8 @@ impl From<MasterSecLevelLock> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecLevelPq {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -2182,7 +2245,8 @@ impl From<MasterSecLevelPq> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecLevelSdio {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -2217,7 +2281,8 @@ impl From<MasterSecLevelSdio> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecLevelSdma0 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -2252,7 +2317,8 @@ impl From<MasterSecLevelSdma0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecLevelSdma1 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -2287,7 +2353,8 @@ impl From<MasterSecLevelSdma1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecLevelUsbfsd {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -2322,7 +2389,8 @@ impl From<MasterSecLevelUsbfsd> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecLevelUsbfsh {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -2357,7 +2425,8 @@ impl From<MasterSecLevelUsbfsh> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MiscCtrlDpRegDisableSimpleMasterStrictMode {
     _RESERVED_0 = 0x0,
@@ -2390,7 +2459,8 @@ impl From<MiscCtrlDpRegDisableSimpleMasterStrictMode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MiscCtrlDpRegDisableSmartMasterStrictMode {
     _RESERVED_0 = 0x0,
@@ -2423,7 +2493,8 @@ impl From<MiscCtrlDpRegDisableSmartMasterStrictMode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MiscCtrlDpRegDisableViolationAbort {
     _RESERVED_0 = 0x0,
@@ -2456,7 +2527,8 @@ impl From<MiscCtrlDpRegDisableViolationAbort> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MiscCtrlDpRegEnableNsPrivCheck {
     _RESERVED_0 = 0x0,
@@ -2489,7 +2561,8 @@ impl From<MiscCtrlDpRegEnableNsPrivCheck> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MiscCtrlDpRegEnableSPrivCheck {
     _RESERVED_0 = 0x0,
@@ -2522,7 +2595,8 @@ impl From<MiscCtrlDpRegEnableSPrivCheck> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MiscCtrlDpRegEnableSecureChecking {
     _RESERVED_0 = 0x0,
@@ -2555,7 +2629,8 @@ impl From<MiscCtrlDpRegEnableSecureChecking> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MiscCtrlDpRegIdauAllNs {
     _RESERVED_0 = 0x0,
@@ -2588,7 +2663,8 @@ impl From<MiscCtrlDpRegIdauAllNs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MiscCtrlDpRegWriteLock {
     _RESERVED_0 = 0x0,
@@ -2621,7 +2697,8 @@ impl From<MiscCtrlDpRegWriteLock> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MiscCtrlRegDisableSimpleMasterStrictMode {
     _RESERVED_0 = 0x0,
@@ -2654,7 +2731,8 @@ impl From<MiscCtrlRegDisableSimpleMasterStrictMode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MiscCtrlRegDisableSmartMasterStrictMode {
     _RESERVED_0 = 0x0,
@@ -2687,7 +2765,8 @@ impl From<MiscCtrlRegDisableSmartMasterStrictMode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MiscCtrlRegDisableViolationAbort {
     _RESERVED_0 = 0x0,
@@ -2720,7 +2799,8 @@ impl From<MiscCtrlRegDisableViolationAbort> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MiscCtrlRegEnableNsPrivCheck {
     _RESERVED_0 = 0x0,
@@ -2753,7 +2833,8 @@ impl From<MiscCtrlRegEnableNsPrivCheck> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MiscCtrlRegEnableSPrivCheck {
     _RESERVED_0 = 0x0,
@@ -2786,7 +2867,8 @@ impl From<MiscCtrlRegEnableSPrivCheck> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MiscCtrlRegEnableSecureChecking {
     _RESERVED_0 = 0x0,
@@ -2819,7 +2901,8 @@ impl From<MiscCtrlRegEnableSecureChecking> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MiscCtrlRegIdauAllNs {
     _RESERVED_0 = 0x0,
@@ -2852,7 +2935,8 @@ impl From<MiscCtrlRegIdauAllNs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MiscCtrlRegWriteLock {
     _RESERVED_0 = 0x0,
@@ -2885,7 +2969,8 @@ impl From<MiscCtrlRegWriteLock> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MrtRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -2920,7 +3005,8 @@ impl From<MrtRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OseventRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -2955,7 +3041,8 @@ impl From<OseventRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PintRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -2990,7 +3077,8 @@ impl From<PintRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin0SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3021,7 +3109,8 @@ impl From<Pio0Pin0SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin10SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3052,7 +3141,8 @@ impl From<Pio0Pin10SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin11SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3083,7 +3173,8 @@ impl From<Pio0Pin11SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin12SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3114,7 +3205,8 @@ impl From<Pio0Pin12SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin13SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3145,7 +3237,8 @@ impl From<Pio0Pin13SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin14SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3176,7 +3269,8 @@ impl From<Pio0Pin14SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin15SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3207,7 +3301,8 @@ impl From<Pio0Pin15SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin16SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3238,7 +3333,8 @@ impl From<Pio0Pin16SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin17SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3269,7 +3365,8 @@ impl From<Pio0Pin17SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin18SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3300,7 +3397,8 @@ impl From<Pio0Pin18SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin19SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3331,7 +3429,8 @@ impl From<Pio0Pin19SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin1SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3362,7 +3461,8 @@ impl From<Pio0Pin1SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin20SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3393,7 +3493,8 @@ impl From<Pio0Pin20SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin21SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3424,7 +3525,8 @@ impl From<Pio0Pin21SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin22SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3455,7 +3557,8 @@ impl From<Pio0Pin22SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin23SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3486,7 +3589,8 @@ impl From<Pio0Pin23SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin24SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3517,7 +3621,8 @@ impl From<Pio0Pin24SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin25SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3548,7 +3653,8 @@ impl From<Pio0Pin25SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin26SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3579,7 +3685,8 @@ impl From<Pio0Pin26SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin27SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3610,7 +3717,8 @@ impl From<Pio0Pin27SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin28SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3641,7 +3749,8 @@ impl From<Pio0Pin28SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin29SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3672,7 +3781,8 @@ impl From<Pio0Pin29SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin2SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3703,7 +3813,8 @@ impl From<Pio0Pin2SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin30SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3734,7 +3845,8 @@ impl From<Pio0Pin30SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin31SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3765,7 +3877,8 @@ impl From<Pio0Pin31SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin3SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3796,7 +3909,8 @@ impl From<Pio0Pin3SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin4SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3827,7 +3941,8 @@ impl From<Pio0Pin4SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin5SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3858,7 +3973,8 @@ impl From<Pio0Pin5SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin6SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3889,7 +4005,8 @@ impl From<Pio0Pin6SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin7SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3920,7 +4037,8 @@ impl From<Pio0Pin7SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin8SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3951,7 +4069,8 @@ impl From<Pio0Pin8SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin9SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -3982,7 +4101,8 @@ impl From<Pio0Pin9SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin0SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4013,7 +4133,8 @@ impl From<Pio1Pin0SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin10SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4044,7 +4165,8 @@ impl From<Pio1Pin10SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin11SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4075,7 +4197,8 @@ impl From<Pio1Pin11SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin12SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4106,7 +4229,8 @@ impl From<Pio1Pin12SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin13SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4137,7 +4261,8 @@ impl From<Pio1Pin13SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin14SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4168,7 +4293,8 @@ impl From<Pio1Pin14SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin15SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4199,7 +4325,8 @@ impl From<Pio1Pin15SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin16SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4230,7 +4357,8 @@ impl From<Pio1Pin16SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin17SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4261,7 +4389,8 @@ impl From<Pio1Pin17SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin18SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4292,7 +4421,8 @@ impl From<Pio1Pin18SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin19SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4323,7 +4453,8 @@ impl From<Pio1Pin19SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin1SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4354,7 +4485,8 @@ impl From<Pio1Pin1SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin20SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4385,7 +4517,8 @@ impl From<Pio1Pin20SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin21SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4416,7 +4549,8 @@ impl From<Pio1Pin21SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin22SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4447,7 +4581,8 @@ impl From<Pio1Pin22SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin23SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4478,7 +4613,8 @@ impl From<Pio1Pin23SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin24SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4509,7 +4645,8 @@ impl From<Pio1Pin24SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin25SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4540,7 +4677,8 @@ impl From<Pio1Pin25SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin26SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4571,7 +4709,8 @@ impl From<Pio1Pin26SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin27SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4602,7 +4741,8 @@ impl From<Pio1Pin27SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin28SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4633,7 +4773,8 @@ impl From<Pio1Pin28SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin29SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4664,7 +4805,8 @@ impl From<Pio1Pin29SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin2SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4695,7 +4837,8 @@ impl From<Pio1Pin2SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin30SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4726,7 +4869,8 @@ impl From<Pio1Pin30SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin31SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4757,7 +4901,8 @@ impl From<Pio1Pin31SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin3SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4788,7 +4933,8 @@ impl From<Pio1Pin3SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin4SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4819,7 +4965,8 @@ impl From<Pio1Pin4SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin5SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4850,7 +4997,8 @@ impl From<Pio1Pin5SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin6SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4881,7 +5029,8 @@ impl From<Pio1Pin6SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin7SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4912,7 +5061,8 @@ impl From<Pio1Pin7SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin8SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4943,7 +5093,8 @@ impl From<Pio1Pin8SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio1Pin9SecMask {
     #[doc = "Pin state is blocked to non-secure world."]
@@ -4974,7 +5125,8 @@ impl From<Pio1Pin9SecMask> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PluRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -5009,7 +5161,8 @@ impl From<PluRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PmcRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -5044,7 +5197,8 @@ impl From<PmcRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PqRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -5079,7 +5233,8 @@ impl From<PqRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PrinceRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -5114,7 +5269,8 @@ impl From<PrinceRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PufRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -5149,7 +5305,8 @@ impl From<PufRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ram0Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -5184,7 +5341,8 @@ impl From<Ram0Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ram1Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -5219,7 +5377,8 @@ impl From<Ram1Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ram2Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -5254,7 +5413,8 @@ impl From<Ram2Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ram3Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -5289,7 +5449,8 @@ impl From<Ram3Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ram4Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -5324,7 +5485,8 @@ impl From<Ram4Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamUsbHsRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -5359,7 +5521,8 @@ impl From<RamUsbHsRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamxRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -5394,7 +5557,8 @@ impl From<RamxRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RngRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -5429,7 +5593,8 @@ impl From<RngRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RomRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -5464,7 +5629,8 @@ impl From<RomRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RtcRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -5499,7 +5665,8 @@ impl From<RtcRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SctRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -5534,7 +5701,8 @@ impl From<SctRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SdioRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -5569,7 +5737,8 @@ impl From<SdioRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCpu1IntMask0Lock {
     _RESERVED_0 = 0x0,
@@ -5602,7 +5771,8 @@ impl From<SecCpu1IntMask0Lock> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCpu1IntMask1Lock {
     _RESERVED_0 = 0x0,
@@ -5635,7 +5805,8 @@ impl From<SecCpu1IntMask1Lock> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlFlashMemRule0Rule0 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -5670,7 +5841,8 @@ impl From<SecCtrlFlashMemRule0Rule0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlFlashMemRule0Rule1 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -5705,7 +5877,8 @@ impl From<SecCtrlFlashMemRule0Rule1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlFlashMemRule0Rule2 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -5740,7 +5913,8 @@ impl From<SecCtrlFlashMemRule0Rule2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlFlashMemRule0Rule3 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -5775,7 +5949,8 @@ impl From<SecCtrlFlashMemRule0Rule3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlFlashMemRule0Rule4 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -5810,7 +5985,8 @@ impl From<SecCtrlFlashMemRule0Rule4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlFlashMemRule0Rule5 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -5845,7 +6021,8 @@ impl From<SecCtrlFlashMemRule0Rule5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlFlashMemRule0Rule6 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -5880,7 +6057,8 @@ impl From<SecCtrlFlashMemRule0Rule6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlFlashMemRule0Rule7 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -5915,7 +6093,8 @@ impl From<SecCtrlFlashMemRule0Rule7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlFlashMemRule1Rule0 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -5950,7 +6129,8 @@ impl From<SecCtrlFlashMemRule1Rule0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlFlashMemRule1Rule1 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -5985,7 +6165,8 @@ impl From<SecCtrlFlashMemRule1Rule1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlFlashMemRule1Rule2 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -6020,7 +6201,8 @@ impl From<SecCtrlFlashMemRule1Rule2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlFlashMemRule1Rule3 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -6055,7 +6237,8 @@ impl From<SecCtrlFlashMemRule1Rule3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlFlashMemRule1Rule4 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -6090,7 +6273,8 @@ impl From<SecCtrlFlashMemRule1Rule4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlFlashMemRule1Rule5 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -6125,7 +6309,8 @@ impl From<SecCtrlFlashMemRule1Rule5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlFlashMemRule1Rule6 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -6160,7 +6345,8 @@ impl From<SecCtrlFlashMemRule1Rule6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlFlashMemRule1Rule7 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -6195,7 +6381,8 @@ impl From<SecCtrlFlashMemRule1Rule7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlFlashMemRule2Rule0 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -6230,7 +6417,8 @@ impl From<SecCtrlFlashMemRule2Rule0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlFlashMemRule2Rule1 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -6265,7 +6453,8 @@ impl From<SecCtrlFlashMemRule2Rule1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlFlashMemRule2Rule2 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -6300,7 +6489,8 @@ impl From<SecCtrlFlashMemRule2Rule2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlFlashMemRule2Rule3 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -6335,7 +6525,8 @@ impl From<SecCtrlFlashMemRule2Rule3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlFlashMemRule2Rule4 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -6370,7 +6561,8 @@ impl From<SecCtrlFlashMemRule2Rule4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlFlashMemRule2Rule5 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -6405,7 +6597,8 @@ impl From<SecCtrlFlashMemRule2Rule5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlFlashMemRule2Rule6 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -6440,7 +6633,8 @@ impl From<SecCtrlFlashMemRule2Rule6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlFlashMemRule2Rule7 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -6475,7 +6669,8 @@ impl From<SecCtrlFlashMemRule2Rule7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam0MemRule0Rule0 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -6510,7 +6705,8 @@ impl From<SecCtrlRam0MemRule0Rule0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam0MemRule0Rule1 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -6545,7 +6741,8 @@ impl From<SecCtrlRam0MemRule0Rule1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam0MemRule0Rule2 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -6580,7 +6777,8 @@ impl From<SecCtrlRam0MemRule0Rule2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam0MemRule0Rule3 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -6615,7 +6813,8 @@ impl From<SecCtrlRam0MemRule0Rule3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam0MemRule0Rule4 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -6650,7 +6849,8 @@ impl From<SecCtrlRam0MemRule0Rule4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam0MemRule0Rule5 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -6685,7 +6885,8 @@ impl From<SecCtrlRam0MemRule0Rule5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam0MemRule0Rule6 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -6720,7 +6921,8 @@ impl From<SecCtrlRam0MemRule0Rule6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam0MemRule0Rule7 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -6755,7 +6957,8 @@ impl From<SecCtrlRam0MemRule0Rule7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam0MemRule1Rule0 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -6790,7 +6993,8 @@ impl From<SecCtrlRam0MemRule1Rule0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam0MemRule1Rule1 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -6825,7 +7029,8 @@ impl From<SecCtrlRam0MemRule1Rule1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam0MemRule1Rule2 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -6860,7 +7065,8 @@ impl From<SecCtrlRam0MemRule1Rule2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam0MemRule1Rule3 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -6895,7 +7101,8 @@ impl From<SecCtrlRam0MemRule1Rule3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam0MemRule1Rule4 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -6930,7 +7137,8 @@ impl From<SecCtrlRam0MemRule1Rule4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam0MemRule1Rule5 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -6965,7 +7173,8 @@ impl From<SecCtrlRam0MemRule1Rule5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam0MemRule1Rule6 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -7000,7 +7209,8 @@ impl From<SecCtrlRam0MemRule1Rule6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam0MemRule1Rule7 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -7035,7 +7245,8 @@ impl From<SecCtrlRam0MemRule1Rule7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam1MemRule0Rule0 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -7070,7 +7281,8 @@ impl From<SecCtrlRam1MemRule0Rule0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam1MemRule0Rule1 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -7105,7 +7317,8 @@ impl From<SecCtrlRam1MemRule0Rule1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam1MemRule0Rule2 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -7140,7 +7353,8 @@ impl From<SecCtrlRam1MemRule0Rule2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam1MemRule0Rule3 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -7175,7 +7389,8 @@ impl From<SecCtrlRam1MemRule0Rule3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam1MemRule0Rule4 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -7210,7 +7425,8 @@ impl From<SecCtrlRam1MemRule0Rule4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam1MemRule0Rule5 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -7245,7 +7461,8 @@ impl From<SecCtrlRam1MemRule0Rule5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam1MemRule0Rule6 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -7280,7 +7497,8 @@ impl From<SecCtrlRam1MemRule0Rule6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam1MemRule0Rule7 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -7315,7 +7533,8 @@ impl From<SecCtrlRam1MemRule0Rule7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam1MemRule1Rule0 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -7350,7 +7569,8 @@ impl From<SecCtrlRam1MemRule1Rule0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam1MemRule1Rule1 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -7385,7 +7605,8 @@ impl From<SecCtrlRam1MemRule1Rule1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam1MemRule1Rule2 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -7420,7 +7641,8 @@ impl From<SecCtrlRam1MemRule1Rule2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam1MemRule1Rule3 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -7455,7 +7677,8 @@ impl From<SecCtrlRam1MemRule1Rule3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam1MemRule1Rule4 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -7490,7 +7713,8 @@ impl From<SecCtrlRam1MemRule1Rule4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam1MemRule1Rule5 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -7525,7 +7749,8 @@ impl From<SecCtrlRam1MemRule1Rule5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam1MemRule1Rule6 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -7560,7 +7785,8 @@ impl From<SecCtrlRam1MemRule1Rule6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam1MemRule1Rule7 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -7595,7 +7821,8 @@ impl From<SecCtrlRam1MemRule1Rule7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam2MemRule0Rule0 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -7630,7 +7857,8 @@ impl From<SecCtrlRam2MemRule0Rule0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam2MemRule0Rule1 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -7665,7 +7893,8 @@ impl From<SecCtrlRam2MemRule0Rule1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam2MemRule0Rule2 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -7700,7 +7929,8 @@ impl From<SecCtrlRam2MemRule0Rule2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam2MemRule0Rule3 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -7735,7 +7965,8 @@ impl From<SecCtrlRam2MemRule0Rule3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam2MemRule0Rule4 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -7770,7 +8001,8 @@ impl From<SecCtrlRam2MemRule0Rule4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam2MemRule0Rule5 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -7805,7 +8037,8 @@ impl From<SecCtrlRam2MemRule0Rule5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam2MemRule0Rule6 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -7840,7 +8073,8 @@ impl From<SecCtrlRam2MemRule0Rule6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam2MemRule0Rule7 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -7875,7 +8109,8 @@ impl From<SecCtrlRam2MemRule0Rule7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam2MemRule1Rule0 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -7910,7 +8145,8 @@ impl From<SecCtrlRam2MemRule1Rule0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam2MemRule1Rule1 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -7945,7 +8181,8 @@ impl From<SecCtrlRam2MemRule1Rule1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam2MemRule1Rule2 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -7980,7 +8217,8 @@ impl From<SecCtrlRam2MemRule1Rule2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam2MemRule1Rule3 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -8015,7 +8253,8 @@ impl From<SecCtrlRam2MemRule1Rule3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam2MemRule1Rule4 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -8050,7 +8289,8 @@ impl From<SecCtrlRam2MemRule1Rule4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam2MemRule1Rule5 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -8085,7 +8325,8 @@ impl From<SecCtrlRam2MemRule1Rule5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam2MemRule1Rule6 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -8120,7 +8361,8 @@ impl From<SecCtrlRam2MemRule1Rule6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam2MemRule1Rule7 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -8155,7 +8397,8 @@ impl From<SecCtrlRam2MemRule1Rule7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam3MemRule0Rule0 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -8190,7 +8433,8 @@ impl From<SecCtrlRam3MemRule0Rule0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam3MemRule0Rule1 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -8225,7 +8469,8 @@ impl From<SecCtrlRam3MemRule0Rule1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam3MemRule0Rule2 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -8260,7 +8505,8 @@ impl From<SecCtrlRam3MemRule0Rule2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam3MemRule0Rule3 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -8295,7 +8541,8 @@ impl From<SecCtrlRam3MemRule0Rule3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam3MemRule0Rule4 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -8330,7 +8577,8 @@ impl From<SecCtrlRam3MemRule0Rule4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam3MemRule0Rule5 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -8365,7 +8613,8 @@ impl From<SecCtrlRam3MemRule0Rule5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam3MemRule0Rule6 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -8400,7 +8649,8 @@ impl From<SecCtrlRam3MemRule0Rule6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam3MemRule0Rule7 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -8435,7 +8685,8 @@ impl From<SecCtrlRam3MemRule0Rule7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam3MemRule1Rule0 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -8470,7 +8721,8 @@ impl From<SecCtrlRam3MemRule1Rule0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam3MemRule1Rule1 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -8505,7 +8757,8 @@ impl From<SecCtrlRam3MemRule1Rule1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam3MemRule1Rule2 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -8540,7 +8793,8 @@ impl From<SecCtrlRam3MemRule1Rule2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam3MemRule1Rule3 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -8575,7 +8829,8 @@ impl From<SecCtrlRam3MemRule1Rule3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam3MemRule1Rule4 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -8610,7 +8865,8 @@ impl From<SecCtrlRam3MemRule1Rule4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam3MemRule1Rule5 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -8645,7 +8901,8 @@ impl From<SecCtrlRam3MemRule1Rule5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam3MemRule1Rule6 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -8680,7 +8937,8 @@ impl From<SecCtrlRam3MemRule1Rule6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam3MemRule1Rule7 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -8715,7 +8973,8 @@ impl From<SecCtrlRam3MemRule1Rule7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam4MemRule0Rule0 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -8750,7 +9009,8 @@ impl From<SecCtrlRam4MemRule0Rule0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam4MemRule0Rule1 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -8785,7 +9045,8 @@ impl From<SecCtrlRam4MemRule0Rule1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam4MemRule0Rule2 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -8820,7 +9081,8 @@ impl From<SecCtrlRam4MemRule0Rule2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRam4MemRule0Rule3 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -8855,7 +9117,8 @@ impl From<SecCtrlRam4MemRule0Rule3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRamxMemRule0Rule0 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -8890,7 +9153,8 @@ impl From<SecCtrlRamxMemRule0Rule0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRamxMemRule0Rule1 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -8925,7 +9189,8 @@ impl From<SecCtrlRamxMemRule0Rule1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRamxMemRule0Rule2 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -8960,7 +9225,8 @@ impl From<SecCtrlRamxMemRule0Rule2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRamxMemRule0Rule3 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -8995,7 +9261,8 @@ impl From<SecCtrlRamxMemRule0Rule3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRamxMemRule0Rule4 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -9030,7 +9297,8 @@ impl From<SecCtrlRamxMemRule0Rule4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRamxMemRule0Rule5 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -9065,7 +9333,8 @@ impl From<SecCtrlRamxMemRule0Rule5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRamxMemRule0Rule6 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -9100,7 +9369,8 @@ impl From<SecCtrlRamxMemRule0Rule6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRamxMemRule0Rule7 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -9135,7 +9405,8 @@ impl From<SecCtrlRamxMemRule0Rule7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule0Rule0 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -9170,7 +9441,8 @@ impl From<SecCtrlRomMemRule0Rule0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule0Rule1 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -9205,7 +9477,8 @@ impl From<SecCtrlRomMemRule0Rule1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule0Rule2 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -9240,7 +9513,8 @@ impl From<SecCtrlRomMemRule0Rule2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule0Rule3 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -9275,7 +9549,8 @@ impl From<SecCtrlRomMemRule0Rule3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule0Rule4 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -9310,7 +9585,8 @@ impl From<SecCtrlRomMemRule0Rule4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule0Rule5 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -9345,7 +9621,8 @@ impl From<SecCtrlRomMemRule0Rule5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule0Rule6 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -9380,7 +9657,8 @@ impl From<SecCtrlRomMemRule0Rule6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule0Rule7 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -9415,7 +9693,8 @@ impl From<SecCtrlRomMemRule0Rule7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule1Rule0 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -9450,7 +9729,8 @@ impl From<SecCtrlRomMemRule1Rule0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule1Rule1 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -9485,7 +9765,8 @@ impl From<SecCtrlRomMemRule1Rule1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule1Rule2 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -9520,7 +9801,8 @@ impl From<SecCtrlRomMemRule1Rule2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule1Rule3 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -9555,7 +9837,8 @@ impl From<SecCtrlRomMemRule1Rule3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule1Rule4 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -9590,7 +9873,8 @@ impl From<SecCtrlRomMemRule1Rule4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule1Rule5 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -9625,7 +9909,8 @@ impl From<SecCtrlRomMemRule1Rule5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule1Rule6 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -9660,7 +9945,8 @@ impl From<SecCtrlRomMemRule1Rule6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule1Rule7 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -9695,7 +9981,8 @@ impl From<SecCtrlRomMemRule1Rule7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule2Rule0 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -9730,7 +10017,8 @@ impl From<SecCtrlRomMemRule2Rule0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule2Rule1 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -9765,7 +10053,8 @@ impl From<SecCtrlRomMemRule2Rule1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule2Rule2 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -9800,7 +10089,8 @@ impl From<SecCtrlRomMemRule2Rule2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule2Rule3 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -9835,7 +10125,8 @@ impl From<SecCtrlRomMemRule2Rule3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule2Rule4 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -9870,7 +10161,8 @@ impl From<SecCtrlRomMemRule2Rule4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule2Rule5 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -9905,7 +10197,8 @@ impl From<SecCtrlRomMemRule2Rule5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule2Rule6 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -9940,7 +10233,8 @@ impl From<SecCtrlRomMemRule2Rule6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule2Rule7 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -9975,7 +10269,8 @@ impl From<SecCtrlRomMemRule2Rule7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule3Rule0 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -10010,7 +10305,8 @@ impl From<SecCtrlRomMemRule3Rule0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule3Rule1 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -10045,7 +10341,8 @@ impl From<SecCtrlRomMemRule3Rule1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule3Rule2 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -10080,7 +10377,8 @@ impl From<SecCtrlRomMemRule3Rule2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule3Rule3 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -10115,7 +10413,8 @@ impl From<SecCtrlRomMemRule3Rule3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule3Rule4 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -10150,7 +10449,8 @@ impl From<SecCtrlRomMemRule3Rule4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule3Rule5 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -10185,7 +10485,8 @@ impl From<SecCtrlRomMemRule3Rule5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule3Rule6 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -10220,7 +10521,8 @@ impl From<SecCtrlRomMemRule3Rule6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCtrlRomMemRule3Rule7 {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -10255,7 +10557,8 @@ impl From<SecCtrlRomMemRule3Rule7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecGpioMask0Lock {
     _RESERVED_0 = 0x0,
@@ -10288,7 +10591,8 @@ impl From<SecGpioMask0Lock> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecGpioMask1Lock {
     _RESERVED_0 = 0x0,
@@ -10321,7 +10625,8 @@ impl From<SecGpioMask1Lock> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecPintRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -10356,7 +10661,8 @@ impl From<SecPintRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecVioInfoDataAccess {
     #[doc = "Code access."]
@@ -10387,7 +10693,8 @@ impl From<SecVioInfoDataAccess> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecVioInfoMaster {
     #[doc = "CPU0 Code."]
@@ -10441,7 +10748,8 @@ impl From<SecVioInfoMaster> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecVioInfoWrite {
     #[doc = "Read access."]
@@ -10472,7 +10780,8 @@ impl From<SecVioInfoWrite> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramSect0Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -10507,7 +10816,8 @@ impl From<SramSect0Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramSect1Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -10542,7 +10852,8 @@ impl From<SramSect1Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramSect2Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -10577,7 +10888,8 @@ impl From<SramSect2Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramSect3Rule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -10612,7 +10924,8 @@ impl From<SramSect3Rule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SysconRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -10647,7 +10960,8 @@ impl From<SysconRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SysctrlRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -10682,7 +10996,8 @@ impl From<SysctrlRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum UsbFsHostRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -10717,7 +11032,8 @@ impl From<UsbFsHostRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum UsbHsDevRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -10752,7 +11068,8 @@ impl From<UsbHsDevRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum UsbHsHostRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -10787,7 +11104,8 @@ impl From<UsbHsHostRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum UsbhphyRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -10822,7 +11140,8 @@ impl From<UsbhphyRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum UtickRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]
@@ -10857,7 +11176,8 @@ impl From<UtickRule> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum WwdtRule {
     #[doc = "Non-secure and Non-priviledge user access allowed."]

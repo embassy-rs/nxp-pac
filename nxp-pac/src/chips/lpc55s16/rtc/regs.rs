@@ -22,6 +22,7 @@ impl Default for Count {
         Count(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Count {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Count").field("val", &self.val()).finish()
@@ -165,6 +166,7 @@ impl Default for Ctrl {
         Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl")
@@ -203,8 +205,8 @@ impl defmt::Format for Ctrl {
 #[doc = "General Purpose register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Gpreg(pub u32);
-impl Gpreg {
+pub struct Gpreg0(pub u32);
+impl Gpreg0 {
     #[doc = "Data retained during Deep power-down mode or loss of main power as long as VBAT is supplied."]
     #[must_use]
     #[inline(always)]
@@ -218,23 +220,290 @@ impl Gpreg {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
     }
 }
-impl Default for Gpreg {
+impl Default for Gpreg0 {
     #[inline(always)]
-    fn default() -> Gpreg {
-        Gpreg(0)
+    fn default() -> Gpreg0 {
+        Gpreg0(0)
     }
 }
-impl core::fmt::Debug for Gpreg {
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Gpreg0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Gpreg")
+        f.debug_struct("Gpreg0")
             .field("gpdata", &self.gpdata())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for Gpreg {
+impl defmt::Format for Gpreg0 {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Gpreg {{ gpdata: {=u32:?} }}", self.gpdata())
+        defmt::write!(f, "Gpreg0 {{ gpdata: {=u32:?} }}", self.gpdata())
+    }
+}
+#[doc = "General Purpose register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Gpreg1(pub u32);
+impl Gpreg1 {
+    #[doc = "Data retained during Deep power-down mode or loss of main power as long as VBAT is supplied."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn gpdata(&self) -> u32 {
+        let val = (self.0 >> 0usize) & 0xffff_ffff;
+        val as u32
+    }
+    #[doc = "Data retained during Deep power-down mode or loss of main power as long as VBAT is supplied."]
+    #[inline(always)]
+    pub const fn set_gpdata(&mut self, val: u32) {
+        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+    }
+}
+impl Default for Gpreg1 {
+    #[inline(always)]
+    fn default() -> Gpreg1 {
+        Gpreg1(0)
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Gpreg1 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Gpreg1")
+            .field("gpdata", &self.gpdata())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Gpreg1 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Gpreg1 {{ gpdata: {=u32:?} }}", self.gpdata())
+    }
+}
+#[doc = "General Purpose register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Gpreg2(pub u32);
+impl Gpreg2 {
+    #[doc = "Data retained during Deep power-down mode or loss of main power as long as VBAT is supplied."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn gpdata(&self) -> u32 {
+        let val = (self.0 >> 0usize) & 0xffff_ffff;
+        val as u32
+    }
+    #[doc = "Data retained during Deep power-down mode or loss of main power as long as VBAT is supplied."]
+    #[inline(always)]
+    pub const fn set_gpdata(&mut self, val: u32) {
+        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+    }
+}
+impl Default for Gpreg2 {
+    #[inline(always)]
+    fn default() -> Gpreg2 {
+        Gpreg2(0)
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Gpreg2 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Gpreg2")
+            .field("gpdata", &self.gpdata())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Gpreg2 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Gpreg2 {{ gpdata: {=u32:?} }}", self.gpdata())
+    }
+}
+#[doc = "General Purpose register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Gpreg3(pub u32);
+impl Gpreg3 {
+    #[doc = "Data retained during Deep power-down mode or loss of main power as long as VBAT is supplied."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn gpdata(&self) -> u32 {
+        let val = (self.0 >> 0usize) & 0xffff_ffff;
+        val as u32
+    }
+    #[doc = "Data retained during Deep power-down mode or loss of main power as long as VBAT is supplied."]
+    #[inline(always)]
+    pub const fn set_gpdata(&mut self, val: u32) {
+        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+    }
+}
+impl Default for Gpreg3 {
+    #[inline(always)]
+    fn default() -> Gpreg3 {
+        Gpreg3(0)
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Gpreg3 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Gpreg3")
+            .field("gpdata", &self.gpdata())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Gpreg3 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Gpreg3 {{ gpdata: {=u32:?} }}", self.gpdata())
+    }
+}
+#[doc = "General Purpose register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Gpreg4(pub u32);
+impl Gpreg4 {
+    #[doc = "Data retained during Deep power-down mode or loss of main power as long as VBAT is supplied."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn gpdata(&self) -> u32 {
+        let val = (self.0 >> 0usize) & 0xffff_ffff;
+        val as u32
+    }
+    #[doc = "Data retained during Deep power-down mode or loss of main power as long as VBAT is supplied."]
+    #[inline(always)]
+    pub const fn set_gpdata(&mut self, val: u32) {
+        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+    }
+}
+impl Default for Gpreg4 {
+    #[inline(always)]
+    fn default() -> Gpreg4 {
+        Gpreg4(0)
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Gpreg4 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Gpreg4")
+            .field("gpdata", &self.gpdata())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Gpreg4 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Gpreg4 {{ gpdata: {=u32:?} }}", self.gpdata())
+    }
+}
+#[doc = "General Purpose register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Gpreg5(pub u32);
+impl Gpreg5 {
+    #[doc = "Data retained during Deep power-down mode or loss of main power as long as VBAT is supplied."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn gpdata(&self) -> u32 {
+        let val = (self.0 >> 0usize) & 0xffff_ffff;
+        val as u32
+    }
+    #[doc = "Data retained during Deep power-down mode or loss of main power as long as VBAT is supplied."]
+    #[inline(always)]
+    pub const fn set_gpdata(&mut self, val: u32) {
+        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+    }
+}
+impl Default for Gpreg5 {
+    #[inline(always)]
+    fn default() -> Gpreg5 {
+        Gpreg5(0)
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Gpreg5 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Gpreg5")
+            .field("gpdata", &self.gpdata())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Gpreg5 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Gpreg5 {{ gpdata: {=u32:?} }}", self.gpdata())
+    }
+}
+#[doc = "General Purpose register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Gpreg6(pub u32);
+impl Gpreg6 {
+    #[doc = "Data retained during Deep power-down mode or loss of main power as long as VBAT is supplied."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn gpdata(&self) -> u32 {
+        let val = (self.0 >> 0usize) & 0xffff_ffff;
+        val as u32
+    }
+    #[doc = "Data retained during Deep power-down mode or loss of main power as long as VBAT is supplied."]
+    #[inline(always)]
+    pub const fn set_gpdata(&mut self, val: u32) {
+        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+    }
+}
+impl Default for Gpreg6 {
+    #[inline(always)]
+    fn default() -> Gpreg6 {
+        Gpreg6(0)
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Gpreg6 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Gpreg6")
+            .field("gpdata", &self.gpdata())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Gpreg6 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Gpreg6 {{ gpdata: {=u32:?} }}", self.gpdata())
+    }
+}
+#[doc = "General Purpose register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Gpreg7(pub u32);
+impl Gpreg7 {
+    #[doc = "Data retained during Deep power-down mode or loss of main power as long as VBAT is supplied."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn gpdata(&self) -> u32 {
+        let val = (self.0 >> 0usize) & 0xffff_ffff;
+        val as u32
+    }
+    #[doc = "Data retained during Deep power-down mode or loss of main power as long as VBAT is supplied."]
+    #[inline(always)]
+    pub const fn set_gpdata(&mut self, val: u32) {
+        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+    }
+}
+impl Default for Gpreg7 {
+    #[inline(always)]
+    fn default() -> Gpreg7 {
+        Gpreg7(0)
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for Gpreg7 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Gpreg7")
+            .field("gpdata", &self.gpdata())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Gpreg7 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Gpreg7 {{ gpdata: {=u32:?} }}", self.gpdata())
     }
 }
 #[doc = "RTC match register."]
@@ -261,6 +530,7 @@ impl Default for Match {
         Match(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Match {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Match")
@@ -298,6 +568,7 @@ impl Default for Subsec {
         Subsec(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Subsec {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Subsec")
@@ -335,6 +606,7 @@ impl Default for Wake {
         Wake(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Wake {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Wake").field("val", &self.val()).finish()

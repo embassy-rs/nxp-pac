@@ -106,6 +106,7 @@ impl Default for Bfcrt01 {
         Bfcrt01(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Bfcrt01 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Bfcrt01")
@@ -245,6 +246,7 @@ impl Default for Bfcrt23 {
         Bfcrt23(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Bfcrt23 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Bfcrt23")

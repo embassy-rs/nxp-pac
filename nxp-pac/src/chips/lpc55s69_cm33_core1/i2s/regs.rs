@@ -142,6 +142,7 @@ impl Default for Cfg1 {
         Cfg1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cfg1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cfg1")
@@ -215,6 +216,7 @@ impl Default for Cfg2 {
         Cfg2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cfg2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cfg2")
@@ -258,6 +260,7 @@ impl Default for Div {
         Div(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Div {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Div").field("div", &self.div()).finish()
@@ -413,6 +416,7 @@ impl Default for Fifocfg {
         Fifocfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fifocfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fifocfg")
@@ -510,6 +514,7 @@ impl Default for Fifointenclr {
         Fifointenclr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fifointenclr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fifointenclr")
@@ -593,6 +598,7 @@ impl Default for Fifointenset {
         Fifointenset(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fifointenset {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fifointenset")
@@ -688,6 +694,7 @@ impl Default for Fifointstat {
         Fifointstat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fifointstat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fifointstat")
@@ -737,6 +744,7 @@ impl Default for Fiford {
         Fiford(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fiford {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fiford")
@@ -774,6 +782,7 @@ impl Default for Fiford48h {
         Fiford48h(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fiford48h {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fiford48h")
@@ -811,6 +820,7 @@ impl Default for Fiford48hnopop {
         Fiford48hnopop(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fiford48hnopop {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fiford48hnopop")
@@ -848,6 +858,7 @@ impl Default for Fifordnopop {
         Fifordnopop(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fifordnopop {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fifordnopop")
@@ -885,6 +896,7 @@ impl Default for Fifosize {
         Fifosize(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fifosize {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fifosize")
@@ -1018,6 +1030,7 @@ impl Default for Fifostat {
         Fifostat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fifostat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fifostat")
@@ -1111,6 +1124,7 @@ impl Default for Fifotrig {
         Fifotrig(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fifotrig {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fifotrig")
@@ -1158,6 +1172,7 @@ impl Default for Fifowr {
         Fifowr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fifowr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fifowr")
@@ -1195,6 +1210,7 @@ impl Default for Fifowr48h {
         Fifowr48h(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fifowr48h {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fifowr48h")
@@ -1268,6 +1284,7 @@ impl Default for Id {
         Id(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Id {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Id")
@@ -1351,6 +1368,7 @@ impl Default for Stat {
         Stat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Stat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Stat")

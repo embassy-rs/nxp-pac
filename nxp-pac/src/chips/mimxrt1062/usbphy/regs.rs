@@ -382,6 +382,7 @@ impl Default for Ctrl {
         Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl")
@@ -843,6 +844,7 @@ impl Default for CtrlClr {
         CtrlClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CtrlClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CtrlClr")
@@ -1304,6 +1306,7 @@ impl Default for CtrlSet {
         CtrlSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CtrlSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CtrlSet")
@@ -1765,6 +1768,7 @@ impl Default for CtrlTog {
         CtrlTog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CtrlTog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CtrlTog")
@@ -2034,6 +2038,7 @@ impl Default for Debug {
         Debug(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Debug {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Debug")
@@ -2127,6 +2132,7 @@ impl Default for Debug0Status {
         Debug0Status(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Debug0Status {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Debug0Status")
@@ -2196,6 +2202,7 @@ impl Default for Debug1 {
         Debug1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Debug1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Debug1")
@@ -2265,6 +2272,7 @@ impl Default for Debug1Clr {
         Debug1Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Debug1Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Debug1Clr")
@@ -2334,6 +2342,7 @@ impl Default for Debug1Set {
         Debug1Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Debug1Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Debug1Set")
@@ -2403,6 +2412,7 @@ impl Default for Debug1Tog {
         Debug1Tog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Debug1Tog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Debug1Tog")
@@ -2616,6 +2626,7 @@ impl Default for DebugClr {
         DebugClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DebugClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DebugClr")
@@ -2853,6 +2864,7 @@ impl Default for DebugSet {
         DebugSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DebugSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DebugSet")
@@ -3090,6 +3102,7 @@ impl Default for DebugTog {
         DebugTog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DebugTog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DebugTog")
@@ -3267,6 +3280,7 @@ impl Default for Pwd {
         Pwd(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pwd {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pwd")
@@ -3434,6 +3448,7 @@ impl Default for PwdClr {
         PwdClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PwdClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PwdClr")
@@ -3601,6 +3616,7 @@ impl Default for PwdSet {
         PwdSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PwdSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PwdSet")
@@ -3768,6 +3784,7 @@ impl Default for PwdTog {
         PwdTog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PwdTog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PwdTog")
@@ -3887,6 +3904,7 @@ impl Default for Rx {
         Rx(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Rx {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Rx")
@@ -3998,6 +4016,7 @@ impl Default for RxClr {
         RxClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for RxClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RxClr")
@@ -4109,6 +4128,7 @@ impl Default for RxSet {
         RxSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for RxSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RxSet")
@@ -4220,6 +4240,7 @@ impl Default for RxTog {
         RxTog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for RxTog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RxTog")
@@ -4367,6 +4388,7 @@ impl Default for Status {
         Status(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Status {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Status")
@@ -4508,6 +4530,7 @@ impl Default for Tx {
         Tx(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tx {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tx")
@@ -4647,6 +4670,7 @@ impl Default for TxClr {
         TxClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TxClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TxClr")
@@ -4786,6 +4810,7 @@ impl Default for TxSet {
         TxSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TxSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TxSet")
@@ -4925,6 +4950,7 @@ impl Default for TxTog {
         TxTog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for TxTog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TxTog")
@@ -5004,6 +5030,7 @@ impl Default for Version {
         Version(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Version {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Version")

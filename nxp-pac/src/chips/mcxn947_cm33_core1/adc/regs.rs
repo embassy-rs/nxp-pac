@@ -22,6 +22,7 @@ impl Default for CalGar {
         CalGar(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CalGar {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CalGar")
@@ -59,6 +60,7 @@ impl Default for CalGbr {
         CalGbr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CalGbr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CalGbr")
@@ -180,6 +182,7 @@ impl Default for Cfg {
         Cfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cfg")
@@ -307,6 +310,7 @@ impl Default for Cmdh1 {
         Cmdh1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmdh1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmdh1")
@@ -432,6 +436,7 @@ impl Default for Cmdh10 {
         Cmdh10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmdh10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmdh10")
@@ -557,6 +562,7 @@ impl Default for Cmdh11 {
         Cmdh11(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmdh11 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmdh11")
@@ -682,6 +688,7 @@ impl Default for Cmdh12 {
         Cmdh12(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmdh12 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmdh12")
@@ -807,6 +814,7 @@ impl Default for Cmdh13 {
         Cmdh13(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmdh13 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmdh13")
@@ -932,6 +940,7 @@ impl Default for Cmdh14 {
         Cmdh14(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmdh14 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmdh14")
@@ -1057,6 +1066,7 @@ impl Default for Cmdh15 {
         Cmdh15(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmdh15 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmdh15")
@@ -1182,6 +1192,7 @@ impl Default for Cmdh2 {
         Cmdh2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmdh2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmdh2")
@@ -1307,6 +1318,7 @@ impl Default for Cmdh3 {
         Cmdh3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmdh3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmdh3")
@@ -1432,6 +1444,7 @@ impl Default for Cmdh4 {
         Cmdh4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmdh4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmdh4")
@@ -1557,6 +1570,7 @@ impl Default for Cmdh5 {
         Cmdh5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmdh5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmdh5")
@@ -1682,6 +1696,7 @@ impl Default for Cmdh6 {
         Cmdh6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmdh6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmdh6")
@@ -1807,6 +1822,7 @@ impl Default for Cmdh7 {
         Cmdh7(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmdh7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmdh7")
@@ -1932,6 +1948,7 @@ impl Default for Cmdh8 {
         Cmdh8(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmdh8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmdh8")
@@ -2057,6 +2074,7 @@ impl Default for Cmdh9 {
         Cmdh9(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmdh9 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmdh9")
@@ -2158,6 +2176,7 @@ impl Default for Cmdl1 {
         Cmdl1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmdl1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmdl1")
@@ -2255,6 +2274,7 @@ impl Default for Cmdl10 {
         Cmdl10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmdl10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmdl10")
@@ -2352,6 +2372,7 @@ impl Default for Cmdl11 {
         Cmdl11(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmdl11 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmdl11")
@@ -2449,6 +2470,7 @@ impl Default for Cmdl12 {
         Cmdl12(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmdl12 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmdl12")
@@ -2546,6 +2568,7 @@ impl Default for Cmdl13 {
         Cmdl13(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmdl13 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmdl13")
@@ -2643,6 +2666,7 @@ impl Default for Cmdl14 {
         Cmdl14(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmdl14 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmdl14")
@@ -2740,6 +2764,7 @@ impl Default for Cmdl15 {
         Cmdl15(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmdl15 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmdl15")
@@ -2837,6 +2862,7 @@ impl Default for Cmdl2 {
         Cmdl2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmdl2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmdl2")
@@ -2934,6 +2960,7 @@ impl Default for Cmdl3 {
         Cmdl3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmdl3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmdl3")
@@ -3031,6 +3058,7 @@ impl Default for Cmdl4 {
         Cmdl4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmdl4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmdl4")
@@ -3128,6 +3156,7 @@ impl Default for Cmdl5 {
         Cmdl5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmdl5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmdl5")
@@ -3225,6 +3254,7 @@ impl Default for Cmdl6 {
         Cmdl6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmdl6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmdl6")
@@ -3322,6 +3352,7 @@ impl Default for Cmdl7 {
         Cmdl7(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmdl7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmdl7")
@@ -3419,6 +3450,7 @@ impl Default for Cmdl8 {
         Cmdl8(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmdl8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmdl8")
@@ -3516,6 +3548,7 @@ impl Default for Cmdl9 {
         Cmdl9(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmdl9 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmdl9")
@@ -3649,6 +3682,7 @@ impl Default for Ctrl {
         Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl")
@@ -3716,6 +3750,7 @@ impl Default for Cv {
         Cv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cv")
@@ -3771,6 +3806,7 @@ impl Default for De {
         De(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for De {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("De")
@@ -3826,6 +3862,7 @@ impl Default for Fctrl {
         Fctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fctrl")
@@ -3881,6 +3918,7 @@ impl Default for Gcc {
         Gcc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gcc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gcc")
@@ -3936,6 +3974,7 @@ impl Default for Gcr {
         Gcr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gcr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gcr")
@@ -4039,6 +4078,7 @@ impl Default for Ie {
         Ie(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ie {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ie")
@@ -4102,6 +4142,7 @@ impl Default for Ofstrim {
         Ofstrim(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ofstrim {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ofstrim")
@@ -4181,6 +4222,7 @@ impl Default for Param {
         Param(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Param {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Param")
@@ -4240,6 +4282,7 @@ impl Default for Pause {
         Pause(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pause {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pause")
@@ -4331,6 +4374,7 @@ impl Default for Resfifo {
         Resfifo(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Resfifo {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Resfifo")
@@ -4488,6 +4532,7 @@ impl Default for Stat {
         Stat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Stat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Stat")
@@ -4583,6 +4628,7 @@ impl Default for Swtrig {
         Swtrig(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Swtrig {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Swtrig")
@@ -4702,6 +4748,7 @@ impl Default for Tctrl {
         Tctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tctrl")
@@ -4767,6 +4814,7 @@ impl Default for Tstat {
         Tstat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tstat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tstat")
@@ -4930,6 +4978,7 @@ impl Default for Verid {
         Verid(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Verid {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Verid")

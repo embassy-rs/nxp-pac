@@ -130,8 +130,6 @@ impl Adc0TrigTrigin {
     pub const Val63: Self = Self(0x3f);
     #[doc = "GPIO3 Pin Event Trig 1 input is selected."]
     pub const Val64: Self = Self(0x40);
-    #[doc = "WUU input is selected."]
-    pub const Val65: Self = Self(0x41);
 }
 impl Adc0TrigTrigin {
     pub const fn from_bits(val: u8) -> Adc0TrigTrigin {
@@ -141,6 +139,7 @@ impl Adc0TrigTrigin {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Adc0TrigTrigin {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -208,7 +207,6 @@ impl core::fmt::Debug for Adc0TrigTrigin {
             0x3e => f.write_str("Val62"),
             0x3f => f.write_str("Val63"),
             0x40 => f.write_str("Val64"),
-            0x41 => f.write_str("Val65"),
             other => core::write!(f, "0x{:02X}", other),
         }
     }
@@ -281,7 +279,6 @@ impl defmt::Format for Adc0TrigTrigin {
             0x3e => defmt::write!(f, "Val62"),
             0x3f => defmt::write!(f, "Val63"),
             0x40 => defmt::write!(f, "Val64"),
-            0x41 => defmt::write!(f, "Val65"),
             other => defmt::write!(f, "0x{:02X}", other),
         }
     }
@@ -430,8 +427,6 @@ impl Adc1TrigTrigin {
     pub const Val63: Self = Self(0x3f);
     #[doc = "GPIO3 Pin Event Trig 1 input is selected."]
     pub const Val64: Self = Self(0x40);
-    #[doc = "WUU input is selected."]
-    pub const Val65: Self = Self(0x41);
 }
 impl Adc1TrigTrigin {
     pub const fn from_bits(val: u8) -> Adc1TrigTrigin {
@@ -441,6 +436,7 @@ impl Adc1TrigTrigin {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Adc1TrigTrigin {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -508,7 +504,6 @@ impl core::fmt::Debug for Adc1TrigTrigin {
             0x3e => f.write_str("Val62"),
             0x3f => f.write_str("Val63"),
             0x40 => f.write_str("Val64"),
-            0x41 => f.write_str("Val65"),
             other => core::write!(f, "0x{:02X}", other),
         }
     }
@@ -581,7 +576,6 @@ impl defmt::Format for Adc1TrigTrigin {
             0x3e => defmt::write!(f, "Val62"),
             0x3f => defmt::write!(f, "Val63"),
             0x40 => defmt::write!(f, "Val64"),
-            0x41 => defmt::write!(f, "Val65"),
             other => defmt::write!(f, "0x{:02X}", other),
         }
     }
@@ -599,7 +593,8 @@ impl From<Adc1TrigTrigin> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmp0TrigTrigin {
     #[doc = "PINT PIN_INT0 input is selected."]
@@ -727,7 +722,8 @@ impl From<Cmp0TrigTrigin> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmp1TrigTrigin {
     #[doc = "PINT PIN_INT0 input is selected."]
@@ -855,7 +851,8 @@ impl From<Cmp1TrigTrigin> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmp2TrigTrigin {
     #[doc = "PINT PIN_INT0 input is selected."]
@@ -983,7 +980,8 @@ impl From<Cmp2TrigTrigin> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctimer0cap0Inp {
     #[doc = "CT_INP0 input is selected."]
@@ -1201,7 +1199,8 @@ impl From<Ctimer0cap0Inp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctimer0cap1Inp {
     #[doc = "CT_INP0 input is selected."]
@@ -1419,7 +1418,8 @@ impl From<Ctimer0cap1Inp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctimer0cap2Inp {
     #[doc = "CT_INP0 input is selected."]
@@ -1637,7 +1637,8 @@ impl From<Ctimer0cap2Inp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctimer0cap3Inp {
     #[doc = "CT_INP0 input is selected."]
@@ -1855,7 +1856,8 @@ impl From<Ctimer0cap3Inp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctimer1cap0Inp {
     #[doc = "CT_INP0 input is selected."]
@@ -2073,7 +2075,8 @@ impl From<Ctimer1cap0Inp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctimer1cap1Inp {
     #[doc = "CT_INP0 input is selected."]
@@ -2291,7 +2294,8 @@ impl From<Ctimer1cap1Inp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctimer1cap2Inp {
     #[doc = "CT_INP0 input is selected."]
@@ -2509,7 +2513,8 @@ impl From<Ctimer1cap2Inp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctimer1cap3Inp {
     #[doc = "CT_INP0 input is selected."]
@@ -2727,7 +2732,8 @@ impl From<Ctimer1cap3Inp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctimer2cap0Inp {
     #[doc = "CT_INP0 input is selected."]
@@ -2945,7 +2951,8 @@ impl From<Ctimer2cap0Inp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctimer2cap1Inp {
     #[doc = "CT_INP0 input is selected."]
@@ -3163,7 +3170,8 @@ impl From<Ctimer2cap1Inp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctimer2cap2Inp {
     #[doc = "CT_INP0 input is selected."]
@@ -3381,7 +3389,8 @@ impl From<Ctimer2cap2Inp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctimer2cap3Inp {
     #[doc = "CT_INP0 input is selected."]
@@ -3599,7 +3608,8 @@ impl From<Ctimer2cap3Inp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctimer3cap0Inp {
     #[doc = "CT_INP0 input is selected."]
@@ -3817,7 +3827,8 @@ impl From<Ctimer3cap0Inp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctimer3cap1Inp {
     #[doc = "CT_INP0 input is selected."]
@@ -4035,7 +4046,8 @@ impl From<Ctimer3cap1Inp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctimer3cap2Inp {
     #[doc = "CT_INP0 input is selected."]
@@ -4253,7 +4265,8 @@ impl From<Ctimer3cap2Inp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctimer3cap3Inp {
     #[doc = "CT_INP0 input is selected."]
@@ -4471,7 +4484,8 @@ impl From<Ctimer3cap3Inp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctimer4cap0Inp {
     #[doc = "CT_INP0 input is selected."]
@@ -4689,7 +4703,8 @@ impl From<Ctimer4cap0Inp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctimer4cap1Inp {
     #[doc = "CT_INP0 input is selected."]
@@ -4907,7 +4922,8 @@ impl From<Ctimer4cap1Inp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctimer4cap2Inp {
     #[doc = "CT_INP0 input is selected."]
@@ -5125,7 +5141,8 @@ impl From<Ctimer4cap2Inp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctimer4cap3Inp {
     #[doc = "CT_INP0 input is selected."]
@@ -5343,7 +5360,8 @@ impl From<Ctimer4cap3Inp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dac0TrigTrigin {
     #[doc = "PINT PIN_INT0 input is selected."]
@@ -5464,7 +5482,8 @@ impl From<Dac0TrigTrigin> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dac1TrigTrigin {
     #[doc = "PINT PIN_INT0 input is selected."]
@@ -5585,7 +5604,8 @@ impl From<Dac1TrigTrigin> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dac2TrigTrigin {
     #[doc = "PINT PIN_INT0 input is selected."]
@@ -5706,9 +5726,10 @@ impl From<Dac2TrigTrigin> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum EvtgTrigInp {
+pub enum EvtgTrig0Inp {
     #[doc = "PINT PIN_INT0 input is selected."]
     Val0 = 0x0,
     #[doc = "PINT PIN_INT1 input is selected."]
@@ -5829,9 +5850,9 @@ pub enum EvtgTrigInp {
     _RESERVED_3e = 0x3e,
     _RESERVED_3f = 0x3f,
 }
-impl EvtgTrigInp {
+impl EvtgTrig0Inp {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> EvtgTrigInp {
+    pub const fn from_bits(val: u8) -> EvtgTrig0Inp {
         unsafe { core::mem::transmute(val & 0x3f) }
     }
     #[inline(always)]
@@ -5839,22 +5860,2228 @@ impl EvtgTrigInp {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for EvtgTrigInp {
+impl From<u8> for EvtgTrig0Inp {
     #[inline(always)]
-    fn from(val: u8) -> EvtgTrigInp {
-        EvtgTrigInp::from_bits(val)
+    fn from(val: u8) -> EvtgTrig0Inp {
+        EvtgTrig0Inp::from_bits(val)
     }
 }
-impl From<EvtgTrigInp> for u8 {
+impl From<EvtgTrig0Inp> for u8 {
     #[inline(always)]
-    fn from(val: EvtgTrigInp) -> u8 {
-        EvtgTrigInp::to_bits(val)
+    fn from(val: EvtgTrig0Inp) -> u8 {
+        EvtgTrig0Inp::to_bits(val)
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum ExtTrigInp {
+pub enum EvtgTrig10Inp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT1 input is selected."]
+    Val1 = 0x01,
+    #[doc = "SCT_OUT0 input is selected."]
+    Val2 = 0x02,
+    #[doc = "SCT_OUT1 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT2 input is selected."]
+    Val4 = 0x04,
+    #[doc = "SCT_OUT3 input is selected."]
+    Val5 = 0x05,
+    #[doc = "CTIMER0_MAT3 input is selected."]
+    Val6 = 0x06,
+    #[doc = "CTIMER1_MAT3 input is selected."]
+    Val7 = 0x07,
+    #[doc = "CTIMER2_MAT3 input is selected."]
+    Val8 = 0x08,
+    #[doc = "CTIMER2_MAT2 input is selected."]
+    Val9 = 0x09,
+    #[doc = "CTIMER3_MAT2 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "CTIMER4_MAT2 input is selected."]
+    Val11 = 0x0b,
+    _RESERVED_c = 0x0c,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val13 = 0x0d,
+    #[doc = "ADC0_IRQ input is selected."]
+    Val14 = 0x0e,
+    #[doc = "ADC1_IRQ input is selected."]
+    Val15 = 0x0f,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val16 = 0x10,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val21 = 0x15,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val22 = 0x16,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val23 = 0x17,
+    #[doc = "CMP0_OUT input is selected."]
+    Val24 = 0x18,
+    #[doc = "CMP1_OUT input is selected."]
+    Val25 = 0x19,
+    #[doc = "CMP2_OUT input is selected."]
+    Val26 = 0x1a,
+    #[doc = "PWM0_SM0_MUX_TRIG0 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM0_SM1_MUX_TRIG0 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM0_SM2_MUX_TRIG0 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val32 = 0x20,
+    #[doc = "PWM0_SM3_MUX_TRIG0 input is selected."]
+    Val33 = 0x21,
+    #[doc = "PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val34 = 0x22,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val35 = 0x23,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val36 = 0x24,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val37 = 0x25,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val38 = 0x26,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val39 = 0x27,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val40 = 0x28,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val41 = 0x29,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val43 = 0x2b,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val44 = 0x2c,
+    #[doc = "TRIG_IN0 input is selected."]
+    Val45 = 0x2d,
+    #[doc = "TRIG_IN1 input is selected."]
+    Val46 = 0x2e,
+    #[doc = "TRIG_IN2 input is selected."]
+    Val47 = 0x2f,
+    #[doc = "TRIG_IN3 input is selected."]
+    Val48 = 0x30,
+    #[doc = "LPTMR0 input is selected."]
+    Val49 = 0x31,
+    #[doc = "LPTMR1 input is selected."]
+    Val50 = 0x32,
+    #[doc = "SINC Filter CH0 Break input is selected."]
+    Val51 = 0x33,
+    #[doc = "SINC Filter CH1 Break input is selected."]
+    Val52 = 0x34,
+    #[doc = "SINC Filter CH2 Break input is selected."]
+    Val53 = 0x35,
+    #[doc = "SINC Filter CH3 Break input is selected."]
+    Val54 = 0x36,
+    #[doc = "SINC Filter CH4 Break input is selected."]
+    Val55 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl EvtgTrig10Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> EvtgTrig10Inp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for EvtgTrig10Inp {
+    #[inline(always)]
+    fn from(val: u8) -> EvtgTrig10Inp {
+        EvtgTrig10Inp::from_bits(val)
+    }
+}
+impl From<EvtgTrig10Inp> for u8 {
+    #[inline(always)]
+    fn from(val: EvtgTrig10Inp) -> u8 {
+        EvtgTrig10Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum EvtgTrig11Inp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT1 input is selected."]
+    Val1 = 0x01,
+    #[doc = "SCT_OUT0 input is selected."]
+    Val2 = 0x02,
+    #[doc = "SCT_OUT1 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT2 input is selected."]
+    Val4 = 0x04,
+    #[doc = "SCT_OUT3 input is selected."]
+    Val5 = 0x05,
+    #[doc = "CTIMER0_MAT3 input is selected."]
+    Val6 = 0x06,
+    #[doc = "CTIMER1_MAT3 input is selected."]
+    Val7 = 0x07,
+    #[doc = "CTIMER2_MAT3 input is selected."]
+    Val8 = 0x08,
+    #[doc = "CTIMER2_MAT2 input is selected."]
+    Val9 = 0x09,
+    #[doc = "CTIMER3_MAT2 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "CTIMER4_MAT2 input is selected."]
+    Val11 = 0x0b,
+    _RESERVED_c = 0x0c,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val13 = 0x0d,
+    #[doc = "ADC0_IRQ input is selected."]
+    Val14 = 0x0e,
+    #[doc = "ADC1_IRQ input is selected."]
+    Val15 = 0x0f,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val16 = 0x10,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val21 = 0x15,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val22 = 0x16,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val23 = 0x17,
+    #[doc = "CMP0_OUT input is selected."]
+    Val24 = 0x18,
+    #[doc = "CMP1_OUT input is selected."]
+    Val25 = 0x19,
+    #[doc = "CMP2_OUT input is selected."]
+    Val26 = 0x1a,
+    #[doc = "PWM0_SM0_MUX_TRIG0 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM0_SM1_MUX_TRIG0 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM0_SM2_MUX_TRIG0 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val32 = 0x20,
+    #[doc = "PWM0_SM3_MUX_TRIG0 input is selected."]
+    Val33 = 0x21,
+    #[doc = "PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val34 = 0x22,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val35 = 0x23,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val36 = 0x24,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val37 = 0x25,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val38 = 0x26,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val39 = 0x27,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val40 = 0x28,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val41 = 0x29,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val43 = 0x2b,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val44 = 0x2c,
+    #[doc = "TRIG_IN0 input is selected."]
+    Val45 = 0x2d,
+    #[doc = "TRIG_IN1 input is selected."]
+    Val46 = 0x2e,
+    #[doc = "TRIG_IN2 input is selected."]
+    Val47 = 0x2f,
+    #[doc = "TRIG_IN3 input is selected."]
+    Val48 = 0x30,
+    #[doc = "LPTMR0 input is selected."]
+    Val49 = 0x31,
+    #[doc = "LPTMR1 input is selected."]
+    Val50 = 0x32,
+    #[doc = "SINC Filter CH0 Break input is selected."]
+    Val51 = 0x33,
+    #[doc = "SINC Filter CH1 Break input is selected."]
+    Val52 = 0x34,
+    #[doc = "SINC Filter CH2 Break input is selected."]
+    Val53 = 0x35,
+    #[doc = "SINC Filter CH3 Break input is selected."]
+    Val54 = 0x36,
+    #[doc = "SINC Filter CH4 Break input is selected."]
+    Val55 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl EvtgTrig11Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> EvtgTrig11Inp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for EvtgTrig11Inp {
+    #[inline(always)]
+    fn from(val: u8) -> EvtgTrig11Inp {
+        EvtgTrig11Inp::from_bits(val)
+    }
+}
+impl From<EvtgTrig11Inp> for u8 {
+    #[inline(always)]
+    fn from(val: EvtgTrig11Inp) -> u8 {
+        EvtgTrig11Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum EvtgTrig12Inp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT1 input is selected."]
+    Val1 = 0x01,
+    #[doc = "SCT_OUT0 input is selected."]
+    Val2 = 0x02,
+    #[doc = "SCT_OUT1 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT2 input is selected."]
+    Val4 = 0x04,
+    #[doc = "SCT_OUT3 input is selected."]
+    Val5 = 0x05,
+    #[doc = "CTIMER0_MAT3 input is selected."]
+    Val6 = 0x06,
+    #[doc = "CTIMER1_MAT3 input is selected."]
+    Val7 = 0x07,
+    #[doc = "CTIMER2_MAT3 input is selected."]
+    Val8 = 0x08,
+    #[doc = "CTIMER2_MAT2 input is selected."]
+    Val9 = 0x09,
+    #[doc = "CTIMER3_MAT2 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "CTIMER4_MAT2 input is selected."]
+    Val11 = 0x0b,
+    _RESERVED_c = 0x0c,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val13 = 0x0d,
+    #[doc = "ADC0_IRQ input is selected."]
+    Val14 = 0x0e,
+    #[doc = "ADC1_IRQ input is selected."]
+    Val15 = 0x0f,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val16 = 0x10,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val21 = 0x15,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val22 = 0x16,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val23 = 0x17,
+    #[doc = "CMP0_OUT input is selected."]
+    Val24 = 0x18,
+    #[doc = "CMP1_OUT input is selected."]
+    Val25 = 0x19,
+    #[doc = "CMP2_OUT input is selected."]
+    Val26 = 0x1a,
+    #[doc = "PWM0_SM0_MUX_TRIG0 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM0_SM1_MUX_TRIG0 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM0_SM2_MUX_TRIG0 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val32 = 0x20,
+    #[doc = "PWM0_SM3_MUX_TRIG0 input is selected."]
+    Val33 = 0x21,
+    #[doc = "PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val34 = 0x22,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val35 = 0x23,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val36 = 0x24,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val37 = 0x25,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val38 = 0x26,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val39 = 0x27,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val40 = 0x28,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val41 = 0x29,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val43 = 0x2b,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val44 = 0x2c,
+    #[doc = "TRIG_IN0 input is selected."]
+    Val45 = 0x2d,
+    #[doc = "TRIG_IN1 input is selected."]
+    Val46 = 0x2e,
+    #[doc = "TRIG_IN2 input is selected."]
+    Val47 = 0x2f,
+    #[doc = "TRIG_IN3 input is selected."]
+    Val48 = 0x30,
+    #[doc = "LPTMR0 input is selected."]
+    Val49 = 0x31,
+    #[doc = "LPTMR1 input is selected."]
+    Val50 = 0x32,
+    #[doc = "SINC Filter CH0 Break input is selected."]
+    Val51 = 0x33,
+    #[doc = "SINC Filter CH1 Break input is selected."]
+    Val52 = 0x34,
+    #[doc = "SINC Filter CH2 Break input is selected."]
+    Val53 = 0x35,
+    #[doc = "SINC Filter CH3 Break input is selected."]
+    Val54 = 0x36,
+    #[doc = "SINC Filter CH4 Break input is selected."]
+    Val55 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl EvtgTrig12Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> EvtgTrig12Inp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for EvtgTrig12Inp {
+    #[inline(always)]
+    fn from(val: u8) -> EvtgTrig12Inp {
+        EvtgTrig12Inp::from_bits(val)
+    }
+}
+impl From<EvtgTrig12Inp> for u8 {
+    #[inline(always)]
+    fn from(val: EvtgTrig12Inp) -> u8 {
+        EvtgTrig12Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum EvtgTrig13Inp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT1 input is selected."]
+    Val1 = 0x01,
+    #[doc = "SCT_OUT0 input is selected."]
+    Val2 = 0x02,
+    #[doc = "SCT_OUT1 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT2 input is selected."]
+    Val4 = 0x04,
+    #[doc = "SCT_OUT3 input is selected."]
+    Val5 = 0x05,
+    #[doc = "CTIMER0_MAT3 input is selected."]
+    Val6 = 0x06,
+    #[doc = "CTIMER1_MAT3 input is selected."]
+    Val7 = 0x07,
+    #[doc = "CTIMER2_MAT3 input is selected."]
+    Val8 = 0x08,
+    #[doc = "CTIMER2_MAT2 input is selected."]
+    Val9 = 0x09,
+    #[doc = "CTIMER3_MAT2 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "CTIMER4_MAT2 input is selected."]
+    Val11 = 0x0b,
+    _RESERVED_c = 0x0c,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val13 = 0x0d,
+    #[doc = "ADC0_IRQ input is selected."]
+    Val14 = 0x0e,
+    #[doc = "ADC1_IRQ input is selected."]
+    Val15 = 0x0f,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val16 = 0x10,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val21 = 0x15,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val22 = 0x16,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val23 = 0x17,
+    #[doc = "CMP0_OUT input is selected."]
+    Val24 = 0x18,
+    #[doc = "CMP1_OUT input is selected."]
+    Val25 = 0x19,
+    #[doc = "CMP2_OUT input is selected."]
+    Val26 = 0x1a,
+    #[doc = "PWM0_SM0_MUX_TRIG0 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM0_SM1_MUX_TRIG0 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM0_SM2_MUX_TRIG0 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val32 = 0x20,
+    #[doc = "PWM0_SM3_MUX_TRIG0 input is selected."]
+    Val33 = 0x21,
+    #[doc = "PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val34 = 0x22,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val35 = 0x23,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val36 = 0x24,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val37 = 0x25,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val38 = 0x26,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val39 = 0x27,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val40 = 0x28,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val41 = 0x29,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val43 = 0x2b,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val44 = 0x2c,
+    #[doc = "TRIG_IN0 input is selected."]
+    Val45 = 0x2d,
+    #[doc = "TRIG_IN1 input is selected."]
+    Val46 = 0x2e,
+    #[doc = "TRIG_IN2 input is selected."]
+    Val47 = 0x2f,
+    #[doc = "TRIG_IN3 input is selected."]
+    Val48 = 0x30,
+    #[doc = "LPTMR0 input is selected."]
+    Val49 = 0x31,
+    #[doc = "LPTMR1 input is selected."]
+    Val50 = 0x32,
+    #[doc = "SINC Filter CH0 Break input is selected."]
+    Val51 = 0x33,
+    #[doc = "SINC Filter CH1 Break input is selected."]
+    Val52 = 0x34,
+    #[doc = "SINC Filter CH2 Break input is selected."]
+    Val53 = 0x35,
+    #[doc = "SINC Filter CH3 Break input is selected."]
+    Val54 = 0x36,
+    #[doc = "SINC Filter CH4 Break input is selected."]
+    Val55 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl EvtgTrig13Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> EvtgTrig13Inp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for EvtgTrig13Inp {
+    #[inline(always)]
+    fn from(val: u8) -> EvtgTrig13Inp {
+        EvtgTrig13Inp::from_bits(val)
+    }
+}
+impl From<EvtgTrig13Inp> for u8 {
+    #[inline(always)]
+    fn from(val: EvtgTrig13Inp) -> u8 {
+        EvtgTrig13Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum EvtgTrig14Inp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT1 input is selected."]
+    Val1 = 0x01,
+    #[doc = "SCT_OUT0 input is selected."]
+    Val2 = 0x02,
+    #[doc = "SCT_OUT1 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT2 input is selected."]
+    Val4 = 0x04,
+    #[doc = "SCT_OUT3 input is selected."]
+    Val5 = 0x05,
+    #[doc = "CTIMER0_MAT3 input is selected."]
+    Val6 = 0x06,
+    #[doc = "CTIMER1_MAT3 input is selected."]
+    Val7 = 0x07,
+    #[doc = "CTIMER2_MAT3 input is selected."]
+    Val8 = 0x08,
+    #[doc = "CTIMER2_MAT2 input is selected."]
+    Val9 = 0x09,
+    #[doc = "CTIMER3_MAT2 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "CTIMER4_MAT2 input is selected."]
+    Val11 = 0x0b,
+    _RESERVED_c = 0x0c,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val13 = 0x0d,
+    #[doc = "ADC0_IRQ input is selected."]
+    Val14 = 0x0e,
+    #[doc = "ADC1_IRQ input is selected."]
+    Val15 = 0x0f,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val16 = 0x10,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val21 = 0x15,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val22 = 0x16,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val23 = 0x17,
+    #[doc = "CMP0_OUT input is selected."]
+    Val24 = 0x18,
+    #[doc = "CMP1_OUT input is selected."]
+    Val25 = 0x19,
+    #[doc = "CMP2_OUT input is selected."]
+    Val26 = 0x1a,
+    #[doc = "PWM0_SM0_MUX_TRIG0 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM0_SM1_MUX_TRIG0 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM0_SM2_MUX_TRIG0 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val32 = 0x20,
+    #[doc = "PWM0_SM3_MUX_TRIG0 input is selected."]
+    Val33 = 0x21,
+    #[doc = "PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val34 = 0x22,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val35 = 0x23,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val36 = 0x24,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val37 = 0x25,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val38 = 0x26,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val39 = 0x27,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val40 = 0x28,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val41 = 0x29,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val43 = 0x2b,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val44 = 0x2c,
+    #[doc = "TRIG_IN0 input is selected."]
+    Val45 = 0x2d,
+    #[doc = "TRIG_IN1 input is selected."]
+    Val46 = 0x2e,
+    #[doc = "TRIG_IN2 input is selected."]
+    Val47 = 0x2f,
+    #[doc = "TRIG_IN3 input is selected."]
+    Val48 = 0x30,
+    #[doc = "LPTMR0 input is selected."]
+    Val49 = 0x31,
+    #[doc = "LPTMR1 input is selected."]
+    Val50 = 0x32,
+    #[doc = "SINC Filter CH0 Break input is selected."]
+    Val51 = 0x33,
+    #[doc = "SINC Filter CH1 Break input is selected."]
+    Val52 = 0x34,
+    #[doc = "SINC Filter CH2 Break input is selected."]
+    Val53 = 0x35,
+    #[doc = "SINC Filter CH3 Break input is selected."]
+    Val54 = 0x36,
+    #[doc = "SINC Filter CH4 Break input is selected."]
+    Val55 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl EvtgTrig14Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> EvtgTrig14Inp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for EvtgTrig14Inp {
+    #[inline(always)]
+    fn from(val: u8) -> EvtgTrig14Inp {
+        EvtgTrig14Inp::from_bits(val)
+    }
+}
+impl From<EvtgTrig14Inp> for u8 {
+    #[inline(always)]
+    fn from(val: EvtgTrig14Inp) -> u8 {
+        EvtgTrig14Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum EvtgTrig15Inp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT1 input is selected."]
+    Val1 = 0x01,
+    #[doc = "SCT_OUT0 input is selected."]
+    Val2 = 0x02,
+    #[doc = "SCT_OUT1 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT2 input is selected."]
+    Val4 = 0x04,
+    #[doc = "SCT_OUT3 input is selected."]
+    Val5 = 0x05,
+    #[doc = "CTIMER0_MAT3 input is selected."]
+    Val6 = 0x06,
+    #[doc = "CTIMER1_MAT3 input is selected."]
+    Val7 = 0x07,
+    #[doc = "CTIMER2_MAT3 input is selected."]
+    Val8 = 0x08,
+    #[doc = "CTIMER2_MAT2 input is selected."]
+    Val9 = 0x09,
+    #[doc = "CTIMER3_MAT2 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "CTIMER4_MAT2 input is selected."]
+    Val11 = 0x0b,
+    _RESERVED_c = 0x0c,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val13 = 0x0d,
+    #[doc = "ADC0_IRQ input is selected."]
+    Val14 = 0x0e,
+    #[doc = "ADC1_IRQ input is selected."]
+    Val15 = 0x0f,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val16 = 0x10,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val21 = 0x15,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val22 = 0x16,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val23 = 0x17,
+    #[doc = "CMP0_OUT input is selected."]
+    Val24 = 0x18,
+    #[doc = "CMP1_OUT input is selected."]
+    Val25 = 0x19,
+    #[doc = "CMP2_OUT input is selected."]
+    Val26 = 0x1a,
+    #[doc = "PWM0_SM0_MUX_TRIG0 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM0_SM1_MUX_TRIG0 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM0_SM2_MUX_TRIG0 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val32 = 0x20,
+    #[doc = "PWM0_SM3_MUX_TRIG0 input is selected."]
+    Val33 = 0x21,
+    #[doc = "PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val34 = 0x22,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val35 = 0x23,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val36 = 0x24,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val37 = 0x25,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val38 = 0x26,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val39 = 0x27,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val40 = 0x28,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val41 = 0x29,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val43 = 0x2b,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val44 = 0x2c,
+    #[doc = "TRIG_IN0 input is selected."]
+    Val45 = 0x2d,
+    #[doc = "TRIG_IN1 input is selected."]
+    Val46 = 0x2e,
+    #[doc = "TRIG_IN2 input is selected."]
+    Val47 = 0x2f,
+    #[doc = "TRIG_IN3 input is selected."]
+    Val48 = 0x30,
+    #[doc = "LPTMR0 input is selected."]
+    Val49 = 0x31,
+    #[doc = "LPTMR1 input is selected."]
+    Val50 = 0x32,
+    #[doc = "SINC Filter CH0 Break input is selected."]
+    Val51 = 0x33,
+    #[doc = "SINC Filter CH1 Break input is selected."]
+    Val52 = 0x34,
+    #[doc = "SINC Filter CH2 Break input is selected."]
+    Val53 = 0x35,
+    #[doc = "SINC Filter CH3 Break input is selected."]
+    Val54 = 0x36,
+    #[doc = "SINC Filter CH4 Break input is selected."]
+    Val55 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl EvtgTrig15Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> EvtgTrig15Inp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for EvtgTrig15Inp {
+    #[inline(always)]
+    fn from(val: u8) -> EvtgTrig15Inp {
+        EvtgTrig15Inp::from_bits(val)
+    }
+}
+impl From<EvtgTrig15Inp> for u8 {
+    #[inline(always)]
+    fn from(val: EvtgTrig15Inp) -> u8 {
+        EvtgTrig15Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum EvtgTrig1Inp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT1 input is selected."]
+    Val1 = 0x01,
+    #[doc = "SCT_OUT0 input is selected."]
+    Val2 = 0x02,
+    #[doc = "SCT_OUT1 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT2 input is selected."]
+    Val4 = 0x04,
+    #[doc = "SCT_OUT3 input is selected."]
+    Val5 = 0x05,
+    #[doc = "CTIMER0_MAT3 input is selected."]
+    Val6 = 0x06,
+    #[doc = "CTIMER1_MAT3 input is selected."]
+    Val7 = 0x07,
+    #[doc = "CTIMER2_MAT3 input is selected."]
+    Val8 = 0x08,
+    #[doc = "CTIMER2_MAT2 input is selected."]
+    Val9 = 0x09,
+    #[doc = "CTIMER3_MAT2 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "CTIMER4_MAT2 input is selected."]
+    Val11 = 0x0b,
+    _RESERVED_c = 0x0c,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val13 = 0x0d,
+    #[doc = "ADC0_IRQ input is selected."]
+    Val14 = 0x0e,
+    #[doc = "ADC1_IRQ input is selected."]
+    Val15 = 0x0f,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val16 = 0x10,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val21 = 0x15,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val22 = 0x16,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val23 = 0x17,
+    #[doc = "CMP0_OUT input is selected."]
+    Val24 = 0x18,
+    #[doc = "CMP1_OUT input is selected."]
+    Val25 = 0x19,
+    #[doc = "CMP2_OUT input is selected."]
+    Val26 = 0x1a,
+    #[doc = "PWM0_SM0_MUX_TRIG0 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM0_SM1_MUX_TRIG0 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM0_SM2_MUX_TRIG0 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val32 = 0x20,
+    #[doc = "PWM0_SM3_MUX_TRIG0 input is selected."]
+    Val33 = 0x21,
+    #[doc = "PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val34 = 0x22,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val35 = 0x23,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val36 = 0x24,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val37 = 0x25,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val38 = 0x26,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val39 = 0x27,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val40 = 0x28,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val41 = 0x29,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val43 = 0x2b,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val44 = 0x2c,
+    #[doc = "TRIG_IN0 input is selected."]
+    Val45 = 0x2d,
+    #[doc = "TRIG_IN1 input is selected."]
+    Val46 = 0x2e,
+    #[doc = "TRIG_IN2 input is selected."]
+    Val47 = 0x2f,
+    #[doc = "TRIG_IN3 input is selected."]
+    Val48 = 0x30,
+    #[doc = "LPTMR0 input is selected."]
+    Val49 = 0x31,
+    #[doc = "LPTMR1 input is selected."]
+    Val50 = 0x32,
+    #[doc = "SINC Filter CH0 Break input is selected."]
+    Val51 = 0x33,
+    #[doc = "SINC Filter CH1 Break input is selected."]
+    Val52 = 0x34,
+    #[doc = "SINC Filter CH2 Break input is selected."]
+    Val53 = 0x35,
+    #[doc = "SINC Filter CH3 Break input is selected."]
+    Val54 = 0x36,
+    #[doc = "SINC Filter CH4 Break input is selected."]
+    Val55 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl EvtgTrig1Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> EvtgTrig1Inp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for EvtgTrig1Inp {
+    #[inline(always)]
+    fn from(val: u8) -> EvtgTrig1Inp {
+        EvtgTrig1Inp::from_bits(val)
+    }
+}
+impl From<EvtgTrig1Inp> for u8 {
+    #[inline(always)]
+    fn from(val: EvtgTrig1Inp) -> u8 {
+        EvtgTrig1Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum EvtgTrig2Inp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT1 input is selected."]
+    Val1 = 0x01,
+    #[doc = "SCT_OUT0 input is selected."]
+    Val2 = 0x02,
+    #[doc = "SCT_OUT1 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT2 input is selected."]
+    Val4 = 0x04,
+    #[doc = "SCT_OUT3 input is selected."]
+    Val5 = 0x05,
+    #[doc = "CTIMER0_MAT3 input is selected."]
+    Val6 = 0x06,
+    #[doc = "CTIMER1_MAT3 input is selected."]
+    Val7 = 0x07,
+    #[doc = "CTIMER2_MAT3 input is selected."]
+    Val8 = 0x08,
+    #[doc = "CTIMER2_MAT2 input is selected."]
+    Val9 = 0x09,
+    #[doc = "CTIMER3_MAT2 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "CTIMER4_MAT2 input is selected."]
+    Val11 = 0x0b,
+    _RESERVED_c = 0x0c,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val13 = 0x0d,
+    #[doc = "ADC0_IRQ input is selected."]
+    Val14 = 0x0e,
+    #[doc = "ADC1_IRQ input is selected."]
+    Val15 = 0x0f,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val16 = 0x10,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val21 = 0x15,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val22 = 0x16,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val23 = 0x17,
+    #[doc = "CMP0_OUT input is selected."]
+    Val24 = 0x18,
+    #[doc = "CMP1_OUT input is selected."]
+    Val25 = 0x19,
+    #[doc = "CMP2_OUT input is selected."]
+    Val26 = 0x1a,
+    #[doc = "PWM0_SM0_MUX_TRIG0 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM0_SM1_MUX_TRIG0 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM0_SM2_MUX_TRIG0 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val32 = 0x20,
+    #[doc = "PWM0_SM3_MUX_TRIG0 input is selected."]
+    Val33 = 0x21,
+    #[doc = "PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val34 = 0x22,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val35 = 0x23,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val36 = 0x24,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val37 = 0x25,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val38 = 0x26,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val39 = 0x27,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val40 = 0x28,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val41 = 0x29,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val43 = 0x2b,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val44 = 0x2c,
+    #[doc = "TRIG_IN0 input is selected."]
+    Val45 = 0x2d,
+    #[doc = "TRIG_IN1 input is selected."]
+    Val46 = 0x2e,
+    #[doc = "TRIG_IN2 input is selected."]
+    Val47 = 0x2f,
+    #[doc = "TRIG_IN3 input is selected."]
+    Val48 = 0x30,
+    #[doc = "LPTMR0 input is selected."]
+    Val49 = 0x31,
+    #[doc = "LPTMR1 input is selected."]
+    Val50 = 0x32,
+    #[doc = "SINC Filter CH0 Break input is selected."]
+    Val51 = 0x33,
+    #[doc = "SINC Filter CH1 Break input is selected."]
+    Val52 = 0x34,
+    #[doc = "SINC Filter CH2 Break input is selected."]
+    Val53 = 0x35,
+    #[doc = "SINC Filter CH3 Break input is selected."]
+    Val54 = 0x36,
+    #[doc = "SINC Filter CH4 Break input is selected."]
+    Val55 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl EvtgTrig2Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> EvtgTrig2Inp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for EvtgTrig2Inp {
+    #[inline(always)]
+    fn from(val: u8) -> EvtgTrig2Inp {
+        EvtgTrig2Inp::from_bits(val)
+    }
+}
+impl From<EvtgTrig2Inp> for u8 {
+    #[inline(always)]
+    fn from(val: EvtgTrig2Inp) -> u8 {
+        EvtgTrig2Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum EvtgTrig3Inp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT1 input is selected."]
+    Val1 = 0x01,
+    #[doc = "SCT_OUT0 input is selected."]
+    Val2 = 0x02,
+    #[doc = "SCT_OUT1 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT2 input is selected."]
+    Val4 = 0x04,
+    #[doc = "SCT_OUT3 input is selected."]
+    Val5 = 0x05,
+    #[doc = "CTIMER0_MAT3 input is selected."]
+    Val6 = 0x06,
+    #[doc = "CTIMER1_MAT3 input is selected."]
+    Val7 = 0x07,
+    #[doc = "CTIMER2_MAT3 input is selected."]
+    Val8 = 0x08,
+    #[doc = "CTIMER2_MAT2 input is selected."]
+    Val9 = 0x09,
+    #[doc = "CTIMER3_MAT2 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "CTIMER4_MAT2 input is selected."]
+    Val11 = 0x0b,
+    _RESERVED_c = 0x0c,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val13 = 0x0d,
+    #[doc = "ADC0_IRQ input is selected."]
+    Val14 = 0x0e,
+    #[doc = "ADC1_IRQ input is selected."]
+    Val15 = 0x0f,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val16 = 0x10,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val21 = 0x15,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val22 = 0x16,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val23 = 0x17,
+    #[doc = "CMP0_OUT input is selected."]
+    Val24 = 0x18,
+    #[doc = "CMP1_OUT input is selected."]
+    Val25 = 0x19,
+    #[doc = "CMP2_OUT input is selected."]
+    Val26 = 0x1a,
+    #[doc = "PWM0_SM0_MUX_TRIG0 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM0_SM1_MUX_TRIG0 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM0_SM2_MUX_TRIG0 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val32 = 0x20,
+    #[doc = "PWM0_SM3_MUX_TRIG0 input is selected."]
+    Val33 = 0x21,
+    #[doc = "PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val34 = 0x22,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val35 = 0x23,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val36 = 0x24,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val37 = 0x25,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val38 = 0x26,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val39 = 0x27,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val40 = 0x28,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val41 = 0x29,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val43 = 0x2b,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val44 = 0x2c,
+    #[doc = "TRIG_IN0 input is selected."]
+    Val45 = 0x2d,
+    #[doc = "TRIG_IN1 input is selected."]
+    Val46 = 0x2e,
+    #[doc = "TRIG_IN2 input is selected."]
+    Val47 = 0x2f,
+    #[doc = "TRIG_IN3 input is selected."]
+    Val48 = 0x30,
+    #[doc = "LPTMR0 input is selected."]
+    Val49 = 0x31,
+    #[doc = "LPTMR1 input is selected."]
+    Val50 = 0x32,
+    #[doc = "SINC Filter CH0 Break input is selected."]
+    Val51 = 0x33,
+    #[doc = "SINC Filter CH1 Break input is selected."]
+    Val52 = 0x34,
+    #[doc = "SINC Filter CH2 Break input is selected."]
+    Val53 = 0x35,
+    #[doc = "SINC Filter CH3 Break input is selected."]
+    Val54 = 0x36,
+    #[doc = "SINC Filter CH4 Break input is selected."]
+    Val55 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl EvtgTrig3Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> EvtgTrig3Inp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for EvtgTrig3Inp {
+    #[inline(always)]
+    fn from(val: u8) -> EvtgTrig3Inp {
+        EvtgTrig3Inp::from_bits(val)
+    }
+}
+impl From<EvtgTrig3Inp> for u8 {
+    #[inline(always)]
+    fn from(val: EvtgTrig3Inp) -> u8 {
+        EvtgTrig3Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum EvtgTrig4Inp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT1 input is selected."]
+    Val1 = 0x01,
+    #[doc = "SCT_OUT0 input is selected."]
+    Val2 = 0x02,
+    #[doc = "SCT_OUT1 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT2 input is selected."]
+    Val4 = 0x04,
+    #[doc = "SCT_OUT3 input is selected."]
+    Val5 = 0x05,
+    #[doc = "CTIMER0_MAT3 input is selected."]
+    Val6 = 0x06,
+    #[doc = "CTIMER1_MAT3 input is selected."]
+    Val7 = 0x07,
+    #[doc = "CTIMER2_MAT3 input is selected."]
+    Val8 = 0x08,
+    #[doc = "CTIMER2_MAT2 input is selected."]
+    Val9 = 0x09,
+    #[doc = "CTIMER3_MAT2 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "CTIMER4_MAT2 input is selected."]
+    Val11 = 0x0b,
+    _RESERVED_c = 0x0c,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val13 = 0x0d,
+    #[doc = "ADC0_IRQ input is selected."]
+    Val14 = 0x0e,
+    #[doc = "ADC1_IRQ input is selected."]
+    Val15 = 0x0f,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val16 = 0x10,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val21 = 0x15,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val22 = 0x16,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val23 = 0x17,
+    #[doc = "CMP0_OUT input is selected."]
+    Val24 = 0x18,
+    #[doc = "CMP1_OUT input is selected."]
+    Val25 = 0x19,
+    #[doc = "CMP2_OUT input is selected."]
+    Val26 = 0x1a,
+    #[doc = "PWM0_SM0_MUX_TRIG0 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM0_SM1_MUX_TRIG0 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM0_SM2_MUX_TRIG0 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val32 = 0x20,
+    #[doc = "PWM0_SM3_MUX_TRIG0 input is selected."]
+    Val33 = 0x21,
+    #[doc = "PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val34 = 0x22,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val35 = 0x23,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val36 = 0x24,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val37 = 0x25,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val38 = 0x26,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val39 = 0x27,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val40 = 0x28,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val41 = 0x29,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val43 = 0x2b,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val44 = 0x2c,
+    #[doc = "TRIG_IN0 input is selected."]
+    Val45 = 0x2d,
+    #[doc = "TRIG_IN1 input is selected."]
+    Val46 = 0x2e,
+    #[doc = "TRIG_IN2 input is selected."]
+    Val47 = 0x2f,
+    #[doc = "TRIG_IN3 input is selected."]
+    Val48 = 0x30,
+    #[doc = "LPTMR0 input is selected."]
+    Val49 = 0x31,
+    #[doc = "LPTMR1 input is selected."]
+    Val50 = 0x32,
+    #[doc = "SINC Filter CH0 Break input is selected."]
+    Val51 = 0x33,
+    #[doc = "SINC Filter CH1 Break input is selected."]
+    Val52 = 0x34,
+    #[doc = "SINC Filter CH2 Break input is selected."]
+    Val53 = 0x35,
+    #[doc = "SINC Filter CH3 Break input is selected."]
+    Val54 = 0x36,
+    #[doc = "SINC Filter CH4 Break input is selected."]
+    Val55 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl EvtgTrig4Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> EvtgTrig4Inp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for EvtgTrig4Inp {
+    #[inline(always)]
+    fn from(val: u8) -> EvtgTrig4Inp {
+        EvtgTrig4Inp::from_bits(val)
+    }
+}
+impl From<EvtgTrig4Inp> for u8 {
+    #[inline(always)]
+    fn from(val: EvtgTrig4Inp) -> u8 {
+        EvtgTrig4Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum EvtgTrig5Inp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT1 input is selected."]
+    Val1 = 0x01,
+    #[doc = "SCT_OUT0 input is selected."]
+    Val2 = 0x02,
+    #[doc = "SCT_OUT1 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT2 input is selected."]
+    Val4 = 0x04,
+    #[doc = "SCT_OUT3 input is selected."]
+    Val5 = 0x05,
+    #[doc = "CTIMER0_MAT3 input is selected."]
+    Val6 = 0x06,
+    #[doc = "CTIMER1_MAT3 input is selected."]
+    Val7 = 0x07,
+    #[doc = "CTIMER2_MAT3 input is selected."]
+    Val8 = 0x08,
+    #[doc = "CTIMER2_MAT2 input is selected."]
+    Val9 = 0x09,
+    #[doc = "CTIMER3_MAT2 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "CTIMER4_MAT2 input is selected."]
+    Val11 = 0x0b,
+    _RESERVED_c = 0x0c,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val13 = 0x0d,
+    #[doc = "ADC0_IRQ input is selected."]
+    Val14 = 0x0e,
+    #[doc = "ADC1_IRQ input is selected."]
+    Val15 = 0x0f,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val16 = 0x10,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val21 = 0x15,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val22 = 0x16,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val23 = 0x17,
+    #[doc = "CMP0_OUT input is selected."]
+    Val24 = 0x18,
+    #[doc = "CMP1_OUT input is selected."]
+    Val25 = 0x19,
+    #[doc = "CMP2_OUT input is selected."]
+    Val26 = 0x1a,
+    #[doc = "PWM0_SM0_MUX_TRIG0 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM0_SM1_MUX_TRIG0 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM0_SM2_MUX_TRIG0 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val32 = 0x20,
+    #[doc = "PWM0_SM3_MUX_TRIG0 input is selected."]
+    Val33 = 0x21,
+    #[doc = "PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val34 = 0x22,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val35 = 0x23,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val36 = 0x24,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val37 = 0x25,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val38 = 0x26,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val39 = 0x27,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val40 = 0x28,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val41 = 0x29,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val43 = 0x2b,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val44 = 0x2c,
+    #[doc = "TRIG_IN0 input is selected."]
+    Val45 = 0x2d,
+    #[doc = "TRIG_IN1 input is selected."]
+    Val46 = 0x2e,
+    #[doc = "TRIG_IN2 input is selected."]
+    Val47 = 0x2f,
+    #[doc = "TRIG_IN3 input is selected."]
+    Val48 = 0x30,
+    #[doc = "LPTMR0 input is selected."]
+    Val49 = 0x31,
+    #[doc = "LPTMR1 input is selected."]
+    Val50 = 0x32,
+    #[doc = "SINC Filter CH0 Break input is selected."]
+    Val51 = 0x33,
+    #[doc = "SINC Filter CH1 Break input is selected."]
+    Val52 = 0x34,
+    #[doc = "SINC Filter CH2 Break input is selected."]
+    Val53 = 0x35,
+    #[doc = "SINC Filter CH3 Break input is selected."]
+    Val54 = 0x36,
+    #[doc = "SINC Filter CH4 Break input is selected."]
+    Val55 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl EvtgTrig5Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> EvtgTrig5Inp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for EvtgTrig5Inp {
+    #[inline(always)]
+    fn from(val: u8) -> EvtgTrig5Inp {
+        EvtgTrig5Inp::from_bits(val)
+    }
+}
+impl From<EvtgTrig5Inp> for u8 {
+    #[inline(always)]
+    fn from(val: EvtgTrig5Inp) -> u8 {
+        EvtgTrig5Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum EvtgTrig6Inp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT1 input is selected."]
+    Val1 = 0x01,
+    #[doc = "SCT_OUT0 input is selected."]
+    Val2 = 0x02,
+    #[doc = "SCT_OUT1 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT2 input is selected."]
+    Val4 = 0x04,
+    #[doc = "SCT_OUT3 input is selected."]
+    Val5 = 0x05,
+    #[doc = "CTIMER0_MAT3 input is selected."]
+    Val6 = 0x06,
+    #[doc = "CTIMER1_MAT3 input is selected."]
+    Val7 = 0x07,
+    #[doc = "CTIMER2_MAT3 input is selected."]
+    Val8 = 0x08,
+    #[doc = "CTIMER2_MAT2 input is selected."]
+    Val9 = 0x09,
+    #[doc = "CTIMER3_MAT2 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "CTIMER4_MAT2 input is selected."]
+    Val11 = 0x0b,
+    _RESERVED_c = 0x0c,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val13 = 0x0d,
+    #[doc = "ADC0_IRQ input is selected."]
+    Val14 = 0x0e,
+    #[doc = "ADC1_IRQ input is selected."]
+    Val15 = 0x0f,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val16 = 0x10,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val21 = 0x15,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val22 = 0x16,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val23 = 0x17,
+    #[doc = "CMP0_OUT input is selected."]
+    Val24 = 0x18,
+    #[doc = "CMP1_OUT input is selected."]
+    Val25 = 0x19,
+    #[doc = "CMP2_OUT input is selected."]
+    Val26 = 0x1a,
+    #[doc = "PWM0_SM0_MUX_TRIG0 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM0_SM1_MUX_TRIG0 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM0_SM2_MUX_TRIG0 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val32 = 0x20,
+    #[doc = "PWM0_SM3_MUX_TRIG0 input is selected."]
+    Val33 = 0x21,
+    #[doc = "PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val34 = 0x22,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val35 = 0x23,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val36 = 0x24,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val37 = 0x25,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val38 = 0x26,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val39 = 0x27,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val40 = 0x28,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val41 = 0x29,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val43 = 0x2b,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val44 = 0x2c,
+    #[doc = "TRIG_IN0 input is selected."]
+    Val45 = 0x2d,
+    #[doc = "TRIG_IN1 input is selected."]
+    Val46 = 0x2e,
+    #[doc = "TRIG_IN2 input is selected."]
+    Val47 = 0x2f,
+    #[doc = "TRIG_IN3 input is selected."]
+    Val48 = 0x30,
+    #[doc = "LPTMR0 input is selected."]
+    Val49 = 0x31,
+    #[doc = "LPTMR1 input is selected."]
+    Val50 = 0x32,
+    #[doc = "SINC Filter CH0 Break input is selected."]
+    Val51 = 0x33,
+    #[doc = "SINC Filter CH1 Break input is selected."]
+    Val52 = 0x34,
+    #[doc = "SINC Filter CH2 Break input is selected."]
+    Val53 = 0x35,
+    #[doc = "SINC Filter CH3 Break input is selected."]
+    Val54 = 0x36,
+    #[doc = "SINC Filter CH4 Break input is selected."]
+    Val55 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl EvtgTrig6Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> EvtgTrig6Inp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for EvtgTrig6Inp {
+    #[inline(always)]
+    fn from(val: u8) -> EvtgTrig6Inp {
+        EvtgTrig6Inp::from_bits(val)
+    }
+}
+impl From<EvtgTrig6Inp> for u8 {
+    #[inline(always)]
+    fn from(val: EvtgTrig6Inp) -> u8 {
+        EvtgTrig6Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum EvtgTrig7Inp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT1 input is selected."]
+    Val1 = 0x01,
+    #[doc = "SCT_OUT0 input is selected."]
+    Val2 = 0x02,
+    #[doc = "SCT_OUT1 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT2 input is selected."]
+    Val4 = 0x04,
+    #[doc = "SCT_OUT3 input is selected."]
+    Val5 = 0x05,
+    #[doc = "CTIMER0_MAT3 input is selected."]
+    Val6 = 0x06,
+    #[doc = "CTIMER1_MAT3 input is selected."]
+    Val7 = 0x07,
+    #[doc = "CTIMER2_MAT3 input is selected."]
+    Val8 = 0x08,
+    #[doc = "CTIMER2_MAT2 input is selected."]
+    Val9 = 0x09,
+    #[doc = "CTIMER3_MAT2 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "CTIMER4_MAT2 input is selected."]
+    Val11 = 0x0b,
+    _RESERVED_c = 0x0c,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val13 = 0x0d,
+    #[doc = "ADC0_IRQ input is selected."]
+    Val14 = 0x0e,
+    #[doc = "ADC1_IRQ input is selected."]
+    Val15 = 0x0f,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val16 = 0x10,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val21 = 0x15,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val22 = 0x16,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val23 = 0x17,
+    #[doc = "CMP0_OUT input is selected."]
+    Val24 = 0x18,
+    #[doc = "CMP1_OUT input is selected."]
+    Val25 = 0x19,
+    #[doc = "CMP2_OUT input is selected."]
+    Val26 = 0x1a,
+    #[doc = "PWM0_SM0_MUX_TRIG0 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM0_SM1_MUX_TRIG0 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM0_SM2_MUX_TRIG0 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val32 = 0x20,
+    #[doc = "PWM0_SM3_MUX_TRIG0 input is selected."]
+    Val33 = 0x21,
+    #[doc = "PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val34 = 0x22,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val35 = 0x23,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val36 = 0x24,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val37 = 0x25,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val38 = 0x26,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val39 = 0x27,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val40 = 0x28,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val41 = 0x29,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val43 = 0x2b,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val44 = 0x2c,
+    #[doc = "TRIG_IN0 input is selected."]
+    Val45 = 0x2d,
+    #[doc = "TRIG_IN1 input is selected."]
+    Val46 = 0x2e,
+    #[doc = "TRIG_IN2 input is selected."]
+    Val47 = 0x2f,
+    #[doc = "TRIG_IN3 input is selected."]
+    Val48 = 0x30,
+    #[doc = "LPTMR0 input is selected."]
+    Val49 = 0x31,
+    #[doc = "LPTMR1 input is selected."]
+    Val50 = 0x32,
+    #[doc = "SINC Filter CH0 Break input is selected."]
+    Val51 = 0x33,
+    #[doc = "SINC Filter CH1 Break input is selected."]
+    Val52 = 0x34,
+    #[doc = "SINC Filter CH2 Break input is selected."]
+    Val53 = 0x35,
+    #[doc = "SINC Filter CH3 Break input is selected."]
+    Val54 = 0x36,
+    #[doc = "SINC Filter CH4 Break input is selected."]
+    Val55 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl EvtgTrig7Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> EvtgTrig7Inp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for EvtgTrig7Inp {
+    #[inline(always)]
+    fn from(val: u8) -> EvtgTrig7Inp {
+        EvtgTrig7Inp::from_bits(val)
+    }
+}
+impl From<EvtgTrig7Inp> for u8 {
+    #[inline(always)]
+    fn from(val: EvtgTrig7Inp) -> u8 {
+        EvtgTrig7Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum EvtgTrig8Inp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT1 input is selected."]
+    Val1 = 0x01,
+    #[doc = "SCT_OUT0 input is selected."]
+    Val2 = 0x02,
+    #[doc = "SCT_OUT1 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT2 input is selected."]
+    Val4 = 0x04,
+    #[doc = "SCT_OUT3 input is selected."]
+    Val5 = 0x05,
+    #[doc = "CTIMER0_MAT3 input is selected."]
+    Val6 = 0x06,
+    #[doc = "CTIMER1_MAT3 input is selected."]
+    Val7 = 0x07,
+    #[doc = "CTIMER2_MAT3 input is selected."]
+    Val8 = 0x08,
+    #[doc = "CTIMER2_MAT2 input is selected."]
+    Val9 = 0x09,
+    #[doc = "CTIMER3_MAT2 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "CTIMER4_MAT2 input is selected."]
+    Val11 = 0x0b,
+    _RESERVED_c = 0x0c,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val13 = 0x0d,
+    #[doc = "ADC0_IRQ input is selected."]
+    Val14 = 0x0e,
+    #[doc = "ADC1_IRQ input is selected."]
+    Val15 = 0x0f,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val16 = 0x10,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val21 = 0x15,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val22 = 0x16,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val23 = 0x17,
+    #[doc = "CMP0_OUT input is selected."]
+    Val24 = 0x18,
+    #[doc = "CMP1_OUT input is selected."]
+    Val25 = 0x19,
+    #[doc = "CMP2_OUT input is selected."]
+    Val26 = 0x1a,
+    #[doc = "PWM0_SM0_MUX_TRIG0 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM0_SM1_MUX_TRIG0 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM0_SM2_MUX_TRIG0 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val32 = 0x20,
+    #[doc = "PWM0_SM3_MUX_TRIG0 input is selected."]
+    Val33 = 0x21,
+    #[doc = "PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val34 = 0x22,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val35 = 0x23,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val36 = 0x24,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val37 = 0x25,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val38 = 0x26,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val39 = 0x27,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val40 = 0x28,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val41 = 0x29,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val43 = 0x2b,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val44 = 0x2c,
+    #[doc = "TRIG_IN0 input is selected."]
+    Val45 = 0x2d,
+    #[doc = "TRIG_IN1 input is selected."]
+    Val46 = 0x2e,
+    #[doc = "TRIG_IN2 input is selected."]
+    Val47 = 0x2f,
+    #[doc = "TRIG_IN3 input is selected."]
+    Val48 = 0x30,
+    #[doc = "LPTMR0 input is selected."]
+    Val49 = 0x31,
+    #[doc = "LPTMR1 input is selected."]
+    Val50 = 0x32,
+    #[doc = "SINC Filter CH0 Break input is selected."]
+    Val51 = 0x33,
+    #[doc = "SINC Filter CH1 Break input is selected."]
+    Val52 = 0x34,
+    #[doc = "SINC Filter CH2 Break input is selected."]
+    Val53 = 0x35,
+    #[doc = "SINC Filter CH3 Break input is selected."]
+    Val54 = 0x36,
+    #[doc = "SINC Filter CH4 Break input is selected."]
+    Val55 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl EvtgTrig8Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> EvtgTrig8Inp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for EvtgTrig8Inp {
+    #[inline(always)]
+    fn from(val: u8) -> EvtgTrig8Inp {
+        EvtgTrig8Inp::from_bits(val)
+    }
+}
+impl From<EvtgTrig8Inp> for u8 {
+    #[inline(always)]
+    fn from(val: EvtgTrig8Inp) -> u8 {
+        EvtgTrig8Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum EvtgTrig9Inp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT1 input is selected."]
+    Val1 = 0x01,
+    #[doc = "SCT_OUT0 input is selected."]
+    Val2 = 0x02,
+    #[doc = "SCT_OUT1 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT2 input is selected."]
+    Val4 = 0x04,
+    #[doc = "SCT_OUT3 input is selected."]
+    Val5 = 0x05,
+    #[doc = "CTIMER0_MAT3 input is selected."]
+    Val6 = 0x06,
+    #[doc = "CTIMER1_MAT3 input is selected."]
+    Val7 = 0x07,
+    #[doc = "CTIMER2_MAT3 input is selected."]
+    Val8 = 0x08,
+    #[doc = "CTIMER2_MAT2 input is selected."]
+    Val9 = 0x09,
+    #[doc = "CTIMER3_MAT2 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "CTIMER4_MAT2 input is selected."]
+    Val11 = 0x0b,
+    _RESERVED_c = 0x0c,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val13 = 0x0d,
+    #[doc = "ADC0_IRQ input is selected."]
+    Val14 = 0x0e,
+    #[doc = "ADC1_IRQ input is selected."]
+    Val15 = 0x0f,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val16 = 0x10,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val21 = 0x15,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val22 = 0x16,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val23 = 0x17,
+    #[doc = "CMP0_OUT input is selected."]
+    Val24 = 0x18,
+    #[doc = "CMP1_OUT input is selected."]
+    Val25 = 0x19,
+    #[doc = "CMP2_OUT input is selected."]
+    Val26 = 0x1a,
+    #[doc = "PWM0_SM0_MUX_TRIG0 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM0_SM1_MUX_TRIG0 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM0_SM2_MUX_TRIG0 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val32 = 0x20,
+    #[doc = "PWM0_SM3_MUX_TRIG0 input is selected."]
+    Val33 = 0x21,
+    #[doc = "PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val34 = 0x22,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val35 = 0x23,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val36 = 0x24,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val37 = 0x25,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val38 = 0x26,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val39 = 0x27,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val40 = 0x28,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val41 = 0x29,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val43 = 0x2b,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val44 = 0x2c,
+    #[doc = "TRIG_IN0 input is selected."]
+    Val45 = 0x2d,
+    #[doc = "TRIG_IN1 input is selected."]
+    Val46 = 0x2e,
+    #[doc = "TRIG_IN2 input is selected."]
+    Val47 = 0x2f,
+    #[doc = "TRIG_IN3 input is selected."]
+    Val48 = 0x30,
+    #[doc = "LPTMR0 input is selected."]
+    Val49 = 0x31,
+    #[doc = "LPTMR1 input is selected."]
+    Val50 = 0x32,
+    #[doc = "SINC Filter CH0 Break input is selected."]
+    Val51 = 0x33,
+    #[doc = "SINC Filter CH1 Break input is selected."]
+    Val52 = 0x34,
+    #[doc = "SINC Filter CH2 Break input is selected."]
+    Val53 = 0x35,
+    #[doc = "SINC Filter CH3 Break input is selected."]
+    Val54 = 0x36,
+    #[doc = "SINC Filter CH4 Break input is selected."]
+    Val55 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl EvtgTrig9Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> EvtgTrig9Inp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for EvtgTrig9Inp {
+    #[inline(always)]
+    fn from(val: u8) -> EvtgTrig9Inp {
+        EvtgTrig9Inp::from_bits(val)
+    }
+}
+impl From<EvtgTrig9Inp> for u8 {
+    #[inline(always)]
+    fn from(val: EvtgTrig9Inp) -> u8 {
+        EvtgTrig9Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum ExtTrig0Inp {
     #[doc = "PINT PIN_INT0 input is selected."]
     Val0 = 0x0,
     #[doc = "PINT PIN_INT1 input is selected."]
@@ -5966,9 +8193,9 @@ pub enum ExtTrigInp {
     _RESERVED_3e = 0x3e,
     _RESERVED_3f = 0x3f,
 }
-impl ExtTrigInp {
+impl ExtTrig0Inp {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> ExtTrigInp {
+    pub const fn from_bits(val: u8) -> ExtTrig0Inp {
         unsafe { core::mem::transmute(val & 0x3f) }
     }
     #[inline(always)]
@@ -5976,20 +8203,987 @@ impl ExtTrigInp {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for ExtTrigInp {
+impl From<u8> for ExtTrig0Inp {
     #[inline(always)]
-    fn from(val: u8) -> ExtTrigInp {
-        ExtTrigInp::from_bits(val)
+    fn from(val: u8) -> ExtTrig0Inp {
+        ExtTrig0Inp::from_bits(val)
     }
 }
-impl From<ExtTrigInp> for u8 {
+impl From<ExtTrig0Inp> for u8 {
     #[inline(always)]
-    fn from(val: ExtTrigInp) -> u8 {
-        ExtTrigInp::to_bits(val)
+    fn from(val: ExtTrig0Inp) -> u8 {
+        ExtTrig0Inp::to_bits(val)
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum ExtTrig1Inp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT1 input is selected."]
+    Val1 = 0x01,
+    #[doc = "ADC0_IRQ input is selected."]
+    Val2 = 0x02,
+    #[doc = "ADC1_IRQ input is selected."]
+    Val3 = 0x03,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val4 = 0x04,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val5 = 0x05,
+    #[doc = "PWM0_SM0_MUX_TRIG0/PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val6 = 0x06,
+    #[doc = "PWM0_SM1_MUX_TRIG0/PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val7 = 0x07,
+    #[doc = "PWM0_SM2_MUX_TRIG0/PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val8 = 0x08,
+    #[doc = "PWM0_SM3_MUX_TRIG0/PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val9 = 0x09,
+    #[doc = "PWM1_SM0_MUX_TRIG0/PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "PWM1_SM1_MUX_TRIG0/PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val11 = 0x0b,
+    #[doc = "PWM1_SM2_MUX_TRIG0/PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val12 = 0x0c,
+    #[doc = "PWM1_SM3_MUX_TRIG0/PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val13 = 0x0d,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val14 = 0x0e,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val15 = 0x0f,
+    #[doc = "EVTG_OUT0A input is selected."]
+    Val16 = 0x10,
+    #[doc = "EVTG_OUT0B input is selected."]
+    Val17 = 0x11,
+    #[doc = "EVTG_OUT1A input is selected."]
+    Val18 = 0x12,
+    #[doc = "EVTG_OUT1B input is selected."]
+    Val19 = 0x13,
+    #[doc = "EVTG_OUT2A input is selected."]
+    Val20 = 0x14,
+    #[doc = "EVTG_OUT2B input is selected."]
+    Val21 = 0x15,
+    #[doc = "EVTG_OUT3A input is selected."]
+    Val22 = 0x16,
+    #[doc = "EVTG_OUT3B input is selected."]
+    Val23 = 0x17,
+    _RESERVED_18 = 0x18,
+    _RESERVED_19 = 0x19,
+    #[doc = "LPTMR0 input is selected."]
+    Val26 = 0x1a,
+    #[doc = "LPTMR1 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "SCT Out0 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "SCT Out1 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "SCT Out2 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "SCT Out3 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "SCT Out4 input is selected."]
+    Val32 = 0x20,
+    #[doc = "SCT Out5 input is selected."]
+    Val33 = 0x21,
+    #[doc = "LP_FLEXCOMM0 trigger output 3 input is selected."]
+    Val34 = 0x22,
+    #[doc = "LP_FLEXCOMM1 trigger output 3 input is selected."]
+    Val35 = 0x23,
+    #[doc = "LP_FLEXCOMM2 trigger output 3 input is selected."]
+    Val36 = 0x24,
+    #[doc = "LP_FLEXCOMM3 trigger output 3 input is selected."]
+    Val37 = 0x25,
+    #[doc = "LP_FLEXCOMM4 trigger output 3 input is selected."]
+    Val38 = 0x26,
+    #[doc = "LP_FLEXCOMM5 trigger output 3 input is selected."]
+    Val39 = 0x27,
+    #[doc = "LP_FLEXCOMM6 trigger output 3 input is selected."]
+    Val40 = 0x28,
+    #[doc = "LP_FLEXCOMM7 trigger output 3 input is selected."]
+    Val41 = 0x29,
+    #[doc = "LP_FLEXCOMM8 trigger output 3 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "LP_FLEXCOMM9 trigger output 3 input is selected."]
+    Val43 = 0x2b,
+    #[doc = "CMP0_OUT input is selected."]
+    Val44 = 0x2c,
+    #[doc = "CMP1_OUT input is selected."]
+    Val45 = 0x2d,
+    #[doc = "CMP2_OUT input is selected."]
+    Val46 = 0x2e,
+    #[doc = "ENET_PPS_OUT_0 input is selected."]
+    Val47 = 0x2f,
+    _RESERVED_30 = 0x30,
+    _RESERVED_31 = 0x31,
+    _RESERVED_32 = 0x32,
+    _RESERVED_33 = 0x33,
+    _RESERVED_34 = 0x34,
+    _RESERVED_35 = 0x35,
+    _RESERVED_36 = 0x36,
+    _RESERVED_37 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl ExtTrig1Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> ExtTrig1Inp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for ExtTrig1Inp {
+    #[inline(always)]
+    fn from(val: u8) -> ExtTrig1Inp {
+        ExtTrig1Inp::from_bits(val)
+    }
+}
+impl From<ExtTrig1Inp> for u8 {
+    #[inline(always)]
+    fn from(val: ExtTrig1Inp) -> u8 {
+        ExtTrig1Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum ExtTrig2Inp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT1 input is selected."]
+    Val1 = 0x01,
+    #[doc = "ADC0_IRQ input is selected."]
+    Val2 = 0x02,
+    #[doc = "ADC1_IRQ input is selected."]
+    Val3 = 0x03,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val4 = 0x04,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val5 = 0x05,
+    #[doc = "PWM0_SM0_MUX_TRIG0/PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val6 = 0x06,
+    #[doc = "PWM0_SM1_MUX_TRIG0/PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val7 = 0x07,
+    #[doc = "PWM0_SM2_MUX_TRIG0/PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val8 = 0x08,
+    #[doc = "PWM0_SM3_MUX_TRIG0/PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val9 = 0x09,
+    #[doc = "PWM1_SM0_MUX_TRIG0/PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "PWM1_SM1_MUX_TRIG0/PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val11 = 0x0b,
+    #[doc = "PWM1_SM2_MUX_TRIG0/PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val12 = 0x0c,
+    #[doc = "PWM1_SM3_MUX_TRIG0/PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val13 = 0x0d,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val14 = 0x0e,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val15 = 0x0f,
+    #[doc = "EVTG_OUT0A input is selected."]
+    Val16 = 0x10,
+    #[doc = "EVTG_OUT0B input is selected."]
+    Val17 = 0x11,
+    #[doc = "EVTG_OUT1A input is selected."]
+    Val18 = 0x12,
+    #[doc = "EVTG_OUT1B input is selected."]
+    Val19 = 0x13,
+    #[doc = "EVTG_OUT2A input is selected."]
+    Val20 = 0x14,
+    #[doc = "EVTG_OUT2B input is selected."]
+    Val21 = 0x15,
+    #[doc = "EVTG_OUT3A input is selected."]
+    Val22 = 0x16,
+    #[doc = "EVTG_OUT3B input is selected."]
+    Val23 = 0x17,
+    _RESERVED_18 = 0x18,
+    _RESERVED_19 = 0x19,
+    #[doc = "LPTMR0 input is selected."]
+    Val26 = 0x1a,
+    #[doc = "LPTMR1 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "SCT Out0 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "SCT Out1 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "SCT Out2 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "SCT Out3 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "SCT Out4 input is selected."]
+    Val32 = 0x20,
+    #[doc = "SCT Out5 input is selected."]
+    Val33 = 0x21,
+    #[doc = "LP_FLEXCOMM0 trigger output 3 input is selected."]
+    Val34 = 0x22,
+    #[doc = "LP_FLEXCOMM1 trigger output 3 input is selected."]
+    Val35 = 0x23,
+    #[doc = "LP_FLEXCOMM2 trigger output 3 input is selected."]
+    Val36 = 0x24,
+    #[doc = "LP_FLEXCOMM3 trigger output 3 input is selected."]
+    Val37 = 0x25,
+    #[doc = "LP_FLEXCOMM4 trigger output 3 input is selected."]
+    Val38 = 0x26,
+    #[doc = "LP_FLEXCOMM5 trigger output 3 input is selected."]
+    Val39 = 0x27,
+    #[doc = "LP_FLEXCOMM6 trigger output 3 input is selected."]
+    Val40 = 0x28,
+    #[doc = "LP_FLEXCOMM7 trigger output 3 input is selected."]
+    Val41 = 0x29,
+    #[doc = "LP_FLEXCOMM8 trigger output 3 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "LP_FLEXCOMM9 trigger output 3 input is selected."]
+    Val43 = 0x2b,
+    #[doc = "CMP0_OUT input is selected."]
+    Val44 = 0x2c,
+    #[doc = "CMP1_OUT input is selected."]
+    Val45 = 0x2d,
+    #[doc = "CMP2_OUT input is selected."]
+    Val46 = 0x2e,
+    #[doc = "ENET_PPS_OUT_0 input is selected."]
+    Val47 = 0x2f,
+    _RESERVED_30 = 0x30,
+    _RESERVED_31 = 0x31,
+    _RESERVED_32 = 0x32,
+    _RESERVED_33 = 0x33,
+    _RESERVED_34 = 0x34,
+    _RESERVED_35 = 0x35,
+    _RESERVED_36 = 0x36,
+    _RESERVED_37 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl ExtTrig2Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> ExtTrig2Inp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for ExtTrig2Inp {
+    #[inline(always)]
+    fn from(val: u8) -> ExtTrig2Inp {
+        ExtTrig2Inp::from_bits(val)
+    }
+}
+impl From<ExtTrig2Inp> for u8 {
+    #[inline(always)]
+    fn from(val: ExtTrig2Inp) -> u8 {
+        ExtTrig2Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum ExtTrig3Inp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT1 input is selected."]
+    Val1 = 0x01,
+    #[doc = "ADC0_IRQ input is selected."]
+    Val2 = 0x02,
+    #[doc = "ADC1_IRQ input is selected."]
+    Val3 = 0x03,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val4 = 0x04,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val5 = 0x05,
+    #[doc = "PWM0_SM0_MUX_TRIG0/PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val6 = 0x06,
+    #[doc = "PWM0_SM1_MUX_TRIG0/PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val7 = 0x07,
+    #[doc = "PWM0_SM2_MUX_TRIG0/PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val8 = 0x08,
+    #[doc = "PWM0_SM3_MUX_TRIG0/PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val9 = 0x09,
+    #[doc = "PWM1_SM0_MUX_TRIG0/PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "PWM1_SM1_MUX_TRIG0/PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val11 = 0x0b,
+    #[doc = "PWM1_SM2_MUX_TRIG0/PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val12 = 0x0c,
+    #[doc = "PWM1_SM3_MUX_TRIG0/PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val13 = 0x0d,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val14 = 0x0e,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val15 = 0x0f,
+    #[doc = "EVTG_OUT0A input is selected."]
+    Val16 = 0x10,
+    #[doc = "EVTG_OUT0B input is selected."]
+    Val17 = 0x11,
+    #[doc = "EVTG_OUT1A input is selected."]
+    Val18 = 0x12,
+    #[doc = "EVTG_OUT1B input is selected."]
+    Val19 = 0x13,
+    #[doc = "EVTG_OUT2A input is selected."]
+    Val20 = 0x14,
+    #[doc = "EVTG_OUT2B input is selected."]
+    Val21 = 0x15,
+    #[doc = "EVTG_OUT3A input is selected."]
+    Val22 = 0x16,
+    #[doc = "EVTG_OUT3B input is selected."]
+    Val23 = 0x17,
+    _RESERVED_18 = 0x18,
+    _RESERVED_19 = 0x19,
+    #[doc = "LPTMR0 input is selected."]
+    Val26 = 0x1a,
+    #[doc = "LPTMR1 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "SCT Out0 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "SCT Out1 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "SCT Out2 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "SCT Out3 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "SCT Out4 input is selected."]
+    Val32 = 0x20,
+    #[doc = "SCT Out5 input is selected."]
+    Val33 = 0x21,
+    #[doc = "LP_FLEXCOMM0 trigger output 3 input is selected."]
+    Val34 = 0x22,
+    #[doc = "LP_FLEXCOMM1 trigger output 3 input is selected."]
+    Val35 = 0x23,
+    #[doc = "LP_FLEXCOMM2 trigger output 3 input is selected."]
+    Val36 = 0x24,
+    #[doc = "LP_FLEXCOMM3 trigger output 3 input is selected."]
+    Val37 = 0x25,
+    #[doc = "LP_FLEXCOMM4 trigger output 3 input is selected."]
+    Val38 = 0x26,
+    #[doc = "LP_FLEXCOMM5 trigger output 3 input is selected."]
+    Val39 = 0x27,
+    #[doc = "LP_FLEXCOMM6 trigger output 3 input is selected."]
+    Val40 = 0x28,
+    #[doc = "LP_FLEXCOMM7 trigger output 3 input is selected."]
+    Val41 = 0x29,
+    #[doc = "LP_FLEXCOMM8 trigger output 3 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "LP_FLEXCOMM9 trigger output 3 input is selected."]
+    Val43 = 0x2b,
+    #[doc = "CMP0_OUT input is selected."]
+    Val44 = 0x2c,
+    #[doc = "CMP1_OUT input is selected."]
+    Val45 = 0x2d,
+    #[doc = "CMP2_OUT input is selected."]
+    Val46 = 0x2e,
+    #[doc = "ENET_PPS_OUT_0 input is selected."]
+    Val47 = 0x2f,
+    _RESERVED_30 = 0x30,
+    _RESERVED_31 = 0x31,
+    _RESERVED_32 = 0x32,
+    _RESERVED_33 = 0x33,
+    _RESERVED_34 = 0x34,
+    _RESERVED_35 = 0x35,
+    _RESERVED_36 = 0x36,
+    _RESERVED_37 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl ExtTrig3Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> ExtTrig3Inp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for ExtTrig3Inp {
+    #[inline(always)]
+    fn from(val: u8) -> ExtTrig3Inp {
+        ExtTrig3Inp::from_bits(val)
+    }
+}
+impl From<ExtTrig3Inp> for u8 {
+    #[inline(always)]
+    fn from(val: ExtTrig3Inp) -> u8 {
+        ExtTrig3Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum ExtTrig4Inp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT1 input is selected."]
+    Val1 = 0x01,
+    #[doc = "ADC0_IRQ input is selected."]
+    Val2 = 0x02,
+    #[doc = "ADC1_IRQ input is selected."]
+    Val3 = 0x03,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val4 = 0x04,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val5 = 0x05,
+    #[doc = "PWM0_SM0_MUX_TRIG0/PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val6 = 0x06,
+    #[doc = "PWM0_SM1_MUX_TRIG0/PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val7 = 0x07,
+    #[doc = "PWM0_SM2_MUX_TRIG0/PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val8 = 0x08,
+    #[doc = "PWM0_SM3_MUX_TRIG0/PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val9 = 0x09,
+    #[doc = "PWM1_SM0_MUX_TRIG0/PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "PWM1_SM1_MUX_TRIG0/PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val11 = 0x0b,
+    #[doc = "PWM1_SM2_MUX_TRIG0/PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val12 = 0x0c,
+    #[doc = "PWM1_SM3_MUX_TRIG0/PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val13 = 0x0d,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val14 = 0x0e,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val15 = 0x0f,
+    #[doc = "EVTG_OUT0A input is selected."]
+    Val16 = 0x10,
+    #[doc = "EVTG_OUT0B input is selected."]
+    Val17 = 0x11,
+    #[doc = "EVTG_OUT1A input is selected."]
+    Val18 = 0x12,
+    #[doc = "EVTG_OUT1B input is selected."]
+    Val19 = 0x13,
+    #[doc = "EVTG_OUT2A input is selected."]
+    Val20 = 0x14,
+    #[doc = "EVTG_OUT2B input is selected."]
+    Val21 = 0x15,
+    #[doc = "EVTG_OUT3A input is selected."]
+    Val22 = 0x16,
+    #[doc = "EVTG_OUT3B input is selected."]
+    Val23 = 0x17,
+    _RESERVED_18 = 0x18,
+    _RESERVED_19 = 0x19,
+    #[doc = "LPTMR0 input is selected."]
+    Val26 = 0x1a,
+    #[doc = "LPTMR1 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "SCT Out0 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "SCT Out1 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "SCT Out2 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "SCT Out3 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "SCT Out4 input is selected."]
+    Val32 = 0x20,
+    #[doc = "SCT Out5 input is selected."]
+    Val33 = 0x21,
+    #[doc = "LP_FLEXCOMM0 trigger output 3 input is selected."]
+    Val34 = 0x22,
+    #[doc = "LP_FLEXCOMM1 trigger output 3 input is selected."]
+    Val35 = 0x23,
+    #[doc = "LP_FLEXCOMM2 trigger output 3 input is selected."]
+    Val36 = 0x24,
+    #[doc = "LP_FLEXCOMM3 trigger output 3 input is selected."]
+    Val37 = 0x25,
+    #[doc = "LP_FLEXCOMM4 trigger output 3 input is selected."]
+    Val38 = 0x26,
+    #[doc = "LP_FLEXCOMM5 trigger output 3 input is selected."]
+    Val39 = 0x27,
+    #[doc = "LP_FLEXCOMM6 trigger output 3 input is selected."]
+    Val40 = 0x28,
+    #[doc = "LP_FLEXCOMM7 trigger output 3 input is selected."]
+    Val41 = 0x29,
+    #[doc = "LP_FLEXCOMM8 trigger output 3 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "LP_FLEXCOMM9 trigger output 3 input is selected."]
+    Val43 = 0x2b,
+    #[doc = "CMP0_OUT input is selected."]
+    Val44 = 0x2c,
+    #[doc = "CMP1_OUT input is selected."]
+    Val45 = 0x2d,
+    #[doc = "CMP2_OUT input is selected."]
+    Val46 = 0x2e,
+    #[doc = "ENET_PPS_OUT_0 input is selected."]
+    Val47 = 0x2f,
+    _RESERVED_30 = 0x30,
+    _RESERVED_31 = 0x31,
+    _RESERVED_32 = 0x32,
+    _RESERVED_33 = 0x33,
+    _RESERVED_34 = 0x34,
+    _RESERVED_35 = 0x35,
+    _RESERVED_36 = 0x36,
+    _RESERVED_37 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl ExtTrig4Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> ExtTrig4Inp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for ExtTrig4Inp {
+    #[inline(always)]
+    fn from(val: u8) -> ExtTrig4Inp {
+        ExtTrig4Inp::from_bits(val)
+    }
+}
+impl From<ExtTrig4Inp> for u8 {
+    #[inline(always)]
+    fn from(val: ExtTrig4Inp) -> u8 {
+        ExtTrig4Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum ExtTrig5Inp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT1 input is selected."]
+    Val1 = 0x01,
+    #[doc = "ADC0_IRQ input is selected."]
+    Val2 = 0x02,
+    #[doc = "ADC1_IRQ input is selected."]
+    Val3 = 0x03,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val4 = 0x04,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val5 = 0x05,
+    #[doc = "PWM0_SM0_MUX_TRIG0/PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val6 = 0x06,
+    #[doc = "PWM0_SM1_MUX_TRIG0/PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val7 = 0x07,
+    #[doc = "PWM0_SM2_MUX_TRIG0/PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val8 = 0x08,
+    #[doc = "PWM0_SM3_MUX_TRIG0/PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val9 = 0x09,
+    #[doc = "PWM1_SM0_MUX_TRIG0/PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "PWM1_SM1_MUX_TRIG0/PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val11 = 0x0b,
+    #[doc = "PWM1_SM2_MUX_TRIG0/PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val12 = 0x0c,
+    #[doc = "PWM1_SM3_MUX_TRIG0/PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val13 = 0x0d,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val14 = 0x0e,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val15 = 0x0f,
+    #[doc = "EVTG_OUT0A input is selected."]
+    Val16 = 0x10,
+    #[doc = "EVTG_OUT0B input is selected."]
+    Val17 = 0x11,
+    #[doc = "EVTG_OUT1A input is selected."]
+    Val18 = 0x12,
+    #[doc = "EVTG_OUT1B input is selected."]
+    Val19 = 0x13,
+    #[doc = "EVTG_OUT2A input is selected."]
+    Val20 = 0x14,
+    #[doc = "EVTG_OUT2B input is selected."]
+    Val21 = 0x15,
+    #[doc = "EVTG_OUT3A input is selected."]
+    Val22 = 0x16,
+    #[doc = "EVTG_OUT3B input is selected."]
+    Val23 = 0x17,
+    _RESERVED_18 = 0x18,
+    _RESERVED_19 = 0x19,
+    #[doc = "LPTMR0 input is selected."]
+    Val26 = 0x1a,
+    #[doc = "LPTMR1 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "SCT Out0 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "SCT Out1 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "SCT Out2 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "SCT Out3 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "SCT Out4 input is selected."]
+    Val32 = 0x20,
+    #[doc = "SCT Out5 input is selected."]
+    Val33 = 0x21,
+    #[doc = "LP_FLEXCOMM0 trigger output 3 input is selected."]
+    Val34 = 0x22,
+    #[doc = "LP_FLEXCOMM1 trigger output 3 input is selected."]
+    Val35 = 0x23,
+    #[doc = "LP_FLEXCOMM2 trigger output 3 input is selected."]
+    Val36 = 0x24,
+    #[doc = "LP_FLEXCOMM3 trigger output 3 input is selected."]
+    Val37 = 0x25,
+    #[doc = "LP_FLEXCOMM4 trigger output 3 input is selected."]
+    Val38 = 0x26,
+    #[doc = "LP_FLEXCOMM5 trigger output 3 input is selected."]
+    Val39 = 0x27,
+    #[doc = "LP_FLEXCOMM6 trigger output 3 input is selected."]
+    Val40 = 0x28,
+    #[doc = "LP_FLEXCOMM7 trigger output 3 input is selected."]
+    Val41 = 0x29,
+    #[doc = "LP_FLEXCOMM8 trigger output 3 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "LP_FLEXCOMM9 trigger output 3 input is selected."]
+    Val43 = 0x2b,
+    #[doc = "CMP0_OUT input is selected."]
+    Val44 = 0x2c,
+    #[doc = "CMP1_OUT input is selected."]
+    Val45 = 0x2d,
+    #[doc = "CMP2_OUT input is selected."]
+    Val46 = 0x2e,
+    #[doc = "ENET_PPS_OUT_0 input is selected."]
+    Val47 = 0x2f,
+    _RESERVED_30 = 0x30,
+    _RESERVED_31 = 0x31,
+    _RESERVED_32 = 0x32,
+    _RESERVED_33 = 0x33,
+    _RESERVED_34 = 0x34,
+    _RESERVED_35 = 0x35,
+    _RESERVED_36 = 0x36,
+    _RESERVED_37 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl ExtTrig5Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> ExtTrig5Inp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for ExtTrig5Inp {
+    #[inline(always)]
+    fn from(val: u8) -> ExtTrig5Inp {
+        ExtTrig5Inp::from_bits(val)
+    }
+}
+impl From<ExtTrig5Inp> for u8 {
+    #[inline(always)]
+    fn from(val: ExtTrig5Inp) -> u8 {
+        ExtTrig5Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum ExtTrig6Inp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT1 input is selected."]
+    Val1 = 0x01,
+    #[doc = "ADC0_IRQ input is selected."]
+    Val2 = 0x02,
+    #[doc = "ADC1_IRQ input is selected."]
+    Val3 = 0x03,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val4 = 0x04,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val5 = 0x05,
+    #[doc = "PWM0_SM0_MUX_TRIG0/PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val6 = 0x06,
+    #[doc = "PWM0_SM1_MUX_TRIG0/PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val7 = 0x07,
+    #[doc = "PWM0_SM2_MUX_TRIG0/PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val8 = 0x08,
+    #[doc = "PWM0_SM3_MUX_TRIG0/PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val9 = 0x09,
+    #[doc = "PWM1_SM0_MUX_TRIG0/PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "PWM1_SM1_MUX_TRIG0/PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val11 = 0x0b,
+    #[doc = "PWM1_SM2_MUX_TRIG0/PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val12 = 0x0c,
+    #[doc = "PWM1_SM3_MUX_TRIG0/PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val13 = 0x0d,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val14 = 0x0e,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val15 = 0x0f,
+    #[doc = "EVTG_OUT0A input is selected."]
+    Val16 = 0x10,
+    #[doc = "EVTG_OUT0B input is selected."]
+    Val17 = 0x11,
+    #[doc = "EVTG_OUT1A input is selected."]
+    Val18 = 0x12,
+    #[doc = "EVTG_OUT1B input is selected."]
+    Val19 = 0x13,
+    #[doc = "EVTG_OUT2A input is selected."]
+    Val20 = 0x14,
+    #[doc = "EVTG_OUT2B input is selected."]
+    Val21 = 0x15,
+    #[doc = "EVTG_OUT3A input is selected."]
+    Val22 = 0x16,
+    #[doc = "EVTG_OUT3B input is selected."]
+    Val23 = 0x17,
+    _RESERVED_18 = 0x18,
+    _RESERVED_19 = 0x19,
+    #[doc = "LPTMR0 input is selected."]
+    Val26 = 0x1a,
+    #[doc = "LPTMR1 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "SCT Out0 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "SCT Out1 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "SCT Out2 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "SCT Out3 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "SCT Out4 input is selected."]
+    Val32 = 0x20,
+    #[doc = "SCT Out5 input is selected."]
+    Val33 = 0x21,
+    #[doc = "LP_FLEXCOMM0 trigger output 3 input is selected."]
+    Val34 = 0x22,
+    #[doc = "LP_FLEXCOMM1 trigger output 3 input is selected."]
+    Val35 = 0x23,
+    #[doc = "LP_FLEXCOMM2 trigger output 3 input is selected."]
+    Val36 = 0x24,
+    #[doc = "LP_FLEXCOMM3 trigger output 3 input is selected."]
+    Val37 = 0x25,
+    #[doc = "LP_FLEXCOMM4 trigger output 3 input is selected."]
+    Val38 = 0x26,
+    #[doc = "LP_FLEXCOMM5 trigger output 3 input is selected."]
+    Val39 = 0x27,
+    #[doc = "LP_FLEXCOMM6 trigger output 3 input is selected."]
+    Val40 = 0x28,
+    #[doc = "LP_FLEXCOMM7 trigger output 3 input is selected."]
+    Val41 = 0x29,
+    #[doc = "LP_FLEXCOMM8 trigger output 3 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "LP_FLEXCOMM9 trigger output 3 input is selected."]
+    Val43 = 0x2b,
+    #[doc = "CMP0_OUT input is selected."]
+    Val44 = 0x2c,
+    #[doc = "CMP1_OUT input is selected."]
+    Val45 = 0x2d,
+    #[doc = "CMP2_OUT input is selected."]
+    Val46 = 0x2e,
+    #[doc = "ENET_PPS_OUT_0 input is selected."]
+    Val47 = 0x2f,
+    _RESERVED_30 = 0x30,
+    _RESERVED_31 = 0x31,
+    _RESERVED_32 = 0x32,
+    _RESERVED_33 = 0x33,
+    _RESERVED_34 = 0x34,
+    _RESERVED_35 = 0x35,
+    _RESERVED_36 = 0x36,
+    _RESERVED_37 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl ExtTrig6Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> ExtTrig6Inp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for ExtTrig6Inp {
+    #[inline(always)]
+    fn from(val: u8) -> ExtTrig6Inp {
+        ExtTrig6Inp::from_bits(val)
+    }
+}
+impl From<ExtTrig6Inp> for u8 {
+    #[inline(always)]
+    fn from(val: ExtTrig6Inp) -> u8 {
+        ExtTrig6Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum ExtTrig7Inp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT1 input is selected."]
+    Val1 = 0x01,
+    #[doc = "ADC0_IRQ input is selected."]
+    Val2 = 0x02,
+    #[doc = "ADC1_IRQ input is selected."]
+    Val3 = 0x03,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val4 = 0x04,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val5 = 0x05,
+    #[doc = "PWM0_SM0_MUX_TRIG0/PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val6 = 0x06,
+    #[doc = "PWM0_SM1_MUX_TRIG0/PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val7 = 0x07,
+    #[doc = "PWM0_SM2_MUX_TRIG0/PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val8 = 0x08,
+    #[doc = "PWM0_SM3_MUX_TRIG0/PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val9 = 0x09,
+    #[doc = "PWM1_SM0_MUX_TRIG0/PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "PWM1_SM1_MUX_TRIG0/PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val11 = 0x0b,
+    #[doc = "PWM1_SM2_MUX_TRIG0/PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val12 = 0x0c,
+    #[doc = "PWM1_SM3_MUX_TRIG0/PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val13 = 0x0d,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val14 = 0x0e,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val15 = 0x0f,
+    #[doc = "EVTG_OUT0A input is selected."]
+    Val16 = 0x10,
+    #[doc = "EVTG_OUT0B input is selected."]
+    Val17 = 0x11,
+    #[doc = "EVTG_OUT1A input is selected."]
+    Val18 = 0x12,
+    #[doc = "EVTG_OUT1B input is selected."]
+    Val19 = 0x13,
+    #[doc = "EVTG_OUT2A input is selected."]
+    Val20 = 0x14,
+    #[doc = "EVTG_OUT2B input is selected."]
+    Val21 = 0x15,
+    #[doc = "EVTG_OUT3A input is selected."]
+    Val22 = 0x16,
+    #[doc = "EVTG_OUT3B input is selected."]
+    Val23 = 0x17,
+    _RESERVED_18 = 0x18,
+    _RESERVED_19 = 0x19,
+    #[doc = "LPTMR0 input is selected."]
+    Val26 = 0x1a,
+    #[doc = "LPTMR1 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "SCT Out0 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "SCT Out1 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "SCT Out2 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "SCT Out3 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "SCT Out4 input is selected."]
+    Val32 = 0x20,
+    #[doc = "SCT Out5 input is selected."]
+    Val33 = 0x21,
+    #[doc = "LP_FLEXCOMM0 trigger output 3 input is selected."]
+    Val34 = 0x22,
+    #[doc = "LP_FLEXCOMM1 trigger output 3 input is selected."]
+    Val35 = 0x23,
+    #[doc = "LP_FLEXCOMM2 trigger output 3 input is selected."]
+    Val36 = 0x24,
+    #[doc = "LP_FLEXCOMM3 trigger output 3 input is selected."]
+    Val37 = 0x25,
+    #[doc = "LP_FLEXCOMM4 trigger output 3 input is selected."]
+    Val38 = 0x26,
+    #[doc = "LP_FLEXCOMM5 trigger output 3 input is selected."]
+    Val39 = 0x27,
+    #[doc = "LP_FLEXCOMM6 trigger output 3 input is selected."]
+    Val40 = 0x28,
+    #[doc = "LP_FLEXCOMM7 trigger output 3 input is selected."]
+    Val41 = 0x29,
+    #[doc = "LP_FLEXCOMM8 trigger output 3 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "LP_FLEXCOMM9 trigger output 3 input is selected."]
+    Val43 = 0x2b,
+    #[doc = "CMP0_OUT input is selected."]
+    Val44 = 0x2c,
+    #[doc = "CMP1_OUT input is selected."]
+    Val45 = 0x2d,
+    #[doc = "CMP2_OUT input is selected."]
+    Val46 = 0x2e,
+    #[doc = "ENET_PPS_OUT_0 input is selected."]
+    Val47 = 0x2f,
+    _RESERVED_30 = 0x30,
+    _RESERVED_31 = 0x31,
+    _RESERVED_32 = 0x32,
+    _RESERVED_33 = 0x33,
+    _RESERVED_34 = 0x34,
+    _RESERVED_35 = 0x35,
+    _RESERVED_36 = 0x36,
+    _RESERVED_37 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl ExtTrig7Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> ExtTrig7Inp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for ExtTrig7Inp {
+    #[inline(always)]
+    fn from(val: u8) -> ExtTrig7Inp {
+        ExtTrig7Inp::from_bits(val)
+    }
+}
+impl From<ExtTrig7Inp> for u8 {
+    #[inline(always)]
+    fn from(val: ExtTrig7Inp) -> u8 {
+        ExtTrig7Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlexPwm0ExtforceTrigin {
     #[doc = "PINT PIN_INT0 input is selected."]
@@ -6140,7 +9334,8 @@ impl From<FlexPwm0ExtforceTrigin> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlexPwm0FaultTrigin {
     #[doc = "PINT PIN_INT0 input is selected."]
@@ -6291,7 +9486,8 @@ impl From<FlexPwm0FaultTrigin> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlexPwm0SmExtaTrigin {
     #[doc = "PINT PIN_INT0 input is selected."]
@@ -6442,7 +9638,8 @@ impl From<FlexPwm0SmExtaTrigin> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlexPwm0SmExtsyncTrigin {
     #[doc = "PINT PIN_INT0 input is selected."]
@@ -6593,7 +9790,8 @@ impl From<FlexPwm0SmExtsyncTrigin> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlexPwm1ExtforceTrigin {
     #[doc = "PINT PIN_INT0 input is selected."]
@@ -6744,7 +9942,8 @@ impl From<FlexPwm1ExtforceTrigin> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlexPwm1FaultTrigin {
     #[doc = "PINT PIN_INT0 input is selected."]
@@ -6895,7 +10094,8 @@ impl From<FlexPwm1FaultTrigin> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlexPwm1SmExtaTrigin {
     #[doc = "PINT PIN_INT0 input is selected."]
@@ -7046,7 +10246,8 @@ impl From<FlexPwm1SmExtaTrigin> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlexPwm1SmExtsyncTrigin {
     #[doc = "PINT PIN_INT0 input is selected."]
@@ -7197,7 +10398,8 @@ impl From<FlexPwm1SmExtsyncTrigin> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexcomm0TrigInp {
     #[doc = "PINT PIN_INT4 input is selected."]
@@ -7330,7 +10532,8 @@ impl From<Flexcomm0TrigInp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexcomm1TrigInp {
     #[doc = "PINT PIN_INT4 input is selected."]
@@ -7463,7 +10666,8 @@ impl From<Flexcomm1TrigInp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexcomm2TrigInp {
     #[doc = "PINT PIN_INT4 input is selected."]
@@ -7596,7 +10800,8 @@ impl From<Flexcomm2TrigInp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexcomm3TrigInp {
     #[doc = "PINT PIN_INT4 input is selected."]
@@ -7729,7 +10934,8 @@ impl From<Flexcomm3TrigInp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexcomm4TrigInp {
     #[doc = "PINT PIN_INT4 input is selected."]
@@ -7862,7 +11068,8 @@ impl From<Flexcomm4TrigInp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexcomm5TrigInp {
     #[doc = "PINT PIN_INT4 input is selected."]
@@ -7995,7 +11202,8 @@ impl From<Flexcomm5TrigInp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexcomm6TrigInp {
     #[doc = "PINT PIN_INT4 input is selected."]
@@ -8128,7 +11336,8 @@ impl From<Flexcomm6TrigInp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexcomm7TrigInp {
     #[doc = "PINT PIN_INT4 input is selected."]
@@ -8261,7 +11470,8 @@ impl From<Flexcomm7TrigInp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexcomm8TrigInp {
     #[doc = "PINT PIN_INT4 input is selected."]
@@ -8394,7 +11604,8 @@ impl From<Flexcomm8TrigInp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexcomm9TrigInp {
     #[doc = "PINT PIN_INT4 input is selected."]
@@ -8527,9 +11738,10 @@ impl From<Flexcomm9TrigInp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum FlexioTrigInp {
+pub enum FlexioTrig0Inp {
     #[doc = "PINT PIN_INT4 input is selected."]
     Val0 = 0x0,
     #[doc = "PINT PIN_INT5 input is selected."]
@@ -8735,9 +11947,9 @@ pub enum FlexioTrigInp {
     _RESERVED_7e = 0x7e,
     _RESERVED_7f = 0x7f,
 }
-impl FlexioTrigInp {
+impl FlexioTrig0Inp {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> FlexioTrigInp {
+    pub const fn from_bits(val: u8) -> FlexioTrig0Inp {
         unsafe { core::mem::transmute(val & 0x7f) }
     }
     #[inline(always)]
@@ -8745,20 +11957,1645 @@ impl FlexioTrigInp {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for FlexioTrigInp {
+impl From<u8> for FlexioTrig0Inp {
     #[inline(always)]
-    fn from(val: u8) -> FlexioTrigInp {
-        FlexioTrigInp::from_bits(val)
+    fn from(val: u8) -> FlexioTrig0Inp {
+        FlexioTrig0Inp::from_bits(val)
     }
 }
-impl From<FlexioTrigInp> for u8 {
+impl From<FlexioTrig0Inp> for u8 {
     #[inline(always)]
-    fn from(val: FlexioTrigInp) -> u8 {
-        FlexioTrigInp::to_bits(val)
+    fn from(val: FlexioTrig0Inp) -> u8 {
+        FlexioTrig0Inp::to_bits(val)
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum FlexioTrig1Inp {
+    #[doc = "PINT PIN_INT4 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT5 input is selected."]
+    Val1 = 0x01,
+    #[doc = "PINT PIN_INT6 input is selected."]
+    Val2 = 0x02,
+    #[doc = "PINT PIN_INT7 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT5 input is selected."]
+    Val4 = 0x04,
+    #[doc = "SCT_OUT6 input is selected."]
+    Val5 = 0x05,
+    #[doc = "SCT_OUT7 input is selected."]
+    Val6 = 0x06,
+    #[doc = "SCT_OUT8 input is selected."]
+    Val7 = 0x07,
+    #[doc = "SCT_OUT9 input is selected."]
+    Val8 = 0x08,
+    #[doc = "T0_MAT1 input is selected."]
+    Val9 = 0x09,
+    #[doc = "T1_MAT1 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "T2_MAT1 input is selected."]
+    Val11 = 0x0b,
+    #[doc = "T3_MAT1 input is selected."]
+    Val12 = 0x0c,
+    #[doc = "T4_MAT1 input is selected."]
+    Val13 = 0x0d,
+    #[doc = "LPTMR0 input is selected."]
+    Val14 = 0x0e,
+    #[doc = "LPTMR1 input is selected."]
+    Val15 = 0x0f,
+    _RESERVED_10 = 0x10,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val21 = 0x15,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val22 = 0x16,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val23 = 0x17,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val24 = 0x18,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val25 = 0x19,
+    #[doc = "CMP0_OUT input is selected."]
+    Val26 = 0x1a,
+    #[doc = "CMP1_OUT input is selected."]
+    Val27 = 0x1b,
+    #[doc = "CMP2_OUT input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM0_SM0_MUX_TRIG0 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM0_SM1_MUX_TRIG0 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val32 = 0x20,
+    #[doc = "PWM0_SM2_MUX_TRIG0 input is selected."]
+    Val33 = 0x21,
+    #[doc = "PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val34 = 0x22,
+    #[doc = "PWM0_SM3_MUX_TRIG0 input is selected."]
+    Val35 = 0x23,
+    #[doc = "PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val36 = 0x24,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val37 = 0x25,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val38 = 0x26,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val39 = 0x27,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val40 = 0x28,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val41 = 0x29,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val43 = 0x2b,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val44 = 0x2c,
+    #[doc = "EVTG_OUT0A input is selected."]
+    Val45 = 0x2d,
+    #[doc = "EVTG_OUT0B input is selected."]
+    Val46 = 0x2e,
+    #[doc = "EVTG_OUT1A input is selected."]
+    Val47 = 0x2f,
+    #[doc = "EVTG_OUT1B input is selected."]
+    Val48 = 0x30,
+    #[doc = "EVTG_OUT2A input is selected."]
+    Val49 = 0x31,
+    #[doc = "EVTG_OUT2B input is selected."]
+    Val50 = 0x32,
+    #[doc = "EVTG_OUT3A input is selected."]
+    Val51 = 0x33,
+    #[doc = "EVTG_OUT3B input is selected."]
+    Val52 = 0x34,
+    #[doc = "TRIG_IN0 input is selected."]
+    Val53 = 0x35,
+    #[doc = "TRIG_IN1 input is selected."]
+    Val54 = 0x36,
+    #[doc = "TRIG_IN2 input is selected."]
+    Val55 = 0x37,
+    #[doc = "TRIG_IN3 input is selected."]
+    Val56 = 0x38,
+    #[doc = "TRIG_IN4 input is selected."]
+    Val57 = 0x39,
+    #[doc = "SINC Filter CH0 Conversion Complete input is selected."]
+    Val58 = 0x3a,
+    #[doc = "SINC Filter CH1 Conversion Complete input is selected."]
+    Val59 = 0x3b,
+    #[doc = "SINC Filter CH2 Conversion Complete input is selected."]
+    Val60 = 0x3c,
+    #[doc = "SINC Filter CH3 Conversion Complete input is selected."]
+    Val61 = 0x3d,
+    #[doc = "SINC Filter CH4 Conversion Complete input is selected."]
+    Val62 = 0x3e,
+    #[doc = "LP_FLEXCOMM0 trig 0 (lpuart_trg_txword) input is selected."]
+    Val63 = 0x3f,
+    #[doc = "LP_FLEXCOMM0 trig 1 (lpuart_trg_rxword) input is selected."]
+    Val64 = 0x40,
+    #[doc = "LP_FLEXCOMM0 trig 2 (lpuart_trg_rxidle) input is selected."]
+    Val65 = 0x41,
+    #[doc = "LP_FLEXCOMM1 trig 0 input is selected."]
+    Val66 = 0x42,
+    #[doc = "LP_FLEXCOMM1 trig 1 input is selected."]
+    Val67 = 0x43,
+    #[doc = "LP_FLEXCOMM1 trig 2 input is selected."]
+    Val68 = 0x44,
+    #[doc = "LP_FLEXCOMM2 trig 0 input is selected."]
+    Val69 = 0x45,
+    #[doc = "LP_FLEXCOMM2 trig 1 input is selected."]
+    Val70 = 0x46,
+    #[doc = "LP_FLEXCOMM2 trig 2 input is selected."]
+    Val71 = 0x47,
+    #[doc = "LP_FLEXCOMM3 trig 0 input is selected."]
+    Val72 = 0x48,
+    #[doc = "LP_FLEXCOMM3 trig 1 input is selected."]
+    Val73 = 0x49,
+    #[doc = "LP_FLEXCOMM3 trig 2 input is selected."]
+    Val74 = 0x4a,
+    #[doc = "LP_FLEXCOMM3 trig 3 input is selected."]
+    Val75 = 0x4b,
+    #[doc = "WUU input is selected."]
+    Val76 = 0x4c,
+    _RESERVED_4d = 0x4d,
+    _RESERVED_4e = 0x4e,
+    _RESERVED_4f = 0x4f,
+    _RESERVED_50 = 0x50,
+    _RESERVED_51 = 0x51,
+    _RESERVED_52 = 0x52,
+    _RESERVED_53 = 0x53,
+    _RESERVED_54 = 0x54,
+    _RESERVED_55 = 0x55,
+    _RESERVED_56 = 0x56,
+    _RESERVED_57 = 0x57,
+    _RESERVED_58 = 0x58,
+    _RESERVED_59 = 0x59,
+    _RESERVED_5a = 0x5a,
+    _RESERVED_5b = 0x5b,
+    _RESERVED_5c = 0x5c,
+    _RESERVED_5d = 0x5d,
+    _RESERVED_5e = 0x5e,
+    _RESERVED_5f = 0x5f,
+    _RESERVED_60 = 0x60,
+    _RESERVED_61 = 0x61,
+    _RESERVED_62 = 0x62,
+    _RESERVED_63 = 0x63,
+    _RESERVED_64 = 0x64,
+    _RESERVED_65 = 0x65,
+    _RESERVED_66 = 0x66,
+    _RESERVED_67 = 0x67,
+    _RESERVED_68 = 0x68,
+    _RESERVED_69 = 0x69,
+    _RESERVED_6a = 0x6a,
+    _RESERVED_6b = 0x6b,
+    _RESERVED_6c = 0x6c,
+    _RESERVED_6d = 0x6d,
+    _RESERVED_6e = 0x6e,
+    _RESERVED_6f = 0x6f,
+    _RESERVED_70 = 0x70,
+    _RESERVED_71 = 0x71,
+    _RESERVED_72 = 0x72,
+    _RESERVED_73 = 0x73,
+    _RESERVED_74 = 0x74,
+    _RESERVED_75 = 0x75,
+    _RESERVED_76 = 0x76,
+    _RESERVED_77 = 0x77,
+    _RESERVED_78 = 0x78,
+    _RESERVED_79 = 0x79,
+    _RESERVED_7a = 0x7a,
+    _RESERVED_7b = 0x7b,
+    _RESERVED_7c = 0x7c,
+    _RESERVED_7d = 0x7d,
+    _RESERVED_7e = 0x7e,
+    _RESERVED_7f = 0x7f,
+}
+impl FlexioTrig1Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> FlexioTrig1Inp {
+        unsafe { core::mem::transmute(val & 0x7f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for FlexioTrig1Inp {
+    #[inline(always)]
+    fn from(val: u8) -> FlexioTrig1Inp {
+        FlexioTrig1Inp::from_bits(val)
+    }
+}
+impl From<FlexioTrig1Inp> for u8 {
+    #[inline(always)]
+    fn from(val: FlexioTrig1Inp) -> u8 {
+        FlexioTrig1Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum FlexioTrig2Inp {
+    #[doc = "PINT PIN_INT4 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT5 input is selected."]
+    Val1 = 0x01,
+    #[doc = "PINT PIN_INT6 input is selected."]
+    Val2 = 0x02,
+    #[doc = "PINT PIN_INT7 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT5 input is selected."]
+    Val4 = 0x04,
+    #[doc = "SCT_OUT6 input is selected."]
+    Val5 = 0x05,
+    #[doc = "SCT_OUT7 input is selected."]
+    Val6 = 0x06,
+    #[doc = "SCT_OUT8 input is selected."]
+    Val7 = 0x07,
+    #[doc = "SCT_OUT9 input is selected."]
+    Val8 = 0x08,
+    #[doc = "T0_MAT1 input is selected."]
+    Val9 = 0x09,
+    #[doc = "T1_MAT1 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "T2_MAT1 input is selected."]
+    Val11 = 0x0b,
+    #[doc = "T3_MAT1 input is selected."]
+    Val12 = 0x0c,
+    #[doc = "T4_MAT1 input is selected."]
+    Val13 = 0x0d,
+    #[doc = "LPTMR0 input is selected."]
+    Val14 = 0x0e,
+    #[doc = "LPTMR1 input is selected."]
+    Val15 = 0x0f,
+    _RESERVED_10 = 0x10,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val21 = 0x15,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val22 = 0x16,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val23 = 0x17,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val24 = 0x18,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val25 = 0x19,
+    #[doc = "CMP0_OUT input is selected."]
+    Val26 = 0x1a,
+    #[doc = "CMP1_OUT input is selected."]
+    Val27 = 0x1b,
+    #[doc = "CMP2_OUT input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM0_SM0_MUX_TRIG0 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM0_SM1_MUX_TRIG0 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val32 = 0x20,
+    #[doc = "PWM0_SM2_MUX_TRIG0 input is selected."]
+    Val33 = 0x21,
+    #[doc = "PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val34 = 0x22,
+    #[doc = "PWM0_SM3_MUX_TRIG0 input is selected."]
+    Val35 = 0x23,
+    #[doc = "PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val36 = 0x24,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val37 = 0x25,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val38 = 0x26,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val39 = 0x27,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val40 = 0x28,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val41 = 0x29,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val43 = 0x2b,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val44 = 0x2c,
+    #[doc = "EVTG_OUT0A input is selected."]
+    Val45 = 0x2d,
+    #[doc = "EVTG_OUT0B input is selected."]
+    Val46 = 0x2e,
+    #[doc = "EVTG_OUT1A input is selected."]
+    Val47 = 0x2f,
+    #[doc = "EVTG_OUT1B input is selected."]
+    Val48 = 0x30,
+    #[doc = "EVTG_OUT2A input is selected."]
+    Val49 = 0x31,
+    #[doc = "EVTG_OUT2B input is selected."]
+    Val50 = 0x32,
+    #[doc = "EVTG_OUT3A input is selected."]
+    Val51 = 0x33,
+    #[doc = "EVTG_OUT3B input is selected."]
+    Val52 = 0x34,
+    #[doc = "TRIG_IN0 input is selected."]
+    Val53 = 0x35,
+    #[doc = "TRIG_IN1 input is selected."]
+    Val54 = 0x36,
+    #[doc = "TRIG_IN2 input is selected."]
+    Val55 = 0x37,
+    #[doc = "TRIG_IN3 input is selected."]
+    Val56 = 0x38,
+    #[doc = "TRIG_IN4 input is selected."]
+    Val57 = 0x39,
+    #[doc = "SINC Filter CH0 Conversion Complete input is selected."]
+    Val58 = 0x3a,
+    #[doc = "SINC Filter CH1 Conversion Complete input is selected."]
+    Val59 = 0x3b,
+    #[doc = "SINC Filter CH2 Conversion Complete input is selected."]
+    Val60 = 0x3c,
+    #[doc = "SINC Filter CH3 Conversion Complete input is selected."]
+    Val61 = 0x3d,
+    #[doc = "SINC Filter CH4 Conversion Complete input is selected."]
+    Val62 = 0x3e,
+    #[doc = "LP_FLEXCOMM0 trig 0 (lpuart_trg_txword) input is selected."]
+    Val63 = 0x3f,
+    #[doc = "LP_FLEXCOMM0 trig 1 (lpuart_trg_rxword) input is selected."]
+    Val64 = 0x40,
+    #[doc = "LP_FLEXCOMM0 trig 2 (lpuart_trg_rxidle) input is selected."]
+    Val65 = 0x41,
+    #[doc = "LP_FLEXCOMM1 trig 0 input is selected."]
+    Val66 = 0x42,
+    #[doc = "LP_FLEXCOMM1 trig 1 input is selected."]
+    Val67 = 0x43,
+    #[doc = "LP_FLEXCOMM1 trig 2 input is selected."]
+    Val68 = 0x44,
+    #[doc = "LP_FLEXCOMM2 trig 0 input is selected."]
+    Val69 = 0x45,
+    #[doc = "LP_FLEXCOMM2 trig 1 input is selected."]
+    Val70 = 0x46,
+    #[doc = "LP_FLEXCOMM2 trig 2 input is selected."]
+    Val71 = 0x47,
+    #[doc = "LP_FLEXCOMM3 trig 0 input is selected."]
+    Val72 = 0x48,
+    #[doc = "LP_FLEXCOMM3 trig 1 input is selected."]
+    Val73 = 0x49,
+    #[doc = "LP_FLEXCOMM3 trig 2 input is selected."]
+    Val74 = 0x4a,
+    #[doc = "LP_FLEXCOMM3 trig 3 input is selected."]
+    Val75 = 0x4b,
+    #[doc = "WUU input is selected."]
+    Val76 = 0x4c,
+    _RESERVED_4d = 0x4d,
+    _RESERVED_4e = 0x4e,
+    _RESERVED_4f = 0x4f,
+    _RESERVED_50 = 0x50,
+    _RESERVED_51 = 0x51,
+    _RESERVED_52 = 0x52,
+    _RESERVED_53 = 0x53,
+    _RESERVED_54 = 0x54,
+    _RESERVED_55 = 0x55,
+    _RESERVED_56 = 0x56,
+    _RESERVED_57 = 0x57,
+    _RESERVED_58 = 0x58,
+    _RESERVED_59 = 0x59,
+    _RESERVED_5a = 0x5a,
+    _RESERVED_5b = 0x5b,
+    _RESERVED_5c = 0x5c,
+    _RESERVED_5d = 0x5d,
+    _RESERVED_5e = 0x5e,
+    _RESERVED_5f = 0x5f,
+    _RESERVED_60 = 0x60,
+    _RESERVED_61 = 0x61,
+    _RESERVED_62 = 0x62,
+    _RESERVED_63 = 0x63,
+    _RESERVED_64 = 0x64,
+    _RESERVED_65 = 0x65,
+    _RESERVED_66 = 0x66,
+    _RESERVED_67 = 0x67,
+    _RESERVED_68 = 0x68,
+    _RESERVED_69 = 0x69,
+    _RESERVED_6a = 0x6a,
+    _RESERVED_6b = 0x6b,
+    _RESERVED_6c = 0x6c,
+    _RESERVED_6d = 0x6d,
+    _RESERVED_6e = 0x6e,
+    _RESERVED_6f = 0x6f,
+    _RESERVED_70 = 0x70,
+    _RESERVED_71 = 0x71,
+    _RESERVED_72 = 0x72,
+    _RESERVED_73 = 0x73,
+    _RESERVED_74 = 0x74,
+    _RESERVED_75 = 0x75,
+    _RESERVED_76 = 0x76,
+    _RESERVED_77 = 0x77,
+    _RESERVED_78 = 0x78,
+    _RESERVED_79 = 0x79,
+    _RESERVED_7a = 0x7a,
+    _RESERVED_7b = 0x7b,
+    _RESERVED_7c = 0x7c,
+    _RESERVED_7d = 0x7d,
+    _RESERVED_7e = 0x7e,
+    _RESERVED_7f = 0x7f,
+}
+impl FlexioTrig2Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> FlexioTrig2Inp {
+        unsafe { core::mem::transmute(val & 0x7f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for FlexioTrig2Inp {
+    #[inline(always)]
+    fn from(val: u8) -> FlexioTrig2Inp {
+        FlexioTrig2Inp::from_bits(val)
+    }
+}
+impl From<FlexioTrig2Inp> for u8 {
+    #[inline(always)]
+    fn from(val: FlexioTrig2Inp) -> u8 {
+        FlexioTrig2Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum FlexioTrig3Inp {
+    #[doc = "PINT PIN_INT4 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT5 input is selected."]
+    Val1 = 0x01,
+    #[doc = "PINT PIN_INT6 input is selected."]
+    Val2 = 0x02,
+    #[doc = "PINT PIN_INT7 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT5 input is selected."]
+    Val4 = 0x04,
+    #[doc = "SCT_OUT6 input is selected."]
+    Val5 = 0x05,
+    #[doc = "SCT_OUT7 input is selected."]
+    Val6 = 0x06,
+    #[doc = "SCT_OUT8 input is selected."]
+    Val7 = 0x07,
+    #[doc = "SCT_OUT9 input is selected."]
+    Val8 = 0x08,
+    #[doc = "T0_MAT1 input is selected."]
+    Val9 = 0x09,
+    #[doc = "T1_MAT1 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "T2_MAT1 input is selected."]
+    Val11 = 0x0b,
+    #[doc = "T3_MAT1 input is selected."]
+    Val12 = 0x0c,
+    #[doc = "T4_MAT1 input is selected."]
+    Val13 = 0x0d,
+    #[doc = "LPTMR0 input is selected."]
+    Val14 = 0x0e,
+    #[doc = "LPTMR1 input is selected."]
+    Val15 = 0x0f,
+    _RESERVED_10 = 0x10,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val21 = 0x15,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val22 = 0x16,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val23 = 0x17,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val24 = 0x18,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val25 = 0x19,
+    #[doc = "CMP0_OUT input is selected."]
+    Val26 = 0x1a,
+    #[doc = "CMP1_OUT input is selected."]
+    Val27 = 0x1b,
+    #[doc = "CMP2_OUT input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM0_SM0_MUX_TRIG0 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM0_SM1_MUX_TRIG0 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val32 = 0x20,
+    #[doc = "PWM0_SM2_MUX_TRIG0 input is selected."]
+    Val33 = 0x21,
+    #[doc = "PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val34 = 0x22,
+    #[doc = "PWM0_SM3_MUX_TRIG0 input is selected."]
+    Val35 = 0x23,
+    #[doc = "PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val36 = 0x24,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val37 = 0x25,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val38 = 0x26,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val39 = 0x27,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val40 = 0x28,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val41 = 0x29,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val43 = 0x2b,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val44 = 0x2c,
+    #[doc = "EVTG_OUT0A input is selected."]
+    Val45 = 0x2d,
+    #[doc = "EVTG_OUT0B input is selected."]
+    Val46 = 0x2e,
+    #[doc = "EVTG_OUT1A input is selected."]
+    Val47 = 0x2f,
+    #[doc = "EVTG_OUT1B input is selected."]
+    Val48 = 0x30,
+    #[doc = "EVTG_OUT2A input is selected."]
+    Val49 = 0x31,
+    #[doc = "EVTG_OUT2B input is selected."]
+    Val50 = 0x32,
+    #[doc = "EVTG_OUT3A input is selected."]
+    Val51 = 0x33,
+    #[doc = "EVTG_OUT3B input is selected."]
+    Val52 = 0x34,
+    #[doc = "TRIG_IN0 input is selected."]
+    Val53 = 0x35,
+    #[doc = "TRIG_IN1 input is selected."]
+    Val54 = 0x36,
+    #[doc = "TRIG_IN2 input is selected."]
+    Val55 = 0x37,
+    #[doc = "TRIG_IN3 input is selected."]
+    Val56 = 0x38,
+    #[doc = "TRIG_IN4 input is selected."]
+    Val57 = 0x39,
+    #[doc = "SINC Filter CH0 Conversion Complete input is selected."]
+    Val58 = 0x3a,
+    #[doc = "SINC Filter CH1 Conversion Complete input is selected."]
+    Val59 = 0x3b,
+    #[doc = "SINC Filter CH2 Conversion Complete input is selected."]
+    Val60 = 0x3c,
+    #[doc = "SINC Filter CH3 Conversion Complete input is selected."]
+    Val61 = 0x3d,
+    #[doc = "SINC Filter CH4 Conversion Complete input is selected."]
+    Val62 = 0x3e,
+    #[doc = "LP_FLEXCOMM0 trig 0 (lpuart_trg_txword) input is selected."]
+    Val63 = 0x3f,
+    #[doc = "LP_FLEXCOMM0 trig 1 (lpuart_trg_rxword) input is selected."]
+    Val64 = 0x40,
+    #[doc = "LP_FLEXCOMM0 trig 2 (lpuart_trg_rxidle) input is selected."]
+    Val65 = 0x41,
+    #[doc = "LP_FLEXCOMM1 trig 0 input is selected."]
+    Val66 = 0x42,
+    #[doc = "LP_FLEXCOMM1 trig 1 input is selected."]
+    Val67 = 0x43,
+    #[doc = "LP_FLEXCOMM1 trig 2 input is selected."]
+    Val68 = 0x44,
+    #[doc = "LP_FLEXCOMM2 trig 0 input is selected."]
+    Val69 = 0x45,
+    #[doc = "LP_FLEXCOMM2 trig 1 input is selected."]
+    Val70 = 0x46,
+    #[doc = "LP_FLEXCOMM2 trig 2 input is selected."]
+    Val71 = 0x47,
+    #[doc = "LP_FLEXCOMM3 trig 0 input is selected."]
+    Val72 = 0x48,
+    #[doc = "LP_FLEXCOMM3 trig 1 input is selected."]
+    Val73 = 0x49,
+    #[doc = "LP_FLEXCOMM3 trig 2 input is selected."]
+    Val74 = 0x4a,
+    #[doc = "LP_FLEXCOMM3 trig 3 input is selected."]
+    Val75 = 0x4b,
+    #[doc = "WUU input is selected."]
+    Val76 = 0x4c,
+    _RESERVED_4d = 0x4d,
+    _RESERVED_4e = 0x4e,
+    _RESERVED_4f = 0x4f,
+    _RESERVED_50 = 0x50,
+    _RESERVED_51 = 0x51,
+    _RESERVED_52 = 0x52,
+    _RESERVED_53 = 0x53,
+    _RESERVED_54 = 0x54,
+    _RESERVED_55 = 0x55,
+    _RESERVED_56 = 0x56,
+    _RESERVED_57 = 0x57,
+    _RESERVED_58 = 0x58,
+    _RESERVED_59 = 0x59,
+    _RESERVED_5a = 0x5a,
+    _RESERVED_5b = 0x5b,
+    _RESERVED_5c = 0x5c,
+    _RESERVED_5d = 0x5d,
+    _RESERVED_5e = 0x5e,
+    _RESERVED_5f = 0x5f,
+    _RESERVED_60 = 0x60,
+    _RESERVED_61 = 0x61,
+    _RESERVED_62 = 0x62,
+    _RESERVED_63 = 0x63,
+    _RESERVED_64 = 0x64,
+    _RESERVED_65 = 0x65,
+    _RESERVED_66 = 0x66,
+    _RESERVED_67 = 0x67,
+    _RESERVED_68 = 0x68,
+    _RESERVED_69 = 0x69,
+    _RESERVED_6a = 0x6a,
+    _RESERVED_6b = 0x6b,
+    _RESERVED_6c = 0x6c,
+    _RESERVED_6d = 0x6d,
+    _RESERVED_6e = 0x6e,
+    _RESERVED_6f = 0x6f,
+    _RESERVED_70 = 0x70,
+    _RESERVED_71 = 0x71,
+    _RESERVED_72 = 0x72,
+    _RESERVED_73 = 0x73,
+    _RESERVED_74 = 0x74,
+    _RESERVED_75 = 0x75,
+    _RESERVED_76 = 0x76,
+    _RESERVED_77 = 0x77,
+    _RESERVED_78 = 0x78,
+    _RESERVED_79 = 0x79,
+    _RESERVED_7a = 0x7a,
+    _RESERVED_7b = 0x7b,
+    _RESERVED_7c = 0x7c,
+    _RESERVED_7d = 0x7d,
+    _RESERVED_7e = 0x7e,
+    _RESERVED_7f = 0x7f,
+}
+impl FlexioTrig3Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> FlexioTrig3Inp {
+        unsafe { core::mem::transmute(val & 0x7f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for FlexioTrig3Inp {
+    #[inline(always)]
+    fn from(val: u8) -> FlexioTrig3Inp {
+        FlexioTrig3Inp::from_bits(val)
+    }
+}
+impl From<FlexioTrig3Inp> for u8 {
+    #[inline(always)]
+    fn from(val: FlexioTrig3Inp) -> u8 {
+        FlexioTrig3Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum FlexioTrig4Inp {
+    #[doc = "PINT PIN_INT4 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT5 input is selected."]
+    Val1 = 0x01,
+    #[doc = "PINT PIN_INT6 input is selected."]
+    Val2 = 0x02,
+    #[doc = "PINT PIN_INT7 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT5 input is selected."]
+    Val4 = 0x04,
+    #[doc = "SCT_OUT6 input is selected."]
+    Val5 = 0x05,
+    #[doc = "SCT_OUT7 input is selected."]
+    Val6 = 0x06,
+    #[doc = "SCT_OUT8 input is selected."]
+    Val7 = 0x07,
+    #[doc = "SCT_OUT9 input is selected."]
+    Val8 = 0x08,
+    #[doc = "T0_MAT1 input is selected."]
+    Val9 = 0x09,
+    #[doc = "T1_MAT1 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "T2_MAT1 input is selected."]
+    Val11 = 0x0b,
+    #[doc = "T3_MAT1 input is selected."]
+    Val12 = 0x0c,
+    #[doc = "T4_MAT1 input is selected."]
+    Val13 = 0x0d,
+    #[doc = "LPTMR0 input is selected."]
+    Val14 = 0x0e,
+    #[doc = "LPTMR1 input is selected."]
+    Val15 = 0x0f,
+    _RESERVED_10 = 0x10,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val21 = 0x15,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val22 = 0x16,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val23 = 0x17,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val24 = 0x18,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val25 = 0x19,
+    #[doc = "CMP0_OUT input is selected."]
+    Val26 = 0x1a,
+    #[doc = "CMP1_OUT input is selected."]
+    Val27 = 0x1b,
+    #[doc = "CMP2_OUT input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM0_SM0_MUX_TRIG0 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM0_SM1_MUX_TRIG0 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val32 = 0x20,
+    #[doc = "PWM0_SM2_MUX_TRIG0 input is selected."]
+    Val33 = 0x21,
+    #[doc = "PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val34 = 0x22,
+    #[doc = "PWM0_SM3_MUX_TRIG0 input is selected."]
+    Val35 = 0x23,
+    #[doc = "PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val36 = 0x24,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val37 = 0x25,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val38 = 0x26,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val39 = 0x27,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val40 = 0x28,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val41 = 0x29,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val43 = 0x2b,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val44 = 0x2c,
+    #[doc = "EVTG_OUT0A input is selected."]
+    Val45 = 0x2d,
+    #[doc = "EVTG_OUT0B input is selected."]
+    Val46 = 0x2e,
+    #[doc = "EVTG_OUT1A input is selected."]
+    Val47 = 0x2f,
+    #[doc = "EVTG_OUT1B input is selected."]
+    Val48 = 0x30,
+    #[doc = "EVTG_OUT2A input is selected."]
+    Val49 = 0x31,
+    #[doc = "EVTG_OUT2B input is selected."]
+    Val50 = 0x32,
+    #[doc = "EVTG_OUT3A input is selected."]
+    Val51 = 0x33,
+    #[doc = "EVTG_OUT3B input is selected."]
+    Val52 = 0x34,
+    #[doc = "TRIG_IN0 input is selected."]
+    Val53 = 0x35,
+    #[doc = "TRIG_IN1 input is selected."]
+    Val54 = 0x36,
+    #[doc = "TRIG_IN2 input is selected."]
+    Val55 = 0x37,
+    #[doc = "TRIG_IN3 input is selected."]
+    Val56 = 0x38,
+    #[doc = "TRIG_IN4 input is selected."]
+    Val57 = 0x39,
+    #[doc = "SINC Filter CH0 Conversion Complete input is selected."]
+    Val58 = 0x3a,
+    #[doc = "SINC Filter CH1 Conversion Complete input is selected."]
+    Val59 = 0x3b,
+    #[doc = "SINC Filter CH2 Conversion Complete input is selected."]
+    Val60 = 0x3c,
+    #[doc = "SINC Filter CH3 Conversion Complete input is selected."]
+    Val61 = 0x3d,
+    #[doc = "SINC Filter CH4 Conversion Complete input is selected."]
+    Val62 = 0x3e,
+    #[doc = "LP_FLEXCOMM0 trig 0 (lpuart_trg_txword) input is selected."]
+    Val63 = 0x3f,
+    #[doc = "LP_FLEXCOMM0 trig 1 (lpuart_trg_rxword) input is selected."]
+    Val64 = 0x40,
+    #[doc = "LP_FLEXCOMM0 trig 2 (lpuart_trg_rxidle) input is selected."]
+    Val65 = 0x41,
+    #[doc = "LP_FLEXCOMM1 trig 0 input is selected."]
+    Val66 = 0x42,
+    #[doc = "LP_FLEXCOMM1 trig 1 input is selected."]
+    Val67 = 0x43,
+    #[doc = "LP_FLEXCOMM1 trig 2 input is selected."]
+    Val68 = 0x44,
+    #[doc = "LP_FLEXCOMM2 trig 0 input is selected."]
+    Val69 = 0x45,
+    #[doc = "LP_FLEXCOMM2 trig 1 input is selected."]
+    Val70 = 0x46,
+    #[doc = "LP_FLEXCOMM2 trig 2 input is selected."]
+    Val71 = 0x47,
+    #[doc = "LP_FLEXCOMM3 trig 0 input is selected."]
+    Val72 = 0x48,
+    #[doc = "LP_FLEXCOMM3 trig 1 input is selected."]
+    Val73 = 0x49,
+    #[doc = "LP_FLEXCOMM3 trig 2 input is selected."]
+    Val74 = 0x4a,
+    #[doc = "LP_FLEXCOMM3 trig 3 input is selected."]
+    Val75 = 0x4b,
+    #[doc = "WUU input is selected."]
+    Val76 = 0x4c,
+    _RESERVED_4d = 0x4d,
+    _RESERVED_4e = 0x4e,
+    _RESERVED_4f = 0x4f,
+    _RESERVED_50 = 0x50,
+    _RESERVED_51 = 0x51,
+    _RESERVED_52 = 0x52,
+    _RESERVED_53 = 0x53,
+    _RESERVED_54 = 0x54,
+    _RESERVED_55 = 0x55,
+    _RESERVED_56 = 0x56,
+    _RESERVED_57 = 0x57,
+    _RESERVED_58 = 0x58,
+    _RESERVED_59 = 0x59,
+    _RESERVED_5a = 0x5a,
+    _RESERVED_5b = 0x5b,
+    _RESERVED_5c = 0x5c,
+    _RESERVED_5d = 0x5d,
+    _RESERVED_5e = 0x5e,
+    _RESERVED_5f = 0x5f,
+    _RESERVED_60 = 0x60,
+    _RESERVED_61 = 0x61,
+    _RESERVED_62 = 0x62,
+    _RESERVED_63 = 0x63,
+    _RESERVED_64 = 0x64,
+    _RESERVED_65 = 0x65,
+    _RESERVED_66 = 0x66,
+    _RESERVED_67 = 0x67,
+    _RESERVED_68 = 0x68,
+    _RESERVED_69 = 0x69,
+    _RESERVED_6a = 0x6a,
+    _RESERVED_6b = 0x6b,
+    _RESERVED_6c = 0x6c,
+    _RESERVED_6d = 0x6d,
+    _RESERVED_6e = 0x6e,
+    _RESERVED_6f = 0x6f,
+    _RESERVED_70 = 0x70,
+    _RESERVED_71 = 0x71,
+    _RESERVED_72 = 0x72,
+    _RESERVED_73 = 0x73,
+    _RESERVED_74 = 0x74,
+    _RESERVED_75 = 0x75,
+    _RESERVED_76 = 0x76,
+    _RESERVED_77 = 0x77,
+    _RESERVED_78 = 0x78,
+    _RESERVED_79 = 0x79,
+    _RESERVED_7a = 0x7a,
+    _RESERVED_7b = 0x7b,
+    _RESERVED_7c = 0x7c,
+    _RESERVED_7d = 0x7d,
+    _RESERVED_7e = 0x7e,
+    _RESERVED_7f = 0x7f,
+}
+impl FlexioTrig4Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> FlexioTrig4Inp {
+        unsafe { core::mem::transmute(val & 0x7f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for FlexioTrig4Inp {
+    #[inline(always)]
+    fn from(val: u8) -> FlexioTrig4Inp {
+        FlexioTrig4Inp::from_bits(val)
+    }
+}
+impl From<FlexioTrig4Inp> for u8 {
+    #[inline(always)]
+    fn from(val: FlexioTrig4Inp) -> u8 {
+        FlexioTrig4Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum FlexioTrig5Inp {
+    #[doc = "PINT PIN_INT4 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT5 input is selected."]
+    Val1 = 0x01,
+    #[doc = "PINT PIN_INT6 input is selected."]
+    Val2 = 0x02,
+    #[doc = "PINT PIN_INT7 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT5 input is selected."]
+    Val4 = 0x04,
+    #[doc = "SCT_OUT6 input is selected."]
+    Val5 = 0x05,
+    #[doc = "SCT_OUT7 input is selected."]
+    Val6 = 0x06,
+    #[doc = "SCT_OUT8 input is selected."]
+    Val7 = 0x07,
+    #[doc = "SCT_OUT9 input is selected."]
+    Val8 = 0x08,
+    #[doc = "T0_MAT1 input is selected."]
+    Val9 = 0x09,
+    #[doc = "T1_MAT1 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "T2_MAT1 input is selected."]
+    Val11 = 0x0b,
+    #[doc = "T3_MAT1 input is selected."]
+    Val12 = 0x0c,
+    #[doc = "T4_MAT1 input is selected."]
+    Val13 = 0x0d,
+    #[doc = "LPTMR0 input is selected."]
+    Val14 = 0x0e,
+    #[doc = "LPTMR1 input is selected."]
+    Val15 = 0x0f,
+    _RESERVED_10 = 0x10,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val21 = 0x15,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val22 = 0x16,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val23 = 0x17,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val24 = 0x18,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val25 = 0x19,
+    #[doc = "CMP0_OUT input is selected."]
+    Val26 = 0x1a,
+    #[doc = "CMP1_OUT input is selected."]
+    Val27 = 0x1b,
+    #[doc = "CMP2_OUT input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM0_SM0_MUX_TRIG0 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM0_SM1_MUX_TRIG0 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val32 = 0x20,
+    #[doc = "PWM0_SM2_MUX_TRIG0 input is selected."]
+    Val33 = 0x21,
+    #[doc = "PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val34 = 0x22,
+    #[doc = "PWM0_SM3_MUX_TRIG0 input is selected."]
+    Val35 = 0x23,
+    #[doc = "PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val36 = 0x24,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val37 = 0x25,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val38 = 0x26,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val39 = 0x27,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val40 = 0x28,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val41 = 0x29,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val43 = 0x2b,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val44 = 0x2c,
+    #[doc = "EVTG_OUT0A input is selected."]
+    Val45 = 0x2d,
+    #[doc = "EVTG_OUT0B input is selected."]
+    Val46 = 0x2e,
+    #[doc = "EVTG_OUT1A input is selected."]
+    Val47 = 0x2f,
+    #[doc = "EVTG_OUT1B input is selected."]
+    Val48 = 0x30,
+    #[doc = "EVTG_OUT2A input is selected."]
+    Val49 = 0x31,
+    #[doc = "EVTG_OUT2B input is selected."]
+    Val50 = 0x32,
+    #[doc = "EVTG_OUT3A input is selected."]
+    Val51 = 0x33,
+    #[doc = "EVTG_OUT3B input is selected."]
+    Val52 = 0x34,
+    #[doc = "TRIG_IN0 input is selected."]
+    Val53 = 0x35,
+    #[doc = "TRIG_IN1 input is selected."]
+    Val54 = 0x36,
+    #[doc = "TRIG_IN2 input is selected."]
+    Val55 = 0x37,
+    #[doc = "TRIG_IN3 input is selected."]
+    Val56 = 0x38,
+    #[doc = "TRIG_IN4 input is selected."]
+    Val57 = 0x39,
+    #[doc = "SINC Filter CH0 Conversion Complete input is selected."]
+    Val58 = 0x3a,
+    #[doc = "SINC Filter CH1 Conversion Complete input is selected."]
+    Val59 = 0x3b,
+    #[doc = "SINC Filter CH2 Conversion Complete input is selected."]
+    Val60 = 0x3c,
+    #[doc = "SINC Filter CH3 Conversion Complete input is selected."]
+    Val61 = 0x3d,
+    #[doc = "SINC Filter CH4 Conversion Complete input is selected."]
+    Val62 = 0x3e,
+    #[doc = "LP_FLEXCOMM0 trig 0 (lpuart_trg_txword) input is selected."]
+    Val63 = 0x3f,
+    #[doc = "LP_FLEXCOMM0 trig 1 (lpuart_trg_rxword) input is selected."]
+    Val64 = 0x40,
+    #[doc = "LP_FLEXCOMM0 trig 2 (lpuart_trg_rxidle) input is selected."]
+    Val65 = 0x41,
+    #[doc = "LP_FLEXCOMM1 trig 0 input is selected."]
+    Val66 = 0x42,
+    #[doc = "LP_FLEXCOMM1 trig 1 input is selected."]
+    Val67 = 0x43,
+    #[doc = "LP_FLEXCOMM1 trig 2 input is selected."]
+    Val68 = 0x44,
+    #[doc = "LP_FLEXCOMM2 trig 0 input is selected."]
+    Val69 = 0x45,
+    #[doc = "LP_FLEXCOMM2 trig 1 input is selected."]
+    Val70 = 0x46,
+    #[doc = "LP_FLEXCOMM2 trig 2 input is selected."]
+    Val71 = 0x47,
+    #[doc = "LP_FLEXCOMM3 trig 0 input is selected."]
+    Val72 = 0x48,
+    #[doc = "LP_FLEXCOMM3 trig 1 input is selected."]
+    Val73 = 0x49,
+    #[doc = "LP_FLEXCOMM3 trig 2 input is selected."]
+    Val74 = 0x4a,
+    #[doc = "LP_FLEXCOMM3 trig 3 input is selected."]
+    Val75 = 0x4b,
+    #[doc = "WUU input is selected."]
+    Val76 = 0x4c,
+    _RESERVED_4d = 0x4d,
+    _RESERVED_4e = 0x4e,
+    _RESERVED_4f = 0x4f,
+    _RESERVED_50 = 0x50,
+    _RESERVED_51 = 0x51,
+    _RESERVED_52 = 0x52,
+    _RESERVED_53 = 0x53,
+    _RESERVED_54 = 0x54,
+    _RESERVED_55 = 0x55,
+    _RESERVED_56 = 0x56,
+    _RESERVED_57 = 0x57,
+    _RESERVED_58 = 0x58,
+    _RESERVED_59 = 0x59,
+    _RESERVED_5a = 0x5a,
+    _RESERVED_5b = 0x5b,
+    _RESERVED_5c = 0x5c,
+    _RESERVED_5d = 0x5d,
+    _RESERVED_5e = 0x5e,
+    _RESERVED_5f = 0x5f,
+    _RESERVED_60 = 0x60,
+    _RESERVED_61 = 0x61,
+    _RESERVED_62 = 0x62,
+    _RESERVED_63 = 0x63,
+    _RESERVED_64 = 0x64,
+    _RESERVED_65 = 0x65,
+    _RESERVED_66 = 0x66,
+    _RESERVED_67 = 0x67,
+    _RESERVED_68 = 0x68,
+    _RESERVED_69 = 0x69,
+    _RESERVED_6a = 0x6a,
+    _RESERVED_6b = 0x6b,
+    _RESERVED_6c = 0x6c,
+    _RESERVED_6d = 0x6d,
+    _RESERVED_6e = 0x6e,
+    _RESERVED_6f = 0x6f,
+    _RESERVED_70 = 0x70,
+    _RESERVED_71 = 0x71,
+    _RESERVED_72 = 0x72,
+    _RESERVED_73 = 0x73,
+    _RESERVED_74 = 0x74,
+    _RESERVED_75 = 0x75,
+    _RESERVED_76 = 0x76,
+    _RESERVED_77 = 0x77,
+    _RESERVED_78 = 0x78,
+    _RESERVED_79 = 0x79,
+    _RESERVED_7a = 0x7a,
+    _RESERVED_7b = 0x7b,
+    _RESERVED_7c = 0x7c,
+    _RESERVED_7d = 0x7d,
+    _RESERVED_7e = 0x7e,
+    _RESERVED_7f = 0x7f,
+}
+impl FlexioTrig5Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> FlexioTrig5Inp {
+        unsafe { core::mem::transmute(val & 0x7f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for FlexioTrig5Inp {
+    #[inline(always)]
+    fn from(val: u8) -> FlexioTrig5Inp {
+        FlexioTrig5Inp::from_bits(val)
+    }
+}
+impl From<FlexioTrig5Inp> for u8 {
+    #[inline(always)]
+    fn from(val: FlexioTrig5Inp) -> u8 {
+        FlexioTrig5Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum FlexioTrig6Inp {
+    #[doc = "PINT PIN_INT4 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT5 input is selected."]
+    Val1 = 0x01,
+    #[doc = "PINT PIN_INT6 input is selected."]
+    Val2 = 0x02,
+    #[doc = "PINT PIN_INT7 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT5 input is selected."]
+    Val4 = 0x04,
+    #[doc = "SCT_OUT6 input is selected."]
+    Val5 = 0x05,
+    #[doc = "SCT_OUT7 input is selected."]
+    Val6 = 0x06,
+    #[doc = "SCT_OUT8 input is selected."]
+    Val7 = 0x07,
+    #[doc = "SCT_OUT9 input is selected."]
+    Val8 = 0x08,
+    #[doc = "T0_MAT1 input is selected."]
+    Val9 = 0x09,
+    #[doc = "T1_MAT1 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "T2_MAT1 input is selected."]
+    Val11 = 0x0b,
+    #[doc = "T3_MAT1 input is selected."]
+    Val12 = 0x0c,
+    #[doc = "T4_MAT1 input is selected."]
+    Val13 = 0x0d,
+    #[doc = "LPTMR0 input is selected."]
+    Val14 = 0x0e,
+    #[doc = "LPTMR1 input is selected."]
+    Val15 = 0x0f,
+    _RESERVED_10 = 0x10,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val21 = 0x15,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val22 = 0x16,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val23 = 0x17,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val24 = 0x18,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val25 = 0x19,
+    #[doc = "CMP0_OUT input is selected."]
+    Val26 = 0x1a,
+    #[doc = "CMP1_OUT input is selected."]
+    Val27 = 0x1b,
+    #[doc = "CMP2_OUT input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM0_SM0_MUX_TRIG0 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM0_SM1_MUX_TRIG0 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val32 = 0x20,
+    #[doc = "PWM0_SM2_MUX_TRIG0 input is selected."]
+    Val33 = 0x21,
+    #[doc = "PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val34 = 0x22,
+    #[doc = "PWM0_SM3_MUX_TRIG0 input is selected."]
+    Val35 = 0x23,
+    #[doc = "PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val36 = 0x24,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val37 = 0x25,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val38 = 0x26,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val39 = 0x27,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val40 = 0x28,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val41 = 0x29,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val43 = 0x2b,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val44 = 0x2c,
+    #[doc = "EVTG_OUT0A input is selected."]
+    Val45 = 0x2d,
+    #[doc = "EVTG_OUT0B input is selected."]
+    Val46 = 0x2e,
+    #[doc = "EVTG_OUT1A input is selected."]
+    Val47 = 0x2f,
+    #[doc = "EVTG_OUT1B input is selected."]
+    Val48 = 0x30,
+    #[doc = "EVTG_OUT2A input is selected."]
+    Val49 = 0x31,
+    #[doc = "EVTG_OUT2B input is selected."]
+    Val50 = 0x32,
+    #[doc = "EVTG_OUT3A input is selected."]
+    Val51 = 0x33,
+    #[doc = "EVTG_OUT3B input is selected."]
+    Val52 = 0x34,
+    #[doc = "TRIG_IN0 input is selected."]
+    Val53 = 0x35,
+    #[doc = "TRIG_IN1 input is selected."]
+    Val54 = 0x36,
+    #[doc = "TRIG_IN2 input is selected."]
+    Val55 = 0x37,
+    #[doc = "TRIG_IN3 input is selected."]
+    Val56 = 0x38,
+    #[doc = "TRIG_IN4 input is selected."]
+    Val57 = 0x39,
+    #[doc = "SINC Filter CH0 Conversion Complete input is selected."]
+    Val58 = 0x3a,
+    #[doc = "SINC Filter CH1 Conversion Complete input is selected."]
+    Val59 = 0x3b,
+    #[doc = "SINC Filter CH2 Conversion Complete input is selected."]
+    Val60 = 0x3c,
+    #[doc = "SINC Filter CH3 Conversion Complete input is selected."]
+    Val61 = 0x3d,
+    #[doc = "SINC Filter CH4 Conversion Complete input is selected."]
+    Val62 = 0x3e,
+    #[doc = "LP_FLEXCOMM0 trig 0 (lpuart_trg_txword) input is selected."]
+    Val63 = 0x3f,
+    #[doc = "LP_FLEXCOMM0 trig 1 (lpuart_trg_rxword) input is selected."]
+    Val64 = 0x40,
+    #[doc = "LP_FLEXCOMM0 trig 2 (lpuart_trg_rxidle) input is selected."]
+    Val65 = 0x41,
+    #[doc = "LP_FLEXCOMM1 trig 0 input is selected."]
+    Val66 = 0x42,
+    #[doc = "LP_FLEXCOMM1 trig 1 input is selected."]
+    Val67 = 0x43,
+    #[doc = "LP_FLEXCOMM1 trig 2 input is selected."]
+    Val68 = 0x44,
+    #[doc = "LP_FLEXCOMM2 trig 0 input is selected."]
+    Val69 = 0x45,
+    #[doc = "LP_FLEXCOMM2 trig 1 input is selected."]
+    Val70 = 0x46,
+    #[doc = "LP_FLEXCOMM2 trig 2 input is selected."]
+    Val71 = 0x47,
+    #[doc = "LP_FLEXCOMM3 trig 0 input is selected."]
+    Val72 = 0x48,
+    #[doc = "LP_FLEXCOMM3 trig 1 input is selected."]
+    Val73 = 0x49,
+    #[doc = "LP_FLEXCOMM3 trig 2 input is selected."]
+    Val74 = 0x4a,
+    #[doc = "LP_FLEXCOMM3 trig 3 input is selected."]
+    Val75 = 0x4b,
+    #[doc = "WUU input is selected."]
+    Val76 = 0x4c,
+    _RESERVED_4d = 0x4d,
+    _RESERVED_4e = 0x4e,
+    _RESERVED_4f = 0x4f,
+    _RESERVED_50 = 0x50,
+    _RESERVED_51 = 0x51,
+    _RESERVED_52 = 0x52,
+    _RESERVED_53 = 0x53,
+    _RESERVED_54 = 0x54,
+    _RESERVED_55 = 0x55,
+    _RESERVED_56 = 0x56,
+    _RESERVED_57 = 0x57,
+    _RESERVED_58 = 0x58,
+    _RESERVED_59 = 0x59,
+    _RESERVED_5a = 0x5a,
+    _RESERVED_5b = 0x5b,
+    _RESERVED_5c = 0x5c,
+    _RESERVED_5d = 0x5d,
+    _RESERVED_5e = 0x5e,
+    _RESERVED_5f = 0x5f,
+    _RESERVED_60 = 0x60,
+    _RESERVED_61 = 0x61,
+    _RESERVED_62 = 0x62,
+    _RESERVED_63 = 0x63,
+    _RESERVED_64 = 0x64,
+    _RESERVED_65 = 0x65,
+    _RESERVED_66 = 0x66,
+    _RESERVED_67 = 0x67,
+    _RESERVED_68 = 0x68,
+    _RESERVED_69 = 0x69,
+    _RESERVED_6a = 0x6a,
+    _RESERVED_6b = 0x6b,
+    _RESERVED_6c = 0x6c,
+    _RESERVED_6d = 0x6d,
+    _RESERVED_6e = 0x6e,
+    _RESERVED_6f = 0x6f,
+    _RESERVED_70 = 0x70,
+    _RESERVED_71 = 0x71,
+    _RESERVED_72 = 0x72,
+    _RESERVED_73 = 0x73,
+    _RESERVED_74 = 0x74,
+    _RESERVED_75 = 0x75,
+    _RESERVED_76 = 0x76,
+    _RESERVED_77 = 0x77,
+    _RESERVED_78 = 0x78,
+    _RESERVED_79 = 0x79,
+    _RESERVED_7a = 0x7a,
+    _RESERVED_7b = 0x7b,
+    _RESERVED_7c = 0x7c,
+    _RESERVED_7d = 0x7d,
+    _RESERVED_7e = 0x7e,
+    _RESERVED_7f = 0x7f,
+}
+impl FlexioTrig6Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> FlexioTrig6Inp {
+        unsafe { core::mem::transmute(val & 0x7f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for FlexioTrig6Inp {
+    #[inline(always)]
+    fn from(val: u8) -> FlexioTrig6Inp {
+        FlexioTrig6Inp::from_bits(val)
+    }
+}
+impl From<FlexioTrig6Inp> for u8 {
+    #[inline(always)]
+    fn from(val: FlexioTrig6Inp) -> u8 {
+        FlexioTrig6Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum FlexioTrig7Inp {
+    #[doc = "PINT PIN_INT4 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT5 input is selected."]
+    Val1 = 0x01,
+    #[doc = "PINT PIN_INT6 input is selected."]
+    Val2 = 0x02,
+    #[doc = "PINT PIN_INT7 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT5 input is selected."]
+    Val4 = 0x04,
+    #[doc = "SCT_OUT6 input is selected."]
+    Val5 = 0x05,
+    #[doc = "SCT_OUT7 input is selected."]
+    Val6 = 0x06,
+    #[doc = "SCT_OUT8 input is selected."]
+    Val7 = 0x07,
+    #[doc = "SCT_OUT9 input is selected."]
+    Val8 = 0x08,
+    #[doc = "T0_MAT1 input is selected."]
+    Val9 = 0x09,
+    #[doc = "T1_MAT1 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "T2_MAT1 input is selected."]
+    Val11 = 0x0b,
+    #[doc = "T3_MAT1 input is selected."]
+    Val12 = 0x0c,
+    #[doc = "T4_MAT1 input is selected."]
+    Val13 = 0x0d,
+    #[doc = "LPTMR0 input is selected."]
+    Val14 = 0x0e,
+    #[doc = "LPTMR1 input is selected."]
+    Val15 = 0x0f,
+    _RESERVED_10 = 0x10,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val21 = 0x15,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val22 = 0x16,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val23 = 0x17,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val24 = 0x18,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val25 = 0x19,
+    #[doc = "CMP0_OUT input is selected."]
+    Val26 = 0x1a,
+    #[doc = "CMP1_OUT input is selected."]
+    Val27 = 0x1b,
+    #[doc = "CMP2_OUT input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM0_SM0_MUX_TRIG0 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM0_SM1_MUX_TRIG0 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val32 = 0x20,
+    #[doc = "PWM0_SM2_MUX_TRIG0 input is selected."]
+    Val33 = 0x21,
+    #[doc = "PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val34 = 0x22,
+    #[doc = "PWM0_SM3_MUX_TRIG0 input is selected."]
+    Val35 = 0x23,
+    #[doc = "PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val36 = 0x24,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val37 = 0x25,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val38 = 0x26,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val39 = 0x27,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val40 = 0x28,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val41 = 0x29,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val43 = 0x2b,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val44 = 0x2c,
+    #[doc = "EVTG_OUT0A input is selected."]
+    Val45 = 0x2d,
+    #[doc = "EVTG_OUT0B input is selected."]
+    Val46 = 0x2e,
+    #[doc = "EVTG_OUT1A input is selected."]
+    Val47 = 0x2f,
+    #[doc = "EVTG_OUT1B input is selected."]
+    Val48 = 0x30,
+    #[doc = "EVTG_OUT2A input is selected."]
+    Val49 = 0x31,
+    #[doc = "EVTG_OUT2B input is selected."]
+    Val50 = 0x32,
+    #[doc = "EVTG_OUT3A input is selected."]
+    Val51 = 0x33,
+    #[doc = "EVTG_OUT3B input is selected."]
+    Val52 = 0x34,
+    #[doc = "TRIG_IN0 input is selected."]
+    Val53 = 0x35,
+    #[doc = "TRIG_IN1 input is selected."]
+    Val54 = 0x36,
+    #[doc = "TRIG_IN2 input is selected."]
+    Val55 = 0x37,
+    #[doc = "TRIG_IN3 input is selected."]
+    Val56 = 0x38,
+    #[doc = "TRIG_IN4 input is selected."]
+    Val57 = 0x39,
+    #[doc = "SINC Filter CH0 Conversion Complete input is selected."]
+    Val58 = 0x3a,
+    #[doc = "SINC Filter CH1 Conversion Complete input is selected."]
+    Val59 = 0x3b,
+    #[doc = "SINC Filter CH2 Conversion Complete input is selected."]
+    Val60 = 0x3c,
+    #[doc = "SINC Filter CH3 Conversion Complete input is selected."]
+    Val61 = 0x3d,
+    #[doc = "SINC Filter CH4 Conversion Complete input is selected."]
+    Val62 = 0x3e,
+    #[doc = "LP_FLEXCOMM0 trig 0 (lpuart_trg_txword) input is selected."]
+    Val63 = 0x3f,
+    #[doc = "LP_FLEXCOMM0 trig 1 (lpuart_trg_rxword) input is selected."]
+    Val64 = 0x40,
+    #[doc = "LP_FLEXCOMM0 trig 2 (lpuart_trg_rxidle) input is selected."]
+    Val65 = 0x41,
+    #[doc = "LP_FLEXCOMM1 trig 0 input is selected."]
+    Val66 = 0x42,
+    #[doc = "LP_FLEXCOMM1 trig 1 input is selected."]
+    Val67 = 0x43,
+    #[doc = "LP_FLEXCOMM1 trig 2 input is selected."]
+    Val68 = 0x44,
+    #[doc = "LP_FLEXCOMM2 trig 0 input is selected."]
+    Val69 = 0x45,
+    #[doc = "LP_FLEXCOMM2 trig 1 input is selected."]
+    Val70 = 0x46,
+    #[doc = "LP_FLEXCOMM2 trig 2 input is selected."]
+    Val71 = 0x47,
+    #[doc = "LP_FLEXCOMM3 trig 0 input is selected."]
+    Val72 = 0x48,
+    #[doc = "LP_FLEXCOMM3 trig 1 input is selected."]
+    Val73 = 0x49,
+    #[doc = "LP_FLEXCOMM3 trig 2 input is selected."]
+    Val74 = 0x4a,
+    #[doc = "LP_FLEXCOMM3 trig 3 input is selected."]
+    Val75 = 0x4b,
+    #[doc = "WUU input is selected."]
+    Val76 = 0x4c,
+    _RESERVED_4d = 0x4d,
+    _RESERVED_4e = 0x4e,
+    _RESERVED_4f = 0x4f,
+    _RESERVED_50 = 0x50,
+    _RESERVED_51 = 0x51,
+    _RESERVED_52 = 0x52,
+    _RESERVED_53 = 0x53,
+    _RESERVED_54 = 0x54,
+    _RESERVED_55 = 0x55,
+    _RESERVED_56 = 0x56,
+    _RESERVED_57 = 0x57,
+    _RESERVED_58 = 0x58,
+    _RESERVED_59 = 0x59,
+    _RESERVED_5a = 0x5a,
+    _RESERVED_5b = 0x5b,
+    _RESERVED_5c = 0x5c,
+    _RESERVED_5d = 0x5d,
+    _RESERVED_5e = 0x5e,
+    _RESERVED_5f = 0x5f,
+    _RESERVED_60 = 0x60,
+    _RESERVED_61 = 0x61,
+    _RESERVED_62 = 0x62,
+    _RESERVED_63 = 0x63,
+    _RESERVED_64 = 0x64,
+    _RESERVED_65 = 0x65,
+    _RESERVED_66 = 0x66,
+    _RESERVED_67 = 0x67,
+    _RESERVED_68 = 0x68,
+    _RESERVED_69 = 0x69,
+    _RESERVED_6a = 0x6a,
+    _RESERVED_6b = 0x6b,
+    _RESERVED_6c = 0x6c,
+    _RESERVED_6d = 0x6d,
+    _RESERVED_6e = 0x6e,
+    _RESERVED_6f = 0x6f,
+    _RESERVED_70 = 0x70,
+    _RESERVED_71 = 0x71,
+    _RESERVED_72 = 0x72,
+    _RESERVED_73 = 0x73,
+    _RESERVED_74 = 0x74,
+    _RESERVED_75 = 0x75,
+    _RESERVED_76 = 0x76,
+    _RESERVED_77 = 0x77,
+    _RESERVED_78 = 0x78,
+    _RESERVED_79 = 0x79,
+    _RESERVED_7a = 0x7a,
+    _RESERVED_7b = 0x7b,
+    _RESERVED_7c = 0x7c,
+    _RESERVED_7d = 0x7d,
+    _RESERVED_7e = 0x7e,
+    _RESERVED_7f = 0x7f,
+}
+impl FlexioTrig7Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> FlexioTrig7Inp {
+        unsafe { core::mem::transmute(val & 0x7f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for FlexioTrig7Inp {
+    #[inline(always)]
+    fn from(val: u8) -> FlexioTrig7Inp {
+        FlexioTrig7Inp::from_bits(val)
+    }
+}
+impl From<FlexioTrig7Inp> for u8 {
+    #[inline(always)]
+    fn from(val: FlexioTrig7Inp) -> u8 {
+        FlexioTrig7Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FreqmeasRefInp {
     #[doc = "clk_in (output of clk_in or XTAL mux in Clockgen) input is selected."]
@@ -8858,7 +13695,8 @@ impl From<FreqmeasRefInp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FreqmeasTarInp {
     #[doc = "clk_in (output of clk_in or XTAL mux in Clockgen) input is selected."]
@@ -8958,9 +13796,10 @@ impl From<FreqmeasTarInp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum OpampTrigInp {
+pub enum Opamp0TrigInp {
     #[doc = "PINT PIN_INT0 input is selected."]
     Val0 = 0x0,
     #[doc = "PINT PIN_INT1 input is selected."]
@@ -9081,9 +13920,9 @@ pub enum OpampTrigInp {
     _RESERVED_3e = 0x3e,
     _RESERVED_3f = 0x3f,
 }
-impl OpampTrigInp {
+impl Opamp0TrigInp {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> OpampTrigInp {
+    pub const fn from_bits(val: u8) -> Opamp0TrigInp {
         unsafe { core::mem::transmute(val & 0x3f) }
     }
     #[inline(always)]
@@ -9091,20 +13930,315 @@ impl OpampTrigInp {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for OpampTrigInp {
+impl From<u8> for Opamp0TrigInp {
     #[inline(always)]
-    fn from(val: u8) -> OpampTrigInp {
-        OpampTrigInp::from_bits(val)
+    fn from(val: u8) -> Opamp0TrigInp {
+        Opamp0TrigInp::from_bits(val)
     }
 }
-impl From<OpampTrigInp> for u8 {
+impl From<Opamp0TrigInp> for u8 {
     #[inline(always)]
-    fn from(val: OpampTrigInp) -> u8 {
-        OpampTrigInp::to_bits(val)
+    fn from(val: Opamp0TrigInp) -> u8 {
+        Opamp0TrigInp::to_bits(val)
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Opamp1TrigInp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT1 input is selected."]
+    Val1 = 0x01,
+    #[doc = "PINT PIN_INT2 input is selected."]
+    Val2 = 0x02,
+    #[doc = "PINT PIN_INT3 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT4 input is selected."]
+    Val4 = 0x04,
+    #[doc = "SCT_OUT5 input is selected."]
+    Val5 = 0x05,
+    #[doc = "SCT_OUT6 input is selected."]
+    Val6 = 0x06,
+    #[doc = "SCT_OUT7 input is selected."]
+    Val7 = 0x07,
+    #[doc = "SCT_OUT8 input is selected."]
+    Val8 = 0x08,
+    #[doc = "CTIMER0_MAT3 input is selected."]
+    Val9 = 0x09,
+    #[doc = "CTIMER1_MAT3 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "CTIMER2_MAT3 input is selected."]
+    Val11 = 0x0b,
+    #[doc = "CTIMER3_MAT3 input is selected."]
+    Val12 = 0x0c,
+    #[doc = "CTIMER4_MAT3 input is selected."]
+    Val13 = 0x0d,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val14 = 0x0e,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val15 = 0x0f,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val16 = 0x10,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val21 = 0x15,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val22 = 0x16,
+    #[doc = "PWM0_SM0_MUX_TRIG0 input is selected."]
+    Val23 = 0x17,
+    #[doc = "PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val24 = 0x18,
+    #[doc = "PWM0_SM1_MUX_TRIG0 input is selected."]
+    Val25 = 0x19,
+    #[doc = "PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val26 = 0x1a,
+    #[doc = "PWM0_SM2_MUX_TRIG0 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM0_SM3_MUX_TRIG0 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val32 = 0x20,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val33 = 0x21,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val34 = 0x22,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val35 = 0x23,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val36 = 0x24,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val37 = 0x25,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val38 = 0x26,
+    #[doc = "EVTG_OUT0A input is selected."]
+    Val39 = 0x27,
+    #[doc = "EVTG_OUT0B input is selected."]
+    Val40 = 0x28,
+    #[doc = "EVTG_OUT1A input is selected."]
+    Val41 = 0x29,
+    #[doc = "EVTG_OUT1B input is selected."]
+    Val42 = 0x2a,
+    #[doc = "EVTG_OUT2A input is selected."]
+    Val43 = 0x2b,
+    #[doc = "EVTG_OUT2B input is selected."]
+    Val44 = 0x2c,
+    #[doc = "EVTG_OUT3A input is selected."]
+    Val45 = 0x2d,
+    #[doc = "EVTG_OUT3B input is selected."]
+    Val46 = 0x2e,
+    #[doc = "TRIG_IN0 input is selected."]
+    Val47 = 0x2f,
+    #[doc = "TRIG_IN1 input is selected."]
+    Val48 = 0x30,
+    #[doc = "TRIG_IN2 input is selected."]
+    Val49 = 0x31,
+    #[doc = "TRIG_IN3 input is selected."]
+    Val50 = 0x32,
+    #[doc = "FlexIO CH4 input is selected."]
+    Val51 = 0x33,
+    #[doc = "FlexIO CH5 input is selected."]
+    Val52 = 0x34,
+    #[doc = "FlexIO CH6 input is selected."]
+    Val53 = 0x35,
+    #[doc = "FlexIO CH7 input is selected."]
+    Val54 = 0x36,
+    _RESERVED_37 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl Opamp1TrigInp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Opamp1TrigInp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Opamp1TrigInp {
+    #[inline(always)]
+    fn from(val: u8) -> Opamp1TrigInp {
+        Opamp1TrigInp::from_bits(val)
+    }
+}
+impl From<Opamp1TrigInp> for u8 {
+    #[inline(always)]
+    fn from(val: Opamp1TrigInp) -> u8 {
+        Opamp1TrigInp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Opamp2TrigInp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT1 input is selected."]
+    Val1 = 0x01,
+    #[doc = "PINT PIN_INT2 input is selected."]
+    Val2 = 0x02,
+    #[doc = "PINT PIN_INT3 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT4 input is selected."]
+    Val4 = 0x04,
+    #[doc = "SCT_OUT5 input is selected."]
+    Val5 = 0x05,
+    #[doc = "SCT_OUT6 input is selected."]
+    Val6 = 0x06,
+    #[doc = "SCT_OUT7 input is selected."]
+    Val7 = 0x07,
+    #[doc = "SCT_OUT8 input is selected."]
+    Val8 = 0x08,
+    #[doc = "CTIMER0_MAT3 input is selected."]
+    Val9 = 0x09,
+    #[doc = "CTIMER1_MAT3 input is selected."]
+    Val10 = 0x0a,
+    #[doc = "CTIMER2_MAT3 input is selected."]
+    Val11 = 0x0b,
+    #[doc = "CTIMER3_MAT3 input is selected."]
+    Val12 = 0x0c,
+    #[doc = "CTIMER4_MAT3 input is selected."]
+    Val13 = 0x0d,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val14 = 0x0e,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val15 = 0x0f,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val16 = 0x10,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val21 = 0x15,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val22 = 0x16,
+    #[doc = "PWM0_SM0_MUX_TRIG0 input is selected."]
+    Val23 = 0x17,
+    #[doc = "PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val24 = 0x18,
+    #[doc = "PWM0_SM1_MUX_TRIG0 input is selected."]
+    Val25 = 0x19,
+    #[doc = "PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val26 = 0x1a,
+    #[doc = "PWM0_SM2_MUX_TRIG0 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM0_SM3_MUX_TRIG0 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val32 = 0x20,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val33 = 0x21,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val34 = 0x22,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val35 = 0x23,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val36 = 0x24,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val37 = 0x25,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val38 = 0x26,
+    #[doc = "EVTG_OUT0A input is selected."]
+    Val39 = 0x27,
+    #[doc = "EVTG_OUT0B input is selected."]
+    Val40 = 0x28,
+    #[doc = "EVTG_OUT1A input is selected."]
+    Val41 = 0x29,
+    #[doc = "EVTG_OUT1B input is selected."]
+    Val42 = 0x2a,
+    #[doc = "EVTG_OUT2A input is selected."]
+    Val43 = 0x2b,
+    #[doc = "EVTG_OUT2B input is selected."]
+    Val44 = 0x2c,
+    #[doc = "EVTG_OUT3A input is selected."]
+    Val45 = 0x2d,
+    #[doc = "EVTG_OUT3B input is selected."]
+    Val46 = 0x2e,
+    #[doc = "TRIG_IN0 input is selected."]
+    Val47 = 0x2f,
+    #[doc = "TRIG_IN1 input is selected."]
+    Val48 = 0x30,
+    #[doc = "TRIG_IN2 input is selected."]
+    Val49 = 0x31,
+    #[doc = "TRIG_IN3 input is selected."]
+    Val50 = 0x32,
+    #[doc = "FlexIO CH4 input is selected."]
+    Val51 = 0x33,
+    #[doc = "FlexIO CH5 input is selected."]
+    Val52 = 0x34,
+    #[doc = "FlexIO CH6 input is selected."]
+    Val53 = 0x35,
+    #[doc = "FlexIO CH7 input is selected."]
+    Val54 = 0x36,
+    _RESERVED_37 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl Opamp2TrigInp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Opamp2TrigInp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Opamp2TrigInp {
+    #[inline(always)]
+    fn from(val: u8) -> Opamp2TrigInp {
+        Opamp2TrigInp::from_bits(val)
+    }
+}
+impl From<Opamp2TrigInp> for u8 {
+    #[inline(always)]
+    fn from(val: Opamp2TrigInp) -> u8 {
+        Opamp2TrigInp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PintselInp {
     #[doc = "GPIO P0_0 input is selected."]
@@ -9317,7 +14451,8 @@ impl From<PintselInp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pwm0ExtClkTrigin {
     #[doc = "FRO16K input is selected."]
@@ -9358,7 +14493,8 @@ impl From<Pwm0ExtClkTrigin> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pwm1ExtClkTrigin {
     #[doc = "FRO16K input is selected."]
@@ -9407,9 +14543,10 @@ impl From<Pwm1ExtClkTrigin> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum QdcHomeInp {
+pub enum Qdc0HomeInp {
     #[doc = "PINT PIN_INT0 input is selected."]
     Val0 = 0x0,
     #[doc = "PINT PIN_INT4 input is selected."]
@@ -9526,9 +14663,9 @@ pub enum QdcHomeInp {
     _RESERVED_3e = 0x3e,
     _RESERVED_3f = 0x3f,
 }
-impl QdcHomeInp {
+impl Qdc0HomeInp {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> QdcHomeInp {
+    pub const fn from_bits(val: u8) -> Qdc0HomeInp {
         unsafe { core::mem::transmute(val & 0x3f) }
     }
     #[inline(always)]
@@ -9536,22 +14673,23 @@ impl QdcHomeInp {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for QdcHomeInp {
+impl From<u8> for Qdc0HomeInp {
     #[inline(always)]
-    fn from(val: u8) -> QdcHomeInp {
-        QdcHomeInp::from_bits(val)
+    fn from(val: u8) -> Qdc0HomeInp {
+        Qdc0HomeInp::from_bits(val)
     }
 }
-impl From<QdcHomeInp> for u8 {
+impl From<Qdc0HomeInp> for u8 {
     #[inline(always)]
-    fn from(val: QdcHomeInp) -> u8 {
-        QdcHomeInp::to_bits(val)
+    fn from(val: Qdc0HomeInp) -> u8 {
+        Qdc0HomeInp::to_bits(val)
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum QdcIndexInp {
+pub enum Qdc0IndexInp {
     #[doc = "PINT PIN_INT0 input is selected."]
     Val0 = 0x0,
     #[doc = "PINT PIN_INT4 input is selected."]
@@ -9668,9 +14806,9 @@ pub enum QdcIndexInp {
     _RESERVED_3e = 0x3e,
     _RESERVED_3f = 0x3f,
 }
-impl QdcIndexInp {
+impl Qdc0IndexInp {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> QdcIndexInp {
+    pub const fn from_bits(val: u8) -> Qdc0IndexInp {
         unsafe { core::mem::transmute(val & 0x3f) }
     }
     #[inline(always)]
@@ -9678,22 +14816,23 @@ impl QdcIndexInp {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for QdcIndexInp {
+impl From<u8> for Qdc0IndexInp {
     #[inline(always)]
-    fn from(val: u8) -> QdcIndexInp {
-        QdcIndexInp::from_bits(val)
+    fn from(val: u8) -> Qdc0IndexInp {
+        Qdc0IndexInp::from_bits(val)
     }
 }
-impl From<QdcIndexInp> for u8 {
+impl From<Qdc0IndexInp> for u8 {
     #[inline(always)]
-    fn from(val: QdcIndexInp) -> u8 {
-        QdcIndexInp::to_bits(val)
+    fn from(val: Qdc0IndexInp) -> u8 {
+        Qdc0IndexInp::to_bits(val)
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum QdcPhaseaInp {
+pub enum Qdc0PhaseaInp {
     #[doc = "PINT PIN_INT0 input is selected."]
     Val0 = 0x0,
     #[doc = "PINT PIN_INT4 input is selected."]
@@ -9810,9 +14949,9 @@ pub enum QdcPhaseaInp {
     _RESERVED_3e = 0x3e,
     _RESERVED_3f = 0x3f,
 }
-impl QdcPhaseaInp {
+impl Qdc0PhaseaInp {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> QdcPhaseaInp {
+    pub const fn from_bits(val: u8) -> Qdc0PhaseaInp {
         unsafe { core::mem::transmute(val & 0x3f) }
     }
     #[inline(always)]
@@ -9820,22 +14959,23 @@ impl QdcPhaseaInp {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for QdcPhaseaInp {
+impl From<u8> for Qdc0PhaseaInp {
     #[inline(always)]
-    fn from(val: u8) -> QdcPhaseaInp {
-        QdcPhaseaInp::from_bits(val)
+    fn from(val: u8) -> Qdc0PhaseaInp {
+        Qdc0PhaseaInp::from_bits(val)
     }
 }
-impl From<QdcPhaseaInp> for u8 {
+impl From<Qdc0PhaseaInp> for u8 {
     #[inline(always)]
-    fn from(val: QdcPhaseaInp) -> u8 {
-        QdcPhaseaInp::to_bits(val)
+    fn from(val: Qdc0PhaseaInp) -> u8 {
+        Qdc0PhaseaInp::to_bits(val)
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum QdcPhasebInp {
+pub enum Qdc0PhasebInp {
     #[doc = "PINT PIN_INT0 input is selected."]
     Val0 = 0x0,
     #[doc = "PINT PIN_INT4 input is selected."]
@@ -9952,9 +15092,9 @@ pub enum QdcPhasebInp {
     _RESERVED_3e = 0x3e,
     _RESERVED_3f = 0x3f,
 }
-impl QdcPhasebInp {
+impl Qdc0PhasebInp {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> QdcPhasebInp {
+    pub const fn from_bits(val: u8) -> Qdc0PhasebInp {
         unsafe { core::mem::transmute(val & 0x3f) }
     }
     #[inline(always)]
@@ -9962,22 +15102,23 @@ impl QdcPhasebInp {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for QdcPhasebInp {
+impl From<u8> for Qdc0PhasebInp {
     #[inline(always)]
-    fn from(val: u8) -> QdcPhasebInp {
-        QdcPhasebInp::from_bits(val)
+    fn from(val: u8) -> Qdc0PhasebInp {
+        Qdc0PhasebInp::from_bits(val)
     }
 }
-impl From<QdcPhasebInp> for u8 {
+impl From<Qdc0PhasebInp> for u8 {
     #[inline(always)]
-    fn from(val: QdcPhasebInp) -> u8 {
-        QdcPhasebInp::to_bits(val)
+    fn from(val: Qdc0PhasebInp) -> u8 {
+        Qdc0PhasebInp::to_bits(val)
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum QdcTrigInp {
+pub enum Qdc0TrigInp {
     #[doc = "PINT PIN_INT0 input is selected."]
     Val0 = 0x0,
     #[doc = "PINT PIN_INT4 input is selected."]
@@ -10094,9 +15235,9 @@ pub enum QdcTrigInp {
     _RESERVED_3e = 0x3e,
     _RESERVED_3f = 0x3f,
 }
-impl QdcTrigInp {
+impl Qdc0TrigInp {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> QdcTrigInp {
+    pub const fn from_bits(val: u8) -> Qdc0TrigInp {
         unsafe { core::mem::transmute(val & 0x3f) }
     }
     #[inline(always)]
@@ -10104,20 +15245,736 @@ impl QdcTrigInp {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for QdcTrigInp {
+impl From<u8> for Qdc0TrigInp {
     #[inline(always)]
-    fn from(val: u8) -> QdcTrigInp {
-        QdcTrigInp::from_bits(val)
+    fn from(val: u8) -> Qdc0TrigInp {
+        Qdc0TrigInp::from_bits(val)
     }
 }
-impl From<QdcTrigInp> for u8 {
+impl From<Qdc0TrigInp> for u8 {
     #[inline(always)]
-    fn from(val: QdcTrigInp) -> u8 {
-        QdcTrigInp::to_bits(val)
+    fn from(val: Qdc0TrigInp) -> u8 {
+        Qdc0TrigInp::to_bits(val)
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Qdc1HomeInp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT4 input is selected."]
+    Val1 = 0x01,
+    #[doc = "SCT0 SCT_OUT4 input is selected."]
+    Val2 = 0x02,
+    #[doc = "SCT0 SCT_OUT5 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT0 SCT_OUT1 input is selected."]
+    Val4 = 0x04,
+    #[doc = "CTIMER0_MAT3 input is selected."]
+    Val5 = 0x05,
+    #[doc = "CTIMER1_MAT3 input is selected."]
+    Val6 = 0x06,
+    #[doc = "CTIMER2_MAT3 input is selected."]
+    Val7 = 0x07,
+    #[doc = "CTIMER1_MAT0 input is selected."]
+    Val8 = 0x08,
+    #[doc = "CTIMER3_MAT0 input is selected."]
+    Val9 = 0x09,
+    _RESERVED_a = 0x0a,
+    #[doc = "ARM_TXEV input is selected."]
+    Val11 = 0x0b,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val12 = 0x0c,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val13 = 0x0d,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val14 = 0x0e,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val15 = 0x0f,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val16 = 0x10,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "CMP0_OUT input is selected."]
+    Val21 = 0x15,
+    #[doc = "CMP1_OUT input is selected."]
+    Val22 = 0x16,
+    #[doc = "CMP2_OUT input is selected."]
+    Val23 = 0x17,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val24 = 0x18,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val25 = 0x19,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val26 = 0x1a,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val32 = 0x20,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val33 = 0x21,
+    #[doc = "EVTG_OUT0A input is selected."]
+    Val34 = 0x22,
+    #[doc = "EVTG_OUT0B input is selected."]
+    Val35 = 0x23,
+    #[doc = "EVTG_OUT1A input is selected."]
+    Val36 = 0x24,
+    #[doc = "EVTG_OUT1B input is selected."]
+    Val37 = 0x25,
+    #[doc = "EVTG_OUT2A input is selected."]
+    Val38 = 0x26,
+    #[doc = "EVTG_OUT2B input is selected."]
+    Val39 = 0x27,
+    #[doc = "EVTG_OUT3A input is selected."]
+    Val40 = 0x28,
+    #[doc = "EVTG_OUT3B input is selected."]
+    Val41 = 0x29,
+    #[doc = "TRIG_IN0 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "TRIG_IN1 input is selected."]
+    Val43 = 0x2b,
+    #[doc = "TRIG_IN2 input is selected."]
+    Val44 = 0x2c,
+    #[doc = "TRIG_IN3 input is selected."]
+    Val45 = 0x2d,
+    #[doc = "TRIG_IN4 input is selected."]
+    Val46 = 0x2e,
+    #[doc = "TRIG_IN5 input is selected."]
+    Val47 = 0x2f,
+    #[doc = "TRIG_IN6 input is selected."]
+    Val48 = 0x30,
+    #[doc = "TRIG_IN7 input is selected."]
+    Val49 = 0x31,
+    #[doc = "TRIG_IN8 input is selected."]
+    Val50 = 0x32,
+    #[doc = "TRIG_IN9 input is selected."]
+    Val51 = 0x33,
+    _RESERVED_34 = 0x34,
+    _RESERVED_35 = 0x35,
+    _RESERVED_36 = 0x36,
+    _RESERVED_37 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl Qdc1HomeInp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Qdc1HomeInp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Qdc1HomeInp {
+    #[inline(always)]
+    fn from(val: u8) -> Qdc1HomeInp {
+        Qdc1HomeInp::from_bits(val)
+    }
+}
+impl From<Qdc1HomeInp> for u8 {
+    #[inline(always)]
+    fn from(val: Qdc1HomeInp) -> u8 {
+        Qdc1HomeInp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Qdc1IndexInp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT4 input is selected."]
+    Val1 = 0x01,
+    #[doc = "SCT_OUT4 input is selected."]
+    Val2 = 0x02,
+    #[doc = "SCT_OUT5 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT1 input is selected."]
+    Val4 = 0x04,
+    #[doc = "CTIMER0_MAT3 input is selected."]
+    Val5 = 0x05,
+    #[doc = "CTIMER1_MAT3 input is selected."]
+    Val6 = 0x06,
+    #[doc = "CTIMER2_MAT3 input is selected."]
+    Val7 = 0x07,
+    #[doc = "CTIMER1_MAT0 input is selected."]
+    Val8 = 0x08,
+    #[doc = "CTIMER3_MAT0 input is selected."]
+    Val9 = 0x09,
+    _RESERVED_a = 0x0a,
+    #[doc = "ARM_TXEV input is selected."]
+    Val11 = 0x0b,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val12 = 0x0c,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val13 = 0x0d,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val14 = 0x0e,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val15 = 0x0f,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val16 = 0x10,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "CMP0_OUT input is selected."]
+    Val21 = 0x15,
+    #[doc = "CMP1_OUT input is selected."]
+    Val22 = 0x16,
+    #[doc = "CMP2_OUT input is selected."]
+    Val23 = 0x17,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val24 = 0x18,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val25 = 0x19,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val26 = 0x1a,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val32 = 0x20,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val33 = 0x21,
+    #[doc = "EVTG_OUT0A input is selected."]
+    Val34 = 0x22,
+    #[doc = "EVTG_OUT0B input is selected."]
+    Val35 = 0x23,
+    #[doc = "EVTG_OUT1A input is selected."]
+    Val36 = 0x24,
+    #[doc = "EVTG_OUT1B input is selected."]
+    Val37 = 0x25,
+    #[doc = "EVTG_OUT2A input is selected."]
+    Val38 = 0x26,
+    #[doc = "EVTG_OUT2B input is selected."]
+    Val39 = 0x27,
+    #[doc = "EVTG_OUT3A input is selected."]
+    Val40 = 0x28,
+    #[doc = "EVTG_OUT3B input is selected."]
+    Val41 = 0x29,
+    #[doc = "TRIG_IN0 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "TRIG_IN1 input is selected."]
+    Val43 = 0x2b,
+    #[doc = "TRIG_IN2 input is selected."]
+    Val44 = 0x2c,
+    #[doc = "TRIG_IN3 input is selected."]
+    Val45 = 0x2d,
+    #[doc = "TRIG_IN4 input is selected."]
+    Val46 = 0x2e,
+    #[doc = "TRIG_IN5 input is selected."]
+    Val47 = 0x2f,
+    #[doc = "TRIG_IN6 input is selected."]
+    Val48 = 0x30,
+    #[doc = "TRIG_IN7 input is selected."]
+    Val49 = 0x31,
+    #[doc = "TRIG_IN8 input is selected."]
+    Val50 = 0x32,
+    #[doc = "TRIG_IN9 input is selected."]
+    Val51 = 0x33,
+    _RESERVED_34 = 0x34,
+    _RESERVED_35 = 0x35,
+    _RESERVED_36 = 0x36,
+    _RESERVED_37 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl Qdc1IndexInp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Qdc1IndexInp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Qdc1IndexInp {
+    #[inline(always)]
+    fn from(val: u8) -> Qdc1IndexInp {
+        Qdc1IndexInp::from_bits(val)
+    }
+}
+impl From<Qdc1IndexInp> for u8 {
+    #[inline(always)]
+    fn from(val: Qdc1IndexInp) -> u8 {
+        Qdc1IndexInp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Qdc1PhaseaInp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT4 input is selected."]
+    Val1 = 0x01,
+    #[doc = "SCT_OUT4 input is selected."]
+    Val2 = 0x02,
+    #[doc = "SCT_OUT5 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT1 input is selected."]
+    Val4 = 0x04,
+    #[doc = "CTIMER0_MAT3 input is selected."]
+    Val5 = 0x05,
+    #[doc = "CTIMER1_MAT3 input is selected."]
+    Val6 = 0x06,
+    #[doc = "CTIMER2_MAT3 input is selected."]
+    Val7 = 0x07,
+    #[doc = "CTIMER1_MAT0 input is selected."]
+    Val8 = 0x08,
+    #[doc = "CTIMER3_MAT0 input is selected."]
+    Val9 = 0x09,
+    _RESERVED_a = 0x0a,
+    #[doc = "ARM_TXEV input is selected."]
+    Val11 = 0x0b,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val12 = 0x0c,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val13 = 0x0d,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val14 = 0x0e,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val15 = 0x0f,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val16 = 0x10,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "CMP0_OUT input is selected."]
+    Val21 = 0x15,
+    #[doc = "CMP1_OUT input is selected."]
+    Val22 = 0x16,
+    #[doc = "CMP2_OUT input is selected."]
+    Val23 = 0x17,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val24 = 0x18,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val25 = 0x19,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val26 = 0x1a,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val32 = 0x20,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val33 = 0x21,
+    #[doc = "EVTG_OUT0A input is selected."]
+    Val34 = 0x22,
+    #[doc = "EVTG_OUT0B input is selected."]
+    Val35 = 0x23,
+    #[doc = "EVTG_OUT1A input is selected."]
+    Val36 = 0x24,
+    #[doc = "EVTG_OUT1B input is selected."]
+    Val37 = 0x25,
+    #[doc = "EVTG_OUT2A input is selected."]
+    Val38 = 0x26,
+    #[doc = "EVTG_OUT2B input is selected."]
+    Val39 = 0x27,
+    #[doc = "EVTG_OUT3A input is selected."]
+    Val40 = 0x28,
+    #[doc = "EVTG_OUT3B input is selected."]
+    Val41 = 0x29,
+    #[doc = "TRIG_IN0 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "TRIG_IN1 input is selected."]
+    Val43 = 0x2b,
+    #[doc = "TRIG_IN2 input is selected."]
+    Val44 = 0x2c,
+    #[doc = "TRIG_IN3 input is selected."]
+    Val45 = 0x2d,
+    #[doc = "TRIG_IN4 input is selected."]
+    Val46 = 0x2e,
+    #[doc = "TRIG_IN5 input is selected."]
+    Val47 = 0x2f,
+    #[doc = "TRIG_IN6 input is selected."]
+    Val48 = 0x30,
+    #[doc = "TRIG_IN7 input is selected."]
+    Val49 = 0x31,
+    #[doc = "TRIG_IN8 input is selected."]
+    Val50 = 0x32,
+    #[doc = "TRIG_IN9 input is selected."]
+    Val51 = 0x33,
+    _RESERVED_34 = 0x34,
+    _RESERVED_35 = 0x35,
+    _RESERVED_36 = 0x36,
+    _RESERVED_37 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl Qdc1PhaseaInp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Qdc1PhaseaInp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Qdc1PhaseaInp {
+    #[inline(always)]
+    fn from(val: u8) -> Qdc1PhaseaInp {
+        Qdc1PhaseaInp::from_bits(val)
+    }
+}
+impl From<Qdc1PhaseaInp> for u8 {
+    #[inline(always)]
+    fn from(val: Qdc1PhaseaInp) -> u8 {
+        Qdc1PhaseaInp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Qdc1PhasebInp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT4 input is selected."]
+    Val1 = 0x01,
+    #[doc = "SCT_OUT4 input is selected."]
+    Val2 = 0x02,
+    #[doc = "SCT_OUT5 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT1 input is selected."]
+    Val4 = 0x04,
+    #[doc = "CTIMER0_MAT3 input is selected."]
+    Val5 = 0x05,
+    #[doc = "CTIMER1_MAT3 input is selected."]
+    Val6 = 0x06,
+    #[doc = "CTIMER2_MAT3 input is selected."]
+    Val7 = 0x07,
+    #[doc = "CTIMER1_MAT0 input is selected."]
+    Val8 = 0x08,
+    #[doc = "CTIMER3_MAT0 input is selected."]
+    Val9 = 0x09,
+    _RESERVED_a = 0x0a,
+    #[doc = "ARM_TXEV input is selected."]
+    Val11 = 0x0b,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val12 = 0x0c,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val13 = 0x0d,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val14 = 0x0e,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val15 = 0x0f,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val16 = 0x10,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "CMP0_OUT input is selected."]
+    Val21 = 0x15,
+    #[doc = "CMP1_OUT input is selected."]
+    Val22 = 0x16,
+    #[doc = "CMP2_OUT input is selected."]
+    Val23 = 0x17,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val24 = 0x18,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val25 = 0x19,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val26 = 0x1a,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val32 = 0x20,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val33 = 0x21,
+    #[doc = "EVTG_OUT0A input is selected."]
+    Val34 = 0x22,
+    #[doc = "EVTG_OUT0B input is selected."]
+    Val35 = 0x23,
+    #[doc = "EVTG_OUT1A input is selected."]
+    Val36 = 0x24,
+    #[doc = "EVTG_OUT1B input is selected."]
+    Val37 = 0x25,
+    #[doc = "EVTG_OUT2A input is selected."]
+    Val38 = 0x26,
+    #[doc = "EVTG_OUT2B input is selected."]
+    Val39 = 0x27,
+    #[doc = "EVTG_OUT3A input is selected."]
+    Val40 = 0x28,
+    #[doc = "EVTG_OUT3B input is selected."]
+    Val41 = 0x29,
+    #[doc = "TRIG_IN0 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "TRIG_IN1 input is selected."]
+    Val43 = 0x2b,
+    #[doc = "TRIG_IN2 input is selected."]
+    Val44 = 0x2c,
+    #[doc = "TRIG_IN3 input is selected."]
+    Val45 = 0x2d,
+    #[doc = "TRIG_IN4 input is selected."]
+    Val46 = 0x2e,
+    #[doc = "TRIG_IN5 input is selected."]
+    Val47 = 0x2f,
+    #[doc = "TRIG_IN6 input is selected."]
+    Val48 = 0x30,
+    #[doc = "TRIG_IN7 input is selected."]
+    Val49 = 0x31,
+    #[doc = "TRIG_IN8 input is selected."]
+    Val50 = 0x32,
+    #[doc = "TRIG_IN9 input is selected."]
+    Val51 = 0x33,
+    _RESERVED_34 = 0x34,
+    _RESERVED_35 = 0x35,
+    _RESERVED_36 = 0x36,
+    _RESERVED_37 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl Qdc1PhasebInp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Qdc1PhasebInp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Qdc1PhasebInp {
+    #[inline(always)]
+    fn from(val: u8) -> Qdc1PhasebInp {
+        Qdc1PhasebInp::from_bits(val)
+    }
+}
+impl From<Qdc1PhasebInp> for u8 {
+    #[inline(always)]
+    fn from(val: Qdc1PhasebInp) -> u8 {
+        Qdc1PhasebInp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Qdc1TrigInp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT4 input is selected."]
+    Val1 = 0x01,
+    #[doc = "SCT_OUT4 input is selected."]
+    Val2 = 0x02,
+    #[doc = "SCT_OUT5 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT1 input is selected."]
+    Val4 = 0x04,
+    #[doc = "CTIMER0_MAT3 input is selected."]
+    Val5 = 0x05,
+    #[doc = "CTIMER1_MAT3 input is selected."]
+    Val6 = 0x06,
+    #[doc = "CTIMER2_MAT3 input is selected."]
+    Val7 = 0x07,
+    #[doc = "CTIMER1_MAT0 input is selected."]
+    Val8 = 0x08,
+    #[doc = "CTIMER3_MAT0 input is selected."]
+    Val9 = 0x09,
+    _RESERVED_a = 0x0a,
+    #[doc = "ARM_TXEV input is selected."]
+    Val11 = 0x0b,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val12 = 0x0c,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val13 = 0x0d,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val14 = 0x0e,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val15 = 0x0f,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val16 = 0x10,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "CMP0_OUT input is selected."]
+    Val21 = 0x15,
+    #[doc = "CMP1_OUT input is selected."]
+    Val22 = 0x16,
+    #[doc = "CMP2_OUT input is selected."]
+    Val23 = 0x17,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val24 = 0x18,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val25 = 0x19,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val26 = 0x1a,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val32 = 0x20,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val33 = 0x21,
+    #[doc = "EVTG_OUT0A input is selected."]
+    Val34 = 0x22,
+    #[doc = "EVTG_OUT0B input is selected."]
+    Val35 = 0x23,
+    #[doc = "EVTG_OUT1A input is selected."]
+    Val36 = 0x24,
+    #[doc = "EVTG_OUT1B input is selected."]
+    Val37 = 0x25,
+    #[doc = "EVTG_OUT2A input is selected."]
+    Val38 = 0x26,
+    #[doc = "EVTG_OUT2B input is selected."]
+    Val39 = 0x27,
+    #[doc = "EVTG_OUT3A input is selected."]
+    Val40 = 0x28,
+    #[doc = "EVTG_OUT3B input is selected."]
+    Val41 = 0x29,
+    #[doc = "TRIG_IN0 input is selected."]
+    Val42 = 0x2a,
+    #[doc = "TRIG_IN1 input is selected."]
+    Val43 = 0x2b,
+    #[doc = "TRIG_IN2 input is selected."]
+    Val44 = 0x2c,
+    #[doc = "TRIG_IN3 input is selected."]
+    Val45 = 0x2d,
+    #[doc = "TRIG_IN4 input is selected."]
+    Val46 = 0x2e,
+    #[doc = "TRIG_IN5 input is selected."]
+    Val47 = 0x2f,
+    #[doc = "TRIG_IN6 input is selected."]
+    Val48 = 0x30,
+    #[doc = "TRIG_IN7 input is selected."]
+    Val49 = 0x31,
+    #[doc = "TRIG_IN8 input is selected."]
+    Val50 = 0x32,
+    #[doc = "TRIG_IN9 input is selected."]
+    Val51 = 0x33,
+    _RESERVED_34 = 0x34,
+    _RESERVED_35 = 0x35,
+    _RESERVED_36 = 0x36,
+    _RESERVED_37 = 0x37,
+    _RESERVED_38 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl Qdc1TrigInp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Qdc1TrigInp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Qdc1TrigInp {
+    #[inline(always)]
+    fn from(val: u8) -> Qdc1TrigInp {
+        Qdc1TrigInp::from_bits(val)
+    }
+}
+impl From<Qdc1TrigInp> for u8 {
+    #[inline(always)]
+    fn from(val: Qdc1TrigInp) -> u8 {
+        Qdc1TrigInp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req100En0 {
     #[doc = "Disable."]
@@ -10148,7 +16005,8 @@ impl From<Req100En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req100En1 {
     #[doc = "Disable."]
@@ -10179,7 +16037,8 @@ impl From<Req100En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req101En0 {
     #[doc = "Disable."]
@@ -10210,7 +16069,8 @@ impl From<Req101En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req101En1 {
     #[doc = "Disable."]
@@ -10241,7 +16101,8 @@ impl From<Req101En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req102En0 {
     #[doc = "Disable."]
@@ -10272,7 +16133,8 @@ impl From<Req102En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req102En1 {
     #[doc = "Disable."]
@@ -10303,7 +16165,8 @@ impl From<Req102En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req103En0 {
     #[doc = "Disable."]
@@ -10334,7 +16197,8 @@ impl From<Req103En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req103En1 {
     #[doc = "Disable."]
@@ -10365,7 +16229,8 @@ impl From<Req103En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req104En0 {
     #[doc = "Disable."]
@@ -10396,7 +16261,8 @@ impl From<Req104En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req104En1 {
     #[doc = "Disable."]
@@ -10427,7 +16293,8 @@ impl From<Req104En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req105En0 {
     #[doc = "Disable."]
@@ -10458,7 +16325,8 @@ impl From<Req105En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req105En1 {
     #[doc = "Disable."]
@@ -10489,7 +16357,8 @@ impl From<Req105En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req106En0 {
     #[doc = "Disable."]
@@ -10520,7 +16389,8 @@ impl From<Req106En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req106En1 {
     #[doc = "Disable."]
@@ -10551,7 +16421,8 @@ impl From<Req106En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req107En0 {
     #[doc = "Disable."]
@@ -10582,7 +16453,8 @@ impl From<Req107En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req107En1 {
     #[doc = "Disable."]
@@ -10613,7 +16485,8 @@ impl From<Req107En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req108En0 {
     #[doc = "Disable."]
@@ -10644,7 +16517,8 @@ impl From<Req108En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req108En1 {
     #[doc = "Disable."]
@@ -10675,7 +16549,8 @@ impl From<Req108En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req109En0 {
     #[doc = "Disable."]
@@ -10706,7 +16581,8 @@ impl From<Req109En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req109En1 {
     #[doc = "Disable."]
@@ -10737,7 +16613,8 @@ impl From<Req109En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req10En0 {
     #[doc = "Disable."]
@@ -10768,7 +16645,8 @@ impl From<Req10En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req10En1 {
     #[doc = "Disable."]
@@ -10799,7 +16677,8 @@ impl From<Req10En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req110En0 {
     #[doc = "Disable."]
@@ -10830,7 +16709,8 @@ impl From<Req110En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req110En1 {
     #[doc = "Disable."]
@@ -10861,7 +16741,8 @@ impl From<Req110En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req111En0 {
     #[doc = "Disable."]
@@ -10892,7 +16773,8 @@ impl From<Req111En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req111En1 {
     #[doc = "Disable."]
@@ -10923,7 +16805,8 @@ impl From<Req111En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req112En0 {
     #[doc = "Disable."]
@@ -10954,7 +16837,8 @@ impl From<Req112En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req112En1 {
     #[doc = "Disable."]
@@ -10985,7 +16869,8 @@ impl From<Req112En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req113En0 {
     #[doc = "Disable."]
@@ -11016,7 +16901,8 @@ impl From<Req113En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req113En1 {
     #[doc = "Disable."]
@@ -11047,7 +16933,8 @@ impl From<Req113En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req114En0 {
     #[doc = "Disable."]
@@ -11078,7 +16965,8 @@ impl From<Req114En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req114En1 {
     #[doc = "Disable."]
@@ -11109,7 +16997,8 @@ impl From<Req114En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req115En0 {
     #[doc = "Disable."]
@@ -11140,7 +17029,8 @@ impl From<Req115En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req115En1 {
     #[doc = "Disable."]
@@ -11171,7 +17061,8 @@ impl From<Req115En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req116En0 {
     #[doc = "Disable."]
@@ -11202,7 +17093,8 @@ impl From<Req116En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req116En1 {
     #[doc = "Disable."]
@@ -11233,7 +17125,8 @@ impl From<Req116En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req117En0 {
     #[doc = "Disable."]
@@ -11264,7 +17157,8 @@ impl From<Req117En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req117En1 {
     #[doc = "Disable."]
@@ -11295,7 +17189,8 @@ impl From<Req117En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req118En0 {
     #[doc = "Disable."]
@@ -11326,7 +17221,8 @@ impl From<Req118En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req118En1 {
     #[doc = "Disable."]
@@ -11357,7 +17253,8 @@ impl From<Req118En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req119En0 {
     #[doc = "Disable."]
@@ -11388,7 +17285,8 @@ impl From<Req119En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req119En1 {
     #[doc = "Disable."]
@@ -11419,7 +17317,8 @@ impl From<Req119En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req11En0 {
     #[doc = "Disable."]
@@ -11450,7 +17349,8 @@ impl From<Req11En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req11En1 {
     #[doc = "Disable."]
@@ -11481,7 +17381,8 @@ impl From<Req11En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req120En0 {
     #[doc = "Disable."]
@@ -11512,7 +17413,8 @@ impl From<Req120En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req120En1 {
     #[doc = "Disable."]
@@ -11543,7 +17445,8 @@ impl From<Req120En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req121En0 {
     #[doc = "Disable."]
@@ -11574,7 +17477,8 @@ impl From<Req121En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req121En1 {
     #[doc = "Disable."]
@@ -11605,7 +17509,8 @@ impl From<Req121En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req12En0 {
     #[doc = "Disable."]
@@ -11636,7 +17541,8 @@ impl From<Req12En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req12En1 {
     #[doc = "Disable."]
@@ -11667,7 +17573,8 @@ impl From<Req12En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req13En0 {
     #[doc = "Disable."]
@@ -11698,7 +17605,8 @@ impl From<Req13En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req13En1 {
     #[doc = "Disable."]
@@ -11729,7 +17637,8 @@ impl From<Req13En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req14En0 {
     #[doc = "Disable."]
@@ -11760,7 +17669,8 @@ impl From<Req14En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req14En1 {
     #[doc = "Disable."]
@@ -11791,7 +17701,8 @@ impl From<Req14En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req15En0 {
     #[doc = "Disable."]
@@ -11822,7 +17733,8 @@ impl From<Req15En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req15En1 {
     #[doc = "Disable."]
@@ -11853,7 +17765,8 @@ impl From<Req15En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req16En0 {
     #[doc = "Disable."]
@@ -11884,7 +17797,8 @@ impl From<Req16En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req16En1 {
     #[doc = "Disable."]
@@ -11915,7 +17829,8 @@ impl From<Req16En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req17En0 {
     #[doc = "Disable."]
@@ -11946,7 +17861,8 @@ impl From<Req17En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req17En1 {
     #[doc = "Disable."]
@@ -11977,7 +17893,8 @@ impl From<Req17En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req18En0 {
     #[doc = "Disable."]
@@ -12008,7 +17925,8 @@ impl From<Req18En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req18En1 {
     #[doc = "Disable."]
@@ -12039,7 +17957,8 @@ impl From<Req18En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req19En0 {
     #[doc = "Disable."]
@@ -12070,7 +17989,8 @@ impl From<Req19En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req19En1 {
     #[doc = "Disable."]
@@ -12101,7 +18021,8 @@ impl From<Req19En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req1En0 {
     #[doc = "Disable."]
@@ -12132,7 +18053,8 @@ impl From<Req1En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req1En1 {
     #[doc = "Disable."]
@@ -12163,7 +18085,8 @@ impl From<Req1En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req20En0 {
     #[doc = "Disable."]
@@ -12194,7 +18117,8 @@ impl From<Req20En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req20En1 {
     #[doc = "Disable."]
@@ -12225,7 +18149,8 @@ impl From<Req20En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req21En0 {
     #[doc = "Disable."]
@@ -12256,7 +18181,8 @@ impl From<Req21En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req21En1 {
     #[doc = "Disable."]
@@ -12287,7 +18213,8 @@ impl From<Req21En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req22En0 {
     #[doc = "Disable."]
@@ -12318,7 +18245,8 @@ impl From<Req22En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req22En1 {
     #[doc = "Disable."]
@@ -12349,7 +18277,8 @@ impl From<Req22En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req23En0 {
     #[doc = "Disable."]
@@ -12380,7 +18309,8 @@ impl From<Req23En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req23En1 {
     #[doc = "Disable."]
@@ -12411,7 +18341,8 @@ impl From<Req23En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req24En0 {
     #[doc = "Disable."]
@@ -12442,7 +18373,8 @@ impl From<Req24En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req24En1 {
     #[doc = "Disable."]
@@ -12473,7 +18405,8 @@ impl From<Req24En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req25En0 {
     #[doc = "Disable."]
@@ -12504,7 +18437,8 @@ impl From<Req25En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req25En1 {
     #[doc = "Disable."]
@@ -12535,7 +18469,8 @@ impl From<Req25En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req26En0 {
     #[doc = "Disable."]
@@ -12566,7 +18501,8 @@ impl From<Req26En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req26En1 {
     #[doc = "Disable."]
@@ -12597,7 +18533,8 @@ impl From<Req26En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req27En0 {
     #[doc = "Disable."]
@@ -12628,7 +18565,8 @@ impl From<Req27En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req27En1 {
     #[doc = "Disable."]
@@ -12659,7 +18597,8 @@ impl From<Req27En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req28En0 {
     #[doc = "Disable."]
@@ -12690,7 +18629,8 @@ impl From<Req28En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req28En1 {
     #[doc = "Disable."]
@@ -12721,7 +18661,8 @@ impl From<Req28En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req29En0 {
     #[doc = "Disable."]
@@ -12752,7 +18693,8 @@ impl From<Req29En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req29En1 {
     #[doc = "Disable."]
@@ -12783,7 +18725,8 @@ impl From<Req29En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req2En0 {
     #[doc = "Disable."]
@@ -12814,7 +18757,8 @@ impl From<Req2En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req2En1 {
     #[doc = "Disable."]
@@ -12845,7 +18789,8 @@ impl From<Req2En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req30En0 {
     #[doc = "Disable."]
@@ -12876,7 +18821,8 @@ impl From<Req30En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req30En1 {
     #[doc = "Disable."]
@@ -12907,7 +18853,8 @@ impl From<Req30En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req31En0 {
     #[doc = "Disable."]
@@ -12938,7 +18885,8 @@ impl From<Req31En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req31En1 {
     #[doc = "Disable."]
@@ -12969,7 +18917,8 @@ impl From<Req31En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req32En0 {
     #[doc = "Disable."]
@@ -13000,7 +18949,8 @@ impl From<Req32En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req32En1 {
     #[doc = "Disable."]
@@ -13031,7 +18981,8 @@ impl From<Req32En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req33En0 {
     #[doc = "Disable."]
@@ -13062,7 +19013,8 @@ impl From<Req33En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req33En1 {
     #[doc = "Disable."]
@@ -13093,7 +19045,8 @@ impl From<Req33En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req34En0 {
     #[doc = "Disable."]
@@ -13124,7 +19077,8 @@ impl From<Req34En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req34En1 {
     #[doc = "Disable."]
@@ -13155,7 +19109,8 @@ impl From<Req34En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req35En0 {
     #[doc = "Disable."]
@@ -13186,7 +19141,8 @@ impl From<Req35En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req35En1 {
     #[doc = "Disable."]
@@ -13217,7 +19173,8 @@ impl From<Req35En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req36En0 {
     #[doc = "Disable."]
@@ -13248,7 +19205,8 @@ impl From<Req36En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req36En1 {
     #[doc = "Disable."]
@@ -13279,7 +19237,8 @@ impl From<Req36En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req37En0 {
     #[doc = "Disable."]
@@ -13310,7 +19269,8 @@ impl From<Req37En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req37En1 {
     #[doc = "Disable."]
@@ -13341,7 +19301,8 @@ impl From<Req37En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req38En0 {
     #[doc = "Disable."]
@@ -13372,7 +19333,8 @@ impl From<Req38En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req38En1 {
     #[doc = "Disable."]
@@ -13403,7 +19365,8 @@ impl From<Req38En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req39En0 {
     #[doc = "Disable."]
@@ -13434,7 +19397,8 @@ impl From<Req39En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req39En1 {
     #[doc = "Disable."]
@@ -13465,7 +19429,8 @@ impl From<Req39En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req3En0 {
     #[doc = "Disable."]
@@ -13496,7 +19461,8 @@ impl From<Req3En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req3En1 {
     #[doc = "Disable."]
@@ -13527,7 +19493,8 @@ impl From<Req3En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req40En0 {
     #[doc = "Disable."]
@@ -13558,7 +19525,8 @@ impl From<Req40En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req40En1 {
     #[doc = "Disable."]
@@ -13589,7 +19557,8 @@ impl From<Req40En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req41En0 {
     #[doc = "Disable."]
@@ -13620,7 +19589,8 @@ impl From<Req41En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req41En1 {
     #[doc = "Disable."]
@@ -13651,7 +19621,8 @@ impl From<Req41En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req42En0 {
     #[doc = "Disable."]
@@ -13682,7 +19653,8 @@ impl From<Req42En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req42En1 {
     #[doc = "Disable."]
@@ -13713,7 +19685,8 @@ impl From<Req42En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req43En0 {
     #[doc = "Disable."]
@@ -13744,7 +19717,8 @@ impl From<Req43En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req43En1 {
     #[doc = "Disable."]
@@ -13775,7 +19749,8 @@ impl From<Req43En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req44En0 {
     #[doc = "Disable."]
@@ -13806,7 +19781,8 @@ impl From<Req44En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req44En1 {
     #[doc = "Disable."]
@@ -13837,7 +19813,8 @@ impl From<Req44En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req45En0 {
     #[doc = "Disable."]
@@ -13868,7 +19845,8 @@ impl From<Req45En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req45En1 {
     #[doc = "Disable."]
@@ -13899,7 +19877,8 @@ impl From<Req45En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req46En0 {
     #[doc = "Disable."]
@@ -13930,7 +19909,8 @@ impl From<Req46En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req46En1 {
     #[doc = "Disable."]
@@ -13961,7 +19941,8 @@ impl From<Req46En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req47En0 {
     #[doc = "Disable."]
@@ -13992,7 +19973,8 @@ impl From<Req47En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req47En1 {
     #[doc = "Disable."]
@@ -14023,7 +20005,8 @@ impl From<Req47En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req48En0 {
     #[doc = "Disable."]
@@ -14054,7 +20037,8 @@ impl From<Req48En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req48En1 {
     #[doc = "Disable."]
@@ -14085,7 +20069,8 @@ impl From<Req48En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req49En0 {
     #[doc = "Disable."]
@@ -14116,7 +20101,8 @@ impl From<Req49En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req49En1 {
     #[doc = "Disable."]
@@ -14147,7 +20133,8 @@ impl From<Req49En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req4En0 {
     #[doc = "Disable."]
@@ -14178,7 +20165,8 @@ impl From<Req4En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req4En1 {
     #[doc = "Disable."]
@@ -14209,7 +20197,8 @@ impl From<Req4En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req50En0 {
     #[doc = "Disable."]
@@ -14240,7 +20229,8 @@ impl From<Req50En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req50En1 {
     #[doc = "Disable."]
@@ -14271,7 +20261,8 @@ impl From<Req50En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req51En0 {
     #[doc = "Disable."]
@@ -14302,7 +20293,8 @@ impl From<Req51En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req51En1 {
     #[doc = "Disable."]
@@ -14333,7 +20325,8 @@ impl From<Req51En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req52En0 {
     #[doc = "Disable."]
@@ -14364,7 +20357,8 @@ impl From<Req52En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req52En1 {
     #[doc = "Disable."]
@@ -14395,7 +20389,8 @@ impl From<Req52En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req53En0 {
     #[doc = "Disable."]
@@ -14426,7 +20421,8 @@ impl From<Req53En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req53En1 {
     #[doc = "Disable."]
@@ -14457,7 +20453,8 @@ impl From<Req53En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req54En0 {
     #[doc = "Disable."]
@@ -14488,7 +20485,8 @@ impl From<Req54En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req54En1 {
     #[doc = "Disable."]
@@ -14519,7 +20517,8 @@ impl From<Req54En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req57En0 {
     #[doc = "Disable."]
@@ -14550,7 +20549,8 @@ impl From<Req57En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req57En1 {
     #[doc = "Disable."]
@@ -14581,7 +20581,8 @@ impl From<Req57En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req58En0 {
     #[doc = "Disable."]
@@ -14612,7 +20613,8 @@ impl From<Req58En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req58En1 {
     #[doc = "Disable."]
@@ -14643,7 +20645,8 @@ impl From<Req58En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req59En0 {
     #[doc = "Disable."]
@@ -14674,7 +20677,8 @@ impl From<Req59En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req59En1 {
     #[doc = "Disable."]
@@ -14705,7 +20709,8 @@ impl From<Req59En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req5En0 {
     #[doc = "Disable."]
@@ -14736,7 +20741,8 @@ impl From<Req5En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req5En1 {
     #[doc = "Disable."]
@@ -14767,7 +20773,8 @@ impl From<Req5En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req60En0 {
     #[doc = "Disable."]
@@ -14798,7 +20805,8 @@ impl From<Req60En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req60En1 {
     #[doc = "Disable."]
@@ -14829,7 +20837,8 @@ impl From<Req60En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req61En0 {
     #[doc = "Disable."]
@@ -14860,7 +20869,8 @@ impl From<Req61En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req61En1 {
     #[doc = "Disable."]
@@ -14891,7 +20901,8 @@ impl From<Req61En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req62En0 {
     #[doc = "Disable."]
@@ -14922,7 +20933,8 @@ impl From<Req62En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req62En1 {
     #[doc = "Disable."]
@@ -14953,7 +20965,8 @@ impl From<Req62En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req63En0 {
     #[doc = "Disable."]
@@ -14984,7 +20997,8 @@ impl From<Req63En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req63En1 {
     #[doc = "Disable."]
@@ -15015,7 +21029,8 @@ impl From<Req63En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req64En0 {
     #[doc = "Disable."]
@@ -15046,7 +21061,8 @@ impl From<Req64En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req64En1 {
     #[doc = "Disable."]
@@ -15077,7 +21093,8 @@ impl From<Req64En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req65En0 {
     #[doc = "Disable."]
@@ -15108,7 +21125,8 @@ impl From<Req65En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req65En1 {
     #[doc = "Disable."]
@@ -15139,7 +21157,8 @@ impl From<Req65En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req66En0 {
     #[doc = "Disable."]
@@ -15170,7 +21189,8 @@ impl From<Req66En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req66En1 {
     #[doc = "Disable."]
@@ -15201,7 +21221,8 @@ impl From<Req66En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req67En0 {
     #[doc = "Disable."]
@@ -15232,7 +21253,8 @@ impl From<Req67En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req67En1 {
     #[doc = "Disable."]
@@ -15263,7 +21285,8 @@ impl From<Req67En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req68En0 {
     #[doc = "Disable."]
@@ -15294,7 +21317,8 @@ impl From<Req68En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req68En1 {
     #[doc = "Disable."]
@@ -15325,7 +21349,8 @@ impl From<Req68En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req69En0 {
     #[doc = "Disable."]
@@ -15356,7 +21381,8 @@ impl From<Req69En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req69En1 {
     #[doc = "Disable."]
@@ -15387,7 +21413,8 @@ impl From<Req69En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req6En0 {
     #[doc = "Disable."]
@@ -15418,7 +21445,8 @@ impl From<Req6En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req6En1 {
     #[doc = "Disable."]
@@ -15449,7 +21477,8 @@ impl From<Req6En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req70En0 {
     #[doc = "Disable."]
@@ -15480,7 +21509,8 @@ impl From<Req70En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req70En1 {
     #[doc = "Disable."]
@@ -15511,7 +21541,8 @@ impl From<Req70En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req71En0 {
     #[doc = "Disable."]
@@ -15542,7 +21573,8 @@ impl From<Req71En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req71En1 {
     #[doc = "Disable."]
@@ -15573,7 +21605,8 @@ impl From<Req71En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req72En0 {
     #[doc = "Disable."]
@@ -15604,7 +21637,8 @@ impl From<Req72En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req72En1 {
     #[doc = "Disable."]
@@ -15635,7 +21669,8 @@ impl From<Req72En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req73En0 {
     #[doc = "Disable."]
@@ -15666,7 +21701,8 @@ impl From<Req73En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req73En1 {
     #[doc = "Disable."]
@@ -15697,7 +21733,8 @@ impl From<Req73En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req74En0 {
     #[doc = "Disable."]
@@ -15728,7 +21765,8 @@ impl From<Req74En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req74En1 {
     #[doc = "Disable."]
@@ -15759,7 +21797,8 @@ impl From<Req74En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req75En0 {
     #[doc = "Disable."]
@@ -15790,7 +21829,8 @@ impl From<Req75En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req75En1 {
     #[doc = "Disable."]
@@ -15821,7 +21861,8 @@ impl From<Req75En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req76En0 {
     #[doc = "Disable."]
@@ -15852,7 +21893,8 @@ impl From<Req76En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req76En1 {
     #[doc = "Disable."]
@@ -15883,7 +21925,8 @@ impl From<Req76En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req77En0 {
     #[doc = "Disable."]
@@ -15914,7 +21957,8 @@ impl From<Req77En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req77En1 {
     #[doc = "Disable."]
@@ -15945,7 +21989,8 @@ impl From<Req77En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req78En0 {
     #[doc = "Disable."]
@@ -15976,7 +22021,8 @@ impl From<Req78En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req78En1 {
     #[doc = "Disable."]
@@ -16007,7 +22053,8 @@ impl From<Req78En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req79En0 {
     #[doc = "Disable."]
@@ -16038,7 +22085,8 @@ impl From<Req79En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req79En1 {
     #[doc = "Disable."]
@@ -16069,7 +22117,8 @@ impl From<Req79En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req7En0 {
     #[doc = "Disable."]
@@ -16100,7 +22149,8 @@ impl From<Req7En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req7En1 {
     #[doc = "Disable."]
@@ -16131,7 +22181,8 @@ impl From<Req7En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req80En0 {
     #[doc = "Disable."]
@@ -16162,7 +22213,8 @@ impl From<Req80En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req80En1 {
     #[doc = "Disable."]
@@ -16193,7 +22245,8 @@ impl From<Req80En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req81En0 {
     #[doc = "Disable."]
@@ -16224,7 +22277,8 @@ impl From<Req81En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req81En1 {
     #[doc = "Disable."]
@@ -16255,7 +22309,8 @@ impl From<Req81En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req82En0 {
     #[doc = "Disable."]
@@ -16286,7 +22341,8 @@ impl From<Req82En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req82En1 {
     #[doc = "Disable."]
@@ -16317,7 +22373,8 @@ impl From<Req82En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req83En0 {
     #[doc = "Disable."]
@@ -16348,7 +22405,8 @@ impl From<Req83En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req83En1 {
     #[doc = "Disable."]
@@ -16379,7 +22437,8 @@ impl From<Req83En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req84En0 {
     #[doc = "Disable."]
@@ -16410,7 +22469,8 @@ impl From<Req84En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req84En1 {
     #[doc = "Disable."]
@@ -16441,7 +22501,8 @@ impl From<Req84En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req85En0 {
     #[doc = "Disable."]
@@ -16472,7 +22533,8 @@ impl From<Req85En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req85En1 {
     #[doc = "Disable."]
@@ -16503,7 +22565,8 @@ impl From<Req85En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req86En0 {
     #[doc = "Disable."]
@@ -16534,7 +22597,8 @@ impl From<Req86En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req86En1 {
     #[doc = "Disable."]
@@ -16565,7 +22629,8 @@ impl From<Req86En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req87En0 {
     #[doc = "Disable."]
@@ -16596,7 +22661,8 @@ impl From<Req87En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req87En1 {
     #[doc = "Disable."]
@@ -16627,7 +22693,8 @@ impl From<Req87En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req88En0 {
     #[doc = "Disable."]
@@ -16658,7 +22725,8 @@ impl From<Req88En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req88En1 {
     #[doc = "Disable."]
@@ -16689,7 +22757,8 @@ impl From<Req88En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req8En0 {
     #[doc = "Disable."]
@@ -16720,7 +22789,8 @@ impl From<Req8En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req8En1 {
     #[doc = "Disable."]
@@ -16751,7 +22821,8 @@ impl From<Req8En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req91En0 {
     #[doc = "Disable."]
@@ -16782,7 +22853,8 @@ impl From<Req91En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req91En1 {
     #[doc = "Disable."]
@@ -16813,7 +22885,8 @@ impl From<Req91En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req92En0 {
     #[doc = "Disable."]
@@ -16844,7 +22917,8 @@ impl From<Req92En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req92En1 {
     #[doc = "Disable."]
@@ -16875,7 +22949,8 @@ impl From<Req92En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req93En0 {
     #[doc = "Disable."]
@@ -16906,7 +22981,8 @@ impl From<Req93En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req93En1 {
     #[doc = "Disable."]
@@ -16937,7 +23013,8 @@ impl From<Req93En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req94En0 {
     #[doc = "Disable."]
@@ -16968,7 +23045,8 @@ impl From<Req94En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req94En1 {
     #[doc = "Disable."]
@@ -16999,7 +23077,8 @@ impl From<Req94En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req95En0 {
     #[doc = "Disable."]
@@ -17030,7 +23109,8 @@ impl From<Req95En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req95En1 {
     #[doc = "Disable."]
@@ -17061,7 +23141,8 @@ impl From<Req95En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req96En0 {
     #[doc = "Disable."]
@@ -17092,7 +23173,8 @@ impl From<Req96En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req96En1 {
     #[doc = "Disable."]
@@ -17123,7 +23205,8 @@ impl From<Req96En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req97En0 {
     #[doc = "Disable."]
@@ -17154,7 +23237,8 @@ impl From<Req97En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req97En1 {
     #[doc = "Disable."]
@@ -17185,7 +23269,8 @@ impl From<Req97En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req98En0 {
     #[doc = "Disable."]
@@ -17216,7 +23301,8 @@ impl From<Req98En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req98En1 {
     #[doc = "Disable."]
@@ -17247,7 +23333,8 @@ impl From<Req98En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req99En0 {
     #[doc = "Disable."]
@@ -17278,7 +23365,8 @@ impl From<Req99En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req99En1 {
     #[doc = "Disable."]
@@ -17309,7 +23397,8 @@ impl From<Req99En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req9En0 {
     #[doc = "Disable."]
@@ -17340,7 +23429,8 @@ impl From<Req9En0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Req9En1 {
     #[doc = "Disable."]
@@ -17371,7 +23461,8 @@ impl From<Req9En1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sct0InmuxInp {
     #[doc = "SCT0_IN0 input is selected."]
@@ -17600,9 +23691,10 @@ impl From<Sct0InmuxInp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum SincFilterChInp {
+pub enum SincFilterCh0Inp {
     #[doc = "PINT PIN_INT0 input is selected."]
     Val0 = 0x0,
     #[doc = "PINT PIN_INT1 input is selected."]
@@ -17723,9 +23815,9 @@ pub enum SincFilterChInp {
     _RESERVED_3e = 0x3e,
     _RESERVED_3f = 0x3f,
 }
-impl SincFilterChInp {
+impl SincFilterCh0Inp {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> SincFilterChInp {
+    pub const fn from_bits(val: u8) -> SincFilterCh0Inp {
         unsafe { core::mem::transmute(val & 0x3f) }
     }
     #[inline(always)]
@@ -17733,20 +23825,609 @@ impl SincFilterChInp {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for SincFilterChInp {
+impl From<u8> for SincFilterCh0Inp {
     #[inline(always)]
-    fn from(val: u8) -> SincFilterChInp {
-        SincFilterChInp::from_bits(val)
+    fn from(val: u8) -> SincFilterCh0Inp {
+        SincFilterCh0Inp::from_bits(val)
     }
 }
-impl From<SincFilterChInp> for u8 {
+impl From<SincFilterCh0Inp> for u8 {
     #[inline(always)]
-    fn from(val: SincFilterChInp) -> u8 {
-        SincFilterChInp::to_bits(val)
+    fn from(val: SincFilterCh0Inp) -> u8 {
+        SincFilterCh0Inp::to_bits(val)
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum SincFilterCh1Inp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT1 input is selected."]
+    Val1 = 0x01,
+    #[doc = "SCT_OUT4 input is selected."]
+    Val2 = 0x02,
+    #[doc = "SCT_OUT5 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT9 input is selected."]
+    Val4 = 0x04,
+    #[doc = "CTIMER0_MAT3 input is selected."]
+    Val5 = 0x05,
+    #[doc = "CTIMER1_MAT3 input is selected."]
+    Val6 = 0x06,
+    #[doc = "CTIMER2_MAT3 input is selected."]
+    Val7 = 0x07,
+    #[doc = "CTIMER3_MAT3 input is selected."]
+    Val8 = 0x08,
+    #[doc = "CTIMER4_MAT3 input is selected."]
+    Val9 = 0x09,
+    _RESERVED_a = 0x0a,
+    _RESERVED_b = 0x0b,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val12 = 0x0c,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val13 = 0x0d,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val14 = 0x0e,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val15 = 0x0f,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val16 = 0x10,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "CMP0_OUT input is selected."]
+    Val21 = 0x15,
+    #[doc = "CMP1_OUT input is selected."]
+    Val22 = 0x16,
+    #[doc = "CMP2_OUT input is selected."]
+    Val23 = 0x17,
+    #[doc = "PWM0_SM0_MUX_TRIG0 input is selected."]
+    Val24 = 0x18,
+    #[doc = "PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val25 = 0x19,
+    #[doc = "PWM0_SM1_MUX_TRIG0 input is selected."]
+    Val26 = 0x1a,
+    #[doc = "PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "PWM0_SM2_MUX_TRIG0 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM0_SM3_MUX_TRIG0 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val32 = 0x20,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val33 = 0x21,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val34 = 0x22,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val35 = 0x23,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val36 = 0x24,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val37 = 0x25,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val38 = 0x26,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val39 = 0x27,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val40 = 0x28,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val41 = 0x29,
+    #[doc = "EVTG_OUT0A input is selected."]
+    Val42 = 0x2a,
+    #[doc = "EVTG_OUT0B input is selected."]
+    Val43 = 0x2b,
+    #[doc = "EVTG_OUT1A input is selected."]
+    Val44 = 0x2c,
+    #[doc = "EVTG_OUT1B input is selected."]
+    Val45 = 0x2d,
+    #[doc = "EVTG_OUT2A input is selected."]
+    Val46 = 0x2e,
+    #[doc = "EVTG_OUT2B input is selected."]
+    Val47 = 0x2f,
+    #[doc = "EVTG_OUT3A input is selected."]
+    Val48 = 0x30,
+    #[doc = "EVTG_OUT3B input is selected."]
+    Val49 = 0x31,
+    #[doc = "LPTMR0 input is selected."]
+    Val50 = 0x32,
+    #[doc = "LPTMR1 input is selected."]
+    Val51 = 0x33,
+    #[doc = "FlexIO CH0 input is selected."]
+    Val52 = 0x34,
+    #[doc = "FlexIO CH1 input is selected."]
+    Val53 = 0x35,
+    #[doc = "FlexIO CH2 input is selected."]
+    Val54 = 0x36,
+    #[doc = "FlexIO CH3 input is selected."]
+    Val55 = 0x37,
+    #[doc = "WUU input is selected."]
+    Val56 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl SincFilterCh1Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> SincFilterCh1Inp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for SincFilterCh1Inp {
+    #[inline(always)]
+    fn from(val: u8) -> SincFilterCh1Inp {
+        SincFilterCh1Inp::from_bits(val)
+    }
+}
+impl From<SincFilterCh1Inp> for u8 {
+    #[inline(always)]
+    fn from(val: SincFilterCh1Inp) -> u8 {
+        SincFilterCh1Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum SincFilterCh2Inp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT1 input is selected."]
+    Val1 = 0x01,
+    #[doc = "SCT_OUT4 input is selected."]
+    Val2 = 0x02,
+    #[doc = "SCT_OUT5 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT9 input is selected."]
+    Val4 = 0x04,
+    #[doc = "CTIMER0_MAT3 input is selected."]
+    Val5 = 0x05,
+    #[doc = "CTIMER1_MAT3 input is selected."]
+    Val6 = 0x06,
+    #[doc = "CTIMER2_MAT3 input is selected."]
+    Val7 = 0x07,
+    #[doc = "CTIMER3_MAT3 input is selected."]
+    Val8 = 0x08,
+    #[doc = "CTIMER4_MAT3 input is selected."]
+    Val9 = 0x09,
+    _RESERVED_a = 0x0a,
+    _RESERVED_b = 0x0b,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val12 = 0x0c,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val13 = 0x0d,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val14 = 0x0e,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val15 = 0x0f,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val16 = 0x10,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "CMP0_OUT input is selected."]
+    Val21 = 0x15,
+    #[doc = "CMP1_OUT input is selected."]
+    Val22 = 0x16,
+    #[doc = "CMP2_OUT input is selected."]
+    Val23 = 0x17,
+    #[doc = "PWM0_SM0_MUX_TRIG0 input is selected."]
+    Val24 = 0x18,
+    #[doc = "PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val25 = 0x19,
+    #[doc = "PWM0_SM1_MUX_TRIG0 input is selected."]
+    Val26 = 0x1a,
+    #[doc = "PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "PWM0_SM2_MUX_TRIG0 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM0_SM3_MUX_TRIG0 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val32 = 0x20,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val33 = 0x21,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val34 = 0x22,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val35 = 0x23,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val36 = 0x24,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val37 = 0x25,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val38 = 0x26,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val39 = 0x27,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val40 = 0x28,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val41 = 0x29,
+    #[doc = "EVTG_OUT0A input is selected."]
+    Val42 = 0x2a,
+    #[doc = "EVTG_OUT0B input is selected."]
+    Val43 = 0x2b,
+    #[doc = "EVTG_OUT1A input is selected."]
+    Val44 = 0x2c,
+    #[doc = "EVTG_OUT1B input is selected."]
+    Val45 = 0x2d,
+    #[doc = "EVTG_OUT2A input is selected."]
+    Val46 = 0x2e,
+    #[doc = "EVTG_OUT2B input is selected."]
+    Val47 = 0x2f,
+    #[doc = "EVTG_OUT3A input is selected."]
+    Val48 = 0x30,
+    #[doc = "EVTG_OUT3B input is selected."]
+    Val49 = 0x31,
+    #[doc = "LPTMR0 input is selected."]
+    Val50 = 0x32,
+    #[doc = "LPTMR1 input is selected."]
+    Val51 = 0x33,
+    #[doc = "FlexIO CH0 input is selected."]
+    Val52 = 0x34,
+    #[doc = "FlexIO CH1 input is selected."]
+    Val53 = 0x35,
+    #[doc = "FlexIO CH2 input is selected."]
+    Val54 = 0x36,
+    #[doc = "FlexIO CH3 input is selected."]
+    Val55 = 0x37,
+    #[doc = "WUU input is selected."]
+    Val56 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl SincFilterCh2Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> SincFilterCh2Inp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for SincFilterCh2Inp {
+    #[inline(always)]
+    fn from(val: u8) -> SincFilterCh2Inp {
+        SincFilterCh2Inp::from_bits(val)
+    }
+}
+impl From<SincFilterCh2Inp> for u8 {
+    #[inline(always)]
+    fn from(val: SincFilterCh2Inp) -> u8 {
+        SincFilterCh2Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum SincFilterCh3Inp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT1 input is selected."]
+    Val1 = 0x01,
+    #[doc = "SCT_OUT4 input is selected."]
+    Val2 = 0x02,
+    #[doc = "SCT_OUT5 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT9 input is selected."]
+    Val4 = 0x04,
+    #[doc = "CTIMER0_MAT3 input is selected."]
+    Val5 = 0x05,
+    #[doc = "CTIMER1_MAT3 input is selected."]
+    Val6 = 0x06,
+    #[doc = "CTIMER2_MAT3 input is selected."]
+    Val7 = 0x07,
+    #[doc = "CTIMER3_MAT3 input is selected."]
+    Val8 = 0x08,
+    #[doc = "CTIMER4_MAT3 input is selected."]
+    Val9 = 0x09,
+    _RESERVED_a = 0x0a,
+    _RESERVED_b = 0x0b,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val12 = 0x0c,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val13 = 0x0d,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val14 = 0x0e,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val15 = 0x0f,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val16 = 0x10,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "CMP0_OUT input is selected."]
+    Val21 = 0x15,
+    #[doc = "CMP1_OUT input is selected."]
+    Val22 = 0x16,
+    #[doc = "CMP2_OUT input is selected."]
+    Val23 = 0x17,
+    #[doc = "PWM0_SM0_MUX_TRIG0 input is selected."]
+    Val24 = 0x18,
+    #[doc = "PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val25 = 0x19,
+    #[doc = "PWM0_SM1_MUX_TRIG0 input is selected."]
+    Val26 = 0x1a,
+    #[doc = "PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "PWM0_SM2_MUX_TRIG0 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM0_SM3_MUX_TRIG0 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val32 = 0x20,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val33 = 0x21,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val34 = 0x22,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val35 = 0x23,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val36 = 0x24,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val37 = 0x25,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val38 = 0x26,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val39 = 0x27,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val40 = 0x28,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val41 = 0x29,
+    #[doc = "EVTG_OUT0A input is selected."]
+    Val42 = 0x2a,
+    #[doc = "EVTG_OUT0B input is selected."]
+    Val43 = 0x2b,
+    #[doc = "EVTG_OUT1A input is selected."]
+    Val44 = 0x2c,
+    #[doc = "EVTG_OUT1B input is selected."]
+    Val45 = 0x2d,
+    #[doc = "EVTG_OUT2A input is selected."]
+    Val46 = 0x2e,
+    #[doc = "EVTG_OUT2B input is selected."]
+    Val47 = 0x2f,
+    #[doc = "EVTG_OUT3A input is selected."]
+    Val48 = 0x30,
+    #[doc = "EVTG_OUT3B input is selected."]
+    Val49 = 0x31,
+    #[doc = "LPTMR0 input is selected."]
+    Val50 = 0x32,
+    #[doc = "LPTMR1 input is selected."]
+    Val51 = 0x33,
+    #[doc = "FlexIO CH0 input is selected."]
+    Val52 = 0x34,
+    #[doc = "FlexIO CH1 input is selected."]
+    Val53 = 0x35,
+    #[doc = "FlexIO CH2 input is selected."]
+    Val54 = 0x36,
+    #[doc = "FlexIO CH3 input is selected."]
+    Val55 = 0x37,
+    #[doc = "WUU input is selected."]
+    Val56 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl SincFilterCh3Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> SincFilterCh3Inp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for SincFilterCh3Inp {
+    #[inline(always)]
+    fn from(val: u8) -> SincFilterCh3Inp {
+        SincFilterCh3Inp::from_bits(val)
+    }
+}
+impl From<SincFilterCh3Inp> for u8 {
+    #[inline(always)]
+    fn from(val: SincFilterCh3Inp) -> u8 {
+        SincFilterCh3Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum SincFilterCh4Inp {
+    #[doc = "PINT PIN_INT0 input is selected."]
+    Val0 = 0x0,
+    #[doc = "PINT PIN_INT1 input is selected."]
+    Val1 = 0x01,
+    #[doc = "SCT_OUT4 input is selected."]
+    Val2 = 0x02,
+    #[doc = "SCT_OUT5 input is selected."]
+    Val3 = 0x03,
+    #[doc = "SCT_OUT9 input is selected."]
+    Val4 = 0x04,
+    #[doc = "CTIMER0_MAT3 input is selected."]
+    Val5 = 0x05,
+    #[doc = "CTIMER1_MAT3 input is selected."]
+    Val6 = 0x06,
+    #[doc = "CTIMER2_MAT3 input is selected."]
+    Val7 = 0x07,
+    #[doc = "CTIMER3_MAT3 input is selected."]
+    Val8 = 0x08,
+    #[doc = "CTIMER4_MAT3 input is selected."]
+    Val9 = 0x09,
+    _RESERVED_a = 0x0a,
+    _RESERVED_b = 0x0b,
+    #[doc = "PINT GPIO_INT_BMAT input is selected."]
+    Val12 = 0x0c,
+    #[doc = "ADC0_tcomp\\[0\\] input is selected."]
+    Val13 = 0x0d,
+    #[doc = "ADC0_tcomp\\[1\\] input is selected."]
+    Val14 = 0x0e,
+    #[doc = "ADC0_tcomp\\[2\\] input is selected."]
+    Val15 = 0x0f,
+    #[doc = "ADC0_tcomp\\[3\\] input is selected."]
+    Val16 = 0x10,
+    #[doc = "ADC1_tcomp\\[0\\] input is selected."]
+    Val17 = 0x11,
+    #[doc = "ADC1_tcomp\\[1\\] input is selected."]
+    Val18 = 0x12,
+    #[doc = "ADC1_tcomp\\[2\\] input is selected."]
+    Val19 = 0x13,
+    #[doc = "ADC1_tcomp\\[3\\] input is selected."]
+    Val20 = 0x14,
+    #[doc = "CMP0_OUT input is selected."]
+    Val21 = 0x15,
+    #[doc = "CMP1_OUT input is selected."]
+    Val22 = 0x16,
+    #[doc = "CMP2_OUT input is selected."]
+    Val23 = 0x17,
+    #[doc = "PWM0_SM0_MUX_TRIG0 input is selected."]
+    Val24 = 0x18,
+    #[doc = "PWM0_SM0_MUX_TRIG1 input is selected."]
+    Val25 = 0x19,
+    #[doc = "PWM0_SM1_MUX_TRIG0 input is selected."]
+    Val26 = 0x1a,
+    #[doc = "PWM0_SM1_MUX_TRIG1 input is selected."]
+    Val27 = 0x1b,
+    #[doc = "PWM0_SM2_MUX_TRIG0 input is selected."]
+    Val28 = 0x1c,
+    #[doc = "PWM0_SM2_MUX_TRIG1 input is selected."]
+    Val29 = 0x1d,
+    #[doc = "PWM0_SM3_MUX_TRIG0 input is selected."]
+    Val30 = 0x1e,
+    #[doc = "PWM0_SM3_MUX_TRIG1 input is selected."]
+    Val31 = 0x1f,
+    #[doc = "PWM1_SM0_MUX_TRIG0 input is selected."]
+    Val32 = 0x20,
+    #[doc = "PWM1_SM0_MUX_TRIG1 input is selected."]
+    Val33 = 0x21,
+    #[doc = "PWM1_SM1_MUX_TRIG0 input is selected."]
+    Val34 = 0x22,
+    #[doc = "PWM1_SM1_MUX_TRIG1 input is selected."]
+    Val35 = 0x23,
+    #[doc = "PWM1_SM2_MUX_TRIG0 input is selected."]
+    Val36 = 0x24,
+    #[doc = "PWM1_SM2_MUX_TRIG1 input is selected."]
+    Val37 = 0x25,
+    #[doc = "PWM1_SM3_MUX_TRIG0 input is selected."]
+    Val38 = 0x26,
+    #[doc = "PWM1_SM3_MUX_TRIG1 input is selected."]
+    Val39 = 0x27,
+    #[doc = "QDC0_CMP/POS_MATCH input is selected."]
+    Val40 = 0x28,
+    #[doc = "QDC1_CMP/POS_MATCH input is selected."]
+    Val41 = 0x29,
+    #[doc = "EVTG_OUT0A input is selected."]
+    Val42 = 0x2a,
+    #[doc = "EVTG_OUT0B input is selected."]
+    Val43 = 0x2b,
+    #[doc = "EVTG_OUT1A input is selected."]
+    Val44 = 0x2c,
+    #[doc = "EVTG_OUT1B input is selected."]
+    Val45 = 0x2d,
+    #[doc = "EVTG_OUT2A input is selected."]
+    Val46 = 0x2e,
+    #[doc = "EVTG_OUT2B input is selected."]
+    Val47 = 0x2f,
+    #[doc = "EVTG_OUT3A input is selected."]
+    Val48 = 0x30,
+    #[doc = "EVTG_OUT3B input is selected."]
+    Val49 = 0x31,
+    #[doc = "LPTMR0 input is selected."]
+    Val50 = 0x32,
+    #[doc = "LPTMR1 input is selected."]
+    Val51 = 0x33,
+    #[doc = "FlexIO CH0 input is selected."]
+    Val52 = 0x34,
+    #[doc = "FlexIO CH1 input is selected."]
+    Val53 = 0x35,
+    #[doc = "FlexIO CH2 input is selected."]
+    Val54 = 0x36,
+    #[doc = "FlexIO CH3 input is selected."]
+    Val55 = 0x37,
+    #[doc = "WUU input is selected."]
+    Val56 = 0x38,
+    _RESERVED_39 = 0x39,
+    _RESERVED_3a = 0x3a,
+    _RESERVED_3b = 0x3b,
+    _RESERVED_3c = 0x3c,
+    _RESERVED_3d = 0x3d,
+    _RESERVED_3e = 0x3e,
+    _RESERVED_3f = 0x3f,
+}
+impl SincFilterCh4Inp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> SincFilterCh4Inp {
+        unsafe { core::mem::transmute(val & 0x3f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for SincFilterCh4Inp {
+    #[inline(always)]
+    fn from(val: u8) -> SincFilterCh4Inp {
+        SincFilterCh4Inp::from_bits(val)
+    }
+}
+impl From<SincFilterCh4Inp> for u8 {
+    #[inline(always)]
+    fn from(val: SincFilterCh4Inp) -> u8 {
+        SincFilterCh4Inp::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SmartdmaarchbInmuxInp {
     #[doc = "FlexIO interrupt is selected as input."]
@@ -17965,7 +24646,8 @@ impl From<SmartdmaarchbInmuxInp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Timer0trigInp {
     #[doc = "CT_INP0 input is selected."]
@@ -18183,7 +24865,8 @@ impl From<Timer0trigInp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Timer1trigInp {
     #[doc = "CT_INP0 input is selected."]
@@ -18401,7 +25084,8 @@ impl From<Timer1trigInp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Timer2trigInp {
     #[doc = "CT_INP0 input is selected."]
@@ -18619,7 +25303,8 @@ impl From<Timer2trigInp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Timer3trigInp {
     #[doc = "CT_INP0 input is selected."]
@@ -18837,7 +25522,8 @@ impl From<Timer3trigInp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Timer4trigInp {
     #[doc = "CT_INP0 input is selected."]
@@ -19055,7 +25741,8 @@ impl From<Timer4trigInp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TsiTrigInp {
     #[doc = "LPTMR0 input is selected."]
@@ -19088,7 +25775,8 @@ impl From<TsiTrigInp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum UsbfsTrigInp {
     #[doc = "LP_FLEXCOMM 0 trigger out \\[3\\] input is selected."]

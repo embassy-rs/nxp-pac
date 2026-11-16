@@ -22,6 +22,7 @@ impl Default for Fccob {
         Fccob(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fccob {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fccob")
@@ -107,6 +108,7 @@ impl Default for Fcnfg {
         Fcnfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fcnfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fcnfg")
@@ -180,6 +182,7 @@ impl Default for Fctrl {
         Fctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fctrl")
@@ -369,6 +372,7 @@ impl Default for Fstat {
         Fstat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fstat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fstat")

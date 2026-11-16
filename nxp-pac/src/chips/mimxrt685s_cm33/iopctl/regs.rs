@@ -118,6 +118,7 @@ impl Default for Fc15I2cScl {
         Fc15I2cScl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fc15I2cScl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fc15I2cScl")
@@ -271,6 +272,7 @@ impl Default for Fc15I2cSda {
         Fc15I2cSda(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fc15I2cSda {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fc15I2cSda")
@@ -424,6 +426,7 @@ impl Default for Pio {
         Pio(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pio {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pio")

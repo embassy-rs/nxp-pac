@@ -22,6 +22,7 @@ impl Default for AnatopUsbOtg1IdSelectInput {
         AnatopUsbOtg1IdSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AnatopUsbOtg1IdSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AnatopUsbOtg1IdSelectInput")
@@ -63,6 +64,7 @@ impl Default for AnatopUsbOtg2IdSelectInput {
         AnatopUsbOtg2IdSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AnatopUsbOtg2IdSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AnatopUsbOtg2IdSelectInput")
@@ -104,6 +106,7 @@ impl Default for CanfdIppIndCanrxSelectInput {
         CanfdIppIndCanrxSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CanfdIppIndCanrxSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CanfdIppIndCanrxSelectInput")
@@ -145,6 +148,7 @@ impl Default for CcmPmicReadySelectInput {
         CcmPmicReadySelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CcmPmicReadySelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CcmPmicReadySelectInput")
@@ -182,6 +186,7 @@ impl Default for CsiData02SelectInput {
         CsiData02SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CsiData02SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CsiData02SelectInput")
@@ -219,6 +224,7 @@ impl Default for CsiData03SelectInput {
         CsiData03SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CsiData03SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CsiData03SelectInput")
@@ -256,6 +262,7 @@ impl Default for CsiData04SelectInput {
         CsiData04SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CsiData04SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CsiData04SelectInput")
@@ -293,6 +300,7 @@ impl Default for CsiData05SelectInput {
         CsiData05SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CsiData05SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CsiData05SelectInput")
@@ -330,6 +338,7 @@ impl Default for CsiData06SelectInput {
         CsiData06SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CsiData06SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CsiData06SelectInput")
@@ -367,6 +376,7 @@ impl Default for CsiData07SelectInput {
         CsiData07SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CsiData07SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CsiData07SelectInput")
@@ -404,6 +414,7 @@ impl Default for CsiData08SelectInput {
         CsiData08SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CsiData08SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CsiData08SelectInput")
@@ -441,6 +452,7 @@ impl Default for CsiData09SelectInput {
         CsiData09SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CsiData09SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CsiData09SelectInput")
@@ -478,6 +490,7 @@ impl Default for CsiHsyncSelectInput {
         CsiHsyncSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CsiHsyncSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CsiHsyncSelectInput")
@@ -515,6 +528,7 @@ impl Default for CsiPixclkSelectInput {
         CsiPixclkSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CsiPixclkSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CsiPixclkSelectInput")
@@ -552,6 +566,7 @@ impl Default for CsiVsyncSelectInput {
         CsiVsyncSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CsiVsyncSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CsiVsyncSelectInput")
@@ -673,6 +688,7 @@ impl Default for Ctl {
         Ctl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctl")
@@ -728,6 +744,7 @@ impl Default for Enet0RxdataSelectInput {
         Enet0RxdataSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Enet0RxdataSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Enet0RxdataSelectInput")
@@ -765,6 +782,7 @@ impl Default for Enet0TimerSelectInput {
         Enet0TimerSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Enet0TimerSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Enet0TimerSelectInput")
@@ -802,6 +820,7 @@ impl Default for Enet1RxdataSelectInput {
         Enet1RxdataSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Enet1RxdataSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Enet1RxdataSelectInput")
@@ -839,6 +858,7 @@ impl Default for Enet2IpgClkRmiiSelectInput {
         Enet2IpgClkRmiiSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Enet2IpgClkRmiiSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Enet2IpgClkRmiiSelectInput")
@@ -880,6 +900,7 @@ impl Default for Enet2IppIndMac0MdioSelectInput {
         Enet2IppIndMac0MdioSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Enet2IppIndMac0MdioSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Enet2IppIndMac0MdioSelectInput")
@@ -921,6 +942,7 @@ impl Default for Enet2IppIndMac0RxdataSelectInput0 {
         Enet2IppIndMac0RxdataSelectInput0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Enet2IppIndMac0RxdataSelectInput0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Enet2IppIndMac0RxdataSelectInput0")
@@ -962,6 +984,7 @@ impl Default for Enet2IppIndMac0RxdataSelectInput1 {
         Enet2IppIndMac0RxdataSelectInput1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Enet2IppIndMac0RxdataSelectInput1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Enet2IppIndMac0RxdataSelectInput1")
@@ -1003,6 +1026,7 @@ impl Default for Enet2IppIndMac0RxenSelectInput {
         Enet2IppIndMac0RxenSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Enet2IppIndMac0RxenSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Enet2IppIndMac0RxenSelectInput")
@@ -1044,6 +1068,7 @@ impl Default for Enet2IppIndMac0RxerrSelectInput {
         Enet2IppIndMac0RxerrSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Enet2IppIndMac0RxerrSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Enet2IppIndMac0RxerrSelectInput")
@@ -1085,6 +1110,7 @@ impl Default for Enet2IppIndMac0TimerSelectInput0 {
         Enet2IppIndMac0TimerSelectInput0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Enet2IppIndMac0TimerSelectInput0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Enet2IppIndMac0TimerSelectInput0")
@@ -1126,6 +1152,7 @@ impl Default for Enet2IppIndMac0TxclkSelectInput {
         Enet2IppIndMac0TxclkSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Enet2IppIndMac0TxclkSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Enet2IppIndMac0TxclkSelectInput")
@@ -1167,6 +1194,7 @@ impl Default for EnetIpgClkRmiiSelectInput {
         EnetIpgClkRmiiSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EnetIpgClkRmiiSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EnetIpgClkRmiiSelectInput")
@@ -1208,6 +1236,7 @@ impl Default for EnetMdioSelectInput {
         EnetMdioSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EnetMdioSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EnetMdioSelectInput")
@@ -1245,6 +1274,7 @@ impl Default for EnetRxenSelectInput {
         EnetRxenSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EnetRxenSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EnetRxenSelectInput")
@@ -1282,6 +1312,7 @@ impl Default for EnetRxerrSelectInput {
         EnetRxerrSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EnetRxerrSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EnetRxerrSelectInput")
@@ -1319,6 +1350,7 @@ impl Default for EnetTxclkSelectInput {
         EnetTxclkSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EnetTxclkSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EnetTxclkSelectInput")
@@ -1356,6 +1388,7 @@ impl Default for Flexcan1RxSelectInput {
         Flexcan1RxSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexcan1RxSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexcan1RxSelectInput")
@@ -1393,6 +1426,7 @@ impl Default for Flexcan2RxSelectInput {
         Flexcan2RxSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexcan2RxSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexcan2RxSelectInput")
@@ -1430,6 +1464,7 @@ impl Default for Flexpwm1Pwma0SelectInput {
         Flexpwm1Pwma0SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexpwm1Pwma0SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexpwm1Pwma0SelectInput")
@@ -1471,6 +1506,7 @@ impl Default for Flexpwm1Pwma1SelectInput {
         Flexpwm1Pwma1SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexpwm1Pwma1SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexpwm1Pwma1SelectInput")
@@ -1512,6 +1548,7 @@ impl Default for Flexpwm1Pwma2SelectInput {
         Flexpwm1Pwma2SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexpwm1Pwma2SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexpwm1Pwma2SelectInput")
@@ -1553,6 +1590,7 @@ impl Default for Flexpwm1Pwma3SelectInput {
         Flexpwm1Pwma3SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexpwm1Pwma3SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexpwm1Pwma3SelectInput")
@@ -1594,6 +1632,7 @@ impl Default for Flexpwm1Pwmb0SelectInput {
         Flexpwm1Pwmb0SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexpwm1Pwmb0SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexpwm1Pwmb0SelectInput")
@@ -1635,6 +1674,7 @@ impl Default for Flexpwm1Pwmb1SelectInput {
         Flexpwm1Pwmb1SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexpwm1Pwmb1SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexpwm1Pwmb1SelectInput")
@@ -1676,6 +1716,7 @@ impl Default for Flexpwm1Pwmb2SelectInput {
         Flexpwm1Pwmb2SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexpwm1Pwmb2SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexpwm1Pwmb2SelectInput")
@@ -1717,6 +1758,7 @@ impl Default for Flexpwm1Pwmb3SelectInput {
         Flexpwm1Pwmb3SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexpwm1Pwmb3SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexpwm1Pwmb3SelectInput")
@@ -1758,6 +1800,7 @@ impl Default for Flexpwm2Pwma0SelectInput {
         Flexpwm2Pwma0SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexpwm2Pwma0SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexpwm2Pwma0SelectInput")
@@ -1799,6 +1842,7 @@ impl Default for Flexpwm2Pwma1SelectInput {
         Flexpwm2Pwma1SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexpwm2Pwma1SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexpwm2Pwma1SelectInput")
@@ -1840,6 +1884,7 @@ impl Default for Flexpwm2Pwma2SelectInput {
         Flexpwm2Pwma2SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexpwm2Pwma2SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexpwm2Pwma2SelectInput")
@@ -1881,6 +1926,7 @@ impl Default for Flexpwm2Pwma3SelectInput {
         Flexpwm2Pwma3SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexpwm2Pwma3SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexpwm2Pwma3SelectInput")
@@ -1922,6 +1968,7 @@ impl Default for Flexpwm2Pwmb0SelectInput {
         Flexpwm2Pwmb0SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexpwm2Pwmb0SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexpwm2Pwmb0SelectInput")
@@ -1963,6 +2010,7 @@ impl Default for Flexpwm2Pwmb1SelectInput {
         Flexpwm2Pwmb1SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexpwm2Pwmb1SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexpwm2Pwmb1SelectInput")
@@ -2004,6 +2052,7 @@ impl Default for Flexpwm2Pwmb2SelectInput {
         Flexpwm2Pwmb2SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexpwm2Pwmb2SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexpwm2Pwmb2SelectInput")
@@ -2045,6 +2094,7 @@ impl Default for Flexpwm2Pwmb3SelectInput {
         Flexpwm2Pwmb3SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexpwm2Pwmb3SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexpwm2Pwmb3SelectInput")
@@ -2086,6 +2136,7 @@ impl Default for Flexpwm4Pwma0SelectInput {
         Flexpwm4Pwma0SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexpwm4Pwma0SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexpwm4Pwma0SelectInput")
@@ -2127,6 +2178,7 @@ impl Default for Flexpwm4Pwma1SelectInput {
         Flexpwm4Pwma1SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexpwm4Pwma1SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexpwm4Pwma1SelectInput")
@@ -2168,6 +2220,7 @@ impl Default for Flexpwm4Pwma2SelectInput {
         Flexpwm4Pwma2SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexpwm4Pwma2SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexpwm4Pwma2SelectInput")
@@ -2209,6 +2262,7 @@ impl Default for Flexpwm4Pwma3SelectInput {
         Flexpwm4Pwma3SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexpwm4Pwma3SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexpwm4Pwma3SelectInput")
@@ -2250,6 +2304,7 @@ impl Default for Flexspi2IppIndDqsFaSelectInput {
         Flexspi2IppIndDqsFaSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexspi2IppIndDqsFaSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexspi2IppIndDqsFaSelectInput")
@@ -2291,6 +2346,7 @@ impl Default for Flexspi2IppIndIoFaBit0SelectInput {
         Flexspi2IppIndIoFaBit0SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexspi2IppIndIoFaBit0SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexspi2IppIndIoFaBit0SelectInput")
@@ -2332,6 +2388,7 @@ impl Default for Flexspi2IppIndIoFaBit1SelectInput {
         Flexspi2IppIndIoFaBit1SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexspi2IppIndIoFaBit1SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexspi2IppIndIoFaBit1SelectInput")
@@ -2373,6 +2430,7 @@ impl Default for Flexspi2IppIndIoFaBit2SelectInput {
         Flexspi2IppIndIoFaBit2SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexspi2IppIndIoFaBit2SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexspi2IppIndIoFaBit2SelectInput")
@@ -2414,6 +2472,7 @@ impl Default for Flexspi2IppIndIoFaBit3SelectInput {
         Flexspi2IppIndIoFaBit3SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexspi2IppIndIoFaBit3SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexspi2IppIndIoFaBit3SelectInput")
@@ -2455,6 +2514,7 @@ impl Default for Flexspi2IppIndIoFbBit0SelectInput {
         Flexspi2IppIndIoFbBit0SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexspi2IppIndIoFbBit0SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexspi2IppIndIoFbBit0SelectInput")
@@ -2496,6 +2556,7 @@ impl Default for Flexspi2IppIndIoFbBit1SelectInput {
         Flexspi2IppIndIoFbBit1SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexspi2IppIndIoFbBit1SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexspi2IppIndIoFbBit1SelectInput")
@@ -2537,6 +2598,7 @@ impl Default for Flexspi2IppIndIoFbBit2SelectInput {
         Flexspi2IppIndIoFbBit2SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexspi2IppIndIoFbBit2SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexspi2IppIndIoFbBit2SelectInput")
@@ -2578,6 +2640,7 @@ impl Default for Flexspi2IppIndIoFbBit3SelectInput {
         Flexspi2IppIndIoFbBit3SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexspi2IppIndIoFbBit3SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexspi2IppIndIoFbBit3SelectInput")
@@ -2619,6 +2682,7 @@ impl Default for Flexspi2IppIndSckFaSelectInput {
         Flexspi2IppIndSckFaSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexspi2IppIndSckFaSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexspi2IppIndSckFaSelectInput")
@@ -2660,6 +2724,7 @@ impl Default for Flexspi2IppIndSckFbSelectInput {
         Flexspi2IppIndSckFbSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexspi2IppIndSckFbSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexspi2IppIndSckFbSelectInput")
@@ -2701,6 +2766,7 @@ impl Default for FlexspiaData0SelectInput {
         FlexspiaData0SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FlexspiaData0SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FlexspiaData0SelectInput")
@@ -2742,6 +2808,7 @@ impl Default for FlexspiaData1SelectInput {
         FlexspiaData1SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FlexspiaData1SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FlexspiaData1SelectInput")
@@ -2783,6 +2850,7 @@ impl Default for FlexspiaData2SelectInput {
         FlexspiaData2SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FlexspiaData2SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FlexspiaData2SelectInput")
@@ -2824,6 +2892,7 @@ impl Default for FlexspiaData3SelectInput {
         FlexspiaData3SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FlexspiaData3SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FlexspiaData3SelectInput")
@@ -2865,6 +2934,7 @@ impl Default for FlexspiaDqsSelectInput {
         FlexspiaDqsSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FlexspiaDqsSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FlexspiaDqsSelectInput")
@@ -2902,6 +2972,7 @@ impl Default for FlexspiaSckSelectInput {
         FlexspiaSckSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FlexspiaSckSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FlexspiaSckSelectInput")
@@ -2939,6 +3010,7 @@ impl Default for FlexspibData0SelectInput {
         FlexspibData0SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FlexspibData0SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FlexspibData0SelectInput")
@@ -2980,6 +3052,7 @@ impl Default for FlexspibData1SelectInput {
         FlexspibData1SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FlexspibData1SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FlexspibData1SelectInput")
@@ -3021,6 +3094,7 @@ impl Default for FlexspibData2SelectInput {
         FlexspibData2SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FlexspibData2SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FlexspibData2SelectInput")
@@ -3062,6 +3136,7 @@ impl Default for FlexspibData3SelectInput {
         FlexspibData3SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FlexspibData3SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FlexspibData3SelectInput")
@@ -3103,6 +3178,7 @@ impl Default for Gpt1IppIndCapin1SelectInput {
         Gpt1IppIndCapin1SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpt1IppIndCapin1SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpt1IppIndCapin1SelectInput")
@@ -3144,6 +3220,7 @@ impl Default for Gpt1IppIndCapin2SelectInput {
         Gpt1IppIndCapin2SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpt1IppIndCapin2SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpt1IppIndCapin2SelectInput")
@@ -3185,6 +3262,7 @@ impl Default for Gpt1IppIndClkinSelectInput {
         Gpt1IppIndClkinSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpt1IppIndClkinSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpt1IppIndClkinSelectInput")
@@ -3226,6 +3304,7 @@ impl Default for Gpt2IppIndCapin1SelectInput {
         Gpt2IppIndCapin1SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpt2IppIndCapin1SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpt2IppIndCapin1SelectInput")
@@ -3267,6 +3346,7 @@ impl Default for Gpt2IppIndCapin2SelectInput {
         Gpt2IppIndCapin2SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpt2IppIndCapin2SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpt2IppIndCapin2SelectInput")
@@ -3308,6 +3388,7 @@ impl Default for Gpt2IppIndClkinSelectInput {
         Gpt2IppIndClkinSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gpt2IppIndClkinSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gpt2IppIndClkinSelectInput")
@@ -3349,6 +3430,7 @@ impl Default for Lpi2c1SclSelectInput {
         Lpi2c1SclSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpi2c1SclSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpi2c1SclSelectInput")
@@ -3386,6 +3468,7 @@ impl Default for Lpi2c1SdaSelectInput {
         Lpi2c1SdaSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpi2c1SdaSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpi2c1SdaSelectInput")
@@ -3423,6 +3506,7 @@ impl Default for Lpi2c2SclSelectInput {
         Lpi2c2SclSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpi2c2SclSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpi2c2SclSelectInput")
@@ -3460,6 +3544,7 @@ impl Default for Lpi2c2SdaSelectInput {
         Lpi2c2SdaSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpi2c2SdaSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpi2c2SdaSelectInput")
@@ -3497,6 +3582,7 @@ impl Default for Lpi2c3SclSelectInput {
         Lpi2c3SclSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpi2c3SclSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpi2c3SclSelectInput")
@@ -3534,6 +3620,7 @@ impl Default for Lpi2c3SdaSelectInput {
         Lpi2c3SdaSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpi2c3SdaSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpi2c3SdaSelectInput")
@@ -3571,6 +3658,7 @@ impl Default for Lpi2c4SclSelectInput {
         Lpi2c4SclSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpi2c4SclSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpi2c4SclSelectInput")
@@ -3608,6 +3696,7 @@ impl Default for Lpi2c4SdaSelectInput {
         Lpi2c4SdaSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpi2c4SdaSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpi2c4SdaSelectInput")
@@ -3645,6 +3734,7 @@ impl Default for Lpspi1Pcs0SelectInput {
         Lpspi1Pcs0SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpspi1Pcs0SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpspi1Pcs0SelectInput")
@@ -3682,6 +3772,7 @@ impl Default for Lpspi1SckSelectInput {
         Lpspi1SckSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpspi1SckSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpspi1SckSelectInput")
@@ -3719,6 +3810,7 @@ impl Default for Lpspi1SdiSelectInput {
         Lpspi1SdiSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpspi1SdiSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpspi1SdiSelectInput")
@@ -3756,6 +3848,7 @@ impl Default for Lpspi1SdoSelectInput {
         Lpspi1SdoSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpspi1SdoSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpspi1SdoSelectInput")
@@ -3793,6 +3886,7 @@ impl Default for Lpspi2Pcs0SelectInput {
         Lpspi2Pcs0SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpspi2Pcs0SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpspi2Pcs0SelectInput")
@@ -3830,6 +3924,7 @@ impl Default for Lpspi2SckSelectInput {
         Lpspi2SckSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpspi2SckSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpspi2SckSelectInput")
@@ -3867,6 +3962,7 @@ impl Default for Lpspi2SdiSelectInput {
         Lpspi2SdiSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpspi2SdiSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpspi2SdiSelectInput")
@@ -3904,6 +4000,7 @@ impl Default for Lpspi2SdoSelectInput {
         Lpspi2SdoSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpspi2SdoSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpspi2SdoSelectInput")
@@ -3941,6 +4038,7 @@ impl Default for Lpspi3Pcs0SelectInput {
         Lpspi3Pcs0SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpspi3Pcs0SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpspi3Pcs0SelectInput")
@@ -3978,6 +4076,7 @@ impl Default for Lpspi3SckSelectInput {
         Lpspi3SckSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpspi3SckSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpspi3SckSelectInput")
@@ -4015,6 +4114,7 @@ impl Default for Lpspi3SdiSelectInput {
         Lpspi3SdiSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpspi3SdiSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpspi3SdiSelectInput")
@@ -4052,6 +4152,7 @@ impl Default for Lpspi3SdoSelectInput {
         Lpspi3SdoSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpspi3SdoSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpspi3SdoSelectInput")
@@ -4089,6 +4190,7 @@ impl Default for Lpspi4Pcs0SelectInput {
         Lpspi4Pcs0SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpspi4Pcs0SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpspi4Pcs0SelectInput")
@@ -4126,6 +4228,7 @@ impl Default for Lpspi4SckSelectInput {
         Lpspi4SckSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpspi4SckSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpspi4SckSelectInput")
@@ -4163,6 +4266,7 @@ impl Default for Lpspi4SdiSelectInput {
         Lpspi4SdiSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpspi4SdiSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpspi4SdiSelectInput")
@@ -4200,6 +4304,7 @@ impl Default for Lpspi4SdoSelectInput {
         Lpspi4SdoSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpspi4SdoSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpspi4SdoSelectInput")
@@ -4237,6 +4342,7 @@ impl Default for Lpuart2RxSelectInput {
         Lpuart2RxSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpuart2RxSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpuart2RxSelectInput")
@@ -4274,6 +4380,7 @@ impl Default for Lpuart2TxSelectInput {
         Lpuart2TxSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpuart2TxSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpuart2TxSelectInput")
@@ -4311,6 +4418,7 @@ impl Default for Lpuart3CtsBSelectInput {
         Lpuart3CtsBSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpuart3CtsBSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpuart3CtsBSelectInput")
@@ -4348,6 +4456,7 @@ impl Default for Lpuart3RxSelectInput {
         Lpuart3RxSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpuart3RxSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpuart3RxSelectInput")
@@ -4385,6 +4494,7 @@ impl Default for Lpuart3TxSelectInput {
         Lpuart3TxSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpuart3TxSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpuart3TxSelectInput")
@@ -4422,6 +4532,7 @@ impl Default for Lpuart4RxSelectInput {
         Lpuart4RxSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpuart4RxSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpuart4RxSelectInput")
@@ -4459,6 +4570,7 @@ impl Default for Lpuart4TxSelectInput {
         Lpuart4TxSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpuart4TxSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpuart4TxSelectInput")
@@ -4496,6 +4608,7 @@ impl Default for Lpuart5RxSelectInput {
         Lpuart5RxSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpuart5RxSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpuart5RxSelectInput")
@@ -4533,6 +4646,7 @@ impl Default for Lpuart5TxSelectInput {
         Lpuart5TxSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpuart5TxSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpuart5TxSelectInput")
@@ -4570,6 +4684,7 @@ impl Default for Lpuart6RxSelectInput {
         Lpuart6RxSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpuart6RxSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpuart6RxSelectInput")
@@ -4607,6 +4722,7 @@ impl Default for Lpuart6TxSelectInput {
         Lpuart6TxSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpuart6TxSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpuart6TxSelectInput")
@@ -4644,6 +4760,7 @@ impl Default for Lpuart7RxSelectInput {
         Lpuart7RxSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpuart7RxSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpuart7RxSelectInput")
@@ -4681,6 +4798,7 @@ impl Default for Lpuart7TxSelectInput {
         Lpuart7TxSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpuart7TxSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpuart7TxSelectInput")
@@ -4718,6 +4836,7 @@ impl Default for Lpuart8RxSelectInput {
         Lpuart8RxSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpuart8RxSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpuart8RxSelectInput")
@@ -4755,6 +4874,7 @@ impl Default for Lpuart8TxSelectInput {
         Lpuart8TxSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lpuart8TxSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lpuart8TxSelectInput")
@@ -4804,6 +4924,7 @@ impl Default for MuxCtl {
         MuxCtl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MuxCtl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MuxCtl")
@@ -4847,6 +4968,7 @@ impl Default for NmiSelectInput {
         NmiSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for NmiSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("NmiSelectInput")
@@ -4884,6 +5006,7 @@ impl Default for Qtimer2Timer0SelectInput {
         Qtimer2Timer0SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Qtimer2Timer0SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Qtimer2Timer0SelectInput")
@@ -4925,6 +5048,7 @@ impl Default for Qtimer2Timer1SelectInput {
         Qtimer2Timer1SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Qtimer2Timer1SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Qtimer2Timer1SelectInput")
@@ -4966,6 +5090,7 @@ impl Default for Qtimer2Timer2SelectInput {
         Qtimer2Timer2SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Qtimer2Timer2SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Qtimer2Timer2SelectInput")
@@ -5007,6 +5132,7 @@ impl Default for Qtimer2Timer3SelectInput {
         Qtimer2Timer3SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Qtimer2Timer3SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Qtimer2Timer3SelectInput")
@@ -5048,6 +5174,7 @@ impl Default for Qtimer3Timer0SelectInput {
         Qtimer3Timer0SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Qtimer3Timer0SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Qtimer3Timer0SelectInput")
@@ -5089,6 +5216,7 @@ impl Default for Qtimer3Timer1SelectInput {
         Qtimer3Timer1SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Qtimer3Timer1SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Qtimer3Timer1SelectInput")
@@ -5130,6 +5258,7 @@ impl Default for Qtimer3Timer2SelectInput {
         Qtimer3Timer2SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Qtimer3Timer2SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Qtimer3Timer2SelectInput")
@@ -5171,6 +5300,7 @@ impl Default for Qtimer3Timer3SelectInput {
         Qtimer3Timer3SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Qtimer3Timer3SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Qtimer3Timer3SelectInput")
@@ -5212,6 +5342,7 @@ impl Default for Sai1Mclk2SelectInput {
         Sai1Mclk2SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sai1Mclk2SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sai1Mclk2SelectInput")
@@ -5249,6 +5380,7 @@ impl Default for Sai1RxBclkSelectInput {
         Sai1RxBclkSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sai1RxBclkSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sai1RxBclkSelectInput")
@@ -5286,6 +5418,7 @@ impl Default for Sai1RxData0SelectInput {
         Sai1RxData0SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sai1RxData0SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sai1RxData0SelectInput")
@@ -5323,6 +5456,7 @@ impl Default for Sai1RxData1SelectInput {
         Sai1RxData1SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sai1RxData1SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sai1RxData1SelectInput")
@@ -5360,6 +5494,7 @@ impl Default for Sai1RxData2SelectInput {
         Sai1RxData2SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sai1RxData2SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sai1RxData2SelectInput")
@@ -5397,6 +5532,7 @@ impl Default for Sai1RxData3SelectInput {
         Sai1RxData3SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sai1RxData3SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sai1RxData3SelectInput")
@@ -5434,6 +5570,7 @@ impl Default for Sai1RxSyncSelectInput {
         Sai1RxSyncSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sai1RxSyncSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sai1RxSyncSelectInput")
@@ -5471,6 +5608,7 @@ impl Default for Sai1TxBclkSelectInput {
         Sai1TxBclkSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sai1TxBclkSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sai1TxBclkSelectInput")
@@ -5508,6 +5646,7 @@ impl Default for Sai1TxSyncSelectInput {
         Sai1TxSyncSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sai1TxSyncSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sai1TxSyncSelectInput")
@@ -5545,6 +5684,7 @@ impl Default for Sai2Mclk2SelectInput {
         Sai2Mclk2SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sai2Mclk2SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sai2Mclk2SelectInput")
@@ -5582,6 +5722,7 @@ impl Default for Sai2RxBclkSelectInput {
         Sai2RxBclkSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sai2RxBclkSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sai2RxBclkSelectInput")
@@ -5619,6 +5760,7 @@ impl Default for Sai2RxData0SelectInput {
         Sai2RxData0SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sai2RxData0SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sai2RxData0SelectInput")
@@ -5656,6 +5798,7 @@ impl Default for Sai2RxSyncSelectInput {
         Sai2RxSyncSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sai2RxSyncSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sai2RxSyncSelectInput")
@@ -5693,6 +5836,7 @@ impl Default for Sai2TxBclkSelectInput {
         Sai2TxBclkSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sai2TxBclkSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sai2TxBclkSelectInput")
@@ -5730,6 +5874,7 @@ impl Default for Sai2TxSyncSelectInput {
         Sai2TxSyncSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sai2TxSyncSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sai2TxSyncSelectInput")
@@ -5767,6 +5912,7 @@ impl Default for Sai3IpgClkSaiMclkSelectInput2 {
         Sai3IpgClkSaiMclkSelectInput2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sai3IpgClkSaiMclkSelectInput2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sai3IpgClkSaiMclkSelectInput2")
@@ -5808,6 +5954,7 @@ impl Default for Sai3IppIndSaiRxbclkSelectInput {
         Sai3IppIndSaiRxbclkSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sai3IppIndSaiRxbclkSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sai3IppIndSaiRxbclkSelectInput")
@@ -5849,6 +5996,7 @@ impl Default for Sai3IppIndSaiRxdataSelectInput0 {
         Sai3IppIndSaiRxdataSelectInput0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sai3IppIndSaiRxdataSelectInput0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sai3IppIndSaiRxdataSelectInput0")
@@ -5890,6 +6038,7 @@ impl Default for Sai3IppIndSaiRxsyncSelectInput {
         Sai3IppIndSaiRxsyncSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sai3IppIndSaiRxsyncSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sai3IppIndSaiRxsyncSelectInput")
@@ -5931,6 +6080,7 @@ impl Default for Sai3IppIndSaiTxbclkSelectInput {
         Sai3IppIndSaiTxbclkSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sai3IppIndSaiTxbclkSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sai3IppIndSaiTxbclkSelectInput")
@@ -5972,6 +6122,7 @@ impl Default for Sai3IppIndSaiTxsyncSelectInput {
         Sai3IppIndSaiTxsyncSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sai3IppIndSaiTxsyncSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sai3IppIndSaiTxsyncSelectInput")
@@ -6013,6 +6164,7 @@ impl Default for SemcIIppIndDqs4SelectInput {
         SemcIIppIndDqs4SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SemcIIppIndDqs4SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SemcIIppIndDqs4SelectInput")
@@ -6054,6 +6206,7 @@ impl Default for SpdifInSelectInput {
         SpdifInSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SpdifInSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SpdifInSelectInput")
@@ -6091,6 +6244,7 @@ impl Default for UsbOtg1OcSelectInput {
         UsbOtg1OcSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UsbOtg1OcSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UsbOtg1OcSelectInput")
@@ -6128,6 +6282,7 @@ impl Default for UsbOtg2OcSelectInput {
         UsbOtg2OcSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UsbOtg2OcSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UsbOtg2OcSelectInput")
@@ -6165,6 +6320,7 @@ impl Default for Usdhc1CdBSelectInput {
         Usdhc1CdBSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Usdhc1CdBSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Usdhc1CdBSelectInput")
@@ -6202,6 +6358,7 @@ impl Default for Usdhc1WpSelectInput {
         Usdhc1WpSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Usdhc1WpSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Usdhc1WpSelectInput")
@@ -6239,6 +6396,7 @@ impl Default for Usdhc2CdBSelectInput {
         Usdhc2CdBSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Usdhc2CdBSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Usdhc2CdBSelectInput")
@@ -6276,6 +6434,7 @@ impl Default for Usdhc2ClkSelectInput {
         Usdhc2ClkSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Usdhc2ClkSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Usdhc2ClkSelectInput")
@@ -6313,6 +6472,7 @@ impl Default for Usdhc2CmdSelectInput {
         Usdhc2CmdSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Usdhc2CmdSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Usdhc2CmdSelectInput")
@@ -6350,6 +6510,7 @@ impl Default for Usdhc2Data0SelectInput {
         Usdhc2Data0SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Usdhc2Data0SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Usdhc2Data0SelectInput")
@@ -6387,6 +6548,7 @@ impl Default for Usdhc2Data1SelectInput {
         Usdhc2Data1SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Usdhc2Data1SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Usdhc2Data1SelectInput")
@@ -6424,6 +6586,7 @@ impl Default for Usdhc2Data2SelectInput {
         Usdhc2Data2SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Usdhc2Data2SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Usdhc2Data2SelectInput")
@@ -6461,6 +6624,7 @@ impl Default for Usdhc2Data3SelectInput {
         Usdhc2Data3SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Usdhc2Data3SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Usdhc2Data3SelectInput")
@@ -6498,6 +6662,7 @@ impl Default for Usdhc2Data4SelectInput {
         Usdhc2Data4SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Usdhc2Data4SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Usdhc2Data4SelectInput")
@@ -6535,6 +6700,7 @@ impl Default for Usdhc2Data5SelectInput {
         Usdhc2Data5SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Usdhc2Data5SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Usdhc2Data5SelectInput")
@@ -6572,6 +6738,7 @@ impl Default for Usdhc2Data6SelectInput {
         Usdhc2Data6SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Usdhc2Data6SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Usdhc2Data6SelectInput")
@@ -6609,6 +6776,7 @@ impl Default for Usdhc2Data7SelectInput {
         Usdhc2Data7SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Usdhc2Data7SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Usdhc2Data7SelectInput")
@@ -6646,6 +6814,7 @@ impl Default for Usdhc2WpSelectInput {
         Usdhc2WpSelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Usdhc2WpSelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Usdhc2WpSelectInput")
@@ -6683,6 +6852,7 @@ impl Default for Xbar1In02SelectInput {
         Xbar1In02SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Xbar1In02SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Xbar1In02SelectInput")
@@ -6720,6 +6890,7 @@ impl Default for Xbar1In03SelectInput {
         Xbar1In03SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Xbar1In03SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Xbar1In03SelectInput")
@@ -6757,6 +6928,7 @@ impl Default for Xbar1In04SelectInput {
         Xbar1In04SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Xbar1In04SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Xbar1In04SelectInput")
@@ -6794,6 +6966,7 @@ impl Default for Xbar1In05SelectInput {
         Xbar1In05SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Xbar1In05SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Xbar1In05SelectInput")
@@ -6831,6 +7004,7 @@ impl Default for Xbar1In06SelectInput {
         Xbar1In06SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Xbar1In06SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Xbar1In06SelectInput")
@@ -6868,6 +7042,7 @@ impl Default for Xbar1In07SelectInput {
         Xbar1In07SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Xbar1In07SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Xbar1In07SelectInput")
@@ -6905,6 +7080,7 @@ impl Default for Xbar1In08SelectInput {
         Xbar1In08SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Xbar1In08SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Xbar1In08SelectInput")
@@ -6942,6 +7118,7 @@ impl Default for Xbar1In09SelectInput {
         Xbar1In09SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Xbar1In09SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Xbar1In09SelectInput")
@@ -6979,6 +7156,7 @@ impl Default for Xbar1In14SelectInput {
         Xbar1In14SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Xbar1In14SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Xbar1In14SelectInput")
@@ -7016,6 +7194,7 @@ impl Default for Xbar1In15SelectInput {
         Xbar1In15SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Xbar1In15SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Xbar1In15SelectInput")
@@ -7053,6 +7232,7 @@ impl Default for Xbar1In16SelectInput {
         Xbar1In16SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Xbar1In16SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Xbar1In16SelectInput")
@@ -7090,6 +7270,7 @@ impl Default for Xbar1In17SelectInput {
         Xbar1In17SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Xbar1In17SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Xbar1In17SelectInput")
@@ -7127,6 +7308,7 @@ impl Default for Xbar1In18SelectInput {
         Xbar1In18SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Xbar1In18SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Xbar1In18SelectInput")
@@ -7164,6 +7346,7 @@ impl Default for Xbar1In19SelectInput {
         Xbar1In19SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Xbar1In19SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Xbar1In19SelectInput")
@@ -7201,6 +7384,7 @@ impl Default for Xbar1In20SelectInput {
         Xbar1In20SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Xbar1In20SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Xbar1In20SelectInput")
@@ -7238,6 +7422,7 @@ impl Default for Xbar1In21SelectInput {
         Xbar1In21SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Xbar1In21SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Xbar1In21SelectInput")
@@ -7275,6 +7460,7 @@ impl Default for Xbar1In22SelectInput {
         Xbar1In22SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Xbar1In22SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Xbar1In22SelectInput")
@@ -7312,6 +7498,7 @@ impl Default for Xbar1In23SelectInput {
         Xbar1In23SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Xbar1In23SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Xbar1In23SelectInput")
@@ -7349,6 +7536,7 @@ impl Default for Xbar1In24SelectInput {
         Xbar1In24SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Xbar1In24SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Xbar1In24SelectInput")
@@ -7386,6 +7574,7 @@ impl Default for Xbar1In25SelectInput {
         Xbar1In25SelectInput(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Xbar1In25SelectInput {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Xbar1In25SelectInput")

@@ -202,6 +202,7 @@ impl Default for Misc0 {
         Misc0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Misc0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Misc0")
@@ -453,6 +454,7 @@ impl Default for Misc0Clr {
         Misc0Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Misc0Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Misc0Clr")
@@ -704,6 +706,7 @@ impl Default for Misc0Set {
         Misc0Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Misc0Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Misc0Set")
@@ -955,6 +958,7 @@ impl Default for Misc0Tog {
         Misc0Tog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Misc0Tog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Misc0Tog")
@@ -1170,6 +1174,7 @@ impl Default for Misc1 {
         Misc1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Misc1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Misc1")
@@ -1379,6 +1384,7 @@ impl Default for Misc1Clr {
         Misc1Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Misc1Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Misc1Clr")
@@ -1588,6 +1594,7 @@ impl Default for Misc1Set {
         Misc1Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Misc1Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Misc1Set")
@@ -1797,6 +1804,7 @@ impl Default for Misc1Tog {
         Misc1Tog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Misc1Tog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Misc1Tog")
@@ -2054,6 +2062,7 @@ impl Default for Misc2 {
         Misc2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Misc2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Misc2")
@@ -2319,6 +2328,7 @@ impl Default for Misc2Clr {
         Misc2Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Misc2Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Misc2Clr")
@@ -2584,6 +2594,7 @@ impl Default for Misc2Set {
         Misc2Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Misc2Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Misc2Set")
@@ -2849,6 +2860,7 @@ impl Default for Misc2Tog {
         Misc2Tog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Misc2Tog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Misc2Tog")
@@ -3030,6 +3042,7 @@ impl Default for Reg1p1 {
         Reg1p1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Reg1p1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Reg1p1")
@@ -3197,6 +3210,7 @@ impl Default for Reg1p1Clr {
         Reg1p1Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Reg1p1Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Reg1p1Clr")
@@ -3364,6 +3378,7 @@ impl Default for Reg1p1Set {
         Reg1p1Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Reg1p1Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Reg1p1Set")
@@ -3531,6 +3546,7 @@ impl Default for Reg1p1Tog {
         Reg1p1Tog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Reg1p1Tog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Reg1p1Tog")
@@ -3686,6 +3702,7 @@ impl Default for Reg2p5 {
         Reg2p5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Reg2p5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Reg2p5")
@@ -3839,6 +3856,7 @@ impl Default for Reg2p5Clr {
         Reg2p5Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Reg2p5Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Reg2p5Clr")
@@ -3992,6 +4010,7 @@ impl Default for Reg2p5Set {
         Reg2p5Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Reg2p5Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Reg2p5Set")
@@ -4145,6 +4164,7 @@ impl Default for Reg2p5Tog {
         Reg2p5Tog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Reg2p5Tog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Reg2p5Tog")
@@ -4286,6 +4306,7 @@ impl Default for Reg3p0 {
         Reg3p0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Reg3p0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Reg3p0")
@@ -4425,6 +4446,7 @@ impl Default for Reg3p0Clr {
         Reg3p0Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Reg3p0Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Reg3p0Clr")
@@ -4564,6 +4586,7 @@ impl Default for Reg3p0Set {
         Reg3p0Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Reg3p0Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Reg3p0Set")
@@ -4703,6 +4726,7 @@ impl Default for Reg3p0Tog {
         Reg3p0Tog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Reg3p0Tog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Reg3p0Tog")
@@ -4842,6 +4866,7 @@ impl Default for RegCore {
         RegCore(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for RegCore {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RegCore")
@@ -4981,6 +5006,7 @@ impl Default for RegCoreClr {
         RegCoreClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for RegCoreClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RegCoreClr")
@@ -5120,6 +5146,7 @@ impl Default for RegCoreSet {
         RegCoreSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for RegCoreSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RegCoreSet")
@@ -5259,6 +5286,7 @@ impl Default for RegCoreTog {
         RegCoreTog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for RegCoreTog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RegCoreTog")

@@ -58,6 +58,7 @@ impl Default for Adc0clkdiv {
         Adc0clkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Adc0clkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Adc0clkdiv")
@@ -105,6 +106,7 @@ impl Default for Adc0clksel {
         Adc0clksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Adc0clksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Adc0clksel")
@@ -178,6 +180,7 @@ impl Default for Adc1clkdiv {
         Adc1clkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Adc1clkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Adc1clkdiv")
@@ -225,6 +228,7 @@ impl Default for Adc1clksel {
         Adc1clksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Adc1clksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Adc1clksel")
@@ -586,6 +590,7 @@ impl Default for Ahbclkctrl0 {
         Ahbclkctrl0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ahbclkctrl0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ahbclkctrl0")
@@ -1005,6 +1010,7 @@ impl Default for Ahbclkctrl1 {
         Ahbclkctrl1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ahbclkctrl1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ahbclkctrl1")
@@ -1364,6 +1370,7 @@ impl Default for Ahbclkctrl2 {
         Ahbclkctrl2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ahbclkctrl2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ahbclkctrl2")
@@ -1725,6 +1732,7 @@ impl Default for Ahbclkctrl3 {
         Ahbclkctrl3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ahbclkctrl3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ahbclkctrl3")
@@ -1812,6 +1820,7 @@ impl Default for Ahbclkctrlclr {
         Ahbclkctrlclr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ahbclkctrlclr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ahbclkctrlclr")
@@ -1849,6 +1858,7 @@ impl Default for Ahbclkctrlset {
         Ahbclkctrlset(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ahbclkctrlset {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ahbclkctrlset")
@@ -1898,6 +1908,7 @@ impl Default for Ahbclkdiv {
         Ahbclkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ahbclkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ahbclkdiv")
@@ -2109,6 +2120,7 @@ impl Default for Ahbmatprio {
         Ahbmatprio(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ahbmatprio {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ahbmatprio")
@@ -2256,6 +2268,7 @@ impl Default for Autoclkgateoverride {
         Autoclkgateoverride(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Autoclkgateoverride {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Autoclkgateoverride")
@@ -2321,6 +2334,7 @@ impl Default for Autoclkgateoverridec {
         Autoclkgateoverridec(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Autoclkgateoverridec {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Autoclkgateoverridec")
@@ -2364,6 +2378,7 @@ impl Default for BinaryCodeLsb {
         BinaryCodeLsb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for BinaryCodeLsb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BinaryCodeLsb")
@@ -2405,6 +2420,7 @@ impl Default for BinaryCodeMsb {
         BinaryCodeMsb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for BinaryCodeMsb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BinaryCodeMsb")
@@ -2458,6 +2474,7 @@ impl Default for ClkoutFrgctrl {
         ClkoutFrgctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ClkoutFrgctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ClkoutFrgctrl")
@@ -2537,6 +2554,7 @@ impl Default for Clkoutdiv {
         Clkoutdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Clkoutdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Clkoutdiv")
@@ -2584,6 +2602,7 @@ impl Default for Clkoutsel {
         Clkoutsel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Clkoutsel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Clkoutsel")
@@ -2621,6 +2640,7 @@ impl Default for Clkunlock {
         Clkunlock(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Clkunlock {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Clkunlock")
@@ -2730,6 +2750,7 @@ impl Default for ClockCtrl {
         ClockCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ClockCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ClockCtrl")
@@ -2819,6 +2840,7 @@ impl Default for Cmp0fclkdiv {
         Cmp0fclkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmp0fclkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmp0fclkdiv")
@@ -2866,6 +2888,7 @@ impl Default for Cmp0fclksel {
         Cmp0fclksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmp0fclksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmp0fclksel")
@@ -2939,6 +2962,7 @@ impl Default for Cmp0rrclkdiv {
         Cmp0rrclkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmp0rrclkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmp0rrclkdiv")
@@ -2986,6 +3010,7 @@ impl Default for Cmp0rrclksel {
         Cmp0rrclksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmp0rrclksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmp0rrclksel")
@@ -3059,6 +3084,7 @@ impl Default for Cmp1fclkdiv {
         Cmp1fclkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmp1fclkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmp1fclkdiv")
@@ -3106,6 +3132,7 @@ impl Default for Cmp1fclksel {
         Cmp1fclksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmp1fclksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmp1fclksel")
@@ -3179,6 +3206,7 @@ impl Default for Cmp1rrclkdiv {
         Cmp1rrclkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmp1rrclkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmp1rrclkdiv")
@@ -3226,6 +3254,7 @@ impl Default for Cmp1rrclksel {
         Cmp1rrclksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmp1rrclksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmp1rrclksel")
@@ -3299,6 +3328,7 @@ impl Default for Cmp2fclkdiv {
         Cmp2fclkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmp2fclkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmp2fclkdiv")
@@ -3346,6 +3376,7 @@ impl Default for Cmp2fclksel {
         Cmp2fclksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmp2fclksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmp2fclksel")
@@ -3419,6 +3450,7 @@ impl Default for Cmp2rrclkdiv {
         Cmp2rrclkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmp2rrclkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmp2rrclkdiv")
@@ -3466,6 +3498,7 @@ impl Default for Cmp2rrclksel {
         Cmp2rrclksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cmp2rrclksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cmp2rrclksel")
@@ -3503,6 +3536,7 @@ impl Default for Cpboot {
         Cpboot(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cpboot {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cpboot")
@@ -3564,6 +3598,7 @@ impl Default for Cpu0nstckcal {
         Cpu0nstckcal(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cpu0nstckcal {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cpu0nstckcal")
@@ -3633,6 +3668,7 @@ impl Default for Cpu0stckcal {
         Cpu0stckcal(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cpu0stckcal {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cpu0stckcal")
@@ -3702,6 +3738,7 @@ impl Default for Cpu1stckcal {
         Cpu1stckcal(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cpu1stckcal {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cpu1stckcal")
@@ -3771,6 +3808,7 @@ impl Default for Cpuctrl {
         Cpuctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cpuctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cpuctrl")
@@ -3852,6 +3890,7 @@ impl Default for Cpustat {
         Cpustat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cpustat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cpustat")
@@ -3935,6 +3974,7 @@ impl Default for Ctimerclkdiv {
         Ctimerclkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctimerclkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctimerclkdiv")
@@ -3982,6 +4022,7 @@ impl Default for Ctimerclksel {
         Ctimerclksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctimerclksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctimerclksel")
@@ -4067,6 +4108,7 @@ impl Default for Ctimerglobalstarten {
         Ctimerglobalstarten(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctimerglobalstarten {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctimerglobalstarten")
@@ -4152,6 +4194,7 @@ impl Default for Dac0clkdiv {
         Dac0clkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dac0clkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dac0clkdiv")
@@ -4199,6 +4242,7 @@ impl Default for Dac0clksel {
         Dac0clksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dac0clksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dac0clksel")
@@ -4272,6 +4316,7 @@ impl Default for Dac1clkdiv {
         Dac1clkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dac1clkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dac1clkdiv")
@@ -4319,6 +4364,7 @@ impl Default for Dac1clksel {
         Dac1clksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dac1clksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dac1clksel")
@@ -4392,6 +4438,7 @@ impl Default for Dac2clkdiv {
         Dac2clkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dac2clkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dac2clkdiv")
@@ -4439,6 +4486,7 @@ impl Default for Dac2clksel {
         Dac2clksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dac2clksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dac2clksel")
@@ -4476,6 +4524,7 @@ impl Default for DebugAuthBeacon {
         DebugAuthBeacon(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DebugAuthBeacon {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DebugAuthBeacon")
@@ -4585,6 +4634,7 @@ impl Default for DebugFeatures {
         DebugFeatures(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DebugFeatures {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DebugFeatures")
@@ -4710,6 +4760,7 @@ impl Default for DebugFeaturesDp {
         DebugFeaturesDp(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DebugFeaturesDp {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DebugFeaturesDp")
@@ -4763,6 +4814,7 @@ impl Default for DebugLockEn {
         DebugLockEn(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DebugLockEn {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DebugLockEn")
@@ -4800,6 +4852,7 @@ impl Default for DeviceId0 {
         DeviceId0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DeviceId0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DeviceId0")
@@ -4841,6 +4894,7 @@ impl Default for DeviceType {
         DeviceType(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DeviceType {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DeviceType")
@@ -4906,6 +4960,7 @@ impl Default for Dieid {
         Dieid(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dieid {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dieid")
@@ -4987,6 +5042,7 @@ impl Default for EccEnableCtrl {
         EccEnableCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EccEnableCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EccEnableCtrl")
@@ -5202,6 +5258,7 @@ impl Default for ElsAsBootLog0 {
         ElsAsBootLog0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ElsAsBootLog0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ElsAsBootLog0")
@@ -5295,6 +5352,7 @@ impl Default for ElsAsBootLog1 {
         ElsAsBootLog1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ElsAsBootLog1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ElsAsBootLog1")
@@ -5388,6 +5446,7 @@ impl Default for ElsAsBootLog2 {
         ElsAsBootLog2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ElsAsBootLog2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ElsAsBootLog2")
@@ -5449,6 +5508,7 @@ impl Default for ElsAsBootLog3 {
         ElsAsBootLog3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ElsAsBootLog3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ElsAsBootLog3")
@@ -5732,6 +5792,7 @@ impl Default for ElsAsCfg0 {
         ElsAsCfg0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ElsAsCfg0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ElsAsCfg0")
@@ -6056,6 +6117,7 @@ impl Default for ElsAsCfg1 {
         ElsAsCfg1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ElsAsCfg1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ElsAsCfg1")
@@ -6145,6 +6207,7 @@ impl Default for ElsAsCfg2 {
         ElsAsCfg2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ElsAsCfg2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ElsAsCfg2")
@@ -6186,6 +6249,7 @@ impl Default for ElsAsCfg3 {
         ElsAsCfg3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ElsAsCfg3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ElsAsCfg3")
@@ -6539,6 +6603,7 @@ impl Default for ElsAsFlag0 {
         ElsAsFlag0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ElsAsFlag0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ElsAsFlag0")
@@ -6680,6 +6745,7 @@ impl Default for ElsAsFlag1 {
         ElsAsFlag1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ElsAsFlag1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ElsAsFlag1")
@@ -6893,6 +6959,7 @@ impl Default for ElsAsSt0 {
         ElsAsSt0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ElsAsSt0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ElsAsSt0")
@@ -7058,6 +7125,7 @@ impl Default for ElsAsSt1 {
         ElsAsSt1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ElsAsSt1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ElsAsSt1")
@@ -7115,6 +7183,7 @@ impl Default for ElsAssetProt {
         ElsAssetProt(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ElsAssetProt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ElsAssetProt")
@@ -7156,6 +7225,7 @@ impl Default for ElsKdfMask {
         ElsKdfMask(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ElsKdfMask {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ElsKdfMask")
@@ -7193,6 +7263,7 @@ impl Default for ElsLockCtrl {
         ElsLockCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ElsLockCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ElsLockCtrl")
@@ -7230,6 +7301,7 @@ impl Default for ElsLockCtrlDp {
         ElsLockCtrlDp(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ElsLockCtrlDp {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ElsLockCtrlDp")
@@ -7271,6 +7343,7 @@ impl Default for ElsOtpLcState {
         ElsOtpLcState(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ElsOtpLcState {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ElsOtpLcState")
@@ -7312,6 +7385,7 @@ impl Default for ElsOtpLcStateDp {
         ElsOtpLcStateDp(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ElsOtpLcStateDp {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ElsOtpLcStateDp")
@@ -7353,6 +7427,7 @@ impl Default for ElsTemporalState {
         ElsTemporalState(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ElsTemporalState {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ElsTemporalState")
@@ -7430,6 +7505,7 @@ impl Default for Emvsim0clkdiv {
         Emvsim0clkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Emvsim0clkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Emvsim0clkdiv")
@@ -7477,6 +7553,7 @@ impl Default for Emvsim0clksel {
         Emvsim0clksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Emvsim0clksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Emvsim0clksel")
@@ -7550,6 +7627,7 @@ impl Default for Emvsim1clkdiv {
         Emvsim1clkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Emvsim1clkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Emvsim1clkdiv")
@@ -7597,6 +7675,7 @@ impl Default for Emvsim1clksel {
         Emvsim1clksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Emvsim1clksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Emvsim1clksel")
@@ -7634,6 +7713,7 @@ impl Default for EnetPhyIntfSel {
         EnetPhyIntfSel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EnetPhyIntfSel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EnetPhyIntfSel")
@@ -7683,6 +7763,7 @@ impl Default for EnetSbdFlowCtrl {
         EnetSbdFlowCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EnetSbdFlowCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EnetSbdFlowCtrl")
@@ -7762,6 +7843,7 @@ impl Default for Enetptprefclkdiv {
         Enetptprefclkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Enetptprefclkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Enetptprefclkdiv")
@@ -7809,6 +7891,7 @@ impl Default for Enetptprefclksel {
         Enetptprefclksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Enetptprefclksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Enetptprefclksel")
@@ -7882,6 +7965,7 @@ impl Default for Enetrmiiclkdiv {
         Enetrmiiclkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Enetrmiiclkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Enetrmiiclkdiv")
@@ -7929,6 +8013,7 @@ impl Default for Enetrmiiclksel {
         Enetrmiiclksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Enetrmiiclksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Enetrmiiclksel")
@@ -7990,6 +8075,7 @@ impl Default for EtbCounterCtrl {
         EtbCounterCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EtbCounterCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EtbCounterCtrl")
@@ -8035,6 +8121,7 @@ impl Default for EtbCounterReload {
         EtbCounterReload(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EtbCounterReload {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EtbCounterReload")
@@ -8072,6 +8159,7 @@ impl Default for EtbCounterValue {
         EtbCounterValue(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EtbCounterValue {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EtbCounterValue")
@@ -8137,6 +8225,7 @@ impl Default for EtbStatus {
         EtbStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EtbStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EtbStatus")
@@ -8182,6 +8271,7 @@ impl Default for Ewm0clksel {
         Ewm0clksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ewm0clksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ewm0clksel")
@@ -8219,6 +8309,7 @@ impl Default for Fcclksel {
         Fcclksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fcclksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fcclksel")
@@ -8292,6 +8383,7 @@ impl Default for FlexSpiclkdiv {
         FlexSpiclkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FlexSpiclkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FlexSpiclkdiv")
@@ -8339,6 +8431,7 @@ impl Default for FlexSpiclksel {
         FlexSpiclksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FlexSpiclksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FlexSpiclksel")
@@ -8412,6 +8505,7 @@ impl Default for Flexcan0clkdiv {
         Flexcan0clkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexcan0clkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexcan0clkdiv")
@@ -8459,6 +8553,7 @@ impl Default for Flexcan0clksel {
         Flexcan0clksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexcan0clksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexcan0clksel")
@@ -8532,6 +8627,7 @@ impl Default for Flexcan1clkdiv {
         Flexcan1clkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexcan1clkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexcan1clkdiv")
@@ -8579,6 +8675,7 @@ impl Default for Flexcan1clksel {
         Flexcan1clksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexcan1clksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexcan1clksel")
@@ -8652,6 +8749,7 @@ impl Default for Flexcommclkdiv {
         Flexcommclkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexcommclkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexcommclkdiv")
@@ -8735,6 +8833,7 @@ impl Default for Flexioclkdiv {
         Flexioclkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexioclkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexioclkdiv")
@@ -8782,6 +8881,7 @@ impl Default for Flexioclksel {
         Flexioclksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexioclksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexioclksel")
@@ -8843,6 +8943,7 @@ impl Default for Frohfdiv {
         Frohfdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Frohfdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Frohfdiv")
@@ -8960,6 +9061,7 @@ impl Default for GdetCtrl {
         GdetCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for GdetCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GdetCtrl")
@@ -9013,6 +9115,7 @@ impl Default for GrayCodeLsb {
         GrayCodeLsb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for GrayCodeLsb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GrayCodeLsb")
@@ -9054,6 +9157,7 @@ impl Default for GrayCodeMsb {
         GrayCodeMsb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for GrayCodeMsb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GrayCodeMsb")
@@ -9131,6 +9235,7 @@ impl Default for I3c0fclkdiv {
         I3c0fclkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for I3c0fclkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I3c0fclkdiv")
@@ -9214,6 +9319,7 @@ impl Default for I3c0fclksdiv {
         I3c0fclksdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for I3c0fclksdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I3c0fclksdiv")
@@ -9261,6 +9367,7 @@ impl Default for I3c0fclksel {
         I3c0fclksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for I3c0fclksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I3c0fclksel")
@@ -9298,6 +9405,7 @@ impl Default for I3c0fclkssel {
         I3c0fclkssel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for I3c0fclkssel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I3c0fclkssel")
@@ -9371,6 +9479,7 @@ impl Default for I3c0fclkstcdiv {
         I3c0fclkstcdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for I3c0fclkstcdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I3c0fclkstcdiv")
@@ -9418,6 +9527,7 @@ impl Default for I3c0fclkstcsel {
         I3c0fclkstcsel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for I3c0fclkstcsel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I3c0fclkstcsel")
@@ -9491,6 +9601,7 @@ impl Default for I3c1fclkdiv {
         I3c1fclkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for I3c1fclkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I3c1fclkdiv")
@@ -9574,6 +9685,7 @@ impl Default for I3c1fclksdiv {
         I3c1fclksdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for I3c1fclksdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I3c1fclksdiv")
@@ -9621,6 +9733,7 @@ impl Default for I3c1fclksel {
         I3c1fclksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for I3c1fclksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I3c1fclksel")
@@ -9658,6 +9771,7 @@ impl Default for I3c1fclkssel {
         I3c1fclkssel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for I3c1fclkssel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I3c1fclkssel")
@@ -9731,6 +9845,7 @@ impl Default for I3c1fclkstcdiv {
         I3c1fclkstcdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for I3c1fclkstcdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I3c1fclkstcdiv")
@@ -9778,6 +9893,7 @@ impl Default for I3c1fclkstcsel {
         I3c1fclkstcsel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for I3c1fclkstcsel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I3c1fclkstcsel")
@@ -9815,6 +9931,7 @@ impl Default for JtagId {
         JtagId(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for JtagId {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("JtagId")
@@ -9888,6 +10005,7 @@ impl Default for KeyRetainCtrl {
         KeyRetainCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for KeyRetainCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("KeyRetainCtrl")
@@ -10019,6 +10137,7 @@ impl Default for LpcacCtrl {
         LpcacCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for LpcacCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LpcacCtrl")
@@ -10110,6 +10229,7 @@ impl Default for Micfilfclkdiv {
         Micfilfclkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Micfilfclkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Micfilfclkdiv")
@@ -10157,6 +10277,7 @@ impl Default for Micfilfclksel {
         Micfilfclksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Micfilfclksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Micfilfclksel")
@@ -10230,6 +10351,7 @@ impl Default for Nmisrc {
         Nmisrc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Nmisrc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Nmisrc")
@@ -10373,6 +10495,7 @@ impl Default for NvmCtrl {
         NvmCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for NvmCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("NvmCtrl")
@@ -10430,6 +10553,7 @@ impl Default for Ostimerclksel {
         Ostimerclksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ostimerclksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ostimerclksel")
@@ -10503,6 +10627,7 @@ impl Default for Pll1clk0div {
         Pll1clk0div(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pll1clk0div {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pll1clk0div")
@@ -10586,6 +10711,7 @@ impl Default for Pll1clk1div {
         Pll1clk1div(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pll1clk1div {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pll1clk1div")
@@ -10669,6 +10795,7 @@ impl Default for Pllclkdiv {
         Pllclkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pllclkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pllclkdiv")
@@ -10716,6 +10843,7 @@ impl Default for Pllclkdivsel {
         Pllclkdivsel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pllclkdivsel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pllclkdivsel")
@@ -10945,6 +11073,7 @@ impl Default for Presetctrl0 {
         Presetctrl0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Presetctrl0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Presetctrl0")
@@ -11330,6 +11459,7 @@ impl Default for Presetctrl1 {
         Presetctrl1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Presetctrl1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Presetctrl1")
@@ -11651,6 +11781,7 @@ impl Default for Presetctrl2 {
         Presetctrl2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Presetctrl2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Presetctrl2")
@@ -11982,6 +12113,7 @@ impl Default for Presetctrl3 {
         Presetctrl3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Presetctrl3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Presetctrl3")
@@ -12065,6 +12197,7 @@ impl Default for Presetctrlclr {
         Presetctrlclr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Presetctrlclr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Presetctrlclr")
@@ -12102,6 +12235,7 @@ impl Default for Presetctrlset {
         Presetctrlset(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Presetctrlset {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Presetctrlset")
@@ -12223,6 +12357,7 @@ impl Default for Pwm0subctl {
         Pwm0subctl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pwm0subctl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pwm0subctl")
@@ -12362,6 +12497,7 @@ impl Default for Pwm1subctl {
         Pwm1subctl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pwm1subctl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pwm1subctl")
@@ -12417,6 +12553,7 @@ impl Default for RamInterleave {
         RamInterleave(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for RamInterleave {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RamInterleave")
@@ -12466,6 +12603,7 @@ impl Default for RefClkCtrl {
         RefClkCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for RefClkCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RefClkCtrl")
@@ -12521,6 +12659,7 @@ impl Default for RefClkCtrlClr {
         RefClkCtrlClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for RefClkCtrlClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RefClkCtrlClr")
@@ -12576,6 +12715,7 @@ impl Default for RefClkCtrlSet {
         RefClkCtrlSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for RefClkCtrlSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RefClkCtrlSet")
@@ -12619,6 +12759,7 @@ impl Default for Romcr {
         Romcr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Romcr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Romcr")
@@ -12692,6 +12833,7 @@ impl Default for Sai0clkdiv {
         Sai0clkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sai0clkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sai0clkdiv")
@@ -12739,6 +12881,7 @@ impl Default for Sai0clksel {
         Sai0clksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sai0clksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sai0clksel")
@@ -12812,6 +12955,7 @@ impl Default for Sai1clkdiv {
         Sai1clkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sai1clkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sai1clkdiv")
@@ -12859,6 +13003,7 @@ impl Default for Sai1clksel {
         Sai1clksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sai1clksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sai1clksel")
@@ -12932,6 +13077,7 @@ impl Default for Sctclkdiv {
         Sctclkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sctclkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sctclkdiv")
@@ -12979,6 +13125,7 @@ impl Default for Sctclksel {
         Sctclksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sctclksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sctclksel")
@@ -13016,6 +13163,7 @@ impl Default for Sincfiltclksel {
         Sincfiltclksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sincfiltclksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sincfiltclksel")
@@ -13077,6 +13225,7 @@ impl Default for Slowclkdiv {
         Slowclkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Slowclkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Slowclkdiv")
@@ -13398,6 +13547,7 @@ impl Default for SmartDmaint {
         SmartDmaint(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SmartDmaint {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SmartDmaint")
@@ -13486,6 +13636,7 @@ impl Default for SwdAccessCpu0 {
         SwdAccessCpu0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SwdAccessCpu0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SwdAccessCpu0")
@@ -13524,6 +13675,7 @@ impl Default for SwdAccessCpu1 {
         SwdAccessCpu1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SwdAccessCpu1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SwdAccessCpu1")
@@ -13562,6 +13714,7 @@ impl Default for SwdAccessDsp {
         SwdAccessDsp(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SwdAccessDsp {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SwdAccessDsp")
@@ -13635,6 +13788,7 @@ impl Default for Systickclkdiv0 {
         Systickclkdiv0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Systickclkdiv0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Systickclkdiv0")
@@ -13718,6 +13872,7 @@ impl Default for Systickclkdiv1 {
         Systickclkdiv1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Systickclkdiv1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Systickclkdiv1")
@@ -13765,6 +13920,7 @@ impl Default for Systickclksel0 {
         Systickclksel0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Systickclksel0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Systickclksel0")
@@ -13802,6 +13958,7 @@ impl Default for Systickclksel1 {
         Systickclksel1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Systickclksel1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Systickclksel1")
@@ -13875,6 +14032,7 @@ impl Default for Traceclkdiv {
         Traceclkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Traceclkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Traceclkdiv")
@@ -13922,6 +14080,7 @@ impl Default for Traceclksel {
         Traceclksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Traceclksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Traceclksel")
@@ -13995,6 +14154,7 @@ impl Default for Tsiclkdiv {
         Tsiclkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tsiclkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tsiclkdiv")
@@ -14042,6 +14202,7 @@ impl Default for Tsiclksel {
         Tsiclksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tsiclksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tsiclksel")
@@ -14115,6 +14276,7 @@ impl Default for USdhcclkdiv {
         USdhcclkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for USdhcclkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("USdhcclkdiv")
@@ -14162,6 +14324,7 @@ impl Default for USdhcclksel {
         USdhcclksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for USdhcclksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("USdhcclksel")
@@ -14235,6 +14398,7 @@ impl Default for Usb0clkdiv {
         Usb0clkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Usb0clkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Usb0clkdiv")
@@ -14282,6 +14446,7 @@ impl Default for Usb0clksel {
         Usb0clksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Usb0clksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Usb0clksel")
@@ -14355,6 +14520,7 @@ impl Default for Utickclkdiv {
         Utickclkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Utickclkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Utickclkdiv")
@@ -14402,6 +14568,7 @@ impl Default for Utickclksel {
         Utickclksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Utickclksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Utickclksel")
@@ -14475,6 +14642,7 @@ impl Default for Wdt0clkdiv {
         Wdt0clkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Wdt0clkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Wdt0clkdiv")
@@ -14558,6 +14726,7 @@ impl Default for Wdt1clkdiv {
         Wdt1clkdiv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Wdt1clkdiv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Wdt1clkdiv")
@@ -14605,6 +14774,7 @@ impl Default for Wdt1clksel {
         Wdt1clksel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Wdt1clksel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Wdt1clksel")

@@ -15,6 +15,7 @@ impl Edge {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Edge {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -63,6 +64,7 @@ impl PolCtl {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PolCtl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {

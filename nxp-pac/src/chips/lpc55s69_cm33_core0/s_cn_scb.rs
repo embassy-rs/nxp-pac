@@ -1,4 +1,4 @@
-#[doc = "no description available."]
+#[doc = "System Control not in System Control Block."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SCnScb {
     ptr: *mut u8,

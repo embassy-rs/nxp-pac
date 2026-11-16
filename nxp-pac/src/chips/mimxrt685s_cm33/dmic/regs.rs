@@ -106,6 +106,7 @@ impl Default for Chanen {
         Chanen(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Chanen {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Chanen")
@@ -197,6 +198,7 @@ impl Default for DcCtrl {
         DcCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DcCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DcCtrl")
@@ -220,7 +222,7 @@ impl defmt::Format for DcCtrl {
         )
     }
 }
-#[doc = "no description available."]
+#[doc = "DMIC decimator reset."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Decreset(pub u32);
@@ -244,6 +246,7 @@ impl Default for Decreset {
         Decreset(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Decreset {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Decreset")
@@ -281,6 +284,7 @@ impl Default for Divhfclk {
         Divhfclk(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Divhfclk {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Divhfclk")
@@ -366,6 +370,7 @@ impl Default for FifoCtrl {
         FifoCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FifoCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FifoCtrl")
@@ -415,6 +420,7 @@ impl Default for FifoData {
         FifoData(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FifoData {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FifoData")
@@ -476,6 +482,7 @@ impl Default for FifoStatus {
         FifoStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FifoStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FifoStatus")
@@ -521,6 +528,7 @@ impl Default for Gainshift {
         Gainshift(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gainshift {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gainshift")
@@ -534,7 +542,7 @@ impl defmt::Format for Gainshift {
         defmt::write!(f, "Gainshift {{ gain: {=u8:?} }}", self.gain())
     }
 }
-#[doc = "no description available."]
+#[doc = "Global channel synchronization counter value."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct GlobalCountVal(pub u32);
@@ -558,6 +566,7 @@ impl Default for GlobalCountVal {
         GlobalCountVal(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for GlobalCountVal {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GlobalCountVal")
@@ -599,6 +608,7 @@ impl Default for GlobalSyncEn {
         GlobalSyncEn(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for GlobalSyncEn {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GlobalSyncEn")
@@ -640,6 +650,7 @@ impl Default for Hwvadgain {
         Hwvadgain(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hwvadgain {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hwvadgain")
@@ -677,6 +688,7 @@ impl Default for Hwvadhpfs {
         Hwvadhpfs(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hwvadhpfs {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hwvadhpfs")
@@ -714,6 +726,7 @@ impl Default for Hwvadlowz {
         Hwvadlowz(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hwvadlowz {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hwvadlowz")
@@ -751,6 +764,7 @@ impl Default for Hwvadrstt {
         Hwvadrstt(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hwvadrstt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hwvadrstt")
@@ -788,6 +802,7 @@ impl Default for Hwvadst10 {
         Hwvadst10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hwvadst10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hwvadst10")
@@ -825,6 +840,7 @@ impl Default for Hwvadthgn {
         Hwvadthgn(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hwvadthgn {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hwvadthgn")
@@ -862,6 +878,7 @@ impl Default for Hwvadthgs {
         Hwvadthgs(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hwvadthgs {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hwvadthgs")
@@ -899,6 +916,7 @@ impl Default for Osr {
         Osr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Osr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Osr").field("osr", &self.osr()).finish()
@@ -946,6 +964,7 @@ impl Default for PhyCtrl {
         PhyCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for PhyCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PhyCtrl")
@@ -989,6 +1008,7 @@ impl Default for Preac2fscoef {
         Preac2fscoef(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Preac2fscoef {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Preac2fscoef")
@@ -1026,6 +1046,7 @@ impl Default for Preac4fscoef {
         Preac4fscoef(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Preac4fscoef {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Preac4fscoef")
@@ -1063,6 +1084,7 @@ impl Default for Use2fs {
         Use2fs(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Use2fs {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Use2fs")

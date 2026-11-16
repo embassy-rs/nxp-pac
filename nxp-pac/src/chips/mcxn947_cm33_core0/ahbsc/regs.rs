@@ -94,6 +94,7 @@ impl Default for AhbPeripheral0SlavePortP12SlaveRule0 {
         AhbPeripheral0SlavePortP12SlaveRule0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AhbPeripheral0SlavePortP12SlaveRule0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AhbPeripheral0SlavePortP12SlaveRule0")
@@ -231,6 +232,7 @@ impl Default for AhbPeripheral0SlavePortP12SlaveRule1 {
         AhbPeripheral0SlavePortP12SlaveRule1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AhbPeripheral0SlavePortP12SlaveRule1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AhbPeripheral0SlavePortP12SlaveRule1")
@@ -286,6 +288,7 @@ impl Default for AhbPeripheral0SlavePortP12SlaveRule2 {
         AhbPeripheral0SlavePortP12SlaveRule2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AhbPeripheral0SlavePortP12SlaveRule2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AhbPeripheral0SlavePortP12SlaveRule2")
@@ -399,6 +402,7 @@ impl Default for AhbPeripheral1SlavePortP13SlaveRule0 {
         AhbPeripheral1SlavePortP13SlaveRule0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AhbPeripheral1SlavePortP13SlaveRule0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AhbPeripheral1SlavePortP13SlaveRule0")
@@ -536,6 +540,7 @@ impl Default for AhbPeripheral1SlavePortP13SlaveRule1 {
         AhbPeripheral1SlavePortP13SlaveRule1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AhbPeripheral1SlavePortP13SlaveRule1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AhbPeripheral1SlavePortP13SlaveRule1")
@@ -591,6 +596,7 @@ impl Default for AhbPeripheral1SlavePortP13SlaveRule2 {
         AhbPeripheral1SlavePortP13SlaveRule2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AhbPeripheral1SlavePortP13SlaveRule2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AhbPeripheral1SlavePortP13SlaveRule2")
@@ -668,6 +674,7 @@ impl Default for AhbSecureCtrlPeripheralRule0 {
         AhbSecureCtrlPeripheralRule0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AhbSecureCtrlPeripheralRule0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AhbSecureCtrlPeripheralRule0")
@@ -799,6 +806,7 @@ impl Default for AipsBridgeGroup0MemRule0 {
         AipsBridgeGroup0MemRule0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AipsBridgeGroup0MemRule0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AipsBridgeGroup0MemRule0")
@@ -890,6 +898,7 @@ impl Default for AipsBridgeGroup0MemRule1 {
         AipsBridgeGroup0MemRule1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AipsBridgeGroup0MemRule1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AipsBridgeGroup0MemRule1")
@@ -1021,6 +1030,7 @@ impl Default for AipsBridgeGroup0MemRule2 {
         AipsBridgeGroup0MemRule2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AipsBridgeGroup0MemRule2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AipsBridgeGroup0MemRule2")
@@ -1136,6 +1146,7 @@ impl Default for AipsBridgeGroup0MemRule3 {
         AipsBridgeGroup0MemRule3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AipsBridgeGroup0MemRule3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AipsBridgeGroup0MemRule3")
@@ -1271,6 +1282,7 @@ impl Default for AipsBridgeGroup1MemRule0 {
         AipsBridgeGroup1MemRule0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AipsBridgeGroup1MemRule0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AipsBridgeGroup1MemRule0")
@@ -1410,6 +1422,7 @@ impl Default for AipsBridgeGroup1MemRule1 {
         AipsBridgeGroup1MemRule1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AipsBridgeGroup1MemRule1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AipsBridgeGroup1MemRule1")
@@ -1549,6 +1562,7 @@ impl Default for AipsBridgeGroup2MemRule0 {
         AipsBridgeGroup2MemRule0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AipsBridgeGroup2MemRule0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AipsBridgeGroup2MemRule0")
@@ -1688,6 +1702,7 @@ impl Default for AipsBridgeGroup2MemRule1 {
         AipsBridgeGroup2MemRule1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AipsBridgeGroup2MemRule1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AipsBridgeGroup2MemRule1")
@@ -1791,6 +1806,7 @@ impl Default for AipsBridgeGroup3MemRule0 {
         AipsBridgeGroup3MemRule0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AipsBridgeGroup3MemRule0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AipsBridgeGroup3MemRule0")
@@ -1900,6 +1916,7 @@ impl Default for AipsBridgeGroup3MemRule1 {
         AipsBridgeGroup3MemRule1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AipsBridgeGroup3MemRule1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AipsBridgeGroup3MemRule1")
@@ -2023,6 +2040,7 @@ impl Default for AipsBridgeGroup3MemRule2 {
         AipsBridgeGroup3MemRule2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AipsBridgeGroup3MemRule2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AipsBridgeGroup3MemRule2")
@@ -2136,6 +2154,7 @@ impl Default for AipsBridgeGroup3MemRule3 {
         AipsBridgeGroup3MemRule3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AipsBridgeGroup3MemRule3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AipsBridgeGroup3MemRule3")
@@ -2247,6 +2266,7 @@ impl Default for AipsBridgeGroup4MemRule0 {
         AipsBridgeGroup4MemRule0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AipsBridgeGroup4MemRule0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AipsBridgeGroup4MemRule0")
@@ -2382,6 +2402,7 @@ impl Default for AipsBridgeGroup4MemRule1 {
         AipsBridgeGroup4MemRule1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AipsBridgeGroup4MemRule1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AipsBridgeGroup4MemRule1")
@@ -2521,6 +2542,7 @@ impl Default for AipsBridgeGroup4MemRule2 {
         AipsBridgeGroup4MemRule2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AipsBridgeGroup4MemRule2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AipsBridgeGroup4MemRule2")
@@ -2624,6 +2646,7 @@ impl Default for AipsBridgeGroup4MemRule3 {
         AipsBridgeGroup4MemRule3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AipsBridgeGroup4MemRule3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AipsBridgeGroup4MemRule3")
@@ -2697,6 +2720,7 @@ impl Default for ApbPeripheralGroup0MemRule0 {
         ApbPeripheralGroup0MemRule0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ApbPeripheralGroup0MemRule0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ApbPeripheralGroup0MemRule0")
@@ -2778,6 +2802,7 @@ impl Default for ApbPeripheralGroup0MemRule1 {
         ApbPeripheralGroup0MemRule1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ApbPeripheralGroup0MemRule1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ApbPeripheralGroup0MemRule1")
@@ -2897,6 +2922,7 @@ impl Default for ApbPeripheralGroup0MemRule2 {
         ApbPeripheralGroup0MemRule2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ApbPeripheralGroup0MemRule2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ApbPeripheralGroup0MemRule2")
@@ -2950,6 +2976,7 @@ impl Default for ApbPeripheralGroup0MemRule3 {
         ApbPeripheralGroup0MemRule3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ApbPeripheralGroup0MemRule3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ApbPeripheralGroup0MemRule3")
@@ -3027,6 +3054,7 @@ impl Default for ApbPeripheralGroup1MemRule0 {
         ApbPeripheralGroup1MemRule0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ApbPeripheralGroup1MemRule0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ApbPeripheralGroup1MemRule0")
@@ -3122,6 +3150,7 @@ impl Default for ApbPeripheralGroup1MemRule1 {
         ApbPeripheralGroup1MemRule1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ApbPeripheralGroup1MemRule1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ApbPeripheralGroup1MemRule1")
@@ -3207,6 +3236,7 @@ impl Default for ApbPeripheralGroup1MemRule2 {
         ApbPeripheralGroup1MemRule2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ApbPeripheralGroup1MemRule2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ApbPeripheralGroup1MemRule2")
@@ -3314,6 +3344,7 @@ impl Default for Cpu0LockReg {
         Cpu0LockReg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cpu0LockReg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cpu0LockReg")
@@ -3377,6 +3408,7 @@ impl Default for Cpu1LockReg {
         Cpu1LockReg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cpu1LockReg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cpu1LockReg")
@@ -3504,6 +3536,7 @@ impl Default for Flash00MemRule {
         Flash00MemRule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flash00MemRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flash00MemRule")
@@ -3643,6 +3676,7 @@ impl Default for Flash01MemRule {
         Flash01MemRule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flash01MemRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flash01MemRule")
@@ -3734,6 +3768,7 @@ impl Default for Flash02MemRule {
         Flash02MemRule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flash02MemRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flash02MemRule")
@@ -3865,6 +3900,7 @@ impl Default for Flash03MemRule {
         Flash03MemRule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flash03MemRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flash03MemRule")
@@ -4004,6 +4040,7 @@ impl Default for Flexspi0Region0MemRule {
         Flexspi0Region0MemRule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexspi0Region0MemRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexspi0Region0MemRule")
@@ -4137,6 +4174,7 @@ impl Default for Flexspi0Region16MemRuleFlexspi0RegionMemRule0 {
         Flexspi0Region16MemRuleFlexspi0RegionMemRule0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexspi0Region16MemRuleFlexspi0RegionMemRule0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexspi0Region16MemRuleFlexspi0RegionMemRule0")
@@ -4272,6 +4310,7 @@ impl Default for Flexspi0Region7MemRule {
         Flexspi0Region7MemRule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexspi0Region7MemRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexspi0Region7MemRule")
@@ -4405,6 +4444,7 @@ impl Default for Flexspi0Region813MemRuleFlexspi0RegionMemRule0 {
         Flexspi0Region813MemRuleFlexspi0RegionMemRule0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flexspi0Region813MemRuleFlexspi0RegionMemRule0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexspi0Region813MemRuleFlexspi0RegionMemRule0")
@@ -4603,6 +4643,7 @@ impl Default for MasterSecAntiPolReg {
         MasterSecAntiPolReg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MasterSecAntiPolReg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MasterSecAntiPolReg")
@@ -4815,6 +4856,7 @@ impl Default for MasterSecLevel {
         MasterSecLevel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MasterSecLevel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MasterSecLevel")
@@ -4967,6 +5009,7 @@ impl Default for MiscCtrlDpReg {
         MiscCtrlDpReg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MiscCtrlDpReg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MiscCtrlDpReg")
@@ -5104,6 +5147,7 @@ impl Default for MiscCtrlReg {
         MiscCtrlReg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MiscCtrlReg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MiscCtrlReg")
@@ -5241,6 +5285,7 @@ impl Default for RamaMemRule {
         RamaMemRule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for RamaMemRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RamaMemRule")
@@ -5380,6 +5425,7 @@ impl Default for RambMemRule {
         RambMemRule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for RambMemRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RambMemRule")
@@ -5519,6 +5565,7 @@ impl Default for RamcMemRule {
         RamcMemRule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for RamcMemRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RamcMemRule")
@@ -5658,6 +5705,7 @@ impl Default for RamdMemRule {
         RamdMemRule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for RamdMemRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RamdMemRule")
@@ -5797,6 +5845,7 @@ impl Default for RameMemRule {
         RameMemRule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for RameMemRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RameMemRule")
@@ -5936,6 +5985,7 @@ impl Default for RamfMemRule {
         RamfMemRule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for RamfMemRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RamfMemRule")
@@ -6075,6 +6125,7 @@ impl Default for RamgMemRule {
         RamgMemRule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for RamgMemRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RamgMemRule")
@@ -6214,6 +6265,7 @@ impl Default for RamhMemRule {
         RamhMemRule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for RamhMemRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RamhMemRule")
@@ -6353,6 +6405,7 @@ impl Default for RamxMemRule {
         RamxMemRule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for RamxMemRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RamxMemRule")
@@ -6492,6 +6545,7 @@ impl Default for RomMemRule {
         RomMemRule(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for RomMemRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RomMemRule")
@@ -6919,6 +6973,7 @@ impl Default for SecCpu1IntMask0 {
         SecCpu1IntMask0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCpu1IntMask0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCpu1IntMask0")
@@ -7394,6 +7449,7 @@ impl Default for SecCpu1IntMask1 {
         SecCpu1IntMask1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCpu1IntMask1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCpu1IntMask1")
@@ -7869,6 +7925,7 @@ impl Default for SecCpu1IntMask2 {
         SecCpu1IntMask2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCpu1IntMask2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCpu1IntMask2")
@@ -8344,6 +8401,7 @@ impl Default for SecCpu1IntMask3 {
         SecCpu1IntMask3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCpu1IntMask3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCpu1IntMask3")
@@ -8819,6 +8877,7 @@ impl Default for SecCpu1IntMask4 {
         SecCpu1IntMask4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecCpu1IntMask4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecCpu1IntMask4")
@@ -8994,6 +9053,7 @@ impl Default for SecGpRegLock {
         SecGpRegLock(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecGpRegLock {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecGpRegLock")
@@ -9419,6 +9479,7 @@ impl Default for SecGpioMask {
         SecGpioMask(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecGpioMask {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecGpioMask")
@@ -9522,6 +9583,7 @@ impl Default for SecVioAddr {
         SecVioAddr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecVioAddr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecVioAddr")
@@ -9779,6 +9841,7 @@ impl Default for SecVioInfoValid {
         SecVioInfoValid(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecVioInfoValid {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecVioInfoValid")
@@ -9892,6 +9955,7 @@ impl Default for SecVioMiscInfo {
         SecVioMiscInfo(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SecVioMiscInfo {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SecVioMiscInfo")

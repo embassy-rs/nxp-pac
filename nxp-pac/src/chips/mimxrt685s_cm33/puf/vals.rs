@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CkDis {
     #[doc = "PUF RAM clock is disabled."]
@@ -30,7 +31,8 @@ impl From<CkDis> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum KeyenableKey0 {
     #[doc = "Data coming from the PUF Index 0 interface are NOT shifted in the KEY0 register."]
@@ -65,7 +67,8 @@ impl From<KeyenableKey0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum KeyenableKey1 {
     #[doc = "Data coming from the PUF Index 0 interface are NOT shifted in the KEY1 register."]
@@ -100,7 +103,8 @@ impl From<KeyenableKey1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum KeyenableKey2 {
     #[doc = "Data coming from the PUF Index 0 interface are NOT shifted in the KEY2 register."]
@@ -135,7 +139,8 @@ impl From<KeyenableKey2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum KeyenableKey3 {
     #[doc = "Data coming from the PUF Index 0 interface are NOT shifted in the KEY3 register."]
@@ -170,7 +175,8 @@ impl From<KeyenableKey3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum KeylockKey0 {
     #[doc = "Write access to KEY0MASK, KEYENABLE\\[KEY0\\] and KEYRESET\\[KEY0\\] is NOT allowed."]
@@ -205,7 +211,8 @@ impl From<KeylockKey0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum KeylockKey1 {
     #[doc = "Write access to KEY1MASK, KEYENABLE\\[KEY1\\] and KEYRESET\\[KEY1\\] is NOT allowed."]
@@ -240,7 +247,8 @@ impl From<KeylockKey1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum KeylockKey2 {
     #[doc = "Write access to KEY2MASK, KEYENABLE\\[KEY2\\] and KEYRESET\\[KEY2\\] is NOT allowed."]
@@ -275,7 +283,8 @@ impl From<KeylockKey2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum KeylockKey3 {
     #[doc = "Write access to KEY3MASK, KEYENABLE\\[KEY3\\] and KEYRESET\\[KEY3\\] is NOT allowed."]
@@ -310,7 +319,8 @@ impl From<KeylockKey3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum KeyresetKey0 {
     _RESERVED_0 = 0x0,
@@ -342,7 +352,8 @@ impl From<KeyresetKey0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum KeyresetKey1 {
     _RESERVED_0 = 0x0,
@@ -374,7 +385,8 @@ impl From<KeyresetKey1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum KeyresetKey2 {
     _RESERVED_0 = 0x0,
@@ -406,7 +418,8 @@ impl From<KeyresetKey2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum KeyresetKey3 {
     _RESERVED_0 = 0x0,
@@ -438,7 +451,8 @@ impl From<KeyresetKey3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamOn {
     #[doc = "Power Off."]

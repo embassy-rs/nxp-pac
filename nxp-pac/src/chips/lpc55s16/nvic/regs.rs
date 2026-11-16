@@ -394,6 +394,7 @@ impl Default for Iabr {
         Iabr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Iabr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Iabr")
@@ -869,6 +870,7 @@ impl Default for Icer {
         Icer(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Icer {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Icer")
@@ -1344,6 +1346,7 @@ impl Default for Icpr {
         Icpr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Icpr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Icpr")
@@ -1483,6 +1486,7 @@ impl Default for Ipr {
         Ipr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ipr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ipr")
@@ -1902,6 +1906,7 @@ impl Default for Iser {
         Iser(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Iser {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Iser")
@@ -2377,6 +2382,7 @@ impl Default for Ispr {
         Ispr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ispr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ispr")
@@ -2852,6 +2858,7 @@ impl Default for Itns {
         Itns(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Itns {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Itns")
@@ -2955,6 +2962,7 @@ impl Default for Stir {
         Stir(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Stir {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Stir")

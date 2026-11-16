@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cfg1Onechannel {
     #[doc = "I2S data for this channel pair is treated as left and right channels."]
@@ -30,7 +31,8 @@ impl From<Cfg1Onechannel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Datapause {
     #[doc = "Normal operation, or resuming normal operation at the next frame if the I2S has already been paused."]
@@ -61,7 +63,8 @@ impl From<Datapause> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Leftjust {
     #[doc = "Data is transferred between the FIFO and the I2S serializer/deserializer right justified, i.e. starting from bit 0 and continuing to the position defined by DATALEN. This would correspond to right justified data in the stream on the data bus."]
@@ -92,7 +95,8 @@ impl From<Leftjust> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lr {
     #[doc = "Left channel."]
@@ -123,7 +127,8 @@ impl From<Lr> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mode {
     #[doc = "I2S mode a.k.a. 'classic' mode. WS has a 50% duty cycle, with (for each enabled channel pair) one piece of left channel data occurring during the first phase, and one pieces of right channel data occurring during the second phase. In this mode, the data region begins one clock after the leading WS edge for the frame. For a 50% WS duty cycle, FRAMELEN must define an even number of I2S clocks for the frame. If FRAMELEN defines an odd number of clocks per frame, the extra clock will occur on the right."]
@@ -158,7 +163,8 @@ impl From<Mode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mstslvcfg {
     #[doc = "Normal slave mode, the default mode. SCK and WS are received from a master and used to transmit or receive data."]
@@ -193,7 +199,8 @@ impl From<Mstslvcfg> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pack48 {
     #[doc = "48-bit I2S FIFO entries are handled as all 24-bit values."]
@@ -224,7 +231,8 @@ impl From<Pack48> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Paircount {
     #[doc = "1 I2S channel pairs in this flexcomm."]
@@ -259,17 +267,18 @@ impl From<Paircount> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Pcfg1Onechannel {
+pub enum Pcfg11Onechannel {
     #[doc = "I2S data for this channel pair is treated as left and right channels."]
     Stereo = 0x0,
     #[doc = "I2S data for this channel pair is treated as a single channel, functionally the left channel for this pair."]
     Single = 0x01,
 }
-impl Pcfg1Onechannel {
+impl Pcfg11Onechannel {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> Pcfg1Onechannel {
+    pub const fn from_bits(val: u8) -> Pcfg11Onechannel {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -277,30 +286,95 @@ impl Pcfg1Onechannel {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for Pcfg1Onechannel {
+impl From<u8> for Pcfg11Onechannel {
     #[inline(always)]
-    fn from(val: u8) -> Pcfg1Onechannel {
-        Pcfg1Onechannel::from_bits(val)
+    fn from(val: u8) -> Pcfg11Onechannel {
+        Pcfg11Onechannel::from_bits(val)
     }
 }
-impl From<Pcfg1Onechannel> for u8 {
+impl From<Pcfg11Onechannel> for u8 {
     #[inline(always)]
-    fn from(val: Pcfg1Onechannel) -> u8 {
-        Pcfg1Onechannel::to_bits(val)
+    fn from(val: Pcfg11Onechannel) -> u8 {
+        Pcfg11Onechannel::to_bits(val)
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum PstatBusy {
+pub enum Pcfg12Onechannel {
+    #[doc = "I2S data for this channel pair is treated as left and right channels."]
+    Stereo = 0x0,
+    #[doc = "I2S data for this channel pair is treated as a single channel, functionally the left channel for this pair."]
+    Single = 0x01,
+}
+impl Pcfg12Onechannel {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Pcfg12Onechannel {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Pcfg12Onechannel {
+    #[inline(always)]
+    fn from(val: u8) -> Pcfg12Onechannel {
+        Pcfg12Onechannel::from_bits(val)
+    }
+}
+impl From<Pcfg12Onechannel> for u8 {
+    #[inline(always)]
+    fn from(val: Pcfg12Onechannel) -> u8 {
+        Pcfg12Onechannel::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Pcfg13Onechannel {
+    #[doc = "I2S data for this channel pair is treated as left and right channels."]
+    Stereo = 0x0,
+    #[doc = "I2S data for this channel pair is treated as a single channel, functionally the left channel for this pair."]
+    Single = 0x01,
+}
+impl Pcfg13Onechannel {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Pcfg13Onechannel {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Pcfg13Onechannel {
+    #[inline(always)]
+    fn from(val: u8) -> Pcfg13Onechannel {
+        Pcfg13Onechannel::from_bits(val)
+    }
+}
+impl From<Pcfg13Onechannel> for u8 {
+    #[inline(always)]
+    fn from(val: Pcfg13Onechannel) -> u8 {
+        Pcfg13Onechannel::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Pstat1Busy {
     #[doc = "The transmitter/receiver for this channel pair is currently idle."]
     Idle = 0x0,
     #[doc = "The transmitter/receiver for this channel pair is currently processing data."]
     Processing = 0x01,
 }
-impl PstatBusy {
+impl Pstat1Busy {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> PstatBusy {
+    pub const fn from_bits(val: u8) -> Pstat1Busy {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -308,30 +382,31 @@ impl PstatBusy {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for PstatBusy {
+impl From<u8> for Pstat1Busy {
     #[inline(always)]
-    fn from(val: u8) -> PstatBusy {
-        PstatBusy::from_bits(val)
+    fn from(val: u8) -> Pstat1Busy {
+        Pstat1Busy::from_bits(val)
     }
 }
-impl From<PstatBusy> for u8 {
+impl From<Pstat1Busy> for u8 {
     #[inline(always)]
-    fn from(val: PstatBusy) -> u8 {
-        PstatBusy::to_bits(val)
+    fn from(val: Pstat1Busy) -> u8 {
+        Pstat1Busy::to_bits(val)
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum PstatDatapaused {
+pub enum Pstat1Datapaused {
     #[doc = "Data is not currently paused."]
     Pause = 0x0,
     #[doc = "A data pause has been requested and is now in force."]
     Force = 0x01,
 }
-impl PstatDatapaused {
+impl Pstat1Datapaused {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> PstatDatapaused {
+    pub const fn from_bits(val: u8) -> Pstat1Datapaused {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -339,20 +414,149 @@ impl PstatDatapaused {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for PstatDatapaused {
+impl From<u8> for Pstat1Datapaused {
     #[inline(always)]
-    fn from(val: u8) -> PstatDatapaused {
-        PstatDatapaused::from_bits(val)
+    fn from(val: u8) -> Pstat1Datapaused {
+        Pstat1Datapaused::from_bits(val)
     }
 }
-impl From<PstatDatapaused> for u8 {
+impl From<Pstat1Datapaused> for u8 {
     #[inline(always)]
-    fn from(val: PstatDatapaused) -> u8 {
-        PstatDatapaused::to_bits(val)
+    fn from(val: Pstat1Datapaused) -> u8 {
+        Pstat1Datapaused::to_bits(val)
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Pstat2Busy {
+    #[doc = "The transmitter/receiver for this channel pair is currently idle."]
+    Idle = 0x0,
+    #[doc = "The transmitter/receiver for this channel pair is currently processing data."]
+    Processing = 0x01,
+}
+impl Pstat2Busy {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Pstat2Busy {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Pstat2Busy {
+    #[inline(always)]
+    fn from(val: u8) -> Pstat2Busy {
+        Pstat2Busy::from_bits(val)
+    }
+}
+impl From<Pstat2Busy> for u8 {
+    #[inline(always)]
+    fn from(val: Pstat2Busy) -> u8 {
+        Pstat2Busy::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Pstat2Datapaused {
+    #[doc = "Data is not currently paused."]
+    Pause = 0x0,
+    #[doc = "A data pause has been requested and is now in force."]
+    Force = 0x01,
+}
+impl Pstat2Datapaused {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Pstat2Datapaused {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Pstat2Datapaused {
+    #[inline(always)]
+    fn from(val: u8) -> Pstat2Datapaused {
+        Pstat2Datapaused::from_bits(val)
+    }
+}
+impl From<Pstat2Datapaused> for u8 {
+    #[inline(always)]
+    fn from(val: Pstat2Datapaused) -> u8 {
+        Pstat2Datapaused::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Pstat3Busy {
+    #[doc = "The transmitter/receiver for this channel pair is currently idle."]
+    Idle = 0x0,
+    #[doc = "The transmitter/receiver for this channel pair is currently processing data."]
+    Processing = 0x01,
+}
+impl Pstat3Busy {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Pstat3Busy {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Pstat3Busy {
+    #[inline(always)]
+    fn from(val: u8) -> Pstat3Busy {
+        Pstat3Busy::from_bits(val)
+    }
+}
+impl From<Pstat3Busy> for u8 {
+    #[inline(always)]
+    fn from(val: Pstat3Busy) -> u8 {
+        Pstat3Busy::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Pstat3Datapaused {
+    #[doc = "Data is not currently paused."]
+    Pause = 0x0,
+    #[doc = "A data pause has been requested and is now in force."]
+    Force = 0x01,
+}
+impl Pstat3Datapaused {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Pstat3Datapaused {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Pstat3Datapaused {
+    #[inline(always)]
+    fn from(val: u8) -> Pstat3Datapaused {
+        Pstat3Datapaused::from_bits(val)
+    }
+}
+impl From<Pstat3Datapaused> for u8 {
+    #[inline(always)]
+    fn from(val: Pstat3Datapaused) -> u8 {
+        Pstat3Datapaused::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rightlow {
     #[doc = "The right channel is taken from the high part of the FIFO data. For example, when data is 16 bits, FIFO bits 31:16 are used for the right channel."]
@@ -383,7 +587,8 @@ impl From<Rightlow> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SckPol {
     #[doc = "Data is launched on SCK falling edges and sampled on SCK rising edges (standard for I2S)."]
@@ -414,7 +619,8 @@ impl From<SckPol> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatBusy {
     #[doc = "The transmitter/receiver for channel pair is currently idle."]
@@ -445,7 +651,8 @@ impl From<StatBusy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Txi2se0 {
     #[doc = "If the TX FIFO becomes empty, the last value is sent. This setting may be used when the data length is 24 bits or less, or when MONO = 1 for this channel pair."]

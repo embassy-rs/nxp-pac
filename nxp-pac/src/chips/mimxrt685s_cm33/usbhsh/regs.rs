@@ -34,6 +34,7 @@ impl Default for Atlptd {
         Atlptd(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Atlptd {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Atlptd")
@@ -77,6 +78,7 @@ impl Default for Atlptdd {
         Atlptdd(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Atlptdd {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Atlptdd")
@@ -114,6 +116,7 @@ impl Default for Atlptds {
         Atlptds(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Atlptds {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Atlptds")
@@ -163,6 +166,7 @@ impl Default for CaplengthChipid {
         CaplengthChipid(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CaplengthChipid {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CaplengthChipid")
@@ -206,6 +210,7 @@ impl Default for Datapayload {
         Datapayload(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Datapayload {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Datapayload")
@@ -255,6 +260,7 @@ impl Default for FladjFrindex {
         FladjFrindex(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FladjFrindex {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FladjFrindex")
@@ -298,6 +304,7 @@ impl Default for Hccparams {
         Hccparams(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hccparams {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hccparams")
@@ -359,6 +366,7 @@ impl Default for Hcsparams {
         Hcsparams(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hcsparams {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hcsparams")
@@ -416,6 +424,7 @@ impl Default for Intptd {
         Intptd(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Intptd {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Intptd")
@@ -459,6 +468,7 @@ impl Default for Intptdd {
         Intptdd(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Intptdd {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Intptdd")
@@ -496,6 +506,7 @@ impl Default for Intptds {
         Intptds(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Intptds {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Intptds")
@@ -545,6 +556,7 @@ impl Default for Isoptd {
         Isoptd(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Isoptd {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Isoptd")
@@ -588,6 +600,7 @@ impl Default for Isoptdd {
         Isoptdd(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Isoptdd {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Isoptdd")
@@ -625,6 +638,7 @@ impl Default for Isoptds {
         Isoptds(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Isoptds {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Isoptds")
@@ -686,6 +700,7 @@ impl Default for Lastptd {
         Lastptd(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lastptd {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lastptd")
@@ -731,6 +746,7 @@ impl Default for Portmode {
         Portmode(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Portmode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Portmode")
@@ -972,6 +988,7 @@ impl Default for Portsc1 {
         Portsc1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Portsc1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Portsc1")
@@ -1131,6 +1148,7 @@ impl Default for Usbcmd {
         Usbcmd(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Usbcmd {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Usbcmd")
@@ -1246,6 +1264,7 @@ impl Default for Usbintr {
         Usbintr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Usbintr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Usbintr")
@@ -1357,6 +1376,7 @@ impl Default for Usbsts {
         Usbsts(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Usbsts {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Usbsts")

@@ -154,6 +154,7 @@ impl Default for Prstctl0 {
         Prstctl0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Prstctl0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Prstctl0")
@@ -349,6 +350,7 @@ impl Default for Prstctl0Clr {
         Prstctl0Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Prstctl0Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Prstctl0Clr")
@@ -544,6 +546,7 @@ impl Default for Prstctl0Set {
         Prstctl0Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Prstctl0Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Prstctl0Set")
@@ -763,6 +766,7 @@ impl Default for Prstctl1 {
         Prstctl1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Prstctl1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Prstctl1")
@@ -986,6 +990,7 @@ impl Default for Prstctl1Clr {
         Prstctl1Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Prstctl1Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Prstctl1Clr")
@@ -1209,6 +1214,7 @@ impl Default for Prstctl1Set {
         Prstctl1Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Prstctl1Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Prstctl1Set")
@@ -1384,6 +1390,7 @@ impl Default for Prstctl2 {
         Prstctl2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Prstctl2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Prstctl2")
@@ -1551,6 +1558,7 @@ impl Default for Prstctl2Clr {
         Prstctl2Clr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Prstctl2Clr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Prstctl2Clr")
@@ -1718,6 +1726,7 @@ impl Default for Prstctl2Set {
         Prstctl2Set(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Prstctl2Set {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Prstctl2Set")
@@ -1825,6 +1834,7 @@ impl Default for Sysrststat {
         Sysrststat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sysrststat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sysrststat")

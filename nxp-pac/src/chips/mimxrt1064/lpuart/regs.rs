@@ -166,6 +166,7 @@ impl Default for Baud {
         Baud(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Baud {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Baud")
@@ -555,6 +556,7 @@ impl Default for Ctrl {
         Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl")
@@ -714,6 +716,7 @@ impl Default for Data {
         Data(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Data {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Data")
@@ -927,6 +930,7 @@ impl Default for Fifo {
         Fifo(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fifo {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fifo")
@@ -992,6 +996,7 @@ impl Default for Global {
         Global(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Global {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Global").field("rst", &self.rst()).finish()
@@ -1039,6 +1044,7 @@ impl Default for Match {
         Match(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Match {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Match")
@@ -1178,6 +1184,7 @@ impl Default for Modir {
         Modir(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Modir {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Modir")
@@ -1247,6 +1254,7 @@ impl Default for Param {
         Param(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Param {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Param")
@@ -1290,6 +1298,7 @@ impl Default for Pincfg {
         Pincfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pincfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pincfg")
@@ -1531,6 +1540,7 @@ impl Default for Stat {
         Stat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Stat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Stat")
@@ -1630,6 +1640,7 @@ impl Default for Verid {
         Verid(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Verid {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Verid")
@@ -1711,6 +1722,7 @@ impl Default for Water {
         Water(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Water {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Water")

@@ -34,6 +34,7 @@ impl Default for Cap {
         Cap(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cap {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cap")
@@ -89,6 +90,7 @@ impl Default for Capctrl {
         Capctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Capctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Capctrl")
@@ -132,6 +134,7 @@ impl Default for Conen {
         Conen(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Conen {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Conen").field("ncen", &self.ncen()).finish()
@@ -251,6 +254,7 @@ impl Default for Config {
         Config(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Config {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Config")
@@ -330,6 +334,7 @@ impl Default for Conflag {
         Conflag(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Conflag {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Conflag")
@@ -387,6 +392,7 @@ impl Default for Count {
         Count(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Count {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Count")
@@ -562,6 +568,7 @@ impl Default for Ctrl {
         Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl")
@@ -649,6 +656,7 @@ impl Default for Dmareq0 {
         Dmareq0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dmareq0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dmareq0")
@@ -718,6 +726,7 @@ impl Default for Dmareq1 {
         Dmareq1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dmareq1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dmareq1")
@@ -871,6 +880,7 @@ impl Default for EvCtrl {
         EvCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EvCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EvCtrl")
@@ -930,6 +940,7 @@ impl Default for EvState {
         EvState(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EvState {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EvState")
@@ -967,6 +978,7 @@ impl Default for Even {
         Even(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Even {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Even").field("ien", &self.ien()).finish()
@@ -1002,6 +1014,7 @@ impl Default for Evflag {
         Evflag(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Evflag {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Evflag")
@@ -1051,6 +1064,7 @@ impl Default for Halt {
         Halt(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Halt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Halt")
@@ -1114,6 +1128,7 @@ impl Default for Input {
         Input(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Input {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Input")
@@ -1229,6 +1244,7 @@ impl Default for Limit {
         Limit(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Limit {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Limit")
@@ -1284,6 +1300,7 @@ impl Default for Match {
         Match(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Match {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Match")
@@ -1339,6 +1356,7 @@ impl Default for Matchrel {
         Matchrel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Matchrel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Matchrel")
@@ -1384,6 +1402,7 @@ impl Default for OutClr {
         OutClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OutClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OutClr")
@@ -1457,6 +1476,7 @@ impl Default for OutSet {
         OutSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for OutSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OutSet")
@@ -1528,6 +1548,7 @@ impl Default for Output {
         Output(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Output {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Output").field("out", &self.out()).finish()
@@ -1567,6 +1588,7 @@ impl Default for Outputdirctrl {
         Outputdirctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Outputdirctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Outputdirctrl")
@@ -1650,6 +1672,7 @@ impl Default for Regmode {
         Regmode(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Regmode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Regmode")
@@ -1697,6 +1720,7 @@ impl Default for Res {
         Res(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Res {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Res")
@@ -1780,6 +1804,7 @@ impl Default for Start {
         Start(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Start {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Start")
@@ -1835,6 +1860,7 @@ impl Default for State {
         State(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for State {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("State")
@@ -1890,6 +1916,7 @@ impl Default for Stop {
         Stop(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Stop {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Stop")

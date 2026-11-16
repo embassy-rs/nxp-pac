@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Adcen {
     #[doc = "ADC is disabled."]
@@ -30,7 +31,8 @@ impl From<Adcen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Calofsi {
     #[doc = "Offset calibration and offset trimming not implemented."]
@@ -61,7 +63,8 @@ impl From<Calofsi> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdact {
     #[doc = "No command is currently in progress."]
@@ -108,7 +111,8 @@ impl From<Cmdact> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CmdhAvgs {
     #[doc = "Single conversion."]
@@ -151,7 +155,8 @@ impl From<CmdhAvgs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CmdhCmpen {
     #[doc = "Compare disabled."]
@@ -185,7 +190,8 @@ impl From<CmdhCmpen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CmdhLoop {
     #[doc = "Looping not enabled. Command executes 1 time."]
@@ -208,11 +214,16 @@ pub enum CmdhLoop {
     Loop8 = 0x08,
     #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
     Loop9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
+    Loop10 = 0x0a,
+    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
+    Loop11 = 0x0b,
+    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
+    Loop12 = 0x0c,
+    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
+    Loop13 = 0x0d,
+    #[doc = "Loop corresponding number of times. Command executes LOOP+1 times."]
+    Loop14 = 0x0e,
     #[doc = "Loop 15 times. Command executes 16 times."]
     Loop15 = 0x0f,
 }
@@ -239,7 +250,8 @@ impl From<CmdhLoop> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CmdhLwi {
     #[doc = "Auto channel increment disabled."]
@@ -270,7 +282,8 @@ impl From<CmdhLwi> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CmdhNext {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
@@ -293,11 +306,16 @@ pub enum CmdhNext {
     Next8 = 0x08,
     #[doc = "Select corresponding CMD command buffer register as next command."]
     Next9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    Next10 = 0x0a,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    Next11 = 0x0b,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    Next12 = 0x0c,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    Next13 = 0x0d,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    Next14 = 0x0e,
     #[doc = "Select CMD15 command buffer register as next command."]
     Next15 = 0x0f,
 }
@@ -324,7 +342,8 @@ impl From<CmdhNext> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CmdhSts {
     #[doc = "Minimum sample time of 3 ADCK cycles."]
@@ -367,7 +386,8 @@ impl From<CmdhSts> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CmdlAbsel {
     #[doc = "When DIFF=0b0, the associated A-side channel is converted as single-ended. When DIFF=0b1, the ADC result is (CHnA-CHnB)."]
@@ -398,7 +418,8 @@ impl From<CmdlAbsel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CmdlAdch {
     #[doc = "Select CH0A or CH0B or CH0A/CH0B pair."]
@@ -421,10 +442,14 @@ pub enum CmdlAdch {
     Adch8 = 0x08,
     #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
     Adch9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    Adch10 = 0x0a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    Adch11 = 0x0b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    Adch12 = 0x0c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    Adch13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -435,12 +460,18 @@ pub enum CmdlAdch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    Adch24 = 0x18,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    Adch25 = 0x19,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    Adch26 = 0x1a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    Adch27 = 0x1b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    Adch28 = 0x1c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    Adch29 = 0x1d,
     #[doc = "Select CH30A or CH30B or CH30A/CH30B pair."]
     Adch30 = 0x1e,
     #[doc = "Select CH31A or CH31B or CH31A/CH31B pair."]
@@ -469,7 +500,8 @@ impl From<CmdlAdch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CmdlCscale {
     #[doc = "Scale selected analog channel (Factor of 30/64)."]
@@ -500,7 +532,8 @@ impl From<CmdlCscale> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CmdlDiff {
     #[doc = "Single-ended mode."]
@@ -531,7 +564,8 @@ impl From<CmdlDiff> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdsrc {
     #[doc = "Not a valid value CMDSRC value for a dataword in RESFIFO. 0x0 is only found in initial FIFO state prior to an ADC conversion result dataword being stored to a RESFIFO buffer."]
@@ -554,11 +588,16 @@ pub enum Cmdsrc {
     Cmdsrc8 = 0x08,
     #[doc = "Corresponding command buffer used as control settings for this conversion."]
     Cmdsrc9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Corresponding command buffer used as control settings for this conversion."]
+    Cmdsrc10 = 0x0a,
+    #[doc = "Corresponding command buffer used as control settings for this conversion."]
+    Cmdsrc11 = 0x0b,
+    #[doc = "Corresponding command buffer used as control settings for this conversion."]
+    Cmdsrc12 = 0x0c,
+    #[doc = "Corresponding command buffer used as control settings for this conversion."]
+    Cmdsrc13 = 0x0d,
+    #[doc = "Corresponding command buffer used as control settings for this conversion."]
+    Cmdsrc14 = 0x0e,
     #[doc = "CMD15 buffer used as control settings for this conversion."]
     Cmdsrc15 = 0x0f,
 }
@@ -585,7 +624,8 @@ impl From<Cmdsrc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Csw {
     #[doc = "Channel scaling not supported."]
@@ -623,7 +663,8 @@ impl From<Csw> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Diffen {
     #[doc = "Differential operation not supported."]
@@ -654,7 +695,8 @@ impl From<Diffen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dozen {
     #[doc = "ADC is enabled in Doze mode."]
@@ -709,6 +751,7 @@ impl Fifosize {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fifosize {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -749,7 +792,8 @@ impl From<Fifosize> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fof {
     #[doc = "No result FIFO overflow has occurred since the last time the flag was cleared."]
@@ -780,7 +824,8 @@ impl From<Fof> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fofie {
     #[doc = "FIFO overflow interrupts are not enabled."]
@@ -811,7 +856,8 @@ impl From<Fofie> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fwmde {
     #[doc = "DMA request disabled."]
@@ -842,7 +888,8 @@ impl From<Fwmde> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fwmie {
     #[doc = "FIFO watermark interrupts are not enabled."]
@@ -873,7 +920,8 @@ impl From<Fwmie> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hten {
     #[doc = "Hardware trigger source disabled."]
@@ -904,7 +952,8 @@ impl From<Hten> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Iadcki {
     #[doc = "Internal clock source not implemented."]
@@ -935,7 +984,8 @@ impl From<Iadcki> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Loopcnt {
     #[doc = "Result is from initial conversion in command."]
@@ -958,11 +1008,16 @@ pub enum Loopcnt {
     Loopcnt8 = 0x08,
     #[doc = "Result is from LOOPCNT+1 conversion in command."]
     Loopcnt9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Result is from LOOPCNT+1 conversion in command."]
+    Loopcnt10 = 0x0a,
+    #[doc = "Result is from LOOPCNT+1 conversion in command."]
+    Loopcnt11 = 0x0b,
+    #[doc = "Result is from LOOPCNT+1 conversion in command."]
+    Loopcnt12 = 0x0c,
+    #[doc = "Result is from LOOPCNT+1 conversion in command."]
+    Loopcnt13 = 0x0d,
+    #[doc = "Result is from LOOPCNT+1 conversion in command."]
+    Loopcnt14 = 0x0e,
     #[doc = "Result is from 16th conversion in command."]
     Loopcnt15 = 0x0f,
 }
@@ -989,7 +1044,8 @@ impl From<Loopcnt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mvi {
     #[doc = "Single voltage reference high (VREFH) input supported."]
@@ -1020,7 +1076,8 @@ impl From<Mvi> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pauseen {
     #[doc = "Pause operation disabled."]
@@ -1051,7 +1108,8 @@ impl From<Pauseen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pwren {
     #[doc = "ADC analog circuits are only enabled while conversions are active. Performance is affected due to analog startup delays."]
@@ -1082,7 +1140,8 @@ impl From<Pwren> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pwrsel {
     #[doc = "Lowest power setting."]
@@ -1117,7 +1176,8 @@ impl From<Pwrsel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rdy {
     #[doc = "Result FIFO data level not above watermark level."]
@@ -1148,7 +1208,8 @@ impl From<Rdy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Refsel {
     #[doc = "(Default) Option 1 setting."]
@@ -1182,7 +1243,8 @@ impl From<Refsel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Res {
     #[doc = "Up to 13-bit differential/12-bit single ended resolution supported."]
@@ -1213,7 +1275,8 @@ impl From<Res> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rst {
     #[doc = "ADC logic is not reset."]
@@ -1244,7 +1307,8 @@ impl From<Rst> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rstfifo {
     #[doc = "No effect."]
@@ -1275,7 +1339,8 @@ impl From<Rstfifo> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swt0 {
     #[doc = "No trigger 0 event generated."]
@@ -1306,7 +1371,8 @@ impl From<Swt0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swt1 {
     #[doc = "No trigger 1 event generated."]
@@ -1337,7 +1403,8 @@ impl From<Swt1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swt10 {
     #[doc = "No trigger 10 event generated."]
@@ -1368,7 +1435,8 @@ impl From<Swt10> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swt11 {
     #[doc = "No trigger 11 event generated."]
@@ -1399,7 +1467,8 @@ impl From<Swt11> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swt12 {
     #[doc = "No trigger 12 event generated."]
@@ -1430,7 +1499,8 @@ impl From<Swt12> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swt13 {
     #[doc = "No trigger 13 event generated."]
@@ -1461,7 +1531,8 @@ impl From<Swt13> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swt14 {
     #[doc = "No trigger 14 event generated."]
@@ -1492,7 +1563,8 @@ impl From<Swt14> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swt15 {
     #[doc = "No trigger 15 event generated."]
@@ -1523,7 +1595,8 @@ impl From<Swt15> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swt2 {
     #[doc = "No trigger 2 event generated."]
@@ -1554,7 +1627,8 @@ impl From<Swt2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swt3 {
     #[doc = "No trigger 3 event generated."]
@@ -1585,7 +1659,8 @@ impl From<Swt3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swt4 {
     #[doc = "No trigger 4 event generated."]
@@ -1616,7 +1691,8 @@ impl From<Swt4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swt5 {
     #[doc = "No trigger 5 event generated."]
@@ -1647,7 +1723,8 @@ impl From<Swt5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swt6 {
     #[doc = "No trigger 6 event generated."]
@@ -1678,7 +1755,8 @@ impl From<Swt6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swt7 {
     #[doc = "No trigger 7 event generated."]
@@ -1709,7 +1787,8 @@ impl From<Swt7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swt8 {
     #[doc = "No trigger 8 event generated."]
@@ -1740,7 +1819,8 @@ impl From<Swt8> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swt9 {
     #[doc = "No trigger 9 event generated."]
@@ -1771,7 +1851,8 @@ impl From<Swt9> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcmd {
     #[doc = "Not a valid selection from the command buffer. Trigger event is ignored."]
@@ -1794,11 +1875,16 @@ pub enum Tcmd {
     Tcmd8 = 0x08,
     #[doc = "Corresponding CMD is executed."]
     Tcmd9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Corresponding CMD is executed."]
+    Tcmd10 = 0x0a,
+    #[doc = "Corresponding CMD is executed."]
+    Tcmd11 = 0x0b,
+    #[doc = "Corresponding CMD is executed."]
+    Tcmd12 = 0x0c,
+    #[doc = "Corresponding CMD is executed."]
+    Tcmd13 = 0x0d,
+    #[doc = "Corresponding CMD is executed."]
+    Tcmd14 = 0x0e,
     #[doc = "CMD15 is executed."]
     Tcmd15 = 0x0f,
 }
@@ -1825,7 +1911,8 @@ impl From<Tcmd> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tpri {
     #[doc = "Set to highest priority, Level 1."]
@@ -1848,11 +1935,16 @@ pub enum Tpri {
     Tpri8 = 0x08,
     #[doc = "Set to corresponding priority level."]
     Tpri9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Set to corresponding priority level."]
+    Tpri10 = 0x0a,
+    #[doc = "Set to corresponding priority level."]
+    Tpri11 = 0x0b,
+    #[doc = "Set to corresponding priority level."]
+    Tpri12 = 0x0c,
+    #[doc = "Set to corresponding priority level."]
+    Tpri13 = 0x0d,
+    #[doc = "Set to corresponding priority level."]
+    Tpri14 = 0x0e,
     #[doc = "Set to lowest priority, Level 16."]
     Tpri15 = 0x0f,
 }
@@ -1879,7 +1971,8 @@ impl From<Tpri> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tprictrl {
     #[doc = "If a higher priority trigger is detected during command processing, the current conversion is aborted and the new command specified by the trigger is started."]
@@ -1910,7 +2003,8 @@ impl From<Tprictrl> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trgact {
     #[doc = "Command (sequence) associated with Trigger 0 currently being executed."]
@@ -1956,7 +2050,8 @@ impl From<Trgact> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tsrc {
     #[doc = "Trigger source 0 initiated this conversion."]
@@ -1979,11 +2074,16 @@ pub enum Tsrc {
     Tsrc8 = 0x08,
     #[doc = "Corresponding trigger source initiated this conversion."]
     Tsrc9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Corresponding trigger source initiated this conversion."]
+    Tsrc10 = 0x0a,
+    #[doc = "Corresponding trigger source initiated this conversion."]
+    Tsrc11 = 0x0b,
+    #[doc = "Corresponding trigger source initiated this conversion."]
+    Tsrc12 = 0x0c,
+    #[doc = "Corresponding trigger source initiated this conversion."]
+    Tsrc13 = 0x0d,
+    #[doc = "Corresponding trigger source initiated this conversion."]
+    Tsrc14 = 0x0e,
     #[doc = "Trigger source 15 initiated this conversion."]
     Tsrc15 = 0x0f,
 }
@@ -2010,7 +2110,8 @@ impl From<Tsrc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Valid {
     #[doc = "FIFO is empty. Discard any read from RESFIFO."]
@@ -2041,7 +2142,8 @@ impl From<Valid> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Vr1rngi {
     #[doc = "Range control not required. CFG\\[VREF1RNG\\] is not implemented."]

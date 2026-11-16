@@ -22,6 +22,7 @@ impl Default for CorrErrCnt0 {
         CorrErrCnt0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CorrErrCnt0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CorrErrCnt0")
@@ -59,6 +60,7 @@ impl Default for CorrErrCnt1 {
         CorrErrCnt1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CorrErrCnt1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CorrErrCnt1")
@@ -96,6 +98,7 @@ impl Default for CorrErrCnt2 {
         CorrErrCnt2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CorrErrCnt2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CorrErrCnt2")
@@ -133,6 +136,7 @@ impl Default for CorrErrCnt3 {
         CorrErrCnt3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CorrErrCnt3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CorrErrCnt3")
@@ -170,6 +174,7 @@ impl Default for CorrErrCnt4 {
         CorrErrCnt4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CorrErrCnt4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CorrErrCnt4")
@@ -207,6 +212,7 @@ impl Default for CorrErrCnt5 {
         CorrErrCnt5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CorrErrCnt5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CorrErrCnt5")
@@ -244,6 +250,7 @@ impl Default for CorrErrCnt6 {
         CorrErrCnt6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CorrErrCnt6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CorrErrCnt6")
@@ -281,6 +288,7 @@ impl Default for CorrErrCnt7 {
         CorrErrCnt7(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CorrErrCnt7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CorrErrCnt7")
@@ -318,6 +326,7 @@ impl Default for CorrErrCnt8 {
         CorrErrCnt8(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CorrErrCnt8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CorrErrCnt8")
@@ -355,6 +364,7 @@ impl Default for CorrErrCnt9 {
         CorrErrCnt9(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CorrErrCnt9 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CorrErrCnt9")
@@ -572,6 +582,7 @@ impl Default for Cr0 {
         Cr0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cr0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cr0")
@@ -679,6 +690,7 @@ impl Default for Cr1 {
         Cr1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cr1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cr1")
@@ -726,6 +738,7 @@ impl Default for Ear0 {
         Ear0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ear0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ear0").field("ear", &self.ear()).finish()
@@ -761,6 +774,7 @@ impl Default for Ear1 {
         Ear1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ear1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ear1").field("ear", &self.ear()).finish()
@@ -796,6 +810,7 @@ impl Default for Ear2 {
         Ear2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ear2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ear2").field("ear", &self.ear()).finish()
@@ -831,6 +846,7 @@ impl Default for Ear3 {
         Ear3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ear3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ear3").field("ear", &self.ear()).finish()
@@ -866,6 +882,7 @@ impl Default for Ear4 {
         Ear4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ear4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ear4").field("ear", &self.ear()).finish()
@@ -901,6 +918,7 @@ impl Default for Ear5 {
         Ear5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ear5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ear5").field("ear", &self.ear()).finish()
@@ -936,6 +954,7 @@ impl Default for Ear6 {
         Ear6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ear6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ear6").field("ear", &self.ear()).finish()
@@ -1151,6 +1170,7 @@ impl Default for Sr0 {
         Sr0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sr0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sr0")
@@ -1258,6 +1278,7 @@ impl Default for Sr1 {
         Sr1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sr1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sr1")
@@ -1305,6 +1326,7 @@ impl Default for Syn0 {
         Syn0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Syn0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Syn0")
@@ -1342,6 +1364,7 @@ impl Default for Syn1 {
         Syn1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Syn1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Syn1")
@@ -1379,6 +1402,7 @@ impl Default for Syn2 {
         Syn2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Syn2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Syn2")
@@ -1416,6 +1440,7 @@ impl Default for Syn3 {
         Syn3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Syn3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Syn3")
@@ -1453,6 +1478,7 @@ impl Default for Syn4 {
         Syn4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Syn4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Syn4")
@@ -1490,6 +1516,7 @@ impl Default for Syn5 {
         Syn5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Syn5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Syn5")
@@ -1527,6 +1554,7 @@ impl Default for Syn6 {
         Syn6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Syn6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Syn6")
@@ -1564,6 +1592,7 @@ impl Default for Syn8 {
         Syn8(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Syn8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Syn8")

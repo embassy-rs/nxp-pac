@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AnatopUsbOtg1IdSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B0_01 for Mode: ALT3."]
@@ -30,7 +31,8 @@ impl From<AnatopUsbOtg1IdSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AnatopUsbOtg2IdSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B0_00 for Mode: ALT3."]
@@ -61,7 +63,8 @@ impl From<AnatopUsbOtg2IdSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CanfdIppIndCanrxSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_37 for Mode: ALT9."]
@@ -95,7 +98,8 @@ impl From<CanfdIppIndCanrxSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CcmPmicReadySelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_03 for Mode: ALT6."]
@@ -135,7 +139,8 @@ impl From<CcmPmicReadySelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CsiData02SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B1_15 for Mode: ALT4."]
@@ -166,7 +171,8 @@ impl From<CsiData02SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CsiData03SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B1_14 for Mode: ALT4."]
@@ -197,7 +203,8 @@ impl From<CsiData03SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CsiData04SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B1_13 for Mode: ALT4."]
@@ -228,7 +235,8 @@ impl From<CsiData04SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CsiData05SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B1_12 for Mode: ALT4."]
@@ -259,7 +267,8 @@ impl From<CsiData05SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CsiData06SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B1_11 for Mode: ALT4."]
@@ -290,7 +299,8 @@ impl From<CsiData06SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CsiData07SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B1_10 for Mode: ALT4."]
@@ -321,7 +331,8 @@ impl From<CsiData07SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CsiData08SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B1_09 for Mode: ALT4."]
@@ -352,7 +363,8 @@ impl From<CsiData08SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CsiData09SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B1_08 for Mode: ALT4."]
@@ -383,7 +395,8 @@ impl From<CsiData09SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CsiHsyncSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B0_15 for Mode: ALT4."]
@@ -417,7 +430,8 @@ impl From<CsiHsyncSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CsiPixclkSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B1_04 for Mode: ALT4."]
@@ -448,7 +462,8 @@ impl From<CsiPixclkSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CsiVsyncSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B0_14 for Mode: ALT4."]
@@ -482,7 +497,8 @@ impl From<CsiVsyncSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dse {
     #[doc = "output driver disabled;."]
@@ -525,7 +541,8 @@ impl From<Dse> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Enet0RxdataSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_20 for Mode: ALT3."]
@@ -556,7 +573,8 @@ impl From<Enet0RxdataSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Enet0TimerSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B0_15 for Mode: ALT3."]
@@ -590,7 +608,8 @@ impl From<Enet0TimerSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Enet1RxdataSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_19 for Mode: ALT3."]
@@ -621,7 +640,8 @@ impl From<Enet1RxdataSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Enet2IpgClkRmiiSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_33 for Mode: ALT9."]
@@ -655,7 +675,8 @@ impl From<Enet2IpgClkRmiiSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Enet2IppIndMac0MdioSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_39 for Mode: ALT8."]
@@ -686,7 +707,8 @@ impl From<Enet2IppIndMac0MdioSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Enet2IppIndMac0RxdataSelectInput0Daisy {
     #[doc = "Selecting Pad: GPIO_EMC_35 for Mode: ALT8."]
@@ -720,7 +742,8 @@ impl From<Enet2IppIndMac0RxdataSelectInput0Daisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Enet2IppIndMac0RxdataSelectInput1Daisy {
     #[doc = "Selecting Pad: GPIO_EMC_36 for Mode: ALT8."]
@@ -754,7 +777,8 @@ impl From<Enet2IppIndMac0RxdataSelectInput1Daisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Enet2IppIndMac0RxenSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_37 for Mode: ALT8."]
@@ -788,7 +812,8 @@ impl From<Enet2IppIndMac0RxenSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Enet2IppIndMac0RxerrSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_34 for Mode: ALT8."]
@@ -822,7 +847,8 @@ impl From<Enet2IppIndMac0RxerrSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Enet2IppIndMac0TimerSelectInput0Daisy {
     #[doc = "Selecting Pad: GPIO_AD_B1_01 for Mode: ALT8."]
@@ -853,7 +879,8 @@ impl From<Enet2IppIndMac0TimerSelectInput0Daisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Enet2IppIndMac0TxclkSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_33 for Mode: ALT8."]
@@ -887,7 +914,8 @@ impl From<Enet2IppIndMac0TxclkSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EnetIpgClkRmiiSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_25 for Mode: ALT4."]
@@ -918,7 +946,8 @@ impl From<EnetIpgClkRmiiSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EnetMdioSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B1_05 for Mode: ALT1."]
@@ -952,7 +981,8 @@ impl From<EnetMdioSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EnetRxenSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_23 for Mode: ALT3."]
@@ -983,7 +1013,8 @@ impl From<EnetRxenSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EnetRxerrSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_26 for Mode: ALT3."]
@@ -1014,7 +1045,8 @@ impl From<EnetRxerrSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EnetTxclkSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_25 for Mode: ALT3."]
@@ -1045,7 +1077,8 @@ impl From<EnetTxclkSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexcan1RxSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_03 for Mode: ALT4."]
@@ -1080,7 +1113,8 @@ impl From<Flexcan1RxSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexcan2RxSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_10 for Mode: ALT3."]
@@ -1115,7 +1149,8 @@ impl From<Flexcan2RxSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexpwm1Pwma0SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_23 for Mode: ALT1."]
@@ -1146,7 +1181,8 @@ impl From<Flexpwm1Pwma0SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexpwm1Pwma1SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_25 for Mode: ALT1."]
@@ -1177,7 +1213,8 @@ impl From<Flexpwm1Pwma1SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexpwm1Pwma2SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_27 for Mode: ALT1."]
@@ -1208,7 +1245,8 @@ impl From<Flexpwm1Pwma2SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexpwm1Pwma3SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_00 for Mode: ALT2."]
@@ -1248,7 +1286,8 @@ impl From<Flexpwm1Pwma3SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexpwm1Pwmb0SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_24 for Mode: ALT1."]
@@ -1279,7 +1318,8 @@ impl From<Flexpwm1Pwmb0SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexpwm1Pwmb1SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_26 for Mode: ALT1."]
@@ -1310,7 +1350,8 @@ impl From<Flexpwm1Pwmb1SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexpwm1Pwmb2SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_28 for Mode: ALT1."]
@@ -1341,7 +1382,8 @@ impl From<Flexpwm1Pwmb2SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexpwm1Pwmb3SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_01 for Mode: ALT2."]
@@ -1381,7 +1423,8 @@ impl From<Flexpwm1Pwmb3SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexpwm2Pwma0SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_06 for Mode: ALT1."]
@@ -1412,7 +1455,8 @@ impl From<Flexpwm2Pwma0SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexpwm2Pwma1SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_08 for Mode: ALT1."]
@@ -1443,7 +1487,8 @@ impl From<Flexpwm2Pwma1SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexpwm2Pwma2SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_10 for Mode: ALT1."]
@@ -1474,7 +1519,8 @@ impl From<Flexpwm2Pwma2SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexpwm2Pwma3SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_02 for Mode: ALT2."]
@@ -1514,7 +1560,8 @@ impl From<Flexpwm2Pwma3SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexpwm2Pwmb0SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_07 for Mode: ALT1."]
@@ -1545,7 +1592,8 @@ impl From<Flexpwm2Pwmb0SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexpwm2Pwmb1SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_09 for Mode: ALT1."]
@@ -1576,7 +1624,8 @@ impl From<Flexpwm2Pwmb1SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexpwm2Pwmb2SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_11 for Mode: ALT1."]
@@ -1607,7 +1656,8 @@ impl From<Flexpwm2Pwmb2SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexpwm2Pwmb3SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_03 for Mode: ALT2."]
@@ -1642,7 +1692,8 @@ impl From<Flexpwm2Pwmb3SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexpwm4Pwma0SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_00 for Mode: ALT1."]
@@ -1673,7 +1724,8 @@ impl From<Flexpwm4Pwma0SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexpwm4Pwma1SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_02 for Mode: ALT1."]
@@ -1704,7 +1756,8 @@ impl From<Flexpwm4Pwma1SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexpwm4Pwma2SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_04 for Mode: ALT1."]
@@ -1735,7 +1788,8 @@ impl From<Flexpwm4Pwma2SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexpwm4Pwma3SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_17 for Mode: ALT1."]
@@ -1766,7 +1820,8 @@ impl From<Flexpwm4Pwma3SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi2IppIndDqsFaSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SPI_B1_00 for Mode: ALT0."]
@@ -1800,7 +1855,8 @@ impl From<Flexspi2IppIndDqsFaSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi2IppIndIoFaBit0SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SPI_B1_04 for Mode: ALT0."]
@@ -1834,7 +1890,8 @@ impl From<Flexspi2IppIndIoFaBit0SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi2IppIndIoFaBit1SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SPI_B1_03 for Mode: ALT0."]
@@ -1868,7 +1925,8 @@ impl From<Flexspi2IppIndIoFaBit1SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi2IppIndIoFaBit2SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SPI_B1_02 for Mode: ALT0."]
@@ -1902,7 +1960,8 @@ impl From<Flexspi2IppIndIoFaBit2SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi2IppIndIoFaBit3SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SPI_B1_01 for Mode: ALT0."]
@@ -1936,7 +1995,8 @@ impl From<Flexspi2IppIndIoFaBit3SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi2IppIndIoFbBit0SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_13 for Mode: ALT8."]
@@ -1967,7 +2027,8 @@ impl From<Flexspi2IppIndIoFbBit0SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi2IppIndIoFbBit1SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_14 for Mode: ALT8."]
@@ -1998,7 +2059,8 @@ impl From<Flexspi2IppIndIoFbBit1SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi2IppIndIoFbBit2SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_15 for Mode: ALT8."]
@@ -2029,7 +2091,8 @@ impl From<Flexspi2IppIndIoFbBit2SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi2IppIndIoFbBit3SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_16 for Mode: ALT8."]
@@ -2060,7 +2123,8 @@ impl From<Flexspi2IppIndIoFbBit3SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi2IppIndSckFaSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SPI_B1_05 for Mode: ALT0."]
@@ -2094,7 +2158,8 @@ impl From<Flexspi2IppIndSckFaSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi2IppIndSckFbSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_12 for Mode: ALT8."]
@@ -2125,7 +2190,8 @@ impl From<Flexspi2IppIndSckFbSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlexspiaData0SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_08 for Mode: ALT1."]
@@ -2156,7 +2222,8 @@ impl From<FlexspiaData0SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlexspiaData1SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_09 for Mode: ALT1."]
@@ -2187,7 +2254,8 @@ impl From<FlexspiaData1SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlexspiaData2SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_10 for Mode: ALT1."]
@@ -2218,7 +2286,8 @@ impl From<FlexspiaData2SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlexspiaData3SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_11 for Mode: ALT1."]
@@ -2249,7 +2318,8 @@ impl From<FlexspiaData3SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlexspiaDqsSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_05 for Mode: ALT1."]
@@ -2280,7 +2350,8 @@ impl From<FlexspiaDqsSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlexspiaSckSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_07 for Mode: ALT1."]
@@ -2311,7 +2382,8 @@ impl From<FlexspiaSckSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlexspibData0SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_03 for Mode: ALT1."]
@@ -2342,7 +2414,8 @@ impl From<FlexspibData0SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlexspibData1SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_02 for Mode: ALT1."]
@@ -2373,7 +2446,8 @@ impl From<FlexspibData1SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlexspibData2SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_01 for Mode: ALT1."]
@@ -2404,7 +2478,8 @@ impl From<FlexspibData2SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlexspibData3SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_00 for Mode: ALT1."]
@@ -2435,7 +2510,8 @@ impl From<FlexspibData3SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpt1IppIndCapin1SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_24 for Mode: ALT4."]
@@ -2466,7 +2542,8 @@ impl From<Gpt1IppIndCapin1SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpt1IppIndCapin2SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_23 for Mode: ALT4."]
@@ -2497,7 +2574,8 @@ impl From<Gpt1IppIndCapin2SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpt1IppIndClkinSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B0_13 for Mode: ALT1."]
@@ -2528,7 +2606,8 @@ impl From<Gpt1IppIndClkinSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpt2IppIndCapin1SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_41 for Mode: ALT1."]
@@ -2559,7 +2638,8 @@ impl From<Gpt2IppIndCapin1SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpt2IppIndCapin2SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_40 for Mode: ALT1."]
@@ -2590,7 +2670,8 @@ impl From<Gpt2IppIndCapin2SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpt2IppIndClkinSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B0_09 for Mode: ALT7."]
@@ -2621,7 +2702,8 @@ impl From<Gpt2IppIndClkinSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpi2c1SclSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_04 for Mode: ALT2."]
@@ -2652,7 +2734,8 @@ impl From<Lpi2c1SclSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpi2c1SdaSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_05 for Mode: ALT2."]
@@ -2683,7 +2766,8 @@ impl From<Lpi2c1SdaSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpi2c2SclSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_11 for Mode: ALT3."]
@@ -2714,7 +2798,8 @@ impl From<Lpi2c2SclSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpi2c2SdaSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_10 for Mode: ALT3."]
@@ -2745,7 +2830,8 @@ impl From<Lpi2c2SdaSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpi2c3SclSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_22 for Mode: ALT2."]
@@ -2779,7 +2865,8 @@ impl From<Lpi2c3SclSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpi2c3SdaSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_21 for Mode: ALT2."]
@@ -2813,7 +2900,8 @@ impl From<Lpi2c3SdaSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpi2c4SclSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_12 for Mode: ALT2."]
@@ -2844,7 +2932,8 @@ impl From<Lpi2c4SclSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpi2c4SdaSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_11 for Mode: ALT2."]
@@ -2875,7 +2964,8 @@ impl From<Lpi2c4SdaSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi1Pcs0SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B0_01 for Mode: ALT4."]
@@ -2906,7 +2996,8 @@ impl From<Lpspi1Pcs0SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi1SckSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_27 for Mode: ALT3."]
@@ -2937,7 +3028,8 @@ impl From<Lpspi1SckSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi1SdiSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_29 for Mode: ALT3."]
@@ -2968,7 +3060,8 @@ impl From<Lpspi1SdiSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi1SdoSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_28 for Mode: ALT3."]
@@ -2999,7 +3092,8 @@ impl From<Lpspi1SdoSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi2Pcs0SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_06 for Mode: ALT4."]
@@ -3030,7 +3124,8 @@ impl From<Lpspi2Pcs0SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi2SckSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_07 for Mode: ALT4."]
@@ -3061,7 +3156,8 @@ impl From<Lpspi2SckSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi2SdiSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_09 for Mode: ALT4."]
@@ -3092,7 +3188,8 @@ impl From<Lpspi2SdiSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi2SdoSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_08 for Mode: ALT4."]
@@ -3123,7 +3220,8 @@ impl From<Lpspi2SdoSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi3Pcs0SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B0_03 for Mode: ALT7."]
@@ -3154,7 +3252,8 @@ impl From<Lpspi3Pcs0SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi3SckSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B0_00 for Mode: ALT7."]
@@ -3185,7 +3284,8 @@ impl From<Lpspi3SckSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi3SdiSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B0_02 for Mode: ALT7."]
@@ -3216,7 +3316,8 @@ impl From<Lpspi3SdiSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi3SdoSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B0_01 for Mode: ALT7."]
@@ -3247,7 +3348,8 @@ impl From<Lpspi3SdoSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi4Pcs0SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_B0_00 for Mode: ALT3."]
@@ -3278,7 +3380,8 @@ impl From<Lpspi4Pcs0SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi4SckSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_B0_03 for Mode: ALT3."]
@@ -3309,7 +3412,8 @@ impl From<Lpspi4SckSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi4SdiSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_B0_01 for Mode: ALT3."]
@@ -3340,7 +3444,8 @@ impl From<Lpspi4SdiSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi4SdoSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_B0_02 for Mode: ALT3."]
@@ -3371,7 +3476,8 @@ impl From<Lpspi4SdoSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart2RxSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_10 for Mode: ALT2."]
@@ -3402,7 +3508,8 @@ impl From<Lpuart2RxSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart2TxSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_11 for Mode: ALT2."]
@@ -3433,7 +3540,8 @@ impl From<Lpuart2TxSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart3CtsBSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_15 for Mode: ALT2."]
@@ -3464,7 +3572,8 @@ impl From<Lpuart3CtsBSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart3RxSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B1_07 for Mode: ALT2."]
@@ -3498,7 +3607,8 @@ impl From<Lpuart3RxSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart3TxSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B1_06 for Mode: ALT2."]
@@ -3532,7 +3642,8 @@ impl From<Lpuart3TxSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart4RxSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_01 for Mode: ALT4."]
@@ -3566,7 +3677,8 @@ impl From<Lpuart4RxSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart4TxSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_00 for Mode: ALT4."]
@@ -3600,7 +3712,8 @@ impl From<Lpuart4TxSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart5RxSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_24 for Mode: ALT2."]
@@ -3631,7 +3744,8 @@ impl From<Lpuart5RxSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart5TxSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_23 for Mode: ALT2."]
@@ -3662,7 +3776,8 @@ impl From<Lpuart5TxSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart6RxSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_26 for Mode: ALT2."]
@@ -3693,7 +3808,8 @@ impl From<Lpuart6RxSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart6TxSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_25 for Mode: ALT2."]
@@ -3724,7 +3840,8 @@ impl From<Lpuart6TxSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart7RxSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_09 for Mode: ALT2."]
@@ -3755,7 +3872,8 @@ impl From<Lpuart7RxSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart7TxSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_08 for Mode: ALT2."]
@@ -3786,7 +3904,8 @@ impl From<Lpuart7TxSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart8RxSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B0_05 for Mode: ALT2."]
@@ -3820,7 +3939,8 @@ impl From<Lpuart8RxSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart8TxSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B0_04 for Mode: ALT2."]
@@ -3854,7 +3974,8 @@ impl From<Lpuart8TxSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum NmiSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B0_12 for Mode: ALT7."]
@@ -3885,7 +4006,8 @@ impl From<NmiSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pus {
     #[doc = "100K Ohm Pull Down."]
@@ -3920,7 +4042,8 @@ impl From<Pus> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qtimer2Timer0SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_19 for Mode: ALT4."]
@@ -3951,7 +4074,8 @@ impl From<Qtimer2Timer0SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qtimer2Timer1SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_20 for Mode: ALT4."]
@@ -3982,7 +4106,8 @@ impl From<Qtimer2Timer1SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qtimer2Timer2SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_21 for Mode: ALT4."]
@@ -4013,7 +4138,8 @@ impl From<Qtimer2Timer2SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qtimer2Timer3SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_22 for Mode: ALT4."]
@@ -4044,7 +4170,8 @@ impl From<Qtimer2Timer3SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qtimer3Timer0SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_15 for Mode: ALT4."]
@@ -4078,7 +4205,8 @@ impl From<Qtimer3Timer0SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qtimer3Timer1SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B1_01 for Mode: ALT1."]
@@ -4112,7 +4240,8 @@ impl From<Qtimer3Timer1SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qtimer3Timer2SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_17 for Mode: ALT4."]
@@ -4146,7 +4275,8 @@ impl From<Qtimer3Timer2SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qtimer3Timer3SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_18 for Mode: ALT4."]
@@ -4180,7 +4310,8 @@ impl From<Qtimer3Timer3SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai1Mclk2SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_03 for Mode: ALT3."]
@@ -4214,7 +4345,8 @@ impl From<Sai1Mclk2SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai1RxBclkSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_05 for Mode: ALT3."]
@@ -4248,7 +4380,8 @@ impl From<Sai1RxBclkSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai1RxData0SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_06 for Mode: ALT3."]
@@ -4282,7 +4415,8 @@ impl From<Sai1RxData0SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai1RxData1SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_00 for Mode: ALT3."]
@@ -4313,7 +4447,8 @@ impl From<Sai1RxData1SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai1RxData2SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_01 for Mode: ALT3."]
@@ -4344,7 +4479,8 @@ impl From<Sai1RxData2SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai1RxData3SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_02 for Mode: ALT3."]
@@ -4375,7 +4511,8 @@ impl From<Sai1RxData3SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai1RxSyncSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_04 for Mode: ALT3."]
@@ -4409,7 +4546,8 @@ impl From<Sai1RxSyncSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai1TxBclkSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_08 for Mode: ALT3."]
@@ -4443,7 +4581,8 @@ impl From<Sai1TxBclkSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai1TxSyncSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_09 for Mode: ALT3."]
@@ -4477,7 +4616,8 @@ impl From<Sai1TxSyncSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai2Mclk2SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_07 for Mode: ALT2."]
@@ -4508,7 +4648,8 @@ impl From<Sai2Mclk2SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai2RxBclkSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_10 for Mode: ALT2."]
@@ -4539,7 +4680,8 @@ impl From<Sai2RxBclkSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai2RxData0SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_08 for Mode: ALT2."]
@@ -4570,7 +4712,8 @@ impl From<Sai2RxData0SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai2RxSyncSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_09 for Mode: ALT2."]
@@ -4601,7 +4744,8 @@ impl From<Sai2RxSyncSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai2TxBclkSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_06 for Mode: ALT2."]
@@ -4632,7 +4776,8 @@ impl From<Sai2TxBclkSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai2TxSyncSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_05 for Mode: ALT2."]
@@ -4663,7 +4808,8 @@ impl From<Sai2TxSyncSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai3IpgClkSaiMclkSelectInput2Daisy {
     #[doc = "Selecting Pad: GPIO_EMC_37 for Mode: ALT3."]
@@ -4694,7 +4840,8 @@ impl From<Sai3IpgClkSaiMclkSelectInput2Daisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai3IppIndSaiRxbclkSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_35 for Mode: ALT3."]
@@ -4725,7 +4872,8 @@ impl From<Sai3IppIndSaiRxbclkSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai3IppIndSaiRxdataSelectInput0Daisy {
     #[doc = "Selecting Pad: GPIO_EMC_33 for Mode: ALT3."]
@@ -4756,7 +4904,8 @@ impl From<Sai3IppIndSaiRxdataSelectInput0Daisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai3IppIndSaiRxsyncSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_34 for Mode: ALT3."]
@@ -4787,7 +4936,8 @@ impl From<Sai3IppIndSaiRxsyncSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai3IppIndSaiTxbclkSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_38 for Mode: ALT3."]
@@ -4818,7 +4968,8 @@ impl From<Sai3IppIndSaiTxbclkSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai3IppIndSaiTxsyncSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_39 for Mode: ALT3."]
@@ -4849,7 +5000,8 @@ impl From<Sai3IppIndSaiTxsyncSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SemcIIppIndDqs4SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B0_00 for Mode: ALT9."]
@@ -4884,7 +5036,8 @@ impl From<SemcIIppIndDqs4SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SpdifInSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B1_03 for Mode: ALT3."]
@@ -4915,7 +5068,8 @@ impl From<SpdifInSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Speed {
     #[doc = "low(50MHz)."]
@@ -4950,7 +5104,8 @@ impl From<Speed> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum UsbOtg1OcSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B0_03 for Mode: ALT3."]
@@ -4981,7 +5136,8 @@ impl From<UsbOtg1OcSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum UsbOtg2OcSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B0_14 for Mode: ALT0."]
@@ -5012,7 +5168,8 @@ impl From<UsbOtg2OcSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usdhc1CdBSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_35 for Mode: ALT6."]
@@ -5046,7 +5203,8 @@ impl From<Usdhc1CdBSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usdhc1WpSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_12 for Mode: ALT3."]
@@ -5081,7 +5239,8 @@ impl From<Usdhc1WpSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usdhc2CdBSelectInputDaisy {
     #[doc = "Selecting Pad:GPIO_AD_B1_03 for Mode: ALT6."]
@@ -5112,7 +5271,8 @@ impl From<Usdhc2CdBSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usdhc2ClkSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_04 for Mode: ALT0."]
@@ -5143,7 +5303,8 @@ impl From<Usdhc2ClkSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usdhc2CmdSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_05 for Mode: ALT0."]
@@ -5174,7 +5335,8 @@ impl From<Usdhc2CmdSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usdhc2Data0SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_03 for Mode: ALT0."]
@@ -5205,7 +5367,8 @@ impl From<Usdhc2Data0SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usdhc2Data1SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_02 for Mode: ALT0."]
@@ -5236,7 +5399,8 @@ impl From<Usdhc2Data1SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usdhc2Data2SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_01 for Mode: ALT0."]
@@ -5267,7 +5431,8 @@ impl From<Usdhc2Data2SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usdhc2Data3SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_00 for Mode: ALT0."]
@@ -5298,7 +5463,8 @@ impl From<Usdhc2Data3SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usdhc2Data4SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_08 for Mode: ALT0."]
@@ -5329,7 +5495,8 @@ impl From<Usdhc2Data4SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usdhc2Data5SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_09 for Mode: ALT0."]
@@ -5360,7 +5527,8 @@ impl From<Usdhc2Data5SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usdhc2Data6SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_10 for Mode: ALT0."]
@@ -5391,7 +5559,8 @@ impl From<Usdhc2Data6SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usdhc2Data7SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_SD_B1_11 for Mode: ALT0."]
@@ -5422,7 +5591,8 @@ impl From<Usdhc2Data7SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usdhc2WpSelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_37 for Mode: ALT6."]
@@ -5453,7 +5623,8 @@ impl From<Usdhc2WpSelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Xbar1In02SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_00 for Mode: ALT3."]
@@ -5484,7 +5655,8 @@ impl From<Xbar1In02SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Xbar1In03SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_01 for Mode: ALT3."]
@@ -5515,7 +5687,8 @@ impl From<Xbar1In03SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Xbar1In04SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_02 for Mode: ALT3."]
@@ -5546,7 +5719,8 @@ impl From<Xbar1In04SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Xbar1In05SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_03 for Mode: ALT3."]
@@ -5577,7 +5751,8 @@ impl From<Xbar1In05SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Xbar1In06SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_04 for Mode: ALT3."]
@@ -5608,7 +5783,8 @@ impl From<Xbar1In06SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Xbar1In07SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_05 for Mode: ALT3."]
@@ -5639,7 +5815,8 @@ impl From<Xbar1In07SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Xbar1In08SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_06 for Mode: ALT3."]
@@ -5670,7 +5847,8 @@ impl From<Xbar1In08SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Xbar1In09SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_07 for Mode: ALT3."]
@@ -5701,7 +5879,8 @@ impl From<Xbar1In09SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Xbar1In14SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B0_00 for Mode: ALT1."]
@@ -5732,7 +5911,8 @@ impl From<Xbar1In14SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Xbar1In15SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B0_01 for Mode: ALT1."]
@@ -5763,7 +5943,8 @@ impl From<Xbar1In15SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Xbar1In16SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B0_02 for Mode: ALT1."]
@@ -5794,7 +5975,8 @@ impl From<Xbar1In16SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Xbar1In17SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_08 for Mode: ALT3."]
@@ -5829,7 +6011,8 @@ impl From<Xbar1In17SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Xbar1In18SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_35 for Mode: ALT1."]
@@ -5860,7 +6043,8 @@ impl From<Xbar1In18SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Xbar1In19SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_14 for Mode: ALT1."]
@@ -5891,7 +6075,8 @@ impl From<Xbar1In19SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Xbar1In20SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_15 for Mode: ALT1."]
@@ -5922,7 +6107,8 @@ impl From<Xbar1In20SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Xbar1In21SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_16 for Mode: ALT1."]
@@ -5953,7 +6139,8 @@ impl From<Xbar1In21SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Xbar1In22SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_36 for Mode: ALT1."]
@@ -5984,7 +6171,8 @@ impl From<Xbar1In22SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Xbar1In23SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_37 for Mode: ALT1."]
@@ -6015,7 +6203,8 @@ impl From<Xbar1In23SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Xbar1In24SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_EMC_12 for Mode: ALT1."]
@@ -6046,7 +6235,8 @@ impl From<Xbar1In24SelectInputDaisy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Xbar1In25SelectInputDaisy {
     #[doc = "Selecting Pad: GPIO_AD_B0_15 for Mode: ALT1."]

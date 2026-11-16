@@ -1,4 +1,4 @@
-#[doc = "no description available."]
+#[doc = "Array of registers: EV_CTRL, EV_STATE."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ev {
     ptr: *mut u8,
@@ -25,7 +25,7 @@ impl Ev {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
     }
 }
-#[doc = "no description available."]
+#[doc = "Array of registers: OUT_CLR, OUT_SET."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Out {
     ptr: *mut u8,
@@ -195,13 +195,13 @@ impl Sct0 {
             crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0200usize + n * 4usize) as _)
         }
     }
-    #[doc = "no description available."]
+    #[doc = "Array of registers: EV_CTRL, EV_STATE."]
     #[inline(always)]
     pub const fn ev(self, n: usize) -> Ev {
         assert!(n < 16usize);
         unsafe { Ev::from_ptr(self.ptr.wrapping_add(0x0300usize + n * 8usize) as _) }
     }
-    #[doc = "no description available."]
+    #[doc = "Array of registers: OUT_CLR, OUT_SET."]
     #[inline(always)]
     pub const fn out(self, n: usize) -> Out {
         assert!(n < 10usize);

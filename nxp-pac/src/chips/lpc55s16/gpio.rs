@@ -1,4 +1,4 @@
-#[doc = "no description available."]
+#[doc = "Array of registers: B_\\[%s\\]."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B {
     ptr: *mut u8,
@@ -37,13 +37,13 @@ impl Gpio {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "no description available."]
+    #[doc = "Array of registers: B_\\[%s\\]."]
     #[inline(always)]
     pub const fn b(self, n: usize) -> B {
         assert!(n < 2usize);
         unsafe { B::from_ptr(self.ptr.wrapping_add(0x0usize + n * 32usize) as _) }
     }
-    #[doc = "no description available."]
+    #[doc = "Array of registers: W_\\[%s\\]."]
     #[inline(always)]
     pub const fn w(self, n: usize) -> W {
         assert!(n < 2usize);
@@ -130,7 +130,7 @@ impl Gpio {
         }
     }
 }
-#[doc = "no description available."]
+#[doc = "Array of registers: W_\\[%s\\]."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W {
     ptr: *mut u8,

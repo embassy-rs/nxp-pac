@@ -22,6 +22,7 @@ impl Default for Eichd0Word0 {
         Eichd0Word0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Eichd0Word0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Eichd0Word0")
@@ -63,6 +64,7 @@ impl Default for Eichd0Word1 {
         Eichd0Word1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Eichd0Word1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Eichd0Word1")
@@ -104,6 +106,7 @@ impl Default for Eichd1Word0 {
         Eichd1Word0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Eichd1Word0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Eichd1Word0")
@@ -145,6 +148,7 @@ impl Default for Eichd1Word1 {
         Eichd1Word1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Eichd1Word1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Eichd1Word1")
@@ -186,6 +190,7 @@ impl Default for Eichd2Word0 {
         Eichd2Word0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Eichd2Word0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Eichd2Word0")
@@ -227,6 +232,7 @@ impl Default for Eichd2Word1 {
         Eichd2Word1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Eichd2Word1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Eichd2Word1")
@@ -268,6 +274,7 @@ impl Default for Eichd3Word0 {
         Eichd3Word0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Eichd3Word0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Eichd3Word0")
@@ -309,6 +316,7 @@ impl Default for Eichd3Word1 {
         Eichd3Word1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Eichd3Word1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Eichd3Word1")
@@ -350,6 +358,7 @@ impl Default for Eichd4Word0 {
         Eichd4Word0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Eichd4Word0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Eichd4Word0")
@@ -391,6 +400,7 @@ impl Default for Eichd4Word1 {
         Eichd4Word1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Eichd4Word1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Eichd4Word1")
@@ -432,6 +442,7 @@ impl Default for Eichd5Word0 {
         Eichd5Word0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Eichd5Word0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Eichd5Word0")
@@ -473,6 +484,7 @@ impl Default for Eichd5Word1 {
         Eichd5Word1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Eichd5Word1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Eichd5Word1")
@@ -514,6 +526,7 @@ impl Default for Eichd6Word0 {
         Eichd6Word0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Eichd6Word0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Eichd6Word0")
@@ -555,6 +568,7 @@ impl Default for Eichd6Word1 {
         Eichd6Word1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Eichd6Word1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Eichd6Word1")
@@ -596,6 +610,7 @@ impl Default for Eichd7Word0 {
         Eichd7Word0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Eichd7Word0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Eichd7Word0")
@@ -637,6 +652,7 @@ impl Default for Eichd7Word1 {
         Eichd7Word1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Eichd7Word1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Eichd7Word1")
@@ -678,6 +694,7 @@ impl Default for Eichd8Word0 {
         Eichd8Word0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Eichd8Word0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Eichd8Word0")
@@ -719,6 +736,7 @@ impl Default for Eichd8Word1 {
         Eichd8Word1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Eichd8Word1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Eichd8Word1")
@@ -856,6 +874,7 @@ impl Default for Eichen {
         Eichen(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Eichen {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Eichen")
@@ -913,6 +932,7 @@ impl Default for Eimcr {
         Eimcr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Eimcr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Eimcr")

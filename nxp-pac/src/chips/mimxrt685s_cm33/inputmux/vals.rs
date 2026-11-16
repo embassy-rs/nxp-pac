@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CaPnSel {
     #[doc = "CT_INP0."]
@@ -77,7 +78,8 @@ impl From<CaPnSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dma0ItrigSel {
     #[doc = "NSGPIOPINT0_INT0."]
@@ -161,7 +163,8 @@ impl From<Dma0ItrigSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dma1ItrigSel {
     #[doc = "NSGPIOPINT0_INT0."]
@@ -245,7 +248,8 @@ impl From<Dma1ItrigSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux0 {
     #[doc = "No Effect."]
@@ -276,7 +280,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux1 {
     #[doc = "No Effect."]
@@ -307,7 +312,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux10 {
     #[doc = "No Effect."]
@@ -338,7 +344,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux10> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux11 {
     #[doc = "No Effect."]
@@ -369,7 +376,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux11> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux12 {
     #[doc = "No Effect."]
@@ -400,7 +408,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux12> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux13 {
     #[doc = "No Effect."]
@@ -431,7 +440,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux13> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux14 {
     #[doc = "No Effect."]
@@ -462,7 +472,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux14> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux15 {
     #[doc = "No Effect."]
@@ -493,7 +504,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux15> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux16 {
     #[doc = "No Effect."]
@@ -524,7 +536,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux16> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux17 {
     #[doc = "No Effect."]
@@ -555,7 +568,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux17> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux18 {
     #[doc = "No Effect."]
@@ -586,7 +600,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux18> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux19 {
     #[doc = "No Effect."]
@@ -617,7 +632,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux19> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux20 {
     #[doc = "No Effect."]
@@ -648,7 +664,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux20> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux21 {
     #[doc = "No Effect."]
@@ -679,7 +696,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux21> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux22 {
     #[doc = "No Effect."]
@@ -710,7 +728,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux22> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux23 {
     #[doc = "No Effect."]
@@ -741,7 +760,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux23> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux24 {
     #[doc = "No Effect."]
@@ -772,7 +792,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux24> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux25 {
     #[doc = "No Effect."]
@@ -803,7 +824,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux25> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux26 {
     #[doc = "No Effect."]
@@ -834,7 +856,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux26> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux27 {
     #[doc = "No Effect."]
@@ -865,7 +888,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux27> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux28 {
     #[doc = "No Effect."]
@@ -896,7 +920,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux28> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux29 {
     #[doc = "No Effect."]
@@ -927,7 +952,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux29> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux3 {
     #[doc = "No Effect."]
@@ -958,7 +984,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux30 {
     #[doc = "No Effect."]
@@ -989,7 +1016,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux30> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux31 {
     #[doc = "No Effect."]
@@ -1020,7 +1048,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux31> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux4 {
     #[doc = "No Effect."]
@@ -1051,7 +1080,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux5 {
     #[doc = "No Effect."]
@@ -1082,7 +1112,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux6 {
     #[doc = "No Effect."]
@@ -1113,7 +1144,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux7 {
     #[doc = "No Effect."]
@@ -1144,7 +1176,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux8 {
     #[doc = "No Effect."]
@@ -1175,7 +1208,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux8> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0ClrDmac0ItrigInmux9 {
     #[doc = "No Effect."]
@@ -1206,7 +1240,8 @@ impl From<Dmac0ItrigEna0ClrDmac0ItrigInmux9> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux0 {
     #[doc = "No Effect."]
@@ -1237,7 +1272,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux1 {
     #[doc = "No Effect."]
@@ -1268,7 +1304,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux10 {
     #[doc = "No Effect."]
@@ -1299,7 +1336,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux10> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux11 {
     #[doc = "No Effect."]
@@ -1330,7 +1368,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux11> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux12 {
     #[doc = "No Effect."]
@@ -1361,7 +1400,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux12> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux13 {
     #[doc = "No Effect."]
@@ -1392,7 +1432,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux13> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux14 {
     #[doc = "No Effect."]
@@ -1423,7 +1464,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux14> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux15 {
     #[doc = "No Effect."]
@@ -1454,7 +1496,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux15> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux16 {
     #[doc = "No Effect."]
@@ -1485,7 +1528,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux16> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux17 {
     #[doc = "No Effect."]
@@ -1516,7 +1560,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux17> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux18 {
     #[doc = "No Effect."]
@@ -1547,7 +1592,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux18> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux19 {
     #[doc = "No Effect."]
@@ -1578,7 +1624,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux19> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux20 {
     #[doc = "No Effect."]
@@ -1609,7 +1656,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux20> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux21 {
     #[doc = "No Effect."]
@@ -1640,7 +1688,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux21> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux22 {
     #[doc = "No Effect."]
@@ -1671,7 +1720,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux22> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux23 {
     #[doc = "No Effect."]
@@ -1702,7 +1752,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux23> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux24 {
     #[doc = "No Effect."]
@@ -1733,7 +1784,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux24> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux25 {
     #[doc = "No Effect."]
@@ -1764,7 +1816,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux25> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux26 {
     #[doc = "No Effect."]
@@ -1795,7 +1848,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux26> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux27 {
     #[doc = "No Effect."]
@@ -1826,7 +1880,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux27> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux28 {
     #[doc = "No Effect."]
@@ -1857,7 +1912,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux28> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux29 {
     #[doc = "No Effect."]
@@ -1888,7 +1944,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux29> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux3 {
     #[doc = "No Effect."]
@@ -1919,7 +1976,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux30 {
     #[doc = "No Effect."]
@@ -1950,7 +2008,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux30> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux31 {
     #[doc = "No Effect."]
@@ -1981,7 +2040,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux31> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux4 {
     #[doc = "No Effect."]
@@ -2012,7 +2072,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux5 {
     #[doc = "No Effect."]
@@ -2043,7 +2104,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux6 {
     #[doc = "No Effect."]
@@ -2074,7 +2136,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux7 {
     #[doc = "No Effect."]
@@ -2105,7 +2168,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux8 {
     #[doc = "No Effect."]
@@ -2136,7 +2200,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux8> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ItrigEna0SetDmac0ItrigInmux9 {
     #[doc = "No Effect."]
@@ -2167,7 +2232,8 @@ impl From<Dmac0ItrigEna0SetDmac0ItrigInmux9> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0OtrigSel {
     #[doc = "DMAC0_OTRIG_CH0."]
@@ -2291,7 +2357,8 @@ impl From<Dmac0OtrigSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0ClrDmic0ch0 {
     #[doc = "No Effect."]
@@ -2322,7 +2389,8 @@ impl From<Dmac0ReqEna0ClrDmic0ch0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0ClrDmic0ch1 {
     #[doc = "No Effect."]
@@ -2353,7 +2421,8 @@ impl From<Dmac0ReqEna0ClrDmic0ch1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0ClrDmic0ch2 {
     #[doc = "No Effect."]
@@ -2384,7 +2453,8 @@ impl From<Dmac0ReqEna0ClrDmic0ch2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0ClrDmic0ch3 {
     #[doc = "No Effect."]
@@ -2415,7 +2485,8 @@ impl From<Dmac0ReqEna0ClrDmic0ch3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0ClrDmic0ch4 {
     #[doc = "No Effect."]
@@ -2446,7 +2517,8 @@ impl From<Dmac0ReqEna0ClrDmic0ch4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0ClrDmic0ch5 {
     #[doc = "No Effect."]
@@ -2477,7 +2549,8 @@ impl From<Dmac0ReqEna0ClrDmic0ch5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0ClrDmic0ch6 {
     #[doc = "No Effect."]
@@ -2508,7 +2581,8 @@ impl From<Dmac0ReqEna0ClrDmic0ch6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0ClrDmic0ch7 {
     #[doc = "No Effect."]
@@ -2539,7 +2613,8 @@ impl From<Dmac0ReqEna0ClrDmic0ch7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0ClrEspiCh0 {
     #[doc = "No Effect."]
@@ -2570,7 +2645,8 @@ impl From<Dmac0ReqEna0ClrEspiCh0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0ClrFlexcomm0Rx {
     #[doc = "No Effect."]
@@ -2601,7 +2677,8 @@ impl From<Dmac0ReqEna0ClrFlexcomm0Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0ClrFlexcomm0Tx {
     #[doc = "No Effect."]
@@ -2632,7 +2709,8 @@ impl From<Dmac0ReqEna0ClrFlexcomm0Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0ClrFlexcomm14Rx {
     #[doc = "No Effect."]
@@ -2663,7 +2741,8 @@ impl From<Dmac0ReqEna0ClrFlexcomm14Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0ClrFlexcomm14Tx {
     #[doc = "No Effect."]
@@ -2694,7 +2773,8 @@ impl From<Dmac0ReqEna0ClrFlexcomm14Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0ClrFlexcomm1Rx {
     #[doc = "No Effect."]
@@ -2725,7 +2805,8 @@ impl From<Dmac0ReqEna0ClrFlexcomm1Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0ClrFlexcomm1Tx {
     #[doc = "No Effect."]
@@ -2756,7 +2837,8 @@ impl From<Dmac0ReqEna0ClrFlexcomm1Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0ClrFlexcomm2Rx {
     #[doc = "No Effect."]
@@ -2787,7 +2869,8 @@ impl From<Dmac0ReqEna0ClrFlexcomm2Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0ClrFlexcomm2Tx {
     #[doc = "No Effect."]
@@ -2818,7 +2901,8 @@ impl From<Dmac0ReqEna0ClrFlexcomm2Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0ClrFlexcomm3Rx {
     #[doc = "No Effect."]
@@ -2849,7 +2933,8 @@ impl From<Dmac0ReqEna0ClrFlexcomm3Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0ClrFlexcomm3Tx {
     #[doc = "No Effect."]
@@ -2880,7 +2965,8 @@ impl From<Dmac0ReqEna0ClrFlexcomm3Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0ClrFlexcomm4Rx {
     #[doc = "No Effect."]
@@ -2911,7 +2997,8 @@ impl From<Dmac0ReqEna0ClrFlexcomm4Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0ClrFlexcomm4Tx {
     #[doc = "No Effect."]
@@ -2942,7 +3029,8 @@ impl From<Dmac0ReqEna0ClrFlexcomm4Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0ClrFlexcomm5Rx {
     #[doc = "No Effect."]
@@ -2973,7 +3061,8 @@ impl From<Dmac0ReqEna0ClrFlexcomm5Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0ClrFlexcomm5Tx {
     #[doc = "No Effect."]
@@ -3004,7 +3093,8 @@ impl From<Dmac0ReqEna0ClrFlexcomm5Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0ClrFlexcomm6Rx {
     #[doc = "No Effect."]
@@ -3035,7 +3125,8 @@ impl From<Dmac0ReqEna0ClrFlexcomm6Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0ClrFlexcomm6Tx {
     #[doc = "No Effect."]
@@ -3066,7 +3157,8 @@ impl From<Dmac0ReqEna0ClrFlexcomm6Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0ClrFlexcomm7Rx {
     #[doc = "No Effect."]
@@ -3097,7 +3189,8 @@ impl From<Dmac0ReqEna0ClrFlexcomm7Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0ClrFlexcomm7Tx {
     #[doc = "No Effect."]
@@ -3128,7 +3221,8 @@ impl From<Dmac0ReqEna0ClrFlexcomm7Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0ClrHashcrypt {
     #[doc = "No Effect."]
@@ -3159,7 +3253,8 @@ impl From<Dmac0ReqEna0ClrHashcrypt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0ClrI3c0Rx {
     #[doc = "No Effect."]
@@ -3190,7 +3285,8 @@ impl From<Dmac0ReqEna0ClrI3c0Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0ClrI3c0Tx {
     #[doc = "No Effect."]
@@ -3221,7 +3317,8 @@ impl From<Dmac0ReqEna0ClrI3c0Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0SetDmic0ch0 {
     #[doc = "No Effect."]
@@ -3252,7 +3349,8 @@ impl From<Dmac0ReqEna0SetDmic0ch0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0SetDmic0ch1 {
     #[doc = "No Effect."]
@@ -3283,7 +3381,8 @@ impl From<Dmac0ReqEna0SetDmic0ch1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0SetDmic0ch2 {
     #[doc = "No Effect."]
@@ -3314,7 +3413,8 @@ impl From<Dmac0ReqEna0SetDmic0ch2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0SetDmic0ch3 {
     #[doc = "No Effect."]
@@ -3345,7 +3445,8 @@ impl From<Dmac0ReqEna0SetDmic0ch3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0SetDmic0ch4 {
     #[doc = "No Effect."]
@@ -3376,7 +3477,8 @@ impl From<Dmac0ReqEna0SetDmic0ch4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0SetDmic0ch5 {
     #[doc = "No Effect."]
@@ -3407,7 +3509,8 @@ impl From<Dmac0ReqEna0SetDmic0ch5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0SetDmic0ch6 {
     #[doc = "No Effect."]
@@ -3438,7 +3541,8 @@ impl From<Dmac0ReqEna0SetDmic0ch6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0SetDmic0ch7 {
     #[doc = "No Effect."]
@@ -3469,7 +3573,8 @@ impl From<Dmac0ReqEna0SetDmic0ch7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0SetEspiCh0 {
     #[doc = "No Effect."]
@@ -3500,7 +3605,8 @@ impl From<Dmac0ReqEna0SetEspiCh0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0SetFlexcomm0Rx {
     #[doc = "No Effect."]
@@ -3531,7 +3637,8 @@ impl From<Dmac0ReqEna0SetFlexcomm0Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0SetFlexcomm0Tx {
     #[doc = "No Effect."]
@@ -3562,7 +3669,8 @@ impl From<Dmac0ReqEna0SetFlexcomm0Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0SetFlexcomm14Rx {
     #[doc = "No Effect."]
@@ -3593,7 +3701,8 @@ impl From<Dmac0ReqEna0SetFlexcomm14Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0SetFlexcomm14Tx {
     #[doc = "No Effect."]
@@ -3624,7 +3733,8 @@ impl From<Dmac0ReqEna0SetFlexcomm14Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0SetFlexcomm1Rx {
     #[doc = "No Effect."]
@@ -3655,7 +3765,8 @@ impl From<Dmac0ReqEna0SetFlexcomm1Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0SetFlexcomm1Tx {
     #[doc = "No Effect."]
@@ -3686,7 +3797,8 @@ impl From<Dmac0ReqEna0SetFlexcomm1Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0SetFlexcomm2Rx {
     #[doc = "No Effect."]
@@ -3717,7 +3829,8 @@ impl From<Dmac0ReqEna0SetFlexcomm2Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0SetFlexcomm2Tx {
     #[doc = "No Effect."]
@@ -3748,7 +3861,8 @@ impl From<Dmac0ReqEna0SetFlexcomm2Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0SetFlexcomm3Rx {
     #[doc = "No Effect."]
@@ -3779,7 +3893,8 @@ impl From<Dmac0ReqEna0SetFlexcomm3Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0SetFlexcomm3Tx {
     #[doc = "No Effect."]
@@ -3810,7 +3925,8 @@ impl From<Dmac0ReqEna0SetFlexcomm3Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0SetFlexcomm4Rx {
     #[doc = "No Effect."]
@@ -3841,7 +3957,8 @@ impl From<Dmac0ReqEna0SetFlexcomm4Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0SetFlexcomm4Tx {
     #[doc = "No Effect."]
@@ -3872,7 +3989,8 @@ impl From<Dmac0ReqEna0SetFlexcomm4Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0SetFlexcomm5Rx {
     #[doc = "No Effect."]
@@ -3903,7 +4021,8 @@ impl From<Dmac0ReqEna0SetFlexcomm5Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0SetFlexcomm5Tx {
     #[doc = "No Effect."]
@@ -3934,7 +4053,8 @@ impl From<Dmac0ReqEna0SetFlexcomm5Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0SetFlexcomm6Rx {
     #[doc = "No Effect."]
@@ -3965,7 +4085,8 @@ impl From<Dmac0ReqEna0SetFlexcomm6Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0SetFlexcomm6Tx {
     #[doc = "No Effect."]
@@ -3996,7 +4117,8 @@ impl From<Dmac0ReqEna0SetFlexcomm6Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0SetFlexcomm7Rx {
     #[doc = "No Effect."]
@@ -4027,7 +4149,8 @@ impl From<Dmac0ReqEna0SetFlexcomm7Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0SetFlexcomm7Tx {
     #[doc = "No Effect."]
@@ -4058,7 +4181,8 @@ impl From<Dmac0ReqEna0SetFlexcomm7Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0SetHashcrypt {
     #[doc = "No Effect."]
@@ -4089,7 +4213,8 @@ impl From<Dmac0ReqEna0SetHashcrypt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0SetI3c0Rx {
     #[doc = "No Effect."]
@@ -4120,7 +4245,8 @@ impl From<Dmac0ReqEna0SetI3c0Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna0SetI3c0Tx {
     #[doc = "No Effect."]
@@ -4151,7 +4277,8 @@ impl From<Dmac0ReqEna0SetI3c0Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna1ClrEspiCh1 {
     #[doc = "No Effect."]
@@ -4182,7 +4309,8 @@ impl From<Dmac0ReqEna1ClrEspiCh1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac0ReqEna1SetEspiCh1 {
     #[doc = "No Effect."]
@@ -4213,7 +4341,8 @@ impl From<Dmac0ReqEna1SetEspiCh1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux0 {
     #[doc = "No Effect."]
@@ -4244,7 +4373,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux1 {
     #[doc = "No Effect."]
@@ -4275,7 +4405,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux10 {
     #[doc = "No Effect."]
@@ -4306,7 +4437,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux10> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux11 {
     #[doc = "No Effect."]
@@ -4337,7 +4469,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux11> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux12 {
     #[doc = "No Effect."]
@@ -4368,7 +4501,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux12> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux13 {
     #[doc = "No Effect."]
@@ -4399,7 +4533,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux13> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux14 {
     #[doc = "No Effect."]
@@ -4430,7 +4565,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux14> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux15 {
     #[doc = "No Effect."]
@@ -4461,7 +4597,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux15> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux16 {
     #[doc = "No Effect."]
@@ -4492,7 +4629,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux16> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux17 {
     #[doc = "No Effect."]
@@ -4523,7 +4661,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux17> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux18 {
     #[doc = "No Effect."]
@@ -4554,7 +4693,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux18> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux19 {
     #[doc = "No Effect."]
@@ -4585,7 +4725,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux19> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux20 {
     #[doc = "No Effect."]
@@ -4616,7 +4757,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux20> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux21 {
     #[doc = "No Effect."]
@@ -4647,7 +4789,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux21> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux22 {
     #[doc = "No Effect."]
@@ -4678,7 +4821,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux22> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux23 {
     #[doc = "No Effect."]
@@ -4709,7 +4853,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux23> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux24 {
     #[doc = "No Effect."]
@@ -4740,7 +4885,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux24> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux25 {
     #[doc = "No Effect."]
@@ -4771,7 +4917,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux25> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux26 {
     #[doc = "No Effect."]
@@ -4802,7 +4949,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux26> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux27 {
     #[doc = "No Effect."]
@@ -4833,7 +4981,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux27> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux28 {
     #[doc = "No Effect."]
@@ -4864,7 +5013,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux28> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux29 {
     #[doc = "No Effect."]
@@ -4895,7 +5045,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux29> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux3 {
     #[doc = "No Effect."]
@@ -4926,7 +5077,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux30 {
     #[doc = "No Effect."]
@@ -4957,7 +5109,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux30> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux31 {
     #[doc = "No Effect."]
@@ -4988,7 +5141,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux31> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux4 {
     #[doc = "No Effect."]
@@ -5019,7 +5173,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux5 {
     #[doc = "No Effect."]
@@ -5050,7 +5205,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux6 {
     #[doc = "No Effect."]
@@ -5081,7 +5237,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux7 {
     #[doc = "No Effect."]
@@ -5112,7 +5269,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux8 {
     #[doc = "No Effect."]
@@ -5143,7 +5301,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux8> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0ClrDmac1ItrigInmux9 {
     #[doc = "No Effect."]
@@ -5174,7 +5333,8 @@ impl From<Dmac1ItrigEna0ClrDmac1ItrigInmux9> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux0 {
     #[doc = "No Effect."]
@@ -5205,7 +5365,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux1 {
     #[doc = "No Effect."]
@@ -5236,7 +5397,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux10 {
     #[doc = "No Effect."]
@@ -5267,7 +5429,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux10> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux11 {
     #[doc = "No Effect."]
@@ -5298,7 +5461,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux11> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux12 {
     #[doc = "No Effect."]
@@ -5329,7 +5493,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux12> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux13 {
     #[doc = "No Effect."]
@@ -5360,7 +5525,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux13> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux14 {
     #[doc = "No Effect."]
@@ -5391,7 +5557,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux14> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux15 {
     #[doc = "No Effect."]
@@ -5422,7 +5589,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux15> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux16 {
     #[doc = "No Effect."]
@@ -5453,7 +5621,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux16> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux17 {
     #[doc = "No Effect."]
@@ -5484,7 +5653,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux17> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux18 {
     #[doc = "No Effect."]
@@ -5515,7 +5685,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux18> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux19 {
     #[doc = "No Effect."]
@@ -5546,7 +5717,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux19> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux20 {
     #[doc = "No Effect."]
@@ -5577,7 +5749,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux20> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux21 {
     #[doc = "No Effect."]
@@ -5608,7 +5781,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux21> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux22 {
     #[doc = "No Effect."]
@@ -5639,7 +5813,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux22> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux23 {
     #[doc = "No Effect."]
@@ -5670,7 +5845,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux23> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux24 {
     #[doc = "No Effect."]
@@ -5701,7 +5877,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux24> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux25 {
     #[doc = "No Effect."]
@@ -5732,7 +5909,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux25> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux26 {
     #[doc = "No Effect."]
@@ -5763,7 +5941,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux26> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux27 {
     #[doc = "No Effect."]
@@ -5794,7 +5973,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux27> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux28 {
     #[doc = "No Effect."]
@@ -5825,7 +6005,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux28> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux29 {
     #[doc = "No Effect."]
@@ -5856,7 +6037,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux29> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux3 {
     #[doc = "No Effect."]
@@ -5887,7 +6069,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux30 {
     #[doc = "No Effect."]
@@ -5918,7 +6101,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux30> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux31 {
     #[doc = "No Effect."]
@@ -5949,7 +6133,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux31> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux4 {
     #[doc = "No Effect."]
@@ -5980,7 +6165,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux5 {
     #[doc = "No Effect."]
@@ -6011,7 +6197,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux6 {
     #[doc = "No Effect."]
@@ -6042,7 +6229,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux7 {
     #[doc = "No Effect."]
@@ -6073,7 +6261,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux8 {
     #[doc = "No Effect."]
@@ -6104,7 +6293,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux8> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ItrigEna0SetDmac1ItrigInmux9 {
     #[doc = "No Effect."]
@@ -6135,7 +6325,8 @@ impl From<Dmac1ItrigEna0SetDmac1ItrigInmux9> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1OtrigSel {
     #[doc = "DMAC1_OTRIG_CH0."]
@@ -6259,7 +6450,8 @@ impl From<Dmac1OtrigSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0ClrDmic0ch0 {
     #[doc = "No Effect."]
@@ -6290,7 +6482,8 @@ impl From<Dmac1ReqEna0ClrDmic0ch0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0ClrDmic0ch1 {
     #[doc = "No Effect."]
@@ -6321,7 +6514,8 @@ impl From<Dmac1ReqEna0ClrDmic0ch1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0ClrDmic0ch2 {
     #[doc = "No Effect."]
@@ -6352,7 +6546,8 @@ impl From<Dmac1ReqEna0ClrDmic0ch2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0ClrDmic0ch3 {
     #[doc = "No Effect."]
@@ -6383,7 +6578,8 @@ impl From<Dmac1ReqEna0ClrDmic0ch3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0ClrDmic0ch4 {
     #[doc = "No Effect."]
@@ -6414,7 +6610,8 @@ impl From<Dmac1ReqEna0ClrDmic0ch4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0ClrDmic0ch5 {
     #[doc = "No Effect."]
@@ -6445,7 +6642,8 @@ impl From<Dmac1ReqEna0ClrDmic0ch5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0ClrDmic0ch6 {
     #[doc = "No Effect."]
@@ -6476,7 +6674,8 @@ impl From<Dmac1ReqEna0ClrDmic0ch6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0ClrDmic0ch7 {
     #[doc = "No Effect."]
@@ -6507,7 +6706,8 @@ impl From<Dmac1ReqEna0ClrDmic0ch7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0ClrEspiCh0 {
     #[doc = "No Effect."]
@@ -6538,7 +6738,8 @@ impl From<Dmac1ReqEna0ClrEspiCh0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0ClrFlexcomm0Rx {
     #[doc = "No Effect."]
@@ -6569,7 +6770,8 @@ impl From<Dmac1ReqEna0ClrFlexcomm0Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0ClrFlexcomm0Tx {
     #[doc = "No Effect."]
@@ -6600,7 +6802,8 @@ impl From<Dmac1ReqEna0ClrFlexcomm0Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0ClrFlexcomm14Rx {
     #[doc = "No Effect."]
@@ -6631,7 +6834,8 @@ impl From<Dmac1ReqEna0ClrFlexcomm14Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0ClrFlexcomm14Tx {
     #[doc = "No Effect."]
@@ -6662,7 +6866,8 @@ impl From<Dmac1ReqEna0ClrFlexcomm14Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0ClrFlexcomm1Rx {
     #[doc = "No Effect."]
@@ -6693,7 +6898,8 @@ impl From<Dmac1ReqEna0ClrFlexcomm1Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0ClrFlexcomm1Tx {
     #[doc = "No Effect."]
@@ -6724,7 +6930,8 @@ impl From<Dmac1ReqEna0ClrFlexcomm1Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0ClrFlexcomm2Rx {
     #[doc = "No Effect."]
@@ -6755,7 +6962,8 @@ impl From<Dmac1ReqEna0ClrFlexcomm2Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0ClrFlexcomm2Tx {
     #[doc = "No Effect."]
@@ -6786,7 +6994,8 @@ impl From<Dmac1ReqEna0ClrFlexcomm2Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0ClrFlexcomm3Rx {
     #[doc = "No Effect."]
@@ -6817,7 +7026,8 @@ impl From<Dmac1ReqEna0ClrFlexcomm3Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0ClrFlexcomm3Tx {
     #[doc = "No Effect."]
@@ -6848,7 +7058,8 @@ impl From<Dmac1ReqEna0ClrFlexcomm3Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0ClrFlexcomm4Rx {
     #[doc = "No Effect."]
@@ -6879,7 +7090,8 @@ impl From<Dmac1ReqEna0ClrFlexcomm4Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0ClrFlexcomm4Tx {
     #[doc = "No Effect."]
@@ -6910,7 +7122,8 @@ impl From<Dmac1ReqEna0ClrFlexcomm4Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0ClrFlexcomm5Rx {
     #[doc = "No Effect."]
@@ -6941,7 +7154,8 @@ impl From<Dmac1ReqEna0ClrFlexcomm5Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0ClrFlexcomm5Tx {
     #[doc = "No Effect."]
@@ -6972,7 +7186,8 @@ impl From<Dmac1ReqEna0ClrFlexcomm5Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0ClrFlexcomm6Rx {
     #[doc = "No Effect."]
@@ -7003,7 +7218,8 @@ impl From<Dmac1ReqEna0ClrFlexcomm6Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0ClrFlexcomm6Tx {
     #[doc = "No Effect."]
@@ -7034,7 +7250,8 @@ impl From<Dmac1ReqEna0ClrFlexcomm6Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0ClrFlexcomm7Rx {
     #[doc = "No Effect."]
@@ -7065,7 +7282,8 @@ impl From<Dmac1ReqEna0ClrFlexcomm7Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0ClrFlexcomm7Tx {
     #[doc = "No Effect."]
@@ -7096,7 +7314,8 @@ impl From<Dmac1ReqEna0ClrFlexcomm7Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0ClrHashcrypt {
     #[doc = "No Effect."]
@@ -7127,7 +7346,8 @@ impl From<Dmac1ReqEna0ClrHashcrypt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0ClrI3c0Rx {
     #[doc = "No Effect."]
@@ -7158,7 +7378,8 @@ impl From<Dmac1ReqEna0ClrI3c0Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0ClrI3c0Tx {
     #[doc = "No Effect."]
@@ -7189,7 +7410,8 @@ impl From<Dmac1ReqEna0ClrI3c0Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0SetDmic0ch0 {
     #[doc = "No Effect."]
@@ -7220,7 +7442,8 @@ impl From<Dmac1ReqEna0SetDmic0ch0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0SetDmic0ch1 {
     #[doc = "No Effect."]
@@ -7251,7 +7474,8 @@ impl From<Dmac1ReqEna0SetDmic0ch1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0SetDmic0ch2 {
     #[doc = "No Effect."]
@@ -7282,7 +7506,8 @@ impl From<Dmac1ReqEna0SetDmic0ch2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0SetDmic0ch3 {
     #[doc = "No Effect."]
@@ -7313,7 +7538,8 @@ impl From<Dmac1ReqEna0SetDmic0ch3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0SetDmic0ch4 {
     #[doc = "No Effect."]
@@ -7344,7 +7570,8 @@ impl From<Dmac1ReqEna0SetDmic0ch4> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0SetDmic0ch5 {
     #[doc = "No Effect."]
@@ -7375,7 +7602,8 @@ impl From<Dmac1ReqEna0SetDmic0ch5> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0SetDmic0ch6 {
     #[doc = "No Effect."]
@@ -7406,7 +7634,8 @@ impl From<Dmac1ReqEna0SetDmic0ch6> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0SetDmic0ch7 {
     #[doc = "No Effect."]
@@ -7437,7 +7666,8 @@ impl From<Dmac1ReqEna0SetDmic0ch7> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0SetEspiCh0 {
     #[doc = "No Effect."]
@@ -7468,7 +7698,8 @@ impl From<Dmac1ReqEna0SetEspiCh0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0SetFlexcomm0Rx {
     #[doc = "No Effect."]
@@ -7499,7 +7730,8 @@ impl From<Dmac1ReqEna0SetFlexcomm0Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0SetFlexcomm0Tx {
     #[doc = "No Effect."]
@@ -7530,7 +7762,8 @@ impl From<Dmac1ReqEna0SetFlexcomm0Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0SetFlexcomm14Rx {
     #[doc = "No Effect."]
@@ -7561,7 +7794,8 @@ impl From<Dmac1ReqEna0SetFlexcomm14Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0SetFlexcomm14Tx {
     #[doc = "No Effect."]
@@ -7592,7 +7826,8 @@ impl From<Dmac1ReqEna0SetFlexcomm14Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0SetFlexcomm1Rx {
     #[doc = "No Effect."]
@@ -7623,7 +7858,8 @@ impl From<Dmac1ReqEna0SetFlexcomm1Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0SetFlexcomm1Tx {
     #[doc = "No Effect."]
@@ -7654,7 +7890,8 @@ impl From<Dmac1ReqEna0SetFlexcomm1Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0SetFlexcomm2Rx {
     #[doc = "No Effect."]
@@ -7685,7 +7922,8 @@ impl From<Dmac1ReqEna0SetFlexcomm2Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0SetFlexcomm2Tx {
     #[doc = "No Effect."]
@@ -7716,7 +7954,8 @@ impl From<Dmac1ReqEna0SetFlexcomm2Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0SetFlexcomm3Rx {
     #[doc = "No Effect."]
@@ -7747,7 +7986,8 @@ impl From<Dmac1ReqEna0SetFlexcomm3Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0SetFlexcomm3Tx {
     #[doc = "No Effect."]
@@ -7778,7 +8018,8 @@ impl From<Dmac1ReqEna0SetFlexcomm3Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0SetFlexcomm4Rx {
     #[doc = "No Effect."]
@@ -7809,7 +8050,8 @@ impl From<Dmac1ReqEna0SetFlexcomm4Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0SetFlexcomm4Tx {
     #[doc = "No Effect."]
@@ -7840,7 +8082,8 @@ impl From<Dmac1ReqEna0SetFlexcomm4Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0SetFlexcomm5Rx {
     #[doc = "No Effect."]
@@ -7871,7 +8114,8 @@ impl From<Dmac1ReqEna0SetFlexcomm5Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0SetFlexcomm5Tx {
     #[doc = "No Effect."]
@@ -7902,7 +8146,8 @@ impl From<Dmac1ReqEna0SetFlexcomm5Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0SetFlexcomm6Rx {
     #[doc = "No Effect."]
@@ -7933,7 +8178,8 @@ impl From<Dmac1ReqEna0SetFlexcomm6Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0SetFlexcomm6Tx {
     #[doc = "No Effect."]
@@ -7964,7 +8210,8 @@ impl From<Dmac1ReqEna0SetFlexcomm6Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0SetFlexcomm7Rx {
     #[doc = "No Effect."]
@@ -7995,7 +8242,8 @@ impl From<Dmac1ReqEna0SetFlexcomm7Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0SetFlexcomm7Tx {
     #[doc = "No Effect."]
@@ -8026,7 +8274,8 @@ impl From<Dmac1ReqEna0SetFlexcomm7Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0SetHashcrypt {
     #[doc = "No Effect."]
@@ -8057,7 +8306,8 @@ impl From<Dmac1ReqEna0SetHashcrypt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0SetI3c0Rx {
     #[doc = "No Effect."]
@@ -8088,7 +8338,8 @@ impl From<Dmac1ReqEna0SetI3c0Rx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna0SetI3c0Tx {
     #[doc = "No Effect."]
@@ -8119,7 +8370,8 @@ impl From<Dmac1ReqEna0SetI3c0Tx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna1ClrEspiCh1 {
     #[doc = "No Effect."]
@@ -8150,7 +8402,8 @@ impl From<Dmac1ReqEna1ClrEspiCh1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmac1ReqEna1SetEspiCh1 {
     #[doc = "No Effect."]
@@ -8181,7 +8434,8 @@ impl From<Dmac1ReqEna1SetEspiCh1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspIntSel {
     #[doc = "FLEXCOMM0."]
@@ -8307,7 +8561,8 @@ impl From<DspIntSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FmeasureSel {
     #[doc = "XTALIN."]
@@ -8373,7 +8628,8 @@ impl From<FmeasureSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SctInSel {
     #[doc = "SCT0_PIN_INP0."]

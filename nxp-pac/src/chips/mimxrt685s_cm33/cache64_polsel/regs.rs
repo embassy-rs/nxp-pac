@@ -46,6 +46,7 @@ impl Default for Polsel {
         Polsel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Polsel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Polsel")
@@ -91,6 +92,7 @@ impl Default for Reg0Top {
         Reg0Top(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Reg0Top {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Reg0Top")
@@ -128,6 +130,7 @@ impl Default for Reg1Top {
         Reg1Top(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Reg1Top {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Reg1Top")

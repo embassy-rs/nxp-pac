@@ -22,6 +22,7 @@ impl Default for AdcCtrl {
         AdcCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AdcCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AdcCtrl")
@@ -63,6 +64,7 @@ impl Default for AnalogCtrlCfg {
         AnalogCtrlCfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AnalogCtrlCfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AnalogCtrlCfg")
@@ -116,6 +118,7 @@ impl Default for AnalogCtrlStatus {
         AnalogCtrlStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AnalogCtrlStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AnalogCtrlStatus")
@@ -231,6 +234,7 @@ impl Default for AuxBias {
         AuxBias(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for AuxBias {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AuxBias")
@@ -344,6 +348,7 @@ impl Default for BodDcdcIntCtrl {
         BodDcdcIntCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for BodDcdcIntCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BodDcdcIntCtrl")
@@ -491,6 +496,7 @@ impl Default for BodDcdcIntStatus {
         BodDcdcIntStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for BodDcdcIntStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BodDcdcIntStatus")
@@ -548,6 +554,7 @@ impl Default for DummyCtrl {
         DummyCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DummyCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DummyCtrl")
@@ -601,6 +608,7 @@ impl Default for FreqMeCtrl {
         FreqMeCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FreqMeCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FreqMeCtrl")
@@ -704,6 +712,7 @@ impl Default for Fro192mCtrl {
         Fro192mCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fro192mCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fro192mCtrl")
@@ -767,6 +776,7 @@ impl Default for Fro192mStatus {
         Fro192mStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fro192mStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fro192mStatus")
@@ -858,6 +868,7 @@ impl Default for LdoXo32m {
         LdoXo32m(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for LdoXo32m {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LdoXo32m")
@@ -1063,6 +1074,7 @@ impl Default for Ringo0Ctrl {
         Ringo0Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ringo0Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ringo0Ctrl")
@@ -1250,6 +1262,7 @@ impl Default for Ringo1Ctrl {
         Ringo1Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ringo1Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ringo1Ctrl")
@@ -1431,6 +1444,7 @@ impl Default for Ringo2Ctrl {
         Ringo2Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ringo2Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ringo2Ctrl")
@@ -1516,6 +1530,7 @@ impl Default for UsbhsPhyCtrl {
         UsbhsPhyCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UsbhsPhyCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UsbhsPhyCtrl")
@@ -1633,6 +1648,7 @@ impl Default for UsbhsPhyTrim {
         UsbhsPhyTrim(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UsbhsPhyTrim {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UsbhsPhyTrim")
@@ -1749,6 +1765,7 @@ impl Default for Xo32mCtrl {
         Xo32mCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Xo32mCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Xo32mCtrl")
@@ -1800,6 +1817,7 @@ impl Default for Xo32mStatus {
         Xo32mStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Xo32mStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Xo32mStatus")

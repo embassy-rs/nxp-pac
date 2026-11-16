@@ -58,6 +58,7 @@ impl Default for Ctrl {
         Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl")
@@ -285,6 +286,7 @@ impl Default for DmaCtrl {
         DmaCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DmaCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DmaCtrl")
@@ -536,6 +538,7 @@ impl Default for Done01Irq {
         Done01Irq(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Done01Irq {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Done01Irq")
@@ -883,6 +886,7 @@ impl Default for Done23ErrIrq {
         Done23ErrIrq(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Done23ErrIrq {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Done23ErrIrq")
@@ -1078,6 +1082,7 @@ impl Default for Trig0Chain10 {
         Trig0Chain10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig0Chain10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig0Chain10")
@@ -1245,6 +1250,7 @@ impl Default for Trig0Chain32 {
         Trig0Chain32(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig0Chain32 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig0Chain32")
@@ -1412,6 +1418,7 @@ impl Default for Trig0Chain54 {
         Trig0Chain54(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig0Chain54 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig0Chain54")
@@ -1579,6 +1586,7 @@ impl Default for Trig0Chain76 {
         Trig0Chain76(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig0Chain76 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig0Chain76")
@@ -1650,6 +1658,7 @@ impl Default for Trig0Counter {
         Trig0Counter(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig0Counter {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig0Counter")
@@ -1741,6 +1750,7 @@ impl Default for Trig0Ctrl {
         Trig0Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig0Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig0Ctrl")
@@ -1802,6 +1812,7 @@ impl Default for Trig0Result10 {
         Trig0Result10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig0Result10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig0Result10")
@@ -1857,6 +1868,7 @@ impl Default for Trig0Result32 {
         Trig0Result32(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig0Result32 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig0Result32")
@@ -1912,6 +1924,7 @@ impl Default for Trig0Result54 {
         Trig0Result54(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig0Result54 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig0Result54")
@@ -1967,6 +1980,7 @@ impl Default for Trig0Result76 {
         Trig0Result76(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig0Result76 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig0Result76")
@@ -2118,6 +2132,7 @@ impl Default for Trig1Chain10 {
         Trig1Chain10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig1Chain10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig1Chain10")
@@ -2285,6 +2300,7 @@ impl Default for Trig1Chain32 {
         Trig1Chain32(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig1Chain32 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig1Chain32")
@@ -2452,6 +2468,7 @@ impl Default for Trig1Chain54 {
         Trig1Chain54(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig1Chain54 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig1Chain54")
@@ -2619,6 +2636,7 @@ impl Default for Trig1Chain76 {
         Trig1Chain76(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig1Chain76 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig1Chain76")
@@ -2690,6 +2708,7 @@ impl Default for Trig1Counter {
         Trig1Counter(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig1Counter {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig1Counter")
@@ -2781,6 +2800,7 @@ impl Default for Trig1Ctrl {
         Trig1Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig1Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig1Ctrl")
@@ -2842,6 +2862,7 @@ impl Default for Trig1Result10 {
         Trig1Result10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig1Result10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig1Result10")
@@ -2897,6 +2918,7 @@ impl Default for Trig1Result32 {
         Trig1Result32(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig1Result32 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig1Result32")
@@ -2952,6 +2974,7 @@ impl Default for Trig1Result54 {
         Trig1Result54(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig1Result54 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig1Result54")
@@ -3007,6 +3030,7 @@ impl Default for Trig1Result76 {
         Trig1Result76(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig1Result76 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig1Result76")
@@ -3158,6 +3182,7 @@ impl Default for Trig2Chain10 {
         Trig2Chain10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig2Chain10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig2Chain10")
@@ -3325,6 +3350,7 @@ impl Default for Trig2Chain32 {
         Trig2Chain32(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig2Chain32 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig2Chain32")
@@ -3492,6 +3518,7 @@ impl Default for Trig2Chain54 {
         Trig2Chain54(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig2Chain54 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig2Chain54")
@@ -3659,6 +3686,7 @@ impl Default for Trig2Chain76 {
         Trig2Chain76(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig2Chain76 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig2Chain76")
@@ -3730,6 +3758,7 @@ impl Default for Trig2Counter {
         Trig2Counter(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig2Counter {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig2Counter")
@@ -3821,6 +3850,7 @@ impl Default for Trig2Ctrl {
         Trig2Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig2Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig2Ctrl")
@@ -3882,6 +3912,7 @@ impl Default for Trig2Result10 {
         Trig2Result10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig2Result10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig2Result10")
@@ -3937,6 +3968,7 @@ impl Default for Trig2Result32 {
         Trig2Result32(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig2Result32 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig2Result32")
@@ -3992,6 +4024,7 @@ impl Default for Trig2Result54 {
         Trig2Result54(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig2Result54 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig2Result54")
@@ -4047,6 +4080,7 @@ impl Default for Trig2Result76 {
         Trig2Result76(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig2Result76 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig2Result76")
@@ -4198,6 +4232,7 @@ impl Default for Trig3Chain10 {
         Trig3Chain10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig3Chain10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig3Chain10")
@@ -4365,6 +4400,7 @@ impl Default for Trig3Chain32 {
         Trig3Chain32(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig3Chain32 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig3Chain32")
@@ -4532,6 +4568,7 @@ impl Default for Trig3Chain54 {
         Trig3Chain54(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig3Chain54 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig3Chain54")
@@ -4699,6 +4736,7 @@ impl Default for Trig3Chain76 {
         Trig3Chain76(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig3Chain76 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig3Chain76")
@@ -4770,6 +4808,7 @@ impl Default for Trig3Counter {
         Trig3Counter(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig3Counter {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig3Counter")
@@ -4861,6 +4900,7 @@ impl Default for Trig3Ctrl {
         Trig3Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig3Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig3Ctrl")
@@ -4922,6 +4962,7 @@ impl Default for Trig3Result10 {
         Trig3Result10(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig3Result10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig3Result10")
@@ -4977,6 +5018,7 @@ impl Default for Trig3Result32 {
         Trig3Result32(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig3Result32 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig3Result32")
@@ -5032,6 +5074,7 @@ impl Default for Trig3Result54 {
         Trig3Result54(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig3Result54 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig3Result54")
@@ -5087,6 +5130,7 @@ impl Default for Trig3Result76 {
         Trig3Result76(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Trig3Result76 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Trig3Result76")

@@ -13,6 +13,7 @@ impl ConfigOpt {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ConfigOpt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -57,6 +58,7 @@ impl EcoRev {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for EcoRev {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -101,6 +103,7 @@ impl Era {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Era {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -131,7 +134,8 @@ impl From<Era> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IntCtrlEntVal {
     #[doc = "Same behavior as bit 0 of this register."]
@@ -162,7 +166,8 @@ impl From<IntCtrlEntVal> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IntCtrlFrqCtFail {
     #[doc = "Same behavior as bit 0 of this register."]
@@ -193,7 +198,8 @@ impl From<IntCtrlFrqCtFail> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IntCtrlHwErr {
     #[doc = "Corresponding bit of INT_STATUS register cleared."]
@@ -224,7 +230,8 @@ impl From<IntCtrlHwErr> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IntMaskEntVal {
     #[doc = "Same behavior as bit 0 of this register."]
@@ -255,7 +262,8 @@ impl From<IntMaskEntVal> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IntMaskFrqCtFail {
     #[doc = "Same behavior as bit 0 of this register."]
@@ -286,7 +294,8 @@ impl From<IntMaskFrqCtFail> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IntMaskHwErr {
     #[doc = "Corresponding interrupt of INT_STATUS is masked."]
@@ -317,7 +326,8 @@ impl From<IntMaskHwErr> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IntStatusEntVal {
     #[doc = "Busy generation entropy. Any value read is invalid."]
@@ -348,7 +358,8 @@ impl From<IntStatusEntVal> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IntStatusFrqCtFail {
     #[doc = "No hardware nor self test frequency errors."]
@@ -379,7 +390,8 @@ impl From<IntStatusFrqCtFail> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IntStatusHwErr {
     #[doc = "no error."]
@@ -424,6 +436,7 @@ impl IntgOpt {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IntgOpt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -468,6 +481,7 @@ impl IpId {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IpId {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -512,6 +526,7 @@ impl MajRev {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MajRev {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -556,6 +571,7 @@ impl MinRev {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MinRev {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -586,7 +602,8 @@ impl From<MinRev> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum NoPrgm {
     #[doc = "Programability of registers controlled only by the Miscellaneous Control Register's access mode bit."]
@@ -617,7 +634,8 @@ impl From<NoPrgm> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OscDiv {
     #[doc = "use ring oscillator with no divide."]
@@ -652,7 +670,8 @@ impl From<OscDiv> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SampMode {
     #[doc = "use Von Neumann data into both Entropy shifter and Statistical Checker."]

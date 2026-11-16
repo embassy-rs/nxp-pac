@@ -1,4 +1,4 @@
-#[doc = "no description available."]
+#[doc = "Array of registers: CFG, CTLSTAT, XFERCFG."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Channel {
     ptr: *mut u8,
@@ -121,7 +121,7 @@ impl Dma {
     pub const fn abort0(self) -> crate::common::Reg<regs::Abort0, crate::common::W> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x78usize) as _) }
     }
-    #[doc = "no description available."]
+    #[doc = "Array of registers: CFG, CTLSTAT, XFERCFG."]
     #[inline(always)]
     pub const fn channel(self, n: usize) -> Channel {
         assert!(n < 23usize);

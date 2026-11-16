@@ -22,6 +22,7 @@ impl Default for Cval {
         Cval(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cval {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cval").field("tvl", &self.tvl()).finish()
@@ -57,6 +58,7 @@ impl Default for Ltmr64h {
         Ltmr64h(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ltmr64h {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ltmr64h").field("lth", &self.lth()).finish()
@@ -92,6 +94,7 @@ impl Default for Ltmr64l {
         Ltmr64l(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ltmr64l {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ltmr64l").field("ltl", &self.ltl()).finish()
@@ -139,6 +142,7 @@ impl Default for Mcr {
         Mcr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mcr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mcr")
@@ -206,6 +210,7 @@ impl Default for Tctrl {
         Tctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tctrl")
@@ -251,6 +256,7 @@ impl Default for Tflg {
         Tflg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tflg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tflg").field("tif", &self.tif()).finish()

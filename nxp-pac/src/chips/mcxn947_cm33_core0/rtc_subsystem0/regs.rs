@@ -22,6 +22,7 @@ impl Default for SubsecondCnt {
         SubsecondCnt(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SubsecondCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SubsecondCnt")
@@ -63,6 +64,7 @@ impl Default for SubsecondCtrl {
         SubsecondCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SubsecondCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SubsecondCtrl")
@@ -104,6 +106,7 @@ impl Default for WakeTimerCnt {
         WakeTimerCnt(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for WakeTimerCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WakeTimerCnt")
@@ -177,6 +180,7 @@ impl Default for WakeTimerCtrl {
         WakeTimerCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for WakeTimerCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WakeTimerCtrl")

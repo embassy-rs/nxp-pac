@@ -34,6 +34,7 @@ impl Default for Cfg {
         Cfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cfg")
@@ -89,6 +90,7 @@ impl Default for IntClrEnable {
         IntClrEnable(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IntClrEnable {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IntClrEnable")
@@ -144,6 +146,7 @@ impl Default for IntClrStatus {
         IntClrStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IntClrStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IntClrStatus")
@@ -199,6 +202,7 @@ impl Default for IntEnable {
         IntEnable(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IntEnable {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IntEnable")
@@ -254,6 +258,7 @@ impl Default for IntSetEnable {
         IntSetEnable(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IntSetEnable {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IntSetEnable")
@@ -309,6 +314,7 @@ impl Default for IntSetStatus {
         IntSetStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IntSetStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IntSetStatus")
@@ -364,6 +370,7 @@ impl Default for IntStatus {
         IntStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for IntStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IntStatus")
@@ -407,6 +414,7 @@ impl Default for Status {
         Status(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Status {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Status")

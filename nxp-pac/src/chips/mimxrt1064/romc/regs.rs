@@ -34,6 +34,7 @@ impl Default for Rompatcha {
         Rompatcha(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Rompatcha {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Rompatcha")
@@ -89,6 +90,7 @@ impl Default for Rompatchcntl {
         Rompatchcntl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Rompatchcntl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Rompatchcntl")
@@ -132,6 +134,7 @@ impl Default for Rompatchd {
         Rompatchd(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Rompatchd {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Rompatchd")
@@ -169,6 +172,7 @@ impl Default for Rompatchenl {
         Rompatchenl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Rompatchenl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Rompatchenl")
@@ -218,6 +222,7 @@ impl Default for Rompatchsr {
         Rompatchsr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Rompatchsr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Rompatchsr")

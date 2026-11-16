@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tempsense0ClrMeasureTemp {
     #[doc = "Do not start the measurement process."]
@@ -30,7 +31,8 @@ impl From<Tempsense0ClrMeasureTemp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tempsense0ClrPowerDown {
     #[doc = "Enable power to the temperature sensor."]
@@ -61,7 +63,8 @@ impl From<Tempsense0ClrPowerDown> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tempsense0MeasureTemp {
     #[doc = "Do not start the measurement process."]
@@ -92,7 +95,8 @@ impl From<Tempsense0MeasureTemp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tempsense0PowerDown {
     #[doc = "Enable power to the temperature sensor."]
@@ -123,7 +127,8 @@ impl From<Tempsense0PowerDown> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tempsense0SetMeasureTemp {
     #[doc = "Do not start the measurement process."]
@@ -154,7 +159,8 @@ impl From<Tempsense0SetMeasureTemp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tempsense0SetPowerDown {
     #[doc = "Enable power to the temperature sensor."]
@@ -185,7 +191,8 @@ impl From<Tempsense0SetPowerDown> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tempsense0TogMeasureTemp {
     #[doc = "Do not start the measurement process."]
@@ -216,7 +223,8 @@ impl From<Tempsense0TogMeasureTemp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tempsense0TogPowerDown {
     #[doc = "Enable power to the temperature sensor."]
@@ -267,6 +275,7 @@ impl Tempsense1ClrMeasureFreq {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tempsense1ClrMeasureFreq {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -323,6 +332,7 @@ impl Tempsense1MeasureFreq {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tempsense1MeasureFreq {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -379,6 +389,7 @@ impl Tempsense1SetMeasureFreq {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tempsense1SetMeasureFreq {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -435,6 +446,7 @@ impl Tempsense1TogMeasureFreq {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tempsense1TogMeasureFreq {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {

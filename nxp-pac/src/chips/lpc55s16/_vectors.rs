@@ -22,10 +22,15 @@ unsafe extern "C" {
     fn FLEXCOMM6();
     fn FLEXCOMM7();
     fn ADC0();
+    fn RESERVED39();
     fn ACMP();
+    fn RESERVED41();
+    fn RESERVED42();
     fn USB0_NEEDCLK();
     fn USB0();
     fn RTC();
+    fn RESERVED46();
+    fn RESERVED47();
     fn PIN_INT4();
     fn PIN_INT5();
     fn PIN_INT6();
@@ -33,8 +38,13 @@ unsafe extern "C" {
     fn CTIMER2();
     fn CTIMER4();
     fn OS_EVENT();
+    fn RESERVED55();
+    fn RESERVED56();
+    fn RESERVED57();
+    fn RESERVED58();
     fn CAN0_IRQ0();
     fn CAN0_IRQ1();
+    fn RESERVED61();
     fn USB1_PHY();
     fn USB1();
     fn USB1_NEEDCLK();
@@ -46,6 +56,7 @@ unsafe extern "C" {
     fn HASHCRYPT();
     fn CASER();
     fn PUF();
+    fn RESERVED73();
     fn DMA1();
     fn FLEXCOMM8();
     fn CDOG();
@@ -96,17 +107,27 @@ pub static __INTERRUPTS: [Vector; 61] = [
         _handler: FLEXCOMM7,
     },
     Vector { _handler: ADC0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: RESERVED39,
+    },
     Vector { _handler: ACMP },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: RESERVED41,
+    },
+    Vector {
+        _handler: RESERVED42,
+    },
     Vector {
         _handler: USB0_NEEDCLK,
     },
     Vector { _handler: USB0 },
     Vector { _handler: RTC },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: RESERVED46,
+    },
+    Vector {
+        _handler: RESERVED47,
+    },
     Vector { _handler: PIN_INT4 },
     Vector { _handler: PIN_INT5 },
     Vector { _handler: PIN_INT6 },
@@ -114,17 +135,27 @@ pub static __INTERRUPTS: [Vector; 61] = [
     Vector { _handler: CTIMER2 },
     Vector { _handler: CTIMER4 },
     Vector { _handler: OS_EVENT },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: RESERVED55,
+    },
+    Vector {
+        _handler: RESERVED56,
+    },
+    Vector {
+        _handler: RESERVED57,
+    },
+    Vector {
+        _handler: RESERVED58,
+    },
     Vector {
         _handler: CAN0_IRQ0,
     },
     Vector {
         _handler: CAN0_IRQ1,
     },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: RESERVED61,
+    },
     Vector { _handler: USB1_PHY },
     Vector { _handler: USB1 },
     Vector {
@@ -146,7 +177,9 @@ pub static __INTERRUPTS: [Vector; 61] = [
     },
     Vector { _handler: CASER },
     Vector { _handler: PUF },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: RESERVED73,
+    },
     Vector { _handler: DMA1 },
     Vector {
         _handler: FLEXCOMM8,

@@ -34,6 +34,7 @@ impl Default for Kddr {
         Kddr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Kddr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Kddr")
@@ -89,6 +90,7 @@ impl Default for Kpcr {
         Kpcr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Kpcr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Kpcr")
@@ -139,6 +141,7 @@ impl Default for Kpdr {
         Kpdr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Kpdr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Kpdr")
@@ -242,6 +245,7 @@ impl Default for Kpsr {
         Kpsr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Kpsr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Kpsr")

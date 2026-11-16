@@ -1,18 +1,19 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ahbcmderrcode {
     #[doc = "No error."]
-    Val0 = 0x0,
+    Ahbcmderrcode0 = 0x0,
     _RESERVED_1 = 0x01,
     #[doc = "AHB Write command with JMP_ON_CS instruction used in the sequence."]
-    Val2 = 0x02,
+    Ahbcmderrcode2 = 0x02,
     #[doc = "There is unknown instruction opcode in the sequence."]
-    Val3 = 0x03,
+    Ahbcmderrcode3 = 0x03,
     #[doc = "Instruction DUMMY_SDR/DUMMY_RWDS_SDR used in DDR sequence."]
-    Val4 = 0x04,
+    Ahbcmderrcode4 = 0x04,
     #[doc = "Instruction DUMMY_DDR/DUMMY_RWDS_DDR used in SDR sequence."]
-    Val5 = 0x05,
+    Ahbcmderrcode5 = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
     _RESERVED_8 = 0x08,
@@ -22,7 +23,7 @@ pub enum Ahbcmderrcode {
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     #[doc = "Sequence execution timeout."]
-    Val6 = 0x0e,
+    Ahbcmderrcode14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
 impl Ahbcmderrcode {
@@ -48,7 +49,44 @@ impl From<Ahbcmderrcode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Alignment {
+    #[doc = "No limit."]
+    Bit0 = 0x0,
+    #[doc = "1 KBytes."]
+    Bit1 = 0x01,
+    #[doc = "512 Bytes."]
+    Bit2 = 0x02,
+    #[doc = "256 Bytes."]
+    Bit3 = 0x03,
+}
+impl Alignment {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Alignment {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Alignment {
+    #[inline(always)]
+    fn from(val: u8) -> Alignment {
+        Alignment::from_bits(val)
+    }
+}
+impl From<Alignment> for u8 {
+    #[inline(always)]
+    fn from(val: Alignment) -> u8 {
+        Alignment::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Aparen {
     #[doc = "Flash will be accessed in Individual mode."]
@@ -79,17 +117,18 @@ impl From<Aparen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Arbcmdsrc {
-    #[doc = "Triggered by AHB read command."]
-    Val0 = 0x0,
-    #[doc = "Triggered by AHB write command."]
-    Val1 = 0x01,
-    #[doc = "Triggered by IP command (triggered by setting register bit IPCMD\\[TRG\\])."]
-    Val2 = 0x02,
+    #[doc = "Triggered by AHB read command (triggered by AHB read)."]
+    Arbcmdsrc0 = 0x0,
+    #[doc = "Triggered by AHB write command (triggered by AHB Write)."]
+    Arbcmdsrc1 = 0x01,
+    #[doc = "Triggered by IP command (triggered by setting register bit IPCMD.TRG)."]
+    Arbcmdsrc2 = 0x02,
     #[doc = "Triggered by suspended command (resumed)."]
-    Val3 = 0x03,
+    Arbcmdsrc3 = 0x03,
 }
 impl Arbcmdsrc {
     #[inline(always)]
@@ -114,13 +153,14 @@ impl From<Arbcmdsrc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ardfen {
     #[doc = "IP RX FIFO should be read by IP Bus. AHB Bus read access to IP RX FIFO memory space will get bus error response."]
-    Val0 = 0x0,
+    Ardfen0 = 0x0,
     #[doc = "IP RX FIFO should be read by AHB Bus. IP Bus read access to IP RX FIFO memory space will always return data zero but no bus error response."]
-    Val1 = 0x01,
+    Ardfen1 = 0x01,
 }
 impl Ardfen {
     #[inline(always)]
@@ -145,13 +185,14 @@ impl From<Ardfen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Atdfen {
     #[doc = "IP TX FIFO should be written by IP Bus. AHB Bus write access to IP TX FIFO memory space will get bus error response."]
-    Val0 = 0x0,
+    Atdfen0 = 0x0,
     #[doc = "IP TX FIFO should be written by AHB Bus. IP Bus write access to IP TX FIFO memory space will be ignored but no bus error response."]
-    Val1 = 0x01,
+    Atdfen1 = 0x01,
 }
 impl Atdfen {
     #[inline(always)]
@@ -176,25 +217,26 @@ impl From<Atdfen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Awrwaitunit {
-    #[doc = "The AWRWAIT unit is 2 AHB clock cycle."]
-    Val0 = 0x0,
-    #[doc = "The AWRWAIT unit is 8 AHB clock cycle."]
-    Val1 = 0x01,
-    #[doc = "The AWRWAIT unit is 32 AHB clock cycle."]
-    Val2 = 0x02,
-    #[doc = "The AWRWAIT unit is 128 AHB clock cycle."]
-    Val3 = 0x03,
-    #[doc = "The AWRWAIT unit is 512 AHB clock cycle."]
-    Val4 = 0x04,
-    #[doc = "The AWRWAIT unit is 2048 AHB clock cycle."]
-    Val5 = 0x05,
-    #[doc = "The AWRWAIT unit is 8192 AHB clock cycle."]
-    Val6 = 0x06,
-    #[doc = "The AWRWAIT unit is 32768 AHB clock cycle."]
-    Val7 = 0x07,
+    #[doc = "The AWRWAIT unit is 2 ahb clock cycle."]
+    Awrwaitunit0 = 0x0,
+    #[doc = "The AWRWAIT unit is 8 ahb clock cycle."]
+    Awrwaitunit1 = 0x01,
+    #[doc = "The AWRWAIT unit is 32 ahb clock cycle."]
+    Awrwaitunit2 = 0x02,
+    #[doc = "The AWRWAIT unit is 128 ahb clock cycle."]
+    Awrwaitunit3 = 0x03,
+    #[doc = "The AWRWAIT unit is 512 ahb clock cycle."]
+    Awrwaitunit4 = 0x04,
+    #[doc = "The AWRWAIT unit is 2048 ahb clock cycle."]
+    Awrwaitunit5 = 0x05,
+    #[doc = "The AWRWAIT unit is 8192 ahb clock cycle."]
+    Awrwaitunit6 = 0x06,
+    #[doc = "The AWRWAIT unit is 32768 ahb clock cycle."]
+    Awrwaitunit7 = 0x07,
 }
 impl Awrwaitunit {
     #[inline(always)]
@@ -219,13 +261,14 @@ impl From<Awrwaitunit> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bufferableen {
-    #[doc = "Disabled. For all AHB write accesses (bufferable or non-bufferable), FlexSPI will return AHB Bus ready after all data is transmitted to external device and AHB command finished."]
-    Val0 = 0x0,
+    #[doc = "Disabled. For all AHB write access (no matter bufferable or non-bufferable ), FlexSPI will return AHB Bus ready after all data is transmitted to External device and AHB command finished."]
+    Bufferableen0 = 0x0,
     #[doc = "Enabled. For AHB bufferable write access, FlexSPI will return AHB Bus ready when the AHB command is granted by arbitrator and will not wait for AHB command finished."]
-    Val1 = 0x01,
+    Bufferableen1 = 0x01,
 }
 impl Bufferableen {
     #[inline(always)]
@@ -250,13 +293,14 @@ impl From<Bufferableen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cachableen {
     #[doc = "Disabled. When there is AHB bus cachable read access, FlexSPI will not check whether it hit AHB TX Buffer."]
-    Val0 = 0x0,
+    Cachableen0 = 0x0,
     #[doc = "Enabled. When there is AHB bus cachable read access, FlexSPI will check whether it hit AHB TX Buffer first."]
-    Val1 = 0x01,
+    Cachableen1 = 0x01,
 }
 impl Cachableen {
     #[inline(always)]
@@ -281,13 +325,14 @@ impl From<Cachableen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Clrahbbufopt {
-    #[doc = "AHB RX/TX Buffer will not be cleared automatically when FlexSPI returns Stop mode ACK."]
-    Val0 = 0x0,
-    #[doc = "AHB RX/TX Buffer will be cleared automatically when FlexSPI returns Stop mode ACK."]
-    Val1 = 0x01,
+    #[doc = "AHB RX/TX Buffer will not be cleaned automatically when FlexSPI return Stop mode ACK."]
+    Clrahbbufopt0 = 0x0,
+    #[doc = "AHB RX/TX Buffer will be cleaned automatically when FlexSPI return Stop mode ACK."]
+    Clrahbbufopt1 = 0x01,
 }
 impl Clrahbbufopt {
     #[inline(always)]
@@ -312,13 +357,46 @@ impl From<Clrahbbufopt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Combinationen {
+    #[doc = "Disable."]
+    Combinationen0 = 0x0,
+    #[doc = "Enable."]
+    Combinationen1 = 0x01,
+}
+impl Combinationen {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Combinationen {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Combinationen {
+    #[inline(always)]
+    fn from(val: u8) -> Combinationen {
+        Combinationen::from_bits(val)
+    }
+}
+impl From<Combinationen> for u8 {
+    #[inline(always)]
+    fn from(val: Combinationen) -> u8 {
+        Combinationen::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Csintervalunit {
     #[doc = "The CS interval unit is 1 serial clock cycle."]
-    Val0 = 0x0,
+    Csintervalunit0 = 0x0,
     #[doc = "The CS interval unit is 256 serial clock cycle."]
-    Val1 = 0x01,
+    Csintervalunit1 = 0x01,
 }
 impl Csintervalunit {
     #[inline(always)]
@@ -343,13 +421,14 @@ impl From<Csintervalunit> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dozeen {
     #[doc = "Doze mode support disabled. AHB clock and serial clock will not be gated off when there is doze mode request from system."]
-    Val0 = 0x0,
+    Dozeen0 = 0x0,
     #[doc = "Doze mode support enabled. AHB clock and serial clock will be gated off when there is doze mode request from system."]
-    Val1 = 0x01,
+    Dozeen1 = 0x01,
 }
 impl Dozeen {
     #[inline(always)]
@@ -374,13 +453,14 @@ impl From<Dozeen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hsen {
     #[doc = "Disable divide by 2 of serial flash clock for half speed commands."]
-    Val0 = 0x0,
+    Hsen0 = 0x0,
     #[doc = "Enable divide by 2 of serial flash clock for half speed commands."]
-    Val1 = 0x01,
+    Hsen1 = 0x01,
 }
 impl Hsen {
     #[inline(always)]
@@ -405,22 +485,23 @@ impl From<Hsen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ipcmderrcode {
     #[doc = "No error."]
-    Val0 = 0x0,
+    Ipcmderrcode0 = 0x0,
     _RESERVED_1 = 0x01,
     #[doc = "IP command with JMP_ON_CS instruction used in the sequence."]
-    Val2 = 0x02,
+    Ipcmderrcode2 = 0x02,
     #[doc = "There is unknown instruction opcode in the sequence."]
-    Val3 = 0x03,
+    Ipcmderrcode3 = 0x03,
     #[doc = "Instruction DUMMY_SDR/DUMMY_RWDS_SDR used in DDR sequence."]
-    Val4 = 0x04,
+    Ipcmderrcode4 = 0x04,
     #[doc = "Instruction DUMMY_DDR/DUMMY_RWDS_DDR used in SDR sequence."]
-    Val5 = 0x05,
+    Ipcmderrcode5 = 0x05,
     #[doc = "Flash access start address exceed the whole flash address range (A1/A2/B1/B2)."]
-    Val6 = 0x06,
+    Ipcmderrcode6 = 0x06,
     _RESERVED_7 = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
@@ -429,9 +510,9 @@ pub enum Ipcmderrcode {
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     #[doc = "Sequence execution timeout."]
-    Val7 = 0x0e,
+    Ipcmderrcode14 = 0x0e,
     #[doc = "Flash boundary crossed."]
-    Val8 = 0x0f,
+    Ipcmderrcode15 = 0x0f,
 }
 impl Ipcmderrcode {
     #[inline(always)]
@@ -456,13 +537,14 @@ impl From<Ipcmderrcode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Readaddropt {
     #[doc = "There is AHB read burst start address alignment limitation when flash is accessed in parallel mode or flash is word-addressable."]
-    Val0 = 0x0,
+    Readaddropt0 = 0x0,
     #[doc = "There is no AHB read burst start address alignment limitation. FlexSPI will fetch more data than AHB burst required to meet the alignment requirement."]
-    Val1 = 0x01,
+    Readaddropt1 = 0x01,
 }
 impl Readaddropt {
     #[inline(always)]
@@ -487,13 +569,14 @@ impl From<Readaddropt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Readszalign {
     #[doc = "AHB read size will be decided by other register setting like PREFETCH_EN."]
-    Val0 = 0x0,
+    Readszalign0 = 0x0,
     #[doc = "AHB read size to up size to 8 bytes aligned, no prefetching."]
-    Val1 = 0x01,
+    Readszalign1 = 0x01,
 }
 impl Readszalign {
     #[inline(always)]
@@ -518,16 +601,17 @@ impl From<Readszalign> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rxclksrc {
     #[doc = "Dummy Read strobe generated by FlexSPI Controller and loopback internally."]
-    Val0 = 0x0,
+    Rxclksrc0 = 0x0,
     #[doc = "Dummy Read strobe generated by FlexSPI Controller and loopback from DQS pad."]
-    Val1 = 0x01,
+    Rxclksrc1 = 0x01,
     _RESERVED_2 = 0x02,
     #[doc = "Flash provided Read strobe and input from DQS pad."]
-    Val3 = 0x03,
+    Rxclksrc3 = 0x03,
 }
 impl Rxclksrc {
     #[inline(always)]
@@ -552,13 +636,14 @@ impl From<Rxclksrc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rxdmaen {
     #[doc = "IP RX FIFO would be read by processor."]
-    Val0 = 0x0,
+    Rxdmaen0 = 0x0,
     #[doc = "IP RX FIFO would be read by DMA."]
-    Val1 = 0x01,
+    Rxdmaen1 = 0x01,
 }
 impl Rxdmaen {
     #[inline(always)]
@@ -583,12 +668,13 @@ impl From<Rxdmaen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Samedeviceen {
-    #[doc = "In Individual mode, FLSHA1CRx/FLSHA2CRx/FLSHB1CRx/FLSHB2CRx register setting will be applied to Flash A1/A2/B1/B2 separately. In Parallel mode, FLSHA1CRx register setting will be applied to Flash A1 and B1, FLSHA2CRx register setting will be applied to Flash A2 and B2. FLSHB1CRx/FLSHB2CRx register setting will be ignored."]
+    #[doc = "In Individual mode, FLSHA1CRx/FLSHA2CRx/FLSHB1CRx/FLSHB2CRx register setting will be applied to Flash A1/A2/B1/B2 separately. In Parallel mode, FLSHA1CRx register setting will be applied to Flash A1 and B1, FLSHA2CRx register setting will be applied to Flash A2 and B2. FLSHB1CRx/FLSHB2CRx register settings will be ignored."]
     IndividualParallel = 0x0,
-    #[doc = "FLSHA1CR0/FLSHA1CR1/FLSHA1CR2 register setting will be applied to Flash A1/A2/B1/B2. FLSHA2CRx/FLSHB1CRx/FLSHB2CRx will be ignored."]
+    #[doc = "FLSHA1CR0/FLSHA1CR1/FLSHA1CR2 register settings will be applied to Flash A1/A2/B1/B2. FLSHA2CRx/FLSHB1CRx/FLSHB2CRx will be ignored."]
     Enable = 0x01,
 }
 impl Samedeviceen {
@@ -614,13 +700,14 @@ impl From<Samedeviceen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sckbdiffopt {
     #[doc = "B_SCLK pad is used as port B SCLK clock output. Port B flash access is available."]
-    Val1 = 0x0,
+    Sckbdiffopt0 = 0x0,
     #[doc = "B_SCLK pad is used as port A SCLK inverted clock output (Differential clock to A_SCLK). Port B flash access is not available."]
-    Val0 = 0x01,
+    Sckbdiffopt1 = 0x01,
 }
 impl Sckbdiffopt {
     #[inline(always)]
@@ -645,25 +732,58 @@ impl From<Sckbdiffopt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Sckfreerunen {
+    #[doc = "Disable."]
+    Sckfreerunen0 = 0x0,
+    #[doc = "Enable."]
+    Sckfreerunen1 = 0x01,
+}
+impl Sckfreerunen {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Sckfreerunen {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Sckfreerunen {
+    #[inline(always)]
+    fn from(val: u8) -> Sckfreerunen {
+        Sckfreerunen::from_bits(val)
+    }
+}
+impl From<Sckfreerunen> for u8 {
+    #[inline(always)]
+    fn from(val: Sckfreerunen) -> u8 {
+        Sckfreerunen::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Serclkdiv {
     #[doc = "Divided by 1."]
-    Val0 = 0x0,
+    Serclkdiv0 = 0x0,
     #[doc = "Divided by 2."]
-    Val1 = 0x01,
+    Serclkdiv1 = 0x01,
     #[doc = "Divided by 3."]
-    Val2 = 0x02,
+    Serclkdiv2 = 0x02,
     #[doc = "Divided by 4."]
-    Val3 = 0x03,
+    Serclkdiv3 = 0x03,
     #[doc = "Divided by 5."]
-    Val4 = 0x04,
+    Serclkdiv4 = 0x04,
     #[doc = "Divided by 6."]
-    Val5 = 0x05,
+    Serclkdiv5 = 0x05,
     #[doc = "Divided by 7."]
-    Val6 = 0x06,
+    Serclkdiv6 = 0x06,
     #[doc = "Divided by 8."]
-    Val7 = 0x07,
+    Serclkdiv7 = 0x07,
 }
 impl Serclkdiv {
     #[inline(always)]
@@ -688,13 +808,14 @@ impl From<Serclkdiv> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Txdmaen {
     #[doc = "IP TX FIFO would be filled by processor."]
-    Val0 = 0x0,
+    Txdmaen0 = 0x0,
     #[doc = "IP TX FIFO would be filled by DMA."]
-    Val1 = 0x01,
+    Txdmaen1 = 0x01,
 }
 impl Txdmaen {
     #[inline(always)]
@@ -719,13 +840,14 @@ impl From<Txdmaen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wmena {
-    #[doc = "Write mask is disabled, DQS(RWDS) pin will not be driven when writing to external device."]
-    Val0 = 0x0,
+    #[doc = "Write mask is disabled, DQS(RWDS) pin will be un-driven when writing to external device."]
+    Wmena0 = 0x0,
     #[doc = "Write mask is enabled, DQS(RWDS) pin will be driven by FlexSPI as write mask output when writing to external device."]
-    Val1 = 0x01,
+    Wmena1 = 0x01,
 }
 impl Wmena {
     #[inline(always)]
@@ -750,13 +872,14 @@ impl From<Wmena> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wmenb {
-    #[doc = "Write mask is disabled, DQS(RWDS) pin will not be driven when writing to external device."]
-    Val0 = 0x0,
+    #[doc = "Write mask is disabled, DQS(RWDS) pin will be un-driven when writing to external device."]
+    Wmenb0 = 0x0,
     #[doc = "Write mask is enabled, DQS(RWDS) pin will be driven by FlexSPI as write mask output when writing to external device."]
-    Val1 = 0x01,
+    Wmenb1 = 0x01,
 }
 impl Wmenb {
     #[inline(always)]

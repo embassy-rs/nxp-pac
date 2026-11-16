@@ -22,6 +22,7 @@ impl Default for CodeBinLsb {
         CodeBinLsb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CodeBinLsb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CodeBinLsb")
@@ -63,6 +64,7 @@ impl Default for CodeBinMsb {
         CodeBinMsb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CodeBinMsb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CodeBinMsb")
@@ -104,6 +106,7 @@ impl Default for CodeGrayLsb {
         CodeGrayLsb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CodeGrayLsb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CodeGrayLsb")
@@ -145,6 +148,7 @@ impl Default for CodeGrayMsb {
         CodeGrayMsb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CodeGrayMsb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CodeGrayMsb")
@@ -222,6 +226,7 @@ impl Default for Fcctrlsel {
         Fcctrlsel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fcctrlsel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fcctrlsel")
@@ -377,6 +382,7 @@ impl Default for Sharedctrlset {
         Sharedctrlset(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sharedctrlset {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sharedctrlset")
@@ -436,6 +442,7 @@ impl Default for Updatelckout {
         Updatelckout(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Updatelckout {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Updatelckout")
@@ -477,6 +484,7 @@ impl Default for UsbHsStatus {
         UsbHsStatus(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for UsbHsStatus {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UsbHsStatus")

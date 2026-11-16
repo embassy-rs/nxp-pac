@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AdcActive {
     #[doc = "ADC is idle. There are no pending triggers to service and no active commands are being processed."]
@@ -30,7 +31,8 @@ impl From<AdcActive> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CalAvgs {
     #[doc = "Single conversion."]
@@ -84,7 +86,8 @@ impl From<CalAvgs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CalRdy {
     #[doc = "Calibration is incomplete or has not been run."]
@@ -115,7 +118,8 @@ impl From<CalRdy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CalReq {
     #[doc = "No request made."]
@@ -146,7 +150,8 @@ impl From<CalReq> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Calofs {
     #[doc = "Calibration function disabled."]
@@ -177,7 +182,8 @@ impl From<Calofs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Calofsi {
     #[doc = "Not implemented."]
@@ -208,7 +214,8 @@ impl From<Calofsi> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdact {
     #[doc = "No command currently in progress."]
@@ -231,12 +238,18 @@ pub enum Cmdact {
     CommandX8 = 0x08,
     #[doc = "Associated command number currently being executed."]
     CommandX9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
-    _RESERVED_f = 0x0f,
+    #[doc = "Associated command number currently being executed."]
+    CommandX10 = 0x0a,
+    #[doc = "Associated command number currently being executed."]
+    CommandX11 = 0x0b,
+    #[doc = "Associated command number currently being executed."]
+    CommandX12 = 0x0c,
+    #[doc = "Associated command number currently being executed."]
+    CommandX13 = 0x0d,
+    #[doc = "Associated command number currently being executed."]
+    CommandX14 = 0x0e,
+    #[doc = "Associated command number currently being executed."]
+    CommandX15 = 0x0f,
 }
 impl Cmdact {
     #[inline(always)]
@@ -261,7 +274,8 @@ impl From<Cmdact> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh10Avgs {
     #[doc = "Single conversion."]
@@ -315,7 +329,8 @@ impl From<Cmdh10Avgs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh10Cmpen {
     #[doc = "Disabled."]
@@ -349,7 +364,8 @@ impl From<Cmdh10Cmpen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh10Loop {
     #[doc = "Looping not enabled. Command executes one time."]
@@ -372,11 +388,16 @@ pub enum Cmdh10Loop {
     CmdExecutesCorrespondingTimes8 = 0x08,
     #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
     CmdExecutesCorrespondingTimes9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes10 = 0x0a,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes11 = 0x0b,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes12 = 0x0c,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes13 = 0x0d,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes14 = 0x0e,
     #[doc = "Loop 15 times. Command executes 16 times."]
     CmdExec15x = 0x0f,
 }
@@ -403,7 +424,8 @@ impl From<Cmdh10Loop> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh10Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
@@ -426,11 +448,16 @@ pub enum Cmdh10Next {
     DoCorrespondingCmdNext8 = 0x08,
     #[doc = "Select corresponding CMD command buffer register as next command."]
     DoCorrespondingCmdNext9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext10 = 0x0a,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext11 = 0x0b,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext12 = 0x0c,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext13 = 0x0d,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext14 = 0x0e,
     #[doc = "CMD15."]
     DoCmd15Next = 0x0f,
 }
@@ -457,7 +484,8 @@ impl From<Cmdh10Next> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh10Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
@@ -500,7 +528,8 @@ impl From<Cmdh10Sts> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh11Avgs {
     #[doc = "Single conversion."]
@@ -554,7 +583,8 @@ impl From<Cmdh11Avgs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh11Cmpen {
     #[doc = "Disabled."]
@@ -588,7 +618,8 @@ impl From<Cmdh11Cmpen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh11Loop {
     #[doc = "Looping not enabled. Command executes one time."]
@@ -611,11 +642,16 @@ pub enum Cmdh11Loop {
     CmdExecutesCorrespondingTimes8 = 0x08,
     #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
     CmdExecutesCorrespondingTimes9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes10 = 0x0a,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes11 = 0x0b,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes12 = 0x0c,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes13 = 0x0d,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes14 = 0x0e,
     #[doc = "Loop 15 times. Command executes 16 times."]
     CmdExec15x = 0x0f,
 }
@@ -642,7 +678,8 @@ impl From<Cmdh11Loop> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh11Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
@@ -665,11 +702,16 @@ pub enum Cmdh11Next {
     DoCorrespondingCmdNext8 = 0x08,
     #[doc = "Select corresponding CMD command buffer register as next command."]
     DoCorrespondingCmdNext9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext10 = 0x0a,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext11 = 0x0b,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext12 = 0x0c,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext13 = 0x0d,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext14 = 0x0e,
     #[doc = "CMD15."]
     DoCmd15Next = 0x0f,
 }
@@ -696,7 +738,8 @@ impl From<Cmdh11Next> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh11Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
@@ -739,7 +782,8 @@ impl From<Cmdh11Sts> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh12Avgs {
     #[doc = "Single conversion."]
@@ -793,7 +837,8 @@ impl From<Cmdh12Avgs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh12Cmpen {
     #[doc = "Disabled."]
@@ -827,7 +872,8 @@ impl From<Cmdh12Cmpen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh12Loop {
     #[doc = "Looping not enabled. Command executes one time."]
@@ -850,11 +896,16 @@ pub enum Cmdh12Loop {
     CmdExecutesCorrespondingTimes8 = 0x08,
     #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
     CmdExecutesCorrespondingTimes9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes10 = 0x0a,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes11 = 0x0b,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes12 = 0x0c,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes13 = 0x0d,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes14 = 0x0e,
     #[doc = "Loop 15 times. Command executes 16 times."]
     CmdExec15x = 0x0f,
 }
@@ -881,7 +932,8 @@ impl From<Cmdh12Loop> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh12Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
@@ -904,11 +956,16 @@ pub enum Cmdh12Next {
     DoCorrespondingCmdNext8 = 0x08,
     #[doc = "Select corresponding CMD command buffer register as next command."]
     DoCorrespondingCmdNext9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext10 = 0x0a,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext11 = 0x0b,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext12 = 0x0c,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext13 = 0x0d,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext14 = 0x0e,
     #[doc = "CMD15."]
     DoCmd15Next = 0x0f,
 }
@@ -935,7 +992,8 @@ impl From<Cmdh12Next> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh12Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
@@ -978,7 +1036,8 @@ impl From<Cmdh12Sts> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh13Avgs {
     #[doc = "Single conversion."]
@@ -1032,7 +1091,8 @@ impl From<Cmdh13Avgs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh13Cmpen {
     #[doc = "Disabled."]
@@ -1066,7 +1126,8 @@ impl From<Cmdh13Cmpen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh13Loop {
     #[doc = "Looping not enabled. Command executes one time."]
@@ -1089,11 +1150,16 @@ pub enum Cmdh13Loop {
     CmdExecutesCorrespondingTimes8 = 0x08,
     #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
     CmdExecutesCorrespondingTimes9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes10 = 0x0a,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes11 = 0x0b,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes12 = 0x0c,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes13 = 0x0d,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes14 = 0x0e,
     #[doc = "Loop 15 times. Command executes 16 times."]
     CmdExec15x = 0x0f,
 }
@@ -1120,7 +1186,8 @@ impl From<Cmdh13Loop> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh13Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
@@ -1143,11 +1210,16 @@ pub enum Cmdh13Next {
     DoCorrespondingCmdNext8 = 0x08,
     #[doc = "Select corresponding CMD command buffer register as next command."]
     DoCorrespondingCmdNext9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext10 = 0x0a,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext11 = 0x0b,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext12 = 0x0c,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext13 = 0x0d,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext14 = 0x0e,
     #[doc = "CMD15."]
     DoCmd15Next = 0x0f,
 }
@@ -1174,7 +1246,8 @@ impl From<Cmdh13Next> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh13Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
@@ -1217,7 +1290,8 @@ impl From<Cmdh13Sts> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh14Avgs {
     #[doc = "Single conversion."]
@@ -1271,7 +1345,8 @@ impl From<Cmdh14Avgs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh14Cmpen {
     #[doc = "Disabled."]
@@ -1305,7 +1380,8 @@ impl From<Cmdh14Cmpen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh14Loop {
     #[doc = "Looping not enabled. Command executes one time."]
@@ -1328,11 +1404,16 @@ pub enum Cmdh14Loop {
     CmdExecutesCorrespondingTimes8 = 0x08,
     #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
     CmdExecutesCorrespondingTimes9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes10 = 0x0a,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes11 = 0x0b,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes12 = 0x0c,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes13 = 0x0d,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes14 = 0x0e,
     #[doc = "Loop 15 times. Command executes 16 times."]
     CmdExec15x = 0x0f,
 }
@@ -1359,7 +1440,8 @@ impl From<Cmdh14Loop> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh14Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
@@ -1382,11 +1464,16 @@ pub enum Cmdh14Next {
     DoCorrespondingCmdNext8 = 0x08,
     #[doc = "Select corresponding CMD command buffer register as next command."]
     DoCorrespondingCmdNext9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext10 = 0x0a,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext11 = 0x0b,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext12 = 0x0c,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext13 = 0x0d,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext14 = 0x0e,
     #[doc = "CMD15."]
     DoCmd15Next = 0x0f,
 }
@@ -1413,7 +1500,8 @@ impl From<Cmdh14Next> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh14Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
@@ -1456,7 +1544,8 @@ impl From<Cmdh14Sts> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh15Avgs {
     #[doc = "Single conversion."]
@@ -1510,7 +1599,8 @@ impl From<Cmdh15Avgs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh15Cmpen {
     #[doc = "Disabled."]
@@ -1544,7 +1634,8 @@ impl From<Cmdh15Cmpen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh15Loop {
     #[doc = "Looping not enabled. Command executes one time."]
@@ -1567,11 +1658,16 @@ pub enum Cmdh15Loop {
     CmdExecutesCorrespondingTimes8 = 0x08,
     #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
     CmdExecutesCorrespondingTimes9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes10 = 0x0a,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes11 = 0x0b,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes12 = 0x0c,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes13 = 0x0d,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes14 = 0x0e,
     #[doc = "Loop 15 times. Command executes 16 times."]
     CmdExec15x = 0x0f,
 }
@@ -1598,7 +1694,8 @@ impl From<Cmdh15Loop> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh15Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
@@ -1621,11 +1718,16 @@ pub enum Cmdh15Next {
     DoCorrespondingCmdNext8 = 0x08,
     #[doc = "Select corresponding CMD command buffer register as next command."]
     DoCorrespondingCmdNext9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext10 = 0x0a,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext11 = 0x0b,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext12 = 0x0c,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext13 = 0x0d,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext14 = 0x0e,
     #[doc = "CMD15."]
     DoCmd15Next = 0x0f,
 }
@@ -1652,7 +1754,8 @@ impl From<Cmdh15Next> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh15Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
@@ -1695,7 +1798,8 @@ impl From<Cmdh15Sts> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh1Avgs {
     #[doc = "Single conversion."]
@@ -1749,7 +1853,8 @@ impl From<Cmdh1Avgs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh1Cmpen {
     #[doc = "Disabled."]
@@ -1783,7 +1888,8 @@ impl From<Cmdh1Cmpen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh1Loop {
     #[doc = "Looping not enabled. Command executes one time."]
@@ -1806,11 +1912,16 @@ pub enum Cmdh1Loop {
     CmdExecutesCorrespondingTimes8 = 0x08,
     #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
     CmdExecutesCorrespondingTimes9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes10 = 0x0a,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes11 = 0x0b,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes12 = 0x0c,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes13 = 0x0d,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes14 = 0x0e,
     #[doc = "Loop 15 times. Command executes 16 times."]
     CmdExec15x = 0x0f,
 }
@@ -1837,7 +1948,8 @@ impl From<Cmdh1Loop> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh1Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
@@ -1860,11 +1972,16 @@ pub enum Cmdh1Next {
     DoCorrespondingCmdNext8 = 0x08,
     #[doc = "Select corresponding CMD command buffer register as next command."]
     DoCorrespondingCmdNext9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext10 = 0x0a,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext11 = 0x0b,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext12 = 0x0c,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext13 = 0x0d,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext14 = 0x0e,
     #[doc = "CMD15."]
     DoCmd15Next = 0x0f,
 }
@@ -1891,7 +2008,8 @@ impl From<Cmdh1Next> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh1Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
@@ -1934,7 +2052,8 @@ impl From<Cmdh1Sts> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh2Avgs {
     #[doc = "Single conversion."]
@@ -1988,7 +2107,8 @@ impl From<Cmdh2Avgs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh2Cmpen {
     #[doc = "Disabled."]
@@ -2022,7 +2142,8 @@ impl From<Cmdh2Cmpen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh2Loop {
     #[doc = "Looping not enabled. Command executes one time."]
@@ -2045,11 +2166,16 @@ pub enum Cmdh2Loop {
     CmdExecutesCorrespondingTimes8 = 0x08,
     #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
     CmdExecutesCorrespondingTimes9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes10 = 0x0a,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes11 = 0x0b,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes12 = 0x0c,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes13 = 0x0d,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes14 = 0x0e,
     #[doc = "Loop 15 times. Command executes 16 times."]
     CmdExec15x = 0x0f,
 }
@@ -2076,7 +2202,8 @@ impl From<Cmdh2Loop> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh2Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
@@ -2099,11 +2226,16 @@ pub enum Cmdh2Next {
     DoCorrespondingCmdNext8 = 0x08,
     #[doc = "Select corresponding CMD command buffer register as next command."]
     DoCorrespondingCmdNext9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext10 = 0x0a,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext11 = 0x0b,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext12 = 0x0c,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext13 = 0x0d,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext14 = 0x0e,
     #[doc = "CMD15."]
     DoCmd15Next = 0x0f,
 }
@@ -2130,7 +2262,8 @@ impl From<Cmdh2Next> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh2Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
@@ -2173,7 +2306,8 @@ impl From<Cmdh2Sts> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh3Avgs {
     #[doc = "Single conversion."]
@@ -2227,7 +2361,8 @@ impl From<Cmdh3Avgs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh3Cmpen {
     #[doc = "Disabled."]
@@ -2261,7 +2396,8 @@ impl From<Cmdh3Cmpen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh3Loop {
     #[doc = "Looping not enabled. Command executes one time."]
@@ -2284,11 +2420,16 @@ pub enum Cmdh3Loop {
     CmdExecutesCorrespondingTimes8 = 0x08,
     #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
     CmdExecutesCorrespondingTimes9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes10 = 0x0a,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes11 = 0x0b,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes12 = 0x0c,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes13 = 0x0d,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes14 = 0x0e,
     #[doc = "Loop 15 times. Command executes 16 times."]
     CmdExec15x = 0x0f,
 }
@@ -2315,7 +2456,8 @@ impl From<Cmdh3Loop> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh3Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
@@ -2338,11 +2480,16 @@ pub enum Cmdh3Next {
     DoCorrespondingCmdNext8 = 0x08,
     #[doc = "Select corresponding CMD command buffer register as next command."]
     DoCorrespondingCmdNext9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext10 = 0x0a,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext11 = 0x0b,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext12 = 0x0c,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext13 = 0x0d,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext14 = 0x0e,
     #[doc = "CMD15."]
     DoCmd15Next = 0x0f,
 }
@@ -2369,7 +2516,8 @@ impl From<Cmdh3Next> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh3Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
@@ -2412,7 +2560,8 @@ impl From<Cmdh3Sts> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh4Avgs {
     #[doc = "Single conversion."]
@@ -2466,7 +2615,8 @@ impl From<Cmdh4Avgs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh4Cmpen {
     #[doc = "Disabled."]
@@ -2500,7 +2650,8 @@ impl From<Cmdh4Cmpen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh4Loop {
     #[doc = "Looping not enabled. Command executes one time."]
@@ -2523,11 +2674,16 @@ pub enum Cmdh4Loop {
     CmdExecutesCorrespondingTimes8 = 0x08,
     #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
     CmdExecutesCorrespondingTimes9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes10 = 0x0a,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes11 = 0x0b,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes12 = 0x0c,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes13 = 0x0d,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes14 = 0x0e,
     #[doc = "Loop 15 times. Command executes 16 times."]
     CmdExec15x = 0x0f,
 }
@@ -2554,7 +2710,8 @@ impl From<Cmdh4Loop> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh4Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
@@ -2577,11 +2734,16 @@ pub enum Cmdh4Next {
     DoCorrespondingCmdNext8 = 0x08,
     #[doc = "Select corresponding CMD command buffer register as next command."]
     DoCorrespondingCmdNext9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext10 = 0x0a,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext11 = 0x0b,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext12 = 0x0c,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext13 = 0x0d,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext14 = 0x0e,
     #[doc = "CMD15."]
     DoCmd15Next = 0x0f,
 }
@@ -2608,7 +2770,8 @@ impl From<Cmdh4Next> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh4Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
@@ -2651,7 +2814,8 @@ impl From<Cmdh4Sts> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh5Avgs {
     #[doc = "Single conversion."]
@@ -2705,7 +2869,8 @@ impl From<Cmdh5Avgs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh5Cmpen {
     #[doc = "Disabled."]
@@ -2739,7 +2904,8 @@ impl From<Cmdh5Cmpen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh5Loop {
     #[doc = "Looping not enabled. Command executes one time."]
@@ -2762,11 +2928,16 @@ pub enum Cmdh5Loop {
     CmdExecutesCorrespondingTimes8 = 0x08,
     #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
     CmdExecutesCorrespondingTimes9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes10 = 0x0a,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes11 = 0x0b,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes12 = 0x0c,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes13 = 0x0d,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes14 = 0x0e,
     #[doc = "Loop 15 times. Command executes 16 times."]
     CmdExec15x = 0x0f,
 }
@@ -2793,7 +2964,8 @@ impl From<Cmdh5Loop> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh5Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
@@ -2816,11 +2988,16 @@ pub enum Cmdh5Next {
     DoCorrespondingCmdNext8 = 0x08,
     #[doc = "Select corresponding CMD command buffer register as next command."]
     DoCorrespondingCmdNext9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext10 = 0x0a,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext11 = 0x0b,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext12 = 0x0c,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext13 = 0x0d,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext14 = 0x0e,
     #[doc = "CMD15."]
     DoCmd15Next = 0x0f,
 }
@@ -2847,7 +3024,8 @@ impl From<Cmdh5Next> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh5Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
@@ -2890,7 +3068,8 @@ impl From<Cmdh5Sts> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh6Avgs {
     #[doc = "Single conversion."]
@@ -2944,7 +3123,8 @@ impl From<Cmdh6Avgs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh6Cmpen {
     #[doc = "Disabled."]
@@ -2978,7 +3158,8 @@ impl From<Cmdh6Cmpen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh6Loop {
     #[doc = "Looping not enabled. Command executes one time."]
@@ -3001,11 +3182,16 @@ pub enum Cmdh6Loop {
     CmdExecutesCorrespondingTimes8 = 0x08,
     #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
     CmdExecutesCorrespondingTimes9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes10 = 0x0a,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes11 = 0x0b,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes12 = 0x0c,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes13 = 0x0d,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes14 = 0x0e,
     #[doc = "Loop 15 times. Command executes 16 times."]
     CmdExec15x = 0x0f,
 }
@@ -3032,7 +3218,8 @@ impl From<Cmdh6Loop> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh6Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
@@ -3055,11 +3242,16 @@ pub enum Cmdh6Next {
     DoCorrespondingCmdNext8 = 0x08,
     #[doc = "Select corresponding CMD command buffer register as next command."]
     DoCorrespondingCmdNext9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext10 = 0x0a,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext11 = 0x0b,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext12 = 0x0c,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext13 = 0x0d,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext14 = 0x0e,
     #[doc = "CMD15."]
     DoCmd15Next = 0x0f,
 }
@@ -3086,7 +3278,8 @@ impl From<Cmdh6Next> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh6Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
@@ -3129,7 +3322,8 @@ impl From<Cmdh6Sts> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh7Avgs {
     #[doc = "Single conversion."]
@@ -3183,7 +3377,8 @@ impl From<Cmdh7Avgs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh7Cmpen {
     #[doc = "Disabled."]
@@ -3217,7 +3412,8 @@ impl From<Cmdh7Cmpen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh7Loop {
     #[doc = "Looping not enabled. Command executes one time."]
@@ -3240,11 +3436,16 @@ pub enum Cmdh7Loop {
     CmdExecutesCorrespondingTimes8 = 0x08,
     #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
     CmdExecutesCorrespondingTimes9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes10 = 0x0a,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes11 = 0x0b,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes12 = 0x0c,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes13 = 0x0d,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes14 = 0x0e,
     #[doc = "Loop 15 times. Command executes 16 times."]
     CmdExec15x = 0x0f,
 }
@@ -3271,7 +3472,8 @@ impl From<Cmdh7Loop> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh7Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
@@ -3294,11 +3496,16 @@ pub enum Cmdh7Next {
     DoCorrespondingCmdNext8 = 0x08,
     #[doc = "Select corresponding CMD command buffer register as next command."]
     DoCorrespondingCmdNext9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext10 = 0x0a,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext11 = 0x0b,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext12 = 0x0c,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext13 = 0x0d,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext14 = 0x0e,
     #[doc = "CMD15."]
     DoCmd15Next = 0x0f,
 }
@@ -3325,7 +3532,8 @@ impl From<Cmdh7Next> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh7Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
@@ -3368,7 +3576,8 @@ impl From<Cmdh7Sts> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh8Avgs {
     #[doc = "Single conversion."]
@@ -3422,7 +3631,8 @@ impl From<Cmdh8Avgs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh8Cmpen {
     #[doc = "Disabled."]
@@ -3456,7 +3666,8 @@ impl From<Cmdh8Cmpen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh8Loop {
     #[doc = "Looping not enabled. Command executes one time."]
@@ -3479,11 +3690,16 @@ pub enum Cmdh8Loop {
     CmdExecutesCorrespondingTimes8 = 0x08,
     #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
     CmdExecutesCorrespondingTimes9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes10 = 0x0a,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes11 = 0x0b,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes12 = 0x0c,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes13 = 0x0d,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes14 = 0x0e,
     #[doc = "Loop 15 times. Command executes 16 times."]
     CmdExec15x = 0x0f,
 }
@@ -3510,7 +3726,8 @@ impl From<Cmdh8Loop> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh8Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
@@ -3533,11 +3750,16 @@ pub enum Cmdh8Next {
     DoCorrespondingCmdNext8 = 0x08,
     #[doc = "Select corresponding CMD command buffer register as next command."]
     DoCorrespondingCmdNext9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext10 = 0x0a,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext11 = 0x0b,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext12 = 0x0c,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext13 = 0x0d,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext14 = 0x0e,
     #[doc = "CMD15."]
     DoCmd15Next = 0x0f,
 }
@@ -3564,7 +3786,8 @@ impl From<Cmdh8Next> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh8Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
@@ -3607,7 +3830,8 @@ impl From<Cmdh8Sts> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh9Avgs {
     #[doc = "Single conversion."]
@@ -3661,7 +3885,8 @@ impl From<Cmdh9Avgs> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh9Cmpen {
     #[doc = "Disabled."]
@@ -3695,7 +3920,8 @@ impl From<Cmdh9Cmpen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh9Loop {
     #[doc = "Looping not enabled. Command executes one time."]
@@ -3718,11 +3944,16 @@ pub enum Cmdh9Loop {
     CmdExecutesCorrespondingTimes8 = 0x08,
     #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
     CmdExecutesCorrespondingTimes9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes10 = 0x0a,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes11 = 0x0b,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes12 = 0x0c,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes13 = 0x0d,
+    #[doc = "Loop corresponding number of times. Command executes LOOP + 1 times."]
+    CmdExecutesCorrespondingTimes14 = 0x0e,
     #[doc = "Loop 15 times. Command executes 16 times."]
     CmdExec15x = 0x0f,
 }
@@ -3749,7 +3980,8 @@ impl From<Cmdh9Loop> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh9Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
@@ -3772,11 +4004,16 @@ pub enum Cmdh9Next {
     DoCorrespondingCmdNext8 = 0x08,
     #[doc = "Select corresponding CMD command buffer register as next command."]
     DoCorrespondingCmdNext9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext10 = 0x0a,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext11 = 0x0b,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext12 = 0x0c,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext13 = 0x0d,
+    #[doc = "Select corresponding CMD command buffer register as next command."]
+    DoCorrespondingCmdNext14 = 0x0e,
     #[doc = "CMD15."]
     DoCmd15Next = 0x0f,
 }
@@ -3803,7 +4040,8 @@ impl From<Cmdh9Next> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh9Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
@@ -3846,7 +4084,8 @@ impl From<Cmdh9Sts> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl10Adch {
     #[doc = "CH0A or CH0B or CH0A/CH0B pair."]
@@ -3869,10 +4108,14 @@ pub enum Cmdl10Adch {
     SelectCorrespondingChannel8 = 0x08,
     #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
     SelectCorrespondingChannel9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel10 = 0x0a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel11 = 0x0b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel12 = 0x0c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -3883,12 +4126,18 @@ pub enum Cmdl10Adch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel24 = 0x18,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel25 = 0x19,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel26 = 0x1a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel27 = 0x1b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel28 = 0x1c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel29 = 0x1d,
     #[doc = "CH30A or CH30B or CH30A/CH30B pair."]
     SelectCh30 = 0x1e,
     #[doc = "CH31A or CH31B or CH31A/CH31B pair."]
@@ -3917,7 +4166,8 @@ impl From<Cmdl10Adch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl10AltbAdch {
     #[doc = "Select CH0B."]
@@ -3940,10 +4190,14 @@ pub enum Cmdl10AltbAdch {
     SelectCorrespondingCHnB8 = 0x08,
     #[doc = "Select corresponding channel CHnB."]
     SelectCorrespondingCHnB9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB10 = 0x0a,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB11 = 0x0b,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB12 = 0x0c,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -3954,12 +4208,18 @@ pub enum Cmdl10AltbAdch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB24 = 0x18,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB25 = 0x19,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB26 = 0x1a,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB27 = 0x1b,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB28 = 0x1c,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB29 = 0x1d,
     #[doc = "Select CH30B."]
     SelectCh30b = 0x1e,
     #[doc = "Select CH31B."]
@@ -3988,7 +4248,8 @@ impl From<Cmdl10AltbAdch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl10Ctype {
     #[doc = "Single-Ended mode. Only A-side channel is converted."]
@@ -4023,7 +4284,8 @@ impl From<Cmdl10Ctype> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl10Mode {
     #[doc = "Standard resolution. Single-ended 12-bit conversion; differential 13-bit conversion with 2's complement output."]
@@ -4054,7 +4316,8 @@ impl From<Cmdl10Mode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl11Adch {
     #[doc = "CH0A or CH0B or CH0A/CH0B pair."]
@@ -4077,10 +4340,14 @@ pub enum Cmdl11Adch {
     SelectCorrespondingChannel8 = 0x08,
     #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
     SelectCorrespondingChannel9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel10 = 0x0a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel11 = 0x0b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel12 = 0x0c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -4091,12 +4358,18 @@ pub enum Cmdl11Adch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel24 = 0x18,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel25 = 0x19,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel26 = 0x1a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel27 = 0x1b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel28 = 0x1c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel29 = 0x1d,
     #[doc = "CH30A or CH30B or CH30A/CH30B pair."]
     SelectCh30 = 0x1e,
     #[doc = "CH31A or CH31B or CH31A/CH31B pair."]
@@ -4125,7 +4398,8 @@ impl From<Cmdl11Adch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl11AltbAdch {
     #[doc = "Select CH0B."]
@@ -4148,10 +4422,14 @@ pub enum Cmdl11AltbAdch {
     SelectCorrespondingCHnB8 = 0x08,
     #[doc = "Select corresponding channel CHnB."]
     SelectCorrespondingCHnB9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB10 = 0x0a,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB11 = 0x0b,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB12 = 0x0c,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -4162,12 +4440,18 @@ pub enum Cmdl11AltbAdch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB24 = 0x18,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB25 = 0x19,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB26 = 0x1a,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB27 = 0x1b,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB28 = 0x1c,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB29 = 0x1d,
     #[doc = "Select CH30B."]
     SelectCh30b = 0x1e,
     #[doc = "Select CH31B."]
@@ -4196,7 +4480,8 @@ impl From<Cmdl11AltbAdch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl11Ctype {
     #[doc = "Single-Ended mode. Only A-side channel is converted."]
@@ -4231,7 +4516,8 @@ impl From<Cmdl11Ctype> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl11Mode {
     #[doc = "Standard resolution. Single-ended 12-bit conversion; differential 13-bit conversion with 2's complement output."]
@@ -4262,7 +4548,8 @@ impl From<Cmdl11Mode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl12Adch {
     #[doc = "CH0A or CH0B or CH0A/CH0B pair."]
@@ -4285,10 +4572,14 @@ pub enum Cmdl12Adch {
     SelectCorrespondingChannel8 = 0x08,
     #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
     SelectCorrespondingChannel9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel10 = 0x0a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel11 = 0x0b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel12 = 0x0c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -4299,12 +4590,18 @@ pub enum Cmdl12Adch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel24 = 0x18,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel25 = 0x19,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel26 = 0x1a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel27 = 0x1b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel28 = 0x1c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel29 = 0x1d,
     #[doc = "CH30A or CH30B or CH30A/CH30B pair."]
     SelectCh30 = 0x1e,
     #[doc = "CH31A or CH31B or CH31A/CH31B pair."]
@@ -4333,7 +4630,8 @@ impl From<Cmdl12Adch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl12AltbAdch {
     #[doc = "Select CH0B."]
@@ -4356,10 +4654,14 @@ pub enum Cmdl12AltbAdch {
     SelectCorrespondingCHnB8 = 0x08,
     #[doc = "Select corresponding channel CHnB."]
     SelectCorrespondingCHnB9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB10 = 0x0a,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB11 = 0x0b,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB12 = 0x0c,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -4370,12 +4672,18 @@ pub enum Cmdl12AltbAdch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB24 = 0x18,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB25 = 0x19,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB26 = 0x1a,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB27 = 0x1b,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB28 = 0x1c,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB29 = 0x1d,
     #[doc = "Select CH30B."]
     SelectCh30b = 0x1e,
     #[doc = "Select CH31B."]
@@ -4404,7 +4712,8 @@ impl From<Cmdl12AltbAdch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl12Ctype {
     #[doc = "Single-Ended mode. Only A-side channel is converted."]
@@ -4439,7 +4748,8 @@ impl From<Cmdl12Ctype> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl12Mode {
     #[doc = "Standard resolution. Single-ended 12-bit conversion; differential 13-bit conversion with 2's complement output."]
@@ -4470,7 +4780,8 @@ impl From<Cmdl12Mode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl13Adch {
     #[doc = "CH0A or CH0B or CH0A/CH0B pair."]
@@ -4493,10 +4804,14 @@ pub enum Cmdl13Adch {
     SelectCorrespondingChannel8 = 0x08,
     #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
     SelectCorrespondingChannel9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel10 = 0x0a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel11 = 0x0b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel12 = 0x0c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -4507,12 +4822,18 @@ pub enum Cmdl13Adch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel24 = 0x18,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel25 = 0x19,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel26 = 0x1a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel27 = 0x1b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel28 = 0x1c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel29 = 0x1d,
     #[doc = "CH30A or CH30B or CH30A/CH30B pair."]
     SelectCh30 = 0x1e,
     #[doc = "CH31A or CH31B or CH31A/CH31B pair."]
@@ -4541,7 +4862,8 @@ impl From<Cmdl13Adch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl13AltbAdch {
     #[doc = "Select CH0B."]
@@ -4564,10 +4886,14 @@ pub enum Cmdl13AltbAdch {
     SelectCorrespondingCHnB8 = 0x08,
     #[doc = "Select corresponding channel CHnB."]
     SelectCorrespondingCHnB9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB10 = 0x0a,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB11 = 0x0b,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB12 = 0x0c,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -4578,12 +4904,18 @@ pub enum Cmdl13AltbAdch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB24 = 0x18,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB25 = 0x19,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB26 = 0x1a,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB27 = 0x1b,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB28 = 0x1c,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB29 = 0x1d,
     #[doc = "Select CH30B."]
     SelectCh30b = 0x1e,
     #[doc = "Select CH31B."]
@@ -4612,7 +4944,8 @@ impl From<Cmdl13AltbAdch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl13Ctype {
     #[doc = "Single-Ended mode. Only A-side channel is converted."]
@@ -4647,7 +4980,8 @@ impl From<Cmdl13Ctype> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl13Mode {
     #[doc = "Standard resolution. Single-ended 12-bit conversion; differential 13-bit conversion with 2's complement output."]
@@ -4678,7 +5012,8 @@ impl From<Cmdl13Mode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl14Adch {
     #[doc = "CH0A or CH0B or CH0A/CH0B pair."]
@@ -4701,10 +5036,14 @@ pub enum Cmdl14Adch {
     SelectCorrespondingChannel8 = 0x08,
     #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
     SelectCorrespondingChannel9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel10 = 0x0a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel11 = 0x0b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel12 = 0x0c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -4715,12 +5054,18 @@ pub enum Cmdl14Adch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel24 = 0x18,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel25 = 0x19,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel26 = 0x1a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel27 = 0x1b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel28 = 0x1c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel29 = 0x1d,
     #[doc = "CH30A or CH30B or CH30A/CH30B pair."]
     SelectCh30 = 0x1e,
     #[doc = "CH31A or CH31B or CH31A/CH31B pair."]
@@ -4749,7 +5094,8 @@ impl From<Cmdl14Adch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl14AltbAdch {
     #[doc = "Select CH0B."]
@@ -4772,10 +5118,14 @@ pub enum Cmdl14AltbAdch {
     SelectCorrespondingCHnB8 = 0x08,
     #[doc = "Select corresponding channel CHnB."]
     SelectCorrespondingCHnB9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB10 = 0x0a,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB11 = 0x0b,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB12 = 0x0c,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -4786,12 +5136,18 @@ pub enum Cmdl14AltbAdch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB24 = 0x18,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB25 = 0x19,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB26 = 0x1a,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB27 = 0x1b,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB28 = 0x1c,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB29 = 0x1d,
     #[doc = "Select CH30B."]
     SelectCh30b = 0x1e,
     #[doc = "Select CH31B."]
@@ -4820,7 +5176,8 @@ impl From<Cmdl14AltbAdch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl14Ctype {
     #[doc = "Single-Ended mode. Only A-side channel is converted."]
@@ -4855,7 +5212,8 @@ impl From<Cmdl14Ctype> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl14Mode {
     #[doc = "Standard resolution. Single-ended 12-bit conversion; differential 13-bit conversion with 2's complement output."]
@@ -4886,7 +5244,8 @@ impl From<Cmdl14Mode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl15Adch {
     #[doc = "CH0A or CH0B or CH0A/CH0B pair."]
@@ -4909,10 +5268,14 @@ pub enum Cmdl15Adch {
     SelectCorrespondingChannel8 = 0x08,
     #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
     SelectCorrespondingChannel9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel10 = 0x0a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel11 = 0x0b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel12 = 0x0c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -4923,12 +5286,18 @@ pub enum Cmdl15Adch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel24 = 0x18,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel25 = 0x19,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel26 = 0x1a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel27 = 0x1b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel28 = 0x1c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel29 = 0x1d,
     #[doc = "CH30A or CH30B or CH30A/CH30B pair."]
     SelectCh30 = 0x1e,
     #[doc = "CH31A or CH31B or CH31A/CH31B pair."]
@@ -4957,7 +5326,8 @@ impl From<Cmdl15Adch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl15AltbAdch {
     #[doc = "Select CH0B."]
@@ -4980,10 +5350,14 @@ pub enum Cmdl15AltbAdch {
     SelectCorrespondingCHnB8 = 0x08,
     #[doc = "Select corresponding channel CHnB."]
     SelectCorrespondingCHnB9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB10 = 0x0a,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB11 = 0x0b,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB12 = 0x0c,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -4994,12 +5368,18 @@ pub enum Cmdl15AltbAdch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB24 = 0x18,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB25 = 0x19,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB26 = 0x1a,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB27 = 0x1b,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB28 = 0x1c,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB29 = 0x1d,
     #[doc = "Select CH30B."]
     SelectCh30b = 0x1e,
     #[doc = "Select CH31B."]
@@ -5028,7 +5408,8 @@ impl From<Cmdl15AltbAdch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl15Ctype {
     #[doc = "Single-Ended mode. Only A-side channel is converted."]
@@ -5063,7 +5444,8 @@ impl From<Cmdl15Ctype> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl15Mode {
     #[doc = "Standard resolution. Single-ended 12-bit conversion; differential 13-bit conversion with 2's complement output."]
@@ -5094,7 +5476,8 @@ impl From<Cmdl15Mode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl1Adch {
     #[doc = "CH0A or CH0B or CH0A/CH0B pair."]
@@ -5117,10 +5500,14 @@ pub enum Cmdl1Adch {
     SelectCorrespondingChannel8 = 0x08,
     #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
     SelectCorrespondingChannel9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel10 = 0x0a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel11 = 0x0b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel12 = 0x0c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -5131,12 +5518,18 @@ pub enum Cmdl1Adch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel24 = 0x18,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel25 = 0x19,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel26 = 0x1a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel27 = 0x1b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel28 = 0x1c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel29 = 0x1d,
     #[doc = "CH30A or CH30B or CH30A/CH30B pair."]
     SelectCh30 = 0x1e,
     #[doc = "CH31A or CH31B or CH31A/CH31B pair."]
@@ -5165,7 +5558,8 @@ impl From<Cmdl1Adch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl1AltbAdch {
     #[doc = "Select CH0B."]
@@ -5188,10 +5582,14 @@ pub enum Cmdl1AltbAdch {
     SelectCorrespondingCHnB8 = 0x08,
     #[doc = "Select corresponding channel CHnB."]
     SelectCorrespondingCHnB9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB10 = 0x0a,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB11 = 0x0b,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB12 = 0x0c,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -5202,12 +5600,18 @@ pub enum Cmdl1AltbAdch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB24 = 0x18,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB25 = 0x19,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB26 = 0x1a,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB27 = 0x1b,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB28 = 0x1c,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB29 = 0x1d,
     #[doc = "Select CH30B."]
     SelectCh30b = 0x1e,
     #[doc = "Select CH31B."]
@@ -5236,7 +5640,8 @@ impl From<Cmdl1AltbAdch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl1Ctype {
     #[doc = "Single-Ended mode. Only A-side channel is converted."]
@@ -5271,7 +5676,8 @@ impl From<Cmdl1Ctype> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl1Mode {
     #[doc = "Standard resolution. Single-ended 12-bit conversion; differential 13-bit conversion with 2's complement output."]
@@ -5302,7 +5708,8 @@ impl From<Cmdl1Mode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl2Adch {
     #[doc = "CH0A or CH0B or CH0A/CH0B pair."]
@@ -5325,10 +5732,14 @@ pub enum Cmdl2Adch {
     SelectCorrespondingChannel8 = 0x08,
     #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
     SelectCorrespondingChannel9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel10 = 0x0a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel11 = 0x0b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel12 = 0x0c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -5339,12 +5750,18 @@ pub enum Cmdl2Adch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel24 = 0x18,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel25 = 0x19,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel26 = 0x1a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel27 = 0x1b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel28 = 0x1c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel29 = 0x1d,
     #[doc = "CH30A or CH30B or CH30A/CH30B pair."]
     SelectCh30 = 0x1e,
     #[doc = "CH31A or CH31B or CH31A/CH31B pair."]
@@ -5373,7 +5790,8 @@ impl From<Cmdl2Adch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl2AltbAdch {
     #[doc = "Select CH0B."]
@@ -5396,10 +5814,14 @@ pub enum Cmdl2AltbAdch {
     SelectCorrespondingCHnB8 = 0x08,
     #[doc = "Select corresponding channel CHnB."]
     SelectCorrespondingCHnB9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB10 = 0x0a,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB11 = 0x0b,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB12 = 0x0c,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -5410,12 +5832,18 @@ pub enum Cmdl2AltbAdch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB24 = 0x18,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB25 = 0x19,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB26 = 0x1a,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB27 = 0x1b,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB28 = 0x1c,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB29 = 0x1d,
     #[doc = "Select CH30B."]
     SelectCh30b = 0x1e,
     #[doc = "Select CH31B."]
@@ -5444,7 +5872,8 @@ impl From<Cmdl2AltbAdch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl2Ctype {
     #[doc = "Single-Ended mode. Only A-side channel is converted."]
@@ -5479,7 +5908,8 @@ impl From<Cmdl2Ctype> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl2Mode {
     #[doc = "Standard resolution. Single-ended 12-bit conversion; differential 13-bit conversion with 2's complement output."]
@@ -5510,7 +5940,8 @@ impl From<Cmdl2Mode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl3Adch {
     #[doc = "CH0A or CH0B or CH0A/CH0B pair."]
@@ -5533,10 +5964,14 @@ pub enum Cmdl3Adch {
     SelectCorrespondingChannel8 = 0x08,
     #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
     SelectCorrespondingChannel9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel10 = 0x0a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel11 = 0x0b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel12 = 0x0c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -5547,12 +5982,18 @@ pub enum Cmdl3Adch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel24 = 0x18,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel25 = 0x19,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel26 = 0x1a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel27 = 0x1b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel28 = 0x1c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel29 = 0x1d,
     #[doc = "CH30A or CH30B or CH30A/CH30B pair."]
     SelectCh30 = 0x1e,
     #[doc = "CH31A or CH31B or CH31A/CH31B pair."]
@@ -5581,7 +6022,8 @@ impl From<Cmdl3Adch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl3AltbAdch {
     #[doc = "Select CH0B."]
@@ -5604,10 +6046,14 @@ pub enum Cmdl3AltbAdch {
     SelectCorrespondingCHnB8 = 0x08,
     #[doc = "Select corresponding channel CHnB."]
     SelectCorrespondingCHnB9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB10 = 0x0a,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB11 = 0x0b,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB12 = 0x0c,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -5618,12 +6064,18 @@ pub enum Cmdl3AltbAdch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB24 = 0x18,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB25 = 0x19,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB26 = 0x1a,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB27 = 0x1b,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB28 = 0x1c,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB29 = 0x1d,
     #[doc = "Select CH30B."]
     SelectCh30b = 0x1e,
     #[doc = "Select CH31B."]
@@ -5652,7 +6104,8 @@ impl From<Cmdl3AltbAdch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl3Ctype {
     #[doc = "Single-Ended mode. Only A-side channel is converted."]
@@ -5687,7 +6140,8 @@ impl From<Cmdl3Ctype> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl3Mode {
     #[doc = "Standard resolution. Single-ended 12-bit conversion; differential 13-bit conversion with 2's complement output."]
@@ -5718,7 +6172,8 @@ impl From<Cmdl3Mode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl4Adch {
     #[doc = "CH0A or CH0B or CH0A/CH0B pair."]
@@ -5741,10 +6196,14 @@ pub enum Cmdl4Adch {
     SelectCorrespondingChannel8 = 0x08,
     #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
     SelectCorrespondingChannel9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel10 = 0x0a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel11 = 0x0b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel12 = 0x0c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -5755,12 +6214,18 @@ pub enum Cmdl4Adch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel24 = 0x18,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel25 = 0x19,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel26 = 0x1a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel27 = 0x1b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel28 = 0x1c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel29 = 0x1d,
     #[doc = "CH30A or CH30B or CH30A/CH30B pair."]
     SelectCh30 = 0x1e,
     #[doc = "CH31A or CH31B or CH31A/CH31B pair."]
@@ -5789,7 +6254,8 @@ impl From<Cmdl4Adch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl4AltbAdch {
     #[doc = "Select CH0B."]
@@ -5812,10 +6278,14 @@ pub enum Cmdl4AltbAdch {
     SelectCorrespondingCHnB8 = 0x08,
     #[doc = "Select corresponding channel CHnB."]
     SelectCorrespondingCHnB9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB10 = 0x0a,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB11 = 0x0b,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB12 = 0x0c,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -5826,12 +6296,18 @@ pub enum Cmdl4AltbAdch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB24 = 0x18,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB25 = 0x19,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB26 = 0x1a,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB27 = 0x1b,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB28 = 0x1c,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB29 = 0x1d,
     #[doc = "Select CH30B."]
     SelectCh30b = 0x1e,
     #[doc = "Select CH31B."]
@@ -5860,7 +6336,8 @@ impl From<Cmdl4AltbAdch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl4Ctype {
     #[doc = "Single-Ended mode. Only A-side channel is converted."]
@@ -5895,7 +6372,8 @@ impl From<Cmdl4Ctype> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl4Mode {
     #[doc = "Standard resolution. Single-ended 12-bit conversion; differential 13-bit conversion with 2's complement output."]
@@ -5926,7 +6404,8 @@ impl From<Cmdl4Mode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl5Adch {
     #[doc = "CH0A or CH0B or CH0A/CH0B pair."]
@@ -5949,10 +6428,14 @@ pub enum Cmdl5Adch {
     SelectCorrespondingChannel8 = 0x08,
     #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
     SelectCorrespondingChannel9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel10 = 0x0a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel11 = 0x0b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel12 = 0x0c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -5963,12 +6446,18 @@ pub enum Cmdl5Adch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel24 = 0x18,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel25 = 0x19,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel26 = 0x1a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel27 = 0x1b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel28 = 0x1c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel29 = 0x1d,
     #[doc = "CH30A or CH30B or CH30A/CH30B pair."]
     SelectCh30 = 0x1e,
     #[doc = "CH31A or CH31B or CH31A/CH31B pair."]
@@ -5997,7 +6486,8 @@ impl From<Cmdl5Adch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl5AltbAdch {
     #[doc = "Select CH0B."]
@@ -6020,10 +6510,14 @@ pub enum Cmdl5AltbAdch {
     SelectCorrespondingCHnB8 = 0x08,
     #[doc = "Select corresponding channel CHnB."]
     SelectCorrespondingCHnB9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB10 = 0x0a,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB11 = 0x0b,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB12 = 0x0c,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -6034,12 +6528,18 @@ pub enum Cmdl5AltbAdch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB24 = 0x18,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB25 = 0x19,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB26 = 0x1a,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB27 = 0x1b,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB28 = 0x1c,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB29 = 0x1d,
     #[doc = "Select CH30B."]
     SelectCh30b = 0x1e,
     #[doc = "Select CH31B."]
@@ -6068,7 +6568,8 @@ impl From<Cmdl5AltbAdch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl5Ctype {
     #[doc = "Single-Ended mode. Only A-side channel is converted."]
@@ -6103,7 +6604,8 @@ impl From<Cmdl5Ctype> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl5Mode {
     #[doc = "Standard resolution. Single-ended 12-bit conversion; differential 13-bit conversion with 2's complement output."]
@@ -6134,7 +6636,8 @@ impl From<Cmdl5Mode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl6Adch {
     #[doc = "CH0A or CH0B or CH0A/CH0B pair."]
@@ -6157,10 +6660,14 @@ pub enum Cmdl6Adch {
     SelectCorrespondingChannel8 = 0x08,
     #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
     SelectCorrespondingChannel9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel10 = 0x0a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel11 = 0x0b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel12 = 0x0c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -6171,12 +6678,18 @@ pub enum Cmdl6Adch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel24 = 0x18,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel25 = 0x19,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel26 = 0x1a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel27 = 0x1b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel28 = 0x1c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel29 = 0x1d,
     #[doc = "CH30A or CH30B or CH30A/CH30B pair."]
     SelectCh30 = 0x1e,
     #[doc = "CH31A or CH31B or CH31A/CH31B pair."]
@@ -6205,7 +6718,8 @@ impl From<Cmdl6Adch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl6AltbAdch {
     #[doc = "Select CH0B."]
@@ -6228,10 +6742,14 @@ pub enum Cmdl6AltbAdch {
     SelectCorrespondingCHnB8 = 0x08,
     #[doc = "Select corresponding channel CHnB."]
     SelectCorrespondingCHnB9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB10 = 0x0a,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB11 = 0x0b,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB12 = 0x0c,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -6242,12 +6760,18 @@ pub enum Cmdl6AltbAdch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB24 = 0x18,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB25 = 0x19,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB26 = 0x1a,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB27 = 0x1b,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB28 = 0x1c,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB29 = 0x1d,
     #[doc = "Select CH30B."]
     SelectCh30b = 0x1e,
     #[doc = "Select CH31B."]
@@ -6276,7 +6800,8 @@ impl From<Cmdl6AltbAdch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl6Ctype {
     #[doc = "Single-Ended mode. Only A-side channel is converted."]
@@ -6311,7 +6836,8 @@ impl From<Cmdl6Ctype> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl6Mode {
     #[doc = "Standard resolution. Single-ended 12-bit conversion; differential 13-bit conversion with 2's complement output."]
@@ -6342,7 +6868,8 @@ impl From<Cmdl6Mode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl7Adch {
     #[doc = "CH0A or CH0B or CH0A/CH0B pair."]
@@ -6365,10 +6892,14 @@ pub enum Cmdl7Adch {
     SelectCorrespondingChannel8 = 0x08,
     #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
     SelectCorrespondingChannel9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel10 = 0x0a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel11 = 0x0b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel12 = 0x0c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -6379,12 +6910,18 @@ pub enum Cmdl7Adch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel24 = 0x18,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel25 = 0x19,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel26 = 0x1a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel27 = 0x1b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel28 = 0x1c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel29 = 0x1d,
     #[doc = "CH30A or CH30B or CH30A/CH30B pair."]
     SelectCh30 = 0x1e,
     #[doc = "CH31A or CH31B or CH31A/CH31B pair."]
@@ -6413,7 +6950,8 @@ impl From<Cmdl7Adch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl7AltbAdch {
     #[doc = "Select CH0B."]
@@ -6436,10 +6974,14 @@ pub enum Cmdl7AltbAdch {
     SelectCorrespondingCHnB8 = 0x08,
     #[doc = "Select corresponding channel CHnB."]
     SelectCorrespondingCHnB9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB10 = 0x0a,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB11 = 0x0b,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB12 = 0x0c,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -6450,12 +6992,18 @@ pub enum Cmdl7AltbAdch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB24 = 0x18,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB25 = 0x19,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB26 = 0x1a,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB27 = 0x1b,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB28 = 0x1c,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB29 = 0x1d,
     #[doc = "Select CH30B."]
     SelectCh30b = 0x1e,
     #[doc = "Select CH31B."]
@@ -6484,7 +7032,8 @@ impl From<Cmdl7AltbAdch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl7Ctype {
     #[doc = "Single-Ended mode. Only A-side channel is converted."]
@@ -6519,7 +7068,8 @@ impl From<Cmdl7Ctype> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl7Mode {
     #[doc = "Standard resolution. Single-ended 12-bit conversion; differential 13-bit conversion with 2's complement output."]
@@ -6550,7 +7100,8 @@ impl From<Cmdl7Mode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl8Adch {
     #[doc = "CH0A or CH0B or CH0A/CH0B pair."]
@@ -6573,10 +7124,14 @@ pub enum Cmdl8Adch {
     SelectCorrespondingChannel8 = 0x08,
     #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
     SelectCorrespondingChannel9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel10 = 0x0a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel11 = 0x0b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel12 = 0x0c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -6587,12 +7142,18 @@ pub enum Cmdl8Adch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel24 = 0x18,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel25 = 0x19,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel26 = 0x1a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel27 = 0x1b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel28 = 0x1c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel29 = 0x1d,
     #[doc = "CH30A or CH30B or CH30A/CH30B pair."]
     SelectCh30 = 0x1e,
     #[doc = "CH31A or CH31B or CH31A/CH31B pair."]
@@ -6621,7 +7182,8 @@ impl From<Cmdl8Adch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl8AltbAdch {
     #[doc = "Select CH0B."]
@@ -6644,10 +7206,14 @@ pub enum Cmdl8AltbAdch {
     SelectCorrespondingCHnB8 = 0x08,
     #[doc = "Select corresponding channel CHnB."]
     SelectCorrespondingCHnB9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB10 = 0x0a,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB11 = 0x0b,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB12 = 0x0c,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -6658,12 +7224,18 @@ pub enum Cmdl8AltbAdch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB24 = 0x18,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB25 = 0x19,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB26 = 0x1a,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB27 = 0x1b,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB28 = 0x1c,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB29 = 0x1d,
     #[doc = "Select CH30B."]
     SelectCh30b = 0x1e,
     #[doc = "Select CH31B."]
@@ -6692,7 +7264,8 @@ impl From<Cmdl8AltbAdch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl8Ctype {
     #[doc = "Single-Ended mode. Only A-side channel is converted."]
@@ -6727,7 +7300,8 @@ impl From<Cmdl8Ctype> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl8Mode {
     #[doc = "Standard resolution. Single-ended 12-bit conversion; differential 13-bit conversion with 2's complement output."]
@@ -6758,7 +7332,8 @@ impl From<Cmdl8Mode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl9Adch {
     #[doc = "CH0A or CH0B or CH0A/CH0B pair."]
@@ -6781,10 +7356,14 @@ pub enum Cmdl9Adch {
     SelectCorrespondingChannel8 = 0x08,
     #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
     SelectCorrespondingChannel9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel10 = 0x0a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel11 = 0x0b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel12 = 0x0c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -6795,12 +7374,18 @@ pub enum Cmdl9Adch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel24 = 0x18,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel25 = 0x19,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel26 = 0x1a,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel27 = 0x1b,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel28 = 0x1c,
+    #[doc = "Select corresponding channel CHnA or CHnB or CHnA/CHnB pair."]
+    SelectCorrespondingChannel29 = 0x1d,
     #[doc = "CH30A or CH30B or CH30A/CH30B pair."]
     SelectCh30 = 0x1e,
     #[doc = "CH31A or CH31B or CH31A/CH31B pair."]
@@ -6829,7 +7414,8 @@ impl From<Cmdl9Adch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl9AltbAdch {
     #[doc = "Select CH0B."]
@@ -6852,10 +7438,14 @@ pub enum Cmdl9AltbAdch {
     SelectCorrespondingCHnB8 = 0x08,
     #[doc = "Select corresponding channel CHnB."]
     SelectCorrespondingCHnB9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB10 = 0x0a,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB11 = 0x0b,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB12 = 0x0c,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -6866,12 +7456,18 @@ pub enum Cmdl9AltbAdch {
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    _RESERVED_18 = 0x18,
-    _RESERVED_19 = 0x19,
-    _RESERVED_1a = 0x1a,
-    _RESERVED_1b = 0x1b,
-    _RESERVED_1c = 0x1c,
-    _RESERVED_1d = 0x1d,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB24 = 0x18,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB25 = 0x19,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB26 = 0x1a,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB27 = 0x1b,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB28 = 0x1c,
+    #[doc = "Select corresponding channel CHnB."]
+    SelectCorrespondingCHnB29 = 0x1d,
     #[doc = "Select CH30B."]
     SelectCh30b = 0x1e,
     #[doc = "Select CH31B."]
@@ -6900,7 +7496,8 @@ impl From<Cmdl9AltbAdch> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl9Ctype {
     #[doc = "Single-Ended mode. Only A-side channel is converted."]
@@ -6935,7 +7532,8 @@ impl From<Cmdl9Ctype> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl9Mode {
     #[doc = "Standard resolution. Single-ended 12-bit conversion; differential 13-bit conversion with 2's complement output."]
@@ -6966,7 +7564,8 @@ impl From<Cmdl9Mode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdsrc {
     #[doc = "Not a valid value CMDSRC value for a data word in RESFIFO. 0h is only found in the initial FIFO state, prior to the storage of an ADC conversion result into a RESFIFO buffer."]
@@ -6989,11 +7588,16 @@ pub enum Cmdsrc {
     CorrespondingCmd8 = 0x08,
     #[doc = "Corresponding command buffer used as control settings for this conversion."]
     CorrespondingCmd9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Corresponding command buffer used as control settings for this conversion."]
+    CorrespondingCmd10 = 0x0a,
+    #[doc = "Corresponding command buffer used as control settings for this conversion."]
+    CorrespondingCmd11 = 0x0b,
+    #[doc = "Corresponding command buffer used as control settings for this conversion."]
+    CorrespondingCmd12 = 0x0c,
+    #[doc = "Corresponding command buffer used as control settings for this conversion."]
+    CorrespondingCmd13 = 0x0d,
+    #[doc = "Corresponding command buffer used as control settings for this conversion."]
+    CorrespondingCmd14 = 0x0e,
     #[doc = "CMD15."]
     Cmd15 = 0x0f,
 }
@@ -7020,7 +7624,8 @@ impl From<Cmdsrc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Csw {
     #[doc = "Not supported."]
@@ -7058,7 +7663,8 @@ impl From<Csw> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Diffen {
     #[doc = "Not supported."]
@@ -7089,7 +7695,8 @@ impl From<Diffen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dozen {
     #[doc = "ADC is enabled in low-power mode."]
@@ -7120,7 +7727,8 @@ impl From<Dozen> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FifoSelA {
     #[doc = "FIFO 0."]
@@ -7151,7 +7759,8 @@ impl From<FifoSelA> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FifoSelB {
     #[doc = "FIFO 0."]
@@ -7206,6 +7815,7 @@ impl Fifosize {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fifosize {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -7246,7 +7856,8 @@ impl From<Fifosize> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fof0 {
     #[doc = "No result FIFO 0 overflow has occurred since the last time that the flag was cleared."]
@@ -7277,7 +7888,8 @@ impl From<Fof0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fof1 {
     #[doc = "No result FIFO1 overflow has occurred since the last time that the flag was cleared."]
@@ -7308,7 +7920,8 @@ impl From<Fof1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum GccRdy {
     #[doc = "Invalid."]
@@ -7339,7 +7952,8 @@ impl From<GccRdy> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HptExdi {
     #[doc = "Enabled."]
@@ -7370,7 +7984,8 @@ impl From<HptExdi> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Iadcki {
     #[doc = "Not implemented."]
@@ -7401,7 +8016,8 @@ impl From<Iadcki> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Loopcnt {
     #[doc = "Result is from initial conversion in command."]
@@ -7424,11 +8040,16 @@ pub enum Loopcnt {
     CorrespondingResult8 = 0x08,
     #[doc = "Result is from (LOOPCNT + 1) conversion in command."]
     CorrespondingResult9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Result is from (LOOPCNT + 1) conversion in command."]
+    CorrespondingResult10 = 0x0a,
+    #[doc = "Result is from (LOOPCNT + 1) conversion in command."]
+    CorrespondingResult11 = 0x0b,
+    #[doc = "Result is from (LOOPCNT + 1) conversion in command."]
+    CorrespondingResult12 = 0x0c,
+    #[doc = "Result is from (LOOPCNT + 1) conversion in command."]
+    CorrespondingResult13 = 0x0d,
+    #[doc = "Result is from (LOOPCNT + 1) conversion in command."]
+    CorrespondingResult14 = 0x0e,
     #[doc = "Result is from 16th conversion in command."]
     Result16 = 0x0f,
 }
@@ -7455,7 +8076,8 @@ impl From<Loopcnt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mvi {
     #[doc = "Single VREFH input supported."]
@@ -7486,7 +8108,8 @@ impl From<Mvi> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum NumFifo {
     #[doc = "N/A."]
@@ -7526,7 +8149,8 @@ impl From<NumFifo> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum NumSec {
     #[doc = "One."]
@@ -7557,7 +8181,8 @@ impl From<NumSec> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pwrsel {
     #[doc = "Low power."]
@@ -7590,7 +8215,8 @@ impl From<Pwrsel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rdy0 {
     #[doc = "Not above watermark."]
@@ -7621,7 +8247,8 @@ impl From<Rdy0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rdy1 {
     #[doc = "Not above watermark."]
@@ -7652,7 +8279,8 @@ impl From<Rdy1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Refsel {
     #[doc = "Option 1."]
@@ -7686,7 +8314,8 @@ impl From<Refsel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Res {
     #[doc = "Up to 13-bit differential or 12-bit single-ended resolution supported."]
@@ -7717,7 +8346,8 @@ impl From<Res> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rst {
     #[doc = "ADC logic is not reset."]
@@ -7748,7 +8378,8 @@ impl From<Rst> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rstfifo0 {
     #[doc = "No effect."]
@@ -7779,7 +8410,8 @@ impl From<Rstfifo0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rstfifo1 {
     #[doc = "No effect."]
@@ -7810,7 +8442,8 @@ impl From<Rstfifo1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swt0 {
     #[doc = "No trigger 0 event generated."]
@@ -7841,7 +8474,8 @@ impl From<Swt0> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swt1 {
     #[doc = "No trigger 1 event generated."]
@@ -7872,7 +8506,8 @@ impl From<Swt1> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swt2 {
     #[doc = "No trigger 2 event generated."]
@@ -7903,7 +8538,8 @@ impl From<Swt2> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swt3 {
     #[doc = "No trigger 3 event generated."]
@@ -7934,7 +8570,8 @@ impl From<Swt3> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcmd {
     #[doc = "Not a valid selection from the command buffer. Trigger event is ignored."]
@@ -7957,11 +8594,16 @@ pub enum Tcmd {
     ExecuteCorrespondingCmd8 = 0x08,
     #[doc = "Corresponding CMD is executed."]
     ExecuteCorrespondingCmd9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Corresponding CMD is executed."]
+    ExecuteCorrespondingCmd10 = 0x0a,
+    #[doc = "Corresponding CMD is executed."]
+    ExecuteCorrespondingCmd11 = 0x0b,
+    #[doc = "Corresponding CMD is executed."]
+    ExecuteCorrespondingCmd12 = 0x0c,
+    #[doc = "Corresponding CMD is executed."]
+    ExecuteCorrespondingCmd13 = 0x0d,
+    #[doc = "Corresponding CMD is executed."]
+    ExecuteCorrespondingCmd14 = 0x0e,
     #[doc = "CMD15."]
     ExecuteCmd15 = 0x0f,
 }
@@ -7988,7 +8630,8 @@ impl From<Tcmd> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TcompFlag {
     #[doc = "No triggers have been completed. Trigger completion interrupts are disabled."]
@@ -8011,11 +8654,16 @@ pub enum TcompFlag {
     SetBitsIndicateTriggerXCompleted8 = 0x08,
     #[doc = "Associated trigger sequence has completed and has enabled completion interrupts."]
     SetBitsIndicateTriggerXCompleted9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Associated trigger sequence has completed and has enabled completion interrupts."]
+    SetBitsIndicateTriggerXCompleted10 = 0x0a,
+    #[doc = "Associated trigger sequence has completed and has enabled completion interrupts."]
+    SetBitsIndicateTriggerXCompleted11 = 0x0b,
+    #[doc = "Associated trigger sequence has completed and has enabled completion interrupts."]
+    SetBitsIndicateTriggerXCompleted12 = 0x0c,
+    #[doc = "Associated trigger sequence has completed and has enabled completion interrupts."]
+    SetBitsIndicateTriggerXCompleted13 = 0x0d,
+    #[doc = "Associated trigger sequence has completed and has enabled completion interrupts."]
+    SetBitsIndicateTriggerXCompleted14 = 0x0e,
     #[doc = "Every trigger sequence has been completed and every trigger has enabled completion interrupts."]
     AllBitsSetIndicateAllTriggersCompleted = 0x0f,
 }
@@ -8042,7 +8690,8 @@ impl From<TcompFlag> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TcompIe {
     #[doc = "All disabled."]
@@ -8065,11 +8714,16 @@ pub enum TcompIe {
     TriggerXCompleteEnabled8 = 0x08,
     #[doc = "Associated trigger completion interrupts are enabled."]
     TriggerXCompleteEnabled9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Associated trigger completion interrupts are enabled."]
+    TriggerXCompleteEnabled10 = 0x0a,
+    #[doc = "Associated trigger completion interrupts are enabled."]
+    TriggerXCompleteEnabled11 = 0x0b,
+    #[doc = "Associated trigger completion interrupts are enabled."]
+    TriggerXCompleteEnabled12 = 0x0c,
+    #[doc = "Associated trigger completion interrupts are enabled."]
+    TriggerXCompleteEnabled13 = 0x0d,
+    #[doc = "Associated trigger completion interrupts are enabled."]
+    TriggerXCompleteEnabled14 = 0x0e,
     #[doc = "All enabled."]
     AllTriggerCompletesEnabled = 0x0f,
 }
@@ -8096,7 +8750,8 @@ impl From<TcompIe> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TcompInt {
     #[doc = "Either IE\\[TCOMP_IE\\] = 0, or no trigger sequences have run to completion."]
@@ -8127,7 +8782,8 @@ impl From<TcompInt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TexcInt {
     #[doc = "No trigger exceptions have occurred."]
@@ -8158,7 +8814,8 @@ impl From<TexcInt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TexcNum {
     #[doc = "No triggers have been interrupted by a high-priority exception."]
@@ -8181,11 +8838,16 @@ pub enum TexcNum {
     SetBitsIndicateTriggerXInterrupted8 = 0x08,
     #[doc = "Associated trigger sequence has interrupted by a high-priority exception."]
     SetBitsIndicateTriggerXInterrupted9 = 0x09,
-    _RESERVED_a = 0x0a,
-    _RESERVED_b = 0x0b,
-    _RESERVED_c = 0x0c,
-    _RESERVED_d = 0x0d,
-    _RESERVED_e = 0x0e,
+    #[doc = "Associated trigger sequence has interrupted by a high-priority exception."]
+    SetBitsIndicateTriggerXInterrupted10 = 0x0a,
+    #[doc = "Associated trigger sequence has interrupted by a high-priority exception."]
+    SetBitsIndicateTriggerXInterrupted11 = 0x0b,
+    #[doc = "Associated trigger sequence has interrupted by a high-priority exception."]
+    SetBitsIndicateTriggerXInterrupted12 = 0x0c,
+    #[doc = "Associated trigger sequence has interrupted by a high-priority exception."]
+    SetBitsIndicateTriggerXInterrupted13 = 0x0d,
+    #[doc = "Associated trigger sequence has interrupted by a high-priority exception."]
+    SetBitsIndicateTriggerXInterrupted14 = 0x0e,
     #[doc = "Every trigger sequence has been interrupted by a high-priority exception."]
     AllBitsSetIndicateAllTriggersInterrupted = 0x0f,
 }
@@ -8212,7 +8874,8 @@ impl From<TexcNum> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tpri {
     #[doc = "Highest priority, Level 1."]
@@ -8247,7 +8910,8 @@ impl From<Tpri> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tprictrl {
     #[doc = "Current conversion is aborted and the new command specified by the trigger is started."]
@@ -8281,7 +8945,8 @@ impl From<Tprictrl> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trgact {
     #[doc = "Command (sequence) associated with Trigger 0 currently being executed."]
@@ -8316,7 +8981,8 @@ impl From<Trgact> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tsrc {
     #[doc = "Trigger source 0."]
@@ -8351,7 +9017,8 @@ impl From<Tsrc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Vr1rngi {
     #[doc = "Range control not required."]

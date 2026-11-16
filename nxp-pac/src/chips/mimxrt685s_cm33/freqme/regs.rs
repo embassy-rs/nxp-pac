@@ -37,6 +37,7 @@ impl Default for FreqmectrlR {
         FreqmectrlR(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FreqmectrlR {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FreqmectrlR")
@@ -119,6 +120,7 @@ impl Default for FreqmectrlW {
         FreqmectrlW(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for FreqmectrlW {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FreqmectrlW")

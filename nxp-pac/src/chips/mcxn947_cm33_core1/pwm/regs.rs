@@ -106,6 +106,7 @@ impl Default for Dtsrcsel {
         Dtsrcsel(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dtsrcsel {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dtsrcsel")
@@ -197,6 +198,7 @@ impl Default for Fctrl0 {
         Fctrl0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fctrl0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fctrl0")
@@ -244,6 +246,7 @@ impl Default for Fctrl20 {
         Fctrl20(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fctrl20 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fctrl20")
@@ -305,6 +308,7 @@ impl Default for Ffilt0 {
         Ffilt0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ffilt0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ffilt0")
@@ -386,6 +390,7 @@ impl Default for Fsts0 {
         Fsts0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fsts0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fsts0")
@@ -433,6 +438,7 @@ impl Default for Ftst0 {
         Ftst0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ftst0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ftst0")
@@ -506,6 +512,7 @@ impl Default for Mask {
         Mask(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mask {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mask")
@@ -589,6 +596,7 @@ impl Default for Mctrl {
         Mctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mctrl")
@@ -648,6 +656,7 @@ impl Default for Mctrl2 {
         Mctrl2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mctrl2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mctrl2")
@@ -715,6 +724,7 @@ impl Default for Outen {
         Outen(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Outen {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Outen")
@@ -772,6 +782,7 @@ impl Default for Sm0captcompa {
         Sm0captcompa(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0captcompa {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0captcompa")
@@ -827,6 +838,7 @@ impl Default for Sm0captcompb {
         Sm0captcompb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0captcompb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0captcompb")
@@ -882,6 +894,7 @@ impl Default for Sm0captcompx {
         Sm0captcompx(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0captcompx {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0captcompx")
@@ -1021,6 +1034,7 @@ impl Default for Sm0captctrla {
         Sm0captctrla(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0captctrla {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0captctrla")
@@ -1174,6 +1188,7 @@ impl Default for Sm0captctrlb {
         Sm0captctrlb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0captctrlb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0captctrlb")
@@ -1327,6 +1342,7 @@ impl Default for Sm0captctrlx {
         Sm0captctrlx(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0captctrlx {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0captctrlx")
@@ -1396,6 +1412,7 @@ impl Default for Sm0captfilta {
         Sm0captfilta(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0captfilta {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0captfilta")
@@ -1451,6 +1468,7 @@ impl Default for Sm0captfiltb {
         Sm0captfiltb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0captfiltb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0captfiltb")
@@ -1506,6 +1524,7 @@ impl Default for Sm0captfiltx {
         Sm0captfiltx(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0captfiltx {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0captfiltx")
@@ -1549,6 +1568,7 @@ impl Default for Sm0cnt {
         Sm0cnt(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0cnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0cnt").field("cnt", &self.cnt()).finish()
@@ -1692,6 +1712,7 @@ impl Default for Sm0ctrl {
         Sm0ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0ctrl")
@@ -1871,6 +1892,7 @@ impl Default for Sm0ctrl2 {
         Sm0ctrl2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0ctrl2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0ctrl2")
@@ -1932,6 +1954,7 @@ impl Default for Sm0cval0 {
         Sm0cval0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0cval0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0cval0")
@@ -1969,6 +1992,7 @@ impl Default for Sm0cval0cyc {
         Sm0cval0cyc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0cval0cyc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0cval0cyc")
@@ -2006,6 +2030,7 @@ impl Default for Sm0cval1 {
         Sm0cval1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0cval1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0cval1")
@@ -2043,6 +2068,7 @@ impl Default for Sm0cval1cyc {
         Sm0cval1cyc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0cval1cyc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0cval1cyc")
@@ -2080,6 +2106,7 @@ impl Default for Sm0cval2 {
         Sm0cval2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0cval2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0cval2")
@@ -2117,6 +2144,7 @@ impl Default for Sm0cval2cyc {
         Sm0cval2cyc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0cval2cyc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0cval2cyc")
@@ -2154,6 +2182,7 @@ impl Default for Sm0cval3 {
         Sm0cval3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0cval3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0cval3")
@@ -2191,6 +2220,7 @@ impl Default for Sm0cval3cyc {
         Sm0cval3cyc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0cval3cyc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0cval3cyc")
@@ -2228,6 +2258,7 @@ impl Default for Sm0cval4 {
         Sm0cval4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0cval4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0cval4")
@@ -2265,6 +2296,7 @@ impl Default for Sm0cval4cyc {
         Sm0cval4cyc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0cval4cyc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0cval4cyc")
@@ -2302,6 +2334,7 @@ impl Default for Sm0cval5 {
         Sm0cval5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0cval5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0cval5")
@@ -2339,6 +2372,7 @@ impl Default for Sm0cval5cyc {
         Sm0cval5cyc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0cval5cyc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0cval5cyc")
@@ -2400,6 +2434,7 @@ impl Default for Sm0dismap0 {
         Sm0dismap0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0dismap0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0dismap0")
@@ -2541,6 +2576,7 @@ impl Default for Sm0dmaen {
         Sm0dmaen(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0dmaen {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0dmaen")
@@ -2598,6 +2634,7 @@ impl Default for Sm0dtcnt0 {
         Sm0dtcnt0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0dtcnt0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0dtcnt0")
@@ -2635,6 +2672,7 @@ impl Default for Sm0dtcnt1 {
         Sm0dtcnt1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0dtcnt1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0dtcnt1")
@@ -2672,6 +2710,7 @@ impl Default for Sm0fracval1 {
         Sm0fracval1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0fracval1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0fracval1")
@@ -2709,6 +2748,7 @@ impl Default for Sm0fracval2 {
         Sm0fracval2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0fracval2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0fracval2")
@@ -2746,6 +2786,7 @@ impl Default for Sm0fracval3 {
         Sm0fracval3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0fracval3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0fracval3")
@@ -2783,6 +2824,7 @@ impl Default for Sm0fracval4 {
         Sm0fracval4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0fracval4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0fracval4")
@@ -2820,6 +2862,7 @@ impl Default for Sm0fracval5 {
         Sm0fracval5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0fracval5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0fracval5")
@@ -2893,6 +2936,7 @@ impl Default for Sm0frctrl {
         Sm0frctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0frctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0frctrl")
@@ -2940,6 +2984,7 @@ impl Default for Sm0init {
         Sm0init(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0init {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0init")
@@ -3073,6 +3118,7 @@ impl Default for Sm0inten {
         Sm0inten(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0inten {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0inten")
@@ -3226,6 +3272,7 @@ impl Default for Sm0octrl {
         Sm0octrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0octrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0octrl")
@@ -3391,6 +3438,7 @@ impl Default for Sm0sts {
         Sm0sts(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0sts {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0sts")
@@ -3486,6 +3534,7 @@ impl Default for Sm0tctrl {
         Sm0tctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0tctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0tctrl")
@@ -3533,6 +3582,7 @@ impl Default for Sm0val0 {
         Sm0val0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0val0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0val0")
@@ -3570,6 +3620,7 @@ impl Default for Sm0val1 {
         Sm0val1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0val1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0val1")
@@ -3607,6 +3658,7 @@ impl Default for Sm0val2 {
         Sm0val2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0val2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0val2")
@@ -3644,6 +3696,7 @@ impl Default for Sm0val3 {
         Sm0val3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0val3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0val3")
@@ -3681,6 +3734,7 @@ impl Default for Sm0val4 {
         Sm0val4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0val4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0val4")
@@ -3718,6 +3772,7 @@ impl Default for Sm0val5 {
         Sm0val5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm0val5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm0val5")
@@ -3767,6 +3822,7 @@ impl Default for Sm1captcompa {
         Sm1captcompa(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1captcompa {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1captcompa")
@@ -3822,6 +3878,7 @@ impl Default for Sm1captcompb {
         Sm1captcompb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1captcompb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1captcompb")
@@ -3877,6 +3934,7 @@ impl Default for Sm1captcompx {
         Sm1captcompx(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1captcompx {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1captcompx")
@@ -4016,6 +4074,7 @@ impl Default for Sm1captctrla {
         Sm1captctrla(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1captctrla {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1captctrla")
@@ -4169,6 +4228,7 @@ impl Default for Sm1captctrlb {
         Sm1captctrlb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1captctrlb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1captctrlb")
@@ -4322,6 +4382,7 @@ impl Default for Sm1captctrlx {
         Sm1captctrlx(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1captctrlx {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1captctrlx")
@@ -4391,6 +4452,7 @@ impl Default for Sm1captfilta {
         Sm1captfilta(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1captfilta {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1captfilta")
@@ -4446,6 +4508,7 @@ impl Default for Sm1captfiltb {
         Sm1captfiltb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1captfiltb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1captfiltb")
@@ -4501,6 +4564,7 @@ impl Default for Sm1captfiltx {
         Sm1captfiltx(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1captfiltx {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1captfiltx")
@@ -4544,6 +4608,7 @@ impl Default for Sm1cnt {
         Sm1cnt(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1cnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1cnt").field("cnt", &self.cnt()).finish()
@@ -4687,6 +4752,7 @@ impl Default for Sm1ctrl {
         Sm1ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1ctrl")
@@ -4866,6 +4932,7 @@ impl Default for Sm1ctrl2 {
         Sm1ctrl2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1ctrl2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1ctrl2")
@@ -4927,6 +4994,7 @@ impl Default for Sm1cval0 {
         Sm1cval0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1cval0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1cval0")
@@ -4964,6 +5032,7 @@ impl Default for Sm1cval0cyc {
         Sm1cval0cyc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1cval0cyc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1cval0cyc")
@@ -5001,6 +5070,7 @@ impl Default for Sm1cval1 {
         Sm1cval1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1cval1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1cval1")
@@ -5038,6 +5108,7 @@ impl Default for Sm1cval1cyc {
         Sm1cval1cyc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1cval1cyc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1cval1cyc")
@@ -5075,6 +5146,7 @@ impl Default for Sm1cval2 {
         Sm1cval2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1cval2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1cval2")
@@ -5112,6 +5184,7 @@ impl Default for Sm1cval2cyc {
         Sm1cval2cyc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1cval2cyc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1cval2cyc")
@@ -5149,6 +5222,7 @@ impl Default for Sm1cval3 {
         Sm1cval3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1cval3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1cval3")
@@ -5186,6 +5260,7 @@ impl Default for Sm1cval3cyc {
         Sm1cval3cyc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1cval3cyc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1cval3cyc")
@@ -5223,6 +5298,7 @@ impl Default for Sm1cval4 {
         Sm1cval4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1cval4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1cval4")
@@ -5260,6 +5336,7 @@ impl Default for Sm1cval4cyc {
         Sm1cval4cyc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1cval4cyc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1cval4cyc")
@@ -5297,6 +5374,7 @@ impl Default for Sm1cval5 {
         Sm1cval5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1cval5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1cval5")
@@ -5334,6 +5412,7 @@ impl Default for Sm1cval5cyc {
         Sm1cval5cyc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1cval5cyc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1cval5cyc")
@@ -5395,6 +5474,7 @@ impl Default for Sm1dismap0 {
         Sm1dismap0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1dismap0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1dismap0")
@@ -5536,6 +5616,7 @@ impl Default for Sm1dmaen {
         Sm1dmaen(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1dmaen {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1dmaen")
@@ -5593,6 +5674,7 @@ impl Default for Sm1dtcnt0 {
         Sm1dtcnt0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1dtcnt0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1dtcnt0")
@@ -5630,6 +5712,7 @@ impl Default for Sm1dtcnt1 {
         Sm1dtcnt1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1dtcnt1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1dtcnt1")
@@ -5667,6 +5750,7 @@ impl Default for Sm1fracval1 {
         Sm1fracval1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1fracval1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1fracval1")
@@ -5704,6 +5788,7 @@ impl Default for Sm1fracval2 {
         Sm1fracval2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1fracval2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1fracval2")
@@ -5741,6 +5826,7 @@ impl Default for Sm1fracval3 {
         Sm1fracval3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1fracval3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1fracval3")
@@ -5778,6 +5864,7 @@ impl Default for Sm1fracval4 {
         Sm1fracval4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1fracval4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1fracval4")
@@ -5815,6 +5902,7 @@ impl Default for Sm1fracval5 {
         Sm1fracval5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1fracval5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1fracval5")
@@ -5888,6 +5976,7 @@ impl Default for Sm1frctrl {
         Sm1frctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1frctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1frctrl")
@@ -5935,6 +6024,7 @@ impl Default for Sm1init {
         Sm1init(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1init {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1init")
@@ -6068,6 +6158,7 @@ impl Default for Sm1inten {
         Sm1inten(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1inten {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1inten")
@@ -6221,6 +6312,7 @@ impl Default for Sm1octrl {
         Sm1octrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1octrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1octrl")
@@ -6278,6 +6370,7 @@ impl Default for Sm1phasedly {
         Sm1phasedly(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1phasedly {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1phasedly")
@@ -6423,6 +6516,7 @@ impl Default for Sm1sts {
         Sm1sts(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1sts {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1sts")
@@ -6518,6 +6612,7 @@ impl Default for Sm1tctrl {
         Sm1tctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1tctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1tctrl")
@@ -6565,6 +6660,7 @@ impl Default for Sm1val0 {
         Sm1val0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1val0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1val0")
@@ -6602,6 +6698,7 @@ impl Default for Sm1val1 {
         Sm1val1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1val1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1val1")
@@ -6639,6 +6736,7 @@ impl Default for Sm1val2 {
         Sm1val2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1val2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1val2")
@@ -6676,6 +6774,7 @@ impl Default for Sm1val3 {
         Sm1val3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1val3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1val3")
@@ -6713,6 +6812,7 @@ impl Default for Sm1val4 {
         Sm1val4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1val4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1val4")
@@ -6750,6 +6850,7 @@ impl Default for Sm1val5 {
         Sm1val5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm1val5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm1val5")
@@ -6799,6 +6900,7 @@ impl Default for Sm2captcompa {
         Sm2captcompa(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2captcompa {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2captcompa")
@@ -6854,6 +6956,7 @@ impl Default for Sm2captcompb {
         Sm2captcompb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2captcompb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2captcompb")
@@ -6909,6 +7012,7 @@ impl Default for Sm2captcompx {
         Sm2captcompx(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2captcompx {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2captcompx")
@@ -7048,6 +7152,7 @@ impl Default for Sm2captctrla {
         Sm2captctrla(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2captctrla {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2captctrla")
@@ -7201,6 +7306,7 @@ impl Default for Sm2captctrlb {
         Sm2captctrlb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2captctrlb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2captctrlb")
@@ -7354,6 +7460,7 @@ impl Default for Sm2captctrlx {
         Sm2captctrlx(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2captctrlx {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2captctrlx")
@@ -7423,6 +7530,7 @@ impl Default for Sm2captfilta {
         Sm2captfilta(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2captfilta {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2captfilta")
@@ -7478,6 +7586,7 @@ impl Default for Sm2captfiltb {
         Sm2captfiltb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2captfiltb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2captfiltb")
@@ -7533,6 +7642,7 @@ impl Default for Sm2captfiltx {
         Sm2captfiltx(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2captfiltx {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2captfiltx")
@@ -7576,6 +7686,7 @@ impl Default for Sm2cnt {
         Sm2cnt(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2cnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2cnt").field("cnt", &self.cnt()).finish()
@@ -7719,6 +7830,7 @@ impl Default for Sm2ctrl {
         Sm2ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2ctrl")
@@ -7898,6 +8010,7 @@ impl Default for Sm2ctrl2 {
         Sm2ctrl2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2ctrl2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2ctrl2")
@@ -7959,6 +8072,7 @@ impl Default for Sm2cval0 {
         Sm2cval0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2cval0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2cval0")
@@ -7996,6 +8110,7 @@ impl Default for Sm2cval0cyc {
         Sm2cval0cyc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2cval0cyc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2cval0cyc")
@@ -8033,6 +8148,7 @@ impl Default for Sm2cval1 {
         Sm2cval1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2cval1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2cval1")
@@ -8070,6 +8186,7 @@ impl Default for Sm2cval1cyc {
         Sm2cval1cyc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2cval1cyc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2cval1cyc")
@@ -8107,6 +8224,7 @@ impl Default for Sm2cval2 {
         Sm2cval2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2cval2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2cval2")
@@ -8144,6 +8262,7 @@ impl Default for Sm2cval2cyc {
         Sm2cval2cyc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2cval2cyc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2cval2cyc")
@@ -8181,6 +8300,7 @@ impl Default for Sm2cval3 {
         Sm2cval3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2cval3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2cval3")
@@ -8218,6 +8338,7 @@ impl Default for Sm2cval3cyc {
         Sm2cval3cyc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2cval3cyc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2cval3cyc")
@@ -8255,6 +8376,7 @@ impl Default for Sm2cval4 {
         Sm2cval4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2cval4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2cval4")
@@ -8292,6 +8414,7 @@ impl Default for Sm2cval4cyc {
         Sm2cval4cyc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2cval4cyc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2cval4cyc")
@@ -8329,6 +8452,7 @@ impl Default for Sm2cval5 {
         Sm2cval5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2cval5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2cval5")
@@ -8366,6 +8490,7 @@ impl Default for Sm2cval5cyc {
         Sm2cval5cyc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2cval5cyc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2cval5cyc")
@@ -8427,6 +8552,7 @@ impl Default for Sm2dismap0 {
         Sm2dismap0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2dismap0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2dismap0")
@@ -8568,6 +8694,7 @@ impl Default for Sm2dmaen {
         Sm2dmaen(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2dmaen {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2dmaen")
@@ -8625,6 +8752,7 @@ impl Default for Sm2dtcnt0 {
         Sm2dtcnt0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2dtcnt0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2dtcnt0")
@@ -8662,6 +8790,7 @@ impl Default for Sm2dtcnt1 {
         Sm2dtcnt1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2dtcnt1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2dtcnt1")
@@ -8699,6 +8828,7 @@ impl Default for Sm2fracval1 {
         Sm2fracval1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2fracval1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2fracval1")
@@ -8736,6 +8866,7 @@ impl Default for Sm2fracval2 {
         Sm2fracval2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2fracval2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2fracval2")
@@ -8773,6 +8904,7 @@ impl Default for Sm2fracval3 {
         Sm2fracval3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2fracval3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2fracval3")
@@ -8810,6 +8942,7 @@ impl Default for Sm2fracval4 {
         Sm2fracval4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2fracval4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2fracval4")
@@ -8847,6 +8980,7 @@ impl Default for Sm2fracval5 {
         Sm2fracval5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2fracval5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2fracval5")
@@ -8920,6 +9054,7 @@ impl Default for Sm2frctrl {
         Sm2frctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2frctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2frctrl")
@@ -8967,6 +9102,7 @@ impl Default for Sm2init {
         Sm2init(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2init {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2init")
@@ -9100,6 +9236,7 @@ impl Default for Sm2inten {
         Sm2inten(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2inten {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2inten")
@@ -9253,6 +9390,7 @@ impl Default for Sm2octrl {
         Sm2octrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2octrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2octrl")
@@ -9310,6 +9448,7 @@ impl Default for Sm2phasedly {
         Sm2phasedly(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2phasedly {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2phasedly")
@@ -9455,6 +9594,7 @@ impl Default for Sm2sts {
         Sm2sts(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2sts {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2sts")
@@ -9550,6 +9690,7 @@ impl Default for Sm2tctrl {
         Sm2tctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2tctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2tctrl")
@@ -9597,6 +9738,7 @@ impl Default for Sm2val0 {
         Sm2val0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2val0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2val0")
@@ -9634,6 +9776,7 @@ impl Default for Sm2val1 {
         Sm2val1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2val1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2val1")
@@ -9671,6 +9814,7 @@ impl Default for Sm2val2 {
         Sm2val2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2val2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2val2")
@@ -9708,6 +9852,7 @@ impl Default for Sm2val3 {
         Sm2val3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2val3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2val3")
@@ -9745,6 +9890,7 @@ impl Default for Sm2val4 {
         Sm2val4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2val4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2val4")
@@ -9782,6 +9928,7 @@ impl Default for Sm2val5 {
         Sm2val5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm2val5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm2val5")
@@ -9831,6 +9978,7 @@ impl Default for Sm3captcompa {
         Sm3captcompa(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3captcompa {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3captcompa")
@@ -9886,6 +10034,7 @@ impl Default for Sm3captcompb {
         Sm3captcompb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3captcompb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3captcompb")
@@ -9941,6 +10090,7 @@ impl Default for Sm3captcompx {
         Sm3captcompx(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3captcompx {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3captcompx")
@@ -10080,6 +10230,7 @@ impl Default for Sm3captctrla {
         Sm3captctrla(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3captctrla {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3captctrla")
@@ -10233,6 +10384,7 @@ impl Default for Sm3captctrlb {
         Sm3captctrlb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3captctrlb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3captctrlb")
@@ -10386,6 +10538,7 @@ impl Default for Sm3captctrlx {
         Sm3captctrlx(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3captctrlx {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3captctrlx")
@@ -10455,6 +10608,7 @@ impl Default for Sm3captfilta {
         Sm3captfilta(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3captfilta {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3captfilta")
@@ -10510,6 +10664,7 @@ impl Default for Sm3captfiltb {
         Sm3captfiltb(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3captfiltb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3captfiltb")
@@ -10565,6 +10720,7 @@ impl Default for Sm3captfiltx {
         Sm3captfiltx(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3captfiltx {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3captfiltx")
@@ -10608,6 +10764,7 @@ impl Default for Sm3cnt {
         Sm3cnt(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3cnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3cnt").field("cnt", &self.cnt()).finish()
@@ -10751,6 +10908,7 @@ impl Default for Sm3ctrl {
         Sm3ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3ctrl")
@@ -10930,6 +11088,7 @@ impl Default for Sm3ctrl2 {
         Sm3ctrl2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3ctrl2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3ctrl2")
@@ -10991,6 +11150,7 @@ impl Default for Sm3cval0 {
         Sm3cval0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3cval0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3cval0")
@@ -11028,6 +11188,7 @@ impl Default for Sm3cval0cyc {
         Sm3cval0cyc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3cval0cyc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3cval0cyc")
@@ -11065,6 +11226,7 @@ impl Default for Sm3cval1 {
         Sm3cval1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3cval1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3cval1")
@@ -11102,6 +11264,7 @@ impl Default for Sm3cval1cyc {
         Sm3cval1cyc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3cval1cyc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3cval1cyc")
@@ -11139,6 +11302,7 @@ impl Default for Sm3cval2 {
         Sm3cval2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3cval2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3cval2")
@@ -11176,6 +11340,7 @@ impl Default for Sm3cval2cyc {
         Sm3cval2cyc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3cval2cyc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3cval2cyc")
@@ -11213,6 +11378,7 @@ impl Default for Sm3cval3 {
         Sm3cval3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3cval3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3cval3")
@@ -11250,6 +11416,7 @@ impl Default for Sm3cval3cyc {
         Sm3cval3cyc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3cval3cyc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3cval3cyc")
@@ -11287,6 +11454,7 @@ impl Default for Sm3cval4 {
         Sm3cval4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3cval4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3cval4")
@@ -11324,6 +11492,7 @@ impl Default for Sm3cval4cyc {
         Sm3cval4cyc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3cval4cyc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3cval4cyc")
@@ -11361,6 +11530,7 @@ impl Default for Sm3cval5 {
         Sm3cval5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3cval5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3cval5")
@@ -11398,6 +11568,7 @@ impl Default for Sm3cval5cyc {
         Sm3cval5cyc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3cval5cyc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3cval5cyc")
@@ -11459,6 +11630,7 @@ impl Default for Sm3dismap0 {
         Sm3dismap0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3dismap0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3dismap0")
@@ -11600,6 +11772,7 @@ impl Default for Sm3dmaen {
         Sm3dmaen(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3dmaen {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3dmaen")
@@ -11657,6 +11830,7 @@ impl Default for Sm3dtcnt0 {
         Sm3dtcnt0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3dtcnt0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3dtcnt0")
@@ -11694,6 +11868,7 @@ impl Default for Sm3dtcnt1 {
         Sm3dtcnt1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3dtcnt1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3dtcnt1")
@@ -11731,6 +11906,7 @@ impl Default for Sm3fracval1 {
         Sm3fracval1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3fracval1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3fracval1")
@@ -11768,6 +11944,7 @@ impl Default for Sm3fracval2 {
         Sm3fracval2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3fracval2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3fracval2")
@@ -11805,6 +11982,7 @@ impl Default for Sm3fracval3 {
         Sm3fracval3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3fracval3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3fracval3")
@@ -11842,6 +12020,7 @@ impl Default for Sm3fracval4 {
         Sm3fracval4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3fracval4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3fracval4")
@@ -11879,6 +12058,7 @@ impl Default for Sm3fracval5 {
         Sm3fracval5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3fracval5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3fracval5")
@@ -11952,6 +12132,7 @@ impl Default for Sm3frctrl {
         Sm3frctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3frctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3frctrl")
@@ -11999,6 +12180,7 @@ impl Default for Sm3init {
         Sm3init(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3init {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3init")
@@ -12132,6 +12314,7 @@ impl Default for Sm3inten {
         Sm3inten(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3inten {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3inten")
@@ -12285,6 +12468,7 @@ impl Default for Sm3octrl {
         Sm3octrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3octrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3octrl")
@@ -12342,6 +12526,7 @@ impl Default for Sm3phasedly {
         Sm3phasedly(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3phasedly {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3phasedly")
@@ -12487,6 +12672,7 @@ impl Default for Sm3sts {
         Sm3sts(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3sts {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3sts")
@@ -12582,6 +12768,7 @@ impl Default for Sm3tctrl {
         Sm3tctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3tctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3tctrl")
@@ -12629,6 +12816,7 @@ impl Default for Sm3val0 {
         Sm3val0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3val0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3val0")
@@ -12666,6 +12854,7 @@ impl Default for Sm3val1 {
         Sm3val1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3val1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3val1")
@@ -12703,6 +12892,7 @@ impl Default for Sm3val2 {
         Sm3val2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3val2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3val2")
@@ -12740,6 +12930,7 @@ impl Default for Sm3val3 {
         Sm3val3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3val3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3val3")
@@ -12777,6 +12968,7 @@ impl Default for Sm3val4 {
         Sm3val4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3val4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3val4")
@@ -12814,6 +13006,7 @@ impl Default for Sm3val5 {
         Sm3val5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sm3val5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sm3val5")
@@ -12935,6 +13128,7 @@ impl Default for Swcout {
         Swcout(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Swcout {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Swcout")

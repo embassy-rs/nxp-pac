@@ -178,6 +178,7 @@ impl Default for Baud {
         Baud(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Baud {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Baud")
@@ -297,18 +298,6 @@ impl Ctrl {
     #[inline(always)]
     pub const fn set_rsrc(&mut self, val: super::vals::Rsrc) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
-    }
-    #[doc = "Doze Mode."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dozeen(&self) -> super::vals::Dozeen {
-        let val = (self.0 >> 6usize) & 0x01;
-        super::vals::Dozeen::from_bits(val as u8)
-    }
-    #[doc = "Doze Mode."]
-    #[inline(always)]
-    pub const fn set_dozeen(&mut self, val: super::vals::Dozeen) {
-        self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Loop Mode Select."]
     #[must_use]
@@ -569,6 +558,7 @@ impl Default for Ctrl {
         Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl")
@@ -578,7 +568,6 @@ impl core::fmt::Debug for Ctrl {
             .field("wake", &self.wake())
             .field("m", &self.m())
             .field("rsrc", &self.rsrc())
-            .field("dozeen", &self.dozeen())
             .field("loops", &self.loops())
             .field("idlecfg", &self.idlecfg())
             .field("m7", &self.m7())
@@ -608,14 +597,13 @@ impl defmt::Format for Ctrl {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Ctrl {{ pt: {:?}, pe: {=bool:?}, ilt: {:?}, wake: {:?}, m: {:?}, rsrc: {:?}, dozeen: {:?}, loops: {:?}, idlecfg: {:?}, m7: {:?}, ma2ie: {=bool:?}, ma1ie: {=bool:?}, sbk: {:?}, rwu: {:?}, re: {=bool:?}, te: {=bool:?}, ilie: {=bool:?}, rie: {=bool:?}, tcie: {=bool:?}, tie: {=bool:?}, peie: {=bool:?}, feie: {=bool:?}, neie: {=bool:?}, orie: {=bool:?}, txinv: {=bool:?}, txdir: {:?}, r9t8: {=bool:?}, r8t9: {=bool:?} }}",
+            "Ctrl {{ pt: {:?}, pe: {=bool:?}, ilt: {:?}, wake: {:?}, m: {:?}, rsrc: {:?}, loops: {:?}, idlecfg: {:?}, m7: {:?}, ma2ie: {=bool:?}, ma1ie: {=bool:?}, sbk: {:?}, rwu: {:?}, re: {=bool:?}, te: {=bool:?}, ilie: {=bool:?}, rie: {=bool:?}, tcie: {=bool:?}, tie: {=bool:?}, peie: {=bool:?}, feie: {=bool:?}, neie: {=bool:?}, orie: {=bool:?}, txinv: {=bool:?}, txdir: {:?}, r9t8: {=bool:?}, r8t9: {=bool:?} }}",
             self.pt(),
             self.pe(),
             self.ilt(),
             self.wake(),
             self.m(),
             self.rsrc(),
-            self.dozeen(),
             self.loops(),
             self.idlecfg(),
             self.m7(),
@@ -844,6 +832,7 @@ impl Default for Data {
         Data(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Data {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Data")
@@ -915,6 +904,7 @@ impl Default for Dataro {
         Dataro(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dataro {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dataro")
@@ -1096,6 +1086,7 @@ impl Default for Fifo {
         Fifo(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fifo {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fifo")
@@ -1161,6 +1152,7 @@ impl Default for Global {
         Global(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Global {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Global").field("rst", &self.rst()).finish()
@@ -1244,6 +1236,7 @@ impl Default for Hdcr {
         Hdcr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Hdcr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Hdcr")
@@ -1305,6 +1298,7 @@ impl Default for Match {
         Match(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Match {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Match")
@@ -1408,6 +1402,7 @@ impl Default for Mcr {
         Mcr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mcr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mcr")
@@ -1555,6 +1550,7 @@ impl Default for Modir {
         Modir(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Modir {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Modir")
@@ -1696,6 +1692,7 @@ impl Default for Msr {
         Msr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Msr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Msr")
@@ -1763,6 +1760,7 @@ impl Default for Param {
         Param(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Param {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Param")
@@ -1806,6 +1804,7 @@ impl Default for Pincfg {
         Pincfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pincfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pincfg")
@@ -1843,6 +1842,7 @@ impl Default for Reir {
         Reir(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Reir {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Reir")
@@ -2132,6 +2132,7 @@ impl Default for Stat {
         Stat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Stat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Stat")
@@ -2215,6 +2216,7 @@ impl Default for Tcbr {
         Tcbr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tcbr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tcbr").field("data", &self.data()).finish()
@@ -2286,6 +2288,7 @@ impl Default for Tdbr {
         Tdbr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tdbr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tdbr")
@@ -2333,6 +2336,7 @@ impl Default for Teir {
         Teir(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Teir {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Teir")
@@ -2382,6 +2386,7 @@ impl Default for Timeout {
         Timeout(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Timeout {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Timeout")
@@ -2437,6 +2442,7 @@ impl Default for Tocr {
         Tocr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tocr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tocr")
@@ -2492,6 +2498,7 @@ impl Default for Tosr {
         Tosr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tosr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tosr")
@@ -2559,6 +2566,7 @@ impl Default for Verid {
         Verid(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Verid {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Verid")
@@ -2640,6 +2648,7 @@ impl Default for Water {
         Water(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Water {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Water")

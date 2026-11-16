@@ -22,6 +22,7 @@ impl Default for Ana0 {
         Ana0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ana0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ana0").field("bits", &self.bits()).finish()
@@ -57,6 +58,7 @@ impl Default for Ana1 {
         Ana1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ana1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ana1").field("bits", &self.bits()).finish()
@@ -92,6 +94,7 @@ impl Default for Ana2 {
         Ana2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ana2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ana2").field("bits", &self.bits()).finish()
@@ -127,6 +130,7 @@ impl Default for Cfg0 {
         Cfg0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cfg0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cfg0").field("bits", &self.bits()).finish()
@@ -162,6 +166,7 @@ impl Default for Cfg1 {
         Cfg1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cfg1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cfg1").field("bits", &self.bits()).finish()
@@ -197,6 +202,7 @@ impl Default for Cfg2 {
         Cfg2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cfg2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cfg2").field("bits", &self.bits()).finish()
@@ -232,6 +238,7 @@ impl Default for Cfg3 {
         Cfg3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cfg3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cfg3").field("bits", &self.bits()).finish()
@@ -267,6 +274,7 @@ impl Default for Cfg4 {
         Cfg4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cfg4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cfg4").field("bits", &self.bits()).finish()
@@ -302,6 +310,7 @@ impl Default for Cfg5 {
         Cfg5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cfg5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cfg5").field("bits", &self.bits()).finish()
@@ -337,6 +346,7 @@ impl Default for Cfg6 {
         Cfg6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cfg6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cfg6").field("bits", &self.bits()).finish()
@@ -420,6 +430,7 @@ impl Default for Ctrl {
         Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl")
@@ -517,6 +528,7 @@ impl Default for CtrlClr {
         CtrlClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CtrlClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CtrlClr")
@@ -614,6 +626,7 @@ impl Default for CtrlSet {
         CtrlSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CtrlSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CtrlSet")
@@ -711,6 +724,7 @@ impl Default for CtrlTog {
         CtrlTog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for CtrlTog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CtrlTog")
@@ -760,6 +774,7 @@ impl Default for Data {
         Data(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Data {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Data").field("data", &self.data()).finish()
@@ -795,6 +810,7 @@ impl Default for Gp1 {
         Gp1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gp1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gp1").field("bits", &self.bits()).finish()
@@ -830,6 +846,7 @@ impl Default for Gp2 {
         Gp2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gp2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gp2").field("bits", &self.bits()).finish()
@@ -865,6 +882,7 @@ impl Default for Gp30 {
         Gp30(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gp30 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gp30").field("bits", &self.bits()).finish()
@@ -900,6 +918,7 @@ impl Default for Gp31 {
         Gp31(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gp31 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gp31").field("bits", &self.bits()).finish()
@@ -935,6 +954,7 @@ impl Default for Gp32 {
         Gp32(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gp32 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gp32").field("bits", &self.bits()).finish()
@@ -970,6 +990,7 @@ impl Default for Gp33 {
         Gp33(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gp33 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gp33").field("bits", &self.bits()).finish()
@@ -1005,6 +1026,7 @@ impl Default for Gp40 {
         Gp40(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gp40 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gp40").field("bits", &self.bits()).finish()
@@ -1040,6 +1062,7 @@ impl Default for Gp41 {
         Gp41(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gp41 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gp41").field("bits", &self.bits()).finish()
@@ -1075,6 +1098,7 @@ impl Default for Gp42 {
         Gp42(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gp42 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gp42").field("bits", &self.bits()).finish()
@@ -1110,6 +1134,7 @@ impl Default for Gp43 {
         Gp43(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Gp43 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Gp43").field("bits", &self.bits()).finish()
@@ -1301,6 +1326,7 @@ impl Default for Lock {
         Lock(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lock {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lock")
@@ -1368,6 +1394,7 @@ impl Default for Mac0 {
         Mac0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mac0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mac0").field("bits", &self.bits()).finish()
@@ -1403,6 +1430,7 @@ impl Default for Mac1 {
         Mac1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mac1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mac1").field("bits", &self.bits()).finish()
@@ -1438,6 +1466,7 @@ impl Default for Mac2 {
         Mac2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mac2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mac2").field("bits", &self.bits()).finish()
@@ -1473,6 +1502,7 @@ impl Default for Mem0 {
         Mem0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mem0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mem0").field("bits", &self.bits()).finish()
@@ -1508,6 +1538,7 @@ impl Default for Mem1 {
         Mem1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mem1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mem1").field("bits", &self.bits()).finish()
@@ -1543,6 +1574,7 @@ impl Default for Mem2 {
         Mem2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mem2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mem2").field("bits", &self.bits()).finish()
@@ -1578,6 +1610,7 @@ impl Default for Mem3 {
         Mem3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mem3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mem3").field("bits", &self.bits()).finish()
@@ -1613,6 +1646,7 @@ impl Default for Mem4 {
         Mem4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mem4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mem4").field("bits", &self.bits()).finish()
@@ -1648,6 +1682,7 @@ impl Default for MiscConf0 {
         MiscConf0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MiscConf0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MiscConf0")
@@ -1685,6 +1720,7 @@ impl Default for MiscConf1 {
         MiscConf1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for MiscConf1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MiscConf1")
@@ -1722,6 +1758,7 @@ impl Default for ReadCtrl {
         ReadCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ReadCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ReadCtrl")
@@ -1759,6 +1796,7 @@ impl Default for ReadFuseData {
         ReadFuseData(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ReadFuseData {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ReadFuseData")
@@ -1820,6 +1858,7 @@ impl Default for Scs {
         Scs(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Scs {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Scs")
@@ -1889,6 +1928,7 @@ impl Default for ScsClr {
         ScsClr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ScsClr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ScsClr")
@@ -1958,6 +1998,7 @@ impl Default for ScsSet {
         ScsSet(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ScsSet {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ScsSet")
@@ -2027,6 +2068,7 @@ impl Default for ScsTog {
         ScsTog(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for ScsTog {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ScsTog")
@@ -2072,6 +2114,7 @@ impl Default for SjcResp0 {
         SjcResp0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SjcResp0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SjcResp0")
@@ -2109,6 +2152,7 @@ impl Default for SjcResp1 {
         SjcResp1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SjcResp1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SjcResp1")
@@ -2146,6 +2190,7 @@ impl Default for Srk0 {
         Srk0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Srk0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Srk0").field("bits", &self.bits()).finish()
@@ -2181,6 +2226,7 @@ impl Default for Srk1 {
         Srk1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Srk1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Srk1").field("bits", &self.bits()).finish()
@@ -2216,6 +2262,7 @@ impl Default for Srk2 {
         Srk2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Srk2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Srk2").field("bits", &self.bits()).finish()
@@ -2251,6 +2298,7 @@ impl Default for Srk3 {
         Srk3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Srk3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Srk3").field("bits", &self.bits()).finish()
@@ -2286,6 +2334,7 @@ impl Default for Srk4 {
         Srk4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Srk4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Srk4").field("bits", &self.bits()).finish()
@@ -2321,6 +2370,7 @@ impl Default for Srk5 {
         Srk5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Srk5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Srk5").field("bits", &self.bits()).finish()
@@ -2356,6 +2406,7 @@ impl Default for Srk6 {
         Srk6(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Srk6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Srk6").field("bits", &self.bits()).finish()
@@ -2391,6 +2442,7 @@ impl Default for Srk7 {
         Srk7(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Srk7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Srk7").field("bits", &self.bits()).finish()
@@ -2426,6 +2478,7 @@ impl Default for SrkRevoke {
         SrkRevoke(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SrkRevoke {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SrkRevoke")
@@ -2463,6 +2516,7 @@ impl Default for SwGp1 {
         SwGp1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SwGp1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SwGp1").field("bits", &self.bits()).finish()
@@ -2498,6 +2552,7 @@ impl Default for SwGp20 {
         SwGp20(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SwGp20 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SwGp20")
@@ -2535,6 +2590,7 @@ impl Default for SwGp21 {
         SwGp21(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SwGp21 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SwGp21")
@@ -2572,6 +2628,7 @@ impl Default for SwGp22 {
         SwGp22(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SwGp22 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SwGp22")
@@ -2609,6 +2666,7 @@ impl Default for SwGp23 {
         SwGp23(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SwGp23 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SwGp23")
@@ -2658,6 +2716,7 @@ impl Default for SwSticky {
         SwSticky(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for SwSticky {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SwSticky")
@@ -2737,6 +2796,7 @@ impl Default for Timing {
         Timing(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Timing {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Timing")
@@ -2796,6 +2856,7 @@ impl Default for Timing2 {
         Timing2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Timing2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Timing2")
@@ -2863,6 +2924,7 @@ impl Default for Version {
         Version(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Version {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Version")

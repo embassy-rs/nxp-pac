@@ -1,5 +1,6 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BgtErr {
     #[doc = "Sufficient."]
@@ -30,7 +31,8 @@ impl From<BgtErr> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BgtErrIm {
     #[doc = "Enable."]
@@ -61,7 +63,8 @@ impl From<BgtErrIm> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BwtErr {
     #[doc = "Not exceeded."]
@@ -92,7 +95,8 @@ impl From<BwtErr> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BwtErrIm {
     #[doc = "Enable."]
@@ -123,7 +127,8 @@ impl From<BwtErrIm> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CrcOk {
     #[doc = "Current CRC value does not match remainder."]
@@ -154,7 +159,8 @@ impl From<CrcOk> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CwtErrIm {
     #[doc = "Enable."]
@@ -208,6 +214,28 @@ impl DivisorValue {
     pub const Valid8: Self = Self(0x08);
     #[doc = "Divisor value F/D."]
     pub const Valid9: Self = Self(0x09);
+    #[doc = "Divisor value F/D."]
+    pub const Valid10: Self = Self(0x0a);
+    #[doc = "Divisor value F/D."]
+    pub const Valid11: Self = Self(0x0b);
+    #[doc = "Divisor value F/D."]
+    pub const Valid12: Self = Self(0x0c);
+    #[doc = "Divisor value F/D."]
+    pub const Valid13: Self = Self(0x0d);
+    #[doc = "Divisor value F/D."]
+    pub const Valid14: Self = Self(0x0e);
+    #[doc = "Divisor value F/D."]
+    pub const Valid250: Self = Self(0xfa);
+    #[doc = "Divisor value F/D."]
+    pub const Valid251: Self = Self(0xfb);
+    #[doc = "Divisor value F/D."]
+    pub const Valid252: Self = Self(0xfc);
+    #[doc = "Divisor value F/D."]
+    pub const Valid253: Self = Self(0xfd);
+    #[doc = "Divisor value F/D."]
+    pub const Valid254: Self = Self(0xfe);
+    #[doc = "Divisor value F/D."]
+    pub const Valid255: Self = Self(0xff);
 }
 impl DivisorValue {
     pub const fn from_bits(val: u16) -> DivisorValue {
@@ -217,6 +245,7 @@ impl DivisorValue {
         self.0
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for DivisorValue {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
@@ -230,6 +259,17 @@ impl core::fmt::Debug for DivisorValue {
             0x07 => f.write_str("Valid7"),
             0x08 => f.write_str("Valid8"),
             0x09 => f.write_str("Valid9"),
+            0x0a => f.write_str("Valid10"),
+            0x0b => f.write_str("Valid11"),
+            0x0c => f.write_str("Valid12"),
+            0x0d => f.write_str("Valid13"),
+            0x0e => f.write_str("Valid14"),
+            0xfa => f.write_str("Valid250"),
+            0xfb => f.write_str("Valid251"),
+            0xfc => f.write_str("Valid252"),
+            0xfd => f.write_str("Valid253"),
+            0xfe => f.write_str("Valid254"),
+            0xff => f.write_str("Valid255"),
             other => core::write!(f, "0x{:02X}", other),
         }
     }
@@ -248,6 +288,17 @@ impl defmt::Format for DivisorValue {
             0x07 => defmt::write!(f, "Valid7"),
             0x08 => defmt::write!(f, "Valid8"),
             0x09 => defmt::write!(f, "Valid9"),
+            0x0a => defmt::write!(f, "Valid10"),
+            0x0b => defmt::write!(f, "Valid11"),
+            0x0c => defmt::write!(f, "Valid12"),
+            0x0d => defmt::write!(f, "Valid13"),
+            0x0e => defmt::write!(f, "Valid14"),
+            0xfa => defmt::write!(f, "Valid250"),
+            0xfb => defmt::write!(f, "Valid251"),
+            0xfc => defmt::write!(f, "Valid252"),
+            0xfd => defmt::write!(f, "Valid253"),
+            0xfe => defmt::write!(f, "Valid254"),
+            0xff => defmt::write!(f, "Valid255"),
             other => defmt::write!(f, "0x{:02X}", other),
         }
     }
@@ -265,7 +316,8 @@ impl From<DivisorValue> for u16 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DozeEn {
     #[doc = "Disable."]
@@ -296,7 +348,8 @@ impl From<DozeEn> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EtcIm {
     #[doc = "Enable."]
@@ -327,7 +380,8 @@ impl From<EtcIm> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Etcf {
     #[doc = "Pending or incomplete."]
@@ -358,7 +412,8 @@ impl From<Etcf> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlshRx {
     #[doc = "Normal."]
@@ -389,7 +444,8 @@ impl From<FlshRx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlshTx {
     #[doc = "Normal."]
@@ -420,7 +476,8 @@ impl From<FlshTx> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpcnt0ClkSel {
     #[doc = "Disable/reset."]
@@ -455,7 +512,8 @@ impl From<Gpcnt0ClkSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpcnt0Im {
     #[doc = "Enable."]
@@ -486,7 +544,8 @@ impl From<Gpcnt0Im> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpcnt0To {
     #[doc = "GPCNT0 not reached, or flag cleared."]
@@ -517,7 +576,8 @@ impl From<Gpcnt0To> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpcnt1ClkSel {
     #[doc = "Disable/reset."]
@@ -552,7 +612,8 @@ impl From<Gpcnt1ClkSel> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpcnt1Im {
     #[doc = "Enable."]
@@ -583,7 +644,8 @@ impl From<Gpcnt1Im> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpcnt1To {
     #[doc = "GPCNT1 not reached, or flag cleared."]
@@ -614,7 +676,8 @@ impl From<Gpcnt1To> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ic {
     #[doc = "Direct."]
@@ -645,7 +708,8 @@ impl From<Ic> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum KillClocks {
     #[doc = "Enable."]
@@ -676,7 +740,8 @@ impl From<KillClocks> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LrcOk {
     #[doc = "No match."]
@@ -707,7 +772,8 @@ impl From<LrcOk> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PefIm {
     #[doc = "Enable."]
@@ -738,7 +804,8 @@ impl From<PefIm> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rcvr11 {
     #[doc = "12 ETU operation."]
@@ -769,7 +836,8 @@ impl From<Rcvr11> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RdtIm {
     #[doc = "Enable."]
@@ -800,7 +868,8 @@ impl From<RdtIm> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rdtf {
     #[doc = "Less than threshold."]
@@ -831,7 +900,8 @@ impl From<Rdtf> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rfo {
     #[doc = "No overrun error."]
@@ -862,7 +932,8 @@ impl From<Rfo> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RfoIm {
     #[doc = "Enable."]
@@ -893,7 +964,8 @@ impl From<RfoIm> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RnackIm {
     #[doc = "Enable."]
@@ -924,7 +996,8 @@ impl From<RnackIm> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rte {
     #[doc = "Less than."]
@@ -955,7 +1028,8 @@ impl From<Rte> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RxCnt {
     #[doc = "FIFO empty."]
@@ -999,7 +1073,8 @@ impl From<RxCnt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RxDataIm {
     #[doc = "Enable."]
@@ -1030,7 +1105,8 @@ impl From<RxDataIm> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Scsp {
     #[doc = "Logic 0."]
@@ -1061,7 +1137,8 @@ impl From<Scsp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Spd {
     #[doc = "No."]
@@ -1092,7 +1169,8 @@ impl From<Spd> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Spdes {
     #[doc = "Falling edge."]
@@ -1123,7 +1201,8 @@ impl From<Spdes> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Spdim {
     #[doc = "Enable."]
@@ -1154,7 +1233,8 @@ impl From<Spdim> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Spdp {
     #[doc = "Logic low."]
@@ -1185,7 +1265,8 @@ impl From<Spdp> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Srst {
     #[doc = "Assert."]
@@ -1216,7 +1297,8 @@ impl From<Srst> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StopEn {
     #[doc = "Disable."]
@@ -1247,7 +1329,8 @@ impl From<StopEn> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwRst {
     #[doc = "Normal."]
@@ -1278,7 +1361,8 @@ impl From<SwRst> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TcIm {
     #[doc = "Enable."]
@@ -1309,7 +1393,8 @@ impl From<TcIm> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcf {
     #[doc = "Pending or incomplete."]
@@ -1340,7 +1425,8 @@ impl From<Tcf> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TdtIm {
     #[doc = "Enable."]
@@ -1371,7 +1457,8 @@ impl From<TdtIm> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tdtf {
     #[doc = "Threshold exceeded or this field written to 0."]
@@ -1402,7 +1489,8 @@ impl From<Tdtf> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tfe {
     #[doc = "Not empty."]
@@ -1433,7 +1521,8 @@ impl From<Tfe> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TfeIm {
     #[doc = "Enable."]
@@ -1464,7 +1553,8 @@ impl From<TfeIm> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tff {
     #[doc = "Not full."]
@@ -1495,7 +1585,8 @@ impl From<Tff> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TffIm {
     #[doc = "Enable."]
@@ -1526,7 +1617,8 @@ impl From<TffIm> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TnackIm {
     #[doc = "Enable."]
@@ -1557,7 +1649,8 @@ impl From<TnackIm> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tnte {
     #[doc = "Threshold not reached."]
@@ -1588,7 +1681,8 @@ impl From<Tnte> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TxCnt {
     #[doc = "FIFO empty."]
@@ -1632,7 +1726,8 @@ impl From<TxCnt> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "debug", derive(Debug))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Vccenp {
     #[doc = "Active high."]

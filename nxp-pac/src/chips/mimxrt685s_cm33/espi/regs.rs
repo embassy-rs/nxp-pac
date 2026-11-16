@@ -82,6 +82,7 @@ impl Default for Dmactrl {
         Dmactrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Dmactrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Dmactrl")
@@ -217,6 +218,7 @@ impl Default for Espicap {
         Espicap(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Espicap {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Espicap")
@@ -428,6 +430,7 @@ impl Default for Espicfg {
         Espicfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Espicfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Espicfg")
@@ -555,6 +558,7 @@ impl Default for Espimisc {
         Espimisc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Espimisc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Espimisc")
@@ -690,6 +694,7 @@ impl Default for Intenclr {
         Intenclr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Intenclr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Intenclr")
@@ -829,6 +834,7 @@ impl Default for Intenset {
         Intenset(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Intenset {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Intenset")
@@ -968,6 +974,7 @@ impl Default for Intstat {
         Intstat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Intstat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Intstat")
@@ -1035,6 +1042,7 @@ impl Default for Irqpush {
         Irqpush(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Irqpush {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Irqpush")
@@ -1090,6 +1098,7 @@ impl Default for Mapbase {
         Mapbase(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mapbase {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mapbase")
@@ -1181,6 +1190,7 @@ impl Default for Mctrl {
         Mctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mctrl")
@@ -1374,6 +1384,7 @@ impl Default for Mstat {
         Mstat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mstat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mstat")
@@ -1475,6 +1486,7 @@ impl Default for P0addr {
         P0addr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P0addr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P0addr")
@@ -1582,6 +1594,7 @@ impl Default for P0cfg {
         P0cfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P0cfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P0cfg")
@@ -1614,14 +1627,14 @@ impl defmt::Format for P0cfg {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct P0dataIn(pub u32);
 impl P0dataIn {
-    #[doc = "Meaning is dependent on type of port: If endpoint or index/data: is data byte If Mailbox or Bus master or Flash: is count in last message, 0 relative If SAF, is count in last message including address (so, +4), 0 relative."]
+    #[doc = "Meaning is dependent on type of port: * If endpoint or index/data: is data byte * If Mailbox or Bus master or Flash: is count in last message, 0 relative * If SAF, is count in last message including address (so, +4), 0 relative."]
     #[must_use]
     #[inline(always)]
     pub const fn data_len(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Meaning is dependent on type of port: If endpoint or index/data: is data byte If Mailbox or Bus master or Flash: is count in last message, 0 relative If SAF, is count in last message including address (so, +4), 0 relative."]
+    #[doc = "Meaning is dependent on type of port: * If endpoint or index/data: is data byte * If Mailbox or Bus master or Flash: is count in last message, 0 relative * If SAF, is count in last message including address (so, +4), 0 relative."]
     #[inline(always)]
     pub const fn set_data_len(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
@@ -1657,6 +1670,7 @@ impl Default for P0dataIn {
         P0dataIn(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P0dataIn {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P0dataIn")
@@ -1702,6 +1716,7 @@ impl Default for P0dataOut {
         P0dataOut(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P0dataOut {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P0dataOut")
@@ -1715,7 +1730,7 @@ impl defmt::Format for P0dataOut {
         defmt::write!(f, "P0dataOut {{ data: {=u8:?} }}", self.data())
     }
 }
-#[doc = "The Port Set Interrupt-Rule and Set User Status register is used to set: The interrupt causes per port. That is, it is used to select what events from the port should cause an interrupt, if any. The user Status bits. The status byte returned to the host will be composed of both these user bits (which the application defines) and automatically generated status. The interrupt masks then are matched by sticky cause bits in PnSTAT (which can be read and then write-1 cleared). The sticky bits are set whether the interrupt is masked or not, but the masks cause an interrupt when the bits are set and the port is int enabled via INTENSET."]
+#[doc = "The Port Set Interrupt-Rule and Set User Status register is used to set: * The interrupt causes per port. That is, it is used to select what events from the port should cause an interrupt, if any. * The user Status bits. The status byte returned to the host will be composed of both these user bits (which the application defines) and automatically generated status. The interrupt masks then are matched by sticky cause bits in PnSTAT (which can be read and then write-1 cleared). The sticky bits are set whether the interrupt is masked or not, but the masks cause an interrupt when the bits are set and the port is int enabled via INTENSET."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct P0iRuleStat(pub u32);
@@ -1811,6 +1826,7 @@ impl Default for P0iRuleStat {
         P0iRuleStat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P0iRuleStat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P0iRuleStat")
@@ -1876,6 +1892,7 @@ impl Default for P0omflen {
         P0omflen(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P0omflen {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P0omflen")
@@ -1931,6 +1948,7 @@ impl Default for P0ramUse {
         P0ramUse(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P0ramUse {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P0ramUse")
@@ -2046,6 +2064,7 @@ impl Default for P0stat {
         P0stat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P0stat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P0stat")
@@ -2135,6 +2154,7 @@ impl Default for P1addr {
         P1addr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P1addr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P1addr")
@@ -2242,6 +2262,7 @@ impl Default for P1cfg {
         P1cfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P1cfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P1cfg")
@@ -2274,14 +2295,14 @@ impl defmt::Format for P1cfg {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct P1dataIn(pub u32);
 impl P1dataIn {
-    #[doc = "Meaning is dependent on type of port: If endpoint or index/data: is data byte If Mailbox or Bus master or Flash: is count in last message, 0 relative If SAF, is count in last message including address (so, +4), 0 relative."]
+    #[doc = "Meaning is dependent on type of port: * If endpoint or index/data: is data byte * If Mailbox or Bus master or Flash: is count in last message, 0 relative * If SAF, is count in last message including address (so, +4), 0 relative."]
     #[must_use]
     #[inline(always)]
     pub const fn data_len(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Meaning is dependent on type of port: If endpoint or index/data: is data byte If Mailbox or Bus master or Flash: is count in last message, 0 relative If SAF, is count in last message including address (so, +4), 0 relative."]
+    #[doc = "Meaning is dependent on type of port: * If endpoint or index/data: is data byte * If Mailbox or Bus master or Flash: is count in last message, 0 relative * If SAF, is count in last message including address (so, +4), 0 relative."]
     #[inline(always)]
     pub const fn set_data_len(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
@@ -2317,6 +2338,7 @@ impl Default for P1dataIn {
         P1dataIn(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P1dataIn {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P1dataIn")
@@ -2362,6 +2384,7 @@ impl Default for P1dataOut {
         P1dataOut(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P1dataOut {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P1dataOut")
@@ -2375,7 +2398,7 @@ impl defmt::Format for P1dataOut {
         defmt::write!(f, "P1dataOut {{ data: {=u8:?} }}", self.data())
     }
 }
-#[doc = "The Port Set Interrupt-Rule and Set User Status register is used to set: The interrupt causes per port. That is, it is used to select what events from the port should cause an interrupt, if any. The user Status bits. The status byte returned to the host will be composed of both these user bits (which the application defines) and automatically generated status. The interrupt masks then are matched by sticky cause bits in PnSTAT (which can be read and then write-1 cleared). The sticky bits are set whether the interrupt is masked or not, but the masks cause an interrupt when the bits are set and the port is int enabled via INTENSET."]
+#[doc = "The Port Set Interrupt-Rule and Set User Status register is used to set: * The interrupt causes per port. That is, it is used to select what events from the port should cause an interrupt, if any. * The user Status bits. The status byte returned to the host will be composed of both these user bits (which the application defines) and automatically generated status. The interrupt masks then are matched by sticky cause bits in PnSTAT (which can be read and then write-1 cleared). The sticky bits are set whether the interrupt is masked or not, but the masks cause an interrupt when the bits are set and the port is int enabled via INTENSET."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct P1iRuleStat(pub u32);
@@ -2471,6 +2494,7 @@ impl Default for P1iRuleStat {
         P1iRuleStat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P1iRuleStat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P1iRuleStat")
@@ -2536,6 +2560,7 @@ impl Default for P1omflen {
         P1omflen(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P1omflen {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P1omflen")
@@ -2591,6 +2616,7 @@ impl Default for P1ramUse {
         P1ramUse(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P1ramUse {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P1ramUse")
@@ -2706,6 +2732,7 @@ impl Default for P1stat {
         P1stat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P1stat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P1stat")
@@ -2795,6 +2822,7 @@ impl Default for P2addr {
         P2addr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P2addr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P2addr")
@@ -2902,6 +2930,7 @@ impl Default for P2cfg {
         P2cfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P2cfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P2cfg")
@@ -2934,14 +2963,14 @@ impl defmt::Format for P2cfg {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct P2dataIn(pub u32);
 impl P2dataIn {
-    #[doc = "Meaning is dependent on type of port: If endpoint or index/data: is data byte If Mailbox or Bus master or Flash: is count in last message, 0 relative If SAF, is count in last message including address (so, +4), 0 relative."]
+    #[doc = "Meaning is dependent on type of port: * If endpoint or index/data: is data byte * If Mailbox or Bus master or Flash: is count in last message, 0 relative * If SAF, is count in last message including address (so, +4), 0 relative."]
     #[must_use]
     #[inline(always)]
     pub const fn data_len(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Meaning is dependent on type of port: If endpoint or index/data: is data byte If Mailbox or Bus master or Flash: is count in last message, 0 relative If SAF, is count in last message including address (so, +4), 0 relative."]
+    #[doc = "Meaning is dependent on type of port: * If endpoint or index/data: is data byte * If Mailbox or Bus master or Flash: is count in last message, 0 relative * If SAF, is count in last message including address (so, +4), 0 relative."]
     #[inline(always)]
     pub const fn set_data_len(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
@@ -2977,6 +3006,7 @@ impl Default for P2dataIn {
         P2dataIn(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P2dataIn {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P2dataIn")
@@ -3022,6 +3052,7 @@ impl Default for P2dataOut {
         P2dataOut(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P2dataOut {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P2dataOut")
@@ -3035,7 +3066,7 @@ impl defmt::Format for P2dataOut {
         defmt::write!(f, "P2dataOut {{ data: {=u8:?} }}", self.data())
     }
 }
-#[doc = "The Port Set Interrupt-Rule and Set User Status register is used to set: The interrupt causes per port. That is, it is used to select what events from the port should cause an interrupt, if any. The user Status bits. The status byte returned to the host will be composed of both these user bits (which the application defines) and automatically generated status. The interrupt masks then are matched by sticky cause bits in PnSTAT (which can be read and then write-1 cleared). The sticky bits are set whether the interrupt is masked or not, but the masks cause an interrupt when the bits are set and the port is int enabled via INTENSET."]
+#[doc = "The Port Set Interrupt-Rule and Set User Status register is used to set: * The interrupt causes per port. That is, it is used to select what events from the port should cause an interrupt, if any. * The user Status bits. The status byte returned to the host will be composed of both these user bits (which the application defines) and automatically generated status. The interrupt masks then are matched by sticky cause bits in PnSTAT (which can be read and then write-1 cleared). The sticky bits are set whether the interrupt is masked or not, but the masks cause an interrupt when the bits are set and the port is int enabled via INTENSET."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct P2iRuleStat(pub u32);
@@ -3131,6 +3162,7 @@ impl Default for P2iRuleStat {
         P2iRuleStat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P2iRuleStat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P2iRuleStat")
@@ -3196,6 +3228,7 @@ impl Default for P2omflen {
         P2omflen(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P2omflen {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P2omflen")
@@ -3251,6 +3284,7 @@ impl Default for P2ramUse {
         P2ramUse(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P2ramUse {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P2ramUse")
@@ -3366,6 +3400,7 @@ impl Default for P2stat {
         P2stat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P2stat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P2stat")
@@ -3455,6 +3490,7 @@ impl Default for P3addr {
         P3addr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P3addr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P3addr")
@@ -3562,6 +3598,7 @@ impl Default for P3cfg {
         P3cfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P3cfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P3cfg")
@@ -3594,14 +3631,14 @@ impl defmt::Format for P3cfg {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct P3dataIn(pub u32);
 impl P3dataIn {
-    #[doc = "Meaning is dependent on type of port: If endpoint or index/data: is data byte If Mailbox or Bus master or Flash: is count in last message, 0 relative If SAF, is count in last message including address (so, +4), 0 relative."]
+    #[doc = "Meaning is dependent on type of port: * If endpoint or index/data: is data byte * If Mailbox or Bus master or Flash: is count in last message, 0 relative * If SAF, is count in last message including address (so, +4), 0 relative."]
     #[must_use]
     #[inline(always)]
     pub const fn data_len(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Meaning is dependent on type of port: If endpoint or index/data: is data byte If Mailbox or Bus master or Flash: is count in last message, 0 relative If SAF, is count in last message including address (so, +4), 0 relative."]
+    #[doc = "Meaning is dependent on type of port: * If endpoint or index/data: is data byte * If Mailbox or Bus master or Flash: is count in last message, 0 relative * If SAF, is count in last message including address (so, +4), 0 relative."]
     #[inline(always)]
     pub const fn set_data_len(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
@@ -3637,6 +3674,7 @@ impl Default for P3dataIn {
         P3dataIn(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P3dataIn {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P3dataIn")
@@ -3682,6 +3720,7 @@ impl Default for P3dataOut {
         P3dataOut(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P3dataOut {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P3dataOut")
@@ -3695,7 +3734,7 @@ impl defmt::Format for P3dataOut {
         defmt::write!(f, "P3dataOut {{ data: {=u8:?} }}", self.data())
     }
 }
-#[doc = "The Port Set Interrupt-Rule and Set User Status register is used to set: The interrupt causes per port. That is, it is used to select what events from the port should cause an interrupt, if any. The user Status bits. The status byte returned to the host will be composed of both these user bits (which the application defines) and automatically generated status. The interrupt masks then are matched by sticky cause bits in PnSTAT (which can be read and then write-1 cleared). The sticky bits are set whether the interrupt is masked or not, but the masks cause an interrupt when the bits are set and the port is int enabled via INTENSET."]
+#[doc = "The Port Set Interrupt-Rule and Set User Status register is used to set: * The interrupt causes per port. That is, it is used to select what events from the port should cause an interrupt, if any. * The user Status bits. The status byte returned to the host will be composed of both these user bits (which the application defines) and automatically generated status. The interrupt masks then are matched by sticky cause bits in PnSTAT (which can be read and then write-1 cleared). The sticky bits are set whether the interrupt is masked or not, but the masks cause an interrupt when the bits are set and the port is int enabled via INTENSET."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct P3iRuleStat(pub u32);
@@ -3791,6 +3830,7 @@ impl Default for P3iRuleStat {
         P3iRuleStat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P3iRuleStat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P3iRuleStat")
@@ -3856,6 +3896,7 @@ impl Default for P3omflen {
         P3omflen(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P3omflen {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P3omflen")
@@ -3911,6 +3952,7 @@ impl Default for P3ramUse {
         P3ramUse(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P3ramUse {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P3ramUse")
@@ -4026,6 +4068,7 @@ impl Default for P3stat {
         P3stat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P3stat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P3stat")
@@ -4115,6 +4158,7 @@ impl Default for P4addr {
         P4addr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P4addr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P4addr")
@@ -4222,6 +4266,7 @@ impl Default for P4cfg {
         P4cfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P4cfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P4cfg")
@@ -4254,14 +4299,14 @@ impl defmt::Format for P4cfg {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct P4dataIn(pub u32);
 impl P4dataIn {
-    #[doc = "Meaning is dependent on type of port: If endpoint or index/data: is data byte If Mailbox or Bus master or Flash: is count in last message, 0 relative If SAF, is count in last message including address (so, +4), 0 relative."]
+    #[doc = "Meaning is dependent on type of port: * If endpoint or index/data: is data byte * If Mailbox or Bus master or Flash: is count in last message, 0 relative * If SAF, is count in last message including address (so, +4), 0 relative."]
     #[must_use]
     #[inline(always)]
     pub const fn data_len(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Meaning is dependent on type of port: If endpoint or index/data: is data byte If Mailbox or Bus master or Flash: is count in last message, 0 relative If SAF, is count in last message including address (so, +4), 0 relative."]
+    #[doc = "Meaning is dependent on type of port: * If endpoint or index/data: is data byte * If Mailbox or Bus master or Flash: is count in last message, 0 relative * If SAF, is count in last message including address (so, +4), 0 relative."]
     #[inline(always)]
     pub const fn set_data_len(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
@@ -4297,6 +4342,7 @@ impl Default for P4dataIn {
         P4dataIn(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P4dataIn {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P4dataIn")
@@ -4342,6 +4388,7 @@ impl Default for P4dataOut {
         P4dataOut(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P4dataOut {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P4dataOut")
@@ -4355,7 +4402,7 @@ impl defmt::Format for P4dataOut {
         defmt::write!(f, "P4dataOut {{ data: {=u8:?} }}", self.data())
     }
 }
-#[doc = "The Port Set Interrupt-Rule and Set User Status register is used to set: The interrupt causes per port. That is, it is used to select what events from the port should cause an interrupt, if any. The user Status bits. The status byte returned to the host will be composed of both these user bits (which the application defines) and automatically generated status. The interrupt masks then are matched by sticky cause bits in PnSTAT (which can be read and then write-1 cleared). The sticky bits are set whether the interrupt is masked or not, but the masks cause an interrupt when the bits are set and the port is int enabled via INTENSET."]
+#[doc = "The Port Set Interrupt-Rule and Set User Status register is used to set: * The interrupt causes per port. That is, it is used to select what events from the port should cause an interrupt, if any. * The user Status bits. The status byte returned to the host will be composed of both these user bits (which the application defines) and automatically generated status. The interrupt masks then are matched by sticky cause bits in PnSTAT (which can be read and then write-1 cleared). The sticky bits are set whether the interrupt is masked or not, but the masks cause an interrupt when the bits are set and the port is int enabled via INTENSET."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct P4iRuleStat(pub u32);
@@ -4451,6 +4498,7 @@ impl Default for P4iRuleStat {
         P4iRuleStat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P4iRuleStat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P4iRuleStat")
@@ -4516,6 +4564,7 @@ impl Default for P4omflen {
         P4omflen(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P4omflen {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P4omflen")
@@ -4571,6 +4620,7 @@ impl Default for P4ramUse {
         P4ramUse(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P4ramUse {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P4ramUse")
@@ -4686,6 +4736,7 @@ impl Default for P4stat {
         P4stat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P4stat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P4stat")
@@ -4775,6 +4826,7 @@ impl Default for P80stat {
         P80stat(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for P80stat {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("P80stat")
@@ -4834,6 +4886,7 @@ impl Default for Rambase {
         Rambase(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Rambase {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Rambase")
@@ -4889,6 +4942,7 @@ impl Default for Stataddr {
         Stataddr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Stataddr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Stataddr")
@@ -4932,6 +4986,7 @@ impl Default for Wirero {
         Wirero(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Wirero {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Wirero")
@@ -4981,6 +5036,7 @@ impl Default for Wirewo {
         Wirewo(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Wirewo {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Wirewo")

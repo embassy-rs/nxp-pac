@@ -70,6 +70,7 @@ impl Default for Mode {
         Mode(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mode")
@@ -119,6 +120,7 @@ impl Default for Seed {
         Seed(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Seed {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Seed")
@@ -156,6 +158,7 @@ impl Default for Sum {
         Sum(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sum {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sum")
@@ -193,6 +196,7 @@ impl Default for WrData {
         WrData(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for WrData {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WrData")

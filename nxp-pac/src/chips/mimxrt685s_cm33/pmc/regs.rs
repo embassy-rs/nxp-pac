@@ -22,6 +22,7 @@ impl Default for Autowkup {
         Autowkup(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Autowkup {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Autowkup")
@@ -167,6 +168,7 @@ impl Default for Ctrl {
         Ctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ctrl")
@@ -346,6 +348,7 @@ impl Default for Flags {
         Flags(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Flags {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flags")
@@ -407,6 +410,7 @@ impl Default for Lvdcorectrl {
         Lvdcorectrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Lvdcorectrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Lvdcorectrl")
@@ -448,6 +452,7 @@ impl Default for Memseqctrl {
         Memseqctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Memseqctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Memseqctrl")
@@ -509,6 +514,7 @@ impl Default for Padvrange {
         Padvrange(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Padvrange {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Padvrange")
@@ -638,6 +644,7 @@ impl Default for Pmiccfg {
         Pmiccfg(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pmiccfg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pmiccfg")
@@ -693,6 +700,7 @@ impl Default for Runctrl {
         Runctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Runctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Runctrl")
@@ -730,6 +738,7 @@ impl Default for Sleepctrl {
         Sleepctrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sleepctrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sleepctrl")
@@ -767,6 +776,7 @@ impl Default for Status {
         Status(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Status {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Status")

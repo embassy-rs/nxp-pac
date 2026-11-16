@@ -130,6 +130,7 @@ impl Default for De {
         De(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for De {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("De")
@@ -201,6 +202,7 @@ impl Default for Fdc {
         Fdc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fdc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fdc")
@@ -304,6 +306,7 @@ impl Default for Filt {
         Filt(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Filt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Filt")
@@ -367,6 +370,7 @@ impl Default for Fmc {
         Fmc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Fmc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Fmc")
@@ -518,6 +522,7 @@ impl Default for Me {
         Me(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Me {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Me")
@@ -613,6 +618,7 @@ impl Default for Param {
         Param(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Param {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Param")
@@ -840,6 +846,7 @@ impl Default for Pdc1 {
         Pdc1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pdc1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pdc1")
@@ -1091,6 +1098,7 @@ impl Default for Pdc2 {
         Pdc2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pdc2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pdc2")
@@ -1342,6 +1350,7 @@ impl Default for Pe1 {
         Pe1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pe1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pe1")
@@ -1550,42 +1559,6 @@ impl Pe2 {
     pub const fn set_wupe28(&mut self, val: super::vals::Wupe28) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
-    #[doc = "Wake-up Pin Enable for WUU_Pn."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn wupe29(&self) -> super::vals::Wupe29 {
-        let val = (self.0 >> 26usize) & 0x03;
-        super::vals::Wupe29::from_bits(val as u8)
-    }
-    #[doc = "Wake-up Pin Enable for WUU_Pn."]
-    #[inline(always)]
-    pub const fn set_wupe29(&mut self, val: super::vals::Wupe29) {
-        self.0 = (self.0 & !(0x03 << 26usize)) | (((val.to_bits() as u32) & 0x03) << 26usize);
-    }
-    #[doc = "Wake-up Pin Enable for WUU_Pn."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn wupe30(&self) -> super::vals::Wupe30 {
-        let val = (self.0 >> 28usize) & 0x03;
-        super::vals::Wupe30::from_bits(val as u8)
-    }
-    #[doc = "Wake-up Pin Enable for WUU_Pn."]
-    #[inline(always)]
-    pub const fn set_wupe30(&mut self, val: super::vals::Wupe30) {
-        self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
-    }
-    #[doc = "Wake-up Pin Enable for WUU_Pn."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn wupe31(&self) -> super::vals::Wupe31 {
-        let val = (self.0 >> 30usize) & 0x03;
-        super::vals::Wupe31::from_bits(val as u8)
-    }
-    #[doc = "Wake-up Pin Enable for WUU_Pn."]
-    #[inline(always)]
-    pub const fn set_wupe31(&mut self, val: super::vals::Wupe31) {
-        self.0 = (self.0 & !(0x03 << 30usize)) | (((val.to_bits() as u32) & 0x03) << 30usize);
-    }
 }
 impl Default for Pe2 {
     #[inline(always)]
@@ -1593,6 +1566,7 @@ impl Default for Pe2 {
         Pe2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pe2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pe2")
@@ -1609,9 +1583,6 @@ impl core::fmt::Debug for Pe2 {
             .field("wupe26", &self.wupe26())
             .field("wupe27", &self.wupe27())
             .field("wupe28", &self.wupe28())
-            .field("wupe29", &self.wupe29())
-            .field("wupe30", &self.wupe30())
-            .field("wupe31", &self.wupe31())
             .finish()
     }
 }
@@ -1620,7 +1591,7 @@ impl defmt::Format for Pe2 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Pe2 {{ wupe16: {:?}, wupe17: {:?}, wupe18: {:?}, wupe19: {:?}, wupe20: {:?}, wupe21: {:?}, wupe22: {:?}, wupe23: {:?}, wupe24: {:?}, wupe25: {:?}, wupe26: {:?}, wupe27: {:?}, wupe28: {:?}, wupe29: {:?}, wupe30: {:?}, wupe31: {:?} }}",
+            "Pe2 {{ wupe16: {:?}, wupe17: {:?}, wupe18: {:?}, wupe19: {:?}, wupe20: {:?}, wupe21: {:?}, wupe22: {:?}, wupe23: {:?}, wupe24: {:?}, wupe25: {:?}, wupe26: {:?}, wupe27: {:?}, wupe28: {:?} }}",
             self.wupe16(),
             self.wupe17(),
             self.wupe18(),
@@ -1633,10 +1604,7 @@ impl defmt::Format for Pe2 {
             self.wupe25(),
             self.wupe26(),
             self.wupe27(),
-            self.wupe28(),
-            self.wupe29(),
-            self.wupe30(),
-            self.wupe31()
+            self.wupe28()
         )
     }
 }
@@ -1993,42 +1961,6 @@ impl Pf {
     pub const fn set_wuf28(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Wake-up Flag for WUU_Pn."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn wuf29(&self) -> bool {
-        let val = (self.0 >> 29usize) & 0x01;
-        val != 0
-    }
-    #[doc = "Wake-up Flag for WUU_Pn."]
-    #[inline(always)]
-    pub const fn set_wuf29(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
-    }
-    #[doc = "Wake-up Flag for WUU_Pn."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn wuf30(&self) -> bool {
-        let val = (self.0 >> 30usize) & 0x01;
-        val != 0
-    }
-    #[doc = "Wake-up Flag for WUU_Pn."]
-    #[inline(always)]
-    pub const fn set_wuf30(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
-    }
-    #[doc = "Wake-up Flag for WUU_Pn."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn wuf31(&self) -> bool {
-        let val = (self.0 >> 31usize) & 0x01;
-        val != 0
-    }
-    #[doc = "Wake-up Flag for WUU_Pn."]
-    #[inline(always)]
-    pub const fn set_wuf31(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
-    }
 }
 impl Default for Pf {
     #[inline(always)]
@@ -2036,6 +1968,7 @@ impl Default for Pf {
         Pf(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pf {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pf")
@@ -2068,9 +2001,6 @@ impl core::fmt::Debug for Pf {
             .field("wuf26", &self.wuf26())
             .field("wuf27", &self.wuf27())
             .field("wuf28", &self.wuf28())
-            .field("wuf29", &self.wuf29())
-            .field("wuf30", &self.wuf30())
-            .field("wuf31", &self.wuf31())
             .finish()
     }
 }
@@ -2079,7 +2009,7 @@ impl defmt::Format for Pf {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Pf {{ wuf0: {=bool:?}, wuf1: {=bool:?}, wuf2: {=bool:?}, wuf3: {=bool:?}, wuf4: {=bool:?}, wuf5: {=bool:?}, wuf6: {=bool:?}, wuf7: {=bool:?}, wuf8: {=bool:?}, wuf9: {=bool:?}, wuf10: {=bool:?}, wuf11: {=bool:?}, wuf12: {=bool:?}, wuf13: {=bool:?}, wuf14: {=bool:?}, wuf15: {=bool:?}, wuf16: {=bool:?}, wuf17: {=bool:?}, wuf18: {=bool:?}, wuf19: {=bool:?}, wuf20: {=bool:?}, wuf21: {=bool:?}, wuf22: {=bool:?}, wuf23: {=bool:?}, wuf24: {=bool:?}, wuf25: {=bool:?}, wuf26: {=bool:?}, wuf27: {=bool:?}, wuf28: {=bool:?}, wuf29: {=bool:?}, wuf30: {=bool:?}, wuf31: {=bool:?} }}",
+            "Pf {{ wuf0: {=bool:?}, wuf1: {=bool:?}, wuf2: {=bool:?}, wuf3: {=bool:?}, wuf4: {=bool:?}, wuf5: {=bool:?}, wuf6: {=bool:?}, wuf7: {=bool:?}, wuf8: {=bool:?}, wuf9: {=bool:?}, wuf10: {=bool:?}, wuf11: {=bool:?}, wuf12: {=bool:?}, wuf13: {=bool:?}, wuf14: {=bool:?}, wuf15: {=bool:?}, wuf16: {=bool:?}, wuf17: {=bool:?}, wuf18: {=bool:?}, wuf19: {=bool:?}, wuf20: {=bool:?}, wuf21: {=bool:?}, wuf22: {=bool:?}, wuf23: {=bool:?}, wuf24: {=bool:?}, wuf25: {=bool:?}, wuf26: {=bool:?}, wuf27: {=bool:?}, wuf28: {=bool:?} }}",
             self.wuf0(),
             self.wuf1(),
             self.wuf2(),
@@ -2108,10 +2038,7 @@ impl defmt::Format for Pf {
             self.wuf25(),
             self.wuf26(),
             self.wuf27(),
-            self.wuf28(),
-            self.wuf29(),
-            self.wuf30(),
-            self.wuf31()
+            self.wuf28()
         )
     }
 }
@@ -2511,6 +2438,7 @@ impl Default for Pmc {
         Pmc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pmc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pmc")
@@ -2638,6 +2566,7 @@ impl Default for Verid {
         Verid(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Verid {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Verid")

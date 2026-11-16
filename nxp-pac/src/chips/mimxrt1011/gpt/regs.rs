@@ -22,6 +22,7 @@ impl Default for Cnt {
         Cnt(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cnt").field("count", &self.count()).finish()
@@ -261,6 +262,7 @@ impl Default for Cr {
         Cr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Cr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Cr")
@@ -336,6 +338,7 @@ impl Default for Icr1 {
         Icr1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Icr1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Icr1").field("capt", &self.capt()).finish()
@@ -371,6 +374,7 @@ impl Default for Icr2 {
         Icr2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Icr2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Icr2").field("capt", &self.capt()).finish()
@@ -466,6 +470,7 @@ impl Default for Ir {
         Ir(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ir {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ir")
@@ -517,6 +522,7 @@ impl Default for Ocr1 {
         Ocr1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ocr1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ocr1").field("comp", &self.comp()).finish()
@@ -552,6 +558,7 @@ impl Default for Ocr2 {
         Ocr2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ocr2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ocr2").field("comp", &self.comp()).finish()
@@ -587,6 +594,7 @@ impl Default for Ocr3 {
         Ocr3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Ocr3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Ocr3").field("comp", &self.comp()).finish()
@@ -634,6 +642,7 @@ impl Default for Pr {
         Pr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Pr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pr")
@@ -737,6 +746,7 @@ impl Default for Sr {
         Sr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Sr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Sr")

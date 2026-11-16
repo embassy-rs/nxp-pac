@@ -22,6 +22,7 @@ impl Default for Feed {
         Feed(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Feed {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Feed").field("feed", &self.feed()).finish()
@@ -117,6 +118,7 @@ impl Default for Mod {
         Mod(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Mod {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mod")
@@ -168,6 +170,7 @@ impl Default for Tc {
         Tc(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tc {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tc").field("count", &self.count()).finish()
@@ -203,6 +206,7 @@ impl Default for Tv {
         Tv(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Tv {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Tv").field("count", &self.count()).finish()
@@ -238,6 +242,7 @@ impl Default for Warnint {
         Warnint(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Warnint {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Warnint")
@@ -275,6 +280,7 @@ impl Default for Window {
         Window(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Window {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Window")

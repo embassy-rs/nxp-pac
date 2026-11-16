@@ -118,6 +118,7 @@ impl Default for Csr {
         Csr(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Csr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Csr")
@@ -187,6 +188,7 @@ impl Default for Utrim {
         Utrim(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Utrim {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Utrim")
@@ -254,6 +256,7 @@ impl Default for Verid {
         Verid(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Verid {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Verid")

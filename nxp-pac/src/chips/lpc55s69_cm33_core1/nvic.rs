@@ -1,4 +1,4 @@
-#[doc = "no description available."]
+#[doc = "Nested Vectored Interrupt Controller."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Nvic {
     ptr: *mut u8,

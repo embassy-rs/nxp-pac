@@ -46,6 +46,7 @@ impl Default for GdetConf0 {
         GdetConf0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for GdetConf0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GdetConf0")
@@ -199,6 +200,7 @@ impl Default for GdetConf1 {
         GdetConf1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for GdetConf1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GdetConf1")
@@ -318,6 +320,7 @@ impl Default for GdetConf2 {
         GdetConf2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for GdetConf2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GdetConf2")
@@ -381,6 +384,7 @@ impl Default for GdetConf3 {
         GdetConf3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for GdetConf3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GdetConf3")
@@ -436,6 +440,7 @@ impl Default for GdetConf4 {
         GdetConf4(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for GdetConf4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GdetConf4")
@@ -503,6 +508,7 @@ impl Default for GdetConf5 {
         GdetConf5(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for GdetConf5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GdetConf5")
@@ -572,6 +578,7 @@ impl Default for GdetDlyCtrl {
         GdetDlyCtrl(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for GdetDlyCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GdetDlyCtrl")
@@ -629,6 +636,7 @@ impl Default for GdetEnable1 {
         GdetEnable1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for GdetEnable1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GdetEnable1")
@@ -696,6 +704,7 @@ impl Default for GdetReset {
         GdetReset(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for GdetReset {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GdetReset")
@@ -753,6 +762,7 @@ impl Default for GdetTest {
         GdetTest(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for GdetTest {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GdetTest")

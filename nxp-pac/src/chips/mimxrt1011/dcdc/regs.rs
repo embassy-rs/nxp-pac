@@ -238,6 +238,7 @@ impl Default for Reg0 {
         Reg0(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Reg0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Reg0")
@@ -375,6 +376,7 @@ impl Default for Reg1 {
         Reg1(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Reg1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Reg1")
@@ -486,6 +488,7 @@ impl Default for Reg2 {
         Reg2(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Reg2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Reg2")
@@ -573,6 +576,7 @@ impl Default for Reg3 {
         Reg3(0)
     }
 }
+#[cfg(feature = "debug")]
 impl core::fmt::Debug for Reg3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Reg3")
