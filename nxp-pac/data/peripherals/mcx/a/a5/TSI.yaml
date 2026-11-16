@@ -261,7 +261,7 @@ fieldset/ConfigMutual:
       this address is TSI_CONFIG for mutual-cap'
     bit_offset: 0
     bit_size: 1
-    enum: ConfigMutualMode
+    enum: ConfigMode
   - name: m_nmirror
     description: 'M_NMIRROR. Encodings: 0: m=1; 1: m=2; 2: m=3; 3: m=4 (default)'
     bit_offset: 1
@@ -870,13 +870,6 @@ enum/ConfigFilterTrim:
     value: 2
   - name: Ns25
     value: 3
-enum/ConfigMutualMode:
-  bit_size: 1
-  variants:
-  - name: SelfCap
-    value: 0
-  - name: MutualCap
-    value: 1
 enum/MulMMode:
   bit_size: 2
   variants:

@@ -21,12 +21,12 @@ block/DacAlpha:
     description: Version Identifier.
     byte_offset: 0
     access: Read
-    fieldset: DacAlphaFieldsetLima
+    fieldset: Verid3
   - name: param
     description: Parameter.
     byte_offset: 4
     access: Read
-    fieldset: DacAlphaFieldsetHotel
+    fieldset: Param3
   - name: data
     description: Data.
     byte_offset: 8
@@ -47,27 +47,27 @@ block/DacAlpha:
   - name: fsr
     description: FIFO Status.
     byte_offset: 24
-    fieldset: DacAlphaFieldsetEcho
+    fieldset: Fsr2
   - name: ier
     description: Interrupt Enable.
     byte_offset: 28
-    fieldset: DacAlphaFieldsetGolf
+    fieldset: Ier2
   - name: der
     description: DMA Enable.
     byte_offset: 32
-    fieldset: DacAlphaFieldsetBravo
+    fieldset: Der2
   - name: rcr
     description: Reset Control.
     byte_offset: 36
-    fieldset: DacAlphaFieldsetJuliet
+    fieldset: Rcr2
   - name: tcr
     description: Trigger Control.
     byte_offset: 40
-    fieldset: DacAlphaFieldsetKilo
+    fieldset: Tcr2
   - name: pcr
     description: Periodic Trigger Control.
     byte_offset: 44
-    fieldset: DacAlphaFieldsetIndia
+    fieldset: Pcr8
 fieldset/DacAlphaFieldsetAlpha:
   description: Data.
   fields:
@@ -75,19 +75,19 @@ fieldset/DacAlphaFieldsetAlpha:
     description: FIFO Entry or Buffer Entry.
     bit_offset: 0
     bit_size: 12
-fieldset/DacAlphaFieldsetBravo:
+fieldset/Der2:
   description: DMA Enable.
   fields:
   - name: empty_dmaen
     description: FIFO Empty DMA Enable.
     bit_offset: 1
     bit_size: 1
-    enum: DacAlphaEnumFoxtrot
+    enum: Dacen
   - name: wm_dmaen
     description: FIFO Watermark DMA Enable.
     bit_offset: 2
     bit_size: 1
-    enum: DacAlphaEnumCharlieAlpha
+    enum: Dacen
 fieldset/DacAlphaFieldsetCharlie:
   description: DAC FIFO Control.
   fields:
@@ -106,44 +106,44 @@ fieldset/DacAlphaFieldsetDelta:
     description: FIFO Write Pointer.
     bit_offset: 16
     bit_size: 4
-fieldset/DacAlphaFieldsetEcho:
+fieldset/Fsr2:
   description: FIFO Status.
   fields:
   - name: full
     description: FIFO Full Flag.
     bit_offset: 0
     bit_size: 1
-    enum: DacAlphaEnumKilo
+    enum: Full2
   - name: empty
     description: FIFO Empty Flag.
     bit_offset: 1
     bit_size: 1
-    enum: DacAlphaEnumEcho
+    enum: Empty
   - name: wm
     description: FIFO Watermark Status Flag.
     bit_offset: 2
     bit_size: 1
-    enum: DacAlphaEnumBravoAlpha
+    enum: Wm2
   - name: swbk
     description: Swing Back One Cycle Complete Flag.
     bit_offset: 3
     bit_size: 1
-    enum: DacAlphaEnumTango
+    enum: Swbk2
   - name: of
     description: FIFO Overflow Flag.
     bit_offset: 6
     bit_size: 1
-    enum: DacAlphaEnumOscar
+    enum: Of
   - name: uf
     description: FIFO Underflow Flag.
     bit_offset: 7
     bit_size: 1
-    enum: DacAlphaEnumZulu
+    enum: Uf
   - name: ptgcoco
     description: Period Trigger Mode Conversion Complete Flag.
     bit_offset: 8
     bit_size: 1
-    enum: DacAlphaEnumQuebec
+    enum: Ptgcoco2
 fieldset/DacAlphaFieldsetFoxtrot:
   description: Global Control.
   fields:
@@ -151,7 +151,7 @@ fieldset/DacAlphaFieldsetFoxtrot:
     description: DAC Enable.
     bit_offset: 0
     bit_size: 1
-    enum: DacAlphaEnumCharlie
+    enum: Dacen
   - name: dacrfs
     description: DAC Reference Select.
     bit_offset: 1
@@ -161,22 +161,22 @@ fieldset/DacAlphaFieldsetFoxtrot:
     description: FIFO Enable.
     bit_offset: 3
     bit_size: 1
-    enum: DacAlphaEnumHotel
+    enum: Fifoen2
   - name: swmd
     description: Swing Back Mode.
     bit_offset: 4
     bit_size: 1
-    enum: DacAlphaEnumVictor
+    enum: Swmd
   - name: trgsel
     description: DAC Trigger Select.
     bit_offset: 5
     bit_size: 1
-    enum: DacAlphaEnumYankee
+    enum: Trgsel2
   - name: ptgen
     description: DAC Periodic Trigger Mode Enable.
     bit_offset: 6
     bit_size: 1
-    enum: DacAlphaEnumSierra
+    enum: Dacen
   - name: latch_cyc
     description: RCLK Cycles Before Data Latch.
     bit_offset: 8
@@ -185,69 +185,69 @@ fieldset/DacAlphaFieldsetFoxtrot:
     description: Buffer Enable.
     bit_offset: 17
     bit_size: 1
-    enum: DacAlphaEnumAlpha
+    enum: BufEn2
   - name: iref_ptat_ext_sel
     description: External On-Chip PTAT Current Reference Select.
     bit_offset: 20
     bit_size: 1
-    enum: DacAlphaEnumMike
+    enum: IrefPtatExtSel
   - name: iref_ztc_ext_sel
     description: External On-Chip ZTC Current Reference Select.
     bit_offset: 21
     bit_size: 1
-    enum: DacAlphaEnumNovember
+    enum: IrefPtatExtSel
   - name: buf_spd_ctrl
     description: OPAMP as Buffer, Speed Control Signal.
     bit_offset: 23
     bit_size: 1
     enum: DacAlphaEnumBravo
-fieldset/DacAlphaFieldsetGolf:
+fieldset/Ier2:
   description: Interrupt Enable.
   fields:
   - name: full_ie
     description: FIFO Full Interrupt Enable.
     bit_offset: 0
     bit_size: 1
-    enum: DacAlphaEnumLima
+    enum: Dacen
   - name: empty_ie
     description: FIFO Empty Interrupt Enable.
     bit_offset: 1
     bit_size: 1
-    enum: DacAlphaEnumGolf
+    enum: Dacen
   - name: wm_ie
     description: FIFO Watermark Interrupt Enable.
     bit_offset: 2
     bit_size: 1
-    enum: DacAlphaEnumDeltaAlpha
+    enum: Dacen
   - name: swbk_ie
     description: Swing Back One Cycle Complete Interrupt Enable.
     bit_offset: 3
     bit_size: 1
-    enum: DacAlphaEnumUniform
+    enum: Dacen
   - name: of_ie
     description: FIFO Overflow Interrupt Enable.
     bit_offset: 6
     bit_size: 1
-    enum: DacAlphaEnumPapa
+    enum: Dacen
   - name: uf_ie
     description: FIFO Underflow Interrupt Enable.
     bit_offset: 7
     bit_size: 1
-    enum: DacAlphaEnumAlphaAlpha
+    enum: Dacen
   - name: ptgcoco_ie
     description: PTG Mode Conversion Complete Interrupt Enable.
     bit_offset: 8
     bit_size: 1
-    enum: DacAlphaEnumRomeo
-fieldset/DacAlphaFieldsetHotel:
+    enum: Dacen
+fieldset/Param3:
   description: Parameter.
   fields:
   - name: fifosz
     description: FIFO Size.
     bit_offset: 0
     bit_size: 3
-    enum: DacAlphaEnumJuliet
-fieldset/DacAlphaFieldsetIndia:
+    enum: Fifosz2
+fieldset/Pcr8:
   description: Periodic Trigger Control.
   fields:
   - name: ptg_num
@@ -258,28 +258,28 @@ fieldset/DacAlphaFieldsetIndia:
     description: Periodic Trigger Period Width.
     bit_offset: 16
     bit_size: 16
-fieldset/DacAlphaFieldsetJuliet:
+fieldset/Rcr2:
   description: Reset Control.
   fields:
   - name: swrst
     description: Software Reset.
     bit_offset: 0
     bit_size: 1
-    enum: DacAlphaEnumWhiskey
+    enum: Swrst2
   - name: fiforst
     description: FIFO Reset.
     bit_offset: 1
     bit_size: 1
-    enum: DacAlphaEnumIndia
-fieldset/DacAlphaFieldsetKilo:
+    enum: Fiforst2
+fieldset/Tcr2:
   description: Trigger Control.
   fields:
   - name: swtrg
     description: Software Trigger.
     bit_offset: 0
     bit_size: 1
-    enum: DacAlphaEnumXray
-fieldset/DacAlphaFieldsetLima:
+    enum: Swtrg
+fieldset/Verid3:
   description: Version Identifier.
   fields:
   - name: feature
@@ -294,7 +294,7 @@ fieldset/DacAlphaFieldsetLima:
     description: Major Version Number.
     bit_offset: 24
     bit_size: 8
-enum/DacAlphaEnumAlpha:
+enum/BufEn2:
   bit_size: 1
   variants:
   - name: NoUseBuf
@@ -312,15 +312,6 @@ enum/DacAlphaEnumBravo:
   - name: LpMode
     description: Low-Power mode.
     value: 1
-enum/DacAlphaEnumCharlie:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
 enum/DacAlphaEnumDelta:
   bit_size: 2
   variants:
@@ -333,7 +324,7 @@ enum/DacAlphaEnumDelta:
   - name: Vrefh2
     description: Selects VREFH2 as the reference voltage.
     value: 2
-enum/DacAlphaEnumEcho:
+enum/Empty:
   bit_size: 1
   variants:
   - name: Empty
@@ -342,7 +333,7 @@ enum/DacAlphaEnumEcho:
   - name: NotEmpty
     description: Not empty.
     value: 0
-enum/DacAlphaEnumFoxtrot:
+enum/Dacen:
   bit_size: 1
   variants:
   - name: Disabled
@@ -351,16 +342,7 @@ enum/DacAlphaEnumFoxtrot:
   - name: Enabled
     description: Enables.
     value: 1
-enum/DacAlphaEnumGolf:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
-enum/DacAlphaEnumHotel:
+enum/Fifoen2:
   bit_size: 1
   variants:
   - name: BufferMode
@@ -369,40 +351,7 @@ enum/DacAlphaEnumHotel:
   - name: FifoMode
     description: Enables FIFO mode. Data will be first read from FIFO to buffer and then goes to conversion.
     value: 1
-enum/DacAlphaEnumIndia:
-  bit_size: 1
-  variants:
-  - name: FifoReset
-    description: FIFO reset.
-    value: 1
-  - name: NoEffect
-    description: No effect.
-    value: 0
-enum/DacAlphaEnumJuliet:
-  bit_size: 3
-  variants:
-  - name: Val1
-    description: FIFO depth is 4.
-    value: 1
-  - name: Val2
-    description: FIFO depth is 8.
-    value: 2
-  - name: Val3
-    description: FIFO depth is 16.
-    value: 3
-  - name: Val4
-    description: FIFO depth is 32.
-    value: 4
-  - name: Val5
-    description: FIFO depth is 64.
-    value: 5
-  - name: Val6
-    description: FIFO depth is 128.
-    value: 6
-  - name: Val7
-    description: FIFO depth is 256.
-    value: 7
-enum/DacAlphaEnumKilo:
+enum/Full2:
   bit_size: 1
   variants:
   - name: Full
@@ -411,16 +360,7 @@ enum/DacAlphaEnumKilo:
   - name: NotFull
     description: Not full.
     value: 0
-enum/DacAlphaEnumLima:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
-enum/DacAlphaEnumMike:
+enum/IrefPtatExtSel:
   bit_size: 1
   variants:
   - name: NotSelected
@@ -429,97 +369,7 @@ enum/DacAlphaEnumMike:
   - name: Selected
     description: Selected.
     value: 1
-enum/DacAlphaEnumNovember:
-  bit_size: 1
-  variants:
-  - name: NotSelected
-    description: Not selected.
-    value: 0
-  - name: Selected
-    description: Selected.
-    value: 1
-enum/DacAlphaEnumOscar:
-  bit_size: 1
-  variants:
-  - name: NoOverflow
-    description: No overflow has occurred since the last time the flag was cleared.
-    value: 0
-  - name: Overflow
-    description: At least one FIFO overflow has occurred since the last time the flag was cleared.
-    value: 1
-enum/DacAlphaEnumPapa:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
-enum/DacAlphaEnumQuebec:
-  bit_size: 1
-  variants:
-  - name: Completed
-    description: Completed.
-    value: 1
-  - name: NotStart
-    description: Not completed or not started.
-    value: 0
-enum/DacAlphaEnumRomeo:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
-enum/DacAlphaEnumSierra:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
-enum/DacAlphaEnumTango:
-  bit_size: 1
-  variants:
-  - name: NoSwing
-    description: No swing back cycle has completed since the last time the flag was cleared.
-    value: 0
-  - name: SwingBack
-    description: At least one swing back cycle has occurred since the last time the flag was cleared.
-    value: 1
-enum/DacAlphaEnumUniform:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
-enum/DacAlphaEnumVictor:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/DacAlphaEnumWhiskey:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: No effect.
-    value: 0
-  - name: SoftwareReset
-    description: Software reset.
-    value: 1
-enum/DacAlphaEnumXray:
+enum/Swtrg:
   bit_size: 1
   variants:
   - name: NotValid
@@ -528,7 +378,7 @@ enum/DacAlphaEnumXray:
   - name: Valid
     description: Valid.
     value: 1
-enum/DacAlphaEnumYankee:
+enum/Trgsel2:
   bit_size: 1
   variants:
   - name: Hardware
@@ -537,7 +387,7 @@ enum/DacAlphaEnumYankee:
   - name: Software
     description: Software trigger.
     value: 1
-enum/DacAlphaEnumZulu:
+enum/Uf:
   bit_size: 1
   variants:
   - name: NoUnderflow
@@ -546,42 +396,6 @@ enum/DacAlphaEnumZulu:
   - name: Underflow
     description: At least one trigger underflow has occurred since the last time the flag was cleared.
     value: 1
-enum/DacAlphaEnumAlphaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
-enum/DacAlphaEnumBravoAlpha:
-  bit_size: 1
-  variants:
-  - name: LessThanWlevel
-    description: Data in FIFO is less than or equal to watermark level.
-    value: 1
-  - name: MoreThanWlevel
-    description: Data in FIFO is more than watermark level.
-    value: 0
-enum/DacAlphaEnumCharlieAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
-enum/DacAlphaEnumDeltaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
 block/DacBravo:
   description: 14-bit DAC.
   items:
@@ -589,12 +403,12 @@ block/DacBravo:
     description: Version Identifier.
     byte_offset: 0
     access: Read
-    fieldset: DacBravoFieldsetLima
+    fieldset: Verid3
   - name: param
     description: Parameter.
     byte_offset: 4
     access: Read
-    fieldset: DacBravoFieldsetHotel
+    fieldset: Param3
   - name: data
     description: Data.
     byte_offset: 8
@@ -615,27 +429,27 @@ block/DacBravo:
   - name: fsr
     description: FIFO Status.
     byte_offset: 24
-    fieldset: DacBravoFieldsetEcho
+    fieldset: Fsr2
   - name: ier
     description: Interrupt Enable.
     byte_offset: 28
-    fieldset: DacBravoFieldsetGolf
+    fieldset: Ier2
   - name: der
     description: DMA Enable.
     byte_offset: 32
-    fieldset: DacBravoFieldsetBravo
+    fieldset: Der2
   - name: rcr
     description: Reset Control.
     byte_offset: 36
-    fieldset: DacBravoFieldsetJuliet
+    fieldset: Rcr2
   - name: tcr
     description: Trigger Control.
     byte_offset: 40
-    fieldset: DacBravoFieldsetKilo
+    fieldset: Tcr2
   - name: pcr
     description: Periodic Trigger Control.
     byte_offset: 44
-    fieldset: DacBravoFieldsetIndia
+    fieldset: Pcr8
 fieldset/DacBravoFieldsetAlpha:
   description: Data.
   fields:
@@ -643,19 +457,6 @@ fieldset/DacBravoFieldsetAlpha:
     description: FIFO Entry or Buffer Entry.
     bit_offset: 0
     bit_size: 14
-fieldset/DacBravoFieldsetBravo:
-  description: DMA Enable.
-  fields:
-  - name: empty_dmaen
-    description: FIFO Empty DMA Enable.
-    bit_offset: 1
-    bit_size: 1
-    enum: DacBravoEnumDelta
-  - name: wm_dmaen
-    description: FIFO Watermark DMA Enable.
-    bit_offset: 2
-    bit_size: 1
-    enum: DacBravoEnumYankee
 fieldset/DacBravoFieldsetCharlie:
   description: DAC FIFO Control.
   fields:
@@ -674,44 +475,6 @@ fieldset/DacBravoFieldsetDelta:
     description: FIFO Write Pointer.
     bit_offset: 16
     bit_size: 5
-fieldset/DacBravoFieldsetEcho:
-  description: FIFO Status.
-  fields:
-  - name: full
-    description: FIFO Full Flag.
-    bit_offset: 0
-    bit_size: 1
-    enum: DacBravoEnumIndia
-  - name: empty
-    description: FIFO Empty Flag.
-    bit_offset: 1
-    bit_size: 1
-    enum: DacBravoEnumCharlie
-  - name: wm
-    description: FIFO Watermark Status Flag.
-    bit_offset: 2
-    bit_size: 1
-    enum: DacBravoEnumXray
-  - name: swbk
-    description: Swing Back One Cycle Complete Flag.
-    bit_offset: 3
-    bit_size: 1
-    enum: DacBravoEnumPapa
-  - name: of
-    description: FIFO Overflow Flag.
-    bit_offset: 6
-    bit_size: 1
-    enum: DacBravoEnumKilo
-  - name: uf
-    description: FIFO Underflow Flag.
-    bit_offset: 7
-    bit_size: 1
-    enum: DacBravoEnumVictor
-  - name: ptgcoco
-    description: Period Trigger Mode Conversion Complete Flag.
-    bit_offset: 8
-    bit_size: 1
-    enum: DacBravoEnumMike
 fieldset/DacBravoFieldsetFoxtrot:
   description: Global Control.
   fields:
@@ -719,180 +482,33 @@ fieldset/DacBravoFieldsetFoxtrot:
     description: DAC Enable.
     bit_offset: 0
     bit_size: 1
-    enum: DacBravoEnumBravo
+    enum: Dacen
   - name: fifoen
     description: FIFO Enable.
     bit_offset: 3
     bit_size: 1
-    enum: DacBravoEnumFoxtrot
+    enum: Fifoen2
   - name: swmd
     description: Swing Back Mode.
     bit_offset: 4
     bit_size: 1
-    enum: DacBravoEnumRomeo
+    enum: Swmd
   - name: trgsel
     description: DAC Trigger Select.
     bit_offset: 5
     bit_size: 1
-    enum: DacBravoEnumUniform
+    enum: Trgsel2
   - name: ptgen
     description: DAC Periodic Trigger Mode Enable.
     bit_offset: 6
     bit_size: 1
-    enum: DacBravoEnumOscar
+    enum: Dacen
   - name: buf_en
     description: Buffer Enable.
     bit_offset: 17
     bit_size: 1
-    enum: DacBravoEnumAlpha
-fieldset/DacBravoFieldsetGolf:
-  description: Interrupt Enable.
-  fields:
-  - name: full_ie
-    description: FIFO Full Interrupt Enable.
-    bit_offset: 0
-    bit_size: 1
-    enum: DacBravoEnumJuliet
-  - name: empty_ie
-    description: FIFO Empty Interrupt Enable.
-    bit_offset: 1
-    bit_size: 1
-    enum: DacBravoEnumEcho
-  - name: wm_ie
-    description: FIFO Watermark Interrupt Enable.
-    bit_offset: 2
-    bit_size: 1
-    enum: DacBravoEnumZulu
-  - name: swbk_ie
-    description: Swing Back One Cycle Complete Interrupt Enable.
-    bit_offset: 3
-    bit_size: 1
-    enum: DacBravoEnumQuebec
-  - name: of_ie
-    description: FIFO Overflow Interrupt Enable.
-    bit_offset: 6
-    bit_size: 1
-    enum: DacBravoEnumLima
-  - name: uf_ie
-    description: FIFO Underflow Interrupt Enable.
-    bit_offset: 7
-    bit_size: 1
-    enum: DacBravoEnumWhiskey
-  - name: ptgcoco_ie
-    description: PTG Mode Conversion Complete Interrupt Enable.
-    bit_offset: 8
-    bit_size: 1
-    enum: DacBravoEnumNovember
-fieldset/DacBravoFieldsetHotel:
-  description: Parameter.
-  fields:
-  - name: fifosz
-    description: FIFO Size.
-    bit_offset: 0
-    bit_size: 3
-    enum: DacBravoEnumHotel
-fieldset/DacBravoFieldsetIndia:
-  description: Periodic Trigger Control.
-  fields:
-  - name: ptg_num
-    description: Periodic Trigger Number.
-    bit_offset: 0
-    bit_size: 16
-  - name: ptg_period
-    description: Periodic Trigger Period Width.
-    bit_offset: 16
-    bit_size: 16
-fieldset/DacBravoFieldsetJuliet:
-  description: Reset Control.
-  fields:
-  - name: swrst
-    description: Software Reset.
-    bit_offset: 0
-    bit_size: 1
-    enum: DacBravoEnumSierra
-  - name: fiforst
-    description: FIFO Reset.
-    bit_offset: 1
-    bit_size: 1
-    enum: DacBravoEnumGolf
-fieldset/DacBravoFieldsetKilo:
-  description: Trigger Control.
-  fields:
-  - name: swtrg
-    description: Software Trigger.
-    bit_offset: 0
-    bit_size: 1
-    enum: DacBravoEnumTango
-fieldset/DacBravoFieldsetLima:
-  description: Version Identifier.
-  fields:
-  - name: feature
-    description: Feature Identification Number.
-    bit_offset: 0
-    bit_size: 16
-  - name: minor
-    description: Minor Version Number.
-    bit_offset: 16
-    bit_size: 8
-  - name: major
-    description: Major Version Number.
-    bit_offset: 24
-    bit_size: 8
-enum/DacBravoEnumAlpha:
-  bit_size: 1
-  variants:
-  - name: NoUseBuf
-    description: Used.
-    value: 1
-  - name: UseBuf
-    description: Not used.
-    value: 0
-enum/DacBravoEnumBravo:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
-enum/DacBravoEnumCharlie:
-  bit_size: 1
-  variants:
-  - name: Empty
-    description: Empty.
-    value: 1
-  - name: NotEmpty
-    description: Not empty.
-    value: 0
-enum/DacBravoEnumDelta:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
-enum/DacBravoEnumEcho:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
-enum/DacBravoEnumFoxtrot:
-  bit_size: 1
-  variants:
-  - name: BufferMode
-    description: Enables FIFO mode and disables Buffer mode. Any data written to DATA[DATA] goes to buffer then goes to conversion.
-    value: 0
-  - name: FifoMode
-    description: Enables FIFO mode. Data will be first read from FIFO to buffer and then goes to conversion.
-    value: 1
-enum/DacBravoEnumGolf:
+    enum: BufEn2
+enum/Fiforst2:
   bit_size: 1
   variants:
   - name: FifoReset
@@ -901,7 +517,7 @@ enum/DacBravoEnumGolf:
   - name: NoEffect
     description: No effect.
     value: 0
-enum/DacBravoEnumHotel:
+enum/Fifosz2:
   bit_size: 3
   variants:
   - name: Val1
@@ -925,25 +541,7 @@ enum/DacBravoEnumHotel:
   - name: Val7
     description: FIFO depth is 256.
     value: 7
-enum/DacBravoEnumIndia:
-  bit_size: 1
-  variants:
-  - name: Full
-    description: Full.
-    value: 1
-  - name: NotFull
-    description: Not full.
-    value: 0
-enum/DacBravoEnumJuliet:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
-enum/DacBravoEnumKilo:
+enum/Of:
   bit_size: 1
   variants:
   - name: NoOverflow
@@ -952,16 +550,7 @@ enum/DacBravoEnumKilo:
   - name: Overflow
     description: At least one FIFO overflow has occurred since the last time the flag was cleared.
     value: 1
-enum/DacBravoEnumLima:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
-enum/DacBravoEnumMike:
+enum/Ptgcoco2:
   bit_size: 1
   variants:
   - name: Completed
@@ -970,25 +559,7 @@ enum/DacBravoEnumMike:
   - name: NotStart
     description: Not completed or not started.
     value: 0
-enum/DacBravoEnumNovember:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
-enum/DacBravoEnumOscar:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
-enum/DacBravoEnumPapa:
+enum/Swbk2:
   bit_size: 1
   variants:
   - name: NoSwing
@@ -997,16 +568,7 @@ enum/DacBravoEnumPapa:
   - name: SwingBack
     description: At least one swing back cycle has occurred since the last time the flag was cleared.
     value: 1
-enum/DacBravoEnumQuebec:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
-enum/DacBravoEnumRomeo:
+enum/Swmd:
   bit_size: 1
   variants:
   - name: Disable
@@ -1015,7 +577,7 @@ enum/DacBravoEnumRomeo:
   - name: Enable
     description: Enables.
     value: 1
-enum/DacBravoEnumSierra:
+enum/Swrst2:
   bit_size: 1
   variants:
   - name: NoEffect
@@ -1024,43 +586,7 @@ enum/DacBravoEnumSierra:
   - name: SoftwareReset
     description: Software reset.
     value: 1
-enum/DacBravoEnumTango:
-  bit_size: 1
-  variants:
-  - name: NotValid
-    description: Not valid.
-    value: 0
-  - name: Valid
-    description: Valid.
-    value: 1
-enum/DacBravoEnumUniform:
-  bit_size: 1
-  variants:
-  - name: Hardware
-    description: Hardware trigger.
-    value: 0
-  - name: Software
-    description: Software trigger.
-    value: 1
-enum/DacBravoEnumVictor:
-  bit_size: 1
-  variants:
-  - name: NoUnderflow
-    description: No underflow has occurred since the last time the flag was cleared.
-    value: 0
-  - name: Underflow
-    description: At least one trigger underflow has occurred since the last time the flag was cleared.
-    value: 1
-enum/DacBravoEnumWhiskey:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
-enum/DacBravoEnumXray:
+enum/Wm2:
   bit_size: 1
   variants:
   - name: LessThanWlevel
@@ -1069,21 +595,3 @@ enum/DacBravoEnumXray:
   - name: MoreThanWlevel
     description: Data in FIFO is more than watermark level.
     value: 0
-enum/DacBravoEnumYankee:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
-enum/DacBravoEnumZulu:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1

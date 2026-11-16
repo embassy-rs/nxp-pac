@@ -16,15 +16,15 @@ block/UsbphyAlpha:
   - name: pwd_set
     description: Power Down.
     byte_offset: 4
-    fieldset: UsbphyAlphaFieldsetAlphaAlpha
+    fieldset: PwdClr
   - name: pwd_clr
     description: Power Down.
     byte_offset: 8
-    fieldset: UsbphyAlphaFieldsetZulu
+    fieldset: PwdClr
   - name: pwd_tog
     description: Power Down.
     byte_offset: 12
-    fieldset: UsbphyAlphaFieldsetBravoAlpha
+    fieldset: PwdClr
   - name: tx
     description: TX Control.
     byte_offset: 16
@@ -32,15 +32,15 @@ block/UsbphyAlpha:
   - name: tx_set
     description: TX Control.
     byte_offset: 20
-    fieldset: UsbphyAlphaFieldsetNovemberAlpha
+    fieldset: TxClr
   - name: tx_clr
     description: TX Control.
     byte_offset: 24
-    fieldset: UsbphyAlphaFieldsetMikeAlpha
+    fieldset: TxClr
   - name: tx_tog
     description: TX Control.
     byte_offset: 28
-    fieldset: UsbphyAlphaFieldsetOscarAlpha
+    fieldset: TxClr
   - name: rx
     description: RX Control.
     byte_offset: 32
@@ -48,15 +48,15 @@ block/UsbphyAlpha:
   - name: rx_set
     description: RX Control.
     byte_offset: 36
-    fieldset: UsbphyAlphaFieldsetEchoAlpha
+    fieldset: RxClr
   - name: rx_clr
     description: RX Control.
     byte_offset: 40
-    fieldset: UsbphyAlphaFieldsetDeltaAlpha
+    fieldset: RxClr
   - name: rx_tog
     description: RX Control.
     byte_offset: 44
-    fieldset: UsbphyAlphaFieldsetFoxtrotAlpha
+    fieldset: RxClr
   - name: ctrl
     description: General Purpose Control.
     byte_offset: 48
@@ -64,15 +64,15 @@ block/UsbphyAlpha:
   - name: ctrl_set
     description: General Purpose Control.
     byte_offset: 52
-    fieldset: UsbphyAlphaFieldsetGolf
+    fieldset: CtrlClr
   - name: ctrl_clr
     description: General Purpose Control.
     byte_offset: 56
-    fieldset: UsbphyAlphaFieldsetFoxtrot
+    fieldset: CtrlClr
   - name: ctrl_tog
     description: General Purpose Control.
     byte_offset: 60
-    fieldset: UsbphyAlphaFieldsetHotel
+    fieldset: CtrlClr
   - name: status
     description: Status.
     byte_offset: 64
@@ -84,15 +84,15 @@ block/UsbphyAlpha:
   - name: debug0_set
     description: Debug 0.
     byte_offset: 84
-    fieldset: UsbphyAlphaFieldsetKilo
+    fieldset: DebugClr
   - name: debug0_clr
     description: Debug 0.
     byte_offset: 88
-    fieldset: UsbphyAlphaFieldsetJuliet
+    fieldset: DebugClr
   - name: debug0_tog
     description: Debug 0.
     byte_offset: 92
-    fieldset: UsbphyAlphaFieldsetLima
+    fieldset: DebugClr
   - name: version
     description: Version.
     byte_offset: 128
@@ -101,19 +101,19 @@ block/UsbphyAlpha:
   - name: ip
     description: IP Block.
     byte_offset: 144
-    fieldset: UsbphyAlphaFieldsetMike
+    fieldset: Ip2
   - name: ip_set
     description: IP Block.
     byte_offset: 148
-    fieldset: UsbphyAlphaFieldsetOscar
+    fieldset: Ip2
   - name: ip_clr
     description: IP Block.
     byte_offset: 152
-    fieldset: UsbphyAlphaFieldsetNovember
+    fieldset: Ip2
   - name: ip_tog
     description: IP Block.
     byte_offset: 156
-    fieldset: UsbphyAlphaFieldsetPapa
+    fieldset: Ip2
   - name: pll_sic
     description: PLL SIC.
     byte_offset: 160
@@ -121,15 +121,15 @@ block/UsbphyAlpha:
   - name: pll_sic_set
     description: PLL SIC.
     byte_offset: 164
-    fieldset: UsbphyAlphaFieldsetWhiskey
+    fieldset: PllSicClr
   - name: pll_sic_clr
     description: PLL SIC.
     byte_offset: 168
-    fieldset: UsbphyAlphaFieldsetVictor
+    fieldset: PllSicClr
   - name: pll_sic_tog
     description: PLL SIC.
     byte_offset: 172
-    fieldset: UsbphyAlphaFieldsetXray
+    fieldset: PllSicClr
   - name: usb1_vbus_detect
     description: VBUS Detect.
     byte_offset: 192
@@ -137,15 +137,15 @@ block/UsbphyAlpha:
   - name: usb1_vbus_detect_set
     description: VBUS Detect.
     byte_offset: 196
-    fieldset: UsbphyAlphaFieldsetDeltaBravo
+    fieldset: UsbVbusDetectClr
   - name: usb1_vbus_detect_clr
     description: VBUS Detect.
     byte_offset: 200
-    fieldset: UsbphyAlphaFieldsetCharlieBravo
+    fieldset: UsbVbusDetectClr
   - name: usb1_vbus_detect_tog
     description: VBUS Detect.
     byte_offset: 204
-    fieldset: UsbphyAlphaFieldsetEchoBravo
+    fieldset: UsbVbusDetectClr
   - name: usb1_vbus_det_stat
     description: VBUS Detect Status.
     byte_offset: 208
@@ -155,17 +155,17 @@ block/UsbphyAlpha:
     description: VBUS Detect Status.
     byte_offset: 212
     access: Read
-    fieldset: UsbphyAlphaFieldsetZuluAlpha
+    fieldset: UsbVbusDetStatClr
   - name: usb1_vbus_det_stat_clr
     description: VBUS Detect Status.
     byte_offset: 216
     access: Read
-    fieldset: UsbphyAlphaFieldsetYankeeAlpha
+    fieldset: UsbVbusDetStatClr
   - name: usb1_vbus_det_stat_tog
     description: VBUS Detect Status.
     byte_offset: 220
     access: Read
-    fieldset: UsbphyAlphaFieldsetAlphaBravo
+    fieldset: UsbVbusDetStatClr
   - name: usb1_chrg_detect
     description: Charger Detect.
     byte_offset: 224
@@ -173,15 +173,15 @@ block/UsbphyAlpha:
   - name: usb1_chrg_detect_set
     description: Charger Detect.
     byte_offset: 228
-    fieldset: UsbphyAlphaFieldsetVictorAlpha
+    fieldset: UsbChrgDetectClr
   - name: usb1_chrg_detect_clr
     description: Charger Detect.
     byte_offset: 232
-    fieldset: UsbphyAlphaFieldsetUniformAlpha
+    fieldset: UsbChrgDetectClr
   - name: usb1_chrg_detect_tog
     description: Charger Detect.
     byte_offset: 236
-    fieldset: UsbphyAlphaFieldsetWhiskeyAlpha
+    fieldset: UsbChrgDetectClr
   - name: usb1_chrg_det_stat
     description: Charger Detect Status.
     byte_offset: 240
@@ -191,17 +191,17 @@ block/UsbphyAlpha:
     description: Charger Detect Status.
     byte_offset: 244
     access: Read
-    fieldset: UsbphyAlphaFieldsetRomeoAlpha
+    fieldset: UsbChrgDetStatClr
   - name: usb1_chrg_det_stat_clr
     description: Charger Detect Status.
     byte_offset: 248
     access: Read
-    fieldset: UsbphyAlphaFieldsetQuebecAlpha
+    fieldset: UsbChrgDetStatClr
   - name: usb1_chrg_det_stat_tog
     description: Charger Detect Status.
     byte_offset: 252
     access: Read
-    fieldset: UsbphyAlphaFieldsetSierraAlpha
+    fieldset: UsbChrgDetStatClr
   - name: anactrl
     description: Analog Control.
     byte_offset: 256
@@ -209,15 +209,15 @@ block/UsbphyAlpha:
   - name: anactrl_set
     description: Analog Control.
     byte_offset: 260
-    fieldset: UsbphyAlphaFieldsetCharlie
+    fieldset: AnactrlClr
   - name: anactrl_clr
     description: Analog Control.
     byte_offset: 264
-    fieldset: UsbphyAlphaFieldsetBravo
+    fieldset: AnactrlClr
   - name: anactrl_tog
     description: Analog Control.
     byte_offset: 268
-    fieldset: UsbphyAlphaFieldsetDelta
+    fieldset: AnactrlClr
   - name: trim_override_en
     description: Trim.
     byte_offset: 304
@@ -225,15 +225,15 @@ block/UsbphyAlpha:
   - name: trim_override_en_set
     description: Trim.
     byte_offset: 308
-    fieldset: UsbphyAlphaFieldsetJulietAlpha
+    fieldset: TrimOverrideEnClr
   - name: trim_override_en_clr
     description: Trim.
     byte_offset: 312
-    fieldset: UsbphyAlphaFieldsetIndiaAlpha
+    fieldset: TrimOverrideEnClr
   - name: trim_override_en_tog
     description: Trim.
     byte_offset: 316
-    fieldset: UsbphyAlphaFieldsetKiloAlpha
+    fieldset: TrimOverrideEnClr
   - name: pfda
     description: PFD A.
     byte_offset: 320
@@ -241,15 +241,15 @@ block/UsbphyAlpha:
   - name: pfda_set
     description: PFD A.
     byte_offset: 324
-    fieldset: UsbphyAlphaFieldsetSierra
+    fieldset: PfdaClr
   - name: pfda_clr
     description: PFD A.
     byte_offset: 328
-    fieldset: UsbphyAlphaFieldsetRomeo
+    fieldset: PfdaClr
   - name: pfda_tog
     description: PFD A.
     byte_offset: 332
-    fieldset: UsbphyAlphaFieldsetTango
+    fieldset: PfdaClr
 fieldset/UsbphyAlphaFieldsetAlpha:
   description: Analog Control.
   fields:
@@ -268,37 +268,7 @@ fieldset/UsbphyAlphaFieldsetAlpha:
     bit_offset: 10
     bit_size: 1
     enum: UsbphyAlphaEnumKilo
-fieldset/UsbphyAlphaFieldsetBravo:
-  description: Analog Control.
-  fields:
-  - name: lvi_en
-    description: Internal Low Voltage Detector Enable.
-    bit_offset: 1
-    bit_size: 1
-  - name: pfd_clk_sel
-    description: PFD Clock Selection.
-    bit_offset: 2
-    bit_size: 2
-  - name: dev_pulldown
-    description: Device Pulldown Enable.
-    bit_offset: 10
-    bit_size: 1
-fieldset/UsbphyAlphaFieldsetCharlie:
-  description: Analog Control.
-  fields:
-  - name: lvi_en
-    description: Internal Low Voltage Detector Enable.
-    bit_offset: 1
-    bit_size: 1
-  - name: pfd_clk_sel
-    description: PFD Clock Selection.
-    bit_offset: 2
-    bit_size: 2
-  - name: dev_pulldown
-    description: Device Pulldown Enable.
-    bit_offset: 10
-    bit_size: 1
-fieldset/UsbphyAlphaFieldsetDelta:
+fieldset/AnactrlClr:
   description: Analog Control.
   fields:
   - name: lvi_en
@@ -320,17 +290,17 @@ fieldset/UsbphyAlphaFieldsetEcho:
     description: OTG ID Change Interrupt Enable.
     bit_offset: 0
     bit_size: 1
-    enum: UsbphyAlphaEnumCharlieAlpha
+    enum: Enutmilevel
   - name: enhostdiscondetect
     description: Host Disconnect Detection Enable.
     bit_offset: 1
     bit_size: 1
-    enum: UsbphyAlphaEnumWhiskey
+    enum: Enutmilevel
   - name: enirqhostdiscon
     description: Enable Interrupt for Host Disconnect.
     bit_offset: 2
     bit_size: 1
-    enum: UsbphyAlphaEnumZulu
+    enum: Enutmilevel
   - name: hostdiscondetect_irq
     description: Host Disconnect Detection Interrupt.
     bit_offset: 3
@@ -365,7 +335,7 @@ fieldset/UsbphyAlphaFieldsetEcho:
     description: Resume Detection Interrupt Enable.
     bit_offset: 9
     bit_size: 1
-    enum: UsbphyAlphaEnumAlphaAlpha
+    enum: Enutmilevel
   - name: resume_irq
     description: Resume Interrupt.
     bit_offset: 10
@@ -375,7 +345,7 @@ fieldset/UsbphyAlphaFieldsetEcho:
     description: Enable Interrupt for Nonstandard Resistive Plugged-In Detection.
     bit_offset: 11
     bit_size: 1
-    enum: UsbphyAlphaEnumYankee
+    enum: Enutmilevel
   - name: devplugin_irq
     description: Device Plug-In Interrupt.
     bit_offset: 12
@@ -388,17 +358,17 @@ fieldset/UsbphyAlphaFieldsetEcho:
     description: UTMI Level 2 Enable.
     bit_offset: 14
     bit_size: 1
-    enum: UsbphyAlphaEnumEchoAlpha
+    enum: Enutmilevel
   - name: enutmilevel3
     description: UTMI Level 3 Enable.
     bit_offset: 15
     bit_size: 1
-    enum: UsbphyAlphaEnumFoxtrotAlpha
+    enum: Enutmilevel
   - name: enirqwakeup
     description: Wake-Up Interrupt Enable.
     bit_offset: 16
     bit_size: 1
-    enum: UsbphyAlphaEnumBravoAlpha
+    enum: Enutmilevel
   - name: wakeup_irq
     description: Wake-Up Interrupt.
     bit_offset: 17
@@ -407,22 +377,22 @@ fieldset/UsbphyAlphaFieldsetEcho:
     description: Autoresume Enable.
     bit_offset: 18
     bit_size: 1
-    enum: UsbphyAlphaEnumAlpha
+    enum: Enutmilevel
   - name: enautoclr_clkgate
     description: Autoclear Clock Gate Enable.
     bit_offset: 19
     bit_size: 1
-    enum: UsbphyAlphaEnumTango
+    enum: Enutmilevel
   - name: enautoclr_phy_pwd
     description: PHY PWD Autoclear Enable.
     bit_offset: 20
     bit_size: 1
-    enum: UsbphyAlphaEnumUniform
+    enum: Enutmilevel
   - name: otg_id_value
     description: OTG ID Value.
     bit_offset: 27
     bit_size: 1
-    enum: UsbphyAlphaEnumRomeoAlpha
+    enum: OtgIdValue
   - name: utmi_suspendm
     description: UTMI Suspend.
     bit_offset: 29
@@ -438,213 +408,7 @@ fieldset/UsbphyAlphaFieldsetEcho:
     bit_offset: 31
     bit_size: 1
     enum: UsbphyAlphaEnumQuebecBravo
-fieldset/UsbphyAlphaFieldsetFoxtrot:
-  description: General Purpose Control.
-  fields:
-  - name: enotg_id_chg_irq
-    description: OTG ID Change Interrupt Enable.
-    bit_offset: 0
-    bit_size: 1
-  - name: enhostdiscondetect
-    description: Host Disconnect Detection Enable.
-    bit_offset: 1
-    bit_size: 1
-  - name: enirqhostdiscon
-    description: Enable Interrupt for Host Disconnect.
-    bit_offset: 2
-    bit_size: 1
-  - name: hostdiscondetect_irq
-    description: Host Disconnect Detection Interrupt.
-    bit_offset: 3
-    bit_size: 1
-  - name: endevplugindetect
-    description: Enable Nonstandard Resistive Plugged-In Detection.
-    bit_offset: 4
-    bit_size: 1
-  - name: devplugin_polarity
-    description: Device Plug-In Polarity.
-    bit_offset: 5
-    bit_size: 1
-  - name: otg_id_chg_irq
-    description: OTG ID Change Interrupt.
-    bit_offset: 6
-    bit_size: 1
-  - name: enotgiddetect
-    description: Enable Internal OTG ID Detector.
-    bit_offset: 7
-    bit_size: 1
-  - name: resumeirqsticky
-    description: Resume Interrupt Sticky.
-    bit_offset: 8
-    bit_size: 1
-  - name: enirqresumedetect
-    description: Resume Detection Interrupt Enable.
-    bit_offset: 9
-    bit_size: 1
-  - name: resume_irq
-    description: Resume Interrupt.
-    bit_offset: 10
-    bit_size: 1
-  - name: enirqdevplugin
-    description: Enable Interrupt for Nonstandard Resistive Plugged-In Detection.
-    bit_offset: 11
-    bit_size: 1
-  - name: devplugin_irq
-    description: Device Plug-In Interrupt.
-    bit_offset: 12
-    bit_size: 1
-  - name: data_on_lradc
-    description: APB Clock Switch Option.
-    bit_offset: 13
-    bit_size: 1
-  - name: enutmilevel2
-    description: UTMI Level 2 Enable.
-    bit_offset: 14
-    bit_size: 1
-  - name: enutmilevel3
-    description: UTMI Level 3 Enable.
-    bit_offset: 15
-    bit_size: 1
-  - name: enirqwakeup
-    description: Wake-Up Interrupt Enable.
-    bit_offset: 16
-    bit_size: 1
-  - name: wakeup_irq
-    description: Wake-Up Interrupt.
-    bit_offset: 17
-    bit_size: 1
-  - name: autoresume_en
-    description: Autoresume Enable.
-    bit_offset: 18
-    bit_size: 1
-  - name: enautoclr_clkgate
-    description: Autoclear Clock Gate Enable.
-    bit_offset: 19
-    bit_size: 1
-  - name: enautoclr_phy_pwd
-    description: PHY PWD Autoclear Enable.
-    bit_offset: 20
-    bit_size: 1
-  - name: otg_id_value
-    description: OTG ID Value.
-    bit_offset: 27
-    bit_size: 1
-  - name: utmi_suspendm
-    description: UTMI Suspend.
-    bit_offset: 29
-    bit_size: 1
-  - name: clkgate
-    description: UTMI Clock Gate.
-    bit_offset: 30
-    bit_size: 1
-  - name: sftrst
-    description: Software Reset.
-    bit_offset: 31
-    bit_size: 1
-fieldset/UsbphyAlphaFieldsetGolf:
-  description: General Purpose Control.
-  fields:
-  - name: enotg_id_chg_irq
-    description: OTG ID Change Interrupt Enable.
-    bit_offset: 0
-    bit_size: 1
-  - name: enhostdiscondetect
-    description: Host Disconnect Detection Enable.
-    bit_offset: 1
-    bit_size: 1
-  - name: enirqhostdiscon
-    description: Enable Interrupt for Host Disconnect.
-    bit_offset: 2
-    bit_size: 1
-  - name: hostdiscondetect_irq
-    description: Host Disconnect Detection Interrupt.
-    bit_offset: 3
-    bit_size: 1
-  - name: endevplugindetect
-    description: Enable Nonstandard Resistive Plugged-In Detection.
-    bit_offset: 4
-    bit_size: 1
-  - name: devplugin_polarity
-    description: Device Plug-In Polarity.
-    bit_offset: 5
-    bit_size: 1
-  - name: otg_id_chg_irq
-    description: OTG ID Change Interrupt.
-    bit_offset: 6
-    bit_size: 1
-  - name: enotgiddetect
-    description: Enable Internal OTG ID Detector.
-    bit_offset: 7
-    bit_size: 1
-  - name: resumeirqsticky
-    description: Resume Interrupt Sticky.
-    bit_offset: 8
-    bit_size: 1
-  - name: enirqresumedetect
-    description: Resume Detection Interrupt Enable.
-    bit_offset: 9
-    bit_size: 1
-  - name: resume_irq
-    description: Resume Interrupt.
-    bit_offset: 10
-    bit_size: 1
-  - name: enirqdevplugin
-    description: Enable Interrupt for Nonstandard Resistive Plugged-In Detection.
-    bit_offset: 11
-    bit_size: 1
-  - name: devplugin_irq
-    description: Device Plug-In Interrupt.
-    bit_offset: 12
-    bit_size: 1
-  - name: data_on_lradc
-    description: APB Clock Switch Option.
-    bit_offset: 13
-    bit_size: 1
-  - name: enutmilevel2
-    description: UTMI Level 2 Enable.
-    bit_offset: 14
-    bit_size: 1
-  - name: enutmilevel3
-    description: UTMI Level 3 Enable.
-    bit_offset: 15
-    bit_size: 1
-  - name: enirqwakeup
-    description: Wake-Up Interrupt Enable.
-    bit_offset: 16
-    bit_size: 1
-  - name: wakeup_irq
-    description: Wake-Up Interrupt.
-    bit_offset: 17
-    bit_size: 1
-  - name: autoresume_en
-    description: Autoresume Enable.
-    bit_offset: 18
-    bit_size: 1
-  - name: enautoclr_clkgate
-    description: Autoclear Clock Gate Enable.
-    bit_offset: 19
-    bit_size: 1
-  - name: enautoclr_phy_pwd
-    description: PHY PWD Autoclear Enable.
-    bit_offset: 20
-    bit_size: 1
-  - name: otg_id_value
-    description: OTG ID Value.
-    bit_offset: 27
-    bit_size: 1
-  - name: utmi_suspendm
-    description: UTMI Suspend.
-    bit_offset: 29
-    bit_size: 1
-  - name: clkgate
-    description: UTMI Clock Gate.
-    bit_offset: 30
-    bit_size: 1
-  - name: sftrst
-    description: Software Reset.
-    bit_offset: 31
-    bit_size: 1
-fieldset/UsbphyAlphaFieldsetHotel:
+fieldset/CtrlClr:
   description: General Purpose Control.
   fields:
   - name: enotg_id_chg_irq
@@ -764,7 +528,7 @@ fieldset/UsbphyAlphaFieldsetIndia:
     bit_offset: 4
     bit_size: 2
     enum: UsbphyAlphaEnumXray
-fieldset/UsbphyAlphaFieldsetJuliet:
+fieldset/DebugClr:
   description: Debug 0.
   fields:
   - name: otgidpiolock
@@ -779,58 +543,7 @@ fieldset/UsbphyAlphaFieldsetJuliet:
     description: Enable Host Pulldown Overdrive Mode.
     bit_offset: 4
     bit_size: 2
-fieldset/UsbphyAlphaFieldsetKilo:
-  description: Debug 0.
-  fields:
-  - name: otgidpiolock
-    description: Hold OTG_ID.
-    bit_offset: 0
-    bit_size: 1
-  - name: hstpulldown
-    description: Host Pulldown Overdrive Mode.
-    bit_offset: 2
-    bit_size: 2
-  - name: enhstpulldown
-    description: Enable Host Pulldown Overdrive Mode.
-    bit_offset: 4
-    bit_size: 2
-fieldset/UsbphyAlphaFieldsetLima:
-  description: Debug 0.
-  fields:
-  - name: otgidpiolock
-    description: Hold OTG_ID.
-    bit_offset: 0
-    bit_size: 1
-  - name: hstpulldown
-    description: Host Pulldown Overdrive Mode.
-    bit_offset: 2
-    bit_size: 2
-  - name: enhstpulldown
-    description: Enable Host Pulldown Overdrive Mode.
-    bit_offset: 4
-    bit_size: 2
-fieldset/UsbphyAlphaFieldsetMike:
-  description: IP Block.
-  fields:
-  - name: power_control_suspend_option
-    description: Power Control Suspend Option.
-    bit_offset: 0
-    bit_size: 1
-fieldset/UsbphyAlphaFieldsetNovember:
-  description: IP Block.
-  fields:
-  - name: power_control_suspend_option
-    description: Power Control Suspend Option.
-    bit_offset: 0
-    bit_size: 1
-fieldset/UsbphyAlphaFieldsetOscar:
-  description: IP Block.
-  fields:
-  - name: power_control_suspend_option
-    description: Power Control Suspend Option.
-    bit_offset: 0
-    bit_size: 1
-fieldset/UsbphyAlphaFieldsetPapa:
+fieldset/Ip2:
   description: IP Block.
   fields:
   - name: power_control_suspend_option
@@ -854,37 +567,7 @@ fieldset/UsbphyAlphaFieldsetQuebec:
     bit_offset: 7
     bit_size: 1
     enum: UsbphyAlphaEnumUniformAlpha
-fieldset/UsbphyAlphaFieldsetRomeo:
-  description: PFD A.
-  fields:
-  - name: pfd0_clkgate
-    description: PFD0 Clock Gate.
-    bit_offset: 0
-    bit_size: 1
-  - name: pfd0_frac
-    description: PFD0 Fractional Divider.
-    bit_offset: 1
-    bit_size: 6
-  - name: pfd0_stable
-    description: PFD0 Stable Signal.
-    bit_offset: 7
-    bit_size: 1
-fieldset/UsbphyAlphaFieldsetSierra:
-  description: PFD A.
-  fields:
-  - name: pfd0_clkgate
-    description: PFD0 Clock Gate.
-    bit_offset: 0
-    bit_size: 1
-  - name: pfd0_frac
-    description: PFD0 Fractional Divider.
-    bit_offset: 1
-    bit_size: 6
-  - name: pfd0_stable
-    description: PFD0 Stable Signal.
-    bit_offset: 7
-    bit_size: 1
-fieldset/UsbphyAlphaFieldsetTango:
+fieldset/PfdaClr:
   description: PFD A.
   fields:
   - name: pfd0_clkgate
@@ -957,101 +640,7 @@ fieldset/UsbphyAlphaFieldsetUniform:
     bit_offset: 31
     bit_size: 1
     enum: UsbphyAlphaEnumAlphaBravo
-fieldset/UsbphyAlphaFieldsetVictor:
-  description: PLL SIC.
-  fields:
-  - name: misc2_control0
-    description: Miscellaneous Control.
-    bit_offset: 5
-    bit_size: 1
-  - name: pll_en_usb_clks
-    description: PLL Multi-Phase Clock Outputs Enable.
-    bit_offset: 6
-    bit_size: 1
-  - name: pll_power
-    description: USB PLL Powerup Control.
-    bit_offset: 12
-    bit_size: 1
-  - name: pll_enable
-    description: PLL Output Clock Enable.
-    bit_offset: 13
-    bit_size: 1
-  - name: pll_bypass
-    description: Bypass USB PLL.
-    bit_offset: 16
-    bit_size: 1
-  - name: refbias_pwd_sel
-    description: Reference Bias Power Control.
-    bit_offset: 19
-    bit_size: 1
-  - name: refbias_pwd
-    description: Power Down Reference Bias.
-    bit_offset: 20
-    bit_size: 1
-  - name: pll_reg_enable
-    description: Enable PLL Regulator.
-    bit_offset: 21
-    bit_size: 1
-  - name: pll_div_sel
-    description: PLL Divider Value Configuration.
-    bit_offset: 22
-    bit_size: 3
-  - name: pll_prediv
-    description: Predivide selector between /1 or /2 to expand the range of the USB PLL input clock.
-    bit_offset: 30
-    bit_size: 1
-  - name: pll_lock
-    description: USB PLL Lock Status Indicator.
-    bit_offset: 31
-    bit_size: 1
-fieldset/UsbphyAlphaFieldsetWhiskey:
-  description: PLL SIC.
-  fields:
-  - name: misc2_control0
-    description: Miscellaneous Control.
-    bit_offset: 5
-    bit_size: 1
-  - name: pll_en_usb_clks
-    description: PLL Multi-Phase Clock Outputs Enable.
-    bit_offset: 6
-    bit_size: 1
-  - name: pll_power
-    description: USB PLL Powerup Control.
-    bit_offset: 12
-    bit_size: 1
-  - name: pll_enable
-    description: PLL Output Clock Enable.
-    bit_offset: 13
-    bit_size: 1
-  - name: pll_bypass
-    description: Bypass USB PLL.
-    bit_offset: 16
-    bit_size: 1
-  - name: refbias_pwd_sel
-    description: Reference Bias Power Control.
-    bit_offset: 19
-    bit_size: 1
-  - name: refbias_pwd
-    description: Power Down Reference Bias.
-    bit_offset: 20
-    bit_size: 1
-  - name: pll_reg_enable
-    description: Enable PLL Regulator.
-    bit_offset: 21
-    bit_size: 1
-  - name: pll_div_sel
-    description: PLL Divider Value Configuration.
-    bit_offset: 22
-    bit_size: 3
-  - name: pll_prediv
-    description: Predivide selector between /1 or /2 to expand the range of the USB PLL input clock.
-    bit_offset: 30
-    bit_size: 1
-  - name: pll_lock
-    description: USB PLL Lock Status Indicator.
-    bit_offset: 31
-    bit_size: 1
-fieldset/UsbphyAlphaFieldsetXray:
+fieldset/PllSicClr:
   description: PLL SIC.
   fields:
   - name: misc2_control0
@@ -1136,69 +725,7 @@ fieldset/UsbphyAlphaFieldsetYankee:
     bit_offset: 20
     bit_size: 1
     enum: UsbphyAlphaEnumNovemberBravo
-fieldset/UsbphyAlphaFieldsetZulu:
-  description: Power Down.
-  fields:
-  - name: txpwdfs
-    description: Power Down USB FS TX Drivers.
-    bit_offset: 10
-    bit_size: 1
-  - name: txpwdibias
-    description: Power Down USBPHY TX Current Bias Block.
-    bit_offset: 11
-    bit_size: 1
-  - name: txpwdv2i
-    description: Power Down USBPHY TX V-I Converter and Current Mirror.
-    bit_offset: 12
-    bit_size: 1
-  - name: rxpwdenv
-    description: Power Down USB HS RX Envelope Detector.
-    bit_offset: 17
-    bit_size: 1
-  - name: rxpwd1pt1
-    description: Power Down USB FS Differential Receiver.
-    bit_offset: 18
-    bit_size: 1
-  - name: rxpwddiff
-    description: Power Down USB HS Differential Receiver.
-    bit_offset: 19
-    bit_size: 1
-  - name: rxpwdrx
-    description: Power Down USBPHY Receiver Circuits.
-    bit_offset: 20
-    bit_size: 1
-fieldset/UsbphyAlphaFieldsetAlphaAlpha:
-  description: Power Down.
-  fields:
-  - name: txpwdfs
-    description: Power Down USB FS TX Drivers.
-    bit_offset: 10
-    bit_size: 1
-  - name: txpwdibias
-    description: Power Down USBPHY TX Current Bias Block.
-    bit_offset: 11
-    bit_size: 1
-  - name: txpwdv2i
-    description: Power Down USBPHY TX V-I Converter and Current Mirror.
-    bit_offset: 12
-    bit_size: 1
-  - name: rxpwdenv
-    description: Power Down USB HS RX Envelope Detector.
-    bit_offset: 17
-    bit_size: 1
-  - name: rxpwd1pt1
-    description: Power Down USB FS Differential Receiver.
-    bit_offset: 18
-    bit_size: 1
-  - name: rxpwddiff
-    description: Power Down USB HS Differential Receiver.
-    bit_offset: 19
-    bit_size: 1
-  - name: rxpwdrx
-    description: Power Down USBPHY Receiver Circuits.
-    bit_offset: 20
-    bit_size: 1
-fieldset/UsbphyAlphaFieldsetBravoAlpha:
+fieldset/PwdClr:
   description: Power Down.
   fields:
   - name: txpwdfs
@@ -1242,29 +769,7 @@ fieldset/UsbphyAlphaFieldsetCharlieAlpha:
     bit_offset: 4
     bit_size: 3
     enum: UsbphyAlphaEnumOscar
-fieldset/UsbphyAlphaFieldsetDeltaAlpha:
-  description: RX Control.
-  fields:
-  - name: envadj
-    description: Envelope Detector Trip Point.
-    bit_offset: 0
-    bit_size: 3
-  - name: disconadj
-    description: Disconnect Detector Trip Point.
-    bit_offset: 4
-    bit_size: 3
-fieldset/UsbphyAlphaFieldsetEchoAlpha:
-  description: RX Control.
-  fields:
-  - name: envadj
-    description: Envelope Detector Trip Point.
-    bit_offset: 0
-    bit_size: 3
-  - name: disconadj
-    description: Disconnect Detector Trip Point.
-    bit_offset: 4
-    bit_size: 3
-fieldset/UsbphyAlphaFieldsetFoxtrotAlpha:
+fieldset/RxClr:
   description: RX Control.
   fields:
   - name: envadj
@@ -1297,7 +802,7 @@ fieldset/UsbphyAlphaFieldsetGolfAlpha:
     description: OTG ID Status.
     bit_offset: 8
     bit_size: 1
-    enum: UsbphyAlphaEnumSierraAlpha
+    enum: OtgIdValue
   - name: resume_status
     description: Resume Status.
     bit_offset: 10
@@ -1333,7 +838,7 @@ fieldset/UsbphyAlphaFieldsetHotelAlpha:
     description: HS TX Output Current Trim Bits from Outside USBPHY.
     bit_offset: 20
     bit_size: 4
-    enum: UsbphyAlphaEnumXrayBravo
+    enum: DCal
   - name: usbphy_tx_cal45dp
     description: DP Series Termination Resistance Trim Bits from Outside USBPHY.
     bit_offset: 24
@@ -1342,77 +847,7 @@ fieldset/UsbphyAlphaFieldsetHotelAlpha:
     description: DM Series Termination Resistance Trim Bits from Outside USBPHY.
     bit_offset: 28
     bit_size: 4
-fieldset/UsbphyAlphaFieldsetIndiaAlpha:
-  description: Trim.
-  fields:
-  - name: div_sel_override
-    description: Override Enable for PLL Divider Value.
-    bit_offset: 0
-    bit_size: 1
-  - name: tx_d_cal_override
-    description: Override Enable for HS TX Output Current Trim.
-    bit_offset: 2
-    bit_size: 1
-  - name: tx_cal45dp_override
-    description: Override Enable for USB_DP Series Termination Trim.
-    bit_offset: 3
-    bit_size: 1
-  - name: tx_cal45dm_override
-    description: Override Enable for USB_DM Series Termination Trim.
-    bit_offset: 4
-    bit_size: 1
-  - name: pll_ctrl0_div_sel
-    description: PLL Divider Value Configuration Bits from Outside USBPHY.
-    bit_offset: 15
-    bit_size: 3
-  - name: usbphy_tx_d_cal
-    description: HS TX Output Current Trim Bits from Outside USBPHY.
-    bit_offset: 20
-    bit_size: 4
-  - name: usbphy_tx_cal45dp
-    description: DP Series Termination Resistance Trim Bits from Outside USBPHY.
-    bit_offset: 24
-    bit_size: 4
-  - name: usbphy_tx_cal45dn
-    description: DM Series Termination Resistance Trim Bits from Outside USBPHY.
-    bit_offset: 28
-    bit_size: 4
-fieldset/UsbphyAlphaFieldsetJulietAlpha:
-  description: Trim.
-  fields:
-  - name: div_sel_override
-    description: Override Enable for PLL Divider Value.
-    bit_offset: 0
-    bit_size: 1
-  - name: tx_d_cal_override
-    description: Override Enable for HS TX Output Current Trim.
-    bit_offset: 2
-    bit_size: 1
-  - name: tx_cal45dp_override
-    description: Override Enable for USB_DP Series Termination Trim.
-    bit_offset: 3
-    bit_size: 1
-  - name: tx_cal45dm_override
-    description: Override Enable for USB_DM Series Termination Trim.
-    bit_offset: 4
-    bit_size: 1
-  - name: pll_ctrl0_div_sel
-    description: PLL Divider Value Configuration Bits from Outside USBPHY.
-    bit_offset: 15
-    bit_size: 3
-  - name: usbphy_tx_d_cal
-    description: HS TX Output Current Trim Bits from Outside USBPHY.
-    bit_offset: 20
-    bit_size: 4
-  - name: usbphy_tx_cal45dp
-    description: DP Series Termination Resistance Trim Bits from Outside USBPHY.
-    bit_offset: 24
-    bit_size: 4
-  - name: usbphy_tx_cal45dn
-    description: DM Series Termination Resistance Trim Bits from Outside USBPHY.
-    bit_offset: 28
-    bit_size: 4
-fieldset/UsbphyAlphaFieldsetKiloAlpha:
+fieldset/TrimOverrideEnClr:
   description: Trim.
   fields:
   - name: div_sel_override
@@ -1454,7 +889,7 @@ fieldset/UsbphyAlphaFieldsetLimaAlpha:
     description: HS TX Output Current Trim.
     bit_offset: 0
     bit_size: 4
-    enum: UsbphyAlphaEnumHotel
+    enum: DCal
   - name: txcal45dn
     description: DM Series Termination Resistance Trim.
     bit_offset: 8
@@ -1463,37 +898,7 @@ fieldset/UsbphyAlphaFieldsetLimaAlpha:
     description: DP Series Termination Resistance Trim.
     bit_offset: 16
     bit_size: 4
-fieldset/UsbphyAlphaFieldsetMikeAlpha:
-  description: TX Control.
-  fields:
-  - name: d_cal
-    description: HS TX Output Current Trim.
-    bit_offset: 0
-    bit_size: 4
-  - name: txcal45dn
-    description: DM Series Termination Resistance Trim.
-    bit_offset: 8
-    bit_size: 4
-  - name: txcal45dp
-    description: DP Series Termination Resistance Trim.
-    bit_offset: 16
-    bit_size: 4
-fieldset/UsbphyAlphaFieldsetNovemberAlpha:
-  description: TX Control.
-  fields:
-  - name: d_cal
-    description: HS TX Output Current Trim.
-    bit_offset: 0
-    bit_size: 4
-  - name: txcal45dn
-    description: DM Series Termination Resistance Trim.
-    bit_offset: 8
-    bit_size: 4
-  - name: txcal45dp
-    description: DP Series Termination Resistance Trim.
-    bit_offset: 16
-    bit_size: 4
-fieldset/UsbphyAlphaFieldsetOscarAlpha:
+fieldset/TxClr:
   description: TX Control.
   fields:
   - name: d_cal
@@ -1536,53 +941,7 @@ fieldset/UsbphyAlphaFieldsetPapaAlpha:
     bit_offset: 4
     bit_size: 1
     enum: UsbphyAlphaEnumOscarBravo
-fieldset/UsbphyAlphaFieldsetQuebecAlpha:
-  description: Charger Detect Status.
-  fields:
-  - name: plug_contact
-    description: Battery Charging Data Contact Detection Phase Output.
-    bit_offset: 0
-    bit_size: 1
-  - name: chrg_detected
-    description: Battery Charging Primary Detection Phase Output.
-    bit_offset: 1
-    bit_size: 1
-  - name: dm_state
-    description: DM Voltage.
-    bit_offset: 2
-    bit_size: 1
-  - name: dp_state
-    description: DP Voltage.
-    bit_offset: 3
-    bit_size: 1
-  - name: secdet_dcp
-    description: Battery Charging Secondary Detection Phase Output.
-    bit_offset: 4
-    bit_size: 1
-fieldset/UsbphyAlphaFieldsetRomeoAlpha:
-  description: Charger Detect Status.
-  fields:
-  - name: plug_contact
-    description: Battery Charging Data Contact Detection Phase Output.
-    bit_offset: 0
-    bit_size: 1
-  - name: chrg_detected
-    description: Battery Charging Primary Detection Phase Output.
-    bit_offset: 1
-    bit_size: 1
-  - name: dm_state
-    description: DM Voltage.
-    bit_offset: 2
-    bit_size: 1
-  - name: dp_state
-    description: DP Voltage.
-    bit_offset: 3
-    bit_size: 1
-  - name: secdet_dcp
-    description: Battery Charging Secondary Detection Phase Output.
-    bit_offset: 4
-    bit_size: 1
-fieldset/UsbphyAlphaFieldsetSierraAlpha:
+fieldset/UsbChrgDetStatClr:
   description: Charger Detect Status.
   fields:
   - name: plug_contact
@@ -1643,69 +1002,7 @@ fieldset/UsbphyAlphaFieldsetTangoAlpha:
     bit_offset: 31
     bit_size: 1
     enum: UsbphyAlphaEnumIndia
-fieldset/UsbphyAlphaFieldsetUniformAlpha:
-  description: Charger Detect.
-  fields:
-  - name: detect_sec
-    description: Secondary Detection Function Enable.
-    bit_offset: 1
-    bit_size: 1
-  - name: pullup_dp
-    description: DP Pullup Resistor Enable Override Control.
-    bit_offset: 2
-    bit_size: 1
-  - name: vdm_src_enable
-    description: VDM_SRC Function Enable.
-    bit_offset: 4
-    bit_size: 1
-  - name: chk_contact
-    description: BC Data Contact Detect Function Enable.
-    bit_offset: 18
-    bit_size: 1
-  - name: chk_chrg_b
-    description: BC Charger Detection Function Enable.
-    bit_offset: 19
-    bit_size: 1
-  - name: en_b
-    description: Selection of BC v1.2 Function Enable.
-    bit_offset: 20
-    bit_size: 1
-  - name: dcdsel
-    description: DCD Selection.
-    bit_offset: 31
-    bit_size: 1
-fieldset/UsbphyAlphaFieldsetVictorAlpha:
-  description: Charger Detect.
-  fields:
-  - name: detect_sec
-    description: Secondary Detection Function Enable.
-    bit_offset: 1
-    bit_size: 1
-  - name: pullup_dp
-    description: DP Pullup Resistor Enable Override Control.
-    bit_offset: 2
-    bit_size: 1
-  - name: vdm_src_enable
-    description: VDM_SRC Function Enable.
-    bit_offset: 4
-    bit_size: 1
-  - name: chk_contact
-    description: BC Data Contact Detect Function Enable.
-    bit_offset: 18
-    bit_size: 1
-  - name: chk_chrg_b
-    description: BC Charger Detection Function Enable.
-    bit_offset: 19
-    bit_size: 1
-  - name: en_b
-    description: Selection of BC v1.2 Function Enable.
-    bit_offset: 20
-    bit_size: 1
-  - name: dcdsel
-    description: DCD Selection.
-    bit_offset: 31
-    bit_size: 1
-fieldset/UsbphyAlphaFieldsetWhiskeyAlpha:
+fieldset/UsbChrgDetectClr:
   description: Charger Detect.
   fields:
   - name: detect_sec
@@ -1768,61 +1065,7 @@ fieldset/UsbphyAlphaFieldsetXrayAlpha:
     description: OTG ID External Override Status.
     bit_offset: 5
     bit_size: 1
-fieldset/UsbphyAlphaFieldsetYankeeAlpha:
-  description: VBUS Detect Status.
-  fields:
-  - name: sessend
-    description: Session End Indicator.
-    bit_offset: 0
-    bit_size: 1
-  - name: bvalid
-    description: B-Device Session Valid Status.
-    bit_offset: 1
-    bit_size: 1
-  - name: avalid
-    description: A-Device Session Valid Status.
-    bit_offset: 2
-    bit_size: 1
-  - name: vbus_valid
-    description: VBUS Voltage Status.
-    bit_offset: 3
-    bit_size: 1
-  - name: vbus_valid_3v
-    description: VBUS_VALID_3V Detector Status.
-    bit_offset: 4
-    bit_size: 1
-  - name: ext_id
-    description: OTG ID External Override Status.
-    bit_offset: 5
-    bit_size: 1
-fieldset/UsbphyAlphaFieldsetZuluAlpha:
-  description: VBUS Detect Status.
-  fields:
-  - name: sessend
-    description: Session End Indicator.
-    bit_offset: 0
-    bit_size: 1
-  - name: bvalid
-    description: B-Device Session Valid Status.
-    bit_offset: 1
-    bit_size: 1
-  - name: avalid
-    description: A-Device Session Valid Status.
-    bit_offset: 2
-    bit_size: 1
-  - name: vbus_valid
-    description: VBUS Voltage Status.
-    bit_offset: 3
-    bit_size: 1
-  - name: vbus_valid_3v
-    description: VBUS_VALID_3V Detector Status.
-    bit_offset: 4
-    bit_size: 1
-  - name: ext_id
-    description: OTG ID External Override Status.
-    bit_offset: 5
-    bit_size: 1
-fieldset/UsbphyAlphaFieldsetAlphaBravo:
+fieldset/UsbVbusDetStatClr:
   description: VBUS Detect Status.
   fields:
   - name: sessend
@@ -1922,133 +1165,7 @@ fieldset/UsbphyAlphaFieldsetBravoBravo:
     bit_offset: 26
     bit_size: 1
     enum: UsbphyAlphaEnumNovember
-fieldset/UsbphyAlphaFieldsetCharlieBravo:
-  description: VBUS Detect.
-  fields:
-  - name: vbusvalid_thresh
-    description: VBUS Comparator Threshold.
-    bit_offset: 0
-    bit_size: 3
-  - name: vbus_override_en
-    description: VBUS Detect Signal Local Override Enable.
-    bit_offset: 3
-    bit_size: 1
-  - name: sessend_override
-    description: Override Value for SESSEND.
-    bit_offset: 4
-    bit_size: 1
-  - name: bvalid_override
-    description: Override Value for B-Device Session Valid.
-    bit_offset: 5
-    bit_size: 1
-  - name: avalid_override
-    description: Override Value for A-Device Session Valid.
-    bit_offset: 6
-    bit_size: 1
-  - name: vbusvalid_override
-    description: Override Value for the VBUS_VALID Signal.
-    bit_offset: 7
-    bit_size: 1
-  - name: vbusvalid_sel
-    description: VBUS_VALID Selection.
-    bit_offset: 8
-    bit_size: 1
-  - name: vbus_source_sel
-    description: VBUS_VALID Source Selection.
-    bit_offset: 9
-    bit_size: 2
-  - name: id_override_en
-    description: Enable Local ID Pin Status Override.
-    bit_offset: 11
-    bit_size: 1
-  - name: id_override
-    description: ID Pin Status Local Override.
-    bit_offset: 12
-    bit_size: 1
-  - name: ext_id_override_en
-    description: External ID Override Enable.
-    bit_offset: 13
-    bit_size: 1
-  - name: ext_vbus_override_en
-    description: External VBUS Override Enable.
-    bit_offset: 14
-    bit_size: 1
-  - name: vbusvalid_to_b
-    description: VBUS_VALID Comparator Selection.
-    bit_offset: 18
-    bit_size: 1
-  - name: vbusvalid_pwrup_cmps
-    description: VBUS_VALID Comparator Enable.
-    bit_offset: 20
-    bit_size: 3
-  - name: discharge_vbus
-    description: VBUS Discharge Resistor.
-    bit_offset: 26
-    bit_size: 1
-fieldset/UsbphyAlphaFieldsetDeltaBravo:
-  description: VBUS Detect.
-  fields:
-  - name: vbusvalid_thresh
-    description: VBUS Comparator Threshold.
-    bit_offset: 0
-    bit_size: 3
-  - name: vbus_override_en
-    description: VBUS Detect Signal Local Override Enable.
-    bit_offset: 3
-    bit_size: 1
-  - name: sessend_override
-    description: Override Value for SESSEND.
-    bit_offset: 4
-    bit_size: 1
-  - name: bvalid_override
-    description: Override Value for B-Device Session Valid.
-    bit_offset: 5
-    bit_size: 1
-  - name: avalid_override
-    description: Override Value for A-Device Session Valid.
-    bit_offset: 6
-    bit_size: 1
-  - name: vbusvalid_override
-    description: Override Value for the VBUS_VALID Signal.
-    bit_offset: 7
-    bit_size: 1
-  - name: vbusvalid_sel
-    description: VBUS_VALID Selection.
-    bit_offset: 8
-    bit_size: 1
-  - name: vbus_source_sel
-    description: VBUS_VALID Source Selection.
-    bit_offset: 9
-    bit_size: 2
-  - name: id_override_en
-    description: Enable Local ID Pin Status Override.
-    bit_offset: 11
-    bit_size: 1
-  - name: id_override
-    description: ID Pin Status Local Override.
-    bit_offset: 12
-    bit_size: 1
-  - name: ext_id_override_en
-    description: External ID Override Enable.
-    bit_offset: 13
-    bit_size: 1
-  - name: ext_vbus_override_en
-    description: External VBUS Override Enable.
-    bit_offset: 14
-    bit_size: 1
-  - name: vbusvalid_to_b
-    description: VBUS_VALID Comparator Selection.
-    bit_offset: 18
-    bit_size: 1
-  - name: vbusvalid_pwrup_cmps
-    description: VBUS_VALID Comparator Enable.
-    bit_offset: 20
-    bit_size: 3
-  - name: discharge_vbus
-    description: VBUS Discharge Resistor.
-    bit_offset: 26
-    bit_size: 1
-fieldset/UsbphyAlphaFieldsetEchoBravo:
+fieldset/UsbVbusDetectClr:
   description: VBUS Detect.
   fields:
   - name: vbusvalid_thresh
@@ -2126,15 +1243,6 @@ fieldset/UsbphyAlphaFieldsetFoxtrotBravo:
     description: Major.
     bit_offset: 24
     bit_size: 8
-enum/UsbphyAlphaEnumAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
 enum/UsbphyAlphaEnumBravo:
   bit_size: 1
   variants:
@@ -2189,7 +1297,7 @@ enum/UsbphyAlphaEnumGolf:
   - name: RunClocks
     description: Run clocks.
     value: 0
-enum/UsbphyAlphaEnumHotel:
+enum/DCal:
   bit_size: 4
   variants:
   - name: MaxCurrent
@@ -2306,24 +1414,6 @@ enum/UsbphyAlphaEnumSierra:
   - name: BcEnable
     description: Enable.
     value: 0
-enum/UsbphyAlphaEnumTango:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/UsbphyAlphaEnumUniform:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
 enum/UsbphyAlphaEnumVictor:
   bit_size: 1
   variants:
@@ -2331,15 +1421,6 @@ enum/UsbphyAlphaEnumVictor:
     description: Disable.
     value: 0
   - name: PluginEnable
-    description: Enable.
-    value: 1
-enum/UsbphyAlphaEnumWhiskey:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
     description: Enable.
     value: 1
 enum/UsbphyAlphaEnumXray:
@@ -2351,43 +1432,7 @@ enum/UsbphyAlphaEnumXray:
   - name: Enable
     description: Enable.
     value: 1
-enum/UsbphyAlphaEnumYankee:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/UsbphyAlphaEnumZulu:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/UsbphyAlphaEnumAlphaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/UsbphyAlphaEnumBravoAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/UsbphyAlphaEnumCharlieAlpha:
+enum/Enutmilevel:
   bit_size: 1
   variants:
   - name: Disable
@@ -2403,24 +1448,6 @@ enum/UsbphyAlphaEnumDeltaAlpha:
     description: Disable.
     value: 0
   - name: IdDetEnable
-    description: Enable.
-    value: 1
-enum/UsbphyAlphaEnumEchoAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/UsbphyAlphaEnumFoxtrotAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
     description: Enable.
     value: 1
 enum/UsbphyAlphaEnumGolfAlpha:
@@ -2528,16 +1555,7 @@ enum/UsbphyAlphaEnumQuebecAlpha:
   - name: NoIdChgIrq
     description: No ID change interrupt.
     value: 0
-enum/UsbphyAlphaEnumRomeoAlpha:
-  bit_size: 1
-  variants:
-  - name: IdDevice
-    description: Device.
-    value: 1
-  - name: IdHost
-    description: Host.
-    value: 0
-enum/UsbphyAlphaEnumSierraAlpha:
+enum/OtgIdValue:
   bit_size: 1
   variants:
   - name: IdDevice
@@ -2837,18 +1855,6 @@ enum/UsbphyAlphaEnumWhiskeyBravo:
   - name: V2iBiasPwd
     description: Disable or power down.
     value: 1
-enum/UsbphyAlphaEnumXrayBravo:
-  bit_size: 4
-  variants:
-  - name: MaxCurrent
-    description: Maximum current, approximately 19% above nominal.
-    value: 0
-  - name: MinCurrent
-    description: Minimum current, approximately 19% below nominal.
-    value: 15
-  - name: Nominal
-    description: Nominal.
-    value: 7
 enum/UsbphyAlphaEnumYankeeBravo:
   bit_size: 1
   variants:

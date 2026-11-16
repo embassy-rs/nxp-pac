@@ -92,12 +92,12 @@ fieldset/TdetAlphaFieldsetBravo:
     description: Active Tamper Clock Source.
     bit_offset: 4
     bit_size: 1
-    enum: TdetAlphaEnumAlpha
+    enum: Atcs
   - name: atcs1
     description: Active Tamper Clock Source.
     bit_offset: 5
     bit_size: 1
-    enum: TdetAlphaEnumBravo
+    enum: Atcs
   - name: distam
     description: Disable Prescaler On Tamper.
     bit_offset: 8
@@ -114,97 +114,97 @@ fieldset/TdetAlphaFieldsetCharlie:
     description: Digital Tamper Interrupt Enable.
     bit_offset: 0
     bit_size: 1
-    enum: TdetAlphaEnumIndia
+    enum: Tie2
   - name: tiie0
     description: Tamper Input n Interrupt Enable.
     bit_offset: 2
     bit_size: 1
-    enum: TdetAlphaEnumWhiskeyAlpha
+    enum: Tie2
   - name: tiie1
     description: Tamper Input n Interrupt Enable.
     bit_offset: 3
     bit_size: 1
-    enum: TdetAlphaEnumXrayAlpha
+    enum: Tie2
   - name: tiie2
     description: Tamper Input n Interrupt Enable.
     bit_offset: 4
     bit_size: 1
-    enum: TdetAlphaEnumYankeeAlpha
+    enum: Tie2
   - name: tiie3
     description: Tamper Input n Interrupt Enable.
     bit_offset: 5
     bit_size: 1
-    enum: TdetAlphaEnumZuluAlpha
+    enum: Tie2
   - name: tiie4
     description: Tamper Input n Interrupt Enable.
     bit_offset: 6
     bit_size: 1
-    enum: TdetAlphaEnumAlphaBravo
+    enum: Tie2
   - name: tiie5
     description: Tamper Input n Interrupt Enable.
     bit_offset: 7
     bit_size: 1
-    enum: TdetAlphaEnumBravoBravo
+    enum: Tie2
   - name: tiie6
     description: Tamper Input n Interrupt Enable.
     bit_offset: 8
     bit_size: 1
-    enum: TdetAlphaEnumCharlieBravo
+    enum: Tie2
   - name: tiie7
     description: Tamper Input n Interrupt Enable.
     bit_offset: 9
     bit_size: 1
-    enum: TdetAlphaEnumDeltaBravo
+    enum: Tie2
   - name: tiie8
     description: Tamper Input n Interrupt Enable.
     bit_offset: 10
     bit_size: 1
-    enum: TdetAlphaEnumEchoBravo
+    enum: Tie2
   - name: tiie9
     description: Tamper Input n Interrupt Enable.
     bit_offset: 11
     bit_size: 1
-    enum: TdetAlphaEnumFoxtrotBravo
+    enum: Tie2
   - name: tpie0
     description: Tamper Pin n Interrupt Enable.
     bit_offset: 16
     bit_size: 1
-    enum: TdetAlphaEnumOscarCharlie
+    enum: Tie2
   - name: tpie1
     description: Tamper Pin n Interrupt Enable.
     bit_offset: 17
     bit_size: 1
-    enum: TdetAlphaEnumPapaCharlie
+    enum: Tie2
   - name: tpie2
     description: Tamper Pin n Interrupt Enable.
     bit_offset: 18
     bit_size: 1
-    enum: TdetAlphaEnumQuebecCharlie
+    enum: Tie2
   - name: tpie3
     description: Tamper Pin n Interrupt Enable.
     bit_offset: 19
     bit_size: 1
-    enum: TdetAlphaEnumRomeoCharlie
+    enum: Tie2
   - name: tpie4
     description: Tamper Pin n Interrupt Enable.
     bit_offset: 20
     bit_size: 1
-    enum: TdetAlphaEnumSierraCharlie
+    enum: Tie2
   - name: tpie5
     description: Tamper Pin n Interrupt Enable.
     bit_offset: 21
     bit_size: 1
-    enum: TdetAlphaEnumTangoCharlie
+    enum: Tie2
   - name: tpie6
     description: Tamper Pin n Interrupt Enable.
     bit_offset: 22
     bit_size: 1
-    enum: TdetAlphaEnumUniformCharlie
+    enum: Tie2
   - name: tpie7
     description: Tamper Pin n Interrupt Enable.
     bit_offset: 23
     bit_size: 1
-    enum: TdetAlphaEnumVictorCharlie
+    enum: Tie2
 fieldset/TdetAlphaFieldsetDelta:
   description: Lock.
   fields:
@@ -212,92 +212,92 @@ fieldset/TdetAlphaFieldsetDelta:
     description: Control Register Lock.
     bit_offset: 4
     bit_size: 1
-    enum: TdetAlphaEnumEcho
+    enum: Gfl
   - name: srl
     description: Status Register Lock.
     bit_offset: 5
     bit_size: 1
-    enum: TdetAlphaEnumXray
+    enum: Gfl
   - name: lrl
     description: Lock Register Lock.
     bit_offset: 6
     bit_size: 1
-    enum: TdetAlphaEnumUniform
+    enum: Gfl
   - name: iel
     description: Interrupt Enable Lock.
     bit_offset: 7
     bit_size: 1
-    enum: TdetAlphaEnumTango
+    enum: Gfl
   - name: tsl
     description: Tamper Seconds Lock.
     bit_offset: 8
     bit_size: 1
-    enum: TdetAlphaEnumPapaDelta
+    enum: Gfl
   - name: tel
     description: Tamper Enable Lock.
     bit_offset: 9
     bit_size: 1
-    enum: TdetAlphaEnumAlphaAlpha
+    enum: Gfl
   - name: pdl
     description: Pin Direction Lock.
     bit_offset: 10
     bit_size: 1
-    enum: TdetAlphaEnumVictor
+    enum: Gfl
   - name: ppl
     description: Pin Polarity Lock.
     bit_offset: 11
     bit_size: 1
-    enum: TdetAlphaEnumWhiskey
+    enum: Gfl
   - name: atl0
     description: Active Tamper Lock.
     bit_offset: 12
     bit_size: 1
-    enum: TdetAlphaEnumCharlie
+    enum: Gfl
   - name: atl1
     description: Active Tamper Lock.
     bit_offset: 13
     bit_size: 1
-    enum: TdetAlphaEnumDelta
+    enum: Gfl
   - name: gfl0
     description: Glitch Filter Lock.
     bit_offset: 16
     bit_size: 1
-    enum: TdetAlphaEnumKilo
+    enum: Gfl
   - name: gfl1
     description: Glitch Filter Lock.
     bit_offset: 17
     bit_size: 1
-    enum: TdetAlphaEnumLima
+    enum: Gfl
   - name: gfl2
     description: Glitch Filter Lock.
     bit_offset: 18
     bit_size: 1
-    enum: TdetAlphaEnumMike
+    enum: Gfl
   - name: gfl3
     description: Glitch Filter Lock.
     bit_offset: 19
     bit_size: 1
-    enum: TdetAlphaEnumNovember
+    enum: Gfl
   - name: gfl4
     description: Glitch Filter Lock.
     bit_offset: 20
     bit_size: 1
-    enum: TdetAlphaEnumOscar
+    enum: Gfl
   - name: gfl5
     description: Glitch Filter Lock.
     bit_offset: 21
     bit_size: 1
-    enum: TdetAlphaEnumPapa
+    enum: Gfl
   - name: gfl6
     description: Glitch Filter Lock.
     bit_offset: 22
     bit_size: 1
-    enum: TdetAlphaEnumQuebec
+    enum: Gfl
   - name: gfl7
     description: Glitch Filter Lock.
     bit_offset: 23
     bit_size: 1
-    enum: TdetAlphaEnumRomeo
+    enum: Gfl
 fieldset/TdetAlphaFieldsetEcho:
   description: Pin Direction.
   fields:
@@ -305,82 +305,82 @@ fieldset/TdetAlphaFieldsetEcho:
     description: Tamper Pin Direction.
     bit_offset: 0
     bit_size: 1
-    enum: TdetAlphaEnumGolfBravo
+    enum: Tpd
   - name: tpd1
     description: Tamper Pin Direction.
     bit_offset: 1
     bit_size: 1
-    enum: TdetAlphaEnumHotelBravo
+    enum: Tpd
   - name: tpd2
     description: Tamper Pin Direction.
     bit_offset: 2
     bit_size: 1
-    enum: TdetAlphaEnumIndiaBravo
+    enum: Tpd
   - name: tpd3
     description: Tamper Pin Direction.
     bit_offset: 3
     bit_size: 1
-    enum: TdetAlphaEnumJulietBravo
+    enum: Tpd
   - name: tpd4
     description: Tamper Pin Direction.
     bit_offset: 4
     bit_size: 1
-    enum: TdetAlphaEnumKiloBravo
+    enum: Tpd
   - name: tpd5
     description: Tamper Pin Direction.
     bit_offset: 5
     bit_size: 1
-    enum: TdetAlphaEnumLimaBravo
+    enum: Tpd
   - name: tpd6
     description: Tamper Pin Direction.
     bit_offset: 6
     bit_size: 1
-    enum: TdetAlphaEnumMikeBravo
+    enum: Tpd
   - name: tpd7
     description: Tamper Pin Direction.
     bit_offset: 7
     bit_size: 1
-    enum: TdetAlphaEnumNovemberBravo
+    enum: Tpd
   - name: tpod0
     description: Tamper Pin Output Data.
     bit_offset: 16
     bit_size: 1
-    enum: TdetAlphaEnumWhiskeyCharlie
+    enum: Tpid
   - name: tpod1
     description: Tamper Pin Output Data.
     bit_offset: 17
     bit_size: 1
-    enum: TdetAlphaEnumXrayCharlie
+    enum: Tpid
   - name: tpod2
     description: Tamper Pin Output Data.
     bit_offset: 18
     bit_size: 1
-    enum: TdetAlphaEnumYankeeCharlie
+    enum: Tpid
   - name: tpod3
     description: Tamper Pin Output Data.
     bit_offset: 19
     bit_size: 1
-    enum: TdetAlphaEnumZuluCharlie
+    enum: Tpid
   - name: tpod4
     description: Tamper Pin Output Data.
     bit_offset: 20
     bit_size: 1
-    enum: TdetAlphaEnumAlphaDelta
+    enum: Tpid
   - name: tpod5
     description: Tamper Pin Output Data.
     bit_offset: 21
     bit_size: 1
-    enum: TdetAlphaEnumBravoDelta
+    enum: Tpid
   - name: tpod6
     description: Tamper Pin Output Data.
     bit_offset: 22
     bit_size: 1
-    enum: TdetAlphaEnumCharlieDelta
+    enum: Tpid
   - name: tpod7
     description: Tamper Pin Output Data.
     bit_offset: 23
     bit_size: 1
-    enum: TdetAlphaEnumDeltaDelta
+    enum: Tpid
 fieldset/TdetAlphaFieldsetFoxtrot:
   description: Pin Glitch Filter.
   fields:
@@ -417,7 +417,7 @@ fieldset/TdetAlphaFieldsetFoxtrot:
     description: Tamper Pull Enable.
     bit_offset: 24
     bit_size: 1
-    enum: TdetAlphaEnumOscarBravo
+    enum: Tie2
   - name: tps
     description: Tamper Pull Select.
     bit_offset: 25
@@ -430,82 +430,82 @@ fieldset/TdetAlphaFieldsetGolf:
     description: Tamper Pin n Polarity.
     bit_offset: 0
     bit_size: 1
-    enum: TdetAlphaEnumEchoDelta
+    enum: Tpp2
   - name: tpp1
     description: Tamper Pin n Polarity.
     bit_offset: 1
     bit_size: 1
-    enum: TdetAlphaEnumFoxtrotDelta
+    enum: Tpp2
   - name: tpp2
     description: Tamper Pin n Polarity.
     bit_offset: 2
     bit_size: 1
-    enum: TdetAlphaEnumGolfDelta
+    enum: Tpp2
   - name: tpp3
     description: Tamper Pin n Polarity.
     bit_offset: 3
     bit_size: 1
-    enum: TdetAlphaEnumHotelDelta
+    enum: Tpp2
   - name: tpp4
     description: Tamper Pin n Polarity.
     bit_offset: 4
     bit_size: 1
-    enum: TdetAlphaEnumIndiaDelta
+    enum: Tpp2
   - name: tpp5
     description: Tamper Pin n Polarity.
     bit_offset: 5
     bit_size: 1
-    enum: TdetAlphaEnumJulietDelta
+    enum: Tpp2
   - name: tpp6
     description: Tamper Pin n Polarity.
     bit_offset: 6
     bit_size: 1
-    enum: TdetAlphaEnumKiloDelta
+    enum: Tpp2
   - name: tpp7
     description: Tamper Pin n Polarity.
     bit_offset: 7
     bit_size: 1
-    enum: TdetAlphaEnumLimaDelta
+    enum: Tpp2
   - name: tpid0
     description: Tamper Pin n Input Data.
     bit_offset: 16
     bit_size: 1
-    enum: TdetAlphaEnumGolfCharlie
+    enum: Tpid
   - name: tpid1
     description: Tamper Pin n Input Data.
     bit_offset: 17
     bit_size: 1
-    enum: TdetAlphaEnumHotelCharlie
+    enum: Tpid
   - name: tpid2
     description: Tamper Pin n Input Data.
     bit_offset: 18
     bit_size: 1
-    enum: TdetAlphaEnumIndiaCharlie
+    enum: Tpid
   - name: tpid3
     description: Tamper Pin n Input Data.
     bit_offset: 19
     bit_size: 1
-    enum: TdetAlphaEnumJulietCharlie
+    enum: Tpid
   - name: tpid4
     description: Tamper Pin n Input Data.
     bit_offset: 20
     bit_size: 1
-    enum: TdetAlphaEnumKiloCharlie
+    enum: Tpid
   - name: tpid5
     description: Tamper Pin n Input Data.
     bit_offset: 21
     bit_size: 1
-    enum: TdetAlphaEnumLimaCharlie
+    enum: Tpid
   - name: tpid6
     description: Tamper Pin n Input Data.
     bit_offset: 22
     bit_size: 1
-    enum: TdetAlphaEnumMikeCharlie
+    enum: Tpid
   - name: tpid7
     description: Tamper Pin n Input Data.
     bit_offset: 23
     bit_size: 1
-    enum: TdetAlphaEnumNovemberCharlie
+    enum: Tpid
 fieldset/TdetAlphaFieldsetHotel:
   description: Status.
   fields:
@@ -523,92 +523,92 @@ fieldset/TdetAlphaFieldsetHotel:
     description: Tamper Input n Flag.
     bit_offset: 2
     bit_size: 1
-    enum: TdetAlphaEnumMikeAlpha
+    enum: Tif2
   - name: tif1
     description: Tamper Input n Flag.
     bit_offset: 3
     bit_size: 1
-    enum: TdetAlphaEnumNovemberAlpha
+    enum: Tif2
   - name: tif2
     description: Tamper Input n Flag.
     bit_offset: 4
     bit_size: 1
-    enum: TdetAlphaEnumOscarAlpha
+    enum: Tif2
   - name: tif3
     description: Tamper Input n Flag.
     bit_offset: 5
     bit_size: 1
-    enum: TdetAlphaEnumPapaAlpha
+    enum: Tif2
   - name: tif4
     description: Tamper Input n Flag.
     bit_offset: 6
     bit_size: 1
-    enum: TdetAlphaEnumQuebecAlpha
+    enum: Tif2
   - name: tif5
     description: Tamper Input n Flag.
     bit_offset: 7
     bit_size: 1
-    enum: TdetAlphaEnumRomeoAlpha
+    enum: Tif2
   - name: tif6
     description: Tamper Input n Flag.
     bit_offset: 8
     bit_size: 1
-    enum: TdetAlphaEnumSierraAlpha
+    enum: Tif2
   - name: tif7
     description: Tamper Input n Flag.
     bit_offset: 9
     bit_size: 1
-    enum: TdetAlphaEnumTangoAlpha
+    enum: Tif2
   - name: tif8
     description: Tamper Input n Flag.
     bit_offset: 10
     bit_size: 1
-    enum: TdetAlphaEnumUniformAlpha
+    enum: Tif2
   - name: tif9
     description: Tamper Input n Flag.
     bit_offset: 11
     bit_size: 1
-    enum: TdetAlphaEnumVictorAlpha
+    enum: Tif2
   - name: tpf0
     description: Tamper Pin n Flag.
     bit_offset: 16
     bit_size: 1
-    enum: TdetAlphaEnumYankeeBravo
+    enum: Tpf
   - name: tpf1
     description: Tamper Pin n Flag.
     bit_offset: 17
     bit_size: 1
-    enum: TdetAlphaEnumZuluBravo
+    enum: Tpf
   - name: tpf2
     description: Tamper Pin n Flag.
     bit_offset: 18
     bit_size: 1
-    enum: TdetAlphaEnumAlphaCharlie
+    enum: Tpf
   - name: tpf3
     description: Tamper Pin n Flag.
     bit_offset: 19
     bit_size: 1
-    enum: TdetAlphaEnumBravoCharlie
+    enum: Tpf
   - name: tpf4
     description: Tamper Pin n Flag.
     bit_offset: 20
     bit_size: 1
-    enum: TdetAlphaEnumCharlieCharlie
+    enum: Tpf
   - name: tpf5
     description: Tamper Pin n Flag.
     bit_offset: 21
     bit_size: 1
-    enum: TdetAlphaEnumDeltaCharlie
+    enum: Tpf
   - name: tpf6
     description: Tamper Pin n Flag.
     bit_offset: 22
     bit_size: 1
-    enum: TdetAlphaEnumEchoCharlie
+    enum: Tpf
   - name: tpf7
     description: Tamper Pin n Flag.
     bit_offset: 23
     bit_size: 1
-    enum: TdetAlphaEnumFoxtrotCharlie
+    enum: Tpf
 fieldset/TdetAlphaFieldsetIndia:
   description: Tamper Enable.
   fields:
@@ -616,92 +616,92 @@ fieldset/TdetAlphaFieldsetIndia:
     description: Tamper Input Enable.
     bit_offset: 2
     bit_size: 1
-    enum: TdetAlphaEnumCharlieAlpha
+    enum: Tie2
   - name: tie1
     description: Tamper Input Enable.
     bit_offset: 3
     bit_size: 1
-    enum: TdetAlphaEnumDeltaAlpha
+    enum: Tie2
   - name: tie2
     description: Tamper Input Enable.
     bit_offset: 4
     bit_size: 1
-    enum: TdetAlphaEnumEchoAlpha
+    enum: Tie2
   - name: tie3
     description: Tamper Input Enable.
     bit_offset: 5
     bit_size: 1
-    enum: TdetAlphaEnumFoxtrotAlpha
+    enum: Tie2
   - name: tie4
     description: Tamper Input Enable.
     bit_offset: 6
     bit_size: 1
-    enum: TdetAlphaEnumGolfAlpha
+    enum: Tie2
   - name: tie5
     description: Tamper Input Enable.
     bit_offset: 7
     bit_size: 1
-    enum: TdetAlphaEnumHotelAlpha
+    enum: Tie2
   - name: tie6
     description: Tamper Input Enable.
     bit_offset: 8
     bit_size: 1
-    enum: TdetAlphaEnumIndiaAlpha
+    enum: Tie2
   - name: tie7
     description: Tamper Input Enable.
     bit_offset: 9
     bit_size: 1
-    enum: TdetAlphaEnumJulietAlpha
+    enum: Tie2
   - name: tie8
     description: Tamper Input Enable.
     bit_offset: 10
     bit_size: 1
-    enum: TdetAlphaEnumKiloAlpha
+    enum: Tie2
   - name: tie9
     description: Tamper Input Enable.
     bit_offset: 11
     bit_size: 1
-    enum: TdetAlphaEnumLimaAlpha
+    enum: Tie2
   - name: tpe0
     description: Tamper Pin Enable.
     bit_offset: 16
     bit_size: 1
-    enum: TdetAlphaEnumPapaBravo
+    enum: Tie2
   - name: tpe1
     description: Tamper Pin Enable.
     bit_offset: 17
     bit_size: 1
-    enum: TdetAlphaEnumQuebecBravo
+    enum: Tie2
   - name: tpe2
     description: Tamper Pin Enable.
     bit_offset: 18
     bit_size: 1
-    enum: TdetAlphaEnumRomeoBravo
+    enum: Tie2
   - name: tpe3
     description: Tamper Pin Enable.
     bit_offset: 19
     bit_size: 1
-    enum: TdetAlphaEnumSierraBravo
+    enum: Tie2
   - name: tpe4
     description: Tamper Pin Enable.
     bit_offset: 20
     bit_size: 1
-    enum: TdetAlphaEnumTangoBravo
+    enum: Tie2
   - name: tpe5
     description: Tamper Pin Enable.
     bit_offset: 21
     bit_size: 1
-    enum: TdetAlphaEnumUniformBravo
+    enum: Tie2
   - name: tpe6
     description: Tamper Pin Enable.
     bit_offset: 22
     bit_size: 1
-    enum: TdetAlphaEnumVictorBravo
+    enum: Tie2
   - name: tpe7
     description: Tamper Pin Enable.
     bit_offset: 23
     bit_size: 1
-    enum: TdetAlphaEnumWhiskeyBravo
+    enum: Tie2
 fieldset/TdetAlphaFieldsetJuliet:
   description: Tamper Seconds.
   fields:
@@ -709,7 +709,7 @@ fieldset/TdetAlphaFieldsetJuliet:
     description: Tamper Time Seconds.
     bit_offset: 0
     bit_size: 32
-enum/TdetAlphaEnumAlpha:
+enum/Atcs:
   bit_size: 1
   variants:
   - name: Freq1Hz
@@ -718,34 +718,7 @@ enum/TdetAlphaEnumAlpha:
   - name: Freq64Hz
     description: 64 Hz prescaler clock.
     value: 1
-enum/TdetAlphaEnumBravo:
-  bit_size: 1
-  variants:
-  - name: Freq1Hz
-    description: 1 Hz prescaler clock.
-    value: 0
-  - name: Freq64Hz
-    description: 64 Hz prescaler clock.
-    value: 1
-enum/TdetAlphaEnumCharlie:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
-    value: 1
-enum/TdetAlphaEnumDelta:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
-    value: 1
-enum/TdetAlphaEnumEcho:
+enum/Gfl:
   bit_size: 1
   variants:
   - name: Lock
@@ -781,7 +754,7 @@ enum/TdetAlphaEnumHotel:
   - name: NoDet
     description: TDET tampering not detected.
     value: 0
-enum/TdetAlphaEnumIndia:
+enum/Tie2:
   bit_size: 1
   variants:
   - name: Disable
@@ -799,78 +772,6 @@ enum/TdetAlphaEnumJuliet:
   - name: Enable
     description: Enables.
     value: 1
-enum/TdetAlphaEnumKilo:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
-    value: 1
-enum/TdetAlphaEnumLima:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
-    value: 1
-enum/TdetAlphaEnumMike:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
-    value: 1
-enum/TdetAlphaEnumNovember:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
-    value: 1
-enum/TdetAlphaEnumOscar:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
-    value: 1
-enum/TdetAlphaEnumPapa:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
-    value: 1
-enum/TdetAlphaEnumQuebec:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
-    value: 1
-enum/TdetAlphaEnumRomeo:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
-    value: 1
 enum/TdetAlphaEnumSierra:
   bit_size: 1
   variants:
@@ -880,51 +781,6 @@ enum/TdetAlphaEnumSierra:
   - name: Freq512Hz
     description: 512 Hz prescaler clock.
     value: 0
-enum/TdetAlphaEnumTango:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
-    value: 1
-enum/TdetAlphaEnumUniform:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
-    value: 1
-enum/TdetAlphaEnumVictor:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
-    value: 1
-enum/TdetAlphaEnumWhiskey:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
-    value: 1
-enum/TdetAlphaEnumXray:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
-    value: 1
 enum/TdetAlphaEnumYankee:
   bit_size: 1
   variants:
@@ -943,15 +799,6 @@ enum/TdetAlphaEnumZulu:
   - name: Occur
     description: Chip reset has occurred after Digital Tamper Flag (SR[DTF]) was set.
     value: 1
-enum/TdetAlphaEnumAlphaAlpha:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
-    value: 1
 enum/TdetAlphaEnumBravoAlpha:
   bit_size: 1
   variants:
@@ -961,97 +808,7 @@ enum/TdetAlphaEnumBravoAlpha:
   - name: Reset
     description: Force chip reset.
     value: 1
-enum/TdetAlphaEnumCharlieAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumDeltaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumEchoAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumFoxtrotAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumGolfAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumHotelAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumIndiaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumJulietAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumKiloAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumLimaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumMikeAlpha:
+enum/Tif2:
   bit_size: 1
   variants:
   - name: Det
@@ -1060,178 +817,7 @@ enum/TdetAlphaEnumMikeAlpha:
   - name: NoDet
     description: On-chip tamper not detected.
     value: 0
-enum/TdetAlphaEnumNovemberAlpha:
-  bit_size: 1
-  variants:
-  - name: Det
-    description: On-chip tamper detected.
-    value: 1
-  - name: NoDet
-    description: On-chip tamper not detected.
-    value: 0
-enum/TdetAlphaEnumOscarAlpha:
-  bit_size: 1
-  variants:
-  - name: Det
-    description: On-chip tamper detected.
-    value: 1
-  - name: NoDet
-    description: On-chip tamper not detected.
-    value: 0
-enum/TdetAlphaEnumPapaAlpha:
-  bit_size: 1
-  variants:
-  - name: Det
-    description: On-chip tamper detected.
-    value: 1
-  - name: NoDet
-    description: On-chip tamper not detected.
-    value: 0
-enum/TdetAlphaEnumQuebecAlpha:
-  bit_size: 1
-  variants:
-  - name: Det
-    description: On-chip tamper detected.
-    value: 1
-  - name: NoDet
-    description: On-chip tamper not detected.
-    value: 0
-enum/TdetAlphaEnumRomeoAlpha:
-  bit_size: 1
-  variants:
-  - name: Det
-    description: On-chip tamper detected.
-    value: 1
-  - name: NoDet
-    description: On-chip tamper not detected.
-    value: 0
-enum/TdetAlphaEnumSierraAlpha:
-  bit_size: 1
-  variants:
-  - name: Det
-    description: On-chip tamper detected.
-    value: 1
-  - name: NoDet
-    description: On-chip tamper not detected.
-    value: 0
-enum/TdetAlphaEnumTangoAlpha:
-  bit_size: 1
-  variants:
-  - name: Det
-    description: On-chip tamper detected.
-    value: 1
-  - name: NoDet
-    description: On-chip tamper not detected.
-    value: 0
-enum/TdetAlphaEnumUniformAlpha:
-  bit_size: 1
-  variants:
-  - name: Det
-    description: On-chip tamper detected.
-    value: 1
-  - name: NoDet
-    description: On-chip tamper not detected.
-    value: 0
-enum/TdetAlphaEnumVictorAlpha:
-  bit_size: 1
-  variants:
-  - name: Det
-    description: On-chip tamper detected.
-    value: 1
-  - name: NoDet
-    description: On-chip tamper not detected.
-    value: 0
-enum/TdetAlphaEnumWhiskeyAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumXrayAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumYankeeAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumZuluAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumAlphaBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumBravoBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumCharlieBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumDeltaBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumEchoBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumFoxtrotBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumGolfBravo:
+enum/Tpd:
   bit_size: 1
   variants:
   - name: Input
@@ -1239,150 +825,6 @@ enum/TdetAlphaEnumGolfBravo:
     value: 0
   - name: Output
     description: Output and drives the inverse of the expected value (tamper pin is asserted).
-    value: 1
-enum/TdetAlphaEnumHotelBravo:
-  bit_size: 1
-  variants:
-  - name: Input
-    description: Input.
-    value: 0
-  - name: Output
-    description: Output and drives the inverse of the expected value (tamper pin is asserted).
-    value: 1
-enum/TdetAlphaEnumIndiaBravo:
-  bit_size: 1
-  variants:
-  - name: Input
-    description: Input.
-    value: 0
-  - name: Output
-    description: Output and drives the inverse of the expected value (tamper pin is asserted).
-    value: 1
-enum/TdetAlphaEnumJulietBravo:
-  bit_size: 1
-  variants:
-  - name: Input
-    description: Input.
-    value: 0
-  - name: Output
-    description: Output and drives the inverse of the expected value (tamper pin is asserted).
-    value: 1
-enum/TdetAlphaEnumKiloBravo:
-  bit_size: 1
-  variants:
-  - name: Input
-    description: Input.
-    value: 0
-  - name: Output
-    description: Output and drives the inverse of the expected value (tamper pin is asserted).
-    value: 1
-enum/TdetAlphaEnumLimaBravo:
-  bit_size: 1
-  variants:
-  - name: Input
-    description: Input.
-    value: 0
-  - name: Output
-    description: Output and drives the inverse of the expected value (tamper pin is asserted).
-    value: 1
-enum/TdetAlphaEnumMikeBravo:
-  bit_size: 1
-  variants:
-  - name: Input
-    description: Input.
-    value: 0
-  - name: Output
-    description: Output and drives the inverse of the expected value (tamper pin is asserted).
-    value: 1
-enum/TdetAlphaEnumNovemberBravo:
-  bit_size: 1
-  variants:
-  - name: Input
-    description: Input.
-    value: 0
-  - name: Output
-    description: Output and drives the inverse of the expected value (tamper pin is asserted).
-    value: 1
-enum/TdetAlphaEnumOscarBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumPapaBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumQuebecBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumRomeoBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumSierraBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumTangoBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumUniformBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumVictorBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumWhiskeyBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
     value: 1
 enum/TdetAlphaEnumXrayBravo:
   bit_size: 2
@@ -1399,7 +841,7 @@ enum/TdetAlphaEnumXrayBravo:
   - name: Zero
     description: Zero/passive tamper.
     value: 0
-enum/TdetAlphaEnumYankeeBravo:
+enum/Tpf:
   bit_size: 1
   variants:
   - name: Det
@@ -1408,70 +850,7 @@ enum/TdetAlphaEnumYankeeBravo:
   - name: NoDet
     description: Pin tamper not detected.
     value: 0
-enum/TdetAlphaEnumZuluBravo:
-  bit_size: 1
-  variants:
-  - name: Det
-    description: Pin tamper detected.
-    value: 1
-  - name: NoDet
-    description: Pin tamper not detected.
-    value: 0
-enum/TdetAlphaEnumAlphaCharlie:
-  bit_size: 1
-  variants:
-  - name: Det
-    description: Pin tamper detected.
-    value: 1
-  - name: NoDet
-    description: Pin tamper not detected.
-    value: 0
-enum/TdetAlphaEnumBravoCharlie:
-  bit_size: 1
-  variants:
-  - name: Det
-    description: Pin tamper detected.
-    value: 1
-  - name: NoDet
-    description: Pin tamper not detected.
-    value: 0
-enum/TdetAlphaEnumCharlieCharlie:
-  bit_size: 1
-  variants:
-  - name: Det
-    description: Pin tamper detected.
-    value: 1
-  - name: NoDet
-    description: Pin tamper not detected.
-    value: 0
-enum/TdetAlphaEnumDeltaCharlie:
-  bit_size: 1
-  variants:
-  - name: Det
-    description: Pin tamper detected.
-    value: 1
-  - name: NoDet
-    description: Pin tamper not detected.
-    value: 0
-enum/TdetAlphaEnumEchoCharlie:
-  bit_size: 1
-  variants:
-  - name: Det
-    description: Pin tamper detected.
-    value: 1
-  - name: NoDet
-    description: Pin tamper not detected.
-    value: 0
-enum/TdetAlphaEnumFoxtrotCharlie:
-  bit_size: 1
-  variants:
-  - name: Det
-    description: Pin tamper detected.
-    value: 1
-  - name: NoDet
-    description: Pin tamper not detected.
-    value: 0
-enum/TdetAlphaEnumGolfCharlie:
+enum/Tpid:
   bit_size: 1
   variants:
   - name: One
@@ -1480,277 +859,7 @@ enum/TdetAlphaEnumGolfCharlie:
   - name: Zero
     description: Zero.
     value: 0
-enum/TdetAlphaEnumHotelCharlie:
-  bit_size: 1
-  variants:
-  - name: One
-    description: One.
-    value: 1
-  - name: Zero
-    description: Zero.
-    value: 0
-enum/TdetAlphaEnumIndiaCharlie:
-  bit_size: 1
-  variants:
-  - name: One
-    description: One.
-    value: 1
-  - name: Zero
-    description: Zero.
-    value: 0
-enum/TdetAlphaEnumJulietCharlie:
-  bit_size: 1
-  variants:
-  - name: One
-    description: One.
-    value: 1
-  - name: Zero
-    description: Zero.
-    value: 0
-enum/TdetAlphaEnumKiloCharlie:
-  bit_size: 1
-  variants:
-  - name: One
-    description: One.
-    value: 1
-  - name: Zero
-    description: Zero.
-    value: 0
-enum/TdetAlphaEnumLimaCharlie:
-  bit_size: 1
-  variants:
-  - name: One
-    description: One.
-    value: 1
-  - name: Zero
-    description: Zero.
-    value: 0
-enum/TdetAlphaEnumMikeCharlie:
-  bit_size: 1
-  variants:
-  - name: One
-    description: One.
-    value: 1
-  - name: Zero
-    description: Zero.
-    value: 0
-enum/TdetAlphaEnumNovemberCharlie:
-  bit_size: 1
-  variants:
-  - name: One
-    description: One.
-    value: 1
-  - name: Zero
-    description: Zero.
-    value: 0
-enum/TdetAlphaEnumOscarCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumPapaCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumQuebecCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumRomeoCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumSierraCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumTangoCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumUniformCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumVictorCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/TdetAlphaEnumWhiskeyCharlie:
-  bit_size: 1
-  variants:
-  - name: One
-    description: One.
-    value: 1
-  - name: Zero
-    description: Zero.
-    value: 0
-enum/TdetAlphaEnumXrayCharlie:
-  bit_size: 1
-  variants:
-  - name: One
-    description: One.
-    value: 1
-  - name: Zero
-    description: Zero.
-    value: 0
-enum/TdetAlphaEnumYankeeCharlie:
-  bit_size: 1
-  variants:
-  - name: One
-    description: One.
-    value: 1
-  - name: Zero
-    description: Zero.
-    value: 0
-enum/TdetAlphaEnumZuluCharlie:
-  bit_size: 1
-  variants:
-  - name: One
-    description: One.
-    value: 1
-  - name: Zero
-    description: Zero.
-    value: 0
-enum/TdetAlphaEnumAlphaDelta:
-  bit_size: 1
-  variants:
-  - name: One
-    description: One.
-    value: 1
-  - name: Zero
-    description: Zero.
-    value: 0
-enum/TdetAlphaEnumBravoDelta:
-  bit_size: 1
-  variants:
-  - name: One
-    description: One.
-    value: 1
-  - name: Zero
-    description: Zero.
-    value: 0
-enum/TdetAlphaEnumCharlieDelta:
-  bit_size: 1
-  variants:
-  - name: One
-    description: One.
-    value: 1
-  - name: Zero
-    description: Zero.
-    value: 0
-enum/TdetAlphaEnumDeltaDelta:
-  bit_size: 1
-  variants:
-  - name: One
-    description: One.
-    value: 1
-  - name: Zero
-    description: Zero.
-    value: 0
-enum/TdetAlphaEnumEchoDelta:
-  bit_size: 1
-  variants:
-  - name: Invert
-    description: Inverted.
-    value: 1
-  - name: NoInvert
-    description: Not inverted.
-    value: 0
-enum/TdetAlphaEnumFoxtrotDelta:
-  bit_size: 1
-  variants:
-  - name: Invert
-    description: Inverted.
-    value: 1
-  - name: NoInvert
-    description: Not inverted.
-    value: 0
-enum/TdetAlphaEnumGolfDelta:
-  bit_size: 1
-  variants:
-  - name: Invert
-    description: Inverted.
-    value: 1
-  - name: NoInvert
-    description: Not inverted.
-    value: 0
-enum/TdetAlphaEnumHotelDelta:
-  bit_size: 1
-  variants:
-  - name: Invert
-    description: Inverted.
-    value: 1
-  - name: NoInvert
-    description: Not inverted.
-    value: 0
-enum/TdetAlphaEnumIndiaDelta:
-  bit_size: 1
-  variants:
-  - name: Invert
-    description: Inverted.
-    value: 1
-  - name: NoInvert
-    description: Not inverted.
-    value: 0
-enum/TdetAlphaEnumJulietDelta:
-  bit_size: 1
-  variants:
-  - name: Invert
-    description: Inverted.
-    value: 1
-  - name: NoInvert
-    description: Not inverted.
-    value: 0
-enum/TdetAlphaEnumKiloDelta:
-  bit_size: 1
-  variants:
-  - name: Invert
-    description: Inverted.
-    value: 1
-  - name: NoInvert
-    description: Not inverted.
-    value: 0
-enum/TdetAlphaEnumLimaDelta:
+enum/Tpp2:
   bit_size: 1
   variants:
   - name: Invert
@@ -1798,15 +907,6 @@ enum/TdetAlphaEnumOscarDelta:
   - name: Disable
     description: Continuous monitoring, pin sampling disabled.
     value: 0
-enum/TdetAlphaEnumPapaDelta:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
-    value: 1
 enum/TdetAlphaEnumQuebecDelta:
   bit_size: 1
   variants:

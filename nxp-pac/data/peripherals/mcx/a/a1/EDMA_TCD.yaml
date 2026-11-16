@@ -392,12 +392,12 @@ fieldset/TcdNbytesMloffyes:
     description: Destination Minor Loop Offset Enable.
     bit_offset: 30
     bit_size: 1
-    enum: TcdNbytesMloffyesDmloe
+    enum: TcdNbytesMloffnoDmloe
   - name: smloe
     description: Source Minor Loop Offset Enable.
     bit_offset: 31
     bit_size: 1
-    enum: TcdNbytesMloffyesSmloe
+    enum: TcdNbytesMloffnoSmloe
 fieldset/TcdSaddr:
   description: TCD Source Address.
   fields:
@@ -517,24 +517,6 @@ enum/TcdNbytesMloffnoDmloe:
     description: Minor loop offset applied to DADDR.
     value: 1
 enum/TcdNbytesMloffnoSmloe:
-  bit_size: 1
-  variants:
-  - name: OffsetNotApplied
-    description: Minor loop offset not applied to SADDR.
-    value: 0
-  - name: OffsetApplied
-    description: Minor loop offset applied to SADDR.
-    value: 1
-enum/TcdNbytesMloffyesDmloe:
-  bit_size: 1
-  variants:
-  - name: OffsetNotApplied
-    description: Minor loop offset not applied to DADDR.
-    value: 0
-  - name: OffsetApplied
-    description: Minor loop offset applied to DADDR.
-    value: 1
-enum/TcdNbytesMloffyesSmloe:
   bit_size: 1
   variants:
   - name: OffsetNotApplied

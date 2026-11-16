@@ -1,0 +1,543 @@
+# NXP mcux-soc-svd 7c1f00bdd6263f0b93466f5e73e5fc55a744b879; native chiptool import.
+# Source instance geometry is retained in explicit block variants; see private source bindings.
+# Unannotated fieldsets construct zero in software, not a claimed hardware reset.
+# Command/W1C/SET/CLR/TOG construction defaults are zero masks; no RMW semantics are implied.
+# Source: MCXN247.xml ENET0 sha256 dbbed5781a39012768344882dad168430c742f26e4261c6fd0bda9a34ca4a652
+# Curated shared types replace imported per-field/per-register type clones.
+# Source: MCXN546_cm33_core0.xml ENET0 sha256 54e1fc060f9ccc17299bdb2da84159e699e87456276f2e695d440a6eb4aa9aad
+# Source: MCXN546_cm33_core1.xml ENET0 sha256 ddb7e932730a51c75f544efd6564ad6dbce5b3eca0a7befb7ab5b74a9951b937
+# Source: MCXN547_cm33_core0.xml ENET0 sha256 a276aee072bebd57c18929fe9a74408366fdbb42b918e06be5a3783a4aae4db7
+# Source: MCXN547_cm33_core1.xml ENET0 sha256 4a265743bdd2130cdd37ef12b9fd1d538cce9a2eac1c9149db291b7638e61423
+# Source: MCXN946_cm33_core0.xml ENET0 sha256 b986328ff1224adaeea70522fa61383a5f89f6313dfc3e7df92e8894fdab72d7
+# Source: MCXN946_cm33_core1.xml ENET0 sha256 57e8910317a1cb467d56726cb822c57806aa247542969bcf12dbcc8822187916
+# Source: MCXN947_cm33_core0.xml ENET0 sha256 629ac7cdc82684e467b0cf36a8aef697bc1eb65c2047d6610b7b5df65692e590
+# Source: MCXN947_cm33_core1.xml ENET0 sha256 0d77f3d23cad1d5eab631fd7f5ade4044d8aaca2d9d13cd11f3836d27fe089fb
+includes:
+  - ENET-fields.yaml
+block/EnetAlpha:
+  description: ENET.
+  items:
+  - name: mac_configuration
+    description: MAC Configuration.
+    byte_offset: 0
+    fieldset: MacConfiguration2
+  - name: mac_ext_configuration
+    description: MAC Extended Configuration Register.
+    byte_offset: 4
+    fieldset: MacExtConfiguration2
+  - name: mac_packet_filter
+    description: MAC Packet Filter.
+    byte_offset: 8
+    fieldset: MacPacketFilter2
+  - name: mac_watchdog_timeout
+    description: Watchdog Timeout.
+    byte_offset: 12
+    fieldset: MacWatchdogTimeout
+  - name: mac_vlan_tag_ctrl
+    description: MAC VLAN Tag Control.
+    byte_offset: 80
+    fieldset: MacVlanTagCtrl
+  - name: mac_vlan_incl
+    description: VLAN Tag Inclusion or Replacement.
+    byte_offset: 96
+    fieldset: MacVlanIncl2
+  - name: mac_inner_vlan_incl
+    description: MAC Inner VLAN Tag Inclusion or Replacement.
+    byte_offset: 100
+    fieldset: MacInnerVlanIncl2
+  - name: mac_q0_tx_flow_ctrl
+    description: MAC Q0 Tx Flow Control.
+    byte_offset: 112
+    fieldset: MacQ0TxFlowCtrl2
+  - name: mac_rx_flow_ctrl
+    description: MAC Rx Flow Control.
+    byte_offset: 144
+    fieldset: MacRxFlowCtrl2
+  - name: mac_rxq_ctrl4
+    description: Receive Queue Control 4.
+    byte_offset: 148
+    fieldset: MacRxqCtrl4
+  - name: mac_rxq_ctrl0
+    description: Receive Queue Control 0.
+    byte_offset: 160
+    fieldset: MacRxqCtrl0
+  - name: mac_rxq_ctrl1
+    description: Receive Queue Control 1.
+    byte_offset: 164
+    fieldset: MacRxqCtrl1
+  - name: mac_rxq_ctrl2
+    description: Receive Queue Control 2.
+    byte_offset: 168
+    fieldset: MacRxqCtrl2
+  - name: mac_interrupt_status
+    description: Interrupt Status.
+    byte_offset: 176
+    access: Read
+    fieldset: MacInterruptStatus2
+  - name: mac_interrupt_enable
+    description: Interrupt Enable.
+    byte_offset: 180
+    fieldset: MacInterruptEnable2
+  - name: mac_rx_tx_status
+    description: Receive Transmit Status.
+    byte_offset: 184
+    access: Read
+    fieldset: MacRxTxStatus2
+  - name: mac_pmt_control_status
+    description: PMT Control and Status.
+    byte_offset: 192
+    fieldset: MacPmtControlStatus2
+  - name: mac_rwk_packet_filter
+    description: Remote Wakeup Filter.
+    byte_offset: 196
+    fieldset: MacRwkPacketFilter
+  - name: mac_lpi_control_status
+    description: LPI Control and Status.
+    byte_offset: 208
+    fieldset: MacLpiControlStatus
+  - name: mac_lpi_timers_control
+    description: LPI Timers Control.
+    byte_offset: 212
+    fieldset: MacLpiTimersControl
+  - name: mac_lpi_entry_timer
+    description: Tx LPI Entry Timer Control.
+    byte_offset: 216
+    fieldset: MacLpiEntryTimer
+  - name: mac_oneus_tic_counter
+    description: One-microsecond Reference Timer.
+    byte_offset: 220
+    fieldset: MacOneusTicCounter
+  - name: mac_version
+    description: MAC Version.
+    byte_offset: 272
+    access: Read
+    fieldset: MacVersion2
+  - name: mac_debug
+    description: MAC Debug.
+    byte_offset: 276
+    access: Read
+    fieldset: MacDebug2
+  - name: mac_hw_feature0
+    description: Hardware Features 0.
+    byte_offset: 284
+    access: Read
+    fieldset: MacHwFeature02
+  - name: mac_hw_feature1
+    description: Hardware Features 1.
+    byte_offset: 288
+    access: Read
+    fieldset: MacHwFeature12
+  - name: mac_hw_feature2
+    description: Hardware Features 2.
+    byte_offset: 292
+    access: Read
+    fieldset: MacHwFeature22
+  - name: mac_hw_feature3
+    description: Hardware Features 3.
+    byte_offset: 296
+    access: Read
+    fieldset: MacHwFeature32
+  - name: mac_mdio_address
+    description: MDIO Address.
+    byte_offset: 512
+    fieldset: MacMdioAddress2
+  - name: mac_mdio_data
+    description: MAC MDIO Data.
+    byte_offset: 516
+    fieldset: MacMdioData2
+  - name: mac_csr_sw_ctrl
+    description: CSR Software Control.
+    byte_offset: 560
+    fieldset: MacCsrSwCtrl2
+  - name: mac_address0_high
+    description: MAC Address0 High.
+    byte_offset: 768
+    fieldset: MacAddress0High2
+  - name: mac_address0_low
+    description: MAC Address0 Low.
+    byte_offset: 772
+    fieldset: MacAddress0Low2
+  - name: indir_access_ctrl
+    description: Indirect Access Control.
+    byte_offset: 2672
+    fieldset: IndirAccessCtrl
+  - name: indir_access_data
+    description: Indirect Access Data.
+    byte_offset: 2676
+    fieldset: IndirAccessData
+  - name: mac_timestamp_control
+    description: Timestamp Control.
+    byte_offset: 2816
+    fieldset: MacTimestampControl2
+  - name: mac_sub_second_increment
+    description: Subsecond Increment.
+    byte_offset: 2820
+    fieldset: MacSubSecondIncrement2
+  - name: mac_system_time_seconds
+    description: System Time Seconds.
+    byte_offset: 2824
+    access: Read
+    fieldset: MacSystemTimeSeconds2
+  - name: mac_system_time_nanoseconds
+    description: System Time Nanoseconds.
+    byte_offset: 2828
+    access: Read
+    fieldset: MacSystemTimeNanoseconds2
+  - name: mac_system_time_seconds_update
+    description: System Time Seconds Update.
+    byte_offset: 2832
+    fieldset: MacSystemTimeSecondsUpdate2
+  - name: mac_system_time_nanoseconds_update
+    description: System Time Nanoseconds Update.
+    byte_offset: 2836
+    fieldset: MacSystemTimeNanosecondsUpdate2
+  - name: mac_timestamp_addend
+    description: Timestamp Addend.
+    byte_offset: 2840
+    fieldset: MacTimestampAddend2
+  - name: mac_timestamp_status
+    description: Timestamp Status.
+    byte_offset: 2848
+    access: Read
+    fieldset: MacTimestampStatus2
+  - name: mac_tx_timestamp_status_nanoseconds
+    description: Transmit Timestamp Status Nanoseconds.
+    byte_offset: 2864
+    access: Read
+    fieldset: MacTxTimestampStatusNanoseconds2
+  - name: mac_tx_timestamp_status_seconds
+    description: Transmit Timestamp Status Seconds.
+    byte_offset: 2868
+    access: Read
+    fieldset: MacTxTimestampStatusSeconds2
+  - name: mac_timestamp_ingress_corr_nanosecond
+    description: Timestamp Ingress Correction Nanosecond.
+    byte_offset: 2904
+    fieldset: MacTimestampIngressCorrNanosecond2
+  - name: mac_timestamp_egress_corr_nanosecond
+    description: Timestamp Egress Correction Nanosecond.
+    byte_offset: 2908
+    fieldset: MacTimestampEgressCorrNanosecond2
+  - name: mac_timestamp_ingress_latency
+    description: Timestamp Ingress Latency.
+    byte_offset: 2920
+    access: Read
+    fieldset: MacTimestampIngressLatency2
+  - name: mac_timestamp_egress_latency
+    description: Timestamp Egress Latency.
+    byte_offset: 2924
+    access: Read
+    fieldset: MacTimestampEgressLatency2
+  - name: mac_pps_control
+    description: PPS Control.
+    byte_offset: 2928
+    fieldset: MacPpsControl2
+  - name: pps0_target_time_seconds
+    description: PPS0 Target Time Seconds.
+    byte_offset: 2944
+    fieldset: Pps0TargetTimeSeconds
+  - name: pps0_target_time_nanoseconds
+    description: PPS0 Target Time Nanoseconds.
+    byte_offset: 2948
+    fieldset: Pps0TargetTimeNanoseconds
+  - name: mtl_operation_mode
+    description: MTL Operation Mode.
+    byte_offset: 3072
+    fieldset: MtlOperationMode2
+  - name: mtl_interrupt_status
+    description: MTL Interrupt Status.
+    byte_offset: 3104
+    access: Read
+    fieldset: MtlInterruptStatus2
+  - name: mtl_rxq_dma_map0
+    description: Receive Queue and DMA Channel Mapping 0.
+    byte_offset: 3120
+    fieldset: MtlRxqDmaMap0
+  - name: mtl_txq0_operation_mode
+    description: Queue 0 Transmit Operation Mode.
+    byte_offset: 3328
+    fieldset: MtlTxq0OperationMode2
+  - name: mtl_txq0_underflow
+    description: Queue 0 Underflow Counter.
+    byte_offset: 3332
+    access: Read
+    fieldset: MtlTxq0Underflow2
+  - name: mtl_txq0_debug
+    description: Queue 0 Transmit Debug.
+    byte_offset: 3336
+    access: Read
+    fieldset: MtlTxq0Debug2
+  - name: mtl_txq0_ets_status
+    description: Queue 0 ETS Status.
+    byte_offset: 3348
+    access: Read
+    fieldset: MtlTxq0EtsStatus
+  - name: mtl_txq0_quantum_weight
+    description: Queue 0 Quantum or Weights.
+    byte_offset: 3352
+    fieldset: MtlTxq0QuantumWeight
+  - name: mtl_q0_interrupt_control_status
+    description: Queue 0 Interrupt Control Status.
+    byte_offset: 3372
+    fieldset: MtlQ0InterruptControlStatus2
+  - name: mtl_rxq0_operation_mode
+    description: Queue 0 Receive Operation Mode.
+    byte_offset: 3376
+    fieldset: MtlRxq0OperationMode2
+  - name: mtl_rxq0_missed_packet_overflow_cnt
+    description: Queue 0 Missed Packet and Overflow Counter.
+    byte_offset: 3380
+    access: Read
+    fieldset: MtlRxq0MissedPacketOverflowCnt2
+  - name: mtl_rxq0_debug
+    description: Queue 0 Receive Debug.
+    byte_offset: 3384
+    access: Read
+    fieldset: MtlRxq0Debug2
+  - name: mtl_rxq0_control
+    description: Queue 0 Receive Control.
+    byte_offset: 3388
+    fieldset: MtlRxq0Control
+  - name: mtl_txq1_operation_mode
+    description: Queue 1 Transmit Operation Mode.
+    byte_offset: 3392
+    fieldset: MtlTxq0OperationMode2
+  - name: mtl_txq1_underflow
+    description: Queue 1 Underflow Counter.
+    byte_offset: 3396
+    access: Read
+    fieldset: MtlTxq0Underflow2
+  - name: mtl_txq1_debug
+    description: Queue 1 Transmit Debug.
+    byte_offset: 3400
+    access: Read
+    fieldset: MtlTxq0Debug2
+  - name: mtl_txq1_ets_control
+    description: Queue 1 ETS Control.
+    byte_offset: 3408
+    fieldset: MtlTxq1EtsControl
+  - name: mtl_txq1_ets_status
+    description: Queue 1 ETS Status.
+    byte_offset: 3412
+    access: Read
+    fieldset: MtlTxq0EtsStatus
+  - name: mtl_txq1_quantum_weight
+    description: Queue 1 idleSlopeCredit, Quantum or Weights.
+    byte_offset: 3416
+    fieldset: MtlTxq1QuantumWeight
+  - name: mtl_txq1_sendslopecredit
+    description: Queue 1 sendSlopeCredit.
+    byte_offset: 3420
+    fieldset: MtlTxq1Sendslopecredit
+  - name: mtl_txq1_hicredit
+    description: Queue 1 hiCredit.
+    byte_offset: 3424
+    fieldset: MtlTxq1Hicredit
+  - name: mtl_txq1_locredit
+    description: Queue 1 loCredit.
+    byte_offset: 3428
+    fieldset: MtlTxq1Locredit
+  - name: mtl_q1_interrupt_control_status
+    description: Queue 1 Interrupt Control Status.
+    byte_offset: 3436
+    fieldset: MtlQ0InterruptControlStatus2
+  - name: mtl_rxq1_operation_mode
+    description: Queue 1 Receive Operation Mode.
+    byte_offset: 3440
+    fieldset: MtlRxq0OperationMode2
+  - name: mtl_rxq1_missed_packet_overflow_cnt
+    description: Queue 1 Missed Packet and Overflow Counter.
+    byte_offset: 3444
+    access: Read
+    fieldset: MtlRxq0MissedPacketOverflowCnt2
+  - name: mtl_rxq1_debug
+    description: Queue 1 Receive Debug.
+    byte_offset: 3448
+    access: Read
+    fieldset: MtlRxq0Debug2
+  - name: mtl_rxq1_control
+    description: Queue 1 Receive Control.
+    byte_offset: 3452
+    fieldset: MtlRxq0Control
+  - name: dma_mode
+    description: DMA Bus Mode.
+    byte_offset: 4096
+    fieldset: DmaMode2
+  - name: dma_sysbus_mode
+    description: DMA System Bus Mode.
+    byte_offset: 4100
+    fieldset: DmaSysbusMode2
+  - name: dma_interrupt_status
+    description: DMA Interrupt Status.
+    byte_offset: 4104
+    access: Read
+    fieldset: DmaInterruptStatus2
+  - name: dma_debug_status0
+    description: DMA Debug Status 0.
+    byte_offset: 4108
+    access: Read
+    fieldset: DmaDebugStatus02
+  - name: dma_ch0_control
+    description: DMA Channel 0 Control.
+    byte_offset: 4352
+    fieldset: DmaCh0Control2
+  - name: dma_ch0_tx_control
+    description: DMA Channel 0 Transmit Control.
+    byte_offset: 4356
+    fieldset: DmaCh1TxControl
+  - name: dma_ch0_rx_control
+    description: DMA Channel 0 Receive Control.
+    byte_offset: 4360
+    fieldset: DmaCh1RxControl
+  - name: dma_ch0_txdesc_list_address
+    description: Channel 0 Tx Descriptor List Address register.
+    byte_offset: 4372
+    fieldset: DmaCh1TxdescListAddress
+  - name: dma_ch0_rxdesc_list_address
+    description: Channel 0 Rx Descriptor List Address register.
+    byte_offset: 4380
+    fieldset: DmaCh1RxdescListAddress
+  - name: dma_ch0_txdesc_tail_pointer
+    description: Channel 0 Tx Descriptor Tail Pointer.
+    byte_offset: 4384
+    fieldset: DmaCh1TxdescTailPointer
+  - name: dma_ch0_rxdesc_tail_pointer
+    description: Channel 0 Rx Descriptor Tail Pointer.
+    byte_offset: 4392
+    fieldset: DmaCh1RxdescTailPointer
+  - name: dma_ch0_txdesc_ring_length
+    description: Channel 0 Tx Descriptor Ring Length.
+    byte_offset: 4396
+    fieldset: DmaCh1TxdescRingLength
+  - name: dma_ch0_rx_control2
+    description: Channeli Receive Control.
+    byte_offset: 4400
+    fieldset: DmaCh1RxControl2
+  - name: dma_ch0_interrupt_enable
+    description: Channeli Interrupt Enable.
+    byte_offset: 4404
+    fieldset: DmaCh0InterruptEnable2
+  - name: dma_ch0_rx_interrupt_watchdog_timer
+    description: Channel 0 Receive Interrupt Watchdog Timer.
+    byte_offset: 4408
+    fieldset: DmaCh1RxInterruptWatchdogTimer
+  - name: dma_ch0_slot_function_control_status
+    description: Channel 0 Slot Function Control and Status.
+    byte_offset: 4412
+    fieldset: DmaCh1SlotFunctionControlStatus
+  - name: dma_ch0_current_app_txdesc
+    description: Channel 0 Current Application Transmit Descriptor.
+    byte_offset: 4420
+    access: Read
+    fieldset: DmaCh0CurrentAppTxdesc2
+  - name: dma_ch0_current_app_rxdesc
+    description: Channel 0 Current Application Receive Descriptor.
+    byte_offset: 4428
+    access: Read
+    fieldset: DmaCh0CurrentAppRxdesc2
+  - name: dma_ch0_current_app_txbuffer
+    description: Channel 0 Current Application Transmit Buffer Address.
+    byte_offset: 4436
+    access: Read
+    fieldset: DmaCh0CurrentAppTxbuffer2
+  - name: dma_ch0_current_app_rxbuffer
+    description: Channel 0 Current Application Receive Buffer Address.
+    byte_offset: 4444
+    access: Read
+    fieldset: DmaCh0CurrentAppRxbuffer2
+  - name: dma_ch0_status
+    description: DMA Channel 0 Status.
+    byte_offset: 4448
+    fieldset: DmaCh1Status
+  - name: dma_ch0_miss_frame_cnt
+    description: Channel 0 Missed Frame Counter.
+    byte_offset: 4452
+    access: Read
+    fieldset: DmaCh0MissFrameCnt2
+  - name: dma_ch0_rx_eri_cnt
+    description: Channel 0 Receive ERI Counter.
+    byte_offset: 4460
+    access: Read
+    fieldset: DmaCh1RxEriCnt
+  - name: dma_ch1_control
+    description: DMA Channel 1 Control.
+    byte_offset: 4480
+    fieldset: DmaCh0Control2
+  - name: dma_ch1_tx_control
+    description: DMA Channel 1 Transmit Control.
+    byte_offset: 4484
+    fieldset: DmaCh1TxControl
+  - name: dma_ch1_rx_control
+    description: DMA Channel 1 Receive Control.
+    byte_offset: 4488
+    fieldset: DmaCh1RxControl
+  - name: dma_ch1_txdesc_list_address
+    description: Channel 1 Tx Descriptor List Address.
+    byte_offset: 4500
+    fieldset: DmaCh1TxdescListAddress
+  - name: dma_ch1_rxdesc_list_address
+    description: Channel 1 Rx Descriptor List Address.
+    byte_offset: 4508
+    fieldset: DmaCh1RxdescListAddress
+  - name: dma_ch1_txdesc_tail_pointer
+    description: Channel 1 Tx Descriptor Tail Pointer.
+    byte_offset: 4512
+    fieldset: DmaCh1TxdescTailPointer
+  - name: dma_ch1_rxdesc_tail_pointer
+    description: Channel 1 Rx Descriptor Tail Pointer.
+    byte_offset: 4520
+    fieldset: DmaCh1RxdescTailPointer
+  - name: dma_ch1_txdesc_ring_length
+    description: Channel 1 Tx Descriptor Ring Length.
+    byte_offset: 4524
+    fieldset: DmaCh1TxdescRingLength
+  - name: dma_ch1_rx_control2
+    description: DMA Channel 1 Receive Control.
+    byte_offset: 4528
+    fieldset: DmaCh1RxControl2
+  - name: dma_ch1_interrupt_enable
+    description: Channel 1 Interrupt Enable.
+    byte_offset: 4532
+    fieldset: DmaCh0InterruptEnable2
+  - name: dma_ch1_rx_interrupt_watchdog_timer
+    description: Channel 1 Receive Interrupt Watchdog Timer.
+    byte_offset: 4536
+    fieldset: DmaCh1RxInterruptWatchdogTimer
+  - name: dma_ch1_slot_function_control_status
+    description: Channel 1 Slot Function Control and Status.
+    byte_offset: 4540
+    fieldset: DmaCh1SlotFunctionControlStatus
+  - name: dma_ch1_current_app_txdesc
+    description: Channel 1 Current Application Transmit Descriptor.
+    byte_offset: 4548
+    access: Read
+    fieldset: DmaCh0CurrentAppTxdesc2
+  - name: dma_ch1_current_app_rxdesc
+    description: Channel 1 Current Application Receive Descriptor.
+    byte_offset: 4556
+    access: Read
+    fieldset: DmaCh0CurrentAppRxdesc2
+  - name: dma_ch1_current_app_txbuffer
+    description: Channel 1 Current Application Transmit Buffer Address.
+    byte_offset: 4564
+    access: Read
+    fieldset: DmaCh0CurrentAppTxbuffer2
+  - name: dma_ch1_current_app_rxbuffer
+    description: Channel 1 Current Application Receive Buffer Address.
+    byte_offset: 4572
+    access: Read
+    fieldset: DmaCh0CurrentAppRxbuffer2
+  - name: dma_ch1_status
+    description: DMA Channel 1 Status.
+    byte_offset: 4576
+    fieldset: DmaCh1Status
+  - name: dma_ch1_miss_frame_cnt
+    description: Channel 1 Missed Frame Counter.
+    byte_offset: 4580
+    access: Read
+    fieldset: DmaCh0MissFrameCnt2
+  - name: dma_ch1_rx_eri_cnt
+    description: Channel 1 Receive ERI Counter.
+    byte_offset: 4588
+    access: Read
+    fieldset: DmaCh1RxEriCnt

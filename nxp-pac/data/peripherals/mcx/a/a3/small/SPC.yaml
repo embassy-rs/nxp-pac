@@ -99,7 +99,7 @@ fieldset/ActiveCfg:
     description: LDO_CORE VDD Drive Strength.
     bit_offset: 0
     bit_size: 1
-    enum: ActiveCfgCoreldoVddDs
+    enum: HpCfgCoreldoVddDs
   - name: coreldo_vdd_lvl
     description: LDO_CORE VDD Regulator Voltage Level.
     bit_offset: 2
@@ -113,7 +113,7 @@ fieldset/ActiveCfg:
     description: Bandgap Mode.
     bit_offset: 20
     bit_size: 2
-    enum: ActiveCfgBgmode
+    enum: HpCfgBgmode
   - name: core_lvde
     description: Core Low-Voltage Detection Enable.
     bit_offset: 24
@@ -262,7 +262,7 @@ fieldset/LpCfg:
     description: LDO_CORE VDD Drive Strength.
     bit_offset: 0
     bit_size: 1
-    enum: LpCfgCoreldoVddDs
+    enum: HpCfgCoreldoVddDs
   - name: coreldo_vdd_lvl
     description: LDO_CORE VDD Regulator Voltage Level.
     bit_offset: 2
@@ -281,7 +281,7 @@ fieldset/LpCfg:
     description: Bandgap Mode.
     bit_offset: 20
     bit_size: 2
-    enum: LpCfgBgmode
+    enum: HpCfgBgmode
   - name: lp_irefen
     description: Low-Power IREF Enable.
     bit_offset: 23
@@ -373,7 +373,7 @@ fieldset/Sc:
     description: Power Domain Low-Power Mode Request.
     bit_offset: 4
     bit_size: 4
-    enum: SpcLpMode
+    enum: LpMode
   - name: iso_clr
     description: Isolation Clear Flags.
     bit_offset: 16
@@ -435,7 +435,7 @@ fieldset/VdCoreCfg:
     description: Core Voltage Detect Reset Enable Lock.
     bit_offset: 16
     bit_size: 1
-    enum: VdCoreCfgLock
+    enum: VdSysCfgLock
   bit_size: 32
   reset_value: 1
 fieldset/VdStat:
@@ -445,12 +445,12 @@ fieldset/VdStat:
     description: Core Low-Voltage Detect Flag.
     bit_offset: 0
     bit_size: 1
-    enum: CorevddLvdf
+    enum: SysvddHvdf
   - name: sysvdd_lvdf
     description: System Low-Voltage Detect Flag.
     bit_offset: 1
     bit_size: 1
-    enum: SysvddLvdf
+    enum: SysvddHvdf
   - name: sysvdd_hvdf
     description: System HVD Flag.
     bit_offset: 5
@@ -507,27 +507,6 @@ fieldset/Verid:
     bit_size: 8
   bit_size: 32
   reset_value: 0
-enum/ActiveCfgBgmode:
-  bit_size: 2
-  variants:
-  - name: Bgmode0
-    description: Bandgap disabled.
-    value: 0
-  - name: Bgmode01
-    description: Bandgap enabled, buffer disabled.
-    value: 1
-  - name: Bgmode10
-    description: Bandgap enabled, buffer enabled.
-    value: 2
-enum/ActiveCfgCoreldoVddDs:
-  bit_size: 1
-  variants:
-  - name: Low
-    description: Low.
-    value: 0
-  - name: Normal
-    description: Normal.
-    value: 1
 enum/ActiveCfgCoreldoVddLvl:
   bit_size: 2
   variants:
@@ -552,15 +531,6 @@ enum/CntSelect:
   - name: Bit3
     description: '3.'
     value: 3
-enum/CorevddLvdf:
-  bit_size: 1
-  variants:
-  - name: EventNo
-    description: Event not detected.
-    value: 0
-  - name: EventYes
-    description: Event detected.
-    value: 1
 enum/Feature:
   bit_size: 16
   variants:
@@ -609,27 +579,6 @@ enum/HpCfgCoreldoVddLvl:
   - name: Over
     description: Regulate to overdrive voltage (1.2 V).
     value: 3
-enum/LpCfgBgmode:
-  bit_size: 2
-  variants:
-  - name: Bgmode0
-    description: Bandgap disabled.
-    value: 0
-  - name: Bgmode01
-    description: Bandgap enabled, buffer disabled.
-    value: 1
-  - name: Bgmode10
-    description: Bandgap enabled, buffer enabled.
-    value: 2
-enum/LpCfgCoreldoVddDs:
-  bit_size: 1
-  variants:
-  - name: Low
-    description: Low.
-    value: 0
-  - name: Normal
-    description: Normal.
-    value: 1
 enum/LpCfgCoreldoVddLvl:
   bit_size: 2
   variants:
@@ -699,18 +648,6 @@ enum/PdLpReq:
   - name: ReqYes
     description: Requested.
     value: 1
-enum/SpcLpMode:
-  bit_size: 4
-  variants:
-  - name: Mode1
-    description: DSLEEP with system clock off.
-    value: 1
-  - name: Mode2
-    description: PDOWN with system clock off.
-    value: 2
-  - name: Mode8
-    description: DPDOWN with system clock off.
-    value: 8
 enum/SpcLpReq:
   bit_size: 1
   variants:
@@ -729,24 +666,6 @@ enum/SysvddHvdf:
     value: 0
   - name: EventYes
     description: Event detected.
-    value: 1
-enum/SysvddLvdf:
-  bit_size: 1
-  variants:
-  - name: EventNo
-    description: Event not detected.
-    value: 0
-  - name: EventYes
-    description: Event detected.
-    value: 1
-enum/VdCoreCfgLock:
-  bit_size: 1
-  variants:
-  - name: Allow
-    description: Allow.
-    value: 0
-  - name: Deny
-    description: Deny.
     value: 1
 enum/VdSysCfgLock:
   bit_size: 1

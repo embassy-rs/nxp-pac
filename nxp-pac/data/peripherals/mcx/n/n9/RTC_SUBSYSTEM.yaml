@@ -40,7 +40,7 @@ fieldset/RtcSubsystemAlphaFieldsetBravo:
     description: Subsecond Counter Enable.
     bit_offset: 0
     bit_size: 1
-    enum: RtcSubsystemAlphaEnumDelta
+    enum: IntrEn
 fieldset/RtcSubsystemAlphaFieldsetCharlie:
   description: Wake Timer Counter.
   fields:
@@ -65,12 +65,12 @@ fieldset/RtcSubsystemAlphaFieldsetDelta:
     description: OSC Divide Enable.
     bit_offset: 4
     bit_size: 1
-    enum: RtcSubsystemAlphaEnumCharlie
+    enum: IntrEn
   - name: intr_en
     description: Enable Interrupt.
     bit_offset: 5
     bit_size: 1
-    enum: RtcSubsystemAlphaEnumBravo
+    enum: IntrEn
 enum/RtcSubsystemAlphaEnumAlpha:
   bit_size: 1
   variants:
@@ -80,25 +80,7 @@ enum/RtcSubsystemAlphaEnumAlpha:
   - name: Enable
     description: Clear the wake timer counter.
     value: 1
-enum/RtcSubsystemAlphaEnumBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/RtcSubsystemAlphaEnumCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/RtcSubsystemAlphaEnumDelta:
+enum/IntrEn:
   bit_size: 1
   variants:
   - name: Disable

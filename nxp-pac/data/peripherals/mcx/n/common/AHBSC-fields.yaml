@@ -1,0 +1,2932 @@
+# MCXN field definitions; identical layouts share one type, including software defaults.
+# Different field/variant documentation is retained rather than width-based merging.
+# Curated from the N2/N5/N9 native imports; source hashes remain on block entries.
+includes:
+  - ../../common/AHBSC-fields.yaml
+fieldset/AhbPeripheral0SlavePortP12SlaveRule0:
+  description: AHB Peripheral 0 Slave Port 12 Slave Rule 0.
+  fields:
+  - name: e_dma0_ch15
+    description: eDMA0_CH15.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: sct0
+    description: SCT0.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: lp_flexcomm0
+    description: LP_FLEXCOMM0.
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
+  - name: lp_flexcomm1
+    description: LP_FLEXCOMM1.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: lp_flexcomm2
+    description: LP_FLEXCOMM2.
+    bit_offset: 20
+    bit_size: 2
+    enum: Rule
+  - name: lp_flexcomm3
+    description: LP_FLEXCOMM3.
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
+  - name: gpio0_alias0
+    description: GPIO0_ALIAS0.
+    bit_offset: 28
+    bit_size: 2
+    enum: Rule
+fieldset/AhbPeripheral0SlavePortP12SlaveRule1:
+  description: AHB Peripheral 0 Slave Port 12 Slave Rule 1.
+  fields:
+  - name: gpio0_alias1
+    description: GPIO0_ALIAS1.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  - name: gpio1_alias0
+    description: GPIO1_ALIAS0.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: gpio1_alias1
+    description: GPIO1_ALIAS1.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: gpio2_alias0
+    description: GPIO2_ALIAS0.
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
+  - name: gpio2_alias1
+    description: GPIO2_ALIAS1.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: gpio3_alias0
+    description: GPIO3_ALIAS0.
+    bit_offset: 20
+    bit_size: 2
+    enum: Rule
+  - name: gpio3_alias1
+    description: GPIO3_ALIAS1.
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
+  - name: gpio4_alias0
+    description: GPIO4_ALIAS0.
+    bit_offset: 28
+    bit_size: 2
+    enum: Rule
+fieldset/AhbPeripheral0SlavePortP12SlaveRule2:
+  description: AHB Peripheral 0 Slave Port 12 Slave Rule 2.
+  fields:
+  - name: gpio4_alias1
+    description: GPIO4_ALIAS1.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+fieldset/AhbPeripheral1SlavePortP13SlaveRule0:
+  description: AHB Peripheral 1 Slave Port 13 Slave Rule 0.
+  fields:
+  - name: e_dma1_ch15
+    description: eDMA1_CH15.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: sema42
+    description: SEMA42.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: mailbox
+    description: MAILBOX.
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
+  - name: pkc_ram
+    description: PKC_RAM.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: flexcomm4
+    description: FLEXCOMM4.
+    bit_offset: 20
+    bit_size: 2
+    enum: Rule
+  - name: flexcomm5
+    description: FLEXCOMM5.
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
+  - name: flexcomm6
+    description: FLEXCOMM6.
+    bit_offset: 28
+    bit_size: 2
+    enum: Rule
+fieldset/AhbPeripheral1SlavePortP13SlaveRule1:
+  description: AHB Peripheral 1 Slave Port 13 Slave Rule 1.
+  fields:
+  - name: flexcomm7
+    description: FLEXCOMM7.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  - name: flexcomm8
+    description: FLEXCOMM8.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: flexcomm9
+    description: FLEXCOMM9.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: usb_fs_otg_ram
+    description: USB FS OTG RAM.
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
+  - name: cdog0
+    description: CDOG0.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: cdog1
+    description: CDOG1.
+    bit_offset: 20
+    bit_size: 2
+    enum: Rule
+  - name: debug_mailbox
+    description: DEBUG_MAILBOX.
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
+  - name: npu
+    description: NPU.
+    bit_offset: 28
+    bit_size: 2
+    enum: Rule
+fieldset/AhbPeripheral1SlavePortP13SlaveRule2:
+  description: AHB Peripheral 1 Slave Port 13 Slave Rule 2.
+  fields:
+  - name: powerquad
+    description: POWERQUAD.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+fieldset/AhbSecureCtrlPeripheralRule0:
+  description: AHB Secure Control Peripheral Rule 0.
+  fields:
+  - name: rule0
+    description: Rule 0.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  - name: rule1
+    description: Rule 1.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: rule2
+    description: Rule 2.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: rule3
+    description: Rule 3.
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
+fieldset/AipsBridgeGroup0MemRule0:
+  description: AIPS Bridge Group 0 Memory Rule 0.
+  fields:
+  - name: gpio5_alias0
+    description: GPIO5_ALIAS0.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  - name: gpio5_alias1
+    description: GPIO5_ALIAS2.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: port5
+    description: PORT5.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: fmu0
+    description: FMU0.
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
+  - name: scg0
+    description: SCG0.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: spc0
+    description: SPC0.
+    bit_offset: 20
+    bit_size: 2
+    enum: Rule
+  - name: wuu0
+    description: WUU0.
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
+  only_in: ^(MCXN2[0-9]{2})$
+fieldset/AipsBridgeGroup0MemRule02:
+  description: AIPS Bridge Group 0 Memory Rule 0.
+  fields:
+  - name: gpio5_alias0
+    description: GPIO5_ALIAS0.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  - name: gpio5_alias1
+    description: GPIO5_ALIAS2.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: port5
+    description: PORT5.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: fmu0
+    description: FMU0.
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
+  - name: scg0
+    description: SCG0.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: spc0
+    description: SPC0.
+    bit_offset: 20
+    bit_size: 2
+    enum: Rule
+  - name: wuu0
+    description: WUU0.
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
+  - name: tro0
+    description: TRO0.
+    bit_offset: 28
+    bit_size: 2
+    enum: Rule
+fieldset/AipsBridgeGroup0MemRule1:
+  description: AIPS Bridge Group 0 Memory Rule 1.
+  fields:
+  - name: lptmr0
+    description: LPTMR0.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: lptmr1
+    description: LPTMR1.
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
+  - name: rtc
+    description: RTC.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: fmu_test
+    description: FMU_TEST.
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
+fieldset/AipsBridgeGroup0MemRule2:
+  description: AIPS Bridge Group 0 Memory Rule 2.
+  fields:
+  - name: tsi
+    description: TSI.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  - name: cmp0
+    description: CMP0.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: cmp1
+    description: CMP1.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: cmp2
+    description: CMP2.
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
+  - name: els
+    description: ELS.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: els_alias1
+    description: ELS_ALIAS1.
+    bit_offset: 20
+    bit_size: 2
+    enum: Rule
+  - name: els_alias2
+    description: ELS_ALIAS2.
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
+  - name: els_alias3
+    description: ELS_ALIAS3.
+    bit_offset: 28
+    bit_size: 2
+    enum: Rule
+fieldset/AipsBridgeGroup0MemRule3:
+  description: AIPS Bridge Group 0 Memory Rule 3.
+  fields:
+  - name: digtmp
+    description: DIGTMP.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  - name: vbat
+    description: VBAT.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: trng
+    description: TRNG.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: eim0
+    description: EIM0.
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
+  - name: erm0
+    description: ERM0.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: intm0
+    description: INTM0.
+    bit_offset: 20
+    bit_size: 2
+    enum: Rule
+fieldset/AipsBridgeGroup1MemRule0:
+  description: AIPS Bridge Group 1 Rule 0.
+  fields:
+  - name: e_dma0_mp
+    description: eDMA0_MP.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  - name: e_dma0_ch0
+    description: eDMA0_CH0.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: e_dma0_ch1
+    description: eDMA0_CH1.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: e_dma0_ch2
+    description: eDMA0_CH2.
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
+  - name: e_dma0_ch3
+    description: FLEXSPI0 Registers.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: e_dma0_ch4
+    description: eDMA0_CH4.
+    bit_offset: 20
+    bit_size: 2
+    enum: Rule
+  - name: e_dma0_ch5
+    description: eDMA0_CH5.
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
+  - name: e_dma0_ch6
+    description: eDMA0_CH6.
+    bit_offset: 28
+    bit_size: 2
+    enum: Rule
+fieldset/AipsBridgeGroup1MemRule1:
+  description: AIPS Bridge Group 1 Rule 1.
+  fields:
+  - name: e_dma0_ch7
+    description: eDMA0_CH7.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  - name: e_dma0_ch8
+    description: eDMA0_CH8.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: e_dma0_ch9
+    description: eDMA0_CH9.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: e_dma0_ch10
+    description: eDMA0_CH10.
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
+  - name: e_dma0_ch11
+    description: FLEXSPI0.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: e_dma0_ch12
+    description: eDMA0_CH12.
+    bit_offset: 20
+    bit_size: 2
+    enum: Rule
+  - name: e_dma0_ch13
+    description: eDMA0_CH13.
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
+  - name: e_dma0_ch14
+    description: eDMA0_CH14.
+    bit_offset: 28
+    bit_size: 2
+    enum: Rule
+fieldset/AipsBridgeGroup2MemRule0:
+  description: AIPS Bridge Group 2 Rule 0.
+  fields:
+  - name: e_dma1_mp
+    description: eDMA1_MP.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  - name: e_dma1_ch0
+    description: eDMA1_CH0.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: e_dma1_ch1
+    description: eDMA1_CH1.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: e_dma1_ch2
+    description: eDMA1_CH2.
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
+  - name: e_dma1_ch3
+    description: eDMA1_CH3.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: e_dma1_ch4
+    description: eDMA1_CH4.
+    bit_offset: 20
+    bit_size: 2
+    enum: Rule
+  - name: e_dma1_ch5
+    description: eDMA1_CH5.
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
+  - name: e_dma1_ch6
+    description: eDMA1_CH6.
+    bit_offset: 28
+    bit_size: 2
+    enum: Rule
+fieldset/AipsBridgeGroup2MemRule1:
+  description: AIPS Bridge Group 2 Memory Rule 1.
+  fields:
+  - name: e_dma1_ch7
+    description: eDMA1_CH7.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  only_in: ^(MCXN2[0-9]{2})$
+fieldset/AipsBridgeGroup2MemRule12:
+  description: AIPS Bridge Group 2 Memory Rule 1.
+  fields:
+  - name: e_dma1_ch7
+    description: eDMA1_CH7.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  - name: e_dma1_ch8
+    description: eDMA1_CH8.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: e_dma1_ch9
+    description: eDMA1_CH9.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: e_dma1_ch10
+    description: eDMA1_CH10.
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
+  - name: e_dma1_ch11
+    description: eDMA1_CH11.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: e_dma1_ch12
+    description: eDMA1_CH12.
+    bit_offset: 20
+    bit_size: 2
+    enum: Rule
+  - name: e_dma1_ch13
+    description: eDMA1_CH13.
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
+  - name: e_dma1_ch14
+    description: eDMA1_CH14.
+    bit_offset: 28
+    bit_size: 2
+    enum: Rule
+fieldset/AipsBridgeGroup3MemRule0:
+  description: AIPS Bridge Group 3 Rule 0.
+  fields:
+  - name: ewm0
+    description: EWM0.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  - name: lpcac
+    description: LPCAC.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: flexspi_cmx
+    description: FLEXSPI_CMX.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: sfa
+    description: SFA.
+    bit_offset: 20
+    bit_size: 2
+    enum: Rule
+  - name: mbc
+    description: MBC.
+    bit_offset: 28
+    bit_size: 2
+    enum: Rule
+fieldset/AipsBridgeGroup3MemRule1:
+  description: AIPS Bridge Group 3 Memory Rule 1.
+  fields:
+  - name: flexspi
+    description: FLEXSPI.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  - name: otpc
+    description: OTPC.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: crc
+    description: CRC.
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
+  - name: npx
+    description: NPX.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: pwm
+    description: PWM.
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
+  - name: qdc
+    description: QDC.
+    bit_offset: 28
+    bit_size: 2
+    enum: Rule
+  only_in: ^(MCXN2[0-9]{2})$
+fieldset/AipsBridgeGroup3MemRule12:
+  description: AIPS Bridge Group 3 Memory Rule 1.
+  fields:
+  - name: flexspi
+    description: FLEXSPI.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  - name: otpc
+    description: OTPC.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: crc
+    description: CRC.
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
+  - name: npx
+    description: NPX.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: pwm
+    description: PWM.
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
+  - name: enc
+    description: ENC.
+    bit_offset: 28
+    bit_size: 2
+    enum: Rule
+fieldset/AipsBridgeGroup3MemRule2:
+  description: AIPS Bridge Group 3 Rule 2.
+  fields:
+  - name: pwm1
+    description: PWM1.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  - name: qdc1
+    description: QDC1.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: evtg
+    description: EVTG.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: can0_rule0
+    description: CAN0 RULE0.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: can0_rule1
+    description: CAN0 RULE1.
+    bit_offset: 20
+    bit_size: 2
+    enum: Rule
+  - name: can0_rule2
+    description: CAN0 RULE2.
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
+  - name: can0_rule3
+    description: CAN0 RULE3.
+    bit_offset: 28
+    bit_size: 2
+    enum: Rule
+  only_in: ^(MCXN2[0-9]{2})$
+fieldset/AipsBridgeGroup3MemRule22:
+  description: AIPS Bridge Group 3 Rule 2.
+  fields:
+  - name: pwm1
+    description: PWM1.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  - name: enc1
+    description: ENC1.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: evtg
+    description: EVTG.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: can0_rule0
+    description: CAN0 RULE0.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: can0_rule1
+    description: CAN0 RULE1.
+    bit_offset: 20
+    bit_size: 2
+    enum: Rule
+  - name: can0_rule2
+    description: CAN0 RULE2.
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
+  - name: can0_rule3
+    description: CAN0 RULE3.
+    bit_offset: 28
+    bit_size: 2
+    enum: Rule
+fieldset/AipsBridgeGroup3MemRule3:
+  description: AIPS Bridge Group 3 Rule 3.
+  fields:
+  - name: can1_rule0
+    description: CAN1 RULE0.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  - name: can1_rule1
+    description: CAN1 RULE1.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: can1_rule2
+    description: CAN1 RULE2.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: can1_rule3
+    description: CAN1 RULE3.
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
+  - name: usbdcd
+    description: USBDCD.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: usbfs
+    description: USBFS.
+    bit_offset: 20
+    bit_size: 2
+    enum: Rule
+fieldset/AipsBridgeGroup4MemRule0:
+  description: AIPS Bridge Group 4 Rule 0.
+  fields:
+  - name: enet
+    description: ENET.
+    bit_offset: 0
+    bit_size: 4
+    enum: Enet
+  - name: emvsim0
+    description: EMVSIM0.
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
+  - name: emvsim1
+    description: EMVSIM1.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: flexio
+    description: FLEXIO.
+    bit_offset: 20
+    bit_size: 2
+    enum: Rule
+  - name: sai0
+    description: SAI0.
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
+  - name: sai1
+    description: SAI1.
+    bit_offset: 28
+    bit_size: 2
+    enum: Rule
+fieldset/AipsBridgeGroup4MemRule1:
+  description: AIPS Bridge Group 4 Rule 1.
+  fields:
+  - name: sinc0
+    description: SINC0.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  - name: u_sdhc0
+    description: uSDHC0.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: usbhsphy
+    description: USBHSPHY.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: usbhs
+    description: USBHS.
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
+  - name: micd
+    description: MICD.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: adc0
+    description: ADC0.
+    bit_offset: 20
+    bit_size: 2
+    enum: Rule
+  - name: adc1
+    description: ADC1.
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
+  - name: dac0
+    description: DAC0.
+    bit_offset: 28
+    bit_size: 2
+    enum: Rule
+fieldset/AipsBridgeGroup4MemRule2:
+  description: AIPS Bridge Group 4 Rule 2.
+  fields:
+  - name: opamp0
+    description: OPAMP0.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  - name: vref
+    description: VREF.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: dac
+    description: DAC.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: opamp1
+    description: OPAMP1.
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
+  - name: hpdac0
+    description: HPDAC0.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: opamp2
+    description: OPAMP2.
+    bit_offset: 20
+    bit_size: 2
+    enum: Rule
+  - name: port0
+    description: PORT0.
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
+  - name: port1
+    description: PORT1.
+    bit_offset: 28
+    bit_size: 2
+    enum: Rule
+fieldset/AipsBridgeGroup4MemRule3:
+  description: AIPS Bridge Group 4 Rule 3.
+  fields:
+  - name: port2
+    description: PORT2.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  - name: port3
+    description: PORT3.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: port4
+    description: PORT4.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: mtr0
+    description: MTR0.
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
+  - name: atx0
+    description: ATX0.
+    bit_offset: 28
+    bit_size: 2
+    enum: Rule
+fieldset/ApbPeripheralGroup0MemRule0:
+  description: APB Bridge Group 0 Memory Rule 0.
+  fields:
+  - name: syscon
+    description: SYSCON.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  - name: pint0
+    description: PINT0.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: inputmux
+    description: INPUTMUX.
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
+fieldset/ApbPeripheralGroup0MemRule1:
+  description: APB Bridge Group 0 Memory Rule 1.
+  fields:
+  - name: ctimer0
+    description: CTIMER0.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: ctimer1
+    description: CTIMER1.
+    bit_offset: 20
+    bit_size: 2
+    enum: Rule
+  - name: ctimer2
+    description: CTIMER2.
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
+  - name: ctimer3
+    description: CTIMER3.
+    bit_offset: 28
+    bit_size: 2
+    enum: Rule
+fieldset/ApbPeripheralGroup0MemRule2:
+  description: APB Bridge Group 0 Rule 2.
+  fields:
+  - name: ctimer4
+    description: CTIMER4.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  - name: freqme0
+    description: FREQME0.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: utcik0
+    description: UTCIK0.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: mrt0
+    description: MRT0.
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
+  - name: ostimer0
+    description: OSTIMER0.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: wwdt0
+    description: WWDT0.
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
+  - name: wwdt1
+    description: WWDT1.
+    bit_offset: 28
+    bit_size: 2
+    enum: Rule
+fieldset/ApbPeripheralGroup0MemRule3:
+  description: APB Bridge Group 0 Memory Rule 3.
+  fields:
+  - name: cache64_polsel0
+    description: CACHE64_POLSEL0.
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
+fieldset/ApbPeripheralGroup1MemRule0:
+  description: APB Bridge Group 1 Memory Rule 0.
+  fields:
+  - name: i3c0
+    description: I3C0.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: i3c1
+    description: I3C1.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: gdet
+    description: GDET.
+    bit_offset: 20
+    bit_size: 2
+    enum: Rule
+  - name: itrc
+    description: ITRC.
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
+fieldset/ApbPeripheralGroup1MemRule1:
+  description: APB Bridge Group 1 Memory Rule 1.
+  fields:
+  - name: pkc
+    description: PKC.
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
+  - name: puf_alias0
+    description: PUF_ALIAS0.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: puf_alias1
+    description: PUF_ALIAS1.
+    bit_offset: 20
+    bit_size: 2
+    enum: Rule
+  - name: puf_alias2
+    description: PUF_ALIAS2.
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
+  - name: puf_alias3
+    description: PUF_ALIAS3.
+    bit_offset: 28
+    bit_size: 2
+    enum: Rule
+fieldset/ApbPeripheralGroup1MemRule2:
+  description: APB Bridge Group 1 Memory Rule 2.
+  fields:
+  - name: coolflux
+    description: COOLFLUX.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: smartdma
+    description: SmartDMA.
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
+  - name: plu
+    description: PLU.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  only_in: ^(MCXN2[0-9]{2})$
+fieldset/ApbPeripheralGroup1MemRule22:
+  description: APB Bridge Group 1 Memory Rule 2.
+  fields:
+  - name: sm3
+    description: SM3.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: coolflux
+    description: COOLFLUX.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: smartdma
+    description: SmartDMA.
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
+  - name: plu
+    description: PLU.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+fieldset/Cpu0LockReg:
+  description: Miscellaneous CPU0 Control Signals.
+  fields:
+  - name: lock_ns_vtor
+    description: LOCK_NS_VTOR.
+    bit_offset: 0
+    bit_size: 2
+    enum: LockNsVtor
+  - name: lock_ns_mpu
+    description: LOCK_NS_MPU.
+    bit_offset: 2
+    bit_size: 2
+    enum: LockNsMpu
+  - name: lock_s_vtaircr
+    description: LOCK_S_VTAIRCR.
+    bit_offset: 4
+    bit_size: 2
+    enum: LockSVtaircr
+  - name: lock_s_mpu
+    description: LOCK_S_MPU.
+    bit_offset: 6
+    bit_size: 2
+    enum: LockSMpu
+  - name: lock_sau
+    description: LOCK_SAU.
+    bit_offset: 8
+    bit_size: 2
+    enum: LockSau
+  - name: cm33_lock_reg_lock
+    description: CM33_LOCK_REG_LOCK.
+    bit_offset: 30
+    bit_size: 2
+    enum: Cm33LockRegLock
+fieldset/Cpu1LockReg:
+  description: Miscellaneous CPU1 Control Signals.
+  fields:
+  - name: lock_ns_vtor
+    description: LOCK_NS_VTOR.
+    bit_offset: 0
+    bit_size: 2
+    enum: LockNsVtor
+  - name: lock_ns_mpu
+    description: LOCK_NS_MPU.
+    bit_offset: 2
+    bit_size: 2
+    enum: LockNsMpu
+fieldset/Flash00MemRule:
+  description: Flash Memory Rule.
+  fields:
+  - name: rule0
+    description: Rule 0.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  - name: rule1
+    description: Rule 1.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: rule2
+    description: Rule 2.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: rule3
+    description: Rule 3.
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
+  - name: rule4
+    description: Rule 4.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: rule5
+    description: Rule 5.
+    bit_offset: 20
+    bit_size: 2
+    enum: Rule
+  - name: rule6
+    description: Rule 6.
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
+  - name: rule7
+    description: Rule 7.
+    bit_offset: 28
+    bit_size: 2
+    enum: Rule
+fieldset/Flexspi0RegionMemRule0:
+  description: FLEXSPI0 Region index Memory Rule 0.
+  fields:
+  - name: rule0
+    description: Rule 0.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  - name: rule1
+    description: Rule 1.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: rule2
+    description: Rule 2.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: rule3
+    description: Rule 3.
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
+  - name: rule4
+    description: Rule 4.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: rule5
+    description: Rule 5.
+    bit_offset: 20
+    bit_size: 2
+    enum: Rule
+fieldset/MasterSecAntiPolReg2:
+  description: Master Secure Level.
+  fields:
+  - name: smartdma
+    description: SMARTDMA Data.
+    bit_offset: 4
+    bit_size: 2
+    enum: EDma0
+  - name: e_dma0
+    description: eDMA0.
+    bit_offset: 6
+    bit_size: 2
+    enum: EDma0
+  - name: e_dma1
+    description: eDMA1.
+    bit_offset: 8
+    bit_size: 2
+    enum: EDma0
+  - name: pkc
+    description: PKC.
+    bit_offset: 10
+    bit_size: 2
+    enum: EDma0
+  - name: usb_hs
+    description: USB HS.
+    bit_offset: 26
+    bit_size: 2
+    enum: EDma0
+  - name: master_sec_level_antipol_lock
+    description: Master SEC Level Antipol Lock.
+    bit_offset: 30
+    bit_size: 2
+    enum: MasterSecLevelAntipolLock
+  only_in: ^(MCXN2[0-9]{2})$
+fieldset/MasterSecAntiPolReg3:
+  description: Master Secure Level.
+  fields:
+  - name: cpu1
+    description: CPU1.
+    bit_offset: 2
+    bit_size: 2
+    enum: EDma0
+  - name: smartdma
+    description: SMARTDMA Data.
+    bit_offset: 4
+    bit_size: 2
+    enum: EDma0
+  - name: e_dma0
+    description: eDMA0.
+    bit_offset: 6
+    bit_size: 2
+    enum: EDma0
+  - name: e_dma1
+    description: eDMA1.
+    bit_offset: 8
+    bit_size: 2
+    enum: EDma0
+  - name: pkc
+    description: PKC.
+    bit_offset: 10
+    bit_size: 2
+    enum: EDma0
+  - name: pq
+    description: PowerQuad.
+    bit_offset: 14
+    bit_size: 2
+    enum: EDma0
+  - name: npuo
+    description: NPU Operands.
+    bit_offset: 16
+    bit_size: 2
+    enum: EDma0
+  - name: coolfluxi
+    description: Coolflux Instruction.
+    bit_offset: 18
+    bit_size: 2
+    enum: EDma0
+  - name: usb_fs
+    description: USB_FS.
+    bit_offset: 22
+    bit_size: 2
+    enum: EDma0
+  - name: ethernet
+    description: Ethernet.
+    bit_offset: 24
+    bit_size: 2
+    enum: EDma0
+  - name: usb_hs
+    description: USB HS.
+    bit_offset: 26
+    bit_size: 2
+    enum: EDma0
+  - name: usdhc
+    description: uSDHC.
+    bit_offset: 28
+    bit_size: 2
+    enum: EDma0
+  - name: master_sec_level_antipol_lock
+    description: Master SEC Level Antipol Lock.
+    bit_offset: 30
+    bit_size: 2
+    enum: MasterSecLevelAntipolLock
+fieldset/MasterSecLevel2:
+  description: Master Secure Level.
+  fields:
+  - name: smartdma
+    description: SMARTDMA Data.
+    bit_offset: 4
+    bit_size: 2
+    enum: MasterSec
+  - name: e_dma0
+    description: eDMA0.
+    bit_offset: 6
+    bit_size: 2
+    enum: MasterSec
+  - name: e_dma1
+    description: eDMA1.
+    bit_offset: 8
+    bit_size: 2
+    enum: MasterSec
+  - name: pkc
+    description: PKC.
+    bit_offset: 10
+    bit_size: 2
+    enum: MasterSec
+  - name: usb_hs
+    description: USB HS.
+    bit_offset: 26
+    bit_size: 2
+    enum: MasterSec
+  - name: master_sec_level_lock
+    description: Master SEC Level Lock.
+    bit_offset: 30
+    bit_size: 2
+    enum: MasterSecLevelAntipolLock
+  only_in: ^(MCXN2[0-9]{2})$
+fieldset/MasterSecLevel3:
+  description: Master Secure Level.
+  fields:
+  - name: cpu1
+    description: CPU1.
+    bit_offset: 2
+    bit_size: 2
+    enum: MasterSec
+  - name: smartdma
+    description: SMARTDMA Data.
+    bit_offset: 4
+    bit_size: 2
+    enum: MasterSec
+  - name: e_dma0
+    description: eDMA0.
+    bit_offset: 6
+    bit_size: 2
+    enum: MasterSec
+  - name: e_dma1
+    description: eDMA1.
+    bit_offset: 8
+    bit_size: 2
+    enum: MasterSec
+  - name: pkc
+    description: PKC.
+    bit_offset: 10
+    bit_size: 2
+    enum: MasterSec
+  - name: pq
+    description: PowerQuad.
+    bit_offset: 14
+    bit_size: 2
+    enum: MasterSec
+  - name: npuo
+    description: NPU Operands.
+    bit_offset: 16
+    bit_size: 2
+    enum: MasterSec
+  - name: coolfluxi
+    description: Coolflux Instruction.
+    bit_offset: 18
+    bit_size: 2
+    enum: MasterSec
+  - name: usb_fs
+    description: USB_FS.
+    bit_offset: 22
+    bit_size: 2
+    enum: MasterSec
+  - name: ethernet
+    description: Ethernet.
+    bit_offset: 24
+    bit_size: 2
+    enum: MasterSec
+  - name: usb_hs
+    description: USB HS.
+    bit_offset: 26
+    bit_size: 2
+    enum: MasterSec
+  - name: usdhc
+    description: uSDHC.
+    bit_offset: 28
+    bit_size: 2
+    enum: MasterSec
+  - name: master_sec_level_lock
+    description: Master SEC Level Lock.
+    bit_offset: 30
+    bit_size: 2
+    enum: MasterSecLevelAntipolLock
+fieldset/MiscCtrlDpReg2:
+  description: Secure Control Duplicate.
+  fields:
+  - name: write_lock
+    description: Write Lock.
+    bit_offset: 0
+    bit_size: 2
+    enum: MiscCtrlRegWriteLock
+  - name: enable_secure_checking
+    description: Enable Secure Checking.
+    bit_offset: 2
+    bit_size: 2
+    enum: EnableSecureChecking
+  - name: enable_s_priv_check
+    description: Enable Secure Privilege Checking.
+    bit_offset: 4
+    bit_size: 2
+    enum: EnableSPrivCheck2
+  - name: enable_ns_priv_check
+    description: Enable Non-Secure Privilege Checking.
+    bit_offset: 6
+    bit_size: 2
+    enum: MiscCtrlEnable
+  - name: disable_violation_abort
+    description: Disable Violation Abort.
+    bit_offset: 8
+    bit_size: 2
+    enum: MiscCtrlRegDisableViolationAbort
+  - name: disable_strict_mode
+    description: Disable Strict Mode.
+    bit_offset: 10
+    bit_size: 2
+    enum: MiscCtrlRegDisableStrictMode
+  - name: idau_all_ns
+    description: IDAU All Non-Secure.
+    bit_offset: 14
+    bit_size: 2
+    enum: MiscCtrlRegIdauAllNs
+fieldset/MiscCtrlReg2:
+  description: Secure Control.
+  fields:
+  - name: write_lock
+    description: Write Lock.
+    bit_offset: 0
+    bit_size: 2
+    enum: MiscCtrlRegWriteLock
+  - name: enable_secure_checking
+    description: Enable Secure Checking.
+    bit_offset: 2
+    bit_size: 2
+    enum: EnableSecureChecking
+  - name: enable_s_priv_check
+    description: Enable Secure Privilege Checking.
+    bit_offset: 4
+    bit_size: 2
+    enum: EnableSPrivCheck
+  - name: enable_ns_priv_check
+    description: Enable Non-Secure Privilege Checking.
+    bit_offset: 6
+    bit_size: 2
+    enum: EnableNsPrivCheck
+  - name: disable_violation_abort
+    description: Disable Violation Abort.
+    bit_offset: 8
+    bit_size: 2
+    enum: MiscCtrlRegDisableViolationAbort
+  - name: disable_strict_mode
+    description: Disable Strict Mode.
+    bit_offset: 10
+    bit_size: 2
+    enum: DisableStrictMode
+  - name: idau_all_ns
+    description: IDAU All Non-Secure.
+    bit_offset: 14
+    bit_size: 2
+    enum: MiscCtrlRegIdauAllNs
+fieldset/SecCpu1IntMask0:
+  description: Secure Interrupt Mask 0 for CPU1.
+  fields:
+  - name: int0_mask
+    description: Mask bit.
+    bit_offset: 0
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int1_mask
+    description: Mask bit.
+    bit_offset: 1
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int2_mask
+    description: Mask bit.
+    bit_offset: 2
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int3_mask
+    description: Mask bit.
+    bit_offset: 3
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int4_mask
+    description: Mask bit.
+    bit_offset: 4
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int5_mask
+    description: Mask bit.
+    bit_offset: 5
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int6_mask
+    description: Mask bit.
+    bit_offset: 6
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int7_mask
+    description: Mask bit.
+    bit_offset: 7
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int8_mask
+    description: Mask bit.
+    bit_offset: 8
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int9_mask
+    description: Mask bit.
+    bit_offset: 9
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int10_mask
+    description: Mask bit.
+    bit_offset: 10
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int11_mask
+    description: Mask bit.
+    bit_offset: 11
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int12_mask
+    description: Mask bit.
+    bit_offset: 12
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int13_mask
+    description: Mask bit.
+    bit_offset: 13
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int14_mask
+    description: Mask bit.
+    bit_offset: 14
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int15_mask
+    description: Mask bit.
+    bit_offset: 15
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int16_mask
+    description: Mask bit.
+    bit_offset: 16
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int17_mask
+    description: Mask bit.
+    bit_offset: 17
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int18_mask
+    description: Mask bit.
+    bit_offset: 18
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int19_mask
+    description: Mask bit.
+    bit_offset: 19
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int20_mask
+    description: Mask bit.
+    bit_offset: 20
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int21_mask
+    description: Mask bit.
+    bit_offset: 21
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int22_mask
+    description: Mask bit.
+    bit_offset: 22
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int23_mask
+    description: Mask bit.
+    bit_offset: 23
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int24_mask
+    description: Mask bit.
+    bit_offset: 24
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int25_mask
+    description: Mask bit.
+    bit_offset: 25
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int26_mask
+    description: Mask bit.
+    bit_offset: 26
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int27_mask
+    description: Mask bit.
+    bit_offset: 27
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int28_mask
+    description: Mask bit.
+    bit_offset: 28
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int29_mask
+    description: Mask bit.
+    bit_offset: 29
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int30_mask
+    description: Mask bit.
+    bit_offset: 30
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int31_mask
+    description: Mask bit.
+    bit_offset: 31
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+fieldset/SecCpu1IntMask1:
+  description: Secure Interrupt Mask 1 for CPU1.
+  fields:
+  - name: int32_mask
+    description: Mask bit.
+    bit_offset: 0
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int33_mask
+    description: Mask bit.
+    bit_offset: 1
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int34_mask
+    description: Mask bit.
+    bit_offset: 2
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int35_mask
+    description: Mask bit.
+    bit_offset: 3
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int36_mask
+    description: Mask bit.
+    bit_offset: 4
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int37_mask
+    description: Mask bit.
+    bit_offset: 5
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int38_mask
+    description: Mask bit.
+    bit_offset: 6
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int39_mask
+    description: Mask bit.
+    bit_offset: 7
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int40_mask
+    description: Mask bit.
+    bit_offset: 8
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int41_mask
+    description: Mask bit.
+    bit_offset: 9
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int42_mask
+    description: Mask bit.
+    bit_offset: 10
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int43_mask
+    description: Mask bit.
+    bit_offset: 11
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int44_mask
+    description: Mask bit.
+    bit_offset: 12
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int45_mask
+    description: Mask bit.
+    bit_offset: 13
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int46_mask
+    description: Mask bit.
+    bit_offset: 14
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int47_mask
+    description: Mask bit.
+    bit_offset: 15
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int48_mask
+    description: Mask bit.
+    bit_offset: 16
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int49_mask
+    description: Mask bit.
+    bit_offset: 17
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int50_mask
+    description: Mask bit.
+    bit_offset: 18
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int51_mask
+    description: Mask bit.
+    bit_offset: 19
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int52_mask
+    description: Mask bit.
+    bit_offset: 20
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int53_mask
+    description: Mask bit.
+    bit_offset: 21
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int54_mask
+    description: Mask bit.
+    bit_offset: 22
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int55_mask
+    description: Mask bit.
+    bit_offset: 23
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int56_mask
+    description: Mask bit.
+    bit_offset: 24
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int57_mask
+    description: Mask bit.
+    bit_offset: 25
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int58_mask
+    description: Mask bit.
+    bit_offset: 26
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int59_mask
+    description: Mask bit.
+    bit_offset: 27
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int60_mask
+    description: Mask bit.
+    bit_offset: 28
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int61_mask
+    description: Mask bit.
+    bit_offset: 29
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int62_mask
+    description: Mask bit.
+    bit_offset: 30
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int63_mask
+    description: Mask bit.
+    bit_offset: 31
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+fieldset/SecCpu1IntMask2:
+  description: Secure Interrupt Mask 2 for CPU1.
+  fields:
+  - name: int64_mask
+    description: Mask bit.
+    bit_offset: 0
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int65_mask
+    description: Mask bit.
+    bit_offset: 1
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int66_mask
+    description: Mask bit.
+    bit_offset: 2
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int67_mask
+    description: Mask bit.
+    bit_offset: 3
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int68_mask
+    description: Mask bit.
+    bit_offset: 4
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int69_mask
+    description: Mask bit.
+    bit_offset: 5
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int70_mask
+    description: Mask bit.
+    bit_offset: 6
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int71_mask
+    description: Mask bit.
+    bit_offset: 7
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int72_mask
+    description: Mask bit.
+    bit_offset: 8
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int73_mask
+    description: Mask bit.
+    bit_offset: 9
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int74_mask
+    description: Mask bit.
+    bit_offset: 10
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int75_mask
+    description: Mask bit.
+    bit_offset: 11
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int76_mask
+    description: Mask bit.
+    bit_offset: 12
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int77_mask
+    description: Mask bit.
+    bit_offset: 13
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int78_mask
+    description: Mask bit.
+    bit_offset: 14
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int79_mask
+    description: Mask bit.
+    bit_offset: 15
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int80_mask
+    description: Mask bit.
+    bit_offset: 16
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int81_mask
+    description: Mask bit.
+    bit_offset: 17
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int82_mask
+    description: Mask bit.
+    bit_offset: 18
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int83_mask
+    description: Mask bit.
+    bit_offset: 19
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int84_mask
+    description: Mask bit.
+    bit_offset: 20
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int85_mask
+    description: Mask bit.
+    bit_offset: 21
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int86_mask
+    description: Mask bit.
+    bit_offset: 22
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int87_mask
+    description: Mask bit.
+    bit_offset: 23
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int88_mask
+    description: Mask bit.
+    bit_offset: 24
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int89_mask
+    description: Mask bit.
+    bit_offset: 25
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int90_mask
+    description: Mask bit.
+    bit_offset: 26
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int91_mask
+    description: Mask bit.
+    bit_offset: 27
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int92_mask
+    description: Mask bit.
+    bit_offset: 28
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int93_mask
+    description: Mask bit.
+    bit_offset: 29
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int94_mask
+    description: Mask bit.
+    bit_offset: 30
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int95_mask
+    description: Mask bit.
+    bit_offset: 31
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+fieldset/SecCpu1IntMask3:
+  description: Secure Interrupt Mask 3 for CPU1.
+  fields:
+  - name: int96_mask
+    description: Mask bit.
+    bit_offset: 0
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int97_mask
+    description: Mask bit.
+    bit_offset: 1
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int98_mask
+    description: Mask bit.
+    bit_offset: 2
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int99_mask
+    description: Mask bit.
+    bit_offset: 3
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int100_mask
+    description: Mask bit.
+    bit_offset: 4
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int101_mask
+    description: Mask bit.
+    bit_offset: 5
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int102_mask
+    description: Mask bit.
+    bit_offset: 6
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int103_mask
+    description: Mask bit.
+    bit_offset: 7
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int104_mask
+    description: Mask bit.
+    bit_offset: 8
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int105_mask
+    description: Mask bit.
+    bit_offset: 9
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int106_mask
+    description: Mask bit.
+    bit_offset: 10
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int107_mask
+    description: Mask bit.
+    bit_offset: 11
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int108_mask
+    description: Mask bit.
+    bit_offset: 12
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int109_mask
+    description: Mask bit.
+    bit_offset: 13
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int110_mask
+    description: Mask bit.
+    bit_offset: 14
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int111_mask
+    description: Mask bit.
+    bit_offset: 15
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int112_mask
+    description: Mask bit.
+    bit_offset: 16
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int113_mask
+    description: Mask bit.
+    bit_offset: 17
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int114_mask
+    description: Mask bit.
+    bit_offset: 18
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int115_mask
+    description: Mask bit.
+    bit_offset: 19
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int116_mask
+    description: Mask bit.
+    bit_offset: 20
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int117_mask
+    description: Mask bit.
+    bit_offset: 21
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int118_mask
+    description: Mask bit.
+    bit_offset: 22
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int119_mask
+    description: Mask bit.
+    bit_offset: 23
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int120_mask
+    description: Mask bit.
+    bit_offset: 24
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int121_mask
+    description: Mask bit.
+    bit_offset: 25
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int122_mask
+    description: Mask bit.
+    bit_offset: 26
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int123_mask
+    description: Mask bit.
+    bit_offset: 27
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int124_mask
+    description: Mask bit.
+    bit_offset: 28
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int125_mask
+    description: Mask bit.
+    bit_offset: 29
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int126_mask
+    description: Mask bit.
+    bit_offset: 30
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int127_mask
+    description: Mask bit.
+    bit_offset: 31
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+fieldset/SecCpu1IntMask4:
+  description: Secure Interrupt Mask 4 for CPU1.
+  fields:
+  - name: int128_mask
+    description: Mask bit.
+    bit_offset: 0
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int129_mask
+    description: Mask bit.
+    bit_offset: 1
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int130_mask
+    description: Mask bit.
+    bit_offset: 2
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int131_mask
+    description: Mask bit.
+    bit_offset: 3
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int132_mask
+    description: Mask bit.
+    bit_offset: 4
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int133_mask
+    description: Mask bit.
+    bit_offset: 5
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int134_mask
+    description: Mask bit.
+    bit_offset: 6
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int135_mask
+    description: Mask bit.
+    bit_offset: 7
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int136_mask
+    description: Mask bit.
+    bit_offset: 8
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int137_mask
+    description: Mask bit.
+    bit_offset: 9
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int138_mask
+    description: Mask bit.
+    bit_offset: 10
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int139_mask
+    description: Mask bit.
+    bit_offset: 11
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int140_mask
+    description: Mask bit.
+    bit_offset: 12
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int141_mask
+    description: Mask bit.
+    bit_offset: 13
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int142_mask
+    description: Mask bit.
+    bit_offset: 14
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int143_mask
+    description: Mask bit.
+    bit_offset: 15
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int144_mask
+    description: Mask bit.
+    bit_offset: 16
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int145_mask
+    description: Mask bit.
+    bit_offset: 17
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int146_mask
+    description: Mask bit.
+    bit_offset: 18
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int147_mask
+    description: Mask bit.
+    bit_offset: 19
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int148_mask
+    description: Mask bit.
+    bit_offset: 20
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int149_mask
+    description: Mask bit.
+    bit_offset: 21
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int150_mask
+    description: Mask bit.
+    bit_offset: 22
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int151_mask
+    description: Mask bit.
+    bit_offset: 23
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int152_mask
+    description: Mask bit.
+    bit_offset: 24
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int153_mask
+    description: Mask bit.
+    bit_offset: 25
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int154_mask
+    description: Mask bit.
+    bit_offset: 26
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int155_mask
+    description: Mask bit.
+    bit_offset: 27
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int156_mask
+    description: Mask bit.
+    bit_offset: 28
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int157_mask
+    description: Mask bit.
+    bit_offset: 29
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int158_mask
+    description: Mask bit.
+    bit_offset: 30
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: int159_mask
+    description: Mask bit.
+    bit_offset: 31
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+fieldset/SecGpRegLock:
+  description: Secure Mask Lock.
+  fields:
+  - name: sec_gpio_mask0_lock
+    description: Secure GPIO _MASK0 Lock.
+    bit_offset: 0
+    bit_size: 2
+    enum: SecCpu1IntMask0Lock
+  - name: sec_gpio_mask1_lock
+    description: Secure GPIO _MASK1 Lock.
+    bit_offset: 2
+    bit_size: 2
+    enum: SecCpu1IntMask1Lock
+  - name: sec_cpu1_int_mask0_lock
+    description: SEC_CPU1_INT_MASK0 Lock.
+    bit_offset: 12
+    bit_size: 2
+    enum: SecCpu1IntMask0Lock
+  - name: sec_cpu1_int_mask1_lock
+    description: SEC_CPU1_INT_MASK1 Lock.
+    bit_offset: 14
+    bit_size: 2
+    enum: SecCpu1IntMask1Lock
+  - name: sec_cpu1_int_mask2_lock
+    description: SEC_CPU1_INT_MASK2 Lock.
+    bit_offset: 16
+    bit_size: 2
+    enum: SecCpu1IntMask2Lock
+  - name: sec_cpu1_int_mask3_lock
+    description: SEC_CPU1_INT_MASK3 Lock.
+    bit_offset: 18
+    bit_size: 2
+    enum: SecCpu1IntMask3Lock
+  - name: sec_cpu1_int_mask4_lock
+    description: SEC_CPU1_INT_MASK4 Lock.
+    bit_offset: 20
+    bit_size: 2
+    enum: SecCpu1IntMask4Lock
+fieldset/SecGpioMask:
+  description: GPIO Mask for Port index.
+  fields:
+  - name: pio0_pin0_sec_mask
+    description: Mask bit.
+    bit_offset: 0
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin1_sec_mask
+    description: Mask bit.
+    bit_offset: 1
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin2_sec_mask
+    description: Mask bit.
+    bit_offset: 2
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin3_sec_mask
+    description: Mask bit.
+    bit_offset: 3
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin4_sec_mask
+    description: Mask bit.
+    bit_offset: 4
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin5_sec_mask
+    description: Mask bit.
+    bit_offset: 5
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin6_sec_mask
+    description: Mask bit.
+    bit_offset: 6
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin7_sec_mask
+    description: Mask bit.
+    bit_offset: 7
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin8_sec_mask
+    description: Mask bit.
+    bit_offset: 8
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin9_sec_mask
+    description: Mask bit.
+    bit_offset: 9
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin10_sec_mask
+    description: Mask bit.
+    bit_offset: 10
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin11_sec_mask
+    description: Mask bit.
+    bit_offset: 11
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin12_sec_mask
+    description: Mask bit.
+    bit_offset: 12
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin13_sec_mask
+    description: Mask bit.
+    bit_offset: 13
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin14_sec_mask
+    description: Mask bit.
+    bit_offset: 14
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin15_sec_mask
+    description: Mask bit.
+    bit_offset: 15
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin16_sec_mask
+    description: Mask bit.
+    bit_offset: 16
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin17_sec_mask
+    description: Mask bit.
+    bit_offset: 17
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin18_sec_mask
+    description: Mask bit.
+    bit_offset: 18
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin19_sec_mask
+    description: Mask bit.
+    bit_offset: 19
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin20_sec_mask
+    description: Mask bit.
+    bit_offset: 20
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin21_sec_mask
+    description: Mask bit.
+    bit_offset: 21
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin22_sec_mask
+    description: Mask bit.
+    bit_offset: 22
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin23_sec_mask
+    description: Mask bit.
+    bit_offset: 23
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin24_sec_mask
+    description: Mask bit.
+    bit_offset: 24
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin25_sec_mask
+    description: Mask bit.
+    bit_offset: 25
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin26_sec_mask
+    description: Mask bit.
+    bit_offset: 26
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin27_sec_mask
+    description: Mask bit.
+    bit_offset: 27
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin28_sec_mask
+    description: Mask bit.
+    bit_offset: 28
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin29_sec_mask
+    description: Mask bit.
+    bit_offset: 29
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin30_sec_mask
+    description: Mask bit.
+    bit_offset: 30
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+  - name: pio0_pin31_sec_mask
+    description: Mask bit.
+    bit_offset: 31
+    bit_size: 1
+    enum: Pio0Pin16SecMask
+fieldset/SecVioInfoValid2:
+  description: Security Violation Info Validity for Address.
+  fields:
+  - name: vio_info_valid0
+    description: Violation information valid flag for AHB port 0.
+    bit_offset: 0
+    bit_size: 1
+    enum: VioInfoValid18
+  - name: vio_info_valid1
+    description: Violation information valid flag for AHB port 1.
+    bit_offset: 1
+    bit_size: 1
+    enum: VioInfoValid18
+  - name: vio_info_valid2
+    description: Violation information valid flag for AHB port 2.
+    bit_offset: 2
+    bit_size: 1
+    enum: VioInfoValid18
+  - name: vio_info_valid3
+    description: Violation information valid flag for AHB port 3.
+    bit_offset: 3
+    bit_size: 1
+    enum: VioInfoValid18
+  - name: vio_info_valid4
+    description: Violation information valid flag for AHB port 4.
+    bit_offset: 4
+    bit_size: 1
+    enum: VioInfoValid18
+  - name: vio_info_valid5
+    description: Violation information valid flag for AHB port 5.
+    bit_offset: 5
+    bit_size: 1
+    enum: VioInfoValid18
+  - name: vio_info_valid6
+    description: Violation information valid flag for AHB port 6.
+    bit_offset: 6
+    bit_size: 1
+    enum: VioInfoValid18
+  - name: vio_info_valid7
+    description: Violation information valid flag for AHB port 7.
+    bit_offset: 7
+    bit_size: 1
+    enum: VioInfoValid18
+  - name: vio_info_valid8
+    description: Violation information valid flag for AHB port 8.
+    bit_offset: 8
+    bit_size: 1
+    enum: VioInfoValid18
+  - name: vio_info_valid9
+    description: Violation information valid flag for AHB port 9.
+    bit_offset: 9
+    bit_size: 1
+    enum: VioInfoValid18
+  - name: vio_info_valid10
+    description: Violation information valid flag for AHB port 10.
+    bit_offset: 10
+    bit_size: 1
+    enum: VioInfoValid18
+  - name: vio_info_valid11
+    description: Violation information valid flag for AHB port 11.
+    bit_offset: 11
+    bit_size: 1
+    enum: VioInfoValid18
+  - name: vio_info_valid12
+    description: Violation information valid flag for AHB port 12.
+    bit_offset: 12
+    bit_size: 1
+    enum: VioInfoValid18
+  - name: vio_info_valid13
+    description: Violation information valid flag for AHB port 13.
+    bit_offset: 13
+    bit_size: 1
+    enum: VioInfoValid18
+  - name: vio_info_valid14
+    description: Violation information valid flag for AHB port 14.
+    bit_offset: 14
+    bit_size: 1
+    enum: VioInfoValid18
+  - name: vio_info_valid15
+    description: Violation information valid flag for AHB port 15.
+    bit_offset: 15
+    bit_size: 1
+    enum: VioInfoValid18
+  - name: vio_info_valid16
+    description: Violation information valid flag for AHB port 16.
+    bit_offset: 16
+    bit_size: 1
+    enum: VioInfoValid18
+  - name: vio_info_valid17
+    description: Violation information valid flag for AHB port 17.
+    bit_offset: 17
+    bit_size: 1
+    enum: VioInfoValid18
+  - name: vio_info_valid18
+    description: Violation information valid flag for AHB port 18.
+    bit_offset: 18
+    bit_size: 1
+    enum: VioInfoValid18
+fieldset/SecVioMiscInfo2:
+  description: Security Violation Miscellaneous Information at Address.
+  fields:
+  - name: sec_vio_info_write
+    description: Security violation access read/write indicator.
+    bit_offset: 0
+    bit_size: 1
+    enum: SecVioInfoWrite
+  - name: sec_vio_info_data_access
+    description: Security Violation Info Data Access.
+    bit_offset: 1
+    bit_size: 1
+    enum: SecVioInfoDataAccess
+  - name: sec_vio_info_master_sec_level
+    description: Security Violation Info Master Security Level.
+    bit_offset: 4
+    bit_size: 4
+  - name: sec_vio_info_master
+    description: Security violation master number.
+    bit_offset: 8
+    bit_size: 5
+    enum: SecVioInfoMaster2
+  only_in: ^(MCXN2[0-9]{2})$
+fieldset/SecVioMiscInfo3:
+  description: Security Violation Miscellaneous Information at Address.
+  fields:
+  - name: sec_vio_info_write
+    description: Security violation access read/write indicator.
+    bit_offset: 0
+    bit_size: 1
+    enum: SecVioInfoWrite
+  - name: sec_vio_info_data_access
+    description: Security Violation Info Data Access.
+    bit_offset: 1
+    bit_size: 1
+    enum: SecVioInfoDataAccess
+  - name: sec_vio_info_master_sec_level
+    description: Security Violation Info Master Security Level.
+    bit_offset: 4
+    bit_size: 4
+  - name: sec_vio_info_master
+    description: Security violation master number.
+    bit_offset: 8
+    bit_size: 5
+    enum: SecVioInfoMaster3
+enum/Cm33LockRegLock:
+  bit_size: 2
+  variants:
+  - name: Cm33LockRegLockEq1
+    description: CM33_LOCK_REG_LOCK is 1.
+    value: 1
+  - name: Cm33LockRegLockEq0
+    description: CM33_LOCK_REG_LOCK is 0.
+    value: 2
+enum/DisableStrictMode:
+  bit_size: 2
+  variants:
+  - name: Ahbtm
+    description: Master strict mode is on and can access memories and peripherals at the same level or below that level.
+    value: 1
+  - name: Ahbsm1
+    description: Master strict mode is disabled and can access memories and peripherals at same level only.
+    value: 2
+enum/EDma0:
+  bit_size: 2
+  variants:
+  - name: NonsecureNonprivMaster
+    description: Secure and privileged Master.
+    value: 0
+  - name: NonsecurePrivMaster
+    description: Secure and non-privileged Master.
+    value: 1
+  - name: SecureNonprivMaster
+    description: Non-secure and privileged Master.
+    value: 2
+  - name: SecurePrivMaster
+    description: Non-secure and non-privileged Master.
+    value: 3
+enum/EnableNsPrivCheck:
+  bit_size: 2
+  variants:
+  - name: Enabled
+    description: Enables privilege checking of non-secure mode access.
+    value: 1
+  - name: Disabled
+    description: Disables privilege checking of non-secure mode access is disabled.
+    value: 2
+enum/EnableSPrivCheck:
+  bit_size: 2
+  variants:
+  - name: Enabled
+    description: Enables privilege checking of secure mode access.
+    value: 1
+  - name: Disabled
+    description: Disables privilege checking of secure mode access.
+    value: 2
+enum/EnableSPrivCheck2:
+  bit_size: 2
+  variants:
+  - name: Enabled
+    description: Enables the privilege checking of secure mode access.
+    value: 1
+  - name: Disabled
+    description: Disables the privilege checking of secure mode access.
+    value: 2
+enum/EnableSecureChecking:
+  bit_size: 2
+  variants:
+  - name: Enabled
+    description: Enables secure checking. Violation can be detected when the security level of a transaction does not meet the security rule of the slave or memory to be accessed.
+    value: 1
+  - name: Disabled
+    description: Disables secure checking. Even if the security level of a transaction does not conform to the security rule of the slave or memory, it will not be detected as a violation.
+    value: 2
+enum/Enet:
+  bit_size: 4
+  variants:
+  - name: NonsecureNonprivUserAllowed
+    description: Non-secure and non-privilege user access allowed.
+    value: 0
+  - name: NonsecurePrivUserAllowed
+    description: Non-secure and privilege access allowed.
+    value: 1
+  - name: SecureNonprivUserAllowed
+    description: Secure and non-privilege user access allowed.
+    value: 2
+  - name: SecurePrivUserAllowed
+    description: Secure and privilege user access allowed.
+    value: 3
+enum/MasterSecLevelAntipolLock:
+  bit_size: 2
+  variants:
+  - name: Enable
+    description: MASTER_SEC_LEVEL_LOCK cannot be written.
+    value: 1
+  - name: Disable
+    description: MASTER_SEC_LEVEL_LOCK can be written.
+    value: 2
+enum/Pio0Pin16SecMask:
+  bit_size: 1
+  variants:
+  - name: Masked
+    description: Masked.
+    value: 0
+  - name: NotMasked
+    description: Not masked.
+    value: 1
+enum/SecCpu1IntMask0Lock:
+  bit_size: 2
+  variants:
+  - name: CannotBeWritten
+    description: SEC_GPIO_MASK0 cannot be written.
+    value: 1
+  - name: CanBeWritten
+    description: SEC_GPIO_MASK0 can be written.
+    value: 2
+enum/SecCpu1IntMask1Lock:
+  bit_size: 2
+  variants:
+  - name: CannotBeWritten
+    description: SEC_GPIO_MASK1 cannot be written.
+    value: 1
+  - name: CanBeWritten
+    description: SEC_GPIO_MASK1 can be written.
+    value: 2
+enum/SecCpu1IntMask2Lock:
+  bit_size: 2
+  variants:
+  - name: CannotBeWritten
+    description: SEC_CPU1_INT_MASK2 cannot be written.
+    value: 1
+  - name: CanBeWritten
+    description: SEC_CPU1_INT_MASK2 can be written.
+    value: 2
+enum/SecCpu1IntMask3Lock:
+  bit_size: 2
+  variants:
+  - name: CannotBeWritten
+    description: SEC_CPU1_INT_MASK3 cannot be written.
+    value: 1
+  - name: CanBeWritten
+    description: SEC_CPU1_INT_MASK3 can be written.
+    value: 2
+enum/SecCpu1IntMask4Lock:
+  bit_size: 2
+  variants:
+  - name: CannotBeWritten
+    description: SEC_CPU1_INT_MASK4 cannot be written.
+    value: 1
+  - name: CanBeWritten
+    description: SEC_CPU1_INT_MASK4 can be written.
+    value: 2
+enum/SecVioInfoMaster2:
+  bit_size: 5
+  variants:
+  - name: Cpu0Code
+    description: M33 Code.
+    value: 0
+  - name: Cpu0Sys
+    description: M33 System.
+    value: 1
+  - name: SdmaInstr
+    description: SMARTDMA Instruction.
+    value: 3
+  - name: SdmaData
+    description: SMARTDMA Data.
+    value: 5
+  - name: EDma0
+    description: eDMA0.
+    value: 6
+  - name: EDma1
+    description: eDMA1.
+    value: 7
+  - name: Pkc
+    description: PKC.
+    value: 8
+  - name: Cssv2
+    description: ELS S50.
+    value: 9
+  - name: Pq
+    description: PKC M0.
+    value: 10
+  - name: Npuo
+    description: NPU Operands.
+    value: 11
+  - name: Dspi
+    description: DSP Instruction.
+    value: 12
+  - name: Dspx
+    description: DSPX.
+    value: 13
+  - name: Dspy
+    description: DSPY.
+    value: 14
+  - name: Npud
+    description: NPU Data.
+    value: 16
+  - name: Ethernet
+    description: Ethernet.
+    value: 18
+  - name: UsbHs
+    description: USB HS.
+    value: 19
+  only_in: ^(MCXN2[0-9]{2})$
+enum/SecVioInfoMaster3:
+  bit_size: 5
+  variants:
+  - name: Cpu0Code
+    description: M33 Code.
+    value: 0
+  - name: Cpu0Sys
+    description: M33 System.
+    value: 1
+  - name: Cpu1Code
+    description: CPU1 (Mirco-CM33) Code.
+    value: 2
+  - name: SdmaInstr
+    description: SMARTDMA Instruction.
+    value: 3
+  - name: Cpu1Sys
+    description: CPU1 (Mirco-CM33) system.
+    value: 4
+  - name: SdmaData
+    description: SMARTDMA Data.
+    value: 5
+  - name: EDma0
+    description: eDMA0.
+    value: 6
+  - name: EDma1
+    description: eDMA1.
+    value: 7
+  - name: Pkc
+    description: PKC.
+    value: 8
+  - name: Cssv2
+    description: ELS S50.
+    value: 9
+  - name: Pq
+    description: PKC M0.
+    value: 10
+  - name: Npuo
+    description: NPU Operands.
+    value: 11
+  - name: Dspi
+    description: DSP Instruction.
+    value: 12
+  - name: Dspx
+    description: DSPX.
+    value: 13
+  - name: Dspy
+    description: DSPY.
+    value: 14
+  - name: Npud
+    description: NPU Data.
+    value: 16
+  - name: UsbFs
+    description: USB FS.
+    value: 17
+  - name: Ethernet
+    description: Ethernet.
+    value: 18
+  - name: UsbHs
+    description: USB HS.
+    value: 19
+  - name: Usdhc
+    description: uSDHC.
+    value: 20
+enum/VioInfoValid18:
+  bit_size: 1
+  variants:
+  - name: NotValid
+    description: Not valid.
+    value: 0
+  - name: Valid
+    description: Valid.
+    value: 1

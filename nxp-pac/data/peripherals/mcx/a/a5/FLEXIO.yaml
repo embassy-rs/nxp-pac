@@ -495,7 +495,7 @@ fieldset/Shiftctl:
     description: Shifter Pin Polarity.
     bit_offset: 7
     bit_size: 1
-    enum: ShiftctlPinpol
+    enum: Trgpol
   - name: pinsel
     description: Shifter Pin Select.
     bit_offset: 8
@@ -639,7 +639,7 @@ fieldset/Timctl:
     description: Timer Pin Polarity.
     bit_offset: 7
     bit_size: 1
-    enum: TimctlPinpol
+    enum: Trgpol
   - name: pinsel
     description: Timer Pin Select.
     bit_offset: 8
@@ -812,15 +812,6 @@ enum/ShiftctlPincfg:
   - name: Output
     description: Shifter pin output.
     value: 3
-enum/ShiftctlPinpol:
-  bit_size: 1
-  variants:
-  - name: ActiveHigh
-    description: Active high.
-    value: 0
-  - name: ActiveLow
-    description: Active low.
-    value: 1
 enum/Smod:
   bit_size: 3
   variants:
@@ -899,15 +890,6 @@ enum/TimctlPincfg:
   - name: Output
     description: Timer pin output.
     value: 3
-enum/TimctlPinpol:
-  bit_size: 1
-  variants:
-  - name: ActiveHigh
-    description: Active high.
-    value: 0
-  - name: ActiveLow
-    description: Active low.
-    value: 1
 enum/Timdec:
   bit_size: 3
   variants:

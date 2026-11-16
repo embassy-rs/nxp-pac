@@ -111,12 +111,12 @@ fieldset/EmvsimAlphaFieldsetCharlie:
     description: General Purpose Counter 1 Clock Select.
     bit_offset: 8
     bit_size: 2
-    enum: EmvsimAlphaEnumXray
+    enum: GpcntClkSel
   - name: gpcnt0_clk_sel
     description: General Purpose Counter 0 Clock Select.
     bit_offset: 10
     bit_size: 2
-    enum: EmvsimAlphaEnumUniform
+    enum: GpcntClkSel
 fieldset/EmvsimAlphaFieldsetDelta:
   description: Control.
   fields:
@@ -129,32 +129,32 @@ fieldset/EmvsimAlphaFieldsetDelta:
     description: Initial Character Mode.
     bit_offset: 1
     bit_size: 1
-    enum: EmvsimAlphaEnumBravoAlpha
+    enum: Anack
   - name: anack
     description: Auto NACK Enable.
     bit_offset: 2
     bit_size: 1
-    enum: EmvsimAlphaEnumAlpha
+    enum: Anack
   - name: onack
     description: Overrun NACK Enable.
     bit_offset: 3
     bit_size: 1
-    enum: EmvsimAlphaEnumGolfAlpha
+    enum: Anack
   - name: flsh_rx
     description: Flush Receiver.
     bit_offset: 8
     bit_size: 1
-    enum: EmvsimAlphaEnumSierra
+    enum: FlshRx
   - name: flsh_tx
     description: Flush Transmitter.
     bit_offset: 9
     bit_size: 1
-    enum: EmvsimAlphaEnumTango
+    enum: FlshRx
   - name: sw_rst
     description: Software Reset.
     bit_offset: 10
     bit_size: 1
-    enum: EmvsimAlphaEnumGolfBravo
+    enum: FlshRx
   - name: kill_clocks
     description: Kill Internal Clocks.
     bit_offset: 11
@@ -174,12 +174,12 @@ fieldset/EmvsimAlphaFieldsetDelta:
     description: Receiver Enable.
     bit_offset: 16
     bit_size: 1
-    enum: EmvsimAlphaEnumJulietAlpha
+    enum: Anack
   - name: xmt_en
     description: Transmitter Enable.
     bit_offset: 17
     bit_size: 1
-    enum: EmvsimAlphaEnumVictorBravo
+    enum: Anack
   - name: rcvr_11
     description: Receiver 11 ETU Mode Enable.
     bit_offset: 18
@@ -204,27 +204,27 @@ fieldset/EmvsimAlphaFieldsetDelta:
     description: CRC Output Value Bit Reversal Or Flip Control.
     bit_offset: 25
     bit_size: 1
-    enum: EmvsimAlphaEnumJuliet
+    enum: CrcInFlip
   - name: crc_in_flip
     description: CRC Input Byte's Bit Reversal Or Flip Control.
     bit_offset: 26
     bit_size: 1
-    enum: EmvsimAlphaEnumHotel
+    enum: CrcInFlip
   - name: cwt_en
     description: CWT Counter Enable.
     bit_offset: 27
     bit_size: 1
-    enum: EmvsimAlphaEnumKilo
+    enum: Anack
   - name: lrc_en
     description: LRC Enable.
     bit_offset: 28
     bit_size: 1
-    enum: EmvsimAlphaEnumEchoAlpha
+    enum: Anack
   - name: crc_en
     description: CRC Enable.
     bit_offset: 29
     bit_size: 1
-    enum: EmvsimAlphaEnumGolf
+    enum: Anack
   - name: xmt_crc_lrc
     description: Transmit CRC or LRC Enable.
     bit_offset: 30
@@ -234,7 +234,7 @@ fieldset/EmvsimAlphaFieldsetDelta:
     description: Block Wait Time Counter Enable.
     bit_offset: 31
     bit_size: 1
-    enum: EmvsimAlphaEnumDelta
+    enum: Anack
 fieldset/EmvsimAlphaFieldsetEcho:
   description: Character Wait Time Value.
   fields:
@@ -271,47 +271,47 @@ fieldset/EmvsimAlphaFieldsetIndia:
     description: Receive Data Threshold Interrupt Mask.
     bit_offset: 0
     bit_size: 1
-    enum: EmvsimAlphaEnumLimaAlpha
+    enum: GpcntIm
   - name: tc_im
     description: Transmit Complete Interrupt Mask.
     bit_offset: 1
     bit_size: 1
-    enum: EmvsimAlphaEnumHotelBravo
+    enum: GpcntIm
   - name: rfo_im
     description: Receive FIFO Overflow Interrupt Mask.
     bit_offset: 2
     bit_size: 1
-    enum: EmvsimAlphaEnumOscarAlpha
+    enum: GpcntIm
   - name: etc_im
     description: Early Transmit Complete Interrupt Mask.
     bit_offset: 3
     bit_size: 1
-    enum: EmvsimAlphaEnumPapa
+    enum: GpcntIm
   - name: tfe_im
     description: Transmit FIFO Empty Interrupt Mask.
     bit_offset: 4
     bit_size: 1
-    enum: EmvsimAlphaEnumMikeBravo
+    enum: GpcntIm
   - name: tnack_im
     description: Transmit NACK Threshold Interrupt Mask.
     bit_offset: 5
     bit_size: 1
-    enum: EmvsimAlphaEnumPapaBravo
+    enum: GpcntIm
   - name: tff_im
     description: Transmit FIFO Full Interrupt Mask.
     bit_offset: 6
     bit_size: 1
-    enum: EmvsimAlphaEnumOscarBravo
+    enum: GpcntIm
   - name: tdt_im
     description: Transmit Data Threshold Interrupt Mask.
     bit_offset: 7
     bit_size: 1
-    enum: EmvsimAlphaEnumJulietBravo
+    enum: GpcntIm
   - name: gpcnt0_im
     description: General Purpose Timer 0 Timeout Interrupt Mask.
     bit_offset: 8
     bit_size: 1
-    enum: EmvsimAlphaEnumVictor
+    enum: GpcntIm
   - name: cwt_err_im
     description: Character Wait Time Error Interrupt Mask.
     bit_offset: 9
@@ -321,32 +321,32 @@ fieldset/EmvsimAlphaFieldsetIndia:
     description: Receiver NACK Threshold Interrupt Mask.
     bit_offset: 10
     bit_size: 1
-    enum: EmvsimAlphaEnumPapaAlpha
+    enum: GpcntIm
   - name: bwt_err_im
     description: Block Wait Time Error Interrupt Mask.
     bit_offset: 11
     bit_size: 1
-    enum: EmvsimAlphaEnumFoxtrot
+    enum: GpcntIm
   - name: bgt_err_im
     description: Block Guard Time Error Interrupt.
     bit_offset: 12
     bit_size: 1
-    enum: EmvsimAlphaEnumCharlie
+    enum: GpcntIm
   - name: gpcnt1_im
     description: General Purpose Counter 1 Timeout Interrupt Mask.
     bit_offset: 13
     bit_size: 1
-    enum: EmvsimAlphaEnumYankee
+    enum: GpcntIm
   - name: rx_data_im
     description: Receive Data Interrupt Mask.
     bit_offset: 14
     bit_size: 1
-    enum: EmvsimAlphaEnumTangoAlpha
+    enum: GpcntIm
   - name: pef_im
     description: Parity Error Interrupt Mask.
     bit_offset: 15
     bit_size: 1
-    enum: EmvsimAlphaEnumIndiaAlpha
+    enum: GpcntIm
 fieldset/EmvsimAlphaFieldsetJuliet:
   description: Parameters.
   fields:
@@ -365,12 +365,12 @@ fieldset/EmvsimAlphaFieldsetKilo:
     description: Auto Power Down Enable.
     bit_offset: 0
     bit_size: 1
-    enum: EmvsimAlphaEnumVictorAlpha
+    enum: Anack
   - name: svcc_en
     description: Vcc Enable for Smart Card.
     bit_offset: 1
     bit_size: 1
-    enum: EmvsimAlphaEnumFoxtrotBravo
+    enum: Anack
   - name: vccenp
     description: VCC Enable Polarity Control.
     bit_offset: 2
@@ -385,7 +385,7 @@ fieldset/EmvsimAlphaFieldsetKilo:
     description: Clock Enable for Smart Card.
     bit_offset: 4
     bit_size: 1
-    enum: EmvsimAlphaEnumWhiskeyAlpha
+    enum: Anack
   - name: scsp
     description: Smart Card Clock Stop Polarity.
     bit_offset: 5
@@ -489,7 +489,7 @@ fieldset/EmvsimAlphaFieldsetMike:
     description: Receive FIFO Byte Count.
     bit_offset: 24
     bit_size: 4
-    enum: EmvsimAlphaEnumRomeoAlpha
+    enum: RxCnt
 fieldset/EmvsimAlphaFieldsetNovember:
   description: Receiver Threshold.
   fields:
@@ -566,7 +566,7 @@ fieldset/EmvsimAlphaFieldsetQuebec:
     description: Transmit FIFO Byte Count.
     bit_offset: 24
     bit_size: 4
-    enum: EmvsimAlphaEnumRomeoBravo
+    enum: RxCnt
 fieldset/EmvsimAlphaFieldsetRomeo:
   description: Transmitter Threshold.
   fields:
@@ -585,15 +585,6 @@ fieldset/EmvsimAlphaFieldsetSierra:
     description: Version ID.
     bit_offset: 0
     bit_size: 32
-enum/EmvsimAlphaEnumAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disable.
-    value: 0
-  - name: Enabled
-    description: Enable.
-    value: 1
 enum/EmvsimAlphaEnumBravo:
   bit_size: 1
   variants:
@@ -602,24 +593,6 @@ enum/EmvsimAlphaEnumBravo:
     value: 0
   - name: BgtErrToosmall
     description: Too small.
-    value: 1
-enum/EmvsimAlphaEnumCharlie:
-  bit_size: 1
-  variants:
-  - name: IntEnabled
-    description: Enable.
-    value: 0
-  - name: IntMasked
-    description: Masked.
-    value: 1
-enum/EmvsimAlphaEnumDelta:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disable.
-    value: 0
-  - name: Enabled
-    description: Enable.
     value: 1
 enum/EmvsimAlphaEnumEcho:
   bit_size: 1
@@ -630,16 +603,7 @@ enum/EmvsimAlphaEnumEcho:
   - name: BwtErrYes
     description: Exceeded.
     value: 1
-enum/EmvsimAlphaEnumFoxtrot:
-  bit_size: 1
-  variants:
-  - name: IntEnabled
-    description: Enable.
-    value: 0
-  - name: IntMasked
-    description: Masked.
-    value: 1
-enum/EmvsimAlphaEnumGolf:
+enum/Anack:
   bit_size: 1
   variants:
   - name: Disabled
@@ -648,7 +612,7 @@ enum/EmvsimAlphaEnumGolf:
   - name: Enabled
     description: Enable.
     value: 1
-enum/EmvsimAlphaEnumHotel:
+enum/CrcInFlip:
   bit_size: 1
   variants:
   - name: NotReversed
@@ -665,24 +629,6 @@ enum/EmvsimAlphaEnumIndia:
     value: 0
   - name: CrcOk
     description: Current calculated CRC value matches the expected result.
-    value: 1
-enum/EmvsimAlphaEnumJuliet:
-  bit_size: 1
-  variants:
-  - name: NotReversed
-    description: Not reversed.
-    value: 0
-  - name: Reversed
-    description: Reversed.
-    value: 1
-enum/EmvsimAlphaEnumKilo:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disable.
-    value: 0
-  - name: Enabled
-    description: Enable.
     value: 1
 enum/EmvsimAlphaEnumLima:
   bit_size: 1
@@ -777,7 +723,7 @@ enum/EmvsimAlphaEnumOscar:
   - name: DozeNogate
     description: Enable.
     value: 1
-enum/EmvsimAlphaEnumPapa:
+enum/GpcntIm:
   bit_size: 1
   variants:
   - name: IntEnabled
@@ -804,7 +750,7 @@ enum/EmvsimAlphaEnumRomeo:
   - name: NoFefDetect
     description: No error.
     value: 0
-enum/EmvsimAlphaEnumSierra:
+enum/FlshRx:
   bit_size: 1
   variants:
   - name: Normalop
@@ -812,39 +758,6 @@ enum/EmvsimAlphaEnumSierra:
     value: 0
   - name: Resethold
     description: Reset.
-    value: 1
-enum/EmvsimAlphaEnumTango:
-  bit_size: 1
-  variants:
-  - name: Normalop
-    description: Normal.
-    value: 0
-  - name: Resethold
-    description: Reset.
-    value: 1
-enum/EmvsimAlphaEnumUniform:
-  bit_size: 2
-  variants:
-  - name: Cardclk
-    description: Card clock.
-    value: 1
-  - name: Disabled
-    description: Disable/reset.
-    value: 0
-  - name: Rxclk
-    description: Receive clock.
-    value: 2
-  - name: Txclk
-    description: ETU clock (transmit clock).
-    value: 3
-enum/EmvsimAlphaEnumVictor:
-  bit_size: 1
-  variants:
-  - name: IntEnabled
-    description: Enable.
-    value: 0
-  - name: IntMasked
-    description: Masked.
     value: 1
 enum/EmvsimAlphaEnumWhiskey:
   bit_size: 1
@@ -855,7 +768,7 @@ enum/EmvsimAlphaEnumWhiskey:
   - name: Gpcnt0ToReached
     description: GPCNT0 reached.
     value: 1
-enum/EmvsimAlphaEnumXray:
+enum/GpcntClkSel:
   bit_size: 2
   variants:
   - name: Cardclk
@@ -870,15 +783,6 @@ enum/EmvsimAlphaEnumXray:
   - name: Txclk
     description: ETU clock (transmit clock).
     value: 3
-enum/EmvsimAlphaEnumYankee:
-  bit_size: 1
-  variants:
-  - name: IntEnabled
-    description: Enable.
-    value: 0
-  - name: IntMasked
-    description: Masked.
-    value: 1
 enum/EmvsimAlphaEnumZulu:
   bit_size: 1
   variants:
@@ -896,15 +800,6 @@ enum/EmvsimAlphaEnumAlphaAlpha:
     value: 0
   - name: InvConvention
     description: Inverse.
-    value: 1
-enum/EmvsimAlphaEnumBravoAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disable.
-    value: 0
-  - name: Enabled
-    description: Enable.
     value: 1
 enum/EmvsimAlphaEnumCharlieAlpha:
   bit_size: 1
@@ -924,15 +819,6 @@ enum/EmvsimAlphaEnumDeltaAlpha:
   - name: InclkEnabled
     description: Enable.
     value: 0
-enum/EmvsimAlphaEnumEchoAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disable.
-    value: 0
-  - name: Enabled
-    description: Enable.
-    value: 1
 enum/EmvsimAlphaEnumFoxtrotAlpha:
   bit_size: 1
   variants:
@@ -941,15 +827,6 @@ enum/EmvsimAlphaEnumFoxtrotAlpha:
     value: 0
   - name: LrcOk
     description: Match.
-    value: 1
-enum/EmvsimAlphaEnumGolfAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disable.
-    value: 0
-  - name: Enabled
-    description: Enable.
     value: 1
 enum/EmvsimAlphaEnumHotelAlpha:
   bit_size: 1
@@ -960,24 +837,6 @@ enum/EmvsimAlphaEnumHotelAlpha:
   - name: ParityDetect
     description: Error.
     value: 1
-enum/EmvsimAlphaEnumIndiaAlpha:
-  bit_size: 1
-  variants:
-  - name: IntEnabled
-    description: Enable.
-    value: 0
-  - name: IntMasked
-    description: Masked.
-    value: 1
-enum/EmvsimAlphaEnumJulietAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disable.
-    value: 0
-  - name: Enabled
-    description: Enable.
-    value: 1
 enum/EmvsimAlphaEnumKiloAlpha:
   bit_size: 1
   variants:
@@ -987,15 +846,6 @@ enum/EmvsimAlphaEnumKiloAlpha:
   - name: Rcvr12
     description: 12 ETU operation.
     value: 0
-enum/EmvsimAlphaEnumLimaAlpha:
-  bit_size: 1
-  variants:
-  - name: IntEnabled
-    description: Enable.
-    value: 0
-  - name: IntMasked
-    description: Masked.
-    value: 1
 enum/EmvsimAlphaEnumMikeAlpha:
   bit_size: 1
   variants:
@@ -1014,24 +864,6 @@ enum/EmvsimAlphaEnumNovemberAlpha:
   - name: Overflow
     description: Overrun error.
     value: 1
-enum/EmvsimAlphaEnumOscarAlpha:
-  bit_size: 1
-  variants:
-  - name: IntEnabled
-    description: Enable.
-    value: 0
-  - name: IntMasked
-    description: Masked.
-    value: 1
-enum/EmvsimAlphaEnumPapaAlpha:
-  bit_size: 1
-  variants:
-  - name: IntEnabled
-    description: Enable.
-    value: 0
-  - name: IntMasked
-    description: Masked.
-    value: 1
 enum/EmvsimAlphaEnumQuebecAlpha:
   bit_size: 1
   variants:
@@ -1041,7 +873,7 @@ enum/EmvsimAlphaEnumQuebecAlpha:
   - name: LessthanNackthresh
     description: Less than.
     value: 0
-enum/EmvsimAlphaEnumRomeoAlpha:
+enum/RxCnt:
   bit_size: 4
   variants:
   - name: FifoEmpty
@@ -1056,15 +888,6 @@ enum/EmvsimAlphaEnumSierraAlpha:
   - name: NoByteRx
     description: No new byte.
     value: 0
-enum/EmvsimAlphaEnumTangoAlpha:
-  bit_size: 1
-  variants:
-  - name: IntEnabled
-    description: Enable.
-    value: 0
-  - name: IntMasked
-    description: Masked.
-    value: 1
 enum/EmvsimAlphaEnumUniformAlpha:
   bit_size: 1
   variants:
@@ -1074,24 +897,6 @@ enum/EmvsimAlphaEnumUniformAlpha:
   - name: NoDmareadReq
     description: Not asserted.
     value: 0
-enum/EmvsimAlphaEnumVictorAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disable.
-    value: 0
-  - name: Enabled
-    description: Enable.
-    value: 1
-enum/EmvsimAlphaEnumWhiskeyAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disable.
-    value: 0
-  - name: Enabled
-    description: Enable.
-    value: 1
 enum/EmvsimAlphaEnumXrayAlpha:
   bit_size: 1
   variants:
@@ -1164,33 +969,6 @@ enum/EmvsimAlphaEnumEchoBravo:
   - name: StopAllClks
     description: Disable.
     value: 0
-enum/EmvsimAlphaEnumFoxtrotBravo:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disable.
-    value: 0
-  - name: Enabled
-    description: Enable.
-    value: 1
-enum/EmvsimAlphaEnumGolfBravo:
-  bit_size: 1
-  variants:
-  - name: Normalop
-    description: Normal.
-    value: 0
-  - name: Resethold
-    description: Reset.
-    value: 1
-enum/EmvsimAlphaEnumHotelBravo:
-  bit_size: 1
-  variants:
-  - name: IntEnabled
-    description: Enable.
-    value: 0
-  - name: IntMasked
-    description: Masked.
-    value: 1
 enum/EmvsimAlphaEnumIndiaBravo:
   bit_size: 1
   variants:
@@ -1200,15 +978,6 @@ enum/EmvsimAlphaEnumIndiaBravo:
   - name: TxPending
     description: Pending or incomplete.
     value: 0
-enum/EmvsimAlphaEnumJulietBravo:
-  bit_size: 1
-  variants:
-  - name: IntEnabled
-    description: Enable.
-    value: 0
-  - name: IntMasked
-    description: Masked.
-    value: 1
 enum/EmvsimAlphaEnumKiloBravo:
   bit_size: 1
   variants:
@@ -1227,15 +996,6 @@ enum/EmvsimAlphaEnumLimaBravo:
   - name: FifoNotempty
     description: Empty.
     value: 1
-enum/EmvsimAlphaEnumMikeBravo:
-  bit_size: 1
-  variants:
-  - name: IntEnabled
-    description: Enable.
-    value: 0
-  - name: IntMasked
-    description: Masked.
-    value: 1
 enum/EmvsimAlphaEnumNovemberBravo:
   bit_size: 1
   variants:
@@ -1245,24 +1005,6 @@ enum/EmvsimAlphaEnumNovemberBravo:
   - name: TxFifoNotfull
     description: Not full.
     value: 0
-enum/EmvsimAlphaEnumOscarBravo:
-  bit_size: 1
-  variants:
-  - name: IntEnabled
-    description: Enable.
-    value: 0
-  - name: IntMasked
-    description: Masked.
-    value: 1
-enum/EmvsimAlphaEnumPapaBravo:
-  bit_size: 1
-  variants:
-  - name: IntEnabled
-    description: Enable.
-    value: 0
-  - name: IntMasked
-    description: Masked.
-    value: 1
 enum/EmvsimAlphaEnumQuebecBravo:
   bit_size: 1
   variants:
@@ -1271,12 +1013,6 @@ enum/EmvsimAlphaEnumQuebecBravo:
     value: 1
   - name: LessthanNackthresh
     description: Threshold not reached.
-    value: 0
-enum/EmvsimAlphaEnumRomeoBravo:
-  bit_size: 4
-  variants:
-  - name: FifoEmpty
-    description: FIFO empty.
     value: 0
 enum/EmvsimAlphaEnumSierraBravo:
   bit_size: 1
@@ -1305,12 +1041,3 @@ enum/EmvsimAlphaEnumUniformBravo:
   - name: NoCrcLrcTx
     description: Do not transmit.
     value: 0
-enum/EmvsimAlphaEnumVictorBravo:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disable.
-    value: 0
-  - name: Enabled
-    description: Enable.
-    value: 1

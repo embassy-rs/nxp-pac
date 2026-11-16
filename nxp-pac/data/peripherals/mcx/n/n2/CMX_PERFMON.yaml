@@ -18,34 +18,34 @@ block/CmxPerfmonAlpha:
     byte_offset: 24
     access: Read
     bit_size: 8
-    fieldset: CmxPerfmonAlphaFieldsetBravo
+    fieldset: PmectrHi
   - name: pmectr1_lo
     description: Performance Monitor Event Counter.
     byte_offset: 28
     access: Read
-    fieldset: CmxPerfmonAlphaFieldsetCharlie
+    fieldset: PmectrLo
   - name: pmectr2_hi
     description: Performance Monitor Event Counter.
     byte_offset: 32
     access: Read
     bit_size: 8
-    fieldset: CmxPerfmonAlphaFieldsetDelta
+    fieldset: PmectrHi
   - name: pmectr2_lo
     description: Performance Monitor Event Counter.
     byte_offset: 36
     access: Read
-    fieldset: CmxPerfmonAlphaFieldsetEcho
+    fieldset: PmectrLo
   - name: pmectr3_hi
     description: Performance Monitor Event Counter.
     byte_offset: 40
     access: Read
     bit_size: 8
-    fieldset: CmxPerfmonAlphaFieldsetFoxtrot
+    fieldset: PmectrHi
   - name: pmectr3_lo
     description: Performance Monitor Event Counter.
     byte_offset: 44
     access: Read
-    fieldset: CmxPerfmonAlphaFieldsetGolf
+    fieldset: PmectrLo
 fieldset/CmxPerfmonAlphaFieldsetAlpha:
   description: Performance Monitor Control.
   fields:
@@ -53,12 +53,12 @@ fieldset/CmxPerfmonAlphaFieldsetAlpha:
     description: Module Is Enabled.
     bit_offset: 0
     bit_size: 1
-    enum: CmxPerfmonAlphaEnumBravo
+    enum: Menb
   - name: ssc
     description: Start and Stop Control.
     bit_offset: 1
     bit_size: 3
-    enum: CmxPerfmonAlphaEnumFoxtrot
+    enum: Ssc
   - name: cmode
     description: Count Mode.
     bit_offset: 4
@@ -68,17 +68,17 @@ fieldset/CmxPerfmonAlphaFieldsetAlpha:
     description: Reset Event Counter 1.
     bit_offset: 8
     bit_size: 1
-    enum: CmxPerfmonAlphaEnumCharlie
+    enum: Rectr
   - name: rectr2
     description: Reset Event Counter 2.
     bit_offset: 9
     bit_size: 1
-    enum: CmxPerfmonAlphaEnumDelta
+    enum: Rectr
   - name: rectr3
     description: Reset Event Counter 3.
     bit_offset: 10
     bit_size: 1
-    enum: CmxPerfmonAlphaEnumEcho
+    enum: Rectr
   - name: selevt1
     description: Select Event 1.
     bit_offset: 11
@@ -91,7 +91,7 @@ fieldset/CmxPerfmonAlphaFieldsetAlpha:
     description: Select Event 3.
     bit_offset: 25
     bit_size: 7
-fieldset/CmxPerfmonAlphaFieldsetBravo:
+fieldset/PmectrHi:
   description: Performance Monitor Event Counter.
   bit_size: 8
   fields:
@@ -99,37 +99,7 @@ fieldset/CmxPerfmonAlphaFieldsetBravo:
     description: Event Counter.
     bit_offset: 0
     bit_size: 8
-fieldset/CmxPerfmonAlphaFieldsetCharlie:
-  description: Performance Monitor Event Counter.
-  fields:
-  - name: ectr
-    description: Event Counter.
-    bit_offset: 0
-    bit_size: 32
-fieldset/CmxPerfmonAlphaFieldsetDelta:
-  description: Performance Monitor Event Counter.
-  bit_size: 8
-  fields:
-  - name: ectr
-    description: Event Counter.
-    bit_offset: 0
-    bit_size: 8
-fieldset/CmxPerfmonAlphaFieldsetEcho:
-  description: Performance Monitor Event Counter.
-  fields:
-  - name: ectr
-    description: Event Counter.
-    bit_offset: 0
-    bit_size: 32
-fieldset/CmxPerfmonAlphaFieldsetFoxtrot:
-  description: Performance Monitor Event Counter.
-  bit_size: 8
-  fields:
-  - name: ectr
-    description: Event Counter.
-    bit_offset: 0
-    bit_size: 8
-fieldset/CmxPerfmonAlphaFieldsetGolf:
+fieldset/PmectrLo:
   description: Performance Monitor Event Counter.
   fields:
   - name: ectr
@@ -148,7 +118,7 @@ enum/CmxPerfmonAlphaEnumAlpha:
   - name: UserOnly
     description: Counted only in User mode.
     value: 2
-enum/CmxPerfmonAlphaEnumBravo:
+enum/Menb:
   bit_size: 1
   variants:
   - name: Disabled
@@ -157,7 +127,7 @@ enum/CmxPerfmonAlphaEnumBravo:
   - name: Enabled
     description: Enabled.
     value: 1
-enum/CmxPerfmonAlphaEnumCharlie:
+enum/Rectr:
   bit_size: 1
   variants:
   - name: Reset
@@ -166,25 +136,7 @@ enum/CmxPerfmonAlphaEnumCharlie:
   - name: Run
     description: Run normally.
     value: 0
-enum/CmxPerfmonAlphaEnumDelta:
-  bit_size: 1
-  variants:
-  - name: Reset
-    description: Reset.
-    value: 1
-  - name: Run
-    description: Run normally.
-    value: 0
-enum/CmxPerfmonAlphaEnumEcho:
-  bit_size: 1
-  variants:
-  - name: Reset
-    description: Reset.
-    value: 1
-  - name: Run
-    description: Run normally.
-    value: 0
-enum/CmxPerfmonAlphaEnumFoxtrot:
+enum/Ssc:
   bit_size: 3
   variants:
   - name: Idle
@@ -211,34 +163,34 @@ block/CmxPerfmonBravo:
     byte_offset: 24
     access: Read
     bit_size: 8
-    fieldset: CmxPerfmonBravoFieldsetBravo
+    fieldset: PmectrHi
   - name: pmectr1_lo
     description: Performance Monitor Event Counter.
     byte_offset: 28
     access: Read
-    fieldset: CmxPerfmonBravoFieldsetCharlie
+    fieldset: PmectrLo
   - name: pmectr2_hi
     description: Performance Monitor Event Counter.
     byte_offset: 32
     access: Read
     bit_size: 8
-    fieldset: CmxPerfmonBravoFieldsetDelta
+    fieldset: PmectrHi
   - name: pmectr2_lo
     description: Performance Monitor Event Counter.
     byte_offset: 36
     access: Read
-    fieldset: CmxPerfmonBravoFieldsetEcho
+    fieldset: PmectrLo
   - name: pmectr3_hi
     description: Performance Monitor Event Counter.
     byte_offset: 40
     access: Read
     bit_size: 8
-    fieldset: CmxPerfmonBravoFieldsetFoxtrot
+    fieldset: PmectrHi
   - name: pmectr3_lo
     description: Performance Monitor Event Counter.
     byte_offset: 44
     access: Read
-    fieldset: CmxPerfmonBravoFieldsetGolf
+    fieldset: PmectrLo
 fieldset/CmxPerfmonBravoFieldsetAlpha:
   description: Performance Monitor Control.
   fields:
@@ -246,12 +198,12 @@ fieldset/CmxPerfmonBravoFieldsetAlpha:
     description: Module Is Enabled.
     bit_offset: 0
     bit_size: 1
-    enum: CmxPerfmonBravoEnumBravo
+    enum: Menb
   - name: ssc
     description: Start and Stop Control.
     bit_offset: 1
     bit_size: 3
-    enum: CmxPerfmonBravoEnumFoxtrot
+    enum: Ssc
   - name: cmode
     description: Count Mode.
     bit_offset: 4
@@ -261,17 +213,17 @@ fieldset/CmxPerfmonBravoFieldsetAlpha:
     description: Reset Event Counter 1.
     bit_offset: 8
     bit_size: 1
-    enum: CmxPerfmonBravoEnumCharlie
+    enum: Rectr
   - name: rectr2
     description: Reset Event Counter 2.
     bit_offset: 9
     bit_size: 1
-    enum: CmxPerfmonBravoEnumDelta
+    enum: Rectr
   - name: rectr3
     description: Reset Event Counter 3.
     bit_offset: 10
     bit_size: 1
-    enum: CmxPerfmonBravoEnumEcho
+    enum: Rectr
   - name: selevt1
     description: Select Event 1.
     bit_offset: 11
@@ -284,105 +236,9 @@ fieldset/CmxPerfmonBravoFieldsetAlpha:
     description: Select Event 3.
     bit_offset: 25
     bit_size: 7
-fieldset/CmxPerfmonBravoFieldsetBravo:
-  description: Performance Monitor Event Counter.
-  bit_size: 8
-  fields:
-  - name: ectr
-    description: Event Counter.
-    bit_offset: 0
-    bit_size: 8
-fieldset/CmxPerfmonBravoFieldsetCharlie:
-  description: Performance Monitor Event Counter.
-  fields:
-  - name: ectr
-    description: Event Counter.
-    bit_offset: 0
-    bit_size: 32
-fieldset/CmxPerfmonBravoFieldsetDelta:
-  description: Performance Monitor Event Counter.
-  bit_size: 8
-  fields:
-  - name: ectr
-    description: Event Counter.
-    bit_offset: 0
-    bit_size: 8
-fieldset/CmxPerfmonBravoFieldsetEcho:
-  description: Performance Monitor Event Counter.
-  fields:
-  - name: ectr
-    description: Event Counter.
-    bit_offset: 0
-    bit_size: 32
-fieldset/CmxPerfmonBravoFieldsetFoxtrot:
-  description: Performance Monitor Event Counter.
-  bit_size: 8
-  fields:
-  - name: ectr
-    description: Event Counter.
-    bit_offset: 0
-    bit_size: 8
-fieldset/CmxPerfmonBravoFieldsetGolf:
-  description: Performance Monitor Event Counter.
-  fields:
-  - name: ectr
-    description: Event Counter.
-    bit_offset: 0
-    bit_size: 32
 enum/CmxPerfmonBravoEnumAlpha:
   bit_size: 2
   variants:
   - name: UserAndPriv
     description: Counted in both User and Privileged modes.
     value: 0
-enum/CmxPerfmonBravoEnumBravo:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disabled.
-    value: 0
-  - name: Enabled
-    description: Enabled.
-    value: 1
-enum/CmxPerfmonBravoEnumCharlie:
-  bit_size: 1
-  variants:
-  - name: Reset
-    description: Reset.
-    value: 1
-  - name: Run
-    description: Run normally.
-    value: 0
-enum/CmxPerfmonBravoEnumDelta:
-  bit_size: 1
-  variants:
-  - name: Reset
-    description: Reset.
-    value: 1
-  - name: Run
-    description: Run normally.
-    value: 0
-enum/CmxPerfmonBravoEnumEcho:
-  bit_size: 1
-  variants:
-  - name: Reset
-    description: Reset.
-    value: 1
-  - name: Run
-    description: Run normally.
-    value: 0
-enum/CmxPerfmonBravoEnumFoxtrot:
-  bit_size: 3
-  variants:
-  - name: Idle
-    description: Idle or no-op.
-    value: 0
-  - name: Lstart2
-    description: Local start.
-    value: 2
-  - name: Lstart3
-    description: Local start.
-    value: 3
-  - name: Lstop
-    description: Local stop.
-    value: 1

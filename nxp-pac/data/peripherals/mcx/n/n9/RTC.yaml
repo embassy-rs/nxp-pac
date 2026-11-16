@@ -264,72 +264,72 @@ fieldset/RtcAlphaFieldsetLima:
     description: Alarm Interrupt Enable.
     bit_offset: 2
     bit_size: 1
-    enum: RtcAlphaEnumAlpha
+    enum: AlmIe
   - name: day_ie
     description: Days Interrupt Enable.
     bit_offset: 3
     bit_size: 1
-    enum: RtcAlphaEnumJuliet
+    enum: AlmIe
   - name: hour_ie
     description: Hours Interrupt Enable.
     bit_offset: 4
     bit_size: 1
-    enum: RtcAlphaEnumOscar
+    enum: AlmIe
   - name: min_ie
     description: Minutes Interrupt Enable.
     bit_offset: 5
     bit_size: 1
-    enum: RtcAlphaEnumLimaAlpha
+    enum: AlmIe
   - name: ie_1hz
     description: 1 Hz Interval Interrupt Enable.
     bit_offset: 6
     bit_size: 1
-    enum: RtcAlphaEnumSierra
+    enum: AlmIe
   - name: ie_2hz
     description: 2 Hz Interval Interrupt Enable.
     bit_offset: 7
     bit_size: 1
-    enum: RtcAlphaEnumUniform
+    enum: AlmIe
   - name: ie_4hz
     description: 4 Hz Interval Interrupt Enable.
     bit_offset: 8
     bit_size: 1
-    enum: RtcAlphaEnumWhiskey
+    enum: AlmIe
   - name: ie_8hz
     description: 8 Hz Interval Interrupt Enable.
     bit_offset: 9
     bit_size: 1
-    enum: RtcAlphaEnumZulu
+    enum: AlmIe
   - name: ie_16hz
     description: 16 Hz Interval Interrupt Enable.
     bit_offset: 10
     bit_size: 1
-    enum: RtcAlphaEnumRomeo
+    enum: AlmIe
   - name: ie_32hz
     description: 32 Hz Interval Interrupt Enable.
     bit_offset: 11
     bit_size: 1
-    enum: RtcAlphaEnumVictor
+    enum: AlmIe
   - name: ie_64hz
     description: 64 Hz Interval Interrupt Enable.
     bit_offset: 12
     bit_size: 1
-    enum: RtcAlphaEnumYankee
+    enum: AlmIe
   - name: ie_128hz
     description: 128 Hz Interval Interrupt Enable.
     bit_offset: 13
     bit_size: 1
-    enum: RtcAlphaEnumQuebec
+    enum: AlmIe
   - name: ie_256hz
     description: 256 Hz Interval Interrupt Enable.
     bit_offset: 14
     bit_size: 1
-    enum: RtcAlphaEnumTango
+    enum: AlmIe
   - name: ie_512hz
     description: 512 Hz Interval Interrupt Enable.
     bit_offset: 15
     bit_size: 1
-    enum: RtcAlphaEnumXray
+    enum: AlmIe
 fieldset/RtcAlphaFieldsetMike:
   description: Interrupt Status.
   bit_size: 16
@@ -338,72 +338,72 @@ fieldset/RtcAlphaFieldsetMike:
     description: Alarm Interrupt Status.
     bit_offset: 2
     bit_size: 1
-    enum: RtcAlphaEnumBravo
+    enum: AlmIs
   - name: day_is
     description: Days Interrupt Status.
     bit_offset: 3
     bit_size: 1
-    enum: RtcAlphaEnumKilo
+    enum: AlmIs
   - name: hour_is
     description: Hours Interrupt Status.
     bit_offset: 4
     bit_size: 1
-    enum: RtcAlphaEnumPapa
+    enum: AlmIs
   - name: min_is
     description: Minutes Interrupt Status.
     bit_offset: 5
     bit_size: 1
-    enum: RtcAlphaEnumMikeAlpha
+    enum: AlmIs
   - name: is_1hz
     description: 1 Hz Interval Interrupt Status.
     bit_offset: 6
     bit_size: 1
-    enum: RtcAlphaEnumDeltaAlpha
+    enum: AlmIs
   - name: is_2hz
     description: 2 Hz Interval Interrupt Status.
     bit_offset: 7
     bit_size: 1
-    enum: RtcAlphaEnumFoxtrotAlpha
+    enum: AlmIs
   - name: is_4hz
     description: 4 Hz Interval Interrupt Status.
     bit_offset: 8
     bit_size: 1
-    enum: RtcAlphaEnumHotelAlpha
+    enum: AlmIs
   - name: is_8hz
     description: 8 Hz Interval Interrupt Status.
     bit_offset: 9
     bit_size: 1
-    enum: RtcAlphaEnumKiloAlpha
+    enum: AlmIs
   - name: is_16hz
     description: 16 Hz Interval Interrupt Status.
     bit_offset: 10
     bit_size: 1
-    enum: RtcAlphaEnumCharlieAlpha
+    enum: AlmIs
   - name: is_32hz
     description: 32 Hz Interval Interrupt Status.
     bit_offset: 11
     bit_size: 1
-    enum: RtcAlphaEnumGolfAlpha
+    enum: AlmIs
   - name: is_64hz
     description: 64 Hz Interval Interrupt Status.
     bit_offset: 12
     bit_size: 1
-    enum: RtcAlphaEnumJulietAlpha
+    enum: AlmIs
   - name: is_128hz
     description: 128 Hz Interval Interrupt Status.
     bit_offset: 13
     bit_size: 1
-    enum: RtcAlphaEnumBravoAlpha
+    enum: AlmIs
   - name: is_256hz
     description: 256 Hz Interval Interrupt Status.
     bit_offset: 14
     bit_size: 1
-    enum: RtcAlphaEnumEchoAlpha
+    enum: AlmIs
   - name: is_512hz
     description: 512 Hz Interval Interrupt Status.
     bit_offset: 15
     bit_size: 1
-    enum: RtcAlphaEnumIndiaAlpha
+    enum: AlmIs
 fieldset/RtcAlphaFieldsetNovember:
   description: Sub Second Counter.
   bit_size: 16
@@ -466,24 +466,6 @@ fieldset/RtcAlphaFieldsetQuebec:
     description: Year Offset Count Value.
     bit_offset: 8
     bit_size: 8
-enum/RtcAlphaEnumAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Interrupt is disabled.
-    value: 0
-  - name: Enabled
-    description: Interrupt is enabled.
-    value: 1
-enum/RtcAlphaEnumBravo:
-  bit_size: 1
-  variants:
-  - name: Asserted
-    description: Interrupt is asserted.
-    value: 1
-  - name: Deasserted
-    description: Interrupt is de-asserted.
-    value: 0
 enum/RtcAlphaEnumCharlie:
   bit_size: 2
   variants:
@@ -559,16 +541,7 @@ enum/RtcAlphaEnumIndia:
   - name: Enabled
     description: Coarse compensation is enabled.
     value: 1
-enum/RtcAlphaEnumJuliet:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Interrupt is disabled.
-    value: 0
-  - name: Enabled
-    description: Interrupt is enabled.
-    value: 1
-enum/RtcAlphaEnumKilo:
+enum/AlmIs:
   bit_size: 1
   variants:
   - name: Asserted
@@ -619,106 +592,7 @@ enum/RtcAlphaEnumNovember:
   - name: Enabled
     description: Fine compensation is enabled.
     value: 1
-enum/RtcAlphaEnumOscar:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Interrupt is disabled.
-    value: 0
-  - name: Enabled
-    description: Interrupt is enabled.
-    value: 1
-enum/RtcAlphaEnumPapa:
-  bit_size: 1
-  variants:
-  - name: Asserted
-    description: Interrupt is asserted.
-    value: 1
-  - name: Deasserted
-    description: Interrupt is de-asserted.
-    value: 0
-enum/RtcAlphaEnumQuebec:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Interrupt is disabled.
-    value: 0
-  - name: Enabled
-    description: Interrupt is enabled.
-    value: 1
-enum/RtcAlphaEnumRomeo:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Interrupt is disabled.
-    value: 0
-  - name: Enabled
-    description: Interrupt is enabled.
-    value: 1
-enum/RtcAlphaEnumSierra:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Interrupt is disabled.
-    value: 0
-  - name: Enabled
-    description: Interrupt is enabled.
-    value: 1
-enum/RtcAlphaEnumTango:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Interrupt is disabled.
-    value: 0
-  - name: Enabled
-    description: Interrupt is enabled.
-    value: 1
-enum/RtcAlphaEnumUniform:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Interrupt is disabled.
-    value: 0
-  - name: Enabled
-    description: Interrupt is enabled.
-    value: 1
-enum/RtcAlphaEnumVictor:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Interrupt is disabled.
-    value: 0
-  - name: Enabled
-    description: Interrupt is enabled.
-    value: 1
-enum/RtcAlphaEnumWhiskey:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Interrupt is disabled.
-    value: 0
-  - name: Enabled
-    description: Interrupt is enabled.
-    value: 1
-enum/RtcAlphaEnumXray:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Interrupt is disabled.
-    value: 0
-  - name: Enabled
-    description: Interrupt is enabled.
-    value: 1
-enum/RtcAlphaEnumYankee:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Interrupt is disabled.
-    value: 0
-  - name: Enabled
-    description: Interrupt is enabled.
-    value: 1
-enum/RtcAlphaEnumZulu:
+enum/AlmIe:
   bit_size: 1
   variants:
   - name: Disabled
@@ -735,114 +609,6 @@ enum/RtcAlphaEnumAlphaAlpha:
     value: 1
   - name: Valid
     description: Time and date counters can be read or written. Time and date is valid.
-    value: 0
-enum/RtcAlphaEnumBravoAlpha:
-  bit_size: 1
-  variants:
-  - name: Asserted
-    description: Interrupt is asserted.
-    value: 1
-  - name: Deasserted
-    description: Interrupt is de-asserted.
-    value: 0
-enum/RtcAlphaEnumCharlieAlpha:
-  bit_size: 1
-  variants:
-  - name: Asserted
-    description: Interrupt is asserted.
-    value: 1
-  - name: Deasserted
-    description: Interrupt is de-asserted.
-    value: 0
-enum/RtcAlphaEnumDeltaAlpha:
-  bit_size: 1
-  variants:
-  - name: Asserted
-    description: Interrupt is asserted.
-    value: 1
-  - name: Deasserted
-    description: Interrupt is de-asserted.
-    value: 0
-enum/RtcAlphaEnumEchoAlpha:
-  bit_size: 1
-  variants:
-  - name: Asserted
-    description: Interrupt is asserted.
-    value: 1
-  - name: Deasserted
-    description: Interrupt is de-asserted.
-    value: 0
-enum/RtcAlphaEnumFoxtrotAlpha:
-  bit_size: 1
-  variants:
-  - name: Asserted
-    description: Interrupt is asserted.
-    value: 1
-  - name: Deasserted
-    description: Interrupt is de-asserted.
-    value: 0
-enum/RtcAlphaEnumGolfAlpha:
-  bit_size: 1
-  variants:
-  - name: Asserted
-    description: Interrupt is asserted.
-    value: 1
-  - name: Deasserted
-    description: Interrupt is de-asserted.
-    value: 0
-enum/RtcAlphaEnumHotelAlpha:
-  bit_size: 1
-  variants:
-  - name: Asserted
-    description: Interrupt is asserted.
-    value: 1
-  - name: Deasserted
-    description: Interrupt is de-asserted.
-    value: 0
-enum/RtcAlphaEnumIndiaAlpha:
-  bit_size: 1
-  variants:
-  - name: Asserted
-    description: Interrupt is asserted.
-    value: 1
-  - name: Deasserted
-    description: Interrupt is de-asserted.
-    value: 0
-enum/RtcAlphaEnumJulietAlpha:
-  bit_size: 1
-  variants:
-  - name: Asserted
-    description: Interrupt is asserted.
-    value: 1
-  - name: Deasserted
-    description: Interrupt is de-asserted.
-    value: 0
-enum/RtcAlphaEnumKiloAlpha:
-  bit_size: 1
-  variants:
-  - name: Asserted
-    description: Interrupt is asserted.
-    value: 1
-  - name: Deasserted
-    description: Interrupt is de-asserted.
-    value: 0
-enum/RtcAlphaEnumLimaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Interrupt is disabled.
-    value: 0
-  - name: Enabled
-    description: Interrupt is enabled.
-    value: 1
-enum/RtcAlphaEnumMikeAlpha:
-  bit_size: 1
-  variants:
-  - name: Asserted
-    description: Interrupt is asserted.
-    value: 1
-  - name: Deasserted
-    description: Interrupt is de-asserted.
     value: 0
 enum/RtcAlphaEnumNovemberAlpha:
   bit_size: 4

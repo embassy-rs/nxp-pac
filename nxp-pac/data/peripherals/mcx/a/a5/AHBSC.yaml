@@ -1,7 +1,8 @@
 # File not directly generated from transforms!
 # This file was manually copied from mcux-soc-svd @ 13bbf70 with some transforms applied.
 # Current release 25.06.00 commit da354fa is very incorrect.
-
+includes:
+  - ../../common/AHBSC-fields.yaml
 block/Ahbsc:
   description: AHBSC.
   items:
@@ -211,7 +212,7 @@ block/Ahbsc:
   - name: master_sec_anti_pol_reg
     description: Master Secure Level.
     byte_offset: 4052
-    fieldset: MasterSecAntiPolReg
+    fieldset: MasterSecLevel
   - name: cpu0_lock_reg
     description: Miscellaneous CPU0 Control Signals.
     byte_offset: 4076
@@ -219,7 +220,7 @@ block/Ahbsc:
   - name: misc_ctrl_dp_reg
     description: Secure Control Duplicate.
     byte_offset: 4088
-    fieldset: MiscCtrlDpReg
+    fieldset: MiscCtrlReg
   - name: misc_ctrl_reg
     description: Secure Control.
     byte_offset: 4092
@@ -957,39 +958,6 @@ fieldset/Cpu0lockReg:
     bit_offset: 8
     bit_size: 2
     enum: LockSau
-fieldset/MasterSecAntiPolReg:
-  description: Master Secure Level.
-  fields:
-  - name: smartdma
-    description: SMARTDMA Data.
-    bit_offset: 4
-    bit_size: 2
-    enum: MasterSec
-  - name: dma0
-    description: eDMA0.
-    bit_offset: 6
-    bit_size: 2
-    enum: MasterSec
-  - name: dma1
-    description: eDMA1.
-    bit_offset: 8
-    bit_size: 2
-    enum: MasterSec
-  - name: pkc
-    description: PKC.
-    bit_offset: 10
-    bit_size: 2
-    enum: MasterSec
-  - name: enet0
-    description: ENET0.
-    bit_offset: 24
-    bit_size: 2
-    enum: MasterSec
-  - name: usb1
-    description: USB1.
-    bit_offset: 26
-    bit_size: 2
-    enum: MasterSec
 fieldset/MasterSecLevel:
   description: Master Secure Level.
   fields:
@@ -1023,44 +991,6 @@ fieldset/MasterSecLevel:
     bit_offset: 26
     bit_size: 2
     enum: MasterSec
-fieldset/MiscCtrlDpReg:
-  description: Secure Control Duplicate.
-  fields:
-  - name: write_lock
-    description: Write Lock.
-    bit_offset: 0
-    bit_size: 2
-    enum: MiscCtrlRegWriteLock
-  - name: enable_secure_checking
-    description: Enable Secure Checking.
-    bit_offset: 2
-    bit_size: 2
-    enum: MiscCtrlEnable
-  - name: enable_s_priv_check
-    description: Enable Secure Privilege Checking.
-    bit_offset: 4
-    bit_size: 2
-    enum: MiscCtrlEnable
-  - name: enable_ns_priv_check
-    description: Enable Non-Secure Privilege Checking.
-    bit_offset: 6
-    bit_size: 2
-    enum: MiscCtrlEnable
-  - name: disable_violation_abort
-    description: Disable Violation Abort.
-    bit_offset: 8
-    bit_size: 2
-    enum: MiscCtrlRegDisableViolationAbort
-  - name: disable_strict_mode
-    description: Disable Strict Mode.
-    bit_offset: 10
-    bit_size: 2
-    enum: MiscCtrlRegDisableStrictMode
-  - name: idau_all_ns
-    description: IDAU All Non-Secure.
-    bit_offset: 14
-    bit_size: 2
-    enum: MiscCtrlRegIdauAllNs
 fieldset/MiscCtrlReg:
   description: Secure Control.
   fields:
@@ -1131,13 +1061,6 @@ fieldset/SecGpReg:
     array:
       len: 32
       stride: 1
-fieldset/SecVioAddr:
-  description: Security Violation Address.
-  fields:
-  - name: sec_vio_addr
-    description: Security violation address for AHB layer a reset value 0.
-    bit_offset: 0
-    bit_size: 32
 fieldset/SecVioInfoValid:
   description: Security Violation Info Validity for Address.
   fields:
@@ -1170,135 +1093,6 @@ fieldset/SecVioMiscInfo:
     bit_offset: 8
     bit_size: 5
     enum: SecVioInfoMaster
-enum/LockNsMpu:
-  bit_size: 2
-  variants:
-  - name: LockNsMpuEq0
-    description: CM33 (CPU0) LOCK_NS_MPU is 0.
-    value: 2
-  - name: LockNsMpuEq1
-    description: CM33 (CPU0) LOCK_NS_MPU is 1.
-    value: 1
-enum/LockNsVtor:
-  bit_size: 2
-  variants:
-  - name: LockNsVtorEq0
-    description: CM33 (CPU0) LOCKNSVTOR is 0.
-    value: 2
-  - name: LockNsVtorEq1
-    description: CM33 (CPU0) LOCKNSVTOR is 1.
-    value: 1
-enum/LockSMpu:
-  bit_size: 2
-  variants:
-  - name: LockSMpuEq0
-    description: CM33 (CPU0) LOCK_S_MPU is 0.
-    value: 2
-  - name: LockSMpuEq1
-    description: CM33 (CPU0) LOCK_S_MPU is 1.
-    value: 1
-enum/LockSVtaircr:
-  bit_size: 2
-  variants:
-  - name: LockSVtaircrEq0
-    description: CM33 (CPU0) LOCK_S_VTAIRCR is 0.
-    value: 2
-  - name: LockSVtaircrEq1
-    description: CM33 (CPU0) LOCK_S_VTAIRCR is 1.
-    value: 1
-enum/LockSau:
-  bit_size: 2
-  variants:
-  - name: LockSauEq0
-    description: CM33 (CPU0) LOCK_SAU is 0.
-    value: 2
-  - name: LockSauEq1
-    description: CM33 (CPU0) LOCK_SAU is 1.
-    value: 1
-enum/MasterSec:
-  bit_size: 2
-  variants:
-  - name: NonsecureNonprivMaster
-    description: Non-secure and non-privileged Master.
-    value: 0
-  - name: NonsecurePrivMaster
-    description: Non-secure and privileged Master.
-    value: 1
-  - name: SecureNonprivMaster
-    description: Secure and non-privileged Master.
-    value: 2
-  - name: SecurePrivMaster
-    description: Secure and privileged Master.
-    value: 3
-enum/MiscCtrlEnable:
-  bit_size: 2
-  variants:
-  - name: Disabled
-    description: Disables the privilege checking of non-secure mode access.
-    value: 2
-  - name: Enabled
-    description: Enables the privilege checking of non-secure mode access.
-    value: 1
-enum/MiscCtrlRegDisableStrictMode:
-  bit_size: 2
-  variants:
-  - name: Ahbsm1
-    description: Master can access memories and peripherals at same level only.
-    value: 2
-  - name: Ahbtm
-    description: Master can access memories and peripherals at the same level or below that level.
-    value: 1
-enum/MiscCtrlRegDisableViolationAbort:
-  bit_size: 2
-  variants:
-  - name: Abort
-    description: The violation detected by the secure checker will cause an abort.
-    value: 2
-  - name: NoAbort
-    description: The violation detected by the secure checker will not cause an abort, but a secure_violation_irq (interrupt request) will still be asserted and serviced by ISR.
-    value: 1
-enum/MiscCtrlRegIdauAllNs:
-  bit_size: 2
-  variants:
-  - name: Disabled
-    description: IDAU is disabled, which means that all memories are attributed as non-secure memory.
-    value: 1
-  - name: Enabled
-    description: IDAU is enabled (restrictive mode).
-    value: 2
-enum/MiscCtrlRegWriteLock:
-  bit_size: 2
-  variants:
-  - name: Locked
-    description: Writes to this register and to the Memory and Peripheral RULE registers are not allowed.
-    value: 1
-  - name: NotLocked
-    description: Writes to this register and to the Memory and Peripheral RULE registers are allowed.
-    value: 2
-enum/Rule:
-  bit_size: 2
-  variants:
-  - name: NonsecureNonprivUserAllowed
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NonsecurePrivUserAllowed
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SecureNonprivUserAllowed
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SecurePrivUserAllowed
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/SecVioInfoDataAccess:
-  bit_size: 1
-  variants:
-  - name: Code
-    description: Code.
-    value: 0
-  - name: Data
-    description: Data.
-    value: 1
 enum/SecVioInfoMaster:
   bit_size: 5
   variants:
@@ -1308,36 +1102,27 @@ enum/SecVioInfoMaster:
   - name: Cpu0Sys
     description: CM33 System.
     value: 1
-  - name: EDma0
-    description: eDMA0.
-    value: 5
+  - name: SdmaInstr
+    description: SMARTDMA Instruction.
+    value: 2
+  - name: SdmaData
+    description: SMARTDMA Data.
+    value: 3
   - name: EDma1
     description: eDMA1.
     value: 4
-  - name: Enet
-    description: Ethernet.
-    value: 13
+  - name: EDma0
+    description: eDMA0.
+    value: 5
+  - name: UsbHs
+    description: USB HS.
+    value: 6
   - name: Espi
     description: eSPI.
     value: 10
   - name: Pkc
     description: PKC.
     value: 12
-  - name: SdmaData
-    description: SMARTDMA Data.
-    value: 3
-  - name: SdmaInstr
-    description: SMARTDMA Instruction.
-    value: 2
-  - name: UsbHs
-    description: USB HS.
-    value: 6
-enum/SecVioInfoWrite:
-  bit_size: 1
-  variants:
-  - name: Read
-    description: Read access.
-    value: 0
-  - name: Write
-    description: Write access.
-    value: 1
+  - name: Enet
+    description: Ethernet.
+    value: 13

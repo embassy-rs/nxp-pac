@@ -167,37 +167,37 @@ fieldset/CdogAlphaFieldsetFoxtrot:
     description: TIMEOUT fault control.
     bit_offset: 2
     bit_size: 3
-    enum: CdogAlphaEnumNovember
+    enum: AddressCtrl2
   - name: miscompare_ctrl
     description: MISCOMPARE fault control.
     bit_offset: 5
     bit_size: 3
-    enum: CdogAlphaEnumHotel
+    enum: AddressCtrl2
   - name: sequence_ctrl
     description: SEQUENCE fault control.
     bit_offset: 8
     bit_size: 3
-    enum: CdogAlphaEnumKilo
+    enum: AddressCtrl2
   - name: state_ctrl
     description: STATE fault control.
     bit_offset: 14
     bit_size: 3
-    enum: CdogAlphaEnumLima
+    enum: AddressCtrl2
   - name: address_ctrl
     description: ADDRESS fault control.
     bit_offset: 17
     bit_size: 3
-    enum: CdogAlphaEnumBravo
+    enum: AddressCtrl2
   - name: irq_pause
     description: IRQ pause control.
     bit_offset: 28
     bit_size: 2
-    enum: CdogAlphaEnumEcho
+    enum: DebugHaltCtrl2
   - name: debug_halt_ctrl
     description: DEBUG_HALT control.
     bit_offset: 30
     bit_size: 2
-    enum: CdogAlphaEnumDelta
+    enum: DebugHaltCtrl2
 fieldset/CdogAlphaFieldsetGolf:
   description: Flags Register.
   fields:
@@ -349,18 +349,6 @@ enum/CdogAlphaEnumAlpha:
   - name: NoFlag
     description: An ADDRESS fault has not occurred.
     value: 0
-enum/CdogAlphaEnumBravo:
-  bit_size: 3
-  variants:
-  - name: DisableBoth
-    description: Disable both reset and interrupt.
-    value: 4
-  - name: EnableInterrupt
-    description: Enable interrupt.
-    value: 2
-  - name: EnableReset
-    description: Enable reset.
-    value: 1
 enum/CdogAlphaEnumCharlie:
   bit_size: 1
   variants:
@@ -370,16 +358,7 @@ enum/CdogAlphaEnumCharlie:
   - name: NoFlag
     description: A CONTROL fault has not occurred.
     value: 0
-enum/CdogAlphaEnumDelta:
-  bit_size: 2
-  variants:
-  - name: PauseTimer
-    description: Stop the timer.
-    value: 2
-  - name: RunTimer
-    description: Keep the timer running.
-    value: 1
-enum/CdogAlphaEnumEcho:
+enum/DebugHaltCtrl2:
   bit_size: 2
   variants:
   - name: PauseTimer
@@ -406,18 +385,6 @@ enum/CdogAlphaEnumGolf:
   - name: NoFlag
     description: A MISCOMPARE fault has not occurred.
     value: 0
-enum/CdogAlphaEnumHotel:
-  bit_size: 3
-  variants:
-  - name: DisableBoth
-    description: Disable both reset and interrupt.
-    value: 4
-  - name: EnableInterrupt
-    description: Enable interrupt.
-    value: 2
-  - name: EnableReset
-    description: Enable reset.
-    value: 1
 enum/CdogAlphaEnumIndia:
   bit_size: 1
   variants:
@@ -436,19 +403,7 @@ enum/CdogAlphaEnumJuliet:
   - name: NoFlag
     description: A SEQUENCE fault has not occurred.
     value: 0
-enum/CdogAlphaEnumKilo:
-  bit_size: 3
-  variants:
-  - name: DisableBoth
-    description: Disable both reset and interrupt.
-    value: 4
-  - name: EnableInterrupt
-    description: Enable interrupt.
-    value: 2
-  - name: EnableReset
-    description: Enable reset.
-    value: 1
-enum/CdogAlphaEnumLima:
+enum/AddressCtrl2:
   bit_size: 3
   variants:
   - name: DisableBoth
@@ -469,18 +424,6 @@ enum/CdogAlphaEnumMike:
   - name: NoFlag
     description: A STATE fault has not occurred.
     value: 0
-enum/CdogAlphaEnumNovember:
-  bit_size: 3
-  variants:
-  - name: DisableBoth
-    description: Disable both reset and interrupt.
-    value: 4
-  - name: EnableInterrupt
-    description: Enable interrupt.
-    value: 2
-  - name: EnableReset
-    description: Enable reset.
-    value: 1
 enum/CdogAlphaEnumOscar:
   bit_size: 1
   variants:

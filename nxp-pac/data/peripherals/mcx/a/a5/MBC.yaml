@@ -1,4 +1,6 @@
 # MCXAP172M240F70RM Rev. 1, sections64.1/64.5.1. Includes MEM1 words2/3 and effective RO fixed policies.
+includes:
+  - ../../common/MBC-enums.yaml
 block/Mbc:
   description: Memory block checker. Word writes only. GLIKEY index15 protects MBC registers. Choosing a locked global policy locks the corresponding block selector until reset. Chip-specific flash accesses are SecureUser; the manual advises not setting NSE.
   items:
@@ -668,30 +670,3 @@ fieldset/MemnGlbac7:
     bit_size: 1
   bit_size: 32
   reset_value: 2147483648
-enum/Mbacsel:
-  bit_size: 3
-  variants:
-  - name: Glbac0
-    description: select MBC_MEMN_GLBAC0 access control policy for block B.
-    value: 0
-  - name: Glbac1
-    description: select MBC_MEMN_GLBAC1 access control policy for block B.
-    value: 1
-  - name: Glbac2
-    description: select MBC_MEMN_GLBAC2 access control policy for block B.
-    value: 2
-  - name: Glbac3
-    description: select MBC_MEMN_GLBAC3 access control policy for block B.
-    value: 3
-  - name: Glbac4
-    description: select MBC_MEMN_GLBAC4 access control policy for block B.
-    value: 4
-  - name: Glbac5
-    description: select MBC_MEMN_GLBAC5 access control policy for block B.
-    value: 5
-  - name: Glbac6
-    description: select MBC_MEMN_GLBAC6 access control policy for block B.
-    value: 6
-  - name: Glbac7
-    description: select MBC_MEMN_GLBAC7 access control policy for block B.
-    value: 7

@@ -162,7 +162,7 @@ fieldset/Control:
     description: DEBUG_HALT control.
     bit_offset: 30
     bit_size: 2
-    enum: DebugHaltCtrl
+    enum: IrqPause
 fieldset/Flags:
   description: Flags Register.
   fields:
@@ -317,15 +317,6 @@ enum/Ctrl:
   - name: DisableBoth
     description: Disable both reset and interrupt.
     value: 4
-enum/DebugHaltCtrl:
-  bit_size: 2
-  variants:
-  - name: RunTimer
-    description: Keep the timer running.
-    value: 1
-  - name: PauseTimer
-    description: Stop the timer.
-    value: 2
 enum/IrqPause:
   bit_size: 2
   variants:

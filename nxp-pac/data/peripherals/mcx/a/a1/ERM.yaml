@@ -26,16 +26,9 @@ block/Erm:
   - name: corr_err_cnt1
     description: ERM Memory 1 Correctable Error Count Register.
     byte_offset: 280
-    fieldset: CorrErrCnt1
+    fieldset: CorrErrCnt0
 fieldset/CorrErrCnt0:
   description: ERM Memory 0 Correctable Error Count Register.
-  fields:
-  - name: count
-    description: Memory n Correctable Error Count.
-    bit_offset: 0
-    bit_size: 8
-fieldset/CorrErrCnt1:
-  description: ERM Memory 1 Correctable Error Count Register.
   fields:
   - name: count
     description: Memory n Correctable Error Count.

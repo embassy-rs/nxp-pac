@@ -220,32 +220,32 @@ fieldset/PowerquadAlphaFieldsetIndia:
     description: Event Trigger on Floating-point Overflow.
     bit_offset: 0
     bit_size: 1
-    enum: PowerquadAlphaEnumJuliet
+    enum: EventBerr
   - name: event_nan
     description: Event Trigger on Floating-Point NaN.
     bit_offset: 1
     bit_size: 1
-    enum: PowerquadAlphaEnumIndia
+    enum: EventBerr
   - name: event_fixed
     description: Event Trigger on Fixed-point Overflow.
     bit_offset: 2
     bit_size: 1
-    enum: PowerquadAlphaEnumHotel
+    enum: EventBerr
   - name: event_uflow
     description: Event Trigger on Underflow.
     bit_offset: 3
     bit_size: 1
-    enum: PowerquadAlphaEnumKilo
+    enum: EventBerr
   - name: event_berr
     description: Event Trigger on AHBM Bus Error.
     bit_offset: 4
     bit_size: 1
-    enum: PowerquadAlphaEnumFoxtrot
+    enum: EventBerr
   - name: event_comp
     description: Event Trigger on Instruction Completion.
     bit_offset: 7
     bit_size: 1
-    enum: PowerquadAlphaEnumGolf
+    enum: EventBerr
 fieldset/PowerquadAlphaFieldsetJuliet:
   description: General Purpose Register Bank n.
   fields:
@@ -267,12 +267,12 @@ fieldset/PowerquadAlphaFieldsetLima:
     description: Input A Internal Format.
     bit_offset: 0
     bit_size: 2
-    enum: PowerquadAlphaEnumNovember
+    enum: InaFormatext
   - name: ina_formatext
     description: Input A External Format.
     bit_offset: 4
     bit_size: 2
-    enum: PowerquadAlphaEnumMike
+    enum: InaFormatext
   - name: ina_scaler
     description: Input A Scaler Value.
     bit_offset: 8
@@ -291,12 +291,12 @@ fieldset/PowerquadAlphaFieldsetNovember:
     description: Input B Internal Format.
     bit_offset: 0
     bit_size: 2
-    enum: PowerquadAlphaEnumPapa
+    enum: InaFormatext
   - name: inb_formatext
     description: Input B External Format.
     bit_offset: 4
     bit_size: 2
-    enum: PowerquadAlphaEnumOscar
+    enum: InaFormatext
   - name: inb_scaler
     description: Input B Scaler.
     bit_offset: 8
@@ -308,32 +308,32 @@ fieldset/PowerquadAlphaFieldsetOscar:
     description: Interrupt Floating-point Overflow.
     bit_offset: 0
     bit_size: 1
-    enum: PowerquadAlphaEnumVictor
+    enum: IntrBerr
   - name: intr_nan
     description: Interrupt Floating-point NaN.
     bit_offset: 1
     bit_size: 1
-    enum: PowerquadAlphaEnumUniform
+    enum: IntrBerr
   - name: intr_fixed
     description: Interrupt on Fixed-point Overflow.
     bit_offset: 2
     bit_size: 1
-    enum: PowerquadAlphaEnumTango
+    enum: IntrBerr
   - name: intr_uflow
     description: Interrupt on Underflow.
     bit_offset: 3
     bit_size: 1
-    enum: PowerquadAlphaEnumXray
+    enum: IntrBerr
   - name: intr_berr
     description: Interrupt on AHBM Bus Error.
     bit_offset: 4
     bit_size: 1
-    enum: PowerquadAlphaEnumRomeo
+    enum: IntrBerr
   - name: intr_comp
     description: Interrupt on Instruction Completion.
     bit_offset: 7
     bit_size: 1
-    enum: PowerquadAlphaEnumSierra
+    enum: IntrBerr
 fieldset/PowerquadAlphaFieldsetPapa:
   description: Interrupt Status.
   fields:
@@ -370,12 +370,12 @@ fieldset/PowerquadAlphaFieldsetTango:
     description: Output Internal Format.
     bit_offset: 0
     bit_size: 2
-    enum: PowerquadAlphaEnumAlphaAlpha
+    enum: InaFormatext
   - name: out_formatext
     description: Output External Format.
     bit_offset: 4
     bit_size: 2
-    enum: PowerquadAlphaEnumZulu
+    enum: InaFormatext
   - name: out_scaler
     description: 8-bit Scaling Value for Result Data.
     bit_offset: 8
@@ -394,12 +394,12 @@ fieldset/PowerquadAlphaFieldsetVictor:
     description: Temporary Internal Format.
     bit_offset: 0
     bit_size: 2
-    enum: PowerquadAlphaEnumDeltaAlpha
+    enum: InaFormatext
   - name: tmp_formatext
     description: Temporary External Format.
     bit_offset: 4
     bit_size: 2
-    enum: PowerquadAlphaEnumCharlieAlpha
+    enum: InaFormatext
   - name: tmp_scaler
     description: Scaling Value for Temporary Data.
     bit_offset: 8
@@ -458,52 +458,7 @@ enum/PowerquadAlphaEnumEcho:
   - name: Transform
     description: Transform engine.
     value: 2
-enum/PowerquadAlphaEnumFoxtrot:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable event trigger.
-    value: 0
-  - name: Enable
-    description: Enable event trigger.
-    value: 1
-enum/PowerquadAlphaEnumGolf:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable event trigger.
-    value: 0
-  - name: Enable
-    description: Enable event trigger.
-    value: 1
-enum/PowerquadAlphaEnumHotel:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable event trigger.
-    value: 0
-  - name: Enable
-    description: Enable event trigger.
-    value: 1
-enum/PowerquadAlphaEnumIndia:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable event trigger.
-    value: 0
-  - name: Enable
-    description: Enable event trigger.
-    value: 1
-enum/PowerquadAlphaEnumJuliet:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable event trigger.
-    value: 0
-  - name: Enable
-    description: Enable event trigger.
-    value: 1
-enum/PowerquadAlphaEnumKilo:
+enum/EventBerr:
   bit_size: 1
   variants:
   - name: Disable
@@ -521,43 +476,7 @@ enum/PowerquadAlphaEnumLima:
   - name: NoError
     description: No error.
     value: 0
-enum/PowerquadAlphaEnumMike:
-  bit_size: 2
-  variants:
-  - name: Float
-    description: F32 32-bit floating-point format.
-    value: 2
-  - name: Q15
-    description: Q15 16-bit fixed-point integer.
-    value: 0
-  - name: Q31
-    description: Q31 32-bit fixed-point integer.
-    value: 1
-enum/PowerquadAlphaEnumNovember:
-  bit_size: 2
-  variants:
-  - name: Float
-    description: F32 32-bit floating-point format.
-    value: 2
-  - name: Q15
-    description: Q15 16-bit fixed-point integer.
-    value: 0
-  - name: Q31
-    description: Q31 32-bit fixed-point integer.
-    value: 1
-enum/PowerquadAlphaEnumOscar:
-  bit_size: 2
-  variants:
-  - name: Float
-    description: F32 32-bit floating-point format.
-    value: 2
-  - name: Q15
-    description: Q15 16-bit fixed-point integer.
-    value: 0
-  - name: Q31
-    description: Q31 32-bit fixed-point integer.
-    value: 1
-enum/PowerquadAlphaEnumPapa:
+enum/InaFormatext:
   bit_size: 2
   variants:
   - name: Float
@@ -578,51 +497,6 @@ enum/PowerquadAlphaEnumQuebec:
   - name: NotBusy
     description: Not busy.
     value: 0
-enum/PowerquadAlphaEnumRomeo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable interrupt.
-    value: 0
-  - name: Enable
-    description: Enable interrupt.
-    value: 1
-enum/PowerquadAlphaEnumSierra:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable interrupt.
-    value: 0
-  - name: Enable
-    description: Enable interrupt.
-    value: 1
-enum/PowerquadAlphaEnumTango:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable interrupt.
-    value: 0
-  - name: Enable
-    description: Enable interrupt.
-    value: 1
-enum/PowerquadAlphaEnumUniform:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable interrupt.
-    value: 0
-  - name: Enable
-    description: Enable interrupt.
-    value: 1
-enum/PowerquadAlphaEnumVictor:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable interrupt.
-    value: 0
-  - name: Enable
-    description: Enable interrupt.
-    value: 1
 enum/PowerquadAlphaEnumWhiskey:
   bit_size: 1
   variants:
@@ -632,7 +506,7 @@ enum/PowerquadAlphaEnumWhiskey:
   - name: Enable
     description: Interrupt captured.
     value: 1
-enum/PowerquadAlphaEnumXray:
+enum/IntrBerr:
   bit_size: 1
   variants:
   - name: Disable
@@ -650,30 +524,6 @@ enum/PowerquadAlphaEnumYankee:
   - name: NoError
     description: No error.
     value: 0
-enum/PowerquadAlphaEnumZulu:
-  bit_size: 2
-  variants:
-  - name: Float
-    description: F32 32-bit floating-point format.
-    value: 2
-  - name: Q15
-    description: Q15 16-bit fixed-point integer.
-    value: 0
-  - name: Q31
-    description: Q31 32-bit fixed-point integer.
-    value: 1
-enum/PowerquadAlphaEnumAlphaAlpha:
-  bit_size: 2
-  variants:
-  - name: Float
-    description: F32 32-bit floating-point format.
-    value: 2
-  - name: Q15
-    description: Q15 16-bit fixed-point integer.
-    value: 0
-  - name: Q31
-    description: Q31 32-bit fixed-point integer.
-    value: 1
 enum/PowerquadAlphaEnumBravoAlpha:
   bit_size: 1
   variants:
@@ -683,30 +533,6 @@ enum/PowerquadAlphaEnumBravoAlpha:
   - name: NoError
     description: No error.
     value: 0
-enum/PowerquadAlphaEnumCharlieAlpha:
-  bit_size: 2
-  variants:
-  - name: Float
-    description: F32 32-bit floating-point format.
-    value: 2
-  - name: Q15
-    description: Q15 16-bit fixed-point integer.
-    value: 0
-  - name: Q31
-    description: Q31 32-bit fixed-point integer.
-    value: 1
-enum/PowerquadAlphaEnumDeltaAlpha:
-  bit_size: 2
-  variants:
-  - name: Float
-    description: F32 32-bit floating-point format.
-    value: 2
-  - name: Q15
-    description: Q15 16-bit fixed-point integer.
-    value: 0
-  - name: Q31
-    description: Q31 32-bit fixed-point integer.
-    value: 1
 enum/PowerquadAlphaEnumEchoAlpha:
   bit_size: 1
   variants:

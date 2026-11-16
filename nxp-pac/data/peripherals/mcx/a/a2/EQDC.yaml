@@ -40,7 +40,7 @@ block/Eqdc:
     description: Upper Position Counter Register. Depending on PMEN this read captures and clears POSD. OUTCTL can also generate a POS_MATCH pulse.
     byte_offset: 12
     bit_size: 16
-    fieldset: Upos
+    fieldset: Lpos
   - name: lpos
     description: Lower Position Counter Register. Depending on PMEN this read captures and clears POSD. OUTCTL can also generate a POS_MATCH pulse.
     byte_offset: 14
@@ -96,7 +96,7 @@ block/Eqdc:
     description: Upper Initialization Register. Buffered writes require LDOK=0; loading depends on LDMOD. Reads, when supported, return the active inner value or hold-register alias, not necessarily the written compare value.
     byte_offset: 32
     bit_size: 16
-    fieldset: Uinit
+    fieldset: Linit
   - name: linit
     description: Lower Initialization Register. Buffered writes require LDOK=0; loading depends on LDMOD. Reads, when supported, return the active inner value or hold-register alias, not necessarily the written compare value.
     byte_offset: 34
@@ -106,7 +106,7 @@ block/Eqdc:
     description: Upper Modulus Register. Buffered writes require LDOK=0; loading depends on LDMOD. Reads, when supported, return the active inner value or hold-register alias, not necessarily the written compare value.
     byte_offset: 36
     bit_size: 16
-    fieldset: Umod
+    fieldset: Lmod
   - name: lmod
     description: Lower Modulus Register. Buffered writes require LDOK=0; loading depends on LDMOD. Reads, when supported, return the active inner value or hold-register alias, not necessarily the written compare value.
     byte_offset: 38
@@ -794,33 +794,6 @@ fieldset/Ucomp3:
     bit_offset: 0
     bit_size: 16
   reset_value: 32768
-fieldset/Uinit:
-  description: Upper Initialization Register.
-  bit_size: 16
-  fields:
-  - name: init
-    description: INIT.
-    bit_offset: 0
-    bit_size: 16
-  reset_value: 0
-fieldset/Umod:
-  description: Upper Modulus Register.
-  bit_size: 16
-  fields:
-  - name: mod_
-    description: MOD.
-    bit_offset: 0
-    bit_size: 16
-  reset_value: 0
-fieldset/Upos:
-  description: Upper Position Counter Register.
-  bit_size: 16
-  fields:
-  - name: pos
-    description: POS.
-    bit_offset: 0
-    bit_size: 16
-  reset_value: 0
 fieldset/Uposh:
   description: Upper Position Hold Register.
   bit_size: 16

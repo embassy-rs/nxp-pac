@@ -11,7 +11,7 @@ block/Mrcc:
     description: Peripheral Reset Control Set 0.
     byte_offset: 4
     access: Write
-    fieldset: MrccGlbRst0Set
+    fieldset: MrccGlbRst0Clr
   - name: mrcc_glb_rst0_clr
     description: Peripheral Reset Control Clear 0.
     byte_offset: 8
@@ -25,12 +25,12 @@ block/Mrcc:
     description: Peripheral Reset Control Set 1.
     byte_offset: 20
     access: Write
-    fieldset: MrccGlbRst1Set
+    fieldset: MrccGlbRst0Clr
   - name: mrcc_glb_rst1_clr
     description: Peripheral Reset Control Clear 1.
     byte_offset: 24
     access: Write
-    fieldset: MrccGlbRst1Clr
+    fieldset: MrccGlbRst0Clr
   - name: mrcc_glb_rst2
     description: Peripheral Reset Control 2.
     byte_offset: 32
@@ -39,12 +39,12 @@ block/Mrcc:
     description: Peripheral Reset Control Set 2.
     byte_offset: 36
     access: Write
-    fieldset: MrccGlbRst2Set
+    fieldset: MrccGlbRst0Clr
   - name: mrcc_glb_rst2_clr
     description: Peripheral Reset Control Clear 2.
     byte_offset: 40
     access: Write
-    fieldset: MrccGlbRst2Clr
+    fieldset: MrccGlbRst0Clr
   - name: mrcc_glb_cc0
     description: AHB Clock Control 0.
     byte_offset: 64
@@ -53,7 +53,7 @@ block/Mrcc:
     description: AHB Clock Control Set 0.
     byte_offset: 68
     access: Write
-    fieldset: MrccGlbCc0Set
+    fieldset: MrccGlbCc0Clr
   - name: mrcc_glb_cc0_clr
     description: AHB Clock Control Clear 0.
     byte_offset: 72
@@ -67,7 +67,7 @@ block/Mrcc:
     description: AHB Clock Control Set 1.
     byte_offset: 84
     access: Write
-    fieldset: MrccGlbCc1Set
+    fieldset: MrccGlbCc1Clr
   - name: mrcc_glb_cc1_clr
     description: AHB Clock Control Clear 1.
     byte_offset: 88
@@ -81,12 +81,12 @@ block/Mrcc:
     description: AHB Clock Control Set 2.
     byte_offset: 100
     access: Write
-    fieldset: MrccGlbCc2Set
+    fieldset: MrccGlbCc1Clr
   - name: mrcc_glb_cc2_clr
     description: AHB Clock Control Clear 2.
     byte_offset: 104
     access: Write
-    fieldset: MrccGlbCc2Clr
+    fieldset: MrccGlbCc1Clr
   - name: mrcc_glb_acc0
     description: Control Automatic Clock Gating 0.
     byte_offset: 128
@@ -94,7 +94,7 @@ block/Mrcc:
   - name: mrcc_glb_acc1
     description: Control Automatic Clock Gating 1.
     byte_offset: 132
-    fieldset: MrccGlbAcc1
+    fieldset: MrccGlbCc1
   - name: mrcc_glb_acc2
     description: Control Automatic Clock Gating 2.
     byte_offset: 136
@@ -106,23 +106,23 @@ block/Mrcc:
   - name: mrcc_ctimer0_clkdiv
     description: CTIMER0 clock divider control.
     byte_offset: 164
-    fieldset: MrccCtimer0Clkdiv
+    fieldset: MrccAdcClkdiv
   - name: mrcc_ctimer1_clksel
     description: CTIMER1 clock selection control.
     byte_offset: 168
-    fieldset: MrccCtimer1Clksel
+    fieldset: MrccCtimer0Clksel
   - name: mrcc_ctimer1_clkdiv
     description: CTIMER1 clock divider control.
     byte_offset: 172
-    fieldset: MrccCtimer1Clkdiv
+    fieldset: MrccAdcClkdiv
   - name: mrcc_ctimer2_clksel
     description: CTIMER2 clock selection control.
     byte_offset: 176
-    fieldset: MrccCtimer2Clksel
+    fieldset: MrccCtimer0Clksel
   - name: mrcc_ctimer2_clkdiv
     description: CTIMER2 clock divider control.
     byte_offset: 180
-    fieldset: MrccCtimer2Clkdiv
+    fieldset: MrccAdcClkdiv
   - name: mrcc_wwdt0_clkdiv
     description: WWDT0 clock divider control.
     byte_offset: 188
@@ -130,35 +130,35 @@ block/Mrcc:
   - name: mrcc_lpi2c0_clksel
     description: LPI2C0 clock selection control.
     byte_offset: 192
-    fieldset: MrccLpi2c0Clksel
+    fieldset: MrccCmp0RrClksel
   - name: mrcc_lpi2c0_clkdiv
     description: LPI2C0 clock divider control.
     byte_offset: 196
-    fieldset: MrccLpi2c0Clkdiv
+    fieldset: MrccAdcClkdiv
   - name: mrcc_lpi2c1_clksel
     description: LPI2C1 clock selection control.
     byte_offset: 200
-    fieldset: MrccLpi2c1Clksel
+    fieldset: MrccCmp0RrClksel
   - name: mrcc_lpi2c1_clkdiv
     description: LPI2C1 clock divider control.
     byte_offset: 204
-    fieldset: MrccLpi2c1Clkdiv
+    fieldset: MrccAdcClkdiv
   - name: mrcc_lpspi0_clksel
     description: LPSPI0 clock selection control.
     byte_offset: 208
-    fieldset: MrccLpspi0Clksel
+    fieldset: MrccCmp0RrClksel
   - name: mrcc_lpspi0_clkdiv
     description: LPSPI0 clock divider control.
     byte_offset: 212
-    fieldset: MrccLpspi0Clkdiv
+    fieldset: MrccAdcClkdiv
   - name: mrcc_lpspi1_clksel
     description: LPSPI1 clock selection control.
     byte_offset: 216
-    fieldset: MrccLpspi1Clksel
+    fieldset: MrccCmp0RrClksel
   - name: mrcc_lpspi1_clkdiv
     description: LPSPI1 clock divider control.
     byte_offset: 220
-    fieldset: MrccLpspi1Clkdiv
+    fieldset: MrccAdcClkdiv
   - name: mrcc_lpuart0_clksel
     description: LPUART0 clock selection control.
     byte_offset: 224
@@ -166,39 +166,39 @@ block/Mrcc:
   - name: mrcc_lpuart0_clkdiv
     description: LPUART0 clock divider control.
     byte_offset: 228
-    fieldset: MrccLpuart0Clkdiv
+    fieldset: MrccAdcClkdiv
   - name: mrcc_lpuart1_clksel
     description: LPUART1 clock selection control.
     byte_offset: 232
-    fieldset: MrccLpuart1Clksel
+    fieldset: MrccLpuart0Clksel
   - name: mrcc_lpuart1_clkdiv
     description: LPUART1 clock divider control.
     byte_offset: 236
-    fieldset: MrccLpuart1Clkdiv
+    fieldset: MrccAdcClkdiv
   - name: mrcc_lpuart2_clksel
     description: LPUART2 clock selection control.
     byte_offset: 240
-    fieldset: MrccLpuart2Clksel
+    fieldset: MrccLpuart0Clksel
   - name: mrcc_lpuart2_clkdiv
     description: LPUART2 clock divider control.
     byte_offset: 244
-    fieldset: MrccLpuart2Clkdiv
+    fieldset: MrccAdcClkdiv
   - name: mrcc_lpuart3_clksel
     description: LPUART3 clock selection control.
     byte_offset: 248
-    fieldset: MrccLpuart3Clksel
+    fieldset: MrccLpuart0Clksel
   - name: mrcc_lpuart3_clkdiv
     description: LPUART3 clock divider control.
     byte_offset: 252
-    fieldset: MrccLpuart3Clkdiv
+    fieldset: MrccAdcClkdiv
   - name: mrcc_lptmr0_clksel
     description: LPTMR0 clock selection control.
     byte_offset: 256
-    fieldset: MrccLptmr0Clksel
+    fieldset: MrccCmp0RrClksel
   - name: mrcc_lptmr0_clkdiv
     description: LPTMR0 clock divider control.
     byte_offset: 260
-    fieldset: MrccLptmr0Clkdiv
+    fieldset: MrccAdcClkdiv
   - name: mrcc_ostimer0_clksel
     description: OSTIMER0 clock selection control.
     byte_offset: 264
@@ -214,7 +214,7 @@ block/Mrcc:
   - name: mrcc_cmp0_func_clkdiv
     description: CMP0_FUNC clock divider control.
     byte_offset: 284
-    fieldset: MrccCmp0FuncClkdiv
+    fieldset: MrccAdcClkdiv
   - name: mrcc_cmp0_rr_clksel
     description: CMP0_RR clock selection control.
     byte_offset: 288
@@ -222,19 +222,19 @@ block/Mrcc:
   - name: mrcc_cmp0_rr_clkdiv
     description: CMP0_RR clock divider control.
     byte_offset: 292
-    fieldset: MrccCmp0RrClkdiv
+    fieldset: MrccAdcClkdiv
   - name: mrcc_cmp1_func_clkdiv
     description: CMP1_FUNC clock divider control.
     byte_offset: 300
-    fieldset: MrccCmp1FuncClkdiv
+    fieldset: MrccAdcClkdiv
   - name: mrcc_cmp1_rr_clksel
     description: CMP1_RR clock selection control.
     byte_offset: 304
-    fieldset: MrccCmp1RrClksel
+    fieldset: MrccCmp0RrClksel
   - name: mrcc_cmp1_rr_clkdiv
     description: CMP1_RR clock divider control.
     byte_offset: 308
-    fieldset: MrccCmp1RrClkdiv
+    fieldset: MrccAdcClkdiv
   - name: mrcc_flexcan0_clksel
     description: FLEXCAN0 clock selection control.
     byte_offset: 328
@@ -242,7 +242,7 @@ block/Mrcc:
   - name: mrcc_flexcan0_clkdiv
     description: FLEXCAN0 clock divider control.
     byte_offset: 332
-    fieldset: MrccFlexcan0Clkdiv
+    fieldset: MrccAdcClkdiv
   - name: mrcc_dbg_trace_clksel
     description: DBG_TRACE clock selection control.
     byte_offset: 336
@@ -250,7 +250,7 @@ block/Mrcc:
   - name: mrcc_dbg_trace_clkdiv
     description: DBG_TRACE clock divider control.
     byte_offset: 340
-    fieldset: MrccDbgTraceClkdiv
+    fieldset: MrccWwdt0Clkdiv
   - name: mrcc_clkout_clksel
     description: CLKOUT clock selection control.
     byte_offset: 344
@@ -258,7 +258,7 @@ block/Mrcc:
   - name: mrcc_clkout_clkdiv
     description: CLKOUT clock divider control.
     byte_offset: 348
-    fieldset: MrccClkoutClkdiv
+    fieldset: MrccAdcClkdiv
 fieldset/MrccAdcClkdiv:
   description: ADCx clock divider control.
   fields:
@@ -293,30 +293,6 @@ fieldset/MrccAdcClksel:
     enum: MrccAdcClkselMux
   bit_size: 32
   reset_value: 7
-fieldset/MrccClkoutClkdiv:
-  description: CLKOUT clock divider control.
-  fields:
-  - name: div
-    description: Functional Clock Divider.
-    bit_offset: 0
-    bit_size: 4
-  - name: reset
-    description: Reset divider counter.
-    bit_offset: 29
-    bit_size: 1
-    enum: MrccClkoutClkdivReset
-  - name: halt
-    description: Halt divider counter.
-    bit_offset: 30
-    bit_size: 1
-    enum: MrccClkoutClkdivHalt
-  - name: unstab
-    description: Divider status flag.
-    bit_offset: 31
-    bit_size: 1
-    enum: MrccClkoutClkdivUnstab
-  bit_size: 32
-  reset_value: 1073741824
 fieldset/MrccClkoutClksel:
   description: CLKOUT clock selection control.
   fields:
@@ -327,54 +303,6 @@ fieldset/MrccClkoutClksel:
     enum: MrccClkoutClkselMux
   bit_size: 32
   reset_value: 7
-fieldset/MrccCmp0FuncClkdiv:
-  description: CMP0_FUNC clock divider control.
-  fields:
-  - name: div
-    description: Functional Clock Divider.
-    bit_offset: 0
-    bit_size: 4
-  - name: reset
-    description: Reset divider counter.
-    bit_offset: 29
-    bit_size: 1
-    enum: MrccCmp0FuncClkdivReset
-  - name: halt
-    description: Halt divider counter.
-    bit_offset: 30
-    bit_size: 1
-    enum: MrccCmp0FuncClkdivHalt
-  - name: unstab
-    description: Divider status flag.
-    bit_offset: 31
-    bit_size: 1
-    enum: MrccCmp0FuncClkdivUnstab
-  bit_size: 32
-  reset_value: 1073741824
-fieldset/MrccCmp0RrClkdiv:
-  description: CMP0_RR clock divider control.
-  fields:
-  - name: div
-    description: Functional Clock Divider.
-    bit_offset: 0
-    bit_size: 4
-  - name: reset
-    description: Reset divider counter.
-    bit_offset: 29
-    bit_size: 1
-    enum: MrccCmp0RrClkdivReset
-  - name: halt
-    description: Halt divider counter.
-    bit_offset: 30
-    bit_size: 1
-    enum: MrccCmp0RrClkdivHalt
-  - name: unstab
-    description: Divider status flag.
-    bit_offset: 31
-    bit_size: 1
-    enum: MrccCmp0RrClkdivUnstab
-  bit_size: 32
-  reset_value: 1073741824
 fieldset/MrccCmp0RrClksel:
   description: CMP0_RR clock selection control.
   fields:
@@ -385,88 +313,6 @@ fieldset/MrccCmp0RrClksel:
     enum: MrccCmp0RrClkselMux
   bit_size: 32
   reset_value: 7
-fieldset/MrccCmp1FuncClkdiv:
-  description: CMP1_FUNC clock divider control.
-  fields:
-  - name: div
-    description: Functional Clock Divider.
-    bit_offset: 0
-    bit_size: 4
-  - name: reset
-    description: Reset divider counter.
-    bit_offset: 29
-    bit_size: 1
-    enum: MrccCmp1FuncClkdivReset
-  - name: halt
-    description: Halt divider counter.
-    bit_offset: 30
-    bit_size: 1
-    enum: MrccCmp1FuncClkdivHalt
-  - name: unstab
-    description: Divider status flag.
-    bit_offset: 31
-    bit_size: 1
-    enum: MrccCmp1FuncClkdivUnstab
-  bit_size: 32
-  reset_value: 1073741824
-fieldset/MrccCmp1RrClkdiv:
-  description: CMP1_RR clock divider control.
-  fields:
-  - name: div
-    description: Functional Clock Divider.
-    bit_offset: 0
-    bit_size: 4
-  - name: reset
-    description: Reset divider counter.
-    bit_offset: 29
-    bit_size: 1
-    enum: MrccCmp1RrClkdivReset
-  - name: halt
-    description: Halt divider counter.
-    bit_offset: 30
-    bit_size: 1
-    enum: MrccCmp1RrClkdivHalt
-  - name: unstab
-    description: Divider status flag.
-    bit_offset: 31
-    bit_size: 1
-    enum: MrccCmp1RrClkdivUnstab
-  bit_size: 32
-  reset_value: 1073741824
-fieldset/MrccCmp1RrClksel:
-  description: CMP1_RR clock selection control.
-  fields:
-  - name: mux
-    description: Functional Clock Mux Select.
-    bit_offset: 0
-    bit_size: 3
-    enum: MrccCmp1RrClkselMux
-  bit_size: 32
-  reset_value: 7
-fieldset/MrccCtimer0Clkdiv:
-  description: CTIMER0 clock divider control.
-  fields:
-  - name: div
-    description: Functional Clock Divider.
-    bit_offset: 0
-    bit_size: 4
-  - name: reset
-    description: Reset divider counter.
-    bit_offset: 29
-    bit_size: 1
-    enum: MrccCtimer0ClkdivReset
-  - name: halt
-    description: Halt divider counter.
-    bit_offset: 30
-    bit_size: 1
-    enum: MrccCtimer0ClkdivHalt
-  - name: unstab
-    description: Divider status flag.
-    bit_offset: 31
-    bit_size: 1
-    enum: MrccCtimer0ClkdivUnstab
-  bit_size: 32
-  reset_value: 1073741824
 fieldset/MrccCtimer0Clksel:
   description: CTIMER0 clock selection control.
   fields:
@@ -477,98 +323,6 @@ fieldset/MrccCtimer0Clksel:
     enum: MrccCtimer0ClkselMux
   bit_size: 32
   reset_value: 7
-fieldset/MrccCtimer1Clkdiv:
-  description: CTIMER1 clock divider control.
-  fields:
-  - name: div
-    description: Functional Clock Divider.
-    bit_offset: 0
-    bit_size: 4
-  - name: reset
-    description: Reset divider counter.
-    bit_offset: 29
-    bit_size: 1
-    enum: MrccCtimer1ClkdivReset
-  - name: halt
-    description: Halt divider counter.
-    bit_offset: 30
-    bit_size: 1
-    enum: MrccCtimer1ClkdivHalt
-  - name: unstab
-    description: Divider status flag.
-    bit_offset: 31
-    bit_size: 1
-    enum: MrccCtimer1ClkdivUnstab
-  bit_size: 32
-  reset_value: 1073741824
-fieldset/MrccCtimer1Clksel:
-  description: CTIMER1 clock selection control.
-  fields:
-  - name: mux
-    description: Functional Clock Mux Select.
-    bit_offset: 0
-    bit_size: 3
-    enum: MrccCtimer1ClkselMux
-  bit_size: 32
-  reset_value: 7
-fieldset/MrccCtimer2Clkdiv:
-  description: CTIMER2 clock divider control.
-  fields:
-  - name: div
-    description: Functional Clock Divider.
-    bit_offset: 0
-    bit_size: 4
-  - name: reset
-    description: Reset divider counter.
-    bit_offset: 29
-    bit_size: 1
-    enum: MrccCtimer2ClkdivReset
-  - name: halt
-    description: Halt divider counter.
-    bit_offset: 30
-    bit_size: 1
-    enum: MrccCtimer2ClkdivHalt
-  - name: unstab
-    description: Divider status flag.
-    bit_offset: 31
-    bit_size: 1
-    enum: MrccCtimer2ClkdivUnstab
-  bit_size: 32
-  reset_value: 1073741824
-fieldset/MrccCtimer2Clksel:
-  description: CTIMER2 clock selection control.
-  fields:
-  - name: mux
-    description: Functional Clock Mux Select.
-    bit_offset: 0
-    bit_size: 3
-    enum: MrccCtimer2ClkselMux
-  bit_size: 32
-  reset_value: 7
-fieldset/MrccDbgTraceClkdiv:
-  description: DBG_TRACE clock divider control.
-  fields:
-  - name: div
-    description: Functional Clock Divider.
-    bit_offset: 0
-    bit_size: 4
-  - name: reset
-    description: Reset divider counter.
-    bit_offset: 29
-    bit_size: 1
-    enum: MrccDbgTraceClkdivReset
-  - name: halt
-    description: Halt divider counter.
-    bit_offset: 30
-    bit_size: 1
-    enum: MrccDbgTraceClkdivHalt
-  - name: unstab
-    description: Divider status flag.
-    bit_offset: 31
-    bit_size: 1
-    enum: MrccDbgTraceClkdivUnstab
-  bit_size: 32
-  reset_value: 0
 fieldset/MrccDbgTraceClksel:
   description: DBG_TRACE clock selection control.
   fields:
@@ -579,30 +333,6 @@ fieldset/MrccDbgTraceClksel:
     enum: MrccDbgTraceClkselMux
   bit_size: 32
   reset_value: 0
-fieldset/MrccFlexcan0Clkdiv:
-  description: FLEXCAN0 clock divider control.
-  fields:
-  - name: div
-    description: Functional Clock Divider.
-    bit_offset: 0
-    bit_size: 4
-  - name: reset
-    description: Reset divider counter.
-    bit_offset: 29
-    bit_size: 1
-    enum: MrccFlexcan0ClkdivReset
-  - name: halt
-    description: Halt divider counter.
-    bit_offset: 30
-    bit_size: 1
-    enum: MrccFlexcan0ClkdivHalt
-  - name: unstab
-    description: Divider status flag.
-    bit_offset: 31
-    bit_size: 1
-    enum: MrccFlexcan0ClkdivUnstab
-  bit_size: 32
-  reset_value: 1073741824
 fieldset/MrccFlexcan0Clksel:
   description: FLEXCAN0 clock selection control.
   fields:
@@ -718,63 +448,6 @@ fieldset/MrccGlbAcc0:
     bit_size: 1
   bit_size: 32
   reset_value: 66048
-fieldset/MrccGlbAcc1:
-  description: Control Automatic Clock Gating 1.
-  fields:
-  - name: flexpwm1
-    description: FLEXPWM1.
-    bit_offset: 0
-    bit_size: 1
-  - name: ostimer0
-    description: OSTIMER0.
-    bit_offset: 1
-    bit_size: 1
-  - name: adc0
-    description: ADC0.
-    bit_offset: 2
-    bit_size: 1
-  - name: adc1
-    description: ADC1.
-    bit_offset: 3
-    bit_size: 1
-  - name: cmp0
-    description: CMP0.
-    bit_offset: 4
-    bit_size: 1
-  - name: cmp1
-    description: CMP1.
-    bit_offset: 5
-    bit_size: 1
-  - name: opamp0
-    description: OPAMP0.
-    bit_offset: 8
-    bit_size: 1
-  - name: port0
-    description: PORT0.
-    bit_offset: 12
-    bit_size: 1
-  - name: port1
-    description: PORT1.
-    bit_offset: 13
-    bit_size: 1
-  - name: port2
-    description: PORT2.
-    bit_offset: 14
-    bit_size: 1
-  - name: port3
-    description: PORT3.
-    bit_offset: 15
-    bit_size: 1
-  - name: port4
-    description: PORT4.
-    bit_offset: 16
-    bit_size: 1
-  - name: flexcan0
-    description: FLEXCAN0.
-    bit_offset: 18
-    bit_size: 1
-  bit_size: 32
-  reset_value: 0
 fieldset/MrccGlbAcc2:
   description: Control Automatic Clock Gating 2.
   fields:
@@ -930,15 +603,6 @@ fieldset/MrccGlbCc0Clr:
     bit_size: 32
   bit_size: 32
   reset_value: 65536
-fieldset/MrccGlbCc0Set:
-  description: AHB Clock Control Set 0.
-  fields:
-  - name: data
-    description: Data array value, refer to corresponding position in MRCC_GLB_CCn.
-    bit_offset: 0
-    bit_size: 32
-  bit_size: 32
-  reset_value: 65536
 fieldset/MrccGlbCc1:
   description: AHB Clock Control 1.
   fields:
@@ -1005,15 +669,6 @@ fieldset/MrccGlbCc1Clr:
     bit_size: 32
   bit_size: 32
   reset_value: 0
-fieldset/MrccGlbCc1Set:
-  description: AHB Clock Control Set 1.
-  fields:
-  - name: data
-    description: Data array value, refer to corresponding position in MRCC_GLB_CCn.
-    bit_offset: 0
-    bit_size: 32
-  bit_size: 32
-  reset_value: 0
 fieldset/MrccGlbCc2:
   description: AHB Clock Control 2.
   fields:
@@ -1053,24 +708,6 @@ fieldset/MrccGlbCc2:
     description: ROMC.
     bit_offset: 10
     bit_size: 1
-  bit_size: 32
-  reset_value: 0
-fieldset/MrccGlbCc2Clr:
-  description: AHB Clock Control Clear 2.
-  fields:
-  - name: data
-    description: Data array value, refer to corresponding position in MRCC_GLB_CCn.
-    bit_offset: 0
-    bit_size: 32
-  bit_size: 32
-  reset_value: 0
-fieldset/MrccGlbCc2Set:
-  description: AHB Clock Control Set 2.
-  fields:
-  - name: data
-    description: Data array value, refer to corresponding position in MRCC_GLB_CCn.
-    bit_offset: 0
-    bit_size: 32
   bit_size: 32
   reset_value: 0
 fieldset/MrccGlbRst0:
@@ -1183,15 +820,6 @@ fieldset/MrccGlbRst0Clr:
     bit_size: 32
   bit_size: 32
   reset_value: 0
-fieldset/MrccGlbRst0Set:
-  description: Peripheral Reset Control Set 0.
-  fields:
-  - name: data
-    description: Data array value, refer to corresponding position in MRCC_GLB_RSTn.
-    bit_offset: 0
-    bit_size: 32
-  bit_size: 32
-  reset_value: 0
 fieldset/MrccGlbRst1:
   description: Peripheral Reset Control 1.
   fields:
@@ -1245,24 +873,6 @@ fieldset/MrccGlbRst1:
     bit_size: 1
   bit_size: 32
   reset_value: 0
-fieldset/MrccGlbRst1Clr:
-  description: Peripheral Reset Control Clear 1.
-  fields:
-  - name: data
-    description: Data array value, refer to corresponding position in MRCC_GLB_RSTn.
-    bit_offset: 0
-    bit_size: 32
-  bit_size: 32
-  reset_value: 0
-fieldset/MrccGlbRst1Set:
-  description: Peripheral Reset Control Set 1.
-  fields:
-  - name: data
-    description: Data array value, refer to corresponding position in MRCC_GLB_RSTn.
-    bit_offset: 0
-    bit_size: 32
-  bit_size: 32
-  reset_value: 0
 fieldset/MrccGlbRst2:
   description: Peripheral Reset Control 2.
   fields:
@@ -1288,218 +898,6 @@ fieldset/MrccGlbRst2:
     bit_size: 1
   bit_size: 32
   reset_value: 0
-fieldset/MrccGlbRst2Clr:
-  description: Peripheral Reset Control Clear 2.
-  fields:
-  - name: data
-    description: Data array value, refer to corresponding position in MRCC_GLB_RSTn.
-    bit_offset: 0
-    bit_size: 32
-  bit_size: 32
-  reset_value: 0
-fieldset/MrccGlbRst2Set:
-  description: Peripheral Reset Control Set 2.
-  fields:
-  - name: data
-    description: Data array value, refer to corresponding position in MRCC_GLB_RSTn.
-    bit_offset: 0
-    bit_size: 32
-  bit_size: 32
-  reset_value: 0
-fieldset/MrccLpi2c0Clkdiv:
-  description: LPI2C0 clock divider control.
-  fields:
-  - name: div
-    description: Functional Clock Divider.
-    bit_offset: 0
-    bit_size: 4
-  - name: reset
-    description: Reset divider counter.
-    bit_offset: 29
-    bit_size: 1
-    enum: MrccLpi2c0ClkdivReset
-  - name: halt
-    description: Halt divider counter.
-    bit_offset: 30
-    bit_size: 1
-    enum: MrccLpi2c0ClkdivHalt
-  - name: unstab
-    description: Divider status flag.
-    bit_offset: 31
-    bit_size: 1
-    enum: MrccLpi2c0ClkdivUnstab
-  bit_size: 32
-  reset_value: 1073741824
-fieldset/MrccLpi2c0Clksel:
-  description: LPI2C0 clock selection control.
-  fields:
-  - name: mux
-    description: Functional Clock Mux Select.
-    bit_offset: 0
-    bit_size: 3
-    enum: MrccLpi2c0ClkselMux
-  bit_size: 32
-  reset_value: 7
-fieldset/MrccLpi2c1Clkdiv:
-  description: LPI2C1 clock divider control.
-  fields:
-  - name: div
-    description: Functional Clock Divider.
-    bit_offset: 0
-    bit_size: 4
-  - name: reset
-    description: Reset divider counter.
-    bit_offset: 29
-    bit_size: 1
-    enum: MrccLpi2c1ClkdivReset
-  - name: halt
-    description: Halt divider counter.
-    bit_offset: 30
-    bit_size: 1
-    enum: MrccLpi2c1ClkdivHalt
-  - name: unstab
-    description: Divider status flag.
-    bit_offset: 31
-    bit_size: 1
-    enum: MrccLpi2c1ClkdivUnstab
-  bit_size: 32
-  reset_value: 1073741824
-fieldset/MrccLpi2c1Clksel:
-  description: LPI2C1 clock selection control.
-  fields:
-  - name: mux
-    description: Functional Clock Mux Select.
-    bit_offset: 0
-    bit_size: 3
-    enum: MrccLpi2c1ClkselMux
-  bit_size: 32
-  reset_value: 7
-fieldset/MrccLpspi0Clkdiv:
-  description: LPSPI0 clock divider control.
-  fields:
-  - name: div
-    description: Functional Clock Divider.
-    bit_offset: 0
-    bit_size: 4
-  - name: reset
-    description: Reset divider counter.
-    bit_offset: 29
-    bit_size: 1
-    enum: MrccLpspi0ClkdivReset
-  - name: halt
-    description: Halt divider counter.
-    bit_offset: 30
-    bit_size: 1
-    enum: MrccLpspi0ClkdivHalt
-  - name: unstab
-    description: Divider status flag.
-    bit_offset: 31
-    bit_size: 1
-    enum: MrccLpspi0ClkdivUnstab
-  bit_size: 32
-  reset_value: 1073741824
-fieldset/MrccLpspi0Clksel:
-  description: LPSPI0 clock selection control.
-  fields:
-  - name: mux
-    description: Functional Clock Mux Select.
-    bit_offset: 0
-    bit_size: 3
-    enum: MrccLpspi0ClkselMux
-  bit_size: 32
-  reset_value: 7
-fieldset/MrccLpspi1Clkdiv:
-  description: LPSPI1 clock divider control.
-  fields:
-  - name: div
-    description: Functional Clock Divider.
-    bit_offset: 0
-    bit_size: 4
-  - name: reset
-    description: Reset divider counter.
-    bit_offset: 29
-    bit_size: 1
-    enum: MrccLpspi1ClkdivReset
-  - name: halt
-    description: Halt divider counter.
-    bit_offset: 30
-    bit_size: 1
-    enum: MrccLpspi1ClkdivHalt
-  - name: unstab
-    description: Divider status flag.
-    bit_offset: 31
-    bit_size: 1
-    enum: MrccLpspi1ClkdivUnstab
-  bit_size: 32
-  reset_value: 1073741824
-fieldset/MrccLpspi1Clksel:
-  description: LPSPI1 clock selection control.
-  fields:
-  - name: mux
-    description: Functional Clock Mux Select.
-    bit_offset: 0
-    bit_size: 3
-    enum: MrccLpspi1ClkselMux
-  bit_size: 32
-  reset_value: 7
-fieldset/MrccLptmr0Clkdiv:
-  description: LPTMR0 clock divider control.
-  fields:
-  - name: div
-    description: Functional Clock Divider.
-    bit_offset: 0
-    bit_size: 4
-  - name: reset
-    description: Reset divider counter.
-    bit_offset: 29
-    bit_size: 1
-    enum: MrccLptmr0ClkdivReset
-  - name: halt
-    description: Halt divider counter.
-    bit_offset: 30
-    bit_size: 1
-    enum: MrccLptmr0ClkdivHalt
-  - name: unstab
-    description: Divider status flag.
-    bit_offset: 31
-    bit_size: 1
-    enum: MrccLptmr0ClkdivUnstab
-  bit_size: 32
-  reset_value: 1073741824
-fieldset/MrccLptmr0Clksel:
-  description: LPTMR0 clock selection control.
-  fields:
-  - name: mux
-    description: Functional Clock Mux Select.
-    bit_offset: 0
-    bit_size: 3
-    enum: MrccLptmr0ClkselMux
-  bit_size: 32
-  reset_value: 7
-fieldset/MrccLpuart0Clkdiv:
-  description: LPUART0 clock divider control.
-  fields:
-  - name: div
-    description: Functional Clock Divider.
-    bit_offset: 0
-    bit_size: 4
-  - name: reset
-    description: Reset divider counter.
-    bit_offset: 29
-    bit_size: 1
-    enum: MrccLpuart0ClkdivReset
-  - name: halt
-    description: Halt divider counter.
-    bit_offset: 30
-    bit_size: 1
-    enum: MrccLpuart0ClkdivHalt
-  - name: unstab
-    description: Divider status flag.
-    bit_offset: 31
-    bit_size: 1
-    enum: MrccLpuart0ClkdivUnstab
-  bit_size: 32
-  reset_value: 1073741824
 fieldset/MrccLpuart0Clksel:
   description: LPUART0 clock selection control.
   fields:
@@ -1508,108 +906,6 @@ fieldset/MrccLpuart0Clksel:
     bit_offset: 0
     bit_size: 3
     enum: MrccLpuart0ClkselMux
-  bit_size: 32
-  reset_value: 7
-fieldset/MrccLpuart1Clkdiv:
-  description: LPUART1 clock divider control.
-  fields:
-  - name: div
-    description: Functional Clock Divider.
-    bit_offset: 0
-    bit_size: 4
-  - name: reset
-    description: Reset divider counter.
-    bit_offset: 29
-    bit_size: 1
-    enum: MrccLpuart1ClkdivReset
-  - name: halt
-    description: Halt divider counter.
-    bit_offset: 30
-    bit_size: 1
-    enum: MrccLpuart1ClkdivHalt
-  - name: unstab
-    description: Divider status flag.
-    bit_offset: 31
-    bit_size: 1
-    enum: MrccLpuart1ClkdivUnstab
-  bit_size: 32
-  reset_value: 1073741824
-fieldset/MrccLpuart1Clksel:
-  description: LPUART1 clock selection control.
-  fields:
-  - name: mux
-    description: Functional Clock Mux Select.
-    bit_offset: 0
-    bit_size: 3
-    enum: MrccLpuart1ClkselMux
-  bit_size: 32
-  reset_value: 7
-fieldset/MrccLpuart2Clkdiv:
-  description: LPUART2 clock divider control.
-  fields:
-  - name: div
-    description: Functional Clock Divider.
-    bit_offset: 0
-    bit_size: 4
-  - name: reset
-    description: Reset divider counter.
-    bit_offset: 29
-    bit_size: 1
-    enum: MrccLpuart2ClkdivReset
-  - name: halt
-    description: Halt divider counter.
-    bit_offset: 30
-    bit_size: 1
-    enum: MrccLpuart2ClkdivHalt
-  - name: unstab
-    description: Divider status flag.
-    bit_offset: 31
-    bit_size: 1
-    enum: MrccLpuart2ClkdivUnstab
-  bit_size: 32
-  reset_value: 1073741824
-fieldset/MrccLpuart2Clksel:
-  description: LPUART2 clock selection control.
-  fields:
-  - name: mux
-    description: Functional Clock Mux Select.
-    bit_offset: 0
-    bit_size: 3
-    enum: MrccLpuart2ClkselMux
-  bit_size: 32
-  reset_value: 7
-fieldset/MrccLpuart3Clkdiv:
-  description: LPUART3 clock divider control.
-  fields:
-  - name: div
-    description: Functional Clock Divider.
-    bit_offset: 0
-    bit_size: 4
-  - name: reset
-    description: Reset divider counter.
-    bit_offset: 29
-    bit_size: 1
-    enum: MrccLpuart3ClkdivReset
-  - name: halt
-    description: Halt divider counter.
-    bit_offset: 30
-    bit_size: 1
-    enum: MrccLpuart3ClkdivHalt
-  - name: unstab
-    description: Divider status flag.
-    bit_offset: 31
-    bit_size: 1
-    enum: MrccLpuart3ClkdivUnstab
-  bit_size: 32
-  reset_value: 1073741824
-fieldset/MrccLpuart3Clksel:
-  description: LPUART3 clock selection control.
-  fields:
-  - name: mux
-    description: Functional Clock Mux Select.
-    bit_offset: 0
-    bit_size: 3
-    enum: MrccLpuart3ClkselMux
   bit_size: 32
   reset_value: 7
 fieldset/MrccOstimer0Clksel:
@@ -1633,17 +929,17 @@ fieldset/MrccWwdt0Clkdiv:
     description: Reset divider counter.
     bit_offset: 29
     bit_size: 1
-    enum: MrccWwdt0ClkdivReset
+    enum: MrccAdcClkdivReset
   - name: halt
     description: Halt divider counter.
     bit_offset: 30
     bit_size: 1
-    enum: MrccWwdt0ClkdivHalt
+    enum: MrccAdcClkdivHalt
   - name: unstab
     description: Divider status flag.
     bit_offset: 31
     bit_size: 1
-    enum: MrccWwdt0ClkdivUnstab
+    enum: MrccAdcClkdivUnstab
   bit_size: 32
   reset_value: 0
 enum/MrccAdcClkdivHalt:
@@ -1688,33 +984,6 @@ enum/MrccAdcClkselMux:
   - name: ClkrootFunc5
     description: CLK_1M.
     value: 5
-enum/MrccClkoutClkdivHalt:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is running.
-    value: 0
-  - name: 'Off'
-    description: Divider clock is stopped.
-    value: 1
-enum/MrccClkoutClkdivReset:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider isn't reset.
-    value: 0
-  - name: 'Off'
-    description: Divider is reset.
-    value: 1
-enum/MrccClkoutClkdivUnstab:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is stable.
-    value: 0
-  - name: 'Off'
-    description: Clock frequency isn't stable.
-    value: 1
 enum/MrccClkoutClkselMux:
   bit_size: 3
   variants:
@@ -1733,60 +1002,6 @@ enum/MrccClkoutClkselMux:
   - name: ClkrootSlow
     description: SLOW_CLK.
     value: 6
-enum/MrccCmp0FuncClkdivHalt:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is running.
-    value: 0
-  - name: 'Off'
-    description: Divider clock is stopped.
-    value: 1
-enum/MrccCmp0FuncClkdivReset:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider isn't reset.
-    value: 0
-  - name: 'Off'
-    description: Divider is reset.
-    value: 1
-enum/MrccCmp0FuncClkdivUnstab:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is stable.
-    value: 0
-  - name: 'Off'
-    description: Clock frequency isn't stable.
-    value: 1
-enum/MrccCmp0RrClkdivHalt:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is running.
-    value: 0
-  - name: 'Off'
-    description: Divider clock is stopped.
-    value: 1
-enum/MrccCmp0RrClkdivReset:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider isn't reset.
-    value: 0
-  - name: 'Off'
-    description: Divider is reset.
-    value: 1
-enum/MrccCmp0RrClkdivUnstab:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is stable.
-    value: 0
-  - name: 'Off'
-    description: Clock frequency isn't stable.
-    value: 1
 enum/MrccCmp0RrClkselMux:
   bit_size: 3
   variants:
@@ -1802,102 +1017,6 @@ enum/MrccCmp0RrClkselMux:
   - name: ClkrootFunc5
     description: CLK_1M.
     value: 5
-enum/MrccCmp1FuncClkdivHalt:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is running.
-    value: 0
-  - name: 'Off'
-    description: Divider clock is stopped.
-    value: 1
-enum/MrccCmp1FuncClkdivReset:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider isn't reset.
-    value: 0
-  - name: 'Off'
-    description: Divider is reset.
-    value: 1
-enum/MrccCmp1FuncClkdivUnstab:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is stable.
-    value: 0
-  - name: 'Off'
-    description: Clock frequency isn't stable.
-    value: 1
-enum/MrccCmp1RrClkdivHalt:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is running.
-    value: 0
-  - name: 'Off'
-    description: Divider clock is stopped.
-    value: 1
-enum/MrccCmp1RrClkdivReset:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider isn't reset.
-    value: 0
-  - name: 'Off'
-    description: Divider is reset.
-    value: 1
-enum/MrccCmp1RrClkdivUnstab:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is stable.
-    value: 0
-  - name: 'Off'
-    description: Clock frequency isn't stable.
-    value: 1
-enum/MrccCmp1RrClkselMux:
-  bit_size: 3
-  variants:
-  - name: ClkrootFunc0
-    description: FRO_LF_DIV.
-    value: 0
-  - name: ClkrootFunc2
-    description: FRO_HF_DIV.
-    value: 2
-  - name: ClkrootFunc3
-    description: CLK_IN.
-    value: 3
-  - name: ClkrootFunc5
-    description: CLK_1M.
-    value: 5
-enum/MrccCtimer0ClkdivHalt:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is running.
-    value: 0
-  - name: 'Off'
-    description: Divider clock is stopped.
-    value: 1
-enum/MrccCtimer0ClkdivReset:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider isn't reset.
-    value: 0
-  - name: 'Off'
-    description: Divider is reset.
-    value: 1
-enum/MrccCtimer0ClkdivUnstab:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is stable.
-    value: 0
-  - name: 'Off'
-    description: Clock frequency isn't stable.
-    value: 1
 enum/MrccCtimer0ClkselMux:
   bit_size: 3
   variants:
@@ -1916,123 +1035,6 @@ enum/MrccCtimer0ClkselMux:
   - name: ClkrootFunc5
     description: CLK_1M.
     value: 5
-enum/MrccCtimer1ClkdivHalt:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is running.
-    value: 0
-  - name: 'Off'
-    description: Divider clock is stopped.
-    value: 1
-enum/MrccCtimer1ClkdivReset:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider isn't reset.
-    value: 0
-  - name: 'Off'
-    description: Divider is reset.
-    value: 1
-enum/MrccCtimer1ClkdivUnstab:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is stable.
-    value: 0
-  - name: 'Off'
-    description: Clock frequency isn't stable.
-    value: 1
-enum/MrccCtimer1ClkselMux:
-  bit_size: 3
-  variants:
-  - name: ClkrootFunc0
-    description: FRO_LF_DIV.
-    value: 0
-  - name: ClkrootFunc1
-    description: FRO_HF_GATED.
-    value: 1
-  - name: ClkrootFunc3
-    description: CLK_IN.
-    value: 3
-  - name: ClkrootFunc4
-    description: CLK_16K.
-    value: 4
-  - name: ClkrootFunc5
-    description: CLK_1M.
-    value: 5
-enum/MrccCtimer2ClkdivHalt:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is running.
-    value: 0
-  - name: 'Off'
-    description: Divider clock is stopped.
-    value: 1
-enum/MrccCtimer2ClkdivReset:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider isn't reset.
-    value: 0
-  - name: 'Off'
-    description: Divider is reset.
-    value: 1
-enum/MrccCtimer2ClkdivUnstab:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is stable.
-    value: 0
-  - name: 'Off'
-    description: Clock frequency isn't stable.
-    value: 1
-enum/MrccCtimer2ClkselMux:
-  bit_size: 3
-  variants:
-  - name: ClkrootFunc0
-    description: FRO_LF_DIV.
-    value: 0
-  - name: ClkrootFunc1
-    description: FRO_HF_GATED.
-    value: 1
-  - name: ClkrootFunc3
-    description: CLK_IN.
-    value: 3
-  - name: ClkrootFunc4
-    description: CLK_16K.
-    value: 4
-  - name: ClkrootFunc5
-    description: CLK_1M.
-    value: 5
-enum/MrccDbgTraceClkdivHalt:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is running.
-    value: 0
-  - name: 'Off'
-    description: Divider clock is stopped.
-    value: 1
-enum/MrccDbgTraceClkdivReset:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider isn't reset.
-    value: 0
-  - name: 'Off'
-    description: Divider is reset.
-    value: 1
-enum/MrccDbgTraceClkdivUnstab:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is stable.
-    value: 0
-  - name: 'Off'
-    description: Clock frequency isn't stable.
-    value: 1
 enum/MrccDbgTraceClkselMux:
   bit_size: 2
   variants:
@@ -2045,33 +1047,6 @@ enum/MrccDbgTraceClkselMux:
   - name: Clkroot16k
     description: CLK_16K.
     value: 2
-enum/MrccFlexcan0ClkdivHalt:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is running.
-    value: 0
-  - name: 'Off'
-    description: Divider clock is stopped.
-    value: 1
-enum/MrccFlexcan0ClkdivReset:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider isn't reset.
-    value: 0
-  - name: 'Off'
-    description: Divider is reset.
-    value: 1
-enum/MrccFlexcan0ClkdivUnstab:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is stable.
-    value: 0
-  - name: 'Off'
-    description: Clock frequency isn't stable.
-    value: 1
 enum/MrccFlexcan0ClkselMux:
   bit_size: 3
   variants:
@@ -2084,379 +1059,7 @@ enum/MrccFlexcan0ClkselMux:
   - name: ClkrootSosc
     description: CLK_IN.
     value: 3
-enum/MrccLpi2c0ClkdivHalt:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is running.
-    value: 0
-  - name: 'Off'
-    description: Divider clock is stopped.
-    value: 1
-enum/MrccLpi2c0ClkdivReset:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider isn't reset.
-    value: 0
-  - name: 'Off'
-    description: Divider is reset.
-    value: 1
-enum/MrccLpi2c0ClkdivUnstab:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is stable.
-    value: 0
-  - name: 'Off'
-    description: Clock frequency isn't stable.
-    value: 1
-enum/MrccLpi2c0ClkselMux:
-  bit_size: 3
-  variants:
-  - name: ClkrootFunc0
-    description: FRO_LF_DIV.
-    value: 0
-  - name: ClkrootFunc2
-    description: FRO_HF_DIV.
-    value: 2
-  - name: ClkrootFunc3
-    description: CLK_IN.
-    value: 3
-  - name: ClkrootFunc5
-    description: CLK_1M.
-    value: 5
-enum/MrccLpi2c1ClkdivHalt:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is running.
-    value: 0
-  - name: 'Off'
-    description: Divider clock is stopped.
-    value: 1
-enum/MrccLpi2c1ClkdivReset:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider isn't reset.
-    value: 0
-  - name: 'Off'
-    description: Divider is reset.
-    value: 1
-enum/MrccLpi2c1ClkdivUnstab:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is stable.
-    value: 0
-  - name: 'Off'
-    description: Clock frequency isn't stable.
-    value: 1
-enum/MrccLpi2c1ClkselMux:
-  bit_size: 3
-  variants:
-  - name: ClkrootFunc0
-    description: FRO_LF_DIV.
-    value: 0
-  - name: ClkrootFunc2
-    description: FRO_HF_DIV.
-    value: 2
-  - name: ClkrootFunc3
-    description: CLK_IN.
-    value: 3
-  - name: ClkrootFunc5
-    description: CLK_1M.
-    value: 5
-enum/MrccLpspi0ClkdivHalt:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is running.
-    value: 0
-  - name: 'Off'
-    description: Divider clock is stopped.
-    value: 1
-enum/MrccLpspi0ClkdivReset:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider isn't reset.
-    value: 0
-  - name: 'Off'
-    description: Divider is reset.
-    value: 1
-enum/MrccLpspi0ClkdivUnstab:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is stable.
-    value: 0
-  - name: 'Off'
-    description: Clock frequency isn't stable.
-    value: 1
-enum/MrccLpspi0ClkselMux:
-  bit_size: 3
-  variants:
-  - name: ClkrootFunc0
-    description: FRO_LF_DIV.
-    value: 0
-  - name: ClkrootFunc2
-    description: FRO_HF_DIV.
-    value: 2
-  - name: ClkrootFunc3
-    description: CLK_IN.
-    value: 3
-  - name: ClkrootFunc5
-    description: CLK_1M.
-    value: 5
-enum/MrccLpspi1ClkdivHalt:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is running.
-    value: 0
-  - name: 'Off'
-    description: Divider clock is stopped.
-    value: 1
-enum/MrccLpspi1ClkdivReset:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider isn't reset.
-    value: 0
-  - name: 'Off'
-    description: Divider is reset.
-    value: 1
-enum/MrccLpspi1ClkdivUnstab:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is stable.
-    value: 0
-  - name: 'Off'
-    description: Clock frequency isn't stable.
-    value: 1
-enum/MrccLpspi1ClkselMux:
-  bit_size: 3
-  variants:
-  - name: ClkrootFunc0
-    description: FRO_LF_DIV.
-    value: 0
-  - name: ClkrootFunc2
-    description: FRO_HF_DIV.
-    value: 2
-  - name: ClkrootFunc3
-    description: CLK_IN.
-    value: 3
-  - name: ClkrootFunc5
-    description: CLK_1M.
-    value: 5
-enum/MrccLptmr0ClkdivHalt:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is running.
-    value: 0
-  - name: 'Off'
-    description: Divider clock is stopped.
-    value: 1
-enum/MrccLptmr0ClkdivReset:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider isn't reset.
-    value: 0
-  - name: 'Off'
-    description: Divider is reset.
-    value: 1
-enum/MrccLptmr0ClkdivUnstab:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is stable.
-    value: 0
-  - name: 'Off'
-    description: Clock frequency isn't stable.
-    value: 1
-enum/MrccLptmr0ClkselMux:
-  bit_size: 3
-  variants:
-  - name: ClkrootFunc0
-    description: FRO_LF_DIV.
-    value: 0
-  - name: ClkrootFunc2
-    description: FRO_HF_DIV.
-    value: 2
-  - name: ClkrootFunc3
-    description: CLK_IN.
-    value: 3
-  - name: ClkrootFunc5
-    description: CLK_1M.
-    value: 5
-enum/MrccLpuart0ClkdivHalt:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is running.
-    value: 0
-  - name: 'Off'
-    description: Divider clock is stopped.
-    value: 1
-enum/MrccLpuart0ClkdivReset:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider isn't reset.
-    value: 0
-  - name: 'Off'
-    description: Divider is reset.
-    value: 1
-enum/MrccLpuart0ClkdivUnstab:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is stable.
-    value: 0
-  - name: 'Off'
-    description: Clock frequency isn't stable.
-    value: 1
 enum/MrccLpuart0ClkselMux:
-  bit_size: 3
-  variants:
-  - name: ClkrootFunc0
-    description: FRO_LF_DIV.
-    value: 0
-  - name: ClkrootFunc2
-    description: FRO_HF_DIV.
-    value: 2
-  - name: ClkrootFunc3
-    description: CLK_IN.
-    value: 3
-  - name: ClkrootFunc4
-    description: CLK_16K.
-    value: 4
-  - name: ClkrootFunc5
-    description: CLK_1M.
-    value: 5
-enum/MrccLpuart1ClkdivHalt:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is running.
-    value: 0
-  - name: 'Off'
-    description: Divider clock is stopped.
-    value: 1
-enum/MrccLpuart1ClkdivReset:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider isn't reset.
-    value: 0
-  - name: 'Off'
-    description: Divider is reset.
-    value: 1
-enum/MrccLpuart1ClkdivUnstab:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is stable.
-    value: 0
-  - name: 'Off'
-    description: Clock frequency isn't stable.
-    value: 1
-enum/MrccLpuart1ClkselMux:
-  bit_size: 3
-  variants:
-  - name: ClkrootFunc0
-    description: FRO_LF_DIV.
-    value: 0
-  - name: ClkrootFunc2
-    description: FRO_HF_DIV.
-    value: 2
-  - name: ClkrootFunc3
-    description: CLK_IN.
-    value: 3
-  - name: ClkrootFunc4
-    description: CLK_16K.
-    value: 4
-  - name: ClkrootFunc5
-    description: CLK_1M.
-    value: 5
-enum/MrccLpuart2ClkdivHalt:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is running.
-    value: 0
-  - name: 'Off'
-    description: Divider clock is stopped.
-    value: 1
-enum/MrccLpuart2ClkdivReset:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider isn't reset.
-    value: 0
-  - name: 'Off'
-    description: Divider is reset.
-    value: 1
-enum/MrccLpuart2ClkdivUnstab:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is stable.
-    value: 0
-  - name: 'Off'
-    description: Clock frequency isn't stable.
-    value: 1
-enum/MrccLpuart2ClkselMux:
-  bit_size: 3
-  variants:
-  - name: ClkrootFunc0
-    description: FRO_LF_DIV.
-    value: 0
-  - name: ClkrootFunc2
-    description: FRO_HF_DIV.
-    value: 2
-  - name: ClkrootFunc3
-    description: CLK_IN.
-    value: 3
-  - name: ClkrootFunc4
-    description: CLK_16K.
-    value: 4
-  - name: ClkrootFunc5
-    description: CLK_1M.
-    value: 5
-enum/MrccLpuart3ClkdivHalt:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is running.
-    value: 0
-  - name: 'Off'
-    description: Divider clock is stopped.
-    value: 1
-enum/MrccLpuart3ClkdivReset:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider isn't reset.
-    value: 0
-  - name: 'Off'
-    description: Divider is reset.
-    value: 1
-enum/MrccLpuart3ClkdivUnstab:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is stable.
-    value: 0
-  - name: 'Off'
-    description: Clock frequency isn't stable.
-    value: 1
-enum/MrccLpuart3ClkselMux:
   bit_size: 3
   variants:
   - name: ClkrootFunc0
@@ -2483,30 +1086,3 @@ enum/MrccOstimer0ClkselMux:
   - name: Clkroot1m
     description: CLK_1M.
     value: 2
-enum/MrccWwdt0ClkdivHalt:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is running.
-    value: 0
-  - name: 'Off'
-    description: Divider clock is stopped.
-    value: 1
-enum/MrccWwdt0ClkdivReset:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider isn't reset.
-    value: 0
-  - name: 'Off'
-    description: Divider is reset.
-    value: 1
-enum/MrccWwdt0ClkdivUnstab:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is stable.
-    value: 0
-  - name: 'Off'
-    description: Clock frequency isn't stable.
-    value: 1

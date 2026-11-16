@@ -44,7 +44,7 @@ block/Cmp:
   - name: rrcr0
     description: Round Robin Control Register 0.
     byte_offset: 36
-    fieldset: Rrcr0
+    fieldset: Rrcr0Base
   - name: rrcr1
     description: Round Robin Control Register 1.
     byte_offset: 40
@@ -61,8 +61,3 @@ block/Cmp:
     description: Round Robin Control Register 2.
     byte_offset: 56
     fieldset: Rrcr2
-fieldset/Rrcr0:
-  extends: Rrcr0Base
-  bit_size: 32
-  reset_value: 0
-  fields: []

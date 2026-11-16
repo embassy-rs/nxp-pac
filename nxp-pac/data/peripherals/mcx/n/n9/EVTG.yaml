@@ -28,7 +28,7 @@ block/EvtgAlphaBlockBravo:
     description: AOI0 Boolean Function Term 2 and 3 Configuration.
     byte_offset: 2
     bit_size: 16
-    fieldset: EvtgAlphaFieldsetBravo
+    fieldset: EvtgAoiBft
   - name: evtg_aoi1_bft01
     description: AOI1 Boolean Function Term 0 and 1 Configuration.
     byte_offset: 4
@@ -38,7 +38,7 @@ block/EvtgAlphaBlockBravo:
     description: AOI1 Boolean Function Term 2 and 3 Configuration.
     byte_offset: 6
     bit_size: 16
-    fieldset: EvtgAlphaFieldsetEcho
+    fieldset: EvtgAoiBft
   - name: evtg_ctrl
     description: Control and Status.
     byte_offset: 10
@@ -48,12 +48,12 @@ block/EvtgAlphaBlockBravo:
     description: AOI0 Output Filter.
     byte_offset: 12
     bit_size: 16
-    fieldset: EvtgAlphaFieldsetCharlie
+    fieldset: EvtgAoiFilt
   - name: evtg_aoi1_filt
     description: AOI1 Output Filter.
     byte_offset: 14
     bit_size: 16
-    fieldset: EvtgAlphaFieldsetFoxtrot
+    fieldset: EvtgAoiFilt
 fieldset/EvtgAlphaFieldsetAlpha:
   description: AOI0 Boolean Function Term 0 and 1 Configuration.
   bit_size: 16
@@ -62,7 +62,7 @@ fieldset/EvtgAlphaFieldsetAlpha:
     description: Product Term 1, D Input Configuration.
     bit_offset: 0
     bit_size: 2
-    enum: EvtgAlphaEnumHotel
+    enum: PtDc
   - name: pt1_cc
     description: Product Term 1, C Input Configuration.
     bit_offset: 2
@@ -92,57 +92,13 @@ fieldset/EvtgAlphaFieldsetAlpha:
     description: Product Term 0, B Input Configuration.
     bit_offset: 12
     bit_size: 2
-    enum: EvtgAlphaEnumBravo
+    enum: PtBc
   - name: pt0_ac
     description: Product Term 0, A Input Configuration.
     bit_offset: 14
     bit_size: 2
-    enum: EvtgAlphaEnumAlpha
-fieldset/EvtgAlphaFieldsetBravo:
-  description: AOI0 Boolean Function Term 2 and 3 Configuration.
-  bit_size: 16
-  fields:
-  - name: pt3_dc
-    description: Product Term 3, D Input Configuration.
-    bit_offset: 0
-    bit_size: 2
-    enum: EvtgAlphaEnumPapa
-  - name: pt3_cc
-    description: Product Term 3, C Input Configuration.
-    bit_offset: 2
-    bit_size: 2
-    enum: EvtgAlphaEnumOscar
-  - name: pt3_bc
-    description: Product Term 3, B Input Configuration.
-    bit_offset: 4
-    bit_size: 2
-    enum: EvtgAlphaEnumNovember
-  - name: pt3_ac
-    description: Product Term 3, A Input Configuration.
-    bit_offset: 6
-    bit_size: 2
-    enum: EvtgAlphaEnumMike
-  - name: pt2_dc
-    description: Product Term 2, D Input Configuration.
-    bit_offset: 8
-    bit_size: 2
-    enum: EvtgAlphaEnumLima
-  - name: pt2_cc
-    description: Product Term 2, C Input Configuration.
-    bit_offset: 10
-    bit_size: 2
-    enum: EvtgAlphaEnumKilo
-  - name: pt2_bc
-    description: Product Term 2, B Input Configuration.
-    bit_offset: 12
-    bit_size: 2
-    enum: EvtgAlphaEnumJuliet
-  - name: pt2_ac
-    description: Product Term 2, A Input Configuration.
-    bit_offset: 14
-    bit_size: 2
-    enum: EvtgAlphaEnumIndia
-fieldset/EvtgAlphaFieldsetCharlie:
+    enum: PtAc
+fieldset/EvtgAoiFilt:
   description: AOI0 Output Filter.
   bit_size: 16
   fields:
@@ -162,7 +118,7 @@ fieldset/EvtgAlphaFieldsetDelta:
     description: Product Term 1, D Input Configuration.
     bit_offset: 0
     bit_size: 2
-    enum: EvtgAlphaEnumXray
+    enum: PtDc
   - name: pt1_cc
     description: Product Term 1, C Input Configuration.
     bit_offset: 2
@@ -192,13 +148,13 @@ fieldset/EvtgAlphaFieldsetDelta:
     description: Product Term 0, B Input Configuration.
     bit_offset: 12
     bit_size: 2
-    enum: EvtgAlphaEnumRomeo
+    enum: PtBc
   - name: pt0_ac
     description: Product Term 0, A Input Configuration.
     bit_offset: 14
     bit_size: 2
-    enum: EvtgAlphaEnumQuebec
-fieldset/EvtgAlphaFieldsetEcho:
+    enum: PtAc
+fieldset/EvtgAoiBft:
   description: AOI1 Boolean Function Term 2 and 3 Configuration.
   bit_size: 16
   fields:
@@ -206,54 +162,42 @@ fieldset/EvtgAlphaFieldsetEcho:
     description: Product Term 3, D Input Configuration.
     bit_offset: 0
     bit_size: 2
-    enum: EvtgAlphaEnumFoxtrotAlpha
+    enum: PtDc3
   - name: pt3_cc
     description: Product Term 3, C Input Configuration.
     bit_offset: 2
     bit_size: 2
-    enum: EvtgAlphaEnumEchoAlpha
+    enum: PtCc2
   - name: pt3_bc
     description: Product Term 3, B Input Configuration.
     bit_offset: 4
     bit_size: 2
-    enum: EvtgAlphaEnumDeltaAlpha
+    enum: PtBc3
   - name: pt3_ac
     description: Product Term 3, A Input Configuration.
     bit_offset: 6
     bit_size: 2
-    enum: EvtgAlphaEnumCharlieAlpha
+    enum: PtAc3
   - name: pt2_dc
     description: Product Term 2, D Input Configuration.
     bit_offset: 8
     bit_size: 2
-    enum: EvtgAlphaEnumBravoAlpha
+    enum: PtDc2
   - name: pt2_cc
     description: Product Term 2, C Input Configuration.
     bit_offset: 10
     bit_size: 2
-    enum: EvtgAlphaEnumAlphaAlpha
+    enum: PtCc
   - name: pt2_bc
     description: Product Term 2, B Input Configuration.
     bit_offset: 12
     bit_size: 2
-    enum: EvtgAlphaEnumZulu
+    enum: PtBc2
   - name: pt2_ac
     description: Product Term 2, A Input Configuration.
     bit_offset: 14
     bit_size: 2
-    enum: EvtgAlphaEnumYankee
-fieldset/EvtgAlphaFieldsetFoxtrot:
-  description: AOI1 Output Filter.
-  bit_size: 16
-  fields:
-  - name: filt_per
-    description: Output Filter Sample Period.
-    bit_offset: 0
-    bit_size: 8
-  - name: filt_cnt
-    description: Output Filter Sample Count.
-    bit_offset: 8
-    bit_size: 3
+    enum: PtAc2
 fieldset/EvtgAlphaFieldsetGolf:
   description: Control and Status.
   bit_size: 16
@@ -288,7 +232,7 @@ fieldset/EvtgAlphaFieldsetGolf:
     bit_offset: 12
     bit_size: 2
     enum: EvtgAlphaEnumIndiaAlpha
-enum/EvtgAlphaEnumAlpha:
+enum/PtAc:
   bit_size: 2
   variants:
   - name: Pt0Ac0
@@ -303,7 +247,7 @@ enum/EvtgAlphaEnumAlpha:
   - name: Pt0Ac3
     description: Force the A input in this product term to a logical one.
     value: 3
-enum/EvtgAlphaEnumBravo:
+enum/PtBc:
   bit_size: 2
   variants:
   - name: Pt0Bc0
@@ -393,22 +337,7 @@ enum/EvtgAlphaEnumGolf:
   - name: Cc3
     description: Force the C input in this product term to a logical one.
     value: 3
-enum/EvtgAlphaEnumHotel:
-  bit_size: 2
-  variants:
-  - name: Pt1Dc0
-    description: Force the D input in this product term to a logical zero.
-    value: 0
-  - name: Pt1Dc1
-    description: Pass the D input in this product term.
-    value: 1
-  - name: Pt1Dc2
-    description: Complement the D input in this product term.
-    value: 2
-  - name: Pt1Dc3
-    description: Force the D input in this product term to a logical one.
-    value: 3
-enum/EvtgAlphaEnumIndia:
+enum/PtAc2:
   bit_size: 2
   variants:
   - name: Pt2Ac0
@@ -423,22 +352,7 @@ enum/EvtgAlphaEnumIndia:
   - name: Pt2Ac3
     description: Force the A input in this product term to a logical one.
     value: 3
-enum/EvtgAlphaEnumJuliet:
-  bit_size: 2
-  variants:
-  - name: Pt2Bc0
-    description: Force the B input in this product term to a logical zero.
-    value: 0
-  - name: Pt2Bc1
-    description: Pass the B input in this product term.
-    value: 1
-  - name: Pt2Bc2
-    description: Complement the B input in this product term.
-    value: 2
-  - name: Pt2Bc3
-    description: Force the B input in this product term to a logical one.
-    value: 3
-enum/EvtgAlphaEnumKilo:
+enum/PtCc:
   bit_size: 2
   variants:
   - name: Pt2Cc0
@@ -453,7 +367,7 @@ enum/EvtgAlphaEnumKilo:
   - name: Pt2Cc3
     description: Force the C input in this product term to a logical one.
     value: 3
-enum/EvtgAlphaEnumLima:
+enum/PtDc2:
   bit_size: 2
   variants:
   - name: Pt2Dc0
@@ -468,7 +382,7 @@ enum/EvtgAlphaEnumLima:
   - name: Pt2Dc3
     description: Force the D input in this product term to a logical one.
     value: 3
-enum/EvtgAlphaEnumMike:
+enum/PtAc3:
   bit_size: 2
   variants:
   - name: Pt3Ac0
@@ -483,7 +397,7 @@ enum/EvtgAlphaEnumMike:
   - name: Pt3Ac3
     description: Force the A input in this product term to a logical one.
     value: 3
-enum/EvtgAlphaEnumNovember:
+enum/PtBc3:
   bit_size: 2
   variants:
   - name: Pt3Bc0
@@ -498,7 +412,7 @@ enum/EvtgAlphaEnumNovember:
   - name: Pt3Bc3
     description: Force the B input in this product term to a logical one.
     value: 3
-enum/EvtgAlphaEnumOscar:
+enum/PtCc2:
   bit_size: 2
   variants:
   - name: Pt3Cc0
@@ -513,7 +427,7 @@ enum/EvtgAlphaEnumOscar:
   - name: Pt3Cc3
     description: Force the C input in this product term to a logical one.
     value: 3
-enum/EvtgAlphaEnumPapa:
+enum/PtDc3:
   bit_size: 2
   variants:
   - name: Pt3Dc0
@@ -527,36 +441,6 @@ enum/EvtgAlphaEnumPapa:
     value: 2
   - name: Pt3Dc3
     description: Force the D input in this product term to a logical one.
-    value: 3
-enum/EvtgAlphaEnumQuebec:
-  bit_size: 2
-  variants:
-  - name: Pt0Ac0
-    description: Force the A input in this product term to a logical zero.
-    value: 0
-  - name: Pt0Ac1
-    description: Pass the A input in this product term.
-    value: 1
-  - name: Pt0Ac2
-    description: Complement the A input in this product term.
-    value: 2
-  - name: Pt0Ac3
-    description: Force the A input in this product term to a logical one.
-    value: 3
-enum/EvtgAlphaEnumRomeo:
-  bit_size: 2
-  variants:
-  - name: Pt0Bc0
-    description: Force the B input in this product term to a logical zero.
-    value: 0
-  - name: Pt0Bc1
-    description: Pass the B input in this product term.
-    value: 1
-  - name: Pt0Bc2
-    description: Complement the B input in this product term.
-    value: 2
-  - name: Pt0Bc3
-    description: Force the B input in this product term to a logical one.
     value: 3
 enum/EvtgAlphaEnumSierra:
   bit_size: 2
@@ -633,7 +517,7 @@ enum/EvtgAlphaEnumWhiskey:
   - name: Pt1Cc3
     description: Force the C input in this product term to a logical one.
     value: 3
-enum/EvtgAlphaEnumXray:
+enum/PtDc:
   bit_size: 2
   variants:
   - name: Pt1Dc0
@@ -648,22 +532,7 @@ enum/EvtgAlphaEnumXray:
   - name: Pt1Dc3
     description: Force the D input in this product term to a logical one.
     value: 3
-enum/EvtgAlphaEnumYankee:
-  bit_size: 2
-  variants:
-  - name: Pt2Ac0
-    description: Force the A input in this product term to a logical zero.
-    value: 0
-  - name: Pt2Ac1
-    description: Pass the A input in this product term.
-    value: 1
-  - name: Pt2Ac2
-    description: Complement the A input in this product term.
-    value: 2
-  - name: Pt2Ac3
-    description: Force the A input in this product term to a logical one.
-    value: 3
-enum/EvtgAlphaEnumZulu:
+enum/PtBc2:
   bit_size: 2
   variants:
   - name: Pt2Bc0
@@ -677,96 +546,6 @@ enum/EvtgAlphaEnumZulu:
     value: 2
   - name: Pt2Bc3
     description: Force the B input in this product term to a logical one.
-    value: 3
-enum/EvtgAlphaEnumAlphaAlpha:
-  bit_size: 2
-  variants:
-  - name: Pt2Cc0
-    description: Force the C input in this product term to a logical zero.
-    value: 0
-  - name: Pt2Cc1
-    description: Pass the C input in this product term.
-    value: 1
-  - name: Pt2Cc2
-    description: Complement the C input in this product term.
-    value: 2
-  - name: Pt2Cc3
-    description: Force the C input in this product term to a logical one.
-    value: 3
-enum/EvtgAlphaEnumBravoAlpha:
-  bit_size: 2
-  variants:
-  - name: Pt2Dc0
-    description: Force the D input in this product term to a logical zero.
-    value: 0
-  - name: Pt2Dc1
-    description: Pass the D input in this product term.
-    value: 1
-  - name: Pt2Dc2
-    description: Complement the D input in this product term.
-    value: 2
-  - name: Pt2Dc3
-    description: Force the D input in this product term to a logical one.
-    value: 3
-enum/EvtgAlphaEnumCharlieAlpha:
-  bit_size: 2
-  variants:
-  - name: Pt3Ac0
-    description: Force the A input in this product term to a logical zero.
-    value: 0
-  - name: Pt3Ac1
-    description: Pass the A input in this product term.
-    value: 1
-  - name: Pt3Ac2
-    description: Complement the A input in this product term.
-    value: 2
-  - name: Pt3Ac3
-    description: Force the A input in this product term to a logical one.
-    value: 3
-enum/EvtgAlphaEnumDeltaAlpha:
-  bit_size: 2
-  variants:
-  - name: Pt3Bc0
-    description: Force the B input in this product term to a logical zero.
-    value: 0
-  - name: Pt3Bc1
-    description: Pass the B input in this product term.
-    value: 1
-  - name: Pt3Bc2
-    description: Complement the B input in this product term.
-    value: 2
-  - name: Pt3Bc3
-    description: Force the B input in this product term to a logical one.
-    value: 3
-enum/EvtgAlphaEnumEchoAlpha:
-  bit_size: 2
-  variants:
-  - name: Pt3Cc0
-    description: Force the C input in this product term to a logical zero.
-    value: 0
-  - name: Pt3Cc1
-    description: Pass the C input in this product term.
-    value: 1
-  - name: Pt3Cc2
-    description: Complement the C input in this product term.
-    value: 2
-  - name: Pt3Cc3
-    description: Force the C input in this product term to a logical one.
-    value: 3
-enum/EvtgAlphaEnumFoxtrotAlpha:
-  bit_size: 2
-  variants:
-  - name: Pt3Dc0
-    description: Force the D input in this product term to a logical zero.
-    value: 0
-  - name: Pt3Dc1
-    description: Pass the D input in this product term.
-    value: 1
-  - name: Pt3Dc2
-    description: Complement the D input in this product term.
-    value: 2
-  - name: Pt3Dc3
-    description: Force the D input in this product term to a logical one.
     value: 3
 enum/EvtgAlphaEnumGolfAlpha:
   bit_size: 2

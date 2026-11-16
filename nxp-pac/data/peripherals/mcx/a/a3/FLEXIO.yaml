@@ -495,7 +495,7 @@ fieldset/Shiftctl:
     description: Shifter Pin Polarity.
     bit_offset: 7
     bit_size: 1
-    enum: ShiftctlPinpol
+    enum: Trgpol
   - name: pinsel
     description: Shifter Pin Select.
     bit_offset: 8
@@ -560,7 +560,7 @@ fieldset/Shiftstat:
     description: Shifter Status Flag.
     bit_offset: 0
     bit_size: 4
-    enum: Ssf
+    enum: Sef
   bit_size: 32
   reset_value: 0
 fieldset/Shiftstate:
@@ -641,7 +641,7 @@ fieldset/Timctl:
     description: Timer Pin Polarity.
     bit_offset: 7
     bit_size: 1
-    enum: TimctlPinpol
+    enum: Trgpol
   - name: pinsel
     description: Timer Pin Select.
     bit_offset: 8
@@ -692,7 +692,7 @@ fieldset/Timstat:
     description: Timer Status Flag.
     bit_offset: 0
     bit_size: 4
-    enum: Tsf
+    enum: Sef
   bit_size: 32
   reset_value: 0
 fieldset/Trgstat:
@@ -702,7 +702,7 @@ fieldset/Trgstat:
     description: External Trigger Status Flag.
     bit_offset: 0
     bit_size: 4
-    enum: Etsf
+    enum: Sef
   bit_size: 32
   reset_value: 0
 fieldset/Trigien:
@@ -749,15 +749,6 @@ enum/Dozen:
     value: 0
   - name: Disable
     description: Disable.
-    value: 1
-enum/Etsf:
-  bit_size: 4
-  variants:
-  - name: Clr
-    description: Clear.
-    value: 0
-  - name: Set
-    description: Set.
     value: 1
 enum/Fastacc:
   bit_size: 1
@@ -843,15 +834,6 @@ enum/ShiftctlPincfg:
   - name: Output
     description: Shifter pin output.
     value: 3
-enum/ShiftctlPinpol:
-  bit_size: 1
-  variants:
-  - name: ActiveHigh
-    description: Active high.
-    value: 0
-  - name: ActiveLow
-    description: Active low.
-    value: 1
 enum/Smod:
   bit_size: 3
   variants:
@@ -876,15 +858,6 @@ enum/Smod:
   - name: Logic
     description: Logic mode; SHIFTBUF contents implement programmable logic lookup table.
     value: 7
-enum/Ssf:
-  bit_size: 4
-  variants:
-  - name: Clr
-    description: Clear.
-    value: 0
-  - name: Set
-    description: Set.
-    value: 1
 enum/Ssize:
   bit_size: 1
   variants:
@@ -948,15 +921,6 @@ enum/TimctlPincfg:
   - name: Output
     description: Timer pin output.
     value: 3
-enum/TimctlPinpol:
-  bit_size: 1
-  variants:
-  - name: ActiveHigh
-    description: Active high.
-    value: 0
-  - name: ActiveLow
-    description: Active low.
-    value: 1
 enum/Timdec:
   bit_size: 3
   variants:
@@ -1127,15 +1091,6 @@ enum/Trgsrc:
     value: 0
   - name: InternalTrig
     description: Internal.
-    value: 1
-enum/Tsf:
-  bit_size: 4
-  variants:
-  - name: Clr
-    description: Clear.
-    value: 0
-  - name: Set
-    description: Set.
     value: 1
 enum/Tstop:
   bit_size: 2

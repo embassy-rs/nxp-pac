@@ -99,7 +99,7 @@ fieldset/Ctrl:
     description: Transpose Type for Read.
     bit_offset: 28
     bit_size: 2
-    enum: Totr
+    enum: Tot
   - name: tot
     description: Transpose Type for Write.
     bit_offset: 30
@@ -124,21 +124,6 @@ enum/Tcrc:
     description: 32 bits.
     value: 1
 enum/Tot:
-  bit_size: 2
-  variants:
-  - name: Notrnps
-    description: No transposition.
-    value: 0
-  - name: BtsTrnps
-    description: Bits in bytes are transposed, but bytes are not transposed.
-    value: 1
-  - name: BytsBtsTrnps
-    description: Both bits in bytes and bytes are transposed.
-    value: 2
-  - name: BytsTrnps
-    description: Only bytes are transposed, no bits in a byte are transposed.
-    value: 3
-enum/Totr:
   bit_size: 2
   variants:
   - name: Notrnps

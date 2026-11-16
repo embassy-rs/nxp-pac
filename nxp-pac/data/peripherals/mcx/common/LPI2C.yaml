@@ -67,7 +67,7 @@ block/Lpi2c:
     only_in: '^MCXA'
     description: Controller Clock Configuration 1.
     byte_offset: 80
-    fieldset: Mccr1
+    fieldset: Mccr0
   - name: mfcr
     only_in: '^MCXA'
     description: Controller FIFO Control.
@@ -220,7 +220,7 @@ block/Lpi2c:
     only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Target Interrupt Enable.
     byte_offset: 280
-    fieldset: NSier
+    fieldset: Sier
   - name: sasr
     only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Target Address Status. Read only when SSR.AVF is set. Reading acknowledges the address and clears SSR.AVF/AM0F/AM1F/GCF/SARF; SRDR can return this view when RXCFG selects it.
@@ -296,7 +296,7 @@ block/Lpi2c:
     only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Controller Clock Configuration 1. Change only with controller disabled. The generic HS timing register does not establish chip-level HS controller support.
     byte_offset: 80
-    fieldset: Mccr1
+    fieldset: Mccr0
   - name: scr
     only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Target Control. RTF/RRF are write-only reset commands and read zero. RST holds target logic/registers except SCR in reset until software clears it. Update FILTEN/FILTDZ only with target disabled.
@@ -335,25 +335,6 @@ block/Lpi2c:
     fieldset: Stdr
 fieldset/Mccr0:
   description: Controller Clock Configuration 0.
-  fields:
-  - name: clklo
-    description: Clock Low Period.
-    bit_offset: 0
-    bit_size: 6
-  - name: clkhi
-    description: Clock High Period.
-    bit_offset: 8
-    bit_size: 6
-  - name: sethold
-    description: Setup Hold Delay.
-    bit_offset: 16
-    bit_size: 6
-  - name: datavd
-    description: Data Valid Delay.
-    bit_offset: 24
-    bit_size: 6
-fieldset/Mccr1:
-  description: Controller Clock Configuration 1.
   fields:
   - name: clklo
     description: Clock Low Period.
@@ -676,7 +657,7 @@ fieldset/Msr:
     description: Bus Busy Flag.
     bit_offset: 25
     bit_size: 1
-    enum: MsrBbf
+    enum: Mbf
 fieldset/Mtdr:
   description: Controller Transmit Data.
   fields:
@@ -1020,12 +1001,12 @@ fieldset/Ssr:
     description: Target Busy Flag.
     bit_offset: 24
     bit_size: 1
-    enum: Sbf
+    enum: Mbf
   - name: bbf
     description: Bus Busy Flag.
     bit_offset: 25
     bit_size: 1
-    enum: SsrBbf
+    enum: Mbf
 fieldset/Star:
   description: Target Transmit ACK.
   fields:
@@ -1243,15 +1224,6 @@ enum/McrRtf:
   - name: Reset
     description: Reset transmit FIFO.
     value: 1
-enum/MsrBbf:
-  bit_size: 1
-  variants:
-  - name: Idle
-    description: Idle.
-    value: 0
-  - name: Busy
-    description: Busy.
-    value: 1
 enum/MsrFef:
   bit_size: 1
   variants:
@@ -1396,15 +1368,6 @@ enum/Rxnack:
   - name: AlwaysGeneratedOnAddressOrReceiveDataOverrun
     description: NACK always generated on address overrun or receive data overrun, otherwise ACK or NACK is determined by STAR[TXNACK].
     value: 1
-enum/Sbf:
-  bit_size: 1
-  variants:
-  - name: Idle
-    description: Idle.
-    value: 0
-  - name: Busy
-    description: Busy.
-    value: 1
 enum/Scfgr1Ignack:
   bit_size: 1
   variants:
@@ -1440,15 +1403,6 @@ enum/Sdcfg:
     value: 0
   - name: AnyStop
     description: Any Stop condition.
-    value: 1
-enum/SsrBbf:
-  bit_size: 1
-  variants:
-  - name: Idle
-    description: Idle.
-    value: 0
-  - name: Busy
-    description: Busy.
     value: 1
 enum/Startcfg:
   bit_size: 1
@@ -1639,51 +1593,6 @@ fieldset/NSsr:
     description: Read-only SMBus Alert Response Flag. Cleared by reading SASR.
     bit_offset: 15
     bit_size: 1
-fieldset/NSier:
-  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
-  extends: Sier
-  reset_value: 0
-  fields:
-  - name: avie
-    description: Address Valid Interrupt Enable.
-    bit_offset: 2
-    bit_size: 1
-  - name: taie
-    description: Transmit ACK Interrupt Enable.
-    bit_offset: 3
-    bit_size: 1
-  - name: rsie
-    description: Repeated Start Interrupt Enable.
-    bit_offset: 8
-    bit_size: 1
-  - name: sdie
-    description: Stop Detect Interrupt Enable.
-    bit_offset: 9
-    bit_size: 1
-  - name: beie
-    description: Bit Error Interrupt Enable.
-    bit_offset: 10
-    bit_size: 1
-  - name: feie
-    description: FIFO Error Interrupt Enable.
-    bit_offset: 11
-    bit_size: 1
-  - name: am0ie
-    description: Address Match 0 Interrupt Enable.
-    bit_offset: 12
-    bit_size: 1
-  - name: am1ie
-    description: Address Match 1 Interrupt Enable.
-    bit_offset: 13
-    bit_size: 1
-  - name: gcie
-    description: General Call Interrupt Enable.
-    bit_offset: 14
-    bit_size: 1
-  - name: sarie
-    description: SMBus Alert Response Interrupt Enable.
-    bit_offset: 15
-    bit_size: 1
 fieldset/Mtdbr:
   only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   description: Transmit Data Burst byte payloads. Each pushes a zero-command transmit entry.
@@ -1706,6 +1615,7 @@ fieldset/Mtdbr:
     bit_offset: 24
     bit_size: 8
 enum/SsrDetect:
+  only_in: '^(MCXN235|MCXN236|MCXN246|MCXN247|MCXN526|MCXN527|MCXN536|MCXN537|MCXN546|MCXN547|MCXN556|MCXN557|MCXN946|MCXN947)$'
   bit_size: 1
   variants:
   - name: NotDetected
@@ -1715,6 +1625,7 @@ enum/SsrDetect:
     description: Detected.
     value: 1
 enum/SsrError:
+  only_in: '^(MCXN235|MCXN236|MCXN246|MCXN247|MCXN526|MCXN527|MCXN536|MCXN537|MCXN546|MCXN547|MCXN556|MCXN557|MCXN946|MCXN947)$'
   bit_size: 1
   variants:
   - name: NoError

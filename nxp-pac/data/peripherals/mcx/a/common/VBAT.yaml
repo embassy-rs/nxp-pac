@@ -37,7 +37,7 @@ block/Vbat:
   - name: osclcka
     description: Oscillator Lock A.
     byte_offset: 280
-    fieldset: Osclcka
+    fieldset: Frolcka
   - name: oscclke
     description: Oscillator Clock Enable.
     byte_offset: 288
@@ -77,7 +77,7 @@ block/Vbat:
   - name: ldolcka
     description: LDO_RAM Lock A.
     byte_offset: 792
-    fieldset: Ldolcka
+    fieldset: Frolcka
   - name: ldoramc
     description: RAM Control.
     byte_offset: 800
@@ -97,7 +97,7 @@ block/Vbat:
   - name: swilcka
     description: Switch Lock A.
     byte_offset: 1560
-    fieldset: Swilcka
+    fieldset: Frolcka
   - name: wakeup
     description: 'Array of registers: WAKEUPA.'
     array:
@@ -108,7 +108,7 @@ block/Vbat:
   - name: waklcka
     description: Wakeup Lock A.
     byte_offset: 2040
-    fieldset: Waklcka
+    fieldset: Frolcka
 block/Wakeup:
   description: 'Array of registers: WAKEUPA.'
   items:
@@ -220,13 +220,6 @@ fieldset/Ldoctla:
   - name: refresh_en
     description: Refresh Enable.
     bit_offset: 2
-    bit_size: 1
-fieldset/Ldolcka:
-  description: LDO_RAM Lock A.
-  fields:
-  - name: lock
-    description: Lock.
-    bit_offset: 0
     bit_size: 1
 fieldset/Ldoramc:
   description: RAM Control.
@@ -367,7 +360,7 @@ fieldset/Oscctla:
     description: Crystal Load Capacitance Selection.
     bit_offset: 8
     bit_size: 4
-    enum: ExtalCapSel
+    enum: XtalCapSel
   - name: xtal_cap_sel
     description: Crystal Load Capacitance Selection.
     bit_offset: 12
@@ -383,13 +376,6 @@ fieldset/Oscctla:
     bit_offset: 18
     bit_size: 2
     enum: SupplyDet
-fieldset/Osclcka:
-  description: Oscillator Lock A.
-  fields:
-  - name: lock
-    description: Lock.
-    bit_offset: 0
-    bit_size: 1
 fieldset/Osctsta:
   description: Oscillator Test A.
   fields:
@@ -427,7 +413,7 @@ fieldset/Statusa:
     description: Bandgap Timer 1 Flag.
     bit_offset: 3
     bit_size: 1
-    enum: StatusaTimer1Flag
+    enum: StatusaTimer0Flag
   - name: ldo_rdy
     description: LDO Ready.
     bit_offset: 4
@@ -448,13 +434,6 @@ fieldset/Swictla:
   - name: lp_en
     description: Low Power Enable.
     bit_offset: 1
-    bit_size: 1
-fieldset/Swilcka:
-  description: Switch Lock A.
-  fields:
-  - name: lock
-    description: Lock.
-    bit_offset: 0
     bit_size: 1
 fieldset/Verid:
   description: Version ID.
@@ -490,7 +469,7 @@ fieldset/Wakena:
     description: Wake-up Pin Flag.
     bit_offset: 1
     bit_size: 1
-    enum: WakenaWakeupFlag
+    enum: IrqenaWakeupFlag
   - name: timer0_flag
     description: Bandgap Timer 0.
     bit_offset: 2
@@ -514,13 +493,6 @@ fieldset/Wakeupa:
     description: Register.
     bit_offset: 0
     bit_size: 32
-fieldset/Waklcka:
-  description: Wakeup Lock A.
-  fields:
-  - name: lock
-    description: Lock.
-    bit_offset: 0
-    bit_size: 1
 enum/CapTrim:
   bit_size: 2
   variants:
@@ -593,57 +565,6 @@ enum/DlyTrim:
   - name: Dly42
     description: P current 4(nA) and N Current 2(nA).
     value: 11
-enum/ExtalCapSel:
-  bit_size: 4
-  variants:
-  - name: Sel0
-    description: 0 pF.
-    value: 0
-  - name: Sel2
-    description: 2 pF.
-    value: 1
-  - name: Sel4
-    description: 4 pF.
-    value: 2
-  - name: Sel6
-    description: 6 pF.
-    value: 3
-  - name: Sel8
-    description: 8 pF.
-    value: 4
-  - name: Sel10
-    description: 10 pF.
-    value: 5
-  - name: Sel12
-    description: 12 pF.
-    value: 6
-  - name: Sel14
-    description: 14 pF.
-    value: 7
-  - name: Sel16
-    description: 16 pF.
-    value: 8
-  - name: Sel18
-    description: 18 pF.
-    value: 9
-  - name: Sel20
-    description: 20 pF.
-    value: 10
-  - name: Sel22
-    description: 22 pF.
-    value: 11
-  - name: Sel24
-    description: 24 pF.
-    value: 12
-  - name: Sel26
-    description: 26 pF.
-    value: 13
-  - name: Sel28
-    description: 28 pF.
-    value: 14
-  - name: Sel30
-    description: 30 pF.
-    value: 15
 enum/FineAmpGain:
   bit_size: 2
   variants:
@@ -758,15 +679,6 @@ enum/StatusaTimer0Flag:
   - name: Set
     description: Reached.
     value: 1
-enum/StatusaTimer1Flag:
-  bit_size: 1
-  variants:
-  - name: Clr
-    description: Not reached.
-    value: 0
-  - name: Set
-    description: Reached.
-    value: 1
 enum/StatusaWakeupFlag:
   bit_size: 1
   variants:
@@ -812,15 +724,6 @@ enum/Timcfg:
   - name: Cfg7
     description: 7.8125 ms.
     value: 7
-enum/WakenaWakeupFlag:
-  bit_size: 1
-  variants:
-  - name: Clr
-    description: Disable.
-    value: 0
-  - name: Set
-    description: Enable.
-    value: 1
 enum/XtalCapSel:
   bit_size: 4
   variants:

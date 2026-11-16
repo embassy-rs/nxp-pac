@@ -1,0 +1,641 @@
+# NXP mcux-soc-svd 7c1f00bdd6263f0b93466f5e73e5fc55a744b879; native chiptool import.
+# Source instance geometry is retained in explicit block variants; see private source bindings.
+# Unannotated fieldsets construct zero in software, not a claimed hardware reset.
+# Command/W1C/SET/CLR/TOG construction defaults are zero masks; no RMW semantics are implied.
+# Source: MCXN526_cm33_core0.xml INPUTMUX0 sha256 ccb0c8ecf3573e24bb8c15a32bdec8a6f63b8870ced5bb7b9b629177f5f990f3
+# Source: MCXN526_cm33_core1.xml INPUTMUX0 sha256 caf054982956506a2f2e6896e0b1e0eb1c3035684fd3093778a21bda218bfa09
+# Source: MCXN527_cm33_core0.xml INPUTMUX0 sha256 5547fbb406e6e825ebc2f983518a5893814d62c3a6e2c5ad6075c49d939c8e17
+# Source: MCXN527_cm33_core1.xml INPUTMUX0 sha256 daac6c4d6fdbbdc87d7557ed9e567801921eca1e8107fc3f9f38173be3c936e0
+# Source: MCXN536_cm33_core0.xml INPUTMUX0 sha256 f9533e58d74eab222fc38608bd1d8dc45087e87b80a93f8b693e6cf2eb25cba4
+# Source: MCXN536_cm33_core1.xml INPUTMUX0 sha256 c089aecac3d73a7d8fc4a8c0cccf77ea8446b22a2ea99f4f2f01a4e0ca3a2fdd
+# Source: MCXN537_cm33_core0.xml INPUTMUX0 sha256 e72dbd80d33e6f53f05f11156fc20f6d53cf9848bc74fed80b5c34157455b11a
+# Source: MCXN537_cm33_core1.xml INPUTMUX0 sha256 4d5f7d121166c4d720a9da81b90be1b2f93be5e71fd25b9dd74b8715ebe30dce
+# Source: MCXN546_cm33_core0.xml INPUTMUX0 sha256 54e1fc060f9ccc17299bdb2da84159e699e87456276f2e695d440a6eb4aa9aad
+# Source: MCXN546_cm33_core1.xml INPUTMUX0 sha256 ddb7e932730a51c75f544efd6564ad6dbce5b3eca0a7befb7ab5b74a9951b937
+# Source: MCXN547_cm33_core0.xml INPUTMUX0 sha256 a276aee072bebd57c18929fe9a74408366fdbb42b918e06be5a3783a4aae4db7
+# Source: MCXN547_cm33_core1.xml INPUTMUX0 sha256 4a265743bdd2130cdd37ef12b9fd1d538cce9a2eac1c9149db291b7638e61423
+# Curated shared types replace imported per-field/per-register type clones.
+# Source: MCXN946_cm33_core0.xml INPUTMUX0 sha256 b986328ff1224adaeea70522fa61383a5f89f6313dfc3e7df92e8894fdab72d7
+# Source: MCXN946_cm33_core1.xml INPUTMUX0 sha256 57e8910317a1cb467d56726cb822c57806aa247542969bcf12dbcc8822187916
+# Source: MCXN947_cm33_core0.xml INPUTMUX0 sha256 629ac7cdc82684e467b0cf36a8aef697bc1eb65c2047d6610b7b5df65692e590
+# Source: MCXN947_cm33_core1.xml INPUTMUX0 sha256 0d77f3d23cad1d5eab631fd7f5ade4044d8aaca2d9d13cd11f3836d27fe089fb
+includes:
+  - INPUTMUX-fields.yaml
+block/InputmuxAlpha:
+  description: INPUTMUX.
+  items:
+  - name: sct0_inmux
+    description: Inputmux Register for SCT0 Input.
+    array:
+      len: 8
+      stride: 4
+    byte_offset: 0
+    fieldset: Sct0Inmux
+  - name: ctimer0cap0
+    description: Capture Select Register for CTIMER Inputs.
+    byte_offset: 32
+    fieldset: Timer0trig3
+  - name: ctimer0cap1
+    description: Capture Select Register for CTIMER Inputs.
+    byte_offset: 36
+    fieldset: Timer0trig3
+  - name: ctimer0cap2
+    description: Capture Select Register for CTIMER Inputs.
+    byte_offset: 40
+    fieldset: Timer0trig3
+  - name: ctimer0cap3
+    description: Capture Select Register for CTIMER Inputs.
+    byte_offset: 44
+    fieldset: Timer0trig3
+  - name: timer0trig
+    description: Trigger Register for CTIMER.
+    byte_offset: 48
+    fieldset: Timer0trig3
+  - name: ctimer1cap0
+    description: Capture Select Register for CTIMER Inputs.
+    byte_offset: 64
+    fieldset: Timer0trig3
+  - name: ctimer1cap1
+    description: Capture Select Register for CTIMER Inputs.
+    byte_offset: 68
+    fieldset: Timer0trig3
+  - name: ctimer1cap2
+    description: Capture Select Register for CTIMER Inputs.
+    byte_offset: 72
+    fieldset: Timer0trig3
+  - name: ctimer1cap3
+    description: Capture Select Register for CTIMER Inputs.
+    byte_offset: 76
+    fieldset: Timer0trig3
+  - name: timer1trig
+    description: Trigger Register for CTIMER.
+    byte_offset: 80
+    fieldset: Timer0trig3
+  - name: ctimer2cap0
+    description: Capture Select Register for CTIMER Inputs.
+    byte_offset: 96
+    fieldset: Timer0trig3
+  - name: ctimer2cap1
+    description: Capture Select Register for CTIMER Inputs.
+    byte_offset: 100
+    fieldset: Timer0trig3
+  - name: ctimer2cap2
+    description: Capture Select Register for CTIMER Inputs.
+    byte_offset: 104
+    fieldset: Timer0trig3
+  - name: ctimer2cap3
+    description: Capture Select Register for CTIMER Inputs.
+    byte_offset: 108
+    fieldset: Timer0trig3
+  - name: timer2trig
+    description: Trigger Register for CTIMER.
+    byte_offset: 112
+    fieldset: Timer0trig3
+  - name: smartdmaarchb_inmux
+    description: Inputmux Register for SMARTDMA Arch B Inputs.
+    array:
+      len: 8
+      stride: 4
+    byte_offset: 160
+    fieldset: SmartdmaarchbInmux2
+  - name: pintsel
+    description: Pin Interrupt Select.
+    array:
+      len: 8
+      stride: 4
+    byte_offset: 192
+    fieldset: Pintsel2
+  - name: freqmeas_ref
+    description: Selection for Frequency Measurement Reference Clock.
+    byte_offset: 384
+    fieldset: FreqmeasRef2
+  - name: freqmeas_tar
+    description: Selection for Frequency Measurement Target Clock.
+    byte_offset: 388
+    fieldset: FreqmeasTar2
+  - name: ctimer3cap0
+    description: Capture Select Register for CTIMER Inputs.
+    byte_offset: 416
+    fieldset: Timer3trig3
+  - name: ctimer3cap1
+    description: Capture Select Register for CTIMER Inputs.
+    byte_offset: 420
+    fieldset: Timer3trig3
+  - name: ctimer3cap2
+    description: Capture Select Register for CTIMER Inputs.
+    byte_offset: 424
+    fieldset: Timer3trig3
+  - name: ctimer3cap3
+    description: Capture Select Register for CTIMER Inputs.
+    byte_offset: 428
+    fieldset: Timer3trig3
+  - name: timer3trig
+    description: Trigger Register for CTIMER.
+    byte_offset: 432
+    fieldset: Timer3trig3
+  - name: ctimer4cap0
+    description: Capture Select Register for CTIMER Inputs.
+    byte_offset: 448
+    fieldset: Timer3trig3
+  - name: ctimer4cap1
+    description: Capture Select Register for CTIMER Inputs.
+    byte_offset: 452
+    fieldset: Timer3trig3
+  - name: ctimer4cap2
+    description: Capture Select Register for CTIMER Inputs.
+    byte_offset: 456
+    fieldset: Timer3trig3
+  - name: ctimer4cap3
+    description: Capture Select Register for CTIMER Inputs.
+    byte_offset: 460
+    fieldset: Timer3trig3
+  - name: timer4trig
+    description: Trigger Register for CTIMER.
+    byte_offset: 464
+    fieldset: Timer3trig3
+  - name: cmp0_trig
+    description: CMP0 Input Connections.
+    byte_offset: 608
+    fieldset: Cmp0Trig2
+  - name: adc0_trig
+    description: ADC Trigger Input Connections.
+    array:
+      len: 4
+      stride: 4
+    byte_offset: 640
+    fieldset: Adc0Trig2
+  - name: adc1_trig
+    description: ADC Trigger Input Connections.
+    array:
+      len: 4
+      stride: 4
+    byte_offset: 704
+    fieldset: Adc1Trig2
+  - name: dac0_trig
+    description: DAC0 Trigger Inputs.
+    byte_offset: 768
+    fieldset: Dac0Trig
+  - name: dac1_trig
+    description: DAC1 Trigger Inputs.
+    byte_offset: 800
+    fieldset: Dac1Trig
+  - name: dac2_trig
+    description: DAC2 Trigger Inputs.
+    byte_offset: 832
+    fieldset: Dac2Trig
+  - name: qdc0_trig
+    description: QDC0 Trigger Input Connections.
+    byte_offset: 864
+    fieldset: Qdc0Trig2
+  - name: qdc0_home
+    description: QDC0 Input Connections.
+    byte_offset: 868
+    fieldset: Qdc0Home2
+  - name: qdc0_index
+    description: QDC0 Input Connections.
+    byte_offset: 872
+    fieldset: Qdc0Index2
+  - name: qdc0_phaseb
+    description: QDC0 Input Connections.
+    byte_offset: 876
+    fieldset: Qdc0Phaseb2
+  - name: qdc0_phasea
+    description: QDC0 Input Connections.
+    byte_offset: 880
+    fieldset: Qdc0Phasea2
+  - name: qdc1_trig
+    description: QDC1 Trigger Input Connections.
+    byte_offset: 896
+    fieldset: Qdc1Trig2
+  - name: qdc1_home
+    description: QDC1 Input Connections.
+    byte_offset: 900
+    fieldset: Qdc1Home2
+  - name: qdc1_index
+    description: QDC1 Input Connections.
+    byte_offset: 904
+    fieldset: Qdc1Index2
+  - name: qdc1_phaseb
+    description: QDC1 Input Connections.
+    byte_offset: 908
+    fieldset: Qdc1Phaseb2
+  - name: qdc1_phasea
+    description: QDC1 Input Connections.
+    byte_offset: 912
+    fieldset: Qdc1Phasea2
+  - name: flex_pwm0_sm_extsync
+    description: PWM0 External Synchronization.
+    array:
+      len: 4
+      stride: 4
+    byte_offset: 928
+    fieldset: FlexPwm0SmExtsync2
+  - name: flex_pwm0_sm_exta
+    description: PWM0 Input Trigger Connections.
+    array:
+      len: 4
+      stride: 4
+    byte_offset: 944
+    fieldset: FlexPwm0SmExta2
+  - name: flex_pwm0_extforce
+    description: PWM0 External Force Trigger Connections.
+    byte_offset: 960
+    fieldset: FlexPwm0Extforce2
+  - name: flex_pwm0_fault
+    description: PWM0 Fault Input Trigger Connections.
+    array:
+      len: 4
+      stride: 4
+    byte_offset: 964
+    fieldset: FlexPwm0Fault2
+  - name: flex_pwm1_sm_extsync
+    description: PWM1 External Synchronization.
+    array:
+      len: 4
+      stride: 4
+    byte_offset: 992
+    fieldset: FlexPwm1SmExtsync2
+  - name: flex_pwm1_sm_exta
+    description: PWM1 Input EXTA Connections.
+    array:
+      len: 4
+      stride: 4
+    byte_offset: 1008
+    fieldset: FlexPwm1SmExta2
+  - name: flex_pwm1_extforce
+    description: PWM1 External Force Trigger Connections.
+    byte_offset: 1024
+    fieldset: FlexPwm1Extforce2
+  - name: flex_pwm1_fault
+    description: PWM1 Fault Input Trigger Connections.
+    array:
+      len: 4
+      stride: 4
+    byte_offset: 1028
+    fieldset: FlexPwm1Fault2
+  - name: pwm0_ext_clk
+    description: PWM0 External Clock Trigger.
+    byte_offset: 1056
+    fieldset: Pwm0ExtClk
+  - name: pwm1_ext_clk
+    description: PWM1 External Clock Trigger.
+    byte_offset: 1060
+    fieldset: Pwm1ExtClk
+  - name: evtg_trig0
+    description: EVTG Trigger Input Connections.
+    byte_offset: 1088
+    fieldset: EvtgTrig02
+  - name: evtg_trig1
+    description: EVTG Trigger Input Connections.
+    byte_offset: 1092
+    fieldset: EvtgTrig02
+  - name: evtg_trig2
+    description: EVTG Trigger Input Connections.
+    byte_offset: 1096
+    fieldset: EvtgTrig02
+  - name: evtg_trig3
+    description: EVTG Trigger Input Connections.
+    byte_offset: 1100
+    fieldset: EvtgTrig02
+  - name: evtg_trig4
+    description: EVTG Trigger Input Connections.
+    byte_offset: 1104
+    fieldset: EvtgTrig02
+  - name: evtg_trig5
+    description: EVTG Trigger Input Connections.
+    byte_offset: 1108
+    fieldset: EvtgTrig02
+  - name: evtg_trig6
+    description: EVTG Trigger Input Connections.
+    byte_offset: 1112
+    fieldset: EvtgTrig02
+  - name: evtg_trig7
+    description: EVTG Trigger Input Connections.
+    byte_offset: 1116
+    fieldset: EvtgTrig02
+  - name: evtg_trig8
+    description: EVTG Trigger Input Connections.
+    byte_offset: 1120
+    fieldset: EvtgTrig02
+  - name: evtg_trig9
+    description: EVTG Trigger Input Connections.
+    byte_offset: 1124
+    fieldset: EvtgTrig02
+  - name: evtg_trig10
+    description: EVTG Trigger Input Connections.
+    byte_offset: 1128
+    fieldset: EvtgTrig02
+  - name: evtg_trig11
+    description: EVTG Trigger Input Connections.
+    byte_offset: 1132
+    fieldset: EvtgTrig02
+  - name: evtg_trig12
+    description: EVTG Trigger Input Connections.
+    byte_offset: 1136
+    fieldset: EvtgTrig02
+  - name: evtg_trig13
+    description: EVTG Trigger Input Connections.
+    byte_offset: 1140
+    fieldset: EvtgTrig02
+  - name: evtg_trig14
+    description: EVTG Trigger Input Connections.
+    byte_offset: 1144
+    fieldset: EvtgTrig02
+  - name: evtg_trig15
+    description: EVTG Trigger Input Connections.
+    byte_offset: 1148
+    fieldset: EvtgTrig02
+  - name: usbfs_trig
+    description: USB-FS Trigger Input Connections.
+    byte_offset: 1152
+    fieldset: UsbfsTrig
+  - name: tsi_trig
+    description: TSI Trigger Input Connections.
+    byte_offset: 1184
+    fieldset: TsiTrig
+  - name: ext_trig0
+    description: EXT Trigger Connections.
+    byte_offset: 1216
+    fieldset: ExtTrig4
+  - name: ext_trig1
+    description: EXT Trigger Connections.
+    byte_offset: 1220
+    fieldset: ExtTrig4
+  - name: ext_trig2
+    description: EXT Trigger Connections.
+    byte_offset: 1224
+    fieldset: ExtTrig4
+  - name: ext_trig3
+    description: EXT Trigger Connections.
+    byte_offset: 1228
+    fieldset: ExtTrig4
+  - name: ext_trig4
+    description: EXT Trigger Connections.
+    byte_offset: 1232
+    fieldset: ExtTrig4
+  - name: ext_trig5
+    description: EXT Trigger Connections.
+    byte_offset: 1236
+    fieldset: ExtTrig4
+  - name: ext_trig6
+    description: EXT Trigger Connections.
+    byte_offset: 1240
+    fieldset: ExtTrig4
+  - name: ext_trig7
+    description: EXT Trigger Connections.
+    byte_offset: 1244
+    fieldset: ExtTrig4
+  - name: cmp1_trig
+    description: CMP1 Input Connections.
+    byte_offset: 1248
+    fieldset: Cmp1Trig2
+  - name: cmp2_trig
+    description: CMP2 Input Connections.
+    byte_offset: 1280
+    fieldset: Cmp2Trig
+  - name: sinc_filter_ch0
+    description: SINC Filter Channel Trigger Input Connections.
+    byte_offset: 1312
+    fieldset: SincFilterCh3
+  - name: sinc_filter_ch1
+    description: SINC Filter Channel Trigger Input Connections.
+    byte_offset: 1316
+    fieldset: SincFilterCh3
+  - name: sinc_filter_ch2
+    description: SINC Filter Channel Trigger Input Connections.
+    byte_offset: 1320
+    fieldset: SincFilterCh3
+  - name: sinc_filter_ch3
+    description: SINC Filter Channel Trigger Input Connections.
+    byte_offset: 1324
+    fieldset: SincFilterCh3
+  - name: sinc_filter_ch4
+    description: SINC Filter Channel Trigger Input Connections.
+    byte_offset: 1328
+    fieldset: SincFilterCh3
+  - name: opamp0_trig
+    description: OPAMP Trigger Input Connections.
+    byte_offset: 1408
+    fieldset: Opamp0Trig
+  - name: opamp1_trig
+    description: OPAMP Trigger Input Connections.
+    byte_offset: 1412
+    fieldset: Opamp0Trig
+  - name: opamp2_trig
+    description: OPAMP Trigger Input Connections.
+    byte_offset: 1416
+    fieldset: Opamp0Trig
+  - name: flexcomm0_trig
+    description: LP_FLEXCOMM0 Trigger Input Connections.
+    byte_offset: 1440
+    fieldset: Flexcomm0Trig2
+  - name: flexcomm1_trig
+    description: LP_FLEXCOMM1 Trigger Input Connections.
+    byte_offset: 1472
+    fieldset: Flexcomm1Trig2
+  - name: flexcomm2_trig
+    description: LP_FLEXCOMM2 Trigger Input Connections.
+    byte_offset: 1504
+    fieldset: Flexcomm2Trig2
+  - name: flexcomm3_trig
+    description: LP_FLEXCOMM3 Trigger Input Connections.
+    byte_offset: 1536
+    fieldset: Flexcomm3Trig2
+  - name: flexcomm4_trig
+    description: LP_FLEXCOMM4 Trigger Input Connections.
+    byte_offset: 1568
+    fieldset: Flexcomm4Trig2
+  - name: flexcomm5_trig
+    description: LP_FLEXCOMM5 Trigger Input Connections.
+    byte_offset: 1600
+    fieldset: Flexcomm5Trig2
+  - name: flexcomm6_trig
+    description: LP_FLEXCOMM6 Trigger Input Connections.
+    byte_offset: 1632
+    fieldset: Flexcomm6Trig2
+  - name: flexcomm7_trig
+    description: LP_FLEXCOMM7 Trigger Input Connections.
+    byte_offset: 1664
+    fieldset: Flexcomm7Trig2
+  - name: flexcomm8_trig
+    description: LP_FLEXCOMM8 Trigger Input Connections.
+    byte_offset: 1696
+    fieldset: Flexcomm8Trig
+  - name: flexcomm9_trig
+    description: LP_FLEXCOMM9 Trigger Input Connections.
+    byte_offset: 1728
+    fieldset: Flexcomm9Trig
+  - name: flexio_trig0
+    description: FlexIO Trigger Input Connections.
+    byte_offset: 1760
+    fieldset: FlexioTrig4
+  - name: flexio_trig1
+    description: FlexIO Trigger Input Connections.
+    byte_offset: 1764
+    fieldset: FlexioTrig4
+  - name: flexio_trig2
+    description: FlexIO Trigger Input Connections.
+    byte_offset: 1768
+    fieldset: FlexioTrig4
+  - name: flexio_trig3
+    description: FlexIO Trigger Input Connections.
+    byte_offset: 1772
+    fieldset: FlexioTrig4
+  - name: flexio_trig4
+    description: FlexIO Trigger Input Connections.
+    byte_offset: 1776
+    fieldset: FlexioTrig4
+  - name: flexio_trig5
+    description: FlexIO Trigger Input Connections.
+    byte_offset: 1780
+    fieldset: FlexioTrig4
+  - name: flexio_trig6
+    description: FlexIO Trigger Input Connections.
+    byte_offset: 1784
+    fieldset: FlexioTrig4
+  - name: flexio_trig7
+    description: FlexIO Trigger Input Connections.
+    byte_offset: 1788
+    fieldset: FlexioTrig4
+  - name: dma0_req_enable0
+    description: DMA0 Request Enable0.
+    byte_offset: 1792
+    fieldset: Dma0ReqEnable02
+  - name: dma0_req_enable0_set
+    description: DMA0 Request Enable0.
+    byte_offset: 1796
+    access: Write
+    fieldset: Dma0ReqEnable0Set2
+  - name: dma0_req_enable0_clr
+    description: DMA0 Request Enable0.
+    byte_offset: 1800
+    access: Write
+    fieldset: Dma0ReqEnable0Clr2
+  - name: dma0_req_enable0_tog
+    description: DMA0 Request Enable0.
+    byte_offset: 1804
+    access: Write
+    fieldset: Dma0ReqEnable0Tog2
+  - name: dma0_req_enable1
+    description: DMA0 Request Enable1.
+    byte_offset: 1808
+    fieldset: Dma0ReqEnable1
+  - name: dma0_req_enable1_set
+    description: DMA0 Request Enable1.
+    byte_offset: 1812
+    access: Write
+    fieldset: Dma0ReqEnable1Set
+  - name: dma0_req_enable1_clr
+    description: DMA0 Request Enable1.
+    byte_offset: 1816
+    access: Write
+    fieldset: Dma0ReqEnable1Clr
+  - name: dma0_req_enable1_tog
+    description: DMA0 Request Enable1.
+    byte_offset: 1820
+    access: Write
+    fieldset: Dma0ReqEnable1Tog
+  - name: dma0_req_enable2
+    description: DMA0 Request Enable2.
+    byte_offset: 1824
+    fieldset: Dma0ReqEnable22
+  - name: dma0_req_enable2_set
+    description: DMA0 Request Enable2.
+    byte_offset: 1828
+    access: Write
+    fieldset: Dma0ReqEnable2Set2
+  - name: dma0_req_enable2_clr
+    description: DMA0 Request Enable2.
+    byte_offset: 1832
+    access: Write
+    fieldset: Dma0ReqEnable2Clr2
+  - name: dma0_req_enable2_tog
+    description: DMA0 Request Enable2.
+    byte_offset: 1836
+    access: Write
+    fieldset: Dma0ReqEnable2Tog2
+  - name: dma0_req_enable3
+    description: DMA0 Request Enable3.
+    byte_offset: 1840
+    fieldset: Dma0ReqEnable32
+  - name: dma0_req_enable3_set
+    description: DMA0 Request Enable3.
+    byte_offset: 1844
+    access: Write
+    fieldset: Dma0ReqEnable3Set2
+  - name: dma0_req_enable3_clr
+    description: DMA0 Request Enable3.
+    byte_offset: 1848
+    access: Write
+    fieldset: Dma0ReqEnable3Clr2
+  - name: dma1_req_enable0
+    description: DMA1 Request Enable0.
+    byte_offset: 1920
+    fieldset: Dma1ReqEnable02
+  - name: dma1_req_enable0_set
+    description: DMA1 Request Enable0.
+    byte_offset: 1924
+    access: Write
+    fieldset: Dma1ReqEnable0Set2
+  - name: dma1_req_enable0_clr
+    description: DMA1 Request Enable0.
+    byte_offset: 1928
+    access: Write
+    fieldset: Dma1ReqEnable0Clr2
+  - name: dma1_req_enable0_tog
+    description: DMA1 Request Enable0.
+    byte_offset: 1932
+    access: Write
+    fieldset: Dma1ReqEnable0Tog2
+  - name: dma1_req_enable1
+    description: DMA1 Request Enable1.
+    byte_offset: 1936
+    fieldset: Dma1ReqEnable1
+  - name: dma1_req_enable1_set
+    description: DMA1 Request Enable1.
+    byte_offset: 1940
+    access: Write
+    fieldset: Dma1ReqEnable1Set
+  - name: dma1_req_enable1_clr
+    description: DMA1 Request Enable1.
+    byte_offset: 1944
+    access: Write
+    fieldset: Dma1ReqEnable1Clr
+  - name: dma1_req_enable1_tog
+    description: DMA1 Request Enable1.
+    byte_offset: 1948
+    access: Write
+    fieldset: Dma1ReqEnable1Tog
+  - name: dma1_req_enable2
+    description: DMA1 Request Enable2.
+    byte_offset: 1952
+    fieldset: Dma1ReqEnable22
+  - name: dma1_req_enable2_set
+    description: DMA1 Request Enable2.
+    byte_offset: 1956
+    access: Write
+    fieldset: Dma1ReqEnable2Set
+  - name: dma1_req_enable2_clr
+    description: DMA1 Request Enable2.
+    byte_offset: 1960
+    access: Write
+    fieldset: Dma1ReqEnable2Clr
+  - name: dma1_req_enable2_tog
+    description: DMA1 Request Enable2.
+    byte_offset: 1964
+    access: Write
+    fieldset: Dma1ReqEnable2Tog
+  - name: dma1_req_enable3
+    description: DMA1 Request Enable3.
+    byte_offset: 1968
+    fieldset: Dma1ReqEnable32
+  - name: dma1_req_enable3_set
+    description: DMA1 Request Enable3.
+    byte_offset: 1972
+    access: Write
+    fieldset: Dma1ReqEnable3Set
+  - name: dma1_req_enable3_clr
+    description: DMA1 Request Enable3.
+    byte_offset: 1976
+    access: Write
+    fieldset: Dma1ReqEnable3Clr

@@ -123,12 +123,12 @@ block/UsbAlpha:
     description: BDT Page 2.
     byte_offset: 176
     bit_size: 8
-    fieldset: UsbAlphaFieldsetDelta
+    fieldset: Bdtpage
   - name: bdtpage3
     description: BDT Page 3.
     byte_offset: 180
     bit_size: 8
-    fieldset: UsbAlphaFieldsetEcho
+    fieldset: Bdtpage
   - name: endpoint
     description: 'Array of registers: ENDPT.'
     array:
@@ -279,14 +279,6 @@ fieldset/UsbAlphaFieldsetCharlieAlpha:
     description: Revision.
     bit_offset: 0
     bit_size: 8
-fieldset/UsbAlphaFieldsetDelta:
-  description: BDT Page 2.
-  bit_size: 8
-  fields:
-  - name: bdtba
-    description: BDT Base Address.
-    bit_offset: 0
-    bit_size: 8
 fieldset/UsbAlphaFieldsetDeltaAlpha:
   description: SOF Threshold.
   bit_size: 8
@@ -295,7 +287,7 @@ fieldset/UsbAlphaFieldsetDeltaAlpha:
     description: SOF Count Threshold.
     bit_offset: 0
     bit_size: 8
-fieldset/UsbAlphaFieldsetEcho:
+fieldset/Bdtpage:
   description: BDT Page 3.
   bit_size: 8
   fields:
@@ -795,7 +787,7 @@ fieldset/UsbAlphaFieldsetNovember:
     description: CRC5 Error or End of Frame Error Flag.
     bit_offset: 1
     bit_size: 1
-    enum: UsbAlphaEnumJuliet
+    enum: Crc5eof2
   - name: crc16
     description: CRC16 Error Flag.
     bit_offset: 2
@@ -810,17 +802,17 @@ fieldset/UsbAlphaFieldsetNovember:
     description: Bus Turnaround Timeout Error Flag.
     bit_offset: 4
     bit_size: 1
-    enum: UsbAlphaEnumCharlie
+    enum: Btoerr2
   - name: dmaerr
     description: DMA Access Error Flag.
     bit_offset: 5
     bit_size: 1
-    enum: UsbAlphaEnumNovember
+    enum: Crc5eof2
   - name: ownerr
     description: BD Unavailable Error Flag.
     bit_offset: 6
     bit_size: 1
-    enum: UsbAlphaEnumQuebecAlpha
+    enum: Crc5eof2
   - name: btserr
     description: Bit Stuff Error Flag.
     bit_offset: 7
@@ -902,7 +894,7 @@ fieldset/UsbAlphaFieldsetSierra:
     description: USB Reset Flag.
     bit_offset: 0
     bit_size: 1
-    enum: UsbAlphaEnumGolfDelta
+    enum: Attach2
   - name: error
     description: Error Flag.
     bit_offset: 1
@@ -922,22 +914,22 @@ fieldset/UsbAlphaFieldsetSierra:
     description: Sleep Flag.
     bit_offset: 4
     bit_size: 1
-    enum: UsbAlphaEnumDeltaBravo
+    enum: Crc5eof2
   - name: resume
     description: Resume Flag.
     bit_offset: 5
     bit_size: 1
-    enum: UsbAlphaEnumZuluAlpha
+    enum: Crc5eof2
   - name: attach
     description: Attach Interrupt Flag.
     bit_offset: 6
     bit_size: 1
-    enum: UsbAlphaEnumAlpha
+    enum: Attach2
   - name: stall
     description: Stall Interrupt Flag.
     bit_offset: 7
     bit_size: 1
-    enum: UsbAlphaEnumJulietBravo
+    enum: Crc5eof2
 fieldset/UsbAlphaFieldsetTango:
   description: Keep Alive Mode Control.
   bit_size: 8
@@ -974,7 +966,7 @@ fieldset/UsbAlphaFieldsetTango:
     description: Wakeup Interrupt Status Flag.
     bit_offset: 7
     bit_size: 1
-    enum: UsbAlphaEnumNovemberDelta
+    enum: Crc5eof2
 fieldset/UsbAlphaFieldsetUniform:
   description: Keep Alive Mode Wakeup Control.
   bit_size: 8
@@ -1087,13 +1079,13 @@ fieldset/UsbAlphaFieldsetZulu:
     description: Line State Change Interrupt Flag.
     bit_offset: 5
     bit_size: 1
-    enum: UsbAlphaEnumHotelAlpha
+    enum: Crc5eof2
   - name: onemsec
     description: One Millisecond Timer Timeout Flag.
     bit_offset: 6
     bit_size: 1
-    enum: UsbAlphaEnumLimaAlpha
-enum/UsbAlphaEnumAlpha:
+    enum: Btoerr2
+enum/Attach2:
   bit_size: 1
   variants:
   - name: IntNo
@@ -1183,7 +1175,7 @@ enum/UsbAlphaEnumBravoDelta:
   - name: UartMode
     description: USB DP and DM external package pins are used for UART signaling.
     value: 1
-enum/UsbAlphaEnumCharlie:
+enum/Btoerr2:
   bit_size: 1
   variants:
   - name: IntNo
@@ -1245,15 +1237,6 @@ enum/UsbAlphaEnumDeltaAlpha:
     value: 0
   - name: Enabled
     description: Enabled.
-    value: 1
-enum/UsbAlphaEnumDeltaBravo:
-  bit_size: 1
-  variants:
-  - name: IntNo
-    description: Interrupt did not occur.
-    value: 0
-  - name: IntYes
-    description: Interrupt occurred.
     value: 1
 enum/UsbAlphaEnumDeltaCharlie:
   bit_size: 1
@@ -1399,15 +1382,6 @@ enum/UsbAlphaEnumGolfCharlie:
   - name: DisEp14OutStall
     description: Disable.
     value: 1
-enum/UsbAlphaEnumGolfDelta:
-  bit_size: 1
-  variants:
-  - name: IntNo
-    description: Not detected.
-    value: 0
-  - name: IntYes
-    description: Detected.
-    value: 1
 enum/UsbAlphaEnumHotel:
   bit_size: 1
   variants:
@@ -1416,15 +1390,6 @@ enum/UsbAlphaEnumHotel:
     value: 0
   - name: IntYes
     description: Rejected.
-    value: 1
-enum/UsbAlphaEnumHotelAlpha:
-  bit_size: 1
-  variants:
-  - name: IntNo
-    description: Interrupt did not occur.
-    value: 0
-  - name: IntYes
-    description: Interrupt occurred.
     value: 1
 enum/UsbAlphaEnumHotelBravo:
   bit_size: 1
@@ -1495,7 +1460,7 @@ enum/UsbAlphaEnumIndiaDelta:
   - name: Resistive
     description: Resistive divider attached to a GPIO pin.
     value: 1
-enum/UsbAlphaEnumJuliet:
+enum/Crc5eof2:
   bit_size: 1
   variants:
   - name: IntNo
@@ -1512,15 +1477,6 @@ enum/UsbAlphaEnumJulietAlpha:
     value: 0
   - name: LinestStable
     description: Stable.
-    value: 1
-enum/UsbAlphaEnumJulietBravo:
-  bit_size: 1
-  variants:
-  - name: IntNo
-    description: Interrupt did not occur.
-    value: 0
-  - name: IntYes
-    description: Interrupt occurred.
     value: 1
 enum/UsbAlphaEnumJulietCharlie:
   bit_size: 1
@@ -1594,15 +1550,6 @@ enum/UsbAlphaEnumLima:
   - name: IntYes
     description: Not an integer number of bytes.
     value: 1
-enum/UsbAlphaEnumLimaAlpha:
-  bit_size: 1
-  variants:
-  - name: IntNo
-    description: Not timed out.
-    value: 0
-  - name: IntYes
-    description: Timed out.
-    value: 1
 enum/UsbAlphaEnumLimaBravo:
   bit_size: 1
   variants:
@@ -1675,15 +1622,6 @@ enum/UsbAlphaEnumMikeDelta:
   - name: EnVreginReInt
     description: Enable.
     value: 1
-enum/UsbAlphaEnumNovember:
-  bit_size: 1
-  variants:
-  - name: IntNo
-    description: Interrupt did not occur.
-    value: 0
-  - name: IntYes
-    description: Interrupt occurred.
-    value: 1
 enum/UsbAlphaEnumNovemberAlpha:
   bit_size: 1
   variants:
@@ -1710,15 +1648,6 @@ enum/UsbAlphaEnumNovemberCharlie:
     value: 0
   - name: DisEp7OutStall
     description: Disable.
-    value: 1
-enum/UsbAlphaEnumNovemberDelta:
-  bit_size: 1
-  variants:
-  - name: IntNo
-    description: Interrupt did not occur.
-    value: 0
-  - name: IntYes
-    description: Interrupt occurred.
     value: 1
 enum/UsbAlphaEnumOscar:
   bit_size: 1
@@ -1815,15 +1744,6 @@ enum/UsbAlphaEnumQuebec:
     value: 0
   - name: DmPdEnStat
     description: Enabled.
-    value: 1
-enum/UsbAlphaEnumQuebecAlpha:
-  bit_size: 1
-  variants:
-  - name: IntNo
-    description: Interrupt did not occur.
-    value: 0
-  - name: IntYes
-    description: Interrupt occurred.
     value: 1
 enum/UsbAlphaEnumQuebecBravo:
   bit_size: 1
@@ -2142,15 +2062,6 @@ enum/UsbAlphaEnumZulu:
     value: 0
   - name: EnErrorInt
     description: Enable.
-    value: 1
-enum/UsbAlphaEnumZuluAlpha:
-  bit_size: 1
-  variants:
-  - name: IntNo
-    description: Interrupt did not occur.
-    value: 0
-  - name: IntYes
-    description: Interrupt occurred.
     value: 1
 enum/UsbAlphaEnumZuluBravo:
   bit_size: 1

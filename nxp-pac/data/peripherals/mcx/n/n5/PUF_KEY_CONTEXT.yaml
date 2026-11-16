@@ -79,47 +79,47 @@ fieldset/PufKeyContextAlphaFieldsetBravo:
     description: Disable PUF enroll command.
     bit_offset: 1
     bit_size: 1
-    enum: PufKeyContextAlphaEnumBravo
+    enum: DisPufEnroll
   - name: dis_puf_start
     description: Disable PUF start command.
     bit_offset: 2
     bit_size: 1
-    enum: PufKeyContextAlphaEnumFoxtrot
+    enum: DisPufEnroll
   - name: dis_puf_stop
     description: Disable PUF stop command.
     bit_offset: 5
     bit_size: 1
-    enum: PufKeyContextAlphaEnumGolf
+    enum: DisPufEnroll
   - name: dis_puf_get_key
     description: Disable PUF get key command.
     bit_offset: 6
     bit_size: 1
-    enum: PufKeyContextAlphaEnumEcho
+    enum: DisPufEnroll
   - name: dis_puf_unwrap_key
     description: Disable PUF unwrap key command.
     bit_offset: 7
     bit_size: 1
-    enum: PufKeyContextAlphaEnumIndia
+    enum: DisPufEnroll
   - name: dis_puf_gen_wrap_key
     description: Disable PUF generate and wrap key command.
     bit_offset: 8
     bit_size: 1
-    enum: PufKeyContextAlphaEnumDelta
+    enum: DisPufEnroll
   - name: dis_puf_wrap_key
     description: Disable PUF wrap key command.
     bit_offset: 9
     bit_size: 1
-    enum: PufKeyContextAlphaEnumJuliet
+    enum: DisPufEnroll
   - name: dis_puf_gen_random_number
     description: Disable PUF generate and wrap key command.
     bit_offset: 15
     bit_size: 1
-    enum: PufKeyContextAlphaEnumCharlie
+    enum: DisPufEnroll
   - name: dis_puf_test
     description: Disable PUF test command.
     bit_offset: 31
     bit_size: 1
-    enum: PufKeyContextAlphaEnumHotel
+    enum: DisPufEnroll
 fieldset/PufKeyContextAlphaFieldsetCharlie:
   description: Security level lock.
   fields:
@@ -152,79 +152,7 @@ enum/PufKeyContextAlphaEnumAlpha:
   - name: SecurePrivMaster
     description: Non-secure and non-privileged Master.
     value: 3
-enum/PufKeyContextAlphaEnumBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Command disabled.
-    value: 1
-  - name: Enable
-    description: Command enabled.
-    value: 0
-enum/PufKeyContextAlphaEnumCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Command disabled.
-    value: 1
-  - name: Enable
-    description: Command enabled.
-    value: 0
-enum/PufKeyContextAlphaEnumDelta:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Command disabled.
-    value: 1
-  - name: Enable
-    description: Command enabled.
-    value: 0
-enum/PufKeyContextAlphaEnumEcho:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Command disabled.
-    value: 1
-  - name: Enable
-    description: Command enabled.
-    value: 0
-enum/PufKeyContextAlphaEnumFoxtrot:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Command disabled.
-    value: 1
-  - name: Enable
-    description: Command enabled.
-    value: 0
-enum/PufKeyContextAlphaEnumGolf:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Command disabled.
-    value: 1
-  - name: Enable
-    description: Command enabled.
-    value: 0
-enum/PufKeyContextAlphaEnumHotel:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Command disabled.
-    value: 1
-  - name: Enable
-    description: Command enabled.
-    value: 0
-enum/PufKeyContextAlphaEnumIndia:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Command disabled.
-    value: 1
-  - name: Enable
-    description: Command enabled.
-    value: 0
-enum/PufKeyContextAlphaEnumJuliet:
+enum/DisPufEnroll:
   bit_size: 1
   variants:
   - name: Disable

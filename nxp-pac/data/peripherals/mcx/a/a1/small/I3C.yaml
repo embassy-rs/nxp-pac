@@ -54,7 +54,7 @@ block/I3c:
     description: Target Write Data Byte End.
     byte_offset: 52
     access: Write
-    fieldset: Swdatabe
+    fieldset: Swdatab1
   - name: swdatah
     description: Target Write Data Half-word.
     byte_offset: 56
@@ -84,7 +84,7 @@ block/I3c:
     description: Target Write Data Halfword.
     byte_offset: 84
     access: Write
-    fieldset: Swdatah1
+    fieldset: MrmsgDdr
   - name: scapabilities2
     description: Target Capabilities 2.
     byte_offset: 92
@@ -199,7 +199,7 @@ block/I3c:
     description: Controller Write Byte Data 1(to bus).
     byte_offset: 204
     access: Write
-    fieldset: Mwdatab1
+    fieldset: Mrdatab
   - name: mwdatah1
     description: Controller Write Halfword Data (to bus).
     byte_offset: 204
@@ -214,12 +214,12 @@ block/I3c:
     description: Controller Write Message Data in SDR mode.
     byte_offset: 208
     access: Write
-    fieldset: MwmsgSdrData
+    fieldset: MwmsgDdrData
   - name: mrmsg_sdr
     description: Controller Read Message in SDR mode.
     byte_offset: 212
     access: Read
-    fieldset: MrmsgSdr
+    fieldset: MrmsgDdr
   - name: mwmsg_ddr_control
     description: 'Controller Write Message in DDR mode: First Control Word.'
     byte_offset: 216
@@ -365,7 +365,7 @@ fieldset/MconfigExt:
     description: I3C CAS Delay After Repeated START.
     bit_offset: 18
     bit_size: 2
-    enum: I3cCasrDel
+    enum: I3cCasDel
   reset_value: 0
 fieldset/Mctrl:
   description: Controller Control.
@@ -406,7 +406,7 @@ fieldset/Mdatactrl:
     description: Flush To-bus Buffer or FIFO.
     bit_offset: 0
     bit_size: 1
-    enum: Flushtb
+    enum: Flushfb
   - name: flushfb
     description: Flush From-bus Buffer or FIFO.
     bit_offset: 1
@@ -691,14 +691,6 @@ fieldset/MrmsgDdr:
     bit_offset: 0
     bit_size: 16
   reset_value: 0
-fieldset/MrmsgSdr:
-  description: Controller Read Message in SDR mode.
-  fields:
-  - name: data
-    description: Data.
-    bit_offset: 0
-    bit_size: 16
-  reset_value: 0
 fieldset/Mstatus:
   description: Controller Status.
   fields:
@@ -772,14 +764,6 @@ fieldset/Mwdatab:
     description: End of Message Also.
     bit_offset: 16
     bit_size: 1
-  reset_value: 0
-fieldset/Mwdatab1:
-  description: Controller Write Byte Data 1(to bus).
-  fields:
-  - name: value
-    description: Value.
-    bit_offset: 0
-    bit_size: 8
   reset_value: 0
 fieldset/Mwdatabe:
   description: Controller Write Data Byte End.
@@ -878,14 +862,6 @@ fieldset/MwmsgSdrControl:
     description: Length.
     bit_offset: 11
     bit_size: 5
-  reset_value: 0
-fieldset/MwmsgSdrData:
-  description: Controller Write Message Data in SDR mode.
-  fields:
-  - name: data16b
-    description: Data.
-    bit_offset: 0
-    bit_size: 16
   reset_value: 0
 fieldset/Scapabilities:
   description: Target Capabilities.
@@ -1605,14 +1581,6 @@ fieldset/Swdatab1:
     bit_offset: 0
     bit_size: 8
   reset_value: 0
-fieldset/Swdatabe:
-  description: Target Write Data Byte End.
-  fields:
-  - name: data
-    description: Data.
-    bit_offset: 0
-    bit_size: 8
-  reset_value: 0
 fieldset/Swdatah:
   description: Target Write Data Half-word.
   fields:
@@ -1628,14 +1596,6 @@ fieldset/Swdatah:
     description: End of message.
     bit_offset: 16
     bit_size: 1
-  reset_value: 0
-fieldset/Swdatah1:
-  description: Target Write Data Halfword.
-  fields:
-  - name: data
-    description: Data.
-    bit_offset: 0
-    bit_size: 16
   reset_value: 0
 fieldset/Swdatahe:
   description: Target Write Data Half-word End.
@@ -1786,15 +1746,6 @@ enum/Flushfb:
   - name: Flush
     description: Flush the buffer.
     value: 1
-enum/Flushtb:
-  bit_size: 1
-  variants:
-  - name: NoAction
-    description: No action.
-    value: 0
-  - name: Flush
-    description: Flush the buffer.
-    value: 1
 enum/Group:
   bit_size: 2
   variants:
@@ -1853,21 +1804,6 @@ enum/I2c:
     description: I2C message.
     value: 1
 enum/I3cCasDel:
-  bit_size: 2
-  variants:
-  - name: NoDelay
-    description: No Delay.
-    value: 0
-  - name: OneHalfClk
-    description: Increases SCL clock period by 1/2.
-    value: 1
-  - name: OneClk
-    description: Increases SCL clock period by 1.
-    value: 2
-  - name: OneAndOneHalfClk
-    description: Increases SCL clock period by 1 1/2.
-    value: 3
-enum/I3cCasrDel:
   bit_size: 2
   variants:
   - name: NoDelay

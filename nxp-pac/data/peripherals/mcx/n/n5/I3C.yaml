@@ -79,7 +79,7 @@ block/IthreecAlpha:
     description: Target Write Data Byte End.
     byte_offset: 52
     access: Write
-    fieldset: IthreecAlphaFieldsetZuluAlpha
+    fieldset: Swdatab2
   - name: swdatah
     description: Target Write Data Halfword.
     byte_offset: 56
@@ -99,12 +99,12 @@ block/IthreecAlpha:
     description: Target Read Data Halfword.
     byte_offset: 72
     access: Read
-    fieldset: IthreecAlphaFieldsetTangoAlpha
+    fieldset: Mrdatah2
   - name: swdatab1
     description: Target Write Data Byte.
     byte_offset: 84
     access: Write
-    fieldset: IthreecAlphaFieldsetYankeeAlpha
+    fieldset: Swdatab2
   - name: scapabilities2
     description: Target Capabilities 2.
     byte_offset: 92
@@ -205,17 +205,17 @@ block/IthreecAlpha:
     description: Controller Read Data Byte.
     byte_offset: 192
     access: Read
-    fieldset: IthreecAlphaFieldsetMike
+    fieldset: Mrdatab2
   - name: mrdatah
     description: Controller Read Data Halfword.
     byte_offset: 200
     access: Read
-    fieldset: IthreecAlphaFieldsetNovember
+    fieldset: Mrdatah2
   - name: mwdatab1
     description: Controller Write Byte Data 1 (to Bus).
     byte_offset: 204
     access: Write
-    fieldset: IthreecAlphaFieldsetSierra
+    fieldset: Mrdatab2
   - name: mwmsg_sdr_control
     description: Controller Write Message Control in SDR mode.
     byte_offset: 208
@@ -225,12 +225,12 @@ block/IthreecAlpha:
     description: Controller Write Message Data in SDR mode.
     byte_offset: 208
     access: Write
-    fieldset: IthreecAlphaFieldsetAlphaAlpha
+    fieldset: MwmsgDdrData2
   - name: mrmsg_sdr
     description: Controller Read Message in SDR mode.
     byte_offset: 212
     access: Read
-    fieldset: IthreecAlphaFieldsetPapa
+    fieldset: MrmsgDdr2
   - name: mwmsg_ddr_control
     description: 'Controller Write Message in DDR mode: First Control Word.'
     byte_offset: 216
@@ -245,12 +245,12 @@ block/IthreecAlpha:
     description: Controller Write Message Data in DDR mode.
     byte_offset: 216
     access: Write
-    fieldset: IthreecAlphaFieldsetYankee
+    fieldset: MwmsgDdrData2
   - name: mrmsg_ddr
     description: Controller Read Message in DDR mode.
     byte_offset: 220
     access: Read
-    fieldset: IthreecAlphaFieldsetOscar
+    fieldset: MrmsgDdr2
   - name: mdynaddr
     description: Controller Dynamic Address.
     byte_offset: 228
@@ -337,7 +337,7 @@ fieldset/IthreecAlphaFieldsetCharlie:
     description: Open Drain Stop.
     bit_offset: 6
     bit_size: 1
-    enum: IthreecAlphaEnumVictorCharlie
+    enum: Errwarn
   - name: ppbaud
     description: Push-Pull Baud Rate.
     bit_offset: 8
@@ -354,7 +354,7 @@ fieldset/IthreecAlphaFieldsetCharlie:
     description: Open Drain High Push-Pull.
     bit_offset: 24
     bit_size: 1
-    enum: IthreecAlphaEnumUniformCharlie
+    enum: Errwarn
   - name: skew
     description: Skew.
     bit_offset: 25
@@ -401,12 +401,12 @@ fieldset/IthreecAlphaFieldsetEcho:
     description: Flush To-Bus Buffer or FIFO.
     bit_offset: 0
     bit_size: 1
-    enum: IthreecAlphaEnumQuebec
+    enum: Flushfb2
   - name: flushfb
     description: Flush From-Bus Buffer or FIFO.
     bit_offset: 1
     bit_size: 1
-    enum: IthreecAlphaEnumPapa
+    enum: Flushfb2
   - name: unlock
     description: Unlock.
     bit_offset: 3
@@ -477,47 +477,47 @@ fieldset/IthreecAlphaFieldsetHotel:
     description: Not Acknowledge Error.
     bit_offset: 2
     bit_size: 1
-    enum: IthreecAlphaEnumBravoBravo
+    enum: Hcrc
   - name: wrabt
     description: Write Abort Error.
     bit_offset: 3
     bit_size: 1
-    enum: IthreecAlphaEnumHotelFoxtrot
+    enum: Hcrc
   - name: hpar
     description: High Data Rate Parity.
     bit_offset: 9
     bit_size: 1
-    enum: IthreecAlphaEnumAlphaBravo
+    enum: Hcrc
   - name: hcrc
     description: High Data Rate CRC Error.
     bit_offset: 10
     bit_size: 1
-    enum: IthreecAlphaEnumZuluAlpha
+    enum: Hcrc
   - name: oread
     description: Overread Error.
     bit_offset: 16
     bit_size: 1
-    enum: IthreecAlphaEnumCharlieBravo
+    enum: Hcrc
   - name: owrite
     description: Overwrite Error.
     bit_offset: 17
     bit_size: 1
-    enum: IthreecAlphaEnumDeltaBravo
+    enum: Hcrc
   - name: msgerr
     description: Message Error.
     bit_offset: 18
     bit_size: 1
-    enum: IthreecAlphaEnumCharlieCharlie
+    enum: Hcrc
   - name: invreq
     description: Invalid Request Error.
     bit_offset: 19
     bit_size: 1
-    enum: IthreecAlphaEnumKiloAlpha
+    enum: Hcrc
   - name: timeout
     description: Timeout Error.
     bit_offset: 20
     bit_size: 1
-    enum: IthreecAlphaEnumCharlieFoxtrot
+    enum: Hcrc
 fieldset/IthreecAlphaFieldsetIndia:
   description: Controller In-band Interrupt Registry and Rules.
   fields:
@@ -558,42 +558,42 @@ fieldset/IthreecAlphaFieldsetJuliet:
     description: SLVSTART Interrupt Enable Clear.
     bit_offset: 8
     bit_size: 1
-    enum: IthreecAlphaEnumKiloBravo
+    enum: Complete
   - name: mctrldone
     description: MCTRLDONE Interrupt Enable Clear.
     bit_offset: 9
     bit_size: 1
-    enum: IthreecAlphaEnumHotelBravo
+    enum: Complete
   - name: complete
     description: COMPLETE Interrupt Enable Clear.
     bit_offset: 10
     bit_size: 1
-    enum: IthreecAlphaEnumEchoBravo
+    enum: Complete
   - name: rxpend
     description: RXPEND Interrupt Enable Clear.
     bit_offset: 11
     bit_size: 1
-    enum: IthreecAlphaEnumJulietBravo
+    enum: Complete
   - name: txnotfull
     description: TXNOTFULL Interrupt Enable Clear.
     bit_offset: 12
     bit_size: 1
-    enum: IthreecAlphaEnumLimaBravo
+    enum: Complete
   - name: ibiwon
     description: IBIWON Interrupt Enable Clear.
     bit_offset: 13
     bit_size: 1
-    enum: IthreecAlphaEnumGolfBravo
+    enum: Complete
   - name: errwarn
     description: ERRWARN Interrupt Enable Clear.
     bit_offset: 15
     bit_size: 1
-    enum: IthreecAlphaEnumFoxtrotBravo
+    enum: Complete
   - name: nowmaster
     description: NOWCONTROLLER Interrupt Enable Clear.
     bit_offset: 19
     bit_size: 1
-    enum: IthreecAlphaEnumIndiaBravo
+    enum: Complete
 fieldset/IthreecAlphaFieldsetKilo:
   description: Controller Interrupt Mask.
   fields:
@@ -601,17 +601,17 @@ fieldset/IthreecAlphaFieldsetKilo:
     description: SLVSTART Interrupt Mask.
     bit_offset: 8
     bit_size: 1
-    enum: IthreecAlphaEnumRomeoBravo
+    enum: Complete2
   - name: mctrldone
     description: MCTRLDONE Interrupt Mask.
     bit_offset: 9
     bit_size: 1
-    enum: IthreecAlphaEnumPapaBravo
+    enum: Complete2
   - name: complete
     description: COMPLETE Interrupt Mask.
     bit_offset: 10
     bit_size: 1
-    enum: IthreecAlphaEnumMikeBravo
+    enum: Complete2
   - name: rxpend
     description: RXPEND Interrupt Mask.
     bit_offset: 11
@@ -620,22 +620,22 @@ fieldset/IthreecAlphaFieldsetKilo:
     description: TXNOTFULL Interrupt Mask.
     bit_offset: 12
     bit_size: 1
-    enum: IthreecAlphaEnumSierraBravo
+    enum: Complete2
   - name: ibiwon
     description: IBIWON Interrupt Mask.
     bit_offset: 13
     bit_size: 1
-    enum: IthreecAlphaEnumOscarBravo
+    enum: Complete2
   - name: errwarn
     description: ERRWARN Interrupt Mask.
     bit_offset: 15
     bit_size: 1
-    enum: IthreecAlphaEnumNovemberBravo
+    enum: Complete2
   - name: nowmaster
     description: NOWCONTROLLER Interrupt Mask.
     bit_offset: 19
     bit_size: 1
-    enum: IthreecAlphaEnumQuebecBravo
+    enum: Complete2
 fieldset/IthreecAlphaFieldsetLima:
   description: Controller Interrupt Set.
   fields:
@@ -643,17 +643,17 @@ fieldset/IthreecAlphaFieldsetLima:
     description: Target Start Interrupt Enable.
     bit_offset: 8
     bit_size: 1
-    enum: IthreecAlphaEnumYankeeBravo
+    enum: Errwarn
   - name: mctrldone
     description: Controller Control Done Interrupt Enable.
     bit_offset: 9
     bit_size: 1
-    enum: IthreecAlphaEnumWhiskeyBravo
+    enum: Errwarn
   - name: complete
     description: Completed Message Interrupt Enable.
     bit_offset: 10
     bit_size: 1
-    enum: IthreecAlphaEnumTangoBravo
+    enum: Errwarn
   - name: rxpend
     description: Receive Pending Interrupt Enable.
     bit_offset: 11
@@ -662,30 +662,30 @@ fieldset/IthreecAlphaFieldsetLima:
     description: Transmit Buffer/FIFO Not Full Interrupt Enable.
     bit_offset: 12
     bit_size: 1
-    enum: IthreecAlphaEnumZuluBravo
+    enum: Errwarn
   - name: ibiwon
     description: IBI Won Interrupt Enable.
     bit_offset: 13
     bit_size: 1
-    enum: IthreecAlphaEnumVictorBravo
+    enum: Errwarn
   - name: errwarn
     description: Error or Warning (ERRWARN) Interrupt Enable.
     bit_offset: 15
     bit_size: 1
-    enum: IthreecAlphaEnumUniformBravo
+    enum: Errwarn
   - name: nowmaster
     description: Now Controller Interrupt Enable.
     bit_offset: 19
     bit_size: 1
-    enum: IthreecAlphaEnumXrayBravo
-fieldset/IthreecAlphaFieldsetMike:
+    enum: Errwarn
+fieldset/Mrdatab2:
   description: Controller Read Data Byte.
   fields:
   - name: value
     description: Value.
     bit_offset: 0
     bit_size: 8
-fieldset/IthreecAlphaFieldsetNovember:
+fieldset/Mrdatah2:
   description: Controller Read Data Halfword.
   fields:
   - name: lsb
@@ -696,14 +696,7 @@ fieldset/IthreecAlphaFieldsetNovember:
     description: High Byte.
     bit_offset: 8
     bit_size: 8
-fieldset/IthreecAlphaFieldsetOscar:
-  description: Controller Read Message in DDR mode.
-  fields:
-  - name: data
-    description: Data.
-    bit_offset: 0
-    bit_size: 16
-fieldset/IthreecAlphaFieldsetPapa:
+fieldset/MrmsgDdr2:
   description: Controller Read Message in SDR mode.
   fields:
   - name: data
@@ -788,19 +781,12 @@ fieldset/IthreecAlphaFieldsetRomeo:
     description: End of Message.
     bit_offset: 8
     bit_size: 1
-    enum: IthreecAlphaEnumMikeCharlie
+    enum: End
   - name: end_also
     description: End of Message ALSO.
     bit_offset: 16
     bit_size: 1
-    enum: IthreecAlphaEnumNovemberCharlie
-fieldset/IthreecAlphaFieldsetSierra:
-  description: Controller Write Byte Data 1 (to Bus).
-  fields:
-  - name: value
-    description: Value.
-    bit_offset: 0
-    bit_size: 8
+    enum: End
 fieldset/IthreecAlphaFieldsetTango:
   description: Controller Write Data Byte End.
   fields:
@@ -823,7 +809,7 @@ fieldset/IthreecAlphaFieldsetUniform:
     description: End of Message.
     bit_offset: 16
     bit_size: 1
-    enum: IthreecAlphaEnumOscarCharlie
+    enum: End
 fieldset/IthreecAlphaFieldsetVictor:
   description: Controller Write Data Halfword End.
   fields:
@@ -853,8 +839,8 @@ fieldset/IthreecAlphaFieldsetXray:
     description: End of Message.
     bit_offset: 14
     bit_size: 1
-    enum: IthreecAlphaEnumPapaCharlie
-fieldset/IthreecAlphaFieldsetYankee:
+    enum: End
+fieldset/MwmsgDdrData2:
   description: Controller Write Message Data in DDR mode.
   fields:
   - name: data16b
@@ -877,7 +863,7 @@ fieldset/IthreecAlphaFieldsetZulu:
     description: End of SDR Message.
     bit_offset: 8
     bit_size: 1
-    enum: IthreecAlphaEnumRomeoCharlie
+    enum: End
   - name: i2c
     description: I2C.
     bit_offset: 10
@@ -887,13 +873,6 @@ fieldset/IthreecAlphaFieldsetZulu:
     description: Length.
     bit_offset: 11
     bit_size: 5
-fieldset/IthreecAlphaFieldsetAlphaAlpha:
-  description: Controller Write Message Data in SDR mode.
-  fields:
-  - name: data16b
-    description: Data.
-    bit_offset: 0
-    bit_size: 16
 fieldset/IthreecAlphaFieldsetBravoAlpha:
   description: Target Capabilities.
   fields:
@@ -973,32 +952,32 @@ fieldset/IthreecAlphaFieldsetCharlieAlpha:
     description: I2C 10-bit Address.
     bit_offset: 4
     bit_size: 1
-    enum: IthreecAlphaEnumXray
+    enum: I2c10b
   - name: i2crst
     description: I2C Software Reset.
     bit_offset: 5
     bit_size: 1
-    enum: IthreecAlphaEnumZulu
+    enum: I2c10b
   - name: i2cdevid
     description: I2C Device ID.
     bit_offset: 6
     bit_size: 1
-    enum: IthreecAlphaEnumYankee
+    enum: I2c10b
   - name: ibiext
     description: In-Band Interrupt EXTDATA.
     bit_offset: 8
     bit_size: 1
-    enum: IthreecAlphaEnumCharlieAlpha
+    enum: I2c10b
   - name: ibixreg
     description: In-Band Interrupt Extended Register.
     bit_offset: 9
     bit_size: 1
-    enum: IthreecAlphaEnumFoxtrotAlpha
+    enum: I2c10b
   - name: slvrst
     description: Target Reset.
     bit_offset: 17
     bit_size: 1
-    enum: IthreecAlphaEnumDeltaEcho
+    enum: I2c10b
   - name: group
     description: Group.
     bit_offset: 18
@@ -1026,7 +1005,7 @@ fieldset/IthreecAlphaFieldsetDeltaAlpha:
     description: Target Enable.
     bit_offset: 0
     bit_size: 1
-    enum: IthreecAlphaEnumCharlieEcho
+    enum: Errwarn
   - name: nack
     description: Not Acknowledge.
     bit_offset: 1
@@ -1036,7 +1015,7 @@ fieldset/IthreecAlphaFieldsetDeltaAlpha:
     description: Match Start or Stop.
     bit_offset: 2
     bit_size: 1
-    enum: IthreecAlphaEnumOscarAlpha
+    enum: Errwarn
   - name: s0ignore
     description: Ignore TE0 or TE1 Errors.
     bit_offset: 3
@@ -1056,7 +1035,7 @@ fieldset/IthreecAlphaFieldsetDeltaAlpha:
     description: Offline.
     bit_offset: 9
     bit_size: 1
-    enum: IthreecAlphaEnumWhiskeyCharlie
+    enum: Errwarn
   - name: bamatch
     description: Bus Available Match.
     bit_offset: 16
@@ -1077,7 +1056,7 @@ fieldset/IthreecAlphaFieldsetEchoAlpha:
     description: Extended Data.
     bit_offset: 3
     bit_size: 1
-    enum: IthreecAlphaEnumLima
+    enum: Errwarn
   - name: ibidata
     description: In-Band Interrupt Data.
     bit_offset: 8
@@ -1145,12 +1124,12 @@ fieldset/IthreecAlphaFieldsetGolfAlpha:
     description: DMA Read (From-Bus) Trigger.
     bit_offset: 0
     bit_size: 2
-    enum: IthreecAlphaEnumLimaDelta
+    enum: Dmafb
   - name: dmatb
     description: DMA Write (To-Bus) Trigger.
     bit_offset: 2
     bit_size: 2
-    enum: IthreecAlphaEnumMikeDelta
+    enum: Dmafb
   - name: dmawidth
     description: Width of DMA Operations.
     bit_offset: 4
@@ -1364,57 +1343,57 @@ fieldset/IthreecAlphaFieldsetOscarAlpha:
     description: Start Interrupt Enable.
     bit_offset: 8
     bit_size: 1
-    enum: IthreecAlphaEnumAlphaEcho
+    enum: Errwarn
   - name: matched
     description: Match Interrupt Enable.
     bit_offset: 9
     bit_size: 1
-    enum: IthreecAlphaEnumYankeeDelta
+    enum: Errwarn
   - name: stop
     description: Stop Interrupt Enable.
     bit_offset: 10
     bit_size: 1
-    enum: IthreecAlphaEnumBravoEcho
+    enum: Errwarn
   - name: rxpend
     description: Receive Interrupt Enable.
     bit_offset: 11
     bit_size: 1
-    enum: IthreecAlphaEnumZuluDelta
+    enum: Errwarn
   - name: txsend
     description: Transmit Interrupt Enable.
     bit_offset: 12
     bit_size: 1
-    enum: IthreecAlphaEnumDeltaFoxtrot
+    enum: Errwarn
   - name: dachg
     description: Dynamic Address Change Interrupt Enable.
     bit_offset: 13
     bit_size: 1
-    enum: IthreecAlphaEnumVictorDelta
+    enum: Errwarn
   - name: ccc
     description: Common Command Code (CCC) Interrupt Enable.
     bit_offset: 14
     bit_size: 1
-    enum: IthreecAlphaEnumTangoDelta
+    enum: Errwarn
   - name: errwarn
     description: Error or Warning Interrupt Enable.
     bit_offset: 15
     bit_size: 1
-    enum: IthreecAlphaEnumWhiskeyDelta
+    enum: Errwarn
   - name: ddrmatched
     description: Double Data Rate Interrupt Enable.
     bit_offset: 16
     bit_size: 1
-    enum: IthreecAlphaEnumFoxtrot
+    enum: Errwarn
   - name: chandled
     description: Common Command Code (CCC) Interrupt Enable.
     bit_offset: 17
     bit_size: 1
-    enum: IthreecAlphaEnumUniformDelta
+    enum: Errwarn
   - name: event
     description: Event Interrupt Enable.
     bit_offset: 18
     bit_size: 1
-    enum: IthreecAlphaEnumXrayDelta
+    enum: Errwarn
 fieldset/IthreecAlphaFieldsetPapaAlpha:
   description: Map Feature Control 0.
   fields:
@@ -1469,17 +1448,6 @@ fieldset/IthreecAlphaFieldsetSierraAlpha:
   - name: data0
     description: Data 0.
     bit_offset: 0
-    bit_size: 8
-fieldset/IthreecAlphaFieldsetTangoAlpha:
-  description: Target Read Data Halfword.
-  fields:
-  - name: lsb
-    description: Low Byte.
-    bit_offset: 0
-    bit_size: 8
-  - name: msb
-    description: High Byte.
-    bit_offset: 8
     bit_size: 8
 fieldset/IthreecAlphaFieldsetUniformAlpha:
   description: Target Status.
@@ -1587,12 +1555,12 @@ fieldset/IthreecAlphaFieldsetUniformAlpha:
     description: Controller Requests Disable.
     bit_offset: 25
     bit_size: 1
-    enum: IthreecAlphaEnumAlphaCharlie
+    enum: Hjdis2
   - name: hjdis
     description: Hot-Join Disabled.
     bit_offset: 27
     bit_size: 1
-    enum: IthreecAlphaEnumUniform
+    enum: Hjdis2
   - name: actstate
     description: Activity State from Common Command Codes (CCC).
     bit_offset: 28
@@ -1632,20 +1600,13 @@ fieldset/IthreecAlphaFieldsetXrayAlpha:
     description: End.
     bit_offset: 8
     bit_size: 1
-    enum: IthreecAlphaEnumYankeeEcho
+    enum: End
   - name: end_also
     description: End Also.
     bit_offset: 16
     bit_size: 1
-    enum: IthreecAlphaEnumZuluEcho
-fieldset/IthreecAlphaFieldsetYankeeAlpha:
-  description: Target Write Data Byte.
-  fields:
-  - name: data
-    description: Data.
-    bit_offset: 0
-    bit_size: 8
-fieldset/IthreecAlphaFieldsetZuluAlpha:
+    enum: End
+fieldset/Swdatab2:
   description: Target Write Data Byte End.
   fields:
   - name: data
@@ -1667,7 +1628,7 @@ fieldset/IthreecAlphaFieldsetAlphaBravo:
     description: End of Message.
     bit_offset: 16
     bit_size: 1
-    enum: IthreecAlphaEnumAlphaFoxtrot
+    enum: End
 fieldset/IthreecAlphaFieldsetBravoBravo:
   description: Target Write Data Halfword End.
   fields:
@@ -1748,15 +1709,6 @@ enum/IthreecAlphaEnumEcho:
   - name: Vendinfo
     description: GETSTATUS CCC returns the value of SCTRL[VENDINFO].
     value: 8
-enum/IthreecAlphaEnumFoxtrot:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
 enum/IthreecAlphaEnumGolf:
   bit_size: 1
   variants:
@@ -1808,7 +1760,7 @@ enum/IthreecAlphaEnumKilo:
   - name: None
     description: NONE (no event or no pending event).
     value: 0
-enum/IthreecAlphaEnumLima:
+enum/Errwarn:
   bit_size: 1
   variants:
   - name: Disable
@@ -1859,16 +1811,7 @@ enum/IthreecAlphaEnumOscar:
   - name: Fifo8byte
     description: Eight.
     value: 2
-enum/IthreecAlphaEnumPapa:
-  bit_size: 1
-  variants:
-  - name: Flush
-    description: Flush the buffer.
-    value: 1
-  - name: NoAction
-    description: No action.
-    value: 0
-enum/IthreecAlphaEnumQuebec:
+enum/Flushfb2:
   bit_size: 1
   variants:
   - name: Flush
@@ -1910,7 +1853,7 @@ enum/IthreecAlphaEnumTango:
   - name: NoHdr
     description: No HDR modes supported.
     value: 0
-enum/IthreecAlphaEnumUniform:
+enum/Hjdis2:
   bit_size: 1
   variants:
   - name: MrDisabled
@@ -1943,25 +1886,7 @@ enum/IthreecAlphaEnumWhiskey:
   - name: I3cmessage
     description: I3C message.
     value: 0
-enum/IthreecAlphaEnumXray:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Not supported.
-    value: 0
-  - name: Enable
-    description: Supported.
-    value: 1
-enum/IthreecAlphaEnumYankee:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Not supported.
-    value: 0
-  - name: Enable
-    description: Supported.
-    value: 1
-enum/IthreecAlphaEnumZulu:
+enum/I2c10b:
   bit_size: 1
   variants:
   - name: Disable
@@ -2000,15 +1925,6 @@ enum/IthreecAlphaEnumBravoAlpha:
   - name: InterruptsEnabled
     description: Enabled.
     value: 0
-enum/IthreecAlphaEnumCharlieAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Not supported.
-    value: 0
-  - name: Enable
-    description: Supported.
-    value: 1
 enum/IthreecAlphaEnumDeltaAlpha:
   bit_size: 2
   variants:
@@ -2039,15 +1955,6 @@ enum/IthreecAlphaEnumEchoAlpha:
   - name: None
     description: 'NONE (no IBI: this status occurs when MSTATUS[IBIWON] becomes 0).'
     value: 0
-enum/IthreecAlphaEnumFoxtrotAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Not supported.
-    value: 0
-  - name: Enable
-    description: Supported.
-    value: 1
 enum/IthreecAlphaEnumGolfAlpha:
   bit_size: 2
   variants:
@@ -2099,7 +2006,7 @@ enum/IthreecAlphaEnumJulietAlpha:
   - name: Interruptsyes
     description: Supported.
     value: 1
-enum/IthreecAlphaEnumKiloAlpha:
+enum/Hcrc:
   bit_size: 1
   variants:
   - name: Error
@@ -2134,15 +2041,6 @@ enum/IthreecAlphaEnumNovemberAlpha:
     value: 0
   - name: Mastersupported
     description: Supported.
-    value: 1
-enum/IthreecAlphaEnumOscarAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
     value: 1
 enum/IthreecAlphaEnumPapaAlpha:
   bit_size: 1
@@ -2255,52 +2153,7 @@ enum/IthreecAlphaEnumYankeeAlpha:
   - name: Valid
     description: Valid DA assigned.
     value: 1
-enum/IthreecAlphaEnumZuluAlpha:
-  bit_size: 1
-  variants:
-  - name: Error
-    description: Error.
-    value: 1
-  - name: NoError
-    description: No error.
-    value: 0
-enum/IthreecAlphaEnumAlphaBravo:
-  bit_size: 1
-  variants:
-  - name: Error
-    description: Error.
-    value: 1
-  - name: NoError
-    description: No error.
-    value: 0
-enum/IthreecAlphaEnumBravoBravo:
-  bit_size: 1
-  variants:
-  - name: Error
-    description: Error.
-    value: 1
-  - name: NoError
-    description: No error.
-    value: 0
-enum/IthreecAlphaEnumCharlieBravo:
-  bit_size: 1
-  variants:
-  - name: Error
-    description: Error.
-    value: 1
-  - name: NoError
-    description: No error.
-    value: 0
-enum/IthreecAlphaEnumDeltaBravo:
-  bit_size: 1
-  variants:
-  - name: Error
-    description: Error.
-    value: 1
-  - name: NoError
-    description: No error.
-    value: 0
-enum/IthreecAlphaEnumEchoBravo:
+enum/Complete:
   bit_size: 1
   variants:
   - name: Clear
@@ -2309,70 +2162,7 @@ enum/IthreecAlphaEnumEchoBravo:
   - name: None
     description: No effect.
     value: 0
-enum/IthreecAlphaEnumFoxtrotBravo:
-  bit_size: 1
-  variants:
-  - name: Clear
-    description: Interrupt enable cleared.
-    value: 1
-  - name: None
-    description: No effect.
-    value: 0
-enum/IthreecAlphaEnumGolfBravo:
-  bit_size: 1
-  variants:
-  - name: Clear
-    description: Interrupt enable cleared.
-    value: 1
-  - name: None
-    description: No effect.
-    value: 0
-enum/IthreecAlphaEnumHotelBravo:
-  bit_size: 1
-  variants:
-  - name: Clear
-    description: Interrupt enable cleared.
-    value: 1
-  - name: None
-    description: No effect.
-    value: 0
-enum/IthreecAlphaEnumIndiaBravo:
-  bit_size: 1
-  variants:
-  - name: Clear
-    description: Interrupt enable cleared.
-    value: 1
-  - name: None
-    description: No effect.
-    value: 0
-enum/IthreecAlphaEnumJulietBravo:
-  bit_size: 1
-  variants:
-  - name: Clear
-    description: Interrupt enable cleared.
-    value: 1
-  - name: None
-    description: No effect.
-    value: 0
-enum/IthreecAlphaEnumKiloBravo:
-  bit_size: 1
-  variants:
-  - name: Clear
-    description: Interrupt enable cleared.
-    value: 1
-  - name: None
-    description: No effect.
-    value: 0
-enum/IthreecAlphaEnumLimaBravo:
-  bit_size: 1
-  variants:
-  - name: Clear
-    description: Interrupt enable cleared.
-    value: 1
-  - name: None
-    description: No effect.
-    value: 0
-enum/IthreecAlphaEnumMikeBravo:
+enum/Complete2:
   bit_size: 1
   variants:
   - name: Enabled
@@ -2380,132 +2170,6 @@ enum/IthreecAlphaEnumMikeBravo:
     value: 1
   - name: NotEnabled
     description: Disabled.
-    value: 0
-enum/IthreecAlphaEnumNovemberBravo:
-  bit_size: 1
-  variants:
-  - name: Enabled
-    description: Enabled.
-    value: 1
-  - name: NotEnabled
-    description: Disabled.
-    value: 0
-enum/IthreecAlphaEnumOscarBravo:
-  bit_size: 1
-  variants:
-  - name: Enabled
-    description: Enabled.
-    value: 1
-  - name: NotEnabled
-    description: Disabled.
-    value: 0
-enum/IthreecAlphaEnumPapaBravo:
-  bit_size: 1
-  variants:
-  - name: Enabled
-    description: Enabled.
-    value: 1
-  - name: NotEnabled
-    description: Disabled.
-    value: 0
-enum/IthreecAlphaEnumQuebecBravo:
-  bit_size: 1
-  variants:
-  - name: Enabled
-    description: Enabled.
-    value: 1
-  - name: NotEnabled
-    description: Disabled.
-    value: 0
-enum/IthreecAlphaEnumRomeoBravo:
-  bit_size: 1
-  variants:
-  - name: Enabled
-    description: Enabled.
-    value: 1
-  - name: NotEnabled
-    description: Disabled.
-    value: 0
-enum/IthreecAlphaEnumSierraBravo:
-  bit_size: 1
-  variants:
-  - name: Enabled
-    description: Enabled.
-    value: 1
-  - name: NotEnabled
-    description: Disabled.
-    value: 0
-enum/IthreecAlphaEnumTangoBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/IthreecAlphaEnumUniformBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/IthreecAlphaEnumVictorBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/IthreecAlphaEnumWhiskeyBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/IthreecAlphaEnumXrayBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/IthreecAlphaEnumYankeeBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/IthreecAlphaEnumZuluBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/IthreecAlphaEnumAlphaCharlie:
-  bit_size: 1
-  variants:
-  - name: MrDisabled
-    description: Disabled.
-    value: 1
-  - name: MrEnabled
-    description: Enabled.
     value: 0
 enum/IthreecAlphaEnumBravoCharlie:
   bit_size: 1
@@ -2516,15 +2180,6 @@ enum/IthreecAlphaEnumBravoCharlie:
   - name: Enable
     description: MSB is 0.
     value: 1
-enum/IthreecAlphaEnumCharlieCharlie:
-  bit_size: 1
-  variants:
-  - name: Error
-    description: Error.
-    value: 1
-  - name: NoError
-    description: No error.
-    value: 0
 enum/IthreecAlphaEnumDeltaCharlie:
   bit_size: 1
   variants:
@@ -2612,42 +2267,6 @@ enum/IthreecAlphaEnumLimaCharlie:
   - name: MasterOn
     description: CONTROLLER_ON.
     value: 1
-enum/IthreecAlphaEnumMikeCharlie:
-  bit_size: 1
-  variants:
-  - name: End
-    description: End.
-    value: 1
-  - name: NotEnd
-    description: Not the end.
-    value: 0
-enum/IthreecAlphaEnumNovemberCharlie:
-  bit_size: 1
-  variants:
-  - name: End
-    description: End.
-    value: 1
-  - name: NotEnd
-    description: Not the end.
-    value: 0
-enum/IthreecAlphaEnumOscarCharlie:
-  bit_size: 1
-  variants:
-  - name: End
-    description: End.
-    value: 1
-  - name: NotEnd
-    description: Not the end.
-    value: 0
-enum/IthreecAlphaEnumPapaCharlie:
-  bit_size: 1
-  variants:
-  - name: End
-    description: End.
-    value: 1
-  - name: NotEnd
-    description: Not the end.
-    value: 0
 enum/IthreecAlphaEnumQuebecCharlie:
   bit_size: 1
   variants:
@@ -2656,15 +2275,6 @@ enum/IthreecAlphaEnumQuebecCharlie:
     value: 1
   - name: Write
     description: Write.
-    value: 0
-enum/IthreecAlphaEnumRomeoCharlie:
-  bit_size: 1
-  variants:
-  - name: End
-    description: End.
-    value: 1
-  - name: NotEnd
-    description: Not the end.
     value: 0
 enum/IthreecAlphaEnumSierraCharlie:
   bit_size: 1
@@ -2683,33 +2293,6 @@ enum/IthreecAlphaEnumTangoCharlie:
     value: 0
   - name: NoIbibyte
     description: Without mandatory IBI byte.
-    value: 1
-enum/IthreecAlphaEnumUniformCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/IthreecAlphaEnumVictorCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/IthreecAlphaEnumWhiskeyCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
     value: 1
 enum/IthreecAlphaEnumXrayCharlie:
   bit_size: 1
@@ -2876,19 +2459,7 @@ enum/IthreecAlphaEnumKiloDelta:
   - name: Enabled
     description: Can be changed.
     value: 1
-enum/IthreecAlphaEnumLimaDelta:
-  bit_size: 2
-  variants:
-  - name: Enable
-    description: DMA enabled until turned off.
-    value: 2
-  - name: EnableOneFrame
-    description: DMA enabled for one frame.
-    value: 1
-  - name: NotUsed
-    description: DMA not used.
-    value: 0
-enum/IthreecAlphaEnumMikeDelta:
+enum/Dmafb:
   bit_size: 2
   variants:
   - name: Enable
@@ -2957,105 +2528,6 @@ enum/IthreecAlphaEnumSierraDelta:
   - name: NoError
     description: No overwrite error.
     value: 0
-enum/IthreecAlphaEnumTangoDelta:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/IthreecAlphaEnumUniformDelta:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/IthreecAlphaEnumVictorDelta:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/IthreecAlphaEnumWhiskeyDelta:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/IthreecAlphaEnumXrayDelta:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/IthreecAlphaEnumYankeeDelta:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/IthreecAlphaEnumZuluDelta:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/IthreecAlphaEnumAlphaEcho:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/IthreecAlphaEnumBravoEcho:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/IthreecAlphaEnumCharlieEcho:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/IthreecAlphaEnumDeltaEcho:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Not supported.
-    value: 0
-  - name: Enable
-    description: Supported.
-    value: 1
 enum/IthreecAlphaEnumEchoEcho:
   bit_size: 1
   variants:
@@ -3260,25 +2732,7 @@ enum/IthreecAlphaEnumXrayEcho:
   - name: Idle
     description: Not an SDR write.
     value: 0
-enum/IthreecAlphaEnumYankeeEcho:
-  bit_size: 1
-  variants:
-  - name: End
-    description: End.
-    value: 1
-  - name: NotEnd
-    description: Not the end.
-    value: 0
-enum/IthreecAlphaEnumZuluEcho:
-  bit_size: 1
-  variants:
-  - name: End
-    description: End.
-    value: 1
-  - name: NotEnd
-    description: Not the end.
-    value: 0
-enum/IthreecAlphaEnumAlphaFoxtrot:
+enum/End:
   bit_size: 1
   variants:
   - name: End
@@ -3296,24 +2750,6 @@ enum/IthreecAlphaEnumBravoFoxtrot:
   - name: NoError
     description: No terminated error.
     value: 0
-enum/IthreecAlphaEnumCharlieFoxtrot:
-  bit_size: 1
-  variants:
-  - name: Error
-    description: Error.
-    value: 1
-  - name: NoError
-    description: No error.
-    value: 0
-enum/IthreecAlphaEnumDeltaFoxtrot:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
 enum/IthreecAlphaEnumEchoFoxtrot:
   bit_size: 2
   variants:
@@ -3343,13 +2779,4 @@ enum/IthreecAlphaEnumGolfFoxtrot:
     value: 1
   - name: NoError
     description: No underrun; not acknowledged error.
-    value: 0
-enum/IthreecAlphaEnumHotelFoxtrot:
-  bit_size: 1
-  variants:
-  - name: Error
-    description: Error.
-    value: 1
-  - name: NoError
-    description: No error.
     value: 0

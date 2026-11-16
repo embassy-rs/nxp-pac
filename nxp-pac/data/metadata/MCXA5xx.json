@@ -8644,7 +8644,7 @@
     {
       "name": "PORT0",
       "address": "0x400BC000",
-      "block": "mcx/a/a5/PORT",
+      "block": "mcx/common/PORT",
       "signals": [],
       "gate": {
         "enable": "mrcc_glb_cc1",
@@ -8654,7 +8654,7 @@
     {
       "name": "PORT1",
       "address": "0x400BD000",
-      "block": "mcx/a/a5/PORT",
+      "block": "mcx/common/PORT",
       "signals": [],
       "gate": {
         "enable": "mrcc_glb_cc1",
@@ -8664,7 +8664,7 @@
     {
       "name": "PORT2",
       "address": "0x400BE000",
-      "block": "mcx/a/a5/PORT",
+      "block": "mcx/common/PORT",
       "signals": [],
       "gate": {
         "enable": "mrcc_glb_cc1",
@@ -8674,7 +8674,7 @@
     {
       "name": "PORT3",
       "address": "0x400BF000",
-      "block": "mcx/a/a5/PORT",
+      "block": "mcx/common/PORT",
       "signals": [],
       "gate": {
         "enable": "mrcc_glb_cc1",
@@ -8684,7 +8684,7 @@
     {
       "name": "PORT4",
       "address": "0x400C0000",
-      "block": "mcx/a/a5/PORT",
+      "block": "mcx/common/PORT",
       "signals": [],
       "gate": {
         "enable": "mrcc_glb_cc1",
@@ -8694,7 +8694,7 @@
     {
       "name": "PORT5",
       "address": "0x400E3000",
-      "block": "mcx/a/a5/PORT",
+      "block": "mcx/common/PORT",
       "signals": [],
       "gate": {
         "enable": "mrcc_glb_cc1"

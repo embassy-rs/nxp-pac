@@ -1,4 +1,6 @@
+# Shared MCXA2/A5 register block and compatible MCXA/MCXN field definitions.
 block/Port:
+  only_in: '^MCXA'
   description: Port Control.
   items:
   - name: verid
@@ -9,7 +11,7 @@ block/Port:
   - name: gpclr
     description: Global Pin Control Low.
     byte_offset: 16
-    fieldset: Gpclr
+    fieldset: Gpchr
   - name: gpchr
     description: Global Pin Control High.
     byte_offset: 20
@@ -35,21 +37,6 @@ fieldset/Config:
     enum: Range
 fieldset/Gpchr:
   description: Global Pin Control High.
-  fields:
-  - name: gpwd
-    description: Global Pin Write Data.
-    bit_offset: 0
-    bit_size: 16
-  - name: gpwe
-    description: Global Pin Write Enable.
-    bit_offset: 16
-    bit_size: 1
-    array:
-      len: 16
-      stride: 1
-    enum: Gpwe
-fieldset/Gpclr:
-  description: Global Pin Control Low.
   fields:
   - name: gpwd
     description: Global Pin Write Data.

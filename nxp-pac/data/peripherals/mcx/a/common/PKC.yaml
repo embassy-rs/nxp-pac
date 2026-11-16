@@ -35,19 +35,19 @@ block/PkcShared:
   - name: pkc_mode2
     description: Mode register, parameter set 2.
     byte_offset: 32
-    fieldset: PkcMode2
+    fieldset: PkcMode1
   - name: pkc_xyptr2
     description: X+Y pointer register, parameter set 2.
     byte_offset: 36
-    fieldset: PkcXyptr2
+    fieldset: PkcXyptr1
   - name: pkc_zrptr2
     description: Z+R pointer register, parameter set 2.
     byte_offset: 40
-    fieldset: PkcZrptr2
+    fieldset: PkcZrptr1
   - name: pkc_len2
     description: Length register, parameter set 2.
     byte_offset: 44
-    fieldset: PkcLen2
+    fieldset: PkcLen1
   - name: pkc_uptr
     description: Universal pointer FUP program. Do not update while GOANY=1 during an L2 calculation; hardware does not prevent this and the result can be corrupted or a security alarm raised.
     byte_offset: 64
@@ -301,30 +301,8 @@ fieldset/PkcLen1:
     bit_size: 16
   bit_size: 32
   reset_value: 0
-fieldset/PkcLen2:
-  description: Length register, parameter set 2.
-  fields:
-  - name: len
-    description: Operand length.
-    bit_offset: 0
-    bit_size: 16
-  - name: mclen
-    description: Loop counter for microcode pattern.
-    bit_offset: 16
-    bit_size: 16
-  bit_size: 32
-  reset_value: 0
 fieldset/PkcMode1:
   description: Mode register, parameter set 1.
-  fields:
-  - name: mode
-    description: Calculation Mode / MC Start address.
-    bit_offset: 0
-    bit_size: 8
-  bit_size: 32
-  reset_value: 0
-fieldset/PkcMode2:
-  description: Mode register, parameter set 2.
   fields:
   - name: mode
     description: Calculation Mode / MC Start address.
@@ -406,34 +384,8 @@ fieldset/PkcXyptr1:
     bit_size: 16
   bit_size: 32
   reset_value: 0
-fieldset/PkcXyptr2:
-  description: X+Y pointer register, parameter set 2.
-  fields:
-  - name: xptr
-    description: Start address of X operand in PKCRAM with byte granularity.
-    bit_offset: 0
-    bit_size: 16
-  - name: yptr
-    description: Start address of Y operand in PKCRAM with byte granularity.
-    bit_offset: 16
-    bit_size: 16
-  bit_size: 32
-  reset_value: 0
 fieldset/PkcZrptr1:
   description: Z+R pointer register, parameter set 1.
-  fields:
-  - name: zptr
-    description: Start address of Z operand in PKCRAM with byte granularity or constant for calculation modes using CONST.
-    bit_offset: 0
-    bit_size: 16
-  - name: rptr
-    description: Start address of R result in PKCRAM with byte granularity.
-    bit_offset: 16
-    bit_size: 16
-  bit_size: 32
-  reset_value: 0
-fieldset/PkcZrptr2:
-  description: Z+R pointer register, parameter set 2.
   fields:
   - name: zptr
     description: Start address of Z operand in PKCRAM with byte granularity or constant for calculation modes using CONST.

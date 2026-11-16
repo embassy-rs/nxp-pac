@@ -51,7 +51,7 @@ block/I3c:
     description: Target Write Data Byte End.
     byte_offset: 52
     access: Write
-    fieldset: Swdatabe
+    fieldset: Swdatab1
   - name: swdatah
     description: Target Write Data Halfword.
     byte_offset: 56
@@ -71,7 +71,7 @@ block/I3c:
     description: Target Read Data Halfword.
     byte_offset: 72
     access: Read
-    fieldset: Srdatah
+    fieldset: Mrdatah
   - name: swdatab1
     description: Target Write Data Byte.
     byte_offset: 84
@@ -81,7 +81,7 @@ block/I3c:
     description: Target Write Data Halfword.
     byte_offset: 84
     access: Write
-    fieldset: Swdatah1
+    fieldset: MrmsgDdr
   - name: scapabilities2
     description: Target Capabilities 2.
     byte_offset: 92
@@ -196,7 +196,7 @@ block/I3c:
     description: Controller Write Byte Data 1 (to Bus).
     byte_offset: 204
     access: Write
-    fieldset: Mwdatab1
+    fieldset: Mrdatab
   - name: mwdatah1
     description: Controller Write Halfword Data (to Bus).
     byte_offset: 204
@@ -211,12 +211,12 @@ block/I3c:
     description: Controller Write Message Data in SDR mode.
     byte_offset: 208
     access: Write
-    fieldset: MwmsgSdrData
+    fieldset: MwmsgDdrData
   - name: mrmsg_sdr
     description: Controller Read Message in SDR mode.
     byte_offset: 212
     access: Read
-    fieldset: MrmsgSdr
+    fieldset: MrmsgDdr
   - name: mwmsg_ddr_control
     description: 'Controller Write Message in DDR mode: First Control Word.'
     byte_offset: 216
@@ -670,13 +670,6 @@ fieldset/MrmsgDdr:
     description: Data.
     bit_offset: 0
     bit_size: 16
-fieldset/MrmsgSdr:
-  description: Controller Read Message in SDR mode.
-  fields:
-  - name: data
-    description: Data.
-    bit_offset: 0
-    bit_size: 16
 fieldset/Mstatus:
   description: Controller Status.
   fields:
@@ -749,13 +742,6 @@ fieldset/Mwdatab:
     description: End of Message ALSO.
     bit_offset: 16
     bit_size: 1
-fieldset/Mwdatab1:
-  description: Controller Write Byte Data 1 (to Bus).
-  fields:
-  - name: value
-    description: Value.
-    bit_offset: 0
-    bit_size: 8
 fieldset/Mwdatabe:
   description: Controller Write Data Byte End.
   fields:
@@ -846,13 +832,6 @@ fieldset/MwmsgSdrControl:
     description: Length.
     bit_offset: 11
     bit_size: 5
-fieldset/MwmsgSdrData:
-  description: Controller Write Message Data in SDR mode.
-  fields:
-  - name: data16b
-    description: Data.
-    bit_offset: 0
-    bit_size: 16
 fieldset/Scapabilities:
   description: Target Capabilities.
   fields:
@@ -1083,7 +1062,7 @@ fieldset/Sdmactrl:
     description: DMA Write (To-Bus) Trigger.
     bit_offset: 2
     bit_size: 2
-    enum: SdmactrlDmatb
+    enum: SdmactrlDmafb
   - name: dmawidth
     description: Width of DMA Operations.
     bit_offset: 4
@@ -1380,17 +1359,6 @@ fieldset/Srdatab:
     description: Data 0.
     bit_offset: 0
     bit_size: 8
-fieldset/Srdatah:
-  description: Target Read Data Halfword.
-  fields:
-  - name: lsb
-    description: Low Byte.
-    bit_offset: 0
-    bit_size: 8
-  - name: msb
-    description: High Byte.
-    bit_offset: 8
-    bit_size: 8
 fieldset/Sstatus:
   description: Target Status.
   fields:
@@ -1487,7 +1455,7 @@ fieldset/Sstatus:
     description: Controller Requests Disable.
     bit_offset: 25
     bit_size: 1
-    enum: Mrdis
+    enum: Hjdis
   - name: hjdis
     description: Hot-Join Disabled.
     bit_offset: 27
@@ -1543,13 +1511,6 @@ fieldset/Swdatab1:
     description: Data.
     bit_offset: 0
     bit_size: 8
-fieldset/Swdatabe:
-  description: Target Write Data Byte End.
-  fields:
-  - name: data
-    description: Data.
-    bit_offset: 0
-    bit_size: 8
 fieldset/Swdatah:
   description: Target Write Data Halfword.
   fields:
@@ -1565,13 +1526,6 @@ fieldset/Swdatah:
     description: End of Message.
     bit_offset: 16
     bit_size: 1
-fieldset/Swdatah1:
-  description: Target Write Data Halfword.
-  fields:
-  - name: data
-    description: Data.
-    bit_offset: 0
-    bit_size: 16
 fieldset/Swdatahe:
   description: Target Write Data Halfword End.
   fields:
@@ -1991,15 +1945,6 @@ enum/MdmactrlDmawidth:
   - name: HalfWord
     description: Halfword (16 bits).
     value: 2
-enum/Mrdis:
-  bit_size: 1
-  variants:
-  - name: MrEnabled
-    description: Enabled.
-    value: 0
-  - name: MrDisabled
-    description: Disabled.
-    value: 1
 enum/Mstena:
   bit_size: 2
   variants:
@@ -2145,18 +2090,6 @@ enum/SdatactrlTxtrig:
     description: Default (trigger when 1 less than full or less).
     value: 3
 enum/SdmactrlDmafb:
-  bit_size: 2
-  variants:
-  - name: NotUsed
-    description: DMA not used.
-    value: 0
-  - name: EnableOneFrame
-    description: DMA enabled for one frame.
-    value: 1
-  - name: Enable
-    description: DMA enabled until turned off.
-    value: 2
-enum/SdmactrlDmatb:
   bit_size: 2
   variants:
   - name: NotUsed

@@ -129,22 +129,22 @@ fieldset/FmcAlphaFieldsetDelta:
     description: Key n Valid.
     bit_offset: 8
     bit_size: 1
-    enum: FmcAlphaEnumKilo
+    enum: V
   - name: v1
     description: Key n Valid.
     bit_offset: 9
     bit_size: 1
-    enum: FmcAlphaEnumLima
+    enum: V
   - name: v2
     description: Key n Valid.
     bit_offset: 10
     bit_size: 1
-    enum: FmcAlphaEnumMike
+    enum: V
   - name: v3
     description: Key n Valid.
     bit_offset: 11
     bit_size: 1
-    enum: FmcAlphaEnumNovember
+    enum: V
 fieldset/FmcAlphaFieldsetEcho:
   description: Data Remap.
   fields:
@@ -168,162 +168,162 @@ fieldset/FmcAlphaFieldsetFoxtrot:
     description: Block valid enable for encryption/decryption.
     bit_offset: 0
     bit_size: 1
-    enum: FmcAlphaEnumOscar
+    enum: Val
   - name: val1
     description: Block valid enable for encryption/decryption.
     bit_offset: 1
     bit_size: 1
-    enum: FmcAlphaEnumPapa
+    enum: Val
   - name: val2
     description: Block valid enable for encryption/decryption.
     bit_offset: 2
     bit_size: 1
-    enum: FmcAlphaEnumAlphaAlpha
+    enum: Val
   - name: val3
     description: Block valid enable for encryption/decryption.
     bit_offset: 3
     bit_size: 1
-    enum: FmcAlphaEnumLimaAlpha
+    enum: Val
   - name: val4
     description: Block valid enable for encryption/decryption.
     bit_offset: 4
     bit_size: 1
-    enum: FmcAlphaEnumOscarAlpha
+    enum: Val
   - name: val5
     description: Block valid enable for encryption/decryption.
     bit_offset: 5
     bit_size: 1
-    enum: FmcAlphaEnumPapaAlpha
+    enum: Val
   - name: val6
     description: Block valid enable for encryption/decryption.
     bit_offset: 6
     bit_size: 1
-    enum: FmcAlphaEnumQuebecAlpha
+    enum: Val
   - name: val7
     description: Block valid enable for encryption/decryption.
     bit_offset: 7
     bit_size: 1
-    enum: FmcAlphaEnumRomeoAlpha
+    enum: Val
   - name: val8
     description: Block valid enable for encryption/decryption.
     bit_offset: 8
     bit_size: 1
-    enum: FmcAlphaEnumSierraAlpha
+    enum: Val
   - name: val9
     description: Block valid enable for encryption/decryption.
     bit_offset: 9
     bit_size: 1
-    enum: FmcAlphaEnumTangoAlpha
+    enum: Val
   - name: val10
     description: Block valid enable for encryption/decryption.
     bit_offset: 10
     bit_size: 1
-    enum: FmcAlphaEnumQuebec
+    enum: Val
   - name: val11
     description: Block valid enable for encryption/decryption.
     bit_offset: 11
     bit_size: 1
-    enum: FmcAlphaEnumRomeo
+    enum: Val
   - name: val12
     description: Block valid enable for encryption/decryption.
     bit_offset: 12
     bit_size: 1
-    enum: FmcAlphaEnumSierra
+    enum: Val
   - name: val13
     description: Block valid enable for encryption/decryption.
     bit_offset: 13
     bit_size: 1
-    enum: FmcAlphaEnumTango
+    enum: Val
   - name: val14
     description: Block valid enable for encryption/decryption.
     bit_offset: 14
     bit_size: 1
-    enum: FmcAlphaEnumUniform
+    enum: Val
   - name: val15
     description: Block valid enable for encryption/decryption.
     bit_offset: 15
     bit_size: 1
-    enum: FmcAlphaEnumVictor
+    enum: Val
   - name: val16
     description: Block valid enable for encryption/decryption.
     bit_offset: 16
     bit_size: 1
-    enum: FmcAlphaEnumWhiskey
+    enum: Val
   - name: val17
     description: Block valid enable for encryption/decryption.
     bit_offset: 17
     bit_size: 1
-    enum: FmcAlphaEnumXray
+    enum: Val
   - name: val18
     description: Block valid enable for encryption/decryption.
     bit_offset: 18
     bit_size: 1
-    enum: FmcAlphaEnumYankee
+    enum: Val
   - name: val19
     description: Block valid enable for encryption/decryption.
     bit_offset: 19
     bit_size: 1
-    enum: FmcAlphaEnumZulu
+    enum: Val
   - name: val20
     description: Block valid enable for encryption/decryption.
     bit_offset: 20
     bit_size: 1
-    enum: FmcAlphaEnumBravoAlpha
+    enum: Val
   - name: val21
     description: Block valid enable for encryption/decryption.
     bit_offset: 21
     bit_size: 1
-    enum: FmcAlphaEnumCharlieAlpha
+    enum: Val
   - name: val22
     description: Block valid enable for encryption/decryption.
     bit_offset: 22
     bit_size: 1
-    enum: FmcAlphaEnumDeltaAlpha
+    enum: Val
   - name: val23
     description: Block valid enable for encryption/decryption.
     bit_offset: 23
     bit_size: 1
-    enum: FmcAlphaEnumEchoAlpha
+    enum: Val
   - name: val24
     description: Block valid enable for encryption/decryption.
     bit_offset: 24
     bit_size: 1
-    enum: FmcAlphaEnumFoxtrotAlpha
+    enum: Val
   - name: val25
     description: Block valid enable for encryption/decryption.
     bit_offset: 25
     bit_size: 1
-    enum: FmcAlphaEnumGolfAlpha
+    enum: Val
   - name: val26
     description: Block valid enable for encryption/decryption.
     bit_offset: 26
     bit_size: 1
-    enum: FmcAlphaEnumHotelAlpha
+    enum: Val
   - name: val27
     description: Block valid enable for encryption/decryption.
     bit_offset: 27
     bit_size: 1
-    enum: FmcAlphaEnumIndiaAlpha
+    enum: Val
   - name: val28
     description: Block valid enable for encryption/decryption.
     bit_offset: 28
     bit_size: 1
-    enum: FmcAlphaEnumJulietAlpha
+    enum: Val
   - name: val29
     description: Block valid enable for encryption/decryption.
     bit_offset: 29
     bit_size: 1
-    enum: FmcAlphaEnumKiloAlpha
+    enum: Val
   - name: val30
     description: Block valid enable for encryption/decryption.
     bit_offset: 30
     bit_size: 1
-    enum: FmcAlphaEnumMikeAlpha
+    enum: Val
   - name: val31
     description: Block valid enable for encryption/decryption.
     bit_offset: 31
     bit_size: 1
-    enum: FmcAlphaEnumNovemberAlpha
+    enum: Val
 enum/FmcAlphaEnumAlpha:
   bit_size: 1
   variants:
@@ -423,7 +423,7 @@ enum/FmcAlphaEnumJuliet:
   - name: LockEnabled
     description: 'Lock enabled: cannot write to REMAP.'
     value: 1
-enum/FmcAlphaEnumKilo:
+enum/V:
   bit_size: 1
   variants:
   - name: KeyNotvalid
@@ -432,313 +432,7 @@ enum/FmcAlphaEnumKilo:
   - name: KeyValid
     description: Valid.
     value: 1
-enum/FmcAlphaEnumLima:
-  bit_size: 1
-  variants:
-  - name: KeyNotvalid
-    description: Not valid.
-    value: 0
-  - name: KeyValid
-    description: Valid.
-    value: 1
-enum/FmcAlphaEnumMike:
-  bit_size: 1
-  variants:
-  - name: KeyNotvalid
-    description: Not valid.
-    value: 0
-  - name: KeyValid
-    description: Valid.
-    value: 1
-enum/FmcAlphaEnumNovember:
-  bit_size: 1
-  variants:
-  - name: KeyNotvalid
-    description: Not valid.
-    value: 0
-  - name: KeyValid
-    description: Valid.
-    value: 1
-enum/FmcAlphaEnumOscar:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumPapa:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumQuebec:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumRomeo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumSierra:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumTango:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumUniform:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumVictor:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumWhiskey:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumXray:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumYankee:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumZulu:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumAlphaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumBravoAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumCharlieAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumDeltaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumEchoAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumFoxtrotAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumGolfAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumHotelAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumIndiaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumJulietAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumKiloAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumLimaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumMikeAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumNovemberAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumOscarAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumPapaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumQuebecAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumRomeoAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumSierraAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/FmcAlphaEnumTangoAlpha:
+enum/Val:
   bit_size: 1
   variants:
   - name: Disable

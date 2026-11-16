@@ -99,7 +99,7 @@ block/Lpspi:
     description: Receive Data Read Only.
     byte_offset: 120
     access: Read
-    fieldset: Rdror
+    fieldset: Rdr
   - name: tcbr
     only_in: '^MCXA'
     description: Transmit Command Burst.
@@ -114,7 +114,7 @@ block/Lpspi:
       stride: 4
     byte_offset: 1024
     access: Write
-    fieldset: Tdbr
+    fieldset: Rdbr
   - name: rdbr
     only_in: '^MCXA'
     description: Receive Data Burst.
@@ -160,7 +160,7 @@ block/Lpspi:
     only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: DMA Enable. Includes frame-complete request enable.
     byte_offset: 28
-    fieldset: NDer
+    fieldset: Der
   - name: ccr
     only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Clock Configuration. Change only when CR.MEN is zero. SCKDIV and DBT read zero and writes update CCR1 timing fields; a 32-bit write overwrites CCR1. Use the documented byte/halfword sequence when preserving CCR1 fields; do not read-modify-write this alias as independent storage.
@@ -204,7 +204,7 @@ block/Lpspi:
     description: Receive Data Read Only. Returns the first FIFO entry without removing it.
     byte_offset: 120
     access: Read
-    fieldset: Rdror
+    fieldset: Rdr
   - name: tcbr
     only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Transmit Command Burst alias of TCR for DMA command writes; not independent storage.
@@ -219,7 +219,7 @@ block/Lpspi:
       stride: 4
     byte_offset: 1024
     access: Write
-    fieldset: Tdbr
+    fieldset: Rdbr
   - name: rdbr
     only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: Receive Data Burst aliases of RDR for DMA FIFO reads. Reads remove FIFO entries; not independent storage or 128 FIFO entries.
@@ -494,13 +494,6 @@ fieldset/Rdr:
     description: Receive Data.
     bit_offset: 0
     bit_size: 32
-fieldset/Rdror:
-  description: Receive Data Read Only.
-  fields:
-  - name: data
-    description: Receive Data.
-    bit_offset: 0
-    bit_size: 32
 fieldset/Rsr:
   description: Receive Status.
   fields:
@@ -621,13 +614,6 @@ fieldset/Tcr:
     bit_offset: 31
     bit_size: 1
     enum: Cpol
-fieldset/Tdbr:
-  description: Transmit Data Burst.
-  fields:
-  - name: data
-    description: Data.
-    bit_offset: 0
-    bit_size: 32
 fieldset/Tdr:
   description: Transmit Data.
   fields:
@@ -966,15 +952,6 @@ fieldset/NRsr:
   extends: Rsr
   reset_value: 2
   fields: []
-fieldset/NDer:
-  only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
-  extends: Der
-  reset_value: 0
-  fields:
-  - name: fcde
-    description: Frame Complete DMA Enable.
-    bit_offset: 9
-    bit_size: 1
 fieldset/NFcr:
   only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
   description: FIFO Control.

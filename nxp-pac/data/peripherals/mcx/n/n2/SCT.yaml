@@ -112,131 +112,131 @@ block/SctAlpha:
   - name: cap0
     description: Capture Value.
     byte_offset: 256
-    fieldset: SctAlphaFieldsetAlpha
+    fieldset: Cap2
   - name: match0
     description: Match Value.
     byte_offset: 256
-    fieldset: SctAlphaFieldsetXrayAlpha
+    fieldset: Match2
   - name: cap1
     description: Capture Value.
     byte_offset: 260
-    fieldset: SctAlphaFieldsetBravo
+    fieldset: Cap2
   - name: match1
     description: Match Value.
     byte_offset: 260
-    fieldset: SctAlphaFieldsetYankeeAlpha
+    fieldset: Match2
   - name: cap2
     description: Capture Value.
     byte_offset: 264
-    fieldset: SctAlphaFieldsetIndia
+    fieldset: Cap2
   - name: match2
     description: Match Value.
     byte_offset: 264
-    fieldset: SctAlphaFieldsetFoxtrotBravo
+    fieldset: Match2
   - name: cap3
     description: Capture Value.
     byte_offset: 268
-    fieldset: SctAlphaFieldsetJuliet
+    fieldset: Cap2
   - name: match3
     description: Match Value.
     byte_offset: 268
-    fieldset: SctAlphaFieldsetGolfBravo
+    fieldset: Match2
   - name: cap4
     description: Capture Value.
     byte_offset: 272
-    fieldset: SctAlphaFieldsetKilo
+    fieldset: Cap2
   - name: match4
     description: Match Value.
     byte_offset: 272
-    fieldset: SctAlphaFieldsetHotelBravo
+    fieldset: Match2
   - name: cap5
     description: Capture Value.
     byte_offset: 276
-    fieldset: SctAlphaFieldsetLima
+    fieldset: Cap2
   - name: match5
     description: Match Value.
     byte_offset: 276
-    fieldset: SctAlphaFieldsetIndiaBravo
+    fieldset: Match2
   - name: cap6
     description: Capture Value.
     byte_offset: 280
-    fieldset: SctAlphaFieldsetMike
+    fieldset: Cap2
   - name: match6
     description: Match Value.
     byte_offset: 280
-    fieldset: SctAlphaFieldsetJulietBravo
+    fieldset: Match2
   - name: cap7
     description: Capture Value.
     byte_offset: 284
-    fieldset: SctAlphaFieldsetNovember
+    fieldset: Cap2
   - name: match7
     description: Match Value.
     byte_offset: 284
-    fieldset: SctAlphaFieldsetKiloBravo
+    fieldset: Match2
   - name: cap8
     description: Capture Value.
     byte_offset: 288
-    fieldset: SctAlphaFieldsetOscar
+    fieldset: Cap2
   - name: match8
     description: Match Value.
     byte_offset: 288
-    fieldset: SctAlphaFieldsetLimaBravo
+    fieldset: Match2
   - name: cap9
     description: Capture Value.
     byte_offset: 292
-    fieldset: SctAlphaFieldsetPapa
+    fieldset: Cap2
   - name: match9
     description: Match Value.
     byte_offset: 292
-    fieldset: SctAlphaFieldsetMikeBravo
+    fieldset: Match2
   - name: cap10
     description: Capture Value.
     byte_offset: 296
-    fieldset: SctAlphaFieldsetCharlie
+    fieldset: Cap2
   - name: match10
     description: Match Value.
     byte_offset: 296
-    fieldset: SctAlphaFieldsetZuluAlpha
+    fieldset: Match2
   - name: cap11
     description: Capture Value.
     byte_offset: 300
-    fieldset: SctAlphaFieldsetDelta
+    fieldset: Cap2
   - name: match11
     description: Match Value.
     byte_offset: 300
-    fieldset: SctAlphaFieldsetAlphaBravo
+    fieldset: Match2
   - name: cap12
     description: Capture Value.
     byte_offset: 304
-    fieldset: SctAlphaFieldsetEcho
+    fieldset: Cap2
   - name: match12
     description: Match Value.
     byte_offset: 304
-    fieldset: SctAlphaFieldsetBravoBravo
+    fieldset: Match2
   - name: cap13
     description: Capture Value.
     byte_offset: 308
-    fieldset: SctAlphaFieldsetFoxtrot
+    fieldset: Cap2
   - name: match13
     description: Match Value.
     byte_offset: 308
-    fieldset: SctAlphaFieldsetCharlieBravo
+    fieldset: Match2
   - name: cap14
     description: Capture Value.
     byte_offset: 312
-    fieldset: SctAlphaFieldsetGolf
+    fieldset: Cap2
   - name: match14
     description: Match Value.
     byte_offset: 312
-    fieldset: SctAlphaFieldsetDeltaBravo
+    fieldset: Match2
   - name: cap15
     description: Capture Value.
     byte_offset: 316
-    fieldset: SctAlphaFieldsetHotel
+    fieldset: Cap2
   - name: match15
     description: Match Value.
     byte_offset: 316
-    fieldset: SctAlphaFieldsetEchoBravo
+    fieldset: Match2
   - name: fracmat
     description: Fractional Match.
     array:
@@ -247,131 +247,131 @@ block/SctAlpha:
   - name: capctrl0
     description: Capture Control.
     byte_offset: 512
-    fieldset: SctAlphaFieldsetQuebec
+    fieldset: Capctrl
   - name: matchrel0
     description: Match Reload Value.
     byte_offset: 512
-    fieldset: SctAlphaFieldsetNovemberBravo
+    fieldset: Matchrel
   - name: capctrl1
     description: Capture Control.
     byte_offset: 516
-    fieldset: SctAlphaFieldsetRomeo
+    fieldset: Capctrl
   - name: matchrel1
     description: Match Reload Value.
     byte_offset: 516
-    fieldset: SctAlphaFieldsetOscarBravo
+    fieldset: Matchrel
   - name: capctrl2
     description: Capture Control.
     byte_offset: 520
-    fieldset: SctAlphaFieldsetYankee
+    fieldset: Capctrl
   - name: matchrel2
     description: Match Reload Value.
     byte_offset: 520
-    fieldset: SctAlphaFieldsetVictorBravo
+    fieldset: Matchrel
   - name: capctrl3
     description: Capture Control.
     byte_offset: 524
-    fieldset: SctAlphaFieldsetZulu
+    fieldset: Capctrl
   - name: matchrel3
     description: Match Reload Value.
     byte_offset: 524
-    fieldset: SctAlphaFieldsetWhiskeyBravo
+    fieldset: Matchrel
   - name: capctrl4
     description: Capture Control.
     byte_offset: 528
-    fieldset: SctAlphaFieldsetAlphaAlpha
+    fieldset: Capctrl
   - name: matchrel4
     description: Match Reload Value.
     byte_offset: 528
-    fieldset: SctAlphaFieldsetXrayBravo
+    fieldset: Matchrel
   - name: capctrl5
     description: Capture Control.
     byte_offset: 532
-    fieldset: SctAlphaFieldsetBravoAlpha
+    fieldset: Capctrl
   - name: matchrel5
     description: Match Reload Value.
     byte_offset: 532
-    fieldset: SctAlphaFieldsetYankeeBravo
+    fieldset: Matchrel
   - name: capctrl6
     description: Capture Control.
     byte_offset: 536
-    fieldset: SctAlphaFieldsetCharlieAlpha
+    fieldset: Capctrl
   - name: matchrel6
     description: Match Reload Value.
     byte_offset: 536
-    fieldset: SctAlphaFieldsetZuluBravo
+    fieldset: Matchrel
   - name: capctrl7
     description: Capture Control.
     byte_offset: 540
-    fieldset: SctAlphaFieldsetDeltaAlpha
+    fieldset: Capctrl
   - name: matchrel7
     description: Match Reload Value.
     byte_offset: 540
-    fieldset: SctAlphaFieldsetAlphaCharlie
+    fieldset: Matchrel
   - name: capctrl8
     description: Capture Control.
     byte_offset: 544
-    fieldset: SctAlphaFieldsetEchoAlpha
+    fieldset: Capctrl
   - name: matchrel8
     description: Match Reload Value.
     byte_offset: 544
-    fieldset: SctAlphaFieldsetBravoCharlie
+    fieldset: Matchrel
   - name: capctrl9
     description: Capture Control.
     byte_offset: 548
-    fieldset: SctAlphaFieldsetFoxtrotAlpha
+    fieldset: Capctrl
   - name: matchrel9
     description: Match Reload Value.
     byte_offset: 548
-    fieldset: SctAlphaFieldsetCharlieCharlie
+    fieldset: Matchrel
   - name: capctrl10
     description: Capture Control.
     byte_offset: 552
-    fieldset: SctAlphaFieldsetSierra
+    fieldset: Capctrl
   - name: matchrel10
     description: Match Reload Value.
     byte_offset: 552
-    fieldset: SctAlphaFieldsetPapaBravo
+    fieldset: Matchrel
   - name: capctrl11
     description: Capture Control.
     byte_offset: 556
-    fieldset: SctAlphaFieldsetTango
+    fieldset: Capctrl
   - name: matchrel11
     description: Match Reload Value.
     byte_offset: 556
-    fieldset: SctAlphaFieldsetQuebecBravo
+    fieldset: Matchrel
   - name: capctrl12
     description: Capture Control.
     byte_offset: 560
-    fieldset: SctAlphaFieldsetUniform
+    fieldset: Capctrl
   - name: matchrel12
     description: Match Reload Value.
     byte_offset: 560
-    fieldset: SctAlphaFieldsetRomeoBravo
+    fieldset: Matchrel
   - name: capctrl13
     description: Capture Control.
     byte_offset: 564
-    fieldset: SctAlphaFieldsetVictor
+    fieldset: Capctrl
   - name: matchrel13
     description: Match Reload Value.
     byte_offset: 564
-    fieldset: SctAlphaFieldsetSierraBravo
+    fieldset: Matchrel
   - name: capctrl14
     description: Capture Control.
     byte_offset: 568
-    fieldset: SctAlphaFieldsetWhiskey
+    fieldset: Capctrl
   - name: matchrel14
     description: Match Reload Value.
     byte_offset: 568
-    fieldset: SctAlphaFieldsetTangoBravo
+    fieldset: Matchrel
   - name: capctrl15
     description: Capture Control.
     byte_offset: 572
-    fieldset: SctAlphaFieldsetXray
+    fieldset: Capctrl
   - name: matchrel15
     description: Match Reload Value.
     byte_offset: 572
-    fieldset: SctAlphaFieldsetUniformBravo
+    fieldset: Matchrel
   - name: fracmatrel
     description: Fractional Match Reload.
     array:
@@ -393,7 +393,7 @@ block/SctAlpha:
       stride: 8
     byte_offset: 1280
     block: SctAlphaBlockBravo
-fieldset/SctAlphaFieldsetAlpha:
+fieldset/Cap2:
   description: Capture Value.
   fields:
   - name: ca_pn_l
@@ -404,337 +404,7 @@ fieldset/SctAlphaFieldsetAlpha:
     description: Capture High.
     bit_offset: 16
     bit_size: 16
-fieldset/SctAlphaFieldsetBravo:
-  description: Capture Value.
-  fields:
-  - name: ca_pn_l
-    description: Capture Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: ca_pn_h
-    description: Capture High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetCharlie:
-  description: Capture Value.
-  fields:
-  - name: ca_pn_l
-    description: Capture Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: ca_pn_h
-    description: Capture High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetDelta:
-  description: Capture Value.
-  fields:
-  - name: ca_pn_l
-    description: Capture Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: ca_pn_h
-    description: Capture High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetEcho:
-  description: Capture Value.
-  fields:
-  - name: ca_pn_l
-    description: Capture Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: ca_pn_h
-    description: Capture High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetFoxtrot:
-  description: Capture Value.
-  fields:
-  - name: ca_pn_l
-    description: Capture Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: ca_pn_h
-    description: Capture High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetGolf:
-  description: Capture Value.
-  fields:
-  - name: ca_pn_l
-    description: Capture Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: ca_pn_h
-    description: Capture High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetHotel:
-  description: Capture Value.
-  fields:
-  - name: ca_pn_l
-    description: Capture Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: ca_pn_h
-    description: Capture High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetIndia:
-  description: Capture Value.
-  fields:
-  - name: ca_pn_l
-    description: Capture Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: ca_pn_h
-    description: Capture High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetJuliet:
-  description: Capture Value.
-  fields:
-  - name: ca_pn_l
-    description: Capture Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: ca_pn_h
-    description: Capture High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetKilo:
-  description: Capture Value.
-  fields:
-  - name: ca_pn_l
-    description: Capture Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: ca_pn_h
-    description: Capture High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetLima:
-  description: Capture Value.
-  fields:
-  - name: ca_pn_l
-    description: Capture Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: ca_pn_h
-    description: Capture High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetMike:
-  description: Capture Value.
-  fields:
-  - name: ca_pn_l
-    description: Capture Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: ca_pn_h
-    description: Capture High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetNovember:
-  description: Capture Value.
-  fields:
-  - name: ca_pn_l
-    description: Capture Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: ca_pn_h
-    description: Capture High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetOscar:
-  description: Capture Value.
-  fields:
-  - name: ca_pn_l
-    description: Capture Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: ca_pn_h
-    description: Capture High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetPapa:
-  description: Capture Value.
-  fields:
-  - name: ca_pn_l
-    description: Capture Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: ca_pn_h
-    description: Capture High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetQuebec:
-  description: Capture Control.
-  fields:
-  - name: capco_nn_l
-    description: Capture Control Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: capco_nn_h
-    description: Capture Control High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetRomeo:
-  description: Capture Control.
-  fields:
-  - name: capco_nn_l
-    description: Capture Control Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: capco_nn_h
-    description: Capture Control High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetSierra:
-  description: Capture Control.
-  fields:
-  - name: capco_nn_l
-    description: Capture Control Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: capco_nn_h
-    description: Capture Control High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetTango:
-  description: Capture Control.
-  fields:
-  - name: capco_nn_l
-    description: Capture Control Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: capco_nn_h
-    description: Capture Control High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetUniform:
-  description: Capture Control.
-  fields:
-  - name: capco_nn_l
-    description: Capture Control Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: capco_nn_h
-    description: Capture Control High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetVictor:
-  description: Capture Control.
-  fields:
-  - name: capco_nn_l
-    description: Capture Control Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: capco_nn_h
-    description: Capture Control High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetWhiskey:
-  description: Capture Control.
-  fields:
-  - name: capco_nn_l
-    description: Capture Control Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: capco_nn_h
-    description: Capture Control High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetXray:
-  description: Capture Control.
-  fields:
-  - name: capco_nn_l
-    description: Capture Control Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: capco_nn_h
-    description: Capture Control High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetYankee:
-  description: Capture Control.
-  fields:
-  - name: capco_nn_l
-    description: Capture Control Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: capco_nn_h
-    description: Capture Control High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetZulu:
-  description: Capture Control.
-  fields:
-  - name: capco_nn_l
-    description: Capture Control Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: capco_nn_h
-    description: Capture Control High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetAlphaAlpha:
-  description: Capture Control.
-  fields:
-  - name: capco_nn_l
-    description: Capture Control Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: capco_nn_h
-    description: Capture Control High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetBravoAlpha:
-  description: Capture Control.
-  fields:
-  - name: capco_nn_l
-    description: Capture Control Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: capco_nn_h
-    description: Capture Control High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetCharlieAlpha:
-  description: Capture Control.
-  fields:
-  - name: capco_nn_l
-    description: Capture Control Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: capco_nn_h
-    description: Capture Control High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetDeltaAlpha:
-  description: Capture Control.
-  fields:
-  - name: capco_nn_l
-    description: Capture Control Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: capco_nn_h
-    description: Capture Control High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetEchoAlpha:
-  description: Capture Control.
-  fields:
-  - name: capco_nn_l
-    description: Capture Control Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: capco_nn_h
-    description: Capture Control High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetFoxtrotAlpha:
+fieldset/Capctrl:
   description: Capture Control.
   fields:
   - name: capco_nn_l
@@ -752,52 +422,52 @@ fieldset/SctAlphaFieldsetGolfAlpha:
     description: No Change Conflict Event and Interrupt Enable.
     bit_offset: 0
     bit_size: 1
-    enum: SctAlphaEnumUniformAlpha
+    enum: Ncen
   - name: ncen1
     description: No Change Conflict Event and Interrupt Enable.
     bit_offset: 1
     bit_size: 1
-    enum: SctAlphaEnumVictorAlpha
+    enum: Ncen
   - name: ncen2
     description: No Change Conflict Event and Interrupt Enable.
     bit_offset: 2
     bit_size: 1
-    enum: SctAlphaEnumWhiskeyAlpha
+    enum: Ncen
   - name: ncen3
     description: No Change Conflict Event and Interrupt Enable.
     bit_offset: 3
     bit_size: 1
-    enum: SctAlphaEnumXrayAlpha
+    enum: Ncen
   - name: ncen4
     description: No Change Conflict Event and Interrupt Enable.
     bit_offset: 4
     bit_size: 1
-    enum: SctAlphaEnumYankeeAlpha
+    enum: Ncen
   - name: ncen5
     description: No Change Conflict Event and Interrupt Enable.
     bit_offset: 5
     bit_size: 1
-    enum: SctAlphaEnumZuluAlpha
+    enum: Ncen
   - name: ncen6
     description: No Change Conflict Event and Interrupt Enable.
     bit_offset: 6
     bit_size: 1
-    enum: SctAlphaEnumAlphaBravo
+    enum: Ncen
   - name: ncen7
     description: No Change Conflict Event and Interrupt Enable.
     bit_offset: 7
     bit_size: 1
-    enum: SctAlphaEnumBravoBravo
+    enum: Ncen
   - name: ncen8
     description: No Change Conflict Event and Interrupt Enable.
     bit_offset: 8
     bit_size: 1
-    enum: SctAlphaEnumCharlieBravo
+    enum: Ncen
   - name: ncen9
     description: No Change Conflict Event and Interrupt Enable.
     bit_offset: 9
     bit_size: 1
-    enum: SctAlphaEnumDeltaBravo
+    enum: Ncen
 fieldset/SctAlphaFieldsetHotelAlpha:
   description: SCT Configuration.
   fields:
@@ -834,12 +504,12 @@ fieldset/SctAlphaFieldsetHotelAlpha:
     description: Auto Limit Lower.
     bit_offset: 17
     bit_size: 1
-    enum: SctAlphaEnumBravo
+    enum: Ien
   - name: autolimit_h
     description: Auto Limit Higher.
     bit_offset: 18
     bit_size: 1
-    enum: SctAlphaEnumAlpha
+    enum: Ien
 fieldset/SctAlphaFieldsetIndiaAlpha:
   description: Conflict Flag.
   fields:
@@ -847,52 +517,52 @@ fieldset/SctAlphaFieldsetIndiaAlpha:
     description: No Change Conflict Event Flag.
     bit_offset: 0
     bit_size: 1
-    enum: SctAlphaEnumEchoBravo
+    enum: Ncflag
   - name: ncflag1
     description: No Change Conflict Event Flag.
     bit_offset: 1
     bit_size: 1
-    enum: SctAlphaEnumFoxtrotBravo
+    enum: Ncflag
   - name: ncflag2
     description: No Change Conflict Event Flag.
     bit_offset: 2
     bit_size: 1
-    enum: SctAlphaEnumGolfBravo
+    enum: Ncflag
   - name: ncflag3
     description: No Change Conflict Event Flag.
     bit_offset: 3
     bit_size: 1
-    enum: SctAlphaEnumHotelBravo
+    enum: Ncflag
   - name: ncflag4
     description: No Change Conflict Event Flag.
     bit_offset: 4
     bit_size: 1
-    enum: SctAlphaEnumIndiaBravo
+    enum: Ncflag
   - name: ncflag5
     description: No Change Conflict Event Flag.
     bit_offset: 5
     bit_size: 1
-    enum: SctAlphaEnumJulietBravo
+    enum: Ncflag
   - name: ncflag6
     description: No Change Conflict Event Flag.
     bit_offset: 6
     bit_size: 1
-    enum: SctAlphaEnumKiloBravo
+    enum: Ncflag
   - name: ncflag7
     description: No Change Conflict Event Flag.
     bit_offset: 7
     bit_size: 1
-    enum: SctAlphaEnumLimaBravo
+    enum: Ncflag
   - name: ncflag8
     description: No Change Conflict Event Flag.
     bit_offset: 8
     bit_size: 1
-    enum: SctAlphaEnumMikeBravo
+    enum: Ncflag
   - name: ncflag9
     description: No Change Conflict Event Flag.
     bit_offset: 9
     bit_size: 1
-    enum: SctAlphaEnumNovemberBravo
+    enum: Ncflag
   - name: buserrl
     description: Bus Error Low or Unified.
     bit_offset: 30
@@ -919,17 +589,17 @@ fieldset/SctAlphaFieldsetKiloAlpha:
     description: Down Counter Low.
     bit_offset: 0
     bit_size: 1
-    enum: SctAlphaEnumJuliet
+    enum: DownH
   - name: stop_l
     description: Stop Counter Low.
     bit_offset: 1
     bit_size: 1
-    enum: SctAlphaEnumDeltaEcho
+    enum: HaltL
   - name: halt_l
     description: Halt Counter Low.
     bit_offset: 2
     bit_size: 1
-    enum: SctAlphaEnumBravoAlpha
+    enum: HaltL
   - name: clrctr_l
     description: Clear Counter Low.
     bit_offset: 3
@@ -938,7 +608,7 @@ fieldset/SctAlphaFieldsetKiloAlpha:
     description: Bidirectional Select Low.
     bit_offset: 4
     bit_size: 1
-    enum: SctAlphaEnumDelta
+    enum: BidirH
   - name: pre_l
     description: Prescaler for Low Counter.
     bit_offset: 5
@@ -947,12 +617,12 @@ fieldset/SctAlphaFieldsetKiloAlpha:
     description: Down Counter High.
     bit_offset: 16
     bit_size: 1
-    enum: SctAlphaEnumIndia
+    enum: DownH
   - name: stop_h
     description: Stop Counter High.
     bit_offset: 17
     bit_size: 1
-    enum: SctAlphaEnumCharlieEcho
+    enum: HaltL
   - name: halt_h
     description: Halt Counter High.
     bit_offset: 18
@@ -966,7 +636,7 @@ fieldset/SctAlphaFieldsetKiloAlpha:
     description: Bidirectional Select High.
     bit_offset: 20
     bit_size: 1
-    enum: SctAlphaEnumCharlie
+    enum: BidirH
   - name: pre_h
     description: Prescaler for High Counter.
     bit_offset: 21
@@ -1195,82 +865,82 @@ fieldset/SctAlphaFieldsetQuebecAlpha:
     description: Event Interrupt Enable.
     bit_offset: 0
     bit_size: 1
-    enum: SctAlphaEnumDeltaAlpha
+    enum: Ien
   - name: ien1
     description: Event Interrupt Enable.
     bit_offset: 1
     bit_size: 1
-    enum: SctAlphaEnumEchoAlpha
+    enum: Ien
   - name: ien2
     description: Event Interrupt Enable.
     bit_offset: 2
     bit_size: 1
-    enum: SctAlphaEnumLimaAlpha
+    enum: Ien
   - name: ien3
     description: Event Interrupt Enable.
     bit_offset: 3
     bit_size: 1
-    enum: SctAlphaEnumMikeAlpha
+    enum: Ien
   - name: ien4
     description: Event Interrupt Enable.
     bit_offset: 4
     bit_size: 1
-    enum: SctAlphaEnumNovemberAlpha
+    enum: Ien
   - name: ien5
     description: Event Interrupt Enable.
     bit_offset: 5
     bit_size: 1
-    enum: SctAlphaEnumOscarAlpha
+    enum: Ien
   - name: ien6
     description: Event Interrupt Enable.
     bit_offset: 6
     bit_size: 1
-    enum: SctAlphaEnumPapaAlpha
+    enum: Ien
   - name: ien7
     description: Event Interrupt Enable.
     bit_offset: 7
     bit_size: 1
-    enum: SctAlphaEnumQuebecAlpha
+    enum: Ien
   - name: ien8
     description: Event Interrupt Enable.
     bit_offset: 8
     bit_size: 1
-    enum: SctAlphaEnumRomeoAlpha
+    enum: Ien
   - name: ien9
     description: Event Interrupt Enable.
     bit_offset: 9
     bit_size: 1
-    enum: SctAlphaEnumSierraAlpha
+    enum: Ien
   - name: ien10
     description: Event Interrupt Enable.
     bit_offset: 10
     bit_size: 1
-    enum: SctAlphaEnumFoxtrotAlpha
+    enum: Ien
   - name: ien11
     description: Event Interrupt Enable.
     bit_offset: 11
     bit_size: 1
-    enum: SctAlphaEnumGolfAlpha
+    enum: Ien
   - name: ien12
     description: Event Interrupt Enable.
     bit_offset: 12
     bit_size: 1
-    enum: SctAlphaEnumHotelAlpha
+    enum: Ien
   - name: ien13
     description: Event Interrupt Enable.
     bit_offset: 13
     bit_size: 1
-    enum: SctAlphaEnumIndiaAlpha
+    enum: Ien
   - name: ien14
     description: Event Interrupt Enable.
     bit_offset: 14
     bit_size: 1
-    enum: SctAlphaEnumJulietAlpha
+    enum: Ien
   - name: ien15
     description: Event Interrupt Enable.
     bit_offset: 15
     bit_size: 1
-    enum: SctAlphaEnumKiloAlpha
+    enum: Ien
 fieldset/SctAlphaFieldsetRomeoAlpha:
   description: Event Flag.
   fields:
@@ -1278,82 +948,82 @@ fieldset/SctAlphaFieldsetRomeoAlpha:
     description: Event Flag.
     bit_offset: 0
     bit_size: 1
-    enum: SctAlphaEnumKilo
+    enum: Flag
   - name: flag1
     description: Event Flag.
     bit_offset: 1
     bit_size: 1
-    enum: SctAlphaEnumLima
+    enum: Flag
   - name: flag2
     description: Event Flag.
     bit_offset: 2
     bit_size: 1
-    enum: SctAlphaEnumSierra
+    enum: Flag
   - name: flag3
     description: Event Flag.
     bit_offset: 3
     bit_size: 1
-    enum: SctAlphaEnumTango
+    enum: Flag
   - name: flag4
     description: Event Flag.
     bit_offset: 4
     bit_size: 1
-    enum: SctAlphaEnumUniform
+    enum: Flag
   - name: flag5
     description: Event Flag.
     bit_offset: 5
     bit_size: 1
-    enum: SctAlphaEnumVictor
+    enum: Flag
   - name: flag6
     description: Event Flag.
     bit_offset: 6
     bit_size: 1
-    enum: SctAlphaEnumWhiskey
+    enum: Flag
   - name: flag7
     description: Event Flag.
     bit_offset: 7
     bit_size: 1
-    enum: SctAlphaEnumXray
+    enum: Flag
   - name: flag8
     description: Event Flag.
     bit_offset: 8
     bit_size: 1
-    enum: SctAlphaEnumYankee
+    enum: Flag
   - name: flag9
     description: Event Flag.
     bit_offset: 9
     bit_size: 1
-    enum: SctAlphaEnumZulu
+    enum: Flag
   - name: flag10
     description: Event Flag.
     bit_offset: 10
     bit_size: 1
-    enum: SctAlphaEnumMike
+    enum: Flag
   - name: flag11
     description: Event Flag.
     bit_offset: 11
     bit_size: 1
-    enum: SctAlphaEnumNovember
+    enum: Flag
   - name: flag12
     description: Event Flag.
     bit_offset: 12
     bit_size: 1
-    enum: SctAlphaEnumOscar
+    enum: Flag
   - name: flag13
     description: Event Flag.
     bit_offset: 13
     bit_size: 1
-    enum: SctAlphaEnumPapa
+    enum: Flag
   - name: flag14
     description: Event Flag.
     bit_offset: 14
     bit_size: 1
-    enum: SctAlphaEnumQuebec
+    enum: Flag
   - name: flag15
     description: Event Flag.
     bit_offset: 15
     bit_size: 1
-    enum: SctAlphaEnumRomeo
+    enum: Flag
 fieldset/SctAlphaFieldsetSierraAlpha:
   description: Fractional Match.
   fields:
@@ -1529,7 +1199,7 @@ fieldset/SctAlphaFieldsetWhiskeyAlpha:
     description: Limit Event Counter High.
     bit_offset: 16
     bit_size: 16
-fieldset/SctAlphaFieldsetXrayAlpha:
+fieldset/Match2:
   description: Match Value.
   fields:
   - name: matc_hn_l
@@ -1540,337 +1210,7 @@ fieldset/SctAlphaFieldsetXrayAlpha:
     description: Match High.
     bit_offset: 16
     bit_size: 16
-fieldset/SctAlphaFieldsetYankeeAlpha:
-  description: Match Value.
-  fields:
-  - name: matc_hn_l
-    description: Match Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: matc_hn_h
-    description: Match High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetZuluAlpha:
-  description: Match Value.
-  fields:
-  - name: matc_hn_l
-    description: Match Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: matc_hn_h
-    description: Match High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetAlphaBravo:
-  description: Match Value.
-  fields:
-  - name: matc_hn_l
-    description: Match Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: matc_hn_h
-    description: Match High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetBravoBravo:
-  description: Match Value.
-  fields:
-  - name: matc_hn_l
-    description: Match Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: matc_hn_h
-    description: Match High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetCharlieBravo:
-  description: Match Value.
-  fields:
-  - name: matc_hn_l
-    description: Match Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: matc_hn_h
-    description: Match High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetDeltaBravo:
-  description: Match Value.
-  fields:
-  - name: matc_hn_l
-    description: Match Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: matc_hn_h
-    description: Match High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetEchoBravo:
-  description: Match Value.
-  fields:
-  - name: matc_hn_l
-    description: Match Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: matc_hn_h
-    description: Match High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetFoxtrotBravo:
-  description: Match Value.
-  fields:
-  - name: matc_hn_l
-    description: Match Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: matc_hn_h
-    description: Match High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetGolfBravo:
-  description: Match Value.
-  fields:
-  - name: matc_hn_l
-    description: Match Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: matc_hn_h
-    description: Match High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetHotelBravo:
-  description: Match Value.
-  fields:
-  - name: matc_hn_l
-    description: Match Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: matc_hn_h
-    description: Match High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetIndiaBravo:
-  description: Match Value.
-  fields:
-  - name: matc_hn_l
-    description: Match Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: matc_hn_h
-    description: Match High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetJulietBravo:
-  description: Match Value.
-  fields:
-  - name: matc_hn_l
-    description: Match Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: matc_hn_h
-    description: Match High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetKiloBravo:
-  description: Match Value.
-  fields:
-  - name: matc_hn_l
-    description: Match Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: matc_hn_h
-    description: Match High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetLimaBravo:
-  description: Match Value.
-  fields:
-  - name: matc_hn_l
-    description: Match Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: matc_hn_h
-    description: Match High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetMikeBravo:
-  description: Match Value.
-  fields:
-  - name: matc_hn_l
-    description: Match Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: matc_hn_h
-    description: Match High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetNovemberBravo:
-  description: Match Reload Value.
-  fields:
-  - name: reloa_dn_l
-    description: Reload Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: reloa_dn_h
-    description: Reload High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetOscarBravo:
-  description: Match Reload Value.
-  fields:
-  - name: reloa_dn_l
-    description: Reload Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: reloa_dn_h
-    description: Reload High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetPapaBravo:
-  description: Match Reload Value.
-  fields:
-  - name: reloa_dn_l
-    description: Reload Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: reloa_dn_h
-    description: Reload High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetQuebecBravo:
-  description: Match Reload Value.
-  fields:
-  - name: reloa_dn_l
-    description: Reload Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: reloa_dn_h
-    description: Reload High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetRomeoBravo:
-  description: Match Reload Value.
-  fields:
-  - name: reloa_dn_l
-    description: Reload Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: reloa_dn_h
-    description: Reload High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetSierraBravo:
-  description: Match Reload Value.
-  fields:
-  - name: reloa_dn_l
-    description: Reload Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: reloa_dn_h
-    description: Reload High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetTangoBravo:
-  description: Match Reload Value.
-  fields:
-  - name: reloa_dn_l
-    description: Reload Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: reloa_dn_h
-    description: Reload High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetUniformBravo:
-  description: Match Reload Value.
-  fields:
-  - name: reloa_dn_l
-    description: Reload Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: reloa_dn_h
-    description: Reload High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetVictorBravo:
-  description: Match Reload Value.
-  fields:
-  - name: reloa_dn_l
-    description: Reload Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: reloa_dn_h
-    description: Reload High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetWhiskeyBravo:
-  description: Match Reload Value.
-  fields:
-  - name: reloa_dn_l
-    description: Reload Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: reloa_dn_h
-    description: Reload High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetXrayBravo:
-  description: Match Reload Value.
-  fields:
-  - name: reloa_dn_l
-    description: Reload Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: reloa_dn_h
-    description: Reload High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetYankeeBravo:
-  description: Match Reload Value.
-  fields:
-  - name: reloa_dn_l
-    description: Reload Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: reloa_dn_h
-    description: Reload High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetZuluBravo:
-  description: Match Reload Value.
-  fields:
-  - name: reloa_dn_l
-    description: Reload Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: reloa_dn_h
-    description: Reload High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetAlphaCharlie:
-  description: Match Reload Value.
-  fields:
-  - name: reloa_dn_l
-    description: Reload Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: reloa_dn_h
-    description: Reload High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetBravoCharlie:
-  description: Match Reload Value.
-  fields:
-  - name: reloa_dn_l
-    description: Reload Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: reloa_dn_h
-    description: Reload High.
-    bit_offset: 16
-    bit_size: 16
-fieldset/SctAlphaFieldsetCharlieCharlie:
+fieldset/Matchrel:
   description: Match Reload Value.
   fields:
   - name: reloa_dn_l
@@ -1902,52 +1242,52 @@ fieldset/SctAlphaFieldsetFoxtrotCharlie:
     description: Output Low and High.
     bit_offset: 0
     bit_size: 1
-    enum: SctAlphaEnumAlphaCharlie
+    enum: Out2
   - name: out1
     description: Output Low and High.
     bit_offset: 1
     bit_size: 1
-    enum: SctAlphaEnumBravoCharlie
+    enum: Out2
   - name: out2
     description: Output Low and High.
     bit_offset: 2
     bit_size: 1
-    enum: SctAlphaEnumCharlieCharlie
+    enum: Out2
   - name: out3
     description: Output Low and High.
     bit_offset: 3
     bit_size: 1
-    enum: SctAlphaEnumDeltaCharlie
+    enum: Out2
   - name: out4
     description: Output Low and High.
     bit_offset: 4
     bit_size: 1
-    enum: SctAlphaEnumEchoCharlie
+    enum: Out2
   - name: out5
     description: Output Low and High.
     bit_offset: 5
     bit_size: 1
-    enum: SctAlphaEnumFoxtrotCharlie
+    enum: Out2
   - name: out6
     description: Output Low and High.
     bit_offset: 6
     bit_size: 1
-    enum: SctAlphaEnumGolfCharlie
+    enum: Out2
   - name: out7
     description: Output Low and High.
     bit_offset: 7
     bit_size: 1
-    enum: SctAlphaEnumHotelCharlie
+    enum: Out2
   - name: out8
     description: Output Low and High.
     bit_offset: 8
     bit_size: 1
-    enum: SctAlphaEnumIndiaCharlie
+    enum: Out2
   - name: out9
     description: Output Low and High.
     bit_offset: 9
     bit_size: 1
-    enum: SctAlphaEnumJulietCharlie
+    enum: Out2
 fieldset/SctAlphaFieldsetGolfCharlie:
   description: Output Counter Direction Control.
   fields:
@@ -1955,52 +1295,52 @@ fieldset/SctAlphaFieldsetGolfCharlie:
     description: Set and Clear Operation on Output.
     bit_offset: 0
     bit_size: 2
-    enum: SctAlphaEnumRomeoDelta
+    enum: Setclr
   - name: setclr1
     description: Set and Clear Operation on Output.
     bit_offset: 2
     bit_size: 2
-    enum: SctAlphaEnumSierraDelta
+    enum: Setclr
   - name: setclr2
     description: Set and Clear Operation on Output.
     bit_offset: 4
     bit_size: 2
-    enum: SctAlphaEnumTangoDelta
+    enum: Setclr
   - name: setclr3
     description: Set and Clear Operation on Output.
     bit_offset: 6
     bit_size: 2
-    enum: SctAlphaEnumUniformDelta
+    enum: Setclr
   - name: setclr4
     description: Set and Clear Operation on Output.
     bit_offset: 8
     bit_size: 2
-    enum: SctAlphaEnumVictorDelta
+    enum: Setclr
   - name: setclr5
     description: Set and Clear Operation on Output.
     bit_offset: 10
     bit_size: 2
-    enum: SctAlphaEnumWhiskeyDelta
+    enum: Setclr
   - name: setclr6
     description: Set and Clear Operation on Output.
     bit_offset: 12
     bit_size: 2
-    enum: SctAlphaEnumXrayDelta
+    enum: Setclr
   - name: setclr7
     description: Set and Clear Operation on Output.
     bit_offset: 14
     bit_size: 2
-    enum: SctAlphaEnumYankeeDelta
+    enum: Setclr
   - name: setclr8
     description: Set and Clear Operation on Output.
     bit_offset: 16
     bit_size: 2
-    enum: SctAlphaEnumZuluDelta
+    enum: Setclr
   - name: setclr9
     description: Set and Clear Operation on Output.
     bit_offset: 18
     bit_size: 2
-    enum: SctAlphaEnumAlphaEcho
+    enum: Setclr
 fieldset/SctAlphaFieldsetHotelCharlie:
   description: Match and Capture Register Mode.
   fields:
@@ -2008,162 +1348,162 @@ fieldset/SctAlphaFieldsetHotelCharlie:
     description: Register Mode Low.
     bit_offset: 0
     bit_size: 1
-    enum: SctAlphaEnumBravoDelta
+    enum: RegisterMode
   - name: regmod_l1
     description: Register Mode Low.
     bit_offset: 1
     bit_size: 1
-    enum: SctAlphaEnumCharlieDelta
+    enum: RegisterMode
   - name: regmod_l2
     description: Register Mode Low.
     bit_offset: 2
     bit_size: 1
-    enum: SctAlphaEnumJulietDelta
+    enum: RegisterMode
   - name: regmod_l3
     description: Register Mode Low.
     bit_offset: 3
     bit_size: 1
-    enum: SctAlphaEnumKiloDelta
+    enum: RegisterMode
   - name: regmod_l4
     description: Register Mode Low.
     bit_offset: 4
     bit_size: 1
-    enum: SctAlphaEnumLimaDelta
+    enum: RegisterMode
   - name: regmod_l5
     description: Register Mode Low.
     bit_offset: 5
     bit_size: 1
-    enum: SctAlphaEnumMikeDelta
+    enum: RegisterMode
   - name: regmod_l6
     description: Register Mode Low.
     bit_offset: 6
     bit_size: 1
-    enum: SctAlphaEnumNovemberDelta
+    enum: RegisterMode
   - name: regmod_l7
     description: Register Mode Low.
     bit_offset: 7
     bit_size: 1
-    enum: SctAlphaEnumOscarDelta
+    enum: RegisterMode
   - name: regmod_l8
     description: Register Mode Low.
     bit_offset: 8
     bit_size: 1
-    enum: SctAlphaEnumPapaDelta
+    enum: RegisterMode
   - name: regmod_l9
     description: Register Mode Low.
     bit_offset: 9
     bit_size: 1
-    enum: SctAlphaEnumQuebecDelta
+    enum: RegisterMode
   - name: regmod_l10
     description: Register Mode Low.
     bit_offset: 10
     bit_size: 1
-    enum: SctAlphaEnumDeltaDelta
+    enum: RegisterMode
   - name: regmod_l11
     description: Register Mode Low.
     bit_offset: 11
     bit_size: 1
-    enum: SctAlphaEnumEchoDelta
+    enum: RegisterMode
   - name: regmod_l12
     description: Register Mode Low.
     bit_offset: 12
     bit_size: 1
-    enum: SctAlphaEnumFoxtrotDelta
+    enum: RegisterMode
   - name: regmod_l13
     description: Register Mode Low.
     bit_offset: 13
     bit_size: 1
-    enum: SctAlphaEnumGolfDelta
+    enum: RegisterMode
   - name: regmod_l14
     description: Register Mode Low.
     bit_offset: 14
     bit_size: 1
-    enum: SctAlphaEnumHotelDelta
+    enum: RegisterMode
   - name: regmod_l15
     description: Register Mode Low.
     bit_offset: 15
     bit_size: 1
-    enum: SctAlphaEnumIndiaDelta
+    enum: RegisterMode
   - name: regmod_h0
     description: Register Mode High.
     bit_offset: 16
     bit_size: 1
-    enum: SctAlphaEnumLimaCharlie
+    enum: RegisterMode
   - name: regmod_h1
     description: Register Mode High.
     bit_offset: 17
     bit_size: 1
-    enum: SctAlphaEnumMikeCharlie
+    enum: RegisterMode
   - name: regmod_h2
     description: Register Mode High.
     bit_offset: 18
     bit_size: 1
-    enum: SctAlphaEnumTangoCharlie
+    enum: RegisterMode
   - name: regmod_h3
     description: Register Mode High.
     bit_offset: 19
     bit_size: 1
-    enum: SctAlphaEnumUniformCharlie
+    enum: RegisterMode
   - name: regmod_h4
     description: Register Mode High.
     bit_offset: 20
     bit_size: 1
-    enum: SctAlphaEnumVictorCharlie
+    enum: RegisterMode
   - name: regmod_h5
     description: Register Mode High.
     bit_offset: 21
     bit_size: 1
-    enum: SctAlphaEnumWhiskeyCharlie
+    enum: RegisterMode
   - name: regmod_h6
     description: Register Mode High.
     bit_offset: 22
     bit_size: 1
-    enum: SctAlphaEnumXrayCharlie
+    enum: RegisterMode
   - name: regmod_h7
     description: Register Mode High.
     bit_offset: 23
     bit_size: 1
-    enum: SctAlphaEnumYankeeCharlie
+    enum: RegisterMode
   - name: regmod_h8
     description: Register Mode High.
     bit_offset: 24
     bit_size: 1
-    enum: SctAlphaEnumZuluCharlie
+    enum: RegisterMode
   - name: regmod_h9
     description: Register Mode High.
     bit_offset: 25
     bit_size: 1
-    enum: SctAlphaEnumAlphaDelta
+    enum: RegisterMode
   - name: regmod_h10
     description: Register Mode High.
     bit_offset: 26
     bit_size: 1
-    enum: SctAlphaEnumNovemberCharlie
+    enum: RegisterMode
   - name: regmod_h11
     description: Register Mode High.
     bit_offset: 27
     bit_size: 1
-    enum: SctAlphaEnumOscarCharlie
+    enum: RegisterMode
   - name: regmod_h12
     description: Register Mode High.
     bit_offset: 28
     bit_size: 1
-    enum: SctAlphaEnumPapaCharlie
+    enum: RegisterMode
   - name: regmod_h13
     description: Register Mode High.
     bit_offset: 29
     bit_size: 1
-    enum: SctAlphaEnumQuebecCharlie
+    enum: RegisterMode
   - name: regmod_h14
     description: Register Mode High.
     bit_offset: 30
     bit_size: 1
-    enum: SctAlphaEnumRomeoCharlie
+    enum: RegisterMode
   - name: regmod_h15
     description: Register Mode High.
     bit_offset: 31
     bit_size: 1
-    enum: SctAlphaEnumSierraCharlie
+    enum: RegisterMode
 fieldset/SctAlphaFieldsetIndiaCharlie:
   description: Output Conflict Resolution.
   fields:
@@ -2171,52 +1511,52 @@ fieldset/SctAlphaFieldsetIndiaCharlie:
     description: Output Resolution.
     bit_offset: 0
     bit_size: 2
-    enum: SctAlphaEnumQuebecBravo
+    enum: O0res
   - name: o1res
     description: Output Resolution.
     bit_offset: 2
     bit_size: 2
-    enum: SctAlphaEnumRomeoBravo
+    enum: O0res
   - name: o2res
     description: Output Resolution.
     bit_offset: 4
     bit_size: 2
-    enum: SctAlphaEnumSierraBravo
+    enum: O0res
   - name: o3res
     description: Output Resolution.
     bit_offset: 6
     bit_size: 2
-    enum: SctAlphaEnumTangoBravo
+    enum: O0res
   - name: o4res
     description: Output Resolution.
     bit_offset: 8
     bit_size: 2
-    enum: SctAlphaEnumUniformBravo
+    enum: O0res
   - name: o5res
     description: Output Resolution.
     bit_offset: 10
     bit_size: 2
-    enum: SctAlphaEnumVictorBravo
+    enum: O0res
   - name: o6res
     description: Output Resolution.
     bit_offset: 12
     bit_size: 2
-    enum: SctAlphaEnumWhiskeyBravo
+    enum: O0res
   - name: o7res
     description: Output Resolution.
     bit_offset: 14
     bit_size: 2
-    enum: SctAlphaEnumXrayBravo
+    enum: O0res
   - name: o8res
     description: Output Resolution.
     bit_offset: 16
     bit_size: 2
-    enum: SctAlphaEnumYankeeBravo
+    enum: O0res
   - name: o9res
     description: Output Resolution.
     bit_offset: 18
     bit_size: 2
-    enum: SctAlphaEnumZuluBravo
+    enum: O0res
 fieldset/SctAlphaFieldsetJulietCharlie:
   description: Start Event Select.
   fields:
@@ -2250,7 +1590,7 @@ fieldset/SctAlphaFieldsetLimaCharlie:
     description: Stop Event High.
     bit_offset: 16
     bit_size: 16
-enum/SctAlphaEnumAlpha:
+enum/Ien:
   bit_size: 1
   variants:
   - name: Disable
@@ -2259,25 +1599,7 @@ enum/SctAlphaEnumAlpha:
   - name: Enable
     description: Enables.
     value: 1
-enum/SctAlphaEnumBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/SctAlphaEnumCharlie:
-  bit_size: 1
-  variants:
-  - name: Up
-    description: Up.
-    value: 0
-  - name: UpDown
-    description: Up-down.
-    value: 1
-enum/SctAlphaEnumDelta:
+enum/BidirH:
   bit_size: 1
   variants:
   - name: Up
@@ -2379,7 +1701,7 @@ enum/SctAlphaEnumHotel:
   - name: DirectionIndependent
     description: Direction independent (event triggered regardless of the count direction).
     value: 0
-enum/SctAlphaEnumIndia:
+enum/DownH:
   bit_size: 1
   variants:
   - name: Down
@@ -2388,151 +1710,7 @@ enum/SctAlphaEnumIndia:
   - name: Up
     description: Up.
     value: 0
-enum/SctAlphaEnumJuliet:
-  bit_size: 1
-  variants:
-  - name: Down
-    description: Down.
-    value: 1
-  - name: Up
-    description: Up.
-    value: 0
-enum/SctAlphaEnumKilo:
-  bit_size: 1
-  variants:
-  - name: Flag
-    description: Event n flag.
-    value: 1
-  - name: NoFlag
-    description: No flag.
-    value: 0
-enum/SctAlphaEnumLima:
-  bit_size: 1
-  variants:
-  - name: Flag
-    description: Event n flag.
-    value: 1
-  - name: NoFlag
-    description: No flag.
-    value: 0
-enum/SctAlphaEnumMike:
-  bit_size: 1
-  variants:
-  - name: Flag
-    description: Event n flag.
-    value: 1
-  - name: NoFlag
-    description: No flag.
-    value: 0
-enum/SctAlphaEnumNovember:
-  bit_size: 1
-  variants:
-  - name: Flag
-    description: Event n flag.
-    value: 1
-  - name: NoFlag
-    description: No flag.
-    value: 0
-enum/SctAlphaEnumOscar:
-  bit_size: 1
-  variants:
-  - name: Flag
-    description: Event n flag.
-    value: 1
-  - name: NoFlag
-    description: No flag.
-    value: 0
-enum/SctAlphaEnumPapa:
-  bit_size: 1
-  variants:
-  - name: Flag
-    description: Event n flag.
-    value: 1
-  - name: NoFlag
-    description: No flag.
-    value: 0
-enum/SctAlphaEnumQuebec:
-  bit_size: 1
-  variants:
-  - name: Flag
-    description: Event n flag.
-    value: 1
-  - name: NoFlag
-    description: No flag.
-    value: 0
-enum/SctAlphaEnumRomeo:
-  bit_size: 1
-  variants:
-  - name: Flag
-    description: Event n flag.
-    value: 1
-  - name: NoFlag
-    description: No flag.
-    value: 0
-enum/SctAlphaEnumSierra:
-  bit_size: 1
-  variants:
-  - name: Flag
-    description: Event n flag.
-    value: 1
-  - name: NoFlag
-    description: No flag.
-    value: 0
-enum/SctAlphaEnumTango:
-  bit_size: 1
-  variants:
-  - name: Flag
-    description: Event n flag.
-    value: 1
-  - name: NoFlag
-    description: No flag.
-    value: 0
-enum/SctAlphaEnumUniform:
-  bit_size: 1
-  variants:
-  - name: Flag
-    description: Event n flag.
-    value: 1
-  - name: NoFlag
-    description: No flag.
-    value: 0
-enum/SctAlphaEnumVictor:
-  bit_size: 1
-  variants:
-  - name: Flag
-    description: Event n flag.
-    value: 1
-  - name: NoFlag
-    description: No flag.
-    value: 0
-enum/SctAlphaEnumWhiskey:
-  bit_size: 1
-  variants:
-  - name: Flag
-    description: Event n flag.
-    value: 1
-  - name: NoFlag
-    description: No flag.
-    value: 0
-enum/SctAlphaEnumXray:
-  bit_size: 1
-  variants:
-  - name: Flag
-    description: Event n flag.
-    value: 1
-  - name: NoFlag
-    description: No flag.
-    value: 0
-enum/SctAlphaEnumYankee:
-  bit_size: 1
-  variants:
-  - name: Flag
-    description: Event n flag.
-    value: 1
-  - name: NoFlag
-    description: No flag.
-    value: 0
-enum/SctAlphaEnumZulu:
+enum/Flag:
   bit_size: 1
   variants:
   - name: Flag
@@ -2550,15 +1728,6 @@ enum/SctAlphaEnumAlphaAlpha:
   - name: Enable
     description: Enable.
     value: 1
-enum/SctAlphaEnumBravoAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
 enum/SctAlphaEnumCharlieAlpha:
   bit_size: 1
   variants:
@@ -2568,150 +1737,6 @@ enum/SctAlphaEnumCharlieAlpha:
   - name: LCounter
     description: Low counter (selects the L state and the L match register that the MATCHSEL field specifies).
     value: 0
-enum/SctAlphaEnumDeltaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/SctAlphaEnumEchoAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/SctAlphaEnumFoxtrotAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/SctAlphaEnumGolfAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/SctAlphaEnumHotelAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/SctAlphaEnumIndiaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/SctAlphaEnumJulietAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/SctAlphaEnumKiloAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/SctAlphaEnumLimaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/SctAlphaEnumMikeAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/SctAlphaEnumNovemberAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/SctAlphaEnumOscarAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/SctAlphaEnumPapaAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/SctAlphaEnumQuebecAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/SctAlphaEnumRomeoAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/SctAlphaEnumSierraAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
 enum/SctAlphaEnumTangoAlpha:
   bit_size: 2
   variants:
@@ -2727,7 +1752,7 @@ enum/SctAlphaEnumTangoAlpha:
   - name: Rise
     description: Rise.
     value: 1
-enum/SctAlphaEnumUniformAlpha:
+enum/Ncen:
   bit_size: 1
   variants:
   - name: Interrupt
@@ -2736,169 +1761,7 @@ enum/SctAlphaEnumUniformAlpha:
   - name: NoInterrupt
     description: No interrupt.
     value: 0
-enum/SctAlphaEnumVictorAlpha:
-  bit_size: 1
-  variants:
-  - name: Interrupt
-    description: Interrupt.
-    value: 1
-  - name: NoInterrupt
-    description: No interrupt.
-    value: 0
-enum/SctAlphaEnumWhiskeyAlpha:
-  bit_size: 1
-  variants:
-  - name: Interrupt
-    description: Interrupt.
-    value: 1
-  - name: NoInterrupt
-    description: No interrupt.
-    value: 0
-enum/SctAlphaEnumXrayAlpha:
-  bit_size: 1
-  variants:
-  - name: Interrupt
-    description: Interrupt.
-    value: 1
-  - name: NoInterrupt
-    description: No interrupt.
-    value: 0
-enum/SctAlphaEnumYankeeAlpha:
-  bit_size: 1
-  variants:
-  - name: Interrupt
-    description: Interrupt.
-    value: 1
-  - name: NoInterrupt
-    description: No interrupt.
-    value: 0
-enum/SctAlphaEnumZuluAlpha:
-  bit_size: 1
-  variants:
-  - name: Interrupt
-    description: Interrupt.
-    value: 1
-  - name: NoInterrupt
-    description: No interrupt.
-    value: 0
-enum/SctAlphaEnumAlphaBravo:
-  bit_size: 1
-  variants:
-  - name: Interrupt
-    description: Interrupt.
-    value: 1
-  - name: NoInterrupt
-    description: No interrupt.
-    value: 0
-enum/SctAlphaEnumBravoBravo:
-  bit_size: 1
-  variants:
-  - name: Interrupt
-    description: Interrupt.
-    value: 1
-  - name: NoInterrupt
-    description: No interrupt.
-    value: 0
-enum/SctAlphaEnumCharlieBravo:
-  bit_size: 1
-  variants:
-  - name: Interrupt
-    description: Interrupt.
-    value: 1
-  - name: NoInterrupt
-    description: No interrupt.
-    value: 0
-enum/SctAlphaEnumDeltaBravo:
-  bit_size: 1
-  variants:
-  - name: Interrupt
-    description: Interrupt.
-    value: 1
-  - name: NoInterrupt
-    description: No interrupt.
-    value: 0
-enum/SctAlphaEnumEchoBravo:
-  bit_size: 1
-  variants:
-  - name: NcConflict
-    description: Occurred.
-    value: 1
-  - name: NoNcConflict
-    description: Did not occur.
-    value: 0
-enum/SctAlphaEnumFoxtrotBravo:
-  bit_size: 1
-  variants:
-  - name: NcConflict
-    description: Occurred.
-    value: 1
-  - name: NoNcConflict
-    description: Did not occur.
-    value: 0
-enum/SctAlphaEnumGolfBravo:
-  bit_size: 1
-  variants:
-  - name: NcConflict
-    description: Occurred.
-    value: 1
-  - name: NoNcConflict
-    description: Did not occur.
-    value: 0
-enum/SctAlphaEnumHotelBravo:
-  bit_size: 1
-  variants:
-  - name: NcConflict
-    description: Occurred.
-    value: 1
-  - name: NoNcConflict
-    description: Did not occur.
-    value: 0
-enum/SctAlphaEnumIndiaBravo:
-  bit_size: 1
-  variants:
-  - name: NcConflict
-    description: Occurred.
-    value: 1
-  - name: NoNcConflict
-    description: Did not occur.
-    value: 0
-enum/SctAlphaEnumJulietBravo:
-  bit_size: 1
-  variants:
-  - name: NcConflict
-    description: Occurred.
-    value: 1
-  - name: NoNcConflict
-    description: Did not occur.
-    value: 0
-enum/SctAlphaEnumKiloBravo:
-  bit_size: 1
-  variants:
-  - name: NcConflict
-    description: Occurred.
-    value: 1
-  - name: NoNcConflict
-    description: Did not occur.
-    value: 0
-enum/SctAlphaEnumLimaBravo:
-  bit_size: 1
-  variants:
-  - name: NcConflict
-    description: Occurred.
-    value: 1
-  - name: NoNcConflict
-    description: Did not occur.
-    value: 0
-enum/SctAlphaEnumMikeBravo:
-  bit_size: 1
-  variants:
-  - name: NcConflict
-    description: Occurred.
-    value: 1
-  - name: NoNcConflict
-    description: Did not occur.
-    value: 0
-enum/SctAlphaEnumNovemberBravo:
+enum/Ncflag:
   bit_size: 1
   variants:
   - name: NcConflict
@@ -2925,7 +1788,7 @@ enum/SctAlphaEnumPapaBravo:
   - name: Reload
     description: Reloaded.
     value: 0
-enum/SctAlphaEnumQuebecBravo:
+enum/O0res:
   bit_size: 2
   variants:
   - name: Clear
@@ -2940,223 +1803,7 @@ enum/SctAlphaEnumQuebecBravo:
   - name: ToggleOutput
     description: Toggle output.
     value: 3
-enum/SctAlphaEnumRomeoBravo:
-  bit_size: 2
-  variants:
-  - name: Clear
-    description: Clear output (or set, based on OUTPUTDIRCTRL[SETCLRn]).
-    value: 2
-  - name: NoChange
-    description: No change.
-    value: 0
-  - name: Set
-    description: Set output (or clear, based on OUTPUTDIRCTRL[SETCLRn]).
-    value: 1
-  - name: ToggleOutput
-    description: Toggle output.
-    value: 3
-enum/SctAlphaEnumSierraBravo:
-  bit_size: 2
-  variants:
-  - name: Clear
-    description: Clear output (or set, based on OUTPUTDIRCTRL[SETCLRn]).
-    value: 2
-  - name: NoChange
-    description: No change.
-    value: 0
-  - name: Set
-    description: Set output (or clear, based on OUTPUTDIRCTRL[SETCLRn]).
-    value: 1
-  - name: ToggleOutput
-    description: Toggle output.
-    value: 3
-enum/SctAlphaEnumTangoBravo:
-  bit_size: 2
-  variants:
-  - name: Clear
-    description: Clear output (or set, based on OUTPUTDIRCTRL[SETCLRn]).
-    value: 2
-  - name: NoChange
-    description: No change.
-    value: 0
-  - name: Set
-    description: Set output (or clear, based on OUTPUTDIRCTRL[SETCLRn]).
-    value: 1
-  - name: ToggleOutput
-    description: Toggle output.
-    value: 3
-enum/SctAlphaEnumUniformBravo:
-  bit_size: 2
-  variants:
-  - name: Clear
-    description: Clear output (or set, based on OUTPUTDIRCTRL[SETCLRn]).
-    value: 2
-  - name: NoChange
-    description: No change.
-    value: 0
-  - name: Set
-    description: Set output (or clear, based on OUTPUTDIRCTRL[SETCLRn]).
-    value: 1
-  - name: ToggleOutput
-    description: Toggle output.
-    value: 3
-enum/SctAlphaEnumVictorBravo:
-  bit_size: 2
-  variants:
-  - name: Clear
-    description: Clear output (or set, based on OUTPUTDIRCTRL[SETCLRn]).
-    value: 2
-  - name: NoChange
-    description: No change.
-    value: 0
-  - name: Set
-    description: Set output (or clear, based on OUTPUTDIRCTRL[SETCLRn]).
-    value: 1
-  - name: ToggleOutput
-    description: Toggle output.
-    value: 3
-enum/SctAlphaEnumWhiskeyBravo:
-  bit_size: 2
-  variants:
-  - name: Clear
-    description: Clear output (or set, based on OUTPUTDIRCTRL[SETCLRn]).
-    value: 2
-  - name: NoChange
-    description: No change.
-    value: 0
-  - name: Set
-    description: Set output (or clear, based on OUTPUTDIRCTRL[SETCLRn]).
-    value: 1
-  - name: ToggleOutput
-    description: Toggle output.
-    value: 3
-enum/SctAlphaEnumXrayBravo:
-  bit_size: 2
-  variants:
-  - name: Clear
-    description: Clear output (or set, based on OUTPUTDIRCTRL[SETCLRn]).
-    value: 2
-  - name: NoChange
-    description: No change.
-    value: 0
-  - name: Set
-    description: Set output (or clear, based on OUTPUTDIRCTRL[SETCLRn]).
-    value: 1
-  - name: ToggleOutput
-    description: Toggle output.
-    value: 3
-enum/SctAlphaEnumYankeeBravo:
-  bit_size: 2
-  variants:
-  - name: Clear
-    description: Clear output (or set, based on OUTPUTDIRCTRL[SETCLRn]).
-    value: 2
-  - name: NoChange
-    description: No change.
-    value: 0
-  - name: Set
-    description: Set output (or clear, based on OUTPUTDIRCTRL[SETCLRn]).
-    value: 1
-  - name: ToggleOutput
-    description: Toggle output.
-    value: 3
-enum/SctAlphaEnumZuluBravo:
-  bit_size: 2
-  variants:
-  - name: Clear
-    description: Clear output (or set, based on OUTPUTDIRCTRL[SETCLRn]).
-    value: 2
-  - name: NoChange
-    description: No change.
-    value: 0
-  - name: Set
-    description: Set output (or clear, based on OUTPUTDIRCTRL[SETCLRn]).
-    value: 1
-  - name: ToggleOutput
-    description: Toggle output.
-    value: 3
-enum/SctAlphaEnumAlphaCharlie:
-  bit_size: 1
-  variants:
-  - name: High
-    description: Forces the corresponding output high.
-    value: 1
-  - name: Low
-    description: Forces the corresponding output low.
-    value: 0
-enum/SctAlphaEnumBravoCharlie:
-  bit_size: 1
-  variants:
-  - name: High
-    description: Forces the corresponding output high.
-    value: 1
-  - name: Low
-    description: Forces the corresponding output low.
-    value: 0
-enum/SctAlphaEnumCharlieCharlie:
-  bit_size: 1
-  variants:
-  - name: High
-    description: Forces the corresponding output high.
-    value: 1
-  - name: Low
-    description: Forces the corresponding output low.
-    value: 0
-enum/SctAlphaEnumDeltaCharlie:
-  bit_size: 1
-  variants:
-  - name: High
-    description: Forces the corresponding output high.
-    value: 1
-  - name: Low
-    description: Forces the corresponding output low.
-    value: 0
-enum/SctAlphaEnumEchoCharlie:
-  bit_size: 1
-  variants:
-  - name: High
-    description: Forces the corresponding output high.
-    value: 1
-  - name: Low
-    description: Forces the corresponding output low.
-    value: 0
-enum/SctAlphaEnumFoxtrotCharlie:
-  bit_size: 1
-  variants:
-  - name: High
-    description: Forces the corresponding output high.
-    value: 1
-  - name: Low
-    description: Forces the corresponding output low.
-    value: 0
-enum/SctAlphaEnumGolfCharlie:
-  bit_size: 1
-  variants:
-  - name: High
-    description: Forces the corresponding output high.
-    value: 1
-  - name: Low
-    description: Forces the corresponding output low.
-    value: 0
-enum/SctAlphaEnumHotelCharlie:
-  bit_size: 1
-  variants:
-  - name: High
-    description: Forces the corresponding output high.
-    value: 1
-  - name: Low
-    description: Forces the corresponding output low.
-    value: 0
-enum/SctAlphaEnumIndiaCharlie:
-  bit_size: 1
-  variants:
-  - name: High
-    description: Forces the corresponding output high.
-    value: 1
-  - name: Low
-    description: Forces the corresponding output low.
-    value: 0
-enum/SctAlphaEnumJulietCharlie:
+enum/Out2:
   bit_size: 1
   variants:
   - name: High
@@ -3174,7 +1821,7 @@ enum/SctAlphaEnumKiloCharlie:
   - name: Output
     description: Outputs.
     value: 1
-enum/SctAlphaEnumLimaCharlie:
+enum/RegisterMode:
   bit_size: 1
   variants:
   - name: Capture
@@ -3183,394 +1830,7 @@ enum/SctAlphaEnumLimaCharlie:
   - name: Match
     description: Match.
     value: 0
-enum/SctAlphaEnumMikeCharlie:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumNovemberCharlie:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumOscarCharlie:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumPapaCharlie:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumQuebecCharlie:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumRomeoCharlie:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumSierraCharlie:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumTangoCharlie:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumUniformCharlie:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumVictorCharlie:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumWhiskeyCharlie:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumXrayCharlie:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumYankeeCharlie:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumZuluCharlie:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumAlphaDelta:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumBravoDelta:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumCharlieDelta:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumDeltaDelta:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumEchoDelta:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumFoxtrotDelta:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumGolfDelta:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumHotelDelta:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumIndiaDelta:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumJulietDelta:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumKiloDelta:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumLimaDelta:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumMikeDelta:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumNovemberDelta:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumOscarDelta:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumPapaDelta:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumQuebecDelta:
-  bit_size: 1
-  variants:
-  - name: Capture
-    description: Capture.
-    value: 1
-  - name: Match
-    description: Match.
-    value: 0
-enum/SctAlphaEnumRomeoDelta:
-  bit_size: 2
-  variants:
-  - name: HReversed
-    description: Reversed when counter H is counting down (do not use this value when CONFIG[UNIFY] = 1).
-    value: 2
-  - name: Independent
-    description: Not dependent on the direction of any counter.
-    value: 0
-  - name: LReversed
-    description: Reversed when counter L or the unified counter is counting down.
-    value: 1
-enum/SctAlphaEnumSierraDelta:
-  bit_size: 2
-  variants:
-  - name: HReversed
-    description: Reversed when counter H is counting down (do not use this value when CONFIG[UNIFY] = 1).
-    value: 2
-  - name: Independent
-    description: Not dependent on the direction of any counter.
-    value: 0
-  - name: LReversed
-    description: Reversed when counter L or the unified counter is counting down.
-    value: 1
-enum/SctAlphaEnumTangoDelta:
-  bit_size: 2
-  variants:
-  - name: HReversed
-    description: Reversed when counter H is counting down (do not use this value when CONFIG[UNIFY] = 1).
-    value: 2
-  - name: Independent
-    description: Not dependent on the direction of any counter.
-    value: 0
-  - name: LReversed
-    description: Reversed when counter L or the unified counter is counting down.
-    value: 1
-enum/SctAlphaEnumUniformDelta:
-  bit_size: 2
-  variants:
-  - name: HReversed
-    description: Reversed when counter H is counting down (do not use this value when CONFIG[UNIFY] = 1).
-    value: 2
-  - name: Independent
-    description: Not dependent on the direction of any counter.
-    value: 0
-  - name: LReversed
-    description: Reversed when counter L or the unified counter is counting down.
-    value: 1
-enum/SctAlphaEnumVictorDelta:
-  bit_size: 2
-  variants:
-  - name: HReversed
-    description: Reversed when counter H is counting down (do not use this value when CONFIG[UNIFY] = 1).
-    value: 2
-  - name: Independent
-    description: Not dependent on the direction of any counter.
-    value: 0
-  - name: LReversed
-    description: Reversed when counter L or the unified counter is counting down.
-    value: 1
-enum/SctAlphaEnumWhiskeyDelta:
-  bit_size: 2
-  variants:
-  - name: HReversed
-    description: Reversed when counter H is counting down (do not use this value when CONFIG[UNIFY] = 1).
-    value: 2
-  - name: Independent
-    description: Not dependent on the direction of any counter.
-    value: 0
-  - name: LReversed
-    description: Reversed when counter L or the unified counter is counting down.
-    value: 1
-enum/SctAlphaEnumXrayDelta:
-  bit_size: 2
-  variants:
-  - name: HReversed
-    description: Reversed when counter H is counting down (do not use this value when CONFIG[UNIFY] = 1).
-    value: 2
-  - name: Independent
-    description: Not dependent on the direction of any counter.
-    value: 0
-  - name: LReversed
-    description: Reversed when counter L or the unified counter is counting down.
-    value: 1
-enum/SctAlphaEnumYankeeDelta:
-  bit_size: 2
-  variants:
-  - name: HReversed
-    description: Reversed when counter H is counting down (do not use this value when CONFIG[UNIFY] = 1).
-    value: 2
-  - name: Independent
-    description: Not dependent on the direction of any counter.
-    value: 0
-  - name: LReversed
-    description: Reversed when counter L or the unified counter is counting down.
-    value: 1
-enum/SctAlphaEnumZuluDelta:
-  bit_size: 2
-  variants:
-  - name: HReversed
-    description: Reversed when counter H is counting down (do not use this value when CONFIG[UNIFY] = 1).
-    value: 2
-  - name: Independent
-    description: Not dependent on the direction of any counter.
-    value: 0
-  - name: LReversed
-    description: Reversed when counter L or the unified counter is counting down.
-    value: 1
-enum/SctAlphaEnumAlphaEcho:
+enum/Setclr:
   bit_size: 2
   variants:
   - name: HReversed
@@ -3591,16 +1851,7 @@ enum/SctAlphaEnumBravoEcho:
   - name: Load
     description: Value of STATEV loaded into that of STATE.
     value: 1
-enum/SctAlphaEnumCharlieEcho:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/SctAlphaEnumDeltaEcho:
+enum/HaltL:
   bit_size: 1
   variants:
   - name: Disable

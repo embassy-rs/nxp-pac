@@ -1,3 +1,5 @@
+includes:
+  - ../../common/ADC-fields.yaml
 block/Adc:
   description: ADC.
   items:
@@ -165,7 +167,7 @@ fieldset/Cfg2:
     description: Async SAR settling delay.
     bit_offset: 0
     bit_size: 2
-    enum: AsSettle
+    enum: AsLto
   - name: as_lto
     description: Async SAR latch time out delay.
     bit_offset: 2
@@ -218,7 +220,7 @@ fieldset/Cmdh:
     description: Hardware Average Select.
     bit_offset: 12
     bit_size: 4
-    enum: Avgs
+    enum: CalAvgs
   - name: loop_
     description: Loop Count Select.
     bit_offset: 16
@@ -297,17 +299,6 @@ fieldset/Ctrl:
     bit_offset: 16
     bit_size: 4
     enum: CalAvgs
-fieldset/Cv:
-  description: Compare Value Register.
-  fields:
-  - name: cvl
-    description: Compare Value Low.
-    bit_offset: 0
-    bit_size: 16
-  - name: cvh
-    description: Compare Value High.
-    bit_offset: 16
-    bit_size: 16
 fieldset/De:
   description: DMA Enable Register.
   fields:
@@ -678,93 +669,6 @@ enum/AsLto:
   - name: LongestDelay
     description: Longest delay.
     value: 3
-enum/AsSettle:
-  bit_size: 2
-  variants:
-  - name: ShortestDelay
-    description: Shortest delay.
-    value: 0
-  - name: Mid1Delay
-    description: Mid 1 delay.
-    value: 1
-  - name: Mid2Delay
-    description: Mid 2 delay.
-    value: 2
-  - name: LongestDelay
-    description: Longest delay.
-    value: 3
-enum/Avgs:
-  bit_size: 4
-  variants:
-  - name: NoAverage
-    description: Single conversion.
-    value: 0
-  - name: Average2
-    description: 2 conversions averaged.
-    value: 1
-  - name: Average4
-    description: 4 conversions averaged.
-    value: 2
-  - name: Average8
-    description: 8 conversions averaged.
-    value: 3
-  - name: Average16
-    description: 16 conversions averaged.
-    value: 4
-  - name: Average32
-    description: 32 conversions averaged.
-    value: 5
-  - name: Average64
-    description: 64 conversions averaged.
-    value: 6
-  - name: Average128
-    description: 128 conversions averaged.
-    value: 7
-  - name: Average256
-    description: 256 conversions averaged.
-    value: 8
-  - name: Average512
-    description: 512 conversions averaged.
-    value: 9
-  - name: Average1024
-    description: 1024 conversions averaged.
-    value: 10
-enum/CalAvgs:
-  bit_size: 4
-  variants:
-  - name: NoAverage
-    description: Single conversion.
-    value: 0
-  - name: Average2
-    description: 2 conversions averaged.
-    value: 1
-  - name: Average4
-    description: 4 conversions averaged.
-    value: 2
-  - name: Average8
-    description: 8 conversions averaged.
-    value: 3
-  - name: Average16
-    description: 16 conversions averaged.
-    value: 4
-  - name: Average32
-    description: 32 conversions averaged.
-    value: 5
-  - name: Average64
-    description: 64 conversions averaged.
-    value: 6
-  - name: Average128
-    description: 128 conversions averaged.
-    value: 7
-  - name: Average256
-    description: 256 conversions averaged.
-    value: 8
-  - name: Average512
-    description: 512 conversions averaged.
-    value: 9
-  - name: Average1024
-    description: 1024 conversions averaged.
-    value: 10
 enum/CalRdy:
   bit_size: 1
   variants:
@@ -1185,24 +1089,6 @@ enum/Res:
   - name: Max16Bit
     description: Up to 16-bit single ended resolution supported (and 16-bit differential resolution if VERID[DIFFEN] = 1b).
     value: 1
-enum/Rst:
-  bit_size: 1
-  variants:
-  - name: ReleasedFromReset
-    description: ADC logic is not reset.
-    value: 0
-  - name: HeldInReset
-    description: ADC logic is reset.
-    value: 1
-enum/Rstfifo0:
-  bit_size: 1
-  variants:
-  - name: NoAction
-    description: No effect.
-    value: 0
-  - name: TriggerReset
-    description: FIFO 0 is reset.
-    value: 1
 enum/Sts:
   bit_size: 3
   variants:
@@ -1410,21 +1296,6 @@ enum/Tprictrl:
   - name: FinishSequenceOnPriority
     description: If a higher priority trigger is received during command processing, the current command will be completed (averaging, looping, compare) before servicing the higher priority trigger.
     value: 2
-enum/Trgact:
-  bit_size: 2
-  variants:
-  - name: Trig0
-    description: Command (sequence) associated with Trigger 0 currently being executed.
-    value: 0
-  - name: Trig1
-    description: Command (sequence) associated with Trigger 1 currently being executed.
-    value: 1
-  - name: Trig2
-    description: Command (sequence) associated with Trigger 2 currently being executed.
-    value: 2
-  - name: Trig3
-    description: Command (sequence) associated with Trigger 3 currently being executed.
-    value: 3
 enum/Tsrc:
   bit_size: 2
   variants:

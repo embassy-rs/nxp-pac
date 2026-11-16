@@ -2757,7 +2757,7 @@
     },
     {
       "name": "PORT5",
-      "block": "mcx/n/n2/PORT::PortGolf",
+      "block": "mcx/n/n2/PORT::Port5",
       "address": "0x40042000",
       "signals": []
     },
@@ -9266,7 +9266,7 @@
     },
     {
       "name": "MBC0",
-      "block": "mcx/n/n2/MBC::MbcAlpha",
+      "block": "mcx/n/common/MBC",
       "address": "0x400C7000",
       "signals": []
     },
@@ -12745,7 +12745,7 @@
     },
     {
       "name": "PORT0",
-      "block": "mcx/n/n2/PORT::PortHotel",
+      "block": "mcx/n/n2/PORT::Port0",
       "address": "0x40116000",
       "signals": [],
       "gate": {
@@ -12757,7 +12757,7 @@
     },
     {
       "name": "PORT1",
-      "block": "mcx/n/n2/PORT::PortIndia",
+      "block": "mcx/n/n2/PORT::Port1",
       "address": "0x40117000",
       "signals": [],
       "gate": {
@@ -12769,7 +12769,7 @@
     },
     {
       "name": "PORT2",
-      "block": "mcx/n/n2/PORT::PortDelta",
+      "block": "mcx/n/n2/PORT::Port2",
       "address": "0x40118000",
       "signals": [],
       "gate": {
@@ -12781,7 +12781,7 @@
     },
     {
       "name": "PORT3",
-      "block": "mcx/n/n2/PORT::PortJuliet",
+      "block": "mcx/n/n2/PORT::Port3",
       "address": "0x40119000",
       "signals": [],
       "gate": {
@@ -12793,7 +12793,7 @@
     },
     {
       "name": "PORT4",
-      "block": "mcx/n/n2/PORT::PortFoxtrot",
+      "block": "mcx/n/n2/PORT::Port4",
       "address": "0x4011A000",
       "signals": [],
       "gate": {

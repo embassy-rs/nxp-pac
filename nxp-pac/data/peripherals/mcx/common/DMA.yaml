@@ -573,7 +573,7 @@ block/Dma16:
     description: Management Page Error Status. Read-only summary; acknowledge errors through the channel CH_ES register.
     byte_offset: 4
     access: Read
-    fieldset: MpEs16
+    fieldset: MpEs12
   - name: mp_int
     description: Management Page Interrupt Request Status. Read-only summary of channel interrupts.
     byte_offset: 8
@@ -628,11 +628,6 @@ fieldset/MpCsrEight:
   description: Eight-channel Management Page Control. ACTIVE_ID and ACTIVE are read-only; CX and ECX are cancel commands. Change ERCA, GCLC or GMRC only when all channels are inactive (ACTIVE=0).
   extends: MpCsr8
   reset_value: 0x00310000
-  fields: []
-fieldset/MpEs16:
-  only_in: '^MCXN'
-  description: Read-only Management Page Error Status for sixteen channels.
-  extends: MpEs12
   fields: []
 fieldset/MpInt16:
   only_in: '^MCXN'
