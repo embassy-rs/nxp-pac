@@ -2800,55 +2800,45 @@ fieldset/Ctrl1:
     bit_offset: 0
     bit_size: 3
   - name: lom
-    description: Listen-Only Mode.
+    description: "Listen-Only Mode.\n\nRaw bit values: false (0) = ListenOnlyModeDisabled: Listen-Only mode is deactivated.; true (1) = ListenOnlyModeEnabled: FlexCAN module operates in Listen-Only mode."
     bit_offset: 3
     bit_size: 1
-    enum: Lom
   - name: lbuf
-    description: Lowest Buffer Transmitted First.
+    description: "Lowest Buffer Transmitted First.\n\nRaw bit values: false (0) = HighestBufferFirst: Buffer with highest priority is transmitted first.; true (1) = LowestBufferFirst: Lowest number buffer is transmitted first."
     bit_offset: 4
     bit_size: 1
-    enum: Lbuf
   - name: tsyn
-    description: Timer Sync.
+    description: "Timer Sync.\n\nRaw bit values: false (0) = TimerSyncDisabled: Disable.; true (1) = TimerSyncEnabled: Enable."
     bit_offset: 5
     bit_size: 1
-    enum: Tsyn
   - name: boffrec
-    description: Bus Off Recovery.
+    description: "Bus Off Recovery.\n\nRaw bit values: false (0) = AutoRecoverEnabled: Enabled.; true (1) = AutoRecoverDisabled: Disabled."
     bit_offset: 6
     bit_size: 1
-    enum: Boffrec
   - name: smp
-    description: CAN Bit Sampling.
+    description: "CAN Bit Sampling.\n\nRaw bit values: false (0) = OneSample: One sample is used to determine the bit value.; true (1) = ThreeSample: Three samples are used to determine the value of the received bit: the regular one (sample point) and two preceding samples. A majority rule is used."
     bit_offset: 7
     bit_size: 1
-    enum: Smp
   - name: rwrnmsk
-    description: RX Warning Interrupt Mask.
+    description: "RX Warning Interrupt Mask.\n\nRaw bit values: false (0) = RxWarningIntDisabled: Disabled.; true (1) = RxWarningIntEnabled: Enabled."
     bit_offset: 10
     bit_size: 1
-    enum: Rwrnmsk
   - name: twrnmsk
-    description: TX Warning Interrupt Mask.
+    description: "TX Warning Interrupt Mask.\n\nRaw bit values: false (0) = TxWarningIntDisabled: Disabled.; true (1) = TxWarningIntEnabled: Enabled."
     bit_offset: 11
     bit_size: 1
-    enum: Twrnmsk
   - name: lpb
-    description: Loopback Mode.
+    description: "Loopback Mode.\n\nRaw bit values: false (0) = LoopbackDisabled: Disabled.; true (1) = LoopbackEnabled: Enabled."
     bit_offset: 12
     bit_size: 1
-    enum: Lpb
   - name: errmsk
-    description: Error Interrupt Mask.
+    description: "Error Interrupt Mask.\n\nRaw bit values: false (0) = ErrorIntDisabled: Interrupt disabled.; true (1) = ErrorIntEnabled: Interrupt enabled."
     bit_offset: 14
     bit_size: 1
-    enum: Errmsk
   - name: boffmsk
-    description: Bus Off Interrupt Mask.
+    description: "Bus Off Interrupt Mask.\n\nRaw bit values: false (0) = BusOffIntDisabled: Interrupt disabled.; true (1) = BusOffIntEnabled: Interrupt enabled."
     bit_offset: 15
     bit_size: 1
-    enum: Boffmsk
   - name: pseg2
     description: Phase Segment 2.
     bit_offset: 16
@@ -2904,25 +2894,21 @@ fieldset/Ctrl2:
   description: Control 2.
   fields:
   - name: pes
-    description: Payload Byte and Bit Order Selection.
+    description: "Payload Byte and Bit Order Selection.\n\nRaw bit values: false (0) = BigEnd: Big-endian.; true (1) = LittleEnd: Little-endian."
     bit_offset: 0
     bit_size: 1
-    enum: Pes
   - name: asd
-    description: ACK Suppression Disable.
+    description: "ACK Suppression Disable.\n\nRaw bit values: false (0) = Enable: Enabled.; true (1) = Disable: Disabled."
     bit_offset: 1
     bit_size: 1
-    enum: Asd
   - name: edfltdis
-    description: Edge Filter Disable.
+    description: "Edge Filter Disable.\n\nRaw bit values: false (0) = Enable: Enabled.; true (1) = Disable: Disabled."
     bit_offset: 11
     bit_size: 1
-    enum: Asd
   - name: isocanfden
-    description: ISO CAN FD Enable.
+    description: "ISO CAN FD Enable.\n\nRaw bit values: false (0) = NonIso: Disable.; true (1) = Iso: Enable."
     bit_offset: 12
     bit_size: 1
-    enum: Isocanfden
   - name: bte
     description: Bit Timing Expansion Enable.
     bit_offset: 13
@@ -2932,20 +2918,17 @@ fieldset/Ctrl2:
     bit_offset: 14
     bit_size: 1
   - name: eacen
-    description: Entire Frame Arbitration Field Comparison Enable for RX Message Buffers.
+    description: "Entire Frame Arbitration Field Comparison Enable for RX Message Buffers.\n\nRaw bit values: false (0) = RtrCompareNo: Disable.; true (1) = RtrCompareYes: Enable."
     bit_offset: 16
     bit_size: 1
-    enum: Eacen
   - name: rrs
-    description: Remote Request Storing.
+    description: "Remote Request Storing.\n\nRaw bit values: false (0) = RemoteResponseFrameNotGenerated: Generated.; true (1) = RemoteResponseFrameGenerated: Stored."
     bit_offset: 17
     bit_size: 1
-    enum: Rrs
   - name: mrp
-    description: Message Buffers Reception Priority.
+    description: "Message Buffers Reception Priority.\n\nRaw bit values: false (0) = Id1: Matching starts from Legacy RX FIFO or Enhanced RX FIFO and continues on message buffers.; true (1) = Id3: Matching starts from message buffers and continues on Legacy RX FIFO or Enhanced RX FIFO."
     bit_offset: 18
     bit_size: 1
-    enum: Mrp
   - name: tasd
     description: Transmission Arbitration Start Delay.
     bit_offset: 19
@@ -3112,19 +3095,17 @@ fieldset/Erfsr:
     bit_offset: 17
     bit_size: 1
   - name: erfclr
-    description: Enhanced RX FIFO Clear.
+    description: "Enhanced RX FIFO Clear.\n\nRaw bit values: false (0) = NoEffect: No effect.; true (1) = Clear: Clear enhanced RX FIFO content."
     bit_offset: 27
     bit_size: 1
-    enum: Erfclr
   - name: erfda
     description: Enhanced RX FIFO Data Available Flag.
     bit_offset: 28
     bit_size: 1
   - name: erfwmi
-    description: Enhanced RX FIFO Watermark Indication Flag.
+    description: "Enhanced RX FIFO Watermark Indication Flag.\n\nRaw bit values: false (0) = WatermarkNo: No such occurrence.; true (1) = WatermarkYes: Number of messages in FIFO is greater than the watermark."
     bit_offset: 29
     bit_size: 1
-    enum: Erfwmi
   - name: erfovf
     description: Enhanced RX FIFO Overflow Flag.
     bit_offset: 30
@@ -3160,120 +3141,98 @@ fieldset/Esr1:
     bit_size: 2
     enum: Fltconf
   - name: tx
-    description: FlexCAN In Transmission.
+    description: "FlexCAN In Transmission.\n\nRaw bit values: false (0) = TransmitMessageNo: Not transmitting.; true (1) = TransmitMessageYes: Transmitting."
     bit_offset: 6
     bit_size: 1
-    enum: Tx
   - name: idle
-    description: Idle.
+    description: "Idle.\n\nRaw bit values: false (0) = CanBusNotIdle: Not IDLE.; true (1) = CanBusIdle: IDLE."
     bit_offset: 7
     bit_size: 1
-    enum: Idle
   - name: rxwrn
-    description: RX Error Warning Flag.
+    description: "RX Error Warning Flag.\n\nRaw bit values: false (0) = RxerrcntLt96: No such occurrence.; true (1) = RxerrcntGte96: RXERRCNT is greater than or equal to 96."
     bit_offset: 8
     bit_size: 1
-    enum: Rxwrn
   - name: txwrn
-    description: TX Error Warning Flag.
+    description: "TX Error Warning Flag.\n\nRaw bit values: false (0) = TxerrcntLt96: No such occurrence.; true (1) = TxerrcntGte96: TXERRCNT is 96 or greater."
     bit_offset: 9
     bit_size: 1
-    enum: Txwrn
   - name: stferr
-    description: Stuffing Error Flag.
+    description: "Stuffing Error Flag.\n\nRaw bit values: false (0) = StuffingErrorNo: No error.; true (1) = StuffingErrorYes: Error occurred since last read of this register."
     bit_offset: 10
     bit_size: 1
-    enum: Stferr
   - name: frmerr
-    description: Form Error Flag.
+    description: "Form Error Flag.\n\nRaw bit values: false (0) = FormErrorNo: No error.; true (1) = FormErrorYes: Error occurred since last read of this register."
     bit_offset: 11
     bit_size: 1
-    enum: Frmerr
   - name: crcerr
-    description: Cyclic Redundancy Check Error Flag.
+    description: "Cyclic Redundancy Check Error Flag.\n\nRaw bit values: false (0) = CrcErrorNo: No error.; true (1) = CrcErrorYes: Error occurred since last read of this register."
     bit_offset: 12
     bit_size: 1
-    enum: Crcerr
   - name: ackerr
-    description: Acknowledge Error Flag.
+    description: "Acknowledge Error Flag.\n\nRaw bit values: false (0) = AckErrorNo: No error.; true (1) = AckErrorYes: Error occurred since last read of this register."
     bit_offset: 13
     bit_size: 1
-    enum: Ackerr
   - name: bit0err
-    description: Bit0 Error Flag.
+    description: "Bit0 Error Flag.\n\nRaw bit values: false (0) = Bit0ErrorNo: No such occurrence.; true (1) = Bit0ErrorYes: At least one bit sent as dominant is received as recessive."
     bit_offset: 14
     bit_size: 1
-    enum: Bit0err
   - name: bit1err
-    description: Bit1 Error Flag.
+    description: "Bit1 Error Flag.\n\nRaw bit values: false (0) = Bit1ErrorNo: No such occurrence.; true (1) = Bit1ErrorYes: At least one bit sent as recessive is received as dominant."
     bit_offset: 15
     bit_size: 1
-    enum: Bit1err
   - name: rwrnint
-    description: RX Warning Interrupt Flag.
+    description: "RX Warning Interrupt Flag.\n\nRaw bit values: false (0) = RxWarningIntNo: No such occurrence.; true (1) = RxWarningIntYes: RX error counter changed from less than 96 to greater than or equal to 96."
     bit_offset: 16
     bit_size: 1
-    enum: Rwrnint
   - name: twrnint
-    description: TX Warning Interrupt Flag.
+    description: "TX Warning Interrupt Flag.\n\nRaw bit values: false (0) = TxWarningIntNo: No such occurrence.; true (1) = TxWarningIntYes: TX error counter changed from less than 96 to greater than or equal to 96."
     bit_offset: 17
     bit_size: 1
-    enum: Twrnint
   - name: synch
-    description: CAN Synchronization Status Flag.
+    description: "CAN Synchronization Status Flag.\n\nRaw bit values: false (0) = CanBusSyncNo: Not synchronized.; true (1) = CanBusSyncYes: Synchronized."
     bit_offset: 18
     bit_size: 1
-    enum: Synch
   - name: boffdoneint
-    description: Bus Off Done Interrupt Flag.
+    description: "Bus Off Done Interrupt Flag.\n\nRaw bit values: false (0) = BusOffNotDone: No such occurrence.; true (1) = BusOffDone: FlexCAN module has completed Bus Off process."
     bit_offset: 19
     bit_size: 1
-    enum: Boffdoneint
   - name: errint_fast
-    description: Fast Error Interrupt Flag.
+    description: "Fast Error Interrupt Flag.\n\nRaw bit values: false (0) = ErrorsDataPhaseNo: No such occurrence.; true (1) = ErrorsDataPhaseYes: Error flag set in the data phase of CAN FD frames that have BRS = 1."
     bit_offset: 20
     bit_size: 1
-    enum: ErrintFast
   - name: errovr
-    description: Error Overrun Flag.
+    description: "Error Overrun Flag.\n\nRaw bit values: false (0) = OverrunNotOccurred: No overrun.; true (1) = OverrunOccurred: Overrun."
     bit_offset: 21
     bit_size: 1
-    enum: Errovr
   - name: stferr_fast
-    description: Fast Stuffing Error Flag.
+    description: "Fast Stuffing Error Flag.\n\nRaw bit values: false (0) = StuffingErrorNo: No such occurrence.; true (1) = StuffingErrorYes: A stuffing error occurred since last read of this register."
     bit_offset: 26
     bit_size: 1
-    enum: StferrFast
   - name: frmerr_fast
-    description: Fast Form Error Flag.
+    description: "Fast Form Error Flag.\n\nRaw bit values: false (0) = FormErrorNo: No such occurrence.; true (1) = FormErrorYes: A form error occurred since last read of this register."
     bit_offset: 27
     bit_size: 1
-    enum: FrmerrFast
   - name: crcerr_fast
-    description: Fast Cyclic Redundancy Check Error Flag.
+    description: "Fast Cyclic Redundancy Check Error Flag.\n\nRaw bit values: false (0) = CrcErrorNo: No such occurrence.; true (1) = CrcErrorYes: A CRC error occurred since last read of this register."
     bit_offset: 28
     bit_size: 1
-    enum: CrcerrFast
   - name: bit0err_fast
-    description: Fast Bit0 Error Flag.
+    description: "Fast Bit0 Error Flag.\n\nRaw bit values: false (0) = Bit0ErrorNo: No such occurrence.; true (1) = Bit0ErrorYes: At least one bit transmitted as dominant is received as recessive."
     bit_offset: 30
     bit_size: 1
-    enum: Bit0errFast
   - name: bit1err_fast
-    description: Fast Bit1 Error Flag.
+    description: "Fast Bit1 Error Flag.\n\nRaw bit values: false (0) = Bit1ErrorNo: No such occurrence.; true (1) = Bit1ErrorYes: At least one bit transmitted as recessive is received as dominant."
     bit_offset: 31
     bit_size: 1
-    enum: Bit1errFast
   bit_size: 32
   reset_value: 0
 fieldset/Esr2:
   description: Error and Status 2.
   fields:
   - name: imb
-    description: Inactive Message Buffer.
+    description: "Inactive Message Buffer.\n\nRaw bit values: false (0) = InactiveMailboxNo: Message buffer indicated by ESR2[LPTM] is not inactive.; true (1) = InactiveMailboxYes: At least one message buffer is inactive."
     bit_offset: 13
     bit_size: 1
-    enum: Imb
   - name: vps
     description: Valid Priority Status.
     bit_offset: 14
@@ -3292,19 +3251,17 @@ fieldset/Etdc:
     bit_offset: 0
     bit_size: 8
   - name: etdcfail
-    description: Transceiver Delay Compensation Fail.
+    description: "Transceiver Delay Compensation Fail.\n\nRaw bit values: false (0) = InRange: In range.; true (1) = OutOfRange: Out of range."
     bit_offset: 15
     bit_size: 1
-    enum: Tdcfail
   - name: etdcoff
     description: Enhanced Transceiver Delay Compensation Offset.
     bit_offset: 16
     bit_size: 7
   - name: tdmdis
-    description: Transceiver Delay Measurement Disable.
+    description: "Transceiver Delay Measurement Disable.\n\nRaw bit values: false (0) = Enable: Enable.; true (1) = Disable: Disable."
     bit_offset: 30
     bit_size: 1
-    enum: Tdmdis
   - name: etdcen
     description: Transceiver Delay Compensation Enable.
     bit_offset: 31
@@ -3361,10 +3318,9 @@ fieldset/Fdctrl:
     bit_offset: 8
     bit_size: 5
   - name: tdcfail
-    description: Transceiver Delay Compensation Fail.
+    description: "Transceiver Delay Compensation Fail.\n\nRaw bit values: false (0) = InRange: In range.; true (1) = OutOfRange: Out of range."
     bit_offset: 14
     bit_size: 1
-    enum: Tdcfail
   - name: tdcen
     description: Transceiver Delay Compensation Enable.
     bit_offset: 15
@@ -3375,10 +3331,9 @@ fieldset/Fdctrl:
     bit_size: 2
     enum: Mbdsr0
   - name: fdrate
-    description: Bit Rate Switch Enable.
+    description: "Bit Rate Switch Enable.\n\nRaw bit values: false (0) = Nominal: Disable.; true (1) = BitRateSwitching: Enable."
     bit_offset: 31
     bit_size: 1
-    enum: Fdrate
   bit_size: 32
   reset_value: 2147483904
 fieldset/FltDlc:
@@ -3402,15 +3357,13 @@ fieldset/FltId1:
     bit_offset: 0
     bit_size: 29
   - name: flt_rtr
-    description: Remote Transmission Request Filter.
+    description: "Remote Transmission Request Filter.\n\nRaw bit values: false (0) = Reject: Reject remote frame (accept data frame).; true (1) = Accept: Accept remote frame."
     bit_offset: 29
     bit_size: 1
-    enum: FltRtr
   - name: flt_ide
-    description: ID Extended Filter.
+    description: "ID Extended Filter.\n\nRaw bit values: false (0) = Standard: Standard.; true (1) = Extended: Extended."
     bit_offset: 30
     bit_size: 1
-    enum: Ide
   bit_size: 32
   reset_value: 0
 fieldset/FltId2Idmask:
@@ -3421,15 +3374,13 @@ fieldset/FltId2Idmask:
     bit_offset: 0
     bit_size: 29
   - name: rtr_msk
-    description: Remote Transmission Request Mask.
+    description: "Remote Transmission Request Mask.\n\nRaw bit values: false (0) = FrameTypeNo: The corresponding bit in the filter is \"don't care.\".; true (1) = FrameTypeYes: The corresponding bit in the filter is checked."
     bit_offset: 29
     bit_size: 1
-    enum: RtrMsk
   - name: ide_msk
-    description: ID Extended Mask.
+    description: "ID Extended Mask.\n\nRaw bit values: false (0) = FrameFormatNo: The corresponding bit in the filter is \"don't care.\".; true (1) = FrameFormatYes: The corresponding bit in the filter is checked."
     bit_offset: 30
     bit_size: 1
-    enum: IdeMsk
   bit_size: 32
   reset_value: 0
 fieldset/Id0:
@@ -3455,29 +3406,25 @@ fieldset/Iflag1:
   description: Interrupt Flags 1.
   fields:
   - name: buf0i
-    description: Buffer MB0 Interrupt or Clear Legacy FIFO bit.
+    description: "Buffer MB0 Interrupt or Clear Legacy FIFO bit.\n\nRaw bit values: false (0) = BufferTxRxNotComplete: MB0 has no occurrence of successfully completed transmission or reception.; true (1) = BufferTxRxComplete: MB0 has successfully completed transmission or reception."
     bit_offset: 0
     bit_size: 1
-    enum: Buf0i
   - name: buf4to1i
     description: Buffer MBi Interrupt or Reserved.
     bit_offset: 1
     bit_size: 4
   - name: buf5i
-    description: Buffer MB5 Interrupt or Frames available in Legacy RX FIFO.
+    description: "Buffer MB5 Interrupt or Frames available in Legacy RX FIFO.\n\nRaw bit values: false (0) = Id1: No occurrence of completed transmission or reception, or no frames available.; true (1) = Id2: MB5 completed transmission or reception, or frames available."
     bit_offset: 5
     bit_size: 1
-    enum: Buf5i
   - name: buf6i
-    description: Buffer MB6 Interrupt or Legacy RX FIFO Warning.
+    description: "Buffer MB6 Interrupt or Legacy RX FIFO Warning.\n\nRaw bit values: false (0) = Id1: No occurrence of MB6 completing transmission or reception, or FIFO not almost full.; true (1) = Id2: MB6 completed transmission or reception, or FIFO almost full."
     bit_offset: 6
     bit_size: 1
-    enum: Buf6i
   - name: buf7i
-    description: Buffer MB7 Interrupt or Legacy RX FIFO Overflow.
+    description: "Buffer MB7 Interrupt or Legacy RX FIFO Overflow.\n\nRaw bit values: false (0) = Id1: No occurrence of MB7 completing transmission or reception, or no FIFO overflow.; true (1) = Id2: MB7 completed transmission or reception, or FIFO overflow."
     bit_offset: 7
     bit_size: 1
-    enum: Buf7i
   - name: buf31to8i
     description: Buffer MBi Interrupt.
     bit_offset: 8
@@ -3800,109 +3747,89 @@ fieldset/Mcr:
     bit_size: 2
     enum: Idam
   - name: fden
-    description: CAN FD Operation Enable.
+    description: "CAN FD Operation Enable.\n\nRaw bit values: false (0) = CanFdDisabled: Disable.; true (1) = CanFdEnabled: Enable."
     bit_offset: 11
     bit_size: 1
-    enum: Fden
   - name: aen
-    description: Abort Enable.
+    description: "Abort Enable.\n\nRaw bit values: false (0) = AbortDisabled: Disabled.; true (1) = AbortEnabled: Enabled."
     bit_offset: 12
     bit_size: 1
-    enum: Aen
   - name: lprioen
-    description: Local Priority Enable.
+    description: "Local Priority Enable.\n\nRaw bit values: false (0) = LocalPriorityDisabled: Disable.; true (1) = LocalPriorityEnabled: Enable."
     bit_offset: 13
     bit_size: 1
-    enum: Lprioen
   - name: pnet_en
-    description: Pretended Networking Enable.
+    description: "Pretended Networking Enable.\n\nRaw bit values: false (0) = PnDisabled: Disable.; true (1) = PnEnabled: Enable."
     bit_offset: 14
     bit_size: 1
-    enum: PnetEn
   - name: dma
-    description: DMA Enable.
+    description: "DMA Enable.\n\nRaw bit values: false (0) = Id1: Disable.; true (1) = Id2: Enable."
     bit_offset: 15
     bit_size: 1
-    enum: Dma
   - name: irmq
-    description: Individual RX Masking and Queue Enable.
+    description: "Individual RX Masking and Queue Enable.\n\nRaw bit values: false (0) = IndividualRxMaskingDisabled: Disable.; true (1) = IndividualRxMaskingEnabled: Enable."
     bit_offset: 16
     bit_size: 1
-    enum: Irmq
   - name: srxdis
-    description: Self-Reception Disable.
+    description: "Self-Reception Disable.\n\nRaw bit values: false (0) = SelfReceptionEnabled: Enable.; true (1) = SelfReceptionDisabled: Disable."
     bit_offset: 17
     bit_size: 1
-    enum: Srxdis
   - name: doze
-    description: Doze Mode Enable.
+    description: "Doze Mode Enable.\n\nRaw bit values: false (0) = LowPowerDozeDisabled: Disable.; true (1) = LowPowerDozeEnabled: Enable."
     bit_offset: 18
     bit_size: 1
-    enum: Doze
   - name: waksrc
     description: Wake-Up Source.
     bit_offset: 19
     bit_size: 1
   - name: lpmack
-    description: Low-Power Mode Acknowledge.
+    description: "Low-Power Mode Acknowledge.\n\nRaw bit values: false (0) = LowPowerNo: Not in a low-power mode.; true (1) = LowPowerYes: In a low-power mode."
     bit_offset: 20
     bit_size: 1
-    enum: Lpmack
   - name: wrnen
-    description: Warning Interrupt Enable.
+    description: "Warning Interrupt Enable.\n\nRaw bit values: false (0) = TwrnintRwrnintInactive: Disable.; true (1) = TwrnintRwrnintActive: Enable."
     bit_offset: 21
     bit_size: 1
-    enum: Wrnen
   - name: slfwak
-    description: Self-Wake-Up Feature.
+    description: "Self-Wake-Up Feature.\n\nRaw bit values: false (0) = SelfWakeupDisabled: Disable.; true (1) = SelfWakeupEnabled: Enable."
     bit_offset: 22
     bit_size: 1
-    enum: Slfwak
   - name: supv
-    description: Supervisor Mode.
+    description: "Supervisor Mode.\n\nRaw bit values: false (0) = Id1: User mode.; true (1) = Id2: Supervisor mode."
     bit_offset: 23
     bit_size: 1
-    enum: Supv
   - name: frzack
-    description: Freeze Mode Acknowledge.
+    description: "Freeze Mode Acknowledge.\n\nRaw bit values: false (0) = FreezeModeNo: Not in Freeze mode, prescaler running.; true (1) = FreezeModeYes: In Freeze mode, prescaler stopped."
     bit_offset: 24
     bit_size: 1
-    enum: Frzack
   - name: softrst
-    description: Soft Reset.
+    description: "Soft Reset.\n\nRaw bit values: false (0) = SoftrstNoResetRequest: No reset.; true (1) = SoftrstResetRegisters: Soft reset affects reset registers."
     bit_offset: 25
     bit_size: 1
-    enum: Softrst
   - name: wakmsk
-    description: Wake-up Interrupt Mask.
+    description: "Wake-up Interrupt Mask.\n\nRaw bit values: false (0) = WakeupInterruptDisabled: Disabled.; true (1) = WakeupInterruptEnabled: Enabled."
     bit_offset: 26
     bit_size: 1
-    enum: Wakmsk
   - name: notrdy
-    description: FlexCAN Not Ready.
+    description: "FlexCAN Not Ready.\n\nRaw bit values: false (0) = Id1: FlexCAN is in Normal mode, Listen-Only mode, or Loopback mode.; true (1) = Id2: FlexCAN is in Disable mode, Doze mode, Stop mode, or Freeze mode."
     bit_offset: 27
     bit_size: 1
-    enum: Notrdy
   - name: halt
-    description: Halt FlexCAN.
+    description: "Halt FlexCAN.\n\nRaw bit values: false (0) = HaltDisable: No request.; true (1) = HaltEnable: Enter Freeze mode, if MCR[FRZ] = 1."
     bit_offset: 28
     bit_size: 1
-    enum: Halt
   - name: rfen
-    description: Legacy RX FIFO Enable.
+    description: "Legacy RX FIFO Enable.\n\nRaw bit values: false (0) = Id1: Disable.; true (1) = Id2: Enable."
     bit_offset: 29
     bit_size: 1
-    enum: Dma
   - name: frz
-    description: Freeze Enable.
+    description: "Freeze Enable.\n\nRaw bit values: false (0) = FreezeModeDisabled: Disable.; true (1) = FreezeModeEnabled: Enable."
     bit_offset: 30
     bit_size: 1
-    enum: Frz
   - name: mdis
-    description: Module Disable.
+    description: "Module Disable.\n\nRaw bit values: false (0) = FlexcanEnabled: Enable.; true (1) = FlexcanDisabled: Disable."
     bit_offset: 31
     bit_size: 1
-    enum: Mdis
   bit_size: 32
   reset_value: 3633315855
 fieldset/Pl1Hi:
@@ -4022,15 +3949,13 @@ fieldset/WmbCs:
     bit_offset: 20
     bit_size: 1
   - name: ide
-    description: ID Extended Bit.
+    description: "ID Extended Bit.\n\nRaw bit values: false (0) = Standard: Standard.; true (1) = Extended: Extended."
     bit_offset: 21
     bit_size: 1
-    enum: Ide
   - name: srr
-    description: Substitute Remote Request.
+    description: "Substitute Remote Request.\n\nRaw bit values: false (0) = Dominant: Dominant.; true (1) = Recessive: Recessive."
     bit_offset: 22
     bit_size: 1
-    enum: Srr
   bit_size: 32
   reset_value: 0
 fieldset/WmbD03:
@@ -4143,222 +4068,6 @@ fieldset/WuMtc:
     bit_size: 1
   bit_size: 32
   reset_value: 0
-enum/Ackerr:
-  bit_size: 1
-  variants:
-  - name: AckErrorNo
-    description: No error.
-    value: 0
-  - name: AckErrorYes
-    description: Error occurred since last read of this register.
-    value: 1
-enum/Aen:
-  bit_size: 1
-  variants:
-  - name: AbortDisabled
-    description: Disabled.
-    value: 0
-  - name: AbortEnabled
-    description: Enabled.
-    value: 1
-enum/Asd:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Enabled.
-    value: 0
-  - name: Disable
-    description: Disabled.
-    value: 1
-enum/Bit0err:
-  bit_size: 1
-  variants:
-  - name: Bit0ErrorNo
-    description: No such occurrence.
-    value: 0
-  - name: Bit0ErrorYes
-    description: At least one bit sent as dominant is received as recessive.
-    value: 1
-enum/Bit0errFast:
-  bit_size: 1
-  variants:
-  - name: Bit0ErrorNo
-    description: No such occurrence.
-    value: 0
-  - name: Bit0ErrorYes
-    description: At least one bit transmitted as dominant is received as recessive.
-    value: 1
-enum/Bit1err:
-  bit_size: 1
-  variants:
-  - name: Bit1ErrorNo
-    description: No such occurrence.
-    value: 0
-  - name: Bit1ErrorYes
-    description: At least one bit sent as recessive is received as dominant.
-    value: 1
-enum/Bit1errFast:
-  bit_size: 1
-  variants:
-  - name: Bit1ErrorNo
-    description: No such occurrence.
-    value: 0
-  - name: Bit1ErrorYes
-    description: At least one bit transmitted as recessive is received as dominant.
-    value: 1
-enum/Boffdoneint:
-  bit_size: 1
-  variants:
-  - name: BusOffNotDone
-    description: No such occurrence.
-    value: 0
-  - name: BusOffDone
-    description: FlexCAN module has completed Bus Off process.
-    value: 1
-enum/Boffmsk:
-  bit_size: 1
-  variants:
-  - name: BusOffIntDisabled
-    description: Interrupt disabled.
-    value: 0
-  - name: BusOffIntEnabled
-    description: Interrupt enabled.
-    value: 1
-enum/Boffrec:
-  bit_size: 1
-  variants:
-  - name: AutoRecoverEnabled
-    description: Enabled.
-    value: 0
-  - name: AutoRecoverDisabled
-    description: Disabled.
-    value: 1
-enum/Buf0i:
-  bit_size: 1
-  variants:
-  - name: BufferTxRxNotComplete
-    description: MB0 has no occurrence of successfully completed transmission or reception.
-    value: 0
-  - name: BufferTxRxComplete
-    description: MB0 has successfully completed transmission or reception.
-    value: 1
-enum/Buf5i:
-  bit_size: 1
-  variants:
-  - name: Id1
-    description: No occurrence of completed transmission or reception, or no frames available.
-    value: 0
-  - name: Id2
-    description: MB5 completed transmission or reception, or frames available.
-    value: 1
-enum/Buf6i:
-  bit_size: 1
-  variants:
-  - name: Id1
-    description: No occurrence of MB6 completing transmission or reception, or FIFO not almost full.
-    value: 0
-  - name: Id2
-    description: MB6 completed transmission or reception, or FIFO almost full.
-    value: 1
-enum/Buf7i:
-  bit_size: 1
-  variants:
-  - name: Id1
-    description: No occurrence of MB7 completing transmission or reception, or no FIFO overflow.
-    value: 0
-  - name: Id2
-    description: MB7 completed transmission or reception, or FIFO overflow.
-    value: 1
-enum/Crcerr:
-  bit_size: 1
-  variants:
-  - name: CrcErrorNo
-    description: No error.
-    value: 0
-  - name: CrcErrorYes
-    description: Error occurred since last read of this register.
-    value: 1
-enum/CrcerrFast:
-  bit_size: 1
-  variants:
-  - name: CrcErrorNo
-    description: No such occurrence.
-    value: 0
-  - name: CrcErrorYes
-    description: A CRC error occurred since last read of this register.
-    value: 1
-enum/Dma:
-  bit_size: 1
-  variants:
-  - name: Id1
-    description: Disable.
-    value: 0
-  - name: Id2
-    description: Enable.
-    value: 1
-enum/Doze:
-  bit_size: 1
-  variants:
-  - name: LowPowerDozeDisabled
-    description: Disable.
-    value: 0
-  - name: LowPowerDozeEnabled
-    description: Enable.
-    value: 1
-enum/Eacen:
-  bit_size: 1
-  variants:
-  - name: RtrCompareNo
-    description: Disable.
-    value: 0
-  - name: RtrCompareYes
-    description: Enable.
-    value: 1
-enum/Erfclr:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: No effect.
-    value: 0
-  - name: Clear
-    description: Clear enhanced RX FIFO content.
-    value: 1
-enum/Erfwmi:
-  bit_size: 1
-  variants:
-  - name: WatermarkNo
-    description: No such occurrence.
-    value: 0
-  - name: WatermarkYes
-    description: Number of messages in FIFO is greater than the watermark.
-    value: 1
-enum/ErrintFast:
-  bit_size: 1
-  variants:
-  - name: ErrorsDataPhaseNo
-    description: No such occurrence.
-    value: 0
-  - name: ErrorsDataPhaseYes
-    description: Error flag set in the data phase of CAN FD frames that have BRS = 1.
-    value: 1
-enum/Errmsk:
-  bit_size: 1
-  variants:
-  - name: ErrorIntDisabled
-    description: Interrupt disabled.
-    value: 0
-  - name: ErrorIntEnabled
-    description: Interrupt enabled.
-    value: 1
-enum/Errovr:
-  bit_size: 1
-  variants:
-  - name: OverrunNotOccurred
-    description: No overrun.
-    value: 0
-  - name: OverrunOccurred
-    description: Overrun.
-    value: 1
 enum/Fcs:
   bit_size: 2
   variants:
@@ -4374,33 +4083,6 @@ enum/Fcs:
   - name: IdPayloadFilteringNumber
     description: Message ID filtering and payload filtering a specified number of times.
     value: 3
-enum/Fden:
-  bit_size: 1
-  variants:
-  - name: CanFdDisabled
-    description: Disable.
-    value: 0
-  - name: CanFdEnabled
-    description: Enable.
-    value: 1
-enum/Fdrate:
-  bit_size: 1
-  variants:
-  - name: Nominal
-    description: Disable.
-    value: 0
-  - name: BitRateSwitching
-    description: Enable.
-    value: 1
-enum/FltRtr:
-  bit_size: 1
-  variants:
-  - name: Reject
-    description: Reject remote frame (accept data frame).
-    value: 0
-  - name: Accept
-    description: Accept remote frame.
-    value: 1
 enum/Fltconf:
   bit_size: 2
   variants:
@@ -4413,51 +4095,6 @@ enum/Fltconf:
   - name: BusOff
     description: Bus Off.
     value: 2
-enum/Frmerr:
-  bit_size: 1
-  variants:
-  - name: FormErrorNo
-    description: No error.
-    value: 0
-  - name: FormErrorYes
-    description: Error occurred since last read of this register.
-    value: 1
-enum/FrmerrFast:
-  bit_size: 1
-  variants:
-  - name: FormErrorNo
-    description: No such occurrence.
-    value: 0
-  - name: FormErrorYes
-    description: A form error occurred since last read of this register.
-    value: 1
-enum/Frz:
-  bit_size: 1
-  variants:
-  - name: FreezeModeDisabled
-    description: Disable.
-    value: 0
-  - name: FreezeModeEnabled
-    description: Enable.
-    value: 1
-enum/Frzack:
-  bit_size: 1
-  variants:
-  - name: FreezeModeNo
-    description: Not in Freeze mode, prescaler running.
-    value: 0
-  - name: FreezeModeYes
-    description: In Freeze mode, prescaler stopped.
-    value: 1
-enum/Halt:
-  bit_size: 1
-  variants:
-  - name: HaltDisable
-    description: No request.
-    value: 0
-  - name: HaltEnable
-    description: Enter Freeze mode, if MCR[FRZ] = 1.
-    value: 1
 enum/Idam:
   bit_size: 2
   variants:
@@ -4474,24 +4111,6 @@ enum/Idam:
   - name: AllFramesRejected
     description: 'Format D: All frames rejected.'
     value: 3
-enum/Ide:
-  bit_size: 1
-  variants:
-  - name: Standard
-    description: Standard.
-    value: 0
-  - name: Extended
-    description: Extended.
-    value: 1
-enum/IdeMsk:
-  bit_size: 1
-  variants:
-  - name: FrameFormatNo
-    description: The corresponding bit in the filter is "don't care.".
-    value: 0
-  - name: FrameFormatYes
-    description: The corresponding bit in the filter is checked.
-    value: 1
 enum/Idfs:
   bit_size: 2
   variants:
@@ -4507,87 +4126,6 @@ enum/Idfs:
   - name: MatchRange
     description: Match an ID value within a range of values, inclusive.
     value: 3
-enum/Idle:
-  bit_size: 1
-  variants:
-  - name: CanBusNotIdle
-    description: Not IDLE.
-    value: 0
-  - name: CanBusIdle
-    description: IDLE.
-    value: 1
-enum/Imb:
-  bit_size: 1
-  variants:
-  - name: InactiveMailboxNo
-    description: Message buffer indicated by ESR2[LPTM] is not inactive.
-    value: 0
-  - name: InactiveMailboxYes
-    description: At least one message buffer is inactive.
-    value: 1
-enum/Irmq:
-  bit_size: 1
-  variants:
-  - name: IndividualRxMaskingDisabled
-    description: Disable.
-    value: 0
-  - name: IndividualRxMaskingEnabled
-    description: Enable.
-    value: 1
-enum/Isocanfden:
-  bit_size: 1
-  variants:
-  - name: NonIso
-    description: Disable.
-    value: 0
-  - name: Iso
-    description: Enable.
-    value: 1
-enum/Lbuf:
-  bit_size: 1
-  variants:
-  - name: HighestBufferFirst
-    description: Buffer with highest priority is transmitted first.
-    value: 0
-  - name: LowestBufferFirst
-    description: Lowest number buffer is transmitted first.
-    value: 1
-enum/Lom:
-  bit_size: 1
-  variants:
-  - name: ListenOnlyModeDisabled
-    description: Listen-Only mode is deactivated.
-    value: 0
-  - name: ListenOnlyModeEnabled
-    description: FlexCAN module operates in Listen-Only mode.
-    value: 1
-enum/Lpb:
-  bit_size: 1
-  variants:
-  - name: LoopbackDisabled
-    description: Disabled.
-    value: 0
-  - name: LoopbackEnabled
-    description: Enabled.
-    value: 1
-enum/Lpmack:
-  bit_size: 1
-  variants:
-  - name: LowPowerNo
-    description: Not in a low-power mode.
-    value: 0
-  - name: LowPowerYes
-    description: In a low-power mode.
-    value: 1
-enum/Lprioen:
-  bit_size: 1
-  variants:
-  - name: LocalPriorityDisabled
-    description: Disable.
-    value: 0
-  - name: LocalPriorityEnabled
-    description: Enable.
-    value: 1
 enum/Mbdsr0:
   bit_size: 2
   variants:
@@ -4603,24 +4141,6 @@ enum/Mbdsr0:
   - name: R064Bytes
     description: 64 bytes.
     value: 3
-enum/Mdis:
-  bit_size: 1
-  variants:
-  - name: FlexcanEnabled
-    description: Enable.
-    value: 0
-  - name: FlexcanDisabled
-    description: Disable.
-    value: 1
-enum/Mrp:
-  bit_size: 1
-  variants:
-  - name: Id1
-    description: Matching starts from Legacy RX FIFO or Enhanced RX FIFO and continues on message buffers.
-    value: 0
-  - name: Id3
-    description: Matching starts from message buffers and continues on Legacy RX FIFO or Enhanced RX FIFO.
-    value: 1
 enum/Nmatch:
   bit_size: 8
   variants:
@@ -4633,24 +4153,6 @@ enum/Nmatch:
   - name: Match255
     description: 255 times.
     value: 255
-enum/Notrdy:
-  bit_size: 1
-  variants:
-  - name: Id1
-    description: FlexCAN is in Normal mode, Listen-Only mode, or Loopback mode.
-    value: 0
-  - name: Id2
-    description: FlexCAN is in Disable mode, Doze mode, Stop mode, or Freeze mode.
-    value: 1
-enum/Pes:
-  bit_size: 1
-  variants:
-  - name: BigEnd
-    description: Big-endian.
-    value: 0
-  - name: LittleEnd
-    description: Little-endian.
-    value: 1
 enum/Plfs:
   bit_size: 2
   variants:
@@ -4666,220 +4168,3 @@ enum/Plfs:
   - name: MatchRange
     description: Match upon a payload value within a range of values, inclusive.
     value: 3
-enum/PnetEn:
-  bit_size: 1
-  variants:
-  - name: PnDisabled
-    description: Disable.
-    value: 0
-  - name: PnEnabled
-    description: Enable.
-    value: 1
-enum/Rrs:
-  bit_size: 1
-  variants:
-  - name: RemoteResponseFrameNotGenerated
-    description: Generated.
-    value: 0
-  - name: RemoteResponseFrameGenerated
-    description: Stored.
-    value: 1
-enum/RtrMsk:
-  bit_size: 1
-  variants:
-  - name: FrameTypeNo
-    description: The corresponding bit in the filter is "don't care.".
-    value: 0
-  - name: FrameTypeYes
-    description: The corresponding bit in the filter is checked.
-    value: 1
-enum/Rwrnint:
-  bit_size: 1
-  variants:
-  - name: RxWarningIntNo
-    description: No such occurrence.
-    value: 0
-  - name: RxWarningIntYes
-    description: RX error counter changed from less than 96 to greater than or equal to 96.
-    value: 1
-enum/Rwrnmsk:
-  bit_size: 1
-  variants:
-  - name: RxWarningIntDisabled
-    description: Disabled.
-    value: 0
-  - name: RxWarningIntEnabled
-    description: Enabled.
-    value: 1
-enum/Rxwrn:
-  bit_size: 1
-  variants:
-  - name: RxerrcntLt96
-    description: No such occurrence.
-    value: 0
-  - name: RxerrcntGte96
-    description: RXERRCNT is greater than or equal to 96.
-    value: 1
-enum/Slfwak:
-  bit_size: 1
-  variants:
-  - name: SelfWakeupDisabled
-    description: Disable.
-    value: 0
-  - name: SelfWakeupEnabled
-    description: Enable.
-    value: 1
-enum/Smp:
-  bit_size: 1
-  variants:
-  - name: OneSample
-    description: One sample is used to determine the bit value.
-    value: 0
-  - name: ThreeSample
-    description: 'Three samples are used to determine the value of the received bit: the regular one (sample point)
-      and two preceding samples. A majority rule is used.'
-    value: 1
-enum/Softrst:
-  bit_size: 1
-  variants:
-  - name: SoftrstNoResetRequest
-    description: No reset.
-    value: 0
-  - name: SoftrstResetRegisters
-    description: Soft reset affects reset registers.
-    value: 1
-enum/Srr:
-  bit_size: 1
-  variants:
-  - name: Dominant
-    description: Dominant.
-    value: 0
-  - name: Recessive
-    description: Recessive.
-    value: 1
-enum/Srxdis:
-  bit_size: 1
-  variants:
-  - name: SelfReceptionEnabled
-    description: Enable.
-    value: 0
-  - name: SelfReceptionDisabled
-    description: Disable.
-    value: 1
-enum/Stferr:
-  bit_size: 1
-  variants:
-  - name: StuffingErrorNo
-    description: No error.
-    value: 0
-  - name: StuffingErrorYes
-    description: Error occurred since last read of this register.
-    value: 1
-enum/StferrFast:
-  bit_size: 1
-  variants:
-  - name: StuffingErrorNo
-    description: No such occurrence.
-    value: 0
-  - name: StuffingErrorYes
-    description: A stuffing error occurred since last read of this register.
-    value: 1
-enum/Supv:
-  bit_size: 1
-  variants:
-  - name: Id1
-    description: User mode.
-    value: 0
-  - name: Id2
-    description: Supervisor mode.
-    value: 1
-enum/Synch:
-  bit_size: 1
-  variants:
-  - name: CanBusSyncNo
-    description: Not synchronized.
-    value: 0
-  - name: CanBusSyncYes
-    description: Synchronized.
-    value: 1
-enum/Tdcfail:
-  bit_size: 1
-  variants:
-  - name: InRange
-    description: In range.
-    value: 0
-  - name: OutOfRange
-    description: Out of range.
-    value: 1
-enum/Tdmdis:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Enable.
-    value: 0
-  - name: Disable
-    description: Disable.
-    value: 1
-enum/Tsyn:
-  bit_size: 1
-  variants:
-  - name: TimerSyncDisabled
-    description: Disable.
-    value: 0
-  - name: TimerSyncEnabled
-    description: Enable.
-    value: 1
-enum/Twrnint:
-  bit_size: 1
-  variants:
-  - name: TxWarningIntNo
-    description: No such occurrence.
-    value: 0
-  - name: TxWarningIntYes
-    description: TX error counter changed from less than 96 to greater than or equal to 96.
-    value: 1
-enum/Twrnmsk:
-  bit_size: 1
-  variants:
-  - name: TxWarningIntDisabled
-    description: Disabled.
-    value: 0
-  - name: TxWarningIntEnabled
-    description: Enabled.
-    value: 1
-enum/Tx:
-  bit_size: 1
-  variants:
-  - name: TransmitMessageNo
-    description: Not transmitting.
-    value: 0
-  - name: TransmitMessageYes
-    description: Transmitting.
-    value: 1
-enum/Txwrn:
-  bit_size: 1
-  variants:
-  - name: TxerrcntLt96
-    description: No such occurrence.
-    value: 0
-  - name: TxerrcntGte96
-    description: TXERRCNT is 96 or greater.
-    value: 1
-enum/Wakmsk:
-  bit_size: 1
-  variants:
-  - name: WakeupInterruptDisabled
-    description: Disabled.
-    value: 0
-  - name: WakeupInterruptEnabled
-    description: Enabled.
-    value: 1
-enum/Wrnen:
-  bit_size: 1
-  variants:
-  - name: TwrnintRwrnintInactive
-    description: Disable.
-    value: 0
-  - name: TwrnintRwrnintActive
-    description: Enable.
-    value: 1

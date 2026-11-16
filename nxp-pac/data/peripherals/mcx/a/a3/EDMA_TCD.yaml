@@ -200,15 +200,13 @@ fieldset/ChPri:
     bit_offset: 0
     bit_size: 3
   - name: dpa
-    description: Disable Preempt Ability.
+    description: "Disable Preempt Ability.\n\nRaw bit values: false (0) = Suspend: Channel can suspend a lower-priority channel.; true (1) = CannotSuspend: Channel cannot suspend any other channel, regardless of channel priority."
     bit_offset: 30
     bit_size: 1
-    enum: Dpa
   - name: ecp
-    description: Enable Channel Preemption.
+    description: "Enable Channel Preemption.\n\nRaw bit values: false (0) = CannotSuspend: Channel cannot be suspended by a higher-priority channel's service request.; true (1) = Suspend: Channel can be temporarily suspended by a higher-priority channel's service request."
     bit_offset: 31
     bit_size: 1
-    enum: Ecp
   bit_size: 32
   reset_value: 0
 fieldset/ChSbr:
@@ -219,10 +217,9 @@ fieldset/ChSbr:
     bit_offset: 0
     bit_size: 4
   - name: pal
-    description: Privileged Access Level.
+    description: "Privileged Access Level.\n\nRaw bit values: false (0) = UserProtection: User protection level for DMA transfers.; true (1) = PrivilegedProtection: Privileged protection level for DMA transfers."
     bit_offset: 15
     bit_size: 1
-    enum: Pal
   - name: emi
     description: Enable Initiator ID Replication.
     bit_offset: 16
@@ -317,10 +314,9 @@ fieldset/TcdCsr:
   bit_size: 16
   fields:
   - name: start
-    description: Channel Start.
+    description: "Channel Start.\n\nRaw bit values: false (0) = ChannelNotStarted: Channel not explicitly started.; true (1) = ChannelStarted: Channel explicitly started via a software-initiated service request."
     bit_offset: 0
     bit_size: 1
-    enum: Start
   - name: intmajor
     description: Enable Interrupt If Major count complete.
     bit_offset: 1
@@ -330,15 +326,13 @@ fieldset/TcdCsr:
     bit_offset: 2
     bit_size: 1
   - name: dreq
-    description: Disable Request.
+    description: "Disable Request.\n\nRaw bit values: false (0) = ChannelNotAffected: No operation.; true (1) = ErqFieldClear: Clear the ERQ field to 0 upon major loop completion, thus disabling hardware service requests."
     bit_offset: 3
     bit_size: 1
-    enum: Dreq
   - name: esg
-    description: Enable Scatter/Gather Processing.
+    description: "Enable Scatter/Gather Processing.\n\nRaw bit values: false (0) = NormalFormat: Current channel's TCD is normal format.; true (1) = ScatterGatherFormat: Current channel's TCD specifies scatter/gather format."
     bit_offset: 4
     bit_size: 1
-    enum: Esg
   - name: majorelink
     description: Enable Link When Major Loop Complete.
     bit_offset: 5
@@ -396,15 +390,13 @@ fieldset/TcdNbytesMloffno:
     bit_offset: 0
     bit_size: 30
   - name: dmloe
-    description: Destination Minor Loop Offset Enable.
+    description: "Destination Minor Loop Offset Enable.\n\nRaw bit values: false (0) = OffsetNotApplied: Minor loop offset not applied to DADDR.; true (1) = OffsetApplied: Minor loop offset applied to DADDR."
     bit_offset: 30
     bit_size: 1
-    enum: TcdNbytesMloffnoDmloe
   - name: smloe
-    description: Source Minor Loop Offset Enable.
+    description: "Source Minor Loop Offset Enable.\n\nRaw bit values: false (0) = OffsetNotApplied: Minor loop offset not applied to SADDR.; true (1) = OffsetApplied: Minor loop offset applied to SADDR."
     bit_offset: 31
     bit_size: 1
-    enum: TcdNbytesMloffnoSmloe
   bit_size: 32
   reset_value: 0
 fieldset/TcdNbytesMloffyes:
@@ -419,15 +411,13 @@ fieldset/TcdNbytesMloffyes:
     bit_offset: 10
     bit_size: 20
   - name: dmloe
-    description: Destination Minor Loop Offset Enable.
+    description: "Destination Minor Loop Offset Enable.\n\nRaw bit values: false (0) = OffsetNotApplied: Minor loop offset not applied to DADDR.; true (1) = OffsetApplied: Minor loop offset applied to DADDR."
     bit_offset: 30
     bit_size: 1
-    enum: TcdNbytesMloffnoDmloe
   - name: smloe
-    description: Source Minor Loop Offset Enable.
+    description: "Source Minor Loop Offset Enable.\n\nRaw bit values: false (0) = OffsetNotApplied: Minor loop offset not applied to SADDR.; true (1) = OffsetApplied: Minor loop offset applied to SADDR."
     bit_offset: 31
     bit_size: 1
-    enum: TcdNbytesMloffnoSmloe
   bit_size: 32
   reset_value: 0
 fieldset/TcdSaddr:
@@ -469,51 +459,6 @@ enum/Bwc:
   - name: EngineStallsEight
     description: eDMA engine stalls for 8 cycles after each R/W.
     value: 3
-enum/Dpa:
-  bit_size: 1
-  variants:
-  - name: Suspend
-    description: Channel can suspend a lower-priority channel.
-    value: 0
-  - name: CannotSuspend
-    description: Channel cannot suspend any other channel, regardless of channel priority.
-    value: 1
-enum/Dreq:
-  bit_size: 1
-  variants:
-  - name: ChannelNotAffected
-    description: No operation.
-    value: 0
-  - name: ErqFieldClear
-    description: Clear the ERQ field to 0 upon major loop completion, thus disabling hardware service requests.
-    value: 1
-enum/Ecp:
-  bit_size: 1
-  variants:
-  - name: CannotSuspend
-    description: Channel cannot be suspended by a higher-priority channel's service request.
-    value: 0
-  - name: Suspend
-    description: Channel can be temporarily suspended by a higher-priority channel's service request.
-    value: 1
-enum/Esg:
-  bit_size: 1
-  variants:
-  - name: NormalFormat
-    description: Current channel's TCD is normal format.
-    value: 0
-  - name: ScatterGatherFormat
-    description: Current channel's TCD specifies scatter/gather format.
-    value: 1
-enum/Pal:
-  bit_size: 1
-  variants:
-  - name: UserProtection
-    description: User protection level for DMA transfers.
-    value: 0
-  - name: PrivilegedProtection
-    description: Privileged protection level for DMA transfers.
-    value: 1
 enum/Size:
   bit_size: 3
   variants:
@@ -535,30 +480,3 @@ enum/Size:
   - name: ThirtytwoByte
     description: 32-byte.
     value: 5
-enum/Start:
-  bit_size: 1
-  variants:
-  - name: ChannelNotStarted
-    description: Channel not explicitly started.
-    value: 0
-  - name: ChannelStarted
-    description: Channel explicitly started via a software-initiated service request.
-    value: 1
-enum/TcdNbytesMloffnoDmloe:
-  bit_size: 1
-  variants:
-  - name: OffsetNotApplied
-    description: Minor loop offset not applied to DADDR.
-    value: 0
-  - name: OffsetApplied
-    description: Minor loop offset applied to DADDR.
-    value: 1
-enum/TcdNbytesMloffnoSmloe:
-  bit_size: 1
-  variants:
-  - name: OffsetNotApplied
-    description: Minor loop offset not applied to SADDR.
-    value: 0
-  - name: OffsetApplied
-    description: Minor loop offset applied to SADDR.
-    value: 1

@@ -71,18 +71,16 @@ fieldset/IntmAlphaFieldsetDelta:
   description: Monitor Mode.
   fields:
   - name: mm
-    description: Monitor Mode.
+    description: "Monitor Mode.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: IntmAlphaEnumAlpha
 fieldset/IntmAlphaFieldsetEcho:
   description: Status for Monitor mon_index.
   fields:
   - name: status
-    description: Monitor status.
+    description: "Monitor status.\n\nRaw bit values: false (0) = St02: Did not exceed.; true (1) = St01: Exceeded."
     bit_offset: 0
     bit_size: 1
-    enum: IntmAlphaEnumBravo
 fieldset/IntmAlphaFieldsetFoxtrot:
   description: Timer for Monitor mon_index.
   fields:
@@ -90,21 +88,3 @@ fieldset/IntmAlphaFieldsetFoxtrot:
     description: Timer.
     bit_offset: 0
     bit_size: 24
-enum/IntmAlphaEnumAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/IntmAlphaEnumBravo:
-  bit_size: 1
-  variants:
-  - name: St01
-    description: Exceeded.
-    value: 1
-  - name: St02
-    description: Did not exceed.
-    value: 0

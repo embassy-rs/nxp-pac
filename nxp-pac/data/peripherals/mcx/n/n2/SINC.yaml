@@ -140,10 +140,9 @@ fieldset/SincAlphaFieldsetCharlie:
     bit_offset: 0
     bit_size: 5
   - name: rdfmt
-    description: Result Data Format.
+    description: "Result Data Format.\n\nRaw bit values: false (0) = Signed: Left justified, signed.; true (1) = Unsigned: Left justified, unsigned."
     bit_offset: 6
     bit_size: 1
-    enum: SincAlphaEnumWhiskeyDelta
   - name: fifowmk
     description: FIFO Watermark.
     bit_offset: 10
@@ -174,10 +173,9 @@ fieldset/SincAlphaFieldsetCharlie:
     bit_size: 2
     enum: SincAlphaEnumNovemberCharlie
   - name: itlvl
-    description: Input Trigger Level Type.
+    description: "Input Trigger Level Type.\n\nRaw bit values: false (0) = Edge: Edge.; true (1) = Level: Level."
     bit_offset: 28
     bit_size: 1
-    enum: SincAlphaEnumQuebecCharlie
   - name: zcop
     description: Zero Cross Option.
     bit_offset: 30
@@ -187,45 +185,37 @@ fieldset/SincAlphaFieldsetDelta:
   description: Channel n Control.
   fields:
   - name: chen
-    description: Channel Enable.
+    description: "Channel Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 0
     bit_size: 1
-    enum: Cadie
   - name: pfen
-    description: PF Enable.
+    description: "PF Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 1
     bit_size: 1
-    enum: Cadie
   - name: dmaen
-    description: DMA Enable.
+    description: "DMA Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 3
     bit_size: 1
-    enum: Cadie
   - name: scden
-    description: Short Circuit Detect Enable.
+    description: "Short Circuit Detect Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 8
     bit_size: 1
-    enum: Cadie
   - name: caden
-    description: Clock Absence Detect Enable.
+    description: "Clock Absence Detect Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 9
     bit_size: 1
-    enum: Cadie
   - name: zcden
-    description: Zero Cross Detect Enable.
+    description: "Zero Cross Detect Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 12
     bit_size: 1
-    enum: Cadie
   - name: lmten
-    description: Limit Enable.
+    description: "Limit Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 13
     bit_size: 1
-    enum: Cadie
   - name: fifoen
-    description: FIFO Enable.
+    description: "FIFO Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 14
     bit_size: 1
-    enum: Cadie
   - name: dbgsel
     description: Debug Output Selection.
     bit_offset: 20
@@ -285,10 +275,9 @@ fieldset/SincAlphaFieldsetJuliet:
     bit_size: 8
     enum: SincAlphaEnumWhiskeyEcho
   - name: scdcm
-    description: SCD Conversion Mode.
+    description: "SCD Conversion Mode.\n\nRaw bit values: false (0) = Always: Constantly when CnCR[CHEN] = MCR[MEN] = 1.; true (1) = DuringConv: Only when the PF is performing a conversion."
     bit_offset: 11
     bit_size: 1
-    enum: SincAlphaEnumPapaEcho
   - name: scdop
     description: SCD Option.
     bit_offset: 12
@@ -305,30 +294,25 @@ fieldset/SincAlphaFieldsetJuliet:
     bit_size: 4
     enum: SincAlphaEnumOscar
   - name: cadbk
-    description: CAD Break Signal.
+    description: "CAD Break Signal.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 26
     bit_size: 1
-    enum: Cadie
   - name: scdbk
-    description: SCD Break Signal.
+    description: "SCD Break Signal.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 27
     bit_size: 1
-    enum: Cadie
   - name: llmtbk
-    description: Low Limit Break Signal.
+    description: "Low Limit Break Signal.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 29
     bit_size: 1
-    enum: Cadie
   - name: wlmtbk
-    description: Window Limit Break Signal.
+    description: "Window Limit Break Signal.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 30
     bit_size: 1
-    enum: Cadie
   - name: hlmtbk
-    description: High Limit Break Signal.
+    description: "High Limit Break Signal.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 31
     bit_size: 1
-    enum: Cadie
 fieldset/SincAlphaFieldsetKilo:
   description: Channel n Result Data.
   fields:
@@ -344,40 +328,33 @@ fieldset/SincAlphaFieldsetLima:
     bit_offset: 0
     bit_size: 5
   - name: psrdy
-    description: Parallel or Serial Data Ready.
+    description: "Parallel or Serial Data Ready.\n\nRaw bit values: false (0) = ReadyNo: Not ready.; true (1) = ReadyYes: Ready."
     bit_offset: 7
     bit_size: 1
-    enum: Chrdy
   - name: pfsat
-    description: Primary CIC Saturation Flag.
+    description: "Primary CIC Saturation Flag.\n\nRaw bit values: false (0) = SatNo: Did not occur.; true (1) = SatYes: Occurred."
     bit_offset: 8
     bit_size: 1
-    enum: Biassat
   - name: hpfsat
-    description: HPF Saturation Flag.
+    description: "HPF Saturation Flag.\n\nRaw bit values: false (0) = SatNo: Did not occur.; true (1) = SatYes: Occurred."
     bit_offset: 9
     bit_size: 1
-    enum: Biassat
   - name: sftsat
-    description: Shift Saturation Flag.
+    description: "Shift Saturation Flag.\n\nRaw bit values: false (0) = SatNo: Did not occur.; true (1) = SatYes: Occurred."
     bit_offset: 10
     bit_size: 1
-    enum: Biassat
   - name: biassat
-    description: Bias Saturation Flag.
+    description: "Bias Saturation Flag.\n\nRaw bit values: false (0) = SatNo: Did not occur.; true (1) = SatYes: Occurred."
     bit_offset: 11
     bit_size: 1
-    enum: Biassat
   - name: rdrs
-    description: Result Data Direct Read Status.
+    description: "Result Data Direct Read Status.\n\nRaw bit values: false (0) = Valid: Valid.; true (1) = Invalid: Invalid."
     bit_offset: 12
     bit_size: 1
-    enum: SincAlphaEnumXrayDelta
   - name: srds
-    description: Start Read Debug Data Sync.
+    description: "Start Read Debug Data Sync.\n\nRaw bit values: false (0) = DataValid: Data valid.; true (1) = InProgress: Procedure in progress."
     bit_offset: 13
     bit_size: 1
-    enum: SincAlphaEnumZuluEcho
   - name: dbgrs
     description: Debug Data Read Status.
     bit_offset: 14
@@ -388,465 +365,376 @@ fieldset/SincAlphaFieldsetLima:
     bit_offset: 16
     bit_size: 7
   - name: cnum_ov
-    description: Overflow In Number Of Conversions.
+    description: "Overflow In Number Of Conversions.\n\nRaw bit values: false (0) = OflwNo: No overflow.; true (1) = OflwYes: Overflow."
     bit_offset: 23
     bit_size: 1
-    enum: SincAlphaEnumKiloAlpha
 fieldset/SincAlphaFieldsetMike:
   description: Error Interrupt Enable.
   fields:
   - name: scdie0
-    description: Short Circuit Detected Interrupt Enable.
+    description: "Short Circuit Detected Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 0
     bit_size: 1
-    enum: Cadie
   - name: scdie1
-    description: Short Circuit Detected Interrupt Enable.
+    description: "Short Circuit Detected Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 1
     bit_size: 1
-    enum: Cadie
   - name: scdie2
-    description: Short Circuit Detected Interrupt Enable.
+    description: "Short Circuit Detected Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 2
     bit_size: 1
-    enum: Cadie
   - name: scdie3
-    description: Short Circuit Detected Interrupt Enable.
+    description: "Short Circuit Detected Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 3
     bit_size: 1
-    enum: Cadie
   - name: scdie4
-    description: Short Circuit Detected Interrupt Enable.
+    description: "Short Circuit Detected Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 4
     bit_size: 1
-    enum: Cadie
   - name: wlmtie0
-    description: Window Limit Interrupt Enable.
+    description: "Window Limit Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 8
     bit_size: 1
-    enum: Cadie
   - name: wlmtie1
-    description: Window Limit Interrupt Enable.
+    description: "Window Limit Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 9
     bit_size: 1
-    enum: Cadie
   - name: wlmtie2
-    description: Window Limit Interrupt Enable.
+    description: "Window Limit Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 10
     bit_size: 1
-    enum: Cadie
   - name: wlmtie3
-    description: Window Limit Interrupt Enable.
+    description: "Window Limit Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 11
     bit_size: 1
-    enum: Cadie
   - name: wlmtie4
-    description: Window Limit Interrupt Enable.
+    description: "Window Limit Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 12
     bit_size: 1
-    enum: Cadie
   - name: llmtie0
-    description: Low Limit Interrupt Enable.
+    description: "Low Limit Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 16
     bit_size: 1
-    enum: Cadie
   - name: llmtie1
-    description: Low Limit Interrupt Enable.
+    description: "Low Limit Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 17
     bit_size: 1
-    enum: Cadie
   - name: llmtie2
-    description: Low Limit Interrupt Enable.
+    description: "Low Limit Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 18
     bit_size: 1
-    enum: Cadie
   - name: llmtie3
-    description: Low Limit Interrupt Enable.
+    description: "Low Limit Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 19
     bit_size: 1
-    enum: Cadie
   - name: llmtie4
-    description: Low Limit Interrupt Enable.
+    description: "Low Limit Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 20
     bit_size: 1
-    enum: Cadie
   - name: hlmtie0
-    description: High Limit Interrupt Enable.
+    description: "High Limit Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 24
     bit_size: 1
-    enum: Cadie
   - name: hlmtie1
-    description: High Limit Interrupt Enable.
+    description: "High Limit Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 25
     bit_size: 1
-    enum: Cadie
   - name: hlmtie2
-    description: High Limit Interrupt Enable.
+    description: "High Limit Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 26
     bit_size: 1
-    enum: Cadie
   - name: hlmtie3
-    description: High Limit Interrupt Enable.
+    description: "High Limit Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 27
     bit_size: 1
-    enum: Cadie
   - name: hlmtie4
-    description: High Limit Interrupt Enable.
+    description: "High Limit Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 28
     bit_size: 1
-    enum: Cadie
 fieldset/SincAlphaFieldsetNovember:
   description: Error Interrupt Status.
   fields:
   - name: scd0
-    description: Short Circuit Detected Flag.
+    description: "Short Circuit Detected Flag.\n\nRaw bit values: false (0) = ScNo: Not detected.; true (1) = ScYes: Detected."
     bit_offset: 0
     bit_size: 1
-    enum: Scd
   - name: scd1
-    description: Short Circuit Detected Flag.
+    description: "Short Circuit Detected Flag.\n\nRaw bit values: false (0) = ScNo: Not detected.; true (1) = ScYes: Detected."
     bit_offset: 1
     bit_size: 1
-    enum: Scd
   - name: scd2
-    description: Short Circuit Detected Flag.
+    description: "Short Circuit Detected Flag.\n\nRaw bit values: false (0) = ScNo: Not detected.; true (1) = ScYes: Detected."
     bit_offset: 2
     bit_size: 1
-    enum: Scd
   - name: scd3
-    description: Short Circuit Detected Flag.
+    description: "Short Circuit Detected Flag.\n\nRaw bit values: false (0) = ScNo: Not detected.; true (1) = ScYes: Detected."
     bit_offset: 3
     bit_size: 1
-    enum: Scd
   - name: scd4
-    description: Short Circuit Detected Flag.
+    description: "Short Circuit Detected Flag.\n\nRaw bit values: false (0) = ScNo: Not detected.; true (1) = ScYes: Detected."
     bit_offset: 4
     bit_size: 1
-    enum: Scd
   - name: wlmt0
-    description: Window Limit Flag.
+    description: "Window Limit Flag.\n\nRaw bit values: false (0) = WlmtNo: Not exceeded.; true (1) = WlmtYes: Exceeded."
     bit_offset: 8
     bit_size: 1
-    enum: Wlmt
   - name: wlmt1
-    description: Window Limit Flag.
+    description: "Window Limit Flag.\n\nRaw bit values: false (0) = WlmtNo: Not exceeded.; true (1) = WlmtYes: Exceeded."
     bit_offset: 9
     bit_size: 1
-    enum: Wlmt
   - name: wlmt2
-    description: Window Limit Flag.
+    description: "Window Limit Flag.\n\nRaw bit values: false (0) = WlmtNo: Not exceeded.; true (1) = WlmtYes: Exceeded."
     bit_offset: 10
     bit_size: 1
-    enum: Wlmt
   - name: wlmt3
-    description: Window Limit Flag.
+    description: "Window Limit Flag.\n\nRaw bit values: false (0) = WlmtNo: Not exceeded.; true (1) = WlmtYes: Exceeded."
     bit_offset: 11
     bit_size: 1
-    enum: Wlmt
   - name: wlmt4
-    description: Window Limit Flag.
+    description: "Window Limit Flag.\n\nRaw bit values: false (0) = WlmtNo: Not exceeded.; true (1) = WlmtYes: Exceeded."
     bit_offset: 12
     bit_size: 1
-    enum: Wlmt
   - name: llmt0
-    description: Low Limit Flag.
+    description: "Low Limit Flag.\n\nRaw bit values: false (0) = LlmtNo: Not exceeded.; true (1) = LlmtYes: Exceeded."
     bit_offset: 16
     bit_size: 1
-    enum: Llmt
   - name: llmt1
-    description: Low Limit Flag.
+    description: "Low Limit Flag.\n\nRaw bit values: false (0) = LlmtNo: Not exceeded.; true (1) = LlmtYes: Exceeded."
     bit_offset: 17
     bit_size: 1
-    enum: Llmt
   - name: llmt2
-    description: Low Limit Flag.
+    description: "Low Limit Flag.\n\nRaw bit values: false (0) = LlmtNo: Not exceeded.; true (1) = LlmtYes: Exceeded."
     bit_offset: 18
     bit_size: 1
-    enum: Llmt
   - name: llmt3
-    description: Low Limit Flag.
+    description: "Low Limit Flag.\n\nRaw bit values: false (0) = LlmtNo: Not exceeded.; true (1) = LlmtYes: Exceeded."
     bit_offset: 19
     bit_size: 1
-    enum: Llmt
   - name: llmt4
-    description: Low Limit Flag.
+    description: "Low Limit Flag.\n\nRaw bit values: false (0) = LlmtNo: Not exceeded.; true (1) = LlmtYes: Exceeded."
     bit_offset: 20
     bit_size: 1
-    enum: Llmt
   - name: hlmt0
-    description: High Limit Flag.
+    description: "High Limit Flag.\n\nRaw bit values: false (0) = HlmtNo: Not exceeded.; true (1) = HlmtYes: Exceeded."
     bit_offset: 24
     bit_size: 1
-    enum: Hlmt
   - name: hlmt1
-    description: High Limit Flag.
+    description: "High Limit Flag.\n\nRaw bit values: false (0) = HlmtNo: Not exceeded.; true (1) = HlmtYes: Exceeded."
     bit_offset: 25
     bit_size: 1
-    enum: Hlmt
   - name: hlmt2
-    description: High Limit Flag.
+    description: "High Limit Flag.\n\nRaw bit values: false (0) = HlmtNo: Not exceeded.; true (1) = HlmtYes: Exceeded."
     bit_offset: 26
     bit_size: 1
-    enum: Hlmt
   - name: hlmt3
-    description: High Limit Flag.
+    description: "High Limit Flag.\n\nRaw bit values: false (0) = HlmtNo: Not exceeded.; true (1) = HlmtYes: Exceeded."
     bit_offset: 27
     bit_size: 1
-    enum: Hlmt
   - name: hlmt4
-    description: High Limit Flag.
+    description: "High Limit Flag.\n\nRaw bit values: false (0) = HlmtNo: Not exceeded.; true (1) = HlmtYes: Exceeded."
     bit_offset: 28
     bit_size: 1
-    enum: Hlmt
 fieldset/SincAlphaFieldsetOscar:
   description: FIFO And CAD Error Interrupt Enable.
   fields:
   - name: funfie0
-    description: FIFO Underflow Interrupt Enable.
+    description: "FIFO Underflow Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 0
     bit_size: 1
-    enum: Cadie
   - name: funfie1
-    description: FIFO Underflow Interrupt Enable.
+    description: "FIFO Underflow Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 1
     bit_size: 1
-    enum: Cadie
   - name: funfie2
-    description: FIFO Underflow Interrupt Enable.
+    description: "FIFO Underflow Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 2
     bit_size: 1
-    enum: Cadie
   - name: funfie3
-    description: FIFO Underflow Interrupt Enable.
+    description: "FIFO Underflow Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 3
     bit_size: 1
-    enum: Cadie
   - name: funfie4
-    description: FIFO Underflow Interrupt Enable.
+    description: "FIFO Underflow Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 4
     bit_size: 1
-    enum: Cadie
   - name: fovfie0
-    description: FIFO Overflow Interrupt Enable.
+    description: "FIFO Overflow Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 8
     bit_size: 1
-    enum: Cadie
   - name: fovfie1
-    description: FIFO Overflow Interrupt Enable.
+    description: "FIFO Overflow Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 9
     bit_size: 1
-    enum: Cadie
   - name: fovfie2
-    description: FIFO Overflow Interrupt Enable.
+    description: "FIFO Overflow Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 10
     bit_size: 1
-    enum: Cadie
   - name: fovfie3
-    description: FIFO Overflow Interrupt Enable.
+    description: "FIFO Overflow Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 11
     bit_size: 1
-    enum: Cadie
   - name: fovfie4
-    description: FIFO Overflow Interrupt Enable.
+    description: "FIFO Overflow Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 12
     bit_size: 1
-    enum: Cadie
   - name: cadie0
-    description: Clock Absence Interrupt Enable.
+    description: "Clock Absence Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 16
     bit_size: 1
-    enum: Cadie
   - name: cadie1
-    description: Clock Absence Interrupt Enable.
+    description: "Clock Absence Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 17
     bit_size: 1
-    enum: Cadie
   - name: cadie2
-    description: Clock Absence Interrupt Enable.
+    description: "Clock Absence Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 18
     bit_size: 1
-    enum: Cadie
   - name: cadie3
-    description: Clock Absence Interrupt Enable.
+    description: "Clock Absence Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 19
     bit_size: 1
-    enum: Cadie
   - name: cadie4
-    description: Clock Absence Interrupt Enable.
+    description: "Clock Absence Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 20
     bit_size: 1
-    enum: Cadie
   - name: satie0
-    description: Saturation Interrupt Enable.
+    description: "Saturation Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 24
     bit_size: 1
-    enum: Cadie
   - name: satie1
-    description: Saturation Interrupt Enable.
+    description: "Saturation Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 25
     bit_size: 1
-    enum: Cadie
   - name: satie2
-    description: Saturation Interrupt Enable.
+    description: "Saturation Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 26
     bit_size: 1
-    enum: Cadie
   - name: satie3
-    description: Saturation Interrupt Enable.
+    description: "Saturation Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 27
     bit_size: 1
-    enum: Cadie
   - name: satie4
-    description: Saturation Interrupt Enable.
+    description: "Saturation Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 28
     bit_size: 1
-    enum: Cadie
 fieldset/SincAlphaFieldsetPapa:
   description: FIFO And CAD Error Interrupt Status.
   fields:
   - name: funf0
-    description: FIFO Underflow Flag.
+    description: "FIFO Underflow Flag.\n\nRaw bit values: false (0) = FunfNo: Did not occur.; true (1) = FunfYes: Occurred."
     bit_offset: 0
     bit_size: 1
-    enum: Funf
   - name: funf1
-    description: FIFO Underflow Flag.
+    description: "FIFO Underflow Flag.\n\nRaw bit values: false (0) = FunfNo: Did not occur.; true (1) = FunfYes: Occurred."
     bit_offset: 1
     bit_size: 1
-    enum: Funf
   - name: funf2
-    description: FIFO Underflow Flag.
+    description: "FIFO Underflow Flag.\n\nRaw bit values: false (0) = FunfNo: Did not occur.; true (1) = FunfYes: Occurred."
     bit_offset: 2
     bit_size: 1
-    enum: Funf
   - name: funf3
-    description: FIFO Underflow Flag.
+    description: "FIFO Underflow Flag.\n\nRaw bit values: false (0) = FunfNo: Did not occur.; true (1) = FunfYes: Occurred."
     bit_offset: 3
     bit_size: 1
-    enum: Funf
   - name: funf4
-    description: FIFO Underflow Flag.
+    description: "FIFO Underflow Flag.\n\nRaw bit values: false (0) = FunfNo: Did not occur.; true (1) = FunfYes: Occurred."
     bit_offset: 4
     bit_size: 1
-    enum: Funf
   - name: fovf0
-    description: FIFO Overflow Flag.
+    description: "FIFO Overflow Flag.\n\nRaw bit values: false (0) = FovfNo: Did not occur.; true (1) = FovfYes: Occurred."
     bit_offset: 8
     bit_size: 1
-    enum: Fovf
   - name: fovf1
-    description: FIFO Overflow Flag.
+    description: "FIFO Overflow Flag.\n\nRaw bit values: false (0) = FovfNo: Did not occur.; true (1) = FovfYes: Occurred."
     bit_offset: 9
     bit_size: 1
-    enum: Fovf
   - name: fovf2
-    description: FIFO Overflow Flag.
+    description: "FIFO Overflow Flag.\n\nRaw bit values: false (0) = FovfNo: Did not occur.; true (1) = FovfYes: Occurred."
     bit_offset: 10
     bit_size: 1
-    enum: Fovf
   - name: fovf3
-    description: FIFO Overflow Flag.
+    description: "FIFO Overflow Flag.\n\nRaw bit values: false (0) = FovfNo: Did not occur.; true (1) = FovfYes: Occurred."
     bit_offset: 11
     bit_size: 1
-    enum: Fovf
   - name: fovf4
-    description: FIFO Overflow Flag.
+    description: "FIFO Overflow Flag.\n\nRaw bit values: false (0) = FovfNo: Did not occur.; true (1) = FovfYes: Occurred."
     bit_offset: 12
     bit_size: 1
-    enum: Fovf
   - name: cad0
-    description: Clock Absence Flag.
+    description: "Clock Absence Flag.\n\nRaw bit values: false (0) = CadNo: Clock present.; true (1) = CadYes: Clock absent."
     bit_offset: 16
     bit_size: 1
-    enum: Cad
   - name: cad1
-    description: Clock Absence Flag.
+    description: "Clock Absence Flag.\n\nRaw bit values: false (0) = CadNo: Clock present.; true (1) = CadYes: Clock absent."
     bit_offset: 17
     bit_size: 1
-    enum: Cad
   - name: cad2
-    description: Clock Absence Flag.
+    description: "Clock Absence Flag.\n\nRaw bit values: false (0) = CadNo: Clock present.; true (1) = CadYes: Clock absent."
     bit_offset: 18
     bit_size: 1
-    enum: Cad
   - name: cad3
-    description: Clock Absence Flag.
+    description: "Clock Absence Flag.\n\nRaw bit values: false (0) = CadNo: Clock present.; true (1) = CadYes: Clock absent."
     bit_offset: 19
     bit_size: 1
-    enum: Cad
   - name: cad4
-    description: Clock Absence Flag.
+    description: "Clock Absence Flag.\n\nRaw bit values: false (0) = CadNo: Clock present.; true (1) = CadYes: Clock absent."
     bit_offset: 20
     bit_size: 1
-    enum: Cad
   - name: sat0
-    description: Saturation Flag.
+    description: "Saturation Flag.\n\nRaw bit values: false (0) = SatNo: Not saturated.; true (1) = SatYes: Saturated."
     bit_offset: 24
     bit_size: 1
-    enum: Sat
   - name: sat1
-    description: Saturation Flag.
+    description: "Saturation Flag.\n\nRaw bit values: false (0) = SatNo: Not saturated.; true (1) = SatYes: Saturated."
     bit_offset: 25
     bit_size: 1
-    enum: Sat
   - name: sat2
-    description: Saturation Flag.
+    description: "Saturation Flag.\n\nRaw bit values: false (0) = SatNo: Not saturated.; true (1) = SatYes: Saturated."
     bit_offset: 26
     bit_size: 1
-    enum: Sat
   - name: sat3
-    description: Saturation Flag.
+    description: "Saturation Flag.\n\nRaw bit values: false (0) = SatNo: Not saturated.; true (1) = SatYes: Saturated."
     bit_offset: 27
     bit_size: 1
-    enum: Sat
   - name: sat4
-    description: Saturation Flag.
+    description: "Saturation Flag.\n\nRaw bit values: false (0) = SatNo: Not saturated.; true (1) = SatYes: Saturated."
     bit_offset: 28
     bit_size: 1
-    enum: Sat
 fieldset/SincAlphaFieldsetQuebec:
   description: Main Control.
   fields:
   - name: strig0
-    description: Software Trigger For Channel 0.
+    description: "Software Trigger For Channel 0.\n\nRaw bit values: false (0) = NoEffect: No effect.; true (1) = Trigger: Trigger."
     bit_offset: 0
     bit_size: 1
-    enum: Strig
   - name: strig1
-    description: Software Trigger For Channel 1.
+    description: "Software Trigger For Channel 1.\n\nRaw bit values: false (0) = NoEffect: No effect.; true (1) = Trigger: Trigger."
     bit_offset: 1
     bit_size: 1
-    enum: Strig
   - name: strig2
-    description: Software Trigger For Channel 2.
+    description: "Software Trigger For Channel 2.\n\nRaw bit values: false (0) = NoEffect: No effect.; true (1) = Trigger: Trigger."
     bit_offset: 2
     bit_size: 1
-    enum: Strig
   - name: strig3
-    description: Software Trigger For Channel 3.
+    description: "Software Trigger For Channel 3.\n\nRaw bit values: false (0) = NoEffect: No effect.; true (1) = Trigger: Trigger."
     bit_offset: 3
     bit_size: 1
-    enum: Strig
   - name: strig4
-    description: Software Trigger For Channel 4.
+    description: "Software Trigger For Channel 4.\n\nRaw bit values: false (0) = NoEffect: No effect.; true (1) = Trigger: Trigger."
     bit_offset: 4
     bit_size: 1
-    enum: Strig
   - name: dozen
-    description: Doze Or Stop Enable.
+    description: "Doze Or Stop Enable.\n\nRaw bit values: false (0) = Enabled: Enables.; true (1) = Disabled: Disables."
     bit_offset: 10
     bit_size: 1
-    enum: SincAlphaEnumYankeeAlpha
   - name: rst
-    description: Software Reset.
+    description: "Software Reset.\n\nRaw bit values: false (0) = ResetNo: Do not reset.; true (1) = ResetYes: Reset."
     bit_offset: 13
     bit_size: 1
-    enum: SincAlphaEnumYankeeDelta
   - name: men
-    description: Master Enable.
+    description: "Master Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 15
     bit_size: 1
-    enum: Cadie
   - name: mclkdiv
     description: Modulator Clock Divider.
     bit_offset: 16
@@ -858,176 +746,143 @@ fieldset/SincAlphaFieldsetQuebec:
     bit_size: 2
     enum: SincAlphaEnumUniformDelta
   - name: mclk0dis
-    description: Disable Modulator Clock 0 Output.
+    description: "Disable Modulator Clock 0 Output.\n\nRaw bit values: false (0) = Enabled: Enabled when MEN = 1.; true (1) = Disabled: Disabled regardless of MEN value."
     bit_offset: 27
     bit_size: 1
-    enum: Mclk0dis
   - name: mclk1dis
-    description: Disable Modulator Clock 1 Output.
+    description: "Disable Modulator Clock 1 Output.\n\nRaw bit values: false (0) = Enabled: Enabled when MEN = 1.; true (1) = Disabled: Disabled regardless of MEN value."
     bit_offset: 28
     bit_size: 1
-    enum: Mclk0dis
   - name: mclk2dis
-    description: Disable Modulator Clock 2 Output.
+    description: "Disable Modulator Clock 2 Output.\n\nRaw bit values: false (0) = Enabled: Enabled when MEN = 1.; true (1) = Disabled: Disabled regardless of MEN value."
     bit_offset: 29
     bit_size: 1
-    enum: Mclk0dis
 fieldset/SincAlphaFieldsetRomeo:
   description: Normal Interrupt Enable.
   fields:
   - name: cocie0
-    description: Conversion Complete Interrupt Enable.
+    description: "Conversion Complete Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 0
     bit_size: 1
-    enum: Cadie
   - name: cocie1
-    description: Conversion Complete Interrupt Enable.
+    description: "Conversion Complete Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 1
     bit_size: 1
-    enum: Cadie
   - name: cocie2
-    description: Conversion Complete Interrupt Enable.
+    description: "Conversion Complete Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 2
     bit_size: 1
-    enum: Cadie
   - name: cocie3
-    description: Conversion Complete Interrupt Enable.
+    description: "Conversion Complete Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 3
     bit_size: 1
-    enum: Cadie
   - name: cocie4
-    description: Conversion Complete Interrupt Enable.
+    description: "Conversion Complete Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 4
     bit_size: 1
-    enum: Cadie
   - name: chfie0
-    description: Data Output Ready Interrupt Enable.
+    description: "Data Output Ready Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 8
     bit_size: 1
-    enum: Cadie
   - name: chfie1
-    description: Data Output Ready Interrupt Enable.
+    description: "Data Output Ready Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 9
     bit_size: 1
-    enum: Cadie
   - name: chfie2
-    description: Data Output Ready Interrupt Enable.
+    description: "Data Output Ready Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 10
     bit_size: 1
-    enum: Cadie
   - name: chfie3
-    description: Data Output Ready Interrupt Enable.
+    description: "Data Output Ready Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 11
     bit_size: 1
-    enum: Cadie
   - name: chfie4
-    description: Data Output Ready Interrupt Enable.
+    description: "Data Output Ready Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 12
     bit_size: 1
-    enum: Cadie
   - name: zcdie0
-    description: Zero Cross Detected Interrupt Enable.
+    description: "Zero Cross Detected Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 16
     bit_size: 1
-    enum: Cadie
   - name: zcdie1
-    description: Zero Cross Detected Interrupt Enable.
+    description: "Zero Cross Detected Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 17
     bit_size: 1
-    enum: Cadie
   - name: zcdie2
-    description: Zero Cross Detected Interrupt Enable.
+    description: "Zero Cross Detected Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 18
     bit_size: 1
-    enum: Cadie
   - name: zcdie3
-    description: Zero Cross Detected Interrupt Enable.
+    description: "Zero Cross Detected Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 19
     bit_size: 1
-    enum: Cadie
   - name: zcdie4
-    description: Zero Cross Detected Interrupt Enable.
+    description: "Zero Cross Detected Interrupt Enable.\n\nRaw bit values: false (0) = Disables: Disables.; true (1) = Enables: Enables."
     bit_offset: 20
     bit_size: 1
-    enum: Cadie
 fieldset/SincAlphaFieldsetSierra:
   description: Normal Interrupt Status.
   fields:
   - name: coc0
-    description: Conversion Complete Flag.
+    description: "Conversion Complete Flag.\n\nRaw bit values: false (0) = CocNo: Not finished; data not available.; true (1) = CocYes: Finished; data available."
     bit_offset: 0
     bit_size: 1
-    enum: Coc
   - name: coc1
-    description: Conversion Complete Flag.
+    description: "Conversion Complete Flag.\n\nRaw bit values: false (0) = CocNo: Not finished; data not available.; true (1) = CocYes: Finished; data available."
     bit_offset: 1
     bit_size: 1
-    enum: Coc
   - name: coc2
-    description: Conversion Complete Flag.
+    description: "Conversion Complete Flag.\n\nRaw bit values: false (0) = CocNo: Not finished; data not available.; true (1) = CocYes: Finished; data available."
     bit_offset: 2
     bit_size: 1
-    enum: Coc
   - name: coc3
-    description: Conversion Complete Flag.
+    description: "Conversion Complete Flag.\n\nRaw bit values: false (0) = CocNo: Not finished; data not available.; true (1) = CocYes: Finished; data available."
     bit_offset: 3
     bit_size: 1
-    enum: Coc
   - name: coc4
-    description: Conversion Complete Flag.
+    description: "Conversion Complete Flag.\n\nRaw bit values: false (0) = CocNo: Not finished; data not available.; true (1) = CocYes: Finished; data available."
     bit_offset: 4
     bit_size: 1
-    enum: Coc
   - name: chf0
-    description: Data Output Ready Flag.
+    description: "Data Output Ready Flag.\n\nRaw bit values: false (0) = OvflwNo: No overflow; data not available.; true (1) = OvflwYes: Overflow; data available."
     bit_offset: 8
     bit_size: 1
-    enum: Chf
   - name: chf1
-    description: Data Output Ready Flag.
+    description: "Data Output Ready Flag.\n\nRaw bit values: false (0) = OvflwNo: No overflow; data not available.; true (1) = OvflwYes: Overflow; data available."
     bit_offset: 9
     bit_size: 1
-    enum: Chf
   - name: chf2
-    description: Data Output Ready Flag.
+    description: "Data Output Ready Flag.\n\nRaw bit values: false (0) = OvflwNo: No overflow; data not available.; true (1) = OvflwYes: Overflow; data available."
     bit_offset: 10
     bit_size: 1
-    enum: Chf
   - name: chf3
-    description: Data Output Ready Flag.
+    description: "Data Output Ready Flag.\n\nRaw bit values: false (0) = OvflwNo: No overflow; data not available.; true (1) = OvflwYes: Overflow; data available."
     bit_offset: 11
     bit_size: 1
-    enum: Chf
   - name: chf4
-    description: Data Output Ready Flag.
+    description: "Data Output Ready Flag.\n\nRaw bit values: false (0) = OvflwNo: No overflow; data not available.; true (1) = OvflwYes: Overflow; data available."
     bit_offset: 12
     bit_size: 1
-    enum: Chf
   - name: zcd0
-    description: Zero Cross Detected Flag.
+    description: "Zero Cross Detected Flag.\n\nRaw bit values: false (0) = ZcNo: Not detected.; true (1) = ZcYes: Detected."
     bit_offset: 16
     bit_size: 1
-    enum: Zcd
   - name: zcd1
-    description: Zero Cross Detected Flag.
+    description: "Zero Cross Detected Flag.\n\nRaw bit values: false (0) = ZcNo: Not detected.; true (1) = ZcYes: Detected."
     bit_offset: 17
     bit_size: 1
-    enum: Zcd
   - name: zcd2
-    description: Zero Cross Detected Flag.
+    description: "Zero Cross Detected Flag.\n\nRaw bit values: false (0) = ZcNo: Not detected.; true (1) = ZcYes: Detected."
     bit_offset: 18
     bit_size: 1
-    enum: Zcd
   - name: zcd3
-    description: Zero Cross Detected Flag.
+    description: "Zero Cross Detected Flag.\n\nRaw bit values: false (0) = ZcNo: Not detected.; true (1) = ZcYes: Detected."
     bit_offset: 19
     bit_size: 1
-    enum: Zcd
   - name: zcd4
-    description: Zero Cross Detected Flag.
+    description: "Zero Cross Detected Flag.\n\nRaw bit values: false (0) = ZcNo: Not detected.; true (1) = ZcYes: Detected."
     bit_offset: 20
     bit_size: 1
-    enum: Zcd
 fieldset/SincAlphaFieldsetTango:
   description: Parameters.
   fields:
@@ -1048,95 +903,77 @@ fieldset/SincAlphaFieldsetUniform:
   description: Status.
   fields:
   - name: cip0
-    description: Conversion In Progress.
+    description: "Conversion In Progress.\n\nRaw bit values: false (0) = ConvNo: Not in progress.; true (1) = ConvYes: In progress."
     bit_offset: 0
     bit_size: 1
-    enum: Cip
   - name: cip1
-    description: Conversion In Progress.
+    description: "Conversion In Progress.\n\nRaw bit values: false (0) = ConvNo: Not in progress.; true (1) = ConvYes: In progress."
     bit_offset: 1
     bit_size: 1
-    enum: Cip
   - name: cip2
-    description: Conversion In Progress.
+    description: "Conversion In Progress.\n\nRaw bit values: false (0) = ConvNo: Not in progress.; true (1) = ConvYes: In progress."
     bit_offset: 2
     bit_size: 1
-    enum: Cip
   - name: cip3
-    description: Conversion In Progress.
+    description: "Conversion In Progress.\n\nRaw bit values: false (0) = ConvNo: Not in progress.; true (1) = ConvYes: In progress."
     bit_offset: 3
     bit_size: 1
-    enum: Cip
   - name: cip4
-    description: Conversion In Progress.
+    description: "Conversion In Progress.\n\nRaw bit values: false (0) = ConvNo: Not in progress.; true (1) = ConvYes: In progress."
     bit_offset: 4
     bit_size: 1
-    enum: Cip
   - name: chrdy0
-    description: Channel Ready For Conversion.
+    description: "Channel Ready For Conversion.\n\nRaw bit values: false (0) = ReadyNo: Not ready.; true (1) = ReadyYes: Ready."
     bit_offset: 8
     bit_size: 1
-    enum: Chrdy
   - name: chrdy1
-    description: Channel Ready For Conversion.
+    description: "Channel Ready For Conversion.\n\nRaw bit values: false (0) = ReadyNo: Not ready.; true (1) = ReadyYes: Ready."
     bit_offset: 9
     bit_size: 1
-    enum: Chrdy
   - name: chrdy2
-    description: Channel Ready For Conversion.
+    description: "Channel Ready For Conversion.\n\nRaw bit values: false (0) = ReadyNo: Not ready.; true (1) = ReadyYes: Ready."
     bit_offset: 10
     bit_size: 1
-    enum: Chrdy
   - name: chrdy3
-    description: Channel Ready For Conversion.
+    description: "Channel Ready For Conversion.\n\nRaw bit values: false (0) = ReadyNo: Not ready.; true (1) = ReadyYes: Ready."
     bit_offset: 11
     bit_size: 1
-    enum: Chrdy
   - name: chrdy4
-    description: Channel Ready For Conversion.
+    description: "Channel Ready For Conversion.\n\nRaw bit values: false (0) = ReadyNo: Not ready.; true (1) = ReadyYes: Ready."
     bit_offset: 12
     bit_size: 1
-    enum: Chrdy
   - name: fifoempty0
-    description: FIFO Empty.
+    description: "FIFO Empty.\n\nRaw bit values: false (0) = EmptyNo: Not empty.; true (1) = EmptyYes: Empty."
     bit_offset: 16
     bit_size: 1
-    enum: Fifoempty
   - name: fifoempty1
-    description: FIFO Empty.
+    description: "FIFO Empty.\n\nRaw bit values: false (0) = EmptyNo: Not empty.; true (1) = EmptyYes: Empty."
     bit_offset: 17
     bit_size: 1
-    enum: Fifoempty
   - name: fifoempty2
-    description: FIFO Empty.
+    description: "FIFO Empty.\n\nRaw bit values: false (0) = EmptyNo: Not empty.; true (1) = EmptyYes: Empty."
     bit_offset: 18
     bit_size: 1
-    enum: Fifoempty
   - name: fifoempty3
-    description: FIFO Empty.
+    description: "FIFO Empty.\n\nRaw bit values: false (0) = EmptyNo: Not empty.; true (1) = EmptyYes: Empty."
     bit_offset: 19
     bit_size: 1
-    enum: Fifoempty
   - name: fifoempty4
-    description: FIFO Empty.
+    description: "FIFO Empty.\n\nRaw bit values: false (0) = EmptyNo: Not empty.; true (1) = EmptyYes: Empty."
     bit_offset: 20
     bit_size: 1
-    enum: Fifoempty
   - name: mclkrdy0
-    description: Modulator Clock 0 Ready.
+    description: "Modulator Clock 0 Ready.\n\nRaw bit values: false (0) = ReadyNo: Not ready.; true (1) = ReadyYes: Ready."
     bit_offset: 24
     bit_size: 1
-    enum: Chrdy
   - name: mclkrdy1
-    description: Modulator Clock 1 Ready.
+    description: "Modulator Clock 1 Ready.\n\nRaw bit values: false (0) = ReadyNo: Not ready.; true (1) = ReadyYes: Ready."
     bit_offset: 25
     bit_size: 1
-    enum: Chrdy
   - name: mclkrdy2
-    description: Modulator Clock 2 Ready.
+    description: "Modulator Clock 2 Ready.\n\nRaw bit values: false (0) = ReadyNo: Not ready.; true (1) = ReadyYes: Ready."
     bit_offset: 26
     bit_size: 1
-    enum: Chrdy
 fieldset/SincAlphaFieldsetVictor:
   description: Version ID.
   fields:
@@ -1193,84 +1030,12 @@ enum/SincAlphaEnumAlpha:
   - name: Zcd
     description: Zero crossing detected.
     value: 3
-enum/Biassat:
-  bit_size: 1
-  variants:
-  - name: SatNo
-    description: Did not occur.
-    value: 0
-  - name: SatYes
-    description: Occurred.
-    value: 1
-enum/Cad:
-  bit_size: 1
-  variants:
-  - name: CadNo
-    description: Clock present.
-    value: 0
-  - name: CadYes
-    description: Clock absent.
-    value: 1
-enum/Cadie:
-  bit_size: 1
-  variants:
-  - name: Disables
-    description: Disables.
-    value: 0
-  - name: Enables
-    description: Enables.
-    value: 1
 enum/SincAlphaEnumOscar:
   bit_size: 4
   variants:
   - name: Disables
     description: Disables CAD.
     value: 0
-enum/Chf:
-  bit_size: 1
-  variants:
-  - name: OvflwNo
-    description: No overflow; data not available.
-    value: 0
-  - name: OvflwYes
-    description: Overflow; data available.
-    value: 1
-enum/Chrdy:
-  bit_size: 1
-  variants:
-  - name: ReadyNo
-    description: Not ready.
-    value: 0
-  - name: ReadyYes
-    description: Ready.
-    value: 1
-enum/Cip:
-  bit_size: 1
-  variants:
-  - name: ConvNo
-    description: Not in progress.
-    value: 0
-  - name: ConvYes
-    description: In progress.
-    value: 1
-enum/SincAlphaEnumKiloAlpha:
-  bit_size: 1
-  variants:
-  - name: OflwNo
-    description: No overflow.
-    value: 0
-  - name: OflwYes
-    description: Overflow.
-    value: 1
-enum/Coc:
-  bit_size: 1
-  variants:
-  - name: CocNo
-    description: Not finished; data not available.
-    value: 0
-  - name: CocYes
-    description: Finished; data available.
-    value: 1
 enum/SincAlphaEnumVictorAlpha:
   bit_size: 2
   variants:
@@ -1319,51 +1084,6 @@ enum/SincAlphaEnumWhiskeyAlpha:
   - name: Scd
     description: Historical data from SCD.
     value: 6
-enum/SincAlphaEnumYankeeAlpha:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 1
-  - name: Enabled
-    description: Enables.
-    value: 0
-enum/Fifoempty:
-  bit_size: 1
-  variants:
-  - name: EmptyNo
-    description: Not empty.
-    value: 0
-  - name: EmptyYes
-    description: Empty.
-    value: 1
-enum/Fovf:
-  bit_size: 1
-  variants:
-  - name: FovfNo
-    description: Did not occur.
-    value: 0
-  - name: FovfYes
-    description: Occurred.
-    value: 1
-enum/Funf:
-  bit_size: 1
-  variants:
-  - name: FunfNo
-    description: Did not occur.
-    value: 0
-  - name: FunfYes
-    description: Occurred.
-    value: 1
-enum/Hlmt:
-  bit_size: 1
-  variants:
-  - name: HlmtNo
-    description: Not exceeded.
-    value: 0
-  - name: HlmtYes
-    description: Exceeded.
-    value: 1
 enum/SincAlphaEnumLimaCharlie:
   bit_size: 4
   variants:
@@ -1439,15 +1159,6 @@ enum/SincAlphaEnumPapaCharlie:
   - name: MclkOut2
     description: MCLK_OUT2 with internal routeback.
     value: 2
-enum/SincAlphaEnumQuebecCharlie:
-  bit_size: 1
-  variants:
-  - name: Edge
-    description: Edge.
-    value: 0
-  - name: Level
-    description: Level.
-    value: 1
 enum/SincAlphaEnumRomeoCharlie:
   bit_size: 2
   variants:
@@ -1460,15 +1171,6 @@ enum/SincAlphaEnumRomeoCharlie:
   - name: Sw
     description: Software.
     value: 0
-enum/Llmt:
-  bit_size: 1
-  variants:
-  - name: LlmtNo
-    description: Not exceeded.
-    value: 0
-  - name: LlmtYes
-    description: Exceeded.
-    value: 1
 enum/SincAlphaEnumEchoDelta:
   bit_size: 2
   variants:
@@ -1493,15 +1195,6 @@ enum/SincAlphaEnumFoxtrotDelta:
   - name: Ver2
     description: 2.x.
     value: 2
-enum/Mclk0dis:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disabled regardless of MEN value.
-    value: 1
-  - name: Enabled
-    description: Enabled when MEN = 1.
-    value: 0
 enum/SincAlphaEnumJulietDelta:
   bit_size: 8
   variants:
@@ -1568,60 +1261,6 @@ enum/SincAlphaEnumUniformDelta:
   - name: PrescaleNo
     description: No prescale.
     value: 0
-enum/SincAlphaEnumWhiskeyDelta:
-  bit_size: 1
-  variants:
-  - name: Signed
-    description: Left justified, signed.
-    value: 0
-  - name: Unsigned
-    description: Left justified, unsigned.
-    value: 1
-enum/SincAlphaEnumXrayDelta:
-  bit_size: 1
-  variants:
-  - name: Invalid
-    description: Invalid.
-    value: 1
-  - name: Valid
-    description: Valid.
-    value: 0
-enum/SincAlphaEnumYankeeDelta:
-  bit_size: 1
-  variants:
-  - name: ResetNo
-    description: Do not reset.
-    value: 0
-  - name: ResetYes
-    description: Reset.
-    value: 1
-enum/Sat:
-  bit_size: 1
-  variants:
-  - name: SatNo
-    description: Not saturated.
-    value: 0
-  - name: SatYes
-    description: Saturated.
-    value: 1
-enum/Scd:
-  bit_size: 1
-  variants:
-  - name: ScNo
-    description: Not detected.
-    value: 0
-  - name: ScYes
-    description: Detected.
-    value: 1
-enum/SincAlphaEnumPapaEcho:
-  bit_size: 1
-  variants:
-  - name: Always
-    description: Constantly when CnCR[CHEN] = MCR[MEN] = 1.
-    value: 0
-  - name: DuringConv
-    description: Only when the PF is performing a conversion.
-    value: 1
 enum/SincAlphaEnumWhiskeyEcho:
   bit_size: 8
   variants:
@@ -1643,42 +1282,6 @@ enum/SincAlphaEnumXrayEcho:
   - name: Zero
     description: Only 0.
     value: 2
-enum/SincAlphaEnumZuluEcho:
-  bit_size: 1
-  variants:
-  - name: DataValid
-    description: Data valid.
-    value: 0
-  - name: InProgress
-    description: Procedure in progress.
-    value: 1
-enum/Strig:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: No effect.
-    value: 0
-  - name: Trigger
-    description: Trigger.
-    value: 1
-enum/Wlmt:
-  bit_size: 1
-  variants:
-  - name: WlmtNo
-    description: Not exceeded.
-    value: 0
-  - name: WlmtYes
-    description: Exceeded.
-    value: 1
-enum/Zcd:
-  bit_size: 1
-  variants:
-  - name: ZcNo
-    description: Not detected.
-    value: 0
-  - name: ZcYes
-    description: Detected.
-    value: 1
 enum/SincAlphaEnumBravoGolf:
   bit_size: 2
   variants:

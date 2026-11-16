@@ -165,19 +165,17 @@ fieldset/Mcfgr0:
     bit_offset: 0
     bit_size: 1
   - name: hrpol
-    description: Host Request Polarity.
+    description: "Host Request Polarity.\n\nRaw bit values: false (0) = ActiveLow: Active low.; true (1) = ActiveHigh: Active high."
     bit_offset: 1
     bit_size: 1
-    enum: Hrpol
   - name: hrsel
     description: Host Request Select.
     bit_offset: 2
     bit_size: 1
   - name: hrdir
-    description: Host Request Direction.
+    description: "Host Request Direction.\n\nRaw bit values: false (0) = Input: HREQ pin is input (for LPI2C controller).; true (1) = Output: HREQ pin is output (for LPI2C target)."
     bit_offset: 3
     bit_size: 1
-    enum: Hrdir
   - name: cirfifo
     description: Circular FIFO Enable.
     bit_offset: 8
@@ -187,10 +185,9 @@ fieldset/Mcfgr0:
     bit_offset: 9
     bit_size: 1
   - name: relax
-    description: Relaxed Mode.
+    description: "Relaxed Mode.\n\nRaw bit values: false (0) = NormalTransfer: Normal transfer.; true (1) = RelaxedTransfer: Relaxed transfer."
     bit_offset: 16
     bit_size: 1
-    enum: Relax
   - name: abort
     description: Abort Transfer.
     bit_offset: 17
@@ -214,20 +211,17 @@ fieldset/Mcfgr1:
     bit_offset: 9
     bit_size: 1
   - name: timecfg
-    description: Timeout Configuration.
+    description: "Timeout Configuration.\n\nRaw bit values: false (0) = IfSclLow: SCL.; true (1) = IfSclOrSdaLow: SCL or SDA."
     bit_offset: 10
     bit_size: 1
-    enum: Timecfg
   - name: stopcfg
-    description: Stop Configuration.
+    description: "Stop Configuration.\n\nRaw bit values: false (0) = AnyStop: Any Stop condition.; true (1) = LastStop: Last Stop condition."
     bit_offset: 11
     bit_size: 1
-    enum: Stopcfg
   - name: startcfg
-    description: Start Configuration.
+    description: "Start Configuration.\n\nRaw bit values: false (0) = BothI2cAndLpi2cIdle: Sets when both I2C bus and LPI2C controller are idle.; true (1) = I2cIdle: Sets when I2C bus is idle."
     bit_offset: 12
     bit_size: 1
-    enum: Startcfg
   - name: matcfg
     description: Match Configuration.
     bit_offset: 16
@@ -278,24 +272,21 @@ fieldset/Mcr:
     bit_offset: 1
     bit_size: 1
   - name: dozen
-    description: Doze Mode Enable.
+    description: "Doze Mode Enable.\n\nRaw bit values: false (0) = Enabled: Enable.; true (1) = Disabled: Disable."
     bit_offset: 2
     bit_size: 1
-    enum: Dozen
   - name: dbgen
     description: Debug Enable.
     bit_offset: 3
     bit_size: 1
   - name: rtf
-    description: Reset Transmit FIFO.
+    description: "Reset Transmit FIFO.\n\nRaw bit values: false (0) = NoEffect: No effect.; true (1) = Reset: Reset transmit FIFO."
     bit_offset: 8
     bit_size: 1
-    enum: McrRtf
   - name: rrf
-    description: Reset Receive FIFO.
+    description: "Reset Receive FIFO.\n\nRaw bit values: false (0) = NoEffect: No effect.; true (1) = Reset: Reset receive FIFO."
     bit_offset: 9
     bit_size: 1
-    enum: McrRrf
   bit_size: 32
   reset_value: 0
 fieldset/Mder:
@@ -433,55 +424,45 @@ fieldset/Msr:
     bit_offset: 1
     bit_size: 1
   - name: epf
-    description: End Packet Flag.
+    description: "End Packet Flag.\n\nRaw bit values: false (0) = IntNo: No Stop or repeated Start generated.; true (1) = IntYes: Stop or repeated Start generated."
     bit_offset: 8
     bit_size: 1
-    enum: Epf
   - name: sdf
-    description: Stop Detect Flag.
+    description: "Stop Detect Flag.\n\nRaw bit values: false (0) = IntNo: No Stop condition generated.; true (1) = IntYes: Stop condition generated."
     bit_offset: 9
     bit_size: 1
-    enum: MsrSdf
   - name: ndf
-    description: NACK Detect Flag.
+    description: "NACK Detect Flag.\n\nRaw bit values: false (0) = IntNo: No unexpected NACK detected.; true (1) = IntYes: Unexpected NACK detected."
     bit_offset: 10
     bit_size: 1
-    enum: Ndf
   - name: alf
-    description: Arbitration Lost Flag.
+    description: "Arbitration Lost Flag.\n\nRaw bit values: false (0) = IntNo: Controller did not lose arbitration.; true (1) = IntYes: Controller lost arbitration."
     bit_offset: 11
     bit_size: 1
-    enum: Alf
   - name: fef
-    description: FIFO Error Flag.
+    description: "FIFO Error Flag.\n\nRaw bit values: false (0) = IntNo: No FIFO error.; true (1) = IntYes: FIFO error."
     bit_offset: 12
     bit_size: 1
-    enum: MsrFef
   - name: pltf
-    description: Pin Low Timeout Flag.
+    description: "Pin Low Timeout Flag.\n\nRaw bit values: false (0) = IntNo: Pin low timeout did not occur.; true (1) = IntYes: Pin low timeout occurred."
     bit_offset: 13
     bit_size: 1
-    enum: Pltf
   - name: dmf
-    description: Data Match Flag.
+    description: "Data Match Flag.\n\nRaw bit values: false (0) = IntNo: Matching data not received.; true (1) = IntYes: Matching data received."
     bit_offset: 14
     bit_size: 1
-    enum: Dmf
   - name: stf
-    description: Start Flag.
+    description: "Start Flag.\n\nRaw bit values: false (0) = IntNo: Start condition not detected.; true (1) = IntYes: Start condition detected."
     bit_offset: 15
     bit_size: 1
-    enum: Stf
   - name: mbf
-    description: Controller Busy Flag.
+    description: "Controller Busy Flag.\n\nRaw bit values: false (0) = Idle: Idle.; true (1) = Busy: Busy."
     bit_offset: 24
     bit_size: 1
-    enum: Mbf
   - name: bbf
-    description: Bus Busy Flag.
+    description: "Bus Busy Flag.\n\nRaw bit values: false (0) = Idle: Idle.; true (1) = Busy: Busy."
     bit_offset: 25
     bit_size: 1
-    enum: Mbf
   bit_size: 32
   reset_value: 1
 fieldset/Mtdr:
@@ -532,10 +513,9 @@ fieldset/Sasr:
     bit_offset: 0
     bit_size: 11
   - name: anv
-    description: Address Not Valid.
+    description: "Address Not Valid.\n\nRaw bit values: false (0) = Valid: Valid.; true (1) = NotValid: Not valid."
     bit_offset: 14
     bit_size: 1
-    enum: Anv
   bit_size: 32
   reset_value: 16384
 fieldset/Scfgr0:
@@ -571,10 +551,9 @@ fieldset/Scfgr1:
     bit_offset: 3
     bit_size: 1
   - name: rxnack
-    description: Receive NACK.
+    description: "Receive NACK.\n\nRaw bit values: false (0) = SetByTxnack: ACK or NACK always determined by STAR[TXNACK].; true (1) = AlwaysGeneratedOnAddressOrReceiveDataOverrun: NACK always generated on address overrun or receive data overrun, otherwise ACK or NACK is determined by STAR[TXNACK]."
     bit_offset: 4
     bit_size: 1
-    enum: Rxnack
   - name: gcen
     description: General Call Enable.
     bit_offset: 8
@@ -584,20 +563,17 @@ fieldset/Scfgr1:
     bit_offset: 9
     bit_size: 1
   - name: txcfg
-    description: Transmit Flag Configuration.
+    description: "Transmit Flag Configuration.\n\nRaw bit values: false (0) = AssertsDuringSlaveTransmitTransferWhenTxDataEmpty: SSR[TDF] is set only during a target-transmit transfer when STDR is empty.; true (1) = AssertsWhenTxDataEmpty: SSR[TDF] is set whenever STDR is empty."
     bit_offset: 10
     bit_size: 1
-    enum: Txcfg
   - name: rxcfg
-    description: Receive Data Configuration.
+    description: "Receive Data Configuration.\n\nRaw bit values: false (0) = ReturnsReceivedDataAndClearsRxDataFlag: Return received data, clear SSR[RDF].; true (1) = WhenAddressValidFlagSetReturnsAddressStatusAndClearsAddressValidFlag: Return SASR and clear SSR[AVF] when SSR[AVF] is set, return received data and clear SSR[RDF] when SSR[AFV] is not set."
     bit_offset: 11
     bit_size: 1
-    enum: Rxcfg
   - name: ignack
-    description: Ignore NACK.
+    description: "Ignore NACK.\n\nRaw bit values: false (0) = EndsTransferOnNack: End transfer on NACK.; true (1) = DoesNotEndTransferOnNack: Do not end transfer on NACK."
     bit_offset: 12
     bit_size: 1
-    enum: Scfgr1Ignack
   - name: hsmen
     description: HS Mode Enable.
     bit_offset: 13
@@ -612,15 +588,13 @@ fieldset/Scfgr1:
     bit_offset: 24
     bit_size: 1
   - name: rscfg
-    description: Repeated Start Configuration.
+    description: "Repeated Start Configuration.\n\nRaw bit values: false (0) = AnyRepeatedStartAfterAddressMatch: Any repeated Start condition following an address match.; true (1) = AnyRepeatedStart: Any repeated Start condition."
     bit_offset: 25
     bit_size: 1
-    enum: Rscfg
   - name: sdcfg
-    description: Stop Detect Configuration.
+    description: "Stop Detect Configuration.\n\nRaw bit values: false (0) = AnyStopAfterAddressMatch: Any Stop condition following an address match.; true (1) = AnyStop: Any Stop condition."
     bit_offset: 26
     bit_size: 1
-    enum: Sdcfg
   bit_size: 32
   reset_value: 0
 fieldset/Scfgr2:
@@ -660,20 +634,17 @@ fieldset/Scr:
     bit_offset: 4
     bit_size: 1
   - name: filtdz
-    description: Filter Doze Enable.
+    description: "Filter Doze Enable.\n\nRaw bit values: false (0) = FilterEnabled: Enable.; true (1) = FilterDisabled: Disable."
     bit_offset: 5
     bit_size: 1
-    enum: Filtdz
   - name: rtf
-    description: Reset Transmit FIFO.
+    description: "Reset Transmit FIFO.\n\nRaw bit values: false (0) = NoEffect: No effect.; true (1) = NowEmpty: STDR is now empty."
     bit_offset: 8
     bit_size: 1
-    enum: ScrRtf
   - name: rrf
-    description: Reset Receive FIFO.
+    description: "Reset Receive FIFO.\n\nRaw bit values: false (0) = NoEffect: No effect.; true (1) = NowEmpty: SRDR is now empty."
     bit_offset: 9
     bit_size: 1
-    enum: ScrRrf
   bit_size: 32
   reset_value: 0
 fieldset/Sder:
@@ -848,25 +819,22 @@ fieldset/Ssr:
     bit_offset: 15
     bit_size: 1
   - name: sbf
-    description: Target Busy Flag.
+    description: "Target Busy Flag.\n\nRaw bit values: false (0) = Idle: Idle.; true (1) = Busy: Busy."
     bit_offset: 24
     bit_size: 1
-    enum: Mbf
   - name: bbf
-    description: Bus Busy Flag.
+    description: "Bus Busy Flag.\n\nRaw bit values: false (0) = Idle: Idle.; true (1) = Busy: Busy."
     bit_offset: 25
     bit_size: 1
-    enum: Mbf
   bit_size: 32
   reset_value: 0
 fieldset/Star:
   description: Target Transmit ACK.
   fields:
   - name: txnack
-    description: Transmit NACK.
+    description: "Transmit NACK.\n\nRaw bit values: false (0) = TransmitAck: Transmit ACK.; true (1) = TransmitNack: Transmit NACK."
     bit_offset: 0
     bit_size: 1
-    enum: Txnack
   bit_size: 32
   reset_value: 0
 fieldset/Stdr:
@@ -923,24 +891,6 @@ enum/Addrcfg:
   - name: FromAddressMatch010BitToAddressMatch110Bit
     description: From address match 0 (10-bit) to address match 1 (10-bit).
     value: 7
-enum/Alf:
-  bit_size: 1
-  variants:
-  - name: IntNo
-    description: Controller did not lose arbitration.
-    value: 0
-  - name: IntYes
-    description: Controller lost arbitration.
-    value: 1
-enum/Anv:
-  bit_size: 1
-  variants:
-  - name: Valid
-    description: Valid.
-    value: 0
-  - name: NotValid
-    description: Not valid.
-    value: 1
 enum/Cmd:
   bit_size: 3
   variants:
@@ -970,33 +920,6 @@ enum/Cmd:
     description: Generate (repeated) Start on the I2C bus and transmit the address in DATA[7:0] using HS mode expecting
       a NACK response
     value: 7
-enum/Dmf:
-  bit_size: 1
-  variants:
-  - name: IntNo
-    description: Matching data not received.
-    value: 0
-  - name: IntYes
-    description: Matching data received.
-    value: 1
-enum/Dozen:
-  bit_size: 1
-  variants:
-  - name: Enabled
-    description: Enable.
-    value: 0
-  - name: Disabled
-    description: Disable.
-    value: 1
-enum/Epf:
-  bit_size: 1
-  variants:
-  - name: IntNo
-    description: No Stop or repeated Start generated.
-    value: 0
-  - name: IntYes
-    description: Stop or repeated Start generated.
-    value: 1
 enum/Feature:
   bit_size: 16
   variants:
@@ -1006,33 +929,6 @@ enum/Feature:
   - name: MasterAndSlave
     description: Controller and target, with standard feature set.
     value: 3
-enum/Filtdz:
-  bit_size: 1
-  variants:
-  - name: FilterEnabled
-    description: Enable.
-    value: 0
-  - name: FilterDisabled
-    description: Disable.
-    value: 1
-enum/Hrdir:
-  bit_size: 1
-  variants:
-  - name: Input
-    description: HREQ pin is input (for LPI2C controller).
-    value: 0
-  - name: Output
-    description: HREQ pin is output (for LPI2C target).
-    value: 1
-enum/Hrpol:
-  bit_size: 1
-  variants:
-  - name: ActiveLow
-    description: Active low.
-    value: 0
-  - name: ActiveHigh
-    description: Active high.
-    value: 1
 enum/Matcfg:
   bit_size: 3
   variants:
@@ -1057,60 +953,6 @@ enum/Matcfg:
   - name: AnyDataWordAndMatch1EqualsMatch0AndMatch1
     description: 'Match is enabled: (any data word AND MDMR[MATCH1]) equals (MDMR[MATCH0] AND MDMR[MATCH1]).'
     value: 7
-enum/Mbf:
-  bit_size: 1
-  variants:
-  - name: Idle
-    description: Idle.
-    value: 0
-  - name: Busy
-    description: Busy.
-    value: 1
-enum/McrRrf:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: No effect.
-    value: 0
-  - name: Reset
-    description: Reset receive FIFO.
-    value: 1
-enum/McrRtf:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: No effect.
-    value: 0
-  - name: Reset
-    description: Reset transmit FIFO.
-    value: 1
-enum/MsrFef:
-  bit_size: 1
-  variants:
-  - name: IntNo
-    description: No FIFO error.
-    value: 0
-  - name: IntYes
-    description: FIFO error.
-    value: 1
-enum/MsrSdf:
-  bit_size: 1
-  variants:
-  - name: IntNo
-    description: No Stop condition generated.
-    value: 0
-  - name: IntYes
-    description: Stop condition generated.
-    value: 1
-enum/Ndf:
-  bit_size: 1
-  variants:
-  - name: IntNo
-    description: No unexpected NACK detected.
-    value: 0
-  - name: IntYes
-    description: Unexpected NACK detected.
-    value: 1
 enum/Pincfg:
   bit_size: 3
   variants:
@@ -1138,15 +980,6 @@ enum/Pincfg:
   - name: PushPull4PinWLpi2cSlave
     description: Four-pin push-pull mode (inverted outputs).
     value: 7
-enum/Pltf:
-  bit_size: 1
-  variants:
-  - name: IntNo
-    description: Pin low timeout did not occur.
-    value: 0
-  - name: IntYes
-    description: Pin low timeout occurred.
-    value: 1
 enum/Prescale:
   bit_size: 3
   variants:
@@ -1174,131 +1007,3 @@ enum/Prescale:
   - name: DivideBy128
     description: Divide by 128.
     value: 7
-enum/Relax:
-  bit_size: 1
-  variants:
-  - name: NormalTransfer
-    description: Normal transfer.
-    value: 0
-  - name: RelaxedTransfer
-    description: Relaxed transfer.
-    value: 1
-enum/Rscfg:
-  bit_size: 1
-  variants:
-  - name: AnyRepeatedStartAfterAddressMatch
-    description: Any repeated Start condition following an address match.
-    value: 0
-  - name: AnyRepeatedStart
-    description: Any repeated Start condition.
-    value: 1
-enum/Rxcfg:
-  bit_size: 1
-  variants:
-  - name: ReturnsReceivedDataAndClearsRxDataFlag
-    description: Return received data, clear SSR[RDF].
-    value: 0
-  - name: WhenAddressValidFlagSetReturnsAddressStatusAndClearsAddressValidFlag
-    description: Return SASR and clear SSR[AVF] when SSR[AVF] is set, return received data and clear SSR[RDF] when
-      SSR[AFV] is not set.
-    value: 1
-enum/Rxnack:
-  bit_size: 1
-  variants:
-  - name: SetByTxnack
-    description: ACK or NACK always determined by STAR[TXNACK].
-    value: 0
-  - name: AlwaysGeneratedOnAddressOrReceiveDataOverrun
-    description: NACK always generated on address overrun or receive data overrun, otherwise ACK or NACK is determined
-      by STAR[TXNACK].
-    value: 1
-enum/Scfgr1Ignack:
-  bit_size: 1
-  variants:
-  - name: EndsTransferOnNack
-    description: End transfer on NACK.
-    value: 0
-  - name: DoesNotEndTransferOnNack
-    description: Do not end transfer on NACK.
-    value: 1
-enum/ScrRrf:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: No effect.
-    value: 0
-  - name: NowEmpty
-    description: SRDR is now empty.
-    value: 1
-enum/ScrRtf:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: No effect.
-    value: 0
-  - name: NowEmpty
-    description: STDR is now empty.
-    value: 1
-enum/Sdcfg:
-  bit_size: 1
-  variants:
-  - name: AnyStopAfterAddressMatch
-    description: Any Stop condition following an address match.
-    value: 0
-  - name: AnyStop
-    description: Any Stop condition.
-    value: 1
-enum/Startcfg:
-  bit_size: 1
-  variants:
-  - name: BothI2cAndLpi2cIdle
-    description: Sets when both I2C bus and LPI2C controller are idle.
-    value: 0
-  - name: I2cIdle
-    description: Sets when I2C bus is idle.
-    value: 1
-enum/Stf:
-  bit_size: 1
-  variants:
-  - name: IntNo
-    description: Start condition not detected.
-    value: 0
-  - name: IntYes
-    description: Start condition detected.
-    value: 1
-enum/Stopcfg:
-  bit_size: 1
-  variants:
-  - name: AnyStop
-    description: Any Stop condition.
-    value: 0
-  - name: LastStop
-    description: Last Stop condition.
-    value: 1
-enum/Timecfg:
-  bit_size: 1
-  variants:
-  - name: IfSclLow
-    description: SCL.
-    value: 0
-  - name: IfSclOrSdaLow
-    description: SCL or SDA.
-    value: 1
-enum/Txcfg:
-  bit_size: 1
-  variants:
-  - name: AssertsDuringSlaveTransmitTransferWhenTxDataEmpty
-    description: SSR[TDF] is set only during a target-transmit transfer when STDR is empty.
-    value: 0
-  - name: AssertsWhenTxDataEmpty
-    description: SSR[TDF] is set whenever STDR is empty.
-    value: 1
-enum/Txnack:
-  bit_size: 1
-  variants:
-  - name: TransmitAck
-    description: Transmit ACK.
-    value: 0
-  - name: TransmitNack
-    description: Transmit NACK.
-    value: 1

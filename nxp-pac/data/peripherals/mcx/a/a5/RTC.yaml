@@ -223,15 +223,13 @@ fieldset/Ctrl:
     bit_offset: 6
     bit_size: 1
   - name: bcd_en
-    description: BCD Mode Enable.
+    description: "BCD Mode Enable.\n\nRaw bit values: false (0) = BinaryMode: Binary mode.; true (1) = BcdMode: BCD mode."
     bit_offset: 7
     bit_size: 1
-    enum: BcdEn
   - name: swr
-    description: Software Reset.
+    description: "Software Reset.\n\nRaw bit values: false (0) = Cleared: Software Reset cleared.; true (1) = Asserted: Software Reset asserted."
     bit_offset: 8
     bit_size: 1
-    enum: Swr
   - name: clk_sel
     description: RTC Clock Select.
     bit_offset: 9
@@ -258,10 +256,9 @@ fieldset/Ctrl2:
     bit_size: 2
     enum: WakeupStatus
   - name: wakeup_mode
-    description: Wakeup Mode.
+    description: "Wakeup Mode.\n\nRaw bit values: false (0) = TamperPin: Tamper pin 0 is used as the tamper pin.; true (1) = WakeupPin: Tamper pin 0 is used as a wakeup and hibernation pin."
     bit_offset: 7
     bit_size: 1
-    enum: WakeupMode
 fieldset/Days:
   description: Days and Day-of-Week Counters.
   bit_size: 16
@@ -325,10 +322,9 @@ fieldset/Filter01Cfg:
     bit_size: 3
     enum: ClkSel0
   - name: pol1
-    description: Tamper Detect Input Bit 1 Polarity Control.
+    description: "Tamper Detect Input Bit 1 Polarity Control.\n\nRaw bit values: false (0) = ActiveHigh: Tamper detect input bit 1 is active high.; true (1) = ActiveLow: Tamper detect input bit 1 is active low."
     bit_offset: 7
     bit_size: 1
-    enum: Pol1
   - name: fil_dur0
     description: Tamper Detect Bit 0 Filter Duration.
     bit_offset: 8
@@ -340,10 +336,9 @@ fieldset/Filter01Cfg:
     bit_size: 3
     enum: ClkSel0
   - name: pol0
-    description: Tamper Detect Input Bit 0 Polarity Control.
+    description: "Tamper Detect Input Bit 0 Polarity Control.\n\nRaw bit values: false (0) = ActiveHigh: Tamper detect input bit 0 is active high.; true (1) = ActiveLow: Tamper detect input bit 0 is active low."
     bit_offset: 15
     bit_size: 1
-    enum: Pol0
 fieldset/Filter23Cfg:
   description: Tamper 23 Filter Configuration.
   bit_size: 16
@@ -359,10 +354,9 @@ fieldset/Filter23Cfg:
     bit_size: 3
     enum: ClkSel0
   - name: pol3
-    description: Tamper Detect Input Bit 3 Polarity Control.
+    description: "Tamper Detect Input Bit 3 Polarity Control.\n\nRaw bit values: false (0) = ActiveHigh: Tamper detect input bit 3 is active high.; true (1) = ActiveLow: Tamper detect input bit 3 is active low."
     bit_offset: 7
     bit_size: 1
-    enum: Pol3
   - name: fil_dur2
     description: Tamper Detect Bit 2 Filter Duration.
     bit_offset: 8
@@ -374,10 +368,9 @@ fieldset/Filter23Cfg:
     bit_size: 3
     enum: ClkSel0
   - name: pol2
-    description: Tamper Detect Input Bit 2 Polarity Control.
+    description: "Tamper Detect Input Bit 2 Polarity Control.\n\nRaw bit values: false (0) = ActiveHigh: Tamper detect input bit 2 is active high.; true (1) = ActiveLow: Tamper detect input bit 2 is active low."
     bit_offset: 15
     bit_size: 1
-    enum: Pol2
 fieldset/Filter45Cfg:
   description: Tamper 05 Filter Configuration.
   bit_size: 16
@@ -393,10 +386,9 @@ fieldset/Filter45Cfg:
     bit_size: 3
     enum: ClkSel5
   - name: pol5
-    description: Tamper Detect Input Bit 5 Polarity Control.
+    description: "Tamper Detect Input Bit 5 Polarity Control.\n\nRaw bit values: false (0) = ActiveHigh: Tamper detect input bit 5 is active high.; true (1) = ActiveLow: Tamper detect input bit 5 is active low."
     bit_offset: 7
     bit_size: 1
-    enum: Pol5
   - name: fil_dur4
     description: Tamper Detect Bit 4 Filter Duration.
     bit_offset: 8
@@ -408,10 +400,9 @@ fieldset/Filter45Cfg:
     bit_size: 3
     enum: ClkSel4
   - name: pol4
-    description: Tamper Detect Input Bit 4 Polarity Control.
+    description: "Tamper Detect Input Bit 4 Polarity Control.\n\nRaw bit values: false (0) = ActiveHigh: Tamper detect input bit 4is active high.; true (1) = ActiveLow: Tamper detect input bit 4 is active low."
     bit_offset: 15
     bit_size: 1
-    enum: Pol4
 fieldset/Filter67Cfg:
   description: Tamper 67 Filter Configuration.
   bit_size: 16
@@ -427,10 +418,9 @@ fieldset/Filter67Cfg:
     bit_size: 3
     enum: ClkSel7
   - name: pol7
-    description: Tamper Detect Input Bit 7 Polarity Control.
+    description: "Tamper Detect Input Bit 7 Polarity Control.\n\nRaw bit values: false (0) = ActiveHigh: Tamper detect input bit 7 is active high.; true (1) = ActiveLow: Tamper detect input bit 7 is active low."
     bit_offset: 7
     bit_size: 1
-    enum: Pol7
   - name: fil_dur6
     description: Tamper Detect Bit 6 Filter Duration.
     bit_offset: 8
@@ -442,10 +432,9 @@ fieldset/Filter67Cfg:
     bit_size: 3
     enum: ClkSel6
   - name: pol6
-    description: Tamper Detect Input Bit 6 Polarity Control.
+    description: "Tamper Detect Input Bit 6 Polarity Control.\n\nRaw bit values: false (0) = ActiveHigh: Tamper detect input bit 6 is active high.; true (1) = ActiveLow: Tamper detect input bit 6 is active low."
     bit_offset: 15
     bit_size: 1
-    enum: Pol6
 fieldset/Hourmin:
   description: Hours and Minutes Counters.
   bit_size: 16
@@ -615,10 +604,9 @@ fieldset/Status:
     bit_offset: 1
     bit_size: 1
   - name: dwn_cntr_inval_bit
-    description: Down Counter Invalidate Read/Write Access.
+    description: "Down Counter Invalidate Read/Write Access.\n\nRaw bit values: false (0) = Valid: Count down timer can be changed or read.; true (1) = Invalid: Count down timer (if running) is changing value and cannot be read or written."
     bit_offset: 4
     bit_size: 1
-    enum: DwnCntrInvalBit
   - name: cmp_int
     description: Compensation Interval.
     bit_offset: 5
@@ -628,10 +616,9 @@ fieldset/Status:
     bit_offset: 6
     bit_size: 2
   - name: bus_err
-    description: Bus Error.
+    description: "Bus Error.\n\nRaw bit values: false (0) = Normal: Read and write accesses are normal.; true (1) = Asserted: Read or write accesses occurred when STATUS[INVAL_BIT] was asserted."
     bit_offset: 8
     bit_size: 1
-    enum: BusErr
   - name: cmp_done
     description: Compensation Done.
     bit_offset: 11
@@ -703,24 +690,6 @@ fieldset/Yearmon:
     description: Year Offset Count Value.
     bit_offset: 8
     bit_size: 8
-enum/BcdEn:
-  bit_size: 1
-  variants:
-  - name: BinaryMode
-    description: Binary mode.
-    value: 0
-  - name: BcdMode
-    description: BCD mode.
-    value: 1
-enum/BusErr:
-  bit_size: 1
-  variants:
-  - name: Normal
-    description: Read and write accesses are normal.
-    value: 0
-  - name: Asserted
-    description: Read or write accesses occurred when STATUS[INVAL_BIT] was asserted.
-    value: 1
 enum/ClkSel0:
   bit_size: 3
   variants:
@@ -783,15 +752,6 @@ enum/ClkSel7:
     value: 0
   - name: Clk512hz
     description: Clock to tamper filter 7 is 512 Hz Tamper filter duration is 2.85ms (i.e. 1.5 clock) to 125ms (64 clocks) in increments of 1.95ms.
-    value: 1
-enum/DwnCntrInvalBit:
-  bit_size: 1
-  variants:
-  - name: Valid
-    description: Count down timer can be changed or read.
-    value: 0
-  - name: Invalid
-    description: Count down timer (if running) is changing value and cannot be read or written.
     value: 1
 enum/FilDur0:
   bit_size: 4
@@ -886,87 +846,6 @@ enum/LfsrClkSel:
   - name: Clk2hz
     description: 2 Hz.
     value: 7
-enum/Pol0:
-  bit_size: 1
-  variants:
-  - name: ActiveHigh
-    description: Tamper detect input bit 0 is active high.
-    value: 0
-  - name: ActiveLow
-    description: Tamper detect input bit 0 is active low.
-    value: 1
-enum/Pol1:
-  bit_size: 1
-  variants:
-  - name: ActiveHigh
-    description: Tamper detect input bit 1 is active high.
-    value: 0
-  - name: ActiveLow
-    description: Tamper detect input bit 1 is active low.
-    value: 1
-enum/Pol2:
-  bit_size: 1
-  variants:
-  - name: ActiveHigh
-    description: Tamper detect input bit 2 is active high.
-    value: 0
-  - name: ActiveLow
-    description: Tamper detect input bit 2 is active low.
-    value: 1
-enum/Pol3:
-  bit_size: 1
-  variants:
-  - name: ActiveHigh
-    description: Tamper detect input bit 3 is active high.
-    value: 0
-  - name: ActiveLow
-    description: Tamper detect input bit 3 is active low.
-    value: 1
-enum/Pol4:
-  bit_size: 1
-  variants:
-  - name: ActiveHigh
-    description: Tamper detect input bit 4is active high.
-    value: 0
-  - name: ActiveLow
-    description: Tamper detect input bit 4 is active low.
-    value: 1
-enum/Pol5:
-  bit_size: 1
-  variants:
-  - name: ActiveHigh
-    description: Tamper detect input bit 5 is active high.
-    value: 0
-  - name: ActiveLow
-    description: Tamper detect input bit 5 is active low.
-    value: 1
-enum/Pol6:
-  bit_size: 1
-  variants:
-  - name: ActiveHigh
-    description: Tamper detect input bit 6 is active high.
-    value: 0
-  - name: ActiveLow
-    description: Tamper detect input bit 6 is active low.
-    value: 1
-enum/Pol7:
-  bit_size: 1
-  variants:
-  - name: ActiveHigh
-    description: Tamper detect input bit 7 is active high.
-    value: 0
-  - name: ActiveLow
-    description: Tamper detect input bit 7 is active low.
-    value: 1
-enum/Swr:
-  bit_size: 1
-  variants:
-  - name: Cleared
-    description: Software Reset cleared.
-    value: 0
-  - name: Asserted
-    description: Software Reset asserted.
-    value: 1
 enum/TmprEn:
   bit_size: 4
   variants:
@@ -984,15 +863,6 @@ enum/TmprSts:
     value: 0
   - name: TamperDetected
     description: Tamper Event Detected.
-    value: 1
-enum/WakeupMode:
-  bit_size: 1
-  variants:
-  - name: TamperPin
-    description: Tamper pin 0 is used as the tamper pin.
-    value: 0
-  - name: WakeupPin
-    description: Tamper pin 0 is used as a wakeup and hibernation pin.
     value: 1
 enum/WakeupStatus:
   bit_size: 2

@@ -1075,15 +1075,13 @@ fieldset/SecVioMiscInfo:
   description: Security Violation Miscellaneous Information at Address.
   fields:
   - name: sec_vio_info_write
-    description: Security violation access read/write indicator.
+    description: "Security violation access read/write indicator.\n\nRaw bit values: false (0) = Read: Read access.; true (1) = Write: Write access."
     bit_offset: 0
     bit_size: 1
-    enum: SecVioInfoWrite
   - name: sec_vio_info_data_access
-    description: Security Violation Info Data Access.
+    description: "Security Violation Info Data Access.\n\nRaw bit values: false (0) = Code: Code.; true (1) = Data: Data."
     bit_offset: 1
     bit_size: 1
-    enum: SecVioInfoDataAccess
   - name: sec_vio_info_master_sec_level
     description: Security Violation Info Master Security Level.
     bit_offset: 4

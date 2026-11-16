@@ -131,10 +131,9 @@ fieldset/PowerquadAlphaFieldsetBravo:
     bit_size: 4
     enum: PowerquadAlphaEnumEcho
   - name: inst_busy
-    description: Instruction Busy.
+    description: "Instruction Busy.\n\nRaw bit values: false (0) = NotBusy: Not busy.; true (1) = Busy: Busy."
     bit_offset: 31
     bit_size: 1
-    enum: PowerquadAlphaEnumQuebec
 fieldset/PowerquadAlphaFieldsetCharlie:
   description: CORDIC Input X.
   fields:
@@ -168,84 +167,70 @@ fieldset/PowerquadAlphaFieldsetFoxtrot:
     bit_offset: 8
     bit_size: 8
   - name: cppre_sat
-    description: Saturation.
+    description: "Saturation.\n\nRaw bit values: false (0) = Disable: No saturation.; true (1) = Enable: Forces sub-32 bit saturation."
     bit_offset: 16
     bit_size: 1
-    enum: PowerquadAlphaEnumBravo
   - name: cppre_sat8
-    description: Saturation 8.
+    description: "Saturation 8.\n\nRaw bit values: false (0) = Sat8Bits: 8 bits.; true (1) = Sat16Bits: 16 bits."
     bit_offset: 17
     bit_size: 1
-    enum: PowerquadAlphaEnumCharlie
 fieldset/PowerquadAlphaFieldsetGolf:
   description: Cursory.
   fields:
   - name: cursory
-    description: Cursory Mode.
+    description: "Cursory Mode.\n\nRaw bit values: false (0) = Disable: Disable cursory mode, full floating-point accuracy (24-bit mantissa + 2 bits before rounding).; true (1) = Enable: Enable cursory Mode, 16-bit mantissa (bottom bits are zeroed for inputs and outputs of MACs)."
     bit_offset: 0
     bit_size: 1
-    enum: PowerquadAlphaEnumDelta
 fieldset/PowerquadAlphaFieldsetHotel:
   description: Error Status.
   fields:
   - name: overflow
-    description: Floating-point Overflow.
+    description: "Floating-point Overflow.\n\nRaw bit values: false (0) = NoError: No error.; true (1) = Error: Error on floating-point overflow."
     bit_offset: 0
     bit_size: 1
-    enum: PowerquadAlphaEnumBravoAlpha
   - name: nan
-    description: Floating-Point Not-a-Number (NaN).
+    description: "Floating-Point Not-a-Number (NaN).\n\nRaw bit values: false (0) = NoError: No error.; true (1) = Error: Error on floating-point NaN."
     bit_offset: 1
     bit_size: 1
-    enum: PowerquadAlphaEnumYankee
   - name: fixedoverflow
-    description: Fixed-point Overflow.
+    description: "Fixed-point Overflow.\n\nRaw bit values: false (0) = NoError: No error.; true (1) = Error: Error on fixed-point overflow."
     bit_offset: 2
     bit_size: 1
-    enum: PowerquadAlphaEnumLima
   - name: underflow
-    description: Underflow.
+    description: "Underflow.\n\nRaw bit values: false (0) = NoError: No error.; true (1) = Error: Error on underflow."
     bit_offset: 3
     bit_size: 1
-    enum: PowerquadAlphaEnumEchoAlpha
   - name: buserror
-    description: Bus Error.
+    description: "Bus Error.\n\nRaw bit values: false (0) = NoError: No error.; true (1) = Error: Error on bus."
     bit_offset: 4
     bit_size: 1
-    enum: PowerquadAlphaEnumAlpha
 fieldset/PowerquadAlphaFieldsetIndia:
   description: Event Enable.
   fields:
   - name: event_oflow
-    description: Event Trigger on Floating-point Overflow.
+    description: "Event Trigger on Floating-point Overflow.\n\nRaw bit values: false (0) = Disable: Disable event trigger.; true (1) = Enable: Enable event trigger."
     bit_offset: 0
     bit_size: 1
-    enum: EventBerr
   - name: event_nan
-    description: Event Trigger on Floating-Point NaN.
+    description: "Event Trigger on Floating-Point NaN.\n\nRaw bit values: false (0) = Disable: Disable event trigger.; true (1) = Enable: Enable event trigger."
     bit_offset: 1
     bit_size: 1
-    enum: EventBerr
   - name: event_fixed
-    description: Event Trigger on Fixed-point Overflow.
+    description: "Event Trigger on Fixed-point Overflow.\n\nRaw bit values: false (0) = Disable: Disable event trigger.; true (1) = Enable: Enable event trigger."
     bit_offset: 2
     bit_size: 1
-    enum: EventBerr
   - name: event_uflow
-    description: Event Trigger on Underflow.
+    description: "Event Trigger on Underflow.\n\nRaw bit values: false (0) = Disable: Disable event trigger.; true (1) = Enable: Enable event trigger."
     bit_offset: 3
     bit_size: 1
-    enum: EventBerr
   - name: event_berr
-    description: Event Trigger on AHBM Bus Error.
+    description: "Event Trigger on AHBM Bus Error.\n\nRaw bit values: false (0) = Disable: Disable event trigger.; true (1) = Enable: Enable event trigger."
     bit_offset: 4
     bit_size: 1
-    enum: EventBerr
   - name: event_comp
-    description: Event Trigger on Instruction Completion.
+    description: "Event Trigger on Instruction Completion.\n\nRaw bit values: false (0) = Disable: Disable event trigger.; true (1) = Enable: Enable event trigger."
     bit_offset: 7
     bit_size: 1
-    enum: EventBerr
 fieldset/PowerquadAlphaFieldsetJuliet:
   description: General Purpose Register Bank n.
   fields:
@@ -305,43 +290,36 @@ fieldset/PowerquadAlphaFieldsetOscar:
   description: Interrupt Enable.
   fields:
   - name: intr_oflow
-    description: Interrupt Floating-point Overflow.
+    description: "Interrupt Floating-point Overflow.\n\nRaw bit values: false (0) = Disable: Disable interrupt.; true (1) = Enable: Enable interrupt."
     bit_offset: 0
     bit_size: 1
-    enum: IntrBerr
   - name: intr_nan
-    description: Interrupt Floating-point NaN.
+    description: "Interrupt Floating-point NaN.\n\nRaw bit values: false (0) = Disable: Disable interrupt.; true (1) = Enable: Enable interrupt."
     bit_offset: 1
     bit_size: 1
-    enum: IntrBerr
   - name: intr_fixed
-    description: Interrupt on Fixed-point Overflow.
+    description: "Interrupt on Fixed-point Overflow.\n\nRaw bit values: false (0) = Disable: Disable interrupt.; true (1) = Enable: Enable interrupt."
     bit_offset: 2
     bit_size: 1
-    enum: IntrBerr
   - name: intr_uflow
-    description: Interrupt on Underflow.
+    description: "Interrupt on Underflow.\n\nRaw bit values: false (0) = Disable: Disable interrupt.; true (1) = Enable: Enable interrupt."
     bit_offset: 3
     bit_size: 1
-    enum: IntrBerr
   - name: intr_berr
-    description: Interrupt on AHBM Bus Error.
+    description: "Interrupt on AHBM Bus Error.\n\nRaw bit values: false (0) = Disable: Disable interrupt.; true (1) = Enable: Enable interrupt."
     bit_offset: 4
     bit_size: 1
-    enum: IntrBerr
   - name: intr_comp
-    description: Interrupt on Instruction Completion.
+    description: "Interrupt on Instruction Completion.\n\nRaw bit values: false (0) = Disable: Disable interrupt.; true (1) = Enable: Enable interrupt."
     bit_offset: 7
     bit_size: 1
-    enum: IntrBerr
 fieldset/PowerquadAlphaFieldsetPapa:
   description: Interrupt Status.
   fields:
   - name: intr_stat
-    description: Interrupt Status.
+    description: "Interrupt Status.\n\nRaw bit values: false (0) = Disable: No new interrupt.; true (1) = Enable: Interrupt captured."
     bit_offset: 0
     bit_size: 1
-    enum: PowerquadAlphaEnumWhiskey
 fieldset/PowerquadAlphaFieldsetQuebec:
   description: Length.
   fields:
@@ -404,42 +382,6 @@ fieldset/PowerquadAlphaFieldsetVictor:
     description: Scaling Value for Temporary Data.
     bit_offset: 8
     bit_size: 8
-enum/PowerquadAlphaEnumAlpha:
-  bit_size: 1
-  variants:
-  - name: Error
-    description: Error on bus.
-    value: 1
-  - name: NoError
-    description: No error.
-    value: 0
-enum/PowerquadAlphaEnumBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: No saturation.
-    value: 0
-  - name: Enable
-    description: Forces sub-32 bit saturation.
-    value: 1
-enum/PowerquadAlphaEnumCharlie:
-  bit_size: 1
-  variants:
-  - name: Sat16Bits
-    description: 16 bits.
-    value: 1
-  - name: Sat8Bits
-    description: 8 bits.
-    value: 0
-enum/PowerquadAlphaEnumDelta:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable cursory mode, full floating-point accuracy (24-bit mantissa + 2 bits before rounding).
-    value: 0
-  - name: Enable
-    description: Enable cursory Mode, 16-bit mantissa (bottom bits are zeroed for inputs and outputs of MACs).
-    value: 1
 enum/PowerquadAlphaEnumEcho:
   bit_size: 4
   variants:
@@ -458,24 +400,6 @@ enum/PowerquadAlphaEnumEcho:
   - name: Transform
     description: Transform engine.
     value: 2
-enum/EventBerr:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable event trigger.
-    value: 0
-  - name: Enable
-    description: Enable event trigger.
-    value: 1
-enum/PowerquadAlphaEnumLima:
-  bit_size: 1
-  variants:
-  - name: Error
-    description: Error on fixed-point overflow.
-    value: 1
-  - name: NoError
-    description: No error.
-    value: 0
 enum/InaFormatext:
   bit_size: 2
   variants:
@@ -488,57 +412,3 @@ enum/InaFormatext:
   - name: Q31
     description: Q31 32-bit fixed-point integer.
     value: 1
-enum/PowerquadAlphaEnumQuebec:
-  bit_size: 1
-  variants:
-  - name: Busy
-    description: Busy.
-    value: 1
-  - name: NotBusy
-    description: Not busy.
-    value: 0
-enum/PowerquadAlphaEnumWhiskey:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: No new interrupt.
-    value: 0
-  - name: Enable
-    description: Interrupt captured.
-    value: 1
-enum/IntrBerr:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable interrupt.
-    value: 0
-  - name: Enable
-    description: Enable interrupt.
-    value: 1
-enum/PowerquadAlphaEnumYankee:
-  bit_size: 1
-  variants:
-  - name: Error
-    description: Error on floating-point NaN.
-    value: 1
-  - name: NoError
-    description: No error.
-    value: 0
-enum/PowerquadAlphaEnumBravoAlpha:
-  bit_size: 1
-  variants:
-  - name: Error
-    description: Error on floating-point overflow.
-    value: 1
-  - name: NoError
-    description: No error.
-    value: 0
-enum/PowerquadAlphaEnumEchoAlpha:
-  bit_size: 1
-  variants:
-  - name: Error
-    description: Error on underflow.
-    value: 1
-  - name: NoError
-    description: No error.
-    value: 0

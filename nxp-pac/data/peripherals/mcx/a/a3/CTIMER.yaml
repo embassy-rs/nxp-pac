@@ -337,25 +337,21 @@ fieldset/Pwmc:
   description: PWM Control.
   fields:
   - name: pwmen0
-    description: PWM Mode Enable for Channel 0.
+    description: "PWM Mode Enable for Channel 0.\n\nRaw bit values: false (0) = Match: Disable.; true (1) = Pwm: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Pwmen
   - name: pwmen1
-    description: PWM Mode Enable for Channel 1.
+    description: "PWM Mode Enable for Channel 1.\n\nRaw bit values: false (0) = Match: Disable.; true (1) = Pwm: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: Pwmen
   - name: pwmen2
-    description: PWM Mode Enable for Channel 2.
+    description: "PWM Mode Enable for Channel 2.\n\nRaw bit values: false (0) = Match: Disable.; true (1) = Pwm: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: Pwmen
   - name: pwmen3
-    description: PWM Mode Enable for Channel 3.
+    description: "PWM Mode Enable for Channel 3.\n\nRaw bit values: false (0) = Match: Disable.; true (1) = Pwm: Enable."
     bit_offset: 3
     bit_size: 1
-    enum: Pwmen
   bit_size: 32
   reset_value: 0
 fieldset/Tc:
@@ -433,15 +429,6 @@ enum/Emc:
   - name: Toggle
     description: Toggles.
     value: 3
-enum/Pwmen:
-  bit_size: 1
-  variants:
-  - name: Match
-    description: Disable.
-    value: 0
-  - name: Pwm
-    description: Enable.
-    value: 1
 enum/Selcc:
   bit_size: 3
   variants:

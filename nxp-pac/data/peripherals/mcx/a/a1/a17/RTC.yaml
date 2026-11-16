@@ -39,20 +39,17 @@ fieldset/Cr:
   description: RTC Control.
   fields:
   - name: swr
-    description: Software Reset.
+    description: "Software Reset.\n\nRaw bit values: false (0) = NoEffect: No effect.; true (1) = Reset: Resets all RTC registers except for this bit . This bit is cleared by POR and by software explicitly clearing it."
     bit_offset: 0
     bit_size: 1
-    enum: Swr
   - name: um
-    description: Update Mode.
+    description: "Update Mode.\n\nRaw bit values: false (0) = NonWritable: Registers cannot be written when locked.; true (1) = Writable: Registers can be written when locked under limited conditions."
     bit_offset: 3
     bit_size: 1
-    enum: Um
   - name: lpos
-    description: LPO Select.
+    description: "LPO Select.\n\nRaw bit values: false (0) = Clock32: RTC prescaler increments using 32.768 kHz clock.; true (1) = ClockLpo: RTC prescaler increments using 16.384 kHz LPO. Bit [0] of the prescaler is ignored."
     bit_offset: 7
     bit_size: 1
-    enum: Lpos
   bit_size: 32
   reset_value: 128
 fieldset/Ier:
@@ -85,35 +82,30 @@ fieldset/Lr:
   description: RTC Lock.
   fields:
   - name: tcl
-    description: Time Compensation Lock.
+    description: "Time Compensation Lock.\n\nRaw bit values: false (0) = Locked: Time Compensation Register is locked and writes are ignored.; true (1) = NotLocked: Time Compensation Register is not locked and writes complete as normal."
     bit_offset: 3
     bit_size: 1
-    enum: Tcl
   - name: crl
-    description: Control Register Lock.
+    description: "Control Register Lock.\n\nRaw bit values: false (0) = Locked: Control Register is locked and writes are ignored.; true (1) = NotLocked: Control Register is not locked and writes complete as normal."
     bit_offset: 4
     bit_size: 1
-    enum: Crl
   - name: srl
-    description: Status Register Lock.
+    description: "Status Register Lock.\n\nRaw bit values: false (0) = Locked: Status Register is locked and writes are ignored.; true (1) = NotLocked: Status Register is not locked and writes complete as normal."
     bit_offset: 5
     bit_size: 1
-    enum: Srl
   - name: lrl
-    description: Lock Register Lock.
+    description: "Lock Register Lock.\n\nRaw bit values: false (0) = Locked: Lock Register is locked and writes are ignored.; true (1) = NotLocked: Lock Register is not locked and writes complete as normal."
     bit_offset: 6
     bit_size: 1
-    enum: Lrl
   bit_size: 32
   reset_value: 255
 fieldset/Sr:
   description: RTC Status.
   fields:
   - name: tif
-    description: Time Invalid Flag.
+    description: "Time Invalid Flag.\n\nRaw bit values: false (0) = Valid: Time is valid.; true (1) = Invalid: Time is invalid and time counter is read as zero."
     bit_offset: 0
     bit_size: 1
-    enum: Tif
   - name: tof
     description: Time Overflow Flag.
     bit_offset: 1
@@ -177,70 +169,6 @@ fieldset/Tsr:
     bit_size: 32
   bit_size: 32
   reset_value: 0
-enum/Crl:
-  bit_size: 1
-  variants:
-  - name: Locked
-    description: Control Register is locked and writes are ignored.
-    value: 0
-  - name: NotLocked
-    description: Control Register is not locked and writes complete as normal.
-    value: 1
-enum/Lpos:
-  bit_size: 1
-  variants:
-  - name: Clock32
-    description: RTC prescaler increments using 32.768 kHz clock.
-    value: 0
-  - name: ClockLpo
-    description: RTC prescaler increments using 16.384 kHz LPO. Bit [0] of the prescaler is ignored.
-    value: 1
-enum/Lrl:
-  bit_size: 1
-  variants:
-  - name: Locked
-    description: Lock Register is locked and writes are ignored.
-    value: 0
-  - name: NotLocked
-    description: Lock Register is not locked and writes complete as normal.
-    value: 1
-enum/Srl:
-  bit_size: 1
-  variants:
-  - name: Locked
-    description: Status Register is locked and writes are ignored.
-    value: 0
-  - name: NotLocked
-    description: Status Register is not locked and writes complete as normal.
-    value: 1
-enum/Swr:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: No effect.
-    value: 0
-  - name: Reset
-    description: Resets all RTC registers except for this bit . This bit is cleared by POR and by software explicitly
-      clearing it.
-    value: 1
-enum/Tcl:
-  bit_size: 1
-  variants:
-  - name: Locked
-    description: Time Compensation Register is locked and writes are ignored.
-    value: 0
-  - name: NotLocked
-    description: Time Compensation Register is not locked and writes complete as normal.
-    value: 1
-enum/Tif:
-  bit_size: 1
-  variants:
-  - name: Valid
-    description: Time is valid.
-    value: 0
-  - name: Invalid
-    description: Time is invalid and time counter is read as zero.
-    value: 1
 enum/Tsic:
   bit_size: 3
   variants:
@@ -268,15 +196,6 @@ enum/Tsic:
   - name: Frq8
     description: 128 Hz.
     value: 7
-enum/Um:
-  bit_size: 1
-  variants:
-  - name: NonWritable
-    description: Registers cannot be written when locked.
-    value: 0
-  - name: Writable
-    description: Registers can be written when locked under limited conditions.
-    value: 1
 enum/CompensationValue:
   bit_size: 8
   variants:

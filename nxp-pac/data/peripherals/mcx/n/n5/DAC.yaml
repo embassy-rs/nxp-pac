@@ -87,15 +87,13 @@ fieldset/Der2:
   description: DMA Enable.
   fields:
   - name: empty_dmaen
-    description: FIFO Empty DMA Enable.
+    description: "FIFO Empty DMA Enable.\n\nRaw bit values: false (0) = Disabled: Disables.; true (1) = Enabled: Enables."
     bit_offset: 1
     bit_size: 1
-    enum: Dacen
   - name: wm_dmaen
-    description: FIFO Watermark DMA Enable.
+    description: "FIFO Watermark DMA Enable.\n\nRaw bit values: false (0) = Disabled: Disables.; true (1) = Enabled: Enables."
     bit_offset: 2
     bit_size: 1
-    enum: Dacen
 fieldset/DacAlphaFieldsetCharlie:
   description: DAC FIFO Control.
   fields:
@@ -118,135 +116,112 @@ fieldset/Fsr2:
   description: FIFO Status.
   fields:
   - name: full
-    description: FIFO Full Flag.
+    description: "FIFO Full Flag.\n\nRaw bit values: false (0) = NotFull: Not full.; true (1) = Full: Full."
     bit_offset: 0
     bit_size: 1
-    enum: Full2
   - name: empty
-    description: FIFO Empty Flag.
+    description: "FIFO Empty Flag.\n\nRaw bit values: false (0) = NotEmpty: Not empty.; true (1) = Empty: Empty."
     bit_offset: 1
     bit_size: 1
-    enum: Empty
   - name: wm
-    description: FIFO Watermark Status Flag.
+    description: "FIFO Watermark Status Flag.\n\nRaw bit values: false (0) = MoreThanWlevel: Data in FIFO is more than watermark level.; true (1) = LessThanWlevel: Data in FIFO is less than or equal to watermark level."
     bit_offset: 2
     bit_size: 1
-    enum: Wm2
   - name: swbk
-    description: Swing Back One Cycle Complete Flag.
+    description: "Swing Back One Cycle Complete Flag.\n\nRaw bit values: false (0) = NoSwing: No swing back cycle has completed since the last time the flag was cleared.; true (1) = SwingBack: At least one swing back cycle has occurred since the last time the flag was cleared."
     bit_offset: 3
     bit_size: 1
-    enum: Swbk2
   - name: of
-    description: FIFO Overflow Flag.
+    description: "FIFO Overflow Flag.\n\nRaw bit values: false (0) = NoOverflow: No overflow has occurred since the last time the flag was cleared.; true (1) = Overflow: At least one FIFO overflow has occurred since the last time the flag was cleared."
     bit_offset: 6
     bit_size: 1
-    enum: Of
   - name: uf
-    description: FIFO Underflow Flag.
+    description: "FIFO Underflow Flag.\n\nRaw bit values: false (0) = NoUnderflow: No underflow has occurred since the last time the flag was cleared.; true (1) = Underflow: At least one trigger underflow has occurred since the last time the flag was cleared."
     bit_offset: 7
     bit_size: 1
-    enum: Uf
   - name: ptgcoco
-    description: Period Trigger Mode Conversion Complete Flag.
+    description: "Period Trigger Mode Conversion Complete Flag.\n\nRaw bit values: false (0) = NotStart: Not completed or not started.; true (1) = Completed: Completed."
     bit_offset: 8
     bit_size: 1
-    enum: Ptgcoco2
 fieldset/DacAlphaFieldsetFoxtrot:
   description: Global Control.
   fields:
   - name: dacen
-    description: DAC Enable.
+    description: "DAC Enable.\n\nRaw bit values: false (0) = Disabled: Disables.; true (1) = Enabled: Enables."
     bit_offset: 0
     bit_size: 1
-    enum: Dacen
   - name: dacrfs
     description: DAC Reference Select.
     bit_offset: 1
     bit_size: 2
     enum: DacAlphaEnumDelta
   - name: fifoen
-    description: FIFO Enable.
+    description: "FIFO Enable.\n\nRaw bit values: false (0) = BufferMode: Enables FIFO mode and disables Buffer mode. Any data written to DATA[DATA] goes to buffer then goes to conversion.; true (1) = FifoMode: Enables FIFO mode. Data will be first read from FIFO to buffer and then goes to conversion."
     bit_offset: 3
     bit_size: 1
-    enum: Fifoen2
   - name: swmd
-    description: Swing Back Mode.
+    description: "Swing Back Mode.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 4
     bit_size: 1
-    enum: Swmd
   - name: trgsel
-    description: DAC Trigger Select.
+    description: "DAC Trigger Select.\n\nRaw bit values: false (0) = Hardware: Hardware trigger.; true (1) = Software: Software trigger."
     bit_offset: 5
     bit_size: 1
-    enum: Trgsel2
   - name: ptgen
-    description: DAC Periodic Trigger Mode Enable.
+    description: "DAC Periodic Trigger Mode Enable.\n\nRaw bit values: false (0) = Disabled: Disables.; true (1) = Enabled: Enables."
     bit_offset: 6
     bit_size: 1
-    enum: Dacen
   - name: latch_cyc
     description: RCLK Cycles Before Data Latch.
     bit_offset: 8
     bit_size: 4
   - name: buf_en
-    description: Buffer Enable.
+    description: "Buffer Enable.\n\nRaw bit values: false (0) = UseBuf: Not used.; true (1) = NoUseBuf: Used."
     bit_offset: 17
     bit_size: 1
-    enum: BufEn2
   - name: iref_ptat_ext_sel
-    description: External On-Chip PTAT Current Reference Select.
+    description: "External On-Chip PTAT Current Reference Select.\n\nRaw bit values: false (0) = NotSelected: Not selected.; true (1) = Selected: Selected."
     bit_offset: 20
     bit_size: 1
-    enum: IrefPtatExtSel
   - name: iref_ztc_ext_sel
-    description: External On-Chip ZTC Current Reference Select.
+    description: "External On-Chip ZTC Current Reference Select.\n\nRaw bit values: false (0) = NotSelected: Not selected.; true (1) = Selected: Selected."
     bit_offset: 21
     bit_size: 1
-    enum: IrefPtatExtSel
   - name: buf_spd_ctrl
-    description: OPAMP as Buffer, Speed Control Signal.
+    description: "OPAMP as Buffer, Speed Control Signal.\n\nRaw bit values: false (0) = LlpMode: Lower Low-Power mode.; true (1) = LpMode: Low-Power mode."
     bit_offset: 23
     bit_size: 1
-    enum: DacAlphaEnumBravo
 fieldset/Ier2:
   description: Interrupt Enable.
   fields:
   - name: full_ie
-    description: FIFO Full Interrupt Enable.
+    description: "FIFO Full Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Disables.; true (1) = Enabled: Enables."
     bit_offset: 0
     bit_size: 1
-    enum: Dacen
   - name: empty_ie
-    description: FIFO Empty Interrupt Enable.
+    description: "FIFO Empty Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Disables.; true (1) = Enabled: Enables."
     bit_offset: 1
     bit_size: 1
-    enum: Dacen
   - name: wm_ie
-    description: FIFO Watermark Interrupt Enable.
+    description: "FIFO Watermark Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Disables.; true (1) = Enabled: Enables."
     bit_offset: 2
     bit_size: 1
-    enum: Dacen
   - name: swbk_ie
-    description: Swing Back One Cycle Complete Interrupt Enable.
+    description: "Swing Back One Cycle Complete Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Disables.; true (1) = Enabled: Enables."
     bit_offset: 3
     bit_size: 1
-    enum: Dacen
   - name: of_ie
-    description: FIFO Overflow Interrupt Enable.
+    description: "FIFO Overflow Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Disables.; true (1) = Enabled: Enables."
     bit_offset: 6
     bit_size: 1
-    enum: Dacen
   - name: uf_ie
-    description: FIFO Underflow Interrupt Enable.
+    description: "FIFO Underflow Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Disables.; true (1) = Enabled: Enables."
     bit_offset: 7
     bit_size: 1
-    enum: Dacen
   - name: ptgcoco_ie
-    description: PTG Mode Conversion Complete Interrupt Enable.
+    description: "PTG Mode Conversion Complete Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: Disables.; true (1) = Enabled: Enables."
     bit_offset: 8
     bit_size: 1
-    enum: Dacen
 fieldset/Param3:
   description: Parameter.
   fields:
@@ -270,23 +245,20 @@ fieldset/Rcr2:
   description: Reset Control.
   fields:
   - name: swrst
-    description: Software Reset.
+    description: "Software Reset.\n\nRaw bit values: false (0) = NoEffect: No effect.; true (1) = SoftwareReset: Software reset."
     bit_offset: 0
     bit_size: 1
-    enum: Swrst2
   - name: fiforst
-    description: FIFO Reset.
+    description: "FIFO Reset.\n\nRaw bit values: false (0) = NoEffect: No effect.; true (1) = FifoReset: FIFO reset."
     bit_offset: 1
     bit_size: 1
-    enum: Fiforst2
 fieldset/Tcr2:
   description: Trigger Control.
   fields:
   - name: swtrg
-    description: Software Trigger.
+    description: "Software Trigger.\n\nRaw bit values: false (0) = NotValid: Not valid.; true (1) = Valid: Valid."
     bit_offset: 0
     bit_size: 1
-    enum: Swtrg
 fieldset/Verid3:
   description: Version Identifier.
   fields:
@@ -302,24 +274,6 @@ fieldset/Verid3:
     description: Major Version Number.
     bit_offset: 24
     bit_size: 8
-enum/BufEn2:
-  bit_size: 1
-  variants:
-  - name: NoUseBuf
-    description: Used.
-    value: 1
-  - name: UseBuf
-    description: Not used.
-    value: 0
-enum/DacAlphaEnumBravo:
-  bit_size: 1
-  variants:
-  - name: LlpMode
-    description: Lower Low-Power mode.
-    value: 0
-  - name: LpMode
-    description: Low-Power mode.
-    value: 1
 enum/DacAlphaEnumDelta:
   bit_size: 2
   variants:
@@ -332,78 +286,6 @@ enum/DacAlphaEnumDelta:
   - name: Vrefh2
     description: Selects VREFH2 as the reference voltage.
     value: 2
-enum/Empty:
-  bit_size: 1
-  variants:
-  - name: Empty
-    description: Empty.
-    value: 1
-  - name: NotEmpty
-    description: Not empty.
-    value: 0
-enum/Dacen:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disables.
-    value: 0
-  - name: Enabled
-    description: Enables.
-    value: 1
-enum/Fifoen2:
-  bit_size: 1
-  variants:
-  - name: BufferMode
-    description: Enables FIFO mode and disables Buffer mode. Any data written to DATA[DATA] goes to buffer then goes to conversion.
-    value: 0
-  - name: FifoMode
-    description: Enables FIFO mode. Data will be first read from FIFO to buffer and then goes to conversion.
-    value: 1
-enum/Full2:
-  bit_size: 1
-  variants:
-  - name: Full
-    description: Full.
-    value: 1
-  - name: NotFull
-    description: Not full.
-    value: 0
-enum/IrefPtatExtSel:
-  bit_size: 1
-  variants:
-  - name: NotSelected
-    description: Not selected.
-    value: 0
-  - name: Selected
-    description: Selected.
-    value: 1
-enum/Swtrg:
-  bit_size: 1
-  variants:
-  - name: NotValid
-    description: Not valid.
-    value: 0
-  - name: Valid
-    description: Valid.
-    value: 1
-enum/Trgsel2:
-  bit_size: 1
-  variants:
-  - name: Hardware
-    description: Hardware trigger.
-    value: 0
-  - name: Software
-    description: Software trigger.
-    value: 1
-enum/Uf:
-  bit_size: 1
-  variants:
-  - name: NoUnderflow
-    description: No underflow has occurred since the last time the flag was cleared.
-    value: 0
-  - name: Underflow
-    description: At least one trigger underflow has occurred since the last time the flag was cleared.
-    value: 1
 block/DacBravo:
   description: 14-bit DAC.
   items:
@@ -487,44 +369,29 @@ fieldset/DacBravoFieldsetFoxtrot:
   description: Global Control.
   fields:
   - name: dacen
-    description: DAC Enable.
+    description: "DAC Enable.\n\nRaw bit values: false (0) = Disabled: Disables.; true (1) = Enabled: Enables."
     bit_offset: 0
     bit_size: 1
-    enum: Dacen
   - name: fifoen
-    description: FIFO Enable.
+    description: "FIFO Enable.\n\nRaw bit values: false (0) = BufferMode: Enables FIFO mode and disables Buffer mode. Any data written to DATA[DATA] goes to buffer then goes to conversion.; true (1) = FifoMode: Enables FIFO mode. Data will be first read from FIFO to buffer and then goes to conversion."
     bit_offset: 3
     bit_size: 1
-    enum: Fifoen2
   - name: swmd
-    description: Swing Back Mode.
+    description: "Swing Back Mode.\n\nRaw bit values: false (0) = Disable: Disables.; true (1) = Enable: Enables."
     bit_offset: 4
     bit_size: 1
-    enum: Swmd
   - name: trgsel
-    description: DAC Trigger Select.
+    description: "DAC Trigger Select.\n\nRaw bit values: false (0) = Hardware: Hardware trigger.; true (1) = Software: Software trigger."
     bit_offset: 5
     bit_size: 1
-    enum: Trgsel2
   - name: ptgen
-    description: DAC Periodic Trigger Mode Enable.
+    description: "DAC Periodic Trigger Mode Enable.\n\nRaw bit values: false (0) = Disabled: Disables.; true (1) = Enabled: Enables."
     bit_offset: 6
     bit_size: 1
-    enum: Dacen
   - name: buf_en
-    description: Buffer Enable.
+    description: "Buffer Enable.\n\nRaw bit values: false (0) = UseBuf: Not used.; true (1) = NoUseBuf: Used."
     bit_offset: 17
     bit_size: 1
-    enum: BufEn2
-enum/Fiforst2:
-  bit_size: 1
-  variants:
-  - name: FifoReset
-    description: FIFO reset.
-    value: 1
-  - name: NoEffect
-    description: No effect.
-    value: 0
 enum/Fifosz2:
   bit_size: 3
   variants:
@@ -549,57 +416,3 @@ enum/Fifosz2:
   - name: Val7
     description: FIFO depth is 256.
     value: 7
-enum/Of:
-  bit_size: 1
-  variants:
-  - name: NoOverflow
-    description: No overflow has occurred since the last time the flag was cleared.
-    value: 0
-  - name: Overflow
-    description: At least one FIFO overflow has occurred since the last time the flag was cleared.
-    value: 1
-enum/Ptgcoco2:
-  bit_size: 1
-  variants:
-  - name: Completed
-    description: Completed.
-    value: 1
-  - name: NotStart
-    description: Not completed or not started.
-    value: 0
-enum/Swbk2:
-  bit_size: 1
-  variants:
-  - name: NoSwing
-    description: No swing back cycle has completed since the last time the flag was cleared.
-    value: 0
-  - name: SwingBack
-    description: At least one swing back cycle has occurred since the last time the flag was cleared.
-    value: 1
-enum/Swmd:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/Swrst2:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: No effect.
-    value: 0
-  - name: SoftwareReset
-    description: Software reset.
-    value: 1
-enum/Wm2:
-  bit_size: 1
-  variants:
-  - name: LessThanWlevel
-    description: Data in FIFO is less than or equal to watermark level.
-    value: 1
-  - name: MoreThanWlevel
-    description: Data in FIFO is more than watermark level.
-    value: 0

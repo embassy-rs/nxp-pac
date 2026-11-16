@@ -33,6 +33,14 @@ Metadata-only host builds are supported with default features
 disabled. Building a MetaPAC does not require a vendor SVD checkout, external
 formatter, or generator executable.
 
+MCXA/MCXN MetaPAC one-bit fields use primitive `bool`, not field-specific enums.
+`false` is the raw bit value 0 and `true` is 1, including for active-low controls.
+The field documentation retains the former enum's bit meanings. Callers migrating
+from an enum getter/setter must use those raw Boolean values; `true` does not
+universally mean enabled. Wider fields retain their integer or enum types, even
+when they have only two named choices. Register layouts and software defaults are
+unchanged. The separate legacy two-core MCXN947 PAC is not part of this migration.
+
 MCXN MetaPAC chip features are `mcxn235`, `mcxn236`, `mcxn246`, `mcxn247`,
 `mcxn526`, `mcxn527`, `mcxn536`, `mcxn537`, `mcxn546`, `mcxn547`, `mcxn556`,
 `mcxn557`, `mcxn946`, and `mcxn947`. The numeric features also cover matching

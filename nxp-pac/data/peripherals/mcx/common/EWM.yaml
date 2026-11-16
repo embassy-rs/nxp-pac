@@ -92,10 +92,9 @@ fieldset/Ctrl:
     bit_offset: 2
     bit_size: 1
   - name: inten
-    description: Enable interrupt generation; clear to deassert interrupt requests.
+    description: "Enable interrupt generation; clear to deassert interrupt requests.\n\nRaw bit values: false (0) = Disabled: Deasserts interrupt requests.; true (1) = Enabled: Generates interrupt requests."
     bit_offset: 3
     bit_size: 1
-    enum: Inten
 fieldset/Serv:
   bit_size: 8
   reset_value: 0
@@ -155,12 +154,3 @@ enum/Clksel:
     only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
     description: EWM LPO CLK, connected to LPO_CLK[0].
     value: 0
-enum/Inten:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Deasserts interrupt requests.
-    value: 0
-  - name: Enabled
-    description: Generates interrupt requests.
-    value: 1

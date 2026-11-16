@@ -5,10 +5,9 @@ fieldset/DmaCh0Control2:
   description: DMA Channel 0 Control.
   fields:
   - name: pb_lx8
-    description: 8xPBL mode.
+    description: "8xPBL mode.\n\nRaw bit values: false (0) = Disable: 8xPBL mode is disabled.; true (1) = Enable: 8xPBL mode is enabled."
     bit_offset: 16
     bit_size: 1
-    enum: PbLx8
   - name: dsl
     description: Descriptor Skip Length.
     bit_offset: 18
@@ -45,70 +44,57 @@ fieldset/DmaCh0InterruptEnable2:
   description: Channeli Interrupt Enable.
   fields:
   - name: tie
-    description: Transmit Interrupt Enable.
+    description: "Transmit Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Transmit Interrupt is disabled.; true (1) = Enable: Transmit Interrupt is enabled."
     bit_offset: 0
     bit_size: 1
-    enum: Tie
   - name: txse
-    description: Transmit Stopped Enable.
+    description: "Transmit Stopped Enable.\n\nRaw bit values: false (0) = Disable: Transmit Stopped is disabled.; true (1) = Enable: Transmit Stopped is enabled."
     bit_offset: 1
     bit_size: 1
-    enum: Txse
   - name: tbue
-    description: Transmit Buffer Unavailable Enable.
+    description: "Transmit Buffer Unavailable Enable.\n\nRaw bit values: false (0) = Disable: Transmit Buffer Unavailable is disabled.; true (1) = Enable: Transmit Buffer Unavailable is enabled."
     bit_offset: 2
     bit_size: 1
-    enum: Tbue
   - name: rie
-    description: Receive Interrupt Enable.
+    description: "Receive Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Receive Interrupt is disabled.; true (1) = Enable: Receive Interrupt is enabled."
     bit_offset: 6
     bit_size: 1
-    enum: Rie
   - name: rbue
-    description: Receive Buffer Unavailable Enable.
+    description: "Receive Buffer Unavailable Enable.\n\nRaw bit values: false (0) = Disable: Receive Buffer Unavailable is disabled.; true (1) = Enable: Receive Buffer Unavailable is enabled."
     bit_offset: 7
     bit_size: 1
-    enum: Rbue
   - name: rse
-    description: Receive Stopped Enable.
+    description: "Receive Stopped Enable.\n\nRaw bit values: false (0) = Disable: Receive Stopped is disabled.; true (1) = Enable: Receive Stopped is enabled."
     bit_offset: 8
     bit_size: 1
-    enum: Rse
   - name: rwte
-    description: Receive Watchdog Timeout Enable.
+    description: "Receive Watchdog Timeout Enable.\n\nRaw bit values: false (0) = Disable: Receive Watchdog Timeout is disabled.; true (1) = Enable: Receive Watchdog Timeout is enabled."
     bit_offset: 9
     bit_size: 1
-    enum: Rwte
   - name: etie
-    description: Early Transmit Interrupt Enable.
+    description: "Early Transmit Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Early Transmit Interrupt is disabled.; true (1) = Enable: Early Transmit Interrupt is enabled."
     bit_offset: 10
     bit_size: 1
-    enum: Etic
   - name: erie
-    description: Early Receive Interrupt Enable.
+    description: "Early Receive Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Early Receive Interrupt is disabled.; true (1) = Enable: Early Receive Interrupt is enabled."
     bit_offset: 11
     bit_size: 1
-    enum: Eric
   - name: fbee
-    description: Fatal Bus Error Enable.
+    description: "Fatal Bus Error Enable.\n\nRaw bit values: false (0) = Disable: Fatal Bus Error is disabled.; true (1) = Enable: Fatal Bus Error is enabled."
     bit_offset: 12
     bit_size: 1
-    enum: Fbee
   - name: cdee
-    description: Context Descriptor Error Enable.
+    description: "Context Descriptor Error Enable.\n\nRaw bit values: false (0) = Disable: Context Descriptor Error is disabled.; true (1) = Enable: Context Descriptor Error is enabled."
     bit_offset: 13
     bit_size: 1
-    enum: Cdee
   - name: aie
-    description: Abnormal Interrupt Summary Enable.
+    description: "Abnormal Interrupt Summary Enable.\n\nRaw bit values: false (0) = Disable: Abnormal Interrupt Summary is disabled.; true (1) = Enable: Abnormal Interrupt Summary is enabled."
     bit_offset: 14
     bit_size: 1
-    enum: Aie
   - name: nie
-    description: Normal Interrupt Summary Enable.
+    description: "Normal Interrupt Summary Enable.\n\nRaw bit values: false (0) = Disable: Normal Interrupt Summary is disabled.; true (1) = Enable: Normal Interrupt Summary is enabled."
     bit_offset: 15
     bit_size: 1
-    enum: Nie
 fieldset/DmaCh0MissFrameCnt2:
   description: Channel 0 Missed Frame Counter.
   fields:
@@ -117,18 +103,16 @@ fieldset/DmaCh0MissFrameCnt2:
     bit_offset: 0
     bit_size: 11
   - name: mfco
-    description: Overflow status of the MFC Counter.
+    description: "Overflow status of the MFC Counter.\n\nRaw bit values: false (0) = Inactive: Miss Frame Counter overflow not occurred.; true (1) = Active: Miss Frame Counter overflow occurred."
     bit_offset: 15
     bit_size: 1
-    enum: Mfco
 fieldset/DmaCh1RxControl:
   description: DMA Channel 1 Receive Control.
   fields:
   - name: sr
-    description: Start or Stop Receive.
+    description: "Start or Stop Receive.\n\nRaw bit values: false (0) = Stop: Stop Receive.; true (1) = Start: Start Receive."
     bit_offset: 0
     bit_size: 1
-    enum: Sr
   - name: rbsz_x_0
     description: Receive Buffer size Low.
     bit_offset: 1
@@ -142,15 +126,13 @@ fieldset/DmaCh1RxControl:
     bit_offset: 16
     bit_size: 6
   - name: eric
-    description: Early Receive Interrupt Control.
+    description: "Early Receive Interrupt Control.\n\nRaw bit values: false (0) = Disable: Early Receive Interrupt is disabled.; true (1) = Enable: Early Receive Interrupt is enabled."
     bit_offset: 22
     bit_size: 1
-    enum: Eric
   - name: rpf
-    description: Rx Packet Flush.
+    description: "Rx Packet Flush.\n\nRaw bit values: false (0) = Disable: Rx Packet Flush is disabled.; true (1) = Enable: Rx Packet Flush is enabled."
     bit_offset: 31
     bit_size: 1
-    enum: Rpf
 fieldset/DmaCh1RxControl2:
   description: DMA Channel 1 Receive Control.
   fields:
@@ -198,15 +180,13 @@ fieldset/DmaCh1SlotFunctionControlStatus:
   description: Channel 1 Slot Function Control and Status.
   fields:
   - name: esc
-    description: Enable Slot Comparison.
+    description: "Enable Slot Comparison.\n\nRaw bit values: false (0) = Disable: Slot Comparison is disabled.; true (1) = Enable: Slot Comparison is enabled."
     bit_offset: 0
     bit_size: 1
-    enum: Esc
   - name: asc
-    description: Advance Slot Check.
+    description: "Advance Slot Check.\n\nRaw bit values: false (0) = Disable: Advance Slot Check is disabled.; true (1) = Enable: Advance Slot Check is enabled."
     bit_offset: 1
     bit_size: 1
-    enum: Asc
   - name: siv
     description: Slot Interval Value.
     bit_offset: 4
@@ -219,70 +199,57 @@ fieldset/DmaCh1Status:
   description: DMA Channel 1 Status.
   fields:
   - name: ti
-    description: Transmit Interrupt.
+    description: "Transmit Interrupt.\n\nRaw bit values: false (0) = Inactive: Transmit Interrupt status not detected.; true (1) = Active: Transmit Interrupt status detected."
     bit_offset: 0
     bit_size: 1
-    enum: Ti
   - name: tps
-    description: Transmit Process Stopped.
+    description: "Transmit Process Stopped.\n\nRaw bit values: false (0) = Inactive: Transmit Process Stopped status not detected.; true (1) = Active: Transmit Process Stopped status detected."
     bit_offset: 1
     bit_size: 1
-    enum: Tps
   - name: tbu
-    description: Transmit Buffer Unavailable.
+    description: "Transmit Buffer Unavailable.\n\nRaw bit values: false (0) = Inactive: Transmit Buffer Unavailable status not detected.; true (1) = Active: Transmit Buffer Unavailable status detected."
     bit_offset: 2
     bit_size: 1
-    enum: Tbu
   - name: ri
-    description: Receive Interrupt.
+    description: "Receive Interrupt.\n\nRaw bit values: false (0) = Inactive: Receive Interrupt status not detected.; true (1) = Active: Receive Interrupt status detected."
     bit_offset: 6
     bit_size: 1
-    enum: Ri
   - name: rbu
-    description: Receive Buffer Unavailable.
+    description: "Receive Buffer Unavailable.\n\nRaw bit values: false (0) = Inactive: Receive Buffer Unavailable status not detected.; true (1) = Active: Receive Buffer Unavailable status detected."
     bit_offset: 7
     bit_size: 1
-    enum: Rbu
   - name: rps
-    description: Receive Process Stopped.
+    description: "Receive Process Stopped.\n\nRaw bit values: false (0) = Inactive: Receive Process Stopped status not detected.; true (1) = Active: Receive Process Stopped status detected."
     bit_offset: 8
     bit_size: 1
-    enum: Rps
   - name: rwt
-    description: Receive Watchdog Timeout.
+    description: "Receive Watchdog Timeout.\n\nRaw bit values: false (0) = Inactive: Receive Watchdog Timeout status not detected.; true (1) = Active: Receive Watchdog Timeout status detected."
     bit_offset: 9
     bit_size: 1
-    enum: Rwt2
   - name: eti
-    description: Early Transmit Interrupt.
+    description: "Early Transmit Interrupt.\n\nRaw bit values: false (0) = Inactive: Early Transmit Interrupt status not detected.; true (1) = Active: Early Transmit Interrupt status detected."
     bit_offset: 10
     bit_size: 1
-    enum: Eti
   - name: eri
-    description: Early Receive Interrupt.
+    description: "Early Receive Interrupt.\n\nRaw bit values: false (0) = Inactive: Early Receive Interrupt status not detected.; true (1) = Active: Early Receive Interrupt status detected."
     bit_offset: 11
     bit_size: 1
-    enum: Eri
   - name: fbe
-    description: Fatal Bus Error.
+    description: "Fatal Bus Error.\n\nRaw bit values: false (0) = Inactive: Fatal Bus Error status not detected.; true (1) = Active: Fatal Bus Error status detected."
     bit_offset: 12
     bit_size: 1
-    enum: Fbe
   - name: cde
-    description: Context Descriptor Error.
+    description: "Context Descriptor Error.\n\nRaw bit values: false (0) = Inactive: Context Descriptor Error status not detected.; true (1) = Active: Context Descriptor Error status detected."
     bit_offset: 13
     bit_size: 1
-    enum: Cde
   - name: ais
-    description: Abnormal Interrupt Summary.
+    description: "Abnormal Interrupt Summary.\n\nRaw bit values: false (0) = Inactive: Abnormal Interrupt Summary status not detected.; true (1) = Active: Abnormal Interrupt Summary status detected."
     bit_offset: 14
     bit_size: 1
-    enum: Ais
   - name: nis
-    description: Normal Interrupt Summary.
+    description: "Normal Interrupt Summary.\n\nRaw bit values: false (0) = Inactive: Normal Interrupt Summary status not detected.; true (1) = Active: Normal Interrupt Summary status detected."
     bit_offset: 15
     bit_size: 1
-    enum: Nis
   - name: teb
     description: Tx DMA Error Bits.
     bit_offset: 16
@@ -295,28 +262,25 @@ fieldset/DmaCh1TxControl:
   description: DMA Channel 1 Transmit Control.
   fields:
   - name: st
-    description: Start or Stop Transmission Command.
+    description: "Start or Stop Transmission Command.\n\nRaw bit values: false (0) = Stop: Stop Transmission Command.; true (1) = Start: Start Transmission Command."
     bit_offset: 0
     bit_size: 1
-    enum: St
   - name: tcw
     description: Transmit Channel Weight.
     bit_offset: 1
     bit_size: 3
   - name: osf
-    description: Operate on Second Packet.
+    description: "Operate on Second Packet.\n\nRaw bit values: false (0) = Disable: Operate on Second Packet disabled.; true (1) = Enable: Operate on Second Packet enabled."
     bit_offset: 4
     bit_size: 1
-    enum: Osf
   - name: tx_pbl
     description: Transmit Programmable Burst Length.
     bit_offset: 16
     bit_size: 6
   - name: etic
-    description: Early Transmit Interrupt Control.
+    description: "Early Transmit Interrupt Control.\n\nRaw bit values: false (0) = Disable: Early Transmit Interrupt is disabled.; true (1) = Enable: Early Transmit Interrupt is enabled."
     bit_offset: 22
     bit_size: 1
-    enum: Etic
 fieldset/DmaCh1TxdescListAddress:
   description: Channel 1 Tx Descriptor List Address.
   fields:
@@ -342,10 +306,9 @@ fieldset/DmaDebugStatus02:
   description: DMA Debug Status 0.
   fields:
   - name: axwhsts
-    description: AHB Master Status.
+    description: "AHB Master Status.\n\nRaw bit values: false (0) = Inactive: AXI Master Write Channel or AHB Master Status not detected.; true (1) = Active: AXI Master Write Channel or AHB Master Status detected."
     bit_offset: 0
     bit_size: 1
-    enum: Axwhsts
   - name: rps0
     description: DMA Channel 0 Receive Process State.
     bit_offset: 8
@@ -370,48 +333,41 @@ fieldset/DmaInterruptStatus2:
   description: DMA Interrupt Status.
   fields:
   - name: dc0is
-    description: DMA Channel 0 Interrupt Status.
+    description: "DMA Channel 0 Interrupt Status.\n\nRaw bit values: false (0) = Inactive: DMA Channel 0 Interrupt Status not detected.; true (1) = Active: DMA Channel 0 Interrupt Status detected."
     bit_offset: 0
     bit_size: 1
-    enum: Dc0is
   - name: dc1is
-    description: DMA Channel 1 Interrupt Status.
+    description: "DMA Channel 1 Interrupt Status.\n\nRaw bit values: false (0) = Inactive: DMA Channel 1 Interrupt Status not detected.; true (1) = Active: DMA Channel 1 Interrupt Status detected."
     bit_offset: 1
     bit_size: 1
-    enum: Dc1is
   - name: mtlis
-    description: MTL Interrupt Status.
+    description: "MTL Interrupt Status.\n\nRaw bit values: false (0) = Inactive: MTL Interrupt Status not detected.; true (1) = Active: MTL Interrupt Status detected."
     bit_offset: 16
     bit_size: 1
-    enum: Mtlis
   - name: macis
-    description: MAC Interrupt Status.
+    description: "MAC Interrupt Status.\n\nRaw bit values: false (0) = Inactive: MAC Interrupt Status not detected.; true (1) = Active: MAC Interrupt Status detected."
     bit_offset: 17
     bit_size: 1
-    enum: Macis
 fieldset/DmaMode2:
   description: DMA Bus Mode.
   fields:
   - name: swr
-    description: Software Reset.
+    description: "Software Reset.\n\nRaw bit values: false (0) = Disable: Software Reset is disabled.; true (1) = Enable: Software Reset is enabled."
     bit_offset: 0
     bit_size: 1
-    enum: Swr
   - name: da
-    description: DMA Tx or Rx Arbitration Scheme.
+    description: "DMA Tx or Rx Arbitration Scheme.\n\nRaw bit values: false (0) = Wrr: Weighted Round-Robin with Rx:Tx or Tx:Rx.; true (1) = Fp: Fixed Priority."
     bit_offset: 1
     bit_size: 1
-    enum: Da
   - name: taa
     description: Transmit Arbitration Algorithm.
     bit_offset: 2
     bit_size: 3
     enum: Taa
   - name: txpr
-    description: Transmit Priority.
+    description: "Transmit Priority.\n\nRaw bit values: false (0) = Disable: Transmit Priority is disabled.; true (1) = Enable: Transmit Priority is enabled."
     bit_offset: 11
     bit_size: 1
-    enum: Txpr
   - name: pr
     description: Priority Ratio.
     bit_offset: 12
@@ -421,25 +377,21 @@ fieldset/DmaSysbusMode2:
   description: DMA System Bus Mode.
   fields:
   - name: fb
-    description: Fixed Burst Length.
+    description: "Fixed Burst Length.\n\nRaw bit values: false (0) = Disable: Fixed Burst Length is disabled.; true (1) = Enable: Fixed Burst Length is enabled."
     bit_offset: 0
     bit_size: 1
-    enum: Fb
   - name: aal
-    description: Address-Aligned Beats.
+    description: "Address-Aligned Beats.\n\nRaw bit values: false (0) = Disable: Address-Aligned Beats is disabled.; true (1) = Enable: Address-Aligned Beats is enabled."
     bit_offset: 12
     bit_size: 1
-    enum: Aal
   - name: mb
-    description: Mixed Burst.
+    description: "Mixed Burst.\n\nRaw bit values: false (0) = Disable: Mixed Burst is disabled.; true (1) = Enable: Mixed Burst is enabled."
     bit_offset: 14
     bit_size: 1
-    enum: Mb
   - name: rb
-    description: Rebuild INCRx Burst.
+    description: "Rebuild INCRx Burst.\n\nRaw bit values: false (0) = Disable: Rebuild INCRx Burst is disabled.; true (1) = Enable: Rebuild INCRx Burst is enabled."
     bit_offset: 15
     bit_size: 1
-    enum: Rb
 fieldset/IndirAccessCtrl:
   description: Indirect Access Control.
   fields:
@@ -448,10 +400,9 @@ fieldset/IndirAccessCtrl:
     bit_offset: 0
     bit_size: 1
   - name: com
-    description: Command type.
+    description: "Command type.\n\nRaw bit values: false (0) = Write: Write operation.; true (1) = Read: Read operation."
     bit_offset: 1
     bit_size: 1
-    enum: Com
   - name: auto
     description: Auto increment.
     bit_offset: 5
@@ -483,10 +434,9 @@ fieldset/MacAddress0High2:
     bit_offset: 16
     bit_size: 2
   - name: ae
-    description: Address Enable.
+    description: "Address Enable.\n\nRaw bit values: false (0) = Disable: INVALID : This bit must be always set to 1.; true (1) = Enable: This bit is always set to 1."
     bit_offset: 31
     bit_size: 1
-    enum: Ae
 fieldset/MacAddress0Low2:
   description: MAC Address0 Low.
   fields:
@@ -498,115 +448,96 @@ fieldset/MacConfiguration2:
   description: MAC Configuration.
   fields:
   - name: re
-    description: Receiver Enable.
+    description: "Receiver Enable.\n\nRaw bit values: false (0) = Disable: Receiver is disabled.; true (1) = Enable: Receiver is enabled."
     bit_offset: 0
     bit_size: 1
-    enum: Re
   - name: te
-    description: Transmitter Enable.
+    description: "Transmitter Enable.\n\nRaw bit values: false (0) = Disable: Transmitter is disabled.; true (1) = Enable: Transmitter is enabled."
     bit_offset: 1
     bit_size: 1
-    enum: Te
   - name: prelen
     description: Preamble Length for Transmit packets.
     bit_offset: 2
     bit_size: 2
     enum: Prelen
   - name: dc
-    description: Deferral Check.
+    description: "Deferral Check.\n\nRaw bit values: false (0) = Disable: Deferral check function is disabled.; true (1) = Enable: Deferral check function is enabled."
     bit_offset: 4
     bit_size: 1
-    enum: Dc
   - name: bl
     description: Back-Off Limit.
     bit_offset: 5
     bit_size: 2
     enum: Bl
   - name: dr
-    description: Disable Retry.
+    description: "Disable Retry.\n\nRaw bit values: false (0) = Enable: Enable Retry.; true (1) = Disable: Disable Retry."
     bit_offset: 8
     bit_size: 1
-    enum: Dr
   - name: dcrs
-    description: Disable Carrier Sense During Transmission.
+    description: "Disable Carrier Sense During Transmission.\n\nRaw bit values: false (0) = Enable: Enable Carrier Sense During Transmission.; true (1) = Disable: Disable Carrier Sense During Transmission."
     bit_offset: 9
     bit_size: 1
-    enum: Dcrs
   - name: do_
-    description: Disable Receive Own.
+    description: "Disable Receive Own.\n\nRaw bit values: false (0) = Enable: Enable Receive Own.; true (1) = Disable: Disable Receive Own."
     bit_offset: 10
     bit_size: 1
-    enum: Do
   - name: ecrsfd
-    description: Enable Carrier Sense Before Transmission in Full-Duplex Mode.
+    description: "Enable Carrier Sense Before Transmission in Full-Duplex Mode.\n\nRaw bit values: false (0) = Disable: ECRSFD is disabled.; true (1) = Enable: ECRSFD is enabled."
     bit_offset: 11
     bit_size: 1
-    enum: Ecrsfd
   - name: lm
-    description: Loopback Mode.
+    description: "Loopback Mode.\n\nRaw bit values: false (0) = Disable: Loopback is disabled.; true (1) = Enable: Loopback is enabled."
     bit_offset: 12
     bit_size: 1
-    enum: Lm
   - name: dm
-    description: Duplex Mode.
+    description: "Duplex Mode.\n\nRaw bit values: false (0) = Hduplx: Half-duplex mode.; true (1) = Fduplx: Full-duplex mode."
     bit_offset: 13
     bit_size: 1
-    enum: Dm
   - name: fes
-    description: Speed.
+    description: "Speed.\n\nRaw bit values: false (0) = M101000m: 10 Mbps when PS bit is 1 and 1 Gbps when PS bit is 0.; true (1) = M1002500m: 100 Mbps when PS bit is 1 and 2.5 Gbps when PS bit is 0."
     bit_offset: 14
     bit_size: 1
-    enum: Fes
   - name: ps
-    description: Port Select.
+    description: "Port Select.\n\nRaw bit values: false (0) = M10002500m: For 1000 or 2500 Mbps operations.; true (1) = M10100m: For 10 or 100 Mbps operations."
     bit_offset: 15
     bit_size: 1
-    enum: Ps
   - name: je
-    description: Jumbo Packet Enable.
+    description: "Jumbo Packet Enable.\n\nRaw bit values: false (0) = Disable: Jumbo packet is disabled.; true (1) = Enable: Jumbo packet is enabled."
     bit_offset: 16
     bit_size: 1
-    enum: Je
   - name: jd
-    description: Jabber Disable.
+    description: "Jabber Disable.\n\nRaw bit values: false (0) = Enable: Jabber is enabled.; true (1) = Disable: Jabber is disabled."
     bit_offset: 17
     bit_size: 1
-    enum: Jd
   - name: wd
-    description: Watchdog Disable.
+    description: "Watchdog Disable.\n\nRaw bit values: false (0) = Enable: Watchdog is enabled.; true (1) = Disable: Watchdog is disabled."
     bit_offset: 19
     bit_size: 1
-    enum: Wd
   - name: acs
-    description: Automatic Pad or CRC Stripping.
+    description: "Automatic Pad or CRC Stripping.\n\nRaw bit values: false (0) = Disable: Automatic Pad or CRC Stripping is disabled.; true (1) = Enable: Automatic Pad or CRC Stripping is enabled."
     bit_offset: 20
     bit_size: 1
-    enum: Acs
   - name: cst
-    description: CRC stripping for Type packets.
+    description: "CRC stripping for Type packets.\n\nRaw bit values: false (0) = Disable: CRC stripping for Type packets is disabled.; true (1) = Enable: CRC stripping for Type packets is enabled."
     bit_offset: 21
     bit_size: 1
-    enum: Cst
   - name: s2kp
-    description: IEEE 802.3as Support for 2K Packets.
+    description: "IEEE 802.3as Support for 2K Packets.\n\nRaw bit values: false (0) = Disable: Support upto 2K packet is disabled.; true (1) = Enable: Support upto 2K packet is Enabled."
     bit_offset: 22
     bit_size: 1
-    enum: S2kp
   - name: gpslce
-    description: Giant Packet Size Limit Control Enable.
+    description: "Giant Packet Size Limit Control Enable.\n\nRaw bit values: false (0) = Disable: Giant Packet Size Limit Control is disabled.; true (1) = Enable: Giant Packet Size Limit Control is enabled."
     bit_offset: 23
     bit_size: 1
-    enum: Gpslce
   - name: ipg
     description: Inter-Packet Gap.
     bit_offset: 24
     bit_size: 3
     enum: Ipg
   - name: ipc
-    description: Checksum Offload.
+    description: "Checksum Offload.\n\nRaw bit values: false (0) = Disable: IP header/payload checksum checking is disabled.; true (1) = Enable: IP header/payload checksum checking is enabled."
     bit_offset: 27
     bit_size: 1
-    enum: Ipc
   - name: sarc
     description: Source Address Insertion or Replacement Control.
     bit_offset: 28
@@ -616,27 +547,24 @@ fieldset/MacCsrSwCtrl2:
   description: CSR Software Control.
   fields:
   - name: rcwe
-    description: Register Clear on Write 1 Enable.
+    description: "Register Clear on Write 1 Enable.\n\nRaw bit values: false (0) = Disable: Register Clear on Write 1 is disabled.; true (1) = Enable: Register Clear on Write 1 is enabled."
     bit_offset: 0
     bit_size: 1
-    enum: Rcwe
 fieldset/MacDebug2:
   description: MAC Debug.
   fields:
   - name: rpests
-    description: MAC GMII or MII Receive Protocol Engine Status.
+    description: "MAC GMII or MII Receive Protocol Engine Status.\n\nRaw bit values: false (0) = Inactive: MAC GMII or MII Receive Protocol Engine Status not detected.; true (1) = Active: MAC GMII or MII Receive Protocol Engine Status detected."
     bit_offset: 0
     bit_size: 1
-    enum: Rpests
   - name: rfcfcsts
     description: MAC Receive Packet Controller FIFO Status.
     bit_offset: 1
     bit_size: 2
   - name: tpests
-    description: MAC GMII or MII Transmit Protocol Engine Status.
+    description: "MAC GMII or MII Transmit Protocol Engine Status.\n\nRaw bit values: false (0) = Inactive: MAC GMII or MII Transmit Protocol Engine Status not detected.; true (1) = Active: MAC GMII or MII Transmit Protocol Engine Status detected."
     bit_offset: 16
     bit_size: 1
-    enum: Tpests
   - name: tfcsts
     description: MAC Transmit Packet Controller Status.
     bit_offset: 17
@@ -650,30 +578,25 @@ fieldset/MacExtConfiguration2:
     bit_offset: 0
     bit_size: 14
   - name: dcrcc
-    description: Disable CRC Checking for Received Packets.
+    description: "Disable CRC Checking for Received Packets.\n\nRaw bit values: false (0) = Enable: CRC Checking is enabled.; true (1) = Disable: CRC Checking is disabled."
     bit_offset: 16
     bit_size: 1
-    enum: Dcrcc
   - name: spen
-    description: Slow Protocol Detection Enable.
+    description: "Slow Protocol Detection Enable.\n\nRaw bit values: false (0) = Disable: Slow Protocol Detection is disabled.; true (1) = Enable: Slow Protocol Detection is enabled."
     bit_offset: 17
     bit_size: 1
-    enum: Spen
   - name: usp
-    description: Unicast Slow Protocol Packet Detect.
+    description: "Unicast Slow Protocol Packet Detect.\n\nRaw bit values: false (0) = Disable: Unicast Slow Protocol Packet Detection is disabled.; true (1) = Enable: Unicast Slow Protocol Packet Detection is enabled."
     bit_offset: 18
     bit_size: 1
-    enum: Usp
   - name: pdc
-    description: Packet Duplication Control.
+    description: "Packet Duplication Control.\n\nRaw bit values: false (0) = Disable: Packet Duplication Control is disabled.; true (1) = Enable: Packet Duplication Control is enabled."
     bit_offset: 19
     bit_size: 1
-    enum: Pdc
   - name: eipgen
-    description: Extended Inter-Packet Gap Enable.
+    description: "Extended Inter-Packet Gap Enable.\n\nRaw bit values: false (0) = Disable: Extended Inter-Packet Gap is disabled.; true (1) = Enable: Extended Inter-Packet Gap is enabled."
     bit_offset: 24
     bit_size: 1
-    enum: Eipgen
   - name: eipg
     description: Extended Inter-Packet Gap.
     bit_offset: 25
@@ -682,99 +605,82 @@ fieldset/MacHwFeature02:
   description: Hardware Features 0.
   fields:
   - name: miisel
-    description: 10 or 100 Mbps Support.
+    description: "10 or 100 Mbps Support.\n\nRaw bit values: false (0) = Inactive: No 10 or 100 Mbps support.; true (1) = Active: 10 or 100 Mbps support."
     bit_offset: 0
     bit_size: 1
-    enum: Miisel
   - name: gmiisel
-    description: 1000 Mbps Support.
+    description: "1000 Mbps Support.\n\nRaw bit values: false (0) = Inactive: No 1000 Mbps support.; true (1) = Active: 1000 Mbps support."
     bit_offset: 1
     bit_size: 1
-    enum: Gmiisel
   - name: hdsel
-    description: Half-duplex Support.
+    description: "Half-duplex Support.\n\nRaw bit values: false (0) = Inactive: No Half-duplex support.; true (1) = Active: Half-duplex support."
     bit_offset: 2
     bit_size: 1
-    enum: Hdsel
   - name: pcssel
-    description: PCS Registers (TBI, SGMII, or RTBI PHY interface).
+    description: "PCS Registers (TBI, SGMII, or RTBI PHY interface).\n\nRaw bit values: false (0) = Inactive: No PCS Registers (TBI, SGMII, or RTBI PHY interface).; true (1) = Active: PCS Registers (TBI, SGMII, or RTBI PHY interface)."
     bit_offset: 3
     bit_size: 1
-    enum: Pcssel
   - name: vlhash
-    description: VLAN Hash Filter Selected.
+    description: "VLAN Hash Filter Selected.\n\nRaw bit values: false (0) = Inactive: VLAN Hash Filter not selected.; true (1) = Active: VLAN Hash Filter selected."
     bit_offset: 4
     bit_size: 1
-    enum: Vlhash
   - name: smasel
-    description: SMA (MDIO) Interface.
+    description: "SMA (MDIO) Interface.\n\nRaw bit values: false (0) = Inactive: SMA (MDIO) Interface not selected.; true (1) = Active: SMA (MDIO) Interface selected."
     bit_offset: 5
     bit_size: 1
-    enum: Smasel
   - name: rwksel
-    description: PMT Remote Wake-up Packet Enable.
+    description: "PMT Remote Wake-up Packet Enable.\n\nRaw bit values: false (0) = Inactive: PMT Remote Wake-up Packet Enable option is not selected.; true (1) = Active: PMT Remote Wake-up Packet Enable option is selected."
     bit_offset: 6
     bit_size: 1
-    enum: Rwksel
   - name: mgksel
-    description: PMT Magic Packet Enable.
+    description: "PMT Magic Packet Enable.\n\nRaw bit values: false (0) = Inactive: PMT Magic Packet Enable option is not selected.; true (1) = Active: PMT Magic Packet Enable option is selected."
     bit_offset: 7
     bit_size: 1
-    enum: Mgksel
   - name: mmcsel
-    description: RMON Module Enable.
+    description: "RMON Module Enable.\n\nRaw bit values: false (0) = Inactive: RMON Module Enable option is not selected.; true (1) = Active: RMON Module Enable option is selected."
     bit_offset: 8
     bit_size: 1
-    enum: Mmcsel
   - name: arpoffsel
-    description: ARP Offload Enabled.
+    description: "ARP Offload Enabled.\n\nRaw bit values: false (0) = Inactive: ARP Offload Enable option is not selected.; true (1) = Active: ARP Offload Enable option is selected."
     bit_offset: 9
     bit_size: 1
-    enum: Arpoffsel
   - name: tssel
-    description: IEEE 1588-2008 Timestamp Enabled.
+    description: "IEEE 1588-2008 Timestamp Enabled.\n\nRaw bit values: false (0) = Inactive: IEEE 1588-2008 Timestamp Enable option is not selected.; true (1) = Active: IEEE 1588-2008 Timestamp Enable option is selected."
     bit_offset: 12
     bit_size: 1
-    enum: Tssel
   - name: eeesel
-    description: Energy Efficient Ethernet Enabled.
+    description: "Energy Efficient Ethernet Enabled.\n\nRaw bit values: false (0) = Inactive: Energy Efficient Ethernet Enable option is not selected.; true (1) = Active: Energy Efficient Ethernet Enable option is selected."
     bit_offset: 13
     bit_size: 1
-    enum: Eeesel
   - name: txcoesel
-    description: Transmit Checksum Offload Enabled.
+    description: "Transmit Checksum Offload Enabled.\n\nRaw bit values: false (0) = Inactive: Transmit Checksum Offload Enable option is not selected.; true (1) = Active: Transmit Checksum Offload Enable option is selected."
     bit_offset: 14
     bit_size: 1
-    enum: Txcoesel
   - name: rxcoesel
-    description: Receive Checksum Offload Enabled.
+    description: "Receive Checksum Offload Enabled.\n\nRaw bit values: false (0) = Inactive: Receive Checksum Offload Enable option is not selected.; true (1) = Active: Receive Checksum Offload Enable option is selected."
     bit_offset: 16
     bit_size: 1
-    enum: Rxcoesel
   - name: addmacadrsel
     description: MAC Addresses 1-31 Selected.
     bit_offset: 18
     bit_size: 5
   - name: macadr32sel
-    description: MAC Addresses 32-63 Selected.
+    description: "MAC Addresses 32-63 Selected.\n\nRaw bit values: false (0) = Inactive: MAC Addresses 32-63 Select option is not selected.; true (1) = Active: MAC Addresses 32-63 Select option is selected."
     bit_offset: 23
     bit_size: 1
-    enum: Macadr32sel
   - name: macadr64sel
-    description: MAC Addresses 64-127 Selected.
+    description: "MAC Addresses 64-127 Selected.\n\nRaw bit values: false (0) = Inactive: MAC Addresses 64-127 Select option is not selected.; true (1) = Active: MAC Addresses 64-127 Select option is selected."
     bit_offset: 24
     bit_size: 1
-    enum: Macadr64sel
   - name: tsstssel
     description: Timestamp System Time Source.
     bit_offset: 25
     bit_size: 2
     enum: Tsstssel
   - name: savlanins
-    description: Source Address or VLAN Insertion Enable.
+    description: "Source Address or VLAN Insertion Enable.\n\nRaw bit values: false (0) = Inactive: Source Address or VLAN Insertion Enable option is not selected.; true (1) = Active: Source Address or VLAN Insertion Enable option is selected."
     bit_offset: 27
     bit_size: 1
-    enum: Savlanins
   - name: actphysel
     description: Active PHY Selected.
     bit_offset: 28
@@ -789,70 +695,59 @@ fieldset/MacHwFeature12:
     bit_size: 5
     enum: Rxfifosize
   - name: spram
-    description: Single Port RAM Enable.
+    description: "Single Port RAM Enable.\n\nRaw bit values: false (0) = Inactive: Single Port RAM feature is not selected.; true (1) = Active: Single Port RAM feature is selected."
     bit_offset: 5
     bit_size: 1
-    enum: Spram
   - name: txfifosize
     description: MTL Transmit FIFO Size.
     bit_offset: 6
     bit_size: 5
     enum: Txfifosize
   - name: osten
-    description: One-Step Timestamping Enable.
+    description: "One-Step Timestamping Enable.\n\nRaw bit values: false (0) = Inactive: One-Step Timestamping feature is not selected.; true (1) = Active: One-Step Timestamping feature is selected."
     bit_offset: 11
     bit_size: 1
-    enum: Osten
   - name: ptoen
-    description: PTP Offload Enable.
+    description: "PTP Offload Enable.\n\nRaw bit values: false (0) = Inactive: PTP Offload feature is not selected.; true (1) = Active: PTP Offload feature is selected."
     bit_offset: 12
     bit_size: 1
-    enum: Ptoen
   - name: advthword
-    description: IEEE 1588 High Word Register Enable.
+    description: "IEEE 1588 High Word Register Enable.\n\nRaw bit values: false (0) = Inactive: IEEE 1588 High Word Register option is not selected.; true (1) = Active: IEEE 1588 High Word Register option is selected."
     bit_offset: 13
     bit_size: 1
-    enum: Advthword
   - name: addr64
     description: Address Width.
     bit_offset: 14
     bit_size: 2
     enum: Addr64
   - name: dcben
-    description: DCB Feature Enable.
+    description: "DCB Feature Enable.\n\nRaw bit values: false (0) = Inactive: DCB Feature is not selected.; true (1) = Active: DCB Feature is selected."
     bit_offset: 16
     bit_size: 1
-    enum: Dcben
   - name: sphen
-    description: Split Header Feature Enable.
+    description: "Split Header Feature Enable.\n\nRaw bit values: false (0) = Inactive: Split Header Feature is not selected.; true (1) = Active: Split Header Feature is selected."
     bit_offset: 17
     bit_size: 1
-    enum: Sphen
   - name: tsoen
-    description: TCP Segmentation Offload Enable.
+    description: "TCP Segmentation Offload Enable.\n\nRaw bit values: false (0) = Inactive: TCP Segmentation Offload Feature is not selected.; true (1) = Active: TCP Segmentation Offload Feature is selected."
     bit_offset: 18
     bit_size: 1
-    enum: Tsoen
   - name: dbgmema
-    description: DMA Debug Registers Enable.
+    description: "DMA Debug Registers Enable.\n\nRaw bit values: false (0) = Inactive: DMA Debug Registers option is not selected.; true (1) = Active: DMA Debug Registers option is selected."
     bit_offset: 19
     bit_size: 1
-    enum: Dbgmema
   - name: avsel
-    description: AV Feature Enable.
+    description: "AV Feature Enable.\n\nRaw bit values: false (0) = Inactive: AV Feature is not selected.; true (1) = Active: AV Feature is selected."
     bit_offset: 20
     bit_size: 1
-    enum: Avsel
   - name: ravsel
-    description: Rx Side Only AV Feature Enable.
+    description: "Rx Side Only AV Feature Enable.\n\nRaw bit values: false (0) = Inactive: Rx Side Only AV Feature is not selected.; true (1) = Active: Rx Side Only AV Feature is selected."
     bit_offset: 21
     bit_size: 1
-    enum: Ravsel
   - name: pouost
-    description: One Step for PTP over UDP/IP Feature Enable.
+    description: "One Step for PTP over UDP/IP Feature Enable.\n\nRaw bit values: false (0) = Inactive: One Step for PTP over UDP/IP Feature is not selected.; true (1) = Active: One Step for PTP over UDP/IP Feature is selected."
     bit_offset: 23
     bit_size: 1
-    enum: Pouost
   - name: hashtblsz
     description: Hash Table Size.
     bit_offset: 24
@@ -913,25 +808,21 @@ fieldset/MacHwFeature32:
     bit_size: 3
     enum: Nrvf
   - name: cbtisel
-    description: Queue/Channel based VLAN tag insertion on Tx Enable.
+    description: "Queue/Channel based VLAN tag insertion on Tx Enable.\n\nRaw bit values: false (0) = Inactive: Enable Queue/Channel based VLAN tag insertion on Tx feature is not selected.; true (1) = Active: Enable Queue/Channel based VLAN tag insertion on Tx feature is selected."
     bit_offset: 4
     bit_size: 1
-    enum: Cbtisel
   - name: dvlan
-    description: Double VLAN Tag Processing Selected.
+    description: "Double VLAN Tag Processing Selected.\n\nRaw bit values: false (0) = Inactive: Double VLAN option is not selected.; true (1) = Active: Double VLAN option is selected."
     bit_offset: 5
     bit_size: 1
-    enum: Dvlan
   - name: pdupsel
-    description: Broadcast/Multicast Packet Duplication.
+    description: "Broadcast/Multicast Packet Duplication.\n\nRaw bit values: false (0) = Inactive: Broadcast/Multicast Packet Duplication feature is not selected.; true (1) = Active: Broadcast/Multicast Packet Duplication feature is selected."
     bit_offset: 9
     bit_size: 1
-    enum: Pdupsel
   - name: frpsel
-    description: Flexible Receive Parser Selected.
+    description: "Flexible Receive Parser Selected.\n\nRaw bit values: false (0) = Inactive: Flexible Receive Parser feature is not selected.; true (1) = Active: Flexible Receive Parser feature is selected."
     bit_offset: 10
     bit_size: 1
-    enum: Frpsel
   - name: frpbs
     description: Flexible Receive Parser Buffer size.
     bit_offset: 11
@@ -943,10 +834,9 @@ fieldset/MacHwFeature32:
     bit_size: 2
     enum: Frpes
   - name: estsel
-    description: Enhancements to Scheduled Traffic Enable.
+    description: "Enhancements to Scheduled Traffic Enable.\n\nRaw bit values: false (0) = Inactive: Enable Enhancements to Scheduling Traffic feature is not selected.; true (1) = Active: Enable Enhancements to Scheduling Traffic feature is selected."
     bit_offset: 16
     bit_size: 1
-    enum: Estsel
   - name: estdep
     description: Depth of the Gate Control List.
     bit_offset: 17
@@ -958,15 +848,13 @@ fieldset/MacHwFeature32:
     bit_size: 2
     enum: Estwid
   - name: fpesel
-    description: Frame Preemption Enable.
+    description: "Frame Preemption Enable.\n\nRaw bit values: false (0) = Inactive: Frame Preemption Enable feature is not selected.; true (1) = Active: Frame Preemption Enable feature is selected."
     bit_offset: 26
     bit_size: 1
-    enum: Fpesel
   - name: tbssel
-    description: Time Based Scheduling Enable.
+    description: "Time Based Scheduling Enable.\n\nRaw bit values: false (0) = Inactive: Time Based Scheduling Enable feature is not selected.; true (1) = Active: Time Based Scheduling Enable feature is selected."
     bit_offset: 27
     bit_size: 1
-    enum: Tbssel
   - name: asp
     description: Automotive Safety Package.
     bit_offset: 28
@@ -985,154 +873,126 @@ fieldset/MacInnerVlanIncl2:
     bit_size: 2
     enum: Vlc
   - name: vlp
-    description: VLAN Priority Control.
+    description: "VLAN Priority Control.\n\nRaw bit values: false (0) = Disable: VLAN Priority Control is disabled.; true (1) = Enable: VLAN Priority Control is enabled."
     bit_offset: 18
     bit_size: 1
-    enum: Vlp
   - name: csvl
-    description: C-VLAN or S-VLAN.
+    description: "C-VLAN or S-VLAN.\n\nRaw bit values: false (0) = Cvlan: C-VLAN type (0x8100) is inserted.; true (1) = Svlan: S-VLAN type (0x88A8) is inserted."
     bit_offset: 19
     bit_size: 1
-    enum: Csvl
   - name: vlti
-    description: VLAN Tag Input.
+    description: "VLAN Tag Input.\n\nRaw bit values: false (0) = Disable: VLAN Tag Input is disabled.; true (1) = Enable: VLAN Tag Input is enabled."
     bit_offset: 20
     bit_size: 1
-    enum: Vlti
 fieldset/MacInterruptEnable2:
   description: Interrupt Enable.
   fields:
   - name: phyie
-    description: PHY Interrupt Enable.
+    description: "PHY Interrupt Enable.\n\nRaw bit values: false (0) = Disable: PHY Interrupt is disabled.; true (1) = Enable: PHY Interrupt is enabled."
     bit_offset: 3
     bit_size: 1
-    enum: Phyie
   - name: pmtie
-    description: PMT Interrupt Enable.
+    description: "PMT Interrupt Enable.\n\nRaw bit values: false (0) = Disable: PMT Interrupt is disabled.; true (1) = Enable: PMT Interrupt is enabled."
     bit_offset: 4
     bit_size: 1
-    enum: Pmtie
   - name: lpiie
-    description: LPI Interrupt Enable.
+    description: "LPI Interrupt Enable.\n\nRaw bit values: false (0) = Disable: LPI Interrupt is disabled.; true (1) = Enable: LPI Interrupt is enabled."
     bit_offset: 5
     bit_size: 1
-    enum: Lpiie
   - name: tsie
-    description: Timestamp Interrupt Enable.
+    description: "Timestamp Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Timestamp Interrupt is disabled.; true (1) = Enable: Timestamp Interrupt is enabled."
     bit_offset: 12
     bit_size: 1
-    enum: Tsie
   - name: txstsie
-    description: Transmit Status Interrupt Enable.
+    description: "Transmit Status Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Timestamp Status Interrupt is disabled.; true (1) = Enable: Timestamp Status Interrupt is enabled."
     bit_offset: 13
     bit_size: 1
-    enum: Txstsie
   - name: rxstsie
-    description: Receive Status Interrupt Enable.
+    description: "Receive Status Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Receive Status Interrupt is disabled.; true (1) = Enable: Receive Status Interrupt is enabled."
     bit_offset: 14
     bit_size: 1
-    enum: Rxstsie
   - name: mdioie
-    description: MDIO Interrupt Enable.
+    description: "MDIO Interrupt Enable.\n\nRaw bit values: false (0) = Disable: MDIO Interrupt is disabled.; true (1) = Enable: MDIO Interrupt is enabled."
     bit_offset: 18
     bit_size: 1
-    enum: Mdioie
 fieldset/MacInterruptStatus2:
   description: Interrupt Status.
   fields:
   - name: phyis
-    description: PHY Interrupt.
+    description: "PHY Interrupt.\n\nRaw bit values: false (0) = Inactive: PHY Interrupt not detected.; true (1) = Active: PHY Interrupt detected."
     bit_offset: 3
     bit_size: 1
-    enum: Phyis
   - name: pmtis
-    description: PMTIS.
+    description: "PMTIS.\n\nRaw bit values: false (0) = Inactive: PMT Interrupt status not active.; true (1) = Active: PMT Interrupt status active."
     bit_offset: 4
     bit_size: 1
-    enum: Pmtis
   - name: lpiis
-    description: LPIIS.
+    description: "LPIIS.\n\nRaw bit values: false (0) = Inactive: LPI Interrupt status not active.; true (1) = Active: LPI Interrupt status active."
     bit_offset: 5
     bit_size: 1
-    enum: Lpiis
   - name: tsis
-    description: TSIS.
+    description: "TSIS.\n\nRaw bit values: false (0) = Inactive: Timestamp Interrupt status not active.; true (1) = Active: Timestamp Interrupt status active."
     bit_offset: 12
     bit_size: 1
-    enum: Tsis
   - name: txstsis
-    description: Transmit Status Interrupt.
+    description: "Transmit Status Interrupt.\n\nRaw bit values: false (0) = Inactive: Transmit Interrupt status not active.; true (1) = Active: Transmit Interrupt status active."
     bit_offset: 13
     bit_size: 1
-    enum: Txstsis
   - name: rxstsis
-    description: Receive Status Interrupt.
+    description: "Receive Status Interrupt.\n\nRaw bit values: false (0) = Inactive: Receive Interrupt status not active.; true (1) = Active: Receive Interrupt status active."
     bit_offset: 14
     bit_size: 1
-    enum: Rxstsis
   - name: mdiois
-    description: MDIO Interrupt Status.
+    description: "MDIO Interrupt Status.\n\nRaw bit values: false (0) = Inactive: MDIO Interrupt status not active.; true (1) = Active: MDIO Interrupt status active."
     bit_offset: 18
     bit_size: 1
-    enum: Mdiois
 fieldset/MacLpiControlStatus:
   description: LPI Control and Status.
   fields:
   - name: tlpien
-    description: Transmit LPI Entry.
+    description: "Transmit LPI Entry.\n\nRaw bit values: false (0) = Inactive: Transmit LPI entry not detected.; true (1) = Active: Transmit LPI entry detected."
     bit_offset: 0
     bit_size: 1
-    enum: Tlpien
   - name: tlpiex
-    description: Transmit LPI Exit.
+    description: "Transmit LPI Exit.\n\nRaw bit values: false (0) = Inactive: Transmit LPI exit not detected.; true (1) = Active: Transmit LPI exit detected."
     bit_offset: 1
     bit_size: 1
-    enum: Tlpiex
   - name: rlpien
-    description: Receive LPI Entry.
+    description: "Receive LPI Entry.\n\nRaw bit values: false (0) = Inactive: Receive LPI entry not detected.; true (1) = Active: Receive LPI entry detected."
     bit_offset: 2
     bit_size: 1
-    enum: Rlpien
   - name: rlpiex
-    description: Receive LPI Exit.
+    description: "Receive LPI Exit.\n\nRaw bit values: false (0) = Inactive: Receive LPI exit not detected.; true (1) = Active: Receive LPI exit detected."
     bit_offset: 3
     bit_size: 1
-    enum: Rlpiex
   - name: tlpist
-    description: Transmit LPI State.
+    description: "Transmit LPI State.\n\nRaw bit values: false (0) = Inactive: Transmit LPI state not detected.; true (1) = Active: Transmit LPI state detected."
     bit_offset: 8
     bit_size: 1
-    enum: Tlpist
   - name: rlpist
-    description: Receive LPI State.
+    description: "Receive LPI State.\n\nRaw bit values: false (0) = Inactive: Receive LPI state not detected.; true (1) = Active: Receive LPI state detected."
     bit_offset: 9
     bit_size: 1
-    enum: Rlpist
   - name: lpien
-    description: LPI Enable.
+    description: "LPI Enable.\n\nRaw bit values: false (0) = Disable: LPI state is disabled.; true (1) = Enable: LPI state is enabled."
     bit_offset: 16
     bit_size: 1
-    enum: Lpien
   - name: pls
-    description: PHY Link Status.
+    description: "PHY Link Status.\n\nRaw bit values: false (0) = Disable: link is down.; true (1) = Enable: link is okay (UP)."
     bit_offset: 17
     bit_size: 1
-    enum: Pls
   - name: lpitxa
-    description: LPI Tx Automate.
+    description: "LPI Tx Automate.\n\nRaw bit values: false (0) = Disable: LPI Tx Automate is disabled.; true (1) = Enable: LPI Tx Automate is enabled."
     bit_offset: 19
     bit_size: 1
-    enum: Lpitxa
   - name: lpiate
-    description: LPI Timer Enable.
+    description: "LPI Timer Enable.\n\nRaw bit values: false (0) = Disable: LPI Timer is disabled.; true (1) = Enable: LPI Timer is enabled."
     bit_offset: 20
     bit_size: 1
-    enum: Lpiate
   - name: lpitcse
-    description: LPI Tx Clock Stop Enable.
+    description: "LPI Tx Clock Stop Enable.\n\nRaw bit values: false (0) = Disable: LPI Tx Clock Stop is disabled.; true (1) = Enable: LPI Tx Clock Stop is enabled."
     bit_offset: 21
     bit_size: 1
-    enum: Lpitcse
 fieldset/MacLpiEntryTimer:
   description: Tx LPI Entry Timer Control.
   fields:
@@ -1155,30 +1015,25 @@ fieldset/MacMdioAddress2:
   description: MDIO Address.
   fields:
   - name: gb
-    description: GMII Busy.
+    description: "GMII Busy.\n\nRaw bit values: false (0) = Disable: GMII Busy is disabled.; true (1) = Enable: GMII Busy is enabled."
     bit_offset: 0
     bit_size: 1
-    enum: Gb
   - name: c45e
-    description: Clause 45 PHY Enable.
+    description: "Clause 45 PHY Enable.\n\nRaw bit values: false (0) = Disable: Clause 45 PHY is disabled.; true (1) = Enable: Clause 45 PHY is enabled."
     bit_offset: 1
     bit_size: 1
-    enum: C45e
   - name: goc_0
-    description: GMII Operation Command 0.
+    description: "GMII Operation Command 0.\n\nRaw bit values: false (0) = Disable: GMII Operation Command 0 is disabled.; true (1) = Enable: GMII Operation Command 0 is enabled."
     bit_offset: 2
     bit_size: 1
-    enum: Goc0
   - name: goc_1
-    description: GMII Operation Command 1.
+    description: "GMII Operation Command 1.\n\nRaw bit values: false (0) = Disable: GMII Operation Command 1 is disabled.; true (1) = Enable: GMII Operation Command 1 is enabled."
     bit_offset: 3
     bit_size: 1
-    enum: Goc1
   - name: skap
-    description: Skip Address Packet.
+    description: "Skip Address Packet.\n\nRaw bit values: false (0) = Disable: Skip Address Packet is disabled.; true (1) = Enable: Skip Address Packet is enabled."
     bit_offset: 4
     bit_size: 1
-    enum: Skap
   - name: cr
     description: CR.
     bit_offset: 8
@@ -1196,15 +1051,13 @@ fieldset/MacMdioAddress2:
     bit_offset: 21
     bit_size: 5
   - name: btb
-    description: Back to Back transactions.
+    description: "Back to Back transactions.\n\nRaw bit values: false (0) = Disable: Back to Back transactions disabled.; true (1) = Enable: Back to Back transactions enabled."
     bit_offset: 26
     bit_size: 1
-    enum: Btb
   - name: pse
-    description: Preamble Suppression Enable.
+    description: "Preamble Suppression Enable.\n\nRaw bit values: false (0) = Disable: Preamble Suppression disabled.; true (1) = Enable: Preamble Suppression enabled."
     bit_offset: 27
     bit_size: 1
-    enum: Pse
 fieldset/MacMdioData2:
   description: MAC MDIO Data.
   fields:
@@ -1227,87 +1080,73 @@ fieldset/MacPacketFilter2:
   description: MAC Packet Filter.
   fields:
   - name: pr
-    description: Promiscuous Mode.
+    description: "Promiscuous Mode.\n\nRaw bit values: false (0) = Disable: Promiscuous Mode is disabled.; true (1) = Enable: Promiscuous Mode is enabled."
     bit_offset: 0
     bit_size: 1
-    enum: Pr2
   - name: daif
-    description: DA Inverse Filtering.
+    description: "DA Inverse Filtering.\n\nRaw bit values: false (0) = Disable: DA Inverse Filtering is disabled.; true (1) = Enable: DA Inverse Filtering is enabled."
     bit_offset: 3
     bit_size: 1
-    enum: Daif
   - name: pm
-    description: Pass All Multicast.
+    description: "Pass All Multicast.\n\nRaw bit values: false (0) = Disable: Pass All Multicast is disabled.; true (1) = Enable: Pass All Multicast is enabled."
     bit_offset: 4
     bit_size: 1
-    enum: Pm
   - name: dbf
-    description: Disable Broadcast Packets.
+    description: "Disable Broadcast Packets.\n\nRaw bit values: false (0) = Enable: Enable Broadcast Packets.; true (1) = Disable: Disable Broadcast Packets."
     bit_offset: 5
     bit_size: 1
-    enum: Dbf
   - name: pcf
     description: Pass Control Packets.
     bit_offset: 6
     bit_size: 2
     enum: Pcf
   - name: vtfe
-    description: VLAN Tag Filter Enable.
+    description: "VLAN Tag Filter Enable.\n\nRaw bit values: false (0) = Disable: VLAN Tag Filter is disabled.; true (1) = Enable: VLAN Tag Filter is enabled."
     bit_offset: 16
     bit_size: 1
-    enum: Vtfe
   - name: ra
-    description: Receive All.
+    description: "Receive All.\n\nRaw bit values: false (0) = Disable: Receive All is disabled.; true (1) = Enable: Receive All is enabled."
     bit_offset: 31
     bit_size: 1
-    enum: Ra
 fieldset/MacPmtControlStatus2:
   description: PMT Control and Status.
   fields:
   - name: pwrdwn
-    description: Power Down.
+    description: "Power Down.\n\nRaw bit values: false (0) = Disable: Power down is disabled.; true (1) = Enable: Power down is enabled."
     bit_offset: 0
     bit_size: 1
-    enum: Pwrdwn
   - name: mgkpkten
-    description: Magic Packet Enable.
+    description: "Magic Packet Enable.\n\nRaw bit values: false (0) = Disable: Magic Packet is disabled.; true (1) = Enable: Magic Packet is enabled."
     bit_offset: 1
     bit_size: 1
-    enum: Mgkpkten
   - name: rwkpkten
-    description: Remote Wake-Up Packet Enable.
+    description: "Remote Wake-Up Packet Enable.\n\nRaw bit values: false (0) = Disable: Remote wake-up packet is disabled.; true (1) = Enable: Remote wake-up packet is enabled."
     bit_offset: 2
     bit_size: 1
-    enum: Rwkpkten
   - name: mgkprcvd
-    description: Magic Packet Received.
+    description: "Magic Packet Received.\n\nRaw bit values: false (0) = Inactive: No Magic packet is received.; true (1) = Active: Magic packet is received."
     bit_offset: 5
     bit_size: 1
-    enum: Mgkprcvd
   - name: rwkprcvd
-    description: Remote Wake-Up Packet Received.
+    description: "Remote Wake-Up Packet Received.\n\nRaw bit values: false (0) = Inactive: Remote wake-up packet is received.; true (1) = Active: Remote wake-up packet is received."
     bit_offset: 6
     bit_size: 1
-    enum: Rwkprcvd
   - name: glblucast
-    description: Global Unicast.
+    description: "Global Unicast.\n\nRaw bit values: false (0) = Disable: Global unicast is disabled.; true (1) = Enable: Global unicast is enabled."
     bit_offset: 9
     bit_size: 1
-    enum: Glblucast
   - name: rwkpfe
-    description: Remote Wake-up Packet Forwarding Enable.
+    description: "Remote Wake-up Packet Forwarding Enable.\n\nRaw bit values: false (0) = Disable: Remote Wake-up Packet Forwarding is disabled.; true (1) = Enable: Remote Wake-up Packet Forwarding is enabled."
     bit_offset: 10
     bit_size: 1
-    enum: Rwkpfe
   - name: rwkptr
     description: Remote Wake-up FIFO Pointer.
     bit_offset: 24
     bit_size: 5
   - name: rwkfiltrst
-    description: Remote Wake-Up Packet Filter Register Pointer Reset.
+    description: "Remote Wake-Up Packet Filter Register Pointer Reset.\n\nRaw bit values: false (0) = Disable: Remote Wake-Up Packet Filter Register Pointer is not Reset.; true (1) = Enable: Remote Wake-Up Packet Filter Register Pointer is Reset."
     bit_offset: 31
     bit_size: 1
-    enum: Rwkfiltrst
 fieldset/MacPpsControl2:
   description: PPS Control.
   fields:
@@ -1319,25 +1158,22 @@ fieldset/MacQ0TxFlowCtrl2:
   description: MAC Q0 Tx Flow Control.
   fields:
   - name: fcb_bpa
-    description: Flow Control Busy or Backpressure Activate.
+    description: "Flow Control Busy or Backpressure Activate.\n\nRaw bit values: false (0) = Disable: Flow Control Busy or Backpressure Activate is disabled.; true (1) = Enable: Flow Control Busy or Backpressure Activate is enabled."
     bit_offset: 0
     bit_size: 1
-    enum: FcbBpa
   - name: tfe
-    description: Transmit Flow Control Enable.
+    description: "Transmit Flow Control Enable.\n\nRaw bit values: false (0) = Disable: Transmit Flow Control is disabled.; true (1) = Enable: Transmit Flow Control is enabled."
     bit_offset: 1
     bit_size: 1
-    enum: Tfe
   - name: plt
     description: Pause Low Threshold.
     bit_offset: 4
     bit_size: 3
     enum: Plt
   - name: dzpq
-    description: Disable Zero-Quanta Pause.
+    description: "Disable Zero-Quanta Pause.\n\nRaw bit values: false (0) = Enable: Zero-Quanta Pause packet generation is enabled.; true (1) = Disable: Zero-Quanta Pause packet generation is disabled."
     bit_offset: 7
     bit_size: 1
-    enum: Dzpq
   - name: pt
     description: Pause Time.
     bit_offset: 16
@@ -1353,53 +1189,44 @@ fieldset/MacRxFlowCtrl2:
   description: MAC Rx Flow Control.
   fields:
   - name: rfe
-    description: Receive Flow Control Enable.
+    description: "Receive Flow Control Enable.\n\nRaw bit values: false (0) = Disable: Receive Flow Control is disabled.; true (1) = Enable: Receive Flow Control is enabled."
     bit_offset: 0
     bit_size: 1
-    enum: Rfe
   - name: up
-    description: Unicast Pause Packet Detect.
+    description: "Unicast Pause Packet Detect.\n\nRaw bit values: false (0) = Disable: Unicast Pause Packet Detect disabled.; true (1) = Enable: Unicast Pause Packet Detect enabled."
     bit_offset: 1
     bit_size: 1
-    enum: Up
 fieldset/MacRxTxStatus2:
   description: Receive Transmit Status.
   fields:
   - name: tjt
-    description: Transmit Jabber Timeout.
+    description: "Transmit Jabber Timeout.\n\nRaw bit values: false (0) = Inactive: No Transmit Jabber Timeout.; true (1) = Active: Transmit Jabber Timeout occurred."
     bit_offset: 0
     bit_size: 1
-    enum: Tjt
   - name: ncarr
-    description: No Carrier.
+    description: "No Carrier.\n\nRaw bit values: false (0) = Inactive: Carrier is present.; true (1) = Active: No carrier."
     bit_offset: 1
     bit_size: 1
-    enum: Ncarr
   - name: lcarr
-    description: Loss of Carrier.
+    description: "Loss of Carrier.\n\nRaw bit values: false (0) = Inactive: Carrier is present.; true (1) = Active: Loss of carrier."
     bit_offset: 2
     bit_size: 1
-    enum: Lcarr
   - name: exdef
-    description: Excessive Deferral.
+    description: "Excessive Deferral.\n\nRaw bit values: false (0) = Inactive: No Excessive deferral.; true (1) = Active: Excessive deferral."
     bit_offset: 3
     bit_size: 1
-    enum: Exdef
   - name: lcol
-    description: Late Collision.
+    description: "Late Collision.\n\nRaw bit values: false (0) = Inactive: No collision.; true (1) = Active: Late collision is sensed."
     bit_offset: 4
     bit_size: 1
-    enum: Lcol
   - name: excol
-    description: Excessive Collisions.
+    description: "Excessive Collisions.\n\nRaw bit values: false (0) = Inactive: No collision.; true (1) = Active: Excessive collision is sensed."
     bit_offset: 5
     bit_size: 1
-    enum: Excol
   - name: rwt
-    description: Receive Watchdog Timeout.
+    description: "Receive Watchdog Timeout.\n\nRaw bit values: false (0) = Inactive: No receive watchdog timeout.; true (1) = Active: Receive watchdog timed out."
     bit_offset: 8
     bit_size: 1
-    enum: Rwt
 fieldset/MacRxqCtrl0:
   description: Receive Queue Control 0.
   fields:
@@ -1437,24 +1264,21 @@ fieldset/MacRxqCtrl1:
     bit_size: 3
     enum: Ptpq
   - name: mcbcqen
-    description: Multicast and Broadcast Queue Enable.
+    description: "Multicast and Broadcast Queue Enable.\n\nRaw bit values: false (0) = Disable: Multicast and Broadcast Queue is disabled.; true (1) = Enable: Multicast and Broadcast Queue is enabled."
     bit_offset: 20
     bit_size: 1
-    enum: Mcbcqen
   - name: tacpqe
-    description: Tagged AV Control Packets Queuing Enable.
+    description: "Tagged AV Control Packets Queuing Enable.\n\nRaw bit values: false (0) = Disable: Tagged AV Control Packets Queuing is disabled.; true (1) = Enable: Tagged AV Control Packets Queuing is enabled."
     bit_offset: 21
     bit_size: 1
-    enum: Tacpqe
   - name: tpqc
     description: Tagged PTP over Ethernet Packets Queuing Control.
     bit_offset: 22
     bit_size: 2
   - name: omcbcq
-    description: OMCBCQ.
+    description: "OMCBCQ.\n\nRaw bit values: false (0) = Disable: overriding MCBCQ priority disabled.; true (1) = Enable: overriding MCBCQ priority enabled."
     bit_offset: 28
     bit_size: 1
-    enum: Omcbcq
   - name: tbrqe
     description: Type Field Based Rx Queuing Enable.
     bit_offset: 29
@@ -1474,28 +1298,25 @@ fieldset/MacRxqCtrl4:
   description: Receive Queue Control 4.
   fields:
   - name: uffqe
-    description: Unicast Address Filter Fail Packets Queuing Enable.
+    description: "Unicast Address Filter Fail Packets Queuing Enable.\n\nRaw bit values: false (0) = Disable: Unicast Address Filter Fail Packets Queuing is disabled.; true (1) = Enable: Unicast Address Filter Fail Packets Queuing is enabled."
     bit_offset: 0
     bit_size: 1
-    enum: Uffqe
   - name: uffq
     description: Unicast Address Filter Fail Packets Queue.
     bit_offset: 1
     bit_size: 1
   - name: mffqe
-    description: Multicast Address Filter Fail Packets Queuing Enable.
+    description: "Multicast Address Filter Fail Packets Queuing Enable.\n\nRaw bit values: false (0) = Disable: Multicast Address Filter Fail Packets Queuing is disabled.; true (1) = Enable: Multicast Address Filter Fail Packets Queuing is enabled."
     bit_offset: 8
     bit_size: 1
-    enum: Mffqe
   - name: mffq
     description: Multicast Address Filter Fail Packets Queue.
     bit_offset: 9
     bit_size: 1
   - name: vffqe
-    description: VLAN Tag Filter Fail Packets Queuing Enable.
+    description: "VLAN Tag Filter Fail Packets Queuing Enable.\n\nRaw bit values: false (0) = Disable: VLAN tag Filter Fail Packets Queuing is disabled.; true (1) = Enable: VLAN tag Filter Fail Packets Queuing is enabled."
     bit_offset: 16
     bit_size: 1
-    enum: Vffqe
   - name: vffq
     description: VLAN Tag Filter Fail Packets Queue.
     bit_offset: 17
@@ -1522,10 +1343,9 @@ fieldset/MacSystemTimeNanosecondsUpdate2:
     bit_offset: 0
     bit_size: 31
   - name: addsub
-    description: Add or Subtract Time.
+    description: "Add or Subtract Time.\n\nRaw bit values: false (0) = Add: Add time.; true (1) = Sub: Subtract time."
     bit_offset: 31
     bit_size: 1
-    enum: Addsub
 fieldset/MacSystemTimeSeconds2:
   description: System Time Seconds.
   fields:
@@ -1551,99 +1371,81 @@ fieldset/MacTimestampControl2:
   description: Timestamp Control.
   fields:
   - name: tsena
-    description: Enable Timestamp.
+    description: "Enable Timestamp.\n\nRaw bit values: false (0) = Disable: Timestamp is disabled.; true (1) = Enable: Timestamp is enabled."
     bit_offset: 0
     bit_size: 1
-    enum: Tsena
   - name: tscfupdt
-    description: Fine or Coarse Timestamp Update.
+    description: "Fine or Coarse Timestamp Update.\n\nRaw bit values: false (0) = Coarse: Coarse method is used to update system timestamp.; true (1) = Fine: Fine method is used to update system timestamp."
     bit_offset: 1
     bit_size: 1
-    enum: Tscfupdt
   - name: tsinit
-    description: Initialize Timestamp.
+    description: "Initialize Timestamp.\n\nRaw bit values: false (0) = Disable: Timestamp is not initialized.; true (1) = Enable: Timestamp is initialized."
     bit_offset: 2
     bit_size: 1
-    enum: Tsinit
   - name: tsupdt
-    description: Update Timestamp.
+    description: "Update Timestamp.\n\nRaw bit values: false (0) = Disable: Timestamp is not updated.; true (1) = Enable: Timestamp is updated."
     bit_offset: 3
     bit_size: 1
-    enum: Tsupdt
   - name: tstrig
-    description: Enable Timestamp Interrupt Trigger.
+    description: "Enable Timestamp Interrupt Trigger.\n\nRaw bit values: false (0) = Disable: Timestamp Interrupt Trigger is not enabled.; true (1) = Enable: Timestamp Interrupt Trigger is enabled."
     bit_offset: 4
     bit_size: 1
-    enum: Tstrig
   - name: tsaddreg
-    description: Update Addend Register.
+    description: "Update Addend Register.\n\nRaw bit values: false (0) = Disable: Addend Register is not updated.; true (1) = Enable: Addend Register is updated."
     bit_offset: 5
     bit_size: 1
-    enum: Tsaddreg
   - name: tsenall
-    description: Enable Timestamp for All Packets.
+    description: "Enable Timestamp for All Packets.\n\nRaw bit values: false (0) = Disable: Timestamp for All Packets disabled.; true (1) = Enable: Timestamp for All Packets enabled."
     bit_offset: 8
     bit_size: 1
-    enum: Tsenall
   - name: tsctrlssr
-    description: Timestamp Digital or Binary Rollover Control.
+    description: "Timestamp Digital or Binary Rollover Control.\n\nRaw bit values: false (0) = DigDisable: Timestamp Digital Rollover Control is disabled and Binary Rollover Control is enabled.; true (1) = DigEnable: Timestamp Digital Rollover Control is enabled and Binary Rollover Control is disabled."
     bit_offset: 9
     bit_size: 1
-    enum: Tsctrlssr
   - name: tsver2ena
-    description: Enable PTP Packet Processing for Version 2 Format.
+    description: "Enable PTP Packet Processing for Version 2 Format.\n\nRaw bit values: false (0) = Disable: PTP Packet Processing for Version 2 Format is disabled.; true (1) = Enable: PTP Packet Processing for Version 2 Format is enabled."
     bit_offset: 10
     bit_size: 1
-    enum: Tsver2ena
   - name: tsipena
-    description: Enable Processing of PTP over Ethernet Packets.
+    description: "Enable Processing of PTP over Ethernet Packets.\n\nRaw bit values: false (0) = Disable: Processing of PTP over Ethernet Packets is disabled.; true (1) = Enable: Processing of PTP over Ethernet Packets is enabled."
     bit_offset: 11
     bit_size: 1
-    enum: Tsipena
   - name: tsipv6ena
-    description: Enable Processing of PTP Packets Sent over IPv6-UDP.
+    description: "Enable Processing of PTP Packets Sent over IPv6-UDP.\n\nRaw bit values: false (0) = Disable: Processing of PTP Packets Sent over IPv6-UDP is disabled.; true (1) = Enable: Processing of PTP Packets Sent over IPv6-UDP is enabled."
     bit_offset: 12
     bit_size: 1
-    enum: Tsipv6ena
   - name: tsipv4ena
-    description: Enable Processing of PTP Packets Sent over IPv4-UDP.
+    description: "Enable Processing of PTP Packets Sent over IPv4-UDP.\n\nRaw bit values: false (0) = Disable: Processing of PTP Packets Sent over IPv4-UDP is disabled.; true (1) = Enable: Processing of PTP Packets Sent over IPv4-UDP is enabled."
     bit_offset: 13
     bit_size: 1
-    enum: Tsipv4ena
   - name: tsevntena
-    description: Enable Timestamp Snapshot for Event Messages.
+    description: "Enable Timestamp Snapshot for Event Messages.\n\nRaw bit values: false (0) = Disable: Timestamp Snapshot for Event Messages is disabled.; true (1) = Enable: Timestamp Snapshot for Event Messages is enabled."
     bit_offset: 14
     bit_size: 1
-    enum: Tsevntena
   - name: tsmstrena
-    description: Enable Snapshot for Messages Relevant to Master.
+    description: "Enable Snapshot for Messages Relevant to Master.\n\nRaw bit values: false (0) = Disable: Snapshot for Messages Relevant to Master is disabled.; true (1) = Enable: Snapshot for Messages Relevant to Master is enabled."
     bit_offset: 15
     bit_size: 1
-    enum: Tsmstrena
   - name: snaptypsel
     description: Select PTP packets for Taking Snapshots.
     bit_offset: 16
     bit_size: 2
   - name: tsenmacaddr
-    description: Enable MAC Address for PTP Packet Filtering.
+    description: "Enable MAC Address for PTP Packet Filtering.\n\nRaw bit values: false (0) = Disable: MAC Address for PTP Packet Filtering is disabled.; true (1) = Enable: MAC Address for PTP Packet Filtering is enabled."
     bit_offset: 18
     bit_size: 1
-    enum: Tsenmacaddr
   - name: esti
-    description: External System Time Input.
+    description: "External System Time Input.\n\nRaw bit values: false (0) = Disable: External System Time Input is disabled.; true (1) = Enable: External System Time Input is enabled."
     bit_offset: 20
     bit_size: 1
-    enum: Esti
   - name: txtsstsm
-    description: Transmit Timestamp Status Mode.
+    description: "Transmit Timestamp Status Mode.\n\nRaw bit values: false (0) = Disable: Transmit Timestamp Status Mode is disabled.; true (1) = Enable: Transmit Timestamp Status Mode is enabled."
     bit_offset: 24
     bit_size: 1
-    enum: Txtsstsm
   - name: av8021asmen
-    description: AV 802.
+    description: "AV 802.\n\nRaw bit values: false (0) = Disable: AV 802.1AS Mode is disabled.; true (1) = Enable: AV 802.1AS Mode is enabled."
     bit_offset: 28
     bit_size: 1
-    enum: Av8021asmen
 fieldset/MacTimestampEgressCorrNanosecond2:
   description: Timestamp Egress Correction Nanosecond.
   fields:
@@ -1684,25 +1486,21 @@ fieldset/MacTimestampStatus2:
   description: Timestamp Status.
   fields:
   - name: tssovf
-    description: Timestamp Seconds Overflow.
+    description: "Timestamp Seconds Overflow.\n\nRaw bit values: false (0) = Inactive: Timestamp Seconds Overflow status not detected.; true (1) = Active: Timestamp Seconds Overflow status detected."
     bit_offset: 0
     bit_size: 1
-    enum: Tssovf
   - name: tstargt0
-    description: Timestamp Target Time Reached.
+    description: "Timestamp Target Time Reached.\n\nRaw bit values: false (0) = Inactive: Timestamp Target Time Reached status not detected.; true (1) = Active: Timestamp Target Time Reached status detected."
     bit_offset: 1
     bit_size: 1
-    enum: Tstargt0
   - name: tstrgterr0
-    description: Timestamp Target Time Error.
+    description: "Timestamp Target Time Error.\n\nRaw bit values: false (0) = Inactive: Timestamp Target Time Error status not detected.; true (1) = Active: Timestamp Target Time Error status detected."
     bit_offset: 3
     bit_size: 1
-    enum: Tstrgterr0
   - name: txtssis
-    description: Tx Timestamp Status Interrupt Status.
+    description: "Tx Timestamp Status Interrupt Status.\n\nRaw bit values: false (0) = Inactive: Tx Timestamp Status Interrupt status not detected.; true (1) = Active: Tx Timestamp Status Interrupt status detected."
     bit_offset: 15
     bit_size: 1
-    enum: Txtssis
 fieldset/MacTxTimestampStatusNanoseconds2:
   description: Transmit Timestamp Status Nanoseconds.
   fields:
@@ -1711,10 +1509,9 @@ fieldset/MacTxTimestampStatusNanoseconds2:
     bit_offset: 0
     bit_size: 31
   - name: txtssmis
-    description: TXTSSMIS.
+    description: "TXTSSMIS.\n\nRaw bit values: false (0) = Inactive: Transmit Timestamp Status Missed status not detected.; true (1) = Active: Transmit Timestamp Status Missed status detected."
     bit_offset: 31
     bit_size: 1
-    enum: Txtssmis
 fieldset/MacTxTimestampStatusSeconds2:
   description: Transmit Timestamp Status Seconds.
   fields:
@@ -1746,39 +1543,33 @@ fieldset/MacVlanIncl2:
     bit_size: 2
     enum: Vlc
   - name: vlp
-    description: VLAN Priority Control.
+    description: "VLAN Priority Control.\n\nRaw bit values: false (0) = Disable: VLAN Priority Control is disabled.; true (1) = Enable: VLAN Priority Control is enabled."
     bit_offset: 18
     bit_size: 1
-    enum: Vlp
   - name: csvl
-    description: C-VLAN or S-VLAN.
+    description: "C-VLAN or S-VLAN.\n\nRaw bit values: false (0) = CVlan: C-VLAN type (0x8100) is inserted or replaced.; true (1) = SVlan: S-VLAN type (0x88A8) is inserted or replaced."
     bit_offset: 19
     bit_size: 1
-    enum: Csvl2
   - name: vlti
-    description: VLAN Tag Input.
+    description: "VLAN Tag Input.\n\nRaw bit values: false (0) = Disable: VLAN Tag Input is disabled.; true (1) = Enable: VLAN Tag Input is enabled."
     bit_offset: 20
     bit_size: 1
-    enum: Vlti
   - name: cbti
-    description: Channel based tag insertion.
+    description: "Channel based tag insertion.\n\nRaw bit values: false (0) = Disable: Channel based tag insertion is disabled.; true (1) = Enable: Channel based tag insertion is enabled."
     bit_offset: 21
     bit_size: 1
-    enum: Cbti
   - name: addr
     description: Address.
     bit_offset: 24
     bit_size: 1
   - name: rdwr
-    description: Read write control.
+    description: "Read write control.\n\nRaw bit values: false (0) = Read: Read operation of indirect access.; true (1) = Write: Write operation of indirect access."
     bit_offset: 30
     bit_size: 1
-    enum: Rdwr
   - name: busy
-    description: Busy.
+    description: "Busy.\n\nRaw bit values: false (0) = Inactive: Busy status not detected.; true (1) = Active: Busy status detected."
     bit_offset: 31
     bit_size: 1
-    enum: Busy
 fieldset/MacVlanTagCtrl:
   description: MAC VLAN Tag Control.
   fields:
@@ -1787,60 +1578,51 @@ fieldset/MacVlanTagCtrl:
     bit_offset: 0
     bit_size: 16
   - name: etv
-    description: Enable 12-Bit VLAN Tag Comparison.
+    description: "Enable 12-Bit VLAN Tag Comparison.\n\nRaw bit values: false (0) = Disable: 12-bit VLAN Tag Comparison is disabled.; true (1) = Enable: 12-bit VLAN Tag Comparison is enabled."
     bit_offset: 16
     bit_size: 1
-    enum: Etv
   - name: vtim
-    description: VLAN Tag Inverse Match Enable.
+    description: "VLAN Tag Inverse Match Enable.\n\nRaw bit values: false (0) = Disable: VLAN Tag Inverse Match is disabled.; true (1) = Enable: VLAN Tag Inverse Match is enabled."
     bit_offset: 17
     bit_size: 1
-    enum: Vtim
   - name: esvl
-    description: Enable S-VLAN.
+    description: "Enable S-VLAN.\n\nRaw bit values: false (0) = Disable: S-VLAN is disabled.; true (1) = Enable: S-VLAN is enabled."
     bit_offset: 18
     bit_size: 1
-    enum: Esvl
   - name: ersvlm
-    description: Enable Receive S-VLAN Match.
+    description: "Enable Receive S-VLAN Match.\n\nRaw bit values: false (0) = Disable: Receive S-VLAN Match is disabled.; true (1) = Enable: Receive S-VLAN Match is enabled."
     bit_offset: 19
     bit_size: 1
-    enum: Ersvlm
   - name: dovltc
-    description: Disable VLAN Type Check.
+    description: "Disable VLAN Type Check.\n\nRaw bit values: false (0) = Enable: VLAN Type Check is enabled.; true (1) = Disable: VLAN Type Check is disabled."
     bit_offset: 20
     bit_size: 1
-    enum: Dovltc
   - name: evls
     description: Enable VLAN Tag Stripping on Receive.
     bit_offset: 21
     bit_size: 2
     enum: Evls
   - name: evlrxs
-    description: Enable VLAN Tag in Rx status.
+    description: "Enable VLAN Tag in Rx status.\n\nRaw bit values: false (0) = Disable: VLAN Tag in Rx status is disabled.; true (1) = Enable: VLAN Tag in Rx status is enabled."
     bit_offset: 24
     bit_size: 1
-    enum: Evlrxs
   - name: edvlp
-    description: Enable Double VLAN Processing.
+    description: "Enable Double VLAN Processing.\n\nRaw bit values: false (0) = Disable: Double VLAN Processing is disabled.; true (1) = Enable: Double VLAN Processing is enabled."
     bit_offset: 26
     bit_size: 1
-    enum: Edvlp
   - name: erivlt
-    description: Enable Inner VLAN Tag.
+    description: "Enable Inner VLAN Tag.\n\nRaw bit values: false (0) = Disable: Inner VLAN tag is disabled.; true (1) = Enable: Inner VLAN tag is enabled."
     bit_offset: 27
     bit_size: 1
-    enum: Erivlt
   - name: eivls
     description: Enable Inner VLAN Tag Stripping on Receive.
     bit_offset: 28
     bit_size: 2
     enum: Evls
   - name: eivlrxs
-    description: Enable Inner VLAN Tag in Rx Status.
+    description: "Enable Inner VLAN Tag in Rx Status.\n\nRaw bit values: false (0) = Disable: Inner VLAN Tag in Rx status is disabled.; true (1) = Enable: Inner VLAN Tag in Rx status is enabled."
     bit_offset: 31
     bit_size: 1
-    enum: Eivlrxs
 fieldset/MacWatchdogTimeout:
   description: Watchdog Timeout.
   fields:
@@ -1850,84 +1632,71 @@ fieldset/MacWatchdogTimeout:
     bit_size: 4
     enum: Wto
   - name: pwe
-    description: Programmable Watchdog Enable.
+    description: "Programmable Watchdog Enable.\n\nRaw bit values: false (0) = Disable: Programmable Watchdog is disabled.; true (1) = Enable: Programmable Watchdog is enabled."
     bit_offset: 8
     bit_size: 1
-    enum: Pwe
 fieldset/MtlInterruptStatus2:
   description: MTL Interrupt Status.
   fields:
   - name: q0is
-    description: Queue 0 Interrupt status.
+    description: "Queue 0 Interrupt status.\n\nRaw bit values: false (0) = Inactive: Queue 0 Interrupt status not detected.; true (1) = Active: Queue 0 Interrupt status detected."
     bit_offset: 0
     bit_size: 1
-    enum: Q0is
   - name: q1is
-    description: Queue 1 Interrupt status.
+    description: "Queue 1 Interrupt status.\n\nRaw bit values: false (0) = Inactive: Queue 1 Interrupt status not detected.; true (1) = Active: Queue 1 Interrupt status detected."
     bit_offset: 1
     bit_size: 1
-    enum: Q1is
 fieldset/MtlOperationMode2:
   description: MTL Operation Mode.
   fields:
   - name: dtxsts
-    description: Drop Transmit Status.
+    description: "Drop Transmit Status.\n\nRaw bit values: false (0) = Disable: Drop Transmit Status is disabled.; true (1) = Enable: Drop Transmit Status is enabled."
     bit_offset: 1
     bit_size: 1
-    enum: Dtxsts
   - name: raa
-    description: Receive Arbitration Algorithm.
+    description: "Receive Arbitration Algorithm.\n\nRaw bit values: false (0) = Sp: Strict priority (SP).; true (1) = Wsp: Weighted Strict Priority (WSP)."
     bit_offset: 2
     bit_size: 1
-    enum: Raa
   - name: schalg
     description: Tx Scheduling Algorithm.
     bit_offset: 5
     bit_size: 2
     enum: Schalg
   - name: cntprst
-    description: Counters Preset.
+    description: "Counters Preset.\n\nRaw bit values: false (0) = Disable: Counters Preset is disabled.; true (1) = Enable: Counters Preset is enabled."
     bit_offset: 8
     bit_size: 1
-    enum: Cntprst
   - name: cntclr
-    description: Counters Reset.
+    description: "Counters Reset.\n\nRaw bit values: false (0) = Disable: Counters are not reset.; true (1) = Enable: All counters are reset."
     bit_offset: 9
     bit_size: 1
-    enum: Cntclr
 fieldset/MtlQ0InterruptControlStatus2:
   description: Queue 0 Interrupt Control Status.
   fields:
   - name: txunfis
-    description: Transmit Queue Underflow Interrupt Status.
+    description: "Transmit Queue Underflow Interrupt Status.\n\nRaw bit values: false (0) = Inactive: Transmit Queue Underflow Interrupt Status not detected.; true (1) = Active: Transmit Queue Underflow Interrupt Status detected."
     bit_offset: 0
     bit_size: 1
-    enum: Txunfis
   - name: abpsis
-    description: Average Bits Per Slot Interrupt Status.
+    description: "Average Bits Per Slot Interrupt Status.\n\nRaw bit values: false (0) = Inactive: Average Bits Per Slot Interrupt Status not detected.; true (1) = Active: Average Bits Per Slot Interrupt Status detected."
     bit_offset: 1
     bit_size: 1
-    enum: Abpsis
   - name: txuie
-    description: Transmit Queue Underflow Interrupt Enable.
+    description: "Transmit Queue Underflow Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Transmit Queue Underflow Interrupt Status is disabled.; true (1) = Enable: Transmit Queue Underflow Interrupt Status is enabled."
     bit_offset: 8
     bit_size: 1
-    enum: Txuie
   - name: abpsie
-    description: Average Bits Per Slot Interrupt Enable.
+    description: "Average Bits Per Slot Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Average Bits Per Slot Interrupt is disabled.; true (1) = Enable: Average Bits Per Slot Interrupt is enabled."
     bit_offset: 9
     bit_size: 1
-    enum: Abpsie
   - name: rxovfis
-    description: Receive Queue Overflow Interrupt Status.
+    description: "Receive Queue Overflow Interrupt Status.\n\nRaw bit values: false (0) = Inactive: Receive Queue Overflow Interrupt Status not detected.; true (1) = Active: Receive Queue Overflow Interrupt Status detected."
     bit_offset: 16
     bit_size: 1
-    enum: Rxovfis
   - name: rxoie
-    description: Receive Queue Overflow Interrupt Enable.
+    description: "Receive Queue Overflow Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Receive Queue Overflow Interrupt is disabled.; true (1) = Enable: Receive Queue Overflow Interrupt is enabled."
     bit_offset: 24
     bit_size: 1
-    enum: Rxoie
 fieldset/MtlRxq0Control:
   description: Queue 0 Receive Control.
   fields:
@@ -1936,18 +1705,16 @@ fieldset/MtlRxq0Control:
     bit_offset: 0
     bit_size: 3
   - name: rxq_frm_arbit
-    description: Receive Queue Packet Arbitration.
+    description: "Receive Queue Packet Arbitration.\n\nRaw bit values: false (0) = Disable: Receive Queue Packet Arbitration is disabled.; true (1) = Enable: Receive Queue Packet Arbitration is enabled."
     bit_offset: 3
     bit_size: 1
-    enum: RxqFrmArbit
 fieldset/MtlRxq0Debug2:
   description: Queue 0 Receive Debug.
   fields:
   - name: rwcsts
-    description: MTL Rx Queue Write Controller Active Status.
+    description: "MTL Rx Queue Write Controller Active Status.\n\nRaw bit values: false (0) = Inactive: MTL Rx Queue Write Controller Active Status not detected.; true (1) = Active: MTL Rx Queue Write Controller Active Status detected."
     bit_offset: 0
     bit_size: 1
-    enum: Rwcsts
   - name: rrcsts
     description: MTL Rx Queue Read Controller State.
     bit_offset: 1
@@ -1970,19 +1737,17 @@ fieldset/MtlRxq0MissedPacketOverflowCnt2:
     bit_offset: 0
     bit_size: 11
   - name: ovfcntovf
-    description: Overflow Counter Overflow Bit.
+    description: "Overflow Counter Overflow Bit.\n\nRaw bit values: false (0) = Inactive: Overflow Counter overflow not detected.; true (1) = Active: Overflow Counter overflow detected."
     bit_offset: 11
     bit_size: 1
-    enum: Ovfcntovf
   - name: mispktcnt
     description: Missed Packet Counter.
     bit_offset: 16
     bit_size: 11
   - name: miscntovf
-    description: Missed Packet Counter Overflow Bit.
+    description: "Missed Packet Counter Overflow Bit.\n\nRaw bit values: false (0) = Inactive: Missed Packet Counter overflow not detected.; true (1) = Active: Missed Packet Counter overflow detected."
     bit_offset: 27
     bit_size: 1
-    enum: Miscntovf
 fieldset/MtlRxq0OperationMode2:
   description: Queue 0 Receive Operation Mode.
   fields:
@@ -1992,25 +1757,21 @@ fieldset/MtlRxq0OperationMode2:
     bit_size: 2
     enum: Rtc
   - name: fup
-    description: Forward Undersized Good Packets.
+    description: "Forward Undersized Good Packets.\n\nRaw bit values: false (0) = Disable: Forward Undersized Good Packets is disabled.; true (1) = Enable: Forward Undersized Good Packets is enabled."
     bit_offset: 3
     bit_size: 1
-    enum: Fup
   - name: fep
-    description: Forward Error Packets.
+    description: "Forward Error Packets.\n\nRaw bit values: false (0) = Disable: Forward Error Packets is disabled.; true (1) = Enable: Forward Error Packets is enabled."
     bit_offset: 4
     bit_size: 1
-    enum: Fep
   - name: rsf
-    description: Receive Queue Store and Forward.
+    description: "Receive Queue Store and Forward.\n\nRaw bit values: false (0) = Disable: Receive Queue Store and Forward is disabled.; true (1) = Enable: Receive Queue Store and Forward is enabled."
     bit_offset: 5
     bit_size: 1
-    enum: Rsf
   - name: dis_tcp_ef
-    description: Disable Dropping of TCP/IP Checksum Error Packets.
+    description: "Disable Dropping of TCP/IP Checksum Error Packets.\n\nRaw bit values: false (0) = Enable: Dropping of TCP/IP Checksum Error Packets is enabled.; true (1) = Disable: Dropping of TCP/IP Checksum Error Packets is disabled."
     bit_offset: 6
     bit_size: 1
-    enum: DisTcpEf
   - name: rqs
     description: Receive Queue Size.
     bit_offset: 20
@@ -2023,47 +1784,41 @@ fieldset/MtlRxqDmaMap0:
     bit_offset: 0
     bit_size: 1
   - name: q0ddmach
-    description: Queue 0 Enabled for DA-based DMA Channel Selection.
+    description: "Queue 0 Enabled for DA-based DMA Channel Selection.\n\nRaw bit values: false (0) = Disable: Queue 0 disabled for DA-based DMA Channel Selection.; true (1) = Enable: Queue 0 enabled for DA-based DMA Channel Selection."
     bit_offset: 4
     bit_size: 1
-    enum: Q0ddmach
   - name: q1mdmach
     description: Queue 1 Mapped to DMA Channel.
     bit_offset: 8
     bit_size: 1
   - name: q1ddmach
-    description: Queue 1 Enabled for DA-based DMA Channel Selection.
+    description: "Queue 1 Enabled for DA-based DMA Channel Selection.\n\nRaw bit values: false (0) = Disable: Queue 1 disabled for DA-based DMA Channel Selection.; true (1) = Enable: Queue 1 enabled for DA-based DMA Channel Selection."
     bit_offset: 12
     bit_size: 1
-    enum: Q1ddmach
 fieldset/MtlTxq0Debug2:
   description: Queue 0 Transmit Debug.
   fields:
   - name: txqpaused
-    description: Transmit Queue in Pause.
+    description: "Transmit Queue in Pause.\n\nRaw bit values: false (0) = Inactive: Transmit Queue in Pause status is not detected.; true (1) = Active: Transmit Queue in Pause status is detected."
     bit_offset: 0
     bit_size: 1
-    enum: Txqpaused
   - name: trcsts
     description: MTL Tx Queue Read Controller Status.
     bit_offset: 1
     bit_size: 2
     enum: Trcsts
   - name: twcsts
-    description: MTL Tx Queue Write Controller Status.
+    description: "MTL Tx Queue Write Controller Status.\n\nRaw bit values: false (0) = Inactive: MTL Tx Queue Write Controller status is not detected.; true (1) = Active: MTL Tx Queue Write Controller status is detected."
     bit_offset: 3
     bit_size: 1
-    enum: Twcsts
   - name: txqsts
-    description: MTL Tx Queue Not Empty Status.
+    description: "MTL Tx Queue Not Empty Status.\n\nRaw bit values: false (0) = Inactive: MTL Tx Queue Not Empty status is not detected.; true (1) = Active: MTL Tx Queue Not Empty status is detected."
     bit_offset: 4
     bit_size: 1
-    enum: Txqsts
   - name: txstsfsts
-    description: MTL Tx Status FIFO Full Status.
+    description: "MTL Tx Status FIFO Full Status.\n\nRaw bit values: false (0) = Inactive: MTL Tx Status FIFO Full status is not detected.; true (1) = Active: MTL Tx Status FIFO Full status is detected."
     bit_offset: 5
     bit_size: 1
-    enum: Txstsfsts
   - name: ptxq
     description: Number of Packets in the Transmit Queue.
     bit_offset: 16
@@ -2083,15 +1838,13 @@ fieldset/MtlTxq0OperationMode2:
   description: Queue 0 Transmit Operation Mode.
   fields:
   - name: ftq
-    description: Flush Transmit Queue.
+    description: "Flush Transmit Queue.\n\nRaw bit values: false (0) = Disable: Flush Transmit Queue is disabled.; true (1) = Enable: Flush Transmit Queue is enabled."
     bit_offset: 0
     bit_size: 1
-    enum: Ftq
   - name: tsf
-    description: Transmit Store and Forward.
+    description: "Transmit Store and Forward.\n\nRaw bit values: false (0) = Disable: Transmit Store and Forward is disabled.; true (1) = Enable: Transmit Store and Forward is enabled."
     bit_offset: 1
     bit_size: 1
-    enum: Tsf
   - name: txqen
     description: Transmit Queue Enable.
     bit_offset: 2
@@ -2121,23 +1874,20 @@ fieldset/MtlTxq0Underflow2:
     bit_offset: 0
     bit_size: 11
   - name: ufcntovf
-    description: Overflow Bit for Underflow Packet Counter.
+    description: "Overflow Bit for Underflow Packet Counter.\n\nRaw bit values: false (0) = Inactive: Overflow not detected for Underflow Packet Counter.; true (1) = Active: Overflow detected for Underflow Packet Counter."
     bit_offset: 11
     bit_size: 1
-    enum: Ufcntovf
 fieldset/MtlTxq1EtsControl:
   description: Queue 1 ETS Control.
   fields:
   - name: avalg
-    description: AV Algorithm.
+    description: "AV Algorithm.\n\nRaw bit values: false (0) = Disable: CBS Algorithm is disabled.; true (1) = Enable: CBS Algorithm is enabled."
     bit_offset: 2
     bit_size: 1
-    enum: Avalg
   - name: cc
-    description: Credit Control.
+    description: "Credit Control.\n\nRaw bit values: false (0) = Disable: Credit Control is disabled.; true (1) = Enable: Credit Control is enabled."
     bit_offset: 3
     bit_size: 1
-    enum: Cc
   - name: slc
     description: Slot Count.
     bit_offset: 4
@@ -2185,42 +1935,6 @@ fieldset/Pps0TargetTimeSeconds:
     description: PPS Target Time Seconds Register.
     bit_offset: 0
     bit_size: 32
-enum/Aal:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Address-Aligned Beats is disabled.
-    value: 0
-  - name: Enable
-    description: Address-Aligned Beats is enabled.
-    value: 1
-enum/Abpsie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Average Bits Per Slot Interrupt is disabled.
-    value: 0
-  - name: Enable
-    description: Average Bits Per Slot Interrupt is enabled.
-    value: 1
-enum/Abpsis:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Average Bits Per Slot Interrupt Status not detected.
-    value: 0
-  - name: Active
-    description: Average Bits Per Slot Interrupt Status detected.
-    value: 1
-enum/Acs:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Automatic Pad or CRC Stripping is disabled.
-    value: 0
-  - name: Enable
-    description: Automatic Pad or CRC Stripping is enabled.
-    value: 1
 enum/Actphysel:
   bit_size: 3
   variants:
@@ -2260,69 +1974,6 @@ enum/Addr64:
   - name: M48
     description: '48.'
     value: 2
-enum/Addsub:
-  bit_size: 1
-  variants:
-  - name: Add
-    description: Add time.
-    value: 0
-  - name: Sub
-    description: Subtract time.
-    value: 1
-enum/Advthword:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: IEEE 1588 High Word Register option is not selected.
-    value: 0
-  - name: Active
-    description: IEEE 1588 High Word Register option is selected.
-    value: 1
-enum/Ae:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: 'INVALID : This bit must be always set to 1.'
-    value: 0
-  - name: Enable
-    description: This bit is always set to 1.
-    value: 1
-enum/Aie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Abnormal Interrupt Summary is disabled.
-    value: 0
-  - name: Enable
-    description: Abnormal Interrupt Summary is enabled.
-    value: 1
-enum/Ais:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Abnormal Interrupt Summary status not detected.
-    value: 0
-  - name: Active
-    description: Abnormal Interrupt Summary status detected.
-    value: 1
-enum/Arpoffsel:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: ARP Offload Enable option is not selected.
-    value: 0
-  - name: Active
-    description: ARP Offload Enable option is selected.
-    value: 1
-enum/Asc:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Advance Slot Check is disabled.
-    value: 0
-  - name: Enable
-    description: Advance Slot Check is enabled.
-    value: 1
 enum/Asp:
   bit_size: 2
   variants:
@@ -2356,42 +2007,6 @@ enum/Auxsnapnum:
   - name: M4Auxi
     description: 4 auxiliary input.
     value: 4
-enum/Av8021asmen:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: AV 802.1AS Mode is disabled.
-    value: 0
-  - name: Enable
-    description: AV 802.1AS Mode is enabled.
-    value: 1
-enum/Avalg:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: CBS Algorithm is disabled.
-    value: 0
-  - name: Enable
-    description: CBS Algorithm is enabled.
-    value: 1
-enum/Avsel:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: AV Feature is not selected.
-    value: 0
-  - name: Active
-    description: AV Feature is selected.
-    value: 1
-enum/Axwhsts:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: AXI Master Write Channel or AHB Master Status not detected.
-    value: 0
-  - name: Active
-    description: AXI Master Write Channel or AHB Master Status detected.
-    value: 1
 enum/Bl:
   bit_size: 2
   variants:
@@ -2407,384 +2022,6 @@ enum/Bl:
   - name: MinN1
     description: k = min(n,1).
     value: 3
-enum/Btb:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Back to Back transactions disabled.
-    value: 0
-  - name: Enable
-    description: Back to Back transactions enabled.
-    value: 1
-enum/Busy:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Busy status not detected.
-    value: 0
-  - name: Active
-    description: Busy status detected.
-    value: 1
-enum/C45e:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Clause 45 PHY is disabled.
-    value: 0
-  - name: Enable
-    description: Clause 45 PHY is enabled.
-    value: 1
-enum/Cbti:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Channel based tag insertion is disabled.
-    value: 0
-  - name: Enable
-    description: Channel based tag insertion is enabled.
-    value: 1
-enum/Cbtisel:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Enable Queue/Channel based VLAN tag insertion on Tx feature is not selected.
-    value: 0
-  - name: Active
-    description: Enable Queue/Channel based VLAN tag insertion on Tx feature is selected.
-    value: 1
-enum/Cc:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Credit Control is disabled.
-    value: 0
-  - name: Enable
-    description: Credit Control is enabled.
-    value: 1
-enum/Cde:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Context Descriptor Error status not detected.
-    value: 0
-  - name: Active
-    description: Context Descriptor Error status detected.
-    value: 1
-enum/Cdee:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Context Descriptor Error is disabled.
-    value: 0
-  - name: Enable
-    description: Context Descriptor Error is enabled.
-    value: 1
-enum/Cntclr:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Counters are not reset.
-    value: 0
-  - name: Enable
-    description: All counters are reset.
-    value: 1
-enum/Cntprst:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Counters Preset is disabled.
-    value: 0
-  - name: Enable
-    description: Counters Preset is enabled.
-    value: 1
-enum/Com:
-  bit_size: 1
-  variants:
-  - name: Write
-    description: Write operation.
-    value: 0
-  - name: Read
-    description: Read operation.
-    value: 1
-enum/Cst:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: CRC stripping for Type packets is disabled.
-    value: 0
-  - name: Enable
-    description: CRC stripping for Type packets is enabled.
-    value: 1
-enum/Csvl:
-  bit_size: 1
-  variants:
-  - name: Cvlan
-    description: C-VLAN type (0x8100) is inserted.
-    value: 0
-  - name: Svlan
-    description: S-VLAN type (0x88A8) is inserted.
-    value: 1
-enum/Csvl2:
-  bit_size: 1
-  variants:
-  - name: CVlan
-    description: C-VLAN type (0x8100) is inserted or replaced.
-    value: 0
-  - name: SVlan
-    description: S-VLAN type (0x88A8) is inserted or replaced.
-    value: 1
-enum/Da:
-  bit_size: 1
-  variants:
-  - name: Wrr
-    description: Weighted Round-Robin with Rx:Tx or Tx:Rx.
-    value: 0
-  - name: Fp
-    description: Fixed Priority.
-    value: 1
-enum/Daif:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: DA Inverse Filtering is disabled.
-    value: 0
-  - name: Enable
-    description: DA Inverse Filtering is enabled.
-    value: 1
-enum/Dbf:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Enable Broadcast Packets.
-    value: 0
-  - name: Disable
-    description: Disable Broadcast Packets.
-    value: 1
-enum/Dbgmema:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: DMA Debug Registers option is not selected.
-    value: 0
-  - name: Active
-    description: DMA Debug Registers option is selected.
-    value: 1
-enum/Dc:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Deferral check function is disabled.
-    value: 0
-  - name: Enable
-    description: Deferral check function is enabled.
-    value: 1
-enum/Dc0is:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: DMA Channel 0 Interrupt Status not detected.
-    value: 0
-  - name: Active
-    description: DMA Channel 0 Interrupt Status detected.
-    value: 1
-enum/Dc1is:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: DMA Channel 1 Interrupt Status not detected.
-    value: 0
-  - name: Active
-    description: DMA Channel 1 Interrupt Status detected.
-    value: 1
-enum/Dcben:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: DCB Feature is not selected.
-    value: 0
-  - name: Active
-    description: DCB Feature is selected.
-    value: 1
-enum/Dcrcc:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: CRC Checking is enabled.
-    value: 0
-  - name: Disable
-    description: CRC Checking is disabled.
-    value: 1
-enum/Dcrs:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Enable Carrier Sense During Transmission.
-    value: 0
-  - name: Disable
-    description: Disable Carrier Sense During Transmission.
-    value: 1
-enum/DisTcpEf:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Dropping of TCP/IP Checksum Error Packets is enabled.
-    value: 0
-  - name: Disable
-    description: Dropping of TCP/IP Checksum Error Packets is disabled.
-    value: 1
-enum/Dm:
-  bit_size: 1
-  variants:
-  - name: Hduplx
-    description: Half-duplex mode.
-    value: 0
-  - name: Fduplx
-    description: Full-duplex mode.
-    value: 1
-enum/Do:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Enable Receive Own.
-    value: 0
-  - name: Disable
-    description: Disable Receive Own.
-    value: 1
-enum/Dovltc:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: VLAN Type Check is enabled.
-    value: 0
-  - name: Disable
-    description: VLAN Type Check is disabled.
-    value: 1
-enum/Dr:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Enable Retry.
-    value: 0
-  - name: Disable
-    description: Disable Retry.
-    value: 1
-enum/Dtxsts:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Drop Transmit Status is disabled.
-    value: 0
-  - name: Enable
-    description: Drop Transmit Status is enabled.
-    value: 1
-enum/Dvlan:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Double VLAN option is not selected.
-    value: 0
-  - name: Active
-    description: Double VLAN option is selected.
-    value: 1
-enum/Dzpq:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Zero-Quanta Pause packet generation is enabled.
-    value: 0
-  - name: Disable
-    description: Zero-Quanta Pause packet generation is disabled.
-    value: 1
-enum/Ecrsfd:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: ECRSFD is disabled.
-    value: 0
-  - name: Enable
-    description: ECRSFD is enabled.
-    value: 1
-enum/Edvlp:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Double VLAN Processing is disabled.
-    value: 0
-  - name: Enable
-    description: Double VLAN Processing is enabled.
-    value: 1
-enum/Eeesel:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Energy Efficient Ethernet Enable option is not selected.
-    value: 0
-  - name: Active
-    description: Energy Efficient Ethernet Enable option is selected.
-    value: 1
-enum/Eipgen:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Extended Inter-Packet Gap is disabled.
-    value: 0
-  - name: Enable
-    description: Extended Inter-Packet Gap is enabled.
-    value: 1
-enum/Eivlrxs:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Inner VLAN Tag in Rx status is disabled.
-    value: 0
-  - name: Enable
-    description: Inner VLAN Tag in Rx status is enabled.
-    value: 1
-enum/Eri:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Early Receive Interrupt status not detected.
-    value: 0
-  - name: Active
-    description: Early Receive Interrupt status detected.
-    value: 1
-enum/Eric:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Early Receive Interrupt is disabled.
-    value: 0
-  - name: Enable
-    description: Early Receive Interrupt is enabled.
-    value: 1
-enum/Erivlt:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Inner VLAN tag is disabled.
-    value: 0
-  - name: Enable
-    description: Inner VLAN tag is enabled.
-    value: 1
-enum/Ersvlm:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Receive S-VLAN Match is disabled.
-    value: 0
-  - name: Enable
-    description: Receive S-VLAN Match is enabled.
-    value: 1
-enum/Esc:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Slot Comparison is disabled.
-    value: 0
-  - name: Enable
-    description: Slot Comparison is enabled.
-    value: 1
 enum/Estdep:
   bit_size: 3
   variants:
@@ -2806,24 +2043,6 @@ enum/Estdep:
   - name: Depth1024
     description: '1024.'
     value: 5
-enum/Esti:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: External System Time Input is disabled.
-    value: 0
-  - name: Enable
-    description: External System Time Input is enabled.
-    value: 1
-enum/Estsel:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Enable Enhancements to Scheduling Traffic feature is not selected.
-    value: 0
-  - name: Active
-    description: Enable Enhancements to Scheduling Traffic feature is selected.
-    value: 1
 enum/Estwid:
   bit_size: 2
   variants:
@@ -2839,51 +2058,6 @@ enum/Estwid:
   - name: Width24
     description: '24.'
     value: 3
-enum/Esvl:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: S-VLAN is disabled.
-    value: 0
-  - name: Enable
-    description: S-VLAN is enabled.
-    value: 1
-enum/Eti:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Early Transmit Interrupt status not detected.
-    value: 0
-  - name: Active
-    description: Early Transmit Interrupt status detected.
-    value: 1
-enum/Etic:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Early Transmit Interrupt is disabled.
-    value: 0
-  - name: Enable
-    description: Early Transmit Interrupt is enabled.
-    value: 1
-enum/Etv:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: 12-bit VLAN Tag Comparison is disabled.
-    value: 0
-  - name: Enable
-    description: 12-bit VLAN Tag Comparison is enabled.
-    value: 1
-enum/Evlrxs:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: VLAN Tag in Rx status is disabled.
-    value: 0
-  - name: Enable
-    description: VLAN Tag in Rx status is enabled.
-    value: 1
 enum/Evls:
   bit_size: 2
   variants:
@@ -2899,87 +2073,6 @@ enum/Evls:
   - name: Always
     description: Always strip.
     value: 3
-enum/Excol:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: No collision.
-    value: 0
-  - name: Active
-    description: Excessive collision is sensed.
-    value: 1
-enum/Exdef:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: No Excessive deferral.
-    value: 0
-  - name: Active
-    description: Excessive deferral.
-    value: 1
-enum/Fb:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Fixed Burst Length is disabled.
-    value: 0
-  - name: Enable
-    description: Fixed Burst Length is enabled.
-    value: 1
-enum/Fbe:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Fatal Bus Error status not detected.
-    value: 0
-  - name: Active
-    description: Fatal Bus Error status detected.
-    value: 1
-enum/Fbee:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Fatal Bus Error is disabled.
-    value: 0
-  - name: Enable
-    description: Fatal Bus Error is enabled.
-    value: 1
-enum/FcbBpa:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Flow Control Busy or Backpressure Activate is disabled.
-    value: 0
-  - name: Enable
-    description: Flow Control Busy or Backpressure Activate is enabled.
-    value: 1
-enum/Fep:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Forward Error Packets is disabled.
-    value: 0
-  - name: Enable
-    description: Forward Error Packets is enabled.
-    value: 1
-enum/Fes:
-  bit_size: 1
-  variants:
-  - name: M101000m
-    description: 10 Mbps when PS bit is 1 and 1 Gbps when PS bit is 0.
-    value: 0
-  - name: M1002500m
-    description: 100 Mbps when PS bit is 1 and 2.5 Gbps when PS bit is 0.
-    value: 1
-enum/Fpesel:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Frame Preemption Enable feature is not selected.
-    value: 0
-  - name: Active
-    description: Frame Preemption Enable feature is selected.
-    value: 1
 enum/Frpbs:
   bit_size: 2
   variants:
@@ -3004,87 +2097,6 @@ enum/Frpes:
   - name: M256entr
     description: 256 Entries.
     value: 2
-enum/Frpsel:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Flexible Receive Parser feature is not selected.
-    value: 0
-  - name: Active
-    description: Flexible Receive Parser feature is selected.
-    value: 1
-enum/Ftq:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Flush Transmit Queue is disabled.
-    value: 0
-  - name: Enable
-    description: Flush Transmit Queue is enabled.
-    value: 1
-enum/Fup:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Forward Undersized Good Packets is disabled.
-    value: 0
-  - name: Enable
-    description: Forward Undersized Good Packets is enabled.
-    value: 1
-enum/Gb:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: GMII Busy is disabled.
-    value: 0
-  - name: Enable
-    description: GMII Busy is enabled.
-    value: 1
-enum/Glblucast:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Global unicast is disabled.
-    value: 0
-  - name: Enable
-    description: Global unicast is enabled.
-    value: 1
-enum/Gmiisel:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: No 1000 Mbps support.
-    value: 0
-  - name: Active
-    description: 1000 Mbps support.
-    value: 1
-enum/Goc0:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: GMII Operation Command 0 is disabled.
-    value: 0
-  - name: Enable
-    description: GMII Operation Command 0 is enabled.
-    value: 1
-enum/Goc1:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: GMII Operation Command 1 is disabled.
-    value: 0
-  - name: Enable
-    description: GMII Operation Command 1 is enabled.
-    value: 1
-enum/Gpslce:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Giant Packet Size Limit Control is disabled.
-    value: 0
-  - name: Enable
-    description: Giant Packet Size Limit Control is enabled.
-    value: 1
 enum/Hashtblsz:
   bit_size: 2
   variants:
@@ -3100,24 +2112,6 @@ enum/Hashtblsz:
   - name: M256
     description: '256.'
     value: 3
-enum/Hdsel:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: No Half-duplex support.
-    value: 0
-  - name: Active
-    description: Half-duplex support.
-    value: 1
-enum/Ipc:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: IP header/payload checksum checking is disabled.
-    value: 0
-  - name: Enable
-    description: IP header/payload checksum checking is enabled.
-    value: 1
 enum/Ipg:
   bit_size: 3
   variants:
@@ -3145,24 +2139,6 @@ enum/Ipg:
   - name: Ipg40
     description: 40 bit times IPG.
     value: 7
-enum/Jd:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Jabber is enabled.
-    value: 0
-  - name: Disable
-    description: Jabber is disabled.
-    value: 1
-enum/Je:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Jumbo packet is disabled.
-    value: 0
-  - name: Enable
-    description: Jumbo packet is enabled.
-    value: 1
 enum/L3l4fnum:
   bit_size: 4
   variants:
@@ -3193,258 +2169,6 @@ enum/L3l4fnum:
   - name: M8filt
     description: 8 L3 or L4 Filters.
     value: 8
-enum/Lcarr:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Carrier is present.
-    value: 0
-  - name: Active
-    description: Loss of carrier.
-    value: 1
-enum/Lcol:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: No collision.
-    value: 0
-  - name: Active
-    description: Late collision is sensed.
-    value: 1
-enum/Lm:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Loopback is disabled.
-    value: 0
-  - name: Enable
-    description: Loopback is enabled.
-    value: 1
-enum/Lpiate:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: LPI Timer is disabled.
-    value: 0
-  - name: Enable
-    description: LPI Timer is enabled.
-    value: 1
-enum/Lpien:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: LPI state is disabled.
-    value: 0
-  - name: Enable
-    description: LPI state is enabled.
-    value: 1
-enum/Lpiie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: LPI Interrupt is disabled.
-    value: 0
-  - name: Enable
-    description: LPI Interrupt is enabled.
-    value: 1
-enum/Lpiis:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: LPI Interrupt status not active.
-    value: 0
-  - name: Active
-    description: LPI Interrupt status active.
-    value: 1
-enum/Lpitcse:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: LPI Tx Clock Stop is disabled.
-    value: 0
-  - name: Enable
-    description: LPI Tx Clock Stop is enabled.
-    value: 1
-enum/Lpitxa:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: LPI Tx Automate is disabled.
-    value: 0
-  - name: Enable
-    description: LPI Tx Automate is enabled.
-    value: 1
-enum/Macadr32sel:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: MAC Addresses 32-63 Select option is not selected.
-    value: 0
-  - name: Active
-    description: MAC Addresses 32-63 Select option is selected.
-    value: 1
-enum/Macadr64sel:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: MAC Addresses 64-127 Select option is not selected.
-    value: 0
-  - name: Active
-    description: MAC Addresses 64-127 Select option is selected.
-    value: 1
-enum/Macis:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: MAC Interrupt Status not detected.
-    value: 0
-  - name: Active
-    description: MAC Interrupt Status detected.
-    value: 1
-enum/Mb:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Mixed Burst is disabled.
-    value: 0
-  - name: Enable
-    description: Mixed Burst is enabled.
-    value: 1
-enum/Mcbcqen:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Multicast and Broadcast Queue is disabled.
-    value: 0
-  - name: Enable
-    description: Multicast and Broadcast Queue is enabled.
-    value: 1
-enum/Mdioie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: MDIO Interrupt is disabled.
-    value: 0
-  - name: Enable
-    description: MDIO Interrupt is enabled.
-    value: 1
-enum/Mdiois:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: MDIO Interrupt status not active.
-    value: 0
-  - name: Active
-    description: MDIO Interrupt status active.
-    value: 1
-enum/Mfco:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Miss Frame Counter overflow not occurred.
-    value: 0
-  - name: Active
-    description: Miss Frame Counter overflow occurred.
-    value: 1
-enum/Mffqe:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Multicast Address Filter Fail Packets Queuing is disabled.
-    value: 0
-  - name: Enable
-    description: Multicast Address Filter Fail Packets Queuing is enabled.
-    value: 1
-enum/Mgkpkten:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Magic Packet is disabled.
-    value: 0
-  - name: Enable
-    description: Magic Packet is enabled.
-    value: 1
-enum/Mgkprcvd:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: No Magic packet is received.
-    value: 0
-  - name: Active
-    description: Magic packet is received.
-    value: 1
-enum/Mgksel:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: PMT Magic Packet Enable option is not selected.
-    value: 0
-  - name: Active
-    description: PMT Magic Packet Enable option is selected.
-    value: 1
-enum/Miisel:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: No 10 or 100 Mbps support.
-    value: 0
-  - name: Active
-    description: 10 or 100 Mbps support.
-    value: 1
-enum/Miscntovf:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Missed Packet Counter overflow not detected.
-    value: 0
-  - name: Active
-    description: Missed Packet Counter overflow detected.
-    value: 1
-enum/Mmcsel:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: RMON Module Enable option is not selected.
-    value: 0
-  - name: Active
-    description: RMON Module Enable option is selected.
-    value: 1
-enum/Mtlis:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: MTL Interrupt Status not detected.
-    value: 0
-  - name: Active
-    description: MTL Interrupt Status detected.
-    value: 1
-enum/Ncarr:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Carrier is present.
-    value: 0
-  - name: Active
-    description: No carrier.
-    value: 1
-enum/Nie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Normal Interrupt Summary is disabled.
-    value: 0
-  - name: Enable
-    description: Normal Interrupt Summary is enabled.
-    value: 1
-enum/Nis:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Normal Interrupt Summary status not detected.
-    value: 0
-  - name: Active
-    description: Normal Interrupt Summary status detected.
-    value: 1
 enum/Nrvf:
   bit_size: 3
   variants:
@@ -3466,51 +2190,6 @@ enum/Nrvf:
   - name: M32Ervlan
     description: 32 Extended Rx VLAN Filters.
     value: 5
-enum/Omcbcq:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: overriding MCBCQ priority disabled.
-    value: 0
-  - name: Enable
-    description: overriding MCBCQ priority enabled.
-    value: 1
-enum/Osf:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Operate on Second Packet disabled.
-    value: 0
-  - name: Enable
-    description: Operate on Second Packet enabled.
-    value: 1
-enum/Osten:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: One-Step Timestamping feature is not selected.
-    value: 0
-  - name: Active
-    description: One-Step Timestamping feature is selected.
-    value: 1
-enum/Ovfcntovf:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Overflow Counter overflow not detected.
-    value: 0
-  - name: Active
-    description: Overflow Counter overflow detected.
-    value: 1
-enum/PbLx8:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: 8xPBL mode is disabled.
-    value: 0
-  - name: Enable
-    description: 8xPBL mode is enabled.
-    value: 1
 enum/Pcf:
   bit_size: 2
   variants:
@@ -3526,60 +2205,6 @@ enum/Pcf:
   - name: FwPass
     description: MAC forwards the control packets that pass the Address filter.
     value: 3
-enum/Pcssel:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: No PCS Registers (TBI, SGMII, or RTBI PHY interface).
-    value: 0
-  - name: Active
-    description: PCS Registers (TBI, SGMII, or RTBI PHY interface).
-    value: 1
-enum/Pdc:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Packet Duplication Control is disabled.
-    value: 0
-  - name: Enable
-    description: Packet Duplication Control is enabled.
-    value: 1
-enum/Pdupsel:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Broadcast/Multicast Packet Duplication feature is not selected.
-    value: 0
-  - name: Active
-    description: Broadcast/Multicast Packet Duplication feature is selected.
-    value: 1
-enum/Phyie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: PHY Interrupt is disabled.
-    value: 0
-  - name: Enable
-    description: PHY Interrupt is enabled.
-    value: 1
-enum/Phyis:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: PHY Interrupt not detected.
-    value: 0
-  - name: Active
-    description: PHY Interrupt detected.
-    value: 1
-enum/Pls:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: link is down.
-    value: 0
-  - name: Enable
-    description: link is okay (UP).
-    value: 1
 enum/Plt:
   bit_size: 3
   variants:
@@ -3601,42 +2226,6 @@ enum/Plt:
   - name: Pt512
     description: Pause Time minus 512 Slot Times (PT -512 slot times).
     value: 5
-enum/Pm:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Pass All Multicast is disabled.
-    value: 0
-  - name: Enable
-    description: Pass All Multicast is enabled.
-    value: 1
-enum/Pmtie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: PMT Interrupt is disabled.
-    value: 0
-  - name: Enable
-    description: PMT Interrupt is enabled.
-    value: 1
-enum/Pmtis:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: PMT Interrupt status not active.
-    value: 0
-  - name: Active
-    description: PMT Interrupt status active.
-    value: 1
-enum/Pouost:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: One Step for PTP over UDP/IP Feature is not selected.
-    value: 0
-  - name: Active
-    description: One Step for PTP over UDP/IP Feature is selected.
-    value: 1
 enum/Ppsoutnum:
   bit_size: 3
   variants:
@@ -3682,15 +2271,6 @@ enum/Pr:
   - name: R81
     description: The priority ratio is 8:1.
     value: 7
-enum/Pr2:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Promiscuous Mode is disabled.
-    value: 0
-  - name: Enable
-    description: Promiscuous Mode is enabled.
-    value: 1
 enum/Prelen:
   bit_size: 2
   variants:
@@ -3703,33 +2283,6 @@ enum/Prelen:
   - name: M3bytes
     description: 3 bytes of preamble.
     value: 2
-enum/Ps:
-  bit_size: 1
-  variants:
-  - name: M10002500m
-    description: For 1000 or 2500 Mbps operations.
-    value: 0
-  - name: M10100m
-    description: For 10 or 100 Mbps operations.
-    value: 1
-enum/Pse:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Preamble Suppression disabled.
-    value: 0
-  - name: Enable
-    description: Preamble Suppression enabled.
-    value: 1
-enum/Ptoen:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: PTP Offload feature is not selected.
-    value: 0
-  - name: Active
-    description: PTP Offload feature is selected.
-    value: 1
 enum/Ptpq:
   bit_size: 3
   variants:
@@ -3738,222 +2291,6 @@ enum/Ptpq:
     value: 0
   - name: Queue1
     description: Receive Queue 1.
-    value: 1
-enum/Pwe:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Programmable Watchdog is disabled.
-    value: 0
-  - name: Enable
-    description: Programmable Watchdog is enabled.
-    value: 1
-enum/Pwrdwn:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Power down is disabled.
-    value: 0
-  - name: Enable
-    description: Power down is enabled.
-    value: 1
-enum/Q0ddmach:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Queue 0 disabled for DA-based DMA Channel Selection.
-    value: 0
-  - name: Enable
-    description: Queue 0 enabled for DA-based DMA Channel Selection.
-    value: 1
-enum/Q0is:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Queue 0 Interrupt status not detected.
-    value: 0
-  - name: Active
-    description: Queue 0 Interrupt status detected.
-    value: 1
-enum/Q1ddmach:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Queue 1 disabled for DA-based DMA Channel Selection.
-    value: 0
-  - name: Enable
-    description: Queue 1 enabled for DA-based DMA Channel Selection.
-    value: 1
-enum/Q1is:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Queue 1 Interrupt status not detected.
-    value: 0
-  - name: Active
-    description: Queue 1 Interrupt status detected.
-    value: 1
-enum/Ra:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Receive All is disabled.
-    value: 0
-  - name: Enable
-    description: Receive All is enabled.
-    value: 1
-enum/Raa:
-  bit_size: 1
-  variants:
-  - name: Sp
-    description: Strict priority (SP).
-    value: 0
-  - name: Wsp
-    description: Weighted Strict Priority (WSP).
-    value: 1
-enum/Ravsel:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Rx Side Only AV Feature is not selected.
-    value: 0
-  - name: Active
-    description: Rx Side Only AV Feature is selected.
-    value: 1
-enum/Rb:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Rebuild INCRx Burst is disabled.
-    value: 0
-  - name: Enable
-    description: Rebuild INCRx Burst is enabled.
-    value: 1
-enum/Rbu:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Receive Buffer Unavailable status not detected.
-    value: 0
-  - name: Active
-    description: Receive Buffer Unavailable status detected.
-    value: 1
-enum/Rbue:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Receive Buffer Unavailable is disabled.
-    value: 0
-  - name: Enable
-    description: Receive Buffer Unavailable is enabled.
-    value: 1
-enum/Rcwe:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Register Clear on Write 1 is disabled.
-    value: 0
-  - name: Enable
-    description: Register Clear on Write 1 is enabled.
-    value: 1
-enum/Rdwr:
-  bit_size: 1
-  variants:
-  - name: Read
-    description: Read operation of indirect access.
-    value: 0
-  - name: Write
-    description: Write operation of indirect access.
-    value: 1
-enum/Re:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Receiver is disabled.
-    value: 0
-  - name: Enable
-    description: Receiver is enabled.
-    value: 1
-enum/Rfe:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Receive Flow Control is disabled.
-    value: 0
-  - name: Enable
-    description: Receive Flow Control is enabled.
-    value: 1
-enum/Ri:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Receive Interrupt status not detected.
-    value: 0
-  - name: Active
-    description: Receive Interrupt status detected.
-    value: 1
-enum/Rie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Receive Interrupt is disabled.
-    value: 0
-  - name: Enable
-    description: Receive Interrupt is enabled.
-    value: 1
-enum/Rlpien:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Receive LPI entry not detected.
-    value: 0
-  - name: Active
-    description: Receive LPI entry detected.
-    value: 1
-enum/Rlpiex:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Receive LPI exit not detected.
-    value: 0
-  - name: Active
-    description: Receive LPI exit detected.
-    value: 1
-enum/Rlpist:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Receive LPI state not detected.
-    value: 0
-  - name: Active
-    description: Receive LPI state detected.
-    value: 1
-enum/Rpests:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: MAC GMII or MII Receive Protocol Engine Status not detected.
-    value: 0
-  - name: Active
-    description: MAC GMII or MII Receive Protocol Engine Status detected.
-    value: 1
-enum/Rpf:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Rx Packet Flush is disabled.
-    value: 0
-  - name: Enable
-    description: Rx Packet Flush is enabled.
-    value: 1
-enum/Rps:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Receive Process Stopped status not detected.
-    value: 0
-  - name: Active
-    description: Receive Process Stopped status detected.
     value: 1
 enum/Rps0:
   bit_size: 4
@@ -3994,24 +2331,6 @@ enum/Rrcsts:
   - name: Flush
     description: Flushing the packet data and status.
     value: 3
-enum/Rse:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Receive Stopped is disabled.
-    value: 0
-  - name: Enable
-    description: Receive Stopped is enabled.
-    value: 1
-enum/Rsf:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Receive Queue Store and Forward is disabled.
-    value: 0
-  - name: Enable
-    description: Receive Queue Store and Forward is enabled.
-    value: 1
 enum/Rtc:
   bit_size: 2
   variants:
@@ -4027,87 +2346,6 @@ enum/Rtc:
   - name: M128byte
     description: '128.'
     value: 3
-enum/Rwcsts:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: MTL Rx Queue Write Controller Active Status not detected.
-    value: 0
-  - name: Active
-    description: MTL Rx Queue Write Controller Active Status detected.
-    value: 1
-enum/Rwkfiltrst:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Remote Wake-Up Packet Filter Register Pointer is not Reset.
-    value: 0
-  - name: Enable
-    description: Remote Wake-Up Packet Filter Register Pointer is Reset.
-    value: 1
-enum/Rwkpfe:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Remote Wake-up Packet Forwarding is disabled.
-    value: 0
-  - name: Enable
-    description: Remote Wake-up Packet Forwarding is enabled.
-    value: 1
-enum/Rwkpkten:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Remote wake-up packet is disabled.
-    value: 0
-  - name: Enable
-    description: Remote wake-up packet is enabled.
-    value: 1
-enum/Rwkprcvd:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Remote wake-up packet is received.
-    value: 0
-  - name: Active
-    description: Remote wake-up packet is received.
-    value: 1
-enum/Rwksel:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: PMT Remote Wake-up Packet Enable option is not selected.
-    value: 0
-  - name: Active
-    description: PMT Remote Wake-up Packet Enable option is selected.
-    value: 1
-enum/Rwt:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: No receive watchdog timeout.
-    value: 0
-  - name: Active
-    description: Receive watchdog timed out.
-    value: 1
-enum/Rwt2:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Receive Watchdog Timeout status not detected.
-    value: 0
-  - name: Active
-    description: Receive Watchdog Timeout status detected.
-    value: 1
-enum/Rwte:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Receive Watchdog Timeout is disabled.
-    value: 0
-  - name: Enable
-    description: Receive Watchdog Timeout is enabled.
-    value: 1
 enum/Rxchcnt:
   bit_size: 4
   variants:
@@ -4135,15 +2373,6 @@ enum/Rxchcnt:
   - name: M8rxch
     description: 8 MTL Rx Channels.
     value: 7
-enum/Rxcoesel:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Receive Checksum Offload Enable option is not selected.
-    value: 0
-  - name: Active
-    description: Receive Checksum Offload Enable option is selected.
-    value: 1
 enum/Rxfifosize:
   bit_size: 5
   variants:
@@ -4183,24 +2412,6 @@ enum/Rxfifosize:
   - name: M256kb
     description: 256 KB.
     value: 11
-enum/Rxoie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Receive Queue Overflow Interrupt is disabled.
-    value: 0
-  - name: Enable
-    description: Receive Queue Overflow Interrupt is enabled.
-    value: 1
-enum/Rxovfis:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Receive Queue Overflow Interrupt Status not detected.
-    value: 0
-  - name: Active
-    description: Receive Queue Overflow Interrupt Status detected.
-    value: 1
 enum/Rxq0en:
   bit_size: 2
   variants:
@@ -4213,15 +2424,6 @@ enum/Rxq0en:
   - name: EnDcbGen
     description: Queue enabled for DCB/Generic.
     value: 2
-enum/RxqFrmArbit:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Receive Queue Packet Arbitration is disabled.
-    value: 0
-  - name: Enable
-    description: Receive Queue Packet Arbitration is enabled.
-    value: 1
 enum/Rxqcnt:
   bit_size: 4
   variants:
@@ -4264,33 +2466,6 @@ enum/Rxqsts:
   - name: Full
     description: Rx Queue full.
     value: 3
-enum/Rxstsie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Receive Status Interrupt is disabled.
-    value: 0
-  - name: Enable
-    description: Receive Status Interrupt is enabled.
-    value: 1
-enum/Rxstsis:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Receive Interrupt status not active.
-    value: 0
-  - name: Active
-    description: Receive Interrupt status active.
-    value: 1
-enum/S2kp:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Support upto 2K packet is disabled.
-    value: 0
-  - name: Enable
-    description: Support upto 2K packet is Enabled.
-    value: 1
 enum/Sarc:
   bit_size: 3
   variants:
@@ -4309,15 +2484,6 @@ enum/Sarc:
   - name: Mac1RepSa
     description: Contents of MAC Addr-1 replaces SA field.
     value: 7
-enum/Savlanins:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Source Address or VLAN Insertion Enable option is not selected.
-    value: 0
-  - name: Active
-    description: Source Address or VLAN Insertion Enable option is selected.
-    value: 1
 enum/Schalg:
   bit_size: 2
   variants:
@@ -4327,15 +2493,6 @@ enum/Schalg:
   - name: Sp
     description: Strict priority algorithm.
     value: 3
-enum/Skap:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Skip Address Packet is disabled.
-    value: 0
-  - name: Enable
-    description: Skip Address Packet is enabled.
-    value: 1
 enum/Slc:
   bit_size: 3
   variants:
@@ -4354,69 +2511,6 @@ enum/Slc:
   - name: M16Slot
     description: 16 slots.
     value: 4
-enum/Smasel:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: SMA (MDIO) Interface not selected.
-    value: 0
-  - name: Active
-    description: SMA (MDIO) Interface selected.
-    value: 1
-enum/Spen:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Slow Protocol Detection is disabled.
-    value: 0
-  - name: Enable
-    description: Slow Protocol Detection is enabled.
-    value: 1
-enum/Sphen:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Split Header Feature is not selected.
-    value: 0
-  - name: Active
-    description: Split Header Feature is selected.
-    value: 1
-enum/Spram:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Single Port RAM feature is not selected.
-    value: 0
-  - name: Active
-    description: Single Port RAM feature is selected.
-    value: 1
-enum/Sr:
-  bit_size: 1
-  variants:
-  - name: Stop
-    description: Stop Receive.
-    value: 0
-  - name: Start
-    description: Start Receive.
-    value: 1
-enum/St:
-  bit_size: 1
-  variants:
-  - name: Stop
-    description: Stop Transmission Command.
-    value: 0
-  - name: Start
-    description: Start Transmission Command.
-    value: 1
-enum/Swr:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Software Reset is disabled.
-    value: 0
-  - name: Enable
-    description: Software Reset is enabled.
-    value: 1
 enum/Taa:
   bit_size: 3
   variants:
@@ -4429,51 +2523,6 @@ enum/Taa:
   - name: Wrr
     description: Weighted Round-Robin (WRR).
     value: 2
-enum/Tacpqe:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Tagged AV Control Packets Queuing is disabled.
-    value: 0
-  - name: Enable
-    description: Tagged AV Control Packets Queuing is enabled.
-    value: 1
-enum/Tbssel:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Time Based Scheduling Enable feature is not selected.
-    value: 0
-  - name: Active
-    description: Time Based Scheduling Enable feature is selected.
-    value: 1
-enum/Tbu:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Transmit Buffer Unavailable status not detected.
-    value: 0
-  - name: Active
-    description: Transmit Buffer Unavailable status detected.
-    value: 1
-enum/Tbue:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Transmit Buffer Unavailable is disabled.
-    value: 0
-  - name: Enable
-    description: Transmit Buffer Unavailable is enabled.
-    value: 1
-enum/Te:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Transmitter is disabled.
-    value: 0
-  - name: Enable
-    description: Transmitter is enabled.
-    value: 1
 enum/Tfcsts:
   bit_size: 2
   variants:
@@ -4489,87 +2538,6 @@ enum/Tfcsts:
   - name: Trnsfr
     description: Transferring input packet for transmission.
     value: 3
-enum/Tfe:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Transmit Flow Control is disabled.
-    value: 0
-  - name: Enable
-    description: Transmit Flow Control is enabled.
-    value: 1
-enum/Ti:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Transmit Interrupt status not detected.
-    value: 0
-  - name: Active
-    description: Transmit Interrupt status detected.
-    value: 1
-enum/Tie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Transmit Interrupt is disabled.
-    value: 0
-  - name: Enable
-    description: Transmit Interrupt is enabled.
-    value: 1
-enum/Tjt:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: No Transmit Jabber Timeout.
-    value: 0
-  - name: Active
-    description: Transmit Jabber Timeout occurred.
-    value: 1
-enum/Tlpien:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Transmit LPI entry not detected.
-    value: 0
-  - name: Active
-    description: Transmit LPI entry detected.
-    value: 1
-enum/Tlpiex:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Transmit LPI exit not detected.
-    value: 0
-  - name: Active
-    description: Transmit LPI exit detected.
-    value: 1
-enum/Tlpist:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Transmit LPI state not detected.
-    value: 0
-  - name: Active
-    description: Transmit LPI state detected.
-    value: 1
-enum/Tpests:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: MAC GMII or MII Transmit Protocol Engine Status not detected.
-    value: 0
-  - name: Active
-    description: MAC GMII or MII Transmit Protocol Engine Status detected.
-    value: 1
-enum/Tps:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Transmit Process Stopped status not detected.
-    value: 0
-  - name: Active
-    description: Transmit Process Stopped status detected.
-    value: 1
 enum/Tps0:
   bit_size: 4
   variants:
@@ -4609,168 +2577,6 @@ enum/Trcsts:
   - name: Flush
     description: Flushing the Tx queue because of the Packet Abort request from the MAC.
     value: 3
-enum/Tsaddreg:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Addend Register is not updated.
-    value: 0
-  - name: Enable
-    description: Addend Register is updated.
-    value: 1
-enum/Tscfupdt:
-  bit_size: 1
-  variants:
-  - name: Coarse
-    description: Coarse method is used to update system timestamp.
-    value: 0
-  - name: Fine
-    description: Fine method is used to update system timestamp.
-    value: 1
-enum/Tsctrlssr:
-  bit_size: 1
-  variants:
-  - name: DigDisable
-    description: Timestamp Digital Rollover Control is disabled and Binary Rollover Control is enabled.
-    value: 0
-  - name: DigEnable
-    description: Timestamp Digital Rollover Control is enabled and Binary Rollover Control is disabled.
-    value: 1
-enum/Tsena:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Timestamp is disabled.
-    value: 0
-  - name: Enable
-    description: Timestamp is enabled.
-    value: 1
-enum/Tsenall:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Timestamp for All Packets disabled.
-    value: 0
-  - name: Enable
-    description: Timestamp for All Packets enabled.
-    value: 1
-enum/Tsenmacaddr:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: MAC Address for PTP Packet Filtering is disabled.
-    value: 0
-  - name: Enable
-    description: MAC Address for PTP Packet Filtering is enabled.
-    value: 1
-enum/Tsevntena:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Timestamp Snapshot for Event Messages is disabled.
-    value: 0
-  - name: Enable
-    description: Timestamp Snapshot for Event Messages is enabled.
-    value: 1
-enum/Tsf:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Transmit Store and Forward is disabled.
-    value: 0
-  - name: Enable
-    description: Transmit Store and Forward is enabled.
-    value: 1
-enum/Tsie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Timestamp Interrupt is disabled.
-    value: 0
-  - name: Enable
-    description: Timestamp Interrupt is enabled.
-    value: 1
-enum/Tsinit:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Timestamp is not initialized.
-    value: 0
-  - name: Enable
-    description: Timestamp is initialized.
-    value: 1
-enum/Tsipena:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Processing of PTP over Ethernet Packets is disabled.
-    value: 0
-  - name: Enable
-    description: Processing of PTP over Ethernet Packets is enabled.
-    value: 1
-enum/Tsipv4ena:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Processing of PTP Packets Sent over IPv4-UDP is disabled.
-    value: 0
-  - name: Enable
-    description: Processing of PTP Packets Sent over IPv4-UDP is enabled.
-    value: 1
-enum/Tsipv6ena:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Processing of PTP Packets Sent over IPv6-UDP is disabled.
-    value: 0
-  - name: Enable
-    description: Processing of PTP Packets Sent over IPv6-UDP is enabled.
-    value: 1
-enum/Tsis:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Timestamp Interrupt status not active.
-    value: 0
-  - name: Active
-    description: Timestamp Interrupt status active.
-    value: 1
-enum/Tsmstrena:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Snapshot for Messages Relevant to Master is disabled.
-    value: 0
-  - name: Enable
-    description: Snapshot for Messages Relevant to Master is enabled.
-    value: 1
-enum/Tsoen:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: TCP Segmentation Offload Feature is not selected.
-    value: 0
-  - name: Active
-    description: TCP Segmentation Offload Feature is selected.
-    value: 1
-enum/Tssel:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: IEEE 1588-2008 Timestamp Enable option is not selected.
-    value: 0
-  - name: Active
-    description: IEEE 1588-2008 Timestamp Enable option is selected.
-    value: 1
-enum/Tssovf:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Timestamp Seconds Overflow status not detected.
-    value: 0
-  - name: Active
-    description: Timestamp Seconds Overflow status detected.
-    value: 1
 enum/Tsstssel:
   bit_size: 2
   variants:
@@ -4783,51 +2589,6 @@ enum/Tsstssel:
   - name: Both
     description: Both.
     value: 2
-enum/Tstargt0:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Timestamp Target Time Reached status not detected.
-    value: 0
-  - name: Active
-    description: Timestamp Target Time Reached status detected.
-    value: 1
-enum/Tstrgterr0:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Timestamp Target Time Error status not detected.
-    value: 0
-  - name: Active
-    description: Timestamp Target Time Error status detected.
-    value: 1
-enum/Tstrig:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Timestamp Interrupt Trigger is not enabled.
-    value: 0
-  - name: Enable
-    description: Timestamp Interrupt Trigger is enabled.
-    value: 1
-enum/Tsupdt:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Timestamp is not updated.
-    value: 0
-  - name: Enable
-    description: Timestamp is updated.
-    value: 1
-enum/Tsver2ena:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: PTP Packet Processing for Version 2 Format is disabled.
-    value: 0
-  - name: Enable
-    description: PTP Packet Processing for Version 2 Format is enabled.
-    value: 1
 enum/Ttc:
   bit_size: 3
   variants:
@@ -4855,15 +2616,6 @@ enum/Ttc:
   - name: M512bytes
     description: '512.'
     value: 7
-enum/Twcsts:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: MTL Tx Queue Write Controller status is not detected.
-    value: 0
-  - name: Active
-    description: MTL Tx Queue Write Controller status is detected.
-    value: 1
 enum/Txchcnt:
   bit_size: 4
   variants:
@@ -4891,15 +2643,6 @@ enum/Txchcnt:
   - name: M8txch
     description: 8 MTL Tx Channels.
     value: 7
-enum/Txcoesel:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Transmit Checksum Offload Enable option is not selected.
-    value: 0
-  - name: Active
-    description: Transmit Checksum Offload Enable option is selected.
-    value: 1
 enum/Txfifosize:
   bit_size: 5
   variants:
@@ -4936,15 +2679,6 @@ enum/Txfifosize:
   - name: M128kb
     description: 128 KB.
     value: 10
-enum/Txpr:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Transmit Priority is disabled.
-    value: 0
-  - name: Enable
-    description: Transmit Priority is enabled.
-    value: 1
 enum/Txqcnt:
   bit_size: 4
   variants:
@@ -4981,150 +2715,6 @@ enum/Txqen:
   - name: Enable
     description: Enabled.
     value: 2
-enum/Txqpaused:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Transmit Queue in Pause status is not detected.
-    value: 0
-  - name: Active
-    description: Transmit Queue in Pause status is detected.
-    value: 1
-enum/Txqsts:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: MTL Tx Queue Not Empty status is not detected.
-    value: 0
-  - name: Active
-    description: MTL Tx Queue Not Empty status is detected.
-    value: 1
-enum/Txse:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Transmit Stopped is disabled.
-    value: 0
-  - name: Enable
-    description: Transmit Stopped is enabled.
-    value: 1
-enum/Txstsfsts:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: MTL Tx Status FIFO Full status is not detected.
-    value: 0
-  - name: Active
-    description: MTL Tx Status FIFO Full status is detected.
-    value: 1
-enum/Txstsie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Timestamp Status Interrupt is disabled.
-    value: 0
-  - name: Enable
-    description: Timestamp Status Interrupt is enabled.
-    value: 1
-enum/Txstsis:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Transmit Interrupt status not active.
-    value: 0
-  - name: Active
-    description: Transmit Interrupt status active.
-    value: 1
-enum/Txtssis:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Tx Timestamp Status Interrupt status not detected.
-    value: 0
-  - name: Active
-    description: Tx Timestamp Status Interrupt status detected.
-    value: 1
-enum/Txtssmis:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Transmit Timestamp Status Missed status not detected.
-    value: 0
-  - name: Active
-    description: Transmit Timestamp Status Missed status detected.
-    value: 1
-enum/Txtsstsm:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Transmit Timestamp Status Mode is disabled.
-    value: 0
-  - name: Enable
-    description: Transmit Timestamp Status Mode is enabled.
-    value: 1
-enum/Txuie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Transmit Queue Underflow Interrupt Status is disabled.
-    value: 0
-  - name: Enable
-    description: Transmit Queue Underflow Interrupt Status is enabled.
-    value: 1
-enum/Txunfis:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Transmit Queue Underflow Interrupt Status not detected.
-    value: 0
-  - name: Active
-    description: Transmit Queue Underflow Interrupt Status detected.
-    value: 1
-enum/Ufcntovf:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: Overflow not detected for Underflow Packet Counter.
-    value: 0
-  - name: Active
-    description: Overflow detected for Underflow Packet Counter.
-    value: 1
-enum/Uffqe:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Unicast Address Filter Fail Packets Queuing is disabled.
-    value: 0
-  - name: Enable
-    description: Unicast Address Filter Fail Packets Queuing is enabled.
-    value: 1
-enum/Up:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Unicast Pause Packet Detect disabled.
-    value: 0
-  - name: Enable
-    description: Unicast Pause Packet Detect enabled.
-    value: 1
-enum/Usp:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Unicast Slow Protocol Packet Detection is disabled.
-    value: 0
-  - name: Enable
-    description: Unicast Slow Protocol Packet Detection is enabled.
-    value: 1
-enum/Vffqe:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: VLAN tag Filter Fail Packets Queuing is disabled.
-    value: 0
-  - name: Enable
-    description: VLAN tag Filter Fail Packets Queuing is enabled.
-    value: 1
 enum/Vlc:
   bit_size: 2
   variants:
@@ -5140,60 +2730,6 @@ enum/Vlc:
   - name: Replace
     description: VLAN tag replacement.
     value: 3
-enum/Vlhash:
-  bit_size: 1
-  variants:
-  - name: Inactive
-    description: VLAN Hash Filter not selected.
-    value: 0
-  - name: Active
-    description: VLAN Hash Filter selected.
-    value: 1
-enum/Vlp:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: VLAN Priority Control is disabled.
-    value: 0
-  - name: Enable
-    description: VLAN Priority Control is enabled.
-    value: 1
-enum/Vlti:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: VLAN Tag Input is disabled.
-    value: 0
-  - name: Enable
-    description: VLAN Tag Input is enabled.
-    value: 1
-enum/Vtfe:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: VLAN Tag Filter is disabled.
-    value: 0
-  - name: Enable
-    description: VLAN Tag Filter is enabled.
-    value: 1
-enum/Vtim:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: VLAN Tag Inverse Match is disabled.
-    value: 0
-  - name: Enable
-    description: VLAN Tag Inverse Match is enabled.
-    value: 1
-enum/Wd:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Watchdog is enabled.
-    value: 0
-  - name: Disable
-    description: Watchdog is disabled.
-    value: 1
 enum/Wto:
   bit_size: 4
   variants:

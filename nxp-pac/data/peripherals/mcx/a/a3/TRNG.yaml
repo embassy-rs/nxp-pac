@@ -215,50 +215,42 @@ fieldset/Csclr:
   description: Common Security Clear Register.
   fields:
   - name: red_sigs_clr
-    description: Redundant Signals error/fault Detected.
+    description: "Redundant Signals error/fault Detected.\n\nRaw bit values: false (0) = RedSigsNoeffect: No effect, ignored.; true (1) = RedSigsClear: Clears the CSER[RED_SIGS] bit."
     bit_offset: 0
     bit_size: 1
-    enum: RedSigsClr
   - name: red_fsm_clr
-    description: 'Read only: Redundant FSM error/fault detected.'
+    description: "Read only: Redundant FSM error/fault detected.\n\nRaw bit values: false (0) = RedFsmNoeffect: No effect, ignored.; true (1) = RedFsmClear: Clears the CSER[RED_FSM] bit."
     bit_offset: 1
     bit_size: 1
-    enum: RedFsmClr
   - name: local_edc_clr
-    description: 'Read only: Local-EDC error/fault detected.'
+    description: "Read only: Local-EDC error/fault detected.\n\nRaw bit values: false (0) = LocalEdcNoeffect: No effect, ignored.; true (1) = LocalEdcClear: Clears the CSER[LOCAL_EDC] bit."
     bit_offset: 2
     bit_size: 1
-    enum: LocalEdcClr
   - name: bus_edc_clr
-    description: 'Read only: Bus-EDC error/fault detected.'
+    description: "Read only: Bus-EDC error/fault detected.\n\nRaw bit values: false (0) = BusEdcNoeffect: No effect, ignored.; true (1) = BusEdcClear: Clears the CSER[BUS_EDC] bit."
     bit_offset: 3
     bit_size: 1
-    enum: BusEdcClr
   bit_size: 32
   reset_value: 0
 fieldset/Cser:
   description: Common Security Error Register.
   fields:
   - name: red_sigs
-    description: Redundant Signals error/fault Detected.
+    description: "Redundant Signals error/fault Detected.\n\nRaw bit values: false (0) = RedSigsNoerr: No redundant signal error/fault.; true (1) = RedSigsErr: Redundant signal error/fault detected."
     bit_offset: 0
     bit_size: 1
-    enum: RedSigs
   - name: red_fsm
-    description: Redundant FSM error/fault detected.
+    description: "Redundant FSM error/fault detected.\n\nRaw bit values: false (0) = RedFsmNoerr: No redundant FSM error/fault.; true (1) = RedFsmErr: Redundant FSM error/fault detected."
     bit_offset: 1
     bit_size: 1
-    enum: RedFsm
   - name: local_edc
-    description: Local-EDC error/fault detected.
+    description: "Local-EDC error/fault detected.\n\nRaw bit values: false (0) = LocalEdcNoerr: No Local-EDC error/fault detected.; true (1) = LocalEdcErr: Local-EDC error/fault detected."
     bit_offset: 2
     bit_size: 1
-    enum: LocalEdc
   - name: bus_edc
-    description: Bus-EDC error/fault detected.
+    description: "Bus-EDC error/fault detected.\n\nRaw bit values: false (0) = BusEdcNoerr: No Bus-EDC error/fault detected.; true (1) = BusEdcErr: Bus-EDC error/fault detected."
     bit_offset: 3
     bit_size: 1
-    enum: BusEdc
   bit_size: 32
   reset_value: 0
 fieldset/Ent:
@@ -301,75 +293,63 @@ fieldset/IntCtrl:
   description: Interrupt Control Register.
   fields:
   - name: hw_err
-    description: Clear the HW_ERR interrupt.
+    description: "Clear the HW_ERR interrupt.\n\nRaw bit values: false (0) = HwErrClear: Clears the INT_STATUS[HW_ERR] bit. Will automatically set after writing.; true (1) = HwErrOn: Enables the INT_STATUS[HW_ERR] bit to be set, thereby enabling interrupt generation for the HW_ERR condition."
     bit_offset: 0
     bit_size: 1
-    enum: IntCtrlHwErr
   - name: ent_val
-    description: Clear the ENT_VAL interrupt.
+    description: "Clear the ENT_VAL interrupt.\n\nRaw bit values: false (0) = EntValClear: Clears the INT_STATUS[ENT_VAL] bit. Will automatically set after writing.; true (1) = EntValOn: Enables the INT_STATUS[ENT_VAL] bit to be set, thereby enabling interrupt generation for the ENT_VAL condition."
     bit_offset: 1
     bit_size: 1
-    enum: IntCtrlEntVal
   - name: frq_ct_fail
-    description: Clear the FRQ_CT_FAIL interrupt.
+    description: "Clear the FRQ_CT_FAIL interrupt.\n\nRaw bit values: false (0) = FrqCtFailClear: Clears the INT_STATUS[FRQ_CT_FAIL] bit. Will automatically set after writing.; true (1) = FrqCtFailOn: Enables the INT_STATUS[FRQ_CT_FAIL] bit to be set, thereby enabling interrupt generation for the FRQ_CT_FAIL condition."
     bit_offset: 2
     bit_size: 1
-    enum: IntCtrlFrqCtFail
   - name: intg_flt
-    description: Clear the INTG_FLT interrupt.
+    description: "Clear the INTG_FLT interrupt.\n\nRaw bit values: false (0) = IntgFltClear: Clears the INT_STATUS[INTG_FLT] bit. Will automatically set after writing.; true (1) = IntgFltOn: Enables the INT_STATUS[INTG_FLT] bit to be set, thereby enabling interrupt generation for the INTG_FLT condition."
     bit_offset: 3
     bit_size: 1
-    enum: IntCtrlIntgFlt
   bit_size: 32
   reset_value: 15
 fieldset/IntMask:
   description: Mask Register.
   fields:
   - name: hw_err
-    description: Mask the HW_ERR interrupt.
+    description: "Mask the HW_ERR interrupt.\n\nRaw bit values: false (0) = HwErrMasked: HW_ERR interrupt is disabled.; true (1) = HwErrActive: HW_ERR interrupt is enabled."
     bit_offset: 0
     bit_size: 1
-    enum: IntMaskHwErr
   - name: ent_val
-    description: Mask the ENT_VAL interrupt.
+    description: "Mask the ENT_VAL interrupt.\n\nRaw bit values: false (0) = EntValMasked: ENT_VAL interrupt is disabled.; true (1) = EntValActive: ENT_VAL interrupt is enabled."
     bit_offset: 1
     bit_size: 1
-    enum: IntMaskEntVal
   - name: frq_ct_fail
-    description: Mask the FRQ_CT_FAIL interrupt.
+    description: "Mask the FRQ_CT_FAIL interrupt.\n\nRaw bit values: false (0) = FrqCtFailMasked: FRQ_CT_FAIL interrupt is disabled.; true (1) = FrqCtFailActive: FRQ_CT_FAIL interrupt is enabled."
     bit_offset: 2
     bit_size: 1
-    enum: IntMaskFrqCtFail
   - name: intg_flt
-    description: Mask the INTG_FLT interrupt.
+    description: "Mask the INTG_FLT interrupt.\n\nRaw bit values: false (0) = IntgFltMasked: INTG_FLT interrupt is disabled.; true (1) = IntgFltActive: INTG_FLT interrupt is enabled."
     bit_offset: 3
     bit_size: 1
-    enum: IntMaskIntgFlt
   bit_size: 32
   reset_value: 0
 fieldset/IntStatus:
   description: Interrupt Status Register.
   fields:
   - name: hw_err
-    description: 'Read: TRNG Error. Any error in the TRNG will trigger this interrupt.'
+    description: "Read: TRNG Error. Any error in the TRNG will trigger this interrupt.\n\nRaw bit values: false (0) = HwErrNo: No error.; true (1) = HwErrYes: Error detected."
     bit_offset: 0
     bit_size: 1
-    enum: IntStatusHwErr
   - name: ent_val
-    description: Entropy Valid.
+    description: "Entropy Valid.\n\nRaw bit values: false (0) = EntValInvalid: Busy generating entropy. Any value read from the Entropy registers is invalid.; true (1) = EntValValid: Values read from the Entropy registers are valid."
     bit_offset: 1
     bit_size: 1
-    enum: IntStatusEntVal
   - name: frq_ct_fail
-    description: Frequency Count Fail.
+    description: "Frequency Count Fail.\n\nRaw bit values: false (0) = FrqCtFailNoErr: No hardware nor self test frequency errors.; true (1) = FrqCtFailErr: The frequency counter has detected a failure."
     bit_offset: 2
     bit_size: 1
-    enum: IntStatusFrqCtFail
   - name: intg_flt
-    description: Integrity Fault. An internal fault has occurred.
+    description: "Integrity Fault. An internal fault has occurred.\n\nRaw bit values: false (0) = IntgFltNoErr: No internal fault has been detected.; true (1) = IntgFltErr: TRNG has detected internal fault."
     bit_offset: 3
     bit_size: 1
-    enum: IntStatusIntgFlt
   bit_size: 32
   reset_value: 0
 fieldset/Mctl:
@@ -440,10 +420,9 @@ fieldset/Osc2Ctl:
     bit_size: 2
     enum: Osc2Div
   - name: osc2_out_en
-    description: Oscillator 2 Clock Output Enable.
+    description: "Oscillator 2 Clock Output Enable.\n\nRaw bit values: false (0) = Osc2OutEn0: Ring oscillator 2 output is gated to an output pad.; true (1) = Osc2OutEn1: Allows external viewing of divided-by-2 ring oscillator 2 if MCTL[PRGM] = 1 mode is also selected, else ring oscillator 2 output is gated to an output pad."
     bit_offset: 4
     bit_size: 1
-    enum: Osc2OutEn
   - name: osc2_fct_val
     description: TRNG Oscillator 2 Frequency Count Valid.
     bit_offset: 9
@@ -816,17 +795,9 @@ fieldset/SecCfg:
   description: Security Configuration Register.
   fields:
   - name: no_prgm
-    description: 'If set, below mentioned TRNG configuration registers cannot be programmed: Oscillator 2 Control
-      Register (OSC2_CTL): TRNG Entropy Generation Control [1:0] Oscillator 2 Divider [3:2] Oscillator Fail Safe
-      Limit [13:12] Oscillator Fail Safe Test [14] TRNG Seed Control Register (SDCTL) TRNG Frequency Count Minimum
-      Limit Register (FRQMIN) TRNG Frequency Count Maximum Limit Register (FRQMAX) TRNG Statistical Check Monobit
-      Limit Register (SCML) TRNG Statistical Check Run Length 1 Limit Register (SCR1L) TRNG Statistical Check Run
-      Length 2 Limit Register (SCR2L) TRNG Statistical Check Run Length 3 Limit Register (SCR3L) TRNG Miscellaneous
-      Control Register (MCTL): Sample Mode [1:0] Oscillator Divider [3:2] Reset Defaults [6] Force System Clock
-      [7] Long Runs Continuation Mode [14] After this bit has been written to a 1, it cannot be changed.'
+    description: "If set, below mentioned TRNG configuration registers cannot be programmed: Oscillator 2 Control Register (OSC2_CTL): TRNG Entropy Generation Control [1:0] Oscillator 2 Divider [3:2] Oscillator Fail Safe Limit [13:12] Oscillator Fail Safe Test [14] TRNG Seed Control Register (SDCTL) TRNG Frequency Count Minimum Limit Register (FRQMIN) TRNG Frequency Count Maximum Limit Register (FRQMAX) TRNG Statistical Check Monobit Limit Register (SCML) TRNG Statistical Check Run Length 1 Limit Register (SCR1L) TRNG Statistical Check Run Length 2 Limit Register (SCR2L) TRNG Statistical Check Run Length 3 Limit Register (SCR3L) TRNG Miscellaneous Control Register (MCTL): Sample Mode [1:0] Oscillator Divider [3:2] Reset Defaults [6] Force System Clock [7] Long Runs Continuation Mode [14] After this bit has been written to a 1, it cannot be changed.\n\nRaw bit values: false (0) = NoPrgmOff: TRNG configuration registers can be modified.; true (1) = NoPrgmOn: TRNG configuration registers cannot be modified."
     bit_offset: 1
     bit_size: 1
-    enum: NoPrgm
   bit_size: 32
   reset_value: 0
 fieldset/Status:
@@ -956,24 +927,6 @@ fieldset/Vid2:
     enum: Era
   bit_size: 32
   reset_value: 201981952
-enum/BusEdc:
-  bit_size: 1
-  variants:
-  - name: BusEdcNoerr
-    description: No Bus-EDC error/fault detected.
-    value: 0
-  - name: BusEdcErr
-    description: Bus-EDC error/fault detected.
-    value: 1
-enum/BusEdcClr:
-  bit_size: 1
-  variants:
-  - name: BusEdcNoeffect
-    description: No effect, ignored.
-    value: 0
-  - name: BusEdcClear
-    description: Clears the CSER[BUS_EDC] bit.
-    value: 1
 enum/ConfigOpt:
   bit_size: 8
   variants:
@@ -992,118 +945,6 @@ enum/Era:
   - name: EraVal
     description: ERA of the TRNG.
     value: 12
-enum/IntCtrlEntVal:
-  bit_size: 1
-  variants:
-  - name: EntValClear
-    description: Clears the INT_STATUS[ENT_VAL] bit. Will automatically set after writing.
-    value: 0
-  - name: EntValOn
-    description: Enables the INT_STATUS[ENT_VAL] bit to be set, thereby enabling interrupt generation for the ENT_VAL
-      condition.
-    value: 1
-enum/IntCtrlFrqCtFail:
-  bit_size: 1
-  variants:
-  - name: FrqCtFailClear
-    description: Clears the INT_STATUS[FRQ_CT_FAIL] bit. Will automatically set after writing.
-    value: 0
-  - name: FrqCtFailOn
-    description: Enables the INT_STATUS[FRQ_CT_FAIL] bit to be set, thereby enabling interrupt generation for the
-      FRQ_CT_FAIL condition.
-    value: 1
-enum/IntCtrlHwErr:
-  bit_size: 1
-  variants:
-  - name: HwErrClear
-    description: Clears the INT_STATUS[HW_ERR] bit. Will automatically set after writing.
-    value: 0
-  - name: HwErrOn
-    description: Enables the INT_STATUS[HW_ERR] bit to be set, thereby enabling interrupt generation for the HW_ERR
-      condition.
-    value: 1
-enum/IntCtrlIntgFlt:
-  bit_size: 1
-  variants:
-  - name: IntgFltClear
-    description: Clears the INT_STATUS[INTG_FLT] bit. Will automatically set after writing.
-    value: 0
-  - name: IntgFltOn
-    description: Enables the INT_STATUS[INTG_FLT] bit to be set, thereby enabling interrupt generation for the INTG_FLT
-      condition.
-    value: 1
-enum/IntMaskEntVal:
-  bit_size: 1
-  variants:
-  - name: EntValMasked
-    description: ENT_VAL interrupt is disabled.
-    value: 0
-  - name: EntValActive
-    description: ENT_VAL interrupt is enabled.
-    value: 1
-enum/IntMaskFrqCtFail:
-  bit_size: 1
-  variants:
-  - name: FrqCtFailMasked
-    description: FRQ_CT_FAIL interrupt is disabled.
-    value: 0
-  - name: FrqCtFailActive
-    description: FRQ_CT_FAIL interrupt is enabled.
-    value: 1
-enum/IntMaskHwErr:
-  bit_size: 1
-  variants:
-  - name: HwErrMasked
-    description: HW_ERR interrupt is disabled.
-    value: 0
-  - name: HwErrActive
-    description: HW_ERR interrupt is enabled.
-    value: 1
-enum/IntMaskIntgFlt:
-  bit_size: 1
-  variants:
-  - name: IntgFltMasked
-    description: INTG_FLT interrupt is disabled.
-    value: 0
-  - name: IntgFltActive
-    description: INTG_FLT interrupt is enabled.
-    value: 1
-enum/IntStatusEntVal:
-  bit_size: 1
-  variants:
-  - name: EntValInvalid
-    description: Busy generating entropy. Any value read from the Entropy registers is invalid.
-    value: 0
-  - name: EntValValid
-    description: Values read from the Entropy registers are valid.
-    value: 1
-enum/IntStatusFrqCtFail:
-  bit_size: 1
-  variants:
-  - name: FrqCtFailNoErr
-    description: No hardware nor self test frequency errors.
-    value: 0
-  - name: FrqCtFailErr
-    description: The frequency counter has detected a failure.
-    value: 1
-enum/IntStatusHwErr:
-  bit_size: 1
-  variants:
-  - name: HwErrNo
-    description: No error.
-    value: 0
-  - name: HwErrYes
-    description: Error detected.
-    value: 1
-enum/IntStatusIntgFlt:
-  bit_size: 1
-  variants:
-  - name: IntgFltNoErr
-    description: No internal fault has been detected.
-    value: 0
-  - name: IntgFltErr
-    description: TRNG has detected internal fault.
-    value: 1
 enum/IntgOpt:
   bit_size: 8
   variants:
@@ -1116,24 +957,6 @@ enum/IpId:
   - name: IpIdVal
     description: ID for TRNG.
     value: 48
-enum/LocalEdc:
-  bit_size: 1
-  variants:
-  - name: LocalEdcNoerr
-    description: No Local-EDC error/fault detected.
-    value: 0
-  - name: LocalEdcErr
-    description: Local-EDC error/fault detected.
-    value: 1
-enum/LocalEdcClr:
-  bit_size: 1
-  variants:
-  - name: LocalEdcNoeffect
-    description: No effect, ignored.
-    value: 0
-  - name: LocalEdcClear
-    description: Clears the CSER[LOCAL_EDC] bit.
-    value: 1
 enum/MajRev:
   bit_size: 8
   variants:
@@ -1146,15 +969,6 @@ enum/MinRev:
   - name: MinRevVal
     description: Minor revision number for TRNG.
     value: 12
-enum/NoPrgm:
-  bit_size: 1
-  variants:
-  - name: NoPrgmOff
-    description: TRNG configuration registers can be modified.
-    value: 0
-  - name: NoPrgmOn
-    description: TRNG configuration registers cannot be modified.
-    value: 1
 enum/Osc2Div:
   bit_size: 2
   variants:
@@ -1170,16 +984,6 @@ enum/Osc2Div:
   - name: Osc2DivDiv8
     description: Use ring oscillator 2 divided-by-8.
     value: 3
-enum/Osc2OutEn:
-  bit_size: 1
-  variants:
-  - name: Osc2OutEn0
-    description: Ring oscillator 2 output is gated to an output pad.
-    value: 0
-  - name: Osc2OutEn1
-    description: Allows external viewing of divided-by-2 ring oscillator 2 if MCTL[PRGM] = 1 mode is also selected,
-      else ring oscillator 2 output is gated to an output pad.
-    value: 1
 enum/OscDiv:
   bit_size: 2
   variants:
@@ -1210,42 +1014,6 @@ enum/OscFailsafeLmt:
   - name: OscFailsafeLmt4m
     description: N is 2^22 system clocks (full range of the counter being used).
     value: 3
-enum/RedFsm:
-  bit_size: 1
-  variants:
-  - name: RedFsmNoerr
-    description: No redundant FSM error/fault.
-    value: 0
-  - name: RedFsmErr
-    description: Redundant FSM error/fault detected.
-    value: 1
-enum/RedFsmClr:
-  bit_size: 1
-  variants:
-  - name: RedFsmNoeffect
-    description: No effect, ignored.
-    value: 0
-  - name: RedFsmClear
-    description: Clears the CSER[RED_FSM] bit.
-    value: 1
-enum/RedSigs:
-  bit_size: 1
-  variants:
-  - name: RedSigsNoerr
-    description: No redundant signal error/fault.
-    value: 0
-  - name: RedSigsErr
-    description: Redundant signal error/fault detected.
-    value: 1
-enum/RedSigsClr:
-  bit_size: 1
-  variants:
-  - name: RedSigsNoeffect
-    description: No effect, ignored.
-    value: 0
-  - name: RedSigsClear
-    description: Clears the CSER[RED_SIGS] bit.
-    value: 1
 enum/TrngEntCtl:
   bit_size: 2
   variants:

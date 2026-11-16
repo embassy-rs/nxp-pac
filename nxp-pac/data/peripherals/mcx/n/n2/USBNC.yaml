@@ -24,55 +24,45 @@ fieldset/UsbncAlphaFieldsetAlpha:
   description: USB OTG Control 1.
   fields:
   - name: over_cur_dis
-    description: Disable Overcurrent Detection.
+    description: "Disable Overcurrent Detection.\n\nRaw bit values: false (0) = OvrcrntDetctEn: Enables.; true (1) = OvrcrntDetctDis: Disables."
     bit_offset: 7
     bit_size: 1
-    enum: UsbncAlphaEnumFoxtrot
   - name: over_cur_pol
-    description: Polarity of Overcurrent.
+    description: "Polarity of Overcurrent.\n\nRaw bit values: false (0) = ActiveHiOvrcrnt: High active (high on this signal represents an overcurrent condition).; true (1) = ActiveLowOvrcrnt: Low active (low on this signal represents an overcurrent condition)."
     bit_offset: 8
     bit_size: 1
-    enum: UsbncAlphaEnumGolf
   - name: pwr_pol
-    description: Power Polarity.
+    description: "Power Polarity.\n\nRaw bit values: false (0) = ActiveLoPmic: PMIC Power Pin is Low active.; true (1) = ActiveHiPmic: PMIC Power Pin is High active."
     bit_offset: 9
     bit_size: 1
-    enum: UsbncAlphaEnumHotel
   - name: wie
-    description: Wake-up Interrupt Enable.
+    description: "Wake-up Interrupt Enable.\n\nRaw bit values: false (0) = IntDis: Interrupt Disabled.; true (1) = IntEn: Interrupt Enabled."
     bit_offset: 10
     bit_size: 1
-    enum: UsbncAlphaEnumKilo
   - name: wkup_sw_en
-    description: Software Wake-up Enable.
+    description: "Software Wake-up Enable.\n\nRaw bit values: false (0) = SwWkupDis: Disables.; true (1) = SwWkupEn: Enables."
     bit_offset: 14
     bit_size: 1
-    enum: UsbncAlphaEnumPapa
   - name: wkup_sw
-    description: Software Wake-up.
+    description: "Software Wake-up.\n\nRaw bit values: false (0) = Inactive: Inactive.; true (1) = ForceWkup: Force wake-up."
     bit_offset: 15
     bit_size: 1
-    enum: UsbncAlphaEnumOscar
   - name: wkup_id_en
-    description: Wake-up on ID Change Enable.
+    description: "Wake-up on ID Change Enable.\n\nRaw bit values: false (0) = WkupIdDis: Disables.; true (1) = WkupIdEn: Enables."
     bit_offset: 16
     bit_size: 1
-    enum: UsbncAlphaEnumNovember
   - name: wkup_vbus_en
-    description: Wake-up on VBUS Change Enable.
+    description: "Wake-up on VBUS Change Enable.\n\nRaw bit values: false (0) = WkupVbusDis: Disables.; true (1) = WkupVbusEn: Enables."
     bit_offset: 17
     bit_size: 1
-    enum: UsbncAlphaEnumQuebec
   - name: wkup_dpdm_en
-    description: Wake-up on DPDM Change Enable.
+    description: "Wake-up on DPDM Change Enable.\n\nRaw bit values: false (0) = DpdmWkupDis: DPDM changes wake-up to be disabled only when VBUS is 0.; true (1) = DpdmWkupEn: DPDM changes wake-up to be enabled, it is for device only."
     bit_offset: 29
     bit_size: 1
-    enum: UsbncAlphaEnumMike
   - name: wir
-    description: Wake-up Interrupt Request.
+    description: "Wake-up Interrupt Request.\n\nRaw bit values: false (0) = NoWkupReq: No request received.; true (1) = WkupReq: Request received."
     bit_offset: 31
     bit_size: 1
-    enum: UsbncAlphaEnumLima
 fieldset/UsbncAlphaFieldsetBravo:
   description: USB OTG Control 2.
   fields:
@@ -82,98 +72,32 @@ fieldset/UsbncAlphaFieldsetBravo:
     bit_size: 2
     enum: UsbncAlphaEnumJuliet
   - name: auturesume_en
-    description: Auto Resume Enable.
+    description: "Auto Resume Enable.\n\nRaw bit values: false (0) = Default: Default."
     bit_offset: 2
     bit_size: 1
-    enum: AuturesumeEn
   - name: lowspeed_en
-    description: Low Speed Enable.
+    description: "Low Speed Enable.\n\nRaw bit values: false (0) = Default: Default."
     bit_offset: 3
     bit_size: 1
-    enum: AuturesumeEn
   - name: utmi_clk_vld
-    description: UTMI Clock Valid.
+    description: "UTMI Clock Valid.\n\nRaw bit values: false (0) = Default: Default."
     bit_offset: 31
     bit_size: 1
-    enum: AuturesumeEn
 fieldset/UsbncAlphaFieldsetCharlie:
   description: USB Host HSIC Control.
   fields:
   - name: hsic_clk_on
-    description: HSIC Clock ON.
+    description: "HSIC Clock ON.\n\nRaw bit values: false (0) = Inactive: Inactive.; true (1) = Active: Active."
     bit_offset: 11
     bit_size: 1
-    enum: UsbncAlphaEnumCharlie
   - name: hsic_en
-    description: Host HSIC Enable.
+    description: "Host HSIC Enable.\n\nRaw bit values: false (0) = Disable: Disabled.; true (1) = Enable: Enabled."
     bit_offset: 12
     bit_size: 1
-    enum: UsbncAlphaEnumDelta
   - name: clk_vld
-    description: Clock Valid.
+    description: "Clock Valid.\n\nRaw bit values: false (0) = Invalid: Invalid.; true (1) = Valid: Valid."
     bit_offset: 31
     bit_size: 1
-    enum: UsbncAlphaEnumBravo
-enum/UsbncAlphaEnumBravo:
-  bit_size: 1
-  variants:
-  - name: Invalid
-    description: Invalid.
-    value: 0
-  - name: Valid
-    description: Valid.
-    value: 1
-enum/UsbncAlphaEnumCharlie:
-  bit_size: 1
-  variants:
-  - name: Active
-    description: Active.
-    value: 1
-  - name: Inactive
-    description: Inactive.
-    value: 0
-enum/UsbncAlphaEnumDelta:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
-enum/AuturesumeEn:
-  bit_size: 1
-  variants:
-  - name: Default
-    description: Default.
-    value: 0
-enum/UsbncAlphaEnumFoxtrot:
-  bit_size: 1
-  variants:
-  - name: OvrcrntDetctDis
-    description: Disables.
-    value: 1
-  - name: OvrcrntDetctEn
-    description: Enables.
-    value: 0
-enum/UsbncAlphaEnumGolf:
-  bit_size: 1
-  variants:
-  - name: ActiveHiOvrcrnt
-    description: High active (high on this signal represents an overcurrent condition).
-    value: 0
-  - name: ActiveLowOvrcrnt
-    description: Low active (low on this signal represents an overcurrent condition).
-    value: 1
-enum/UsbncAlphaEnumHotel:
-  bit_size: 1
-  variants:
-  - name: ActiveHiPmic
-    description: PMIC Power Pin is High active.
-    value: 1
-  - name: ActiveLoPmic
-    description: PMIC Power Pin is Low active.
-    value: 0
 enum/UsbncAlphaEnumJuliet:
   bit_size: 2
   variants:
@@ -189,66 +113,3 @@ enum/UsbncAlphaEnumJuliet:
   - name: VbusValid
     description: vbus_valid.
     value: 0
-enum/UsbncAlphaEnumKilo:
-  bit_size: 1
-  variants:
-  - name: IntDis
-    description: Interrupt Disabled.
-    value: 0
-  - name: IntEn
-    description: Interrupt Enabled.
-    value: 1
-enum/UsbncAlphaEnumLima:
-  bit_size: 1
-  variants:
-  - name: NoWkupReq
-    description: No request received.
-    value: 0
-  - name: WkupReq
-    description: Request received.
-    value: 1
-enum/UsbncAlphaEnumMike:
-  bit_size: 1
-  variants:
-  - name: DpdmWkupDis
-    description: DPDM changes wake-up to be disabled only when VBUS is 0.
-    value: 0
-  - name: DpdmWkupEn
-    description: DPDM changes wake-up to be enabled, it is for device only.
-    value: 1
-enum/UsbncAlphaEnumNovember:
-  bit_size: 1
-  variants:
-  - name: WkupIdDis
-    description: Disables.
-    value: 0
-  - name: WkupIdEn
-    description: Enables.
-    value: 1
-enum/UsbncAlphaEnumOscar:
-  bit_size: 1
-  variants:
-  - name: ForceWkup
-    description: Force wake-up.
-    value: 1
-  - name: Inactive
-    description: Inactive.
-    value: 0
-enum/UsbncAlphaEnumPapa:
-  bit_size: 1
-  variants:
-  - name: SwWkupDis
-    description: Disables.
-    value: 0
-  - name: SwWkupEn
-    description: Enables.
-    value: 1
-enum/UsbncAlphaEnumQuebec:
-  bit_size: 1
-  variants:
-  - name: WkupVbusDis
-    description: Disables.
-    value: 0
-  - name: WkupVbusEn
-    description: Enables.
-    value: 1

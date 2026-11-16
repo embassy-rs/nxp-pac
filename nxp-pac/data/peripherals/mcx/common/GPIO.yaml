@@ -161,29 +161,25 @@ fieldset/Icnp:
   description: Interrupt Control Nonprivilege.
   fields:
   - name: npe0
-    description: Nonprivilege Enable.
+    description: "Nonprivilege Enable.\n\nRaw bit values: false (0) = Npe0: Privilege access.; true (1) = Npe1: Nonprivilege access."
     bit_offset: 0
     bit_size: 1
-    enum: IcnpNpe0
   - name: npe1
-    description: Nonprivilege Enable.
+    description: "Nonprivilege Enable.\n\nRaw bit values: false (0) = Npe0: Privilege access.; true (1) = Npe1: Nonprivilege access."
     bit_offset: 1
     bit_size: 1
-    enum: IcnpNpe0
 fieldset/Icns:
   only_in: '^(MCXA(286|287|456|457|536|537|556|557|566|567|577)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$'
   description: Interrupt Control Nonsecure.
   fields:
   - name: nse0
-    description: Nonsecure Enable.
+    description: "Nonsecure Enable.\n\nRaw bit values: false (0) = Nse0: Secure access.; true (1) = Nse1: Nonsecure access."
     bit_offset: 0
     bit_size: 1
-    enum: IcnsNse0
   - name: nse1
-    description: Nonsecure Enable.
+    description: "Nonsecure Enable.\n\nRaw bit values: false (0) = Nse0: Secure access.; true (1) = Nse1: Nonsecure access."
     bit_offset: 1
     bit_size: 1
-    enum: IcnsNse0
 fieldset/Icr:
   description: Interrupt Control.
   fields:
@@ -194,27 +190,23 @@ fieldset/Icr:
     enum: Irqc
   - name: irqs
     only_in: '^(MCXA(286|287|456|457|536|537|556|557|566|567|577)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$'
-    description: Interrupt Select.
+    description: "Interrupt Select.\n\nRaw bit values: false (0) = Irqs0: Interrupt, trigger output, or DMA request 0.; true (1) = Irqs1: Interrupt, trigger output, or DMA request 1."
     bit_offset: 20
     bit_size: 1
-    enum: Irqs
   - name: lk
     only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
-    description: Lock.
+    description: "Lock.\n\nRaw bit values: false (0) = Lk0: Not locked.; true (1) = Lk1: Locked."
     bit_offset: 23
     bit_size: 1
-    enum: Lk
   - name: lk
     only_in: '^MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947)$'
-    description: 'Lock ICR[23:0] until system reset. The manual prose defines 0 as unlocked and 1 as locked, as represented here; its short enumeration labels (and XML) reverse this meaning. This source conflict requires vendor clarification.'
+    description: "Lock ICR[23:0] until system reset. The manual prose defines 0 as unlocked and 1 as locked, as represented here; its short enumeration labels (and XML) reverse this meaning. This source conflict requires vendor clarification.\n\nRaw bit values: false (0) = Lk0: Not locked.; true (1) = Lk1: Locked."
     bit_offset: 23
     bit_size: 1
-    enum: Lk
   - name: isf
-    description: Interrupt Status Flag.
+    description: "Interrupt Status Flag.\n\nRaw bit values: false (0) = Isf0: Not detected.; true (1) = Isf1: Detected."
     bit_offset: 24
     bit_size: 1
-    enum: Isf
 fieldset/Isfr:
   description: Interrupt Status Flag.
   fields:
@@ -378,47 +370,43 @@ fieldset/Pcnp:
   description: Pin Control Nonprivilege.
   fields:
   - name: npe
-    description: Nonprivilege Enable.
+    description: "Nonprivilege Enable.\n\nRaw bit values: false (0) = Npe0: Privilege access.; true (1) = Npe1: Nonprivilege access."
     bit_offset: 0
     bit_size: 1
     array:
       len: 32
       stride: 1
-    enum: IcnpNpe0
 fieldset/Pcns:
   only_in: '^(MCXA(286|287|456|457|536|537|556|557|566|567|577)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$'
   description: Pin Control Nonsecure.
   fields:
   - name: nse
-    description: Nonsecure Enable.
+    description: "Nonsecure Enable.\n\nRaw bit values: false (0) = Nse0: Secure access.; true (1) = Nse1: Nonsecure access."
     bit_offset: 0
     bit_size: 1
     array:
       len: 32
       stride: 1
-    enum: IcnsNse0
 fieldset/Pcor:
   description: Port Clear Output.
   fields:
   - name: ptco
-    description: Port Clear Output.
+    description: "Port Clear Output.\n\nRaw bit values: false (0) = Ptco0: No change.; true (1) = Ptco1: Corresponding field in PDOR becomes 0."
     bit_offset: 0
     bit_size: 1
     array:
       len: 32
       stride: 1
-    enum: Ptco
 fieldset/Pddr:
   description: Port Data Direction.
   fields:
   - name: pdd
-    description: Port Data Direction.
+    description: "Port Data Direction.\n\nRaw bit values: false (0) = Pdd0: Input.; true (1) = Pdd1: Output."
     bit_offset: 0
     bit_size: 1
     array:
       len: 32
       stride: 1
-    enum: Pdd
 fieldset/Pdir:
   description: Port Data Input.
   fields:
@@ -444,32 +432,29 @@ fieldset/Pdr:
   bit_size: 8
   fields:
   - name: pd
-    description: Pin Data (I/O).
+    description: "Pin Data (I/O).\n\nRaw bit values: false (0) = Pd0: Logic zero.; true (1) = Pd1: Logic one."
     bit_offset: 0
     bit_size: 1
-    enum: Pd
 fieldset/Pidr:
   description: Port Input Disable.
   fields:
   - name: pid
-    description: Port Input Disable.
+    description: "Port Input Disable.\n\nRaw bit values: false (0) = Pid0: Configured for general-purpose input.; true (1) = Pid1: Disabled for general-purpose input."
     bit_offset: 0
     bit_size: 1
     array:
       len: 32
       stride: 1
-    enum: Pid
 fieldset/Psor:
   description: Port Set Output.
   fields:
   - name: ptso
-    description: Port Set Output.
+    description: "Port Set Output.\n\nRaw bit values: false (0) = Ptso0: No change.; true (1) = Ptso1: Corresponding field in PDOR becomes 1."
     bit_offset: 0
     bit_size: 1
     array:
       len: 32
       stride: 1
-    enum: Ptso
 fieldset/Ptor:
   description: Port Toggle Output.
   fields:
@@ -495,26 +480,6 @@ fieldset/Verid:
     description: Major Version Number.
     bit_offset: 24
     bit_size: 8
-enum/IcnpNpe0:
-  only_in: '^(MCXA(286|287|456|457|536|537|556|557|566|567|577)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$'
-  bit_size: 1
-  variants:
-  - name: Npe0
-    description: Privilege access.
-    value: 0
-  - name: Npe1
-    description: Nonprivilege access.
-    value: 1
-enum/IcnsNse0:
-  only_in: '^(MCXA(286|287|456|457|536|537|556|557|566|567|577)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$'
-  bit_size: 1
-  variants:
-  - name: Nse0
-    description: Secure access.
-    value: 0
-  - name: Nse1
-    description: Nonsecure access.
-    value: 1
 enum/Irqc:
   bit_size: 4
   variants:
@@ -560,77 +525,3 @@ enum/Irqc:
   - name: Irqc14
     description: Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals).
     value: 14
-enum/Irqs:
-  only_in: '^(MCXA(286|287|456|457|536|537|556|557|566|567|577)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$'
-  bit_size: 1
-  variants:
-  - name: Irqs0
-    description: Interrupt, trigger output, or DMA request 0.
-    value: 0
-  - name: Irqs1
-    description: Interrupt, trigger output, or DMA request 1.
-    value: 1
-enum/Isf:
-  bit_size: 1
-  variants:
-  - name: Isf0
-    description: Not detected.
-    value: 0
-  - name: Isf1
-    description: Detected.
-    value: 1
-enum/Lk:
-  only_in: '^(MCXA(286|287|456|457|536|537|556|557|566|567|577)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$'
-  bit_size: 1
-  variants:
-  - name: Lk0
-    description: Not locked.
-    value: 0
-  - name: Lk1
-    description: Locked.
-    value: 1
-enum/Pd:
-  bit_size: 1
-  variants:
-  - name: Pd0
-    description: Logic zero.
-    value: 0
-  - name: Pd1
-    description: Logic one.
-    value: 1
-enum/Pdd:
-  bit_size: 1
-  variants:
-  - name: Pdd0
-    description: Input.
-    value: 0
-  - name: Pdd1
-    description: Output.
-    value: 1
-enum/Pid:
-  bit_size: 1
-  variants:
-  - name: Pid0
-    description: Configured for general-purpose input.
-    value: 0
-  - name: Pid1
-    description: Disabled for general-purpose input.
-    value: 1
-enum/Ptco:
-  bit_size: 1
-  variants:
-  - name: Ptco0
-    description: No change.
-    value: 0
-  - name: Ptco1
-    description: Corresponding field in PDOR becomes 0.
-    value: 1
-enum/Ptso:
-  bit_size: 1
-  variants:
-  - name: Ptso0
-    description: No change.
-    value: 0
-  - name: Ptso1
-    description: Corresponding field in PDOR becomes 1.
-    value: 1

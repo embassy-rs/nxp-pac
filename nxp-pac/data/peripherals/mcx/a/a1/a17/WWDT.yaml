@@ -42,15 +42,13 @@ fieldset/Mod:
   description: Mode.
   fields:
   - name: wden
-    description: Watchdog Enable.
+    description: "Watchdog Enable.\n\nRaw bit values: false (0) = Stop: Timer stopped.; true (1) = Run: Timer running."
     bit_offset: 0
     bit_size: 1
-    enum: Wden
   - name: wdreset
-    description: Watchdog Reset Enable.
+    description: "Watchdog Reset Enable.\n\nRaw bit values: false (0) = Interrupt: Interrupt.; true (1) = Reset: Reset."
     bit_offset: 1
     bit_size: 1
-    enum: Wdreset
   - name: wdtof
     description: Watchdog Timeout Flag.
     bit_offset: 2
@@ -60,10 +58,9 @@ fieldset/Mod:
     bit_offset: 3
     bit_size: 1
   - name: wdprotect
-    description: Watchdog Update Mode.
+    description: "Watchdog Update Mode.\n\nRaw bit values: false (0) = Flexible: Flexible.; true (1) = Threshold: Threshold."
     bit_offset: 4
     bit_size: 1
-    enum: Wdprotect
   - name: lock
     description: Lock.
     bit_offset: 5
@@ -106,30 +103,3 @@ fieldset/Window:
     bit_size: 24
   bit_size: 32
   reset_value: 16777215
-enum/Wden:
-  bit_size: 1
-  variants:
-  - name: Stop
-    description: Timer stopped.
-    value: 0
-  - name: Run
-    description: Timer running.
-    value: 1
-enum/Wdprotect:
-  bit_size: 1
-  variants:
-  - name: Flexible
-    description: Flexible.
-    value: 0
-  - name: Threshold
-    description: Threshold.
-    value: 1
-enum/Wdreset:
-  bit_size: 1
-  variants:
-  - name: Interrupt
-    description: Interrupt.
-    value: 0
-  - name: Reset
-    description: Reset.
-    value: 1

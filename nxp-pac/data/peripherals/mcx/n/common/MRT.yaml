@@ -119,10 +119,9 @@ fieldset/Stat:
     bit_offset: 0
     bit_size: 1
   - name: run
-    description: Timer is running when set, idle when clear. Read-only.
+    description: "Timer is running when set, idle when clear. Read-only.\n\nRaw bit values: false (0) = IdleState: Idle state.; true (1) = Running: Running."
     bit_offset: 1
     bit_size: 1
-    enum: Run
   - name: inuse
     description: >-
       Channel-in-use flag. Write one to clear. Hardware status mode resets all
@@ -143,10 +142,9 @@ fieldset/Modcfg:
     bit_offset: 4
     bit_size: 5
   - name: multitask
-    description: Operating mode for STAT.INUSE and IDLE_CH.
+    description: "Operating mode for STAT.INUSE and IDLE_CH.\n\nRaw bit values: false (0) = HARDWARE_STATUS: Hardware status mode.; true (1) = MULTITASK: Multitask mode."
     bit_offset: 31
     bit_size: 1
-    enum: Multitask
 # N23:77979-77999; N:121861-121881. Known reset mask: 0x000000f0.
 fieldset/IdleCh:
   bit_size: 32
@@ -191,21 +189,3 @@ enum/Mode:
   - name: ONE_SHOT_STALL
     description: One-Shot Stall mode.
     value: 2
-enum/Multitask:
-  bit_size: 1
-  variants:
-  - name: HARDWARE_STATUS
-    description: Hardware status mode.
-    value: 0
-  - name: MULTITASK
-    description: Multitask mode.
-    value: 1
-enum/Run:
-  bit_size: 1
-  variants:
-  - name: IdleState
-    description: Idle state.
-    value: 0
-  - name: Running
-    description: Running.
-    value: 1

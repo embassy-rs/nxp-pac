@@ -46,22 +46,19 @@ fieldset/Control:
   - name: iack
     bit_offset: 0
     bit_size: 1
-    enum: Iack
-    description: Write one to acknowledge IF. Self-clearing.
+    description: "Write one to acknowledge IF. Self-clearing.\n\nRaw bit values: false (0) = NoEffect: Do not clear the interrupt.; true (1) = Clear: Clear the IF field (interrupt flag)."
   - name: if_
     bit_offset: 8
     bit_size: 1
-    enum: If
-    description: Read-only interrupt flag. Writes ignored; acknowledge with IACK.
+    description: "Read-only interrupt flag. Writes ignored; acknowledge with IACK.\n\nRaw bit values: false (0) = NotPending: No interrupt is pending.; true (1) = Pending: An interrupt is pending."
   - name: ie
+    description: "Raw bit values: false (0) = Disabled: Disable interrupts to the system.; true (1) = Enabled: Enable interrupts to the system."
     bit_offset: 16
     bit_size: 1
-    enum: Ie
   - name: bc12
     bit_offset: 17
     bit_size: 1
-    enum: Bc12
-    description: One selects BC1.2, zero BC1.1. Must not change after detection starts.
+    description: "One selects BC1.2, zero BC1.1. Must not change after detection starts.\n\nRaw bit values: false (0) = Bc11: Compatible with BC1.1.; true (1) = Bc12: Compatible with BC1.2 (default)."
   - name: start
     bit_offset: 24
     bit_size: 1
@@ -69,17 +66,16 @@ fieldset/Control:
   - name: sr
     bit_offset: 25
     bit_size: 1
-    enum: Sr
-    description: Software reset command; self-clearing. Configuration is preserved.
+    description: "Software reset command; self-clearing. Configuration is preserved.\n\nRaw bit values: false (0) = NoReset: Do not perform a software reset.; true (1) = SwReset: Perform a software reset."
 fieldset/Clock:
   only_in: '^MCXA[0-9]+$'
   bit_size: 32
   reset_value: 193
   fields:
   - name: clock_unit
+    description: "Raw bit values: false (0) = Kilohertz: kHz,4..1023.; true (1) = Megahertz: MHz,1..1023."
     bit_offset: 0
     bit_size: 1
-    enum: ClockUnit
   - name: clock_speed
     bit_offset: 2
     bit_size: 10
@@ -90,9 +86,9 @@ fieldset/ClockN:
   reset_value: 97
   fields:
   - name: clock_unit
+    description: "Raw bit values: false (0) = Kilohertz: kHz,4..1023.; true (1) = Megahertz: MHz,1..1023."
     bit_offset: 0
     bit_size: 1
-    enum: ClockUnit
   - name: clock_speed
     bit_offset: 2
     bit_size: 10
@@ -125,9 +121,9 @@ fieldset/Status:
     bit_size: 1
     description: Timeout does not stop the sequence; assess ERR and sequence state.
   - name: active
+    description: "Raw bit values: false (0) = SeqNotRunning: The sequence is not running.; true (1) = SeqRunning: The sequence is running."
     bit_offset: 22
     bit_size: 1
-    enum: Active
 fieldset/SignalOverride:
   bit_size: 32
   reset_value: 0
@@ -227,15 +223,6 @@ fieldset/Timer2Bc12:
     bit_offset: 16
     bit_size: 10
     description: Valid1..1023ms per the detailed field. The timing table lists a broader programmable range of0..1023ms. This discrepancy is unresolved; that range does not establish USB-compliant operation or hardware behavior for disputed values.
-enum/ClockUnit:
-  bit_size: 1
-  variants:
-  - name: Kilohertz
-    value: 0
-    description: kHz,4..1023.
-  - name: Megahertz
-    value: 1
-    description: MHz,1..1023.
 enum/SequenceResult:
   bit_size: 2
   variants:
@@ -278,57 +265,3 @@ enum/OverrideMode:
   - name: VdmSource
     value: 4
     description: Enable VDM_SRC only.
-enum/Iack:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: Do not clear the interrupt.
-    value: 0
-  - name: Clear
-    description: Clear the IF field (interrupt flag).
-    value: 1
-enum/Bc12:
-  bit_size: 1
-  variants:
-  - name: Bc11
-    description: Compatible with BC1.1.
-    value: 0
-  - name: Bc12
-    description: Compatible with BC1.2 (default).
-    value: 1
-enum/If:
-  bit_size: 1
-  variants:
-  - name: NotPending
-    description: No interrupt is pending.
-    value: 0
-  - name: Pending
-    description: An interrupt is pending.
-    value: 1
-enum/Sr:
-  bit_size: 1
-  variants:
-  - name: NoReset
-    description: Do not perform a software reset.
-    value: 0
-  - name: SwReset
-    description: Perform a software reset.
-    value: 1
-enum/Ie:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disable interrupts to the system.
-    value: 0
-  - name: Enabled
-    description: Enable interrupts to the system.
-    value: 1
-enum/Active:
-  bit_size: 1
-  variants:
-  - name: SeqNotRunning
-    description: The sequence is not running.
-    value: 0
-  - name: SeqRunning
-    description: The sequence is running.
-    value: 1

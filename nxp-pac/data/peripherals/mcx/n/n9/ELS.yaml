@@ -263,23 +263,20 @@ fieldset/ElsAlphaFieldsetDelta:
   description: CRC Configuration.
   fields:
   - name: cmdcrc_rst
-    description: CRC reset to initial valueCMDCRC_EN and CMDCRC_RST fields act independently.
+    description: "CRC reset to initial valueCMDCRC_EN and CMDCRC_RST fields act independently.\n\nRaw bit values: false (0) = Exit: No effect.; true (1) = Clr: Resets the CRC command to its default value."
     bit_offset: 0
     bit_size: 1
-    enum: ElsAlphaEnumEcho
   - name: cmdcrc_en
-    description: CRC enable bit.
+    description: "CRC enable bit.\n\nRaw bit values: false (0) = Exit: Disables the CRC command CRC. The CRC command will not be updated on completion of each ELS command.; true (1) = Clr: Enables the CRC command. The CRC command will be updated on completion of each ELS command."
     bit_offset: 1
     bit_size: 1
-    enum: ElsAlphaEnumDelta
 fieldset/ElsAlphaFieldsetEcho:
   description: Control Register.
   fields:
   - name: els_en
-    description: ELS enable.
+    description: "ELS enable.\n\nRaw bit values: false (0) = Dis: Disabled.; true (1) = En: Enabled."
     bit_offset: 0
     bit_size: 1
-    enum: ElsAlphaEnumKilo
   - name: els_start
     description: Write to 1 to start an ELS operation. Writing 0 has no effect.
     bit_offset: 1
@@ -293,10 +290,9 @@ fieldset/ElsAlphaFieldsetEcho:
     bit_offset: 3
     bit_size: 5
   - name: byte_order
-    description: Defines endianness.
+    description: "Defines endianness.\n\nRaw bit values: false (0) = Lit: Little endian.; true (1) = Big: Big endian."
     bit_offset: 8
     bit_size: 1
-    enum: ElsAlphaEnumCharlie
 fieldset/ElsAlphaFieldsetFoxtrot:
   description: Final DMA Address.
   fields:
@@ -2517,60 +2513,51 @@ fieldset/ElsAlphaFieldsetHotelAlpha:
   description: Error Status.
   fields:
   - name: bus_err
-    description: Indicates public or private bus access error.
+    description: "Indicates public or private bus access error.\n\nRaw bit values: false (0) = Dis: No error.; true (1) = En: Error occurred."
     bit_offset: 0
     bit_size: 1
-    enum: AlgErr
   - name: opn_err
-    description: Indicates operational error, that is, ELS has been incorrectly operated.
+    description: "Indicates operational error, that is, ELS has been incorrectly operated.\n\nRaw bit values: false (0) = Dis: No error.; true (1) = En: Error occurred."
     bit_offset: 1
     bit_size: 1
-    enum: AlgErr
   - name: alg_err
-    description: Indicates algorithm error; an internal algorithm has produced an unexpected result.
+    description: "Indicates algorithm error; an internal algorithm has produced an unexpected result.\n\nRaw bit values: false (0) = Dis: No error.; true (1) = En: Error occurred."
     bit_offset: 2
     bit_size: 1
-    enum: AlgErr
   - name: itg_err
-    description: Indicates data integrity error, that is, internal data integrity check has failed.
+    description: "Indicates data integrity error, that is, internal data integrity check has failed.\n\nRaw bit values: false (0) = Dis: No error.; true (1) = En: Error occurred."
     bit_offset: 3
     bit_size: 1
-    enum: AlgErr
   - name: flt_err
-    description: Indicates hardware fault error; an attempt to change the value of an internal register.
+    description: "Indicates hardware fault error; an attempt to change the value of an internal register.\n\nRaw bit values: false (0) = Dis: No error.; true (1) = En: Error occurred."
     bit_offset: 4
     bit_size: 1
-    enum: AlgErr
   - name: prng_err
-    description: Indicates user read of PRNG_DATOUT when STATUS[PRNG_RDY] is 0.
+    description: "Indicates user read of PRNG_DATOUT when STATUS[PRNG_RDY] is 0.\n\nRaw bit values: false (0) = Dis: No error.; true (1) = En: Error occurred."
     bit_offset: 5
     bit_size: 1
-    enum: AlgErr
   - name: err_lvl
     description: 'Indicates the triggered error level: 0, 1 ,2.'
     bit_offset: 6
     bit_size: 2
   - name: dtrng_err
-    description: TRNG unable to gather entropy with the current configuration.
+    description: "TRNG unable to gather entropy with the current configuration.\n\nRaw bit values: false (0) = Dis: No error.; true (1) = En: TRNG error occurred."
     bit_offset: 8
     bit_size: 1
-    enum: ElsAlphaEnumHotel
 fieldset/ElsAlphaFieldsetIndiaAlpha:
   description: Error Status Clear.
   fields:
   - name: err_clr
-    description: ELS error status bit.
+    description: "ELS error status bit.\n\nRaw bit values: false (0) = Exit: Exits ELS error state.; true (1) = Clr: Clears ELS error state."
     bit_offset: 0
     bit_size: 1
-    enum: ElsAlphaEnumOscar
 fieldset/ElsAlphaFieldsetJulietAlpha:
   description: Interrupt Enable.
   fields:
   - name: int_en
-    description: Enables or disables the operation of the ELS interrupt output port.
+    description: "Enables or disables the operation of the ELS interrupt output port.\n\nRaw bit values: false (0) = Dis: Disables.; true (1) = En: Enables."
     bit_offset: 0
     bit_size: 1
-    enum: ElsAlphaEnumQuebec
 fieldset/ElsAlphaFieldsetKiloAlpha:
   description: Interrupt Status Clear.
   fields:
@@ -2638,25 +2625,21 @@ fieldset/ElsAlphaFieldsetTangoAlpha:
   description: Status Register.
   fields:
   - name: els_busy
-    description: When set, indicates the ELS is executing a crypto sequence.
+    description: "When set, indicates the ELS is executing a crypto sequence.\n\nRaw bit values: false (0) = Ntcry: Crypto sequence not executing.; true (1) = Cryp: Crypto sequence executing."
     bit_offset: 0
     bit_size: 1
-    enum: ElsAlphaEnumJuliet
   - name: els_irq
-    description: When set, indicates the ELS has an active interrupt.
+    description: "When set, indicates the ELS has an active interrupt.\n\nRaw bit values: false (0) = Ntint: No active interrupt.; true (1) = Int: Active interrupt."
     bit_offset: 1
     bit_size: 1
-    enum: ElsAlphaEnumMike
   - name: els_err
-    description: When set, indicates the ELS has detected an internal error.
+    description: "When set, indicates the ELS has detected an internal error.\n\nRaw bit values: false (0) = Nterr: Internal error not detected.; true (1) = Err: Internal error detected."
     bit_offset: 2
     bit_size: 1
-    enum: ElsAlphaEnumLima
   - name: prng_rdy
-    description: When set, indicates the internal PRNG is ready.
+    description: "When set, indicates the internal PRNG is ready.\n\nRaw bit values: false (0) = Ntready: Internal PRNG not ready.; true (1) = Ready: Internal PRNG ready."
     bit_offset: 3
     bit_size: 1
-    enum: ElsAlphaEnumPapaAlpha
   - name: ecdsa_vfy_status
     description: Signature verify result status.
     bit_offset: 4
@@ -2673,15 +2656,13 @@ fieldset/ElsAlphaFieldsetTangoAlpha:
     bit_size: 2
     enum: ElsAlphaEnumFoxtrot
   - name: dtrng_busy
-    description: When set, it indicates TRNG is gathering entropy.
+    description: "When set, it indicates TRNG is gathering entropy.\n\nRaw bit values: false (0) = Notent: Not gathering entropy.; true (1) = Ent: Gathering entropy."
     bit_offset: 10
     bit_size: 1
-    enum: ElsAlphaEnumGolf
   - name: els_locked
-    description: When set, indicates that ELS is locked by a master.
+    description: "When set, indicates that ELS is locked by a master.\n\nRaw bit values: false (0) = Notl: Not locked by master.; true (1) = Lock: Locked by master."
     bit_offset: 16
     bit_size: 1
-    enum: ElsAlphaEnumNovember
 fieldset/ElsAlphaFieldsetUniformAlpha:
   description: Version Register.
   fields:
@@ -2717,33 +2698,6 @@ fieldset/ElsAlphaFieldsetUniformAlpha:
     description: Specifies the software major release version; possible values are from 1-9.
     bit_offset: 28
     bit_size: 4
-enum/ElsAlphaEnumCharlie:
-  bit_size: 1
-  variants:
-  - name: Big
-    description: Big endian.
-    value: 1
-  - name: Lit
-    description: Little endian.
-    value: 0
-enum/ElsAlphaEnumDelta:
-  bit_size: 1
-  variants:
-  - name: Clr
-    description: Enables the CRC command. The CRC command will be updated on completion of each ELS command.
-    value: 1
-  - name: Exit
-    description: Disables the CRC command CRC. The CRC command will not be updated on completion of each ELS command.
-    value: 0
-enum/ElsAlphaEnumEcho:
-  bit_size: 1
-  variants:
-  - name: Clr
-    description: Resets the CRC command to its default value.
-    value: 1
-  - name: Exit
-    description: No effect.
-    value: 0
 enum/ElsAlphaEnumFoxtrot:
   bit_size: 2
   variants:
@@ -2756,24 +2710,6 @@ enum/ElsAlphaEnumFoxtrot:
   - name: None
     description: NONE.
     value: 0
-enum/ElsAlphaEnumGolf:
-  bit_size: 1
-  variants:
-  - name: Ent
-    description: Gathering entropy.
-    value: 1
-  - name: Notent
-    description: Not gathering entropy.
-    value: 0
-enum/ElsAlphaEnumHotel:
-  bit_size: 1
-  variants:
-  - name: Dis
-    description: No error.
-    value: 0
-  - name: En
-    description: TRNG error occurred.
-    value: 1
 enum/ElsAlphaEnumIndia:
   bit_size: 2
   variants:
@@ -2789,78 +2725,6 @@ enum/ElsAlphaEnumIndia:
   - name: SigPass
     description: Signature verify passed.
     value: 2
-enum/ElsAlphaEnumJuliet:
-  bit_size: 1
-  variants:
-  - name: Cryp
-    description: Crypto sequence executing.
-    value: 1
-  - name: Ntcry
-    description: Crypto sequence not executing.
-    value: 0
-enum/ElsAlphaEnumKilo:
-  bit_size: 1
-  variants:
-  - name: Dis
-    description: Disabled.
-    value: 0
-  - name: En
-    description: Enabled.
-    value: 1
-enum/ElsAlphaEnumLima:
-  bit_size: 1
-  variants:
-  - name: Err
-    description: Internal error detected.
-    value: 1
-  - name: Nterr
-    description: Internal error not detected.
-    value: 0
-enum/ElsAlphaEnumMike:
-  bit_size: 1
-  variants:
-  - name: Int
-    description: Active interrupt.
-    value: 1
-  - name: Ntint
-    description: No active interrupt.
-    value: 0
-enum/ElsAlphaEnumNovember:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked by master.
-    value: 1
-  - name: Notl
-    description: Not locked by master.
-    value: 0
-enum/ElsAlphaEnumOscar:
-  bit_size: 1
-  variants:
-  - name: Clr
-    description: Clears ELS error state.
-    value: 1
-  - name: Exit
-    description: Exits ELS error state.
-    value: 0
-enum/AlgErr:
-  bit_size: 1
-  variants:
-  - name: Dis
-    description: No error.
-    value: 0
-  - name: En
-    description: Error occurred.
-    value: 1
-enum/ElsAlphaEnumQuebec:
-  bit_size: 1
-  variants:
-  - name: Dis
-    description: Disables.
-    value: 0
-  - name: En
-    description: Enables.
-    value: 1
 enum/KsKsize:
   bit_size: 2
   variants:
@@ -2884,13 +2748,4 @@ enum/ElsAlphaEnumNovemberAlpha:
     value: 0
   - name: Secp
     description: Secure, privileged.
-    value: 1
-enum/ElsAlphaEnumPapaAlpha:
-  bit_size: 1
-  variants:
-  - name: Ntready
-    description: Internal PRNG not ready.
-    value: 0
-  - name: Ready
-    description: Internal PRNG ready.
     value: 1

@@ -38,823 +38,677 @@ fieldset/Edcr:
   description: EFT Detect Clear.
   fields:
   - name: edhc
-    description: EFT Detect High Clear.
+    description: "EFT Detect High Clear.\n\nRaw bit values: false (0) = Edhc0: Does not clear.; true (1) = Edhc1: Clears."
     bit_offset: 0
     bit_size: 1
-    enum: Edhc
   - name: edlc
-    description: EFT Detect Low Clear.
+    description: "EFT Detect Low Clear.\n\nRaw bit values: false (0) = Edlc0: Does not clear.; true (1) = Edlc1: Clears."
     bit_offset: 1
     bit_size: 1
-    enum: Edlc
 fieldset/EdfrMask000000ff:
   description: EFT Detect Flag.
   fields:
   - name: edf0
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 0
     bit_size: 1
-    enum: Edf
   - name: edf1
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 1
     bit_size: 1
-    enum: Edf
   - name: edf2
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 2
     bit_size: 1
-    enum: Edf
   - name: edf3
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 3
     bit_size: 1
-    enum: Edf
   - name: edf4
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 4
     bit_size: 1
-    enum: Edf
   - name: edf5
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 5
     bit_size: 1
-    enum: Edf
   - name: edf6
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 6
     bit_size: 1
-    enum: Edf
   - name: edf7
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 7
     bit_size: 1
-    enum: Edf
 fieldset/EdfrMask000003ff:
   extends: EdfrMask000000ff
   description: EFT Detect Flag.
   fields:
   - name: edf8
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 8
     bit_size: 1
-    enum: Edf
   - name: edf9
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 9
     bit_size: 1
-    enum: Edf
 fieldset/EdfrMask00000fff:
   extends: EdfrMask000003ff
   description: EFT Detect Flag.
   fields:
   - name: edf10
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 10
     bit_size: 1
-    enum: Edf
   - name: edf11
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 11
     bit_size: 1
-    enum: Edf
 fieldset/EdfrMask00f7ffc7:
   only_in: '^MCXN23[56]$'
   description: EFT Detect Flag.
   fields:
   - name: edf0
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 0
     bit_size: 1
-    enum: Edf
   - name: edf1
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 1
     bit_size: 1
-    enum: Edf
   - name: edf2
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 2
     bit_size: 1
-    enum: Edf
   - name: edf6
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 6
     bit_size: 1
-    enum: Edf
   - name: edf7
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 7
     bit_size: 1
-    enum: Edf
   - name: edf8
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 8
     bit_size: 1
-    enum: Edf
   - name: edf9
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 9
     bit_size: 1
-    enum: Edf
   - name: edf10
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 10
     bit_size: 1
-    enum: Edf
   - name: edf11
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 11
     bit_size: 1
-    enum: Edf
   - name: edf12
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 12
     bit_size: 1
-    enum: Edf
   - name: edf13
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 13
     bit_size: 1
-    enum: Edf
   - name: edf14
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 14
     bit_size: 1
-    enum: Edf
   - name: edf15
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 15
     bit_size: 1
-    enum: Edf
   - name: edf16
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 16
     bit_size: 1
-    enum: Edf
   - name: edf17
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 17
     bit_size: 1
-    enum: Edf
   - name: edf18
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 18
     bit_size: 1
-    enum: Edf
   - name: edf20
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 20
     bit_size: 1
-    enum: Edf
   - name: edf21
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 21
     bit_size: 1
-    enum: Edf
   - name: edf22
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 22
     bit_size: 1
-    enum: Edf
   - name: edf23
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 23
     bit_size: 1
-    enum: Edf
 fieldset/EdfrMask00fff0ff:
   extends: EdfrMask000000ff
   description: EFT Detect Flag.
   fields:
   - name: edf12
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 12
     bit_size: 1
-    enum: Edf
   - name: edf13
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 13
     bit_size: 1
-    enum: Edf
   - name: edf14
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 14
     bit_size: 1
-    enum: Edf
   - name: edf15
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 15
     bit_size: 1
-    enum: Edf
   - name: edf16
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 16
     bit_size: 1
-    enum: Edf
   - name: edf17
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 17
     bit_size: 1
-    enum: Edf
   - name: edf18
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 18
     bit_size: 1
-    enum: Edf
   - name: edf19
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 19
     bit_size: 1
-    enum: Edf
   - name: edf20
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 20
     bit_size: 1
-    enum: Edf
   - name: edf21
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 21
     bit_size: 1
-    enum: Edf
   - name: edf22
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 22
     bit_size: 1
-    enum: Edf
   - name: edf23
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 23
     bit_size: 1
-    enum: Edf
 fieldset/EdfrMask00ffffff:
   only_in: '^MCXN(24[67]|5[0-9]{2}|94[67])$'
   extends: EdfrMask00fff0ff
   description: EFT Detect Flag.
   fields:
   - name: edf8
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 8
     bit_size: 1
-    enum: Edf
   - name: edf9
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 9
     bit_size: 1
-    enum: Edf
   - name: edf10
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 10
     bit_size: 1
-    enum: Edf
   - name: edf11
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 11
     bit_size: 1
-    enum: Edf
 fieldset/EdfrMask3ffff0ff:
   only_in: '^MCXN23[56]$'
   extends: EdfrMask00fff0ff
   description: EFT Detect Flag.
   fields:
   - name: edf24
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 24
     bit_size: 1
-    enum: Edf
   - name: edf25
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 25
     bit_size: 1
-    enum: Edf
   - name: edf26
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 26
     bit_size: 1
-    enum: Edf
   - name: edf27
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 27
     bit_size: 1
-    enum: Edf
   - name: edf28
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 28
     bit_size: 1
-    enum: Edf
   - name: edf29
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 29
     bit_size: 1
-    enum: Edf
 fieldset/EdfrMaskc00fffff:
   only_in: '^MCXN23[56]$'
   extends: EdfrMask00000fff
   description: EFT Detect Flag.
   fields:
   - name: edf12
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 12
     bit_size: 1
-    enum: Edf
   - name: edf13
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 13
     bit_size: 1
-    enum: Edf
   - name: edf14
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 14
     bit_size: 1
-    enum: Edf
   - name: edf15
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 15
     bit_size: 1
-    enum: Edf
   - name: edf16
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 16
     bit_size: 1
-    enum: Edf
   - name: edf17
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 17
     bit_size: 1
-    enum: Edf
   - name: edf18
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 18
     bit_size: 1
-    enum: Edf
   - name: edf19
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 19
     bit_size: 1
-    enum: Edf
   - name: edf30
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 30
     bit_size: 1
-    enum: Edf
   - name: edf31
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 31
     bit_size: 1
-    enum: Edf
 fieldset/EdfrMaskc0ffffff:
   only_in: '^MCXN(24[67]|5[0-9]{2}|94[67])$'
   extends: EdfrMask00ffffff
   description: EFT Detect Flag.
   fields:
   - name: edf30
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 30
     bit_size: 1
-    enum: Edf
   - name: edf31
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 31
     bit_size: 1
-    enum: Edf
 fieldset/EdfrMaskffffffff:
   only_in: '^MCXN(24[67]|5[0-9]{2}|94[67])$'
   extends: EdfrMaskc0ffffff
   description: EFT Detect Flag.
   fields:
   - name: edf24
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 24
     bit_size: 1
-    enum: Edf
   - name: edf25
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 25
     bit_size: 1
-    enum: Edf
   - name: edf26
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 26
     bit_size: 1
-    enum: Edf
   - name: edf27
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 27
     bit_size: 1
-    enum: Edf
   - name: edf28
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 28
     bit_size: 1
-    enum: Edf
   - name: edf29
-    description: EFT Detect Flag.
+    description: "EFT Detect Flag.\n\nRaw bit values: false (0) = Edie0: No EFT event detected.; true (1) = Edie1: High or/and low EFT event detected."
     bit_offset: 29
     bit_size: 1
-    enum: Edf
 fieldset/EdierMask000000ff:
   description: EFT Detect Interrupt Enable.
   fields:
   - name: edie0
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 0
     bit_size: 1
-    enum: Edie
   - name: edie1
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 1
     bit_size: 1
-    enum: Edie
   - name: edie2
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 2
     bit_size: 1
-    enum: Edie
   - name: edie3
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 3
     bit_size: 1
-    enum: Edie
   - name: edie4
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 4
     bit_size: 1
-    enum: Edie
   - name: edie5
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 5
     bit_size: 1
-    enum: Edie
   - name: edie6
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 6
     bit_size: 1
-    enum: Edie
   - name: edie7
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 7
     bit_size: 1
-    enum: Edie
 fieldset/EdierMask000003ff:
   extends: EdierMask000000ff
   description: EFT Detect Interrupt Enable.
   fields:
   - name: edie8
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 8
     bit_size: 1
-    enum: Edie
   - name: edie9
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 9
     bit_size: 1
-    enum: Edie
 fieldset/EdierMask00000fff:
   extends: EdierMask000003ff
   description: EFT Detect Interrupt Enable.
   fields:
   - name: edie10
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 10
     bit_size: 1
-    enum: Edie
   - name: edie11
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 11
     bit_size: 1
-    enum: Edie
 fieldset/EdierMask00f7ffc7:
   only_in: '^MCXN23[56]$'
   description: EFT Detect Interrupt Enable.
   fields:
   - name: edie0
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 0
     bit_size: 1
-    enum: Edie
   - name: edie1
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 1
     bit_size: 1
-    enum: Edie
   - name: edie2
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 2
     bit_size: 1
-    enum: Edie
   - name: edie6
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 6
     bit_size: 1
-    enum: Edie
   - name: edie7
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 7
     bit_size: 1
-    enum: Edie
   - name: edie8
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 8
     bit_size: 1
-    enum: Edie
   - name: edie9
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 9
     bit_size: 1
-    enum: Edie
   - name: edie10
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 10
     bit_size: 1
-    enum: Edie
   - name: edie11
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 11
     bit_size: 1
-    enum: Edie
   - name: edie12
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 12
     bit_size: 1
-    enum: Edie
   - name: edie13
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 13
     bit_size: 1
-    enum: Edie
   - name: edie14
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 14
     bit_size: 1
-    enum: Edie
   - name: edie15
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 15
     bit_size: 1
-    enum: Edie
   - name: edie16
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 16
     bit_size: 1
-    enum: Edie
   - name: edie17
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 17
     bit_size: 1
-    enum: Edie
   - name: edie18
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 18
     bit_size: 1
-    enum: Edie
   - name: edie20
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 20
     bit_size: 1
-    enum: Edie
   - name: edie21
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 21
     bit_size: 1
-    enum: Edie
   - name: edie22
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 22
     bit_size: 1
-    enum: Edie
   - name: edie23
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 23
     bit_size: 1
-    enum: Edie
 fieldset/EdierMask00fff0ff:
   extends: EdierMask000000ff
   description: EFT Detect Interrupt Enable.
   fields:
   - name: edie12
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 12
     bit_size: 1
-    enum: Edie
   - name: edie13
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 13
     bit_size: 1
-    enum: Edie
   - name: edie14
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 14
     bit_size: 1
-    enum: Edie
   - name: edie15
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 15
     bit_size: 1
-    enum: Edie
   - name: edie16
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 16
     bit_size: 1
-    enum: Edie
   - name: edie17
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 17
     bit_size: 1
-    enum: Edie
   - name: edie18
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 18
     bit_size: 1
-    enum: Edie
   - name: edie19
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 19
     bit_size: 1
-    enum: Edie
   - name: edie20
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 20
     bit_size: 1
-    enum: Edie
   - name: edie21
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 21
     bit_size: 1
-    enum: Edie
   - name: edie22
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 22
     bit_size: 1
-    enum: Edie
   - name: edie23
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 23
     bit_size: 1
-    enum: Edie
 fieldset/EdierMask00ffffff:
   only_in: '^MCXN(24[67]|5[0-9]{2}|94[67])$'
   extends: EdierMask00fff0ff
   description: EFT Detect Interrupt Enable.
   fields:
   - name: edie8
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 8
     bit_size: 1
-    enum: Edie
   - name: edie9
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 9
     bit_size: 1
-    enum: Edie
   - name: edie10
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 10
     bit_size: 1
-    enum: Edie
   - name: edie11
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 11
     bit_size: 1
-    enum: Edie
 fieldset/EdierMask3ffff0ff:
   only_in: '^MCXN23[56]$'
   extends: EdierMask00fff0ff
   description: EFT Detect Interrupt Enable.
   fields:
   - name: edie24
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 24
     bit_size: 1
-    enum: Edie
   - name: edie25
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 25
     bit_size: 1
-    enum: Edie
   - name: edie26
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 26
     bit_size: 1
-    enum: Edie
   - name: edie27
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 27
     bit_size: 1
-    enum: Edie
   - name: edie28
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 28
     bit_size: 1
-    enum: Edie
   - name: edie29
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 29
     bit_size: 1
-    enum: Edie
 fieldset/EdierMaskc00fffff:
   only_in: '^MCXN23[56]$'
   extends: EdierMask00000fff
   description: EFT Detect Interrupt Enable.
   fields:
   - name: edie12
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 12
     bit_size: 1
-    enum: Edie
   - name: edie13
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 13
     bit_size: 1
-    enum: Edie
   - name: edie14
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 14
     bit_size: 1
-    enum: Edie
   - name: edie15
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 15
     bit_size: 1
-    enum: Edie
   - name: edie16
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 16
     bit_size: 1
-    enum: Edie
   - name: edie17
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 17
     bit_size: 1
-    enum: Edie
   - name: edie18
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 18
     bit_size: 1
-    enum: Edie
   - name: edie19
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 19
     bit_size: 1
-    enum: Edie
   - name: edie30
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 30
     bit_size: 1
-    enum: Edie
   - name: edie31
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 31
     bit_size: 1
-    enum: Edie
 fieldset/EdierMaskc0ffffff:
   only_in: '^MCXN(24[67]|5[0-9]{2}|94[67])$'
   extends: EdierMask00ffffff
   description: EFT Detect Interrupt Enable.
   fields:
   - name: edie30
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 30
     bit_size: 1
-    enum: Edie
   - name: edie31
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 31
     bit_size: 1
-    enum: Edie
 fieldset/EdierMaskffffffff:
   only_in: '^MCXN(24[67]|5[0-9]{2}|94[67])$'
   extends: EdierMaskc0ffffff
   description: EFT Detect Interrupt Enable.
   fields:
   - name: edie24
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 24
     bit_size: 1
-    enum: Edie
   - name: edie25
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 25
     bit_size: 1
-    enum: Edie
   - name: edie26
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 26
     bit_size: 1
-    enum: Edie
   - name: edie27
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 27
     bit_size: 1
-    enum: Edie
   - name: edie28
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 28
     bit_size: 1
-    enum: Edie
   - name: edie29
-    description: EFT Detect Interrupt Enable.
+    description: "EFT Detect Interrupt Enable.\n\nRaw bit values: false (0) = Edie0: Interrupt not generated upon detection of the EFT event.; true (1) = Edie1: Interrupt generated upon detection of the EFT event."
     bit_offset: 29
     bit_size: 1
-    enum: Edie
 fieldset/GpchrPins:
   description: Global Pin Control High.
   fields:
@@ -863,85 +717,69 @@ fieldset/GpchrPins:
     bit_offset: 0
     bit_size: 16
   - name: gpwe16
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 16
     bit_size: 1
-    enum: Gpwe
   - name: gpwe17
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 17
     bit_size: 1
-    enum: Gpwe
   - name: gpwe18
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 18
     bit_size: 1
-    enum: Gpwe
   - name: gpwe19
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 19
     bit_size: 1
-    enum: Gpwe
   - name: gpwe20
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 20
     bit_size: 1
-    enum: Gpwe
   - name: gpwe21
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 21
     bit_size: 1
-    enum: Gpwe
   - name: gpwe22
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 22
     bit_size: 1
-    enum: Gpwe
   - name: gpwe23
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 23
     bit_size: 1
-    enum: Gpwe
   - name: gpwe24
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 24
     bit_size: 1
-    enum: Gpwe
   - name: gpwe25
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 25
     bit_size: 1
-    enum: Gpwe
   - name: gpwe26
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 26
     bit_size: 1
-    enum: Gpwe
   - name: gpwe27
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 27
     bit_size: 1
-    enum: Gpwe
   - name: gpwe28
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 28
     bit_size: 1
-    enum: Gpwe
   - name: gpwe29
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 29
     bit_size: 1
-    enum: Gpwe
   - name: gpwe30
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 30
     bit_size: 1
-    enum: Gpwe
   - name: gpwe31
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 31
     bit_size: 1
-    enum: Gpwe
 fieldset/GpclrPins:
   description: Global Pin Control Low.
   fields:
@@ -950,85 +788,69 @@ fieldset/GpclrPins:
     bit_offset: 0
     bit_size: 16
   - name: gpwe0
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 16
     bit_size: 1
-    enum: Gpwe
   - name: gpwe1
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 17
     bit_size: 1
-    enum: Gpwe
   - name: gpwe2
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 18
     bit_size: 1
-    enum: Gpwe
   - name: gpwe3
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 19
     bit_size: 1
-    enum: Gpwe
   - name: gpwe4
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 20
     bit_size: 1
-    enum: Gpwe
   - name: gpwe5
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 21
     bit_size: 1
-    enum: Gpwe
   - name: gpwe6
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 22
     bit_size: 1
-    enum: Gpwe
   - name: gpwe7
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 23
     bit_size: 1
-    enum: Gpwe
   - name: gpwe8
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 24
     bit_size: 1
-    enum: Gpwe
   - name: gpwe9
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 25
     bit_size: 1
-    enum: Gpwe
   - name: gpwe10
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 26
     bit_size: 1
-    enum: Gpwe
   - name: gpwe11
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 27
     bit_size: 1
-    enum: Gpwe
   - name: gpwe12
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 28
     bit_size: 1
-    enum: Gpwe
   - name: gpwe13
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 29
     bit_size: 1
-    enum: Gpwe
   - name: gpwe14
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 30
     bit_size: 1
-    enum: Gpwe
   - name: gpwe15
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 31
     bit_size: 1
-    enum: Gpwe
 fieldset/PcrMux4:
   extends: Pcr
   description: Pin Control.
@@ -1043,103 +865,57 @@ fieldset/PcrPfeMux4:
   description: Pin Control.
   fields:
   - name: pfe
-    description: Passive Filter Enable.
+    description: "Passive Filter Enable.\n\nRaw bit values: false (0) = Pfe0: Disables.; true (1) = Pfe1: Enables."
     bit_offset: 4
     bit_size: 1
-    enum: Pfe
 fieldset/PcrPvPfeMux2:
   description: Pin Control.
   fields:
   - name: ps
-    description: Pull Select.
+    description: "Pull Select.\n\nRaw bit values: false (0) = Ps0: Enables internal pulldown resistor.; true (1) = Ps1: Enables internal pullup resistor."
     bit_offset: 0
     bit_size: 1
-    enum: Ps
   - name: pe
-    description: Pull Enable.
+    description: "Pull Enable.\n\nRaw bit values: false (0) = Pe0: Disables.; true (1) = Pe1: Enables."
     bit_offset: 1
     bit_size: 1
-    enum: Pe
   - name: pv
-    description: Pull Value.
+    description: "Pull Value.\n\nRaw bit values: false (0) = Pv0: Low.; true (1) = Pv1: High."
     bit_offset: 2
     bit_size: 1
-    enum: Pv
   - name: pfe
-    description: Passive Filter Enable.
+    description: "Passive Filter Enable.\n\nRaw bit values: false (0) = Pfe0: Disables.; true (1) = Pfe1: Enables."
     bit_offset: 4
     bit_size: 1
-    enum: Pfe
   - name: ode
-    description: Open Drain Enable.
+    description: "Open Drain Enable.\n\nRaw bit values: false (0) = Ode0: Disables.; true (1) = Ode1: Enables."
     bit_offset: 5
     bit_size: 1
-    enum: Ode
   - name: mux
     description: Pin Multiplex Control.
     bit_offset: 8
     bit_size: 2
     enum: Mux2
   - name: ibe
-    description: Input Buffer Enable.
+    description: "Input Buffer Enable.\n\nRaw bit values: false (0) = Ibe0: Disables.; true (1) = Ibe1: Enables."
     bit_offset: 12
     bit_size: 1
-    enum: Ibe
   - name: inv
-    description: Invert Input.
+    description: "Invert Input.\n\nRaw bit values: false (0) = Inv0: Does not invert.; true (1) = Inv1: Inverts."
     bit_offset: 13
     bit_size: 1
-    enum: Inv
   - name: lk
-    description: Lock Register.
+    description: "Lock Register.\n\nRaw bit values: false (0) = Lk0: Does not lock.; true (1) = Lk1: Locks."
     bit_offset: 15
     bit_size: 1
-    enum: Lk
 fieldset/PcrPvPfeMux4:
   extends: PcrPfeMux4
   description: Pin Control.
   fields:
   - name: pv
-    description: Pull Value.
+    description: "Pull Value.\n\nRaw bit values: false (0) = Pv0: Low.; true (1) = Pv1: High."
     bit_offset: 2
     bit_size: 1
-    enum: Pv
-enum/Edf:
-  bit_size: 1
-  variants:
-  - name: Edie0
-    description: No EFT event detected.
-    value: 0
-  - name: Edie1
-    description: High or/and low EFT event detected.
-    value: 1
-enum/Edhc:
-  bit_size: 1
-  variants:
-  - name: Edhc0
-    description: Does not clear.
-    value: 0
-  - name: Edhc1
-    description: Clears.
-    value: 1
-enum/Edie:
-  bit_size: 1
-  variants:
-  - name: Edie0
-    description: Interrupt not generated upon detection of the EFT event.
-    value: 0
-  - name: Edie1
-    description: Interrupt generated upon detection of the EFT event.
-    value: 1
-enum/Edlc:
-  bit_size: 1
-  variants:
-  - name: Edlc0
-    description: Does not clear.
-    value: 0
-  - name: Edlc1
-    description: Clears.
-    value: 1
 enum/Mux2:
   bit_size: 2
   variants:
@@ -1200,21 +976,3 @@ enum/Mux4:
   - name: Mux1101
     description: Alternative 13 (chip-specific).
     value: 13
-enum/Pfe:
-  bit_size: 1
-  variants:
-  - name: Pfe0
-    description: Disables.
-    value: 0
-  - name: Pfe1
-    description: Enables.
-    value: 1
-enum/Pv:
-  bit_size: 1
-  variants:
-  - name: Pv0
-    description: Low.
-    value: 0
-  - name: Pv1
-    description: High.
-    value: 1

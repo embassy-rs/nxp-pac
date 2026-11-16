@@ -23,10 +23,9 @@ fieldset/OpampCtr:
     bit_offset: 0
     bit_size: 1
   - name: mode
-    description: Mode Selection.
+    description: "Mode Selection.\n\nRaw bit values: false (0) = Low: High performance mode.; true (1) = High: Low power mode."
     bit_offset: 1
     bit_size: 1
-    enum: Mode
   - name: biasc
     description: Bias Current Trim Selection.
     bit_offset: 2
@@ -42,15 +41,13 @@ fieldset/OpampCtr:
     bit_offset: 8
     bit_size: 1
   - name: inpsel
-    description: Positive Input Channel Selection.
+    description: "Positive Input Channel Selection.\n\nRaw bit values: false (0) = Inp0: When OPAMP is not in trigger mode, select positive input 0 (INP0).; true (1) = Inp1: When OPAMP is not in trigger mode, select positive input 1 (INP1)."
     bit_offset: 9
     bit_size: 1
-    enum: Inpsel
   - name: inpf
-    description: Positive Input Connection Status.
+    description: "Positive Input Connection Status.\n\nRaw bit values: false (0) = Inp0: Positive input 0 (INP0).; true (1) = Inp1: Positive input 1 (INP1)."
     bit_offset: 12
     bit_size: 1
-    enum: Inpf
   - name: bufen
     description: Reference Buffer.
     bit_offset: 16
@@ -86,10 +83,9 @@ fieldset/Param:
   description: Parameter.
   fields:
   - name: pga_function
-    description: PGA Function Option.
+    description: "PGA Function Option.\n\nRaw bit values: false (0) = CoreAmp: Core amplifier enabled.; true (1) = Pga: PGA function enabled."
     bit_offset: 0
     bit_size: 1
-    enum: PgaFunction
 fieldset/Verid:
   description: Version ID.
   fields:
@@ -120,24 +116,6 @@ enum/Biasc:
   - name: FurDec
     description: Further decrease current.
     value: 3
-enum/Inpf:
-  bit_size: 1
-  variants:
-  - name: Inp0
-    description: Positive input 0 (INP0).
-    value: 0
-  - name: Inp1
-    description: Positive input 1 (INP1).
-    value: 1
-enum/Inpsel:
-  bit_size: 1
-  variants:
-  - name: Inp0
-    description: When OPAMP is not in trigger mode, select positive input 0 (INP0).
-    value: 0
-  - name: Inp1
-    description: When OPAMP is not in trigger mode, select positive input 1 (INP1).
-    value: 1
 enum/Intref:
   bit_size: 2
   variants:
@@ -153,15 +131,6 @@ enum/Intref:
   - name: Not
     description: Not allowed.
     value: 3
-enum/Mode:
-  bit_size: 1
-  variants:
-  - name: Low
-    description: High performance mode.
-    value: 0
-  - name: High
-    description: Low power mode.
-    value: 1
 enum/Ngain:
   bit_size: 3
   variants:
@@ -189,15 +158,6 @@ enum/Ngain:
   - name: G64
     description: Ngain=64.
     value: 7
-enum/PgaFunction:
-  bit_size: 1
-  variants:
-  - name: CoreAmp
-    description: Core amplifier enabled.
-    value: 0
-  - name: Pga
-    description: PGA function enabled.
-    value: 1
 enum/Pgain:
   bit_size: 3
   variants:

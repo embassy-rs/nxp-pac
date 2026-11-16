@@ -203,7 +203,6 @@ fieldset/RemapA3:
     bit_size: 2
     enum: Usb0
   - name: lock
-    description: This 1-bit field provides a mechanism to limit writes to this register to protect its contents. Once set, this bit remains asserted until a system reset.
+    description: "This 1-bit field provides a mechanism to limit writes to this register to protect its contents. Once set, this bit remains asserted until a system reset.\n\nRaw bit values: false (0) = Lock0: This register is not locked and can be altered.; true (1) = Lock1: This register is locked and cannot be altered until a system reset."
     bit_offset: 31
     bit_size: 1
-    enum: ProtlvlLock

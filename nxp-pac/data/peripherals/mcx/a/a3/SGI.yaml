@@ -511,15 +511,13 @@ fieldset/SgiCtrl:
   description: SGI Control register.
   fields:
   - name: start
-    description: Start crypto operation.
+    description: "Start crypto operation.\n\nRaw bit values: false (0) = NoEffect: Clr has no effect.; true (1) = StartOp: Set to start operation."
     bit_offset: 0
     bit_size: 1
-    enum: Start
   - name: decrypt
-    description: Sets Cipher direction(AES and DES).
+    description: "Sets Cipher direction(AES and DES).\n\nRaw bit values: false (0) = Enc: Encryption.; true (1) = Dec: Decryption."
     bit_offset: 1
     bit_size: 1
-    enum: Decrypt
   - name: aeskeysz
     description: Sets AES key size.
     bit_offset: 2
@@ -566,40 +564,34 @@ fieldset/SgiCtrl:
     bit_offset: 20
     bit_size: 5
   - name: tdeskey
-    description: Triple-DES Key Configuration.
+    description: "Triple-DES Key Configuration.\n\nRaw bit values: false (0) = TwoKey: 2-key TDES.; true (1) = ThreeKey: 3-key TDES."
     bit_offset: 25
     bit_size: 1
-    enum: Tdeskey
   - name: aes_no_kl
-    description: AES No decryption key schedule.
+    description: "AES No decryption key schedule.\n\nRaw bit values: false (0) = New: new AES key will be loaded.; true (1) = No: No AES key will be loaded, and previously loaded key will be used."
     bit_offset: 26
     bit_size: 1
-    enum: AesNoKl
   - name: aes_sel
-    description: AES Dual Selection.
+    description: "AES Dual Selection.\n\nRaw bit values: false (0) = FirstAes: First AES selected.; true (1) = SecondAes: Second AES selected (when enabled)."
     bit_offset: 27
     bit_size: 1
-    enum: AesSel
   bit_size: 32
   reset_value: 0
 fieldset/SgiCtrl2:
   description: SGI Control register 2.
   fields:
   - name: flush
-    description: Start Full SGI Flush.
+    description: "Start Full SGI Flush.\n\nRaw bit values: false (0) = NoEffect: Clr has no effect.; true (1) = Flush: Set to start flush."
     bit_offset: 0
     bit_size: 1
-    enum: Flush
   - name: key_flush
-    description: Start KEY register-bank Flush.
+    description: "Start KEY register-bank Flush.\n\nRaw bit values: false (0) = NoEffect: Clr has no effect.; true (1) = Flush: Set to start flush."
     bit_offset: 1
     bit_size: 1
-    enum: Flush
   - name: datin_flush
-    description: Start DATIN register-bank Flush.
+    description: "Start DATIN register-bank Flush.\n\nRaw bit values: false (0) = NoEffect: Clr has no effect.; true (1) = Flush: Set to start flush."
     bit_offset: 2
     bit_size: 1
-    enum: Flush
   - name: incr
     description: Increment(Triggered by SFR write).
     bit_offset: 3
@@ -613,24 +605,21 @@ fieldset/SgiCtrl2:
     bit_offset: 5
     bit_size: 1
   - name: incr_cin
-    description: Increment Carry-In control.
+    description: "Increment Carry-In control.\n\nRaw bit values: false (0) = IncrOne: Carry-In for INCR is 1.; true (1) = IncrPrevious: Carry-In for INCR is overflow from previous INCR operation."
     bit_offset: 6
     bit_size: 1
-    enum: IncrCin
   - name: smasken
     description: SFRMASK Enable.
     bit_offset: 8
     bit_size: 1
   - name: smaskstep
-    description: SFRSEED increment control.
+    description: "SFRSEED increment control.\n\nRaw bit values: false (0) = Regbank: SFRSEED increments every regbank access.; true (1) = RegbankAndPlus: SFRSEED increments every regbank access PLUS when SFRSEED in read."
     bit_offset: 9
     bit_size: 1
-    enum: Smaskstep
   - name: smasksw
-    description: SFRMASK MASK control.
+    description: "SFRMASK MASK control.\n\nRaw bit values: false (0) = Hw: SFR MASK output directly controlled by HW mask generator.; true (1) = Sw: SFR MASK output directly controlled by SW."
     bit_offset: 10
     bit_size: 1
-    enum: Smasksw
   - name: movem
     description: 4-bit optional input for MOVEM feature.
     bit_offset: 12
@@ -640,15 +629,13 @@ fieldset/SgiCtrl2:
     bit_offset: 16
     bit_size: 5
   - name: rkey
-    description: Crypto result location.
+    description: "Crypto result location.\n\nRaw bit values: false (0) = Datout: DATOUT register bank.; true (1) = Key: KEY register bank."
     bit_offset: 21
     bit_size: 1
-    enum: Rkey
   - name: bytes_order
-    description: Byte order of regbank read/write data.
+    description: "Byte order of regbank read/write data.\n\nRaw bit values: false (0) = NormalOrder: Normal.; true (1) = SwappedOrder: Swapped."
     bit_offset: 22
     bit_size: 1
-    enum: BytesOrder
   - name: gcm_inxor
     description: GCM INXOR.
     bit_offset: 23
@@ -1244,10 +1231,9 @@ fieldset/SgiSha2Ctrl:
     bit_offset: 0
     bit_size: 1
   - name: sha2_mode
-    description: SHA mode normal or automatic.
+    description: "SHA mode normal or automatic.\n\nRaw bit values: false (0) = Normal: SHA NORM Mode.; true (1) = Auto: SHA AUTO Mode."
     bit_offset: 1
     bit_size: 1
-    enum: Sha2Mode
   - name: sha2_size
     description: Indicates SHA size.
     bit_offset: 2
@@ -1262,24 +1248,21 @@ fieldset/SgiSha2Ctrl:
     bit_offset: 8
     bit_size: 4
   - name: sha2_count_en
-    description: SHA Calculation counter enable.
+    description: "SHA Calculation counter enable.\n\nRaw bit values: false (0) = Count: SHA operation DOES NOT increment COUNT.; true (1) = NoCount: SHA operation DOES increment count."
     bit_offset: 12
     bit_size: 1
-    enum: Sha2CountEn
   - name: hash_reload
     description: SHA HASH reload.
     bit_offset: 13
     bit_size: 1
   - name: sha2_stop
-    description: STOP SHA AUTO mode.
+    description: "STOP SHA AUTO mode.\n\nRaw bit values: false (0) = Running: Keep running.; true (1) = Stop: Stop auto mode."
     bit_offset: 14
     bit_size: 1
-    enum: Sha2Stop
   - name: no_auto_init
-    description: SHA no automatic HASH initialisation.
+    description: "SHA no automatic HASH initialisation.\n\nRaw bit values: false (0) = ShaInit: SHA automatic HASH initialisation.; true (1) = NoShaInit: No SHA automatic HASH initialisation."
     bit_offset: 15
     bit_size: 1
-    enum: NoAutoInit
   bit_size: 32
   reset_value: 3840
 fieldset/SgiShaFifo:
@@ -1379,24 +1362,6 @@ enum/AesKeysize:
   - name: AllKeysize
     description: All key sizes.
     value: 3
-enum/AesNoKl:
-  bit_size: 1
-  variants:
-  - name: New
-    description: new AES key will be loaded.
-    value: 0
-  - name: 'No'
-    description: No AES key will be loaded, and previously loaded key will be used.
-    value: 1
-enum/AesSel:
-  bit_size: 1
-  variants:
-  - name: FirstAes
-    description: First AES selected.
-    value: 0
-  - name: SecondAes
-    description: Second AES selected (when enabled).
-    value: 1
 enum/AesUsed:
   bit_size: 4
   variants:
@@ -1460,15 +1425,6 @@ enum/Aeskeysz:
   - name: Rfu
     description: RFU (defaults to AES-128).
     value: 3
-enum/BytesOrder:
-  bit_size: 1
-  variants:
-  - name: NormalOrder
-    description: Normal.
-    value: 0
-  - name: SwappedOrder
-    description: Swapped.
-    value: 1
 enum/Cmd:
   bit_size: 8
   variants:
@@ -1532,15 +1488,6 @@ enum/DatoutRes:
   - name: NoUp
     description: NO_UP.
     value: 3
-enum/Decrypt:
-  bit_size: 1
-  variants:
-  - name: Enc
-    description: Encryption.
-    value: 0
-  - name: Dec
-    description: Decryption.
-    value: 1
 enum/DesUsed:
   bit_size: 4
   variants:
@@ -1601,24 +1548,6 @@ enum/Error:
   - name: NoError
     description: No error.
     value: 5
-enum/Flush:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: Clr has no effect.
-    value: 0
-  - name: Flush
-    description: Set to start flush.
-    value: 1
-enum/IncrCin:
-  bit_size: 1
-  variants:
-  - name: IncrOne
-    description: Carry-In for INCR is 1.
-    value: 0
-  - name: IncrPrevious
-    description: Carry-In for INCR is overflow from previous INCR operation.
-    value: 1
 enum/IncrMode:
   bit_size: 2
   variants:
@@ -1700,15 +1629,6 @@ enum/Milestone:
   - name: Go
     description: GO.
     value: 3
-enum/NoAutoInit:
-  bit_size: 1
-  variants:
-  - name: ShaInit
-    description: SHA automatic HASH initialisation.
-    value: 0
-  - name: NoShaInit
-    description: No SHA automatic HASH initialisation.
-    value: 1
 enum/Outsel:
   bit_size: 3
   variants:
@@ -1736,33 +1656,6 @@ enum/Outsel:
   - name: Others7
     description: others - DATOUT = 'Kernel Res' * - only if DATIN[num] exists, else [0].
     value: 7
-enum/Rkey:
-  bit_size: 1
-  variants:
-  - name: Datout
-    description: DATOUT register bank.
-    value: 0
-  - name: Key
-    description: KEY register bank.
-    value: 1
-enum/Sha2CountEn:
-  bit_size: 1
-  variants:
-  - name: Count
-    description: SHA operation DOES NOT increment COUNT.
-    value: 0
-  - name: NoCount
-    description: SHA operation DOES increment count.
-    value: 1
-enum/Sha2Mode:
-  bit_size: 1
-  variants:
-  - name: Normal
-    description: SHA NORM Mode.
-    value: 0
-  - name: Auto
-    description: SHA AUTO Mode.
-    value: 1
 enum/Sha2Size:
   bit_size: 2
   variants:
@@ -1778,48 +1671,3 @@ enum/Sha2Size:
   - name: Sha512
     description: SHA-512 (or SHA-256 if SHA-256 only).
     value: 3
-enum/Sha2Stop:
-  bit_size: 1
-  variants:
-  - name: Running
-    description: Keep running.
-    value: 0
-  - name: Stop
-    description: Stop auto mode.
-    value: 1
-enum/Smaskstep:
-  bit_size: 1
-  variants:
-  - name: Regbank
-    description: SFRSEED increments every regbank access.
-    value: 0
-  - name: RegbankAndPlus
-    description: SFRSEED increments every regbank access PLUS when SFRSEED in read.
-    value: 1
-enum/Smasksw:
-  bit_size: 1
-  variants:
-  - name: Hw
-    description: SFR MASK output directly controlled by HW mask generator.
-    value: 0
-  - name: Sw
-    description: SFR MASK output directly controlled by SW.
-    value: 1
-enum/Start:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: Clr has no effect.
-    value: 0
-  - name: StartOp
-    description: Set to start operation.
-    value: 1
-enum/Tdeskey:
-  bit_size: 1
-  variants:
-  - name: TwoKey
-    description: 2-key TDES.
-    value: 0
-  - name: ThreeKey
-    description: 3-key TDES.
-    value: 1

@@ -41,10 +41,9 @@ fieldset/Cr:
   description: Control.
   fields:
   - name: swr
-    description: Software Reset.
+    description: "Software Reset.\n\nRaw bit values: false (0) = NoEffect: No effect.; true (1) = SwReset: Perform a software reset."
     bit_offset: 0
     bit_size: 1
-    enum: Swr
   - name: den
     description: Digital Tamper Enable.
     bit_offset: 1
@@ -54,15 +53,13 @@ fieldset/Cr:
     bit_offset: 2
     bit_size: 1
   - name: um
-    description: Update Mode.
+    description: "Update Mode.\n\nRaw bit values: false (0) = NoEffect: No effect.; true (1) = ClearInts: Allows the clearing of interrupts."
     bit_offset: 3
     bit_size: 1
-    enum: Um
   - name: distam
-    description: Disable Prescaler On Tamper.
+    description: "Disable Prescaler On Tamper.\n\nRaw bit values: false (0) = NoEffect: No effect.; true (1) = AutoDis: Automatically disables the prescaler after tamper detection."
     bit_offset: 8
     bit_size: 1
-    enum: Distam
   - name: dpr
     description: Digital Tamper Prescaler.
     bit_offset: 17
@@ -150,70 +147,57 @@ fieldset/Lr:
   description: Lock.
   fields:
   - name: crl
-    description: Control Register Lock.
+    description: "Control Register Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 4
     bit_size: 1
-    enum: Crl
   - name: srl
-    description: Status Register Lock.
+    description: "Status Register Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 5
     bit_size: 1
-    enum: Crl
   - name: lrl
-    description: Lock Register Lock.
+    description: "Lock Register Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 6
     bit_size: 1
-    enum: Crl
   - name: iel
-    description: Interrupt Enable Lock.
+    description: "Interrupt Enable Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 7
     bit_size: 1
-    enum: Crl
   - name: tsl
-    description: Tamper Seconds Lock.
+    description: "Tamper Seconds Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 8
     bit_size: 1
-    enum: Crl
   - name: tel
-    description: Tamper Enable Lock.
+    description: "Tamper Enable Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 9
     bit_size: 1
-    enum: Crl
   - name: ppl
-    description: Pin Polarity Lock.
+    description: "Pin Polarity Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 11
     bit_size: 1
-    enum: Crl
   - name: gfl0
-    description: Glitch Filter Lock.
+    description: "Glitch Filter Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 16
     bit_size: 1
-    enum: Crl
   - name: gfl1
-    description: Glitch Filter Lock.
+    description: "Glitch Filter Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 17
     bit_size: 1
-    enum: Crl
   - name: gfl2
-    description: Glitch Filter Lock.
+    description: "Glitch Filter Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 18
     bit_size: 1
-    enum: Crl
   - name: gfl3
-    description: Glitch Filter Lock.
+    description: "Glitch Filter Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 19
     bit_size: 1
-    enum: Crl
   - name: gfl4
-    description: Glitch Filter Lock.
+    description: "Glitch Filter Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 20
     bit_size: 1
-    enum: Crl
   - name: gfl5
-    description: Glitch Filter Lock.
+    description: "Glitch Filter Lock.\n\nRaw bit values: false (0) = Lock: Locked and writes are ignored.; true (1) = NotLock: Not locked and writes complete as normal."
     bit_offset: 21
     bit_size: 1
-    enum: Crl
   bit_size: 32
   reset_value: 4131824
 fieldset/Pgfr:
@@ -224,15 +208,13 @@ fieldset/Pgfr:
     bit_offset: 0
     bit_size: 6
   - name: gfp
-    description: Glitch Filter Prescaler.
+    description: "Glitch Filter Prescaler.\n\nRaw bit values: false (0) = Freq512Hz: 256 Hz prescaler clock.; true (1) = Freq32Khz: 16.384 kHz clock."
     bit_offset: 6
     bit_size: 1
-    enum: Gfp
   - name: gfe
-    description: Glitch Filter Enable.
+    description: "Glitch Filter Enable.\n\nRaw bit values: false (0) = Bypass: Bypasses.; true (1) = Enable: Enables."
     bit_offset: 7
     bit_size: 1
-    enum: Gfe
   - name: tpsw
     description: Tamper Pin Sample Width.
     bit_offset: 8
@@ -248,10 +230,9 @@ fieldset/Pgfr:
     bit_offset: 24
     bit_size: 1
   - name: tps
-    description: Tamper Pull Select.
+    description: "Tamper Pull Select.\n\nRaw bit values: false (0) = Assert: Asserts.; true (1) = Negate: Negates."
     bit_offset: 25
     bit_size: 1
-    enum: Tps
   bit_size: 32
   reset_value: 0
 fieldset/Ppr:
@@ -282,35 +263,29 @@ fieldset/Ppr:
     bit_offset: 5
     bit_size: 1
   - name: tpid0
-    description: Tamper Pin n Input Data.
+    description: "Tamper Pin n Input Data.\n\nRaw bit values: false (0) = Zero: Zero.; true (1) = One: One."
     bit_offset: 16
     bit_size: 1
-    enum: Tpid0
   - name: tpid1
-    description: Tamper Pin n Input Data.
+    description: "Tamper Pin n Input Data.\n\nRaw bit values: false (0) = Zero: Zero.; true (1) = One: One."
     bit_offset: 17
     bit_size: 1
-    enum: Tpid0
   - name: tpid2
-    description: Tamper Pin n Input Data.
+    description: "Tamper Pin n Input Data.\n\nRaw bit values: false (0) = Zero: Zero.; true (1) = One: One."
     bit_offset: 18
     bit_size: 1
-    enum: Tpid0
   - name: tpid3
-    description: Tamper Pin n Input Data.
+    description: "Tamper Pin n Input Data.\n\nRaw bit values: false (0) = Zero: Zero.; true (1) = One: One."
     bit_offset: 19
     bit_size: 1
-    enum: Tpid0
   - name: tpid4
-    description: Tamper Pin n Input Data.
+    description: "Tamper Pin n Input Data.\n\nRaw bit values: false (0) = Zero: Zero.; true (1) = One: One."
     bit_offset: 20
     bit_size: 1
-    enum: Tpid0
   - name: tpid5
-    description: Tamper Pin n Input Data.
+    description: "Tamper Pin n Input Data.\n\nRaw bit values: false (0) = Zero: Zero.; true (1) = One: One."
     bit_offset: 21
     bit_size: 1
-    enum: Tpid0
   bit_size: 32
   reset_value: 0
 fieldset/Sr:
@@ -476,69 +451,6 @@ fieldset/Tsr:
     bit_size: 32
   bit_size: 32
   reset_value: 0
-enum/Crl:
-  bit_size: 1
-  variants:
-  - name: Lock
-    description: Locked and writes are ignored.
-    value: 0
-  - name: NotLock
-    description: Not locked and writes complete as normal.
-    value: 1
-enum/Distam:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: No effect.
-    value: 0
-  - name: AutoDis
-    description: Automatically disables the prescaler after tamper detection.
-    value: 1
-enum/Gfe:
-  bit_size: 1
-  variants:
-  - name: Bypass
-    description: Bypasses.
-    value: 0
-  - name: Enable
-    description: Enables.
-    value: 1
-enum/Gfp:
-  bit_size: 1
-  variants:
-  - name: Freq512Hz
-    description: 256 Hz prescaler clock.
-    value: 0
-  - name: Freq32Khz
-    description: 16.384 kHz clock.
-    value: 1
-enum/Swr:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: No effect.
-    value: 0
-  - name: SwReset
-    description: Perform a software reset.
-    value: 1
-enum/Tpid0:
-  bit_size: 1
-  variants:
-  - name: Zero
-    description: Zero.
-    value: 0
-  - name: One
-    description: One.
-    value: 1
-enum/Tps:
-  bit_size: 1
-  variants:
-  - name: Assert
-    description: Asserts.
-    value: 0
-  - name: Negate
-    description: Negates.
-    value: 1
 enum/Tpsf:
   bit_size: 2
   variants:
@@ -569,12 +481,3 @@ enum/Tpsw:
   - name: Cycles8
     description: 8 cycles for pull enable and 4 cycles for input buffer enable.
     value: 3
-enum/Um:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: No effect.
-    value: 0
-  - name: ClearInts
-    description: Allows the clearing of interrupts.
-    value: 1

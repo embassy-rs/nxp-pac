@@ -236,20 +236,17 @@ fieldset/MrccAdc0Clkdiv:
     bit_offset: 0
     bit_size: 4
   - name: reset
-    description: Reset divider counter.
+    description: "Reset divider counter.\n\nRaw bit values: false (0) = On: Divider isn't reset.; true (1) = Off: Divider is reset."
     bit_offset: 29
     bit_size: 1
-    enum: MrccAdc0ClkdivReset
   - name: halt
-    description: Halt divider counter.
+    description: "Halt divider counter.\n\nRaw bit values: false (0) = On: Divider clock is running.; true (1) = Off: Divider clock is stopped."
     bit_offset: 30
     bit_size: 1
-    enum: MrccAdc0ClkdivHalt
   - name: unstab
-    description: Divider status flag.
+    description: "Divider status flag.\n\nRaw bit values: false (0) = On: Divider clock is stable.; true (1) = Off: Clock frequency isn't stable."
     bit_offset: 31
     bit_size: 1
-    enum: MrccAdc0ClkdivUnstab
   reset_value: 1073741824
 fieldset/MrccAdc0Clksel:
   description: ADC0 clock selection control.
@@ -268,20 +265,17 @@ fieldset/MrccClkoutClkdiv:
     bit_offset: 0
     bit_size: 4
   - name: reset
-    description: Reset divider counter.
+    description: "Reset divider counter.\n\nRaw bit values: false (0) = On: Divider isn't reset.; true (1) = Off: Divider is reset."
     bit_offset: 29
     bit_size: 1
-    enum: MrccAdc0ClkdivReset
   - name: halt
-    description: Halt divider counter.
+    description: "Halt divider counter.\n\nRaw bit values: false (0) = On: Divider clock is running.; true (1) = Off: Divider clock is stopped."
     bit_offset: 30
     bit_size: 1
-    enum: MrccAdc0ClkdivHalt
   - name: unstab
-    description: Divider status flag.
+    description: "Divider status flag.\n\nRaw bit values: false (0) = On: Divider clock is stable.; true (1) = Off: Clock frequency is not stable."
     bit_offset: 31
     bit_size: 1
-    enum: MrccClkoutClkdivUnstab
   reset_value: 1073741824
 fieldset/MrccClkoutClksel:
   description: CLKOUT clock selection control.
@@ -300,20 +294,17 @@ fieldset/MrccCmp0RrClkdiv:
     bit_offset: 0
     bit_size: 2
   - name: reset
-    description: Reset divider counter.
+    description: "Reset divider counter.\n\nRaw bit values: false (0) = On: Divider isn't reset.; true (1) = Off: Divider is reset."
     bit_offset: 29
     bit_size: 1
-    enum: MrccAdc0ClkdivReset
   - name: halt
-    description: Halt divider counter.
+    description: "Halt divider counter.\n\nRaw bit values: false (0) = On: Divider clock is running.; true (1) = Off: Divider clock is stopped."
     bit_offset: 30
     bit_size: 1
-    enum: MrccAdc0ClkdivHalt
   - name: unstab
-    description: Divider status flag.
+    description: "Divider status flag.\n\nRaw bit values: false (0) = On: Divider clock is stable.; true (1) = Off: Clock frequency isn't stable."
     bit_offset: 31
     bit_size: 1
-    enum: MrccAdc0ClkdivUnstab
   reset_value: 1073741824
 fieldset/MrccCmp0RrClksel:
   description: CMP0_RR clock selection control.
@@ -350,10 +341,9 @@ fieldset/MrccFroHfDivClkdiv:
     bit_offset: 0
     bit_size: 4
   - name: unstab
-    description: Divider status flag.
+    description: "Divider status flag.\n\nRaw bit values: false (0) = On: Divider clock is stable.; true (1) = Off: Clock frequency isn't stable."
     bit_offset: 31
     bit_size: 1
-    enum: MrccAdc0ClkdivUnstab
   reset_value: 0
 fieldset/MrccGlbAcc0:
   description: Control Automatic Clock Gating 0.
@@ -863,48 +853,18 @@ fieldset/MrccWwdt0Clkdiv:
     bit_offset: 0
     bit_size: 4
   - name: reset
-    description: Reset divider counter.
+    description: "Reset divider counter.\n\nRaw bit values: false (0) = On: Divider isn't reset.; true (1) = Off: Divider is reset."
     bit_offset: 29
     bit_size: 1
-    enum: MrccAdc0ClkdivReset
   - name: halt
-    description: Halt divider counter.
+    description: "Halt divider counter.\n\nRaw bit values: false (0) = On: Divider clock is running.; true (1) = Off: Divider clock is stopped."
     bit_offset: 30
     bit_size: 1
-    enum: MrccAdc0ClkdivHalt
   - name: unstab
-    description: Divider status flag.
+    description: "Divider status flag.\n\nRaw bit values: false (0) = On: Divider clock is stable.; true (1) = Off: Clock frequency isn't stable."
     bit_offset: 31
     bit_size: 1
-    enum: MrccAdc0ClkdivUnstab
   reset_value: 0
-enum/MrccAdc0ClkdivHalt:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is running.
-    value: 0
-  - name: 'Off'
-    description: Divider clock is stopped.
-    value: 1
-enum/MrccAdc0ClkdivReset:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider isn't reset.
-    value: 0
-  - name: 'Off'
-    description: Divider is reset.
-    value: 1
-enum/MrccAdc0ClkdivUnstab:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is stable.
-    value: 0
-  - name: 'Off'
-    description: Clock frequency isn't stable.
-    value: 1
 enum/MrccAdc0ClkselMux:
   bit_size: 3
   variants:
@@ -920,15 +880,6 @@ enum/MrccAdc0ClkselMux:
   - name: ClkrootFunc5
     description: CLK_1M.
     value: 5
-enum/MrccClkoutClkdivUnstab:
-  bit_size: 1
-  variants:
-  - name: 'On'
-    description: Divider clock is stable.
-    value: 0
-  - name: 'Off'
-    description: Clock frequency is not stable.
-    value: 1
 enum/MrccClkoutClkselMux:
   bit_size: 3
   variants:

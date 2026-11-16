@@ -39,15 +39,13 @@ fieldset/Csw:
     bit_offset: 3
     bit_size: 1
   - name: soft_reset
-    description: Soft Reset.
+    description: "Soft Reset.\n\nRaw bit values: false (0) = NoEff: No effect.; true (1) = Reset: Reset."
     bit_offset: 4
     bit_size: 1
-    enum: SoftReset
   - name: chip_reset_req
-    description: Chip Reset Request.
+    description: "Chip Reset Request.\n\nRaw bit values: false (0) = NoEff: No effect.; true (1) = Reset: Reset."
     bit_offset: 5
     bit_size: 1
-    enum: SoftReset
   bit_size: 32
   reset_value: 0
 fieldset/Id:
@@ -77,12 +75,3 @@ fieldset/Return:
     bit_size: 32
   bit_size: 32
   reset_value: 0
-enum/SoftReset:
-  bit_size: 1
-  variants:
-  - name: NoEff
-    description: No effect.
-    value: 0
-  - name: Reset
-    description: Reset.
-    value: 1

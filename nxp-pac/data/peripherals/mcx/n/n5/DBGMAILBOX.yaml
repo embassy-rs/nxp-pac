@@ -40,25 +40,21 @@ fieldset/DbgmailboxAlphaFieldsetAlpha:
   description: Command and Status Word.
   fields:
   - name: resynch_req
-    description: Resynchronization Request.
+    description: "Resynchronization Request.\n\nRaw bit values: false (0) = NoRequest: No request.; true (1) = Request: Request for resynchronization."
     bit_offset: 0
     bit_size: 1
-    enum: DbgmailboxAlphaEnumDelta
   - name: req_pending
-    description: Request Pending.
+    description: "Request Pending.\n\nRaw bit values: false (0) = NoRequestPending: No request pending.; true (1) = RequestPending: Request for resynchronization pending."
     bit_offset: 1
     bit_size: 1
-    enum: DbgmailboxAlphaEnumCharlie
   - name: dbg_or_err
-    description: DBGMB Overrun Error.
+    description: "DBGMB Overrun Error.\n\nRaw bit values: false (0) = NoOverrunErr: No DBGMB Overrun error.; true (1) = OverrunErr: DBGMB overrun error. A DBGMB overrun occurred."
     bit_offset: 2
     bit_size: 1
-    enum: DbgmailboxAlphaEnumBravo
   - name: ahb_or_err
-    description: AHB Overrun Error.
+    description: "AHB Overrun Error.\n\nRaw bit values: false (0) = NoAhbOverrunErr: No AHB Overrun Error.; true (1) = AhbOverrunErr: AHB Overrun Error. An AHB overrun occurred."
     bit_offset: 3
     bit_size: 1
-    enum: DbgmailboxAlphaEnumAlpha
   - name: soft_reset
     description: Soft Reset.
     bit_offset: 4
@@ -89,39 +85,3 @@ fieldset/DbgmailboxAlphaFieldsetDelta:
     description: Return Value.
     bit_offset: 0
     bit_size: 32
-enum/DbgmailboxAlphaEnumAlpha:
-  bit_size: 1
-  variants:
-  - name: AhbOverrunErr
-    description: AHB Overrun Error. An AHB overrun occurred.
-    value: 1
-  - name: NoAhbOverrunErr
-    description: No AHB Overrun Error.
-    value: 0
-enum/DbgmailboxAlphaEnumBravo:
-  bit_size: 1
-  variants:
-  - name: NoOverrunErr
-    description: No DBGMB Overrun error.
-    value: 0
-  - name: OverrunErr
-    description: DBGMB overrun error. A DBGMB overrun occurred.
-    value: 1
-enum/DbgmailboxAlphaEnumCharlie:
-  bit_size: 1
-  variants:
-  - name: NoRequestPending
-    description: No request pending.
-    value: 0
-  - name: RequestPending
-    description: Request for resynchronization pending.
-    value: 1
-enum/DbgmailboxAlphaEnumDelta:
-  bit_size: 1
-  variants:
-  - name: NoRequest
-    description: No request.
-    value: 0
-  - name: Request
-    description: Request for resynchronization.
-    value: 1

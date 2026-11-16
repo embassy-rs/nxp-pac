@@ -198,11 +198,9 @@ fieldset/Config:
   reset_value: 8388608
   fields:
   - name: mode
-    description: 'MODE. Encodings: 0: Self-cap mode, this address is TSI_SEL_CONFIG; 1: Mutual-cap mode, this address
-      is TSI_MUL_CONFIG'
+    description: "MODE. Encodings: 0: Self-cap mode, this address is TSI_SEL_CONFIG; 1: Mutual-cap mode, this address is TSI_MUL_CONFIG\n\nRaw bit values: false (0) = SelfCap; true (1) = MutualCap"
     bit_offset: 0
     bit_size: 1
-    enum: ConfigMode
   - name: filter_trim
     description: 'FILTER_TRIM. Encodings: 0: filter bypass; 1: 5.3ns; 2: 21.1ns; 3: 25ns'
     bit_offset: 4
@@ -257,11 +255,9 @@ fieldset/ConfigMutual:
   reset_value: 671219838
   fields:
   - name: mode
-    description: 'MODE. Encodings: 0: Self-cap mode, this address is TSI_CONFIG for self-cap; 1: Mutual-cap mode,
-      this address is TSI_CONFIG for mutual-cap'
+    description: "MODE. Encodings: 0: Self-cap mode, this address is TSI_CONFIG for self-cap; 1: Mutual-cap mode, this address is TSI_CONFIG for mutual-cap\n\nRaw bit values: false (0) = SelfCap; true (1) = MutualCap"
     bit_offset: 0
     bit_size: 1
-    enum: ConfigMode
   - name: m_nmirror
     description: 'M_NMIRROR. Encodings: 0: m=1; 1: m=2; 2: m=3; 3: m=4 (default)'
     bit_offset: 1
@@ -852,13 +848,6 @@ fieldset/Test:
     description: 'RUN_CTRL. Encodings: 0: Gate analog switch clock; 1: Not gate analog switch clock'
     bit_offset: 21
     bit_size: 1
-enum/ConfigMode:
-  bit_size: 1
-  variants:
-  - name: SelfCap
-    value: 0
-  - name: MutualCap
-    value: 1
 enum/ConfigFilterTrim:
   bit_size: 2
   variants:

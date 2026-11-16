@@ -138,80 +138,72 @@ fieldset/MemnBlkCfgW:
     bit_size: 3
     enum: Mbacsel
   - name: nse0
-    description: NonSecure Enable for block B.
+    description: "NonSecure Enable for block B.\n\nRaw bit values: false (0) = Allowed: Secure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.; true (1) = Notallowed: Secure accesses to block B are not allowed, nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL])."
     bit_offset: 3
     bit_size: 1
-    enum: Nse
   - name: mbacsel1
     description: Memory Block Access Control Select for block B.
     bit_offset: 4
     bit_size: 3
     enum: Mbacsel
   - name: nse1
-    description: NonSecure Enable for block B.
+    description: "NonSecure Enable for block B.\n\nRaw bit values: false (0) = Allowed: Secure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.; true (1) = Notallowed: Secure accesses to block B are not allowed, nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL])."
     bit_offset: 7
     bit_size: 1
-    enum: Nse
   - name: mbacsel2
     description: Memory Block Access Control Select for block B.
     bit_offset: 8
     bit_size: 3
     enum: Mbacsel
   - name: nse2
-    description: NonSecure Enable for block B.
+    description: "NonSecure Enable for block B.\n\nRaw bit values: false (0) = Allowed: Secure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.; true (1) = Notallowed: Secure accesses to block B are not allowed, nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL])."
     bit_offset: 11
     bit_size: 1
-    enum: Nse
   - name: mbacsel3
     description: Memory Block Access Control Select for block B.
     bit_offset: 12
     bit_size: 3
     enum: Mbacsel
   - name: nse3
-    description: NonSecure Enable for block B.
+    description: "NonSecure Enable for block B.\n\nRaw bit values: false (0) = Allowed: Secure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.; true (1) = Notallowed: Secure accesses to block B are not allowed, nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL])."
     bit_offset: 15
     bit_size: 1
-    enum: Nse
   - name: mbacsel4
     description: Memory Block Access Control Select for block B.
     bit_offset: 16
     bit_size: 3
     enum: Mbacsel
   - name: nse4
-    description: NonSecure Enable for block B.
+    description: "NonSecure Enable for block B.\n\nRaw bit values: false (0) = Allowed: Secure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.; true (1) = Notallowed: Secure accesses to block B are not allowed, nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL])."
     bit_offset: 19
     bit_size: 1
-    enum: Nse
   - name: mbacsel5
     description: Memory Block Access Control Select for block B.
     bit_offset: 20
     bit_size: 3
     enum: Mbacsel
   - name: nse5
-    description: NonSecure Enable for block B.
+    description: "NonSecure Enable for block B.\n\nRaw bit values: false (0) = Allowed: Secure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.; true (1) = Notallowed: Secure accesses to block B are not allowed, nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL])."
     bit_offset: 23
     bit_size: 1
-    enum: Nse
   - name: mbacsel6
     description: Memory Block Access Control Select for block B.
     bit_offset: 24
     bit_size: 3
     enum: Mbacsel
   - name: nse6
-    description: NonSecure Enable for block B.
+    description: "NonSecure Enable for block B.\n\nRaw bit values: false (0) = Allowed: Secure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.; true (1) = Notallowed: Secure accesses to block B are not allowed, nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL])."
     bit_offset: 27
     bit_size: 1
-    enum: Nse
   - name: mbacsel7
     description: Memory Block Access Control Select for block B.
     bit_offset: 28
     bit_size: 3
     enum: Mbacsel
   - name: nse7
-    description: NonSecure Enable for block B.
+    description: "NonSecure Enable for block B.\n\nRaw bit values: false (0) = Allowed: Secure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.; true (1) = Notallowed: Secure accesses to block B are not allowed, nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL])."
     bit_offset: 31
     bit_size: 1
-    enum: Nse
   bit_size: 32
   reset_value: 0
 fieldset/Mem2BlkCfgW0:
@@ -223,40 +215,36 @@ fieldset/Mem2BlkCfgW0:
     bit_size: 3
     enum: Mbacsel
   - name: nse0
-    description: NonSecure Enable for block B.
+    description: "NonSecure Enable for block B.\n\nRaw bit values: false (0) = Allowed: Secure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.; true (1) = Notallowed: Secure accesses to block B are not allowed, nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL])."
     bit_offset: 3
     bit_size: 1
-    enum: Nse
   - name: mbacsel1
     description: Memory Block Access Control Select for block B.
     bit_offset: 4
     bit_size: 3
     enum: Mbacsel
   - name: nse1
-    description: NonSecure Enable for block B.
+    description: "NonSecure Enable for block B.\n\nRaw bit values: false (0) = Allowed: Secure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.; true (1) = Notallowed: Secure accesses to block B are not allowed, nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL])."
     bit_offset: 7
     bit_size: 1
-    enum: Nse
   - name: mbacsel2
     description: Memory Block Access Control Select for block B.
     bit_offset: 8
     bit_size: 3
     enum: Mbacsel
   - name: nse2
-    description: NonSecure Enable for block B.
+    description: "NonSecure Enable for block B.\n\nRaw bit values: false (0) = Allowed: Secure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.; true (1) = Notallowed: Secure accesses to block B are not allowed, nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL])."
     bit_offset: 11
     bit_size: 1
-    enum: Nse
   - name: mbacsel3
     description: Memory Block Access Control Select for block B.
     bit_offset: 12
     bit_size: 3
     enum: Mbacsel
   - name: nse3
-    description: NonSecure Enable for block B.
+    description: "NonSecure Enable for block B.\n\nRaw bit values: false (0) = Allowed: Secure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.; true (1) = Notallowed: Secure accesses to block B are not allowed, nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL])."
     bit_offset: 15
     bit_size: 1
-    enum: Nse
   bit_size: 32
   reset_value: 0
 fieldset/MemnGlbac0:
@@ -738,14 +726,3 @@ enum/Mbacsel:
   - name: Glbac7
     description: select MBC_MEMN_GLBAC7 access control policy for block B.
     value: 7
-enum/Nse:
-  bit_size: 1
-  variants:
-  - name: Allowed
-    description: Secure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]),
-      nonsecure accesses to block B are not allowed.
-    value: 0
-  - name: Notallowed
-    description: Secure accesses to block B are not allowed, nonsecure accesses to block B are based on corresponding
-      MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
-    value: 1

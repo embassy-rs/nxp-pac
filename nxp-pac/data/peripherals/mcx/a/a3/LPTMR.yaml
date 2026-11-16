@@ -40,45 +40,38 @@ fieldset/Csr:
   description: Control Status.
   fields:
   - name: ten
-    description: Timer Enable.
+    description: "Timer Enable.\n\nRaw bit values: false (0) = Ten0: Disable.; true (1) = Ten1: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Ten
   - name: tms
-    description: Timer Mode Select.
+    description: "Timer Mode Select.\n\nRaw bit values: false (0) = Tms0: Time Counter.; true (1) = Tms1: Pulse Counter."
     bit_offset: 1
     bit_size: 1
-    enum: Tms
   - name: tfc
-    description: Timer Free-Running Counter.
+    description: "Timer Free-Running Counter.\n\nRaw bit values: false (0) = Tfc0: Reset when TCF asserts.; true (1) = Tfc1: Reset on overflow."
     bit_offset: 2
     bit_size: 1
-    enum: Tfc
   - name: tpp
-    description: Timer Pin Polarity.
+    description: "Timer Pin Polarity.\n\nRaw bit values: false (0) = Tpp0: Active-high.; true (1) = Tpp1: Active-low."
     bit_offset: 3
     bit_size: 1
-    enum: Tpp
   - name: tps
     description: Timer Pin Select.
     bit_offset: 4
     bit_size: 2
     enum: Tps
   - name: tie
-    description: Timer Interrupt Enable.
+    description: "Timer Interrupt Enable.\n\nRaw bit values: false (0) = Tie0: Disable.; true (1) = Tie1: Enable."
     bit_offset: 6
     bit_size: 1
-    enum: Tie
   - name: tcf
-    description: Timer Compare Flag.
+    description: "Timer Compare Flag.\n\nRaw bit values: false (0) = Tcf0: CNR != (CMR + 1).; true (1) = Tcf1: CNR = (CMR + 1)."
     bit_offset: 7
     bit_size: 1
-    enum: Tcf
   - name: tdre
-    description: Timer DMA Request Enable.
+    description: "Timer DMA Request Enable.\n\nRaw bit values: false (0) = Trde0: Disable.; true (1) = Trde1: Enable."
     bit_offset: 8
     bit_size: 1
-    enum: Tdre
   bit_size: 32
   reset_value: 0
 fieldset/Psr:
@@ -90,10 +83,9 @@ fieldset/Psr:
     bit_size: 2
     enum: Pcs
   - name: pbyp
-    description: Prescaler and Glitch Filter Bypass.
+    description: "Prescaler and Glitch Filter Bypass.\n\nRaw bit values: false (0) = Pbyp0: Prescaler and glitch filter enable.; true (1) = Pbyp1: Prescaler and glitch filter bypass."
     bit_offset: 2
     bit_size: 1
-    enum: Pbyp
   - name: prescale
     description: Prescaler and Glitch Filter Value.
     bit_offset: 3
@@ -101,15 +93,6 @@ fieldset/Psr:
     enum: Prescale
   bit_size: 32
   reset_value: 0
-enum/Pbyp:
-  bit_size: 1
-  variants:
-  - name: Pbyp0
-    description: Prescaler and glitch filter enable.
-    value: 0
-  - name: Pbyp1
-    description: Prescaler and glitch filter bypass.
-    value: 1
 enum/Pcs:
   bit_size: 2
   variants:
@@ -191,69 +174,6 @@ enum/Prescale:
     description: Prescaler divides the prescaler clock by 65,536; glitch filter recognizes change on input pin after
       32,768 rising clock edges.
     value: 15
-enum/Tcf:
-  bit_size: 1
-  variants:
-  - name: Tcf0
-    description: CNR != (CMR + 1).
-    value: 0
-  - name: Tcf1
-    description: CNR = (CMR + 1).
-    value: 1
-enum/Tdre:
-  bit_size: 1
-  variants:
-  - name: Trde0
-    description: Disable.
-    value: 0
-  - name: Trde1
-    description: Enable.
-    value: 1
-enum/Ten:
-  bit_size: 1
-  variants:
-  - name: Ten0
-    description: Disable.
-    value: 0
-  - name: Ten1
-    description: Enable.
-    value: 1
-enum/Tfc:
-  bit_size: 1
-  variants:
-  - name: Tfc0
-    description: Reset when TCF asserts.
-    value: 0
-  - name: Tfc1
-    description: Reset on overflow.
-    value: 1
-enum/Tie:
-  bit_size: 1
-  variants:
-  - name: Tie0
-    description: Disable.
-    value: 0
-  - name: Tie1
-    description: Enable.
-    value: 1
-enum/Tms:
-  bit_size: 1
-  variants:
-  - name: Tms0
-    description: Time Counter.
-    value: 0
-  - name: Tms1
-    description: Pulse Counter.
-    value: 1
-enum/Tpp:
-  bit_size: 1
-  variants:
-  - name: Tpp0
-    description: Active-high.
-    value: 0
-  - name: Tpp1
-    description: Active-low.
-    value: 1
 enum/Tps:
   bit_size: 2
   variants:

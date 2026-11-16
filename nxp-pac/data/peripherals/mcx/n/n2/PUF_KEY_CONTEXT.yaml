@@ -40,50 +40,41 @@ fieldset/PufKeyContextAlphaFieldsetBravo:
   description: PUF command blocking configuration.
   fields:
   - name: dis_puf_enroll
-    description: Disable PUF enroll command.
+    description: "Disable PUF enroll command.\n\nRaw bit values: false (0) = Enable: Command enabled.; true (1) = Disable: Command disabled."
     bit_offset: 1
     bit_size: 1
-    enum: DisPufEnroll
   - name: dis_puf_start
-    description: Disable PUF start command.
+    description: "Disable PUF start command.\n\nRaw bit values: false (0) = Enable: Command enabled.; true (1) = Disable: Command disabled."
     bit_offset: 2
     bit_size: 1
-    enum: DisPufEnroll
   - name: dis_puf_stop
-    description: Disable PUF stop command.
+    description: "Disable PUF stop command.\n\nRaw bit values: false (0) = Enable: Command enabled.; true (1) = Disable: Command disabled."
     bit_offset: 5
     bit_size: 1
-    enum: DisPufEnroll
   - name: dis_puf_get_key
-    description: Disable PUF get key command.
+    description: "Disable PUF get key command.\n\nRaw bit values: false (0) = Enable: Command enabled.; true (1) = Disable: Command disabled."
     bit_offset: 6
     bit_size: 1
-    enum: DisPufEnroll
   - name: dis_puf_unwrap_key
-    description: Disable PUF unwrap key command.
+    description: "Disable PUF unwrap key command.\n\nRaw bit values: false (0) = Enable: Command enabled.; true (1) = Disable: Command disabled."
     bit_offset: 7
     bit_size: 1
-    enum: DisPufEnroll
   - name: dis_puf_gen_wrap_key
-    description: Disable PUF generate and wrap key command.
+    description: "Disable PUF generate and wrap key command.\n\nRaw bit values: false (0) = Enable: Command enabled.; true (1) = Disable: Command disabled."
     bit_offset: 8
     bit_size: 1
-    enum: DisPufEnroll
   - name: dis_puf_wrap_key
-    description: Disable PUF wrap key command.
+    description: "Disable PUF wrap key command.\n\nRaw bit values: false (0) = Enable: Command enabled.; true (1) = Disable: Command disabled."
     bit_offset: 9
     bit_size: 1
-    enum: DisPufEnroll
   - name: dis_puf_gen_random_number
-    description: Disable PUF generate and wrap key command.
+    description: "Disable PUF generate and wrap key command.\n\nRaw bit values: false (0) = Enable: Command enabled.; true (1) = Disable: Command disabled."
     bit_offset: 15
     bit_size: 1
-    enum: DisPufEnroll
   - name: dis_puf_test
-    description: Disable PUF test command.
+    description: "Disable PUF test command.\n\nRaw bit values: false (0) = Enable: Command enabled.; true (1) = Disable: Command disabled."
     bit_offset: 31
     bit_size: 1
-    enum: DisPufEnroll
 fieldset/PufKeyContextAlphaFieldsetCharlie:
   description: Security level lock.
   fields:
@@ -116,15 +107,6 @@ enum/PufKeyContextAlphaEnumAlpha:
   - name: SecurePrivMaster
     description: Non-secure and non-privileged Master.
     value: 3
-enum/DisPufEnroll:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Command disabled.
-    value: 1
-  - name: Enable
-    description: Command enabled.
-    value: 0
 enum/PufKeyContextAlphaEnumKilo:
   bit_size: 2
   variants:

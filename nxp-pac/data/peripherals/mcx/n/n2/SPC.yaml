@@ -104,25 +104,22 @@ fieldset/SpcAlphaFieldsetAlpha:
   description: Active Power Mode Configuration.
   fields:
   - name: coreldo_vdd_ds
-    description: LDO_CORE VDD Drive Strength.
+    description: "LDO_CORE VDD Drive Strength.\n\nRaw bit values: false (0) = Low: Low.; true (1) = Normal: Normal."
     bit_offset: 0
     bit_size: 1
-    enum: CoreldoVddDs
   - name: coreldo_vdd_lvl
     description: LDO_CORE VDD Regulator Voltage Level.
     bit_offset: 2
     bit_size: 2
     enum: SpcAlphaEnumFoxtrot
   - name: sysldo_vdd_ds
-    description: LDO_SYS VDD Drive Strength.
+    description: "LDO_SYS VDD Drive Strength.\n\nRaw bit values: false (0) = Low: Low.; true (1) = Normal: Normal."
     bit_offset: 4
     bit_size: 1
-    enum: CoreldoVddDs
   - name: sysldo_vdd_lvl
-    description: LDO_SYS VDD Regulator Voltage Level.
+    description: "LDO_SYS VDD Regulator Voltage Level.\n\nRaw bit values: false (0) = Normal: Normal voltage (1.8 V).; true (1) = Over: Overdrive voltage (2.5 V)."
     bit_offset: 6
     bit_size: 1
-    enum: SysldoVddLvl
   - name: dcdc_vdd_ds
     description: DCDC VDD Drive Strength.
     bit_offset: 8
@@ -134,55 +131,46 @@ fieldset/SpcAlphaFieldsetAlpha:
     bit_size: 2
     enum: DcdcVddLvl
   - name: glitch_detect_disable
-    description: Glitch Detect Disable.
+    description: "Glitch Detect Disable.\n\nRaw bit values: false (0) = Disabled: Low Voltage Glitch Detect enabled.; true (1) = Enabled: Low Voltage Glitch Detect disabled."
     bit_offset: 12
     bit_size: 1
-    enum: GlitchDetectDisable2
   - name: lpbuff_en
-    description: CMP Bandgap Buffer Enable.
+    description: "CMP Bandgap Buffer Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 18
     bit_size: 1
-    enum: Hvdie
   - name: bgmode
     description: Bandgap Mode.
     bit_offset: 20
     bit_size: 2
     enum: Bgmode
   - name: vdd_vd_disable
-    description: VDD Voltage Detect Disable.
+    description: "VDD Voltage Detect Disable.\n\nRaw bit values: false (0) = Enable: Enable.; true (1) = Disable: Disable."
     bit_offset: 23
     bit_size: 1
-    enum: GlitchDetectDisable
   - name: core_lvde
-    description: Core Low-Voltage Detection Enable.
+    description: "Core Low-Voltage Detection Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 24
     bit_size: 1
-    enum: Hvdie
   - name: sys_lvde
-    description: System Low-Voltage Detection Enable.
+    description: "System Low-Voltage Detection Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 25
     bit_size: 1
-    enum: Hvdie
   - name: io_lvde
-    description: IO Low-Voltage Detection Enable.
+    description: "IO Low-Voltage Detection Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 26
     bit_size: 1
-    enum: Hvdie
   - name: core_hvde
-    description: Core High-Voltage Detection Enable.
+    description: "Core High-Voltage Detection Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 27
     bit_size: 1
-    enum: Hvdie
   - name: sys_hvde
-    description: System High-Voltage Detection Enable.
+    description: "System High-Voltage Detection Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 28
     bit_size: 1
-    enum: Hvdie
   - name: io_hvde
-    description: IO High-Voltage Detection Enable.
+    description: "IO High-Voltage Detection Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 29
     bit_size: 1
-    enum: Hvdie
 fieldset/ActiveCfg2:
   description: Active Power Mode Configuration 1.
   fields:
@@ -201,46 +189,39 @@ fieldset/Cntrl2:
   description: SPC Regulator Control.
   fields:
   - name: coreldo_en
-    description: LDO_CORE Regulator Enable.
+    description: "LDO_CORE Regulator Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Hvdie
   - name: sysldo_en
-    description: LDO_SYS Regulator Enable.
+    description: "LDO_SYS Regulator Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: Hvdie
   - name: dcdc_en
-    description: DCDC_CORE Regulator Enable.
+    description: "DCDC_CORE Regulator Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: Hvdie
 fieldset/CoreldoCfg2:
   description: LDO_CORE Configuration.
   fields:
   - name: dpdown_pulldown_disable
-    description: LDO_CORE Deep Power Down Pulldown Disable.
+    description: "LDO_CORE Deep Power Down Pulldown Disable.\n\nRaw bit values: false (0) = Disabled: LDO_CORE pulldown in Deep Power Down not disabled.; true (1) = Enabled: LDO_CORE pulldown in Deep Power Down disabled."
     bit_offset: 16
     bit_size: 1
-    enum: DpdownPulldownDisable
 fieldset/DcdcBurstCfg:
   description: DCDC Burst Configuration.
   fields:
   - name: burst_req
-    description: Software Burst Request.
+    description: "Software Burst Request.\n\nRaw bit values: false (0) = GenNo: Do not generate.; true (1) = GenYes: Generate."
     bit_offset: 0
     bit_size: 1
-    enum: BurstReq
   - name: ext_burst_en
-    description: External Burst Request Enable.
+    description: "External Burst Request Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: Hvdie
   - name: burst_ack
-    description: Burst Acknowledge Flag.
+    description: "Burst Acknowledge Flag.\n\nRaw bit values: false (0) = ComplNo: Did not complete.; true (1) = ComplYes: Completed."
     bit_offset: 3
     bit_size: 1
-    enum: BurstAck
   - name: pulse_refresh_cnt
     description: Refresh Count Value.
     bit_offset: 16
@@ -249,19 +230,17 @@ fieldset/DcdcCfg:
   description: DCDC Configuration.
   fields:
   - name: freq_cntrl_on
-    description: DCDC Burst Frequency Control Enable.
+    description: "DCDC Burst Frequency Control Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Hvdie
   - name: freq_cntrl
     description: DCDC Burst Frequency Control.
     bit_offset: 8
     bit_size: 6
   - name: bleed_en
-    description: DCDC Bleed Enable.
+    description: "DCDC Bleed Enable.\n\nRaw bit values: false (0) = AddNo: Do not add.; true (1) = AddYes: Add."
     bit_offset: 19
     bit_size: 1
-    enum: BleedEn
 fieldset/EvdCfg2:
   description: External Voltage Domain Configuration.
   fields:
@@ -290,42 +269,37 @@ fieldset/GlitchDetectSc2:
     bit_offset: 2
     bit_size: 4
   - name: re
-    description: Glitch Detect Reset Enable.
+    description: "Glitch Detect Reset Enable.\n\nRaw bit values: false (0) = Disabled: GLITCH_DETECT_FLAG[CNT_SELECT] does not generate POR/LVD reset.; true (1) = Enabled: GLITCH_DETECT_FLAG[CNT_SELECT] does generate POR/LVD reset."
     bit_offset: 6
     bit_size: 1
-    enum: Re2
   - name: ie
-    description: Glitch Detect Interrupt Enable.
+    description: "Glitch Detect Interrupt Enable.\n\nRaw bit values: false (0) = Disabled: GLITCH_DETECT_FLAG[CNT_SELECT] does not generate hardware interrupt (user polling).; true (1) = Enabled: GLITCH_DETECT_FLAG[CNT_SELECT] does generate hardware interrupt."
     bit_offset: 7
     bit_size: 1
-    enum: Ie3
   - name: glitch_detect_flag
     description: GLITCH_DETECT_FLAG.
     bit_offset: 8
     bit_size: 4
   - name: lock
-    description: Glitch Detect Reset Enable Lock Bit.
+    description: "Glitch Detect Reset Enable Lock Bit.\n\nRaw bit values: false (0) = Disabled: Writes to RE are allowed.; true (1) = Enabled: Writes to RE are ignored."
     bit_offset: 16
     bit_size: 1
-    enum: Lock3
 fieldset/SpcAlphaFieldsetJuliet:
   description: Low-Power Mode Configuration.
   fields:
   - name: coreldo_vdd_ds
-    description: LDO_CORE VDD Drive Strength.
+    description: "LDO_CORE VDD Drive Strength.\n\nRaw bit values: false (0) = Low: Low.; true (1) = Normal: Normal."
     bit_offset: 0
     bit_size: 1
-    enum: CoreldoVddDs
   - name: coreldo_vdd_lvl
     description: LDO_CORE VDD Regulator Voltage Level.
     bit_offset: 2
     bit_size: 2
     enum: SpcAlphaEnumMikeAlpha
   - name: sysldo_vdd_ds
-    description: LDO_SYS VDD Drive Strength.
+    description: "LDO_SYS VDD Drive Strength.\n\nRaw bit values: false (0) = Low: Low.; true (1) = Normal: Normal."
     bit_offset: 4
     bit_size: 1
-    enum: CoreldoVddDs
   - name: dcdc_vdd_ds
     description: DCDC VDD Drive Strength.
     bit_offset: 8
@@ -337,60 +311,50 @@ fieldset/SpcAlphaFieldsetJuliet:
     bit_size: 2
     enum: DcdcVddLvl2
   - name: glitch_detect_disable
-    description: Glitch Detect Disable.
+    description: "Glitch Detect Disable.\n\nRaw bit values: false (0) = Enable: Enable.; true (1) = Disable: Disable."
     bit_offset: 12
     bit_size: 1
-    enum: GlitchDetectDisable
   - name: corevdd_ivs_en
-    description: CORE VDD Internal Voltage Scaling (IVS) Enable.
+    description: "CORE VDD Internal Voltage Scaling (IVS) Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 17
     bit_size: 1
-    enum: Hvdie
   - name: lpbuff_en
-    description: CMP Bandgap Buffer Enable.
+    description: "CMP Bandgap Buffer Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 18
     bit_size: 1
-    enum: Hvdie
   - name: bgmode
     description: Bandgap Mode.
     bit_offset: 20
     bit_size: 2
     enum: Bgmode
   - name: lp_irefen
-    description: Low-Power IREF Enable.
+    description: "Low-Power IREF Enable.\n\nRaw bit values: false (0) = Disable: Disable for power saving in Deep Power Down mode.; true (1) = Enable: Enable."
     bit_offset: 23
     bit_size: 1
-    enum: LpIrefen
   - name: core_lvde
-    description: Core Low Voltage Detect Enable.
+    description: "Core Low Voltage Detect Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 24
     bit_size: 1
-    enum: Hvdie
   - name: sys_lvde
-    description: System Low Voltage Detect Enable.
+    description: "System Low Voltage Detect Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 25
     bit_size: 1
-    enum: Hvdie
   - name: io_lvde
-    description: IO Low Voltage Detect Enable.
+    description: "IO Low Voltage Detect Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 26
     bit_size: 1
-    enum: Hvdie
   - name: core_hvde
-    description: Core High Voltage Detect Enable.
+    description: "Core High Voltage Detect Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 27
     bit_size: 1
-    enum: Hvdie
   - name: sys_hvde
-    description: System High Voltage Detect Enable.
+    description: "System High Voltage Detect Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 28
     bit_size: 1
-    enum: Hvdie
   - name: io_hvde
-    description: IO High Voltage Detect Enable.
+    description: "IO High Voltage Detect Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 29
     bit_size: 1
-    enum: Hvdie
 fieldset/LpCfg2:
   description: Low Power Mode Configuration 1.
   fields:
@@ -402,15 +366,13 @@ fieldset/LpreqCfg2:
   description: Low-Power Request Configuration.
   fields:
   - name: lpreqoe
-    description: Low-Power Request Output Enable.
+    description: "Low-Power Request Output Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Hvdie
   - name: lpreqpol
-    description: Low-Power Request Output Pin Polarity Control.
+    description: "Low-Power Request Output Pin Polarity Control.\n\nRaw bit values: false (0) = High: High.; true (1) = Low: Low."
     bit_offset: 1
     bit_size: 1
-    enum: Lpreqpol2
   - name: lpreqov
     description: Low-Power Request Output Override.
     bit_offset: 2
@@ -427,15 +389,13 @@ fieldset/PdStatus:
   description: SPC Power Domain Mode Status.
   fields:
   - name: pwr_req_status
-    description: Power Request Status Flag.
+    description: "Power Request Status Flag.\n\nRaw bit values: false (0) = ReqNo: Did not request.; true (1) = ReqYes: Requested."
     bit_offset: 0
     bit_size: 1
-    enum: PdLpReq2
   - name: pd_lp_req
-    description: Power Domain Low Power Request Flag.
+    description: "Power Domain Low Power Request Flag.\n\nRaw bit values: false (0) = ReqNo: Did not request.; true (1) = ReqYes: Requested."
     bit_offset: 4
     bit_size: 1
-    enum: PdLpReq2
   - name: lp_mode
     description: Power Domain Low Power Mode Request.
     bit_offset: 8
@@ -445,15 +405,13 @@ fieldset/Sc2:
   description: Status Control.
   fields:
   - name: busy
-    description: SPC Busy Status Flag.
+    description: "SPC Busy Status Flag.\n\nRaw bit values: false (0) = BusyNo: Not busy.; true (1) = BusyYes: Busy."
     bit_offset: 0
     bit_size: 1
-    enum: Busy2
   - name: spc_lp_req
-    description: SPC Power Mode Configuration Status Flag.
+    description: "SPC Power Mode Configuration Status Flag.\n\nRaw bit values: false (0) = Active: SPC is in Active or Sleep mode; the ACTIVE_CFG register has control.; true (1) = LowPower: All power domains requested low-power mode; SPC entered a low-power state; power-mode configuration based on the LP_CFG register."
     bit_offset: 1
     bit_size: 1
-    enum: SpcLpReq2
   - name: spc_lp_mode
     description: Power Domain Low-Power Mode Request.
     bit_offset: 4
@@ -472,150 +430,124 @@ fieldset/Sramctl2:
     bit_size: 2
     enum: Vsm2
   - name: req
-    description: SRAM Voltage Update Request.
+    description: "SRAM Voltage Update Request.\n\nRaw bit values: false (0) = ReqNo: Do not request.; true (1) = ReqYes: Request."
     bit_offset: 30
     bit_size: 1
-    enum: Req
   - name: ack
-    description: SRAM Voltage Update Request Acknowledge.
+    description: "SRAM Voltage Update Request Acknowledge.\n\nRaw bit values: false (0) = AckNo: Not acknowledged.; true (1) = AckYes: Acknowledged."
     bit_offset: 31
     bit_size: 1
-    enum: Ack
 fieldset/SysldoCfg:
   description: LDO_SYS Configuration.
   fields:
   - name: isinken
-    description: Current Sink Enable.
+    description: "Current Sink Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enabled: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Isinken
 fieldset/VdCoreCfg2:
   description: Core Voltage Detect Configuration.
   fields:
   - name: lvdre
-    description: Core LVD Reset Enable.
+    description: "Core LVD Reset Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Hvdie
   - name: lvdie
-    description: Core LVD Interrupt Enable.
+    description: "Core LVD Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: Hvdie
   - name: hvdre
-    description: Core VDD HVD Reset Enable.
+    description: "Core VDD HVD Reset Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: Hvdie
   - name: hvdie
-    description: Core VDD HVD Interrupt Enable.
+    description: "Core VDD HVD Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 3
     bit_size: 1
-    enum: Hvdie
   - name: lock
-    description: Core Voltage Detect Reset Enable Lock.
+    description: "Core Voltage Detect Reset Enable Lock.\n\nRaw bit values: false (0) = Allow: Allow.; true (1) = Deny: Deny."
     bit_offset: 16
     bit_size: 1
-    enum: Lock2
 fieldset/SpcAlphaFieldsetSierra:
   description: IO Voltage Detect Configuration.
   fields:
   - name: lvdre
-    description: IO VDD LVD Reset Enable.
+    description: "IO VDD LVD Reset Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Hvdie
   - name: lvdie
-    description: IO VDD LVD Interrupt Enable.
+    description: "IO VDD LVD Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: Hvdie
   - name: hvdre
-    description: IO VDD HVD Reset Enable.
+    description: "IO VDD HVD Reset Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: Hvdie
   - name: hvdie
-    description: IO VDD HVD Interrupt Enable.
+    description: "IO VDD HVD Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 3
     bit_size: 1
-    enum: Hvdie
   - name: lvsel
-    description: IO VDD Low-Voltage Level Select.
+    description: "IO VDD Low-Voltage Level Select.\n\nRaw bit values: false (0) = Normal: Normal.; true (1) = Safe: Safe."
     bit_offset: 8
     bit_size: 1
-    enum: Lvsel2
   - name: lock
-    description: IO Voltage Detect Reset Enable Lock.
+    description: "IO Voltage Detect Reset Enable Lock.\n\nRaw bit values: false (0) = Allow: Allow.; true (1) = Deny: Deny."
     bit_offset: 16
     bit_size: 1
-    enum: Lock2
 fieldset/VdStat2:
   description: Voltage Detect Status.
   fields:
   - name: corevdd_lvdf
-    description: Core Low-Voltage Detect Flag.
+    description: "Core Low-Voltage Detect Flag.\n\nRaw bit values: false (0) = EventNo: Event not detected.; true (1) = EventYes: Event detected."
     bit_offset: 0
     bit_size: 1
-    enum: CorevddHvdf
   - name: sysvdd_lvdf
-    description: System Low-Voltage Detect Flag.
+    description: "System Low-Voltage Detect Flag.\n\nRaw bit values: false (0) = EventNo: Event not detected.; true (1) = EventYes: Event detected."
     bit_offset: 1
     bit_size: 1
-    enum: CorevddHvdf
   - name: iovdd_lvdf
-    description: IO VDD LVD Flag.
+    description: "IO VDD LVD Flag.\n\nRaw bit values: false (0) = EventNo: Event not detected.; true (1) = EventYes: Event detected."
     bit_offset: 2
     bit_size: 1
-    enum: CorevddHvdf
   - name: corevdd_hvdf
-    description: Core VDD HVD Flag.
+    description: "Core VDD HVD Flag.\n\nRaw bit values: false (0) = EventNo: Event not detected.; true (1) = EventYes: Event detected."
     bit_offset: 4
     bit_size: 1
-    enum: CorevddHvdf
   - name: sysvdd_hvdf
-    description: System HVD Flag.
+    description: "System HVD Flag.\n\nRaw bit values: false (0) = EventNo: Event not detected.; true (1) = EventYes: Event detected."
     bit_offset: 5
     bit_size: 1
-    enum: CorevddHvdf
   - name: iovdd_hvdf
-    description: IO VDD HVD Flag.
+    description: "IO VDD HVD Flag.\n\nRaw bit values: false (0) = EventNo: Event not detected.; true (1) = EventYes: Event detected."
     bit_offset: 6
     bit_size: 1
-    enum: CorevddHvdf
 fieldset/SpcAlphaFieldsetUniform:
   description: System Voltage Detect Configuration.
   fields:
   - name: lvdre
-    description: System LVD Reset Enable.
+    description: "System LVD Reset Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Hvdie
   - name: lvdie
-    description: System LVD Interrupt Enable.
+    description: "System LVD Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: Hvdie
   - name: hvdre
-    description: System HVD Reset Enable.
+    description: "System HVD Reset Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: Hvdie
   - name: hvdie
-    description: System HVD Interrupt Enable.
+    description: "System HVD Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 3
     bit_size: 1
-    enum: Hvdie
   - name: lvsel
-    description: System Low-Voltage Level Select.
+    description: "System Low-Voltage Level Select.\n\nRaw bit values: false (0) = Normal: Normal.; true (1) = Safe: Safe."
     bit_offset: 8
     bit_size: 1
-    enum: Lvsel2
   - name: lock
-    description: System Voltage Detect Reset Enable Lock.
+    description: "System Voltage Detect Reset Enable Lock.\n\nRaw bit values: false (0) = Allow: Allow.; true (1) = Deny: Deny."
     bit_offset: 16
     bit_size: 1
-    enum: Lock2
 fieldset/Verid3:
   description: Version ID.
   fields:
@@ -632,15 +564,6 @@ fieldset/Verid3:
     description: Major Version Number.
     bit_offset: 24
     bit_size: 8
-enum/Ack:
-  bit_size: 1
-  variants:
-  - name: AckNo
-    description: Not acknowledged.
-    value: 0
-  - name: AckYes
-    description: Acknowledged.
-    value: 1
 enum/Bgmode:
   bit_size: 2
   variants:
@@ -653,15 +576,6 @@ enum/Bgmode:
   - name: Bgmode10
     description: Bandgap enabled, buffer enabled.
     value: 2
-enum/CoreldoVddDs:
-  bit_size: 1
-  variants:
-  - name: Low
-    description: Low.
-    value: 0
-  - name: Normal
-    description: Normal.
-    value: 1
 enum/SpcAlphaEnumFoxtrot:
   bit_size: 2
   variants:
@@ -692,60 +606,6 @@ enum/DcdcVddLvl:
   - name: Dcdc11
     description: Overdrive voltage (1.2 V).
     value: 3
-enum/GlitchDetectDisable2:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Low Voltage Glitch Detect enabled.
-    value: 0
-  - name: Enabled
-    description: Low Voltage Glitch Detect disabled.
-    value: 1
-enum/Hvdie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
-enum/BleedEn:
-  bit_size: 1
-  variants:
-  - name: AddNo
-    description: Do not add.
-    value: 0
-  - name: AddYes
-    description: Add.
-    value: 1
-enum/BurstAck:
-  bit_size: 1
-  variants:
-  - name: ComplNo
-    description: Did not complete.
-    value: 0
-  - name: ComplYes
-    description: Completed.
-    value: 1
-enum/BurstReq:
-  bit_size: 1
-  variants:
-  - name: GenNo
-    description: Do not generate.
-    value: 0
-  - name: GenYes
-    description: Generate.
-    value: 1
-enum/Busy2:
-  bit_size: 1
-  variants:
-  - name: BusyNo
-    description: Not busy.
-    value: 0
-  - name: BusyYes
-    description: Busy.
-    value: 1
 enum/CntSelect2:
   bit_size: 2
   variants:
@@ -761,57 +621,12 @@ enum/CntSelect2:
   - name: Bit3
     description: '3.'
     value: 3
-enum/CorevddHvdf:
-  bit_size: 1
-  variants:
-  - name: EventNo
-    description: Event not detected.
-    value: 0
-  - name: EventYes
-    description: Event detected.
-    value: 1
-enum/DpdownPulldownDisable:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: LDO_CORE pulldown in Deep Power Down not disabled.
-    value: 0
-  - name: Enabled
-    description: LDO_CORE pulldown in Deep Power Down disabled.
-    value: 1
 enum/Feature2:
   bit_size: 16
   variants:
   - name: Standard
     description: Standard features.
     value: 0
-enum/Lock3:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Writes to RE are allowed.
-    value: 0
-  - name: Enabled
-    description: Writes to RE are ignored.
-    value: 1
-enum/Ie3:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: GLITCH_DETECT_FLAG[CNT_SELECT] does not generate hardware interrupt (user polling).
-    value: 0
-  - name: Enabled
-    description: GLITCH_DETECT_FLAG[CNT_SELECT] does generate hardware interrupt.
-    value: 1
-enum/Isinken:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 0
-  - name: Enabled
-    description: Enable.
-    value: 1
 enum/SpcAlphaEnumMikeAlpha:
   bit_size: 2
   variants:
@@ -854,24 +669,6 @@ enum/DcdcVddLvl2:
   - name: Vdd11
     description: Overdrive voltage (1.2 V).
     value: 3
-enum/GlitchDetectDisable:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable.
-    value: 1
-  - name: Enable
-    description: Enable.
-    value: 0
-enum/LpIrefen:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disable for power saving in Deep Power Down mode.
-    value: 0
-  - name: Enable
-    description: Enable.
-    value: 1
 enum/LpMode2:
   bit_size: 4
   variants:
@@ -899,60 +696,6 @@ enum/Lpreqov2:
   - name: ForceNo
     description: Not forced.
     value: 0
-enum/Lpreqpol2:
-  bit_size: 1
-  variants:
-  - name: High
-    description: High.
-    value: 0
-  - name: Low
-    description: Low.
-    value: 1
-enum/PdLpReq2:
-  bit_size: 1
-  variants:
-  - name: ReqNo
-    description: Did not request.
-    value: 0
-  - name: ReqYes
-    description: Requested.
-    value: 1
-enum/Req:
-  bit_size: 1
-  variants:
-  - name: ReqNo
-    description: Do not request.
-    value: 0
-  - name: ReqYes
-    description: Request.
-    value: 1
-enum/SpcLpReq2:
-  bit_size: 1
-  variants:
-  - name: Active
-    description: SPC is in Active or Sleep mode; the ACTIVE_CFG register has control.
-    value: 0
-  - name: LowPower
-    description: All power domains requested low-power mode; SPC entered a low-power state; power-mode configuration based on the LP_CFG register.
-    value: 1
-enum/SysldoVddLvl:
-  bit_size: 1
-  variants:
-  - name: Normal
-    description: Normal voltage (1.8 V).
-    value: 0
-  - name: Over
-    description: Overdrive voltage (2.5 V).
-    value: 1
-enum/Lvsel2:
-  bit_size: 1
-  variants:
-  - name: Normal
-    description: Normal.
-    value: 0
-  - name: Safe
-    description: Safe.
-    value: 1
 enum/Vsm2:
   bit_size: 2
   variants:
@@ -1061,25 +804,22 @@ fieldset/SpcBravoFieldsetAlpha:
   description: Active Power Mode Configuration.
   fields:
   - name: coreldo_vdd_ds
-    description: LDO_CORE VDD Drive Strength.
+    description: "LDO_CORE VDD Drive Strength.\n\nRaw bit values: false (0) = Low: Low.; true (1) = Normal: Normal."
     bit_offset: 0
     bit_size: 1
-    enum: CoreldoVddDs
   - name: coreldo_vdd_lvl
     description: LDO_CORE VDD Regulator Voltage Level.
     bit_offset: 2
     bit_size: 2
     enum: SpcBravoEnumFoxtrot
   - name: sysldo_vdd_ds
-    description: LDO_SYS VDD Drive Strength.
+    description: "LDO_SYS VDD Drive Strength.\n\nRaw bit values: false (0) = Low: Low.; true (1) = Normal: Normal."
     bit_offset: 4
     bit_size: 1
-    enum: CoreldoVddDs
   - name: sysldo_vdd_lvl
-    description: LDO_SYS VDD Regulator Voltage Level.
+    description: "LDO_SYS VDD Regulator Voltage Level.\n\nRaw bit values: false (0) = Normal: Normal voltage (1.8 V).; true (1) = Over: Overdrive voltage (2.5 V)."
     bit_offset: 6
     bit_size: 1
-    enum: SysldoVddLvl
   - name: dcdc_vdd_ds
     description: DCDC VDD Drive Strength.
     bit_offset: 8
@@ -1091,73 +831,62 @@ fieldset/SpcBravoFieldsetAlpha:
     bit_size: 2
     enum: DcdcVddLvl
   - name: glitch_detect_disable
-    description: Glitch Detect Disable.
+    description: "Glitch Detect Disable.\n\nRaw bit values: false (0) = Disabled: Low Voltage Glitch Detect enabled.; true (1) = Enabled: Low Voltage Glitch Detect disabled."
     bit_offset: 12
     bit_size: 1
-    enum: GlitchDetectDisable2
   - name: lpbuff_en
-    description: CMP Bandgap Buffer Enable.
+    description: "CMP Bandgap Buffer Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 18
     bit_size: 1
-    enum: Hvdie
   - name: bgmode
     description: Bandgap Mode.
     bit_offset: 20
     bit_size: 2
     enum: Bgmode
   - name: vdd_vd_disable
-    description: VDD Voltage Detect Disable.
+    description: "VDD Voltage Detect Disable.\n\nRaw bit values: false (0) = Enable: Enable.; true (1) = Disable: Disable."
     bit_offset: 23
     bit_size: 1
-    enum: GlitchDetectDisable
   - name: core_lvde
-    description: Core Low-Voltage Detection Enable.
+    description: "Core Low-Voltage Detection Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 24
     bit_size: 1
-    enum: Hvdie
   - name: sys_lvde
-    description: System Low-Voltage Detection Enable.
+    description: "System Low-Voltage Detection Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 25
     bit_size: 1
-    enum: Hvdie
   - name: io_lvde
-    description: IO Low-Voltage Detection Enable.
+    description: "IO Low-Voltage Detection Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 26
     bit_size: 1
-    enum: Hvdie
   - name: core_hvde
-    description: Core High-Voltage Detection Enable.
+    description: "Core High-Voltage Detection Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 27
     bit_size: 1
-    enum: Hvdie
   - name: sys_hvde
-    description: System High-Voltage Detection Enable.
+    description: "System High-Voltage Detection Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 28
     bit_size: 1
-    enum: Hvdie
   - name: io_hvde
-    description: IO High-Voltage Detection Enable.
+    description: "IO High-Voltage Detection Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 29
     bit_size: 1
-    enum: Hvdie
 fieldset/SpcBravoFieldsetJuliet:
   description: Low-Power Mode Configuration.
   fields:
   - name: coreldo_vdd_ds
-    description: LDO_CORE VDD Drive Strength.
+    description: "LDO_CORE VDD Drive Strength.\n\nRaw bit values: false (0) = Low: Low.; true (1) = Normal: Normal."
     bit_offset: 0
     bit_size: 1
-    enum: CoreldoVddDs
   - name: coreldo_vdd_lvl
     description: LDO_CORE VDD Regulator Voltage Level.
     bit_offset: 2
     bit_size: 2
     enum: SpcBravoEnumMikeAlpha
   - name: sysldo_vdd_ds
-    description: LDO_SYS VDD Drive Strength.
+    description: "LDO_SYS VDD Drive Strength.\n\nRaw bit values: false (0) = Low: Low.; true (1) = Normal: Normal."
     bit_offset: 4
     bit_size: 1
-    enum: CoreldoVddDs
   - name: dcdc_vdd_ds
     description: DCDC VDD Drive Strength.
     bit_offset: 8
@@ -1169,121 +898,100 @@ fieldset/SpcBravoFieldsetJuliet:
     bit_size: 2
     enum: DcdcVddLvl2
   - name: glitch_detect_disable
-    description: Glitch Detect Disable.
+    description: "Glitch Detect Disable.\n\nRaw bit values: false (0) = Enable: Enable.; true (1) = Disable: Disable."
     bit_offset: 12
     bit_size: 1
-    enum: GlitchDetectDisable
   - name: corevdd_ivs_en
-    description: CORE VDD Internal Voltage Scaling (IVS) Enable.
+    description: "CORE VDD Internal Voltage Scaling (IVS) Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 17
     bit_size: 1
-    enum: Hvdie
   - name: lpbuff_en
-    description: CMP Bandgap Buffer Enable.
+    description: "CMP Bandgap Buffer Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 18
     bit_size: 1
-    enum: Hvdie
   - name: bgmode
     description: Bandgap Mode.
     bit_offset: 20
     bit_size: 2
     enum: Bgmode
   - name: lp_irefen
-    description: Low-Power IREF Enable.
+    description: "Low-Power IREF Enable.\n\nRaw bit values: false (0) = Disable: Disable for power saving in Deep Power Down mode.; true (1) = Enable: Enable."
     bit_offset: 23
     bit_size: 1
-    enum: LpIrefen
   - name: core_lvde
-    description: Core Low Voltage Detect Enable.
+    description: "Core Low Voltage Detect Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 24
     bit_size: 1
-    enum: Hvdie
   - name: sys_lvde
-    description: System Low Voltage Detect Enable.
+    description: "System Low Voltage Detect Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 25
     bit_size: 1
-    enum: Hvdie
   - name: io_lvde
-    description: IO Low Voltage Detect Enable.
+    description: "IO Low Voltage Detect Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 26
     bit_size: 1
-    enum: Hvdie
   - name: core_hvde
-    description: Core High Voltage Detect Enable.
+    description: "Core High Voltage Detect Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 27
     bit_size: 1
-    enum: Hvdie
   - name: sys_hvde
-    description: System High Voltage Detect Enable.
+    description: "System High Voltage Detect Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 28
     bit_size: 1
-    enum: Hvdie
   - name: io_hvde
-    description: IO High Voltage Detect Enable.
+    description: "IO High Voltage Detect Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 29
     bit_size: 1
-    enum: Hvdie
 fieldset/SpcBravoFieldsetSierra:
   description: IO Voltage Detect Configuration.
   fields:
   - name: lvdre
-    description: IO VDD LVD Reset Enable.
+    description: "IO VDD LVD Reset Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Hvdie
   - name: lvdie
-    description: IO VDD LVD Interrupt Enable.
+    description: "IO VDD LVD Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: Hvdie
   - name: hvdre
-    description: IO VDD HVD Reset Enable.
+    description: "IO VDD HVD Reset Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: Hvdie
   - name: hvdie
-    description: IO VDD HVD Interrupt Enable.
+    description: "IO VDD HVD Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 3
     bit_size: 1
-    enum: Hvdie
   - name: lvsel
-    description: IO VDD Low-Voltage Level Select.
+    description: "IO VDD Low-Voltage Level Select.\n\nRaw bit values: false (0) = Normal: High range.; true (1) = Safe: Low range."
     bit_offset: 8
     bit_size: 1
-    enum: SpcBravoEnumBravoBravo
   - name: lock
-    description: IO Voltage Detect Reset Enable Lock.
+    description: "IO Voltage Detect Reset Enable Lock.\n\nRaw bit values: false (0) = Allow: Allow.; true (1) = Deny: Deny."
     bit_offset: 16
     bit_size: 1
-    enum: Lock2
 fieldset/SpcBravoFieldsetUniform:
   description: System Voltage Detect Configuration.
   fields:
   - name: lvdre
-    description: System LVD Reset Enable.
+    description: "System LVD Reset Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 0
     bit_size: 1
-    enum: Hvdie
   - name: lvdie
-    description: System LVD Interrupt Enable.
+    description: "System LVD Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: Hvdie
   - name: hvdre
-    description: System HVD Reset Enable.
+    description: "System HVD Reset Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 2
     bit_size: 1
-    enum: Hvdie
   - name: hvdie
-    description: System HVD Interrupt Enable.
+    description: "System HVD Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disable.; true (1) = Enable: Enable."
     bit_offset: 3
     bit_size: 1
-    enum: Hvdie
   - name: lock
-    description: System Voltage Detect Reset Enable Lock.
+    description: "System Voltage Detect Reset Enable Lock.\n\nRaw bit values: false (0) = Allow: Allow.; true (1) = Deny: Deny."
     bit_offset: 16
     bit_size: 1
-    enum: Lock2
 enum/SpcBravoEnumFoxtrot:
   bit_size: 2
   variants:
@@ -1311,24 +1019,6 @@ enum/SpcBravoEnumMikeAlpha:
   - name: Under
     description: Retention voltage.
     value: 0
-enum/SpcBravoEnumBravoBravo:
-  bit_size: 1
-  variants:
-  - name: Normal
-    description: High range.
-    value: 0
-  - name: Safe
-    description: Low range.
-    value: 1
-enum/Re2:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: GLITCH_DETECT_FLAG[CNT_SELECT] does not generate POR/LVD reset.
-    value: 0
-  - name: Enabled
-    description: GLITCH_DETECT_FLAG[CNT_SELECT] does generate POR/LVD reset.
-    value: 1
 enum/SpcLpMode2:
   bit_size: 4
   variants:
@@ -1344,12 +1034,3 @@ enum/SpcLpMode2:
   - name: Mode8
     description: DPDOWN with system clock off.
     value: 8
-enum/Lock2:
-  bit_size: 1
-  variants:
-  - name: Allow
-    description: Allow.
-    value: 0
-  - name: Deny
-    description: Deny.
-    value: 1

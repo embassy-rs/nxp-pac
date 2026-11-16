@@ -315,10 +315,9 @@ fieldset/Mconfig:
     bit_size: 2
     enum: Mstena
   - name: disto
-    description: Disable Timeout.
+    description: "Disable Timeout.\n\nRaw bit values: false (0) = Enable: Timeout enabled.; true (1) = Disable: Timeout disabled, if timeout is configured."
     bit_offset: 3
     bit_size: 1
-    enum: Disto
   - name: hkeep
     description: High-Keeper.
     bit_offset: 4
@@ -386,10 +385,9 @@ fieldset/Mctrl:
     bit_size: 2
     enum: Ibiresp
   - name: dir
-    description: Direction.
+    description: "Direction.\n\nRaw bit values: false (0) = Dirwrite: Write.; true (1) = Dirread: Read."
     bit_offset: 8
     bit_size: 1
-    enum: MctrlDir
   - name: addr
     description: Address.
     bit_offset: 9
@@ -403,15 +401,13 @@ fieldset/Mdatactrl:
   description: Controller Data Control.
   fields:
   - name: flushtb
-    description: Flush To-bus Buffer or FIFO.
+    description: "Flush To-bus Buffer or FIFO.\n\nRaw bit values: false (0) = NoAction: No action.; true (1) = Flush: Flush the buffer."
     bit_offset: 0
     bit_size: 1
-    enum: Flushfb
   - name: flushfb
-    description: Flush From-bus Buffer or FIFO.
+    description: "Flush From-bus Buffer or FIFO.\n\nRaw bit values: false (0) = NoAction: No action.; true (1) = Flush: Flush the buffer."
     bit_offset: 1
     bit_size: 1
-    enum: Flushfb
   - name: unlock
     description: Unlock.
     bit_offset: 3
@@ -550,10 +546,9 @@ fieldset/Mibirules:
     bit_offset: 30
     bit_size: 1
   - name: nobyte
-    description: No IBI byte.
+    description: "No IBI byte.\n\nRaw bit values: false (0) = Ibibyte: With mandatory IBI byte.; true (1) = NoIbibyte: Without mandatory IBI byte."
     bit_offset: 31
     bit_size: 1
-    enum: Nobyte
   reset_value: 0
 fieldset/Mintclr:
   description: Controller Interrupt Clear.
@@ -841,10 +836,9 @@ fieldset/MwmsgSdrControl:
   description: Controller Write Message Control in SDR mode.
   fields:
   - name: dir
-    description: Direction.
+    description: "Direction.\n\nRaw bit values: false (0) = Write: Write.; true (1) = Read: Read."
     bit_offset: 0
     bit_size: 1
-    enum: MwmsgSdrControlDir
   - name: addr
     description: Address.
     bit_offset: 1
@@ -854,10 +848,9 @@ fieldset/MwmsgSdrControl:
     bit_offset: 8
     bit_size: 1
   - name: i2c
-    description: I2C.
+    description: "I2C.\n\nRaw bit values: false (0) = I3cmessage: I3C message.; true (1) = I2cmessage: I2C message."
     bit_offset: 10
     bit_size: 1
-    enum: I2c
   - name: len
     description: Length.
     bit_offset: 11
@@ -882,10 +875,9 @@ fieldset/Scapabilities:
     bit_size: 2
     enum: Hdrsupp
   - name: master
-    description: Controller.
+    description: "Controller.\n\nRaw bit values: false (0) = Masternotsupported: Not supported.; true (1) = Mastersupported: Supported."
     bit_offset: 9
     bit_size: 1
-    enum: Master
   - name: saddr
     description: Static Address.
     bit_offset: 10
@@ -902,10 +894,9 @@ fieldset/Scapabilities:
     bit_size: 5
     enum: IbiMrHj
   - name: timectrl
-    description: Time Control.
+    description: "Time Control.\n\nRaw bit values: false (0) = NoTimeControlType: No time control enabled.; true (1) = Atleast1TimeControl: At least one time-control type supported."
     bit_offset: 21
     bit_size: 1
-    enum: ScapabilitiesTimectrl
   - name: extfifo
     description: External FIFO.
     bit_offset: 23
@@ -922,15 +913,13 @@ fieldset/Scapabilities:
     bit_size: 2
     enum: Fiforx
   - name: int
-    description: Interrupts.
+    description: "Interrupts.\n\nRaw bit values: false (0) = Interruptsno: Not supported.; true (1) = Interruptsyes: Supported."
     bit_offset: 30
     bit_size: 1
-    enum: Int
   - name: dma
-    description: Direct Memory Access.
+    description: "Direct Memory Access.\n\nRaw bit values: false (0) = Dmano: Not supported.; true (1) = Dmayes: Supported."
     bit_offset: 31
     bit_size: 1
-    enum: Dma
   reset_value: 3896508016
 fieldset/Scapabilities2:
   description: Target Capabilities 2.
@@ -1080,15 +1069,13 @@ fieldset/Sdatactrl:
     bit_offset: 24
     bit_size: 5
   - name: txfull
-    description: Transmit Is Full.
+    description: "Transmit Is Full.\n\nRaw bit values: false (0) = Txisnotfull: Not full.; true (1) = Txisfull: Full."
     bit_offset: 30
     bit_size: 1
-    enum: SdatactrlTxfull
   - name: rxempty
-    description: Receive Is Empty.
+    description: "Receive Is Empty.\n\nRaw bit values: false (0) = Rxisnotempty: Not empty.; true (1) = Rxisempty: Empty."
     bit_offset: 31
     bit_size: 1
-    enum: SdatactrlRxempty
   reset_value: 2147483696
 fieldset/Sdmactrl:
   description: Target DMA Control.
@@ -1113,10 +1100,9 @@ fieldset/Sdynaddr:
   description: Target Dynamic Address.
   fields:
   - name: davalid
-    description: Dynamic Address Valid.
+    description: "Dynamic Address Valid.\n\nRaw bit values: false (0) = Danotassigned: DANOTASSIGNED: a Dynamic Address is not assigned.; true (1) = Daassigned: DAASSIGNED: a Dynamic Address is assigned."
     bit_offset: 0
     bit_size: 1
-    enum: SdynaddrDavalid
   - name: daddr
     description: Dynamic Address.
     bit_offset: 1
@@ -1391,10 +1377,9 @@ fieldset/Smsgmapaddr:
     bit_offset: 0
     bit_size: 4
   - name: laststatic
-    description: Last Static Address Matched.
+    description: "Last Static Address Matched.\n\nRaw bit values: false (0) = I3c: I3C dynamic address.; true (1) = I2c: I2C static address."
     bit_offset: 4
     bit_size: 1
-    enum: Laststatic
   - name: maplastm1
     description: Matched Previous Address Index 1.
     bit_offset: 8
@@ -1428,30 +1413,25 @@ fieldset/Sstatus:
   description: Target Status.
   fields:
   - name: stnotstop
-    description: Status Not Stop.
+    description: "Status Not Stop.\n\nRaw bit values: false (0) = Stopped: I3C module is in a STOP condition.; true (1) = Busy: The bus is busy (has activity)."
     bit_offset: 0
     bit_size: 1
-    enum: Stnotstop
   - name: stmsg
-    description: Status message.
+    description: "Status message.\n\nRaw bit values: false (0) = Idle: Bus target not listening or responding.; true (1) = Busy: This bus target is listening to the bus traffic or responding."
     bit_offset: 1
     bit_size: 1
-    enum: Stmsg
   - name: stccch
-    description: Status Common Command Code Handler.
+    description: "Status Common Command Code Handler.\n\nRaw bit values: false (0) = Idle: No CCC message is being handled.; true (1) = Busy: A CCC message is being handled automatically."
     bit_offset: 2
     bit_size: 1
-    enum: Stccch
   - name: streqrd
-    description: Status Request Read.
+    description: "Status Request Read.\n\nRaw bit values: false (0) = Idle: REQ in process is not an SDR read from this target.; true (1) = Busy: The REQ in process is an SDR read from this target, or an In-Band Interrupt (IBI) is being pushed out."
     bit_offset: 3
     bit_size: 1
-    enum: Streqrd
   - name: streqwr
-    description: Status Request Write.
+    description: "Status Request Write.\n\nRaw bit values: false (0) = Idle: REQ in process is not SDR write data from the controller.; true (1) = Busy: REQ in process is SDR write data from the controller to this bus target (or all targets), but not in ENTDAA mode."
     bit_offset: 4
     bit_size: 1
-    enum: Streqwr
   - name: stdaa
     description: Status Dynamic Address Assignment.
     bit_offset: 5
@@ -1461,10 +1441,9 @@ fieldset/Sstatus:
     bit_offset: 6
     bit_size: 1
   - name: start
-    description: Start.
+    description: "Start.\n\nRaw bit values: false (0) = StartNotDetected: No START seen.; true (1) = StartDetected: A START or repeated START was seen after the START bit was last cleared."
     bit_offset: 8
     bit_size: 1
-    enum: SstatusStart
   - name: matched
     description: Matched.
     bit_offset: 9
@@ -1478,10 +1457,9 @@ fieldset/Sstatus:
     bit_offset: 11
     bit_size: 1
   - name: txnotfull
-    description: Transmit Buffer Is Not Full.
+    description: "Transmit Buffer Is Not Full.\n\nRaw bit values: false (0) = Full: Transmit buffer full.; true (1) = NotFull: Transmit buffer not full."
     bit_offset: 12
     bit_size: 1
-    enum: SstatusTxnotfull
   - name: dachg
     description: Dynamic Address Change.
     bit_offset: 13
@@ -1512,20 +1490,17 @@ fieldset/Sstatus:
     bit_size: 2
     enum: Evdet
   - name: ibidis
-    description: In-Band Interrupts Are Disabled.
+    description: "In-Band Interrupts Are Disabled.\n\nRaw bit values: false (0) = InterruptsEnabled: In-Band Interrupts not disabled.; true (1) = InterruptsDisabled: In-Band Interrupts disabled."
     bit_offset: 24
     bit_size: 1
-    enum: Ibidis
   - name: mrdis
-    description: Controller Requests Are Disabled.
+    description: "Controller Requests Are Disabled.\n\nRaw bit values: false (0) = MrEnabled: Controller Requests not disabled.; true (1) = MrDisabled: Controller Requests disabled."
     bit_offset: 25
     bit_size: 1
-    enum: Mrdis
   - name: hjdis
-    description: Hot-Join Disabled.
+    description: "Hot-Join Disabled.\n\nRaw bit values: false (0) = MrEnabled: Hot-Join not disabled.; true (1) = MrDisabled: Hot-Join disabled."
     bit_offset: 27
     bit_size: 1
-    enum: Hjdis
   - name: actstate
     description: Activity State from Common Command Codes (CCC).
     bit_offset: 28
@@ -1662,24 +1637,6 @@ enum/Ccchandle:
   - name: Vendinfo
     description: GETSTATUS CCC returns SCTRL[VENDINFO] value.
     value: 8
-enum/Disto:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Timeout enabled.
-    value: 0
-  - name: Disable
-    description: Timeout disabled, if timeout is configured.
-    value: 1
-enum/Dma:
-  bit_size: 1
-  variants:
-  - name: Dmano
-    description: Not supported.
-    value: 0
-  - name: Dmayes
-    description: Supported.
-    value: 1
 enum/Evdet:
   bit_size: 2
   variants:
@@ -1737,15 +1694,6 @@ enum/Fifotx:
   - name: Fifo16byte
     description: 16 or larger.
     value: 3
-enum/Flushfb:
-  bit_size: 1
-  variants:
-  - name: NoAction
-    description: No action.
-    value: 0
-  - name: Flush
-    description: Flush the buffer.
-    value: 1
 enum/Group:
   bit_size: 2
   variants:
@@ -1770,15 +1718,6 @@ enum/Hdrsupp:
   - name: Ddr
     description: Double Data Rate mode supported.
     value: 1
-enum/Hjdis:
-  bit_size: 1
-  variants:
-  - name: MrEnabled
-    description: Hot-Join not disabled.
-    value: 0
-  - name: MrDisabled
-    description: Hot-Join disabled.
-    value: 1
 enum/Hkeep:
   bit_size: 2
   variants:
@@ -1794,15 +1733,6 @@ enum/Hkeep:
   - name: PassiveOnSdaScl
     description: PASSIVE_ON_SDA_SCL.
     value: 3
-enum/I2c:
-  bit_size: 1
-  variants:
-  - name: I3cmessage
-    description: I3C message.
-    value: 0
-  - name: I2cmessage
-    description: I2C message.
-    value: 1
 enum/I3cCasDel:
   bit_size: 2
   variants:
@@ -1839,15 +1769,6 @@ enum/IbiMrHj:
   - name: BamatchForBus
     description: Application can use SCONFIG[BAMATCH] for bus-available timing.
     value: 16
-enum/Ibidis:
-  bit_size: 1
-  variants:
-  - name: InterruptsEnabled
-    description: In-Band Interrupts not disabled.
-    value: 0
-  - name: InterruptsDisabled
-    description: In-Band Interrupts disabled.
-    value: 1
 enum/Ibiresp:
   bit_size: 2
   variants:
@@ -1911,42 +1832,6 @@ enum/Idreg:
   - name: Bcr
     description: A Bus Characteristics Register (BCR) is available.
     value: 8
-enum/Int:
-  bit_size: 1
-  variants:
-  - name: Interruptsno
-    description: Not supported.
-    value: 0
-  - name: Interruptsyes
-    description: Supported.
-    value: 1
-enum/Laststatic:
-  bit_size: 1
-  variants:
-  - name: I3c
-    description: I3C dynamic address.
-    value: 0
-  - name: I2c
-    description: I2C static address.
-    value: 1
-enum/Master:
-  bit_size: 1
-  variants:
-  - name: Masternotsupported
-    description: Not supported.
-    value: 0
-  - name: Mastersupported
-    description: Supported.
-    value: 1
-enum/MctrlDir:
-  bit_size: 1
-  variants:
-  - name: Dirwrite
-    description: Write.
-    value: 0
-  - name: Dirread
-    description: Read.
-    value: 1
 enum/MdatactrlRxtrig:
   bit_size: 2
   variants:
@@ -2013,15 +1898,6 @@ enum/MdmactrlDmawidth:
   - name: HalfWord
     description: Halfword (16 bits).
     value: 2
-enum/Mrdis:
-  bit_size: 1
-  variants:
-  - name: MrEnabled
-    description: Controller Requests not disabled.
-    value: 0
-  - name: MrDisabled
-    description: Controller Requests disabled.
-    value: 1
 enum/Mstena:
   bit_size: 2
   variants:
@@ -2037,24 +1913,6 @@ enum/Mstena:
   - name: I2cMasterMode
     description: I2C_CONTROLLER_MODE.
     value: 3
-enum/MwmsgSdrControlDir:
-  bit_size: 1
-  variants:
-  - name: Write
-    description: Write.
-    value: 0
-  - name: Read
-    description: Read.
-    value: 1
-enum/Nobyte:
-  bit_size: 1
-  variants:
-  - name: Ibibyte
-    description: With mandatory IBI byte.
-    value: 0
-  - name: NoIbibyte
-    description: Without mandatory IBI byte.
-    value: 1
 enum/Request:
   bit_size: 3
   variants:
@@ -2094,15 +1952,6 @@ enum/Saddr:
   - name: Config
     description: SCONFIG register supplies the static address.
     value: 3
-enum/ScapabilitiesTimectrl:
-  bit_size: 1
-  variants:
-  - name: NoTimeControlType
-    description: No time control enabled.
-    value: 0
-  - name: Atleast1TimeControl
-    description: At least one time-control type supported.
-    value: 1
 enum/SctrlEvent:
   bit_size: 2
   variants:
@@ -2118,15 +1967,6 @@ enum/SctrlEvent:
   - name: HotJoinRequest
     description: HOT_JOIN_REQUEST.
     value: 3
-enum/SdatactrlRxempty:
-  bit_size: 1
-  variants:
-  - name: Rxisnotempty
-    description: Not empty.
-    value: 0
-  - name: Rxisempty
-    description: Empty.
-    value: 1
 enum/SdatactrlRxtrig:
   bit_size: 2
   variants:
@@ -2142,15 +1982,6 @@ enum/SdatactrlRxtrig:
   - name: Triggrthreefourths
     description: Trigger when 3/4 or more full.
     value: 3
-enum/SdatactrlTxfull:
-  bit_size: 1
-  variants:
-  - name: Txisnotfull
-    description: Not full.
-    value: 0
-  - name: Txisfull
-    description: Full.
-    value: 1
 enum/SdatactrlTxtrig:
   bit_size: 2
   variants:
@@ -2202,24 +2033,6 @@ enum/SdmactrlDmawidth:
   - name: HalfWord
     description: Half word (16 bits).
     value: 2
-enum/SdynaddrDavalid:
-  bit_size: 1
-  variants:
-  - name: Danotassigned
-    description: 'DANOTASSIGNED: a Dynamic Address is not assigned.'
-    value: 0
-  - name: Daassigned
-    description: 'DAASSIGNED: a Dynamic Address is assigned.'
-    value: 1
-enum/SstatusStart:
-  bit_size: 1
-  variants:
-  - name: StartNotDetected
-    description: No START seen.
-    value: 0
-  - name: StartDetected
-    description: A START or repeated START was seen after the START bit was last cleared.
-    value: 1
 enum/SstatusTimectrl:
   bit_size: 2
   variants:
@@ -2235,15 +2048,6 @@ enum/SstatusTimectrl:
   - name: Bothsyncasync
     description: BOTHSYNCASYNC.
     value: 3
-enum/SstatusTxnotfull:
-  bit_size: 1
-  variants:
-  - name: Full
-    description: Transmit buffer full.
-    value: 0
-  - name: NotFull
-    description: Transmit buffer not full.
-    value: 1
 enum/State:
   bit_size: 3
   variants:
@@ -2271,52 +2075,6 @@ enum/State:
   - name: Ibircv
     description: IBIRCV.
     value: 7
-enum/Stccch:
-  bit_size: 1
-  variants:
-  - name: Idle
-    description: No CCC message is being handled.
-    value: 0
-  - name: Busy
-    description: A CCC message is being handled automatically.
-    value: 1
-enum/Stmsg:
-  bit_size: 1
-  variants:
-  - name: Idle
-    description: Bus target not listening or responding.
-    value: 0
-  - name: Busy
-    description: This bus target is listening to the bus traffic or responding.
-    value: 1
-enum/Stnotstop:
-  bit_size: 1
-  variants:
-  - name: Stopped
-    description: I3C module is in a STOP condition.
-    value: 0
-  - name: Busy
-    description: The bus is busy (has activity).
-    value: 1
-enum/Streqrd:
-  bit_size: 1
-  variants:
-  - name: Idle
-    description: REQ in process is not an SDR read from this target.
-    value: 0
-  - name: Busy
-    description: The REQ in process is an SDR read from this target, or an In-Band Interrupt (IBI) is being pushed out.
-    value: 1
-enum/Streqwr:
-  bit_size: 1
-  variants:
-  - name: Idle
-    description: REQ in process is not SDR write data from the controller.
-    value: 0
-  - name: Busy
-    description: REQ in process is SDR write data from the controller to this bus target (or all targets), but not in ENTDAA
-      mode.
-    value: 1
 enum/Type:
   bit_size: 2
   variants:

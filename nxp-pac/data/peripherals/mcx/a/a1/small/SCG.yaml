@@ -97,10 +97,9 @@ fieldset/Firccsr:
     bit_offset: 0
     bit_size: 1
   - name: fircsten
-    description: FIRC Stop Enable.
+    description: "FIRC Stop Enable.\n\nRaw bit values: false (0) = DisabledInStopModes: FIRC is disabled in Deep Sleep mode.; true (1) = EnabledInStopModes: FIRC is enabled in Deep Sleep mode."
     bit_offset: 1
     bit_size: 1
-    enum: Fircsten
   - name: firc_sclk_periph_en
     description: FIRC 48 MHz Clock to peripherals Enable.
     bit_offset: 4
@@ -118,48 +117,41 @@ fieldset/Firccsr:
     bit_offset: 9
     bit_size: 1
   - name: trim_lock
-    description: FIRC TRIM LOCK.
+    description: "FIRC TRIM LOCK.\n\nRaw bit values: false (0) = FircNotLocked: FIRC auto trim not locked to target frequency range.; true (1) = FircLocked: FIRC auto trim locked to target frequency range."
     bit_offset: 10
     bit_size: 1
-    enum: FirccsrTrimLock
   - name: coarse_trim_bypass
     description: Coarse Auto Trim Bypass.
     bit_offset: 11
     bit_size: 1
   - name: lk
-    description: Lock Register.
+    description: "Lock Register.\n\nRaw bit values: false (0) = WriteEnabled: Control Status Register can be written.; true (1) = WriteDisabled: Control Status Register cannot be written."
     bit_offset: 23
     bit_size: 1
-    enum: FirccsrLk
   - name: fircvld
-    description: FIRC Valid status.
+    description: "FIRC Valid status.\n\nRaw bit values: false (0) = NotEnabledOrNotValid: FIRC is not enabled or clock is not valid.; true (1) = EnabledAndValid: FIRC is enabled and output clock is valid. The clock is valid after there is an output clock from the FIRC analog."
     bit_offset: 24
     bit_size: 1
-    enum: Fircvld
   - name: fircsel
     description: FIRC Selected.
     bit_offset: 25
     bit_size: 1
   - name: fircerr
-    description: FIRC Clock Error.
+    description: "FIRC Clock Error.\n\nRaw bit values: false (0) = ErrorNotDetected: Error not detected with the FIRC trimming.; true (1) = ErrorDetected: Error detected with the FIRC trimming."
     bit_offset: 26
     bit_size: 1
-    enum: Fircerr
   - name: fircerr_ie
-    description: FIRC Clock Error Interrupt Enable.
+    description: "FIRC Clock Error Interrupt Enable.\n\nRaw bit values: false (0) = ErrorNotDetected: FIRCERR interrupt is not enabled.; true (1) = ErrorDetected: FIRCERR interrupt is enabled."
     bit_offset: 27
     bit_size: 1
-    enum: FircerrIe
   - name: fircacc_ie
-    description: FIRC Accurate Interrupt Enable.
+    description: "FIRC Accurate Interrupt Enable.\n\nRaw bit values: false (0) = Fircaccnot: FIRCACC interrupt is not enabled.; true (1) = Fircaccyes: FIRCACC interrupt is enabled."
     bit_offset: 30
     bit_size: 1
-    enum: FircaccIe
   - name: fircacc
-    description: FIRC Frequency Accurate.
+    description: "FIRC Frequency Accurate.\n\nRaw bit values: false (0) = NotEnabledOrNotValid: FIRC is not enabled or clock is not accurate.; true (1) = EnabledAndValid: FIRC is enabled and output clock is accurate. The clock is accurate after 4096 clock cycles of FRO_HF clock(It also takes 4096 clock cycles when FIRCCFG_FREQ_SEL[0] changes) or 1365 clock cycles of 48 MHz from the FIRC analog."
     bit_offset: 31
     bit_size: 1
-    enum: Fircacc
   reset_value: 50331697
 fieldset/Fircstat:
   description: FIRC Auto-trimming Status Register.
@@ -234,24 +226,21 @@ fieldset/Rosccsr:
   description: ROSC Control Status Register.
   fields:
   - name: lk
-    description: Lock Register.
+    description: "Lock Register.\n\nRaw bit values: false (0) = WriteEnabled: Control Status Register can be written.; true (1) = WriteDisabled: Control Status Register cannot be written."
     bit_offset: 23
     bit_size: 1
-    enum: FirccsrLk
   - name: roscvld
-    description: ROSC Valid.
+    description: "ROSC Valid.\n\nRaw bit values: false (0) = DisabledOrNotValid: ROSC is not enabled or clock is not valid.; true (1) = EnabledAndValid: ROSC is enabled and output clock is valid."
     bit_offset: 24
     bit_size: 1
-    enum: Roscvld
   - name: roscsel
     description: ROSC Selected.
     bit_offset: 25
     bit_size: 1
   - name: roscerr
-    description: ROSC Clock Error.
+    description: "ROSC Clock Error.\n\nRaw bit values: false (0) = DisabledOrNoError: ROSC Clock has not detected an error.; true (1) = EnabledAndError: ROSC Clock has detected an error."
     bit_offset: 26
     bit_size: 1
-    enum: Roscerr
   reset_value: 0
 fieldset/Sirccsr:
   description: SIRC Control Status Register.
@@ -273,38 +262,33 @@ fieldset/Sirccsr:
     bit_offset: 9
     bit_size: 1
   - name: trim_lock
-    description: SIRC TRIM LOCK.
+    description: "SIRC TRIM LOCK.\n\nRaw bit values: false (0) = SircNotLocked: SIRC auto trim not locked to target frequency range.; true (1) = SircLocked: SIRC auto trim locked to target frequency range."
     bit_offset: 10
     bit_size: 1
-    enum: SirccsrTrimLock
   - name: coarse_trim_bypass
     description: Coarse Auto Trim Bypass.
     bit_offset: 11
     bit_size: 1
   - name: lk
-    description: Lock Register.
+    description: "Lock Register.\n\nRaw bit values: false (0) = WriteEnabled: Control Status Register can be written.; true (1) = WriteDisabled: Control Status Register cannot be written."
     bit_offset: 23
     bit_size: 1
-    enum: FirccsrLk
   - name: sircvld
-    description: SIRC Valid.
+    description: "SIRC Valid.\n\nRaw bit values: false (0) = DisabledOrNotValid: SIRC is not enabled or clock is not valid.; true (1) = EnabledAndValid: SIRC is enabled and output clock is valid."
     bit_offset: 24
     bit_size: 1
-    enum: Sircvld
   - name: sircsel
     description: SIRC Selected.
     bit_offset: 25
     bit_size: 1
   - name: sircerr
-    description: SIRC Clock Error.
+    description: "SIRC Clock Error.\n\nRaw bit values: false (0) = ErrorNotDetected: Error not detected with the SIRC trimming.; true (1) = ErrorDetected: Error detected with the SIRC trimming."
     bit_offset: 26
     bit_size: 1
-    enum: Sircerr
   - name: sircerr_ie
-    description: SIRC Clock Error Interrupt Enable.
+    description: "SIRC Clock Error Interrupt Enable.\n\nRaw bit values: false (0) = ErrorNotDetected: SIRCERR interrupt is not enabled.; true (1) = ErrorDetected: SIRCERR interrupt is enabled."
     bit_offset: 27
     bit_size: 1
-    enum: SircerrIe
   reset_value: 16777248
 fieldset/Sircstat:
   description: SIRC Auto-trimming Status Register.
@@ -335,10 +319,9 @@ fieldset/Sosccfg:
   description: SOSC Configuration Register.
   fields:
   - name: erefs
-    description: External Reference Select.
+    description: "External Reference Select.\n\nRaw bit values: false (0) = External: External reference clock selected.; true (1) = Internal: Internal crystal oscillator of OSC selected."
     bit_offset: 2
     bit_size: 1
-    enum: Erefs
   - name: range
     description: SOSC Range Select.
     bit_offset: 4
@@ -361,15 +344,13 @@ fieldset/Sosccsr:
     bit_offset: 16
     bit_size: 1
   - name: sosccmre
-    description: SOSC Clock Monitor Reset Enable.
+    description: "SOSC Clock Monitor Reset Enable.\n\nRaw bit values: false (0) = GenerateInterrupt: Clock monitor generates an interrupt when an error is detected.; true (1) = GenerateReset: Clock monitor generates a reset when an error is detected."
     bit_offset: 17
     bit_size: 1
-    enum: Sosccmre
   - name: lk
-    description: Lock Register.
+    description: "Lock Register.\n\nRaw bit values: false (0) = WriteEnabled: This Control Status Register can be written.; true (1) = WriteDisabled: This Control Status Register cannot be written."
     bit_offset: 23
     bit_size: 1
-    enum: SosccsrLk
   - name: soscvld
     description: SOSC Valid.
     bit_offset: 24
@@ -379,10 +360,9 @@ fieldset/Sosccsr:
     bit_offset: 25
     bit_size: 1
   - name: soscerr
-    description: SOSC Clock Error.
+    description: "SOSC Clock Error.\n\nRaw bit values: false (0) = DisabledOrNoError: SOSC Clock Monitor is disabled or has not detected an error.; true (1) = EnabledAndError: SOSC Clock Monitor is enabled and detected an error."
     bit_offset: 26
     bit_size: 1
-    enum: Soscerr
   - name: soscvld_ie
     description: SOSC Valid Interrupt Enable.
     bit_offset: 30
@@ -392,15 +372,13 @@ fieldset/TrimLock:
   description: Trim Lock register.
   fields:
   - name: trim_unlock
-    description: TRIM_UNLOCK.
+    description: "TRIM_UNLOCK.\n\nRaw bit values: false (0) = Locked: SCG Trim Registers locked and not writable.; true (1) = NotLocked: SCG Trim registers unlocked and writable."
     bit_offset: 0
     bit_size: 1
-    enum: TrimUnlock
   - name: ifr_disable
-    description: IFR_DISABLE.
+    description: "IFR_DISABLE.\n\nRaw bit values: false (0) = Enabled: IFR write access to SCG trim registers not disabled. The SCG Trim registers are reprogrammed with the IFR values after any system reset.; true (1) = Disabled: IFR write access to SCG trim registers during system reset is blocked."
     bit_offset: 1
     bit_size: 1
-    enum: IfrDisable
   - name: trim_lock_key
     description: TRIM_LOCK_KEY.
     bit_offset: 16
@@ -414,79 +392,6 @@ fieldset/Verid:
     bit_offset: 0
     bit_size: 32
   reset_value: 0
-enum/Erefs:
-  bit_size: 1
-  variants:
-  - name: External
-    description: External reference clock selected.
-    value: 0
-  - name: Internal
-    description: Internal crystal oscillator of OSC selected.
-    value: 1
-enum/Fircacc:
-  bit_size: 1
-  variants:
-  - name: NotEnabledOrNotValid
-    description: FIRC is not enabled or clock is not accurate.
-    value: 0
-  - name: EnabledAndValid
-    description: FIRC is enabled and output clock is accurate. The clock is accurate after 4096 clock cycles of FRO_HF clock(It
-      also takes 4096 clock cycles when FIRCCFG_FREQ_SEL[0] changes) or 1365 clock cycles of 48 MHz from the FIRC analog.
-    value: 1
-enum/FircaccIe:
-  bit_size: 1
-  variants:
-  - name: Fircaccnot
-    description: FIRCACC interrupt is not enabled.
-    value: 0
-  - name: Fircaccyes
-    description: FIRCACC interrupt is enabled.
-    value: 1
-enum/FirccsrLk:
-  bit_size: 1
-  variants:
-  - name: WriteEnabled
-    description: Control Status Register can be written.
-    value: 0
-  - name: WriteDisabled
-    description: Control Status Register cannot be written.
-    value: 1
-enum/FirccsrTrimLock:
-  bit_size: 1
-  variants:
-  - name: FircNotLocked
-    description: FIRC auto trim not locked to target frequency range.
-    value: 0
-  - name: FircLocked
-    description: FIRC auto trim locked to target frequency range.
-    value: 1
-enum/Fircerr:
-  bit_size: 1
-  variants:
-  - name: ErrorNotDetected
-    description: Error not detected with the FIRC trimming.
-    value: 0
-  - name: ErrorDetected
-    description: Error detected with the FIRC trimming.
-    value: 1
-enum/FircerrIe:
-  bit_size: 1
-  variants:
-  - name: ErrorNotDetected
-    description: FIRCERR interrupt is not enabled.
-    value: 0
-  - name: ErrorDetected
-    description: FIRCERR interrupt is enabled.
-    value: 1
-enum/Fircsten:
-  bit_size: 1
-  variants:
-  - name: DisabledInStopModes
-    description: FIRC is disabled in Deep Sleep mode.
-    value: 0
-  - name: EnabledInStopModes
-    description: FIRC is enabled in Deep Sleep mode.
-    value: 1
 enum/FirctcfgTrimsrc:
   bit_size: 2
   variants:
@@ -496,16 +401,6 @@ enum/FirctcfgTrimsrc:
   - name: Sosc
     description: SOSC. This option requires that SOSC be divided using the TRIMDIV field to get a frequency of 1 MHz.
     value: 2
-enum/Fircvld:
-  bit_size: 1
-  variants:
-  - name: NotEnabledOrNotValid
-    description: FIRC is not enabled or clock is not valid.
-    value: 0
-  - name: EnabledAndValid
-    description: FIRC is enabled and output clock is valid. The clock is valid after there is an output clock from the FIRC
-      analog.
-    value: 1
 enum/FreqSel:
   bit_size: 3
   variants:
@@ -517,16 +412,6 @@ enum/FreqSel:
     value: 5
   - name: Firc180_192mhz
     value: 7
-enum/IfrDisable:
-  bit_size: 1
-  variants:
-  - name: Enabled
-    description: IFR write access to SCG trim registers not disabled. The SCG Trim registers are reprogrammed with the IFR
-      values after any system reset.
-    value: 0
-  - name: Disabled
-    description: IFR write access to SCG trim registers during system reset is blocked.
-    value: 1
 enum/Range:
   bit_size: 2
   variants:
@@ -542,24 +427,6 @@ enum/Range:
   - name: HighFreq
     description: Frequency range select of 40-50 MHz.
     value: 3
-enum/Roscerr:
-  bit_size: 1
-  variants:
-  - name: DisabledOrNoError
-    description: ROSC Clock has not detected an error.
-    value: 0
-  - name: EnabledAndError
-    description: ROSC Clock has detected an error.
-    value: 1
-enum/Roscvld:
-  bit_size: 1
-  variants:
-  - name: DisabledOrNotValid
-    description: ROSC is not enabled or clock is not valid.
-    value: 0
-  - name: EnabledAndValid
-    description: ROSC is enabled and output clock is valid.
-    value: 1
 enum/Scs:
   bit_size: 3
   variants:
@@ -575,81 +442,9 @@ enum/Scs:
   - name: Rosc
     description: ROSC.
     value: 4
-enum/SirccsrTrimLock:
-  bit_size: 1
-  variants:
-  - name: SircNotLocked
-    description: SIRC auto trim not locked to target frequency range.
-    value: 0
-  - name: SircLocked
-    description: SIRC auto trim locked to target frequency range.
-    value: 1
-enum/Sircerr:
-  bit_size: 1
-  variants:
-  - name: ErrorNotDetected
-    description: Error not detected with the SIRC trimming.
-    value: 0
-  - name: ErrorDetected
-    description: Error detected with the SIRC trimming.
-    value: 1
-enum/SircerrIe:
-  bit_size: 1
-  variants:
-  - name: ErrorNotDetected
-    description: SIRCERR interrupt is not enabled.
-    value: 0
-  - name: ErrorDetected
-    description: SIRCERR interrupt is enabled.
-    value: 1
 enum/SirctcfgTrimsrc:
   bit_size: 2
   variants:
   - name: Sosc
     description: SOSC. This option requires that SOSC be divided using the TRIMDIV field to get a frequency of 1 MHz.
     value: 2
-enum/Sircvld:
-  bit_size: 1
-  variants:
-  - name: DisabledOrNotValid
-    description: SIRC is not enabled or clock is not valid.
-    value: 0
-  - name: EnabledAndValid
-    description: SIRC is enabled and output clock is valid.
-    value: 1
-enum/Sosccmre:
-  bit_size: 1
-  variants:
-  - name: GenerateInterrupt
-    description: Clock monitor generates an interrupt when an error is detected.
-    value: 0
-  - name: GenerateReset
-    description: Clock monitor generates a reset when an error is detected.
-    value: 1
-enum/SosccsrLk:
-  bit_size: 1
-  variants:
-  - name: WriteEnabled
-    description: This Control Status Register can be written.
-    value: 0
-  - name: WriteDisabled
-    description: This Control Status Register cannot be written.
-    value: 1
-enum/Soscerr:
-  bit_size: 1
-  variants:
-  - name: DisabledOrNoError
-    description: SOSC Clock Monitor is disabled or has not detected an error.
-    value: 0
-  - name: EnabledAndError
-    description: SOSC Clock Monitor is enabled and detected an error.
-    value: 1
-enum/TrimUnlock:
-  bit_size: 1
-  variants:
-  - name: Locked
-    description: SCG Trim Registers locked and not writable.
-    value: 0
-  - name: NotLocked
-    description: SCG Trim registers unlocked and writable.
-    value: 1

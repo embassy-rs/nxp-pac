@@ -216,10 +216,9 @@ fieldset/Pmctrl:
   reset_value: 0
   fields:
   - name: sel_pmatch
-    description: Select pin interrupts (zero) or pattern-match interrupts (one).
+    description: "Select pin interrupts (zero) or pattern-match interrupts (one).\n\nRaw bit values: false (0) = PIN_INTERRUPT: Standard pin interrupt function.; true (1) = PATTERN_MATCH: Pattern-match function."
     bit_offset: 0
     bit_size: 1
-    enum: SelPmatch
   - name: ena_rxev
     description: Enable RXEV output for a true pattern Boolean expression.
     bit_offset: 1
@@ -247,13 +246,9 @@ fieldset/Pmcfg:
   reset_value: 0
   fields:
   - name: prod_endpts
-    description: >-
-      One ends a product term at slice n and starts a new term at slice n+1;
-      that term's match asserts interrupt n. Zero has no effect. Slice 7 is
-      always an endpoint and has no programmable bit.
+    description: "One ends a product term at slice n and starts a new term at slice n+1; that term's match asserts interrupt n. Zero has no effect. Slice 7 is always an endpoint and has no programmable bit.\n\nRaw bit values: false (0) = NoEffect: No effect.; true (1) = Endpoint: Endpoint."
     bit_offset: 0
     bit_size: 1
-    enum: ProdEndpts
     array:
       len: 7
       stride: 1
@@ -269,15 +264,6 @@ fieldset/Pmcfg:
       len: 8
       stride: 3
     enum: MatchCondition
-enum/SelPmatch:
-  bit_size: 1
-  variants:
-  - name: PIN_INTERRUPT
-    description: Standard pin interrupt function.
-    value: 0
-  - name: PATTERN_MATCH
-    description: Pattern-match function.
-    value: 1
 enum/Source:
   bit_size: 3
   variants:
@@ -324,12 +310,3 @@ enum/MatchCondition:
   - name: EVENT
     description: Nonsticky rising or falling edge; see CFG timing wording conflict.
     value: 7
-enum/ProdEndpts:
-  bit_size: 1
-  variants:
-  - name: NoEffect
-    description: No effect.
-    value: 0
-  - name: Endpoint
-    description: Endpoint.
-    value: 1

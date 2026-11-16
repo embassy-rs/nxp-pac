@@ -140,10 +140,9 @@ fieldset/Config:
   description: Configuration.
   fields:
   - name: range
-    description: Port Voltage Range.
+    description: "Port Voltage Range.\n\nRaw bit values: false (0) = Range0: 1.71 V-3.6 V.; true (1) = Range1: 2.70 V-3.6 V."
     bit_offset: 0
     bit_size: 1
-    enum: Range
   bit_size: 32
   reset_value: 0
 fieldset/Gpchr:
@@ -154,85 +153,69 @@ fieldset/Gpchr:
     bit_offset: 0
     bit_size: 16
   - name: gpwe16
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 16
     bit_size: 1
-    enum: Gpwe0
   - name: gpwe17
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 17
     bit_size: 1
-    enum: Gpwe0
   - name: gpwe18
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 18
     bit_size: 1
-    enum: Gpwe0
   - name: gpwe19
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 19
     bit_size: 1
-    enum: Gpwe0
   - name: gpwe20
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 20
     bit_size: 1
-    enum: Gpwe0
   - name: gpwe21
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 21
     bit_size: 1
-    enum: Gpwe0
   - name: gpwe22
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 22
     bit_size: 1
-    enum: Gpwe0
   - name: gpwe23
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 23
     bit_size: 1
-    enum: Gpwe0
   - name: gpwe24
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 24
     bit_size: 1
-    enum: Gpwe0
   - name: gpwe25
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 25
     bit_size: 1
-    enum: Gpwe0
   - name: gpwe26
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 26
     bit_size: 1
-    enum: Gpwe0
   - name: gpwe27
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 27
     bit_size: 1
-    enum: Gpwe0
   - name: gpwe28
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 28
     bit_size: 1
-    enum: Gpwe0
   - name: gpwe29
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 29
     bit_size: 1
-    enum: Gpwe0
   - name: gpwe30
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 30
     bit_size: 1
-    enum: Gpwe0
   - name: gpwe31
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 31
     bit_size: 1
-    enum: Gpwe0
   bit_size: 32
   reset_value: 0
 fieldset/Gpclr:
@@ -243,510 +226,425 @@ fieldset/Gpclr:
     bit_offset: 0
     bit_size: 16
   - name: gpwe0
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 16
     bit_size: 1
-    enum: Gpwe0
   - name: gpwe1
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 17
     bit_size: 1
-    enum: Gpwe0
   - name: gpwe2
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 18
     bit_size: 1
-    enum: Gpwe0
   - name: gpwe3
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 19
     bit_size: 1
-    enum: Gpwe0
   - name: gpwe4
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 20
     bit_size: 1
-    enum: Gpwe0
   - name: gpwe5
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 21
     bit_size: 1
-    enum: Gpwe0
   - name: gpwe6
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 22
     bit_size: 1
-    enum: Gpwe0
   - name: gpwe7
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 23
     bit_size: 1
-    enum: Gpwe0
   - name: gpwe8
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 24
     bit_size: 1
-    enum: Gpwe0
   - name: gpwe9
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 25
     bit_size: 1
-    enum: Gpwe0
   - name: gpwe10
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 26
     bit_size: 1
-    enum: Gpwe0
   - name: gpwe11
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 27
     bit_size: 1
-    enum: Gpwe0
   - name: gpwe12
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 28
     bit_size: 1
-    enum: Gpwe0
   - name: gpwe13
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 29
     bit_size: 1
-    enum: Gpwe0
   - name: gpwe14
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 30
     bit_size: 1
-    enum: Gpwe0
   - name: gpwe15
-    description: Global Pin Write Enable.
+    description: "Global Pin Write Enable.\n\nRaw bit values: false (0) = Gpwe0: Not updated.; true (1) = Gpwe1: Updated."
     bit_offset: 31
     bit_size: 1
-    enum: Gpwe0
   bit_size: 32
   reset_value: 0
 fieldset/Pcr0:
   description: Pin Control 0.
   fields:
   - name: ps
-    description: Pull Select.
+    description: "Pull Select.\n\nRaw bit values: false (0) = Ps0: Enables internal pulldown resistor.; true (1) = Ps1: Enables internal pullup resistor."
     bit_offset: 0
     bit_size: 1
-    enum: Pcr0Ps
   - name: pe
-    description: Pull Enable.
+    description: "Pull Enable.\n\nRaw bit values: false (0) = Pe0: Disables.; true (1) = Pe1: Enables."
     bit_offset: 1
     bit_size: 1
-    enum: Pcr0Pe
   - name: sre
-    description: Slew Rate Enable.
+    description: "Slew Rate Enable.\n\nRaw bit values: false (0) = Sre0: Fast.; true (1) = Sre1: Slow."
     bit_offset: 3
     bit_size: 1
-    enum: Pcr0Sre
   - name: ode
-    description: Open Drain Enable.
+    description: "Open Drain Enable.\n\nRaw bit values: false (0) = Ode0: Disables.; true (1) = Ode1: Enables."
     bit_offset: 5
     bit_size: 1
-    enum: Pcr0Ode
   - name: dse
-    description: Drive Strength Enable.
+    description: "Drive Strength Enable.\n\nRaw bit values: false (0) = Dse0: Low.; true (1) = Dse1: High."
     bit_offset: 6
     bit_size: 1
-    enum: Pcr0Dse
   - name: mux
     description: Pin Multiplex Control.
     bit_offset: 8
     bit_size: 3
     enum: Pcr0Mux
   - name: ibe
-    description: Input Buffer Enable.
+    description: "Input Buffer Enable.\n\nRaw bit values: false (0) = Ibe0: Disables.; true (1) = Ibe1: Enables."
     bit_offset: 12
     bit_size: 1
-    enum: Pcr0Ibe
   - name: inv
-    description: Invert Input.
+    description: "Invert Input.\n\nRaw bit values: false (0) = Inv0: Does not invert.; true (1) = Inv1: Inverts."
     bit_offset: 13
     bit_size: 1
-    enum: Pcr0Inv
   - name: lk
-    description: Lock Register.
+    description: "Lock Register.\n\nRaw bit values: false (0) = Lk0: Does not lock.; true (1) = Lk1: Locks."
     bit_offset: 15
     bit_size: 1
-    enum: Pcr0Lk
   bit_size: 32
   reset_value: 4419
 fieldset/Pcr1:
   description: Pin Control 1.
   fields:
   - name: ps
-    description: Pull Select.
+    description: "Pull Select.\n\nRaw bit values: false (0) = Ps0: Enables internal pulldown resistor.; true (1) = Ps1: Enables internal pullup resistor."
     bit_offset: 0
     bit_size: 1
-    enum: Pcr0Ps
   - name: pe
-    description: Pull Enable.
+    description: "Pull Enable.\n\nRaw bit values: false (0) = Pe0: Disables.; true (1) = Pe1: Enables."
     bit_offset: 1
     bit_size: 1
-    enum: Pcr0Pe
   - name: sre
-    description: Slew Rate Enable.
+    description: "Slew Rate Enable.\n\nRaw bit values: false (0) = Sre0: Fast.; true (1) = Sre1: Slow."
     bit_offset: 3
     bit_size: 1
-    enum: Pcr0Sre
   - name: ode
-    description: Open Drain Enable.
+    description: "Open Drain Enable.\n\nRaw bit values: false (0) = Ode0: Disables.; true (1) = Ode1: Enables."
     bit_offset: 5
     bit_size: 1
-    enum: Pcr0Ode
   - name: dse
-    description: Drive Strength Enable.
+    description: "Drive Strength Enable.\n\nRaw bit values: false (0) = Dse0: Low.; true (1) = Dse1: High."
     bit_offset: 6
     bit_size: 1
-    enum: Pcr0Dse
   - name: mux
     description: Pin Multiplex Control.
     bit_offset: 8
     bit_size: 3
     enum: Pcr0Mux
   - name: ibe
-    description: Input Buffer Enable.
+    description: "Input Buffer Enable.\n\nRaw bit values: false (0) = Ibe0: Disables.; true (1) = Ibe1: Enables."
     bit_offset: 12
     bit_size: 1
-    enum: Pcr0Ibe
   - name: inv
-    description: Invert Input.
+    description: "Invert Input.\n\nRaw bit values: false (0) = Inv0: Does not invert.; true (1) = Inv1: Inverts."
     bit_offset: 13
     bit_size: 1
-    enum: Pcr0Inv
   - name: lk
-    description: Lock Register.
+    description: "Lock Register.\n\nRaw bit values: false (0) = Lk0: Does not lock.; true (1) = Lk1: Locks."
     bit_offset: 15
     bit_size: 1
-    enum: Pcr0Lk
   bit_size: 32
   reset_value: 4354
 fieldset/Pcr16:
   description: Pin Control 16.
   fields:
   - name: ps
-    description: Pull Select.
+    description: "Pull Select.\n\nRaw bit values: false (0) = Ps0: Enables internal pulldown resistor.; true (1) = Ps1: Enables internal pullup resistor."
     bit_offset: 0
     bit_size: 1
-    enum: Pcr0Ps
   - name: pe
-    description: Pull Enable.
+    description: "Pull Enable.\n\nRaw bit values: false (0) = Pe0: Disables.; true (1) = Pe1: Enables."
     bit_offset: 1
     bit_size: 1
-    enum: Pcr0Pe
   - name: pv
-    description: Pull Value.
+    description: "Pull Value.\n\nRaw bit values: false (0) = Pv0: Low.; true (1) = Pv1: High."
     bit_offset: 2
     bit_size: 1
-    enum: Pv
   - name: sre
-    description: Slew Rate Enable.
+    description: "Slew Rate Enable.\n\nRaw bit values: false (0) = Sre0: Fast.; true (1) = Sre1: Slow."
     bit_offset: 3
     bit_size: 1
-    enum: Pcr0Sre
   - name: pfe
-    description: Passive Filter Enable.
+    description: "Passive Filter Enable.\n\nRaw bit values: false (0) = Pfe0: Disables.; true (1) = Pfe1: Enables."
     bit_offset: 4
     bit_size: 1
-    enum: Pcr16Pfe
   - name: ode
-    description: Open Drain Enable.
+    description: "Open Drain Enable.\n\nRaw bit values: false (0) = Ode0: Disables.; true (1) = Ode1: Enables."
     bit_offset: 5
     bit_size: 1
-    enum: Pcr0Ode
   - name: dse
-    description: Drive Strength Enable.
+    description: "Drive Strength Enable.\n\nRaw bit values: false (0) = Dse0: Low.; true (1) = Dse1: High."
     bit_offset: 6
     bit_size: 1
-    enum: Pcr0Dse
   - name: dse1
-    description: Drive Strength Enable.
+    description: "Drive Strength Enable.\n\nRaw bit values: false (0) = Dse10: Normal.; true (1) = Dse11: Double."
     bit_offset: 7
     bit_size: 1
-    enum: Pcr16Dse1
   - name: mux
     description: Pin Multiplex Control.
     bit_offset: 8
     bit_size: 4
     enum: Pcr2Mux
   - name: ibe
-    description: Input Buffer Enable.
+    description: "Input Buffer Enable.\n\nRaw bit values: false (0) = Ibe0: Disables.; true (1) = Ibe1: Enables."
     bit_offset: 12
     bit_size: 1
-    enum: Pcr0Ibe
   - name: inv
-    description: Invert Input.
+    description: "Invert Input.\n\nRaw bit values: false (0) = Inv0: Does not invert.; true (1) = Inv1: Inverts."
     bit_offset: 13
     bit_size: 1
-    enum: Pcr0Inv
   - name: lk
-    description: Lock Register.
+    description: "Lock Register.\n\nRaw bit values: false (0) = Lk0: Does not lock.; true (1) = Lk1: Locks."
     bit_offset: 15
     bit_size: 1
-    enum: Pcr0Lk
   bit_size: 32
   reset_value: 0
 fieldset/Pcr17:
   description: Pin Control 17.
   fields:
   - name: ps
-    description: Pull Select.
+    description: "Pull Select.\n\nRaw bit values: false (0) = Ps0: Enables internal pulldown resistor.; true (1) = Ps1: Enables internal pullup resistor."
     bit_offset: 0
     bit_size: 1
-    enum: Pcr0Ps
   - name: pe
-    description: Pull Enable.
+    description: "Pull Enable.\n\nRaw bit values: false (0) = Pe0: Disables.; true (1) = Pe1: Enables."
     bit_offset: 1
     bit_size: 1
-    enum: Pcr0Pe
   - name: sre
-    description: Slew Rate Enable.
+    description: "Slew Rate Enable.\n\nRaw bit values: false (0) = Sre0: Fast.; true (1) = Sre1: Slow."
     bit_offset: 3
     bit_size: 1
-    enum: Pcr0Sre
   - name: pfe
-    description: Passive Filter Enable.
+    description: "Passive Filter Enable.\n\nRaw bit values: false (0) = Pfe0: Disables.; true (1) = Pfe1: Enables."
     bit_offset: 4
     bit_size: 1
-    enum: Pcr16Pfe
   - name: ode
-    description: Open Drain Enable.
+    description: "Open Drain Enable.\n\nRaw bit values: false (0) = Ode0: Disables.; true (1) = Ode1: Enables."
     bit_offset: 5
     bit_size: 1
-    enum: Pcr0Ode
   - name: dse
-    description: Drive Strength Enable.
+    description: "Drive Strength Enable.\n\nRaw bit values: false (0) = Dse0: Low.; true (1) = Dse1: High."
     bit_offset: 6
     bit_size: 1
-    enum: Pcr0Dse
   - name: dse1
-    description: Drive Strength Enable.
+    description: "Drive Strength Enable.\n\nRaw bit values: false (0) = Dse10: Normal.; true (1) = Dse11: Double."
     bit_offset: 7
     bit_size: 1
-    enum: Pcr16Dse1
   - name: mux
     description: Pin Multiplex Control.
     bit_offset: 8
     bit_size: 4
     enum: Pcr2Mux
   - name: ibe
-    description: Input Buffer Enable.
+    description: "Input Buffer Enable.\n\nRaw bit values: false (0) = Ibe0: Disables.; true (1) = Ibe1: Enables."
     bit_offset: 12
     bit_size: 1
-    enum: Pcr0Ibe
   - name: inv
-    description: Invert Input.
+    description: "Invert Input.\n\nRaw bit values: false (0) = Inv0: Does not invert.; true (1) = Inv1: Inverts."
     bit_offset: 13
     bit_size: 1
-    enum: Pcr0Inv
   - name: lk
-    description: Lock Register.
+    description: "Lock Register.\n\nRaw bit values: false (0) = Lk0: Does not lock.; true (1) = Lk1: Locks."
     bit_offset: 15
     bit_size: 1
-    enum: Pcr0Lk
   bit_size: 32
   reset_value: 0
 fieldset/Pcr2:
   description: Pin Control 2.
   fields:
   - name: ps
-    description: Pull Select.
+    description: "Pull Select.\n\nRaw bit values: false (0) = Ps0: Enables internal pulldown resistor.; true (1) = Ps1: Enables internal pullup resistor."
     bit_offset: 0
     bit_size: 1
-    enum: Pcr0Ps
   - name: pe
-    description: Pull Enable.
+    description: "Pull Enable.\n\nRaw bit values: false (0) = Pe0: Disables.; true (1) = Pe1: Enables."
     bit_offset: 1
     bit_size: 1
-    enum: Pcr0Pe
   - name: sre
-    description: Slew Rate Enable.
+    description: "Slew Rate Enable.\n\nRaw bit values: false (0) = Sre0: Fast.; true (1) = Sre1: Slow."
     bit_offset: 3
     bit_size: 1
-    enum: Pcr0Sre
   - name: ode
-    description: Open Drain Enable.
+    description: "Open Drain Enable.\n\nRaw bit values: false (0) = Ode0: Disables.; true (1) = Ode1: Enables."
     bit_offset: 5
     bit_size: 1
-    enum: Pcr0Ode
   - name: dse
-    description: Drive Strength Enable.
+    description: "Drive Strength Enable.\n\nRaw bit values: false (0) = Dse0: Low.; true (1) = Dse1: High."
     bit_offset: 6
     bit_size: 1
-    enum: Pcr0Dse
   - name: mux
     description: Pin Multiplex Control.
     bit_offset: 8
     bit_size: 4
     enum: Pcr2Mux
   - name: ibe
-    description: Input Buffer Enable.
+    description: "Input Buffer Enable.\n\nRaw bit values: false (0) = Ibe0: Disables.; true (1) = Ibe1: Enables."
     bit_offset: 12
     bit_size: 1
-    enum: Pcr0Ibe
   - name: inv
-    description: Invert Input.
+    description: "Invert Input.\n\nRaw bit values: false (0) = Inv0: Does not invert.; true (1) = Inv1: Inverts."
     bit_offset: 13
     bit_size: 1
-    enum: Pcr0Inv
   - name: lk
-    description: Lock Register.
+    description: "Lock Register.\n\nRaw bit values: false (0) = Lk0: Does not lock.; true (1) = Lk1: Locks."
     bit_offset: 15
     bit_size: 1
-    enum: Pcr0Lk
   bit_size: 32
   reset_value: 320
 fieldset/Pcr3:
   description: Pin Control 3.
   fields:
   - name: ps
-    description: Pull Select.
+    description: "Pull Select.\n\nRaw bit values: false (0) = Ps0: Enables internal pulldown resistor.; true (1) = Ps1: Enables internal pullup resistor."
     bit_offset: 0
     bit_size: 1
-    enum: Pcr0Ps
   - name: pe
-    description: Pull Enable.
+    description: "Pull Enable.\n\nRaw bit values: false (0) = Pe0: Disables.; true (1) = Pe1: Enables."
     bit_offset: 1
     bit_size: 1
-    enum: Pcr0Pe
   - name: sre
-    description: Slew Rate Enable.
+    description: "Slew Rate Enable.\n\nRaw bit values: false (0) = Sre0: Fast.; true (1) = Sre1: Slow."
     bit_offset: 3
     bit_size: 1
-    enum: Pcr0Sre
   - name: ode
-    description: Open Drain Enable.
+    description: "Open Drain Enable.\n\nRaw bit values: false (0) = Ode0: Disables.; true (1) = Ode1: Enables."
     bit_offset: 5
     bit_size: 1
-    enum: Pcr0Ode
   - name: dse
-    description: Drive Strength Enable.
+    description: "Drive Strength Enable.\n\nRaw bit values: false (0) = Dse0: Low.; true (1) = Dse1: High."
     bit_offset: 6
     bit_size: 1
-    enum: Pcr0Dse
   - name: mux
     description: Pin Multiplex Control.
     bit_offset: 8
     bit_size: 4
     enum: Pcr2Mux
   - name: ibe
-    description: Input Buffer Enable.
+    description: "Input Buffer Enable.\n\nRaw bit values: false (0) = Ibe0: Disables.; true (1) = Ibe1: Enables."
     bit_offset: 12
     bit_size: 1
-    enum: Pcr0Ibe
   - name: inv
-    description: Invert Input.
+    description: "Invert Input.\n\nRaw bit values: false (0) = Inv0: Does not invert.; true (1) = Inv1: Inverts."
     bit_offset: 13
     bit_size: 1
-    enum: Pcr0Inv
   - name: lk
-    description: Lock Register.
+    description: "Lock Register.\n\nRaw bit values: false (0) = Lk0: Does not lock.; true (1) = Lk1: Locks."
     bit_offset: 15
     bit_size: 1
-    enum: Pcr0Lk
   bit_size: 32
   reset_value: 4355
 fieldset/Pcr4:
   description: Pin Control 4.
   fields:
   - name: ps
-    description: Pull Select.
+    description: "Pull Select.\n\nRaw bit values: false (0) = Ps0: Enables internal pulldown resistor.; true (1) = Ps1: Enables internal pullup resistor."
     bit_offset: 0
     bit_size: 1
-    enum: Pcr0Ps
   - name: pe
-    description: Pull Enable.
+    description: "Pull Enable.\n\nRaw bit values: false (0) = Pe0: Disables.; true (1) = Pe1: Enables."
     bit_offset: 1
     bit_size: 1
-    enum: Pcr0Pe
   - name: sre
-    description: Slew Rate Enable.
+    description: "Slew Rate Enable.\n\nRaw bit values: false (0) = Sre0: Fast.; true (1) = Sre1: Slow."
     bit_offset: 3
     bit_size: 1
-    enum: Pcr0Sre
   - name: ode
-    description: Open Drain Enable.
+    description: "Open Drain Enable.\n\nRaw bit values: false (0) = Ode0: Disables.; true (1) = Ode1: Enables."
     bit_offset: 5
     bit_size: 1
-    enum: Pcr0Ode
   - name: dse
-    description: Drive Strength Enable.
+    description: "Drive Strength Enable.\n\nRaw bit values: false (0) = Dse0: Low.; true (1) = Dse1: High."
     bit_offset: 6
     bit_size: 1
-    enum: Pcr0Dse
   - name: mux
     description: Pin Multiplex Control.
     bit_offset: 8
     bit_size: 4
     enum: Pcr2Mux
   - name: ibe
-    description: Input Buffer Enable.
+    description: "Input Buffer Enable.\n\nRaw bit values: false (0) = Ibe0: Disables.; true (1) = Ibe1: Enables."
     bit_offset: 12
     bit_size: 1
-    enum: Pcr0Ibe
   - name: inv
-    description: Invert Input.
+    description: "Invert Input.\n\nRaw bit values: false (0) = Inv0: Does not invert.; true (1) = Inv1: Inverts."
     bit_offset: 13
     bit_size: 1
-    enum: Pcr0Inv
   - name: lk
-    description: Lock Register.
+    description: "Lock Register.\n\nRaw bit values: false (0) = Lk0: Does not lock.; true (1) = Lk1: Locks."
     bit_offset: 15
     bit_size: 1
-    enum: Pcr0Lk
   bit_size: 32
   reset_value: 0
 fieldset/Pcr7:
   description: Pin Control 7.
   fields:
   - name: ps
-    description: Pull Select.
+    description: "Pull Select.\n\nRaw bit values: false (0) = Ps0: Enables internal pulldown resistor.; true (1) = Ps1: Enables internal pullup resistor."
     bit_offset: 0
     bit_size: 1
-    enum: Pcr0Ps
   - name: pe
-    description: Pull Enable.
+    description: "Pull Enable.\n\nRaw bit values: false (0) = Pe0: Disables.; true (1) = Pe1: Enables."
     bit_offset: 1
     bit_size: 1
-    enum: Pcr0Pe
   - name: sre
-    description: Slew Rate Enable.
+    description: "Slew Rate Enable.\n\nRaw bit values: false (0) = Sre0: Fast.; true (1) = Sre1: Slow."
     bit_offset: 3
     bit_size: 1
-    enum: Pcr0Sre
   - name: ode
-    description: Open Drain Enable.
+    description: "Open Drain Enable.\n\nRaw bit values: false (0) = Ode0: Disables.; true (1) = Ode1: Enables."
     bit_offset: 5
     bit_size: 1
-    enum: Pcr0Ode
   - name: dse
-    description: Drive Strength Enable.
+    description: "Drive Strength Enable.\n\nRaw bit values: false (0) = Dse0: Low.; true (1) = Dse1: High."
     bit_offset: 6
     bit_size: 1
-    enum: Pcr0Dse
   - name: mux
     description: Pin Multiplex Control.
     bit_offset: 8
     bit_size: 3
     enum: Pcr0Mux
   - name: ibe
-    description: Input Buffer Enable.
+    description: "Input Buffer Enable.\n\nRaw bit values: false (0) = Ibe0: Disables.; true (1) = Ibe1: Enables."
     bit_offset: 12
     bit_size: 1
-    enum: Pcr0Ibe
   - name: inv
-    description: Invert Input.
+    description: "Invert Input.\n\nRaw bit values: false (0) = Inv0: Does not invert.; true (1) = Inv1: Inverts."
     bit_offset: 13
     bit_size: 1
-    enum: Pcr0Inv
   - name: lk
-    description: Lock Register.
+    description: "Lock Register.\n\nRaw bit values: false (0) = Lk0: Does not lock.; true (1) = Lk1: Locks."
     bit_offset: 15
     bit_size: 1
-    enum: Pcr0Lk
   bit_size: 32
   reset_value: 0
 fieldset/Verid:
@@ -773,51 +671,6 @@ enum/Feature:
   - name: Feature0
     description: Basic implementation.
     value: 0
-enum/Gpwe0:
-  bit_size: 1
-  variants:
-  - name: Gpwe0
-    description: Not updated.
-    value: 0
-  - name: Gpwe1
-    description: Updated.
-    value: 1
-enum/Pcr0Dse:
-  bit_size: 1
-  variants:
-  - name: Dse0
-    description: Low.
-    value: 0
-  - name: Dse1
-    description: High.
-    value: 1
-enum/Pcr0Ibe:
-  bit_size: 1
-  variants:
-  - name: Ibe0
-    description: Disables.
-    value: 0
-  - name: Ibe1
-    description: Enables.
-    value: 1
-enum/Pcr0Inv:
-  bit_size: 1
-  variants:
-  - name: Inv0
-    description: Does not invert.
-    value: 0
-  - name: Inv1
-    description: Inverts.
-    value: 1
-enum/Pcr0Lk:
-  bit_size: 1
-  variants:
-  - name: Lk0
-    description: Does not lock.
-    value: 0
-  - name: Lk1
-    description: Locks.
-    value: 1
 enum/Pcr0Mux:
   bit_size: 3
   variants:
@@ -845,60 +698,6 @@ enum/Pcr0Mux:
   - name: Mux111
     description: Alternative 7 (chip-specific).
     value: 7
-enum/Pcr0Ode:
-  bit_size: 1
-  variants:
-  - name: Ode0
-    description: Disables.
-    value: 0
-  - name: Ode1
-    description: Enables.
-    value: 1
-enum/Pcr0Pe:
-  bit_size: 1
-  variants:
-  - name: Pe0
-    description: Disables.
-    value: 0
-  - name: Pe1
-    description: Enables.
-    value: 1
-enum/Pcr0Ps:
-  bit_size: 1
-  variants:
-  - name: Ps0
-    description: Enables internal pulldown resistor.
-    value: 0
-  - name: Ps1
-    description: Enables internal pullup resistor.
-    value: 1
-enum/Pcr0Sre:
-  bit_size: 1
-  variants:
-  - name: Sre0
-    description: Fast.
-    value: 0
-  - name: Sre1
-    description: Slow.
-    value: 1
-enum/Pcr16Dse1:
-  bit_size: 1
-  variants:
-  - name: Dse10
-    description: Normal.
-    value: 0
-  - name: Dse11
-    description: Double.
-    value: 1
-enum/Pcr16Pfe:
-  bit_size: 1
-  variants:
-  - name: Pfe0
-    description: Disables.
-    value: 0
-  - name: Pfe1
-    description: Enables.
-    value: 1
 enum/Pcr2Mux:
   bit_size: 4
   variants:
@@ -944,24 +743,6 @@ enum/Pcr2Mux:
   - name: Mux1101
     description: Alternative 13 (chip-specific).
     value: 13
-enum/Pv:
-  bit_size: 1
-  variants:
-  - name: Pv0
-    description: Low.
-    value: 0
-  - name: Pv1
-    description: High.
-    value: 1
-enum/Range:
-  bit_size: 1
-  variants:
-  - name: Range0
-    description: 1.71 V-3.6 V.
-    value: 0
-  - name: Range1
-    description: 2.70 V-3.6 V.
-    value: 1
 block/Port1:
   description: Port Control.
   items:
@@ -1086,115 +867,96 @@ fieldset/Port1Pcr0:
   description: Pin Control 0.
   fields:
   - name: ps
-    description: Pull Select.
+    description: "Pull Select.\n\nRaw bit values: false (0) = Ps0: Enables internal pulldown resistor.; true (1) = Ps1: Enables internal pullup resistor."
     bit_offset: 0
     bit_size: 1
-    enum: Pcr0Ps
   - name: pe
-    description: Pull Enable.
+    description: "Pull Enable.\n\nRaw bit values: false (0) = Pe0: Disables.; true (1) = Pe1: Enables."
     bit_offset: 1
     bit_size: 1
-    enum: Pcr0Pe
   - name: sre
-    description: Slew Rate Enable.
+    description: "Slew Rate Enable.\n\nRaw bit values: false (0) = Sre0: Fast.; true (1) = Sre1: Slow."
     bit_offset: 3
     bit_size: 1
-    enum: Pcr0Sre
   - name: pfe
-    description: Passive Filter Enable.
+    description: "Passive Filter Enable.\n\nRaw bit values: false (0) = Pfe0: Disables.; true (1) = Pfe1: Enables."
     bit_offset: 4
     bit_size: 1
-    enum: Pcr16Pfe
   - name: ode
-    description: Open Drain Enable.
+    description: "Open Drain Enable.\n\nRaw bit values: false (0) = Ode0: Disables.; true (1) = Ode1: Enables."
     bit_offset: 5
     bit_size: 1
-    enum: Pcr0Ode
   - name: dse
-    description: Drive Strength Enable.
+    description: "Drive Strength Enable.\n\nRaw bit values: false (0) = Dse0: Low.; true (1) = Dse1: High."
     bit_offset: 6
     bit_size: 1
-    enum: Pcr0Dse
   - name: mux
     description: Pin Multiplex Control.
     bit_offset: 8
     bit_size: 4
     enum: Pcr2Mux
   - name: ibe
-    description: Input Buffer Enable.
+    description: "Input Buffer Enable.\n\nRaw bit values: false (0) = Ibe0: Disables.; true (1) = Ibe1: Enables."
     bit_offset: 12
     bit_size: 1
-    enum: Pcr0Ibe
   - name: inv
-    description: Invert Input.
+    description: "Invert Input.\n\nRaw bit values: false (0) = Inv0: Does not invert.; true (1) = Inv1: Inverts."
     bit_offset: 13
     bit_size: 1
-    enum: Pcr0Inv
   - name: lk
-    description: Lock Register.
+    description: "Lock Register.\n\nRaw bit values: false (0) = Lk0: Does not lock.; true (1) = Lk1: Locks."
     bit_offset: 15
     bit_size: 1
-    enum: Pcr0Lk
   bit_size: 32
   reset_value: 0
 fieldset/Port1Pcr29:
   description: Pin Control 29.
   fields:
   - name: ps
-    description: Pull Select.
+    description: "Pull Select.\n\nRaw bit values: false (0) = Ps0: Enables internal pulldown resistor.; true (1) = Ps1: Enables internal pullup resistor."
     bit_offset: 0
     bit_size: 1
-    enum: Pcr0Ps
   - name: pe
-    description: Pull Enable.
+    description: "Pull Enable.\n\nRaw bit values: false (0) = Pe0: Disables.; true (1) = Pe1: Enables."
     bit_offset: 1
     bit_size: 1
-    enum: Pcr0Pe
   - name: pv
-    description: Pull Value.
+    description: "Pull Value.\n\nRaw bit values: false (0) = Pv0: Low.; true (1) = Pv1: High."
     bit_offset: 2
     bit_size: 1
-    enum: Pv
   - name: sre
-    description: Slew Rate Enable.
+    description: "Slew Rate Enable.\n\nRaw bit values: false (0) = Sre0: Fast.; true (1) = Sre1: Slow."
     bit_offset: 3
     bit_size: 1
-    enum: Pcr0Sre
   - name: pfe
-    description: Passive Filter Enable.
+    description: "Passive Filter Enable.\n\nRaw bit values: false (0) = Pfe0: Disables.; true (1) = Pfe1: Enables."
     bit_offset: 4
     bit_size: 1
-    enum: Pcr16Pfe
   - name: ode
-    description: Open Drain Enable.
+    description: "Open Drain Enable.\n\nRaw bit values: false (0) = Ode0: Disables.; true (1) = Ode1: Enables."
     bit_offset: 5
     bit_size: 1
-    enum: Pcr0Ode
   - name: dse
-    description: Drive Strength Enable.
+    description: "Drive Strength Enable.\n\nRaw bit values: false (0) = Dse0: Low.; true (1) = Dse1: High."
     bit_offset: 6
     bit_size: 1
-    enum: Pcr0Dse
   - name: mux
     description: Pin Multiplex Control.
     bit_offset: 8
     bit_size: 2
     enum: Port1Pcr29Mux
   - name: ibe
-    description: Input Buffer Enable.
+    description: "Input Buffer Enable.\n\nRaw bit values: false (0) = Ibe0: Disables.; true (1) = Ibe1: Enables."
     bit_offset: 12
     bit_size: 1
-    enum: Pcr0Ibe
   - name: inv
-    description: Invert Input.
+    description: "Invert Input.\n\nRaw bit values: false (0) = Inv0: Does not invert.; true (1) = Inv1: Inverts."
     bit_offset: 13
     bit_size: 1
-    enum: Pcr0Inv
   - name: lk
-    description: Lock Register.
+    description: "Lock Register.\n\nRaw bit values: false (0) = Lk0: Does not lock.; true (1) = Lk1: Locks."
     bit_offset: 15
     bit_size: 1
-    enum: Pcr0Lk
   bit_size: 32
   reset_value: 307
 enum/Port1Pcr29Mux:
@@ -1500,165 +1262,138 @@ fieldset/Port3Pcr18:
   description: Pin Control 18.
   fields:
   - name: ps
-    description: Pull Select.
+    description: "Pull Select.\n\nRaw bit values: false (0) = Ps0: Enables internal pulldown resistor.; true (1) = Ps1: Enables internal pullup resistor."
     bit_offset: 0
     bit_size: 1
-    enum: Pcr0Ps
   - name: pe
-    description: Pull Enable.
+    description: "Pull Enable.\n\nRaw bit values: false (0) = Pe0: Disables.; true (1) = Pe1: Enables."
     bit_offset: 1
     bit_size: 1
-    enum: Pcr0Pe
   - name: pv
-    description: Pull Value.
+    description: "Pull Value.\n\nRaw bit values: false (0) = Pv0: Low.; true (1) = Pv1: High."
     bit_offset: 2
     bit_size: 1
-    enum: Pv
   - name: sre
-    description: Slew Rate Enable.
+    description: "Slew Rate Enable.\n\nRaw bit values: false (0) = Sre0: Fast.; true (1) = Sre1: Slow."
     bit_offset: 3
     bit_size: 1
-    enum: Pcr0Sre
   - name: ode
-    description: Open Drain Enable.
+    description: "Open Drain Enable.\n\nRaw bit values: false (0) = Ode0: Disables.; true (1) = Ode1: Enables."
     bit_offset: 5
     bit_size: 1
-    enum: Pcr0Ode
   - name: dse
-    description: Drive Strength Enable.
+    description: "Drive Strength Enable.\n\nRaw bit values: false (0) = Dse0: Low.; true (1) = Dse1: High."
     bit_offset: 6
     bit_size: 1
-    enum: Pcr0Dse
   - name: mux
     description: Pin Multiplex Control.
     bit_offset: 8
     bit_size: 4
     enum: Pcr2Mux
   - name: ibe
-    description: Input Buffer Enable.
+    description: "Input Buffer Enable.\n\nRaw bit values: false (0) = Ibe0: Disables.; true (1) = Ibe1: Enables."
     bit_offset: 12
     bit_size: 1
-    enum: Pcr0Ibe
   - name: inv
-    description: Invert Input.
+    description: "Invert Input.\n\nRaw bit values: false (0) = Inv0: Does not invert.; true (1) = Inv1: Inverts."
     bit_offset: 13
     bit_size: 1
-    enum: Pcr0Inv
   - name: lk
-    description: Lock Register.
+    description: "Lock Register.\n\nRaw bit values: false (0) = Lk0: Does not lock.; true (1) = Lk1: Locks."
     bit_offset: 15
     bit_size: 1
-    enum: Pcr0Lk
   bit_size: 32
   reset_value: 0
 fieldset/Port3Pcr27:
   description: Pin Control 27.
   fields:
   - name: ps
-    description: Pull Select.
+    description: "Pull Select.\n\nRaw bit values: false (0) = Ps0: Enables internal pulldown resistor.; true (1) = Ps1: Enables internal pullup resistor."
     bit_offset: 0
     bit_size: 1
-    enum: Pcr0Ps
   - name: pe
-    description: Pull Enable.
+    description: "Pull Enable.\n\nRaw bit values: false (0) = Pe0: Disables.; true (1) = Pe1: Enables."
     bit_offset: 1
     bit_size: 1
-    enum: Pcr0Pe
   - name: sre
-    description: Slew Rate Enable.
+    description: "Slew Rate Enable.\n\nRaw bit values: false (0) = Sre0: Fast.; true (1) = Sre1: Slow."
     bit_offset: 3
     bit_size: 1
-    enum: Pcr0Sre
   - name: ode
-    description: Open Drain Enable.
+    description: "Open Drain Enable.\n\nRaw bit values: false (0) = Ode0: Disables.; true (1) = Ode1: Enables."
     bit_offset: 5
     bit_size: 1
-    enum: Pcr0Ode
   - name: dse
-    description: Drive Strength Enable.
+    description: "Drive Strength Enable.\n\nRaw bit values: false (0) = Dse0: Low.; true (1) = Dse1: High."
     bit_offset: 6
     bit_size: 1
-    enum: Pcr0Dse
   - name: dse1
-    description: Drive Strength Enable.
+    description: "Drive Strength Enable.\n\nRaw bit values: false (0) = Dse10: Normal.; true (1) = Dse11: Double."
     bit_offset: 7
     bit_size: 1
-    enum: Pcr16Dse1
   - name: mux
     description: Pin Multiplex Control.
     bit_offset: 8
     bit_size: 4
     enum: Pcr2Mux
   - name: ibe
-    description: Input Buffer Enable.
+    description: "Input Buffer Enable.\n\nRaw bit values: false (0) = Ibe0: Disables.; true (1) = Ibe1: Enables."
     bit_offset: 12
     bit_size: 1
-    enum: Pcr0Ibe
   - name: inv
-    description: Invert Input.
+    description: "Invert Input.\n\nRaw bit values: false (0) = Inv0: Does not invert.; true (1) = Inv1: Inverts."
     bit_offset: 13
     bit_size: 1
-    enum: Pcr0Inv
   - name: lk
-    description: Lock Register.
+    description: "Lock Register.\n\nRaw bit values: false (0) = Lk0: Does not lock.; true (1) = Lk1: Locks."
     bit_offset: 15
     bit_size: 1
-    enum: Pcr0Lk
   bit_size: 32
   reset_value: 0
 fieldset/Port3Pcr29:
   description: Pin Control 29.
   fields:
   - name: ps
-    description: Pull Select.
+    description: "Pull Select.\n\nRaw bit values: false (0) = Ps0: Enables internal pulldown resistor.; true (1) = Ps1: Enables internal pullup resistor."
     bit_offset: 0
     bit_size: 1
-    enum: Pcr0Ps
   - name: pe
-    description: Pull Enable.
+    description: "Pull Enable.\n\nRaw bit values: false (0) = Pe0: Disables.; true (1) = Pe1: Enables."
     bit_offset: 1
     bit_size: 1
-    enum: Pcr0Pe
   - name: pv
-    description: Pull Value.
+    description: "Pull Value.\n\nRaw bit values: false (0) = Pv0: Low.; true (1) = Pv1: High."
     bit_offset: 2
     bit_size: 1
-    enum: Pv
   - name: sre
-    description: Slew Rate Enable.
+    description: "Slew Rate Enable.\n\nRaw bit values: false (0) = Sre0: Fast.; true (1) = Sre1: Slow."
     bit_offset: 3
     bit_size: 1
-    enum: Pcr0Sre
   - name: ode
-    description: Open Drain Enable.
+    description: "Open Drain Enable.\n\nRaw bit values: false (0) = Ode0: Disables.; true (1) = Ode1: Enables."
     bit_offset: 5
     bit_size: 1
-    enum: Pcr0Ode
   - name: dse
-    description: Drive Strength Enable.
+    description: "Drive Strength Enable.\n\nRaw bit values: false (0) = Dse0: Low.; true (1) = Dse1: High."
     bit_offset: 6
     bit_size: 1
-    enum: Pcr0Dse
   - name: mux
     description: Pin Multiplex Control.
     bit_offset: 8
     bit_size: 4
     enum: Pcr2Mux
   - name: ibe
-    description: Input Buffer Enable.
+    description: "Input Buffer Enable.\n\nRaw bit values: false (0) = Ibe0: Disables.; true (1) = Ibe1: Enables."
     bit_offset: 12
     bit_size: 1
-    enum: Pcr0Ibe
   - name: inv
-    description: Invert Input.
+    description: "Invert Input.\n\nRaw bit values: false (0) = Inv0: Does not invert.; true (1) = Inv1: Inverts."
     bit_offset: 13
     bit_size: 1
-    enum: Pcr0Inv
   - name: lk
-    description: Lock Register.
+    description: "Lock Register.\n\nRaw bit values: false (0) = Lk0: Does not lock.; true (1) = Lk1: Locks."
     bit_offset: 15
     bit_size: 1
-    enum: Pcr0Lk
   bit_size: 32
   reset_value: 259
 block/Port4:

@@ -54,10 +54,9 @@ fieldset/CmxPerfmonAlphaFieldsetAlpha:
   description: Performance Monitor Control.
   fields:
   - name: menb
-    description: Module Is Enabled.
+    description: "Module Is Enabled.\n\nRaw bit values: false (0) = Disabled: Disabled.; true (1) = Enabled: Enabled."
     bit_offset: 0
     bit_size: 1
-    enum: CmxPerfmonAlphaEnumBravo
   - name: ssc
     description: Start and Stop Control.
     bit_offset: 1
@@ -69,20 +68,17 @@ fieldset/CmxPerfmonAlphaFieldsetAlpha:
     bit_size: 2
     enum: CmxPerfmonAlphaEnumAlpha
   - name: rectr1
-    description: Reset Event Counter 1.
+    description: "Reset Event Counter 1.\n\nRaw bit values: false (0) = Run: Run normally.; true (1) = Reset: Reset."
     bit_offset: 8
     bit_size: 1
-    enum: Rectr
   - name: rectr2
-    description: Reset Event Counter 2.
+    description: "Reset Event Counter 2.\n\nRaw bit values: false (0) = Run: Run normally.; true (1) = Reset: Reset."
     bit_offset: 9
     bit_size: 1
-    enum: Rectr
   - name: rectr3
-    description: Reset Event Counter 3.
+    description: "Reset Event Counter 3.\n\nRaw bit values: false (0) = Run: Run normally.; true (1) = Reset: Reset."
     bit_offset: 10
     bit_size: 1
-    enum: Rectr
   - name: selevt1
     description: Select Event 1.
     bit_offset: 11
@@ -157,24 +153,6 @@ enum/CmxPerfmonAlphaEnumAlpha:
   - name: PrivOnly
     description: Counted only in Privileged mode.
     value: 3
-enum/CmxPerfmonAlphaEnumBravo:
-  bit_size: 1
-  variants:
-  - name: Disabled
-    description: Disabled.
-    value: 0
-  - name: Enabled
-    description: Enabled.
-    value: 1
-enum/Rectr:
-  bit_size: 1
-  variants:
-  - name: Reset
-    description: Reset.
-    value: 1
-  - name: Run
-    description: Run normally.
-    value: 0
 enum/CmxPerfmonAlphaEnumFoxtrot:
   bit_size: 3
   variants:

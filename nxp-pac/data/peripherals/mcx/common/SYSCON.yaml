@@ -1,14 +1,5 @@
 # Compatible MCXA/MCXN SYSCON field definitions. Register geometry stays local.
 # Enum variants, values and documentation match exactly; software defaults are preserved.
-enum/AhbclkdivUnstab:
-  bit_size: 1
-  variants:
-  - name: Stable
-    description: Divider clock is stable.
-    value: 0
-  - name: Ongoing
-    description: Clock frequency is not stable.
-    value: 1
 enum/AhbmatprioCpu0Sbus:
   bit_size: 2
   variants:
@@ -24,51 +15,6 @@ enum/AhbmatprioCpu0Sbus:
   - name: Level3
     description: level 3.
     value: 3
-enum/BusclkdivHalt:
-  bit_size: 1
-  variants:
-  - name: Run
-    description: Divider clock is running.
-    value: 0
-  - name: Halt
-    description: Divider clock is stopped.
-    value: 1
-enum/BusclkdivReset:
-  bit_size: 1
-  variants:
-  - name: Released
-    description: Divider is not reset.
-    value: 0
-  - name: Asserted
-    description: Divider is reset.
-    value: 1
-enum/ClrLpcac:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Unclears the cache.
-    value: 0
-  - name: Disable
-    description: Clears the cache.
-    value: 1
-enum/Cpu0lockup:
-  bit_size: 1
-  variants:
-  - name: Awake
-    description: CPU is not in lockup.
-    value: 0
-  - name: Sleeping
-    description: CPU is in lockup.
-    value: 1
-enum/Cpu0sleeping:
-  bit_size: 1
-  variants:
-  - name: Awake
-    description: CPU is not sleeping.
-    value: 0
-  - name: Sleeping
-    description: CPU is sleeping.
-    value: 1
 enum/DebugFeaturesCpu0Dbgen:
   bit_size: 2
   variants:
@@ -79,69 +25,6 @@ enum/DebugFeaturesCpu0Dbgen:
     description: Enables debug.
     value: 2
   only_in: ^(MCXA(132|133|142|143|144|145|146|152|153|154|155|156|173|174|175|176|185|186|255|256|265|266|343|344|345|346|355|356|365|366)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$
-enum/DisDataSpec:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Enables data speculation.
-    value: 0
-  - name: Disable
-    description: Disables data speculation.
-    value: 1
-enum/DisFlashSpec:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Enables flash speculation.
-    value: 0
-  - name: Disable
-    description: Disables flash speculation.
-    value: 1
-enum/DisLpcac:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Enabled.
-    value: 0
-  - name: Disable
-    description: Disabled.
-    value: 1
-enum/DisMbeccErrData:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Enables bus error on multi-bit ECC error for data.
-    value: 0
-  - name: Disable
-    description: Disables bus error on multi-bit ECC error for data.
-    value: 1
-enum/DisMbeccErrInst:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Enables bus error on multi-bit ECC error for instruction.
-    value: 0
-  - name: Disable
-    description: Disables bus error on multi-bit ECC error for instruction.
-    value: 1
-enum/FlashStallEn:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: No stall on FLASH busy.
-    value: 0
-  - name: Disable
-    description: Stall on FLASH busy.
-    value: 1
-enum/FrcNoAlloc:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Forces allocation.
-    value: 0
-  - name: Disable
-    description: Forces no allocation.
-    value: 1
 enum/LockAll:
   bit_size: 4
   variants:
@@ -152,25 +35,6 @@ enum/LockAll:
     description: Enables write access to all registers.
     value: 10
   only_in: ^(MCXA(132|133|142|143|144|145|146|152|153|154|155|156|173|174|175|176|185|186|255|256|265|266|343|344|345|346|355|356|365|366)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$
-enum/Noref:
-  bit_size: 1
-  variants:
-  - name: YesRef
-    description: Reference clock is provided.
-    value: 0
-  - name: NoRef
-    description: No reference clock is provided.
-    value: 1
-enum/PhyIntf:
-  bit_size: 1
-  variants:
-  - name: Mii
-    description: Selects MII PHY Interface.
-    value: 0
-  - name: Rmii
-    description: Selects RMII PHY Interface.
-    value: 1
-  only_in: ^(MCXA(286|287|456|457|536|537|556|557|566|567|577)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$
 enum/SecCode:
   bit_size: 32
   variants:
@@ -181,24 +45,6 @@ enum/SecCode:
     description: Value to write to enable CPU0 SWD access. Reading back register is read as 0xA.
     value: 305419896
   only_in: ^(MCXA(132|133|142|143|144|145|146|152|153|154|155|156|173|174|175|176|185|186|255|256|265|266|343|344|345|346|355|356|365|366)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$
-enum/Skew:
-  bit_size: 1
-  variants:
-  - name: Exact
-    description: TENMS value is exact.
-    value: 0
-  - name: Inexact
-    description: TENMS value is not exact or not given.
-    value: 1
-enum/Unlock:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Updates are allowed to all clock configuration registers.
-    value: 0
-  - name: Freeze
-    description: Freezes all clock configuration registers update.
-    value: 1
 fieldset/Ahbclkdiv:
   fields:
   - name: div
@@ -206,10 +52,9 @@ fieldset/Ahbclkdiv:
     bit_offset: 0
     bit_size: 8
   - name: unstab
-    description: Divider status flag.
+    description: "Divider status flag.\n\nRaw bit values: false (0) = Stable: Divider clock is stable.; true (1) = Ongoing: Clock frequency is not stable."
     bit_offset: 31
     bit_size: 1
-    enum: AhbclkdivUnstab
 fieldset/BinaryCodeLsb:
   fields:
   - name: code_bin_31_0
@@ -229,20 +74,17 @@ fieldset/Busclkdiv:
     bit_offset: 0
     bit_size: 8
   - name: reset
-    description: Resets the divider counter.
+    description: "Resets the divider counter.\n\nRaw bit values: false (0) = Released: Divider is not reset.; true (1) = Asserted: Divider is reset."
     bit_offset: 29
     bit_size: 1
-    enum: BusclkdivReset
   - name: halt
-    description: Halts the divider counter.
+    description: "Halts the divider counter.\n\nRaw bit values: false (0) = Run: Divider clock is running.; true (1) = Halt: Divider clock is stopped."
     bit_offset: 30
     bit_size: 1
-    enum: BusclkdivHalt
   - name: unstab
-    description: Divider status flag.
+    description: "Divider status flag.\n\nRaw bit values: false (0) = Stable: Divider clock is stable.; true (1) = Ongoing: Clock frequency is not stable."
     bit_offset: 31
     bit_size: 1
-    enum: AhbclkdivUnstab
   only_in: ^(MCXA(175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$
 fieldset/Cpu0nstckcal:
   fields:
@@ -251,27 +93,23 @@ fieldset/Cpu0nstckcal:
     bit_offset: 0
     bit_size: 24
   - name: skew
-    description: Indicates whether the TENMS value is exact.
+    description: "Indicates whether the TENMS value is exact.\n\nRaw bit values: false (0) = Exact: TENMS value is exact.; true (1) = Inexact: TENMS value is not exact or not given."
     bit_offset: 24
     bit_size: 1
-    enum: Skew
   - name: noref
-    description: Indicates whether the device provides a reference clock to the processor.
+    description: "Indicates whether the device provides a reference clock to the processor.\n\nRaw bit values: false (0) = YesRef: Reference clock is provided.; true (1) = NoRef: No reference clock is provided."
     bit_offset: 25
     bit_size: 1
-    enum: Noref
 fieldset/Cpustat:
   fields:
   - name: cpu0sleeping
-    description: CPU0 sleeping state.
+    description: "CPU0 sleeping state.\n\nRaw bit values: false (0) = Awake: CPU is not sleeping.; true (1) = Sleeping: CPU is sleeping."
     bit_offset: 0
     bit_size: 1
-    enum: Cpu0sleeping
   - name: cpu0lockup
-    description: CPU0 lockup state.
+    description: "CPU0 lockup state.\n\nRaw bit values: false (0) = Awake: CPU is not in lockup.; true (1) = Sleeping: CPU is in lockup."
     bit_offset: 2
     bit_size: 1
-    enum: Cpu0lockup
   only_in: ^(MCXA(132|133|142|143|144|145|146|152|153|154|155|156|173|174|175|176|185|186|255|256|265|266|286|287|343|344|345|346|355|356|365|366|456|457|536|537|556|557|566|567|577)|MCXN(235|236|246|247))$
 fieldset/DebugAuthBeacon:
   fields:
@@ -346,20 +184,17 @@ fieldset/JtagId:
 fieldset/Slowclkdiv:
   fields:
   - name: reset
-    description: Resets the divider counter.
+    description: "Resets the divider counter.\n\nRaw bit values: false (0) = Released: Divider is not reset.; true (1) = Asserted: Divider is reset."
     bit_offset: 29
     bit_size: 1
-    enum: BusclkdivReset
   - name: halt
-    description: Halts the divider counter.
+    description: "Halts the divider counter.\n\nRaw bit values: false (0) = Run: Divider clock is running.; true (1) = Halt: Divider clock is stopped."
     bit_offset: 30
     bit_size: 1
-    enum: BusclkdivHalt
   - name: unstab
-    description: Divider status flag.
+    description: "Divider status flag.\n\nRaw bit values: false (0) = Stable: Divider clock is stable.; true (1) = Ongoing: Clock frequency is not stable."
     bit_offset: 31
     bit_size: 1
-    enum: AhbclkdivUnstab
   only_in: ^(MCXA(132|133|142|143|144|145|146|152|153|154|155|156)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$
 fieldset/SwdAccessCpu0:
   fields:

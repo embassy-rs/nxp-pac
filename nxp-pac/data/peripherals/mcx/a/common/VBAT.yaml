@@ -166,10 +166,9 @@ fieldset/Irqena:
     bit_offset: 0
     bit_size: 1
   - name: wakeup_flag
-    description: Wakeup Pin Flag.
+    description: "Wakeup Pin Flag.\n\nRaw bit values: false (0) = Clr: Disable.; true (1) = Set: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: IrqenaWakeupFlag
   - name: timer0_flag
     description: Bandgap Timer 0.
     bit_offset: 2
@@ -395,35 +394,29 @@ fieldset/Statusa:
   description: Status A.
   fields:
   - name: por_det
-    description: POR Detect Flag.
+    description: "POR Detect Flag.\n\nRaw bit values: false (0) = Clr: Not reset.; true (1) = Set: Reset."
     bit_offset: 0
     bit_size: 1
-    enum: StatusaPorDet
   - name: wakeup_flag
-    description: Wakeup Pin Flag.
+    description: "Wakeup Pin Flag.\n\nRaw bit values: false (0) = Clr: Not asserted.; true (1) = Set: Asserted."
     bit_offset: 1
     bit_size: 1
-    enum: StatusaWakeupFlag
   - name: timer0_flag
-    description: Bandgap Timer 0 Flag.
+    description: "Bandgap Timer 0 Flag.\n\nRaw bit values: false (0) = Clr: Not reached.; true (1) = Set: Reached."
     bit_offset: 2
     bit_size: 1
-    enum: StatusaTimer0Flag
   - name: timer1_flag
-    description: Bandgap Timer 1 Flag.
+    description: "Bandgap Timer 1 Flag.\n\nRaw bit values: false (0) = Clr: Not reached.; true (1) = Set: Reached."
     bit_offset: 3
     bit_size: 1
-    enum: StatusaTimer0Flag
   - name: ldo_rdy
-    description: LDO Ready.
+    description: "LDO Ready.\n\nRaw bit values: false (0) = Clr: Disabled (not ready).; true (1) = Set: Enabled (ready)."
     bit_offset: 4
     bit_size: 1
-    enum: StatusaLdoRdy
   - name: osc_rdy
-    description: OSC32k Ready.
+    description: "OSC32k Ready.\n\nRaw bit values: false (0) = Clr: Disabled (clock not ready).; true (1) = Set: Enabled (clock ready)."
     bit_offset: 5
     bit_size: 1
-    enum: StatusaOscRdy
 fieldset/Swictla:
   description: Switch Control A.
   fields:
@@ -454,10 +447,9 @@ fieldset/Wakecfg:
   description: Wake-up Configuration.
   fields:
   - name: out
-    description: Output.
+    description: "Output.\n\nRaw bit values: false (0) = On: Logic zero (asserted).; true (1) = Off: Logic one."
     bit_offset: 0
     bit_size: 1
-    enum: Out
 fieldset/Wakena:
   description: Wake-up Enable A.
   fields:
@@ -466,10 +458,9 @@ fieldset/Wakena:
     bit_offset: 0
     bit_size: 1
   - name: wakeup_flag
-    description: Wake-up Pin Flag.
+    description: "Wake-up Pin Flag.\n\nRaw bit values: false (0) = Clr: Disable.; true (1) = Set: Enable."
     bit_offset: 1
     bit_size: 1
-    enum: IrqenaWakeupFlag
   - name: timer0_flag
     description: Bandgap Timer 0.
     bit_offset: 2
@@ -598,15 +589,6 @@ enum/InitTrim:
   - name: Sel7
     description: 0.5 ms.
     value: 7
-enum/IrqenaWakeupFlag:
-  bit_size: 1
-  variants:
-  - name: Clr
-    description: Disable.
-    value: 0
-  - name: Set
-    description: Enable.
-    value: 1
 enum/ModeEn:
   bit_size: 2
   variants:
@@ -619,15 +601,6 @@ enum/ModeEn:
   - name: Sw
     description: Low power mode.
     value: 3
-enum/Out:
-  bit_size: 1
-  variants:
-  - name: On
-    description: Logic zero (asserted).
-    value: 0
-  - name: Off
-    description: Logic one.
-    value: 1
 enum/RefreshTrim:
   bit_size: 2
   variants:
@@ -643,51 +616,6 @@ enum/RefreshTrim:
   - name: Sel62
     description: Refresh every 62.5 ms.
     value: 3
-enum/StatusaLdoRdy:
-  bit_size: 1
-  variants:
-  - name: Clr
-    description: Disabled (not ready).
-    value: 0
-  - name: Set
-    description: Enabled (ready).
-    value: 1
-enum/StatusaOscRdy:
-  bit_size: 1
-  variants:
-  - name: Clr
-    description: Disabled (clock not ready).
-    value: 0
-  - name: Set
-    description: Enabled (clock ready).
-    value: 1
-enum/StatusaPorDet:
-  bit_size: 1
-  variants:
-  - name: Clr
-    description: Not reset.
-    value: 0
-  - name: Set
-    description: Reset.
-    value: 1
-enum/StatusaTimer0Flag:
-  bit_size: 1
-  variants:
-  - name: Clr
-    description: Not reached.
-    value: 0
-  - name: Set
-    description: Reached.
-    value: 1
-enum/StatusaWakeupFlag:
-  bit_size: 1
-  variants:
-  - name: Clr
-    description: Not asserted.
-    value: 0
-  - name: Set
-    description: Asserted.
-    value: 1
 enum/SupplyDet:
   bit_size: 2
   variants:

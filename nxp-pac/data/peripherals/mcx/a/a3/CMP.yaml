@@ -149,24 +149,21 @@ fieldset/Ccr1:
     bit_offset: 3
     bit_size: 1
   - name: cout_sel
-    description: Comparator Output Select.
+    description: "Comparator Output Select.\n\nRaw bit values: false (0) = Cout: Use COUT (filtered).; true (1) = Couta: Use COUTA (unfiltered)."
     bit_offset: 4
     bit_size: 1
-    enum: CoutSel
   - name: cout_pen
     description: Comparator Output Pin Enable.
     bit_offset: 5
     bit_size: 1
   - name: couta_owen
-    description: COUTA_OW Enable.
+    description: "COUTA_OW Enable.\n\nRaw bit values: false (0) = Sampled: COUTA holds the last sampled value.; true (1) = CoutaOw: Enables the COUTA signal value to be defined by COUTA_OW."
     bit_offset: 6
     bit_size: 1
-    enum: CoutaOwen
   - name: couta_ow
-    description: COUTA Output Level for Closed Window.
+    description: "COUTA Output Level for Closed Window.\n\nRaw bit values: false (0) = Couta0: COUTA is 0.; true (1) = Couta1: COUTA is 1."
     bit_offset: 7
     bit_size: 1
-    enum: CoutaOw
   - name: window_inv
     description: WINDOW/SAMPLE Signal Invert.
     bit_offset: 8
@@ -200,10 +197,9 @@ fieldset/Ccr2:
   description: Comparator Control Register 2.
   fields:
   - name: cmp_hpmd
-    description: CMP High Power Mode Select.
+    description: "CMP High Power Mode Select.\n\nRaw bit values: false (0) = Low: Low power (speed) comparison mode.; true (1) = High: High power (speed) comparison mode."
     bit_offset: 0
     bit_size: 1
-    enum: CmpHpmd
   - name: cmp_npmd
     description: CMP Nano Power Mode Select.
     bit_offset: 1
@@ -258,10 +254,9 @@ fieldset/Dcr:
     bit_offset: 1
     bit_size: 1
   - name: vrsel
-    description: DAC Reference High Voltage Source Select.
+    description: "DAC Reference High Voltage Source Select.\n\nRaw bit values: false (0) = Vref0: VREFH0.; true (1) = Vref1: VREFH1."
     bit_offset: 8
     bit_size: 1
-    enum: Vrsel
   - name: dac_data
     description: DAC Output Voltage Select.
     bit_offset: 16
@@ -303,10 +298,9 @@ fieldset/Rrcr0:
     bit_offset: 0
     bit_size: 1
   - name: rr_trg_sel
-    description: Round-Robin Trigger Select.
+    description: "Round-Robin Trigger Select.\n\nRaw bit values: false (0) = Enable: External trigger.; true (1) = Disable: Internal trigger."
     bit_offset: 1
     bit_size: 1
-    enum: RrTrgSel
   - name: rr_nsam
     description: Number of Sample Clocks.
     bit_offset: 8
@@ -380,10 +374,9 @@ fieldset/Rrcr1:
     bit_offset: 7
     bit_size: 1
   - name: fixp
-    description: Fixed Port.
+    description: "Fixed Port.\n\nRaw bit values: false (0) = FixPlus: Fix the plus port. Sweep only the inputs to the minus port.; true (1) = FixMinus: Fix the minus port. Sweep only the inputs to the plus port."
     bit_offset: 16
     bit_size: 1
-    enum: Fixp
   - name: fixch
     description: Fixed Channel Select.
     bit_offset: 20
@@ -496,42 +489,6 @@ fieldset/Verid:
     bit_size: 8
   bit_size: 32
   reset_value: 16777217
-enum/CmpHpmd:
-  bit_size: 1
-  variants:
-  - name: Low
-    description: Low power (speed) comparison mode.
-    value: 0
-  - name: High
-    description: High power (speed) comparison mode.
-    value: 1
-enum/CoutSel:
-  bit_size: 1
-  variants:
-  - name: Cout
-    description: Use COUT (filtered).
-    value: 0
-  - name: Couta
-    description: Use COUTA (unfiltered).
-    value: 1
-enum/CoutaOw:
-  bit_size: 1
-  variants:
-  - name: Couta0
-    description: COUTA is 0.
-    value: 0
-  - name: Couta1
-    description: COUTA is 1.
-    value: 1
-enum/CoutaOwen:
-  bit_size: 1
-  variants:
-  - name: Sampled
-    description: COUTA holds the last sampled value.
-    value: 0
-  - name: CoutaOw
-    description: Enables the COUTA signal value to be defined by COUTA_OW.
-    value: 1
 enum/DacRes:
   bit_size: 4
   variants:
@@ -628,15 +585,6 @@ enum/Fixch:
   - name: FixCh7
     description: Channel 7.
     value: 7
-enum/Fixp:
-  bit_size: 1
-  variants:
-  - name: FixPlus
-    description: Fix the plus port. Sweep only the inputs to the minus port.
-    value: 0
-  - name: FixMinus
-    description: Fix the minus port. Sweep only the inputs to the plus port.
-    value: 1
 enum/FuncClkSel:
   bit_size: 2
   variants:
@@ -847,21 +795,3 @@ enum/RrSampleThreshold:
   - name: Sample15
     description: At least 16 sampled "1", the final result is "1".
     value: 15
-enum/RrTrgSel:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: External trigger.
-    value: 0
-  - name: Disable
-    description: Internal trigger.
-    value: 1
-enum/Vrsel:
-  bit_size: 1
-  variants:
-  - name: Vref0
-    description: VREFH0.
-    value: 0
-  - name: Vref1
-    description: VREFH1.
-    value: 1

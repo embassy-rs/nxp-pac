@@ -277,10 +277,9 @@ fieldset/RemapA1Small:
     bit_size: 2
     enum: Usb0A1Small
   - name: lock
-    description: This 1-bit field provides a mechanism to limit writes to the this register to protect its contents. Once set, this bit remains asserted until the next reset.
+    description: "This 1-bit field provides a mechanism to limit writes to the this register to protect its contents. Once set, this bit remains asserted until the next reset.\n\nRaw bit values: false (0) = Lock0: This register is not locked and can be altered.; true (1) = Lock1: This register is locked and cannot be altered."
     bit_offset: 31
     bit_size: 1
-    enum: SramXenLock
 fieldset/SramXenA1Small:
   description: RAM XEN Control.
   fields:
@@ -301,10 +300,9 @@ fieldset/SramXenA1Small:
     bit_offset: 3
     bit_size: 1
   - name: lock
-    description: This 1-bit field provides a mechanism to limit writes to the this register (and SRAM_XEN_DP) to protect its contents. Once set, this bit remains asserted until the next reset.
+    description: "This 1-bit field provides a mechanism to limit writes to the this register (and SRAM_XEN_DP) to protect its contents. Once set, this bit remains asserted until the next reset.\n\nRaw bit values: false (0) = Lock0: This register is not locked and can be altered.; true (1) = Lock1: This register is locked and cannot be altered."
     bit_offset: 31
     bit_size: 1
-    enum: SramXenLock
 fieldset/SramXenDpA1Small:
   description: RAM XEN Control (Duplicate).
   fields:

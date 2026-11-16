@@ -150,60 +150,49 @@ fieldset/PufAlphaFieldsetAlpha:
   description: Allow.
   fields:
   - name: allow_enroll
-    description: Enroll operation.
+    description: "Enroll operation.\n\nRaw bit values: false (0) = Disable: Indicates that the Enroll operation is not allowed.; true (1) = Enable: Indicates that the Enroll operation is allowed."
     bit_offset: 1
     bit_size: 1
-    enum: PufAlphaEnumAlpha
   - name: allow_start
-    description: Start operation.
+    description: "Start operation.\n\nRaw bit values: false (0) = Disable: Indicates that the Start operation is not allowed.; true (1) = Enable: Indicates that the Start operation is allowed."
     bit_offset: 2
     bit_size: 1
-    enum: PufAlphaEnumEcho
   - name: allow_reconstruct
-    description: Reconstruct operation.
+    description: "Reconstruct operation.\n\nRaw bit values: false (0) = Disable: Indicates that the Reconstruct operation is not allowed.; true (1) = Enable: Indicates that the Reconstruct operation is allowed."
     bit_offset: 3
     bit_size: 1
-    enum: PufAlphaEnumDelta
   - name: allow_stop
-    description: Stop operation.
+    description: "Stop operation.\n\nRaw bit values: false (0) = Disable: Indicates that the Stop operation is not allowed.; true (1) = Enable: Indicates that the Stop operation is allowed."
     bit_offset: 5
     bit_size: 1
-    enum: PufAlphaEnumFoxtrot
   - name: allow_get_key
-    description: Get Key operation.
+    description: "Get Key operation.\n\nRaw bit values: false (0) = Disable: Indicates that the Get Key operation is not allowed.; true (1) = Enable: Indicates that the Get Key operation is allowed."
     bit_offset: 6
     bit_size: 1
-    enum: PufAlphaEnumCharlie
   - name: allow_unwrap
-    description: Unwrap operation.
+    description: "Unwrap operation.\n\nRaw bit values: false (0) = Disable: Indicates that the Unwrap operation is not allowed.; true (1) = Enable: Indicates that the Unwrap operation is allowed."
     bit_offset: 7
     bit_size: 1
-    enum: PufAlphaEnumIndia
   - name: allow_wrap_generated_random
-    description: Wrap Generated Random operation.
+    description: "Wrap Generated Random operation.\n\nRaw bit values: false (0) = Disable: Indicates that the Wrap Generated Random operation is not allowed.; true (1) = Enable: Indicates that the Wrap Generated Random operation is allowed."
     bit_offset: 8
     bit_size: 1
-    enum: PufAlphaEnumKilo
   - name: allow_wrap
-    description: Wrap operation.
+    description: "Wrap operation.\n\nRaw bit values: false (0) = Disable: Indicates that the Wrap operation is not allowed.; true (1) = Enable: Indicates that the Wrap operation is allowed."
     bit_offset: 9
     bit_size: 1
-    enum: PufAlphaEnumJuliet
   - name: allow_generate_random
-    description: Generate Random operation.
+    description: "Generate Random operation.\n\nRaw bit values: false (0) = Disable: Indicates that the Generate Random operation is not allowed.; true (1) = Enable: Indicates that the Generate Random operation is allowed."
     bit_offset: 15
     bit_size: 1
-    enum: PufAlphaEnumBravo
   - name: allow_test_memory
-    description: no description available.
+    description: "no description available.\n\nRaw bit values: false (0) = Disable: Indicates that the Test Memory operation is not allowed.; true (1) = Enable: Indicates that the Test Memory operation is allowed."
     bit_offset: 30
     bit_size: 1
-    enum: PufAlphaEnumGolf
   - name: allow_test_puf
-    description: Test PUF operation.
+    description: "Test PUF operation.\n\nRaw bit values: false (0) = Disable: Test PUF operation is not allowed.; true (1) = Enable: Test PUF operation is allowed."
     bit_offset: 31
     bit_size: 1
-    enum: PufAlphaEnumHotel
 fieldset/PufAlphaFieldsetBravo:
   description: Control.
   fields:
@@ -302,10 +291,9 @@ fieldset/PufAlphaFieldsetHotel:
   description: Hardware Information.
   fields:
   - name: config_wrap
-    description: Wrap configuration.
+    description: "Wrap configuration.\n\nRaw bit values: false (0) = Enable: Indicates that Wrap is not included.; true (1) = Disable: Indicates that Wrap is included."
     bit_offset: 24
     bit_size: 1
-    enum: PufAlphaEnumNovember
   - name: config_type
     description: PUF configuration.
     bit_offset: 28
@@ -365,10 +353,9 @@ fieldset/PufAlphaFieldsetLima:
   description: Interrupt Enable.
   fields:
   - name: int_en
-    description: Interrupt enable.
+    description: "Interrupt enable.\n\nRaw bit values: false (0) = Disable: Disables all PUF interrupts.; true (1) = Enable: Enables all PUF interrupts that are enabled in the Interrupt Mask register."
     bit_offset: 0
     bit_size: 1
-    enum: PufAlphaEnumQuebec
 fieldset/PufAlphaFieldsetMike:
   description: Interface Status.
   fields:
@@ -442,10 +429,9 @@ fieldset/PufAlphaFieldsetPapa:
   description: Miscellaneous.
   fields:
   - name: data_endianness
-    description: Defines the endianness of data in DIR and DOR:.
+    description: "Defines the endianness of data in DIR and DOR:.\n\nRaw bit values: false (0) = Disable: Little endian.; true (1) = Enable: Big endian (default)."
     bit_offset: 0
     bit_size: 1
-    enum: PufAlphaEnumOscar
 fieldset/PufAlphaFieldsetQuebec:
   description: Operation Result.
   fields:
@@ -501,15 +487,13 @@ fieldset/PufAlphaFieldsetTango:
   description: SRAM Configuration.
   fields:
   - name: enable
-    description: PUF SRAM Controller activation.
+    description: "PUF SRAM Controller activation.\n\nRaw bit values: false (0) = Disable: Disabled.; true (1) = Enable: Enabled."
     bit_offset: 0
     bit_size: 1
-    enum: Ckgating
   - name: ckgating
-    description: PUF SRAM Clock Gating control.
+    description: "PUF SRAM Clock Gating control.\n\nRaw bit values: false (0) = Disable: Disabled.; true (1) = Enable: Enabled."
     bit_offset: 2
     bit_size: 1
-    enum: Ckgating
 fieldset/PufAlphaFieldsetUniform:
   description: Interrupt Enable Clear.
   fields:
@@ -529,23 +513,20 @@ fieldset/PufAlphaFieldsetVictor:
     bit_offset: 0
     bit_size: 1
   - name: apb_err
-    description: APB_ERR Interrupt Status Clear.
+    description: "APB_ERR Interrupt Status Clear.\n\nRaw bit values: false (0) = NoEffect: No effect.; true (1) = Enable: Clears the APB_ERR bit field in register INT_STATUS. Automatically reset by the Hardware."
     bit_offset: 1
     bit_size: 1
-    enum: ApbErr
 fieldset/PufAlphaFieldsetWhiskey:
   description: Interrupt Enable.
   fields:
   - name: ready
-    description: READY Interrupt Enable.
+    description: "READY Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disabled.; true (1) = Enable: Enabled."
     bit_offset: 0
     bit_size: 1
-    enum: Ckgating
   - name: sram_apb_err
-    description: APB_ERR Interrupt Enable.
+    description: "APB_ERR Interrupt Enable.\n\nRaw bit values: false (0) = Disable: Disabled.; true (1) = Enable: Enabled."
     bit_offset: 1
     bit_size: 1
-    enum: Ckgating
 fieldset/PufAlphaFieldsetXray:
   description: Interrupt Enable Set.
   fields:
@@ -565,10 +546,9 @@ fieldset/PufAlphaFieldsetYankee:
     bit_offset: 0
     bit_size: 1
   - name: apb_err
-    description: APB_ERR Interrupt Status Set.
+    description: "APB_ERR Interrupt Status Set.\n\nRaw bit values: false (0) = NoEffect: No effect.; true (1) = Enable: Clears the APB_ERR bit field in register INT_STATUS. Automatically reset by the Hardware."
     bit_offset: 1
     bit_size: 1
-    enum: ApbErr
 fieldset/PufAlphaFieldsetZulu:
   description: Interrupt Status.
   fields:
@@ -587,114 +567,6 @@ fieldset/PufAlphaFieldsetAlphaAlpha:
     description: PUF SRAM Controller State.
     bit_offset: 0
     bit_size: 1
-enum/PufAlphaEnumAlpha:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Indicates that the Enroll operation is not allowed.
-    value: 0
-  - name: Enable
-    description: Indicates that the Enroll operation is allowed.
-    value: 1
-enum/PufAlphaEnumBravo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Indicates that the Generate Random operation is not allowed.
-    value: 0
-  - name: Enable
-    description: Indicates that the Generate Random operation is allowed.
-    value: 1
-enum/PufAlphaEnumCharlie:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Indicates that the Get Key operation is not allowed.
-    value: 0
-  - name: Enable
-    description: Indicates that the Get Key operation is allowed.
-    value: 1
-enum/PufAlphaEnumDelta:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Indicates that the Reconstruct operation is not allowed.
-    value: 0
-  - name: Enable
-    description: Indicates that the Reconstruct operation is allowed.
-    value: 1
-enum/PufAlphaEnumEcho:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Indicates that the Start operation is not allowed.
-    value: 0
-  - name: Enable
-    description: Indicates that the Start operation is allowed.
-    value: 1
-enum/PufAlphaEnumFoxtrot:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Indicates that the Stop operation is not allowed.
-    value: 0
-  - name: Enable
-    description: Indicates that the Stop operation is allowed.
-    value: 1
-enum/PufAlphaEnumGolf:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Indicates that the Test Memory operation is not allowed.
-    value: 0
-  - name: Enable
-    description: Indicates that the Test Memory operation is allowed.
-    value: 1
-enum/PufAlphaEnumHotel:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Test PUF operation is not allowed.
-    value: 0
-  - name: Enable
-    description: Test PUF operation is allowed.
-    value: 1
-enum/PufAlphaEnumIndia:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Indicates that the Unwrap operation is not allowed.
-    value: 0
-  - name: Enable
-    description: Indicates that the Unwrap operation is allowed.
-    value: 1
-enum/PufAlphaEnumJuliet:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Indicates that the Wrap operation is not allowed.
-    value: 0
-  - name: Enable
-    description: Indicates that the Wrap operation is allowed.
-    value: 1
-enum/PufAlphaEnumKilo:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Indicates that the Wrap Generated Random operation is not allowed.
-    value: 0
-  - name: Enable
-    description: Indicates that the Wrap Generated Random operation is allowed.
-    value: 1
-enum/Ckgating:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disabled.
-    value: 0
-  - name: Enable
-    description: Enabled.
-    value: 1
 enum/PufAlphaEnumMike:
   bit_size: 4
   variants:
@@ -703,33 +575,6 @@ enum/PufAlphaEnumMike:
     value: 2
   - name: Safe
     description: Indicates that PUF configuration is Safe.
-    value: 1
-enum/PufAlphaEnumNovember:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Indicates that Wrap is included.
-    value: 1
-  - name: Enable
-    description: Indicates that Wrap is not included.
-    value: 0
-enum/PufAlphaEnumOscar:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Little endian.
-    value: 0
-  - name: Enable
-    description: Big endian (default).
-    value: 1
-enum/PufAlphaEnumQuebec:
-  bit_size: 1
-  variants:
-  - name: Disable
-    description: Disables all PUF interrupts.
-    value: 0
-  - name: Enable
-    description: Enables all PUF interrupts that are enabled in the Interrupt Mask register.
     value: 1
 enum/PufAlphaEnumRomeo:
   bit_size: 8
@@ -835,13 +680,4 @@ enum/PufAlphaEnumUniform:
     value: 255
   - name: Ok
     description: Indicates that the last operation was successful or operation is in progress.
-    value: 0
-enum/ApbErr:
-  bit_size: 1
-  variants:
-  - name: Enable
-    description: Clears the APB_ERR bit field in register INT_STATUS. Automatically reset by the Hardware.
-    value: 1
-  - name: NoEffect
-    description: No effect.
     value: 0
