@@ -41,9 +41,12 @@ fieldset/Froclke:
   description: FRO16K Clock Enable.
   fields:
   - name: clke
-    description: Clock Enable.
+    description: Clock enable for the indexed FRO16K output (F60RM 25.5.1.5).
     bit_offset: 0
-    bit_size: 2
+    bit_size: 1
+    array:
+      len: 2
+      stride: 1
   bit_size: 32
   reset_value: 0
 fieldset/Froctla:
