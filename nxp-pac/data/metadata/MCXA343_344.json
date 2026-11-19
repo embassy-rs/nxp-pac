@@ -1800,7 +1800,7 @@
         "reset": "mrcc_glb_rst0"
       },
       "address": "0x40080000",
-      "block": "mcx/a/a3/DMA::Dma",
+      "block": "mcx/a/a3/DMA::Dma8",
       "module": "DMA",
       "signals": []
     },
