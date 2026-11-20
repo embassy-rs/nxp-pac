@@ -312,7 +312,7 @@ fieldset/Ctrl:
     bit_offset: 11
     bit_size: 1
   - name: swap
-    only_in: '^MCXA(175|176|185|186|255|256|265|266|286|287|456|457|536|537|556|557|566|567|577)$'
+    only_in: '^MCXA(175|176|185|186|255|256|265|266|286|287|343|344|345|346|355|356|365|366|456|457|536|537|556|557|566|567|577)$'
     description: "TXD and RXD Pin Swap.\n\nRaw bit values: false (0) = Standard: Use the standard way.; true (1) = Swap: Swap."
     bit_offset: 12
     bit_size: 1

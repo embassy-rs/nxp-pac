@@ -352,14 +352,14 @@
   "nvic_prio_bits": 3,
   "interrupts": {
     "CMC": 1,
-    "DMA_CH0": 2,
-    "DMA_CH1": 3,
-    "DMA_CH2": 4,
-    "DMA_CH3": 5,
-    "DMA_CH4": 6,
-    "DMA_CH5": 7,
-    "DMA_CH6": 8,
-    "DMA_CH7": 9,
+    "DMA0_CH0": 2,
+    "DMA0_CH1": 3,
+    "DMA0_CH2": 4,
+    "DMA0_CH3": 5,
+    "DMA0_CH4": 6,
+    "DMA0_CH5": 7,
+    "DMA0_CH6": 8,
+    "DMA0_CH7": 9,
     "ERM0_SINGLE_BIT": 10,
     "ERM0_MULTI_BIT": 11,
     "FMU0": 12,
@@ -440,7 +440,7 @@
     "ADC3": 117,
     "RTC": 119,
     "RTC_1HZ": 120,
-    "LCD": 121
+    "SLCD": 121
   },
   "peripherals": [
     {
@@ -1071,7 +1071,8 @@
       "name": "I3C0",
       "gate": {
         "enable": "mrcc_glb_cc0",
-        "reset": "mrcc_glb_rst0"
+        "reset": "mrcc_glb_rst0",
+        "config": "I3cConfig"
       },
       "address": "0x40002000",
       "block": "mcx/a/a3/I3C::I3c",
@@ -1130,14 +1131,327 @@
       "name": "CTIMER0",
       "gate": {
         "enable": "mrcc_glb_cc0",
-        "reset": "mrcc_glb_rst0"
+        "reset": "mrcc_glb_rst0",
+        "config": "CTimerConfig"
       },
       "address": "0x40004000",
       "block": "mcx/a/a3/CTIMER::Ctimer",
       "module": "CTIMER",
       "signals": [
         {
-          "name": "MATCH2",
+          "name": "INP8",
+          "pins": [
+            {
+              "pin": "P1_8",
+              "alt": 4
+            },
+            {
+              "pin": "P2_24",
+              "alt": 4
+            },
+            {
+              "pin": "P3_16",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP9",
+          "pins": [
+            {
+              "pin": "P1_9",
+              "alt": 4
+            },
+            {
+              "pin": "P2_25",
+              "alt": 4
+            },
+            {
+              "pin": "P3_17",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP12",
+          "pins": [
+            {
+              "pin": "P1_16",
+              "alt": 4
+            },
+            {
+              "pin": "P2_2",
+              "alt": 4
+            },
+            {
+              "pin": "P3_28",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP13",
+          "pins": [
+            {
+              "pin": "P1_17",
+              "alt": 4
+            },
+            {
+              "pin": "P2_3",
+              "alt": 4
+            },
+            {
+              "pin": "P3_27",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP16",
+          "pins": [
+            {
+              "pin": "P1_30",
+              "alt": 4
+            },
+            {
+              "pin": "P2_0",
+              "alt": 4
+            },
+            {
+              "pin": "P3_24",
+              "alt": 4
+            },
+            {
+              "pin": "P3_0",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP17",
+          "pins": [
+            {
+              "pin": "P1_31",
+              "alt": 4
+            },
+            {
+              "pin": "P2_1",
+              "alt": 4
+            },
+            {
+              "pin": "P3_1",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP6",
+          "pins": [
+            {
+              "pin": "P4_6",
+              "alt": 4
+            },
+            {
+              "pin": "P3_14",
+              "alt": 4
+            },
+            {
+              "pin": "P1_6",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP7",
+          "pins": [
+            {
+              "pin": "P4_7",
+              "alt": 4
+            },
+            {
+              "pin": "P3_15",
+              "alt": 4
+            },
+            {
+              "pin": "P1_7",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP14",
+          "pins": [
+            {
+              "pin": "P2_4",
+              "alt": 4
+            },
+            {
+              "pin": "P3_26",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP15",
+          "pins": [
+            {
+              "pin": "P2_5",
+              "alt": 4
+            },
+            {
+              "pin": "P3_25",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP18",
+          "pins": [
+            {
+              "pin": "P2_6",
+              "alt": 4
+            },
+            {
+              "pin": "P3_4",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP19",
+          "pins": [
+            {
+              "pin": "P2_7",
+              "alt": 4
+            },
+            {
+              "pin": "P3_5",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP10",
+          "pins": [
+            {
+              "pin": "P2_26",
+              "alt": 4
+            },
+            {
+              "pin": "P3_22",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP3",
+          "pins": [
+            {
+              "pin": "P3_29",
+              "alt": 4
+            },
+            {
+              "pin": "P0_7",
+              "alt": 4
+            },
+            {
+              "pin": "P0_15",
+              "alt": 4
+            },
+            {
+              "pin": "P0_23",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP11",
+          "pins": [
+            {
+              "pin": "P3_23",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP5",
+          "pins": [
+            {
+              "pin": "P3_9",
+              "alt": 4
+            },
+            {
+              "pin": "P1_1",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP4",
+          "pins": [
+            {
+              "pin": "P3_8",
+              "alt": 4
+            },
+            {
+              "pin": "P1_0",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP0",
+          "pins": [
+            {
+              "pin": "P0_0",
+              "alt": 4
+            },
+            {
+              "pin": "P0_20",
+              "alt": 4
+            },
+            {
+              "pin": "P1_2",
+              "alt": 5
+            }
+          ]
+        },
+        {
+          "name": "INP1",
+          "pins": [
+            {
+              "pin": "P0_1",
+              "alt": 4
+            },
+            {
+              "pin": "P0_21",
+              "alt": 4
+            },
+            {
+              "pin": "P1_3",
+              "alt": 5
+            }
+          ]
+        },
+        {
+          "name": "INP2",
+          "pins": [
+            {
+              "pin": "P0_6",
+              "alt": 4
+            },
+            {
+              "pin": "P0_14",
+              "alt": 4
+            },
+            {
+              "pin": "P0_22",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "MAT2",
           "pins": [
             {
               "pin": "P1_8",
@@ -1178,7 +1492,7 @@
           ]
         },
         {
-          "name": "MATCH3",
+          "name": "MAT3",
           "pins": [
             {
               "pin": "P1_9",
@@ -1215,7 +1529,7 @@
           ]
         },
         {
-          "name": "MATCH0",
+          "name": "MAT0",
           "pins": [
             {
               "pin": "P2_12",
@@ -1240,7 +1554,7 @@
           ]
         },
         {
-          "name": "MATCH1",
+          "name": "MAT1",
           "pins": [
             {
               "pin": "P2_13",
@@ -1267,12 +1581,12 @@
       ],
       "dma_muxing": [
         {
-          "signal": "CTIMER0DMAREQ_M0",
+          "signal": "CTIMER0M0",
           "mux": "DMA0",
           "request": 31
         },
         {
-          "signal": "CTIMER0DMAREQ_M1",
+          "signal": "CTIMER0M1",
           "mux": "DMA0",
           "request": 32
         }
@@ -1282,14 +1596,327 @@
       "name": "CTIMER1",
       "gate": {
         "enable": "mrcc_glb_cc0",
-        "reset": "mrcc_glb_rst0"
+        "reset": "mrcc_glb_rst0",
+        "config": "CTimerConfig"
       },
       "address": "0x40005000",
       "block": "mcx/a/a3/CTIMER::Ctimer",
       "module": "CTIMER",
       "signals": [
         {
-          "name": "MATCH0",
+          "name": "INP8",
+          "pins": [
+            {
+              "pin": "P1_8",
+              "alt": 4
+            },
+            {
+              "pin": "P2_24",
+              "alt": 4
+            },
+            {
+              "pin": "P3_16",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP9",
+          "pins": [
+            {
+              "pin": "P1_9",
+              "alt": 4
+            },
+            {
+              "pin": "P2_25",
+              "alt": 4
+            },
+            {
+              "pin": "P3_17",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP12",
+          "pins": [
+            {
+              "pin": "P1_16",
+              "alt": 4
+            },
+            {
+              "pin": "P2_2",
+              "alt": 4
+            },
+            {
+              "pin": "P3_28",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP13",
+          "pins": [
+            {
+              "pin": "P1_17",
+              "alt": 4
+            },
+            {
+              "pin": "P2_3",
+              "alt": 4
+            },
+            {
+              "pin": "P3_27",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP16",
+          "pins": [
+            {
+              "pin": "P1_30",
+              "alt": 4
+            },
+            {
+              "pin": "P2_0",
+              "alt": 4
+            },
+            {
+              "pin": "P3_24",
+              "alt": 4
+            },
+            {
+              "pin": "P3_0",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP17",
+          "pins": [
+            {
+              "pin": "P1_31",
+              "alt": 4
+            },
+            {
+              "pin": "P2_1",
+              "alt": 4
+            },
+            {
+              "pin": "P3_1",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP6",
+          "pins": [
+            {
+              "pin": "P4_6",
+              "alt": 4
+            },
+            {
+              "pin": "P3_14",
+              "alt": 4
+            },
+            {
+              "pin": "P1_6",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP7",
+          "pins": [
+            {
+              "pin": "P4_7",
+              "alt": 4
+            },
+            {
+              "pin": "P3_15",
+              "alt": 4
+            },
+            {
+              "pin": "P1_7",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP14",
+          "pins": [
+            {
+              "pin": "P2_4",
+              "alt": 4
+            },
+            {
+              "pin": "P3_26",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP15",
+          "pins": [
+            {
+              "pin": "P2_5",
+              "alt": 4
+            },
+            {
+              "pin": "P3_25",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP18",
+          "pins": [
+            {
+              "pin": "P2_6",
+              "alt": 4
+            },
+            {
+              "pin": "P3_4",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP19",
+          "pins": [
+            {
+              "pin": "P2_7",
+              "alt": 4
+            },
+            {
+              "pin": "P3_5",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP10",
+          "pins": [
+            {
+              "pin": "P2_26",
+              "alt": 4
+            },
+            {
+              "pin": "P3_22",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP3",
+          "pins": [
+            {
+              "pin": "P3_29",
+              "alt": 4
+            },
+            {
+              "pin": "P0_7",
+              "alt": 4
+            },
+            {
+              "pin": "P0_15",
+              "alt": 4
+            },
+            {
+              "pin": "P0_23",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP11",
+          "pins": [
+            {
+              "pin": "P3_23",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP5",
+          "pins": [
+            {
+              "pin": "P3_9",
+              "alt": 4
+            },
+            {
+              "pin": "P1_1",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP4",
+          "pins": [
+            {
+              "pin": "P3_8",
+              "alt": 4
+            },
+            {
+              "pin": "P1_0",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP0",
+          "pins": [
+            {
+              "pin": "P0_0",
+              "alt": 4
+            },
+            {
+              "pin": "P0_20",
+              "alt": 4
+            },
+            {
+              "pin": "P1_2",
+              "alt": 5
+            }
+          ]
+        },
+        {
+          "name": "INP1",
+          "pins": [
+            {
+              "pin": "P0_1",
+              "alt": 4
+            },
+            {
+              "pin": "P0_21",
+              "alt": 4
+            },
+            {
+              "pin": "P1_3",
+              "alt": 5
+            }
+          ]
+        },
+        {
+          "name": "INP2",
+          "pins": [
+            {
+              "pin": "P0_6",
+              "alt": 4
+            },
+            {
+              "pin": "P0_14",
+              "alt": 4
+            },
+            {
+              "pin": "P0_22",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "MAT0",
           "pins": [
             {
               "pin": "P2_4",
@@ -1306,7 +1933,7 @@
           ]
         },
         {
-          "name": "MATCH1",
+          "name": "MAT1",
           "pins": [
             {
               "pin": "P2_5",
@@ -1323,7 +1950,7 @@
           ]
         },
         {
-          "name": "MATCH2",
+          "name": "MAT2",
           "pins": [
             {
               "pin": "P2_6",
@@ -1340,7 +1967,7 @@
           ]
         },
         {
-          "name": "MATCH3",
+          "name": "MAT3",
           "pins": [
             {
               "pin": "P2_7",
@@ -1359,12 +1986,12 @@
       ],
       "dma_muxing": [
         {
-          "signal": "CTIMER1DMAREQ_M0",
+          "signal": "CTIMER1M0",
           "mux": "DMA0",
           "request": 33
         },
         {
-          "signal": "CTIMER1DMAREQ_M1",
+          "signal": "CTIMER1M1",
           "mux": "DMA0",
           "request": 34
         }
@@ -1374,14 +2001,327 @@
       "name": "CTIMER2",
       "gate": {
         "enable": "mrcc_glb_cc0",
-        "reset": "mrcc_glb_rst0"
+        "reset": "mrcc_glb_rst0",
+        "config": "CTimerConfig"
       },
       "address": "0x40006000",
       "block": "mcx/a/a3/CTIMER::Ctimer",
       "module": "CTIMER",
       "signals": [
         {
-          "name": "MATCH0",
+          "name": "INP8",
+          "pins": [
+            {
+              "pin": "P1_8",
+              "alt": 4
+            },
+            {
+              "pin": "P2_24",
+              "alt": 4
+            },
+            {
+              "pin": "P3_16",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP9",
+          "pins": [
+            {
+              "pin": "P1_9",
+              "alt": 4
+            },
+            {
+              "pin": "P2_25",
+              "alt": 4
+            },
+            {
+              "pin": "P3_17",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP12",
+          "pins": [
+            {
+              "pin": "P1_16",
+              "alt": 4
+            },
+            {
+              "pin": "P2_2",
+              "alt": 4
+            },
+            {
+              "pin": "P3_28",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP13",
+          "pins": [
+            {
+              "pin": "P1_17",
+              "alt": 4
+            },
+            {
+              "pin": "P2_3",
+              "alt": 4
+            },
+            {
+              "pin": "P3_27",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP16",
+          "pins": [
+            {
+              "pin": "P1_30",
+              "alt": 4
+            },
+            {
+              "pin": "P2_0",
+              "alt": 4
+            },
+            {
+              "pin": "P3_24",
+              "alt": 4
+            },
+            {
+              "pin": "P3_0",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP17",
+          "pins": [
+            {
+              "pin": "P1_31",
+              "alt": 4
+            },
+            {
+              "pin": "P2_1",
+              "alt": 4
+            },
+            {
+              "pin": "P3_1",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP6",
+          "pins": [
+            {
+              "pin": "P4_6",
+              "alt": 4
+            },
+            {
+              "pin": "P3_14",
+              "alt": 4
+            },
+            {
+              "pin": "P1_6",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP7",
+          "pins": [
+            {
+              "pin": "P4_7",
+              "alt": 4
+            },
+            {
+              "pin": "P3_15",
+              "alt": 4
+            },
+            {
+              "pin": "P1_7",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP14",
+          "pins": [
+            {
+              "pin": "P2_4",
+              "alt": 4
+            },
+            {
+              "pin": "P3_26",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP15",
+          "pins": [
+            {
+              "pin": "P2_5",
+              "alt": 4
+            },
+            {
+              "pin": "P3_25",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP18",
+          "pins": [
+            {
+              "pin": "P2_6",
+              "alt": 4
+            },
+            {
+              "pin": "P3_4",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP19",
+          "pins": [
+            {
+              "pin": "P2_7",
+              "alt": 4
+            },
+            {
+              "pin": "P3_5",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP10",
+          "pins": [
+            {
+              "pin": "P2_26",
+              "alt": 4
+            },
+            {
+              "pin": "P3_22",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP3",
+          "pins": [
+            {
+              "pin": "P3_29",
+              "alt": 4
+            },
+            {
+              "pin": "P0_7",
+              "alt": 4
+            },
+            {
+              "pin": "P0_15",
+              "alt": 4
+            },
+            {
+              "pin": "P0_23",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP11",
+          "pins": [
+            {
+              "pin": "P3_23",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP5",
+          "pins": [
+            {
+              "pin": "P3_9",
+              "alt": 4
+            },
+            {
+              "pin": "P1_1",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP4",
+          "pins": [
+            {
+              "pin": "P3_8",
+              "alt": 4
+            },
+            {
+              "pin": "P1_0",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP0",
+          "pins": [
+            {
+              "pin": "P0_0",
+              "alt": 4
+            },
+            {
+              "pin": "P0_20",
+              "alt": 4
+            },
+            {
+              "pin": "P1_2",
+              "alt": 5
+            }
+          ]
+        },
+        {
+          "name": "INP1",
+          "pins": [
+            {
+              "pin": "P0_1",
+              "alt": 4
+            },
+            {
+              "pin": "P0_21",
+              "alt": 4
+            },
+            {
+              "pin": "P1_3",
+              "alt": 5
+            }
+          ]
+        },
+        {
+          "name": "INP2",
+          "pins": [
+            {
+              "pin": "P0_6",
+              "alt": 4
+            },
+            {
+              "pin": "P0_14",
+              "alt": 4
+            },
+            {
+              "pin": "P0_22",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "MAT0",
           "pins": [
             {
               "pin": "P1_10",
@@ -1402,7 +2342,7 @@
           ]
         },
         {
-          "name": "MATCH1",
+          "name": "MAT1",
           "pins": [
             {
               "pin": "P1_11",
@@ -1423,7 +2363,7 @@
           ]
         },
         {
-          "name": "MATCH2",
+          "name": "MAT2",
           "pins": [
             {
               "pin": "P1_12",
@@ -1444,7 +2384,7 @@
           ]
         },
         {
-          "name": "MATCH3",
+          "name": "MAT3",
           "pins": [
             {
               "pin": "P1_13",
@@ -1467,12 +2407,12 @@
       ],
       "dma_muxing": [
         {
-          "signal": "CTIMER2DMAREQ_M0",
+          "signal": "CTIMER2M0",
           "mux": "DMA0",
           "request": 35
         },
         {
-          "signal": "CTIMER2DMAREQ_M1",
+          "signal": "CTIMER2M1",
           "mux": "DMA0",
           "request": 36
         }
@@ -1482,14 +2422,327 @@
       "name": "CTIMER3",
       "gate": {
         "enable": "mrcc_glb_cc0",
-        "reset": "mrcc_glb_rst0"
+        "reset": "mrcc_glb_rst0",
+        "config": "CTimerConfig"
       },
       "address": "0x40007000",
       "block": "mcx/a/a3/CTIMER::Ctimer",
       "module": "CTIMER",
       "signals": [
         {
-          "name": "MATCH0",
+          "name": "INP8",
+          "pins": [
+            {
+              "pin": "P1_8",
+              "alt": 4
+            },
+            {
+              "pin": "P2_24",
+              "alt": 4
+            },
+            {
+              "pin": "P3_16",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP9",
+          "pins": [
+            {
+              "pin": "P1_9",
+              "alt": 4
+            },
+            {
+              "pin": "P2_25",
+              "alt": 4
+            },
+            {
+              "pin": "P3_17",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP12",
+          "pins": [
+            {
+              "pin": "P1_16",
+              "alt": 4
+            },
+            {
+              "pin": "P2_2",
+              "alt": 4
+            },
+            {
+              "pin": "P3_28",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP13",
+          "pins": [
+            {
+              "pin": "P1_17",
+              "alt": 4
+            },
+            {
+              "pin": "P2_3",
+              "alt": 4
+            },
+            {
+              "pin": "P3_27",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP16",
+          "pins": [
+            {
+              "pin": "P1_30",
+              "alt": 4
+            },
+            {
+              "pin": "P2_0",
+              "alt": 4
+            },
+            {
+              "pin": "P3_24",
+              "alt": 4
+            },
+            {
+              "pin": "P3_0",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP17",
+          "pins": [
+            {
+              "pin": "P1_31",
+              "alt": 4
+            },
+            {
+              "pin": "P2_1",
+              "alt": 4
+            },
+            {
+              "pin": "P3_1",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP6",
+          "pins": [
+            {
+              "pin": "P4_6",
+              "alt": 4
+            },
+            {
+              "pin": "P3_14",
+              "alt": 4
+            },
+            {
+              "pin": "P1_6",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP7",
+          "pins": [
+            {
+              "pin": "P4_7",
+              "alt": 4
+            },
+            {
+              "pin": "P3_15",
+              "alt": 4
+            },
+            {
+              "pin": "P1_7",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP14",
+          "pins": [
+            {
+              "pin": "P2_4",
+              "alt": 4
+            },
+            {
+              "pin": "P3_26",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP15",
+          "pins": [
+            {
+              "pin": "P2_5",
+              "alt": 4
+            },
+            {
+              "pin": "P3_25",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP18",
+          "pins": [
+            {
+              "pin": "P2_6",
+              "alt": 4
+            },
+            {
+              "pin": "P3_4",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP19",
+          "pins": [
+            {
+              "pin": "P2_7",
+              "alt": 4
+            },
+            {
+              "pin": "P3_5",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP10",
+          "pins": [
+            {
+              "pin": "P2_26",
+              "alt": 4
+            },
+            {
+              "pin": "P3_22",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP3",
+          "pins": [
+            {
+              "pin": "P3_29",
+              "alt": 4
+            },
+            {
+              "pin": "P0_7",
+              "alt": 4
+            },
+            {
+              "pin": "P0_15",
+              "alt": 4
+            },
+            {
+              "pin": "P0_23",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP11",
+          "pins": [
+            {
+              "pin": "P3_23",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP5",
+          "pins": [
+            {
+              "pin": "P3_9",
+              "alt": 4
+            },
+            {
+              "pin": "P1_1",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP4",
+          "pins": [
+            {
+              "pin": "P3_8",
+              "alt": 4
+            },
+            {
+              "pin": "P1_0",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP0",
+          "pins": [
+            {
+              "pin": "P0_0",
+              "alt": 4
+            },
+            {
+              "pin": "P0_20",
+              "alt": 4
+            },
+            {
+              "pin": "P1_2",
+              "alt": 5
+            }
+          ]
+        },
+        {
+          "name": "INP1",
+          "pins": [
+            {
+              "pin": "P0_1",
+              "alt": 4
+            },
+            {
+              "pin": "P0_21",
+              "alt": 4
+            },
+            {
+              "pin": "P1_3",
+              "alt": 5
+            }
+          ]
+        },
+        {
+          "name": "INP2",
+          "pins": [
+            {
+              "pin": "P0_6",
+              "alt": 4
+            },
+            {
+              "pin": "P0_14",
+              "alt": 4
+            },
+            {
+              "pin": "P0_22",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "MAT0",
           "pins": [
             {
               "pin": "P1_14",
@@ -1510,7 +2763,7 @@
           ]
         },
         {
-          "name": "MATCH1",
+          "name": "MAT1",
           "pins": [
             {
               "pin": "P1_15",
@@ -1535,7 +2788,7 @@
           ]
         },
         {
-          "name": "MATCH2",
+          "name": "MAT2",
           "pins": [
             {
               "pin": "P2_10",
@@ -1552,7 +2805,7 @@
           ]
         },
         {
-          "name": "MATCH3",
+          "name": "MAT3",
           "pins": [
             {
               "pin": "P2_11",
@@ -1571,12 +2824,12 @@
       ],
       "dma_muxing": [
         {
-          "signal": "CTIMER3DMAREQ_M0",
+          "signal": "CTIMER3M0",
           "mux": "DMA0",
           "request": 37
         },
         {
-          "signal": "CTIMER3DMAREQ_M1",
+          "signal": "CTIMER3M1",
           "mux": "DMA0",
           "request": 38
         }
@@ -1586,14 +2839,327 @@
       "name": "CTIMER4",
       "gate": {
         "enable": "mrcc_glb_cc0",
-        "reset": "mrcc_glb_rst0"
+        "reset": "mrcc_glb_rst0",
+        "config": "CTimerConfig"
       },
       "address": "0x40008000",
       "block": "mcx/a/a3/CTIMER::Ctimer",
       "module": "CTIMER",
       "signals": [
         {
-          "name": "MATCH0",
+          "name": "INP8",
+          "pins": [
+            {
+              "pin": "P1_8",
+              "alt": 4
+            },
+            {
+              "pin": "P2_24",
+              "alt": 4
+            },
+            {
+              "pin": "P3_16",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP9",
+          "pins": [
+            {
+              "pin": "P1_9",
+              "alt": 4
+            },
+            {
+              "pin": "P2_25",
+              "alt": 4
+            },
+            {
+              "pin": "P3_17",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP12",
+          "pins": [
+            {
+              "pin": "P1_16",
+              "alt": 4
+            },
+            {
+              "pin": "P2_2",
+              "alt": 4
+            },
+            {
+              "pin": "P3_28",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP13",
+          "pins": [
+            {
+              "pin": "P1_17",
+              "alt": 4
+            },
+            {
+              "pin": "P2_3",
+              "alt": 4
+            },
+            {
+              "pin": "P3_27",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP16",
+          "pins": [
+            {
+              "pin": "P1_30",
+              "alt": 4
+            },
+            {
+              "pin": "P2_0",
+              "alt": 4
+            },
+            {
+              "pin": "P3_24",
+              "alt": 4
+            },
+            {
+              "pin": "P3_0",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP17",
+          "pins": [
+            {
+              "pin": "P1_31",
+              "alt": 4
+            },
+            {
+              "pin": "P2_1",
+              "alt": 4
+            },
+            {
+              "pin": "P3_1",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP6",
+          "pins": [
+            {
+              "pin": "P4_6",
+              "alt": 4
+            },
+            {
+              "pin": "P3_14",
+              "alt": 4
+            },
+            {
+              "pin": "P1_6",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP7",
+          "pins": [
+            {
+              "pin": "P4_7",
+              "alt": 4
+            },
+            {
+              "pin": "P3_15",
+              "alt": 4
+            },
+            {
+              "pin": "P1_7",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP14",
+          "pins": [
+            {
+              "pin": "P2_4",
+              "alt": 4
+            },
+            {
+              "pin": "P3_26",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP15",
+          "pins": [
+            {
+              "pin": "P2_5",
+              "alt": 4
+            },
+            {
+              "pin": "P3_25",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP18",
+          "pins": [
+            {
+              "pin": "P2_6",
+              "alt": 4
+            },
+            {
+              "pin": "P3_4",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP19",
+          "pins": [
+            {
+              "pin": "P2_7",
+              "alt": 4
+            },
+            {
+              "pin": "P3_5",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP10",
+          "pins": [
+            {
+              "pin": "P2_26",
+              "alt": 4
+            },
+            {
+              "pin": "P3_22",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP3",
+          "pins": [
+            {
+              "pin": "P3_29",
+              "alt": 4
+            },
+            {
+              "pin": "P0_7",
+              "alt": 4
+            },
+            {
+              "pin": "P0_15",
+              "alt": 4
+            },
+            {
+              "pin": "P0_23",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP11",
+          "pins": [
+            {
+              "pin": "P3_23",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP5",
+          "pins": [
+            {
+              "pin": "P3_9",
+              "alt": 4
+            },
+            {
+              "pin": "P1_1",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP4",
+          "pins": [
+            {
+              "pin": "P3_8",
+              "alt": 4
+            },
+            {
+              "pin": "P1_0",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "INP0",
+          "pins": [
+            {
+              "pin": "P0_0",
+              "alt": 4
+            },
+            {
+              "pin": "P0_20",
+              "alt": 4
+            },
+            {
+              "pin": "P1_2",
+              "alt": 5
+            }
+          ]
+        },
+        {
+          "name": "INP1",
+          "pins": [
+            {
+              "pin": "P0_1",
+              "alt": 4
+            },
+            {
+              "pin": "P0_21",
+              "alt": 4
+            },
+            {
+              "pin": "P1_3",
+              "alt": 5
+            }
+          ]
+        },
+        {
+          "name": "INP2",
+          "pins": [
+            {
+              "pin": "P0_6",
+              "alt": 4
+            },
+            {
+              "pin": "P0_14",
+              "alt": 4
+            },
+            {
+              "pin": "P0_22",
+              "alt": 4
+            }
+          ]
+        },
+        {
+          "name": "MAT0",
           "pins": [
             {
               "pin": "P4_2",
@@ -1614,7 +3180,7 @@
           ]
         },
         {
-          "name": "MATCH1",
+          "name": "MAT1",
           "pins": [
             {
               "pin": "P4_3",
@@ -1635,7 +3201,7 @@
           ]
         },
         {
-          "name": "MATCH2",
+          "name": "MAT2",
           "pins": [
             {
               "pin": "P4_4",
@@ -1652,7 +3218,7 @@
           ]
         },
         {
-          "name": "MATCH3",
+          "name": "MAT3",
           "pins": [
             {
               "pin": "P4_5",
@@ -1671,12 +3237,12 @@
       ],
       "dma_muxing": [
         {
-          "signal": "CTIMER4DMAREQ_M0",
+          "signal": "CTIMER4M0",
           "mux": "DMA0",
           "request": 39
         },
         {
-          "signal": "CTIMER4DMAREQ_M1",
+          "signal": "CTIMER4M1",
           "mux": "DMA0",
           "request": 40
         }
@@ -1758,7 +3324,7 @@
       "module": "UTICK",
       "signals": [
         {
-          "name": "CAPTURE0",
+          "name": "CAP0",
           "pins": [
             {
               "pin": "P0_2",
@@ -1771,7 +3337,7 @@
           ]
         },
         {
-          "name": "CAPTURE1",
+          "name": "CAP1",
           "pins": [
             {
               "pin": "P0_3",
@@ -1784,7 +3350,7 @@
           ]
         },
         {
-          "name": "CAPTURE2",
+          "name": "CAP2",
           "pins": [
             {
               "pin": "P0_4",
@@ -1797,7 +3363,7 @@
           ]
         },
         {
-          "name": "CAPTURE3",
+          "name": "CAP3",
           "pins": [
             {
               "pin": "P0_5",
@@ -1814,7 +3380,8 @@
     {
       "name": "WWDT0",
       "gate": {
-        "enable": "mrcc_glb_cc0"
+        "enable": "mrcc_glb_acc0",
+        "config": "WwdtConfig"
       },
       "address": "0x4000c000",
       "block": "mcx/a/a3/WWDT::Wwdt",
@@ -1825,7 +3392,8 @@
       "name": "SMARTDMA0",
       "gate": {
         "enable": "mrcc_glb_cc0",
-        "reset": "mrcc_glb_rst0"
+        "reset": "mrcc_glb_rst0",
+        "bit": "smartdma0"
       },
       "address": "0x4000e000",
       "block": "mcx/a/a3/SMARTDMA::Smartdma",
@@ -2348,11 +3916,11 @@
     {
       "name": "DMA0",
       "gate": {
-        "enable": "mrcc_glb_cc0",
+        "enable": "mrcc_glb_acc0",
         "reset": "mrcc_glb_rst0"
       },
       "address": "0x40080000",
-      "block": "mcx/a/a3/DMA::Dma",
+      "block": "mcx/a/a3/DMA::Dma8",
       "module": "DMA",
       "signals": []
     },
@@ -2487,9 +4055,13 @@
       "address": "0x40091000",
       "block": "mcx/a/a3/SYSCON::Syscon",
       "module": "SYSCON",
+      "signals": []
+    },
+    {
+      "name": "CLKOUT",
       "signals": [
         {
-          "name": "CLKOUT",
+          "name": "IN",
           "pins": [
             {
               "pin": "P4_2",
@@ -2525,7 +4097,7 @@
       "module": "WUU",
       "signals": [
         {
-          "name": "P10",
+          "name": "IN10",
           "pins": [
             {
               "pin": "P1_8",
@@ -2534,7 +4106,7 @@
           ]
         },
         {
-          "name": "P11",
+          "name": "IN11",
           "pins": [
             {
               "pin": "P1_11",
@@ -2543,7 +4115,7 @@
           ]
         },
         {
-          "name": "P12",
+          "name": "IN12",
           "pins": [
             {
               "pin": "P1_12",
@@ -2552,7 +4124,7 @@
           ]
         },
         {
-          "name": "P13",
+          "name": "IN13",
           "pins": [
             {
               "pin": "P1_15",
@@ -2561,7 +4133,7 @@
           ]
         },
         {
-          "name": "P14",
+          "name": "IN14",
           "pins": [
             {
               "pin": "P1_16",
@@ -2570,7 +4142,7 @@
           ]
         },
         {
-          "name": "P15",
+          "name": "IN15",
           "pins": [
             {
               "pin": "P1_19",
@@ -2579,7 +4151,7 @@
           ]
         },
         {
-          "name": "P16",
+          "name": "IN16",
           "pins": [
             {
               "pin": "P4_2",
@@ -2588,7 +4160,7 @@
           ]
         },
         {
-          "name": "P17",
+          "name": "IN17",
           "pins": [
             {
               "pin": "P4_4",
@@ -2597,7 +4169,7 @@
           ]
         },
         {
-          "name": "P18",
+          "name": "IN18",
           "pins": [
             {
               "pin": "P2_0",
@@ -2606,7 +4178,7 @@
           ]
         },
         {
-          "name": "P19",
+          "name": "IN19",
           "pins": [
             {
               "pin": "P2_3",
@@ -2615,7 +4187,7 @@
           ]
         },
         {
-          "name": "P20",
+          "name": "IN20",
           "pins": [
             {
               "pin": "P2_12",
@@ -2624,7 +4196,7 @@
           ]
         },
         {
-          "name": "P21",
+          "name": "IN21",
           "pins": [
             {
               "pin": "P2_15",
@@ -2633,7 +4205,7 @@
           ]
         },
         {
-          "name": "P27",
+          "name": "IN27",
           "pins": [
             {
               "pin": "P3_29",
@@ -2642,7 +4214,7 @@
           ]
         },
         {
-          "name": "P26",
+          "name": "IN26",
           "pins": [
             {
               "pin": "P3_28",
@@ -2651,7 +4223,7 @@
           ]
         },
         {
-          "name": "P30",
+          "name": "IN30",
           "pins": [
             {
               "pin": "P3_27",
@@ -2660,7 +4232,7 @@
           ]
         },
         {
-          "name": "P25",
+          "name": "IN25",
           "pins": [
             {
               "pin": "P3_14",
@@ -2669,7 +4241,7 @@
           ]
         },
         {
-          "name": "P24",
+          "name": "IN24",
           "pins": [
             {
               "pin": "P3_11",
@@ -2678,7 +4250,7 @@
           ]
         },
         {
-          "name": "P23",
+          "name": "IN23",
           "pins": [
             {
               "pin": "P3_8",
@@ -2687,7 +4259,7 @@
           ]
         },
         {
-          "name": "P22",
+          "name": "IN22",
           "pins": [
             {
               "pin": "P3_0",
@@ -2696,7 +4268,7 @@
           ]
         },
         {
-          "name": "P0",
+          "name": "IN0",
           "pins": [
             {
               "pin": "P0_4",
@@ -2705,7 +4277,7 @@
           ]
         },
         {
-          "name": "P1",
+          "name": "IN1",
           "pins": [
             {
               "pin": "P0_7",
@@ -2714,7 +4286,7 @@
           ]
         },
         {
-          "name": "P2",
+          "name": "IN2",
           "pins": [
             {
               "pin": "P0_16",
@@ -2723,7 +4295,7 @@
           ]
         },
         {
-          "name": "P3",
+          "name": "IN3",
           "pins": [
             {
               "pin": "P0_19",
@@ -2732,7 +4304,7 @@
           ]
         },
         {
-          "name": "P4",
+          "name": "IN4",
           "pins": [
             {
               "pin": "P0_20",
@@ -2741,7 +4313,7 @@
           ]
         },
         {
-          "name": "P5",
+          "name": "IN5",
           "pins": [
             {
               "pin": "P0_23",
@@ -2750,7 +4322,7 @@
           ]
         },
         {
-          "name": "P6",
+          "name": "IN6",
           "pins": [
             {
               "pin": "P1_0",
@@ -2759,7 +4331,7 @@
           ]
         },
         {
-          "name": "P7",
+          "name": "IN7",
           "pins": [
             {
               "pin": "P1_3",
@@ -2768,7 +4340,7 @@
           ]
         },
         {
-          "name": "P8",
+          "name": "IN8",
           "pins": [
             {
               "pin": "P1_4",
@@ -2777,7 +4349,7 @@
           ]
         },
         {
-          "name": "P9",
+          "name": "IN9",
           "pins": [
             {
               "pin": "P1_7",
@@ -2788,7 +4360,7 @@
       ],
       "dma_muxing": [
         {
-          "signal": "WUU0Wake_up_event",
+          "signal": "WUU0WakeUpEvent",
           "mux": "DMA0",
           "request": 1
         }
@@ -3414,8 +4986,9 @@
     {
       "name": "LPI2C0",
       "gate": {
-        "enable": "mrcc_glb_cc0",
-        "reset": "mrcc_glb_rst0"
+        "enable": "mrcc_glb_acc0",
+        "reset": "mrcc_glb_rst0",
+        "config": "Lpi2cConfig"
       },
       "address": "0x4009a000",
       "block": "mcx/a/a3/LPI2C::Lpi2c",
@@ -3491,8 +5064,9 @@
     {
       "name": "LPI2C1",
       "gate": {
-        "enable": "mrcc_glb_cc0",
-        "reset": "mrcc_glb_rst0"
+        "enable": "mrcc_glb_acc0",
+        "reset": "mrcc_glb_rst0",
+        "config": "Lpi2cConfig"
       },
       "address": "0x4009b000",
       "block": "mcx/a/a3/LPI2C::Lpi2c",
@@ -3567,8 +5141,9 @@
     {
       "name": "LPI2C2",
       "gate": {
-        "enable": "mrcc_glb_cc1",
-        "reset": "mrcc_glb_rst1"
+        "enable": "mrcc_glb_acc1",
+        "reset": "mrcc_glb_rst1",
+        "config": "Lpi2cConfig"
       },
       "address": "0x400d4000",
       "block": "mcx/a/a3/LPI2C::Lpi2c",
@@ -3652,8 +5227,9 @@
     {
       "name": "LPI2C3",
       "gate": {
-        "enable": "mrcc_glb_cc1",
-        "reset": "mrcc_glb_rst1"
+        "enable": "mrcc_glb_acc1",
+        "reset": "mrcc_glb_rst1",
+        "config": "Lpi2cConfig"
       },
       "address": "0x400d5000",
       "block": "mcx/a/a3/LPI2C::Lpi2c",
@@ -3729,8 +5305,9 @@
     {
       "name": "LPSPI0",
       "gate": {
-        "enable": "mrcc_glb_cc0",
-        "reset": "mrcc_glb_rst0"
+        "enable": "mrcc_glb_acc0",
+        "reset": "mrcc_glb_rst0",
+        "config": "LpspiConfig"
       },
       "address": "0x4009c000",
       "block": "mcx/a/a3/LPSPI::Lpspi",
@@ -3750,7 +5327,7 @@
           ]
         },
         {
-          "name": "IN",
+          "name": "SDI",
           "pins": [
             {
               "pin": "P0_1",
@@ -3776,7 +5353,7 @@
           ]
         },
         {
-          "name": "OUT",
+          "name": "SDO",
           "pins": [
             {
               "pin": "P0_3",
@@ -3844,8 +5421,9 @@
     {
       "name": "LPSPI1",
       "gate": {
-        "enable": "mrcc_glb_cc0",
-        "reset": "mrcc_glb_rst0"
+        "enable": "mrcc_glb_acc0",
+        "reset": "mrcc_glb_rst0",
+        "config": "LpspiConfig"
       },
       "address": "0x4009d000",
       "block": "mcx/a/a3/LPSPI::Lpspi",
@@ -3878,7 +5456,7 @@
           ]
         },
         {
-          "name": "OUT",
+          "name": "SDO",
           "pins": [
             {
               "pin": "P2_13",
@@ -3891,7 +5469,7 @@
           ]
         },
         {
-          "name": "IN",
+          "name": "SDI",
           "pins": [
             {
               "pin": "P2_15",
@@ -3963,8 +5541,9 @@
     {
       "name": "LPUART0",
       "gate": {
-        "enable": "mrcc_glb_cc0",
-        "reset": "mrcc_glb_rst0"
+        "enable": "mrcc_glb_acc0",
+        "reset": "mrcc_glb_rst0",
+        "config": "LpuartConfig"
       },
       "address": "0x4009f000",
       "block": "mcx/a/a3/LPUART::Lpuart",
@@ -4055,8 +5634,9 @@
     {
       "name": "LPUART1",
       "gate": {
-        "enable": "mrcc_glb_cc0",
-        "reset": "mrcc_glb_rst0"
+        "enable": "mrcc_glb_acc0",
+        "reset": "mrcc_glb_rst0",
+        "config": "LpuartConfig"
       },
       "address": "0x400a0000",
       "block": "mcx/a/a3/LPUART::Lpuart",
@@ -4167,8 +5747,9 @@
     {
       "name": "LPUART2",
       "gate": {
-        "enable": "mrcc_glb_cc0",
-        "reset": "mrcc_glb_rst0"
+        "enable": "mrcc_glb_acc0",
+        "reset": "mrcc_glb_rst0",
+        "config": "LpuartConfig"
       },
       "address": "0x400a1000",
       "block": "mcx/a/a3/LPUART::Lpuart",
@@ -4283,8 +5864,9 @@
     {
       "name": "LPUART3",
       "gate": {
-        "enable": "mrcc_glb_cc0",
-        "reset": "mrcc_glb_rst0"
+        "enable": "mrcc_glb_acc0",
+        "reset": "mrcc_glb_rst0",
+        "config": "LpuartConfig"
       },
       "address": "0x400a2000",
       "block": "mcx/a/a3/LPUART::Lpuart",
@@ -4375,8 +5957,9 @@
     {
       "name": "LPUART4",
       "gate": {
-        "enable": "mrcc_glb_cc0",
-        "reset": "mrcc_glb_rst0"
+        "enable": "mrcc_glb_acc0",
+        "reset": "mrcc_glb_rst0",
+        "config": "LpuartConfig"
       },
       "address": "0x400a3000",
       "block": "mcx/a/a3/LPUART::Lpuart",
@@ -4475,8 +6058,9 @@
     {
       "name": "LPUART5",
       "gate": {
-        "enable": "mrcc_glb_cc1",
-        "reset": "mrcc_glb_rst1"
+        "enable": "mrcc_glb_acc1",
+        "reset": "mrcc_glb_rst1",
+        "config": "LpuartConfig"
       },
       "address": "0x400da000",
       "block": "mcx/a/a3/LPUART::Lpuart",
@@ -4614,7 +6198,7 @@
       "signals": [],
       "dma_muxing": [
         {
-          "signal": "QDC0Dma_request_for_new_buffered_value",
+          "signal": "EQDC0Buffer",
           "mux": "DMA0",
           "request": 65
         }
@@ -4633,7 +6217,7 @@
       "signals": [],
       "dma_muxing": [
         {
-          "signal": "QDC1Dma_request_for_new_buffered_value",
+          "signal": "EQDC1Buffer",
           "mux": "DMA0",
           "request": 66
         }
@@ -4643,7 +6227,8 @@
       "name": "FLEXPWM0",
       "gate": {
         "enable": "mrcc_glb_cc0",
-        "reset": "mrcc_glb_rst0"
+        "reset": "mrcc_glb_rst0",
+        "bit": "flexpwm0"
       },
       "address": "0x400a9000",
       "block": "mcx/a/a3/FLEXPWM::Flexpwm",
@@ -4824,42 +6409,42 @@
       ],
       "dma_muxing": [
         {
-          "signal": "FLEXPWM0Req_capt0",
+          "signal": "FlexPWM0Mcapt0",
           "mux": "DMA0",
           "request": 41
         },
         {
-          "signal": "FLEXPWM0Req_capt1",
+          "signal": "FlexPWM0Mcapt1",
           "mux": "DMA0",
           "request": 42
         },
         {
-          "signal": "FLEXPWM0Req_capt2",
+          "signal": "FlexPWM0Mcapt2",
           "mux": "DMA0",
           "request": 43
         },
         {
-          "signal": "FLEXPWM0Req_capt3",
+          "signal": "FlexPWM0Mcapt3",
           "mux": "DMA0",
           "request": 44
         },
         {
-          "signal": "FLEXPWM0Req_val0",
+          "signal": "FlexPWM0Mval0",
           "mux": "DMA0",
           "request": 45
         },
         {
-          "signal": "FLEXPWM0Req_val1",
+          "signal": "FlexPWM0Mval1",
           "mux": "DMA0",
           "request": 46
         },
         {
-          "signal": "FLEXPWM0Req_val2",
+          "signal": "FlexPWM0Mval2",
           "mux": "DMA0",
           "request": 47
         },
         {
-          "signal": "FLEXPWM0Req_val3",
+          "signal": "FlexPWM0Mval3",
           "mux": "DMA0",
           "request": 48
         }
@@ -4869,7 +6454,8 @@
       "name": "FLEXPWM1",
       "gate": {
         "enable": "mrcc_glb_cc1",
-        "reset": "mrcc_glb_rst1"
+        "reset": "mrcc_glb_rst1",
+        "bit": "flexpwm1"
       },
       "address": "0x400aa000",
       "block": "mcx/a/a3/FLEXPWM::Flexpwm",
@@ -5026,42 +6612,42 @@
       ],
       "dma_muxing": [
         {
-          "signal": "FLEXPWM1Req_capt0",
+          "signal": "FlexPWM1Mcapt0",
           "mux": "DMA0",
           "request": 79
         },
         {
-          "signal": "FLEXPWM1Req_capt1",
+          "signal": "FlexPWM1Mcapt1",
           "mux": "DMA0",
           "request": 80
         },
         {
-          "signal": "FLEXPWM1Req_capt2",
+          "signal": "FlexPWM1Mcapt2",
           "mux": "DMA0",
           "request": 81
         },
         {
-          "signal": "FLEXPWM1Req_capt3",
+          "signal": "FlexPWM1Mcapt3",
           "mux": "DMA0",
           "request": 82
         },
         {
-          "signal": "FLEXPWM1Req_val0",
+          "signal": "FlexPWM1Mval0",
           "mux": "DMA0",
           "request": 83
         },
         {
-          "signal": "FLEXPWM1Req_val1",
+          "signal": "FlexPWM1Mval1",
           "mux": "DMA0",
           "request": 84
         },
         {
-          "signal": "FLEXPWM1Req_val2",
+          "signal": "FlexPWM1Mval2",
           "mux": "DMA0",
           "request": 85
         },
         {
-          "signal": "FLEXPWM1Req_val3",
+          "signal": "FlexPWM1Mval3",
           "mux": "DMA0",
           "request": 86
         }
@@ -5094,7 +6680,7 @@
       ],
       "dma_muxing": [
         {
-          "signal": "LPTMR0Counter_match_event",
+          "signal": "LPTMR0CounterMatchEvent",
           "mux": "DMA0",
           "request": 49
         }
@@ -5104,7 +6690,8 @@
       "name": "OSTIMER0",
       "gate": {
         "enable": "mrcc_glb_cc1",
-        "reset": "mrcc_glb_rst1"
+        "reset": "mrcc_glb_rst1",
+        "config": "OsTimerConfig"
       },
       "address": "0x400ad000",
       "block": "mcx/a/a3/OSTIMER::Ostimer",
@@ -5122,7 +6709,8 @@
       "name": "ADC0",
       "gate": {
         "enable": "mrcc_glb_cc1",
-        "reset": "mrcc_glb_rst1"
+        "reset": "mrcc_glb_rst1",
+        "config": "AdcConfig"
       },
       "address": "0x400af000",
       "block": "mcx/a/a3/ADC::Adc",
@@ -5347,7 +6935,7 @@
       ],
       "dma_muxing": [
         {
-          "signal": "ADC0FIFO_Request",
+          "signal": "ADC0FifoRequest",
           "mux": "DMA0",
           "request": 51
         }
@@ -5357,7 +6945,8 @@
       "name": "ADC1",
       "gate": {
         "enable": "mrcc_glb_cc1",
-        "reset": "mrcc_glb_rst1"
+        "reset": "mrcc_glb_rst1",
+        "config": "AdcConfig"
       },
       "address": "0x400b0000",
       "block": "mcx/a/a3/ADC::Adc",
@@ -5555,7 +7144,7 @@
       ],
       "dma_muxing": [
         {
-          "signal": "ADC1FIFO_Request",
+          "signal": "ADC1FifoRequest",
           "mux": "DMA0",
           "request": 52
         }
@@ -5565,7 +7154,8 @@
       "name": "ADC2",
       "gate": {
         "enable": "mrcc_glb_cc1",
-        "reset": "mrcc_glb_rst1"
+        "reset": "mrcc_glb_rst1",
+        "config": "AdcConfig"
       },
       "address": "0x400f0000",
       "block": "mcx/a/a3/ADC::Adc",
@@ -5790,7 +7380,7 @@
       ],
       "dma_muxing": [
         {
-          "signal": "ADC2FIFO_Request",
+          "signal": "ADC2FifoRequest",
           "mux": "DMA0",
           "request": 123
         }
@@ -5800,7 +7390,8 @@
       "name": "ADC3",
       "gate": {
         "enable": "mrcc_glb_cc1",
-        "reset": "mrcc_glb_rst1"
+        "reset": "mrcc_glb_rst1",
+        "config": "AdcConfig"
       },
       "address": "0x400f1000",
       "block": "mcx/a/a3/ADC::Adc",
@@ -6025,7 +7616,7 @@
       ],
       "dma_muxing": [
         {
-          "signal": "ADC3FIFO_Request",
+          "signal": "ADC3FifoRequest",
           "mux": "DMA0",
           "request": 124
         }
@@ -6041,7 +7632,7 @@
       "module": "CMP",
       "signals": [
         {
-          "name": "IN0P",
+          "name": "IN0",
           "pins": [
             {
               "pin": "P2_2",
@@ -6050,16 +7641,7 @@
           ]
         },
         {
-          "name": "IN0N",
-          "pins": [
-            {
-              "pin": "P2_2",
-              "alt": 0
-            }
-          ]
-        },
-        {
-          "name": "IN4P",
+          "name": "INP4",
           "pins": [
             {
               "pin": "P2_15",
@@ -6068,7 +7650,7 @@
           ]
         },
         {
-          "name": "IN4N",
+          "name": "INN4",
           "pins": [
             {
               "pin": "P2_23",
@@ -6090,7 +7672,7 @@
           ]
         },
         {
-          "name": "IN3P",
+          "name": "IN3",
           "pins": [
             {
               "pin": "P1_0",
@@ -6099,16 +7681,7 @@
           ]
         },
         {
-          "name": "IN3N",
-          "pins": [
-            {
-              "pin": "P1_0",
-              "alt": 0
-            }
-          ]
-        },
-        {
-          "name": "IN1P",
+          "name": "IN1",
           "pins": [
             {
               "pin": "P1_3",
@@ -6117,25 +7690,7 @@
           ]
         },
         {
-          "name": "IN1N",
-          "pins": [
-            {
-              "pin": "P1_3",
-              "alt": 0
-            }
-          ]
-        },
-        {
-          "name": "IN2P",
-          "pins": [
-            {
-              "pin": "P1_4",
-              "alt": 0
-            }
-          ]
-        },
-        {
-          "name": "IN2N",
+          "name": "IN2",
           "pins": [
             {
               "pin": "P1_4",
@@ -6146,7 +7701,7 @@
       ],
       "dma_muxing": [
         {
-          "signal": "CMP0DMA_request",
+          "signal": "CMP0",
           "mux": "DMA0",
           "request": 53
         }
@@ -6163,34 +7718,7 @@
       "module": "CMP",
       "signals": [
         {
-          "name": "IN4N",
-          "pins": [
-            {
-              "pin": "P2_2",
-              "alt": 0
-            }
-          ]
-        },
-        {
-          "name": "IN0P",
-          "pins": [
-            {
-              "pin": "P2_3",
-              "alt": 0
-            }
-          ]
-        },
-        {
-          "name": "IN0N",
-          "pins": [
-            {
-              "pin": "P2_3",
-              "alt": 0
-            }
-          ]
-        },
-        {
-          "name": "IN4P",
+          "name": "INP4",
           "pins": [
             {
               "pin": "P2_19",
@@ -6199,16 +7727,25 @@
           ]
         },
         {
-          "name": "IN1P",
+          "name": "INN4",
           "pins": [
             {
-              "pin": "P0_3",
+              "pin": "P2_2",
               "alt": 0
             }
           ]
         },
         {
-          "name": "IN1N",
+          "name": "IN0",
+          "pins": [
+            {
+              "pin": "P2_3",
+              "alt": 0
+            }
+          ]
+        },
+        {
+          "name": "IN1",
           "pins": [
             {
               "pin": "P0_3",
@@ -6234,7 +7771,7 @@
           ]
         },
         {
-          "name": "IN3P",
+          "name": "IN3",
           "pins": [
             {
               "pin": "P1_1",
@@ -6243,25 +7780,7 @@
           ]
         },
         {
-          "name": "IN3N",
-          "pins": [
-            {
-              "pin": "P1_1",
-              "alt": 0
-            }
-          ]
-        },
-        {
-          "name": "IN2P",
-          "pins": [
-            {
-              "pin": "P1_5",
-              "alt": 0
-            }
-          ]
-        },
-        {
-          "name": "IN2N",
+          "name": "IN2",
           "pins": [
             {
               "pin": "P1_5",
@@ -6272,7 +7791,7 @@
       ],
       "dma_muxing": [
         {
-          "signal": "CMP1DMA_request",
+          "signal": "CMP1",
           "mux": "DMA0",
           "request": 54
         }
@@ -6289,7 +7808,16 @@
       "module": "CMP",
       "signals": [
         {
-          "name": "IN4N",
+          "name": "INP4",
+          "pins": [
+            {
+              "pin": "P2_6",
+              "alt": 0
+            }
+          ]
+        },
+        {
+          "name": "INN4",
           "pins": [
             {
               "pin": "P2_2",
@@ -6298,28 +7826,10 @@
           ]
         },
         {
-          "name": "IN0P",
+          "name": "IN0",
           "pins": [
             {
               "pin": "P2_4",
-              "alt": 0
-            }
-          ]
-        },
-        {
-          "name": "IN0N",
-          "pins": [
-            {
-              "pin": "P2_4",
-              "alt": 0
-            }
-          ]
-        },
-        {
-          "name": "IN4P",
-          "pins": [
-            {
-              "pin": "P2_6",
               "alt": 0
             }
           ]
@@ -6338,7 +7848,7 @@
           ]
         },
         {
-          "name": "IN1P",
+          "name": "IN1",
           "pins": [
             {
               "pin": "P0_7",
@@ -6347,16 +7857,7 @@
           ]
         },
         {
-          "name": "IN1N",
-          "pins": [
-            {
-              "pin": "P0_7",
-              "alt": 0
-            }
-          ]
-        },
-        {
-          "name": "IN2P",
+          "name": "IN2",
           "pins": [
             {
               "pin": "P0_23",
@@ -6365,25 +7866,7 @@
           ]
         },
         {
-          "name": "IN2N",
-          "pins": [
-            {
-              "pin": "P0_23",
-              "alt": 0
-            }
-          ]
-        },
-        {
-          "name": "IN3P",
-          "pins": [
-            {
-              "pin": "P1_2",
-              "alt": 0
-            }
-          ]
-        },
-        {
-          "name": "IN3N",
+          "name": "IN3",
           "pins": [
             {
               "pin": "P1_2",
@@ -6394,7 +7877,7 @@
       ],
       "dma_muxing": [
         {
-          "signal": "CMP2DMA_request",
+          "signal": "CMP2",
           "mux": "DMA0",
           "request": 55
         }
@@ -6404,7 +7887,8 @@
       "name": "DAC0",
       "gate": {
         "enable": "mrcc_glb_cc1",
-        "reset": "mrcc_glb_rst1"
+        "reset": "mrcc_glb_rst1",
+        "config": "DacConfig"
       },
       "address": "0x400b4000",
       "block": "mcx/a/a3/DAC::Dac",
@@ -6422,7 +7906,7 @@
       ],
       "dma_muxing": [
         {
-          "signal": "DAC0FIFO_Request",
+          "signal": "DAC0FifoRequest",
           "mux": "DMA0",
           "request": 56
         }
@@ -6439,7 +7923,7 @@
       "module": "OPAMP",
       "signals": [
         {
-          "name": "DP0",
+          "name": "INP",
           "pins": [
             {
               "pin": "P2_12",
@@ -6448,7 +7932,7 @@
           ]
         },
         {
-          "name": "DM0",
+          "name": "INN",
           "pins": [
             {
               "pin": "P2_13",
@@ -6478,7 +7962,7 @@
       "module": "OPAMP",
       "signals": [
         {
-          "name": "DP0",
+          "name": "INP",
           "pins": [
             {
               "pin": "P2_16",
@@ -6487,7 +7971,7 @@
           ]
         },
         {
-          "name": "DM0",
+          "name": "INN",
           "pins": [
             {
               "pin": "P2_17",
@@ -6517,7 +8001,7 @@
       "module": "OPAMP",
       "signals": [
         {
-          "name": "DP0",
+          "name": "INP",
           "pins": [
             {
               "pin": "P2_0",
@@ -6526,7 +8010,7 @@
           ]
         },
         {
-          "name": "DM0",
+          "name": "INN",
           "pins": [
             {
               "pin": "P2_1",
@@ -6556,7 +8040,7 @@
       "module": "OPAMP",
       "signals": [
         {
-          "name": "DP0",
+          "name": "INP",
           "pins": [
             {
               "pin": "P2_20",
@@ -6565,7 +8049,7 @@
           ]
         },
         {
-          "name": "DM0",
+          "name": "INN",
           "pins": [
             {
               "pin": "P2_21",
@@ -6591,7 +8075,7 @@
         "reset": "mrcc_glb_rst1"
       },
       "address": "0x400bc000",
-      "block": "mcx/a/a3/PORT::Port",
+      "block": "mcx/a/a3/PORT",
       "module": "PORT",
       "signals": []
     },
@@ -6602,7 +8086,7 @@
         "reset": "mrcc_glb_rst1"
       },
       "address": "0x400bd000",
-      "block": "mcx/a/a3/PORT::Port1",
+      "block": "mcx/a/a3/PORT",
       "module": "PORT",
       "signals": []
     },
@@ -6613,7 +8097,7 @@
         "reset": "mrcc_glb_rst1"
       },
       "address": "0x400be000",
-      "block": "mcx/a/a3/PORT::Port2",
+      "block": "mcx/a/a3/PORT",
       "module": "PORT",
       "signals": []
     },
@@ -6624,7 +8108,7 @@
         "reset": "mrcc_glb_rst1"
       },
       "address": "0x400bf000",
-      "block": "mcx/a/a3/PORT::Port3",
+      "block": "mcx/a/a3/PORT",
       "module": "PORT",
       "signals": []
     },
@@ -6635,7 +8119,7 @@
         "reset": "mrcc_glb_rst1"
       },
       "address": "0x400c0000",
-      "block": "mcx/a/a3/PORT::Port4",
+      "block": "mcx/a/a3/PORT",
       "module": "PORT",
       "signals": []
     },
@@ -7299,6 +8783,7 @@
       "gate": {
         "enable": "mrcc_glb_cc1",
         "reset": "mrcc_glb_rst1",
+        "config": "CanConfig",
         "bit": "flexcan0"
       },
       "address": "0x400cc000",
@@ -7350,7 +8835,7 @@
       ],
       "dma_muxing": [
         {
-          "signal": "CAN0DMA_request",
+          "signal": "CAN0",
           "mux": "DMA0",
           "request": 2
         }
@@ -7361,6 +8846,7 @@
       "gate": {
         "enable": "mrcc_glb_cc1",
         "reset": "mrcc_glb_rst1",
+        "config": "CanConfig",
         "bit": "flexcan1"
       },
       "address": "0x400d0000",
@@ -7428,7 +8914,7 @@
       ],
       "dma_muxing": [
         {
-          "signal": "CAN1DMA_request",
+          "signal": "CAN1",
           "mux": "DMA0",
           "request": 87
         }
@@ -7513,7 +8999,8 @@
     {
       "name": "SGI0",
       "gate": {
-        "enable": "mrcc_glb_cc1"
+        "enable": "mrcc_glb_cc1",
+        "config": "Clk1MConfig"
       },
       "address": "0x400eb000",
       "block": "mcx/a/a3/SGI::Sgi",
@@ -7521,12 +9008,12 @@
       "signals": [],
       "dma_muxing": [
         {
-          "signal": "SGI0o_dma_req_idat",
+          "signal": "SGI0ReqIdat",
           "mux": "DMA0",
           "request": 119
         },
         {
-          "signal": "SGI0o_dma_req_odat",
+          "signal": "SGI0ReqOdat",
           "mux": "DMA0",
           "request": 120
         }
@@ -7574,7 +9061,7 @@
     {
       "name": "GPIO0",
       "gate": {
-        "enable": "mrcc_glb_cc2",
+        "enable": "mrcc_glb_acc2",
         "reset": "mrcc_glb_rst2"
       },
       "address": "0x40102000",
@@ -7582,7 +9069,7 @@
       "module": "GPIO",
       "signals": [
         {
-          "name": "P0",
+          "name": "0",
           "pins": [
             {
               "pin": "P0_0",
@@ -7591,7 +9078,7 @@
           ]
         },
         {
-          "name": "P1",
+          "name": "1",
           "pins": [
             {
               "pin": "P0_1",
@@ -7600,7 +9087,7 @@
           ]
         },
         {
-          "name": "P2",
+          "name": "2",
           "pins": [
             {
               "pin": "P0_2",
@@ -7609,7 +9096,7 @@
           ]
         },
         {
-          "name": "P3",
+          "name": "3",
           "pins": [
             {
               "pin": "P0_3",
@@ -7618,7 +9105,7 @@
           ]
         },
         {
-          "name": "P4",
+          "name": "4",
           "pins": [
             {
               "pin": "P0_4",
@@ -7627,7 +9114,7 @@
           ]
         },
         {
-          "name": "P5",
+          "name": "5",
           "pins": [
             {
               "pin": "P0_5",
@@ -7636,7 +9123,7 @@
           ]
         },
         {
-          "name": "P6",
+          "name": "6",
           "pins": [
             {
               "pin": "P0_6",
@@ -7645,7 +9132,7 @@
           ]
         },
         {
-          "name": "P7",
+          "name": "7",
           "pins": [
             {
               "pin": "P0_7",
@@ -7654,7 +9141,7 @@
           ]
         },
         {
-          "name": "P12",
+          "name": "12",
           "pins": [
             {
               "pin": "P0_12",
@@ -7663,7 +9150,7 @@
           ]
         },
         {
-          "name": "P13",
+          "name": "13",
           "pins": [
             {
               "pin": "P0_13",
@@ -7672,7 +9159,7 @@
           ]
         },
         {
-          "name": "P14",
+          "name": "14",
           "pins": [
             {
               "pin": "P0_14",
@@ -7681,7 +9168,7 @@
           ]
         },
         {
-          "name": "P15",
+          "name": "15",
           "pins": [
             {
               "pin": "P0_15",
@@ -7690,7 +9177,7 @@
           ]
         },
         {
-          "name": "P16",
+          "name": "16",
           "pins": [
             {
               "pin": "P0_16",
@@ -7699,7 +9186,7 @@
           ]
         },
         {
-          "name": "P17",
+          "name": "17",
           "pins": [
             {
               "pin": "P0_17",
@@ -7708,7 +9195,7 @@
           ]
         },
         {
-          "name": "P18",
+          "name": "18",
           "pins": [
             {
               "pin": "P0_18",
@@ -7717,7 +9204,7 @@
           ]
         },
         {
-          "name": "P19",
+          "name": "19",
           "pins": [
             {
               "pin": "P0_19",
@@ -7726,7 +9213,7 @@
           ]
         },
         {
-          "name": "P20",
+          "name": "20",
           "pins": [
             {
               "pin": "P0_20",
@@ -7735,7 +9222,7 @@
           ]
         },
         {
-          "name": "P21",
+          "name": "21",
           "pins": [
             {
               "pin": "P0_21",
@@ -7744,7 +9231,7 @@
           ]
         },
         {
-          "name": "P22",
+          "name": "22",
           "pins": [
             {
               "pin": "P0_22",
@@ -7753,7 +9240,7 @@
           ]
         },
         {
-          "name": "P23",
+          "name": "23",
           "pins": [
             {
               "pin": "P0_23",
@@ -7762,7 +9249,7 @@
           ]
         },
         {
-          "name": "P24",
+          "name": "24",
           "pins": [
             {
               "pin": "P0_24",
@@ -7771,7 +9258,7 @@
           ]
         },
         {
-          "name": "P25",
+          "name": "25",
           "pins": [
             {
               "pin": "P0_25",
@@ -7780,7 +9267,7 @@
           ]
         },
         {
-          "name": "P26",
+          "name": "26",
           "pins": [
             {
               "pin": "P0_26",
@@ -7789,7 +9276,7 @@
           ]
         },
         {
-          "name": "P27",
+          "name": "27",
           "pins": [
             {
               "pin": "P0_27",
@@ -7800,7 +9287,7 @@
       ],
       "dma_muxing": [
         {
-          "signal": "GPIO0Pin_event_request_0",
+          "signal": "GPIO0PinEvent0",
           "mux": "DMA0",
           "request": 60
         }
@@ -7809,7 +9296,7 @@
     {
       "name": "GPIO1",
       "gate": {
-        "enable": "mrcc_glb_cc2",
+        "enable": "mrcc_glb_acc2",
         "reset": "mrcc_glb_rst2"
       },
       "address": "0x40103000",
@@ -7817,7 +9304,7 @@
       "module": "GPIO",
       "signals": [
         {
-          "name": "P8",
+          "name": "8",
           "pins": [
             {
               "pin": "P1_8",
@@ -7826,7 +9313,7 @@
           ]
         },
         {
-          "name": "P9",
+          "name": "9",
           "pins": [
             {
               "pin": "P1_9",
@@ -7835,7 +9322,7 @@
           ]
         },
         {
-          "name": "P10",
+          "name": "10",
           "pins": [
             {
               "pin": "P1_10",
@@ -7844,7 +9331,7 @@
           ]
         },
         {
-          "name": "P11",
+          "name": "11",
           "pins": [
             {
               "pin": "P1_11",
@@ -7853,7 +9340,7 @@
           ]
         },
         {
-          "name": "P12",
+          "name": "12",
           "pins": [
             {
               "pin": "P1_12",
@@ -7862,7 +9349,7 @@
           ]
         },
         {
-          "name": "P13",
+          "name": "13",
           "pins": [
             {
               "pin": "P1_13",
@@ -7871,7 +9358,7 @@
           ]
         },
         {
-          "name": "P14",
+          "name": "14",
           "pins": [
             {
               "pin": "P1_14",
@@ -7880,7 +9367,7 @@
           ]
         },
         {
-          "name": "P15",
+          "name": "15",
           "pins": [
             {
               "pin": "P1_15",
@@ -7889,7 +9376,7 @@
           ]
         },
         {
-          "name": "P16",
+          "name": "16",
           "pins": [
             {
               "pin": "P1_16",
@@ -7898,7 +9385,7 @@
           ]
         },
         {
-          "name": "P17",
+          "name": "17",
           "pins": [
             {
               "pin": "P1_17",
@@ -7907,7 +9394,7 @@
           ]
         },
         {
-          "name": "P18",
+          "name": "18",
           "pins": [
             {
               "pin": "P1_18",
@@ -7916,7 +9403,7 @@
           ]
         },
         {
-          "name": "P19",
+          "name": "19",
           "pins": [
             {
               "pin": "P1_19",
@@ -7925,7 +9412,7 @@
           ]
         },
         {
-          "name": "P29",
+          "name": "29",
           "pins": [
             {
               "pin": "P1_29",
@@ -7934,7 +9421,7 @@
           ]
         },
         {
-          "name": "P30",
+          "name": "30",
           "pins": [
             {
               "pin": "P1_30",
@@ -7943,7 +9430,7 @@
           ]
         },
         {
-          "name": "P31",
+          "name": "31",
           "pins": [
             {
               "pin": "P1_31",
@@ -7952,7 +9439,7 @@
           ]
         },
         {
-          "name": "P0",
+          "name": "0",
           "pins": [
             {
               "pin": "P1_0",
@@ -7961,7 +9448,7 @@
           ]
         },
         {
-          "name": "P1",
+          "name": "1",
           "pins": [
             {
               "pin": "P1_1",
@@ -7970,7 +9457,7 @@
           ]
         },
         {
-          "name": "P2",
+          "name": "2",
           "pins": [
             {
               "pin": "P1_2",
@@ -7979,7 +9466,7 @@
           ]
         },
         {
-          "name": "P3",
+          "name": "3",
           "pins": [
             {
               "pin": "P1_3",
@@ -7988,7 +9475,7 @@
           ]
         },
         {
-          "name": "P4",
+          "name": "4",
           "pins": [
             {
               "pin": "P1_4",
@@ -7997,7 +9484,7 @@
           ]
         },
         {
-          "name": "P5",
+          "name": "5",
           "pins": [
             {
               "pin": "P1_5",
@@ -8006,7 +9493,7 @@
           ]
         },
         {
-          "name": "P6",
+          "name": "6",
           "pins": [
             {
               "pin": "P1_6",
@@ -8015,7 +9502,7 @@
           ]
         },
         {
-          "name": "P7",
+          "name": "7",
           "pins": [
             {
               "pin": "P1_7",
@@ -8026,7 +9513,7 @@
       ],
       "dma_muxing": [
         {
-          "signal": "GPIO1Pin_event_request_0",
+          "signal": "GPIO1PinEvent0",
           "mux": "DMA0",
           "request": 61
         }
@@ -8035,7 +9522,7 @@
     {
       "name": "GPIO2",
       "gate": {
-        "enable": "mrcc_glb_cc2",
+        "enable": "mrcc_glb_acc2",
         "reset": "mrcc_glb_rst2"
       },
       "address": "0x40104000",
@@ -8043,7 +9530,7 @@
       "module": "GPIO",
       "signals": [
         {
-          "name": "P0",
+          "name": "0",
           "pins": [
             {
               "pin": "P2_0",
@@ -8052,7 +9539,7 @@
           ]
         },
         {
-          "name": "P1",
+          "name": "1",
           "pins": [
             {
               "pin": "P2_1",
@@ -8061,7 +9548,7 @@
           ]
         },
         {
-          "name": "P2",
+          "name": "2",
           "pins": [
             {
               "pin": "P2_2",
@@ -8070,7 +9557,7 @@
           ]
         },
         {
-          "name": "P3",
+          "name": "3",
           "pins": [
             {
               "pin": "P2_3",
@@ -8079,7 +9566,7 @@
           ]
         },
         {
-          "name": "P4",
+          "name": "4",
           "pins": [
             {
               "pin": "P2_4",
@@ -8088,7 +9575,7 @@
           ]
         },
         {
-          "name": "P5",
+          "name": "5",
           "pins": [
             {
               "pin": "P2_5",
@@ -8097,7 +9584,7 @@
           ]
         },
         {
-          "name": "P6",
+          "name": "6",
           "pins": [
             {
               "pin": "P2_6",
@@ -8106,7 +9593,7 @@
           ]
         },
         {
-          "name": "P7",
+          "name": "7",
           "pins": [
             {
               "pin": "P2_7",
@@ -8115,7 +9602,7 @@
           ]
         },
         {
-          "name": "P8",
+          "name": "8",
           "pins": [
             {
               "pin": "P2_8",
@@ -8124,7 +9611,7 @@
           ]
         },
         {
-          "name": "P9",
+          "name": "9",
           "pins": [
             {
               "pin": "P2_9",
@@ -8133,7 +9620,7 @@
           ]
         },
         {
-          "name": "P10",
+          "name": "10",
           "pins": [
             {
               "pin": "P2_10",
@@ -8142,7 +9629,7 @@
           ]
         },
         {
-          "name": "P11",
+          "name": "11",
           "pins": [
             {
               "pin": "P2_11",
@@ -8151,7 +9638,7 @@
           ]
         },
         {
-          "name": "P12",
+          "name": "12",
           "pins": [
             {
               "pin": "P2_12",
@@ -8160,7 +9647,7 @@
           ]
         },
         {
-          "name": "P13",
+          "name": "13",
           "pins": [
             {
               "pin": "P2_13",
@@ -8169,7 +9656,7 @@
           ]
         },
         {
-          "name": "P14",
+          "name": "14",
           "pins": [
             {
               "pin": "P2_14",
@@ -8178,7 +9665,7 @@
           ]
         },
         {
-          "name": "P15",
+          "name": "15",
           "pins": [
             {
               "pin": "P2_15",
@@ -8187,7 +9674,7 @@
           ]
         },
         {
-          "name": "P16",
+          "name": "16",
           "pins": [
             {
               "pin": "P2_16",
@@ -8196,7 +9683,7 @@
           ]
         },
         {
-          "name": "P17",
+          "name": "17",
           "pins": [
             {
               "pin": "P2_17",
@@ -8205,7 +9692,7 @@
           ]
         },
         {
-          "name": "P18",
+          "name": "18",
           "pins": [
             {
               "pin": "P2_18",
@@ -8214,7 +9701,7 @@
           ]
         },
         {
-          "name": "P19",
+          "name": "19",
           "pins": [
             {
               "pin": "P2_19",
@@ -8223,7 +9710,7 @@
           ]
         },
         {
-          "name": "P20",
+          "name": "20",
           "pins": [
             {
               "pin": "P2_20",
@@ -8232,7 +9719,7 @@
           ]
         },
         {
-          "name": "P21",
+          "name": "21",
           "pins": [
             {
               "pin": "P2_21",
@@ -8241,7 +9728,7 @@
           ]
         },
         {
-          "name": "P22",
+          "name": "22",
           "pins": [
             {
               "pin": "P2_22",
@@ -8250,7 +9737,7 @@
           ]
         },
         {
-          "name": "P23",
+          "name": "23",
           "pins": [
             {
               "pin": "P2_23",
@@ -8259,7 +9746,7 @@
           ]
         },
         {
-          "name": "P24",
+          "name": "24",
           "pins": [
             {
               "pin": "P2_24",
@@ -8268,7 +9755,7 @@
           ]
         },
         {
-          "name": "P25",
+          "name": "25",
           "pins": [
             {
               "pin": "P2_25",
@@ -8277,7 +9764,7 @@
           ]
         },
         {
-          "name": "P26",
+          "name": "26",
           "pins": [
             {
               "pin": "P2_26",
@@ -8288,7 +9775,7 @@
       ],
       "dma_muxing": [
         {
-          "signal": "GPIO2Pin_event_request_0",
+          "signal": "GPIO2PinEvent0",
           "mux": "DMA0",
           "request": 62
         }
@@ -8297,7 +9784,7 @@
     {
       "name": "GPIO3",
       "gate": {
-        "enable": "mrcc_glb_cc2",
+        "enable": "mrcc_glb_acc2",
         "reset": "mrcc_glb_rst2"
       },
       "address": "0x40105000",
@@ -8305,7 +9792,7 @@
       "module": "GPIO",
       "signals": [
         {
-          "name": "P31",
+          "name": "31",
           "pins": [
             {
               "pin": "P3_31",
@@ -8314,7 +9801,7 @@
           ]
         },
         {
-          "name": "P30",
+          "name": "30",
           "pins": [
             {
               "pin": "P3_30",
@@ -8323,7 +9810,7 @@
           ]
         },
         {
-          "name": "P29",
+          "name": "29",
           "pins": [
             {
               "pin": "P3_29",
@@ -8332,7 +9819,7 @@
           ]
         },
         {
-          "name": "P28",
+          "name": "28",
           "pins": [
             {
               "pin": "P3_28",
@@ -8341,7 +9828,7 @@
           ]
         },
         {
-          "name": "P27",
+          "name": "27",
           "pins": [
             {
               "pin": "P3_27",
@@ -8350,7 +9837,7 @@
           ]
         },
         {
-          "name": "P26",
+          "name": "26",
           "pins": [
             {
               "pin": "P3_26",
@@ -8359,7 +9846,7 @@
           ]
         },
         {
-          "name": "P25",
+          "name": "25",
           "pins": [
             {
               "pin": "P3_25",
@@ -8368,7 +9855,7 @@
           ]
         },
         {
-          "name": "P24",
+          "name": "24",
           "pins": [
             {
               "pin": "P3_24",
@@ -8377,7 +9864,7 @@
           ]
         },
         {
-          "name": "P23",
+          "name": "23",
           "pins": [
             {
               "pin": "P3_23",
@@ -8386,7 +9873,7 @@
           ]
         },
         {
-          "name": "P22",
+          "name": "22",
           "pins": [
             {
               "pin": "P3_22",
@@ -8395,7 +9882,7 @@
           ]
         },
         {
-          "name": "P21",
+          "name": "21",
           "pins": [
             {
               "pin": "P3_21",
@@ -8404,7 +9891,7 @@
           ]
         },
         {
-          "name": "P20",
+          "name": "20",
           "pins": [
             {
               "pin": "P3_20",
@@ -8413,7 +9900,7 @@
           ]
         },
         {
-          "name": "P19",
+          "name": "19",
           "pins": [
             {
               "pin": "P3_19",
@@ -8422,7 +9909,7 @@
           ]
         },
         {
-          "name": "P18",
+          "name": "18",
           "pins": [
             {
               "pin": "P3_18",
@@ -8431,7 +9918,7 @@
           ]
         },
         {
-          "name": "P17",
+          "name": "17",
           "pins": [
             {
               "pin": "P3_17",
@@ -8440,7 +9927,7 @@
           ]
         },
         {
-          "name": "P16",
+          "name": "16",
           "pins": [
             {
               "pin": "P3_16",
@@ -8449,7 +9936,7 @@
           ]
         },
         {
-          "name": "P15",
+          "name": "15",
           "pins": [
             {
               "pin": "P3_15",
@@ -8458,7 +9945,7 @@
           ]
         },
         {
-          "name": "P14",
+          "name": "14",
           "pins": [
             {
               "pin": "P3_14",
@@ -8467,7 +9954,7 @@
           ]
         },
         {
-          "name": "P13",
+          "name": "13",
           "pins": [
             {
               "pin": "P3_13",
@@ -8476,7 +9963,7 @@
           ]
         },
         {
-          "name": "P12",
+          "name": "12",
           "pins": [
             {
               "pin": "P3_12",
@@ -8485,7 +9972,7 @@
           ]
         },
         {
-          "name": "P11",
+          "name": "11",
           "pins": [
             {
               "pin": "P3_11",
@@ -8494,7 +9981,7 @@
           ]
         },
         {
-          "name": "P10",
+          "name": "10",
           "pins": [
             {
               "pin": "P3_10",
@@ -8503,7 +9990,7 @@
           ]
         },
         {
-          "name": "P9",
+          "name": "9",
           "pins": [
             {
               "pin": "P3_9",
@@ -8512,7 +9999,7 @@
           ]
         },
         {
-          "name": "P8",
+          "name": "8",
           "pins": [
             {
               "pin": "P3_8",
@@ -8521,7 +10008,7 @@
           ]
         },
         {
-          "name": "P7",
+          "name": "7",
           "pins": [
             {
               "pin": "P3_7",
@@ -8530,7 +10017,7 @@
           ]
         },
         {
-          "name": "P6",
+          "name": "6",
           "pins": [
             {
               "pin": "P3_6",
@@ -8539,7 +10026,7 @@
           ]
         },
         {
-          "name": "P5",
+          "name": "5",
           "pins": [
             {
               "pin": "P3_5",
@@ -8548,7 +10035,7 @@
           ]
         },
         {
-          "name": "P4",
+          "name": "4",
           "pins": [
             {
               "pin": "P3_4",
@@ -8557,7 +10044,7 @@
           ]
         },
         {
-          "name": "P3",
+          "name": "3",
           "pins": [
             {
               "pin": "P3_3",
@@ -8566,7 +10053,7 @@
           ]
         },
         {
-          "name": "P2",
+          "name": "2",
           "pins": [
             {
               "pin": "P3_2",
@@ -8575,7 +10062,7 @@
           ]
         },
         {
-          "name": "P1",
+          "name": "1",
           "pins": [
             {
               "pin": "P3_1",
@@ -8584,7 +10071,7 @@
           ]
         },
         {
-          "name": "P0",
+          "name": "0",
           "pins": [
             {
               "pin": "P3_0",
@@ -8595,7 +10082,7 @@
       ],
       "dma_muxing": [
         {
-          "signal": "GPIO3Pin_event_request_0",
+          "signal": "GPIO3PinEvent0",
           "mux": "DMA0",
           "request": 63
         }
@@ -8604,7 +10091,7 @@
     {
       "name": "GPIO4",
       "gate": {
-        "enable": "mrcc_glb_cc2",
+        "enable": "mrcc_glb_acc2",
         "reset": "mrcc_glb_rst2"
       },
       "address": "0x40106000",
@@ -8612,7 +10099,7 @@
       "module": "GPIO",
       "signals": [
         {
-          "name": "P0",
+          "name": "0",
           "pins": [
             {
               "pin": "P4_0",
@@ -8621,7 +10108,7 @@
           ]
         },
         {
-          "name": "P1",
+          "name": "1",
           "pins": [
             {
               "pin": "P4_1",
@@ -8630,7 +10117,7 @@
           ]
         },
         {
-          "name": "P2",
+          "name": "2",
           "pins": [
             {
               "pin": "P4_2",
@@ -8639,7 +10126,7 @@
           ]
         },
         {
-          "name": "P3",
+          "name": "3",
           "pins": [
             {
               "pin": "P4_3",
@@ -8648,7 +10135,7 @@
           ]
         },
         {
-          "name": "P4",
+          "name": "4",
           "pins": [
             {
               "pin": "P4_4",
@@ -8657,7 +10144,7 @@
           ]
         },
         {
-          "name": "P5",
+          "name": "5",
           "pins": [
             {
               "pin": "P4_5",
@@ -8666,7 +10153,7 @@
           ]
         },
         {
-          "name": "P6",
+          "name": "6",
           "pins": [
             {
               "pin": "P4_6",
@@ -8675,7 +10162,7 @@
           ]
         },
         {
-          "name": "P7",
+          "name": "7",
           "pins": [
             {
               "pin": "P4_7",
@@ -8686,7 +10173,7 @@
       ],
       "dma_muxing": [
         {
-          "signal": "GPIO4Pin_event_request_0",
+          "signal": "GPIO4PinEvent0",
           "mux": "DMA0",
           "request": 64
         }
@@ -8704,7 +10191,7 @@
       "signals": [],
       "dma_muxing": [
         {
-          "signal": "MAU0MAU_DMA_Request",
+          "signal": "MAU0",
           "mux": "DMA0",
           "request": 115
         }

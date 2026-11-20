@@ -55,6 +55,14 @@ Because the crate is in transition, some of them use the PAC method, and some of
 | MCXA276 | MetaPAC (MCXA266 compatibility name for existing boards) |
 | MCXA286 | MetaPAC |
 | MCXA287 | MetaPAC |
+| MCXA343 | MetaPAC |
+| MCXA344 | MetaPAC |
+| MCXA345 | MetaPAC |
+| MCXA346 | MetaPAC |
+| MCXA355 | MetaPAC |
+| MCXA356 | MetaPAC |
+| MCXA365 | MetaPAC |
+| MCXA366 | MetaPAC |
 | MCXA456 | MetaPAC |
 | MCXA457 | MetaPAC |
 | MCXA536 | MetaPAC |

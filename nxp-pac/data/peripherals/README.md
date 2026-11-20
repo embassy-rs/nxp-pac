@@ -23,6 +23,9 @@ add, not placeholder directories or implicit fallback to another family.
   preserves an existing metadata-only mapping without a PAC implementation.
 - `driver`: the base HAL driver identity. A2/A5 keep names such as `mcxa/LPUART`
   so existing HAL cfgs remain compatible; A1 uses its new `mcx/a/a1/...` identities.
+  A3 models whose register layout matches A2 carry the A2 identity, so the HAL
+  drivers for those peripherals apply unchanged; the remaining A3 models keep
+  `mcx/a/a3/...` identities.
 
 When a model uses a shared definition without adding anything, its `source`
 points directly to that definition, including across family directories. Do not
@@ -72,12 +75,12 @@ vendor extraction input is not a public support contract.
 
 ### Shared PORT definitions
 
-MCXA2/A5 metadata references the same `mcx/common/PORT` model, including its
+MCXA2/A3/A5 metadata references the same `mcx/common/PORT` model, including its
 generic `Port` register-block type. Instance names (`PORT0`, `PORT1`, etc.),
 addresses, signals and gates belong to chip metadata; they do not justify
 duplicating an identical register-block model. The same source also provides
-compatible fieldsets and enums used by MCXN. MCXA1/A3 retain their differing
-register layouts.
+compatible fieldsets and enums used by MCXN. MCXA1 retains its differing
+register layout.
 
 MCXN blocks share `mcx/n/common/PORT.yaml`, with EFT masks, calibration, numbered
 global-write-enable fields and PCR capabilities in `PORT-fields.yaml`. Canonical
@@ -131,6 +134,23 @@ Shared enum/fieldset type names replace redundant imported types. This can
 require updates to callers naming the previous types; field values and register
 semantics are unchanged. Metadata instance names and addresses are independent
 of these shared definitions.
+
+### Shared MCXA2/A3 definitions
+
+The MCXA345/346/355/356/365/366 reference manual (MCXAP144M240F60RM Rev. 4)
+documents the same register layouts as A2 for CMC, CRC, CTIMER, DMA, EDMA_TCD,
+FMU, FREQME, GPIO, LPI2C, LPSPI, LPTMR, LPUART, MRCC, OSTIMER, PORT, SCG, UTICK
+and WWDT. The A3 catalog entries for these point at the A2 or common sources.
+MRCC lives in `mcx/a/common/MRCC.yaml`. Its SYSTICK clock controls and FMC
+gate stay A2-only through `only_in`, which keeps A2's existing model; F60RM
+and F61RM both omit the SYSTICK registers and mark CC0/ACC0 bit 16 reserved.
+A3 SPC, SYSCON, VBAT, INPUTMUX, ADC, CAN, CMP and the small-A3 (MCXA343/344)
+models keep their own layouts and identities.
+
+MCXA345/346/355/356/365/366 metadata uses the A2 spellings for interrupt names
+(`DMA0_CHn`, `SLCD`), DMA request names and signal names (for example GPIO `n`,
+LPSPI `SDI`/`SDO`, CTIMER `MATn`/`INPn`), so the HAL's pin and request tables
+apply to both.
 
 ### Other shared A/N definitions
 
@@ -218,17 +238,17 @@ or transforms for genuine incompatible layouts or meanings, with source evidence
 
 ## GPIO capabilities
 
-All three subfamilies include the same GPIO union. The documented split is basic
-A1/A2 GPIO versus extended A5 GPIO, not A1 versus A2/A5:
+All MCXA subfamilies include the same GPIO union. The documented split is basic
+A1/A2/A3 GPIO versus extended A5 GPIO, not A1 versus A2/A5:
 
 | Selection | GPIO capabilities |
 | --- | --- |
-| MCXA156, MCXA175/176/185/186/255/256/265/266 | One ISFR bank; ICR[23:20] reserved; no documented protection-register bank |
+| MCXA156, MCXA175/176/185/186/255/256/265/266, MCXA343/344/345/346/355/356/365/366 | One ISFR bank; ICR[23:20] reserved; no documented protection-register bank |
 | MCXA286/287/456/457/536/537/556/557/566/567/577 | Two ISFR banks, ICR.IRQS/LK, and LOCK/PCNS/ICNS/PCNP/ICNP |
 | MCXA276 compatibility selection | Same basic GPIO and complete hardware model as MCXA266; retained for existing boards |
 
 References: MCXAP100M96FS6RM Rev. 7, chapter 12; MCXAP144M240F61RM Rev. 2,
-sections 12.7.1.1, 12.7.1.12 and 12.7.1.15; MCXAP144M240F61SRM Rev. 2,
+sections 12.7.1.1, 12.7.1.12 and 12.7.1.15; MCXAP144M240F60RM Rev. 4, chapter 12; MCXAP144M240F61SRM Rev. 2,
 section 2.5.9; MCXAP172M240F70RM final Rev. 1, sections 20.7.1.1, 20.7.1.17
 and 20.7.1.20. The A2 security reference manual redirects GPIO coverage to the
 main reference manual; it does not establish the A5 protection extensions.
