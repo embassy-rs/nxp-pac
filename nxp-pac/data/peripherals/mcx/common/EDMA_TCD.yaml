@@ -224,6 +224,7 @@ fieldset/ChSbr:
       bit_offset: 0
       bit_size: 4
     - name: sec
+      only_in: '^(MCXA(286|287|456|457|536|537|556|557|566|567|577)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$'
       description: "Security Level.\n\nRaw bit values: false (0) = NonsecureProtection: Nonsecure protection level for DMA transfers.; true (1) = SecureProtection: Secure protection level for DMA transfers."
       bit_offset: 14
       bit_size: 1
@@ -236,6 +237,7 @@ fieldset/ChSbr:
       bit_offset: 16
       bit_size: 1
     - name: attr
+      only_in: '^(MCXA(286|287|456|457|536|537|556|557|566|567|577)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$'
       description: Attribute Output.
       bit_offset: 17
       bit_size: 4
@@ -282,9 +284,15 @@ fieldset/TcdBiterElinkyes:
       bit_offset: 0
       bit_size: 9
     - name: linkch
+      only_in: '^(MCXA(286|287|456|457|536|537|556|557|566|567|577)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$'
       description: Link Channel Number.
       bit_offset: 9
       bit_size: 4
+    - name: linkch
+      only_in: '^MCXA(175|176|185|186|255|256|265|266|343|344|345|346|355|356|365|366)$'
+      description: Link Channel Number.
+      bit_offset: 9
+      bit_size: 3
     - name: elink
       description: Enable Link.
       bit_offset: 15
@@ -310,9 +318,15 @@ fieldset/TcdCiterElinkyes:
       bit_offset: 0
       bit_size: 9
     - name: linkch
+      only_in: '^(MCXA(286|287|456|457|536|537|556|557|566|567|577)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$'
       description: Minor Loop Link Channel Number.
       bit_offset: 9
       bit_size: 4
+    - name: linkch
+      only_in: '^MCXA(175|176|185|186|255|256|265|266|343|344|345|346|355|356|365|366)$'
+      description: Minor Loop Link Channel Number.
+      bit_offset: 9
+      bit_size: 3
     - name: elink
       description: Enable Link.
       bit_offset: 15
@@ -354,9 +368,15 @@ fieldset/TcdCsr:
       bit_offset: 7
       bit_size: 1
     - name: majorlinkch
+      only_in: '^(MCXA(286|287|456|457|536|537|556|557|566|567|577)|MCXN(235|236|246|247|526|527|536|537|546|547|556|557|946|947))$'
       description: Major Loop Link Channel Number.
       bit_offset: 8
       bit_size: 4
+    - name: majorlinkch
+      only_in: '^MCXA(175|176|185|186|255|256|265|266|343|344|345|346|355|356|365|366)$'
+      description: Major Loop Link Channel Number.
+      bit_offset: 8
+      bit_size: 3
     - name: bwc
       description: Bandwidth Control.
       bit_offset: 14
