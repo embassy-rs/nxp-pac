@@ -1,4 +1,4 @@
-# Shared MCXA2/A5 register block and compatible MCXA/MCXN field definitions.
+# Shared MCXA2/A3/A5 register block and compatible MCXA/MCXN field definitions.
 block/Port:
   only_in: '^MCXA'
   description: Port Control.
@@ -20,6 +20,14 @@ block/Port:
     description: Configuration.
     byte_offset: 32
     fieldset: Config
+  - name: calib0
+    description: Calibration 0. Output driver calibration used when PCRn[DSE] = 0; reset value loaded from IFR. Not implemented on PORT2, where an access is a bus error.
+    byte_offset: 96
+    fieldset: Calib
+  - name: calib1
+    description: Calibration 1. Output driver calibration used when PCRn[DSE] = 1; reset value loaded from IFR. Not implemented on PORT2, where an access is a bus error.
+    byte_offset: 100
+    fieldset: Calib
   - name: pcr
     description: Pin Control 0.
     array:
@@ -27,6 +35,17 @@ block/Port:
       stride: 4
     byte_offset: 128
     fieldset: Pcr
+fieldset/Calib:
+  description: Calibration.
+  fields:
+  - name: ncal
+    description: Calibration of NMOS Output Driver.
+    bit_offset: 0
+    bit_size: 6
+  - name: pcal
+    description: Calibration of PMOS Output Driver.
+    bit_offset: 16
+    bit_size: 6
 fieldset/Config:
   description: Configuration.
   fields:
@@ -59,9 +78,19 @@ fieldset/Pcr:
     description: "Pull Enable.\n\nRaw bit values: false (0) = Pe0: Disables.; true (1) = Pe1: Enables."
     bit_offset: 1
     bit_size: 1
+  - name: pv
+    only_in: '^MCXA'
+    description: "Pull Value. Implemented on a subset of pins and reserved on the others; see the PCRn descriptions in the reference manual.\n\nRaw bit values: false (0) = Low.; true (1) = High."
+    bit_offset: 2
+    bit_size: 1
   - name: sre
     description: "Slew Rate Enable.\n\nRaw bit values: false (0) = Sre0: Fast.; true (1) = Sre1: Slow."
     bit_offset: 3
+    bit_size: 1
+  - name: pfe
+    only_in: '^MCXA'
+    description: "Passive Filter Enable. Implemented on a subset of pins and reserved on the others; see the PCRn descriptions in the reference manual.\n\nRaw bit values: false (0) = Disables.; true (1) = Enables."
+    bit_offset: 4
     bit_size: 1
   - name: ode
     description: "Open Drain Enable.\n\nRaw bit values: false (0) = Ode0: Disables.; true (1) = Ode1: Enables."
@@ -70,6 +99,11 @@ fieldset/Pcr:
   - name: dse
     description: "Drive Strength Enable.\n\nRaw bit values: false (0) = Dse0: Low.; true (1) = Dse1: High."
     bit_offset: 6
+    bit_size: 1
+  - name: dse1
+    only_in: '^MCXA'
+    description: "Drive Strength Enable 1. Implemented on a subset of pins and reserved on the others; see the PCRn descriptions in the reference manual.\n\nRaw bit values: false (0) = Normal.; true (1) = Double."
+    bit_offset: 7
     bit_size: 1
   - name: mux
     description: Pin Multiplex Control.

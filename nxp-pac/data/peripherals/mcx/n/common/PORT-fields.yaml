@@ -23,17 +23,6 @@ block/PortCommon:
     description: Configuration.
     byte_offset: 32
     fieldset: Config
-fieldset/Calib:
-  description: Calibration.
-  fields:
-  - name: ncal
-    description: Calibration of NMOS Output Driver.
-    bit_offset: 0
-    bit_size: 6
-  - name: pcal
-    description: Calibration of PMOS Output Driver.
-    bit_offset: 16
-    bit_size: 6
 fieldset/Edcr:
   description: EFT Detect Clear.
   fields:
