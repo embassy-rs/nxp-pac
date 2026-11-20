@@ -82,6 +82,13 @@ duplicating an identical register-block model. The same source also provides
 compatible fieldsets and enums used by MCXN. MCXA1 retains its differing
 register layout.
 
+The MCXA `Port` block is one type for every instance and exposes a uniform
+32-entry PCR array, so it carries the union of the per-pad capabilities. The
+`pv`, `pfe` and `dse1` fields exist only on the pads the reference manual lists
+for each `PCRn` and are reserved elsewhere; MCXN models them per pad instead.
+`calib0`/`calib1` are implemented on PORT0, 1, 3 and 4 but not PORT2, where an
+access is a bus error (F61RM Rev. 2 and F60RM Rev. 4, 11.6.1.6–7).
+
 MCXN blocks share `mcx/n/common/PORT.yaml`, with EFT masks, calibration, numbered
 global-write-enable fields and PCR capabilities in `PORT-fields.yaml`. Canonical
 N2/N5/N9 model identities remain separate in the catalog. N23x pad differences
@@ -147,10 +154,26 @@ and F61RM both omit the SYSTICK registers and mark CC0/ACC0 bit 16 reserved.
 A3 SPC, SYSCON, VBAT, INPUTMUX, ADC, CAN, CMP and the small-A3 (MCXA343/344)
 models keep their own layouts and identities.
 
+The common CMC, SCG and FMU sources also serve A5. Registers, fields and enum
+values that F61RM and F60RM omit or mark reserved are restricted to the A5
+chips with `only_in`: the APLL/UPLL and test registers, the SRAM retention,
+boot-status and unlock registers, and the extra reset sources. The FIRCTRIM
+`trimtemp` field is 4 bits on A2/A3 and keeps 2 bits on A5. `SCS` stays 4 bits
+on all of them, because its enum is shared and an enum's width must match its
+field; on A2/A3 bit 27 is reserved and the APLL/UPLL encodings are reserved
+variants. The WWDT `debug_en` field is A5-only (bit 6 is reserved in F61RM).
+
+The eight-channel A2/A3 eDMA uses 3-bit `linkch`/`majorlinkch` fields and has
+no `CH_SBR` `sec`/`attr` bits (F61RM 15.6.2.5, 15.6.2.17 and 15.6.2.19); the
+other chips sharing `mcx/common/EDMA_TCD` keep 4 bits. The `Dma4` and `Dma8`
+management pages use `MpInt4` and `MpInt8`, sized to their channel counts.
+
 MCXA345/346/355/356/365/366 metadata uses the A2 spellings for interrupt names
 (`DMA0_CHn`, `SLCD`), DMA request names and signal names (for example GPIO `n`,
 LPSPI `SDI`/`SDO`, CTIMER `MATn`/`INPn`), so the HAL's pin and request tables
-apply to both.
+apply to both. MCXA343/344 DMA request names use the same spellings. DMA
+request names are unique within a chip, because the HAL builds a single request
+enum from them; the QDC buffer requests are `EQDC0Buffer` and `EQDC1Buffer`.
 
 ### Other shared A/N definitions
 
