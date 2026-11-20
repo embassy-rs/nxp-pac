@@ -33,6 +33,7 @@ block/Scg:
     byte_offset: 264
     fieldset: Sosccfg
   - name: sosctest
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: SOSC Test Register.
     byte_offset: 508
     fieldset: Sosctest
@@ -53,6 +54,7 @@ block/Scg:
     byte_offset: 536
     fieldset: Sircstat
   - name: sirctest
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: SIRC Test Register.
     byte_offset: 764
     fieldset: Sirctest
@@ -65,6 +67,7 @@ block/Scg:
     byte_offset: 776
     fieldset: Firccfg
   - name: firctcfg
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: FIRC Trim Configuration Register.
     byte_offset: 780
     fieldset: Firctcfg
@@ -73,10 +76,12 @@ block/Scg:
     byte_offset: 784
     fieldset: Firctrim
   - name: fircstat
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: FIRC Auto-trimming Status Register.
     byte_offset: 792
     fieldset: Fircstat
   - name: firctest
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: FIRC Test Register.
     byte_offset: 1020
     fieldset: Firctest
@@ -85,52 +90,64 @@ block/Scg:
     byte_offset: 1024
     fieldset: Rosccsr
   - name: apllcsr
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: APLL Control Status Register.
     byte_offset: 1280
     fieldset: Apllcsr
   - name: apllctrl
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: APLL Control Register.
     byte_offset: 1284
     fieldset: Apllctrl
   - name: apllstat
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: APLL Status Register.
     byte_offset: 1288
     access: Read
     fieldset: Apllstat
   - name: apllndiv
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: APLL N Divider Register.
     byte_offset: 1292
     fieldset: Apllndiv
   - name: apllmdiv
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: APLL M Divider Register.
     byte_offset: 1296
     fieldset: Apllmdiv
   - name: apllpdiv
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: APLL P Divider Register.
     byte_offset: 1300
     fieldset: Apllpdiv
   - name: aplllock_cnfg
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: APLL LOCK Configuration Register.
     byte_offset: 1304
     fieldset: AplllockCnfg
   - name: apllsscgstat
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: APLL SSCG Status Register.
     byte_offset: 1312
     access: Read
     fieldset: Apllsscgstat
   - name: apllsscg0
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: APLL Spread Spectrum Control 0 Register.
     byte_offset: 1316
     fieldset: Apllsscg0
   - name: apllsscg1
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: APLL Spread Spectrum Control 1 Register.
     byte_offset: 1320
     fieldset: Apllsscg1
   - name: apllteststat
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: APLL Test Status Register.
     byte_offset: 1528
     fieldset: Apllteststat
   - name: aplltestctrl
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: APLL Test Control Register.
     byte_offset: 1532
     fieldset: Aplltestctrl
@@ -177,14 +194,17 @@ block/Scg:
     byte_offset: 1576
     fieldset: Apllsscg1
   - name: spllteststat
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: SPLL Test Status Register.
     byte_offset: 1784
     fieldset: Spllteststat
   - name: splltestctrl
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: SPLL Test Control Register.
     byte_offset: 1788
     fieldset: Splltestctrl
   - name: upllcsr
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: UPLL Control Status Register.
     byte_offset: 1792
     fieldset: Upllcsr
@@ -193,10 +213,12 @@ block/Scg:
     byte_offset: 2048
     fieldset: Ldocsr
   - name: ldotest
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: LDO Test Register.
     byte_offset: 2300
     fieldset: Ldotest
 fieldset/Apllcsr:
+  only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
   description: APLL Control Status Register.
   fields:
   - name: apllpwren
@@ -244,6 +266,7 @@ fieldset/Apllcsr:
     bit_offset: 30
     bit_size: 1
 fieldset/Apllctrl:
+  only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
   description: APLL Control Register.
   fields:
   - name: selr
@@ -292,6 +315,7 @@ fieldset/Apllctrl:
     bit_size: 2
     enum: ApllctrlSource
 fieldset/AplllockCnfg:
+  only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
   description: APLL LOCK Configuration Register.
   fields:
   - name: lock_time
@@ -332,6 +356,7 @@ fieldset/Apllpdiv:
     bit_offset: 31
     bit_size: 1
 fieldset/Apllsscg0:
+  only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
   description: APLL Spread Spectrum Control 0 Register.
   fields:
   - name: ss_mdiv_lsb
@@ -382,6 +407,7 @@ fieldset/Apllsscgstat:
     bit_offset: 0
     bit_size: 1
 fieldset/Apllstat:
+  only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
   description: APLL Status Register.
   fields:
   - name: lock
@@ -405,6 +431,7 @@ fieldset/Apllstat:
     bit_offset: 4
     bit_size: 1
 fieldset/Aplltestctrl:
+  only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
   description: APLL Test Control Register.
   fields:
   - name: nfunctest
@@ -433,6 +460,7 @@ fieldset/Aplltestctrl:
     bit_offset: 31
     bit_size: 1
 fieldset/Apllteststat:
+  only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
   description: APLL Test Status Register.
   fields:
   - name: nmotest
@@ -495,18 +523,22 @@ fieldset/Firccsr:
     bit_offset: 5
     bit_size: 1
   - name: firctren
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: FIRC 144 MHz Trim Enable (FIRCCFG[RANGE]=1).
     bit_offset: 8
     bit_size: 1
   - name: firctrup
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: FIRC Trim Update.
     bit_offset: 9
     bit_size: 1
   - name: trim_lock
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: "FIRC TRIM LOCK.\n\nRaw bit values: false (0) = FircNotLocked: FIRC auto trim not locked to target frequency range.; true (1) = FircLocked: FIRC auto trim locked to target frequency range."
     bit_offset: 10
     bit_size: 1
   - name: coarse_trim_bypass
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: Coarse Auto Trim Bypass.
     bit_offset: 11
     bit_size: 1
@@ -539,6 +571,7 @@ fieldset/Firccsr:
     bit_offset: 31
     bit_size: 1
 fieldset/Fircstat:
+  only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
   description: FIRC Auto-trimming Status Register.
   fields:
   - name: trimfine
@@ -550,6 +583,7 @@ fieldset/Fircstat:
     bit_offset: 8
     bit_size: 6
 fieldset/Firctcfg:
+  only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
   description: FIRC Trim Configuration Register.
   fields:
   - name: trimsrc
@@ -562,6 +596,7 @@ fieldset/Firctcfg:
     bit_offset: 16
     bit_size: 7
 fieldset/Firctest:
+  only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
   description: FIRC Test Register.
   fields:
   - name: testen
@@ -605,9 +640,15 @@ fieldset/Firctrim:
     bit_offset: 8
     bit_size: 6
   - name: trimtemp
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: Trim Temperature.
     bit_offset: 16
     bit_size: 2
+  - name: trimtemp
+    only_in: '^MCXA(175|176|185|186|255|256|265|266|345|346|355|356|365|366)$'
+    description: Trim Temperature.
+    bit_offset: 16
+    bit_size: 4
   - name: trimstart
     description: Trim Start.
     bit_offset: 24
@@ -633,6 +674,7 @@ fieldset/Ldocsr:
     bit_offset: 31
     bit_size: 1
 fieldset/Ldotest:
+  only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
   description: LDO Test Register.
   fields:
   - name: sel_atx
@@ -660,6 +702,7 @@ fieldset/Param:
     bit_offset: 4
     bit_size: 1
   - name: apllclkpres
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: APLL Clock Present.
     bit_offset: 5
     bit_size: 1
@@ -668,6 +711,7 @@ fieldset/Param:
     bit_offset: 6
     bit_size: 1
   - name: upllclkpres
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: UPLL Clock Present.
     bit_offset: 7
     bit_size: 1
@@ -675,10 +719,12 @@ fieldset/Rosccsr:
   description: ROSC Control Status Register.
   fields:
   - name: rosccm
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: ROSC Clock Monitor.
     bit_offset: 16
     bit_size: 1
   - name: rosccmre
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: "ROSC Clock Monitor Reset Enable.\n\nRaw bit values: false (0) = GenerateInterrupt: Clock monitor generates an interrupt when an error is detected.; true (1) = GenerateReset: Clock monitor generates a reset when an error is detected."
     bit_offset: 17
     bit_size: 1
@@ -769,6 +815,7 @@ fieldset/Sirctcfg:
     bit_offset: 16
     bit_size: 7
 fieldset/Sirctest:
+  only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
   description: SIRC Test Register.
   fields:
   - name: test
@@ -863,6 +910,7 @@ fieldset/Sosccsr:
     bit_offset: 30
     bit_size: 1
 fieldset/Sosctest:
+  only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
   description: SOSC Test Register.
   fields:
   - name: sosc_xtm_test_mode_en
@@ -965,6 +1013,7 @@ fieldset/Spllctrl:
     bit_offset: 22
     bit_size: 1
   - name: skew_en
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: Skew mode.
     bit_offset: 24
     bit_size: 1
@@ -991,6 +1040,7 @@ fieldset/Spllstat:
   description: SPLL Status Register.
   fields:
   - name: lock
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: Lock detector output (active high).
     bit_offset: 0
     bit_size: 1
@@ -1011,6 +1061,7 @@ fieldset/Spllstat:
     bit_offset: 4
     bit_size: 1
 fieldset/Splltestctrl:
+  only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
   description: SPLL Test Control Register.
   fields:
   - name: nfunctest
@@ -1039,6 +1090,7 @@ fieldset/Splltestctrl:
     bit_offset: 31
     bit_size: 1
 fieldset/Spllteststat:
+  only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
   description: SPLL Test Status Register.
   fields:
   - name: nmotest
@@ -1081,6 +1133,7 @@ fieldset/TrimLock:
     bit_offset: 16
     bit_size: 16
 fieldset/Upllcsr:
+  only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
   description: UPLL Control Status Register.
   fields:
   - name: upllcm
@@ -1115,6 +1168,7 @@ fieldset/Verid:
     bit_offset: 0
     bit_size: 32
 enum/ApllctrlSource:
+  only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
   bit_size: 2
   variants:
   - name: Sosc
@@ -1136,6 +1190,7 @@ enum/Apllsscg1Mc:
     description: MC[1:0] maximum compensation.
     value: 3
 enum/AplltestctrlTestvSel:
+  only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
   bit_size: 3
   variants:
   - name: PllBias
@@ -1148,6 +1203,7 @@ enum/AplltestctrlTestvSel:
     description: ldo_ldo1p1.
     value: 4
 enum/FirctcfgTrimsrc:
+  only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
   bit_size: 2
   variants:
   - name: Usb0
@@ -1201,15 +1257,18 @@ enum/Scs:
     description: ROSC.
     value: 4
   - name: Apll
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: APLL.
     value: 5
   - name: Spll
     description: SPLL.
     value: 6
   - name: Upll
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: UPLL.
     value: 7
 enum/SelAtx:
+  only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
   bit_size: 2
   variants:
   - name: Floating
@@ -1231,6 +1290,7 @@ enum/SirctcfgTrimsrc:
     description: SOSC.
     value: 2
   - name: Rosc
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: ROSC (32.768 kHz).
     value: 3
 enum/Source:
@@ -1249,6 +1309,7 @@ enum/Source:
     description: SIRC 12 MHz clock
     value: 3
 enum/TestSel:
+  only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
   bit_size: 2
   variants:
   - name: TestSel00
@@ -1264,6 +1325,7 @@ enum/TestSel:
     description: VCCO.
     value: 3
 enum/Testsel:
+  only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
   bit_size: 2
   variants:
   - name: Regout
@@ -1276,6 +1338,7 @@ enum/Testsel:
     description: VREF test.
     value: 3
 enum/Tstmd:
+  only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
   bit_size: 2
   variants:
   - name: Tstmd00

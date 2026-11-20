@@ -7610,7 +7610,7 @@
       "signals": [],
       "dma_muxing": [
         {
-          "signal": "BUFFER",
+          "signal": "EQDC0Buffer",
           "mux": "DMA3",
           "request": 65
         }
@@ -7628,7 +7628,7 @@
       "signals": [],
       "dma_muxing": [
         {
-          "signal": "BUFFER",
+          "signal": "EQDC1Buffer",
           "mux": "DMA3",
           "request": 66
         }

@@ -14,6 +14,7 @@ block/Fmu:
     byte_offset: 8
     fieldset: Fctrl
   - name: ftest
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: Flash Test Register.
     byte_offset: 12
     access: Read
@@ -134,6 +135,7 @@ fieldset/Fstat:
     bit_offset: 31
     bit_size: 1
 fieldset/Ftest:
+  only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
   description: Flash Test Register.
   fields:
   - name: tmectl

@@ -23,6 +23,9 @@ add, not placeholder directories or implicit fallback to another family.
   preserves an existing metadata-only mapping without a PAC implementation.
 - `driver`: the base HAL driver identity. A2/A5 keep names such as `mcxa/LPUART`
   so existing HAL cfgs remain compatible; A1 uses its new `mcx/a/a1/...` identities.
+  A3 models whose register layout matches A2 carry the A2 identity, so the HAL
+  drivers for those peripherals apply unchanged; the remaining A3 models keep
+  `mcx/a/a3/...` identities.
 
 When a model uses a shared definition without adding anything, its `source`
 points directly to that definition, including across family directories. Do not
@@ -72,12 +75,19 @@ vendor extraction input is not a public support contract.
 
 ### Shared PORT definitions
 
-MCXA2/A5 metadata references the same `mcx/common/PORT` model, including its
+MCXA2/A3/A5 metadata references the same `mcx/common/PORT` model, including its
 generic `Port` register-block type. Instance names (`PORT0`, `PORT1`, etc.),
 addresses, signals and gates belong to chip metadata; they do not justify
 duplicating an identical register-block model. The same source also provides
-compatible fieldsets and enums used by MCXN. MCXA1/A3 retain their differing
-register layouts.
+compatible fieldsets and enums used by MCXN. MCXA1 retains its differing
+register layout.
+
+The MCXA `Port` block is one type for every instance and exposes a uniform
+32-entry PCR array, so it carries the union of the per-pad capabilities. The
+`pv`, `pfe` and `dse1` fields exist only on the pads the reference manual lists
+for each `PCRn` and are reserved elsewhere; MCXN models them per pad instead.
+`calib0`/`calib1` are implemented on PORT0, 1, 3 and 4 but not PORT2, where an
+access is a bus error (F61RM Rev. 2 and F60RM Rev. 4, 11.6.1.6–7).
 
 MCXN blocks share `mcx/n/common/PORT.yaml`, with EFT masks, calibration, numbered
 global-write-enable fields and PCR capabilities in `PORT-fields.yaml`. Canonical
@@ -131,6 +141,39 @@ Shared enum/fieldset type names replace redundant imported types. This can
 require updates to callers naming the previous types; field values and register
 semantics are unchanged. Metadata instance names and addresses are independent
 of these shared definitions.
+
+### Shared MCXA2/A3 definitions
+
+The MCXA345/346/355/356/365/366 reference manual (MCXAP144M240F60RM Rev. 4)
+documents the same register layouts as A2 for CMC, CRC, CTIMER, DMA, EDMA_TCD,
+FMU, FREQME, GPIO, LPI2C, LPSPI, LPTMR, LPUART, MRCC, OSTIMER, PORT, SCG, UTICK
+and WWDT. The A3 catalog entries for these point at the A2 or common sources.
+MRCC lives in `mcx/a/common/MRCC.yaml`. Its SYSTICK clock controls and FMC
+gate stay A2-only through `only_in`, which keeps A2's existing model; F60RM
+and F61RM both omit the SYSTICK registers and mark CC0/ACC0 bit 16 reserved.
+A3 SPC, SYSCON, VBAT, INPUTMUX, ADC, CAN, CMP and the small-A3 (MCXA343/344)
+models keep their own layouts and identities.
+
+The common CMC, SCG and FMU sources also serve A5. Registers, fields and enum
+values that F61RM and F60RM omit or mark reserved are restricted to the A5
+chips with `only_in`: the APLL/UPLL and test registers, the SRAM retention,
+boot-status and unlock registers, and the extra reset sources. The FIRCTRIM
+`trimtemp` field is 4 bits on A2/A3 and keeps 2 bits on A5. `SCS` stays 4 bits
+on all of them, because its enum is shared and an enum's width must match its
+field; on A2/A3 bit 27 is reserved and the APLL/UPLL encodings are reserved
+variants. The WWDT `debug_en` field is A5-only (bit 6 is reserved in F61RM).
+
+The eight-channel A2/A3 eDMA uses 3-bit `linkch`/`majorlinkch` fields and has
+no `CH_SBR` `sec`/`attr` bits (F61RM 15.6.2.5, 15.6.2.17 and 15.6.2.19); the
+other chips sharing `mcx/common/EDMA_TCD` keep 4 bits. The `Dma4` and `Dma8`
+management pages use `MpInt4` and `MpInt8`, sized to their channel counts.
+
+MCXA345/346/355/356/365/366 metadata uses the A2 spellings for interrupt names
+(`DMA0_CHn`, `SLCD`), DMA request names and signal names (for example GPIO `n`,
+LPSPI `SDI`/`SDO`, CTIMER `MATn`/`INPn`), so the HAL's pin and request tables
+apply to both. MCXA343/344 DMA request names use the same spellings. DMA
+request names are unique within a chip, because the HAL builds a single request
+enum from them; the QDC buffer requests are `EQDC0Buffer` and `EQDC1Buffer`.
 
 ### Other shared A/N definitions
 
@@ -218,17 +261,17 @@ or transforms for genuine incompatible layouts or meanings, with source evidence
 
 ## GPIO capabilities
 
-All three subfamilies include the same GPIO union. The documented split is basic
-A1/A2 GPIO versus extended A5 GPIO, not A1 versus A2/A5:
+All MCXA subfamilies include the same GPIO union. The documented split is basic
+A1/A2/A3 GPIO versus extended A5 GPIO, not A1 versus A2/A5:
 
 | Selection | GPIO capabilities |
 | --- | --- |
-| MCXA156, MCXA175/176/185/186/255/256/265/266 | One ISFR bank; ICR[23:20] reserved; no documented protection-register bank |
+| MCXA156, MCXA175/176/185/186/255/256/265/266, MCXA343/344/345/346/355/356/365/366 | One ISFR bank; ICR[23:20] reserved; no documented protection-register bank |
 | MCXA286/287/456/457/536/537/556/557/566/567/577 | Two ISFR banks, ICR.IRQS/LK, and LOCK/PCNS/ICNS/PCNP/ICNP |
 | MCXA276 compatibility selection | Same basic GPIO and complete hardware model as MCXA266; retained for existing boards |
 
 References: MCXAP100M96FS6RM Rev. 7, chapter 12; MCXAP144M240F61RM Rev. 2,
-sections 12.7.1.1, 12.7.1.12 and 12.7.1.15; MCXAP144M240F61SRM Rev. 2,
+sections 12.7.1.1, 12.7.1.12 and 12.7.1.15; MCXAP144M240F60RM Rev. 4, chapter 12; MCXAP144M240F61SRM Rev. 2,
 section 2.5.9; MCXAP172M240F70RM final Rev. 1, sections 20.7.1.1, 20.7.1.17
 and 20.7.1.20. The A2 security reference manual redirects GPIO coverage to the
 main reference manual; it does not establish the A5 protection extensions.

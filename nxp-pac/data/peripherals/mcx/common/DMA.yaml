@@ -16,7 +16,7 @@ block/Dma4:
     description: Management Page Interrupt Request Status.
     byte_offset: 8
     access: Read
-    fieldset: MpInt
+    fieldset: MpInt4
   - name: mp_hrs
     description: Management Page Hardware Request Status.
     byte_offset: 12
@@ -45,7 +45,7 @@ block/Dma8:
     description: Management Page Interrupt Request Status.
     byte_offset: 8
     access: Read
-    fieldset: MpInt
+    fieldset: MpInt8
   - name: mp_hrs
     description: Management Page Hardware Request Status.
     byte_offset: 12
@@ -378,6 +378,20 @@ fieldset/MpInt:
     description: Interrupt Request Status.
     bit_offset: 0
     bit_size: 12
+fieldset/MpInt4:
+  description: Management Page Interrupt Request Status.
+  fields:
+  - name: int
+    description: Interrupt Request Status.
+    bit_offset: 0
+    bit_size: 4
+fieldset/MpInt8:
+  description: Management Page Interrupt Request Status.
+  fields:
+  - name: int
+    description: Interrupt Request Status.
+    bit_offset: 0
+    bit_size: 8
 
 # MCXN23x RM Rev. 4, 16.1.2 and 16.6.1; MCXN RM Rev. 7, 23.1.1 and 23.6.1-2.
 # DMA1 on N235/N236 has eight channels; the other N controllers have sixteen.

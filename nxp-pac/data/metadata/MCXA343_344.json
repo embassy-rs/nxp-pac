@@ -1007,12 +1007,12 @@
       ],
       "dma_muxing": [
         {
-          "signal": "CTIMER0DMAREQ_M0",
+          "signal": "CTIMER0M0",
           "mux": "DMA0",
           "request": 31
         },
         {
-          "signal": "CTIMER0DMAREQ_M1",
+          "signal": "CTIMER0M1",
           "mux": "DMA0",
           "request": 32
         }
@@ -1099,12 +1099,12 @@
       ],
       "dma_muxing": [
         {
-          "signal": "CTIMER1DMAREQ_M0",
+          "signal": "CTIMER1M0",
           "mux": "DMA0",
           "request": 33
         },
         {
-          "signal": "CTIMER1DMAREQ_M1",
+          "signal": "CTIMER1M1",
           "mux": "DMA0",
           "request": 34
         }
@@ -1203,12 +1203,12 @@
       ],
       "dma_muxing": [
         {
-          "signal": "CTIMER2DMAREQ_M0",
+          "signal": "CTIMER2M0",
           "mux": "DMA0",
           "request": 35
         },
         {
-          "signal": "CTIMER2DMAREQ_M1",
+          "signal": "CTIMER2M1",
           "mux": "DMA0",
           "request": 36
         }
@@ -1800,7 +1800,7 @@
         "reset": "mrcc_glb_rst0"
       },
       "address": "0x40080000",
-      "block": "mcx/a/a3/DMA::Dma",
+      "block": "mcx/a/a3/DMA::Dma8",
       "module": "DMA",
       "signals": []
     },
@@ -2200,7 +2200,7 @@
       ],
       "dma_muxing": [
         {
-          "signal": "WUU0Wake_up_event",
+          "signal": "WUU0WakeUpEvent",
           "mux": "DMA0",
           "request": 1
         }
@@ -3072,7 +3072,7 @@
       "signals": [],
       "dma_muxing": [
         {
-          "signal": "QDC0Dma_request_for_new_buffered_value",
+          "signal": "EQDC0Buffer",
           "mux": "DMA0",
           "request": 65
         }
@@ -3091,7 +3091,7 @@
       "signals": [],
       "dma_muxing": [
         {
-          "signal": "QDC1Dma_request_for_new_buffered_value",
+          "signal": "EQDC1Buffer",
           "mux": "DMA0",
           "request": 66
         }
@@ -3258,42 +3258,42 @@
       ],
       "dma_muxing": [
         {
-          "signal": "FLEXPWM0Req_capt0",
+          "signal": "FlexPWM0Mcapt0",
           "mux": "DMA0",
           "request": 41
         },
         {
-          "signal": "FLEXPWM0Req_capt1",
+          "signal": "FlexPWM0Mcapt1",
           "mux": "DMA0",
           "request": 42
         },
         {
-          "signal": "FLEXPWM0Req_capt2",
+          "signal": "FlexPWM0Mcapt2",
           "mux": "DMA0",
           "request": 43
         },
         {
-          "signal": "FLEXPWM0Req_capt3",
+          "signal": "FlexPWM0Mcapt3",
           "mux": "DMA0",
           "request": 44
         },
         {
-          "signal": "FLEXPWM0Req_val0",
+          "signal": "FlexPWM0Mval0",
           "mux": "DMA0",
           "request": 45
         },
         {
-          "signal": "FLEXPWM0Req_val1",
+          "signal": "FlexPWM0Mval1",
           "mux": "DMA0",
           "request": 46
         },
         {
-          "signal": "FLEXPWM0Req_val2",
+          "signal": "FlexPWM0Mval2",
           "mux": "DMA0",
           "request": 47
         },
         {
-          "signal": "FLEXPWM0Req_val3",
+          "signal": "FlexPWM0Mval3",
           "mux": "DMA0",
           "request": 48
         }
@@ -3443,37 +3443,37 @@
       ],
       "dma_muxing": [
         {
-          "signal": "FLEXPWM1Req_capt0",
+          "signal": "FlexPWM1Mcapt0",
           "mux": "DMA0",
           "request": 79
         },
         {
-          "signal": "FLEXPWM1Req_capt1",
+          "signal": "FlexPWM1Mcapt1",
           "mux": "DMA0",
           "request": 80
         },
         {
-          "signal": "FLEXPWM1Req_capt2",
+          "signal": "FlexPWM1Mcapt2",
           "mux": "DMA0",
           "request": 81
         },
         {
-          "signal": "FLEXPWM1Req_val0",
+          "signal": "FlexPWM1Mval0",
           "mux": "DMA0",
           "request": 83
         },
         {
-          "signal": "FLEXPWM1Req_val1",
+          "signal": "FlexPWM1Mval1",
           "mux": "DMA0",
           "request": 84
         },
         {
-          "signal": "FLEXPWM1Req_val2",
+          "signal": "FlexPWM1Mval2",
           "mux": "DMA0",
           "request": 85
         },
         {
-          "signal": "FLEXPWM1Req_val3",
+          "signal": "FlexPWM1Mval3",
           "mux": "DMA0",
           "request": 86
         }
@@ -3506,7 +3506,7 @@
       ],
       "dma_muxing": [
         {
-          "signal": "LPTMR0Counter_match_event",
+          "signal": "LPTMR0CounterMatchEvent",
           "mux": "DMA0",
           "request": 49
         }
@@ -3759,7 +3759,7 @@
       ],
       "dma_muxing": [
         {
-          "signal": "ADC0FIFO_Request",
+          "signal": "ADC0FifoRequest",
           "mux": "DMA0",
           "request": 51
         }
@@ -3931,7 +3931,7 @@
       ],
       "dma_muxing": [
         {
-          "signal": "ADC1FIFO_Request",
+          "signal": "ADC1FifoRequest",
           "mux": "DMA0",
           "request": 52
         }
@@ -4043,7 +4043,7 @@
       ],
       "dma_muxing": [
         {
-          "signal": "CMP0DMA_request",
+          "signal": "CMP0",
           "mux": "DMA0",
           "request": 53
         }
@@ -4165,7 +4165,7 @@
       ],
       "dma_muxing": [
         {
-          "signal": "CMP1DMA_request",
+          "signal": "CMP1",
           "mux": "DMA0",
           "request": 54
         }
@@ -4265,7 +4265,7 @@
       ],
       "dma_muxing": [
         {
-          "signal": "CMP2DMA_request",
+          "signal": "CMP2",
           "mux": "DMA0",
           "request": 55
         }
@@ -4507,7 +4507,7 @@
       ],
       "dma_muxing": [
         {
-          "signal": "CAN0DMA_request",
+          "signal": "CAN0",
           "mux": "DMA0",
           "request": 2
         }
@@ -4682,7 +4682,7 @@
       ],
       "dma_muxing": [
         {
-          "signal": "GPIO0Pin_event_request_0",
+          "signal": "GPIO0PinEvent0",
           "mux": "DMA0",
           "request": 60
         }
@@ -4872,7 +4872,7 @@
       ],
       "dma_muxing": [
         {
-          "signal": "GPIO1Pin_event_request_0",
+          "signal": "GPIO1PinEvent0",
           "mux": "DMA0",
           "request": 61
         }
@@ -5089,7 +5089,7 @@
       ],
       "dma_muxing": [
         {
-          "signal": "GPIO2Pin_event_request_0",
+          "signal": "GPIO2PinEvent0",
           "mux": "DMA0",
           "request": 62
         }
@@ -5324,7 +5324,7 @@
       ],
       "dma_muxing": [
         {
-          "signal": "GPIO3Pin_event_request_0",
+          "signal": "GPIO3PinEvent0",
           "mux": "DMA0",
           "request": 63
         }
@@ -5397,7 +5397,7 @@
       ],
       "dma_muxing": [
         {
-          "signal": "GPIO4Pin_event_request_0",
+          "signal": "GPIO4PinEvent0",
           "mux": "DMA0",
           "request": 64
         }

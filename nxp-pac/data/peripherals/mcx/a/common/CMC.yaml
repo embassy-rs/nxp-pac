@@ -7,6 +7,7 @@ block/Cmc:
     access: Read
     fieldset: Verid
   - name: param
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: Parameter.
     byte_offset: 4
     access: Read
@@ -60,10 +61,12 @@ block/Cmc:
     byte_offset: 176
     fieldset: Fm0
   - name: sramdis0
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: SRAM Shut Down Register.
     byte_offset: 192
     fieldset: Sramdis0
   - name: sramret0
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: SRAM Deep Sleep Register.
     byte_offset: 208
     fieldset: Sramret0
@@ -72,6 +75,7 @@ block/Cmc:
     byte_offset: 224
     fieldset: Flashcr
   - name: bsr
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: BootROM Status Register.
     byte_offset: 256
     fieldset: Bsr
@@ -84,14 +88,17 @@ block/Cmc:
     byte_offset: 288
     fieldset: Dbgctl
   - name: unlock
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: Unlock Register.
     byte_offset: 512
     fieldset: Unlock
   - name: test
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: Test Register.
     byte_offset: 516
     fieldset: Test
 fieldset/Bsr:
+  only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
   description: BootROM Status Register.
   fields:
   - name: stat
@@ -212,6 +219,7 @@ fieldset/Rpc:
     bit_offset: 9
     bit_size: 1
 fieldset/Sramdis0:
+  only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
   description: SRAM Shut Down Register.
   fields:
   - name: dis
@@ -222,6 +230,7 @@ fieldset/Sramdis0:
       len: 32
       stride: 1
 fieldset/Sramret0:
+  only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
   description: SRAM Deep Sleep Register.
   fields:
   - name: ret
@@ -263,6 +272,7 @@ fieldset/Srie:
     bit_offset: 15
     bit_size: 1
   - name: wdog1
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: Watchdog 1 Reset.
     bit_offset: 25
     bit_size: 1
@@ -302,6 +312,7 @@ fieldset/Srif:
     bit_offset: 15
     bit_size: 1
   - name: wdog1
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: Watchdog 1 Reset.
     bit_offset: 25
     bit_size: 1
@@ -329,6 +340,7 @@ fieldset/Srs:
     bit_offset: 2
     bit_size: 1
   - name: hvd
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: High Voltage Detect Reset.
     bit_offset: 3
     bit_size: 1
@@ -373,6 +385,7 @@ fieldset/Srs:
     bit_offset: 15
     bit_size: 1
   - name: wdog1
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: Watchdog 1 Reset.
     bit_offset: 25
     bit_size: 1
@@ -389,6 +402,7 @@ fieldset/Srs:
     bit_offset: 28
     bit_size: 1
   - name: secvio
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: Security Violation Reset.
     bit_offset: 30
     bit_size: 1
@@ -412,6 +426,7 @@ fieldset/Ssrs:
     bit_offset: 2
     bit_size: 1
   - name: hvd
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: High Voltage Detect Reset.
     bit_offset: 3
     bit_size: 1
@@ -456,6 +471,7 @@ fieldset/Ssrs:
     bit_offset: 15
     bit_size: 1
   - name: wdog1
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: Watchdog 1 Reset.
     bit_offset: 25
     bit_size: 1
@@ -472,6 +488,7 @@ fieldset/Ssrs:
     bit_offset: 28
     bit_size: 1
   - name: secvio
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: Security Violation Reset.
     bit_offset: 30
     bit_size: 1
@@ -480,6 +497,7 @@ fieldset/Ssrs:
     bit_offset: 31
     bit_size: 1
 fieldset/Test:
+  only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
   description: Test Register.
   fields:
   - name: observe
@@ -488,6 +506,7 @@ fieldset/Test:
     bit_size: 4
     enum: Observe
 fieldset/Unlock:
+  only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
   description: Unlock Register.
   fields:
   - name: alwr
@@ -523,15 +542,18 @@ enum/Ckmode:
     description: Core clock is off.
     value: 1
   - name: Ckmode0011
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: Core and platform clocks are off.
     value: 3
   - name: Ckmode0111
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: Core, platform, and peripheral clocks are off, but no change in Low-Power mode.
     value: 7
   - name: Ckmode1111
     description: Core, platform, and peripheral clocks are off, and core enters Low-Power mode.
     value: 15
 enum/Observe:
+  only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
   bit_size: 4
   variants:
   - name: Test0
@@ -571,6 +593,7 @@ enum/PmctrlmainLpmode:
     description: Deep Sleep.
     value: 3
   - name: Lpmode0111
+    only_in: '^MCXA(286|287|456|457|536|537|556|557|566|567|577)$'
     description: Power Down.
     value: 7
   - name: Lpmode1111

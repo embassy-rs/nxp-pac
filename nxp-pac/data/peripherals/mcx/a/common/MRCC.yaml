@@ -358,10 +358,12 @@ block/Mrcc:
     byte_offset: 436
     fieldset: Clkdiv
   - name: mrcc_systick_clksel
+    only_in: '^MCXA(175|176|185|186|255|256|265|266)$'
     description: SYSTICK clock selection control.
     byte_offset: 440
     fieldset: SystickClksel
   - name: mrcc_systick_clkdiv
+    only_in: '^MCXA(175|176|185|186|255|256|265|266)$'
     description: SYSTICK clock divider control.
     byte_offset: 444
     fieldset: Clkdiv
@@ -611,6 +613,7 @@ fieldset/GlbCc0:
     bit_offset: 15
     bit_size: 1
   - name: fmc
+    only_in: '^MCXA(175|176|185|186|255|256|265|266)$'
     description: FMC.
     bit_offset: 16
     bit_size: 1
