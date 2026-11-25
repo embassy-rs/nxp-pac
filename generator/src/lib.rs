@@ -1,11 +1,14 @@
 #[path = "../../nxp-pac/build/chips.rs"]
 mod chips;
 pub mod commands;
+pub mod features;
 #[path = "../../nxp-pac/build/inventory.rs"]
 mod inventory;
 pub mod metadata;
 #[path = "../../nxp-pac/build/engine/mod.rs"]
 pub mod metapac;
+// `nxp-pac/build/features.rs` names the engine as in `nxp-pac/build.rs`.
+use metapac as engine;
 #[path = "../../nxp-pac/build/models.rs"]
 mod models;
 pub mod pac;

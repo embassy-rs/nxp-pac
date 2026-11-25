@@ -18,12 +18,20 @@ pub struct Generate {
     /// Select build-time MetaPAC generation (including the legacy MCXN947 name).
     #[clap(long)]
     pub metapac: bool,
+    /// The MetaPAC chip's MCUXpresso SDK `<SoC>_features.h`: sets the import-only IP features
+    /// (see nxp-pac/data/features/README.md) and fails where a feature derived from the chip's
+    /// models disagrees with it.
+    #[clap(long, value_name = "FILE", requires = "chip")]
+    pub sdk_features: Option<PathBuf>,
 }
 
 pub fn generate(args: Generate) -> anyhow::Result<()> {
     let current = Path::new(env!("CARGO_MANIFEST_DIR"))
         .parent()
         .context("repository root")?;
+    let features = crate::features::Options {
+        sdk_features: args.sdk_features,
+    };
     let chips = if let Some(chip_name) = args.chip.as_deref() {
         // The registry is authoritative for MetaPAC targets. Keep the existing
         // MCXN947 descriptor and bare command on the legacy two-core path.
@@ -32,12 +40,16 @@ pub fn generate(args: Generate) -> anyhow::Result<()> {
                 current,
                 &chip_name.to_ascii_uppercase(),
                 args.out_dir.as_deref(),
+                &features,
             )?;
             info!("Generate command completed successfully");
             return Ok(());
         }
         if args.metapac {
             bail!("Selected chip '{chip_name}' does not have a MetaPAC description");
+        }
+        if features.sdk_features.is_some() {
+            bail!("--sdk-features applies to MetaPAC chips only");
         }
         vec![crate::commands::select_chip(chip_name)?]
     } else {
@@ -48,7 +60,7 @@ pub fn generate(args: Generate) -> anyhow::Result<()> {
     };
     let outputs: Vec<anyhow::Result<()>> = chips
         .par_iter()
-        .map(|feature| generate_chip(current, feature, args.out_dir.as_deref()))
+        .map(|feature| generate_chip(current, feature, args.out_dir.as_deref(), &features))
         .collect();
     let mut failed = false;
     for output in outputs {
@@ -62,9 +74,12 @@ pub fn generate(args: Generate) -> anyhow::Result<()> {
             .iter()
             .filter(|chip| chip.feature.starts_with("mcxn"))
         {
-            if let Err(error) =
-                generate_metapac(current, &chip.core_name(), args.out_dir.as_deref())
-            {
+            if let Err(error) = generate_metapac(
+                current,
+                &chip.core_name(),
+                args.out_dir.as_deref(),
+                &features,
+            ) {
                 failed = true;
                 error!("Error for output {error:#}");
             }
@@ -81,10 +96,11 @@ fn generate_chip(
     current: &Path,
     feature: &ChipDescription,
     output: Option<&Path>,
+    features: &crate::features::Options,
 ) -> anyhow::Result<()> {
     for core in feature.cores {
         if feature.metapac {
-            generate_metapac(current, core, output)?;
+            generate_metapac(current, core, output, features)?;
         } else {
             let svd = current
                 .join("data/mcux-soc-svd")
@@ -111,7 +127,12 @@ fn generate_chip(
     Ok(())
 }
 
-fn generate_metapac(current: &Path, core: &str, output: Option<&Path>) -> anyhow::Result<()> {
+fn generate_metapac(
+    current: &Path,
+    core: &str,
+    output: Option<&Path>,
+    features: &crate::features::Options,
+) -> anyhow::Result<()> {
     let temporary;
     let output = match output {
         Some(output) => output.join(core.to_lowercase()),
@@ -138,5 +159,6 @@ fn generate_metapac(current: &Path, core: &str, output: Option<&Path>) -> anyhow
         generated.input_files.len(),
         generated.output_files.len()
     );
+    crate::features::generate_metapac(current, core, features).context("Generating IP features")?;
     Ok(())
 }
