@@ -1,4 +1,7 @@
-use std::{env, path::PathBuf};
+use std::{
+    env,
+    path::{Path, PathBuf},
+};
 
 #[cfg(feature = "_metapac")]
 #[path = "build/chips.rs"]
@@ -6,6 +9,11 @@ mod chips;
 #[cfg(feature = "_metapac")]
 #[path = "build/engine/mod.rs"]
 mod engine;
+#[path = "build/feature_names.rs"]
+mod feature_names;
+#[cfg(feature = "_metapac")]
+#[path = "build/features.rs"]
+mod features;
 #[path = "build/inventory.rs"]
 mod inventory;
 #[path = "build/models.rs"]
@@ -38,6 +46,7 @@ fn main() {
     for directory in inventory::write(&inputs, &out).expect("generating peripheral inventory") {
         println!("cargo:rerun-if-changed={}", directory.display());
     }
+    export_features(&inputs, &chip);
     #[cfg(feature = "_metapac")]
     if chips::find(&chip).is_some() {
         println!("cargo:rustc-cfg=nxp_metapac");
@@ -68,5 +77,35 @@ fn main() {
             "cargo:rustc-link-search={}",
             manifest.join("src/chips").join(chip).display()
         );
+    }
+}
+
+/// IP features (`data/features/README.md`): printed as `cargo::metadata` lines, so the build
+/// scripts of direct dependents see them as `DEP_NXP_PAC_<KEY>` (`links = "nxp-pac"`). Every
+/// chip gets `all_cfgs`, the names of the catalog. MetaPAC chips also get `cfgs`, evaluated from
+/// their curated models.
+#[allow(unused_variables)]
+fn export_features(inputs: &Path, chip: &str) {
+    println!("cargo:rerun-if-changed=data/features");
+    let all = feature_names::all_cfg_names(&inputs.join("features"))
+        .unwrap_or_else(|error| panic!("IP feature catalog: {error}"));
+    println!(
+        "cargo::metadata=all_cfgs={}",
+        all.into_iter().collect::<Vec<_>>().join(",")
+    );
+
+    #[cfg(feature = "_metapac")]
+    if let Some(chip) = chips::find(chip) {
+        let export = features::metapac_export(inputs, chip)
+            .unwrap_or_else(|error| panic!("IP features of {}: {error:#}", chip.feature));
+        for path in &export.input_files {
+            println!("cargo:rerun-if-changed={}", path.display());
+        }
+        for line in features::render_txt(&export.features)
+            .lines()
+            .filter(|l| !l.starts_with('#'))
+        {
+            println!("cargo::metadata={line}");
+        }
     }
 }

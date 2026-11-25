@@ -1,0 +1,18 @@
+cfgs:
+  i3c_has_no_sconfig_bamatch:
+    derive: { field: Sconfig.bamatch, absent: true }
+  i3c_has_no_sconfig_idrand:
+    derive: { field: Sconfig.idrand, absent: true }
+  i3c_has_no_merrwarn_term:
+    derive: { field: Merrwarn.term, absent: true }
+  i3c_has_start_scl_delay:
+    derive: { field: MconfigExt.i3c_cas_del }
+  # Import-only (`{}`): behaviour and errata, not visible as a register or field.
+  # Each is false unless the chip's chips/<CORE>.yaml lists it under `imported:`.
+  i3c_has_no_reset: {}
+  i3c_has_errata_051617: {}
+  i3c_has_no_slave_ibi_mr_hj: {}
+  i3c_has_errata_052086: {}
+  i3c_has_errata_052123: {}
+  i3c_has_ibi_payload_size_optional_byte: {}
+  i3c_has_no_master_dma_wdata_reg: {}

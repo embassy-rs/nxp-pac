@@ -1,0 +1,7 @@
+cfgs:
+  lpspi_has_ccr1:
+    derive: { register: Lpspi.ccr1 }
+  lpspi_has_no_pcscfg:
+    derive: { field: Cfgr1.pcscfg, absent: true }
+  lpspi_has_no_multi_width:
+    derive: { field: Tcr.width, absent: true }

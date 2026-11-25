@@ -1,0 +1,5 @@
+cfgs:
+  gpio_has_port_input_control:
+    derive: { register: Gpio.pidr }
+  gpio_has_interrupt_channel_select:
+    derive: { field: Icr.irqs }

@@ -1,0 +1,3 @@
+cfgs:
+  lpuart_has_ctrl_swap:
+    derive: { field: Ctrl.swap }
