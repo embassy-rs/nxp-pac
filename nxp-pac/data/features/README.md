@@ -49,3 +49,12 @@ A chip file `chips/<CORE>.yaml` lists the import-only options the chip sets (`im
 imported:
 - i3c_has_errata_051617
 ```
+
+The files are written by the generator:
+
+```
+cargo run -p generator -- generate <CHIP> --sdk-features <path/to/SoC_features.h>
+```
+
+- Import-only options are taken from the SDK header, and `generate` fails where an option derived from the model disagrees with it.
+- Without `--sdk-features`, `generate` leaves the chip file as it is.

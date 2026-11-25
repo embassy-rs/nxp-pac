@@ -260,8 +260,8 @@ pub fn render_txt(f: &ChipFeatures) -> String {
     )
 }
 
-/// `data/features/chips/<CORE>.yaml`: the import-only cfgs a chip sets. A chip without
-/// import-only cfgs has no file.
+/// `data/features/chips/<CORE>.yaml`: the import-only cfgs a chip sets (written by
+/// `generate <CHIP> --sdk-features`). A chip without import-only cfgs has no file.
 #[derive(Clone, Debug, Default, Deserialize, Serialize)]
 #[serde(deny_unknown_fields)]
 pub struct ChipFile {

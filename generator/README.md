@@ -75,3 +75,16 @@ The fourteen MCXN MetaPAC chip names are `MCXN235`, `MCXN236`, `MCXN246`,
 MetaPAC with the ordinary `generate`
 command. Use `--out-dir` to retain inspection output; generation otherwise uses
 temporary output. Do not use the no-argument command as a read-only check.
+
+## How to check the IP features against the SDK
+
+A MetaPAC chip exports its IP features to dependent build scripts (see
+`nxp-pac/data/features/README.md`). To check the values derived from the PAC
+against the SDK `<SoC>_features.h`, and to record the ones only the SDK knows,
+pass the header to `generate`:
+
+```bash
+cargo run -p generator -- generate MCXA577 --sdk-features <path/to/MCXA577_features.h>
+```
+
+The command fails if a derived value disagrees with the header.
